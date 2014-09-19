@@ -5,6 +5,9 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.URLEncoder;
+import java.util.ArrayList; 
+import java.util.List; 
+import java.lang.String;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
@@ -42,9 +45,21 @@ public class TargetStorage  extends StorageDefault{
 
 	private int limitOfPages;
 
+	private int numberOfLatestCrawled;
+	
+	private int numberOfLatestRelevant;
+
+	private int numberOfLatestHarvestRates;	
+
 	private Storage linkStorage;
 	  
 	private StringBuffer urls = new StringBuffer();
+
+	private List<String> crawledUrls;
+
+	private List<String> relevantUrls;
+
+	private List<String> harvestRates;
 
 	private boolean hardFocus;
 	
@@ -53,21 +68,30 @@ public class TargetStorage  extends StorageDefault{
   private LangDetection langDetect;
 	
 	public TargetStorage(TargetClassifier targetClassifier, String fileLocation, TargetRepository targetRepository, 
-			Storage linkStorage, int limitOfPages, boolean hardFocus, boolean getBacklinks) {
+			Storage linkStorage, int limitOfPages, boolean hardFocus, boolean getBacklinks, int numberOfLatestCrawled, int numberOfLatestRelevant,
+		int numberOfLatestHarvestRates) {
 	    this.targetClassifier = targetClassifier;
 	    this.fileLocation = fileLocation;
 	    this.targetRepository = targetRepository;
 	    this.linkStorage = linkStorage;
 	    this.limitOfPages = limitOfPages;
+	    this.crawledUrls = new ArrayList<String>();
+	    this.relevantUrls = new ArrayList<String>();
+ 	    this.harvestRates = new ArrayList<String>();
 	    this.hardFocus = hardFocus;
 	    this.getBacklinks = getBacklinks;
+	    this.numberOfLatestCrawled = numberOfLatestCrawled;
+	    this.numberOfLatestRelevant = numberOfLatestRelevant;
+	    this.numberOfLatestHarvestRates = numberOfLatestHarvestRates;
+	    this.totalOfPages = 0;
+	    this.totalOnTopicPages = 0;
       this.langDetect = new LangDetection();
       this.langDetect.init("libs/profiles/");//This is hard coded, should be fixed
 	}
 
 	public TargetStorage(String fileLocation, TargetRepository targetRepository, Storage linkStorage, 
 			int limitOfPages, boolean hardFocus, boolean getBacklinks) {
-		this(null, fileLocation, targetRepository, linkStorage, limitOfPages, hardFocus,getBacklinks);
+		this(null, fileLocation, targetRepository, linkStorage, limitOfPages, hardFocus,getBacklinks, 10, 10, 10);
 	}
 
 	/**
@@ -75,13 +99,16 @@ public class TargetStorage  extends StorageDefault{
 	 */
 	public synchronized Object insert(Object obj) throws StorageException {
 		Page page = (Page)obj;
-    if (this.langDetect.detect_page(page) == false){
-      System.out.println(">>>> non-English page: " + page.getIdentifier());
-      return null;
-    }
+  		if (this.langDetect.detect_page(page) == false){
+     			System.out.println(">>>> non-English page: " + page.getIdentifier());
+      			return null;
+    		}
+
 		urls.append(fileLocation + File.separator + page.getURL().getHost() + File.separator + URLEncoder.encode(page.getIdentifier()));
 		urls.append("\n");
+		crawledUrls.add(page.getIdentifier());
 		totalOfPages++;
+
 		try {
 			if(targetClassifier != null){
 				double prob = targetClassifier.distributionForInstance(page)[0];
@@ -93,6 +120,7 @@ public class TargetStorage  extends StorageDefault{
 						page.setAuth(true);
 					}
 					linkStorage.insert(page);
+					relevantUrls.add(page.getIdentifier());
 					totalOnTopicPages++;
 				}else{
 					if(!hardFocus){
@@ -113,10 +141,37 @@ public class TargetStorage  extends StorageDefault{
 				targetRepository.insert(page,totalOfPages);
 				totalOnTopicPages++;
 			}
-			System.out.println("TOTAL_PAGES=" + totalOfPages
+
+			harvestRates.add(String.valueOf(totalOfPages) + "\t" + Integer.toString(totalOnTopicPages) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
+		/*	System.out.println("TOTAL_PAGES=" + totalOfPages
 					+ ": PAGE:" + page.getURL() + " RELEVANT:" +
 					totalOnTopicPages );
 			System.out.println("---------------------------");
+	*/
+			if(totalOfPages % numberOfLatestHarvestRates == 0) {
+				System.out.println("#CRAWLED\t#RELEVANT\tTIMESTAMP");
+                       		List<String> latestHarvestRates = getLatestHarvestRates(); 
+				for(String i : latestHarvestRates) {
+					System.out.println(i);
+				}
+			}
+           
+			if(totalOfPages % numberOfLatestCrawled == 0) {
+				List<String> latestCrawled = getLatestCrawledURLs();
+				System.out.println("LATEST CRAWLED PAGES");
+				for(String i: latestCrawled) {   
+					System.out.println(i);
+				}	
+			}
+
+			if(totalOnTopicPages % numberOfLatestRelevant == 0) {
+				List<String> latestRelevant = getLatestRelevantURLs();
+				System.out.println("LATEST RELEVANT PAGES");
+				for(String i: latestRelevant) {   
+					System.out.println(i);
+				}
+			}
+
 			if(totalOfPages > limitOfPages){
 				System.exit(0);
 			}
@@ -133,6 +188,37 @@ public class TargetStorage  extends StorageDefault{
 	public void setLimitPages(int limit){
 		limitOfPages = limit;
 	}
+
+
+	private int initialIndex(List<String> urls, int number) {
+		if(number > urls.size()) {
+			return 0;
+		} else {
+			return urls.size() - number;
+		}		
+	
+	}
+
+	public List<String> getLatestCrawledURLs() {
+		List<String> crawled = new ArrayList<String>(crawledUrls);
+		crawledUrls.clear();
+		return crawled;
+	}
+
+
+	public List<String> getLatestRelevantURLs() {
+		List<String> relevant = new ArrayList<String>(relevantUrls);
+		relevantUrls.clear();
+		return relevant;
+	}
+
+	public List<String> getLatestHarvestRates() {
+		List<String> rates = new ArrayList<String>(harvestRates);
+		harvestRates.clear();
+		return rates;
+
+	}
+        
 
 	public static void main(String[] args) {
 		try{
@@ -166,7 +252,7 @@ public class TargetStorage  extends StorageDefault{
 			Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
 			Storage targetStorage = new TargetStorage(targetClassifier,targetDirectory,targetRepository,
 					linkStorage,config.getParamInt("VISITED_PAGE_LIMIT"),config.getParamBoolean("HARD_FOCUS"),
-					config.getParamBoolean("BIPARTITE"));
+					config.getParamBoolean("BIPARTITE"), 10, 20, 100);
 			StorageBinder binder = new StorageBinder(config);
 			binder.bind(targetStorage);
 		}catch (java.io.IOException ex) {
