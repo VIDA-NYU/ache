@@ -7,10 +7,11 @@ public class TargetMonitor
 {
 	private PrintWriter fCrawledPages;
 	private PrintWriter fRelevantPages;
+	private PrintWriter fNonRelevantPages;
 	private PrintWriter fHarvestInfo;
 	private PrintWriter fPointer;
 
-  public TargetMonitor(String fileCrawledPages, String fileRelevantPages, String fileHarvestInfo)
+  public TargetMonitor(String fileCrawledPages, String fileRelevantPages, String fileHarvestInfo, String fileNonRelevantPages)
 	{
 		try
 		{
@@ -18,6 +19,7 @@ public class TargetMonitor
   		fCrawledPages = new PrintWriter(fileCrawledPages, "UTF-8");
   		fRelevantPages = new PrintWriter(fileRelevantPages, "UTF-8");
   		fHarvestInfo = new PrintWriter(fileHarvestInfo, "UTF-8");
+  		fNonRelevantPages = new PrintWriter(fileNonRelevantPages, "UTF-8");
 		}
 		catch(Exception ex)
 		{
@@ -49,6 +51,12 @@ public class TargetMonitor
   public void exportRelevantPages(List<String> list)
   {
 		this.fPointer = this.fRelevantPages;
+		export(list);
+  }
+
+  public void exportNonRelevantPages(List<String> list)
+  {
+		this.fPointer = this.fNonRelevantPages;
 		export(list);
   }
 

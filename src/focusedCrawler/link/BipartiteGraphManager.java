@@ -94,14 +94,17 @@ public class BipartiteGraphManager {
 		return this.rep;
 	}
 	
-	public void insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException{
+	public String insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException{
+		String outLinks = page.getIdentifier() + "\t1.0\t" + String.valueOf(System.currentTimeMillis() / 1000L);
 		PaginaURL parsedPage = page.getPageURL();
 		parsedPage.setRelevance(page.getRelevance());
 		LinkRelevance[] linksRelevance = outlinkClassifier.classify(parsedPage);
 		HashSet<String> relevantURLs = new HashSet<String>();
 		for (int i = 0; i < linksRelevance.length; i++) {
 			if(frontierManager.isRelevant(linksRelevance[i])){
-				relevantURLs.add(linksRelevance[i].getURL().toString());
+				String url = linksRelevance[i].getURL().toString();
+				relevantURLs.add(url);
+				outLinks += "\t" + url;
 			}
 		}
 		LinkNeighborhood[] lns = parsedPage.getLinkNeighboor();
@@ -117,6 +120,7 @@ public class BipartiteGraphManager {
 			count = 0;
 		}
 		count++;
+		return outLinks;
 	}
 	
 	public void insertBacklinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException{

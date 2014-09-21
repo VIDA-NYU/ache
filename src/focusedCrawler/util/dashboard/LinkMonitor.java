@@ -6,15 +6,30 @@ import java.io.*;
 public class LinkMonitor
 {
 	private String fPath;
+	private PrintWriter fOutLinks;
 	
-  public LinkMonitor(String fileFrontierPages)
+  public LinkMonitor(String fileFrontierPages, String fileOutLinks)
 	{
-		fPath = fileFrontierPages;
-
+		try
+		{
+			fPath = fileFrontierPages;
+			fOutLinks = new PrintWriter(fileOutLinks, "UTF-8");
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
 	}
 
-	private void export(List<String> list)
+	public void exportOutLinks(List<String> list)
 	{
+		for(String item: list)
+			fOutLinks.println(item);
+		fOutLinks.flush();
+	}
+
+  public void exportFrontierPages(List<String> list)
+  {
 		try
 		{
   		FileWriter f = new FileWriter(fPath, false);
@@ -28,12 +43,6 @@ public class LinkMonitor
 		{
 			ex.printStackTrace();
 		}
-	  	
-	}
-
-  public void exportFrontierPages(List<String> list)
-  {
-		export(list);
   }
   
   static public void main(String[] args) {

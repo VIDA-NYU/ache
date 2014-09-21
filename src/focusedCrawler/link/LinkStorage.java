@@ -92,6 +92,7 @@ public class LinkStorage extends StorageDefault{
 //Data structure for dashboard//
 	private LinkMonitor monitor;
 	private int nInterval;//export the current frontier after inserting nInterval of pages.
+	private List<String> outLinks;
 ///////////////////////////////
   
   public LinkStorage(BipartiteGraphManager manager, FrontierManager frontierManager, boolean getBacklinks, boolean getOutlinks, LinkMonitor mnt, int interval) throws IOException {
@@ -101,6 +102,7 @@ public class LinkStorage extends StorageDefault{
     this.getOutlinks = getOutlinks;
 		this.monitor = mnt;
 		nInterval = interval;
+		outLinks = new ArrayList<String>();
   }
 
   public void setOnlineLearning(OnlineLearning onlineLearning, int learnLimit){
@@ -119,6 +121,7 @@ public class LinkStorage extends StorageDefault{
 		return frontierManager.getFrontierPersistent().getFrontierPages();
 	}
 
+
   /**
    * This method inserts links from a given page into the frontier
    * @param obj Object - page containing links
@@ -135,6 +138,8 @@ public class LinkStorage extends StorageDefault{
 			{
 				List<String> list = getFrontierPages();
 				monitor.exportFrontierPages(list);
+				monitor.exportOutLinks(outLinks);
+				outLinks.clear();
 			}
 		}
 		catch(Exception ex)
@@ -159,7 +164,8 @@ public class LinkStorage extends StorageDefault{
     		}
     	}else{
     		if(getOutlinks){
-    			graphManager.insertOutlinks(page);	
+    			String sOutLinks = graphManager.insertOutlinks(page);	
+					outLinks.add(sOutLinks);
     		}
     	}
     }catch (LinkClassifierException ex) {
@@ -288,7 +294,7 @@ public class LinkStorage extends StorageDefault{
            manager = new BipartiteGraphManager(frontierManager,graphRep,linkClassifier,null);
        }
       
-			 LinkMonitor mnt = new LinkMonitor("data/data_monitor/frontierpages.csv");//hard coding 
+			 LinkMonitor mnt = new LinkMonitor("data/data_monitor/frontierpages.csv", "data/data_monitor/outlinks.csv");//hard coding file name 
        linkStorage = new LinkStorage(manager,frontierManager,getBacklinks,getOutlinks, mnt, 10);//hard coding interval
        boolean useOnlineLearning = config.getParamBoolean("ONLINE_LEARNING");
        if(useOnlineLearning){

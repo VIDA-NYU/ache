@@ -51,15 +51,17 @@ public class TargetStorage  extends StorageDefault{
 	private StringBuffer urls = new StringBuffer();
 
 //Data structure for dashboard ///////
-	private int numberOfLatestCrawled;
+	private int numberOfLatestCrawled;//not used yet
 	
-	private int numberOfLatestRelevant;//not used yet
+	private int numberOfLatestRelevant;
 
 	private int numberOfLatestHarvestRates;	
 
 	private List<String> crawledUrls; 
 																	  
 	private List<String> relevantUrls;
+	
+	private List<String> nonRelevantUrls;
 																		
 	private List<String> harvestRates;
 
@@ -81,6 +83,7 @@ public class TargetStorage  extends StorageDefault{
 	    this.limitOfPages = limitOfPages;
 	    this.crawledUrls = new ArrayList<String>();
 	    this.relevantUrls = new ArrayList<String>();
+			this.nonRelevantUrls = new ArrayList<String>();
  	    this.harvestRates = new ArrayList<String>();
 	    this.hardFocus = hardFocus;
 	    this.getBacklinks = getBacklinks;
@@ -119,7 +122,7 @@ public class TargetStorage  extends StorageDefault{
 				double prob = targetClassifier.distributionForInstance(page)[0];
 				page.setRelevance(prob);
 				System.out.println(">>>PROCESSING: " + page.getIdentifier() + " PROB:" + prob);
-				if(prob > 0.99){
+				if(prob > 0.9){
 					targetRepository.insert(page);
 					if(getBacklinks){//set the page is as authority if using backlinks
 						page.setAuth(true);
@@ -137,6 +140,10 @@ public class TargetStorage  extends StorageDefault{
 							linkStorage.insert(page);
 						}
 					}
+					else
+					{
+						nonRelevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(prob) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
+					}
 				}
 			}else{
 				page.setRelevance(1);
@@ -150,17 +157,24 @@ public class TargetStorage  extends StorageDefault{
 			//Export information for dashboard
 			harvestRates.add(Integer.toString(totalOnTopicPages) + "\t" + String.valueOf(totalOfPages) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
 			if(totalOfPages % numberOfLatestHarvestRates == 0) {
-        List<String> latestHarvestRates = getLatestHarvestRates(); 
-				monitor.exportHarvestInfo(latestHarvestRates);
+      //  List<String> latestHarvestRates = getLatestHarvestRates(); 
+		//		monitor.exportHarvestInfo(latestHarvestRates);
+				monitor.exportHarvestInfo(harvestRates);
+				harvestRates.clear();
 			}
            
 			if(totalOnTopicPages % numberOfLatestRelevant == 0) {
-				List<String> latestCrawled = getLatestCrawledURLs();
-				monitor.exportCrawledPages(latestCrawled);	
+				//List<String> latestCrawled = getLatestCrawledURLs();
+				monitor.exportCrawledPages(crawledUrls);
+				crawledUrls.clear();	
 
-				List<String> latestRelevant = getLatestRelevantURLs();
-				monitor.exportRelevantPages(latestRelevant);
+				//List<String> latestRelevant = getLatestRelevantURLs();
+				monitor.exportRelevantPages(relevantUrls);
+				relevantUrls.clear();
 
+				//List<String> latestNonRelevant = getLatestNonRelevantURLs();
+				monitor.exportNonRelevantPages(nonRelevantUrls);
+				nonRelevantUrls.clear();
 			}
 			//End exporting
 
@@ -190,7 +204,7 @@ public class TargetStorage  extends StorageDefault{
 		}		
 	
 	}
-
+/*
 	public List<String> getLatestCrawledURLs() {
 		List<String> crawled = new ArrayList<String>(crawledUrls);
 		crawledUrls.clear();
@@ -204,13 +218,19 @@ public class TargetStorage  extends StorageDefault{
 		return relevant;
 	}
 
+	public List<String> getLatestNonRelevantURLs() {
+		List<String> nonRelevant = new ArrayList<String>(nonRelevantUrls);
+		nonRelevantUrls.clear();
+		return nonRelevant;
+	}
+
 	public List<String> getLatestHarvestRates() {
 		List<String> rates = new ArrayList<String>(harvestRates);
 		harvestRates.clear();
 		return rates;
 
 	}
-        
+  */      
 
 	public static void main(String[] args) {
 		try{
@@ -244,7 +264,8 @@ public class TargetStorage  extends StorageDefault{
 			Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
 			TargetMonitor mnt = new TargetMonitor("data/data_monitor/crawledpages.csv", 
 																"data/data_monitor/relevantpages.csv", 
-																"data/data_monitor/harvestinfo.csv");//hard coding 
+																"data/data_monitor/harvestinfo.csv",
+																"data/data_monitor/nonrelevantpages.csv");//hard coding 
 			Storage targetStorage = new TargetStorage(targetClassifier,targetDirectory,targetRepository,
 					linkStorage,config.getParamInt("VISITED_PAGE_LIMIT"),config.getParamBoolean("HARD_FOCUS"),
 					config.getParamBoolean("BIPARTITE"), 10, 10, 10, mnt);
