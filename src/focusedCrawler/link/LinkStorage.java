@@ -111,11 +111,12 @@ public class LinkStorage extends StorageDefault{
 
 	public List<String> getFrontierPages() throws Exception
 	{
-		List<String> pages = new ArrayList<String>();
-		Tuple[] tuples = frontierManager.getFrontierPersistent().getFrontierPages();
-		for (Tuple tuple: tuples)
-			pages.add(tuple.getKey());
-		return pages;
+		//List<String> pages = new ArrayList<String>();
+		//Tuple[] tuples = frontierManager.getFrontierPersistent().getFrontierPages();
+		//for (Tuple tuple: tuples)
+		//	pages.add(tuple.getKey());
+		//return pages;
+		return frontierManager.getFrontierPersistent().getFrontierPages();
 	}
 
   /**

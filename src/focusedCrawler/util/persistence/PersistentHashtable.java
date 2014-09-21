@@ -22,7 +22,7 @@
 ############################################################################
 */
 package focusedCrawler.util.persistence;
-
+import java.util.Set;
 import java.io.File;
 import java.util.Collections;
 import java.util.Enumeration;
@@ -31,7 +31,9 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Vector;
 import java.net.URLEncoder;
-
+import java.net.URLDecoder;
+import java.util.List;
+import java.util.ArrayList;
 import com.sleepycat.je.DatabaseException;
 import com.sleepycat.je.EnvironmentLockedException;
 
@@ -123,6 +125,16 @@ public class PersistentHashtable {
 		return persistentTable.listElements();
 	}
 	
+	public List<String> getCache() throws Exception
+	{
+		List<String> pages = new ArrayList<String>();
+		for (HashMap.Entry<String, String> entry : (Set<HashMap.Entry<String, String>>)cache.entrySet())
+		{
+			pages.add(URLDecoder.decode(entry.getKey(), "UTF-8"));
+		}
+		return pages;
+	}
+
 	public synchronized void updateCache(HashMap newCache){
 		this.cache.clear();
 		this.cache = null;

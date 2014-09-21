@@ -34,6 +34,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Vector;
+import java.util.List;
 
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.PriorityQueueLink;
@@ -174,11 +175,13 @@ public class FrontierTargetRepositoryBaseline {
 	}
 	
 
-	public Tuple[] getFrontierPages() throws Exception
+	public List<String> getFrontierPages() throws Exception
+	//public Tuple[] getFrontierPages() throws Exception
 	{
 		//This function is used to getting all existing links in frontier.
 		//Should we get frontier links via cache member of urlRelevant?
-		return urlRelevance.getTable();	
+		//return urlRelevance.getTable();
+		return urlRelevance.getCache();	
 	}
 
 	/**
