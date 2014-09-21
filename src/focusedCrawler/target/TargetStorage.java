@@ -114,7 +114,7 @@ public class TargetStorage  extends StorageDefault{
 
 		urls.append(fileLocation + File.separator + page.getURL().getHost() + File.separator + URLEncoder.encode(page.getIdentifier()));
 		urls.append("\n");
-		crawledUrls.add(page.getIdentifier());
+		crawledUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
 		totalOfPages++;
 
 		try {
@@ -128,7 +128,7 @@ public class TargetStorage  extends StorageDefault{
 						page.setAuth(true);
 					}
 					linkStorage.insert(page);
-					relevantUrls.add(page.getIdentifier());
+					relevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
 					totalOnTopicPages++;
 				}else{
 					if(!hardFocus){
