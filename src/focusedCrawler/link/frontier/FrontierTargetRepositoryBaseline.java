@@ -173,6 +173,14 @@ public class FrontierTargetRepositoryBaseline {
 		}
 	}
 	
+
+	public Tuple[] getFrontierPages() throws Exception
+	{
+		//This function is used to getting all existing links in frontier.
+		//Should we get frontier links via cache member of urlRelevant?
+		return urlRelevance.getTable();	
+	}
+
 	/**
 	 * This method inserts a new link into the frontier
 	 * @param linkRelev

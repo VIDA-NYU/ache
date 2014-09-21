@@ -105,6 +105,7 @@ public class FrontierManager {
 		}
 		return insert;
 	}
+
   
 	public LinkRelevance nextURL() throws FrontierPersistentException {
 

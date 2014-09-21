@@ -39,6 +39,7 @@ import focusedCrawler.link.frontier.FrontierTargetRepository;
 import focusedCrawler.link.frontier.FrontierTargetRepositoryBaseline;
 import focusedCrawler.util.PriorityQueueLink;
 import focusedCrawler.util.cache.CacheException;
+import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.string.StopListArquivo;
@@ -49,9 +50,12 @@ import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
 import focusedCrawler.util.Page;
+import focusedCrawler.util.dashboard.LinkMonitor;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -84,12 +88,19 @@ public class LinkStorage extends StorageDefault{
   private boolean getOutlinks = false;
   
   private int learnLimit = 10;
+
+//Data structure for dashboard//
+	private LinkMonitor monitor;
+	private int nInterval;//export the current frontier after inserting nInterval of pages.
+///////////////////////////////
   
-  public LinkStorage(BipartiteGraphManager manager, FrontierManager frontierManager, boolean getBacklinks, boolean getOutlinks) throws IOException {
+  public LinkStorage(BipartiteGraphManager manager, FrontierManager frontierManager, boolean getBacklinks, boolean getOutlinks, LinkMonitor mnt, int interval) throws IOException {
     this.frontierManager = frontierManager;
     this.graphManager = manager;
     this.getBacklinks = getBacklinks;
     this.getOutlinks = getOutlinks;
+		this.monitor = mnt;
+		nInterval = interval;
   }
 
   public void setOnlineLearning(OnlineLearning onlineLearning, int learnLimit){
@@ -97,6 +108,16 @@ public class LinkStorage extends StorageDefault{
 	  this.learnLimit = learnLimit;
   }
   
+
+	public List<String> getFrontierPages() throws Exception
+	{
+		List<String> pages = new ArrayList<String>();
+		Tuple[] tuples = frontierManager.getFrontierPersistent().getFrontierPages();
+		for (Tuple tuple: tuples)
+			pages.add(tuple.getKey());
+		return pages;
+	}
+
   /**
    * This method inserts links from a given page into the frontier
    * @param obj Object - page containing links
@@ -107,6 +128,18 @@ public class LinkStorage extends StorageDefault{
 
     Page page = (Page)obj;
     numberOfPages++;
+		try
+		{
+			if((numberOfPages % nInterval) == 0)
+			{
+				List<String> list = getFrontierPages();
+				monitor.exportFrontierPages(list);
+			}
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
     try {
     	if(getBacklinks && page.isAuth()){
     		System.out.println(">>>>>GETTING BACKLINKS:" + page.getURL().toString());
@@ -253,8 +286,9 @@ public class LinkStorage extends StorageDefault{
        }else{
            manager = new BipartiteGraphManager(frontierManager,graphRep,linkClassifier,null);
        }
-       
-       linkStorage = new LinkStorage(manager,frontierManager,getBacklinks,getOutlinks);
+      
+			 LinkMonitor mnt = new LinkMonitor("data/data_monitor/frontierpages.csv");//hard coding 
+       linkStorage = new LinkStorage(manager,frontierManager,getBacklinks,getOutlinks, mnt, 10);//hard coding interval
        boolean useOnlineLearning = config.getParamBoolean("ONLINE_LEARNING");
        if(useOnlineLearning){
     	   StopList stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));

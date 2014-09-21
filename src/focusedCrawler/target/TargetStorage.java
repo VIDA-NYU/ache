@@ -25,6 +25,7 @@ import focusedCrawler.util.storage.distribution.StorageCreator;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
 import focusedCrawler.util.LangDetection;
+import focusedCrawler.util.dashboard.TargetMonitor;
 
 /**
  * This class runs a socket server responsible to store pages coming from the crawler client.
@@ -45,22 +46,25 @@ public class TargetStorage  extends StorageDefault{
 
 	private int limitOfPages;
 
-	private int numberOfLatestCrawled;
-	
-	private int numberOfLatestRelevant;
-
-	private int numberOfLatestHarvestRates;	
-
 	private Storage linkStorage;
 	  
 	private StringBuffer urls = new StringBuffer();
 
-	private List<String> crawledUrls;
+//Data structure for dashboard ///////
+	private int numberOfLatestCrawled;
+	
+	private int numberOfLatestRelevant;//not used yet
 
+	private int numberOfLatestHarvestRates;	
+
+	private List<String> crawledUrls; 
+																	  
 	private List<String> relevantUrls;
-
+																		
 	private List<String> harvestRates;
 
+	private TargetMonitor monitor;
+//////////////////////////////////////
 	private boolean hardFocus;
 	
 	private boolean getBacklinks = false;
@@ -69,7 +73,7 @@ public class TargetStorage  extends StorageDefault{
 	
 	public TargetStorage(TargetClassifier targetClassifier, String fileLocation, TargetRepository targetRepository, 
 			Storage linkStorage, int limitOfPages, boolean hardFocus, boolean getBacklinks, int numberOfLatestCrawled, int numberOfLatestRelevant,
-		int numberOfLatestHarvestRates) {
+		int numberOfLatestHarvestRates, TargetMonitor mnt) {
 	    this.targetClassifier = targetClassifier;
 	    this.fileLocation = fileLocation;
 	    this.targetRepository = targetRepository;
@@ -87,11 +91,12 @@ public class TargetStorage  extends StorageDefault{
 	    this.totalOnTopicPages = 0;
       this.langDetect = new LangDetection();
       this.langDetect.init("libs/profiles/");//This is hard coded, should be fixed
+			this.monitor = mnt;
 	}
 
 	public TargetStorage(String fileLocation, TargetRepository targetRepository, Storage linkStorage, 
-			int limitOfPages, boolean hardFocus, boolean getBacklinks) {
-		this(null, fileLocation, targetRepository, linkStorage, limitOfPages, hardFocus,getBacklinks, 10, 10, 10);
+			int limitOfPages, boolean hardFocus, boolean getBacklinks, TargetMonitor mnt) {
+		this(null, fileLocation, targetRepository, linkStorage, limitOfPages, hardFocus,getBacklinks, 10, 10, 10, mnt);
 	}
 
 	/**
@@ -142,35 +147,22 @@ public class TargetStorage  extends StorageDefault{
 				totalOnTopicPages++;
 			}
 
-			harvestRates.add(String.valueOf(totalOfPages) + "\t" + Integer.toString(totalOnTopicPages) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
-		/*	System.out.println("TOTAL_PAGES=" + totalOfPages
-					+ ": PAGE:" + page.getURL() + " RELEVANT:" +
-					totalOnTopicPages );
-			System.out.println("---------------------------");
-	*/
+			//Export information for dashboard
+			harvestRates.add(Integer.toString(totalOnTopicPages) + "\t" + String.valueOf(totalOfPages) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
 			if(totalOfPages % numberOfLatestHarvestRates == 0) {
-				System.out.println("#CRAWLED\t#RELEVANT\tTIMESTAMP");
-                       		List<String> latestHarvestRates = getLatestHarvestRates(); 
-				for(String i : latestHarvestRates) {
-					System.out.println(i);
-				}
+        List<String> latestHarvestRates = getLatestHarvestRates(); 
+				monitor.exportHarvestInfo(latestHarvestRates);
 			}
            
-			if(totalOfPages % numberOfLatestCrawled == 0) {
-				List<String> latestCrawled = getLatestCrawledURLs();
-				System.out.println("LATEST CRAWLED PAGES");
-				for(String i: latestCrawled) {   
-					System.out.println(i);
-				}	
-			}
-
 			if(totalOnTopicPages % numberOfLatestRelevant == 0) {
+				List<String> latestCrawled = getLatestCrawledURLs();
+				monitor.exportCrawledPages(latestCrawled);	
+
 				List<String> latestRelevant = getLatestRelevantURLs();
-				System.out.println("LATEST RELEVANT PAGES");
-				for(String i: latestRelevant) {   
-					System.out.println(i);
-				}
+				monitor.exportRelevantPages(latestRelevant);
+
 			}
+			//End exporting
 
 			if(totalOfPages > limitOfPages){
 				System.exit(0);
@@ -250,9 +242,13 @@ public class TargetStorage  extends StorageDefault{
 			TargetRepository targetRepository = new TargetFileRepository(targetDirectory);
 			ParameterFile linkStorageConfig = new ParameterFile(config.getParam("LINK_STORAGE_FILE"));
 			Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
+			TargetMonitor mnt = new TargetMonitor("data/data_monitor/crawledpages.csv", 
+																"data/data_monitor/relevantpages.csv", 
+																"data/data_monitor/harvestinfo.csv");//hard coding 
 			Storage targetStorage = new TargetStorage(targetClassifier,targetDirectory,targetRepository,
 					linkStorage,config.getParamInt("VISITED_PAGE_LIMIT"),config.getParamBoolean("HARD_FOCUS"),
-					config.getParamBoolean("BIPARTITE"), 10, 20, 100);
+					config.getParamBoolean("BIPARTITE"), 10, 10, 10, mnt);
+
 			StorageBinder binder = new StorageBinder(config);
 			binder.bind(targetStorage);
 		}catch (java.io.IOException ex) {
