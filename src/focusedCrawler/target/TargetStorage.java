@@ -107,10 +107,10 @@ public class TargetStorage  extends StorageDefault{
 	 */
 	public synchronized Object insert(Object obj) throws StorageException {
 		Page page = (Page)obj;
-  		if (this.langDetect.detect_page(page) == false){
-     			System.out.println(">>>> non-English page: " + page.getIdentifier());
-      			return null;
-    		}
+    if (this.langDetect.detect_page(page) == false){
+     	System.out.println(">>>> non-English page: " + page.getIdentifier());
+      return null;
+    }
 
 		urls.append(fileLocation + File.separator + page.getURL().getHost() + File.separator + URLEncoder.encode(page.getIdentifier()));
 		urls.append("\n");

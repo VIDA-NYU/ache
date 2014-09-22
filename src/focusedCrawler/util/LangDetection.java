@@ -5,12 +5,18 @@ import com.cybozu.labs.langdetect.DetectorFactory;
 import com.cybozu.labs.langdetect.Language;
 import focusedCrawler.util.Page;
 import de.l3s.boilerpipe.extractors.ArticleExtractor;
+import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LangDetection {
     private String[] extList = {".de", ".vn"};
-
+    private int maxHeaderSize;
+    private Pattern searchPattern;
     public LangDetection(){
       //this.extList = {".de", ".vn"};
+      maxHeaderSize = 10;
+      searchPattern = Pattern.compile("lang=\"(..)\"");
     }
 
     public void init(String profileDirectory){
@@ -23,7 +29,7 @@ public class LangDetection {
       }
     }
 
-    public String detect_text(String text){
+    public String detectByBody(String text){
       try
       {
         Detector detector = DetectorFactory.create();
@@ -35,7 +41,43 @@ public class LangDetection {
         System.out.println("Error in detect language");
         return null;
       }
+    }
 
+    public Boolean detectByHeader(String text)
+    {
+      try
+      {
+        BufferedReader bufReader = new BufferedReader(new StringReader(text));
+        String line=null;
+        int count = 0;
+        while( (line=bufReader.readLine()) != null )
+        {
+          Matcher m = searchPattern.matcher(line);
+          if(m.find())
+          {
+            //System.out.println(m.group(1));
+            if (m.group(1).toLowerCase().equals("en"))
+            {
+              System.out.println("Matched: " + m.group(1));
+              return true;
+            }
+            else
+            {
+              System.out.println("Not Matched: " + m.group(1));
+              return false;
+            }
+          }
+          count += 1;
+          if (count == maxHeaderSize)
+            break;
+        }   
+        return true;
+      } catch (Exception ex)
+      {
+        ex.printStackTrace();
+        System.out.println(">>>>Exception in language detection");
+        return false;
+      }
     }
 
     public Boolean detect_page(Page page){
@@ -43,8 +85,9 @@ public class LangDetection {
       //Check the url extension:
       //if (check_ext(page.getURL().getHost())){
       try{
-        String text = ArticleExtractor.INSTANCE.getText(page.getContent());
-        if (check_content(text)){
+        //String text = ArticleExtractor.INSTANCE.getText(page.getContent());
+        String text = page.getContent();
+        if (detectByHeader(text)){
           return true;
         }
         else{
@@ -58,7 +101,7 @@ public class LangDetection {
     }
     public Boolean check_content(String content)
     {
-      if (detect_text(content).equals("en")){
+      if (detectByHeader(content).equals("en")){
         return true;
       }
       else{
@@ -92,5 +135,10 @@ public class LangDetection {
         System.out.println("Error in detect language");
         return null;
       }     
+    }
+    
+    public static void main(String[] args)
+    {
+      LangDetection ld = new LangDetection();
     }
 }

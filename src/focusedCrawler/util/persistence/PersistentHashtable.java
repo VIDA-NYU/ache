@@ -128,10 +128,15 @@ public class PersistentHashtable {
 	public List<String> getCache() throws Exception
 	{
 		List<String> pages = new ArrayList<String>();
+    /*
 		for (HashMap.Entry<String, String> entry : (Set<HashMap.Entry<String, String>>)cache.entrySet())
 		{
 			pages.add(URLDecoder.decode(entry.getKey(), "UTF-8"));
-		}
+		}*/
+    for (String key: (Set<String>)cache.keySet())
+    {
+			pages.add(URLDecoder.decode(key, "UTF-8"));
+    }
 		return pages;
 	}
 
