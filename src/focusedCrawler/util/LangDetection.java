@@ -58,12 +58,10 @@ public class LangDetection {
             //System.out.println(m.group(1));
             if (m.group(1).toLowerCase().equals("en"))
             {
-              System.out.println("Matched: " + m.group(1));
               return true;
             }
             else
             {
-              System.out.println("Not Matched: " + m.group(1));
               return false;
             }
           }
