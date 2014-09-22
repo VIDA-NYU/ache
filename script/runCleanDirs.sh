@@ -1,5 +1,6 @@
 rm -fr $1/data
 mkdir $1/data
+mkdir $1/data/data_monitor
 mkdir $1/data/data_target
 mkdir $1/data/data_url
 mkdir $1/data/data_url/dir
