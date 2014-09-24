@@ -46,6 +46,8 @@ public class TargetStorage  extends StorageDefault{
 
 	private int limitOfPages;
 
+	private float relevanceThreshold;
+	
 	private Storage linkStorage;
 	  
 	private StringBuffer urls = new StringBuffer();
@@ -75,12 +77,14 @@ public class TargetStorage  extends StorageDefault{
   private LangDetection langDetect;
 	
 	public TargetStorage(TargetClassifier targetClassifier, String fileLocation, TargetRepository targetRepository, 
-			Storage linkStorage, int limitOfPages, boolean hardFocus, boolean getBacklinks, int numberOfLatestCrawled, int numberOfLatestRelevant,
-		int numberOfLatestHarvestRates, TargetMonitor mnt) {
+		Storage linkStorage, int limitOfPages, boolean hardFocus, boolean getBacklinks, 
+		int numberOfLatestCrawled, int numberOfLatestRelevant,  
+		int numberOfLatestHarvestRates, float relevanceThreshold, TargetMonitor mnt) {
 	    this.targetClassifier = targetClassifier;
 	    this.fileLocation = fileLocation;
 	    this.targetRepository = targetRepository;
 	    this.linkStorage = linkStorage;
+	    this.relevanceThreshold = relevanceThreshold;
 	    this.limitOfPages = limitOfPages;
 	    this.crawledUrls = new ArrayList<String>();
 	    this.relevantUrls = new ArrayList<String>();
@@ -100,7 +104,7 @@ public class TargetStorage  extends StorageDefault{
 
 	public TargetStorage(String fileLocation, TargetRepository targetRepository, Storage linkStorage, 
 			int limitOfPages, boolean hardFocus, boolean getBacklinks, TargetMonitor mnt) {
-		this(null, fileLocation, targetRepository, linkStorage, limitOfPages, hardFocus,getBacklinks, 10, 10, 10, mnt);
+		this(null, fileLocation, targetRepository, linkStorage, limitOfPages, hardFocus,getBacklinks, 10, 10, 10, 0.9f, mnt);
 	}
 
 	/**
@@ -123,7 +127,7 @@ public class TargetStorage  extends StorageDefault{
 				double prob = targetClassifier.distributionForInstance(page)[0];
 				page.setRelevance(prob);
 				System.out.println(">>>PROCESSING: " + page.getIdentifier() + " PROB:" + prob);
-				if(prob > 0.9){
+				if(prob > this.relevanceThreshold){
 					targetRepository.insert(page);
 					if(getBacklinks){//set the page is as authority if using backlinks
 						page.setAuth(true);
@@ -158,22 +162,17 @@ public class TargetStorage  extends StorageDefault{
 			//Export information for dashboard
 			harvestRates.add(Integer.toString(totalOnTopicPages) + "\t" + String.valueOf(totalOfPages) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
 			if(totalOfPages % numberOfLatestHarvestRates == 0) {
-      //  List<String> latestHarvestRates = getLatestHarvestRates(); 
-		//		monitor.exportHarvestInfo(latestHarvestRates);
 				monitor.exportHarvestInfo(harvestRates);
 				harvestRates.clear();
 			}
            
 			if(totalOnTopicPages % numberOfLatestRelevant == 0) {
-				//List<String> latestCrawled = getLatestCrawledURLs();
 				monitor.exportCrawledPages(crawledUrls);
 				crawledUrls.clear();	
 
-				//List<String> latestRelevant = getLatestRelevantURLs();
 				monitor.exportRelevantPages(relevantUrls);
 				relevantUrls.clear();
 
-				//List<String> latestNonRelevant = getLatestNonRelevantURLs();
 				monitor.exportNonRelevantPages(nonRelevantUrls);
 				nonRelevantUrls.clear();
 			}
@@ -205,33 +204,6 @@ public class TargetStorage  extends StorageDefault{
 		}		
 	
 	}
-/*
-	public List<String> getLatestCrawledURLs() {
-		List<String> crawled = new ArrayList<String>(crawledUrls);
-		crawledUrls.clear();
-		return crawled;
-	}
-
-
-	public List<String> getLatestRelevantURLs() {
-		List<String> relevant = new ArrayList<String>(relevantUrls);
-		relevantUrls.clear();
-		return relevant;
-	}
-
-	public List<String> getLatestNonRelevantURLs() {
-		List<String> nonRelevant = new ArrayList<String>(nonRelevantUrls);
-		nonRelevantUrls.clear();
-		return nonRelevant;
-	}
-
-	public List<String> getLatestHarvestRates() {
-		List<String> rates = new ArrayList<String>(harvestRates);
-		harvestRates.clear();
-		return rates;
-
-	}
-  */      
 
 	public static void main(String[] args) {
 		try{
@@ -263,14 +235,15 @@ public class TargetStorage  extends StorageDefault{
 			TargetRepository targetRepository = new TargetFileRepository(targetDirectory);
 			ParameterFile linkStorageConfig = new ParameterFile(config.getParam("LINK_STORAGE_FILE"));
 			Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
-      int rate = config.getParamInt("DATA_MONITOR_REFRESH_RATE");
+		        int rate = config.getParamInt("DATA_MONITOR_REFRESH_RATE");
+			float relevanceThreshold = config.getParamFloat("RELEVANCE_THRESHOLD");
 			TargetMonitor mnt = new TargetMonitor("data/data_monitor/crawledpages.csv", 
 																"data/data_monitor/relevantpages.csv", 
 																"data/data_monitor/harvestinfo.csv",
 																"data/data_monitor/nonrelevantpages.csv");//hard coding 
 			Storage targetStorage = new TargetStorage(targetClassifier,targetDirectory,targetRepository,
 					linkStorage,config.getParamInt("VISITED_PAGE_LIMIT"),config.getParamBoolean("HARD_FOCUS"),
-					config.getParamBoolean("BIPARTITE"), rate, rate, 10, mnt);
+					config.getParamBoolean("BIPARTITE"), rate, rate, 10, relevanceThreshold, mnt);
 
 			StorageBinder binder = new StorageBinder(config);
 			binder.bind(targetStorage);
