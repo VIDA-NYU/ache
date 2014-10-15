@@ -3150,6 +3150,7 @@ public class PaginaURL implements Pagina {
 //                                           src, st);
             
             PaginaURL p = new PaginaURL(args[1].trim(), st);
+            System.out.println(p.toString());
 //            Vector<String> images = p.getImages();
 //            for (int i = 0; i < images.size(); i++) {
 //				System.out.println(images.elementAt(i));

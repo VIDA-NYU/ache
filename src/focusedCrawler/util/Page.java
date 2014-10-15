@@ -71,6 +71,11 @@ public class Page implements Serializable, Target{
         return url;
     }
 
+    public String getDomainName(){
+        String domain = url.getHost();
+        return domain.startsWith("www.") ? domain.substring(4) : domain;
+    }
+
     public String getContent(){
         return content;
     }

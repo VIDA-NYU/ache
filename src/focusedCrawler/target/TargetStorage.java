@@ -5,8 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.URLEncoder;
-import java.util.ArrayList; 
-import java.util.List; 
+import java.util.*; 
 import java.lang.String;
 
 import weka.classifiers.Classifier;
@@ -53,23 +52,22 @@ public class TargetStorage  extends StorageDefault{
 	private StringBuffer urls = new StringBuffer();
 
 //Data structure for dashboard ///////
-	private int numberOfLatestCrawled;//not used yet
-	
-	private int numberOfLatestRelevant;
-
-	private int numberOfLatestHarvestRates;	
-
+	private int crawledPageRefreshFreq;
+	private int relevantPageRefreshFreq;
+	private int harvestinfoRefreshFreq;	
+  private boolean refreshSync;
+  private int refreshFreq;//if refresh_sync is true, this variable will be used as refresh frequency for all information
 	private List<String> crawledUrls; 
-																	  
 	private List<String> relevantUrls;
-	
 	private List<String> nonRelevantUrls;
-																		
 	private List<String> harvestRates;
-
 	private TargetMonitor monitor;
 
+//Data structure for stop conditions //
+  private HashMap<String, Integer> domainCounter;//Count number of pages for each domain
+  private int maxNumPages;//Maximum number of pages for each domain
 //////////////////////////////////////
+
 	private boolean hardFocus;
 	
 	private boolean getBacklinks = false;
@@ -77,9 +75,9 @@ public class TargetStorage  extends StorageDefault{
   private LangDetection langDetect;
 	
 	public TargetStorage(TargetClassifier targetClassifier, String fileLocation, TargetRepository targetRepository, 
-		Storage linkStorage, int limitOfPages, boolean hardFocus, boolean getBacklinks, 
-		int numberOfLatestCrawled, int numberOfLatestRelevant,  
-		int numberOfLatestHarvestRates, float relevanceThreshold, TargetMonitor mnt) {
+		                   Storage linkStorage, int limitOfPages, boolean hardFocus, boolean getBacklinks, 
+		                   int crawledFreq, int relevantFreq,  int harvestinfoFreq, int syncFreq, boolean isRefreshSync,
+                       float relevanceThreshold, int maxPages, TargetMonitor mnt) {
 	    this.targetClassifier = targetClassifier;
 	    this.fileLocation = fileLocation;
 	    this.targetRepository = targetRepository;
@@ -92,9 +90,13 @@ public class TargetStorage  extends StorageDefault{
  	    this.harvestRates = new ArrayList<String>();
 	    this.hardFocus = hardFocus;
 	    this.getBacklinks = getBacklinks;
-	    this.numberOfLatestCrawled = numberOfLatestCrawled;
-	    this.numberOfLatestRelevant = numberOfLatestRelevant;
-	    this.numberOfLatestHarvestRates = numberOfLatestHarvestRates;
+	    this.crawledPageRefreshFreq = crawledFreq;
+	    this.relevantPageRefreshFreq = relevantFreq;
+	    this.harvestinfoRefreshFreq = harvestinfoFreq;
+      this.refreshFreq = syncFreq;
+      this.refreshSync = isRefreshSync;
+      this.maxNumPages = maxPages;
+      this.domainCounter = new HashMap<String, Integer>();
 	    this.totalOfPages = 0;
 	    this.totalOnTopicPages = 0;
       this.langDetect = new LangDetection();
@@ -104,7 +106,8 @@ public class TargetStorage  extends StorageDefault{
 
 	public TargetStorage(String fileLocation, TargetRepository targetRepository, Storage linkStorage, 
 			int limitOfPages, boolean hardFocus, boolean getBacklinks, TargetMonitor mnt) {
-		this(null, fileLocation, targetRepository, linkStorage, limitOfPages, hardFocus,getBacklinks, 10, 10, 10, 0.9f, mnt);
+		this(null, fileLocation, targetRepository, linkStorage, limitOfPages, hardFocus, getBacklinks, 
+          100, 100, 100, 100, true, 0.9f, 100, mnt);
 	}
 
 	/**
@@ -123,61 +126,84 @@ public class TargetStorage  extends StorageDefault{
 		totalOfPages++;
 
 		try {
-			if(targetClassifier != null){
-				double prob = targetClassifier.distributionForInstance(page)[0];
-				page.setRelevance(prob);
-				System.out.println(">>>PROCESSING: " + page.getIdentifier() + " PROB:" + prob);
-				if(prob > this.relevanceThreshold){
-					targetRepository.insert(page);
-					if(getBacklinks){//set the page is as authority if using backlinks
-						page.setAuth(true);
-					}
-					linkStorage.insert(page);
-					relevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
-					totalOnTopicPages++;
-				}else{
-					if(!hardFocus){
-						if(getBacklinks){
-							if(page.isHub()){
-								linkStorage.insert(page);
-							}
-						}else{
-							linkStorage.insert(page);
-						}
-					}
-					else
-					{
-						nonRelevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(prob) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
-					}
-				}
-			}else{
-				page.setRelevance(1);
-				page.setAuth(true);
-				System.out.println(">>>PROCESSING: " + page.getIdentifier());
-				linkStorage.insert(page);
-				targetRepository.insert(page,totalOfPages);
-				totalOnTopicPages++;
-			}
-
+      String domain = page.getDomainName();
+      Integer count = domainCounter.get(domain);
+      if (count == null)
+        count = 0;
+      if (count < maxNumPages){
+        count ++;
+        domainCounter.put(domain, count);
+		  	if(targetClassifier != null){
+		  		double prob = targetClassifier.distributionForInstance(page)[0];
+		  		page.setRelevance(prob);
+		  		System.out.println(">>>PROCESSING: " + page.getIdentifier() + " PROB:" + prob);
+		  		if(prob > this.relevanceThreshold){
+		  			targetRepository.insert(page);
+		  			if(getBacklinks){//set the page is as authority if using backlinks
+		  				page.setAuth(true);
+		  			}
+		  			linkStorage.insert(page);
+		  			relevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
+		  			totalOnTopicPages++;
+		  		}else{
+		  			if(!hardFocus){
+		  				if(getBacklinks){
+		  					if(page.isHub()){
+		  						linkStorage.insert(page);
+		  					}
+		  				}else{
+		  					linkStorage.insert(page);
+		  				}
+		  			}
+		  			else
+		  			{
+		  				nonRelevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(prob) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
+		  			}
+		  		}
+		  	}else{
+		  		page.setRelevance(1);
+		  		page.setAuth(true);
+		  		System.out.println(">>>PROCESSING: " + page.getIdentifier());
+		  		linkStorage.insert(page);
+		  		targetRepository.insert(page,totalOfPages);
+		  		totalOnTopicPages++;
+		  	}
+      }
 			//Export information for dashboard
-			harvestRates.add(Integer.toString(totalOnTopicPages) + "\t" + String.valueOf(totalOfPages) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
-			if(totalOfPages % numberOfLatestHarvestRates == 0) {
-				monitor.exportHarvestInfo(harvestRates);
-				harvestRates.clear();
-			}
-           
-			if(totalOnTopicPages % numberOfLatestRelevant == 0) {
-				monitor.exportCrawledPages(crawledUrls);
-				crawledUrls.clear();	
+			harvestRates.add(Integer.toString(totalOnTopicPages) + "\t" + 
+                       String.valueOf(totalOfPages) + "\t" + 
+                       String.valueOf(System.currentTimeMillis() / 1000L));
+			if (refreshSync){
+        if(totalOnTopicPages % refreshFreq == 0) {
+		  		monitor.exportHarvestInfo(harvestRates);
+		  		harvestRates.clear();
+		  		monitor.exportCrawledPages(crawledUrls);
+		  		crawledUrls.clear();	
+		  		monitor.exportRelevantPages(relevantUrls);
+		  		relevantUrls.clear();
+		  		monitor.exportNonRelevantPages(nonRelevantUrls);
+		  		nonRelevantUrls.clear();
+		  	}
+      }
+      else{
+        if(totalOfPages % harvestinfoRefreshFreq == 0) {
+		  		monitor.exportHarvestInfo(harvestRates);
+		  		harvestRates.clear();
+		  	}
+		  	if(totalOfPages % crawledPageRefreshFreq == 0) {
+		  		monitor.exportCrawledPages(crawledUrls);
+		  		crawledUrls.clear();	
+        }
+		  	if(totalOnTopicPages % relevantPageRefreshFreq == 0) {
+		  		monitor.exportRelevantPages(relevantUrls);
+		  		relevantUrls.clear();
 
-				monitor.exportRelevantPages(relevantUrls);
-				relevantUrls.clear();
+		  		monitor.exportNonRelevantPages(nonRelevantUrls);
+		  		nonRelevantUrls.clear();
+		  	}
+		  	//End exporting
 
-				monitor.exportNonRelevantPages(nonRelevantUrls);
-				nonRelevantUrls.clear();
-			}
-			//End exporting
-
+      }
 			if(totalOfPages > limitOfPages){
 				System.exit(0);
 			}
@@ -235,15 +261,20 @@ public class TargetStorage  extends StorageDefault{
 			TargetRepository targetRepository = new TargetFileRepository(targetDirectory);
 			ParameterFile linkStorageConfig = new ParameterFile(config.getParam("LINK_STORAGE_FILE"));
 			Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
-		        int rate = config.getParamInt("DATA_MONITOR_REFRESH_RATE");
+		  int crawledFreq = config.getParamInt("CRAWLED_REFRESH_FREQUENCY");
+		  int relevantFreq = config.getParamInt("RELEVANT_REFRESH_FREQUENCY");
+		  int harvestinfoFreq = config.getParamInt("HARVESTINFO_REFRESH_FREQUENCY");
+		  int refreshFreq = config.getParamInt("SYNC_REFRESH_FREQUENCY");
+      boolean isRefreshSync = config.getParamBoolean("REFRESH_SYNC");
 			float relevanceThreshold = config.getParamFloat("RELEVANCE_THRESHOLD");
+      int maxPages = config.getParamInt("MAX_PAGES_PER_DOMAIN");
 			TargetMonitor mnt = new TargetMonitor("data/data_monitor/crawledpages.csv", 
 																"data/data_monitor/relevantpages.csv", 
 																"data/data_monitor/harvestinfo.csv",
 																"data/data_monitor/nonrelevantpages.csv");//hard coding 
 			Storage targetStorage = new TargetStorage(targetClassifier,targetDirectory,targetRepository,
 					linkStorage,config.getParamInt("VISITED_PAGE_LIMIT"),config.getParamBoolean("HARD_FOCUS"),
-					config.getParamBoolean("BIPARTITE"), rate, rate, 10, relevanceThreshold, mnt);
+					config.getParamBoolean("BIPARTITE"), crawledFreq, relevantFreq, harvestinfoFreq, refreshFreq, isRefreshSync, relevanceThreshold, maxPages, mnt);
 
 			StorageBinder binder = new StorageBinder(config);
 			binder.bind(targetStorage);
