@@ -50,6 +50,12 @@ public class LinkRelevance implements Serializable{
 		return url;
 	}
 
+  public String getDomainName(){
+    String domain = url.getHost();
+    return domain.startsWith("www.") ? domain.substring(4) : domain;
+  }
+
+
 	public double getRelevance(){
 		return relevance;
 	}

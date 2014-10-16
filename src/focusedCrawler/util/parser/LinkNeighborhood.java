@@ -91,6 +91,11 @@ public class LinkNeighborhood implements Serializable{
 		return this.link;
 	}
 	
+  public String getDomainName(){
+    String domain = link.getHost();
+    return domain.startsWith("www.") ? domain.substring(4) : domain;
+  }
+
 	public int getAroundPosition(){
 		return this.aroundPosition;
 	}

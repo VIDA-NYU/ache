@@ -28,7 +28,7 @@ import java.net.URL;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 import java.util.Vector;
-
+import java.util.HashMap;
 
 
 import focusedCrawler.link.classifier.LinkClassifier;
@@ -61,6 +61,11 @@ public class BipartiteGraphManager {
 	private BipartiteGraphRep rep;
 	
 	private int count = 0;
+
+  //Data structure for stop conditions //////////////////////////
+  private int maxPages = 100; //Maximum number of pages per each domain
+  private HashMap<String, Integer> domainCounter;//Count number of pages for each domain
+  ///////////////////////////////////////////////////////////////
 	
 	private final int pagesToCommit = 100;
 	
@@ -68,6 +73,7 @@ public class BipartiteGraphManager {
 		this.frontierManager = frontierManager;
 		this.outlinkClassifier = outlinkClassifier;
 		this.rep = rep;
+    this.domainCounter = new HashMap<String, Integer>();
 	}
 	
 	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRep rep, LinkClassifier outlinkClassifier, LinkClassifier backlinkClassifier) throws IOException, ClassNotFoundException{
@@ -75,7 +81,12 @@ public class BipartiteGraphManager {
 		this.outlinkClassifier = outlinkClassifier;
 		this.backlinkClassifier = backlinkClassifier;
 		this.rep = rep;
+    this.domainCounter = new HashMap<String, Integer>();
 	}
+
+  public void setMaxPages(int max){
+    this.maxPages = max;
+  }
 
 	public void setBacklinkSurfer(BacklinkSurfer surfer){
 		this.surfer = surfer;
@@ -112,6 +123,19 @@ public class BipartiteGraphManager {
 			if(!relevantURLs.contains(lns[i].getLink().toString())){
 				lns[i] = null;
 			}
+      else{
+        String domain = lns[i].getDomainName();
+        Integer count = domainCounter.get(domain);
+        if (count == null)
+          count = 1;
+        if (count < maxPages){
+          count++;
+          domainCounter.put(domain, count);
+        }
+        else{
+          lns[i] = null;
+        }
+      }
 		}
 		rep.insertOutlinks(page.getURL(), lns);
 		frontierManager.insert(linksRelevance);

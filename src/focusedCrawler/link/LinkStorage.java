@@ -91,18 +91,18 @@ public class LinkStorage extends StorageDefault{
 
 //Data structure for dashboard//
 	private LinkMonitor monitor;
-	private int nInterval;//export the current frontier after inserting nInterval of pages.
+	private int refreshFreq;//export the urls in the frontier after inserting refreshFreq of pages.
 	private List<String> outLinks;
 ///////////////////////////////
-  
-  public LinkStorage(BipartiteGraphManager manager, FrontierManager frontierManager, boolean getBacklinks, boolean getOutlinks, LinkMonitor mnt, int interval) throws IOException {
+
+  public LinkStorage(BipartiteGraphManager manager, FrontierManager frontierManager, boolean getBacklinks, boolean getOutlinks, LinkMonitor mnt, int freq) throws IOException {
     this.frontierManager = frontierManager;
     this.graphManager = manager;
     this.getBacklinks = getBacklinks;
     this.getOutlinks = getOutlinks;
 		this.monitor = mnt;
-		nInterval = interval;
-		outLinks = new ArrayList<String>();
+		this.refreshFreq = freq;
+		this.outLinks = new ArrayList<String>();
   }
 
   public void setOnlineLearning(OnlineLearning onlineLearning, int learnLimit){
@@ -134,7 +134,7 @@ public class LinkStorage extends StorageDefault{
     numberOfPages++;
 		try
 		{
-			if((numberOfPages % nInterval) == 0)
+			if((numberOfPages % refreshFreq) == 0)
 			{
 				List<String> list = getFrontierPages();
 				monitor.exportFrontierPages(list);
@@ -293,9 +293,11 @@ public class LinkStorage extends StorageDefault{
        }else{
            manager = new BipartiteGraphManager(frontierManager,graphRep,linkClassifier,null);
        }
-      
 			 LinkMonitor mnt = new LinkMonitor("data/data_monitor/frontierpages.csv", "data/data_monitor/outlinks.csv");//hard coding file name 
-       linkStorage = new LinkStorage(manager,frontierManager,getBacklinks,getOutlinks, mnt, 10);//hard coding interval
+       int freq = config.getParamInt("FRONTIER_REFRESH_FREQUENCY");
+       int maxPages = config.getParamInt("MAX_PAGES_PER_DOMAIN");
+       manager.setMaxPages(maxPages);      
+       linkStorage = new LinkStorage(manager,frontierManager,getBacklinks,getOutlinks, mnt, freq);//hard coding interval
        boolean useOnlineLearning = config.getParamBoolean("ONLINE_LEARNING");
        if(useOnlineLearning){
     	   StopList stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));

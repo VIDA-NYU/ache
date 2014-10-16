@@ -5,7 +5,8 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.URLEncoder;
-import java.util.*; 
+import java.util.List; 
+import java.util.ArrayList; 
 import java.lang.String;
 
 import weka.classifiers.Classifier;
@@ -63,11 +64,6 @@ public class TargetStorage  extends StorageDefault{
 	private List<String> harvestRates;
 	private TargetMonitor monitor;
 
-//Data structure for stop conditions //
-  private HashMap<String, Integer> domainCounter;//Count number of pages for each domain
-  private int maxNumPages;//Maximum number of pages for each domain
-//////////////////////////////////////
-
 	private boolean hardFocus;
 	
 	private boolean getBacklinks = false;
@@ -77,7 +73,7 @@ public class TargetStorage  extends StorageDefault{
 	public TargetStorage(TargetClassifier targetClassifier, String fileLocation, TargetRepository targetRepository, 
 		                   Storage linkStorage, int limitOfPages, boolean hardFocus, boolean getBacklinks, 
 		                   int crawledFreq, int relevantFreq,  int harvestinfoFreq, int syncFreq, boolean isRefreshSync,
-                       float relevanceThreshold, int maxPages, TargetMonitor mnt) {
+                       float relevanceThreshold, TargetMonitor mnt) {
 	    this.targetClassifier = targetClassifier;
 	    this.fileLocation = fileLocation;
 	    this.targetRepository = targetRepository;
@@ -95,8 +91,6 @@ public class TargetStorage  extends StorageDefault{
 	    this.harvestinfoRefreshFreq = harvestinfoFreq;
       this.refreshFreq = syncFreq;
       this.refreshSync = isRefreshSync;
-      this.maxNumPages = maxPages;
-      this.domainCounter = new HashMap<String, Integer>();
 	    this.totalOfPages = 0;
 	    this.totalOnTopicPages = 0;
       this.langDetect = new LangDetection();
@@ -107,7 +101,7 @@ public class TargetStorage  extends StorageDefault{
 	public TargetStorage(String fileLocation, TargetRepository targetRepository, Storage linkStorage, 
 			int limitOfPages, boolean hardFocus, boolean getBacklinks, TargetMonitor mnt) {
 		this(null, fileLocation, targetRepository, linkStorage, limitOfPages, hardFocus, getBacklinks, 
-          100, 100, 100, 100, true, 0.9f, 100, mnt);
+          100, 100, 100, 100, true, 0.9f, mnt);
 	}
 
 	/**
@@ -126,40 +120,33 @@ public class TargetStorage  extends StorageDefault{
 		totalOfPages++;
 
 		try {
-      String domain = page.getDomainName();
-      Integer count = domainCounter.get(domain);
-      if (count == null)
-        count = 0;
-      if (count < maxNumPages){
-        count ++;
-        domainCounter.put(domain, count);
-		  	if(targetClassifier != null){
-		  		double prob = targetClassifier.distributionForInstance(page)[0];
-		  		page.setRelevance(prob);
-		  		System.out.println(">>>PROCESSING: " + page.getIdentifier() + " PROB:" + prob);
-		  		if(prob > this.relevanceThreshold){
-		  			targetRepository.insert(page);
-		  			if(getBacklinks){//set the page is as authority if using backlinks
-		  				page.setAuth(true);
-		  			}
-		  			linkStorage.insert(page);
-		  			relevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
-		  			totalOnTopicPages++;
-		  		}else{
-		  			if(!hardFocus){
-		  				if(getBacklinks){
-		  					if(page.isHub()){
-		  						linkStorage.insert(page);
-		  					}
-		  				}else{
+		  if(targetClassifier != null){
+		  	double prob = targetClassifier.distributionForInstance(page)[0];
+		  	page.setRelevance(prob);
+		  	System.out.println(">>>PROCESSING: " + page.getIdentifier() + " PROB:" + prob);
+		  	if(prob > this.relevanceThreshold){
+		  		targetRepository.insert(page);
+		  		if(getBacklinks){//set the page is as authority if using backlinks
+		  			page.setAuth(true);
+		  		}
+		  		linkStorage.insert(page);
+		  		relevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
+		  		totalOnTopicPages++;
+		  	}else{
+		  		if(!hardFocus){
+		  			if(getBacklinks){
+		  				if(page.isHub()){
 		  					linkStorage.insert(page);
 		  				}
-		  			}
-		  			else
-		  			{
-		  				nonRelevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(prob) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
+		  			}else{
+		  				linkStorage.insert(page);
 		  			}
 		  		}
+		  		else
+		  		{
+		  			nonRelevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(prob) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
+		  		}
+		  	}
 		  	}else{
 		  		page.setRelevance(1);
 		  		page.setAuth(true);
@@ -168,7 +155,6 @@ public class TargetStorage  extends StorageDefault{
 		  		targetRepository.insert(page,totalOfPages);
 		  		totalOnTopicPages++;
 		  	}
-      }
 			//Export information for dashboard
 			harvestRates.add(Integer.toString(totalOnTopicPages) + "\t" + 
                        String.valueOf(totalOfPages) + "\t" + 
@@ -267,14 +253,13 @@ public class TargetStorage  extends StorageDefault{
 		  int refreshFreq = config.getParamInt("SYNC_REFRESH_FREQUENCY");
       boolean isRefreshSync = config.getParamBoolean("REFRESH_SYNC");
 			float relevanceThreshold = config.getParamFloat("RELEVANCE_THRESHOLD");
-      int maxPages = config.getParamInt("MAX_PAGES_PER_DOMAIN");
 			TargetMonitor mnt = new TargetMonitor("data/data_monitor/crawledpages.csv", 
 																"data/data_monitor/relevantpages.csv", 
 																"data/data_monitor/harvestinfo.csv",
 																"data/data_monitor/nonrelevantpages.csv");//hard coding 
 			Storage targetStorage = new TargetStorage(targetClassifier,targetDirectory,targetRepository,
 					linkStorage,config.getParamInt("VISITED_PAGE_LIMIT"),config.getParamBoolean("HARD_FOCUS"),
-					config.getParamBoolean("BIPARTITE"), crawledFreq, relevantFreq, harvestinfoFreq, refreshFreq, isRefreshSync, relevanceThreshold, maxPages, mnt);
+					config.getParamBoolean("BIPARTITE"), crawledFreq, relevantFreq, harvestinfoFreq, refreshFreq, isRefreshSync, relevanceThreshold, mnt);
 
 			StorageBinder binder = new StorageBinder(config);
 			binder.bind(targetStorage);
