@@ -29,6 +29,7 @@ import java.util.HashSet;
 import java.util.StringTokenizer;
 import java.util.Vector;
 import java.util.HashMap;
+import java.util.ArrayList;
 
 
 import focusedCrawler.link.classifier.LinkClassifier;
@@ -110,35 +111,36 @@ public class BipartiteGraphManager {
 		PaginaURL parsedPage = page.getPageURL();
 		parsedPage.setRelevance(page.getRelevance());
 		LinkRelevance[] linksRelevance = outlinkClassifier.classify(parsedPage);
+    ArrayList<LinkRelevance> temp = new ArrayList<LinkRelevance>();
 		HashSet<String> relevantURLs = new HashSet<String>();
 		for (int i = 0; i < linksRelevance.length; i++) {
 			if(frontierManager.isRelevant(linksRelevance[i])){
 				String url = linksRelevance[i].getURL().toString();
-				relevantURLs.add(url);
-				outLinks += "\t" + url;
+        if(!relevantURLs.contains(url)){
+          String domain = linksRelevance[i].getDomainName();
+          Integer domainCount = domainCounter.get(domain);
+          if (domainCount == null)
+            domainCount = 0;
+          if (domainCount < maxPages){
+            domainCount++;
+            domainCounter.put(domain, domainCount);
+				    relevantURLs.add(url);
+            temp.add(linksRelevance[i]);
+				    outLinks += "\t" + url;
+          }
+        }
 			}
 		}
+    
+    LinkRelevance[] filteredLinksRelevance = temp.toArray(new LinkRelevance[relevantURLs.size()]);
 		LinkNeighborhood[] lns = parsedPage.getLinkNeighboor();
 		for (int i = 0; i < lns.length; i++) {
 			if(!relevantURLs.contains(lns[i].getLink().toString())){
 				lns[i] = null;
 			}
-      else{
-        String domain = lns[i].getDomainName();
-        Integer count = domainCounter.get(domain);
-        if (count == null)
-          count = 1;
-        if (count < maxPages){
-          count++;
-          domainCounter.put(domain, count);
-        }
-        else{
-          lns[i] = null;
-        }
-      }
 		}
 		rep.insertOutlinks(page.getURL(), lns);
-		frontierManager.insert(linksRelevance);
+		frontierManager.insert(filteredLinksRelevance);
 		if(count == pagesToCommit){
 			rep.commit();
 			count = 0;
