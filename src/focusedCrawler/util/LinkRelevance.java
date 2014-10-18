@@ -25,6 +25,7 @@ package focusedCrawler.util;
 
 import java.io.Serializable;
 import java.net.URL;
+import com.google.common.net.InternetDomainName;
 
 public class LinkRelevance implements Serializable{
 
@@ -53,6 +54,12 @@ public class LinkRelevance implements Serializable{
   public String getDomainName(){
     String domain = url.getHost();
     return domain.startsWith("www.") ? domain.substring(4) : domain;
+  }
+
+  public String getTopLevelDomainName(){
+    String domain = this.getDomainName();
+    InternetDomainName topPrivateDomain = InternetDomainName.from(domain).topPrivateDomain();
+    return topPrivateDomain.toString();  
   }
 
 

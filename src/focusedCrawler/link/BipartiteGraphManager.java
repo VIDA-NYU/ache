@@ -117,11 +117,11 @@ public class BipartiteGraphManager {
 			if(frontierManager.isRelevant(linksRelevance[i])){
 				String url = linksRelevance[i].getURL().toString();
         if(!relevantURLs.contains(url)){
-          String domain = linksRelevance[i].getDomainName();
+          String domain = linksRelevance[i].getTopLevelDomainName();
           Integer domainCount = domainCounter.get(domain);
           if (domainCount == null)
             domainCount = 0;
-          if (domainCount < maxPages){
+          if (domainCount < maxPages){//Stop Condition
             domainCount++;
             domainCounter.put(domain, domainCount);
 				    relevantURLs.add(url);
