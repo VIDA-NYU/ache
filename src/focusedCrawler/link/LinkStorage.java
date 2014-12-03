@@ -293,7 +293,7 @@ public class LinkStorage extends StorageDefault{
        }else{
            manager = new BipartiteGraphManager(frontierManager,graphRep,linkClassifier,null);
        }
-			 LinkMonitor mnt = new LinkMonitor("data/data_monitor/frontierpages.csv", "data/data_monitor/outlinks.csv");//hard coding file name 
+	   LinkMonitor mnt = new LinkMonitor("data/data_monitor/frontierpages.csv", "data/data_monitor/outlinks.csv");//hard coding file name 
        int freq = config.getParamInt("FRONTIER_REFRESH_FREQUENCY");
        int maxPages = config.getParamInt("MAX_PAGES_PER_DOMAIN");
        manager.setMaxPages(maxPages);      
