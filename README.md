@@ -14,7 +14,7 @@ If you want to compile ACHE from source code, use compile_crawler.sh:
         $./script/compile_crawler.sh
   
   
-Building a Model for ACHE's Page Classifier
+Build a model for ACHE's page classifier
 --------------------------------------------
 To focus on a certain topic, say HIV, ACHE needs to have accddess to a model of its content. This model is then 
 used by a classifier to decide, given a new crawled page, whether it is on-topic or not. Assume that you store positive and negative examples in two directories postive and negative respectively. Also, these directories are placed in training_data directory. Here is how you build a model from these examples:
@@ -40,7 +40,7 @@ Note that all urls are placed in single line. Now you are ready to run the crawl
 - *Second parameter* is the seed file.
 - *Third parameter* is path to model directory.
 
-Configuring ACHE to Use its Link Classifier
+Configure ACHE to Use its Link Classifier
 --------------------------------------------
 ACHE has a link classifier that, via exploitation and exploration, predicts which links are promising to follow. It operates under an online learning fashion. To use ACHE's link classifier:
 
@@ -53,7 +53,7 @@ If you want to stop ACHE's execution, just type:
 
         $./script/stop_crawler.sh
 
-Analysing ACHE's Execution
+Monitor ACHE's execution
 ---------------------------
 To analyse ACHE's execution, you can either check its logs or the data that is being crawled. 
 The log files are log/crawler.log, log/link_storage.log, and log/target_storage.log. Some exceptions in 
