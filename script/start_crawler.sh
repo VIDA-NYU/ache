@@ -5,6 +5,7 @@ then
     SEED_PATH=$2
     MODEL_PATH=$3
 else
+    #default parameters
     CONFIG_PATH='conf/'
     SEED_PATH='conf/seeds/ht.seeds'
     MODEL_PATH='conf/models/ht'
