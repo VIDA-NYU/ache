@@ -40,13 +40,6 @@ Note that all urls are placed in single line. Now you are ready to run the crawl
 - **Second parameter** is the seed file.
 - **Third parameter** is path to model directory.
 
-Configure ACHE to Use its Link Classifier
---------------------------------------------
-ACHE has a link classifier that, via exploitation and exploration, predicts which links are promising to follow. It operates under an online learning fashion. To use ACHE's link classifier:
-
-- Set parameter ONLINE_LEARNING to TRUE in file conf/link_storage/link_storage.cfg
-- Set parameter HARD_FOCUS to TRUE in file conf/target_storage/target_storage.cfg
-
 Stop ACHE
 --------------------------------------------
 If you want to stop ACHE's execution, just type:
