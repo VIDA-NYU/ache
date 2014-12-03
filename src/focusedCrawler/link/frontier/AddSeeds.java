@@ -14,11 +14,15 @@ public class AddSeeds {
 
 	public static void main(String[] args) {
 		try {
-			focusedCrawler.util.ParameterFile config = new focusedCrawler.util.ParameterFile(args[0]);
+            String linkConfigFile = args[0] + "/link_storage/link_storage.cfg";
+            String seedFile = args[1];
+			focusedCrawler.util.ParameterFile config = new focusedCrawler.util.ParameterFile(linkConfigFile);
+			focusedCrawler.util.ParameterFile seedConfig = new focusedCrawler.util.ParameterFile(seedFile);
 			String dir = config.getParam("LINK_DIRECTORY");
 			PersistentHashtable urls = new PersistentHashtable(dir,1000);
 			FrontierTargetRepositoryBaseline frontier = new FrontierTargetRepositoryBaseline(urls,10000);
 			int count = 0;
+            /*
 			if(args.length > 1){
 				BufferedReader input = new BufferedReader(new FileReader(args[1]));
 				for (String line1 = input.readLine(); line1 != null; line1 = input.readLine()) {
@@ -35,8 +39,13 @@ public class AddSeeds {
 //					System.out.println(added);
 					count++;
 				}
-			}
-			System.out.println("# SEEDS:" + count);
+			}*/
+            String[] seeds = seedConfig.getParam("SEEDS"," ");
+            for (int i = 0; i < seeds.length; i++) {
+              urls.put(seeds[i], "299");
+              count++;
+            }
+			System.out.println("Number of seeds:" + count);
 			frontier.close();
 		}
 		catch (MalformedURLException ex) {

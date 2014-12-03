@@ -211,7 +211,9 @@ public class LinkStorage extends StorageDefault{
   public static void main(String[] args) throws FrontierPersistentException {
 
      try{
-       ParameterFile config = new ParameterFile(args[0]);
+       String configPath = args[0];
+       String linkConfigFile = configPath + "/link_storage/link_storage.cfg";
+       ParameterFile config = new ParameterFile(linkConfigFile);
        LinkClassifierFactory factory = new LinkClassifierFactoryImpl(config);
        LinkClassifier linkClassifier = factory.createLinkClassifier(config.getParam("TYPE_OF_CLASSIFIER"));
        PriorityQueueLink queue = new PriorityQueueLink(config.getParamInt("MAX_SIZE_LINK_QUEUE"));
@@ -221,12 +223,10 @@ public class LinkStorage extends StorageDefault{
        boolean useScope = config.getParamBoolean("USE_SCOPE");
        System.out.println("USE_SCOPE:" + useScope);
        if(useScope){
-    	   String[] hosts = config.getParam("HOSTS", " ");
            HashMap<String,Integer> scope = new HashMap<String,Integer>();
-           for (int i = 0; i < hosts.length; i++) {
-               scope.put(hosts[i], new Integer(1));
-           }
-           String[] urls = config.getParam("SEEDS", " ");
+           String seedFile = args[1];
+           ParameterFile seedConfig = new ParameterFile(seedFile);
+           String[] urls = seedConfig.getParam("SEEDS", " ");
            for (int i = 0; i < urls.length; i++) {
         	   java.net.URL url = new java.net.URL(urls[i]);
         	   String host = url.getHost();
