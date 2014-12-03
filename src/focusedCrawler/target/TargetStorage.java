@@ -219,21 +219,28 @@ public class TargetStorage  extends StorageDefault{
 
 	public static void main(String[] args) {
 		try{
-			ParameterFile config = new ParameterFile(args[0]);
-			StopList stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));
+            String configPath = args[0];
+            String targetConfFile = configPath + "/target_storage/target_storage.cfg";
+			ParameterFile config = new ParameterFile(targetConfFile);
+            String stoplistFile = configPath  + "/stoplist.txt"; //default
+			StopList stoplist = new StopListArquivo(stoplistFile);
 			boolean useClassifier = config.getParamBoolean("USE_CLASSIFIER");
 			TargetClassifier targetClassifier = null;
 			//if one wants to use a classifier
 			if(useClassifier){
-				InputStream is = new FileInputStream(config.getParam("FILE_CLASSIFIER"));
+                String modelPath = args[1];
+                String modelFile = modelPath + "/pageclassifier.model";
+                String featureFile = modelPath + "/pageclassifier.features";
+                ParameterFile featureConfig = new ParameterFile(featureFile);
+				InputStream is = new FileInputStream(modelFile);
 				ObjectInputStream objectInputStream = new ObjectInputStream(is);
 				Classifier classifier = (Classifier) objectInputStream.readObject();
-				String[] attributes = config.getParam("ATTRIBUTES", " ");
+				String[] attributes = featureConfig.getParam("ATTRIBUTES", " ");
 				weka.core.FastVector vectorAtt = new weka.core.FastVector();
 				for (int i = 0; i < attributes.length; i++) {
 					vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
 				}
-				String[] classValues = config.getParam("CLASS_VALUES", " ");
+				String[] classValues = featureConfig.getParam("CLASS_VALUES", " ");
 				weka.core.FastVector classAtt = new weka.core.FastVector();
 				for (int i = 0; i < classValues.length; i++) {
 					classAtt.addElement(classValues[i]);
@@ -247,22 +254,22 @@ public class TargetStorage  extends StorageDefault{
 			TargetRepository targetRepository = new TargetFileRepository(targetDirectory);
 			ParameterFile linkStorageConfig = new ParameterFile(config.getParam("LINK_STORAGE_FILE"));
 			Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
-		  int crawledFreq = config.getParamInt("CRAWLED_REFRESH_FREQUENCY");
-		  int relevantFreq = config.getParamInt("RELEVANT_REFRESH_FREQUENCY");
-		  int harvestinfoFreq = config.getParamInt("HARVESTINFO_REFRESH_FREQUENCY");
-		  int refreshFreq = config.getParamInt("SYNC_REFRESH_FREQUENCY");
-      boolean isRefreshSync = config.getParamBoolean("REFRESH_SYNC");
-			float relevanceThreshold = config.getParamFloat("RELEVANCE_THRESHOLD");
-			TargetMonitor mnt = new TargetMonitor("data/data_monitor/crawledpages.csv", 
+		    int crawledFreq = config.getParamInt("CRAWLED_REFRESH_FREQUENCY");
+		    int relevantFreq = config.getParamInt("RELEVANT_REFRESH_FREQUENCY");
+		    int harvestinfoFreq = config.getParamInt("HARVESTINFO_REFRESH_FREQUENCY");
+		    int refreshFreq = config.getParamInt("SYNC_REFRESH_FREQUENCY");
+            boolean isRefreshSync = config.getParamBoolean("REFRESH_SYNC");
+	        float relevanceThreshold = config.getParamFloat("RELEVANCE_THRESHOLD");
+		    TargetMonitor mnt = new TargetMonitor("data/data_monitor/crawledpages.csv", 
 																"data/data_monitor/relevantpages.csv", 
 																"data/data_monitor/harvestinfo.csv",
 																"data/data_monitor/nonrelevantpages.csv");//hard coding 
-			Storage targetStorage = new TargetStorage(targetClassifier,targetDirectory,targetRepository,
+		    Storage targetStorage = new TargetStorage(targetClassifier,targetDirectory,targetRepository,
 					linkStorage,config.getParamInt("VISITED_PAGE_LIMIT"),config.getParamBoolean("HARD_FOCUS"),
 					config.getParamBoolean("BIPARTITE"), crawledFreq, relevantFreq, harvestinfoFreq, refreshFreq, isRefreshSync, relevanceThreshold, mnt);
 
-			StorageBinder binder = new StorageBinder(config);
-			binder.bind(targetStorage);
+		    StorageBinder binder = new StorageBinder(config);
+		    binder.bind(targetStorage);
 		}catch (java.io.IOException ex) {
 			ex.printStackTrace();
 		}catch (StorageBinderException ex) {
