@@ -21,10 +21,10 @@ used by a classifier to decide, given a new crawled page, whether it is on-topic
     
         $./script/build_model.sh training_data conf/models/new_model
 
-- *First parameter* is path to the directory containing positive and negative examples.
-- *Second parameter* is the new directory that you want to save the generated model. We recommend to save the models in conf directory for easy management.
+- **First parameter** is path to the directory containing positive and negative examples.
+- **Second parameter** is the new directory that you want to save the generated model. We recommend to save the models in conf directory for easy management.
   
-This script will generate two files in conf/models/new_model: pageclassifier.model and pageclassifier.features.
+This script will generate two files in conf/models/new_model: **pageclassifier.model** and **pageclassifier.features**.
 
 Start ACHE
 --------------------------------------------
@@ -36,9 +36,9 @@ Note that all urls are placed in single line. Now you are ready to run the crawl
 
         $./script/start_crawler.sh conf/ conf/seeds/topics.seeds conf/models/new_model/
 
-- *First parameter* is path to the config directory.
-- *Second parameter* is the seed file.
-- *Third parameter* is path to model directory.
+- **First parameter** is path to the config directory.
+- **Second parameter** is the seed file.
+- **Third parameter** is path to model directory.
 
 Configure ACHE to Use its Link Classifier
 --------------------------------------------
@@ -56,10 +56,10 @@ If you want to stop ACHE's execution, just type:
 Monitor ACHE's execution
 ---------------------------
 To analyse ACHE's execution, you can either check its logs or the data that is being crawled. 
-The log files are log/crawler.log, log/link_storage.log, and log/target_storage.log. Some exceptions in 
+The log files are **log/crawler.log**, **log/link_storage.log**, and **log/target_storage.log**. Some exceptions in 
 log files are ok, as long as they're not in the link_storage file. Also in the logs, PROB indicates the
 probability that a certain page is on-topic. 
 The data that is being crawled is under the directory named data. In particular, one can check the HTML 
-pages under data/data_target.
-Besides log files, crawler's status is also updated in runtime at data/data_monitor. This information
-could be used to visualize the crawler's status while it is running
+pages under **data/data_target**.
+Besides log files, crawler's status is also updated in runtime at **data/data_monitor**. This information
+could be used to visualize the crawler's status while it is running.
