@@ -1,15 +1,15 @@
-memexcrawler
+MemexCrawler
 ============
 Collaboration between NYU and Continnum Analytics in Memex Project
 
+About ACHE
 --------------------------------------------
-* About ACHE
 
   The focused crawler in this package, ACHE (Adaptative Crawler for Hidden-Web Entries), was created by Luciano Barbosa and Juliana Freire. 
   It uses the contents of pages to focus the crawl on a topic and, additionally, is able to learn link patterns that indicate which links are 
   more promising to follow [Barbosa and Freire; WWW 2007].
 
-* Building a Model for ACHE's Page Classifier
+Building a Model for ACHE's Page Classifier
 --------------------------------------------
 
 To focus on a certain topic, say HIV, ACHE needs to have accddess to a model of its content. This model is then 
@@ -24,7 +24,7 @@ training_data directory. Here is how you build a model from these examples:
   
 This script will generate two files in conf/models/new_model: pageclassifier.model and pageclassifier.features
 
-* Start ACHE
+Start ACHE
 --------------------------------------------
   
 After you generated a model and saved it to conf/models/new_model. You need to prepare the seed list for the crawler. We recommend 
@@ -50,14 +50,14 @@ an online learning fashion. To use ACHE's link classifier:
 - Set parameter ONLINE_LEARNING to TRUE in file conf/link_storage/link_storage.cfg
 - Set parameter HARD_FOCUS to TRUE in file conf/target_storage/target_storage.cfg
 
-* Compile ACHE
+Compile ACHE
 --------------------------------------------
 
 If you want to compile ACHE from source code, use compile_crawler.sh:
 
     $./script/compile_crawler.sh
   
-* Stop ACHE
+Stop ACHE
 --------------------------------------------
 
 If you want to stop ACHE's execution, just type:
@@ -65,7 +65,7 @@ If you want to stop ACHE's execution, just type:
         $./script/stop_crawler.sh
 
 --------------------------------------------
-* Analysing ACHE's Execution
+Analysing ACHE's Execution
 
   To analyse ACHE's execution, you can either check its logs or the data that is being crawled. 
 
