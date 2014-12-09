@@ -40,7 +40,8 @@ public class AddSeeds {
 					count++;
 				}
 			}*/
-            String[] seeds = seedConfig.getParam("SEEDS"," ");
+            //String[] seeds = seedConfig.getParam("SEEDS"," ");
+            String[] seeds = focusedCrawler.util.ParameterFile.getSeeds(seedFile);
             for (int i = 0; i < seeds.length; i++) {
               urls.put(seeds[i], "299");
               count++;

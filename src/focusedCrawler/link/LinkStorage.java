@@ -225,8 +225,9 @@ public class LinkStorage extends StorageDefault{
        if(useScope){
            HashMap<String,Integer> scope = new HashMap<String,Integer>();
            String seedFile = args[1];
-           ParameterFile seedConfig = new ParameterFile(seedFile);
-           String[] urls = seedConfig.getParam("SEEDS", " ");
+                    //ParameterFile seedConfig = new ParameterFile(seedFile);
+           //String[] urls = seedConfig.getParam("SEEDS", " ");
+           String[] urls = ParameterFile.getSeeds(seedFile);
            for (int i = 0; i < urls.length; i++) {
         	   java.net.URL url = new java.net.URL(urls[i]);
         	   String host = url.getHost();

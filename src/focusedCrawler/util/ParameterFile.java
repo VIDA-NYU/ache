@@ -109,6 +109,28 @@ public class ParameterFile {
         loadHash();
     }
 
+    static public String[] getSeeds(String seedFile){
+        ArrayList<String> urls = new ArrayList<String>();
+        try{
+            File file = new File(seedFile);
+            FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                urls.add(line);
+            }
+            fileReader.close();
+            String[] res = new String[urls.size()];
+            res = urls.toArray(res);
+            return res;
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            System.out.println("Error while reading seed list");
+            return null;
+        }
+    }
+
     public PrintStream log() {
         if (log == null) return System.out;
         else return log;
