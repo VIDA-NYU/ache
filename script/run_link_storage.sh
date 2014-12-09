@@ -9,4 +9,4 @@ else
     CONFIG_PATH='conf/'
     SEED_PATH='conf/seeds/ht.seeds'
 fi
-java  -Xmx32g -cp "libs/guava-18.0.jar:libs/je-3.3.75.jar:libs/lucene2.4.0.jar:libs/xercesImpl.jar:libs/xmlParserAPIs.jar:libs/xml-apis.jar:libs/nekohtml.jar:libs/weka.jar:class" focusedCrawler.link.LinkStorage $CONFIG_PATH $SEED_PATH > log/link_storage.log 2>&1 &
+java  -Xmx32g -cp "libs/guava-18.0.jar:libs/je-3.3.75.jar:libs/lucene2.4.0.jar:libs/xercesImpl-2.5.0.jar:libs/nekohtml-0.9.5.jar:libs/weka-3.6.2.jar:class" focusedCrawler.link.LinkStorage $CONFIG_PATH $SEED_PATH > log/link_storage.log 2>&1 &
