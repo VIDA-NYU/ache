@@ -16,7 +16,7 @@ If you want to compile ACHE from source code, use compile_crawler.sh:
   
 Build a model for ACHE's page classifier
 --------------------------------------------
-To focus on a certain topic, say HIV, ACHE needs to have accddess to a model of its content. This model is then 
+To focus on a certain topic ACHE needs to have accddess to a model of its content. This model is then 
 used by a classifier to decide, given a new crawled page, whether it is on-topic or not. Assume that you store positive and negative examples in two directories postive and negative respectively. Also, these directories are placed in training_data directory. Here is how you build a model from these examples:
     
         $./script/build_model.sh training_data conf/models/new_model
@@ -28,11 +28,13 @@ This script will generate two files in conf/models/new_model: **pageclassifier.m
 
 Start ACHE
 --------------------------------------------
-After you generated a model and saved it to conf/models/new_model. You need to prepare the seed list for the crawler. We recommend to save the seed list in conf/seeds for easy management. Assume that you have a seed file: conf/seeds/topic.seeds. Here is an example of seed file:
+After you generated a model and saved it to conf/models/new_model. You need to prepare the seed list for the crawler. We recommend to save the seed list in conf/seeds for easy management. Assume that you have a seed file: conf/seeds/topic.seeds, in which each url is placed in one line. Here is an example of seed file:
   
-        SEEDS http://www.seed1.com http://www.seed2.com
+        http://www.seed1.com
+        http://www.seed2.com
+        http://www.seed3.com
   
-Note that all urls are placed in single line. Now you are ready to run the crawler:
+Now you are ready to run the crawler:
 
         $./script/start_crawler.sh conf/ conf/seeds/topics.seeds conf/models/new_model/
 
