@@ -1,16 +1,17 @@
-rm -fr $1/data
-mkdir $1/data
-mkdir $1/data/data_monitor
-mkdir $1/data/data_target
-mkdir $1/data/data_url
-mkdir $1/data/data_url/dir
-mkdir $1/data/data_host/
-mkdir $1/data/data_backlinks/
-mkdir $1/data/data_backlinks/dir
-mkdir $1/data/data_backlinks/hubHash
-mkdir $1/data/data_backlinks/authorityHash
-mkdir $1/data/data_backlinks/url
-mkdir $1/data/data_backlinks/auth_id
-mkdir $1/data/data_backlinks/auth_graph
-mkdir $1/data/data_backlinks/hub_id
-mkdir $1/data/data_backlinks/hub_graph
+DATA_PATH=$1
+rm -fr $DATA_PATH
+mkdir $DATA_PATH
+mkdir $DATA_PATH/data_monitor
+mkdir $DATA_PATH/data_target
+mkdir $DATA_PATH/data_url
+mkdir $DATA_PATH/data_url/dir
+mkdir $DATA_PATH/data_host/
+mkdir $DATA_PATH/data_backlinks/
+mkdir $DATA_PATH/data_backlinks/dir
+mkdir $DATA_PATH/data_backlinks/hubHash
+mkdir $DATA_PATH/data_backlinks/authorityHash
+mkdir $DATA_PATH/data_backlinks/url
+mkdir $DATA_PATH/data_backlinks/auth_id
+mkdir $DATA_PATH/data_backlinks/auth_graph
+mkdir $DATA_PATH/data_backlinks/hub_id
+mkdir $DATA_PATH/data_backlinks/hub_graph

@@ -220,6 +220,8 @@ public class TargetStorage  extends StorageDefault{
 	public static void main(String[] args) {
 		try{
             String configPath = args[0];
+            String modelPath = args[1];
+            String dataPath = args[2];
             String targetConfFile = configPath + "/target_storage/target_storage.cfg";
             String linkConfFile = configPath + "/link_storage/link_storage.cfg";
 			ParameterFile config = new ParameterFile(targetConfFile);
@@ -229,7 +231,6 @@ public class TargetStorage  extends StorageDefault{
 			TargetClassifier targetClassifier = null;
 			//if one wants to use a classifier
 			if(useClassifier){
-                String modelPath = args[1];
                 String modelFile = modelPath + "/pageclassifier.model";
                 String featureFile = modelPath + "/pageclassifier.features";
                 ParameterFile featureConfig = new ParameterFile(featureFile);
@@ -251,7 +252,7 @@ public class TargetStorage  extends StorageDefault{
 				insts.setClassIndex(attributes.length);
 				targetClassifier = new TargetClassifierImpl(classifier, insts, attributes, stoplist);
 			}
-			String targetDirectory = config.getParam("TARGET_STORAGE_DIRECTORY");
+			String targetDirectory = dataPath + "/" + config.getParam("TARGET_STORAGE_DIRECTORY");
 			TargetRepository targetRepository = new TargetFileRepository(targetDirectory);
 			ParameterFile linkStorageConfig = new ParameterFile(linkConfFile);
 			Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
@@ -261,10 +262,10 @@ public class TargetStorage  extends StorageDefault{
 		    int refreshFreq = config.getParamInt("SYNC_REFRESH_FREQUENCY");
             boolean isRefreshSync = config.getParamBoolean("REFRESH_SYNC");
 	        float relevanceThreshold = config.getParamFloat("RELEVANCE_THRESHOLD");
-		    TargetMonitor mnt = new TargetMonitor("data/data_monitor/crawledpages.csv", 
-																"data/data_monitor/relevantpages.csv", 
-																"data/data_monitor/harvestinfo.csv",
-																"data/data_monitor/nonrelevantpages.csv");//hard coding 
+		    TargetMonitor mnt = new TargetMonitor(dataPath + "/data_monitor/crawledpages.csv", 
+											      dataPath + "/data_monitor/relevantpages.csv", 
+											      dataPath + "/data_monitor/harvestinfo.csv",
+												  dataPath + "/data_monitor/nonrelevantpages.csv");
 		    Storage targetStorage = new TargetStorage(targetClassifier,targetDirectory,targetRepository,
 					linkStorage,config.getParamInt("VISITED_PAGE_LIMIT"),config.getParamBoolean("HARD_FOCUS"),
 					config.getParamBoolean("BIPARTITE"), crawledFreq, relevantFreq, harvestinfoFreq, refreshFreq, isRefreshSync, relevanceThreshold, mnt);

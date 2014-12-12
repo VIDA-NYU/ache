@@ -212,20 +212,21 @@ public class LinkStorage extends StorageDefault{
 
      try{
        String configPath = args[0];
+       String seedFile = args[1];
+       String dataPath = args[2];
        String linkConfigFile = configPath + "/link_storage/link_storage.cfg";
        String stoplistFile = configPath + "/stoplist.txt";
        ParameterFile config = new ParameterFile(linkConfigFile);
        LinkClassifierFactory factory = new LinkClassifierFactoryImpl(stoplistFile);
        LinkClassifier linkClassifier = factory.createLinkClassifier(config.getParam("TYPE_OF_CLASSIFIER"));
        PriorityQueueLink queue = new PriorityQueueLink(config.getParamInt("MAX_SIZE_LINK_QUEUE"));
-       PersistentHashtable persistentHash = new PersistentHashtable(config.getParam("LINK_DIRECTORY"),config.getParamInt("MAX_CACHE_URLS_SIZE"));
+       PersistentHashtable persistentHash = new PersistentHashtable(dataPath + "/" + config.getParam("LINK_DIRECTORY"),config.getParamInt("MAX_CACHE_URLS_SIZE"));
        FrontierTargetRepositoryBaseline frontier = null;
        boolean getOutlinks = config.getParamBoolean("GRAB_LINKS"); 
        boolean useScope = config.getParamBoolean("USE_SCOPE");
        System.out.println("USE_SCOPE:" + useScope);
        if(useScope){
            HashMap<String,Integer> scope = new HashMap<String,Integer>();
-           String seedFile = args[1];
                     //ParameterFile seedConfig = new ParameterFile(seedFile);
            //String[] urls = seedConfig.getParam("SEEDS", " ");
            String[] urls = ParameterFile.getSeeds(seedFile);
@@ -264,11 +265,11 @@ public class LinkStorage extends StorageDefault{
        Storage linkStorage = null;
        
        System.out.println(">> LOADING GRAPH...");
-       PersistentHashtable url2id = new PersistentHashtable(config.getParam("URL_ID_DIRECTORY"),100000);
-       PersistentHashtable authID = new PersistentHashtable(config.getParam("AUTH_ID_DIRECTORY"),100000);
-       PersistentHashtable authGraph = new PersistentHashtable(config.getParam("AUTH_GRAPH_DIRECTORY"),100000);
-       PersistentHashtable hubID = new PersistentHashtable(config.getParam("HUB_ID_DIRECTORY"),100000);
-       PersistentHashtable hubGraph = new PersistentHashtable(config.getParam("HUB_GRAPH_DIRECTORY"),100000);
+       PersistentHashtable url2id = new PersistentHashtable(dataPath + "/" + config.getParam("URL_ID_DIRECTORY"),100000);
+       PersistentHashtable authID = new PersistentHashtable(dataPath + "/" + config.getParam("AUTH_ID_DIRECTORY"),100000);
+       PersistentHashtable authGraph = new PersistentHashtable(dataPath + "/" + config.getParam("AUTH_GRAPH_DIRECTORY"),100000);
+       PersistentHashtable hubID = new PersistentHashtable(dataPath + "/" + config.getParam("HUB_ID_DIRECTORY"),100000);
+       PersistentHashtable hubGraph = new PersistentHashtable(dataPath + "/" + config.getParam("HUB_GRAPH_DIRECTORY"),100000);
        BipartiteGraphRep graphRep = new BipartiteGraphRep(authGraph,url2id,authID,hubID,hubGraph);
        System.out.println(">> DONE GRAPH.");
 //       //to avoid hitting backlink site
@@ -295,7 +296,7 @@ public class LinkStorage extends StorageDefault{
        }else{
            manager = new BipartiteGraphManager(frontierManager,graphRep,linkClassifier,null);
        }
-	   LinkMonitor mnt = new LinkMonitor("data/data_monitor/frontierpages.csv", "data/data_monitor/outlinks.csv");//hard coding file name 
+	   LinkMonitor mnt = new LinkMonitor(dataPath + "/" + "data_monitor/frontierpages.csv", dataPath + "/" + "data_monitor/outlinks.csv");
        int freq = config.getParamInt("FRONTIER_REFRESH_FREQUENCY");
        int maxPages = config.getParamInt("MAX_PAGES_PER_DOMAIN");
        manager.setMaxPages(maxPages);      
@@ -307,7 +308,7 @@ public class LinkStorage extends StorageDefault{
     	   WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
     	   ClassifierBuilder cb = new ClassifierBuilder(graphRep,stoplist,wrapper,frontier);
     	   System.out.println("ONLINE LEARNING:" + config.getParam("ONLINE_METHOD"));
-    	   OnlineLearning onlineLearning = new OnlineLearning(frontier, manager, cb, config.getParam("ONLINE_METHOD"),config.getParam("TARGET_STORAGE_DIRECTORY"));
+    	   OnlineLearning onlineLearning = new OnlineLearning(frontier, manager, cb, config.getParam("ONLINE_METHOD"), dataPath + "/" + config.getParam("TARGET_STORAGE_DIRECTORY"));
     	   ((LinkStorage)linkStorage).setOnlineLearning(onlineLearning,config.getParamInt("LEARNING_LIMIT"));
        }
        StorageBinder binder = new StorageBinder(config);

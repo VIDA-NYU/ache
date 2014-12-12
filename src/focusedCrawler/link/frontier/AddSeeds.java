@@ -16,9 +16,10 @@ public class AddSeeds {
 		try {
             String linkConfigFile = args[0] + "/link_storage/link_storage.cfg";
             String seedFile = args[1];
+            String dataPath = args[2];
 			focusedCrawler.util.ParameterFile config = new focusedCrawler.util.ParameterFile(linkConfigFile);
 			focusedCrawler.util.ParameterFile seedConfig = new focusedCrawler.util.ParameterFile(seedFile);
-			String dir = config.getParam("LINK_DIRECTORY");
+			String dir = dataPath + "/" + config.getParam("LINK_DIRECTORY");
 			PersistentHashtable urls = new PersistentHashtable(dir,1000);
 			FrontierTargetRepositoryBaseline frontier = new FrontierTargetRepositoryBaseline(urls,10000);
 			int count = 0;
