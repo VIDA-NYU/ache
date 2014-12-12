@@ -36,17 +36,19 @@ After you generated a model and saved it to conf/models/new_model. You need to p
   
 Now you are ready to run the crawler:
 
-        $./script/start_crawler.sh conf/ conf/seeds/topics.seeds conf/models/new_model/
+        $./script/start_crawler.sh crawler_name conf/conf_default conf/seeds/topics.seeds conf/models/new_model/ data
 
-- **First parameter** is path to the config directory.
-- **Second parameter** is the seed file.
-- **Third parameter** is path to model directory.
+- **First parameter** is a string to name the crawler.
+- **Second parameter** is path to the config directory.
+- **Third parameter** is the seed file.
+- **Fourth parameter** is path to model directory.
+- **Fifth parameter** is path to data output directory.
 
 Stop ACHE
 --------------------------------------------
 If you want to stop ACHE's execution, just type:
 
-        $./script/stop_crawler.sh
+        $./script/stop_crawler.sh crawler_name
 
 Monitor ACHE's execution
 ---------------------------
