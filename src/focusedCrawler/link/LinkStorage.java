@@ -213,8 +213,9 @@ public class LinkStorage extends StorageDefault{
      try{
        String configPath = args[0];
        String linkConfigFile = configPath + "/link_storage/link_storage.cfg";
+       String stoplistFile = configPath + "/stoplist.txt";
        ParameterFile config = new ParameterFile(linkConfigFile);
-       LinkClassifierFactory factory = new LinkClassifierFactoryImpl(config);
+       LinkClassifierFactory factory = new LinkClassifierFactoryImpl(stoplistFile);
        LinkClassifier linkClassifier = factory.createLinkClassifier(config.getParam("TYPE_OF_CLASSIFIER"));
        PriorityQueueLink queue = new PriorityQueueLink(config.getParamInt("MAX_SIZE_LINK_QUEUE"));
        PersistentHashtable persistentHash = new PersistentHashtable(config.getParam("LINK_DIRECTORY"),config.getParamInt("MAX_CACHE_URLS_SIZE"));
@@ -301,7 +302,8 @@ public class LinkStorage extends StorageDefault{
        linkStorage = new LinkStorage(manager,frontierManager,getBacklinks,getOutlinks, mnt, freq);//hard coding interval
        boolean useOnlineLearning = config.getParamBoolean("ONLINE_LEARNING");
        if(useOnlineLearning){
-    	   StopList stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));
+    	  // StopList stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));
+    	   StopList stoplist = new StopListArquivo(stoplistFile);
     	   WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
     	   ClassifierBuilder cb = new ClassifierBuilder(graphRep,stoplist,wrapper,frontier);
     	   System.out.println("ONLINE LEARNING:" + config.getParam("ONLINE_METHOD"));

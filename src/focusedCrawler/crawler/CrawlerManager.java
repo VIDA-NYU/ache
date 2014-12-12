@@ -663,7 +663,10 @@ public class CrawlerManager extends Thread{
      public static void main(String[] args) throws IOException,
          NumberFormatException {
 
-       ParameterFile config = new ParameterFile(args[0]);
+       String crawlerConfigFile = args[0] + "/crawler/crawler.cfg";
+       String linkConfigFile = args[0] + "/link_storage/link_storage.cfg";
+       String formConfigFile = args[0] + "/target_storage/target_storage.cfg";
+       ParameterFile config = new ParameterFile(crawlerConfigFile);
        ThreadGroup tg = new ThreadGroup(config.getParam("ROBOT_THREAD_GROUP"));
        int numberRobots = Integer.valueOf(config.getParam("ROBOT_QUANTITY")).intValue();
        long restingTime = 0;
@@ -679,12 +682,10 @@ public class CrawlerManager extends Thread{
              "ROBOT_MANAGER_CHECKTIME")).longValue();
          long maxRobotLifeTime = Long.valueOf(config.getParam(
              "ROBOT_MANAGER_MAXTIME")).longValue();
-         ParameterFile configLinkStorage = new ParameterFile(config.getParam(
-             "CONFIG_LINK_STORAGE"));
+         ParameterFile configLinkStorage = new ParameterFile(linkConfigFile);
          Storage linkStorage = null;
          linkStorage = new StorageCreator(configLinkStorage).produce();
-         ParameterFile configFormStorage = new ParameterFile(config.getParam(
-             "CONFIG_FORM_STORAGE"));
+         ParameterFile configFormStorage = new ParameterFile(formConfigFile);
          Storage formStorage = new StorageCreator(configFormStorage).produce();
          CrawlerManager manager = new CrawlerManager(config, linkStorage,
                                                      configLinkStorage,

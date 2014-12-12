@@ -221,6 +221,7 @@ public class TargetStorage  extends StorageDefault{
 		try{
             String configPath = args[0];
             String targetConfFile = configPath + "/target_storage/target_storage.cfg";
+            String linkConfFile = configPath + "/link_storage/link_storage.cfg";
 			ParameterFile config = new ParameterFile(targetConfFile);
             String stoplistFile = configPath  + "/stoplist.txt"; //default
 			StopList stoplist = new StopListArquivo(stoplistFile);
@@ -252,7 +253,7 @@ public class TargetStorage  extends StorageDefault{
 			}
 			String targetDirectory = config.getParam("TARGET_STORAGE_DIRECTORY");
 			TargetRepository targetRepository = new TargetFileRepository(targetDirectory);
-			ParameterFile linkStorageConfig = new ParameterFile(config.getParam("LINK_STORAGE_FILE"));
+			ParameterFile linkStorageConfig = new ParameterFile(linkConfFile);
 			Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
 		    int crawledFreq = config.getParamInt("CRAWLED_REFRESH_FREQUENCY");
 		    int relevantFreq = config.getParamInt("RELEVANT_REFRESH_FREQUENCY");

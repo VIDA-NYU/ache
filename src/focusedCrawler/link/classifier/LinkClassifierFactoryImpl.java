@@ -65,10 +65,10 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory{
    * @param config ParameterFile configuration file
    */
 
-  public LinkClassifierFactoryImpl(ParameterFile config) {
+  public LinkClassifierFactoryImpl(String stoplistFile) {
     this.config = config;
     try {
-		stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));
+		stoplist = new StopListArquivo(stoplistFile);
 	} catch (IOException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
