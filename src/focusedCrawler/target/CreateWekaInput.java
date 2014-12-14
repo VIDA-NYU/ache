@@ -258,6 +258,10 @@ public class CreateWekaInput {
     		VSMElement elem = (VSMElement)bestWordsForm.elementAt(i);
     		if(elem.getWeight() > minDF){
     			header.append("@ATTRIBUTE ");
+                if(elem.getWord().equals("class")){
+                    //This is a hack, weka does not allow attribute with name class.
+                    elem.setWord("class-random-string");
+                }
     			header.append(elem.getWord());
     			attributes.add(elem.getWord());
     			header.append(" REAL");
