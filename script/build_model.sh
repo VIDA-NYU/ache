@@ -1,3 +1,4 @@
+#!/bin/bash
 DIRECTORY=$1 #Directory that contain training examples. it should have two subdirectories: positive and negative
 OUTPUT=$2 #output directory
 mkdir -p $OUTPUT
