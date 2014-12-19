@@ -5,4 +5,4 @@ java -cp "class/:libs/weka-stable-3.6.10.jar" focusedCrawler.target.CreateWekaIn
 java -cp libs/weka-stable-3.6.10.jar weka.classifiers.functions.SMO -M -d ${OUTPUT}/pageclassifier.model -t ${DIRECTORY}/weka.arff
 echo "CLASS_VALUES  S NS" > ${OUTPUT}/pageclassifier.features
 echo -n "ATTRIBUTES " >> ${OUTPUT}/pageclassifier.features
-cat ${DIRECTORY}/weka.arff | awk '{FS=" "; if (($1=="@ATTRIBUTE") && ($3=="REAL")) {print $2}}' | sed ':a;N;$!ba;s/\n/ /g' >> ${OUTPUT}/pageclassifier.features
+cat ${DIRECTORY}/weka.arff | awk '{FS=" "; if (($1=="@ATTRIBUTE") && ($3=="REAL")) {print $2}}' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' >> ${OUTPUT}/pageclassifier.features
