@@ -1,3 +1,4 @@
+#!/bin/sh
 
 while true
 do
@@ -6,7 +7,8 @@ do
   then
     sh script/runCrawler.sh
     sh script/runCrawler.sh
-    echo "rerun"
+    sh script/runCrawler.sh
+    echo "restart client"
   fi
   sleep 5m
 done

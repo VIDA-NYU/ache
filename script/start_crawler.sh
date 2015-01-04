@@ -1,3 +1,5 @@
+#!/bin/sh
+
 mkdir -p log
 if [ $# -eq 5 ]
 then
