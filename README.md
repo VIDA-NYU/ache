@@ -1,11 +1,5 @@
-MemexCrawler
+ACHE - Adaptative Crawler for Hidden-Web Entries
 ============
-Collaboration between NYU and Continnum Analytics in Memex Project
-
-About ACHE
---------------------------------------------
-The focused crawler in this package, ACHE (Adaptative Crawler for Hidden-Web Entries), was created by Luciano Barbosa and Juliana Freire. 
-It uses the contents of pages to focus the crawl on a topic and, additionally, is able to learn link patterns that indicate which links are more promising to follow [Barbosa and Freire; WWW 2007].
 
 Build ACHE
 --------------------------------------------
