@@ -1,0 +1,1599 @@
+
+<!doctype html>
+
+
+<!-- Conditionals add class to html tag with IE version and class of no-js.  no-js is removed by Modernizer if JS active -->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>	<html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>	<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>	<html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+
+<meta charset="UTF-8" />
+
+<!-- forces IE to use the most current rendering engine in versions 8+, also triggers Chrome Frame if user has it installed in IE6- IE8 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--Generic meta that is dynamic, leave blank -->
+<meta id="ctl00_mtKeywords" name="keywords" content=""></meta>
+<meta id="ctl00_mtDescription" name="description" content=""></meta>
+<meta id="ctl00_mtTaxonomyTerms" name="TaxonomyTerms" content=""></meta>
+<meta id="ctl00_mtGUID" name="GUID" content="{ED5A0500-EEEA-4D3E-8075-B22620819363}"></meta>
+
+<meta name="google-site-verification" content="99xXIP71eqru9ak3hf8p7ofHkKt8oXR3CeQDVNZVxic" />
+
+<script src="/js/modernizr.custom.25196.js"></script>
+
+<link href="/css/colorbox.css" rel="stylesheet" media="screen" />
+
+<link href="/css/flexslider.css" rel="stylesheet" media="screen" />
+
+<!-- links to CSS note, homepages get a unique print style sheet -->
+<link href="/css/shared.css" rel="stylesheet" media="screen" />
+
+<link id="ctl00_linkSubCSS" href="/css/sub.css" rel="Stylesheet" media="screen"></link>
+
+
+
+<link href="/css/print.css" rel="stylesheet" media="print" />
+<!--[if IE 8]><link href="/css/ie8.css" rel="stylesheet" media="screen"><![endif]-->
+<!--[if IE 7]><link href="/css/ie7.css" rel="stylesheet" media="screen"><![endif]-->
+<!--[if IE 6]><link href="/css/ie6.css" rel="stylesheet" media="screen"><![endif]-->
+<link rel="shortcut icon" href="/favicon.ico" />
+<link href="/css/mediaelementplayer.min.css" rel="stylesheet" media="screen" />
+
+
+<title>Plague | University of Maryland Medical Center</title>
+
+<meta id="ctl00_mtOGTitle" property="og:title" content="Plague"></meta>
+<meta property="og:type" content="website" />
+<meta id="ctl00_mtOGUrl" property="og:url" content="http://umm.edu/health/medical/ency/articles/plague"></meta>
+<meta id="ctl00_mtOGImage" property="og:image" content="http://umm.edu/images/fbimages/fblogo.jpg"></meta>
+<meta id="ctl00_Meta1" property="og:site_name" content="University of Maryland Medical Center"></meta>
+<meta id="ctl00_mtFBAdmins" property="fb:admins" content="11003399411,776217618,1127651989,1805655068,1278186384,1635500870"></meta>
+<meta id="ctl00_mtOGDesc" property="og:description" content=""></meta>
+<meta property="og:latitude" content="39.2878217" />
+<meta property="og:longitude" content="-76.624375" />
+<meta property="og:street-address" content="22 South Greene Street" />
+<meta property="og:locality" content="Baltimore" />
+<meta property="og:region" content="MD" />
+<meta property="og:postal-code" content="21201" />
+<meta property="og:country-name" content="USA" />
+
+<style>
+  input.star.starSelected { background-position: 0 0; }
+</style>
+
+
+<style type="text/css">
+     .ratings{
+            display:none;
+      }
+</style>
+
+<script type="text/javascript">
+function getWidth() {
+    if (self.innerWidth) {
+       return self.innerWidth;
+    }
+    else if (document.documentElement && document.documentElement.clientHeight){
+        return document.documentElement.clientWidth;
+    }
+    else if (document.body) {
+        return document.body.clientWidth;
+    }
+    return 0;
+}
+var xWidth = getWidth();
+</script>
+
+
+
+
+
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PFJGB7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+{'gtm.start': new Date().getTime(),event:'gtm.js'}
+);var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PFJGB7');</script>
+<!-- End Google Tag Manager -->
+   
+
+ <div class="call-us">
+	<a href="tel:8004925538"><span class="icon"></span>Call us</a>
+</div>
+
+    <form method="post" action="/health/medical/ency/articles/plague" id="formUmbrellaThreeCol">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJLTkzODg3ODE4D2QWCAIBD2QWAmYPZBYYAgEPFgIeB2NvbnRlbnRlZAIDDxYCHwBlZAIFDxYCHwBlZAIHDxYCHwAFJntFRDVBMDUwMC1FRUVBLTREM0UtODA3NS1CMjI2MjA4MTkzNjN9ZAILDxYCHgdWaXNpYmxlZ2QCDw8WAh4EVGV4dAUuUGxhZ3VlIHwgVW5pdmVyc2l0eSBvZiBNYXJ5bGFuZCBNZWRpY2FsIENlbnRlcmQCEQ8WAh8ABQZQbGFndWVkAhMPFgIfAAUyaHR0cDovL3VtbS5lZHUvaGVhbHRoL21lZGljYWwvZW5jeS9hcnRpY2xlcy9wbGFndWVkAhUPFgIfAAUpaHR0cDovL3VtbS5lZHUvaW1hZ2VzL2ZiaW1hZ2VzL2ZibG9nby5qcGdkAhkPFgIfAAVBMTEwMDMzOTk0MTEsNzc2MjE3NjE4LDExMjc2NTE5ODksMTgwNTY1NTA2OCwxMjc4MTg2Mzg0LDE2MzU1MDA4NzBkAhsPFgIfAGVkAh0PFgIfAgXpAzxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQogICAgIC5yYXRpbmdzew0KICAgICAgICAgICAgZGlzcGxheTpub25lOw0KICAgICAgfQ0KPC9zdHlsZT4NCg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KZnVuY3Rpb24gZ2V0V2lkdGgoKSB7DQogICAgaWYgKHNlbGYuaW5uZXJXaWR0aCkgew0KICAgICAgIHJldHVybiBzZWxmLmlubmVyV2lkdGg7DQogICAgfQ0KICAgIGVsc2UgaWYgKGRvY3VtZW50LmRvY3VtZW50RWxlbWVudCAmJiBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuY2xpZW50SGVpZ2h0KXsNCiAgICAgICAgcmV0dXJuIGRvY3VtZW50LmRvY3VtZW50RWxlbWVudC5jbGllbnRXaWR0aDsNCiAgICB9DQogICAgZWxzZSBpZiAoZG9jdW1lbnQuYm9keSkgew0KICAgICAgICByZXR1cm4gZG9jdW1lbnQuYm9keS5jbGllbnRXaWR0aDsNCiAgICB9DQogICAgcmV0dXJuIDA7DQp9DQp2YXIgeFdpZHRoID0gZ2V0V2lkdGgoKTsNCjwvc2NyaXB0PmQCAw8WAh8CBcAEPCEtLSBHb29nbGUgVGFnIE1hbmFnZXIgLS0+DQo8bm9zY3JpcHQ+PGlmcmFtZSBzcmM9Ii8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tL25zLmh0bWw/aWQ9R1RNLVBGSkdCNyINCmhlaWdodD0iMCIgd2lkdGg9IjAiIHN0eWxlPSJkaXNwbGF5Om5vbmU7dmlzaWJpbGl0eTpoaWRkZW4iPjwvaWZyYW1lPjwvbm9zY3JpcHQ+DQo8c2NyaXB0PihmdW5jdGlvbih3LGQscyxsLGkpe3dbbF09d1tsXXx8W107d1tsXS5wdXNoKA0KeydndG0uc3RhcnQnOiBuZXcgRGF0ZSgpLmdldFRpbWUoKSxldmVudDonZ3RtLmpzJ30NCik7dmFyIGY9ZC5nZXRFbGVtZW50c0J5VGFnTmFtZShzKVswXSwNCmo9ZC5jcmVhdGVFbGVtZW50KHMpLGRsPWwhPSdkYXRhTGF5ZXInPycmbD0nK2w6Jyc7ai5hc3luYz10cnVlO2ouc3JjPQ0KJy8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tL2d0bS5qcz9pZD0nK2krZGw7Zi5wYXJlbnROb2RlLmluc2VydEJlZm9yZShqLGYpOw0KfSkod2luZG93LGRvY3VtZW50LCdzY3JpcHQnLCdkYXRhTGF5ZXInLCdHVE0tUEZKR0I3Jyk7PC9zY3JpcHQ+DQo8IS0tIEVuZCBHb29nbGUgVGFnIE1hbmFnZXIgLS0+ZAIHEGRkFgYCAQ9kFgJmD2QWAgIBD2QWAmYPZBYKAgEPDxYCHgtOYXZpZ2F0ZVVybAUUaHR0cDovL3d3dy51bW1zLm9yZy9kZAIDDw8WAh8DBR9odHRwOi8vbWVkc2Nob29sLnVtYXJ5bGFuZC5lZHUvZGQCBQ8PFgIfAwUBL2QWAmYPDxYEHghJbWFnZVVybAUvL34vbWVkaWEvVU1NL0ltYWdlcy9DZW50ZXIgTG9nb3MvVU1NTG9nbzIwMC5qcGceDUFsdGVybmF0ZVRleHQFDVVNTUMgTG9nbyAyMDBkZAIHDw8WAh8DBQEvZBYCZg8PFgQfBAU1L34vbWVkaWEvVU1NL0ltYWdlcy9DZW50ZXIgTG9nb3MvVXRpbGl0eSBOYXYgTG9nby5wbmcfBQUqVW5pdmVyc2l0eSBvZiBNYXJ5bGFuZCBNZWRpY2FsIENlbnRlciBsb2dvZGQCCQ8WBB4LXyFJdGVtQ291bnQCBR8BZxYKZg9kFgICAQ8PFgQfAgUIQWJvdXQgVXMfAwUGL2Fib3V0ZGQCAQ9kFgICAQ8PFgQfAgUHQ2FyZWVycx8DBQgvY2FyZWVyc2RkAgIPZBYCAgEPDxYEHwIFEVdheXMgWW91IENhbiBIZWxwHwMFEi93YXlzLXlvdS1jYW4taGVscGRkAgMPZBYCAgEPDxYEHwIFB0VzcGFub2wfAwUbL2hlYWx0aC9tZWRpY2FsL3NwYW5pc2hlbmN5ZGQCBA9kFgICAQ8PFggfAgUKQ29udGFjdCBVcx8DBQsvY29udGFjdC11cx4IQ3NzQ2xhc3MFBGxhc3QeBF8hU0ICAmRkAgMPZBYCZg9kFgRmD2QWAmYPZBYEAgEPFgIfBgIGFgxmD2QWBAIBDw8WCB8HBRVwcmltYXJ5IGhhcy1zdWItbGlua3MfAgUiUGF0aWVudHMgPHNwYW4+YW5kIFZpc2l0b3JzPC9zcGFuPh8DBQkvcGF0aWVudHMfCAICZGQCAw9kFgYCAQ8PFgQfAgUiUGF0aWVudHMgPHNwYW4+YW5kIFZpc2l0b3JzPC9zcGFuPh8DBQkvcGF0aWVudHNkZAIDDxYCHwYCEhYkZg9kFgICAQ8PFgQfAgUWRGlyZWN0aW9ucyBhbmQgUGFya2luZx8DBRQvcGF0aWVudHMvZGlyZWN0aW9uc2RkAgEPZBYCAgEPDxYEHwIFDlZpc2l0aW5nIEhvdXJzHwMFGC9wYXRpZW50cy92aXNpdGluZy1ob3Vyc2RkAgIPZBYCAgEPDxYEHwIFF1BhdGllbnQgUmVzb3VyY2UgQ2VudGVyHwMFGS9wYXRpZW50cy9yZXNvdXJjZS1jZW50ZXJkZAIDD2QWAgIBDw8WBB8CBRtQYXRpZW50IGFuZCBGYW1pbHkgSGFuZGJvb2sfAwVHL34vbWVkaWEvVU1NL1BERnMvcGF0aWVudHMtYW5kLXZpc2l0b3JzL3BhdGllbnQtYW5kLWZhbWlseS1oYW5kYm9vay5wZGZkZAIED2QWAgIBDw8WBB8CBRJDb25jaWVyZ2UgU2VydmljZXMfAwUcL3BhdGllbnRzL2NvbmNpZXJnZS1zZXJ2aWNlc2RkAgUPZBYCAgEPDxYEHwIFD0luc3VyYW5jZSBQbGFucx8DBRkvcGF0aWVudHMvaW5zdXJhbmNlLXBsYW5zZGQCBg9kFgICAQ8PFgQfAgUMTXkgUG9ydGZvbGlvHwMFFi9wYXRpZW50cy9teS1wb3J0Zm9saW9kZAIHD2QWAgIBDw8WBB8CBRJFbWVyZ2VuY3kgU2VydmljZXMfAwUTL3BhdGllbnRzL2VtZXJnZW5jeWRkAggPZBYCAgEPDxYEHwIFEUZsb3dlcnMgYW5kIENhcmRzHwMFGy9wYXRpZW50cy9mbG93ZXJzLWFuZC1jYXJkc2RkAgkPZBYCAgEPDxYEHwIFBkhvdGVscx8DBRAvcGF0aWVudHMvaG90ZWxzZGQCCg9kFgICAQ8PFgQfAgULUmVzdGF1cmFudHMfAwUVL3BhdGllbnRzL3Jlc3RhdXJhbnRzZGQCCw9kFgICAQ8PFgQfAgUMQ2FyaW5nQnJpZGdlHwMFFi9wYXRpZW50cy9jYXJpbmdicmlkZ2VkZAIMD2QWAgIBDw8WBB8CBQ5TdXBwb3J0IEdyb3Vwcx8DBRgvcGF0aWVudHMvc3VwcG9ydC1ncm91cHNkZAIND2QWAgIBDw8WBB8CBQ9NZWRpY2FsIFJlY29yZHMfAwUZL3BhdGllbnRzL21lZGljYWwtcmVjb3Jkc2RkAg4PZBYCAgEPDxYEHwIFDVBhc3RvcmFsIENhcmUfAwUSL3BhdGllbnRzL3Bhc3RvcmFsZGQCDw9kFgICAQ8PFgQfAgUaUGF0aWVudCBTYWZldHkgYW5kIFF1YWxpdHkfAwUYL3BhdGllbnRzL3BhdGllbnQtc2FmZXR5ZGQCEA9kFgICAQ8PFgQfAgUWUGVyaW9wZXJhdGl2ZSBTZXJ2aWNlcx8DBSAvcGF0aWVudHMvcGVyaW9wZXJhdGl2ZS1zZXJ2aWNlc2RkAhEPZBYCAgEPDxYEHwIFDVBob25lIE51bWJlcnMfAwUXL3BhdGllbnRzL3Bob25lLW51bWJlcnNkZAIFD2QWAgIDDxYCHwYC/////w9kAgEPZBYEAgEPDxYIHwcFFXByaW1hcnkgaGFzLXN1Yi1saW5rcx8CBRRDZW50ZXJzIGFuZCBTZXJ2aWNlcx8DBQkvcHJvZ3JhbXMfCAICZGQCAw9kFgYCAQ8PFgQfAgUUQ2VudGVycyBhbmQgU2VydmljZXMfAwUJL3Byb2dyYW1zZGQCAw8WAh8GAgYWDGYPZBYCAgEPDxYEHwIFDUNhbmNlciBDZW50ZXIfAwUVaHR0cDovL3d3dy51bWdjYy5vcmcvZGQCAQ9kFgICAQ8PFgQfAgUTQ2hpbGRyZW4ncyBIb3NwaXRhbB8DBRMvcHJvZ3JhbXMvY2hpbGRyZW5zZGQCAg9kFgICAQ8PFgQfAgUMSGVhcnQgQ2VudGVyHwMFDy9wcm9ncmFtcy9oZWFydGRkAgMPZBYCAgEPDxYEHwIFDFNob2NrIFRyYXVtYR8DBRYvcHJvZ3JhbXMvc2hvY2stdHJhdW1hZGQCBA9kFgICAQ8PFgQfAgURVHJhbnNwbGFudCBDZW50ZXIfAwUUL3Byb2dyYW1zL3RyYW5zcGxhbnRkZAIFD2QWAgIBDw8WBB8CBRxTZWUgQWxsIENlbnRlcnMgYW5kIFNlcnZpY2VzHwMFCS9wcm9ncmFtc2RkAgUPZBYCAgMPFgIfBgL/////D2QCAg9kFgQCAQ8PFggfBwUVcHJpbWFyeSBoYXMtc3ViLWxpbmtzHwIFH0hlYWx0aCA8c3Bhbj5JbmZvcm1hdGlvbjwvc3Bhbj4fAwUHL2hlYWx0aB8IAgJkZAIDD2QWBgIBDw8WBB8CBR9IZWFsdGggPHNwYW4+SW5mb3JtYXRpb248L3NwYW4+HwMFBy9oZWFsdGhkZAIDDxYCHwYCBxYOZg9kFgICAQ8PFgQfAgUOQXNrIFRoZSBFeHBlcnQfAwUsaHR0cDovL2RhdGEudW1tcy5vcmcvc2NyaXB0cy9leHBlcnRwcm9jZXNzMi9kZAIBD2QWAgIBDw8WBB8CBQ5LaWNrIFRoZSBIYWJpdB8DBRYvaGVhbHRoL2tpY2stdGhlLWhhYml0ZGQCAg9kFgICAQ8PFgQfAgUXUGF0aWVudCBTdWNjZXNzIFN0b3JpZXMfAwUfL2hlYWx0aC9wYXRpZW50LXN1Y2Nlc3Mtc3Rvcmllc2RkAgMPZBYCAgEPDxYEHwIFDUF1ZGlvIExpYnJhcnkfAwUNL2hlYWx0aC9hHBlcnRwcm9jZXNzMi9kZAIBD2QWAgIBDw8WBB8CBQ5LaWNrIFRoZSBIYWJpdB8DBRYvaGVhbHRoL2tpY2stdGhlLWhhYml0ZGQCAg9kFgICAQ8PFgQfAgdWRpb2RkAgQPZBYCAgEPDxYEHwIFDVZpZGVvIExpYnJhcnkfAwUNL2hlYWx0aC92aWRlb2RkAgUPZBYCAgEPDxYEHwIFCFdlYmNhc3RzHwMFEC9oZWFsdGgvd2ViY2FzdHNkZAIGD2QWAgIBDw8WBB8CBQtZb3VyIEhlYWx0aB8DBRMvaGVhbHRoL3lvdXItaGVhbHRoZGQCBQ8WAh8BZxYEAgEPDxYEHwIFEU1lZGljYWwgUmVmZXJlbmNlHwMFDy9oZWFsdGgvbWVkaWNhbGRkAgMPFgIfBgIIFhBmD2QWAgIBDw8WBB8CBRRNZWRpY2FsIEVuY3ljbG9wZWRpYR8DBRQvaGVhbHRoL21lZGljYWwvZW5jeWRkAgEPZBYCAgEPDxYEHwIFHFNwYW5pc2ggTWVkaWNhbCBFbmN5Y2xvcGVkaWEfAwUbL2hlYWx0aC9tZWRpY2FsL3NwYW5pc2hlbmN5ZGQCAg9kFgICAQ8PFgQfAgUVRHJ1ZyBJbnRlcmFjdGlvbiBUb29sHwMFJS9oZWFsdGgvbWVkaWNhbC9kcnVnLWludGVyYWN0aW9uLXRvb2xkZAIDD2QWAgIBDw8WBB8CBSxDb21wbGVtZW50YXJ5IGFuZCBBbHRlcm5hdGl2ZSBNZWRpY2luZSBHdWlkZR8DBRYvaGVhbHRoL21lZGljYWwvYWx0bWVkZGQCBA9kFgICAQ8PFgQfAgUQUHJlZ25hbmN5IENlbnRlch8DBRkvaGVhbHRoL21lZGljYWwvcHJlZ25hbmN5ZGQCBQ9kFgICAQ8PFgQfAgUYU3BhbmlzaCBQcmVnbmFuY3kgQ2VudGVyHwMFGy9oZWFsdGgvbWVkaWNhbC9zcGFuaXNocHJlZ2RkAgYPZBYCAgEPDxYEHwIFIkluIERlcHRoIFBhdGllbnQgRWR1Y2F0aW9uIFJlcG9ydHMfAwUXL2hlYWx0aC9tZWRpY2FsL3JlcG9ydHNkZAIHD2QWAgIBDw8WBB8CBQpEcnVnIE5vdGVzHwMFGi9oZWFsdGgvbWVkaWNhbC9kcnVnLW5vdGVzZGQCAw9kFgQCAQ8PFggfBwUVcHJpbWFyeSBoYXMtc3ViLWxpbmtzHwIFKVJlc2VhcmNoIDxzcGFuPmFuZCBDbGluaWNhbCBUcmlhbHM8L3NwYW4+HwMFCS9yZXNlYXJjaB8IAgJkZAIDD2Q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mQtZmFtaWx5LWhhbmRib29rLnBkZmRkAgQPZBYCAgEPDxYEHwIFEkNvbmNpZXJnZSBTZXJ2aWNlcx8DBRwvcGF0aWVudHMvY29uY2llcmdlLXNlcnZpY2VzZGQCBQ9kFgICAQ8PFgQfAgUPSW5zdXJhbmNlIFBsYW5zHwMFGS9wYXRpZW50cy9pbnN1cmFuY2UtcGxhbnNkZAIGD2QWAgIBDw8WBB8CBQtNeVBvcnRmb2xpbx8DBRYvcGF0aWVudHMvbXktcG9ydGZvbGlvZGQCBw9kFgICAQ8PFgQfAgUSRW1lcmdlbmN5IFNlcnZpY2VzHwMFEy9wYXRpZW50cy9lbWVyZ2VuY3lkZAIID2QWAgIBDw8WBB8CBRFGbG93ZXJzIGFuZCBDYXJkcx8DBRsvcGF0aWVudHMvZmxvd2Vycy1hbmQtY2FyZHNkZAIJD2QWAgIBDw8WBB8CBQZIb3RlbHMfAwUQL3BhdGllbnRzL2hvdGVsc2RkAgoPZBYCAgEPDxYEHwIFC1Jlc3RhdXJhbnRzHwMFFS9wYXRpZW50cy9yZXN0YXVyYW50c2RkAgsPZBYCAgEPDxYEHwIFDENhcmluZ0JyaWRnZR8DBRYvcGF0aWVudHMvY2FyaW5nYnJpZGdlZGQCDA9kFgICAQ8PFgQfAgUOU3VwcG9ydCBHcm91cHMfAwUYL3BhdGllbnRzL3N1cHBvcnQtZ3JvdXBzZGQCDQ9kFgICAQ8PFgQfAgUPTWVkaWNhbCBSZWNvcmRzHwMFGS9wYXRpZW50cy9tZWRpY2FsLXJlY29yZHNkZAIOD2QWAgIBDw8WBB8CBQ1QYXN0b3JhbCBDYXJlHwMFEi9wYXRpZW50cy9wYXN0b3JhbGRkAg8PZBYCAgEPDxYEHwIFGlBhdGllbnQgU2FmZXR5IGFuZCBRdWFsaXR5HwMFGC9wYXRpZW50cy9wYXRpZW50LXNhZmV0eWRkAhAPZBYCAgEPDxYEHwIFFlBlcmlvcGVyYXRpdmUgU2VydmljZXMfAwUgL3BhdGllbnRzL3BlcmlvcGVyYXRpdmUtc2VydmljZXNkZAIRD2QWAgIBDw8WBB8CBQ1QaG9uZSBOdW1iZXJzHwMFFy9wYXRpZW50cy9waG9uBYCAgEPDxYEHwIFGlBhdGllbnQgU2FmZXR5IGFuZCBRdWFsaXR5HwMFGC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WUgdG8gdGhlIEJyaWdodGNvdmUgUHVibGlzaGVyIFQgYW5kIEMgDQpmb3VuZCBhGU9ImRpc3BsYXk6bm9uZTtwb3NpdGlvbjpyZWxhdGl2ZTtsZWZ0Oi0xMHB4OyI+DQpQbGF5ZXIgdXNlZCBpbiBwb3J0bGV0cyBmb3Igc2luZ2xlIHZpZGVvcyANCjwvZGl2Pg0KDQo8IS0tDQpCeSB1c2Ugb2YgdGhpcyBjb2RdCBodHRwczovL2FjY291bnRzLmJyaWdodGNvdmUuY29tL2VuL3Rlcm1zLWFuZC1jb25kaXRpb25zLy4gDQotLT4NCg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cDovL2FkbWluLmJyaWdodGNvdmUuY29tL2pzL0JyaWdodGNvdmVFeHBlcmllbmNlcy5qcyI+PC9zY3JpcHQ+DQoNCjxvYmplY3QgaWQ9Im15RXhwZXJpZW5jZTM3MDE3MzMxMDAwMDEiIGNsYXNzPSJCcmlnaHRjb3ZlRXhwZXJpZW5jZSI+DQogIDxwYXJhbSBuYW1lPSJiZ2NvbG9yIiB2YWx1ZT0iI0ZGRkZGRiIgLz4NCiAgPHBhcmFtIG5hbWU9IndpZHRoIiB2YWx1ZT0iMTczIiAvPg0KICA8cGFyYW0gbmFtZT0iaGVpZ2h0IiB2YWx1ZT0iMTc3IiAvPg0KICA8cGFyYW0gbmFtZT0icGxheWVySUQiIHZhbHVlPSIzNTAxNTEyMzk0MDAxIiAvPg0KICA8cGFyYW0gbmFtZT0icGxheWVyS2V5IiB2YWx1ZT0iQVF+fixBQUFETUdOQkdHRX4sY2VVa2RINnl2NEVLSmxINUVUbVFOVjluV1BuanpSRzIiIC8+DQogIDxwYXJhbSBuYW1lPSJpc1ZpZCIgdmFsdWU9InRydWUiIC8+DQogIDxwYXJhbSBuYW1lPSJkeW5hbWljU3RyZWFtaW5nIiB2YWx1ZT0idHJ1ZSIgLz4NCiAgICANCiAgPHBhcmFtIG5hbWU9IkB2aWRlb1BsYXllciIgdmFsdWU9IjM3MDE3MzMxMDAwMDEiIC8+DQo8L29iamVjdD4NCg0KPCEtLSANClRoaXMgc2NyaXB0IHRhZyB3aWxsIGNhdXNlIHRoZSBCcmlnaHRjb3ZlIFBsYXllcnM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dL2hlYWx0aC9tZWRpY2FsL2VuY3kvZGlzZWFzZXNkZAIGD2QWAgIBDw8WBB8CBQdTdXJnZXJ5HwMFHC9oZWFsdGgvbWVkaWNhbC9lbmN5L3N1cmdlcnlkZAIHD2QWAgIBDw8WBB8CBQlOdXRyaXRpb24fAwUeL2hlYWx0aC9tZWRpY2FsL2VuY3kvbnV0cml0aW9uZGQCCA9kFgICAQ8PFgQfAgUOU3BlY2lhbCBJc3N1ZXMfAwUcL2hlYWx0aC9tZWRpY2FsL2VuY3kvc3BlY2lhbGRkAgkPZBYCAgEPDxYEHwIFCVBvaXNvbmluZx8DBRsvaGVhbHRoL21lZGljYWwvZW5jeS9wb2lzb25kZAIKD2QWAgIBDw8WBB8CBQVUZXN0cx8DBRovaGVhbHRoL21lZGljYWwvZW5jeS90ZXN0c2RkAgsPZBYCAgEPDxYEHwIFFkRpc2NoYXJnZSBJbnN0cnVjdGlvbnMfAwUeL2hlYWx0aC9tZWRpY2FsL2VuY3kvZGlzY2hhcmdlZGQCDA9kFgICAQ8PFgQfAgUWU2VsZi1DYXJlIEluc3RydWN0aW9ucx8DBSsvaGVhbHRoL21lZGljYWwvZW5jeS9zZWxmLWNhcmUtaW5zdHJ1Y3Rpb25zZGQCDQ9kFgICAQ8PFgQfAgUcUXVlc3Rpb25zIFRvIEFzayBZb3VyIERvY3Rvch8DBTEvaGVhbHRoL21lZGljYWwvZW5jeS9xdWVzdGlvbnMtdG8tYXNrLXlvdXItZG9jdG9yZGQCAg9kFgQCAQ8PFgQfAgUtw41uZGljZSBNw6lkaWNvIERlIGxhIEVuY2ljbG9wZWRpYSAtIEVzcGHDsW9sHwMFGy9oZWFsdGgvbWVkaWNhbC9zcGFuaXNoZW5jeWRkAgMPFgIfBgL/////D2QCAw9kFgQCAQ8PFgQfAgUVRHJ1ZyBJbnRlcmFjdGlvbiBUb29sHwMFJS9oZWFsdGgvbWVkaWNhbC9kcnVnLWludGVyYWN0aW9uLXRvb2xkZAIDDxYCHwYC/////w9kAgQPgUtw41uZGljZSBNw6lkaWNvIERlIGxhIEVuY2ljbG9wZWRpYSAtIEVzcGHDsW9sHwMFGy9oZWFsdGgvbWVkaWNhbC9zcGFuaXNoZW5jeWRkAgMPFgIfBgL/////D2QCAw9kFgQCAQ8PFgQfAgUVRHJ1ZyBJbnRlcmFjdGlvbiBZBYEAgEPDxYEHwIFLENvbXBsZW1lbnRhcnkgYW5kIEFsdGVybmF0aXZlIE1lZGljaW5lIEd1aWRlHwMFFi9oZWFsdGgvbWVkaWNhbC9hbHRtZWRkZAIDDxYCHwYC/////w9kAgUPZBYEAgEPDxYEHwIFEFByZWduYW5jeSBDZW50ZXIfAwUZL2hlYWx0aC9tZWRpY2FsL3ByZWduYW5jeWRkAgMPFgIfBgL/////D2QCBg9kFgQCAQ8PFgQfAgUYU3BhbmlzaCBQcmVnbmFuY3kgQ2VudGVyHwMFGy9oZWFsdGgvbWVkaWNhbC9zcGFuaXNocHJlZ2RkAgMPFgIfBgL/////D2QCBw9kFgQCAQ8PFgQfAgUiSW4tRGVwdGggUGF0aWVudCBFZHVjYXRpb24gUmVwb3J0cx8DBRcvaGVhbHRoL21lZGljYWwvcmVwb3J0c2RkAgMPFgIfBgL/////D2QCCA9kFgQCAQ8PFgQfAgUKRHJ1ZyBOb3Rlcx8DBRovaGVhbHRoL21lZGljYWwvZHJ1Zy1ub3Rlc2RkAgMPFgIfBgL/////D2QCAw9kFgICAQ9kFgQCAQ8PFgQfAgUXUGF0aWVudCBTdWNjZXNzIFN0b3JpZXMfAwUfL2hlYWx0aC9wYXRpZW50LXN1Y2Nlc3Mtc3Rvcmllc2RkAgMPFgIfBgL/////D2QCBA9kFgICAQ9kFgQCAQ8PFgQfAgUNQXVkaW8gTGlicmFyeR8DBQ0vaGVhbHRoL2F1ZGlvZGQCAw8WAh8GAv////8PZAIFD2QWAgIBD2QWBAIBDw8WBB8CBQ1WaWRlbyBMaWJyYXJ5HwMFDS9oZWFsdGgvdmlkZW9kZAIDDxYCHwYC/////w9kAgYPZBYCAgEPZBYEAgEPDxYEHwIFCFdlYmNhc3RzHwMFEC9oZWFsdGgvd2ViY2FzdHNkZAIDDxYCHwYC/////w9kAgcPZBYCAgEPZBYEAgEPDxYEHwIFC1lvdXIgSGVhbHRoHwMFEy9oZWFsdGgveW91ci1oZWFsdGhkZAIDDxYCHwYC/////w9kAgkPFgIfAmVkZOyt7W03+osY/Y/QKITXXDzwF631" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C58D84ED" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAYRe2WMaru6dkiIGHfaPRbvztGWebRW />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C58D84ED" />
+	<input type="hidden" name="Pt5siMGyHA97QVJp5wrMlO6lno0n/aAlFV65QOIy55okc1Dh9uwwA2BF784Z1JRYHi8nwTcp4Y3UIAmr+IfbU6ptO7fMyV9OWgRq0+wCjQFYvrw30vqcDnf66YnggA==" />
+</div>
+       
+	    <div id="top">
+		    <header id="header" class="hmain" role="banner">
+			    
+
+<div class="content">
+    
+<div class="um">
+    <a id="ctl02_ctl00_hlSystemLink" href="http://www.umms.org/">A Member of the University of Maryland Medical System</a>
+    <a id="ctl02_ctl00_hlMedicineLink" href="http://medschool.umaryland.edu/">In Partnership with the University of Maryland School of Medicine</a>
+</div>
+    
+    <a id="ctl02_ctl00_hlLogo" class="logo" href="/"><img id="ctl02_ctl00_imgLogo" src="/~/media/UMM/Images/Center%20Logos/UMMLogo200.jpg" alt="UMMC Logo 200" /></a>
+
+    <a id="ctl02_ctl00_hlLogoSmall" class="logo-small" href="/"><img id="ctl02_ctl00_imgLogoSmall" src="/~/media/UMM/Images/Center%20Logos/Utility%20Nav%20Logo.png" alt="University of Maryland Medical Center logo" /></a>
+    
+    <nav class="secondary">
+        
+                <a id="ctl02_ctl00_rptSecondary_hlSecondaryLink_0" href="/about">About Us</a>
+            
+                <a id="ctl02_ctl00_rptSecondary_hlSecondaryLink_1" href="/careers">Careers</a>
+            
+                <a id="ctl02_ctl00_rptSecondary_hlSecondaryLink_2" href="/ways-you-can-help">Ways You Can Help</a>
+            
+             
+                <a id="ctl02_ctl00_rptSecondary_hlSecondaryLink_1" href="/careers">Careers</a>
+            
+                <a id="ctl02_ctl00_rptSecondary_hlS          <a id="ctl02_ctl00_rptSecondary_hlSecondaryLink_3" href="/health/medical/spanishency">Espanol</a>
+            
+                <a id="ctl02_ctl00_rptSecondary_hlSecondaryLink_4" class="last" href="/contact-us">Contact Us</a>
+                    
+    </nav>
+    <div id="ctl02_ctl01_pnlSearch">
+	
+    <div class="search" role="search">
+        <label for="ctl02_ctl01_txtSearch" id="ctl02_ctl01_lblSearch" class="access">Search</label>
+        <input name="ctl02$ctl01$txtSearch" type="text" id="ctl02_ctl01_txtSearch" class="swap" placeholder="Search" />
+        <input type="submit" name="ctl02$ctl01$btnSearch" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl02$ctl01$btnSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl02_ctl01_btnSearch" class="submit" />
+    </div>
+
+</div>
+    
+
+<nav class="action">
+    <a id="ctl02_ctl02_hlFindADoctor" class="fd" href="http://findadoctor.umm.edu">Find a Doctor</a>
+    <a id="ctl02_ctl02_hlMakeAppointment" class="ma" href="/make-an-appointment">Make an Appointment</a>
+    
+</nav>
+</div>
+
+			    
+
+<div id="phone-menu" class="phone-menu">
+    <div class="phone-nav-control">
+        <a href="#phone-nav" id="phone-nav-toggle" class="phone-nav-toggle">Menu</a>
+    </div>
+
+    <nav id="pho>Make an Appointment</a>
+    
+</nav>
+</div>
+
+			    
+
+<div id="phone-menu" class="phone-menu">
+    <div class="phone-nav-control">
+        <a href="#phone-nav" idne-nav" class="phone-nav" role="navigation">
+        <ul>
+            
+                    <li>
+                        <a id="ctl03_ctl00_rptPhoneMainNav_hlLink_0" class="primary has-sub-links" href="/patients">Patients <span>and Visitors</span></a>
+
+                        
+                            <ul>
+                                <li>
+                                    <a id="ctl03_ctl00_rptPhoneMainNav_hlNavLink_0" href="/patients">Patients <span>and Visitors</span></a>
+
+                                    <ul>
+                                        
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_0" href="/patients/directions">Directions and Parking</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_1" href="/patients/visiting-hours">Visiting Hours</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_2" href="/patients/resource-center">Patient Resource Center</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_3av_rptSubLinks_0_hlSubLink_2" href="/patients/resource-center">Patient Resource Center</a></li>
+                                            
+                           " href="/~/media/UMM/PDFs/patients-and-visitors/patient-and-family-handbook.pdf">Patient and Family Handbook</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_4" href="/patients/concierge-services">Concierge Services</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_5" href="/patients/insurance-plans">Insurance Plans</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_6" href="/patients/my-portfolio">My Portfolio</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_7" href="/patients/emergency">Emergency Services</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_8" href="/patients/flowers-and-cards">Flowers and Cards</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_l00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_8" href="/patients/flowers-and-cards">Flowers and Cards</a></li>
+                                            
+              0_hlSubLink_9" href="/patients/hotels">Hotels</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_10" href="/patients/restaurants">Restaurants</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_11" href="/patients/caringbridge">CaringBridge</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_12" href="/patients/support-groups">Support Groups</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_13" href="/patients/medical-records">Medical Records</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_14" href="/patients/pastoral">Pastoral Care</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_15" href="/patients/patient-safety">Patient Safety and Quality</a></li>">Pastoral Care</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_16" href="/patients/perioperative-services">Perioperative Services</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_0_hlSubLink_17" href="/patients/phone-numbers">Phone Numbers</a></li>
+                                            
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                
+                    <li>
+                        <a id="ctl03_ctl00_rptPhoneMainNav_hlLink_1" class="primary has-sub-links" href="/programs">Centers and Services</a>
+
+                        
+                            <ul>
+                                <li>
+                                    <a id="ctl03_ctl00_rptPhoneMainNav_hlNavLink_1" href="/programs">Centers and Services</a>
+
+                                    <ul>
+                                        
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_1_hlSubLink_0" href="http://www.umgcc.org/">Cancer Center</a>ces</a>
+
+                                    <ul>
+                                        
+                                                <li><a id="ctl03_ctl00_rptP</li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_1_hlSubLink_1" href="/programs/childrens">Children's Hospital</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_1_hlSubLink_2" href="/programs/heart">Heart Center</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_1_hlSubLink_3" href="/programs/shock-trauma">Shock Trauma</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_1_hlSubLink_4" href="/programs/transplant">Transplant Center</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_1_hlSubLink_5" href="/programs">See All Centers and Services</a></li>
+                                            
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                
+                               
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+      <li>
+                        <a id="ctl03_ctl00_rptPhoneMainNav_hlLink_2" class="primary has-sub-links" href="/health">Health <span>Information</span></a>
+
+                        
+                            <ul>
+                                <li>
+                                    <a id="ctl03_ctl00_rptPhoneMainNav_hlNavLink_2" href="/health">Health <span>Information</span></a>
+
+                                    <ul>
+                                        
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_2_hlSubLink_0" href="http://data.umms.org/scripts/expertprocess2/">Ask The Expert</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_2_hlSubLink_1" href="/health/kick-the-habit">Kick The Habit</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_2_hlSubLink_2" href="/health/patient-success-stories">Patient Success Stories</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_2_hlSubLink_3" href="/health/audio">Audio Library</a></li>
+                                  ories</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_2_hlSubLi          
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_2_hlSubLink_4" href="/health/video">Video Library</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_2_hlSubLink_5" href="/health/webcasts">Webcasts</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_2_hlSubLink_6" href="/health/your-health">Your Health</a></li>
+                                            
+                                    </ul>
+                                </li>
+                                
+                                    <li>
+                                        <a id="ctl03_ctl00_rptPhoneMainNav_hlMedRefLink_2" href="/health/medical">Medical Reference</a>
+
+                                        <ul>
+                                            
+                                                    <li><a id="ctl03_ctl00_rptPhoneMainNav_rptMedRefSubLinks_2_hlSubLink_0" href="/health/medical/ency">Medical Encyclopedia</a></li>
+                                                
+                                                    <li><a id="ctl03_ctl00_rptPhoneMainNav_rptMedRefSubLinks_Nav_rptMedRefSubLinks_2_hlSubLink_0" href="/health/medical/ency">Medical Encyclopedia</a></li>
+                                                
+                        2_hlSubLink_1" href="/health/medical/spanishency">Spanish Medical Encyclopedia</a></li>
+                                                
+                                                    <li><a id="ctl03_ctl00_rptPhoneMainNav_rptMedRefSubLinks_2_hlSubLink_2" href="/health/medical/drug-interaction-tool">Drug Interaction Tool</a></li>
+                                                
+                                                    <li><a id="ctl03_ctl00_rptPhoneMainNav_rptMedRefSubLinks_2_hlSubLink_3" href="/health/medical/altmed">Complementary and Alternative Medicine Guide</a></li>
+                                                
+                                                    <li><a id="ctl03_ctl00_rptPhoneMainNav_rptMedRefSubLinks_2_hlSubLink_4" href="/health/medical/pregnancy">Pregnancy Center</a></li>
+                                                
+                                                    <li><a id="ctl03_ctl00_rptPhoneMainNav_rptMedRefSubLinks_2_hlSubLink_5" href="/health/medical/spanishpreg">Spanish Pregnancy Center</a></li>
+                                                
+                                                    <li><a id="ctl03_ctl00_rptPhoneMainNav_rptMedRefSubLinks_2_hlSubLink_6" href="/health/medical/reports">In Depth Patient Education Reports</a></li>
+                                                     
+                                                    <li><a id="ctl03_ctl00_rptPhoneMainNav_rptMedRefSubLinks_2_hlSubLink_6" href="/health/medical/re               
+                                                    <li><a id="ctl03_ctl00_rptPhoneMainNav_rptMedRefSubLinks_2_hlSubLink_7" href="/health/medical/drug-notes">Drug Notes</a></li>
+                                                
+                                        </ul>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </li>
+                
+                    <li>
+                        <a id="ctl03_ctl00_rptPhoneMainNav_hlLink_3" class="primary has-sub-links" href="/research">Research <span>and Clinical Trials</span></a>
+
+                        
+                            <ul>
+                                <li>
+                                    <a id="ctl03_ctl00_rptPhoneMainNav_hlNavLink_3" href="/research">Research <span>and Clinical Trials</span></a>
+
+                                    <ul>
+                                        
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_3_hlSubLink_0" href="/research/about">About Clinical Trials</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_3_hlSubLink_1" href="/research/participating">PLink_0" href="/research/about">About Clinical Trials</a></li>
+                                            
+                                                <li><a id="ctarticipating in Clinical Trials</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_3_hlSubLink_2" href="/research/questions-to-ask">Questions</a></li>
+                                            
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                
+                    <li>
+                        <a id="ctl03_ctl00_rptPhoneMainNav_hlLink_4" class="primary has-sub-links" href="/professionals">For Health <span>Professionals</span></a>
+
+                        
+                            <ul>
+                                <li>
+                                    <a id="ctl03_ctl00_rptPhoneMainNav_hlNavLink_4" href="/professionals">For Health <span>Professionals</span></a>
+
+                                    <ul>
+                                        
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_4_hlSubLink_0" href="/professionals/referring">Referring Physicians</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rd="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_4_hlSubLink_0" href="/professionals/referring">Referring Physicians</a></li>
+                                            
+   ptSubLinks_4_hlSubLink_1" href="/professionals/nursing">Nursing</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_4_hlSubLink_2" href="/professionals/nurse-practitioners">Nurse Practitioners</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_4_hlSubLink_3" href="/professionals/gme">Graduate Medical Education</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_4_hlSubLink_4" href="/professionals/medstaff">Medical Staff Services</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_4_hlSubLink_5" href="/professionals/dietetic-internship">Dietetic Internship</a></li>
+                                            
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                
+                    <li>
+                        <a id="ctl03_ctl00_rptPhoneMainNav_hlLink_5" class="prima </li>
+                                
+                            </ul>
+                        
+                    </li>
+                
+                    <lry has-sub-links" href="/news-and-events">News <span>& Events</span></a>
+
+                        
+                            <ul>
+                                <li>
+                                    <a id="ctl03_ctl00_rptPhoneMainNav_hlNavLink_5" href="/news-and-events">News <span>& Events</span></a>
+
+                                    <ul>
+                                        
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_5_hlSubLink_0" href="/news-and-events/news-releases">News Releases</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_5_hlSubLink_1" href="/news-and-events/awards-and-honors">Awards and Honors</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_5_hlSubLink_2" href="/news-and-events/connect-with-ummc">Connect with UMMC</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_5_hlSubLink_3" href="/news-and-events/events">Events</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00                         <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_5_hlSubLink_3" href="/news-and-events/events">Events</a></li>
+                               _rptPhoneMainNav_rptSubLinks_5_hlSubLink_4" href="/news-and-events/media-professionals">Help for Media Professionals</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_5_hlSubLink_5" href="/news-and-events/ummc-discovery">UMMC Discovery</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_5_hlSubLink_6" href="/news-and-events/ummc-connections">UMMC Connections</a></li>
+                                            
+                                                <li><a id="ctl03_ctl00_rptPhoneMainNav_rptSubLinks_5_hlSubLink_7" href="http://medcenterblog.org/">UMMC Blog</a></li>
+                                            
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                
+
+            
+                    <li>
+                        <a id="ctl03_ctl00_rptSecondaryLinks_hlSecondaryLink_0" class="primary first-without-sub-links" href="/about">About Us</a>
+                    </li>
+                
+                    <li>
+                        <a id="ctl03_ct                     <a id="ctl03_ctl00_rptSecondaryLinks_hlSecondaryLink_0" class="primary first-without-sub-links" href="/about">About Us</a>
+                    </li>l00_rptSecondaryLinks_hlSecondaryLink_1" class="primary" href="/careers">Careers</a>
+                    </li>
+                
+                    <li>
+                        <a id="ctl03_ctl00_rptSecondaryLinks_hlSecondaryLink_2" class="primary" href="/ways-you-can-help">Ways You Can Help</a>
+                    </li>
+                
+                    <li>
+                        <a id="ctl03_ctl00_rptSecondaryLinks_hlSecondaryLink_3" class="primary" href="/health/medical/spanishency">Espanol</a>
+                    </li>
+                
+                    <li>
+                        <a id="ctl03_ctl00_rptSecondaryLinks_hlSecondaryLink_4" class="primary" href="/contact-us">Contact Us</a>
+                    </li>
+                
+
+            <li class="staff">
+                <a href="#">Staff</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<nav id="nav" class="mainnav" role="navigation">
+    
+            <div id="ctl03_rptUmbrellaSiteMainNav_pnlNavItem_0" class="patientInformation">
+	
+                <a id="ctl03_rptUmbrellaSiteMainNav_hlNavItem_0" class="title" href="/patients">Patients <span>& Visitors</span></a>
+
+                <div id="ctl03_rptUmbrellaSiteMainNav_pnlDrop_0" class="drop">
+		
+                    <div class="dropIn">
+                        <div class="col1">
+         m_0" class="title" href="/patients">Patients <span>& Visitors</span></a>
+
+                <div id="ctl03_rptUmbrellaSiteMainNav_pnlDrop_0" class="drop">
+		
+                             
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_0" href="/patients/directions">Directions and Parking</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_1" href="/patients/visiting-hours">Visiting Hours</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_2" href="/patients/resource-center">Patient Resource Center</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_3" href="/~/media/UMM/PDFs/patients-and-visitors/patient-and-family-handbook.pdf">Patient & Family Handbook</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_4" href="/patients/concierge-services">Concierge Services</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_5" href="/patients/insurance-plans">Insurance Plans</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_6" href="/patients/my-paSiteMainNav_rptMainNavDrop_0_hlDropItem_5" href="/patients/insurance-plans">Insurance Plans</a>
+                                
+                                    <aortfolio">MyPortfolio</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_7" href="/patients/emergency">Emergency Services</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_8" href="/patients/flowers-and-cards">Flowers and Cards</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_9" href="/patients/hotels">Hotels</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_10" href="/patients/restaurants">Restaurants</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_11" href="/patients/caringbridge">CaringBridge</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_12" href="/patients/support-groups">Support Groups</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_13" href="/patients/medical-records">Medical Records</a>
+                         s/support-groups">Support Groups</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropIte       
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_14" href="/patients/pastoral">Pastoral Care</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_15" href="/patients/patient-safety">Patient Safety and Quality</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_16" href="/patients/perioperative-services">Perioperative Services</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_0_hlDropItem_17" href="/patients/phone-numbers">Phone Numbers</a>
+                                
+                        </div>
+                        
+                    </div>
+                
+	</div>
+            
+</div>
+        
+            <div id="ctl03_rptUmbrellaSiteMainNav_pnlNavItem_1" class="services">
+	
+                <a id="ctl03_rptUmbrellaSiteMainNav_hlNavItem_1" class="title" href="/programs">Centers and Services</a>
+
+                <div id="ctl03_rptUmbrellaSiteMainNav_pnlDrop_1" class="drop">
+		
+                    <div class="dropIn">
+                        <div class="col1">
+                            
+                 programs">Centers and Services</a>
+
+                <div id="ctl03_rptUmbrellaSiteMainNav_pnlDrop_1" class="drop">
+		
+                    <div class="dropIn">
+                         <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_1_hlDropItem_0" href="http://www.umgcc.org/">University of Maryland Greenebaum Cancer Center</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_1_hlDropItem_1" href="/programs/childrens">Children's Hospital</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_1_hlDropItem_2" href="/programs/heart">Heart Center</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_1_hlDropItem_3" href="/programs/shock-trauma">Shock Trauma</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_1_hlDropItem_4" href="/programs/transplant">Transplant Center</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_1_hlDropItem_5" href="/programs">See All Centers and Services</a>
+                                
+                        </div>
+                        
+                    </div>
+                
+	</div>
+            
+</div>
+        
+            <div id="ctl03_rptUmbrellaSiteMainNav_pnlNavItem_2" class="healthInformat                       
+                        </div>
+                        
+                    </div>
+                
+	</div>
+            
+</div>
+        
+ion">
+	
+                <a id="ctl03_rptUmbrellaSiteMainNav_hlNavItem_2" class="title" href="/health">Health <span>Information</span></a>
+
+                <div id="ctl03_rptUmbrellaSiteMainNav_pnlDrop_2" class="drop">
+		
+                    <div class="dropIn">
+                        <div class="col1">
+                            
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_2_hlDropItem_0" href="http://data.umms.org/scripts/expertprocess2/">Ask The Expert</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_2_hlDropItem_1" href="/health/kick-the-habit">Kick The Habit</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_2_hlDropItem_2" href="/health/patient-success-stories">Patient Success Stories</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_2_hlDropItem_3" href="/health/audio">Audio Library</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_2_hlDropItem_4" href="/health/video">Video Library</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSi              
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_2_hlDropItem_4" href="/health/video">Video Library</a>
+           teMainNav_rptMainNavDrop_2_hlDropItem_5" href="/health/webcasts">Webcasts</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_2_hlDropItem_6" href="/health/your-health">Your Health</a>
+                                
+                        </div>
+                        <div id="ctl03_rptUmbrellaSiteMainNav_pnlDropFeatureCol_2" class="col2">
+			
+                            <a id="ctl03_rptUmbrellaSiteMainNav_hlMedRef_2" href="/health/medical" style="color: #B1000D; font-size: 1.4em; font-weight: bold; display: block; margin-bottom: 8px;">Medical Reference:</a>
+
+                            
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptDropFeatureItems_2_hlDropItem_0" href="/health/medical/ency">Medical Encyclopedia</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptDropFeatureItems_2_hlDropItem_1" href="/health/medical/spanishency">Índice Médico De la Enciclopedia - Español</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptDropFeatureItems_2_hlDropItem_2" href="/health/medical/drug-interaction-tool">Drug Interaction Tool</a>
+                                
+                                    <a id                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptDropFeatureItems_2_hlDropItem_2" href="/health/medical/drug-interaction-tool">Drug Interaction Too="ctl03_rptUmbrellaSiteMainNav_rptDropFeatureItems_2_hlDropItem_3" href="/health/medical/altmed">Complementary and Alternative Medicine Guide</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptDropFeatureItems_2_hlDropItem_4" href="/health/medical/pregnancy">Pregnancy Center</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptDropFeatureItems_2_hlDropItem_5" href="/health/medical/spanishpreg">Spanish Pregnancy Center</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptDropFeatureItems_2_hlDropItem_6" href="/health/medical/reports">In-Depth Patient Education Reports</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptDropFeatureItems_2_hlDropItem_7" href="/health/medical/drug-notes">Drug Notes</a>
+                                
+                        
+		</div>
+                    </div>
+                
+	</div>
+            
+</div>
+        
+            <div id="ctl03_rptUmbrellaSiteMainNav_pnlNavItem_3" class="researchClinicalTrials">
+	
+                <a id="ctl03_rptUmbrellaSiteMainNav_hlNavItem_3" class="title" href="/research">Research <span>& Clinical Trials</span></a>
+
+          
+            <div id="ctl03_rptUmbrellaSiteMainNav_pnlNavItem_3" class="researchClinicalTrials">
+	
+                <a id="ctl03_rptUmbrellaSiteMainNav_hlNavItem_            <div id="ctl03_rptUmbrellaSiteMainNav_pnlDrop_3" class="drop">
+		
+                    <div class="dropIn">
+                        <div class="col1">
+                            
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_3_hlDropItem_0" href="/research/about">About Clinical Trials</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_3_hlDropItem_1" href="/research/participating">Participating in Clinical Trials</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_3_hlDropItem_2" href="/research/questions-to-ask">Questions to Ask</a>
+                                
+                        </div>
+                        
+                    </div>
+                
+	</div>
+            
+</div>
+        
+            <div id="ctl03_rptUmbrellaSiteMainNav_pnlNavItem_4" class="forHealthProfessionals">
+	
+                <a id="ctl03_rptUmbrellaSiteMainNav_hlNavItem_4" class="title" href="/professionals">For Health <span>Professionals</span></a>
+
+                <div id="ctl03_rptUmbrellaSiteMainNav_pnlDrop_4" class="drop">
+		
+                    <div class="dropIn">
+                        <div class="col1">
+                  href="/professionals">For Health <span>Professionals</span></a>
+
+                <div id="ctl03_rptUmbrellaSiteMainNav_pnlDrop_4" class="drop">
+		
+                             
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_4_hlDropItem_0" href="/professionals/referring">Referring Physicians</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_4_hlDropItem_1" href="/professionals/nursing">Nursing</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_4_hlDropItem_2" href="/professionals/nurse-practitioners">Nurse Practitioners</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_4_hlDropItem_3" href="/professionals/gme">Graduate Medical Education</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_4_hlDropItem_4" href="/professionals/medstaff">Medical Staff Services</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_4_hlDropItem_5" href="/professionals/dietetic-internship">Dietetic Internship</a>
+                                
+                        </div>
+                        
+                    </div>
+                
+	</div>
+            
+</div>
+        
+            <div id="ctl03_rs/dietetic-internship">Dietetic Internship</a>
+                                
+                        </div>
+                        
+                    </div>
+  ptUmbrellaSiteMainNav_pnlNavItem_5" class="aboutUs">
+	
+                <a id="ctl03_rptUmbrellaSiteMainNav_hlNavItem_5" class="title" href="/news-and-events">News <span>& Events</span></a>
+
+                <div id="ctl03_rptUmbrellaSiteMainNav_pnlDrop_5" class="drop">
+		
+                    <div class="dropIn">
+                        <div class="col1">
+                            
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_5_hlDropItem_0" href="/news-and-events/news-releases">News Releases</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_5_hlDropItem_1" href="/news-and-events/awards-and-honors">Awards and Honors</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_5_hlDropItem_2" href="/news-and-events/connect-with-ummc">Connect with UMMC</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_5_hlDropItem_3" href="/news-and-events/events">Events</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_5_hlDropItem_4" href="/news-and-events/media-professionals">Help for Media Professionals</a>
+       s-and-events/events">Events</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_5_hlDropItem_4"                          
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_5_hlDropItem_5" href="/news-and-events/ummc-discovery">New Medical Center Ad Focuses on Groundbreaking Discoveries and Innovations</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_5_hlDropItem_6" href="/news-and-events/ummc-connections">UMMC Connections</a>
+                                
+                                    <a id="ctl03_rptUmbrellaSiteMainNav_rptMainNavDrop_5_hlDropItem_7" href="http://medcenterblog.org/">UMMC Blog</a>
+                                
+                        </div>
+                        
+                    </div>
+                
+	</div>
+            
+</div>
+        
+</nav>
+		    </header>
+
+		    <div id="content" class="main" role="main">
+			    <div class="shadow">
+                    
+
+<div class="pwt"><div class="pw"><div class="pwb">
+
+    
+
+<div class="breadLinks">
+    <ul class="sizer">
+        <li><a id="printPage">Print the Page</a></li>
+		<li><a id="emailPage" class="st_email">Email the Page</a></li>
+	    <li class="divide"><a id="largeFont" class="fontSizer">Aa</a></li>
+		<li class="divide"><a id="mediumFont" class="fontSizer active">Aa</a></li>
+		<li><a id="smallFont" class="fontSizer"<li><a id="emailPage" class="st_email">Email the Page</a></li>
+	    <li class="divide"><a id="largeFont" class="fontSizer">Aa</a></li>
+		<li class="divide"><a id="medium>Aa</a></li>
+    </ul>
+
+    <ul class="breadCrumbs">
+    <li><a href="/">Home</a></li>
+    
+            <li><a id="bodycontentph_0_ctl00_repBreadCrumb_hlBreadCrumbLink_0" href="/health">Health <span>Information</span></a></li>       
+        
+            <li><a id="bodycontentph_0_ctl00_repBreadCrumb_hlBreadCrumbLink_1" href="/health/medical">Medical Reference Guide</a></li>       
+        
+            <li><a id="bodycontentph_0_ctl00_repBreadCrumb_hlBreadCrumbLink_2" href="/health/medical/ency">Medical Encyclopedia</a></li>       
+        
+            <li><a id="bodycontentph_0_ctl00_repBreadCrumb_hlBreadCrumbLink_3" href="/health/medical/ency/articles">All Articles</a></li>       
+        
+    <li class="breadcrumb-active">Plague</li>
+    </ul>
+</div>
+    <div class="l-contain">
+    <div class="mcWrap">
+	    <div class="mainContent">
+            <h1>Plague</h1>
+
+            <p id="bodycontentph_0_ctl01_pLanguageToggle" class="toggleLanguage">
+    Toggle: <a id="bodycontentph_0_ctl01_hlEnglishToggle" class="active">English</a> / <a id="bodycontentph_0_ctl01_hlSpanishToggle" href="/health/medical/spanishency/articles/peste">Spanish</a>
+</p>
+
+            
+        <div><h2>Definition</h2><p>Plague is a severe and potentially deadly bacterial infection.</p></div><div><h2>Alternative Names</h2><p>Bubonic plague; Pneumonic plague; Se/health/medical/spanishency/articles/peste">Spanish</a>
+</p>
+
+            
+        <div><h2>Definition</h2><p>Plague is a severe and potentially deadly bacterial infecpticemic plague</p></div><div><h2>Causes, incidence, and risk factors</h2><p>Plague is caused by the bacteria <em>Yersinia pestis.</em> Rodents, such as rats, carry the disease. It is spread by their fleas.</p><p>People can get the plague when they are bitten by a flea that carries the plague bacteria from an infected rodent. In rare cases, you may get the disease when handling an infected animal.</p><p>A plague lung infection called pneumonic plague can spread from human to human. When someone with pneumonic plague coughs, tiny droplets carrying the bacteria move through the air. Anyone who breathes in these particles may catch the disease. An epidemic may be started this way.</p><p>In the Middle Ages in Europe, massive plague epidemics killed millions of people. Plague can still be found in Africa, Asia, and South America.</p><p>Today, plague is rare in the United States, but it has been known to occur in parts of California, Arizona, Colorado, and New Mexico.</p><p>There three most common forms of plague are:</p><ul><li><div>Bubonic plague -- an infection of the lymph nodes</div></li><li><div>Pneumonic plague -- an infection of the lungs</div></li><li><div>Septicemic plague -- an infection of the blood</div></li></ul><p>The time between being infected and developing symptoms is typically 2 to 7 days, but may be as short as 1 day for pnli><div>Pneumonic plague -- an infection of the lungs</div></li><li><div>Septicemic plague -- an infection of the blood</div></li></ul><p>The time between being infected eumonic plague.</p><p>Risk factors for plague include a recent flea bite and exposure to rodents, especially rabbits, squirrels, or prairie dogs, or scratches or bites from infected domestic cats.</p></div><div><h2>Symptoms</h2><p>Bubonic plague symptoms appear suddenly, usually after 2 - 5 days of exposure to the bacteria. Symptoms include:</p><ul><li>Chills</li><li>Fever</li><li>General ill feeling (<a href="/health/medical/ency/articles/malaise">malaise</a>)</li><li>Headache</li><li>Muscle pain</li><li><a href="/health/medical/ency/articles/seizures">Seizures</a></li><li>Smooth, painful lymph gland swelling called a <a href="/health/medical/ency/articles/chancroid">bubo</a><ul><li>Commonly found in the groin, but may occur in the armpits or neck, most often at the site of the infection (bite or scratch)</li><li>Pain may occur in the area before the swelling appears</li></ul></li></ul><p>Pneumonic plague symptoms appear suddenly, typically 2 - 3 days after exposure. They include:</p><ul><li>Cough</li><li>Difficulty breathing</li><li>Fever</li><li>Frothy, <a href="/health/medical/ency/articles/coughing-up-blood">bloody sputum</a></li><li>Pain in the chest when you breathe deeply</li><li>Severe cough</li></ul><p>Septicemic plague may cause death even before its symptoms occur. Symptoms can include:</p><ul><li>Abdominal pain</li><li>Bleediticles/coughing-up-blood">bloody sputum</a></li><li>Pain in the chest when you breathe deeply</li><li>Severe cough</li></ul><p>Septicemic plague may cause death even befong due to blood clotting problems</li><li>Diarrhea</li><li>Fever</li><li>Nausea</li><li>Vomiting</li></ul></div><div><h2>Signs and tests</h2><p>Tests that may be done include:</p><ul><li><div><a href="/health/medical/ency/articles/blood-culture">Blood culture</a></div></li><li><a href="/health/medical/ency/articles/lymph-node-culture">Culture of lymph node aspirate</a> (fluid taken from an affected lymph node or bubo)</li><li><a href="/health/medical/ency/articles/routine-sputum-culture">Sputum culture</a></li></ul></div><div><h2>Treatment</h2><p>People with the plague need immediate treatment. If treatment is not received within 24 hours of when the first symptoms occur, death may occur.</p><p>Antibiotics such as streptomycin, gentamicin, doxycycline, or ciprofloxacin are used to treat plague. Oxygen, <ul><li><a href="/health/medical/ency/articles/intravenous">intravenous</a></li><li><a href="/health/medical/ency/articles/respiratory">respiratory</a></li></ul> fluids, and  support usually are also needed.</p><p>Patients with pneumonic plague should be strictly isolated from caregivers and other patients. People who have had contact with anyone infected by pneumonic plague should be watched carefully and given antibiotics as a preventive measure.</p></div><div><h2>Support Groups</h2><p></div><div><h2>Expectations (prognosis)</h2><p>Withoud other patients. People who have had contact with anyone infected by pneumonic plague should be watched carefully and given antibiotics as a preventive measure.</p></divt treatment, about 50% of people with bubonic plague die. Almost all people with pneumonic plague die if not treated. Treatment reduces the death rate to 50%.</p></div><div><h2>Complications</h2></div><div><h2>Calling your health care provider</h2><p>Call your health care provider if you develop plague symptoms after exposure to fleas or rodents, especially if you live in or have visited an area where plague occurs.</p></div><div><h2>Prevention</h2><p>Rat control and watching for the disease in the wild rodent population are the main measures used to control the risk of epidemics. A vaccination is available for high-risk workers, but its effectiveness is not clearly established.</p></div><div><ul class="videos" style="border-top: 1px solid #B3B0AE; margin:30px 0"><li><div class="image" style="width: 10%"><a href="/health/medical/ency/images/flea"><img src="/~/media/ADAM/Thumbnails/1239t.ashx" alt="Flea"></a></div><div class="content" style="margin-top: 20px"><a href="/health/medical/ency/images/flea">Flea</a></div></li><li><div class="image" style="width: 10%"><a href="/health/medical/ency/images/flea-bite-closeup"><img src="/~/media/ADAM/Thumbnails/2051t.ashx" alt="Flea bite - close-up"></a></div><div class="content" style="margin-top: 20px"><a href="/health/medical/ency/images/flea-bite-closeup">Flea bite - close-up</a></div></li><li><dy/images/flea-bite-closeup"><img src="/~/media/ADAM/Thumbnails/2051t.ashx" alt="Flea bite - close-up"></a></div><div class="content" style="margin-top: 20px"><a href="/heiv class="image" style="width: 10%"><a href="/health/medical/ency/images/antibodies"><img src="/~/media/ADAM/Thumbnails/9069t.ashx" alt="Antibodies"></a></div><div class="content" style="margin-top: 20px"><a href="/health/medical/ency/images/antibodies">Antibodies</a></div></li></ul></div><div><h2>References</h2><p>Dennis DT, Mead PS, <em>Yersinia</em> species, including plague. In: Mandell GL, Bennett JE, Dolin R, eds. <em>Principles and Practice of Infectious Diseases</em>. 7th ed. Philadelphia, Pa: Elsevier Churchill Livingstone; 2009:chap 229.</p><p>Gage KL. Plague and other <em>Yersinia</em> infections. In: Goldman L, Ausiello D, eds. <i>Cecil Medicine</i>. 23rd ed. Philadelphia, Pa: Saunders Elsevier. 2007: chap 333.</p></div><h2>Version Info</h2><ul><li>Last reviewed on 6/9/2011</li><li>David C. Dugdale, III, MD, Professor of Medicine, Division of General Medicine, Department of Medicine, University of Washington School of Medicine; Jatin M. Vyas, MD, PhD, Assistant Professor in Medicine, Harvard Medical School, Assistant in Medicine, Division of Infectious Disease, Department of Medicine, Massachusetts General Hospital. Also reviewed by David Zieve, MD, MHA, Medical Director, A.D.A.M., Inc.</li></ul>
+          
+
+            <p class="disclaimer">A.D.A.M., Inc. is accredited by URAC, also known as the American Accreditation Healtedicine, Massachusetts General Hospital. Also reviewed by David Zieve, MD, MHA, Medical Director, A.D.A.M., Inc.</li></ul>
+          
+
+            <p class="disclaimer"hCare Commission (www.urac.org). URAC's accreditation program is an independent audit to verify that A.D.A.M. follows rigorous standards of quality and accountability. A.D.A.M. is among the first to achieve this important distinction for online health information and services. Learn more about A.D.A.M.'s editorial policy, editorial process and privacy policy. A.D.A.M. is also a founding member of Hi-Ethics and subscribes to the principles of the Health on the Net Foundation (<a href="http://www.hon.ch">www.hon.ch</a>)
+<br>
+<br>
+The information provided herein should not be used during any medical emergency or for the diagnosis or treatment of any medical condition. A licensed medical professional should be consulted for diagnosis and treatment of any and all medical conditions. Call 911 for all medical emergencies. Links to other sites are provided for information only -- they do not constitute endorsements of those other sites. &copy; 1997-&nbsp;2013 A.D.A.M., Inc. Any duplication or distribution of the information contained herein is strictly prohibited.</p>
+
+            
+
+<p style="margin-top: 40px">This page was last updated: May 20, 2014</p>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+
+<script type="text/javascript">
+    function Rate(e) {
+        var r = e.getAttribute("rating");
+   le="margin-top: 40px">This page was last updated: May 20, 2014</p>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+
+<script type="text     $('#hiddenRating').attr("value", r);
+        $('input.star').each(function (index) {
+            if ((index + 1) <= r) $(this).addClass("starSelected");
+            else $(this).removeClass("starSelected");
+        });
+    }
+
+    $(document).ready(function () {
+        $("[id$='txtComment']").attr('maxLength', 255);
+    });
+</script>
+
+<a name="submission"></a>
+<div class="ratings" style="margin-top: 0">
+
+    
+
+<div class="rating">
+    <div id="bodycontentph_0_ctl02_ctl00_pnlRating" class="theRating threeStars">
+	
+        <span class="star1">&nbsp;</span>
+		<span class="star2">&nbsp;</span>
+		<span class="star3">&nbsp;</span>
+		<span class="star4">&nbsp;</span>
+		<span class="star5">&nbsp;</span>
+    
+</div>
+
+	<span class="average">Average rating (229)</span>
+
+    
+
+	<p class="title"></p>
+	<p></p>
+</div>
+
+    
+
+    
+
+	<div class="rateIt" style="padding-top: 10px;">
+        <div class="buttons">
+            <input type="button" class="star" value="1 Star" rating="1" onclick="Rate(this);" />
+            <input type="button" class="star" value="2 Stars" rating="2" onclick="Rate(this);" />
+            <input type="button" class="star" value="3 Stars" rating="3" onclick="Rate(this);" />
+            <input type="button" class="star" value="4 Stars" rating="4" onclick="Rate(this);" />
+           2 Stars" rating="2" onclick="Rate(this);" />
+            <input type="button" class="star" value="3 Stars" rating="3" onclick="Rate(this);" />
+            <input type=" <input type="button" class="star" value="5 Stars" rating="5" onclick="Rate(this);" />
+            <input name="bodycontentph_0$ctl02$hiddenRating" type="hidden" id="hiddenRating" />
+        </div>
+
+        <label for="bodycontentph_0_ctl02_txtComment" id="bodycontentph_0_ctl02_lblFeedback">Give us feedback: (up to 255 characters)</label>
+        <textarea name="bodycontentph_0$ctl02$txtComment" rows="2" cols="20" id="bodycontentph_0_ctl02_txtComment">
+</textarea>
+
+        <script type="text/javascript">
+		var RecaptchaOptions = {
+			theme : '',
+			tabindex : 0
+		};
+
+</script><script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6LcfetgSAAAAAK5iY8IJvqFoTK0bSwRh_tXV5x1l">
+
+</script><noscript>
+		<iframe src="http://www.google.com/recaptcha/api/noscript?k=6LcfetgSAAAAAK5iY8IJvqFoTK0bSwRh_tXV5x1l" width="500" height="300" frameborder="0">
+
+		</iframe><br /><textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea><input name="recaptcha_response_field" value="manual_challenge" type="hidden" />
+</noscript>
+        
+
+        <input type="submit" name="bodycontentph_0$ctl02$btnSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;bodycontentph_0$ctl02$btnSubmit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, falseput type="submit" name="bodycontentph_0$ctl02$btnSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;bodycontentph_))" id="bodycontentph_0_ctl02_btnSubmit" class="submit" />
+    </div>
+</div>
+        </div><!-- main -->
+
+	    
+<aside class="portlets">
+    
+    
+    
+
+    
+    <!-- Start of Brightcove Player -->
+
+<div style="display:none;position:relative;left:-10px;">
+Player used in portlets for single videos 
+</div>
+
+<!--
+By use of this code snippet, I agree to the Brightcove Publisher T and C 
+found at https://accounts.brightcove.com/en/terms-and-conditions/. 
+-->
+
+<script type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
+<object id="myExperience3701733100001" class="BrightcoveExperience">
+  <param name="bgcolor" value="#FFFFFF" />
+  <param name="width" value="173" />
+  <param name="height" value="177" />
+  <param name="playerID" value="3501512394001" />
+  <param name="playerKey" value="AQ~~,AAADMGNBGGE~,ceUkdH6yv4EKJlH5ETmQNV9nWPnjzRG2" />
+  <param name="isVid" value="true" />
+  <param name="dynamicStreaming" value="true" />
+    
+  <param name="@videoPlayer" value="3701733100001" />
+</object>
+
+<!-- 
+This script tag will cause the Brightcove Players defined above it to be created as soon
+as the line is read by the browser. If you wish to have the player instantiated only after
+the rest of the HTML is processed and the page load is complete, remove the line.
+-->
+<will cause the Brightcove Players defined above it to be created as soon
+as the line is read by the browser. If you wish to have the player instantiated only after
+the script type="text/javascript">brightcove.createExperiences();</script>
+
+<!-- End of Brightcove Player -->
+
+<div id="bodycontentph_0_ctl08_ctl00_divPortlet" class="portlet portlet-buttons">
+<a href="http://findadoctor.umm.edu/" class="btn-yellow-arrow">Find a Doctor</a>
+<a href="http://data.umms.org/scripts/expertprocess2/" class="btn-yellow-arrow">Ask the Expert</a>
+ 
+</div>
+
+<div id="bodycontentph_0_ctl03_ctl02_divPortlet" class="portlet">
+    <h2>
+        Related Links</h2>
+    <ul>
+            <li>
+                <a id="bodycontentph_0_ctl03_ctl02_repPortletItems_hlItemLink_0" href="/health/patient-success-stories">Patient Success Stories</a>
+            </li>
+        
+            <li>
+                <a id="bodycontentph_0_ctl03_ctl02_repPortletItems_hlItemLink_1" href="/news-and-events/awards-and-honors">Awards and Honors</a>
+            </li>
+        </ul>
+</div>
+
+
+
+
+    
+
+</aside><!-- portlets -->
+    </div><!-- mcWrap -->
+
+    <div class="secondaryCol">
+	    
+
+<nav id="sub-nav" class="sub-nav">
+    <ul>
+        
+                <li id="bodycontentph_0_ctl04_rptLeftNav_liNavItem_0">
+                    <a id="bodycontentph_0_ctl04_rptLeftNav_hlNavItem_0" href="http://data.umms.org/scripts/expertprocess2/">Ask The Expert</a>
+
+                    
+                </li>
+            
+       ntentph_0_ctl04_rptLeftNav_liNavItem_0">
+                    <a id="bodycontentph_0_ctl04_rptLeftNav_hlNavItem_0" href="http://data.umms.org/scripts/expertprocess2/">Ask         <li id="bodycontentph_0_ctl04_rptLeftNav_liNavItem_1">
+                    <a id="bodycontentph_0_ctl04_rptLeftNav_hlNavItem_1" href="/health/kick-the-habit">Kick The Habit</a>
+
+                    
+                </li>
+            
+                <li id="bodycontentph_0_ctl04_rptLeftNav_liNavItem_2" class="expanded">
+                    <a id="bodycontentph_0_ctl04_rptLeftNav_hlNavItem_2" class="active has-sub-links" href="/health/medical">Medical Reference Guide</a>
+
+                    <ul>
+                            <li>
+                                <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_hlNavItem_0" class="active has-sub-links" href="/health/medical/ency">Medical Encyclopedia</a>
+
+                                <ul>
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_0" class="active" href="/health/medical/ency/articles">All Articles</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_1" href="/health/medical/ency/presentations">Presentations</a>
+             
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLev                                  </li>
+                                    
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_2" href="/health/medical/ency/symptoms">Symptoms</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_3" href="/health/medical/ency/injuries">Injuries</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_4" href="/health/medical/ency/diseases">Diseases</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_5" href="/health/medical/ency/surgery">Surgery</a>
+                                        </li>
+                                    
+                                <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_5" href="/health/medical/ency/surgery">Surgery</a>
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_6" href="/health/medical/ency/nutrition">Nutrition</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_7" href="/health/medical/ency/special">Special Issues</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_8" href="/health/medical/ency/poison">Poisoning</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_9" href="/health/medical/ency/tests">Tests</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptL" href="/health/medical/ency/tests">Tests</a>
+                                        </li>
+                                    
+                                      eftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_10" href="/health/medical/ency/discharge">Discharge Instructions</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_11" href="/health/medical/ency/self-care-instructions">Self-Care Instructions</a>
+                                        </li>
+                                    
+                                        <li>
+                                            <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_rptLeftNavLevel_0_hlNavItem_12" href="/health/medical/ency/questions-to-ask-your-doctor">Questions To Ask Your Doctor</a>
+                                        </li>
+                                    </ul>
+                            </li>
+                        
+                            <li>
+                                <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_hlNavItem_1" href="/health/medical/spanishency">Índice Médico De la Enciclopedia - Español</a>
+
+                                
+                            </li>
+                        
+                            <li>
+                                vItem_1" href="/health/medical/spanishency">Índice Médico De la Enciclopedia - Español</a>
+
+                                
+                            </li>
+          <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_hlNavItem_2" href="/health/medical/drug-interaction-tool">Drug Interaction Tool</a>
+
+                                
+                            </li>
+                        
+                            <li>
+                                <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_hlNavItem_3" href="/health/medical/altmed">Complementary and Alternative Medicine Guide</a>
+
+                                
+                            </li>
+                        
+                            <li>
+                                <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_hlNavItem_4" href="/health/medical/pregnancy">Pregnancy Center</a>
+
+                                
+                            </li>
+                        
+                            <li>
+                                <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_hlNavItem_5" href="/health/medical/spanishpreg">Spanish Pregnancy Center</a>
+
+                                
+                            </li>
+                        
+                            <li>
+                                <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_hlNavItem_6" href="/health/medical/reports">In-Depth Patient Education Reports</a>
+
+            </li>
+                        
+                            <li>
+                                <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_hlNavItem                        
+                            </li>
+                        
+                            <li>
+                                <a id="bodycontentph_0_ctl04_rptLeftNav_rptLeftNavLevel_2_hlNavItem_7" href="/health/medical/drug-notes">Drug Notes</a>
+
+                                
+                            </li>
+                        </ul>
+                </li>
+            
+                <li id="bodycontentph_0_ctl04_rptLeftNav_liNavItem_3">
+                    <a id="bodycontentph_0_ctl04_rptLeftNav_hlNavItem_3" href="/health/patient-success-stories">Patient Success Stories</a>
+
+                    
+                </li>
+            
+                <li id="bodycontentph_0_ctl04_rptLeftNav_liNavItem_4">
+                    <a id="bodycontentph_0_ctl04_rptLeftNav_hlNavItem_4" href="/health/audio">Audio Library</a>
+
+                    
+                </li>
+            
+                <li id="bodycontentph_0_ctl04_rptLeftNav_liNavItem_5">
+                    <a id="bodycontentph_0_ctl04_rptLeftNav_hlNavItem_5" href="/health/video">Video Library</a>
+
+                    
+                </li>
+            
+                <li id="bodycontentph_0_ctl04_rptLeftNav_liNavItem_6">
+                    <a id="bodycontentph_0_ctl04_rptLeftNav_hlNavItem_6" href="/health/webcasts">Webcasts</a>Library</a>
+
+                    
+                </li>
+            
+                <li id="bodycontentph_0_ctl04_rptLeftNav_liNavItem_6">
+                    <a i
+
+                    
+                </li>
+            
+                <li id="bodycontentph_0_ctl04_rptLeftNav_liNavItem_7">
+                    <a id="bodycontentph_0_ctl04_rptLeftNav_hlNavItem_7" href="/health/your-health">Your Health</a>
+
+                    
+                </li>
+            
+    </ul>
+</nav>
+    </div>
+    </div>
+</div></div></div><!-- PW -->
+				    
+
+<nav id="footer-nav" class="footerNav" role="navigation">    
+    <div class="row">
+        
+                <div id="ctl05_rptRowOne_pnlRowOne_0" class="col col1">
+	
+                    <h2>
+                        <a id="ctl05_rptRowOne_hlRowOneItem_0" class="has-sub-links" href="/patients">Patients and Visitors</a>
+                    </h2>
+                    <a id="ctl05_rptRowOne_hlRowOneResponsiveItem_0" class="footerNav-landingLink" href="/patients">Patients and Visitors</a>
+                    <ul>
+                        
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_0" href="/patients/directions">Directions and Parking</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_1" href="/patients/visins">Directions and Parking</a>
+                                </li>
+                            
+                                <li>
+                               ting-hours">Visiting Hours</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_2" href="/patients/resource-center">Patient Resource Center</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_3" href="/~/media/UMM/PDFs/patients-and-visitors/patient-and-family-handbook.pdf">Patient and Family Handbook</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_4" href="/patients/concierge-services">Concierge Services</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_5" href="/patients/insurance-plans">Insurance Plans</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_6" href="/patients/my-portfolans">Insurance Plans</a>
+                                </li>
+                            
+                                <li>
+                                    lio">My Portfolio</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_7" href="/patients/emergency">Emergency Services</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_8" href="/patients/flowers-and-cards">Flowers and Cards</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_9" href="/patients/hotels">Hotels</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_10" href="/patients/restaurants">Restaurants</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_11" href="/patients/caringbridge">CaringBridge</a>
+                                </li>
+                            
+                                   <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_11" href="/patients/caringbridge">CaringBridge</                    <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_12" href="/patients/support-groups">Support Groups</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_13" href="/patients/medical-records">Medical Records</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_14" href="/patients/pastoral">Pastoral Care</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_15" href="/patients/patient-safety">Patient Safety and Quality</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_16" href="/patients/perioperative-services">Perioperative Services</a>
+                                </li>
+                            
+                                <li>
+                               _rptRowOne_rptRowOneChildren_0_hlRowOneChild_16" href="/patients/perioperative-services">Perioperative Services</a>
+                                </li>
+                   <a id="ctl05_rptRowOne_rptRowOneChildren_0_hlRowOneChild_17" href="/patients/phone-numbers">Phone Numbers</a>
+                                </li>
+                            
+                    </ul>
+                
+</div>               
+            
+                <div id="ctl05_rptRowOne_pnlRowOne_1" class="col col2">
+	
+                    <h2>
+                        <a id="ctl05_rptRowOne_hlRowOneItem_1" class="has-sub-links" href="/programs">Centers and Services</a>
+                    </h2>
+                    <a id="ctl05_rptRowOne_hlRowOneResponsiveItem_1" class="footerNav-landingLink" href="/programs">Centers and Services</a>
+                    <ul>
+                        
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_1_hlRowOneChild_0" href="http://www.umgcc.org/">Cancer Center</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_1_hlRowOneChild_1" href="/programs/childrens">Children's Hospital</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_1_hlRowOneChild_2" href="/programs/childrens">Children's Hospital</a>
+                                </li>
+                            
+                                <li>
+             ef="/programs/heart">Heart Center</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_1_hlRowOneChild_3" href="/programs/shock-trauma">Shock Trauma</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_1_hlRowOneChild_4" href="/programs/transplant">Transplant Center</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_1_hlRowOneChild_5" href="/programs">See All Centers and Services</a>
+                                </li>
+                            
+                    </ul>
+                
+</div>               
+            
+                <div id="ctl05_rptRowOne_pnlRowOne_2" class="col col3">
+	
+                    <h2>
+                        <a id="ctl05_rptRowOne_hlRowOneItem_2" class="has-sub-links" href="/health">Health Information</a>
+                    </h2>
+                    <a id="ctl05_rptRowOne_hlRowOneResponsiveItem_2" class="footerNav-landingLink" href="/health">Health Information</a>
+                    eItem_2" class="has-sub-links" href="/health">Health Information</a>
+                    </h2>
+                    <a id="ctl05_rptRowOne_hlRowOneResponsiveItem_2" clas<ul>
+                        
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_2_hlRowOneChild_0" href="http://data.umms.org/scripts/expertprocess2/">Ask The Expert</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_2_hlRowOneChild_1" href="/health/kick-the-habit">Kick The Habit</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_2_hlRowOneChild_2" href="/health/medical">Medical Reference Guide</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_2_hlRowOneChild_3" href="/health/patient-success-stories">Patient Success Stories</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_2_hlRowOneChild_4" href="/health/audio">Audio Library</a>
+                                </li>
+                            
+                                            <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_2_hlRowOneChild_4" href="/health/audio">Audio Library</a>
+                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_2_hlRowOneChild_5" href="/health/video">Video Library</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_2_hlRowOneChild_6" href="/health/webcasts">Webcasts</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_2_hlRowOneChild_7" href="/health/your-health">Your Health</a>
+                                </li>
+                            
+                    </ul>
+                
+</div>               
+            
+                <div id="ctl05_rptRowOne_pnlRowOne_3" class="col col4">
+	
+                    <h2>
+                        <a id="ctl05_rptRowOne_hlRowOneItem_3" class="has-sub-links" href="/research">Research and Clinical Trials</a>
+                    </h2>
+                    <a id="ctl05_rptRowOne_hlRowOneResponsiveItem_3" class="footerNav-landingLink" href="/research">Research and Clinical Trials</a>
+                    <ul>
+                        
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildiveItem_3" class="footerNav-landingLink" href="/research">Research and Clinical Trials</a>
+                    <ul>
+                        
+                          ren_3_hlRowOneChild_0" href="/research/about">About Clinical Trials</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_3_hlRowOneChild_1" href="/research/participating">Participating in Clinical Trials</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_3_hlRowOneChild_2" href="/research/questions-to-ask">Questions</a>
+                                </li>
+                            
+                    </ul>
+                
+</div>               
+            
+                <div id="ctl05_rptRowOne_pnlRowOne_4" class="col col5">
+	
+                    <h2>
+                        <a id="ctl05_rptRowOne_hlRowOneItem_4" class="has-sub-links" href="/professionals">For Health Professionals</a>
+                    </h2>
+                    <a id="ctl05_rptRowOne_hlRowOneResponsiveItem_4" class="footerNav-landingLink" href="/professionals">For Health Professionals</a>
+                    <ul>
+                        
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_4_hlRowOneChild_0" href="/prngLink" href="/professionals">For Health Professionals</a>
+                    <ul>
+                        
+                                <li>
+                    ofessionals/referring">Referring Physicians</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_4_hlRowOneChild_1" href="/professionals/nursing">Nursing</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_4_hlRowOneChild_2" href="/professionals/nurse-practitioners">Nurse Practitioners</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_4_hlRowOneChild_3" href="/professionals/gme">Graduate Medical Education</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_4_hlRowOneChild_4" href="/professionals/medstaff">Medical Staff Services</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_4_hlRowOneChild_5" href="/professionals/dietetic-internship">Dietetic Internship</a>
+                 </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_4_h                              </li>
+                            
+                    </ul>
+                
+</div>               
+            
+                <div id="ctl05_rptRowOne_pnlRowOne_5" class="col col6">
+	
+                    <h2>
+                        <a id="ctl05_rptRowOne_hlRowOneItem_5" class="has-sub-links" href="/news-and-events">News and Events</a>
+                    </h2>
+                    <a id="ctl05_rptRowOne_hlRowOneResponsiveItem_5" class="footerNav-landingLink" href="/news-and-events">News and Events</a>
+                    <ul>
+                        
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_5_hlRowOneChild_0" href="/news-and-events/news-releases">News Releases</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_5_hlRowOneChild_1" href="/news-and-events/awards-and-honors">Awards and Honors</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_5_hlRowOneChild_2" href="/news-and-events/connect-with-ummc">Connect with UMMC</a>
+                                                      
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_5_hlRowOneChild_2" href="/ne   </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_5_hlRowOneChild_3" href="/news-and-events/events">Events</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_5_hlRowOneChild_4" href="/news-and-events/media-professionals">Help for Media Professionals</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_5_hlRowOneChild_5" href="/news-and-events/ummc-discovery">UMMC Discovery</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_5_hlRowOneChild_6" href="/news-and-events/ummc-connections">UMMC Connections</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_5_hlRowOneChild_7" href="http://medcenterblog.org/">UMMC Blog</a>
+                                </li>
+                            
+                                    <li>
+                                    <a id="ctl05_rptRowOne_rptRowOneChildren_5_hlRowOneChild_7" href="http://medcenterblog.org/">UMMC Blog</a>      </ul>
+                
+</div>               
+            	    
+    </div>
+
+    <div class="row">
+        
+                <div id="ctl05_rptRowTwo_pnlRowTwo_0" class="col col7">
+	
+                    <h2>
+                        <a id="ctl05_rptRowTwo_hlRowTwoItem_0" href="http://findadoctor.umm.edu">Find a doctor</a>
+                    </h2>
+                
+</div>
+            
+                <div id="ctl05_rptRowTwo_pnlRowTwo_1" class="col col8">
+	
+                    <h2>
+                        <a id="ctl05_rptRowTwo_hlRowTwoItem_1" href="/make-an-appointment">Make An Appointment</a>
+                    </h2>
+                
+</div>
+            
+                <div id="ctl05_rptRowTwo_pnlRowTwo_2" class="col col9">
+	
+                    <h2>
+                        <a id="ctl05_rptRowTwo_hlRowTwoItem_2" href="http://data.umms.org/scripts/expertprocess2/">Ask The Expert</a>
+                    </h2>
+                
+</div>
+            	    
+    </div>
+</nav>
+
+<footer class="mainFooter">
+    <div class="secondary">
+        
+                <a id="ctl05_rptSecondary_hlSecondaryLink_0" href="/about">About Us</a>
+            
+                <a id="ctl05_rptSecondary_hlSecondaryLink_1" href="/ways-you-can-help">Ways You Can Help</a>
+            
+                <a id="ctl05_rptSecondary_hl<a id="ctl05_rptSecondary_hlSecondaryLink_0" href="/about">About Us</a>
+            
+                <a id="ctl05_rptSecondary_hlSecondaryLink_1" href="/ways-you-can-heSecondaryLink_2" href="/health/medical/spanishency">Espanol</a>
+            
+                <a id="ctl05_rptSecondary_hlSecondaryLink_3" href="/contact-us">Contact Us</a>
+            
+    </div>
+    <div class="social">
+	    <h3>Stay Connected:</h3>
+        <a id="ctl05_hlFacebook" class="fb" href="https://www.facebook.com/MedCenter">Facebook</a>
+        <a id="ctl05_hlTwitter" class="twitter" href="https://twitter.com/UMMC">Twitter</a>
+        <a id="ctl05_hlGooglePlus" class="plus" href="https://plus.google.com/104329499008073533257/posts">Google Plus</a>
+        <a id="ctl05_hlYouTube" class="youtube" href="http://www.youtube.com/user/ummcvideos">YouTube</a>
+        
+    </div>
+</footer>
+                </div>
+            </div>
+            
+<div class="mainAddress" role="contentinfo">
+    <address>
+        &copy; 2015 University of Maryland Medical Center (UMMC). All rights reserved. UMMC
+        is a member of the University of Maryland Medical System, 22 S. Greene Street, Baltimore,
+        MD 21201. <a href="tel:8004925538" class="address-tel">1.800.492.5538</a> TDD: <a href="tel:8007352258" class="address-tel">1.800.735.2258</a> Physician
+        Referral: <a href="tel:8003734111" class="address-tel">1.800.373.4111</a>
+    </address>
+</div>
+
+        </div>
+        
+
+<script src="//ajax.googleapis.com/ajax/TDD: <a href="tel:8007352258" class="address-tel">1.800.735.2258</a> Physician
+        Referral: <a href="tel:8003734111" class="address-tel">1.800.373.4111</a>
+    </alibs/jquery/1.10.2/jquery.js"></script>
+<script>window.jQuery || document.write("<script src='js/jquery-1.10.2.min.js'>x3C/script>")</script>
+
+<script src="/js/helper.js"></script>
+<script src="/js/min/responsiveslides.min.js"></script>
+<script src="/js/min/jquery.flexslider-min.js"></script>
+<script src="/js/min/jquery.bxslider.min.js"></script>
+
+<script src="/js/min/jquery.placeholder.min.js"></script>
+<script src="/js/min/mediaelement-and-player.min.js"></script>
+<script src="/js/min/jquery.colorbox.min.js"></script>
+<script src="/js/min/utils.min.js"></script>
+<script src="/js/home.js"></script>
+
+<!-- BEGIN Tynt Script From Editor-->
+<script>
+if (document.location.protocol === 'http:') {
+  var Tynt = Tynt || [];
+  Tynt.push('cAFxnsppar35PradbiUt4I');
+  (function () {
+    var s = document.createElement('script');
+    s.async = "async";
+    s.src = 'http://tcr.tynt.com/ti.js';
+    var h = document.getElementsByTagName('script')[0];
+    h.parentNode.insertBefore(s,h);
+  })();
+}
+</script>
+<!-- END Tynt Script From Editor-->
+<!-- Share This From Editor-->
+
+<script>var switchTo5x=true;</script>
+<script src="http://w.sharethis.com/button/buttons.js"></script>
+<script src="http://s.sharethis.com/loader.js"></script>
+<script>stLight.options({publisher: "67d87cd9-3a0b-4ba0-8d98-6cccad5962f1"});</script>
+
+<scrcript>var switchTo5x=true;</script>
+<script src="http://w.sharethis.com/button/buttons.js"></script>
+<script src="http://s.sharethis.com/loader.js"></script>
+<script>sipt type="text/javascript">
+if(!navigator.userAgent.match(/Android|webOS|iPhone|iPod|BlackBerry|iPad/i) && xWidth > 1033){
+    stLight.options({ publisher: "67d87cd9-3a0b-4ba0-8d98-6cccad5962f1", doNotHash: true, doNotCopy: true, hashAddressBar: false });
+    var options = { "publisher": "67d87cd9-3a0b-4ba0-8d98-6cccad5962f1",
+                    "position": "left",
+                    "ad": {
+                            "visible": false,
+                            "openDelay": 5,
+                            "closeDelay": 0 },
+                    "chicklets": {
+                            "items": [
+                                "email",
+                                "facebook",
+                                "twitter",
+                                "linkedin",
+                                "pinterest",
+                                "tumblr",
+                                "evernote",
+                                "reddit",
+                                "stumbleupon",
+                                "sharethis",
+                                "googleplus",
+                                "instapaper"]} };
+    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+}
+    </script>
+
+<!-- /Share This From Editor-->
+
+
+  </form>
+
+</body>
+</html>,
+                                "googleplus",
+                                "instapaper"]} };
+    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+}
+    </script>
+
+<!-- /Share This Fr

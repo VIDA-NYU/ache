@@ -1,0 +1,619 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>History of Vaccines - Mobile | A Vaccine History Project of The College of Physicians of Philadelphia</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/sites/all/themes/copmobile/favicon.ico" type="image/x-icon" />
+    
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="HandheldFriendly" content="true" />
+	
+	<link rel="apple-touch-icon" href="/sites/all/themes/copmobile/_images/touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/copmobile/_images/touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/sites/all/themes/copmobile/_images/touch-icon-iphone4.png" />
+
+    <link type="text/css" rel="stylesheet" media="all" href="/sites/default/files/css/css_e0971fdc48185308106e25bd852b2115.css" />
+<link type="text/css" rel="stylesheet" media="print" href="/sites/default/files/css/css_710518d08b6dc482384e58e5a6f06472.css" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/ie.css?h" />
+<![endif]-->
+    <script type="text/javascript" src="/sites/default/files/js/js_3bfe1e0dbad392ed814cc9ac23374789.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/" });
+//--><!]]>
+</script>
+</head>
+
+<body class="not-front not-logged-in no-sidebars page-content-timelines-smallpox section-content">
+	
+<div id="page">
+
+<div id="header">
+    <a id="logo" class="replace" href="/" title="Home"><span>Home</span></a>
+    </div>
+
+<div id="main">
+
+<div id="content">
+	
+    <div id="content-area">
+	    
+<div class="panel-timeline clear-block panel-display" >
+    <div class="panel-col-top panel-panel">
+	    <div class="inside">
+        	        
+        	<div id="timelines-topnav">
+            	<a id="timeline_help_btn" href="#" title="Timeline Help" class="replace sprite"><span>Timeline Help</span></a>
+            
+                <ul id="timelines-nav1" class="hor-nav timelines-nav reset clearfix">
+                    <li class="all"><a href="/content/timelines/all">All Topics</a></li>
+                    <li class="diseases-and-vaccines"><a href="/content/timelines/diseases-and-vaccines">Diseases and Vaccines</a></li>
+                    <li class="pioneers"><a href="/content/timelines/pioneers">Pioneers</a></li>
+                    <li class="science-and-society"><a href="/content/timelines/science-and-society">Science and Society</a></li>
+					<li class="en-espanol"><a href="/es/content/timelines/en-espanol">En Espa&ntilde;ol</a></li>
+                </ul>
+                
+                <ul id="timelines-nav2" class="hor-nav timelines-nav reset clearfix">
+                    <li class="diseases-and-vaccines"><a href="/content/timelines/diseases-and-vaccines">All</a></li>
+                    <li class="diphtheria"><a href="/content/timelines/diphtheria">Diphtheria</a></li>
+                    <li class="measles"><a href="/content/timelines/measles">Measles</a></li>
+                    <li class="polio"><a href="/content/timelines/polio">Polio</a></li>
+                    <li class="smallpox"><a href="/content/timelines/smallpox">Smallpox</a></li>
+                    <l/content/timelines/mi class="yellow-fever"><a href="/content/timelines/yellow-fever">Yellow Fever</a></li>
+                    <li class="others"><a href="/content/timelines/others">Others</a></li>
+                </ul>
+    
+                <ul id="timelines-nav3" class="hor-nav timelines-nav reset clearfix">
+                    <li class="pioneers"><a href="/content/timelines/pioneers">All</a></li>
+                    <li class="hilleman"><a href="/content/timelines/hilleman">Hilleman</a></li>
+                    <li class="jenner"><a href="/content/timelines/jenner">Jenner</a></li>
+                    <li class="pasteur"><a href="/content/timelines/pasteur">Pasteur</a></li>
+                </ul>
+                
+                <ul id="timelines-nav4" class="hor-nav timelines-nav reset clearfix">
+                    <li class="science-and-society"><a href="/content/timelines/science-and-society">All</a></li>
+                    <li class="breakthroughs"><a href="/content/timelines/breakthroughs">Breakthroughs</a></li>
+                    <li class="vaccines-and-society"><a href="/content/timelines/vaccines-and-society">Vaccines and Society</a></li>
+                </ul>
+			</div>  <!-- timelines-topnav -->             
+            
+            <div id="timeline-everything">
+                <div id="timeline"></div>  <!-- timeline -->
+
+                <div id="popup">
+                    <div id="popup-container">
+                        <a id="popup-close" href="#" class="replace sprite" title="Close"><span>Close</span></a>
+                        
+                        <div id="popup-images">
+                        
+                        <div id="popup-image-md"></div>
+                        
+                        <div id="popup-credit"></div>
+                        <div id="popup-caption"></div>
+                        
+                        <div id="popup-images-sm">
+                            <a id="popup-images-prev" href="#" class="replace sprite"><span>Prev</span></a>
+                            <a id="popup-images-next" href="#" class="replace sprite"><span>Next</span></a>
+                        </div>
+                
+                        </div> <!-- popup-images -->
+                        
+                        <div id="popup-date"></div>
+                        
+                        <div id="popup-title"></div>
+                        
+                        <div id="popup-description"></div>
+                    </div> <!-- popup-container -->
+                </div> <!-- popup -->
+
+                <div id="timeline-help">
+	                <a id="timeline-help-close" href="#" class="replace sprite" title="Close"><span>Close</span></a>
+                </div> <!-- timeline-help -->
+                
+                <div id="timeline-nav">
+                    <div id="timeline-slider"></div>
+                    <a class="scroll-earlier replace sprite" href="#" title="Scroll Earlier"><span>Scroll Earlier</span></a>
+                    <a class="scroll-later replace sprite" href="#" title="Scroll Later"><span>Scroll Later</span></a>
+                </div> <!-- timeline-nav -->
+            </div> <!-- timeline-everything -->
+        </div>
+    </div>
+
+    <div class="timeline-addthis addthis_toolbox addthis_16x16_style addthis_default_style">
+        <a class="addthis_button_compact"><img src="/sites/all/modules/panels/_images/share_txt.jpg" width="47" height="16" alt="Share" /></a>
+        <a class="addthis_button_facebook"></a>
+        <a class="addthis_button_twitter"></a>
+        <a class="addthis_button_google"></a>
+    </div>
+  
+	<div class="inside clear grid-10 prefix-1 alpha article">
+		<div class="panel-pane pane-views pane-timeline-overview" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="view view-timeline-overview view-id-timeline_overview view-display-id-default view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field-body">
+                <div class="field-content"><h1>History of Smallpox</h1>
+
+<p><img class="body-image" src="http://dev.historyofvaccines.org/sites/default/files/uploaded-timeline-overview-images/000085_265.jpg" alt="Smallpox virus, artificially colored transmission electron microscope image. Copyright Dennis Kunkel Microscopy, Inc." width="265" height="265" />The history of smallpox holds a unique place in medicine. One of the deadliest diseases known to humans, it is also the only human disease to have been eradicated by vaccination.</p>
+<p>Symptoms of a typical smallpox infection began with a fever and lethargy about two weeks after exposure to the <em>Variola</em> virus. Headache, sore throat, and vomiting were common as well. In a few days, a raised rash appeared on the face and body, and sores formed inside the mouth, throat, and nose. Fluid-filled pustules would develop and expand, in some cases joining together and covering large areas of skin. In about the third week of illness, scabs formed and separated from the skin.</p>
+<p>About 30% of cases ended in death, typically in the second week of infection. Most survivors had some degree of permanent scarring, which could be extensive. Other deformities could result, such as loss of lip, nose, and ear tissue. Blindness could occur as a result of corneal scarring.</p>
+<p>Smallpox was spread by close contact with the sores or resome degree of permanent scarring, which could be extensive. Other deformities could resultpiratory droplets of an infected person. Contaminated bedding or clothing could also spread the disease. A patient remained infectious until the last scab separated from the skin.</p>
+<p>Smallpox plagued human populations for thousands of years. Researchers who examined the mummy of Egyptian pharaoh Ramses V (died 1157 BCE) observed scarring similar to that from smallpox on his remains. Ancient Sanskrit medical texts, dating from about 1500 BCE, describe a smallpox-like illness. Smallpox was likely present in Europe by about 300 CE.</p>
+<p>Some estimates indicate that 20th-century worldwide deaths from smallpox numbered more than 300 million. The last known case of wild smallpox occurred in Somalia in 1977.</p>
+<p><a href="http://www.historyofvaccines.org/sites/default/files/inline-pdfs/SMALLPOX_BIBLIOGRAPHY_0.pdf">Bibliography for the Smallpox Timeline</a></p>
+
+</div>
+  </div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+  </div>
+    </div>
+
+	<div class="inside grid-4 suffix-1 omega highlights">
+		<div class="panel-pane pane-views pane-timeline-highlights" >
+  
+  
+  
+  <div class="pane-content">
+    <div class="view view-timeline-highlights view-id-timeline_highlights view-display-id-panel_pane_1 view-dom-id-2">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field-title">
+          <label class="views-label-title">
+        Title:
+      </label>
+                <span class="field-content">Future President Contracts Smallpox</span>
+  </div>
+  
+  <div class="views-field-body">
+          <label class="views-label-body">
+        Body:
+      </label>
+                <div class="field-content"><p>Andrew Jackson (1767-1845), future U.S. president, contracted smallpox  at age 14 while being held prisoner by the British during the War of  Independence.</p></div>
+  </div>
+  
+  <div class="views-field-field-related-media-nid">
+          <label class="views-label-field-related-media-nid">
+        Related Media:
+      </label>
+                <div class="field-content"><div id="node-566" class="node node-type-media"><div class="node-inner">
+      <h1 class="title"><a href="/content/andrew-jackson" title="Andrew Jackson">Wed, 2010-06-16 10:27&mdash; Andrew Jackson</a></h1>
+    
+  <div class="content">
+    <video width="320" poster="http://media.historyofvaccines.org/images/000093_265.jpg" controls preload>
+        <source src="http://media.historyofvaccines.org/mobile/video/320/000093.mp4" />
+        <p>Download <a href="http://media.historyofvaccines.org/mobile/video/320/000093.mp4">MP4</a>.</p>
+	</video>
+  </div>
+</div></div> <!-- /node-inner, /node --></div>
+  </div>
+  
+  <div class="views-field-field-related-timeline-entries-nid">
+          <label class="views-label-field-related-timeline-entries-nid">
+        Related Timeline Entry:
+      </label>
+                <div class="field-content"><div id="node-447" class="node node-type-timeline-entry"><div class="node-inner">
+      <h1 class="title"><a href="/content/future-president-contracts-smallpox" title="Future President Contracts Smallpox">Future President Contracts Smallpox</a></h1>
+    
+  <div class="content">
+    <div class="field field-type-text field-field-event-date">
+      <div class="field-label">Event Date:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    1781        </div>
+        </div>
+</div>
+<p>Andrew Jackson (1767-1845), future U.S. president, contracted smallpox at age 14 while being held prisoner by the British during the War of Independence. His brother Robert, taken prisoner with him, died of the disease.</p>
+<div class="field field-type-number-integer field-field-all-dates">
+      <div class="field-label">Included in All Dates?:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    Yes        </div>
+        </div>
+</div>
+<div class="field field-type-nodereference field-field-related-media">
+      <div class="field-label">Related Media:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/content/andrew-jackson">Andrew Jackson</a>        </div>
+        </div>
+</div>
+<fieldset class="fieldgroup group-admin"><legend>Administrative Fields</legend><div class="field field-type-text field-field-uid">
+      <div class="field-label">Unique ID:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    44        </div>
+        </div>
+</div>
+<div class="field field-type-text field-field-media-filename">
+      <div class="field-label">Associated Media Filename:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    93        </div>
+        </div>
+</div>
+</fieldset>
+  </div>
+</div></div> <!-- /node-inner, /node --></div>
+  </div>
+  
+  <div class="views-field-nid">
+          <label class="views-label-nid">
+        Nid:
+      </label>
+                <span class="field-content">1176</span>
+  </div>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field-title">
+          <label class="views-label-title">
+        Title:
+      </label>
+                <span class="field-content">Did You Know?</span>
+  </div>
+  
+  <div class="views-field-body">
+          <label class="views-label-body">
+        Body:
+      </label>
+                <div class="field-content"><p>Edward Jenner learned from a milkmaid that she believed herself protected from smallpox because she had caught cowpox from a cow.</p></div>
+  </div>
+  
+  <div class="views-field-field-related-media-nid">
+          <label class="views-label-field-related-media-nid">
+        Related Media:
+      </label>
+                <div class="field-content"><div id="node-556" class="node node-type-media"><div class="node-inner">
+      <h1 class="title"><a href="/content/cowpox-near-human-eye" title="Cowpox Near Human Eye">Wed, 2010-06-16 10:27&mdash; Cowpox Near Human Eye</a></h1>
+    
+  <div class="content">
+    <video width="320" poster="http://media.historyofvaccines.org/images/000026_265.jpg" controls preload>
+        <source src="http://media.historyofvaccines.org/mobile/video/320/000026.mp4" />
+        <p>Download <a href="http://media.historyofvaccines.org/mobile/video/320/000026.mp4">MP4</a>.</p>
+	</video>
+  </div>
+</div></div> <!-- /node-inner, /node --></div>
+  </div>
+  
+  <div class="views-field-field-related-timeline-entries-nid">
+          <label class="views-label-field-related-timeline-entries-nid">
+        Related Timeline Entry:
+      </label>
+                <div class="field-content"><div id="node-442" class="node node-type-timeline-entry"><div class="node-inner">
+      <h1 class="title"><a href="/content/protection-cowpox-infection" title="Protection by Cowpox Infection">Protection by Cowpox Infection</a></h1>
+    
+  <div class="content">
+    <div class="field field-type-text field-field-event-date">
+      <div class="field-label">Event Date:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    1770        </div>
+        </div>
+</div>
+<div id="popup-description" style="overflow: visible; height: auto;">
+<p>Edward Jenner (1749-1823), an English doctor, learned from a milkmaid that she believed herself protected from smallpox because she had caught cowpox from a cow.</p>
+<p>Cowpox is an uncommon illness in cattle, usually mild, that can be spread from a cow to humans via sores on the cow. During an infection, dairy workers may have pustules on their hands. Sufferers can spread the infection to other parts of the body.</p>
+<p>We know now that the cowpox virus belongs to the Orthopox family of viruses. Orthopox viruses also include monkeypox virus and <em>variola</em> viruses, which cause smallpox.</p>
+</div>
+<div class="field field-type-number-integer field-field-all-dates">
+      <div class="field-label">Included in All Dates?:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    Yes        </div>
+        </div>
+</div>
+<div class="field field-type-nodereference field-field-related-media">
+      <div class="field-label">Related Media:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/content/orthopox-viruses">Orthopox Viruses</a>        </div>
+              <div class="field-item even">
+                    <a href="/content/edward-jenner">Edward Jenner</a>        </div>
+              <div class="field-item odd">
+                    <a href="/content/cowpox-cow">Cowpox on Cow</a>        </div>
+              <div class="field-item even">
+                    <a href="/content/cowpox-near-human-eye">Cowpox Near Human Eye</a>        </div>
+              <div class="field-item odd">
+                    <a href="/content/milkmaids-and-cowpox">Milkmaids and Cowpox</a>        </div>
+        </div>
+</div>
+<fieldset class="fieldgroup group-admin"><legend>Administrative Fields</legend><div class="field field-type-text field-field-uid">
+      <div class="field-label">Unique ID:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    30        </div>
+        </div>
+</div>
+<div class="field field-type-text field-field-media-filename">
+      <div class="field-label">Associated Media Filename:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    80, 129, 25, 26, 123        </div>
+        </div>
+</div>
+</fielt field-field-media-filename">dset>
+  </div>
+</div></div> <!-- /node-inner, /node --></div>
+  </div>
+  
+  <div class="views-field-nid">
+          <label class="views-label-nid">
+        Nid:
+      </label>
+                <span class="field-content">1133</span>
+  </div>
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field-title">
+          <label class="views-label-title">
+        Title:
+      </label>
+                <span class="field-content">WHO Pushes Eradication Efforts</span>
+  </div>
+  
+  <div class="views-field-body">
+          <label class="views-label-body">
+        Body:
+      </label>
+                <div class="field-content"><p>The World Health Organization launched the Intensified Smallpox Eradication Programme, which eventually led to the disappearance of smallpox.</p></div>
+  </div>
+  
+  <div class="views-field-field-related-media-nid">
+          <label class="views-label-field-related-media-nid">
+        Related Media:
+      </label>
+                <div class="field-content"><div id="node-623" class="node node-type-media"><div class="node-inner">
+      <h1 class="title"><a href="/content/reported-smallpox-cases" title="Reported Smallpox Cases">Wed, 2010-06-16 10:27&mdash; Reported Smallpox Cases</a></h1>
+    
+  <div class="content">
+    <video width="320" poster="http://media.historyofvaccines.org/images/000141_265.jpg" controls preload>
+        <source src="http://media.historyofvaccines.org/mobile/video/320/000141.mp4" />
+        <p>Download <a href="http://media.historyofvaccines.org/mobile/video/320/000141.mp4">MP4</a>.</p>
+	</video>
+  </div>
+</div></div> <!-- /node-inner, /node --></div>
+  </div>
+  
+  <div class="views-field-field-related-timeline-entries-nid">
+          <label class="views-label-field-related-timeline-entries-nid">
+        Related Timeline Entry:
+      </label>
+                <div class="field-content"><div id="node-490" class="node node-type-timeline-entry"><div class="node-inner">
+      <h1 class="title"><a href="/content/who-pushes-eradication-efforts" title="WHO Pushes Eradication Efforts">WHO Pushes Eradication Efforts</a></h1>
+    
+  <div class="content">
+    <div class="field field-type-text field-field-event-date">
+      <div class="field-label">Event Date:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    1/1/1967        </div>
+        </div>
+</div>
+<p>The World Health Organization launched the Intensified Smallpox Eradication Programme.</p>
+<p>At the time, smallpox was endemic in 12 countries or territories in eastern and southern Africa, 11 in western and central Africa, seven in Asia, and Brazil in the Americas. The WHO program designated two main components to its eradication plan: mass vaccinations using freeze-dried vaccine material of carefully monitored quality, and the development of a system to detect, monitor, and investigate smallpox cases and contain outbreaks. Three principles were vital to the program’s success: participation from all countries, with solid coordination; adaptability as national programs were implemented; and ongoing research to evaluate progress and deal with problems that might arise. The United States had already announced plans to coordinate with other countries in a smallpox eradication effort, in accordance with WHO’s eradication program.</p>
+<p>WHO efforts came under criticism from some health workers and human rights advocates. Some public health administrators charged that campaign workers at times bent WHO and local regulations. Some human rights advocates objected to the search and quarantine aspects of the program. Later, some critics claimed that physicians used coercion to ensure vaccination of quarantined individuals.</p>
+<div class="field field-type-number-integer field-field-all-dates">
+      <div class="field-label">Included in All Dates?:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    Yes        </div>
+        </div>
+</div>
+<div class="field field-type-nodereference field-field-related-media">
+      <div class="field-label">Related Media:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/content/reported-smallpox-cases">Reported Smallpox Cases</a>        </div>
+              <div class="field-item even">
+                    <a href="/content/smallpox-lesions">Smallpox Lesions</a>        </div>
+              <div class="field-item odd">
+                    <a href="/content/smallpox-rash">Smallpox Rash</a>        </div>
+              <div class="field-item even">
+                    <a href="/content/planning-session">Planning Session</a>        </div>
+              <div class="field-item odd">
+                    <a href="/content/smallpox-recognition-cards">Smallpox Recognition Cards</a>        </div>
+              <div class="field-item even">
+                    <a href="/content/rotary-lancet-vaccination">Rotary Lancet Vaccination</a>        </div>
+              <div class="field-item odd">
+                    <a href="/content/vaccine-potentcy-test">Vaccine Potentcy Test</a>        </div>
+              <div class="field-item even">
+                    <a href="/content/smallpox-reporting-rewards">Smallpox Reporting Rewards</a>        </div>
+              <div class="field-item odd">
+                    <a href="/content/checking-vaccination">Checking for Vaccination</a>        </div>
+        </div>
+</div>
+<fieldsentent/smallpox-reporting-rewards">Smallpox Reporting Rewards</a>        </div>
+              <t class="fieldgroup group-admin"><legend>Administrative Fields</legend><div class="field field-type-text field-field-uid">
+      <div class="field-label">Unique ID:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    118        </div>
+        </div>
+</div>
+<div class="field field-type-text field-field-media-filename">
+      <div class="field-label">Associated Media Filename:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    141, 36, 39, 40, 42, 44, 45, 46, 48        </div>
+        </div>
+</div>
+</fieldset>
+  </div>
+</div></div> <!-- /node-inner, /node --></div>
+  </div>
+  
+  <div class="views-field-nid">
+          <label class="views-label-nid">
+        Nid:
+      </label>
+                <span class="field-content">1142</span>
+  </div>
+  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+      
+  <div class="views-field-title">
+          <label class="views-label-title">
+        Title:
+      </label>
+                <span class="field-content">Featured Video</span>
+  </div>
+  
+  <div class="views-field-body">
+          <label class="views-label-body">
+        Body:
+      </label>
+                <div class="field-content"><p>Watch the progression of a case of smallpox in a young man who survived the disease.</p></div>
+  </div>
+  
+  <div class="views-field-field-related-media-nid">
+          <label class="views-label-field-related-media-nid">
+        Related Media:
+      </label>
+                <div class="field-content"><div id="node-598" class="node node-type-media"><div class="node-inner">
+      <h1 class="title"><a href="/content/smallpox-lesions-2" title="Smallpox Lesions 2">Wed, 2010-06-16 10:27&mdash; Smallpox Lesions 2</a></h1>
+    
+  <div class="content">
+    <video width="320" poster="http://media.historyofvaccines.org/images/000143_265.jpg" controls preload>
+        <source src="http://media.historyofvaccines.org/mobile/video/320/000143.mp4" />
+        <p>Download <a href="http://media.historyofvaccines.org/mobile/video/320/000143.mp4">MP4</a>.</p>
+	</video>
+  </div>
+</div></div> <!-- /node-inner, /node --></div>
+  </div>
+  
+  <div class="views-field-field-related-timeline-entries-nid">
+          <label class="views-label-field-related-timeline-entries-nid">
+        Related Timeline Entry:
+      </label>
+                <div class="field-content"><div id="node-470" class="node node-type-timeline-entry"><div class="node-inner">
+      <h1 class="title"><a href="/content/view-smallpox-progression" title="A View of Smallpox Progression">A View of Smallpox Progression</a></h1>
+    
+  <div class="content">
+    <div class="field field-type-text field-field-event-date">
+      <div class="field-label">Event Date:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    1881        </div>
+        </div>
+</div>
+<div id="popup-description" style="height: 281px; overflow-x: visible; overflow-y: scroll;">
+<p>These heliotypes (an early photography technique) give a detailed view of the progression of smallpox, from just after eruption of pustules to the late scabbing stage. The publisher noted that the patient made a full recovery. The extent of the patient’s rash suggests that he was left with significant scarring.</p>
+<p>Following is the introduction from the book in which the plates were published:</p>
+<blockquote><p>“The following plates represent the appearance of the variola at different stages of the eruption. The first sixteen pictures show its appearance on the same patient, from the third to the fourteenth day, when it began to disappear. The patient entered the hospital on the ninth day of October, 1881, and remained until the second day of November following, when he was discharged well.</p>
+<p>…[He was] under the professional care of the City Physician of Boston.”</p>
+<p class="byline">— Samuel A. Powers, Superintendent Small-pox Hospital, Boston, from <em>Variola. A Series of Twenty-one Heliotype Plates Illustrating the Progressive Stages of the Eruption</em></p>
+</blockquote>
+</div>
+<div class="field field-type-number-integer field-field-all-dates">
+      <div class="field-label">Included in All Dates?:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    Yes        </div>
+        </div>
+</div>
+<div class="field field-type-nodereference field-field-related-media">
+      <div class="field-label">Related Media:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    <a href="/content/smallpox-lesions-2">Smallpox Lesions 2</a>        </div>
+        </div>
+</div>
+<fieldset class="fieldgroup group-admin"><legend>Administrative Fields</legend><div class="field field-type-text field-field-uid">
+      <div class="field-label">Unique ID:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    84        </div>
+        </div>
+</div>
+<div class="field field-type-text field-field-media-filename">
+      <div class="field-label">Associated Media Filename:&nbsp;</div>
+    <div class="field-items">
+            <div class="field-item odd">
+                    143        </div>
+        </div>
+</div>
+</fieldset>
+  </div>
+</div></div> <!-- /node-inner, /node --></div>
+  </div>
+  
+  <div class="views-field-nid">
+          <label class="views-label-nid">
+        Nid:
+      </label>
+                <span class="field-content">1177</span>
+  </div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+  </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<div id="footer">
+    <a href="http://www.historyofvaccines.org/?device=desktop">View Full Site</a>
+    |
+        &copy; 2015 <a href="http://www.collphyphil.org/" rel="external">The College of Physicians of Philadelphia</a>
+    </div>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-12840640-4']);
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+</body>
+
+</html>
+ true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.in

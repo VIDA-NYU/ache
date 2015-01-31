@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  <head>    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>    <title>What are the symptoms of HIV infection?</title><link rel="stylesheet" href="css/insite.css" type="text/css"/><link rel="stylesheet" href="css/layout.css" type="text/css"/><link rel="stylesheet" href="css/topNav.css" type="text/css"/><!-- jquery javascript --><script type="text/javascript" src="script/jquery/load.js"><!--  --></script><script type="text/javascript" src="app-js/jquery.scrollTo.js"> </script><script type="text/javascript" src="app-js/jquery.cycle.js"> </script><script type="text/javascript" language="JavaScript">
+        function openWindow(url,name){
+            newWin = window.open(url,name,'status,toolbar,menubar,resizable,scrollbars,left=20,top=20,width=650,height=600')
+            newWin.focus()
+        }
+
+        function openXWindow(url,name){
+            newXWin = window.open(url,name)
+            newXWin.focus()
+        }
+
+		/* BASED ON NEC DEMO.XML */
+		   // REVEAL HIDDEN LOGIC QUESTION
+				function branchNext (event) {
+					$.log("BRANCHNEXT() :  enter");
+					var n = $(this).children("input:checked").size();
+
+					if (n)   {
+						 var reveal = "." + $($(this).children("input:checked")).attr("name") + "-" + $($(this).children("input:checked")).val();
+
+						 $(reveal).removeClass("hidden").addClass("question-revealed");
+					}
+			   }
+
+		// HIDE TO-BE-REVEALED LOGIC QUESTIONS
+			$(document).ready(function() { hideLogicQuestions($(document).children()[0]) });
+
+			function hideLogicQuestions (element) {
+				$.log("hideLogicQuestions() : enter");
+				$(".hidden-question").each(function() {
+					$(this).addClass("hidden").removeClass("question-revealed");
+				});
+		   }
+		/* END FROM NEC DEMO.XML */
+
+
+			function expand(event)
+			{
+				var id = $(event.target).attr("query");
+				var section = $("#" + id);
+
+				/* CLOSE ALL SECTIONS AND RESET BUTTONS
+				$(".expandable", section).addClass("hidden");
+				$(".expand", section).removeClass("hidden");
+				$(".collapse", section).addClass("hidden");
+				$(".expandAll", section).removeClass("hidden");
+				$(".collapseAll", section).addClass("hidden");
+				*/
+
+				// OPEN SPECIFIED SECTION AND UPDATE ITS BUTTONS
+				section.removeClass("hidden");
+				$(this).addClass("hidden");
+				$(this).siblings(".collapse").removeClass("hidden");
+
+				// $(this).siblings(".expandAll").addClass("hidden");
+				// $(this).siblings(".collapseAll").removeClass("hidden");
+			}
+			function collapse(event)
+			{
+				var id = $(event.target).attr("query");
+				var section = $("#" + id);
+
+				section.addClass("hidden");
+				$(this).addClass("hidden");
+				$(this).siblings(".expand").removeClass("hidden");
+
+				$(this).siblings(".collapseAll").addClass("hidden");
+				$(this).siblings(".expandAll").removeClass("hidden");
+			}
+
+			function expandAll(event)
+			{
+				var id = $(event.target).attr("query");
+				var section = $("#" + id);
+
+				section.removeClass("hidden");
+				$(".expandable", section).removeClass("hidden");
+				$(this).addClass("hidden");
+
+				$(this).siblings(".expand").addClass("hidden");
+				$(this).siblings(".collapse").removeClass("hidden");
+				$(this).siblings(".collapseAll").removeClass("hidden");
+
+				$(".expand", section).addClass("hidden");
+				$(".collapse", section).removeClass("hidden");
+			}
+			function collapseAll(event)
+			{
+				var id = $(event.target).attr("query");
+				var section = $("#" + id);
+
+				section.addClass("hidden");
+				$(".expandable", section).addClass("hidden");
+				$(this).addClass("hidden");
+
+				$(this).siblings(".collapse").addClass("hidden");
+				$(this).siblings(".expand").removeClass("hidden");
+				$(this).siblings(".expandAll").removeClass("hidden");
+
+				$(".expand", section).removeClass("hidden");
+				$(".collapse", section).addClass("				$(this).siblings(".collapse").addClass("hidden");
+				$(this).siblings(".expand").removeClass("hidden");
+		hidden");
+			}
+
+
+			// connect the correct fuctions
+			function sconnect(element) {
+				$(".reveal-question", element).click(branchNext);
+
+				$(".expand", element).click(expand);
+				$(".expandAll", element).click(expandAll);
+				$(".collapse", element).click(collapse);
+				$(".collapseAll", element).click(collapseAll);
+			}
+
+			// load method for adding connections
+			$(document).ready(function() {
+				sconnect($(document).children()[0])
+			 });
+
+			 $(document).ready(function(){
+			 $('.carousel ul').cycle({'prev':'.previous','next':'.next','play':'.play','pause':'.pause'});
+			 $(".carousel-hidden").each(function () {
+			 $(this).removeClass("carousel-hidden");
+			 });
+			 });
+
+
+		</script><script type="text/javascript" src="/jwplayer/jwplayer.js"/><script>jwplayer.key="2bzE3n8OLqJUUb2eFDHP+ZUgAfGUGy/ydO2k3g=="</script><!--*********************************************************
+    *************************************************************
+    REPLACE GOOGLE ANALYTICS SCRIPT BEFORE PUBLISHING TO LIVESITE
+    You can find the script in google-analytics.js **************
+    *************************************************************
+    **********************************************************--><script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-19627862-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+</script><meta name="date" content="2004-07-22"/><meta name="description" content="Frequently asked questions and answers about HIV/AIDS prevention, transmission, and treatment"/><meta name="KEYWORDS" content="HIV,AIDS,H.I.V.,A.I.D.S.,InSite,InSight,Basics,diagnosis,symptoms,signs,HIV infection, primary HIV infection,acute HIV infection"/></head><body><div class="floatpage"><div id="ucsf"><a href="http://ucsf.edu/"><img src="images/masthead/ucsf.gif" alt="University of California, San Francisco Logo"/></a><p>University of California, San Francisco  |  <a href="http://www.ucsf.edu/about-ucsf/">About UCSF</a>  |  <a href="http://www.ucsf.edu/ucsf/search">Search UCSF</a>  |  <a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></p></div><div id="header"><div style="float:left;"><a href="InSite" style="display:block;"><img src="images/masthead/splash-logo-top.gif" alt="HIV InSite"/></a><h1 class="site-description" style="clear:both; width: 475px;">Comprehensive, up-to-date information on HIV/AIDS treatment, prevention, and policy from the University of California San Francisco</h1></div><div class="site-sub-navigation"><a href="InSite">Home</a> | <a href="InSite?page=pb-00-00">Patient/Public</a> | <a href="InSite?page=Audio">Audio</a> | <a href="InSite?page=News">News</a> | <a href="InSite?page=Links">Links</a></div><div class="sitesearch"><form action="search" method="get"><input type="hidden" name="page" value="sr-00-00"/><input type="hidden" name="post" value="1"/><input size="28" name="SearchEntry"/><input type="submit" id="I1" value="Search" style="margin-left: 5px;"/></form></div><div id="site-navigation"><ul><li class="site-navigation"><a href="InSite?page=KB">Knowledge Base</a></li><li class="site-navigation"><a href="InSite?page=Treatment">Treatment</a></li><li class="site-navigation"><a href="InSite?page=Prevention">Prevention</a></li><li class="site-navigation"><a href="InSite?page=Policy">Policy Analysis</a></li><li class="site-navigation"><a href="InSite?page=Country">Countries &amp; Regions</a></li></ul></div></div><div id="content-target"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="right"><font face="Arial, Helvetica" size="-2"><a href="InSite">Home</a> &gt; <a href="InSite?page=pb-00-00">Public/Patient</a> &gt; <a href="hiv?page=basics-00-00">Basics</a> &gt; <a href="hiv?page=basics-00-02">Symptoms</a></font></td></tr><tr><td><img src="images/transparent.gif" border="0" height="10" width="1"/></td></tr></tbody></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><table cellspacing="0" cellpadding="0" width="100%" border="0"><tr><td class="pgtitle" valign="top" align="left">What are the symptoms of HIV infection?</td></tr><tr><td><img alt="gray line" height="7" width="559" src="images/greyline.gif"/></td></tr><tr><td valign="top"><table cellspacing="0" cellpadding="0" width="100%" border="0"><tr><td valign="top"><table cellspacing="0" cellpadding="0" border="0"><tr><td class="bylinedate" colspan="4"><b>August 3, 2011</b></td></tr><tr><td><img alt="transparent gif" border="0" height="20" width="1" src="images/transparent.gif"/></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td class="section2"><a name="S1X"> </a>How can I tell if I have HIV?</td></tr><tr><td><img border="0" height="6" width="1" src="images/transparent.gif"/></td></tr><tr><td class="normal"><p>Some people who contract HIV experience very strong symptoms, but others experience none at all. Those who do have symptoms generally experience symptoms similar to the common cold or flu: fever, fatigue, and, often, rash. Other common symptoms can include headache, swollen lymph nodes, and sore throat. These symptoms can occur within days or weeks of the initial exposure to the virus during a period called primary or acute HIV infection. Many infections that are not HIV can cause similar symptoms, including mononucleosis, viral hepatitis, other sexual transmitted infections, and viral hepatitis. Stress and anxiety can also produce similar symptoms in some people, even though they do not have HIV.</p><p>Because of the nonspecific symptoms associated with primary or acute HIV infection, symptoms are not a reliable way to diagnose HIV infection. Testing for HIV antibodies is the only way to know whether you have been infected; however, the HIV antibody test only works after the infected person's immune system develops antibodies to HIV. During the "window period" between the initial infection and the period in which antibodies are detectable (which can be from 2 weeks to 6 months, but is usually around 3 months), standard HIV antibody testing may be negative, even though a person is infected--it is too early for the antibody test to be positive. However, HIV can be diagnosed during this window period with a test that looks for the HIV virus itself, and not the body's response to it. </p><p>If you are concerned that you may have recently acquired HIV and have symptoms described above, see a health care provider, who can evaluate you for HIV and other possible causes of your symptoms. If early HIV infection is suspected, your prov it. </p><p>If you are concerned that you may have recently acquired HIV and have symptoms described above, see a health care provider, who can evaluate you for HIV and other possible causes of your symptoms. If early HIV infection is suspeider can test directly for the virus, using a test called "PCR" or a "4th generation" HIV test that looks for the antibody and the virus at the same time), as well as doing the standard antibody test to determine whether HIV is present in the blood.</p><p>Once the primary or acute infection is over, most people do not experience any visible symptoms for another 8-10 years. Even though someone may not have active symptoms, they still have the infection and are infectious to others. Left untreated, the immune system becomes increasingly weaker and the disease progresses to AIDS. The next symptoms experienced by individuals infected with the virus are often associated with the "opportunistic infections" that target individuals with AIDS such as pneumonia, fungal infections, and HIV-specific cancers such as Kaposi sarcoma.</p></td></tr></table><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td><img border="0" height="35" width="1" src="images/transparent.gif"/></td></tr><tr><td class="section2"><a name="S2X"> </a>How can I tell if someone else has HIV?</td></tr><tr><td><img border="0" height="6" width="1" src="images/transparent.gif"/></td></tr><tr><td class="normal"><p> There is no way to know for sure if someone else has HIV unless they have an HIV test. Many people with HIV look perfectly healthy. Other people who are sick with HIV may have symptoms that are identical to other common illnesses. You cannot tell by looking whether someone is HIV positive. The only way to know for sure is if someone tells you. It is important to consider how well you know someone and how much you trust them when talking about sex and HIV.</p></td></tr></table></td></tr><tr><td colspan="2"><img alt="transparent gif" border="0" height="20" width="1" src="images/transparent.gif"/></td></tr></table></td></tr></table></td></tr></table></div><div class="footer"><p class="footerlinks"><a href="InSite?page=About">About</a>
+          |
+          <a href="InSite?page=SM">Site Map</a>
+          |
+          <a href="fb?page=Feedback">Feedback</a>
+          |
+          <a href="InSite?page=Subscribe">Subscribe</a>
+          |
+          <a href="InSite?page=Donate">Donate</a>
+          |
+          <a href="InSite?page=Disclaimer">Disclaimer</a></p><p class="copyright"><a href="http://chi.ucsf.edu/" target="OffSite"><img src="images/footer/chi.gif" alt="UCSF - Center for HIV Information"/></a> HIV InSite is a project of the UCSF Center for HIV Information. Copyright 2014, Regents of the University of California.</p></div></div><!-- Piwik default --><script type="text/javascript">
+      var pkBaseURL = "https://norma.ucsf.edu/piwik/";
+      //var pkBaseURL = (("https:" == document.location.protocol) ? "https://norma.ucsf.edu/piwik/" : "http://norma.ucsf.edu/piwik/");
+      document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+      </script><script type="text/javascript"><!--
+          try {
+          var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+          piwikTracker.trackPageView();
+          piwikTracker.enableLinkTracking();
+          } catch( err ) {}
+        //--></script><noscript><p><img src="http://norma.ucsf.edu/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript><!-- End Piwik Tag --></body></html>kPageView();
+          piwikTracker.enableLinkTracking();
+          } catch( err ) {}
+        //--></script><noscript><p><img src="http://norma.ucsf.edu/piwik/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript><!-- End P

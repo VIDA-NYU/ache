@@ -1,0 +1,1105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script><title>Dengue in children - BabyCenter</title><meta content="Dengue is an acute viral infection characterised by high fever and is one of the most common mosquito borne diseases. Dengue is a major health concern in Malaysia. Read more about this ..." name="description"/><meta content="dengue, denggi, baby with dengue, denggi in babies, dengue and children, DEN-2, DEN-4, fever, nausea, itching, rashes, high fever, sick baby, DHF, mosquito bites, mosquitoes" name="keywords"/><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/><!-- Foundation CSS Files - put app.css first. -->
+<link rel="stylesheet" href="http://www.babycenter.com.my/webassets/2.08.0.75177/css/global/A.app.css.pagespeed.cf.n6Xq_Nf8y0.css" media="screen, projector, print" type="text/css"/>
+<!--[if gt IE 8]><!-->
+<style>@font-face{font-family:'MuseoSlabBold';src:url("/webassets/2.08.0.75177/fonts/MuseoSlab-700.eot");src:url("/webassets/2.08.0.75177/fonts/MuseoSlab-700.eot?#iefix") format("embedded-opentype"),local("//:"),url("/webassets/2.08.0.75177/fonts/MuseoSlab-700.ttf") format("truetype")}@font-face{font-family:'MuseoSlabMedium';src:url("/webassets/2.08.0.75177/fonts/MuseoSlab-500.eot");src:url("/webassets/2.08.0.75177/fonts/MuseoSlab-500.eot?#iefix") format("embedded-opentype"),local("//:"),url("/webassets/2.08.0.75177/fonts/MuseoSlab-500.ttf") format("truetype")}@font-face{font-family:'MuseoSlabLight';src:url("/webassets/2.08.0.75177/fonts/MuseoSlab-300.eot");src:url("/webassets/2.08.0.75177/fonts/MuseoSlab-300.eot?#iefix") format("embedded-opentype"),local("//:"),url("/webassets/2.08.0.75177/fonts/MuseoSlab-300.ttf") format("truetype")}</style>
+<!--<![endif]-->
+<link rel="stylesheet" href="http://www.babycenter.com.my/webassets/2.08.0.75177/css/global/A.bcglobal.css.pagespeed.cf.S5Uu0WXCA5.css" type="text/css"/>
+<style>#toc{width:100%;margin-bottom:20px;background:transparent;border-top:2px solid #d7d7c9;border-bottom:2px solid #d7d7c9;border-left:none;border-right:none;padding:20px 10px;position:relative;z-index:2}#toc .showHideIcon{position:relative;display:inline-block;margin-right:5px;top:0}#toc h3{cursor:pointer;margin-bottom:0;text-align:center;z-index:2}#toc ul{margin-left:0}#toc li{padding:0 0 12px 0!important;background-image:none;font-size:.91667rem;line-height:1.375}#toc li:last-child{padding-bottom:0!important}@media only screen and (min-width:768px){#toc{float:right;width:41.6667%;margin:0 0 10px 10px}#toc h3{text-align:start}#toc ul{margin-left:20px}#toc li{line-height:1.7272}}#toc+#middleTheme{clear:both}</style>
+<style>.socialLinksContainer{height:30px;margin-bottom:20px}.socialLinksContainer h6{bottom:10px;margin:0 15px 5px 0;display:inline-block!important;font-size:10px}.socialLinksContainer .socialButton{height:30px;width:30px;display:inline-block;margin:0 10px 0 0}@media only screen and (min-width:768px){.socialLinksContainer{height:20px}.socialLinksContainer h6{bottom:5px;margin-right:8px}.socialLinksContainer .socialButton{height:20px;width:20px;margin-right:5px}}#pinterestButton a[data-pin-href]{background-image:none!important;display:block!important;height:30px!important;width:30px!important}@media only screen and (min-width:768px){#pinterestButton a[data-pin-href]{height:20px!important;width:20px!important}}.postContainer .socialLinksContainer{margin-bottom:0;margin-top:20px}.socialLinksContainer.colored{margin-top:30px;margin-bottom:30px}.moreTopic+.socialLinksContainer.colored{margin-top:26px}.no-svg .socialLinksContainer{display:none}</style>
+<style>#mainContent .socialLinks.flushBottom{margin-bottom:4px}#mainContent .searchForm{top:10px;position:relative}#tocHeading{font-weight:700;font-size:1.33333rem;color:#656565;padding-bottom:15px}#mainContent .article .featuredArea h3{margin-top:0;position:relative}.article .bodyText h3{font-size:1.33333rem;color:#333;margin:19px 0 8px 0}.article{margin-bottom:26px}.article h2#section1.firstH2{margin-top:0}.article br+h2#section1{margin-top:24px}.article h2{z-index:1}.hideRefsBtn,.citation,.referenceList{display:none}.citation{font-size:.91667rem;color:#999}.referenceList{font-size:.91667rem}.bodyText .toggleRefList{margin-top:24px;font-weight:bold}.openIcon{background:url(/webassets/2.08.0.75177/css/images/xSprite.png.pagespeed.ic.1GPtHwgKEq.png) no-repeat -50px -180px}.closeIcon{background:url(/webassets/2.08.0.75177/css/images/xSprite.png.pagespeed.ic.1GPtHwgKEq.png) no-repeat -70px -180px}a:hover .openIcon{background:url(/webassets/2.08.0.75177/css/images/xSprite.png.pagespeed.ic.1GPtHwgKEq.png) no-repeat -50px -200px}a:hover .closeIcon{background:url(/webassets/2.08.0.75177/css/images/xSprite.png.pagespeed.ic.1GPtHwgKEq.png) no-repeat -70px -200px}a:active .openIcon{background:url(/webassets/2.08.0.75177/css/images/xSprite.png.pagespeed.ic.1GPtHwgKEq.png) no-repeat -50px -220px}a:active .closeIcon{background:url(/webassets/2.08.0.75177/css/images/xSprite.png.pagespeed.ic.1GPtHwgKEq.png) no-repeat -70px -220px}.openIcon,.closeIcon{display:inline-block;width:10px;height:9px;margin:0 6px}</style>
+<link rel="stylesheet" type="text/css" href="http://www.babycenter.com.my/webassets/2.08.0.75177/css/A.jquery-ui-datepicker.custom.BC.css.pagespeed.cf.57lvbMJUwi.css"/>
+<style></style>
+<!--[if lt IE 9]>	  
+	<script src="/webassets/2.08.0.75177/js/thirdParty/html5shiv.js"></script>
+	<script src="/webassets/2.08.0.75177/js/thirdParty/nwmatcher.js"></script>
+	<script src="/webassets/2.08.0.75177/js/thirdParty/selectivizr.js"></script>
+	<script src="/webassets/2.08.0.75177/js/thirdParty/respond.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/webassets/2.08.0.75177/css/browserOverride/shivSelectivizrRespond-ie8.css" />
+	<script src="/webassets/2.08.0.75177/js/global/ie8polyfill.js"></script>
+<![endif]-->
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="/webassets/2.08.0.75177/css/browserOverride/ie.css" />
+<![endif]-->
+<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="/webassets/2.08.0.75177/css/browserOverride/ie6-8.css" />
+<![endif]-->
+<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="/webassets/2.08.0.75177/css/browserOverride/ie6.css" />
+<![endif]-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- Custom Modernizr for Foundation -->
+<script>//<![CDATA[
+;window.Modernizr=function(a,b,c){function y(a){j.cssText=a}function z(a,b){return y(m.join(a+";")+(b||""))}function A(a,b){return typeof a===b}function B(a,b){return!!~(""+a).indexOf(b)}function C(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:A(f,"function")?f.bind(d||b):f}return!1}var d="2.6.2",e={},f=!0,g=b.documentElement,h="modernizr",i=b.createElement(h),j=i.style,k,l={}.toString,m=" -webkit- -moz- -o- -ms- ".split(" "),n={svg:"http://www.w3.org/2000/svg"},o={},p={},q={},r=[],s=r.slice,t,u=function(a,c,d,e){var f,i,j,k,l=b.createElement("div"),m=b.body,n=m||b.createElement("body");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:h+(d+1),l.appendChild(j);return f=["&#173;",'<style id="s',h,'">',a,"</style>"].join(""),l.id=h,(m?l:n).innerHTML+=f,n.appendChild(l),m||(n.style.background="",n.style.overflow="hidden",k=g.style.overflow,g.style.overflow="hidden",g.appendChild(n)),i=c(l,a),m?l.parentNode.removeChild(l):(n.parentNode.removeChild(n),g.style.overflow=k),!!i},v=function(b){var c=a.matchMedia||a.msMatchMedia;if(c)return c(b).matches;var d;return u("@media "+b+" { #"+h+" { position: absolute; } }",function(b){d=(a.getComputedStyle?getComputedStyle(b,null):b.currentStyle)["position"]=="absolute"}),d},w={}.hasOwnProperty,x;!A(w,"undefined")&&!A(w.call,"undefined")?x=function(a,b){return w.call(a,b)}:x=function(a,b){return b in a&&A(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=s.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(s.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(s.call(arguments)))};return e}),o.touch=function(){var c;return"ontouchstart"in a||a.DocumentTouch&&b instanceof DocumentTouch?c=!0:u(["@media (",m.join("touch-enabled),("),h,")","{#modernizr{top:9px;position:absolute}}"].join(""),function(a){c=a.offsetTop===9}),c},o.svg=function(){return!!b.createElementNS&&!!b.createElementNS(n.svg,"svg").createSVGRect},o.inlinesvg=function(){var a=b.createElement("div");return a.innerHTML="<svg/>",(a.firstChild&&a.firstChild.namespaceURI)==n.svg},o.svgclippaths=function(){return!!b.createElementNS&&/SVGClipPath/.test(l.call(b.createElementNS(n.svg,"clipPath")))};for(var D in o)x(o,D)&&(t=D.toLowerCase(),e[t]=o[D](),r.push((e[t]?"":"no-")+t));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)x(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof f!="undefined"&&f&&(g.className+=" "+(b?"":"no-")+a),e[a]=b}return e},y(""),i=k=null,function(a,b){function k(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function l(){var a=r.elements;return typeof a=="string"?a.split(" "):a}function m(a){var b=i[a[g]];return b||(b={},h++,a[g]=h,i[h]=b),b}function n(a,c,f){c||(c=b);if(j)return c.createElement(a);f||(f=m(c));var g;return f.cache[a]?g=f.cache[a].cloneNode():e.test(a)?g=(f.cache[a]=f.createElem(a)).cloneNode():g=f.createElem(a),g.canHaveChildren&&!d.test(a)?f.frag.appendChild(g):g}function o(a,c){a||(a=b);if(j)return a.createDocumentFragment();c=c||m(a);var d=c.frag.cloneNode(),e=0,f=l(),g=f.length;for(;e<g;e++)d.createElement(f[e]);return d}function p(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return r.shivMethods?n(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+l().join().replace(/\w+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(r,b.frag)}function q(a){a||(a=b);var c=m(a);return r.shivCSS&&!f&&!c.hasCSS&&(c.hasCSS=!!k(a,"article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}mark{background:#FF0;color:#000}")),j||p(a,c),a}var c=a.html5||{},d=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,e=/^(?:a|b|code|div|fieldset|h1|h2|h3|"ah4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,f,g="_html5shiv",h=0,i={},j;(function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",f="hidden"in a,j=a.childNodes.length==1||function(){b.createElement("a");var a=b.createDocumentFragment();return typeof a.cloneNode=="undefined"||typeof a.createDocumentFragment=="undefined"||typeof a.createElement=="undefined"}()}catch(c){f=!0,j=!0}})();var r={elements:c.elements||"abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video",shivCSS:c.shivCSS!==!1,supportsUnknownElements:j,shivMethods:c.shivMethods!==!1,type:"default",shivDocument:q,createElement:n,createDocumentFragment:o};a.html5=r,q(b)}(this,b),e._version=d,e._prefixes=m,e.mq=v,e.testStyles=u,g.className=g.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(f?" js "+r.join(" "):""),e}(this,this.document),function(a,b,c){function d(a){return"[object Function]"==o.call(a)}function e(a){return"string"==typeof a}function f(){}function g(a){return!a||"loaded"==a||"complete"==a||"uninitialized"==a}function h(){var a=p.shift();q=1,a?a.t?m(function(){("c"==a.t?B.injectCss:B.injectJs)(a.s,0,a.a,a.x,a.e,1)},0):(a(),h()):q=0}function i(a,c,d,e,f,i,j){function k(b){if(!o&&g(l.readyState)&&(u.r=o=1,!q&&h(),l.onload=l.onreadystatechange=null,b)){"img"!=a&&m(function(){t.removeChild(l)},50);for(var d in y[c])y[c].hasOwnProperty(d)&&y[c][d].onload()}}var j=j||B.errorTimeout,l=b.createElement(a),o=0,r=0,u={t:d,s:c,e:f,a:i,x:j};1===y[c]&&(r=1,y[c]=[]),"object"==a?l.data=c:(l.src=c,l.type=a),l.width=l.height="0",l.onerror=l.onload=l.onreadystatechange=function(){k.call(this,r)},p.splice(e,0,u),"img"!=a&&(r||2===y[c]?(t.insertBefore(l,s?null:n),m(k,j)):y[c].push(l))}function j(a,b,c,d,f){return q=0,b=b||"j",e(a)?i("c"==b?v:u,a,b,this.i++,c,d,f):(p.splice(this.i++,0,a),1==p.length&&h()),this}function k(){var a=B;return a.loader={load:j,i:0},a}var l=b.documentElement,m=a.setTimeout,n=b.getElementsByTagName("script")[0],o={}.toString,p=[],q=0,r="MozAppearance"in l.style,s=r&&!!b.createRange().compareNode,t=s?l:n.parentNode,l=a.opera&&"[object Opera]"==o.call(a.opera),l=!!b.attachEvent&&!l,u=r?"object":l?"script":"img",v=l?"script":u,w=Array.isArray||function(a){return"[object Array]"==o.call(a)},x=[],y={},z={timeout:function(a,b){return b.length&&(a.timeout=b[0]),a}},A,B;B=function(a){function b(a){var a=a.split("!"),b=x.length,c=a.pop(),d=a.length,c={url:c,origUrl:c,prefixes:a},e,f,g;for(f=0;f<d;f++)g=a[f].split("="),(e=z[g.shift()])&&(c=e(c,g));for(f=0;f<b;f++)c=x[f](c);return c}function g(a,e,f,g,h){var i=b(a),j=i.autoCallback;i.url.split(".").pop().split("?").shift(),i.bypass||(e&&(e=d(e)?e:e[a]||e[g]||e[a.split("/").pop().split("?")[0]]),i.instead?i.instead(a,e,f,g,h):(y[i.url]?i.noexec=!0:y[i.url]=1,f.load(i.url,i.forceCSS||!i.forceJS&&"css"==i.url.split(".").pop().split("?").shift()?"c":c,i.noexec,i.attrs,i.timeout),(d(e)||d(j))&&f.load(function(){k(),e&&e(i.origUrl,h,g),j&&j(i.origUrl,h,g),y[i.url]=2})))}function h(a,b){function c(a,c){if(a){if(e(a))c||(j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}),g(a,j,b,0,h);else if(Object(a)===a)for(n in m=function(){var b=0,c;for(c in a)a.hasOwnProperty(c)&&b++;return b}(),a)a.hasOwnProperty(n)&&(!c&&!--m&&(d(j)?j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}:j[n]=function(a){return function(){var b=[].slice.call(arguments);a&&a.apply(this,b),l()}}(k[n])),g(a[n],j,b,n,h))}else!c&&l()}var h=!!a.test,i=a.load||a.both,j=a.callback||f,k=j,l=a.complete||f,m,n;c(h?a.yep:a.nope,!!i),i&&c(i)}var i,j,l=this.yepnope.loader;if(e(a))g(a,0,l,0);else if(w(a))for(i=0;i<a.length;i++)j=a[i],e(j)?g(j,0,l,0):w(j)?B(j):Object(j)===j&&h(j,l);else Object(a)===a&&h(a,l)},B.addPrefix=function(a,b){z[a]=b},B.addFilter=function(a){x.push(a)},B.errorTimeout=1e4,null==b.readyState&&b.addEventListener&&(b.readyState="loading",b.addEventListener("DOMContentLoaded",A=function(){b.removeEventListener("DOMContentLoaded",A,0),b.readyState="complete"},0)),a.yepnope=k(),a.yepnope.executeStack=h,a.yepnope.injectJs=function(a,c,d,e,i,j){var k=b.createElement("script"),l,o,e=e||B.errorTimeout;k.src=a;for(o in d)k.setAttribute(o,d[o]);c=j?h:c||f,k.onreadystatechange=k.onload=function(){!l&&g(k.readyState)&&(l=1,c(),k.onload=k.onreadystatechange=null)},m(function(){l||(l=1,c(1))},e),i?k.onload():n.parentNode.insertBefore(k,n)},a.yepnope.injectCss=function(a,c,d,e,g,i){var e=b.createElement("link"),j,c=i?h:c||f;e.href=a,e.rel="stylesheet",e.type="text/css";for(j in d)e.setAttribute(j,d[j]);g||(n.parentNode.insertBefore(e,n),m(c,0))}}(this,document),Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0))},Modernizr.addTest("ie8compat",function(){return!window.addEventListener&&document.documentMode&&document.documentMode===7});
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+;(function($){$.fn.ajaxSubmit=function(options){if(!this.length){log('ajaxSubmit: skipping submit process - no element selected');return this;}
+if(typeof options=='function'){options={success:options};}
+var url=$.trim(this.attr('action'));if(url){url=(url.match(/^([^#]+)/)||[])[1];}
+url=url||window.location.href||'';options=$.extend(true,{url:url,type:this.attr('method')||'GET',iframeSrc:/^https/i.test(window.location.href||'')?'javascript:false':'about:blank'},options);var veto={};this.trigger('form-pre-serialize',[this,options,veto]);if(veto.veto){log('ajaxSubmit: submit vetoed via form-pre-serialize trigger');return this;}
+if(options.beforeSerialize&&options.beforeSerialize(this,options)===false){log('ajaxSubmit: submit aborted via beforeSerialize callback');return this;}
+var n,v,a=this.formToArray(options.semantic);if(options.data){options.extraData=options.data;for(n in options.data){if(options.data[n]instanceof Array){for(var k in options.data[n]){a.push({name:n,value:options.data[n][k]});}}
+else{v=options.data[n];v=$.isFunction(v)?v():v;a.push({name:n,value:v});}}}
+if(options.beforeSubmit&&options.beforeSubmit(a,this,options)===false){log('ajaxSubmit: submit aborted via beforeSubmit callback');return this;}
+this.trigger('form-submit-validate',[a,this,options,veto]);if(veto.veto){log('ajaxSubmit: submit vetoed via form-submit-validate trigger');return this;}
+var q=$.param(a);if(options.type.toUpperCase()=='GET'){options.url+=(options.url.indexOf('?')>=0?'&':'?')+q;options.data=null;}
+else{options.data=q;}
+var $form=this,callbacks=[];if(options.resetForm){callbacks.push(function(){$form.resetForm();});}
+if(options.clearForm){callbacks.push(function(){$form.clearForm();});}
+if(!options.dataType&&options.target){var oldSuccess=options.success||function(){};callbacks.push(function(data){var fn=options.replaceTarget?'replaceWith':'html';$(options.target)[fn](data).each(oldSuccess,arguments);});}
+else if(options.success){callbacks.push(options.success);}
+options.success=function(data,status,xhr){var context=options.context||options;for(var i=0,max=callbacks.length;i<max;i++){callbacks[i].apply(context,[data,status,xhr||$form,$form]);}};var fileInputs=$('input:file',this).length>0;var mp='multipart/form-data';var multipart=($form.attr('enctype')==mp||$form.attr('encoding')==mp);if(options.iframe!==false&&(fileInputs||options.iframe||multipart)){if(options.closeKeepAlive){$.get(options.closeKeepAlive,fileUpload);}
+else{fileUpload();}}
+else{$.ajax(options);}
+this.trigger('form-submit-notify',[this,options]);return this;function fileUpload(){var form=$form[0];if($(':input[name=submit],:input[id=submit]',form).length){alert('Error: Form elements must not have name or id of "submit".');return;}
+var s=$.extend(true,{},$.ajaxSettings,options);s.context=s.context||s;var id='jqFormIO'+(new Date().getTime()),fn='_'+id;window[fn]=function(){var f=$io.data('form-plugin-onload');if(f){f();window[fn]=undefined;try{delete window[fn];}catch(e){}}}
+var $io=$('<iframe id="'+id+'" name="'+id+'" src="'+s.iframeSrc+'" onload="window[\'_\'+this.id]()" />');var io=$io[0];$io.css({position:'absolute',top:'-1000px',left:'-1000px'});var xhr={aborted:0,responseText:null,responseXML:null,status:0,statusText:'n/a',getAllResponseHeaders:function(){},getResponseHeader:function(){},setRequestHeader:function(){},abort:function(){this.aborted=1;$io.attr('src',s.iframeSrc);}};var g=s.global;if(g&&!$.active++){$.event.trigger("ajaxStart");}
+if(g){$.event.trigger("ajaxSend",[xhr,s]);}
+if(s.beforeSend&&s.beforeSend.call(s.context,xhr,s)===false){if(s.global){$.active--;}
+return;}
+if(xhr.aborted){return;}
+var cbInvoked=false;var timedOut=0;var sub=form.clk;if(sub){var n=sub.name;if(n&&!sub.disabled){s.extraData=s.extraData||{};s.extraData[n]=sub.value;if(sub.type=="image"){s.extraData[n+'.x']=form.clk_x;s.extraData[n+'.y']=form.clk_y;}}}
+function doSubmit(){var t=$form.attr('target'),a=$form.attr('action');form.setAttribute('target',id);if(form.getAttribute('method')!='POST'){form.setAttribute('method','POST');}
+if(form.getAttribute('action')!=s.url){form.setAttribute('action',s.url);}
+if(!s.skipEncodingOverride){$form.attr({encoding:'multipart/form-data',enctype:'multipart/form-data'});}
+if(s.timeout){setTimeout(function(){timedOut=true;cb();},s.timeout);}
+var extraInputs=[];try{if(s.extraData){for(var n in s.extraData){extraInputs.push($('<input type="hidden" name="'+n+'" value="'+s.extraData[n]+'" />').appendTo(form)[0]);}}
+$io.appendTo('body');$io.data('form-plugin-onload',cb);form.submit();}
+finally{form.setAttribute('action',a);if(t){form.setAttribute('target',t);}else{$form.removeAttr('target');}
+$(extraInputs).remove();}}
+if(s.forceSync){doSubmit();}
+else{setTimeou);}}
+$io.appendTo('body');$io.t(doSubmit,10);}
+var data,doc,domCheckCount=50;function cb(){if(cbInvoked){return;}
+$io.removeData('form-plugin-onload');var ok=true;try{if(timedOut){throw'timeout';}
+doc=io.contentWindow?io.contentWindow.document:io.contentDocument?io.contentDocument:io.document;var isXml=s.dataType=='xml'||doc.XMLDocument||$.isXMLDoc(doc);log('isXml='+isXml);if(!isXml&&window.opera&&(doc.body==null||doc.body.innerHTML=='')){if(--domCheckCount){log('requeing onLoad callback, DOM not available');setTimeout(cb,250);return;}}
+cbInvoked=true;xhr.responseText=doc.documentElement?doc.documentElement.innerHTML:null;xhr.responseXML=doc.XMLDocument?doc.XMLDocument:doc;xhr.getResponseHeader=function(header){var headers={'content-type':s.dataType};return headers[header];};var scr=/(json|script)/.test(s.dataType);if(scr||s.textarea){var ta=doc.getElementsByTagName('textarea')[0];if(ta){xhr.responseText=ta.value;}
+else if(scr){var pre=doc.getElementsByTagName('pre')[0];var b=doc.getElementsByTagName('body')[0];if(pre){xhr.responseText=pre.innerHTML;}
+else if(b){xhr.responseText=b.innerHTML;}}}
+else if(s.dataType=='xml'&&!xhr.responseXML&&xhr.responseText!=null){xhr.responseXML=toXml(xhr.responseText);}
+data=$.httpData(xhr,s.dataType);}
+catch(e){log('error caught:',e);ok=false;xhr.error=e;$.handleError(s,xhr,'error',e);}
+if(ok){s.success.call(s.context,data,'success',xhr);if(g){$.event.trigger("ajaxSuccess",[xhr,s]);}}
+if(g){$.event.trigger("ajaxComplete",[xhr,s]);}
+if(g&&! --$.active){$.event.trigger("ajaxStop");}
+if(s.complete){s.complete.call(s.context,xhr,ok?'success':'error');}
+setTimeout(function(){$io.removeData('form-plugin-onload');$io.remove();xhr.responseXML=null;},100);}
+function toXml(s,doc){if(window.ActiveXObject){doc=new ActiveXObject('Microsoft.XMLDOM');doc.async='false';doc.loadXML(s);}
+else{doc=(new DOMParser()).parseFromString(s,'text/xml');}
+return(doc&&doc.documentElement&&doc.documentElement.tagName!='parsererror')?doc:null;}}};$.fn.ajaxForm=function(options){if(this.length===0){var o={s:this.selector,c:this.context};if(!$.isReady&&o.s){log('DOM not ready, queuing ajaxForm');$(function(){$(o.s,o.c).ajaxForm(options);});return this;}
+log('terminating; zero elements found by selector'+($.isReady?'':' (DOM not ready)'));return this;}
+return this.ajaxFormUnbind().bind('submit.form-plugin',function(e){if(!e.isDefaultPrevented()){e.preventDefault();$(this).ajaxSubmit(options);}}).bind('click.form-plugin',function(e){var target=e.target;var $el=$(target);if(!($el.is(":submit,input:image"))){var t=$el.closest(':submit');if(t.length==0){return;}
+target=t[0];}
+var form=this;form.clk=target;if(target.type=='image'){if(e.offsetX!=undefined){form.clk_x=e.offsetX;form.clk_y=e.offsetY;}else if(typeof $.fn.offset=='function'){var offset=$el.offset();form.clk_x=e.pageX-offset.left;form.clk_y=e.pageY-offset.top;}else{form.clk_x=e.pageX-target.offsetLeft;form.clk_y=e.pageY-target.offsetTop;}}
+setTimeout(function(){form.clk=form.clk_x=form.clk_y=null;},100);});};$.fn.ajaxFormUnbind=function(){return this.unbind('submit.form-plugin click.form-plugin');};$.fn.formToArray=function(semantic){var a=[];if(this.length===0){return a;}
+var form=this[0];var els=semantic?form.getElementsByTagName('*'):form.elements;if(!els){return a;}
+var i,j,n,v,el,max,jmax;for(i=0,max=els.length;i<max;i++){el=els[i];n=el.name;if(!n){continue;}
+if(semantic&&form.clk&&el.type=="image"){if(!el.disabled&&form.clk==el){a.push({name:n,value:$(el).val()});a.push({name:n+'.x',value:form.clk_x},{name:n+'.y',value:form.clk_y});}
+continue;}
+v=$.fieldValue(el,true);if(v&&v.constructor==Array){for(j=0,jmax=v.length;j<jmax;j++){a.push({name:n,value:v[j]});}}
+else if(v!==null&&typeof v!='undefined'){a.push({name:n,value:v});}}
+if(!semantic&&form.clk){var $input=$(form.clk),input=$input[0];n=input.name;if(n&&!input.disabled&&input.type=='image'){a.push({name:n,value:$input.val()});a.push({name:n+'.x',value:form.clk_x},{name:n+'.y',value:form.clk_y});}}
+return a;};$.fn.formSerialize=function(semantic){return $.param(this.formToArray(semantic));};$.fn.fieldSerialize=function(successful){var a=[];this.each(function(){var n=this.name;if(!n){return;}
+var v=$.fieldValue(this,successful);if(v&&v.constructor==Array){for(var i=0,max=v.length;i<max;i++){a.push({name:n,value:v[i]});}}
+else if(v!==null&&typeof v!='undefined'){a.push({name:this.name,value:v});}});return $.param(a);};$.fn.fieldValue=function(successful){for(var val=[],i=0,max=this.length;i<max;i++){var el=this[i];var v=$.fieldValue(el,successful);if(v===null||typeof v=='undefined'||(v.constructor==Array&&!v.length)){continue;}
+v.constructor==Array?$.merge(val,v):val.push(v);}
+return val;};$.fieldValue=function(el,successful){var n=el.name,t=el.type,tag=el.tagName.toLowerCase();if(successful===undefined){successful=true;}
+if(successful&&(!n||el.disabled||t=='reset'||t=='button'||(t=='checkbox'||t=='radio')&&!el.checked||(t=='submit'||t=='image')&&el.form&&el.form.clk!=el||tag=='select'&&el.selectedIndex==-1)){return null;}
+if(tag=='select'){var index=el.selectedIndex;if(index<0){return null;}
+var a=[],ops=el.options;var one=(t=='select-one');var max=(one?index+1:ops.length);for(var i=(one?index:0);i<max;i++){var op=ops[i];if(op.selected){var v=op.value;if(!v){v=(op.attributes&&op.attributes['value']&&!(op.attributes['value'].specified))?op.text:op.value;}
+if(one){return v;}
+a.push(v);}}
+return a;}
+return $(el).val();};$.fn.clearForm=function(){return this.each(function(){$('input,select,textarea',this).clearFields();});};$.fn.clearFields=$.fn.clearInputs=function(){return this.each(function(){var t=this.type,tag=this.tagName.toLowerCase();if(t=='text'||t=='password'||tag=='textarea'){this.value='';}
+else if(t=='checkbox'||t=='radio'){this.checked=false;}
+else if(tag=='select'){this.selectedIndex=-1;}});};$.fn.resetForm=function(){return this.each(function(){if(typeof this.reset=='function'||(typeof this.reset=='object'&&!this.reset.nodeType)){this.reset();}});};$.fn.enable=function(b){if(b===undefined){b=true;}
+return this.each(function(){this.disabled=!b;});};$.fn.selected=function(select){if(select===undefined){select=true;}
+return this.each(function(){var t=this.type;if(t=='checkbox'||t=='radio'){this.checked=select;}
+else if(this.tagName.toLowerCase()=='option'){var $sel=$(this).parent('select');if(select&&$sel[0]&&$sel[0].type=='select-one'){$sel.find('option').selected(false);}
+this.selected=select;}});};function log(){if($.fn.ajaxSubmit.debug){var msg='[jquery.form] '+Array.prototype.join.call(arguments,'');if(window.console&&window.console.log){window.console.log(msg);}
+else if(window.opera&&window.opera.postError){window.opera.postError(msg);}}};})(jQuery);
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+(function($){$.toJSON=function(o)
+{if(typeof(JSON)=='object'&&JSON.stringify)
+return JSON.stringify(o);var type=typeof(o);if(o===null)
+return"null";if(type=="undefined")
+return undefined;if(type=="number"||type=="boolean")
+return o+"";if(type=="string")
+return $.quoteString(o);if(type=='object')
+{if(typeof o.toJSON=="function")
+return $.toJSON(o.toJSON());if(o.constructor===Date)
+{var month=o.getUTCMonth()+1;if(month<10)month='0'+month;var day=o.getUTCDate();if(day<10)day='0'+day;var year=o.getUTCFullYear();var hours=o.getUTCHours();if(hours<10)hours='0'+hours;var minutes=o.getUTCMinutes();if(minutes<10)minutes='0'+minutes;var seconds=o.getUTCSeconds();if(seconds<10)seconds='0'+seconds;var milli=o.getUTCMilliseconds();if(milli<100)milli='0'+milli;if(milli<10)milli='0'+milli;return'"'+year+'-'+month+'-'+day+'T'+hours+':'+minutes+':'+seconds+'.'+milli+'Z"';}
+if(o.constructor===Array)
+{var ret=[];for(var i=0;i<o.length;i++)
+ret.push($.toJSON(o[i])||"null");return"["+ret.join(",")+"]";}
+var pairs=[];for(var k in o){var name;var type=typeof k;if(type=="number")
+name='"'+k+'"';else if(type=="string")
+name=$.quoteString(k);else
+continue;if(typeof o[k]=="function")
+continue;var val=$.toJSON(o[k]);pairs.push(name+":"+val);}
+return"{"+pairs.join(", ")+"}";}};$.evalJSON=function(src)
+{if(typeof(JSON)=='object'&&JSON.parse)
+return JSON.parse(src);return eval("("+src+")");};$.secureEvalJSON=function(src)
+{if(typeof(JSON)=='object'&&JSON.parse)
+return JSON.parse(src);var filtered=src;filtered=filtered.replace(/\\["\\\/bfnrtu]/g,'@');filtered=filtered.replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,']');filtered=filtered.replace(/(?:^|:|,)(?:\s*\[)+/g,'');if(/^[\],:{}\s]*$/.test(filtered))
+return eval("("+src+")");else
+throw new SyntaxError("Error parsing JSON, source is not valid.");};$.quoteString=function(string)
+{if(string.match(_escapeable))
+{return'"'+string.replace(_escapeable,function(a)
+{var c=_meta[a];if(typeof c==='string')return c;c=a.charCodeAt();return'\\u00'+Math.floor(c/16).toString(16)+(c%16).toString(16);})+'"';}
+return'"'+string+'"';};var _escapeable=/["\\\x00-\x1f\x7f-\x9f]/g;var _meta={'\b':'\\b','\t':'\\t','\n':'\\n','\f':'\\f','\r':'\\r','"':'\\"','\\':'\\\\'};})(jQuery);
+//]]></script>
+<script type="text/javascript" src="http://www.babycenter.com.my/webassets/2.08.0.75177/js/global/jquery.validate.js.pagespeed.jm.bFhGPrlsw_.js"></script>
+<script type="text/javascript">//<![CDATA[
+jQuery.cookie=function(key,value,options){if(arguments.length>1&&String(value)!=="[object Object]"){options=jQuery.extend({},options);if(value===null||value===undefined){options.expires=-1;}
+if(typeof options.expires==='number'){var days=options.expires,t=options.expires=new Date();t.setDate(t.getDate()+days);}
+value=String(value);return(document.cookie=[encodeURIComponent(key),'=',options.raw?value:encodeURIComponent(value),options.expires?'; expires='+options.expires.toUTCString():'',options.path?'; path='+options.path:'',options.domain?'; domain='+options.domain:'',options.secure?'; secure':''].join(''));}
+options=value||{};var result,decode=options.raw?function(s){return s;}:decodeURIComponent;return(result=new RegExp('(?:^|; )'+encodeURIComponent(key)+'=([^;]*)').exec(document.cookie))?decode(result[1]):null;};
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+(function($){$.fn.lightBoxButtons=function(){this.parent().find('.ui-dialog-buttonset button.ui-button:first').removeClass().addClass('secondary large').attr('id','ltBoxSecondaryBtn');this.parent().find('.ui-dialog-buttonset button.ui-button:last').removeClass().addClass('primary large').attr('id','ltBoxPrimaryBtn');};$.fn.notimplemented=function(){this.click(function(){alert("not implemented yet");return false;});};$.fn.searchForm=function(label){var formElem=$(this);$('.query',formElem).focus(function(){if($(this).val()===label){$(this).clearFields();$(this).removeClass('searchDefaultMsg');}});$('.query',formElem).blur(function(){if($(this).val()===''){$(this).val(label);$(this).addClass('searchDefaultMsg');}});formElem.submit(function(){$qfield=$('.query',formElem);if($qfield.val()===label){$qfield.clearFields();}
+return true;});};$.fn.close=function(){if($(this).hasClass('ui-dialog-content')){$(this).dialog("close");}else{$(this).hide();}};$.fn.addMediaIcons=function(options){$(this).append('<div class="'+options.cssClass+'" />');};$.fn.hoverWithDelay=function(fnOver,fnOut,delay){var readyToShow=false;if(delay===undefined){delay=200;}
+$(this).hover(function(e){readyToShow=true;$.lib.delay(function(){if(!readyToShow){return false;}
+fnOver(e);},delay);},function(e){readyToShow=false;$.lib.delay(function(){if(readyToShow){return false;}
+fnOut(e);},delay);});};$.url={getQueryParam:function(url,paramName){var queryString=url.substring(url.indexOf('?'));return decodeURI((RegExp(paramName+'='+'(.+?)(&|$)').exec(queryString)||[,null])[1]);},getWindowQueryParam:function(paramName){return decodeURI((RegExp(paramName+'='+'(.+?)(&|$)').exec(location.search)||[,null])[1]);},param:function(name){var results=new RegExp('[\\?&amp;]'+name+'=([^&#]*)').exec(window.location.href);if(results){return results[1]||0;}
+return null;}};var defaultLightBoxOptions={box:'#confirmDeleteMsg',resizable:false,width:415,height:'auto',modal:true,cancelLabel:'Cancel'};$.fn.lightbox=function(options,callback){options=$.extend({},defaultLightBoxOptions,options);this.click(function(){return popup(options,callback);});};$.lightbox={popup:function(options,callback){options=$.extend({},defaultLightBoxOptions,options);return popup(options,callback);}};function popup(options,callback){var buttons,lightBoxExt;buttons=[];if(options.okLabel){buttons=[{text:options.cancelLabel,click:function(){$(this).close();}},{text:options.okLabel,click:function(){if(callback){callback($(this));}else{$(this).close();}}}];}
+lightBoxExt=$(options.box).dialog({resizable:options.resizable,width:options.width,height:options.height,modal:options.modal,buttons:buttons,open:function(){$('.ui-widget-overlay, .closeLightbox, .closeX').bind('click',function(){$('.ui-dialog:visible .ui-dialog-content').dialog('close');})}});lightBoxExt.lightBoxButtons();return false;};$.lib={delay:function(callback,ms){var timer=0;clearTimeout(timer);timer=setTimeout(callback,ms);}};$.fn.bcExpandable=function(options){options=$.extend({triggerSelector:'*[data-js-bcExpandableTrigger]',expandElementSelector:'*[data-js-bcExpandableElement]',expandedCssClasson(callback,ms){var timer=0;clearTimeout(timer);timer=s:'js-expanded'},options);$(this).each(function(){var $container=$(this);$(options.triggerSelector,$container).on('click',function(e){if(!$container.data('js-bcExpandable-expanded'))
+{var bcExpandableTimeout=setTimeout(function(){$container.bcExpandableOpen(options)},300);if(!$container.data('js-bcExpandable-initialized')){$(document).on('click',function(e){if($container.has(e.target).length===0&&$container.data('js-bcExpandable-expanded')){$container.bcExpandableCollapse(options);clearTimeout(bcExpandableTimeout);}});$container.data('js-bcExpandable-initialized',true);}}
+else
+{$container.bcExpandableCollapse(options);}});});};$.fn.bcExpandableCollapse=function(options){options=$.extend({expandElementSelector:'*[data-js-bcExpandableElement]',expandedCssClass:'js-expanded'},options);var $container=$(this);$(options.expandElementSelector,$container).slideUp({complete:function(){$container.removeClass(options.expandedCssClass);$container.data('js-bcExpandable-expanded',false);}});};$.fn.bcExpandableOpen=function(options){options=$.extend({expandElementSelector:'*[data-js-bcExpandableElement]',expandedCssClass:'js-expanded'},options);var $container=$(this);$container.addClass(options.expandedCssClass);$(options.expandElementSelector,$container).slideDown();$container.data('js-bcExpandable-expanded',true);};$.fn.toggleExpand=function(detailObj){var expandObj;$(this).click(function(e){expandObj=$(this);expandObj.addClass('invisible expanded');detailObj.slideDown(500);return false;});$('.closeElement',detailObj).click(function(e){detailObj.slideUp(500,function(){expandObj.removeClass('invisible expanded');});return false;});}})(jQuery);
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+if("undefined"==typeof(bc)){bc=new Object();}
+String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"");}
+Number.prototype.format=function(options){n=options['decimalPlace']||2;c=options['decimalDelimiter']||'.';x=options['sectionLength']||3;s=options['sectionDelimiter']||',';var re='\\d(?=(\\d{'+x+'})+'+(n>0?'\\D':'$')+')',num=this.toFixed(Math.max(0,~~n));return num.replace('.',c).replace(new RegExp(re,'g'),'$&'+s);};if(typeof String.prototype.contains!='function'){String.prototype.contains=function(str){return this.indexOf(str)>=0};}
+bc.VALID_NAMESPACE_REG_EXP=new RegExp("^([a-z]+[a-z0-9]?)+(\\.[a-z]+[a-z0-9]?)*$");bc._TOOLKIT_DOJO_041="dojo_0.41";bc._TOOLKIT_DOJO_12="dojo_1.2";bc._toolkit=bc._TOOLKIT_DOJO_041;bc.namespace=function(namespaceInput){var initialErrorMessage="bc.namespace():\n";var errorMessage=initialErrorMessage;if(("string"!=typeof(namespaceInput))||!bc.VALID_NAMESPACE_REG_EXP.test(namespaceInput)){errorMessage+="  The namespace input must be a string of the form "+"level1.level2.level3...where each level is of the form "+"/[a-z]+[a-z0-9]?/.\n";}
+if(errorMessage==initialErrorMessage){var namespaceLevels=(new String(namespaceInput)).split(".");var namespaceHierarchy=window;for(var i=0;i<namespaceLevels.length;i++){var namespaceLevel=namespaceLevels[i];if("undefined"==typeof(namespaceHierarchy[namespaceLevel])){namespaceHierarchy[namespaceLevel]=new Object();}
+namespaceHierarchy=namespaceHierarchy[namespaceLevel];}}
+if(errorMessage!=initialErrorMessage){throw(errorMessage);}}
+//]]></script>
+<script type="text/javascript" src="/webassets/2.08.0.75177/js/global/bcLib.js"></script>
+<script type="text/javascript">//<![CDATA[
+(function($){$.adPlugins={audienceScience:{slotConfig:'',init:function(adSlotConfig,testMode){if(!adSlotConfig)return
+if(typeof testMode==='undefined'||!testMode){var timestamp=new Date().getTime();var idList=($.map(adSlotConfig,function(value,index){return value;})).join(',');var path='//pq-direct.revsci.net/pql?placementIdList='+idList+'&cb='+timestamp
+bc.getHeadScript(path);}
+$.adPlugins.audienceScience.slotConfig=adSlotConfig;var addTargeting=function(adsToDisplay){if(typeof asiPlacements!=='undefined'){$.each(adsToDisplay,function(index,adSlot){var asCode=$.adPlugins.audienceScience.slotConfig[adSlot['id']];if(asCode!==undefined&&asiPlacements[asCode]!==undefined&&asiPlacements[asCode]['default']&&asiPlacements[asCode]['default']['key']){adSlot['targetParams']['gwd']='PQ_'+asCode+'_'+Object.keys(asiPlacements[asCode]['data'])[0];}});}}
+$.gptAdManager.slotPreFetchCalls.add(addTargeting);}}};}(jQuery));bc.namespace("bc.ad");bc.ad.showAd=function(cssClass){var HIDE_FOR_SMALL_CLASS='hide-for-small';var SHOW_FOR_LARGE_AND_UP_CLASS='show-for-large-up';var SHOW_FOR_MEDIUM_CLASS='show-for-medium';var SHOW_FOR_SMALL_CLASS='show-for-small';if(cssClass.contains(HIDE_FOR_SMALL_CLASS)&&bc.isSmallScreen()){return false;}
+if(cssClass.contains(SHOW_FOR_LARGE_AND_UP_CLASS)&&!bc.isLargeScreen()){return false;}
+if(cssClass.contains(SHOW_FOR_MEDIUM_CLASS)&&!bc.isMediumScreen()){return false;}
+if(cssClass.contains(SHOW_FOR_SMALL_CLASS)&&!bc.isSmallScreen()){return false;}
+return true;}
+//]]></script>
+<script src="//www.googletagservices.com/tag/js/gpt.js"></script>
+<script type="text/javascript">//<![CDATA[
+(function($){window.googletag=window.googletag||{};window.googletag.cmd=window.googletag.cmd||[];var adsToDisplay=[];var slotMap={};var adSite='';var adUrl='';var adInfo;var adBlock=false;$.gptAdManager={init:function(pAdInfo){if(googletag.cmd===undefined){adBlock=true;return;}
+var envParam=$.url.param('env');if(typeof envParam==='string'&&envParam==='prod'){delete pAdInfo.targetParams['env'];}
+var adTestParam=$.url.param('adTest');if(typeof adTestParam==='string'){pAdInfo['targetParams']['test']=adTestParam.split(",");}
+googletag.cmd.push(function(){var targetParams=pAdInfo['targetParams'];for(var key in targetParams){googletag.pubads().setTargeting(key,targetParams[key]);};});adInfo=pAdInfo;googletag.pubads().addEventListener('slotRenderEnded',function(event){if(event.isEmpty){for(var i=0;i<adsToDisplay.length;i++){if(typeof adsToDisplay[i]['hideIfEmptyParentSelector']==='string'&&adsToDisplay[i]['hideIfEmptyParentSelector'].length>0){if(event.slot===slotMap[adsToDisplay[i]['id']]){$('#'+adsToDisplay[i]['id']).closest(adsToDisplay[i]['hideIfEmptyParentSelector']).hide();}}}}});},postInit:function(){if(adBlock)return true;$.gptAdManager.display();$(".refreshGptAd").refresh();},enable:function(){if(adBlock)return true;googletag.pubads().enableAsyncRendering();googletag.pubads().enableSingleRequest();googletag.pubads().collapseEmptyDivs();googletag.enableServices();},refresh:function(id){if(adBlock)return true;if(id&&slotMap[id]){googletag.pubads().refresh([slotMap[id]]);}},sendToQueue:function(options){if(adBlock)return true;adsToDisplay.push(options);},slotPreFetchCalls:$.Callbacks(),display:function(){if(adBlock)return true;if(adsToDisplay.length==0){return;}
+adSite=adInfo.site;if(bc.isSmallScreen()){adSite=adInfo.mobileSite;}
+adUrl='/'+adInfo.googleId+'/'+adSite+'/'+adInfo.zone;$.gptAdManager.slotPreFetchCalls.fire(adsToDisplay);googletag.cmd.push(function(){for(var i=0;i<adsToDisplay.length;i++){var slot=googletag.defineSlot(adUrl,adsToDisplay[i]['size'],adsToDisplay[i]['id']);slot.addService(googletag.pubads());var targetParams=adsToDisplay[i]['targetParams'];for(var key in targetParams){slot.setTargeting(key,targetParams[key]);}
+if(adsToDisplay[i]['collapseEmptyDiv']){slot.setCollapseEmptyDiv(true,true);}
+slotMap[adsToDisplay[i]['id']]=slot;}
+if(bc.isLargeScreen()){var slot=googletag.defineOutOfPageSlot(adUrl,'gptAdOop');slot.addService(googletag.pubads());slotMap['gptAdOop']=slot;}
+$.gptAdManager.enable();for(var i=0;i<adsToDisplay.length;i++){googletag.display(adsToDisplay[i]['id']);}
+if(bc.isLargeScreen()){googletag.display('gptAdOop');}});var dartParam=$.url.param('dart');if(typeof dartParam==='string'){displayTest();}}};$.fn.refresh=function(){this.click(function(event){var id=$(this).attr('id');$.gptAdManager.refresh(id);return false;});};function displayTest(){if($('#dartTestHooks').length==0){var div=$('<div></div>').attr('id','dartTestHooks');$('<h3></h3>').html('Dart').appendTo(div);div.appendTo($('body'));}
+var $div=$('#dartTestHooks');addTestElement($div,'gpt_site','Site',adSite);addTestElement($div,'gpt_zone','Zone',adInfo['zone']);addTestElement($div,'gpt_adUrl','AdUrl',adUrl);if(!bc.isIe7()){addTestElement($div,'gpt_targeting','Targeting',JSON.stringify(adInfo['targetParams']));for(var i=0;i<adsToDisplay.length;i++){addTestElement($div,adsToDisplay[i]['id']+'Value',adsToDisplay[i]['id'],JSON.stringify(adsToDisplay[i]));}
+if(bc.isLargeScreen()){addTestElement($div,'gptAdOopValue','gptAdOopValue',JSON.stringify({'id':'gptAdOop'}));}}
+$div.show();};function addTestElement(testHooks,id,title,text){var pelem=$('<p></p>');$('<b></b>').text(title+': ').appendTo(pelem);$('<span></span>').attr('id',id).html(text).appendTo(pelem);pelem.appendTo(testHooks);}})(jQuery);
+//]]></script>
+<script type="text/javascript">var adInfo=$.parseJSON('{"googleId":536,"site":"Malaysia-baby","mobileSite":"Malaysia-mobile-baby","zone":"baby-health","targetParams":{"mystageid":["uru"],"mytp":["baby","baby-health","health-mosquito-disease-prevention-treatment","mosquito-disease-prevention-treatment-dengue"],"mypgtype":["article"],"mypageid":["1021718"]}}');$.gptAdManager.init(adInfo);</script><!-- thirdPartyIncludes -->
+<!-- Begin comScore Tag -->
+<script>var _comscore=_comscore||[];var bcComscoreAccount='6035600';_comscore.push({c1:"2",c2:bcComscoreAccount});(function(){var path=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js";bc.getHeadScript(path);})();</script>
+<!-- End comScore Tag -->
+<!-- BEGAccount='6035600';_comscore.push({c1:"2",c2:bcComscoreAccount});(function(){var path=(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecIN AU Nielsen Online SiteCensus V6.0 -->
+<!-- END AU Nielsen Online SiteCensus V6.0 -->
+<!-- BEGIN Tynt Script -->
+<script type="text/javascript">if(document.location.protocol=='http:'){try{var Tynt=Tynt||[];Tynt.push('d2_n3w3eir4ABbacwqm_6r');Tynt.i={"ap":"Read More:"};bc.getHeadScript('http://tcr.tynt.com/ti.js');}
+catch(err){$.logger.error("Error initializing Tynt js: "+err);}}</script>
+<!-- END Tynt Script -->
+<!-- BEGIN Optimizely Script -->
+<!-- END Optimizely Script -->
+<!-- Facebook OpenGraph Tags-->
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Dengue in children"/>
+<meta property="og:description" content="Dengue is an acute viral infection characterised by high fever and is one of the most common mosquito borne diseases. Dengue is a major health concern in Malaysia. Read more about this endemic disease and the safety precautions you can take."/>
+<meta property="og:site_name" content="BabyCenter"/>
+<meta property="og:image" content="http://www.babycenter.com.my/webassets/countries/en_MY/logo_200x200.png"/>
+<meta property="og:url" content="http://www.babycenter.com.my/a1021718/dengue-in-children"/>
+<link rel="apple-touch-icon" href="http://www.babycenter.com.my/webassets/2.08.0.75177/images/xapple_touch_icon.png.pagespeed.ic.nTwZriC7Ks.png"/>
+<link rel="apple-touch-icon-precomposed" href="http://www.babycenter.com.my/webassets/2.08.0.75177/images/favicons/xapple-touch-icon-precomposed.png.pagespeed.ic.BPaRikmrxg.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.babycenter.com.my/webassets/2.08.0.75177/images/favicons/xapple-touch-icon-72x72-precomposed.png.pagespeed.ic.ud4oWLeTzT.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.babycenter.com.my/webassets/2.08.0.75177/images/favicons/xapple-touch-icon-114x114-precomposed.png.pagespeed.ic.GBnGkFkPSd.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.babycenter.com.my/webassets/2.08.0.75177/images/favicons/xapple-touch-icon-144x144-precomposed.png.pagespeed.ic.OJcv_sOW2a.png"/>
+<script type="text/javascript">//<![CDATA[
+(function($){var enabled=false;$.logger={init:function(penabled){enabled=penabled;},info:function(msg,url,line){log(msg,url,line,'info');},warn:function(msg,url,line){log(msg,url,line,'warn');},error:function(msg,url,line){log(msg,url,line,'error');}};function log(msg,url,line,level){if(enabled){$.get('/site/log',{'message':msg,'url':url,'line':line,'level':level})}};})(jQuery);
+//]]></script>
+</head><body itemtype="http://schema.org/WebPage" itemscope="" class="STANDARD">
+<script type="text/javascript">jQuery.logger.init(false);window.onerror=function(msg,url,linenumber){jQuery.logger.error(msg,url,linenumber);return false;}</script>
+<div id="pageContainer">
+<div id="topAdContainerMobile" class="row">
+<!-- $URL:$ -->
+<div id="mobileAd1" class="bcAd bc-show-for-small">
+<div class="advertisementLabel">advertisement</div>
+</div>
+</div>
+<div id="topContainer" class="clearfix">
+<div class="flexLogoContainer hide-for-medium-up">
+<a href="/" data-oln="logo" id="smallLogoLink">
+<script type="text/javascript" pagespeed_no_defer="">//<![CDATA[
+(function(){var d=window,e=document,f="documentElement",g="scrollTop",k="prototype",l="body",m="getAttribute",n="",p="1",q="data",r="img",s="load",t="number",u="on",v="onload",w="pagespeed_lazy_position",x="pagespeed_lazy_replaced_functions",y="pagespeed_lazy_src",z="position",A="relative",B="resize",C="scroll",D="src";d.pagespeed=d.pagespeed||{};var E=d.pagespeed,F=function(a){this.d=[];this.a=0;this.b=!1;this.o=a;this.e=null;this.i=0;this.j=200;this.c=!1};
+F[k].s=function(){var a=0;typeof d.pageYOffset==t?a=d.pageYOffset:e[l]&&e[l][g]?a=e[l][g]:e[f]&&e[f][g]&&(a=e[f][g]);var b=d.innerHeight||e[f].clientHeight||e[l].clientHeight;return{top:a,bottom:a+b,height:b}};F[k].n=function(a){var b=a[m](w);if(b)return parseInt(b,0);var b=a.offsetTop,c=a.offsetParent;c&&(b+=this.n(c));b=Math.max(b,0);a.setAttribute(w,b);return b};F[k].r=function(a){var b=this.n(a);return{top:b,bottom:b+a.offsetHeight}};
+F[k].q=function(a,b){if(a.currentStyle)return a.currentStyle[b];if(e.defaultView&&e.defaultView.getComputedStyle){var c=e.defaultView.getComputedStyle(a,null);if(c)return c.getPropertyValue(b)}return a.style&&a.style[b]?a.style[b]:n};F[k].p=function(a){if(!this.c&&(0==a.offsetHeight||0==a.offsetWidth))return!1;if(this.q(a,z)==A)return!0;var b=this.s(),c=a.getBoundingClientRect();c?(a=c.top-b.height,b=c.bottom):(c=this.r(a),a=c.top-b.bottom,b=c.bottom-b.top);return a<=this.a&&0<=b+this.a};
+F[k].m=function(a){this.l(a);var b=this;d.setTimeout(function(){var c=a[m](y);if(null!=c)if((b.b||b.p(a))&&-1!=a.src.indexOf(b.o)){var h=a.parentNode,G=a.nextSibling;h&&h.removeChild(a);a.getAttribute=a.k;a.removeAttribute(v);a.removeAttribute(y);a.removeAttribute(x);h&&h.insertBefore(a,G);a.src=c}else b.d.push(a)},0)};F[k].loadIfVisible=F[k].m;F[k].u=function(){this.b=!0;this.f()};F[k].loadAllImages=F[k].u;F[k].f=function(){var a=this.d,b=a.length;this.d=[];for(var c=0;c<b;++c)this.m(a[c])};
+F[k].h=function(a,b){return a.a?null!=a.a(b):null!=a[m](b)};F[k].v=function(){for(var a=e.getElementsByTagName(r),b=0;b<a.length;++b){var c=a[b];this.h(c,y)&&this.l(c)}};F[k].overrideAttributeFunctions=F[k].v;F[k].l=function(a){var b=this;this.h(a,x)||(a.k=a[m],a.getAttribute=function(a){a.toLowerCase()==D&&b.h(this,y)&&(a=y);return this.k(a)},a.setAttribute(x,p))};
+E.g=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,!1);else if(a.attachEvent)a.attachEvent(u+b,c);else{var h=a[u+b];a[u+b]=function(){c.call(this);h&&h.call(this)}}};E.t=function(a,b){var c=new F(b);E.lazyLoadImages=c;E.g(d,s,function(){c.c=!0;c.b=a;c.a=200;c.f()});0!=b.indexOf(q)&&((new Image).src=b);var h=function(){if(!(c.c&&a||c.e)){var b=c.j;(new Date).getTime()-c.i>c.j&&(b=0);c.e=d.setTimeout(function(){c.i=(new Date).getTime();c.f();c.e=null},b)}};E.g(d,C,h);E.g(d,B,h)};
+E.lazyLoadInit=E.t;})();
+
+pagespeed.lazyLoadInit(true, "/mod_pagespeed_static/1.JiBnMqyl6S.gif");
+
+//]]></script><img pagespeed_lazy_src="/webassets/2.08.0.75177/countries/en_MY/logo.svg" id="siteLogo" border="0" alt="" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
+<img pagespeed_lazy_src="http://www.babycenter.com.my/webassets/2.08.0.75177/countries/en_MY/xlogo.gif.pagespeed.ic.y7kf4ZDqoj.png" id="siteLogo" class="pngGraphic" border="0" alt="" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
+</a>
+</div>
+<div id="expandingMobileSearch" class="bc-show-for-small">
+<div class="searchIconButton bc-show-for-small" data-js-bcExpandableTrigger></div>
+<div id="headerSearchContainer" data-js-bcExpandableElement>
+<div class="searchForm">
+<form action="/search" method="GET" class="searchboxGeneric" id="headerSiteSearch">
+<div class="searchBlock">
+<div class="searchInput">
+<input type="text" name="q" id="q" class="query searchDefaultMsg" value="Search" maxlength="200"/>
+</div>
+<input type="submit" alt="search.search" class="searchButton" src="/webassets/2.08.0.75177/images/clear.gif" value=""/>
+</div>
+</form>
+</div>
+</div>
+</div>
+<nav id="meModule" data-oan="meSlice">
+<ul class="loggedOutLinks show-for-medium-up">
+<li id="loginLi">
+<a href="/secure/login" id="loginLink" class="loginLink" data-oln="login_Link">Log in</a></li>
+<li id="signupLi">
+<a href="/secure/registration?registrationLoc=text-desktop-meSlice-right" data-oln=signupLink id="signupLink" class="signupLink">Sign up</a></li>
+</ul>
+<a href="/secure/login" id="loggedOutAvatar" class="meMenuTabForSmall hide-for-medium-up" data-oln="login_Link"><img pagespeed_lazy_src="http://imageserve.babycenter.com/15/000/079/P4drmETAeGKDGzHIXdafrYV1d1ncMihb_sm_sq.jpg" class="microImage" alt="http://imageserve.babycenter.com/15/000/079/P4drmETAeGKDGzHIXdafrYV1d1ncMihb" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a></nav>
+<div class="chicletSmall hide-for-small"> </div>
+<div class="spacer bc-show-for-medium-up"></div>
+<div id="header" class="bc-show-for-medium-up">
+<a href="/" data-oln="logo"><img pagespeed_lazy_src="http://www.babycenter.com.my/webassets/2.08.0.75177/countries/en_MY/xlogo.gif.pagespeed.ic.y7kf4ZDqoj.png" id="siteLogo" border="0" alt="" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a>
+<div class="searchForm">
+<form action="/search" method="GET" class="searchboxGeneric" id="headerSiteSearch-DT">
+<div class="searchBlock">
+<div class="searchInput">
+<input type="text" name="q" id="q" class="query searchDefaultMsg" value="Search" maxlength="200"/>
+</div>
+<input type="submit" alt="search.search" class="searchButton" src="/webassets/2.08.0.75177/images/clear.gif" value=""/>
+</div>
+</form>
+</div>
+</div>
+</div><!-- / topContainer -->
+<div role="main" id="page"><div id="topAdContainerDT" class="bc-hide-for-small row">
+<!-- $URL:$ -->
+<div id="topAd" class="bcAd columns bc-hide-for-small ">
+<div class="advertisementLabel">advertisement</div>
+</div>
+</div>
+<div id="columnWrapper" class="ThreeCol row">
+<div id="nav" class="large-2 columns hide-for-medium-down" data-oan="contextualLeftNav">
+<h3>Baby</h3>
+<a href="/baby">
+All Baby</a>
+<a href="/baby-calendar">
+Baby calendar</a>
+<a href="/c100/baby-food-starting-solids">
+Baby food: starting solids</a>
+<a href="/baby-slideshows">
+Baby photos</a>
+<a href="/c25012557/bonding-with-your-baby">
+Bonding with your baby</a>
+<a href="/breastfeeding">
+Breastfeeding</a>
+<a href="/c564604/new-dads">
+Dads</a>
+<a href="/c5021/caring-for-your-baby">
+Daily care</a>
+<a href="/your-babys-development">
+Development & milestones</a>
+<a href="/c555851/formula-feeding">
+Formula feeding</a>
+<a href="/c25004235/games-and-play">
+Games and play</a>
+<a class="expanded" href="/c5020/your-babys-health">
+Health</a>
+<a class="second" href="/c25004223/teething-and-dental-care">
+Teething and dental care</a>
+<a class="second" href="/c25004239/caring-for-your-sick-baby">
+Caring for your sick baby</a>
+<a class="second" href="/c25004247/baby-illnesses-and-conditions">
+Baby illnesses and conditions</a>
+<a class="second" href="/c25004241/coughs-colds-and-flu">
+Coughs, colds and flu</a>
+<a class="second" href="/c25004219/colic-and-crying">
+Colic and crying</a>
+<a class="second" href="/c25004243/eyes-and-ears">
+Eyes and ears</a>
+<a class="second" href="/c1038871/vaccines-and-immunisation">
+Vaccines and immunisation</a>
+<a class="second" href="/c1048206/rashes-and-skin-conditions">
+Rashes and skin conditions</a>
+<a class="second" href="/c25004249/tummy-troubles">
+Tummy troubles</a>
+<a class="second" href="/c25004237/allergies-and-asthma">
+Allergies and asthma</a>
+<a class="second" href="/c25004245/first-aid">
+First aid</a>
+<div class="selected"><a class="second highlighted" href="/c25004391/mosquito-borne-diseases-prevention-and-treatment">
+<div class="hiliteIcon"></div>Mosquito borne diseases</a>
+</div><a class="second last" href="/c25004183/problems-from-birth">
+Problems from birth</a>
+<a href="/c1048424/is-it-normal">
+Is it normal?</a>
+<a href="/baby-is-it-safe">
+Is it safe?</a>
+<a href="/c1048224/is-it-true">
+Is it true...?</a>
+<a href="/c5034/newborn-care">
+Newborn care</a>
+<a href="/c555477/your-premature-baby">
+Premature baby</a>
+<a href="/c1003010/your-babys-safety">
+Safety</a>
+<a href="/c560738/shopping-for-your-baby">
+Shopping for your baby</a>
+<a href="/c4826/your-babys-sleep">
+Sleep</a>
+<a href="/c3574/twins-and-more">
+Twins and more</a>
+<!-- $URL:$ -->
+<div id="skyscraperAd" class="bcAd bc-show-for-large-up">
+<div class="advertisementLabel">advertisement</div>
+</div>
+<div class="module hide-for-small" id="phaseCommunityGroups" data-omn="phaseCommunityGroups"><h3>Community groups</h3>
+<a href="/c25000183/birth-clubs">Birth Clubs</a>
+<a href="/g25001431/baby-">Babies</a>
+<a href="/g25001917/breastfeeding-and-pumping-mummies">Breastfeeding &amp; pumping</a>
+<a href="/g25002819/working-mums">Working mums</a>
+<a href="/g25002531/contests-sales--freebies-">Contests, sales &amp; freebies</a>
+<a href="/c25001435/parenting-groups">See all Baby groups</a></div>
+<div class="bottomShadow-left hide-for-small"><div class="bottomShadow-right"></div></div>
+</div>
+<div class="large-10 columns" id="themesMainRelatedContainer">
+<div class="row">
+<div id="breadcrumbRow" class="hide-for-large-up columns">
+<div class="breadcrumb hide-for-large-up" id="breadcrumb1" data-omn="breadcrumb" itemprop="breadcrumb" itemscope itemtype="http://schema.org/Breadcrumb">
+<a itemprop="url" href="/" data-oln="breadcrumbLink1"><span itemprop="name">Home</span></a>
+<a itemprop="url" href="/baby" data-oln="breadcrumbLink2"><span itemprop="name">Baby</span></a>
+<a itemprop="url" href="/c5020/your-babys-health" data-oln="breadcrumbLink3"><span itemprop="name">Health</span></a>
+<a itemprop="url" href="/c25004391/mosquito-borne-diseases-prevention-and-treatment" data-oln="breadcrumbLink4"><span itemprop="name">Mosquito borne diseases</span></a>
+</div>
+</div>
+</div>
+<div class="row">
+<div id="mainContent" class="medium-7 columns" data-oan="mainContent" itemscope itemtype="http://schema.org/Article">
+<!-- sponsoredContentPackage -->
+<h1 itemprop="headline">Dengue in children</h1>
+<div class="byline">
+Approved by the <a href="/e1001109/medical-advisory-board">BabyCenter Malaysia Medical Advisory Board</a><br/>
+</div>
+<div class="socialLinksContainer flushBottom">
+<h6>Share</h6>
+<a id="facebookButton" class="socialButton" alt="Facebook" title="Facebook" target="_blank" rel="nofollow" href="https://www.facebook.com/dialog/feed?redirect_uri=http://www.babycenter.com.my/a1021718/dengue-in-children&display=popup&app_id=651444704931163&link=http://www.babycenter.com.my/a1021718/dengue-in-children"></a>
+<a id="twitterButton" class="socialButton" alt="Twitter" title="Twitter" target="_blank" rel="nofollow" href="http://twitter.com/share?url=http://www.babycenter.com.my/a1021718/dengue-in-children&text=Dengue in children"></a>
+<!-- Not sure about pinterest link: Look at dev pages -->
+<div id="pinterestButton" class="socialButton">
+<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-shape="round" alt="Pinterest" title="Pinterest"></a>
+</div>
+<a id="googleplusButton" class="socialButton" rel="publisher" alt="Google+" title="Google+" target="_blank" rel="nofollow" href="https://plus.google.com/share?url=http://www.babycenter.com.my/a1021718/dengue-in-children"></a>
+</div>
+<div class="bodyText article" id="articleBody">
+<div id="toc" data-omn="articleHighlights">
+<h3 class="expanded"><span class="showHideIcon hideIcon"></span>In this article</h3>
+<ul class="noBullets">
+<li><a href="#section1">What is dengue?</a></li>
+<li><a href="#section2">How does dengue spread?</a></li>
+<li><a href="#section3">What are the symptoms of dengue fever?</a></li>
+<li><a href="#section4">What do I do if I think my child has dengue fever?</a></li>
+<li><a href="#section5">How can I reduce the chances of my child picking up dengue?</a></li>
+</ul>
+</div>
+<div id="promoModule" class="embedded hide-for-small">
+<div class="module" data-omn="promoModuleMiddle">
+<div class="modhead_type">Slideshow</div><h6><a href="/l25006307/mosquito-repellent-options-which-is-safe-for-my-baby" target="_blank">Mosquito repellent options</a></h6><a href="/l25006307/mosquito-repellent-options-which-is-safe-for-my-baby" target="_blank"><img class="embeddedModImg" alt="Insect repellent lotion and spray for kids" pagespeed_lazy_src="http://assets.babycenter.com/ims/2010/06jun/baby_medicine_cabinet_meds503_424x302.jpg?width=174" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a>Which mosquito repellent is safe for my baby?</div>
+</div>
+<h2 id='section1' class='firstH2' name='section1'>What is dengue?</h2>Dengue (or <i>denggi</i>) is one of the most common mosquito-borne diseases in Malaysia. It is so common that the <a href="http://www.moh.gov.my/pr_categories/1/press_releases" target="_blank" rel="nofollow">Health Ministry</a> maintains a current dengue report on its homepage, updated weekly.
+<br/>
+<br/>
+Dengue causes a high <a href="/a84/fever">fever</a> and a <a href="/l1038755/childhood-rashes-skin-conditions-and-infections-photos">rash</a>. Most people with dengue will be ill foains a current dengue report on its homepage, updated weekly.
+<br/>
+<br/>
+Dengue causes a high <a href="/a84/fever">fever</a> and a <a href="/l1038755/childhood-rashes-skin-conditions-and-infr about 10 days and, with the right treatment, will then recover.
+<br/>
+<h2 id='section2' class='' name='section2'>How does dengue spread?</h2>The female tiger mosquito spreads the dengue virus. Unlike most mosquitoes, dengue-causing mosquitoes bite during the day.
+<br/>
+<br/>
+These mosquitoes breed in warm, humid weather and in stagnant water. This is why the number of dengue cases increases during the <a href="/a1021724/monsoon-care-for-your-little-ones">monsoon season</a>.
+<br/>
+<h2 id='section3' class='' name='section3'>What are the symptoms of dengue fever?</h2>Dengue in infants and toddlers usually starts with the symptoms of a viral illness:<ul><li><a href="/a84/fever">high fever or temperature;</a></li><li>runny nose;</li><li>cough;</li><li>a mild skin rash.</li></ul><br/>
+Older children may have:<ul><li>a high fever;</li><li>pain behind the eyes and in the joints;</li><li>backaches and headaches.</li></ul><br/>
+They may also develop a red and white patchy skin rash. This may be followed by:<ul><li>loss of appetite;</li><li>nausea;</li><li><a href="/a536689/vomiting-whats-normal-and-whats-not">vomiting</a>;</li><li>itchiness on the soles of the feet.</li></ul><br/>
+Most people with dengue feel very weak. This can last for some time after the illness.
+<br/>
+<h2 id='section4' class='' name='section4'>What do I do if I think my child has dengue fever?</h2>If your child has a <a href="/a84/fever">fever</a> and skin rashes or aching joints, contact your doctor immediately. As the symptoms of dengue and <a href="/a1021721/chikungunya-in-children">chikungunya</a> are similar, your doctor may ask for a blood test to confirm the diagnosis.
+<br/>
+<br/>
+There is no specific cure for dengue, but there is treatment for the symptoms. Your doctor may prescribe paracetamol for the <a href="/a84/fever">fever</a>. Don&#39;t give your child any anti-inflammatories - they could affect your child&#39;s blood platelets.
+<br/>
+<br/>
+You can:<ul><li>make sure your child gets plenty of rest;</li><li>give him light and nourishing food;</li><li>put a wet cloth on his forehead every so often to help keep the fever down.</li></ul><br/>
+Dengue may last up to 10 days, but some people may continue feeling tired for up to a month.
+<br/>
+<h2 id='section5' class='' name='section5'>How can I reduce the chances of my child picking up dengue?</h2>There is no vaccine against dengue. The best way to protect your child is to get rid of the mosquitoes that spread the virus. Mosquitoes breed in stagnant water. Make sure your house and the surrounding area is free of stagnant water, rotting vegetation and old flowerpots, especially in the <a href="/a1021724/monsoon-care-for-your-little-ones">monsoon season</a>.
+<br/>
+<br/>
+You could also:
+<br/>
+<ul><li>dress your child in long-sleeved clothes and long pants to minimise skin exposure;</li><li>dress your child wear light-coloured clothes (dark colours attract mosquitoes);</li><li>use citronella oil-based creams and sprays or other herbal <a href="/a1011642/how-do-mosquito-repellents-work">mosquito repellents</a>;</li><li>use mosquito nets while sleeping;</li><li>install mosquito meshes on windows;</li><li>air conditioning also helps keep mosquitoes at bay.</li></ul><br/>
+Even if your child has had an attack of dengue, it does not give him immunity against the other three closely-related, but distinct dengue viruses. Untreated dengue can develop into dengue haemorrhagic fever (DHF) which can cause bleeding, liver failure, convulsions and even death. Also, dengue haemorrhagic fever (DHF) usually develops in people who have already had dengue. So, prevention is very important.
+<br/>
+<br/>
+Also read about <a href="/a1024041/malaria-in-children">malaria</a> and <a href="/a1021721/chikungunya-in-children">chikungunya</a> in babies and children.
+<br/>
+<br/>
+<i><br/>Are other mums worried about dengue? Ask them! You&#39;ll find them today in our <a href="http://www.babycenter.com.my/c25001435/parenting">Parenting forum</a>.</i>
+<br/>
+<br/>
+<br/>
+<b>Inginkah anda membaca artikel ini dalam <a href="/a1031212/denggi-dan-kanak-kanak">versi Bahasa?</a><br/>
+<br/>
+</b>
+<div class="note">
+<br/>
+Last reviewed:&nbsp;February 2014</div>
+</div>
+<div class="socialLinksContainer colored">
+<h6>Share</h6>
+<a id="facebookButton" class="socialButton" alt="Facebook" title="Facebook" target="_blank" rel="nofollow" href="https://www.facebook.com/dialog/feed?redirect_uri=http://www.babycenter.com.my/a1021718/dengue-in-children&display=popup&app_id=651444704931163&link=http://www.babycenter.com.my/a1021718/dengue-in-children"></a>
+<a id="twitterButton" class="socialButton" alt="Twitter" title="Twitter" target="_blank" rel="nofollow" href="http://twitter.com/share?url=http://www.babycenter.com.my/a1021718/dengue-in-children&text=Dengue in children"></a>
+<!-- Not sure about pinterest link: Look at dev pages -->
+<div id="pinterestButton" class="socialButton">
+<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-shape="round" alt="Pinterest" title="Pinterest"></a>
+</div>
+<a id="googleplusButton" class="socialButton" rel="publisher" alt="Google+" title="Google+" target="_blank" rel="nofollow" href="https://plus.google.com/share?url=http://www.babycenter.com.my/a1021718/dengue-in-children"></a>
+</div>
+<div id="breadcrumbBottom"></div>
+<!-- $URL:$ -->
+<div id="sponsoredAd" class="bcAd ">
+</div>
+<div id="registrationModuleBottom" class="module regModule">
+<div class="row">
+<h3 class="columns">Track your baby’s development</h3>
+<div class="imgContainer medium-4 columns center">
+<img pagespeed_lazy_src="http://assets.babycenter.com/ims/2012/01jan/FetalDev_Reg_Bottom.jpg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
+</div>
+<div class="txtContainer medium-8 columns">
+<div class="regBody">Join now to receive free <a href="javascript: void 0;" class="NLLightBoxCLick">weekly newsletters</a> tracking your baby’s development and yours throughout your pregnancy.</div>
+<form id="regForm" class="bcForm-FND regForm validateForm" action="https://www.babycenter.com.my/secure/registration" method="POST">
+<input id="registrationLoc" name="registrationLoc" value="form-desktop-subtout" type="hidden" value=""/>
+<input id="submitToken" name="submitToken" type="hidden" value="GMyi5OBN5kNR4n9s"/>
+<div id="dateHolder">
+<label for="" id="dueDateLabel" class="boldLabel">Enter your due date or child&#39;s birthday</label>
+<div class="datePicker">
+<div class="dateDropdowns clearfix">
+<select id="day" name="day"><option value="-1" selected="selected" disabled="disabled">dd</option><option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select id="month" name="month"><option value="-1" selected="selected" disabled="disabled">mm</option><option value="0">Jan</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Apr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Aug</option><option value="8">Sep</option><option value="9">Oct</option><option value="10">Nov</option><option value="11">Dec</option></select><select id="year" name="year"><option value="-1" selected="selected" disabled="disabled">yyyy</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option></select></div>
+</div>
+</div>
+<div id="preconCk" class="preconClickArea">
+<input id="precon" name="precon" type="checkbox" value="true"/><input type="hidden" name="_precon" value="on"/>
+<span>Trying to conceive?</span>
+</div>
+<label for="email" id="emailLabel" class="boldLabel">Enter your email address</label>
+<input id="email" name="email" type="text" value=""/>
+<button type="submit" class="CTA btnRegister" id="btnRegister" name="btnRegister">
+Join now
+</button>
+<div id="privacyPolicy">
+<a href="/e7814/privacy--security" target="_blank">Privacy policy</a> &amp; <a href="/e536835/terms-of-use" target="_blank">terms</a>
+</div>
+<input type="hidden" name="_csrf" value="3dcb2fe8-7f0c-40a9-8b25-611b7ac27377"/>
+</form>
+<div id="newsletterLightBox" class="ui-dialog-content ui-widget-content lightbox">
+<div class="closeX"></div>
+<h3>Support for your parenting journey. Delivered to your inbox.</h3>
+<br/>
+<div class="firstColumn">
+<img pagespeed_lazy_src="http://assets.babycenter.com/ims/2012/11/EN_MY_MBTW_Pregnancy_sm.jpg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
+<h5>My Baby This Week Newsletter</h5>
+Keep up with your baby’s development with personalized weekly newsletters.
+</div>
+<div class="secondColumn">
+<img pagespeed_lazy_src="http://assets.babycenter.com/ims/2012/11/EN_MY_BULLETIN_all_sm.jpg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
+<h5>The BabyCenter Bulletin</h5>
+Get the latest parenting news, plus expert advice and real-world wisdom.
+</div>
+<div class="thirdColumn">
+<img pagespeed_lazy_src="http://assets.babycenter.com/ims/2012/11/partner_registration_coupon.jpg" style="height:120px;" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
+<h5>Special Offers from Our Partners</h5>
+Receive discounts, deals and parenting information from BabyCenter’s partners.
+</div>
+</div></div>
+</div>
+</div>
+<div class="bottomShadow-left">
+<div class="bottomShadow-right"></div>
+</div>
+<div id="expertComment" class="row">
+<div class="columns">
+<h2 class="subTtlComments" id="contentCommentHeading">Comments</h2>
+<h4 id="cmtLoggedOutMsg" class="postCommentTitle"><a id="threadPagePostComment" href="/internal/member/redirect?targetUrl=%2fa1021718%2fdengue-in-children%23postComment">Log in</a> or <a id="threadPagePostCommentSignup" href="/secure/registration?registrationLoc=text-desktop-threadList-bottom">sign up</a> to post a comment!</h4>
+<div class="postContainer">
+<div class="avatarContainer">
+<img pagespeed_lazy_src="http://imageserve.babycenter.com/15/000/079/P4drmETAeGKDGzHIXdafrYV1d1ncMihb_sm_sq.jpg" alt="http://imageserve.babycenter.com/15/000/079/P4drmETAeGKDGzHIXdafrYV1d1ncMihb" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
+</div>
+<div class="postInfo clearfix">
+<div class="postUser">
+<a href="/profile/11289529">anakkuon9</a>
+</div>
+<span>30/01/14</span>
+</div>
+<div class="postContent">
+<div id="comment14021" class="bodyText" itemprop="comment">
+Elakkan nyamuk AEDES dengan lampu LED kami Sila layari: http://anakkuon9.blogspot.com/p/blog-page_27.html<div class="postFooter">
+<!-- Not a feature yet: Was this comment helpful? <span class="cmVotes">Yes (5) No (1)</span>	 -->
+<a href="/e25000083/report-violation?itemType=contentComment&itemId=14021" id="reportComment14021" class="commentIcons reportComment" title="Report violation" alt="Report violation" rel="nofollow">Report violation</a></div>
+</div>
+</div>
+</div><!-- / .postContainer -->
+</div>
+</div>
+</div>
+<div id="relatedContent" class="medium-5 columns" data-oan="rightRail">
+<div id="registrationModuleRight" class="module regModule hide-for-small" data-omn="regModule">
+<div class="modhead1">Join BabyCenter</div>
+<div class="regBody">
+Sign up to receive <a href="javascript: void 0;" class="NLLightBoxCLick">free emails</a> and track your baby&#39;s development.</div>
+<div id="welcomeRegister" class="bannerContainer">
+<form id="welcomeRegisterForm" action="/internal/registration/home" method="post">
+<input type="hidden" name="_csrf" value="3dcb2fe8-7f0c-40a9-8b25-611b7ac27377"/>
+<div class="bannerRight"></div>
+<input type="hidden" id="registrationLoc" name="registrationLoc" value="form-desktop-rightRail"/>
+<button class="CTA" type="submit">Join now</button>
+<div class="dynamicWidth">
+<input type="text" value="Email" id="email" class="query searchDefaultMsg" name="email"/>
+</div>
+</form>
+<div class="bannerleft"></div>
+</div>
+</div>
+<div class="bottomShadow-left hide-for-small">
+<div class="bottomShadow-right"></div>
+</div>
+<div class="row">
+<!-- $URL:$ -->
+<div id="mobileAd2" class="bcAd bc-show-for-small">
+<div class="advertisementLabel">advertisement</div>
+</div>
+</div>
+<!-- $URL:$ -->
+<div id="mediumRectangleAd" class="bcAd bc-hide-for-small">
+<div class="advertisementLabel">advertisement</div>
+</div>
+<div class="module" data-omn="relatedExpertContent">
+<div class="modhead1">You might also like</div>
+<ul>
+<li><a href="/a1614/hand-foot-and-mouth-disease-hfmd">Hand, foot and mouth disease (HFMD)</a></li>
+<li><a href="/x1028215/how-safe-is-deet-for-children">How safe is DEET for children?</a></li>
+<li><a href="/x1050386/is-the-smoke-from-mosquito-coils-or-the-fumes-from-plug-in-repellents-safe-for-my-baby">Is the smoke from mosquito coils or the fumes from plug-in repellents safe for my baby?</a></li>
+<li><a href="/a1021724/monsoon-care-for-your-little-ones">Monsoon care for your little ones</a></li>
+<li><a href="/a1029128/haze-protecting-your-baby">Haze: Protecting your baby</a></li>
+<li><a href="/x1024952/should-i-hire-a-maid-to-look-after-my-baby">Should I hire a maid to look after my baby?</a></li>
+<li><a href="/x1016994/is-it-important-to-get-my-two-year-old-dewormed">Is it important to get my two-year-old dewormed?</a></li>
+</ul>
+<hr/>
+<div class="modhead1">Related topics</div>
+<ul>
+<li><a href="/c25004247/baby-illnesses-and-conditions">Baby illnesses and conditions</a></li>
+<li><a href="/c25004391/mosquito-borne-diseases-prevention-and-treatment">Mosquito borne diseases: prevention and treatment</a></li>
+<li><a href="/c25004239/caring-for-your-sick-baby">Caring for your sick baby</a></li>
+</ul>
+</div>
+<div class="bottomShadow-left"><div class="bottomShadow-right"></div></div>
+<div class="module" id="phaseMostPopular" data-omn="mostPopular"><div class="modhead1">Most popular in Baby</div>
+<ul><li><a href="/a6476/milestone-chart-one-to-six-months">Milestone chart: one to six months</a></li>
+<li><a href="/a551926/your-babys-poo-whats-normal-and-whats-not">What&#39;s normal poo?</a></li>
+<li><a href="/c5034/newborn-care">Caring for your newborn</a></li>
+<li><a href="/c1051400/getting-started-on-baby-food">Getting started on first foods</a></li>
+<li><a href="/a1040659/7-signs-that-your-child-loves-you">Seven signs that your child loves you</a></li>
+<li><a href="/a613/breastfeeding-for-beginners">Breastfeeding for beginners</a></li>
+<li><a href="/c1021139/asian-confinement">Asian confinement</a></li>
+<li><a href="/c25004199/lets-play-fun-games-for-you-and-your-baby">Let&#39;s play!</a></li>
+<li><a href="/a6574/developmental-milestones-teething">Teething</a></li>
+</ul></div>
+<div class="bottomShadow-left"><div class="bottomShadow-right"></div></div>
+</div>
+<br class="clearBoth"/>
+</div><!-- / mainContent+relatedContent row -->
+</div><!-- / contentHeader+mainContent+relatedContent small-10.columns -->
+</div><div id="footer" data-oan="footer">
+<div class="medium-centered medium-6 columns">
+<div class="searchForm">
+<form action="/search" method="GET" class="searchboxGeneric" id="footerSiteSearch">
+<div class="searchBlock">
+<div class="searchInput">
+<input type="text" name="q" id="q" class="query searchDefaultMsg" value="Search" maxlength="200"/>
+</div>
+searchForm">
+<form action="/search" method="GET" class="searchboxGeneric" id="footerSiteSearch">
+<div class="searchBlock">
+<div class="searchInput">
+<input type="text" name="q" id="q" class="query se<input type="submit" alt="search.search" class="searchButton" src="/webassets/2.08.0.75177/images/clear.gif" value=""/>
+</div>
+</form>
+</div>
+</div>
+<div class="footerAdWrapper hide-for-small">
+<div class="leaderFooterAdContainer">
+<!-- $URL:$ -->
+<div id="catfishAd" class="bcAd bc-hide-for-small">
+<div class="advertisementLabel">advertisement</div>
+</div>
+</div>
+</div>
+<div class="chicletLarge colored show-for-small">
+</div>
+<div id="footerLinks" class="row">
+<div id="footerShortcutsCol1" class="medium-4 medium-offset-2 columns">
+<h6>BabyCenter shortcuts</h6>
+<ul>
+<li><a href="/getting-pregnant">Getting pregnant</a></li>
+<li><a href="/pregnancy">Pregnancy</a></li>
+<li><a href="/baby">Baby</a></li>
+<li><a href="/toddler">Toddler</a></li>
+<li><a href="/preschooler">Preschooler</a></li>
+<li><a href="/c1028696/bahasa">Bahasa</a></li>
+<li><a href="/for-you">For you</a></li>
+<li><a href="/community">Community</a></li></ul>
+<ul>
+<li><a href="/baby-names-finder">Baby names</a></li>
+<li><a href="/pregnancy-calendar">Pregnancy calendar</a></li>
+<li><a href="/ovulation-calculator">Ovulation calculator</a></li></ul></div>
+<div id="footerAboutCol" class="medium-4 medium-offset-2 columns">
+<h6>About BabyCenter</h6>
+<ul>
+<li><a href="/e536987/contact-us">Contact us</a></li>
+<li><a href="/e1001100/about-babycenter">About us</a></li>
+<li><a href="/e3877/frequently-asked-questions">FAQ</a></li>
+<li><a href="/e1011136/help">Help</a></li>
+<li><a href="http://www.babycentersolutions.com/" target="blank">Advertise with us</a></li></ul></div>
+</div>
+<div id="footerSiteCertification" class="row">
+<div class="medium-10 medium-offset-2 columns">
+<table><tbody><tr><td><a href="http://www.healthonnet.org/HONcode/Conduct.html?HONConduct389685" rel="nofollow" target="_blank"><img id="honImage" alt="Certified by Health on the Net" pagespeed_lazy_src="http://www.honcode.ch/HONcode/Seal/HONConduct389685_s.gif" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a></td><td>We subscribe to the HONcode principles of the <a href="http://www.healthonnet.org/HONcode/Conduct.html" rel="nofollow" target="_blank">Health On the Net Foundation</a>. <a href="http://www.healthonnet.org/HONcode/Conduct.html?HONConduct389685" rel="nofollow" target="_blank">Verify here</a>.</td></tr></tbody></table></div>
+</div>
+<div id="footerLegal" class="row">
+<div class="medium-10 medium-offset-2 columns">
+All contents copyright © BabyCenter, L.L.C. 2015. All rights reserved.<div id="legalLinks">
+<a href="/e7814/privacy--security">Privacy Policy</a><span class="pipe">|</span><a href="/e536835/terms-of-use">Terms of Use</a></div>
+</div>
+</div></div>
+<div id="registrationInterstitial" class="ui-dialog-content ui-widget-content lightbox noicon">
+<div class="closeX"></div>
+<img pagespeed_lazy_src="http://imageserve.babycenter.com/14/000/125/O4wvcLCTB1K6je56PTQrDohpBUeNAyIx_lg.jpg" id="regModBG" class="hide-for-small" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
+<div id="regModuleInterstitial" class="regModule">
+<div class="modhead1">Keep up with baby&#39;s development and yours during pregnancy</div>
+<div class="regBody">
+Join now to receive weekly articles, advice and updates customized for you.</div>
+<form id="regForm" class="bcForm-FND regForm validateForm" action="https://www.babycenter.com.my/secure/registration" method="POST">
+<input id="registrationLoc" name="registrationLoc" value="form-desktop-interstitial" type="hidden" value=""/>
+<input id="submitToken" name="submitToken" type="hidden" value="9SyW2sA0FjazMK8M"/>
+<div id="dateHolder">
+<label for="" id="dueDateLabel" class="boldLabel">Enter your due date or child&#39;s birthday</label>
+<div class="datePicker">
+<div class="dateDropdowns clearfix">
+<select id="day" name="day"><option value="-1" selected="selected" disabled="disabled">dd</option><option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select id="month" name="month"><option value="-1" selected="selected" disabled="disabled">mm</option><option value="0">Jan</option><option value="1">Feb</option><option value="2">Mar</option><option value="3">Apr</option><option value="4">May</option><option value="5">Jun</option><option value="6">Jul</option><option value="7">Aug</option><option value="8">Sep</option><option value="9">Oct</option><option value="10">Nov</option><option value="11">Dec</option></select><select id="year" name="year"><option value="-1" selected="selected" disabled="disabled">yyyy</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option></select></div>
+</div>
+</div>
+<div id="preconCk" class="preconClickArea">
+<input id="precon" name="precon" type="checkbox" value="true"/><input type="hidden" name="_precon" value="on"/>
+<span>Trying to conceive?</span>
+</div>
+<label for="email" id="emailLabel" class="boldLabel">Enter your email address</label>
+<input id="email" name="email" type="text" value=""/>
+<button type="submit" class="CTA btnRegister" id="btnRegister" name="btnRegister">
+Join now
+</button>
+<div id="privacyPolicy">
+<a href="/e7814/privacy--security" target="_blank">Privacy policy</a> &amp; <a href="/e536835/terms-of-use" target="_blank">terms</a>
+</div>
+<input type="hidden" name="_csrf" value="3dcb2fe8-7f0c-40a9-8b25-611b7ac27377"/>
+</form>
+<div id="newsletterLightBox" class="ui-dialog-content ui-widget-content lightbox">
+<div class="closeX"></div>
+<h3>Support for your parenting journey. Delivered to your inbox.</h3>
+<br/>
+<div class="firstColumn">
+<img pagespeed_lazy_src="http://assets.babycenter.com/ims/2012/11/EN_MY_MBTW_Pregnancy_sm.jpg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
+<h5>My Baby This Week Newsletter</h5>
+Keep up with your baby’s development with personalized weekly newsletters.
+</div>
+<div class="secondColumn">
+<img pagespeed_lazy_src="http://assets.babycenter.com/ims/2012/11/EN_MY_BULLETIN_all_sm.jpg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
+<h5>The BabyCenter Bulletin</h5>
+Get the latest parenting news, plus expert advice and real-world wisdom.
+</div>
+<div class="thirdColumn">
+<img pagespeed_lazy_src="http://assets.babycenter.com/ims/2012/11/partner_registration_coupon.jpg" style="height:120px;" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
+<h5>Special Offers from Our Partners</h5>
+Receive discounts, deals and parenting information from BabyCenter’s partners.
+</div>
+</div><hr/>
+<a href="javascript:void" id="noThanks" class="closeLightbox">No, thanks</a>
+<div id="privacyInterStitial" class="show-for-small">
+<a href="/e7814/privacy--security" target="_blank">Privacy policy</a> &amp; <a href="/e536835/terms-of-use" target="_blank">terms</a></div>
+</div>
+<div id="bottomChevron" class="hide-for-small"></div>
+</div>
+<!--[if gt IE 9]> -->
+<script type="text/javascript" pagespeed_no_defer="">pagespeed.lazyLoadImages.overrideAttributeFunctions();</script><script src="http://www.babycenter.com.my/webassets/2.08.0.75177/js/foundation/foundation.js.pagespeed.jm.rTME8iuGDP.js"></script>
+<script>//<![CDATA[
+;(function($,window,document,undefined){'use strict';Foundation.libs.interchange={name:'interchange',version:'5.0.0',cache:{},images_loaded:false,nodes_loaded:false,settings:{load_attr:'interchange',named_queries:{'default':Foundation.media_queries.small,small:Foundation.media_queries.small,medium:Foundation.media_queries.medium,large:Foundation.media_queries.large,xlarge:Foundation.media_queries.xlarge,xxlarge:Foundation.media_queries.xxlarge,landscape:'only screen and (orientation: landscape)',portrait:'only screen and (orientation: portrait)',retina:'only screen and (-webkit-min-device-pixel-ratio: 2),'+'only screen and (min--moz-device-pixel-ratio: 2),'+'only screen and (-o-min-device-pixel-ratio: 2/1),'+'only screen and (min-device-pixel-ratio: 2),'+'only screen and (min-resolution: 192dpi),'+'only screen and (min-resolution: 2dppx)'},directives:{replace:function(el,path,trigger){if(/IMG/.test(el[0].nodeName)){var orig_path=el[0].src;if(new RegExp(path,'i').test(orig_path))return;el[0].src=path;return trigger(el[0].src);}
+var last_path=el.data('interchange-last-path');if(last_path==path)return;return $.get(path,function(response){el.html(response);el.data('interchange-last-path',path);trigger();});}}},init:function(scope,method,options){Foundation.inherit(this,'throttle');this.data_attr='data-'+this.settings.load_attr;this.bindings(method,options);this.load('images');this.load('nodes');},events:function(){var self=this;$(window).off('.interchange').on('resize.fndtn.interchange',self.throttle(function(){self.resize.call(self);},50));return this;},resize:function(){var cache=this.cache;if(!this.images_loaded||!this.nodes_loaded){setTimeout($.proxy(this.resize,this),50);return;}
+for(var uuid in cache){if(cache.hasOwnProperty(uuid)){var passed=this.results(uuid,cache[uuid]);if(passed){this.settings.directives[passed.scenario[1]](passed.el,passed.scenario[0],function(){if(arguments[0]instanceof Array){var args=arguments[0];}else{var args=Array.prototype.slice.call(arguments,0);}
+passed.el.trigger(passed.scenario[1],args);});}}}},results:function(uuid,scenarios){var count=scenarios.length;if(count>0){var el=this.S('[data-uuid="'+uuid+'"]');for(var i=count-1;i>=0;i--){var mq,rule=scenarios[i][2];if(this.settings.named_queries.hasOwnProperty(rule)){mq=matchMedia(this.settings.named_queries[rule]);}else{mq=matchMedia(rule);}
+if(mq.matches){return{el:el,scenario:scenarios[i]};}}}
+return false;},load:function(type,force_update){if(typeof this['cached_'+type]==='undefined'||force_update){this['update_'+type]();}
+return this['cached_'+type];},update_images:function(){var images=this.S('img['+this.data_attr+']'),count=images.length,loaded_count=0,data_attr=this.data_attr;this.cache={};this.cached_images=[];this.images_loaded=(count===0);for(var i=count-1;i>=0;i--){loaded_count++;if(images[i]){var str=images[i].getAttribute(data_attr)||'';if(str.length>0){this.cached_images.push(images[i]);}}
+if(loaded_count===count){this.images_loaded=true;this.enhance('images');}}
+return this;},update_nodes:function(){var nodes=this.S('['+this.data_attr+']:not(img)'),count=nodes.length,loaded_count=0,data_attr=this.data_attr;this.cached_nodes=[];this.nodes_loaded=(count===0);for(var i=count-1;i>=0;i--){loaded_count++;var str=nodes[i].getAttribute(data_attr)||'';if(str.length>0){this.cached_nodes.push(nodes[i]);}
+if(loaded_count===count){this.nodes_loaded=true;this.enhance('nodes');}}
+return this;},enhance:function(type){var count=this['cached_'+type].length;for(var i=count-1;i>=0;i--){this.object($(this['cached_'+type][i]));}
+return $(window).trigger('resize');},parse_params:function(path,directive,mq){return[this.trim(path),this.convert_directive(directive),this.trim(mq)];},convert_directive:function(directive){var trimmed=this.trim(directive);if(trimmed.length>0){return trimmed;}
+return'replace';},object:function(el){var raw_arr=this.parse_data_attr(el),scenarios=[],count=raw_arr.length;if(count>0){for(var i=count-1;i>=0;i--){var split=raw_arr[i].split(/\tive){var trimmed=this.trim(directive);if(trimmed.length>0){return trimmed;}
+return'replac((.*?)(\))$/);if(split.length>1){var cached_split=split[0].split(','),params=this.parse_params(cached_split[0],cached_split[1],split[1]);scenarios.push(params);}}}
+return this.store(el,scenarios);},uuid:function(separator){var delim=separator||"-";function S4(){return(((1+Math.random())*0x10000)|0).toString(16).substring(1);}
+return(S4()+S4()+delim+S4()+delim+S4()+delim+S4()+delim+S4()+S4()+S4());},store:function(el,scenarios){var uuid=this.uuid(),current_uuid=el.data('uuid');if(current_uuid)return this.cache[current_uuid];el.attr('data-uuid',uuid);return this.cache[uuid]=scenarios;},trim:function(str){if(typeof str==='string'){return $.trim(str);}
+return str;},parse_data_attr:function(el){var raw=el.data(this.settings.load_attr).split(/\[(.*?)\]/),count=raw.length,output=[];for(var i=count-1;i>=0;i--){if(raw[i].replace(/[\W\d]+/,'').length>4){output.push(raw[i]);}}
+return output;},reflow:function(){this.load('images',true);this.load('nodes',true);}};}(jQuery,this,this.document));
+//]]></script>
+<script>jQuery.noConflict();jQuery(document).ready(function($){$(document).foundation();});</script>
+<!-- <![endif]-->
+<!-- Begin comScore Tag -->
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=6035600&cv=2.0&cj=1"/>
+</noscript>
+<!-- End comScore Tag -->
+<!-- BEGIN AU Nielsen Online SiteCensus V6.0 -->
+<noscript>
+<div><img src="//secure-au.imrworldwide.com/cgi-bin/m?ci=mcn&amp;cg=babycenter&amp;cc=1&amp;ts=noscript" width="1" height="1" alt=""/></div>
+</noscript>
+<!-- END AU Nielsen Online SiteCensus V6.0 -->
+<!--[if lt IE 9]>	 
+	<script src="/webassets/2.08.0.75177/js/thirdParty/rem.js" type="text/javascript"></script>
+<![endif]--><div id="gptAdOop"></div>
+<!-- $URL:$ -->
+<div id="adhesionAd" class="bcAd bc-show-for-small">
+</div>
+<div class="IEDisappearingAbsPos row"><dl id="topNav" data-oan="topNav" class="row hide-for-small">
+<dd id="ribbonLeft" class="noTabPointer"></dd>
+<!--  new nav here -->
+<dd id="preconception" class="tabSection">
+<a href="/getting-pregnant" class="topTab" id="preconceptionTab" data-oln="phase_preconception">
+Getting pregnant</a>
+<!-- $URL: $ -->
+<div class="panel row" id="preconceptionPanel">
+<div class="topics" id="preconceptionTopics">
+<div class="optionalTagline">Essential topics</div><ul> <li><a href="/c25004267/am-i-pregnant" data-oln="Getting_Pregnant|Am_I_pregnant_link_col1_1">Am I pregnant?</a></li> <li><a href="/c25004265/ovulation-timing-and-baby-making" data-oln="Getting_Pregnant|Trying_to_conceive_link_col1_2">Trying to conceive</a></li> <li><a href="/c564717/trying-for-another-baby" data-oln="Getting_Pregnant|Trying_for_another_link_baby_col1_3">Trying for another baby</a></li> <li><a href="/c1005212/treatments-for-infertility" data-oln="Getting_Pregnant|Fertiliting to conceive</a></li> <li><a href="/c56471y_treatments_link_col1_4">Fertility treatments</a></li> <li><a href="/c3934/suspecting-a-problem" data-oln="Getting_Pregnant|Fertility_problems_link_col1_5">Fertility problems</a></li> <li><a href="/c5112/before-you-begin" data-oln="Getting_Pregnant|Getting_ready_for_a_baby_link_col1_6">Getting ready for a baby</a></li><li class="bulleted"><a href="/getting-pregnant" data-oln="Getting_Pregnant|All_Getting_Pregnant_content_link_col1_7">All Getting Pregnant content</a></li> </ul>
+</div>
+<div class="topResources" id="preconceptionTopResources">
+<div class="optionalTagline">Top resources</div><ul><li><a href="/c25004275/conception-myths--truths" data-oln="Getting_Pregnant|Precon_truth_myth_col2_1">Preconception truth vs myths</a></li><li><a href="/ovulation-calculator" data-oln="Getting_Pregnant|Ovulation_calc_link_col2_2">Ovulation calculator</a></li><li><a href="/c25004271/food-weight-and-fertility" data-oln="Getting_Pregnant|Food_and_fertility_link_col2_3">Food and your fertility</a></li><li><a href="/how-your-menstrual-cycle-works" data-oln="Getting_Pregnant|How_your_menstrual_cycle_works_col2_4">Your menstrual cycle</a></li><li><a href="/t1012825/body-mass-index-bmi-calculator" class="slideLink" data-oln="Getting_Pregnant|BMI_calculator_link_col2_5">BMI calculator</a></li><li><a href="/a561822/ovulation-kits-how-they-work" data-oln="Getting_Pregnant|Guide_to_ovulation_kits_link_col2_6">Guide to ovulation kits </a></li><li><a href="/c1005209/dads-to-be" data-oln="Getting_Pregnant|Male_fertility_col2_7">Male fertility</a></li></ul>
+</div>
+<div class="popular" id="preconceptionPopular">
+<div class="optionalTagline">Most popular</div><ul><li><a href="/sex-for-getting-pregnant" data-oln="Getting_Pregnant|Best_sex_positions_for_baby_making_link_col3_1">Best sex positions for baby making</a></li><li><a href="/a1809/timing-sex-when-you-want-to-get-pregnant" data-oln="Getting_Pregnant|Timing_intercourse_link_col3_2">Timing intercourse</a></li><li><a href="/l25005539/get-pregnant-fast-9-quick-steps-to-conceiving-a-baby" class="slideLink" data-oln="Getting_Pregnant|Get_pregnant_fast_link_col3_3">Get pregnant fast: 9 steps to baby-making</a></li><li><a href="/a3558/diet-for-a-healthy-mum-to-be" data-oln="Getting_Pregnant|Diet_for_healthy_mum-to-be_link_col3_4">Diet for a healthy mum-to-be</a></li><li><a href="/l1047500/what-cervical-mucus-looks-like" class="slideLink" data-oln="Getting_Pregnant|Track_cervical_mucus_link_col3_5">Track your cervical mucus</a></li><li><a href="/pregnancy-test" data-oln="Getting_Pregnant|How_soon_take_pregnancy_test_link_col3_6">How soon can I take a pregnancy test?</a></li><li><a href="/x559362/do-sex-selection-methods-work" data-oln="Getting_Pregnant|Choose_babys_sex_link_col3_7">Can you choose baby&#39;s sex?</a></li></ul>
+</div>
+<div class="promo" id="preconceptionPromo">
+<a href="/c25004395/prakonsepsi" data-oln="Getting_Pregnant|promo_link_col4_img"><img pagespeed_lazy_src="http://assets.babycenter.com/ims/2014/11/136734829_4x3.jpg?width=107" class="promoImg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a> <div class="promoTxt"><a href="/c25004395/prakonsepsi" id="promoHeader" data-oln="Getting_Pregnant|promo_link_col4_headline">Cepat hamil</a><br/>Informasi dan maklumat terkini untuk wanita-wanita yang sedang menunggu rezeki.<br/><ul> <li class="bulleted"><a href="/a1050023/bilakah-masa-terawal-untuk-menjalankan-ujian-kehamilan" data-oln="Getting_Pregnant|promo_link_col4_Link_1">Bila boleh mengambil ujian kehamilan</a></li> <li class="bulleted"><a href="/l25009609/cepat-hamil-9-langkah-untuk-mendapatkan-bayi" class="slideLink" data-oln="Getting_Pregnant|promo_link_col4_Link_2">Panduan cepat hamil</a></li> <li class="bulleted"><a href="/l25009613/mukus-serviks-bagaimana-rupanya" class="slideLink" data-oln="Getting_Pregnant|promo_link_col4_Link_3">Mukus serviks: petunjuk ovulasi</a></li> <li class="bulleted"><a href="/l25007669/10-tanda-penting-kehamilan" class="slideLink" data-oln="Getting_Pregnant|promo_link_col4_Link_3">10 tanda penting kehamilan</a> </li></ul> </div>
+<!-- $URL: $ -->
+<!-- / $URL: $ -->
+</div>
+</div>
+<!-- / $URL: $ --></dd>
+<dd id="pregnancy" class="tabSection">
+<a href="/pregnancy" class="topTab" id="pregnancyTab" data-oln="phase_pregnancy">
+Pregnancy</a>
+<!-- $URL: $ -->
+<div class="panel row" id="pregnancyPanel">
+<div class="topics" id="pregnancyTopics">
+<div class="optionalTagline">Essential topics</div><ul> <li><a href="/pregnancy-calendar" data-oln="Pregnancy|Your_pregnancy_week_by_week_link_col1_1">Pregnancy week by week</a></li> <li><a href="/pregnancy-week-by-week" data-oln="Pregnancy|Fetal_development_link_col1_2">Fetal development</a></li> <li><a href="/c532/nutrition-and-weight-gain" data-oln="Pregnancy|Nutrition_weightt_gain_link_col1_3">Nutrition &amp; weight gain</a></li> <li><a href="/c12814/antenatal-health" data-oln="Pregnancy|Prenatal_health_care_link_col1_4">Prenatal health &amp; care</a></li> <li><a href="/pregnancy-labour-and-birth" data-oln="Pregnancy|Labour_delivery_link_col1_5">Labour &amp; delivery</a></li> <li><a href="/c12814/antenatal-health" data-oln="Pregnancy|Prenatal_health_care_link_col1_6">Prenatal health &amp; care</a></li><li><a href="/c563738/looking-good-in-pregnancy" data-oln="Pregnancy|Pregnancy_style_beauty_link_col1_7">Pregnancy style &amp; beauty </a></li><li class="bulleted"><a href="/pregnancy" data-oln="Pregnancy|All_Pregnancy_content_link_col1_8">All Pregnancy content</a></li> </ul>
+</div>
+<div class="topResources" id="pregnancyTopResources">
+<div class="optionalTagline">Top resources</div><ul><li><a href="/c25004365/fetal-development-videos" class="videoLink" data-oln="Pregnancy|Fetal_dev_videos">Fetal development videos</a></li><li><a href="/slideshow-baby-size" class="slideLink" data-oln="Pregnancy|How_big_is_your_baby_this_week_link_col2_2">How big is your this week? </a></li><li><a href="/pregnancy-due-date-calculator" data-oln="Pregnancy|Due_date_calculator_link_col2_3">Due date calculator</a></li><li><a href="/c1049482/you-and-your-bump" data-oln="Pregnancy|You_and_bump_col2_4">You &amp; your bump</a></li><li><a href="/a1046500/pregnancy-meal-planners-trimester-by-trimester" data-oln="Pregnancy|Birth_stories_confinement_link_col2_5">Pregnancy meal planners</a></li><li><a href="/baby-names-finder" data-oln="Pregnancy|Baby_name_finder_link_col2_6">Baby name finder</a></li><li><a href="/c1028702/kehamilan-panduan-ibu-mengandung" data-oln="Pregnancy|Kehamilan_">Kehamilan: versi Bahasa</a></li></ul>
+</div>
+<div class="popular" id="pregnancyPopular">
+<div class="optionalTagline">Most popular</div><ul> <li><a href="/sex-during-pregnancy-overview" data-oln="Pregnancy|Sex_during_pregnancy_link_col3_1">Sex during pregnancy</a></li> <li><a href="/a3561/diet-for-a-healthy-pregnancy" data-oln="Pregnancy|Diet_for_a_healthy_pregnancy_link_col3_2">Diet for a healthy pregnancy</a></li> <li><a href="/pregnancy-symptoms-you-should-never-ignore" data-oln="Pregnancy|Symptoms_you_shouldn&#39;t_ignore_link_col3_3">Symptoms you shouldn&#39;t ignore</a></li><li><a href="/v25007719/top-10-signs-of-pregnancy-video" class="videoLink" data-oln="Pregnancy|Top_10_preg_symptoms_bahasa_subtitles_link_col3_4">Top 10 pregnancy symptoms</a></li><li><a href="/a329/pregnancy-ultrasound-scans-an-overview" data-oln="Pregnancy|Ultrasound_scans_overview_link_col3_5">Ultrasound scans: an overview</a></li><li><a href="/signs-for-how-I-will-know-I-am-in-labour" data-oln="Pregnancy|How_will_I_know_I&#39;m_in_labour_link_col3_6">How will I know I&#39;m in labour?</a> </li><li><a href="/t25011149/chinese-gender-predictor" data-oln="Pregnancy|Kehamilan_versi_Bahasa_link_col3_7">Chinese gender predictor</a></li> </ul>
+</div>
+<div class="promo" id="pregnancyPromo">
+<a href="/c1044832/top-baby-names-in-malaysia" data-oln="Pregnancy|promo_link_col4_img"><img pagespeed_lazy_src="http://assets.babycenter.com/ims/2013/11/rbby_14_4x3.jpg?width=107" class="promoImg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a> <div class="promoTxt"><a href="/c1044832/top-baby-names-in-malaysia" id="promoHeader" data-oln="Pregnancy|promo_link_col4_headline">Malaysian baby names</a><br/>See the most popular names for baby boys and girls in Malaysia.<br/><ul> <li class="bulleted"><a href="/a25010699/100-lucky-names-for-goat-year-babies" data-oln="Pregnancy|promo_link_col4_Link_1">100 lucky names for Goat year babies</a></li> <li class="bulleted"><a href="/l25011593/top-malaysian-girls-names-2014-photos" class="slideLink" data-oln="Pregnancy|promo_link_col4_Link_2">25 most popular names for girls</a></li> <li class="bulleted"><a href="/l25011595/top-malaysian-boys-names-2014-photos" class="slideLink" data-oln="Pregnancy|promo_link_col4_Link_3">25 most popular names for boys</a></li> <li class="bulleted"><a href="/a1044838/the-most-popular-baby-names-among-muslim-parents" class="slideLink" data-oln="Pregnancy|promo_link_col4_Link_3">Muslim parents&#39; favourite baby names</a></li></ul> </div>
+<!-- $URL: $ -->
+<!-- / $URL: $ -->
+</div>
+</div>
+<!-- / $URL: $ --></dd>
+<dd id="baby" class="tabSection">
+<a href="/baby" class="topTab activeTab" id="babyTab" data-oln="phase_baby">
+Baby</a>
+<!-- $URL: $ -->
+<div class="panel row" id="babyPanel">
+<div class="topics" id="babyTopics">
+<div class="optionalTagline">Essential topics</div><ul> <li><a href="/baby-calendar" data-oln="Baby|Your_baby_week-by-week_link_col1_1">Your baby week by week</a></li> <li><a href="/c5020/your-babys-health" data-oln="Baby|Health_link_col1_2">Baby health</a></li> <li><a href="/c100/baby-food-starting-solids" data-oln="Baby|Baby_food_link_col1_3">Baby food</a></li><li><a href="/c4826/your-babys-sleep" data-oln="Baby|Baby_sleep_guide_link_col1_4">Baby sleep guide</a></li> <li><a href="/breastfeeding" data-oln="Baby|Breastfeeding_link_col1_5">Breastfeeding </a></li> <li><a href="/c555851/formula-feeding" data-oln="Baby|Formula_bottle_feeding_link_col1_6">Formula &amp; bottle feeding</a></li> <li class="bulleted"><a href="/baby" data-oln="Baby|All_Baby_content_link_col1_7">All Baby content</a></li> </ul>
+</div>
+<div class="topResources" id="babyTopResources">
+<div class="optionalTagline">Top resources</div><ul><li><a href="/c5034/newborn-care" data-oln="Baby|Newborn_care_link_col2_1">Newborn care</a></li><li><a href="/your-babys-development" data-oln="Baby|Development_milestones_link_col2_2">Development &amp; milestones</a></li><li><a href="/c1046350/you-and-baby-weekly-meal-planners" data-oln="Baby|Baby_meal_planners_link_col2_3">Baby meal planners</a></li><li><a href="/baby-is-it-safe" data-oln="Baby|Is_it_safe_link_col2_4">Is it safe...?</a></li><li><a href="/c541558/work-and-childcare" data-oln="Baby|Work_Childcare_link_col2_5">Work and childcare</a></li><li><a href="/c1048424/is-it-normal" data-oln="Baby|Is_this_normal_link_col2_6">Is this normal?</a></li><li><a href="/c1028699/bayi---segalanya-tentang-bayi-anda" data-oln="Baby|Bayi_versi_Bahasa_link_col2_7">Bayi: versi Bahasa</a></li></ul>
+</div>
+<div class="popular" id="babyPopular">
+<div class="optionalTagline">Most popular</div><ul> <li><a href="/l25005559/10-reasons-babies-cry-and-how-to-soothe-them" class="slideLink" data-oln="Baby|10_reasons_babies_cry_link_col3_1">10 reasons babies cry</a></li> <li><a href="/a613/breastfeeding-for-beginners" data-oln="Baby|Breastfeeding_for_beginners_celebration_link_col3_2">Breastfeeding for beginners</a></li> <li><a href="/l1046193/baby-traditions-welcoming-a-new-baby" class="slideLink" data-oln="Baby|Asian_baby_traditions_link_col3_3">Asian baby traditions</a></li> <li><a href="/a551926/your-babys-poo-whats-normal-and-whats-not" class="slideLink" data-oln="Baby|Your_babys_poo_whats_normal_link_col3_4">Baby&#39;s poo: what&#39;s normal &amp; what&#39;s not?</a></li><li><a href="/l25005551/9-things-your-baby-needs-to-thrive" class="slideLink" data-oln="Baby|Jaundice_link_col3_5">9 things your baby needs to thrive</a></li><li><a href="/c25004199/lets-play-fun-games-for-you-and-your-baby" data-oln="Baby|Bayi_anda_versi_Bahasa_link_col3_6">Fun games with baby</a></li> </ul>
+</div>
+<div class="promo" id="babyPromo">
+<a href="/c25004239/caring-for-your-sick-baby" data-oln="Baby|promo_link_col4_img"><img pagespeed_lazy_src="http://assets.babycenter.com/ims/2013/11/147284798_4x3.jpg?width=107" class="promoImg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a> <div class="promoTxt"><a href="/c25004239/caring-for-your-sick-baby" id="promoHeader" data-oln="Baby|promo_link_col4_headline">When baby&#39;s not well...</a><br/>
+New mums&#39; guide to caring for a sick baby<br/>
+<ul> <li class="bulleted"><a href="/a84/fever" data-oln="Baby|promo_link_col4_Link_1">Fever</a></li> <li class="bulleted"><a href="/x1047956/how-do-i-take-my-babys-temperature" data-oln="Baby|promo_link_col4_Link_2">How to take baby&#39;s temperature</a></li> <li class="bulleted"><a href="/a1047947/how-to-give-your-baby-medicine" data-oln="Baby|promo_link_col4_Link_3">How to give baby medicine</a></li><li class="bulleted"><a href="/a563663/when-to-call-the-doctor-for-parents-of-babies" data-oln="Baby|promo_link_col4_Link_4">When to call the doctor</a></li> </ul> </div>
+<!-- $URL: $ -->
+<!-- / $URL: $ -->
+</div>
+</div>
+<!-- / $URL: $ --></dd>
+<dd id="toddler" class="tabSection">
+<a href="/toddler" class="topTab" id="toddlerTab" data-oln="phase_toddler">
+Toddler</a>
+<!-- $URL: $ -->
+<div class="panel row" id="toddlerPanel">
+<div class="topics" id="toddlerTopics">
+<div class="optionalTagline">Essential topics</div><ul> <li><a href="/c25004193/your-toddlers-development-month-by-month" data-oln="Toddler|Your_toddler_month_by_month_link_col1_1">Your toddler month by month</a></li> <li><a href="/c25004337/behaviour-and-habits" data-oln="Toddler|Behaviour_habits_link_col1_2">Behaviour and habits</a></li> <li><a href="/c552498/toddler-nutrition" data-oln="Toddler|Nutrition_link_col1_3">Nutrition</a></li><li><a href="/c55onth</a></li> <li><a href="/c25004337/behaviour-and-habits" data-oln="Toddler|Behaviour_habits_link_col1_2">Behaviour and habits</a></li> <li><a href="/c552498/toddler-nutrition" da8771/toddler-sleep" data-oln="Toddler|Sleep_link_col1_4">Sleep</a></li> <li><a href="/potty-training" data-oln="Toddler|Potty_training_link_col1_5">Potty training</a></li><li><a href="/c25004309/toddler-health" data-oln="Toddler|Health_link_col1_6">Health</a></li> <li class="bulleted"><a href="/toddler" data-oln="Toddler|All_Toddler_content_link_col1_7">All Toddler content</a> </li></ul>
+</div>
+<div class="topResources" id="toddlerTopResources">
+<div class="optionalTagline">Top resources</div><ul> <li><a href="/c25004307/daily-care" data-oln="Toddler|Daily_care_link_col2_1">Daily care</a></li> <li><a href="/c557036/games-and-play" data-oln="Toddler|Learning_through_play_link_col2_2">Learning through play</a></li> <li><a href="/c557050/encouraging-positive-behaviour" data-oln="Toddler|Getting_good_behaviour_link_col2_3">Getting good behaviour</a></li> <li><a href="/a557032/toddler-milestone-charts" data-oln="Toddler|Toddler_milestone_charts_link_col2_4">Toddler milestone charts</a></li> <li><a href="/c25004311/tooth-care-and-teething" data-oln="Toddler|Toddler_milestone_charts_link_col2_5">Tooth care &amp; teething</a></li> <li><a href="/c564721/coping-with-two" data-oln="Toddler|Coping_with_2_or_more_link_col2_6">Coping with 2 or more</a></li> <li><a href="/c557054/speech-and-language" data-oln="Toddler|Talking_reading_writing_link_col2_7">Talking, reading, writing</a></li> </ul>
+</div>
+<div class="popular" id="toddlerPopular">
+<div class="optionalTagline">Most popular</div><ul> <li><a href="/x1016988/how-much-water-should-my-toddler-drink-every-day" data-oln="Toddler|How_much_water_does_my_child_need_link_col3_1">How much water does my child need?</a></li> <li><a href="/a554854/preparing-your-child-for-playschool" data-oln="Toddler|Preparing_for_playschool_link_col3_2">Preparing for playschool</a></li> <li><a href="/a548951/parents-top-potty-training-tips" data-oln="Toddler|Parents_top_potty-training_tips_link_col3_3">Parents&#39; top potty-training tips</a></li> <li><a href="/a557032/toddler-milestone-charts" data-oln="Toddler|Milestone_charts_link_col3_4">Milestone charts</a></li> <li><a href="/a1044790/seven-ways-to-avoid-spoiling-your-child" data-oln="Toddler|7_ways_to_avoid_spoiling_your_child_link_col3_5">7 ways to avoid spoiling your child</a></li><li><a href="/x552305/why-is-my-child-such-a-fussy-eater" data-oln="Toddler|Feeding_a_fussy_eater_link_col3_6">Feeding a fussy eater</a></li> <li><a href="/x25009271/my-husband-and-i-are-both-shortsighted-will-our-children-also-be-shortsighted-and-need-glasses" data-oln="Toddler|Will_my_child_need_glasses_link_col3_7">Will my child need glasses?</a></li></ul>
+</div>
+<div class="promo" id="toddlerPromo">
+<a href="/c557044/physical-development" data-oln="Toddler|promo_link_col4_img"><img pagespeed_lazy_src="http://assets.babycenter.com/ims/2012/09/10_11_bc_topics_ethan_254_4x3.jpg?width=107" class="promoImg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a> <div class="promoTxt"><a href="/c557044/physical-development" id="promoHeader" data-oln="Toddler|promo_link_col4_headline">Physical development</a><br/>Information to help you keep up as your toddler learns to climb, jump, run and explore his world!<br/><ul> <li class="bulleted"><a href="/a556921/running-and-jumping" data-oln="Toddler|promo_link_col4_Link_1">Running &amp; jumping</a></li> <li class="bulleted"><a href="/a556927/throwing-and-catching" data-oln="Toddler|promo_link_col4_Link_2">Throwing &amp; catching</a></li> <li class="bulleted"><a href="/a556907/climbing-and-balancing" data-oln="Toddler|promo_link_col4_Link_3">Climbing &amp; balancing</a></li> <li class="bulleted"><a href="/a556911/dressing-and-undressing" data-oln="Toddler|promo_link_col4_Link_3">Dressing &amp; undressing</a></li></ul> </div>
+<!-- $URL: $ -->
+<!-- / $URL: $ -->
+</div>
+</div>
+<!-- / $URL: $ --></dd>
+<dd id="preschooler" class="tabSection">
+<a href="/preschooler" class="topTab" id="preschoolerTab" data-oln="phase_preschooler">
+Preschooler</a>
+<!-- $URL: $ -->
+<div class="panel row" id="preschoolerPanel">
+<div class="topics" id="preschoolerTopics">
+<div class="optionalTagline">Essential topics</div><ul>
+<li><a href="/c25004305/your-preschooler-month-by-month" data-oln="Preschooler|month_by_month_link_col1_1">Preschooler, month by month</a></li>
+<li><a href="/c1021860/preschooler-health" data-oln="Preschooler|Your_childs_health_link_col1_2">Your child&#39;s health</a></li>
+<li><a href="/c1021842/behaviour" data-oln="Preschooler|Behaviour_link_col1_3">Behaviour</a></li>
+<li><a href="/c1021854/learning" data-oln="Preschooler|How_children_learn_link_col1_4">How children learn</a></li>
+<li><a href="/c1041633/development" data-oln="Preschooler|Preschooler_development_link_col1_5">Preschooler development</a></li>
+<li><a href="/c1021851/sleep" data-oln="Preschooler|Sleep_strategies_link_col1_6">Sleep strategies</a></li>
+<li class="bulleted"><a href="/preschooler" data-oln="Preschooler|All_Preschooler_content_link_col1_7">All Preschooler content</a></li></ul>
+</div>
+<div class="topResources" id="preschoolerTopResources">
+<div class="optionalTagline">Top resources</div>
+<ul>
+<li><a href="/a1038520/tips-for-raising-a-confident-girl" data-oln="Preschooler|Raise_a_confident_girl_link_col2_1">How to raise a confident girl</a></li>
+<li><a href="/a1038529/tips-for-raising-a-well-rounded-boy" data-oln="Preschooler|Raising_a_well_rounded_boy_link_col2_2">Raising a well-rounded boy</a></li>
+<li><a href="/c1021839/teaching-values" data-oln="Preschooler|Teaching_values_link_col2_3">Teaching values</a></li>
+<li><a href="/a1022155/five-ways-to-get-your-kids-active" data-oln="Preschooler|5_ways_to_get_kids_active_link_col2_4">5 ways to get kids active</a></li>
+<li><a href="/c1023355/arts-and-crafts" data-oln="Preschooler|Arts_crafts_link_col2_5">Arts and crafts</a></li>
+<li><a href="/c1023361/games-and-imagination" data-oln="Preschooler|Imagination_play_link_col2_6">Imagination &amp; play</a></li>
+<li><a href="/c1021848/preschooler-nutrition" data-oln="Preschooler|Separation_independence_link_col2_7">Preschooler nutrition</a></li></ul>
+</div>
+<div class="popular" id="preschoolerPopular">
+<div class="optionalTagline">Most popular</div><ul>
+<li><a href="/a1022314/keeping-discipline-consistent" data-oln="Preschooler|Consistent_discipline_link_col3_1">Consistent discipline</a></li>
+<li><a href="/a1022115/what-to-feed-your-preschooler" data-oln="Preschooler|What_to_feed_your_child_link_col3_2">What to feed your child</a></li>
+<li><a href="/a1022254/whining-ages-3-to-4" data-oln="Preschooler|Why_your_child_whines_link_col3_3">Why your child whines</a></li>
+<li><a href="/a1021960/how-to-teach-your-child-to-share-ages-3-to-4" data-oln="Preschooler|Teaching_your_child_to_share_link_col3_4">Teaching your child to share</a></li>
+<li><a href="/x1022320/what-can-i-do-about-my-childs-public-tantrums" data-oln="Preschooler|Dealing_with_public_tantrums_link_col3_5">Dealing with public tantrums</a></li>
+<li><a href="/a1022152/how-to-help-your-preschooler-learn-to-read" data-oln="Preschooler|Learning_to_read_link_col3_6">Learning to read</a></li>
+<li><a href="/a1022305/alternatives-to-no-ages-3-to-4" data-oln="Preschooler|Alternatives_to_no_link_col3_7">Alternatives to &quot;no&quot;</a></li></ul>
+</div>
+<div class="promo" id="preschoolerPromo">
+<a href="/c1021845/parenting-strategies" data-oln="Preschooler|promo_link_col4_img"><img pagespeed_lazy_src="http://assets.babycenter.com/ims/2013/06/4049847_4x3.jpg?width=107" class="promoImg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a> <div class="promoTxt"><a href="/c1021845/parenting-strategies" id="promoHeader" data-oln="Preschooler|promo_link_col4_headline">Successful parenting strategies</a><br/>The most effective strategies for managing young children involve consistency and clear instructions. Read more tips about dealing with the various issues you may face with your preschooler.<br/><ul> <li class="bulleted"><a href="/a1049642/seven-ways-to-avoid-spoiling-your-child" data-oln="Preschooler|promo_link_col4_Link_1">7 ways to avoid spoiling your child</a></li> <li class="bulleted"><a href="/x1022317/how-should-i-respond-when-my-child-lies" data-oln="Preschooler|promo_link_col4_Link_2">Dealing with lying</a></li> <li class="bulleted"><a href="/a1022224/defiance-why-it-happens-and-what-to-do-about-it-ages-3-to-4" data-oln="Preschooler|promo_link_col4_Link_3">When your child defies you</a></li> </ul> </div>
+<!-- $URL: $ -->
+<!-- / $URL: $ -->
+</div>
+</div>
+<!-- / $URL: $ --></dd>
+<dd id="malay" class="tabSection">
+<a href="/c1028696/bahasa" class="topTab" id="malayTab" data-oln="phase_malay">
+Bahasa</a>
+<!-- $URL: $ -->
+<div class="panel row" id="malayPanel">
+<div class="topics" id="malayTopics">
+<div class="optionalTagline"> Topik penting</div><ul><li><a href="/c25004395/prakonsepsi" data-oln="Bahasa|Prakonsepsi_link_col1_1">Prakonsepsi</a></li><li><a href="/c1028702/kehamilan-panduan-ibu-mengandung" data-oln="Bahasa|Kehamilan_link_col1_2">Kehamilan</a></li><li><a href="/c25004491/perkembangan-fetus-anda" data-oln="Bahasa|Perkembangan_fetus_anda_link_col1_3">Perkembangan fetus anda</a></li><li><a href="/c1028699/bayi---segalanya-tentang-bayi-anda" data-oln="Bahasa|Bayi_anda_link_col1_4">Bayi anda</a></li><li><a href="/a1033518/berpantang-selepas-bersalin" data-oln="Bahasa|Berpantang_selepas_bersalin_link_col1_5">Berpantang selepas bersalin</a></li><li><a href="/c1042765/kesihatan-bayi" data-oln="Bahasa|Kesihatan_bayi_link_col1_6">Kesihatan bayi</a></li><li class="bulleted"><a href="/c1028696/bahasa" data-oln="Bahasa|Semua_kandungan_Bahasa_link_col1_7">Semua kandungan Bahasa</a></li></ul>
+</div>
+<div class="topResources" id="malayTopResources">
+<div class="optionalTagline">Sumber utama</div><ul></ul><li><a href="/c1042771/menyusui-bayi" data-oln="Bahasa|Menyusui_bayi_link_col2_1">Menyusui bayi anda</a></li><li><a href="/l25007669/10-tanda-penting-kehamilan" class="slideLink" data-oln="Bahasa|10_tanda_kehamilan_link_col2_2">10 tanda kehamilan</a></li><li><a href="/c1042768/pemakanan-bayi" data-oln="Bahasa|Pemakanan_bayi_link_col2_3">Pemakanan bayi</a></li><li><a href="/c1042780/penjagaan-harian" data-oln="Bahasa|Penjagaan_bayi_link_col2_4">Penjagaan bayi</a></li><li><a href="/c1042777/perkembangan-bayi" data-oln="Bahasa|Perkembangan_bayi_link_col2_4">Perkembangan bayi</a></li><li><a href="/c1042696/kesihatan-ibu-mengandung" data-oln="Bahasa|Kesihatan_semasa_mengandunglink_col2_5">Kesihatan semasa mengandung</a></li><li><a href="/l25011441/10-langkah-ke-kehamilan-sihat" class="slideLink" data-oln="Bahasa|Kesihatan_ibu_mengandung_link_col2_6">Sihat &amp; hamil: 10 langkah</a><br/>
+</li>
+</div>
+<div class="popular" id="malayPopular">
+<div class="optionalTagline">Paling popular</div><ul></ul><li><a href="/a1028705/pergerakan-bayi-dalam-kandungan" data-oln="Bahasa|Pergerakan_bayi_anda_semasa_kehamilan_link_col2_1">Pergerakan bayi anda semasa kehamilan</a></li>
+<li><a href="/a1029400/simptom-kehamilan-yang-tidak-boleh-anda-abaikan" data-oln="Bahasa|Tanda_bahaya_dalam_kehamilan_link_col2_2">Tanda bahaya dalam kehamilan</a></li><li><a href="/a1029325/bagaimana-saya-tahu-bila-sudah-tiba-masa-bersalin" data-oln="Bahasa|Sudahkah_tiba_masa_bersalin_link_col2_3">Sudahkah tiba masa bersalin?</a></li><li><a href="/l25009611/9-keperluan-bayi-untuk-berkembang-maju" class="slideLink" data-oln="Bahasa|/a1029325/bagaimana-saya-tahu-bila-sudah-tiba-masa-bersalin" data-oln="Bahasa|Sudahkah_tiba_masa_bersalin_link_col2_3">Sudahkah tiba masa bersalin?</a></li><li><a href="/l25009611/9-keperluan-bayi-untuk-berkembang-maju" cApa_bayi_perlu_untuk_berkembang_maju_link_col2_4">Apa bayi perlu untuk berkembang maju</a></li><li><a href="/a1032571/najis-bayi-anda-apa-yang-normal-dan-apa-yang-tidak" data-oln="Bahasa|Najis_bayi_anda_link_col2_5">Najis bayi anda: apa yang normal</a></li><li><a href="/a25011529/8-rahsia-seks-setiap-ibu-bapa-baru-perlu-tahu" data-oln="Bahasa|8_rahsia_seks_ibu_bapa_baru_link_col2_6">8 rahsia seks ibu bapa baru</a></li><li><a href="/a1029322/diet-untuk-kehamilan-yang-sihat" data-oln="Bahasa|Diet_untuk_kehamilan_yang_sihat_link_col2_7">Diet untuk kehamilan yang sihat</a></li>
+</div>
+<div class="promo" id="malayPromo">
+<a href="/c1042756/proses-kelahiran-dan-bersalin"><img pagespeed_lazy_src="http://assets.babycenter.com/ims/2014/11/516983225_4x3.jpg?width=107" class="promoImg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a><div class="promoTxt"><a href="/c1042756/proses-kelahiran-dan-bersalin" id="promoHeader" data-oln="Bahasa|promo_link_col4_headline">Bersalin: apa yang anda perlu tahu</a><br/>Semua soalan anda mengenai pengalaman bersalin dijawab di sini..<br/><ul><li class="bulleted"><a href="/l25009615/mengemas-beg-hospital-panduan-foto" class="slideLink" data-oln="Bahasa|promo_link_col4_Link_1">Mengemas beg hospital</a></li><li class="bulleted"><a href="/a25008425/bilakah-kepala-bayi-saya-sepatutnya-turun" data-oln="Bahasa|promo_link_col4_Link_2">Bila kepala bayi akan turun</a></li><li class="bulleted"><a href="/a25006137/pembedahan-caesarean-apakah-risiko-dan-kebaikannya" data-oln="Bahasa|promo_link_col4_Link_3">Pembedahan caesar: risiko &amp; kebaikan</a></li><li class="bulleted"><a href="/a1033130/peringkat-peringkat-pelahiran-anak" data-oln="Bahasa|promo_link_col4_Link_4">Peringkat-peringkat pelahiran</a></li></ul></div>
+<!-- $URL: $ -->
+<!-- / $URL: $ -->
+</div>
+</div>
+<!-- / $URL: $ --></dd>
+<dd id="foryou" class="tabSection">
+<a href="/for-you" class="topTab" id="foryouTab" data-oln="phase_foryou">
+For You</a>
+<!-- $URL: $ -->
+<div class="panel row" id="foryouPanel">
+<div class="topics" id="foryouTopics">
+<div class="optionalTagline">Essential topics</div><ul> <li><a href="/c1021139/asian-confinement" data-oln="For_You|Asian_postnatal_confinement_link_col1_1">Asian postnatal confinement</a></li> <li><a href="/c25004325/your-body-after-birth" data-oln="For_You|Your_body_after">Your body after birth</a></li> <li><a href="/c25004321/working" data-oln="For_You|Life_as_a_working_mum_col1_3">Life as a working mum</a></li><li><a href="/c694/sex-and-relationships" data-oln="For_You|Sex_and_relationships_link_col1_4">Sex and relationships</a></li> <li><a href="/c25004319/childcare" data-oln="For_You|Childcare_options_col1_5">Childcare options</a></li><li><a href="/c552/exercise-and-fitness---after-birth" data-oln="For_You|Postnatal_fitness_col1_6">Postnatal fitness</a></li><li class="bulleted"><a href="/for-you" data-oln="For_You|All_for_you_link_col1_7">All For You content</a></li></ul>
+</div>
+<div class="topResources" id="foryouTopResources">
+<div class="optionalTagline">Top resources</div><ul> <li><a href="/l25007747/family-horoscopes" data-oln="For_You|Family_horoscopes_link_col2_1">Family horoscopes</a></li> <li><a href="/c25004401/confinement-food" data-oln="For_You|Confinement_food_link_col2_2">Confinement food</a></li><li><a href="/c7551/parents-sleep" data-oln="For_You|Getting_enough_sleep_link_col2_3">Getting enough sleep</a></li> <li><a href="/c3560/your-nutrition---after-birth" data-oln="For_You|Healthy_eating_link_col2_5">Healthy eating</a></li><li><a href="/c25004323/baby-blues-and-postnatal-depression" data-oln="For_You|Dealing_with_baby_blues_link_col2_4">Dealing with baby blues</a></li> <li><a href="/c1003006/family-finance" data-oln="For_You|Family_finance_link_col2_6">Family finance</a></li><li><a href="/c25004263/family-travel-guides" data-oln="For_You|Whats_it_like_for_dads_link_col2_7">Family travel</a></li></ul>
+</div>
+<div class="popular" id="foryouPopular">
+<div class="optionalTagline">Most popular</div><ul> <li><a href="/a1044778/8-sex-secrets-every-new-parent-should-know" data-oln="For_You|8_sex_secrets_new_parents_link_col3_1">8 sex secrets of new parents</a></li><li><a href="/a1021136/maid-in-malaysia-finding-and-hiring-a-live-in-helper" data-oln="For_You|Finding_hiring_a_live-in_maid_link_col3_2">Finding &amp; hiring a live-in maid</a></li> <li><a href="/c25005483/confinement-help" data-oln="For_You|healthy_weight_loss_link_col3_3">Getting confinement help</a></li> <li><a href="/a1026575/baby-traditions-cukur-jambul" data-oln="For_You|Cukur_jambul_link_col3_4">Cukur jambul</a></li> <li><a href="/a1021145/confinement-practices-an-overview" data-oln="For_You|Traditional_confinement_practices_link_col3_5">Traditional confinement practices</a></li> <li><a href="/a1026578/baby-traditions-chinese-full-moon-celebration" data-oln="For_You|Chinese_full_month_celebration_link_col3_6">Chinese full month celebration</a></li><li><a href="/a537534/breastfeeding-and-working" data-oln="For_You|Breastfeeding_working_link_col3_7">Breastfeeding &amp; working</a></li></ul>
+</div>
+<div class="promo" id="foryouPromo">
+<a href="/c25004261/life-as-a-mum" data-oln="For_You|promo_link_col4_img"><img pagespeed_lazy_src="http://assets.babycenter.com/ims/2014/06/496260433_4x3.jpg?width=107" class="promoImg" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a> <div class="promoTxt"><a href="/c25004261/life-as-a-mum" id="promoHeader" data-oln="For_You|promo_link_col4_headline">Essential tips for new mums</a><br/>Anxious? Elated? Or just plain exhausted? However you feel about life with your new baby, we&#39;re here to help.<br/><ul> <li class="bulleted"><a href="/a1049066/babycenter-mums-tips-for-surviving-confinement" data-oln="For_You|promo_link_col4_Link_1">Surviving confinement: tips from other mums</a></li> <li class="bulleted"><a href="/a1046160/what-i-wish-id-known-about-life-with-a-newborn" data-oln="For_You|promo_link_col4_Link_2">Life with a newborn</a></li> <li class="bulleted"><a href="/l25005527/10-ways-to-pamper-yourself-a-new-mums-guide" data-oln="For_You|promo_link_col4_Link_3">10 ways to pamper yourself</a></li><li class="bulleted"><a href="/l25006669/11-ways-to-get-more-sleep-new-parents-guide" data-oln="For_You|promo_link_col4_Link_3">11 ways to get more sleep</a></li> </ul> </div>
+<!-- $URL: $ -->
+<!-- / $URL: $ -->
+</div>
+</div>
+<!-- / $URL: $ --></dd>
+<dd id="community" class="tabSection">
+<a href="/community" class="topTab" id="communityTab" data-oln="phase_community">
+Community</a>
+<!-- $URL: $ -->
+<div class="panel row" id="communityPanel">
+<div class="topics" id="communityTopics">
+<div class="optionalTagline">Essential topics</div><ul><li><a href="/c25000183/birth-clubs">Birth Clubs</a></li> <li><a href="/g25001381/actively-trying--">Trying to get pregnant</a></li> <li><a href="/g25001383/pregnancy">Pregnancy</a></li> <li><a href="/g25001431/baby-">Parenting baby</a></li> <li><a href="/g25002847/toddler">Parenting toddler</a></li> <li><a href="/c25001575/grief-and-loss-groups">Grief &amp; loss</a></li> <li class="bulleted"><a href="/community">All Community</a></li></ul>
+</div>
+<div class="topResources" id="communityTopResources">
+<div class="optionalTagline">Top groups</div><ul><li><a href="/g25001383/pregnancy">Birth Clubs</a></li><li><a href="/g25002763/pregnant-again-second-third-fourth-fifth">Pregnant again</a></li><li><a href="/g25001917/breastfeeding-and-pumping-mummies">Breastfeeding &amp; pumping mums</a></li><li><a href="/g25001431/baby-">Questions about baby</a></li><li><a href="/g25003313/paparazzi-parents">Paparazzi parents</a></li><li><a href="/g25001881/multiple-pregnancy">Multiple pregnancy</a></li><li><a href="/g25002453/ivficsi">IVF/ICSI</a></li></ul>
+</div>
+<div class="popular" id="communityPopular">
+<div class="optionalTagline">Most popular</div><ul><li><a href="/g25001383/pregnancy">I&#39;m pregnant!</a></li><li><a href="/c25003615/my-online-journal">1st trimester issues</a></li><li><a href="/g25002819/working-mums">Working mums</a></li><li><a href="/g25001879/getting-back-into-shape-after-pregnancy">Getting back in shape</a></li><li><a href="/g25002175/tips-for-labour-and-birth"> Labour &amp; birth tips</a></li><li><a href="/g25001895/recipes">Baby food recipes</a></li><li><a href="/g25002531/contests-sales--freebies-">Contests, sales &amp; freebies</a></li></ul>
+</div>
+<div class="promo" id="communityPromo">
+<a href="/g25003233/the-steam-room"><img class="promoImg" pagespeed_lazy_src="http://assets.babycenter.com/ims/2012/07/no-computador-202X151.jpg?width=107" src="/mod_pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/></a> <div class="promoTxt"><a href="/g25003233/the-steam-room"><b>What&#39;s on your mind?</b></a><br/>Stressed? Happy? Angry? Or just plain tired? Share with other mums who are going through a similar journey.<br/><br/><li class="bulleted"><a href="/g25003233/the-steam-room">The Steam Room</a></li><li class="bulleted"><a href="/g25003439/my-happy-place">Your Happy Place</a></li><li class="bulleted"><a href="/g25005947/mum--baby-services">Mum &amp; baby services</a></li><li class="bulleted"><a href="/g25003489/market-place">Items for sale</a></li></div>
+<!-- $URL: $ -->
+<!-- / $URL: $ -->
+</div>
+</div>
+<!-- / $URL: $ --></dd>
+<dd id="ribbonRight" class="noTabPointer"></dd>
+</dl>
+<div id="navContainer" class="show-for-small">
+<!-- Phase 1 responsive stacked nav  -->
+<div id="navMenuIcon" data-js-bcExpandableTrigger></div>
+<div id="topMenu" data-js-bcExpandableElement>
+<a href="/" id="topNavMobileHome" data-oln="topNavMobileHome">Home</a>
+<a href="/getting-pregnant" class="" id="topNavMobilepreconception.phase" data-oln="phase_preconception.phase-responsiveMenu">Getting pregnant</a>
+<a href="/pregnancy" class="" id="topNavMobilepregnancy.phase" data-oln="phase_pregnancy.phase-responsiveMenu">Pregnancy</a>
+<a href="/baby" class="currentCat" id="topNavMobilebaby.phase" data-oln="phase_baby.phase-responsiveMenu">Baby</a>
+<a href="/toddler" class="" id="topNavMobiletoddler.phase" data-oln="phase_toddler.phase-responsiveMenu">Toddler</a>
+<a href="/preschooler" class="" id="topNavMobilepreschooler.phase" data-oln="phase_preschooler.phase-responsiveMenu">Preschooler</a>
+<a href="/c1028696/bahasa" class="" id="topNavMobilemalay.phase" data-oln="phase_malay.phase-responsiveMenu">Bahasa</a>
+<a href="/for-you" class="" id="topNavMobileforyou.phase" data-oln="phase_foryou.phase-responsiveMenu">For You</a>
+<a href="/community" class="" id="topNavMobilecommunity.landing" data-oln="phase_community.landing-responsiveMenu">Community</a>
+</div>
+</div>
+<div id="TLContainer" class="row hide-for-small">
+<div class="dynamicWidth">
+<iframe id="TLIframe" scrolling="no" frameborder="0" src="/internal/iframe/timeline"></iframe>
+</div>
+</div>
+</div><!-- / IEDisappearingAbsPos -->
+</div></div>
+<script type="text/javascript" pagespeed_no_defer="">pagespeed.lazyLoadImages.overrideAttributeFunctions();</script><script language="JavaScript" type="text/javascript">var omnitureData=new Object();omnitureData.account="babycentermy";omnitureData.trackingServer="metrics.babycenter.com.my";omnitureData.trackingServerSecure="smetrics.babycenter.com.my";omnitureData.cookieDomainPeriods="3";omnitureData.charSet="UTF-8";omnitureData.linkInternalFilters="javascript:,babycenter.com.my";omnitureData.pageName="Articles | 1021718 | mosquito-disease-prevention-treatment-dengue";omnitureData.channel="Articles";omnitureData.server="content";omnitureData.prop23="1021718";omnitureData.prop22="baby";omnitureData.prop20="baby-health";omnitureData.prop21="health-mosquito-disease-prevention-treatment";omnitureData.prop57="Article";omnitureData.prop53="en_MY";omnitureData.prop6="Logged out, unrecognized";omnitureData.prop3="Unrecognized";omnitureData.prop8="desktop";omnitureData.eVar53="en_MY";omnitureData.eVar6="Logged out, unrecognized";omnitureData.eVar3="Unrecognized";</script>
+<!-- SiteCatalyst code version: H.24.4.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com  -->
+<script language="JavaScript" type="text/javascript">try{s_account=omnitureData.account;}catch(err){$.logger.error("Error with omniture s_account: "+err);console.log("Error with omniture s_account: "+err);}</script>
+<script language="JavaScript" type="text/javascript" src="http://www.babycenter.com.my/webassets/2.08.0.75177/js/thirdParty/s_code.js.pagespeed.jm.d090Y-TnCJ.js"></script>
+<script language="JavaScript" type="text/javascript">//<![CDATA[
+(function($){try{$.each(omnitureData,function(key,value){s[key]=value;});var view=bc.getView();s.prop61=view;s.eVar61=view;var width=jQuery(window).width();var height=jQuery(window).height();var sz=width+'x'+height;var orientation=(width<height)?'portrait':'landscape';s.prop62=sz;s.eVar62=sz;s.prop63=orientation;s.eVar63=orientation;var cookieName="bclt";$.intl={writeLinkTrackingCookie:function(pageName,linkText,linkName,linkModule,linkArea){var cookieText=linkText+"::"+linkName+"::"+pageName+"::"+linkModule+"::"+linkArea;bc.writeCookie(cookieName,cookieText);},readLinkTrackingCookie:function(){var cookieText,linkTrackingData,tokens;cookieText=bc.readCookie(cookieName);bc.deleteCookie(cookieName);if(cookieText){linkTrackingData={};tokens=cookieText.split("::");if(tokens.length){linkTrackingData.linkText=tokens[0];linkTrackingData.linkName=tokens[1];linkTrackingData.pageName=tokens[2];linkTrackingData.linkModule=tokens[3];linkTrackingData.linkArea=tokens[4];}}
+return linkTrackingData;}};var linkTrackingData=jQuery.intl.readLinkTrackingCookie();if(linkTrackingData){s.prop11=linkTrackingData['linkArea'];var linkName=linkTrackingData['linkName'];s.prop12=linkTrackingData['linkText']+(linkName?" | "+linkName:'');s.prop15=s.prop11+" | "+s.prop12;s.prop17=linkTrackingData['pageName'];s.prop18=linkTrackingData['linkModule'];}}catch(err){$.logger.error("Error with setting up omniture data: "+err);console.log("Error with setting up omniture data: "+err);}
+try{var bodyId=jQuery('body').attr('id');if(bodyId!=='IFBody'){var s_code=s.t();if(s_code)document.write(s_code)}}catch(err){$.logger.error("Error with sending out omniture data: "+err);console.log("Error with setting up omniture data: "+err);}
+function getDataValueFromParents(targetElement,dataName){foundElement=targetElement.closest('[data-'+dataName+']');if(foundElement.length>0)
+{return foundElement.data(dataName);}
+else
+{return'';}}
+$('body').click(function(e){var $target=jQuery(e.target);var linkText=$target.text();var linkName=getDataValueFromParents($target,'oln');var linkModule=getDataValueFromParents($target,'omn');var linkArea=getDataValueFromParents($target,'oan');jQuery.intl.writeLinkTrackingCookie(parent.pageInfo.pageName,linkText,linkName,linkModule,linkArea);return true;});})(jQuery);
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+(function($){var _baseUrl="http://pubads.g.doubleclick.net";var _anchorPath="/gampad/jump";var _imgPath="/gampad/ad";var adLoaded={};var adImages={};var adsEnabled=false;var topNavTimeout=null;var topNavDelay=300;$.fn.topNav=function(topNavAdInfo){adsEnabled=$('#topNav dd .topNavAdBox').length>0;generateAdHtml(topNavAdInfo);$('dd:not(.noTabPointer)',this).on('click',function(e){if($('.panel',e.currentTarget).is(':hidden'))
+{return false;}}).on('mouseenter touchend',function(e){clearTimeout(topNavTimeout);e.preventDefault();e.stopPropagation();topNavTimeout=setTimeout(function(){$('.panel').hide();$('#topNav dd').removeClass('menuExpanded');$('.panel',e.currentTarget).show();$(e.currentTarget).closest('dd').addClass('menuExpanded');showAd($(e.currentTarget).attr('id'));},topNavDelay);}).on('mouseleave',function(e){clearTimeout(topNavTimeout);topNavTimeout=setTimeout(function(){$('.panel').hide();$(e.currentTarget).closest('dd').removeClass('menuExpanded');},topNavDelay);});};function generateAdHtml(topNavAdInfo){if(!adsEnabled)return;var envParam=$.url.param('env');if(typeof envParam==='string'&&envParam==='prod'){delete topNavAdInfo.targetParams['env'];}
+var adTestParam=$.url.param('adTest');if(typeof adTestParam==='string'){topNavAdInfo['targetParams']['test']=adTestParam;}
+var tabs=[];$('#topNav dd .topNavAdBox').each(function(index,value){tabs[iParam==='prod'){delete topNavAdInfo.targetParams['env'];}
+var adTestParam=$.url.param('adTest');if(typeof adTestParam==='string'){topNavAdInfo['targetParams']['test']=adTestParam;}
+var tabs=[ndex]=$(value).attr('id');});var urlParams='iu=/'+topNavAdInfo.googleId+'/'+topNavAdInfo.site+'&sz=88x31|432x222';var anchorUrl=_baseUrl+_anchorPath+'?'+urlParams;var imageUrl=_baseUrl+_imgPath+'?'+urlParams;var tParams='';for(var tKey in topNavAdInfo.targetParams){if(tParams===''){tParams='t=';}else{tParams+='%26';}
+tParams+=tKey+'%3D'+topNavAdInfo.targetParams[tKey];}
+$.each(tabs,function(index,tabId){var correlatorParam='c='+(new Date()).getTime()+index;var tabTParams=tParams+'%26pos%3D'+tabId;var tabAnchorUrl=anchorUrl+'&'+correlatorParam+'&'+tabTParams;var anchorTag=$('<a />').attr('href',tabAnchorUrl).attr('target','_blank');$('#'+tabId).append(anchorTag);adImages[tabId]='<img src="'+imageUrl+'&'+correlatorParam+'&'+tabTParams+'">';adLoaded[tabId]=false;});}
+function showAd(panelId){if(!adsEnabled)return;var adId=panelId+'nav';var loaded=adLoaded[adId];if(loaded===undefined||loaded){return;}
+adLoaded[adId]=true;var adDiv=$('#'+adId);adDiv.children('a').append(adImages[adId]);adDiv.show();adDiv.children().show();}})(jQuery);
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+(function($){$.nielsenAu={start:function()
+{try
+{var jsTag=document.createElement('script');jsTag.type='text/javascript';jsTag.async=true;jsTag.src='//secure-au.imrworldwide.com/v60.js';jsTag.addEventListener('load',function(e){$.nielsenAu.loaded(e);},false);var head=document.getElementsByTagName('head')[0];head.appendChild(jsTag);}
+catch(err){$.logger.error("Error calling nielsenAu.start() js: "+err);}},loaded:function(evt)
+{try
+{var pvar={cid:"mcn",content:"babycenter",server:"secure-au"};var trac=nol_t(pvar);trac.record().post();}
+catch(err){$.logger.error("Error calling nielsenAu.loaded() js: "+err);}}};})(jQuery);
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+(function($){"use strict";$.fn.regModule=function(options){var $rules,$messages,$parentForm;$rules={email:{required:true,email:true},day:{preconOrDate:true},month:{preconOrDate:true},year:{preconOrDate:true},precon:{preconOrDate:true}};$messages={email:{required:options.requiredLabel,email:options.emailLabel}};$.validator.addMethod('preconOrDate',function(value,element){$parentForm=$(element).parents("form");var dayVal,monthVal,yrVal,preconVal,validDate;dayVal=$('#day option:selected',$parentForm).val();monthVal=$('#month option:selected',$parentForm).val();yrVal=$('#year option:selected',$parentForm).val();if($('#precon',$parentForm).val()==='undefined'){return true;}
+if((dayVal!=='-1'&&monthVal!=='-1'&&yrVal!=='-1')||$('#precon',$parentForm).prop('checked')){return true}
+return false;},$.format(options.babyDateOrPreconLabel));$(this).each(function(){var validator=$(this).validate({rules:$rules,messages:$messages,errorElement:'div',onfocusout:false,onclick:false,groups:{dateSelects:"day month year precon"},errorPlacement:function(error,element){var $parentForm=$(element).closest("form");$("#regFormSpringErr",$parentForm).remove();if(element.attr('name')==='day'||element.attr('name')==='month'||element.attr('name')==='year'||element.attr('name')==='precon'){error.prependTo($('#dateHolder',$parentForm));$("#preconCk span,#dateHolder select, #dateHolder label",$parentForm).addClass('error');}else if(element.attr('name')==='email'){error.insertAfter($parentForm.find('#email'));}else{error.insertAfter(element);}
+$(element).siblings('label').addClass('error');},success:function(label){var $parentForm=$(label).closest("form");$("#regFormSpringErr",$parentForm).remove();label.siblings('label.error').removeClass('error');if(label.parent().attr('id')==='dateHolder'){$("#preconCk span,#dateHolder select, #dateHolder label",$parentForm).removeClass('error');}
+label.remove();}});$("select, :checkbox",$(this)).change(function(){if(validator.numberOfInvalids()>0){$(this).valid();}});});};$.fn.regModuleEmailOnly=function(options){var $rules,$messages,$parentForm;$rules={email:{required:true,email:true}};$messages={email:{required:options.requiredLabel,email:options.emailLabel}};$(this).validate({rules:$rules,messages:$messages,errorElement:'div',errorPlacement:function(error,element){$parentForm=$(element).parents("form");error.insertAfter($parentForm.find('#toolSubmit'));},onfocusout:false});};$.fn.newsLetterLtBox=function(options){this.each(function(){$(this).lightbox(options);});};$('.NLLightBoxCLick').each(function(){$(this).newsLetterLtBox({box:"#newsletterLightBox",width:687,height:372,okLabel:"",cancelLabel:""});});$('.preconClickArea').on('click',function(e){$('input[type=checkbox]#precon',$(this)).trigger('click');})
+$('.preconClickArea input[type=checkbox]#precon').on('click touchstart',function(e){e.stopPropagation();})})(jQuery);
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+(function($){var startIndex=5;var count=0;$.fn.fetchContentComments=function(logicalId,contentType){$(this).click(function(){$.ajax({url:'/internal/contentComments/'+contentType+'/'+logicalId,data:{startIndex:startIndex},cache:false}).done(function(html){if(html!==''){count++;currentId='nextSet'+count;$('#loadMoreCommentsHere').append('<div class="nextSetOfComments" id="'+currentId+'" />');$("#"+currentId).append(html).slideDown('slow');startIndex+=10;if($('#'+currentId+' .commentContainer').length<10){$('#seeMoreRow').hide();}}else{$('#seeMoreRow').hide();}});});};$.fn.textAreaFocusBlur=function(defaultPhrase,charCountElement){$(this).focus(function(){if($(this).attr('class')!=='heightenedField'){$(this).removeClass('defaultMsg');$(this).addClass('heightenedField');}
+if($(this).val()===defaultPhrase){$(this).val('');}});$(this).blur(function(){if($(this).val()===''){$(this).removeClass('heightenedField');}});$(this).keypress(function(event){var max=1000;var len=$(this).val().length;if(event.which<0x20){return;}
+if(len>=max){event.preventDefault();}});$(this).keyup(function(event){var max=1000;var len=$(this).val().length;var char=max-len;charCountElement.text(char);});}
+$.fn.commentValidator=function(options){var $textArea=$(this).find('textarea');$.validator.addMethod('noDefaultMsg',function(value,element){if($textArea.val()===options.defaultTxt){return false;}
+return true;});$.validator.addClassRules({noDefaultMsg:{noDefaultMsg:true}});var $rules={body:{required:true,minlength:2,maxlength:1000,noDefaultMsg:true}};var $messages={body:{required:options.required,minlength:options.minlength,maxlength:options.maxlength,noDefaultMsg:options.noDefaultMsg}};var validator=$(this).validate({rules:$rules,messages:$messages,errorElement:'div',errorPlacement:function(error,element){error.insertAfter(element);$(element).siblings('label').addClass('error');},onfocusout:false,success:function(label){label.siblings('label.error').removeClass('error');label.remove();}});validator;};})(jQuery);
+//]]></script>
+<script type="text/javascript">//<![CDATA[
+jQuery.noConflict();jQuery(document).ready(function($){var cssClass='bc-show-for-small';var showAd=bc.ad.showAd(cssClass);if(showAd){var sizeAsJson=$.parseJSON('[[6,1],[300,50],[320,50]]');var options={'id':'mobileAd1','size':sizeAsJson};options['targetParams']={'pos':'1'};options['hideIfEmptyParentSelector']='#topAdContainerMobile';$.gptAdManager.sendToQueue(options);}
+$('#headerSiteSearch').searchForm('Search');$('#headerSiteSearch-DT').searchForm('Search');$('#expandingMobileSearch').bcExpandable({expandedCssClass:'js-expanded'});var cssClass='columns bc-hide-for-small ';var showAd=bc.ad.showAd(cssClass);if(showAd){var sizeAsJson=$.parseJSON('[[468,60],[728,90],[970,66],[970,250]]');var options={'id':'topAd','size':sizeAsJson};options['targetParams']={'pos':'top'};$.gptAdManager.sendToQueue(options);}
+var cssClass='bc-show-for-large-up';var showAd=bc.ad.showAd(cssClass);if(showAd){var sizeAsJson=$.parseJSON('[[120,600],[160,600]]');var options={'id':'skyscraperAd','size':sizeAsJson};options['targetParams']={'pos':'fourth'};$.gptAdManager.sendToQueue(options);}
+var clonedBC=$('.breadcrumb').clone();clonedBC.removeClass('hide-for-large-up');clonedBC.attr({id:'breadcrumb2','data-omn':'breadcrumb2'});if($('#breadcrumbBottom').length>0){clonedBC.appendTo('#breadcrumbBottom');}else{clonedBC.appendTo('#mainContent').last('.bodyText');}
+$('#toc h3').click(function(){$(this).toggleClass('expanded');$(this).children('.showHideIcon').toggleClass('hideIcon');$(this).siblings('#toc ul').slideToggle();});var embeddedModulePlacement=function(currentModule){if(!bc.isSmallScreen()){if($('#mainContent #embeddedModulePlaceHolder').size()>0){$('#'+currentModule).insertAfter('#mainContent #embeddedModulePlaceHolder');}
+else{if($('#mainContent  #toc')){var tocShadows=$('#mainContent #toc').next('.bottomShadow-left');$('#'+currentModule).insertAfter(tocShadows);}}}}
+embeddedModulePlacement('promoModule');var cssClass='';var showAd=bc.ad.showAd(cssClass);if(showAd){var sizeAsJson=$.parseJSON('[[405,80],[405,112],[405,150],[405,200],[405,250],[405,300],[405,410]]');var options={'id':'sponsoredAd','size':sizeAsJson};options['targetParams']={'pos':'txtlink'};$.gptAdManager.sendToQueue(options);}
+$('.validateForm').regModule({requiredLabel:'This is a required field',emailLabel:'Please enter a valid email address',babyDateOrPreconLabel:'Please enter a due date or birthdate, or check \"Trying to conceive.\"'});$('#postComment').commentValidator({defaultTxt:'Add a comment',required:'This is a required field',minlength:'Please enter at least {0} characters',maxlength:'Please enter no more than {0} characters',noDefaultMsg:'This is a required field'});$('#seeMoreCommentsBtn').fetchContentComments('1021718','ARTICLE');$('#postComment textarea').textAreaFocusBlur('Add a comment',$('#postComment .note span'));$('#registrationModuleRight #welcomeRegisterForm').searchForm('Email');var cssClass='bc-show-for-small';var showAd=bc.ad.showAd(cssClass);if(showAd){var sizeAsJson=$.parseJSON('[[6,1],[300,50],[300,250],[320,50]]');var options={'id':'mobileAd2','size':sizeAsJson};options['targetParams']={'pos':'2'};$.gptAdManager.sendToQueue(options);}
+var cssClass='bc-hide-for-small';var showAd=bc.ad.showAd(cssClass);if(showAd){var sizeAsJson=$.parseJSON('[[300,250],[300,600]]');var options={'id':'mediumRectangleAd','size':sizeAsJson};options['targetParams']={'pos':'box'};$.gptAdManager.sendToQueue(options);}
+$('#footerSiteSearch').searchForm('Search');var cssClass='bc-hide-for-small';var showAd=bc.ad.showAd(cssClass);if(showAd){var sizeAsJson=$.parseJSON('[728,91]');var options={'id':'catfishAd','size':sizeAsJson};options['targetParams']={'pos':'catfish'};$.gptAdManager.sendToQueue(options);}
+$('.validateForm').regModule({requiredLabel:'This is a required field',emailLabel:'Please enter a valid email address',babyDateOrPreconLabel:'Please enter a due date or birthdate, or check \"Trying to conceive.\"'});if(0===1){$.lightbox.popup({box:$('#registrationInterstitial'),width:'auto'});}
+$('a.videoLink').addMediaIcons({cssClass:'videoLinkIcon'});$('a.slideLink').addMediaIcons({cssClass:'slideLinkIcon'});if(bc.isSmallScreen()){$('#footerLinks h6').click(function(){$(this).siblings('ul').slideToggle('fast');$(this).parent().toggleClass('expanded');});}
+var cssClass='bc-show-for-small';var showAd=bc.ad.showAd(cssClass);if(showAd){var sizeAsJson=$.parseJSON('[[1,1],[320,400]]');var options={'id':'adhesionAd','size':sizeAsJson};options['targetParams']={'pos':'adhesion'};$.gptAdManager.sendToQueue(options);}
+var topNavAdInfo=$.parseJSON('{"googleId":536,"site":"Malaysia-top_nav","targetParams":{"mypgtype":"topNav"}}');$('#topNav').topNav(topNavAdInfo);$('#navContainer').prependTo('#topContainer');$('#navContainer').bcExpandable();$.nielsenAu.start()
+try{(function(){bc.getHeadScript('//assets.pinterest.com/js/pinit.js');})();}
+catch(err){$.logger.error("Error from pinterest js: "+err);}
+$('.notimplemented').notimplemented();$.gptAdManager.postInit();});var pageInfo={versionId:"1097088",logicalId:"1021718",contentType:"ARTICLE",pageKey:"",pageName:"Articles | 1021718 | mosquito-disease-prevention-treatment-dengue",memberId:""};
+//]]></script><script type="text/javascript">//<![CDATA[
+window.jQuery=window.$=jQuery;$(window).load(function(){});
+//]]></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"323266","applicationTime":418,"beacon":"beacon-6.newrelic.com","queueTime":0,"licenseKey":"ce288550e9","transactionName":"ZFFbbBEAXkJVUhAMVl0bakgRCF5Wd14KEUtcWFVdEU5zXlpFAQtNY1VeXSAOXkVGXggJXEEQHX0NCVFfV1QWJ0BgREtRDQZzdnh4JkEdAVBfAQYCAQgbVQ0WSV9VQHsMD0RUWkU0BF5W","agent":"js-agent.newrelic.com\/nr-476.min.js","errorBeacon":"bam.nr-data.net"}</script></body></html>tionName":"ZFFbbBEAXkJVUhAMVl0bakgRCF5Wd14KEUtcWFVdEU5zXlpFAQtNY1VeXSAOXkVGXggJXEEQHX0NCVFfV1QWJ0BgREtRDQZzdnh4JkEdAVBfAQYCAQgbVQ0WSV9VQHsMD0RUWkU0BF5W","agent":"js-agent.newrelic.com\/nr-476.min.js"

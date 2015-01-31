@@ -1,0 +1,304 @@
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta name="description" content="MUMBAI: As India deals with increasing number of dengue fever, pharma major Sanofi today said the world's first vaccine against the mosquito-borne viral disease may be available by the second half" /><meta name="keywords" content="news" /><meta property="fb:admins" content="100001837105818" /><meta property="fb:app_id" content="190711634302342" /><meta property="og:title" content="World's 1st dengue vaccine likely by 2015: Sanofi" /><meta property="og:type" content="article" /><meta property="og:url" content="http://articles.economictimes.indiatimes.com/2014-11-04/news/55757625_1_dengue-vaccine-vaccine-unit-dengue-fever" /><meta property="og:image" content="http://economictimes.indiatimes.com/photo/45035273.cms" /><meta property="og:description" content="MUMBAI: As India deals with increasing number of dengue fever, pharma major Sanofi today said the world's first vaccine against the mosquito-borne viral disease may be available by the second half..." />
+        <script type="text/javascript">
+        function pm_fixIEImg(img) {
+            if (navigator.userAgent.indexOf('MSIE 8') == -1 && navigator.userAgent.indexOf('MSIE 7') == -1 && navigator.userAgent.indexOf('MSIE 6') == -1) return img;
+            var parent = img.parentNode;
+            img.onerror = function() { this.parentNode.removeChild(this); }
+            img.src = 'broken';
+            return parent;
+        }
+
+        function pm_imageFailed(div) {
+            pm_fixIEImg(div);
+            while (div.parentNode != null && div.className.indexOf('mod-articleimage') == -1) div = div.parentNode;
+            if (div != null) { div.parentNode.removeChild(div); pm_removeTextMargin(); }
+        }
+
+        function pm_imageFailedGallery(div) {
+            pm_fixIEImg(div);
+            while (div.parentNode != null && div.nodeName != 'LI') div = div.parentNode;
+            if (div != null) { div.parentNode.removeChild(div); pm_updateGallery(); }
+        }
+
+        function pm_updateGallery() {
+            if (typeof updateGallery == 'function') updateGallery();
+            else setTimeout('pm_updateGallery();', 100);
+        }
+
+        function pm_imageFailedFeatured(div) {
+            var logo = 'http://economictimes.indiatimes.com/photo/6151078.cms'
+            if (logo != '') {
+                div.parentNode.parentNode.className = 'photowrapper photowrapper-logo';
+                div.className = 'featured-logo';
+                div.src = logo;
+                return;
+            }
+            div = pm_fixIEImg(div);
+            while (div.parentNode != null && div.className.indexOf('mod-homepageimage') == -1) div = div.parentNode;
+            if (div != null) div.parentNode.removeChild(div);
+        }
+
+        function pm_imageFailedRelatedLink(div) {
+            div = pm_fixIEImg(div);
+            while (div.parentNode != null && div.className.indexOf('image') == -1) div = div.parentNode;
+            if (div != null) {
+                var pN = div.parentNode;
+                pN.removeChild(div);
+                while (pN.parentNode != null && pN.className.indexOf('image-body') == -1) pN = pN.parentNode;
+                if (pN != null) pN.className = 'text-body';
+            }
+        }
+
+        function pm_imageFailedRelatedPhoto(div) {
+            div = pm_fixIEImg(div);
+            while (div.parentNode != null && div.className.indexOf('photos') == -1) div = div.parentNode;
+            if (div != null) div.parentNode.removeChild(div);
+        }
+
+        function pm_removeTextMargin() {
+            var by = document.getElementById('mod-article-byline');
+            var tx = document.getElementById('mod-a-body-first-para');
+            if (by != null) by.style.marginRight = '0px';
+            if (tx != null) tx.style.marginRight = '0px';
+        }
+        </script>
+        <title>World's 1st dengue vaccine likely by 2015: Sanofi - Economic Times</title><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><link rel="canonical" href="http://articles.economictimes.indiatimes.com/2014-11-04/news/55757625_1_dengue-vaccine-vaccine-unit-dengue-fever" /><!-- Begin comScore Tag -->
+	<script>
+	var _comscore = _comscore || [];
+  	_comscore.push({ c1: "2", c2: "6036484" });
+  	(function() {
+    	var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    	s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    	el.parentNode.insertBefore(s, el);
+ 	})();
+	</script>
+	<noscript>
+  		<img src="http://b.scorecardresearch.com/p?c1=2&c2=6036484&cv=2.0&cj=1" />
+	</noscript>
+	<!-- End comScore Tag -->
+        <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+        <!-- Times Trends Code Part 1 - add it just under opening  <head> tag before any other javascript -->
+
+        <script language="javascript">
+            function blockError(){return true;}
+            window.onerror = blockError;
+            var dtTT_startofpage = new Date();
+            var rndtno = Math.random();
+            var timeslog_channel_url = 'articles.economictimes.indiatimes.com';
+            document.write('<img border="0" width="0" height="0" style="display:none;visibility:hidden;" src="http://timeslog.indiatimes.com/timeslog.dll/topcnt?CHUR=articles.economictimes.indiatimes.com&randomno='+ rndtno +'" align="left"/>');
+        </script>
+        <noscript>
+            <img width="0" height="0" border="0" style="display:none;visibility:hidden;" src="http://timeslog.indiatimes.com/timeslog.dll/topcnt?CHUR=articles.economictimes.indiatimes.com&nojs=1"/>
+        </noscript>
+        
+        <script type='text/javascript'>
+        (function() {
+        var useSSL = 'https:' == document.location.protocol;
+        var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+        </script>
+
+        <script type='text/javascript'>
+        googletag.defineSlot('/7176/Economictimes/ET_PerfectMarket/ET_PerfectMarket/ET_ROS_ATF_PM_300', [300, 250], 'div-gpt-ad-1339646484517-0').addService(googletag.pubads());
+        googletag.pubads().enableSyncRendering();
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+        </script><script src="/tracker.js.php?8095c983af7a8d105ddc6575199b1fa5292c3b1f" type="text/javascript"></script>
+        <script type="text/javascript">
+                    setCookie("pmk_tn", "ap-ET_Blended_Ads", 3600);
+                    var sessId = getCookie("sessid");
+                    if (!sessId) {
+                        sessId = guid();
+                        setCookie("sessid", sessId, (30*60));
+                    }
+                    var uuId = getCookie("uuid");
+                    if (!uuId) {
+                        uuId = sessId;
+                        setCookie("uuid", uuId, (60*60*24*30*12*24));
+                    }
+                    var traffic_provider = getParamFromPMCookie("s");
+                    if(!traffic_provider) {
+                        traffic_provider = derive_traffic_provider();
+                        putParamIntoPMCookie("s", traffic_provider);
+                    }
+                    var traffic_type = getParamFromPMCookie("n");
+                    if(!traffic_type) {
+                        traffic_type = derive_traffic_type();
+                        putParamIntoPMCookie("n", traffic_type);
+                    }
+                    referring_domain = get_referring_domain();
+
+                    var tracSessParams = "sessid="+sessId+"&uuid="+uuId+"&s="+traffic_provider+"&n="+traffic_type+"&rd="+referring_domain;
+
+                    var query = get_query();
+                    if(query) {
+                        tracSessParams = tracSessParams + "&q=" + query;
+                    }
+                    var referring_url = get_referring_url();
+                    if(referring_url) {
+                        tracSessParams = tracSessParams + "&ru=" + encode(referring_url);
+                    }
+                    var user_agent = navigator.userAgent;
+                    if(user_agent) {
+                        tracSessParams = tracSessParams + "&ua=" + encode(user_agent);
+                    }
+                </script>
+                <link rel="stylesheet" type="text/css" href="/css/ap-ET_Blended_Ads.css?8095c983af7a8d105ddc6575199b1fa5292c3b1f" media="all" /><meta property="og:site_name" content="The Economic Times" /><script type="text/javascript">function downloadJSAtOnload(){var element, js;element=document.createElement("script");element.setAttribute("type", "text/javascript");element.setAttribute("src", "/sn.php?out=js&t=World%27s+1st+dengue+vaccine+likely+by+2015%3A+Sanofi&u=http%3A%2F%2Feconomictimes.indiatimes.com%2Findustry%2Fhealthcare%2Fbiotech%2Fpharmaceuticals%2Fworlds-1st-dengue-vaccine-likely-by-2015-sanofi%2Farticleshow%2F45035232.cms%3Fintenttarget%3Dno&l=AddThis%3B&i=mod-sm-badge-top-defer&p=EconomicTimes");document.body.appendChild(element);element=document.createElement("script");element.setAttribute("type", "text/javascript");element.setAttribute("src", "/sn.php?out=js&t=World%27s+1st+dengue+vaccine+likely+by+2015%3A+Sanofi&u=http%3A%2F%2Feconomictimes.indiatimes.com%2Findustry%2Fhealthcare%2Fbiotech%2Fpharmaceuticals%2Fworlds-1st-dengue-vaccine-likely-by-2015-sanofi%2Farticleshow%2F45035232.cms%3Fintenttarget%3Dno&l=Twitter_Large-Facebook_RecommendLarge-StumbleUpon_Large-&i=mod-sm-badge-defer&p=EconomicTimes");document.body.appendChild(element);element=document.createElement("script");element.setAttribute("type", "text/javascript");element.setAttribute("src", "/modal/modal.js.php?i=mod-article-image&g=false&c=55757625&j=10&p=EconomicTimes&8095c983af7a8d105ddc6575199b1fa5292c3b1f");document.body.appendChild(element);element=document.createElement("script");element.setAttribute("type", "text/javascript");element.setAttribute("src", "/article-image-resize-compressed.js.php?i=mod-article-image");document.body.appendChild(element);element=document.createElement("script");element.setAttribute("type", "text/javascript");element.setAttribute("src", "/featured-image-offset.js.php?id=mod-article-image-lt&z=8095c983af7a8d105ddc6575199b1fa5292c3b1f");document.body.appendChild(element);element=document.createElement("script");element.setAttribute("type", "text/javascript");element.setAttribute("src", "/featured-image-offset.js.php?id=mod-article-image-ct&z=8095c983af7a8d105ddc6575199b1fa5292c3b1f");document.body.appendChild(element);element=document.createElement("script");element.setAttribute("type", "text/javjavascript");element.setAttribute("src", "/featured-image-offset.js.php?id=mod-article-image-ct&z=8095c983af7a8d105ddc6575199b1fa5292c3b1f");document.body.appendChild(element);elemascript");element.setAttribute("src", "/featured-image-offset.js.php?id=mod-article-image-rt&z=8095c983af7a8d105ddc6575199b1fa5292c3b1f");document.body.appendChild(element);}if (window.addEventListener){window.addEventListener("load", downloadJSAtOnload, false);}else if (window.attachEvent){window.attachEvent("onload", downloadJSAtOnload);}else window.onload = downloadJSAtOnload;</script><script type="text/javascript">window.google_analytics_uacct = "UA-21462242-2";</script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-198011-5', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+  ga('linker:autoLink', ['economictimes.com'] );
+  ga('send', 'pageview');
+
+</script></head><body><!-- Layout starts --><div id="layout"><div id="area-top" class="area"><div id="mod-nav" class="mod-economictimesnav">
+            <script type="text/javascript">
+		function resizeHeader() {
+ 		   document.domain = 'indiatimes.com';
+ 
+		   var frame = document.getElementById('mod-nav').getElementsByTagName('iframe')[0];
+		   if (frame == null || frame.length == 0) {
+		        return;
+		   }
+ 		   var frmDoc = frame.contentWindow.document,
+	           headerHeight = frmDoc.getElementById('header').offsetHeight,
+	           menuHeight = frmDoc.getElementById('navs').offsetHeight,
+	           newHeight = headerHeight + menuHeight + 60;
+ 
+		   // update the iframe height
+		   if (frame.style.setAttribute) {
+		        frame.style.setAttribute('height', newHeight);
+		   } else {
+		        frame.style.height = newHeight + 'px';
+		        frame.setAttribute('height', newHeight);
+		   }
+		}
+            </script><iframe onload="resizeHeader();" src=http://economictimes.indiatimes.com/pmetnav/45035232.cms?pagesize=3 scrolling=no frameborder=0 width=100% height=246px></iframe></div><div id="mod-breadcrumb" class="mod-economictimesarticlepagebreadcrumb mod-articlepagebreadcrumb mod-breadcrumb"><span class="bc-text">You are here: </span><span class="home-link"><a  href="http://www.economictimes.indiatimes.com">Home</a>></iframe></div><div id="mod-breadcrumb" class="mod-economictimesarticlepagebreadcrumb mod-articlepagebreadcrumb mod-breadcrumb"><span class="bc-text">You are here: </span><span class="home-link"><a  href="http://www.economicti</span><span class="bread-crumb-separator">></span><span class="archive-link"><a  href="/">Collections</a></span></div></div><div id="area-center-w-left" class="area"><div id="area-article-side" class="area" style="float:right;"><div id="mod-sm-badge-top" class="mod-economictimessocialmedia mod-socialmedia"><div id="mod-sm-badge-top-defer"><script type="text/javascript">/* Javascript deferred */</script></div><div class="addthis_toolbox addthis_default_style" id="mod-sm-badge-top-defer_addthis" style="display:none;"><script type="text/javascript">var addthis_options = "digg, twitter, facebook, stumbleupon, delicious, friendfeed, buzz, slashdot, reddit, mixx, fark, linkedin, aim, google, myspace, newsvine, technorati, tumblr, typepad, wordpress, more";var addthis_exclude = "print";var addthis_pub     = "archivedigger";</script><a addthis:url="http://economictimes.indiatimes.com/industry/healthcare/biotech/pharmaceuticals/worlds-1st-dengue-vaccine-likely-by-2015-sanofi/articleshow/45035232.cms" class="addthis_button_email" title="Email"></a><a addthis:url="http://economictimes.indiatimes.com/industry/healthcare/biotech/pharmaceuticals/worlds-1st-dengue-vaccine-likely-by-2015-sanofi/articleshow/45035232.cms" class="addthis_button_print" title="Print"></a><a addthis:url="http://economictimes.indiatimes.com/industry/healthcare/biotech/pharmaceuticals/worlds-1st-dengue-vaccine-likely-by-2015-sanofi/articleshow/45035232.cms" class="addthis_button_reddit" title="Reddit"></a><a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', 'http://economictimes.indiatimes.com/industry/healthcare/biotech/pharmaceuticals/worlds-1st-dengue-vaccine-likely-by-2015-sanofi/articleshow/45035232.cms', 'World%26%23039%3Bs+1st+dengue+vaccine+likely+by+2015%3A+Sanofi');" onmouseout="addthis_close();" onclick="return addthis_sendto();" class="addthis_button_expanded" title="More Choices"></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script></div></div><div id="mod-sm-badge" class="mod-economictimessocialmedia mod-socialmedia"><div id="mod-sm-badge-defer"><script type="text/javascript">/* Javascript deferred */</script></div><div class="addthis_toolbox addthis_default_style" id="mod-sm-badge-defer_addthis" style="display:none;"><script type="text/javascript">var addthis_options = "digg, twitter, facebook, stumbleupon, delicious, friendfeed, buzz, slashdot, reddit, mixx, fark, linkedin, aim, google, myspace, newsvine, technorati, tumblr, typepad, wordpress, more";var addthis_exclude = "print";var addthis_pub     = "archivedigger";</script><a addthis:url="http://economictimes.indiatimes.com/industry/healthcare/biotech/pharmaceuticals/worlds-1st-dengue-vaccine-likeline, technorati, tumblr, typepad, wordpress, y-by-2015-sanofi/articleshow/45035232.cms" class="addthis_button_email" title="Email"></a><a addthis:url="http://economictimes.indiatimes.com/industry/healthcare/biotech/pharmaceuticals/worlds-1st-dengue-vaccine-likely-by-2015-sanofi/articleshow/45035232.cms" class="addthis_button_print" title="Print"></a><a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', 'http://economictimes.indiatimes.com/industry/healthcare/biotech/pharmaceuticals/worlds-1st-dengue-vaccine-likely-by-2015-sanofi/articleshow/45035232.cms', 'World%26%23039%3Bs+1st+dengue+vaccine+likely+by+2015%3A+Sanofi');" onmouseout="addthis_close();" onclick="return addthis_sendto();" class="addthis_button_expanded" title="More Choices"></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script></div></div></div><div id="mod-article-header" class="mod-economictimesarticleheader mod-articleheader"><h1 class="multi-line-title-1">World's 1st dengue vaccine likely by 2015: Sanofi</h1></div><div id="area-article-first-block" class="area"><div id="mod-article-byline" class="mod-economictimesarticlebyline mod-articlebyline"><span class="pubdate">PTI</span><span class="separator"> </span><span>Nov 4, 2014, 08.09PM IST</span></div><div class="float" style="clear:both;height:1px;line-height:1px;"><img src="/images/pixel.gif" height="1" width="1" alt="" /></div><div id="mod-rel-ads" class="mod-relatedtopics"><div class="float" style="clear:both;height:1px;line-height:1px;"><img src="/images/pixel.gif" height="1" width="1" alt="" /></div><div id="mod-rel-ads" class="mod-relatedtopics"><div class="header">Tags:</div><ul><li><a href="http://economictimes.indiatimes.com/topic/World-Health-Organization">World Health Organization</a>|</li><li><a href="http://economictimes.indiatimes.com/topic/Sanofi-Pasteur">Sanofi Pasteur</a>|</li><li><a href="http://economictimes.indiatimes.com/topic/Sanofi">Sanofi</a>|</li><li><a href="http://economictimes.indiatimes.com/topic/FDA">FDA</a>|</li><li><a href="http://economictimes.indiatimes.com/topic/Diplomatic-Relations">Diplomatic Relations</a>|</li><li><a href="http://economictimes.indiatimes.com/topic/DENGUE">DENGUE</a></li></ul></div></ul></div><div id="mod-article-image" style="float:right;" class="mod-economictimesarticlepageimage mod-articlepageimage mod-articleimage"><div id="mod-article-image-box" style=" width:280px; height:200px;"><ul class="main-image" style=" width:280px; height:200px;"><li style=" width:280px; height:200px;"><a id="mod-article-image-link" class="thickbox" onclick="return false;" target="_blank" href="http://economictimes.indiatimes.com/photo/45035273.cms" title=" (Country Head, Sanofi Pasteur, Stephan Barth, said dengue is a serious health concern in India, causing a significant but under-reported burden.)"><img src="http://economictimes.indiatimes.com/photo/45035273.cms" title="" alt="" style=" width:266.66666666667px; height:200px;" onerror="pm_imageFailed(this);"/></a></li></ul></div><div class="main-image-info" style="width:275px">(Country Head, Sanofi Pasteur,&hellip;)</div><script src="/modal/js/lazyload-min.js" type="text/javascript"></script></div><div id="mod-a-body-first-para" style="margin-right: 267px;" class="mod-economictimesarticletext mod-articletext"><p>  MUMBAI: As India deals with increasing number of <a href="http://economictimes.indiatimes.com/topic/dengue">dengue</a> fever, pharma major <a href="http://economictimes.indiatimes.com/topic/Sanofi">Sanofi</a> today said the world's first vaccine against the mosquito-borne viral disease may be available by the second half of 2015.</p><p> Sanofi Pasteur, the French drugmaker's vaccine unit, will file for registration of its vaccine candidate and subject to regulatory approval the world's first dengue vaccine could be available by the second half of 2015, the company said in a statement.</p></div></div><div class="float" style="clear:both;height:1px;line-height:1px;"><img src="/images/pixel.gif" height="1" width="1" alt="" /></div><div id="mod-ctr-lt-in-top" class="mod-economictimesadcpc mod-adcpc"><script type="text/javascript"> var adSkipCounter = 0; </script><iframe id="mod-ctr-lt-in-top-frame" src='javascript:(function() {document.open();document.write("<style>body{margin:0px;}</style><script>google_ad_client=\"ca-pub-8415620659137418\";google_ad_slot=\"3278470286\";google_ad_width=\"640\";google_ad_height=\"160\";google_ad_channel=\"9126527482,1000001860,1000000195\";google_adtest=\"off\";google_safe=\"high\";google_hints=\"vaccine research health priority study programme\";google_max_num_ads=\"4\";google_override_format=true;google_page_url=\"http://articles.economictimes.indiatimes.com/2014-11-04/news/55757625_1_dengue-vaccine-vaccine-unit-dengue-fever\";</script><script type=\"text/javascript\" src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\"></script>");document.close();})();' frameborder="0" scrolling="no" width="640" height="160"></iframe></div><div id="mod-a-body-after-first-para" class="mod-economictimesarticletextwithadcpc mod-economictimesarticletext mod-articletext"><p> Results of the last stage of the clinical study showed that the vaccine gives a 95.5 per cent protection against severe dengue and an 80.3 per cent reduction in the risk of hospitalisation, it said.</p><p> Dengue has been a serious challenge to public health as it affects lakhs of people annually in India, Sanofi said.</p><p> The company added that its phase III efficacy clinical study programme for the dengue vaccine candidate was conducted in over 31,000 participants across 10 endemic countries in Asia and Latin America.</p><p> "We plan to submit the vaccine for licences in 2015 in endemic countries where dengue is a public health priority," <a href="http://economictimes.indiatimes.com/topic/Sanofi Pasteur">Sanofi Pasteur</a> President and CEO Olivier Charmeil said.</p><p> Country Head, Sanofi Pasteur, Stephan Barth, said dengue is a serious health concern in India, causing a significant but under-reported burden.</p><p> "Over recent months we have seen a worrying increase in cases in many parts of the country, putting a huge strain on healthcare systems. India is part of Sanofi Pasteur's global development strategy for dengue vaccine.</p><p> "Results of CYD 15 are very encouraging and in line with the results of the phase III study results in Asia and the Phase II study results in India," he said.</p><p> Committed to dengue vaccine research for more than 20 years, Sanofi Pasteur aims to make the tropical ailment the next vaccine-preventable disease, Barth said. <meta content="cms.next" name="cmsei"></p></div><div id="mod-a-body-after-first-para-ad-cpc" class="mod-adcpc"><iframe id="mod-a-body-after-first-para-ad-cpc-frame" src='javascript:(function() {document.open();document.write("<style>body{margin:0px;}</style><script>google_ad_client=\"ca-pub-8415620659137418\";google_ad_slot=\"3278470286\";google_ad_width=\"640\";google_ad_height=\"110\";google_ad_channel=\"9126527482,1000001860,1000000195\";google_adtest=\"off\";google_safe=\"high\";google_hints=\"vaccine research health priority study programme\";google_max_num_ads=\"2\";google_override_format=true;google_page_url=\"http://articles.economictimes.indiatimes.com/2014-11-04/news/55757625_1_dengue-vaccine-vaccine-unit-dengue-fever\";</script><script type=\"text/javascript\" src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\"></script>");document.close();})();' frameborder="0" scrolling="no" width="640" height="110"></iframe></div><div id="mod-a-body-after-second-para" class="mod-economictimesarticletextwithadcpc mod-economictimesarticletext mod-articletext"></div><div id="mod-featured-title" class="mod-text">FEATURED ARTICLES</div><div id="mod-article-image-lt" style="float:left;" class="mod-featuredimage tplmodulefeaturedimage mod-homepageimage mod-articleimage"><div class="photowrapper"><a  href="/2014-09-16/news/53983463_1_daily-turnover-institutional-broking-business-direct-market-access"><img src="http://economictimes.indiatimes.com/photo/42577760.cms" onerror="pm_imageFailedFeatured(this);" ></a></div><div class="text-area"><div class="title"><a  href="/2014-09-16/news/53983463_1_daily-turnover-institutional-broking-business-direct-market-access"><h2>How a two-year-old firm is hitting a daily turnover of Rs 4,000 crore today</h2></a></div></div></div><div id="mod-article-image-ct" style="float:left;" class="mod-featuredimage tplmodulefeaturedimage mod-homepageimage mod-articleimage"><div class="photowrapper"><a  href="/2014-12-28/news/57420356_1_rakesh-jhunjhunwala-rare-enterprises-bull-market"><img src="http://economictimes.indiatimes.com/photo/45649514.cms" onerror="pm_imageFailedFeatured(this);" ></a></div><div class="text-area"><div class="title"><a  href="/2014-12-28/news/57420356_1_rakesh-jhunjhunwala-rare-enterprises-bull-market"><h2>Top seven stocks Rakesh Jhunjhunwala is betting on</h2></a></div></div></div><div id="mod-article-image-rt" style="float:left;" class="mod-featuredimage tplmodulefeaturedimage mod-homepageimage mod-articleimage"><div class="photowrapper"><a  href="/2014-09-04/news/53563459_1_iphone-5s-exclusive-apple-stores-16gb"><img src="http://economictimes.indiatimes.com/photo/41637673.cms" onerror="pm_imageFailedFeatured(this);" ></a></div><div class="text-area"><div class="title"><a  href="/2014-09-04/news/53563459_1_iphone-5s-exclusive-apple-stores-16gb"><h2>Apple cuts online price of iPhone 5S to clear stocks; ties up with Amazon, Flipkart and Snapdeal</h2></a></div></div></div><div class="float" style="clear:both;height:1px;line-  href="/2014-09-04/news/53563height:1px;"><img src="/images/pixel.gif" height="1" width="1" alt="" /></div><div id="mod-featured-more" class="mod-text">More:</div><div id="area-two-col-1" class="area" style="float:left;"><div id="mod-hp-article-list-1" class="mod-economictimesarticles mod-articles"><div class="article"><div class="title"><h2><a title="Apple cuts online price of iPhone 5S to clear stocks; ties up with Amazon, Flipkart and Snapdeal" href="/2014-09-04/news/53563459_1_iphone-5s-exclusive-apple-stores-16gb">Apple cuts online price of iPhone 5S to clear stocks; ties up with Amazon, Flipkart and Snapdeal</a></h2></div></div><div class="article"><div class="title"><h2><a title="India's first e-reader Wink unveiled, supporting 15 languages" href="/2010-08-19/news/28663093_1_e-reader-wink-e-books">India's first e-reader Wink unveiled, supporting 15 languages</a></h2></div></div><div class="article"><div class="title"><h2><a title="Taliban says Pakistan Army fooled youth for blood game in Kashmir" href="/2014-12-28/news/57462577_1_pakistani-army-proxy-war-indian-kashmir">Taliban says Pakistan Army fooled youth for blood game in Kashmir</a></h2></div></div></div></div><div id="area-two-col-2" class="area" style="float:right;"><div id="mod-hp-article-list-2" class="mod-economictimesarticles mod-articles"><div class="article"><div class="title"><h2><a title="15 strategists of 2015 who are in a hurry to usher in change" href="/2014-12-31/news/57558302_1_fm-arun-jaitley-india-inc-banking-system">15 strategists of 2015 who are in a hurry to usher in change</a></h2></div></div><div class="article"><div class="title"><h2><a title="Argumentative &amp; too emotional - are Indians tough to work with?" href="/2014-12-26/news/57420442_1_tetsuya-takano-ricoh-india-expat-ceos">Argumentative & too emotional - are Indians tough to work with?</a></h2></div></div><div class="article"><div class="title"><h2><a title="Fed warns of catastrophe if $14.3-trn debt limit not raised" href="/2011-02-05/news/28432182_1_debt-limit-debt-ceiling-ben-bernanke">Fed warns of catastrophe if $14.3-trn debt limit not raised</a></h2></div></div></div></div><div id="mod-outbrain" class="mod-outbrain">
+	    <div class="OUTBRAIN" data-src="http://articles.economictimes.indiatimes.com/2014-11-04/news/55757625_1_dengue-vaccine-vaccine-unit-dengue-fever" data-widget-id="AR_3" data-ob-template="economictimescom" ></div>
+	    <script type="text/javascript" async="async" src="http://widgets.outbrain.com/outbrain.js"></script> 
+        <div class="float" style="clear:both;height:1px;line-height:1px;"><img src="/images/pixel.gif" height="1" width="1" alt="" /></div></div><div class="float" style="clear:both;height:1px;line-height:1px;"><img src="/images/pixel.gif" height="1" width="1" alt="" /></div><div id="mod-readers-comment" class="mod-readerscomment"><script type="text/javascript">
+            function resizeComment(iframe) {
+                // set the domain to same as nav to fix cross site scripting
+                document.domain = 'indiatimes.com';
+                // get height of their header (drawn different heights if sub sections)
+                var iframes = document.getElementById('mod-readers-comment').getElementsByTagName('iframe');
+                if (iframes == null || iframes.length == 0) return;
+                var header = iframes[0].contentWindow.document.getElementById('cmtMainBox');
+                if (header == null) return;
+                var navHeight = header.offsetHeight;
+                // update the iframe height
+                if (iframe.style.setAttribute) iframe.style.setAttribute('height', navHeight);
+                else iframe.style.height = navHeight + 'px';
+            }
+            </script><iframe onload="resizeComment(this);" src="http://economictimes.indiatimes.com/pmcomment/45035232.cms" scrolling="no" frameborder="0"  width="630px;"></iframe></div></div><div id="area-left" class="area"><div id="mod-left-sky" class="mod-economictimesadcpc mod-adcpc"><iframe id="mod-left-sky-frame" src='javascript:(function() {document.open();document.write("<style>body{margin:0px;}</style><script>google_ad_client=\"ca-pub-8415620659137418\";google_ad_slot=\"4755203488\";google_ad_width=\"300\";google_ad_height=\"250\";google_ad_channel=\"9126527482,1000001860,1000000195\";google_adtest=\"off\";google_safe=\"high\";google_hints=\"vaccine research health priority study programme\";google_max_num_ads=\"4\";google_override_format=true;google_page_url=\"http://articles.economictimes.indiatimes.com/2014-11-04/news/55757625_1_dengue-vaccine-vaccine-unit-dengue-fever\";</script><script type=\"text/javascript\" src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\"></script>");document.close();})();' frameborder="0" scrolling="no" width="300" height="250"></iframe></div><div id="mod-ad-stil" class="mod-economictimesadstil"><div id='div-gpt-ad-1339646484517-0' >
+     <script type='text/javascript'>
+        googletag.display('div-gpt-ad-1339646484517-0');
+    </script>
+    </div></div><div id="mod-stock" class="mod-economictimesstock"></div><div id="mod-related-articles" class="mod-relatedarticlessimplelist mod-relatedarticles"><div class="header">RELATED ARTICLES</div><ul><li><a  title="Vaccine against dengue being developed: Ghulam Nabi Azad" href="/2012-11-30/news/35483469_1_dengue-ghulam-nabi-azad-vaccine"><span class="title">Vaccine against dengue being developed: Ghulam Nabi Azad</span></a><br /><span class="date">November 30, 2012</span></li><div class= being developed: Ghulam Nabi Azad" href="/2012-11-30/news/35483469_1_dengue-ghulam-nabi-a"delimiter"></div><li><a  title="A big shot" href="/2006-06-18/news/27435720_1_small-pox-vaccine-sanofi-aventis-group"><span class="title">A big shot</span></a><br /><span class="date">June 18, 2006</span></li><div class="delimiter"></div><li><a  title="ICGEB joins with US based group to develop vaccines" href="/2008-01-14/news/28494477_1_infectious-diseases-vaccines-genetic-engineering-and-biotechnology"><span class="title">ICGEB joins with US based group to develop vaccines</span></a><br /><span class="date">January 14, 2008</span></li></ul></div><div id="mod-spot-light" class="mod-economictimesspotlight">
+<iframe ALLOWTRANSPARENCY="true" title="spotlight" align="center"
+SCROLLING="no" FRAMEBORDER="0" VSPACE="0" HSPACE="0" MARGINHEIGHT="0"
+
+MARGINWIDTH="0" height="612" width="320" src="http://economictimes.indiatimes.com/pmspotlight.cms" name="spotlight"></iframe>
+</div></div><div id="area-bottom" class="area"><div id="mod-ln-bt" class="mod-line"><div style="border-top:3px solid #A3BEC8; height:1px; width:100%;"></div></center></div><div class="float" style="clear:both;"><img src="/images/pixel.gif" height="1" width="1" alt="" /></div><div id="area-bottom-bt" class="area"><div id="mod-logo-footer" style="float:left;" class="mod-image"><a href="http://www.economictimes.com" target="_new"><img src="http://economictimes.indiatimes.com/photo/6151078.cms" width="286" height="23" alt="The Economic Times"/></a></div><div id="mod-copyright" style="float:left;" class="mod-text">© 2015 Bennett, Coleman & Co. Ltd. All rights reserved</div><div id="mod-kw-index" style="float:right;" class="mod-text"><a  href="/keywords" target="_new" >Index by Keyword</a></div><div id="mod-pipe-bt1" style="float:right;" class="mod-text">|</div><div id="mod-date-index" style="float:right;" class="mod-indexbydate mod-text"><a  href="/2015/jan/05" target="_new" >Index by Date</a></div></div><div class="float" style="clear:both;"><img src="/images/pixel.gif" height="1" width="1" alt="" /></div><div id="area-bottom-bt" class="area"><div id="mod-footer-link-text" style="float:left;" class="mod-text"><a  href="http://www.economictimes.com" target="_new" >www.economictimes.com</a></div><div id="mod-feedback" style="float:right;" class="mod-text"><a  href="http://economictimes.indiatimes.com/feedback.cms" target="_new" >Feedback</a></div><div id="mod-pipe-bt2" style="float:right;" class="mod-text">|</div><div id="mod-privacy" style="float:right;" class="mod-text"><a  href="http://www.indiatimes.com/privacypolicy/" target="_new"  rel="nofollow" >Privacy Policy</a></div><div id="mod-pipe-bt3" style="float:right;" class="mod-text">|</div><div id="mod-tos" style="float:right;" class="mod-text"><a  href="http://www.indiatimes.com/policyterms/3441503.cms" target="_new"  rel="nofollow" >Terms of Use</a></div><div id="mod-pipe-bt4" style="float:right;" class="mod-text">|</div><div id="mod-advertise-withus" style="float:right;" class="mod-text"><a  href="http://advertise.indiatimes.com" target="_new" >Advertise with us</a></div></div>
+<script type='text/javascript'>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21462242-2']);
+  _gaq.push(['_setVar', 'Template-ap-ET_Blended_Ads']);
+  _gaq.push(['_setCustomVar', 1, 'Template', 'Template-ap-ET_Blended_Ads', 3]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- Part 2 add it just before closing body tag -->
+
+<script language="javascript" src="http://timestrends.indiatimes.com/timestrend_v13.js"></script>
+<noscript><img width="1" height="1" src="http://timeslog.indiatimes.com/timeslog.dll/pgcnt?CHUR=articles.economictimes.indiatimes.com&nojs=1"></noscript>
+
+<!-- End Code for timesofindia.indiatimes.com -->
+
+
+<script type="text/javascript">
+var _sf_async_config={uid:10538,domain:"articles.economictimes.indiatimes.com"};
+		(function(){
+		  function loadChartbeat() {	
+	          window._sf_endpt=(new Date()).getTime();
+		    var e = document.createElement('script');
+		    e.setAttribute('language', 'javascript');	
+		    e.setAttribute('type', 'text/javascript');
+		    e.setAttribute('src', (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") + "static.chartbeat.com/js/chartbeat.js");				    document.body.appendChild(e);	
+				  }			
+	  var oldonload = window.onload;		
+	  window.onload = (typeof window.onload != 'function') ?    loadChartbeat : function() {
+		 oldonload(); 
+		loadChartbeat(); };			
+		})();				
+ </script>
+    
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" :
+"http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-e16aPraesolw6",
+labels:"The Times of India Group.The Economic Times"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-e16aPraesolw6.gif" border="0"
+height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+        
+               <!-- BEGIN EFFECTIVE MEASURE CODE -->
+		<!-- COPYRIGHT EFFECTIVE MEASURE -->
+		<script type="text/javascript">
+		    (function() {
+		        var em = document.createElement('script'); em.type = 'text/javascript';
+			em.async = true;
+		        em.src = ('https:' == document.location.protocol ? 'https://in-ssl' :
+			'http://in-cdn') + '.effectivemeasure.net/em.js';
+		        var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(em, s);
+		    })();
+		</script>
+		<noscript>
+		    <img src="//in.effectivemeasure.net/em_image" alt=""
+			style="position:absolute; left:-5px;" />
+		</noscript>
+		<!--END EFFECTIVE MEASURE CODE -->
+       </div></div><!-- Layout ends --><script type="text/javascript">
+                      //<![CDATA[
+                      document.write("<iframe onload=\"params='"+window.tracSessParams+"&pgtp=article&kwInURL=true&pi=73&ci=55757625&cat=health&pe_id=55757625&tv=ap-ET_Blended_Ads&et_nav_type=full&rna=ca-pub-8415620659137418&rn=g&rnrci=9126527482&rnrcn=%28Pre-Rules%29+EconomicTimes_Property&rncci=1000001860&rnccn=%28Pre-Rules%29+category-health&rnpci=&rnpcn=&rntci=&rntcn=&rnlci=1000000195&rnlcn=1000000195&rnp=c&rt=cpc&pageLoad=1';tracker();params='';\" frameborder=\"0\" width=\"0\" height=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" style=\"position:absolute;display:none;overflow-x:hidden;overflow-y:scroll;\"></iframe>");
+                      //]]>
+                    </script></body></html>eborder=\"0\" width=\"0\" height=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" style=\"position:absolute;display:none;overflow-x:h

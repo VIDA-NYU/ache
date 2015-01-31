@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!--
+o o     o     +              o
++   +     +             o     +       +
+            +
+o  +    +        o  +           +        +
+     __  __           _           _     _
+~_,-|  \/  | __ _ ___| |__   __ _| |__ | | ___
+    | |\/| |/ _` / __| '_ \ / _` | '_ \| |/ _ \,-~_,- - - ,
+~_,-| |  | | (_| \__ \ | | | (_| | |_) | |  __/    |   /\_/\
+    |_|  |_|\__,_|___/_| |_|\__,_|_.__/|_|\___|  ~=|__( ^ .^)
+~_,-~_,-~_,-~_,-~_,-~_,-~_,-~_,-~_,-~_,-~_,-~_,-~_,""   ""
+o o     o     +              o
++   +     +             o     +       +
+            +
+o  +    +        o  +           +        +
+-->
+<html data-env='production' lang='en' xml:lang='en'>
+<head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-1.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"faaaef6476","applicationID":"1135420","transactionName":"cAkNR0ENXQpXF0tJDUASEBxACl4R","queueTime":0,"applicationTime":170,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-476.min.js"}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwYHUF9ACQIDUVVQBw=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:20,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:20,2:21,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:21,2:20,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:21,2:20,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:21,2:20,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:21,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],20:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],21:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:20,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script>
+<script>
+  window.__o = {"channel":"world","content_type":"article","v_buy":null,"v_buy_i":null,"h_pub":2367.0,"h_buy":null,"h_pub_buy":null,"v_cur":3.3,"v_max":4.4,"v_cur_i":3,"v_max_i":4,"events":"event52,event61,event62","top_channel":"world","content_source_type":"Internal","content_source_name":"Curated","author_name":"Brian Ries & Jonathan Ellis","age":"98","pub_day":23,"pub_month":10,"pub_year":2014,"pub_date":"10/23/2014","sourced_from":"Internal","isPostView":true,"post_lead_type":"Default","topics":"Ebola,Uncategorized,U.S.,US & World","campaign":null,"display_mode":null,"viral_video_type":null};
+  window._gaq = window._gaq || [];
+  window._gaq.push(['_setAccount', 'UA-92124-1']);
+  window._geo = "US"
+  window.__domStart = (new Date().getTime())
+</script>
+<title>Ebola in NYC: Doctor Tests Positive After Returning From West Africa</title>
+<link href="http://rack.3.mshcdn.com/assets/app-2f8741e5f4acf61fa3e16a90c5c98f56.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://rack.3.mshcdn.com/assets/posts-48787b2c7c281d15ea88e9af3e09c2af.css" media="all" rel="stylesheet" type="text/css" />
+<!--[if lte IE 8]>
+<link href="http://rack.3.mshcdn.com/assets/iehax-957092b11e263c6b850533d06d5aaa2c.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<meta content='no' name='apple-mobile-web-app-capable'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='https://plus.google.com/113493854651753327245' rel='publisher'>
+<link href='http://feeds.mashable.com/Mashable' rel='alternate' title='Mashable' type='application/rss+xml'>
+<link href='http://rack.0.mshcdn.com/assets/favicon-f4f209c501a0902a12e1a674354bb356.png' rel='icon' type='image/png'>
+<meta content='mid:12105681' name='linkedin:owner'>
+<meta content='122071082108' property='fb:app_id'>
+<meta content='18807449704' property='fb:page_id'>
+<meta content='nYmtX7H2sSCkK8gHpQGxr7Es2526DgUaqb6PGYSX' name='readability-verification'>
+<meta content='app-id=910775754' name='apple-itunes-app'>
+<link href='http://rack.3.mshcdn.com/assets/mashable.touchicon-4b641ab8741e4f02da5817297fdaa9b8.png' rel='apple-touch-icon-precomposed'>
+
+<link data-page-subject="true" href="http://mashable.com/2014/10/23/nyc-ebola-doctor-guinea/" rel="canonical" /><link data-page-subject="true" href="http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw/e06c602d/3d1/Ebola-NYC-Guinea-Doctor1.jpg" rel="image_src" /><meta content="http://mashable.com/2014/10/23/nyc-ebola-doctor-guinea/" data-page-subject="true" property="og:url" /><meta content="Ebola in NYC: Doctor Tests Positive After Returning From West Africa" data-page-subject="true" property="og:title" /><meta content="article" data-page-subject="true" property="og:type" /><meta content="Mashable" data-page-subject="true" property="og:site_name" /><meta content="One day before displaying symptoms, the doctor rode three subway lines, took an Uber car and attended a bowling party." data-page-subject="true" property="og:description" /><meta content="http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw/e06c602d/3d1/Ebola-NYC-Guinea-Doctor1.jpg" data-page-subject="true" property="og:image" /><meta content="2014-10-23T21:10:49Z" data-page-subject="true" property="og:article:published_time" /><meta content="2014-10-24T04:58:07Z" data-page-subject="true" property="og:article:modified_time" /><meta content="https://www.facebook.com/mashable" data-page-subject="true" property="og:article:publisher" /><meta content="One day before displaying symptoms, the doctor rode three subway lines, took an Uber car and attended a bowling party." data-page-subject="true" name="description" /><meta content="uncategorized, us-world, us, ebola" data-page-subject="true" name="keywords" /><meta content="Ebola in NYC: Doctor Tests Positive After Returning From West Africa" data-page-subject="true" name="twitter:title" /><meta content="One day before displaying symptoms, the doctor rode three subway lines, took an Uber car and attended a bowling party." data-page-subject="true" name="twitter:description" /><meta content="http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTU2MHg3NTAKZQlqcGc/b4051e8f/3d1/Ebola-NYC-Guinea-Doctor1.jpg" data-page-subject="true" name="twitter:image" /><meta content="@mashable" data-page-subject="true" name="twitter:site" /><meta content="http://mashable.com/2014/10/23/nyc-ebola-doctor-guinea/" data-page-subject="true" name="twitter:url" /><meta content="@mashable" data-page-subject="true" name="twitter:creator" /><meta content="photo" data-page-subject="true" name="twitter:card" /><meta content="560" data-page-subject="true" name="twitter:image:width" /><meta content="750" data-page-subject="true" name="twitter:image:height" /><meta content="2014-10-23 21:10:49 UTC" data-page-subject="true" name="date" /><meta content="Brian Ries &amp; Jonathan Ellis" data-page-subject="true" name="sailthru.author" /><meta content="http://rack.1.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTExNXgxMTUjCmUJanBn/88d9ac1a/3d1/Ebola-NYC-Guinea-Doctor1.jpg" data-page-subject="true" name="sailthru.image.thumb" /><meta content="http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/bf4912c9/3d1/Ebola-NYC-Guinea-Doctor1.jpg" data-page-subject="true" name="sailthru.image.full" /><meta content="http://rack.0.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTYwMHgzMzgjCmUJanBn/2fcc2b74/3d1/Ebola-NYC-Guinea-Doctor1.jpg" data-page-subject="true" name="sailthru.lead_image" /><meta content="http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTI4OHgxNjIjCmUJanBn/7af8f152/3d1/Ebola-NYC-Guinea-Doctor1.jpg" data-page-subject="true" name="sailthru.secondary_image" /><meta content="false" data-page-subject="true" name="sailthru.exclude_homepage" /><meta content="http://on.mash.to/1ws75bl" data-page-subject="true" name="short_url" /><meta name=parsely-page content='{"title":"Ebola in NYC: Doctor Tests Positive After Returning From West Africa","link":"http://mashable.com/2014/10/23/nyc-ebola-doctor-guinea/","image_url":"http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw/e06c602d/3d1/Ebola-NYC-Guinea-Doctor1.jpg","type":"post","post_id":2962691,"pub_date":"2014-10-23T21:10:49Z","section":"world","author":"Brian Ries","tags":["Internal","Internal - Curated","Topics - Ebola","Topics - Uncategorized","Topics - U.S.","Topics - US & World"]}' data-page-subject=true >
+
+<script src='//cdn.optimizely.com/js/58011369.js'></script>
+<script src='http://analytics.revee.com/analytics-v1.js'></script>
+<script async='async' src='http://widgets.outbrain.com/outbrain.js'></script>
+<script src="http://rack.2.mshcdn.com/assets/app-d732f41623f93030c0c2648a41d0053d.js" type="text/javascript"></script>
+<!--[if lte IE 8]>
+<script src="http://rack.2.mshcdn.com/assets/polyfill-6620db93ad92c8f787391361dfe3f23c.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+<body class='body_posts body_show' data-authorid='9421' data-gvcfv='true' data-gvcv='true' data-gvmfv='true' data-gvmv='true' data-jsid='posts/show' data-postid='2962691' data-sec0='world' data-sec1='us' data-sec2='posts' viewport='fixed'>
+<h1 class='semantic'>Mashable</h1>
+<header id='flyout-container'></header>
+<div id='peek'>
+<div id='sticky'>
+<div class='cookie-notice'>
+<div class='wrap'>
+We're using cookies to improve your experience.
+<a href="/cookie-policy/" class="cta">Click Here to find out more.</a>
+<div class='dismiss'></div>
+</div>
+</div>
+
+
+<header id='site-header'><div class='navbar'>
+<div class='navbar-inner'><ul class='inline main-menu nav us'>
+<li class='menu'><a class='icon-reorder' href='#'></a></li>
+<li class='logo us'><a class='brand' data-turbo-target='body-container' href='/'><span>Mashable</span><img alt="Header_logo.v2.us" class="light" src="http://rack.3.mshcdn.com/assets/header_logo.v2.us-30574d105ad07318345ec8f1a85a3efa.png" /><img alt="Header_logo.v2.us.dark" class="dark" src="http://rack.3.mshcdn.com/assets/header_logo.v2.us.dark-5d78b91550b870c7ed82c3497f34947e.png" /></a>
+<div class='geos-content'>
+<a class='geo' href='?geo=AU' onclick='$.cookie("geo","AU")'>Mashable Australia</a>
+<a class='geo' href='?geo=GB' onclick='$.cookie("geo","GB")'>Mashable UK</a>
+</div></li>
+<li class='submenu collapsable pull-right' id='sign-in'><a href='/login/'><span>Sign in</span></a></li>
+<li class='follow submenu pull-right'><a class='follow-trigger' href='/2011/11/18/follow-mashable/'><span class='fb'></span>
+<span class='tw'></span>
+<span class='gp'></span></a>
+<div class='submenu-content'>
+<div class='page-container'>
+<div class='pull-right follow'>
+<a class='social-stub social-share facebook like' data-default='1' data-href='http://facebook.com/mashable' data-shares='2.4m'>Like</a>
+<a class='twitter-follow-button' data-dnt='true' data-show-count='true' data-show-screen-name='false' href='https://twitter.com/mashable'>
+Follow @mashable
+</a>
+<div class='g-follow' data-annotation='bubble' data-height='20' data-href='//plus.google.com/+Mashable' data-rel='author'></div>
+<div class='g-override-container'>
+<div class='g-ytsubscribe' data-channel='mashable'></div>
+</div>
+<a alt='RSS Feed' class='rss' href='http://feeds.mashable.com/Mashable' title='RSS Feed'></a>
+<a alt='Email Subscriptions' class='email' href='/subscriptions' title='Email Subscriptions'></a>
+<div class='more'>
+<a href="/2011/11/18/follow-mashable/">see more&nbsp;&nbsp;&gt;</a></div>
+</div>
+</div>
+</div></li>
+<li class='nav-search submenu pull-right'><a class='search-trigger' href='/search/'>Search</a>
+<div class='dropdown-content'>
+<div class='page-container'>
+<div class='header-search-form'>
+<form accept-charset="UTF-8" action="/search/" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<div class='ie-search-wrapper'><input autocomplete="off" class="header-search" id="q" name="q" type="text" value="" /></div>
+<input class="btn btn-primary header-search-submit" name="commit" type="submit" value="Search" /></form><div class='header-search-results'></div>
+</div>
+</div>
+</div></li>
+<li class='collapsable channel submenu' data-tags='how-to,facebook,twitter,youtube,google-plus'><a href="/social-media/">Social Media</a><div class='submenu-content'></div></li>
+<li class='collapsable channel submenu' data-tags='apps-software,dev-design,gadgets,mobile'><a href="/tech/">Tech</a><div class='submenu-content'></div></li>
+<li class='collapsable channel submenu' data-tags='advertising,marketing,media,small-business,startups,jobs'><a href="/business/">Business</a><div class='submenu-content'></div></li>
+<li class='collapsable channel submenu' data-tags='film,gaming,music,sports,television'><a href="/entertainment/">Entertainment</a><div class='submenu-content'></div></li>
+<li class='collapsable channel submenu' data-tags='us,climate,retronaut,space,australia,uk,social-good'><a href="/world/">World</a><div class='submenu-content'></div></li>
+<li class='collapsable channel submenu' data-tags='family-parenting,health-fitness,home,travel,work-and-play'><a href="/lifestyle/">Lifestyle</a><div class='submenu-content'></div></li>
+<li class='collapsable channel submenu' data-tags='pics,memes,comics,conversations,videos-watercooler'><a href="/watercooler/">Watercooler</a><div class='submenu-content'></div></li>
+<li class='submenu more'><a href='#'><!-- %span=t "header.nav.more" -->
+<span>More</span></a>
+<div class='submenu-content'>
+<div class='page-container'>
+<ul class='columns'><li><ul class='column-list'><li class='header'>Channels</li>
+<li><a href="/social-media/">Social Media</a></li>
+<li><a href="/tech/">Tech</a></li>
+<li><a href="/business/">Business</a></li>
+<li><a href="/entertainment/">Entertainment</a></li>
+<li><a href="/world/">World</a></li>
+<li><a href="/lifestyle/">Lifestyle</a></li>
+<li><a href="/watercooler/">Watercooler</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Company</li><li><a href="/about/">About Us</a></li><li><a href="http://www.wrightsmedia.com/sites/mashable/">Licensing &amp; Reprints</a></li><li><a href="http://mashable.com/2014/">Archive</a></li><li><a href="http://mashable.theresumator.com/">Mashable Careers</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Contact</li><li><a href="/contact-us/">Contact Us</a></li><li><a href="/submit/">Submit News</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Advertise</li><li><a href="/advertise/">Advertise</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Legal</li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li><li><a href="/cookie-policy/">Cookie Policy</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Apps</li><li><a href="https://itunes.apple.com/us/app/mashable/id910775754?mt=8">iPhone / iPad</a></li><li><a href="https://play.google.com/store/apps/details?id=com.mashable.android.phoenix">Android</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Resources</li><li><a href="/2011/11/18/follow-mashable/">Subscriptions</a></li></ul></li><li><ul class='column-list'>
+<li class='header'>Sites</li><li><a href="http://findjobs.mashable.com">Jobs</a></li><li><a href="http://events.mashable.com/">Events</a></li><li><a href="http://mashable.com/sgs/">Social Good Summit</a></li><li><a href="http://mashable.com/media-summit/">Media Summit</a></li></ul></li></ul>
+</div>
+</div></li>
+</ul></div>
+</div></header>
+</div>
+<div id='scrollable'><div class='loader'></div>
+<div class="ad_container"><span class="ad" data-params="{&quot;tile&quot;:3,&quot;adnum&quot;:3,&quot;sec0&quot;:&quot;world&quot;,&quot;sec1&quot;:&quot;us&quot;,&quot;sec2&quot;:&quot;posts&quot;,&quot;postid&quot;:2962691,&quot;gvcfv&quot;:&quot;true&quot;,&quot;gvmfv&quot;:&quot;true&quot;,&quot;gvcv&quot;:&quot;true&quot;,&quot;gvmv&quot;:&quot;true&quot;,&quot;authorid&quot;:9421,&quot;type&quot;:&quot;survey&quot;}"></span></div><header class='box970'>
+<div class='page-container'><center class='visible-desktop'><div class="ad_container"><span class="ad" data-params="{&quot;tile&quot;:4,&quot;adnum&quot;:4,&quot;sec0&quot;:&quot;world&quot;,&quot;sec1&quot;:&quot;us&quot;,&quot;sec2&quot;:&quot;posts&quot;,&quot;postid&quot;:2962691,&quot;gvcfv&quot;:&quot;true&quot;,&quot;gvmfv&quot;:&quot;true&quot;,&quot;gvcv&quot;:&quot;true&quot;,&quot;gvmv&quot;:&quot;true&quot;,&quot;authorid&quot;:9421,&quot;type&quot;:&quot;banner&quot;}"></span></div></center></div>
+</header>
+<div class='posts show' id='body-container'><div id='main'>
+<div class='page-container'>
+
+<div id='body'><hgroup class='page-header channel' data-channel='world' data-section='sec0=world&amp;sec1=index&amp;sec2=' id='post-head'>
+<h2>World</h2>
+<div class='follow-channel'>
+<div class='follow-buttons'>
+<a class='social-stub social-share facebook like' data-default='1' data-href='http://facebook.com/mashable' data-shares='1.7m'>Like</a>
+<a class='social-stub social-share twitter follow' data-shares='3.7m' href='https://twitter.com/intent/follow?region=follow_link&amp;screen_name=mashable&amp;tw_p=followbutton&amp;variant=2.0' target='_blank'>Follow</a>
+<div class='g-follow' data-annotation='bubble' data-height='20' data-href='//plus.google.com/+Mashable' data-rel='author'></div>
+</div>
+</div>
+</hgroup>
+<div class='flex-box'>
+<div class='box-cell'>
+<div class='above_960 adsense outside_post'>
+<script>
+  if(typeof(google_num_ads) != "undefined") google_skip = google_num_ads;
+  google_ad_client = "pub-9942038924324175";
+  if($('.adsense').last().filter('.above_960').length > 0 && $(document).width() < 960){
+    var hideAd = true;
+  }else{
+    var hideAd = false;
+  }
+</script>
+<script>
+  if(!hideAd) google_ad_slot = "3991492827";
+</script>
+<script>
+  if(!hideAd) google_ad_width = 728;
+</script>
+<script>
+  if(!hideAd) google_ad_height = 15;
+</script>
+<script src='http://pagead2.googlesyndication.com/pagead/show_ads.js'></script>
+</div>
+
+<div id='post-content'>
+<div id='post-slider'><article class='full post' data-channel='world' data-id='54496ee912d2cd1ad400023a' data-subchannels='us' data-topic='' data-velocity='869,866,864,861,859,856,854,851,849,846,844,841,839,836,834,831,829,827,824,822,819,817,814,812,809,807,805,802,800,797,795,793,790,788,786,783,781,779,776,774,772,769,767,765,763,760,758,756,754,752' data-wp-id='2962691' id='story'>
+<header class='article-header'>
+<h1 class='title' href='http://mashable.com/2014/10/23/nyc-ebola-doctor-guinea/'>Ebola in NYC: Doctor Tests Positive After Returning From West Africa</h1>
+<aside class='shares social'>
+<div class='total-shares' data-index='0'>
+<em>4.2k</em>
+<div class='caption'>Shares</div>
+</div>
+<div class='share-buttons'>
+<div class='share-button-boxy'><a class="social-stub social-share facebook" data-layout="box_count" data-shares="2733" data-uid="cqJl" href="#">Share</a></div>
+<div class='share-button-boxy'><a class="social-stub social-share twitter" data-shares="1139" data-uid="cqJl" href="https://twitter.com/intent/tweet?original_referer=http://mashable.com/&amp;source=tweetbutton&amp;text=Ebola+in+NYC%3A+Doctor+Tests+Positive+After+Returning+From+West+Africa&amp;url=http%3A%2F%2Fmashable.com%2F2014%2F10%2F23%2Fnyc-ebola-doctor-guinea%2F&amp;via=mashable">Tweet</a></div>
+<div class='share-button-boxy'><a class="social-stub social-share google_plus" data-shares="132" data-size="tall" data-uid="cqJl" href="#">Share</a></div>
+<div class='share-button-boxy'><a class="social-stub social-share linked_in" data-shares="13" data-uid="cqJl" href="#"></a></div>
+<div class='share-button-boxy'><a class="social-stub social-share stumble_upon" data-shares="167" data-uid="cqJl" href="#"></a></div>
+<div class='share-button-boxy'><a class="social-stub social-share pinterest" data-shares="3" data-uid="cqJl" href="#"></a></div>
+</div>
+<div class='velocity-graph tooltip-trigger' title='The Mashable Velocity graph shows how quickly people are sharing this article on the social Web.'>
+<canvas class='velocity'></canvas>
+<div class='caption'>What's This?</div>
+</div>
+</aside>
+
+<div class='above_960 adsense'>
+<script>
+  if(typeof(google_num_ads) != "undefined") google_skip = google_num_ads;
+  google_ad_client = "pub-9942038924324175";
+  if($('.adsense').last().filter('.above_960').length > 0 && $(document).width() < 960){
+    var hideAd = true;
+  }else{
+    var hideAd = false;
+  }
+</script>
+<script>
+  if(!hideAd) google_ad_channel = "9077376301";
+</script>
+<script>
+  if(!hideAd) google_ad_output = "js";
+</script>
+<script>
+  if(!hideAd) google_max_num_ads = "3";
+</script>
+<script>
+  if(!hideAd) google_ad_type = "text";
+</script>
+<script>
+  if(!hideAd) google_feedback = "on";
+</script>
+<script src='http://pagead2.googlesyndication.com/pagead/show_ads.js'></script>
+</div>
+
+<figure class='article-image'><img alt="Ebola-nyc-guinea-doctor1" class="microcontent" data-fragment="lead-image" data-image="http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/bf4912c9/3d1/Ebola-NYC-Guinea-Doctor1.jpg" data-micro="1" data-url="null" src="http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/bf4912c9/3d1/Ebola-NYC-Guinea-Doctor1.jpg" /><figcaption class="image-caption">Dr. Craig Spencer posted this photo on his Facebook page before it was deactivated on Thursday.</figcaption></figure>
+
+<div class="article-info"><span class="byline basic">By Brian Ries &amp; Jonathan Ellis</span><time datetime="Thu, 23 Oct 2014 21:10:49 +0000">2014-10-23 21:10:49 UTC</time></div>
+
+</header>
+<section class='article-content'>
+
+<p><strong>UPDATED, 11:50 p.m. ET</strong></p>
+<p>NEW YORK — A doctor who recently returned from treating Ebola patients in West Africa tested positive for the virus at New York City's Bellevue Hospital on Thursday, becoming the first person to bring Ebola to the city.</p>
+<p><strong>3 things you need to know:</strong></p>
+<blockquote>
+<li><p>Dr. Craig Spencer, a health care worker who recently returned from West Africa, is in isolation at Bellevue Hospital in New York City.</p></li>
+<li><p>Officials are tracking four people who came into close contact with him "during the relevant period." Ebola can't spread if the patient isn't showing symptoms.</p></li>
+<li><p>On Wednesday, Spencer rode three subway lines, took an Uber car and attended a bowling party, but didn't have symptoms at the time.</p></li>
+</blockquote>
+<p>Mayor Bill de Blasio, Gov. Andrew Cuomo and health officials spoke at a press conference Thursday night, where De Blasio emphasized that Ebola is very difficult to contract and New Yorkers should not be alarmed.</p>
+<h3>Listen to the press conference</h3>
+<p><iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/173582060&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></p>
+<p>The doctor, identified as Craig Spencer, 33, had worked with Doctors Without Borders in Guinea treating Ebola patients. He returned to New York on Oct. 17, arriving at Kennedy Airport. On Thursday, he was rushed to the hospital with Ebola-like symptoms.</p>
+<div class="see-also"><p>See also: <a href="http://mashable.com/2014/10/23/new-york-city-ebola-preparations/">Ebola Arrives in New York. How Prepared Is the City to Handle It?</a></p></div>
+<p>Now, Spencer is the first person with Ebola in New York City — a diagnosis that will be confirmed with additional testing. He is also be the second person infected with Ebola to have traveled among the general public in the U.S. (Texas nurse Amber Joy Vinson is the <a href="http://mashable.com/2014/10/15/dallas-ebola-frontier-airline-nurse/" data-crackerjax="#post-slider">first</a>), and the first Doctors Without Borders staffer to developed confirmed Ebola after returning to his or her country from the heart of the Ebola outbreak in West Africa. More than 700 staff have safely returned, a spokesperson for the organization told <em>Mashable</em>.</p>
+<blockquote class="twitter-tweet" lang="en">
+<p>"There is no reason for New Yorkers to be alarmed," <a href="https://twitter.com/BilldeBlasio" target="_blank">@BilldeBlasio</a> says <a href="http://t.co/XOiR1qLfdb" target="_blank">pic.twitter.com/XOiR1qLfdb</a></p>
+<p>— MashableLIVE (@MashableLive) <a href="https://twitter.com/MashableLive/status/525464225201020928" target="_blank">October 24, 2014</a></p>
+</blockquote>
+<p>Spencer displayed his first symptom — a fever — Thursday morning, and wouldn't have posed a danger to others until he did so. <span class="microcontent" data-fragment="officials-said-he-did" data-description='Officials said he "did attempt to self-isolate" during his time in New York' data-micro="1">Officials said he "did attempt to self-isolate" during his time in New York</span>, taking his temperature twice a day, "being mindful about contact with people" and spending "most of his time inside his apartment."</p>
+<p>But as the press conference went on, officials spooled out a growing list of places and people that Spencer did encounter before he displayed symptoms. He went on a three-mile jog — "a sign that he was feeling quite well," according to Dr. Mary Travis Bassett, the city's health commissioner. He visited the High Line park in Manhattan. And, "He may have gone to a restaurant along the way," Bassett said.</p>
+<p>On Wednesday alone, one day before the onset of the fever, Spencer took an Uber car and rode the subway system on the A, L and 1 lines, officials said. He also attended a bowling party in Williamsburg, Brooklyn, that night. "He did bowl," said Bassett, identifying the venue as a bar/alley hybrid named <a href="http://www.thegutterbrooklyn.com/" target="_blank">The Gutter</a>. </p>
+<blockquote class="twitter-tweet" lang="en">
+<p>Patient went on a three-mile jog, took subway system — A train, 1 train, L train — went to bowling alley in Williamsburg, NYC official says.</p>
+<p>— MashableLIVE (@MashableLive) <a href="https://twitter.com/MashableLive/status/525466801560633345" target="_blank">October 24, 2014</a></p>
+</blockquote>
+<p>(Earlier Thursday night, a concert planned at The Gutter was canceled. The bowling alley was closed "due to unforeseen circumstances," a source familiar with the situation told <em>Mashable</em>.)</p>
+<p>Spencer was feeling well the whole time, including at the bowling alley, except for a lingering feeling of fatigue that began on the 21st, Bassett said. Spencer's friends said he appeared to be well, she added.</p>
+<blockquote class="twitter-tweet" lang="en">
+<p>This is an evolving situation that we are well prepared to handle. The health of all NYers remains our top priority. <a href="http://t.co/Erv3KV4s9n" target="_blank">pic.twitter.com/Erv3KV4s9n</a></p>
+<p>— Dr. Mary Bassett (@DrMaryTBassett) <a href="https://twitter.com/DrMaryTBassett/status/525489649922621441" target="_blank">October 24, 2014</a></p>
+</blockquote>
+<p>Under <a href="http://mashable.com/2014/10/22/ebola-cdc-active-monitoring/" data-crackerjax="#post-slider">new CDC rules</a> that go into effect on Monday for anyone coming to the U.S. from West African nations, including Guinea, Spencer would likely have been placed under mandatory quarantine for three weeks once he landed in New York. Because he arrived 10 days ago, before the new rules were even announced, he instead was only self-monitoring for Ebola symptoms, without being required to limit his movements.</p>
+<p>On Thursday afternoon, New York officials were already tracing Spencer's movements and contacts — even before the Ebola test came back positive. Authorities quarantined his fiancée, <a href="http://www.cnn.com/2014/10/23/health/new-york-possible-ebola-case/index.html" target="_blank">CNN reported</a>.</p>
+<p>"<span class="microcontent" data-fragment="we-believe-there-are" data-description="We believe there are four people who he came in contact with during the relevant period" data-micro="1">We believe there are four people who he came in contact with during the relevant period</span>, and we are already in contact with the four people," Cuomo said at the press conference. The other three people were described as friends.</p>
+<p>The Uber driver who gave Spencer a ride is not considered at risk, officials said. Only people who had direct contact with Spencer's bodily fluids while he was displaying symptoms would be a cause for concern.</p>
+<p>Case in point: After Thomas Eric Duncan, the first person diagnosed with Ebola in the U.S., <a href="http://mashable.com/2014/10/08/dallas-ebola-patient-dead/" data-crackerjax="#post-slider">died in Dallas</a> on Oct. 8, two nurses who cared for him were also stricken with Ebola — but no one outside the hospital contracted the virus, even the people with whom Duncan lived.</p>
+<p>"We had the advantage of learning from the Dallas experience," Cuomo said.</p>
+<blockquote class="twitter-tweet" lang="en">
+<p>"We have had the advantage of learning from the Dallas situation and had a training of 5,000 healthcare workers." <a href="https://twitter.com/hashtag/Ebola?src=hash" target="_blank">#Ebola</a></p>
+<p>— Andrew Cuomo (@NYGovCuomo) <a href="https://twitter.com/NYGovCuomo/status/525465222682001408" target="_blank">October 24, 2014</a></p>
+</blockquote>
+<p>In Manhattan, Bellevue Hospital <a href="http://mashable.com/2014/10/23/new-york-city-ebola-preparations/" data-crackerjax="#post-slider">has been training</a> hospital workers on Ebola care for weeks, running drills and even staging scenes with actors. Mayor de Blasio said earlier Thursday that the team was very prepared, and Spencer, who was in quarantine on the infectious disease floor, had been "very communicative, very precise."</p>
+<p><iframe width="640" height="360" src="//www.youtube.com/embed/hXHkj8F4SbM?enablejsapi=1&amp;rel=0" frameborder="0" allowfullscreen></iframe></p>
+<p>"We can't say that this is an unexpected circumstance," given the number of people who travel to New York, Cuomo said. "We are as ready as one could be for this circumstance."</p>
+<p>A spokesperson told <em>Mashable</em> that Spencer notified Doctors Without Borders on Thursday morning that he had developed a fever. The organization requires consistent health monitoring for those who have traveled to Ebola-ravaged countries and specific guidelines that govern the 21 day incubation period of the virus.</p>
+<p>Among them: Check temperature two times per day, be aware of relevant symptoms such as fever, stay within four hours of a hospital with isolation facilities and immediately contact Doctors Without Borders if any relevant symptoms develop.</p>
+<p>Spencer did that on Thursday.</p>
+<p>"Doctors Without Borders, in the interest of public safety and in accordance with its protocols, immediately notified the New York City Department of Health &amp; Mental Hygiene, which is directly managing the individual’s care," the spokesperson said.</p>
+<blockquote class="twitter-tweet" lang="en">
+<p>Bellevue Hospital has admitted a patient presenting fever &amp; gastrointestinal symptoms who will be tested for Ebola: <a href="http://t.co/hHQq8u1hRf" target="_blank">http://t.co/hHQq8u1hRf</a></p>
+<p>— nycHealthy (@nycHealthy) <a href="https://twitter.com/nycHealthy/status/525370571304214529" target="_blank">October 23, 2014</a></p>
+</blockquote>
+<p>Sources <a href="http://nypost.com/2014/10/23/nyc-may-have-its-first-ebola-case/" target="_blank">tell the <em>New York Post</em></a> that Spencer had a 103-degree fever and nausea. He was rushed in an ambulance with police escorts from his apartment in Harlem to Bellevue on Thursday afternoon.</p>
+<p><iframe width="640" height="360" src="//www.youtube.com/embed/HTlQ_x9uE8c?enablejsapi=1&amp;rel=0" frameborder="0" allowfullscreen></iframe></p>
+<p>FDNY workers in hazmat suits were spotted outside his apartment.</p>
+<p><iframe width="640" height="360" src="//www.youtube.com/embed/-VZHQ-GCdHQ?rel=0" frameborder="0" allowfullscreen></iframe></p>
+<p>Health care workers handed out fliers with information about Ebola to residents who live in the man's neighborhood. </p>
+<figure class="image"><p><img data-credit-link="" data-credit-name="EPA/ANDREW GOMBERT" data-credit-label="" data-credit-provider="Custom type" data-caption="New York City Health department workers hand out Ebola information cards to neighbors of a suspected Ebola-infected doctor on Oct. 23. " title="New York City Health department workers hand out Ebola information cards to neighbors of a suspected Ebola infected Health Care worker" src="http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzIzLzczL05ld1lvcmtFYm9sLmM5MzgwLmpwZwpwCXRodW1iCTEyMDB4OTYwMD4/b3cafdbf/cda/New-York-Ebola-03.jpg" alt="New York City Health department workers hand out Ebola information cards to neighbors of a suspected Ebola infected Health Care worker" class="" data-width="1920" data-fragment="m!5140" data-image="http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzIzLzczL05ld1lvcmtFYm9sLmM5MzgwLmpwZwpwCXRodW1iCTEyMDB4OTYwMD4/b3cafdbf/cda/New-York-Ebola-03.jpg" data-micro="1"></p>
+<figcaption class="image-caption"><p>New York City Health department workers hand out Ebola information cards to neighbors of a suspected Ebola-infected doctor on Oct. 23. </p></figcaption><div class="image-credit"><p>Image:  EPA/ANDREW GOMBERT</p></div></figure><figure class="image"><p><img data-credit-link="" data-credit-name="EPA/ANDREW GOMBERT" data-credit-label="" data-credit-provider="Custom type" data-caption="A woman holds an information card about Ebola on Oct. 23, 2014 in New York City. " title="New York City Health department workers hand out Ebola information cards to neighbors of a suspected Ebola infected Health Care worker" src="http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzIzLzczL05ld1lvcmtFYm9sLjdjNjk0LmpwZwpwCXRodW1iCTEyMDB4OTYwMD4/f666816f/07c/New-York-Ebola-04.jpg" alt="New York City Health department workers hand out Ebola information cards to neighbors of a suspected Ebola infected Health Care worker" class="" data-width="1920" data-fragment="m!33d4" data-image="http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzIzLzczL05ld1lvcmtFYm9sLjdjNjk0LmpwZwpwCXRodW1iCTEyMDB4OTYwMD4/f666816f/07c/New-York-Ebola-04.jpg" data-micro="1"></p>
+<figcaption class="image-caption"><p>A woman holds an information card about Ebola on Oct. 23, 2014 in New York City. </p></figcaption><div class="image-credit"><p>Image:  EPA/ANDREW GOMBERT</p></div></figure><p>Thursday's events were in stark contrast to the day Spencer set off for West Africa. </p>
+<p>Departing Brussels on Sept. 18 bound for Guinea, Spencer posted a photo on Facebook that showed the doctor in his new hazmat suit.</p>
+<p>"Off to Guinea with Doctors Without Borders," he wrote. "Please support organizations that are sending support or personnel to West Africa, and help combat one of the worst public health and humanitarian disasters in recent history."</p>
+<p>New York City's team of disease detectives continues to trace Spencer's movements. "We're still getting more information," Bassett said.</p>
+<p><iframe width="640" height="360" src="//www.youtube.com/embed/p1qfSuiMQ8Q?enablejsapi=1&amp;" frameborder="0" allowfullscreen></iframe></p>
+<p><em>Have something to add to this story? Share it in the comments.</em></p>
+<script>      window._msla=window.loadScriptAsync||function(src,id){if(document.getElementById(id))return;var js=document.createElement('script');js.id=id;js.src=src;document.getElementsByTagName('script')[0].parentNode.insertBefore(js,fjs);};
+_msla("//platform.twitter.com/widgets.js","twitter_jssdk");</script>
+
+
+
+</section>
+<footer class='article-topics'>
+Topics:
+<a href="/category/ebola/">Ebola</a>, <a href="/category/us/">U.S.</a>, <a href="/category/us-world/">US & World</a>
+</footer>
+<div id='outbrain-container'>
+<div class='OUTBRAIN' data-ob-template='mashable' data-src='http://mashable.com/2014/10/23/nyc-ebola-doctor-guinea/' data-widget-id='AR_3'></div>
+</div>
+<div data-display-daily-newsletter='show' id='newsletter-signup'></div>
+
+<script>
+  if(window.pageChanged)
+    window.omni({"channel":"world","content_type":"article","v_buy":null,"v_buy_i":null,"h_pub":2367.0,"h_buy":null,"h_pub_buy":null,"v_cur":3.3,"v_max":4.4,"v_cur_i":3,"v_max_i":4,"events":"event52,event61,event62","top_channel":"world","content_source_type":"Internal","content_source_name":"Curated","author_name":"Brian Ries & Jonathan Ellis","age":"98","pub_day":23,"pub_month":10,"pub_year":2014,"pub_date":"10/23/2014","sourced_from":"Internal","isPostView":true,"post_lead_type":"Default","topics":"Ebola,Uncategorized,U.S.,US & World","campaign":null,"display_mode":null,"viral_video_type":null});
+    metaData = {"link":[["canonical","http://mashable.com/2014/10/23/nyc-ebola-doctor-guinea/"],["image_src","http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw/e06c602d/3d1/Ebola-NYC-Guinea-Doctor1.jpg"]],"meta_property":[["og:url","http://mashable.com/2014/10/23/nyc-ebola-doctor-guinea/"],["og:title","Ebola in NYC: Doctor Tests Positive After Returning From West Africa"],["og:type","article"],["og:site_name","Mashable"],["og:description","One day before displaying symptoms, the doctor rode three subway lines, took an Uber car and attended a bowling party."],["og:image","http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw/e06c602d/3d1/Ebola-NYC-Guinea-Doctor1.jpg"],["og:article:published_time","2014-10-23T21:10:49Z"],["og:article:modified_time","2014-10-24T04:58:07Z"],["og:article:publisher","https://www.facebook.com/mashable"]],"meta_name":[["description","One day before displaying symptoms, the doctor rode three subway lines, took an Uber car and attended a bowling party."],["keywords","uncategorized, us-world, us, ebola"],["twitter:title","Ebola in NYC: Doctor Tests Positive After Returning From West Africa"],["twitter:description","One day before displaying symptoms, the doctor rode three subway lines, took an Uber car and attended a bowling party."],["twitter:image","http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTU2MHg3NTAKZQlqcGc/b4051e8f/3d1/Ebola-NYC-Guinea-Doctor1.jpg"],["twitter:site","@mashable"],["twitter:url","http://mashable.com/2014/10/23/nyc-ebola-doctor-guinea/"],["twitter:creator","@mashable"],["twitter:card","photo"],["twitter:image:width","560"],["twitter:image:height","750"],["date","2014-10-23 21:10:49 UTC"],["sailthru.author","Brian Ries & Jonathan Ellis"],["sailthru.image.thumb","http://rack.1.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTExNXgxMTUjCmUJanBn/88d9ac1a/3d1/Ebola-NYC-Guinea-Doctor1.jpg"],["sailthru.image.full","http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/bf4912c9/3d1/Ebola-NYC-Guinea-Doctor1.jpg"],["sailthru.lead_image","http://rack.0.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTYwMHgzMzgjCmUJanBn/2fcc2b74/3d1/Ebola-NYC-Guinea-Doctor1.jpg"],["sailthru.secondary_image","http://rack.2.mshcdn.com/media/ZgkyMDE0LzEwLzI0Lzg1L0Vib2xhTllDR3VpLjY2NGNhLmpwZwpwCXRodW1iCTI4OHgxNjIjCmUJanBn/7af8f152/3d1/Ebola-NYC-Guinea-Doctor1.jpg"],["sailthru.exclude_homepage",false]],"short_url":[["short_url","http://on.mash.to/1ws75bl"]]};
+</script>
+<div class='right_rail_replace'>
+<div class="ad_container"><span class="ad" data-params="{&quot;tile&quot;:1,&quot;adnum&quot;:1,&quot;sec0&quot;:&quot;world&quot;,&quot;sec1&quot;:&quot;us&quot;,&quot;sec2&quot;:&quot;posts&quot;,&quot;postid&quot;:2962691,&quot;gvcfv&quot;:&quot;true&quot;,&quot;gvmfv&quot;:&quot;true&quot;,&quot;gvcv&quot;:&quot;true&quot;,&quot;gvmv&quot;:&quot;true&quot;,&quot;authorid&quot;:9421,&quot;type&quot;:&quot;no_right_rail&quot;}"></span></div>
+</div>
+</article>
+</div>
+<div class='article-comments limit-comments'>
+<div data-article-id="54496ee912d2cd1ad400023a" data-checksum="f60ef629ba4250ddea40975a4b4b7fa7" data-collection-meta="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6IkVib2xhIGluIE5ZQzogRG9jdG9yIFRlc3RzIFBvc2l0aXZlIEFmdGVyIFJldHVybmluZyBGcm9tIFdlc3QgQWZyaWNhIiwidXJsIjoiaHR0cDovL21hc2hhYmxlLmNvbS8yMDE0LzEwLzIzL255Yy1lYm9sYS1kb2N0b3ItZ3VpbmVhLyIsInRhZ3MiOiJ1bmNhdGVnb3JpemVkLHVzLXdvcmxkLHVzLGVib2xhIiwiY2hlY2tzdW0iOiJmNjBlZjYyOWJhNDI1MGRkZWE0MDk3NWE0YjRiN2ZhNyIsImFydGljbGVJZCI6IjU0NDk2ZWU5MTJkMmNkMWFkNDAwMDIzYSJ9.9uRkPceQCHcyvJDDJvzwugSEw4s6ElqKXI5cMCcZEBk" data-network="mashable.fyre.co" data-root="zor.livefyre.com" data-site-id="312274" id="livefyre_comments"></div>
+<a class='btn btn-light load-comments' href='#'>Load Comments</a>
+<div id='powered_by_livefyre_new'>
+<a href='http://livefyre.com' target='_blank'>Powered by Livefyre</a>
+</div>
+</div>
+</div>
+</div>
+<aside class='box-cell sidebar'>
+<div class='ad sidebar-inset sidebar-drop'>
+<div class="ad_container"><span class="ad" data-params="{&quot;tile&quot;:2,&quot;adnum&quot;:1,&quot;sec0&quot;:&quot;world&quot;,&quot;sec1&quot;:&quot;us&quot;,&quot;sec2&quot;:&quot;posts&quot;,&quot;postid&quot;:2962691,&quot;gvcfv&quot;:&quot;true&quot;,&quot;gvmfv&quot;:&quot;true&quot;,&quot;gvcv&quot;:&quot;true&quot;,&quot;gvmv&quot;:&quot;true&quot;,&quot;authorid&quot;:9421,&quot;type&quot;:&quot;right_rail&quot;}"></span></div>
+
+</div>
+<h1 class='ribbon hot'>What's Hot</h1>
+<div class='sidebar-inset' id='big-stories'></div>
+</aside>
+</div>
+<div id='more-in-channel'>
+<div class='page-header channel' data-channel='world' data-section='sec0=world&amp;sec1=index&amp;sec2='>
+<h2>More in World</h2>
+</div>
+<div class='fixable-wrapper' id='column-headers'>
+<div class='column-headers'>
+<div class='headers'>
+<div class='header column1 waypoint' data-fixselector='header.fixable'><a data-short='New' href='#'>
+<em>What's New</em>
+</a></div>
+<div class='header column2 waypoint' data-fixselector='header.fixable'><a data-short='Rising' href='#'>
+<em>What's Rising</em>
+</a></div>
+<div class='header column3 waypoint' data-fixselector='header.fixable'><a data-short='Hot' href='#'>
+<em>What's Hot</em>
+</a></div>
+</div>
+</div>
+</div>
+<div class='slide-window'>
+<div class='flex-box columns'><section class='column box-cell new-stories' id='column-new'><h1 class='semantic'>What's New</h1>
+<div class='column-content'></div></section><section class='column box-cell hot-stories' id='column-rising'><h1 class='semantic'>What's Rising</h1>
+<div class='column-content'></div></section><section class='column box-cell big-stories' id='column-hot'><h1 class='semantic'>What's Hot</h1>
+<div class='column-content'></div></section></div>
+</div>
+</div>
+
+<script>
+  loadScriptAsync("//platform.twitter.com/oct.js", "twitteroct")
+  var timer;
+  timer = every(500, function() {
+    if ((typeof twttr !== "undefined" && twttr !== null) && (twttr.conversion != null)) {
+      clearInterval(timer);
+      return twttr.conversion.trackPid('l4o6d');
+    }
+  });
+</script>
+<noscript>
+<img alt='' height='1' src='https://analytics.twitter.com/i/adsct?txn_id=l4o6d&amp;p_id=Twitter' style='display:none;' width='1'>
+<img alt='' height='1' src='//t.co/i/adsct?txn_id=l4o6d&amp;p_id=Twitter' style='display:none;' width='1'>
+</noscript>
+
+<div id='parsely-root' style='display: none'>
+<span data-parsely-site='mashable.com' id='parsely-cfg'></span>
+</div>
+<script>
+  loadScriptAsync("//static.parsely.com/p.js", "parsely")
+</script>
+</div>
+</div>
+</div><div id='fb-root'></div><script>
+  if(window.initPage) { window.initPage() }
+  else { $(function() { window.initPage(); })}
+</script>
+</div><footer id='site-footer-wrapper'>
+<div class='page-container' id='site-footer'><ul class='nav'><li><a href="/about/">About Us</a></li><li><a href="http://findjobs.mashable.com">Jobs</a></li><li><a href="/advertise/">Advertise</a></li><li><a href="/2011/05/09/connect-with-mashable/">Subscribe</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li></ul><ul class='social'><li><a class='facebook' href='http://www.facebook.com/mashable/' target='_social'></a></li>
+<li><a class='twitter' href='https://twitter.com/mashable' target='_social'></a></li>
+<li><a class='gplus' href='https://plus.google.com/+Mashable' target='_social'></a></li>
+<li><a class='rss' href='http://feeds.mashable.com/Mashable' target='_social'></a></li>
+<li><a class='pinterest' href='http://pinterest.com/mashable/' target='_social'></a></li>
+<li><a class='youtube' href='http://www.youtube.com/user/mashable' target='_social'></a></li>
+<li><a class='stumbleupon' href='http://www.stumbleupon.com/channel/Mashable' target='_social'></a></li>
+<li><a class='linkedin' href='http://www.linkedin.com/today/mashable.com' target='_social'></a></li></ul>
+<div class='about'>
+<a class='brand' href='/'>
+Mashable
+</a>
+<span class='blurb'>is a leading source for news, information and resources for the Connected Generation. Mashable reports on the importance of digital innovation and how it empowers and inspires people around the world. Mashable's record 40 million unique visitors worldwide and 20 million social media followers are one of the most influential and engaged online communities. Founded in 2005, Mashable is headquartered in New York City with an office in San Francisco.</span>
+</div>
+<ul class='copyright-and-legal'>
+<li>
+&copy;2005-2015
+Mashable, Inc.
+</li>
+<li>
+Reproduction without explicit permission is prohibited. All Rights Reserved.
+</li>
+<li>
+Designed in collaboration with <a rel="nofollow" href="http://www.codeandtheory.com">Code &amp; Theory</a>
+</li>
+</ul>
+</div>
+</footer>
+
+<noscript>
+<img src='http://b.scorecardresearch.com/p?c1=2&amp;c2=8750086&amp;cv=2.0&amp;cj=1'>
+</noscript></div>
+</div>
+</body>
+</html>

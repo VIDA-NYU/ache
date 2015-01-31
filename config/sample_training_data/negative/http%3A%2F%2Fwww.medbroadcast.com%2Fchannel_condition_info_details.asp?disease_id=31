@@ -1,0 +1,975 @@
+
+<!-- MP 20080820 - Changing to Webservice -->
+
+			<html>
+			<head>
+
+	<meta name="msvalidate.01" content="C38681D5E736FD4A6E7EEFBFD5047814" />
+	<!-- DATETIMESTAMP: 1/7/2015 2:55:38 AM -->
+			<title>Cholera - Causes, Symptoms, Treatment, Diagnosis - Causes, Symptoms, Treatment, Diagnosis - MedBroadcast</title>
+		<meta name="description" content="Cholera is a bacterial infection of the small bowel that can cause severe diarrhea and dehydration."/>
+		<meta name="keywords" content="Cholera"/>
+	
+	<meta name="robots" content="index, follow"/>
+	<meta NAME="ROBOTS" CONTENT="ALL"/>
+	<meta name="verify-v1" content="e08PWW9bKubwtLziMxmY19a4MLuW5olZ6NOixDgInmU="/>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.medbroadcast.com/rss_ch.asp"/>
+	<!--medbroadcast.com - Your complete guide to health.-->
+	
+	    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://fr.canoe.ca/generix/js/generix.js"></script>
+<script type="text/javascript" src="http://fr.canoe.ca/generix/js/GenFonction.js"></script>
+<script type="text/javascript" src="http://fr.canoe.ca/generix/dfp/external/www.medbroadcast.com/TagDfpSection.js"></script>
+
+
+		<script type="text/javascript"
+			src="http://fr.canoe.ca/generix/dfp/external/www.medbroadcast.com/homepage/TagDfpConfig.js">
+		</script>
+	
+<script type="text/javascript">
+	
+</script><script type='text/javascript'>
+	(function() {
+	var useSSL = 'https:' == document.location.protocol;
+	var src = (useSSL ? 'https:' : 'http:') +	'//www.googletagservices.com/tag/js/gpt.js';
+	document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+	})();
+</script>
+<script type="text/javascript" src="http://fr.canoe.ca/generix/dfp/TagDfpEngine.js"></script>
+
+	
+	<script language="JavaScript">
+		var path			= "";
+		var section_name	= "channel_condition_info";
+	</script>
+
+	<!-- this script contains files executed on every page -->
+	<script language="JavaScript" src="include/js/default.js" type="text/javascript"></script>
+	<script language="JavaScript" src="include/js/portal.js" type="text/javascript"></script>
+
+	<!-- Font size styles -->
+	<link rel="stylesheet" id="FontStyleSheet" type="text/css" media="all" href=""/>
+
+	<!-- this is rollover script -->
+	<script language="JavaScript" src="include/js/rollover.js" type="text/javascript"></script>
+	
+	<!-- this is for detecting flash -->
+	<script language="JavaScript" src="include/js/fpi-init.js" type="text/javascript"></script>
+	<script language="JavaScript" src="include/js/fpi-writevb.js" type="text/javascript"></script>
+	<script language="JavaScript" src="include/js/fpi-main.js" type="text/javascript"></script>
+	
+	<script language="javascript">
+		function check_quick_form(submit_type){
+			var x = document.forms["quick_search"];
+			var errmsg = new Array(), messageout="";
+			
+			if(x.search.value == ""){
+				errmsg[errmsg.length] = "Please enter search value.";
+			}else{
+				if(x.search.value.length < 3)	errmsg[errmsg.length] = "Search value must have at least 3 characters";
+			}
+			
+			if(errmsg.length > 0){
+				for(var i=0;i<errmsg.length;i++){
+					messageout+=errmsg[i]+"\n";
+				}
+				alert(messageout);
+				return false;
+			}
+			else {
+				//searchWindow = openWin( 'searching_popup.asp', 'searching_notice', 'width=200,height=100,toolbar=0,location=0,directories=0,status=0,menuBar=0,scrollBars=0,resizable=0' );
+				x.action = "search.asp";
+				
+				if(submit_type == "os"){
+					return true;
+				}else{
+					x.submit();
+				}
+			}
+		}
+		
+		var addfav = false;
+		
+		function AddFavCount(){
+			var title="Medbroadcast";
+			window.external.AddFavorite(location.href,document.title);
+			return true;
+		}
+		
+		function DisplayFavLink(){
+			var strcurrentlink = location.href
+			var pos = strcurrentlink.indexOf("?")
+			
+			if (pos == -1) {
+				window.location=location.href + '?addfav=go'
+			}
+			else {
+				window.location=location.href + '&addfav=go'
+			}
+		}
+	</script>
+	
+	<script type="text/javascript" src="include/js/flash_resize.js"></script>
+	
+	
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	
+	<script type="text/javascript" src="include/js/fd-slider.min.js"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="include/css/fd-slider.css">
+	<link rel="stylesheet" type="text/css" media="all" href="include/css/fd-slider-tooltip.css">	
+	
+	<!--[if lt IE 9]>
+	<style>
+	.fd-slider-handle:before,
+	.fd-slider-handle:after
+		{
+		display:none;
+		} 
+	</style>		
+	<![endif]-->
+    
+	
+							    		<script type="text/javascript">
+										    var $SMARTLINK_SERVER = 'http://smartlinks.mediresource.com';
+						    			</script>
+									    <script type="text/javascript" src="http://smartlinks.mediresource.com/smartlinksMB.js"></script>
+	
+  
+    <script type="text/javascript" src="include/js/search_action.js"></script>
+  
+    <!--[if gt IE 6]>
+    	<link rel="stylesheet" type="text/css" media="all" href="include/css/ie7.css" />
+    <![endif]-->
+    <!--[if IE 6]>
+    	<link rel="stylesheet" type="text/css" media="all" href="include/css/ie6.css" />
+    <![endif]-->
+	
+	<script type="text/javascript" src="include/js/entourage.min.js"></script>
+	
+	<!-- Google Analytics - BEGIN -->
+	
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-4524706-9']);
+		_gaq.push(['site._setDomainName', 'www.medbroadcast.com']);
+		_gaq.push(['_trackPageview']);
+		
+		/* Rollup tracking - BEGIN */
+		_gaq.push(['rollup._setAccount', 'UA-19576900-1']); // Create a new "tracker" for the rollup profile
+		_gaq.push(['rollup._setAllowAnchor', true]);
+		_gaq.push(['rollup._setDomainName', 'www.medbroadcast.com']); // Multiple domain environment, no main domain specified
+		
+		_gaq.push(['rollup._setAllowLinker', true]); // If links accross sites functionality is ever needed
+		_gaq.push(['rollup._trackPageview']);
+		/* Rollup tracking - END */
+	</script>
+	
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.depressionhurts').live('mouseup',function(event) {
+				_gaq.push(['rollup._trackEvent', 'Depression_Promotion', 'Inline_Click', 'depressionhurts.ca']);
+				return true;       
+			});
+		});
+		
+	</script>
+	
+	<script type="text/javascript">
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			
+			ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+	
+	<script type="text/javascript">
+	function recordOutboundLink(link, category, action, label) {
+		_gaq.push(['rollup._trackEvent', category, action, label]);
+	}
+	</script>
+
+	<!-- Google Analytics - END -->	
+	
+	<!-- Begin comScore Tag -->
+	<script>
+	  var _comscore = _comscore || [];
+	  _comscore.push({ c1: "2", c2: "8256518" });
+	  (function() {
+	    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+	    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+	    el.parentNode.insertBefore(s, el);
+	  })();
+	</script>
+	<noscript>
+	  <img src="http://b.scorecardresearch.com/p?c1=2&c2=8256518&cv=2.0&cj=1" />
+	</noscript>
+	<!-- End comScore Tag -->
+</head>
+
+<body onunload="close_win();">
+	<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-FZS9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-FZS9');</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+    var OAS_List = 'x05,Middle2,x03,Position1,Position3';
+	var OAS_sitepage = 'medbroadcast.com/ros/cholera';
+	var OAS_query = '';
+</script>
+
+
+
+
+
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+	<td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="7" alt="" border="0"></td>
+</tr>
+<tr>
+	<!--<td width="162" rowspan="3"><a href="" onfocus="this.blur();"><img src="nav_images/medbroadcast_logo.gif" width="163" height="84" alt="" border="0"></a><br><img src="nav_images/1px-trans.gif" width="1" height="7" alt="" border="0"></td>
+	<td width="140"><img src="nav_images/1px-trans.gif" width="140" height="1" alt="" border="0"></td>-->
+	
+	
+	
+	
+	<!--<td width="468"><div style="position: relative; width : 468px;"></div></td>-->
+	
+	<td width="770" align="center" colspan="3"><div style="position: relative; width : 770px;">
+<script language="javascript">fctAdTag("superbanner",MyGenericTagVar,1);</script><!-- include file = "ad_top.inc"--></div></td>
+</tr>
+<tr>
+	<td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="7" alt="" border="0"></td>
+</tr>
+<!--<tr>
+	<td width="162"><a href="" onfocus="this.blur();"><img src="nav_images/medbroadcast_logo.gif" width="163" height="84" alt="" border="0"></a><br><img src="nav_images/1px-trans.gif" width="1" height="7" alt="" border="0"></td>
+	<td colspan="2" valign="bottom">-->
+		<!-- start section menu -->
+		<!--<table width="608" border="0" cellspacing="0" cellpadding="0" align="center">
+		<tr>
+			<td width="8"><img src="nav_images/1px-trans.gif" width="8" height="1" alt="" border="0"></td>
+			<td width="149"><a href="condition_info.asp" onMouseover="msover(0);" onMouseout="msout(0);" onfocus="this.blur();"><img src="nav_images/rollover/condition_info_ov.gif" width="149" height="21" alt="" border="0" name="condition_info"></a></td>
+			<td width="1"><img src="nav_images/1px-trans.gif" width="1" height="1" alt="" border="0"></td>
+			<td width="149"><a href="drug_info.asp" onMouseover="msover(1);" onMouseout="msout(1);" onfocus="this.blur();"><img src="nav_images/rollover/drug_info_ov.gif" width="149" height="21" alt="" border="0" name="drug_info"></a></td>
+			<td width="1"><img src="nav_images/1px-trans.gif" width="1" height="1" alt="" border="0"></td>
+			<td width="149"><a href="support_groups.asp" onMouseover="msover(2);" onMouseout="msout(2);" onfocus="this.blur();"><img src="nav_images/rollover/support_groups_ov.gif" width="149" height="21" alt="" border="0" name="support_groups"></a></td>
+			<td width="1"><img src="nav_images/1px-trans.gif" width="1" height="1" alt="" border="0"></td>
+			<td width="150"><a href="ask_an_expert_general.asp" onMouseover="msover(3);" onMouseout="msout(3);" onfocus="this.blur();"><img src="nav_images/rollover/health_videos_ov.gif" width="150" height="21" alt="" border="0" name="health_videos"></a></td>
+		</tr>
+		</table>-->
+		<!-- end section menu -->
+	<!--</td>	
+</tr>
+</table>-->
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+	<td width="164" rowspan="2" valign="top" class="lightbluefill">
+		<table width="164" border="0" cellspacing="0" cellpadding="1" class="darkborderfill">
+		<tr>
+			<td>
+				<table width="162" border="0" cellspacing="0" cellpadding="1" class="whitefill">
+				<tr>
+					<td>
+						<table width="160" border="0" cellspacing="0" cellpadding="1" class="lightborderfill">
+						<tr>
+							<td><a href="http://www.medbroadcast.com/" onfocus="this.blur();"><img src="nav_images/medbroadcast_logo.gif" width="158" height="54" alt="Medbroadcast � Powered by MediResource"  title="Medbroadcast � Powered by MediResource" border="0"></a></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="160" border="0" cellspacing="0" cellpadding="1" class="lightborderfill">
+						<tr>
+							<td>
+								<!-- start search -->
+								<table width="158" border="0" cellspacing="0" cellpadding="0" class="lightbluefill">
+								<tr>
+									<td colspan="2" background="nav_images/blue_nav_1.gif"><span class="whitetext">&nbsp;Search</span></td>
+								</tr>
+								<tr>
+									<td colspan="2"><img src="nav_images/blue_nav_2.gif" width="158" height="12" alt="" border="0"></td>
+								</tr>
+								<form action="#" method="get" name="quick_search" onsubmit="return check_quick_form('os');">
+								<tr>
+									<td width="8" valign="top"><img src="nav_images/blue_nav_3.gif" width="4" height="1" alt="" border="0"><img src="nav_images/1px-trans.gif" width="4" height="1" alt="" border="0"><br><img src="nav_images/blue_nav_4.gif" width="3" height="4" alt="" border="0"></td>
+									<td width="150"><input type="text" id="search" name="search" size="17" maxlength="100" autocomplete="off" onkeypress="return filterKey(event);" onkeyup="SendQuery(this.value,'http://www.medbroadcast.com/')" onkeydown="return moveKey(event,'http://www.medbroadcast.com/')"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"><a href="#" onMouseover="msover(20);" onMouseout="msout(20);" onclick="check_quick_form('oc');" onfocus="this.blur();"><img src="nav_images/rollover/quick_go.gif" width="14" height="15" alt="Go" border="0" name="quick_go"></a><br/><div class="autocomplete" id="autocomplete"></div></td>
+								</tr>
+								</form>
+								<tr>
+									<td colspan="2"><img src="nav_images/1px-trans.gif" width="1" height="7" alt="" border="0"></td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<table width="154" border="0" cellspacing="0" cellpadding="0" align="center">
+										<tr>
+											<td class="bluefill"><span class="bigwhitetext">&nbsp;Browse alphabetically</span></td>
+										</tr>
+										<tr>
+											<td><img src="nav_images/1px-trans.gif" width="1" height="4" alt="" border="0"></td>
+										</tr>
+										<tr>
+											<td align="center">
+												<a href="browse_alphabetically.asp?search_letter=A" class="searchlink">A</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=B" class="searchlink">B</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=C" class="searchlink">C</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=D" class="searchlink">D</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=E" class="searchlink">E</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=F" class="searchlink">F</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=G" class="searchlink">G</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=H" class="searchlink">H</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=I" class="searchlink">I</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=J" class="searchlink">J</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=K" class="searchlink">K</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=L" class="searchlink">L</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=M" class="searchlink">M</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=N" class="searchlink">N</a>
+											</td>
+										</tr>
+										<tr>
+											<td><img src="nav_images/1px-trans.gif" width="1" height="4" alt="" border="0"></td>
+										</tr>
+										<tr>
+											<td align="center">
+												<a href="browse_alphabetically.asp?search_letter=O" class="searchlink">O</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=P" class="searchlink">P</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=Q" class="searchlink">Q</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=R" class="searchlink">R</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=S" class="searchlink">S</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=T" class="searchlink">T</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=U" class="searchlink">U</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=V" class="searchlink">V</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=W" class="searchlink">W</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=X" class="searchlink">X</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=Y" class="searchlink">Y</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=Z" class="searchlink">Z</a>
+											</td>
+										</tr>
+										<tr>
+											<td><img src="nav_images/1px-trans.gif" width="1" height="6" alt="" border="0"></td>
+										</tr>
+										</table>
+									</td>
+								</tr>
+								</table>
+								<!-- end search -->
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="160" border="0" cellspacing="0" cellpadding="1" class="lightborderfill">
+						<tr>
+							<td>
+								<!-- start health channels -->
+								<table width="158" border="0" cellspacing="0" cellpadding="0" class="orangefill">
+								<tr>
+								    <td colspan="3"><div class="leftTitle">HEALTH TOPICS</div></td>
+								</tr>
+								<tr>
+									<td width="3" valign="top"></td>
+									<td width="152" valign="top">
+										<table width="152" border="0" cellspacing="0" cellpadding="0" align="center">
+										<tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav92"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="darkorangefill" onclick="location.href='familyandchildhealth';" onmouseover="this.className='redfill'; this.style.cursor=cursor_pointer;" onmouseout="this.className='darkorangefill';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="whitetext" id="navid92" name="navid92">Family & Child Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav93"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="darkorangefill" onclick="location.href='menshealth';" onmouseover="this.className='redfill'; this.style.cursor=cursor_pointer;" onmouseout="this.className='darkorangefill';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="whitetext" id="navid93" name="navid93">Men's Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav94"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="darkorangefill" onclick="location.href='womenshealth';" onmouseover="this.className='redfill'; this.style.cursor=cursor_pointer;" onmouseout="this.className='darkorangefill';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="whitetext" id="navid94" name="navid94">Women's Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav95"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="darkorangefill" onclick="location.href='seniorshealth';" onmouseover="this.className='redfill'; this.style.cursor=cursor_pointer;" onmouseout="this.className='darkorangefill';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="whitetext" id="navid95" name="navid95">Seniors' Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav96"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='addiction';" onmouseover="this.className='darkbluefill'; document.getElementById('navid96').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid96').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid96" name="navid96">Addiction</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav97"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2094';" onmouseover="this.className='darkbluefill'; document.getElementById('navid97').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid97').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid97" name="navid97">Allergy</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav98"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2047';" onmouseover="this.className='darkbluefill'; document.getElementById('navid98').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid98').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid98" name="navid98">Ankylosing Spondylitis</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav99"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2039';" onmouseover="this.className='darkbluefill'; document.getElementById('navid99').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid99').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid99" name="navid99">Arthritis (Rheumatoid)</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav100"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2014';" onmouseover="this.className='darkbluefill'; document.getElementById('navid100').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid100').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid100" name="navid100">Asthma</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav101"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2126';" onmouseover="this.className='darkbluefill'; document.getElementById('navid101').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid101').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid101" name="navid101">Atrial Fibrillation</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav102"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='babyhealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid102').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid102').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid102" name="navid102">Baby Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav103"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='backhealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid103').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid103').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid103" name="navid103">Back Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav104"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2015';" onmouseover="this.className='darkbluefill'; document.getElementById('navid104').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid104').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid104" name="navid104">Bedwetting</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav105"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2046';" onmouseover="this.className='darkbluefill'; document.getElementById('navid105').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid105').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid105" name="navid105">Bladder (Overactive)</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav106"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='brainhealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid106').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid106').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid106" name="navid106">Brain Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav107"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='Cancer';" onmouseover="this.className='darkbluefill'; document.getElementById('navid107').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid107').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid107" name="navid107">Cancer</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav108"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='ChildhoodVaccinations.asp';" onmouseover="this.className='darkbluefill'; document.getElementById('navid108').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid108').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid108" name="navid108">Childhood Vaccinations</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav109"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='CholesterolMain.asp';" onmouseover="this.className='darkbluefill'; document.getElementById('navid109').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid109').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid109" name="navid109">Cholesterol</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav110"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2059';" onmouseover="this.className='darkbluefill'; document.getElementById('navid110').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid110').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid110" name="navid110">Crohn's & Colitis</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav111"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='ColdFluMain.asp';" onmouseover="this.className='darkbluefill'; document.getElementById('navid111').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid111').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid111" name="navid111">Cold and Flu</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav112"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='COPDMain.asp';" onmouseover="this.className='darkbluefill'; document.getElementById('navid112').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid112').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid112" name="navid112">COPD<span class="newchanneltext"> NEW!</span></span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav113"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='cosmeticprocedures';" onmouseover="this.className='darkbluefill'; document.getElementById('navid113').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid113').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid113" name="navid113">Cosmetic Procedures</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav114"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=1053';" onmouseover="this.className='darkbluefill'; document.getElementById('navid114').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid114').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid114" name="navid114">Depression<span class="newchanneltext"> NEW!</span></span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav115"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='diabetes';" onmouseover="this.className='darkbluefill'; document.getElementById('navid115').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid115').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid115" name="navid115">Diabetes</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav116"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=1017';" onmouseover="this.className='darkbluefill'; document.getElementById('navid116').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid116').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid116" name="navid116">Digestive Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav117"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='earhealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid117').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid117').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid117" name="navid117">Ear Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav118"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='eatingdisorders';" onmouseover="this.className='darkbluefill'; document.getElementById('navid118').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid118').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid118" name="navid118">Eating Disorders</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav119"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='eyehealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid119').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid119').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid119" name="navid119">Eye Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav120"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='FluSeasonal.asp';" onmouseover="this.className='darkbluefill'; document.getElementById('navid120').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid120').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid120" name="navid120">Flu (Seasonal)</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav121"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2048';" onmouseover="this.className='darkbluefill'; document.getElementById('navid121').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid121').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid121" name="navid121">Fertility</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav122"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='fitness';" onmouseover="this.className='darkbluefill'; document.getElementById('navid122').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid122').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid122" name="navid122">Fitness</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav123"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2003';" onmouseover="this.className='darkbluefill'; document.getElementById('navid123').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid123').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid123" name="navid123">Healthy Skin</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav124"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2104';" onmouseover="this.className='darkbluefill'; document.getElementById('navid124').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid124').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid124" name="navid124">Heart</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav125"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2049';" onmouseover="this.className='darkbluefill'; document.getElementById('navid125').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid125').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid125" name="navid125">High Blood Pressure</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav126"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2037';" onmouseover="this.className='darkbluefill'; document.getElementById('navid126').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid126').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid126" name="navid126">HPV</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav127"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='hyperhidrosis.asp?channel_id=2003&relation_id=113523&top_rec=0';" onmouseover="this.className='darkbluefill'; document.getElementById('navid127').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid127').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid127" name="navid127">Hyperhidrosis</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav128"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2035';" onmouseover="this.className='darkbluefill'; document.getElementById('navid128').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid128').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid128" name="navid128">Incontinence</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav129"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=1020';" onmouseover="this.className='darkbluefill'; document.getElementById('navid129').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid129').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid129" name="navid129">Infection</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav130"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='kidneyhealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid130').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid130').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid130" name="navid130">Kidney Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav131"></td><td width="5"><img src="nav_imagen="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src=s/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2180';" onmouseover="this.className='darkbluefill'; document.getElementById('navid131').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid131').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid131" name="navid131">Low Testosterone<span class="newchanneltext"> NEW!</span></span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav132"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='lunghealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid132').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid132').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid132" name="navid132">Lung Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav133"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='medicationsandyou';" onmouseover="this.className='darkbluefill'; document.getElementById('navid133').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid133').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid133" name="navid133">Medications and your Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav134"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2045';" onmouseover="this.className='darkbluefill'; document.getElementById('navid134').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid134').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid134" name="navid134">Menopause</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav135"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='mentalhealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid135').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid135').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid135" name="navid135">Mental Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav136"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2065';" onmouseover="this.className='darkbluefill'; document.getElementById('navid136').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid136').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid136" name="navid136">Multiple Sclerosis<span class="newchanneltext"> NEW!</span></span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav137"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2061';" onmouseover="this.className='darkbluefill'; document.getElementById('navid137').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid137').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid137" name="navid137">Natural and Complementary Therapy</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav138"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='nutrition';" onmouseover="this.className='darkbluefill'; document.getElementById('navid138').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid138').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid138" name="navid138">Nutrition</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav139"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2053';" onmouseover="this.className='darkbluefill'; document.getElementById('navid139').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid139').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid139" name="navid139">Obesity</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav140"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='oralhealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid140').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid140').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid140" name="navid140">Oral Care</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav141"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2178';" onmouseover="this.className='darkbluefill'; document.getElementById('navid141').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid141').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid141" name="navid141">Osteoarthritis of the Knee<span class="newchanneltext"> NEW!</span></span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav142"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='pain';" onmouseover="this.className='darkbluefill'; document.getElementById('navid142').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid142').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid142" name="navid142">Pain</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav143"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2062';" onmouseover="this.className='darkbluefill'; document.getElementById('navid143').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid143').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid143" name="navid143">Pregnancy</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav144"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='Psoriasis';" onmouseover="this.className='darkbluefill'; document.getElementById('navid144').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid144').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid144" name="navid144">Psoriasis</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav145"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2064';" onmouseover="this.className='darkbluefill'; document.getElementById('navid145').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid145').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid145" name="navid145">Psoriatic Arthritis (PsA)</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav146"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='seasonalhealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid146').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid146').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid146" name="navid146">Seasonal Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav147"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='sexualhealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid147').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid147').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid147" name="navid147">Sexual Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav148"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class=td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav148"></td><td width="5"><img src="nav_images/1px-trans.gif" wi"whitefill" onclick="location.href='sleephealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid148').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid148').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid148" name="navid148">Sleep Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav149"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='SRRMain.asp';" onmouseover="this.className='darkbluefill'; document.getElementById('navid149').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid149').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid149" name="navid149">Stroke Risk Reduction</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav150"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2022';" onmouseover="this.className='darkbluefill'; document.getElementById('navid150').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid150').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid150" name="navid150">Smoking</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav151"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='weight';" onmouseover="this.className='darkbluefill'; document.getElementById('navid151').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid151').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid151" name="navid151">Weight Management</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav152"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='workplacehealth';" onmouseover="this.className='darkbluefill'; document.getElementById('navid152').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid152').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid152" name="navid152">Workplace Health</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav153"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='channel_main.asp?channel_id=2050';" onmouseover="this.className='darkbluefill'; document.getElementById('navid153').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid153').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid153" name="navid153">Yeast Infection</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav154"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="darkorangefill" onclick="location.href='all_health_channels.asp';" onmouseover="this.className='redfill'; this.style.cursor=cursor_pointer;" onmouseout="this.className='darkorangefill';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="whitetext" id="navid154" name="navid154">All health channels</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr>
+										</table>
+										<br>
+									</td>
+									<td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td>
+								</tr>
+								</table>
+								<!-- end health channels -->
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table width="160" border="0" cellspacing="0" cellpadding="1" class="lightborderfill">
+						<tr>
+							<td>
+								<!-- start resources -->
+								<table width="158" border="0" cellspacing="0" cellpadding="0" class="lightbluefill">
+								<tr>
+									<td colspan="3"><div class="leftTitle">STAY CONNECTED</div></td>
+								</tr>
+								<tr>
+									<td width="3" valign="top"></td>
+									<td width="152" valign="top">
+                                        <ul class="leftStayConnected">
+                                            <!--<li><a href="redirect.asp?action_id=249&url=http://blog.medbroadcast.com/" target="_blank" ><span class="img"><img src="images/stayconnected/1.gif" alt="" /></span><span class="txt">Read our blog</span></a></li>-->
+                                            <li><a href="redirect.asp?action_id=256&url=http://www.facebook.com/pages/Be-A-Healthy-Canadian/30721306505" target="_blank" ><span class="img"><img src="images/stayconnected/2.gif" alt="" /></span><span class="txt">Be a fan on Facebook</span></a></li>
+                                            <li><a href="redirect.asp?action_id=258&url=http://twitter.com/MedBroadcast" target="_blank" ><span class="img"><img src="images/stayconnected/3.gif" alt="" /></span><span class="txt">Follow us on Twitter</span></a></li>
+                                            <!-- <li><a href="xml_information.asp" ><span class="img"><img src="images/stayconnected/5.gif" alt="" /></span><span class="txt">Subscribe to our Health RSS feed</span></a></li> -->
+                                            <li><a href="subscribe.asp?channel_list=1000" ><span class="img"><img src="images/stayconnected/6.gif" alt="" /></span><span class="txt">Subscribe to our newsletter</span></a></li>
+                                        </ul>
+										
+									</td>
+									<td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td>
+								</tr>
+								</table>
+								<!-- end resources -->
+							</td>
+						</tr>
+                        </table>
+                    </td>
+			 	<tr>
+					<td>
+						<table width="160" border="0" cellspacing="0" cellpadding="1" class="lightborderfill">
+						<tr>
+							<td>                    
+                                <table width="158" border="0" cellspacing="0" cellpadding="0" class="lightbluefill">
+								<tr>
+									<td colspan="3"><div class="leftTitle">RESOURCES</div></td>
+								</tr>
+								<tr>
+									<td width="3" valign="top"></td>
+									<td width="152" valign="top">
+										<table width="152" border="0" cellspacing="0" cellpadding="0" align="center">
+										<tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav155"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='ask_an_expert_general.asp';" onmouseover="this.className='darkbluefill'; document.getElementById('navid155').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid155').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid155" name="navid155">Ask an Expert</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav156"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="link = window.open('http://clinicaltrials.mediresource.com/medbroadcast/');" onmouseover="this.className='darkbluefill'; document.getElementById('navid156').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid156').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid156" name="navid156">Clinical Trials</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav157"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="link = window.open('http://www.royalcollege.ca');" onmouseover="this.className='darkbluefill'; document.getElementById('navid157').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid157').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid157" name="navid157">Find a Specialist</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav158"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='health_features.asp';" onmouseover="this.className='darkbluefill'; document.getElementById('navid158').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid158').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid158" name="navid158">Health features</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav159"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='health_news.asp';" onmouseover="this.className='darkbluefill'; document.getElementById('navid159').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid159').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid159" name="navid159">News</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr><tr><td width="11"><img src="nav_images/rollover/white_orange_box.gif" width="11" height="11" alt="" border="0" name="nav160"></td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td><td width="136" class="whitefill" onclick="location.href='health_tools.asp';" onmouseover="this.className='darkbluefill'; document.getElementById('navid160').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid160').className='darkbluetext';"><table width="136" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="133"><span class="darkbluetext" id="navid160" name="navid160">Tools</span></td></tr></table></td></tr><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="3" alt="" border="0"></td></tr>
+										</table>
+										<br'EBSCO Content>
+									</td>
+									<td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td>
+								</tr>
+								</table>
+								<!-- end resources -->								
+								
+								<br />
+								<div class="bottomLeftAdWrapper" style="text-align:center">
+								    <!-- include file = "ad_BottomLeft.inc" -->
+								</div>
+								<br />
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				
+				
+				
+					<!-- include file = "../pharmAssist/left_pharmAssist_drug.asp" -->
+				
+					<!-- include file = "../pharmAssist/left_pharmAssist_disease.asp" -->
+				
+					<!-- include file = "../pharmAssist/left_pharmAssist_disease_2.asp" -->
+				
+				</table>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td width="6" rowspan="2"><img src="nav_images/1px-trans.gif" width="6" height="1" alt="" border="0"></td>
+	<td width="600" valign="top">
+		
+		<!-- start section menu -->
+			<!-- start section menu -->
+		<table width="600" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="100"><a href="condition_info.asp" onMouseover="msover(0);" onMouseout="msout(0);" onfocus="this.blur();"><img src="nav_images/rollover/condition_info.gif" width="87" height="28" alt="Condition Info" title="Condition Info" border="0" namer>
+			<td width="100"><a href="condition_info.asp" onMouseover="msover(0);" onMouseout="msout(0);" onfocus="this.blur();"><img src="nav_images/rollover/condition_info.gif" width="87" height=="condition_info"></a></td>
+			<td width="1"><img src="nav_images/1px-trans.gif" width="1" height="1" alt="" border="0"></td>
+
+			<td width="100"><a href="drug_info.asp" onMouseover="msover(1);" onMouseout="msout(1);" onfocus="this.blur();"><img src="nav_images/rollover/drug_info.gif" width="87" height="28" alt="Drug Info" title="Drug Info" border="0" name="drug_info"></a></td>
+			<td width="1"><img src="nav_images/1px-trans.gif" width="1" height="1" alt="" border="0"></td>
+
+			<td width="100"><a href="test_and_procedure_info.asp" onMouseover="msover(70);" onMouseout="msout(70);" onfocus="this.blur();"><img src="nav_images/rollover/test_and_procedure_info.gif" width="84" height="28" alt="Tests and Procedures" title="Tests and Procedures" border="0" name="test_and_procedure_info"></a></td>
+			<td width="1"><img src="nav_images/1px-trans.gif" width="1" height="1" alt="" border="0"></td>
+
+			<td width="100"><a href="natural_products_info.asp" onMouseover="msover(67);" onMouseout="msout(67);" onfocus="this.blur();"><img src="nav_images/rollover/natural_products_info.gif" width="84" height="28" alt="Natural Products" title="Natural Products" border="0" name="natural_products_info"></a></td>
+			
+			<td width="1"><img src="nav_images/1px-trans.gif" width="1" height="1" alt="" border="0"></td>
+			
+	        <td width="100"><a href="ask_an_expert_general.asp" onMouseover="msover(68);" onMouseout="msout(68);" onfocus="this.blur();"><img src="nav_images/rollover/ask_an_expert.gif" width="84" height="28" alt="Ask an Expert" title="Ask an Expert" border="0" name="ask_an_expert"></a></td>
+
+			<td width="1"><img src="nav_images/1px-trans.gif" width="1" height="1" alt="" border="0"></td>
+			
+			<td width="100"><a href="support_groups.asp" onMouseover="msover(2);" onMouseout="msout(2);" onfocus="this.blur();"><img src="nav_images/rollover/support_groups.gif" width="84" height="28" alt="Support Groups" border="0" name="support_groups"></a></td>
+
+			
+			<!--<td width="100"><a href="healthi_nation_video.asp" onMouseover="msover(72);" onMouseout="msout(72);" onfocus="this.blur();"><img src="nav_images/rollover/healthi_nation_video_ov.gif" width="84" height="28" alt="Health Videos" title="Health Videos" border="0" name="healthi_nation_video"></a></td>-->
+
+			<!-- <td width="1"><img src="nav_images/1px-trans.gif" width="1" height="1" alt="" border="0"></td> -->
+
+			<!-- <td width="100"><a href="health_recipes.asp" onMouseover="msover(69);" onMouseout="msout(69);" onfocus="this.blur();"><img src="nav_images/rollover/healthy_recipes_ov.gif" width="84" height="28" alt="Healthy Recipes" title="Healthy Recipes" border="0" name="healthy_recipes"></a></td> -->
+			<!--<td width="1"><img src="nav_images/1px-trans.gif" width="1" height="1" alt="" border="0"></td>-->
+			<td width="1"><img src="nav_images/1px-trans.gif" width="1" height="1" alt="" border="0"></td>
+			<td width="100"><a href="http://clinicaltrials.mediresource.com/medbroadcast/" target="_blank" onMouseover="msover(72);" onMouseout="msout(72);" onfocus="this.blur();"><img src="nav_images/rollover/clinical_trials.gif" width="84" height="28" alt="Clinical Trials" title="Clinical Trials" border="0" name="clinical_trials"></a></td>
+		</tr>
+		</table>
+		<!-- end section menu -->
+
+		<!-- start tools menu -->
+		<table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+		<tr>
+			<td width="59"><a href="http://www.medbroadcast.com/" onMouseover="msover(4);" onMouseout="msout(4);" onfocus="this.blur();"><img src="nav_images/rollover/home.gif" width="59" height="24" alt="Home" border="0" name="home"></a></td>
+			<td width="122"><a href="javascript: DisplayFavLink();" onMouseover="msover(5);" onMouseout="msout(5);" onclick="AddFavCount();" onfocus="this.blur();"><img src="nav_images/rollover/bookmark.gif" width="122" height="24" alt="Bookmark Page" border="0" name="bookmark"></a></td>
+			<td width="117"><a href="javascript: new_popup('email_friend.asp?title=test&url=' + location.href, 466, 500, 180, 100);" onMouseover="msover(6);" onMouseout="msout(6);" onfocus="this.blur();"><img src="nav_images/rollover/send.gif" width="117" height="24" alt="Send to a Friend" border="0" name="send"></a></td>
+			<td width="146"><a href="http://santecheznous.com/" onMouseover="msover(71);" onMouseout="msout(71);" onfocus="this.blur();"><img src="nav_images/rollover/french_link.gif" width="146" height="24" alt="Sante Chez Nous" border="0" name="french_link" ></a></td>
+			<!--<td width="156"><a href="subscribe.asp" onMouseover="msover(7);" onMouseout="msout(7);" onfocus="this.blur();"><img src="nav_images/rollover/subscribe_ov.gif" width="156" height="24" alt="" border="0" name="subscribe"></a></td>-->
+			<td width="156"><a href="subscribe.asp?channel_list=1000" onfocus="this.blur();"><img src="nav_images/subscribe.gif" width="156" height="24" alt="Subscribe" border="0" name="subscribe"></a></td>
+		</tr>
+		<tr>
+			<td width="600" colspan="5"><img src="nav_images/1px-trans.gif" width="1" height="2" alt="" border="0"></td>
+		</tr>
+		</table>
+		<!-- end tools menu -->
+
+<!-- start main area (max size is 600) -->
+
+	
+	<table width="600" border="0" cellspacing="0" cellpadding="1" align="center" class="darkborderfill">
+	<tr>
+		<td>
+			<table width="598" border="0" cellspacing="0" cellpadding="1" class="whitefill">
+			<tr>
+				<td>
+					<table width="596" border="0" cellspacing="0" cellpadding="1" class="lightborderfill">
+					<tr>
+						<td>
+							<table width="594" border="0" cellspacing="0" cellpadding="0" class="lightbluefill">
+							<tr>
+								<td colspan="6" class="whitefill">
+
+<table width="594" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td width="10"><img src="nav_images/1px-trans.gif" width="10" height="5"></td>
+		<td width="584">
+			<a href="channel_main.asp?channel_id=1000" class="bigredtext">Medbroadcast Home</a><span class="bigredtext"> ></span> <a href="channel_condition_info_list.asp?channel_id=1000&relation_id=0" class="bigredtext">Related Conditions</a><span class="bigredtext"> ></span> <a href="channel_condition_info_details.asp?disease_id=31&channel_id=1000&relation_id=0" class="bigredtext">Cholera</a>
+		</td>
+	</tr>
+</table>
+</td>
+							</tr>
+							<tr>
+								<td colspan="6"><img src="nav_images/594_section_divider.gif" width="594" height="2" alt="" border="0"></td>
+							</tr>
+							<tr>
+								<td width="381" colspan="4"><img src="nav_images/1px-trans.gif" width="381" height="5" alt="" border="0"></td>
+								<td width="3" rowspan="2" background="nav_images/channel_image_bar.gif"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td>
+								<td width="210" rowspan="2" valign="top"><img src="nav_images/channel/1000.jpg" width="210" height="152" alt='Medbroadcast Home' border="0" title='Medbroadcast Home'></td>
+							</tr>
+							<tr>
+								<td width="168" valign="top">
+									<table width="168" border="0" cellspacing="0" cellpadding="0" align="center">
+									<tr><td width="17" valign="top"><img src="nav_images/rollover/channel_arrow.gif" width="17" height="11" alt="" border="0" name="chn0"></td><td width="151"><table width="151" border="0" cellspacing="0" cellpadding="0" align="center"><tr class="whitefill"  onclick="openChannelLink('ask_an_expert_general.asp?channel_id=1000&relation_id=7985&top_rec=1');" onmouseover="this.className='darkbluefill'; document.getElementById('navid161').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid161').className='darkbluetext';"><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="148"><span class="darkbluetext" id="navid161" name="navid161">Ask an Expert</span></td></tr></table></td></tr><tr><td colspan="2"><img src="nav_images/1px-trans.gif" width="1" height="2" alt="" border="0"></td></tr><tr><td width="17" valign="top"><img src="nav_images/rollover/channel_arrow.gif" width="17" height="11" alt="" border="0" name="chn1"></td><td width="151"><table width="151" border="0" cellspacing="0" cellpadding="0" align="center"><tr class="whitefill"  onclick="openChannelLink('http://clinicaltrials.mediresource.com/medbroadcast/?channel_id=1000&relation_id=36549&top_rec=1');" onmouseover="this.className='darkbluefill'; document.getElementById('navid162').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid162').className='darkbluetext';"><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="148"><span class="darkbluetext" id="navid162" name="navid162">Clinical Trials</span></td></tr></table></td></tr><tr><td colspan="2"><img src="nav_images/1px-trans.gif" width="1" height="2" alt="" border="0"></td></tr><tr><td width="17" valign="top"><img src="nav_images/rollover/channel_arrow.gif" width="17" height="11" alt="" border="0" name="chn2"></td><td width="151"><table width="151" border="0" cellspacing="0" cellpadding="0" align="center"><tr class="whitefill"  onclick="openChannelLink('http://www.royalcollege.ca?channel_id=1000&relation_id=4101&top_rec=1');" onmouseover="this.className='darkbluefill'; document.getElementById('navid163').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid163').className='darkbluetext';"><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="148"><span class="darkbluetext" id="navid163" name="navid163">Find a Specialist</span></td></tr></table></td></tr><tr><td colspan="2"><img src="nav_images/1px-trans.gif" width="1" height="2" alt="" border="0"></td></tr><tr><td width="17" valign="top"><img src="nav_images/rollover/channel_arrow.gif" width="17" height="11" alt="" border="0" name="chn3"></td><td width="151"><table width="151" border="0" cellspacing="0" cellpadding="0" align="center"><tr class="whitefill"  onclick="openChannelLink('health_features.asp?channel_id=1000&relation_id=4096&top_rec=1');" onmouseover="this.className='darkbluefill'; document.getElementById('navid164').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid164').className='darkbluetext';"><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="148"><span class="darkbluetext" id="navid164" name="navid164">Health features</span></td></tr></table></td></tr><tr><td colspan="2"><img src="nav_images/1px-trans.gif" width="1" height="2" alt="" border="0"></td></tr><tr><td width="17" valign="top"><img src="nav_images/rollover/channel_arrow.gif" width="17" height="11" alt="" border="0" name="chn4"></td><td width="151"><table width="151" border="0" cellspacing="0" cellpadding="0" align="center"><tr class="whitefill"  onclick="openChannelLink('health_news.asp?channel_id=1000&relation_id=4093&top_rec=1');" onmouseover="this.className='darkbluefill'; document.getElementById('navid165').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid165').className='darkbluetext';"><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="148"><span class="darkbluetext" id="navid165" name="navid165">News</span></td></tr></table></td></tr><tr><td colspan="2"><img src="nav_images/1px-trans.gif" width="1" height="2" alt="" border="0"></td></tr><tr><td width="17" valign="top"><img src="nav_images/rollover/channel_arrow.gif" width="17" height="11" alt="" border="0" name="chn5"></td><td width="151"><table width="151" border="0" cellspacing="0" cellpadding="0" align="center"><tr class="whitefill"  onclick="openChannelLink('pdf/ManageYourHangoverWithHeart.pdf" target="_blank?top_rec=1');" onmouseover="this.className='darkbluefill'; document.getElementById('navid166').className='whitetext'; this.style.cursor=cursor_pointer;" onmouseout="this.className='whitefill'; document.getElementById('navid166').className='darkbluetext';"><td width="3"><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"></td><td width="148"><span class="darkbluetext" id="navid166" name="navid166">Tools</span></td></tr></table></td></tr><tr><td colspan="2"><img src="nav_images/1px-trans.gif" width="1" height="2" alt="" border="0"></td></tr>
+									</table>
+								</td>
+								<td width="4" valign="top"><img src="nav_images/1px-trans.gif" width="4" height="147" alt="" border="0"></td>
+								<td width="205" valign="top">
+									
+								</td>
+								<td width="4" valign="top"><img src="nav_images/1px-trans.gif" width="4" height="1" alt="" border="0"></td>
+							</tr>
+							</table>
+						</td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+			</table>
+			
+			
+				<!-- include file = "../pharmAssist/pharmassist_logos.inc" -->
+			
+		</td>
+	</tr>
+	</table>
+	
+	<table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+		<td><img src="nav_images/1px-trans.gif" width="1" height="2" alt="" border="0"></td>
+	</tr>
+	</table>
+
+<table width="600" border="0" cellspacing="0" cellpadding="1" align="center" class="darkborderfill">
+<tr>
+	<td>
+		<!-- MP 20080820 - changing to web service -->
+		<style type="text/css">
+#FeatureBox { width: 430px;}
+#FeatureBox h3 {color:#000000; font-size:14px; font-weight:bold; margin: 0 0 5px 15px;}
+#FeatureBox ul { margin: 0; padding: 0; list-style-type: none; }
+#FeatureBox li { margin: 0 0 5px 15px; padding: 0 0 8px 0; border-bottom: 1px dotted #3572B1;}
+#FeatureBox li a.featurelist{ margin: 0; padding:0; color:#3572B1; text-decoration: none;}
+</style>
+
+	
+	
+<!---->
+<!-- include file = "ask_an_expert_drugs_and_diseases.inc" --><table width="598" border="0" cellspacing="0" cellpadding="0" class="whitefill"><tr><td colspan="3"><img src="nav_images/1px-trans.gif" width="1" height="5" alt="" border="0"></td></tr><tr><td width="10"><img src="nav_images/1px-trans.gif" width="10" height="1" alt="" border="0"></td><td width="583"><!-- AddThis Button BEGIN -->
+
+<div id = "AddThisBox">
+
+<div class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_google_plusone" g:plusone:annotation="none" g:plusone:size="medium" g:plusone:href='http://www.medbroadcast.com/channel_condition_info_details.asp?disease_id=31'></a>
+<a class="addthis_button_facebook_like" fb:like:layout="button_count" fb:like:width="47" fb:like:height="30" fb:like:data-show-faces="false"></a>
+<a class="addthis_button_tweet" tw:count="none" tw:height="50"></a>
+<a href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=mrimedbroadcast" class="addthis_counter addthis_pill_style"></a>
+</div>
+
+<script type="text/javascript">	
+	var addthis_config = {
+        data_ga_property: 'UA-4524706-9',
+        data_ga_social: true,
+		data_track_clickback: true,
+		data_track_addressbar: true
+	};
+</script>
+
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=mrimedbroadcast"></script>
+</div>
+<!-- AddThis Button END -->
+						<div style="clear:right; padding:5px 0px 15px 0px;float:right; width:298px;">
+							
+						</div>
+					
+					<br>					
+					<!-- include file = "ad_x05.inc" -->		
+<div id="ContentContainer"><div id="ConditionContainer"><div class="ContentTitle"><h1>Cholera</h1></div><br><br><h3>In this condition factsheet:</h3><ul class="redbulletlist"><li><a class="headerlink" href="#Facts">The facts on Cholera</a></li><br><li><a class="headerlink" href="#Causes">Causes of Cholera</a></li><br><li><a class="headerlink" href="#Symptoms">Symptoms and Complications of Cholera</a></li><br><li><a class="headerlink" href="channel_condition_info_details.asp?disease_id=31&channel_id=1000&relation_id=0&next_page=y#Diagnosis">Diagnosing Cholera</a></li><br><li><a class="headerlink" href="channel_condition_info_details.asp?disease_id=31&channel_id=1000&relation_id=0&next_page=y#Treatment">Treating and Preventing Cholera</a></li><br></ul><br><p><a name="Facts"></a><span class="bigredtext">The Facts on Cholera</span></p><p><b>Cholera is a bacterial infection of the small bowel that can c1&channel_id=1000&relation_id=0&next_page=y#Treatment">Treating and Preventing Cholera</a></li><br></ul><br><p><a name="Facts"></a><span class="bigredtext">The Facts on Cholera</span></p><p><ause severe diarrhea and dehydration.</b></p>
+<p>There have been seven great pandemics (worldwide epidemics) of cholera in history. The seventh began in 1961, when cholera re-emerged in Indonesia and swept across most of the world, and it still lingers today. At the beginning of the 21<span style="vertical-align: text-top; font-size: 70%">st</span> century, cholera infected around 300,000 people per year worldwide; of these, about 10,000 died.</p>
+<p>Cholera settles wherever poor hygiene permits it to infect humans, who appear to be cholera's only hosts. The bacterium that causes cholera is most productive in times of flood and war, since these events can reduce the availability of clean water. <b>Cholera continues to occur in Asia, Africa, the Middle East, and South and Central America.</b> <b>The latest outbreak occurred in Haiti.</b></p>
+<p><b>Worldwide, cholera kills about 4% of the people who develop severe symptoms.</b> That includes people who are treated too late or inappropriately and those who never reach a doctor. Fewer than 1% of people with severe cholera die if they're quickly and properly treated.</p><div style="float:right;padding:15px;"><div id="ad_middle2" style="300px; text-align:center;"><script LANGUAGE="JavaScript1.1">if (typeof OAS_rns == "undefined") OAS_rns = new String (Math.random()).substring(2, 11); document.write('<scr'+'ipt LANGUAGE="JavaScript1.1" SRC="http://oascentral.medbroadcast.com/RealMedia/ads/adstream_jx.ads/medbroadcast.com/conditions/cholera/1' + OAS_rns + '@x05,Middle2,x03,Position1,Position3!Middle2?JX"></scr'+'ipt>');</script></div></div><p><a name="Causes"></a><span class="bigredtext">Causes of Cholera</span></p><p><b>Cholera is caused by a bacterium called <i>Vibrio cholerae</i>. A person  gets cholera by drinking water or eating food infected with the bacterium. </b>Once  swallowed, it settles in the lining of the small bowel and releases a toxin  (poison) that can cause the body to flush liquid into the small bowel, resulting  in watery diarrhea.</p>
+<p><b>The bacterium that causes cholera is usually transmitted by water contaminated with human feces, but it can also be transmitted by ingesting contaminated food, especially raw or undercooked seafood and shellfish.</b> Most people infected with cholera have no symptoms, yet they carry the bacteria for a few weeks, excreting them slowly into the water supply.</p>
+<p>Naturally, this isn't a major problem in countries with flush toilets and sewage plants. Canada, the US, and Western Europe rarely report cholera, and if they do, it's almost always seen in someone who has returned from a high-risk country.</p><p><a name="Symptoms"></a><span class="bigredtext">Symptoms and Complications of Cholera</span></p><p><b>Approximately 25% of people who ingest the bacteria actually develop the particular symptoms that we call cholera.</b> Of those, 80% will experience symptoms that are only of mild or moderate severity, while up to 20% will develop severe watery diarrhea that can be life-threatening if not treated properly.</p>
+<p>It is not known why some people develop cholera while others are unaffected by the bacterial toxin. Most adults in cholera-endemic areas have some antibodies, which helps to protect them from developing the disease. In these countries, severe symptoms are far more common in children.</p>
+<p><i>Vibrio</i> bacteria are killed by stomach acid. Research has shown that people with low acidity in their stomach (e.g., people taking antacid medications) are much more prone to cholera. Also, people with type O blood seem to be more at risk.</p>
+<p><b>If symptoms of cholera occur, the main symptom is watery diarrhea, which can be severe enough to rapidly drain the body of vital water, salts, and minerals.</b> The first watery stool appears 1 to 3 days after infection, and from then on the body can lose up to one litre of liquid an hour. Vomiting may appear at the same time.</p>
+<p>Other symptoms of severe cholera are:</p>
+<ul>
+  <li>muscle cramps</li>
+  <li>reduced or no urination</li>
+  <li>weakness</li>
+  <li>low pulse</li>
+  <li>sunken-looking eyes</li>
+  <li>wrinkled skin on fingers</li>
+</ul>
+<p>Cholera usually runs its course in 3 to 6 days, but if it is not treated it can cause shock from dehydration, kidney failure, coma, and death.</p><br><br><div align="center"><a href="channel_condition_info_details.asp?disease_id=31&channel_id=1000&relation_id=0&next_page=y" onMouseover="msover(51);" onMouseout="msout(51);" onfocus="this.blur();"><img src="nav_images/rollover/next_page.gif" width="81" height="17" alt="" border="0" name="next_page"></a></div>
+
+<table width="583" border="0" cellspacing="0" cellpadding="0" class="whitefill">
+<tr>
+	<td>
+		<out="msout(51);" onfocus="this.blur();"><img src="nav_images/rollover/next_page.gif" width="81" height="table width="570" cellspacing="0" cellpadding="0" align="center" border="0">
+		
+		<tr>
+			<td width="300" valign="top" align="right">
+				<!-- AM 120908 Not showing the print button for HAinfo_list (click on letter or Health topic) -->
+				
+                        <a rel="nofollow"  href="condition_info_details_pf.asp?disease_id=31" onMouseover="msover(17);" onMouseout="msout(17);" onfocus="this.blur();"><img src="nav_images/rollover/print.gif" width="119" height="16" alt="" border="0" name="print"></a>
+					
+			</td>
+		</tr>
+		<tr><td colspan=2>&nbsp;<br><br></td></tr>
+		
+		</table>
+	</td>
+	
+</tr>
+</table>
+
+						<!--Monika Piotrowicz 2008 07 14
+						' Req by Silvia
+						' Added link to contact us page -->
+						</div></div>
+				<!-- nche Aug 17, 05; PM: CB; Comment: for some reasons ad was removed before (??), was asked to put it back -->
+				<style>
+#HealthFeature div.wrapper {padding:10px;}
+#FeatureBox div.wrapper {padding:5px 10px 10px 10px; background:#E5EBF7;}
+#Sponsor div.wrapper {padding: 10px; background: #E9E9E9; text-align: center; }
+#DDG div.wrapper {background: #E1E1E1;padding:5px;}
+div.blue_border {border:1px solid #A5B9D1;margin-bottom:5px;}
+#DDG h3 { color: #3366AC; font: bold 16px Arial; margin: 5px 0 0 0;}
+div.tool_link {margin:0 0 5px 0;}
+</style>
+<table width="238" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+	<td align="center" name="ads">
+	
+		
+		<table width="300" border="0" cellspacing="0" cellpadding="0" align="center">
+		<tr>
+			
+				<td align="center" style="padding:50px 0;">
+			
+			<img src="nav_images/advertisement.gif" width="300" height="14"  alt="Advertisement"  title="Advertisement" border="0"><br>
+			<div style="text-align:center;clear:both;"></div>
+			<script language="javascript">fctAdTag("bigbox",MyGenericTagVar,1);</script>
+		
+			</td>
+		</tr>
+		</table>
+
+	<!--
+	<br>
+			<table bgcolor="#CEC89E" width="300" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+	<td align="center">
+	<br><a target="_blank" href="redirect.asp?action_id=281&url=http://www.medbroadcast.com/cialis_oral_chart_eng.html&redirect_url=http://www.medbroadcast.com/cialis_oral_chart_eng.html" >Find more</a> information on this type of medication.<br><br>
+	</td>
+</tr>
+</table>
+-->
+
+ 
+	</td>
+</tr>
+
+
+
+<tr>
+	<td><br><br></td>
+</tr>
+</table>
+
+<!-- include file = "medireminder_banner.inc" -->
+<!--added by Monika Piotrowicz
+					'July 15 2008, for Silvia
+					'Adding link to contact us page from search results -->
+					<p><b><span class="darkbluetext" style="font-size:11px;">Did you find what you were looking for on our website? <a href='contact_us.asp'>Please let us know.</a></span></b></p>
+		<br><br><br>
+					</td><td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td></tr></table>
+		<!-- include file = "include/usage_capture.inc" -->
+		
+		
+			<!-- include file = "include/relation_box.inc" -->
+			<!-- include file = "include/relation_article_box.inc" -->
+			
+			
+
+<script language="javascript">
+		function related_search(submit_type){
+			var x = document.forms["quick_related_search"];
+			var errmsg = new Array(), messageout="";
+			
+			if(x.search.value == ""){
+				errmsg[errmsg.length] = "Please enter search value.";
+			}else{
+				if(x.search.value.length < 3)	errmsg[errmsg.length] = "Search value must have at least 3 characters";
+			}
+			
+			if(errmsg.length > 0){
+				for(var i=0;i<errmsg.length;i++){
+					messageout+=errmsg[i]+"\n";
+				}
+				alert(messageout);
+				return false;
+			}
+			else {
+				x.action = "search.asp?dosearch=related_search_condition";
+				
+				if(submit_type == "os"){
+					return true;
+				}else{
+					x.submit();
+				}
+			}
+		}
+</script>
+
+<table width="598" border="0" cellspacing="0" cellpadding="0" class="whitefill">
+<tr>
+	<td width="10"><img src="nav_images/1px-trans.gif" width="10" height="1" alt="" border="0"></td>
+	<td width="304">
+		<td width="304" valign="top">
+			<table width="304" border="0" cellspacing="0" cellpadding="1" class="darkborderfill">
+			<tr>
+				<td>
+					<table width="302" border="0" cellspacing="0" cellpadding="1" class="whitefill">
+					<tr>
+						<td>
+							<table width="300" border="0" cellspacing="0" cellpadding="1" class="lightborderfill">
+							<tr>
+								<td>
+									<!-- start search -->
+									<table width="298" border="0" cellspacing="0" cellpadding="0" class="lightbluefill">
+									<tr>
+										<td colspan="2" background="nav_images/related/related_blue_nav_1.gif"><span class="whitetext">&nbsp;Search for information related to</span></td>
+									</tr>
+									<tr>
+										<td colspan="2"><img src="nav_images/related/related_blue_nav_2.gif" width="298" height="17" alt="" border="0"></td>
+									</tr>
+									<form action="#" method="post" name="quick_related_search" onsubmit="return related_search('os');">
+									<tr>
+										<td width="8" valign="top" rowspan="3"><img src="nav_images/1px-trans.gif" width="8" height="1" alt="" border="0"></td>
+										<td width="290"><input type="text" name="search" value="Cholera" size="35" maxlength="100"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"><a href="#" onMouseover="msover(20);" onMouseout="msout(20);" onclick="related_search('oc');" onfocus="this.blur();" class="searchlink"><img src="nav_images/rollover/quick_go.gif" width="14" height="15" alt="" border="0" name="quick_go"><img src="nav_images/1px-trans.gif" width="2" height="1" alt="" border="0">GO</a></td>
+									</tr>
+									</form>
+									<tr>
+										<td><img src="nav_images/1px-trans.gif" width="1" height="5" alt="" border="0"></td>
+									</tr>
+									<tr>
+										<td width="290">
+											<a href="browse_alphabetically.asp?search_letter=A" class="searchlink">A</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=B" class="searchlink">B</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=C" class="searchlink">C</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=D" class="searchlink">D</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=E" class="searchlink">E</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=F" class="searchlink">F</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=G" class="searchlink">G</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=H" class="searchlink">H</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=I" class="searchlink">I</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=J" class="searchlink">J</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=K" class="searchlink">K</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=L" class="searchlink">L</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=M" class="searchlink">M</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=N" class="searchlink">N</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=O" class="searchlink">O</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=P" class="searchlink">P</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=Q" class="searchlink">Q</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=R" class="searchlink">R</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=S" class="searchlink">S</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=T" class="searchlink">T</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=U" class="searchlink">U</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=V" class="searchlink">V</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=W" class="searchlink">W</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=X" class="searchlink">X</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=Y" class="searchlink">Y</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0"><a href="browse_alphabetically.asp?search_letter=Z" class="searchlink">Z</a><img src="nav_images/1px-trans.gif" width="3" height="1" alt="" border="0">
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2"><img src="nav_images/1px-trans.gif" width="1" height="5" alt="" border="0"></td>
+									</tr>
+									</table>
+								</td>
+							</tr>
+							</table>
+						</td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+			</table>
+		</td>
+		<td width="9"><img src="nav_images/1px-trans.gif" width="9" height="1" alt="" border="0"></td>
+	</td>
+	<td width="300">&nbsp;</td>
+	<td width="5"><img src="nav_images/1px-trans.gif" width="5" height="1" alt="" border="0"></td>
+</tr>
+<tr>
+	<td colspan="4"><img src="nav_images/1px-trans.gif" width="1" height="10" alt="" border="0"></td>
+</tr>
+</table>
+
+
+		
+			<!-- include file = "pharmassist/PharmAssist_disease_routine.asp" -->
+		
+	</td>
+</tr>
+</table>
+<!-- end main area -->
+        
+        <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+		<tr>
+			<td width="600"><img src="nav_images/1px-trans.gif" width="1" height="2" alt="" border="0"></td>
+		</tr>
+		</table>
+	</td>
+	
+	<td><img src="nav_images/1px-trans.gif" width="2" height="1" alt="" border="0"></td>
+	<td width="10" valign="top">
+	   <div style="margin-left: 5px;">
+	       <div style="margin-bottom: 10px;">	<script LANGUAGE="JavaScript1.1">
+	<!--
+	
+	if (typeof OAS_rns == "undefined") OAS_rns = new String (Math.random()).substring(2, 11);
+	document.write('<scr'+'ipt LANGUAGE="JavaScript1.1" SRC="http://oascentral.medbroadcast.com/RealMedia/ads/adstream_jx.ads/medbroadcast.com/ros/cholera/1' + OAS_rns + '@x05,Middle2,x03,Position1,Position3!Position1?JX"></scr'+'ipt>');
+	// -->
+	</script></div>
+	       <div style="margin-bottom: 10px;">	<script LANGUAGE="JavaScript1.1">
+	<!--
+	
+	if (typeof OAS_rns == "undefined") OAS_rns = new String (Math.random()).substring(2, 11);
+	document.write('<scr'+'ipt LANGUAGE="JavaScript1.1" SRC="http://oascentral.medbroadcast.com/RealMedia/ads/adstream_jx.ads/medbroadcast.com/ros/cholera/1' + OAS_rns + '@x05,Middle2,x03,Position1,Position3!Position3?JX"></scr'+'ipt>');
+	// -->
+	</script></div>
+	       <div style="margin-bottom: 10px;"><script language="javascript">fctAdTag("skyscraper",MyGenericTagVar,1);</script></div>
+       </div>
+    </td>
+
+</tr>
+<tr>
+	<td width="600" valign="bottom">
+	    <div id="MBFooterLinks">
+	       <ul>
+	           <li><a href="site_map.asp?channel_id=1031&relation_id=6744&top_rec=1" >Site Map</a>
+	           <li><a rel="nofollow" href="channel_section_details.asp?channel_id=1031&relation_id=6743&text_id=2230" >Terms & Conditions</a>
+	           <li><a rel="nofollow" href="channel_section_details.asp?channel_id=1031&relation_id=6743&text_id=2229" >Privacy Policy</a>
+	           <li><a rel="nofollow" href="channel_section_details.asp?text_id=2716&channel_id=1031&relation_id=6743" >Editorial Policy</a>
+	           <li><a href="contact_us.asp" >Contact Us</a>
+	           <li class="last"><a href="channel_section_details.asp?channel_id=1031&relation_id=6738&text_id=2231" >About</a>
+	       </ul>
+	    </div>
+	</td>
+</tr>
+</table>
+
+<table width="930" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+	<td width="600" colspan="2"><img src="nav_images/1px-trans.gif" width="1" height="10" alt="" border="0"></td>
+	<td width="160">
+
+    </td>
+</tr>
+<!--20081217_SponsorChannel-->
+<tr>
+	<td width="170"><img src="nav_images/1px-trans.gif" width="170" height="1" alt="" border="0"></td>
+	<td width="600" align="center">
+		<span class="lightbluetext">
+			<b>Hot Topics</b> -
+			<!--<a href="channel_main.asp?channel_id=2094">Allergy</a>,-->
+			<!--<a href="channel_main.asp?channel_id=2047">Ankylosing Spondylitis</a>,-->
+			<!--<a href="channel_main.asp?channel_id=2014">Asthma</a>,-->
+			<!-- <a href="AtrialFibrillationMain.asp">Atrial Fibrillation</a>, -->
+			<a href="channel_main.asp?channel_id=2015">Bedwetting</a>,
+			<!--<a href="channel_main.asp?channel_id=2055">Cancer</a>,-->
+      <!-- <a href="channel_main.asp?channel_id=2118">Childhood Vaccinations</a>, -->
+			<!-- <a href="channel_main.asp?channel_id=2111">Cholesterol</a>,
+			<a href="channel_main.asp?channel_id=2098">Cold and Flu</a>, -->
+			<!--<a href="channel_main.asp?channel_id=2059">Crohn's & Colitis</a>,-->
+			<a href="channel_main.asp?channel_id=1053">Depression</a>,
+			<!-- <a href="DigestiveMain.asp">Digestive Health</a>, -->
+			<!-- <a href="channel_main.asp?channel_id=2048">Fertility</a>, -->
+			<a href="channel_main.asp?channel_id=2113">Flu (Seasonal)</a>,
+			<!--<a href="channel_main.asp?channel_id=2060">Heart</a>,-->
+			<!--<a href="healthyhair.asp?channel_id=2003&relation_id=99671&top_rec=0">Healthy Hair</a>,-->
+			<a href="channel_main.asp?channel_id=2003">Healthy Skin</a>,
+			<!--<a href="channel_main.asp?channel_id=2037">HPV</a>,-->
+			<a href="IncontinenceMain.asp">Incontinence</a>,
+			<!-- <a href="channel_main.asp?channel_id=2035">Incontinence</a>, -->
+			<!-- <a href="channel_main.asp?channel_id=2035">Incontinence</a>, -->
+			<!--<a href="channel_main.asp?channel_id=2112">Menstruation</a>,-->
+			<a href="channel_main.asp?channel_id=2065">Multiple Sclerosis</a>,
+			<!-- <a href="OralCareMain.asp">Oral Care</a>, -->
+			<!--<a href="OveractiveBladderMain.asp?channel_id=20466">Overactive Bladder</a>,-->
+			<!-- <a href="channel_main.asp?channel_id=2062">Pregnancy</a>, -->
+			<a href="PsoriasisMain.asp">Psoriasis</a>,
+			<!--<a href="channel_main.asp?channel_id=2064">Psoriatic Arthritis</a>,-->
+			<!--<a href="channel_main.asp?channel_id=2039">Rheumatoid Arthritis</a>-->
+			<a href="SRRMain.asp">Stroke Risk Reduction</a>
+		</span><br><br>
+	</td>
+</tr>
+<tr>
+	<td width="170"><img src="nav_images/1px-trans.gif" width="170" height="1" alt="" border="0"></td>
+	<td width="600" align="center"><span class="lightbluetext"><a href="channel_section_details.asp?text_id=5970&channel_id=1031&relation_id=100304">Condition and disease information</a> is written and reviewed by the MedBroadcast Clinical Team.</span><br><br></td>
+</tr>
+<tr>
+	<td width="170">
+	<img src="nav_images/1px-trans.gif" width="170" height="1" alt="" border="0">
+	<!-- nche July 1, 04 - add tracking ad (1px) -->
+	<br><img src="images/tracking_ad.gif" width="1" height="1" alt="" border="0">
+	</td>
+	<td width="600" align="center"><span class="lightbluetext">The contents of this site are for informational purposes only and are meant to be discussed with your physician or other qualified health care professional before being acted on. Never disregard any advice given to you by your doctor or other qubluetext">The contents of this site are for informational purposes only and are meant to be discussed with your physician or other qualified health care professional before being acted on. Nealified health care professional.  Always seek the advice of a physician or other licensed health care professional regarding any questions you have about your medical condition(s) and treatment(s).  This site is not a substitute for medical advice.<br>&copy; 1996 - 2015 <a href="http://www.mediresource.com" target="_blank">MediResource Inc</a>. - MediResource reaches millions of Canadians each year.</span><br><br></td>
+</tr>
+</table>
+
+<!-- nche July 1, 04 - add tracking ad-->
+<!--<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+	<td>
+	<SCRIPT LANGUAGE="JavaScript" SRC="http://mri.mediresource.com/?DC=MB+Tracker&JS=Y"></SCRIPT>
+	<NOSCRIPT>
+	<A HREF="http://mri.mediresource.com/?SHT=MB+Tracker"><IMG SRC="http://mri.mediresource.com/?SIT=MB+Tracker&SC=Y" HEIGHT="1" WIDTH="1"></A>
+	</NOSCRIPT>
+	</td>
+</tr>
+</table>-->
+
+
+<script type="text/javascript">
+//Code to make sure all health tools links open in new window
+//20090601 - MR
+$(document).ready(function() {
+    $('a').each(function() {
+        try {
+        if ($(this).attr("href").indexOf("health_tools") > -1 )
+            {
+                $(this).attr("target","_blank");
+            }	
+        }
+        catch (e) {}														
+	});
+});
+</script>
+
+
+			
+</body>
+
+</html>
+
+  try {
+        if ($(this).attr("href").indexOf("health_tools") > -1 )
+            {
+                $(this).attr("target","_blank");
+            }	
+        }
+        catch (e) {}														
+	});
+});
+<

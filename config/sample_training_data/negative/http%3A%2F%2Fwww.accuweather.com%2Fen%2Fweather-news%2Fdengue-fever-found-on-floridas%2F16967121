@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Dengue Fever Found on Florida's Treasure Coast</title>    
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-3.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"a690b21e9f","applicationID":"599479","transactionName":"NV0GYUFWCEUDBkNQDAwXIFpHeQNCIQpZTRENVAhQQRgkWg0CGHcGFUs3QVxFHw==","queueTime":0,"applicationTime":28,"ttGuid":"67E1DCAF6B4FDD81","agent":"js-agent.newrelic.com/nr-476.min.js"}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQUFVl5UGwYJXVVVDg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+          
+    <meta name="description" content="An outbreak of dengue fever, which is transmitted by infected Aedes mosquitos in tropical areas of the world, is linked to a neighborhood on Florida's Treasure Coast." />
+<link rel="canonical" href="http://www.accuweather.com/en/weather-news/dengue-fever-found-on-floridas/16967121" />
+<link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.accuweather.com/en/weather-news/dengue-fever-found-on-floridas/16967121" />
+<link rel="alternate" media="handheld" href="http://m.accuweather.com/en/weather-news/dengue-fever-found-on-floridas/16967121" />
+
+    <meta name="viewport" content="width=988"/>
+    <link rel="stylesheet" href="http://vortex.accuweather.com/adc2010/stylesheets/site.min-20141222.css" type="text/css" media="all" /> 
+
+    <style type="text/css">
+        @media print{#header-davek,#header-links,#header-davek-2,#ad-prestitial-panel,#footer-nav,#offers,div.logo-ad,div.panel-ad-mr,div.ad-lr,#ad-links,#wrap-s .bt,.margusity,.column-2-r,.addthis_toolbox,body#news-news .column-2,body#news-news #news,body#news-news .panel-head-tabs-rt,#extras{display:none}body,#wrap,#wrap-content,.column-1,#panel-main,.strong .panel-body,.strong .panel-body-lt,.strong .panel-body-rt,.strong .panel-foot,.strong .panel-foot-lt,.strong .panel-foot-rt,.strong .panel-head,.strong .panel-head-lt,.strong .panel-head-rt{background:0}.clearfix{position:static;display:block}body#news-news .column-1{width:980px;float:none;}}
+    </style>
+
+    <link rel="shortcut icon" href="http://vortex.accuweather.com/adc2010/images/favicons/awx-2013-master.ico" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <style type="text/css">
+.flag-US { background-image: url(http://vortex.accuweather.com/adc2010/images/flags/US.png) !important;}
+.flag-CN { background-image: url(http://vortex.accuweather.com/adc2010/images/flags/CN.png) !important;}
+.flag-GB { background-image: url(http://vortex.accuweather.com/adc2010/images/flags/GB.png) !important;}
+        .i-7-header {background-image: url(http://vortex.accuweather.com/adc2010/images/header-bg-night/7-header.jpg);}
+         </style> 
+    
+
+<meta name="description" content="An outbreak of dengue fever, which is transmitted by infected Aedes mosquitos in tropical areas of the world, is linked to a neighborhood on Florida&#39;s Treasure Coast." />
+<meta property="fb:app_id" content="132437483467956" />
+<meta property="og:site_name" content="AccuWeather" />
+<meta property="og:title" content="Dengue Fever Found on Florida&#39;s Treasure Coast" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="An outbreak of dengue fever, which is transmitted by infected Aedes mosquitos in tropical areas of the world, is linked to a neighborhood on Florida&#39;s Treasure Coast." />
+<meta property="og:image" content="http://vortex.accuweather.com/adc2004/pub/includes/columns/newsstory/2013/120x90_08232003_ap49924814778.jpg"/>    
+<meta property="og:url" content="http://www.accuweather.com/en/weather-news/dengue-fever-found-on-floridas/16967121" />
+<style type="text/css">
+.news-image-con{width:330px;height:280px;}
+#news-image-worstwx{background:url(http://sirocco.accuweather.com/adc_images2/english/feature/400x300/worstwx.jpg) -32px -27px}
+#news-image-hotspot{background:url(http://sirocco.accuweather.com/adc_images2/english/feature/400x300/hotspot.jpg) -32px -27px}
+#news-image-wxwhys{background:url(http://sirocco.accuweather.com/adc_images2/english/feature/400x300/wxwhy.jpg) -32px -27px}
+.addthis_toolbox{position:absolute;bottom:0px;right:0px;height:25px;}
+.byline_photo{margin:0px 5px -5px 0;}
+.awx-story .related {margin:20px 10px;background-color:#fafafa;}
+.awx-story .related h6{font-weight:bold;background-color:#637ec1;color:#ffffff;padding:2px 0 2px 3px}
+.awx-story .related a{display:block;font-size:11px;line-height:13px;padding:0 5px 0 15px;}
+</style>
+
+
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://vortex.accuweather.com/adc2010/stylesheets/ie6.css" type="text/css" media="all" />
+    <script type="text/javascript" src="http://vortex.accuweather.com/adc2010/javascripts/ie6.js"></script>
+    <![endif]--> 
+    <!--[if lt IE 7]>
+    <script defer type="text/javascript" src="http://vortex.accuweather.com/adc2010/javascripts/ie6_png_fix.js"></script>
+    <![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="http://vortex.accuweather.com/adc2010/stylesheets/ie7.min-20130423.css" type="text/css" media="all" /><![endif]--> 
+    <!--[if IE 8]><link rel="stylesheet" href="http://vortex.accuweather.com/adc2010/stylesheets/ie8.min-20130423.css" type="text/css" media="all" /><![endif]--> 
+    <!--[if gte IE 9]><link rel="stylesheet" href="http://vortex.accuweather.com/adc2010/stylesheets/ie9.min-20121129.css" type="text/css" media="all" /><![endif]--> 
+
+    <script type="text/javascript">
+    var apgUserInfoObj = {
+        country: 'US',
+        city: 'New York',
+        state: 'NY',
+        metro: 'NYC',
+        zip: '10007',
+        fcode: 'NYC',
+        partner: 'accuweather',
+        sessionPartner: 'accuweather',
+        referer: '',
+        lang: 'en-us',
+        langid: '1',
+        lat: '40.71',
+        lon: '-74.01',
+        dma: '501',
+        ip: '128.238.182.77',
+        geo_dma: '501',
+        geo_city: 'Brooklyn Borough',
+        geo_state: 'NY',
+        geo_zip: '11210',
+        geo_country: 'US',
+        gmtOffset: '-5',
+        locationKey: '349727'
+    };
+        var apgWxInfoObj = { nwsalrt: 'WCY', alerts: { source: 'us', category: 'non-precipitation', typeid: 'us137' }, isday: '0', lfs: { day: '', category: '', severity: '' }, hdln: '', ut: '0', cu: { wx: '7', hi: '20', wd: '', hd: '', uv: '' }, fc: [{ wx: '', hi: '', lo: '' }, { wx: '', hi: '', lo: '' }, { wx: '', hi: '', lo: '' }], ix: {arthritis:'2',asthma:'1',bbq:'1',cold:'4',flu:'3',lawnmowing:'1',migraine:'1',outdoor:'1',schoolclosing:'1',sinus:'2',soil:'3',field:'2',beach:'1',biking:'1',concert:'1',construction:'1',composting:'1',dust:'5',fishing:'1',fueleconomy:'1',golf:'1',heart:'1',hiking:'1',hvac:'5',mosq:'1',sailing:'1',running:'1',schoolbus:'2',skiing:'1',star:'1',frizz:'1',pollen:'1',uvindex:'1',hunting:'1', driving:'3', travel:'4', airq:'0', pgrass:'1', pmold:'1', pweed:'1', ptree:'1' } };
+var aadCustomKeyValuePairs = {};
+    </script>
+
+    <script type="text/javascript">
+    var AW_EXP_ID = null;
+    var AW_EXP_VAR = null;
+        var apgConfigObj = {};
+        apgConfigObj.showLifestyle = true;
+        apgConfigObj.prompts = {};
+
+        var acm_RecentLocationsCarousel= new Array();
+
+acm_RecentLocationsCarousel.push({name:"New York, NY", daypart:'night', href:'/en/us/new-york-ny/10017/weather-forecast/349727', icon:'http://vortex.accuweather.com/adc2010/images/icons-numbered/07-m.png', bg:'s', temp:'20',  realfeel:'14',  text:'Cloudy'});
+acm_RecentLocationsCarousel.push({name:"Miami, FL", daypart:'night', href:'/en/us/miami-fl/33128/weather-forecast/347936', icon:'http://vortex.accuweather.com/adc2010/images/icons-numbered/07-m.png', bg:'s', temp:'72',  realfeel:'75',  text:'Cloudy'});
+acm_RecentLocationsCarousel.push({name:"Los Angeles, CA", daypart:'night', href:'/en/us/los-angeles-ca/90012/weather-forecast/347625', icon:'http://vortex.accuweather.com/adc2010/images/icons-numbered/33-m.png', bg:'cl', temp:'64',  realfeel:'66',  text:'Clear'});
+
+    </script>
+
+            <script type="text/javascript">
+                var acm_InterestLayers = [
+{group:'1.1', name:'Cold & Flu', code:'10302', icon: 'cold-flu', href:'http://www.accuweather.com/en/us/new-york-ny/10007/cold-flu-weather/349727', alarm:[3,4,5]},
+{group:'1.1', name:'Allergies', code:'10201', icon: 'allergies', href:'http://www.accuweather.com/en/us/new-york-ny/10007/allergies-weather/349727', alarm:[3,4,5]},
+{group:'1.1', name:'Respiratory', code:'10301', icon: 'respiratory', href:'http://www.accuweather.com/en/us/new-york-ny/10007/asthma-weather/349727', alarm:[3,4,5]},
+{group:'1.1', name:'Arthritis', code:'10102', icon: 'arthritis', href:'http://www.accuweather.com/en/us/new-york-ny/10007/arthritis-weather/349727', alarm:[3,4,5]},
+{group:'1.1', name:'Migraine', code:'10101', icon: 'migraine', href:'http://www.accuweather.com/en/us/new-york-ny/10007/migraine-weather/349727', alarm:[3,4,5]},
+{group:'1.1', name:'Sinus', code:'10103', icon: 'sinus', href:'http://www.accuweather.com/en/us/new-york-ny/10007/sinus-weather/349727', alarm:[3,4,5]},
+{group:'1.2', name:'Travel', code:'20501', icon: 'travel', href:'http://www.accuweather.com/en/us/new-york-ny/10007/air-travel-weather/349727', alarm:[1]},
+{group:'1.2', name:'Astronomy', code:'40501', icon: 'astro', href:'http://www.accuweather.com/en/us/new-york-ny/10007/astronomy-weather/349727', alarm:[1]},
+{group:'1.2', name:'Events', code:'41001', icon: 'events', href:'http://www.accuweather.com/en/us/new-york-ny/10007/events-weather/349727', alarm:[1]},
+{group:'2.1', name:'Driving', code:'20401', icon: 'driving', href:'http://www.accuweather.com/en/us/new-york-ny/10007/driving-weather/349727', alarm:[1]},
+{group:'2.1', name:'School Day', code:'30401', icon: 'school', href:'http://www.accuweather.com/en/us/new-york-ny/10007/school-day-weather/349727', alarm:[1]},
+{group:'2.1', name:'Hair Day', code:'30301', icon: 'hair', href:'http://www.accuweather.com/en/us/new-york-ny/10007/hair-day-weather/349727', alarm:[3,4,5]},
+{group:'2.1', name:'Snow Days', code:'30402', icon: 'snow', href:'http://www.accuweather.com/en/us/new-york-ny/10007/snow-day-weather/349727', alarm:[4,5]},
+{group:'2.2', name:'D.I.Y.', code:'30101', icon: 'diy', href:'http://www.accuweather.com/en/us/new-york-ny/10007/diy-weather/349727', alarm:[1]},
+{group:'2.2', name:'Lawn & Garden', code:'30201', icon: 'lawn-garden', href:'http://www.accuweather.com/en/us/new-york-ny/10007/lawn-garden-weather/349727', alarm:[1]},
+{group:'2.2', name:'Home Energy', code:'30501', icon: 'home-energy', href:'http://www.accuweather.com/en/us/new-york-ny/10007/home-energy-weather/349727', alarm:[1]},
+{group:'2.2', name:'Entertaining', code:'40102', icon: 'entertaining', href:'http://www.accuweather.com/en/us/new-york-ny/10007/outdoor-entertaining-weather/349727', alarm:[1]},
+{group:'3.1', name:'Golf', code:'40201', icon: 'golf', href:'http://www.accuweather.com/en/us/new-york-ny/10007/golf-weather/349727', alarm:[1]},
+{group:'3.1', name:'Ski', code:'40301', icon: 'ski', href:'http://www.accuweather.com/en/us/new-york-ny/10007/ski-weather/349727', alarm:[1]},
+{group:'3.1', name:'Hunting', code:'40601', icon: 'hunting', href:'http://www.accuweather.com/en/us/new-york-ny/10007/hunting-weather/349727', alarm:[1]},
+{group:'3.1', name:'Fishing', code:'40602', icon: 'fishing', href:'http://www.accuweather.com/en/us/new-york-ny/10007/fishing-weather/349727', alarm:[1]},
+{group:'3.1', name:'Running', code:'40901', icon: 'running', href:'http://www.accuweather.com/en/us/new-york-ny/10007/running-weather/349727', alarm:[1]},
+{group:'3.1', name:'Hiking', code:'40903', icon: 'hiking', href:'http://www.accuweather.com/en/us/new-york-ny/10007/hiking-weather/349727', alarm:[1]},
+{group:'3.1', name:'Biking', code:'40902', icon: 'biking', href:'http://www.accuweather.com/en/us/new-york-ny/10007/biking-weather/349727', alarm:[1]},
+{group:'3.1', name:'Sun & Sand', code:'40401', icon: 'sun-sand', href:'http://www.accuweather.com/en/us/new-york-ny/10007/sun-sand-weather/349727', alarm:[1]},
+{group:'3.1', name:'Sailing', code:'40402', icon: 'sailing', href:'http://www.accuweather.com/en/us/new-york-ny/10007/sailing-weather/349727', alarm:[1]}];                        
+            </script>    
+
+    <script type="text/javascript" src="http://vortex.accuweather.com/adc2010/javascripts/lib.min-20141105.js"></script> 
+    
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=accuweather"></script>
+<script type="text/javascript">
+    var apgPageInfoObj = { ad_site: 'us', section: 'news', ad_section: 'newsandvideo', page: 'news', ad_page: 'news', page_code: '', crumb_trail: ['News', 'News', 'Home'], pageType: 'content', pageExt: '', adPos: { atf728: true, atfPencil: true, atf300: true, atf160: false, btf728: true, btf300: true, popunder: true, prestitial: true, links: true, ptoSkin: false } };
+
+    function onImageLoadError(obj) {
+        obj.src = 'http://vortex.accuweather.com/adc2010/images/misc/default-video-image.jpg';
+    }
+    $(document).ready(function () {
+        if ($('.sponsor-88x30').html() || $('.sponsor-88x30').css('background')) {
+            $('.awx-story h2').width(485);
+        }
+    });
+
+</script>
+
+    
+    <script type="text/javascript" src="http://vortex.accuweather.com/adc2010/javascripts/site.min-20141110a.js"></script>
+    <!--[if lte IE 8]>
+        <script>acm.isOldIE = true;</script>
+    <![endif]-->
+            <script src="https://tags.crwdcntrl.net/c/5355/cc.js?ns=_cc5355" id="LOTCC_5355"></script>
+            <script>
+                _cc5355.bcp();
+            </script>
+                    <script type="text/javascript" src="http://vortex.accuweather.com/adc2010/javascripts/ads.min-20140926.js"></script>
+
+
+        <script type="text/javascript">
+        var settingsCke = "acm";
+        sj_SelectCountry = "Select a Country";
+
+            function acmCitySubmit(key) {
+
+                var s_value = document.getElementById('s').value;
+                if (s_value == "Enter postal code or city...") {
+                    return false;
+                }
+
+                if (s_value === "") {
+                    return false;
+                }
+                var isKeyPress = (key) ? 'EnterKey' : 'ButtonClick';
+
+                if (s_value == "New York, NY") {
+                    _gaq.push(['_trackEvent', 'LocationBox', 'DefaultLocation', s_value.toLowerCase()]);
+                    setTimeout(function () {
+                        window.location.href = 'http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727';
+                    }, 50);
+                } else {
+                    _gaq.push(['_trackEvent', 'LocationBox', 'SearchLocation', s_value.toLowerCase()]);
+                    //setTimeout(function () {
+                    //    document.forms["findcity"].submit();
+                    //}, 50);
+                    // Execute it right away to prevent double-submit.
+                    document.forms["findcity"].submit();
+                }
+            }
+
+
+        </script>
+
+        <script type="text/javascript">
+            _gaq.push(['_setCustomVar', 10, 'SkyMotion', '1', 3]);
+            if (apgConfigObj.minutecast)
+            {
+                apgConfigObj.minutecast.contentAmount = '1';
+            }
+        </script>
+
+    
+    <script>
+        var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "6005068" });
+        (function () {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+            el.parentNode.insertBefore(s, el);
+        })();
+    </script>
+
+    <script type="text/javascript">
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })()
+    </script>
+    <script>
+        if (typeof (aadObj) == 'undefined') {
+            _gaq.push(['_setCustomVar', 47, 'Ads_JS_Not_Loaded', apgUserInfoObj.sessionPartner, 3]);
+        }
+
+        _gaq.push(['_trackPageview']);
+    </script>
+</head>
+<body id="news-news" class="">
+
+
+<span id="dynamic-menu-container"></span> 
+<div id="menu-cities" class="menu menu-list add-interest-menu"> 
+  <div class="menu-head-lt"> 
+    <div class="menu-head-rt"> 
+      <div class="menu-head"></div> 
+    </div> 
+  </div> 
+  <!-- /.menu-head-lt --> 
+  <div class="menu-body-lt"> 
+    <div class="menu-body-rt"> 
+      <div class="menu-body"> 
+        <ul class="menu-items">
+            <li><a href="http://www.accuweather.com/en/us/new-york-ny/10017/weather-forecast/349727">New York, NY</a></li>
+            <li><a href="http://www.accuweather.com/en/us/miami-fl/33128/weather-forecast/347936">Miami, FL</a></li>
+            <li><a href="http://www.accuweather.com/en/us/los-angeles-ca/90012/weather-forecast/347625">Los Angeles, CA</a></li>
+          <li><a href="http://www.accuweather.com/en/browse-locations">Browse for your location</a></li> 
+        </ul>
+        <span class="arrow"></span><span class="arrow-border"></span>
+      </div> 
+    </div> 
+  </div> 
+  <!-- /.menu-body-lt --> 
+  <div class="menu-foot-lt"> 
+    <div class="menu-foot-rt"> 
+      <div class="menu-foot"></div> 
+    </div> 
+  </div> 
+  <!-- /.menu-foot-lt --> 
+</div> 
+
+<!-- NEW! menu -->
+<div id="current-city-menu" class="menu menu-list add-interest-menu">
+  <div class="menu-head-lt"><div class="menu-head-rt"><div class="menu-head"></div></div></div><!-- /.menu-head-lt -->
+  <div class="menu-body-lt">
+  <div class="menu-body-rt">
+  <div class="menu-body">
+	<ul>
+        <li><a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727">Today's Weather</a></li>
+        <li><a href="http://www.accuweather.com/en/us/new-york-ny/10007/hourly-weather-forecast/349727">Hourly Forecast</a></li> 
+        <li><a href="http://www.accuweather.com/en/us/new-york-ny/10007/daily-weather-forecast/349727">Extended</a></li> 
+        <li><a href="http://www.accuweather.com/en/us/new-york-ny/10007/weekend-weather/349727">Weekend</a></li> 
+        <li><a href="http://www.accuweather.com/en/us/new-york-ny/10007/january-weather/349727">Month Outlook</a></li> 
+        <li><a href="http://www.accuweather.com/en/us/new-york-ny/10007/current-weather/349727">Current Weather</a></li> 
+	</ul>
+  <span class="arrow"></span>
+  <span class="arrow-border"></span>	
+  </div>
+  </div>
+  </div>
+  <!-- /.menu-body-lt -->
+  <div class="menu-foot-lt"><div class="menu-foot-rt"><div class="menu-foot"></div></div></div><!-- /.menu-foot-lt -->
+
+</div>
+<!-- #/current-city-menu -->
+
+<div id="current-country-menu" class="menu menu-list add-interest-menu">
+  <div class="menu-head-lt">
+    <div class="menu-head-rt">
+      <div class="menu-head"></div>
+    </div>
+  </div>
+  <!-- /.menu-head-lt -->
+  <div class="menu-body-lt">
+    <div class="menu-body-rt">
+      <div class="menu-body">
+        <ul>
+          <li class="first"><a href="http://www.accuweather.com/en/us/united-states-weather">Home</a></li>
+        </ul>
+        <ul>
+            <li class="first"><a href="http://www.accuweather.com/en/us/new-york/weather-radar">Radar & Maps</a></li>
+            <li><a href="http://www.accuweather.com/en/us/new-york/weather-radar">Radar Maps</a></li>
+            <li><a href="http://www.accuweather.com/en/us/new-york/satellite">Satellite Maps</a></li>
+            <li><a href="http://www.accuweather.com/en/us/national/weather-forecast-maps">Forecast Maps</a></li>
+            <li><a href="http://www.accuweather.com/en/us/national/weather-surface-maps">Surface Maps</a></li>                
+        </ul>
+        <ul>
+          <li class="first"><a href="http://www.accuweather.com/en/weather-news">News & Video</a></li>
+          <li><a href="http://www.accuweather.com/en/weather-news">Weather News</a></li>
+          <li><a href="http://www.accuweather.com/en/weather-video">Weather Video</a></li>
+          <li><a href="http://www.accuweather.com/en/weather-blogs">Weather Blogs</a></li>
+          <li><a href="http://www.accuweather.com/en/personalities">Personalities</a></li>
+        </ul>
+        <ul>
+          <li class="first"><a href="http://www.accuweather.com/en/us/winter-weather">Extreme Weather</a></li>
+          <li><a href="http://www.accuweather.com/en/hurricane">Hurricane Center</a></li>
+          <li><a href="http://www.accuweather.com/en/climate-change">Climate Change</a></li>
+          <li><a href="http://www.accuweather.com/en/us/winter-weather">Winter Weather</a></li>
+          <li><a href="http://www.accuweather.com/en/us/severe-weather">Severe Weather</a></li>
+        </ul>
+        <ul>
+          <li class="first"><a href="http://www.accuweather.com/en/social">Social</a></li>
+          <li><a href="http://www.accuweather.com/en/social">Social Media</a></li>
+          <li><a href="http://www.accuweather.com/en/downloads">Apps & Downloads</a></li>
+          <li><a href="http://photo.accuweather.com">Weather Photos</a></li>
+          <li><a href="http://forums.accuweather.com">Weather Forums</a></li>
+        </ul>
+        <div class="clearfix"></div>
+        <span class="arrow"></span> <span class="arrow-border"></span> </div>
+    </div>
+  </div>
+  <!-- /.menu-body-lt -->
+  <div class="menu-foot-lt">
+    <div class="menu-foot-rt">
+      <div class="menu-foot"></div>
+    </div>
+  </div>
+  <!-- /.menu-foot-lt --> 
+</div>
+<!-- #/current-country-menu -->
+
+<div id="menu-premium" class="menu menu-with-title">
+  <h3 class="menu-title"><span>Login</span></h3> 
+  <div class="menu-head-lt"> 
+    <div class="menu-head-rt"> 
+      <div class="menu-head"></div> 
+    </div> 
+  </div> 
+  <!-- /.menu-head-lt --> 
+  <div class="menu-body-lt"> 
+    <div class="menu-body-rt"> 
+      <div class="menu-body"> 
+        <ul class="menu-items"> 
+          <li><a href="https://wwwl.AccuWeather.com/premium_login.php" target="_blank">AccuWeather.com Premium</a></li> 
+          
+          <li><a href="https://wwwl.AccuWeather.com/pro_login.php" target="_blank">AccuWeather.com Professional</a></li> 
+          <li><a href="http://radarplus.accuweather.com/" target="_blank">AccuWeather.com RadarPlus</a></li> 
+          <li><a href="http://www.accuweather.com/adcbin/public/LightningPlus_Benefits.asp" target="_blank">AccuWeather.com LightningPlus</a></li> 
+        </ul> 
+      </div> 
+    </div> 
+  </div> 
+  <!-- /.menu-body-lt --> 
+  <div class="menu-foot-lt"> 
+    <div class="menu-foot-rt"> 
+      <div class="menu-foot"></div> 
+    </div> 
+  </div> 
+  <!-- /.menu-foot-lt --> 
+</div> 
+
+
+<div id="menu-settings" class="menu menu-with-title"> 
+  
+  <h3 class="menu-title"><span></span></h3> 
+  
+  <div class="menu-head-lt"> 
+    <div class="menu-head-rt"> 
+      <div class="menu-head"></div> 
+    </div> 
+  </div> 
+  <!-- /.menu-head-lt --> 
+  <div class="menu-body-lt"> 
+    <div class="menu-body-rt"> 
+      <div class="menu-body"> 
+        
+      <h4>My Settings</h4> 
+      
+      <div class="control-wrap"> 
+      
+      <form action="" method="post" autocomplete="false"> 
+           
+      <label for="settings-language"></label> 
+      <select id="settings-language" name="language" class="match-toggle" onchange="acm_updateLanguage(this.options[this.selectedIndex].value, (this.selectedIndex+1));">
+       <option value="en-us">English (US)</option>
+<option value="es">Espa&#241;ol</option>
+<option value="fr">Fran&#231;ais</option>
+<option value="da">Dansk</option>
+<option value="pt">Portugu&#234;s</option>
+<option value="nl">Nederlands</option>
+<option value="no">Norsk</option>
+<option value="it">Italiano</option>
+<option value="de">Deutsch</option>
+<option value="sv">Svenska</option>
+<option value="fi">Suomi</option>
+<option value="zh-hk">中文 (HK)</option>
+<option value="zh-cn">中文 (SIM)</option>
+<option value="zh-tw">中文 (Taiwan)</option>
+<option value="es-ar">Espa&#241;ol (Argentina)</option>
+<option value="es-mx">Espa&#241;ol (Latin America)</option>
+<option value="sk">Slovenčinu</option>
+<option value="ro">Romana</option>
+<option value="cs">Čeština</option>
+<option value="hu">Magyar</option>
+<option value="pl">Polski</option>
+<option value="ca">Catal&#224;</option>
+<option value="pt-br">Portugu&#234;s (Brazil)</option>
+<option value="hi">हिन्दी</option>
+<option value="ru">русский</option>
+<option value="ar">عربي</option>
+<option value="el">Ελληνικά</option>
+<option value="en-gb">English (UK)</option>
+<option value="ja">日本語</option>
+<option value="ko">한국어</option>
+<option value="tr">T&#220;RK&#199;E</option>
+<option value="fr-ca">Fran&#231;ais (Canada)</option>
+<option value="he">עברית</option>
+<option value="sl">Slovenski</option>
+<option value="uk">Українське</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="bg">български</option>
+<option value="et">Eesti keeles</option>
+<option value="hr">Hrvatski</option>
+<option value="kk">Қазақша</option>
+<option value="lt">Lietuvių</option>
+<option value="lv">Latviski</option>
+<option value="mk">Македонски</option>
+<option value="ms">Bahasa Melayu</option>
+<option value="tl">Tagalog</option>
+<option value="sr">Srpski</option>
+<option value="th">ไทย</option>
+<option value="vi">Tiếng Việt</option>
+<option value="fa">فارسی</option>
+<option value="bn">বাংলা</option>
+<option value="bs">bosanski</option>
+<option value="is">íslenska</option>
+<option value="sw">Kiswahili</option>
+<option value="ur">اُردُو</option>
+<option value="sr-me">Crnogorski</option>
+
+      </select>
+
+      </div> 
+      <!-- /.control-wrap --> 
+ 
+      <div id="radio-toggle-temp-unit" class="radio-toggle"> 
+        <label for="settings-temp-unit-farenheit" class="first"> 
+          <span>&deg;F</span> 
+          <input id="settings-temp-unit-farenheit" name="temp_unit" type="radio" checked="checked" value="farenheit" onclick="acm_updateUnits('0');"/> 
+        </label> 
+ 
+        <label for="settings-temp-unit-celsius" class="last"> 
+          <span>&deg;C</span> 
+          <input id="settings-temp-unit-celsius" name="temp_unit" type="radio"  value="celsius" onclick="acm_updateUnits('1');"/> 
+        </label> 
+      </div> 
+      <!-- /.radio-toggle --> 
+    
+             </form>
+    
+      </div> 
+    </div> 
+  </div> 
+  <!-- /.menu-body-lt --> 
+  
+  <div class="menu-foot-lt"> 
+    <div class="menu-foot-rt"> 
+      <div class="menu-foot"></div> 
+    </div> 
+  </div> 
+  <!-- /.menu-foot-lt -->      
+  
+</div> 
+<!-- /#settings-menu -->
+
+<div id="menu-country" class="menu menu-with-title"> 
+ 
+  <h3 class="menu-title"><span><span class="flag-US">United States</span></span></h3> 
+ 
+  <div class="menu-head-lt"> 
+    <div class="menu-head-rt"> 
+      <div class="menu-head"></div> 
+    </div> 
+  </div> 
+  <!-- /.menu-head-lt --> 
+  <div class="menu-body-lt"> 
+    <div class="menu-body-rt"> 
+      <div class="menu-body"> 
+ 
+      <h4>My Recent Countries</h4> 
+ 
+      <ul class="menu-items"> 
+            <li><a href="http://www.accuweather.com/en/us/united-states-weather" class="flag-US">United States</a></li>
+            <li><a href="http://www.accuweather.com/en/cn/china-weather" class="flag-CN">China</a></li>
+            <li><a href="http://www.accuweather.com/en/gb/united-kingdom-weather" class="flag-GB">United Kingdom</a></li>
+      </ul> 
+ 
+      <a href="#country-selector" id="bt-more-countries">More Countries</a> 
+    
+      </div> 
+    </div> 
+  </div> 
+  <!-- /.menu-body-lt --> 
+  
+  <div class="menu-foot-lt"> 
+    <div class="menu-foot-rt"> 
+      <div class="menu-foot"></div> 
+    </div> 
+  </div> 
+  <!-- /.menu-foot-lt -->     
+    
+</div> 
+<!-- /#menu-country --> 
+
+<!-- add interest dropdown -->
+<div id="add-interest-dropdown" class="clearfix">
+
+	<div id="inner-content" class="clearfix">		
+	</div><!-- end add-interest-inner-content -->
+						
+	<!-- icons -->
+	<span class="arrow"></span>
+	<span class="arrow-border"></span>
+	<!-- end icons -->
+
+</div><!-- end id="add-interest-dropdown" -->
+
+<div id="wrap" class="winter h-s">
+  <div id="wrap-header-nav" class="night">
+    <div id="header-nav" class="i-7-header">
+      
+    
+<div id="header"> 
+
+    <div id="header-davek">
+        <div id="header-davek-ps"></div>
+                <script type="textp" class="winter h-s">
+  <div id="wrap-header-nav" class="night">
+    <div id="header-nav" /javascript">
+                    acm.loadAd(aadTags, 'tile1', '#header-davek-ps', '90px');
+                </script>
+    </div>        
+
+  <!-- /#header-ad --> 
+  <style type="text/css">
+    #header-nav{overflow:visible;position:static;height:auto;}
+    #header-davek{margin-top:0px;padding-top:4px;}
+  </style>
+ 
+<div id="wrap-country-settings"> 
+    <div id="country-settings"> 
+        <a href="#menu-country" id="bt-menu-country" class="menu-arrow tmenu { el:'#menu-country', affix: { from: 'nw', to: 'nw', offset: [ -6, -8 ] } }"><strong><span class="ir flag-US">United States</span></strong></a>
+        <ul id="country-breadcrumbs"> 
+       
+                    <li class="first"><a href="http://www.accuweather.com/en/world-weather">World</a></li> 
+                    <li><a href="http://www.accuweather.com/en/north-america-weather">North America</a></li> 
+                    <li><a href="http://www.accuweather.com/en/us/united-states-weather">United States</a></li> 
+                    <li><a href="http://www.accuweather.com/en/us/ny/new-york-weather">New York</a></li>  
+                        <li class="last"><a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727">New York</a></li>
+    </ul> 
+    <!-- /#country-breadcrumbs --> 
+  </div> 
+  <!-- /#nav-country --> 
+</div> 
+<!-- /#wrap-nav-country -->  
+       <li class="last"><a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727">New York</a></li>
+    </ul> 
+    <!-- /
+<div id="country-selector" class="strong panel"> 
+ 
+  <div class="panel-head-lt"><div class="panel-head-rt"><div class="panel-head"></div></div></div> 
+  <div class="panel-body-lt"> 
+  <div class="panel-body-rt"> 
+  <div class="panel-body"> 
+    <div class="title"> 
+    <button class="bt bt-panel-close">Close</button> 
+    <div id="country-selector-recent"> 
+      <h3>My Recent Countries</h3>  
+      <ul> 
+            <li class="first"><a href="http://www.accuweather.com/en/us/united-states-weather" class="flag-US">United States</a></li>
+            <li class=""><a href="http://www.accuweather.com/en/cn/china-weather" class="flag-CN">China</a></li>
+            <li class=""><a href="http://www.accuweather.com/en/gb/united-kingdom-weather" class="flag-GB">United Kingdom</a></li>
+      </ul> 
+    </div> 
+    <!-- /#country-selector-recent --> 
+    </div> 
+    <!-- /.title --> 
+ 
+    <div id="country-selector-region" class="panel-content"> 
+      
+      <div class="title"> 
+        <h3>Select a Region</h3>
+      </div> 
+      
+      <div class="content"> 
+        
+        <ul id="country-selector-region-list" class="menu-items"> 
+          <li><a class="link-region" id="link-region-afr" href="#region-afr">Africa</a></li> 
+          <li><a class="link-region" id="link-region-ant" href="#region-ant">Antarctica</a></li> 
+          <li><a class="link-region" id="link-region-arc" href="#region-arc">Arctic</a></li> 
+          <li><a class="link-region" id="link-region-asi" href="#region-asi">Asia</a></li> 
+          <li><a class="link-region" id="link-region-cac" href="#region-cac">Central America</a></li> 
+          <li><a class="link-region" id="link-region-eur" href="#region-eur">Europe</a></li> 
+          <li><a class="link-region" id="link-region-mea" href="#region-mea">Middle East</a></li> 
+          <li><a class="link-region" id="link-region-nam" href="#region-nam">North America</a></li> 
+          <li><a class="link-region" id="link-region-ocn" href="#region-ocn">Oceania</a></li> 
+          <li><a class="link-region" id="link-region-sam" href="#region-sam">South America</a></li> 
+        </ul> 
+        <!-- /#country-selector-region-list --> 
+        
+        <div id="country-selector-region-map">         
+        </div> 
+        <!-- /#country-selector-region-map --> 
+      </div> 
+      <!-- /.content --> 
+    </div> 
+    <!-- /#country-selector-region --> 
+ 
+ 
+    <div id="country-selector-country" class="panel-content"> 
+      <div id="region-afr" class="region"> 
+        <div class="title"> <a href="#country-selector-region" class="world"><span>World</span></a> 
+          <h3></h3> 
+        </div> 
+        <div class="items"> </div> 
+      </div> 
+      <!-- /africa--> 
+      <div id="region-eur" class="region"> 
+        <div class="title"> <a href="#country-selector-region" class="world"><span>World</span></a> 
+          <h3></h3> 
+        </div> 
+        <div class="items"> </div> 
+      </div> 
+      <!-- /europe--> 
+      <div id="region-nam" class="region"> 
+        <div class="title"> <a href="#country-selector-region" class="world"><span>World</span></a> 
+          <h3></h3> 
+        </div> 
+        <div class="items"> </div> 
+      </div> 
+      <!-- /north america--> 
+      <div id="region-sam" class="region"> 
+        <div class="title"> <a href="#country-selector-region" class="world"><span>World</span></a> 
+          <h3></h3> 
+        </div> 
+        <div class="items"> </div> 
+      </div> 
+      <!-- /south america--> 
+      <div id="region-cac" class="region"> 
+        <div class="title"> <a href="#country-selector-region" class="world"><span>World</span></a> 
+          <h3></h3> 
+        </div> 
+        <div class="items"> </div> 
+      </div> 
+      <!-- /central america--> 
+      <div id="region-ocn" class="region"> 
+        <div class="title"> <a href="#country-selector-region" class="world"><span>World</span></a> 
+          <h3></h3> 
+        </div> 
+        <div class="items"> </div> 
+      </div> 
+      <!-- /oceania--> 
+      <div id="region-mea" class="region"> 
+        <div class="title"> <a href="#country-selector-region" class="world"><span>World</span></a> 
+          <h3></h3> 
+        </div> 
+        <div class="items"> </div> 
+      </div> 
+      <!-- /middle east--> 
+      <div id="region-ant" class="region"> 
+        <div class="title"> <a href="#country-selector-region" class="world"><span>World</span></a> 
+          <h3></h3> 
+        </div> 
+        <div class="items"> </div> 
+      </div> 
+      <!-- /antarctica--> 
+      <div id="region-arc" class="region"> 
+        <div class="title"> <a href="#country-selector-region" class="world"><span>World</span></a> 
+          <h3></h3> 
+        </div> 
+        <div class="items"> </div> 
+      </div> 
+      <!-- /arctic--> 
+      <div id="region-asi" class="region"> 
+        <div class="title"> <a href="#country-selector-region" class="world"><span>World</span></a> 
+          <h3></h3> 
+        </div> 
+        <div class="items"> </div> 
+      </div> 
+      <!-- /asia--> 
+    </div> 
+    <!-- /#country-selector-country --> 
+ 
+
+    <div id="country-selector-notes"> 
+      <p class="first">
+        Note: Select a region before finding a country. 
+      </p> 
+ 
+      <p></p> 
+      
+    </div> 
+    <!-- /#country-selector-notes --> 
+ 
+    
+  </div> 
+  </div> 
+  </div> 
+  <!-- /.panel-body-lt --> 
+ es"> 
+      <p class="first">
+        Note: Select a region before finding a country. 
+
+  <div class="panel-foot-lt"><div class="panel-foot-rt"><div class="panel-foot"></div></div></div> 
+ 
+</div> 
+<!-- / #country-selector --> 
+
+
+  <div id="header-logo-search" class="clearfix"> 
+        <div id="header-logo" class="ir"><span>Weather</span></div> 
+    <label for="s">for</label> 
+    
+    <div id="wrap-s-rt"> 
+    <div id="wrap-s-lt"> 
+    <div id="wrap-s" class="tmenu { affix: {offset: [ 0, 7 ], to: 'sw', from: 'nw'},el: '#menu-cities' }">
+        <form id="findcity" action="http://www.accuweather.com/en/search-locations" method="post">
+          <input onkeypress="acmCheckEnter(event);" id="s" name="s" type="text" autocomplete="off" 
+            class="text hint { help: 'New York, NY',className:'hintedLoc' }" /> 
+          <input type="hidden" name="rn" value="3day" />
+        <button onclick="acmCitySubmit()" type="button" class="bt bt-go">
+                    <div class="gold-go"></div>
+        </button>
+        </form> 
+        <script type="text/javascript">
+            (function ($) {
+                $('input.hint').hint();
+            })(jQuery);      
+        </script>
+    </div> 
+    </div> 
+    </div> 
+    <!-- /#wrap-s-rt --> 
+    
+    <!-- NEW! Removed widgets to accommodate login --> 
+    <!-- NEW! Login menu --> 
+  	<a id="bt-menu-login" class="tmenu { el:'#menu-premium', affix: { to: 'ne', from: /script>
+    </div> 
+    </div> 
+    </div> 
+    <!-- /#wrap-s-rt --> 
+    
+    <!-- NEW! Removed widgets to accommodate login --> 
+    <!-- NE'ne', offset: [ 0,-6 ] } }"><span class="menu-arrow"><span>Login</span></span></a>
+	<!-- NEW! moving menu settings here, which affects css -->
+	<a id="bt-menu-settings" class="tmenu { el:'#menu-settings', affix: { from: 'ne', to: 'ne', offset: [ 0,-6 ] } }"><span class="menu-arrow"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>, &deg;F</span></a>
+
+  
+  </div> 
+  <!-- /#header-logo-search --> 
+</div> 
+<!-- /#header --> 
+
+    </div>
+    <!-- /#header-nav -->
+  </div>
+  <!-- /#wrap-header-nav -->
+
+
+  <div id="wrap-content">
+    <div id="content">
+
+<!-- NEW! adding add-interest tab -->
+<div id="nav-main-add-interests" class="clearfix alpha">
+
+	<div id="nav-main-background"></div>
+
+	<ul id="nav-current-location" class="sub-nav">
+		<li id="current-country-tab" class="selected tmenu { affix: {offset: [ 0, 5 ], to: 'sw', from: 'nw' }, el: '#current-country-menu' }">
+			<a href="http://www.accuweather.com/en/us/united-states-weather" class="tab">
+				<span class="current-country"><h1>United States</h1></span>
+				<span class="title"><h2>Weather</h2></span>
+			</a>
+			<span class="bottom-line"></span>
+		</li>
+		<li id="current-city-tab" class=" tmenu { affix: {offset: [ 0, 5 ], to: 'sw', from: 'nw'}, el: '#current-city-menu' }">
+			<a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727" class="tab">
+				<span class="current-city">New York, NY</span>
+				<span class="title">Local Weather</span>
+				<span class="divider"></span>
+                <span class="more-info-arrow"></span>
+				<div class="more-info-content">
+				</div><!-- end more-info-content -->
+			</a>
+                <a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-warnings/349727" class="severe-weather-button us ww-non-precipitation ww-mistyrose ">
+                    <span>Wind Chill</span> Advisory
+                </a>
+		</li>
+		<li id="locations-dropdown-tab" class="location-menu { el: '#locations-dropdown-menu' }">
+			<a href="#" class="tab">
+				<span class="arrow"></span>
+				<span class="right-arrow"></span>
+			</a>
+			<span class="cover-line"></span>
+		</li>
+	</ul><!-- end nav-current-location -->
+
+		<ul id="nav-featured" class="sub-nav add-interest-nav">
+			<li class="migraine featured { code:'10101' }">
+				<a href="http://www.accuweather.com/en/us/new-york-ny/10007/migraine-weather/349727" class="tab">
+					<span class="title">Migraine</span>
+						<!-- icons -->
+						<span class="close-outer">
+                            <span class="close">
+                                <span>x</span>
+                            </span>
+						</span>
+                        <span class="arrow"></span>
+                        <span class="arrow-border"></span>
+						<span class="icon migraine"></span>
+						<span class="featured-tag"></span>
+						<!-- end icons -->
+				</a>
+			</li>
+		</ul>
+	<div id="nav-interests-carousel" class="clearfix">
+		<div class="outer-carousel">
+			<div class="carousel-relative-container">
+				<button class="carousel-button carousel-left disabled">
+					<span class="inner-button">
+						<span class="arrow"></span>
+					</span><!-- end inner-button-->
+				</button>
+				<button class="carousel-button carousel-right">
+					<span class="inner-button">
+						<span class="arrow"></span>
+					</span><!-- end inner-button-->
+				</button>
+
+				<div class="inner-carousel clearfix">
+					<ul id="nav-interests" class="sub-nav add-interest-nav">
+
+						<li id="add-new-interest" class="{affix: {inset:[-218,-10]}, el: '#add-interest-dropdown'}">
+							<a href="#add-interest-dropdown" class="tab">
+								<span class="visuallyhidden">Add New Interest</span>
+									<!-- icons -->
+									<span class="icon"></span>
+									<!-- end icons -->
+							</a>
+						</li>
+					</ul><!-- end nav-interests -->
+				</div><!-- end inner-carousel -->
+			</div><!-- end carousel-relative-container -->
+		</div><!-- end outer-carousel-->
+	</div><!-- end nav-interests-carousel-->
+
+		<!-- New! locations dropdown menu -->
+		<div id="locations-dropdown-menu" class="menu">
+			<div class="outer-border">
+				<div id="locations-carousel" class="locations-carousel">
+					<button class="carousel-button carousel-left disabled">
+						<span class="inner-button">
+							<span class="arrow"></span>
+						</span><!-- end inner-button-->
+					</button>
+					<button class="carousel-button carousel-right">
+						<span class="inner-button">
+							<span class="arrow"></span>
+						</span><!-- end inner-button-->
+					</button>
+					<div class="outer-carousel">
+						<div class="inner-carousel clearfix">
+
+							<div class="my-recent-locations clearfix">
+								<h3>My Recent Locations</h3>
+								<ul>
+                                
+								</ul>
+							</div><!-- end my recent locations -->
+
+						</div><!-- end inner-carousel-->
+					</div><!-- end outer-carousel -->
+				</div><!-- end carousel -->
+			</div><!-- outer-border -->
+		</div><!-- end locations-dropdown-menu -->
+
+</div><!-- end nav-main-add-interests-->
+
+<script type="text/javascript">
+    acm.setupMenus();
+</script>
+
+        
+<!-- moved this outside of panel-main below so it can be 100% of the content area -->
+<!-- NOTE: The left and right ordering is swapped for this one, since it's a two element stretch! -->
+      <div class="subnav-head-tabs-rt clearfix">
+          <div class="subnav-head-tabs-lt clearfix">
+          <ul class="subnav-tab-buttons">
+
+      <li class="">
+          <a href="http://www.accuweather.com/en/us/united-states-weather">
+          <span>Home</span>
+          </a>
+      </li>
+      <!-- 
+      <li class="">
+          <a href="http://www.accuweather.com/en/us/new-york-ny/10007/weather-forecast/349727">
+          <span>Forecast</span>
+          </a>
+      </li>
+      --> 
+      <li class="">   
+          <a href="http://www.accuweather.com/en/us/new-york/weather-radar" >
+          <span>Radar &amp; Maps</span>
+          </a>
+          
+      </li>
+        <li class="current">
+            <a href="http://www.accuweather.com/en/weather-news">
+            <span><strong>News &amp; Video</strong></span>
+            </a><div class="nub"></div>
+        </li>
+            <li class="">
+                <a href="http://www.accuweather.com/en/us/winter-weather">
+                <span>Winter &amp; Severe</span>
+                </a>
+            </li>
+          <li class="">
+              <a href="http://www.accuweather.com/en/climate-change">
+              <span>Climate</span>
+              </a>
+          </li>
+          <li class="last ">
+              <a href="http://www.accuweather.com/en/social">
+              <span>Social</span>
+              </a>
+          </li>
+  
+    <!--
+            <li class="current"><a href="forecast.html?t=day"><span><strong>Today's Weather</strong></span></a><div class="nub"></div></li>
+            <li><a href="forecast-weekend.html?t=day"><span>Weekend</span></a></li>
+            <li><a href="forecast-extended.html?t=day"><span>Extended Forecast</span></a></li>
+            <li class="last"><a href="forecast-month.html?t=day"><span>Month</span></a></li>
+            -->
+          </ul>
+          </div>
+      </div>
+      <!-- /.panel-head-rt -->
+<div class="column-1 clearfix">
+    <a name="top_of_page"></a>
+    <div id="panel-main" class="strong panel">
+
+      <div class="panel-head-tabs-rt">
+        <div class="panel-head-tabs-lt">
+            <ul class="panel-tab-buttons">
+    <li class="current">
+        <a href="http://www.accuweather.com/en/weather-news"><span>News</span></a>
+        <div class="nub"></div>
+    </li>
+
+    <li class="">
+        <a href="http://www.accuweather.com/en/weather-video"><span>Videos</span></a>
+    </li>
+
+    <li class="">
+        <a href="http://www.accuweather.com/en/weather-blogs"><span>Blogs</span></a>
+    </li>
+    <li class="">
+        <a href="http://www.accuweather.com/en/personalities"><span>Personalities</span></a>
+    </li>
+</ul>
+
+        </div>
+      </div>
+      <div class="panel-body-lt">
+        <div class="panel-body-rt">
+          <div id="news-body" class="panel-body">
+            <div class="panel-body-content">
+            <div class="sponsor-88x30"></div>
+            <div class="awx-story">
+              <div class="panel-title-main">
+                <h2>Dengue Fever Found on Florida&#39;s Treasure Coast</h2>
+              </div>
+              <div class="panel-title clearfix" style="position:relative;">
+              <img class="byline_photo lt" width="65" height="50" src="http://vortex.accuweather.com/adc2010/images/personalities/65x50-bw/leberfinger.png" alt="Mark Leberfinger" />
+              <div class="lt">
+			            <h6>By <strong>Mark Leberfinger</strong>, AccuWeather.com Staff Writer</h6>
+			      <h5>August 28, 2013; 10:15 AM ET</h5>
+			  </div>
+                  <div class="addthis_toolbox addthis_default_style">
+        <a href="http://www.addthis.com/bookmark.php?v=250&amp;pub=accuweather" rel="nofollow" class="addthis_button_compact">Share</a> 
+        <span class="addthis_separator">|</span> <a class="addthis_button_facebook" fb:like:action="recommend"></a> 
+        <a class="addthis_button_twitter"></a> <a class="addthis_button_linkedin"></a> 
+        <a class="addthis_button_google_plusone" g:plusone:count="false"></a> 
+    </div>
+
+            </div>
+
+                <div class="rt" style="width:300px;margin:14px 0px 10px 10px;">
+                  <img src="http://vortex.accuweather.com/adc2004/pub/includes/columns/newsstory/2013/300x140_08232003_ap49924814778.jpg" />
+                  <span class="photo-caption">See larger image below.</span>
+                </div>
+
+            <p>An outbreak of dengue fever linked to a neighborhood on Florida's Treasure Coast has caused Mosquito Control officials to go door-to-door in an effort to get rid of possible disease-carrying mosquitos.</p>
+<p>Three dengue fever cases were confirmed two weeks ago, Martin County Health Department spokeswoman Renay Rouse said. A fourth case was uncovered after a review of previously unconfirmed cases in the area.</p>
+<p>All four cases are linked to people living or working in the Rio neighborhood of Jensen Beach in Martin County, Rouse said.</p>
+<p><img src="http://vortex.accuweather.com/adc2004/pub/includes/columns/newsstory/2013/590x380_08232003_ap49924814778.jpg"/><span>A worker from the Public Health Ministry shows a mosquito inside a test tube for later analysis for dengue fever in the neighborhood of Santa Lucia on the outskirts of the city of Guatemala, Thursday, July 11, 2013. Florida officials are working to prevent a dengue fever outbreak after four people living or working in a Martin County neighborhood were discovered with the disease. (AP Photo/Luis Soto)</span></p>
+<p>Dengue is transmitted thro, Thursday, July 11, 2013. Florida officials are working to prevent a dengue fever outbreak after four people living or working in a Martin County neighborhood were discovered with the diseaseugh the bite of an infected Aedes mosquito. A person can contract with dengue fever or a more severe form, dengue hemorrhagic fever, according to the U.S. Centers for Disease Control and Prevention. More than 100 million dengue cases are estimated each year in most tropical areas of the world.</p>
+<p><b>RELATED:</b><br><i><a href="http://www.accuweather.com/en/us/national/weather-forecast-maps">Forecast Temperature Maps</a><br><a href="http://www.accuweather.com/en/us/southern-florida/weather-radar-interactive">Florida Interactive Radar</a><br><a href="http://www.accuweather.com/en/features/trend/why-am-i-a-mosquito-magnet-the-1/52876">Why Am I a Mosquito Magnet During the Summer?</a></i></p>
+<p>Since Aug. 1, temperatures have been near normal in Fort Pierce, Fla., in St. Lucie County, where one of the dengue cases was confined, AccuWeather.com Senior Expert Meteorologist Alex Sosnowski said. Normal highs are about 90 degrees.</p>
+<p>While August has been fairly dry, July was a wet month in Fort Pierce. Approximately 150 percent of the normal July rainfall was recorded.</p>
+<p>Door-to-door sweeps are under way in the Rio neighborhood in search of the water-breeding mosquitos, Gene Lemire of the Martin County Mosquito Control said.</p>
+<p>The two kinds of mosquitos linked to dengue fever will breed in anything with water in them, including 5-gallon buckets, day in the Rio neighborhood in search of the water-breeding mosquitos, Gene Lemire of the Martin County Mosquito Control said.</p>
+<p>The two kinds of og food bowls, drinking cups and bird baths.</p>
+<p>If necessary, Mosquito Control will treat areas to kill both larvae and adult mosquitos, Lemire said.</p>
+<p>The medical community is on alert for any patients who present dengue-like symptoms, including high fever, severe headache, severe eye pain and mild bleeding, Rouse said. There is no specific medication for a dengue or a dengue hemorrhagic fever infection, the CDC said.</p>
+
+            <div class="clearfix" style="margin-bottom:10px;">
+              
+            </div>
+            <div class="clearfix">
+              <ul class="g g-nav rt">
+                <li class="first"><a href="http://www.accuweather.com/en/weather-news">Weather News &gt;</a></li>
+              </ul>
+			  <ul class="g g-nav lt">
+              <li class="first"><a href="http://www.accuweather.com/en/contact?type=typo" style="color:#9B9A98">report a typo</a></li>
+            </ul>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.panel-head-rt -->
+      <div class="panel-foot-lt">
+        <div class="panel-foot-rt">
+          <div class="panel-foot"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        acm_livefeedDynamic = "crowdynews";
+    </script>
+    <div class="panel crowdynews">
+      <div class="panel-head-rt">
+        <div class="panel-head-lt">
+          <div class="panel-head"></div>
+        </div>
+      </div>
+      <div class="panel-body-lt">
+        <div class="panel-body-rt">
+          <div class="panel-body">
+            <div class="panel-body-content">
+              <div id="crowdynews-main">
+                  <div style="width: 290px; height: 400px; float:left;" breakingburner-widget="accuweather/tweets-for-this-article">
+                      <script src="http://widget.breakingburner.com/js/jwidget.js"></script>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-foot-lt">
+        <div class="panel-foot-rt">
+          <div class="panel-foot"></div>
+        </div>
+      </div>
+    </div>
+
+<div class="panel">
+  <div class="panel-head-rt">
+    <div class="panel-head-lt">
+      <div class="panel-head"></div>
+    </div>
+  </div>
+  <div class="panel-body-lt">
+    <div class="panel-body-rt">
+      <div class="panel-body comments">
+        <div class="panel-body-content">
+          <div class="panel-title">
+            <h3>Comments</h3>
+          </div>
+          <h6 style="color:#9B9A98;margin:15px 0 20px 0;">Comments left here should adhere to the <a href="http://forums.accuweather.com/index.php?act=boardrules">nt">
+          <div class="panel-title">
+            <hAccuWeather.com Community Guidelines</a>. Profanity, personal attacks, and spam will not be tolerated.</h6>
+         <div id="fb-root"></div>
+		  <script src="http://connect.facebook.net/en_US/all.js#appId=132437483467956&amp;xfbml=1"></script>
+          <div class="fb-comments" data-href="http://www.accuweather.com/en/weather-news/dengue-fever-found-on-floridas/16967121" data-width="590" data-num-posts="10"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-foot-lt">
+    <div class="panel-foot-rt">
+      <div class="panel-foot"></div>
+    </div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-head-rt">
+    <div class="panel-head-lt">
+      <div class="panel-head"></div>
+    </div>
+  </div>
+  <div class="panel-body-lt">
+    <div class="panel-body-rt">
+      <div class="panel-body">
+        <div id="news" class="panel-body-content">
+          <h3>More Weather News</h3>
+          
+              <ul class="articles">
+                <li> <a href="http://www.accuweather.com/en/weather-news/arctic-air-to-bring-feet-of-la/40212491" class="wrap"><img src="http://vortex.accuweather.com/adc2004/pub/includes/columns/newsstory/2015/120x90_01070840_hd25-1.jpg" width="120" height="90" alt="" /></a>
+                  <div class="info">
+                    <h4><a href="http://www.accuweather.com/en/weather-news"http://vortex.accuweather.com/adc2004/pub/includes/columns/newsstory/2015/120x90_01070840_hd25-1.jpg" width="120" height="90" alt="" /></a>
+        /arctic-air-to-bring-feet-of-la/40212491">Lake-Effect Snow Resumes Over Great Lakes at Midweek</a></h4>
+                    <h5>January 7, 2015; 3:30 AM ET</h5>
+                    <p>A fresh blast of arctic air will produce another round of lake-effect snow downwind of the Great Lakes through the middle of the week.</p>
+                  </div>
+                </li>
+              </ul>                 
+              <ul class="articles">
+                <li> <a href="http://www.accuweather.com/en/weather-news/brutal-cold-midwest-east-next-week/39958655" class="wrap"><img src="http://vortex.accuweather.com/adc2004/pub/includes/columns/newsstory/2015/120x90_01052013_hd27-1.jpg" width="120" height="90" alt="" /></a>
+                  <div class="info">
+                    <h4><a href="http://www.accuweather.com/en/weather-news/brutal-cold-midwest-east-next-week/39958655">Brutal Cold to Blast Eastern Half of US, Challenge Records in Midwest</a></h4>
+                    <h5>January 7, 2015; 3:29 AM ET</h5>
+                    <p>In a weather pattern common for January, waves of arctic air will flow from the Midwest to the Northeast and South into the coming weekend.</p>
+                  </div>
+                </li>
+              </ul>                 
+              <ul class="articles">
+                <li> <a href="http://www.accuweather.com/en/weather-news/drier-and-warmer-this-week-for/40127762" class="wrap"><img src="http://vortex.accuweather.com/adc2004/pub/includes/columns/newsstory/2015/120x90_01041904_hd34-1.jpg" width="120" height="90" alt="" /></a>
+                  <div class="info">
+                    <h4><a href="http://www.accuweather.com/en/weather-news/drier-and-warmer-this-week-for/40127762">Warmth to Remain Locked In This Week for California, Southwest US</a></h4>
+                    <h5>January 7, 2015; 3:28 AM ET</h5>
+                    <p>After rare snow shut down highways and left motorists stranded last week across parts of the Southwest, some normalcy will return to the region for the first full week of 2015.</p>
+                  </div>
+                </li>
+              </ul>                 
+              <ul class="articles">
+                <li> <a href="http://www.accuweather.com/en/weather-news/cities-help-homeless-code-blue/40153076" class="wrap"><img src="http://vortex.accuweather.com/adc2004/pub/includes/columns/newsstory/2015/120x90_01050412_590x390_01021840_ap95121802199.jpg" width="120" height="90" alt="" /></a>
+                  <div class="info">
+                    <h4><a href="http://www.accuweather.com/en/weather-news/cities-help-homeless-code-blue/40153076">Cities Gear Up to Aid Homeless During This Week&#39;s Brutal Arctic Outbreak</a></h4>
+                    <h5>January 7, 2015; 3:27 AM ET</h5>
+                    <p>Cities across the Midwest and Northeast are gearing up to aid their homeless populations this week as a bitter blast of arctic air pushes eastward.</p>
+                  </div>
+                </li>
+              </ul>                 
+              <ul class="articles">
+                <li> <a href="http://www.accuweather.com/en/weather-news/watch-animals-at-national-zoo/40234990" class="wrap"><img src="http://vortex.accuweather.com/adc2004/pub/includes/columns/newsstory/2015/120x90_01062020_15593112134_27d3c9ed6b_k.jpg" width="120" height="90" alt="" /></a>
+                  <div class="info">
+                    <h4><a href="http://www.accuweather.com/en/weather-news/watch-animals-at-national-zoo/40234990">WATCH: Pandas Frolic and Enjoy DC Snow Day at the Smithsonian&#39;s National Zoo</a></h4>
+                    <h5>January 7, 2015; 3:26 AM ET</h5>
+                    <p>Animals that enjoy the cold weather had a blast in the snow on Tuesday at the Smithsonian&#39;s National Zoo in Washington, D.C.</p>
+                  </div>
+                </li>
+              </ul>                 
+              <ul class="articles">
+                <li> <a href="http://www.accuweather.com/en/weather-news/chicago-cold-wave-to-persist-t/40228781" class="wrap"><img src="http://vortex.accuweather.com/adc2004/pub/includes/columns/newsstory/2015/120x90_01061646_hd33.jpg" width="120" height="90" alt="" /></a>
+                  <div class="info">
+                    <h4><a href="http://www.accuweather.com/en/weather-news/chicago-cold-wave-to-persist-t/40228781">Chicago: Cold Wave to Persist Through Saturday</a></h4>
+                    <h5>January 7, 2015; 3:25 AM ET</h5>
+                    <p>The cold wave that hit the Midwest early this week will stretch through the weekend, sending temperatures plummeting to dangerously low levels.</p>
+                  </div>
+                </li>
+              </ul>                 
+
+          <div class="clearfix">
+            <ul class="g g-nav rt">
+              <li class="first"><a href="http://www.accuweather.com/en/weather-news">news Home &gt;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-foot-lt">
+    <div class="panel-foot-rt">
+      <div class="panel-foot"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    (function () {
+        if ($('.awx-story div.rt').length == 0) {
+            $('.awx-story blockquote').css({ 'margin': '10px 30px 10px 30px', 'width': 'auto' });
+        }
+        $('.awx-story img').each(function (i) {
+            $(this).removeAttr('align');
+        });
+        $('#related-links').each(function (i) {
+            $(this).removeAttr('style');
+            $(this).addClass('clearfix');
+            $(this).append('<div class="clearfix"></div>');
+            $(this).find('strong').closest('p').remove();
+            if ($(this).find('img').length > 0) {
+                $(this).prepend('<h6>SOCIAL</h6>');
+            } else {
+                $(this).prepend('<h6>RELATED</h6>')
+            }
+        });
+    })();				
+</script>
+
+
+
+</div>
+<!-- /.column-1 -->
+
+<script type="text/javascript">
+    var addthisHtml = '<div id="addthis_widget" class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="height:180px;">';
+    addthisHtml += '<a class="addthis_button_facebook" style="cursor:pointer"></a>';
+    addthisHtml += '<a class="addthis_button_twitter" style="cursor:pointer"></a>';
+    addthisHtml += '<a class="addthis_button_linkedin" style="cursor:pointer"></a>';
+    addthisHtml += '<a class="addthis_button_google_plusone_share" style="cursor:pointer"></a>';
+    addthisHtml += '<a class="addthis_button_compact"  style="cursor:pointer"></a>';
+    addthisHtml += '</div>';
+
+    var offset = $('#panel-main').offset();
+    $('body').prepend(addthisHtml);
+
+    $('#addthis_widget').css({ position: 'fixed', top: 390, left: offset.left - 45 });
+
+    $(window).resize(function () {
+        var offset = $('#panel-main').offset();
+        $('#addthis_widget').css({ left: offset.left - 45 });
+    });
+
+    $(window).scroll(function () {
+        // trigger at scroll 200px past the bottom of #panel-main 
+        var addthisMaxScroll = offset.top + $('#panel-main').height() + 200 - $(window).height();
+        if ($(window).scrollTop() > addthisMaxScroll) {
+            if ($('#addthis_widget').css('display') != "none") {
+                $('#addthis_widget').fadeOut(400, function () {
+                    // Animation complete.
+                });
+            }
+        }
+        else {
+            if ($('#addthis_widget').css('display') == "none") {
+                $('#addthis_widget').fadeIn(400, function () {
+                    // Animation complete.
+                });
+            }
+        }
+    });
+</script>
+
+
+        
+<div class="column-2 clearfix">
+
+  <div class="panel">    <div class="panel-head-lt">      <div class="panel-head-rt">        <div class="panel-head"></div>      </div>    </div>    <div class="panel-body-lt">      <div class="panel-body-rt">        <div class="panel-body">          <div class="panel-body-content">            <div class="panel-title">              <h4 class="lt">Daily U.S. Extremes</h4>              <span class="when rt">past 24 hours</span> </div>            -body-rt">        <div class="panel-body">          <div class="panel-body-content">            <div class="panel-title">          <div class="content">              <p>                          <table cellspacing="0" class="stats">                <thead>                  <tr>                    <th>&nbsp;</th>                    <th>Extreme</th>                    <th>Location</th>                  </tr>                </thead>                <tbody>                  <tr class="hi">                    <th scope="row">High</th>                    <td><span id="extremeMaxTemp">N/A</span></td>                    <td><span id="extremeMaxCity"></span><span id="extremeMaxState"></span></td>                  </tr>                  <tr class="lo">                    <th scope="row">Low</th>                    <td><span id="extremeMinTemp">N/A</span></td>                    <td><span id="extremeMinCity"></span><span id="extremeMinState"></span></td>                  </tr>                  <tr class="last pre">                    <th scope="row">Precip</th>                    <td><span id="extremePrecip">N/A</span></td>                    <td><span id="extremePrecipCity"></span><span id="extremePrecipState"></span></td>                  </tr>                </tbody>              </table>              </p>            </div>          </div>        </div>         </div>    </div>    <div class="panel-foot-lt">      <div class="panel-foot-rt">        <div class="panel-foot"></div>      </div>    </div>  </div>
+  <script type="text/javascript">
+      var isMetric = false;
+      function getDailyExtremes() {
+          jQuery.ajax({
+              url: "/adc2004/pub/includes/headlines/extremes.xml",
+              dataType: "xml",
+              success: function (xml) {
+                  var tempKey = isMetric ? "tempC" : "tempF";
+                  var precipKey = isMetric ? "precMM" : "precIN";
+                  var precipUnit = isMetric ? "mm" : "\&quot;";
+                  $(xml).find("maxTemp").each(function () {
+                      jQuery("span#extremeMaxTemp").html($(this).find(tempKey).text() + "\&deg;");
+                      jQuery("span#extremeMaxCity").html($(this).find("city").text() + ", ");
+                      jQuery("span#extremeMaxState").html($(this).find("state").text());
+                  });
+                  $(xml).find("minTemp").each(function () {
+                      jQuery("span#extremeMinTemp").html($(this).find(tempKey).text() + "\&deg;");
+                      jQuery("span#extremeMinCity").html($(this).find("city").text() + ", ");
+                      jQuery("span#extremeMinState").html($(this).find("state").text());
+                  });
+                  $(xml).find("maxPrec").each(function () {
+                      jQuery("span#extremePrecip").html($(this).find(precipKey).text() + precipUnit);
+                      jQuery("span#extremePrecipCity").html($(this).find("city").text() + ", ");
+                      jQuery("span#extremePrecipState").html($(this).find("state").text());
+                  });
+              }
+          });
+      }
+      getDailyExtremes();
+  </script>
+
+<div id="aadTop300" class="panel">
+  <div class="panel-head-lt">
+    <div class="panel-head-rt">
+      <div class="panel-head"></div>
+    </div>
+  </div>
+
+  <div class="panel-body-lt">
+    <div class="panel-body-rt">
+        <div id="top-panel-body-rt-body" class="ad-lr panel-body">
+            <div id="top-panel-body-rt-body-ps" ></div>
+            <script type="text/javascript">
+                acm.loadAd(aadTags, 'tile2', '#top-panel-body-rt-body-ps', '250px');
+            </script> 
+        </div>
+    </div>
+  </div>
+
+  <div class="panel-foot-lt">
+    <div class="panel-foot-rt">
+      <div class="panel-foot"></div>
+    </div>
+  </div>
+</div>
+
+<!-- WeatherWhys -->
+<div class="panel">  <div class="panel-head-lt">    <div class="panel-head-rt">      <div class="panel-head"></div>    </div>  </div>  <div class="panel-body-lt">    <div class="panel-body-rt">      <div class="panel-body">        <div class="panel-body-content">          <div class="panel-title">            <h4>WeatherWhys<sup>&reg;</sup></h4>          </div>          <div class="content">            <p>            <div class="news-image-con" id="news-image-wxwhys"></div>            </p>            <p id="wxwhys-description">
+            </p>          </div>        </div>      </div>    </div>  </div>  <div class="panel-foot-lt">    <div class="panel-foot-rt">      <div class="panel-foot"></div>    </div>  </div></div><!-- /weatherwhys -->
+<script type="text/javascript">
+function getWeatherWhys() {
+    jQuery.ajax({
+        url: "http://vortex.accuweather.com/adc2004/pub/includes/headlines/wxwhys_json.asp",
+        dataType: "jsonp"
+    });
+}
+
+function updateWeatherWhy(data) {
+    jQuery('p#wxwhys-description').html(data.description);
+}
+
+getWeatherWhys();</script>
+
+<div class="panel">  <div class="panel-head-lt">    <div class="panel-head-rt">      <div class="panel-head"></div>    </div>  </div>  <div class="panel-body-lt">    <div class="panel-body-rt">      <div class="panel-body">        <div class="panel-body-content">          <div class="panel-title">            <h4 class="lt">This   <div class="panel-head"></div>    </div>  </div>  <div class="panel-body-lt">    < Day In Weather History</h4>          </div>          <div class="content">                <p><strong>Goldsboro, NC (1995)</strong><br />                A wind just beyond 100 mph as a squall line
+crossed the area.
+                </p>
+                <p><strong>The East (1996)</strong><br />                The &quot;Blizzard of &#39;96&quot; wreaked havoc across
+the eastern third of the nation.  Washington
+D.C., Baltimore, philadelphia, New York, and
+Boston became completely paralyzed.  Snowfall
+amounts included a record 31&quot; in Philadelphia,
+20-24&quot; in New York City, and 29&#39; in Boston.
+Drifts reached 10 feet.  Nearly 4 feet of
+snow fell over the West Virginia mountains.
+Winds gusted to nearly 80 mph on the Jersey
+shore.
+                </p>
+                <p><strong>LA Civic Center (996)</strong><br />                87 degrees, new record for date.
+                </p>
+          </div>        </div>      </div>    </div>  </div>  <div class="panel-foot-lt">    <div class="panel-foot-rt">      <div class="panel-foot"></div>    </div>  </div></div>
+
+<div id="ad-links" class="panel">
+    <div class="panel-head-lt">
+        <div class="panel-head-rt">
+            <div class="panel-head"></div>
+        </div>
+    </div>
+    <div class="panel-body-lt">
+        <div class="panel-body-rt">
+            <div class="panel-body">
+                <div class="panel-body-content" id="ad-links-content">
+                    <div id="ad-links-content-x">
+                        <div id="ad-links-content-x-ps"></div>
+                        <script>
+                            acm.loadTextAd("#ad-links-content-x");
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-foot-lt">
+        <div class="panel-foot-rt">
+            <div class="panel-foot"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="panel">  <div class="panel-head-lt">    <div class="panel-head-rt">      <div class="panel-head"></div>    </div>  </div>  <div class="panel-body-lt">    <div class="panel-body-rt">      <div class="panel-body">        <div class="panel-body-content">          <div class="panel-title-main">            <h4>Rough Weather</h4>          </div>          <div class="panel-title">            <ul class="tab-buttons lt">              <li><a href="#news-worst-weather" class="current">Today's Worst Weather</a></li>              <li><a href="#news-hot-spot">World Hot Spot</a></li>            </ul>          </div>          <div id="news-worst-weather" class="tab-panel">            <div class="news-image-con" id="news-image-worstwx"></div>          </div>          <div id="news-hot-spot" class="tab-panel">            <div class="news-image-con" id="news-image-hotspot"></div>          </div>        </div>      </div>    </div>  </div>  <div class="panel-foot-lt">    <div class="panel-foot-rt">      <div class="panel-foot"></div>    </div>  </div></div>
+<!-- /worst wx &  hot spot -->
+
+<div id="aadBot300" class="panel panel-ad-mr">
+  <div class="panel-head-lt">
+    <div class="panel-head-rt">
+      <div class="panel-head"></div>
+    </div>
+  </div>
+  <div class="panel-body-lt">
+    <div class="panel-body-rt">
+        <div id="bottom-panel-body" class="panel-body">
+            <div id="bottom-panel-body-ps" ></div>
+                    <script type="text/javascript">
+                        acm.loadAd(aadTags, 'tile3', '#bottom-panel-body-ps', '250px');
+                    </script>
+        </div>
+    </div>
+  </div>
+  <div class="panel-foot-lt">
+    <div class="panel-foot-rt">
+      <div class="panel-foot"> </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <!-- /.column-2 -->
+
+
+<div id="offers" class="offers-extras">
+          <div class="panel">
+            <div class="panel-head-lt">
+              <div class="panel-head-rt">
+                <div class="panel-head"></div>
+              </div>
+            </div>
+            <div class="panel-body-lt">
+              <div class="panel-body-rt">
+                <div class="panel-body">
+                  <div class="panel-body-content">
+                  <a class="{type:'Image',label:'MinuteCast Outer Banks'}" href="http://www.accuweather.com/en/us/buxton-nc/27936/minute-weather-forecast/2096438?utm_source=adc&amp;utm_medium=ExtraAd&amp;utm_content=buxtonA&amp;utm_campaign=MinuteCast" target="_blank"><img src="http://vortex.accuweather.com/adc2010/images/features/en/extra_minutecast_buxton_A_final.png" width="300" height="140" alt="MinuteCast Outer Banks" /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-foot-lt">
+              <div class="panel-foot-rt">
+                <div class="panel-foot"></div>
+              </div>
+            </div>
+          </div>
+          <!-- /extra 1 --> 
+          <div class="panel">
+            <div class="panel-head-lt">
+              <div class="panel-head-rt">
+                <div class="panel-head"></div>
+              </div>
+            </div>
+            <div class="panel-body-lt">
+              <div class="panel-body-rt">
+                <div class="panel-body">
+                  <div class="panel-body-content">
+                  <a class="{type:'Image',label:'MinuteCast Sweepstakes'}" href="https://www.facebook.com/AccuWeather?sk=app_114170205354472&amp;app_data=MinuteCast-Moments-Sweepstakes" target="_blank"><img src="http://vortex.accuweather.com/adc2010/images/features/en/MnuteCast_Sweeps_Extra_Final.png" width="300" height="140" alt="MinuteCast Sweepstakes" /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-foot-lt">
+              <div class="panel-foot-rt">
+                <div class="panel-foot"></div>
+              </div>
+            </div>
+          </div>
+          <!-- /extra 2 --> 
+  
+  <div class="panel scroll-panel">
+    <div class="panel-head-lt">
+      <div class="panel-head-rt">
+        <div class="panel-head"></div>
+      </div>
+    </div>
+    <div class="panel-body-lt">
+      <div class="panel-body-rt">
+        <div class="panel-body">
+          <div class="panel-body-content">
+            <h3></h3>
+              <ul class="scroll-area scrollbar">
+                <li><a class="{type:'Text',label:'Win $1000 With MinuteCast'}" href="https://www.facebook.com/AccuWeather?sk=app_114170205354472&amp;app_data=MinuteCast-Moments-Sweepstakes" target="_blank">Win $1000 With MinuteCast</a></li>
+                <li><a class="{type:'Text',label:'MinuteCast Sweepstakes'}" href="https://www.facebook.com/AccuWeather?sk=app_114170205354472&amp;app_data=MinuteCast-Moments-Sweepstakes" target="_blank">MinuteCast Sweepstakes</a></li>
+                <li><a class="{type:'Text',label:'MinuteCast London'}" href="http://www.accuweather.com/en/gb/london/ec4a-2/minute-weather-forecast/328328?utm_source=adc&amp;utm_medium=ExtraAd&amp;utm_content=londonA&amp;utm_campaign=MinuteCast" target="_blank">MinuteCast London</a></li>
+                <li><a class="{type:'Text',label:'MinuteCast Outer Banks'}" href="http://www.accuweather.com/en/us/buxton-nc/27936/minute-weather-forecast/2096438?utm_source=adc&amp;utm_medium=ExtraAd&amp;utm_content=buxtonA&amp;utm_campaign=MinuteCast" target="_blank">MinuteCast Outer Banks</a></li>
+                <li><a class="{type:'Text',label:'MinuteCast Lake Placid'}" href="http://www.accuweather.com/en/us/lake-placid-ny/12946/minute-weather-forecast/339681?utm_source=adc&amp;utm_medium=ExtraAd&amp;utm_content=placidA&amp;utm_campaign=MinuteCast" target="_blank">MinuteCast Lake Placid</a></li>
+                <li><a class="{type:'Text',label:'MinuteCast Augusta'}" href="http://www.accuweather.com/en/us/augusta-ga/30901/minute-weather-forecast/328218?utm_source=adc&amp;utm_medium=ExtraAd&amp;utm_content=golfA&amp;utm_campaign=MinuteCast" target="_blank">MinuteCast Augusta</a></li>
+                <li><a class="{type:'Text',label:'AccuWeather for Android'}" href="https://play.google.com/store/apps/details?id=com.accuweather.android&amp;referrer=utm_source%3DADC%26utm_medium%3Dextrasad" target="_blank">AccuWeather for Android</a></li>
+                <li><a class="{type:'Text',label:'AccuWeather&#39;s Superior Accuracy'}" href="http://enterprisesolutions.accuweather.com/success-stories?utm_source=adc&amp;utm_medium=ExtraAd&amp;utm_content=accuweatheradvantage&amp;utm_campaign=SuccessStories" target="_blank">AccuWeather&#39;s Superior Accuracy</a></li>
+                <li><a class="{type:'Text',label:'Free Weather For Your Site'}" href="http://www.accuweather.com/en/free-weather-widgets?utm_source=adc&amp;utm_medium=ExtraAd&amp;utm_campaign=FreeWidget" target="_blank">Free Weather For Your Site</a></li>
+                <li><a class="{type:'Text',label:'Forensic Weather'}" href="http://enterprisesolutions.accuweather.com/legal-forensics?utm_source=adc&amp;utm_medium=ExtraAd&amp;utm_campaign=forensics" target="_blank">Forensic Weather</a></li>
+                <li><a class="{type:'Text',label:'AccuWeather for Windows Phone'}" href="http://www.windowsphone.com/en-us/store/app/accuweather/92507698-67a2-e011-986b-78e7d1fa76f8" target="_blank">AccuWeather for Windows Phone</a></li>
+                <li><a class="{type:'Text',label:'AccuWeather Premium'}" href="https://wwwl.accuweather.com/premium_login.php?&amp;utm_source=adc&amp;utm_medium=ExtraAd&amp;utm_campaign=MoreWeather" target="_blank">AccuWeather Premium</a></li>
+                <li><a class="{type:'Text',label:'AccuWeather Professional'}" href="https://wwwl.accuweather.com/pro_login.php#&amp;panel1-2?&amp;utm_source=adc&amp;utm_medium=ExtraAd&amp;utm_campaign=Professional" target="_blank">AccuWeather Professional</a></li>
+                <li><a class="{type:'Text',label:'SkyGuard Warnings'}" href="http://enterprisesolutions.accuweather.com/skyguard?utm_source=adc&amp;utm_medium=ExtraAd&amp;utm_campaign=SkyGuard" target="_blank">SkyGuard Warnings</a></li>
+                <li><a class="{type:'Text',label:'AccuWeather for iPhone'}" href="http://ad.apps.fm/KLbCUWj_sODIH78DcLdbbPE7og6fuV2oOMeOQdRqrE211zBzfDJXGTZQ94TH09AOr-m5edWa3aXitxLfVc8XICGF8r5dIn5r1MQhQV9_k1g" target="_blank">AccuWeather for iPhone</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-foot-lt">
+      <div class="panel-foot-rt">
+        <div class="panel-foot"></div>
+      </div>
+    </div>
+  </div>
+  <!-- /everything else --> 
+</div>
+<script>
+    (function ($) {
+        $('#offers.offers-extras a').click(function () {
+            var l = $(this).metadata().label;
+            var t = $(this).metadata().type;
+            if (l && t) {
+                _gaq.push(['_trackEvent', 'AccuWeatherExtras2012', t, l]);
+            }
+        });
+    })(jQuery);
+</script>
+    </div>
+    <!-- /#content -->
+  </div>
+  <!-- /#wrap-content -->
+
+   <div id="footer">
+    <div id="footer-content-wrapper">
+        <div class="logo-ad">
+            <h5 class="logo">AccuWeather.com</h5>
+            <div id="footer-stevem">
+                <div id="footer-stevem-ps" ></div>
+                        <script type="text/javascript">
+                            acm.loadAd(aadTags, 'tile4', '#footer-stevem-ps', '90px');
+                        </script>
+            </div>
+        </div>
+
+      <div id="custom-goog-search">
+        <style type="text/css">
+        @import url(http://www.google.com/cse/api/branding.css);
+        </style>
+        <div class="cse-branding-right" style="color:#000000">
+            <div class="cse-branding-form">
+                <form action="http://www.google.com" id="cse-search-box" target="_blank">
+                <div>
+                <input type="hidden" name="cx" value="partner-pub-5771594739411148:7839492073" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input id="goog-cse-input" type="text" name="q" size="100" />
+                <input id="goog-cse-submit" type="submit" name="sa" value="" />
+                </div>
+                </form>
+            </div>
+            <div class="cse-branding-logo">
+                <img src="http://vortex.accuweather.com/adc2010/images/misc/googlelogo.png" alt="Google" />
+            </div>
+            <div class="cse-branding-text">
+            Custom Search
+            </div>
+        </div>
+      
+      </div>
+      <div id="footer-nav-main" class="clearfix">
+        <div class="first">
+          <ul class="footer-nav-cols">
+            <li class="head">Company</li>
+            <li><a href="http://www.accuweather.com/en/about">About Us</a></li>
+            <li><a href="http://mediakit.accuweather.com" target="_blank">Advertise With Us</a></li>
+            <li><a href="http://mediakit.accuweather.com/self-service-ads" target="_blank">Self-Serve Advertising</a></li>
+            <li><a href="http://accuweathercareers.silkroad.com/" target="_blank">Careers</a></li>
+            <li><a href="http://www.accuweather.com/en/press">Press</a></li>
+            
+            <li><a href="http://www.accuweather.com/en/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer-nav-cols">
+            <li class="head">Enterprise Solutions</li>
+            <li><a href="http://www.accuweather.com/adc2004/pub/products_services/media.asp" target="_blank">Media</a></li>
+            <li><a href="http://enterprisesolutions.accuweather.com/manufacturing" target="_blank">Manufacturing</a></li>
+            <li><a href="http://enterprisesolutions.accuweather.com/retail" target="_blank">Retail</a></li>
+            <li><a href="http://enterprisesolutions.accuweather.com/finance-banking" target="_blank">Finance &amp; Banking</a></li>
+            <li><a href="http://enterprisesolutions.accuweather.com/energy" target="_blank">Energy</a></li>
+              <li><a href="http://enterprisesolutions.accuweather.com/legal-forensics" target="_blank">Forensic Weather Experts</a></li>
+            <li><a href="http://enterprisesolutions.accuweather.com" target="_blank">All Enterprise Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer-nav-cols">
+            <li class="head">Subscription Services</li>
+            <li><a href="https://wwwl.accuweather.com/premium_login.php" target="_blank">AccuWeather Premium</a></li>
+            <li><a href="https://wwwl.accuweather.com/pro_login.php" target="_blank">AccuWeather Professional</a></li>
+            <li><a href="http://radarplus.accuweather.com/" target="_blank">AccuWeather RadarPlus</a></li>
+            <li><a href="http://www.accuweather.com/adcbin/public/LightningPlus_Benefits.asp" target="_blank">Lightning Plus</a></li>
+          </ul>
+        </div>
+        <div class="last">
+          <ul class="footer-nav-cols">
+            <li class="head">Partners</li>
+            <li class="img"><a href="http://www.adci.com/html/worldmap/adc_worldmap_digital_atlas.php" target="_blank" class="adci-world-map"></a></li>
+            <!--<li><a href="" target="_blank">Mobium GPS / GeoMicro</a></li>-->
+          </ul>
+        </div>
+      </div>
+      <div id="footer-tm"> &copy; 2015 AccuWeather, Inc. All Rights Reserved.<br />
+        AccuWeather.com is a registered trademark of AccuWeather, Inc.<br />
+        <a href="http://www.accuweather.com/en/legal">Terms of usage</a> under which this service is provided<br />
+        <a href="http://www.accuweather.com/en/privacy">Privacy Statement</a> | <a href="http://www.accuweather.com/en/privacy#adChoices">Ad Choices</a> </div>
+      <div id="footer-social">
+        <ul>
+          <li class="apps"><a href="http://www.accuweather.com/en/downloads">Apps &amp; Downloads</a></li>
+          <li class="fb"><a href="http://www.facebook.com/AccuWeather" target="_blank">Like Us</a></li>
+          <li class="twt"><a href="http://twitter.com/BreakingWeather" target="_blank">Follow Us</a></li>
+          <li class="utube"><a href="http://www.youtube.com/accuweather" target="_blank">Watch Us</a><ccuWeather" target="_blank">Like Us</a></li>
+          <li class="twt"><a href="http://twitter.com/BreakingWeather" target="_blank">Follow Us</a></li>
+          <li class="utube"><a href="h/li>
+        </ul>
+      </div>
+      <!-- /#footer-info --> 
+    </div>
+    <!-- /#footer-content-wrapper --> 
+  </div>
+<!-- /#footer --> 
+
+    <script>        
+        if (acm && acm.isUsePostscribe() === false) {
+            // Only make this call if we are not using postscribe 
+            // (otherwise the call was already made in PostScribe's done event)
+            if (typeof (aad_getCustomSponsors) == 'function') {
+                aadTags.tile1Done = true;
+                aadTags.tile2Done = true;
+                aadTags.tile3Done = true;
+                aadTags.tile4Done = true;
+                aad_getCustomSponsors(aadTags);
+            }
+        }
+    </script>
+    <script>
+        if (typeof (aadSponsoredLinksObj) != 'undefined' && aadSponsoredLinksObj.type == 'google' && aadSponsoredLinksObj.show_links == true) {
+            document.write('<scr' + 'ipt src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></scr' + 'ipt>');
+        } else if (typeof (aadSponsoredLinksObj) == 'undefined') {
+            jQuery('#ad-links').remove();
+        }
+    </script>
+<div id="tracking-pixels"></div>
+
+</div>
+<!-- /#wrap -->
+
+    <div class="vcard">
+        <span class="adr">
+            <span class="locality">
+                <span class="value-title" title="New York" ></span>
+            </span>
+            <abbr class="region" title="New York">
+                <span class="value-title" title="NY" ></span>
+            </abbr>
+            <span class="postal-code">
+                <span class="value-title" title="10007" ></span>
+            </span>
+            <abbr class="country-name" title="United States">
+                <span class="value-title" title="US" ></span>
+            </abbr>
+        </span>
+        <span class="geo">
+            <span class="latitude">
+                <span class="value-title" title="40.71" ></span>
+            </span>
+            <span class="longitude">
+                <span class="value-title" title="-74.01"></span>
+            </span>
+        </span>
+    </div>
+
+    <script type="text/javascript">
+        var _qoptions = { qacct: 'p-4b4gl_1fWISuU' };
+        if (typeof (apgPageInfoObj) != 'undefined' && apgPageInfoObj.crumb_trail) {
+            _qoptions.labels = apgPageInfoObj.crumb_trail.join('.');
+        }
+    </script>
+    <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+    <noscript>
+    <a href="http://www.quantcast.com/p-4b4gl_1fWISuU" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-4b4gl_1fWISuU.gif" style="display: none" border="0" height="1" width="1" alt="Quantcast"/></a>
+    </noscript>    <script type="text/javascript">
+        (function () {
+            var d = new Image(1, 1);
+            d.onerror = d.onload = function () {
+                d.onerror = d.onload = null;
+            };
+            d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-accuweather&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+        })();
+    </script>
+    <noscript>
+    <img style="display:none;" src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-accuweather&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" />
+    </noscript>
+    <script type="text/javascript">
+        var google_conversion_id = 1013122394;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <script>
+        (function() {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded)
+            { var fbds = document.createElement('script'); fbds.async = true; fbds.src = '//connect.facebook.net/en_US/fbds.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fbds, s); _fbq.loaded = true; }
+            _fbq.push(['addPixelId', '513722158765166']);
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+    <script>
+        (function() {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) { var fbds = document.createElement('script'); fbds.async = true; fbds.src = '//connect.facebook.net/en_US/fbds.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fbds, s); _fbq.loaded = true; }
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', '6020195729798',
+        {'value':'0.00','currency':'CAD'}
+        ]);
+    </script>
+    <noscript>
+        
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1013122394/?value=0&guid=ON&script=0" />
+        </div>
+        
+        <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=513722158765166&ev=PixelInitialized" />
+        
+        <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6020195729798&cd[value]=0.00&cd[currency]=CAD&noscript=1" />
+        
+        <img src="http://b.scorecardresearch.com/p?c1=2&c2=6005068&cv=2.0&cj=1" />
+    </noscript>
+    <!-- Migraine/migraine -->
+
+
+</body>
+</html>
+ps://www.facebook.com/tr?ev=6020195729798&cd[value]=0.00&cd[currency]=CAD&noscript=1" />
+        
+      

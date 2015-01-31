@@ -1,0 +1,454 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	IDSA : Influenza
+</title><script type="text/javascript" src="/WorkArea/FrameworkUI/js/ektron.javascript.ashx?id=-1028355414+1948574407+-1388997516+2009761168+27274999+1979897163+-422906301+-1818005853+1338359439+1628691364+-1253165105+659787066+-1965253052"></script><link rel="stylesheet" type="text/css" href="/WorkArea/FrameworkUI/css/ektron.stylesheet.ashx?id=646986939+-1759591071+-1510701721" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    
+        
+        <link id="idsaScreen" rel="Stylesheet" type="text/css" href="/css/idsa.css" />
+        
+        <link id="idsaPrint" rel="Stylesheet" media="print" type="text/css" href="/css/print.css" />         
+    <link id="ctl00_Link1" rel="Stylesheet" type="text/css" href="/css/colorbox.css" /><link rel="Stylesheet" type="text/css" href="/css/jquery.fancybox-1.3.4.css" />
+    <script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript" src="/js/autocolumn.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="/js/jquery.corner.v2.09.js"></script>
+    <script type="text/javascript" src="/js/IDSA-page-functions.js"></script>
+    <script type="text/javascript" src="/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="/js/VirtualPaginate.js"></script>
+    <script type="text/javascript" src="/js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="/js/idsaHomepageBanner.js" type="text/javascript"></script>
+    <!--[if lte IE 7]>
+    <styletext/javascript" src="/js/VirtualPaginate.js"></script>
+    <script type="text/javascript" src="/js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="/js/idsaHomepageBanner.js" type="text/javascript" type="text/css">
+    #idsaBannerMultiThumbnailDock ul li{	
+	display:inline;	
+    }
+
+    #idsaBannerMultiThumbnailDock ul li div{
+	display:inline;	
+     
+    }
+#idsaBannerMultiLeft{
+	height:184px;
+	width:359px;
+	float:left;
+	
+	padding: 10px;
+	
+       
+}
+    </style>
+    <![endif]-->
+<meta name="description" content="Infectious Diseases Society of America; IDSA" /><meta name="keywords" content="Infectious Diseases Society of America;IDSA" /><link rel="stylesheet" type="text/css" href="/Coveo/Anonymous/?k=css&amp;z=1335798084"/></head>
+<body>
+    <form method="post" action="/Influenza/" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="EktronClientManager" id="EktronClientManager" value="-1028355414,1948574407,-1388997516,2009761168,27274999,1979897163,-422906301,-1818005853,646986939,1338359439,1628691364,-1759591071,-1253165105,-1510701721,659787066,-1965253052" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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3JdGlvbi9zdGFyX2xfZS5naWYiLz48aW1nIHNyYz0iL1dvcmtBcmVhL2ltYWdlcy9hcHBsaWNhdGlvbi9zdGFyX3JfZS5naWYiLz48aW1nIHNyYz0iL1dvcmtBcmVhL2ltYWdlcy9hcHBsaWNhdGlvbi9zdGFyX2xfZS5naWYiLz48aW1nIHNyYz0iL1dvcmtBcmVhL2ltYWdlcy9hcHBsaWNhdGlvbi9zdGFyX3JfZS5naWYiLz48aW1nIHNyYz0iL1dvcmtBcmVhL2ltYWdlcy9hcHBsaWNhdGlvbi9zdGFyX2xfZS5naWYiLz48aW1nIHNyYz0iL1dvcmtBcmVhL2ltYWdlcy9hcHBsaWNhdGlvbi9zdGFyX3JfZS5naWYiLz48aW1nIHNyYz0iL1dvcmtBcmVhL2ltYWdlcy9hcHBsaWNhdGlvbi9zdGFyX2xfZS5naWYiLz48aW1nIHNyYz0iL1dvcmtBcmVhL2ltYWdlcy9hcHBsaWNhdGlvbi9zdGFyX3JfZS5naWYiLz48aW1nIHNyYz0iL1dvcmtBcmVhL2ltYWdlcy9hcHBsaWNhdGlvbi9zdGFyX2xfZS5naWYiLz48aW1nIHNyYz0iL1dvcmtBcmVhL2ltYWdlcy9hcHBsaWNhdGlvbi9zdGFyX3JfZS5naWYiLz48c3Bhbj5BdmVyYWdlIDAgb3V0IG9mIDUgPC9zcGFuPmRkAg0PDxYCHwBoZGQCBQ8WAh8AZ2QYAQV2Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRNaWRkbGVDb250YWluZXIkY29sdW1uRGlzcGxheSRjdGwwMCRjb250cm9sY29sdW1uJGN0bDAwJFdpZGdldEhvc3QkV2lkZ2V0SG9zdF93aWRnZXQkVmlld1NldA8PZGZkAuRZh8g6aAMsKTlKohjSCVhHN6TpvIp+H0PmVwuRxEw=" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+__$BubbleCloseIconPath='/WorkArea/';//]]>
+</script>
+
+<script src="/Coveo/Anonymous/?k=ccs&amp;z=1335798084" type="text/javascript"></script>
+<script src="/Coveo/Anonymous/?k=sr&amp;z=1322458038" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=FJ4Lt5DNzxKInMpcimV4JFFOUY6c_eehiyuFjaddtP9vuArI82_k94RNrQJA0lPX_qmuc8C5pEvy58_zDEEDGlJE35798084" type="text/javascript"></script>
+<script src="/Coveo/Anonymous/?k=sr&amp;z=1322458038" type="text/javascript"></script>
+<script src="/Scri02YpQ8wAfDcOzWkooqu4dPtbB8iovfWFlmnDS5_M9PfvOqqsQEQoQJFOvnxj61HILQzwLkSbQo5cHoLAkuwfskWa5DP-6yan7ERQLoa20&amp;t=7e632e9f" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3EA7CABE" />
+</div>
+    <input name="ctl00$txtIsMobileView" type="text" id="ctl00_txtIsMobileView" class="checkMobile" />
+    <!--begin header-->
+    
+    
+<div class="header">
+    <div class="pageActions">
+        <div class="innerHead">
+            <div class="topics">
+                 <script type="text/javascript">
+     function __LoadTaxonomy(args,context){
+          args=context.replace(/\\/g, "\\\\").replace(/'/g, "\\'")+"&"+args;
+WebForm_DoCallback('ctl00$idsaHeader1$Directory2',args,IAjax.DisplayResult,context,IAjax.DisplayError,false);
+     }
+     function OnDirectoryItemShow(id,type,tag){         if(IAjax.Digit(type) && type>=100){
+             IAjax.Pop('/WorkArea/showcontent.aspx?id='+id);
+         } else {
+             __LoadTaxonomy(IAjax.getArguements(),'pagerequest=showcontent&__ecmid='+id+'&control=ctl00_idsaHeader1_Directory2&__ecmdiv='+tag);
+         }
+     }
+     function OnDirectoryIt.Pop('/WorkArea/showcontent.aspx?id='+id);
+         } else {
+             __LoadTaxonomy(IAjax.getArguements(),'pagerequest=showcontent&__ecmid='+idemBubble(id,width,event){         __LoadTaxonomy(IAjax.getArguements(),'pagerequest=bubble&__ecmid='+id+'&control=ctl00_idsaHeader1_Directory2&bubblewidth='+width+'&X='+EBubble.EventX(event)+'&Y='+EBubble.EventY(event));
+     }
+function DmsMenuInit(){   dmsDynamicContentBox = false;    dmsCommunityDocuments = false; }
+     function OnAddCategory(name, selectedTreeId, parentId, action, id, type, share){
+         __LoadTaxonomy(IAjax.getArguements(),'pagerequest=addworkspacecategory&__categoryname='+name+'&control=ctl00_idsaHeader1_Directory2&__selectedTreeId='+selectedTreeId+'&__folderId='+parentId+'&__action='+action+'&__taxonomyId='+id+'&type='+type+'&share='+share);
+     }
+ alertCopyStr='Copy';
+ alertMoveStr='Move';
+ alertDeleteStr='Delete';
+ alertWorkspace='Workspace name is required';
+ alertCatName='Category name is required.';
+ ErrCatName='The category name cannot include';
+ ErrWorkSpaceName='The workspace name cannot include';
+ $ektron(document).ready(function(){
+     DmsMenuInit();
+ });
+</script>
+<input type="hidden" class="storeuserData" id="__EkAjaxHiddenctl00_idsaHeader1_Directory2" name="__EkAjaxHiddenctl00_idsaHeader1_Directory2" value=""/><div id="ctl00_idsaHeader1_Directory2">
+	<script type="text/javascript" src="/js/aToZNavSelect.js"></script><ul><li class="topicsLabel">Topics</li><li><a href="/templates/AtoZIndex.aspx?taxono" name="__EkAjaxHiddenctl00_idsaHeader1_Directory2" value=""/><div id="ctl00_idsaHeader1_Directory2">
+	<script type="text/javascript" src="/js/aToZNamy=32212254905">A</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=12884901886">B</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=12884901887">C</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=12884901888">D</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352832">E</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352833">F</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352839">G</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352835">H</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352838">I</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352840">J</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352841">K</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352842">L</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352843">M</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352845">N</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352844">O</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352846">P</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352847">Q</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352848">R</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352849">S</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352850">T</a></li><li><aspx?taxonomy=19327352847">Q</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352848">R</a></li><li><a href="/templates/AtoZIndex.aspx?taxa href="/templates/AtoZIndex.aspx?taxonomy=19327352851">U</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352852">V</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352853">W</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352854">X</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352855">Y</a></li><li><a href="/templates/AtoZIndex.aspx?taxonomy=19327352856">Z</a></li></ul>
+</div>
+            </div>
+            <div class="search">
+				
+                <span id="ctl00_idsaHeader1_MySearch"><div id="ctl00_idsaHeader1_ctl04">
+	
+
+<table cellspacing="0" cellpadding="0" class="coveo-theme">
+  <tr>
+    <td>
+      <input name="ctl00$idsaHeader1$ctl04$ctl00$TXTQuery" type="text" id="ctl00_idsaHeader1_ctl04_ctl00_TXTQuery" class="searchField" />
+    </td>
+    <td style="padding-left: 2px">
+      <input type="submit" name="ctl00$idsaHeader1$ctl04$ctl00$BTNSearch" value="Search" id="ctl00_idsaHeader1_ctl04_ctl00_BTNSearch" class="buttonGrey" /></td>
+  </tr>
+</table>
+
+</div></span>
+             </div>
+        </div>        
+    </div>
+    <div class="actionsNav">
+        <div class="innerHead">
+            <div class="actionsLinks">
+                <div id="ctl00_idsaHeader1_cbHeader">
+	<a href="/Contact_Us.aspx" target="">Contact Us</a> | <a href="/About_IDSA/" target="">About IDSA</a> | <a hre="actionsNav">
+        <div class="innerHead">
+            <div class="actionsLinks">
+                <div id="ctl00_idsaHeader1_cbHeader">
+	<a hrf="/membership.aspx" target="">Membership</a> | <a href="/Member_Networking/" target="">Member Networking</a> | <a class="findAMember" href="/templates/myidsapage.aspx?tab=2#findmember" target="">Find a Member</a>
+</div>
+            </div>
+            <div id="ctl00_idsaHeader1_globalUserHeader1_topUserPanel">
+	
+    <div class="actionsStatus">
+        
+            <span id="ctl00_idsaHeader1_globalUserHeader1_lblUserAvatar"></span>
+        
+        <div class="signedInInfo">
+            <div id="ctl00_idsaHeader1_globalUserHeader1_PnlLogOut">
+		
+                <a href="/My_IDSA_Login.aspx" id="ctl00_idsaHeader1_globalUserHeader1_login">Log In</a> | <a href="/Membership.aspx" id="ctl00_idsaHeader1_globalUserHeader1_register">Register</a>
+            
+	</div>
+            
+        </div>
+    </div>
+
+</div>
+
+        </div>
+    </div>
+    <div class="headerBlueBack">
+        <div class="innerHead">
+            <div class="headerLogo">
+                <a href="/">
+                    <img height="53" border="0" width="191" src="/uploadedImages/IDSA/logo-idsa-header.jpg" alt="IDSA header logo" style="border: 0px solid; width: 191px; height: 53px;" title="IDSA header logo" />
+                </a>
+            </div>
+            <div class="primaryNav">
+                <ul><li class="parentMenuIDSA"><a href="/Topics.aspx">Topics of Inte logo" style="border: 0px solid; width: 191px; height: 53px;" title="IDSA header logo" />
+                </a>
+            </div>
+            <div rest</a><div class="subMenuIDSA"><ul><li><a href="/Topic_Antimicrobial_Resistance/">Antimicrobial Resistance</a></li><li><a href="/Bioterrorism_Agents/">Bioterrorism</a></li><li><a href="/Emerging_Infections/">Emerging Infections</a></li><li><a href="http://www.idsaglobalhealth.org/">Global ID</a></li><li><a href="/Hepatitis_C/">Hepatitis C</a></li><li><a href="http://www.hivma.org/">HIV</a></li><li><a href="/Immunization/">Immunization</a></li><li><a href="/Influenza/">Influenza</a></li><li><a href="/Lyme/">Lyme Disease</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/Manage_Your_Practice.aspx">Manage Your Practice</a><div class="subMenuIDSA"><ul><li><a href="/Physician_Payments/">Physician Payments</a></li><li><a href="/Billing_and_Coding/">Billing & Coding</a></li><li><a href="/Quality_Improvement/">Quality Improvement</a></li><li><a href="/Value_ID_Specialist/">Value of ID Specialists</a></li><li><a href="/Health_IT/">Health Information Technology</a></li><li><a href="/Medicare/">Medicare & Your Practice</a></li><li><a href="/List_Serve/">Practice Management Listserve</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/Guidelines_Patient_Care/">Guidelines/Patient Care</a><div class="subMenuIDSA"><ul><li><a href="/IDSA_Practice_Guidelines/">IDSA Practice Guidelines</a></li><li><a href="/Guideline_Resources/">Guideline Methodology and <li class="parentMenuIDSA"><a href="/Guidelines_Patient_Care/">Guidelines/Patient Care</a><div class="subMenuIDSA"><ul><li><a href="/IDSA_Practice_GuiOther Resources</a></li><li><a href="/For_Patients/">For Patients & Public</a></li><li><a href="/emerging/">Emerging Clinical Issues</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/Careers_Training.aspx">Careers & Training</a><div class="subMenuIDSA"><ul><li><a href="http://www.healthecareers.com/IDSA">ID/HIV Career Center</a></li><li><a href="/Opportunities_Students/">Student & Resident Opportunities</a></li><li><a href="/Fellows/">Fellows-in-Training Center</a></li><li><a href="/Program_Directors/">Program Director Resources</a></li><li><a href="/CME/">Continuing Medical Education</a></li><li><a href="/MOC/">Maintenance of Certification</a></li><li><a href="/Online_Courses/">Online Courses & Exams</a></li><li><a href="/Research_and_Funding_Opportunities/">Research & Funding Opportunities</a></li><li><a href="http://www.hivma.org/International_HIV_Opportunities/">International HIV Training Opportunities</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/Policy/">Policy & Advocacy</a><div class="subMenuIDSA"><ul><li><a href="/Access_Reimbursement/">Access & Reimbursement</a></li><li><a href="/AR_Policy/">Antimicrobial Resistance</a></li><li><a href="/Infection_Control_Policy/">Infection Prevention & Control</a></li><li><a href="/HIV_TB_Policy/">HIV/AIDS & Global TB</a></li><li><a href="/Immunization_Policy/">Immunizations & Vaccines</a href="/AR_Policy/">Antimicrobial Resistance</a></li><li><a href="/Infection_Control_Policy/">Infection Prevention & Control</a></li><li><a href="/HIV></li><li><a href="/Biothreat_Policy/">Emerging Infections & Biothreats</a></li><li><a href="/Research_Policy/">Research & Infrastructure</a></li><li><a href="/Workforce_Policy/">Workforce & Training</a></li><li><a href="/Funding_Policy/">Federal Funding</a></li><li><a href="/Diagnostics/">Diagnostics</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/News_and_Publications/">News & Publications</a><div class="subMenuIDSA"><ul><li><a href="/CID/">Clinical Infectious Diseases</a></li><li><a href="/JID/">Journal of Infectious Diseases</a></li><li><a href="/OFID/">Open Forum Infectious Diseases</a></li><li><a href="http://news.idsociety.org/idsa/issues/2014-12-18/email.html">IDSA News</a></li><li><a href="http://newsmanager.commpartners.com/idsahiv/issues/">HIVMA eNews</a></li><li><a href="http://sciencespeaksblog.com/">Science Speaks Blog</a></li><li><a href="/News_Releases/">News Releases from IDSA</a></li><li><a href="/News_Journals/">News from the Journals</a></li><li><a href="/Media/">For Media</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/Meetings.aspx">Meetings</a><div class="subMenuIDSA"><ul><li><a href="http://www.idweek.org">IDWeek 2014</a></li><li><a href="http://www.idweek.org/attendees/past-and-future-events/">IDWeek 2013</a></li><li><a href="/IDWeek_CME/">About IDWeek CME</a></li><li><a href="/PastMeetings/">Past Meetings</enuIDSA"><ul><li><a href="http://www.idweek.org">IDWeek 2014</a></li><li><a href="http://www.idweek.org/attendees/past-and-future-events/">IDWeek 2013a></li><li><a href="/Calendar/">ID-Related Meetings Calendar</a></li><li><a href="https://idsa.confex.com/idsa/archives.cgi">Annual Meeting Abstract Archives</a></li></ul></div></li></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mobileHeader">
+    <div class="mobileIDSALogo">
+        <a href="/">
+        <img src="/resources/logo-mob-idsaheader.png" alt="idsa mobile logo" />
+        </a>
+    </div>
+    <a href="/Search.aspx" class="mobileSearchIcon"><img src="/resources/ic-mob-search.png" alt="search icon" /></a>
+</div>
+<div class="mobileGlobalNav">
+<ul>
+<li><a href="javascript:void(0);" class="mobileShowMenu">View Menu</a></li>
+
+<li><a href="/Guidelines_Patient_Care/" title="Guidelines">Guidelines</a></li>
+<li><a href="javascript:void(0);" class="mobileShowAotZ">A-Z Index</a></li>
+
+</ul>
+</div>
+<div class="mobileNav">
+    <ul><li class="parentMenuIDSA"><a href="/Topics.aspx">Topics of Interest</a><div class="subMenuIDSA"><ul><li><a href="/Topic_Antimicrobial_Resistance/">Antimicrobial Resistance</a></li><li><a href="/Bioterrorism_Agents/">Bioterrorism</a></li><li><a href="/Emerging_Infections/">Emerging Infections</a></li><li><a href="http://www.idsaglobalhealth.org/">Global ID</a></li><li><a href="/Hepatitis_C/">Hepatitis C</a></li><li><a href="http://www.hivma.org/">HIV</a></li><li><a href="/Immunization/">Immi><a href="/Emerging_Infections/">Emerging Infections</a></li><li><a href="http://www.idsaglobalhealth.org/">Global ID</a></li><li><a href="/Hepatitisunization</a></li><li><a href="/Influenza/">Influenza</a></li><li><a href="/Lyme/">Lyme Disease</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/Manage_Your_Practice.aspx">Manage Your Practice</a><div class="subMenuIDSA"><ul><li><a href="/Physician_Payments/">Physician Payments</a></li><li><a href="/Billing_and_Coding/">Billing & Coding</a></li><li><a href="/Quality_Improvement/">Quality Improvement</a></li><li><a href="/Value_ID_Specialist/">Value of ID Specialists</a></li><li><a href="/Health_IT/">Health Information Technology</a></li><li><a href="/Medicare/">Medicare & Your Practice</a></li><li><a href="/List_Serve/">Practice Management Listserve</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/Guidelines_Patient_Care/">Guidelines/Patient Care</a><div class="subMenuIDSA"><ul><li><a href="/IDSA_Practice_Guidelines/">IDSA Practice Guidelines</a></li><li><a href="/Guideline_Resources/">Guideline Methodology and Other Resources</a></li><li><a href="/For_Patients/">For Patients & Public</a></li><li><a href="/emerging/">Emerging Clinical Issues</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/Careers_Training.aspx">Careers & Training</a><div class="subMenuIDSA"><ul><li><a href="http://www.healthecareers.com/IDSA">ID/HIV Career Center</a></li><li><a href="/Opportunities_Students/">Student & Resident Opportunities</a></li><li><nuIDSA"><a href="/Careers_Training.aspx">Careers & Training</a><div class="subMenuIDSA"><ul><li><a href="http://www.healthecareers.com/IDSA">ID/HIV Caa href="/Fellows/">Fellows-in-Training Center</a></li><li><a href="/Program_Directors/">Program Director Resources</a></li><li><a href="/CME/">Continuing Medical Education</a></li><li><a href="/MOC/">Maintenance of Certification</a></li><li><a href="/Online_Courses/">Online Courses & Exams</a></li><li><a href="/Research_and_Funding_Opportunities/">Research & Funding Opportunities</a></li><li><a href="http://www.hivma.org/International_HIV_Opportunities/">International HIV Training Opportunities</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/Policy/">Policy & Advocacy</a><div class="subMenuIDSA"><ul><li><a href="/Access_Reimbursement/">Access & Reimbursement</a></li><li><a href="/AR_Policy/">Antimicrobial Resistance</a></li><li><a href="/Infection_Control_Policy/">Infection Prevention & Control</a></li><li><a href="/HIV_TB_Policy/">HIV/AIDS & Global TB</a></li><li><a href="/Immunization_Policy/">Immunizations & Vaccines</a></li><li><a href="/Biothreat_Policy/">Emerging Infections & Biothreats</a></li><li><a href="/Research_Policy/">Research & Infrastructure</a></li><li><a href="/Workforce_Policy/">Workforce & Training</a></li><li><a href="/Funding_Policy/">Federal Funding</a></li><li><a href="/Diagnostics/">Diagnostics</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/News_and_Publications/">News & Publications</a><div class="subMenuI/">Workforce & Training</a></li><li><a href="/Funding_Policy/">Federal Funding</a></li><li><a href="/Diagnostics/">Diagnostics</a></li></ul></div></liDSA"><ul><li><a href="/CID/">Clinical Infectious Diseases</a></li><li><a href="/JID/">Journal of Infectious Diseases</a></li><li><a href="/OFID/">Open Forum Infectious Diseases</a></li><li><a href="http://news.idsociety.org/idsa/issues/2014-12-18/email.html">IDSA News</a></li><li><a href="http://newsmanager.commpartners.com/idsahiv/issues/">HIVMA eNews</a></li><li><a href="http://sciencespeaksblog.com/">Science Speaks Blog</a></li><li><a href="/News_Releases/">News Releases from IDSA</a></li><li><a href="/News_Journals/">News from the Journals</a></li><li><a href="/Media/">For Media</a></li></ul></div></li><li class="parentMenuIDSA"><a href="/Meetings.aspx">Meetings</a><div class="subMenuIDSA"><ul><li><a href="http://www.idweek.org">IDWeek 2014</a></li><li><a href="http://www.idweek.org/attendees/past-and-future-events/">IDWeek 2013</a></li><li><a href="/IDWeek_CME/">About IDWeek CME</a></li><li><a href="/PastMeetings/">Past Meetings</a></li><li><a href="/Calendar/">ID-Related Meetings Calendar</a></li><li><a href="https://idsa.confex.com/idsa/archives.cgi">Annual Meeting Abstract Archives</a></li></ul></div></li></ul>
+</div>
+<div class="mobileAtoZ">
+    
+</div>
+
+    
+    <!--end header-->
+    <!--begin container-->
+    <div class="container">
+        
+    
+
+    <script type="text/javascript" language="JavaScript">
+        Ektron.PBSettings = {></li></ul>
+</div>
+<div class="mobileAtoZ">
+    
+</div>
+
+    
+    <!--end header-->
+    <!--begin container-->
+    <div class="container">
+  'dontClose': false }
+    </script>
+
+
+
+
+
+    <div class="contentGreyLeft">
+        <div class="topContent">
+            
+<div class="breadCrumb">
+        <span><a href="/">Home</a></span><span> &gt; <a href="/Topics.aspx">Topics of Interest</a></span><span> &gt; <a href="/Influenza/">Influenza</a></span>		
+</div>
+            
+<script type="text/javascript">
+    function addFavorites(pagetitle, pagelink) {
+        $.ajax({
+            url: '/Handlers/CommunityFavorites.ashx?action=addFav&pagetitle=' + pagetitle + '&pagelink=' + pagelink,
+            cache: false,
+            success: function (data) {
+                $('#ctl00_ContentPlaceHolder1_PageLinks1_liAddFav').html("<a class=\"icoFavorites\" id=\"addFav\" onclick=\"removeFavorites(" + data + ")\">Remove Favorites</a>");
+            },
+            error: function (data) {
+                $('#ctl00_ContentPlaceHolder1_PageLinks1_liAddFav').html("<a class=\"icoFavorites\" id=\"addFav\" onclick=\"removeFavorites(" + data + ")\">Remove Favorites</a>");
+            }
+        });
+        return false;
+    }
+    function removeFavorites(favId) {
+        $.ajax({
+            url: '/Handlers/CommunityFavorites.ashx?action=removeFav&favId=' + favId,
+            cache: false,
+            success: function (data) {
+                $('#ctl00_ContentPlaceHolder1_PageLinks1_liAddFav')rites(favId) {
+        $.ajax({
+            url: '/Handlers/CommunityFavorites.ashx?action=removeFav&favId=' + favId,
+            cache: false,
+  .html("<a class=\"icoFavorites\" id=\"addFav\" onclick=\"addFavorites('" + document.title + "','" + document.URL + "')\">Favorites</a>");
+            },
+            error: function (data) {
+                $('#ctl00_ContentPlaceHolder1_PageLinks1_liAddFav').html("<a class=\"icoFavorites\" id=\"addFav\" onclick=\"addFavorites('" + document.title + "','" + document.URL + "')\">Favorites</a>");
+            }
+        });
+        return false;
+    }
+</script>
+
+<div class="pageFunctionsContent">
+    <ul>
+        <li><a href="#" class="icoPrint">Print</a></li>
+        <script type="text/javascript">    var switchTo5x = true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({ publisher: '7c6f461b-e3a8-465b-955f-eb084d4b8199' });</script><li><span class="st_sharethis_custom">ShareThis</span></li>
+        
+        <li><a href="javascript:void(0);" class="icoTextSize">Text Size</a></li>
+    </ul>
+</div>
+
+        </div>
+        
+<div class="leftGreySideBar">
+    <!--begin menu-->
+    <div class="menu">
+        <ul>
+            <li><a href="/Topic_Antimicrobial_Resistance/">Antimicrobial Resistance</a></li><li><a href="/Bioterrorism_Agents/">Bioterrorism</a></li><li><a href="/Emerging_Infections/">Emerging Infections</a></li><li><a href="http://www.idsagl      <ul>
+            <li><a href="/Topic_Antimicrobial_Resistance/">Antimicrobial Resistance</a></li><li><a href="/Bioterrorism_Agents/">Bioterroriobalhealth.org/">Global ID</a></li><li><a href="/Hepatitis_C/">Hepatitis C</a></li><li><a href="http://www.hivma.org/">HIV</a></li><li><a href="/Immunization/">Immunization</a></li><li><a href="/Influenza/" class="selected">Influenza</a><ul></ul></li><li><a href="/Lyme/">Lyme Disease</a></li>
+            
+        </ul>
+    </div>
+    <!--end menu-->
+</div>
+
+        <div class="middleContentContainer">
+            
+
+<div id="ctl00_ContentPlaceHolder1_MiddleContainer_updatepanel">
+	
+        <div id="ctl00_ContentPlaceHolder1_MiddleContainer_dzcontainer" class="dropzone PBClear">
+            
+            
+                    <div id="ctl00_ContentPlaceHolder1_MiddleContainer_columnDisplay_ctl00_zone" class="PBViewing">
+                        <ul id="ctl00_ContentPlaceHolder1_MiddleContainer_columnDisplay_ctl00_column" class="columnwidgetlist">
+                            
+                            
+                                    <li class="PBItem">
+                                        <div id="ctl00_ContentPlaceHolder1_MiddleContainer_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_dropcontainer" class="widget">
+    <span id="ctl00_ContentPlaceHolder1_MiddleContainer_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_lblErrorMessage"></span>
+    <div id="ctl00_ContentPlaceHolder1_MiddleContainer_columnDisplay_ctl00_controlcolHost_dropcontainer" class="widget">
+    <span id="ctl00_ContentPlaceHolder1_MiddleContainer_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_lblErrumn_ctl00_WidgetHost_updatepanel">
+		
+            
+            <div class="content">
+                
+        
+        <div id="ctl00_ContentPlaceHolder1_MiddleContainer_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_WidgetHost_widget_CB">
+			<h1>Influenza</h1><div class="bannerStatic"><img src="/uploadedImages/IDSA/Topics_of_Interest/Influenza/Influenza_Header%202(2).jpg" alt="Influenza Header" /></div><p><Description>Influenza (flu) is a viral infection that can be serious and even fatal. It can be prevented with immunization and treated with antivirals. IDSA focuses on both seasonal and pandemic flu.</Description></p><a class="arrowBullet" href="/Flu_Facts/">What's True About the Flu</a>
+		</div>
+        <div id="ctl00_ContentPlaceHolder1_MiddleContainer_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_WidgetHost_widget_pnlTabs">
+			
+        <div class="policyInformation">
+            <span id="ctl00_ContentPlaceHolder1_MiddleContainer_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_WidgetHost_widget_lblheader"></span>
+            <div class="journals"><div class="tabs QuadsTabs"><ul><li class="selected"><a href="javascript:void(0);">Patients (3)</a></li><li><a href="javascript:void(0);">Professionals (4)</a></li><li><a href="javascript:void(0);">Public Policy (3)</a></li><li><a href="javascript:void(0);">Press (4)</a></li></ul></div><li class="selected"><a href="javascript:void(0);">Patients (3)</a></li><li><a href="javascript:void(0);">Professionals (4)</a></li><li><a href="java><div class="contentTabContainer"><div class="contentTab"><div class="row"><span class="date"></span><h2><a href="/What_is_Seasonal_Influenza/" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'What is Seasonal Influenza?']);&#xA;            ">What is Seasonal Influenza?</a></h2><Teaser></Teaser></div><div class="row"><span class="date"></span><h2><a href="/What_is_Pandemic_Influenza/" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'What is Pandemic Influenza?']);&#xA;            ">What is Pandemic Influenza?</a></h2><Teaser></Teaser></div><div class="row"><span class="date"></span><h2><a href="http://flu.gov/" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'Flu.gov']);&#xA;            ">Flu.gov</a></h2><Teaser>The U.S. Department of Health &amp; Human Services has provided a large amount of flu information for the public.</Teaser></div></div><div class="contentTab"><div class="row"><span class="date"></span><h2><a href="/Influenza_Statement.aspx" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'IDSA Continues to Recommend Antivirals for Influenza']);&#xA;            ">IDSA Continues to Recommend Antivirals for Influenza</a></h2><Teaser><p>IDSA continue="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'IDSA Continues to Recommend Antivirals for Influenza'])s to recommend the use of neuraminidase inhibitor antiviral drugs in the treatment of influenza.
+</p></Teaser></div><div class="row"><span class="date"></span><h2><a href="http://www.cdc.gov/flu/swineflu/h3n2v-clinician.htm" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'CDC’s interim information on H3N2v virus infection for clinicians']);&#xA;            ">CDC’s interim information on H3N2v virus infection for clinicians</a></h2><Teaser></Teaser></div><div class="row"><span class="date"></span><h2><a href="http://www.cdc.gov/mmwr/pdf/wk/mm61e0810.pdf" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'Evaluation of Rapid Influenza Diagnostic Tests for Influenza A (H3N2)v Virus and Updated Case Count (PDF)']);&#xA;            ">Evaluation of Rapid Influenza Diagnostic Tests for Influenza A (H3N2)v Virus and Updated Case Count (PDF)</a></h2><Teaser>This report provides 1) an update on the number of reported cases of H3N2v infections from July 12 to August 9, 2012, in the United States, 2) an updated results interpretation for the CDC Flu Real-Time Reverse Transcription Polymerase Chain Reaction (rRT-PCR) Dx Panel for A(H3N2)v for public health laboratories, and 3) an evaluation of rapid influenza diagnostic tests for the detection of H3N2v viruses.</Tesults interpretation for the CDC Flu Real-Time Reverse Transcription Polymerase Chain Reaction (rRT-PCR) Dx Panel for A(H3N2)v for public health laboratoraser></div><div class="row"><span class="date"></span><h2><a href="http://cid.oxfordjournals.org/content/48/8/1003.1.full" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'IDSA's Influenza Practice Guideline']);&#xA;            ">IDSA's Influenza Practice Guideline</a></h2><Teaser>Seasonal Influenza in Adults and Children—Diagnosis, Treatment, Chemoprophylaxis, and Institutional Outbreak Management: Clinical Practice Guidelines of the Infectious Diseases Society of America.</Teaser></div></div><div class="contentTab"><div class="row"><span class="date">9/14/2012</span><h2><a href="/uploadedFiles/IDSA/Policy_and_Advocacy/Current_Topics_and_Issues/Influenza_and_Bio-Threats/Seasonal_and_Pandemic_Influenza/IDSA Seasonal and Pandemic Influenza Principles for US Action 2012.pdf" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'IDSA Seasonal and Pandemic Influenza Principles for U.S. Action (PDF)']);&#xA;            ">IDSA Seasonal and Pandemic Influenza Principles for U.S. Action (PDF)</a></h2><Teaser>IDSA's Pandemic and Seasonal Influenza Principles for United States Action are to educate and federal policymakers and assist the US Department of Health and Human Services' Assistant Secretary for Preparedness and other agency officials, about how best to pres Pandemic and Seasonal Influenza Principles for United States Action are to educate and federal policymakers and assist the US Department of Health and Hupare for and respond to seasonal and pandemic influenza.</Teaser></div><div class="row"><span class="date"></span><h2><a href="http://www.idsociety.org/Biothreat_Policy/" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'IDSA Policy: Emerging Infections and Biothreats']);&#xA;            ">IDSA Policy: Emerging Infections and Biothreats</a></h2><Teaser>Information on IDSA's advocacy efforts regarding influenza and other emerging infections.</Teaser></div><div class="row"><span class="date"></span><h2><a href="/HCW_Policy/" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'IDSA Policy: Health Care Worker Immunization']);&#xA;            ">IDSA Policy: Health Care Worker Immunization</a></h2><Teaser><p>IDSA supports universal immunization of health care workers (HCWs) against seasonal and 2009 H1N1 influenza by health care institutions (inpatient and outpatient) through mandatory vaccination programs as these programs are likely to be the most effective means to protect patients against the transmission of seasonal and H1N1 influenza by HCWs.</p><p> </p></Teaser></div></div><div class="contentTab"><div class="row"><span class="date"></span><h2><a href="/Its_Not_Too_Late_to_Get_the_Flu_Vaccine/" target="_self" onclick="         &#xA;              _gaq.push(['_asonal and H1N1 influenza by HCWs.</p><p> </p></Teaser></div></div><div class="contentTab"><div class="row"><span class="date"></span><h2><a href="/ItstrackEvent', 'Policy', 'Download', 'It's Not Too Late to Get the Flu Vaccine']);&#xA;            ">It's Not Too Late to Get the Flu Vaccine</a></h2><Teaser>During National Influenza Vaccination Week, IDSA is reminding everyone six months or older to be vaccinated against influenza. (12/5/2011)</Teaser></div><div class="row"><span class="date"></span><h2><a href="http://www.webmd.com/cold-and-flu/news/20111025/how-effective-are-seasonal-flu-vaccines" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'How Effective Are Flu Vaccines?']);&#xA;            ">How Effective Are Flu Vaccines?</a></h2><Teaser>Andrew Pavia, MD, who chairs IDSA’s Pandemic Influenza Task Force, talks to WebMD about a new study on the effectiveness of influenza vaccines. Dr. Pavia’s advice: Get your flu shot. (10/24/2011)</Teaser></div><div class="row"><span class="date"></span><h2><a href="/Nations_Leading_Infectious_Diseases_Experts_Call_For_Mandatory_Flu_Vaccine_For_All_Healthcare_Personnel/" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'Nation's Leading Infectious Diseases Experts Call For Mandatory Flu Vaccine For All Healthcare Personnel']);&#xA;            ">Nation's Leading Infectious Diseases Experts Call For Mandatory Flu Vaccine For All Healthcare Personnel</a></h2><Teaswnload', 'Nation's Leading Infectious Diseases Experts Call For Mandatory Flu Vaccine For All Healthcare Personnel']);&#xA;            ">Nation's Leading er>Influenza vaccination of health care personnel is a professional and ethical responsibility and non-compliance should not be tolerated, according to a position paper released today by SHEA and endorsed by IDSA. (8/31/2010)</Teaser></div><div class="row"><span class="date"></span><h2><a href="/HCW_Policy/" target="_self" onclick="         &#xA;              _gaq.push(['_trackEvent', 'Policy', 'Download', 'IDSA Policy: Health Care Worker Immunization']);&#xA;            ">IDSA Policy: Health Care Worker Immunization</a></h2><Teaser><p>IDSA supports universal immunization of health care workers (HCWs) against seasonal and 2009 H1N1 influenza by health care institutions (inpatient and outpatient) through mandatory vaccination programs as these programs are likely to be the most effective means to protect patients against the transmission of seasonal and H1N1 influenza by HCWs.</p><p> </p></Teaser></div></div></div></div>
+        </div>
+        
+		</div>
+        
+        
+        <span id="ctl00_ContentPlaceHolder1_MiddleContainer_columnDisplay_ctl00_controlcolumn_ctl00_WidgetHost_WidgetHost_widget_errorLb"></span>
+    
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+                        </ul>
+                    </div>
+                
+        </div>
+    
+</div>
+
+
+rLb"></span>
+    
+            </div>
+        
+	</div>
+</div>
+                                    </li>
+                                
+               </div>
+        <div class="rightSideBar">
+            
+
+<div id="ctl00_ContentPlaceHolder1_RightSideContainer_updatepanel">
+	
+        <div id="ctl00_ContentPlaceHolder1_RightSideContainer_dzcontainer" class="dropzone PBClear">
+            
+            
+                    <div id="ctl00_ContentPlaceHolder1_RightSideContainer_columnDisplay_ctl00_zone" class="PBViewing">
+                        <ul id="ctl00_ContentPlaceHolder1_RightSideContainer_columnDisplay_ctl00_column" class="columnwidgetlist">
+                            
+                            
+                        </ul>
+                    </div>
+                
+        </div>
+    
+</div>
+
+
+        </div>
+        
+<div class="subscribeBorder">
+    <p>
+        &nbsp;<div id="ctl00_ContentPlaceHolder1_PageSubscriptionsRating1_pnlSubscription" class="subscriptionContainer">
+	
+            <span id="ctl00_ContentPlaceHolder1_PageSubscriptionsRating1_lblLandingSubs"><a href="/Templates/myIdsaLogin.aspx?pageid=34359738354&refUrl=/Influenza/" class="icoRss">Subscribe for Updates</a></span>
+            
+</div>
+        <div id="ctl00_ContentPlaceHolder1_PageSubscriptionsRating1_pnlRating" class="ratingContainer">
+	
+            
+            <span id="ctl00_ContentPlaceHolder1_PageSubscriptionsRating1_lblavgRating"> <img src="/WorkArea/images/application/star_l_e.g    <div id="ctl00_ContentPlaceHolder1_PageSubscriptionsRating1_pnlRating" class="ratingContainer">
+	
+            
+            <span id="ctl00_Contif"/><img src="/WorkArea/images/application/star_r_e.gif"/><img src="/WorkArea/images/application/star_l_e.gif"/><img src="/WorkArea/images/application/star_r_e.gif"/><img src="/WorkArea/images/application/star_l_e.gif"/><img src="/WorkArea/images/application/star_r_e.gif"/><img src="/WorkArea/images/application/star_l_e.gif"/><img src="/WorkArea/images/application/star_r_e.gif"/><img src="/WorkArea/images/application/star_l_e.gif"/><img src="/WorkArea/images/application/star_r_e.gif"/><span>Average 0 out of 5 </span></span>
+        
+</div>
+    </p>
+</div>
+
+    </div>
+
+    </div>
+    <!--end container-->
+    <!--begin footer-->
+    <div id="ctl00_idsaFooter1_ContentBlock1">
+	<div class="footer"><div class="bannerFooter"></div><div class="idsaFooterInfo"><div class="idsaAddressInfo"><img src="/uploadedImages/IDSA/Test/logo-idsa-footer.gif" alt="IDSA footer logo" /><h6>Infectious Diseases Society of America</h6><location_and_contact><p title="temporary paragraph, click here to add a new paragraph"><a title="1300 Wilson Boulevard Suite 300 Arlington, VA 22209 Phone: (703) 299-0200 | Fax: (703) 299-0204" href="http://maps.google.com/maps/place?q=1300+Wilson+Boulevard+Suite+300+Arlington,+VA+22209+&amp;hl=en&amp;ftid=0x89b7b6595ec7a207:0xf85ea9134d025c73" target="_blank">1300 Wilson Boulevard Suite 300 Arlington, VA 22209 </a>| Phone: (703) 299-0200 |204" href="http://maps.google.com/maps/place?q=1300+Wilson+Boulevard+Suite+300+Arlington,+VA+22209+&amp;hl=en&amp;ftid=0x89b7b6595ec7a207:0xf85ea9134d Fax: (703) 299-0204</p>
+</location_and_contact></div><div class="idsaSocialFooter"><div class="leftSocial"><ul><li><a target="_blank" href=" http://www.facebook.com/IDSociety"><img src="/resources/logo-facebook.jpg" alt="facebook" /></a></li><li><a target="_blank" href="http://twitter.com/#!/idsainfo"><img src="/resources/logo-twitter.jpg" alt="twitter" /></a></li><li><a target="_blank" href="http://www.flickr.com/photos/idsociety/"><img src="/resources/logo-flickr.jpg" alt="flickr" /></a></li></ul></div><div class="rightSocial"><ul><li><a href="/Media/" target="">For Media</a></li><li><a href="/For_Patients/" target="">For Patients &amp; Public</a></li><li><a href="" target=""></a></li></ul></div></div></div><div class="partnersFooter"><div class="partnersLinks"><ul><li class="labelPartners">Partners </li><li><a href="http://www.hivma.org/" target="_blank"><img src="/uploadedImages/IDSA/Test/logo-hivma-footer.gif" alt="HIVMA Logo" /></a></li><li><a href="http://www.idsaglobalhealth.org/home.aspx" target="_blank"><img src="/uploadedImages/IDSA/Test/logo-global-health-policy.gif" alt="Global Health Policy logo" /></a></li><li><a href="http://www.healthecareers.com/IDSA/" target="_blank"><img src="/uploadedImages/IDSA/Test/logo-career-center.gif" alt="ID HIV Career Center Logo" /></a></li><li><a href="http://www.immunizationinfo.org/" target="_blank"><img srogo" /></a></li><li><a href="http://www.healthecareers.com/IDSA/" target="_blank"><img src="/uploadedImages/IDSA/Test/logo-career-center.gif" alt="ID c="/uploadedImages/IDSA/Test/logo-nnii.gif" alt="National Network for Immunization Information logo" /></a></li><li><a href="http://ein.idsociety.org/" target="_blank"><img src="/uploadedImages/IDSA/Test/logo-ein.gif" alt="Emerging Infections Network" /></a></li></ul></div></div><div class="copyright"><p><span>
+            © Copyright IDSA 2015</span><span class="swapLink"></span> | <a href="/SiteMap/" target="">Sitemap</a> | <a href="/TermsOfUse.aspx" target="">Terms of Use</a> | <a href="/TermsOfUse.aspx#privacy" target="">Privacy</a></p></div></div><div class="mobileFooter"><p><span class="replaceLink"></span> | <a href="http://www.hivma.org">HIVMA</a> | <a href="#test">Contact Us</a></p><p><span>
+                © Copyright IDSA 2015 Infectious Diseases Society of America</span></p></div>
+</div>
+
+
+<a id="ctl00_idsaFooter1_lbmobile" class="fullSiteLinkJavascript" href="javascript:__doPostBack(&#39;ctl00$idsaFooter1$lbmobile&#39;,&#39;&#39;)">Full Site</a>    
+<a id="ctl00_idsaFooter1_btnMobileView" class="mobileSiteLinkJavascript" href="javascript:__doPostBack(&#39;ctl00$idsaFooter1$btnMobileView&#39;,&#39;&#39;)">Mobile Site</a>
+                
+
+    
+    <!--end footer-->
+    
+
+<script type="text/javascript">
+//<![CDATA[
+CoveoShowQuickViewForListItem = function (p_Arg0, p_Arg1, p_Callback) { _aM.DMC('ctl00$idsaHeader1$MySearch', 'ShowQui39;,&#39;&#39;)">Mobile Site</a>
+                
+
+    
+    <!--end footer-->
+    
+
+<script type="text/javascript">
+//<![CDATA[
+CoveoShowQuickVckViewForSharePointItem', '_d0!1!1!1!0!', p_Callback, new Array(p_Arg0, p_Arg1, null)); };//]]>
+</script>
+</form>
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5332387-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);   })();
+
+</script>
+    
+</body>
+</html>
+<script type="text/javascript">
+	function CNL_InitAjaxManager() {
+	  _aM = new Coveo.CNL.Web.Scripts.Ajax.AjaxManagerScript();
+	  var frameworkDoPostBack = __doPostBack;
+	  __doPostBack = function(t, a) { _aM.DPB(t, a, false, false); }
+	  Coveo.CNL.Web.Scripts.Ajax.AjaxManagerScript.takeBackupOfValue(document.getElementById('__VIEWSTATE'));
+	  _aM.initialize('ctl00$ctl03', document.getElementById('aspnetForm'), null, ss.Delegate.create(null, frameworkDoPostBack), CNL_ParseStringAsXml('\x3c?xml version=\"1.0\" encoding=\"utf-16\"?\x3e\x3cAjaxManager\x3e\x3cPartial\x3e\x3cControl Id=\"ctl00$ctl03\" /\x3e\x3cControl Id=\"ctl00$idsaHeader1$ctl03$CoveoDefaultCatalog\" /\x3e\x3cControl Id=\"ctl00$idsaHeader1$ctl04\" /\x3e\x3cControl Id=\"ctl00$c?xml version=\"1.0\" encoding=\"utf-16\"?\x3e\x3cAjaxManager\x3e\x3cPartial\x3e\x3cControl Id=\"ctl00$ctl03\" /\x3e\x3cControl Id=\"ctl00$idsaHeader1idsaHeader1$ctl05\" /\x3e\x3cControl Id=\"ctl00$hivmaHeader1$ctl03\" /\x3e\x3cControl Id=\"ctl00$hivmaHeader1$ctl04\" /\x3e\x3c/Partial\x3e\x3cExternalScripts\x3e\x3cScript Uri=\"/Coveo/Anonymous/?k=ccs&amp;z=1335798084\" /\x3e\x3cScript Uri=\"/Coveo/Anonymous/?k=sr&amp;z=1322458038\" /\x3e\x3c/ExternalScripts\x3e\x3cConsts /\x3e\x3cAjaxObjects\x3e\x3cAjaxObject Type=\"Coveo.CES.Web.Search.Scripts.Controls.SearchBoxScript\" OwnerId=\"ctl00$idsaHeader1$MySearch\"\x3e\x3cProtectedField Name=\"m_Target\" Type=\"string\"\x3e/Search.aspx?&amp;lcid=9\x3c/ProtectedField\x3e\x3cProtectedField Name=\"m_SearchAsYouType\" Type=\"boolean\"\x3eFalse\x3c/ProtectedField\x3e\x3cProtectedDomElement Name=\"m_TextBox\" Id=\"ctl00_idsaHeader1_ctl04_ctl00_TXTQuery\" /\x3e\x3cProtectedDomElement Name=\"m_SearchButton\" Id=\"ctl00_idsaHeader1_ctl04_ctl00_BTNSearch\" /\x3e\x3cProtectedMethods Name=\"serverUpdateResults\"\x3efunction (p_Arg0, p_Arg1, p_Callback) { _aM.DMC(\'ctl00$idsaHeader1$MySearch\', \'ServerUpdateResults\', \'_d0!1!0!0!0!\', p_Callback, new Array(p_Arg0, p_Arg1, null)); }\x3c/ProtectedMethods\x3e\x3c/AjaxObject\x3e\x3c/AjaxObjects\x3e\x3cBlankOnHistory /\x3e\x3c/AjaxManager\x3e'), false, true)
+	}
+	CNL_InitAjaxManager();
+
+</script>'ServerUpdateResults\', \

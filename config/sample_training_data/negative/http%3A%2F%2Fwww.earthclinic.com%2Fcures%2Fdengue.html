@@ -1,0 +1,1170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Dengue Fever Remedies</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+<meta name="description" content="Dengue fever is a mosquito-borne disease that ranges in severity. Natural treatments can sometimes help, such as Barley grass, goldenseal, neem and papaya.">
+<meta name="keywords" content="Dengue Fever, hemorrhagic fever, DF, DHF, immunity, mosquito borne illness, tropical virus,">
+<link rel="Shortcut Icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/css/ecstyles.css?ver=7" media="all">
+<link rel="stylesheet" type="text/css" href="/css/ec-responsive.css" media="all">
+
+<link rel="alternate" type="application/rss+xml" title="Dengue fever is a mosquito-borne disease that ranges in severity. Natural treatments can sometimes help, such as Barley grass, goldenseal, neem and papaya." href="/cures/dengue.rss" />
+<script src="http://www.earthclinic.com/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://www.earthclinic.com/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="http://www.earthclinic.com/js/jquery.easy-ticker.js"></script>
+<style type="text/css">
+.go-top {
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	text-decoration: none;
+	padding: 0.2em;
+	display: none;
+}
+.fa {
+	font-size: 2.5em;
+	color: #00a2ce;
+}
+</style>
+<meta name="viewport" content="width=device-width">
+<script>
+if (window != top) parent.location.href = window.location;
+</script>
+<script language="javascript">
+function postRequest(strURL){
+	var xmlHttp;
+	if(window.XMLHttpRequest){ // For Mozilla, Safari, ...
+	var xmlHttp = new XMLHttpRequest();
+	}
+	else if(window.ActiveXObject){ // For Internet Explorer
+	var xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlHttp.open('POST', strURL, true);
+	xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	xmlHttp.onreadystatechange = function(){
+	if (xmlHttp.readyState == 4){
+	updatepage(xmlHttp.responseText);
+	}
+	}
+	xmlHttp.send(strURL);
+}
+function updatepage(str){
+if(str!="no"){
+load("login-proccess.php", "signin");
+  //document.getElementById('loginli').innerHTML = '<a href="javascript:void();">Welcome </a><ul><li><a href="/signout.php">Sign Out</a></li><li><a href="/members/members.php">My Account</a></li></ul>';
+  window.location = self.location;
+}
+else{
+alert("Invalid Login! Please try again!");
+}
+}
+function call_login(){
+var username = window.document.f1.username.value;
+var password = window.document.f1.password.value;
+} 
+function ahah(url, target) {
+  document.getElementById(target).innerHTML = ' Fetching data...';
+  if (window.XMLHttpRequest) {
+    req = new XMLHttpRequest();
+  } else if (window.ActiveXObject) {
+    req = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  if (req != undefined) {
+    req.onreadystatechange = function() {ahahDone(url, target);};
+    req.open("GET", url, true);
+    req.send("");
+  }
+}  
+function ahahDone(url, target) {
+  if (req.readyState == 4) { // only if req is "loaded"
+    if (req.status == 200) { // only if "OK"
+      document.getElementById(target).innerHTML = req.responseText;
+    } else {
+      document.getElementById(target).innerHTML="Thank You.";
+    }
+  }
+}
+function load(name, div) {
+	ahah(name,div);
+	return false;
+}
+</script>
+<script type="text/javascript">
+<!--
+function replyToPost(pageId, postId, postTitle, postType)
+{
+	var url = "/contactus.php?action=" + postType + "&pid=" + pageId + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=1025,height=750,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+function followThis(pid, aid)
+{
+LeftPosition = (screen.width) ? (screen.width-200)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-100)/2 : 0;
+	var url = "/follow.php?pid=" + pid + "&aid=" + aid;
+	var options = 'width=640,height=290,top='+TopPosition+',left='+LeftPosition+',status:0,toolbar:0,menubar:0,location:0,scrollbars=no,resizable=no';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+function followThisQuestion(pid, aid)
+{
+LeftPosition = (screen.width) ? (screen.width-200)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-100)/2 : 0;
+	var url = "/followquestion.php?pid=" + pid + "&aid=" + aid;
+	var options = 'width=640,height=290,top='+TopPosition+',left='+LeftPosition+',status:0,toolbar:0,menubar:0,location:0,scrollbars=no,resizable=no';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+function flagPost(pageId, postId, postTitle, postType)
+{
+	var url = "/flag.php?action=" + postType + "&pid=" + pageId + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=400,height=120,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+function flagQuestion(pageId, postId, postTitle, postType)
+{
+	var url = "/flagquestion.php?action=" + postType + "&pid=" + pageId + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=400,height=120,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+function printPost(postId, postTitle, postType)
+{
+	var url = "/printpost.php?action=" + postType + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=800,height=650,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+function mailPost(postId, postTitle, postType)
+{
+	var url = "/mail.php?action=" + postType + "&id=" + postId + "&title=" + postTitle;
+	var options = 'width=800,height=650,status:0,toolbar:0,menubar:0,location:0,scrollbars=yes,resizable=yes';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+function followThisTreatment(tid)
+{
+LeftPosition = (screen.width) ? (screen.width-200)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-100)/2 : 0;
+	var url = "/followtreatment.php?tid=" + tid;
+	var options = 'width=850,height=175,top='+TopPosition+',left='+LeftPosition+',status:0,toolbar:0,menubar:0,location:0,scrollbars=no,resizable=no';
+	var myWindow=window.open(url,"",options);
+	myWindow.focus(); 
+}
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+
+<link rel="stylesheet" type="text/css" href="/css/headernav2014.css" media="all">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link rel="alternate" href="http://www.earthclinic.com/mobile/cures/dengue.html" /><script>
+		function loadReplyForm(formid, type, postid, title){
+			document.getElementById('respond-'+formid).innerHTML='<h3 id="reply-title" class="comment-reply-title">Join the Conversation ...</h3><form action="/contactus.php?action=Feedback&pid=203&id='+formid+'&title='+title+'" method="post" name="contact" id="contact" class="comment-form" onMouseOver="javascript:framefont();" novalidate><div style="display:;"><p class="comment-form-author"><label for="fname">Name <span class="required">*</span></label><br><input class="fname" type="text" value="" name="fullname"><input name="fname" id="fname" type="text" size="30" aria-required="true" value=""></p><p><label for="state">Location <span class="required">*</span></label><br><input type="text" name="state" id="state" class="comment-form" size="30" aria-required="true" value=""></p><p class="email"><label for="email">Email <span class="required"> </span></label><br><input id="email" name="email" type="email" value="" size="30" aria-required="true"></p></div><p><br><label for="ratingText">Your User Rating </label><span> (if applicable):</span><br /><select id="ratingText" name="ratingText" style="width:100%;padding: 0.3rem 0;"><option selected value=""> </option><option value="YEA">YEA</option><option value="NAY">NAY</option><option value="BETTER BUT WITH SIDE EFFECTS">BETTER BUT WITH SIDE EFFECTS</option><option value="BETTER BUT NOT CURED">BETTER BUT NOT CURED</option><option value="WORKED TEMPORARILY">WORKED TEMPORARILY</option><option value="WARNING!">WARNING!</option><option value="SIDE EFFECTS">SIDE EFFECTS</option><option value="DEATH REPORTED">DEATH REPORTED</option></select></p><p class="comment-form-comment"><label for="comments">Comment <span class="required">*</span></label><br><textarea id="comments" name="comments" cols="45" rows="8" aria-required="true"></textarea></p><table id="agree" width="100%" align="center"><tbody><tr><td width="206"><span style="float:left;">* <a href="javascript:void(0);" onclick="MM_openBrWindow(\'/tos.html\',\'\',\'scrollbars=yes,width=965,height=850\')"><u>Earth Clinic, LLC&nbsp;Terms of Service agreement</u></a><br>* <a href="javascript:void(0);" onclick="MM_openBrWindow(\'/privacy_policy.html\',\'\',\'scrollbars=yes,width=965,height=850\')"><u>Earth Clinic, LLC Online Privacy Statement</u></a><br>* <a href="javascript:void(0);" onclick="MM_openBrWindow(\'http://www.earthclinic.com/privacy_policy_children.html\',\'\',\'scrollbars=yes,width=965,height=850\')"><u>I am age 13 or older</u></a></span></td></tr><tr><td><p>To accept the terms of service, click I Agree. Clicking "I Agree" means that you agree to the terms of the Earth Clinic LLC   service agreement and the privacy policy statement, and that you are 13 or older. If you do not agree to these terms, click Cancel.<br></p></td></tr></tbody></table><p class="form-submit"><input name="submit" type="submit" id="submit2" value="Submitting..." style="display:none;" disabled><input name="submit" type="submit" id="submit" value="I Agree" onClick="javascript:this.style.display=\'none\'; document.getElementById(\'submit2\').style.display=\'\';">  <input name="cancel" type="button" id="cancel" value="Cancel" onClick="document.getElementById(\'respond-'+formid+'\').innerHTML=\'\'"></p><input style="font-size:17px;" type="hidden" name="page" value="Contact Us Page"><input type="hidden" name="pageId" value="203"><input type="hidden" name="postId" value="'+formid+'"><input type="hidden" name="type" value="Feedback"><input type="hidden" name="subject" value="'+title+'"></form>';}
+</script>
+
+<script language="javascript" src="/js/main-functions.js"></script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-257479-3']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+<!-- 0 -->
+            <!--BOF DFP Ads Call
+            <script type='text/javascript'>
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            (function() {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') + 
+            '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+            })();
+            </script>
+            
+            <script type='text/javascript'>
+            googletag.cmd.push(function() {
+            //googletag.defineSlot('/11697881/Health_160x600_RtColumn', [160, 600], 'div-gpt-ad-1369427830656-0').addService(googletag.pubads());
+            //googletag.defineSlot('/11697881/Health_300x250_ATF', [300, 250], 'div-gpt-ad-1369427830656-1').addService(googletag.pubads());
+            //googletag.defineSlot('/11697881/Health_336x280_ATF', [300, 250], 'div-gpt-ad-1369427830656-1').addService(googletag.pubads());			
+            //googletag.defineSlot('/11697881/Health_728x90_footer', [728, 90], 'div-gpt-ad-1369427830656-2').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+            });
+            </script>
+            EOF DFP Ads Call-->
+<style>
+.fname {display:none;}
+style25 {padding-left:30px;}
+.padding30{padding-left:30px; padding-right:30px;}
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+//When you click on a link with class of poplight and the href starts with a # 
+
+$('a.le>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+//When you click on a link with class of poppoplight[href^=#]').click(function() {
+
+    var popID = $(this).attr('rel'); //Get Popup Name
+
+    var popURL = $(this).attr('href'); //Get Popup href to define size
+
+    //Pull Query & Variables from href URL
+
+    var query= popURL.split('?');
+
+    var dim= query[1].split('&');
+
+    var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+
+    //Fade in the Popup and add close button
+
+    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="http://earthclinic.com/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>');
+
+    //Define margin for center alignment (vertical   horizontal) - we add 80px to the height/width to accomodate for the padding  and border width defined in the css
+
+    var popMargTop = ($('#' + popID).height() + 80) / 2;
+
+    var popMargLeft = ($('#' + popID).width() + 80) / 2;
+
+    //Apply Margin to Popup
+
+    $('#' + popID).css({
+
+        'margin-top' : -popMargTop,
+
+        'margin-left' : -popMargLeft
+
+    });
+
+    //Fade in Background
+
+    $('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+
+    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) is used to fix the IE Bug on fading transparencies 
+ id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+
+    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the f
+    return false;
+
+});
+
+//Close Popups and Fade Layer
+
+$('a.close, #fade').live('click', function() { //When clicking on the close or fade layer...
+
+    $('#fade , .popup_block').fadeOut(function() {
+
+        $('#fade, a.close').remove();  //fade them both out
+
+    });
+
+    return false;
+
+});
+
+});
+
+</script>
+<!-- TinyMCE -->
+<script src="/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+function setup() {
+	tinymce.init({
+		selector: "textarea",
+		plugins: ["paste advlist link preview pagebreak autoresize"	],
+		browser_spellcheck : true,
+	contextmenu: false,
+	
+		toolbar1: "bold italic underline strikethrough | paste pastetext | bullist | link unlink | spellchecker | preview",
+	
+		menubar: false,
+		statusbar: false
+	});
+}
+</script>
+<script>
+function framefont(){
+	var frame = document.getElementById("comments_ifr");
+    var content = (frame.contentDocument || frame.contentWindow);
+    content.body.style.fontSize = "19px";
+}
+</script>
+<!--/TinyMCE -->
+</head>
+<body>
+<div id="wrapper-outer">
+	<div id="header-outer">
+  	<div align="center">
+  		<div class="headermenuwrap">
+  	<div class="headermenu" style="list-style-type: none; float:right;">
+			<li class="hiderespo"><a href="/about.html">About</a>
+				<ul>
+					<li><a href="/contactus.html">Contact Us</a></li>
+					<li><a href="/about.h		<div class="headermenuwrap">
+  	<div class="headermenu" style="list-style-type: none; float:right;">
+			<li class="hiderespo"><a href="/about.htmltml">Who We Are</a></li>
+					<li><a href="/earth-clinic-reviews.html">What People Say</a></li>
+					<li><a href="/guides.html">Website Help</a></li>
+					<li><a href="/donations.html">Donate</a></li>
+				</ul>
+			</li>
+			<li class="hiderespo"><a href="/earth-clinic-books.html">Books</a>
+            <li class="hiderespo"><a href="http://www.earthclinic.com/videos.html">Videos</a>
+			<li class="hiderespo"><a href="http://directory.earthclinic.com/">Holistic Practitioners</a>
+			<li><a href="/register.html">Register</a>
+				<ul>
+			    <li><a href="/register.html">Signup</a></li>
+					<li><a href="/help.html">Help</a></li>
+					<li><a href="/newsletter.html">Newsletter Signup</a></li>
+				</ul>
+			</li>
+						<li id="loginli">
+            	<a href="javascript:void(0);" onclick="MM_openBrWindow('/signin.php','','scrollbars=1,width=500,height=360,left='+(screen.width/2.25)+',top=30')">Login</a>
+				            	
+		</li>
+          <li style="margin-top:-10px; padding-left:30px; float:right;" id="curesreported">
+                    <div style="padding:0px;margin:0;background-color:#99cc67;">
+							<a href="/user-approved-remedies.html" title="Cures Reported" style="background-image:none !important;font-size: 12px;text-transform: none;";><b>Cures Reported</b></a>
+							<img src="/images/numbers/2.png" alt="2" /><img src="/images/numbers/9.
+							<a href="/user-approved-remedies.html" title="Cures Reported" style="background-image:none !important;font-size: 12px;text-transform: none;";>png" alt="9" /><img src="/images/numbers/8.png" alt="8" /><img src="/images/numbers/1.png" alt="1" /><img src="/images/numbers/8.png" alt="8" />					</div>
+         </li>
+			
+			
+	</div></div>
+	</div>
+  
+	<div id="header" style="border-bottom:#FFFFFF thin solid;">
+		  <div id="header-inner">
+		    	<a href="/" title="Natural Home Remedies Earth Clinic"><div class="logo">Holistic Health and Alternative Medicine - EARTHCLINIC.COM</div></a>
+                <div id="responsivesearch" style="display:none;">
+                	<form action="http://www.earthclinic.com/search.php" id="cse-search-box">
+                      <input type="hidden" name="cx" value="partner-pub-2476760853251960:e2s0aw4vhqg" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="ISO-8859-1" />
+                        <input type="text" class="srch-input" name="q" value="" placeholder=" Search..." />
+                        <input type="submit" class="srch-submit" name="sa" value="" />
+                    </form>
+                </div>
+				<div id="header-search">
+					<!-- SiteSearch Google -->
+					<div id="srch-box">
+					<!-- SiteSearch -->
+					<form action="http://www.earthclinic.com/search.php" id="cse-search-box">
+						<input type="hidden" name="cx" value="partner-pub-24767608532v id="header-search">
+					<!-- SiteSearch Google -->
+					<div id="srch-box">
+					<!-- SiteSearch -->
+					<form action="http://www.earthclinic.51960:e2s0aw4vhqg" />
+						<input type="hidden" name="cof" value="FORID:10" />
+						<input type="hidden" name="ie" value="ISO-8859-1" />
+                        <table><tr><td>
+						<span class="search-label"></span>
+						<input type="text" class="srch-input"name="q" placeholder=" Search..." /></td><td>
+						<input type="submit" class="srch-submit" name="sa" value="" /></td></tr></table>
+						<div class="search-options">
+							<!--<input type="checkbox" name="echl" title="Highlight search terms" /><span style="font-size:10px;">Highlight search terms</span>
+							&nbsp;-->
+							<div class="hdr-icons">
+                            <a href="/contactus.html" title="Add New Post"><img src="/images/submit-post.jpg" alt="Add New Post" /></a>
+								<!--<div class="icons-row1"> <a href="/latest_posts_rss.php" target="blank"><img border="0" src="/tmpl-imgs/rss.png" alt="RSS"></a><a href="http://www.facebook.com/pages/Earth-Clinic/60803892726" target="blank"><img border="0" src="/tmpl-imgs/fb.png" alt="Facebook"></a><a href="http://www.pinterest.com/earthclinic/"><img src="/tmpl-imgs/pin.png" alt="Piterest" border="0" /></a><a href="https://plus.google.com/108563948953952505374" rel="publisher"><img src="/tmpl-imgs/googl.png" border="0"></a></div>
+								<div class="icons-row2"><a href="/contactus.html"><img src="/tmpl-imgs/contact.png" alt="contact earth clinic" height="30" width="60" border="0" /></a><a href="javascript:increaseFontSize();"><img src="/tmpl-imgs/A-plus.png" width="30" height="30" border="0" alt="Increase text size"></a><a href="javascript:normalFontSize();"><img src="/tmpl-imgs/A-minus.png" width="30" height="30" border="0" alt="Decrease text size"></a></div>-->
+							</div><!-- 6 -->
+						</div><!-- 5 -->
+						<br />
+					</form>
+					<!-- <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>	-->
+					</div>
+					<!-- EOF SiteSearch Google -->
+				</div>           
+										</div><!-- 5 -->
+						<br />								 				</div>
+				</div>
+		</div><!-- eof header-inner -->
+	</div><!-- eof header -->
+
+<!-- <div id="sidetabs">
+   <a title="Contact Us" class="feedback_share" href="/contactus.html"></a>
+   <a title="Earth Clinic Books" class="feedback_donate" href="http://earthclinic.com/earth-clinic-books.php" target="_blank"></a>
+</div> -->
+<script>
+var min=9;
+var max=17;
+function normalFontSize() {
+   var p = document.getElementsByTagName('font');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s -= 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }
+   var p = document.getElementsByTagName('p');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s -= 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }
+   var d = document.getElementsByTagName('div');
+   for(i=0;i<d.length;i++) {
+      if(d[i].style.fontSize) {
+         var s = parseInt(d[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s -= 1;
+      }
+      d[i].style.fontSize = s+"px"
+   }
+   var l = document.g     if(d[i].style.fontSize) {
+         var s = parseInt(d[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!etElementsByTagName('label');
+   for(i=0;i<l.length;i++) {
+      if(l[i].style.fontSize) {
+         var s = parseInt(l[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s -= 1;
+      }
+      l[i].style.fontSize = s+"px"
+   }
+   var l = document.getElementsByTagName('input');
+   for(i=0;i<l.length;i++) {
+      if(l[i].style.fontSize) {
+         var s = parseInt(l[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s -= 1;
+      }
+      l[i].style.fontSize = s+"px"
+   }
+   var l = document.getElementsByTagName('textarea');
+   for(i=0;i<l.length;i++) {
+      if(l[i].style.fontSize) {
+         var s = parseInt(l[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s -= 1;
+      }
+      l[i].style.fontSize = s+"px"
+   }
+   document.getElementById("ratingText").style.fontSize="16px";
+   
+    var frame = document.getElementById("comments_ifr");
+    var content = (frame.contentDocument || frame.contentWindow);
+    content.body.style.fontSize = "16px";
+}
+function increaseFontSize() {
+   var p = document.getElementsByTagName('font');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px","";
+    content.body.style.fontSize = "16px";
+}
+function increaseFontSize() {
+   var p = document.getElementsByTagName('font');
+   for(i=0;i<p.leng));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      p[i].style.fontSize = 19+"px"
+   }
+   var p = document.getElementsByTagName('p');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      p[i].style.fontSize = 19+"px"
+   }
+   var d = document.getElementsByTagName('div');
+   for(i=0;i<d.length;i++) {
+      if(d[i].style.fontSize) {
+         var s = parseInt(d[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      d[i].style.fontSize = 19+"px"
+   }
+   var l = document.getElementsByTagName('label');
+   for(i=0;i<l.length;i++) {
+      if(l[i].style.fontSize) {
+         var s = parseInt(l[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      l[i].style.fontSize = 19+"px"
+   }
+   var l = document.getElementsByTagName('input');
+   for(i=0;i<l.length;i++) {
+      if(l[i].style.fontSize) {
+         var s = parseInt(l[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      l[i].stylgName('input');
+   for(i=0;i<l.length;i++) {
+      if(l[i].style.fontSize) {
+         var s = parseInt(l[i].style.fontSize.replace("px",""));
+    e.fontSize = 19+"px"
+   }
+   var l = document.getElementsByTagName('textarea');
+   for(i=0;i<l.length;i++) {
+      if(l[i].style.fontSize) {
+         var s = parseInt(l[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      l[i].style.fontSize = 19+"px"
+   }
+   document.getElementById("ratingText").style.fontSize="19px";
+   
+    var frame = document.getElementById("comments_ifr");
+    var content = (frame.contentDocument || frame.contentWindow);
+    content.body.style.fontSize = "19px";
+}
+function decreaseFontSize() {
+   var p = document.getElementsByTagName('font');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      p[i].style.fontSize = 14+"px"
+   }   
+   var p = document.getElementsByTagName('p');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      p[i].style.fontSize = 14+"px"
+   }   
+   var d = document.getElementsByTagName('div');
+   for(i=0;i<d.length;i++) {
+      if(d[i].style.fontSize) {
+          else {
+         var s = 16;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      p[i].style.fontSize = 14+"px"
+   }   
+   var d = documevar s = parseInt(d[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 16;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      d[i].style.fontSize = 14+"px"
+   }   
+}
+</script>
+</div><!-- eof header-outer -->
+
+<div id="page-wrapper" style="margin-top:-2px;">
+		<div id="pageBody">
+<center>
+<div id="mainNav-new">
+            	<ul>
+                	<li class="tab-off"><a href="/" title="Earth Clinic Home">Home</a></li>
+                	<li class="tab-off"><a href="http://www.earthclinic.com/children.html">Children</a></li>
+                    <li class="tab-off"><a href="/remedies.html" title="Remedies">Remedies</a><ul>
+			    <li><a href="/remedies.html">All Remedies</a></li>
+				<li><a href="/supplements.html">Supplements</a></li>
+				<li><a href="/herbs.html">Herbs</a></li>
+				<li><a href="/beauty.html">Beauty Remedies</a></li>
+			</ul>
+                </li>
+                    <li class="tab-on"><a href="/ailments.html" title="Ailments">Ailments</a></li>
+                    <li class="tab-off"><a href="/pets.html" title="Pets">Pets</a><ul><li><a href="/latest_petposts.html">Latest Pet Posts</a></li><li><a href="/pets.html">Pet Ailments</a><li><a href="/pet-remedies.php">Pet Remedies</a></li>
+</ul></li>
+                    <li class="tab-off" style="width:155px;"><a href="/latest_posts.html" title="Latestest_petposts.html">Latest Pet Posts</a></li><li><a href="/pets.html">Pet Ailments</a><li><a href="/pet-remedies.php">Pet Remedies</a></li>
+</ul></li> Posts">Recent Posts</a></li>
+                    <li class="socialicons"><center><a href="/latest_posts_rss.php" title="RSS Feed"><img src="/images/rss.png" alt="RSS" /></a> <a href="javascript:void(0)" onclick="javascript:increaseFontSize();"><img alt="Increase Font Size" src="/images/plustext.png" /></a> <a href="javascript:void(0)" onclick="javascript:normalFontSize();"><img alt="Decrease Font Size" src="/images/mintext.png" /></a></center></li>
+                </ul>
+</div>
+<div id="mainNav-responsive" style="display:none;" onclick="$('#mainNav-responsive').val('');">
+            	<select>
+                	<option value="" selected="selected">Find New Page...</option> 
+                	<option  value="/">Home</option>
+                    <option value="/ailments.html" >Ailments</li>
+                    <option value="/remedies.html" >Remedies</option>
+            		<option value="/latest_posts.html" >Recent Posts</option>
+                    <option value="/pets.html" >Pet Health</option>
+                    <option value="/latest_petposts.html" >Recent Pet Posts</option>
+                    <option value="/contactus.html" ue="/latest_posts.html" >Recent Posts</option>
+                    <option value="/pets.html" >Pet Health</option>
+>Submit a Post</option>
+                    <option value="/videos.html" >Videos</option>
+                    <option value="http://directory.earthclinic.com">Holistic Practitioners</option>
+                	<option value="/earth-clinic-books.html" >Books</option>
+                    <option value="/beauty.html" >Beauty</option>
+                    <option value="/children.html" >Children</option>
+             		<option value="/about.html" >About Us</option>
+                </select>
+</div>
+<script>
+$("#mainNav-responsive select").change(function() {
+  window.location = $(this).find("option:selected").val();
+});
+</script>
+</center>
+<!-- BOF page main content -->
+			<div id="content">
+			  <div id="content-inner">
+			<div id="introtxt">
+						<h1 style="text-align:left; margin-bottom:0; margin-top:0;"><a name="top"></a>Dengue Fever Remedies</h1>
+			<p class="lastmodified">Last Modified on Jun 18, 2014</p>
+				<!-- Breadcrumbs cures -->
+				                  <div id="breadcrumbs" class="lastmodified"><a href="/">Home</a> > <a href="/ailments.html">Ailments</a> > <a href="/cures/dengue.html">Dengue Fever Remedies</a></div>
+
+								   
+					<a name="top"></a>
+					                        <!-- Introduction -->
+                        <a name="intro"></a><p><strong>What Is Dengue Fever?</strong></p>
+
+<p></p>
+
+<p>Common in tropicalue.html">Dengue Fever Remedies</a></div>
+
+								   
+					<a name="top"></a>
+					                        <!-- Introduction -->
+                       and subtropical regions of the world, Dengue fever is a mosquito-borne disease that ranges in severity. Mild dengue fever is characterized by fever, rash and joint or muscle pain. Severe dengue fever, however, can cause severe bleeding, a rapid drop in blood pressure and even death. This form is known as hemorrhagic fever. The prevalence of dengue fever is somewhat alarming at several million cases worldwide, particularly in Southeast Asia and the western Pacific islands, ranging from individuals experiencing no symptoms to those succumbing to the condition.<br />
+<br />
+Symptoms of the fever typically occur between four to ten days after the individual is bitten by an infected mosquito and generally progress from mild to severe. The most common symptoms of the fever include high fever, headache, muscle, bone and joint pain and pain behind the eyes. Additional symptoms may include widespread rush, nausea and vomiting, minor bleeding from the gums or nose. Severe cases are characterized by progressive symptoms including profuse bleeding from the nose and mouth, abdominal pain, continuous vomiting, bleeding beneath the skin, and problems with the lungs, liver and heart.<br />
+<br />
+Spread by mosquitoes, dengue fever is caused by any of the four dengue viruses. A mosquito bites an infected person and then carries the virus to another individual as it bites aneneath the skin, and problems with the lungs, liver and heart.<br />
+<br />
+Spread by mosquitoes, dengue fever is caused by any of the four dengue virother individual. Contracting and recovering from dengue fever develops an individual&rsquo;s immunity to the one strain with which he or she was infected.<div id="showmoreintro"><a href="javascript:void();" onClick="javascript:$('#moreintro').show('slow'); $('#showmoreintro').hide('slow');" id="#showmoreintro" style="cursor:pointer;padding:8px 16px; background-color:#0095c8; color:#FFF;float:left; margin-top:8px; text-decoration:none;">Continue Reading Article...</a><br><br></div></p><div id="moreintro" style="display:none;"></p>
+
+
+
+<h2>Natural Cures for Dengue Fever</h2>
+
+<p>Dengue fever is characterized by a number of additional symptoms that can cause increased health concerns. Natural methods can be used to treat the fever itself as well as its symptoms. Barley grass helps maintain a healthy platelet count while goldenseal cures the virus. Ho nam peh lo and mangagaw are Chinese herbs that cure dengue and support platelet levels as well. Neem, papaya and sweet potato leaves also treat the condition and its symptoms.</p>
+<div class="hiderespo"><a href="javascript: void(0)" onclick="printPost('<?=$pageId?>', '', 'Intro');" class="ico-print"><img src="/images/print-small-button.jpg" alt="Print"></a> <a href="/mail.php?action=Intro&id=<?=$pageId?>" target="_blank" class="ico-print"><img src="/images/email-small-button.jpg" alt="Print"></a><br></div></div> 
+', '', 'Intro');" class="ico-print"><img src="/images/print-small-button.jpg" alt="Print"></a> <a href="/mail.php?action=Intro&id=<?=$pageId?>" target                         <!-- Social Buttons -->
+
+                   
+                         <div class="hiderespo">
+				 <!-- 4 th Ad topLeftAdCode-->
+<div id="ad1">
+			<script type="text/javascript"><!--
+            google_ad_client = "ca-pub-2476760853251960";
+            /* Health_336x280_BTF_HighCTR */
+            google_ad_slot = "2636830008";
+            google_ad_width = 336;
+            google_ad_height = 280;
+            //-->
+            </script>
+            <script type="text/javascript"
+            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+</div>
+</div></tbody></table><div class="hiderespo"><h2 style="width:100%; border-bottom:#CCCCCC thin solid;">User Reviews<div style="float:right; font-size:12px;"><a href="/contactus.html?action=Feedback&pid=203&id=" style="text-decoration:none;"><img width=16 src="/images/review.png" border="0"> Add New Post</a></div></h2>				</div>
+</div>
+<!-- EOF intro -->
+				
+				
+				
+				<div id="rightcol">
+									<div class="hiderespo"><!-- 2 nd Ad-->
+<div id="slidedownad" style="display:none; padding:0; margin:0;">
+<!-- Health_336x280_ATF -->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2476760853251960";
+/* Health_336x280_ATF */
+google_ad_slot = "4653224805";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+functadding:0; margin:0;">
+<!-- Health_336x280_ATF -->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2476760853251960";
+/* Health_336xion slideDownAd () {
+    $("#slidedownad").slideDown( "slow" );
+	$('#toc').css('margin-top',-30);
+}
+$( document ).ready(function() {
+setTimeout(slideDownAd, 2000);
+});
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+					<br><br></div>
+						<!-- Table of Contents comes here -->
+
+<div id="toc" style="margin-top:-90px;"><h2 class="toc-header">Dengue Fever<br>Table of Contents</h2><div class="tocinner" style="width:336px; "><ul style="overflow: auto; min-height:40px; max-height:380px; -webkit-overflow-scrolling: touch;">	<li class="toc-li-highlight-bg"><a href="/cures/dengue.html#intro">INTRODUCTION</a></li>
+		<li class="toc-li-highlight-bg"><a href="/cures/dengue_questions.html">TED'S ANSWERS</a></li>
+		<li class="toc-li-highlight-bg"><a href="http://answers.earthclinic.com/cures/dengue.html">QUESTIONS & ANSWERS</a></li>
+		<li>
+	<a href="/cures/dengue.html#barley">Barley Grass</a></li>
+		<li>
+	<a href="/cures/dengue.html#goldenseal">Goldenseal</a></li>
+		<li>
+	<a href="/cures/dengue.html#honampehioandmangaga">Ho Nam Peh Io and Mangagaw Shrub</a></li>
+		<li>
+	<a href="/cures/dengue.html#homeopathicremedy">Homeopathic Remedy: Cinnamomum Ha in Ampoule Form</a></li>
+		<li>
+	<a href="/cures/dengue.html#neemlealoees">Neem Leaves</a></li>
+		<li>
+	<a href="/cures/dengue.h Io and Mangagaw Shrub</a></li>
+		<li>
+	<a href="/cures/dengue.html#homeopathicremedy">Homeopathic Remedy: Cinnamomum Ha in Ampoule Form</a></li>
+	tml#papayalealoees">Papaya Leaves</a></li>
+		<li>
+	<a href="/cures/dengue.html#sweet">Sweet Potato Leaves, Orange Juice</a></li>
+		<li>
+	<a href="/cures/dengue.html#watermelon">Watermelon</a></li>
+		<li>
+	<a href="/cures/dengue.html#zapper">Zapper</a></li>
+	</ul></div></div></div><!-- EOF rightcol -->
+
+			<!-- rightelement 1 -->
+<div class="rightelement">
+<!-- 1 st Ad-->
+<div id="topleftad2 ">
+<div class="hiderespo">
+<center>
+<script>
+var randomnumber=Math.floor(Math.random()*3)
+if(randomnumber == 0){
+document.write('<a href="http://www.earthclinic.com/earth-clinic-books.html"><img alt="Earth Clinic Publications" src="http://www.earthclinic.com/images/4books-300x250.jpg" width="300"></a>');
+}
+if(randomnumber == 1){
+document.write('<a href="/candida-killing-so-sweetly-bill-thompson.html"><img src="/images/300X250-candida-2014.png" alt="Candida: Killing So Sweetly by Bill Thompson" width="300" /></a>');
+}
+if(randomnumber == 2){
+document.write('<a href="http://www.earthclinic.com/earth-clinic-books.html" rel="nofollow"><img src="/images/ec-books2014-300x250.jpg" alt="Books" width="300" /></a>');
+}
+</script>
+</center>
+</div>
+        <br />
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2476760853251960";
+/* Health_336x280_BTF_HighCTR */
+google_ad_slot = "2636830008";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+53251960";
+/* Heal</div>
+
+<!-- EOF rightelements -->
+
+<div style="font-size:1pt;clear:both;padding:0;margin:0;"></div>	
+</div><!-- EOF content-inner -->
+
+
+<div id="content-inner2">
+<!-- Posts start here -->
+        <div style="">
+		<!-- Reader Feedback starts here -->
+<a name="reader_feedback"></a><div class="padding30">
+        		
+		<strong>
+		<h3 class="h3title"><a name="barley" id="barley"></a>Barley Grass &nbsp;&nbsp;<span style="font-size:13px;">1</span> <img width="15" src="/images/t-up.jpg" title="YEA" align="absmiddle" /> &nbsp;<span style="font-size:13px;">0</span> <img width="15" src="/images/t-down.jpg" title="NAY" align="absmiddle" />&nbsp;&nbsp;<a href="#?w=500" rel="rating_barley" class="poplight rating_barley" style="display:none; width:12px;"><img src="/images/rating.jpg" align="absmiddle" alt="Ratings" title="Ratings" /></a> <a href="#?w=500" rel="recipe_barley" class="poplight recipe_barley" style="display:none; width:12px;"><img src="/images/recipe.jpg" align="absmiddle" alt="Treatment" title="Treatment" /></a></h3>
+		</strong>
+		        <div id="rating_barley" class="popup_block"> 
+		<table cellpadding="2" cellspacing="3" id="Ratings">
+										<tr><td colspan=3><div class="title">Approval Ratings</div>
+						<tr>
+						<td><strong>YEA (1)</strong></td>	
+						<td width="125" bgcolor="#F7F7F7"><div class="rounded" style="height		<table cellpadding="2" cellspacing="3" id="Ratings">
+										<tr><td colspan=3><div class="title">Approval Ratings</div>
+						<tr>
+						<td><strong:13px; width:100%; background-color:#0000FF;"></div></td>
+						<td>100%</td>
+
+						<tr>
+						</td></tr></table>        <script>
+		$( "a.rating_barley" ).show();
+		</script>
+		</div>
+        <a name="barley_90405" id="barley_90405"></a><div id="postwrap"><span style="color:#063">Posted by Ning  (Springfield, Missouri) on 12/30/2012 </span><p align="left"><p align="left">[<span style="color:#0000FF"><b>YEA</b></span>]&nbsp;&nbsp;My nephew had dengue fever and was hospitalized for almost 1 wk, his platelets were low and somebody told my brother abt barley green , so they went and bought some and after drinking 2 bottles of barley green his platelets went up right away and was cured with dengue, thought I'm going to share this , if I case somebody might have this kind of virus, this is cause by mosquito bites. Thank you!!</p></div></font><p class="BackToTop"><div style="border-bottom:solid #CCC thin; width:100%;" class="action-icons"><a style="cursor:pointer;padding:8px 16px; background-color:#0095c8; color:#FFF;float:left; margin-top:8px;" onClick="javascript:loadReplyForm('90405','Feedback','203','Barley Grass'); setup(); document.getElementById('respond-90405').scrollIntoView();" value="Reply"class="ico-reply">Reply</a><ul style="float:right; margin-top:0;"><li><a href="javascript: void(0)" onclick="MM_openBrWindow('/signin.php?st=203&nd=90405','',arley Grass'); setup(); document.getElementById('respond-90405').scrollIntoView();" value="Reply"class="ico-reply">Reply</a><ul style="float:right; ma'scrollbars=1,width=400,height=350')" class="ico-watch">Watch</a></li><li><a href="javascript: void(0)" onClick="mailPost('90405', 'Barley Grass', 'Feedback');" class="ico-email">Email</a></li><li><a href="javascript: void(0)" onClick="printPost('90405', 'Barley Grass', 'Feedback');" class="ico-print">Print</a></li></ul></div></p>        <!-- comment box -->
+<div id="respond-90405" class="comment-respond"></div>
+</div><div class="padding30">
+        		
+		<strong>
+		<h3 class="h3title"><a name="goldenseal" id="goldenseal"></a>Goldenseal &nbsp;&nbsp;<span style="font-size:13px;">1</span> <img width="15" src="/images/t-up.jpg" title="YEA" align="absmiddle" /> &nbsp;<span style="font-size:13px;">0</span> <img width="15" src="/images/t-down.jpg" title="NAY" align="absmiddle" />&nbsp;&nbsp;<a href="#?w=500" rel="rating_goldenseal" class="poplight rating_goldenseal" style="display:none; width:12px;"><img src="/images/rating.jpg" align="absmiddle" alt="Ratings" title="Ratings" /></a> <a href="#?w=500" rel="recipe_goldenseal" class="poplight recipe_goldenseal" style="display:none; width:12px;"><img src="/images/recipe.jpg" align="absmiddle" alt="Treatment" title="Treatment" /></a></h3>
+		</strong>
+		        <div id="rating_goldenseal" class="popup_block"> 
+		<table cellpadding="2" cellspacing="3" id="Ratings">
+										<tr><td colspan=3><div class="title">Arecipe.jpg" align="absmiddle" alt="Treatment" title="Treatment" /></a></h3>
+		</strong>
+		        <div id="rating_goldenseal" class="popup_block"> pproval Ratings</div>
+						<tr>
+						<td><strong>YEA (1)</strong></td>	
+						<td width="125" bgcolor="#F7F7F7"><div class="rounded" style="height:13px; width:100%; background-color:#0000FF;"></div></td>
+						<td>100%</td>
+
+						<tr>
+						</td></tr></table>        <script>
+		$( "a.rating_goldenseal" ).show();
+		</script>
+		</div>
+        <a name="goldenseal_64571" id="goldenseal_64571"></a><div id="postwrap"><span style="color:#063">Posted by Dechen   (Phoenix, Az, Usa) on 10/05/2011 </span><p align="left"><p align="left">[<span style="color:#0000FF"><b>YEA</b></span>]&nbsp;&nbsp;I have lived in Thailand for several years and have used Goldenseal (Hydrastis canadensis) when I caught dengue fever. It works immediately and avoids the days of serious fever, vomiting, etc. </P> <P>I used it on a friend who had dengue. She had been diagnosed with dengue at the hospital who sent her back home with nothing. She was really ill, fatigued, with a high fever. So I gave her some Goldenseal I had. I didn't know if it would work at all. The next day, when I called, she was working! </P> <P>One day, I myself caught dengue. I nearly didn't have time to make it home and there I lay in my bed, the whole room swirling around me. I was getting chills, hot spells. Felt really sick. I took a capsule of goldenseal. Two hours later, the fever had gone, and I was ok.f caught dengue. I nearly didn't have time to make it home and there I lay in my bed, the whole room swirling around me. I was getting chills, hot spe Extremely tired, but ok. I took another capsule. And it was completely gone.</P> <P>Some naturopathic physicians have since confirmed that goldenseal cures dengue.</p></div></font><p class="BackToTop"><div style="border-bottom:solid #CCC thin; width:100%;" class="action-icons"><a style="cursor:pointer;padding:8px 16px; background-color:#0095c8; color:#FFF;float:left; margin-top:8px;" onClick="javascript:loadReplyForm('64571','Feedback','203','Goldenseal'); setup(); document.getElementById('respond-64571').scrollIntoView();" value="Reply"class="ico-reply">Reply</a><ul style="float:right; margin-top:0;"><li><a href="javascript: void(0)" onclick="MM_openBrWindow('/signin.php?st=203&nd=64571','','scrollbars=1,width=400,height=350')" class="ico-watch">Watch</a></li><li><a href="javascript: void(0)" onClick="mailPost('64571', 'Goldenseal', 'Feedback');" class="ico-email">Email</a></li><li><a href="javascript: void(0)" onClick="printPost('64571', 'Goldenseal', 'Feedback');" class="ico-print">Print</a></li></ul></div></p>        <!-- comment box -->
+<div id="respond-64571" class="comment-respond"></div>
+</div><div class="padding30">
+        		
+		<strong>
+		<h3 class="h3title"><a name="honampehioandmangaga" id="honampehioandmangaga"></a>Ho Nam Peh Io and Mangagaw Shrub &nbsp;&nbsp;<span style="font-size:13px;">1</span> <img width="15" src="/images/t-up.jpg" titv class="padding30">
+        		
+		<strong>
+		<h3 class="h3title"><a name="honampehioandmangaga" id="honampehioandmangaga"></a>Ho Nam Peh Io and Manle="YEA" align="absmiddle" /> &nbsp;<span style="font-size:13px;">0</span> <img width="15" src="/images/t-down.jpg" title="NAY" align="absmiddle" />&nbsp;&nbsp;<a href="#?w=500" rel="rating_honampehioandmangaga" class="poplight rating_honampehioandmangaga" style="display:none; width:12px;"><img src="/images/rating.jpg" align="absmiddle" alt="Ratings" title="Ratings" /></a> <a href="#?w=500" rel="recipe_honampehioandmangaga" class="poplight recipe_honampehioandmangaga" style="display:none; width:12px;"><img src="/images/recipe.jpg" align="absmiddle" alt="Treatment" title="Treatment" /></a></h3>
+		</strong>
+		        <div id="rating_honampehioandmangaga" class="popup_block"> 
+		<table cellpadding="2" cellspacing="3" id="Ratings">
+										<tr><td colspan=3><div class="title">Approval Ratings</div>
+						<tr>
+						<td><strong>YEA (1)</strong></td>	
+						<td width="125" bgcolor="#F7F7F7"><div class="rounded" style="height:13px; width:100%; background-color:#0000FF;"></div></td>
+						<td>100%</td>
+
+						<tr>
+						</td></tr></table>        <script>
+		$( "a.rating_honampehioandmangagag></td>	
+						<td width="125" bgcolor="#F7F7F7"><div class="rounded" style="height:13px; width:100%; background-color:#0000FF;"></div></td>
+						<td>100%</td>" ).show();
+		</script>
+		</div>
+        <a name="honampehioandmangaga_7086" id="honampehioandmangaga_7086"></a><div id="postwrap"><span style="color:#063">Posted by Helen  (Cebu City, Philippines) on 10/22/2007 </span><p align="left"><p align="left">[<span style="color:#0000FF"><b>YEA</b></span>]&nbsp;&nbsp;A month ago I got hospitalized due to dengue fever. My platelet count went down to 15T and my hematocrit went up to 54. I was then in danger of bleeding or dengue shock. I was advised by my Chinese officemate to take HO NAM PEH IOH (a chinese medicine for anti-bleeding often used for emergency cases). I think the medicine really helped coz I never had any bleeding. But still I was given a platelet transfussion. I also drank the juice of the boiled mangagaw/gatasgatas shrub (this shrub is abundant here in the Philippines). This herb is known to cure dengue and helps increase the platelet count</p></div></font><p class="BackToTop"><div style="border-bottom:solid #CCC thin; width:100%;" class="action-icons"><a style="cursor:pointer;padding:8px 16px; background-color:#0095c8; color:#FFF;float:left; margin-top:8px;" onClick="javascript:loadReplyForm('7086','Feedback','203','Ho Nam Peh Io and Mangagaw Shrub'); setup(); document.getElementById('respond-7086').scrollIntoView();" value="Reply"class="ico-reply">Reply</a><ul style="float:right; margin-top:margin-top:8px;" onClick="javascript:loadReplyForm('7086','Feedback','203','Ho Nam Peh Io and Mangagaw Shrub'); setup(); document.getElementById('respond-700;"><li><a href="javascript: void(0)" onclick="MM_openBrWindow('/signin.php?st=203&nd=7086','','scrollbars=1,width=400,height=350')" class="ico-watch">Watch</a></li><li><a href="javascript: void(0)" onClick="mailPost('7086', 'Ho Nam Peh Io and Mangagaw Shrub', 'Feedback');" class="ico-email">Email</a></li><li><a href="javascript: void(0)" onClick="printPost('7086', 'Ho Nam Peh Io and Mangagaw Shrub', 'Feedback');" class="ico-print">Print</a></li></ul></div></p>        <!-- comment box -->
+<div id="respond-7086" class="comment-respond"></div>
+</div><div class="padding30">
+        		
+		<strong>
+		<h3 class="h3title"><a name="homeopathicremedy" id="homeopathicremedy"></a>Homeopathic Remedy: Cinnamomum Ha in Ampoule Form &nbsp;&nbsp;<span style="font-size:13px;">1</span> <img width="15" src="/images/t-up.jpg" title="YEA" align="absmiddle" /> &nbsp;<span style="font-size:13px;">0</span> <img width="15" src="/images/t-down.jpg" title="NAY" align="absmiddle" />&nbsp;&nbsp;<a href="#?w=500" rel="rating_homeopathicremedy" class="poplight rating_homeopathicremedy" style="display:none; width:12px;"><img src="/images/rating.jpg" align="absmiddle" alt="Ratings" title="Ratings" /></a> <a href="#?w=500" rel="recipe_homeopathicremedy" class="poplight recipe_homeopathicremedy" style="display:none; width:12px;"><img src="/images/recipe.jpg" align="absmiddle" alt="Treatmees/rating.jpg" align="absmiddle" alt="Ratings" title="Ratings" /></a> <a href="#?w=500" rel="recipe_homeopathicremedy" class="poplight recipe_homeopatnt" title="Treatment" /></a></h3>
+		</strong>
+		        <div id="rating_homeopathicremedy" class="popup_block"> 
+		<table cellpadding="2" cellspacing="3" id="Ratings">
+										<tr><td colspan=3><div class="title">Approval Ratings</div>
+						<tr>
+						<td><strong>YEA (1)</strong></td>	
+						<td width="125" bgcolor="#F7F7F7"><div class="rounded" style="height:13px; width:100%; background-color:#0000FF;"></div></td>
+						<td>100%</td>
+
+						<tr>
+						</td></tr></table>        <script>
+		$( "a.rating_homeopathicremedy" ).show();
+		</script>
+		</div>
+        <a name="homeopathicremedy_7084" id="homeopathicremedy_7084"></a><div id="postwrap"><span style="color:#063">Posted by Allan  (cebu city, Philippines) on 01/14/2008 </span><p align="left"><p align="left">[<span style="color:#0000FF"><b>YEA</b></span>]&nbsp;&nbsp;Dengue Hemorrhagic fever. I have been using a homeopathic preparation: cinnamomum HA in ampoule form since 1998 given by IM or orally and it is very cost effective. No need for admission if DF is diagnosed earlier. Need only from 3 to 8 ampoules. If patient is in bad state just an IV drip in the clinic for 4 hours with homeopathic remedies in it, patient goes home well immediately. Tried many times to show to other physicians but they are very biased to alternative treatments. No complications noted since its use. so patient frian IV drip in the clinic for 4 hours with homeopathic remedies in it, patient goes home well immediately. Tried many times to show to other physiciansendly.</p></div></font>		<blockquote style="margin:0;">
+<div id="postwrap"><div id="user" style="padding-right:18px; padding-bottom:15px; color:#063; display: inline-block; width: 20%;vertical-align: top;">Replied by Marites<br>Cebu City, Cebu, Philippines<br>12/05/2009<br></div><div id="comment" class="wdt" style="width:76%;display: inline-block;vertical-align: top; padding-top:15px; padding-bottom:15px;">I'm very interested to learn more about your homeopathic remedy. May I know how to reach you?</blockquote><p class="BackToTop"><div style="border-bottom:solid #CCC thin; width:100%;" class="action-icons"><a style="cursor:pointer;padding:8px 16px; background-color:#0095c8; color:#FFF;float:left; margin-top:8px;" onClick="javascript:loadReplyForm('7084','Feedback','203','Homeopathic Remedy: Cinnamomum Ha in Ampoule Form'); setup(); document.getElementById('respond-7084').scrollIntoView();" value="Reply"class="ico-reply">Reply</a><ul style="float:right; margin-top:0;"><li><a href="javascript: void(0)" onclick="MM_openBrWindow('/signin.php?st=203&nd=7084','','scrollbars=1,width=400,height=350')" class="ico-watch">Watch</a></li><li><a href="javascript: void(0)" onClick="mailPost('7084', 'Homeopathic Remedy: Cinnamomum Ha in Ampoule Form', 'Feedback');" class="ico-email">Email</a></li><li><a href="javascript: void(0)" onClick="printPost('35734', 'Homeopathic Retch">Watch</a></li><li><a href="javascript: void(0)" onClick="mailPost('7084', 'Homeopathic Remedy: Cinnamomum Ha in Ampoule Form', 'Feedback');" clasmedy: Cinnamomum Ha in Ampoule Form', 'Feedback');" class="ico-print">Print</a></li></ul></div></p>        <!-- comment box -->
+<div id="respond-7084" class="comment-respond"></div>
+</div><div class="padding30">
+        		
+		<strong>
+		<h3 class="h3title"><a name="neemlealoees" id="neemlealoees"></a>Neem Leaves &nbsp;&nbsp;<span style="font-size:13px;">1</span> <img width="15" src="/images/t-up.jpg" title="YEA" align="absmiddle" /> &nbsp;<span style="font-size:13px;">0</span> <img width="15" src="/images/t-down.jpg" title="NAY" align="absmiddle" />&nbsp;&nbsp;<a href="#?w=500" rel="rating_neemlealoees" class="poplight rating_neemlealoees" style="display:none; width:12px;"><img src="/images/rating.jpg" align="absmiddle" alt="Ratings" title="Ratings" /></a> <a href="#?w=500" rel="recipe_neemlealoees" class="poplight recipe_neemlealoees" style="display:none; width:12px;"><img src="/images/recipe.jpg" align="absmiddle" alt="Treatment" title="Treatment" /></a></h3>
+		</strong>
+		        <div id="rating_neemlealoees" class="popup_block"> 
+		<table cellpadding="2" cellspacing="3" id="Ratings">
+										<tr><td colspan=3><div class="title">Approval Ratings</div>
+						<tr>
+						<td><strong>YEA (1)</strong></td>	
+						<td width="125" bgcolor="#F7F7F7"><div class="rounded" style="height:13px; width:100%; background-color:#0000FF;"></div></td>
+						<tdr><td colspan=3><div class="title">Approval Ratings</div>
+						<tr>
+						<td><strong>YEA (1)</strong></td>	
+						<td width="125" bgcolor="#F7F7F>100%</td>
+
+						<tr>
+						</td></tr></table>        <script>
+		$( "a.rating_neemlealoees" ).show();
+		</script>
+		</div>
+        <a name="neemlealoees_7089" id="neemlealoees_7089"></a><div id="postwrap"><span style="color:#063">Posted by Michele  (Esteli, Nicaragua) on 05/25/2007 </span><p align="left"><p align="left">[<span style="color:#0000FF"><b>YEA</b></span>]&nbsp;&nbsp;I don't know how many live where they are affected by dengue. But I have had it three times. The first time wasn't that bad, the second time even though my platelets didn't drop to a critical level, my white cell did drop and wouldn't come back very fast, the doctors there prescribed an anti-viral and it it helped but recovery was slow. The third time I had read about neem doing research for incecticide I ran across something sayin it was effective against dengue. So I thought I would try it my platelets were dropping close to critical, I didn't know how to use it so I just had some leaves heated them in water, and let it steep. I sipped all thorough out the day, it tastes very bitter, anyway it seems to work better than flu remedies they give you for discomfort. The next day the blood test showed my platelets going back up, and white cells also. The following day after that the platelets made a huge jump of 60,000 in one day and the white cells also went up significantly. I don't know for sure if the neem worked, or if it was just coincidence. My recovery period total was 4 days, the previous time it was 12 days. Supposedely every time you get dengue it is worse than the one before. Since there is only three types of dengue so far in Nicaragua I shouldn't get it again. But I thought this remedy would be of interest to anyone in areas where it happens.was 12 days. Supposede</p></div></font><p class="BackToTop"><div style="border-bottom:solid #CCC thin; width:100%;" class="action-icons"><a style="cursor:pointer;padding:8px 16px; background-color:#0095c8; color:#FFF;float:left; margin-top:8px;" onClick="javascript:loadReplyForm('7089','Feedback','203','Neem Leaves'); setup(); document.getElementById('respond-7089').scrollIntoView();" value="Reply"class="ico-reply">Reply</a><ul style="float:right; margin-top:0;"><li><a href="javascript: void(0)" onclick="MM_openBrWindow('/signin.php?st=203&nd=7089','','scrollbars=1,width=400,height=350')" class="ico-watch">Watch</a></li><li><a href="javascript: void(0)" onClick="mailPost('7089', 'Neem Leaves', 'Feedback');" class="ico-email">Email</a></li><li><a href="javascript: void(0)" onClick="printPost('7089', 'Neem Leaves', 'Feedback');" class="ico-print">Print</a></li></ul></div></p>        <!-- comment box -->
+<div id="respond-7089" class="comment-respond"></div>
+</div><div class="padding30">
+        		
+		<strong>
+		<h3 class="h3title"><a name="papayalealoees" id="papayalealoees"></a>Papaya Leaves &nbsp;&nbsp;<span style="font-size:13px;">1</span> <img width="15" src="/images/t-up.jpg" title="YEA" align="absmiddle" /> &nbsp;<span style="font-size:13px;">0</span> <img width="15" src="/images/t-down.jpg" title="NAY" align="absmiddle" />&nbsp;&nbsp;<a href="#?w=500" rel="rating_pasize:13px;">1</span> <img width="15" src="/images/t-up.jpg" title="YEA" align="absmiddle" /> &nbsp;<span style="font-size:13px;">0</span> <img width="15" srpayalealoees" class="poplight rating_papayalealoees" style="display:none; width:12px;"><img src="/images/rating.jpg" align="absmiddle" alt="Ratings" title="Ratings" /></a> <a href="#?w=500" rel="recipe_papayalealoees" class="poplight recipe_papayalealoees" style="display:none; width:12px;"><img src="/images/recipe.jpg" align="absmiddle" alt="Treatment" title="Treatment" /></a></h3>
+		</strong>
+		        <div id="rating_papayalealoees" class="popup_block"> 
+		<table cellpadding="2" cellspacing="3" id="Ratings">
+										<tr><td colspan=3><div class="title">Approval Ratings</div>
+						<tr>
+						<td><strong>YEA (1)</strong></td>	
+						<td width="125" bgcolor="#F7F7F7"><div class="rounded" style="height:13px; width:100%; background-color:#0000FF;"></div></td>
+						<td>100%</td>
+
+						<tr>
+						</td></tr></table>        <script>
+		$( "a.rating_papayalealoees" ).show();
+		</script>
+		</div>
+        <a name="papayalealoees_7091" id="papayalealoees_7091"></a><div id="postwrap"><span style="color:#063">Posted by Thomas  (Ottawa, Canada) on 06/12/2007 </span><p align="left"><p align="left">[<span style="color:#0000FF"><b>YEA</b></span>]&nbsp;&nbsp;Papaya leaves juice a natural cure for dengue fever. I haven't tried this myself but it has been proved in the medical world. I thought I will share this as dengue is rapidly becoming an epidemic.</p></ style="color:#0000FF"><b>YEA</b></span>]&nbsp;&nbsp;Papaya leaves juice a natural cure for dengue fever. I haven't tried this myself but it has been div></font><p class="BackToTop"><div style="border-bottom:solid #CCC thin; width:100%;" class="action-icons"><a style="cursor:pointer;padding:8px 16px; background-color:#0095c8; color:#FFF;float:left; margin-top:8px;" onClick="javascript:loadReplyForm('7091','Feedback','203','Papaya Leaves'); setup(); document.getElementById('respond-7091').scrollIntoView();" value="Reply"class="ico-reply">Reply</a><ul style="float:right; margin-top:0;"><li><a href="javascript: void(0)" onclick="MM_openBrWindow('/signin.php?st=203&nd=7091','','scrollbars=1,width=400,height=350')" class="ico-watch">Watch</a></li><li><a href="javascript: void(0)" onClick="mailPost('7091', 'Papaya Leaves', 'Feedback');" class="ico-email">Email</a></li><li><a href="javascript: void(0)" onClick="printPost('7091', 'Papaya Leaves', 'Feedback');" class="ico-print">Print</a></li></ul></div></p>        <!-- comment box -->
+<div id="respond-7091" class="comment-respond"></div>
+</div><div class="padding30">
+        		
+		<strong>
+		<h3 class="h3title"><a name="sweet" id="sweet"></a>Sweet Potato Leaves, Orange Juice &nbsp;&nbsp;<span style="font-size:13px;">0</span> <img width="15" src="/images/t-up.jpg" title="YEA" align="absmiddle" /> &nbsp;<span style="font-size:13px;">0</span> <img width="15" src="/images/t-down.jpg" title="NAY" align="absmiddle" />&nbsp;&nbsp;<a href="#?w=500" rel="rating_sweet":13px;">0</span> <img width="15" src="/images/t-up.jpg" title="YEA" align="absmiddle" /> &nbsp;<span style="font-size:13px;">0</span> <img width="15"  class="poplight rating_sweet" style="display:none; width:12px;"><img src="/images/rating.jpg" align="absmiddle" alt="Ratings" title="Ratings" /></a> <a href="#?w=500" rel="recipe_sweet" class="poplight recipe_sweet" style="display:none; width:12px;"><img src="/images/recipe.jpg" align="absmiddle" alt="Treatment" title="Treatment" /></a></h3>
+		</strong>
+		        <div id="rating_sweet" class="popup_block"> 
+		        <script>
+		$( "a.rating_sweet" ).show();
+		</script>
+		</div>
+        <a name="sweet_14217" id="sweet_14217"></a><div id="postwrap"><span style="color:#063">Posted by TAN KOON PENG  (SINGAPORE, SINGAPORE) on 06/20/2008 </span><p align="left"><p align="left"><STRONG>SOUP from Camote Tops (Sweet potatoes)- Best Cure for Dengue fever</STRONG></p><p>Sweet potato leaves are boiled in water to extract the juice. The boiling lasts for about five minutes. A little salt is used to give flavor to it. The patient is made to drink slowly and gradually. The body's immunity system is thus revived, making dengue helpless against the body's natural defenses. Camote enables the body to heal itself. </p><p>or</p><p>Orange juice helps with digestion, increased urinary output, promotes antibodies for faster healing and recovery. It gives energy and vitamins, overall a great source for fighting dengue fevers!</p></div></font>		<blockquote style="margin:0;">p>or</p><p>Orange juice helps with digestion, increased urinary output, promotes antibodies for faster healing and recovery. It gives energy and vitam
+<div id="postwrap"><div id="user" style="padding-right:18px; padding-bottom:15px; color:#063; display: inline-block; width: 20%;vertical-align: top;">Replied by Tan Koon Peng<br>Singapore<br>09/08/2008<br></div><div id="comment" class="wdt" style="width:76%;display: inline-block;vertical-align: top; padding-top:15px; padding-bottom:15px;">Update for Improved formula for dengue fever: Make the above items into a juice and drink immediately. Do not drink the juice chilled.</blockquote><p class="BackToTop"><div style="border-bottom:solid #CCC thin; width:100%;" class="action-icons"><a style="cursor:pointer;padding:8px 16px; background-color:#0095c8; color:#FFF;float:left; margin-top:8px;" onClick="javascript:loadReplyForm('14217','Feedback','203','Sweet Potato Leaves, Orange Juice'); setup(); document.getElementById('respond-14217').scrollIntoView();" value="Reply"class="ico-reply">Reply</a><ul style="float:right; margin-top:0;"><li><a href="javascript: void(0)" onclick="MM_openBrWindow('/signin.php?st=203&nd=14217','','scrollbars=1,width=400,height=350')" class="ico-watch">Watch</a></li><li><a href="javascript: void(0)" onClick="mailPost('14217', 'Sweet Potato Leaves, Orange Juice', 'Feedback');" class="ico-email">Email</a></li><li><a href="javascript: void(0)" onClick="printPost('16538', 'Sweet Potato Leaves, Orange Juice', 'Feedback');" class="ico-print">Prt: void(0)" onClick="mailPost('14217', 'Sweet Potato Leaves, Orange Juice', 'Feedback');" class="ico-email">Email</a></li><li><a href="javascript: voiint</a></li></ul></div></p>        <!-- comment box -->
+<div id="respond-14217" class="comment-respond"></div>
+</div><div class="padding30">
+        		
+		<strong>
+		<h3 class="h3title"><a name="watermelon" id="watermelon"></a>Watermelon &nbsp;&nbsp;<span style="font-size:13px;">1</span> <img width="15" src="/images/t-up.jpg" title="YEA" align="absmiddle" /> &nbsp;<span style="font-size:13px;">0</span> <img width="15" src="/images/t-down.jpg" title="NAY" align="absmiddle" />&nbsp;&nbsp;<a href="#?w=500" rel="rating_watermelon" class="poplight rating_watermelon" style="display:none; width:12px;"><img src="/images/rating.jpg" align="absmiddle" alt="Ratings" title="Ratings" /></a> <a href="#?w=500" rel="recipe_watermelon" class="poplight recipe_watermelon" style="display:none; width:12px;"><img src="/images/recipe.jpg" align="absmiddle" alt="Treatment" title="Treatment" /></a></h3>
+		</strong>
+		        <div id="rating_watermelon" class="popup_block"> 
+		<table cellpadding="2" cellspacing="3" id="Ratings">
+										<tr><td colspan=3><div class="title">Approval Ratings</div>
+						<tr>
+						<td><strong>YEA (1)</strong></td>	
+						<td width="125" bgcolor="#F7F7F7"><div class="rounded" style="height:13px; width:100%; background-color:#0000FF;"></div></td>
+						<td>100%</td>
+
+						<tr>
+						e">Approval Ratings</div>
+						<tr>
+						<td><strong>YEA (1)</strong></td>	
+						<td width="125" bgcolor="#F7F7F7"><div class="rounded" style="height:13px; width:100%; background-color:#0000FF;"></d</td></tr></table>        <script>
+		$( "a.rating_watermelon" ).show();
+		</script>
+		</div>
+        <a name="watermelon_12403" id="watermelon_12403"></a><div id="postwrap"><span style="color:#063">Posted by TAN KOON PENG  (Singapore, Singapore) on 04/20/2008 </span><p align="left"><p align="left">[<span style="color:#0000FF"><b>YEA</b></span>]&nbsp;&nbsp;Fresh water melon! Take as much as you can.Water melon is useful for dengue fever as water melon can boost your immune system and fight infection.Do not take Chill watermelon!</P> <P><A href="http://informativehealth.blogspot.com/">http://informativehealth.blogspot.com/</A></p></div></font><p class="BackToTop"><div style="border-bottom:solid #CCC thin; width:100%;" class="action-icons"><a style="cursor:pointer;padding:8px 16px; background-color:#0095c8; color:#FFF;float:left; margin-top:8px;" onClick="javascript:loadReplyForm('12403','Feedback','203','Watermelon'); setup(); document.getElementById('respond-12403').scrollIntoView();" value="Reply"class="ico-reply">Reply</a><ul style="float:right; margin-top:0;"><li><a href="javascript: void(0)" onclick="MM_openBrWindow('/signin.php?st=203&nd=12403','','scrollbars=1,width=400,height=350')" class="ico-watch">Watch</a></li><li><a href="javascript: void(0)" onClick="mailPost('12403', 'Watermelon', 'Feedback');" class="ico-email">Email</a></li><li><a href="javascript: void(0)" onClick="printPost('12403', 'Watermelon', 'Feedback');" class="ico-print">Print</a></li></ul></div></p>        <!-- comment box -->
+<div id="respond-12403" class="comment-respond"></div>
+</div><div class="padding30">
+        		
+		<strong>
+		<h3 class="h3title"><a name="zapper" id="zapper"></a>Zapper &nbsp;&nbsp;<span style="font-size:13px;">1</span> <img width="15" src="/images/t-up.jpg" title="YEA" align="absmiddle" /> &nbsp;<span style="font-size:13px;">0</span> <img width="15" src="/images/t-down.jpg" title="NAY" align="absmiddle" />&nbsp;&nbsp;<a href="#?w=500" rel="rating_zapper" class="poplight rating_zapper" style="display:none; width:12px;"><img src="/images/rating.jpg" align="absmiddle" alt="Ratings" title="Ratings" /></a> <a href="#?w=500" rel="recipe_zapper" class="poplight recipe_zapper" style="display:none; width:12px;"><img src="/images/recipe.jpg" align="absmiddle" alt="Treatment" title="Treatment" /></a></h3>
+		</strong>
+		        <div id="rating_zapper" class="popup_block"> 
+		<table cellpadding="2" cellspacing="3" id="Ratings">
+										<tr><td colspan=3><div class="title">Approval Ratings</div>
+						<tr>
+						<td><strong>YEA (1)</strong></td>	
+						<td width="125" bgcolor="#F7F7F7"><div class="rounded" style="height:13px; width:100%; background-color:#0000FF;"></div></td>
+						<td>100%</td>
+
+			div class="title">Approval Ratings</div>
+						<tr			<tr>
+						</td></tr></table>        <script>
+		$( "a.rating_zapper" ).show();
+		</script>
+		</div>
+        <a name="zapper_88605" id="zapper_88605"></a><div id="postwrap"><span style="color:#063">Posted by Candice  (Chicago, Il) on 11/16/2012 </span><p align="left"><p align="left">[<span style="color:#0000FF"><b>YEA</b></span>]&nbsp;&nbsp;The Dr. Hulda Clark zapper! Worked great. I had 4 different friends that had Dengue and I let them use my zapper and they all reported immediate relief after using the zapper one time. Thanks Earth Clinic. You ROCK!!</p></div></font><p class="BackToTop"><div style="border-bottom:solid #CCC thin; width:100%;" class="action-icons"><a style="cursor:pointer;padding:8px 16px; background-color:#0095c8; color:#FFF;float:left; margin-top:8px;" onClick="javascript:loadReplyForm('88605','Feedback','203','Zapper'); setup(); document.getElementById('respond-88605').scrollIntoView();" value="Reply"class="ico-reply">Reply</a><ul style="float:right; margin-top:0;"><li><a href="javascript: void(0)" onclick="MM_openBrWindow('/signin.php?st=203&nd=88605','','scrollbars=1,width=400,height=350')" class="ico-watch">Watch</a></li><li><a href="javascript: void(0)" onClick="mailPost('88605', 'Zapper', 'Feedback');" class="ico-email">Email</a></li><li><a href="javascript: void(0)" onClick="printPost('88605', 'Zapper', 'Feedback');" class="eight=350')" class="ico-watch">Watch</a></li><li><a href="javascript: void(0)" onClick="mailPost('88605', 'Zapper', 'Feedback');" class="ico-email">Emico-print">Print</a></li></ul></div></p>        <!-- comment box -->
+<div id="respond-88605" class="comment-respond"></div>
+</div><br><br><br><div class="pagesnav"></div>
+            <!-- <p><a href="/cures.html">Back to cures</a></p> -->
+            <br> <p align="center">
+<center>
+<div style="max-width:730px;"><!-- 3 rd Ad-->
+            <!-- Health_728x90_footer -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Reponsive Health Bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2476760853251960"
+     data-ad-slot="4990182402"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</center>
+<br><br>
+<div class="res_12th_div" style="width:100%; padding:7px;">
+<form action="http://www.earthclinic.com/search.php" id="cse-search-box">
+  <div>
+    <div align="center" class="searchform">
+		  <input type="hidden" name="cx" value="partner-pub-2476760853251960:e2s0aw4vhqg" />
+		  <input type="hidden" name="cof" value="FORID:10" />
+		  <input type="hidden" name="ie" value="ISO-8859-1" />
+          <input type="text" name="q" />
+          <input type="submit" name="sa" value="Search" />
+     </div>
+  </div>
+</form>
+</div>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?idden" name="ie" value="ISO-8859-1" />
+          <input type="text" name="q" />
+          <input type="submit" name="sa" value="Search" />
+     </dform=cse-search-box&amp;lang=en"></script>
+</p>
+<p align="center">&nbsp;</p>
+<br>
+<br>
+          </div></div>
+			</div><!-- EOF content -->
+            
+		<!-- EOF pageBody -->
+		</div>
+		<a href="#" class="go-top"><i class="fa fa-arrow-circle-up"></i></a>
+<div id="ecfooter">
+<div class="ecfooter-inner">
+<div class="newsletter" align="center">
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+    #mc_embed_signup{background:none; clear:left;text-align:center; font:14px Helvetica,Arial,sans-serif; }
+	#mc_embed_signup form {text-align:center;padding:10px !important; width:250px;}
+	#mc_embed_signup input.email {display:inline;border-radius: 4px; margin-left:3px;}
+	#mc_embed_signup input.button {display:inline; max-width:300px;}
+	#mc_embed_signup .button {background-color: #060;}
+	/*
+    Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="http://eepurl.com/SJgYf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <label for="mce-EMAIL">Subscribe to our mailing listyle>
+<div id="mc_embed_signup">
+<form action="http://eepurl.com/SJgYf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-fot</label>
+    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_4ee430e801c7be0ca62527784_c812d52448" value=""></div><br />
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+<!--End mc_embed_signup-->
+<center><a href="/latest_posts_rss.php" title="RSS Feed"><img src="/images/rss.png" /></a> <a href="https://www.facebook.com/pages/Earth-Clinic/60803892726"><img src="/images/facebook.png" /></a> <a href="https://twitter.com/Earth_Clinic"><img src="/images/twitter.png" /></a> <a href="http://www.pinterest.com/earthclinic/"><img src="/images/pin.png" /></a> <a href="https://www.youtube.com/channel/UCP1FU3oLwAMRVfr9HaAg-fw"><img src="/images/youtube.png" /></a> <a href="https://plus.google.com/+earthclinic"><img src="/images/google.png" /></a></center>
+</div>
+<div class="disclaimer">
+<p>DISCLAIMER: Our readers offer information and opinions on Earth Clinic, not as a substitute for professional medical prevention, diagnosis, or treatment. Please consult with your physician, pharmacist, or health care provider before taking any home remedies or supplements or following any treatment suggested by anyone on this site. Only your health care provider, personal physician, or pharmacist can provide you with advice on what is safe and effective for your unique needs or diagnose your particular medical history.</p>
+</div>
+<blockquote>
+
+		    <p align="center"><a href="/copyright.html">Copyright &copy; personal phy2015</a>&nbsp;| <a href="/tos.html" title="Terms of Service" target="_blank">Terms of Service</a> | <a href="/privacy_policy.html" title="Privacy Policy">Privacy Policy</a>&nbsp;|  <a href="/about.html">About Us</a> |<a href="/contactus.html" title="Contact Us" target="_blank"> Contact Us</a>&nbsp;| <a href="/search.html" title="Search">Search</a>  <br />
+		      <br />
+
+		    </p>
+
+  </blockquote>
+</div><!-- eof .ecfooter-inner -->
+</div>
+<!-- back to top javascript -->
+<script>
+		$(document).ready(function() {
+			// Show or hide the sticky footer button
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 200) {
+					$('.go-top').fadeIn(200);
+				} else {
+					$('.go-top').fadeOut(200);
+				}
+			});
+			
+			// Animate the scroll to top
+			$('.go-top').click(function(event) {
+				event.preventDefault();
+				
+				$('html, body').animate({scrollTop: 0}, 300);
+			})
+		});
+	</script>
+</div></div>
+<!-- EOF page-wrapper -->
+<!-- EOF wrapper-outer
+ -->
+</body>
+</html>
+<!-- temptype: sectionstemplate -->function(event) {
+				event.preventDefault();
+				
+				$('html, body').animate({scrollTop: 0}, 300);
+			})
+		});
+	</script>
+</div></div>
+<!-- EOF page-wrapper -->
+<!-- EOF wrapper-outer
+ -->
+</body>
+</html>

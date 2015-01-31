@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+
+	<html lang="en">
+<head><meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><script type="text/javascript">
+   var _U = "undefined";
+   var g_HttpRelativeWebRoot = "/acs/";
+   var SSContributor = false;
+   var SSForceContributor = false;
+   var SSHideContributorUI = false;
+   var ssUrlPrefix = "/";
+   var ssUrlType = "1";
+   var ssDomainNum = "5c38e88";
+   var g_navNode_Path = new Array();
+       g_navNode_Path[0] = '0';
+       g_navNode_Path[1] = '100011';
+       g_navNode_Path[2] = '100014';
+       g_navNode_Path[3] = '265';
+       g_navNode_Path[4] = '286';
+       g_navNode_Path[5] = '1232';
+   var g_ssSourceNodeId = "1232";
+   var g_ssSourceSiteId = "CancerOrg";
+   var g_strLanguageId = "en";
+</script>
+<script id="SSNavigationFunctionsScript" type="text/javascript" src="/acs/websites/CancerOrg/sitenavigationfunctions.js"></script>
+<script id="SSNavigationScript" type="text/javascript" src="/acs/websites/CancerOrg/sitenavigation.js"></script>
+
+	<script type="text/javascript" src="/acs/resources/wcm/sitestudio/wcm.toggle.js"></script>
+	<script type="text/javascript" src="/acs/resources/sitestudio/ssajax/ssajax.js"></script>
+		
+
+
+
+<script id="ssInfo" type="text/xml" warning="DO NOT MODIFY!">
+  <ssinfo >
+
+	<fragmentinstance  id="fragment1" fragmentid="lightBox_CancerHome" library="server:CANCERORG_LIGHTBOX">
+	</fragmentinstance>
+    
+      <fragmentinstance  id="fragment8" fragmentid="ACSBreadcrumb" library="server:ACS-GLOBAL-BREADCRUMB">
+      </fragmentinstance>
+    <region  id="region1" name="PageContribution" flags="111100010001" metadata="" dccommand="ssIncDynamicConversionByRulesEngine(SS_DATAFILE)">
+        <element  id="region1_element4" name="WYSIWYG" label="WYSIWYG" type="1" flags="111111111111111111111100000111100000000000001010001100111010010000000000000000000000000000000000">
+          <linktoregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="false">
+            <choosemanagedquerytext  corecontentonly="FALSE">
+              <![CDATA[xWebsiteObjectType <Matches> `Data File` <OR> xWebsiteObjectType <Matches> `Native Document`]]>
+            </choosemanagedquerytext>
+          </linktoregioncontent>
+          <customconfiguration ><configurationurl >groups/system/documents/webasset/custom_fck_externallink.js</configurationurl></customconfiguration>
+        </element>
+      <element  id="region1_element6" name="displaySectionLevelMsgBlock" label="Display Section Level Messaging Blocks?" type="4" flags="0000000000000000000000000000000000000000000000000000000000000000000000000000">
+        <url >groups/system/documents/webasset/ss_true_false_selector.htm</url>
+      </element>
+        <element  id="region1_element8" name="BottomMessageBlocks" label="Bottom Message Blocks" type="2" flags="000000000000000011100011111000000000000000000011000000000010000000000000000000000000000000000000" fragmentid="BottomMstBlocks" library="server:ACS_MSGBLOCK_FRAGMENTS">
+          
+			
+      <element  id="0" name="Selector" label="Message Block Selector" type="4" flags="0000000000000000000000000000000000000000000000000000000000000000000000000000">
+        <url >groups/system/documents/webasset/btm_msg_block_list_selector.hcsp</url>
+      </element>
+		
+          <linktoregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="false">
+            <choosemanagedquerytext  corecontentonly="FALSE">
+              <![CDATA[xWebsiteObjectType <Matches> `Data File` <OR> xWebsiteObjectType <Matches> `Native Document`]]>
+            </choosemanagedquerytext>
+          </linktoregioncontent>
+        </element>
+      <element  id="region1_element7" name="ACS_MSGBLOCK_STATICLIST" label="Message Block" type="2" flags="000000000000000011100011111000000000000000000011000000000010000000000000000000000000000000000000" fragmentid="ACS_MSGBLOCK_STATICLIST" li/element>
+      <element  id="region1_element7" name="ACS_MSGBLOCK_STATICbrary="server:ACS_MSGBLOCK_FRAGMENTS">
+        
+			
+      <element  id="0" name="Selector" label="Message Block Selector" type="4" flags="0000000000000000000000000000000000000000000000000000000000000000000000000000">
+        <url >groups/system/documents/webasset/ss_messageblock_selector.hcsp</url>
+      </element>
+		
+        <linktoregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="false">
+          <choosemanagedquerytext  corecontentonly="FALSE">
+            <![CDATA[xWebsiteObjectType <Matches> `Data File` <OR> xWebsiteObjectType <Matches> `Native Document`]]>
+          </choosemanagedquerytext>
+        </linktoregioncontent>
+      </element>
+      <element  id="region1_element5" name="SelectCIDTOC" label="Select CID TOC" type="4" flags="0000000000000000000000000000000000000000000000000000000000000000000000000000">
+        <url >groups/system/documents/webasset/ss_cid_toc_form.htm</url>
+      </element>
+      <switchregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="false">
+        <choosemanagedquerytext  corecontentonly="FALSE">
+          <![CDATA[xWebsiteObjectType <Matches> `Data File` <OR> xWebsiteObjectType <Matches> `Native Document`]]>
+        </choosemanagedquerytext>
+      </switchregioncontent>
+    </region>
+  </ssinfo>
+  </script>
+
+
+<meta name="GENERATOR" content="MSHTML 8.00.6001.18702" />
+
+
+
+
+	         
+    
+<!-- SS_BEGIN_SNIPPET(fragment8,1)-->
+			<!-- SS_END_SNIPPET(fragment8,1)--><!-- SS_BEGIN_SNIPPET(region1_element7,1)-->
+			<!-- SS_END_SNIPPET(region1_element7,1)--><!-- SS_BEGIN_SNIPPET(region1_element8,1)-->
+			<!-- SS_END_SNIPPET(region1_element8,1)-->
+
+<!-- LESS/CSS -->
+<link rel="stylesheet" type="text/css" media="screen, projection" href="/acs/fragments/acs_refresh_scripts/css/legacy/acs-global.css" />
+<link rel="stylesheet" type="text/css" href="/acs/fragments/acs_refresh_scripts/css/legacy_style.css">
+<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="/acs/fragments/acs_refresh_scripts/css/ie7.css" /><![endif]-->
+
+<script src="/acs/fragments/acs_refresh_scripts/js/libs/jquery.min.js" type="text/javascript"></script>
+<script src="/acs/fragments/acs_refresh_scripts/js/libs/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/acs/fragments/acs_refresh_scripts/js/libs/jquery.cookie.js" type="text/javascript"></script>
+<script src="/acs/fragments/acs_refresh_scripts/js/libs/placeholder.min.js" type="text/javascript"></script>
+<script src="/acs/fragments/acs_javascript/jquery-plugins.js" ></script>
+<script src="/acs/fragments/acs_javascript/jquery.jscrollpane.min.js" ></script>
+<script src="/acs/fragments/acs_javascript/flowplayer/flowplayer-3.2.6.min.js" ></script>
+<script src="/acs/fragments/acs_javascript/flowplayer/general.js" ></script>
+
+ 
+
+			 
+                    
+			 
+                    
+			 
+                    
+			 
+
+<!-- analytics domain: www.cancer.org -->
+<script src="//s3.amazonaws.com/searchdiscovery-satellite-production/fdd8a5c34af4a173986b916f554ecf31cd8b444f/satelliteLib-d4608ad690a6a3c0845a1e8f6356b554a7de77de.js"></script>
+
+<script src="https://account.cancer.org/login/scripts/sts.js" type="text/javascript" rel="forceLoad"></script>
+<script src="/acs/fragments/acs_refresh_scripts/js/site.legacy.r.js" type="text/javascript"></script>
+<script src="/acs/fragments/acs_refresh_scripts/js/event_tagging.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC4KO6LCndNwrnz64h56mMYbplKmWEwHEw&sensor=false"></script>
+<script src="/acs/fragments/acs_refresh_scripts/js/google.maps.js" ></script>
+<script src="/acs/fragments/acs_refresh_scripts/js/MyAcsPreferencesModal_r.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-50379ea47e169d13"></script>
+
+<!-- Google hosted html5shiv -->
+<!--[if lt IE 9]>
+	<script src="/acs/fragments/acs_refresh_scripts/js/libs/html5.js"></script>
+<![endif]-->
+
+
+
+<style type="text/css">
+#main-article.section-triple {
+	padding-top:12px;
+}
+
+.entry-style-1 h3 a, .entry-style-2 h3 a, .entry-style-3 h3 a {
+line-height:20px;
+}
+
+#officeChoice {padding-top:10px}
+
+.news-article h3, .main-article h3 {
+    padding-top: 10px;
+}
+.omega h3 {
+	padding-top: 0;
+	line-height: 100%;
+	margin-bottom: 0;
+	}
+.omega p {
+	margin-top: 15px;
+	margin-bottom: 0;
+	}
+.section-triple .description, #local-search-criteria .description {
+    margin-bottom: 10px;
+    /* margin-top: -15px; */
+	margin-top:0px;
+}
+
+.main-article #blog-nav li {list-style-image:none}
+
+.hero-nav, .home-page #hero-home .wa-fg .hero-nav {
+	margin-bottom:0;
+}
+
+#slideDesc {
+	margin-bottom:5px;
+}
+
+#thumbs li, #thumbs li a {
+	list-style-image:none;
+    border:none;
+}
+
+.myACS-close #close-button, #text-minus, #text-plus  {
+	border:none;
+}
+
+#page-wrapper .formbox .right {
+	background: none repeat scroll 0 0 #EFEFEF;
+	width: 545px;
+}
+
+.cid-wrapper .right .head {
+    text-align: left;
+	margin-bottom:0px;
+}
+
+#quick-finder li {
+    padding-left:0px;
+	margin-bottom:0px;
+} 
+
+#cid-content .article #quick-finder li, #cid-content .teal-theme #quick-finder li {
+	border-top:none;
+}
+
+.cid-wrapper #cid-toc-container li {background:none}
+</style>
+
+		<!-- SS_BEGIN_SNIPPET(fragment1,headerPart)-->				<link rel="stym:0px;
+} 
+
+#cid-content .article #quick-finder li, #cid-content .teal-theme #quick-findlesheet" type="text/css" href="/acs/fragments/lightbox_cancerhome/css/lightBox.css">
+			<!-- SS_END_SNIPPET(fragment1,headerPart)-->
+
+</head>
+
+
+
+
+
+<title>Smallpox Vaccine and Cancer</title>
+		
+	
+<!--c="has doc info"-->
+	
+		
+		<title id="articleTitle">Smallpox Vaccine and Cancer | American Cancer Society</title>
+ 
+
+	<meta name="title" content="Smallpox Vaccine and Cancer | American Cancer Society" />
+	<meta name="searchTitle" content="Smallpox Vaccine and Cancer  " />	
+		<meta name="keywords" content="Smallpox Vaccine and Cancer" />
+		<meta name="description" content="Learn about the smallpox vaccine and the risks it might pose to someone being treated for cancer." />
+	 
+
+
+
+<body class="theme-support purple-theme">
+
+
+    
+        
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+<header class="site">
+    <nav>
+        <div class="narrow-container">
+            <ul class="social-icons">
+                <li><a tabindex="6" target="_blank" href="http://www.facebook.com/AmericanCancerSociety"><img src="/acs/fragments/acs_refresh_scripts/images/ui/facebook.png" alt="Facebook " class="social" /></a></li>
+                <li><a tabindex="7" target="_blank" href="https://plus.google.com/101317382538991343937"><img src="/acs/fragments/acs_refresh_scripts/images/ui/googleplus.png" alt="Google Plus" class="social" /></a></li>
+                <li><a tabindex="8" target="_blank" href="http://www.twitter.com/AmericanCancer"><img src="/acs/fragments/acs_refresh_scripts/images/ui/twitter.png" alt="Twitter" class="social" /></a></li>
+                <li><a tabindex="9" target="_blank" href="http://www.youtube.com/user/AmerCancerSociety/explore"><img src="/acs/fragments/acs_refresh_scripts/images/ui/youtube.png" alt="YouTube" class="social" /></a></li>
+            </ul>          
+
+            <ul class="languages">
+            
+            		<li><a tabindex="4" href="/Espanol">Espa&ntilde;ol</a></li>
+                <li><a tabindex="5" href="/AsianLanguageMaterials">Asian &amp; Pacific Languages</a></li>
+            </ul>
+            <ul class="email">
+                <li><a tabindex="3" href="/aboutus/howwehelpyou/emailsignup/app/enewsletter-sign-up.aspx">Sign Up for Email</a></li>
+            </ul>
+
+                <div id="logged-section">
+  <ul class="users">
+    <li><a tabindex="1" href="/myacs/account/signin" class="signInLink">Sign In</a></li>
+    <li><a tabindex="2" href="/account/profile/Register.aspx" onClick="STS.register();return false;">Register</a></li>
+  </ul>
+</div>
+        </div>
+    </nav>
+    <div class="narrow-container image-bar">
+    n" class="signInLink">Sign In</a></li>
+    <   	<a tabindex="10" href="/index"><img src="/acs/fragments/acs_refresh_scripts/images/acs_logo.gif" alt="American Cancer Society" class="logo"/></a>        
+        <a tabindex="11" href="/Involved/Donate/DonateOnlineNow/index" class="donate-button">Donate</a>
+        
+        	<img src="/acs/fragments/acs_refresh_scripts/images/acs_fightcancer.gif" alt="Join the fight against cancer" class="join_fight logo"/>
+        
+    </div>
+</header>
+
+<div class="banner-background-right" style="background: #160305; height: 258px;"></div>
+<div class="banner-background-left" style="background: #142535; height: 258px;"></div>
+<section class="banner small-banner" style="background: url('/acs/groups/content/documents/image/acspc-043692.jpg') no-repeat top center transparent; height: 258px;">
+<img class="onepx" src="/acs/fragments/acs_refresh_scripts/images/1px.png" alt="Thanks to American Cancer Society volunteers, cancer patients receive thousands of free rides to treatment every year." />
+
+	 
+    <nav class="main withShadow">
+    	<div class="narrow-container">
+			<form action="/Search/index" method="get">
+				<ul class="help">
+					<li>
+					    <label for="search">How can we help you?</label> 
+					    <input tabindex="13" type="text" name="QueryText" id="search" placeholder="search cancer.org" />
+					    <button tabindex="14" type="submit"><i class="icon magnify"></i> Search</button>
+					</li>
+					<li class="live-chat">
+                            <i class="icon speechbubble"></i> 
+                            <a href="https://livechat.boldchat.com/aid/5386287375352862963/bc.chat?resize=true&amp;cwdid=1134019502191338137" target="_blank" onclick="window.open((window.pageViewer &amp;&amp; pageViewer.link || function(link){return link;})(this.href + (this.href.indexOf('?')>=0 ? '&amp;' : '?') + 'url=' + escape(document.location.href)), 'Chat4972879359643679338', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=640,height=480');return false;">
+  <script language="JavaScript" type="text/javascript"> document.write(unescape('%3Cscript language="JavaScript" type="text/javascript" src="' + (('https:' == document.location.protocol) ? 'https:' : 'http:') + '//cbi.boldchat.com/aid/5386287375352862963/bc.cbhs"%3E%3C/script%3E')); </script>
+  <script language="JavaScript" type="text/javascript"> bt_showChatHTML('Live Chat','Live Chat'); </script>
+  <noscript>Live Chat</noscript>
+</a>
+                    </li>
+					<li class="call"><i class="icon phone"></i> <a tabindex="16" href="/AboutUs/HowWeHelpYou/ContactUs/Index"><span itemscope itemtype="http://data-vocabulary.org/Organization"><span itemprop="tel">800-227-2345</span></span></a></li>
+				</ul>
+			</form>
+			
+      "call"><i class="icon phone"></i> <a tabindex      
+                
+    <ul class="tabs">
+                 
+                    <li class="tab-home" id="nav-home"><a href="/index">Home</a></li>
+                 
+                    <li class="tab-learn" id="nav-cancer"><a href="/Cancer/index">Learn About Cancer</a></li>
+                 
+                    <li class="tab-healthy" id="nav-healthy"><a href="/Healthy/index">Stay Healthy</a></li>
+                 
+                    <li class="selected tab-support" id="nav-treatment"><a href="/Treatment/index">Find Support & Treatment</a></li>
+                 
+                    <li class="tab-explore" id="nav-research"><a href="/Research/index">Explore Research</a></li>
+                 
+                    <li class="tab-involved" id="nav-involved"><a href="/Involved/index">Get Involved</a></li>
+                                 
+                    <li class="tab-local" id="nav-myacs"><a href="/MyACS/index">Find Local ACS</a></li>
+                                                                                                                                    </ul>
+	<div class="current-pointer"></div>
+
+			<div class="current-pointer"></div>
+		</div>
+	    <div id="setAreaFormModal" class="container_12 find-local-dropdown-container"></div>		 			
+	</nav>
+
+</section>
+
+<div id="login-wrapper"></div>
+
+	
+	<div id="mw_hidden_content" style="display:none;">
+      	<div id="banner_imgs">
+          	<a href="https://donate.cancer.org/index?campaign=NovLightboxCY14">
+              	<img data-src="/acs/groups/content/documents/image/acspc-044187.jpg" data-title="Fight+Cancer.+Save+Lives.+%2F+Home+Hero" data-docname="ACSPC-044187" alt="Fight+Cancer.+Save+Lives.+%2F+Home+Hero" />
+          	</a>
+      	</div>
+ 	</div>
+ 
+<script src="/acs/fragments/lightbox_cancerhome/js/eoy14-lightbox.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/acs/fragments/lightbox_cancerhome/css/lightBox.css">
+
+
+<!-- SS_BEGIN_SNIPPET(fragment8,2)-->
+	<section class="utility-bar">
+    <div class="container_12">
+
+
+	<div class="breadcrumbs grid_9">
+	
+
+	
+    										
+     		 			     		 		
+     		 			
+     		 			<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+     		 				<a href = "/Treatment/index" itemprop="url">
+    						<span itemprop="title">Find Support & Treatment</span>
+     		 				</a>
+     		 			</span>
+    										
+     		 			&raquo;     		 		
+     		 			
+     		 			<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+     		 				<a href = "/Treatment/TreatmentsandSideEffects/index" itemprop="url">
+    						<span itemprop="title">Treatments and Side Effects</span>
+     		 				</a>
+     		 			</span>
+    										
+     		 			&raquo;     		 		
+     		 			
+     		 			<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+     		 				<a href = "/Treatment/TreatmentsandSideEffects/PhysicalSideEffects/index" itemprop="url">
+    						<span itemprop="title">Physical Side Effects</span>
+     		 				</a>
+     		 			</span>
+    										
+     		 			&raquo;     		 		
+     		 			
+     		 			<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+     		 				<a href = "/Treatment/TreatmentsandSideEffects/PhysicalSideEffects/InfectionsinPeoplewithCancer/index" itemprop="url">
+    						<span itemprop="title">Infections in People with Cancer</span>
+     		 				</a>
+     		 			</span>
+    										
+     		 			&raquo;     		 		
+     		 			
+     		 			<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+     		 				
+    						<span itemprop="title">Smallpox Vaccine and Cancer</span>
+     		 				
+     		 			</span>
+  			
+	</div><!--end breadcrumbs-->
+
+
+<div id="share-this-wrapper" class="modal-wrapper share-wrapper">
+	<div id="share-this"> 
+		<div class="modal-header">
+			<div class="share-this-h3">Share this Page</div>
+			<p><a tabindex="-1" href="#" onclick="tabIndexOff('share-wrapper');" class="modal-close" id="close-button-share" title="close">Close</a></p>
+		</div><!--end modal-header-->
+		<div style="text-indent: -1000px;">Push escape to close share window.</div>
+		<div>
+
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_email"></a>
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_google_plusone_share"></a>
+<a class="addthis_button_twitter"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-503bd630515eedc0"></script>
+<!-- AddThis Button END -->
+		
+		</div><!--end modal-content-->
+	</div><!--end share-this-->
+</div><!--end share-this-wrapper-->
+
+	<div class="actions grid_3">
+		<a href="?ssDomainNum=5c38e88&print=true" id="printThis" class="button small reversed printThis"><i class="icon print"></i> Print</a>
+		<a href="http://www.cancer.org/#" onclick="tabIndexOn('share-wrapper');" id="click-to-share" class="button small reversed shareThis"><i class="icon share-arrow-small"></i> Share</a>
+    	<a onclick="tabIndexOn('save-wrapper');"  href="/NotLoggedIn/index" class="button small reversed saveThis"><i class="icon save"></i> Save</a>
+	</div><!--end actions-->
+
+	<div class="save-wrapper" id="saved-articles-wrapper" style="display:none;">
+		<div id="saved-articles">
+    		<header>
+    			<h3>Saved this Article</h3>
+    			<div class="close"><a href="#" class="image">Close</a></div>
+    			<div style="text-indent: -1000px;">Push escape to close saved articles window.</div>
+    		</header>
+    		<div class="content">
+    			<div> <a class="sa_show_hide" tabindex="-1" href="/MyAcs/index">My Saved Articles <span class="arrow">&raquo;</span></a> <a class="close" tabindex="-1" href="/MyAcs/index">My ACS <span class="arrow">&raquo;</span></a> </div>
+    			<div id="article-saved"></div>
+    		</div>
+		</div>
+	</div>
+	
+	<div id="saveddocs-modal-wrapper" class="modal-saved-docs" style="display:none;" >
+		<div id="saveddocs-modal">
+			<div class="modal-prefs-content">
+			</div>
+		</div>
+	</div> 
+	</div><!--container_12--> 
+</section>  
+				
+			
+<!-- SS_END_SNIPPET(fragment8,2)-->
+
+<div id="page-wrapper"  class="main-article container_12">
+
+<div class="left">
+    <div id="cid-toc-container">
+     
+      
+      <!--SS_BEGIN_OPENREGIONMARKER(region1)-->
+
+
+      <!--SS_END_OPENREGIONMARKER(region1)-->
+      
+      <!--SS_BEGIN_ELEMENT(region1_element5)-->
+      <!--SS_END_ELEMENT(region1_element5)-->
+      	
+      	
+      <H1>Smallpox Vaccine and Cancer</H1>
+       <div class="btn btn-18" style="width:250px;"> <a href='smallpox-vaccine-and-cancer-pdf'><span class="text">Download Printable Version [PDF]<span class="arrow">»</span></span></a> </div>
+       <div class="clearboth"></div>
+      <!--SS_BEGIN_ELEMENT(region1_element4)--><p>Learn about the smallpox vaccine and the risks it might pose to someone being treated for cancer. Click on the topics below to get started.</p>
+<hr />
+<!--SS_END_ELEMENT(region1_element4)-->
+      <ul><li><a href='smallpox-vaccine-and-cancer-vaccine-background-info'>Some background on the smallpox vaccine</a></li><li><a href='smallpox-vaccine-and-cancer-vaccine-safety'>Smallpox vaccine safety for people with cancer</a></li><li><a href='smallpox-vaccine-and-cancer-smallpox-exposure'>What if a person is exposed to the smallpox virus?</a></li><li><a href='smallpox-vaccine-and-cancer-ref'>References</a></li></ul>
+    
+      <!--SS_BEGIN_ELEMENT(region1_element6)-->
+      <!--SS_END_ELEMENT(region1_element6)-->
+   
+      <!-- SS_BEGIN_SNIPPET(region1_element7,2)-->
+      <div id="msgblock-right-column">
+</div>
+
+				
+			
+      <!-- SS_END_SNIPPET(region1_element7,2)-->
+
+
+	<!-- SS_BEGIN_SNIPPET(region1_element8,2)-->
+	<div id="msgblock-bottom-content">
+</div>
+				
+			
+	<!-- SS_END_SNIPPET(region1_element8,2)-->
+      <!--SS_BEGIN_CLOSEREGIONMARKER(region1)-->
+      <!--SS_END_CLOSEREGIONMARKER(region1)-->
+    </div>
+</div>
+<div class="right" id="right">
+	<!-- Begin RightHandNav -->
+		
+	
+	<div id="quickfinder" class="boxed quick-finder">
+		<div class="head">
+			Find Support &amp; Treatment Topics
+			<div class="current-pointer"></div>	
+		</div>
+			
+<ul id="quick-finder-list">
+<li > 
+	<a 	href ="/Treatment/UnderstandingYourDiagnosis/index" >Understanding Your Diagnosis</a></li>
+<li > 
+	<a 	href ="/Treatment/FindingandPayingforTreatment/index" >Finding and Paying for Treatment</a></li>
+<li class="active"> 
+	<a 	href ="/Treatment/TreatmentsandSideEffects/index" >Treatments and Side Effects</a></li>
+<li > 
+	<a 	href ="/Treatment/SurvivorshipDuringandAfterTreatment/index" >Survivorship: During and After Treatment</a></li>
+<li > 
+	<a 	href ="/Treatment/ChildrenandCancer/index" >Children and Cancer</a></li>
+<li > 
+	<a 	href ="/Treatment/Caregivers/index" >Caregivers and Family</a></li>
+<li > 
+	<a 	href ="/Treatment/NearingtheEndofLife/index" >Nearing the End of Life</a></li>
+<li > 
+	<a 	href ="/Treatment/SupportProgramsServices/index" >Find Support Programs and Services in Your Area</a></li>
+</ul>
+				
+	</div>
+
+
+
+
+
+<!-- END RightHandNav-->
+	
+		
+</div>
+
+</div><!--end page-wrapper-->
+<footer class="site">
+	<script>
+ 
+function get_hostname(url) {
+    var m = ((url||'')+'').match(/^http:\/\/[^/]+/);
+    return m ? m[0] : null;
+}
+ 
+$(document).ready(function(){
+        var currentDomain = get_hostname(window.location.href).split("//")[1].toLowerCase();
+        if(currentDomain == "m.cancer.org" || currentDomain == "mstage.qa.cancer.org")
+        {
+                $("#footerPromo").hide();
+         
+        }
+                                                               
+});
+</script>
+
+
+
+<div class="column-links container_12"> 
+	<nav>
+	    <ul>
+			<li><h4>Cancer Information
+</h4></li>
+			
+				<li><a href="/Cancer/CancerBasics/index">Cancer Basics</a></li>		
+				<li><a href="/Healthy/FindCancerEarly/CancerScreeningGuidelines/index">Cancer Prevention & Detection</a></li>		
+				<li><a href="/Cancer/CancerBasics/signs-and-symptoms-of-cancer">Signs & Symptoms of Cancer</a></li>		
+				<li><a href="/Treatment/TreatmentsandSideEffects/index">Treatments & Side Effects</a></li>		
+				<li><a href="/research/cancerfactsstatistics/index">Cancer Facts & Statistics</a></li>		
+				<li><a href="/Cancer/news/index">News About Cancer</a></li>		
+				<li><a href="/cancer/news/expertvoices/default">Expert Voices Blog</a></li>		
+			
+		</ul>
+		<ul>
+			<li><h4>Programs & Services</h4></li>
+			
+				<li><a href="/treatment/supportprogramsservices/reach-to-recovery">Breast Cancer Support</a></li>		
+				<li><a href="http://www.tlcdirect.org">TLC Hair Loss & Mastectomy Products</a></li>		
+				<li><a href="/treatment/supportprogramsservices/hopelodge/index">Horef="/treatment/supportprogramsservices/reach-to-recovery">Breast Cancer Support</a></li>		
+				<li><a href="http://www.tlcdirect.org">TLC Hair Loss & Mastectomy Products</a></li>	pe Lodge® Lodging</a></li>		
+				<li><a href="/treatment/supportprogramsservices/road-to-recovery">Rides To Treatment</a></li>		
+				<li><a href="/Treatment/SupportProgramsServices/OnlineCommunities/index">Online Support Communities</a></li>		
+				<li><a href="http://acs.whatnext.com">WhatNext</a></li>		
+			
+		</ul>
+		<ul>
+			<li><h4>ACS Events</h4></li>
+			
+				<li><a href="http://makingstrides.acsevents.org/site/PageServer?pagename=MSABC_CY14_FindAnEvent">Making Strides Against Breast Cancer Walks</a></li>		
+				<li><a href="/Involved/Participate/CoachesvsCancer/index">Coaches vs. Cancer</a></li>		
+				<li><a href="http://www.relayforlife.org">Relay For Life Events</a></li>		
+				<li><a href="http://college.relayforlife.org/">College Relay For Life</a></li>		
+				<li><a href="http://www.relayrecess.org">Relay Recess</a></li>		
+				<li><a href="/Involved/Donate/OtherWaystoGive/cars-for-a-cure-donate-your-car-to-charity-to-help-fight-cancer">Donate a Car</a></li>		
+			
+		</ul>
+		<ul>
+			<li><h4>About ACS</h4></li>
+			
+				<li><a href="/AboutUs/index">About Us</a></li>		
+				<li><a href="/AboutUs/HowWeHelpYou/ContactUs/Index">Contact Us</a></li>		
+				<li><a href="/Treatment/SupportProgramsServices/index">Local Offices</a></li>		
+				<li><a href="/Involved/Volunteer/index">Volunteer</a></li>		
+				<li><a href="/AboutUs/EmploymentOpportunities/index">Employment</a></li>		
+				<li><a href="/aboutus/become-a-supplier">Become a Supplier</a></li>		
+				<li><a href="/AboutUs/WhoWeAre/Governance/report-fraud-or-abuse">Report Fraud or Abuse</a></li>		
+			
+		</ul>
+		<ul>
+			<li><h4>More ACS Sites</h4></li>			
+			
+				<li><a href="/Cancer/Bookstore/index">Bookstore</a></li>		
+				<li><a href="http://www.acscan.org">ACS CAN</a></li>		
+				<li><a href="http://www.acsgiftshop.com/">Gift Shop</a></li>		
+				<li><a href="http://canceratlas.cancer.org/">Cancer Atlas</a></li>		
+				<li><a href="http://global.cancer.org">Global Health</a></li>		
+				<li><a href="http://cancer.org/fight">Finish the Fight</a></li>		
+				<li><a href="http://pressroom.cancer.org">Press Room</a></li>		
+				<li><a href="http://m.cancer.org">Mobile Site</a></li>		
+							
+		</ul>
+	</nav>
+</div>	
+
+
+
+	<script type="text/javascript">_satellite.pageBottom();</script>
+	
+		<div class="footer-bottom container_12">
+        	<ul class="pipes">				
+			<li><a href="/AboutUs/HowWeHelpYou/OnlineHelp/index">Help</a></li>
+			<li><a href="/AboutUs/Sitemap/index">Site Map</a></li>
+			<li><a href="/AboutUs/ACSPolicies/PrivacyPolicies/index">Privacy</a></li>
+			<li><a href="/AboutUs/ACSPolicies/accessibility-at-the-american-cancer-society-policy">Accessibility</a></li>
+			<li><a href="/AboutUs/ACSPolicies/user-agreem Map</a></li>
+			<li><a href="/AboutUs/ACSPolent">Terms of Use</a></li>
+			<li><a href="/AboutUs/ACSPolicies/state-fundraising-notices">State Fundraising Notices</a></li>
+			<li>			
+			<a style="font-weight:bold" onclick="iperceptions.ipeCC()" href="javascript:void(0);">Site Comments</a>
+			</li>
+		</ul>
+		<ul class="grid_8">
+			<li><a  class="aimg" href="http://charityreports.bbb.org/public/seal.aspx?ID=1413312005"><img src="/acs/groups/content/documents/webasset/footer-bbb.jpg" alt="BBB" /></a> <a href="http://www.bbb.org/charity-reviews/national/cancer/american-cancer-society-in-atlanta-ga-186">Better Business Bureau</a></li>
+			<li><a  class="aimg" href="http://www.hon.ch/"><img src="/acs/groups/content/documents/webasset/footer-hon.jpg" alt="HON" /></a> <a href="http://www.hon.ch/HONcode/Conduct.html?HONConduct788421">Health On The Net</a></li>
+			<li><a  class="aimg" href="http://www.nationalhealthcouncil.org/"><img src="/acs/groups/content/documents/webasset/footer-nhc.jpg" alt="National Health Council Standards of Excellence Certification Program" /></a> <a href="http://www.nationalhealthcouncil.org/pages/standards.php">National Health Council</a></li>
+		</ul>
+		<p class="small-print grid_4">&copy; 2015 American Cancer Society, Inc. All rights reserved.
+			The American Cancer Society is a qualified 501(c)(3) tax-exempt organization.
+			Cancer.org is provided courtesy of the <a href="/AboutUs/HonoringPeopleWhoAreMakingADifference/the-leo-rosen-family">Leo and Gloria Rosen</a> family.
+		</p>
+	</div>
+<script type="text/javascript">
+
+iperceptions = window.iperceptions || {};
+
+//BEGIN Configuration variables
+iperceptions.imgRootPath = "/iperceptions/118332/en/images/";
+iperceptions.imgSizeOut = [68, 68];
+iperceptions.imgSizeOver = [180, 68];
+iperceptions.blockMobile = true;
+iperceptions.surveyID = 118332;
+iperceptions.langID = 1;
+iperceptions.posX = 'right';
+iperceptions.posY = 'middle';
+iperceptions.winWidth = 480;
+iperceptions.winHeight = 580;
+
+//Reserved for advanced use.  Do not modify these.
+iperceptions.iconBrandID = null;
+iperceptions.logoBrandID = null;
+iperceptions.siteID = null;
+iperceptions.imgOut = iperceptions.imgRootPath + "mr" + (iperceptions.iconBrandID ? "_" + iperceptions.iconBrandID : "") + ".png";
+iperceptions.imgOver = iperceptions.imgRootPath + "mr_over" + (iperceptions.iconBrandID ? "_" + iperceptions.iconBrandID : "") + ".png";
+//END Configuration variables.
+
+
+iperceptions.isMobile = (function(a){return (/android|avantgo|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od|ad)|iris|kindle|lge |maemo|midp|mmp|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino|googlebot|google web preview|msbot|yahoo|bingbot|silk|mobile|rim tablet|hp-tablet|touch;|touch\)|wpdesktop/i.test(a))})(navigator.userAgent || navigator.vendor || window.opera);
+
+//API function to add floating icon
+iperceptions.ipeIcon = function(config) {
+    config = config || {};
+    if(iperceptions.launchedIcon) {
+        return;
+    }
+    iperceptions.launchedIcon = true;
+
+    var _pos_x = config.pos_x || iperceptions.posX, //left|middle|right
+        _pos_y = config.pos_y || iperceptions.posY, //'top'|middle|bottom 
+        _img_out = config.img_out || iperceptions.imgOut,
+        _img_over = config.img_over || iperceptions.imgOver, 
+        _size_out = iperceptions.imgSizeOut || [68, 68],
+        _size_over = iperceptions.imgSizeOver || [180, 68],
+        _size_current = _size_out,
+        _id = Math.ceil(Math.random() * 10000),
+        _img_id = 'UIF-IMG-' + _id,
+		_page = '<img id="' + _img_id + '" ' +
+        ' src="' + _img_out + '"' +
+        'style="display:none;position:fixed;cursor:pointer;margin:0px!important;padding:0px!important;border:0px!important;' +
+        'z-index: 2147483647!important;' +
+		(_pos_x == 'right' ? 'text-align:right!important;' : 'text-align:left!important;') +
+		(_pos_y == 'bottom' ? 'vertical-align:bottom!important;' : 'vertical-align:top!important;') +
+        'background-color:transparent!important;"/>', 
+		_img, _is_ie, _icon_timer,
+      
+        //Generic method to attach an event to a DOM element
+        domAddEvent = function (target, eventName, handlerFn) {
+            if (target.addEventListener)
+                target.addEventListener(eventName, handlerFn, true);
+            else if (target.attachEvent)
+                target.attachEvent("on" + eventName, handlerFn);
+            else
+                target["on" + eventName] = handlerFn;
+        },
+
+        ipeSetPos = function(pos_x, pos_y) {
+            var divW = _size_current[0],
+                divH = _size_current[1],
+                viewsize = iperceptions.viewSize(),
+                bodyWidth, bodyHeight, winW, winH;
+
+            //Our default viewsize calculation sometimes to include the scrollbar.  document.documentElement.client[Width|Height] do not include scrollbar.
+            bodyWidth = document.documentElement.clientWidth;
+            if (bodyWidth > 0 && bodyWidth < viewsize[0]) {
+                viewsize[0] = bodyWidth;
+            }
+
+            bodyHeight = document.documentElement.clientHeight;
+            if (bodyHeight > 0 && bodyHeight < viewsize[1]) {
+                viewsize[1] = bodyHeight;
+            }
+
+            winW = parseInt((viewsize[0] - divW));
+            winH = parseInt((viewsize[1] - divH));
+               
+            if (pos_x == 'left') { _img.style.left = '0px'; }
+            else if (pos_x == 'right') { _img.style.right = '0px'; }
+            else if(winW >= 0) { _img.style.left = (winW / 2 >> 0) + 'px'; }
+            if (pos_y == 'top') { _img.style.top = '0px'; }
+            else if (pos_y == 'bottom') { _img.style.bottom = "0px"; }
+            else if(winH >= 0) { _img.style.top = (winH / 2 >> 0) + 'px'; }
+        },
+
+        isIE = function() {
+            var ua = navigator.userAgent.toLowerCase(),
+            isOpera = (ua.indexOf('opera') != -1);
+            return ua.indexOf('msie') != -1 && !isOpera && (ua.indexOf('webtv') == -1);
+        },
+
+        IEMajorVersion = function() {
+            var m = /MSIE\s*(\d*)/.exec(navigator.userAgent),
+                v = (m && m[1]) || -1;
+            if(isNaN(parseInt(v, 10))) {
+                v = -1;
+            }
+            return v;
+        },
+
+		ipeIconComplete = function() {
+            _img = document.getElementById(_img_id);
+            _img.style.display = "block";
+            ipeSetPos(_pos_x, _pos_y);
+
+            domAddEvent(window, 'resize', function () { ipeSetPos(_pos_x, _pos_y); });
+            domAddEvent(window, 'scroll', function () { ipeSetPos(_pos_x, _pos_y); }); 
+            domAddEvent(_img, "mouseout", function () {
+                    _img.src = _img_out;
+                    _size_current = _size_out;
+                });
+            domAddEvent(_img, "mouseover", function () {
+                    _img.src = _img_over;
+                    _size_current = _size_over;
+            });
+            domAddEvent(_img, "click", function (e) {
+                iperceptions.ipeCC(config);
+            });
+        };
+
+    _is_ie = isIE();
+
+    //Now blocking IE6 and mobile devices
+    if(_is_ie && IEMajorVersion() < 7) {
+        return;
+    }
+    if(iperceptions.blockMobile && iperceptions.isMobile) {
+        return;
+    }
+
+    _icon_timer = setInterval(function() {
+        if(document.readyState === "complete") {
+            if (_is_ie && IEMajorVersion() < 10) {
+                document.body.insertAdjacentHTML("beforeEnd", _page);
+            } else {
+                _dL = document.createElement("div");
+                _dL.innerHTML = _page;
+                document.body.appendChild(_dL);
+            }
+            clearInterval(_icon_timer);
+            ipeIconComplete();
+        }  
+    }, 250);
+}
+
+
+//API function to launch comment card
+iperceptions.ipeCC = function(config) {
+    var config = config || {};
+    config.surveyID = config.surveyID || iperceptions.surveyID;
+
+    iperceptions.launch(config);
+}
+
+iperceptions.viewSize = function() {
+    var width = 0, height = 0;
+    if (typeof (window.innerWidth) == 'number') {
+        width = window.innerWidth;
+        height = window.innerHeight;
+    } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+        width = document.documentElement.clientWidth;
+        height = document.documentElement.clientHeight;
+    } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+        width = document.body.clientWidth;
+        height = document.body.clientHeight;
+    }
+    return [width, height];
+}
+
+iperceptions.launch = function(config) {
+    config.langID = config.langID || iperceptions.langID;
+
+    var RC = function(n){var nEQ= n+'='; var ca= document.cookie.split(';');for(var i=0;i < ca.length;i++) {var c= ca[i];while (c.charAt(0)==' ') c= c.substring(1,c.length);if (c.indexOf(nEQ) == 0) return c.substring(nEQ.length,c.length);} };
+
+    var name = "IPerceptions_comment_" + config.surveyID;
+    var w = 0, h = 0, url = "", l = 0, t = 0, vs = iperceptions.viewSize(), 
+        sdfc = "e8abdf4f" + "-" + config.surveyID + "-" + "3a07d5ce-0cd2-4702-bb09-9246b2aa907e";
+    w = iperceptions.winWidth || 480;
+    h = iperceptions.winHeight || 580;
+    l = Math.max((vs[0] - w) / 2, 0);
+    t = Math.max((vs[1] - h) / 2, 0);
+    url = window.location.protocol + "//ips-invite.iperceptions.com/WebValidator.aspx?b2aa907e";
+    w = iperceptiolID=" + config.langID + "&sdfc=" + sdfc + "&source=91787&destination=commentcard&referrer=" + encodeURIComponent(window.location.href) + (iperceptions.logoBrandID ? "&brandID=" + iperceptions.logoBrandID : "" ) + (iperceptions.siteID ? "&siteID=" + iperceptions.siteID : "" );
+ 
+    var features = "width=" + w + ",height=" + h + ", left=" + l + ", top=" + t + ", resizable=yes, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, copyhistory=no";
+
+    window.open(url, name, features);
+}
+
+</script>
+      
+
+</footer>
+
+			<script src="/acs/fragments/lightbox_cancerhome/js/eoy13-lightbox.js" type="text/javascript"></script>
+
+</body>
+</html>
+o, menubar=no, scrollbars=yes, copyhistory=no";
+
+    window.open(url, name, fe

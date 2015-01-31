@@ -1,0 +1,1183 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vg4HVFVACgMGXFRXBA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:20,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:20,2:21,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:21,2:20,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:21,2:20,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:21,2:20,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:21,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],20:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],21:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:20,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="generator" content="MediaWiki 1.19.20" />
+<meta name="keywords" content="Plague Inc. Wiki,plagueinc,Symptoms,DNA,Symptom Combos,Nausea,Coughing,Insomnia,Anaemia,Vomiting,Pneumonia,Paranoia,Hyper sensitivity" />
+<meta name="description" content="Symptoms can be evolved through the Symptoms screen. Evolving a Symptom costs DNA points, but..." />
+<meta name="google-site-verification" content="1XrlINWUdfbwWJNkWJCi0jh2ThESGwMJycf5lPkPHA0" />
+<link rel="canonical" href="http://plagueinc.wikia.com/wiki/Symptoms" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/wiki/Symptoms?action=edit" />
+<link rel="edit" title="Edit" href="/wiki/Symptoms?action=edit" />
+<link rel="apple-touch-icon" href="http:ref="http://plagueinc.wikia.com/wiki/Symptom//img2.wikia.nocookie.net/__cb12/plagueinc/images/b/bc/Wiki.png" />
+<link rel="shortcut icon" href="http://vignette3.wikia.nocookie.net/plagueinc/images/6/64/Favicon.ico/revision/latest?cb=20140427230912" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="Plague Inc. Wiki (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://plagueinc.wikia.com/api.php?action=rsd" />
+<link rel="copyright" href="http://www.wikia.com/Licensing" />
+<link rel="alternate" type="application/atom+xml" title="Plague Inc. Wiki Atom feed" href="/wiki/Special:RecentChanges?feed=atom" />
+<title>Symptoms - Plague Inc. Wiki</title>
+
+<!-- CSS injected by skin and extensions -->
+<link rel="stylesheet" href="http://slot1.images1.wikia.nocookie.net/__am/1420498505/sasses/background-dynamic%3Dtrue%26background-image%3Dhttp%253A%252F%252Fimg3.wikia.nocookie.net%252F__cb20140428022515%252Fplagueinc%252Fimages%252F5%252F50%252FWiki-background%26background-image-height%3D1080%26background-image-width%3D1920%26color-body%3D%2523000000%26color-body-middle%3D%2523303641%26color-buttons%3D%2523891100%26color-header%3D%25236d0d00%26color-links%3Dorange%26color-page%3D%2523000000%26page-opacity%3D92%26widthType%3D2/skins/oasis/css/oasis.scss,extensions/wikia/Forum/css/ForumTag.scss,extensions/wikia/MonetizationModule/styles/MonetizationModule.scss,extensions/wikia/GlobalNavigation/styles/GlobalNavigation.scss,extensions/wikia/GlobalNavigation/styles/GlobalNavigationSearch.scss,extensions/wikia/GlobalNavigation/styles/GlobalNavigationAccountNavigation.scss,extensions/wikia/GlobalNavigation/styles/GlobalNavigationHubsMenu.scss,extensions/wikia/UserLogin/css/UserLoginDropdown.globalNavigation.scss,extensions/wikia/WallNotifications/styles/WallNotifications.globalNavigation.scss,extensions/wikia/GlobalNavigation/styles/GlobalNavigationOasis.scss,extensions/wikia/GlobalNavigation/styles/GlobalNavigationSearchOasis.scss,extensions/wikia/Qualaroo/css/Qualaroo.scss" /><link rel="stylesheet" href="http://plagueinc.wikia.com/__load/-/cb%3D1420498505%26debug%3Dfalse%26lang%3Den%26only%3Dstyles%26skin%3Doasis/site" /><style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: plagueinc:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */</style>
+
+
+<script>
+var Wikia={},
+wgWikiVertical="games",
+wgWikiCategories=[],
+wgMessages={"categoryselect-button-save":"Save","categoryselect-category-add":"Add category...","categoryselect-category-edit":"Edit category","categoryselect-category-remove":"Remove category","categoryselect-error-category-name-length":"The maximum length for a category name has been reached.","categoryselect-error-duplicate-category-name":"Category \"$1\" already exists.","categoryselect-error-empty-category-name":"Please provide a category name.","categoryselect-modal-category-name":"Provide the name of the category:","categoryselect-modal-category-sortkey":"Optionally, you may alphabetize this page on the \"$1\" category page under the name:","categoryselect-tooltip-add":"Press the Enter or Return key when done.","wikiarelatedpages-heading":"Read more","chat-join-the-chat":"Join the Chat","chat-start-a-chat":"Start a Chat","chat-user-menu-message-wall":"Message Wall","chat-user-menu-talk-page":"Talk Page","chat-user-menu-contribs":"Contributions","chat-live2":"Live! Chat","chat-edit-count":"$1 edits","chat-member-since":"Member since $1"},
+JSSnippetsStack=[],
+ads={"context":{"opts":{"adsInContent":true,"enableAdsInMaps":true,"pageType":"all_ads","showAds":true},"targeting":{"enableKruxTargeting":true,"enablePageCategories":true,"pageArticleId":2059,"pageIsArticle":true,"pageName":"Symptoms","pageType":"article","skin":"oasis","wikiCategory":"gaming","wikiDbName":"plagueinc","wikiIsTop1000":true,"wikiLanguage":"en","wikiVertical":"Gaming"},"providers":[],"slots":[],"forceProviders":[]}},
+adslots2=[],
+adDriverLastDARTCallNoAds=[],
+adDriver2ForcedStatus=[],
+wgGaHasAds=true,
+wgEnableOpenXSPC=true,
+wgAfterContentAndJS=[],
+wgWikiFactoryTagIds=[119],
+wgWikiFactoryTagNames=["2"],
+wgCdnRootUrl="http://slot1.images.wikia.nocookie.net",
+wgCdnApiUrl="http://api.wikia.nocookie.net/__cb1420498505",
+wgDBname="plagueinc",
+wgCityId="590863",
+wgContentLanguage="en",
+wgUserName=null,
+wgArticleId=2059,
+wgCategories=["Symptoms"],
+wgPageName="Symptoms",
+wikiaPageType="article",
+skin="oasis",
+_gaq=[],
+wgIsGASpecialWiki=null,
+wgStyleVersion="1420498505",
+wgTransactionContext={"type":"page/main/view/oasis/no_parser/average","env":"prod","wiki":"plagueinc","entry_point":"page","namespace":0,"logged_in":false,"action":"view","skin":"oasis","parser_cache_used":true,"size_category":"average"};
+</script><script>window.mw||(mw={fk:1,loader:{state:function(s){preMwLdrStA=window.preMwLdrStA||[];preMwLdrStA.push(s)}}});</script>
+<script>
+function syslogReport(priority,message,context){context=context||null;var url='//jserrorslog.wikia.com/',i=new Image(),data={'@message':message,'syslog_pri':priority};if(context){data['@context']=context;}
+try{data['@fields']={server:document.cookie.match(/server.([A-Z]*).cache/)[1]};}catch(e){}
+try{i.src=url+'l?'+JSON.stringify(data);}catch(e){i.src=url+'e?'+e;}}</script><script>var wgNow = new Date();</script>
+<!-- Wikia Beacon Tracking -->
+<noscript><img src="http://a.wikia-beacon.com/__track/view?cb=1420498505&amp;c=590863&amp;lc=en&amp;lid=75&amp;x=plagueinc&amp;y=c3&amp;u=0&amp;a=2059&amp;s=oasis&amp;n=0&amp;nojs=1" width="1" height="1" border="0" alt="" /></noscript>
+<script>
+(function() {
+	var result = RegExp("wikia_beacon_id=([A-Za-z0-9_-]{10})").exec(document.cookie);
+	if(result) {
+		window.beacon_id = result[1];
+	} else {
+		// something went terribly wrong
+	}
+
+	var utma = RegExp("__utma=([0-9\.]+)").exec(document.cookie);
+	var utmb = RegExp("__utmb=([0-9\.]+)").exec(document.cookie);
+
+	var trackUrl = "http://a.wikia-beacon.com/__track/view?cb=1420498505&amp;c=590863&amp;lc=en&amp;lid=75&amp;x=plagueinc&amp;y=c3&amp;u=0&amp;a=2059&amp;s=oasis&amp;n=0" + ((typeof document.referrer != "undefined") ? "&amp;r=" + escape(document.referrer) : "") + "&amp;rand=" + (new Date).valueOf() + (window.beacon_id ? "&amp;beacon=" + window.beacon_id : "") + (utma && utma[1] ? "&amp;utma=" + utma[1] : "") + (utmb && utmb[1] ? "&amp;utmb=" + utmb[1] : "");
+	document.write('<'+'script type="text/javascript" src="' + trackUrl + '"><'+'/script>');
+})();
+</script><script src="http://community.wikia.com/wikia.php?controller=Optimizely&method=getCode"></script><script src="http://slot1.images2.wikia.nocookie.net/__load/-/cb%3D1420498505%26debug%3Dfalse%26lang%3Den%26only%3Dscripts%26skin%3Doasis/wikia.ext.instantGlobals,abtesting"></script>
+<script src="http://slot1.images3.wikia.nocookie.net/__load/-/cb%3D1420498505%26debug%3Dfalse%26lang%3Den%26only%3Dscripts%26skin%3Doasis/amd|wikia.tracker.stub,stub|wikia.abTest,cache,cookies,document,geo,instantGlobals,localStorage,location,log,querystring,window"></script>
+<script>/*<![CDATA[*/window.mw.fk&&delete mw;/*]]>*/</script>
+<script type="text/javascript" src="http://slot1.images.wikia.nocookie.net/__am/1420498505/groups/-/abtesting,oasis_blocking,analytics_gas_js,adengine2_tracking_js,adengine2_rubicon_rtp_js,adengine2_amazon_match_js,optimizely_blocking_js,qualaroo_blocking_js,monetization_module_top_script_js"></script>
+<!-- Make IE recognize HTML5 tags. -->
+<!--[if IE]>
+	<script>/*@cc_on'abbr article aside audio canvas details figcaption figure footer header hgroup mark menu meter nav output progress section summary time video'.replace(/\w+/g,function(n){document.createElement(n)})@*/</script>
+<![endif]-->
+
+
+
+	<meta property="fb:app_id" content="112328095453510" prefix="fb: http://www.facebook.com/2008/fbml" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Plague Inc. Wiki" />
+	<meta property="og:title" content="Symptoms" />
+	<meta property="og:description" content="Symptoms can be evolved through the Symptoms screen. Evolving a Symptom costs DNA points, but each evolution will make your pathogen increasingly deadly, infectious or frightening. There are 6 symptoms available immediately, the others must be evolved after you have evolved a symptom in contact with it." />
+	<meta property="og:url" content="http://plagueinc.wikia.com/wiki/Symptoms" />
+	<meta property="og:image" content="http://img3.wikia.nocookie.net/__cb20140427230912/plagueinc/images/8/89/Wiki-wordmark.png" />
+<meta name="apple-itunes-app" content="app-id=623705389">
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Symptoms  TOC_hide MiniEditor wikinav2 skin-oasis oasis-dark-theme background-fixed background-not-tiled background-dynamic">
+	<div class="background-image-gradient"></div>
+
+
+<!-- Begin comScore Tag -->
+<script type="text/javascript">
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "6177433",
+	options: {
+		url_append: "comscorekw=wikiacsid_gaming"
+	}
+});
+
+(function() {
+	var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+	s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+	el.parentNode.insertBefore(s, el);
+})();
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6177433&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c7=http%3A%2F%2Fplagueinc.wikia.com%2Fwiki%2FSymptoms%3Fcomscorekw%3Dwikiacsid_gaming&amp;c15=&amp;cv=2.0&amp;cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+<!-- Start for QuantServe, page_view -->
+<script type="text/javascript">
+  var _qevents = _qevents || [];
+
+  (function() {
+   var elem = document.createElement('script');
+
+   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem, scpt);
+  })();
+</script>
+<script type="text/javascript">
+var quantcastLabels = "";
+if (window.wgWikiVertical) {
+	quantcastLabels += wgWikiVertical;
+	if (window.wgDartCustomKeyValues) {
+		var keyValues = wgDartCustomKeyValues.split(';');
+		for (var i=0; i<keyValues.length; i++) {
+			var keyValue = keyValues[i].split('=');
+			if (keyValue.length >= 2) {
+				quantcastLabels += ',' + wgWikiVertical + '.' + keyValue[1];
+			}
+		}
+	}
+}
+_qevents.push( { qacct:"p-8bG6eLqkH6Avk", labels:quantcastLabels } );
+</script>
+<noscript>
+<div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-8bG6eLqkH6Avk.gif" height="1" width="1" alt="Quantcast"/></div>
+</noscript>
+
+<!-- Start for AmazonMatch, page_view -->
+<script id="analytics-provider-amazon-match">
+	require(["ext.wikia.adEngine.amazonMatchOld", "wikia.geo", "wikia.instantGlobals"], function (amazon, geo, globals) {
+		var ac = globals["wgAmazonMatchOldCountries"];
+
+		if (ac && ac.indexOf && ac.indexOf(geo.getCountryCode()) > -1) {
+			amazon.call();
+		}
+	});
+	require(["ext.wikia.adEngine.amazonMatch", "wikia.geo", "wikia.instantGlobals"], function (amazon, geo, globals) {
+		var ac = globals["wgAmazonMatchCountries"];
+
+		if (ac && ac.indexOf && ac.indexOf(geo.getCountryCode()) > -1) {
+			amazon.call();
+		}
+	});
+</script>
+<!-- Unsupported language for AnalyticsProviderIVW2 -->
+<!-- Start for RubiconRTP, page_view -->
+<script>
+	require(['wikia.geo', 'wikia.instantGlobals', 'ext.wikia.adEngine.rubiconRtp'], function (geo, instantGlobals, rtp) {
+		var rtpCountries = ["US","GB","BR"], country = geo.getCountryCode();
+
+		if (rtpCountries.indexOf(country) !== -1 && !instantGlobals.wgSitewideDisableRubiconRTP) {
+			rtp.call({"disabled":false,"oz_site":"7450\/11979","oz_zone":"145168","oz_ad_slot_size":"728x90","skin":["oasis"],"oz_cached_only":false,"slotname":["BOTTOM_LEADERBOARD","CORP_TOP_LEADERBOARD","HOME_TOP_LEADERBOARD","HUB_TOP_LEADERBOARD","TOP_LEADERBOARD"]});
+		}
+	});
+</script><div class="WikiaSiteWrapper">
+	<h1>Wikia</h1>
+<div class="skiplinkcontainer">
+<a class="skiplink" rel="nofollow" href="#WikiaArticle">Skip to Content</a>
+<a class="skiplink wikinav" rel="nofollow" href="#WikiHeader">Skip to Wiki Navigation</a>
+<a class="skiplink sitenav" rel="nofollow" href="#GlobalNavigation">Skip to Site Navigation</a>
+</div>
+
+<div id="ad-skin" class="wikia-ad noprint"></div>
+
+	<nav class="global-navigation" id="globalNavigation">
+	<div class="page-width">
+		<div class="global-navigation-item wikia-logo-container" id="hubsEntryPoint">
+			<a href="http://www.wikia.com" class="global-navigation-link wikia-logo" rel="nofollow"><img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" height="24" width="91" alt="Wikia" title="Wikia"></a>
+			<a class="hubs-entry-point global-navigation-link"></a>
+<nav id="hubs" class="hubs-menu">
+	<ul class="hub-list">
+					<li>
+								<a data-vertical="comics" href="http://comicshub.wikia.com/wiki/Comics_Hub" class="comics hub-link ">
+					<span class="icon"></span>
+					<span class="label">Comics</span>
+				</a>
+							</li>
+					<li>
+								<a data-vertical="tv" href="http://tvhub.wikia.com/wiki/TV_Hub" class="tv hub-link ">
+					<span class="icon"></span>
+					<span class="label">TV</span>
+				</a>
+							</li>
+					<li>
+								<a data-vertical="movies" href="http://movieshub.wikia.com/wiki/Movies_Hub" class="movies hub-link ">
+					<span class="icon"></span>
+					<span class="label">Movies</span>
+				</a>
+							</li>
+					<li>
+								<a data-vertical="music" href="http://musichub.wikia.com/wiki/Music_Hub" class="music hub-link ">
+					<span class="icon"></span>
+					<span class="label">Music</span>
+				</a>
+							</li>
+					<li>
+								<a data-vertical="books" href="http://bookshub.wikia.com/wiki/Books_Hub" class="books hub-link ">
+					<span class="icon"></span>
+					<span class="label">Books</span>
+				</a>
+							</li>
+					<li>
+								<a data-vertical="games" href="http://gameshub.wikia.com/wiki/Games_Hub" class="games hub-link  active">
+					<span class="icon"></span>
+					<span class="label">Games</span>
+				</a>
+							</li>
+					<li>
+								<a data-vertical="lifestyle" href="http://lifestylehub.wikia.com/wiki/Lifestyle_Hub" class="lifestyle hub-link ">
+					<span class="icon"></span>
+					<span class="label">Lifestyle</span>
+				</a>
+							</li>
+			</ul>
+	<div class="hub-links">
+		<div class="hub-menu-section games-links active">
+			<ul>
+			<strong>HOT</strong>
+							<li>
+					<a href="http://ow.ly/GjAHo">Which Warrior Woman Are You?</a>
+				</li>
+							<li>
+					<a href="http://ow.ly/Focr3">Create Your Ultimate Mercenary Band</a>
+				</li>
+							<li>
+					<a href="http://ow.ly/Focos">Civ: Beyond Earth Mods</a>
+				</li>
+							<li>
+					<a href="http://ow.ly/FP4A8">Create Your Marvel Team with Captain America</a>
+				</li>
+					</ul>
+			<ul>
+			<strong>FPS</strong>
+							<li>
+					<a href="http://ow.ly/Gkesy">All things HALO</a>
+				</li>
+							<li>
+					<a href="http://ow.ly/GkeqL">Call of Duty: Advanced Warfare</a>
+				</li>
+					</ul>
+			<ul>
+			<strong>PC AND MOBILE</strong>
+							<li>
+					<a href="http://ow.ly/GjAHo">Which Warrior Woman Are You?</a>
+				</li>
+							<li>
+					<a href="http://ow.ly/Gketh">Terra Battle</a>
+				</li>
+							<li>
+					<a href="http://ow.ly/Gkeuq">League of Legends</a>
+				</li>
+					</ul>
+			<ul>
+			<strong>TOP VIDEOS</strong>
+							<li>
+					<a href="http://ow.ly/Gkena">Disney Infinity 2.0 Edition Wishlist Part 2</a>
+				</li>
+							<li>
+					<a href="http://ow.ly/Gkelo">Dragon Age Timeline</a>
+				</li>
+							<li>
+					<a href="http://ow.ly/GkejA">Game of Thrones Iron From Ice Fannotation</a>
+				</li>
+					</ul>
+		<a class="more" href="http://gameshub.wikia.com/wiki/Games_Hub">More Games</a>
+</div>
+	</div>
+</nav>
+		</div>
+		<div class="global-navigation-item search-container">
+			<div class="search-form-wrapper">
+	<form action="http://plagueinc.wikia.com/wiki/Special:Search" class="search-form" id="searchForm" method="get">
+		<span class="search-label-bold table-cell">Search</span>
+		<div class="search-select-wrapper table-cell">
+					<div class="search-select-underlay">
+				<span class="search-label-inline" id="searchLabelInline">this wikia</span>
+				<img class="chevron" id="searchFormChevron" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D"/>
+				<select class="search-select" id="searchSelect">
+					<option value="local" selected="selected" data-search-url="http://plagueinc.wikia.com/wiki/Special:Search">this wikia</option>
+					<option value="global" data-search-url="http://www.wikia.com/wiki/Special:Search">all of Wikia</option>
+				</select>
+			</div>
+				</div>
+		<div class="global-nav-search-input-wrapper table-cell">
+			<input id="searchInput" accesskey="f" autocomplete="off" class="search-input" name="search" type="text" value=""/>
+			<input name="fulltext" type="hidden" value="Search"/>
+			<input disabled id="searchInputResultLang" type="hidden" name="resultsLang" value="en"/>
+			<button class="search-submit" type="submit"></button>
+		</div>
+	</form>
+</div>
+		</div>
+		<div class="global-navigation-item start-wikia-container">
+			<a href="http://www.wikia.com/Special:CreateNewWiki" class="global-navigation-link start-wikia" title="Start a wikia"><span>Start a wikia</span></a>
+		</div>
+		<div class="global-navigation-item account-navigation-container">
+			<ul id="AccountNavigation" class="AccountNavigation">
+	<li>
+		<a data-id="login" href="/wiki/Special:UserLogin?returnto=Symptoms" rel="nofollow" title="Log in" class="ajaxLogin global-navigation-link" accesskey="o">			<div class="bubbles">
+				<div class="bubbles-count notifications-count"></div>
+			</div>
+			<div class="avatar-container anon-avatar-placeholder">
+							</div>
+		</a>
+		<div id="UserLoginDropdown" class="UserLoginDropdown">
+	<div class="ajaxRegisterContainer"><a data-id="register" href="/wiki/Special:UserSignup" rel="nofollow" class="ajaxRegister">Sign up</a></div>
+	
+<form action="/wiki/Special:UserLogin" method="post" class="WikiaForm">
+	<fieldset>
+		
+					<div class="input-group error general-errors">
+				<div class="error-msg"></div>
+			</div>
+		
+		
+									
+									<input type="hidden" name="loginToken" value="">
+											
+									<input type="hidden" name="returnto" value="Symptoms">
+											
+									<input type="hidden" name="returntoquery" value="title=Symptoms">
+											
+															<div class="input-group hide-label required">
+					
+													<label>Username</label>
+						
+						
+																												<input type="text" class="hide-label" id="usernameInput" name="username" tabindex="1" placeholder="Username">
+							
+						
+						
+											</div>
+					
+											
+															<div class="input-group hide-label required">
+					
+													<label>Password</label>
+						
+						
+														<input type="password" class="hide-label" id="passwordInput" name="password" tabindex="2" placeholder="Password">
+							
+						
+						
+											</div>
+					
+											
+															<div class="input-group">
+					
+						
+						
+														<a href="#" class="forgot-password" tabindex="0">Forgot your password?</a>							
+						
+						
+											</div>
+					
+											
+															<div class="input-group keep-logged-in">
+					
+						
+													<label>
+						
+														<input type="checkbox" class="keep-logged-in" name="keeploggedin" value="1" tabindex="3">
+								
+						
+													Stay logged in</label>
+						
+											</div>
+					
+											
+															<div class="input-group login-button">
+					
+						
+						
+														<input type="submit" class="login-button" value="Log in" tabindex="4">
+							
+						
+						
+											</div>
+					
+										</fieldset>
+
+	</form>
+	<div class="sso-login">
+		<div class="sso-login-divider">
+			<span>Or</span>
+		</div>
+
+					<a href="#" class="wikia-button wikia-button-facebook sso-login-facebook"  data-id="facebook" tabindex="5" ><img alt="" class="sprite facebook" height="14" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" width="15" /> Connect</a>
+	</div>
+</div>
+	</li>
+</ul>
+		</div>
+			</div>
+</nav>
+<div class="WikiaTopAds" id="WikiaTopAds">
+
+	<div class="WikiaTopAdsInner">
+
+
+		<!-- BEGIN SLOTNAME: TOP_LEADERBOARD -->
+<div id="TOP_LEADERBOARD" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["TOP_LEADERBOARD"]);
+</script>
+</div>
+<!-- END SLOTNAME: TOP_LEADERBOARD -->
+
+		<!-- BEGIN SLOTNAME: TOP_BUTTON_WIDE -->
+<div id="TOP_BUTTON_WIDE" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["TOP_BUTTON_WIDE"]);
+</script>
+</div>
+<!-- END SLOTNAME: TOP_BUTTON_WIDE -->
+
+	</div>
+
+	<!-- BEGIN SLOTNAME: INVISIBLE_SKIN -->
+<div id="INVISIBLE_SKIN" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["INVISIBLE_SKIN"]);
+</script>
+</div>
+<!-- END SLOTNAME: INVISIBLE_SKIN -->
+
+</div>
+
+
+<section id="WikiaPage" class="WikiaPage V2">
+	<div id="WikiaPageBackground" class="WikiaPageBackground"></div>
+	<div class="WikiaPageContentWrapper">
+				<header id="WikiHeader" class="WikiHeader">
+	<h1 class="wordmark medium graphic ">
+	<a accesskey="z" href="/wiki/Plague_Inc._Wiki">
+					<img src="http://img3.wikia.nocookie.net/__cb12/plagueinc/images/8/89/Wiki-wordmark.png" alt="Plague Inc. Wiki"  width="250" height="65" >
+			</a>
+</h1>
+        <nav class="WikiNav">
+    	        <h1>Plague Inc. Wiki Navigation</h1>
+        		<ul class="nav">
+																				<li class="nav-item marked">
+						<a href="#">On the Wiki</a>
+
+													<ul class="subnav-2 accent firstChild">
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="/wiki/Special:WikiActivity" data-canonical="wikiactivity">Wiki Activity</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="/wiki/Special:Random" data-canonical="random">Random page</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="/wiki/Special:Videos" data-canonical="videos">Videos</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="/wiki/Special:NewFiles" data-canonical="newfiles">Photos</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="/wiki/Special:Chat" data-canonical="chat">Chat</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="/wiki/Special:Forum" data-canonical="forum">Forum</a>
+
+																			</li>
+																							</ul>
+											</li>
+																												<li class="nav-item">
+						<a href="#">Popular pages</a>
+
+													<ul class="subnav-2 accent">
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="#">Most visited articles<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron"></a>
+
+																					<ul class="subnav-3 subnav">
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Achievements">Achievements</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Necroa_Virus">Necroa Virus</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Simian_Flu">Simian Flu</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Neurax_Worm">Neurax Worm</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Symptom_Combos">Symptom Combos</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Nano-Virus">Nano-Virus</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Bio-Weapon">Bio-Weapon</a>
+													</li>
+																							</ul>
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="/wiki/Category:Symptoms">Symptoms<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron"></a>
+
+																					<ul class="subnav-3 subnav">
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Insomnia">Insomnia</a>
+	AAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron"></a>
+
+																					<ul class="subnav-3 subnav">
+																																											</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Coughing">Coughing</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Paranoia">Paranoia</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Insanity">Insanity</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Skin_Lesions">Skin Lesions</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Fever">Fever</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Buboes">Buboes</a>
+													</li>
+																							</ul>
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="/wiki/Category:Achievements">Achievements<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron"></a>
+
+																					<ul class="subnav-3 subnav">
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Not_Another_Zombie_Game">Not Another Zombie Game</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/The_End_Plague">The End Plague</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Evolve_your_disease">Evolve your disease</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Unlock_Virus_disease_type">Unlock Virus disease type</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Unlock_Fungus_disease_type">Unlock Fungus disease type</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Unlock_Parasite_disease_type">Unlock Parasite disease type</a>
+													</li>
+																																						<li class="subnav-3-item">
+														<a class="subnav-3a" href="/wiki/Unlock_Prion_disease_type">Unlock Prion disease type</a>
+													</li>
+																							</ul>
+																			</li>
+																							</ul>
+											</li>
+																				<li class="nav-item">
+						<a href="/wiki/Plague_Inc._Wiki:Community_Portal">Community</a>
+
+													<ul class="subnav-2 accent">
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="/wiki/Blog:Recent_posts">Recent blog posts</a>
+
+																			</li>
+																										<li class="subnav-2-item">
+										<a class="subnav-2a" href="/wiki/Special:Forum">Forum</a>
+
+																			</li>
+																							</ul>
+											</li>
+										</ul>
+
+<div class="navbackground">
+	<div></div>
+	<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron">
+</div>    </nav>
+	    <div class="buttons">
+		<nav class="wikia-menu-button contribute secondary combined" >
+	<img alt="" class="sprite contribute" height="16" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" width="22" /> Contribute
+	<span class="drop">
+		<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron">
+	</span>
+	<ul class="WikiaMenuElement">
+		<li>
+			<a href="/wiki/Symptoms?action=edit"  data-id="edit"  >Edit this Page</a>
+		</li>
+		<li>
+			<a href="/wiki/Special:WikiaVideoAdd"  data-id="wikiavideoadd"  >Add a Video</a>
+		</li>
+		<li>
+			<a href="/wiki/Special:Upload"  data-id="upload"  >Add a Photo</a>
+		</li>
+		<li>
+			<a href="/wiki/Special:CreatePage"  data-id="createpage"   class="createpage">Add a Page</a>
+		</li>
+		<li>
+			<a href="/wiki/Special:WikiActivity"  accesskey="g" data-id="wikiactivity"  >Wiki Activity</a>
+		</li>
+	</ul>
+</nav>
+					<a href="#" class="wikia-button share-button secondary"  data-id="shareButton"> Share<span class="share-dot"></span><span class="share-pixel"></span></a>
+    </div>
+	    <div class="hiddenLinks">
+		<a href="/wiki/Special:Watchlist" title="Special:Watchlist" accesskey="l">Watchlist</a>		<a href="/wiki/Special:Random" title="Special:Random" accesskey="x">Random page</a>		<a href="/wiki/Special:RecentChanges" title="Special:RecentChanges" accesskey="r">Recent changes</a>    </div>
+</header>
+
+				
+		
+		
+		
+		<article id="WikiaMainContent" class="WikiaMainContent">
+						<div id="WikiaMainContentContainer" class="WikiaMainContentContainer">
+				<header id="WikiaPageHeader" class="WikiaPageHeader">
+    <h1>Symptoms</h1>
+
+	<nav class="wikia-menu-button" >
+	<a accesskey="e"  href="/wiki/Symptoms?veaction=edit" data-id="ve-edit" id="ca-ve-edit">
+		<img alt="" class="sprite edit-pencil" height="16" src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" width="22" /> Edit	</a>
+
+	<span class="drop">
+		<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="chevron">
+	</span>
+	<ul class="WikiaMenuElement">
+		<li>
+			<a href="/wiki/Symptoms?action=edit"  accesskey="s" data-id="edit"   id="ca-edit">Classic editor</a>
+		</li>
+		<li>
+			<a href="/wiki/Symptoms?action=history"  accesskey="h" data-id="history"   id="ca-history">History</a>
+		</li>
+	</ul>
+</nav>
+			<a accesskey="t" href="#WikiaArticleComments" class="wikia-button comments secondary" rel="nofollow" data-id="comment"> Comments<span class="commentsbubble">33</span></a>
+        <div class="tally">
+			<em>829</em><span>pages on<br /> this wiki</span>        </div>
+		</header>
+<script>
+    
+
+
+
+
+if (window.fromsearch 
+&& typeof(Wikia.geo) !== 'undefined' && ['AU','CA','DE','GB','JP','UK','US'].indexOf(Wikia.geo.getCountryCode()) < 0
+) {
+    document.write(
+        '<div id="monetization-adunit-below_title" class="monetization-module adunit hide-for-edit" ' +
+        'data-mon-type="adunit" data-mon-slot="below_title"><div class="ad-header">Advertisement</div><div>' +
+        '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">' +
+        '</scr' + 'ipt><ins class="adsbygoogle ad-responsive" style="display:inline-block;" ' +
+        'data-ad-client="ca-pub-4086838842346968" data-ad-channel="mon_pl_bt_ic_fsm_ffa mon_hub_gaming mon_sl_bt" ' +
+        'data-ad-type="text" ' + 
+'data-font-size="medium" ' +
+
+
+
+'data-font-face="arial" ' +
+
+        ' data-color-bg="#000000" data-color-border="#000000" data-color-link="orange" data-color-url="orange" data-color-text="#d5d4d4" ></ins>' +
+        '<script>(adsbygoogle = window.adsbygoogle || []).push({});</scr' + 'ipt></div></div>'
+    );
+}
+</script>
+
+				
+				<div id="WikiaArticle" class="WikiaArticle">
+					
+					<div class="home-top-right-ads">
+					<!-- BEGIN SLOTNAME: TOP_INCONTENT_BOXAD -->
+<div id="TOP_INCONTENT_BOXAD" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["TOP_INCONTENT_BOXAD"]);
+</script>
+</div>
+<!-- END SLOTNAME: TOP_INCONTENT_BOXAD -->
+					</div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr mw-content-text"><b><figure class="article-thumb tright show-info-icon" style="width: 180px"> 	<a href="http://vignette2.wikia.nocookie.net/plagueinc/images/f/fd/Plague_final.png/revision/latest?cb=20140218213326" 	class="image image-thumbnail" 	 	 	><img src="http://vignette2.wikia.nocookie.net/plagueinc/images/f/fd/Plague_final.png/revision/latest/scale-to-width/180?cb=20140218213326" 	 alt="Plague final"  	class="thumbimage " 	 	data-image-key="Plague_final.png" 	data-image-name="Plague final.png" 	 	 width="180"  	 height="153"  	 	 	 	></a>  	<figcaption> 		 			<a href="/wiki/File:Plague_final.png" class="sprite info-icon"></a> 		 		 		 			<p class="caption">Detailed map of Symptoms, with Infectivity, Severity, and Lethality values added.</p> 		 	</figcaption> </figure></b>
+<p><b>Symptoms</b> can be evolved through the Symptoms screen. Evolving a Symptom costs <a href="/wiki/DNA" title="DNA" class="mw-redirect">DNA</a> points, but each evolution will make your pathogen increasingly deadly, infectious or frightening.
+</p><p>There are 6 symptoms available immediately, the others must be evolved after you have evolved a symptom in contact with it.
+</p><p>Certain <b>Symptoms</b> will create <a href="/wiki/Symptom_Combos" title="Symptom Combos">Symptom Combos</a>, which generally increase disease effectivity.
+</p>
+<table border="0" cellpadding="1" cellspacing="1" class="article-table article-table-selected" style="width:500px;">
+<tr>
+<th scope="col">Name
+</th><th scope="col">Effect
+</th><th scope="col">Base Cost
+</th></tr>
+<tr>
+<td><a href="/wiki/Nausea" title="Nausea">Nausea</a>
+</td><td>Irritated stomach lining leads to discomfort. Slight chance of infection when kissing
+</td><td>2 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Coughing" title="Coughing">Coughing</a>
+</td><td>Chance of infection by spreading pathogen into surroundings, especially in high density, urban areas
+</td><td>4 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Rash" title="Rash">Rash</a>
+</td><td>The skin becomes blistered and painful, slightly increasing infectivity
+</td><td>3 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Insomnia" title="Insomnia">Insomnia</a>
+</td><td>Inability to sleep makes people irritable and less productive
+</td><td>2 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Cysts" title="Cysts">Cysts</a>
+</td><td>Painful lumps containing pockets of the pathogen. Slight chance of bursting which can spread disease
+</td><td>2 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Anaemia" title="Anaemia">Anaemia</a>
+</td><td>Decrease in red blood cells or haemoglobin in the blood can lead to hypoxia in the organs
+</td><td>2 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Vomiting" title="Vomiting">Vomiting</a>
+</td><td>The expulsion of infected material through projectile vomiting increases the risk of infection
+</td><td>4 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Pneumonia" title="Pneumonia">Pneumonia</a>
+</td><td>Serious fluid build and discharge from the lungs. People in cold climates especially vulnerable
+</td><td>6 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Sweating" title="Sweating">Sweating</a>
+</td><td>The loss of fluid through sweating increases infection rates due to poor hygiene. More dangerous in cold countries
+</td><td>7 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Paranoia" title="Paranoia">Paranoia</a>
+</td><td>Irrational delusions and mental symptoms. Victims distrust of others makes them unlikely to seek treatment or cooperate with others
+</td><td>5 DNA
+</td></tr>
+<tr>
+<td><a hrefd></tr>
+<tr>
+<td><a href="/wiki/Paranoia" title="Paranoia">Paranoia</a>
+</td><td>Irrational delusions and mental symptoms. Victims distrust of others makes them unlikely to seek tr="/wiki/Hyper_sensitivity" title="Hyper sensitivity">Hyper sensitivity</a>
+</td><td>Increases likelihood of allergic reactions which can distract the immune system. Rich nations particularly vulnerable.
+</td><td>2 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Abscesses" title="Abscesses">Abscesses</a>
+</td><td>Pockets of infected flesh are painful and act as breeding grounds for the pathogen, increasing infection rates when burst.
+</td><td>2 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Haemophilia" title="Haemophilia">Haemophilia</a>
+</td><td>Reduced blood clotting prevents wound healing. Pathogen able to spread through infected blood
+</td><td>3 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Sneezing" title="Sneezing">Sneezing</a>
+</td><td>Fluid discharge through sneezing greatly increases infection rates.
+</td><td>5 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Pulmonary_Oedema" title="Pulmonary Oedema">Pulmonary Oedema</a>
+</td><td>Potentially fatal heart abnormality causes breakdown of respiratory system, releasing pathogens into the air.
+</td><td>7 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Tumours" title="Tumours">Tumours</a>
+</td><td>Pathogens disrupt cell growth pathways, causing uncontrolled, eventually fatal tumour growth
+</td><td>11 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Internal_Haemorrhaging" title="Internal Haemorrhaging">Internal Haemorrhaging</a>
+</td><td>Flesh eating pathogens breaks down arterial membranes causing rapid internal bleeding and death
+</td><td>12 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Fever" title="Fever">Fever</a>
+</td><td>Increase in temperature, contagiousness and severe dehydration, which can be fatal
+</td><td>9 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Skin_Lesions" title="Skin Lesions">Skin Lesions</a>
+</td><td>Breakdown in the epidermis causes large open wounds which significantly increases infectivity.
+</td><td>8 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Seizures" title="Seizures">Seizures</a>
+</td><td>Random blackouts and fits reduce the patient's ability to function independently. Can be fatal
+</td><td>4 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Inflammation" title="Inflammation">Inflammation</a>
+</td><td>Inflammation obstructs bodily processes. Swelling can obstruct breathing and be fatal
+</td><td>5 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Diarrhoea" title="Diarrhoea">Diarrhoea</a>
+</td><td>Pathogen active in digestive tract, causing infection through faeces and potentially lethal dehydration. Poor countries V. vulnerable.
+</td><td>6 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Dysentery" title="Dysentery">Dysentery</a>
+</td><td>A complete breakdown in the digestive tract causes infected sewage, dehydration, starvation and death
+</td><td>19 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Insanity" title="Insanity">Insanity</a>
+ef="/wiki/Dysentery" title="Dysentery">Dysent</td><td>Neuropathic action of the pathogen in the frontal lobe causes severe emotional and behavioural abnormalities. Significantly harder to cure.
+</td><td>18 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Necrosis" title="Necrosis">Necrosis</a>
+</td><td>Large swathes of infected tissue lose blood supply and become fatal sources of gangrene. Decomposed bodies remain a vector of transmission
+</td><td>27 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Hemorrhagic_Shock" title="Hemorrhagic Shock">Hemorrhagic Shock</a>
+</td><td>Failure of the heart to pump effectively causes oxygen deprivation, loss of consciousness and death
+</td><td>23 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Paralysis" title="Paralysis">Paralysis</a>
+</td><td>Pathogen destroys motor neurons to cause paralysis. Significantly harder to cure and lethal
+</td><td>10 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Coma" title="Coma">Coma</a>
+</td><td>Neuropathic effects in the brain stem cause loss of consciousness and sometimes death. Significantly harder to cure
+</td><td>21 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Systemic_Infection" title="Systemic Infection">Systemic Infection</a>
+</td><td>Pathogen affects multiple organ and tissue types, causing body-wide infections that spread fast and can be fatal
+</td><td>17 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Pulmonary_Fibrosis" title="Pulmonary Fibrosis">Pulmonary Fibrosis</a>
+<ection</a>
+</td><td>Pathogen affects multiple organ and tissue types, causing body-wide infections that spread fast and can be fatal
+</td><td>17 DNA
+<//td><td>Scarring of the lungs causes shortness of breath and extreme coughing. Can be fatal when combined by intense exercise
+</td><td>6 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Immune_Suppression" title="Immune Suppression">Immune Suppression</a>
+</td><td>Pathogens attach to lymphocytes, suppressing immune system and allowing significantly greater freedom of mutation.Can be fatal.
+</td><td>12 DNA
+</td></tr>
+<tr>
+<td><a href="/wiki/Total_Organ_Failure" title="Total Organ Failure">Total Organ Failure</a>
+</td><td>Catastrophic cell death of multiple tissue types causes body-wide organ failure and rapid death
+</td><td>28 DNA
+</td></tr></table>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1/300000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key plagueinc:pcache:idhash:2059-0!*!0!*!*!2!* -->
+<noscript><link rel="stylesheet" href="http://slot1.images.wikia.nocookie.net/__cb1420498505/common/extensions/wikia/ImageLazyLoad/css/ImageLazyLoadNoScript.css" /></noscript><noscript><link rel="stylesheet" href="http://slot1.images.wikia.nocookie.net/__cb1420498505/common/extensions/wikia/TOCimprovements/TOCNoScript.css" /></noscript></div><div class="printfooter">
+Retrieved from "<a href="http://plagueinc.wikia.com/wiki/Symptoms?oldid=16473">http://plague href="http://slot1.images.wikia.nocookie.net/__cb1420498505/common/extensions/wikia/TOCimprovements/TOCNoScript.css" /></noscript></div><div class="priinc.wikia.com/wiki/Symptoms?oldid=16473</a>"</div>
+<script>
+    if (window.fromsearch && typeof(Wikia.geo) !== 'undefined' && ['US'].indexOf(Wikia.geo.getCountryCode()) >= 0) {
+        document.write(
+                '<div id="monetization-sharethrough-in_content" class="monetization-module sharethrough hide-for-edit" ' +
+                'data-mon-type="sharethrough" data-mon-slot="in_content">' +
+                '<div data-str-native-key="ee7aabcf" style="display: none;"></div>' +
+                '<script type="text/javascript" src="//native.sharethrough.com/assets/tag.js" async></scr' + 'ipt>' +
+                '</div>'
+        );
+    } else 
+
+
+
+
+if (window.fromsearch 
+&& typeof(Wikia.geo) !== 'undefined' && ['GB','JP','UK','US'].indexOf(Wikia.geo.getCountryCode()) < 0
+) {
+    document.write(
+        '<div id="monetization-adunit-in_content" class="monetization-module adunit hide-for-edit" ' +
+        'data-mon-type="adunit" data-mon-slot="in_content"><div class="ad-header">Advertisement</div><div>' +
+        '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">' +
+        '</scr' + 'ipt><ins class="adsbygoogle ad-responsive-ic" style="display:inline-block;" ' +
+        'data-ad-client="ca-pub-4086838842346968" data-ad-channel="mon_pl_bt_ic_fsm_ffa mon_hub_gaming mon_sl_ic" ' +
+        'data-ad-type="text" ' + 
+'data-font-size="medium" ' +
+
+
+
+'data-font-face="arial" ' +
+
+        ' data-color-bg="#000000" data-color-border="#000000" data-color-link="orange" data-color-url="orange" data-color-text="#d5d4d4" ></ins>' +
+        '<script>(adsbygoogle = window.adsbygoogle || []).push({});</scr' + 'ipt></div></div>'
+    );
+}
+</script>
+				</div>
+
+															<nav class="article-categories CategorySelect articlePage userCanEdit" id="articleCategories">
+	<div class="container">
+		<div class="special-categories"><a href="/wiki/Special:Categories" title="Special:Categories" class="categoriesLink" rel="nofollow">Categories</a>:</div>
+		<ul class="categories">
+				<li class="category normal" data-name="Symptoms" data-namespace="" data-outertag="" data-sortkey="" data-type="normal">
+	<span class="name"><a href="/wiki/Category:Symptoms" title="Category:Symptoms">Symptoms</a></span>
+	<ul class="toolbar">
+		<li class="tool editCategory venus-icon-edit-large sprite-small edit" title=""></li>
+		<li class="tool removeCategory venus-icon-cross-negative sprite-small delete" title=""></li>
+	</ul>
+</li>
+							<li class="last">
+					<button class="wikia-button secondary add" id="CategorySelectAdd" type="button">Add category</button>
+					<input autocomplete="off" class="input" id="CategorySelectInput" name="CategorySelectInput" placeholder="Add category..." type="text">				</li>
+					</ul>
+	</div>
+			<div class="toolbar">
+			<button class="wikia-button secondary cancel" id="CategorySelectCancel" type="button">Cancel</button>
+			<button class="wikia-button save" id="CategorySelectSave" type="button" disabled="disabled">Save</button>
+		</div>
+	</nav>									
+				<nav class="WikiaArticleInterlang">
+	<h3>Languages: </h3>
+	<ul>
+			<li><a href="http://ru.plagueinc.wikia.com/wiki/%D0%A1%D0%B8%D0%BC%D0%BF%D1%82%D0%BE%D0%BC%D1%8B">Русский</a></li>
+		</ul>
+</nav>
+
+				
+									<div id="WikiaArticleFooter" class="WikiaArticleFooter">
+							<form id='RTEFakeForm'></form><section id="WikiaArticleComments" class="WikiaArticleComments noprint" data-page="1">
+	</section><div id="RelatedPagesModuleWrapper"></div>					</div>
+				
+								<div id="WikiaArticleBottomAd" class="noprint">
+					<!-- BEGIN SLOTNAME: PREFOOTER_LEFT_BOXAD -->
+<div id="PREFOOTER_LEFT_BOXAD" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["PREFOOTER_LEFT_BOXAD"]);
+</script>
+</div>
+<!-- END SLOTNAME: PREFOOTER_LEFT_BOXAD -->
+					<!-- BEGIN SLOTNAME: PREFOOTER_RIGHT_BOXAD -->
+<div id="PREFOOTER_RIGHT_BOXAD" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["PREFOOTER_RIGHT_BOXAD"]);
+</script>
+</div>
+<!-- END SLOTNAME: PREFOOTER_RIGHT_BOXAD -->
+				</div>
+			</div>
+		</article><!-- WikiaMainContent -->
+
+					<div id="WikiaRail" class="WikiaRail">
+
+	<!-- BEGIN SLOTNAME: TOP_RIGHT_BOXAD -->
+<div id="TOP_RIGHT_BOXAD" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["TOP_RIGHT_BOXAD"]);
+</script>
+</div>
+<!-- END SLOTNAME: TOP_RIGHT_BOXAD -->
+			<div class="loading"></div>
+	
+</div>
+		
+		
+		<footer id="WikiaFooter" class="WikiaFooter notoolbar">
+	<!-- BEGIN SLOTNAME: LEFT_SKYSCRAPER_3 -->
+<div id="LEFT_SKYSCRAPER_3" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["LEFT_SKYSCRAPER_3"]);
+</script>
+</div>
+<!-- END SLOTNAME: LEFT_SKYSCRAPER_3 -->
+	
+	<section>
+	<div class="header-container">
+		<h1>Around Wikia's network</h1>
+		<a id="WikiaRandomWiki" href="http://community.wikia.com/wiki/Special:RandomWiki/590863" class="wikia-button">Random Wiki</a>
+	</div>
+	<script type='text/javascript'>
+		wgAfterContentAndJS.push(function() {
+			window.OpenXSPC = {};
+			window.OpenXSPC[ 'fillElem_SPOTLIGHT_FOOTER' ] = function() {
+				var output = window.OA_output || [];
+				( 14 in output ) && $( '#SPOTLIGHT_FOOTER_1' ).html( output[ 14 ] );
+				( 15 in output ) && $( '#SPOTLIGHT_FOOTER_2' ).html( output[ 15 ] );
+				( 16 in output ) && $( '#SPOTLIGHT_FOOTER_3' ).html( output[ 16 ] );
+			};
+		});
+	</script>
+	<ul id="SPOTLIGHT_FOOTER" class="LazyLoadAd SPOTLIGHT_FOOTER">
+		<li class="WikiaSpotlight item-1" id="SPOTLIGHT_FOOTER_1"></li>
+		<li class="WikiaSpotlight item-2" id="SPOTLIGHT_FOOTER_2"></li>
+		<li class="WikiaSpotlight item-3" id="SPOTLIGHT_FOOTER_3"></li>
+	</ul>
+</section>
+</footer>
+				<footer class="global-footer row">
+	<nav>
+		<h1>Wikia Inc Navigation</h1>
+		<div class="branding black">
+			<div class="wordmark">
+				<img src="data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D" class="wordmark2">
+			</div>
+							<div class="hub"><a class="hub2" href="http://www.wikia.com/Video_Games">[ Video Games ]</a></div>
+					</div>
+		<ul>
+							<li>
+											<a href="http://www.wikia.com/About"><span>About</span></a>
+									</li>
+							<li>
+											<a href="http://community.wikia.com"><span>Community Central</span></a>
+									</li>
+							<li>
+											<a href="http://www.wikia.com/Careers">Careers</a>
+									</li>
+							<li>
+											<a href="http://www.wikia.com/Advertising">Advertise</a>
+									</li>
+							<li>
+											<a href="http://api.wikia.com/"><span>API</span></a>
+									</li>
+							<li>
+											<a href="/wiki/Special:Contact">Contact Wikia</a>
+									</li>
+							<li>
+											<a href="http://www.wikia.com/Terms_of_Use">Terms of Use</a>
+									</li>
+							<li>
+											<a href="http://www.wikia.com/Privacy_Policy">Privacy Policy</a>
+									</li>
+							<li>
+					Content is available under <a href="http://www.wikia.com/Licensing" title="homepage:Licensing">CC-BY-SA</a>.				</li>
+					</ul>
+	</nav>
+</footer>
+	</div>
+</section><!--WikiaPage-->
+
+	<div id="WikiaBar">
+		<div id="WikiaBarWrapper" class="WikiaBarWrapper hidden">
+				<div class="wikia-bar wikia-bar-anon">
+			<a href="#" class="arrow" data-tooltip="Collapse" data-tooltipshow="Show"></a>
+			<div class="ad">
+		<div id="WIKIA_BAR_BOXAD_1" class="noprint" style="width: 300px; position: relative;"></div>
+</div>
+<div
+	class="message"
+	data-messagetooltip="Click here for more information!"
+	data-wikiabarcontent="[{&quot;text&quot;:&quot;Are you a Trekkie? Watch Chase Masterson talk about Star Trek&quot;,&quot;href&quot;:&quot;http:\/\/ow.ly\/GFNd4&quot;},{&quot;text&quot;:&quot;Are you a Trekkie? Watch Chase Masterson talk about Star Trek&quot;,&quot;href&quot;:&quot;http:\/\/ow.ly\/GFNd4&quot;},{&quot;text&quot;:&quot;Are you a Trekkie? Watch Chase Masterson talk about Star Trek&quot;,&quot;href&quot;:&quot;http:\/\/ow.ly\/GFNd4&quot;},{&quot;text&quot;:&quot;Are you a Trekkie? Watch Chase Masterson talk about Star Trek&quot;,&quot;href&quot;:&quot;http:\/\/ow.ly\/GFNd4&quot;},{&quot;text&quot;:&quot;Are you a Trekkie? Watch Chase Masterson talk about Star Trek&quot;,&quot;href&quot;:&quot;http:\/\/ow.ly\/GFNd4&quot;}]"
+></div>
+	<a class="wikiabar-button" href="http://www.wikia.com/Video_Games" data-index="0">
+		<img src="http://slot1.images.wikia.nocookie.net/__cb1420498505/common/extensions/wikia/WikiaBar/images/wikiabarIcon.png" class="icon cup" />
+		<span>Video Games</span>
+	</a>
+	<a class="wikiabar-button" href="http://www.wikia.com/Entertainment" data-index="1">
+		<img src="http://slot1.images.wikia.nocookie.net/__cb1420498505/common/extensions/wikia/WikiaBar/images/wikiabarIcon.png" class="icon cup" />
+		<span>Entertainment</span>
+	</a>
+	<a class="wikiabar-button" href="http://www.wikia.com/Lifestyle" data-index="2">
+		<img src="http://slot1.images.wikia.nocookie.net/__cb1420498505/common/extensions/wikia/WikiaBar/images/wikiabarIcon.png" class="icon cup" />
+		<span>Lifestyle</span>
+	</a>
+		</div>
+			</div>
+	<div class="WikiaBarCollapseWrapper">
+		<a href="#" class="wikia-bar-collapse" data-tooltip="Collapse"></a>
+	</div>
+</div>
+
+	<!-- BEGIN SLOTNAME: GPT_FLUSH -->
+<div id="GPT_FLUSH" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["GPT_FLUSH"]);
+</script>
+</div>
+<!-- END SLOTNAME: GPT_FLUSH -->
+<!-- BEGIN SLOTNAME: INVISIBLE_1 -->
+<div id="INVISIBLE_1" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["INVISIBLE_1"]);
+</script>
+</div>
+<!-- END SLOTNAME: INVISIBLE_1 -->
+<!-- BEGIN SLOTNAME: INVISIBLE_2 -->
+<div id="INVISIBLE_2" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["INVISIBLE_2"]);
+</script>
+</div>
+<!-- END SLOTNAME: INVISIBLE_2 -->
+<!-- BEGIN SLOTNAME: SEVENONEMEDIA_FLUSH -->
+<div id="SEVENONEMEDIA_FLUSH" class="wikia-ad noprint default-height">
+	<script>
+	window.adslots2.push(["SEVENONEMEDIA_FLUSH"]);
+</script>
+</div>
+<!-- END SLOTNAME: SEVENONEMEDIA_FLUSH -->
+</div>
+	<!--[if lt IE 8]>
+		<script src="http://slot1.images.wikia.nocookie.net/__cb1420498505/common/resources/wikia/libraries/json2/json2.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+		<script src="http://slot1.images.wikia.nocookie.net/__cb1420498505/common/resources/wikia/libraries/html5/html5.min.js"></script>
+	<![endif]-->
+
+	<!-- Combined JS files and head scripts -->
+	
+<!-- Liftium options -->
+<script>LiftiumOptions = {"pubid":999,"baseUrl":"\/__varnish_liftium\/","kv_wgDBname":"plagueinc","kv_article_id":2059,"kv_wpage":"Symptoms","kv_Hub":"Gaming","kv_skin":"oasis","kv_user_lang":"en","kv_cont_lang":"en","kv_isMainPage":false,"kv_page_type":"article","geoUrl":"http:\/\/geoiplookup.wikia.com\/","kv_domain":"plagueinc.wikia.com","hasMoreCalls":true,"isCalledAfterOnload":true,"maxLoadDelay":6000};
+</script>
+<script src="http://plagueinc.wikia.com/__load/-/cb%3D1420498505%26debug%3Dfalse%26lang%3Den%26only%3Dscripts%26skin%3Doasis%26ve%3D1/startup"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Symptoms","wgTitle":"Symptoms","wgCurRevisionId":16473,"wgArticleId":2059,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Symptoms"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Symptoms","wgRestrictionEdit":[],"wgRestrictionMove":[],"wgTimeAgoi18n":{"year":"a year ago","years":"%d years ago","month":"a month ago","months":"%d months ago","day":"a day ago","days":"%d days ago","hour":"an hour ago","hours":"%d hours ago","minute":"a minute ago","minutes":"%d minutes ago","seconds":"a minute ago","year-from-now":"\x26lt;timeago-year-from-now\x26gt;","years-from-now":"\x26lt;timeago-year-from-now\x26gt;","month-from-now":"a month from now","months-from-now":"%d months from now","day-from-now":"a day from now","days-from-now":"%d days from now","hour-from-now":"an hour from now","hours-from-now":"%d hours from now","minute-from-now":"a minute from now","minutes-from-now":"%d minutes from now","second-from-now":"a minute from now","seconds-from-now":"a minute from now"},"sassParams":{"background-dynamic":"true","background-image":"http://img3.wikia.nocookie.net/__cb20140428022515/plagueinc/images/5/50/Wiki-background","background-image-height":"1080","background-image-width":"1920","color-body":"#000000","color-body-middle":"#303641","color-buttons":"#891100","color-header":"#6d0d00","color-links":"orange","color-page":"#000000","page-opacity":"92","widthType":2},"wgAssetsManagerQuery":"/__am/%4$d/%1$s/%3$s/%2$s","wgEnableOutboundScreenExt":true,"wgCatId":"2","wgBlankImgUrl":"data:image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D","wgMainpage":"Plague Inc. Wiki","wgIsContentNamespace":true,"wgExtensionsPath":"http://slot1.images.wikia.nocookie.net/__cb1420498505/common/extensions","wgResourceBasePath":"http://slot1.images.wikia.nocookie.net/__cb1420498505/common","wgSitename":"Plague Inc. Wiki","wgMWrevId":false,"wgRevisionId":16473,"wgCookieDomain":".wikia.com","wgCookiePath":"/","wgEnableWikiaPhotoGalleryExt":true,"wgOasisGrid":true,"wgEnableMediaGalleryExt":false,"wgEnableLightboxExt":true,"wgShowAdModalInterstitialTimes":3,"wgEnableWebPThumbnails":true,"fbAppId":"112328095453510","fbScript":null,"fbLogo":false,"fbLogoutURL":"/wiki/Special:UserLogout?returnto=Symptoms","fbReturnToTitle":"Symptoms","fbScriptLangCode":"en_US","wgEnableFacebookClientExt":true,"wgEnableWikiaFollowedPages":true,"wgFollowedPagesPagerLimit":15,"wgFollowedPagesPagerLimitAjax":600,"wgWikiaChatUsers":"","wgWikiaChatWindowFeatures":"width=600,height=600,menubar=no,status=no,location=no,toolbar=no,scrollbars=no,resizable=yes","wgEnableWikiaBarExt":true,"wgEnableWikiaBarAds":true,"wgWikiaBarMainLanguages":["en","de","es","fr"],"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"http://slot1.images.wikia.nocookie.net/__cb1420498505/common/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048,"namespacesWithSubpages":{"1":true,"2":true,"3":true,"5":true,"7":true,"8":true,"9":true,"11":true,"13":true,"15":true,"0":true,"4":true,"6":true,"10":true,"12":true,"14":true,"110":true,"111":true,"1200":true,"500":true,"501":true,"502":true,"503":true,"828":true,"829":true}},"wgMaxUploadSize":10485760,"wgEnableVisualEditorUI":false,"wgEnableWikiaInteractiveMaps":false,"VignettePathPrefix":null,"wgQualarooUrl":"//s3.amazonaws.com/ki.js/52510/bgJ.js","wgVisualEditorPreferred":true,"wgBuckyConfig":{"host":"//speed.wikia.net/__rum","sample":0.1,"aggregationInterval":1000,"protocol":2},"wgOasisResponsive":true,"verticalName":"Games","WikiaEnableNewCreatepage":true,"ContentNamespacesText":[""],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgCategorySelect":{"defaultNamespace":"Category","defaultNamespaces":"Category","defaultSeparator":":","defaultSortKey":"Symptoms"},"wgArticleCommentsLoadOnDemand":true,"wgEnableMiniEditorExt":true,"wgMiniEditorLoadOnDemand":true,"wgMiniEditorAssets":["/extensions/wikia/MiniEditor/js/Wall/Wall.Animations.js"]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":1,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":1,"justify":0,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"oasis","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":1,"watchcreations":1,"watchdefault":1,"watchdeletion":1,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"htmlemails":1,"watchlistdigest":1,"enablerichtext":1,"editor":0,"enotifwallthread":2,"wallshowsource":false,"walldelete":false,"visualeditor-enable":1,"visualeditor-betatempdisable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-language":0,"visualeditor-hidebetawelcome":0,"useeditwarning":true,"founderemails-joins-590863":0,"founderemails-edits-590863":0,"founderemails-views-digest-590863":0,"founderemails-complete-digest-590863":0,"adoptionmails-590863":1,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":true,"searchNs15":false,"searchNs110":
+false,"searchNs111":false,"searchNs500":false,"searchNs501":false,"searchNs502":false,"searchNs503":false,"searchNs828":false,"searchNs829":false,"searchNs1200":false,"searchNs1201":false,"searchNs1202":false,"searchNs2000":false,"searchNs2001":false,"searchNs2002":false,"userlandingpage":1});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: plagueinc:resourceloader:filter:minify-js:7:c97e658a6ede660e04c04e83fedda1c9 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","amd.shared","ext.visualEditor.wikiaViewPageTarget.init","mediawiki.user","mediawiki.page.ready","ext.wikiaInYourLang"]);
+}</script><script src="http://slot1.images.wikia.nocookie.net/__am/1420498505/groups/-/oasis_shared_core_js,adengine2_js,adengine2_late_js,adengine2_spotlights_js,oasis_shared_js,oasis_anon_with_new_global_nav_js,liftium_ads_js,liftium_ads_extra_js,adengine2_top_in_content_boxad_js,adengine2_interactive_maps_js,toc_js,qualaroo_js,global_footer_js,relatedpages_js"></script>
+<script src="/wikia.php?controller=JSMessages&amp;method=getMessages&amp;format=html&amp;packages=ConfirmModal%2CEditPageLayout%2CImagePlaceholder%2COasis-generic&amp;uselang=en&amp;cb=1420498505.0.75280"></script>
+<script src="http://slot1.images1.wikia.nocookie.net/__am/1420498505/group/-/monetization_module_js"></script>
+<script src="http://slot1.images2.wikia.nocookie.net/__am/1420498505/group/-/global_navigation_js"></script>
+
+<script type="text/javascript">/*<![CDATA[*/ Wikia.LazyQueue.makeQueue(wgAfterContentAndJS, function(fn) {fn();}); wgAfterContentAndJS.start(); /*]]>*/</script>
+<script type="text/javascript">/*<![CDATA[*/ if (typeof AdEngine_trackPageInteractive === 'function') {wgAfterContentAndJS.push(AdEngine_trackPageInteractive);} /*]]>*/</script>
+<script src="http://plagueinc.wikia.com/__load/-/cb%3D1420498505%26debug%3Dfalse%26lang%3Den%26only%3Dscripts%26skin%3Doasis/ext.siteWideMessages.anon"></script>
+
+<script src="http://plagueinc.wikia.com/__load/-/cb%3D1420498505%26debug%3Dfalse%26lang%3Den%26only%3Dscripts%26skin%3Doasis/site"></script>
+<script type='text/javascript'>
+var agllGroup = "Gaming";
+!function(){
+var a=document.createElement("script");a.type="text/javascript";a.async=!0;var b=["http://a98dc034c7781a941eba-bac02262202668bbe918ea9fb5289cd2.r58.cf2.rackcdn.com","https://52e473ee9859b886964f-bac02262202668bbe918ea9fb5289cd2.ssl.cf2.rackcdn.com"];a.src=("https:"==document.location.protocol?b[1]:b[0])+"/c59hk50tip94.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(a,c)
+}();</script><script>var wgSassLoadedScss = ["skins\/oasis\/css\/oasis.scss","extensions\/wikia\/Forum\/css\/ForumTag.scss","extensions\/wikia\/MonetizationModule\/styles\/MonetizationModule.scss","extensions\/wikia\/GlobalNavigation\/styles\/GlobalNavigation.scss","extensions\/wikia\/GlobalNavigation\/styles\/GlobalNavigationSearch.scss","extensions\/wikia\/GlobalNavigation\/styles\/GlobalNavigationAccountNavigation.scss","extensions\/wikia\/GlobalNavigation\/styles\/GlobalNavigationHubsMenu.scss","extensions\/wikia\/UserLogin\/css\/UserLoginDropdown.globalNavigation.scss","extensions\/wikia\/WallNotifications\/styles\/WallNotifications.globalNavigation.scss","extensions\/wikia\/GlobalNavigation\/styles\/GlobalNavigationOasis.scss","extensions\/wikia\/GlobalNavigation\/styles\/GlobalNavigationSearchOasis.scss","extensions\/wikia\/Qualaroo\/css\/Qualaroo.scss"];</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","licenseKey":"60e97494a4","applicationID":"2068553","transactionName":"MVVbZkJVCxVSUhcIXggfekdDQAoLHEECBlRJXVhbXhsTD1ZGTA5QFVlKHV5bOhZSQxAEQ0lRT1dCVQID","queueTime":0,"applicationTime":294,"ttGuid":"","agentToken":"","atts":"HRJMEApPGEoRUEFbShtN","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script></body>
+
+
+
+</html>
+HEECBlRJXVhbXhsTD1ZGTA5QFVlKHV5bOhZSQxAEQ0lRT1dCVQID","queueTime":0,"applicationTime":294,"ttGuid":"","agentToken":"","atts":"HRJMEApPGEoRUEFbShtN","erro

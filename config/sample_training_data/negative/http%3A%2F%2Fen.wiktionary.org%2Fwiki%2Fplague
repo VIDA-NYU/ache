@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>plague - Wiktionary</title>
+<meta name="generator" content="MediaWiki 1.25wmf13" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/w/index.php?title=plague&amp;action=edit" />
+<link rel="edit" title="Edit" href="/w/index.php?title=plague&amp;action=edit" />
+<link rel="apple-touch-icon" href="//bits.wikimedia.org/apple-touch/wiktionary/en.png" />
+<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wiktionary/en.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wiktionary (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wiktionary.org/w/api.php?action=rsd" />
+<link rel="alternate" hreflang="x-default" href="/wiki/plague" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wiktionary Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="http://en.wiktionary.org/wiki/plague" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wiktionary.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.BlockInfo%2CCodeLinks%2CDocTabs%2CJavascriptHeadings%2CLegacyScripts%2CRevdelInfo%7Cext.uls.nojs%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cmw.PopUpMediaTransform%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wiktionary.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiktionary:resourceloader:filter:minify-css:7:3dcc16a20ad1c2eae2b6539515116338 */</style>
+<script src="//bits.wikimedia.org/en.wiktionary.org/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"plague","wgTitle":"plague","wgCurRevisionId":31763882,"wgRevisionId":31763882,"wgArticleId":69574,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["English terms derived from Middle English","English terms derived from Old French","English terms derived from Late Latin","term cleanup/Latin extended","English terms with audio links","English lemmas","English nouns","English countable nouns","en:Pathology","Terms with redundant transliterations","Terms with redundant transliterations/hy","Translations to be checked (Dutch)","Dutch terms needing attention","Translations to be checked (French)","French terms needing attention","Terms with redundant transliterations/el","Terms with manual transliterations different from the automated ones","Terms with manual transliterations different from the automated ones/hy","Check translations","Translations to be checked (Afrikaans)","Translations to be checked (Albanian)","Translations to be checked (Arabic)","Translations to be checked (Azeri)","Translations to be checked (Basque)","Translations to be checked (Serbo-Croatian)","Translations to be checked (Bulgarian)","Translations to be checked (Catalan)","Translations to be checked (Mandarin)","Translations to be checked (Cornish)","Translations to be checked (Esperanto)","Translations to be checked (West Frisian)","Translations to be checked (Galician)","Translations to be checked (German)","Translations to be checked (Hebrew)","Translations to be checked (Hindi)","Translations to be checked (Indonesian)","Translations to be checked (Italian)","Translations to be checked (Korean)","Translations to be checked (Kurdish)","Translations to be checked (Latvian)","Translations to be checked (Norwegian)","Translations to be checked (Persian)","Translations to be checked (Romani)","Translations to be checked (Slovak)","Translations to be checked (Spanish)","Translations to be checked (Swahili)","Translations to be checked (Swedish)","Translations to be checked (Tagalog)","Translations to be checked (Thai)","Translations to be checked (Ukrainian)","Translations to be checked (Vietnamese)","Translations to be checked (Welsh)","English verbs","English transitive verbs","en:Death","Spanish verb forms","Spanish non-lemma forms","Spanish forms of verbs ending in -ar"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"plague","wgRelevantArticleId":69574,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPoweredByHHVM":true,"wgULSAcceptLanguageList":["en-us","en","es"],"wgULSCurrentAutonym":"English","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wiktionary"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});},{},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});},{},{},{});
+/* cache key: enwiktionary:resourceloader:filter:minify-js:7:94007ea073e20ad4a3cdce36b2f2e369 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mw.TMHGalleryHook.js","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","mmv.head","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.25wmf13/skins/Vector/csshover.min.htc")}</style><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-plague skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --><script>document.write("\u003Cdiv id=\"localNotice\" lang=\"en\" dir=\"ltr\"\u003E\u003Cp\u003E\u003Cspan\u003E\u003C/span\u003E\n\u003C/p\u003E\u003C/div\u003E");</script></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">plague</span></h1>
+						<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Definition from Wiktionary, the free dictionary</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#English"><span class="tocnumber">1</span> <span class="toctext">English</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Etymology"><span class="tocnumber">1.1</span> <span class="toctext">Etymology</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Pronunciation"><span class="tocnumber">1.2</span> <span class="toctext">Pronunciation</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Noun"><span class="tocnumber">1.3</span> <span class="toctext">Noun</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Synonyms"><span class="tocnumber">1.3.1</span> <span class="toctext">Synonyms</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Derived_terms"><span class="tocnumber">1.3.2</span> <span class="toctext">Derived terms</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Translations"><span class="tocnumber">1.3.3</span> <span class="toctext">Translations</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#Verb"><span class="tocnumber">1.4</span> <span class="toctext">Verb</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Derived_terms_2"><span class="tocnumber">1.4.1</span> <span class="toctext">Derived terms</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Translations_2"><span class="tocnumber">1.4.2</span> <span class="toctext">Translations</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Spanish"><span class="tocnumber">2</span> <span class="toctext">Spanish</span></a>
+<ul>
+<li class="toclevel-2 tocsection-12"><a href="#Verb_2"><span class="tocnumber">2.1</span> <span class="toctext">Verb</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="English">English</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=1" title="Edit section: English">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="sister-wikipedia sister-project noprint floatright" style="border: 1px solid #aaa; font-size: 90%; background: #f9f9f9; width: 250px; padding: 4px; text-align: left;">
+<div style="float: left;">
+<div class="floatnone"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Wikipedia-logo.png/44px-Wikipedia-logo.png" width="44" height="44" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/63/Wikipedia-logo.png/66px-Wikipedia-logo.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/63/Wikipedia-logo.png/88px-Wikipedia-logo.png 2x" data-file-width="200" data-file-height="200" /></div>
+</div>
+<div style="margin-left: 60px;"><a href="/wiki/Wikipedia" title="Wikipedia">Wikipedia</a> has articles on:
+<div style="margin-left: 10px;"><b class="Latn" lang="en"><a href="//en.wikipedia.org/wiki/Plague" class="extiw" title="w:Plague">plague</a></b></div>
+</div>
+</div>
+<p><span class="interProject"><a href="//en.wikipedia.org/wiki/Plague" class="extiw" title="w:Plague">Wikipedia</a></span></p>
+<h3><span class="mw-headline" id="Etymology">Etymology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=2" title="Edit section: Etymology">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>From <span class="etyl"><a href="//en.wikipedia.org/wiki/Middle_English_language" class="extiw" title="w:Middle English language">Middle English</a></span> <i class="Latn mention" lang="enm"><a href="/wiki/plage#Middle_English" title="plage">plage</a></i>, from <span class="etyl"><a href="//en.wikipedia.org/wiki/Old_French_language" class="extiw" title="w:Old French language">Old French</a></span> <i class="Latn mention" lang="fro"><a href="/wiki/plage#Old_French" title="plage">plage</a></i>, from <span class="etyl"><a href="//en.wikipedia.org/wiki/Late_Latin" class="extiw" title="w:Late Latin">Late Latin</a></span> <i class="Latn mention" lang="la"><a href="/wiki/plaga#Latin" title="plaga">plāga</a></i> (<span class="mention-gloss-double-quote">“</span><span class="mention-gloss">blow, wound</span><span class="mention-gloss-double-quote">”</span>), from <i class="None mention" lang="und"><a href="/wiki/plango" title="plango">plangō</a></i> (<span class="mention-gloss-double-quote">“</span><span class="mention-gloss">to strike</span><span class="mention-gloss-double-quote">”</span>). Cognate with <span class="etyl"><a href="//en.wikipedia.org/wiki/Middle_Dutch_language" class="extiw" title="w:Middle Dutch language">Middle Dutch</a></span> <i class="Latn mention" lang="dum"><a href="/wiki/plaghe#Middle_Dutch" title="plaghe">plāghe</a></i> (&gt; Dutch <i class="Latn mention" lang="nl"><a href="/wiki/plaag#Dutch" title="plaag">plaag</a></i>), <i class="Latn mention" lang="dum"><a href="/w/index.php?title=plaghen&amp;action=edit&amp;redlink=1" class="new" title="plaghen (page does not exist)">plāghen</a></i> (&gt; Dutch <i class="Latn mention" lang="nl"><a href="/wiki/plagen#Dutch" title="plagen">plagen</a></i>), <span class="etyl"><a href="//en.wikipedia.org/wiki/Middle_Low_German_language" class="extiw" title="w:Middle Low German language">Middle Low German</a></span> <i class="Latn mention" lang="gml"><a href="/wiki/plage#Middle_Low_German" title="plage">plāge</a></i>, <i class="Latn mention" lang="gml"><a href="/w/index.php?title=pflage&amp;action=edit&amp;redlink=1" class="new" title="pflage (page does not exist)">pflāge</a="Latn mention" lang="gml"><a href="/wiki/plage#Middle_Low_German" title="plage">plāge</a></i>, <i class="Latn mention" lang="gml"><a hre></i>, <i class="Latn mention" lang="gml"><a href="/w/index.php?title=vlage&amp;action=edit&amp;redlink=1" class="new" title="vlage (page does not exist)">vlāge</a></i>, <span class="etyl"><a href="//en.wikipedia.org/wiki/Middle_High_German_language" class="extiw" title="w:Middle High German language">Middle High German</a></span> <i class="Latn mention" lang="gmh"><a href="/wiki/plage#Middle_High_German" title="plage">plāge</a></i> (&gt; German <i class="Latn mention" lang="de"><a href="/wiki/Plage#German" title="Plage">Plage</a></i>), <i class="Latn mention" lang="gmh"><a href="/wiki/plagen#Middle_High_German" title="plagen">plāgen</a></i> (&gt; German <i class="Latn mention" lang="de"><a href="/wiki/plagen#German" title="plagen">plagen</a></i>), Swedish <i class="Latn mention" lang="sv"><a href="/wiki/pl%C3%A5ga#Swedish" title="plåga">plåga</a></i>, French <i class="Latn mention" lang="fr"><a href="/wiki/plaie#French" title="plaie">plaie</a></i>.</p>
+<h3><span class="mw-headline" id="Pronunciation">Pronunciation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=3" title="Edit section: Pronunciation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><a href="/wiki/Appendix:English_pronunciation" title="Appendix:English pronunciation">enPR</a>: <span class="AHD enPR">plāg</span>, <a href="/wiki/Wiktionary:International_Phonetic_Alphabet" title="Wiktionary:International Phonetic Alphabet">IPA</a><sup>(<a href="/wiki/Appendix:English_pronunciation" title="Appendix:English pronunciation">key</a>)</sup>: <span class="IPA" lang="">/pleɪɡ/</span></li>
+<li>
+<table class="audiotable" style="vertical-align: top; display:inline-block; list-style:none;line-height: 1em;">
+<tr>
+<td class="unicode audiolink">Audio (US)</td>
+<td class="audiofile">
+<div class="mediaContainer" style="position:relative;display:block;width:175px"><audio id="mwe_player_3" style="width:175px" poster="//bits.wikimedia.org/static-1.25wmf12/resources/assets/file-type-icons/fileicon-ogg.png" controls="" preload="none" class="kskin" data-durationhint="1.2306575963719" data-startoffset="0" data-mwtitle="en-us-plague.ogg" data-mwprovider="wikimediacommons"><source src="//upload.wikimedia.org/wikipedia/commons/a/a5/En-us-plague.ogg" type="audio/ogg; codecs=&quot;vorbis&quot;" data-title="Original Ogg file (87 kbps)" data-shorttitle="Ogg source" data-width="0" data-height="0" data-bandwidth="87381"></source>Sorry, your browser either has JavaScript disabled or does not have any supported player.<br />
+You can <a href="//upload.wikimedia.org/wikipedia/commons/a/a5/En-us-plague.ogg">download the clip</a> or <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler/Client_download">download a player</a> to play the clip in your browser.</audio></div>
+</td>
+<td class="audiometa" style="font-size: 80%;">(<a href="/wiki/File:en-us-plague.ogg" title="File:en-us-plague.ogg">file</a>)</td>
+</tr>
+</table>
+</li>
+<li>Rhymes: <a href="/wiki/Rhymes:English/e%C9%AA%C9%A1" title="Rhymes:English/eɪɡ"><span class="IPA" lang="">-eɪɡ</span></a></li>
+</ul>
+<h3><span class="mw-headline" id="Noun">Noun</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=4" title="Edit section: Noun">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><strong class="Latn headword" lang="en">plague</strong> (<i>plural</i> <span class="form-of lang-en plural-form-of"><b class="Latn" lang="en"><a href="/wiki/plagues#English" title="plagues">plagues</a></b></span>)</p>
+<ol>
+<li><span class="ib-brac">(</span><span class="ib-content">often used with <i>the</i>, sometimes capitalized: <i>the <b>Plague</b></i></span><span class="ib-brac">)</span> The <a href="/wiki/bubonic_plague" title="bubonic plague">bubonic plague</a>, the pestilent <a href="/wiki/disease" title="disease">disease</a> caused by the virulent <a href="/wiki/bacterium" title="bacterium">bacterium</a> <i><a href="/wiki/Yersinia_pestis" title="Yersinia pestis">Yersinia pestis</a></i>.</li>
+<li><span class="ib-brac">(</span><span class="ib-content"><a href="/wiki/pathology" title="pathology">pathology</a></span><span class="ib-brac">)</span> An <a href="/wiki/epidemic" title="epidemic">epidemic</a> or <a href="/wiki/pandemic" title="pandemic">pandemic</a> caused by any <a href="/wiki/pestilence" title="pestilence">pestilence</a>, but specifically by the above disease.</li>
+<li>A <a href="/wiki/widespread" title="widespread">widespread</a> <a href="/wiki/affliction" title="affliction">affliction</a>, <a href="/wiki/calamity" title="calamity">calamity</a> or <a href="/wiki/destructive" title="destructive">destructive</a> <a href="/wiki/influx" title="influx">influx</a>, especially when seen as <a href="/wiki/divine" title="divine">divine</a> <a href="/wiki/retribution" title="retribution">retribution</a>.
+<dl>
+<dd><i>Ten Biblical <b>plagues</b> over Egypt, ranging from locusts to the death of the crown prince, finally forced Pharaoh to let Moses's people go.</i></dd>
+</dl>
+</li>
+<li>A grave <a href="/wiki/nuisance" title="nuisance">nuisance</a>, whatever greatly irritates
+<dl>
+<dd><i>Bart is an utter <b>plague</b>; his pranks never cease.</i></dd>
+</dl>
+</li>
+</ol>
+<h4><span class="mw-headline" id="Synonyms">Synonyms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=5" title="Edit section: Synonyms">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul>
+<li><a href="/wiki/pest" title="pest">pest</a></li>
+</ul>
+<h4><span class="mw-headline" id="Derived_terms">Derived terms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=6" title="Edit section: Derived terms">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul>
+<li><a href="/wiki/plaguesome" title="plaguesome">plaguesome</a></li>
+<li><a href="/wiki/plaguey" title="plaguey">plaguey</a></li>
+</ul>
+<h4><span class="mw-headline" id="Translations">Translations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=7" title="Edit section: Translations">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="NavFrame" id="Translations-specific_disease_.22the_Plague.22">
+<div class="NavHead" style="text-align:left;">specific disease "the Plague"</div>
+<div class="NavContent">
+<table class="translations" role="presentation" style="width:100%;" data-gloss="specific disease &quot;the Plague&quot;">
+<tr>
+<td style="background-color:#ffffe0; vertical-align:top; width:48%; text-align:left;">
+<ul>
+<li>Armenian: <span class="Armn" lang="hy"><a href="/wiki/%D5%AA%D5%A1%D5%B6%D5%BF%D5%A1%D5%AD%D5%BF#Armenian" title="ժանտախտ">ժանտախտ</a></span> (<span lang="" class="tr">žantaxt</span>)</li>
+<li>Chinese:
+<dl>
+<dd>Mandarin: <span class="Hani" lang="cmn"><a href="/w/index.php?title=%E9%BC%A0%E7%96%AB&amp;action=edit&amp;redlink=1" class="new" title="鼠疫 (page does not exist)">鼠疫</a></span><span class="tpos">&#160;<a href="//zh.wiktionary.org/wiki/%E9%BC%A0%E7%96%AB" class="extiw" title="zh:鼠疫">(zh)</a></span> (<span lang="" class="tr">shǔyì</span>)</dd>
+</dl>
+</li>
+<li>Czech: <span class="Latn" lang="cs"><a href="/wiki/mor#Czech" title="mor">mor</a></span><span class="tpos">&#160;<a href="//cs.wiktionary.org/wiki/mor" class="extiw" title="cs:mor">(cs)</a></span>&#160;<span class="gender"><abbr title="masculine gender">m</abbr></span></li>
+<li>Danish: <span class="Latn" lang="da"><a href="/wiki/pest#Danish" title="pest">pest</a></span>&#160;<span class="gender"><abbr title="common gender">c</abbr></span></li>
+<li>Dutch: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="nl"><a href="/wiki/pest#Dutch" title="pest">de pest</a></span></span>, <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="nl"><a href="/wiki/Pest#Dutch" title="Pest">de Pest</a></span></span> <span id="attentionseekingnl" class="attentionseeking" lang="nl" title="was &quot;de [[Pest]]&quot; - assumed inflected form or vocalised spelling; please verify if linking is acceptable. see [[User:Kephir/gadgets/xte#Translation_fixing]]"></span></li>
+<li>Estonian: <span class="Latn" lang="et"><a href="/w/index.php?title=katk&amp;action=edit&amp;redlink=1" class="new" title="katk (page does not exist)">katk</a></span></li>
+<li>Faroese: <span class="Latn" lang="fo"><a href="/w/index.php?title=svartidey%C3%B0i&amp;action=edit&amp;redlink=1" class="new" title="svartideyði (page does not exist)">svartideyði</a></span>&#160;<span class="gender"><abbr title="masculine gender">m</abbr></span></li>
+<li>Finnish: <span class="Latn" lang="fi"><a href="/wiki/rutto#Finnish" title="rutto">rutto</a></span><span class="tpos">&#160;<a href="//fi.wiktionary.org/wiki/rutto" class="extiw" title="fi:rutto">(fi)</a></span></li>
+<li>French: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="fr"><a href="/wiki/peste#French" title="peste">la peste</a></span><span class="tpos">&#160;<a href="//fr.wiktionary.org/wiki/peste" class="extiw" title="fr:peste">(fr)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></span> <span id="attentionseekingfr" class="attentionseeking" lang="fr" title="was &quot;la [[peste]]&quot; - assumed inflected form or vocalised spelling; please verify if linking is acceptable. see [[User:Kephir/gadgets/xte#Translation_fixing]]"></span></li>
+<li>Georgian: <span class="Geor" lang="ka"><a href="/w/index.php?title=%E1%83%A8%E1%83%90%E1%83%95%E1%83%98_%E1%83%AD%E1%83%98%E1%83%A0%E1%83%98&amp;action=edit&amp;redlink=1" class="new" title="შავი ჭირი (page does not exist)">შავი ჭირი</a></span> (<span lang="" class="tr">šavi čiri</span>), <span class="Geor" lang="ka"><a href="/wiki/%E1%83%9F%E1%83%90%E1%83%9B%E1%83%98#Georgian" title="ჟამი">ჟამი</a></span><span class="tpos">&#160;<a href="//ka.wiktionary.org/wiki/%E1%83%9F%E1%83%90%E1%83%9B%E1%83%98" class="extiw" title="ka:ჟამი">(ka)</a></span> (<span lang="" class="tr">žami</span>)</li>
+<li>German: <span class="Latn" lang="de"><a href="/wiki/Pest#German" title="Pest">Pest</a></span><span class="tpos">&#160;<a href="//de.wiktionary.org/wiki/Pest" class="extiw" title="de:Pest">(de)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Greek: <span class="Grek" lang="el"><a href="/w/index.php?title=%CF%80%CE%B1%CE%BD%CF%8E%CE%BB%CE%B7&amp;action=edit&amp;redlink=1" class="new" title="πανώλη (page does not exist)">πανώλη</a></span><span class="tpos">&#160;<a href="//el.wiktionary.org/wiki/%CF%80%CE%B1%CE%BD%CF%8E%CE%BB%CE%B7" class="extiw" title="el:πανώλη">(el)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">panóli</span>), <span class="Grek" lang="el"><a href="/wiki/%CF%80%CE%B1%CE%BD%CE%BF%CF%8D%CE%BA%CE%BB%CE%B1#Greek" title="πανούκλα">πανούκλα</a></span><span class="tpos">&#160;<a href="//el.wiktionary.org/wiki/%CF%80%CE%B1%CE%BD%CE%BF%CF%8D%CE%BA%CE%BB%CE%B1" class="extiw" title="el:πανούκλα">(el)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">panoúkla</span>)</li>
+<li>Hungarian: <span class="Latn" lang="hu"><a href="/wiki/pestis#Hungarian" title="pestis">pestis</a></span><span class="tpos">&#160;<a href="//hu.wiktionary.org/wiki/pestis" class="extiw" title="hu:pestis">(hu)</a></span></li>
+<li>Irish: <span class="Latn" lang="ga"><a href="/w/index.php?title=an_Phl%C3%A1_Dhubh&amp;action=edit&amp;redlink=1" class="new" title="an Phlá Dhubh (page does not exist)">an Phlá Dhubh</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span>, <span class="Latn" lang="ga"><a href="/w/index.php?title=an_Phl%C3%A1_Mh%C3%B3r&amp;action=edit&amp;redlink=1" class="new" title="an Phlá Mhór (page does not exist)">an Phlá Mhór</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span>, <span class="Latn" lang="ga"><a href="/w/index.php?title=Pl%C3%A1_bh%C3%BAb%C3%B3nach&amp;action=edit&amp;redlink=1" class="new" title="Plá bhúbónach (page does not exist)">Plá bhúbónach</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+</ul>
+</td>
+<td style="width:1%;"></td>
+<td style="background-color:#ffffe0; vertical-align:top; text-align:left; width:48%;">
+<ul>
+<li>Italian: <span class="Latn" lang="it"><a href="/wiki/peste#Italian" title="peste">peste</a></span><span class="tpos">&#160;<a href="//it.wiktionary.org/wiki/peste" class="extiw" title="it:peste">(it)</a></span></li>
+<li>Japanese: <span class="Jpan" lang="ja"><a href="/wiki/%E3%83%9A%E3%82%B9%E3%83%88#Japanese" title="ペスト">ペスト</a></span><span class="tpos">&#160;<a href="//ja.wiktionary.org/wiki/%E3%83%9A%E3%82%B9%E3%83%88" class="extiw" title="ja:ペスト">(ja)</a></span> (<span lang="" class="tr">ぺすと, pesuto</span>), <span class="ib-brac"><span class="qualifier-brac">(</span></span><span class="ib-content"><span class="qualifier-content">obsolete</span></span><span class="ib-brac"><span class="qualifier-brac">)</span></span> <span class="Jpan" lang="ja"><a href="/w/index.php?title=%E9%BB%92%E6%AD%BB%E7%97%85&amp;action=edit&amp;redlink=1" class="new" title="黒死病 (page does not exist)">黒死病</a></span><span class="tpos">&#160;<a href="//ja.wiktionary.org/wiki/%E9%BB%92%E6%AD%BB%E7%97%85" class="extiw" title="ja:黒死病">(ja)</a></span> (<span lang="" class="tr"><a href="/w/index.php?title=%E3%81%93%E3%81%8F%E3%81%97%E3%81%B3%E3%82%87%E3%81%86&amp;action=edit&amp;redlink=1" class="new" title="こくしびょう (page does not exist)">こくしびょう</a>, kokushibyō</span>)</li>
+<li>Latvian: <span class="Latn" lang="lv"><a href="/w/index.php?title=m%C4%93ris&amp;action=edit&amp;redlink=1" class="new" title="mēris (page does not exist)">mēris</a></span>&#160;<span class="gender"><abbr title="masculine gender">m</abbr></span></li>
+<li>Luxembourgish: <span class="Latn" lang="lb"><a href="/wiki/Pescht#Luxembourgish" title="Pescht">Pescht</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Macedonian: <span class="Cyrl" lang="mk"><a href="/wiki/%D1%87%D1%83%D0%BC%D0%B0#Macedonian" title="чума">чума</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">čúma</span>)</li>
+<li>Persian: <span class="fa-Arab" lang="fa"><a href="/w/index.php?title=%D8%B7%D8%A7%D8%B9%D9%88%D9%86&amp;action=edit&amp;redlink=1" class="new" title="طاعون (page does not exist)">طاعون</a></span><span class="tpos">&#160;<a href="//fa.wiktionary.org/wiki/%D8%B7%D8%A7%D8%B9%D9%88%D9%86" class="extiw" title="fa:طاعون">(fa)</a></span> (<span lang="" class="tr">taa'oon</span>)</li>
+<li>Polish: <span class="Latn" lang="pl"><a href="/wiki/d%C5%BCuma#Polish" title="dżuma">dżuma</a></span><span class="tpos">&#160;<a href="//pl.wiktionary.org/wiki/d%C5%BCuma" class="extiw" title="pl:dżuma">(pl)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Portuguese: <span class="Latn" lang="pt"><a href="/wiki/peste_negra#Portuguese" title="peste negra">peste negra</a></span><span class="tpos">&#160;<a href="//pt.wiktionary.org/wiki/peste_negra" class="extiw" title="pt:peste negra">(pt)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span>, <span class="Latn" lang="pt"><a href="/wiki/peste_bub%C3%B3nica#Portuguese" title="peste bubónica">peste bubónica</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> <span class="ib-brac"><span class="qualifier-brac">(</span></span><span class="ib-content"><span class="qualifier-content">Portugal</span></span><span class="ib-brac"><span class="qualifier-brac">)</span></span>, <span class="Latn" lang="pt"><a href="/wiki/peste_bub%C3%B4nica#Portuguese" title="peste bubônica">peste bubônica</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> <span class="ib-brac"><span class="qualifier-brac">(</span></span><span class="ib-content"><span class="qualifier-content">Brazil</span></span><span class="ib-brac"><span class="qualifier-brac">)</span></span>, <span class="Latn" lang="pt"><a href="/wiki/peste#Portuguese" title="peste">peste</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Romanian: <span class="Latn" lang="ro"><a href="/wiki/cium%C4%83#Romanian" title="ciumă">ciumă</a></span><span class="tpos">&#160;<a href="//ro.wiktionary.org/wiki/cium%C4%83" class="extiw" title="ro:ciumă">(ro)</a></span>, <span class="Latn" lang="ro"><a href="/w/index.php?title=pest%C4%83&amp;action=edit&amp;redlink=1" class="new" title="pestă (page does not exist)">pestă</a></span><span class="tpos">&#160;<a href="//ro.wiktionary.org/wiki/pest%C4%83" class="extiw" title="ro:pestă">(ro)</a></span></li>
+<li>Russian: <span class="Cyrl" lang="ru"><a href="/wiki/%D1%87%D1%83%D0%BC%D0%B0#Russian" title="чума">чума</a></span><span class="tpos">&#160;<a href="//ru.wiktionary.org/wiki/%D1%87%D1%83%D0%BC%D0%B0" class="extiw" title="ru:чума">(ru)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">čumá</span>)</li>
+<li>Scottish Gaelic: <span class="Latn" lang="gd"><a href="/wiki/pl%C3%A0igh#Scottish_Gaelic" title="plàigh">plàigh</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Slovene: <span class="Latn" lang="sl"><a href="/wiki/kuga#Slovene" title="kuga">kuga</a></span><span class="tpos">&#160;<a href="//sl.wiktionary.org/wiki/kuga" class="extiw" title="sl:kuga">(sl)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Spanish: <span class="Latn" lang="es"><a href="/wiki/plaga#Spanish" title="plaga">plaga</a></span><span class="tpos">&#160;<a href="//es.wiktionary.org/wiki/plaga" class="extiw" title="es:plaga">(es)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Swedish: <span class="Latn" lang="sv"><a href="/wiki/pest#Swedish" title="pest">pest</a></span><span class="tpos">&#160;<a href="//sv.wiktionary.org/wiki/pest" class="extiw" title="sv:pest">(sv)</a></span>&#160;<span class="gender"><abbr title="common gender">c</abbr></span></li>
+<li>Turkish: <span class="Latn" lang="tr"><a href="/w/index.php?title=veba&amp;action=edit&amp;redlink=1" class="new" title="veba (page does not exist)">veba</a></span><span class="tpos">&#160;<a href="//tr.wiktionary.org/wiki/veba" class="extiw" title="tr:veba">(tr)</a></span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="NavFrame" id="Translations-an_epidemic_or_pandemic_caused_by_any_pestilence">
+<div class="NavHead" style="text-align:left;">an epidemic or pandemic caused by any pestilence</div>
+<div class="NavContent">
+<table class="translations" role="presentation" style="width:100%;" data-gloss="an epidemic or pandemic caused by any pestilence">
+<tr>
+<td style="background-color:#ffffe0; vertical-align:top; width:48%; text-align:left;">
+<ul>
+<li>Armenian: <span class="Armn" lang="hy"><a href="/wiki/%D5%AA%D5%A1%D5%B6%D5%BF%D5%A1%D5%AD%D5%BF#Armenian" title="ժանտախտ">ժանտախտ</a></span> (<span lang="" class="tr">žantaxt</span>), <span class="Armn" lang="hy"><a href="/w/index.php?title=%D5%AA%D5%A1%D5%B6%D5%BF%D5%A1%D5%B4%D5%A1%D5%B0&amp;action=edit&amp;redlink=1" class="new" title="ժանտամահ (page does not exist)">ժանտամահ</a></span> (<span lang="" class="tr">žantamah</span>)</li>
+<li>Chinese:
+<dl>
+<dd>Mandarin: <span class="Hani" lang="cmn"><a href="/wiki/%E7%98%9F%E7%96%AB#Mandarin" title="瘟疫">瘟疫</a></span><span class="tpos">&#160;<a href="//zh.wiktionary.org/wiki/%E7%98%9F%E7%96%AB" class="extiw" title="zh>žantamah</span>)</li>
+<li>Chin:瘟疫">(zh)</a></span> (<span lang="" class="tr">wēnyì</span>)</dd>
+</dl>
+</li>
+<li>Dutch: <span class="Latn" lang="nl"><a href="/wiki/pest#Dutch" title="pest">pest</a></span><span class="tpos">&#160;<a href="//nl.wiktionary.org/wiki/pest" class="extiw" title="nl:pest">(nl)</a></span>, <span class="Latn" lang="nl"><a href="/wiki/plaag#Dutch" title="plaag">plaag</a></span><span class="tpos">&#160;<a href="//nl.wiktionary.org/wiki/plaag" class="extiw" title="nl:plaag">(nl)</a></span></li>
+<li>Estonian: <span class="Latn" lang="et"><a href="/w/index.php?title=r%C3%A4ndtaud&amp;action=edit&amp;redlink=1" class="new" title="rändtaud (page does not exist)">rändtaud</a></span></li>
+<li>Faroese: <span class="Latn" lang="fo"><a href="/wiki/pest#Faroese" title="pest">pest</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span>, <span class="Latn" lang="fo"><a href="/w/index.php?title=pestur&amp;action=edit&amp;redlink=1" class="new" title="pestur (page does not exist)">pestur</a></span>&#160;<span class="gender"><abbr title="masculine gender">m</abbr></span></li>
+<li>Finnish: <span class="Latn" lang="fi"><a href="/wiki/kulkutauti#Finnish" title="kulkutauti">kulkutauti</a></span><span class="tpos">&#160;<a href="//fi.wiktionary.org/wiki/kulkutauti" class="extiw" title="fi:kulkutauti">(fi)</a></span></li>
+<li>French: <span class="Latn" lang="fr"><a href="/wiki/peste#French" title="peste">peste</a></span><span class="tpos">&#160;<a href="//fr.wiktionary.org/wiki/peste" class="extiw" title="fr:peste">(fr)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Georgian: <span class="Geor" lang="ka"><a href="/wiki/%E1%83%AD%E1%83%98%E1%83%A0%E1%83%98#Georgian" title="ჭირი">ჭირი</a></span> (<span lang="" class="tr">čiri</span>)</li>
+<li>German: <span class="Latn" lang="de"><a href="/wiki/Plage#German" title="Plage">Plage</a></span><span class="tpos">&#160;<a href="//de.wiktionary.org/wiki/Plage" class="extiw" title="de:Plage">(de)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Greek: <span class="Grek" lang="el"><a href="/wiki/%CF%80%CE%B1%CE%BD%CE%B4%CE%B7%CE%BC%CE%AF%CE%B1#Greek" title="πανδημία">πανδημία</a></span><span class="tpos">&#160;<a href="//el.wiktionary.org/wiki/%CF%80%CE%B1%CE%BD%CE%B4%CE%B7%CE%BC%CE%AF%CE%B1" class="extiw" title="el:πανδημία">(el)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">pandimía</span>), <span class="Grek" lang="el"><a href="/wiki/%CE%BB%CE%BF%CE%B9%CE%BC%CF%8C%CF%82#Greek" title="λοιμός">λοιμός</a></span><span class="tpos">&#160;<a href="//el.wiktionary.org/wiki/%CE%BB%CE%BF%CE%B9%CE%BC%CF%8C%CF%82" class="extiw" title="el:λοιμός">(el)</a></span>&#160;<span class="gender"><abbr title="masculine gender">m</abbr></span> (<span lang="" class="tr">loimós</span>), <span class="Grek" lang="el"><a href="/wiki/%CE%B5%CF%80%CE%B9%CE%B4%CE%B7%CE%BC%CE%AF%CE%B1#Greek" title="επιδημία">επιδημία</a></span><span class="tpos">&#160;<a href="//el.wiktionary.org/wiki/%CE%B5%CF%80%CE%B9%CE%B4%CE%B7%CE%BC%CE%AF%CE%B1" class="extiw" title="el:επιδημία">(el)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">epidimía</span>)</li>
+<li>Hungarian: <span class="Latn" lang="hu"><a href="/wiki/j%C3%A1rv%C3%A1ny#Hungarian" title="járvány">járvány</a></span><span class="tpos">&#160;<a href="//hu.wiktionary.org/wiki/j%C3%A1rv%C3%A1ny" class="extiw" title="hu:járvány">(hu)</a></span></li>
+<li>Icelandic: <span class="Latn" lang="is"><a href="/wiki/pl%C3%A1ga#Icelandic" title="plága">plága</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+</ul>
+</td>
+<td style="width:1%;"></td>
+<td style="background-color:#ffffe0; vertical-align:top; text-align:left; width:48%;">
+<ul>
+<li>Irish: <span class="Latn" lang="ga"><a href="/w/index.php?title=pl%C3%A1&amp;action=edit&amp;redlink=1" class="new" title="plá (page does not exist)">plá</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Japanese: <span class="Jpan" lang="ja"><a href="/wiki/%E7%96%AB%E7%97%85#Japanese" title="疫病">疫病</a></span><span class="tpos">&#160;<a href="//ja.wiktionary.org/wiki/%E7%96%AB%E7%97%85" class="extiw" title="ja:疫病">(ja)</a></span> (<span lang="" class="tr"><a href="/wiki/%E3%81%88%E3%81%8D%E3%81%B3%E3%82%87%E3%81%86" title="えきびょう">えきびょう</a>, ekibyō</span>), <span class="Jpan" lang="ja"><a href="/wiki/%E4%BC%9D%E6%9F%93%E7%97%85#Japanese" title="伝染病">伝染病</a></span><span class="tpos">&#160;<a href="//ja.wiktionary.org/wiki/%E4%BC%9D%E6%9F%93%E7%97%85" class="extiw" title="ja:伝染病">(ja)</a></span> (<span lang="" class="tr"><a href="/w/index.php?title=%E3%81%A7%E3%82%93%E3%81%9B%E3%82%93%E3%81%B3%E3%82%87%E3%81%86&amp;action=edit&amp;redlink=1" class="new" title="でんせんびょう (page does not exist)">でんせんびょう</a>, densen-byō</span>), <span class="Jpan" lang="ja"><a href="/w/index.php?title=%E6%84%9F%E6%9F%93%E7%97%87&amp;action=edit&amp;redlink=1" class="new" title="感染症 (page does not exist)">感染症</a></span><span class="tpos">&#160;<a href="//ja.wiktionary.org/wiki/%E6%84%9F%E6%9F%93%E7%97%87" class="extiw" title="ja:感染症">(ja)</a></span> (<span lang="" class="tr"><a href="/w/index.php?title=%E3%81%8B%E3%82%93%E3%81%9B%E3%82%93%E3%81%97%E3%82%87%E3%81%86&amp;action=edit&amp;redlink=1" class="new" title="かんせんしょう (page does not exist)">かんせんしょう</a>, kansen-shō</span>)</li>
+<li>Jèrriais: <span class="Latn" lang="roa-jer"><a href="/wiki/mou%C3%B4thinne#J.C3.A8rriais" title="mouôthinne">mouôthinne</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Macedonian: <span class="Cyrl" lang="mk"><a href="/w/index.php?title=%D0%BF%D0%BE%D0%BC%D0%BE%D1%80&amp;action=edit&amp;redlink=1" class="new" title="помор (page does not exist)">помор</a></span>&#160;<span class="gender"><abbr title="masculine gender">m</abbr></span> (<span lang="" class="tr">pómor</span>), <span class="Cyrl" lang="mk"><a href="/wiki/%D0%B5%D0%BF%D0%B8%D0%B4%D0%B5%D0%BC%D0%B8%D1%98%D0%B0#Macedonian" title="епидемија">епидемија</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">epidémija</span>)</li>
+<li>Maori: <span class="Latn" lang="mi"><a href="/w/index.php?title=urut%C4%81&amp;action=edit&amp;redlink=1" class="new" title="urutā (page does not exist)">urutā</a></span>, <span class="Latn" lang="mi"><a href="/w/index.php?title=mate_urut%C4%81&amp;action=edit&amp;redlink=1" class="new" title="mate urutā (page does not exist)">mate urutā</a></span></li>
+<li>Portuguese: <span class="Latn" lang="pt"><a href="/wiki/praga#Portuguese" title="praga">praga</a></span><span class="tpos">&#160;<a href="//pt.wiktionary.org/wiki/praga" class="extiw" title="pt:praga">(pt)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span>, <span class="Latn" lang="pt"><a href="/wiki/peste#Portuguese" title="peste">peste</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Romanian: <span class="Latn" lang="ro"><a href="/wiki/cium%C4%83#Romanian" title="ciumă">ciumă</a></span><span class="tpos">&#160;<a href="//ro.wiktionary.org/wiki/cium%C4%83" class="extiw" title="ro:ciumă">(ro)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span>, <span class="Latn" lang="ro"><a href="/w/index.php?title=pest%C4%83&amp;action=edit&amp;redlink=1" class="new" title="pestă (page does not exist)">pestă</a></span><span class="tpos">&#160;<a href="//ro.wiktionary.org/wiki/pest%C4%83" class="extiw" title="ro:pestă">(ro)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Russian: <span class="Cyrl" lang="ru"><a href="/wiki/%D1%8D%D0%BF%D0%B8%D0%B4%D0%B5%D0%BC%D0%B8%D1%8F#Russian" title="эпидемия">эпидемия</a></span><span class="tpos">&#160;<a href="//ru.wiktionary.org/wiki/%D1%8D%D0%BF%D0%B8%D0%B4%D0%B5%D0%BC%D0%B8%D1%8F" class="extiw" title="ru:эпидемия">(ru)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">epidémija</span>), <span class="Cyrl" lang="ru"><a href="/wiki/%D0%BC%D0%BE%D1%80#Russian" title="мор">мор</a></span><span class="tpos">&#160;<a href="//ru.wiktionary.org/wiki/%D0%BC%D0%BE%D1%80" class="extiw" title="ru:мор">(ru)</a></span>&#160;<span class="gender"><abbr title="masculine gender">m</abbr></span> (<span lang="" class="tr">mor</span>), <span class="Cyrl" lang="ru"><a href="/wiki/%D0%BF%D0%BE%D0%B2%D0%B5%D1%82%D1%80%D0%B8%D0%B5#Russian" title="поветрие">поветрие</a></span><span class="tpos">&#160;<a href="//ru.wiktionary.org/wiki/%D0%BF%D0%BE%D0%B2%D0%B5%D1%82%D1%80%D0%B8%D0%B5" class="extiw" title="ru:поветрие">(ru)</a></span>&#160;<span class="gender"><abbr title="neuter gender">n</abbr></span> (<span lang="" class="tr">povétrije</span>)</li>
+<li>Scottish Gaelic: <span class="Latn" lang="gd"><a href="/wiki/pl%C3%A0igh#Scottish_Gaelic" title="plàigh">plàigh</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Serbo-Croatian: <span class="Latn" lang="sh"><a href="/wiki/epidemija#Serbo-Croatian" title="epidemija">epidemija</a></span></li>
+<li>Spanish: <span class="Latn" lang="es"><a href="/wiki/plaga#Spanish" title="plaga">plaga</a></span><span class="tpos">&#160;<a href="//es.wiktionary.org/wiki/plaga" class="extiw" title="es:plaga">(es)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Tagalog: <span class="Latn" lang="tl"><a href="/wiki/salot#Tagalog" title="salot">salot</a></span><span class="tpos">&#160;<a href="//tl.wiktionary.org/wiki/salot" class="extiw" title="tl:salot">(tl)</a></span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="NavFrame" id="Translations-widespread_affliction.2C_calamity">
+<div class="NavHead" style="text-align:left;">widespread affliction, calamity</div>
+<div class="NavContent">
+<table class="translations" role="presentation" style="width:100%;" data-gloss="widespread affliction, calamity">
+<tr>
+<td style="background-color:#ffffe0; vertical-align:top; width:48%; text-align:left;">
+<ul>
+<li>Armenian: <span class="Armn" lang="hy"><a href="/wiki/%D5%A1%D5%B2%D5%A5%D5%BF#Armenian" title="աղետ">աղետ</a></span> (<span lang="" class="tr">ałet</span>), <span class="Armn" lang="hy"><a href="/w/index.php?title=%D5%A4%D5%AA%D5%BE%D5%A1%D5%AD%D5%BF%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6&amp;action=edit&amp;redlink=1" class="new" title="դժվախտություն (page does not exist)">դժվախտություն</a></span> (<span lang="" class="tr">džvaxtutʿyun</span>), <span class="Armn" lang="hy"><a href="/wiki/%D5%BA%D5%A1%D5%BF%D5%B8%D6%82%D5%B0%D5%A1%D5%BD#Armenian" title="պատուհաս">պատուհաս</a></span> (<span lang="" class="tr">patuhas</span>), <span class="Armn" lang="hy"><a href="/wiki/%D5%BA%D5%A1%D5%BF%D5%AB%D5%AA#Armenian" title="պատիժ">պատիժ</a></span><span class="tpos">&#160;<a href="//hy.wiktionary.org/wiki/%D5%BA%D5%A1%D5%BF%D5%AB%D5%AA" class="extiw" title="hy:պատիժ">(hy)</a></span> (<span lang="" class="tr">patiž</span>)</li>
+<li>Danish: <span class="Latn" lang="da"><a href="/wiki/plage#Danish" title="plage">plage</a></span><span class="tpos">&#160;<a href="//da.wiktionary.org/wiki/plage" class="extiw" title="da:plage">(da)</a></span>&#160;<span class="gender"><abbr title="common gender">c</abbr></span>, <span class="Latn" lang="da"><a href="/wiki/pestilens#Danish" title="pestilens">pestilens</a></span>&#160;<span class="gender"><abbr title="common gender">c</abbr></span></li>
+<li>Dutch: <span class="Latn" lang="nl"><a href="/wiki/pest#Dutch" title="pest">pest</a></span><span class="tpos">&#160;<a href="//nl.wiktionary.org/wiki/pest" class="extiw" title="nl:pest">(nl)</a></span>, <span class="Latn" lang="nl"><a href="/wiki/plaag#Dutch" title="plaag">plaag</a></span><span class="tpos">&#160;<a href="//nl.wiktionary.org/wiki/plaag" class="extiw" title="nl:plaag">(nl)</a></span></li>
+<li>Estonian: <span class="Latn" lang="et"><a href="/w/index.php?title=katk&amp;action=edit&amp;redlink=1" class="new" title="katk (page does not exist)">katk</a></span></li>
+<li>Faroese: <span class="Latn" lang="fo"><a href="/wiki/pl%C3%A1ga#Faroese" title="plága">plága</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Finnish: <span class="Latn" lang="fi"><a href="/wiki/vitsaus#Finnish" title="vitsaus">vitsaus</a></span><span class="tpos">&#160;<a href="//fi.wiktionary.org/wiki/vitsaus" class="extiw" title="fi:vitsaus">(fi)</a></span></li>
+<li>French: <span class="Latn" lang="fr"><a href="/wiki/fl%C3%A9au#French" title="fléau">fléau</a></span><span class="tpos">&#160;<a href="//fr.wiktionary.org/wiki/fl%C3%A9au" class="extiw" title="fr:fléau">(fr)</a></span>&#160;<span class="gender"><abbr title="masculine gender">m</abbr></span>, <span class="Latn" lang="fr"><a href="/wiki/plaie#French" title="plaie">plaie</a></span><span class="tpos">&#160;<a href="//fr.wiktionary.org/wiki/plaie" class="extiw" title="fr:plaie">(fr)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span>, <span class="Latn" lang="fr"><a href="/wiki/calamit%C3%A9#French" title="calamité">calamité</a></span><span class="tpos">&#160;<a href="//fr.wiktionary.org/wiki/calamit%C3%A9" class="extiw" title="fr:calamité">(fr)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>German: <span class="Latn" lang="de"><a href="/wiki/Plage#German" title="Plage">Plage</a></span><span class="tpos">&#160;<a href="//de.wiktionary.org/wiki/Plage" class="extiw" title="de:Plage">(de)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Greek: <span class="Grek" lang="el"><a href="/w/index.php?title=%CE%BC%CE%AC%CF%83%CF%84%CE%B9%CE%B3%CE%B1&amp;action=edit&amp;redlink=1" class="new" title="μάστιγα (page does not exist)">μάστιγα</a></span><span class="tpos">&#160;<a href="//el.wiktionary.org/wiki/%CE%BC%CE%AC%CF%83%CF%84%CE%B9%CE%B3%CE%B1" class="extiw" title="el:μάστιγα">(el)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">mástiga</span>), <span class="Grek" lang="el"><a href="/wiki/%CF%80%CE%BB%CE%B7%CE%B3%CE%AE#Greek" title="πληγή">πληγή</a></span><span class="tpos">&#160;<a href="//el.wiktionary.org/wiki/%CF%80%CE%BB%CE%B7%CE%B3%CE%AE" class="extiw" title="el:πληγή">(el)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">pligí</span>)</li>
+</ul>
+</td>
+<td style="width:1%;"></td>
+<td style="background-color:#ffffe0; vertical-align:top; text-align:left; width:48%;">
+<ul>
+<li>Hungarian: <span class="Latn" lang="hu"><a href="/wiki/csap%C3%A1s#Hungarian" title="csapás">csapás</a></span><span class="tpos">&#160;<a href="//hu.wiktionary.org/wiki/csap%C3%A1s" class="extiw" title="hu:csapás">(hu)</a></span></li>
+<li>Irish: <span class="Latn" lang="ga"><a href="/w/index.php?title=pl%C3%A1&amp;action=edit&amp;redlink=1" class="new" title="plá (page does not exist)">plá</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Japanese: <span class="Jpan" lang="ja"><a href="/wiki/%E4%BC%9D%E6%9F%93#Japanese" title="伝染">伝染</a></span><span class="tpos">&#160;<a href="//ja.wiktionary.org/wiki/%E4%BC%9D%E6%9F%93" class="extiw" title="ja:伝染">(ja)</a></span> (<span lang="" class="tr"><a href="/wiki/%E3%81%A7%E3%82%93%E3%81%9B%E3%82%93" title="でんせん">でんせん</a>, densen</span>), <span class="Jpan" lang="ja"><a href="/w/index.php?title=%E5%A4%A7%E9%87%8F%E7%99%BA%E7%94%9F&amp;action=edit&amp;redlink=1" class="new" title="大量発生 (page does not exist)">大量発生</a></span> (<span lang="" class="tr"><a href="/w/index.php?title=%E3%81%9F%E3%81%84%E3%82%8A%E3%82%87%E3%81%86%E3%81%AF%E3%81%A3%E3%81%9B%E3%81%84&amp;action=edit&amp;redlink=1" class="new" title="たいりょうはっせい (page does not exist)">たいりょうはっせい</a>, tairyō-hassē</span>)</li>
+<li>Macedonian: <span class="Cyrl" lang="mk"><a href="/wiki/%D0%B1%D0%B5%D0%B4%D0%B0#Macedonian" title="беда">беда</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">béda</span>), <span class="Cyrl" lang="mk"><a href="/wiki/%D0%BD%D0%B0%D0%BF%D0%B0%D1%81%D1%82#Macedonian" title="напаст">напаст</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">nápast</span>)</li>
+<li>Persian: <span class="fa-Arab" lang="fa"><a href="/wiki/%D8%A8%D9%84%D8%A7#Persian" title="بلا">بلا</a></span><span class="tpos">&#160;<a href="//fa.wiktionary.org/wiki/%D8%A8%D9%84%D8%A7" class="extiw" title="fa:بلا">(fa)</a></span> (<span lang="" class="tr">balaa</span>)</li>
+<li>Polish: <span class="Latn" lang="pl"><a href="/wiki/mangina#Polish" title="mangina">mangina</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Portuguese: <span class="Latn" lang="pt"><a href="/wiki/praga#Portuguese" title="praga">praga</a></span><span class="tpos">&#160;<a href="//pt.wiktionary.org/wiki/praga" class="extiw" title="pt:praga">(pt)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span>, <span class="Latn" lang="pt"><a href="/wiki/peste#Portuguese" title="peste">peste</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Russian: <span class="Cyrl" lang="ru"><a href="/wiki/%D0%B1%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%B8%D0%B5#Russian" title="бедствие">бедствие</a></span><span class="tpos">&#160;<a href="//ru.wiktionary.org/wiki/%D0%B1%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%B8%D0%B5" class="extiw" title="ru:бедствие">(ru)</a></span>&#160;<span class="gender"><abbr title="neuter gender">n</abbr></span> (<span lang="" class="tr">bédstvije</span>), <span class="Cyrl" lang="ru"><a href="/wiki/%D0%BD%D0%B0%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D0%B5#Russian" title="нашествие">нашествие</a></span><span class="tpos">&#160;<a href="//ru.wiktionary.org/wiki/%D0%BD%D0%B0%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D0%B5" class="extiw" title="ru:нашествие">(ru)</a></span> (<span lang="" class="tr">našéstvije</span>)</li>
+<li>Volapük: <span class="Latn" lang="vo"><a href="/w/index.php?title=tomod&amp;action=edit&amp;redlink=1" class="new" title="tomod (page does not exist)">tomod</a></span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="NavFrame" id="Translations-a_nuisance">
+<div class="NavHead" style="text-align:left;">a nuisance</div>
+<div class="NavContent">
+<table class="translations" role="presentation" style="width:100%;" data-gloss="a nuisance">
+<tr>
+<td style="background-color:#ffffe0; vertical-align:top; width:48%; text-align:left;">
+<ul>
+<li>Dutch: <span class="Latn" lang="nl"><a href="/wiki/pest#Dutch" title="pest">pest</a></span><span class="tpos">&#160;<a href="//nl.wiktionary.org/wiki/pest" class="extiw" title="nl:pest">(nl)</a></span>, <span class="Latn" lang="nl"><a href="/wiki/ellende#Dutch" title="ellende">ellende</a></span><span class="tpos">&#160;<a href="//nl.wiktionary.org/wiki/ellende" class="extiw" title="nl:ellende">(nl)</a></span>, <span class="Latn" lang="nl"><a href="/wiki/kwelling#Dutch" title="kwelling">kwelling</a></span><span class="tpos">&#160;<a href="//nl.wiktionary.org/wiki/kwelling" class="extiw" title="nl:kwelling">(nl)</a></span></li>
+<li>Faroese: <span class="Latn" lang="fo"><a href="/wiki/pl%C3%A1ga#Faroese" title="plága">plága</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>French: <span class="Latn" lang="fr"><a href="/wiki/plaie#French" title="plaie">plaie</a></span><span class="tpos">&#160;<a href="//fr.wiktionary.org/wiki/plaie" class="extiw" title="fr:plaie">(fr)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span>, <span class="Latn" lang="fr"><a href="/wiki/calamit%C3%A9#French" title="calamité">calamité</a></span><span class="tpos">&#160;<a href="//fr.wiktionary.org/wiki/calamit%C3%A9" class="extiw" title="fr:calamité">(fr)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Japanese: <span class="Jpan" lang="ja"><a href="/w/index.php?title=%E6%82%A9%E3%81%BF%E3%81%AE%E7%A8%AE&amp;action=edit&amp;redlink=1" class="new" title="悩みの種 (page does not exist)">悩みの種</a></span> (<span lang="" class="tr"><a href="/w/index.php?title=%E3%81%AA%E3%82%84%E3%81%BF%E3%81%AE%E3%81%9F%E3%81%AD&amp;action=edit&amp;redlink=1" class="new" title="なやみのたね (page does not exist)">なやみのたね</a>, nayami no tane</span>), <span class="Jpan" lang="ja"><a href="/wiki/%E5%8E%84%E4%BB%8B#Japanese" title="厄介">厄介</a></span><span class="tpos">&#160;<a href="//ja.wiktionary.org/wiki/%E5%8E%84%E4%BB%8B" class="extiw" title="ja:厄介">(ja)</a></span> (<span lang="" class="tr"><a href="/w/index.php?title=%E3%82%84%E3%81%A3%E3%81%8B%E3%81%84&amp;action=edit&amp;redlink=1" class="new" title="やっかい (page does not exist)">やっかい</a>, yakkai</span>)</li>
+</ul>
+</td>
+<td style="width:1%;"></td>
+<td style="background-color:#ffffe0; vertical-align:top; text-align:left; width:48%;">
+<ul>
+<li>Macedonian: <span class="Cyrl" lang="mk"><a href="/wiki/%D0%BD%D0%B0%D0%BF%D0%B0%D1%81%D1%82#Macedonian" title="напаст">напаст</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">nápast</span>)</li>
+<li>Portuguese: <span class="Latn" lang="pt"><a href="/wiki/inc%C3%B3modo#Portuguese" title="incómodo">incómodo</a></span><span class="tpos">&#160;<a href="//pt.wiktionary.org/wiki/inc%C3%B3modo" class="extiw" title="pt:incómodo">(pt)</a></span> <span class="ib-brac"><span class="qualifier-brac">(</span></span><span class="ib-content"><span class="qualifier-content">Portugal</span></span><span class="ib-brac"><span class="qualifier-brac">)</span></span>, <span class="Latn" lang="pt"><a href="/wiki/inc%C3%B4modo#Portuguese" title="incômodo">incômodo</a></span><span class="tpos">&#160;<a href="//pt.wiktionary.org/wiki/inc%C3%B4modo" class="extiw" title="pt:incômodo">(pt)</a></span>&#160;<span class="gender"><abbr title="masculine gender">m</abbr></span> <span class="ib-brac"><span class="qualifier-brac">(</span></span><span class="ib-content"><span class="qualifier-content">Brazil</span></span><span class="ib-brac"><span class="qualifier-brac">)</span></span>, <span class="Latn" lang="pt"><a href="/wiki/peste#Portuguese" title="peste">peste</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Scottish Gaelic: <span class="Latn" lang="gd"><a href="/wiki/pl%C3%A0igh#Scottish_Gaelic" title="plàigh">plàigh</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+<li>Spanish: <span class="Latn" lang="es"><a href="/wiki/plaga#Spanish" title="plaga">plaga</a></span><span class="tpos">&#160;<a href="//es.wiktionary.org/wiki/plaga" class="extiw" title="es:plaga">(es)</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="checktrans">
+<dl>
+<dd><i>The translations below need to be checked and inserted above into the appropriate translation tables, removing any numbers. Numbers do not necessarily match those in definitions. See instructions at <a href="/wiki/Help:How_to_check_translations#Translations_of_English_words" title="Help:How to check translations">Help:How to check translations</a>.</i></dd>
+</dl>
+</div>
+<div class="NavFrame">
+<div class="NavHead" style="text-align:left;">Translations to be checked</div>
+<div class="NavContent">
+<table class="translations" role="presentation" style="width:100%;" data-gloss="Translations to be checked">
+<tr>
+<td style="background-color:#ffffe0; vertical-align:top; width:48%; text-align:left;">
+<ul>
+<li>Afrikaans: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="af"><a href="/wiki/plaag#Afrikaans" title="plaag">plaag</a></span></span></li>
+<li>Albanian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="sq"><a href="/wiki/murtaj%C3%AB#Albanian" title="murtajë">murtajë</a></span></span></li>
+<li>Arabic: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Arab" lang="ar"><a href="/w/index.php?title=%D8%B7%D8%A7%D8%B9%D9%88%D9%86&amp;action=edit&amp;redlink=1" class="new" title="طاعون (page does not exist)">طاعون</a></span>&#160;<span class="gender"><abbr title="masculine gender">m</abbr></span></span></li>
+<li>Azeri: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="az"><a href="/w/index.php?title=q%C4%B1r%C4%9F%C4%B1n&amp;action=edit&amp;redlink=1" class="new" title="qırğın (page does not exist)">qırğın</a></span></span></li>
+<li>Basque: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="eu"><a href="/w/index.php?title=izurri&amp;action=edit&amp;redlink=1" class="new" title="izurri (page does not exist)">izurri</a></span></span></li>
+<li>Serbo-Croatian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="sh"><a href="/wiki/kuga#Serbo-Croatian" title="kuga">kuga</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></span></li>
+<li>Bulgarian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Cyrl" lang="bg"><a href="/w/index.php?title=%D1%82%D0%BE%D1%80%D0%BC%D0%BE%D0%B7%D0%B8&amp;action=edit&amp;redlink=1" class="new" title="тормози (page does not exist)">тормози</a></span> (<span lang="" class="tr">tormozi</span>)</span></li>
+<li>Catalan: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="ca"><a href="/wiki/plaga#Catalan" title="plaga">plaga</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></span></li>
+<li>Mandarin: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Hani" lang="cmn"><a href="/w/index.php?title=%E9%BC%A0%E7%96%AB&amp;action=edit&amp;redlink=1" class="new" title="鼠疫 (page does not exist)">鼠疫</a></span> (<span lang="" class="tr">shǔ yì</span>)</span></li>
+<li>Cornish: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="kw"><a href="/w/index.php?title=malbew&amp;action=edit&amp;redlink=1" class="new" title="malbew (page does not exist)">malbew</a></span></span></li>
+<li>Serbo-Croatian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="sh"><a href="/wiki/kuga#Serbo-Croatian" title="kuga">kuga</a></span></span></li>
+<li>Esperanto: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="eo"><a href="/wiki/pesto#Esperanto" title="pesto">pesto</a></span></span></li>
+<li>West Frisian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="fy"><a href="/wiki/pleach#West_Frisian" title="pleach">pleach</a></span></span></li>
+<li>Galician: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="gl"><a href="/wiki/praga#Galician" title="praga">praga</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></span></li>
+<li>German: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="de"><a href="/wiki/Pest#German" title="Pest">Pest</a></span></span>, <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="de"><a href="/wiki/Plage#German" title="Plage">Plage</a></span></span></li>
+<li>Hebrew: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Hebr" lang="he"><a href="/w/index.php?title=%D7%9E%D7%92%D7%A4%D7%94&amp;action=edit&amp;redlink=1" class="new" title="מגפה (page does not exist)">מַגֵּפָה</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">maggefa</span>)</span></li>
+<li>Hindi: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="None" lang="hi"><a href="/w/index.php?title=mahamari&amp;action=edit&amp;redlink=1" class="new" title="mahamari (page does not exist)">mahamari</a></span></span></li>
+<li>Indonesian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="id"><a href="/wiki/pes#Indonesian" title="pes">pes</a></span></span></li>
+<li>Italian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="it"><a href="/wiki/peste#Italian" title="peste">peste</a></span></span></li>
+</ul>
+</td>
+<td style="width:1%;"></td>
+<td style="background-color:#ffffe0; vertical-align:top; text-align:left; width:48%;">
+<ul>
+<li>Korean: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Kore" lang="ko"><a href="/wiki/%EC%A0%84%EC%97%BC%EB%B3%91#Korean" title="전염병">전염병</a></span> (<span lang="" class="tr">jeonyeombyeong</span>)</span></li>
+<li>Kurdish: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="ku"><a href="/w/index.php?title=weba&amp;action=edit&amp;redlink=1" class="new" title="weba (page does not exist)">weba</a></span></span></li>
+<li>Latvian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="lv"><a href="/w/index.php?title=liksta&amp;action=edit&amp;redlink=1" class="new" title="liksta (page does not exist)">liksta</a></span></span></li>
+<li>Norwegian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="no"><a href="/wiki/pest#Norwegian" title="pest">pest</a></span></span></li>
+<li>Persian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="fa-Arab" lang="fa"><a href="/w/index.php?title=%D8%A7%D9%81%D8%AA&amp;action=edit&amp;redlink=1" class="new" title="افت (page does not exist)">افت</a></span><span class="tpos">&#160;<a href="//fa.wiktionary.org/wiki/%D8%A7%D9%81%D8%AA" class="extiw" title="fa:افت">(fa)</a></span></span></li>
+<li>Romani: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="rom"><a href="/w/index.php?title=d%C5%BEukhli&amp;action=edit&amp;redlink=1" class="new" title="džukhli (page does not exist)">džukhli</a></span></span></li>
+<li>Serbo-Croatian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="sh"><a href="/wiki/kuga#Serbo-Croatian" title="kuga">kuga</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></span>, <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="sh"><a href="/w/index.php?title=%C4%8Duma&amp;action=edit&amp;redlink=1" class="new" title="čuma (page does not exist)">čuma</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></span></li>
+<li>Slovak: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="sk"><a href="/wiki/mor#Slovak" title="mor">mor</a></span></span></li>
+<li>Spanish: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="es"><a href="/wiki/plaga#Spanish" title="plaga">plaga</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span></span></li>
+<li>Swahili: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="sw"><a href="/w/index.php?title=tauni&amp;action=edit&amp;redlink=1" class="new" title="tauni (page does not exist)">tauni</a></span></span></li>
+<li>Swedish: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="sv"><a href="/wiki/pest#Swedish" title="pest">pest</a></span></span></li>
+<li>Tagalog: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="tl"><a href="/w/index.php?title=pestihin&amp;action=edit&amp;redlink=1" class="new" title="pestihin (page does not exist)">pestihin</a></span></span></li>
+<li>Thai: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Thai" lang="th"><a href="/w/index.php?title=%E0%B8%81%E0%B8%B2%E0%B8%AC%E0%B9%82%E0%B8%A3%E0%B8%84&amp;action=edit&amp;redlink=1" class="new" title="กาฬโรค (page does not exist)">กาฬโรค</a></span> (<span lang="" class="tr">kal rókh</span>)</span></li>
+<li>Ukrainian: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Cyrl" lang="uk"><a href="/wiki/%D1%87%D1%83%D0%BC%D0%B0#Ukrainian" title="чума">чума</a></span>&#160;<span class="gender"><abbr title="feminine gender">f</abbr></span> (<span lang="" class="tr">čumá</span>)</span></li>
+<li>Vietnamese: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="vi"><a href="/w/index.php?title=b%E1%BB%87nh_d%E1%BB%8Bch&amp;action=edit&amp;redlink=1" class="new" title="bệnh dịch (page does not exist)">bệnh dịch</a></span></span></li>
+<li>Welsh: <span class="ttbc"><sup class="ttbc">(please <a href="/wiki/Wiktionary:Translations#Translations_to_be_checked" title="Wiktionary:Translations">verify</a>)</sup> <span class="Latn" lang="cy"><a href="/wiki/pla#Welsh" title="pla">pla</a></span></span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<h3><span class="mw-headline" id="Verb">Verb</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=8" title="Edit section: Verb">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><strong class="Latn headword" lang="en">plague</strong> (<i>third-person singular simple present</i> <span class="form-of lang-en third-person-singular-form-of"><b class="Latn" lang="en"><a href="/wiki/plagues#English" title="plagues">plagues</a></b></span>, <i>present participle</i> <span class="form-of lang-en present-participle-form-of"><b class="Latn" lang="en"><a href="/wiki/plaguing#English" title="plaguing">plaguing</a></b></span>, <i>simple past and past participle</i> <span class="form-of lang-en simple-past-and-participle-form-of"><b class="Latn" lang="en"><a href="/wiki/plagued#English" title="plagued">plagued</a></b></span>)</p>
+<ol>
+<li><span class="ib-brac">(</span><span class="ib-content"><a href="/wiki/Appendix:Glossary#transitive" title="Appendix:Glossary">transitive</a></span><span class="ib-brac">)</span> To <a href="/wiki/harass" title="harass">harass</a>, <a href="/wiki/pester" title="pester">pester</a> or <a href="/wiki/annoy" title="annoy">annoy</a> someone <a href="/wiki/persistently" title="persistently">persistently</a> or <a href="/wiki/incessantly" title="incessantly">incessantly</a>.
+<dl>
+<dd><i>Wikis are often <b>plagued</b> by vandalism</i></dd>
+</dl>
+</li>
+<li><span class="ib-brac">(</span><span class="ib-content"><a href="/wiki/Appendix:Glossary#transitive" title="Appendix:Glossary">transitive</a></span><span class="ib-brac">)</span> To <a href="/wiki/afflict" title="afflict">afflict</a> with a disease or other calamity.
+<dl>
+<dd><i>Natural catastrophies <b>plagued</b> the colonists till they abandoned the pestilent marshland</i></dd>
+</dl>
+</li>
+</ol>
+<h4><span class="mw-headline" id="Derived_terms_2">Derived terms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=9" title="Edit section: Derived terms">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<ul>
+<li><a href="/wiki/plaguer" title="plaguer">plaguer</a></li>
+</ul>
+<h4><span class="mw-headline" id="Translations_2">Translations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=10" title="Edit section: Translations">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="NavFrame" id="Translations-to_harass">
+<div class="NavHead" style="text-align:left;">to harass</div>
+<div class="NavContent">
+<table class="translations" role="presentation" style="width:100%;" data-gloss="to harass">
+<tr>
+<td style="background-color:#ffffe0; vertical-align:top; width:48%; text-align:left;">
+<ul>
+<li>Dutch: <span class="Latn" lang="nl"><a href="/wiki/kwellen#Dutch" title="kwellen">kwellen</a></span><span class="tpos">&#160;<a href="//nl.wiktionary.org/wiki/kwellen" class="extiw" title="nl:kwellen">(nl)</a></span>, <span class="Latn" lang="nl"><a href="/wiki/pesten#Dutch" title="pesten">pesten</a></span><span class="tpos">&#160;<a href="//nl.wiktionary.org/wiki/pesten" class="extiw" title="nl:pesten">(nl)</a></span></li>
+<li>Finnish: <span class="Latn" lang="fi"><a href="/wiki/kiusata#Finnish" title="kiusata">kiusata</a></span><span class="tpos">&#160;<a href="//fi.wiktionary.org/wiki/kiusata" class="extiw" title="fi:kiusata">(fi)</a></span>, <span class="Latn" lang="fi"><a href="/wiki/vaivata#Finnish" title="vaivata">vaivata</a></span><span class="tpos">&#160;<a href="//fi.wiktionary.org/wiki/vaivata" class="extiw" title="fi:vaivata">(fi)</a></span></li>
+<li>French: <span class="Latn" lang="fr"><a href="/wiki/affliger#French" title="affliger">affliger</a></span><span class="tpos">&#160;<a href="//fr.wiktionary.org/wiki/affliger" class="extiw" title="fr:affliger">(fr)</a></span></li>
+<li>Italian: <span class="Latn" lang="it"><a href="/wiki/affliggere#Italian" title="affliggere">affliggere</a></span><span class="tpos">&#160;<a href="//it.wiktionary.org/wiki/affliggere" class="extiw" title="it:affliggere">(it)</a></span>, <span class="Latn" lang="it"><a href="/wiki/molestare#Italian" title="molestare">molestare</a></span>, <span class="Latn" lang="it"><a href="/wiki/tormentare#Italian" title="tormentare">tormentare</a></span><span class="tpos">&#160;<a href="//it.wiktionary.org/wiki/tormentare" class="extiw" title="it:tormentare">(it)</a></span></li>
+<li>Japanese: <span class="Jpan" lang="ja"><a href="/w/index.php?title=%E6%82%A9%E3%81%BE%E3%81%99&amp;action=edit&amp;redlink=1" class="new" title="悩ます (page does not exist)">悩ます</a></span> (<span lang="" class="tr"><a href="/w/index.php?title=%E3%81%AA%E3%82%84%E3%81%BE%E3%81%99&amp;action=edit&amp;redlink=1" class="new" title="なやます (page does not exist)">なやます</a>, nayamasu</span>)</li>
+</ul>
+</td>
+<td style="width:1%;"></td>
+<td style="background-cog="" class="tr"><a href="/w/index.php?title=%E3%81%AA%E3%82%84%E3%81%BE%E3%81%99&amp;action=edit&amp;redlink=1" class="new" title="なやます (page does not exist)">なやます</a>, nayamasu</span>)</li>
+</ul>
+</tdlor:#ffffe0; vertical-align:top; text-align:left; width:48%;">
+<ul>
+<li>Maori: <span class="Latn" lang="mi"><a href="/wiki/mui#Maori" title="mui">mui</a></span>, <span class="Latn" lang="mi"><a href="/w/index.php?title=p%C5%8Drearea&amp;action=edit&amp;redlink=1" class="new" title="pōrearea (page does not exist)">pōrearea</a></span></li>
+<li>Portuguese: <span class="Latn" lang="pt"><a href="/wiki/incomodar#Portuguese" title="incomodar">incomodar</a></span><span class="tpos">&#160;<a href="//pt.wiktionary.org/wiki/incomodar" class="extiw" title="pt:incomodar">(pt)</a></span>, <span class="Latn" lang="pt"><a href="/wiki/atormentar#Portuguese" title="atormentar">atormentar</a></span><span class="tpos">&#160;<a href="//pt.wiktionary.org/wiki/atormentar" class="extiw" title="pt:atormentar">(pt)</a></span></li>
+<li>Spanish: <span class="Latn" lang="es"><a href="/wiki/plagar#Spanish" title="plagar">plagar</a></span>, <span class="Latn" lang="es"><a href="/wiki/molestar#Spanish" title="molestar">molestar</a></span><span class="tpos">&#160;<a href="//es.wiktionary.org/wiki/molestar" class="extiw" title="es:molestar">(es)</a></span>, <span class="Latn" lang="es"><a href="/wiki/atormentar#Spanish" title="atormentar">atormentar</a></span></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="NavFrame" id="Translations-to_afflict_with_disease_or_calamity">
+<div class="NavHead" style="text-align:left;">to afflict with disease or calamity</div>
+<div class="NavContent">
+<table class="translations" role="presentation" style="width:100%;" data-gloss="to afflict with disease or calamity">
+<tr>
+<td style="background-color:#ffffe0; vertical-align:top; width:48%; text-align:left;">
+<ul>
+<li>Dutch: <span class="Latn" lang="nl"><a href="/wiki/teisteren#Dutch" title="teisteren">teisteren</a></span><span class="tpos">&#160;<a href="//nl.wiktionary.org/wiki/teisteren" class="extiw" title="nl:teisteren">(nl)</a></span></li>
+<li>Finnish: <span class="Latn" lang="fi"><a href="/wiki/vaivata#Finnish" title="vaivata">vaivata</a></span><span class="tpos">&#160;<a href="//fi.wiktionary.org/wiki/vaivata" class="extiw" title="fi:vaivata">(fi)</a></span></li>
+<li>Greek: <span class="Grek" lang="el"><a href="/w/index.php?title=%CE%BC%CE%B1%CF%83%CF%84%CE%AF%CE%B6%CF%89&amp;action=edit&amp;redlink=1" class="new" title="μαστίζω (page does not exist)">μαστίζω</a></span><span class="tpos">&#160;<a href="//el.wiktionary.org/wiki/%CE%BC%CE%B1%CF%83%CF%84%CE%AF%CE%B6%CF%89" class="extiw" title="el:μαστίζω">(el)</a></span> (<span lang="" class="tr">mastízo</span>), <span class="Grek" lang="el"><a href="/w/index.php?title=%CE%BA%CE%B1%CF%84%CE%B1%CF%84%CF%81%CF%8D%CF%87%CF%89&amp;action=edit&amp;redlink=1" class="new" title="κατατρύχω (page does not exist)">κατατρύχω</a></span><span class="tpos">&#160;<a href="//el.wiktionary.org/wiki/%CE%BA%CE%B1%CF%84%CE%B1%CF%84%CF%81%CF%8D%CF%87%CF%89" class="extiw" title="el:κατατρύχω">(el)</a></span> (<span lang="" class="tr">katatrýcho</span>), <span class="Grek" lang="el"><a href="/wiki/%CE%B2%CE%B1%CF%83%CE%B1%CE%BD%CE%AF%CE%B6%CF%89#Greek" title="βασανίζω">βασανίζω</a></span><span class="tpos">&#160;<a href="//el.wiktionary.org/wiki/%CE%B2%CE%B1%CF%83%CE%B1%CE%BD%CE%AF%CE%B6%CF%89" class="extiw" title="el:βασανίζω">(el)</a></span> (<span lang="" class="tr">vasanízo</span>), <span class="Grek" lang="el"><a href="/wiki/%CF%80%CE%BB%CE%AE%CF%84%CF%84%CF%89#Greek" title="πλήττω">πλήττω</a></span><span class="tpos">&#160;<a href="//el.wiktionary.org/wiki/%CF%80%CE%BB%CE%AE%CF%84%CF%84%CF%89" class="extiw" title="el:πλήττω">(el)</a></span> (<span lang="" class="tr">plítto</span>)</li>
+</ul>
+</td>
+<td style="width:1%;"></td>
+<td style="background-color:#ffffe0; vertical-align:top; text-align:left; width:48%;">
+<ul>
+<li>Japanese: <span class="Jpan" lang="ja"><a href="/wiki/%E6%84%9F%E6%9F%93#Japanese" title="感染">感染する</a></span><span class="tpos">&#160;<a href="//ja.wiktionary.org/wiki/%E6%84%9F%E6%9F%93" class="extiw" title="ja:感染">(ja)</a></span> (<span lang="" class="tr"><a href="/wiki/%E3%81%8B%E3%82%93%E3%81%9B%E3%82%93%E3%81%99%E3%82%8B" title="かんせんする" class="mw-redirect">かんせんする</a>, kansen suru</span>), <span class="Jpan" lang="ja"><a href="/wiki/%E8%94%93%E5%BB%B6#Japanese" title="蔓延">蔓延する</a></span><span class="tpos">&#160;<a href="//ja.wiktionary.org/wiki/%E8%94%93%E5%BB%B6" class="extiw" title="ja:蔓延">(ja)</a></span> (<span lang="" class="tr"><a href="/w/index.php?title=%E3%81%BE%E3%82%93%E3%81%88%E3%82%93%E3%81%99%E3%82%8B&amp;action=edit&amp;redlink=1" class="new" title="まんえんする (page does not exist)">まんえんする</a>, man'en suru</span>)</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<hr />
+<h2><span class="mw-headline" id="Spanish">Spanish</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=11" title="Edit section: Spanish">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Verb_2">Verb</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=plague&amp;action=edit&amp;section=12" title="Edit section: Verb">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><strong class="Latn headword" lang="es">plague</strong></p>
+<ol>
+<li><span class="use-with-mention">First-person singular (<i class="Latn mention" lang="es"><a href="/wiki/yo#Spanish" title="yo">yo</a></i>) present subjunctive form of <span class="mention"><span lang="es"><a href="/wiki/plagar#Spanish" title="plagar">plagar</a></span></span>.</span></li>
+<li><span class="use-with-mention">Formal second-person singular (<i class="Latn mention" lang="es"><a href="/wiki/usted#Spanish" title="usted">usted</a></i>) present subjunctive form of <span class="mention"><span lang="es"><a href="/wiki/plagar#Spanish" title="plagar">plagar</a></span></span>.</span></li>
+<li><span class="use-with-mention">Third-person singular (<i class="Latn mention" lang="es"><a href="/wiki/%C3%A9l#Spanish" title="él">él</a></i>, <i class="Latn mention" lang="es"><a href="/wiki/ella#Spanish" title="ella">ella</a></i>, also used with <i class="Latn mention" lang="es"><a href="/wiki/usted#Spanish" title="usted">usted</a></i><sup><a href="/wiki/Appendix:Spanish_conjugation#Pronouns" title="Appendix:Spanish conjugation" class="mw-redirect">?</a></sup>) present subjunctive form of <span class="mention"><span lang="es"><a href="/wiki/plagar#Spanish" title="plagar">plagar</a></span></span>.</span></li>
+</ol>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1013
+CPU time usage: 2.992 seconds
+Real time usage: 3.118 seconds
+Preprocessor visited node count: 4493/1000000
+Preprocessor generated node count: 15403/1500000
+Post‐expand include size: 83062/2097152 bytes
+Template argument size: 2720/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 5/500
+Lua time usage: 1.179/10.000 seconds
+Lua memory usage: 12.98 MB/50 MB
+Lua Profile:
+    recursiveClone <mwInit.lua:32>                                   260 ms       19.4%
+    pcall                                                            240 ms       17.9%
+    Scribunto_LuaSandboxCallback::gsub                               200 ms       14.9%
+    Scribunto_LuaSandboxCallback::getExpandedArgument                180 ms       13.4%
+    Scribunto_LuaSandboxCallback::loadPackage                        120 ms        9.0%
+    type                                                              80 ms        6.0%
+    <mw.lua:658>                                                      20 ms        1.5%
+    loader <package.lua:57>                                           20 ms        1.5%
+    Scribunto_LuaSandboxCallback::isKnownLanguageTag                  20 ms        1.5%
+    tostring                                                          20 ms        1.5%
+    [others]                                                         180 ms       13.4%
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 2367.134      1 - -total
+ 22.71%  537.502     86 - Template:t+
+ 16.81%  398.018     38 - Template:t-check
+ 15.29%  362.013     55 - Template:t
+  8.76%  207.368     22 - Template:term
+  5.29%  125.144      3 - Template:es-verb_form_of
+  4.74%  112.257      7 - Template:trans-top
+  4.12%   97.415      6 - Template:etyl
+  3.37%   79.751      3 - Template:es-verb_form_of/subjunctive
+  2.72%   64.347      1 - Template:wikipedia
+-->
+
+<!-- Saved in parser cache with key enwiktionary:pcache:idhash:69574-0!*!0!!en!4!* and timestamp 20150104065119 and revision id 31763882
+ -->
+<noscript><img src="//en.wiktionary.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>									<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="http://en.wiktionary.org/w/index.php?title=plague&amp;oldid=31763882">http://en.wiktionary.org/w/index.php?title=plague&amp;oldid=31763882</a>"					</div>
+													<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:English_terms_derived_from_Middle_English" title="Category:English terms derived from Middle English">English terms derived from Middle English</a></li><li><a href="/wiki/Category:English_terms_derived_from_Old_French" title="Category:English terms derived from Old French">English terms derived from Old French</a></li><li><a href="/wiki/Category:English_terms_derived_from_Late_Latin" title="Category:English terms derived from Late Latin">English terms derived from Late Latin</a></li><li><a href="/wiki/Category:English_terms_with_audio_links" title="Category:English terms with audio links">English terms with audio links</a></li><li><a href="/wiki/Category:English_lemmas" title="Category:English lemmas">English lemmas</a></li><li><a href="/wiki/Category:English_nouns" title="Category:English nouns">English nouns</a></li><li><a href="/wiki/Category:English_countable_nouns" title="Category:English countable nouns">English countable nouns</a></li><li><a href="/wiki/Category:en:Pathology" title="Category:en:Pathology">en:Pathology</a></li><li><a href="/wiki/Category:English_verbs" title="Category:English verbs">English verbs</a></li><li><a href="/wiki/Category:English_transitive_verbs" title="Category:English transitive verbs">English transitive verbs</a></li><li><a href="/wiki/Category:en:Death" title="Category:en:Death">en:Death</a></li><li><a href="/wiki/Category:Spanish_verb_forms" title="Category:Spanish verb forms">Spanish verb forms</a></li><li><a href="/wiki/Category:Spanish_non-lemma_forms" title="Category:Spanish non-lemma forms">Spanish non-lemma forms</a></li><li><a href="/wiki/Category:Spanish_forms_of_verbs_ending_in_-ar" title="Category:Spanish forms of verbs ending in -ar">Spanish forms of verbs ending in -ar</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:term_cleanup/Latin_extended" title="Category:term cleanup/Latin extended">term cleanup/Latin extended</a></li><li><a href="/wiki/Category:Terms_with_redundant_transliterations" title="Category:Terms with redundant transliterations">Terms with redundant transliterations</a></li><li><a href="/wiki/Category:Terms_with_redundant_transliterations/hy" title="Category:Terms with redundant transliterations/hy">Terms with redundant transliterations/hy</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Dutch)" title="Category:Translations to be checked (Dutch)">Translations to be checked (Dutch)</a></li><li><a href="/wiki/Category:Dutch_terms_needing_attention" title="Category:Dutch terms needing attention">Dutch terms needing attention</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(French)" title="Category:Translations to be checked (French)">Translations to be checked (French)</a></li><li><a href="/wiki/Category:French_terms_needing_attention" title="Category:French terms needing attention">French terms needing attention</a></li><li><a href="/wiki/Category:Terms_with_redundant_transliterations/el" title="Category:Terms with redundant transliterations/el">Terms with redundant transliterations/el</a></li><li><a href="/wiki/Category:Terms_with_manual_transliterations_different_from_the_automated_ones" title="Category:Terms with manual transliterations different from the automated ones">Terms with manual transliterations different from the automated ones</a></li><li><a href="/wiki/Category:Terms_with_manual_transliterations_different_from_the_automated_ones/hy" title="Category:Terms with manual transliterations different from the automated ones/hy">Terms with manual transliterations different from the automated ones/hy</a></li><li><a href="/wiki/Category:Check_translations" title="Category:Check translations">Check translations</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Afrikaans)" title="Category:Translations to be checked (Afrikaans)">Translations to be checked (Afrikaans)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Albanian)" title="Category:Translations to be checked (Albanian)">Translations to be checked (Albanian)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Arabic)" title="Category:Translations to be checked (Arabic)">Translations to be checked (Arabic)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Azeri)" title="Category:Translations to be checked (Azeri)">Translations to be checked (Azeri)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Basque)" title="Category:Translations to be checked (Basque)">Translations to be checked (Basque)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Serbo-Croatian)" title="Category:Translations to be checked (Serbo-Croatian)">Translations to be checked (Serbo-Croatian)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Bulgarian)" title="Category:Translations to be checked (Bulgarian)">Translations to be checked (Bulgarian)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Catalan)" title="Category:Translations to be checked (Catalan)">Translations to be checked (Catalan)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Mandarin)" title="Category:Translations to be checked (Mandarin)">Translations to be checked (Mandarin)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Cornish)" title="Category:Translations to be checked (Cornish)">Translations to be checked (Cornish)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Esperanto)" title="Category:Translations to be checked (Esperanto)">Translations to be checked (Esperanto)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(West_Frisian)" title="Category:Translations to be checked (West Frisian)">Translations to be checked (West Frisian)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Galician)" title="Category:Translations to be checked (Galician)">Translations to be checked (Galician)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(German)" title="Category:Translations to be checked (German)">Translations to be checked (German)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Hebrew)" title="Category:Translations to be checked (Hebrew)">Translations to be checked (Hebrew)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Hindi)" title="Category:Translations to be checked (Hindi)">Translations to be checked (Hindi)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Indonesian)" title="Category:Translations to be checked (Indonesian)">Translations to be checked (Indonesian)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Italian)" title="Category:Translations to be checked (Italian)">Translations to be checked (Italian)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Korean)" title="Category:Translations to be checked (Korean)">Translations to be checked (Korean)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Kurdish)" title="Category:Translations to be checked (Kurdish)">Translations to be checked (Kurdish)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Latvian)" title="Category:Translations to be checked (Latvian)">Translations to be checked (Latvian)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Norwegian)" title="Category:Translations to be checked (Norwegian)">Translations to be checked (Norwegian)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Persian)" title="Category:Translations to be checked (Persian)">Translations to be checked (Persian)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Romani)" title="Category:Translations to be checked (Romani)">Translations to be checked (Romani)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Slovak)" title="Category:Translations to be checked (Slovak)">Translations to be checked (Slovak)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Spanish)" title="Category:Translations to be checked (Spanish)">Translations to be checked (Spanish)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Swahili)" title="Category:Translations to be checked (Swahili)">Translations to be checked (Swahili)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Swedish)" title="Category:Translations to be checked (Swedish)">Translations to be checked (Swedish)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Tagalog)" title="Category:Translations to be checked (Tagalog)">Translations to be checked (Tagalog)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Thai)" title="Category:Translations to be checked (Thai)">Translations to be checked (Thai)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Ukrainian)" title="Category:Translations to be checked (Ukrainian)">Translations to be checked (Ukrainian)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Vietnamese)" title="Category:Translations to be checked (Vietnamese)">Translations to be checked (Vietnamese)</a></li><li><a href="/wiki/Category:Translations_to_be_checked_(Welsh)" title="Category:Translations to be checked (Welsh)">Translations to be checked (Welsh)</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=plague&amp;type=signup" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=plague" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/plague"  title="View the content page [c]" accesskey="c">Entry</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Talk:plague&amp;action=edit&amp;redlink=1"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label"><span>Variants</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/plague" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="/w/index.php?title=plague&amp;action=edit"  title="You can edit this page. Please use the preview button before saving [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=plague&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">History</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+														<div id="simpleSearch">
+															<input type="search" name="search" placeholder="Search" title="Search Wiktionary [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton" />								</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wiktionary:Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+													<li id="n-mainpage-text"><a href="/wiki/Wiktionary:Main_Page">Main Page</a></li>
+													<li id="n-portal"><a href="/wiki/Wiktionary:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+													<li id="n-wiktprefs"><a href="/wiki/Wiktionary:Per-browser_preferences">Preferences</a></li>
+													<li id="n-requestedarticles"><a href="/wiki/Wiktionary:Requested_entries">Requested entries</a></li>
+													<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+													<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random entry</a></li>
+													<li id="n-help"><a href="https://en.wiktionary.org/wiki/Help:Contents" title="The place to find out">Help</a></li>
+													<li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wiktionary.org&amp;uselang=en" title="Support us">Donations</a></li>
+													<li id="n-contact"><a href="/wiki/Wiktionary:Contact_us">Contact us</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+													<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/plague" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+													<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/plague" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+													<li id="t-upload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard" title="Upload files [u]" accesskey="u">Upload file</a></li>
+													<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+													<li id="t-print"><a href="/w/index.php?title=plague&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>
+													<li id="t-permalink"><a href="/w/index.php?title=plague&amp;oldid=31763882" title="Permanent link to this revision of the page">Permanent link</a></li>
+													<li id="t-info"><a href="/w/index.php?title=plague&amp;action=info" title="More information about this page">Page information</a></li>
+						<li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=plague&amp;id=31763882" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>In other languages</h3>
+
+			<div class="body">
+									<ul>
+													<li class="interlanguage-link interwiki-ca"><a href="//ca.wiktionary.org/wiki/plague" title="plague – Catalan" lang="ca" hreflang="ca">Català</a></li>
+													<li class="interlanguage-link interwiki-cs"><a href="//cs.wiktionary.org/wiki/plague" title="plague – Czech" lang="cs" hreflang="cs">Čeština</a></li>
+													<li class="interlanguage-link interwiki-cy"><a href="//cy.wiktionary.org/wiki/plague" title="plague – Welsh" lang="cy" hreflang="cy">Cymraeg</a></li>
+													<li class="interlanguage-link interwiki-de"><a href="//de.wiktionary.org/wiki/plague" title="plague – German" lang="de" hreflang="de">Deutsch</a></li>
+													<li class="interlanguage-link interwiki-et"><a href="//et.wiktionary.org/wiki/plague" title="plague – Estonian" lang="et" hreflang="et">Eesti</a></li>
+													<li class="interlanguage-link interwiki-es"><a href="//es.wiktionary.org/wiki/plague" title="plague – Spanish" lang="es" hreflang="es">Español</a></li>
+													<li class="interlanguage-link interwiki-fa"><a href="//fa.wiktionary.org/wiki/plague" title="plague – Persian" lang="fa" hreflang="fa">فارسی</a></li>
+													<li class="interlanguage-link interwiki-fr"><a href="//fr.wiktionary.org/wiki/plague" title="plague – French" lang="fr" hreflang="fr">Français</a></li>
+													<li class="interlanguage-link interwiki-ko"><a href="//ko.wiktionary.org/wiki/plague" title="plague – Korean" lang="ko" hreflang="ko">한국어</a></li>
+													<li class="interlanguage-link interwiki-hy"><a href="//hy.wiktionary.org/wiki/plague" title="plague – Armenian" lang="hy" hreflang="hy">Հայերեն</a></li>
+													<li class="interlanguage-link interwiki-io"><a href="//io.wiktionary.org/wiki/plague" title="plague – Ido" lang="io" hreflang="io">Ido</a></li>
+													<li class="interlanguage-link interwiki-kn"><a href="//kn.wiktionary.org/wiki/plague" title="plague – Kannada" lang="kn" hreflang="kn">ಕನ್ನಡ</a></li>
+													<li class="interlanguage-link interwiki-ku"><a href="//ku.wiktionary.org/wiki/plague" title="plague – Kurdish" lang="ku" hreflang="ku">Kurdî</a></li>
+													<li class="interlanguage-link interwiki-hu"><a href="//hu.wiktionary.org/wiki/plague" title="plague – Hungarian" lang="hu" hreflang="hu">Magyar</a></li>
+													<li class="interlanguage-link interwiki-mg"><a href="//mg.wiktionary.org/wiki/plague" title="plague – Malagasy" lang="mg" hreflang="mg">Malagasy</a></li>
+													<li class="interlanguage-link interwiki-ml"><a href="//ml.wiktionary.org/wiki/plague" title="plague – Malayalam" lang="ml" hreflang="ml">മലയാളം</a></li>
+													<li class="interlanguage-link interwiki-my"><a href="//my.wiktionary.org/wiki/plague" title="plague – Burmese" lang="my" hreflang="my">မြန်မာဘာသာ</a></li>
+													<li class="interlanguage-link interwiki-nl"><a href="//nl.wiktionary.org/wiki/plague" title="plague – Dutch" lang="nl" hreflang="nl">Nederlands</a></li>
+													<li class="interlanguage-link interwiki-no"><a href="//no.wiktionary.org/wiki/plague" title="plague – Norwegian (bokmål)" lang="no" hreflang="no">Norsk bokmål</a></li>
+													<li class="interlanguage-link interwiki-pl"><a href="//pl.wiktionary.org/wiki/plague" title="plague – Polish" lang="pl" hreflang="pl">Polski</a></li>
+													<li class="interlanguage-link interwiki-ro"><a href="//ro.wiktionary.org/wiki/plague" title="plague – Romanian" lang="ro" hreflang="ro">Română</a></li>
+													<li class="interlanguage-link interwiki-ru"><a href="//ru.wiktionary.org/wiki/plague" title="plague – Russian" lang="ru" hreflang="ru">Русский</a></li>
+													<li class="interlanguage-link interwiki-sm"><a href="//sm.wiktionary.org/wiki/plague" title="plague – Samoan" lang="sm" hreflang="sm">Gagana Samoa</a></li>
+													<li class="interlanguage-link interwiki-fi"><a href="//fi.wiktionary.org/wiki/plague" title="plague – Finnish" lang="fi" hreflang="fi">Suomi</a></li>
+													<li class="interlanguage-link interwiki-sv"><a href="//sv.wiktionary.org/wiki/plague" title="plague – Swedish" lang="sv" hreflang="sv">Svenska</a></li>
+													<li class="interlanguage-link interwiki-tl"><a href="//tl.wiktionary.org/wiki/plague" title="plague – Tagalog" lang="tl" hreflang="tl">Tagalog</a></li>
+													<li class="interlanguage-link interwiki-ta"><a href="//ta.wiktionary.org/wiki/plague" title="plague – Tamil" lang="ta" hreflang="ta">தமிழ்</a></li>
+													<li class="interlanguage-link interwiki-te"><a href="//te.wiktionary.org/wiki/plague" title="plague – Telugu" lang="te" hreflang="te">తెలుగు</a></li>
+													<li class="interlanguage-link interwiki-chr"><a href="//chr.wiktionary.org/wiki/plague" title="plague – Cherokee" lang="chr" hreflang="chr">ᏣᎳᎩ</a></li>
+													<li class="interlanguage-link interwiki-vi"><a href="//vi.wiktionary.org/wiki/plague" title="plague – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+													<li class="interlanguage-link interwiki-zh"><a href="//zh.wiktionary.org/wiki/plague" title="plague – Chinese" lang="zh" hreflang="zh">中文</a></li>
+													<li class="uls-p-lang-dummy"><a href="#"></a></li>
+											</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 26 December 2014, at 18:34.</li>
+											<li id="footer-info-copyright">Text is available under the <a href="//creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike License</a>; additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy.</a></li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wiktionary:About" title="Wiktionary:About">About Wiktionary</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wiktionary:General_disclaimer" title="Wiktionary:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wiktionary.org/w/index.php?title=plague&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+															<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" srcset="//bits.wikimedia.org/images/wikimedia-button-1.5x.png 1.5x, //bits.wikimedia.org/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>
+													</li>
+											<li id="footer-poweredbyico">
+															<a href="//www.mediawiki.org/"><img src="//bits.wikimedia.org/static-1.25wmf13/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+													</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"ext.globalCssJs.site":"ready","ext.globalCssJs.user":"ready","mw.PopUpMediaTransform":"loading","site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"//bits.wikimedia.org/en.wiktionary.org/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=mw.PopUpMediaTransform\u0026amp;only=scripts\u0026amp;skin=vector\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.LegacyScripts","ext.gadget.JavascriptHeadings","ext.gadget.DocTabs","ext.gadget.BlockInfo","ext.gadget.RevdelInfo","ext.gadget.CodeLinks","mmv.bootstrap.autostart","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.wikimediaEvents.statsd","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage"],null,true);
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"//bits.wikimedia.org/en.wiktionary.org/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=vector\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":108,"wgHostname":"mw1101"});
+}</script>
+	</body>
+</html>
+e\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=vector\u0026amp;*\"\u003E\u003C/script\u003

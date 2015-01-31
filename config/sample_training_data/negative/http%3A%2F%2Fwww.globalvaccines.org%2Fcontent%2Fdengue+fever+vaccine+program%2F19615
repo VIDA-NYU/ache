@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+<title>Dengue Fever Vaccine Program</title>
+<meta name="keywords" content="dengue
+strain
+virus
+vaccine
+treat
+adjuvant
+treatment
+sickness
+health" >
+<meta name="description" content="An overview of the Dengue Fever virus and how we fight it" >
+<meta name="google-translate-customization" content="599d562632eb32fc-0feae154268e9e44-g37ab3ec4cf13a60f-16"/>
+
+
+<link href="/skins/GlobalVaccines/css/layout.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="/skins/GlobalVaccines/css/elements.css" media="screen" rel="stylesheet" type="text/css"/>
+
+
+<script type="text/javascript" src="/skins/GlobalVaccines/js/jquery/jquery.js"></script>
+
+<script type="text/javascript">
+    //<!--
+
+			var SETTINGS = {webRoot:'',skinRoot:'/skins/GlobalVaccines',adminSkinRoot:'/skins/admin'};
+		    //-->
+</script>
+
+<script type="text/javascript" src="/skins/GlobalVaccines/js/common.js"></script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32059000-1', 'globalvaccines.org');
+  ga('send', 'pageview');
+
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/></head>
+
+<body id="twoColumnLayout">
+
+
+
+
+
+<div id="siteWrap">
+	<div id="headerWrap">
+		<div id="nav"><ul><li class='parent'><a href='/content/about+global+vaccines%2C+inc./19651' rel='19651'>About GVI</a><ul><li ><a href='/content/why+vaccines/19602' rel='19602'>Why Vaccines</a></li><li ><a href='/content/business+model/19603' rel='19603'>Business Model</a></li><li class='parent'><a href='/content/global+vaccines+team+members/20280' rel='20280'>The Global Vaccines Team</a><ul><li ><a href='/content/board+of+directors/19788' rel='19788'>Board of Directors</a></li><li ><a href='/content/board+of+advisors/19790' rel='19790'>Board of Advisors</a></li><li ><a href='/content/board+of+visitors/19993' rel='19993'>Board of Visitors</a></li><li ><a href='/content/robert+johnston%2C+executive+director+/19903' rel='19903'>Robert Johnston, Executive Director </a></li><li ><a href='/content/laura+white%2C+director+of+dengue+research/19904' rel='19904'>Laura White, Director of Dengue Research</a></li><li ><a href='/content/jan+woraratanadharm%2C+regulatory+mgr/19896' rel='19896'>Jan Woraratanadharm, Regulatory Mgr</a></li><li ><a href='/content/john+gibbs%2C+staff+scientist/20289' rel='20289'>John Gibbs, Staff Scientist</a></li><li ><a href='/content/wahala+wahala%2C+staff+scientist/862409' rel='862409'>Wahala Wahala, Staff Scientist</a></li><li ><a href='/content/daniel+tonkin%2C+staff+scientist/19897' rel='19897'>Daniel Tonkin, Staff Scientist</a></li><li ><a href='/content/ben+steil%2C+staff+scientist/19898' rel='19898'>Ben Steil, Staff Scientist</a></li><li ><a href='/content/melissa+mattocks%2C+lab+manager/20281' rel='20281'>Melissa Mattocks, Lab Manager</a></li><li ><a href='/content/muaz+khalil%2C+graduate+student/19905' rel='19905'>Muaz Khalil, Graduate Student</a></li><li ><a href='/content/andrew+snead%2C+lab+assistant/66671' rel='66671'>Andrew Snead, Lab Assistant</a></li></ul></li><li ><a href='/content/publications+by+gvi+scientists/20575' rel='20575'>Publications by GVI Scientists</a></li><li ><a href='/content/lab+photos/19792' rel='19792'>Lab Photos</a></li><li ><a href='/content/contact+us/19622' rel='19622'>Contact Us</a></li></ul></li><li class='parent active'><a href='/content/technology+solutions/19606' rel='19606'>Technology Solutions</a><ul><li ><a href='/content/novel+adjuvant/19607' rel='19607'>Novel Adjuvant</a></li><li ><a href='/content/new+live-attenuated+virus+vaccines/20334' rel='20334'>New Live-Attenuated Virus Vaccines</a></li><li class='parent active'><a href='/content/disease+targets+and+vaccine+programs/19610' rel='19610'>Disease Targets and Vaccine Programs</a><ul><li ><a href='/content/polio+vaccine+program/19613' rel='19613'>Polio Vaccine Program</a></li><li ><a href='/content/malaria+vaccine+program/19614' rel='19614'>Malaria Vaccine Program</a></li><li class='active'><a href='/content/dengue+fever+vaccine+program/19615' rel='19615'>Dengue Fever Vaccine Program</a></li><li ><a href='/content/influenza+%28seasonal%2C+pandemic%2C+and+avian%29+vaccine+program/19616' rel='19616'>Influenza (Seasonal, Pandemic, and Avian) Vaccine Program</a></li><li ><a href='/content/hiv+vaccine+program/19617' rel='19617'>HIV Vaccine Program</a></li></ul></li><li ><a href='/content/primary+technology+publications+by+gvi/19611' rel='19611'>Primary Technology Publications by GVI</a></li><li ><a href='/content/about+vaccines/19612' rel='19612'>About Vaccines</a></li></ul></li><li ><a href='/content/partner+with+us/19619' rel='19619'>Partner With Us</a></li><li ><a href='/content/support+us/19620' rel='19620'>Support Us</a></li><li class='parent'><a href='/content/gvi+newsroom/19621' rel='19621'>Newsroom</a><ul><li ><a href='/content/global+vaccines+news+/19623' rel='19623'>Global Vaccines News </a></li><li ><a href='/content/global+vaccines+in+the+news/19624' rel='19624'>Global Vaccines In The News</a></li><li ><a href='/content/global+disease+news/641245' rel='641245'>Global Disease News</a></li><li ><a href='/content/news+about+vaccines/19625' rel='19625'>News About Vaccines</a></li><li ><a href='/content/press+releases+from+gvi/19626' rel='19626'>Press Releases From GVI</a></li></ul></li></ul></div>
+		<div id="logo">
+			<a href="/" title="Global Vaccines">
+				<img src="/files/198/6197.jpg" alt="Global Vaccines"/>
+			</a>
+		
+		</div>	
+		
+	</div>
+	<div id="mainWrap">
+		<div id="mainImage">
+			<img src="/files/198/6198.jpg" alt=""/>
+		
+		</div>
+
+<!--Translate/Search/Donate Button--> 
+		<div id="searchWrap" style="float: right; width: 100%;">
+			<!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
+			<!-- The terms of service are available at http://www.google.com/cse/docs/tos.html -->
+			<form style="float:right; padding-right:20px;" name="cse" id="searchbox_demo" action="http://www.google.com/cse">
+  				<input type="hidden" name="cref" value=""/>
+  				<input type="hidden" name="ie" value="utf-8"/>
+  				<input type="hidden" name="hl" value=""/>
+  				<input name="q" type="text" size="40"/>
+  				<input type="submit" name="sa" value="Search"/>
+			</form>
+				
+
+			<script type="text/javascript" src="http://www.google.com/cse/tools/onthefly?form=searchbox_demo&amp;lang="></script>
+			
+		
+			<div id="google_translate_element" style="float: right; padding-right: 40px;"></div><script type="text/javascript">
+				function googleTranslateElementInit() {
+ 				new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+				}
+				</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        		 
+			<a href="#" onclick="window.open('https://donorbox.org/global-vaccines-inc-please-support-global-vaccines-inc', 'newwindow', 'width=700, height=800, scrollbars=yes'); return false;" style="float: left; padding-left: 5px; padding-right: 20px;"><img src="/skins/GlobalVaccines/img/DonateButton.png" alt="Donate Now!"/></a>
+				
+		</div>
+
+		<div id="utilityWrap">
+
+			<div class="socialWrap" style="padding-bottom: 1px; padding-left: 40px;">
+					<a href="http://www.globalvaccines.org/content/email+form/636850" title="Join Our Mailing List!">	
+                    	<img src="/skins/GlobalVaccines/img/Mail1.jpg" alt="Join Our Mailing List!"/></a>
+						<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com/GlobalVaccinesInc&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=30" scrolling="no" frameborder="0" style="padding-top: 5px; border:none; float: left;  width:80px; height:25px;" allowTransparency="true"></iframe>
+               				<div class="g-plusone" data-size="medium" data-href="www.globalvaccines.org"></div>
+					<a href="http://pinterest.com/globalvaccs/"><img src="http://passets-cdn.pinterest.com/images/about/buttons/pinterest-button.png" style="float: left;" width="60" height="25" alt="Follow Me on Pinterest"/></a><br/>
+			</div>
+
+			<div id="infoWrap">
+					
+				<div class="zone" rel="sidebar" >
+					<h5 style="padding-bottom: 10px; text-align: left; padding-top: 10px;"><b>Related Pages</b></h5>					
+					<div xmlns:eden="eden"   class="html element editable" id="element_110983"><p><a class="parablue13" href="/content/polio+vaccine+program/19613">&gt;Polio </a></p>
+<p><a class="parablue13" href="/content/malaria+vaccine+program/19614">&gt;Malaria</a></p>
+<p><a class="parablue12" href="/content/hiv+vaccine+program/19617">&gt;HIV</a></p>
+<p><a class="parablue13" href="/content/influenza+%28seasonal%2C+pandemic%2C+and+avian%29+vaccine+program/19616">&gt;Influenza</a></p></div>	
+			
+				</div>
+									
+	
+			</div>					
+		</div>
+		
+
+		<div id="textWrap" class="zone" rel="main" >
+			<div xmlns:eden="eden"   class="html element editable" id="element_100492"><p class="parablue11"><a href="/"><span class="parablue11">Home</span></a> &gt; <a href="/content/technology+solutions/19606"><span class="parablue11">Technology Solutions</span></a> &gt; <a href="/content/disease+targets+and+vaccine+programs/19610"><span class="parablue11">Target Diseases &amp; Vaccine Programs</span></a> &gt; Dengue Vaccine Program</p></div><div xmlns:eden="eden"   class="html element editable" id="element_111071"><h5 style="padding-left: 30px;"><a name="Top of page"></a><em>Dengue Fever vaccine program</em></h5>
+<p style="padding-left: 30px; padding-right: 130px;"><a class="parablue13" href="#About dengue fever">About Dengue Fever</a><br /> <a class="parablue13" href="#Dengue vaccine challenges">Dengue Vaccine Challenges</a><br /> <a class="parablue13" href="#Existing Dengue Vaccines">Existing Dengue Vaccine Efforts</a><br /> <a class="parablue13" href="#How GVI can make a difference">How GVI Technology Can Make a Difference</a><br /> <a class="parablue13" href="#Program Outlook and Acheivements">Program Outlook and Acheivemenaccines">Existing Dengue Vaccine Efforts</a><br /> <a class="parablue13" href="#How GVI can make a difference">How GVI Technology Can Make a Difference</a><br /> <a class="parablue13" href="#Program Outlook and Acheivements">Program Outlook and ts</a></p></div><div xmlns:eden="eden"   class="html element editable" id="element_111072"><h5 style="padding-left: 30px;"><em>About Dengue Fever</em></h5>
+<p style="padding-left: 30px; padding-right: 130px;">Dengue fever, also known as breakbone fever, is a viral disease characterized by severe headache, skin rash and debilitating muscle and joint pain. Recent studies estimate ~390 million new infections every year, some of which progress to more severe forms of the disease, characterized by circulatory failure, shock, coma and death. The disease is caused by any of four dengue virus serotypes, and is transmitted to humans by the Aedes aegypti mosquito, which has regained global distribution in the tropical and subtropical regions of the globe. Currently, there is no vaccine to protect against dengue, and there is consensus on the urgent need for effective dengue vaccines, not only for those who live in endemic areas, but also for those who travel or are deployed to those areas.</p></div><div xmlns:eden="eden"   class="html element editable" id="element_111073"><h5 style="padding-left: 30px;"><em><a name="Dengue vaccine challenges"></a>Dengue Vaccine Challenges</em></h5>
+<p style="padding-left: 30px; padding-right: 130px;">The development of a dengue vaccine has unique challenges. The four dengue serotypes circulate globally, and infection with one dengue serotype confers life-long protection against re-infection with the same serotype, but only short-term protection against the other 3 serotypes. Moreover, dengue is unique in that sequential infections with different serotypes increase the risk of developing severe and potentially lethal disease. There is limited understanding of how the virus interacts with the immune system and how certain types of pre-existing immunity can exacerbate disease. Therefore, a safe and effective dengue vaccine must be tetravalent, and induce strong and long-lived protection against all 4 serotypes simultaneously in order to avoid the risk of sensitizing the vaccine recipient to severe disease.</p></div><div xmlns:eden="eden"   class="html element editable" id="element_111074"><h5 style="padding-left: 30px;"><em><a name="Existing Dengue Vaccines"></a>Existing Dengue Vaccine Efforts</em></h5>
+<p style="padding-left: 30px; padding-right: 130px;">There are a number of dengue vaccine candidates in different stages of development. The more advanced consist of tetravalent mixtures of live attenuated viruses representing each serotype. Different attenuation mechanisms have been used to develop three of the leading candidates:</p>
+<ul class="parablack13" style="padding-left: 60px; padding-right: 130px; padding-bottom: 12px;">
+<li>Chimerization with yellow fever 17D vaccine strain, developed by Sanofi Pasteur</li>
+<li>Combinations of defined mutations/deletions and chimeras, developed by NIH</li>
+<li>Chimerization with dengue 2 PDK53 virus, attenuated by cell culture passage, developed by Inviragen/Takeda. </li>
+</ul>
+<p style="padding-left: 30px; padding-right: 130px;">One disadvantage of all live attenuated vaccine candidates in clinical trials is that a single inoculation is not sufficient to induce protection to all 4 serotypes, probably due to viral interference among the live components of the vaccine. In addition, booster doses are not effective when administered less than 6 months apart. Therefore, live attenuated vaccines require three immunizations over an extended dosing schedule of 12 months to elicit balanced neutralizing antibody responses to all 4 serotypes. As a result, there is a  risk that an incomplete response induced by the initial immunizations will enhance disease if infection occurs during the window between the first and the last immunization. While this theoretical concern is being addressed in clinical trials, alternative vaccine approaches are in development. Single cycle alphavirus vectors provide two functions, high level antigen expression and intrinsic adjuvant activity. DNA vaccines, killed virus and recombinant protein are poorly immunogenic and will not be effective without a potent adjuvant.</p></div><div xmlns:eden="eden"   class="html element editable" id="element_111075"><h5 style="padding-left: 30px;"><em><a name="How GVI can make a difference"></a>How GVI Technology Can Make A Difference</em></h5>
+<p style="padding-left: 30px; padding-right: 130px;">The first step to show the feasibility of an alphavirus replicon-based vaccine for dengue was performed in collaboration with UNC and led by Dr. Laura White at the Carolina Vaccine Institute.  Alphavirus replicon vectors were used to express dengue antigens and were shown to induce rapid, balanced and protective neutralizing antibodies to all 4 serotypes.  The next step towards an alphavirus based dengue vaccine aims to lower the manufacturing cost while maintaining the ability to induce a robust and balanced immune response. Our group has developed a novel adjuvant, the <a class="parablue13" href="/content/novel+adjuvant/19607">GVI adjuvant</a>, consisting of a highly modified alphavirus RNA packaged into virus-like particles (nVRP). Due to its genetic configuration, the GVI adjuvant infects dendritic cells, but does not complete its replication cycle and no new adjuvant particles are formed. This limited replication however induces a strong innate immune response and enhanced adaptive humoral, cellular and mucosal immune responses to co-delivered inactivated viruses such as influenza and polio. Dengue antigens can be produced at relatively low cost, but are poorly immunogenic. An FDA approved adjuvant (Alum) does not improve their immunogenicity. However, when the GVI adjuvant was combined with a monovalent inactivated dengue virus preparation, the immune response was enhanced almost 50 fold. The <a class="parablue13" href="/content/novel+adjuvant/19607">GVI adjuvant</a> has the potential to enhance the antibody response to all 4 dengue antigens simultaneously in a tetravalent cocktail at an affordable cost.</p></div><div xmlns:eden="eden"   class="html element editable" id="element_111076"><h5 style="padding-left: 30px;"><em><a name="Program Outlook and Acheivements"></a>Program Outlook and Acheivements </em></h5>
+<p style="padding-left: 30px; padding-right: 130px;">We have completed pre-clinical studies to evaluate the immunogenicity and protective efficacy of a tetravalent dengue vaccine based on alphavirus replicon particles as expression vectors, in collaboration with Dr. Aravinda de Silva at the University of North Carolina, Chapel Hill, and with Dr. Carlos Sariol, at the Caribbean Primate Research Center, San Juan, PR. These studies, funded by NIH, showed that a tetravalent cocktail of VEE replicon particles expressing dengue envelope protein induced rapid and balanced neutralizing antibody responses after one (in mice) or two (an Primate Research Center, San Juan, PR. These studies, funded by NIH, showed that a tetravalent cocktail of VEE replicon particles expressing dengue envelope protein induced rapid and balanced neutralizing antibody responses after one (in mice) or twoin macaques) immunization doses, given 4 to 6 weeks apart. Although this approach seems very promising, we currently do not know what the human dose will be, making it difficult to anticipate whether this vaccine will be cost-effective in resource poor endemic countries. The potentially less costly GVI adjuvant alternative is currently being investigated in mice and macaques.  A monovalent formulation of inactivated dengue virus with the GVI adjuvant results in a robust neutralizing antibody response in mice even after one dose. A tetravalent cocktail of inactivated dengue virus in the presence of the GVI adjuvant demonstrated tetravalent humoral and cellular immune responses in mice.&nbsp; In addition, we have shown that the same tetravalent inactivated dengue virus vaccine in the presence of the GVI adjvuant is immunogenic and protective in macaques and induces a balanced neutralizing antibody response to all 4 serotypes after 2 doses.&nbsp; We are currently funded by the NIH to continue pursuing this project.</p></div><div xmlns:eden="eden"   class="html element editable" id="element_100493"><h5 style="padding-left: 30px;"><a class="parablue13" href="/content/technology+solutions/19606">Read more about GVI's technology solutions</a></h5>
+<p style="padding-left: 60px;"><a class="parablue13" href="/content/polio+vaccine+program/19613">Polio Vaccine Program</a><br /> <a class="parablue13" href="/content/malaria+vaccine+program/19614">Malaria Vaccine Program</a><br /> <a class="parablue13" href="/content/influenza+%28seasonal%2C+pandemic%2C+and+avian%29+vaccine+program/19616">Influenza (seasonal, pandemic, and avian) Vaccine Program</a><br /> <a class="parablue13" href="/content/hiv+vaccine+program/19617">HIV Vaccine Program</a></p>
+<p style="padding-left: 30px;"><a class="parablue13" href="#Top of page">Back to top</a></p></div>
+		
+		</div>
+	</div>
+	
+    <!--Footer-->	
+	<div id="footerWrap">
+		<a class="parablue13" style="position: absolute; left: 10px; bottom: 43px;" href="http://www.globalvaccines.org/content/contact+us/19622" target="_blank">Contact Us</a>
+		<p>&#169;2012 Global Vaccines Inc. P.O. Box: 14827, 801-11 Capitola Dr. Durham, NC, 27713, USA</p>		
+		
+	</div>
+</div>
+
+<a id="preationFooterLogo" href="http://www.preation.com" title="Powered by Preation Eden Platform"><img src="/skins/GlobalVaccines/img/preationFooterLogo.gif" alt="Powered by Preation Eden Platform"/></a>
+
+<!--<tal:block tal:content="structure this/layout/theme/analyticsCode | default" />
+
+ <tal:block tal:content="structure php:this->pageWeight()"/> -->
+
+</body>
+</html>ccines/img/preationFooterLogo.gif" alt="Powered by Preation Eden Platform"/></a>
+
+<!--<tal:block tal:content="structure this/layout/theme/analyticsCode | default" />
+
+ <tal:block tal:conte

@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 ie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 ie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 ie"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9 ie"> <![endif]-->
+<!--[if !IE]> --> <html> <!-- <![endif]-->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>
+The Sale of Human Organs (Stanford Encyclopedia of Philosophy)
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="noarchive, noodp" />
+<meta name="citation_title" content="The Sale of Human Organs" />
+<meta name="citation_author" content="Wilkinson, Stephen" />
+<meta name="citation_publication_date" content="2011/10/17" />
+<meta name="DC.title" content="The Sale of Human Organs" />
+<meta name="DC.creator" content="Wilkinson, Stephen" />
+<meta name="DCTERMS.issued" scheme="DCTERMS.W3CDTF" content="2011-10-17" />
+<meta name="DCTERMS.modified" scheme="DCTERMS.W3CDTF" content="2011-10-17" />
+
+<!-- NOTE: Import webfonts using this link: -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,200&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" media="screen,handheld" href="../../css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" media="screen,handheld" href="../../css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css" />
+<!--[if IE 7]> <link rel="stylesheet" type="text/css" href="../../css/font-awesome-ie7.min.css"> <![endif]-->
+<link rel="stylesheet" type="text/css" media="screen,handheld" href="../../css/style.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+<link rel="stylesheet" type="text/css" href="../../css/entry.css" />
+<!--[if IE]> <link rel="stylesheet" type="text/css" href="../../css/ie.css" /> <![endif]-->
+<script type="text/javascript" src="../../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+
+<!-- NOTE: Javascript for sticky behavior needed on article and ToC pages -->
+<script type="text/javascript" src="../../js/jquery-scrolltofixed-min.js"></script>
+<script type="text/javascript" src="../../js/entry.js"></script>
+
+<!-- SEP custom script -->
+<script type="text/javascript" src="../../js/sep.js"></script>
+</head>
+
+<!-- NOTE: The nojs class is removed from the page if javascript is enabled. Otherwise, it drives the display when there is no javascript. -->
+<body class="nojs article" id="pagetopright">
+<div id="container">
+<div id="header-wrapper">
+  <div id="header">
+    <div id="branding">
+      <div id="site-logo"><a href="../../index.html"><img src="../../symbols/sep-man-red.png" alt="SEP logo" /></a></div>
+      <div id="site-title"><a href="../../index.html">Stanford Encyclopedia of Philosophy</a></div>
+    </div>
+    <div id="navigation">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <button class="btn btn-navbar collapsed" data-target=".collapse-main-menu" data-toggle="collapse" type="button"> <i class="icon-reorder"></i> Menu </button>
+            <div class="nav-collapse collapse-main-menu in collapse">
+              <ul class="nav">
+                <li class="dropdown open"><a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="icon-book"></i> Browse</a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                    <li><a href="../../contents.html">Table of Contents</a></li>
+                    <li><a href="../../new.html">What's New</a></li>
+                    <li><a href="http://plato.stanford.edu/cgi-bin/encyclopedia/rand-labelledby="dropom">Random Entry</a></li>
+                    <li><a href="../../published.html">Chronological</a></li>
+                    <li><a href="../../archives/">Archives</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown open"><a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="icon-info-sign"></i> About</a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                    <li><a href="../../info.html">Editorial Information</a></li>
+                    <li><a href="../../about.html">About the SEP</a></li>
+                    <li><a href="../../board.html">Editorial Board</a></li>
+                    <li><a href="../../cite.html">How to Cite the SEP</a></li>
+                    <li><a href="../../special-characters.html">Special Characters</a></li>
+                    <li><a href="../../tools/">Advanced Tools</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown open"><a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="icon-leaf"></i> Support SEP</a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                    <li><a href="../../support/">Support the SEP</a></li>
+  ="dropdown-toggle" data-toggle="dropdown" role="button"><i class="icon-leaf"></i> Support SEP</a>
+                  <ul class="dropdown-menu" role="me                  <li><a href="../../support/friends.html">PDFs for SEP Friends</a></li>
+                    <li><a href="../../support/donate.html">Make a Donation</a></li>
+                    <li><a href="../../support/sepia.html">SEPIA for Libraries</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End navigation -->
+    
+    <div id="search">
+      <form id="search-form" method="get" action="../../search/searcher.py">
+        <input type="search" name="query" placeholder="Search SEP" />
+        <div class="search-btn-wrapper"><button class="btn search-btn" type="submit"><i class="icon-search"></i></button></div>
+      </form>
+    </div>
+    <!-- End search --> 
+    
+  </div>
+  <!-- End header --> 
+</div>
+<!-- End header wrapper -->
+
+<div id="content">
+
+<!-- Begin article sidebar -->
+<div id="article-sidebar" class="sticky">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <button class="btn btn-navbar" data-target=".collapse-sidebar" data-toggle="collapse" type="button"> <i class="icon-reorder"></i> Entry Navigation </button>
+        <div id="article-nav" class="nav-collapse collapse-sidebar in collapse">
+          <ul class="nav">
+            <li><a href="#toc">Entry Contents</a></li>
+            <li><a " type="button"> <i class="icon-reorder"></i> Entry Navigation </button>
+        <div id="article-nav" class="nav-collapse collapse-sidebar in collapshref="#Bib">Bibliography</a></li>
+            <li><a href="#Aca">Academic Tools</a></li>
+            <li><a href="https://leibniz.stanford.edu/friends/preview/organs-sale/">Friends PDF Preview <i class="icon-external-link"></i></a></li>
+            <li><a href="http://plato.stanford.edu/cgi-bin/encyclopedia/archinfo.cgi?entry=organs-sale">Author and Citation Info <i class="icon-external-link"></i></a> </li>
+            <li><a href="#pagetopright" class="back-to-top">Back to Top <i class="icon-angle-up icon2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End article sidebar --> 
+
+<!-- NOTE: Article content must have two wrapper divs: id="article" and id="article-content" -->
+<div id="article">
+<div id="article-content">
+
+<!-- BEGIN ARTICLE HTML -->
+
+
+<div id="aueditable"><!--DO NOT MODIFY THIS LINE AND ABOVE-->
+
+<h1>The Sale of Human Organs</h1><div id="pubinfo"><em>First published Mon Oct 17, 2011</em></div>
+
+<div id="preamble">
+
+<p>
+
+Organ sale&mdash;for example, allowing or encouraging consenting adults to become living kidney donors in return for money&mdash;has been proposed as a possible solution to the seemingly chronic shortage of organs for transplantation.   Many people however regard this idea as abhorrent and argue both that the practice would be unethical and that it should be banned.  This entry outlis been proposed as a possible solution to the seemingly chronic shortage of organs for transplantation.   Many people however regard this idea as abhones some of the different possible kinds of organ sale, briefly states the case in favour, and then examines the main arguments against.
+</p>
+
+</div>
+
+<div id="toc">
+<!--Entry Contents-->
+<ul>
+<li><a href="#DifKinOrgSalSys">1. Different Kinds of Organ Sale System</a></li>
+<li><a href="#CasForOrgSal">2. The Case for Organ Sale</a>
+   <ul>
+   <li><a href="#ArgBasPriResForAutLibNotSelOwn">2.1 Arguments Based on the Principle of Respect for Autonomy, on Libertarianism, or on a notion of Self-Ownership</a></li>
+   <li><a href="#SavLiv">2.2 The Saving of Lives</a></li>
+   <li><a href="#Con">2.3 Consistency</a></li>
+   </ul></li>
+<li><a href="#HarRis">3. Harm and Risk</a></li>
+<li><a href="#Alt">4. Altruism</a>
+   <ul>
+   <li><a href="#AltAlwGooThi">4.1 Is altruism (always) a good thing?</a></li>
+   <li><a href="#WouOrgSalDisRedAlt">4.2 Would organ sale displace or reduce altruism?</a></li>
+   <li><a href="#AltSupDutRes">4.3 Altruism, Supererogation, and Duties to Rescue</a></li>
+   </ul></li>
+<li><a href="#IndCon">5. Inducements and Consent</a></li>
+<li><a href="#ExpInsObj">6. Exploitation, Instrumentalisation, and Objectification</a></li>
+<li><a href="#Bib">Bibliography</a></li>
+<li><a href="#Aca">Academic Tools</a></li>
+<li><a href="#Oth">Other Internet Resources</a></li>
+<li><a href="#Rel">Related Entries</a></li>
+</ul>
+<!--Entry Contents-->
+
+<hr />
+
+</div>
+
+<div id="main-text">
+
+<h2><a name="DifKinOrgSalSys">1. Different Kinds of Organ Sale System</a></h2>
+
+<p>
+The expression &lsquo;organ sale&rsquo; covers a wide range of different practices.  People most readily associate it with the case in which one individual (who needs or wants money) sells his or her kidney to another (who needs a kidney).  But there are other possibilities too.  One (in countries where the prior consent of the deceased is required for cadaveric organ donation) is to pay people living now for rights over their body after death.  Another (in countries where the consent of relatives is required for cadaveric organ donation) is to pay relatives for transplant rights over their recently deceased loved ones' bodies. 
+</p>
+
+<p>
+Since the kidney is the most commonly transplanted organ and since the ethics literature on organ sale is mainly about kidney sale from live donors, that is the practice on which this entry will focus.  &lsquo;Organ sale&rsquo; as the term is used here does not include the sale of body <em>products</em> (a category which includes blood, eggs, hair, and sperm) since this is different in some important respects.  For example, the risk of permanent harm is generally much less in the case of blood and hair donation; while, the donation of eggs and sperm raises additional issues relating to the creation and parenting of additis different in some important respects.  For onal future people.  That said, many of the fundamental issues are similar and the very same concerns about (for example) exploitation and consent arise in both cases.
+</p>
+
+<p>
+An important preliminary point is that almost all serious advocates of
+allowing payment for human organs argue not for an unfettered
+&lsquo;free market&rsquo; but for a regulated one.  Radcliffe Richards
+et al. (1998, 1950) for example, in their paper &ldquo;The Case for
+Allowing Kidney Sales&rdquo; say:
+</p>
+<blockquote>
+<p>
+It must be stressed that we are not arguing for the positive conclusion
+that organ sales must always be acceptable, let alone that there should
+be an <em>unfettered</em> market.</p>
+</blockquote>
+
+<p>
+While Wilkinson (2003, 132) is typical of organ sale defenders in wishing to distance himself from today's (largely &lsquo;underground&rsquo;) organ trade:
+</p>
+<blockquote>
+<p>
+&hellip; far from being a reason to continue the ban on sale, the dreadfulness of present practice may be a reason to <em>discontinue</em> prohibition, so that the organ trade can be brought &lsquo;overground&rsquo; and properly regulated.
+</p>
+</blockquote>
+<p>
+Different scholars have different views about the precise scope and extent of the regulation required, but most support the requirements that organ sellers give valid consent, are paid a reasonable fee, and are provided with adequat</p>
+</blockquote>
+<p>
+Different scholars have different views about the precise scope and extent of the regulation required, but most support the reqe medical care.  Taylor (2005, 110) for example, says that:
+</p>
+<blockquote>
+<p>
+At minimum &hellip; a market should require that vendors give their informed consent to the sale of their kidneys, that they not be coerced into selling their kidneys by a third party and that they receive adequate post-operative care.
+</p>
+</blockquote>
+
+<p>
+One noteworthy policy proposal comes from Erin and Harris (1994; 2003) who suggest that a market in human organs should have the following features:
+</p>
+<ol>
+<li>
+It is limited to a particular geopolitical area, such as a state or
+the European Union, with only citizens or residents of that area being
+allowed to sell or to receive organs.</li>
+
+<li>
+There is a central public body responsible for making (and funding)
+all purchases and for allocating organs fairly in accordance with
+clinical criteria. Direct sales are banned.</li>
+
+<li>
+Prices are set at a reasonably generous level to attract people
+voluntarily into the market.</li>
+</ol>
+<p>
+
+Features (1) and (2) combined are supposed to rule out exploitative
+organ trafficking from poorer countries, while the ban on direct sales
+and allocation by a central agency ensure that the organs go not to
+those most able to pay, but to those in most need. In common with
+many other defenders of organ sale, Erin and Harris also propose
+building in practical protections for donors and rsales
+and allocation by a central agency ensure that the organs go not to
+those most able to pay, but to those in most need. In common with
+many otherecipients (e.g.,
+adequate medical care and thorough health checkups before donation
+takes place).</p>
+
+<p>
+
+When ethically evaluating organ sale therefore it is best to focus
+not on the worst aspects of today's organ trafficking practices
+(since that is not what any serious ethicist is defending or proposing)
+but rather on what a reasonably well-regulated system of organ sale,
+controlled by some combination of the medical profession and state
+regulators, would look like. More specifically, it should be
+assumed (as it is in what follows) that the doctors, nurses, and
+transplant coordinators implementing an organ sale system should at
+least adhere to the standards around consent and clinical care
+advocated by The Transplantation Society and the World Health
+Organisation (leaving aside of course those bodies' opposition to
+organ sale itself) (see <a href="#Oth">Other Internet Resources section</a> below).</p>
+
+<p>
+
+One final preliminary point to keep in mind is the distinction
+between questions of law and public policy, on the one hand, and
+personal morality on the other. The debate about organ sale is
+largely about whether this should be allowed (by law) and, if so, about
+what system of remuneration would be best. However, there is a
+set of separable questions about personal morality: about (for example)
+whether buying an organ for oneself might be morally proabout whether this should be allowed (by law) and, if so, about
+what system of remuneration would be best. However, there is a
+set of separable questiblematic even
+if it should not be prohibited. Although this distinction is
+important, and should be kept in mind throughout, it will not be
+referred to much in the following sections. That is because, for
+the most part, the very same arguments are used both in attempts to
+show that organ sale is morally problematic and in attempts to show
+that it ought not to be allowed.</p>
+
+<h2><a name="CasForOrgSal">2. The Case for Organ Sale</a></h2>
+
+<p>
+
+Three main positive arguments are advanced in favour of permitting
+organ sale.</p>
+
+<h3><a name="ArgBasPriResForAutLibNotSelOwn">2.1 Arguments Based on the Principle of Respect for Autonomy, on Libertarianism, or on a notion of Self-Ownership</a></h3>
+
+<p>
+
+While there are many different variants under this heading, the
+basic claim common to all is that autonomous and competent adults have
+a strong presumptive right to do as they please with their own bodies
+(especially where this is not substantially harmful to third
+parties). Therefore, at least in the absence of strong reasons to
+do otherwise, people should be allowed to sell parts of their bodies if
+they so wish. Whether there are any such strong reasons is of
+course a moot point and the main candidate reasons are discussed in
+subsequent sections.</p>
+
+<p>
+
+Not much directly will be said about these positive arguments for
+permitting organ sale since they rely on mohether there are any such strong reasons is of
+course a moot point and the main candidate reasons are discussed in
+subsequent sections.</p>
+
+<p>
+
+Not re fundamental and general
+questions in moral and political theory that cannot be tackled within
+the confines of a piece on organ sale (within SEP, see the
+entries on <a href="../libertarianism/">libertarianism</a>,
+ <a href="../privacy-medicine/">privacy and medicine</a>, and
+ <a href="../property/">property and ownership</a>). Later sections
+will indirectly address these arguments, though, because many of the
+objections to sale considered could, if successful, overturn any
+defeasible presumption in favour of allowing
+&lsquo;self-ownership&rsquo; to prevail.</p>
+
+<h3><a name="SavLiv">2.2 The Saving of Lives</a></h3>
+
+<p>
+
+This argument is straightforward. Permitting (or encouraging)
+organ sale will, it is claimed, save lives by (at least partially)
+alleviating the shortage of transplant organs. The saving of
+lives is a good end and organ sale is then defensible as a means of
+achieving that positive end.</p>
+
+<p>
+
+That the shortage of transplant organs is a major problem is beyond
+dispute. An important UK report published in 2008, for example,
+notes that while in 2006&ndash;7 more than 3,000 patients in the UK received
+an organ transplant, another 1,000 died whilst waiting or after being
+removed from the waiting list because they had become too
+ill (Department of Health 2008). The national waiting
+list at that time stood at 7,235, a figure that has been incrUK received
+an organ transplant, another 1,000 died whilst waiting or after being
+removed from the waiting list because they had become too
+ill (Depareasing by
+8% each year. Furthermore, the waiting list size does not even fully
+reflect the actual level of need because doctors are sometimes
+reluctant even to list patients who they feel do not stand a realistic
+chance of getting an organ in time (Department of Health
+2008). Similarly, around one million Americans are said to be on
+transplant waiting lists, with a further million people in China
+requiring organ transplantation of one kind or another. In the
+USA in 2004, the overall median waiting time for a kidney transplant
+was almost three years (Knoll 2008).</p>
+
+<p>
+
+Opposition to the Saving of Lives Argument takes one of two
+forms. It may be objected to empirically, with the critic arguing
+either that permitting organ sale would be ineffective or that an
+alternative system would work better: for example, the ways in which we
+approach bereaved relatives could be improved, as could the ways in
+which the possibility of (unpaid) living donation is publicized, or
+there could be a move to a Mandated Choice or Presumed Consent
+system (Hinkley 2005). Alternatively, one might concede
+the empirical point that allowing organ sale would be an effective
+option, but nonetheless argue that there are sufficiently strong
+countervailing (moral or practical) reasons to justify leaving the
+prohibition on sale in place. These reasons are the subject of
+some later sections.lowing organ sale would be an effective
+option, but nonetheless argue that there are sufficiently strong
+countervailing (moral or practical) reasons t</p>
+
+<p>
+
+The Saving of Lives Argument (unless rejected on empirical grounds)
+has an important role in placing the onus of proof on the shoulders of
+the prohibitionists (those who wish organ sale to be banned). For
+given that this prohibition may, in effect, be causing deaths (or at
+least preventing the saving of lives) a strong reason to continue with
+it will be required.</p>
+
+<h3><a name="Con">2.3 Consistency</a></h3>
+
+<p>
+
+Many authors have pointed out that there appears to be no
+fundamental difference between selling organs and other widely accepted
+practices, particularly selling one's own &lsquo;risky
+labour&rsquo; (work that involves a risk of harm that is the same as or
+greater than that involved in organ donation) (Harris 1985;
+Brecher 1990, 1994; Wilkinson &amp; Garrard 1996).
+Furthermore, common forms of &lsquo;risky labour&rsquo; (coal mining,
+deep-sea diving, fire fighting, military service in a just war, etc.)
+are often <em>more</em> dangerous than selling a kidney, but are
+regarded as heroic, rather than condemned; it is seen as just and
+proper to reward those who do these things. This difference in
+attitude cannot be justified in terms of the good consequences that
+&lsquo;risky labour&rsquo; produces, since the consequences of an organ
+sale (often, saving a life) may be just as good or better.
+Therefore, it is inconsistent to allow people toence in
+attitude cannot be justified in terms of the good consequences that
+&lsquo;risky labour&rsquo; produces, since the consequences of an organ
+sa be paid for
+&lsquo;risky labour&rsquo; while not allowing them to be paid for their
+organs. Savulescu (2003, 138) makes the point as follows:</p>
+<blockquote>
+<p>
+If we should be allowed to sell our labour, why not sell the means to
+that labour? If we should be allowed to risk damaging our body
+for pleasure (by smoking or skiing), why not for money which we will
+use to realise other goods in life? &hellip; or consider the diver. He
+takes on a job as a deep sea diver which pays him an extra $30,000
+&hellip; This loading is paid because the job has higher risks to
+his life and health. He takes the job because he likes holidays in
+expensive exotic locations.</p>
+</blockquote>
+
+<h2><a name="HarRis">3. Harm and Risk</a></h2>
+
+<p>
+
+The first, and most straightforward, objection to organ sale is that
+it is excessively harmful or dangerous for paid organ donors.
+Present-day organ trafficking certainly does often involve excessive
+and unacceptable levels of harm. But, as mentioned earlier, when
+considering the moral permissibility of organ sale, it is advisable to
+focus not on the worst case, but rather on the likely level of harm
+that would occur within a properly regulated system. Once this is
+borne in mind, the harm argument against organ sale appears vulnerable
+to a number of objections.</p>
+
+<p>
+
+The first (an empirical point) is simply that the most widely
+disy level of harm
+that would occur within a properly regulated system. Once this is
+borne in mind, the harm argument against organ sale appears vulnerabcussed form of organ sale, kidney sale, is not terribly dangerous if
+performed in good conditions. The UK body NHS Blood and
+Transplant (NHSBT), for example, informs us that the risk of
+postoperative death (to the donor) is about one in 3,000. There
+is also a small risk (less than 1%) of minor complications (such as
+chest, wound, or urine infections). As regards long-term health
+risks, NHSBT claims that there is there is no long-term effect on the
+health of the donor or on his/her remaining kidney, and that donors are
+at no greater risk of developing kidney failure after donating than
+anyone in the general population. So, while there are some not
+completely insignificant risks to consider, arguably these are
+tolerable compared to both the risks to the prospective recipient of
+not receiving the kidney, and the financial benefit to the donor,
+provided that the level of reward is set at a suitably high level.</p>
+
+<p>
+
+The second objection says that, if our concern is exposing the organ
+vendor to risk, then the last thing we should be doing is banning sale
+since, as Cameron and Hoffenberg put it:</p>
+<blockquote>
+<p>
+It is the marginalization of paid organ donation that leads to its
+performance in less than ideal circumstances. Paid organ donations need
+be no more risky than unpaid.</p>
+</blockquote>
+
+<p>
+
+In other words, the best way of avoiding harm to organ e>
+<p>
+It is the marginalization of paid organ donation that leads to its
+performance in less than ideal circumstances. Paid organ donations need
+be nvendors is
+not to criminalize and drive sale underground but rather to accept and
+regulate it. This style of argument is familiar from other contexts:
+notably debates about the legalization of abortion, drugs, and
+prostitution.</p>
+
+<p>
+
+The third (related) objection is that no matter how dangerous paid
+donation is, it need not (as Cameron and Hoffenberg note above) be any
+more dangerous than unpaid donation, since the mere fact of payment
+does not add any danger. So if paid donation is wrong because of the
+danger to which the donor is subjected, then free donation must also be
+wrong on the very same ground. Free donation, though, is not wrong; on
+the contrary, it is generally regarded as commendable and heroic.
+Therefore, paid donation is not wrong either; or, if it is wrong, it is
+wrong because of something other than the danger to which the donor is
+subjected.</p>
+
+<p>
+
+It might be argued that what is wrong with organ sale is not danger
+<em>per se</em> but rather the fact that someone is being paid to
+endanger herself. There are two readings of this. One is as a worry
+about consent, the idea being that payment invalidates the
+vendor's consent; this will be examined in Section 5. The other
+is as a moral principle according to which (independently of concerns
+about consent) it is wrong to pay someone to endanger herself. Quite
+what the basis for such a prinyment invalidates the
+vendor's consent; this will be examined in Section 5. The other
+is as a moral principle according to which (independently of conciple might be is hard to fathom and it
+does seem implausible for reasons given during the earlier discussion
+of consistency. Paying people to undertake dangerous and/or
+unpleasant work is widespread and, while the world might well be a
+better place if people were not required to undertake such tasks, it
+would be hard to defend the view that all such arrangements are wrong:
+especially in those cases where the work is done voluntarily for fair
+pay.</p>
+
+<h2><a name="Alt">4. Altruism</a></h2>
+
+<p>
+
+A very different style of argument against organ sale appeals to the
+supposed value of altruism. These arguments arise in a number of
+different forms, but most of them have the following underlying
+structure:</p>
+<ol>
+<li>Altruism is a good thing, either intrinsically, or because of its
+positive effects (or both).</li>
+
+<li>
+Permitting and/or practicing organ sale would lessen the amount of
+altruism in the world.</li>
+
+<li>
+ So we
+ought not to permit and/or practice organ sale.</li>
+</ol>
+
+<h3><a name="AltAlwGooThi">4.1 Is altruism (always) a good thing?</a></h3>
+
+<p>
+
+Altruism is usually defined as acting out of a concern for the
+well-being of others (Nagel 1970; Scott &amp; Seglow
+2007). Why might one think that such actions are morally good? Two
+main answers are available. The first is that altruism is intrinsically
+good and to be contrasted with morally bad charconcern for the
+well-being of others (Nagel 1970; Scott &amp; Seglow
+2007). Why might one think that such actions are morally good? Two
+main answers aacteristics and
+motivations, in particular selfishness. The second (which is not
+incompatible with the first) says that altruism is good because of its
+positive effects, not only its direct effects on the person to whom the
+altruism is directed but also its indirect effects on society.
+Both answers have considerable plausibility. Many examples of
+acting out of disinterested concern for the well-being of others do
+seem to be clear-cut cases of moral virtuousness. And it seems
+likely that, all other things being equal, a society with more
+altruistic acts would be a better place to live than one with
+fewer.</p>
+
+<p>
+
+That said, two reservations about the claim that altruism is a good
+thing should be noted. First, altruistic acts are not always morally
+good. Scott and Seglow (2007, 2) give the following very
+pertinent example:</p>
+<blockquote>
+<p>
+Consider the racist organ donor &hellip; who wishes to donate their
+organs, but only to those of their own race. They are altruistic
+but hardly moral.</p>
+</blockquote>
+
+<p>
+Indeed, there seem to be several ways in which an altruistic act might
+be wrong. For example:</p>
+<ol>
+<li> The
+altruist is culpably mistaken about what is really in the interests of
+the person s/he is trying to help and ends up harming rather than
+helping.</li>
+
+<li>
+ The
+altruist benefits the person s/he is trying to help, but her
+intervention isp>
+<ol>
+<li> The
+altruist is culpably mistaken about what is really in the interests of
+the person s/he is trying to help and ends up harming rather t wrongfully paternalistic.</li>
+
+<li>
+The
+altruist benefits the person s/he is trying to help, but in so doing
+wrongfully harms innocent third parties.</li>
+</ol>
+<p>
+It is not hard to come up with examples in which <em>A</em> loves <em>B</em> so much that
+<em>A</em> is prepared to do bad things to a third party, <em>C</em>, in order to benefit
+<em>A</em>. Such cases range from minor wrongdoing to serious evil. So, as
+McLachlan (1998) points out, while many acts of altruism are paradigm
+cases of virtue, others are &lsquo;extremely wicked&rsquo;.</p>
+
+<p>
+In defence of the value of altruism, it could be argued that even
+though many altruistic acts are wrong, all things considered,
+nonetheless altruism is always a positive (or
+&lsquo;right-making&rsquo;) characteristic. On this view, the
+analysis of Scott and Seglow's racist donor example is that,
+while his racism is to be condemned, his altruism is not and that, in
+the case of racist donation (assuming that this really is wrong, all
+things considered), the &lsquo;negative&rsquo; racism simply
+<em>outweighs</em> the &lsquo;positive&rsquo; altruism. If this
+view is correct, then the claim that some altruistic acts are wrong
+becomes less relevant than it might at first appear, since what matters
+is the value of altruism as a <em>positive moral property</em> of
+actions, not whether all altruistic acts are good orw is correct, then the claim that some altruistic acts are wrong
+becomes less relevant than it might at first appear, since what matters
+is the value  permissible
+<em>all things considered</em>.</p>
+
+<h3><a name="WouOrgSalDisRedAlt">4.2 Would organ sale displace or reduce altruism?</a></h3>
+<blockquote>
+<p>
+&hellip; if to a voluntary blood donor system we add the possibility of
+selling blood, we have only expanded the individual's range of
+alternatives. If he derives satisfaction from giving &hellip; he can
+still give, and nothing has been done to impair that right
+(Arrow 1972, 350).</p>
+</blockquote>
+
+<p>
+
+As the quotation from Arrow (above) suggests, there is a puzzle
+about why permitting payment for blood or organs should be thought to
+reduce the amount of altruism in the world. For why
+couldn't paid and unpaid donation systems peacefully coexist,
+with people who want to give freely continuing to do so? Furthermore,
+paid donations may even add to the amount of altruism in the world. For
+there can be cases in which a person sells an organ not for
+&lsquo;selfish&rsquo; reasons, but in order to pay (for example) for
+someone else's medical care (Brecher 1994).</p>
+
+<p>
+
+Given this, how exactly will allowing organ sale lead to there being
+less altruism in the world? The main answer given is that it would
+undermine the practice of free donation. Abouna (1991, 167), for
+example, claims that there is:</p>
+<blockquote>
+<p>
+&hellip; considerable evidence to indicate that marketing in human
+organs will eventually deprecate and destroy the present willingness of
+members of the public to donate their organs out of altruism.</p>
+</blockquote>
+
+<p>
+
+One explanation for this is that when we give people financial
+incentives to do some act this undermines or reduce the extent to which
+they feel morally obliged to do that act. In this way, financial
+incentives &lsquo;crowd out&rsquo; altruism (Satz 2010, 193).</p>
+
+<p>
+
+But is it really true that kidney sale would undermine the practice
+of free donation? Well, it <em>could</em> do and ultimately this
+is a contested empirical matter about which, as a mere
+philosopher, one ought not to claim to have an authoritative
+view. That said, it is worth tentatively noted a number of
+reasons for being sceptical about the suggestion that kidney sale would
+undermine the practice of free donation.</p>
+<p>
+
+The most important of these is that, at least as far as living
+donation is concerned, there is not a very large practice out there to
+be undermined. Given the pain, risk, and inconvenience involved,
+free donation (except by relatives to one another) is likely to remain
+a minority pursuit. Having said that, living donation is on the
+rise and a paper in <em>Kidney International</em> reports that in 2006,
+27,000 related and unrelated legal living donor kidney transplants were
+performed worldwide, &ldquo;representing 39% of all kidney
+transt. Having said that, living donation is on thplants&rdquo;. The same paper reports that &ldquo;the number
+of living kidney donor transplants grew over the last decade, with
+62% of countries reporting at least a
+50% increase&rdquo; (Salimah 2009). However, given
+the figures cited earlier about the scale of unmet need and waiting
+lists, even these advances seem unlikely to deliver the number of
+organs required in the foreseeable future. So, even if some
+altruistic donations are lost as a result of sale being permitted,
+given the limited scale of altruistic living donation, this may be a
+worthwhile trade-off. Furthermore, as was noted above, there is
+nothing to stop a living donor being paid and giving the money away
+altruistically, thus increasing the extent of her
+&lsquo;gifting&rsquo;.</p>
+
+<p>
+
+Kidneys may then be importantly different from (say) blood. For if
+there is no substantial system of free donation in place, then free
+donation cannot be undermined by permitting sale. But if an almost
+adequate system of free donation does exist (as, in many countries, it
+does with blood) then there is a serious possibility of its being
+undermined. Thus, the argument which says that what is wrong with sale
+is that free donation would be undermined might well work for blood,
+even if it does not for kidneys. The same might be true of the
+arguments in favour of an altruistic blood system proposed by Titmuss
+and otgument which says that what is wrong with sale
+is that free donation would be undermined might well work for blood,
+even if it does not for kidneys. Thers. Perhaps the voluntary blood donation system (and
+indeed a voluntary posthumous organ donation system) can be used as a
+method of encouraging a valuable culture of altruism, but this is much
+less likely to work in the case of living organ donation
+(Archard 2002; Campbell 2009; Titmuss 1997).</p>
+<p>
+
+This difference between kidneys and blood reveals a general
+structural difficulty for altruism arguments against sale. For altruism
+arguments (insofar as they work at all) work better for those things
+which are already freely donated on a large scale, than for those
+things which are hardly freely donated at all. Hence, they will tend to
+be most successful where, in a sense, they are needed least&mdash;because if there is already widespread free donation, then
+commercialization will be unnecessary. This is not a decisive
+objection, since there are things which are in short supply in spite of
+widespread free donation (blood and sperm might be examples of this).
+But it is a problem for this style of argument because there will be a
+tendency for it to be least successful where it is most needed
+(Radcliffe Richards 1996, 2009; Wilkinson &amp; Moore
+1999).</p>
+
+<h3><a name="AltSupDutRes">4.3 Altruism, Supererogation, and Duties to Rescue</a></h3>
+
+<p>
+
+However, even if altruism can survive this first challenge, there is a second reason to question its importance rds 1996, 2009; Wilkinson &amp; Moore
+1999).</p>
+
+<h3><a name="AltSupDutRes">4.3 Altruism, Supererogation, and Duties to Rescue</a></h3>
+
+<p>
+
+Howeverfor the debate about the permissibility of organ
+sale. This is the distinction between cases in which altruism is <em>obligatory</em> (where there is a moral duty to help others) and those in which altruism is
+<em>supererogatory</em> (morally good, but not morally required&mdash;going &lsquo;above and beyond&rsquo; one's
+duty) (Wilkinson 2003). This distinction is relevant for the
+following reason. If (say) altruistic kidney donation were morally
+obligatory, then to demand money for one's organ (and, arguably,
+to accede to such a demand) would be wrong. But if, on the other hand,
+altruistic donation were supererogatory, then to demand money for
+one's organ would not be wrong. Rather, it would be merely
+non-supererogatory: perhaps not <em>good</em>, but not <em>wrong</em>.
+So, with this distinction in place, one might (at least in some cases)
+accept that altruistic donations are good whilst also saying that there
+is nothing wrong with non-altruistic donation&mdash;the point being
+that non-altruistic donation, while not as good as altruistic donation,
+is nonetheless (morally) permissible. This has implications for the
+sort of altruism argument which can be made against organ sale. If it
+could be shown that altruistic donation is obligatory then the argument
+would be stronger, or at least more straightforward, because it would
+follow that selling was wrong (it  for the
+sort of altruism argument which can be made against organ sale. If it
+could be shown that altruistic donation is obligatory then the argumentis wrong to demand money for what one
+ought to be giving freely anyway). But if all that could be shown was
+that altruistic donation is good, then it would not follow from this,
+or at least it would not follow directly, that selling is wrong. For it
+might be merely non-supererogatory (Wilkinson &amp; Garrard
+1996).</p>
+
+<p>
+
+This may be one area then where the differences between different
+possible organ sale systems are relevant. For it is not wildly
+implausible to posit the existence of a duty to donate one's
+organs for posthumous transplantation. Indeed, this view is not
+confined to utilitarian bioethicists, with even the Church of England
+stating in 2007 that (posthumous) organ donation is a Christian
+duty (BBC News Online 2007). Thus there may well be a valid
+altruism argument against a system in which people sell rights to their
+body after death: the argument being that they should donate them
+anyway without expecting payment. This style of argument looks
+less promising, though, when looking at non-directed living kidney
+donation (to strangers). Here, I suspect most of us want to say
+that becoming such a donor is heroic and supererogatory, not a moral
+obligation, and so the altruism argument does not engage. Another
+interesting example is blood (from living donors). In many
+countries, there is a widespread view that people ought to do this
+freely and ( a donor is heroic and supererogatory, not a moral
+obligation, and so the altruism argument does not engage. Another
+interesting example is blood (froif this view is correct) this could underpin an altruism
+argument against paying for blood: the claim being that people ought
+not to be paid for that which they have an obligation freely to
+give.</p>
+
+<h2><a name="IndCon">5. Inducements and Consent</a></h2>
+<p>
+
+Monetary incentives, it is sometimes argued, make valid consent
+difficult, impossible, or problematic (Radcliffe Richards
+2010). Some of the main arguments offered for this view are that&mdash;</p>
+
+<ol style="list-style-type: lower-alpha">
+<li>Financial incentives encourage people to do things that they would
+not otherwise do.</li>
+
+<li>Financial incentives encourage people to do things that are likely
+to be harmful to them and which go against their &lsquo;better
+judgement&rsquo;.</li>
+
+<li>Financial incentives can make people's actions, consents, and
+decisions less autonomous or less voluntary (Wilkinson 2005).</li>
+</ol>
+<p>
+
+(a) will not work. For the fact that payments encourage people
+to do things that they otherwise would not does not, in and of itself,
+invalidate consent. If it did, consent problems would be endemic
+and occur every time someone was encouraged by payment to go to work
+for wages or to surrender property for a price. So although some people
+would only provide organs because of the money, this fact alone would
+not invalidate consent.</p>
+
+<p>
+
+(b) is more plausible. Or at least one was encouraged by payment to go to work
+for wages or to surrender property for a price. So although some people
+would only provide organs because it is plausible to suppose
+that we ought not to encourage donors to subject themselves to more
+than a certain level of danger. But the fundamental problem with
+this would be not payment or consent, but rather the fact that they are
+exposed to too much danger. So, provided that we have an adequate
+way of controlling and regulating risk to organ sellers this particular
+worry about payment ought not to arise.</p>
+
+<p>
+
+This is supported by the following two additional
+considerations.</p>
+
+<p>
+
+First, as mentioned earlier, the amount of danger remains the same
+regardless of whether or not payment takes place. So if someone
+objects to paying donors on the grounds that payment will encourage
+excessive risk-taking, s/he ought to object to donation itself
+(including free donation) not just the payment. Imagine someone
+who objects to paying astronauts on the grounds that it encourages them
+to do something excessively dangerous. Surely we should say to
+her that, if the objection is danger, s/he should object to space
+travel <em>in general,</em> not (just) to <em>paid</em> space
+travel. Much the same goes for paying organ donors. If the
+worry is danger, we should object to dangerous donation of all kinds,
+not just the paid variety.</p>
+
+<p>
+
+Second, it is not clear that monetary incentives make people act
+against their better interests or judgement. Indeed, this is a
+rgan donors. If the
+worry is danger, we should object to dangerous donation of all kinds,
+not just the paid variety.</p>
+
+<p>
+
+Second, it is not clear ather surprising view to take since people trade off monetary gains
+and losses against other factors on a daily basis; commerce and work
+require us to do this all the time. So if an adequately informed
+and competent person decides, after deliberation, that it is worth
+subjecting herself to a given risk in return for $5,000 then we should
+not just assume that s/he is acting against her better judgement since,
+for all we know, the $5,000 is more valuable to her than avoiding the
+risk (Wilkinson 2005).</p>
+
+<p>
+
+Finally, there is (c): the idea that financial incentives make
+people's decisions (or consents) less voluntary. The
+thought here is that certain sorts of payment, or payment in certain
+circumstances, exert undue influence on a person's
+decision (Nuffield Council on Bioethics 2002). Accusations
+of undue inducement almost always occur in one of two different
+contexts. The first is where the &lsquo;victim&rsquo; of the inducement
+is in desperate need of money; the second is where the
+&lsquo;victim&rsquo; is not desperate, but is offered such a huge
+amount of money to do <em>X</em> that doing <em>X</em> becomes almost irresistible.
+Wilkinson terms these &lsquo;desperate offeree&rsquo; cases and
+&lsquo;enormous offer&rsquo; cases. One notable thing that these have
+in common is that there is a huge gap between the offeree's
+welfare-level if s/he does not acceomes almost irresistible.
+Wilkinson terms these &lsquo;desperate offeree&rsquo; cases and
+&lsquo;enormous offer&rsquo; cases. One notable thing that tpt the offer, and her welfare-level
+if s/he does accept (Wilkinson 2003).</p>
+<p>
+
+Is valid consent possible in these cases? In both scenarios it
+may be terrifically hard to decline. However this does not mean
+that valid consent to the offer is impossible. Radcliffe Richards
+(2010, 291) makes the point as follows:</p>
+<blockquote>
+<p>
+It does not normally occur to us that people coerced by circumstances
+into doing things they would not otherwise do should have their consent
+regarded as invalid. If you have cancer, with the choice between
+risking its unchecked progression and putting up with pretty nasty
+treatments, nobody would think of arguing that the narrow range of
+options made your consent to treatment invalid.</p>
+</blockquote>
+<p>
+
+So even if we grant that the recipients of enormous offers and
+desperate offerees will find it hard to refuse, this does not mean that
+they cannot validly consent. This must be so. Otherwise, it would be
+impossible for anyone ever to consent validly to lifesaving operations,
+not to mention lottery &lsquo;jackpot&rsquo; wins or large wage rises;
+the mere fact that a proposal is tremendously attractive does not mean
+that it cannot be voluntarily accepted.</p>
+<p>
+
+A slightly different tack is to invoke the idea of coercion by
+circumstances, specifically coercion by poverty (Annas 1984;
+Torcello &amp; Wear 2000). Thus, someone is tremendously attractive does not mean
+that it cannot be voluntarily accepted.</p>
+<p>
+
+A slightly different tack is to invoke the idea of coercion might argue that
+even though valid consent from &lsquo;desperate&rsquo; people is
+possible in principle for the reasons just given, consent will normally
+be invalid when the person consenting (e.g., to selling her kidney) is
+coerced by poverty. The difference between coercion by poverty
+and Radcliffe Richards' cancer example is supposed to be that
+whereas the cancer is a morally neutral natural occurrence, the poverty
+(at least in some cases) is the result of immoral acts and policies; it
+is unjust poverty.</p>
+<p>
+
+One initial response to the &lsquo;coercion by poverty&rsquo; refers
+us back to the fact that almost all defenders of organ sale are arguing
+not for unfettered international trafficking in transplant organs but
+rather for a regulated system of compensation. Within the context
+of a regulated system (particularly that advocated by Erin and Harris,
+which would be limited to one economic area) there is no reason to
+believe that most organ sellers would be desperately poor. Organ
+sale may admittedly be more attractive to those with the least money
+(for why would someone rich need or want to sell an organ?) but then
+much the same can be said of some of the least sought-after and worst
+paid agricultural and cleaning jobs, and we do not generally say that
+people cannot consent to do these or that these types of employment
+should be banned.</p>
+
+<p>
+
+Butrgan?) but then
+much the same can be said of some of the least sought-after and worst
+paid agricultural and cleaning jobs, and we do not generally say let us allow for the sake of argument that organ vendors would
+be very poor. What would follow from this? Poverty (or
+threatening poverty) can clearly be a method of coercion. An
+obvious example of this is the behaviour of exploitative employers
+during times of high unemployment. They can threaten workers with
+unemployment&mdash;and, hence, poverty&mdash;if they do not comply
+with their demands (Wilkinson 2003). The position of the
+prospective organ buyer though seems rather unlike that of the
+exploitative employer and, as Wilkinson and Moore (1999, 378) point
+out:</p>
+<blockquote>
+
+<p>
+
+&hellip; it is a necessary condition of an offer's being
+coercive that the offerer is also responsible for the bad circumstances
+of the offeree. For example, if we poison you and then offer to provide
+the only available antidote in exchange for your stamp collection, that
+is coercive. If you are poisoned in a way for which we are not
+responsible, and we make the same offer, that is not coercive &hellip;
+as long as those making an offer are not responsible for the
+circumstances of the potential subjects, their offer is not
+coercive.</p>
+</blockquote>
+
+<p>
+
+So in order for prospective organ purchasers to be coercing through
+poverty, they must be responsible for the poverty. This need not
+mean that they caused the poverty, for people may be responsible for
+(improving or prevenoercive.</p>
+</blockquote>
+
+<p>
+
+So in order for prospective organ purchasers to be coercing through
+poverty, they must be responsible for the povertyting) situations that they have not themselves
+caused. Hence, another scenario in which the buyers may be
+responsible is if they have a positive duty to rescue the prospective
+sellers from poverty (and &lsquo;for free&rsquo; rather than in
+exchange for an organ).</p>
+
+<p>
+
+An illuminating analogy is Nozick's Drowning Case
+(Nozick 1969, 449). This is a situation in which <em>P</em> (the occupant
+of a boat) offers to save <em>Q</em> (who is drowning close to the boat) but
+only if <em>Q</em> promises to pay <em>P</em> $10,000 within three days of reaching
+shore. One view of this case is that <em>P</em> coerces <em>Q</em> (into paying) if and
+only if <em>P</em> has a freestanding duty to save <em>Q</em> without reward.
+Whether <em>P</em> does in fact have such a duty is not something we need to
+decide upon here and that will depend upon a wide range of facts about
+the situation.</p>
+
+<p>
+
+Organ vendors then are somewhat like the person in the boat.
+If they have an independent duty to alleviate the poverty (i.e., a duty
+that does not depend on their getting an organ in return) then to
+insist on an organ for the money (when they should have been giving the
+money anyway) would be coercive. It would be like charging
+someone who would otherwise drown in a situation where there is a duty
+freely to rescue.</p>
+
+<p>
+
+It is not hard to see how, in principle, this style ooney (when they should have been giving the
+money anyway) would be coercive. It would be like charging
+someone who would otherwise drown in a situatiof coercion
+argument could work against organ sale. What is much harder is working
+out whether, in most of the cases envisaged, organ buyers have a duty
+to alleviate the poverty. The case most often discussed is where
+the organ purchaser is a rich Westerner and the vendor is someone
+desperately poor from the developing world. The Westerner, it is
+said, uses poverty to &lsquo;force&rsquo; (coerce) the poor person into
+giving up the organ. This <em>may</em> be the case if the
+Westerner has a duty to alleviate the prospective organ seller's
+poverty. But, as well as difficult general questions about global
+distributive justice and the like, there is also the question of
+whether the individual in question is directly responsible for alleviating the
+other's poverty in these cases. The problem with
+attributing responsibility to individual organ purchasers is that the
+extent to which they have a positive &lsquo;duty to rescue&rsquo; those
+in dire poverty may vary enormously depending on their own positions of
+wealth and power, and on the extent to which they have already done
+virtuous things in an attempt to act on their duties towards the poor.
+For example, a Western organ purchaser could have already devoted a
+large part of her income and time to charitable projects aimed at the
+alleviation of poverty and may herself have relatively little money&mdash;just enough their duties towards the poor.
+For example, a Western organ purchaser could have already devoted a
+large part of her income and time to charitable projo buy a kidney. Do we really want to say that such
+a person has a duty to give her money to the prospective organ vendor
+without receiving the kidney (without which she may well die) in
+return?</p>
+
+<p>
+
+A more promising option is to focus on groups rather than
+individuals. One might argue, for example, that the rich nations have a
+duty to alleviate poverty in the poor nations. With this (plausible)
+assumption in place, it could then be argued that when the rich nations
+collectively offer the poor nations money (but only) in return for
+organs, this is not really an offer, but rather a threat (a threat to
+wrongfully withhold resources if they do not hand over organs).
+The rich nations (it is argued) should be giving the money anyway, not
+demanding organs in return for it. So what the rich nations are doing
+is threatening to withhold resources to which the poor nations have a
+moral right, unless the poor nations hand over organs: a seemingly
+clear case of coercion.</p>
+
+<p>
+
+However, there is a further problem with the &lsquo;coercion by
+poverty&rsquo; argument&mdash;or at least there is a serious problem
+with attempting to use it specifically as an argument for the legal
+prohibition of organ sale. The problem is that the argument works
+equally well against all trade between the rich nations and the poor
+ones. For (in simplistic terms) if the rich nations have attempting to use it specifically as an argument for the legal
+prohibition of organ sale. The problem is that the argument works
+equally well against a duty to give
+resources to the poor nations, then any time that the rich nations
+insist on trading rather than donating, they will be practicing
+coercion&mdash;threatening to withhold money that they should be
+giving anyway, unless they are provided with goods of one sort or
+another. And, as far as the coercion argument is concerned, there is no
+reason to single out the trade in organs for special treatment. This
+looks like a decisive objection to the coercion argument. Either it
+does not work at all, or it works but &lsquo;proves too much&rsquo; and
+gives us no reason to single out organ sale for condemnation and/or
+prohibition.</p>
+
+<p>
+
+One possible reply to this is to make a distinction between forms of
+global trade which benefit developing world economies and societies and
+those which do not. One might then argue that a difference
+between the organ trade and (say) the development of hi-tech
+manufacturing is that only the latter has the potential to economically
+emancipate populations in the longer-term, whereas buying an organ is
+merely a &lsquo;resource grab&rsquo; with no positive side-effects on
+socio-economic development. Like many of the other arguments
+discussed in this entry, much depends on the how the empirical evidence
+shapes up, but this response does seem to have some plausibility.
+However, it could still be claimed that the international cio-economic development. Like many of the other arguments
+discussed in this entry, much depends on the how the empirical evidence
+shapes up, but thisorgan trade
+is no worse (as far as the quality of consent is concerned) than any
+other form of international trade which fails to positively contribute
+to long-term development. So perhaps the organ trade is (in this
+respect) on a par with logging, or mining, or some basic forms of
+agriculture.</p>
+
+<p>
+
+Perhaps more importantly, though, we must remember that, in any
+case, most of these concerns about coercion and poverty can be dealt
+with by having a controlled system such as the Erin-Harris
+proposal. Of course it is not the case that there is no unfair
+poverty within the Western countries that they have in mind. And
+so, even under the Erin-Harris system, some account would have to be
+taken of the coercion by poverty argument. Perhaps, for example,
+we would want to say that, in order for the national organ purchasing
+agency not to be coercing-by-poverty it needs to be the case that there
+is a minimum wage law and a welfare state that are at least close to
+being fair, so that there is no poverty in society for which the state
+is morally responsible (either actively or by omission). This is
+probably a lot to ask but then we must remember that any actual organ
+sale system, along with all other aspects of the economy, is unlikely
+to be perfect; and, provided that the organ sale system is not
+substantially more exploitative or harmful than most other widely
+acceask but then we must remember that any actual organ
+sale system, along with all other aspects of the economy, is unlikely
+to be perfect; and, providedpted economic transactions then it would seem arbitrary and unfair
+to single it out for particular condemnation or prohibition.</p>
+
+<p>
+
+Finally, Radcliffe Richards offers an argument to the effect that
+even if there is a consent problem caused by &lsquo;coercion through
+poverty&rsquo; (a claim about which she is sceptical) this is unlikely
+to be a sound basis for <em>prohibiting</em> sale. She asks us to
+consider a case in which your daughter is kidnapped. The
+kidnappers ask for a ransom in return for your daughter's
+life. Clearly, your consent to this arrangement (if forthcoming)
+would be invalid because coerced. But&mdash;</p>
+<blockquote>
+
+<p>
+Suppose the police appeared on the kidnapping scene and prevented you
+from signing the [ransom payment] document, perhaps with the outcome
+that your child was shot. They might have good public policy
+reasons for doing this &hellip; but it would be preposterous for them
+to claim that they were doing it because the consent you were trying to
+give would be invalid &hellip; [T]he whole point of declaring
+invalidity is to protect the alleged consenter, and here the police
+would actually be compounding the wrong done to you by constricting
+still further the range of options already constricted by the
+kidnapper (Radcliffe Richards 2010, 294).</p>
+</blockquote>
+
+<p>
+
+According to Radcliffe Richards, this is analogous to tice
+would actually be compounding the wrong done to you by constricting
+still further the range of options already constricted by the
+kidnapper (Radclhe situation
+in which state action is used to prevent organ sale. As with the
+kidnapping, there may be legitimate reasons for such state action (for
+example, if the police suspect that the organ purchaser's surgeon
+is planning to take several organs and then kill the organ
+vendor). However, the invalidity of the seller's consent
+(due to poverty) would not in and of itself be a sufficient reason for
+state intervention in these circumstances.</p>
+<blockquote>
+
+<p>
+Since the metaphorical coercer (poverty) is still present, and the
+individual is making the best choice among a still-constricted range of
+options, disallowing the choice is like preventing you from meeting the
+demands of the kidnapper while he still has your child
+(Radcliffe Richards 2010, 294).</p>
+</blockquote>
+
+<p>
+
+So <em>even if</em> there is a quality of consent problem in these
+organ sale cases this is unlikely to justify prohibition.</p>
+
+<h2><a name="ExpInsObj">6. Exploitation, Instrumentalisation, and Objectification</a></h2>
+
+<p>
+
+Organ sale is commonly accused of being exploitative. Saying
+what exploitation amounts to is itself a complex task, however, and I
+will not say much here about how it should be defined (see
+the SEP entry on <a href="../exploitation/">exploitation</a>). 
+It is, however, worth noting
+that, on one view, defective (or invalid) consent is a necessary
+condition for th task, however, and I
+will not say much here about how it should be defined (see
+the SEP entry on <a href="../exploitation/">exploitation</a>). 
+It ise occurrence of exploitation. Thus (according to
+this view) a transaction can only be exploitative if the putative
+victim of exploitation is coerced, lacking capacity, ill-informed, or
+manipulated (or more generally, if there is some consent-invalidating
+factor in play). If this view of the relationship between consent
+and exploitation were correct, then the discussion of exploitation
+could be ended here; for consent issues were dealt with in the previous
+section and the exploitation worry about organ sale would only be worth
+taking seriously inasmuch as those consent arguments discussed above
+were sound. However, not everyone thinks that defective consent
+is required for there to be exploitation and so there may be some
+mileage in looking independently at exploitation.</p>
+
+<p>
+
+Similar thoughts apply to the unjust distribution of benefits and
+burdens. One view is that a transaction can only count as
+exploitative if the relevant benefits and burdens are unfairly
+distributed in favour of the exploiter and/or against the
+exploited. With this in mind, Harris (Harris 1985, 120) usefully
+distinguishes between two kinds of exploitation-claim. The
+first:</p>
+<blockquote>
+
+<p>
+&hellip; involves the idea of some disparity in the value of an
+exchange of goods and services.</p>
+</blockquote>
+
+<p>
+Exploitation concerns of this kind, or at least most of them, can be
+tako kinds of exploitation-claim. The
+first:</p>
+<blockquote>
+
+<p>
+&hellip; involves the idea of some disparity in the value of an
+exchange of goods and en care of by utilizing some version of the Erin-Harris proposal
+(discussed above) since this is designed to ensure that organ
+sellers receive just rewards and adequate care, whilst also going a
+long way towards ensuring that the distribution of organs to transplant
+recipients is fair. And while there may be some practical
+obstacles to creating such a system there seem no reasons to suppose
+that it is impossible in principle.</p>
+
+<p>
+There is, however, another sense of &lsquo;exploitation&rsquo;.
+This is:</p>
+<blockquote>
+
+<p>
+&hellip; the idea of <em>wrongful</em> use and may occur when there are
+no financial or commercial dimensions to the transaction. A classic
+case here would be where it is claimed that lovers may exploit one
+another, that is, use one another in some wrongful way. The most
+familiar of such wrongful ways in this context might be where it is
+claimed that one partner uses the other or treats the other merely as a
+&lsquo;sex object&rsquo; (Harris 1985, 120).</p>
+</blockquote>
+
+<p>
+
+Similarly Goodin (1987, 166) notes that:</p>
+<blockquote>
+
+<p>
+
+Lovers can exploit one another just as surely as can economic
+classes. Yet neither party in an affectionate relationship is
+functioning in any standard sense as a &lsquo;factor of
+production&rsquo;. Nor, since neither party is creating valuable
+objects in any ordinary respect, does it in that contextas can economic
+classes. Yet neither party in an affectionate relationship is
+functioning in any standard sense as a &lsquo;factor of
+production&rsquo make much
+sense to define exploitation in the standard economics-based terms
+&hellip;</p>
+</blockquote>
+
+<p>
+
+So it looks as if (in Harris's terms) &lsquo;wrongful
+use&rsquo; exploitation is independent of some of the usual concerns
+about distributive justice and could persist even within a
+distributively fair organ sale system. Exploitation of this
+second kind is closely related to, or even the same as, a number of
+other concepts or terms (Wilkinson 2003). One of these is
+<em>objectification</em>: wrongfully treating something (or someone)
+that is not a mere object as if it were a mere object. Another is
+<em>instrumentalisation</em>, which can be similarly defined as
+treating something (or someone) that is not a mere means as if it were
+a mere means. These ideas are closely connected to the Kantian
+idea of dignity. As Dillon (2010) puts it, on this view:</p>
+<blockquote>
+
+<p>
+To be a person is to have a status and worth that is unlike that of any
+other kind of being: it is to be an end in itself with dignity. And the
+only response that is appropriate to such a being is respect.</p>
+</blockquote>
+
+<p>
+
+Instrumentalisation in particular (failing to treat someone as an
+&lsquo;end&rsquo;) is a failure to respect a person's
+dignity.</p>
+
+<p>
+
+So we have the claim that a certain kind of exploitation,
+objectification, or instrumentalisation, could occur within
+dirumentalisation in particular (failing to treat someone as an
+&lsquo;end&rsquo;) is a failure to respect a person's
+dignity.</p>
+
+<p>
+
+So we have the stributively fair transactions. How might this apply in the
+case of organ sale? Specifically, how could these ideas underpin
+a sound moral argument against organ sale?</p>
+
+<p>
+
+In common with some of the arguments considered earlier, attempts to
+use these ideas in an argument against organ sale run up against two
+problems. First, there is the similarity of (free) donation and
+sale. Let us say that someone objects to organ sale (even where
+there is consent and distributive justice) on the grounds that the
+seller's body (organ) or the seller herself is objectified or
+instrumentalised. This immediately raises the question of why the
+very same consideration does not apply to (free) donation, which is
+standardly thought to be admirable rather than morally dubious.
+For in both cases, a part of the donor's (or vendor's) body
+is removed and treated (quite possibly solely) as a means by the
+recipient and the transplant team.</p>
+
+<p>
+
+Then, second, there is the question of consent. For can we
+really make sense of someone being instrumentalised or objectified (in
+the relevant normative or pejorative senses of these terms) if what is
+done to them is done with valid consent, and especially if what is done
+to them would not have been done but for their giving of valid
+consent? So one possible principle that we might wish to endorse
+here is that:</p>
+
+<blockquote>
+<p>
+Iferms) if what is
+done to them is done with valid consent, and especially if what is done
+to them would not have been done but for their giving of vali <em>A</em> requires and obtains from <em>B</em> valid consent to do <em>x</em> to <em>B</em>, that is
+sufficient to guarantee that, in doing <em>x</em> to <em>B</em>, <em>A</em> does not wrongfully
+instrumentalise or objectify <em>B</em>.</p></blockquote>
+
+<p>Or, to put it another way, as with the other sort of
+exploitation discussed above, perhaps even instrumentalisation and
+objectification turn out to rely on defective consent: or perhaps
+rather on the fact that the putative instrumentaliser (objectifier)
+does not care about or require valid consent. Alternatively we
+might make this principle slightly more cautious and include a
+substantial harm constraint as follows:</p>
+
+<blockquote>
+<p>
+If <em>A</em> requires and obtains from <em>B</em> valid consent to do <em>x</em> to <em>B</em>,
+<em>and</em> if doing <em>x</em> to <em>B</em> will not substantially harm <em>B</em>, that is
+sufficient to guarantee that, in doing <em>x</em> to <em>B</em>, <em>A</em> does not wrongfully
+instrumentalise or objectify <em>B</em>.</p></blockquote>
+
+<p>To help think through these principles consider the case of
+Manuel Wackenheim. Wackenheim is a (so-called) &lsquo;dwarf&rsquo; who
+(until a ban was imposed by the local mayor) made a living from being
+&lsquo;tossed&rsquo; by customers in bars and nightclubs. This
+&lsquo;tossing&rsquo; formed part of a dwarf throwing competitinheim. Wackenheim is a (so-called) &lsquo;dwarf&rsquo; who
+(until a ban was imposed by the local mayor) made a living from being
+&lsquo;tossed&rsquo; on&mdash;a sport &lsquo;in which the aim of the competitors is to fling
+a dwarf over the furthest distance possible&rsquo; (Millns 1996,
+375). Wackenheim appeared keen to pursue his chosen career and
+didn't welcome the ban on dwarf throwing, saying &lsquo;this
+spectacle is my life; I want to be allowed to do what I
+want&rsquo;.</p>
+
+<p>Wackenheim can be regarded both as intrinsically valuable
+as a person but also as instrumentally valuable as an object
+(specifically as a projectile). That is, there is no reason in
+principle why a friend of his could not both respect him as an
+&lsquo;end&rsquo; and recognise the fact that his body is formed in a
+way which makes it instrumentally valuable to &lsquo;dwarf
+throwers&rsquo;. But could Wackenheim's friend <em>actually use
+him</em> as a projectile, whilst at the same time respecting the fact
+that he is a person or (in Kantian terms) an end-in-himself? It
+is the overall context of the relationship, along with other structural
+features of the situation, which determine whether he is appropriately
+respected. Surely this must be right, for it would be extraordinarily
+hard to argue plausibly that it is impossible, in all contexts, to use
+Wackenheim as a projectile whilst at the same time respecting his
+personhood. For what if he enjoys being thrown, gets paid for it, and
+freely and knowingly consents to it? If for these rd to argue plausibly that it is impossible, in all contexts, to use
+Wackenheim as a projectile whilst at the same time respecting his
+personhood. Forreasons&mdash;i.e.,
+because I want to ensure that he derives pleasure and money, and am
+certain that it is what he really wants etc.&mdash;I throw him, then
+there seems no basis whatsoever for saying that I am failing to respect
+his personhood. For in such a case, I am (let us assume) deliberately
+giving him what he wants (and wants in a free, informed and otherwise
+autonomous way) and deliberately benefiting him. How can this be a
+failure to recognise his status as an &lsquo;end&rsquo;?</p>
+
+<p>
+
+It is difficult to see how it could be. Although we should add two
+caveats. First, this doesn't rule out the existence of other
+separate moral objections to &lsquo;dwarf throwing&rsquo;. Second,
+there certainly are contexts in which this practice would constitute
+wrongful instrumentalisation. These may include cases in which the
+people thrown are substantially harmed and cases in which they do not
+consent or in which their consent is invalid. Indeed, this is the main
+point. What does all the ethical work here is context: in particular
+issues relating to the existence and quality of the
+&lsquo;dwarf's&rsquo; consent&mdash;and perhaps also those
+relating to harm and welfare.</p>
+
+<p>
+
+Much the same goes for organ sale, or indeed (unpaid) organ
+donation. When we look at a person with a view to using her
+organs for transplantation we are of course viewing at least the &mdash;and perhaps also those
+relating to harm and welfare.</p>
+
+<p>
+
+Much the same goes for organ sale, or indeed (unpaid) organ
+donation. When we loorgan,
+or possibly even the person, as a means to an end, and as a useful
+object. But this is not inconsistent with also respecting the
+person's dignity and viewing her as an end-in-herself provided
+that we take seriously the person's rational agency by requiring
+her valid consent for the organ removal and by ensuring that any risk
+of harm is minimized and reasonable. The particular issues for
+organ sale (as opposed to free donation) then turn out to be those
+discussed at length in previous sections. Perhaps there is an
+increased risk that consent will be flawed in sale cases; if organ
+removal proceeded without proper consent then that could be a failure
+to respect the person. And perhaps there is an increased risk
+that harm will occur in sale cases; if so (and if the risk goes above a
+certain level) then perhaps this also would constitute a failure to
+respect the person. Thus the appeal to dignity,
+instrumentalisation, and objectification would seem merely to amplify
+some of the more routine concerns aired previously about consent and
+harm.</p>
+
+</div>
+
+<div id="bibliography">
+
+<h2><a name="Bib">Bibliography</a></h2>
+
+<ul class="hanging">
+
+<li>Abouna, G., 1991, &ldquo;The Negative Impact of Paid Organ
+Donation&rdquo; in W. Land &amp; J. Dossetor (eds.), <em>Organ
+Replacement Therapy: ethics, justice,</em> <em>commerce</em>, Berlin:
+Springer-Verlag, 1991.</ly</a></h2>
+
+<ul class="hanging">
+
+<li>Abouna, G., 1991, &ldquo;The Negative Impact of Paid Organ
+Donation&rdquo; in W. Land &amp; J. Dossetor (eds.), i>
+
+<li>Annas, G.J. 1984, &ldquo;Life, Liberty, and the Pursuit of Organ
+Sales&rdquo;, <em>Hastings Center Report</em>, 14:22&ndash;3.</li>
+
+<li>Archard, D., 2002, &ldquo;Selling Yourself: Titmuss's Argument
+Against a Market in Blood&rdquo;, <em>The Journal of Ethics</em>, 6:
+87&ndash;103.</li>
+
+<li>Arrow, K., 1972, &ldquo;Gifts and Exchanges&rdquo;, <em>Philosophy
+and Public Affairs</em>, 1: 343&ndash;362.</li>
+
+<li>Campbell, A., 2009, <em>The Body in Bioethics</em>, Abingdon:
+Routledge.</li>
+
+<li>BBC News Online, 2007, <em>Organ Donation &ldquo;a Christian
+Duty&rdquo;</em>.
+(<a href="http://news.bbc.co.uk/1/hi/health/7034487.stm" target="other">see BBC 2007 online</a>)</li>
+
+<li>Brecher, B., 1990, &ldquo;The Kidney Trade: or, the customer is
+always wrong&rdquo;, <em>Journal of medical Ethics</em>, 16:
+120&ndash;123.</li>
+
+<li>&ndash;&ndash;&ndash;, 1994, &ldquo;Organs for transplant: donation or
+payment?&rdquo; in R. Gillon (ed.), <em>Principles of Health
+Care Ethics,</em> Chichester: John Wiley and Sons,
+993&ndash;1002.</li>
+
+<li>Cameron, J. and R. Hoffenberg, 1999, &ldquo;The ethics of
+organ transplantation reconsidered&rdquo;, <em>Kidney
+International</em>, 55: 724&ndash;732.</li>
+
+<li>Department of Health, England, 2008, <em>Organs for Transplant: a report from
+the organ donation taskforce</em>.
+(<a href="http://webarchive.nationalarchives.gov.uk/20130ion reconsidered&rdquo;, <em>Kidney
+International</em>, 55: 724&ndash;732.</li>
+
+<li>Department of Health, England, 2008, <em>Organs for Transplant: a107105354/http://www.dh.gov.uk/prod_consum_dh/groups/dh_digitalassets/@dh/@en/documents/digitalasset/dh_082120.pdf" target="other">DoH 2008 online</a>)</li>
+
+<li>Dillon, R.S., 2010, &ldquo;Respect&rdquo;, <em>The Stanford Encyclopedia of
+Philosophy</em>. URL=&lt;<a href="http://plato.stanford.edu/archives/fall2010/entries/respect/">http://plato.stanford.edu/archives/fall2010/entries/respect/</a>&gt;.</li>
+
+<li>Erin, C. and J. Harris, 1994, &ldquo;A Monopsonistic Market&rdquo; in Robinson,
+I. (ed.) <em>The Social Consequences of Life &amp; Death Under High
+Technology Medicine,</em> Manchester: Manchester University Press,
+134&ndash;157.</li>
+
+<li>&ndash;&ndash;&ndash;, &lsquo;An Ethical Market in
+Human Organs&rsquo;, <em>Journal Of Medical Ethics</em>, 29: 137&ndash;8.</li>
+
+<li>Fabre, C, 2006, <em>Whose Body is it Anyway? Justice and
+the Integrity of the Person</em>, Oxford: Oxford University Press.</li>
+
+<li>Gillon, R., 1997, &ldquo;Commerce and medical ethics&rdquo;,
+<em>Journal of Medical Ethics</em>, 23: 68.</li>
+
+<li>Goodin, R., 1987, &ldquo;Exploiting a Situation and Exploiting a Person,&rdquo;
+in Reeve, A. (ed.), <em>Modern Theories of Exploitation</em>,
+London: Sage, 166&ndash;200.</li>
+
+<li>Harris, J., 1985, <em>The Value of Life</em>, London: Routledge.</li>
+
+<li>Harvey, J., 1990, &ldquo;Paying organ donors&rdquo;, <em>Journal of
+Medical Ethics</eme, A. (ed.), <em>Modern Theories of Exploitation</em>,
+London: Sage, 166&ndash;200.</li>
+
+<li>Harris, J., 1985, <em>The Value of Life</em>, London: Ro>, 16: 119.</li>
+
+<li>Hinkley, C., 2005, <em>Moral Conflicts of Organ Retrieval: a case
+for constructive pluralism</em>, Amsterdam: Rodopi.</li>
+
+<li>Knoll, G., 2008, &ldquo;Trends in Kidney Transplantation over the
+Past Decade&rdquo;, <em>Drugs</em>, 68 (Supp 1): 3&ndash;10.</li>
+
+<li>Matas, A, 2004, &ldquo;The Case for Living Kidney Sales: Rationale,
+Objections and Concern&rdquo;, <em>American Journal of
+Transplantation</em>, 4: 2007&ndash;17.</li>
+
+<li>&ndash;&ndash;&ndash;- 2007, &ldquo;A Gift of Life Deserves
+Compensation&rdquo;, <em>Policy Analysis</em>, 604: 1&ndash;23.</li>
+
+<li>McLachlan, H., 1998, &ldquo;The unpaid donation of blood and
+altruism: a comment on Keown&rdquo;, <em>Journal of Medical
+Ethics</em>, 1998, 24: 253.</li>
+
+<li>Millns, S., 1996, &lsquo;Dwarf-throwing and human dignity: a French
+perspective&rsquo;, <em>Journal of Social Welfare and Family Law</em>,
+18: 375.</li>
+
+<li>Nagel, T., 1970, <em>The Possibility of Altruism</em>, Princeton,
+NJ: Princeton University Press.</li>
+
+<li>Nozick, R., 1969 &lsquo;Coercion&rsquo;, in Morgenbesser, S, Suppes,
+P. and White, M. (eds.), <em>Philosophy, Science and Method: essays in
+honour of Ernest Nagel</em>, New York: St Martin's Press,
+440&ndash;472.</li>
+
+<li>Nuffield Council on Bioethics, 2002, <em>The Ethics of Research
+Related to Healthcare in Developing Countries</em>, URL = 
+&lt;<a href="hthy, Science and Method: essays in
+honour of Ernest Nagel</em>, New York: St Martin's Press,
+440&ndash;472.</li>
+
+<li>Nuffield Council on Bioethics, 20tp://www.nuffieldbioethics.org/research-developing-countries" target="other">http://www.nuffieldbioethics.org/research-developing-countries</a>&gt;.</li>
+
+<li>Radcliffe Richards, J., 1996 &ldquo;Nephrarious Goings On: kidney
+sales and moral arguments&rdquo;, <em>The Journal of Medicine and
+Philosophy</em>, 21: 375&ndash;416.</li>
+
+<li>&ndash;&ndash;&ndash;, 1998, &ldquo;The Case for Allowing Kidney Sales&rdquo;,
+<em>The Lancet</em>, 351: 1950&ndash;1952.</li>
+
+<li>&ndash;&ndash;&ndash;, 2009, &ldquo;Consent with Inducements: the case of body
+parts and services&rdquo; in Miller, F. and A.  Wertheimer (eds.)
+<em>The Ethics of Consent: Theory and Practice</em>,
+Oxford: Oxford
+University Press.</li>
+
+<li>Radin, M., 1991, &ldquo;Reflections on Objectification&rdquo;,
+<em>Southern California Law Review</em>, 65: 341&ndash;54.</li>
+
+<li>Salimah, L., Z. Shariff, and A. Garg, 2009, &ldquo;Global
+trends in the rates of living kidney donation&rdquo;, <em>Kidney
+International</em>, 75: 1088&ndash;1098.</li>
+
+<li>Satz, D., 2010, <em>Why Some Things Should not be for Sale: The
+Moral Limits of Markets</em>, Oxford University Press.</li>
+
+<li>Savulescu, J., 2003. &ldquo;Is the sale of body parts wrong?&rdquo;,
+<em>Journal Of Medical Ethics</em>, 29: 138&ndash;139.</li>
+
+<li>Scott, N. and J. Seglow, 2007, <em>Altruism</em>,
+Maidenhead: Open University Press.</li>
+
+<li>Shimazty Press.</li>
+
+<li>Savulescu, J., 2003. &ldquo;Is the sale of body parts wrong?&rdquo;,
+<em>Journal Of Medical Ethics</em>, 29: 138&ndash;139.</li>
+
+ono, Y., 2007, &ldquo;The State of the International Organ
+Trade: a provisional picture based on integration of available
+information&rdquo;, <em>Bulletin of the World Health Organization,</em>
+85: 901&ndash;980.</li>
+
+<li>Taylor, J., 2005, <em>Stakes and Kidneys: why markets in human body
+parts are morally imperative</em>, Aldershot: Ashgate.</li>
+
+<li>&ndash;&ndash;&ndash;, 2009, &lsquo;Autonomy and Organ Sales Revisited&rsquo;,
+<em>Journal of Medicine and Philosophy</em>, 34, 632&ndash;648.</li>
+
+<li>Titmuss, R., 1997, <em>The Gift Relationship: From Human Blood
+to Social Policy</em>, New York: The New Press.</li>
+
+<li>Torcello, L. and S. Wear, 2000, &ldquo;The Commercialization
+of Human Body Parts: a reappraisal from a protestant
+perspective&rdquo;, <em>Christian Bioethics,</em> 6:153&ndash;169.</li>
+
+<li>Wilkinson, M. and A. Moore, 1999, &ldquo;Inducement in
+Research&rdquo;, <em>Bioethics</em>, 11: 373&ndash;389.</li>
+
+<li>Wilkinson, S., 2000, &ldquo;Commodification arguments for the legal
+prohibition of organ sale&rdquo;, <em>Health Care Analysis</em>,
+8, pp.189&ndash;201.</li>
+
+<li>&ndash;&ndash;&ndash;, 2003, <em>Bodies for Sale: ethics and exploitation in
+the human body trade</em>, London: Routledge.</li>
+
+<li>&ndash;&ndash;&ndash;, 2005, &ldquo;Biomedical Research and the Commercial
+Exploitation of Human Tissue&rdquo;, <em>Genomics, Society and
+Polh;, 2003, <em>Bodies for Sale: ethics and exploitation in
+the human body trade</em>, London: Routledge.</li>
+
+<li>&ndash;&ndash;&ndash;, 2005, &ldquo;icy</em>, 1: 27&ndash;40.</li>
+
+<li>Wilkinson, S. and E.  Garrard, 1996, &ldquo;Bodily Integrity
+and the Sale of Human Organs&rdquo;, <em>Journal of Medical
+Ethics</em>, 22: 334&ndash;339.</li>
+
+</ul>
+
+</div>
+
+<div id="academic-tools">
+
+<h2><a name="Aca">Academic Tools</a></h2>
+
+<blockquote>
+<table>
+<tr>
+<td valign="top"><img src="../../symbols/sepman-icon.jpg" alt="sep man icon" /></td>
+<td><a href="http://plato.stanford.edu/cgi-bin/encyclopedia/archinfo.cgi?entry=organs-sale" target="other">How to cite this entry</a>.</td>
+</tr>
+
+<tr>
+<td valign="top"><img src="../../symbols/sepman-icon.jpg" alt="sep man icon" /></td>
+<td><a href="https://leibniz.stanford.edu/friends/preview/organs-sale/" target="other">Preview the PDF version of this entry</a> at the
+ <a href="https://leibniz.stanford.edu/friends/" target="other">Friends of the SEP Society</a>.</td>
+</tr>
+
+<tr>
+<td valign="top"><img src="../../symbols/inpho.png" alt="inpho icon" /></td>
+<td><a href="https://inpho.cogs.indiana.edu/entity?sep=organs-sale&amp;redirect=True" target="other">Look up this entry topic</a>
+ at the <a href="https://inpho.cogs.indiana.edu/" target="other">Indiana Philosophy Ontology Project</a>
+ (InPhO).</td>
+</tr>
+
+<tr>
+<td valign="top"><img src="../../symbols/pp.gif" alt="phil papers icon" /></td>
+<td><a href="http://philpapers.org/sep/organs-sale/" target="other">Enhanced bibliogna.edu/" target="other">Indiana Philosophy Ontology Project</a>
+ (InPhO).</td>
+</tr>
+
+<tr>
+<td valign="top"><img src="../../symbols/pp.gif" alt="phil raphy for this entry</a>
+at <a href="http://philpapers.org/" target="other">PhilPapers</a>, with links to its database.</td>
+</tr>
+
+</table>
+</blockquote>
+
+</div>
+
+<div id="other-internet-resources">
+
+<h2><a name="Oth">Other Internet Resources</a></h2>
+
+<ul>
+
+<li><a href="http://www.healthytransplant.com/documents/Istanbul_Declaration.pdf" target="other">Declaration of Istanbul on Organ Trafficking and Transplant Tourism</a>,
+ <em>Nephrology Dialysis Transplantation</em> (2008) 23:
+ 3375&ndash;3380. [PDF]</li>
+
+<!-- LINK CHECKER COMMENTED OUT (Sun Aug 25 09:09:46 2013)
+<li>Department of Health (UK), 
+<a href="http://webarchive.nationalarchives.gov.uk/20130107105354/http://www.dh.gov.uk/prod_consum_dh/groups/dh_digitalassets/@dh/@en/documents/digitalasset/dh_082120.pdf" target="other"><em>Organs for Transplant: a report from the organ donation taskforce</em></a>, January 2008. [PDF]</li>
+
+ LINK CHECKER -->
+<li><a href="http://www.wma.net/en/30publications/10policies/t7/" target="other">World Medical Association Statement on Human Organ Donation and Transplantation</a>, WMA General Assembly, adopted 2000, revised 2006.</li>
+
+<li><a href="http://www.uktransplant.org.uk/ukt/" target="other">UK National Health Service Blood and Transplant (NHSBT)</a></li>
+
+<li><a href="http://www.tts.org/" target="other">The Transplantation Society</a></li>
+
+<li><a href="http://wsed 2006.</li>
+
+<li><a href="http://www.uktransplant.org.uk/ukt/" target="other">UK National Health Service Blood and Transplant (NHSBT)</a></li>
+
+<liww.nuffieldbioethics.org/" target="other">Nuffield Council on Bioethics</a></li>
+
+</ul>
+
+</div>
+
+<div id="related-entries">
+
+<h2><a name="Rel">Related Entries</a></h2>
+
+<p>
+
+ <a href="../principle-beneficence/">beneficence, principle of</a> |
+ <a href="../coercion/">coercion</a> |
+ <a href="../death-definition/">death: definition of </a> |
+ <a href="../decision-capacity/">decision-making capacity</a> |
+ <a href="../privacy-medicine/">ethics, biomedical: privacy and medicine</a> |
+ <a href="../exploitation/">exploitation</a> |
+ <!--<a href="../Kant's moral philosophy/">-->Kant's moral philosophy<!--</a>--> |
+ <a href="../libertarianism/">libertarianism</a> |
+ <a href="../paternalism/">paternalism</a> |
+ <a href="../property/">property and ownership</a> |
+ <a href="../respect/">respect</a>
+
+</p>
+
+</div>
+
+</div><!-- #aueditable --><!--DO NOT MODIFY THIS LINE AND BELOW-->
+
+<!-- END ARTICLE HTML -->
+
+</div> <!-- End article-content -->
+
+  <div id="article-copyright">
+    <p>
+ <a href="../../info.html#c">Copyright &copy; 2011</a> by
+
+<br />
+Stephen Wilkinson
+&lt;<a href="m&#97;ilto:s&#37;2ewilkinson2&#37;40lancaster&#37;2eac&#37;2euk"><em>s<abbr title=" dot ">&#46;</abbr>wilkinson2<abbr title=" at ">&#64;</abbr>lancaster<abbr title=" dot ">&#46;</abbr>ac<abbr title=" dot ">&#46;</abbr>uk</em></a>&gt;
+    </p>
+  </div>
+
+</div> <!-- End article -->
+
+<!-- NOTE: articer&#37;2eac&#37;2euk"><em>s<abbr title=" dot ">&#46;</abbr>wilkinson2<abbr title=" at ">&#64;</abbr>lancaster<abbr title=" dot ">&#46;</abbr>ac<abbr tle banner is outside of the id="article" div. -->
+<div id="article-banner" class="scroll-block">
+  <div id="article-banner-content">
+
+<!--FUNDING MESSAGE-->
+  <a href="../../fundraising/">
+  Open access to the SEP is made possible by a world-wide funding initiative.<br />
+  Please Read How You Can Help Keep the Encyclopedia Free</a>
+
+<!--FUNDING MESSAGE-->
+
+    </div>
+  </div> <!-- End article-banner -->
+
+    </div> <!-- End content -->
+
+    <div id="footer">
+
+      <div id="footer-menu">
+        <div class="menu-block">
+          <h4><i class="icon-book"></i> Browse</h4>
+          <ul role="menu">
+            <li><a href="../../contents.html">Table of Contents</a></li>
+            <li><a href="../../new.html">What's New</a></li>
+            <li><a href="http://plato.stanford.edu/cgi-bin/encyclopedia/random">Random Entry</a></li>
+            <li><a href="../../published.html">Chronological</a></li>
+            <li><a href="../../archives/">Archives</a></li>
+          </ul>
+        </div>
+        <div class="menu-block">
+          <h4><i class="icon-info-sign"></i> About</h4>
+          <ul role="menu">
+            <li><a href="../../info.html">Editorial Information</a></li>
+            <li><a href="../../about.html">About the SEP</a></li>
+            <li><a href="../../board.html">Editorial Board</a></li>
+            <li><a href="../../cite.html">How to Cite the SEP</a></li>
+            <li><a href="../../special-characters.html">Special Characters</a></li>
+            <li><a href="../../tools/">Advanced Tools</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="menu-block">
+          <h4><i class="icon-leaf"></i> Support SEP</h4>
+          <ul role="menu">
+            <li><a href="../../support/">Support the SEP</a></li>
+            <li><a href="../../support/friends.html">PDFs for SEP Friends</a></li>
+            <li><a href="../../support/donate.html">Make a Donation</a></li>
+            <li><a href="../../support/sepia.html">SEPIA for Libraries</a></li>
+          </ul>
+        </div>
+      </div> <!-- End footer menu -->
+
+      <div id="mirrors">
+        <div id="mirror-info">
+          <h4><i class="icon-globe"></i> Mirror Sites</h4>
+          <p>View this site from another server:</p>
+        </div>
+        <div class="btn-group open">
+          <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://plato.stanford.edu/">
+            <span class="flag flag-usa"></span> USA (Main Site) <span class="caret"></span>
+            <span class="mirror-source">CSLI, Stanford University</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="http://stanford.library.usyd.edu.au/"><span class="flag pan> USA (Main Site) <span class="caret"></span>
+         flag-australia"></span> Australia
+              <span class="mirror-source">SETIS, University of Sydney</span></a></li>
+            <li><a href="http://seop.illc.uva.nl/"><span class="flag flag-netherlands"></span> Netherlands
+              <span class="mirror-source">ILLC, University of Amsterdam</span></a></li>
+          </ul>
+        </div>
+      </div> <!-- End mirrors -->
+      
+      <div id="site-credits">
+        <p class="csli-logo"><a href="http://www-csli.stanford.edu/"><img src="../../symbols/SU_csli.png" width="355" alt="Stanford Center for the Study of Language and Information" /></a></p>
+        <p>The Stanford Encyclopedia of Philosophy is <a href="../../info.html#c">copyright &copy; 2014</a> by <a href="http://mally.stanford.edu/">The Metaphysics Research Lab</a>, Center for the Study of Language and Information (CSLI), Stanford University</p>
+        <p>Library of Congress Catalog Data: ISSN 1095-5054</p>
+      </div> <!-- End site credits -->
+
+    </div> <!-- End footer -->
+
+  </div> <!-- End container -->
+
+   <!-- NOTE: Script required for drop-down button to work (mirrors). -->
+  <script>
+    $('.dropdown-toggle').dropdown();
+  </script>
+
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40353515-1', 'stanford.edu');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
+ementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');

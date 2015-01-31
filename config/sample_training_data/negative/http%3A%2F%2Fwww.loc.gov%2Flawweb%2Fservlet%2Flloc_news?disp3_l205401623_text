@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8" />
+<title>Global Legal Monitor: Council of Europe; United Nations: Organ Trafficking Treaty Proposed | Global Legal Monitor | Law Library of Congress | Library of Congress</title>
+<meta name="description" content="This Global Legal Monitor article by Constance Johnson covering Organ and tissue donation and transplantation was published on Oct 15, 2009 for Council of Europe, United Nations" />
+<meta name="dc.subject" content="Organ and tissue donation and transplantation" />
+<meta name="dc.subject" content="Council of Europe" />
+<meta name="dc.subject" content="United Nations" />
+<meta name="dc.coverage.spatial" content="Council of Europe" />
+<meta name="dc.coverage.spatial" content="United Nations" />
+<meta name="dc.contributor" content="Johnson, Constance" />
+<meta name="dc.date" content="2009/10/15" />
+<link rel="canonical" href="http://www.loc.gov/lawweb/servlet/lloc_news?disp3_l205401623_text" />
+<meta name="dc.relation.isPartOf" href="http://www.loc.gov/lawweb/servlet/lloc_news?home" title="Global Legal Monitor" />
+<meta name="dc.type" content="web page" />
+<meta name="dc.language" content='eng' />
+<meta name="dc.rights" content="text is US government work" />
+<link media="screen" rel="stylesheet" href="http://loc.gov/law/css/styles.css" />
+<link media="print" rel="stylesheet" href="http://loc.gov/css/loc_print_v2.css" />
+<!--[if lte IE 7]><link media="screen" rel="stylesheet" href="http://loc.gov/css/loc_lte_ie6.css" /><![endif]-->
+<!-- Toolbar -->
+<script type='text/javascript' src='http://loc.gov/cdn/sites/law-library-of-congress.js'></script>
+<!-- beging datepicker -->
+<!-- scripts for datepicker -->
+<script type="text/javascript" src="http://cdn.loc.gov/js/lib/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="http://cdn.loc.gov/js/lib/jquery-ui-1.8.10.min.js"></script>
+<script type="text/javascript" src="http://cdn.loc.gov/js/loc_datepicker/jquery-ui-1.8.14.custom.min.js"></script>
+<script> 
+$(function() {
+  $("#datefrom").datepicker({
+    dateFormat: 'dd-mm-yy',
+    showOn: "both",
+    buttonImage: "http://cdn.loc.gov/js/loc_datepicker/icon_calendar.png",
+    buttonImageOnly: true, 
+    changeMonth: true, 
+    changeYear: true
+    });
+  $('#ui-datepicker-div').wrap('<div class="loc_datepicker"></div>');
+});
+$(function() {
+  $("#dateto").datepicker({
+    dateFormat: 'dd-mm-yy',
+    showOn: "both",
+    buttonImage: "http://cdn.loc.gov/js/loc_datepicker/icon_calendar.png",
+    buttonImageOnly: true, 
+    changeMonth: true, 
+    changeYear: true
+    });
+  $('#ui-datepicker-div').wrap('<div class="loc_datepicker"></div>');
+});
+</script>
+<!-- css for datepicker -->
+<link rel="stylesheet" type="text/css" href="http://cdn.loc.gov/js/loc_datepicker/jquery-ui-1.8.14.custom.css" />
+<!-- end datepicker -->
+<script src="http://cdn.loc.gov/js/lib/modernizr-1.5.min.js"></script>
+</head>
+<body>
+<a id="skip" href="#skip_menu">skip navigation</a>
+<div id="container">
+	<div id="branding">
+  <h2>Library of Congress</h2>
+  <h3>Law Library of Congress</h3>
+</div>
+<!-- end id:branding -->
+	<div id="h-wrapper" class="fix-float">
+  <div id="header" class="fix-float">
+    <div class="logo">
+      <a href="http://www.loc.gov" accesskey="1"><img src="http://cdn.loc.gov/images/img-head/logo-loc.png" width="141" height="32" alt="Library of Congress" /></a>
+    </div>
+    <div class="nav">
+        <ul>
+          <li><a class="btn-loc" href="http://www.loc.gov/rr/askalib/" accesskey="2">Ask a Librarian</a></li>
+          <li><a class="btn-loc" href="http://www.loc.gov/library/libarch-digital.html" accesskey="3">Digital Collections</a></li>
+          <li><a class="btn-loc" href="http://catalog.loc.gov/" accesskey="4">Library Catalogs</a></li>
+        </ul>
+    </div>
+    <div class="search">
+      <form action="http://www.loc.gov/search" method="get">
+        <label class="search_label" for="search">Search</label>
+        <div class="search_wrap">
+        <input type='hidden' name='new' value='true'/>
+        <input id="search" type="search" name="q" maxlength="200" accesskey="/" title="Search the Library of Congress website" placeholder="Search Loc.gov" class="locsuggest" /><button class="button" id="search_button" type="submit">GO</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="http://cdn.loc.gov/suggest/bootstrap-1.1.0.min.js" type="text/javascript"></script>
+</div>
+	<div id="crumb_nav"><a href="http://www.loc.gov">The Library of Congress</a> <span>&gt;</span> <a href="/law/">Law Library of Congress</a> <span>&gt;</span> <a href="/law/news/">News &amp; Events</a> &gt; Global Legal Monitor</div>
+	<div id="content">
+
+
+<!-- new left nav--> 
+<div id="left_nav">
+  <div class="box leftnavtitle"><a href="/law/"><img src="http://loc.gov/law/images/left-img-head.gif" alt="Law Library of Congress" width="219" height="50" /></a></div>
+  <div class="box leftnavimg">Law Library of Congress Logo</div>
+  <div class="box">
+      <form action="http://www.loc.gov/search/" accept-charset="utf-8" id="site_search" name="seek1" method="get">
+          <input type='hidden' name='in' value='PartOf:law library of congress'/>
+          <!--<input type="hidden" name="qp" value="url:http://www.loc.gov/law" />-->
+          <input id="searchtext" name="q" type="text" placeholder="Search this site" title="Search this site" onfocus="this.value=''" />
+      <input class="button" type="submit" value="GO" />
+    </form>
+  </div>
+  <div class="box">
+    <ul class="arrow_o bold">
+      <li><a href="/law/">Law Library Home</a></li>
+      <li><a href="/law/about/">About the Law Library</a></li>
+      <li><a href="/law/help/">Research &amp; Reports</a></li>
+      <li><a href="/law/find/">Find Legal Resources</a></li>
+      <li><a href="/law/opportunities/">Educational &amp; Research Opportunities</a></li>
+      <li><a href="/law/visit/">Visiting the Law Library</a></li>
+      <li><a href="/law/news/">News &amp; Events</a></li>
+      <li><a href="/law/contact/">Submit a Request</a></li>
+    </ul>
+  </div>
+ <div class="box blog">
+  <h2><a href='http://blogs.loc.gov/law/'>In Custodia Legis</a></h2>
+  <p>Official blog from the Law Library of Congress</p></p>
+ </div>
+  <div class="box">
+  <h2>Find the Law Library on:</h2>
+		 <ul class="social">
+		   <li class="facebook"><a class="external" href="http://www.facebook.com/lawlibraryofcongress" target="_blank">Facebook<span> (external link)</span></a></li>
+		   <li class="twitter"><a class="external" href="http://twitter.com/LawLibCongress" target="_blank">Twitter (Law Library)<span> (external link)</span></a></li>
+		   <li class="twitter"><a class="external" href="http://www.twitter.com/congressdotgov" target="_blank">Twitter (THOMAS)<span> (external link)</span></a></li>
+		   <li class="youtube"><a class="external" href="http://www.youtube.com/playlist?list=PL96401BE3402149B9" target="_blank">YouTube<span> (external link)</span></a></li>
+		   <li class="itunes"><a class="external" href="http://deimos3.apple.com/WebObjects/Core.woa/Browse/loc.gov.3061529668" target="_blank">iTunes U<span> (external link)</span></a></li>
+		 </ul>
+  </div>	
+ </div>
+<div id="main_body" role="main">
+	<!-- Toolbar -->
+	<div class="locshare-this" id='instance_access1001'></div>
+	<div class="clear-share"> 
+	<!-- -->
+	</div>
+	<div id="page_head"><span style="width: 100%;"><a id="skip_menu"></a></span>
+		<h1>Council of Europe; United Nations: Organ Trafficking Treaty Proposed</h1>
+	</div>
+	<div id="main_nav" class="w_tert">
+<a href="/law/news/">News &amp; Events</a>&nbsp;|&nbsp;<a href="/law/news/webcasts.html">Webcasts</a>&nbsp;|&nbsp;<a href='lloc_news?home'><strong>Global Legal Monitor</strong></a>&nbsp;|&nbsp;<a href='/law/news/rss.html'>RSS &amp; Email</a>
+  </div>
+  <div id="tert_nav">
+<a href='lloc_news?searchForm'>Search News</a> | <a href='lloc_news?allTopics'>Browse All Topics</a> | <a href='lloc_news?allJuris'>Browse All Jurisdictions</a> | <a href='lloc_news?rssPg'>GLM RSS</a> | <a href='lloc_news?home#twa'>Top Recent Articles</a>
+   </div> 
+  <p>To link to this article, copy this persistent link:<br /><a href='lloc_news?disp3_l205401623_text'>http://www.loc.gov/lawweb/servlet/lloc_news?disp3_l205401623_text</a></p>
+<p> (Oct 15, 2009) On October 13, 2009, a study on human organ trafficking, issued jointly by the United Nations and the Council of Europe, was released. (TRAFFICKING IN ORGANS, TISSUES AND CELLS AND TRAFFICKING IN PERSONS FOR THE PURPOSE OF THE REMOVAL OF ORGANS (2009)<i>, </i>Council of Europe website, <i>available at</i> <a class="external" href="http://www.coe.int/t/dghl/monitoring/trafficking/Docs/News/OrganTrafficking_study.pdf">http://www.coe.int/t/dghl/monitoring/trafficking/Docs/News/OrganTraffick<br />ing_study.pdf</a>.) It concluded that a new treaty was needed to prevent trafficking in organs, tissues, and cells (OTC) and that this crime should be distinguished from trafficking in persons. The proposed agreement could protect victims and provide a basis for prosecuting offenders. (<i>International Pact Needed to Prevent Organ Trafficking, UN-Backed Study Says</i>, UN NEWS CENTRE, Oct. 13, 2009, <i>available at </i><a class="external" href="http://www.un.org/apps/news/story.asp?NewsID=32521&amp;Cr=traffic&amp;Cr1=">http://www.un.org/apps/news/story.asp?NewsID=32521&amp;Cr=traffic&amp;Cr1=</a>.)</p>  <p>Rachel Mayanja, who serves as a special advisor on gender issues to U.N. Secretary-General Ban Ki-moon, has said she hopes the General Assembly will take the first steps toward a treaty on trade in OTC soon. She conveyed the wish that "the study will be presented to the Assembly, and that the issue will be put on the agenda ... ." Mayanja added that work on a binding convention should "start as soon as possible." (<i>Id</i>.)</p>  <p>The report noted that an estimated five to ten percent of transplanted kidneys have been trafficked and says that since there are large profits to be made, OTC trafficking can be hard to track. The trade may take the form of "transplant tourism," in which wealthy potential recipients travel to countries lacking protections for live donors to receive the organs. (<i>Id</i>.) The report recommends that one component of the new treaty be data collection on organ trafficking, with a gender breakdown to determine if the pattern is different for male and female victims. (<i>Id</i>.)</p>  <p>The treaty would prohibit profiting from the sale of the human body or its parts, but encourage voluntary donations of organs, especially from the deceased. One of the authors of the study, Arthur Caplan, who directs the Center for Bioethics at the University of Pennsylvania, stressed that OTC trafficking victims tend to be deeply impoverished people whose bodies or body parts are exploited. Caplan elaborated the danger the current situation poses for the poor, stating:</p>  <BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">  <p>The poor person is usually illiterate, not given any choice in the sense that they have no other job or occupation to make the sale, they wind up sicker, they wind up with no one paying attention to them, they sometimes wind up dead, they usually wind up regretting from the studies that we&#39ve seen that they did the sale because they have no follow-up. &hellip; What looks like perhaps a chance to take somebody out of poverty winds up being a situation in which the deeply impoverished are exploited for the sale, because there is no other way for them to make a living, they can only do it once, and the people who deal with the sellers don&#39t care about them. (<i>Id</i>.)</p></BLOCKQUOTE>  <p>There are already measures on trafficking in human beings for purposes of organ removal in the Council of Europe Convention on Action against Trafficking in Human Beings (Warsaw, 2005, Council of Europe Treaty Series No. 197, Council of Europe website <a class="external" href="http://www.coe.int/t/dghl/monitoring/trafficking/Docs/Convntn/CETS197_en.asp#TopOfPage">http://www.coe.int/t/dghl/monitoring/trafficking/Docs/Convntn/CETS197_en<br />.asp#TopOfPage</a> (last visited Oct. 14, 2009) and the U.N. Protocol to Prevent, Suppress and Punish Trafficking in Persons, Especially Women and Children (Palermo, Italy, 2000, U.N. Crime and Justice Information Network website, <a class="external" href="http://www.uncjin.org/Documents/Conventions/dcatoc/final_documents_2/convention_%20traff_eng.pdf">http://www.uncjin.org/Documents/Conventions/dcatoc/final_documents_2/con<br />vention_%20traff_eng.pdf</a> (last visited Oct. 14, 2009)). </p>
+     <table border='0'>
+       <tr><td><strong>Author:</strong>&nbsp;</td><td>Constance Johnson <a class="ar-more" href='lloc_news?author.Constance Johnson'>More by this author</a></td></tr>
+     </table>
+     <table border='0'>
+       <tr><td><strong>Topic:</strong>&nbsp;</td><td>Organ and tissue donation and transplantation <a class="ar-more" href='lloc_news?browse_topic_Organ and tissue donation and transplantation'>More on this topic</a></td></tr>
+     </table>
+     <table border='0'>
+       <tr><td><strong>Jurisdiction:</strong>&nbsp;</td><td>Council of Europe <a class="ar-more" href='lloc_news?browse_country_Council of Europe'>More about this jurisdiction</a></td></tr>
+       <tr><td>&nbsp;</td><td>United Nations <a class="ar-more" href='lloc_news?browse_country_United Nations'>More about this jurisdiction</td></tr>
+     </table>
+<p class="dot-top"><a href="#">Search Legal News</a><br />Find legal news by topic, country, keyword, date, or author.</p>
+<p><a href="#">Global Legal Monitor RSS</a><br />Get the Global Legal Monitor delivered to your inbox. Sign up for RSS service.</p>
+<p>The Global Legal Monitor is an online publication from the Law Library of Congress covering legal news  and developments worldwide. It is   updated frequently and draws on information from the Global Legal Information Network, official national legal publications, and reliable press sources. You can find previous news by searching the <a href="http://www.loc.gov/lawweb/servlet/lloc_news?searchForm">GLM</a>.</p>
+ <p class="last_updated">Last updated: 10/15/2009</p>
+     </div> 
+    </div> 
+<!-- begin: global footer -->
+  <div id="f-wrapper" class="fix-float">
+  <div id="footer" class="fix-float">
+      <div class="cols heading">
+        <h2>Connect with the Library</h2>
+    ast_updated">Last updated: 10/15/2009</p>
+     </div> 
+    </div> 
+<!-- begin: global footer -->
+  <div id="f-wrapper" class="fix-float">
+  <div id="f    <p><a class="ar-more foot" href="http://www.loc.gov/homepage/connect.html">All ways to connect</a></p>
+      </div>
+      <div class="cols">
+        <h3>Find Us On</h3>
+        <a href="http://www.facebook.com/libraryofcongress"><img src="http://cdn.loc.gov/images/img-foot/facebook.gif" alt="Facebook" width="16" height="16" /></a> &nbsp; <a href="http://twitter.com/#!/librarycongress"><img src="http://cdn.loc.gov/images/img-foot/twitter.gif" alt="Twitter" width="16" height="16" /></a> &nbsp; <a href="http://www.youtube.com/libraryofcongress"><img src="http://cdn.loc.gov/images/img-foot/youtube.gif" alt="YouTube" width="16" height="16" /></a> &nbsp; <a href="http://www.flickr.com/photos/library_of_congress/"><img src="http://cdn.loc.gov/images/img-foot/flickr.gif" alt="Flickr" width="16" height="16" /></a>
+      </div>
+      <div class="cols">
+        <h3>Subscribe &amp; Comment</h3>
+        <ul class="plain">
+          <li><a href="http://www.loc.gov/rss/">RSS &amp; E-Mail</a></li>
+          <li><a href="http://blogs.loc.gov/">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="cols">
+        <h3>Download &amp; Play</h3>
+        <ul class="plain">
+          <li><a href="http://www.loc.gov/podcasts/">Podcasts</a></li>
+          <li><a href="http://www.loc.gov/today/cyberlc/index.php">Webcasts</a></li>
+          <li><a href="http://itunes.apple.com/us/institution/library-of-congress/id386017159" class="external foot mod">iTunesU<span> (external link)</span></a></li>
+        </ul>
+      </div>
+      <div class="cols">
+        <h3>Questions</h3>
+        <ul class="plain">
+          <li><a href="http://www.loc.gov/rr/askalib/">Ask a Librarian</a></li>
+          <li><a href="http://www.loc.gov/help/contact-general.html" accesskey="8">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="clear"><!-- --></div>
+      <p class="links">
+      <a href="http://www.loc.gov/about/">About</a> |
+      <a href="http://www.loc.gov/pressroom/login">Press</a> |
+      <a href="http://www.loc.gov/hr/employment/index.php">Jobs</a> |
+      <a href="http://www.loc.gov/philanthropy/index.php">Donate</a>
+      <br />
+      <a href="http://www.loc.gov/about/oig/">Inspector General</a> |
+      <a href="http://www.loc.gov/homepage/legal.html" accesskey="9">Legal</a> |
+      <a href="http://www.loc.gov/access/" accesskey="0">Accessibility</a> |
+      <a href="http://www.loc.gov/global/disclaim.html">External Link Disclaimer</a> |
+      <a href="http://www.usa.gov/">USA.gov</a>
+      </p>
+      <span class="speech"><a href="http://www.loc.gov/access/web.html">Speech Enabled</a></span>
+  </div><!-- end id:footer -->
+  </div><!-- end id:f-wrapper -->
+	<!-- end: global footer -->	<script type='text/javascript' src='http://www.loc.gov/global/s_code.js'></script></div>
+<!-- end id:container -->
+</body> 
+</html> 
+">Speech Enabled</a></span>
+  </div><!-- end id:footer -->
+  </div><!-- end id:f-wrapper -->
+	<!-- end: global footer -->	<script type='text/javascript' src='http://www.loc.gov/global/s_code.js'></script></div>

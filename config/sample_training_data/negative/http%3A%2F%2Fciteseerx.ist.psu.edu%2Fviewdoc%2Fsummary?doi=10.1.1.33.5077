@@ -1,0 +1,767 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+      
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head profile="http://www.w3.org/2005/11/profile http://a9.com/-/spec/opensearch/1.1/">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   
+    <title>CiteSeerX &mdash; Prevention of Plague</title>
+  
+  
+    <meta name="description" content="CiteSeerX - Document Details (Isaac Councill, Lee Giles, Pradeep Teregowda): this report was prepared for publication by:" />
+  
+  
+    <meta name="keywords" content="CiteSeerX, Recommendations Of The, Epidemiology Program, B. Thacker, M. Sc, Richard A. Goodman, M. Hewitt, Robert S. Black, Rachel J. Wilson" />
+  
+    
+    <meta name="citation_title" content="Prevention of Plague" />
+  
+  
+    <meta name="citation_authors" content="Recommendations Of The, Epidemiology Program, B. Thacker, M. Sc, Richard A. Goodman, M. Hewitt, Robert S. Black, Rachel J. Wilson" />
+  
+  
+  
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico;jsessionid=F05DEACA86CA646473433EE577C68D38" />
+  
+  <link rel="search" title="CiteSeerX" type="application/opensearchdescription+xml" href="/search_plugins/citeseerx_general.xml;jsessionid=F05DEACA86CA646473433EE577C68D38" />
+  <link rel="search" title="CiteSeerX Author" type="application/opensearchdescription+xml" href="/search_plugins/citeseerx_author.xml;jsessionid=F05DEACA86CA646473433EE577C68D38" />
+  <link rel="search" title="CiteSeerX Title" type="application/opensearchdescription+xml" href="/search_plugins/citeseerx_title.xml;jsessionid=F05DEACA86CA646473433EE577C68D38" />
+    
+    
+	<link rel="alternate" type="application/atom+xml" title="CiteSeerX Search Results - Atom" href="/search;jsessionid=F05DEACA86CA646473433EE577C68D38?" />
+	<link rel="alternate" type="application/rss+xml" title="CiteSeerX Search Results - RSS" href="/search;jsessionid=F05DEACA86CA646473433EE577C68D38?" />
+
+	
+	<link type="text/css" rel="stylesheet" href="/css/main.css;jsessionid=F05DEACA86CA646473433EE577C68D38" />
+	<script type="text/javascript" src="/js/jquery-1.4.2.min.js;jsessionid=F05DEACA86CA646473433EE577C68D38"></script>
+  <script type="text/javascript" src="/js/jquery-ui-1.8.custom.min.js;jsessionid=F05DEACA86CA646473433EE577C68D38"></script>
+	<script type="text/javascript" src="/js/jquery.idTabs.min.js;jsessionid=F05DEACA86CA646473433EE576473433EE577C68D38"></script>
+  <script type=7C68D38"></script>
+	<script type="text/javascript" src="/js/metacart.js;jsessionid=F05DEACA86CA646473433EE577C68D38"></script>
+	<script type="text/javascript" src="/js/topnav.js;jsessionid=F05DEACA86CA646473433EE577C68D38"></script>
+	<script type="text/javascript" src="/js/citeseerx.js;jsessionid=F05DEACA86CA646473433EE577C68D38"></script>
+	<script type="text/javascript" src="/js/correctionutils.js;jsessionid=F05DEACA86CA646473433EE577C68D38"></script>
+	<script type="text/javascript" src="/js/checkboxes.js;jsessionid=F05DEACA86CA646473433EE577C68D38"></script>
+	<script type="text/javascript" src="/js/ga.js;jsessionid=F05DEACA86CA646473433EE577C68D38"></script>
+	
+	
+</head>
+<body>
+	<div id="wrapper">
+  	
+
+
+
+<div id="topnav">
+  
+  <ul id="search_nav">
+    
+      <li class="active"><a href="#search_docs">Documents</a></li>
+      <li><a href="/#search_auth">Authors</a></li>
+      <li><a href="/#search_tables">Tables</a></li>
+      
+    
+    
+  </ul>
+  
+  
+  
+    
+    
+    
+    <ul id="toptools">
+  		
+        <li><a href="/myciteseer/login;jsessionid=F05DEACA86CA646473433EE577C68D38">Log in</a></li>
+        <li><a href="/mcsutils/newAccount;jsessionid=F05DEACA86CA646473433EE577C68D38">Sign up</a></li>
+      
+        <li><a href="/metacart;jsessionid=F05DEACA86CA646473433EE577C68D38">MetaCart</a></li>
+    </ul>
+  
+</div>
+
+	  <div id="header">
+			<h1 id="title"><a href="/;jsessionid=F05DEACA86CA646473433EE577C68D38" title="CiteSeerX"><img src="/images/csx_logo.png;jsessionid=F05DEACA86CA646473433EE577C68D38" alt="CiteSeerX logo" /></a></h1>
+		</div>
+
+<div id="main">
+<div id="search">
+  
+    <div id="search_docs">
+      <form method="get" action="/search;jsessionid=F05DEACA86CA646473433EE577C68D38" enctype="application/x-www-form-urlencoded">
+        <label>Documents:</label>
+        <input class="s_field" type="text" name="q" value="" />
+		<input class="s_button" type="submit" name="submit" value="Search" alt="Search" />
+		<div class="opts">
+          <a href="/advanced_search;jsessionid=F05DEACA86CA646473433EE577C68D38" title="Search full text, title, abstract, date, author name, author affiliation, etc.">Advanced Search</a>
+          <input class="c_box" type="checkbox" name="ic" value="1"  /> Include Citations
+        </div>
+        <input type="hidden" name="sort" value="rlv" />
+        <input type="hidden" name="t" value="doc" />
+      </form>
+    </div>
+		  
+	<div id="search_auth">
+	  <form method="get" action="/search;jsessionid=F05DEACA86CA646473433EE577C68D38" enctype="application/x-www-form-urlencoded">
+	    <label>Authors:</label>
+        <input class="s_field" type="text" name="q" value="" />
+        <input class="s_button" type="submit" name="submit" value="Search" alt="Search" />
+        <div class="opts">
+          <a href="/advanced_search;jsessionid=F05DEACA86CA646473433EE577C68D38" title="Search full text, title, abstract, date, author name, author affiliation, etc.">Advanced Search</a>
+          <input class="c_box" type="checkbox" name="ic" value="1"  /> Include Citations |
+          <input class="c_box" type="checkbox" name="uauth" value="1" checked="checked" /> Disambiguate
+        </div>
+        <input type="hidden" name="sort" value="ndocs" />
+        <input type="hidden" name="t" value="auth" />
+	   </form>
+	  </div>		  
+    <div id="search_tables">
+      <form method="get" action="/search;jsessionid=F05DEACA86CA646473433EE577C68D38" enctype="application/x-www-form-urlencoded">
+        <label>Tables:</label>
+        <input class="s_field" type="text" name="q" value="" />
+        <input class="s_button" type="submit" name="submit" value="Search" alt="Search" />
+        <input type="hidden" name="t" value="table" />
+        <input type="hidden" name="sort" value="rlv" />
+     </form>
+    </div>
+
+
+  
+  
+</div>
+    <div id="viewHeader" class="viewDoc">
+      <h2>Prevention of Plague </h2>
+      
+       <div id="downloads">
+	
+		
+        		<h3>Cached</h3>
+        		<ul id="clinks">
+        		
+				
+          			
+          			
+            				<li><a href="/viewdoc/download;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077&amp;h2>
+      
+       <div id="downloads">
+	
+		
+        		<h3>Cached</h3>
+        		<ul id="clinks">
+        		
+				
+          			
+          			
+            				<li><a href="/viewdoc/download;jsessiorep=rep1&amp;type=pdf" title="View or Download this document as PDF">
+						<img src="/images/pdf_icon.gif;jsessionid=F05DEACA86CA646473433EE577C68D38" alt="Download as a PDF"/> 
+					</a></li>
+          			
+          			
+        		
+	        	</ul>
+		
+		
+	
+	
+		<h3>Download Links</h3>
+        	<ul id="dlinks">
+        	
+          		<li>
+                	<a href="ftp://ftp.cdc.gov/pub/Publications/mmwr/rr/rr4514.pdf" title="ftp://ftp.cdc.gov/pub/Publications/mmwr/rr/rr4514.pdf" escapeXml="true">
+          		[ftp.cdc.gov]
+			</a>
+          		</li>
+        	
+          		<li>
+                	<a href="http://www.cdc.gov/mmwr/PDF/rr/rr4514.pdf" title="http://www.cdc.gov/mmwr/PDF/rr/rr4514.pdf" escapeXml="true">
+          		[www.cdc.gov]
+			</a>
+          		</li>
+        	
+          		<li>
+                	<a href="http://ftp.cdc.gov/pub/Publications/mmwr/rr/rr4514.pdf" title="http://ftp.cdc.gov/pub/Publications/mmwr/rr/rr4514.pdf" escapeXml="true">
+          		[ftp.cdc.gov]
+			</a>
+          		</li>
+        	
+	
+        <br/>
+	
+        </ul>
+      </div>
+      <div id="docTools">
+        <ul class="button_nav">
+          <li><a style="cursor: pointer;" onclick="addToCartProxy(8302276)">Save to List</a>
+          <span id="cmsg_8302276" class="cartmsg"></span></li>
+          <li><a class="remove"  href="/myciteseer/action/addPaperCollection;jsessionid=F05DEACA86CA64       <li><a style="cursor: pointer;" onclick="addToCartProxy(8302276)">Save to List</a>
+          <span id="cmsg_8302276" class="cartmsg"></span></l6473433EE577C68D38?doi=10.1.1.33.5077" title="Add this document to your collection (Account required)">Add to Collection</a></li>
+          <li><a class="remove" href="/correct;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077" title="Submit corrections for this document (Account required)">Correct Errors</a></li>
+          <li><a class="remove" href="/myciteseer/action/editMonitors;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077" title="Monitor changes to this document (Account required)">Monitor Changes</a></li>
+        </ul>
+      </div>
+            <div id="docInfo">
+      <div id="docAuthors">
+        by 
+          
+            
+              
+              
+                Recommendations Of The
+              
+              ,
+            
+              
+              
+                Epidemiology Program
+              
+              ,
+            
+              
+              
+                B. Thacker
+              
+              ,
+            
+              
+              
+                M. Sc
+              
+              ,
+            
+              
+              
+                Richard A. Goodman
+              
+              ,
+            
+              
+              
+                M. Hewitt
+              
+              ,
+            
+              
+              
+                Robert S. Black
+             
+                Richard A. Goodman
+              
+              ,
+            
+              
+              
+                M. Hewitt
+              
+        
+              ,
+            
+              
+              
+                Rachel J. Wilson
+              
+              
+            
+          
+        </div>
+      <div id="docOther">
+        <table>
+          
+          
+        </table>
+      </div>
+    </div>
+      
+      <div class="clear"></div>
+    </div>
+
+    
+
+
+    <div id="docMenu" class="submenu">
+    <ul>
+      <li  class="active" ><a href="/viewdoc/summary;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077">Summary</a></li>
+      <li  ><a href="/viewdoc/similar;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077&amp;type=ab" title="Documents that cite the same works">Active Bibliography</a></li>
+      <li  ><a href="/viewdoc/similar;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077&amp;type=cc" title="Documents cited by the same works">Co-citation</a></li>
+      <li ><a href="/viewdoc/similar;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077&amp;type=sc" title="Documents in the Same Cluster">Clustered Documents</a></li>
+      <li ><a href="/viewdoc/versions;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077">Version History</a></li>
+      <!--<li><a  href="/viewdoc/clustered;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077">Clustered Documents</a></li>-->
+    </ul>
+    </div>
+
+
+
+
+
+
+  <div id="viewContent" class="sidebar">
+    <div id="viewContent-inner">
+      <div id="viewSidebar">
+        
+          
+          
+          
+        		
+        
+        
+        
+          <div id="bibtex" class="block">
+            <h3>BibTeX</h3>
+            <p>@MISC{The_preventionof,<br/>&nbsp;&nbsp;&nbsp;&nbsp;author = {Recommendations Of The and Epidemiology Program and B. Thacker and M. Sc and Richard A. Goodman and M. Hewitt and Robert S. Black and Rachel J. Wilson},<br/>&nbsp;&nbsp;&nbsp;&nbsp;title = {Prevention of Plague},<br/>&nbsp;&nbsp;&nbsp;&nbsp;year = {}<br/>}<br/></p>
+          </div> <!-- End content box -->
+        
+        
+        <div id="bookmark" class="block">
+          <h3>Bookmark</h3>
+          <table border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td><a href="/viewdoc/bookmark;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077&amp;title=Prevention of Plague&amp;site=citeulike" title="CiteULike"><img src="/images/citeulike.png;jsessionid=F05DEACA86CA646473433EE577C68D38" alt="citeulike"/></a></td>
+              <td><a href="/viewdoc/bookmark;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077&amp;site=connotea" title="Connotea"><img src="/images/connotea.png;jsessionid=F05DEACA86CA646473433EE577C68D38" alt="Connotea"/></a></td>
+              <td><a href="/viewdoc/bookmark;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077&amp;site=bibsonomy&amp;title=Prevention of Plague" title="BibSonomy"><img src="/images/bibsonomy.png;jsessionid=F05DEACA86CA646473433EE577C68D38" alt="Bibsonomy"/></a></td>
+              <td><a href="/viewdoc/bookmark;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077&amp;title=Prevention of Plague&amp;site=delicious" title="del.icio.us"><img src="/images/delicious.gif;jsessionid=F05DEACA86CA646473433EE577C68D38" alt="Del.icio.us"/></a></td>
+              <td><a href="/viewdoc/bookmark;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077&amp;title=Prevention of Plague&amp;site=digg" title="Digg it"><img src="/images/digg.png;jsessionid=F05DEACA86CA646473433EE577C68D38" alt="Digg"/></a></td>
+              <td><a href="/viewdoc/bookmark;jsessionid=F05DEACA86CA646473433EE577C68D38?doi=10.1.1.33.5077&amp;title=Prevention of Plague&amp;site=reddit" title="Reddit"><img src="/images/reddit.gif;jsessionid=F05DEACA86CA646473433EE577C68D38" alt="Reddit"/></a></td>
+              </tr>
+	      <tr>
+		<td colspan="6">
+		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script>
+			var doi;
+			doi="10.1.1.33.5077";
+			new TWTR.Widget({
+  			version: 2,
+  			type: 'search',
+  			search: 'citeseerx+'+doi,
+  			interval: 30000,
+  			title: 'CiteSeerX',
+  			subject: doi,
+ ets.twimg.com/j/2/widget.js"></script>
+		<script>
+			var doi;
+			doi="10.1.1.33.5077";
+			new TWTR.Widget({
+  			version: 2,
+  			type: 'search',
+  			search: 'citeseerx+'+doi,
+  			inter 			width: 255,
+  			height: 30,
+  			theme: {
+    			shell: {
+      			background: '#E6E6E6',
+      			color: '#000000'
+    			},
+    			tweets: {
+      				background: '#ffffff',
+      				color: '#444444',
+      				links: '#1985b5'
+    			}
+  		},
+  		features: {
+    		scrollbar: false,
+    		loop: true,
+    		live: true,
+    		behavior: 'default'
+ 		 }
+		}).render().start();
+		</script>	
+		</td>
+	      </tr>
+          </table>
+        </div>
+        
+          <div id="OpenURL" class="block">
+            <h3>OpenURL</h3>
+            <span class="Z3988" title="url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;ctx_ver=Z39.88-2004&amp;ctx_enc=info%3Aofi%2Fenc%3AUTF-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.33.5077&amp;rft.atitle=Prevention+of+Plague&amp;rft.genre=unknown&amp;rft.aulast=The&amp;rft.aufirst=+Recommendations+Of&amp;rft.au=The%2C+Recommendations+Of&amp;rft.au=Program%2C+Epidemiology&amp;rft.au=Thacker%2C+B.&amp;rft.au=Sc%2C+M.&amp;rft.au=Goodman%2C+Richard+A.&amp;rft.au=Hewitt%2C+M.&amp;rft.au=Black%2C+Robert+S.&amp;rft.au=Wilson%2C+Rachel+J.">&nbsp;</span>
+          </div>
+        
+      </div> 
+    <div id="abstract">
+      <h3>Abstract</h3>
+      <p>this report was prepared for publication by:</p>
+    </div>
+    <div id="citations">
+      <h3>Citations</h3>
+      
+      
+        <table class="refs" border="0" cellspacing="5" cellpadding="5">
+          
+            <tr><td class="title">24</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302278">Environmental modulation of gene expression and pathogenesis in Yersinia. Trends Microbiol</a>
+                - Straley, Perry
+                 - 1995
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">11</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302282">Health Organization. Human plague</a>
+                - World
+                
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">9</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302277">Factors promoting acute and chronic diseases caused by Yersiniae</a>
+                - RR
+                
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">6</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302285">ML, Quan TJ, Barnes AM. Reported cases of human plague</a>
+                - RB, GO, et al.
+                 - 1993
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">5</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302280">Surveillance and control of bubonic plague in the United States</a>
+                - AM
+                 - 1982
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">5</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302286">Kaufmann AF, Barnes AM, Weber NS. Endemic human plague in New Mexico: risk factors associated with infection</a>
+                - JM, WJ, et al.
+                
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">5</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302289">Elisberg BL, Llewellyn CH, et al. Plague immunization, V: Indirect evidence for the efficacy of plague vaccine. J Infect Dis</a>
+                - DC
+                 - 1974
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">4</td>
+              <td>
+                <a clasirect evidence for the efficacy of plague vaccine. J Infect Dis</a>
+                - DC
+                 - 1974
+		
+		  
+		
+             s="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302288">Cavanaugh DC, Bartelloni PJ, Marshall JD Jr. Plague immunization, I: Past and present trends. J Infect Dis</a>
+                - KF
+                 - 1974
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">4</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302291">et al. Some observations on the current plague outbreak</a>
+                - DC, HG, et al.
+                 - 1968
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">4</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302292">Effectiveness of live or killed plague vaccines</a>
+                - KF
+                 - 1970
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">3</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302279">AM. Plague and tularemia</a>
+                - RB, Barnes
+                
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">3</td>
+              <td>
+                <aDEACA86CA646473433EE577C68D38?cid=8302279">AM. Plague and tularemia</a>
+                - RB, Barnes
+                
+		
+		  
+		
+              < class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302284">DT, Montenieri JA. Human plague in the United States: A review of cases from 1988–1992 with comments on the likelihood of increased plague activity. Border Epidemiological Bulletin</a>
+                - KL, SE, et al.
+                 - 1992
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">3</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302297">Measuring the efficacy of vaccination in affording protection against plague. Bull WHO</a>
+                - JE, DC
+                 - 1979
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">3</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302306">Baratelloni PJ, Cavanaugh DC, Kadull PJ, Meyer KF. Plague immunization, II: Relation of adverse clinical reactions to multiple immunizations with killed vaccine. J Infect Dis</a>
+                - Jr
+                 - 1974
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">2</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302281">The role of predators in the ecology, epidemiology, and surveillance of plague in the United States</a>
+                - KL, JA, et al.
+                 - 1994
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">2</td>
+              <td><a href="/viewdoc/summary;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302283">plague—United States</a>
+                
+                - Human
+                 - 1993
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">2</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302294">An evaluation of Pasteurella pestis fraction 1 specific antibody for the confirmation of plague infections</a>
+                - TH, KF
+                 - 1966
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">2</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302300">Pathogenicity and immunogenic efficacy of a live attenuated plague vaccine in vervet monkeys</a>
+                - Hallett, Isaacson, et al.
+                 - 1973
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">2</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302301">Recombinant capsular antigen (fraction 1) from Yersinia pestis induces a protective antibody response in BALB/C mice. Am J Trop Med Hyg</a>
+                - WJ, RE, et al.
+                 - 1990
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">2</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302309">JD, Barnes AM. Recommendations for the control of Yersinia pestis infections. Recommendations from the CDC. Infect Control</a>
+                - ME, Gordon, et al.
+                 - 1980
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302287">Plague studies in California—the roles of various species of sylvatic rodents in plague ecology</a>
+                - BC
+                 - 1980
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302290">Drug Adminstration. Biological products; bacterial vaccines and toxoids; implementation of efficacy review</a>
+                - Food
+                
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302293">JD Jr, Cavanaugh DC. Clinical and serological responses to plague vaccine USP. Milit Med 1973;138:720–2</a>
+                - PJ, Marshall
+                
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302295">Elberg SS, Eisler DM. Immunity in plague: protection induced in Cercopithecus aethiops by oral administration of live, attenuated Yersinia pestis</a>
+                - TH
+                 - 1976
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302296">Plague immunization. VI. Vaccination with fraction 1 antigen of Yersinia pestis</a>
+                - KF, JA, et al.
+                 - 1974
+		
+		  
+		
+             on_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302296">Plague immunization. V </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302298">Lowenthal JP, Cavanaugh DC. Potency of killed plague vaccines prepared from avirulent Yersinia pestis. Bull World Health Organ</a>
+                - JE, PL, et al.
+                 - 1980
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302299">Comparison of the immune response to three different Yersinia pestis vaccines in guinea pigs and langurs</a>
+                - TH, LE, et al.
+                 - 1974
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302302">Eley SM, Titball RW. Active immunization with recombinant V antigen for Yersinia pestis protects mice against plague. Infect Immun</a>
+                - SE, ED, et al.
+                 - 1995
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302303">Measurement of protective serum antibodies in human volunteers inoculated with plague prophylactics. Stanford Medical Bulletin 1948;6:75–9</a>
+                - KF, LE
+                
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302304">The clinical and immunological response of man to P. pestis vaccine</a>
+                - KF
+                 - 1971
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302305">Plague immunization. III. Serologic response to multiple inoculations of vaccine</a>
+                - DC, PJ, et al.
+                
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302307">et al. Unusual systemic reactions in U.S. Marine Corps personnel receiving Japanese encephalitis vaccine. Clin Infect Dis</a>
+                - SW, BS, et al.
+                 - 1996
+		
+		  
+		
+              </td></tr>
+            
+            <tr><td class="title">1</td>
+              <td>
+                <a class="citation_only" href="/showciting;jsessionid=F05DEACA86CA646473433EE577C68D38?cid=8302308">Draft guideline for isolation precautions in hospitals</a>
+                - Register
+                 - 1994
+		
+		  
+		
+              </td></tr>
+            
+        </table>
+      
+    </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+
+
+  <div id="footer">
+  	<div id="sponsors">
+  	<a href="http://www.nsf.gov"><img src="/images/nsf_logo.png;jsessionid=F05DEACA86CA646473433EE577C68D38" alt="The National Science Foundation"/></a>
+  	<br />
+  	<a href="http://lucene.apache.org/solr/"><img src="/images/solrlogo1.png;jsessionid=F05DEACA86CA646473433EE577C68D38" alt="Apache Solr" height="20%" width="20%"/></a>
+  	</div>
+    <ul class="links">
+      <li><a href="http://csxstatic.ist.psu.edu/about" target="_blank">About CiteSeerX</a></li>
+      <li><a href="http://csxstatic.ist.psu.edu/submit" target="_blank">Submit Documents</a></li>
+      <li><a href="http://csxstatic.ist.psu.edu/privacy" target="_blank">Privacy Policy</a></li>
+      <li><a href="http://csxstatic.ist.psu.edu/help" target="_blank">Help</a></li>
+      <li><a href="http://csxstatic.ist.psu.edu/about/data" target="_blank">Data</a></li>      
+      <li><a href="https://github.com/SeerLabs/CiteSeerX" target="_blank">Source</a></li>      
+      <li><a href="http://csxstatic.ist.psu.edu/contact" target="_blank">Contact Us</a></li>
+    </ul>
+  	<p class="info">Developed at and hosted by <a href="http://ist.psu.edu">The College of Information Sciences and Technology</a></p>
+  	<p>&copy; 2007-2014 <a href="http://www.psu.edu">The Pennsylvania State University</a></p>
+  </div>
+</div> 
+
+</body>
+</html>
+
+ss="info">Developed at and hosted by <a href="http://ist.psu.edu">The College of Information Sciences and Technology</a></p>
+  	<p>&copy; 2007-2014 <a href="http://www.psu.edu">The Pennsylvania State University</a></p

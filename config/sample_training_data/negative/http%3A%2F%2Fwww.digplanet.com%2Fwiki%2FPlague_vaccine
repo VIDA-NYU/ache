@@ -1,0 +1,1024 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<!-- version 1.2 032213-1 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Learn and talk about Plague vaccine, Plague (disease), Vaccines</title>
+<meta name="Keywords" content="Plague vaccine,C,C,C">
+<meta name="description" content="Learn and talk about <h1 class='firstHeading' id='firstHeading'>Plague vaccine</h1>, and check out <h1 class='firstHeading' id='firstHeading'>Plague vaccine</h1> on Wikipedia, Youtube, Google News, Google Books, and Twitter on Digplanet. Digplanet gathers together information and people from all over the Internet, all focused on <h1 class='firstHeading' id='firstHeading'>Plague vaccine</h1>, and makes it easy to learn, explore, and join the Digparty and talk to real people who are also interested in <h1 class='firstHeading' id='firstHeading'>Plague vaccine</h1>.">
+
+<link rel='canonical' href="http://www.digplanet.com/wiki/Plague_vaccine" />
+<link href="http://www.digparty.com/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<link href="http://www.digparty.com/favicon.ico" type="image/x-icon" rel="icon">
+
+<link rel="stylesheet" href="/css/basic.css" type="text/css" media="screen">
+
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=ext.gadget.DRN-wizard%2CReferenceTooltips%2Ccharinsert%2Cteahouse%7Cext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cskins.common.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector&amp;*" />
+<link rel="stylesheet" href="//bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+
+<!--
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%7Cmediawiki.legacy.shared%7Cskins.vector&amp;only=styles&amp;skin=vector" type="text/css" media="all" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;version=20110308T014115Z" type="text/css" media="all" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/en.wikipedia.org/load.php?debug=false&amp;lang=en&amp;modules=user&amp;only=styles&amp;skin=vector&amp;version=19700101T000001Z" type="text/css" media="all" />
+-->
+<link rel="stylesheet" href="/css/wiki.php" type="text/css" media="screen">
+<link rel="stylesheet" href="/css/tabs.css" type="text/css" media="screen">
+<!--[if IE]>
+<style type="text/css">
+.simple_overlay {
+	background-color:#333333;
+	padding:20px;
+}
+.simple_overlay .close {
+	right:-5px;
+	top:-5px;
+}
+</style>
+<![endif]-->
+<style type="text/css">
+td#digcommentscell p {
+	font-size:12px;
+}
+td#digcommentscell h2 {
+	font-size:18px;
+}
+td#digcommentscell {
+	border-top-color:#999;
+	border-top-style:solid;
+	border-top-width:3px;
+	background-color:#FFF;
+}
+/* correcting wikipedia styles */
+.panels h3 {
+	clear:none;
+}
+</style>
+<script type="text/javascript" src="/js/jquery-ui-1.8.7.custom/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="/js/jquery.tools.min.js"></script>
+<script src="https://www.google.com/jsapi?key=ABQIAAAAdBXn2UchjPr_4TVJautNcxToo4RJYKXRaCsO1NbL6OxE7b1prRSz4qNcOgiS61QN8KWXANogA6yU8Q"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-6384678-2', 'auto');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
+</head>
+
+<body class="mediawiki ltr skin-vector">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=24062123053";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+function toggletabs() {
+	if (document.getElementById("digtabcell").style.height != "auto") {
+		document.getElementById("digtabcell").style.height = "auto";
+		document.getElementById("tabs").style.height = "auto";
+		document.getElementById("toglink").innerHTML = "make tab area <b>smaller</b>";
+		$("div.tab_container").height("auto");
+	} else {
+		document.getElementById("digtabcell").style.height = "540px";
+		document.getElementById("tabs").style.height = "540px";
+		document.getElementById("toglink").innerHTML = "make tab area <b>bigger</b>";
+		$("div.tab_container").height("500px");
+	}
+}
+
+function togglebread() {
+	if (document.getElementById("breadblock").style.maxHeight != "400px") {
+		document.getElementById("breadblock").style.maxHeight = "400px";
+		document.getElementById("togbreadlink").innerHTML = "make breadcrumbs <b>smaller</b>";
+	} else {
+		document.getElementById("breadblock").style.maxHeight = "100px";
+		document.getElementById("togbreadlink").innerHTML = "make breadcrumbs <b>bigger</b>";
+	}
+}
+
+var booksInitialQuery = "\"" + "Plague vaccine" + "\"";
+var newsInitialQuery = booksInitialQuery;
+</script>
+<div id="topstripe">
+<a href="/wiki/" title="Go to the digplanet home, where you can start browsing through millions of topics on just about everything!" style="color:#FFF">digplanet</a>
+<span style="float:right; margin-right:20px; margin-left:20px; font-size:14px; font-style:italic; font-family:'Times New Roman', Times, serif;">beta 1: Athena</span>
+
+<span style="float:right; margin-top:-2px"><g:plusone size="medium" count="false"></g:plusone></span>
+<span style="float:right; margin-top:-2px"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a></span>
+
+<span style="float:right; margin-right:10px; margin-top:-2px;"><div class="fb-like" data-href="http://www.digplanet.com/wiki/Plague_vaccine" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"></div></span>
+
+<!--
+<span style="float:right; margin-right:10px; margin-top:-1px;">
+<script type="text/javascript">
+  reddit_url = "http://www.digplanet.com/wiki/Plague_vaccine";
+  reddit_title = "Digplanet! Plague vaccine";
+  reddit_newwindow='1';
+</script>
+<script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
+</span>
+-->
+
+<span style="font-size:12px; color:#FFF; float:right; padding-right:10px;">Share digplanet:</span>
+</div>
+<div id="header">
+	<table width="100%">
+		<tr height="20"><td colspan="3">&nbsp;</td></tr>
+		<tr valign="top">
+			<td align="left">
+				<h1 class='firstHeading' id='firstHeading'>Plague vaccine</h1>			</td>
+			<td align="center">
+				<div id='breadblock' style='overflow-y:auto; max-height:100px;'><div id='breadtogdiv'><a onClick='togglebread()' style='cursor:pointer' id='togbreadlink'>make breadcrumbs <b>bigger</b></a></div>
+<table class='breadtab'><tr valign='top'>
+<td><p class='bread'><a href='/wiki/Category:Plague_(disease)'>Plague (disease)</a>&nbsp;&gt;&nbsp;Plague vaccine</p>
+</td>
+<td><p class='bread'><a href='/wiki/Category:Vaccines'>Vaccines</a>&nbsp;&gt;&nbsp;Plague vaccine</p>
+</td>
+</tr></table>
+</div>
+			</td>
+			<td align="right">
+				<form action="/wiki/" method="get">
+					<label for="search">Search: </label>
+					<input name="search" type="text" value="">
+					<input type="submit" name="do" id="do" value="Search">
+				</form>
+			</td>
+		</tr>
+	</table>
+</div>
+<table id="digmaincontent" width="100%">
+	<tr valign="top">
+		<td width="150" id="dignavcell" class="basic_box">
+			<p class="navhead">Sections</p>
+			<p><a href='/wiki/Category:Agriculture'>Agriculture</a></p>
+	<p><a href='/wiki/Category:Applied_sciences'>Applied sciences</a></p>
+	<p><a href='/wiki/Category:Arts'>Arts</a></p>
+	<p><a href='/wiki/Category:Belief'>Belief</a></p>
+	<p><a href='/wiki/Category:Business'>Business</a></p>
+	<p><a href='/wiki/Category:Chronology'>Chronology</a></p>
+	<p><a href='/wiki/Category:Culture'>Culture</a></p>
+	<p><a href='/wiki/Category:Education'>Education</a></p>
+	<p><a href='/wiki/Category:Environment'>Environment</a></p>
+	<p><a href='/wiki/Category:Geography'>Geography</a></p>
+	<p><a href='/wiki/Category:Health'>Health</a></p>
+	<p><a href='/wiki/Category:History'>History</a></p>
+	<p><a href='/wiki/Category:Humanities'>Humanities</a></p>
+	<p><a href='/wiki/Category:Language'>Language</a></p>
+	<p><a href='/wiki/Category:Law'>Law</a></p>
+	<p><a href='/wiki/Category:Life'>Life</a></p>
+	<p><a href='/wiki/Category:Mathematics'>Mathematics</a></p>
+	<p><a href='/wiki/Category:Nature'>Nature</a></p>
+	<p><a href='/wiki/Category:People'>People</a></p>
+	<p><a href='/wiki/Category:Politics'>Politics</a></p>
+	<p><a href='/wiki/Category:Science'>Science</a></p>
+	<p><a href='/wiki/Category:Society'>Society</a></p>
+	<p><a href='/wiki/Category:Technology'>Technology</a></p>
+		</td>
+		<td valign="top" style="background-color:#F3F3F3">
+			<!--<p style="font-size:14px; background-color:#FFF; border-color:#A6C9E2; border-style:solid; border-width:1px; text-align:center; margin-top:0px; margin-bottom:3px;">
+			<a href="http://www.digparty.com/fb/check.php?n=Plague+vaccine" title="Talk About Plague vaccine" target="_blank">New! Add your voice to the discussion of Plague vaccine</a></p>-->
+			<table width="100%" cellpadding="0" cellspacing="0" style="background-color:#F3F3F3">
+				<tr valign="top">
+					<td id="digtabcell" style="min-width:825px; height:auto">
+						<div id="tabs">
+							<ul class="tools_tabs">
+								<li><a href="#tabs-1" class="w1" id="t1" style="width:134px">Wikipedia</a></li>
+								<li><a href="#tabs-2" class="w1" id="t2" style="width:134px">Youtube</a></li>
+								<li><a href="#tabs-3" class="w1" id="t3" style="width:134px">News</a></li>
+								<li><a href="#tabs-5" class="w1" id="t4" style="width:134px">Books</a></li>
+								<li><a href="#tabs-6" class="w1" id="t5" style="width:134px">Twitter</a></li>
+							</ul>
+							<div class="panes">
+								<div id="tabs-1" class="tab_container panels">
+									<div id="content">
+										<div id="bodyContent">
+											<table class="infobox" style="width:22em;border-spacing:2px;">
+<caption>Plague vaccine</caption>
+<tr>
+<th colspan="2" style="text-align:center;background:#ddd"><a href="/wiki/Vaccine" title="Vaccine">Vaccine description</a></th>
+</tr>
+<tr>
+<th scope="row" style="text-align:left">Target disease</th>
+<td><a href="/wiki/Yersinia_pestis" title="Yersinia pestis">Yersinia pestis</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="/wiki/Vaccine#Types" title="Vaccine">Type</a></th>
+<td>Live bacteria</td>
+</tr>
+<tr>
+<th colspan="2" style="text-align:center;background:#ddd">Clinical data</th>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="/wiki/American_Society_of_Health-System_Pharmacists" title="American Society of Health-System Pharmacists">AHFS</a>/<a href="/wiki/Drugs.com" title="Drugs.com">Drugs.com</a></th>
+<td><span class="reflink plainlinks nourlexpansion"><a rel="nofollow" class='external text' style='text-decoration:underline' onclick="g64('aHR0cDovL3d3dy5kcnVncy5jb20vY29ucy9wbGFndWVfdmFjY2luZS5odG1s')">Micromedex Detailed Consumer Information</a></span></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="/wiki/Regulation_of_therapeutic_goods" title="Regulation of therapeutic goods">Legal status</a></th>
+<td>
+<div class="plainlist">?</div>
+</td>
+</tr>
+<tr>
+<th colspan="2" style="text-align:center;background:#ddd">Identifiers</th>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="/wiki/CAS_registry_number" title="CAS registry number" class="mw-redirect">CAS number</a></th>
+<td><sup>&#160;<img alt="Yes" src="http://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Yes_check.svg/7px-Yes_check.svg.png" width="7" height="7" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/fb/Yes_check.svg/11px-Yes_check.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/fb/Yes_check.svg/14px-Yes_check.svg.png 2x" data-file-width="600" data-file-height="600" /><span style="display:none">Y</span></sup></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left"><a href="/wiki/Anatomical_Therapeutic_Chemical_Classification_System" title="Anatomical Therapeutic Chemical Classification System">ATC code</a></th>
+<td><a href="/wiki/ATC_code_J07" title="ATC code J07">J07</a><span class="reflink plainlinks nourlexpansion"><a rel="nofollow" class='external text' style='text-decoration:underline' onclick="g64('aHR0cDovL3d3dy53aG9jYy5uby9hdGNfZGRkX2luZGV4Lz9jb2RlPUowN0FLMDE=')">AK01</a></span></td>
+</tr>
+<tr>
+<th colspan="2" style="text-align:center;background:#ddd">&#160;<img alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/X_mark.svg/14px-X_mark.svg.png" width="14" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a2/X_mark.svg/21px-X_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/X_mark.svg/14px-X_mark.svg.png" width="14" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/X_mark.svg/28px-X_mark.svg.png 2x" data-file-width="525" data-file-height="600" /><span style="display:none">N</span>&#160;<a target='_blank' rel='nofollow' href="http://wikipedia.org/wiki/Wikipedia:WikiProject_Chemicals/Chembox_validation" title="Wikipedia:WikiProject Chemicals/Chembox validation">(what is this?)</a>&#160;&#160;<span class="reflink plainlinks nourlexpansion"><a class='external text' style='text-decoration:underline' onclick="g64('Ly9lbi53aWtpcGVkaWEub3JnL3cvaW5kZXgucGhwP3RpdGxlPVNwZWNpYWw6Q29tcGFoject Chemicals/Chembox validation">(what is this?)</a>&#160;&#160;<span class="reflink plainlinks nourlexpansion"><a class='external text' style='text-decoration:underline' onclick="g64('Ly9lbi53aWtpcGVkaWEub3JnL3cvaW5kZXgucGhwP3RpdGxlPVNwZWNpyZVBhZ2VzJmFtcDtyZXYxPTQxMDY2NzM2NCZhbXA7cGFnZTI9UGxhZ3VlK3ZhY2NpbmU=')">(verify)</a></span></th>
+</tr>
+</table>
+<p><b>Plague vaccine</b> is a <a href="/wiki/Vaccine" title="Vaccine">vaccine</a> used against <i><a href="/wiki/Yersinia_pestis" title="Yersinia pestis">Yersinia pestis</a></i>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> Killed bacteria have been used since 1890 but are less effective against <a href="/wiki/Pneumonic_plague" title="Pneumonic plague">pneumonic plague</a> so that recently live vaccines of an attenuated type have been developed for this situation.<sup id="cite_ref-pmid17652523_2-0" class="reference"><a href="#cite_note-pmid17652523-2"><span>[</span>2<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Plague_immunization">Plague immunization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a target='_blank' rel='nofollow' href="http://wikipedia.org/w/index.php?title=Plague_vaccine&amp;action=edit&amp;section=1" title="Edit section: Plague immunization">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A plague vaccine is used for an induction of <i>active specific <a href="/wiki/Immunity_(medical)" title="Immunity (medical)">immunity</a></i> in a susceptible organism to <a href="/wiki/Plague_(disease)" title="Plague (disease)">plague</a> by means of administration an <a href="/wiki/Antigen" title="Antigen">antigenic</a> material (a <a href="/wiki/Vaccine" title="Vaccine">vaccine</a>) via a variety of routes to people at risk of contracting any clinical form of plague. This method is known as <b>plague immunization</b>. There is strong evidence for the efficacy of administration of some plague vaccines in preventing or ameliorating the effects of a variety of clinical forms of <a href="/wiki/Infection" title="Infection">infection</a> by <i><a href="/wiki/Yersinia_pestis" title="Yersinia pestis">Yersinia pestis</a></i>. Plague immunization also encompasses incurring state of <i>passive specific <a href="/wiki/Immunity_(medical)" title="Immunity (medical)">immunity</a></i> to plague in a susceptible organism after administration of a plague serum or plague immunoglobulin in people with an immediate risk of developing the disease.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>Many areas that are affected by plague in modern times are third world countries, and therefore cannot get accurate diagnosis or decent medical care for any sufferers of bubonic or pneumonic plague.</p>
+<p>A systematic review by the <a href="/wiki/Cochrane_Collaboration" title="Cochrane Collaboration">Cochrane Collaboration</a> found no studies of sufficient quality to be included in the review, and were thus unable to make any statement on the efficacy of the vaccinec review by the <a href="/wiki/Cochrane_Collaboration" title="Cochrane Collaboration">Cochrane Collaboration</a> found no studies of sufficient quality to be included in .<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a target='_blank' rel='nofollow' href="http://wikipedia.org/w/index.php?title=Plague_vaccine&amp;action=edit&amp;section=2" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class='external text' style='text-decoration:underline' onclick="g64('Ly93d3cubmxtLm5paC5nb3YvY2dpL21lc2gvMjAxMS9NQl9jZ2k/bW9kZT0mYW1wO3Rlcm09UGxhZ3VlK1ZhY2NpbmU=')">Plague Vaccine</a> at the US National Library of Medicine <a href="/wiki/Medical_Subject_Headings" title="Medical Subject Headings">Medical Subject Headings</a> (MeSH)</span></li>
+<li id="cite_note-pmid17652523-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-pmid17652523_2-0">^</a></b></span> <span class="reference-text"><span class="citation journal">Bubeck SS, Dube PH (September 2007). <a rel="nofollow" class='external text' style='text-decoration:underline' onclick="g64('aHR0cDovL2N2aS5hc20ub3JnL2NnaS9wbWlkbG9va3VwP3ZpZXc9bG9uZyZhbXA7cG1pZD0xNzY1MjUyMw==')">"Yersinia pestis CO92ΔyopH Is a Potent Live, Attenuated Plague Vaccine"</a>. <i>Clin. Vaccine Immunol.</i> <b>14</b> (9): 1235–8. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class='external text' style='text-decoration:underline' onclick="g64('aHR0cDovL2R4LmRvaS5vcmcvMTAuMTEyOCUyRkNWSS4wMDEzNy0wNw==')">10.1128/CVI.00137-07</a>. <a href="/wiki/PubMed_Central" title="PubMed Central">PMC</a>&#160;<a rel="nofollow" class='external text' style='text-decoration:underline' onclick="g64('Ly93d3cubmNiaS5ubG0ubmloLmdvdi9wbWMvYXJ0aWNsZXMvUE1DMjA0MzMxNQ==')">2043315</a>. <a href="/wiki/PubMed_Identifier" title="PubMed Identifier" class="mw-redirect">PMID</a>&#160;<a rel="nofollow" class='external text' style='text-decoration:underline' onclick="g64('Ly93d3cubmNiaS5ubG0ubmloLmdvdi9wdWJtZWQvMTc2NTI1MjM=')">17652523</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APlague+vaccine&amp;rft.atitle=Yersinia+pestis+CO92%CE%94yopH+Is+a+Potent+Live%2C+Attenuated+Plague+Vaccine&amp;rft.au=Bubeck+SS%2C+Dube+PH&amp;rft.aulast=Bubeck+SS%2C+Dube+PH&amp;rft.date=September+2007&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fcvi.asm.org%2Fcgi%2Fpmidlookup%3Fview%3Dlong%26pmid%3D17652523&amp;rft_id=info%3Adoi%2F10.1128%2FCVI.00137-07&amp;rft_id=info%3Apmc%2F2043315&amp;rft_id=info%3Apmid%2F17652523&amp;rft.issue=9&amp;rft.jtitle=Clin.+Vaccine+Immunol.&amp;rft.pages=1235-8&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=14" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.who.int/vaccine_research/diseases/zoonotic/en/index5.html">http://www.who.int/vaccine_research/diseases/zoonotic/en/index5.html</a></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation journal">Jefferson T, Demicheli V, Pratt M (2000). "Vaccines for preventing plague". <i>Cochrane Database Syst Rev</i> (2): CD000976. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class='external text' style='text-decoration:underline' onclick="g64('aHR0cDovL2R4LmRvaS5vcmcvMTAuMTAwMiUyRjE0NjUxODU4LkNEMDAwOTc2')">10.1002/14651858.CD000976</a>. <a href="/wiki/PubMed_Identifier" title="PubMed Identifier" class="mw-redirect">PMID</a>&#160;<a rel="nofollow" class='external text' style='text-decoration:underline' onclick="g64('Ly93d3cubmNiaS5ubG0ubmloLmdvdi9wdWJtZWQvMTA3OTY1NjU=')">10796565</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APlague+vaccine&amp;rft.atitle=Vaccines+for+preventing+plague&amp;rft.au=Jefferson+T%2C+Demicheli+V%2C+Pratt+M&amp;rft.aulast=Jefferson+T%2C+Demicheli+V%2C+Pratt+M&amp;rft.date=2000&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1002%2F14651858.CD000976&amp;rft_id=info%3Apmid%2F10796565&amp;rft.issue=2&amp;rft.jtitle=Cochrane+Database+Syst+Rev&amp;rft.pages=CD000976&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<table class="navbox" style="border-spacing:0">
+<tr>
+<td style="padding:2px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="2">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Vaccines" title="Template:Vaccines"><span title="View this template" style=";;background:none transparent;border:none;">v</span></a></li>
+<li class="nv-talk"><a target='_blank' rel='nofollow' href="http://wikipedia.org/wiki/Template_talk:Vaccines" title="Template talk:Vaccines"><span title="Discuss this template" style=";;background:none transparent;border:none;">t</span></a></li>
+<li class="nv-edit"><a class='external text' style='text-decoration:underline' onclick="g64('Ly9lbi53aWtpcGVkaWEub3JnL3cvaW5kZXgucGhwP3RpdGxlPVRlbXBsYXRlOlZhY2NpbmVzJmFtcDthY3Rpb249ZWRpdA==')"><span title="Edit this template" style=";;background:none transparent;border:none;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%"><a href="/wiki/Artificial_induction_of_immunity" title="Artificial induction of immunity">Artificial induction of immunity</a> / <a href="/wiki/Immunization" title="Immunization">Immunization</a>: <a href="/wiki/Vaccine" title="Vaccine">Vaccines</a>, <a href="/wiki/Vaccination" title="Vaccination">Vaccination</a>, and <a href="/wiki/Inoculation" title="Inoculation">Inoculation</a> (<a href="/wiki/ATC_code_J07" title="ATC code J07">J07</a>)</div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background:PowderBlue;">Development</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Immunologic_adjuvant" title="Immunologic adjuvant">Adjuvants</a></li>
+<li><a href="/wiki/List_of_vaccine_ingredients" title="List of vaccine ingredients">List of vaccine ingredients</a></li>
+<li><a href="/wiki/Mathematical_modelling_of_infectious_disease" title="Mathematical modelling of infectious disease">Mathematical modelling</a></li>
+<li><a href="/wiki/Timeline_of_vaccines" title="Timeline of vaccines">Timeline</a></li>
+<li><a href="/wiki/Vaccine_trial" title="Vaccine trial">Trials</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background:PowderBlue;">Classes</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Conjugate_vaccine" title="Conjugate vaccine">Conjugate vaccine</a></li>
+<li><a href="/wiki/DNA_vaccination" title="DNA vaccination">DNA vaccination</a></li>
+<li><a href="/wiki/Inactivated_vaccine" title="Inactivated vaccine">Inactivated vaccine</a></li>
+<li><a href="/wiki/Live_vector_vaccine" title="Live vector vaccine">Live vector vaccine</a>
+<ul>
+<li><a href="/wiki/Attenuated_vaccine" title="Attenuated vaccine">Attenuated vaccine</a></li>
+<li><a href="/wiki/Heterologous_vaccine" title="Heterologous vaccine">Heterologous vaccine</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Protein_subunit" title="Protein subunit">Subunit/component</a> / <a href="/wiki/Peptide_vaccine" title="Peptide vaccine">Peptide</a> / <a href="/wiki/Virus-like_particle" title="Virus-like particle">Virus-like particle</a></li>
+<li><a href="/wiki/Toxoid" title="Toxoid">Toxoid</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background:PowderBlue;">Administration</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>Global:
+<ul>
+<li><a href="/wiki/GAVI_Alliance" title="GAVI Alliance">GAVI Alliance</a></li>
+<li><a href="/wiki/Vaccination_policy" title="Vaccination policy">Policy</a></li>
+<li><a href="/wiki/Vaccination_schedule" title="Vaccination schedule">Schedule</a></li>
+<li><a href="/wiki/Vaccine_injury" title="Vaccine injury">Vaccine injury</a></li>
+</ul>
+</li>
+<li>USA:
+<ul>
+<li><a href="/wiki/Advisory_Committee_on_Immunization_Practices" title="Advisory Committee on Immunization Practices">ACIP</a></li>
+<li><a href="/wiki/Vaccine_court" title="Vaccine court">Vaccine court</a></li>
+<li><a href="/wiki/Vaccines_for_Children_Program" title="Vaccines for Children Program">Vaccines for Children Program</a></li>
+<li><a href="/wiki/Vaccine_Adverse_Event_Reporting_System" title="Vaccine Adverse Event Reporting System">VAERS</a></li>
+<li><a href="/wiki/Vaccine_Safety_Datalink" title="Vaccine Safety Datalink">VSD</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background:PowderBlue;">Vaccines</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="background:PowderBlue;">Bacterial</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Anthrax_vaccines" title="Anthrax vaccines">Anthrax</a></li>
+<li><a href="/wiki/Brucellosis_vaccine" title="Brucellosis vaccine">Brucellosis</a></li>
+<li><a href="/wiki/Cholera_vaccine" title="Cholera vaccine">Cholera</a><sup>#</sup></li>
+<li><a href="/wiki/Diphtheria_vaccine" title="Diphtheria vaccine">Diphtheria</a><sup>#</sup></li>
+<li><a href="/wiki/Hib_vaccine" title="Hib vaccine">Hib</a><sup>#</sup></li>
+<li><a href="/wiki/Lyme_disease_vaccine" title="Lyme disease vaccine" class="mw-redirect">Lyme disease</a><sup>‡</sup></li>
+<li><a href="/wiki/Meningococcal_vaccine" title="Meningococcal vaccine">Meningococcus</a><sup>#</sup>
+<ul>
+<li><a href="/wiki/MeNZB" title="MeNZB">MeNZB</a></li>
+<li><a href="/wiki/NmVac4-A/C/Y/W-135" title="NmVac4-A/C/Y/W-135">NmVac4-A/C/Y/W-135</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Pertussis_vaccine" title="Pertussis vaccine">Pertussis</a><sup>#</sup></li>
+<li><strong class="selflink">Plague</strong></li>
+<li><a href="/wiki/Pneumococcal_vaccine" title="Pneumococcal vaccine">Pneumococcal</a><sup>#</sup>
+<ul>
+<li><a href="/wiki/Pneumococcal_conjugate_vaccine" title="Pneumococcal conjugate vaccine">PCV</a></li>
+<li><a href="/wiki/Pneumococcal_polysaccharide_vaccine" title="Pneumococcal polysaccharide vaccine">PPSV</a></li>
+</ul>
+</li>
+<li><a href="/wikup>
+<ul>
+<li><a href="/wiki/Pneumococcal_conjugate_vaccine" title="Pneumococcal conjugate vaccine">PCV</a></li>
+<li><a href="/wiki/Pneumococcal_pi/Q_fever_vaccine" title="Q fever vaccine" class="mw-redirect">Q fever</a></li>
+<li><a href="/wiki/Tetanus_vaccine" title="Tetanus vaccine">Tetanus</a><sup>#</sup></li>
+<li><a href="/wiki/Tuberculosis_vaccines" title="Tuberculosis vaccines">Tuberculosis</a>
+<ul>
+<li><a href="/wiki/BCG_vaccine" title="BCG vaccine">BCG</a><sup>#</sup></li>
+</ul>
+</li>
+<li><a href="/wiki/Typhoid_vaccine" title="Typhoid vaccine">Typhoid</a><sup>#</sup>
+<ul>
+<li><a href="/wiki/Ty21a" title="Ty21a">Ty21a</a></li>
+<li><a href="/wiki/Vi_capsular_polysaccharide_vaccine" title="Vi capsular polysaccharide vaccine">ViCPS</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Typhus_vaccine" title="Typhus vaccine">Typhus</a></li>
+<li>combination: <a href="/wiki/DPT_vaccine" title="DPT vaccine">DTwP/DTaP</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background:PowderBlue;">Viral</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Adenovirus_vaccine" title="Adenovirus vaccine">Adenovirus</a></li>
+<li><a href="/wiki/Influenza_vaccine" title="Influenza vaccine">Flu</a><sup>#</sup>
+<ul>
+<li><a href="/wiki/2009_flu_pandemic_vaccine" title="2009 flu pandemic vaccine">H1N1</a> (<a href="/wiki/Pandemrix" title="Pandemrix">Pandemrix</a>)</li>
+<li><a href="/wiki/Live_attenuated_influenza_vaccine" title="Live attenuated influenza vaccine">LAIV</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Hantavirus_vaccine" title="Hantavirus vaccine">Hantavirus</a></li>
+<li><a href="/wiki/Hepatitis_A_vaccine" title="Hepatitis A vaccine">Hepatitis A</a><sup>#</sup></li>
+<li><a href="/wiki/Hepatitis_B_vaccine" title="Hepatitis B vaccine">Hepatitis B</a><sup>#</sup></li>
+<li><a href="/wiki/Hepatitis_E_vaccine" title="Hepatitis E vaccine" class="mw-redirect">Hepatitis E</a></li>
+<li><a href="/wiki/HPV_vaccines" title="HPV vaccines">HPV</a>
+<ul>
+<li><a href="/wiki/Cervarix" title="Cervarix">Cervarix</a></li>
+<li><a href="/wiki/Gardasil" title="Gardasil">Gardasil</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Japanese_encephalitis_vaccine" title="Japanese encephalitis vaccine">Japanese encephalitis</a><sup>#</sup></li>
+<li><a href="/wiki/Measles_vaccine" title="Measles vaccine">Measles</a><sup>#</sup></li>
+<li><a href="/wiki/Mumps_vaccine" title="Mumps vaccine">Mumps</a><sup>#</sup>
+<ul>
+<li><a href="/wiki/Mumpsvax" title="Mumpsvax">Mumpsvax</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Polio_vaccine" title="Polio vaccine">Polio</a><sup>#</sup>
+<ul>
+<li><a href="/wiki/Sabin_polio_vaccine" title="Sabin polio vaccine" class="mw-redirect">Sabin</a></li>
+<li><a href="/wiki/Salk_polio_vaccine" title="Salk polio vaccine" class="mw-redirect">Salk</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Rabies_vaccine" title="Rabies vaccine">Rabies</a><sup>#</sup></li>
+<li><a href="/wiki/Rotavirus_vaccine" title="Rotavirus vaccine">Rotavirus</a><sup>#</sup></li>
+<li><a href="/wiki/Rubella_vaccine" title="Rubella vaccine">Rubella</a><sup>#</sup></li>
+<li><a href="/wiki/Smallpox_vaccine" title="Smallpox vaccine">Smallpox</a>
+<ul>
+<li><a href="/wiki/Dryvax" title="Dryvax">Dryvax</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Tick-borne_encephalitis_vaccine" title="Tick-borne encephalitis vaccine">Tick-borne encephalitis</a></li>
+<li>Varicella zoster
+<ul>
+<li><a href="/wiki/Varicella_vaccine" title="Varicella vaccine">chicken pox</a><sup>#</sup></li>
+<li><a href="/wiki/Zoster_vaccine" title="Zoster vaccine">shingles</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Yellow_fever_vaccine" title="Yellow fever vaccine">Yellow fever</a><sup>#</sup></li>
+<li>combination:
+<ul>
+<li><a href="/wiki/MMR_vaccine" title="MMR vaccine">MMR</a></li>
+<li><a href="/wiki/MMRV_vaccine" title="MMRV vaccine">MMRV</a></li>
+</ul>
+</li>
+<li>research:
+<ul>
+<li><a href="/wiki/Chikungunya_vaccine" title="Chikungunya vaccine" class="mw-redirect">Chikungunya</a></li>
+<li><a href="/wiki/Cytomegalovirus_vaccine" title="Cytomegalovirus vaccine">Cytomegalovirus</a></li>
+<li><a href="/wiki/Dengue_vaccine" title="Dengue vaccine">Dengue</a></li>
+<li><a href="/wiki/Ebola_vaccine" title="Ebola vaccine">Ebola</a></li>
+<li><a href="/wiki/Epstein%E2%80%93Barr_virus_vaccine" title="Epstein–Barr virus vaccine">Epstein–Barr virus</a></li>
+<li><a href="/wiki/Hepatitis_C_vaccine" title="Hepatitis C vaccine">Hepatitis C</a></li>
+<li><a href="/wiki/HIV_vaccine" title="HIV vaccine">HIV</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background:PowderBlue;">Protozoan</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>research:
+<ul>
+<li><a href="/wiki/Malaria_vaccine" title="Malaria vaccine">Malaria</a></li>
+<li><a href="/wiki/Trypanosomiasis_vaccine" title="Trypanosomiasis vaccine">Trypanosomiasis</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background:PowderBlue;"><a href="/wiki/Helminthiasis" title="Helminthiasis">Helminthiasis</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>research:
+<ul>
+<li><a href="/wiki/Hookworm_vaccine" title="Hookworm vaccine">Hookworm</a></li>
+<li><a href="/wiki/Schistosomiasis_vaccine" title="Schistosomiasis vaccine">Schistosomiasis</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background:PowderBlue;">Other</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Cancer_vaccine" title="Cancer vaccine">Cancer vaccines</a>
+<ul>
+<li><a href="/wiki/ALVAC-CEA_vaccine" title="ALVAC-CEA vaccine">ALVAC-CEA</a></li>
+<li><a href="/wiki/Hepatitis_B_vaccine" title="Hepatitis B vaccine">Hepatitis B</a><sup>#</sup></li>
+<li><a href="/wiki/HPV_vaccines" title="HPV vaccines">HPV</a>
+<ul>
+<li><a href="/wiki/Cervarix" title="Cervarix">Cervarix</a></li>
+<li><a href="/wiki/Gardasil" title="Gardasil">Gardasil</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/wiki/NicVAX" title="NicVAX">NicVAX</a></li>
+<li><a href="/wiki/TA-CD" title="TA-CD">TA-CD</a></li>
+<li><a href="/wiki/TA-NIC" title="TA-NIC">TA-NIC</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background:PowderBlue;">Controversy</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Vaccine_controversies" title="Vaccine controversies">General</a></li>
+<li><a href="/wiki/MMR_vaccine_controversy" title="MMR vaccine controversy">MMR</a></li>
+<li><a href="/wiki/National_Childhood_Vaccine_Injury_Act" title="National Childhood Vaccine Injury Act">NCVIA</a></li>
+<li><a href="/wiki/Pox_party" title="Pox party">Pox party</a></li>
+<li><a href="/wiki/2000_Simpsonwood_CDC_conference" title="2000 Simpsonwood CDC conference">Simpsonwood</a></li>
+<li><a href="/wiki/Thiomersal_controversy" title="Thiomersal controversy">Thiomersal</a></li>
+<li><a href="/wiki/Andrew_Wakefield" title="Andrew Wakefield">Andrew Wakefield</a></li>
+<li><a href="/wiki/Cedillo_v._Secretary_of_Health_and_Human_Services" title="Cedillo v. Secretary of Health and Human Services">Cedillo v. Secretary of Health and Human Services</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="background:PowderBlue;">See also</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Epidemiology" title="Epidemiology">Epidemiology</a></li>
+<li><a href="/wiki/Eradication_of_infectious_diseases" title="Eradication of infectious diseases">Eradication of infectious diseases</a></li>
+<li><a href="/wiki/List_of_vaccine_topics" title="List of vaccine topics">List of vaccine topics</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="2" style="background: transparent; padding: 0px;">
+<div>
+<div class="hlist">
+<ul>
+<li><sup>#</sup><a href="/wiki/List_of_World_Health_Organization_Essential_Medicines" title="List of World Health Organization Essential Medicines" class="mw-redirect">WHO-EM</a></li>
+<li><sup>‡</sup><a href="/wiki/List_of_withdrawn_drugs" title="List of withdrawn drugs">Withdrawn</a> from market</li>
+<li><a href="/wiki/Clinical_trial" title="Clinical trial">Clinical trials</a>:
+<ul>
+<li><sup>†</sup><a href="/wiki/Clinical_trial#Phase_III" title="Clinical trial">Phase III</a></li>
+<li><sup>§</sup><a href="/wiki/Clinical_trial#Phase_II" title="Clinical trial">Never to phase III</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<div style="text-align:center; position:relative; white-space:nowrap;"><b>Index of <a href="/wiki/Pathogenic_bacteria" title="Pathogenic bacteria">bacterial disease</a></b>
+<div class="plainlinks hlist navbar mini" style="position:absolute; right:0; top:0; margin:0 5px;">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Bacteria_navs" title="Template:Bacteria navs"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a target='_blank' rel='nofollow' href="http://wikipedia.org/wiki/Template_talk:Bacteria_navs" title="Template talk:Bacteria navs"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class='external text' style='text-decoration:underline' onclick="g64('Ly9lbi53aWtpcGVkaWEub3JnL3cvaW5kZXgucGhwP3RpdGxlPVRlbXBsYXRlOkJhY3RlcmlhX25hdnMmYW1wO2FjdGlvbj1lZGl0')"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Description</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Template:Bacteria" title="Template:Bacteria">Bacteria</a>
+<ul>
+<li><a href="/wiki/Template:Bacteria_classification" title="Template:Bacteria classification">classification</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Disease</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Template:Gram-positive_firmicutes_diseases" title="Template:Gram-positive firmicutes diseases">Gram-positive firmicutes</a></li>
+<li><a href="/wiki/Template:Gram-positive_actinobacteria_diseases" title="Template:Gram-positive actinobacteria diseases">Gram-positive actinobacteria</a></li>
+<li><a href="/wiki/Template:Tuberculosis" title="Template:Tuberculosis">Tuberclosis</a></li>
+<li><a href="/wiki/Template:Gram-negative_proteobacterial_diseases" title="Template:Gram-negative proteobacterial diseases">Gram-negative proteobacteria</a></li>
+<li><a href="/wiki/Template:Cholera" title="Template:Cholera">Cholera</a></li>
+<li><a href="/wiki/Template:Gram-negative_non-proteobacterial_diseases" title="Template:Gram-negative non-proteobacterial diseases">Gram-negative non-proteobacteria</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Treatment</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>Antibiotics
+<ul>
+<li><a href="/wiki/Template:Cell_wall_disruptive_antibiotics" title="Template:Cell wall disruptive antibiotics">cell wall</a></li>
+<li><a href="/wiki/Template:Nucleic_acid_inhibitors" title="Template:Nucleic acid inhibitors">nucleic acid</a></li>
+<li><a href="/wiki/Template:Antimycobacterials" title="Template:Antimycobacterials">myocbacteria</a></li>
+<li><a href="/wiki/Template:Protein_synthesis_inhibitor_antibiotics" title="Template:Protein synthesis inhibitor antibiotics">protein synthesis</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Template:Vaccines" title="Template:Vaccines">Vaccines</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0">
+<tr>
+<td class="navbox-abovebelow" colspan="2">
+<div>
+<div style="text-align:center; position:relative; white-space:nowrap;"><b>Index of <a href="/wiki/Viral_disease" title="Viral disease">viral disease</a></b>
+<div class="plainlinks hlist navbar mini" style="position:absolute; right:0; top:0; margin:0 5px;">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Virus_navs" title="Template:Virus navs"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a target='_blank' rel='nofollow' href="http://wikipedia.org/wiki/Template_talk:Virus_navs" title="Template talk:Virus navs"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class='external text' style='text-decoration:underline' onclick="g64('Ly9lbi53aWtpcGVkaWEub3JnL3cvaW5kZXgucGhwP3RpdGxlPVRlbXBsYXRlOlZpcnVzX25hdnMmYW1wO2FjdGlvbj1lZGl0')"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Description</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Template:Virus_topics" title="Template:Virus topics">Virus</a>
+<ul>
+<li><a href="/wiki/Template:Baltimore_(virus_classification)" title="Template:Baltimore (eft-style:solid;width:100%;padding:0px">
+<div style="padding:0emvirus classification)">classification</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Template:Viral_proteins" title="Template:Viral proteins">Viral proteins</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Disease</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Template:Viral_systemic_diseases" title="Template:Viral systemic diseases">Systemic</a>
+<ul>
+<li><a href="/wiki/Template:HIV_and_AIDS" title="Template:HIV and AIDS">HIV and AIDS</a></li>
+<li><a href="/wiki/Template:Influenza" title="Template:Influenza">influenza</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Template:Viral_cutaneous_conditions" title="Template:Viral cutaneous conditions">Cutaneous</a></li>
+<li><a href="/wiki/Template:Varicella_zoster" title="Template:Varicella zoster">Zoster</a></li>
+<li><a href="/wiki/Template:Human_papillomavirus" title="Template:Human papillomavirus">Human papillomavirus</a></li>
+<li><a href="/wiki/Template:Zoonotic_viral_diseases" title="Template:Zoonotic viral diseases">Zoonotic</a></li>
+<li><a href="/wiki/Template:Eponymous_medical_signs_for_infectious_disease" title="Template:Eponymous medical signs for infectious disease">Symptoms and signs</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Treatment</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li>Drugs
+<ul>
+<li><a href="/wiki/Template:Antiretroviral_drug" title="Template:Antiretroviral drug">antiretroviral</a></li>
+<li><a href="/wiki/Template:DNA_antivirals" title="Template:DNA antivirals">DNA</a></li>
+<li><a href="/wiki/Template:RNA_antivirals" title="Template:RNA antivirals">RNA</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Template:Vaccines" title="Template:Vaccines">Vaccines</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table class="metadata plainlinks stub" style="background: transparent;" role="presentation">
+<tr>
+<td><a target='_blank' rel='nofollow' href="http://wikipedia.org/wiki/File:Syringe_with_Green_Fluid.jpg" class="image"><img alt="Stub icon" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Syringe_with_Green_Fluid.jpg/35px-Syringe_with_Green_Fluid.jpg" width="35" height="26" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Syringe_with_Green_Fluid.jpg/53px-Syringe_with_Green_Fluid.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Syringe_with_Green_Fluid.jpg/70px-Syringe_with_Green_Fluid.jpg 2x" data-file-width="1976" data-file-height="1482" /></a></td>
+<td><i>This <a href="/wiki/Vaccine" title="Vaccine">vaccine</a> article is a <a target='_blank' rel='nofollow' href="http://wikipedia.org/wiki/Wikipedia:Stub" title="Wikipedia:Stub">stub</a>. You can help Wikipedia by <a class='external text' style='text-decoration:underline' onclick="g64('Ly9lbi53aWtpcGVkaWEub3JnL3cvaW5kZXgucGhwP3RpdGxlPVBsYWd1ZV92YWNjaW5lJmFtcDthY3Rpb249ZWRpdA==')">expanding it</a>.</i>
+<div class="plainlinks hlist navbar mini" style="position: absolute; right: 15px; display: none;">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Vaccine-stub" title="Template:Vaccine-stub"><span title="View this template" style="">v</span></a></li>
+<li class="nv-talk"><a target='_blank' rel='nofollow' href="http://wikipedia.org/wiki/Template_talk:Vaccine-stub" title="Template talk:Vaccine-stub"><span title="Discuss this template" style="">t</span></a></li>
+<li class="nv-edit"><a class='external text' style='text-decoration:underline' onclick="g64('Ly9lbi53aWtpcGVkaWEub3JnL3cvaW5kZXgucGhwP3RpdGxlPVRlbXBsYXRlOlZhY2NpbmUtc3R1YiZhbXA7YWN0aW9uPWVkaXQ=')"><span title="Edit this template" style="">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1013
+CPU time usage: 0.952 seconds
+Real time usage: 1.025 seconds
+Preprocessor visited node count: 1331/1000000
+Preprocessor generated node count: 12955/1500000
+Post‐expand include size: 83310/2097152 bytes
+Template argument size: 1754/2097152 bytes
+Highest expansion depth: 15/40
+Expensive parser function count: 3/500
+Lua time usage: 0.174/10.000 seconds
+Lua memory usage: 2.21 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  654.476      1 - -total
+ 53.23%  348.365      4 - Template:Navbox
+ 35.21%  230.416      1 - Template:Vaccines
+ 30.93%  202.451      1 - Template:Drugbox
+ 27.00%  176.711      1 - Template:Infobox
+ 20.91%  136.828      1 - Template:Reflist
+ 14.09%   92.228      3 - Template:Navbar
+ 14.03%   91.828      1 - Template:Bacteria_navs
+ 11.45%   74.931      2 - Template:Navbar-header
+ 10.68%   69.878      2 - Template:Cite_journal
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:21053500-0!*!0!!*!4!* and timestamp 20150102003732 and revision id 632605358
+ -->
+
+<br /><div id='wiki_att'>Original courtesy of Wikipedia: <a href='http://en.wikipedia.org/wiki/Plague_vaccine' target='_blank'>http://en.wikipedia.org/wiki/Plague_vaccine</a>&nbsp;&mdash;&nbsp;<a href='http://wikimediafoundation.org/wiki/Donate' target='_blank'>Please support Wikipedia.</a><br />This page uses <a href='http://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons Licensed</a> content from <a href='https://en.wikipedia.org/wiki/Main_Page'>Wikipedia</a>. A portion of the proceeds from advertising on Digplanet goes to supporting Wikipedia.</div>
+ href='http://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons Licensed</a> content from <a href='https://en.wikipedia.org/wiki/Main_Page'>Wikipedia</a>. A portion of the proceeds from adver										</div>
+									</div>
+								</div>
+								<div id="tabs-2" class="tab_container panels">
+									<div id="youContent">
+										<table width='100%'><tbody><tr><td><form action='#' method='get' name='youform' onSubmit='return do_you_get(this)'>
+<input name='query' type='text' value="Plague vaccine"> <input name='Search' type='submit' value='Search'>
+<input name='widen' type='button' onclick='you_wide(this)' value='Widen The Search'></form></td><td class='prevNext'>188932 videos found<a onclick="do_you('Plague vaccine', 11)">Next&nbsp;&gt;</a>&nbsp;</td></tr></tbody></table>
+<table><tbody><tr valign='top'><td class='youcell'><a target='_blank' href="http://www.youtube.com/watch?v=z9pyHSPJCbE&feature=youtube_gdata_player" border='0' rel='nofollow'><img src='http://i.ytimg.com/vi/z9pyHSPJCbE/0.jpg' class='youthm' width='480' height='360' /></a><p class='youtitle'><a target='_blank' href="http://www.youtube.com/watch?v=z9pyHSPJCbE&feature=youtube_gdata_player" rel='nofollow'>Ebola Vaccine is the Plague "Trigger"</a></p><p class='youdesc'>https://www.youtube.com/watch?v=gROhNaJoGzI https://www.youtube.com/watchv=CXsO43i5i1A&list=UUoHd6L0ataUk3OA8fVmQDOg.</p></td><td class='youcell'><a target='_blank' href="http://www.youtube.com/watch?v=jzZ-dhGQeQw&feature=youtube_gdata_player" border='0' rel='nofollow'><img src='http://i.ytimg.com/vi/jzZ-dhGQeQw/0.jpg' class='youthm' width='480' height='360' /></a><p class='youtitle'><a target='_blank' href="http://www.youtube.com/watch?v=jzZ-dhGQeQw&feature=youtube_gdata_player" rel='nofollow'>Experimental Bubonic Plague Vaccine Study Funded By Department of Defense for Bio Research</a></p><p class='youdesc'>Apex Research Institute is conducting a research study of an experimental plague vaccine. Wh need healthy volunteers ages 18-55. This research study is funde...</p></td></tr><tr valign='top'><td class='youcell'><a target='_blank' href="http://www.youtube.com/watch?v=Wi8MrObZITA&feature=youtube_gdata_player" border='0' rel='nofollow'><img src='http://i.ytimg.com/vi/Wi8MrObZITA/0.jpg' class='youthm' width='480' height='360' /></a><p class='youtitle'><a target='_blank' href="http://www.youtube.com/watch?v=Wi8MrObZITA&feature=youtube_gdata_player" rel='nofollow'>'Ebola vaccine is a plague trigger'</a></p><p class='youdesc'>Flow Of Wisdom with Sean Anthony airs live every Sunday 3-5pm EST on a radio station near you! This show originally aired Oct. 12, 2014 Hour two. This excerp...</p></td><td class='youcell'><a target='_blank' href="http://www.youtube.com/watch?v=QwPgI2ncbcc&feature=youtube_gdata_player" border='0' rel='nofollow'><img src='http://i.ytimg.com/vi/QwPgI2ncbcc/0.jpg' class='youthm' width='480' height='360' /></a><p class='youtitle'><a target='_blank' href="http://www.youtube.com/watch?v=QwPgI2ncbcc&feature=youtube_gdata_player" rel='nofollow'>Wind Cave National Park Tests Sylvatic Plague Vaccine on Prairie Dogs</a></p><p class='youdesc'>The Sylvatic Plauge can devastate prairie dog populations in a matter of weeks, creating a growing concern in the Black Hills.</p></td></tr><tr valign='top'><td class='youcell'><a target='_blank' href="http://www.youtube.com/watch?v=MlO3hbQkBsU&feature=youtube_gdata_player" border='0' rel='nofollow'><img src='http://i.ytimg.com/vi/MlO3hbQkBsU/0.jpg' class='youthm' width='480' height='360' /></a><p class='youtitle'><a target='_blank' href="http://www.youtube.com/watch?v=MlO3hbQkBsU&feature=youtube_gdata_player" rel='nofollow'>Let's Play Plague Inc. Evolved (part 41 - Experminetal Vaccine [blind])</a></p><p class='youdesc'>Mwahaha, your puny human vaccines are ineffective! INEFF--what..? Oh... Next part: https://www.youtube.com/watch?v=ynmy9N07DC8 Steam group: http://steamcommu...</p></td><td class='youcell'><a target='_blank' href="http://www.youtube.com/watch?v=rY6G-_2WHi0&feature=youtube_gdata_player" border='0' rel='nofollow'><img src='http://i.ytimg.com/vi/rY6G-_2WHi0/0.jpg' class='youthm' width='480' height='360' /></a><p class='youtitle'><a target='_blank' href="http://www.youtube.com/watch?v=rY6G-_2WHi0&feature=youtube_gdata_player" rel='nofollow'>Defiance - [Plague Siege - Chinatown Vaccine Synthesizer]</a></p><p class='youdesc'>Just in time for Halloween, Plague sieges have come to Defiance. These were originally around in the beta but were removed to be tweaked, reworked and improv...</p></td></tr><tr valign='top'><td class='youcell'><a target='_blank' href="http://www.youtube.com/watch?v=E5p-_alZlew&feature=youtube_gdata_player" border='0' rel='nofollow'><img src='http://i.ytimg.com/vi/E5p-_alZlew/0.jpg' class='youthm' width='480' height='360' /></a><p class='youtitle'><a target='_blank' href="http://www.youtube.com/watch?v=E5p-_alZlew&feature=youtube_gdata_player" rel='nofollow'>Defiance - [Plague Siege - Diablo Vaccine Synthesizer]</a></p><p class='youdesc'>Just in time for Halloween, Plague sieges have come to Defiance. These were originally around in the beta but were removed to be tweaked, reworked and improv...</p></td><td class='youcell'><a target='_blank' href="http://www.youtube.com/watch?v=DFGqizj1r0U&feature=youtube_gdata_player" border='0' rel='nofollow'><img src='http://i.ytimg.com/vi/DFGqizj1r0U/0.jpg' class='youthm' width='480' height='360' /></a><p class='youtitle'><a target='_blank' href="http://www.youtube.com/watch?v=DFGqizj1r0U&feature=youtube_gdata_player" rel='nofollow'>Billy Mays Plague-B-Gone Black Death Vaccine Commercial</a></p><p class='youdesc'>Plague -B- Gone.</p></td></tr><tr valign='top'><td class='youcell'><a target='_blank' href="http://www.youtube.com/watch?v=R06pXg37okw&feature=youtube_gdata_player" border='0' rel='nofollow'><img src='http://i.ytimg.com/vi/R06pXg37okw/0.jpg' class='youthm' width='480' height='360' /></a><p class='youtitle'><a target='_blank' href="http://www.youtube.com/watch?v=R06pXg37okw&feature=youtube_gdata_player" rel='nofollow'>Defiance - [Plague Siege - Bolinas Vaccine Synthesizer]</a></p><p class='youdesc'>Just in time for Halloween, Plague sieges have come to Defiance. These were originally around in the beta but were removed to be tweaked, reworked and improv...</p></td><td class='youcell'><a target='_blank' href="http://www.youtube.com/watch?v=cUEvHS4jd_M&feature=youtube_gdata_player" border='0' rel='nofollow'><img src='http://i.ytimg.com/vi/cUEvHS4jd_M/0.jpg' class='youthm' width='480' height='360' /></a><p class='youtitle'><a target='_blank' href="http://www.youtube.com/watch?v=cUEvHS4jd_M&feature=youtube_gdata_player" rel='nofollow'>Defiance - [Plague Siege - Kenn Farm Vaccine Synthesizer]</a></p><p class='youdesc'>Just in time for Halloween, Plague sieges have come to Defiance. These were originally around in the beta but were removed to be tweaked, reworked and improv...</p></td></tr></tbody></table><table width='100%'><tbody><tr><td><form action='#' method='get' name='youform' onSubmit='return do_you_get(this)'>
+<input name='query' type='text' value="Plague vaccine"> <input name='Search' type='submit' value='Search'>
+<input name='widen' type='button' onclick='you_wide(this)' value='Widen The Search'></form></td><td class='prevNext'>188932 videos found<a onclick="do_you('Plague vaccine', 11)">Next&nbsp;&gt;</a>&nbsp;</td></tr></tbody></table>
+									</div>
+								</div>
+								<div id="tabs-3" class="tab_container panels">
+									<div id="newsContent">
+										
+<form name="newsForm" method="post" onsubmit="return newsDoSearch(this)">
+	<table id="controldiv" border="0">
+		<tr>
+			<td class='news_CtrlCell'>
+				<input name="news_query" type="text" id="news_query" size="50">
+				<input type="submit" name="submit" id="submit" value="Search">
+				<input name='widen' type='button' onclick='news_wide(this)' value='Widen The Search'>
+			</td>
+			<td class='news_CtrlCell'>
+				<div id="news_PrevNext" class="prevNext"></div>
+				<div id="news_Total" class="gTotals"><p>74 news items</p>
+</div>
+			</td>
+			<td class='news_CtrlCell'>
+				<div id="newsbranding" style="float:right; margin-top:3px"></div>
+			</td>
+		</tr>
+	</table>
+</form>
+<div id="news_content"><table><tr valign='top'><td class='news_thmcell'>&nbsp;</td><td><div class='gs-title'><a target='_blank' class='gs-title' href='http://listen.sdpb.org/post/prairie-dog-plague-vaccine-aims-save-ferrets'>Prairie Dog <b>Plague Vaccine</b> Aims To Save Ferrets</a></div>
+<div class='gs-publisher'>SDPB Radio</div>
+<div class='gs-publishedDate'>Fri, 25 Jul 2014 07:09:25 -0700</div><br />
+<div class='gs-snippet'>Greg Schroeder the Chief of Resource Management at Wind Cave checks to see if this prairie dog has already been implanted with an electronic chip. The disease can kill off wholeshedDate'>Fri, 25 Jul 2014 07:09:25 -0700</div><br />
+<div class='gs-snippet'>Greg Schroeder the Chief of Resource Management at Wind Cave checks to see if this prairie dog has already been implanted with an electronic chip. The disease  colonies and it hurts the effort to restore endangered species like the <b>...</b></div>
+</td></tr><tr valign='top'><td class='news_thmcell'><a href='http://www.hcn.org/blogs/goat/states-test-prairie-dog-plague-vaccine' target='_blank'><img src='http://t1.gstatic.com/images?q=tbn:ANd9GcTcNpB7-1MJSt1bA-I7pnP5b1kmBgz2QgbMj7kxXSaWxZoZ0qhOb8D91M0W' width='80' height='53' class='news_thmimg'></a><p><a href='http://www.hcn.org/blogs/goat/states-test-prairie-dog-plague-vaccine' target='_blank'>High Country News (blog)</a></p></td><td><div class='gs-title'><a target='_blank' class='gs-title' href='http://www.hcn.org/blogs/goat/states-test-prairie-dog-plague-vaccine'>States test a new prairie dog <b>plague vaccine</b></a></div>
+<div class='gs-publisher'>High Country News (blog)</div>
+<div class='gs-publishedDate'>Mon, 16 Dec 2013 04:28:49 -0800</div><br />
+<div class='gs-snippet'>This was the first year of a larger three-year study of the real-world effectiveness of the new Sylvatic <b>Plague Vaccine</b> (SPV), now being conducted by the U.S. Geological Survey and local partners across seven Western states. In the lab setting, the <b>...</b></div>
+</td></tr><tr valign='top'><td class='news_thmcell'>&nbsp;</td><td><div class='gs-title'><a target='_blank' class='gs-title' href='http://www.stltoday.com/lifestyles/health-med-fit/health/slu-testing-plague-vaccine-and-they-want-your-help/article_175ed4af-718a-5773-b966-a0abcceaba24.html'>SLU testing <b>plague vaccine</b>, and they want your help</a></div>
+<div class='gs-publisher'>STLtoday.com</div>
+<div class='gs-publishedDate'>Wed, 17 Jul 2013 22:23:34 -0700</div><br />
+<div class='gs-snippet'>It is unlikely that a <b>plague vaccine</b> would ever be distributed widely because of the low risk of infection to the general public. Previous versions of <b>plague vaccine</b> were used by the military but caused undesirable side effects, including headaches and <b>...</b></div>
+</td></tr><tr valign='top'><td class='news_thmcell'>&nbsp;</td><td><div class='gs-title'><a target='_blank' class='gs-title' href='http://www.genengnews.com/keywordsandtools/print/3/35595/'>Developing New Therapies to Address the Reemergence of Bubonic Plague</a></div>
+<div class='gs-publisher'>Genetic Engineering & Biotechnology News</div>
+<div class='gs-publishedDate'>Thu, 28 Aug 2014 13:48:45 -0700</div><br />
+<div class='gs-snippet'>... warned Dr. Smiley, noting that although “safe and effective pneumonic <b>plague vaccine</b> would thwart the use of Y. pestis as an agent of terror, unfortunately, over 100 years of research have yet to generate a safe and effective pneumonic <b>plague</b> <b>...</b></div>
+</td></tr><tr valign='top'><td class='news_thmcell'>&nbsp;</td><td><div class='gs-title'><a target='_blank' class='gs-title' href='http://www.durangoherald.com/article/20140618/NEWS06/140619529/-1/News06'>Vaccine protects prairie dogs</a></div>
+<div class='gs-publisher'>The Durango Herald</div>
+<div class='gs-publishedDate'>Wed, 18 Jun 2014 22:59:33 -0700</div><br />
+<div class='gs-snippet'>After researchers dabbled with dusting fleas with insecticide – an effective but expensive treatment, they are newly encouraged by one potential treatment, the oral sylvatic <b>plague vaccine</b>, Tripp said. Developed by the U.S. Geological Survey&#39;s National&nbsp;...</div>
+</td></tr><tr valign='top'><td class='news_thmcell'>&nbsp;</td><td><div class='gs-title'><a target='_blank' class='gs-title' href='http://www.wired.com/2009/08/prairiedogvax/'><b>Plague Vaccine</b> for Prairie Dogs Could Save Endangered Ferret</a></div>
+<div class='gs-publisher'>Wired News</div>
+<div class='gs-publishedDate'>Tue, 04 Aug 2009 15:21:10 -0700</div><br />
+<div class='gs-snippet'>Although the main goal is to protect ferrets, the <b>plague vaccine</b> might have side benefits for people, Rocke said. Humans usually catch plague from fleas living on infected wild animals, so if fewer animals get the plague, Rocke said, fewer people will <b>...</b></div>
+</td></tr><tr valign='top'><td class='news_thmcell'>&nbsp;</td><td><div class='gs-title'><a target='_blank' class='gs-title' href='http://www.postindependent.com/news/grandjunction/11929972-113/prairie-dogs-species-vaccine'>Regional: Imperiled prairie dogs find hope in vaccine fighting flea-borne disease</a></div>
+<div class='gs-publisher'>Glenwood Springs Post Independent</div>
+<div class='gs-publishedDate'>Fri, 20 Jun 2014 21:07:30 -0700</div><br />
+<div class='gs-snippet'>That means thousands of burrows and an expensive, labor-intensive treatment. A promising new treatment is the oral sylvatic <b>plague vaccine</b>. Developed by the U.S. Geological Survey&#39;s National Wildlife Health Center, the vaccine works well in the <b>...</b></div>
+</td></tr><tr valign='top'><td class='news_thmcell'>&nbsp;</td><td><div class='gs-title'><a target='_blank' class='gs-title' href='http://www.usgs.gov/newsroom/article.asp?ID=1976'>Ouch! Taking a Shot at <b>Plague: Vaccine</b> Offers Hope for Endangered Ferrets in <b>...</b></a></div>
+<div class='gs-publisher'>United States Geological Survey (press release)</div>
+<div class='gs-publishedDate'>Wed, 16 Jul 2008 00:00:00 -0700</div><br />
+<div class='gs-snippet'>&quot;Although the <b>plague vaccine</b> is still experimental in wildlife, we hope its use during this epizootic will protect as many ferrets as we can capture in the field and boost ferret survival during this critical period,&quot; said USGS NWHC Research Chief Dr <b>...</b></div>
+</td></tr></table>l experimental in wildlife, we hope its use during this epizootic will protect as m</div>
+									</div>
+								</div>
+								<div id="tabs-4" class="tab_container panels">
+									<div id="fbContent">
+										<div id="bookOverlay" class="book_simple_overlay" style="width:500px; height:500px">
+	<div id="bookViewerCanvas" style="width:500px; height:500px"></div>
+</div>
+<div id="bookLoading"><img src="/images/ajax-loader.gif" width="128" height="15" alt="Loading" /></div>
+<form name="booksForm" method="post" onsubmit="return booksDoSearch(this)">
+	<table id="controldiv" border="0">
+		<tr valign="top">
+			<td class="book_radio">
+				<label>
+					<input type="radio" name="complete" value="entire" id="complete_0" onclick="booksDoSearch(this.form)">
+					Limit to books that you can completely read online</label>
+				<br>
+				<label>
+					<input name="complete" type="radio" id="complete_1" value="preview" checked onclick="booksDoSearch(this.form)">
+					Include partial books (book previews)</label>
+			</td>
+			<td align="center">
+				<div id="book_PrevNext" class="prevNext"></div>
+				<div id="bookTotal" class="gTotals"></div>
+			</td>
+			<td>
+				<style type="text/css">
+				.gsc-branding {
+					display:block;
+				}
+				</style>
+				<div id="bookBranding" style="float:right; margin-top:3px"></div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<input name="bookQuery" type="text" id="bookQuery" size="30" value="">
+				<input type="submit" name="submit" id="submit" value=>
+				<div id="bookBranding" style="float:right; margin-top:3px"></div>
+			</td>"Search">
+				<input name='widen' type='button' onclick='books_wide(this)' value='Widen The Search'>
+			</td>
+		</tr>
+	</table>
+</form>
+<div id="bookResults"></div>
+
+										<!--<p>Oops, we seem to be having trouble contacting Facebook</p>-->
+									</div>
+								</div>
+								<div id="tabs-5" class="tab_container panels">
+									<div id="twitContent">
+										<p>Oops, we seem to be having trouble contacting Twitter</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td id="digpartycell" style="width:250px; vertical-align:top">
+<!-- Begin Ads -->
+<iframe src="/ads/top.html" seamless style="width:300px; height:250px; overflow:hidden; border-style:none;"></iframe>
+<iframe src="/ads/middle-lanista.html" seamless style="width:300px; height:250px; overflow:hidden; border-style:none;"></iframe>
+<iframe src="/ads/bottom.html" seamless style="width:300px; height:250px; overflow:hidden; border-style:none;"></iframe>
+<script type="text/javascript">
+if (typeof(console) != "undefined") console.log("Randy = 1494");
+</script>
+
+<div style="background-color:#FEFEE0; border-style:solid; border-width:1px; border-color:#A6C9E2; font-size:12px; padding:10px;">
+<h4 style="color:#2E6E9E">Support Wikipedia</h4>
+A portion of the proceeds from advertising on Digplanet goes to supporting Wikipedia.
+<a href="http://wikimediafoundation.org/wiki/Donate" target="_blank" style="font-weight:bold">Please add your support for Wikipedia!</a></div>
+
+<div style="background-color:#FEFEE0; border-style:solid; border-width:1px; border-color:#A6C9E2; font-size:12px; padding:10px; margin-top:3px;">
+<h4 style="color:#2E6E9E">Searchlight Group</h4>
+Digplanet also receives support from Searchlight Group.
+<a href="http://www.slgroup.com/" target="_blank" style="font-weight:bold">Visit Searchlight</a></div>
+<!-- End Ads -->
+		</td>
+	</tr>
+</table>
+<script type="text/javascript" src="/js/wiki_jsonp.js"></script>
+<script type="text/javascript">
+$("ul.tools_tabs").tabs("div.panes > div");
+function load_google_loaders() {
+	google.load('search', '1', {"callback": newsOnLoad});
+//	google.load("books", "0", {"callback": booksOnLoad});
+}
+$(document).ready(load_google_loaders());
+//$(document).ready(do_digplanets(1, "Plague+vaccine", "origin.digplanet.com"));
+$(document).ready(do_twitter("Plague vaccine", ""));
+
+// adjust for small screens
+function curwidth() {
+	var w = $(window).width();
+	if (w < 1178) {
+		document.getElementById("t1").style.width = "100px";
+		document.getElementById("t2").style.width = "100px";
+		document.getElementById("t3").style.width = "100px";
+		document.getElementById("t4").style.width = "100px";
+		document.getElementById("t5").style.width = "100px";
+		//document.getElementById("t6").style.width = "100px";
+		document.getElementById("digtabcell").style.minWidth = "600px";
+	} else {
+		document.getElementById("t1").style.width = "134px";
+		document.getElementById("t2").style.width = "134px";
+		document.getElementById("t3").style.width = "134px";
+		document.getElementById("t4").style.width = "134px";
+		document.getElementById("t5").style.width = "134px";
+		//document.getElementById("t6").style.width = "134px";
+		document.getElementById("digtabcell").style.minWidth = "825px";
+	}
+}
+window.onresize = curwidth;
+curwidth();
+</script>
+<div id="digfooter">
+	<table width="100%" border="0" cellspacing="0" cellpadding="10" height="35">
+	<tr valign="bottom">
+		<td align="left">
+			<p class="nav">Copyright &copy; 2009-2015 Digparty. All rights reserved.</p>
+		</td>
+		<td align="right">
+			<p class="nav"><a class="nav" href="http://www.digparty.com/" target="_blank">Digparty Home</a> 
+			| <a class="nav" href="http://www.digplanet.com/faq.php" target="_blank">FAQ</a> 
+			| <a class="nav" href="http://www.digparty.com/privacy.php" target="_blank">Privacy Policy</a> 
+			| <a class="nav" href="http://www.digparty.com/terms.php" target="_blank">Terms of Service</a> 
+			| <a class="nav" href="http://www.digparty.com/contactus.php" target="_blank">Contact Us</a>
+			| <a class="nav" href="http://www.digparty.com/contactus.php" target="_blank">Feedback</a></p>
+		</td>
+	</tr>
+</table></div>
+
+
+<!-- wiki_get_content: wurl = text_wurl = http://en.wikipedia.org/w/api.php?action=parse&amp;prop=text&amp;format=php&amp;page=Plague_vaccine&lt;/ br&gt;cat_wurl = http://en.wikipedia.org/w/api.php?action=query&amp;prop=categories&amp;redirects&amp;clshow=!hidden&amp;format=php&amp;titles=Plague_vaccine -->
+
+<script type="text/javascript">
+if (document.getElementById("breadblock").scrollHeight > 100) {
+	document.getElementById("breadtogdiv").style.display = "block";
+	document.getElementById("breadblock").style.overflowY = "auto";
+} else {
+	document.getElementById("breadtogdiv").style.display = "none";
+	document.getElementById("breadblock").style.overflowY = "visible";
+}
+</script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js" async></script>
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+
+</body>
+</html>("breadblock").style.overflowY = "visible";
+}
+</script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js" async></script>
+<script type="text/javascript" src="h

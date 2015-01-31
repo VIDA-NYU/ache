@@ -1,0 +1,1099 @@
+ 
+		
+		
+		 
+	
+ 
+	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:addthis="http://www.addthis.com/help/api-spec">
+<head><meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+   var _U = "undefined";
+   var g_HttpRelativeWebRoot = "/ucm/";
+   var SSContributor = false;
+   var SSForceContributor = false;
+   var SSHideContributorUI = false;
+   var ssUrlPrefix = "/";
+   var ssUrlType = "1";
+   
+   var g_navNode_Path = new Array();
+       g_navNode_Path[0] = '1201';
+       g_navNode_Path[1] = '1338';
+       g_navNode_Path[2] = '1487';
+       g_navNode_Path[3] = '1504';
+   var g_ssSourceNodeId = "1504";
+   var g_ssSourceSiteId = "FDAgov";
+   var g_strLanguageId = "en";
+</script>
+<!--<script id="SSNavigationFunctionsScript" type="text/javascript" src="/ucm/websites/FDAgov/sitenavigationfunctions.js"></script>
+<script id="SSNavigationScript" type="text/javascript" src="/ucm/websites/FDAgov/sitenavigation.js"></script>-->
+
+	<script type="text/javascript" src="/ucm/resources/wcm/sitestudio/wcm.toggle.js"></script>
+	<script type="text/javascript" src="/ucm/resources/sitestudio/ssajax/ssajax.js"></script>
+
+      <title>Influenza Virus Vaccine Safety & Availability</title> 
+	<meta name="ID" content="UCM110288"/>
+	<meta name="msvalidate.01" content="0AE61A039CC5BDCCF556A11C18A61D44" />
+	<meta name="dc.title" content="Vaccine Safety & Availability - Influenza Virus Vaccine Safety & Availability"/>
+	<meta name="dc.type" content="WebContent"/>
+	<meta name="dc.description" content=""/>
+	<meta name="dc.language" content="en"/>
+	<meta name="posted" content="2009-03-03"/>
+	<meta name="index_date" content="2013-11-22"/>
+	<meta name="keywords" content="CBER, biologics, flu, influenza, vaccine"/>
+	<meta name="description" content=""/>
+	<meta name="dc.publisher" content="Center for Biologics Evaluation and Research"/>
+	<meta name="dc.audience" content="FDA Employee, Health Professionals, Industry Representatives, Patients & Consumers"/>
+	<meta name="dc.creator" content="Center for Biologics Evaluation and Research"/>
+	<meta name="old_url" content="http://www.fda.gov/cber/flu/flu.htm"/>
+	<meta name="archive" content="No"/>
+	
+			<meta name="search_topic" content="Public Information & Education
+				"/>
+	
+		<meta name="dc.subject" content="Biologics, Vaccines"/>
+	<script language="JavaScript" type="text/javascript">
+	document.title = "Vaccine Safety & Availability" + " > " + "Influenza Virus Vaccine Safety & Availability";</script>
+ 
+ 
+
+<!--- /**** Begin CSS References ****/-->
+ 
+	<link rel="stylesheet" type="text/css" media="screen" href="/ucm/groups/fdagov-public/@system/documents/system/css_fda_gov_stylesheet.css" />
+	<link rel="stylesheet" type="text/css" media="print" href="/ucm/groups/fdagov-public/@system/documents/system/css_fda_gov_print_stylesheet.css" />
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" media="screen" href="/ucm/groups/fdagov-public/@system/documents/system/css_fda_gov_stylesheet_ie.css" />
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="/ucm/groups/fdagov-public/@system/documents/system/css_footable_stylesheet.css" /> 
+	<!--- /**** Begin Sitewide JS References ****/-->
+	<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_jquery_10.js"></script>
+	<!-- ## ADDED tips Javascript reference to handle styling the tool tips ## -->
+
+	<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_fdagov_tips_min.js"></script>
+	<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_fdagov_global.js"></script>
+	<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_fdagov_resize_min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" ></script>
+	<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/highcharts.js" ></script>
+	<!-- ## ADDED hoverIntent JavaScript to support the drop-down menus ## -->
+	<script type="text/JavaScript" src="/ucm/groups/fdagov-public/@system/documents/system/js_jquery_hover_intent_min.js"></script>
+	<!-- ## ADDED submenus JavaScript reference to import code to handle displaying sub-menus when hovered over ## -->
+	<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_fdagov_submenus_min.js"></script>
+	<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_jquery_tablesort_min.js"></script>
+	<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_footable_scripts.js"></script>
+	 		
+	<!-- ## For guidances dynamic list ## --> 
+			<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_jquery_tablepagination_min.js"></script> 
+		<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_sorttable_fdagov.js"></script>
+<!-- Google Auto Suggest-->
+  <link rel="stylesheet" type="text/css" media="screen" href="/ucm/groups/fdagov-public/@system/documents/system/css_fdagov_googlesuggest.css" />
+  <script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_fdagov_googlesuggest.js"></script>
+<!--END  Google Auto Suggest-->
+
+<!--- /**** FEATURE SECTION ****/-->	
+<!--- /**** SUBTOPIC/CONTENT SECTION ****/-->
+	<!--[if lt IE 7]>
+		<script defer type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_pngfix_fdagov.js"></script>
+	<![endif]-->
+	<!-- ## ADDED hovers Javascript reference to handle hovering over images and replacing that image with it's hover effect ## -->
+		<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_fdagov_hovers.js"></script>
+	 
+	
+	<script type="text/javascript" src="/foresee/foresee-trigger.js" language="JavaScript"></script> 
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-22737364-1']);
+	_gaq.push(['_setDomainName', '.fda.gov']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})(); 
+	</script>
+	<script type="text/javascript"> 
+	setTimeout(function(){var a=document.createElement("script"); 
+	var b=document.getElementsByTagName("script")[0]; 
+	a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0024/3700.js?"+Math.floor(new Date().getTime()/3600000);
+	 a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1); 
+	</script> 
+
+
+</head>
+<!--[if IE 8]> <body class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]> <body class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <body> <!--<![endif]-->
+			
+		
+	
+	<div class="quicklinks"> 
+  <a href="#main" accesskey="2" class="quicklinks" tabindex="1" title="Skip to content">Quick Links: Skip to main page content</a>
+  <a href="#search-form" class="quicklinks" tabindex="1" title="Skip to search">Skip to Search</a>
+  <a href="#fda-topmenu-home" class="quicklinks" tabindex="1" title="Skip to FDA top menu">Skip to Topics Menu</a>
+	<a href="#section-menu" class="quicklinks" tabindex="1" title="Skip to Section table of contents">Skip to Section Content Menu</a>
+<a href="#footer-heading" class="quicklinks" tabindex="1" title="Skip to site options">Skip to Common Links</a>
+</div>
+
+<!--==== BEGIN PAGE OUTER WRAPPER ==== --> 
+	<div id="outerwrapper">
+			<!-- #** VALIDATION not sure what this tag is, but it will fail XHTML validation **# -->
+			<MAXAMINEIGNORE XMLNS="FDA">
+			<div id="hhs-masthead">
+				<!--googleoff: index-->
+				<!-- ==== BEGIN RIGHT HHS MASTHEAD ==== -->
+				<div id="hhs-rightmast">
+					<!-- ## ADD page-tools ## -->
+					<div id="page-tools">
+						<ul class="list-horizontal">
+							<li><a id="font-size-decrease" href="#" title="Decrease font size"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_font_adj_small.png" alt="Decrease font size" title="Decrease font size"/></a></li>
+							<li><a id="font-size-standard" href="#" title="Return font size to normal"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_font_adj_medium.png" alt="Return font size to normal" title="Return font size to normal"/></a></li>
+							<li><a id="font-size-increase" href="#" title="Increase font size"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_font_adj_large.png" alt="Increase font size" title="Increase font size"/></a></li>
+						</ul>
+					</div>
+					<!-- ## END page-tools ## -->
+				</div>
+				<!-- ==== END RIGHT HHS MASTHEAD ==== -->
+				<!-- ==== BEGIN LEFT HHS MASTHEAD ==== -->
+				<div id="hhs-leftmast">
+					<a href="http://www.hhs.gov/" title="U.S. Department of Health and Human Services"><img id="rrimg1" border="0" src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_hhs_masthead_logo_r.png" alt="U.S. Department of Health and Human Services" title="U.S. Department of Health and Human Services"/></a>
+				</div>
+				<!-- ==== END LEFT HHS MASTHEAD ==== -->
+			</div>
+			</MAXAMINEIGNORE>
+			<div id="wrapper">
+				<!-- ==== BEGIN PAGE HEADER ==== -->
+				<div id="header">
+					<!-- ==== BEGIN MASTHEAD ==== -->
+					<MAXAMINEIGNORE XMLNS="FDA">
+					<div id="fda-masthead">
+						<!-- ==== BEGIN LEFT MASTHEAD ==== -->
+						<div id="fda-leftmast">
+							<div id="FDAlogo">
+								<a href="/default.htm" title="FDA, U.S. Food and Drug Administration"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_fda_masthead_logo.png" alt="FDA, U.S. Food and Drug Administration" border="0" title="FDA, U.S. Food and Drug Administration"/></a>
+							</div>
+							<!-- ## ADDED print-pagetitle This is what is displayed when the page is printed, rather than the logo ## -->
+							<div class="print-pagetitle">
+								U.S. Food &amp; Drug Administration
+							</div>
+							<!-- ## END print-pagetitle ## -->
+							<div class="clearfloat">&nbsp;</div>
+						</div>
+						<!-- ==== END LEFT FDA MASTHEAD ==== -->
+						<!-- ==== BEGIN RIGHT MASTHEAD ==== -->
+						<div id="fda-rightmast">
+							<!-- ## ADDED masthead-links ## -->
+							<div id="masthead-links">
+								<ul class="list-horizontal">
+									<li class="first"><a href="/SiteIndex/default.htm" title="A to Z Index">A to Z Index</a></li>
+									<li><a href="/NewsEvents/InteractiveMedia/default.htm" title="Follow FDA">Follow FDA</a></li>
+									<li class="last"><a href="/AboutFDA/EnEspanol/default.htm" title="En Español">En Español</a></li>
+								</ul>
+							</div>
+							<!-- ## END masthead-links ## -->
+							<div id="search-form">
+								<form action="http://google2.fda.gov/search" method="get" name="searchForm" id="searchbox">
+									<label class="searchlable" for="search">Enter Search terms</label>
+									<input accesskey="4" id="search" type="text" name="q" onKeyUp="getRequest()" autocomplete="off" />
+									<!-- ## ADDED go_button ## -->
+									<div id="go_button">
+										<a href="javascript:document.getElementById('searchbox').submit();" title="Search this site"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_mast_search_button.png" alt="Search" title="Search this site"/></a>
+									</div>
+									<!-- ## END go_button -->
+<div id=":0D" class="ac-renderer ss-gac-m" role="listbox" style="margin-top:-21px; background-color: #ffffff; min-width: 204px; width: 204px; top: 0 !important; position:relative !important; left:0 !important; -moz-user-select: none; display: none;"></div>                                     
+									<!-- ==== BEGIN HIDDEN SEARCH FIELDS ==== -->
+									<input type="hidden" name="client" value="FDAgov" />
+									<input type="hidden" name="site" value="FDAgov" />
+									<input type="hidden" name="lr" value="" />
+									<input type="hidden" name="proxystylesheet" value="FDAgov" />
+									<input type="hidden" name="requiredfields" value="-archive:Yes" />
+									<input type="hidden" name="output" value="xml_no_dtd"/>
+									<input type="hidden" name="getfields" value="*" />
+									<!-- ==== END HIDDEN SEARCH FIELDS ==== -->
+								</form>
+								<div class="clearfloat">&nbsp;</div>
+							</div>
+
+
+						</div> 
+						<div class="clearfloat">&nbsp;</div>
+						<!-- ==== END RIGHT MASTHEAD ==== -->
+					</div>
+					</MAXAMINEIGNORE>
+
+
+<div id="fda-topmenu">
+            <ul class="menu-tabbed">
+                  <li><a title="Home" href="/default.htm" id="fda-topmenu-home" accesskey="1"><span>Home</span></a></li>
+                  <li><a title="Food" href="/Food/default.htm"><span>Food</span></a></li>
+                  <li><a title="Drugs" href="/Drugs/default.htm"><span>Drugs</span></a></li>
+                  <li><a title="Medical Devices" href="/MedicalDevices/default.htm"><span>Medical Devices</span></a></li>
+                  <li><a title="Radiation-Emitting Products" href="/Radiation-EmittingProducts/default.htm"><span>Radiation-Emitting Products</span></a></li>
+                  <li><a title="Vaccines, Blood and Biologics" href="/BiologicsBloodVaccines/default.htm"><span>Vaccines, Blood & Biologics</span></a></li>
+                  <li><a title="Animal and Veterinary" href="/AnimalVeterinary/default.htm"><span>Animal & Veterinary</span></a></li>
+                  <li><a title="Cosmetics" href="/Cosmetics/default.htm"><span>Cosmetics</span></a></li>
+                  <li><a title="Tobacco Products" href="/TobaccoProducts/default.htm"><span>Tobacco Products</span></a></li>
+            </ul>
+    </div>
+<div class="clearfloat">&nbsp;</div>
+			</div>
+			<!--googleon: index-->
+
+	<div id="content">
+		  <div class="clearfloat"> </div>
+		  <div class="clearfloat"> </div>
+	<!--==== BEGIN Topic Page Title ==== -->
+	
+						
+						<h2 id="topic_page_title" class="head1">Vaccines, Blood & Biologics</h2>
+						
+						
+	<!--==== END Topic Page Title ==== -->
+					<!-- ## ADD page-options ## -->
+					<div id="page-options" class="hover-fade">
+						<ul class="list-horizontal">
+							<li><a href="javascript:window.print();" title="Print this page"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_utility_icon_print.png" alt="Print"  title="Print this page"/></a></li>
+							<li><a href="http://www.addthis.com/bookmark.php?u508=true&v=152&amp;username=fdamain" class="addthis_button_compact" title="Share this page"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_utility_icon_share.png" alt="Share" title="Share this page"/></a></li>
+							<li><a href="http://www.addthis.com/bookmark.php" class="addthis_button_email" title="E-mail this page"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_utility_icon_email.png" alt="E-mail" title="E-mail this page"/></a></li>
+								<script type="text/javascript" src="/ucm/groups/fdagov-public/@system/documents/system/js_espanol_converter.js"></script>
+							<!-- END enEspanol Button -->
+						</ul>
+						
+						<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pub=fdamain"></script>
+
+		<script type="text/javascript">var addthis_config = {data_track_clickback: true, ui_508_compliant: true, services_compact: 'facebook, twitter, linkedin, pinterest_share,  email', services_exclude: 'print', image_container: "#content" } ;</script>
+					</div>
+					<!-- ## END page-options ## -->
+	<!--==== BEGIN Breadcrumbs ==== -->
+		<div id="fda-breadcrumbs" class="fda-breadcrumbs">
+<!-- Check if Node List exists and user is not at the homepage.  If the user is at the homepage, hide the breadcrumb -->
+<!-- Limits Level of BreadCrumb to 4 -->
+<div class="hmenu">
+		<ul class="list-horizontal contentpage">
+			
+									<li><a href = "/default.htm" >Home</a></li>
+			
+									<li><a href = "/BiologicsBloodVaccines/default.htm" >Vaccines, Blood & Biologics</a></li>
+			
+				 <!-- check if second last item in NodeList -->
+					<li class="secondLast"><a href = "/BiologicsBloodVaccines/SafetyAvailability/default.htm" id = "main">Safety & Availability (Biologics)</a></li>				
+							
+				 <!-- check if last item in NodeList -->
+					<li class="last"><a href = "/BiologicsBloodVaccines/SafetyAvailability/VaccineSafety/default.htm" >Vaccine Safety & Availability</a></li>
+	</ul>
+</div>
+</div>
+
+
+	<!--==== END Breadcrumbs ==== --> 
+
+			<div class="left-column">
+			<!-- Wrapping Style Div -->
+	<div id="main_left_nav">
+	<div class="liquid-round">
+	<div class="top"><span></span></div>
+	<div class="liquid-round-header">
+
+	</div>
+	<div class="center-content" id="section-menu">
+	<h2 class="searchlable">Section Contents Menu</h2>
+	<!-- Save your active nodeId -->
+	<!-- determine nav start level from current node -->
+		<!-- find Parent nodeId of active node -->
+		<!-- find Parent nodeId of active node -->
+		<!-- find Parent nodeId of active node -->
+		<!-- find Parent nodeId of active node -->
+	<!-- If useParentNav = true, then use parentNodeId for traversal -->
+	<!-- Opening  Header -->
+
+
+	<!-- Section Data File links -->
+	<!-- SSingh: removes archive pages from the left navigation -->
+	
+     <!--ssLoadSiteNavResultSet(siteId)-->
+				<p class="header_bg"><strong><a href="/BiologicsBloodVaccines/SafetyAvailability/default.htm">Safety & Availability (Biologics)</a></strong></p>
+		        	
+					 
+							<ul id="tabMenu" class="leftnav_child"><li id="left_nav_1504" class="leftnav_current"><a href="/BiologicsBloodVaccines/SafetyAvailability/VaccineSafety/default.htm">Vaccine Safety & Availability</a></li></ul>
+	<!-- Subsection links -->
+	
+			<ul id="tabMenu" class="leftnav_child">
+	</ul><!--here 1-->
+
+</div> <!--- center-content -->
+<div class="bottom"><span></span></div>
+</div> <!-- liquid-round -->
+</div>
+
+<!--BEGIN Resources_for_You Box -->
+    
+<!--$if not isTrue(rsExists(folioNavSetName)) or isTrue(ssShowEditButton)$-->
+	
+	
+	
+	<!--if isTrue(#active.isResponsive)-->
+      
+	 		 
+		
+
+				
+				<div class="box" id="Resources_for_You"><div class="box_top"><div>?</div></div><div class="box_body"><div><div class="clearfloat">-</div><h2 class="head3">Resources for You</h2><ul>
+				
+				
+
+		
+
+				
+		  
+	<li><a href="/BiologicsBloodVaccines/ResourcesforYou/Consumers/default.htm" ><linktitle>Consumers (Biologics)</linktitle></a>
+	
+	</li>
+
+				
+
+			
+		
+
+				
+				
+				
+				
+
+		
+
+				
+		  
+	<li><a href="/BiologicsBloodVaccines/ResourcesforYou/HealthcareProviders/default.htm" ><linktitle>Healthcare Providers (Biologics)</linktitle></a>
+	
+	</li>
+
+				
+
+			
+		
+
+				
+				
+				
+				
+
+		
+
+				
+		  
+	<li><a href="/BiologicsBloodVaccines/ResourcesforYou/Industry/default.htm" ><linktitle>Industry (Biologics)</linktitle></a>
+	
+	</li>
+
+				
+
+			
+		
+
+				
+				
+				
+				
+
+		
+
+				
+		  
+	<li><a href="/AboutFDA/CentersOffices/OfficeofMedicalProductsandTobacco/CBER/default.htm" ><linktitle>About the Center for Biologics Evaluation and Research</linktitle></a>
+	
+	</li>
+
+				
+
+			
+		
+			</ul>
+			<div class="clearfloat"></div>	
+          </div> </div>
+          <div class="box_bottom"><div> </div></div>
+		  </div> <!-- end box -->
+     	 
+ 
+<script type="text/javascript">
+var maincontentcss = document.getElementById("middle_js");
+if(maincontentcss)
+{
+	maincontentcss.style.width = "71%";
+}
+</script>
+
+<!--END Resources_for_You Box -->
+	<div class="clearfloat"> </div>
+	</div>
+	<div class="middle-column">
+	<a name="main"></a>
+		<h1 class="head1_body">Influenza Virus Vaccine Safety & Availability</h1>
+		<p>Influenza, also known as the flu, is a contagious respiratory disease that is caused by influenza viruses. Influenza viruses infect the respiratory tract (nose, throat, and lungs) in humans. The flu is different from a cold, mainly because the symptoms and complications are more severe. Influenza usually comes on suddenly and may include these symptoms: fever, headache, malaise (a feeling of being ill and without energy that can be extreme), cough, sore throat, nasal congestion and body aches.</p><p>A lot of the illness and death caused by the influenza virus can be prevented by a yearly influenza vaccine. Most individuals 6 months of age and older should get the influenza vaccine every year. It is especially important for people in high-risk groups and people who are in close contact with those at high risk to get an influenza vaccine every year as recommended by CDC&rsquo;s Advisory Committee on Immunization Practices (ACIP).</p><p>Influenza vaccine can be given to most individuals 6 months of age and older to protect against influenza. Persons who provide important community services (such as police, fire department personnel, emergency medical services) should consider getting an influenza vaccine so that those services are not disrupted during an influenza outbreak.</p> 
+
+ 
+<!--==== BEGIN Mainlist_Folio ====-->
+<div>
+</div>
+		 
+			  
+					 
+				 
+							
+					 				
+		 
+			  
+					  
+					 
+ 
+																
+					 				
+		 
+			  
+		
+	<!--only do dynlist tool process if we have both a query and display -->
+ 
+							
+					 				
+		 
+			  
+					 
+				 
+						  
+								
+										     
+		
+						
+							  
+										
+
+				
+				<div class='box'><div class='box_top'><div>-</div></div><div class='box_body'><div><h2 class='head3'>Seasonal Information</h2><p></p><ul>
+				
+				
+
+		
+
+		    
+				
+	<li><a href="/BiologicsBloodVaccines/GuidanceComplianceRegulatoryInformation/Post-MarketActivities/LotReleases/ucm062928.htm" ><linktitle>Influenza Virus Vaccine Composition and Lot Release</linktitle></a>
+	
+	</li>
+
+				
+
+			
+	
+											
+							  
+										
+
+				
+				
+				
+				
+
+		
+
+		    
+				
+	<li><a href="/BiologicsBloodVaccines/GuidanceComplianceRegulatoryInformation/Post-MarketActivities/LotReleases/ucm063035.htm" ><linktitle>Importance of Influenza Vaccination for Health Care Personnel</linktitle></a>
+	
+	</li>
+
+				
+
+			
+	
+											
+							  
+										
+
+				
+				
+				
+				
+
+		
+
+		    
+				
+	<li><a href="/BiologicsBloodVaccines/GuidanceComplianceRegulatoryInformation/Post-MarketActivities/LotReleases/ucm063036.htm" ><linktitle>La Importancia de la Vacunación para el Personal Relacionado con el Cuidado de la Salud</linktitle></a>
+	
+	</li>
+
+				
+
+			
+	
+											
+							  
+										
+
+				
+				
+				
+				
+
+		
+
+		
+	<li><a href="http://www.accessdata.fda.gov/scripts/cdrh/cfdocs/psn/transcript.cfm?show=81#4" target="_blank"><linktitle>FDA Patient Safety News (Video): Importance of Influenza Vaccination for Health Care Personnel</linktitle></a>
+	
+	</li>
+
+				
+
+			
+	
+											
+													
+													</ul><div class='clearfloat'></div></div></div><div class='box_bottom'><div>-</div></div></div>			
+							
+					 
+ 				
+		 
+			  
+					 
+				 
+						  
+								
+										     
+		
+						
+							  
+										
+
+				
+				<div class='box'><div class='box_top'><div>-</div></div><div class='box_body'><div><h2 class='head3'>Approved Vaccines </h2><p></p><ul>
+				
+				
+
+		
+
+		    
+				
+	<li><a href="/BiologicsBloodVaccines/Vaccines/ApprovedProducts/ucm295057.htm" ><linktitle>Influenza Virus Vaccine, Quadrivalent, Types A and Types B</linktitle></a>
+	
+	</li>
+
+				
+
+			
+	
+											
+							  
+										
+
+				
+				
+				
+				
+
+		
+
+		    
+				
+	<li><a href="/BiologicsBloodVaccines/Vaccines/ApprovedProducts/ucm094045.htm" ><linktitle>Influenza Virus Vaccine, Trivalent, Types A and B</linktitle></a>
+	
+	</li>
+
+				
+
+			
+	
+											
+							  
+										
+
+				
+				
+				
+				
+
+		
+
+		    
+				
+	<li><a href="/BiologicsBloodVaccines/SafetyAvailability/VaccineSafety/ucm375441.htm" ><linktitle>Influenza Virus Vaccine,    H5N1 (for National Stockpile)</linktitle></a>
+	
+	</li>
+
+				
+
+			
+	
+											
+													
+													</ul><div class='clearfloat'></div></div></div><div class='box_bottom'><div>-</div></div></div>			
+							
+					 
+ 				
+		 
+			  
+					 
+				 
+						  
+								
+										     
+		
+						
+							  
+										
+
+				
+				<div class='box'><div class='box_top'><div>-</div></div><div class='box_body'><div><h2 class='head3'>Related Information</h2><p></p><ul>
+				
+				
+
+		
+
+	<li><a href="/downloads/BiologicsBloodVaccines/SafetyAvailability/VaccineSafety/UCM265558.pdf" ><linktitle>FDA’s Contributions to Advancing New Technologies for Developing Safe and Effective Influenza Vaccines</linktitle>&nbsp;(PDF - 52KB)</a>
+	
+	</li>
+
+				
+
+			
+	
+											
+							  
+										
+
+				
+				
+				
+				
+
+		
+
+				
+		  
+	<li><a href="/BiologicsBloodVaccines/SafetyAvailability/Pandemics/default.htm" ><linktitle>Pandemics & Emerging Diseases</linktitle></a>
+	
+	</li>
+
+				
+
+			
+	
+											
+													
+													</ul><div class='clearfloat'></div></div></div><div class='box_bottom'><div>-</div></div></div>			
+							
+					 
+ 				
+		 
+			  
+					 
+				 
+						  
+								
+										     
+		
+						
+							  
+										
+
+				
+				<div class='box'><div class='box_top'><div>-</div></div><div class='box_body'><div><h2 class='head3'>Related Information from the Centers for Disease Control (CDC)</h2><p></p><ul>
+				
+				
+
+		
+
+		
+	<li><a href="http://www.cdc.gov/flu/protect/keyfacts.htm" target="_blank"><linktitle>Key Facts About Seasonal Flu Vaccine</linktitle></a>
+	
+	</li>
+
+				
+
+			
+	
+											
+							  
+										
+
+				
+				
+				
+				
+
+		
+
+		
+	<li><a href="http://www.cdc.gov/flu/protect/preventing.htm" target="_blank"><linktitle>Preventing Seasonal Flu</linktitle></a>
+	
+	</li>
+
+				
+
+			
+	
+											
+													
+													</ul><div class='clearfloat'></div></div></div><div class='box_bottom'><div>-</div></div></div>			
+							
+ 				
+		 
+			  
+					 
+				 
+						  
+								
+										     
+		
+						
+							  
+										
+
+				
+				<div class='box'><div class='box_top'><div>-</div></div><div class='box_body'><div><h2 class='head3'>Other Related Links</h2><p></p><ul>
+				
+				
+
+		
+
+		
+	<li><a href="http://www.flu.gov" target="_blank"><linktitle>www.Flu.gov</linktitle></a>
+	<br />One-stop access to U.S. Government H1N1, avian and pandemic flu information
+	</li>
+
+				
+
+			
+	
+											
+													
+													</ul><div class='clearfloat'></div></div></div><div class='box_bottom'><div>-</div></div></div>			
+							
+ 				
+		 
+			  
+					 
+				 
+						  
+								
+										     
+		
+					 				
+		 
+			  
+					 
+				 
+						  
+								
+										     
+		
+					 				
+		 
+			  
+					 
+				 
+						  
+								
+										     
+		
+					 				
+		 
+			  
+					 
+				 
+						  
+								
+										     
+		
+					 				
+		 
+			  
+					 
+				 
+						  
+								
+										     
+		
+					 				
+		 
+			  
+					 
+				 
+							
+					 				
+	
+  
+<!--isForRelatedTablesAndLinks=1-->
+
+ 
+
+	
+		  	     
+			
+    
+			
+			 
+		
+	<!--if isTrue(#active.isResponsive)-->
+		<div id="Contact_Us" class="box">	
+			<div class="box_top"><div>&nbsp;</div></div>
+			<div class="box_body">
+			<div style="overflow:hidden;"><div class="clearfloat"></div>
+		    	<h2 class="head3">Contact FDA</h2>
+		    	<div class="clearfloat"></div>
+					<div class="phone_number" title="Primary Phone Number">(800) 835-4709</div>
+							
+					<div class="phone_number" title="Alternative Phone Number">(240) 402-8010</div>
+					<div class="email_address"><a href="mailto:ocod@fda.hhs.gov"><span class="email_address">ocod@fda.hhs.gov</a></div>
+				
+					<div class="div-info">
+					<span class="div-name">Consumer Affairs Branch (CBER)</span>
+								
+				<div class="div-address">				
+				<p>Division of Communication and Consumer Affairs</p>
+				<p>Office of Communication, Outreach and Development</p>
+				<p>Food and Drug Administration</p>
+				<p>10903 New Hampshire Avenue</p>
+				<p>Building 71 Room 3103</p>
+				Silver Spring,
+				
+				MD
+				20993-0002
+				</div><!-- /div-address -->
+				</div><!-- /div-info -->
+	<!--if isTrue(#active.isResponsive)-->
+		</div><!-- end box_body -->
+			
+		</div>
+			<div class="box_bottom"><div></div></div>
+		 </div><!-- end box -->
+	
+				
+ 
+ 
+		<div class="clearfloat"> </div>
+		</div>
+	<div class="clearfloat"> </div>
+
+		<div class="clearfloat"> </div>
+		</div><!--content-->
+		  
+		<!--==== BEGIN CTP Disclaimer ==== -->
+<!--mp_trans_add
+<blockquote>
+<hr>
+<p>This website has been translated to Spanish from English, and is updated often. It is possible that some links will connect you to content only 
+available in English or some of the words on the page will appear in English until translation has been completed (usually within 24 hours). We 
+appreciate your patience with the translation process. In the case of any discrepancy in meaning, the English version is considered official. Thank 
+you for visiting <a href="http://esp.fda.gov/TobaccoProducts/default.htm">esp.fda.gov/tabaco.</a></p>
+</blockquote>
+-->
+<!--==== END CTP Disclaimer ==== -->
+
+
+<script type="text/javascript">
+	setStyle();
+</script>
+		<!--==== BEGIN FOOTER ==== -->
+			<!--googleoff: index-->
+			<div id="footer">
+							
+				<!-- ==== BEGIN Page Tools Bottom ==== -->
+				<div id="pagetools_bottom">
+				<div id="pagetools_right">
+				<p>
+
+<!-- <ul> -->
+
+
+		
+		
+	<!-- The below statement will never be true, xPostedDate is used for the PageLastUpdated Date when a CI has a Folio -->
+			
+			
+			
+	
+	<!-- <li>Page Last Updated: 11/22/2013</li> -->
+	Page Last Updated: 11/22/2013
+<!-- </ul> -->
+
+
+	<br/>
+	Note: If you need help accessing information in different file formats, see <a href="/AboutFDA/AboutThisWebsite/WebsitePolicies/ViewingFiles/default.htm">Instructions for Downloading Viewers and Players</a>.		
+				</p>
+				</div>
+				<br class="clearfloat" />
+				</div>
+				<!-- ## ADDED footer-heading ## -->
+				<div id="footer-heading">
+					<div id="footer-fdalinks">
+						<ul class="list-horizontal">
+							<li class="first"><a href="/AboutFDA/AboutThisWebsite/Accessibility/default.htm" title="Accessibility">Accessibility</a></li>
+							<li><a href="/AboutFDA/ContactFDA/default.htm" title="Contact FDA">Contact FDA</a></li>
+							<li><a href="/AboutFDA/WorkingatFDA/default.htm" title="Careers">Careers</a></li>
+							<li><a href="/AboutFDA/Transparency/Basics/default.htm" title="FDA Basics">FDA Basics</a></li>
+							<li><a href="/RegulatoryInformation/FOI/default.htm" title="Freedom of Information Act">FOIA</a></li>
+							<li><a href="/AboutFDA/WorkingatFDA/NoFearAct/default.htm" title="No Fear Act">No Fear Act</a></li>
+							<li><a href="/SiteMap/default.htm" title="Site Map">Site Map</a></li>
+							<li><a href="/AboutFDA/Transparency/default.htm" title="Transparency">Transparency</a></li>
+							<li class="last"><a href="/AboutFDA/AboutThisWebsite/WebsitePolicies/default.htm" title="Website Policies">Website Policies</a></li>
+						</ul>
+					</div>
+					<div id="footer-fdalogo">
+						<a href="http://www.fda.gov" title="FDA Homepage"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_footer_logo_fda.png" alt="FDA" title="FDA Homepage"/></a>
+					</div>
+				</div>
+				<!-- ## END footer-heading ## -->
+				<!-- ## ADDED footer-content ## -->
+				<div id="footer-content" class="three-column">
+					<div id="footer-fda" class="first">
+						<div class="footer-header">U.S. Food and Drug Administration</div>
+						<div class="address">
+							10903 New Hampshire Avenue <br/>
+							Silver Spring, MD 20993 <br/>
+							Ph. 1-888-INFO-FDA (1-888-463-6332)<br/>
+							<a href="/AboutFDA/ContactFDA/default.htm" title="Email FDA">Email FDA</a>
+						</div>
+						<div id="social-links" class="hover-fade">
+							<ul class="list-horizontal">
+								<li><a href="http://www.usa.gov" title="USA.gov"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_footer_logo_usagov.png" alt="USA.gov" title="USA.gov"/></a></li>
+								<li><a href="/AboutFDA/ContactFDA/StayInformed/GetEmailUpdates/default.htm" title="Subscribe to E-mails"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_footer_icon_email.png" alt="E-mail" title="Subscribe to E-mails"/></a></li>
+								<li><a href="/AboutFDA/ContactFDA/StayInformed/RSSFeeds/default.htm" title="Subscribe to RSS Feeds"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_footer_icon_rss.png" alt="RSS" title="Subscribe to RSS Feeds"/></a></li>
+								<li><a href="https://twitter.com/US_FDA" title="Follow FDA on Twitter"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_footer_icon_twitter.png" alt="Twitter" title="Follow FDA on Twitter"/></a></li>
+								<li><a href="https://www.facebook.com/FDA" title="Follow FDA on Facebook"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_ftr_icon_facebook.png" alt="Facebook" title="Follow FDA on Facebook" /></a></li>
+								<li><a href="http://www.youtube.com/user/USFoodandDrugAdmin" title="View FDA Videos"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_footer_icon_youtube.png" alt="YouTube" title="View FDA Videos"/></a></li>
+								<li><a href="http://www.flickr.com/photos/fdaphotos/" title="View FDA Photostream on Flickr"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_footer_icon_flickr.png" alt="Flickr" title="View FDA Photostream on Flickr"></a></li>
+							</ul>
+						</div>
+						<div id="footer-audience">
+							<ul class="list-horizontal">
+								<li class="first"><a href="/ForFederalStateandLocalOfficials/default.htm" title="For Government">For Government</a></li>
+								<li class="last"><a href="/NewsEvents/default.htm" title="For Press">For Press</a></li>
+							</ul>
+						</div>
+					</div>
+	
+				<div id="footer-links" class="second">
+						<div>
+
+							  <ul class="list-no-bullets">
+								<li><a href="/CombinationProducts/default.htm" title="Combination Products">Combination Products</a></li>
+								<li><a href="/AdvisoryCommittees/default.htm" title="Advisory Committees">Advisory Committees</a></li>
+								<li><a href="/ScienceResearch/default.htm" title="Science &amp; Research">Science & Research</a></li>
+								<li><a href="/RegulatoryInformation/default.htm" title="Regulatory Information">Regulatory Information</a></li>
+								<li><a href="/Safety/default.htm" title="Safety">Safety</a></li>
+								<li><a href="/EmergencyPreparedness/default.htm" title="Emergency Preparedness">Emergency Preparedness</a></li>
+								<li><a href="/InternationalPrograms/default.htm" title="International Programs">International Programs</a></li>
+								<li><a href="/NewsEvents/default.htm" title="News &amp; Events">News & Events</a></li>
+								<li><a href="/Training/default.htm" title="Training and Continuing Education">Training and Continuing Education</a></li>
+								<li><a href="/ICECI/default.htm" title="Inspections/Compliance">Inspections/Compliance</a></li>
+								<li><a href="/ForFederalStateandLocalOfficials/default.htm" title="State &amp; Local Officials">State & Local Officials</a></li>
+								<li><a href="/ForConsumers/default.htm" title="Consumers">Consumers</a></li>
+								<li><a href="/ForIndustry/default.htm" title="Industry">Industry</a></li>
+								<li><a href="/ForHealthProfessionals/default.htm" title="Health Professionals">Health Professionals</a></li>
+								<li><a href="http://www.accessdata.fda.gov/scripts/search/index.cfm?action=archive.search">FDA Archive</a></li>
+								</ul>
+
+						</div>
+					</div>
+					
+					<div id="footer-hhs" class="third">
+						<div class="footer-header"><a href="http://www.hhs.gov" title="U.S. Department of Health &amp; Human Services"><img src="/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_footer_hhslogo.png" alt="U.S. Department of Health &amp; Human Services" title="U.S. Department of Health &amp; Human Services"/></a></div>
+
+					</div>
+					<div class="clearfloat">&nbsp;</div>
+				</div>
+				<!-- ## END footer-content ## -->
+				<!-- ==== BEGIN Footnote(s) ==== -->
+				<div id="footnote"><h2>Links on this page:</h2><div></div></div>
+				<!-- ==== END Footnote(s) ==== -->
+				<!-- ==== BEGIN Page Tools Bottom ==== -->
+				<!-- ## REMOVED pagetools_bottom ## -->
+				<!-- ==== END Page Tools Bottom ==== -->
+				<!-- ## REMOVED footer-menu ## -->
+			<!--googleon: index-->
+			</div>
+			<script type="text/javascript">
+			$(function () {
+				if(!($("#MedicalDeviceRecall_sortid").length || $("#DrugShortage_sortid").length || $("#WarningLetter_sortid").length || $("#TobaccoLetter_sortid").length || $("#ReadingRoom_sortid").length || $("#EggRule_sortid").length))
+				{
+					if ($(".tablesorter").length > 0)
+					{
+						$(".tablesorter").footable({
+								paginate: false
+						});	
+					}
+				}		
+				});
+			</script>
+			<!-- ==== END PAGE FOOTER ==== -->
+		</div> <!--outerwrapper-->
+
+<div class="clearfloat">
+      
+    </div>
+  </div>
+  <div id="bottom_corner" class="box_bottom"></div> 
+   <div class="clearfloat">
+    
+  </div>
+
+<script type="text/javascript">
+	var cid_id, cid_item, cid_class, content_page = 0;
+	var breakout = false;
+	var cid = window.location.href.split("/");
+	var cid_filename = cid[cid.length - 1];
+	if(cid_filename.toLowerCase() == "default.htm" || cid_filename.toLowerCase() == "index.htm" )
+	{
+		cid_id = document.getElementById("left_nav_1504");
+		if(cid_id != null)
+		{
+			if(cid_id.className == "sidemenu_parent")
+			{
+			  breakout = true;			 
+			}
+		} 
+	}
+	else
+	{
+		cid_item = cid_filename.split(".");
+		cid_id = document.getElementById(cid_item[0].toUpperCase());
+		content_page = 1;	
+	}
+	if(breakout == false)
+	{
+		if (cid_id && content_page == 1) {
+			var cid_img_text="<div id=\"doc-select-arrow\" > <img src=\"/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_arrow.gif\" alt=\"Current Page is:\" />";
+			var cid_id_innertext = cid_id.innerHTML; 
+			cid_img_text += cid_id_innertext;
+			cid_id.innerHTML = cid_img_text+"<div class=\"clearfloat\"></div></div>";		
+		}
+		else if(cid_id)
+		{
+		    var cid_img_text="<div id=\"doc-select-arrow-two\" ><img src=\"/ucm/groups/fdagov-public/@system/documents/system/img_fdagov_arrow.gif\" alt=\"Current Page is:\" />";
+			var cid_id_innertext = cid_id.innerHTML;
+			
+			if((cid_id_innertext.toLowerCase()).indexOf("<ul>") >= 0)
+			{
+			  var indexer = (cid_id_innertext.toLowerCase()).indexOf("<ul>");
+			  var beg = cid_id_innertext.substring(0, indexer);
+			  var end = cid_id_innertext.substring(indexer);
+			  cid_id.innerHTML = cid_img_text + beg + "<div class=\"clearfloat\"></div></div>" + end;	
+			}
+			else
+			{
+				cid_img_text += cid_id_innertext;
+				cid_id.innerHTML = cid_img_text+"<div class=\"clearfloat\"></div></div>";
+			}
+		}
+	}
+</script>
+ 
+		</div>
+</body>
+</html>
+ + beg + "<div class=\"clearfloat\"></div></div>" + end;	
+			}
+			else
+			{
+				cid_img_text += cid_id_innertext;
+				cid_id.innerHTML = cid_img_text+"<div class=\"clearfloat\"></div></div>";
+	

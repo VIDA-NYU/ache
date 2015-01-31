@@ -1,0 +1,522 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Dengue Fever (locally acquired) Maps - Human - USA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script type='text/javascript'>
+    year = '2014';
+    diseaseId = 'del';
+    categoryName = 'human';
+    regionId = 'us';
+</script>
+<link href="common/common.css" rel="stylesheet" type="text/css">
+<link href="common/del.css" rel="stylesheet" type="text/css">
+<link href="common/common-override.css" rel="stylesheet" type="text/css">
+<link href="/common/historical.css" rel="stylesheet" type="text/css">
+<script type='text/javascript' src="/common/historical.js"></script>
+<script type='text/javascript' src="common/common.js"></script>
+<script type='text/javascript' src="common/common-config.js"></script>
+<script type='text/javascript'>
+
+    // DETECT IF MOZILLA AND VERSION 3 OR 4
+    ua = navigator.userAgent;
+    if( ua.indexOf('MSIE') == -1 && ( ua.indexOf('Mozilla/4') != -1 ||  ua.indexOf('Mozilla/3') != -1 ) )
+    {
+        // INCLUDE CUSTOM CSS FOR NETSCAPE 4
+        document.writeln('<link href="common/ns4.css" rel="stylesheet" type="text/css">');
+    }
+
+</script>
+<style type="text/css">
+    /* Custom CSS rules go here */
+</style>
+<script type='text/javascript'>
+    gsCategory_id = 'human';
+
+    function init()
+    {
+        // page initializers go here
+        //
+        // Highlight active category navigation link
+        //setClass( document.getElementById(gsCategory_id),'navbarLinkActive' );
+    }
+</script>
+</head>
+<body onLoad="init();initCommon()"> 
+<div id="mastHeadBkgd"> 
+    <div id="mastHead">
+        <div id="mastHeadLeftCol">
+            <div id="visid"><a href="http://www.usgs.gov"><img src="common/images/logo_usgs_del.gif" width="169" height="63" border="0" alt="[USGS Logo]"></a></div> 
+            <div id="siteTitle">Dengue Fever (locally acquired)</div>
+            <div id="pageTitle">Human</div>
+            <div id="siteYear">2014</div>
+        </div>
+        <div id="mastHeadRightCol">
+            <div id="titleIcon"><img id="titleIconImg" src="common/images/icon_page_human.gif" alt="Picture of Human" width="135" height="92"></div>
+            <script type="text/javascript">
+                displayIcon();
+            </script>
+        </div>
+    </div> 
+</div>
+<div id="navbarDisease">
+    <a class="navbarLink" href="index.html" title="Disease Maps Home Page" alt="Disease Maps Home Page" id="dmHome">Disease Maps Home</a><a class="navbarLink" href="wnv_us_human.html" title="West Nile Virus" alt="West Nile Virus" id="wnv">WNV</a><a class="navbarLink" href="sle_us_human.html" title="St Louis Encephalitis" alt="St Louis Encephalitis" id="sle">SLE</a><a class="navbarLink" href="eee_us_human.html" title="Eastern Equine Encephalitis" alt="Eastern Equine Encephalitis" id="eee">EEE</a><a class="navbarLink" href="wee_us_human.html" title="Western Equine Encephalitis" alt="Western Equine Encephalitis" id="wee">WEE</a><a class="navbarLink" href="lac_us_human.html" title="La Crosse Encephalitis" alt="La Crosse Encephalitis" id="lac">LAC</a><a class="navbarLink" href="pow_us_human.html" title="Powassan Virus" alt="Powassan Virus" id="pow">POW</a><a class="navbarLinkActive" href="del_us_human.html" title="Dengue Fever (locally acquired)" alt="Dengue Fever (locally acquired)" id="del">DEN<span style="font-size:smaller;font-weight:normal">(loc)</span></a><a class="navbarLink" href="dep_us_human.html" title="Dengue Fever (imported)" alt="Dengue Fever (imported)" id="dep">DEN<span style="font-size:smaller;font-weight:normal">(imp)</span></a>
+</div>
+<div id="navbarCategory">
+    <a class="navbarLinkInactive" id="null">Bird</a><a class="navbarLinkActive" href="del_us_human.html" id="human">Human</a><a class="navbarLinkInactive" id="null">Mosquito</a><a class="navbarLinkInactive" id="null">Sentinel</a><a class="navbarLinkInactive" id="null">Veterinary</a>
+</div> 
+<div id="content"> 
+<div id="dynamicContent"> 
+    <!-- WHY NEEDED? <table cellpadding="0" cellspacing="0" border="0"><tr><td> --> 
+    <div id="printHeader">
+        <a href="http://www.usgs.gov"><img src="common/images/logo_usgs_print.gif" alt="USGS Logo Banner" width="480" height="32" border="0"></a>
+        <br>
+        Dengue Fever (locally acquired):&nbsp;&nbsp;USA&nbsp;-&nbsp;Human
+    </div>
+    <div id="breadcrumbBar"> 
+            <!-- NOTE: Any changes to this menu MUST be updated in the %region_names
+                       hash of the automation script (assembleHTML.pl) -->
+            <form>
+            <select name="stateMenu" size="1" id="stateMenu" class="noprint" tabindex="1" onchange="stateJumpMenu(this,'del','human')" alt="Select state" title="Select state"> 
+                <option value="0" selected>Select State</option> 
+                <option value="us">USA Map</option> 
+                <option value="al">Alabama</option> 
+                <option value="ak">Alaska</option> 
+                <option value="az">Arizona</option> 
+                <option value="ar">Arkansas</option> 
+                <option value="ca">California</option> 
+                <option </option> 
+                <option value="ak">Alaska</option> 
+                <option value="az">Arizona</option> 
+    value="co">Colorado</option> 
+                <option value="ct">Conneticut</option> 
+                <option value="de">Delaware</option> 
+                <option value="dc">District of Columbia</option> 
+                <option value="fl">Florida</option> 
+                <option value="ga">Georgia</option> 
+                <option value="hi">Hawaii</option> 
+                <option value="id">Idaho</option> 
+                <option value="il">Illinois</option> 
+                <option value="in">Indiana</option> 
+                <option value="ia">Iowa</option> 
+                <option value="ks">Kansas</option> 
+                <option value="ky">Kentucky</option> 
+                <option value="la">Louisiana</option> 
+                <option value="me">Maine</option> 
+                <option value="md">Maryland</option> 
+                <option value="ma">Massachussets</option> 
+                <option value="mi">Michigan</option> 
+                <option value="mn">Minnesota</option> 
+                <option value="ms">Mississippi</option> 
+                <option value="mo">Missouri</option> 
+                <option value="mt">Montana</option> 
+                <option value="ne">Nebraska</option> 
+                <option value="nv">Nevada</option> 
+                <option value="nh">New Hampshire</option> 
+                <opti</option> 
+                <option value="mt">Montana</option> 
+                <option value="ne">Nebraska</option> 
+                <option valuion value="nj">New Jersey</option> 
+                <option value="nm">New Mexico</option> 
+                <option value="ny">New York</option> 
+                <option value="nc">North Carolina</option> 
+                <option value="nd">North Dakota</option> 
+                <option value="oh">Ohio</option> 
+                <option value="ok">Oklahoma</option> 
+                <option value="or">Oregon</option> 
+                <option value="pa">Pennsylvania</option> 
+                <option value="pr">Puerto Rico</option> 
+                <option value="ri">Rhode island</option> 
+                <option value="sc">South Carolina</option> 
+                <option value="sd">South Dakota</option> 
+                <option value="tn">Tennesee</option> 
+                <option value="tx">Texas</option> 
+                <option value="ut">Utah</option> 
+                <option value="vt">Vermont</option> 
+                <option value="va">Virginia</option> 
+                <option value="vi">Virgin Islands (US)</option> 
+                <option value="wa">Washington</option> 
+                <option value="wv">West Virginia</option> 
+                <option value="wi">Wisconsin</option> 
+                <option value="wy">Wyoming</option> 
+            </select></form> 
+        <div id="breadcrumb">
+            <span class="noDisplay     <option value="wv">West Virginia</option> 
+                <option value="wi">Wisconsin</option> 
+                <option value="wy">Wyoming</o">Navigation Breadcrumb: </span>
+                    
+        <span id="us" class="crumbActive">USA</span>
+        
+        
+ 
+        </div> 
+        <div id="specialnote">
+        </div>
+                <div id="stateLinks">
+            <a href="del_us_human.html">USA Map</a>, 
+            <a href="del_al_human.html">Alabama</a>, 
+            <a href="del_ak_human.html">Alaska</a>, 
+            <a href="del_az_human.html">Arizona</a>, 
+            <a href="del_ar_human.html">Arkansas</a>, 
+            <a href="del_ca_human.html">California</a>, 
+            <a href="del_co_human.html">Colorado</a>, 
+            <a href="del_ct_human.html">Conneticut</a>, 
+            <a href="del_de_human.html">Delaware</a>, 
+            <a href="del_dc_human.html">District of Columbia</a>, 
+            <a href="del_fl_human.html">Florida</a>, 
+            <a href="del_ga_human.html">Georgia</a>, 
+            <a href="del_hi_human.html">Hawaii</a>, 
+            <a href="del_id_human.html">Idaho</a>, 
+            <a href="del_il_human.html">Illinois</a>, 
+            <a href="del_in_human.html">Indiana</a>, 
+            <a href="del_ia_human.html">Iowa</a>, 
+            <a href="del_ks_human.html">Kansas</a>, 
+            <a href="del_ky_human.html">Kentucky</a>, 
+            <a href="del_la_human.html">Louisiana</a>, 
+            <a href="del_ana</a>, 
+            <a href="del_ia_human.html">Iowa</a>, 
+            <a href="del_ks_human.html">Kansas</a>, 
+            <a href="del_ky_humanme_human.html">Maine</a>, 
+            <a href="del_md_human.html">Maryland</a>, 
+            <a href="del_ma_human.html">Massachussets</a>, 
+            <a href="del_mi_human.html">Michigan</a>, 
+            <a href="del_mn_human.html">Minnesota</a>, 
+            <a href="del_ms_human.html">Mississippi</a>, 
+            <a href="del_mo_human.html">Missouri</a>, 
+            <a href="del_mt_human.html">Montana</a>, 
+            <a href="del_ne_human.html">Nebraska</a>, 
+            <a href="del_nv_human.html">Nevada</a>, 
+            <a href="del_nh_human.html">New Hampshire</a>, 
+            <a href="del_nj_human.html">New Jersey</a>, 
+            <a href="del_nm_human.html">New Mexico</a>, 
+            <a href="del_ny_human.html">New York</a>, 
+            <a href="del_nc_human.html">North Carolina</a>, 
+            <a href="del_nd_human.html">North Dakota</a>, 
+            <a href="del_oh_human.html">Ohio</a>, 
+            <a href="del_ok_human.html">Oklahoma</a>, 
+            <a href="del_or_human.html">Oregon</a>, 
+            <a href="del_pa_human.html">Pennsylvania</a>, 
+            <a href="del_pr_human.html">Puerto Rico</a>, 
+            <a href="del_ri_human.html">Rhode island</a>, 
+            <a href="del_sc_human.html">South Carolina</a>, 
+            <a href="del_sd_human.html">South Dakota</a>, 
+            <a href="del  <a href="del_pr_human.html">Puerto Rico</a>, 
+            <a href="del_ri_human.html">Rhode island</a>, 
+            <a href="del_sc_human.html">S_tn_human.html">Tennesee</a>, 
+            <a href="del_tx_human.html">Texas</a>, 
+            <a href="del_ut_human.html">Utah</a>, 
+            <a href="del_vt_human.html">Vermont</a>, 
+            <a href="del_va_human.html">Virginia</a>, 
+            <a href="del_wa_human.html">Washington</a>, 
+            <a href="del_wv_human.html">West Virginia</a>, 
+            <a href="del_wi_human.html">Wisconsin</a>, 
+            <a href="del_wy_human.html">Wyoming</a>
+        </div>
+        <script type="text/javascript">
+            document.getElementById('stateLinks').style.display = 'none';    
+        </script>
+
+    </div> 
+    <div id="mapImageArea"> 
+        <div id="mapimage">
+            <img alt="The Map" id="mapimageUS" src="images/del_us_human_map_week50.png" class="theMap" alt="[Clickable Map of USA]" ismap="ismap" usemap="#ImageMap10000" width="580" height="475" border="0" /> 
+             
+                     <div id="usInsetsGroup">
+                <div id="usInsetAK" class="usInset">
+                    <a class="usInsetLink" href="del_ak_human.html" id="ak"><img
+                        alt="Alaska"
+                        title="Alaska"
+                        src="images/del_ak-us_human_map_week50.png" width="131" height="95" border="0"><div>Alaska</div></a>
+                </div> 
+                <div id="usInsetHI"               alt="Alaska"
+                        title="Alaska"
+                        src="images/del_ak-us_human_map_week50.png" width="131" heclass="usInset">
+                    <a class="usInsetLink" href="del_hi_human.html" id="hi"><img 
+                        alt="Hawaii"
+                        title="Hawaii"
+                        src="images/del_hi-us_human_map_week50.png" width="125" height="85" border="0"><div>Hawaii</div></a>
+                </div> 
+                <div id="usInsetPR" class="usInset">
+                    <a class="usInsetLink" href="del_pr_human.html" id="pr"><img 
+                        alt="Puerto Rico"
+                        title="Puerto Rico"
+                        src="images/del_pr-us_human_map_week50.png" width="133" height="50" border="0"><div>P.R.</div></a>
+                </div> 
+                <div id="usInsetVI" class="usInset">
+                    <a class="usInsetLink" href="del_vi_human.html" id="vi"><img 
+                        alt="US Virgin Islands"
+                        title="US Virgin Islands"
+                        src="images/del_vi-us_human_map_week50.png" width="80" height="99" border="0"><div>US Virgin<br>Islands</div></a>
+                </div> 
+            </div>
+ 
+            <div id="smallStatesGroup">
+                <div>
+                    <a class="smallStatesLink" href="del_nh_human.html" id="nh" 
+                        onmouseover="setClass(this.id,'smallStatesLinkOver')" 
+                        on 
+            <div id="smallStatesGroup">
+                <div>
+                    <a class="smallStatesLink" href="del_nh_human.html" id="nh" 
+ mouseout="setClass(this.id,'smallStatesLink')">NH</a>
+                </div>
+                <div>
+                    <a class="smallStatesLink" href="del_vt_human.html" id="vt" 
+                        onmouseover="setClass(this.id,'smallStatesLinkOver')" 
+                        onmouseout="setClass(this.id,'smallStatesLink')">VT</a>
+                </div>
+                <div>
+                    <a class="smallStatesLink" href="del_ma_human.html" id="ma" 
+                        onmouseover="setClass(this.id,'smallStatesLinkOver')" 
+                        onmouseout="setClass(this.id,'smallStatesLink')">MA</a>
+                </div>
+                <div>
+                    <a class="smallStatesLink" href="del_ct_human.html" id="ct" 
+                        onmouseover="setClass(this.id,'smallStatesLinkOver')" 
+                        onmouseout="setClass(this.id,'smallStatesLink')">CT</a>
+                </div>
+                <div>
+                    <a class="smallStatesLink" href="del_ri_human.html" id="ri" 
+                        onmouseover="setClass(this.id,'smallStatesLinkOver')" 
+                        onmouseout="setClass(this.id,'smallStatesLink')">RI</a>
+                </div>
+                <div>
+                    <a class="smallStatesLink" href="del_nj_human.html" id="nj" 
+                        onmouseover=ver')" 
+                        onmouseout="setClass(this.id,'smallStatesLink')">RI</a>
+                </div>
+                <div>
+             "setClass(this.id,'smallStatesLinkOver')" 
+                        onmouseout="setClass(this.id,'smallStatesLink')">NJ</a>
+                </div>
+                <div>
+                    <a class="smallStatesLink" href="del_de_human.html" id="de" 
+                        onmouseover="setClass(this.id,'smallStatesLinkOver')" 
+                        onmouseout="setClass(this.id,'smallStatesLink')">DE</a>
+                </div>
+                <div>
+                    <a class="smallStatesLink" href="del_md_human.html" id="md" 
+                        onmouseover="setClass(this.id,'smallStatesLinkOver')" 
+                        onmouseout="setClass(this.id,'smallStatesLink')">MD</a>
+                </div>
+                <div>
+                    <a class="smallStatesLink" href="del_dc_human.html" id="dc" 
+                        onmouseover="setClass(this.id,'smallStatesLinkOver')" 
+                        onmouseout="setClass(this.id,'smallStatesLink')">DC</a>
+                </div>
+            </div>
+ 
+            <noscript>
+            </noscript>
+        </div> 
+        <map id="map" name="ImageMap10000">
+<area shape="poly" coords="61,40,61,42,60,40,61,37,62,35,62,33,61,30,77,34,94,38,100,40,107,41,110,42,110,44,107,54,105,63,105,66,103,74,102,76,103,78,102,81,97,80,93,79,84,76,82,77,79,76,77,77,74,77,72,77,70,77,68,76,6map id="map" name="ImageMap10000">
+<area shape="poly" coords="61,40,61,42,60,40,61,37,62,35,62,33,61,30,77,34,94,38,100,40,107,41,110,42,110,44,107,54,105,636,76,63,76,62,75,58,74,56,74,53,74,50,73,49,71,49,68,49,66,47,64,45,62,42,61,40,60,41,56,40,59,42,58,42,56,41,54,44,52,43,51,42,49,41,46,42,44,42,40,41,35,42,32,47,37,52,39,55,39,56,41,58,43,56,44,55,46,52,48,55,49,53,49,53,47,56,46,58,44,57,46,57,49,56,51,54,53,55,50,51,51,52,54,55,54,57,52,59,51,59,49,59,47,61,44,61,41,61,40" href="del_wa_human.html" title="Washington" alt="Washington">
+<area shape="poly" coords="57,36,56,35,56,34,56,34,56,33,57,33,57,34,57,35,57,35,57,35,57,35,57,36,57,36" href="del_wa_human.html" title="Washington" alt="Washington">
+<area shape="poly" coords="59,39,60,37,58,39,59,42,61,43,59,42,59,40,59,39" href="del_wa_human.html" title="Washington" alt="Washington">
+<area shape="poly" coords="149,107,149,109,147,109,144,109,142,108,140,109,138,108,136,110,134,108,134,106,134,104,132,103,131,101,131,99,130,97,130,95,130,92,128,90,127,92,125,93,123,91,123,89,125,88,124,86,125,83,126,80,127,78,125,77,124,75,123,74,122,71,120,69,119,67,118,65,118,63,117,60,116,59,116,54,117,50,118,44,130,46,136,47,152,50,160,52,165,52,176,54,187,55,196,57,206,58,216,59,224,59,224,64,224,67,223,73,223,80,222,90,222,95,221,100,220,109,220,112,211,111,202,110,198,110,183,108,180,108,176,107,165,106,160,105,154,104,153,109,153,111,151,109,151,107,149,107" href="del_mt_human.html" title="Montana" alt="Montana">
+<area shape="poly" coords="543,93,544,97,542,9,222,90,222,95,221,100,220,109,220,112,211,111,202,110,198,110,183,108,180,108,176,107,165,106,160,105,154,104,153,109,153,111,151,109,151,107,149,1078,540,100,539,102,539,104,538,108,536,107,534,105,534,104,532,100,531,94,529,89,526,81,528,81,528,79,530,75,531,73,532,71,531,69,531,65,531,62,535,49,538,51,542,49,544,48,549,50,554,64,554,66,556,68,559,69,559,72,561,73,564,75,565,77,564,79,561,81,559,82,558,85,555,84,553,86,550,88,550,85,549,83,550,85,549,89,549,92,548,94,546,95,544,94,544,97,543,94,543,93" href="del_me_human.html" title="Maine" alt="Maine">
+<area shape="poly" coords="554,86,554,85,554,85,555,85,556,86,555,87,555,88,554,87,554,86,554,86" href="del_me_human.html" title="Maine" alt="Maine">
+<area shape="poly" coords="270,102,268,102,261,102,254,102,240,101,231,100,221,100,222,95,222,92,223,81,223,73,224,67,224,64,224,59,234,60,242,61,247,61,259,62,264,62,269,62,279,62,285,62,285,65,286,67,285,69,285,71,286,73,286,75,287,77,287,79,288,81,288,83,288,85,288,88,288,90,289,92,289,94,289,96,290,99,290,102,284,103,277,103,270,102,270,102" href="del_nd_human.html" title="North Dakota" alt="North Dakota">
+<area shape="poly" coords="230,140,228,139,223,139,218,139,218,132,219,127,219,123,219,118,220,112,220,109,221,100,231,100,240,101,254,102,260,102,268,102,270,102,277,103,284,103,290,103,290,105,288,107,289,109,291,110,291,116,291,118,291,120,291,126,291,131,291,135,290,138,291,140,291,143,290,145,291,147,291,149,289,148,288,146,286,145,284,144,282,144,279,144,277,145,275,144,273,143,264,142,261,12,268,102,270,102,277,103,284,103,290,103,290,105,288,107,289,109,291,110,291,116,291,118,291,120,291,126,291,131,291,135,290,138,291,140,291,143,290,41,255,141,245,141,237,140,230,140,230,140" href="del_sd_human.html" title="South Dakota" alt="South Dakota">
+<area shape="poly" coords="216,156,216,160,216,165,207,165,203,164,193,163,187,163,182,162,176,161,165,160,156,158,145,157,146,153,147,149,147,144,149,137,150,130,150,127,151,124,152,117,153,111,153,109,154,104,159,105,164,106,176,107,180,108,183,108,198,110,202,110,210,111,220,112,219,118,219,123,219,127,218,132,218,139,217,144,217,152,216,156,216,156" href="del_wy_human.html" title="Wyoming" alt="Wyoming">
+<area shape="poly" coords="373,112,371,116,371,118,373,117,375,114,377,114,376,118,376,121,376,123,375,127,375,130,374,132,374,136,374,138,375,141,375,143,376,145,372,146,367,146,365,146,360,146,356,147,350,147,348,147,347,145,344,145,343,142,343,140,343,137,342,135,341,133,341,130,340,128,338,127,336,126,335,124,333,122,331,121,329,120,327,119,326,116,326,114,326,111,327,109,325,107,325,105,326,103,328,102,330,101,330,96,330,93,331,91,336,91,343,88,342,93,346,93,348,93,349,95,352,96,359,98,362,99,364,99,367,100,369,100,370,102,372,103,372,105,372,107,374,107,373,109,375,111,373,112,373,112" href="del_wi_human.html" title="Wisconsin" alt="Wisconsin">
+<area shape="poly" coords="380,107,380,110,379,112,378,114,377,111,378,109,379,107,380,107" href="del_wi_human.html" title="Wisconsin" alt="Wisconsin">
+<area shape="poly" coords="95,111,95,109,97ef="del_wi_human.html" title="Wisconsin" alt="Wisconsin">
+<area shape="poly" coords="380,107,380,110,379,112,378,114,377,111,378,109,379,107,380,107",107,97,104,96,103,95,101,96,99,97,97,99,96,100,94,102,92,103,90,104,88,105,86,104,84,103,82,102,80,103,77,103,75,105,66,105,63,107,55,110,44,110,42,118,44,117,50,116,54,116,57,117,59,117,61,117,63,118,65,119,67,121,70,122,72,123,74,124,76,126,77,126,80,125,82,125,84,125,87,123,88,123,91,124,92,126,92,128,91,130,92,129,94,130,96,131,98,132,100,131,103,134,104,134,106,134,108,136,110,137,108,139,109,141,108,143,109,146,109,148,109,149,108,151,108,152,110,152,117,151,124,150,127,150,130,149,137,147,144,143,143,137,142,129,140,118,139,116,138,109,137,100,135,90,133,95,111,95,111" href="del_id_human.html" title="Idaho" alt="Idaho">
+<area shape="poly" coords="515,119,514,117,513,112,512,109,510,108,510,106,509,103,509,101,509,98,508,96,507,94,507,91,514,88,520,87,524,86,524,88,524,90,525,92,523,94,521,96,521,98,522,100,521,102,521,104,520,106,521,108,521,111,521,113,521,115,522,117,518,118,515,119,515,119" href="del_vt_human.html" title="Vermont" alt="Vermont">
+<area shape="poly" coords="337,134,333,135,330,135,324,135,320,135,315,135,313,135,311,135,307,135,301,135,297,135,291,135,291,131,291,126,291,121,291,118,291,116,291,112,290,110,289,108,290,105,290,103,291,101,290,98,289,96,288,94,288,91,288,89,288,87,288,85,288,82,288,80,287,78,286,75,286,73,286,71,286,69,286,67,285,65,285,62,292,62,302,62,303,58,306,58,307,64,308,66,311,66,315,67,318,68,320,67,323,67,18,291,116,291,112,290,110,289,108,290,105,290,103,291,101,290,98,289,96,288,94,288,91,288,89,288,87,288,85,288,82,288,80,287,78,286,75,286,73,286,71,325,68,327,69,328,72,330,70,332,72,334,72,335,74,338,73,340,72,343,73,348,72,350,74,354,74,350,76,345,78,341,82,337,86,334,89,332,91,330,92,330,96,330,99,329,101,327,103,326,105,325,107,327,109,327,111,326,113,326,115,326,117,328,119,330,121,333,122,334,124,336,126,338,127,340,128,341,130,341,133,338,134,337,134" href="del_mn_human.html" title="Minnesota" alt="Minnesota">
+<area shape="poly" coords="48,122,40,120,31,117,28,116,25,116,22,115,21,111,21,108,22,106,22,103,25,98,27,96,29,91,31,86,33,81,34,79,35,76,37,73,37,71,38,68,39,66,40,62,41,63,44,62,46,64,48,65,49,67,49,69,49,72,51,74,55,74,57,74,60,74,62,75,64,76,67,76,70,77,72,77,74,77,77,77,79,76,82,77,84,76,93,79,96,79,102,81,103,83,105,85,105,87,104,88,102,91,101,93,100,94,99,97,96,99,95,101,95,103,97,104,97,107,96,108,95,111,90,133,79,130,68,127,61,126,53,124,48,122,48,122" href="del_or_human.html" title="Oregon" alt="Oregon">
+<area shape="poly" coords="524,117,522,117,521,115,521,113,521,111,521,108,520,106,521,104,521,102,522,100,521,98,521,96,523,94,524,93,524,91,524,88,523,86,524,84,524,82,529,89,531,94,532,100,533,103,534,105,536,107,536,109,537,112,535,112,534,114,528,116,524,117,524,117" href="del_nh_human.html" title="New Hampshire" alt="New Hampshire">
+<area shape="poly" coords="345,171,342,173,342,175,340,175,338,173,336,173,334,173,329,174,325,174,322,174,318,174,316,174,313,174,311,174,3,112,535,112,534,114,528,116,524,117,524,117" href="del_nh_human.html" title="New Hampshire" alt="New Hampshire">
+<area shape="poly" coords="345,171,07,174,304,174,298,174,297,172,297,170,297,168,297,166,296,163,296,162,295,160,294,157,293,155,292,153,292,151,291,149,291,147,289,145,290,143,291,141,291,139,291,137,290,135,295,135,301,135,306,135,311,135,313,135,315,135,318,135,324,135,329,135,333,135,337,134,342,134,342,136,342,139,343,142,344,144,347,145,348,147,350,149,350,150,352,151,353,154,353,156,352,158,350,160,347,161,345,162,344,164,346,166,346,168,345,170,345,171" href="del_ia_human.html" title="Iowa" alt="Iowa">
+<area shape="poly" coords="536,127,535,124,531,125,528,126,524,127,522,127,519,128,515,129,515,122,515,119,517,119,522,117,527,116,533,115,535,113,536,112,539,114,538,117,537,120,539,119,542,123,544,124,546,125,549,123,547,121,550,123,546,127,544,128,543,126,541,128,540,129,538,128,536,127,536,127" href="del_ma_human.html" title="Massachusetts" alt="Massachusetts">
+<area shape="poly" coords="544,130,545,129,545,130,545,130,545,130,546,130,543,131,543,132,542,131,543,131,543,131,543,131,544,129,544,129,544,130,544,130" href="del_ma_human.html" title="Massachusetts" alt="Massachusetts">
+<area shape="poly" coords="550,130,550,129,550,129,550,130,550,129,550,129,551,130,551,130,550,131,549,131,549,130,550,130,550,130,550,130" href="del_ma_human.html" title="Massachusetts" alt="Massachusetts">
+<area shape="poly" coords="241,180,235,180,235,176,235,171,235,167,230,166,222,166,216,165,21629,550,130,550,129,550,129,551,130,551,130,550,131,549,131,549,130,550,130,550,130,550,130" href="del_ma_human.html" title="Massachusetts" alt="Massac,160,216,158,217,152,217,144,218,139,223,139,228,139,230,140,237,140,245,141,255,141,261,141,264,142,272,142,273,143,275,144,277,144,280,144,282,144,284,145,286,146,289,146,290,148,292,149,292,151,293,154,294,156,295,158,295,161,296,162,297,165,297,167,297,170,297,172,298,174,299,177,301,179,302,181,298,182,296,182,293,182,291,182,288,182,282,182,277,182,273,182,270,182,268,182,265,182,259,181,253,181,248,181,242,181,241,180" href="del_ne_human.html" title="Nebraska" alt="Nebraska">
+<area shape="poly" coords="454,138,457,136,459,133,461,130,460,127,459,125,464,121,468,121,471,121,472,122,479,120,481,117,484,115,483,111,484,109,482,108,486,103,489,97,492,94,494,93,501,92,507,90,507,92,508,94,509,97,509,100,509,102,510,104,511,106,511,109,513,112,514,117,515,119,515,122,515,128,516,134,516,138,517,139,515,141,516,144,514,147,514,145,511,142,505,140,503,140,501,138,501,136,499,135,497,134,490,135,485,136,482,137,475,138,470,139,463,140,456,141,454,138,454,138" href="del_ny_human.html" title="New York" alt="New York">
+<area shape="poly" coords="517,148,514,149,514,147,516,146,517,144,521,143,523,142,526,140,529,137,527,140,529,139,532,139,533,137,528,142,520,146,517,148,517,148" href="del_ny_human.html" title="New York" alt="New York">
+<area shape="poly" coords="521,147,521,147,522,146,523,145,525,144,526,144,526,143,526,144,524,145,523,145,522,147,521,147,529,137,527,140,529,139,532,139,533,137,528,142,520,146,517,148,517,148" href="del_ny_human.html" title="New York" alt="New York">
+<area shape="poly" c1,147" href="del_ny_human.html" title="New York" alt="New York">
+<area shape="poly" coords="512,150,512,150,513,149,513,148,514,149,513,150,513,150,512,150,512,150" href="del_ny_human.html" title="New York" alt="New York">
+<area shape="poly" coords="482,168,476,169,474,169,469,170,463,171,460,172,453,173,452,170,451,167,451,164,450,161,450,158,449,154,448,150,447,145,454,138,454,142,461,140,469,139,474,138,481,137,485,136,489,135,496,134,498,134,500,135,501,137,502,139,504,139,504,142,504,144,503,146,503,148,502,149,503,151,504,153,506,154,508,156,507,158,505,160,503,161,501,162,499,164,496,165,492,166,489,166,487,167,485,167,483,168,482,168" href="del_pa_human.html" title="Pennsylvania" alt="Pennsylvania">
+<area shape="poly" coords="516,136,515,129,519,128,521,127,523,127,528,126,531,125,532,129,533,133,529,136,526,137,523,137,521,139,516,143,517,139,516,138,516,136,516,136" href="del_ct_human.html" title="Connecticut" alt="Connecticut">
+<area shape="poly" coords="532,130,531,125,534,124,536,125,537,127,536,131,534,134,532,130,532,130" href="del_ri_human.html" title="Rhode Island" alt="Rhode Island">
+<area shape="poly" coords="538,128,538,128,539,130,539,131,538,128,538,128" href="del_ri_human.html" title="Rhode Island" alt="Rhode Island">
+<area shape="poly" coords="537,129,538,128,538,131,538,131,537,131,537,129,537,129" href="del_ri_human.html" titlarea shape="poly" coords="538,128,538,128,539,130,539,131,538,128,538,128" href="del_ri_human.html" title="Rhode Island" alt="Rhode Island">
+<area she="Rhode Island" alt="Rhode Island">
+<area shape="poly" coords="502,163,503,161,505,161,506,158,508,157,507,155,504,153,503,152,502,150,503,148,502,146,503,144,504,142,509,142,514,143,514,146,513,148,512,150,515,152,515,155,515,158,515,160,514,163,513,165,512,167,511,171,510,169,507,170,504,168,502,167,502,163,502,163" href="del_nj_human.html" title="New Jersey" alt="New Jersey">
+<area shape="poly" coords="396,202,394,204,393,206,391,205,389,206,388,208,386,207,384,207,383,208,381,208,379,209,378,207,379,205,379,203,380,200,381,199,382,197,383,195,382,192,381,191,382,188,382,185,381,180,381,176,381,172,380,168,380,165,380,163,379,159,379,155,382,156,385,155,389,154,392,154,396,153,401,153,406,152,406,155,407,158,407,162,408,166,408,171,409,175,409,179,409,181,410,185,410,187,410,189,410,191,408,192,407,193,404,193,404,195,403,197,402,199,400,202,400,204,397,204,396,203,396,202" href="del_in_human.html" title="Indiana" alt="Indiana">
+<area shape="poly" coords="58,174,57,172,55,169,52,166,52,164,52,161,54,155,59,136,61,126,67,127,79,130,90,133,100,135,109,137,116,138,118,139,116,152,114,163,113,166,112,171,110,182,109,189,107,196,106,205,105,207,104,216,102,218,101,216,99,215,97,216,96,218,96,221,96,223,96,226,96,228,95,230,86,218,84,214,74,198,68,190,64,183,58,174,58,174" href="del_nv_human.html" title="Nevada" alt="Nevada">
+<area shape="poly" coords="109110,182,109,189,107,196,106,205,105,207,104,216,102,218,101,216,99,215,97,216,96,218,96,221,96,223,96,226,96,228,95,230,86,218,84,214,74,198,68,190,64,189,110,184,112,171,113,166,114,163,116,152,118,139,129,140,137,142,143,143,147,144,147,149,146,153,145,157,155,158,165,160,164,164,164,170,163,178,162,181,160,193,160,196,159,202,159,205,158,214,148,212,143,212,140,211,134,210,125,209,121,208,118,207,106,205,107,196,109,189,109,189" href="del_ut_human.html" title="Utah" alt="Utah">
+<area shape="poly" coords="32,171,29,171,26,171,25,169,23,169,23,172,21,172,20,170,19,167,19,165,18,163,17,161,16,158,14,155,15,150,16,147,17,143,16,141,13,136,14,134,18,128,19,126,20,124,21,118,22,115,25,116,28,116,31,117,40,120,48,122,53,124,61,126,59,136,54,155,53,159,52,163,51,165,55,169,57,172,58,174,64,183,68,190,74,198,84,214,86,218,95,230,95,233,96,236,96,238,98,240,97,242,95,243,93,244,93,247,92,249,91,250,89,252,89,255,90,256,91,259,89,260,72,258,61,257,61,254,60,252,60,249,58,244,54,239,52,239,51,236,50,234,48,233,43,231,41,227,37,225,35,224,31,223,30,221,31,219,31,216,32,214,30,212,30,210,28,206,27,203,25,196,23,194,23,191,26,188,25,186,23,184,21,181,22,178,22,175,25,179,25,175,24,173,28,171,31,173,33,172,32,171" href="del_ca_human.html" title="California" alt="California">
+<area shape="poly" coords="36,230,38,231,39,231,40,231,40,231,38,232,36,231,36,231,36,230,36,230,36,230,36,230" href="del_ca_human.html" title="California" alt="California">
+<area shape="poly" coords="33,231,32,230,34,230,35,231,33,231,33,231,3fornia">
+<area shape="poly" coords="36,230,38,231,39,231,40,231,40,231,38,232,36,231,36,231,36,230,36,230,36,230,36,230" href="del_ca_human.html" tit3,231" href="del_ca_human.html" title="California" alt="California">
+<area shape="poly" coords="48,241,50,242,51,243,50,244,49,243,49,242,48,241,48,241,48,241" href="del_ca_human.html" title="California" alt="California">
+<area shape="poly" coords="48,250,48,250,47,249,46,247,47,247,47,247,48,250,48,250" href="del_ca_human.html" title="California" alt="California">
+<area shape="poly" coords="426,192,425,191,423,192,421,191,418,191,416,190,415,188,413,187,411,187,410,185,409,182,409,179,409,177,408,171,408,168,407,163,407,159,406,156,406,153,410,152,415,151,419,151,422,152,426,152,423,154,427,153,431,153,434,152,436,152,439,149,443,146,447,143,448,150,449,154,450,157,450,161,449,163,450,165,449,167,449,170,449,172,449,174,447,176,446,178,444,179,442,181,441,182,441,184,440,186,439,185,437,186,437,189,437,191,436,193,433,193,431,192,430,190,428,191,426,192" href="del_oh_human.html" title="Ohio" alt="Ohio">
+<area shape="poly" coords="379,213,376,214,374,216,375,218,373,219,371,218,368,218,367,220,365,220,364,218,364,215,363,213,362,211,360,209,358,208,356,207,354,205,354,203,355,200,355,198,356,196,354,195,352,195,350,193,350,191,348,189,346,188,344,186,343,185,342,183,341,180,341,178,342,176,342,174,344,172,345,170,346,168,346,166,344,164,345,162,347,161,349,160,352,159,352,157,353,154,353,152,351,151,350,149,348,148,355,147,360,146,365,146,367,146,371,146352,195,350,193,350,191,348,189,346,188,344,186,343,185,342,183,341,180,341,178,342,176,342,174,344,172,345,170,346,168,346,166,344,164,345,162,347,16,376,145,375,148,376,150,378,154,379,159,380,161,380,165,380,168,381,172,381,176,381,180,382,183,382,187,382,189,382,192,383,194,382,196,381,199,380,200,379,203,378,205,378,207,378,210,378,212,379,213" href="del_il_human.html" title="Illinois" alt="Illinois">
+<area shape="poly" coords="489,176,490,177,489,179,489,179,489,178,489,178,489,178,489,178,489,177,488,177,489,176,489,176,489,176" href="del_dc_human.html" title="District of Columbia" alt="District of Columbia">
+<area shape="poly" coords="503,179,502,176,501,172,501,170,499,164,500,162,503,162,501,165,502,167,504,169,505,172,508,175,510,179,507,180,504,180,503,179" href="del_de_human.html" title="Delaware" alt="Delaware">
+<area shape="poly" coords="468,187,465,188,463,186,463,189,462,191,462,193,461,195,460,197,459,199,459,202,458,204,455,205,453,207,451,207,449,207,447,209,445,209,443,208,442,206,440,205,438,204,437,202,436,199,434,198,434,195,436,193,437,191,437,189,437,186,439,185,440,186,441,184,441,182,442,181,443,179,446,179,447,177,448,175,448,173,449,171,449,168,450,165,450,163,450,161,450,163,451,167,452,170,452,173,458,172,462,171,464,178,465,176,466,175,468,174,470,172,472,172,474,171,475,170,477,170,479,170,480,172,481,174,478,175,476,173,474,175,474,177,473,180,471,181,470,182,469,184,468,187,468,187" href="del_wv_human.html" title="West Virginia" alt="West Virginia">
+<area sh,464,178,465,176,466,175,468,174,470,172,472,172,474,171,475,170,477,170,479,170,480,172,481,174,478,175,476,173,474,175,474,177,473,180,471,181,470,182,469,1ape="poly" coords="503,178,504,180,507,180,510,179,510,182,508,185,506,186,503,187,503,185,502,182,501,184,498,182,498,180,500,180,499,178,497,179,497,177,499,176,498,173,497,170,500,169,498,167,497,169,494,170,495,172,492,172,495,173,495,176,494,178,495,181,497,183,494,183,498,185,498,187,496,185,492,184,489,184,489,181,489,179,489,176,487,177,485,176,484,174,481,173,480,172,479,170,476,169,474,170,473,172,471,172,468,174,466,175,465,176,464,178,462,171,468,170,473,169,476,169,482,168,485,167,487,167,489,166,492,166,495,165,499,164,500,168,501,172,502,176,503,178,503,178" href="del_md_human.html" title="Maryland" alt="Maryland">
+<area shape="poly" coords="496,176,496,175,496,175,496,175,496,176,496,176,496,176,496,177,496,175,496,174,497,175,497,175,497,175,496,176,496,176" href="del_md_human.html" title="Maryland" alt="Maryland">
+<area shape="poly" coords="510,179,510,179,510,181,510,179,510,179" href="del_md_human.html" title="Maryland" alt="Maryland">
+<area shape="poly" coords="509,185,510,185,510,184,510,183,510,181,510,184,510,185,509,185,509,185" href="del_md_human.html" title="Maryland" alt="Maryland">
+<area shape="poly" coords="233,213,232,216,232,221,222,221,212,220,199,219,193,218,190,218,185,217,181,217,175,216,165,215,158,214,159,205,159,202,160,198,160,193,162,181,162,179,164,170,164,164,165,160,176,161,182,162,187,163,192,163,203,164,207,1and">
+<area shape="poly" coords="233,213,232,216,232,221,222,221,212,220,199,219,193,218,190,218,185,217,181,217,175,216,165,215,158,214,159,205,159,65,216,165,220,166,229,166,235,167,235,170,235,174,235,180,234,186,234,192,233,198,233,204,233,211,233,213" href="del_co_human.html" title="Colorado" alt="Colorado">
+<area shape="poly" coords="396,223,393,223,390,223,387,224,384,224,382,224,379,224,380,226,375,227,372,227,366,227,368,226,368,223,368,221,368,219,370,218,372,218,374,219,375,217,375,215,378,213,377,211,379,209,380,207,382,207,384,207,386,207,388,208,389,206,391,205,393,206,394,205,396,203,397,204,400,204,400,202,402,199,403,197,404,196,404,194,407,193,408,192,410,191,410,189,410,187,412,187,414,187,416,189,417,191,419,191,421,191,424,191,426,192,428,191,430,190,431,191,433,192,434,195,434,197,435,199,437,200,438,204,440,205,439,209,436,211,435,212,434,214,432,216,431,218,429,219,426,220,423,221,420,221,414,222,412,222,409,222,404,222,402,223,399,223,397,223,396,223" href="del_ky_human.html" title="Kentucky" alt="Kentucky">
+<area shape="poly" coords="364,228,364,227,364,227,364,227,364,227,365,227,365,227,365,227,365,227,365,228,364,228,364,228" href="del_ky_human.html" title="Kentucky" alt="Kentucky">
+<area shape="poly" coords="305,223,302,223,298,223,296,223,290,223,288,223,284,223,280,223,277,223,274,223,271,223,269,223,264,223,260,223,254,222,247,222,244,222,237,222,232,221,232,216,233,213,233,204,233,199,234,193,234,186,235,180,241,180,248,181,253,181,259,181,264,182,268,182,270,182,273,23,298,223,296,223,290,223,288,223,284,223,280,223,277,223,274,223,271,223,269,223,264,223,260,223,254,222,247,222,244,222,237,222,232,221,232,216,233182,276,182,282,182,287,182,291,182,293,182,296,182,298,182,302,182,304,183,306,183,307,185,306,187,305,189,307,190,308,193,310,193,310,198,310,203,310,209,310,214,310,218,310,222,306,223,305,223" href="del_ks_human.html" title="Kansas" alt="Kansas">
+<area shape="poly" coords="473,213,470,214,467,215,464,215,460,216,456,216,450,217,447,217,444,217,442,218,437,219,434,219,431,220,428,220,426,220,428,219,431,218,432,216,434,215,435,213,436,211,438,209,442,205,443,207,445,208,447,209,448,207,450,208,452,207,454,206,456,204,458,204,460,202,459,199,460,197,461,194,462,191,463,189,463,187,465,188,468,188,469,185,469,183,471,182,473,180,474,178,474,176,474,173,478,175,480,176,481,174,483,174,484,176,486,176,488,177,489,178,489,181,487,183,488,185,490,184,492,186,496,187,498,188,499,190,500,193,497,191,494,190,496,191,497,193,500,194,498,194,501,196,499,195,500,197,497,196,500,198,502,200,500,203,499,200,497,199,495,198,497,200,499,202,499,204,501,203,504,202,507,207,506,205,506,207,503,208,500,208,496,209,494,209,488,211,485,211,482,212,478,213,473,213,473,213" href="del_va_human.html" title="Virginia" alt="Virginia">
+<area shape="poly" coords="509,185,510,185,509,186,509,187,509,187,509,187,509,187,509,187,509,185,509,185" href="del_va_human.html" title="Virginia" alt="Virginia">
+<area shape="poly" coords="505,193,505,190,506,188,508,185,507,190,506,192,505,194ia">
+<area shape="poly" coords="509,185,510,185,509,186,509,187,509,187,509,187,509,187,509,187,509,185,509,185" href="del_va_human.html" title="Virg,505,198,504,196,504,194,505,193" href="del_va_human.html" title="Virginia" alt="Virginia">
+<area shape="poly" coords="368,221,368,223,368,225,366,226,365,228,364,230,364,232,363,234,360,235,357,235,357,233,358,231,358,229,353,228,351,229,347,229,344,229,341,229,337,229,333,229,330,229,324,230,321,230,318,230,316,230,310,230,310,228,310,223,310,219,310,214,310,209,310,204,310,199,310,195,309,193,307,192,306,190,305,188,306,186,307,184,305,184,303,182,302,180,300,178,299,176,302,174,307,174,309,174,313,174,316,174,318,174,320,174,325,174,329,174,332,173,336,173,338,173,340,175,341,176,341,178,341,181,342,184,344,186,346,188,348,189,349,191,350,193,351,195,353,194,356,196,355,198,355,200,354,203,354,205,356,207,358,208,359,209,361,210,363,212,364,214,364,216,365,219,366,221,368,221,368,221" href="del_mo_human.html" title="Missouri" alt="Missouri">
+<area shape="poly" coords="91,256,89,255,90,253,90,251,92,249,93,247,93,245,94,243,96,242,98,241,97,239,96,237,96,234,94,232,95,230,96,228,96,224,96,222,96,220,96,217,98,215,100,216,101,218,104,216,105,207,106,205,118,207,121,208,125,209,134,210,140,211,143,212,148,212,158,214,156,227,154,241,153,246,152,256,151,264,150,270,149,274,147,289,132,286,125,285,122,284,101,272,86,263,88,260,90,260,91,258,91,256" href="del_az_human.html" title="Arizona" alt="Arizona">
+<area shape="poly" coords="313,251,313,253,313,256,31,212,158,214,156,227,154,241,153,246,152,256,151,264,150,270,149,274,147,289,132,286,125,285,122,284,101,272,86,263,88,260,90,260,91,258,91,256" href=3,261,312,264,312,268,310,268,309,267,307,265,305,264,303,265,301,265,298,265,296,265,294,266,293,267,290,266,288,264,286,265,284,265,283,267,283,265,281,265,279,264,277,264,275,265,274,263,273,261,271,261,269,262,267,261,265,261,263,260,261,260,260,258,258,258,256,258,254,256,252,252,253,249,253,247,253,243,253,241,253,237,253,235,253,229,247,229,243,229,236,228,232,228,222,227,222,221,232,221,237,222,242,222,247,222,253,222,258,223,264,223,269,223,271,223,274,223,277,223,280,223,284,223,288,223,290,223,296,223,298,223,301,223,305,223,310,223,310,226,310,230,311,234,312,240,313,244,313,251,313,251" href="del_ok_human.html" title="Oklahoma" alt="Oklahoma">
+<area shape="poly" coords="425,242,422,242,422,239,424,239,424,236,426,235,428,234,431,233,433,231,435,230,435,228,438,226,440,225,442,224,444,224,445,222,447,221,447,218,450,217,455,216,458,216,464,215,467,215,470,214,473,214,477,213,481,212,485,211,488,211,492,210,496,209,500,208,503,208,505,207,507,208,509,212,508,211,505,211,506,212,504,212,502,214,500,215,500,212,497,211,499,212,499,214,500,216,503,215,505,215,508,215,507,218,508,216,511,215,511,218,509,222,504,223,503,221,503,223,497,223,502,224,504,225,504,228,501,229,499,228,501,230,504,230,506,228,506,231,500,234,495,238,494,240,493,244,492,246,486,247,479,243,475,239,472,237,469,238,465,238,462,239,460,239,459,237,457,237,453,236,449,236,446,236509,222,504,223,503,221,503,223,497,223,502,224,504,225,504,228,501,229,499,228,501,230,504,230,506,228,506,231,500,234,495,238,494,240,493,244,492,24,444,237,442,237,439,238,437,239,435,241,430,241,426,242,425,242" href="del_nc_human.html" title="North Carolina" alt="North Carolina">
+<area shape="poly" coords="506,207,506,207,507,207,507,208,506,208,506,207,506,207,506,207" href="del_nc_human.html" title="North Carolina" alt="North Carolina">
+<area shape="poly" coords="507,207,507,207,509,211,513,216,511,213,510,213,509,211,507,207,507,207" href="del_nc_human.html" title="North Carolina" alt="North Carolina">
+<area shape="poly" coords="514,217,513,216,514,218,515,223,512,224,513,224,515,223,514,219,514,217,514,217" href="del_nc_human.html" title="North Carolina" alt="North Carolina">
+<area shape="poly" coords="510,226,510,226,511,225,512,224,512,225,511,225,510,226,510,226,510,226" href="del_nc_human.html" title="North Carolina" alt="North Carolina">
+<area shape="poly" coords="506,234,506,234,506,234,506,232,506,231,507,231,508,230,506,232,506,234,506,234" href="del_nc_human.html" title="North Carolina" alt="North Carolina">
+<area shape="poly" coords="425,236,424,238,422,239,422,242,418,243,415,243,412,244,409,244,405,244,400,245,395,245,391,245,386,246,382,246,380,246,378,247,374,247,371,247,369,247,364,248,357,248,359,246,358,244,359,242,360,240,361,239,362,237,363,235,364,233,364,231,364,228,366,227,372,227,375,227,380,226,379,224,382,224,384,224,387,224,390,223,393,223,396,223,399,223,402,223,46,246,382,246,380,246,378,247,374,247,371,247,369,247,364,248,357,248,359,246,358,244,359,242,360,240,361,239,362,237,363,235,364,233,364,231,364,228,04,222,407,222,412,222,414,222,420,221,422,221,426,220,428,220,430,220,433,219,437,219,440,218,444,218,447,217,447,220,445,222,444,224,442,224,440,225,439,227,437,227,435,229,434,230,432,231,430,233,428,234,426,235,425,236" href="del_tn_human.html" title="Tennessee" alt="Tennessee">
+<area shape="poly" coords="182,292,179,291,178,287,175,286,175,284,178,284,183,284,195,285,206,286,209,286,213,287,216,287,217,280,218,274,218,269,218,266,219,263,219,256,220,251,220,248,220,245,220,239,221,233,221,227,230,228,236,228,242,229,247,229,253,229,253,235,253,237,253,241,253,243,253,247,253,249,252,252,252,255,255,257,256,258,259,258,261,258,262,260,264,261,266,261,268,262,270,261,272,261,273,263,275,265,277,264,279,264,281,265,283,265,283,267,284,265,286,264,287,266,290,266,292,267,294,267,295,265,298,265,300,264,302,265,304,264,306,264,307,266,309,267,311,268,313,269,315,269,317,269,317,273,317,276,318,281,318,285,318,287,318,290,319,291,320,293,320,295,321,297,322,299,323,301,324,302,323,304,323,307,322,308,322,310,322,313,322,315,320,317,319,319,321,321,318,321,315,322,311,324,313,323,310,323,311,320,309,321,306,319,307,321,308,323,309,325,307,327,304,330,301,332,299,333,296,334,299,334,293,337,296,335,293,335,294,333,292,334,290,333,291,335,289,335,289,332,289,335,290,336,288,339,286,337,286,339,284,341,282,341,281,343,284,342,283,344,281,345,278,345,280,347,279,352,277,352,275,350,277,353,278,355,277,358,278,361,279,364,279,367,280,369,279,371,276,370,273,368,271,368,268,368,266,366,263,366,262,364,258,363,258,361,256,357,255,356,255,353,254,351,254,349,252,347,250,345,249,342,247,340,245,338,244,336,243,333,242,330,241,327,240,325,238,323,235,321,234,319,233,318,229,317,227,317,223,316,221,317,219,317,217,320,216,322,215,324,212,327,210,326,208,324,206,324,202,322,200,319,198,318,196,316,195,313,195,310,194,307,193,304,191,303,190,301,188,300,186,298,184,295,182,292,182,292" href="del_tx_human.html" title="Texas" alt="Texas">
+<area shape="poly" coords="308,326,310,325,310,325,306,328,308,326,308,326" href="del_tx_human.html" title="Texas" alt="Texas">
+<area shape="poly" coords="291,338,286,342,286,341,287,341,289,339,290,339,291,338,291,338,291,338" href="del_tx_human.html" title="Texas" alt="Texas">
+<area shape="poly" coords="285,342,285,341,286,342,286,342,283,345,284,344,284,343,284,343,285,342,285,342" href="del_tx_human.html" title="Texas" alt="Texas">
+<area shape="poly" coords="280,352,279,353,279,352,280,350,281,348,281,347,281,348,282,347,283,345,283,345,283,345,281,349,280,352,280,352" href="del_tx_human.html" title="Texas" alt="Texas">
+<area shape="poly" coords="280,361,279,360,279,358,279,357,279,355,279,353,279,353,279,355,279,357,279,359,280,361,281,364,281,366,282,368,281,368,281,366,281,365,28145,283,345,281,349,280,352,280,352" href="del,364,280,363,280,362,280,361,280,361" href="del_tx_human.html" title="Texas" alt="Texas">
+<area shape="poly" coords="149,274,150,270,151,264,152,256,153,246,154,241,156,227,158,214,165,215,174,216,180,217,185,217,190,218,193,218,198,219,212,220,221,220,222,227,221,233,221,237,220,245,220,248,220,251,219,256,219,263,218,266,218,269,218,274,217,280,217,286,213,287,209,286,206,286,195,285,183,284,178,284,176,283,175,285,168,285,158,284,157,290,147,289,149,274,149,274" href="del_nm_human.html" title="New Mexico" alt="New Mexico">
+<area shape="poly" coords="418,283,418,286,419,288,419,290,419,293,420,294,415,297,409,297,405,298,401,298,396,299,391,299,391,301,393,303,394,305,393,307,390,309,387,310,390,309,388,307,388,304,387,303,386,308,384,308,382,303,382,300,381,294,381,291,380,288,380,284,380,279,381,274,381,269,381,266,381,263,381,259,381,255,381,252,381,248,386,246,390,245,395,245,400,245,405,244,408,244,409,249,410,253,411,256,412,258,413,261,413,264,415,268,416,272,417,274,418,276,418,278,419,280,418,282,418,283" href="del_al_human.html" title="Alabama" alt="Alabama">
+<area shape="poly" coords="381,294,382,298,382,303,383,308,381,308,377,308,373,310,371,311,369,311,368,309,367,307,366,305,366,303,367,301,361,301,358,301,354,302,352,302,345,302,346,300,347,298,346,295,348,293,349,292,350,289,351,287,352,285,352,283,350,282,351,280,350,279,350,276,349,27,382,298,382,303,383,308,381,308,377,308,373,310,371,311,369,311,368,309,367,307,366,305,366,303,367,301,361,301,358,301,354,302,352,302,345,302,346,34,350,272,350,270,349,268,348,266,350,265,350,263,352,261,352,259,353,257,355,256,355,254,355,251,357,250,364,248,368,247,371,247,373,247,378,247,380,246,381,252,381,255,381,259,381,263,381,266,381,269,381,273,380,279,380,283,380,288,381,291,381,294,381,294" href="del_ms_human.html" title="Mississippi" alt="Mississippi">
+<area shape="poly" coords="418,286,418,283,418,281,419,279,418,277,417,275,416,273,415,268,414,264,413,261,412,258,411,256,410,253,410,250,408,246,409,244,412,244,415,243,417,243,422,242,424,242,430,241,435,241,434,242,433,244,435,246,437,247,439,248,440,250,442,253,444,254,446,255,447,257,449,258,451,260,452,261,453,263,455,264,456,266,457,268,458,270,460,271,462,273,462,275,465,276,462,279,463,282,462,284,461,286,461,289,460,291,460,294,458,294,456,294,455,296,455,298,454,300,453,298,451,298,447,298,442,298,440,298,437,299,432,299,429,299,423,300,421,297,420,295,419,293,419,290,419,288,418,286,418,286" href="del_ga_human.html" title="Georgia" alt="Georgia">
+<area shape="poly" coords="460,292,461,291,461,291,461,294,461,294,461,293,460,292,460,292,460,292" href="del_ga_human.html" title="Georgia" alt="Georgia">
+<area shape="poly" coords="453,262,451,261,450,259,448,258,446,256,444,255,442,254,441,252,440,250,438,247,436,247,434,246,433,244,434,242,436,240,438,239,440,238,442,237,446,236,449,236,453,236,456,235,458,236,460,239,462,239,465Georgia" alt="Georgia">
+<area shape="poly" coords="453,262,451,261,450,259,448,258,446,256,444,255,442,254,441,252,440,250,438,247,436,247,434,246,43,238,469,238,472,237,475,239,479,243,485,247,483,250,482,252,481,254,480,256,480,258,479,260,477,261,476,264,473,263,474,265,473,267,471,268,469,267,469,269,466,269,468,270,467,272,465,270,465,273,465,276,462,276,461,274,460,272,459,270,457,268,457,266,456,264,453,263,453,262" href="del_sc_human.html" title="South Carolina" alt="South Carolina">
+<area shape="poly" coords="466,273,466,273,467,273,465,275,466,273,466,273" href="del_sc_human.html" title="South Carolina" alt="South Carolina">
+<area shape="poly" coords="313,261,313,256,313,253,313,251,313,244,312,241,311,235,310,230,316,230,318,230,321,230,324,230,329,229,333,229,337,229,341,229,344,229,347,229,351,229,353,228,357,228,359,230,358,232,357,233,360,235,363,234,363,236,361,238,360,240,360,242,359,244,360,246,358,248,358,249,356,250,355,252,355,254,354,256,353,258,351,259,352,261,350,262,350,264,350,266,349,268,349,270,350,272,349,274,346,275,339,276,332,276,329,276,326,276,324,276,320,276,317,276,317,273,317,269,315,269,313,269,312,264,313,261,313,261" href="del_ar_human.html" title="Arkansas" alt="Arkansas">
+<area shape="poly" coords="322,313,322,311,322,309,323,307,324,305,323,303,324,301,322,299,322,297,320,296,321,294,320,292,318,290,318,287,318,285,318,281,317,278,320,276,323,276,326,276,329,276,332,276,339,276,346,275,348,275,350,276,350,278,350,281,351,283,353,284,351,285,351,288,350,290,34,311,322,309,323,307,324,305,323,303,324,301,322,299,322,297,320,296,321,294,320,292,318,290,318,287,318,285,318,281,317,278,320,276,323,276,326,276,38,291,347,294,346,296,347,298,345,300,351,302,354,302,358,301,360,301,366,301,367,303,366,305,367,307,368,309,369,311,365,311,364,310,361,311,360,312,362,314,365,314,367,313,367,315,369,316,371,313,372,316,370,317,369,319,370,321,372,322,375,322,376,324,375,326,373,328,374,325,372,324,370,323,368,323,367,321,365,321,363,320,365,322,364,325,363,326,363,324,361,324,358,324,358,326,355,326,354,324,351,323,349,321,346,320,343,319,340,319,339,322,335,321,328,319,322,319,320,319,321,316,322,314,322,313" href="del_la_human.html" title="Louisiana" alt="Louisiana">
+<area shape="poly" coords="342,321,343,320,345,321,345,321,345,322,345,322,344,322,342,321,342,321" href="del_la_human.html" title="Louisiana" alt="Louisiana">
+<area shape="poly" coords="350,324,350,324,351,323,352,324,352,324,352,325,352,325,351,324,351,325,352,325,352,325,352,325,352,325,351,325,350,324,350,324" href="del_la_human.html" title="Louisiana" alt="Louisiana">
+<area shape="poly" coords="355,325,354,325,354,325,354,325,354,325,354,325,354,326,354,326,354,325,353,326,353,325,353,325,353,326,352,325,352,324,354,324,354,324,355,325,355,325" href="del_la_human.html" title="Louisiana" alt="Louisiana">
+<area shape="poly" coords="473,318,474,323,478,330,479,332,480,334,482,337,484,339,486,343,486,349,486,354,486,357,485,359,486,361,485,364,481,365,479,365,476,366,476,364,477,365,475,363,47325" href="del_la_human.html" title="Louisiana" alt="Louisiana">
+<area shape="poly" coords="473,318,474,323,478,330,479,332,480,334,482,337,484,339,486,343,44,360,470,357,468,357,466,355,466,353,465,351,464,348,463,350,462,348,462,346,462,343,460,345,458,345,456,342,455,340,453,338,455,339,454,336,456,334,455,332,453,332,454,333,453,336,451,334,451,330,452,326,451,323,451,320,450,319,449,317,446,317,445,316,443,314,441,313,441,311,438,309,434,307,432,307,429,307,430,310,424,312,420,313,418,313,415,309,417,310,414,308,415,306,413,306,414,308,410,307,406,306,409,306,406,305,403,306,401,306,397,307,399,305,397,304,396,307,394,306,394,303,392,302,391,300,396,299,400,298,405,298,407,298,415,297,421,296,422,298,428,299,432,299,435,299,440,298,442,298,447,298,450,298,453,298,454,300,455,298,455,296,455,294,457,294,459,295,461,297,461,299,464,305,465,307,468,311,473,318,473,318" href="del_fl_human.html" title="Florida" alt="Florida">
+<area shape="poly" coords="401,306,401,306,403,306,404,306,404,306,404,306,402,306,401,306,401,306,396,308,396,308,395,308,395,307,396,307,397,307,398,307,399,307,401,306,401,306" href="del_fl_human.html" title="Florida" alt="Florida">
+<area shape="poly" coords="473,318,473,318,472,317,471,316,471,315,471,315,471,316,473,318,473,318" href="del_fl_human.html" title="Florida" alt="Florida">
+<area shape="poly" coords="473,318,475,321,476,322,476,323,475,323,476,321,475,320,474,320,474,321,473,321,473,320,473,319,473,319,475,320,473,318,473,318" href="del_fl_human.html" title="Florida" alt="="del_fl_human.html" title="Florida" alt="Florida">
+<area shape="poly" coords="473,318,475,321,476,322,476,323,475,323,476,321,475,320,474,320,474,32Florida">
+<area shape="poly" coords="474,321,475,321,475,321,475,323,475,325,476,326,474,324,474,321,474,321" href="del_fl_human.html" title="Florida" alt="Florida">
+<area shape="poly" coords="462,349,462,351,462,351,461,349,461,348,461,348,462,349,462,349" href="del_fl_human.html" title="Florida" alt="Florida">
+<area shape="poly" coords="486,362,485,365,483,368,485,364,486,363,485,363,486,362,486,362" href="del_fl_human.html" title="Florida" alt="Florida">
+<area shape="poly" coords="363,71,362,73,359,74,357,76,363,71,363,71" href="del_mi_human.html" title="Michigan" alt="Michigan">
+<area shape="poly" coords="364,82,366,80,370,79,366,83,365,86,363,84,364,82,364,82" href="del_mi_human.html" title="Michigan" alt="Michigan">
+<area shape="poly" coords="390,97,386,98,384,101,383,103,383,100,380,102,378,102,377,104,375,110,374,107,372,107,372,105,372,103,370,102,369,100,367,100,365,99,363,99,361,98,352,96,350,95,348,94,351,91,352,89,356,89,358,87,360,85,363,83,364,86,364,88,367,87,370,87,372,88,375,92,377,92,380,92,382,92,383,90,386,88,389,88,392,88,394,86,397,86,396,89,399,90,401,90,403,89,405,92,406,93,407,95,403,95,401,95,400,98,397,96,394,95,391,97,390,97" href="del_mi_human.html" title="Michigan" alt="Michigan">
+<area shape="poly" coords="408,95,410,93,411,95,409,96,408,95" href="del_mi_human.html" title="Michigan" alt="Michigan">
+<area shape="poly" c,95,403,95,401,95,400,98,397,96,394,95,391,97,390,97" href="del_mi_human.html" title="Michigan" alt="Michigan">
+<area shape="poly" coords="408,95,410oords="386,154,388,152,389,149,390,147,390,145,391,140,390,136,387,131,386,129,387,126,386,123,387,122,388,119,388,117,388,115,389,112,392,110,393,107,393,111,393,113,395,112,395,110,395,107,398,105,397,102,398,100,400,99,403,100,405,100,408,102,410,102,412,103,414,105,413,107,415,109,416,111,415,114,415,116,414,119,413,121,411,122,411,125,413,126,415,124,416,123,420,119,422,120,423,122,426,130,427,133,427,136,425,138,423,140,421,143,421,145,419,151,416,151,410,152,406,153,402,152,397,153,393,153,389,154,386,154,386,154" href="del_mi_human.html" title="Michigan" alt="Michigan">
+</map> 
+        <div id="scale">
+            <img src="common/images/scalebar.gif" alt="Map Scalebar"
+                width="119" height="8" align="absmiddle">
+                1000000 m 
+        </div> 
+        <div id="date">
+            <span>Cumulative 2014 Data as of 3 am, Dec 17, 2014</span><span class="boldred">*</span>
+        </div>
+        
+        <div id="disclaimer">
+            These data are provisional and may be revised or adjusted in the future.
+        </div> 
+        <!--</td></tr></table>--> 
+    </div> 
+    <div id="dynamicContent2"> 
+        <div id="graph">
+            <div id="epicurve"> 
+                 
+            </div> 
+        </div> 
+        <div id="table"> 
+            <div class="tableTitle"> 
+                 
+            </iv> 
+    <div id="dynamicContent2"> 
+        <div id="graph">
+            <div id="epicurve"> 
+                 
+            </div> 
+        </ddiv> 
+                <table cellspacing="0">
+        <tr class="oddTableRow"><td>Florida</td><td>6</td></tr>
+        <tr class="evenTableRow"><td>Puerto Rico</td><td>453</td></tr>
+        <tr class="oddTableRow"><td>US Virgin Islands</td><td>7</td></tr>
+                </table>
+                <div id="cumulativeTotal">Cumulative Total Entire Country: <span class="total">466</span></div>
+ 
+        </div> 
+        <div id="footer"> 
+            <div id="footnote">
+                
+                
+            </div>
+            <p id="cdcBlurb"><b>For further information or questions regarding the data on this page,</b> please contact the 
+            Centers for Disease Control and Prevention:&nbsp;&nbsp;&nbsp;
+            <b>Phone:</b> (970) 221-6400&nbsp;&nbsp;&nbsp;<b>E-mail:</b> <a href="&#109;a&#105;l&#116;o&#58;dvbid&#64cdc&#46;gov">dvbid&#64cdc&#46;gov</a>
+            <br>
+            <b>For issues regarding this web site</b>, please use the contact link below.
+            </p>
+            <div id="footerText">
+                <ul class="Piped">
+                    <li class="First"><a href="http://www.doi.gov">U.S. Department of the Interior</a></li>
+                    <li><a href="http://www.usgs.gov/">U.S.  Geological Survey</a></li>
+                </ul>
+                <br>
+                http://diseasemaps.usgsss="First"><a href="http://www.doi.gov">U.S. Department of the Interior</a></li>
+                    <li><a href="http://www.usgs.gov/">U.S.  Geological Su.gov/del_us_human.html<br>
+                <span class="noprint"><b>Contact: </b>&nbsp; <a href="&#109;a&#105;l&#116;o&#58;wnvmaps&#64usgs&#46;gov">WNVM Web Team</a></span><br class="noprint"> 
+                
+                <b>This page last modified:</b>&nbsp;&nbsp;Wednesday December 17, 2014 EST<br>
+                <ul class="Piped">
+                    <li class="First"><a href="http://www.usgs.gov/privacy.html">USGS Privacy Statement </a></li>
+                    <li><a href="http://www.usgs.gov/accessibility.html">Accessibility </a></li>
+                    <li><a href="http://www.usgs.gov/disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div> 
+    </div> 
+</div> 
+<div id="sidenav"> 
+    <div id="subnav"> 
+        <a href="del_background.html" id="backgroundLink" class="mouseout">Background</a> 
+        <a href="del_historical.html" id="historicalLink" class="mouseout">Historical Data</a> 
+        <a href="/del_us_human.html" id="currentLink" class="mouseout">Current Year</a> 
+        <a href="faqs.html?del" id="faqsLink" class="mouseout">FAQs</a>
+        <a href="links.html?del" id="linksLink" class="mouseout">Links</a> 
+        
+    </div> 
+    <div id="new">
+        <span class="dyknow"><a href="/mapviewer/">NEW Dynamic Map Viewer</a></span><br>
+        <span class="message1">You can also navigate to Adjacent States by clicking on them.</span>
+    </div>
+    <div id="legend"><img src="common/images/legend_pos-nodata_no-dble-ast.gif" alt="Map Legend"></div> 
+    <div id="legendNote"><strong>*</strong> Data demonstrates local jurisdiction of residence and not necessarily the locale where the infection was acquired.
+        <div class="bottom"><a href="http://www.cdc.gov" id="cdcLogo"><img src="common/images/logo_HHS_CDC_web2.gif" alt="CDC Logo" width="82" height="134" border="0"></a></div> 
+
+</div>
+</div>
+ 
+<div id="historical"></div>
+<script type='text/javascript' src="common/ga1.js"></script>
+<script type='text/javascript' src="common/ga2.js"></script>
+</body>
+</html>
+alt="CDC Logo" width="82" height="134" border="0"></a></div> 
+
+</div>
+</div>
+ 
+<div id="historical"></div>
+<script type='text/javascript' src="common/ga1.js"></script>
+<script type='text/javascript'

@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>	<html class="ie ie6 no-js" 	lang="en-US"> <![endif]-->
+<!--[if IE 7 ]>    	<html class="ie ie7 no-js" 	lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>    	<html class="ie ie8 no-js" 	lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>    	<html class="ie ie9 no-js" 	lang="en-US"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" 	 lang="en-US"><!--<![endif]-->
+<!-- the "no-js" class is for Modernizr. -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+	<!-- [hts]2015-01-30 11:54:01[hts] -->
+			<meta name="alexaVerifyID" content="7UtcB8w5jNCsC6qOYENkpDWimTs"/>
+    <meta property="og:title" content="  Ebola victims without symptoms can still be contagious "/>
+    		<meta property="og:type" content="article"/>
+ 		
+	<meta property="og:url" content="http://www.wnd.com/2014/10/ebola-victims-without-symptoms-could-still-be-contagious/"/>
+        	<meta property="og:image" content="http://www.wnd.com/files/2014/10/tom_frieden-150x150.jpg"/>
+    	<meta property="og:site_name" content="WND"/>
+
+	<meta property="fb:app_id" content="152299868169938"/>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="description" content="A Free Press For A Free People Since 1997">
+	<meta name="author" content="">
+
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="http://www.wnd.com/wp-content/themes/worldnet-theme/_/images/favicon.ico">
+	<link rel="apple-touch-icon" href="http://www.wnd.com/wp-content/themes/worldnet-theme/_/images/apple-touch-icon.png">
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+	    
+    	<title>  Ebola victims without symptoms can still be contagious</title>
+    
+	<link rel="pingback" href="http://www.wnd.com/xmlrpc.php" />
+    <script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type='text/javascript'>
+// For checking cookies outside of
+function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    }
+    else
+    {
+        begin += 2;
+        var end = document.cookie.indexOf(";", begin);
+        if (end == -1) {
+        end = dc.length;
+        }
+    }
+    return unescape(dc.substring(begin + prefix.length, end));
+} 
+
+googletag.cmd.push(function() {
+    googletag.defineSlot('/1016664/skyline728TopCenter', [728, 90], 'div-gpt-ad-skyline728TopCenter').addService(googletag.pubads());
+
+        
+    
+    
+    googletag.pubads().setTargeting("category",['health','politics','us','world',]);
+googletag.pubads().setTargeting("pageauthor",['jcorsi']);	// Server name is www.wnd.com 
+	var loc = document.location.href;	
+	if (loc.match(/wndblogs\.com/i)) { 
+    		googletag.defineSlot('/1016664/fullWidthExpandable', [976, 420], 'div-gpt-ad-fullWidthExpandable').addService(googletag.pubads());
+	}	
+
+	
+	 
+          
+    	googletag.defineSlot('/1016664/300bottom', [300, 250], 'div-gpt-ad-300bottom').addService(googletag.pubads());
+        googletag.defineSlot('/1016664/300top', [300, 250], 'div-gpt-ad-300top').addService(googletag.pubads());
+        googletag.defineSlot('/1016664/story160LeftSide', [160, 600], 'div-gpt-ad-story160LeftSide').addService(googletag.pubads());
+        //googletag.defineSlot('/1016664/sideBar300Bottom', [300, 250], 'div-gpt-ad-sideBar300Bottom').addService(googletag.pubads());
+        googletag.defineSlot('/1016664/wnd_r-sidebar-bottom300x600-p', [300, 600], 'div-gpt-ad-r-sidebar-bottom300x600-p').addService(googletag.pubads());        
+        
+        googletag.defineSlot('/1016664/allpages300footer', [300, 250], 'div-gpt-ad-allpages300footer').addService(googletag.pubads());
+        googletag.defineSlot('/1016664/Footer300Center', [300, 250], 'div-gpt-ad-Footer300Center').addService(googletag.pubads());
+        googletag.defineSlot('/1016664/Footer300Left', [300, 250], 'div-gpt-ad-Footer300Left').addService(googletag.pubads());
+           
+        googletag.pubads().setTargeting("pageid", "1305535");		   
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            googletag.defineSlot('/1016664/thinFullWidth', [976, 27], 'div-gpt-ad-thinFullWidth').addService(googletag.pubads());
+// Disabling this so that ads reliably load in safari 6 googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+	
+    
+    <link rel="alternate" type="application/rss+xml" title="WND &raquo; Feed" href="http://www.wnd.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="WND &raquo; Comments Feed" href="http://www.wnd.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="WND &raquo; Ebola victims without symptoms can still be contagious Comments Feed" href="http://www.wnd.com/2014/10/ebola-victims-without-symptoms-could-still-be-contagious/feed/" />
+<link rel='stylesheet' id='wnd-widget-style-css'  href='http://www.wnd.com/wp-content/plugins/wnd-widgets/widgets/base/assets/css/style.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wnd-breaking-style-css'  href='http://www.wnd.com/wp-content/plugins/wnd-widgets/widgets/breaking/assets/css/style.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wnd-poll-style-css'  href='http://www.wnd.com/wp-content/plugins/wnd-widgets/widgets/poll/assets/css/style.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wnd-rated-style-css'  href='http://www.wnd.com/wp-content/plugins/wnd-widgets/widgets/rated/assets/css/style.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wnd-scoop-style-css'  href='http://www.wnd.com/wp-content/plugins/wnd-widgets/widgets/scoop/assets/css/style.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='http://www.wnd.com/wp-content/themes/worldnet-theme/style.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-css-css'  href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css?ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-polls-css'  href='http://www.wnd.com/wp-content/plugins/wp-polls/polls-css.css?ver=2.63-r8' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.wnd.com/wp-includes/js/swfobject.js?ver=2.2-20120417'></script>
+<script type='text/javascript' src='http://www.wnd.com/wp-content/themes/worldnet-theme/_/js/mobile.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://www.wnd.com/wp-content/plugins/elasticsearch/better-suggest.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://www.wnd.com/wp-includes/js/jquery/ui/jquery.ui.core.min.js?ver=1.10.4'></script>
+<script type='text/javascript' src='http://www.wnd.com/wp-content/themes/worldnet-theme/_/js/jquery-cycle/jquery.cycle.min.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://www.wnd.com/wp-content/themes/worldnet-theme/_/js/jquery.jcarousel.min.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://www.wnd.com/wp-content/themes/worldnet-theme/_/js/functions.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://cdn.jquerytools.org/1.2.6/form/jquery.tools.min.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://www.wnd.com/wp-content/themes/worldnet-theme/_/js/fancybox/jquery.fancybox.pack.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://www.wnd.com/wp-content/themes/worldnet-theme/_/js/jquery.dateformat.js?ver=3.9.2'></script>
+<script type='text/javascript' src='http://www.wnd.com/wp-content/themes/worldnet-theme/_/js/modernizr-2.0.6.min.js?ver=3.9.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.wnd.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.wnd.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Who&#039;s really creating Ebola hysteria?' href='http://www.wnd.com/2014/10/whos-really-creating-ebola-hysteria/' />
+<link rel='next' title='Top Republicans shredded as &#039;cowards&#039; on marriage' href='http://www.wnd.com/2014/10/top-republicans-shredded-as-cowards-on-marriage/' />
+<meta name="generator" content="WordPress 3.9.2" />
+<link rel='canonical' href='http://www.wnd.com/2014/10/ebola-victims-without-symptoms-could-still-be-contagious/' />
+<link rel='shortlink' href='http://www.wnd.com/?p=1305535' />
+<link rel="stylesheet" href="http://www.wnd.com/wp-content/plugins/stream-video-player/responsive.css?ver=" type="text/css" media="all" /><link rel="stylesheet" href="http://www.wnd.com/wp-content/plugins/elasticsearch/template/autocomplete.css" type="text/css" media="screen" />
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$("#s").suggest("?method=autocomplete",{
+		});
+		$("#qrybox").suggest("?method=autocomplete",{});
+
+    });
+
+    </script>
+
+    <style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 8px;
+	line-height: 10px;
+	height: 10px;
+	background-image: url('http://www.wnd.com/wp-content/plugins/wp-polls/images/default_gradient/pollbg.gif');
+	box-shadow: #c8c8c8 0 0 0 1px inset;
+	-webkit-box-shadow: #c8c8c8 0 0 0 1px inset;
+	-moz-box-shadow: #c8c8c8 0 0 0 1px inset;
+	-ms-box-shadow: #c8c8c8 0 0 0 1px inset;
+	-o-box-shadow: #c8c8c8 0 0 0 1px inset;
+}
+</style>
+    <!-- Begin web tools header -->
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3977950-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-d9XxhfbZ3mYSM"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="http://pixel.quantserve.com/pixel/p-d9XxhfbZ3mYSM.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js"></script><script type="text/javascript">_atrk_opts = { atrk_acct: "V+Hff1asZt008h", domain:"worldnetdaily.com"}; atrk ();</script><noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=V+Hff1asZt008h" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+<script src="http://widget.perfectmarket.com/wnd/load.js"></script>
+    <!-- end web tools header -->
+    
+    <!-- Taboola -->
+    <script type="text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({article:'auto'});
+        !function (e, f, u) {
+        e.async = 1;
+        e.src = u;
+        f.parentNode.insertBefore(e, f);
+        }(document.createElement('script'), document.getElementsByTagName('script')[0], 'http://cdn.taboola.com/libtrc/wnd/loader.js');
+    </script>
+    <!--
+	<script data-cfasync="false" type="text/javascript">(function(s,o,l,v,e,d){if(s[o]==null&&s[l+e]){s[o]="loading";s[l+e](d,l=function(){s[o]="complete";s[v+e](d,l,!1)},!1)}})(document,"readyState","add","remove","EventListener","DOMContentLoaded");(function(){var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="//cdn.engine.4dsply.com/Scripts/infinity.js.aspx?guid=e00b9f9b-7aae-4ddc-bad8-1ea3edac6ad0";s.id="infinity";s.setAttribute("data-guid","e00b9f9b-7aae-4ddc-bad8-1ea3edac6ad0");s.setAttribute("data-version","async");var e=document.getElementsByTagName('script')[0];e.parentNode.insertBefore(s,e)})();</script>
+    -->
+</head>
+
+<body id="desktop" class="single single-post postid-1305535 single-format-video">
+<div id="install-site-shortcut" class="closed mobile-only">
+    <div class="offclick"></div>
+    <div class="hide">&times;</div>
+    <div class="install-header">
+        Get WND's mobile app for free.
+    </div>
+    <div class="install-body">
+        <div class="install-body-text">
+            <div class="text-iphone">
+                <div><span>Simply tap the</span> <div class="ios-more-options-icon"></div> <span>button below, and choose</span></div>
+                <div>"Add to Home Screen"</div>
+                <div>The mobile shortcut will then be added as an icon on your home screen.</div>
+                <div class="ios-icon-callout"></div>
+            </div>
+            <div class="text-android">
+                <div><span>Press your menu button and find the option to bookmark this page (a star icon for some browsers).  Then choose the option to add this bookmark to your home screen.</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div id="slideout-menu" class="mobile-only">
+    <div class="menu-content">
+        <div class="menu-header">
+        	<div class="close-menu">
+        		<div class="icon"></div>
+        	</div>
+        	<div class="menu-account">
+                <div class="button" id="slide-m_login" style="display:none"><a href="http://www.wnd.com/wp-login.php?redirect_to=http%3A%2F%2Fwww.wnd.com/">Login</a></div>
+                <div class="button" id="slide-m_register" style="display:none"><a href="http://www.wnd.com/wp-signup.php?redirect_to=http%3A%2F%2Fwww.wnd.com/">Create Account</a></div>
+                        <div class="button" id="slide-m_logout" style="display:none"><a href="http://www.wnd.com/wp-login.php?action=logout&_noconfirm=1&redirect_to=http%3A%2F%2Fwww.wnd.com/">Logout</a></div>
+                        <div class="button" id="slide-m_profile" style="display:none"><a href="http://www.wnd.com/wp-admin/user/profile.php">Profile</a></div>
+        	</div>
+        	<form id="search" action="http://www.wnd.com/" method="get">
+        		<input type="text" id="s" name="s" class="search" placeholder="Search" />
+        	</form>
+        	
+        </div>
+        
+    	<div class="row nav-start">
+        	<div class="column">
+        		<h3><a href="/">FRONTPAGE</a></h3>
+        		<ul>
+        			<li><a href="/category/front-page/politics/">politics</a></li>	
+        			<li><a href="/category/front-page/us/">u.s.</a></li>	
+        			<li><a href="/category/front-page/world/">world</a></li>	
+        			<li><a href="/category/front-page/faith/">faith</a></li>	
+        			<li><a href="/category/front-page/health/">health</a></li>	
+        			<li><a href="/category/front-page/education/">education</a></li>	
+        		</ul>
+        	</div>
+        	<div class="column">
+        		<h3><a href="/category/opinion/">OPINION</a></h3>
+        		<ul>
+        			<li><a href="/category/opinion/commentary/">commentary</a></li>	
+        			<li><a href="/category/opinion/emails-to-the-editor/">email to the editor</a></li>	
+        			<li><a href="/category/opinion/cartoons/">cartoons</a></li>	
+        			<li><a href="/category/opinion/forums/">forums</a></li>	
+        			<li><a href="/commentators/">commentator lineup</a></li>	
+        		</ul>    	
+        	</div>
+    	</div>
+    	<div class="row">
+    	    <h3><a href="/category/wnd-tv/">WND TV</a></h3>
+    	    <ul>
+                                    <li><a href="/author/wndtvnews/">WND TV NEWS<span class="with-author"></span></a></li>	
+                                    <li><a href="/author/djdolce/">News! News!<span class="with-author"> with DJ Dolce</span></a></li>	
+                                    <li><a href="/author/mmitchell/">For The Record<span class="with-author"> with Molotov Mitchell</span></a></li>	
+                                    <li><a href="/author/gnoory/">Beyond Belief<span class="with-author"> with George Noory</span></a></li>	
+                                    <li><a href="/author/sroth/">IT&#039;S SUPERNATURAL!<span class="with-author"> with Sid Roth</span></a></li>	
+                                    <li><a href="/author/medwards/">SURVIVAL TIPS<span class="with-author"> with Manny Edwards</span></a></li>	
+                                    <li><a href="/author/estakelbeck/">The Watchman<span class="with-author"> with Erick Stakelbeck</span></a></li>	
+                                    <li><a href="/author/bdean/">Sons of Liberty<span class="with-author"> with Bradlee Dean</span></a></li>	
+                                    <li><a href="/author/glazovgang/">The Glazov Gang<span class="with-author"> with Jamie Glazov</span></a></li>	
+                                    <li><a href="/author/thewatchers/">The Watchers<span class="with-author"> with </span></a></li>	
+                                    <li><a href="/author/focusonisrael/">Focus on Israel with Laurie Cardoza-Moore<span class="with-author"> with </span></a></li>	
+                                    <li><a href="/author/zerotosuperhero/">Zero To Superhero<span class="with-author"> with </span></a></li>	
+                                    <li><a href="/author/david/">The Heavens Declare<span class="with-author"> with David Rives</span></a></li>	
+                                    <li><a href="/author/rrives/">Just The Facts<span class="with-author"> with Richard Rives</span></a></li>	
+                 	
+    		</ul>
+    	</div>
+        <div class="row">
+        	<div class="column">
+        		<h3><a href="/category/money/">MONEY</a></h3>
+        		<ul>
+        			<!--
+        			<li><a href="/markets/">market overview</a></li>	
+        			<li><a href="/markets/sectors/">sectors</a></li>	
+        			<li><a href="/markets/stocks/">stocks</a></li>	
+        			<li><a href="/markets/funds/">mutual funds & eft's</a></li>	
+        			<li><a href="/markets/currencies/">currencies</a></li>	
+        			-->
+        			<li><a href="/?p=105963">no more red ink</a></li>	
+        		</ul>
+        	</div>
+        	<div class="column">
+        		<h3><a href="/category/diversions/">DIVERSIONS</a></h3>
+        		<ul>
+        			<!--
+        			<li><a href="/tv-guide/">tv guide</a></li>	
+        			<li><a href="/movieguide/">movieguide</a></li>	
+        			-->
+        			<li><a href="/category/diversions/reviews/">reviews</a></li>	
+        			<li><a href="/category/diversions/joke/">joke of the day</a></li>	
+        		</ul>
+        	</div>
+        </div>        	
+    	<div class="slideout-menu-bottom">
+    		<a class="desktop_site" href="http://www.wnd.com">Desktop Site</a>
+    	</div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var rotation = 30;
+    
+        // Display the signup form if they haven't signed up according to the ad rotation
+        if ($.cookie('newsletter_signed_up') || rotation > getRandomInt(0,100)) { 
+            $('body').prepend("<div id='div-gpt-ad-thinFullWidth' style='height: 27px; width:976px;'></div>");   
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-thinFullWidth'); });         
+        } else {
+            $('body').prepend("<div id='newsletter-signup-form' class='desktop-only'><div class='loading'></div><div class='error' style='display: none;'><div class='error-text'>Could not complete your signup.  <span class='reason'></span></div></div><div class='success-new success-update' style='display: none;'><h1>Thank You!</h1><p>We've sent an email to <strong><span class='email'></span></strong>. Please click the link in this email to complete your signup.<br /><a id='not-seeing-email' href='javascript:;'>Not seeing the email?</a></p><p class='note'><strong>Note:</strong> WND does this to protect your privacy. Until you complete this process, WND.com will not send you any email alerts. </p></div><form method='post' data-form-target=''><div class='fields'><input type='hidden' name='emv_tag' value='9590D1440100003A' /><input type='hidden' name='emv_ref' value='EdX7CqkmjWb08SA9MOPQKK7eLUV6aKzH_jjce6k2WMOoK7o' /><input type='hidden' name='ALERTS_PERIODIC' value='X' /><input type='hidden' name='f-ALERTS_DAILY' value='X' /><input type='hidden' name='f-SOURCE' value='Page top signup' /><input type='hidden' name='f-DOUBLE_OPT' value='X' /><input type='hidden' name='f-OFFERS_STORE' value='X' /><input type='hidden' name='f-OFFERS_3P' value='X' /><div class='main-row'><label for='newsletter-email' class='form-title'><span>Subscribe to </span><span class='logo'>WND</span><span style='color: #fff;'>'s News Alerts</span></label><input type='email' name='f-EMAIL' id='newsletter-email' class='required' placeholder='Email' /><span class='required-icon'>*</span></div><div class='hide-first'><p class='newsletter-desc'>Subscribe to WND's Email Alerts and you'll never worry about missing the hottest stories on the Internet. Your e-mail address and postal code will not be sold or abused, but we'll keep you up-to-date on the latest news, special offers and inside scoops from your favorite news source.</p><div class='additional-fields'><input type='email' name='confirm-email' class='required' placeholder='Re-type Email' id='newsletter-re-type-email' /><span class='required-icon'>*</span><div class='name-row'><input type='text' name='f-FIRSTNAME' placeholder='First Name' class='first-name' /><input type='text' name='f-LASTNAME' placeholder='Last Name' class='last-name' /></div><input type='text' name='f-POSTAL_CODE' class='required' placeholder='Postal Code' /><span class='required-icon'>*</span></div></div><div class='submit-button'><button id='newsletter-submit'>Subscribe</button></div><a href='javascript:;' class='already-subscribed'>Already Subscribed?</a><div class='legend'><span class='icon'>*</span> Required field</div></div></form></div>");
+            
+            var notSeeingEmail = $('<div id="not-seeing-email-window" style="display: none;"><div class="close">&times;</div><h3>Troubleshooting E-mail Verification</h3>If you have trouble receiving your Inbox Verification E-mail, please try the following:<ul><li><strong>Wrong Address?</strong> Make sure that you have typed in the correct e-mail address (displayed above). You may correct any mistakes by returning to the Profile Center and editing your e-mail address.</li><li><strong>Junk Mail Filter?</strong> Make sure that the Verification E-mail did not get filtered into the junk mail folder of your e-mail application.</li><li><strong>Blocked by ISP?</strong> In some cases e-mails may be accidentally blocked by anti-spam technology used by your Internet Service Provider (ISP). Contact your ISP and ask them if they are blocking e-mail sent by "WND".</li></ul></div>');
+            
+            $('#not-seeing-email').after(notSeeingEmail);
+            
+            notSeeingEmail.find('.close').click(function() {
+               $(this).parent().fadeOut(); 
+            });
+            
+            $('#not-seeing-email').click(function() {
+                $('#not-seeing-email-window').fadeIn();  
+            });
+            
+            
+            // For expanding
+            $('#newsletter-signup-form .hide-first').css({position: 'absolute', visibility: 'hidden', display: 'block' });
+            var hiddenHeight = $("#newsletter-signup-form .hide-first").height();
+            $("#newsletter-signup-form .hide-first").css({ position: 'static', visibility: 'visible', height: 0});
+            $('#newsletter-submit').attr('disabled','disabled');
+            $('#newsletter-signup-form form').attr('disabled','disabled');
+            
+            // Delay is required because of the way IE works
+            $("#newsletter-email").click(function() {
+                $("#newsletter-signup-form .hide-first").animate({
+                    height: hiddenHeight
+                }, 300, function() {
+                    $("#newsletter-signup-form .hide-first").css('overflow','visible');
+                    $('#newsletter-submit').removeAttr('disabled');
+                    $('#newsletter-signup-form form').removeAttr('disabled');
+                                    
+                    $("#newsletter-signup-form .required-icon").each(function(i, el) {
+                        setTimeout(function() {
+                            $(el).fadeIn(200);
+                        }, (i * 300));
+                    });
+                
+                    setTimeout(function() {
+                        $('#newsletter-signup-form .legend').fadeIn(200);
+                    }, ($("#newsletter-signup-form .required-icon").length * 300));
+                });
+            });
+                      
+            
+            // Check for proper email formatting
+            $('#newsletter-email').blur(function() {
+                if (!$(this).val().match(/.+\@.+\..+/i) && $(this).val().length > 0) {
+                    if (!$(this).hasClass('error')) {
+                        $(this).addClass('error');     
+                        var p = $(this).position();           
+                        $(this).after('<div class="field-error" style="margin-left: ' + p.left + 'px"><div class="field-error-arrow"></div><div class="field-error-text">Not a valid email format. Did you forget something?</div></div>');
+                    }
+                    $('#newsletter-submit').attr('disabled','disabled');
+                    $('#newsletter-signup-form form').attr('disabled','disabled');
+                    
+                } 
+            });
+            $('#newsletter-email').keyup(function(){
+                if ($(this).val().match(/.+\@.+\..+/i)) {
+                    if ($(this).hasClass('error')) {
+                        $(this).removeClass('error');
+                        if ($(this).next().hasClass('field-error'))
+                            $(this).next().remove();
+                    }
+                    $('#newsletter-submit').removeAttr('disabled');
+                    $('#newsletter-signup-form form').removeAttr('disabled');              
+                }
+            });
+            
+            // let a person know when the emails don't match
+            $('#newsletter-re-type-email').keyup(function(){
+                var pattern = new RegExp('^' + $(this).val(), 'i');
+            
+                if (!$('#newsletter-email').val().match(pattern)) {
+                    if (!$(this).hasClass('error')) {
+                        $(this).addClass('error');                
+                        var p = $(this).position();           
+                        $(this).after('<div class="field-error" style="margin-left: ' + p.left + 'px"><div class="field-error-arrow"></div><div class="field-error-text">Email doesn\'t match</div></div>');
+                    }
+                    $('#newsletter-submit').attr('disabled','disabled');
+                    $('#newsletter-signup-form form').attr('disabled','disabled');
+                } else {
+                    if ($(this).hasClass('error')) {
+                        $(this).removeClass('error');
+                        if ($(this).next().hasClass('field-error'))
+                            $(this).next().remove();
+                    }
+                    $('#newsletter-submit').removeAttr('disabled');
+                    $('#newsletter-signup-form form').removeAttr('disabled');
+                }
+            });
+            
+            $('#newsletter-signup-form input').keyup(function(){
+                if ($(this).hasClass('clear-error-on-keyup')) {
+                    $(this).removeClass('clear-error-on-keyup').removeClass('error');   
+                 
+                    if ($(this).next().hasClass('field-error'))
+                        $(this).next().remove();
+                }
+            });
+            
+            $('#newsletter-signup-form').submit(function(e) {
+    
+                
+            });
+            
+        } 
+    </script>
+<div class="content-body">
+    	<header id="header" class="health interior">
+        <div id="open-slideout-menu" class="mobile-only">
+            <div class="text">Menu</div>
+            <div class="icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <section class="utility health">
+            <div class="leader-board-top desktop-only">
+                				<div id='div-gpt-ad-skyline728TopCenter' style='width:728px; height:90px;'>
+				<script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-skyline728TopCenter'); });
+				</script>
+				</div>
+				            </div>
+                            <div class="logo interior health">
+                    <a href="/">WND</a>
+                </div>
+            
+	        <nav id="utility-home" class="desktop-only">
+	            <a id="wb-link" class="mag-link" href="#">whistleblower</a> <span>/</span>
+                <a id="wnw-link" class="mag-link" href="#">WND Weekly</a>
+                <div id="wnw-links">
+	                <a href="http://superstore.wnd.com/SUBSCRIPTIONS/WORLDNETWEEKLY/WorldNetWeekly-FREE-SAMPLE">Trial</a> <span>/</span>
+	                <a href="http://superstore.wnd.com/SUBSCRIPTIONS/WorldNetWeekly-Month-to-Month-Digital_3">Monthly</a> <span>/</span>
+	                <a href="http://superstore.wnd.com/WorldNetWeekly-1-Year-Subscription-Digital_3">ANNUAL</a><br />
+	                <a href="http://superstore.wnd.com/specialty-items/CONTRIBUTIONS/voluntary-subscription">Donate To WND</a>  <span>/</span>
+	                <a href="http://superstore.wnd.com/CUSTOMER-SERVICE">Customer Service</a>
+                </div> 
+                <div id="wb-links">
+                    <a href="http://superstore.wnd.com/Whistleblower-Magazine">Subscribe</a> <span>/</span>
+                    <a href="http://superstore.wnd.com/Whistleblower-Magazine-Gift">Gift</a> <span>/</span>
+                    <a href="http://superstore.wnd.com/Whistleblower-Magazine-Renewal">Renew</a><br />
+                    <a href="http://superstore.wnd.com/specialty-items/CONTRIBUTIONS/voluntary-subscription">Donate To WND</a>  <span>/</span>
+                    <a href="http://superstore.wnd.com/CUSTOMER-SERVICE">Customer Service</a>
+                </div> 
+            </nav>
+            	        <nav id="utility" class="health">
+	            <ul class='left'>
+                	<li class='time'><span id='current_time'> </span></li>
+	            </ul>
+                <ul class='right desktop-only'>
+                    <li id="m_login" style="display:none"><a href="http://www.wnd.com/wp-login.php?redirect_to=http%3A%2F%2Fwww.wnd.com/">Login</a> &nbsp; |</li>
+                    <li id="m_register" style="display:none"><a href="http://www.wnd.com/wp-signup.php?redirect_to=http%3A%2F%2Fwww.wnd.com/">Create Account</a></li>
+                    <li id="m_logout" style="display:none"><a href="http://www.wnd.com/wp-login.php?action=logout&_noconfirm=1&redirect_to=http%3A%2F%2Fwww.wnd.com/">Logout</a> &nbsp; |</li>
+                    <li id="m_profile" style="display:none"><a href="http://www.wnd.com/wp-admin/user/profile.php">Profile</a> </li>
+                </ul>
+                <br style="clear:both"/>
+            </nav>
+    	</section>
+        <aside class="front right desktop-only">
+    		<div class="fb-like" data-href="http://www.facebook.com/pages/WorldNetDaily/119984188013847" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>	
+    		<a href="https://twitter.com/worldnetdaily" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false" data-lang="en">Follow</a>
+    		<a id="wnw" class="magazine hidden" href="http://superstore.wnd.com/SUBSCRIPTIONS/WORLDNETWEEKLY"><img class="shadow" src="http://superstore.wnd.com/core/media/media.nl?id=5479&amp;c=811217&amp;h=b9fa10a323886691712e" alt="WorldNet Weekly" /></a>
+            <a id="wb" class="magazine hidden" href="http://superstore.wnd.com/whistleblower"><img class="shadow" src="http://superstore.wnd.com/P0434.jpg" alt="WorldNet Weekly"/></a>
+    	</aside>
+               		<div class="clear"></div> 
+    	    </header>
+     
+    <div class="desktop-only left">
+        <div id="main-handle" class="health"><ul id="man-nav" class="main health"><li id="menu-item-91516" class="top front-page front menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-91516"><a href="http://www.wnd.com/">Frontpage</a>
+<ul class="sub-menu">
+	<li id="menu-item-83359" class="sub-link politics menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-83359"><a href="http://www.wnd.com/category/front-page/politics/">Politics</a></li>
+	<li id="menu-item-88894" class="sub-link us national menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-88894"><a href="http://www.wnd.com/category/front-page/us/">U.S.</a></li>
+	<li id="menu-item-85478" class="sub-link world menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-85478"><a href="http://www.wnd.com/category/front-page/world/">World</a></li>
+	<li id="menu-item-88325" class="sub-link faith religion menu-item menu-item-type-taxonomy menu-item-object-category menu-item-88325"><a href="http://www.wnd.com/category/front-page/faith/">Faith</a></li>
+	<li id="menu-item-88326" class="sub-link health menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-88326"><a href="http://www.wnd.com/category/front-page/health/">Health</a></li>
+	<li id="menu-item-88324" class="sub-link education menu-item menu-item-type-taxonomy menu-item-object-category menu-item-88324"><a href="http://www.wnd.com/category/front-page/education/">Education</a></li>
+</ul>
+</li>
+<li id="menu-item-88555" class="sub-link wnd-tv menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-88555"><a href="http://www.wnd.com/category/wnd-tv/">WND TV</a>
+<ul class="sub-menu">
+	<li id="menu-item-83385" class="sub-link mmitchell menu-item menu-item-type-custom menu-item-object-custom menu-item-83385"><a href="/author/mmitchell/">Molotov Mitchell</a></li>
+	<li id="menu-item-83387" class="sub-link djdolce menu-item menu-item-type-custom menu-item-object-custom menu-item-83387"><a href="/author/djdolce/">DJ Dolce</a></li>
+	<li id="menu-item-195827" class="sub-link estakelbeck menu-item menu-item-type-custom menu-item-object-custom menu-item-195827"><a href="/author/estakelbeck/">Erick Stakelbeck</a></li>
+	<li id="menu-item-374279" class="sub-link bdean menu-item menu-item-type-custom menu-item-object-custom menu-item-374279"><a href="/author/bdean/">Bradlee Dean</a></li>
+	<li id="menu-item-374285" class="sub-link david menu-item menu-item-type-custom menu-item-object-custom menu-item-374285"><a href="/author/david/">David Rives</a></li>
+	<li id="menu-item-374287" class="sub-link rrives menu-item menu-item-type-custom menu-item-object-custom menu-item-374287"><a href="/author/rrives/">Richard Rives</a></li>
+</ul>
+</li>
+<li id="menu-item-83398" class="top opinion menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-83398"><a href="http://www.wnd.com/category/opinion/">Opinion</a>
+<ul class="sub-menu">
+	<li id="menu-item-83365" class="sub-link commentary menu-item menu-item-type-taxonomy menu-item-object-category menu-item-83365"><a href="http://www.wnd.com/category/opinion/commentary/">Commentary</a></li>
+	<li id="menu-item-101287" class="sub-link emails-to-the-editor opinion menu-item menu-item-type-taxonomy menu-item-object-category menu-item-101287"><a href="http://www.wnd.com/category/opinion/emails-to-the-editor/">Email to the Editor</a></li>
+	<li id="menu-item-83382" class="sub-link cartoons opinion menu-item menu-item-type-taxonomy menu-item-object-category menu-item-83382"><a href="http://www.wnd.com/category/opinion/cartoons/">Cartoons</a></li>
+	<li id="menu-item-99815" class="sub-link forums opinion menu-item menu-item-type-taxonomy menu-item-object-category menu-item-99815"><a href="http://www.wnd.com/category/opinion/forums/">Forums</a></li>
+	<li id="menu-item-99181" class="sub-link commentators opinion menu-item menu-item-type-post_type menu-item-object-page menu-item-99181"><a href="http://www.wnd.com/commentators/">Commentator Lineup</a></li>
+</ul>
+</li>
+<li id="menu-item-83369" class="top money menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-83369"><a href="http://www.wnd.com/category/money/">Money</a>
+<ul class="sub-menu">
+	<li id="menu-item-83370" class="sub-link market-overview menu-item menu-item-type-custom menu-item-object-custom menu-item-83370"><a href="/markets/">Market Overview</a></li>
+	<li id="menu-item-83373" class="sub-link sectors menu-item menu-item-type-custom menu-item-object-custom menu-item-83373"><a href="/markets/sectors">Sectors</a></li>
+	<li id="menu-item-83371" class="sub-link stocks menu-item menu-item-type-custom menu-item-object-custom menu-item-83371"><a href="/markets/stocks">Stocks</a></li>
+	<li id="menu-item-83372" class="sub-link menu-item menu-item-type-custom menu-item-object-custom menu-item-83372"><a href="/markets/funds">Mutual Funds &#038; ETF's</a></li>
+	<li id="menu-item-83374" class="sub-link currencies menu-item menu-item-type-custom menu-item-object-custom menu-item-83374"><a href="/markets/currencies">Currencies</a></li>
+	<li id="menu-item-106977" class="sub-link menu-item menu-item-type-custom menu-item-object-custom menu-item-106977"><a href="/?p=105963">No More Red Ink</a></li>
+</ul>
+</li>
+<li id="menu-item-83375" class="top entertainment diversions menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-83375"><a href="http://www.wnd.com/category/diversions/">Diversions</a>
+<ul class="sub-menu">
+	<li id="menu-item-83377" class="sub-link tv-guide menu-item menu-item-type-post_type menu-item-object-page menu-item-83377"><a href="http://www.wnd.com/tv-guide/">TV Guide</a></li>
+	<li id="menu-item-83376" class="sub-link movieguide menu-item menu-item-type-post_type menu-item-object-page menu-item-83376"><a href="http://www.wnd.com/movieguide/">MovieGuide</a></li>
+	<li id="menu-item-83379" class="sub-link reviews menu-item menu-item-type-taxonomy menu-item-object-category menu-item-83379"><a href="http://www.wnd.com/category/diversions/reviews/">Reviews</a></li>
+	<li id="menu-item-83380" class="sub-link joke menu-item menu-item-type-taxonomy menu-item-object-category menu-item-83380"><a href="http://www.wnd.com/category/diversions/joke/">Joke of the Day</a></li>
+</ul>
+</li>
+<li id="menu-item-83393" class="top hidden super main-link menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-83393"><a target="_blank" href="http://superstore.wnd.com/">Superstore</a>
+<ul class="sub-menu">
+	<li id="menu-item-1285395" class="sub-link menu-item menu-item-type-custom menu-item-object-custom menu-item-1285395"><a target="_blank" href="http://superstore.wnd.com/books/">Books</a></li>
+	<li id="menu-item-1285405" class="sub-link menu-item menu-item-type-custom menu-item-object-custom menu-item-1285405"><a target="_blank" href="http://superstore.wnd.com/video/">Video</a></li>
+	<li id="menu-item-1285415" class="sub-link menu-item menu-item-type-custom menu-item-object-custom menu-item-1285415"><a target="_blank" href="http://superstore.wnd.com/homefront/">Homefront</a></li>
+	<li id="menu-item-1285425" class="sub-link menu-item menu-item-type-custom menu-item-object-custom menu-item-1285425"><a target="_blank" href="http://superstore.wnd.com/specialty-items/">Specialty Items</a></li>
+	<li id="menu-item-1285435" class="sub-link menu-item menu-item-type-custom menu-item-object-custom menu-item-1285435"><a target="_blank" href="http://superstore.wnd.com/SUBSCRIPTIONS/">Subscriptions</a></li>
+	<li id="menu-item-1285445" class="sub-link menu-item menu-item-type-custom menu-item-object-custom menu-item-1285445"><a target="_blank" href="http://superstore.wnd.com/sales/99-CENT-STORE">99 Cent Store</a></li>
+	<li id="menu-item-1285455" class="sub-link menu-item menu-item-type-custom menu-item-object-custom menu-item-1285455"><a target="_blank" href="http://superstore.wnd.com/preparedness/">Preparedness</a></li>
+</ul>
+</li>
+</ul></div><div id="sub-link-bar" class="health"> </div>
+        
+  <div id="sub-banner">
+		    <div id="sublines">
+        <h4><a href="http://www.wnd.com/2015/01/savage-disneyland-measles-part-of-obamas-medical-genocide/"><span class="exclusive-link">WND Exclusive: </span>Savage: Disneyland measles part of Obama's 'medical genocide'</a></h4>
+
+                    
+        <h4><a href="http://www.wnd.com/2015/01/romney-wont-run-for-president-again/"><span class="exclusive-link">WND Exclusive: </span>Romney won't run for president again</a></h4>
+
+                    
+        <h4><a href="http://www.wnd.com/2015/01/gop-senate-tells-obama-to-cough-up-emails/"><span class="exclusive-link">WND Exclusive: </span>Secret emails to finally nail Obama in major scandal?</a></h4>
+
+                    
+        <h4><a href="http://www.wnd.com/2015/01/holocaust-survivor-booted-from-public-schools/"><span class="exclusive-link">WND Exclusive: </span>Holocaust survivor booted from public schools</a></h4>
+
+                    
+        <h4><a href="http://www.wnd.com/2015/01/fdr-describes-world-war-ii-as-battle-of-faith/"><span class="exclusive-link">WND Exclusive: </span>FDR describes World War II as battle of faith</a></h4>
+
+                    
+        <h4><a href="http://www.wnd.com/2015/01/communists-join-reid-campaign-against-kochs/"><span class="exclusive-link">WND Exclusive: </span>Communists join Reid war against Kochs</a></h4>
+
+                    
+        <h4><a href="http://www.wnd.com/2015/01/nuns-claim-neighbor-club-allure-into-prostitution/"><span class="exclusive-link">WND Exclusive: </span>Nuns claim neighbor Club Allure involved in prostitution</a></h4>
+
+                    
+        <h4><a href="http://www.wnd.com/2015/01/arpaio-argues-judges-ruling-based-on-politics/"><span class="exclusive-link">WND Exclusive: </span>Arpaio argues judge's ruling based on 'politics'</a></h4>
+
+                    
+        <h4><a href="http://www.wnd.com/2015/01/2nd-amendment-threatened-in-obamas-trade-plans/"><span class="exclusive-link">WND Exclusive: </span>2nd Amendment threatened in Obama's trade plans</a></h4>
+
+                    
+        <h4><a href="http://www.wnd.com/2015/01/high-school-holds-hijab-day-for-students/"><span class="exclusive-link">WND Exclusive: </span>High school holds 'hijab day' for students</a></h4>
+
+                                </div>
+		    <div class="nav"><a id="prev2" href="#"> < </a> <a id="next2" href="#"> > </a></div>
+		    <div class="alerts right">
+			<form  id="search" action="http://www.wnd.com/" method="get">
+				<input type="text" id="s" name="s" class="search" placeholder="Search WND.com" />
+				<input type="submit" id="searchsubmit"  value="SEARCH" class="searchbutton" />
+				<!--
+				<input id="searchsubmit" type="image" src="http://www.wnd.com/wp-content/themes/worldnet-theme/_/images/search-btn.png" name="submit">
+				-->	
+			</form>
+			<!-- 
+				<form id="alerts" method="get" action="/email-subscribe/">
+				    <input type="text" name="email" id="email" placeholder="Enter Email Address" />
+				    <input type="submit" id="alertsubmit"  value="Get Alerts" class="alerts" />
+			    </form>
+			-->	
+			</div>
+	    </div>
+	            </div>
+    
+    <div id="main" role="main">
+
+<div id="content" class="single wnd">
+
+		
+		<article class="post-1305535 post type-post status-publish format-video has-post-thumbnail hentry category-health category-politics category-us category-world wnd" id="post-1305535">
+			<header class="postmeta wnd author">
+			<!-- health -->
+				
+		
+		<hgroup>
+   	     <h3 class="head">WND EXCLUSIVE</h3>
+			<h1 class="posttitle">Ebola victims without symptoms can still be contagious</h1>
+			<h2 class="deck">German doctors show CDC wrong about spread of disease</h2>
+			<time datetime="2015-01-30T23:53:01+00:00" pubdate class="updated">Published: 10/08/2014 at 8:05 PM</time>
+			            
+		</hgroup>
+						<div class="byline author vcard">
+				<fig class="author-img"> <img src="/files/2012/01/Jerome-R.-Corsi_avatar-96x96.jpg" alt="author-image" /></fig>
+				<span class="fn"><a href="http://www.wnd.com/author/jcorsi/">Jerome R. Corsi</a></span>
+								<a href="javascript:;" id="about-the-author-link">About</a>
+				<span class="archive-link">
+										    | <a class="mail-link" href="mailto:jcorsi@worldnetdaily.com">Email </a> 
+                    						
+						| <a href="http://www.wnd.com/author/jcorsi/?archive=true">Archive</a>
+						
+				</span>
+				<div id="about-the-author">
+					<div class="author-more-body">
+						Jerome R. Corsi, a Harvard Ph.D., is a WND senior staff reporter. He has authored many books, including No. 1 N.Y. Times best-sellers "The Obama Nation" and "Unfit for Command." Corsi's latest book is  <a href="http://superstore.wnd.com/books/jerome-corsi/Who-Really-Killed-Kennedy">"Who Really Killed Kennedy?"</a>					</div>
+				</div>
+				<div class="story-social-media">
+					                         
+            <a href="http://www.wnd.com/author/jcorsi/feed"><img src="http://www.wnd.com/wp-content/themes/worldnet-theme/_/images//feed.png" alt="rss feed" /> Subscribe to feed</a>
+        				</div>
+			</div>
+
+					
+			</header>
+			<div id="hentry" class="entry-content wnd">
+
+				
+        
+        <div class="post-actions">
+            <ul id="additional-options" class="desktop-only"> 
+                 
+                    <li class="print-friend right"><span class="print_story"><a href="http://www.wnd.com/2014/10/ebola-victims-without-symptoms-could-still-be-contagious/print/" title="Printer Friendly" rel="nofollow"><img class="WP-PrintIcon" src="http://www.wnd.com/wp-content/plugins/wp-print/images/print.png" alt="Printer Friendly" title="Printer Friendly" style="border: 0px;" /></a>
+</span></li>
+                    <li class="font-small right"> <span class="decreaseClickItem no-click">Text smaller</span> </li>
+                    <li class="font-big right"><span class="increaseClickItem no-click">Text bigger</span></li>
+                 
+            </ul> 
+            <div class="specific-social">  
+                <div class="pw-widget pw-size-medium pw-counter-show" pw:twitter-via="worldnetdaily">
+	            <a class="pw-button-facebook"></a>
+	            <a class="pw-button-twitter"></a>
+	            <a class="pw-button-googleplus"></a>
+	            <a class="pw-button-linkedin"></a>
+	            <a class="pw-button-email"></a>
+	            <a class="pw-button-post"></a>
+                </div>
+            </div>
+                    </div>
+
+        <script type="text/javascript">
+            a2a_config = {
+            onclick: true,
+            orientation:'up',
+            menu_type:'mail'
+
+                };
+        </script>
+
+
+    				
+				<div id="attachment_1305595" style="width: 606px" class="wp-caption aligncenter"><a href="/files/2014/10/tom_frieden.jpg"><img class="wp-image-1305595 size-full" src="/files/2014/10/tom_frieden.jpg" alt="tom_frieden" width="596" height="283" /></a><p class="wp-caption-text">CDC Director Tom Frieden speaking to a House Foreign Affairs subcommittee on the Ebola virus</p></div>
+<p>NEW YORK – A group of German medical doctors in a <a href="http://www.virology.ws/2009/02/13/acute-viral-infections/">peer-reviewed medical journal article published by Oxford University Press</a> have challenged a key assumption regarding the Ebola virus repeatedly asserted by Dr. Thomas Frieden, director of the Centers for Disease Control and Prevention in Atlanta.</p><div class="left_prom_160">
+                	
+					<div id='div-gpt-ad-story160LeftSide'>
+					<script type='text/javascript'>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-story160LeftSide'); });
+					</script>
+					</div>
+					</div>
+<p>The researchers found that a patient showing no symptoms of the disease can still transmit a virus like Ebola by air if droplets containing the virus are transmitted to another person by a sneeze or cough.</p>
+<p>As <a href="http://www.wnd.com/2014/10/who-admits-sneezing-could-transmit-ebola/">WND reported Tuesday</a>, the World Health Organization has admitted that &#8220;wet and bigger droplets from a heavily infected individual, who has respiratory symptoms caused by other conditions or who vomits violently could transmit the Ebola virus over a short distance to another nearby person.&#8221;</p>
+<p>WHO said it could happen when &#8220;virus-laden heavy droplets are directly propelled, by coughing or sneezing onto the mucus membranes or skin with cuts or abrasions of another person.&#8221;</p>
+<p>Still, WHO added a qualification, insisting the transmission of Ebola by sneezing or coughing is not within its definition of airborne transmission.</p>
+<p><a href="http://www.wnd.com/2014/10/ebola-decimates-duncans-neighborhood-in-liberia/">News broke Wednesday morning</a> that the first person diagnosed with Ebola in the U.S., Thomas Eric Duncan, had died in Dallas. The victim&#8217;s home neighborhood in the Liberian capital, meanwhile, remained under quarantine.</p>
+<p>Later Wednesday, a Texas sheriff&#8217;s deputy was rushed to the hospital in Frisco, Texas, with Ebola symptoms after delivering a quarantine notice to the apartment where Duncan was staying.</p>
+<p><a href="http://www.wnd.com/2014/10/liberia-stifles-ebola-media-coverage/">WND reported Wednesday</a> Liberia is preventing journalists from reporting Ebola-related stories from health care centers in the country unless they obtain written permission from the government. The news came as the World Health Organization issued a statement warning that the officially reported decline in new cases in Liberia over the past three weeks &#8220;is unlikely to be genuine,&#8221; because problems with data gathering continue.</p>
+<p><a href="http://www.wnd.com/2014/10/sick-twist/"><strong><em>What do YOU think? What is your reaction to death of Dallas Ebola victim? Sound off in today&#8217;s WND poll</em></strong></a></p>
+<p><b>&#8216;Not easily detected&#8217;</b></p>
+<p>The German physicians, led by Dr. Timm H. Westhoff of the Department of Nephrology at the Carité Campus Benjamin Franklin in Berlin, noted in a virology blog published Feb. 12, 2009, that acute viral infections such as Ebola hemorrhagic fever may cause little or no clinical symptoms in a so-called &#8220;inapparent infection&#8221; yet may be contagious.</p>
+<p>&#8220;A well-known example is poliovirus: over 90% are without infections,&#8221; Westhoff and his colleagues continued. &#8220;During an inapparent infection, sufficient virus replication occurs in the host to induce antiviral antibodies, but not enough to cause disease. Such infections are important for the spread of infection, because they are not easily detected.&#8221;</p>
+<p>Westhoff and his colleagues then made the key point that individuals with an inapparent infection, showing no symptoms, can yet spread diseases such as polio.</p>
+<p>&#8220;During the height of the polio epidemic in the United States, the quarantine of paralyzed patients had no effect on the spread of the disease, because 99 percent of the infected individuals had no symptoms and were leading normal lives spreading infection.&#8221;</p>
+<p>Westhoff and his colleagues also discussed the risk of spreading Ebola by sneezing or coughing.</p>
+<p>&#8220;An example of a classic acute infection is uncomplicated influenza,&#8221; the medical doctors noted. &#8220;Virus particles are inhaled in droplets produced by sneezing or coughing, and begin replicating in ciliated columnar epithelial cells of the respiratory tract. As new infectious virions are produced, they spread to neighboring cells.&#8221;</p>
+<p>The point was clear: &#8220;Inapparent infections probably are important features of pathogens that are well-adapted to their hosts. They replicate sufficiently to endure the spread to new hosts, but not enough to damage the host and prevent transmission.&#8221;</p>
+<p>Westhoff and his associates conclude: &#8220;Acute viral infections are responsible for epidemics of disease involving millions of individuals each year, such as influenza and measles. When vaccines are not available, acute infections are difficult to control – most are complete by the time the patient feels ill, and the virus has already spread to another host.&#8221;</p>
+<p>The German physicians <a href="http://ndt.oxfordjournals.org/content/24/3/1051.full">published in 2008 the fundamental medical research that formed the basis for their blog comments</a>, demonstrating kidney-transplant patients could carry the norovirus infection that is common in cases of acute gastroenteritis, even if the patient was asymptomatic.</p>
+<p>Westhoff&#8217;s 2008 study provided &#8220;the first evidence&#8221; that norovirus, typically a self-limiting disease of short duration, can cause chronic infection in renal transplant recipients,&#8221; even when there are no symptoms of acute gastroenteritis evident in the patient.</p>
+<p>Dr. Norman M. Balog, D.O., a board-certified family doctor practicing in Silver Spring, Maryland, brought the research of the German medical team to the attention of WND as evidence that the CDC&#8217;s Frieden could not prove his assertion air travel was safe as long as a person infected with Ebola were not showing symptoms. An infected person can go as long as 21 days in an incubation period before being infected.</p>
+<p>&#8220;Dr. Freiden is either completely uninformed of this research,&#8221; Balog explained to WND in an exclusive telephone interview, &#8220;or he is deliberately lying because he does not want to panic the general public.&#8221;</p>
+<p>Balog pointed out that asymptomatic carriers of diseases infecting others is a phenomenon that has been widely documented in virology studies for decades.</p>
+<p>&#8220;There&#8217;s a good potential that on any given day a person you may shake hands with will have Strep Group A Streptococcus that causes sore throats,&#8221; he pointed out. &#8220;Shaking hands you take the risk you are going to get the Streptococcus virus, even if the person you shook hands with looked perfectly well.&#8221;</p>
+<p>Balog explained to WND much of the fundamental research on Ebola, including the conditions under which asymptomatic carriers of the disease can infect others, has yet to be conducted and reported in peer-reviewed medical journals.</p>
+<p>&#8220;Dr. Freiden and the CDC have been reassuring the American public from the beginning of the current outbreak that we can contain and control Ebola, no problem; but the first assurances were three continents ago,&#8221; he pointed out. &#8220;Now we have Ebola in the United States and in Spain. Where is Ebola going to show up next?&#8221;</p>
+<p>Balog was critical of the steps taken so far by the CDC to contain the Ebola outbreak.</p>
+<p>&#8220;Ebola is spreading a lot faster than anybody expected,&#8221; he said.</p>
+<p>&#8220;But even today we are not stopping people from West Africa from boarding international air flights; health officials in Dallas did not put up a fence around Duncan&#8217;s apartment complex; and it took several days before Dallas health authorities found anyone qualified to clean up the vomit outside Duncan&#8217;s apartment. And then the workers just washed the vomit down into the town storm drains.&#8221;</p>
+<p>Balog pointed out the medical literature on virology commonly says asymptomatic but infected individuals can spread a disease to others before showing any signs of being sick.</p>
+<p>&#8220;We have medical models that say a person is capable of secreting a virus like Ebola in bodily fluids before the person displays symptoms of the disease,&#8221; he stressed, &#8220;and that medical evidence is simply being ignored by Dr. Frieden and the CDC when the public is told repeatedly it&#8217;s OK to let Ebola-infected people fly as long as they don&#8217;t have a fever.&#8221;</p>
+</p>
+                               
+        
+        <div class="post-actions has-ratings">
+            <ul id="additional-options" class="desktop-only"> 
+                 
+                    <li class="print-friend right"><span class="print_story"><a href="http://www.wnd.com/2014/10/ebola-victims-without-symptoms-could-still-be-contagious/print/" title="Printer Friendly" rel="nofollow"><img class="WP-PrintIcon" src="http://www.wnd.com/wp-content/plugins/wp-print/images/print.png" alt="Printer Friendly" title="Printer Friendly" style="border: 0px;" /></a>
+</span></li>
+                    <li class="font-small right"> <span class="decreaseClickItem no-click">Text smaller</span> </li>
+                    <li class="font-big right"><span class="increaseClickItem no-click">Text bigger</span></li>
+                 
+            </ul> 
+            <div class="specific-social">  
+                <div class="pw-widget pw-size-medium pw-counter-show" pw:twitter-via="worldnetdaily">
+	            <a class="pw-button-facebook"></a>
+	            <a class="pw-button-twitter"></a>
+	            <a class="pw-button-googleplus"></a>
+	            <a class="pw-button-linkedin"></a>
+	            <a class="pw-button-email"></a>
+	            <a class="pw-button-post"></a>
+                </div>
+            </div>
+                            <div class="post-rating">
+                                    </div>
+                    </div>
+
+        <script type="text/javascript">
+            a2a_config = {
+            onclick: true,
+            orientation:'up',
+            menu_type:'mail'
+
+                };
+        </script>
+
+
+                   
+                    <!-- Taboola images -->
+                    <div class="taboola-content-thumbs">
+                        <div id='taboola-below-main-column'></div>
+                        <script type="text/javascript">
+                            window._taboola = window._taboola || [];
+                            _taboola.push({mode:'thumbs-2r', container:'taboola-below-main-column', placement:'below-main-column'});
+                        </script> 
+                    </div>
+                    <div class="taboola-content-text">  
+                        <div id='taboola-text-2-columns-mix'></div>
+                        <script type="text/javascript">
+                            window._taboola = window._taboola || [];
+                            _taboola.push({mode:'hybrid-text-links-2c', container:'taboola-text-2-columns-mix', placement:'text-2-columns', target_type:'mix'});
+                        </script> 
+                    </div>
+                    <script type="text/javascript">
+                        window._taboola = window._taboola || [];
+                        _taboola.push({flush:true});
+                    </script>
+                </div>
+
+            </article>
+        
+			<footer class="single">
+
+			    
+            
+	
+
+        <div class="footer-single left bottom">
+            <h4 class="footer-single-bottom">Follow WND On</h4>
+            <div id="facebook-bottom">
+            <span class="social-title">Facebook:</span><span id="fb-like-bottome">
+                <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FWorldNetDaily%2F119984188013847&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=269331523131384" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
+            </span>
+            </div>
+            <div id="twitter-bottom">
+                <span class="social-title">Twitter:</span><a href="https://twitter.com/worldnetdaily" class="twitter-follow-button" data-width="180px" data-show-screen-name="false" data-align="right">Follow @worldnetdaily</a>
+            </div>
+            <div id="form=bottom">
+                <form id="alerts-bottom" method="get" action="/email-subscribe/">
+				    <input type="text" name="email" id="email" placeholder="Enter Email Address"/>
+				    <input type="submit" id="alertsubmit" value="Get Alerts" class="alerts"/>
+			    </form>
+                </div>
+        </div>
+        <div class="footer-single right bottom">
+            <h4 class="footer-single-bottom">Contribute</h4>
+            <ul class="contribute-links left">
+                <li class="contact"><a href="/contact-wnd/?subject=contact">Contact Us</a></li>
+                <li class="link"><a href="/contact-wnd/?subject=link">Send a Link</a></li>
+                <li class="corrections"><a href="/contact-wnd/?subject=corrections">Send Corrections</a></li>
+            </ul>
+            <ul class="contribute-links right">
+                <li class="tip"><a href="/contact-wnd/?subject=tips">Send a Tip</a></li>
+                <li class="photos"><a href="/contact-wnd/?subject=media">Send Photos/Videos</a></li>
+                <li class="comment"><a href="/contact-wnd/?subject=comments">Send comments</a></li>
+            </ul>
+        </div>
+
+
+        
+			</footer>
+                  <div class="commenting-guide-top">
+          <div class="bar"></div>
+          <div class="text"><strong>Note:</strong> <a href="/discussion-guidelines/" target="_bank">Read our discussion guidelines</a> before commenting.</div> 
+      </div>
+      
+<div id="disqus_thread">
+    </div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://www.wnd.com/2014/10/ebola-victims-without-symptoms-could-still-be-contagious/';
+    var disqus_identifier = '1305535 http://wp.wnd.com/?p=1305535';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'wnd-news';
+    var disqus_title = "Ebola victims without symptoms can still be contagious";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                
+              eval('var dsq_settings = ' + $.cookie('disqus_sso'));
+              for(i in dsq_settings) { this.page[i] = dsq_settings[i]; }
+            this.sso = {"name":"WND","button":"http:\/\/www.wnd.com\/wp-content\/themes\/worldnet-theme\/_\/images\/wnd-login-button.gif","icon":"http:\/\/www.wnd.com\/wp-content\/themes\/worldnet-theme\/_\/images\/wnd-icon-16x16.gif","url":"http:\/\/www.wnd.com\/fast-login.php?interim-login=1","logout":"http:\/\/www.wnd.com\/fast-logout.php?redirect_to=%2F2014%2F10%2Febola-victims-without-symptoms-could-still-be-contagious%2F","height":600,"width":400};    };
+    var facebookXdReceiverPath = 'http://wp.wnd.com/wp-content/plugins/disqus-comment-system/xd_receiver.htm';
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/www.wnd.com\/2014\/10\/ebola-victims-without-symptoms-could-still-be-contagious\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.' + disqus_domain + '/embed.js?pname=wordpress&pver=2.69';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+    
+	</div>
+       <aside id="sidebar" class="single">
+           
+            <div class="module widget_wnd_prom_widget">
+                <div id='div-gpt-ad-300top' style='width:300px; height:250px;'>
+				<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-300top'); });
+				</script>
+					</div>            </div>
+                                    <div class="module widget_wnd_prom_widget">
+                <div id='div-gpt-ad-300bottom' style='width:300px; height:250px;'>
+					<script type='text/javascript'>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-300bottom'); });
+					</script>
+					</div>            </div>
+            <div id="deal_of_the_day-25" class="wnd-story-right-bottom module widget_deal_of_the_day"><h3 class="widget_title">Deal of the Day</h3>        <div class="inside alt-color">
+        
+            <!--<fig class="deal-image left">-->
+                <a class="deal-image" href="http://superstore.wnd.com/video/Jan/Trapped-in-Hitlers-Hell-Bundle"><img width="130" height="190" src="/files/2014/04/trapped-130x190.jpg" class="attachment-deal-day wp-post-image" alt="trapped" /></a>            <!--</fig>-->
+
+            <hgroup class="">
+                <h1 class="sidebar posttitle"><a href="http://superstore.wnd.com/video/Jan/Trapped-in-Hitlers-Hell-Bundle">'Trapped in Hitler's Hell' – book and movie!</a></h1>
+            </hgroup>
+            <p class="deal">
+                'A Young Jewish Girl Discovers the Messiah's Faithfulness in the Midst of the Holocaust'             </p>
+
+
+
+            </div> <!-- /inside dod -->
+        </div>            <div id="pm-ad-sidebar"></div>
+            <div id="r-sidebar-persist" class="module widget_wnd_prom_widget">
+                
+				<div id='div-gpt-ad-r-sidebar-bottom300x600-p' style='width:300px; height:600px;'>
+				<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-r-sidebar-bottom300x600-p'); });
+				</script>
+				</div>            </div>
+        </aside>
+
+    
+<div id="footer-proms">
+    <div class="home-footer module">
+        <div id="footer_left" class="interior footer_left">
+            <!-- Footer300Left -->
+				<div id='div-gpt-ad-Footer300Left' style='width:300px; height:250px;'>
+				<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-Footer300Left'); });	
+				</script>
+				</div>        </div>
+    </div>
+    <div class="home-footer module">
+        <div id="footer_center" class="interior footer_center">
+            <!-- Footer300Center -->
+				<div id='div-gpt-ad-Footer300Center' style='width:300px; height:250px;'>
+				<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-Footer300Center'); });
+				</script>
+				</div>        </div>
+    </div>
+    <div class="home-footer module">
+        <div id="footer_right" class="interior footer_right">
+            <!-- allpages300footer -->
+				<div id='div-gpt-ad-allpages300footer' style='width:300px; height:250px;'>
+				<script type='text/javascript'>
+				googletag.cmd.push(function() { googletag.display('div-gpt-ad-allpages300footer'); });
+				</script>
+				</div>        </div>
+    </div>
+</div>
+<!-- STATS
+<author>Corsi, Jerome R.</author>
+<post_id>1305535</post_id>
+<pageId>ebola-victims-without-symptoms-could-still-be-contagious</pageId>
+<pubDate>2014-10-09 00:05:14</pubDate>
+-->
+
+		<footer id="footer" clas="source-org vcard copyright">
+
+                <div id="footer-menus">
+                    <div id="footer-nav-handle" class="footer"><ul id="footer-menu-nav" class="footer"><li id="menu-item-82851" class="red menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-82851"><a>sections</a>
+<ul class="sub-menu">
+	<li id="menu-item-420221" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-420221"><a href="http://www.wnd.com/category/wnd-tv/">WND TV</a></li>
+	<li id="menu-item-89420" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-89420"><a href="http://www.wnd.com/category/opinion/commentary/">Commentary</a></li>
+	<li id="menu-item-89415" class="normal menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-89415"><a href="http://www.wnd.com/category/front-page/politics/">Politics</a></li>
+	<li id="menu-item-89416" class="normal menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-89416"><a href="http://www.wnd.com/category/front-page/us/">U.S.</a></li>
+	<li id="menu-item-89417" class="normal menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-89417"><a href="http://www.wnd.com/category/front-page/world/">World</a></li>
+	<li id="menu-item-89413" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-89413"><a href="http://www.wnd.com/category/front-page/faith/">Faith</a></li>
+	<li id="menu-item-89414" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-89414"><a href="http://www.wnd.com/category/front-page/health/">Health</a></li>
+	<li id="menu-item-89412" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-89412"><a href="http://www.wnd.com/category/front-page/education/">Education</a></li>
+	<li id="menu-item-89429" class="normal menu-item menu-item-type-taxonomy menu-item-object-category menu-item-89429"><a href="http://www.wnd.com/category/money/">Money</a></li>
+	<li id="menu-item-93882" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93882"><a href="http://www.wnd.com/category/diversions/">Diversions</a></li>
+</ul>
+</li>
+<li id="menu-item-89509" class="red menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-89509"><a>features</a>
+<ul class="sub-menu">
+	<li id="menu-item-1558455" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1558455"><a href="http://www.wnd.com/category/diversions/american-minute/">American Minute</a></li>
+	<li id="menu-item-89425" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-89425"><a href="http://www.wnd.com/category/opinion/cartoons/">Cartoons</a></li>
+	<li id="menu-item-89428" class="normal menu-item menu-item-type-taxonomy menu-item-object-category menu-item-89428"><a href="http://www.wnd.com/category/diversions/reviews/">Reviews</a></li>
+	<li id="menu-item-182465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-182465"><a href="http://www.wnd.com/author/dailyblessing/">Daily Blessing</a></li>
+	<li id="menu-item-89421" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-89421"><a href="http://www.wnd.com/category/opinion/emails-to-the-editor/">Email to the Editor</a></li>
+	<li id="menu-item-99813" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-99813"><a href="http://www.wnd.com/category/opinion/forums/">Forums</a></li>
+	<li id="menu-item-89423" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-89423"><a href="http://www.wnd.com/category/opinion/petitions/">Petitions</a></li>
+	<li id="menu-item-89427" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-89427"><a href="http://www.wnd.com/category/diversions/joke/">Joke of the Day</a></li>
+</ul>
+</li>
+<li id="menu-item-82840" class="red menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-82840"><a>resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-82841" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82841"><a href="/about-wnd">About WND</a></li>
+	<li id="menu-item-94136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94136"><a href="http://www.wnd.com/advertise-with-wnd/">Advertising</a></li>
+	<li id="menu-item-99221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99221"><a href="http://www.wnd.com/commentators/">Commentator Lineup</a></li>
+	<li id="menu-item-107795" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-107795"><a href="http://superstore.wnd.com/specialty-items/CONTRIBUTIONS">Donate to WND</a></li>
+	<li id="menu-item-288181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288181"><a href="http://www.wnd.com/sign-up-for-wnds-free-email-alerts/">News Alerts</a></li>
+	<li id="menu-item-82854" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82854"><a href="http://g2bulletin.wnd.com/">G2 Bulletin</a></li>
+	<li id="menu-item-82855" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82855"><a href="http://redalert.wnd.com/">Red Alert</a></li>
+	<li id="menu-item-227865" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-227865"><a href="http://superstore.wnd.com/">WND Superstore</a></li>
+	<li id="menu-item-96773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-96773"><a target="_blank" href="http://wndbooks.wnd.com/">WND Books</a></li>
+	<li id="menu-item-82852" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82852"><a href="http://superstore.wnd.com/whistleblower">Whistleblower</a></li>
+</ul>
+</li>
+<li id="menu-item-82853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-82853"><a href="http://superstore.wnd.com/worldnetweekly">WND Weekly</a>
+<ul class="sub-menu">
+	<li id="menu-item-118887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118887"><a href="http://www.wnd.com/who-reads-us/">Who Reads Us</a></li>
+	<li id="menu-item-105899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105899"><a href="http://www.wnd.com/whos-who-at-wnd/">Who's Who at WND</a></li>
+	<li id="menu-item-107241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-107241"><a href="/on-this-day-in-wnd-history/">WND History</a></li>
+	<li id="menu-item-96501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96501"><a href="http://www.wnd.com/wnd-scoops-you-read-it-here-first/">WND Scoops</a></li>
+	<li id="menu-item-106443" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-106443"><a href="http://mobile.wnd.com">Mobile WND</a></li>
+</ul>
+</li>
+</ul></div>                </div>
+        <div id="footer-contact">
+              	<div class="pull-quotes"></div> 
+		<h1 class="posttitle">Contact WND</h1>
+                <ul id="footer-contact-list">
+                    <li><a href="/contact-wnd/?subject=advertising">Advertising Inquiries</a></li>
+                    <li><a href="/contact-wnd/?subject=corrections">Corrections</a></li>
+                    <li><a href="/contact-wnd/?subject=email">Email to the Editor</a></li>
+                    <li><a href="/contact-wnd/?subject=tips">News Tips</a></li>
+                    <li><a href="/contact-wnd/?subject=testimonial">Testimonials</a></li>
+                    <li><a href="/contact-wnd/?subject=questions">Questions</a></li>
+
+                </ul>
+
+         </div>
+
+        <div id="footer-copyright">
+            <fig class="footer-logo">
+            </fig>
+	    <div class="footer-text">
+                <small class="left">&copy; Copyright 1997-2015. All Rights Reserved. WND.com.</small>
+                <a class="footer-link" href="/terms-of-use/">Terms of Use</a> 
+                <a class="footer-link" href="/privacy-policy/"/>Privacy Policy</a>
+	    </div>
+         </div>
+
+             <a href="/privacy-policy/"/><div class="right trust"></div></a>
+
+         <div class="site-switch">
+             <a class="site-switch-desktop pressed" href="javascript:;">DESKTOP</a>
+             <a class="site-switch-mobile" href="http://mobile.wnd.com">MOBILE</a>
+         </div>
+
+
+
+
+
+	    <script src="http://i.po.st/share/script/post-widget.js#publisherKey=4flus3s05nn85t2p4pf4" type="text/javascript"></script><script type="text/javascript">
+                var pwidget_config = {
+                    defaults:
+                    {
+                    	sharePopups: true
+                    }
+                };
+            </script><script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>    <script src='/wp-content/themes/worldnet-theme/_/js/s.js' type='text/javascript'></script>
+ <script type='text/javascript'>
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/www.wnd.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.wnd.com/wp-content/plugins/wp-polls/polls-js.js?ver=2.63-r9'></script>
+<script type='text/javascript' src='http://www.wnd.com/wp-includes/js/comment-reply.min.js?ver=3.9.2'></script>
+	</footer>
+
+
+    <!-- begin web tools footer -->
+    <script src="http://widget.perfectmarket.com/wnd/load.js"></script>
+    <!-- end web tools footer -->
+<!-- end the content-body div -->
+</div>
+ 
+<script src="https://interyield.jmp9.com/InterYield/bindevent.do?e=click&affiliate=wnd&subid=nosubid&ecpm=0&debug=false&snoozeMinutes=3&adCountIntervalHours=24&maxAdCountsPerInterval=1&pop=under&attributionDisabled=true&Adultdisabled=true" type="text/javascript"></script>
+</body>
+
+</html>
+
+        
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+ Served from: www.wnd.com @ 2015-01-30 18:53:01 by W3 Total Cache -->

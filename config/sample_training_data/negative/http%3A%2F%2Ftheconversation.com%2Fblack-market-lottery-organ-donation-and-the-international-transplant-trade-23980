@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="ie ie7 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie ie8 lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="gbtZHHy2pZAlGVbKeAyNZK94zEyJQpNzENMsyu/CbM0=" name="csrf-token" />
+
+  <meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-1.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"5b06465c9f","applicationID":"367227","transactionName":"el9cTBRXCl8EFk5QX1dEV1YSFxVbDhM=","queueTime":1,"applicationTime":61,"agentToken":null,"agent":"js-agent.newrelic.com/nr-476.min.js"}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwcEVlFACwUHVlNV"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+  <meta property="fb:app_id" content="127105130696839">
+  <script>
+  if (/iPad/.test(navigator.userAgent)) {
+    // 972px layout + 20px gutter on left & right.
+    document.write('<meta name="viewport" content="width=1012">');
+  } else {
+    document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
+  }
+</script>
+
+  
+  <meta content="Estimates suggest more than two million people worldwide would benefit from an organ transplant. While the donation rates vary greatly between countries, the contrast between the increasing numbers of…" name="description" />
+<meta content="20140304" name="pubdate" />
+<meta content="analysis" name="searchtype" />
+<meta content="http://theconversation.com/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980" name="original-source" />
+
+  <meta content="Aric Bendorf" name="author" />
+
+  <meta content="University of Sydney" name="institution" />
+
+  <meta content="The Conversation" property="og:site_name" />
+<meta content="Black-market lottery: organ donation and the international transplant trade" property="og:title" />
+<meta content="Estimates suggest more than two million people worldwide would benefit from an organ transplant. While the donation rates vary greatly between countries, the contrast between the increasing numbers of…" property="og:description" />
+<meta content="article" property="og:type" />
+<meta content="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/43050/width668/tz8v4fyt-1393906232.jpg" property="og:image" />
+<meta content="2014-09-08T07escription" />
+<meta content="article" property="og:type" />
+<meta content="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f19:58:55Z" property="og:updated_time" />
+<meta content="http://theconversation.com/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980" property="og:url" />
+<meta content="https://www.facebook.com/ConversationEDU" property="article:publisher" />
+
+  <meta content="summary_large_image" name="twitter:card" />
+<meta content="@ConversationEDU" name="twitter:site" />
+
+
+
+  <!-- refspec 7442eb9 -->
+  <title>Black-market lottery: organ donation and the international transplant trade</title>
+  <link href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/application-30427a316a908fc8f597c5c62f7b070d.css" media="screen" rel="stylesheet" />
+
+
+
+<!--[if lt IE 9]><script src="/javascripts/vendor/shim.js"></script><![endif]-->
+
+<!--[if IE 7]><link href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/ie/ie7-9411a539674b204af72a93f181462583.css" media="screen" rel="stylesheet" /><![endif]-->
+<!--[if IE 8]><link href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/ie/ie8-159ac67d769f3278aeee5962efe6ac67.css" media="screen" rel="stylesheet" /><![endif]-->
+
+<link href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/print-dec0e74a6940c2f52c5bc456b6f7a699.css" media="print" rel="stylesheet" />69f3278aeee5962efe6ac67.css" media="screen" rel="stylesheet" /><![endif]-->
+
+<link href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686
+
+  <link rel="apple-touch-icon-precomposed" href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/ios-logo-c7605b94efa0370b83a62086f97fce3e.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+  
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', "UA-21436757-1"]);
+
+  _gaq.push(['_setCustomVar', 1, 'UserType', 'Reader', 2]);
+_gaq.push(['_setCustomVar', 2, 'CommissioningRegion', 'au', 3]);
+_gaq.push(['_setCustomVar', 3, 'ContentType', 'analysis', 3]);
+_gaq.push(['_setCustomVar', 5, 'RegionCode', 'us', 3]);
+
+
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+    
+    
+    <link href="http://theconversation.com/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980" rel="canonical" />
+
+</head>
+<body class="region_us content content-show  presenting-article analysis">
+  
+  <div id="sm-sidebar">
+    <div id="sm-sidebar-content">
+      <h3>Sections <span id="sm-sidebar-close-button" class="icon-delete"></span></h3>
+      <ul>
+          <li class="home-page ">
+ egion_us content content-show  presenting-article analysis">
+  
+  <div id="sm-sidebar">
+    <div id="sm-sidebar-content">
+      <h3>Sections <span id=           <a class="" href="/us">Home<span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="arts ">
+            <a class="" href="/us/arts">Arts <span><span title="and">+</span> Culture</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="business ">
+            <a class="" href="/us/business">Economy <span><span title="and">+</span> Business</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="health ">
+            <a class="active" href="/us/health">Health <span><span title="and">+</span> Medicine</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="politics ">
+            <a class="" href="/us/politics">Politics <span><span title="and">+</span> Society</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="technology last">
+            <a class="" href="/us/technology">Science <span><span title="and">+</span> Technology</span><span class="icon-chevron-right"></span></a>
+          </li>
+      </ul>
+
+      <h3>Services</h3>
+      <ul>
+        <li>
+          <a href="/us/newsletter">
+            Newsletter <span class="icon-chevron-right"></span>
+</a>        </li>
+        <li id="google-currents-link">
+          <a href="http://www.google.com/newsstand/s/editions/CAowro6aAg">Read on Google Play<span class="icon-chevron-right"></span></a>
+        </li>
+      </ul>
+
+      <h3>Information</h3>
+      <ul>
+        <li><a class="" href="/us/who-we-are">Who we are <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/charter">Our charter <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/team">Our team <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/partners">Partners and funders <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/institutions">Contributing institutions <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/contact-us">Contact us <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/privacy-policy">Privacy policy <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/terms-and-conditions">Terms and conditions <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/corrections">Corrections <span class="icon-chevron-right"></span></a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div id="page-wrapper">
+    <div id="sm-topbar">
+
+  <div>
+    <span id="sm-topbar-menu-button" class="icon-menu"></span>
+  </div>
+
+  <div id="sm-region-select">
+    <div>
+      <span id="sm-region-current">
+        <span class="co
+    </div>
+  </div>
+
+
+  <div id="page-wrappede">US</span>
+        <span class="name">United States</span>
+      </span>
+      <span class="icon-caret-down"></span>
+    </div>
+    <select id="sm-region-select-dropdown">
+        <option data-code="AU" value="/au">
+          Australia
+        </option>
+        <option data-code="UK" value="/uk">
+          United Kingdom
+        </option>
+        <option data-code="US" value="/us" selected="selected">
+          United States
+        </option>
+    </select>
+  </div>
+
+  <div>
+    <span id="sm-topbar-search-button" class="icon-search"></span>
+  </div>
+
+  <div id="sm-search">
+    <form action="/search">
+      <input type="text" name="q" placeholder="Search analysis, academics…">
+      <button type="submit" class="button active"><span class="icon-search"></span></button>
+    </form>
+  </div>
+
+  <div id="sm-overlay"></div>
+
+</div>
+
+    <section id="topbar">
+  <div class="wrapper clearfix">
+
+    <div id="edition-selector">
+      <ul>
+        <li><div>Edition:</div></li>
+          <li class="region au">
+            <a href="/au" title="Australia">
+              AU
+</a>          </li>
+          <li class="region uk">
+            <a href="/uk" title="United Kingdom">
+              UK
+</a>          </li>
+          <li class="region us active">
+            <a href="/us" title="United States">
+              US
+</a>          </li>
+      </ul>
+    </div>
+
+    <nav id= uk">
+            <a href="/uk" title="United Kingdom">
+              UK
+</a>          </li>
+          <li class="region us active">
+            <a href"site-nav">
+      <ul>
+
+
+        <li class="newsletter">
+          <a href="/us/newsletter" title="Sign up to receive our daily email newsletter">Newsletter</a>
+        </li>
+
+        <li class="elsewhere">
+          <a href="https://www.facebook.com/theconversationUS" title="The Conversation on Facebook"><i class="icon-facebook"></i></a>
+          <a href="https://twitter.com/US_Conversation" title="The Conversation on Twitter"><i class="icon-twitter"></i></a>
+          <a class="rss" href="/us/feeds" title="The Conversation&#39;s Feeds"><i class="icon-rss"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="account-nav">
+        <ul class="auth">
+          <li>
+            <a href="/become-an-author">Become an author</a>
+          </li>
+          <li>
+            <a href="https://theconversation.com/sign_up?return_to=%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980">Sign up as a reader</a>
+          </li>
+          <li>
+            <a href="/sign_in?return_to=%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980">Sign in</a>
+          </li>
+        </ul>
+    </nav>
+  </div>
+</section>
+
+    
+  <section id="header">
+    <div class="wrapper nocontent">
+      <header id="masthead" class="clearfix">
+  <a class="masthead-home-link" href="/us">
+    <img alt="The Conversation" src="https:/    </li>
+        </ul>
+    </nav>
+  </div>
+</section>
+
+    
+  <section id="header">
+    <div class="wrapper nocontent">
+      <header id="masthead" c/62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/carlton/logos/logo-a8ba006910b223e5e8b581e05cb0b7c5.svg" />
+</a>
+  <form class="masthead-search" action="/search" method="get">
+    <fieldset>
+  <legend>Search</legend>
+  <div class="row">
+    <div class="input-wrapper">
+      <label for="q"><i class="icon-search"></i></label>
+      <input id="q" name="q" placeholder="Search analysis, research, academics…" type="text" value="" />
+    </div>
+    <button type="submit" class="button" value="Search"></button>
+  </div>
+</fieldset>
+
+  </form>
+
+  <div class="masthead-tagline">
+    Academic rigor, journalistic flair
+  </div>
+</header>
+
+      <nav id="primary-navigation" class=" nocontent">
+  <ol>
+      <li class="arts ">
+        <a class="" href="/us/arts" title="Arts + Culture">Arts <span><span title="and">+</span> Culture</span></a>
+      </li>
+      <li class="business ">
+        <a class="" href="/us/business" title="Economy + Business">Economy <span><span title="and">+</span> Business</span></a>
+      </li>
+      <li class="health ">
+        <a class="current" href="/us/health" title="Health + Medicine">Health <span><span title="and">+</span> Medicine</span></a>
+      </li>
+      <li class="politics ">
+        <a class="" href="/us/politics" title="Politics + Society">Politics <span><span title="and">+</span> Society</span></a>
+title="Health + Medicine">Health <span><span title="and">+</span> Medicine</span></a>
+      </li>
+      <li class="politics ">
+        <a class="" href=      </li>
+      <li class="technology last">
+        <a class="" href="/us/technology" title="Science + Technology">Science <span><span title="and">+</span> Technology</span></a>
+      </li>
+  </ol>
+</nav>
+
+    </div>
+  </section>
+
+    
+
+    <section id="topics">
+      <div class="wrapper nocontent">
+          <section id="hot-topics" class=" clearfix nocontent">
+    <h3>
+      <a href="/us/topics">Follow Topics</a>
+    </h3>
+
+    <ol>
+        <li>
+          <a class="nocontent" data-slug="ebola" href="/us/topics/ebola">Ebola</a>
+        </li>
+        <li>
+          <a class="nocontent" data-slug="midterm-elections-2014" href="/us/topics/midterm-elections-2014">Midterm elections 2014</a>
+        </li>
+        <li>
+          <a class="nocontent" data-slug="isis" href="/us/topics/isis">ISIS</a>
+        </li>
+        <li>
+          <a class="nocontent" data-slug="nobel-prize-2014" href="/us/topics/nobel-prize-2014">Nobel Prize 2014</a>
+        </li>
+        <li>
+          <a class="nocontent" data-slug="explainer" href="/us/topics/explainer">Explainer</a>
+        </li>
+        <li>
+          <a class="nocontent" data-slug="foundation-essays-us" href="/us/topics/foundation-essays-us">Foundation essays US</a>
+        </li>
+    </ol>
+  </section>
+
+      </div>
+    </section>
+
+
+    <div id="outer">
+      
+
+
+      <div id="page" class="wrapper">
+        <div id="bnt" data-slug="foundation-essays-us" href="/us/topics/foundation-essays-us">Foundation essays US</a>
+        </li>
+    </ol>
+  </section>
+
+      </divody" class="clearfix">
+          
+
+
+<article id="article" class="clearfix" data-id="23980" itemscope itemtype="http://schema.org/Article">
+  
+    <header class="grid-prepend-four grid-twelve">
+      <time content="2014-03-04T04:46:11Z" datetime="2014-03-04T04:46:11Z" itemprop="datePublished" pubdate="pubdate">March 3 2014, 11.46pm EST</time>
+      <h1 class="entry-title grid-eight instapaper_title" itemprop="name">
+        <span class="nobr">Black-market</span> lottery: organ donation and the international transplant&nbsp;trade
+      </h1>
+    </header>
+
+  
+    <div class="entry-summary" style="text-indent: 100%; white-space: nowrap; overflow: hidden;">
+      <p>Estimates suggest more than two million people worldwide would benefit from an organ transplant. While the donation rates vary greatly between countries, the contrast between the increasing numbers of…</p>
+    </div>
+
+  <aside id="meta" class="grid-four">
+    
+      <section id="authors" class="module">
+  <h4>Author</h4>
+  <ol class="semantic">
+    <li class="vcard author-avatar large" id="author-6635" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <a href="/profiles/aric-bendorf-6635" rel="author">
+    <img alt="" height="54" itemprop="image" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/avatars/6635/thumb54/9c4zm7pd-1329384958.jpgchema.org/Person">
+        <a href="/profiles/aric-bendorf-6635" rel="author">
+    <img alt="" height="54" itemprop="image" src="https://62e528761d06853" width="54" />
+    <h3 class="fn">
+      <span itemprop="name">Aric Bendorf</span>
+    </h3>
+</a>  
+  <p>
+    <span class="role">Doctoral Scholar at the Centre for Values, Ethics and the Law in Medicine (VELiM) at University of Sydney</span>
+  </p>
+
+    </li>
+</ol>
+
+</section>
+
+      
+      
+      
+        <section id="disclosure-statement" class="module">
+    <h4>Disclosure Statement</h4>
+      <p>This article was co-authored by Sara Irvine, committee member of the organdonationrates.org project at the University of Sydney.</p>
+  </section>
+
+  <section id="partners" class="module">
+      <p class="disclosure-logo clearfix">
+        <a class="logo" href="/institutions/university-of-sydney">
+          <img alt="The University of Sydney" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/institutions/university-of-sydney/logos/width170_logo-1399340253.png" />
+</a>        Provides funding as a <a href="/us/partners">Member</a> of The&nbsp;Conversation.<br />
+        <a href="http://sydney.edu.au" rel="nofollow" target="_blank">sydney.edu.au</a>
+      </p>
+  </section>
+
+
+    
+      
+
+    
+          <section class="jobs-events-list clearfix">
+      <h4>University of Sydney Events</h4>
+      
+  <ul>
+      <li class="event">
+        <p>
+          <a href="/au/events/knocking-on-heavens-door-how-physics-and-scientific-thinking-il
+      
+
+    
+          <section class="jobs-events-list clearfix">
+      <h4>University of Sydney Events</h4>
+      
+  <ul>
+      <li class="event">
+luminate-the-universe-and-the-modern-world-1011" rel="nofollow" target="_blank">
+            <span class="name">KNOCKING ON HEAVEN&#39;S DOOR: HOW PHYSICS AND SCIENTIFIC THINKING ILLUMINATE THE UNIVERSE AND THE MODERN WORLD</span>
+
+
+              &mdash;
+              <span class="location">Sydney, New South Wales</span>
+</a>        </p>
+      </li>
+      <li class="event">
+        <p>
+          <a href="/au/events/sydney-ideas-public-media-and-social-crisis-938" rel="nofollow" target="_blank">
+            <span class="name">Sydney Ideas - Public Media and Social Crisis </span>
+
+
+              &mdash;
+              <span class="location">Sydney, New South Wales</span>
+</a>        </p>
+      </li>
+      <li class="event">
+        <p>
+          <a href="/au/events/sydney-ideas-leadership-for-cultural-competence-innovations-at-the-cutting-edge-to-achieve-change-939" rel="nofollow" target="_blank">
+            <span class="name">Sydney Ideas - Leadership for Cultural Competence: Innovations at the Cutting Edge to Achieve Change</span>
+
+
+              &mdash;
+              <span class="location">Sydney, New South Wales</span>
+</a>        </p>
+      </li>
+      <li class="event">
+        <p>
+          <a href="/au/events/sydney-ideas-living-by-numbers-metrics-algorithms-and-the-sociology-of-everyday-life-937" rel="nofollow" target="_blank">
+            <span class Wales</span>
+</a>        </p>
+      </li>
+      <li class="event">
+        <p>
+          <a href="/au/events/sydney-ideas-living-by-numbers-metrics-a="name">Sydney Ideas - Living by Numbers? Metrics, algorithms and the sociology of everyday life</span>
+
+
+              &mdash;
+              <span class="location">Sydney, New South Wales</span>
+</a>        </p>
+      </li>
+  </ul>
+
+  <a class="view-more" href="/us/events">
+    <i class="icon-the-conversation"></i>
+    <span class="action">More Events</span>
+</a>
+    </section>
+
+
+
+    
+  </aside>
+
+  <div class="grid-twelve grid-last content-wrapper">
+    <div class="grid-twelve instapaper_body">
+      <div class="content entry-content">
+        
+              <figure class="lead-image grid-eight grid-last">
+    <img alt="" data-id="43050" itemprop="image" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/43050/width668/tz8v4fyt-1393906232.jpg" />
+      <figcaption>
+        The demand for organs is growing but supply is not, so many people who need transplants die waiting.
+        <span class="attribution"><a class="source" href="http://www.flickr.com/photos/ndguard/6276694881/sizes/l/" rel="nofollow">North Dakota National Guard</a>, <a class="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow">CC BY-NC-SA</a></span>
+      </figcaption>
+  </figure>
+
+
+          
+
+          <div class="body grid-eight" itemprop="articleBody">
+            <p>Estimates suggest <a href="http://www.ncbi.nlm.nicreativecommons.org/licenses/by-nc-sa/4.0/" rel="nofollow">CC BY-NC-SA</a></span>
+      </figcaption>
+  </figure>
+
+
+          
+
+          <div class="h.gov/pubmed/23692370">more than two million people</a> worldwide would benefit from an organ transplant. While the <a href="http://www.organdonationrates.org">donation rates</a> vary greatly between countries, the contrast between the increasing numbers of people in need and the inadequate numbers of organs being donated mean many will die while they wait.</p>
+
+<p>Last night, ABC’s Four Corners screened <a href="http://www.abc.net.au/4corners/stories/2014/03/03/3953589.htm">Tales from the Organ Trade</a>, an HBO documentary that highlights the desperation that links the world’s poor, who sell their organs, together with first-world recipients who buy them on the black market.</p>
+
+<p>While accurate statistics are difficult to find, some suggest that <a href="http://www.abc.net.au/4corners/stories/2014/03/03/3953589.htm">up to 15%</a> of the world’s transplants are performed using illegally obtained organs via an international black market web of organ brokers. The brokers bring recipients and donors together with transplant surgeons working out of fly-by-night medical clinics. The process is unregulated, illegal and <a href="http://www.livescience.com/19237-illegal-kidney-organ-trade.html">the risks to both donor and recipient</a> are high.</p>
+
+<p>The documentary raises challenging questions about this illegal trade in organs that sometimes benefits ed, illegal and <a href="http://www.livescience.com/19237-illegal-kidney-organ-trade.html">the risks to both donor and recipient</a> are high.</p>
+
+<p>The dboth the donor and recipient and other times imperils the well-being of both. There are, no doubt, many more untold <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3728783/">horror stories</a>.</p>
+
+<p>While some experts argue the sale of organs should be <a href="http://www.theatlantic.com/health/archive/2011/11/why-legalizing-organ-sales-would-help-to-save-lives-end-violence/248114/">regulated</a> and <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2563357/">legalised</a>, most medical professionals <a href="http://www.abc.net.au/worldtoday/content/2012/s3513372.htm">strongly discourage</a> their patients from travelling overseas to undergo organ transplants because they have significantly poorer outcomes than those who receive transplants here.</p>
+
+<p>So, with Australia widely regarded as a world leader in transplantation outcomes, what would compel anyone to consider such a risky proposition? And why would anyone participate in exploitation like this?</p>
+
+<p>Although there has been a welcome increase to the numbers of donations recently, Australia’s <a href="http://www.anzdata.org.au/anzod/v1/reports.html">rate of deceased donation</a> remains relatively low, and our moderately high rate of living donation has fallen since 2008, despite <a href="http://www.kidney.org.au/ORGANDONATION/LivingKidneyDonation/tabid/691/Default.aspx">programs</a>v1/reports.html">rate of deceased donation</a> remains relatively low, and our moderately high rate of living donation has fallen since 2008, despite <a in place to boost these numbers.</p>
+
+<p>While donation rates measure the rate at which organ donations occur, transplant rates measure the actual number of transplants performed – the most accurate measurement of how a country fulfils the need for transplanted organs.</p>
+
+<p>In 2008, there were 1203 transplant recipients from both living and deceased donors in Australia. Five years later, in 2013 this number increased to 1371 transplant recipients. While this improvement is welcome, it still places Australia in the <a href="http://www.organdonationrates.org">bottom half</a> of developed countries worldwide.</p>
+
+<p>While Australia’s official organ transplant <a href="http://www.anzdata.org.au/anzod/v1/waitinglist2012.html">waiting list</a> has been relatively constant for several years (at around 1,600), there are many, many more potential recipients whose lives would be saved or dramatically improved were they not <a href="http://www.ncbi.nlm.nih.gov/pubmed/22498116">excluded from our waiting list</a>.</p>
+
+<p>That’s because waiting lists reflect the supply, not the demand. Around 11,500 people in Australia are being kept alive on dialysis because they have end-stage kidney failure. About 1100 of the approximately 1600 people on the organ transplant waiting list in Australia are awaiting a kidney. If more kidneys were available, many more than the Australia are being kept alive on dialysis because they have end-stage kidney failure. About 1100 of the approximately 1600 people on the organ transplant w<a href="http://www.ncbi.nlm.nih.gov/pubmed/22498116">1100 on the list</a> would benefit greatly from a transplant.</p>
+
+<p>These numbers are mirrored around the world: need is growing and people die waiting.</p>
+
+<p>Organ donation is truly a <a href="http://donorfamiliesaustralia.com">gift of life</a>. In Australia, this gift is made altruistically and often, in the case of deceased donation, at a time of personal grief and shock.</p>
+
+<p>This so-called “organ shortage” has created an ideal marketplace for those willing to exploit the desperation of those on both sides of the transaction. The donors are almost always poor, living in a developing country where the judicial system does not offer ready protection for the underprivileged. Nor are their health-care needs met.</p>
+
+<p>The <a href="http://www.declarationofistanbul.org/">Declaration of Istanbul</a> on organ trafficking and transplant tourism roundly condemns – and attempts to curtail – the practice. Around 100 countries have strengthened their laws to prevent organ trafficking, notably China, Pakistan and the Philippines.</p>
+
+<p>But while the Declaration of Istanbul, and, more recently, China’s formal agreement to stop using <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3728783/">organs from executed prisoners for transplantation</a>, provide much-needed progress toward curtailiile the Declaration of Istanbul, and, more recently, China’s formal agreement to stop using <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3728783/">organs ng the frequency of organ trafficking, the best solution is to increase organ donation to better meet the demand of those in need.</p>
+
+<p><strong><em>This article was co-authored by <a href="http://organdonationrates.blogspot.com.au/p/about-us.html">Sara Irvine</a>, committee member of the organdonationrates.org project at the University of Sydney.</em></strong></p>
+            <script async="async" data-counter="https://counter.theconversation.edu.au/content/23980/count" id="theconversation_tracker_hook" src="https://theconversation.com/javascripts/lib/content_tracker_hook.js"></script>
+
+
+          </div>
+
+        <aside id="related-content" class="grid-three grid-prepend-one grid-last">
+          <div class="republish-this-article">
+  <h4 class="double-bordered">Republish this article</h4>
+  <p>
+    We believe in the free flow of information. We use a
+    <a href="http://creativecommons.org/" target="_blank" title="Creative Commons">Creative Commons</a>
+    license, so you can republish our articles for free, online or in print.
+  </p>
+
+  <a href="#republish" class="steal-button" data-republish="/share/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980">
+    Republish
+  </a>
+</div>
+
+
+          
+            <div class="social-media">
+  <h4 class="double-bordered slammed">Share</h4>
+  <ul>
+    <li class="email">
+      <a class=ack-market-lottery-organ-donation-and-the-international-transplant-trade-23980">
+    Republish
+  </a>
+</div>
+
+
+          
+            <div class="soci"email-button" data-url="null" href="mailto:?body=Hi%0A%0AI+found+this+article+on+http%3A%2F%2Ftheconversation.com+that+you+might+like%3A+%22Black-market+lottery%3A+organ+donation+and+the+international+transplant+trade%22+%0A%0Ahttp%3A%2F%2Ftheconversation.com%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980&amp;subject=Black-market+lottery%3A+organ+donation+and+the+international+transplant+trade+on+The+Conversation" target="_blank"><i class="icon-email"></i> <span>Email</span></a>
+    </li>
+
+    <li class="twitter">
+      <a class="twitter-button" data-url="http://theconversation.com/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980" href="http://twitter.com/intent/tweet?text=Black-market+lottery%3A+organ+donation+and+the+international+transplant+trade&amp;url=http%3A%2F%2Ftheconversation.com%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980&amp;utm_campaign=none&amp;utm_medium=tweetbutton&amp;utm_source=twitter&amp;via=ConversationEDU" target="_blank"><i class="icon-twitter"></i> <span>Twitter</span></a><span class="data-count">59</span>
+    </li>
+
+    <li class="facebook">
+      <a class="facebook-button" data-url="http://theconversation.com/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980" href="http://www.facebook.com/sharer.class="data-count">59</span>
+    </li>
+
+    <li class="facebook">
+      <a class="facebook-button" data-url="http://theconversation.com/black-market-lphp?u=http%3A%2F%2Ftheconversation.com%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980&amp;utm_medium=facebookbutton&amp;utm_source=facebook" target="_blank"><i class="icon-facebook"></i> <span>Facebook</span></a>
+    </li>
+
+    <li class="linkedin">
+      <a class="linkedin-button" data-url="http://theconversation.com/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980" href="http://www.linkedin.com/shareArticle?mini=true&amp;source=The+Conversation&amp;summary=Estimates+suggest+%5Bmore+than+two+million+people%5D%28http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpubmed%2F23692370%29+worldwide+would+benefit+from+an+organ+transplant.+While+the+%5Bdonation+rates%5D%28http%3A%2F%2Fwww.organdonationra...&amp;title=Black-market+lottery%3A+organ+donation+and+the+international+transplant+trade&amp;url=http%3A%2F%2Ftheconversation.com%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980&amp;utm_medium=linkedinbutton&amp;utm_source=linkedin" target="_blank"><i class="icon-linkedin"></i> <span>LinkedIn</span></a>
+    </li>
+
+    <li class="reddit hide-on-mobile">
+      <a class="reddit-button" data-url="http://theconversation.com/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980" href="http://www.reddit.com/submit?title=Black-market+lottery%3A+organ+donation="reddit hide-on-mobile">
+      <a class="reddit-button" data-url="http://theconversation.com/black-market-lottery-organ-donation-and-the-internationa+and+the+international+transplant+trade&amp;url=http%3A%2F%2Ftheconversation.com%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980" target="_blank"><i class="icon-reddit"></i> <span>Reddit</span></a>
+    </li>
+  </ul>
+</div>
+
+
+          <div class="interact-with-this-article">
+            <ul>
+              <li>
+                  <a class="favourite signed-out" href="/sign_in?return_to=%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980">
+    <i class="icon-favourite"></i> Sign in to Favourite
+</a>
+              </li>
+
+              
+                <li>
+                  <a href="#comments" class="comment-count">
+                    <i class="icon-comments"></i> <span>Comment</span>
+                  </a>
+                </li>
+            </ul>
+          </div>
+
+          
+              <section id="related_topics" class="module">
+    <h4 class="double-bordered">Tags</h4>
+    <p>
+      <a href="/us/topics/organ-donation">Organ donation</a>, <a href="/us/topics/four-corners">Four Corners</a>
+    </p>
+  </section>
+
+
+          
+              <section id="also-by-author" class="article-list module">
+    <h4 class="double-bordered">Articles by This Author</h4>
+      <article class="article">
+        <a href="/five-myths-about-organ-donation-in-australia-5008">
+          <time content="2012-02-19T19tion id="also-by-author" class="article-list module">
+    <h4 class="double-bordered">Articles by This Author</h4>
+      <article class="article">
+   :36:06Z" datetime="2012-02-19T19:36:06Z" itemprop="datePublished" pubdate="pubdate">February 19 2012</time>
+          Five myths about organ donation in&nbsp;Australia
+</a>      </article>
+  </section>
+
+
+          
+              <div class="related-articles blockset blocks-1x1-vertical grid-last">
+    <h4>Related articles</h4>
+
+    <div class="blocks-1x1 slammed grid-last">
+      
+<article data-id="31270" class="clearfix placed analysis published">
+    <figure>
+      <a class="article-link" href="/more-people-can-donate-tissue-than-organs-so-why-do-we-know-so-little-about-it-31270">
+        <img alt="" data-echo="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/58240/width324x324/kbv72n8j-1409825420.jpg" data-id="58240" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+</a>        <figcaption>
+            <span class="caption">
+              Eyes – windows on the soul?
+            </span>
+            <span class="source" title="Source">Ángelo González</span>
+        </figcaption>
+    </figure>
+
+  <header>
+
+
+
+    <h2><a href="/more-people-can-donate-tissue-than-organs-so-why-do-we-know-so-little-about-it-31270">More people can donate tissue than organs – so why do we know so little about&nbsp;it?</a></h2>
+      <p class="byline">
+        <span><span>By </span><a href="http://thecon-people-can-donate-tissue-than-organs-so-why-do-we-know-so-little-about-it-31270">More people can donate tissue than organs – so why do we know so little abversation.com/profiles/tracy-long-sutehall-137037">Tracy Long-Sutehall</a><em>, University of Southampton</em></span>
+      </p>
+  </header>
+
+</article>
+
+<article data-id="29773" class="clearfix placed analysis published">
+    <figure>
+      <a class="article-link" href="/mounting-evidence-shows-dredge-spoil-threat-to-the-great-barrier-reef-29773">
+        <img alt="" data-echo="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/56681/width324x324/4nzndnyq-1408338394.jpg" data-id="56681" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+</a>        <figcaption>
+            <span class="caption">
+              Dredging at the port of Gladstone.
+            </span>
+            <span class="source" title="Source">Greens MPs/Flickr</span>
+        </figcaption>
+    </figure>
+
+  <header>
+
+
+
+    <h2><a href="/mounting-evidence-shows-dredge-spoil-threat-to-the-great-barrier-reef-29773">Mounting evidence shows dredge spoil threat to the Great Barrier&nbsp;Reef</a></h2>
+      <p class="byline">
+        <span><span>By </span><a href="http://theconversation.com/profiles/terry-hughes-9894">Terry Hughes</a><em>, James Cook University</em></span>
+      </p>
+  </header>
+
+</article>
+
+<article data-id="26042" class="clearfix placed analysis published">
+    <figure>
+      <a class="article-link" href="/asylrsation.com/profiles/terry-hughes-9894">Terry Hughes</a><em>, James Cook University</em></span>
+      </p>
+  </header>
+
+</article>
+
+<article data-id="um-seekers-we-cant-ignore-our-international-law-obligations-26042">
+        <img alt="" data-echo="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/47243/width324x324/nx34v6fg-1398746725.jpg" data-id="47243" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+</a>        <figcaption>
+            <span class="caption">
+              The transfer of asylum seekers to detention centres in Papua New Guinea is a clear violation of Australia’s international law obligations.
+            </span>
+            <span class="source" title="Source">AAP/Eoin Blackwell</span>
+        </figcaption>
+    </figure>
+
+  <header>
+
+
+
+    <h2><a href="/asylum-seekers-we-cant-ignore-our-international-law-obligations-26042">Asylum seekers: we can&rsquo;t ignore our international law&nbsp;obligations</a></h2>
+      <p class="byline">
+        <span><span>By </span><a href="http://theconversation.com/profiles/azadeh-dastyari-99057">Azadeh Dastyari</a><em>, Monash University</em></span>
+      </p>
+  </header>
+
+</article>
+
+<article data-id="25255" class="clearfix placed analysis published">
+    <figure>
+      <a class="article-link" href="/too-many-battles-for-asic-four-corners-and-lenders-of-last-resort-25255">
+        <img alt="" data-echo="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/45834/width324x324/5g254rrd-1396926346.jpg" data-id="45834" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+</a>        <figcaption>
+            <span class="caption">
+              When is a loan not a loan?
+            </span>
+            <span class="source" title="Source">Chris Goldberg/Flickr</span>
+        </figcaption>
+    </figure>
+
+  <header>
+
+
+
+    <h2><a href="/too-many-battles-for-asic-four-corners-and-lenders-of-last-resort-25255">Too many battles for ASIC? Four Corners and lenders of last&nbsp;resort</a></h2>
+      <p class="byline">
+        <span><span>By </span><a href="http://theconversation.com/profiles/michael-quilter-9909">Michael Quilter</a></span>
+      </p>
+  </header>
+
+</article>
+
+    </div>
+  </div>
+
+
+          <div class="article-bottom grid-three grid-last">
+            
+
+              <div class="social-media">
+  <h4 class="double-bordered slammed">Share</h4>
+  <ul>
+    <li class="email">
+      <a class="email-button" data-url="null" href="mailto:?body=Hi%0A%0AI+found+this+article+on+http%3A%2F%2Ftheconversation.com+that+you+might+like%3A+%22Black-market+lottery%3A+organ+donation+and+the+international+transplant+trade%22+%0A%0Ahttp%3A%2F%2Ftheconversation.com%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980&amp;subject=Black-market+lottery%3A+organ+donation+and+the+international+transplant+trade+on+The+Conversation" target="_blank"><i class="icon-email"></i> <span>Email</span></a>
+    </li>
+
+    <li class="twitter">
+      <a class="twitter-button" data-url="http://theconversation.com/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980" href="http://twitter.com/intent/tweet?text=Black-market+lottery%3A+organ+donation+and+the+international+transplant+trade&amp;url=http%3A%2F%2Ftheconversation.com%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980&amp;utm_campaign=none&amp;utm_medium=tweetbutton&amp;utm_source=twitter&amp;via=ConversationEDU" target="_blank"><i class="icon-twitter"></i> <span>Twitter</span></a><span class="data-count">59</span>
+    </li>
+
+    <li class="facebook">
+      <a class="facebook-button" data-url="http://theconversation.com/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftheconversation.com%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980&amp;utm_medium=facebookbutton&amp;utm_source=facebook" target="_blank"><i class="icon-facebook"></i> <span>Facebook</span></a>
+    </li>
+
+    <li class="linkedin">
+      <a class="linkedin-button" data-url="http://theconversation.com/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980" href="http://www.linkedin.com/shareArticle?mini=true&amp;source=The+Conversation&amp;summary=Estimates+suggest+%5Bmore+than+two+million+people%5D%28http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpubmed%2F23692370%29+worldwide+would+benefit+from+an+organ+transplant.+While+the+%5Bdonation+rates%5D%28http%3A%2F%2Fwww.organdonationra...&amp;title=Black-market+lottery%3A+organ+donation+and+the+international+transplant+trade&amp;url=http%3A%2F%2Ftheconversation.com%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980&amp;utm_medium=linkedinbutton&amp;utm_source=linkedin" target="_blank"><i class="icon-linkedin"></i> <span>LinkedIn</span></a>
+    </li>
+
+    <li class="reddit hide-on-mobile">
+      <a class="reddit-button" data-url="http://theconversation.com/black-market-lottery-organ-donation-and-the-international-transplant-trade-23980" href="http://www.reddit.com/submit?title=Black-market+lottery%3A+organ+donation+and+the+international+transplant+trade&amp;url=http%3A%2F%2Ftheconversation.com%2Fblack-market-lottery-organ-donation-and-the-international-transplant-trade-23980" target="_blank"><i class="icon-reddit"></i> <span>Reddit</span></a>
+    </li>
+  </ul>
+</div>
+
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="article-footer grid-sixteen grid-last">
+  <div class="grid-twelve">
+    <div class="grid-four">
+      <div class="social-media-call-to-action for-facebook">
+        <a href="https://www.facebook.com/theconversationUS" target="_blank" title="The Conversation on Facebook">
+          <i class="icon-facebook"></i> Like us on Facebook
+</a>      </div>
+
+      <div class="social-media-call-to-action for-twitter">
+        <a href="https://twitter.com/US_Conversation" target="_blank" title="The Conversation on Twitter">
+          <i class="icon-twitter"></i> Follow us on Twitter
+</a>      </div>
+    </div>
+
+    
+      <div class="grid-eight grid-last">
+        <div class="newsletter-subscription-call-to-action newsletter-signup-form">
+          <h2><i class="icon-email"></i> Sign up to our free daily newsletter</h2>
+          <form action="/subscriptions" method="post" class="subscribe">
+  <fieldset>
+    <label class="subscribe-email-label" for="subscribe_email">
+      Email address
+    </label>
+
+    <div class="field-wrapper">
+      <input class="email" id="subscribe_email" name="subscribe[email]" placeholder="Your email address" spellcheck="false" type="email" value="" />
+      <i class="success">✔</i>
+      <i class="icon-delete failure"></i>
+      <img alt="Spinner" class="spinner" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/spinner-bcad1d4bf4573cc2f43d9a25e8f81ae2.gif" />
+    </div>
+
+    <input id="subscribe_location" name="subscribe[location]" type="hidden" value="call-to-action-from-article" />
+
+      <fieldset class="regions select-boxes">
+    <select autocomplete="off" id="subscribe_regions_" name="subscribe[regions][]"><option value="au">Australia</option>
+<option value="uk">United Kingdom</option>
+<option selected="selected" value="us">United States</option></select>
+  </fieldset>
+
+
+    <input class="subscribe button subtle" name="subscribe" type="submit" value="Subscribe" />
+  </fieldset>
+</form>
+
+        </div>
+      </div>
+  </div>
+
+  
+</div>
+
+
+
+
+
+        </div>
+      </div>
+        <div id="page-footer"></div>
+
+    </div>
+
+    
+  <div id="footers">
+    
+    <section id="sub-footer">
+  <header>
+    <div class="wrapper nocontent">
+      <h2>The Conversation</h2>
+    </div>
+  </header>
+
+  <div class="wrapper nocontent">
+    <section class="community grid-five">
+      <h6>Community</h6>
+      <nav>
+        <ul>
+          <li><a href="/us/community-standards">Community standards</a></li>
+          <li><a href="/us/republishing-guidelines">Republishing guidelines</a></li>
+          <li><a href="/us/feeds"><i class="icon icon-rss-non-coloured"></i> Our feeds</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="company grid-five">
+      <h6>Company</h6>
+      <nav>
+        <ul>
+          <li><a href="/us/who-we-are">Who we are</a></li>
+          <li><a href="/us/charter">Our charter</a></li>
+          <li><a href="/us/team">Our team</a></li>
+          <li><a href="/columns/blog-26">Our blog</a></li>
+          <li><a href="/us/partners">Partners and funders</a></li>
+          <li><a href="/institutions">Contributing institutions</a></li>
+          <li><a href="/us/contact-us">Contact us</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="contact grid-five">
+      <h6>Contact</h6>
+      <nav>
+        <ul>
+          <li><span>Editorial</span> <a href="mailto:us-editorial@theconversation.com">us-editorial@theconversation.com</a></li>
+          <li><span>Support</span> <a href="mailto:support@theconversation.com">support@theconversation.com</a></li>
+        </ul>
+      </nav>
+      <div class="newsletter-signup-form">
+        <h6>Subscribe to our Newsletters</h6>
+        <form action="/subscriptions" method="post" class="subscribe">
+  <fieldset>
+    <label class="subscribe-email-label" for="subscribe_email">
+      Email address
+    </label>
+
+    <div class="field-wrapper">
+      <input class="email" id="subscribe_email" name="subscribe[email]" placeholder="Your email address" spellcheck="false" type="email" value="" />
+      <i class="success">✔</i>
+      <i class="icon-delete failure"></i>
+      <img alt="Spinner" class="spinner" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/spinner-bcad1d4bf4573cc2f43d9a25e8f81ae2.gif" />
+    </div>
+
+    <input id="subscribe_location" name="subscribe[location]" type="hidden" value="footer" />
+
+      <fieldset class="regions check-boxes">
+      <label for="subscribe_au">
+        <input class="checkbox_au" id="subscribe_au" name="subscribe[regions][]" type="checkbox" value="au" />
+        <span class="full_name">Australia</span>
+        <span class="short_code">au</span>
+      </label>
+      <label for="subscribe_uk">
+        <input class="checkbox_uk" id="subscribe_uk" name="subscribe[regions][]" type="checkbox" value="uk" />
+        <span class="full_name">United Kingdom</span>
+        <span class="short_code">uk</span>
+      </label>
+      <label for="subscribe_us">
+        <input checked="checked" class="checkbox_us" id="subscribe_us" name="subscribe[regions][]" type="checkbox" value="us" />
+        <span class="full_name">United States</span>
+        <span class="short_code">us</span>
+      </label>
+  </fieldset>
+
+
+    <input class="subscribe button subtle" name="subscribe" type="submit" value="Subscribe" />
+  </fieldset>
+</form>
+
+      </div>
+    </section>
+  </div>
+</section>
+
+    <footer id="footer">
+  <div class="wrapper nocontent">
+    <nav>
+      <a href="/us/privacy-policy">Privacy policy</a>
+      <a href="/us/terms-and-conditions">Terms and conditions</a>
+      <a href="/us/corrections">Corrections</a>
+      
+  <script>
+    (function () {
+      var d = new Image(1, 1);
+      d.onerror = d.onload = function () {
+        d.onerror = d.onload = null;
+      };
+      d.src = ["//secure-au.imrworldwide.com/cgi-bin/m?ci=theconversation&cg=o&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+    })();
+  </script>
+  <noscript>
+    <div>
+      <img src="//secure-au.imrworldwide.com/cgi-bin/m?ci=theconversation&amp;cg=o&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="">
+    </div>
+  </noscript>
+
+      <script>
+  (function() {
+    var img = document.createElement('img'); img.width = 1; img.height = 1;
+    img.src = 'https://www.facebook.com/tr?id=1517004835184558&amp;ev=NoScript';
+    img.style.display = "none";
+    var s = document.getElementsByTagName('footer')[0]; s.parentNode.insertBefore(img, s);
+  })();
+</script>
+
+    </nav>
+    <p class="copyright">
+      <span>Copyright &copy; 2010–2014</span><span class="comma">, </span><span><a href="/us/who-we-are">The Conversation US, Inc.</a></span>
+    </p>
+  </div>
+</footer>
+
+  </div>
+
+    <nav id="editorial-menu">
+  </nav>
+
+  </div>
+
+  <script src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/vendored-0b3075e23c326e41cc513faf38ce136a.js"></script>
+<script src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/application-c762e52158c0e4cafc55b66a52c4f6dc.js"></script>
+  <script>
+//<![CDATA[
+
+    TC.time = new TC.TimeFormatter('en_us')
+    TC.currentUser = new TC.User(null);
+      TC.page = new TC.ContentPage({
+    content_id: 23980,
+    content_slug: "black-market-lottery-organ-donation-and-the-international-transplant-trade-23980",
+    comments_closed_at: ""
+  });
+
+
+//]]>
+</script>
+  
+</body>
+</html>
+r = ne

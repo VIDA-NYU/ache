@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en" dir="ltr"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Cholera in Haiti: The UN strain | The Economist</title>
+  <link rel="next" href="http://www.economist.com/blogs/americasview/2013/07/cholera-haiti?page=1" />
+<link rel="shortcut icon" href="http://cdn.static-economist.com/sites/default/files/econfinal_favicon.ico" type="image/x-icon" />
+<script src="//tags.extole.com/99006/core.js"></script>
+<script language="javascript">
+  var gs_channels = "default";
+</script>
+<script language="javascript" type="text/javascript"
+src="//economist.gscontxt.net/main/channels.cgi?url=http%3A%2F%2Fwww.economist.com%2Fblogs%2Famericasview%2F2013%2F07%2Fcholera-haiti">
+</script>
+<script type="text/javascript">
+  if (typeof gs_channels === "undefined") { gs_channels = "default"; }
+  var googletag = googletag || {};
+  var econgpt = econgpt || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {    var gads = document.createElement("script");
+    gads.async = true;
+    gads.type = "text/javascript";
+    var useSSL = "https:" == document.location.protocol;
+    gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+    var node = document.getElementsByTagName("script")[0];
+    node.parentNode.insertBefore(gads, node);  })();
+</script><script type="text/javascript">
+  googletag.cmd.push(function() {  econgpt.gpt_leaderboard_ad = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [[728,90], [970,90], [970,250]], 'gpt_leaderboard_ad').addService(googletag.pubads()).setTargeting('dcopt', 'ist').setTargeting('pos', 'ldr_top').setTargeting('tile', '1').setTargeting('gs_cat', gs_channels);  econgpt.gpt_mpu_no_wrapper_top_ad = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [20,20], 'gpt_mpu_no_wrapper_top_ad').addService(googletag.pubads()).setTargeting('pos', 'mpu_no_wrapper_top').setTargeting('tile', '6').setTargeting('gs_cat', gs_channels);  econgpt.gpt_top_mpu_ad = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [[300,250], [350,900], [350,600], [300,600]], 'gpt_top_mpu_ad').addService(googletag.pubads()).setTargeting('pos', 'mpu_top').setTargeting('tile', '7').setTargeting('gs_cat', gs_channels);  econgpt.gpt_ribbon_ad = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [351,49], 'gpt_ribbon_ad').addService(googletag.pubads()).setTargeting('pos', 'absribbon').setTargeting('tile', '8').setTargeting('gs_cat', gs_channels);  econgpt.gpt_pencil_slug_ad = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [970,35], 'gpt_pencil_slug_ad').addService(googletag.pubads()).setTargeting('pos', 'pslug_top').setTargeting('tile', '3').setTargeting('gs_cat', gs_channels);  econgpt.gpt_subscription_ad = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [223,90], 'gpt_subscription_ad').addService(googletag.pubads()).setTargeting('pos', 'sub_top').setTargeting('tile', '2').setTargeting('gs_cat', gs_channels);  econgpt.gpt_slider_ad = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [1,1], 'gpt_slider_ad').addService(googletag.pubads()).setTargeting('pos', 'slider').setTargeting('tile', '11').setTargeting('gs_cat', gs_channels);  econgpt.gpt_adcast = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [250,1000], 'gpt_adcast').addService(googletag.pubads()).setTargeting('pos', 'adcast').setTargeting('tile', '12').setTargeting('gs_cat', gs_channels);  econgpt.gpt_button_ad_1 = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [125,125], 'gpt_button_ad_1').addService(googletag.pubads()).setTargeting('pos', 'button1').setTargeting('gs_cat', gs_channels);  econgpt.gpt_button_ad_2 = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [125,125], 'gpt_button_ad_2').addService(googletag.pubads()).setTargeting('pos', 'button2').setTargeting('gs_cat', gs_channels);  econgpt.gpt_button_ad_3 = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [125,125], 'gpt_button_ad_3').addService(googletag.pubads()).setTargeting('pos', 'button3').setTargeting('gs_cat', gs_channels);  econgpt.gpt_button_ad_4 = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [125,125], 'gpt_button_ad_4').addService(googletag.pubads()).setTargeting('pos', 'button4').setTargeting('gs_cat', gs_channels);  econgpt.gpt_button_ad_5 = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [125,125], 'gpt_button_ad_5').addService(googletag.pubads()).setTargeting('pos', 'button5').setTargeting('gs_cat', gs_channels);  econgpt.gpt_button_ad_6 = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [125,125], 'gpt_button_ad_6').addService(googletag.pubads()).setTargeting('pos', 'button6').setTargeting('gs_cat', gs_channels);  econgpt.gpt_bottom_mpu_ad = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [[300,250], [50,50], [300,600]], 'gpt_bottom_mpu_ad').addService(googletag.pubads()).setTargeting('pos', 'mpu_bottom').setTargeting('tile', '9').setTargeting('gs_cat', gs_channels);  econgpt.gpt_bottom_right_mpu_ad = googletag.defineSlot("/5605/teg.tdqk/ameh/a", [[300,250], [45,45]], 'gpt_bottom_right_mpu_ad').addService(googletag.pubads()).setTargeting('pos', 'mpu_bottom_right').setTargeting('tile', '10').setTargeting('gs_cat', gs_channels);    googletag.pubads().setTargeting('subs', 'n').setTargeting('wsub', 'n').setTargeting('sdn', 'n');
+    googletag.pubads().enableSingleRequest();googletag.pubads().setTargeting("gs_cat", gs_channels);
+    googletag.pubads().collapseEmptyDivs();    googletag.enableServices();
+  });
+</script><script type="text/javascript">/* global $, Econ */
+/**
+ * Add event listeners to GPT ad rendering.
+ *
+ * @param context
+ */
+if (typeof Econ === "undefined") {
+  Econ = {};
+}
+Econ.gpt = Econ.gpt || {};
+Econ.gpt.attach = Econ.gpt.attach || {};(function(){
+  "use strict";  var deltaPrefix = 'block-ec_ads-',
+      deltaSuffix = '_ad';
+  Econ.gpt.wide_leader = false;
+  /**
+   * Implements Econ.gpt.attach.HOOK
+   * @param googletag_ref
+   */
+  Econ.gpt.attach.ecAds = function(googletag_ref) {
+    googletag_ref.pubads().addEventListener('slotRenderEnded', function(event) {
+      var pos = event.slot.getTargeting("pos")[0],
+          adBlock,
+          adLabel,
+          domSlotID;
+      // When ads are rendered in the ldr_top slot,
+      // we check the size so we know if we need to show the pencil slug or not.
+      domSlotID = event.slot.getSlotId().getDomId();
+      if (pos === "ldr_top") {
+        // If it is fully wide, then remove the subscription ad.
+        if (Number(event.size[0]) === 970) {
+          Econ.gpt.wide_leader = true;
+          // We need to call this behavior because if we are in async mode, the ads are called AFTER document-ready
+          // and the behavior may have already been called before the ad finished rendering.
+          Drupal.behaviors.ecGPTPencilSlug(document);
+        }
+      }      // Remove empty ad slots. We stay in sync with the "collapsed div" motif. Google adds a display: none to ads
+      // that are empty, so we just put our wrapper insync with that.
+      if($('#' + domSlotID).length !== 0 && $('#' + domSlotID).css('display') === 'none') {
+        $('#' + domSlotID).parents('.block-ec_ads').css('display', 'none');
+      }
+      else {
+        $('#' + domSlotID).parents('.block-ec_ads').css('display', '');
+      }      // For special reports sponsor ads. The POS for these is "undefined".
+      if (domSlotID.substr(0, 21) === 'gpt_sponsored_sr_logo') {
+        $('#' + domSlotID).css('float', 'right');
+      }      // For mobile, we are displaying ads using the refresh method,
+      // which means we need to restore the Advertisemnt label.
+      if (pos.substr(0,10) === 'mobile_mpu') {
+        adBlock = document.getElementById(deltaPrefix + pos + deltaSuffix);
+        if (adBlock.className.indexOf('processed') === -1) {
+          adBlock.insertBefore(adLabel, adBlock.firstChild);
+          adBlock.className += ' processed';
+        }
+      }
+    });
+  };
+})();
+</script>
+<link rel="canonical" href="http://www.economist.com/blogs/americasview/2013/07/cholera-haiti" />
+<meta name="description" content="Authoritative weekly newspaper focusing on international politics and business news and opinion." />
+<meta name="article:publisher" content="https://www.facebook.com/theeconomist" />
+<meta name="articleid" content="21581878" />
+<meta name="news_keywords" content="Cholera in Haiti, Political policy, Politics, International relations, War and conflict, Peacekeeping and security, Government and politics, Contagious and infectious diseases" />
+<meta name="pubdate" content="20130715" />
+<meta name="revisit-after" content="1 day" />
+<meta name="sailthru.date" content="1970-01-01 00:00:00" />
+<meta name="sailthru.image.full" content="http://cdn.static-economist.com/sites/default/files/images/2013/07/blogs/americas-view/20130720_amp501.jpg" />
+<meta name="sailthru.image.thumb" content="http://cdn.static-economist.com/sites/default/files/imagecache/50_by_50/images/2013/07/blogs/americas-view/20130720_amp501.jpg" />
+<meta name="sailthru.tags" content="Cholera in Haiti, Political policy, Politics, International relations, War and conflict, Peacekeeping and security, Government and politics, Contagious and infectious diseases" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@EconA, Political policy, Politics, International relations, War and conflict, Peacekeeping and security, Governmemericas" />
+<meta name="twitter:image" content="https://cdn.static-economist.com/sites/default/files/images/2013/07/blogs/americas-view/20130720_amp501.jpg" />
+<meta name="twitter:site" content="@TheEconomist" />
+<meta property="fb:app_id" content="173277756049645" />
+<meta property="og:description" content="ON JULY 5th the United Nations refused, again, to countenance the claims of 5,000 cholera-affected Haitians against it. The Haitians contend that grossly inadequate..." />
+<meta property="og:image" content="http://cdn.static-economist.com/sites/default/files/images/2013/07/blogs/americas-view/20130720_amp501.jpg" />
+<meta property="og:site_name" content="The Economist" />
+<meta property="og:title" content="The UN strain" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.economist.com/blogs/americasview/2013/07/cholera-haiti" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://cdn.static-economist.com/sites/default/files/images/icons/apple-touch-icon-144x144.png" /><link rel="apple-touch-icon" sizes="120x120" href="http://cdn.static-economist.com/sites/default/files/images/icons/apple-touch-icon-120x120.png" /><link rel="apple-touch-icon" sizes="114x114" href="http://cdn.static-economist.com/sites/default/files/images/icons/apple-touch-icon-114x114.png" /><link rel="apple-touch-icon" sizes="72x72" href="http://cdn.static-economist.com/sites/default/files/images/icons/apple-touch-icon-72x72.png" /><link rel="apple-touch-icon" href="http://cdn.static-economist.com/sites/default/files/images/icons/touch-icon-iphone.png" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://cdn.static-economist.com/sites/default/files/images/icons/apple-touch-icon-144x144-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://cdn.static-economist.com/sites/default/files/images/icons/apple-touch-icon-120x120-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://cdn.static-economist.com/sites/default/files/images/icons/apple-touch-icon-114x114-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://cdn.static-economist.com/sites/default/files/images/icons/apple-touch-icon-72x72-precomposed.png"><link rel="apple-touch-icon-precomposed" href="http://cdn.static-economist.com/sites/default/files/images/icons/touch-icon-iphone-precomposed.png">  <link type="text/css" rel="stylesheet" media="all" href="http://cdn.static-economist.com/sites/default/files/css/css_cb55f53aeab90c43a0fa886e41c33009.css" />
+  <!--[if IE 9]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/econfinal/styles/ie9.css?Q" />
+<![endif]-->
+<!--[if IE 8]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/econfinal/styles/ie8.css?Q" />
+<![endif]-->
+<!--[if IE 7]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/econfinal/styles/ie7.css?Q" />
+<![endif]-->
+<!--[if lte IE 6]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/econfinal/styles/ie6.css?Q" />
+<![endif]-->  <link rel="publisher" href="https://plus.google.com/100470681032489535736" />
+  <script type="text/javascript" src="http://cdn.static-economist.com/sites/default/files/js/js_212a700b610dfc652e8b6851f50bb753.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","offline":{"now":1420617273},"insert":{"widgets":{"imagefield_widget":{"fields":{"use_original_size":"input:checked[name$=\"[use_original_size]\"]","image_link":"input:textfield[name$=\"[image_link]\"]"}}}},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"ec_user_settings":{"auto_select_country":true},"omniture":{"edge_server":"economistcomprod","click_tracking":[{"name":"blogs_nav_bottom|prev","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"blogs_nav_bottom|next","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"bookmark|social_buttons|bookmark_saved","selector":"data-ec-omniture","link_track_vars":"prop45","event":"click","edge_server":"economistcomprod"},{"name":"bookmark|social_buttons|learn_more","selector":"data-ec-omniture","link_track_vars":"prop45","event":"click","edge_server":"economistcomprod"},{"name":"blogs_nav_top|prev","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"blogs_nav_top|next","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"blogs_nav_top|blog_site","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"blogs_nav_top|all_blogs","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|linked-in","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|tumblr","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|pinterest","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|youtube","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|rss","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"rightrail|social_share|newsletters","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mtblog|latestupdates_block|0|how_maps_are_biased","selector":"#column-right .block-ec_blogs #node-21633587","event":"click","edge_server":"economistcomprod"},{"name":"mtblog|latestupdates_block|1|just_like_airbnb","selector":"#column-right .block-ec_blogs #node-21637333","event":"click","edge_server":"economistcomprod"},{"name":"mtblog|latestupdates_block|2|recycling_rockets","selector":"#column-right .block-ec_blogs #node-21637969","event":"click","edge_server":"economistcomprod"},{"name":"mtblog|latestupdates_block|3|spreading_his_wings","selector":"#column-right .block-ec_blogs #node-21637938","event":"click","edge_server":"economistcomprod"},{"name":"mtblog|latestupdates_block|4|marriott_is_bad_and_should_feel_bad","selector":"#column-right .block-ec_blogs #node-21637877","event":"click","edge_server":"economistcomprod"},{"name":"mtblog|latestupdates_block|5|a_fine_way_to_start_the_year","selector":"#column-right .block-ec_blogs #node-21637919","event":"click","edge_server":"economistcomprod"},{"name":"mtblog|latestupdates_block|6|lets_talk_about_sex","selector":"#column-right .block-ec_blogs #node-21637933","event":"click","edge_server":"economistcomprod"},{"name":"latestupdates_block|more","selector":"#column-right .block-ec_blogs .more-latest-updates","event":"click","edge_server":"economistcomprx","selector":"#coluod"},{"name":"latestupdates_block|header","selector":"#column-right .block-ec_blogs .title","event":"click","edge_server":"economistcomprod"},{"name":"other|rightrail|most_commented|head0","selector":"a#track-commented-21637348","event":"click","edge_server":"economistcomprod"},{"name":"other|rightrail|most_commented|head1","selector":"a#track-commented-21637820","event":"click","edge_server":"economistcomprod"},{"name":"other|rightrail|most_commented|head2","selector":"a#track-commented-21637440","event":"click","edge_server":"economistcomprod"},{"name":"other|rightrail|most_commented|head3","selector":"a#track-commented-21637418","event":"click","edge_server":"economistcomprod"},{"name":"other|rightrail|most_commented|head4","selector":"a#track-commented-21637467","event":"click","edge_server":"economistcomprod"},{"name":"permar|image1","selector":"#pmfa-wide1 ul.image-body li#pmfa-wide1-0 a","event":"click","edge_server":"economistcomprod"},{"name":"permar|link1","selector":"div.text-body ul li#pmfa-wide1-0 a","event":"click","edge_server":"economistcomprod"},{"name":"permar|image2","selector":"#pmfa-wide1 ul.image-body li#pmfa-wide1-1 a","event":"click","edge_server":"economistcomprod"},{"name":"permar|link2","selector":"div.text-body ul li#pmfa-wide1-1 a","event":"click","edge_server":"economistcomprod"},{"name":"permar|image3","selector":"#pmfa-wide1 ul.image-body li#pmfa-wide1-2 a","event":"click","edge_server":"economistcomprod"},{"name":"permar|link3","selector":"div.text-body ul li#pmfa-wide1-2 a","event":"click","edge_server":"economistcomprod"},{"name":"permar|link4","selector":"div.text-body ul li#pmfa-wide1-3 a","event":"click","edge_server":"economistcomprod"},{"name":"permar|link5","selector":"div.text-body ul li#pmfa-wide1-4 a","event":"click","edge_server":"economistcomprod"},{"name":"permar|link6","selector":"div.text-body ul li#pmfa-wide1-5 a","event":"click","edge_server":"economistcomprod"},{"name":"print_content","selector":"data-ec-omniture","ud_process_prop":"prop18","ud_process_val":"username","link_track_vars":"prop18,prop5,eVar24,eVar31,events","prop18":null,"prop5":"The UN strain","eVar24":"The UN strain","eVar31":"mtblog","events":"event12","event":"click","edge_server":"economistcomprod","link_track_events":"event12"},{"name":"reprints_permissions","selector":"data-ec-omniture","ud_process_prop":"prop18","ud_process_val":"username","link_track_vars":"prop18,prop5,eVar24,eVar31,events","prop18":null,"prop5":"The UN strain","eVar24":"The UN strain","eVar31":"mtblog","events":"event38","event":"click","edge_server":"economistcomprod","link_track_events":"event38"},{"name":"email_a_friend","selector":"data-ec-omniture","ud_process_prop":"prop18","ud_process_val":"username","link_track_vars":"prop18,prop5,eVar24,eVar31,events","prop18":null,"prop5":"The UN strain","eVar24":"The UN strain","eVar31":"mtblog","events":"event81","event":"click","edge_server":"economistcomprod","link_track_events":"event81"},{"name":"footer_reddit","selector":"data-ec-omniture","ud_process_prop":"prop18","ud_process_val":"username","link_track_vars":"prop18,prop5,eVar24,eVar31,events","prop18":null,"prop5":"The UN strain","eVar24":"The UN strain","eVar31":"mtblog","events":"event33","event":"click","edge_server":"economistcomprod","link_track_events":"event33"},{"name":"masthead|act_prod|cookie","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"recommend_comment","selector":"data-ec-omniture","events":"event36","eVar31":"comment","link_track_events":"event36","prop18":null,"link_track_vars":"prop18,eVar31,events","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|contact_us","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|help","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|my_account","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|subscribe","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|print_edition","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|digital_editions","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|events","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|jobs_economist_com","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|timekeeper_saved_articles","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|united_states","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|britain","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|europe","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|china","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|asia","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|americas","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|middle_east_africa","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|international","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|business_finance","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|economics","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|markets_data","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|science_technology","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|special_reports","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|culture","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|multimedia_library","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_debates","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|what_the_world_thinks","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|letters_to_the_editor","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_quiz","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|buttonwoods_notebook","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|democracy_in_america","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|erasmus","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|free_exchange","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|game_theory","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|graphic_detail","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|gulliver","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|prospero","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_explains","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|topics","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|economics_a_z","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|style_guide","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_world_in_2015","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|which_mba_","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_gmat_tutor","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|reprints_and_permissions","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_group","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_intelligence_unit","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_intelligence_unit_store","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_corporate_network","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|ideas_people_media","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|intelligent_life","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|roll_call","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|cq","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|eurofinance","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|the_economist_store","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"mini_map|view_complete_site_index_","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|politics_this_week","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|united_states","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|britain","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|europe","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|china","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|asia","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|americas","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|middle_east_africa","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|international","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|first_level|world_politics","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|all_business_finance","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|which_mba_","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|first_level|business_finance","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|all_economics","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|economics_by_invitation","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|economics_a_z","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|markets_data","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|indicators","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|first_level|economics","selector":"data-ec-omniture","link_track_vars":"prop15","event":"cliname":"masthead|sec_level|indicators","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|first_level|economics","selector":"data-ec-omniture","link_tck","edge_server":"economistcomprod"},{"name":"masthead|sec_level|all_science_technology","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|technology_quarterly","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|first_level|science_technology","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|all_culture","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|more_intelligent_life","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|style_guide","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|the_economist_quiz","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|first_level|culture","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|latest_updates","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|buttonwoods_notebook","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|democracy_in_america","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|erasmus","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|free_exchange","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|game_theory","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|graphic_detail","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|gulliver","selector":"data-ec-omniture","link_track_vars":"prop15","event"},{"name":"masthead|sec_level|graphic_detail","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|prospero","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|the_economist_explains","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|first_level|blogs","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|economist_debates","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|what_the_world_thinks","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|economics_by_invitation","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|letters_to_the_editor","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|first_level|debate","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|multimedia_library","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|in_other_words","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|the_economist_in_audio","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|first_level|multimedia","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|current_issue","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|previous_issues","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|special_reports","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|politics_this_week","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|business_this_week","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|leaders","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|sec_level|kals_cartoon","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_asthead|sec_level|leaders","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"mastheaserver":"economistcomprod"},{"name":"masthead|sec_level|obituaries","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|first_level|print_edition","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"footer|contact_us","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|help","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|about_us","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|advertise_with_us","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|editorial_staff","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|staff_books","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|careers","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|site_index","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|accessibility","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|privacy_policy","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|cookies_info","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"footer|terms_of_use","selector":"data-ec-omniture","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|digital","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|jobs","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|my_subscription","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|renew","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|the_economist_store","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|bookmarks","selector":"data-ec-omniture","link_track_vars":"prop45","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|login","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|logout","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|my_account","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|subscribe","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|newsletters","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|events","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|topics","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|digital_mobile","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|rss","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|jobs","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|facebook","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|twitter","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|extra-shares","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},"selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|extra-shares","selector":"data-ec-omniture","link_track_vars":"prop15","even{"name":"masthead|act_prod|google-plus","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|linked-in","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"},{"name":"masthead|act_prod|tumblr","selector":"data-ec-omniture","link_track_vars":"prop15","event":"click","edge_server":"economistcomprod"}],"click_tracking_frames":["click_tracking_follow_fb","click_tracking_follow_twitter","click_tracking_top_twitter","click_tracking_footer_twitter","click_tracking_footer_linkedin","click_tracking_footer_plusone","click_tracking_top_fb","click_tracking_footer_fb"],"click_tracking_follow_fb":[{"name":"follow_fb","selector":"data-ec-omniture-frame","event":"click","edge_server":"economistcomprod"}],"click_tracking_follow_twitter":[{"name":"follow_twitter","selector":"data-ec-omniture-frame","event":"click","edge_server":"economistcomprod"}],"click_tracking_top_twitter":[{"name":"top_twitter","selector":"data-ec-omniture-frame","ud_process_prop":"prop18","ud_process_val":"username","link_track_vars":"prop18,prop5,eVar24,eVar31,events","prop18":null,"prop5":"The UN strain","eVar24":"The UN strain","eVar31":"mtblog","events":"event31","event":"click","edge_server":"economistcomprod","link_track_events":"event31"}],"click_tracking_footer_twitter":[{"name":"footer_twitter","selector":"data-ec-omniture-frame","ud_process_prop":"prop18","ud_process_val":"username","link_track_vars":"prop18,prop5,eVar24,eVar31,events","prop18":null,"prop5":"The UN strain","eVar24":"The UN strain","eVar31":"mtblog","events":"event31","event":"click","edge_server":"economistcomprod","link_track_events":"event31"}],"click_tracking_footer_linkedin":[{"name":"footer_linkedin","selector":"data-ec-omniture-frame","ud_process_prop":"prop18","ud_process_val":"username","link_track_vars":"prop18,prop5,eVar24,eVar31,events","prop18":null,"prop5":"The UN strain","eVar24":"The UN strain","eVar31":"mtblog","events":"event34","event":"click","edge_server":"economistcomprod","link_track_events":"event34"}],"click_tracking_footer_plusone":[{"name":"footer_plusone","selector":"data-ec-omniture-frame","ud_process_prop":"prop18","ud_process_val":"username","link_track_vars":"prop18,prop5,eVar24,eVar31,events","prop18":null,"prop5":"The UN strain","eVar24":"The UN strain","eVar31":"mtblog","events":"event35","event":"click","edge_server":"economistcomprod","link_track_events":"event35"}],"click_tracking_top_fb":[{"name":"top_fb","selector":"data-ec-omniture-frame","ud_process_prop":"prop18","ud_process_val":"username","link_track_vars":"prop18,prop5,eVar24,eVar31,events","prop18":null,"prop5":"The UN strain","eVar24":"The UN strain","eVar31":"mtblog","events":"event32","event":"click","edge_server":"economistcomprod","link_track_events":"event32"}],"click_tracking_footer_fb":[{"name":"footer_fb","selector":"data-ec-omniture-frame","ud_process_prop":"prop18","ud_process_val":"username","link_track_vars":"prop18,prop5,eVar24,eVar31,events","prop18":null,"prop5":"The UN strain","eVar24":"The UN strain","eVar31":"mtblog","events":"event32","event":"click","edge_server":"economistcomprod","link_track_events":"event32"}]},"paywallMetered":{"1":{"pid":"1","nid":"21581878","referrers":["google","bing","yahoo","baidu","film.economist.com","facebookexternalhit"],"limit":"2","timeFrame":"fixedperiod","nrOfDays":"7","fixedDay":"Friday","nidCookie":"ec_nidlist","wallCookie":"ec_limit","timeOut":"0","enabled":"1"},"2":{"pid":"2","nid":"21581878","referrers":["google","bing","yahoo","baidu","film.economist.com","facebookexternalhit"],"limit":"3","timeFrame":"fixedperiod","nrOfDays":"7","fixedDay":"Friday","nidCookie":"ec_nidlist","wallCookie":"ec_limit","timeOut":"0","enabled":"1"}},"EconStyles":[{"title":"Pull quote","description":"Better reading","outputTemplate":"\u003cdiv class=\"pullquote\"\u003e{$selection}\u003c\/div\u003e"}],"cdn":{"cdnPath":"http:\/\/cdn.static-economist.com","cdnPathPNG":"http:\/\/cdn.static-economist.com"},"reprints_link":"http:\/\/s100.copyright.com\/AppDispatchServlet?publisherName=economist\u0026publication=economist\u0026title=The%20UN%20strain\u0026publicationDate=20130715\u0026contentID=21581878\u0026type=BL\u0026orderBeanReset=0\u0026srTitle=","ecGPT":{"isAsync":true},"ecAds":{"ad_site":"teg","ad_zone":"ameh\/a","sitecode":"tdqk","ad_call_type":"gpt","subs":"n","wsub":"n","sdn":"n","sz_nojs":"20x20"},"ec_mostx_active_tab":"commented","bluekai":{"siteID":18452},"ecCookieMessage":{"cid":"ec_cookie_message_","version":0},"ecPixelTracking":{"adroit":{"countries":["US"],"scriptUrl":"\/\/www.imiclk.com\/cgi\/r.cgi?m=3\u0026mid=Ay3XMfb1\u0026ptid=HOME"},"adRoll":{"adroll_adv_id":"TUF7H3BZCBAHZFLLGT7ESC","adroll_pix_id":"M2QLJYFHCFGHRNKOCEEIEJ"},"adsrvr":{"countries":["IN"],"regions":["AP"],"scriptUrl":"\/\/insight.adsrvr.org\/track\/evnt\/?adv=5gu6big\u0026ct=0:2qbfzvew\u0026fmt=3"},"fosina":{"countries":["US"],"scriptUrl":"\/\/secure.fastclick.net\/w\/roitrack.cgi?aid=1000045446"},"IDMedia":{"countries":["US","CA"],"scriptUrl":"\/\/d1cerpgff739r9.cloudfront.net\/tt-21eb478c997305f06e5e0d043d3ec5acc63a85938da69e14f239f34a8348fc54.js"},"media_math":{"countries":["IN"],"regions":["AP"],"imageUrl":"\/\/insight.adsrvr.org\/track\/evnt\/?adv=5gu6big\u0026ct=0:zx1ys9qy\u0026fmt=3"},"the_trade_desk":{"countries":["IN"],"regions":["AP"],"scriptUrl":"\/\/pixel.mathtag.com\/event\/js?mt_id=413291\u0026mt_adid=120100\u0026v1=\u0026v2=\u0026v3=\u0026s1=\u0026s2=\u0026s3="},"turn":{"countries":["IN"],"regions":["AP"],"imageUrl":"\/\/r.turn.com\/r\/beacon?b2=R_QfAflH-jzroqgoR-7UpyoPLd4h6zhRDu90-2mSJwKPFE1jUk1i_ZKaX90YPbtpfum-xQNkFnpSs2wXvdPFSg\u0026cid=\u0026bprice="},"polar":{"scriptUrl":"\/\/plugin.mediavoice.com\/customers\/economist\/mediavoice.js"}},"ecExtole":{"enabled":1,"countries":{"73":73}},"q":"node\/21581878","alias":"blogs\/americasview\/2013\/07\/cholera-haiti","nid":"21581878","uid":0,"ecHomepage":{"isFront":false},"ecRegOverlayShowOnLoad":true,"EcRegOverlayEnabled":1,"ec_google_cse":{"cx":"013751040265774567329:ylv-hrexwbc","resultsUrl":"http:\/\/www.economist.com\/search\/gcs","gname":"economist-search","queryParameterName":"ss","fromurl":"\/blogs\/americasview\/2013\/07\/cholera-haiti","noResultsString":"Your query returned no results. Please try a different search term. (Did you check your spelling? You can also try rephrasing your query or using more general search terms.)","isResultsPage":false,"omnitureTrackerId":"gsc-i-id1"},"loginform":{"action":"https:\/\/www.economist.com\/user\/login?destination=node%2F21581878"},"formvalidation":{"formname":"#user-login"},"popups":{"originalCSS":{"\/modules\/node\/node.css":1,"\/modules\/poll\/poll.css":1,"\/modules\/system\/defaults.css":1,"\/modules\/system\/system.css":1,"\/modules\/system\/system-menus.css":1,"\/modules\/user\/user.css":1,"\/sites\/all\/modules\/cck\/theme\/content-module.css":1,"\/sites\/all\/modules\/contrib\/oembed\/oembed.css":1,"\/sites\/all\/modules\/ctools\/css\/ctools.css":1,"\/sites\/all\/modules\/custom\/ec_cookie_message\/css\/ec_cookie_message.css":1,"\/sites\/all\/modules\/custom\/ec_messaging\/css\/ec_messaging.css":1,"\/sites\/all\/modules\/date\/date.css":1,"\/sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"\/sites\/all\/modules\/date\/date_popup\/themes\/jquery.timeentry.css":1,"\/sites\/all\/modules\/ec_components\/css\/ec_tip.css":1,"\/sites\/all\/modules\/ec_offline\/styles\/ec_offline_online.css":1,"\/sites\/all\/modules\/ec_vote\/css\/ec_vote.css":1,"\/sites\/all\/modules\/filefield\/filefield.css":1,"\/sites\/all\/modules\/logintoboggan\/logintoboggan.css":1,"\/sites\/all\/modules\/mollom\/mollom.css":1,"\/sites\/all\/modules\/og\/theme\/og.css":1,"\/sites\/all\/modules\/video_filter\/video_filter.css":1,"\/sites\/all\/modules\/wysiwyg_fontcolor\/tinymce\/fontcolor\/css\/fontcolor.css":1,"\/sites\/all\/modules\/ec_comments\/css\/ec_comments.css":1,"\/sites\/all\/modules\/cck\/modules\/fieldgroup\/fieldgroup.css":1,"\/sites\/all\/modules\/views\/css\/views.css":1,"\/sites\/all\/modules\/ec_omniture\/ec_omniture_link_tracking.css":1,"\/sites\/all\/modules\/custom\/wysiwyg_econstyles\/tinymce\/econstyles\/css\/econstyles_editor.css":1,"\/sites\/all\/modules\/ec_offers\/css\/ec-offers.css":1,"\/sites\/all\/modules\/wysiwyg_fontcolor\/tinymce\/fontcolor\/css\/fontcolor_editor.css":1,"\/sites\/all\/modules\/ec_components\/css\/ec_components.css":1,"\/sites\/all\/modules\/custom\/ec_bookmark\/css\/ec_bookmark.css":1,"\/sites\/all\/modules\/ec_ads\/css\/ec_ads.css":1,"\/sites\/all\/modules\/ec_ads\/css\/ec_ads_topic_ribbon.css":1,"\/sites\/all\/modules\/custom\/ec_social\/ec-social-share-follow.css":1,"\/sites\/all\/modules\/ec_ads\/css\/ec_ads_slider.css":1,"\/sites\/all\/modules\/ec_ads\/css\/ec_ads_overlay.css":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_extole\/ec_pixel_tracking_extole.css":1,"\/sites\/all\/modules\/ec_homepage\/ec_homepage-overlay.css":1,"\/sites\/all\/modules\/custom\/ec_google_cse\/css\/ec_google_cse.css":1,"\/sites\/all\/themes\/econfinal\/styles\/reset.css":1,"\/sites\/all\/themes\/econfinal\/styles\/grid.css":1,"\/sites\/all\/themes\/econfinal\/styles\/style.css":1,"\/sites\/all\/themes\/econfinal\/styles\/components.css":1,"\/sites\/all\/themes\/econfinal\/styles\/typography.css":1,"\/sites\/all\/themes\/econfinal\/styles\/skins.css":1,"\/sites\/all\/themes\/econfinal\/styles\/user-profile-comments.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-guest_contribution-tpl.css":1,"\all\/themes\/econfinal\/styles\/typography.css":1,"\/sites\/all\/themes\/eco/sites\/all\/themes\/econfinal\/styles\/page-header.css":1,"\/sites\/all\/themes\/econfinal\/styles\/page-navigation.css":1,"\/sites\/all\/themes\/econfinal\/styles\/page-ads.css":1,"\/sites\/all\/themes\/econfinal\/styles\/page-footer.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-homepage.css":1,"\/sites\/all\/themes\/econfinal\/styles\/page-taxonomy-term.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-issue.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-page-tools.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-print-cover.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-print-sub-ad.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-poll-article.css":1,"\/sites\/all\/themes\/econfinal\/styles\/captcha.css":1,"\/sites\/all\/themes\/econfinal\/styles\/site-index.css":1,"\/sites\/all\/themes\/econfinal\/styles\/inform-component.css":1,"\/sites\/all\/themes\/econfinal\/styles\/pager.css":1,"\/sites\/all\/themes\/econfinal\/styles\/block-blogs.css":1,"\/sites\/all\/themes\/econfinal\/styles\/block-products-events.css":1,"\/sites\/all\/themes\/econfinal\/styles\/block-radio.css":1,"\/sites\/all\/themes\/econfinal\/styles\/block-most-popular.css":1,"\/sites\/all\/themes\/econfinal\/styles\/block-daily-question.css":1,"\/sites\/all\/themes\/econfinal\/styles\/block-brightcove_player-playlist.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-daily-question.css":1,"\/sites\/all\/themes\/econfinal\/styles\/topic-page.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-rss-page.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-page-tpl.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-promotions-page-tpl.css":1,"\/sites\/all\/themes\/econfinal\/styles\/media-directory.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-user.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-user-block.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-highlight-block.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-glossary.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-charts.css":1,"\/sites\/all\/themes\/econfinal\/styles\/ec-sections.css":1,"\/sites\/all\/themes\/econfinal\/styles\/node-event.css":1,"\/sites\/all\/themes\/econfinal\/styles\/interactive-map.css":1,"\/sites\/all\/themes\/econfinal\/styles\/vendor-prexifed.css":1},"originalJS":{"\/sites\/all\/modules\/ec_ads\/ec_gpt\/js\/ec_gpt.js":1,"\/sites\/all\/modules\/ec_ajax_form\/js\/ec_ajax_form.js":1,"\/sites\/all\/modules\/ec_base\/js\/ec_base.js":1,"\/sites\/all\/modules\/ec_base\/js\/ec_console.js":1,"\/sites\/all\/modules\/ec_base\/js\/ec_analytics.js":1,"\/sites\/all\/modules\/ec_base\/js\/plugins\/jquery.ec_timeago.js":1,"\/sites\/all\/modules\/ec_base\/js\/plugins\/jquery.cookie.js":1,"\/sites\/all\/modules\/ec_base\/js\/plugins\/jquery.json.js":1,"\/sites\/all\/libraries\/qtip\/jquery.qtip-1.0.0-rc3.min.js":1,"\/sites\/all\/modules\/ec_components\/js\/ec_tip.js":1,"\/sites\/all\/modules\/ec_vote\/js\/ec_vote.js":1,"\/sites\/all\/modules\/jquery_aop\/misc\/jquery.aop.js":1,"\/sites\/all\/modules\/jsonify\/jsonify.js":1,"\/sites\/all\/modules\/mollom\/mollom.js":1,"\/sites\/all\/modules\/og\/og.js":1,"\/sites\/all\/modules\/swftools\/shared\/swfobject2\/swfobject.js":1,"\/sites\/all\/modules\/ec_user\/js\/ec_user.js":1,"\/sites\/all\/libraries\/simplemodal\/jquery.simplemodal.1.4.1.min.js":1,"\/sites\/all\/libraries\/jquery_expander\/jquery.expander.min.js":1,"\/sites\/all\/modules\/ec_comments\/js\/ec_comments.js":1,"\/sites\/all\/modules\/paywall_metered\/js\/paywall_metered.js":1,"\/sites\/all\/modules\/ec_moderation\/js\/ec_moderation.js":1,"\/sites\/all\/modules\/custom\/ec_bookmark\/js\/ec_bookmark.js":1,"\/sites\/all\/modules\/ec_ads\/js\/stepcarousel.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_extole\/ec_pixel_tracking_extole.js":1,"\/sites\/all\/modules\/ec_mostx\/js\/ec_mostx.js":1,"\/sites\/all\/modules\/ec_ads\/js\/ec_ads_slider.js":1,"\/sites\/all\/libraries\/jquery.ui\/ui\/minified\/jquery.ui.core.min.js":1,"\/sites\/all\/libraries\/jquery.ui\/ui\/minified\/jquery.ui.datepicker.min.js":1,"\/sites\/all\/modules\/custom\/bluekai\/bluekai.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_adroit\/js\/ec_pixel_tracking_adroit.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_adroll\/js\/ec_pixel_tracking_adroll.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_adsrvr\/js\/ec_pixel_tracking_adsrvr.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_fosina\/js\/ec_pixel_tracking_fosina.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_idmedia\/ec_pixel_tracking_idmedia.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_media_math\/js\/ec_pixel_tracking_media_math.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_tapad\/ec_pixel_tracking_tapad.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_the_trade_desk\/js\/ec_pixel_tracking_the_trade_desk.js":1,"\/sites\/all\/modules\/custom\/ec_pixel_tracking\/ec_pixel_tracking_turn\/js\/ec_pixel_tracking_turn.js":1,"\/sites\/all\/modules\/custom\/ec_polar\/ec_polar.js":1,"\/sites\/all\/modules\/ec_ads\/js\/ec_ads.js":1,"\/sites\/all\/modules\/ec_homepage\/ec_reg_overlay.js":1,"\/sites\/all\/modules\/custom\/ec_google_cse\/js\/ec_google_cse.js":1,"\/sites\/all\/modules\/custom\/ec_google_cse\/js\/non_require_js_loader.js":1,"\/sites\/all\/modules\/custom\/ec_social\/ec_social.js":1,"\/sites\/all\/modules\/ajax\/jquery\/jquery.a_form.packed.js":1,"\/sites\/all\/modules\/ajax\/ajax.js":1,"\/sites\/all\/modules\/custom\/ec_brightcove\/js\/ec_brightcove.base.js":1,"\/sites\/all\/modules\/custom\/ec_cookie_message\/js\/ec_cookie_message.js":1,"\/sites\/all\/modules\/custom\/ec_messaging\/js\/ec_messaging.js":1,"\/sites\/all\/modules\/ec_components\/js\/ec_components_plugins.js":1,"\/sites\/all\/modules\/ec_offline\/js\/ec_offline_redirect.js":1,"\/sites\/all\/modules\/ec_offline\/js\/ec_offline.js":1,"\/sites\/all\/modules\/ec_omniture\/ec_omniture_link_tracking.js":1,"\/sites\/all\/modules\/ec_ads\/js\/ec_ads_banner.js":1,"\/sites\/all\/modules\/ec_blogs\/js\/ec_blogs.js":1,"\/sites\/all\/themes\/econfinal\/js\/page-header.js":1,"\/sites\/all\/themes\/econfinal\/js\/node-page-tools.js":1,"\/sites\/all\/themes\/econfinal\/js\/node-poll-article.js":1,"\/sites\/all\/themes\/econfinal\/js\/site-index.js":1,"\/sites\/all\/themes\/econfinal\/js\/node-guest_contribution.js":1,"\/sites\/all\/themes\/econfinal\/js\/AC_OETags.js":1,"\/sites\/all\/themes\/econfinal\/js\/ec-blogs.js":1,"\/sites\/all\/themes\/econfinal\/js\/ec-messages.js":1,"\/sites\/all\/themes\/econfinal\/js\/interactive-map.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/drag.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.color.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.form.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.autogrow.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.timer.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.hoverIntent.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/modernizr_2.8.3.min.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery.flash.min.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jcarousellite_1.0.1.min.js":1,"\/sites\/all\/themes\/econfinal\/js\/plugins\/jquery-ui.min.js":1}}});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+document.write(unescape('%3Cscript src="//service.maxymiser.net/cdn/economist/js/mmcore.js" type="text/javascript"%3E%3C/script%3E'))
+//--><!]]>
+</script>
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="http://www.economist.com/blogs/americasview/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.economist.com/blogs/americasview/index.xml" />
+  <script type="text/javascript">
+    $('html').addClass('js');
+  </script>
+  </head>
+
+<body class="not-front not-logged-in page-node node-type-mtblog one-sidebar sidebar-right path-node-21581878 world-menu business-menu economics-menu printedition-menu science-technology-menu culture-menu">
+      
+  <!-- Begin Tealium Integration -->
+  <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    var utag_data = {"node_id":"21581878","node_title":"The UN strain","node_type":"mtblog","node_created":"1373888164","node_changed":"1373909212","node_author":"2622035","user_status":"anonymous"};
+    //--><!]]>
+  </script>
+
+      <!-- Loading script asynchronously -->
+    <script type="text/javascript">
+      (function(a,b,c,d){
+        a='//tags.tiqcdn.com/utag/poc-teg/main/prod/utag.js';
+        b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+        a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+      })();
+    </script>
+  
+  <!-- End Tealium Integration -->
+        <div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      status: true,
+      cookie: true,
+      xfbml: true,
+      appId: '173277756049645',
+      oauth: true,
+      channelUrl: 'http://www.economist.com/fb/fb_channel.html'
+    });
+  };
+
+  (function() {
+    var e = document.createElement('script');
+    e.src = document.location.protocol true,
+      xfbml: true,
+      appId: '173277756049645',
+      oauth + '//connect.facebook.net/en_US/all.js';
+    e.async = true;
+    document.getElementById('fb-root').appendChild(e);
+  }());
+</script>          <div id="ec-cookie-messages-container"><div id="ec-cookie-messages-wrapper"><div class="ec-cookie-message" id="ec-cookie-message-0"><a href="/ec-cookie-message/0" class="dismiss-messages"></a><div id="teconsent"><script type="text/javascript" src="http://consent-st.truste.com/get?name=notice.js&domain=economist.com&c=teconsent"></script></div><strong>Our cookie policy has changed.</strong>  Review our <a href="/cookies-info" target="_blank">cookies policy</a> for more details and to change your cookie preference.<br>By continuing to browse this site you are agreeing to our use of cookies.</div></div></div>      <div id="leaderboard" class="clearfix">
+    <div id="block-ec_ads-leaderboard_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div id="leaderboard-ad"><!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_leaderboard_ad"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_leaderboard_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26dcopt%3Dist%26pos%3Dldr_top&sz=728x90|970x90|970x250&tile=1&c=199997789" t      googletag.display("gpt_leaderboard_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsarget="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&tt      googletag.display("gpt_leaderboard_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26ws=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26dcopt%3Dist%26pos%3Dldr_top&sz=728x90|970x90|970x250&tile=1&c=199997789" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_ads-subscription_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div id="subslug-ad"><!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_subscription_ad"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_subscription_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dsub_top&sz=223x90&tile=2&c=199997789">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dsub_top&sz=223x90&tile=2&c=199997789" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_ads-pencil_slug_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_pencil_slug_ad"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_pencil_slug_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dpslug_top&sz=970x35&tile=3&c=199997789">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/tel_slug_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclicg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dpslug_top&sz=970x35&tile=3&c=199997789" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+  </div>
+<header class="mh">
+  <div class="mh-stripe">
+    <div class="mh-stripe-wrap">
+      <ul class="mh-user-menu"><li class="first"><span>More from The Economist</span><ul><li class="first"><a href="/digital" data-ec-omniture="masthead|act_prod|digital">The Economist digital editions</a></li>
+<li><a href="/newsletters" data-ec-omniture="masthead|act_prod|newsletters">Newsletters</a></li>
+<li><a href="/events" data-ec-omniture="masthead|act_prod|events">Events</a></li>
+<li><a href="http://jobs.economist.com" data-ec-omniture="masthead|act_prod|jobs">Jobs.Economist.com</a></li>
+<li><a href="http://store.economist.com/" data-ec-omniture="masthead|act_prod|the_economist_store">The Economist Store</a></li>
+<li class="last"><a href="/bookmarks" data-ec-bookmark-click="20|9408299|bookmark &gt; more from the economist &gt; BM saved" data-ec-omniture="masthead|act_prod|bookmarks">Timekeeper reading list</a></li>
+</ul></li>
+<li class="even"><span>My Subscription</span><ul><li class="first"><a href="/products/subscribe" data-ec-omniture="masthead|act_prod|subscribe">Subscribe to The Economist</a></li>
+<li><a href="/user" data-ec-omniture="masthead|act_prod|my_subscription">Manage my subscription</a></li>
+<li class="last"><a href="/products/renew" data-ec-omniture="masthead|act_prod|renew">Renew</a></li>
+</uubscribe">Subscribe to The Economist</a></li>
+<li><a href="/user" datal></li>
+<li class="masthead-user"><a href="/user/login?destination=node%2F21581878" class="show-login" data-ec-omniture="masthead|act_prod|login">Log in or register</a></li>
+<li class="masthead-subscribe even last"><a href="https://subscriptions.economist.com/GLB/MAST/T1" class="show-subscribe" data-ec-omniture="masthead|act_prod|login">Subscribe</a></li>
+</ul>
+              <div class="mh-search">
+          <form action="http://google.com/search"  accept-charset="UTF-8" method="GET" id="search-theme-form">
+<div><div id="search" class="container-inline">
+  <div class="form-item clearfix" id="edit-search-theme-form-1-wrapper">
+ <label for="edit-search-theme-form-1">Search this site:</label>
+<input type="text" maxlength="128" name="query" id="edit-search-theme-form-1" size="15" value="" title="Enter the terms you wish to search for." autocorrect="off" class="form-text  search-field" />
+</div>
+<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
+<input type="hidden" name="form_id" id="edit-search-theme-form" value="search_theme_form"  />
+<input type="hidden" name="sitesearch" id="edit-sitesearch" value="economist.com"  />
+</div>
+
+</div></form>
+        </div>
+          </div> <!-- /.mh-stripe-wrap -->
+  </div> <!-- /.mh-stripe -->
+  <div class="mh-nav">
+    <div class="mh-nav-wrap">
+              <h2 class="svg-logo"><a href="/"><img class="mh-logo" width="170" height="85" src="//cdn.static-economist.com/siv>
+          </div> <!-- /.mh-stripe-wrap -->
+  </div> <!-- /.mh-striptes/all/themes/econfinal/images/svg/logo.svg" alt="The Economist" /></a></h2>
+                    <nav>
+          <ul class="mh-nav-links"><li class="first"><a href="/content/politics-this-week" title="" data-ec-omniture="masthead|first_level|world_politics" class="sub-menu-link">World politics</a><ul class="mh-subnav"><li class="first"><a href="/content/politics-this-week" data-ec-omniture="masthead|sec_level|politics_this_week">Politics this week</a></li>
+<li class="even"><a href="/sections/united-states" data-ec-omniture="masthead|sec_level|united_states">United States</a></li>
+<li><a href="/sections/britain" data-ec-omniture="masthead|sec_level|britain">Britain</a></li>
+<li class="even"><a href="/sections/europe" data-ec-omniture="masthead|sec_level|europe">Europe</a></li>
+<li><a href="/sections/china" data-ec-omniture="masthead|sec_level|china">China</a></li>
+<li class="even"><a href="/sections/asia" data-ec-omniture="masthead|sec_level|asia">Asia</a></li>
+<li><a href="/sections/americas" data-ec-omniture="masthead|sec_level|americas">Americas</a></li>
+<li class="even"><a href="/sections/middle-east-africa" data-ec-omniture="masthead|sec_level|middle_east_africa">Middle East &amp; Africa</a></li>
+<li class="last"><a href="http://www.economist.com/sections/international" data-ec-omniture="masthead|sec_level|international">International</a></li>
+</ul></li>
+<li class="even"><a href="/sections/business-finance" data-ec-omniture="mastheAfrica</a></li>
+<li class="last"><a href="http://www.economist.com/secad|first_level|business_finance" class="sub-menu-link">Business &amp; finance</a><ul class="mh-subnav"><li class="first"><a href="/sections/business-finance" data-ec-omniture="masthead|sec_level|all_business_finance">All Business &amp; finance</a></li>
+<li class="even last"><a href="/whichmba" data-ec-omniture="masthead|sec_level|which_mba_">Which MBA?</a></li>
+</ul></li>
+<li class=""><a href="/sections/economics" data-ec-omniture="masthead|first_level|economics" class="sub-menu-link">Economics</a><ul class="mh-subnav"><li class="first"><a href="/sections/economics" data-ec-omniture="masthead|sec_level|all_economics">All Economics</a></li>
+<li class="even"><a href="/economics/by-invitation" title="" data-ec-omniture="masthead|sec_level|economics_by_invitation">Economics by invitation</a></li>
+<li><a href="/economics-a-to-z" data-ec-omniture="masthead|sec_level|economics_a_z">Economics A-Z</a></li>
+<li class="even"><a href="/markets-data" data-ec-omniture="masthead|sec_level|markets_data">Markets &amp; data</a></li>
+<li class="last"><a href="/indicators" data-ec-omniture="masthead|sec_level|indicators">Indicators</a></li>
+</ul></li>
+<li class="even"><a href="/sections/science-technology" data-ec-omniture="masthead|first_level|science_technology" class="sub-menu-link">Science &amp; technology</a><ul class="mh-subnav"><li class="first"><a href="/sections/science-technology" data-ec-omniture="masthead|sec_level|all_science_technology">All Science &amp; technology</a></li>
+<li class="even last"><a href="/technology-quarterly" title="Technology Quarterly" data-ec-omniture="masthead|sec_level|technology_quarterly">Technology Quarterly</a></li>
+</ul></li>
+<li class=""><a href="/sections/culture" data-ec-omniture="masthead|first_level|culture" class="sub-menu-link">Culture</a><ul class="mh-subnav"><li class="first"><a href="/sections/culture" data-ec-omniture="masthead|sec_level|all_culture">All Culture</a></li>
+<li class="even"><a href="http://moreintelligentlife.com/" data-ec-omniture="masthead|sec_level|more_intelligent_life">More Intelligent Life</a></li>
+<li><a href="/styleguide/introduction" data-ec-omniture="masthead|sec_level|style_guide">Style guide</a></li>
+<li class="even last"><a href="/economist-quiz" data-ec-omniture="masthead|sec_level|the_economist_quiz">The Economist Quiz</a></li>
+</ul></li>
+<li class="even"><a href="/blogs" data-ec-omniture="masthead|first_level|blogs" class="sub-menu-link">Blogs</a><ul class="mh-subnav"><li class="first"><a href="/blogs" data-ec-omniture="masthead|sec_level|latest_updates">Latest updates</a></li>
+<li class="even"><a href="/blogs/buttonwood" title="Financial markets" data-ec-omniture="masthead|sec_level|buttonwoods_notebook">Buttonwood&#039;s notebook</a></li>
+<li><a href="/blogs/democracyinamerica" title="American politics" data-ec-omniture="masthead|sec_level|democracy_in_america">Democracy in America</a></li>
+<li" data-ec-omniture="masthead|sec_level|buttonwoods_notebook">Buttonwood&#039;s notebook</a></li>
+<li><a href="/blogs/democracyinamerica" title="Americ class="even"><a href="/blogs/erasmus" data-ec-omniture="masthead|sec_level|erasmus">Erasmus</a></li>
+<li><a href="/blogs/freeexchange" title="Economics" data-ec-omniture="masthead|sec_level|free_exchange">Free exchange</a></li>
+<li class="even"><a href="/blogs/gametheory" title="Sports" data-ec-omniture="masthead|sec_level|game_theory">Game theory</a></li>
+<li><a href="/blogs/graphicdetail" title="Charts, maps and infographics" data-ec-omniture="masthead|sec_level|graphic_detail">Graphic detail</a></li>
+<li class="even"><a href="/blogs/gulliver" title="Business travel" data-ec-omniture="masthead|sec_level|gulliver">Gulliver</a></li>
+<li><a href="/blogs/prospero" title="Books, arts and culture" data-ec-omniture="masthead|sec_level|prospero">Prospero</a></li>
+<li class="even last"><a href="/blogs/economist-explains" data-ec-omniture="masthead|sec_level|the_economist_explains">The Economist explains</a></li>
+</ul></li>
+<li class=""><a href="http://www.economist.com/debate" data-ec-omniture="masthead|first_level|debate" class="sub-menu-link">Debate</a><ul class="mh-subnav"><li class="first"><a href="http://www.economist.com/debate" title="" data-ec-omniture="masthead|sec_level|economist_debates">Economist debates</a></li>
+<li class="even"><a href="/wtwt" data-ec-omniture="masthead|sec_level|what_the_world_thinks">What the world thinks</a></li>
+<li><a href="/economics/by-invitation" data-ec-omniture="masthead|sec_level|economics_by_invitation">Economics by invitation</a></li>
+<li class="even last"><a href="/content/letters-to-the-editor" title="" data-ec-omniture="masthead|sec_level|letters_to_the_editor">Letters to the editor</a></li>
+</ul></li>
+<li class="even"><a href="/multimedia" data-ec-omniture="masthead|first_level|multimedia" class="sub-menu-link">Multimedia</a><ul class="mh-subnav"><li class="first"><a href="/multimedia" data-ec-omniture="masthead|sec_level|multimedia_library">Multimedia library</a></li>
+<li class="even"><a href="http://inotherwords.economist.com/" data-ec-omniture="masthead|sec_level|in_other_words">In Other Words</a></li>
+<li class="last"><a href="/audio-edition" data-ec-omniture="masthead|sec_level|the_economist_in_audio">The Economist in audio</a></li>
+</ul></li>
+<li class="last"><a href="/printedition" title="" data-ec-omniture="masthead|first_level|print_edition" class="sub-menu-link">Print edition</a><ul class="mh-subnav"><li class="first"><a href="/printedition/" data-ec-omniture="masthead|sec_level|current_issue">Current issue</a></li>
+<li class="even"><a href="/printedition/covers" data-ec-omniture="masthead|sec_level|previous_issues">Previous issues</a></li>
+<li><a href="/printedition/specialreports" data-ec-omniture="masthead|sec_level|special_reports">Special reports</a></li>
+<li class="even"><a href="/content/politics-this-week" data-ec-omniture="masthead|sec_level|politics_this_week">Politics this week</a></li>
+<li><a href="/content/business-this-week" data-ec-omniture="masthead|sec_level|business_this_week">Business this week</a></li>
+<li class="even"><a href="/sections/leaders" data-ec-omniture="masthead|sec_level|leaders">Leaders</a></li>
+<li><a href="/printedition/kallery" data-ec-omniture="masthead|sec_level|kals_cartoon">KAL&#039;s cartoon</a></li>
+<li class="even last"><a href="/sections/obituary" data-ec-omniture="masthead|sec_level|obituaries">Obituaries</a></li>
+</ul></li>
+</ul>                  </nav>
+          </div>
+  </div> <!-- /.mh-nav -->
+</header> <!-- /header -->
+  <div id="page" class="container">
+    <a name="top" id="navigation-top"></a>
+
+            
+    <div id="columns" class="clearfix">
+                  
+      <div id="column-content" class="grid-10 grid-first clearfix">
+                                <!-- Create left column on search pages -->
+                            <div class="blog-title americasview">
+  <img  class="imagefield imagefield-field_blog_logo" width="271" height="95" alt="" src="http://cdn.static-economist.com/sites/default/files/images/blog_sites/_0000s_0019_americas-view.png?1328719158" />  <div class="blog-post-header">
+    <span><a href="/blogs/americasview">Americas view</a></span>
+    <h2>The Americas</h2>
+          <div class="blog-sponsor">
+                      </div>
+      </div>
+</div>
+<div class="item-list"><ul id="blog_post_sublinks"><li class="first"><a href="/blogs/americasview/2013/07/reforming-mexico" data-ec-omniture="blogs_nav_top|prev">Previous</a></li>
+<li class="even"><a href="/blogs/americasview/2013/07/canada-politics" data-ec-omniture="blogs_nav_top|next">Next</a></li>
+<li><a href="/blogs/americasview" class="sublink_latest" data-ec-omniture="blogs_nav_top|blog_site">Latest Americas view</a></li>
+<li class="even last"><span class="latest-updates-link"><a href="/latest-updates" data-ec-omniture="blogs_nav_top|all_blogs">All latest updates</a></span></li>
+</ul></div><hgroup class="typog-content-header main-content-header">
+      <h1 class="fly-title">Cholera in Haiti</h1>
+    <h3 class="headline">
+    The UN strain  </h3>
+</hgroup>
+<aside class="floatleft light-grey">
+  <time class="date-created">Jul 15th 2013, 11:36</time>
+      <span class="location">by P.B. | NEW YORK</span>
+  </aside>
+<div id="block-ec_components-share_inline_header" class="block block-ec_components 
+">
+    <div class="content clearfix">
+    <div class="share_inline_header"><ul class="clearfix"><li class="share-inline-header-timekeeper first" data-ec-omniture-frame="top_timekeeper"><a href="# " data-ec-omniture="bookmark|social_buttons|bookmark_saved" data-ec-bookmark-impression="19|9363470" data-ec-bookmark-click="20|9363476|bookmark &gt; social buttons &gt; BM|event80"><img src="http://cdn.static-economist.com/sites/all/modules/custom/ec_bookmark/assets/timekeeper-btn.png" alt="Timekeeper" title="Timekeeper" width="94" height="20" height="20" width="94" /></a><div class="timekeeper-bubble">
+  <p>Add this article to <strong>your reading list</strong> by clicking this button</p>
+  <div class="logo"><img src="http://cdn.static-economist.com/sites/all/modules/custom/ec_bookmark/assets/timekeeper-by-rolex-medium.png" alt="Rolex values your time.  Timekeeper by Rolex." title="" width="300" height="45" /></div>
+</div>
+</li>
+<li class="share-inline-header-facebook even" data-ec-omniture-frame="top_fb"><fb:like href="http://www.economist.com/blogs/americasview/2013/07/cholera-haiti" ref="scn/fb_ec/the_un_strain" send="false" layout="button_count" show_faces="false" font=""></fb:like></li>
+<li class="share-inline-header-twitter last" data-ec-omniture-frame="top_twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-related="theeconomist" data-text="Cholera in Haiti: The UN strain" data-url="http://econ.st/13UlkLz" data-counturl="http://www.economist.com/blogs/americasview/2013/07/cholera-haiti" data-via=TheEconomist>Tweet</a></li>
+</ul></div>  </div>
+</div>
+
+
+<div class="main-content">
+  <p><div class="content-image-full">
+
+<img src="http://cdn.static-economist.com/sites/default/files/imagecache/full-width/images/2013/07/blogs/americas-view/20130720_amp501.jpg" alt="" title=""  width="595" height="335" />
+
+</div></p><p>ON JULY 5th the United Nations refused, again, to countenance the claims of 5,000 cholera-affected Haitians against it. The Haitians contend that grossly inadequate sanitation at a UN peacekeeping base introduced and spread the disease through the country’s waterways. The great weight of scientific evidence is on their side. The claimants seek millions of dollars in damages, installation of a sanitation network, and an apology.</p><p>In a letter to members of the United States Congress who had <a href="http://waters.house.gov/news/documentsingle.aspx?DocumentID=336057">urged</a> the UN to take responsibility for the cholera outbreak, Ban Ki Moon, the UN's secretary-general,&nbsp;reiterated that the UN’s legal office has decided the claims are “not receivable” because of the UN’s privileges and immunities. The UN has offered little insight into its reasoning, except that consideration of the claims would involve a review of “political and policy matters”. That statement has only raised more questions, including whether “dumping disease-laden wastemunities. The UN has offered little insight into its reasoning, except that consideration of the claims would involve a review of “political and policy matters”. That statement has on water in&nbsp;rivers is UN policy,” as a reporter asked at a press briefing last week.</p><p></p><p>Critics <a href="http://ilg2.org/2013/07/09/haiti-cholera-claims-absolute-immunity-vs-human-rights/">argue</a> that the UN’s stance is tantamount to claiming impunity—that the UN, an organisation whose mission involves promoting the rule of law, is putting itself above it. The Haitians’ lawyers now plan to sue the UN in Haitian and United States courts. If a court decides to hear the claims, the case could have far-reaching implications for peacekeeping practices around the world.</p><p>The disease was not documented in Haiti until October 2010, and even as the first perilously dehydrated patients arrived at hastily assembled clinics, reporters discovered filthy conditions at a nearby UN peacekeeping base. From broken pipes and waste pits, sewage trickled and sometimes flowed into a tributary of one of Haiti’s major rivers. Since then, many scientific studies have provided strong support for the hypothesis that Haiti’s cholera strain came from Nepal. (The <a href="http://mbio.asm.org/content/4/4/e00398-13">latest</a> is a DNA sequencing study, published in July, which traced Haiti’s cholera strain to Nepal.) <span>A Nepali contingent of officers staffed the peacekeeping base at the time of the outbreak</span></p><p>The bacterium, meanwhile, has killed nearly 8,200 Haitians and made unwell close to 665,000, about 7% of the population. Waterborne diseases spread fast in Haiti because the country lacks proper sewerage. The rainy season is especially problematic, and although Tropical Storm Chantal did not make a direct hit on Haiti last week, the additional rain will probably cause cholera cases to spike.</p><p>The UN has staunchly refused to entertain the cholera claims in any venue. Its letter to the claimants’ lawyers eschewed their proposals to meet, engage a mediator, or establish an alternative venue to hear the complaints. Whereas Mr Ban’s letter to congressmen said that “the majority of [the] recommendations” made by a UN panel of experts to avoid future epidemics were being implemented, a <a href="http://physiciansforhaiti.org/2013/05/un-report-card/">report</a> by a United States-based non-proft group in May found that five of the seven recommendations were only partially implemented, or not at all. And although the UN launched an initiative to fight cholera in Haiti in January 2012, the programme is already falling short: Mr Ban's letter stated that pledges for the cholera initiated amounted to $207m, $31m less than the UN said would be available last December.&nbsp;It is another failure that by now will hardly surprise the people of Haiti.</p><p>Correction: This post originally stated that the&nbsp;$207m the UN had raised in pledges for cholera in Haiti was $31m less than was required. In fact, $207m is $31m less than the UN said would be available last December. This was corrected on July 15th.&nbsp;</p></div>
+
+
+<div id="block-ec_blogs-ec_blogs_block_prev_next" class="block block-ec_blogs 
+">
+    <div class="content clearfix">
+    <aside class="prev-next">
+  <a href="/blogs/americasview/2013/07/reforming-mexico" class="prev-next-prev" data-ec-omniture="blogs_nav_bottom|prev">
+    <span>Previous</span>
+        <p>
+      <span>Reforming Mexico:</span>
+      Too good to last?    </p>
+  </a>
+  <a href="/blogs/americasview/2013/07/canada-politics" class="prev-next-next" data-ec-omniture="blogs_nav_bottom|next">
+    <span>Next</span>
+    <img src="http://cdn.static-economist.com/sites/default/files/imagecache/90_by_90/images/2013/07/blogs/americas-view/20130720_amp502.jpg" alt="" title=""  class="imagecache imagecache-90_by_90" width="90" height="90" />    <p>
+      <span>Canada politics:</span>
+      All change?    </p>
+  </a>
+</aside>
+  </div>
+</div>
+
+<div id="block-ec_components-share_inline_footer" class="block block-ec_components 
+">
+    <div class="content clearfix">
+    <div class="share_inline_footer"><ul class="clearfix"><li class="share-inline-footer-facebook first" data-ec-omniture-frame="footer_fb"><fb:like href="http://www.economist.com/blogs/americasview/2013/07/cholera-haiti" ref="scn/fb_ec/the_un_strain" send="false" layout="button_count" show_faces="false" font=""></fb:like></li>
+<li class="share-inline-footer-twitter even" data-ec-omniture-frame="footer_twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-related="theeconomist" data-text="Cholera in Haiti: The UN strain" data-url="http://econ.st/13UlkLz" data-counturl="http://www.economist.com/blogs/americasview/2013/07/cholera-haiti" data-via=TheEconomist>Tweet</a></li>
+<li class="share-inline-footer-reddit"><a href="http://reddit.com/submit" onclick="window.open('http://reddit.com/submit?url=http%3A%2F%2Fwww.economist.com%2Fblogs%2Famericasview%2F2013%2F07%2Fcholera-haiti%3Ffsrc%3Dscn%2Frd_ec%2Fthe_un_strain'); return false" title="submit to reddit" data-ec-omniture="footer_reddit">Submit to reddit</a></li>
+<li class="share-linkedin even" data-ec-omniture-frame="footer_linkedin"><script type="IN/Share" data-url="http://www.economist.com/blogs/americasview/2013/07/cholera-haiti?fsrc=scn/ln_ec/the_un_strain" data-counter="right"></script></li>
+<li class="share-plusone last" data-ec-omniture-frame="footer_plusone"><g:plusone href="http://www.economist.com/blogs/americasview/2013/07/cholera-haiti?fsrc=scn/gn_ec/the_un_strain" size="medium" count="true" callback="clickEventToAnalyticsPlusOne"></g:plusone></li>
+</ul></div>  </div>
+</div>
+
+<div id="block-ec_components-comments_links" class="block block-ec_components 
+">
+    <div class="content clearfix">
+    <div class="ec-comments-links-box clearfix"><a href="/blogs/americasview/2013/07/cholera-haiti#comments" class="view-comments" data-ec-omniture="go_to_comments">View all comments (63)</a></div>  </div>
+</div>
+
+<div id="block-ec_perfect_market-ec_pm_content_container" class="block block-ec_perfect_market 
+">
+    <div class="content clearfix">
+    <div id="ec-perfect-market-container-content"></div>  </div>
+</div>
+
+
+<a name="comments"></a>
+<section id="comments-area" >
+     <div id="comments-header"  class="secondary-box">
+          <h3 id="comments-title"  class="secondary-header typog-size-medium">Readers' comments</h3>
+              <p id="comments-guidelines">Reader comments are listed below. Comments are currently closed and new comments are no longer being accepted.</p>
+          </div>
+  <div class="sort"><p>Sort:</p><ul class="clearfix" id="sort-comments"><li class="first"><a href="/blogs/americasview/2013/07/cholera-haiti?sort=1#sort-comments" rel="nofollow">Newest first</a></li>
+<li class="even"><a href="/blogs/americasview/2013/07/cholera-haiti?sort=2#sort-comments" rel="nofollow">Oldest first</a></li>
+<li id="sort-comments-sort-by" class="last">Readers' most recommended</li>
+</ul></div><div class="pager clearfix"><div class="item-list"><ul class="pager"><li class="pager-current first">1</li>
+<li class="pager-item even"><a href="/blogs/americasview/2013/07/cholera-haiti?page=1#sort-comments" title="Go to page 2" class="active">2</a></li>
+<li class="pager-item"><a href="/blogs/americasview/2013/07/cholera-haiti?page=2#sort-comments" title="Go to page 3" class="active">3</a></li>
+<li class="pager-item even"><a href="/blogs/americasview/2013/07/cholera-haiti?page=3#sort-comments" title="Go to page 4" class="active">4</a></li>
+<li class="pager-next"><a href="/blogs/americasview/2013/07/cholera-haiti?page=1#sort-comments" class="active">next ›</a></li>
+<li class="pager-last even last"><a href="/blogs/americasview/2013/07/cholera-haiti?page=3#sort-comments" class="active">last »</a></li>
+</ul></div></div><a name="comments"></a>
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2089101" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/specialed41/comments" title="View specialed41&#039;s profile">specialed41</a>                                <time itemprop="dateCreated" dateTime="2013-07-16T02:00:00+0000" class="created" title="2013-07-16T02:00:34+00:00">Jul 16th 2013 2:00 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>It seems to me that the article leaves out some important areas, which makes it impossible to form an opinion about what should be done.  First, is ther anything in the UN charter or other governing documents that grants the organization any form of immunity from liability for actions to aid a member state or taken in pursuit of a General Assembly or Council directive?  While we might all agree that the General Secretary's handling of the issue into put it in the kindest terms, ham handed, it could be that he is simply defending the organization's charter.  To illustrate, is the UN liable if one of its peacekeeping forces kills innocent civilians accidentally or deliberately?  If the UN is not liable by virtue of being protected by a status akin to that accorded most national governments, does this immunity extend to nation states acting under the aegis of a UN mandate?  I can think of a dozen more similar questions, all of which need answers in order for the reader to comprehend this issue.  In the end, by simply railing against the UN, the Economist failed to meet its own jounalistic standards in preparing this article.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2089101?nid=21581878&amp;page=0&amp;sort=0&amp;token=3bwn jounalistic standards in preparing this article.</p>
+</div>
+      <footer class="clearfix">
+  b772bf293999c994cafe52027399f6" title="Recommend comment: It seems to me that the" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>42</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2089101?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2089101" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2089101#comment-2089101" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2089560" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/johncsmith/comments" title="View johncsmith&#039;s profile">johncsmith</a>                                <time itemprop="dateCreated" dateTime="2013-07-16T11:12:00+0000" class="created" title="2013-07-16T11:12:32+00:00">Jul 16th 2013 11:12 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>Meanwhile, almost totally ignored by the western media, volunteer Cuban medics clean up the mess: <a href="http://www.independent.co.uk/life-style/health-and-families/health-news/cuban-medics-in-haiti-put-the-world-to-shame-2169415.html" title="http://www.independent.co.uk/life-style/health-and-families/health-news/cuban-medics-in-haiti-put-the-world-to-shame-2169415.html" rel="nofollow">http://www.independent.co.uk/life-style/health-and-families/health-news/...</a></p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2089560?nid=21581878&amp;page=0&amp;sort=0&amp;token=eb4ca9b495f34e0f01d13f71454f0d6f" title="Recommend comment: Meanwhile, almost totally" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>39</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2089560?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2089560" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2089560#comment-2089560" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2089727" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/Twisha/comments" title="View Twisha&#039;s profile">Twisha</a>                                <time itemprop="dateCreated" dateTime="2013-07-16T13:44:00+0000" class="created" title="2013-07-16T13:44:36+00:00">Jul 16th 2013 13:44 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>'Immunity' is a poor defence used by this heavily bureaucratic organization. Haiti, too small; its people too poor and insignificant to care about. Thank you 'Economist' for giving them voice when their own protector and benefactor is forcing them into silence</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2089727?nid=21581878&amp;page=0&amp;sort=0&amp;token=621c7d39a84e2194f6243d4372709fbb" title="Recommend comment: &#039;Immunity&#039; is a poor defence" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>38</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2089727?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2089727" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2089727#comment-2089727" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </articlet</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2089727#comment-2089727" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+ >
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2089022" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/Singcaver/comments" title="View Singcaver&#039;s profile">Singcaver</a>                                <time itemprop="dateCreated" dateTime="2013-07-16T01:12:00+0000" class="created" title="2013-07-16T01:12:14+00:00">Jul 16th 2013 1:12 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>Sorry to say that at all levels , politics and international organisations there has to be accountability , no immunity . There is too much immunity for decision makers in this world , and the world is suffering from bad decision making and often pure incompetence  .<br />
+Governments and organisations are not learning from their mistakes , just repeating .<br />
+The UN today needs to be reorganised , it is seen by many as an ineffective , time consuming and disorganised , unable to make major decisions quickly .<br />
+Privileges have to be abolished</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="eorganised , it is seen by many as an ineffective , time consuming and disorganised , unable to make major decisions quickly .comment_recommend first"><a href="/vote/recommend-comment/2089022?nid=21581878&amp;page=0&amp;sort=0&amp;token=6b1c3f78ca0310f74054267b309810e4" title="Recommend comment: Sorry to say that at all" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>38</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2089022?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2089022" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2089022#comment-2089022" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2089570" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/andym101/comments" title="View andym101&#039;s profile">andym101</a>                                <time itemprop="dateCreated" dateTime="2013-07-16T11:30:00+0000" class="created" title="2013-07-16T11:30:48+00:00">Jul 16th 2013 11:30 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>The UN often uses staff from poorer countries, where the standards of health and organisation are lower. The focus oreated" title="2013-07-16T11:30:48+00:00">Jul 16th 2013 11:30 GMT</timn this case of cholera brought by Nepali UN peacekeepers to Haiti doesn't sit right with me. It seems excessively legalistic and sends the message that Haiti doesn't want any outside help, as if anything goes wrong they'll whack you with lawyers.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2089570?nid=21581878&amp;page=0&amp;sort=0&amp;token=eb33489df8f91bf4ab21be4a8be1581d" title="Recommend comment: The UN often uses staff from" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>37</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2089570?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2089570" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2089570#comment-2089570" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2088982" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/little%2Bike/comments" title="View little ike&#039;s profile">little ike</a>           cope itemtype="http://schema.org/UserComments" id="comment-2088982" cl <a href="/comment/2088703#comment-2088703" class="reply-to">in reply to djones44</a>                    <time itemprop="dateCreated" dateTime="2013-07-16T00:31:00+0000" class="created" title="2013-07-16T00:31:48+00:00">Jul 16th 2013 0:31 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>Smearing the UN?  Read Jonathan Levy's "The Big Truck that Went By," a devastating commentary about all the post-earthquake aid efforts, including the UN's responsibility for the cholera epidemic.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2088982?nid=21581878&amp;page=0&amp;sort=0&amp;token=c102f6319e8948ab3fc411f7a406def4" title="Recommend comment: Smearing the UN?  Read" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>37</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2088982?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2088982" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2088982#comment-2088982" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article class="permalink last"><a href="http://www.economist.com/comment/20889itemscope itemtype="http://schema.org/UserComments" id="comment-2088358" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/sfYiD63Qgv/comments" title="View sfYiD63Qgv&#039;s profile">sfYiD63Qgv</a>                                <time itemprop="dateCreated" dateTime="2013-07-15T19:02:00+0000" class="created" title="2013-07-15T19:02:12+00:00">Jul 15th 2013 19:02 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>By honestly accepting responsibility the UN could have strengthened, or at least maintained, its respectability.<br />
+But these weasel words about "immunity" make me weep for the organization where I worked for many years as a field representative.<br />
+The UN as an institution often gets blamed for actions or, more often, inactions which are in fact the consequences of decisions by its member states.<br />
+In this case it is the Secretariat itself.<br />
+Mr. Ban would surely count on political support from member states if he decided to over-rule the desk-warmers in Legal Office.  If he feels this is impossible, he should take a principled stand and resign in protest. Otherwise, we can only assume he agrees that the UN"s "privileges" are more important than the lives of Haitians.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2088358?nid=21581878&amp;page=0&amp;sort=0&amp;token=be8377fd163b86926bd4b5875b58f065" title="Recommend comment: By honestly accepting" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>37</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2088358?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2088358" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2088358#comment-2088358" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2088074" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/femi/comments" title="View femi&#039;s profile">femi</a>                                <time itemprop="dateCreated" dateTime="2013-07-15T13:24:00+0000" class="created" title="2013-07-15T13:24:31+00:00">Jul 15th 2013 13:24 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>From a public international law point of view this is going to be a very interesting case and indeed a locus classicus. However as this article rightly points out this case is going to have serious implications for NGO and other quasi-governmental organisations who volunteer to take on aid work. Again we seem to be lurching away from common sense and seeking once again legal remedies to problems which should really be resolved by other means.In the end volunteers and those who could otherwise bring aid, succor or relief in times of crisis are going to be reluctant to do so in future, with the consequence that we would see people suffer and die where help could otherwise be provided. How utterly devoid of common sense , but this is a reflection of the world we are now creating. It is unfortunate that it would have to come to this.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2088074?nid=21581878&amp;page=0&amp;sort=0&amp;token=ea9e2015f9ec734e01aca35ccd334352" title="Recommend comment: From a public international" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>37</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2088074?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2088074" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2088074#comment-2088074" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2089424" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/Beaverbrook/comments" title="View Beaverbrook&#039;s profile">Beaverbrook</a>            <a href="/comment/2089022#comment-2089022" class="reply-to">in reply to Singcaver</a>                    <time itemprop="dateCreated" dateTime="2013-07-16T08:17:00+0000" class="created" title="2013-07-16T08:17:18+00:00">Jul 16th 2013 8:17 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>There have been efforts to reform the UN for 60 years, and none have worked. It is beyond reform being an international civil service beholding to no one. The best thing to do: scrap it. If it has a dubious purpose, if it doesn't work, don't try to fix it, just kill it. Take the World Bank with it!</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2089424?nid=21581878&amp;page=0&amp;sort=0&amp;token=44b4a15570a99c231cb2ff14cd4a8fbb" title="Recommend comment: There have been efforts to" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>36</span></div></li>
+<li class="comment_report_abuse"><a href="/reportn=44b4a15570a99c231cb2ff14cd4a8fbb"-abuse/comment/21581878/2089424?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2089424" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2089424#comment-2089424" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2089008" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/djones44/comments" title="View djones44&#039;s profile">djones44</a>            <a href="/comment/2088982#comment-2088982" class="reply-to">in reply to little ike</a>                    <time itemprop="dateCreated" dateTime="2013-07-16T00:56:00+0000" class="created" title="2013-07-16T00:56:01+00:00">Jul 16th 2013 0:56 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>Kofi Annan mentioned that "The UN has a very small budget;smaller than the NYFD." I guess the phrase "you get what you pay for" has meaning anywhere but here.<br />
+My larger point is that the E is NATO-centric and bashing the UN is de rigueur. It's a legacy attitude that is getting very old.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2089008?nid=21581878&amp;page=0&amp;sort=0&amp;token=d88d543e17c129a05cfb3ff7d55f8a09" title="Recommend comment: Koffi Anna mentioned that" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>35</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2089008?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2089008" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2089008#comment-2089008" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2090368" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/W2ijLhwY5m/comments" title="View W2ijLhwY5m&#039;s profile">W2ijLhwY5m</a>                                <time itemprop="dateCreated" dateTime="2013-07-17T00:15:00+0000" class="created" title="2013-07-17T00:15:14+00:00">Jul 17th 2013 0:15 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>Move the UN headquarters and their limo riding, jet flying, penthouse living dignitaries to Haiti</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2090368?nid=21581878&amp;page=0&amp;sort=0&amp;token=60e45267ae664bc23d7138c57d2be652" title="Recommend comment: Move the UN headquarters and" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>34</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2090368?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2090368" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2090368#comment-2090368" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2088703" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/djones44/comments" title="View djones44&#039;s profile">djones44</a>                                <time itemprop="dateCreated" dateTime="2013-07-15T22:20:00+0000" class="created" title="2013-07-15T22:20:18+00:00">Jul 15th 2013 22:20 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>Just like the Economist, being a glee club for the Pentagon and ever leading the toad chorus, to pick through a sewage pile to smear the UN.</p>
+<p>A professional journalist should look at the 200 mile shanty town seeded by the British period outside Islamabad in Nigeria, the world's largest open sewer. It should be of editorial interest to the Economist that 70 million people live in that shanty town.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2088703?nid=21581878&amp;page=0&amp;sort=0&amp;token=041960363e5d430b4e4418d73e8aa1c3" title="Recommend comment: Just like the Economist," class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>33</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2088703?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2088703" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2088703#comment-2088703" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2090554" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/Suchindranath/comments" title="View Suchindranath&#039;s profile">Suchindranath</a>                                <time itemprop="dateCreated" dateTime="2013-07-17T05:13:00+0000" class="created" title="2013-07-17T05:13:34+00:00">Jul 17th 2013 5:13 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>The UN is run by a bureaucracy that enjoys even more impunity and incompetence that that of India or Stalinist Russia. Does anybody remember that the UN introduced the "Nile Perch" into Lake Victoria with devastating effect? The Tilapia used to be fished from dug outs, sun-baked and eaten by the natives. The Nile Perch did away with the Tilapia, de-forested the environment as it needed fire wood to be cooked. It did away with the livelihood of the local fishermen and the non-Wild Life protein intake of East-Central Africa. Asian Factory Ship Owners and European Fish consumers were the real beneficiaries.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2090554?nid=21581878&amp;page=0&amp;sort=0&amp;token=3847ad98ff6d19051a5b510aacacbb75" title="Recommend comment: The UN is run by a" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>32</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2090554?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2090554" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2090554#comment-2090554" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2089602" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/Gustav776/comments" title="View Gustav776&#039;s profile">Gustav776</a>                                <time itemprop="dateCreated" dateTime="2013-07-16T12:14:00+0000" class="created" title="2013-07-16T12:14:43+00:00">Jul 16th 2013 12:14 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>stav776</a>                                <time itemprop="dateCreated" dateTime="2013-07-16T12:14:00+0000" class="created" title="2013-07-16T12:14:43+00:00">Jul 16th 2013 12:14 GMTHm. UN money = Dirty money?</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2089602?nid=21581878&amp;page=0&amp;sort=0&amp;token=1d8fc161741c773caee6a440e79ba0e1" title="Recommend comment: Hm. UN money = Dirty money?" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>31</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2089602?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2089602" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2089602#comment-2089602" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2089275" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/YunnanTobacco/comments" title="View YunnanTobacco&#039;s profile">YunnanTobacco</a>            <a href="/comment/2089008#comment-2089008" class="reply-to">in reply to djones44</a>                    <time itemprop="dateCreated" dateTime="2013-07-16T05:05:00+0000" class="created" title="2013-07-16T05:05:40+00:00">Jul 16th 2013 5:05 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>As long as the UN continues to be an unaccountable bureaucracy that gets up to stuff like this while at the same time unable to solve most of the problems it sets out to solve, this attitude will never get old.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2089275?nid=21581878&amp;page=0&amp;sort=0&amp;token=4a928cfa1d18080854d845d1eab09b71" title="Recommend comment: As long as the UN continues" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>31</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2089275?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2089275" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2089275#comment-2089275" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2090511" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/TS2912/comments" title="View TS2912&#039;s profile">TS2912</a>                                <time itemprop="dateCreated" dateTime="2013-07-17T04:02:00+0000" class="created" title="2013-07-17T04:02:28+00:00">Jul 17th 2013 4:02 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>#1 - Is it the UN's fault for (unwittingly) bringing in a Cholera infection?</p>
+<p>#2 - Or Haiti's fault for not having a sewage system (which would make such diseases a non-issue)?</p>
+<p>If is is #1, then I could sue my neighbor for giving me a cold,<br />
+- which turned into pneumonia<br />
+- because I did not have health insurance to visit my primary care physician<br />
+- causing my condition to become life-threatening</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2090511?nid=21581878&amp;page=0&amp;sort=0&amp;token=0952be919633b8b2c41744441366e4df" title="Recommend comment: #1 - Is it the UN&#039;s fault for" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>30</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2090511?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2090511" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2090511#comment-2090511" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2090093" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/southernman/comments" title="View southernman&#039;s profile">southernman</a>                                <time itemprop="dateCreated" dateTime="2013-07-16T18:21:00+0000" class="created" title="2013-07-16T18:21:04+00:00">Jul 16th 2013 18:21 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>The United Nations costs billions of dollars per year. Does it prevent wars? No. Does it provide basic sanitation for countries in disaster zones? No. Does it provide any semblance of social justice or quality of life for millions of oppressed women, children and minority populations worldwide? Hell no. </p>
+<p>Does it hold conferences and wank on forever about the evils of climate change and copyright violation? Yes.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2090093?nid=21581878&amp;page=0&amp;sort=0&amp;token=be3e8796dc9501796d6934b4a3124eda" title="Recommend comment: The United Nations costs" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>30</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2090093?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2090093" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2090093#comment-2090093" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2089919" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/char69/comments" title="View char69&#039;s profile">char69</a>                                <time itemprop="dateCreated" dateTime="2013-07-16T15:36:00+0000" class="created" title="2013-07-16T15:36:26+00:00">Jul 16th 2013 15:36 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>Great article, I hope the UUN finds a way to pay them up.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2089919?nid=21581878&amp;page=0&amp;sort=0&amp;token=849a81c5c8490c9eedad3488de168f87" title="Recommend comment: Great article, I hope the UUN" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>30</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2089919?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2089919" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2089919#comment-2089919" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2090838" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/Hussain%2BAlrikabi/comments" title="View Hussain Alrikabi&#039;s profile">Hussain Alrikabi</a>                                <time itemprop="dateCreated" dateTime="2013-07-17T13:48:00+0000" class="created" title="2013-07-17T13:48:27+00:00">Jul 17th 2013 13:48 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>The members of US Congress who had urged the UN to take responsibility of the cholera outbreak in Haiti are to be commended for their concern. However, not a single member of the US Congress has ever urged his own government to take responsibility for the horrible effects on the health of Iraqis, particularly children, from the depleted uranium bombs which were generously showered on Iraq by the US during the Gulf War of 1991. In fact the US still denies the fact that depleted uranium bombs were used by US armed forces in Iraq. The United States of America is quite selective about moral responsibilities. That's why it is better for US Administrations and Congress members not to assume high moral ground and to refrain from commenting on such matters until they first own to the US instigated horrors afflicting the human race.<br />
+Hussain Alrikabi<br />
+3 Cronia Court, Wheelers Hill, Victoria 3150, Australia, <a href="mailto:h.alrikabi@gmail.com" rel="nofollow">h.alrikabi@gmail.com</a></p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2090838?nid 3150, Australia, <a href="mailto:h.alrikabi@gmail.com" rel="nofollow">h=21581878&amp;page=0&amp;sort=0&amp;token=4b54eea43dab5ae070bbb92bf25b7d7c" title="Recommend comment: The members of US Congress" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>29</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2090838?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2090838" rel="nofollow">Report</a></li>
+<li class="permalink last"><a href="http://www.economist.com/comment/2090838#comment-2090838" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+
+  <article itemscope itemtype="http://schema.org/UserComments" id="comment-2090164" class="single-comment">
+    <div>
+      <header>        <div>
+                      <a href="/users/tkm-r/comments" title="View tkm-r&#039;s profile">tkm-r</a>                                <time itemprop="dateCreated" dateTime="2013-07-16T20:05:00+0000" class="created" title="2013-07-16T20:05:58+00:00">Jul 16th 2013 20:05 GMT</time>
+        </div>
+      </header>
+      <div class="comment-body"><p>Your picture accompanying the article sums up the UN's case... In a  country with zero sanitation and every communicable disease known how can you be sure of anything.<br />
+Cholera tragic as the deaths are could only be the tiniest bleep on the communicable disease radar of this country.</p>
+<p>7% of the population give me a break.... poor people and greedy lawyers.</p>
+<p>Is there some kind of balance sheet where the UN gets credit for providing most of the medical care and food on the island.</p>
+</div>
+      <footer class="clearfix">
+                  <ul class="links"><li class="comment_recommend first"><a href="/vote/recommend-comment/2090164?nid=21581878&amp;page=0&amp;sort=0&amp;token=0507074260b7af8910a8ab2295b49c98" title="Recommend comment: Your picture accompanying the" class="recommend" data-ec-omniture="recommend_comment" rel="nofollow">Recommend</a> <div><span>29</span></div></li>
+<li class="comment_report_abuse"><a href="/report-abuse/comment/21581878/2090164?destination=node%2F21581878" title="Report this comment to our moderators" class="report-anchor secondary-action" data-form-ajax="/ajax/report-abuse/comment/21581878/2090164" rel="nofollow">Report</a></li>
+<li class="permalink last"><a hr21581878/2090164?destination=node%2F21581878" title="Ref="http://www.economist.com/comment/2090164#comment-2090164" title="Permanent link to this comment" rel="nofollow" class=" secondary-action">Permalink</a></li>
+</ul>              </footer>
+    </div>
+  </article>
+
+<div class="pager clearfix"><div class="item-list"><ul class="pager"><li class="pager-current first">1</li>
+<li class="pager-item even"><a href="/blogs/americasview/2013/07/cholera-haiti?page=1#sort-comments" title="Go to page 2" class="active">2</a></li>
+<li class="pager-item"><a href="/blogs/americasview/2013/07/cholera-haiti?page=2#sort-comments" title="Go to page 3" class="active">3</a></li>
+<li class="pager-item even"><a href="/blogs/americasview/2013/07/cholera-haiti?page=3#sort-comments" title="Go to page 4" class="active">4</a></li>
+<li class="pager-next"><a href="/blogs/americasview/2013/07/cholera-haiti?page=1#sort-comments" class="active">next ›</a></li>
+<li class="pager-last even last"><a href="/blogs/americasview/2013/07/cholera-haiti?page=3#sort-comments" class="active">last »</a></li>
+</ul></div></div>
+  </section>
+              </div> <!-- /#main-area -->
+
+              <div id="column-right" class="grid-6 clearfix">
+                    <div id="block-ec_components-page_tools_compact" class="block block-ec_components 
+">
+    <div class="content clearfix">
+    <ul class="ec-page-tools ec-pt-compact clearfix"><li class="pt-comment first"><a href="/blogs/americasview/2013/07/cholera-haiti#comments" class="view-comments" data-ec-omniture="go_to_comments">Comment (63)</a></li>
+<li class="pt-bookmark even"><a href="/bookmarks" rel="nofollow" title="Timekeeper reading list" data-ec-omniture="bookmark">Timekeeper reading list</a></li>
+<li class="pt-email"><a href="/node/21581878/email" rel="nofollow" title="E-mail this content to a friend" data-ec-omniture="email_a_friend">E-mail</a></li>
+<li class="pt-randr even"><a href="http://s100.copyright.com/AppDispatchServlet?publisherName=economist&amp;publication=economist&amp;title=The%20UN%20strain&amp;publicationDate=20130715&amp;contentID=21581878&amp;type=BL&amp;orderBeanReset=0&amp;srTitle=" data-ec-omniture="reprints_permissions">Reprints &amp; permissions</a></li>
+<li class="pt-print"><a href="/node/21581878/print" rel="nofollow" title="Printer friendly version" data-ec-omniture="print_content">Print</a></li>
+<li class="even last"></li>
+</ul>  </div>
+</div>
+
+<div id="block-ec_blogs-ec_blogs_block_bloginfo" class="block block-ec_blogs 
+">
+    <div class="content clearfix">
+    <div class="title">
+  About Americas view</div>
+<div class="about"><p>Reporting, analysis and opinion on politics, economics, society and culture in Latin America, the Caribbean and Canada</p>
+</div>
+<div class="links">
+  <a href="https://twitter.com/EconAmericas" class="twitter-follow-button">Follow us on Twitter @EconAmericas</a>  <a href="/blogs/americasview/index.xml" class="rss" rel="alternate" type="application/rss+xml" title="RSS 2.0">RSS feed</a></div>
+  </div>
+</div>
+
+<div id="block-ec_ads-mpu_no_wrapper_top_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec-ads ec-ads-remove-if-empty ec-ads-remove-wrapper"><!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_mpu_no_wrapper_top_ad"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_mpu_no_wrapper_top_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dmpu_no_wrapper_top&sz=20x20&tile=6&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dmpu_no_wrapper_top&sz=20x20&tile=6&c=199997789" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_ads-top_mpu_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec-ads ec-ads-remove-if-empty"><p class="ec-ads-label">Advertisement</p><!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_top_mpu_ad"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_top_mpu_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dmpu_top&sz=300x250|350x900|350x600|300x600&tile=7&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampaipt><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dnd/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dmpu_top&sz=300x250|350x900|350x600|300x600&tile=7&c=199997789" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_ads-ribbon_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec_topic_ribbon ec-ads-remove-if-empty"><!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_ribbon_ad"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_ribbon_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dabsribbon&sz=351x49&tile=8&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dabsribbon&sz=351x49&tile=8&c=199997789" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_pixel_tracking_extole-extole_member_get_member" class="block block-ec_pixel_tracking_extole 
+">
+    <div class="content clearfix">
+    <div id="extole_homepage"><a href="/extole/redirect"></a> <script type="extole/widget">{"zone": "more_from_the_economist", "reference_element":"#extole_homepage"}</script></div>  </div>
+</div>
+
+<div id="block-ec_social-right_rail_social_share_buttons" class="block block-ec_social 
+">
+    <div class="content clearfix">
+    <div id="social-share-buttons-block">
+  <div class="title">Follow <em>The Economist</em></div>
+  <div class="social-share-buttons">
+    <ul class="clearfix">
+      <li class="facebook">
+        <a data-ec-omniture="rightrail|social_share|facebook" href="http://www.facebook.com/TheEconomist" title="Facebook" target="_blank">Facebook</a>
+        <div class="social-share-overlay" data-ec-omniture-frame="follow_fb">
+          <fb:like href="http://www.facebook.com/theeconomist" send="false" width="331" font="arial" show_faces="false"></fb:like>
+        </div>
+      </li>
+      <li class="twitter">
+        <a data-ec-omniture="rightrail|social_share|twitter" href="http://twitter.com/TheEconomist" title="Twitter" target="_blank">Twitter</a>
+        <div class="social-share-overlay" data-ec-omniture-frame="follow_twitter">
+          <a href="https://twitter.com/TheEconomist" class="twitter-follow-button" data-show-count="false">Follow @TheEconomist</a>
+        </div>
+      </li>
+      <li class="linked-in">
+        <a href="http://www.linkedin.com/groups/Economist-official-group-Economist-newspaper-3056216" title="Linked in" target="_blank">Linked in</a>
+        <div class="social-share-overlay">
+          <a href="http://www.linkedin.com/groups/Economist-official-group-Economist-newspaper-3056216" title="Join us on LinkedIn" target="_blank" data-ec-omniture="rightrail|social_share|linked-in">
+            <span></span>
+            <img src="http://cdn.static-economist.com/sites/all/themes/econfinal/images/share-follow-bg.png" alt="Follow" title="Follow on LinkedIn" width="90" height="30" />          </a>
+        </div>
+      </li>
+      <li class="google-plus">
+        <a href="https://plus.google.com/100470681032489535736/posts" title="Google plus" target="_blank">Google plus</a>
+        <div class="social-share-overlay">
+          <div class="g-plus" data-width="352" data-height="69" data-href="https://plus.google.com/100470681032489535736?rel=publisher"></div>
+        </div>
+      </li>
+      <li class="tumblr">
+        <a href="http://theeconomist.tumblr.com/" title="Tumblr" target="_blank">Tumblr</a>
+        <div class="social-share-overlay">
+          <a href="http://theeconomist.tumblr.com/" title="Follow us on Tumblr" target="_blank" data-ec-omniture="rightrail|social_share|tumblr">
+            <span></span>
+            <img src="http://cdn.static-economist.com/sites/all/themes/econfinal/images/share-follow-bg.png" alt="Follow" title="Follow on Tumblr" width="90" height="30" />          </a>
+        </div>
+      </li>
+      <li class="pinterest">
+        <a href="http://pinterest.com/theeconomist/" title="Pinterest" target="_blank">Pinterest</a>
+        <div class="social-share-overlay">
+          <a href="http://pinterest.com/theeconomist/" title="Follow us on Pinterest" target="_blank" data-ec-omniture="rightrail|social_share|pinterest">
+            <span></span>
+            <img src="http://cdn.static-economist.com/sites/all/themes/econfinal/images/share-follow-bg.png" alt="Follow" title="Follow on Pinterest" width="90" height="30" />          </a>
+        </div>
+      </li>
+      <li class="youtube">
+        <a href="http://www.youtube.com/user/economistmagazine" title="YouTube" target="_blank">YouTube</a>
+        <div class="social-share-overlay">
+          <a href="http://www.youtube.com/user/economistmagazine" title="Follow us on YouTube" target="_blank" data-ec-omniture="rightrail|social_share|youtube">
+            <span></span>
+            <img src="http://cdn.static-economist.com/sites/all/themes/econfinal/images/share-follow-bg.png" alt="Follow" title="Follow on YouTube" width="90" height="30" />          </a>
+        </div>
+      </li>
+      <li class="rss">
+        <a href="/rss" title="RSS" target="_blank">RSS</a>
+        <div class="social-share-overlay">
+          <a href="/rss" title="Subscribe to an Economist RSS feed" target="_blank" data-ec-omniture="rightrail|social_share|rss"><b>RSS feeds by section & topic</b><br>Excerpts from the print edition &amp; blogs &raquo;</a>        </div>
+      </li>
+      <li class="newsletters">
+        <a href="/newsletters" title="Newsletters" target="_blank">Mail</a>
+        <div class="social-share-overlay">
+          <a href="/newsletters" title="Subscribe to an Economist newsletter" target="_blank" data-ec-omniture="rightrail|social_share|newsletters"><b>Free e-maiters" title="Newsletters" target="l newsletters</b><br>Editor's Highlights, The World This Week, and more  &raquo;</a>        </div>
+      </li>
+    </ul>
+  </div>
+</div>  </div>
+</div>
+
+<div id="block-ec_blogs-ec_blogs_block_recent" class="block block-ec_blogs 
+">
+    <div class="content clearfix">
+    <div class="title">
+                 <h6><a href="/latest-updates">Latest updates &raquo;</a></h6>
+                 </div><div id="latest-updates"><article id="node-21633587" class="ec-sections-latest-updates-block clearfix" data-href-redirect="/blogs/economist-explains/2015/01/economist-explains-3">
+      <img src="http://cdn.static-economist.com/sites/default/files/imagecache/50_by_50/images/2014/11/blogs/economist-explains/20101113_wom943.gif" alt="The Economist explains" title=""  class="imagecache imagecache-50_by_50" width="50" height="50" />    <p><a href="/blogs/economist-explains/2015/01/economist-explains-3"><span class="latest-updates-fly-title">The Economist explains</span>: How maps are biased</a></p>
+  <p class="dateline">
+    <span class="section">The Economist explains</span>
+    <span class="timestamp" title="2015-01-06T23:50:00+00:00"> January 6th, 23:50</span>
+  </p>
+</article>
+
+<article id="node-21637333" class="ec-sections-latest-updates-block clearfix" data-href-redirect="/blogs/democracyinamerica/2015/01/data-and-homelessness">
+      <img src="http://cdn.static-economist.com/sites/default/files/imagecache/50_by_50/images/2015/01/blogs/democracy-america/homeless.jpg" alt="Data and homelessness" title=""  class="imagecache imagecache-50_by_50" width="50" height="50" />    <p><a href="/blogs/democracyinamerica/2015/01/data-and-homelessness"><span class="latest-updates-fly-title">Data and homelessness</span>: Just like Airbnb</a></p>
+  <p class="dateline">
+    <span class="section">Democracy in America</span>
+    <span class="timestamp" title="2015-01-06T19:34:39+00:00"> January 6th, 19:34</span>
+  </p>
+</article>
+
+<article id="node-21637969" class="ec-sections-latest-updates-block clearfix" data-href-redirect="/news/science-and-technology/21637969-week-our-correspondents-discuss-years-first-big-space-flight-story-and-years">
+      <img src="http://cdn.static-economist.com/sites/default/files/imagecache/50_by_50/images/2015/01/articles/main/20150106_babbage_90.jpg" alt="Babbage: January 6th 2015" title="Babbage: Recycling rockets"  class="imagecache imagecache-50_by_50" width="50" height="50" />    <p><a href="/news/science-and-technology/21637969-week-our-correspondents-discuss-years-first-big-space-flight-story-and-years"><span class="latest-updates-fly-title">Babbage: January 6th 2015</span>: Recycling rockets</a></p>
+  <p class="dateline">
+    <span class="section">Science and technology</span>
+    <span class="timestamp" title="2015-01-06T19:11:05+00:00"> January 6th, 19:11</span>
+  </p>
+</article>
+
+<article id="node-21637938" class="ec-sections-latest-updates-block clearfix" data-href-redirect="/blogs/erasmus/2015/01/epiphany-greek-left">
+      <img src="http://cdn.static-economist.com/sites/default/files/imagecache/50_by_50/images/2015/01/blogs/erasmus/20150110_blp504.jpg" alt="Epiphany for the Greek left" title=""  class="imagecache imagecache-50_by_50" width="50" height="50" />    <p><a href="/blogs/erasmus/2015/01/epiphany-greek-left"><span class="latest-updates-fly-title">Epiphany for the Greek left</span>: Spreading his wings</a></p>
+  <p class="dateline">
+    <span class="section">Erasmus</span>
+    <span class="timestamp" title="2015-01-06T17:30:26+00:00"> January 6th, 17:30</span>
+  </p>
+</article>
+
+<article id="node-21637877" class="ec-sections-latest-updates-block clearfix" data-href-redirect="/blogs/gulliver/2015/01/hotel-wi-fi-blocking">
+      <img src="http://cdn.static-economist.com/sites/default/files/imagecache/50_by_50/images/2015/01/blogs/gulliver/20150110_blp503.jpg" alt="Hotel Wi-Fi blocking" title=""  class="imagecache imagecache-50_by_50" width="50" height="50" />    <p><a href="/blogs/gulliver/2015/01/hotel-wi-fi-blocking"><span class="latest-updates-fly-title">Hotel Wi-Fi blocking</span>: Marriott is bad, and should feel bad</a></p>
+  <p class="dateline">
+    <span class="section">Gulliver</span>
+    <span class="timestamp" title="2015-01-06T16:00:55+00:00"> January 6th, 16:00</span>
+  </p>
+</article>
+
+<article id="node-21637919" class="ec-sections-latest-updates-block clearfix" data-href-redirect="/blogs/buttonwood/2015/01/markets">
+      <img src="http://cdn.static-economist.com/sites/default/files/imagecache/50_by_50/buttonwood_90x90.png" alt="Buttonwood&#039;s notebook" title=""  class="imagecache imagecache-50_by_50" width="50" height="50" />    <p><a href="/blogs/buttonwood/2015/01/markets"><span class="latest-updates-fly-title">Markets</span>: A fine way to start the year</a></p>
+  <p class="dateline">
+    <span class="section">Buttonwood's notebook</span>
+    <span class="timestamp" title="2015-01-06T13:15:48+00:00"> January 6th, 13:15</span>
+  </p>
+</article>
+
+<article id="node-21637933" class="ec-sections-latest-updates-block clearfix" data-href-redirect="/blogs/prospero/2015/01/institute-sexology">
+      <img src="http://cdn.static-economist.com/sites/default/files/imagecache/50_by_50/images/2015/01/blogs/prospero/20150110_bkp501.jpg" alt="The Institute of Sexology" title=""  class="imagecache imagecache-50_by_50" width="50" height="50" />    <p><a href="/blogs/prospero/2015/01/institute-sexology"><span class="latest-updates-fly-title">The Institute of Sexology</span>: Let's talk about sex</a></p>
+  <p class="dateline">
+    <span class="section">Prospero</span>
+    <span class="timestamp" title="2015-01-06T13:12:52+00:00"> January 6th, 13:12</span>
+  </p>
+</article>
+
+</div><div class="more-latest-updates"><a href="/latest-updates" class="more">More latest updates &raquo;</a></div>  </div>
+</div>
+
+<div id="block-ec_mostx-mostpopular" class="block block-ec_mostx 
+">
+    <div class="content clearfix">
+    <div id="most-lists" class="block">
+  <div id="block-title"><p>Most popular</p></div>
+  <ul id="tabs">
+    <li><a id="commented" class="tab active hidden">Commented</a></li>
+  </ul>
+
+  <div class="list-wrapper">
+          <h3>Commented</h3>
+      <ul id="commented-list" class="show">
+        <li class="mostx-first"><a href="/news/europe/21637348-unlikely-event-russian-attack-polish-partisans-may-be-waiting-home-army-back?spc=scode&amp;spv=xm&amp;ah=9d7f7ab945510a56fa6d37c30b6f1709" id="track-commented-21637348"><img src="http://cdn.static-economist.com/sites/default/files/imagecache/mostx_block/images/2014/12/articles/main/20141220_eup501_0.jpg" alt="The Home Army is back" title=""  class="mostx-image-first" width="168" height="95" /><span class="mostx-list">1</span><span class="mostx-text"><span class="mostx-fly-title">Poland's would-be guerrillas</span>The Home Army is back</span></a></li><li><a href="/news/europe/21637820-genuine-grassroots-democratic-movement-deny-rights-same-sex-families-uncivil-society?spc=scode&amp;spv=xm&amp;ah=9d7f7ab945510a56fa6d37c30b6f1709" id="track-commented-21637820"><span class="mostx-list">2</span><span class="mostx-text"><span class="mostx-fly-title">Slovakia's anti-gay activists</span>: Uncivil society</span></a></li><li><a href="/news/united-states/21637418-bill-de-blasios-first-year-city-hall-ends-turmoil-blue-thread-frays?spc=scode&amp;spv=xm&amp;ah=9d7f7ab945510a56fa6d37c30b6f1709" id="track-commented-21637418"><span class="mostx-list">3</span><span class="mostx-text"><span class="mostx-fly-title">New York’s mayor</span>: The blue thread frays</span></a></li><li><a href="/news/asia/21637440-asia-2014-was-not-europe-1914-after-all-echoes-warrant-heeding-centenary-delusion?spc=scode&amp;spv=xm&amp;ah=9d7f7ab945510a56fa6d37c30b6f1709" id="track-commented-21637440"><span class="mostx-list">4</span><span class="mostx-text"><span class="mostx-fly-title">Banyan</span>: The centenary delusion</span></a></li><li><a href="/blogs/erasmus/2014/12/western-muslims-and-egypt?spc=scode&amp;spv=xm&amp;ah=9d7f7ab945510a56fa6d37c30b6f1709" id="track-commented-21637467"><span class="mostx-list">5</span><span class="mostx-text"><span class="mostx-fly-title">Western Muslims and Egypt</span>: Telling (all) hard truths</span></a></li>      </ul>
+    
+  </div>
+</div>
+  </div>
+</div>
+
+<div id="block-ec_ads-bottom_mpu_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec-ads ec-ads-remove-if-empty"><p class="ec-ads-label">Advertisement</p><!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_bottom_mpu_ad"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_bottom_mpu_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dmpu_bottom&sz=300x250|50x50|300x600&tile=9&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dmpu_bottom&sz=300x250|50x50|300x600&tile=9&c=199997789" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_pixel_tracking_onscroll-bottom_onscroll" class="block block-ec_pixel_tracking_onscroll 
+">
+    <div class="content clearfix">
+    <div id="onscroll-ad-holder-mpu2"></div>  </div>
+</div>
+
+<div id="block-ec_blogs-ec_blogs_block_blog_links" class="block block-ec_blogs 
+">
+    <div class="content clearfix">
+    <div class="title"><i>Economist</i> blogs</div><div class="item-list"><ul id="blogs"><li class="first"><a href="/blogs/buttonwood" title="Our Buttonwood columnist considers the ever-changing financial markets. Brokerage was once conducted under a buttonwood tree on Wall Street.
+
+The 6th Annual Buttonwood Gathering takes place in New York on February 10th 2015. To learn more click here.">Buttonwood&#039;s notebook<span class="description"> | Financial markets</span></a></li>
+<li class="even"><a href="/blogs/democracyinamerica" title="Thoughts and opinions on America’s kinetic brand of politics. The blog is named after Alexis de Tocqueville’s study of American politics and society">Democracy in America<span class="description"> | American politics</span></a></li>
+<li><a href="/blogs/erasmus" title="This blog, named after the Dutch Rena politics. The blog is named after Alexis de Tocqueville’s study of American politics and society">Democracy in America<span class="description"> | American pissance humanist and scholar, considers the intersections between religion and public policy
+">Erasmus<span class="description"> | Religion and public policy</span></a></li>
+<li class="even"><a href="/blogs/freeexchange" title="Our economics correspondents consider the fluctuations in the world economy and the policies intended to produce more booms than busts">Free exchange<span class="description"> | Economics</span></a></li>
+<li><a href="/blogs/gametheory" title="Reporting and analysis on the politics, economics, science and statistics of the games we play and watch">Game theory<span class="description"> | Sports</span></a></li>
+<li class="even"><a href="/blogs/graphicdetail" title="A new chart or map every working day, interactive-data features and links to interesting sources of data around the web">Graphic detail<span class="description"> | Charts, maps and infographics</span></a></li>
+<li><a href="/blogs/gulliver" title="Our correspondents inform and entertain business travellers with news and views to help them make the most of life on the road">Gulliver<span class="description"> | Business travel</span></a></li>
+<li class="even"><a href="/blogs/prospero" title="Named after the hero of Shakespeare’s “The Tempest”, this blog provides literary insight and cultural commentary from our correspondents">Prospero<span class="description"> | Books, arts and culture</span></a></li>
+<li class="last"><a href="/blogs/economist-explains" title="On this blog, our correspondents explain subjects both topical and timeless, profound and peculiar, with The Economist&#039;s trademark clarity and brevity">The Economist explains<span class="description"> | Explaining the world, daily</span></a></li>
+</ul></div>  </div>
+</div>
+
+<div id="block-block-1" class="block block-block 
+">
+    <div class="content clearfix">
+    <div id="product-events">
+<div class="title">Products and events</div>
+<div class="product-section product-section-first linked">
+<p class="products-events-section"><strong><a  class="social-link" href="https://www.facebook.com/TheEconomist/app_223894367716742" target="_blank">Have you listened to <i>The Economist</i> Radio on Facebook?</a></strong><br />
+<i>The Economist</i> Radio is an on-demand social listening platform that allows you to listen, share and recommend <i>The Economist</i> audio content</p>
+</div>
+<div class="product-section linked">
+<p class="products-events-section"><strong><a  class="social-link" href="/economist-quiz" target="_blank">Test your EQ</a></strong><br />
+Take our weekly news quiz to stay on top of the headlines
+</p>
+</div>
+<div class="product-section linked">
+<p class="products-events-section"><strong><a  class="social-link" href="http://inotherwords.economist.com/" target="_blank">In Other Words</a></strong><br />
+Try our new audio app and website, providing reporting and analysis from our correspondents around the world every weekday
+</p>
+</div>
+<div class="product-section product-section-last linked">
+<p class="products-events-section"><strong><a  class="social-link" href="http://econ.st/R7pQMy" target="_blank">Want more from <i>The Economist?</i></a></strong><br />
+Visit The Economist e-store and you’ll find a range of carefully selected products for business and pleasure, Economist books and diaries, and much more</p>
+</div>
+</div>
+  </div>
+</div>
+
+<div id="block-ec_perfect_market-ec_pm_ads_container" class="block block-ec_perfect_market 
+">
+    <div class="content clearfix">
+    <div id="ec-perfect-market-container-ads"></div>  </div>
+</div>
+
+<div id="block-ec_ads-bottom_right_mpu_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec-ads ec-ads-remove-if-empty"><p class="ec-ads-label">Advertisement</p><!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_bottom_right_mpu_ad"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_bottom_right_mpu_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dmpu_bottom_right&sz=300x250|45x45&tile=10&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dmpu_bottom_right&sz=300x250|45x45&tile=10&c=199997789" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+<div id="block-ec_pixel_tracking_onscroll-bottom_right_onscroll" class="block block-ec_pixel_tracking_onscroll 
+">
+    <div class="content clearfix">
+    <div id="onscroll-ad-holder"></div>  </div>
+</div>
+
+        </div> <!-- /#side-bar -->
+      
+      
+    </div> <!-- /#columns -->    
+          <div id="footer-classifieds" class="clearfix">
+        <div class="title">Classified ads</div>
+        <div id="block-ec_ads-button_ad_1" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified first">
+    <div class="content clearfix">
+    <!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_button_ad_1"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_1");  });
+</script><noscript>
+  <a href="//pubads.g.d  <!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_button_ad_1"><script type="text/javascript">  googletoubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton1&sz=125x125&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton1&sz=125x125&c=199997789" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-button_ad_2" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified">
+    <div class="content clearfix">
+    <!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_button_ad_2"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_2");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton2&sz=125x125&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton2&sz=125x125&c=199997789" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-button_ad_3" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified">
+    <div class="content clearfix">
+    <!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_button_ad_3"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_3");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton3&sz=125x125&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton3&sz=125x125&c=199997789" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-button_ad_4" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified">
+    <div class="content clearfix">
+    <!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_button_ad_4"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_4");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton4&sz=125x125&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton4&sz=125x125&c=199997789" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-button_ad_5" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified">
+    <div class="content clearfix">
+    <!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_button_ad_5"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_5");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton5&sz=125x125&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton5&sz=125x125&c=199997789" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-button_ad_6" class="block block-ec_ads 
+ec-ads-gpt ec-classified-box ec-ads-classified last">
+    <div class="content clearfix">
+    <!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_button_ad_6"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_button_ad_6");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton6&sz=125x125&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dbutton6&sz=125x125&c=199997789" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+      </div>
+        <aside class="site-index">
+      <div>
+  <div class="svg-logo"><img class="mh-logo" width="170" height="85" src="//cdn.static-economist.com/sites/all/themes/econfinal/images/svg/logo.svg" alt="The Economist" /></div>
+      <ul class="site-index-1">
+              <li><a href="http://www.economist.com/contact-info" data-ec-omniture="mini_map|contact_us">Contact us</a></li>
+              <li><a href="/help/home" data-ec-omniture="mini_map|help">Help</a></li>
+              <li><a href="/user" data-ec-omniture="mini_map|my_account">My account</a></li>
+              <li><a href="/products/subscribe" data-ec-omniture="mini_map|subscribe">Subscribe</a></li>
+              <li><a href="/printedition" data-ec-omniture="mini_map|print_edition">Print edition</a></li>
+              <li><a href="http://www.economist.com/digital" data-ec-omniture="mini_map|digital_editions">Digital editions</a></li>
+              <li><a href="http://www.economist.com/events-conferences" data-ec-omniture="mini_map|events">Events</a></li>
+              <li><a href="http://jobs.economist.com/" data-ec-omniture="mini_map|jobs_economist_com">Jobs.Economist.com</a></li>
+              <li><a href="/bookmarks" data-ec-omniture="mini_map|timekeeper_saved_articles">Timekeeper saved articles</a></li>
+          </ul>
+  </div>
+<div>
+  <h6>Sections</h6>
+  <ul class="footer-index-site-2-content">
+                <li><a href="http://www.economist.com/sections/united-states" data-ec-omniture="mini_map|united_states">United States</a></li>
+                <li><a href="http://www.economist.com/sections/britain" data-ec-omniture="mini_map|britain">Britain</a></li>
+                <li><a href="http://www.economist.com/sections/europe" data-ec-omniture="mini_map|europe">Europe</a></li>
+                <li><a href="http://www.economist.com/sections/china" data-ec-omniture="mini_map|china">China</a></li>
+                <li><a href="http://www.economist.com/sections/asia" data-ec-omniture="mini_map|asia">Asia</a></li>
+                <li><a href="http://www.economist.com/sections/americas" data-ec-omniture="mini_map|americas">Americas</a></li>
+                <li><a href="/sections/middle-east-africa" data-ec-omniture="mini_map|middle_east_africa">Middle East &amp; Africa</a></li>
+                <li><a href="/sections/international" data-ec-omniture="mini_map|international">International</a></li>
+                <li><a href="/sections/business-finance" data-ec-omniture="mini_map|business_finance">Business &amp; finance</a></li>
+                <li><a href="http://www.economist.com/sections/economics" data-ec-omniture="mini_map|economics">Economics</a></li>
+                <li><a href="http://www.economist.com/markets-data" data-ec-omniture="mini_map|markets_data">Markets &amp; data</a></li>
+                <li><a href="http://www.economist.com/sections/science-teture="mini_map|economics">Economics</a></li>
+                <li><a href="http://www.economist.com/markets-data" data-ec-omniture="mini_map|markets_data">Markets &amp; data</a></li>
+                <li><a href="http://www.economist.com/sections/scichnology" data-ec-omniture="mini_map|science_technology">Science &amp; technology</a></li>
+                <li><a href="http://www.economist.com/specialreports" data-ec-omniture="mini_map|special_reports">Special reports</a></li>
+                <li><a href="http://www.economist.com/sections/culture" data-ec-omniture="mini_map|culture">Culture</a></li>
+                <li><a href="http://www.economist.com/multimedia" data-ec-omniture="mini_map|multimedia_library">Multimedia library</a></li>
+            </ul>
+      <h6>Debate and discussion</h6>
+    <ul>
+            <li><a href="http://www.economist.com/debate" data-ec-omniture="mini_map|the_economist_debates">The Economist debates</a></li>
+                <li><a href="http://www.economist.com/wtwt" data-ec-omniture="mini_map|what_the_world_thinks">What the world thinks</a></li>
+                <li><a href="http://www.economist.com/letters" data-ec-omniture="mini_map|letters_to_the_editor">Letters to the editor</a></li>
+                <li><a href="/economist-quiz" data-ec-omniture="mini_map|the_economist_quiz">The Economist Quiz</a></li>
+      </ul>
+</div>
+  <div>
+    <h6>Blogs</h6>
+    <ul>
+
+              <li><a href="/blogs/buttonwood" data-ec-omniture="mini_map|buttonwoods_notebook">Buttonwood&#039;s notebook</a></li>
+              <li><a href="/blogs/democracyinamerica" data-ec-omniture="mini_map|democracy_in_america">Democracy in America</a></li>
+              <li><a href="/blogs/erasmus" data-ec-omniture="mini_map|erasmus">Erasmus</a></li>
+              <li><a href="/blogs/freeexchange" data-ec-omniture="mini_map|free_exchange">Free exchange</a></li>
+              <li><a href="/blogs/gametheory" data-ec-omniture="mini_map|game_theory">Game theory</a></li>
+              <li><a href="/blogs/graphicdetail" data-ec-omniture="mini_map|graphic_detail">Graphic detail</a></li>
+              <li><a href="/blogs/gulliver" data-ec-omniture="mini_map|gulliver">Gulliver</a></li>
+              <li><a href="/blogs/prospero" data-ec-omniture="mini_map|prospero">Prospero</a></li>
+              <li><a href="/blogs/economist-explains" data-ec-omniture="mini_map|the_economist_explains">The Economist explains</a></li>
+          </ul>
+  </div>
+  <div>
+    <h6>Research and insights</h6>
+    <ul>
+                              <li><a href="/topics" data-ec-omniture="mini_map|topics">Topics</a></li>
+                                        <li><a href="/economics-a-to-z" data-ec-omniture="mini_map|economics_a_z">Economics A-Z</a></li>
+                                        <li><a href="/styleguide/introduction" data-ec-omniture="mini_map|style_guide">Style guide</a></li>
+                                        <li><a href="http://www.theworldin.com/" data-ec-omniture="mini_map|the_world_in_2015">The World in 2015</a></li>
+                                        <li><a href="/whichmba" data-ec-omniture="mini_map|which_mba_">Which MBA?</a></li>
+                                        <li><a href="http://gmat.economist.com/?gsrc=econ_hp&amp;cvosrc=economist.footer.link" data-ec-omniture="mini_map|the_economist_gmat_tutor">The Economist GMAT Tutor</a></li>
+                                        <li><a href="http://www.economist.com/rights" data-ec-omniture="mini_map|reprints_and_permissions">Reprints and permissions</a></li>
+                                        </ul>
+              <h6><a href="http://www.economistgroup.com" data-ec-omniture="mini_map|the_economist_group">The Economist Group &raquo;</a></h6>
+            <ul>
+                                        <li><a href="http://www.eiu.com" data-ec-omniture="mini_map|the_economist_intelligence_unit">The Economist Intelligence Unit</a></li>
+                                        <li><a href="http://store.eiu.com" data-ec-omniture="mini_map|the_economist_intelligence_unit_store">The Economist Intelligence Unit Store</a></li>
+                                        <li><a href="http://wwwli>
+                                        <li><a href="http://store.eiu.com" data-ec-omniture="mini_map|the_economist_intelligence_uni.corporatenetwork.com" data-ec-omniture="mini_map|the_economist_corporate_network">The Economist Corporate Network</a></li>
+                                        <li><a href="http://ideaspeoplemedia.com/" data-ec-omniture="mini_map|ideas_people_media">Ideas People Media</a></li>
+                                        <li><a href="http://www.moreintelligentlife.com" data-ec-omniture="mini_map|intelligent_life">Intelligent Life</a></li>
+                                        <li><a href="http://www.rollcall.com/?t=0506EC&amp;p=econ&amp;s=econ" data-ec-omniture="mini_map|roll_call">Roll Call</a></li>
+                                        <li><a href="http://www.cq.com/news.do" data-ec-omniture="mini_map|cq">CQ</a></li>
+                                        <li><a href="http://www.eurofinance.com" data-ec-omniture="mini_map|eurofinance">EuroFinance</a></li>
+                                        <li><a href="http://store.economist.com" data-ec-omniture="mini_map|the_economist_store">The Economist Store</a></li>
+                                        </ul>
+              <h6 class="minimap-site-index"><a href="/content/site-index" data-ec-omniture="mini_map|view_complete_site_index_">View complete site index »</a></h6>
+            <ul>
+                      </ul>
+  </div>
+
+
+    </aside>
+    <div id="block-ec_ads-slider_ad" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_slider_ad"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_slider_ad");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dslider&sz=1x1&tile=11&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dslider&sz=1x1&tile=11&c=199997789" />
+  </a>
+</noscript></div>  </div>
+</div>
+
+<div id="block-ec_ads-adcast" class="block block-ec_ads 
+ec-ads-gpt">
+    <div class="content clearfix">
+    <div class="ec-ads-remove-if-empty"><!-- Site: Globalisation.  Zone: Blogs | Americas View Articles |  --> <div id="gpt_adcast"><script type="text/javascript">  googletag.cmd.push(function() {      googletag.display("gpt_adcast");  });
+</script><noscript>
+  <a href="//pubads.g.doubleclick.net/gampad/jump?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dadcast&sz=250x1000&tile=12&c=199997789" target="_blank">
+   <img src="//pubads.g.doubleclick.net/gampad/ad?iu=/5605/teg.tdqk/ameh/a&t=subs%3Dn%26wsub%3Dn%26sdn%3Dn%26pos%3Dadcast&sz=250x1000&tile=12&c=199997789" />
+  </a>
+</noscript></div></div>  </div>
+</div>
+
+
+    <footer>
+        <div class="footer-stripe-top">
+    <ul>
+                                <li><a href="/contact-info" data-ec-omniture="footer|contact_us">Contact us</a></li>
+                          <li><a href="http://www.economist.com/help" data-ec-omniture="footer|help">Help</a></li>
+                          <li><a href="http://www.economist.com/help/about-us#About_Economistcom" data-ec-omniture="footer|about_us">About us</a></li>
+                          <li><a href="http://www.economistgroupmedia.com" data-ec-omniture="footer|advertise_with_us">Advertise with us</a></li>
+                          <li><a href="/mediadirectory" data-ec-omniture="footer|editorial_staff">Editorial Staff</a></li>
+                          <li><a href="/mediadirectory/books" data-ec-omniture="footer|staff_books">Staff Books</a></li>
+                          <li><a href="http://www.economistgroupcareers.com" data-ec-omniture="footer|careers">Careers</a></li>
+                          <li><a href="/content/site-index" data-ec-omniture="footer|site_index">Site index</a></li>
+                          </ul>
+  </div>
+
+<div class="footer-stripe-bottom">
+  <ul>
+    <li>Copyright &copy; The Economist Newspaper Limited 2015. All rights reserved.</li>
+                        <li><a href="/help/accessibilitypolicy" data-ec-omniture="footer|accessibility">Accessibility</a></li>
+                  <li><a href="http://www.economistgroup.com/results_and_governance/governance/privacy" data-ec-omniture="footer|privacy_policy">Privacy policy</a></li>
+                  <li><a href="/cookies-info" data-ec-omniture="footer|cookies_info">Cookies info</a></li>
+                  <li><a href="/legal/terms-of-use" data-ec-omniture="footer|terms_of_use">Terms of use</a></li>
+                            <li class="cookie-pref"><div id="teconsent"><script type="text/javascript" src="http://consent-st.truste.com/get?name=notice.js&domain=economist.com&c=teconsent"></script></div></li>
+        </ul>
+</div>
+    </footer> <!-- /footer -->
+  </div>
+
+  <script type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences_all.js"></script>
+<script type="text/javascript" src="http://admin.brightcove.com/js/APIModules_all.js"></script>
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-a8GHW19EK4IzY"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-a8GHW19EK4IzY.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+<!--
+    SiteCatalyst code version: H.13    Copyright 1997-2009 Omniture, Inc.
+    More info available at http://www.omniture.com
+-->
+<script language="javascript" type="text/javascript">var s_account = 'economistcomprod';
+</script><script language="javascript" src="//media.economist.com/sites/default/files/external/ec_omniture/1_8/ec_omniture_s_code.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+  s.pageName="blog|americas_view|the_un_strain";
+s.pageType="";
+s.server="economist.com";
+s.channel="blogs";
+s.prop1="americas_view";
+s.prop2="";
+s.prop3="web";
+s.prop4="blog_post";
+s.prop5="blog|the_un_strain";
+s.prop6="";
+s.prop7="";
+s.prop11="not_logged_in";
+s.prop12="";
+s.prop13="anonymous";
+s.prop14="";
+s.prop15="";
+s.prop26="";
+s.prop28="";
+s.prop31="2013|07|15";
+s.prop34="econfinal";
+s.prop40="0";
+s.prop41="tdqk";
+s.prop42="ameh/a";
+s.hier1="";
+s.state="";
+s.zip="";
+  // For grape shot.
+  if (typeof s !== "undefined" && typeof window.gs_channels !== "undefined") {
+    s.prop6 = window.gs_channels;
+  }
+  if (typeof s !== "undefined" && typeof Economist !== "undefined" && typeof Economist.userData !== "undefined" && typeof Economist.userData.data !== "undefined") {
+    s.prop11 = "logged_in";
+
+    if (typeof Economist.userData.data.username !== "undefined" && typeof Economist.analytics !== 'undefined' && typeof Economist.analytics.omnitureTools !== 'undefined') {
+      s.prop12 = Economist.analytics.omnitureTools.clean(Economist.userData.data.username);
+    }
+
+    if (typeof Economist.userData.data.uid !== "undefined") {
+      s.prop40 = Economist.userData.deof Economist.analytics.omnitureTools !== 'undefined') {
+      s.prop12 = Economist.analytics.omata.uid;
+    }
+
+    if (typeof s.pageName !== "undefined" && s.pageName === "pay_barrier|registration_offer") {
+      s.pageName = "pay_barrier|subscription_offer";
+      s.events = "event2,event23";
+    }
+  }
+
+  if (typeof s !== "undefined" && typeof Economist !== "undefined" && typeof Economist.userData === "undefined" && $.cookie("ec_old_user_data") !== null) {
+    // Omniture is around, but we dont have userData structure in the Economist associative array.
+    // Check to see if we have a saved cookie with the last logged in user details within, if so use that.
+    try {
+      Economist.oldUserData = $.cookie("ec_old_user_data").split('|');
+    }
+    catch (e) {
+      // If we get a error its probably due to the cookie containing invalid data,
+      // so unset the oldUserData.
+      delete Economist.oldUserData;
+    }
+
+    if (typeof Economist.oldUserData !== "undefined" && Economist.oldUserData instanceof Array && typeof Economist.analytics !== 'undefined' && typeof Economist.analytics.omnitureTools !== 'undefined') {
+      s.prop12 = Economist.analytics.omnitureTools.clean(Economist.oldUserData[0]);
+      s.prop40 = Economist.oldUserData[1];
+    }
+  }
+
+  // Process any queued events if we are not using sessions.
+  if ($.cookie('ec_omniture_queue')) {
+    try {
+      var processQueue = (function() {
+        var queued_events, queued_event, event_name;
+        queued_events = JSON.parse($.cookie('ec_omniture_queue'));
+        for (queued_event in queued_events) {
+          for (event_name in queued_events[queued_event]) {
+            if (queued_events[queued_event].hasOwnProperty(event_name)) {
+              if (typeof s[event_name] !== "undefined" && s[event_name].length > 0) {
+                s[event_name] += ',' + queued_events[queued_event][event_name];
+              } else {
+                s[event_name] = queued_events[queued_event][event_name];
+              }
+            }
+          }
+        }
+      }());
+    } catch (e) {
+      // do nothing but catch the error so it doesn't propagate -
+      // we ensure the cookie is deleted in the finally block.
+    } finally {
+      $.cookie('ec_omniture_queue', '', { path: '/', expires: -5 });
+    }
+  }
+  var s_code=s.t();if(s_code)document.write(s_code)
+</script>
+<script language="JavaScript" type="text/javascript">
+   if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-');
+</script>
+<noscript>
+  <a href="http://www.omniture.com" title="Web Analytics">
+    <img src="//stats.economist.com/b/ss/economistcomprod/1/H.20.3--NS/0" height="1" width="1" border="0" alt="" />
+  </a>
+</noscript>
+<!-- End SiteCatalyst code version: H.13 -->
+<script type="text/javascript" src="http://cdn.static-economist.com/sites/default/files/js/js_8c6a77723c4a91381f5cb231fcc110fd.js"></script>
+      
+<!--
+START of Interactive Avenue Pixel Tag: Please do not remove!!
+-->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 1035071974;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script type="text/javascript"
+        src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt=""
+         src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1035071974/?value=0&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 1047392724;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script type="text/javascript"
+        src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt=""
+         src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1047392724/?value=0&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+<!--
+END of Interactive Avenue Pixel Tag: Please do not remove!!
+-->
+<script type='text/javascript'>
+var ebRand = Math.random()+'';
+ebRand = ebRand * 1000000;
+document.write('<scr'+'ipt src="//bs.serving-sys.com/BurstingPipe/ActivityServer.bs?cn=as&ActivityID=347387&rnd=' + ebRand + '"></scr' + 'ipt>');
+</script>
+<noscript>
+<img width="1" height="1" style="border:0" src="//bs.serving-sys.com/BurstingPipe/ActivityServer.bs?cn=as&amp;ActivityID=347387&;ns=1"/>
+</noscript>
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+-->
+<script type="text/javascript">
+  var axel = Math.random() + "";
+  var a = axel * 10000000000000;
+  var d = document.createElement('iframe');
+  d.setAttribute('height', '1');
+  d.setAttribute('width', '1');
+  d.setAttribute('style', 'display:none');
+  d.setAttribute('src', '//4396156.fls.doubleclick.net/activityi;src=4396156;type=Econo014;cat=Econo0;ord=1;num=' + a + '?');
+  document.body.appendChild(d);</script>
+<noscript>
+  <iframe src="//4396156.fls.doubleclick.net/activityi;src=4396156;type=Econo014;cat=Econo0;ord=1;num=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+<!--
+START of Universal McCann Tag: Please do not remove!!
+-->
+<script src="//d21j20wsoewvjq.cloudfront.net/tt-8c244b370747c1930a4e0967254778ddbb69f6a409e62beebe5f92191a09a3a1.js" async>
+</script>
+<!--
+END of Universal McCann Tag: Please do not remove!!
+-->
+<script src="//tag.yieldoptimizer.com/ps/ps?t=s&p=1814&pg=Page"></script>          <script type="text/javascript">
+  (function() {
+    var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+    em.src = ('https:' == document.location.protocol ? 'https://us-ssl' : 'http://us-cdn') + '.effectivemeasure.net/em.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+  })();
+</script>
+<noscript>
+<img src="//us.effectivemeasure.net/em_image" alt="" style="position:absolute; left:-5px;" />
+</noscript>        <script src="//widget.perfectmarket.com/economist/load.js"></script>        <!-- Begin BlueKai Tag -->
+<script type="text/javascript">
+window.bk_async = function() {
+	// INSERT DATA HERE IN THE FORM:
+	// bk_addPageCtx("<<SOMEKEY>>", "<<SOMEVALUE>>");
+	
+	
+	try{
+		if(typeof Econ.user.user.country !== 'undefined'){
+			var bkCountry = (typeof Econ.user.user.country.iso != 'undefined' ? Econ.user.user.country.iso : '');
+			var bkRegion = (typeof Econ.user.user.country.region != 'undefined' ? Econ.user.user.country.region : '');
+			bk_addPageCtx("ctry", bkCountry);
+			bk_addPageCtx("reg", bkRegion);
+		}
+	}	
+	catch(e){}
+	
+	try{	
+		if(typeof s !='undefined'){
+			var bkChannel = (typeof s.channel != 'undefined' ? s.channel : '');
+			var bkPageName = (typeof s.pageName != 'undefined' ? s.pageName : '');
+
+			var bkprop1 = (typeof s.prop1 != 'undefined' ? s.prop1 : '');
+			var bkprop3 = (typeof s.prop3 != 'undefined' ? s.prop3 : '');
+			var bkprop4 = (typeof s.prop4 != 'undefined' ? s.prop4 : '');
+			var bkprop5 = (typeof s.prop5 != 'undefined' ? s.prop5 : '');
+			var bkprop6 = (typeof s.prop6 != 'undefined' ? s.prop6 : '');
+			var bkprop8 = (typeof s.prop8 != 'undefined' ? s.prop8 : '');
+			var bkprop9 = (typeof s.prop9 != 'undefined.prop4 : '');
+			var bkprop5 = (typeof s.prop5 != 'undefined' ? s.prop5 : '');
+			var bkprop6 =' ? s.prop9 : '');
+			var bkprop10 = (typeof s.prop10 != 'undefined' ? s.prop10 : '');
+			var bkprop11 = (typeof s.prop11 != 'undefined' ? s.prop11 : '');
+			var bkprop13 = (typeof s.prop13 != 'undefined' ? s.prop13 : '');
+			var bkprop16 = (typeof s.prop16 != 'undefined' ? s.prop16 : '');
+			var bkprop40 = (typeof s.prop40 != 'undefined' ? s.prop40 : '');
+			var bkprop41 = (typeof s.prop41 != 'undefined' ? s.prop41 : '');
+			var bkprop42 = (typeof s.prop42 != 'undefined' ? s.prop42 : '');
+
+			var bkevents = (typeof s.events != 'undefined' ? s.events : '');
+
+			bk_addPageCtx("chan", bkChannel);
+			bk_addPageCtx("page", bkPageName);
+			bk_addPageCtx("p1", bkprop1);
+			bk_addPageCtx("p3", bkprop3);
+			bk_addPageCtx("p4", bkprop4);
+			bk_addPageCtx("p5", bkprop5);
+			bk_addPageCtx("p6", bkprop6);
+			bk_addPageCtx("p8", bkprop8);
+			bk_addPageCtx("p9", bkprop9);
+			bk_addPageCtx("p10", bkprop10);
+			bk_addPageCtx("p11", bkprop11);
+			bk_addPageCtx("p13", bkprop13);
+			bk_addPageCtx("p16", bkprop16);
+			bk_addPageCtx("did", bkprop40);
+			bk_addPageCtx("p41", bkprop41);
+			bk_addPageCtx("p42", bkprop42);
+			bk_addPageCtx("events", bkevents);
+		}
+	}
+	catch(e){}	
+  bk_doJSTag(18452, 10);
+
+};
+(function() {
+  var scripts=document.getElementsByTagName('script')[0];
+  var s=document.createElement('script');
+  s.async = true;
+  s.src = '//tags.bkrtx.com/js/bk-coretag.js';
+  scripts.parentNode.insertBefore(s, scripts);
+}());
+</script>
+<!-- End BlueKai Tag -->
+        <script type="text/javascript">
+    (function() {
+        function loadHorizon() {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = location.protocol + '//ak.sail-horizon.com/horizon/v1.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        }
+        loadHorizon();
+        var oldOnLoad = window.onload;
+        window.onload = function() {
+            if (typeof oldOnLoad === 'function') {
+                oldOnLoad();
+            }
+            Sailthru.setup({
+                domain: 'horizon.economist.com'
+            });
+        };
+      })();
+    </script>  <script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&ns=1';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script></body>
+</html>
+src = '/_Incapsula_Resource?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&ns=1';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _ana

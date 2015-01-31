@@ -1,0 +1,2295 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]--><head><script>
+   try {var _sf_startpt=(new Date()).getTime();} catch(e){}
+</script>
+<title>Ebola In The United States: What Happened When : Shots - Health News : NPR</title><meta charset="utf-8" /><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]--><meta name="robots" content="noarchive,index,follow" /><meta name="Rating" content="General" /><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" /><!--[if lt IE 9]><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /><![endif]--><meta name="date" content="2014-10-15" /><link rel="canonical" href="http://www.npr.org/blogs/health/2014/10/15/356098903/ebola-in-the-united-states-what-happened-when" /><meta name="description" content="Taming Ebola virus is now a challenge for the American health care system. We track the U.S. experience with Ebola from the discovery of a strain in laboratory monkeys in 1989 to the current outbreak." /><link rel="alternate" type="application/rss+xml" title="Health" href="/rss/rss.php?id=1128" /><link rel="alternate" type="application/rss+xml" title="Shots - Health News" href="/rss/rss.php?id=103537970" /><meta property="og:title" content="Ebola In The United States: What Happened When" /><meta property="og:url" content="http://www.npr.org/blogs/health/2014/10/15/356098903/ebola-in-the-united-states-what-happened-when" /><meta property="og:type" content="article" /><meta property="og:description" content="Taming Ebola virus is now a challenge for the American health care system. We track the U.S. experience with Ebola from the discovery of a strain in laboratory monkeys in 1989 to the current outbreak." /><meta property="og:image" content="http://media.npr.org/assets/img/2014/10/22/ebola-timeline-2_wide-a361f698ddd89c29b3445723250970e96e069e42.jpg?s=1400" /><meta property="og:image" content="http://media.npr.org/assets/img/2014/10/15/ebola-timeline-wide-2_wide-e51cef127205fa4ce1de748bb2381e035b1650fa.jpg?s=1400" /><meta property="og:site_name" content="NPR.org" /><meta property="fb:app_id" content="138837436154588" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@nprnews" /><meta name="twitter:domain" content="npr.org" /><meta name="twitter:image:src" content="http://media.npr.org/assets/img/2014/10/22/ebola-timeline-2_wide-a361f698ddd89c29b3445723250970e96e069e42.jpg?s=1400" /><link type="text/css" rel="stylesheet" media="screen, print" href="http://s.npr.org/templates/css/generated/fingerprint/newsStory-091b8b2400c19ce56f1db957a95a7300a3ac0a86.css" /><link type="text/css" rel="stylesheet" media="screen" href="http://www.npr.org/branding/blogs/health/branding.css" /><script>
+   window.NPR={};window.NPR.serverVars={"storyId":"356098903","serverType":"prod","facebookAppId":"138837436154588","closeurl":"http:\/\/www.npr.org\/templates\/socialmedia\/close.html","sessionScope":2,"pageScope":3,"breadcrumbs":["News","Health","Shots - Health News"],"primaryTopic":1128,"orgId":"1","topics":[1128,1091,1027,1003,1002,1001],"pageTypeId":1,"internalCampaign":null,"campaignSource":null,"campaignName":null,"aggregations":[1128,1091,1027,1003,1002,1001,147820238,137506347,133188449,133088381,128644964,126568156,103537970],"aggregationsText":["Health","Around the Nation","Health Care","U.S.","Home Page Top Stories","News","ebola","public health","Public Health","Shots  - Featured Posts","United States","Infectious Disease","Shots - Health News"],"aggExtras":["15Oct2014","Alison+Bruzek"],"byline":["Alison Bruzek"],"chartbeatAccount":"18888"};
+</script>
+<script type="text/javascript" src="http://s.npr.org/templates/javascript/generated/fingerprint/fonts-b69636e151d52979e0fdcc7dac022bfd07c7ff6d.js">
+   </script>
+<script type="text/javascript" src="http://s.npr.org/templates/javascript/generated/fingerprint/headerAllPages-2a2d60264a883081f326d6b10e6a2e4fd0a2a63f.js">
+   </script>
+<script type="text/javascript">
+   document.domain="npr.org";
+</script>
+
+<!-- START UNDERWRITING -->
+<script type="text/javascript">
+   
+googletag.cmd.push(function(){try{if(DFP.shouldRenderForDevice('desktop')){googletag.defineSlot("/6735/n6735.NPR/News_Health",[[300,250],[300,600]],'ad-desktop').addService(googletag.pubads());}
+if(DFP.shouldRenderForDevice('88')){googletag.defineSlot("/6735/n6735.NPR/News_Health",[88,31],'ad-88').addService(googletag.pubads()).setCollapseEmptyDiv(true,true);}
+googletag.pubads().setTargeting('agg','103537970');googletag.pubads().setTargeting('theme','103537970');googletag.pubads().setTargeting('storyId','356098903');googletag.pubads().setTargeting('blog','103537970');var deviceString='';var ua=navigator.userAgent.toLowerCase();if(ua.indexOf("android")>-1){googletag.pubads().setTargeting('device','android');}
+else if(ua.match(/(iPad|iPhone|iPod)/i)){googletag.pubads().setTargeting('device','ios');}
+if(typeof DFP.queryParameters.sc==='string'&&DFP.queryParameters.sc.length>0){scValue=DFP.queryParameters.sc;}
+else if(typeof document.referrer==='string'&&document.referrer.search('facebook.com')>-1){scValue='fb';}
+else if(typeof DFP.queryParameters.ft==='string'){scValue=DFP.queryParameters.ft;}
+googletag.pubads().setTargeting('sc',scValue);var utm_source=typeof DFP.queryParameters.utm_source==='string'&&DFP.queryParameters.utm_source.length>0?DFP.queryParameters.utm_source:'';var utm_medium=typeof DFP.queryParameters.utm_medium==='string'&&DFP.queryParameters.utm_medium.length>0?DFP.queryParameters.utm_medium:'';googletag.pubads().setTargeting('utm_source',utm_source);googletag.pubads().setTargeting('utm_medium',utm_medium);var orient='';if(NPR.Devices.isOnPhone()||NPR.Devices.isOnTablet()){if(window.orientation==0||window.orientation==180){orient='portrait';}else if(window.orientation==90||window.orientation==-90){orient='landscape';}}
+googletag.pubads().setTargeting('orient',orient);googletag.pubads().enableSingleRequest();googletag.pubads().collapseEmptyDivs();googletag.enableServices();}catch(e){NPR.messaging.exception(e,'Define Google Publisher Tags',NPR.messaging.constants.SPONSORSHIP_ERROR);}});
+</script>
+
+<!-- END UNDERWRITING -->
+</head><body id="news" class="news tmplBlogNewsStory blog catId133188449 id356098903" data-metrics-scroll ><a href="#wrapper" id="skiplink">Skip to Main Content</a><script type="text/javascript">var pageTrackingCPTV=function(){try{AddNamespace("NPR.metrics");NPR.metrics.pageImpression();}catch(e){NPR.messaging.exception(e,'commonPageTrackView','document.ready',NPR.messaging.constants.METRICS_ERROR);}};if($('docreadybind').length){$('docreadybind').bind('click',pageTrackingCPTV);}else{$(document).ready(pageTrackingCPTV);}</script><header id="globalheader" class="clearfix"><a class="sidebarButton" href="#sidebar" data-action="Toggle OffCanvas" data-metrics='{"action":"Toggle OffCanvas","category":"Global Navigation"}'>
+    <img src="http://media.npr.org/chrome/subnav_toggle.png" alt="subnav toggle" />
+</a>
+
+<a href="/" class="nprhome" data-action="Click Logo" data-metrics='{"action":"Click Header Logo", "category":"Global Navigation"}'>
+    <img src="http://media.npr.org/chrome/news/nprlogo_138x46.gif" alt="NPR" />
+</a>
+
+<div class="inner" data-metrics-category="Global Navigation">
+    <div id="searchWrapper">
+        <form action="/search/index.php" method="get" name="searchForm" id="searchForm" class="search">
+            <label for="searchinput">Search</label>
+            <input type="search" name="searchinput" id="searchinput" class="textbox searchbox" />
+        </form>
+        <a href="#" class="search-toggle">Toggle search</a>
+    </div>
+    <nav class="nav-two" id="loginPElm">
+        <ul>
+            <li class="stations"><a href="/templates/stations/stations/" data-metrics='{"action":"Click Business Link"}' data-reveal-id="myModal">Stations</a></li>
+            <li class="donate"><a href="/stations/donate/index.php" data-metrics='{"action":"Click Business Link"}'>Donate</a></li>
+            <li class="nprshop"><a href="http://shop.npr.org" data-metrics='{"action":"Click Business Link"}'>Shop</a></li>
+            <li class="login-reg loggedOut"><a href="/templates/reg/login.php" data-metrics='{"action":"Click Profile Link","label":"Login / Register"}'>Sign In/Register</a></li>
+            <li class="login-reg loggedIn userLogin has-subnav"><b class="caret"><b class="user"></b></b>
+                <div class="subnav">
+                    <ul data-metrics-action="Click Profile Link" data-metrics-all>
+                        <li><span id="userLogin"></span></li>
+                        <li><a href="/templates/reg/logout.php" class="logout" data-metrics='{"label":"Logout"}'>Logout</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <nav class="nav-one">
+        <ul>
+            <li class="news"><a href="/sections/news/" data-metrics='{"action":"Click News"}'>News</a></li>
+            <li class="arts-and-life"><a href="/sections/arts/" data-metrics='{"action":"Click Arts &amp; Life"}'>Arts &amp; Life</a></li>
+            <li class="music"><a href="/music/" data-metrics='{"action":"Click Music"}'>Music</a></li>
+            <li class="topics">Topics
+                <div class="subnav" data-metrics-action="Click Topics" data-metrics-all>
+                    <ul class="news">
+                        <li class="hdr"><a href="/sections/news/">News</a></li>
+                        <li><a href="/sections/us/">U.S.</a></li>
+                        <li><a href="/sections/world/">World</a></li>
+                        <li><a href="/sections/politics/">Politics</a></li>
+                        <li><a href="/sections/business/">Business</a></li>
+                        <li><a href="/sections/technology/">Technology</a></li>
+                        <li><a href="/sections/science/">Science</a></li>
+                        <li><a href="/sections/health/">Health</a></li>
+                        <li><a href="/blogs/codeswitch/">Race &amp; Culture</a></li>
+                        <li><a href="/blogs/ed/">Education</a></li>
+                    </ul>
+                    <ul class="arts-life">
+                        <li class="hdr"><a href="/sections/arts/">Arts &amp; Life</a></li>
+                        <li><a href="/books/">Books</a></li>
+                        <li><a href="/sections/movies/">Movies</a></li>
+                        <li><a href="/sections/pop-culture/">Pop Culture</a></li>
+                        <li><a href="/sections/food/">Food</a></li>
+                        <li><a href="/sections/art-design/">Art &amp; Design</a></li>
+                        <li><a href="/sections/performing-arts/">Performing Arts</a></li>
+                        <li><a href="/blogs/pictureshow">Photography</a></li>
+                    </ul>
+                    <ul class="music">
+                        <li class="hdr"><a href="/music/">Music</a></li>
+                        <li><a href="/series/98679384/first-listen">First Listen</a></li>
+                        <li><a href="/series/122356178/songs-we-love">Songs We Love</a></li>
+                        <li><a href="/series/100920965/music-articles/">Music Articles</a></li>
+                        <li><a href="/series/tiny-desk-concerts/">Tiny Desk Concerts</a></li>
+                        <li><a href="/sections/music-videos/">Videos</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="programs">Programs
+                <div class="subnav" data-metrics-action="Click Programs" data-metrics-all>
+                    <ul>
+                        <li class="hdr">News and Conversations</li>
+                        <li><a href="/programs/morning-edition/">Morning Edition</a></li>
+                        <li><a href="/programs/all-things-considered/">All Things Considered</a></li>
+                        <li><a href="/programs/fresh-air/">Fresh Air</a></li>
+                        <li><a href="http://hereandnow.wbur.org/" target="_blank">Here &amp; Now</a></li>
+                        <li><a href="http://thedianerehmshow.org" target="_blank">The Diane Rehm Show</a></li>
+                        <li><a href="/programs/latino-usa/">Latino USA</a></li>
+                        <li><a href="http://www.onthemedia.org" target="_blank">On The Media</a></li>
+                        <li><a href="http://www.onpointradio.org/" target="_blank">On Point</a></li>
+                        <li><a href="/programs/weekend-edition-saturday/">Weekend Edition Saturday</a></li>
+                        <li><a href="/programs/weekend-edition-sunday/">Weekend Edition Sunday</a></li>
+                    </ul>
+                    <ul>
+                        <li class="hdr">Storytelling &amp; Humor</li>
+                        <li><a href="/programs/ask-me-another/">Ask Me Another</a></li>
+                        <li><a href="http://www.cartalk.com" target="_blank">The Best Of Car Talk</a></li>
+                        <li><a href="http://www.maximumfun.org/shows/bullseye" target="_blank">Bullseye</a></li>
+                        <li><a href="/programs/invisibilia/">Invisibilia</a></li>
+                        <li><a href="http://www.radiolab.org" target="_blank">Radiolab</a></li>
+                        <li><a href="/programs/snap-judgment/" target="_blank">Snap Judgment</a></li>
+                        <li><a href="http://storycorps.org" class="storycorps" target="_blank">StoryCorps</a></li>
+                        <li><a href="/programs/ted-radio-hour/">TED Radio Hour</a></li>
+                        <li><a href="/programs/wait-wait-dont-tell-me/">Wait Wait...Don't Tell Me!</a></li>
+                    </ul>
+                    <ul>
+                        <li class="hdr">Music</li>
+                        <li><a href="/programs/all-songs-considered/">All Songs Considered</a></li>
+                        <li><a href="/series/alt-latino/">Alt.Latino</a></li>
+                        <li><a href="/series/98679384/first-listen">First Listen</a></li>
+                        <li><a href="http://www.fromthetop.org" target="_blank">From The Top</a></li>
+                        <li><a href="/series/347139849/jazz-night-in-america">Jazz Night In America</a></li>
+                        <li><a href="/blogs/metropolis/">Metropolis</a></li>
+                        <li><a href="/blogs/microphonecheck/">Microphone Check</a></li>
+                        <li><a href="/series/mountain-stage/">Mountain Stage</a></li>
+                        <li><a href="/programs/piano-jazz/">Piano Jazz</a></li>
+                        <li><a href="/series/150560513/song-travels/">Song Travels</a></li>
+                        <li><a href="/series/103063413/the-thistle-and-shamrock/">The Thistle &amp; Shamrock</a></li>
+                        <li><a href="/programs/world-cafe/">World Cafe</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="listen"><a href="/listen/" data-metrics='{"action":"Click Listen"}'>Listen</a></li>
+        </ul>
+    </nav>
+</div>
+</header><div id="wrapper">
+      <div id="sectionWrap" class="clearfix">
+            <section role="main"><header class="contentheader" data-metrics-category="Shots - Health News"><div class="mobileheader">
+    <a class="sidebarButton" href="#sidebar"  data-metrics='{"action":"Toggle OffCanvas","category":"Global Navigation"}'>
+        <img src="http://media.npr.org/chrome/subnav_toggle.png" alt="NPR logo" />
+    </a>
+    
+    <a href="/" class="nprHome" data-metrics='{"action":"Click Logo","category":"Global Navigation"}'>
+        <img src="http://media.npr.org/chrome/news/nprlogo_138x46.gif" alt="NPR">        
+    </a>
+</div><div class="branding">
+      <a href="http://www.npr.org/blogs/health/"  data-metrics='{"action":"Click Header Logo","category":"Shots - Health News"}' ><img src="http://media.npr.org/branding/blogs/health/branding_icon-d1bf0f307a4bae536639f3790f308797103e8d05.png" class="icon" alt="Shots - Health News" /><img src="http://media.npr.org/branding/blogs/health/branding_main-c464b14085b5098ac853fd98e9e84c493d344e3e.png" class="main" alt="Shots - Health News" /><span class="tag">Health News From NPR</span>
+</a>
+</div>
+
+<!-- END CLASS="BRANDING" -->
+</header><div class="subnav-tools-wrap">
+      <div id="subNavigation" class="agglocation linkLocation">
+            <div id="res341873289" class="bucketwrap statichtml">
+                  <div class="subtopics">
+  <ul class="animated fadeInRight">
+    <li><a href="/blogs/health/126567525/your-health">Your Health</a></li>
+    <li><a href="/blogs/health/133188451/treatments-tests">Treatments &amp; Tests</a></li>
+    <li><a href="/blogs/health/133188447/health-inc">Health Inc.</a></li>
+    <li><a href="/blogs/health/133188445/policy-ish">Policy-ish</a></li>
+    <li><a href="/blogs/health/133188449/public-health">Public Health</a></li>
+  </ul>
+</div>
+
+<div class="roller-overlay"></div>
+
+<ul class="subscribe">
+  <li class="twitter"><a href="http://twitter.com/nprhealth" data-metrics='{"action":"Click Twitter"}'>Twitter</a></li>
+</ul>
+      </div>
+      
+<!-- END ID="RES341873289" CLASS="BUCKETWRAP STATICHTML" -->
+   </div>
+   
+<!-- END ID="SUBNAVIGATION" CLASS="AGGLOCATION LINKLOCATION" -->
+</div>
+<article class="story story-blogpost"><a name="mainContent"></a><p class="category"><a href="http://www.npr.org/blogs/health/133188449/public-health">Public Health</a></p> <!--googleon: index--><div class="storytitle">
+      <h1>Ebola In The United States: What Happened When</h1>
+   <input type="hidden" id="title356098903" value="Ebola In The United States: What Happened When"></input>
+   <input type="hidden" id="modelShortUrl356098903" value="http://n.pr/1scpnfG"></input>
+   <input type="hidden" id="modelFullUrl356098903" value="http://www.npr.org/blogs/health/2014/10/15/356098903/ebola-in-the-united-states-what-happened-when"></input>
+</div>
+
+<!-- END CLASS="STORYTITLE" -->
+<div id="story-meta">
+      <div class="dateblock">
+            <time datetime="2014-10-15"><span class="date">October 15, 2014</span><span class="time">12:51 PM ET</span></time>
+   </div>
+   <div id="storybyline" class="  linkLocation">
+            <div class="bucketwrap byline" id="res356098906" previewTitle="bylines">
+                  <div class="blockBylines">
+                        <div class="blockByline  ">
+      <div class="rightContainer">
+            <div class="nameWrap">
+                  <div class="nameOuter">
+                        <div class="nameInner">
+               Alison Bruzek
+            </div>
+         </div>
+      </div>
+   </div>
+   
+<!-- END CLASS="RIGHTCONTAINER" -->
+</div>
+         </div>
+      </div>
+      
+<!-- END CLASS="BUCKETWRAP BYLINE" ID="RES356098906" PREVIEWTITLE="BYLINES" -->
+   </div>
+   
+<!-- END ID="STORYBYLINE" CLASS="  LINKLOCATION" -->
+</div>
+
+<!-- END ID="STORY-META" -->
+<div id="storytext" class="storytext storylocation linkLocation">
+      <div id="res358058330" class="bucketwrap image large" previewTitle="Scenes from an outbreak: Ebola survivor Dr. Kent Brantly; Texas Health Presbyterian Hospital in Dallas; A worker cleans the apartment where Ebola victim Thomas Eric Duncan stayed in Dallas; experimental vaccine; the Carnival Magic cruise ship off Cozumel, Mexico.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/22/ebola-timeline-2_wide-a361f698ddd89c29b3445723250970e96e069e42-s1100-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/22/ebola-timeline-2_wide-a361f698ddd89c29b3445723250970e96e069e42-s1100.jpg" class="img lazyOnLoad"  title="Scenes from an outbreak: Ebola survivor Dr. Kent Brantly; Texas Health Presbyterian Hospital in Dallas; A worker cleans the apartment where Ebola victim Thomas Eric Duncan stayed in Dallas; experimental vaccine; the Carnival Magic cruise ship off Cozumel, Mexico." alt="Scenes from an outbreak: Ebola survivor Dr. Kent Brantly; Texas Health Presbyterian Hospital in Dallas; A worker cleans the apartment where Ebola victim Thomas Eric Duncan stayed in Dallas; experimental vaccine; the Carnival Magic cruise ship off Cozumel, Mexico." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+        <p>
+            Scenes from an outbreak: Ebola survivor Dr. Kent Brantly; Texas Health Presbyterian Hospital in Dallas; A worker cleans the apartment where Ebola victim Thomas Eric Duncan stayed in Dallas; experimental vaccine; the Carnival Magic cruise ship off Cozumel, Mexico.
+            
+            <b class="credit">
+                
+                Jessica McGowan/Getty; Mike Stone/Getty Images; Jim Young/Reuters/Landov; Steve Parsons/AP; Angel Castellanos/AP 
+                
+            </b>
+            <b class="hide-caption"><b>hide caption</b></b>
+        </p>
+    </div>
+    <b class="toggle-caption">i<b>toggle caption</b></b>
+    <span class="credit">
+        
+        Jessica McGowan/Getty; Mike Stone/Getty Images; Jim Young/Reuters/Landov; Steve Parsons/AP; Angel Castellanos/AP 
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/22/ebola-timeline-2_wide-a361f698ddd89c29b3445723250970e96e069e42-s1200.jpg" title="Scenes from an outbreak: Ebola survivor Dr. Kent Brantly; Texas Health Presbyterian Hospital in Dallas; A worker cleans the apartment where Ebola victim Thomas Eric Duncan stayed in Dallas; experimental vaccine; the Carnival Magic cruise ship off Cozumel, Mexico." alt="Scenes from an outbreak: Ebola survivor Dr. Kent Brantly; Texas Health Presbyterian Hospital in Dallas; A worker cleans the apartment where Ebola victim Thomas Eric Duncan stayed in Dallas; experimental vaccine; the Carnival Magic cruise ship off Cozumel, Mexico." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <p class="caption">Scenes from an outbreak: Ebola survivor Dr. Kent Brantly; Texas Health Presbyterian Hospital in Dallas; A worker cleans the apartment where Ebola victim Thomas Eric Duncan stayed in Dallas; experimental vaccine; the Carnival Magic cruise ship off Cozumel, Mexico.</p>
+        <span class="credit">
+            
+            Jessica McGowan/Getty; Mike Stone/Getty Images; Jim Young/Reuters/Landov; Steve Parsons/AP; Angel Castellanos/AP 
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <p>When Ebola virus resurfaced in West Africa in December 2013, public health officials were hopeful that it could be contained, as it had been in past outbreaks.</p>   <p>But the virus continues to ravage communities in Africa and has now spread to the United States and Europe. The number of new cases in Africa make it likely that there will continue to be cases in the United States.</p>   <p>We've put together a timeline to track the U.S. response to Ebola, with the most recent events at the top. (International coverage by NPR continues at the <a href="http://www.npr.org/blogs/goatsandsoda/" target="_blank">Goats and Soda</a> blog.) Check back, as we're regularly updating this list.</p>
+</div>
+<div id="supplementarycontent" class="storylocation linkLocation">
+      <div id="res356167055" class="bucketwrap list medium">
+            <h3 class="hed">The Timeline Of Ebola In The U.S.</h3>
+      <ul>
+                  <li><div id="res364673449" class="bucket listitem simplelistitem">
+      <h3>11/17/2014: SURGEON FROM SIERRA LEONE DIES IN NEBRASKA</h3>
+   <div id="res364676233" class="bucketwrap image medium" previewTitle="Dr. Martin Salia poses for a photo in April 2014 at the United Methodist Church's Kissy Hospital outside Freetown, Sierra Leone. Salia who was diagnosed with Ebola on Monday, landed at Eppley Airfield in Omaha, Neb., on Nov. 17, 2014, and was being transported to the Nebraska Medical Center.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/11/17/salia-5ae988d8bf72b00752c38ba31d8deaacae548226-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/11/17/salia-5ae988d8bf72b00752c38ba31d8deaacae548226-s800.jpg" class="img lazyOnLoad"  title="Dr. Martin Salia poses for a photo in April 2014 at the United Methodist Church's Kissy Hospital outside Freetown, Sierra Leone. Salia who was diagnosed with Ebola on Monday, landed at Eppley Airfield in Omaha, Neb., on Nov. 17, 2014, and was being transported to the Nebraska Medical Center." alt="Dr. Martin Salia poses for a photo in April 2014 at the United Methodist Church's Kissy Hospital outside Freetown, Sierra Leone. Salia who was diagnosed with Ebola on Monday, landed at Eppley Airfield in Omaha, Neb., on Nov. 17, 2014, and was being transported to the Nebraska Medical Center." />
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Mike DuBose/United Methodist News Service/AP
+        
+    </span>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Dr. Martin Salia, 44, dies at Nebraska Medical Center after being evacuated Nov. 15 from Sierra Leone. It's not clear where he became infected with Ebola, since he wasn't working in an Ebola treatment unit. Salia is the second person to die of Ebola in the United States, after Thomas Eric Duncan.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES364673449" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res363322725" class="bucket listitem simplelistitem">
+      <h3>11/11/2014: NEW YORK DOCTOR RELEASED FROM HOSPITAL</h3>
+   <div id="res363323081" class="bucketwrap image medium" previewTitle="Dr. Craig Spencer, who was diagnosed with Ebola in New York City last month, hugs New York Mayor Bill de Blasio at a news conference at New York's Bellevue Hospital after being declared free of the disease on November 11, 2014 in New York City. Spencer, a 33 year old Doctors Without Borders physician, was diagnosed last month after returning from treating patients in Guinea.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/11/11/spencer_custom-cd1b4a16327d30f0b10f29386ee3b3ab8dcfaef2-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/11/11/spencer_custom-cd1b4a16327d30f0b10f29386ee3b3ab8dcfaef2-s800.jpg" class="img lazyOnLoad"  title="Dr. Craig Spencer, who was diagnosed with Ebola in New York City last month, hugs New York Mayor Bill de Blasio at a news conference at New York's Bellevue Hospital after being declared free of the disease on November 11, 2014 in New York City. Spencer, a 33 year old Doctors Without Borders physician, was diagnosed last month after returning from treating patients in Guinea." alt="Dr. Craig Spencer, who was diagnosed with Ebola in New York City last month, hugs New York Mayor Bill de Blasio at a news conference at New York's Bellevue Hospital after being declared free of the disease on November 11, 2014 in New York City. Spencer, a 33 year old Doctors Without Borders physician, was diagnosed last month after returning from treating patients in Guinea." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Spencer Platt/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/11/11/spencer_enl-cd1b4a16327d30f0b10f29386ee3b3ab8dcfaef2-s1200.jpg" title="Dr. Craig Spencer, who was diagnosed with Ebola in New York City last month, hugs New York Mayor Bill de Blasio at a news conference at New York's Bellevue Hospital after being declared free of the disease on November 11, 2014 in New York City. Spencer, a 33 year old Doctors Without Borders physician, was diagnosed last month after returning from treating patients in Guinea." alt="Dr. Craig Spencer, who was diagnosed with Ebola in New York City last month, hugs New York Mayor Bill de Blasio at a news conference at New York's Bellevue Hospital after being declared free of the disease on November 11, 2014 in New York City. Spencer, a 33 year old Doctors Without Borders physician, was diagnosed last month after returning from treating patients in Guinea." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Spencer Platt/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Craig Spencer, the first person in New York City to test positive for Ebola, is released from Bellevue Hospital Center (and gets a huge from Mayor Bill de Blasio.) Spencer, 33, treated Ebola patients in Guinea with Doctors Without Borders and was diagnosed with Ebola on Oct. 23.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES363322725" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res362279630" class="bucket listitem simplelistitem">
+      <h3>11/6/2014: TEXAS CALLS AN END TO MONITORING</h3>
+   <div id="res362305675" class="bucketwrap image medium" previewTitle="Dr. David Lakey, Commissioner of the Texas Department of State Health Services, speaks to the media during an Ebola update on Oct. 6.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/11/07/456747042-c9ec5c9c4ece5218f217ec8d7e29346dd07a61e1-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/11/07/456747042-c9ec5c9c4ece5218f217ec8d7e29346dd07a61e1-s800.jpg" class="img lazyOnLoad"  title="Dr. David Lakey, Commissioner of the Texas Department of State Health Services, speaks to the media during an Ebola update on Oct. 6." alt="Dr. David Lakey, Commissioner of the Texas Department of State Health Services, speaks to the media during an Ebola update on Oct. 6." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Joe Raedle/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/11/07/456747042-c9ec5c9c4ece5218f217ec8d7e29346dd07a61e1-s1200.jpg" title="Dr. David Lakey, Commissioner of the Texas Department of State Health Services, speaks to the media during an Ebola update on Oct. 6." alt="Dr. David Lakey, Commissioner of the Texas Department of State Health Services, speaks to the media during an Ebola update on Oct. 6." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Joe Raedle/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Texas stops monitoring people connected with the state's three Ebola cases, saying they are past the 21-day incubation period. "We're happy to reach this milestone, but our guard stays up," Dr. David Lakey, the state's health commissioner, says. The state also clears people who flew from Dallas to Cleveland with Ebola patient Amber Vinson.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES362279630" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res362001717" class="bucket listitem simplelistitem">
+      <h3>11/6/2014: PRESIDENT OBAMA SEEKS $6.2 BILLION FOR EBOLA RESPONSE</h3>
+   <div id="res362008665" class="bucketwrap image medium" previewTitle="President Barack Obama meets with Ebola Response Coordinator Ron Klain (left), Health and Human Services Secretary Sylvia Burwell (center) and members of his national security and public health teams to receive an update on the Ebola response in the Roosevelt Room of the White House in D.C. on Nov. 4th, 2014.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/11/06/obama-ebola-money-1-2bb68edd330098dcaaaebe25836b677d1f263fe6-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/11/06/obama-ebola-money-1-2bb68edd330098dcaaaebe25836b677d1f263fe6-s800.jpg" class="img lazyOnLoad"  title="President Barack Obama meets with Ebola Response Coordinator Ron Klain (left), Health and Human Services Secretary Sylvia Burwell (center) and members of his national security and public health teams to receive an update on the Ebola response in the Roosevelt Room of the White House in D.C. on Nov. 4th, 2014." alt="President Barack Obama meets with Ebola Response Coordinator Ron Klain (left), Health and Human Services Secretary Sylvia Burwell (center) and members of his national security and public health teams to receive an update on the Ebola response in the Roosevelt Room of the White House in D.C. on Nov. 4th, 2014." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Shawn Thew/EPA/Landov
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/11/06/obama-ebola-money-1-2bb68edd330098dcaaaebe25836b677d1f263fe6-s1200.jpg" title="President Barack Obama meets with Ebola Response Coordinator Ron Klain (left), Health and Human Services Secretary Sylvia Burwell (center) and members of his national security and public health teams to receive an update on the Ebola response in the Roosevelt Room of the White House in D.C. on Nov. 4th, 2014." alt="President Barack Obama meets with Ebola Response Coordinator Ron Klain (left), Health and Human Services Secretary Sylvia Burwell (center) and members of his national security and public health teams to receive an update on the Ebola response in the Roosevelt Room of the White House in D.C. on Nov. 4th, 2014." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Shawn Thew/EPA/Landov
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>President Obama asks Congress for $6.2 billion in emergency funds to help stop the Ebola outbreaks in West Africa and bolster screening and prevention efforts in the U.S. The money would go to the U.S. Agency for International Development, the Department of Health and Human Services and other federal agencies.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES362001717" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res362000995" class="bucket listitem simplelistitem">
+      <h3>11/5/2014: NYC PATIENT IS EXERCISING, PLAYING BANJO</h3>
+   <div id="res362010015" class="bucketwrap image medium" previewTitle="A view of Bellvue Hospital on Oct. 27, 2014, where Dr. Craig Spencer, a doctor who has the ebola virus is being treated after working in West Africa. Spencer is being held in an isolation ward.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/11/06/bellvue-hospital-228c6cc967f4a2d9873535e24fd65b2a8f89143f-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/11/06/bellvue-hospital-228c6cc967f4a2d9873535e24fd65b2a8f89143f-s800.jpg" class="img lazyOnLoad"  title="A view of Bellvue Hospital on Oct. 27, 2014, where Dr. Craig Spencer, a doctor who has the ebola virus is being treated after working in West Africa. Spencer is being held in an isolation ward." alt="A view of Bellvue Hospital on Oct. 27, 2014, where Dr. Craig Spencer, a doctor who has the ebola virus is being treated after working in West Africa. Spencer is being held in an isolation ward." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Andrew Burton/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/11/06/bellvue-hospital-228c6cc967f4a2d9873535e24fd65b2a8f89143f-s1200.jpg" title="A view of Bellvue Hospital on Oct. 27, 2014, where Dr. Craig Spencer, a doctor who has the ebola virus is being treated after working in West Africa. Spencer is being held in an isolation ward." alt="A view of Bellvue Hospital on Oct. 27, 2014, where Dr. Craig Spencer, a doctor who has the ebola virus is being treated after working in West Africa. Spencer is being held in an isolation ward." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Andrew Burton/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Dr. Craig Spencer is well enough to pass the time in the isolation unit at Bellevue Hospital by playing the banjo and riding a stationary bike, according to the <a href="http://www.nydailynews.com/life-style/health/bellevue-ebola-patient-craig-spencer-jamming-quarantine-article-1.2000196">New York Daily News</a>. Spencer, 33, contracted Ebola while working with Doctors Without Borders in Guinea and tested positive on Oct. 23.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES362000995" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res360448591" class="bucket listitem simplelistitem">
+      <h3>10/31/2014 MAINE JUDGE FREES NURSE FROM HOME QUARANTINE</h3>
+   <div id="res360455062" class="bucketwrap image medium" previewTitle="Kaci Hickox stands with her boyfriend Theodore Michael Wilbur as she gives a statement to the media in front of her home on Oct. 31, 2014 in Fort Kent, Maine.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/31/kaci-hickox-2-2ee1f9f4a51ae4a1a8de58214e25d114198b1b5a-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/31/kaci-hickox-2-2ee1f9f4a51ae4a1a8de58214e25d114198b1b5a-s800.jpg" class="img lazyOnLoad"  title="Kaci Hickox stands with her boyfriend Theodore Michael Wilbur as she gives a statement to the media in front of her home on Oct. 31, 2014 in Fort Kent, Maine." alt="Kaci Hickox stands with her boyfriend Theodore Michael Wilbur as she gives a statement to the media in front of her home on Oct. 31, 2014 in Fort Kent, Maine." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Spencer Platt/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/31/kaci-hickox-2-2ee1f9f4a51ae4a1a8de58214e25d114198b1b5a-s1200.jpg" title="Kaci Hickox stands with her boyfriend Theodore Michael Wilbur as she gives a statement to the media in front of her home on Oct. 31, 2014 in Fort Kent, Maine." alt="Kaci Hickox stands with her boyfriend Theodore Michael Wilbur as she gives a statement to the media in front of her home on Oct. 31, 2014 in Fort Kent, Maine." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Spencer Platt/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>The judge overturns an earlier temporary order aimed at keeping nurse Kaci Hickox quarantined at home for 21 days after returning from treating Ebola patients in West Africa. Hickox, who had defied the home quarantine, will self-monitor and coordinate her travels with state officials. </p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES360448591" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res360446816" class="bucket listitem simplelistitem">
+      <h3>10/30/14 NEW ORLEANS BANS EBOLA RESEARCHERS</h3>
+   <div id="res360454111" class="bucketwrap image medium" previewTitle="The New Orleans skyline including the Sheraton Hotel.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/31/sheraton-new-orleans-81508125f81f0b5dfeae4116515ed9a966551591-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/31/sheraton-new-orleans-81508125f81f0b5dfeae4116515ed9a966551591-s800.jpg" class="img lazyOnLoad"  title="The New Orleans skyline including the Sheraton Hotel." alt="The New Orleans skyline including the Sheraton Hotel." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        <a href="https://www.flickr.com/photos/prayitnophotography/6866751102/in/photolist-bsMTSo-78yazg-bGAPz2-8LrfWi-giXybq-bHQMiR-itGyx-efCzbg-efJsHw-7LjPvj-7LfQwR-7LjPqJ-6Tjpp1-bGAzxR-btFVid-bvm4KG-9A6pC-58rX2B-5yx3jz" target="_blank">
+        Prayitno/Flickr
+        </a>
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/31/sheraton-new-orleans-81508125f81f0b5dfeae4116515ed9a966551591-s1200.jpg" title="The New Orleans skyline including the Sheraton Hotel." alt="The New Orleans skyline including the Sheraton Hotel." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            <a href="https://www.flickr.com/photos/prayitnophotography/6866751102/in/photolist-bsMTSo-78yazg-bGAPz2-8LrfWi-giXybq-bHQMiR-itGyx-efCzbg-efJsHw-7LjPvj-7LfQwR-7LjPqJ-6Tjpp1-bGAzxR-btFVid-bvm4KG-9A6pC-58rX2B-5yx3jz" target="_blank">
+            Prayitno/Flickr
+            </a>
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>If you're an infectious disease researcher, the annual American Society of Tropical Medicine and Hygiene meeting is the place to be. But not this year. Louisiana decreed that researchers who had been in West African countries in the past three weeks "should NOT travel to New Orleans to attend the conference." Prospective attendees were told they'd be quarantined in a hotel for 21 days if they showed up, even if they'd had nothing to do with Ebola.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES360446816" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res359608361" class="bucket listitem simplelistitem">
+      <h3>10/28/2014: SECOND DALLAS NURSE RECOVERS</h3>
+   <div id="res359612758" class="bucketwrap image medium" previewTitle="Ebola virus survivor Amber Vinson (Right) listens to Doctor Bruce Ribner, medical director of the Serious Communicable Disease Unit at Emory University Hospital during a press conference in Atlanta, on October 28, 2014. Vinson was one of two nurses who contracted Ebola while treating Liberian citizen Thomas Eric Duncan at Texas Health Presbyterian in Dallas, Texas.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/28/amber-vinson-1-b471928586191d0273ac37f07419a6fead682d10-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/28/amber-vinson-1-b471928586191d0273ac37f07419a6fead682d10-s800.jpg" class="img lazyOnLoad"  title="Ebola virus survivor Amber Vinson (Right) listens to Doctor Bruce Ribner, medical director of the Serious Communicable Disease Unit at Emory University Hospital during a press conference in Atlanta, on October 28, 2014. Vinson was one of two nurses who contracted Ebola while treating Liberian citizen Thomas Eric Duncan at Texas Health Presbyterian in Dallas, Texas." alt="Ebola virus survivor Amber Vinson (Right) listens to Doctor Bruce Ribner, medical director of the Serious Communicable Disease Unit at Emory University Hospital during a press conference in Atlanta, on October 28, 2014. Vinson was one of two nurses who contracted Ebola while treating Liberian citizen Thomas Eric Duncan at Texas Health Presbyterian in Dallas, Texas." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Erik S. Lesser/EPA/Landov
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/28/amber-vinson-1-b471928586191d0273ac37f07419a6fead682d10-s1200.jpg" title="Ebola virus survivor Amber Vinson (Right) listens to Doctor Bruce Ribner, medical director of the Serious Communicable Disease Unit at Emory University Hospital during a press conference in Atlanta, on October 28, 2014. Vinson was one of two nurses who contracted Ebola while treating Liberian citizen Thomas Eric Duncan at Texas Health Presbyterian in Dallas, Texas." alt="Ebola virus survivor Amber Vinson (Right) listens to Doctor Bruce Ribner, medical director of the Serious Communicable Disease Unit at Emory University Hospital during a press conference in Atlanta, on October 28, 2014. Vinson was one of two nurses who contracted Ebola while treating Liberian citizen Thomas Eric Duncan at Texas Health Presbyterian in Dallas, Texas." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Erik S. Lesser/EPA/Landov
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Emory University Hospital in Atlanta releases Amber Vinson, 29, declaring her Ebola-free. She became infected while caring for Thomas Eric Duncan at Texas Health Presbyterian Hospital in Dallas, and was diagnosed with Ebola on Oct. 15.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES359608361" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res359298049" class="bucket listitem simplelistitem">
+      <h3>10/26/2014: NURSE RELEASED FROM 'INHUMANE' QUARANTINE</h3>
+   <div id="res359300555" class="bucketwrap image medium" previewTitle="In a Oct. 26, 2014 telephone interview with CNN, Kaci Hickox, the nurse quarantined at a New Jersey hospital because she had contact with Ebola patients in West Africa, said the process of keeping her isolated is &quot;inhumane.&quot;">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/27/kaci-hickox_custom-31edbcd54f422f86f5772008adbb9eddfcef5c81-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/27/kaci-hickox_custom-31edbcd54f422f86f5772008adbb9eddfcef5c81-s800.jpg" class="img lazyOnLoad"  title="In a Oct. 26, 2014 telephone interview with CNN, Kaci Hickox, the nurse quarantined at a New Jersey hospital because she had contact with Ebola patients in West Africa, said the process of keeping her isolated is &quot;inhumane.&quot;" alt="In a Oct. 26, 2014 telephone interview with CNN, Kaci Hickox, the nurse quarantined at a New Jersey hospital because she had contact with Ebola patients in West Africa, said the process of keeping her isolated is &quot;inhumane.&quot;" />
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        University of Texas at Arlington/AP
+        
+    </span>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>New Jersey officials release Kaci Hickox, a nurse who returned to the U.S. after treating Ebola patients in Sierra Leone, from quarantine in a tent outside Newark's University Hospital. Hickox, who called the quarantine "inhumane," <a href="http://www.npr.org/blogs/thetwo-way/2014/10/26/359073978/nurse-aid-group-criticize-quarantine-after-negative-ebola-test">hired</a> a civil rights attorney to represent her. She will go home to Maine and serve out the quarantine there. </p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES359298049" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res359297353" class="bucket listitem simplelistitem">
+      <h3>10/24/2014: STATES IMPOSE MANDATORY QUARANTINES</h3>
+   <div id="res359300188" class="bucketwrap image medium" previewTitle="New York Governor Andrew Cuomo (center) speaks at a news conference on Oct. 24, 2014 in New York, announcing a mandatory quarantine for people returning to the United States through airports in New York and New Jersey who are deemed &quot;high risk.&quot;">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/27/mandatory-quarantine-35ba6659531b1544ba7c284a9def940a903fc3b5-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/27/mandatory-quarantine-35ba6659531b1544ba7c284a9def940a903fc3b5-s800.jpg" class="img lazyOnLoad"  title="New York Governor Andrew Cuomo (center) speaks at a news conference on Oct. 24, 2014 in New York, announcing a mandatory quarantine for people returning to the United States through airports in New York and New Jersey who are deemed &quot;high risk.&quot;" alt="New York Governor Andrew Cuomo (center) speaks at a news conference on Oct. 24, 2014 in New York, announcing a mandatory quarantine for people returning to the United States through airports in New York and New Jersey who are deemed &quot;high risk.&quot;" />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Mark Lennihan/AP
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/27/mandatory-quarantine-35ba6659531b1544ba7c284a9def940a903fc3b5-s1200.jpg" title="New York Governor Andrew Cuomo (center) speaks at a news conference on Oct. 24, 2014 in New York, announcing a mandatory quarantine for people returning to the United States through airports in New York and New Jersey who are deemed &quot;high risk.&quot;" alt="New York Governor Andrew Cuomo (center) speaks at a news conference on Oct. 24, 2014 in New York, announcing a mandatory quarantine for people returning to the United States through airports in New York and New Jersey who are deemed &quot;high risk.&quot;" />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Mark Lennihan/AP
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>New York Gov. Andrew Cuomo announces that his state will impose a mandatory 21-day quarantine on people arriving in the U.S. who have had direct contact with Ebola-infected individuals. New Jersey and Illinois announce their own quarantines. All affect people with  no symptoms of infection.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES359297353" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res358583775" class="bucket listitem simplelistitem">
+      <h3>10/24/14 OBAMA CONGRATULATES NINA PHAM</h3>
+   <div id="res358583913" class="bucketwrap image medium" previewTitle="President Barack Obama meets with Dallas nurse Nina Pham in the Oval Office of the White House on Oct. 24, 2014 in Washington, D.C.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/24/pham-obama-3d492178e3cd0944100d7bfa55af7a6d7989ca60-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/24/pham-obama-3d492178e3cd0944100d7bfa55af7a6d7989ca60-s800.jpg" class="img lazyOnLoad"  title="President Barack Obama meets with Dallas nurse Nina Pham in the Oval Office of the White House on Oct. 24, 2014 in Washington, D.C." alt="President Barack Obama meets with Dallas nurse Nina Pham in the Oval Office of the White House on Oct. 24, 2014 in Washington, D.C." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Olivier Douliery/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/24/pham-obama-3d492178e3cd0944100d7bfa55af7a6d7989ca60-s1200.jpg" title="President Barack Obama meets with Dallas nurse Nina Pham in the Oval Office of the White House on Oct. 24, 2014 in Washington, D.C." alt="President Barack Obama meets with Dallas nurse Nina Pham in the Oval Office of the White House on Oct. 24, 2014 in Washington, D.C." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Olivier Douliery/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Nurse Nina Pham goes to the White House, where she is greeted by President Obama. She says she's looking forward to going home to Dallas and her dog Bentley. "I feel fortunate and blessed to be standing here today."</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES358583775" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res358557890" class="bucket listitem simplelistitem">
+      <h3>10/24/14: FIRST DALLAS NURSE DECLARED EBOLA-FREE</h3>
+   <div id="res358574943" class="bucketwrap image medium" previewTitle="Patient Nina Pham is hugged by Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Diseases outside of National Institutes of Health (NIH) in Bethesda, Md., on Oct. 24, 2014. Pham, the first nurse diagnosed with Ebola after treating an infected man at a Dallas hospital is free of the virus.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/24/nina-pham-cured-b2c952f0f12f796c292bd3630eebcb8bf3b4eedf-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/24/nina-pham-cured-b2c952f0f12f796c292bd3630eebcb8bf3b4eedf-s800.jpg" class="img lazyOnLoad"  title="Patient Nina Pham is hugged by Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Diseases outside of National Institutes of Health (NIH) in Bethesda, Md., on Oct. 24, 2014. Pham, the first nurse diagnosed with Ebola after treating an infected man at a Dallas hospital is free of the virus." alt="Patient Nina Pham is hugged by Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Diseases outside of National Institutes of Health (NIH) in Bethesda, Md., on Oct. 24, 2014. Pham, the first nurse diagnosed with Ebola after treating an infected man at a Dallas hospital is free of the virus." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Pablo Martinez Monsivais/AP
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/24/nina-pham-cured-b2c952f0f12f796c292bd3630eebcb8bf3b4eedf-s1200.jpg" title="Patient Nina Pham is hugged by Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Diseases outside of National Institutes of Health (NIH) in Bethesda, Md., on Oct. 24, 2014. Pham, the first nurse diagnosed with Ebola after treating an infected man at a Dallas hospital is free of the virus." alt="Patient Nina Pham is hugged by Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Diseases outside of National Institutes of Health (NIH) in Bethesda, Md., on Oct. 24, 2014. Pham, the first nurse diagnosed with Ebola after treating an infected man at a Dallas hospital is free of the virus." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Pablo Martinez Monsivais/AP
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Nina Pham is hugged by Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Diseases, as she leaves the NIH hospital in Bethesda. Pham was diagnosed with Ebola on Oct. 12. The other Dallas nurse, Amber Vinson, is still being treated at Emory University Hospital, but physicians there say there is no longer Ebola in her blood.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES358557890" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res358522741" class="bucket listitem simplelistitem">
+      <h3>10/23/14: DOCTOR IN NEW YORK TESTS POSITIVE FOR EBOLA</h3>
+   <div id="res358528252" class="bucketwrap image medium" previewTitle="Traffic passes Bellevue Hospital, on Oct. 24th, in New York. Dr. Craig Spencer, a resident of New York City and a member of Doctors Without Borders, was admitted to Bellevue Thursday and has been diagnosed with Ebola.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/24/belleview-hospital-spencer-9a371dacba174180cba8578b6c4688886ccfd531-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/24/belleview-hospital-spencer-9a371dacba174180cba8578b6c4688886ccfd531-s800.jpg" class="img lazyOnLoad"  title="Traffic passes Bellevue Hospital, on Oct. 24th, in New York. Dr. Craig Spencer, a resident of New York City and a member of Doctors Without Borders, was admitted to Bellevue Thursday and has been diagnosed with Ebola." alt="Traffic passes Bellevue Hospital, on Oct. 24th, in New York. Dr. Craig Spencer, a resident of New York City and a member of Doctors Without Borders, was admitted to Bellevue Thursday and has been diagnosed with Ebola." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Mark Lennihan/AP
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/24/belleview-hospital-spencer-9a371dacba174180cba8578b6c4688886ccfd531-s1200.jpg" title="Traffic passes Bellevue Hospital, on Oct. 24th, in New York. Dr. Craig Spencer, a resident of New York City and a member of Doctors Without Borders, was admitted to Bellevue Thursday and has been diagnosed with Ebola." alt="Traffic passes Bellevue Hospital, on Oct. 24th, in New York. Dr. Craig Spencer, a resident of New York City and a member of Doctors Without Borders, was admitted to Bellevue Thursday and has been diagnosed with Ebola." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Mark Lennihan/AP
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>A physician with Doctors Without Borders, identified as Craig Spencer, tests positive for Ebola in New York City. He had recently returned from working with Ebola patients in Guinea. He is being treated in the isolation unit at Bellevue Hospital. His fiancee and two friends have been quarantined.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES358522741" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res358040932" class="bucket listitem simplelistitem">
+      <h3>10/22/2014: NBC PHOTOJOURNALIST RELEASED FROM HOSPITAL</h3>
+   <div id="res358044752" class="bucketwrap image medium" previewTitle="The Lied Medical Transplant Center (Left) is shown in Omaha, Nebraska, on Oct. 6, 2014.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/22/ashoka-7e2225032578ecbf5f62d543eb7d44fafac0bf18-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/22/ashoka-7e2225032578ecbf5f62d543eb7d44fafac0bf18-s800.jpg" class="img lazyOnLoad"  title="The Lied Medical Transplant Center (Left) is shown in Omaha, Nebraska, on Oct. 6, 2014." alt="The Lied Medical Transplant Center (Left) is shown in Omaha, Nebraska, on Oct. 6, 2014." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Sait Serkan Gurbuz/Reuters/Landov
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/22/ashoka-7e2225032578ecbf5f62d543eb7d44fafac0bf18-s1200.jpg" title="The Lied Medical Transplant Center (Left) is shown in Omaha, Nebraska, on Oct. 6, 2014." alt="The Lied Medical Transplant Center (Left) is shown in Omaha, Nebraska, on Oct. 6, 2014." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Sait Serkan Gurbuz/Reuters/Landov
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Ashoka Mukpo, a photojournalist who worked for NBC News, is <a href="http://www.npr.org/blogs/thetwo-way/2014/10/21/357914041/nbc-news-photojournalist-is-now-ebola-free-says-hospital">released</a> from the Nebraska Medical Center after being declared Ebola free. The 33-year-old contracted the virus while working in Liberia and was admitted to the hospital on Oct. 6. Mukpo is the latest patient to be released, following an anonymous aid worker who was infected in Africa and discharged on Oct. 19 from Emory University Hospital. Two nurses who were infected while treating Thomas Eric Duncan in Dallas remain hospitalized: Nina Pham at the National Institutes of Health in Bethesda, Md., and Amber Vinson at Emory University Hospital in Atlanta. </p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES358040932" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res357531450" class="bucket listitem simplelistitem">
+      <h3>10/20/14: QUARANTINE ENDS FOR DUNCAN'S FIANCEE</h3>
+   <div id="res357571719" class="bucketwrap image medium" previewTitle="Nurse Belkys Fortune (left) and Teressa Celia, Associate Director of Infection Prevention and Control, pose in protective suits in an isolation room at Bellevue Hospital in N.Y. during a demonstration of procedures for possible Ebola patients, on Oct. 8, 2014.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/20/ebola-suit-8828fff853c3d0bf94f5ca8604323a11ebb5faf4-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/20/ebola-suit-8828fff853c3d0bf94f5ca8604323a11ebb5faf4-s800.jpg" class="img lazyOnLoad"  title="Nurse Belkys Fortune (left) and Teressa Celia, Associate Director of Infection Prevention and Control, pose in protective suits in an isolation room at Bellevue Hospital in N.Y. during a demonstration of procedures for possible Ebola patients, on Oct. 8, 2014." alt="Nurse Belkys Fortune (left) and Teressa Celia, Associate Director of Infection Prevention and Control, pose in protective suits in an isolation room at Bellevue Hospital in N.Y. during a demonstration of procedures for possible Ebola patients, on Oct. 8, 2014." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Richard Drew/AP
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/20/ebola-suit-8828fff853c3d0bf94f5ca8604323a11ebb5faf4-s1200.jpg" title="Nurse Belkys Fortune (left) and Teressa Celia, Associate Director of Infection Prevention and Control, pose in protective suits in an isolation room at Bellevue Hospital in N.Y. during a demonstration of procedures for possible Ebola patients, on Oct. 8, 2014." alt="Nurse Belkys Fortune (left) and Teressa Celia, Associate Director of Infection Prevention and Control, pose in protective suits in an isolation room at Bellevue Hospital in N.Y. during a demonstration of procedures for possible Ebola patients, on Oct. 8, 2014." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Richard Drew/AP
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>The Ebola quarantine mandated for Louise Troh, the fiancee of Thomas Eric Duncan, her son and two nephews ends after 21 days. And CDC changes its guidelines for protective personal equipment to include covering all skin and using a "buddy system" when putting on or removing gear. </p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES357531450" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res357576721" class="bucket listitem simplelistitem">
+      <h3>10/19/2014: EBOLA PANIC STOPS CRUISE, SCHOOLS</h3>
+   <div id="res357577631" class="bucketwrap image medium" previewTitle="The cruise ship Carnival Magic passes near Cozumel, Mexico, on Oct. 17, 2014. The Coast Guard said it had retrieved a blood sample from a Dallas health care worker aboard a cruise ship and being monitored for signs of Ebola.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/20/carnival-magic-24eab1619d6307d005ff59948ccec734f4aea657-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/20/carnival-magic-24eab1619d6307d005ff59948ccec734f4aea657-s800.jpg" class="img lazyOnLoad"  title="The cruise ship Carnival Magic passes near Cozumel, Mexico, on Oct. 17, 2014. The Coast Guard said it had retrieved a blood sample from a Dallas health care worker aboard a cruise ship and being monitored for signs of Ebola." alt="The cruise ship Carnival Magic passes near Cozumel, Mexico, on Oct. 17, 2014. The Coast Guard said it had retrieved a blood sample from a Dallas health care worker aboard a cruise ship and being monitored for signs of Ebola." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Angel Castellanos/AP
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/20/carnival-magic-24eab1619d6307d005ff59948ccec734f4aea657-s1200.jpg" title="The cruise ship Carnival Magic passes near Cozumel, Mexico, on Oct. 17, 2014. The Coast Guard said it had retrieved a blood sample from a Dallas health care worker aboard a cruise ship and being monitored for signs of Ebola." alt="The cruise ship Carnival Magic passes near Cozumel, Mexico, on Oct. 17, 2014. The Coast Guard said it had retrieved a blood sample from a Dallas health care worker aboard a cruise ship and being monitored for signs of Ebola." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Angel Castellanos/AP
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>The Caribbean cruise ship, Carnival Magic, returns to Galveston, Texas after being refused permission to dock in Cozumel, Mexico because it was carrying an employee of Texas Presbyterian hospital. The worker tested negative for Ebola on the ship's return. Earlier, classes were cancelled at schools in Texas and Ohio because staffers, students or parents had traveled on the same airplane as a nurse later diagnosed with Ebola. </p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES357576721" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356948288" class="bucket listitem simplelistitem">
+      <h3>10/17/2014: WHITE HOUSE NAMES EBOLA CZAR</h3>
+   <div id="res356949334" class="bucketwrap image medium" previewTitle="Ron Klain will be appointed as the new Ebola Czar by President Obama on Oct. 17, 2014.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/17/457372270-385e4c326596f3c684d905cbfb66e38963560fbd-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/17/457372270-385e4c326596f3c684d905cbfb66e38963560fbd-s800.jpg" class="img lazyOnLoad"  title="Ron Klain will be appointed as the new Ebola Czar by President Obama on Oct. 17, 2014." alt="Ron Klain will be appointed as the new Ebola Czar by President Obama on Oct. 17, 2014." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Andrew H. Walker/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/17/457372270-385e4c326596f3c684d905cbfb66e38963560fbd-s1200.jpg" title="Ron Klain will be appointed as the new Ebola Czar by President Obama on Oct. 17, 2014." alt="Ron Klain will be appointed as the new Ebola Czar by President Obama on Oct. 17, 2014." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Andrew H. Walker/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Ron Klain, a former chief of staff for Vice Presidents Gore and Biden, is tapped to be the Obama administration's Ebola czar, coordinating the government's response to the virus. Klain, a lawyer, will report to Homeland Security Advisor Lisa Monaco and National Security Advisor Susan Rice.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356948288" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356692390" class="bucket listitem simplelistitem">
+      <h3>10/16/2014: NIH TAKES OVER CARE OF NURSE #1</h3>
+   <div id="res356696808" class="bucketwrap image medium" previewTitle="Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Disease, testifies before a House Energy and Commerce Oversight and Investigations Subcommittee hearing on the US response to the ebola outbreak in D.C., on Oct. 16, 2014.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/16/faucus-77ccd17f362a08bac856c772d60ec0c5bec9b6b5-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/16/faucus-77ccd17f362a08bac856c772d60ec0c5bec9b6b5-s800.jpg" class="img lazyOnLoad"  title="Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Disease, testifies before a House Energy and Commerce Oversight and Investigations Subcommittee hearing on the US response to the ebola outbreak in D.C., on Oct. 16, 2014." alt="Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Disease, testifies before a House Energy and Commerce Oversight and Investigations Subcommittee hearing on the US response to the ebola outbreak in D.C., on Oct. 16, 2014." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Jim Lo Scalzo/EPA/LANDOV
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/16/faucus-77ccd17f362a08bac856c772d60ec0c5bec9b6b5-s1200.jpg" title="Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Disease, testifies before a House Energy and Commerce Oversight and Investigations Subcommittee hearing on the US response to the ebola outbreak in D.C., on Oct. 16, 2014." alt="Dr. Anthony Fauci, director of the National Institute of Allergy and Infectious Disease, testifies before a House Energy and Commerce Oversight and Investigations Subcommittee hearing on the US response to the ebola outbreak in D.C., on Oct. 16, 2014." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Jim Lo Scalzo/EPA/LANDOV
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Nina Pham, the first Dallas nurse to become infected with Ebola, is being moved to the National Institutes of Health hospital in Bethesda, Md., this evening, Dr. Anthony S. Fauci, Director of the National Institute of Allergy and Infectious Diseases, tells a  congressional hearing. New tests of experimental vaccines and medications will be underway soon, he added.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356692390" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356355338" class="bucket listitem simplelistitem">
+      <h3>10/15/2014: SECOND DALLAS NURSE DIAGNOSED WITH EBOLA</h3>
+   <div id="res356635518" class="bucketwrap image medium" previewTitle="Ebola patient Amber Vinson arrives by ambulance at Emory University Hospital on Oct. 15, 2014 in Atlanta, Georgia.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/16/amber-vinson_custom-7d563938f134b2c2931fe600c5a52bcdb16fda3d-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/16/amber-vinson_custom-7d563938f134b2c2931fe600c5a52bcdb16fda3d-s800.jpg" class="img lazyOnLoad"  title="Ebola patient Amber Vinson arrives by ambulance at Emory University Hospital on Oct. 15, 2014 in Atlanta, Georgia." alt="Ebola patient Amber Vinson arrives by ambulance at Emory University Hospital on Oct. 15, 2014 in Atlanta, Georgia." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Kevin C. Cox/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/16/amber-vinson_custom-7d563938f134b2c2931fe600c5a52bcdb16fda3d-s1200.jpg" title="Ebola patient Amber Vinson arrives by ambulance at Emory University Hospital on Oct. 15, 2014 in Atlanta, Georgia." alt="Ebola patient Amber Vinson arrives by ambulance at Emory University Hospital on Oct. 15, 2014 in Atlanta, Georgia." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Kevin C. Cox/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Amber Joy Vinson, a 29-year-old nurse who worked at Texas Health Presbyterian Hospital in Dallas, is diagnosed with Ebola, the CDC reports. She reported having a fever the day before, when she flew back from Cleveland on a commercial flight. She helped care for Thomas Eric Duncan, who died of Ebola at the hospital on Oct. 8. Vinson is evacuated to Emory University Hospital, left, late on Oct. 15. </p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356355338" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356170200" class="bucket listitem simplelistitem">
+      <h3>10/13/2014: NBC CORRESPONDENT DR. NANCY SNYDERMAN BREAKS QUARANTINE</h3>
+   <div id="res356194157" class="bucketwrap image medium" previewTitle="Dr. Nancy Snyderman, left, with Savannah Guthrie on the &quot;Today&quot; show.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/nancy-snyderman-fa82d920d96b88b0ea9510775cc0c35d97509b23-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/nancy-snyderman-fa82d920d96b88b0ea9510775cc0c35d97509b23-s800.jpg" class="img lazyOnLoad"  title="Dr. Nancy Snyderman, left, with Savannah Guthrie on the &quot;Today&quot; show." alt="Dr. Nancy Snyderman, left, with Savannah Guthrie on the &quot;Today&quot; show." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Peter Kramer/NBC/NBC NewsWire via Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/nancy-snyderman-fa82d920d96b88b0ea9510775cc0c35d97509b23-s1200.jpg" title="Dr. Nancy Snyderman, left, with Savannah Guthrie on the &quot;Today&quot; show." alt="Dr. Nancy Snyderman, left, with Savannah Guthrie on the &quot;Today&quot; show." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Peter Kramer/NBC/NBC NewsWire via Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>NBC's medical correspondent Dr. Nancy Snyderman <a href="http://www.cnn.com/2014/10/14/health/ebola-nbc-snyderman-apology/index.html" target="_blank">apologizes</a> for breaking quarantine by going out for takeout food in New Jersey. She had worked with videographer Ashoka Mukpo, who was infected with Ebola in Liberia. Snyderman is shown at right during an earlier appearance on the <em>Today</em> show.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356170200" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356170111" class="bucket listitem simplelistitem">
+      <h3>10/12/2014: DALLAS NURSE DIAGNOSED WITH EBOLA</h3>
+   <div id="res356171406" class="bucketwrap image medium" previewTitle="Nina Pham, 26, who became the first person to contract the disease within the United States.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/ap365449530608-8acdfc829500a6012865e5ddef1bf4b810a17abc-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/ap365449530608-8acdfc829500a6012865e5ddef1bf4b810a17abc-s800.jpg" class="img lazyOnLoad"  title="Nina Pham, 26, who became the first person to contract the disease within the United States." alt="Nina Pham, 26, who became the first person to contract the disease within the United States." />
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Courtesy of tcu360.com/AP
+        
+    </span>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Nina Pham, a 26-year-old nurse who helped treat Ebola patient Thomas Eric Duncan, <a href="http://www.npr.org/2014/10/13/355970885/dallas-nurse-caught-ebola-despite-safety-gear-cant-pinpoint-breach" target="_blank">becomes</a> the first person infected with Ebola in the United States.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356170111" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356169988" class="bucket listitem simplelistitem">
+      <h3>10/11/2014: AIRPORTS BEGIN SCREENING PASSENGERS FOR EBOLA</h3>
+   <div id="res356172019" class="bucketwrap image medium" previewTitle="Passengers make their way in a security checkpoint at the International JFK airport in New York on Oct. 11, 2014. Medical teams at New York's JFK airport, armed with Ebola questionnaires and temperature guns, began screening travelers from three West African countries on Saturday as U.S. health authorities stepped up efforts to stop the spread of the virus.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/jfk-screening_custom-ba69cb6a892957d8d46834c3680f5a72a2cac94a-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/jfk-screening_custom-ba69cb6a892957d8d46834c3680f5a72a2cac94a-s800.jpg" class="img lazyOnLoad"  title="Passengers make their way in a security checkpoint at the International JFK airport in New York on Oct. 11, 2014. Medical teams at New York's JFK airport, armed with Ebola questionnaires and temperature guns, began screening travelers from three West African countries on Saturday as U.S. health authorities stepped up efforts to stop the spread of the virus." alt="Passengers make their way in a security checkpoint at the International JFK airport in New York on Oct. 11, 2014. Medical teams at New York's JFK airport, armed with Ebola questionnaires and temperature guns, began screening travelers from three West African countries on Saturday as U.S. health authorities stepped up efforts to stop the spread of the virus." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Eduardo Munoz/Reuters/Landov
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/jfk-screening_enl-ba69cb6a892957d8d46834c3680f5a72a2cac94a-s1200.jpg" title="Passengers make their way in a security checkpoint at the International JFK airport in New York on Oct. 11, 2014. Medical teams at New York's JFK airport, armed with Ebola questionnaires and temperature guns, began screening travelers from three West African countries on Saturday as U.S. health authorities stepped up efforts to stop the spread of the virus." alt="Passengers make their way in a security checkpoint at the International JFK airport in New York on Oct. 11, 2014. Medical teams at New York's JFK airport, armed with Ebola questionnaires and temperature guns, began screening travelers from three West African countries on Saturday as U.S. health authorities stepped up efforts to stop the spread of the virus." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Eduardo Munoz/Reuters/Landov
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Ebola screenings <a href="http://online.wsj.com/articles/ebola-screenings-begin-at-jfk-airport-1413036019">begin</a> at New York's John F. Kennedy International Airport for passengers from Liberia, Sierra Leone and Guinea. Washington Dulles International Airport, Newark Liberty International Airport, Chicago O'Hare International Airport and Hartsfield-Jackson Atlanta International Airport will follow. Most passengers arriving from West Africa come through these airports.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356169988" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356169924" class="bucket listitem simplelistitem">
+      <h3>10/8/2014: DALLAS PATIENT DIES</h3>
+   <div id="res356398921" class="bucketwrap image medium" previewTitle="This 2011 photo provided by Wilmot Chayee shows Thomas Eric Duncan, right, with friend Wilmot Chayee at a wedding in Ghana. Duncan, who became the first patient diagnosed in the U.S with Ebola, has been kept in isolation at a hospital since Sunday, Sept. 28, 2014. He was listed in serious but stable condition.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/15/ap779034289650-a27ffcde1127133a828fd11c34e41845efd9a1a3-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/15/ap779034289650-a27ffcde1127133a828fd11c34e41845efd9a1a3-s800.jpg" class="img lazyOnLoad"  title="This 2011 photo provided by Wilmot Chayee shows Thomas Eric Duncan, right, with friend Wilmot Chayee at a wedding in Ghana. Duncan, who became the first patient diagnosed in the U.S with Ebola, has been kept in isolation at a hospital since Sunday, Sept. 28, 2014. He was listed in serious but stable condition." alt="This 2011 photo provided by Wilmot Chayee shows Thomas Eric Duncan, right, with friend Wilmot Chayee at a wedding in Ghana. Duncan, who became the first patient diagnosed in the U.S with Ebola, has been kept in isolation at a hospital since Sunday, Sept. 28, 2014. He was listed in serious but stable condition." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Wilmot Chayee/AP
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/15/ap779034289650-a27ffcde1127133a828fd11c34e41845efd9a1a3-s1200.jpg" title="This 2011 photo provided by Wilmot Chayee shows Thomas Eric Duncan, right, with friend Wilmot Chayee at a wedding in Ghana. Duncan, who became the first patient diagnosed in the U.S with Ebola, has been kept in isolation at a hospital since Sunday, Sept. 28, 2014. He was listed in serious but stable condition." alt="This 2011 photo provided by Wilmot Chayee shows Thomas Eric Duncan, right, with friend Wilmot Chayee at a wedding in Ghana. Duncan, who became the first patient diagnosed in the U.S with Ebola, has been kept in isolation at a hospital since Sunday, Sept. 28, 2014. He was listed in serious but stable condition." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Wilmot Chayee/AP
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Thomas Eric Duncan <a href="http://www.npr.org/blogs/thetwo-way/2014/10/08/354577799/dallas-ebola-patient-thomas-eric-duncan-dies-hospital-says" target="_blank">dies</a> of Ebola at Texas Health Presbyterian Hospital in Dallas at age 42. He had traveled from Liberia to visit relatives.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356169924" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356169762" class="bucket listitem simplelistitem">
+      <h3>10/2/2014: AMERICAN JOURNALIST IN LIBERIA TESTS POSITIVE FOR EBOLA</h3>
+   <div id="res356182335" class="bucketwrap image medium" previewTitle="An ambulance transports Ashoka Mukpo, who contracted Ebola while working in Liberia, to the Nebraska Medical Center's specialized isolation unit on Oct. 6, 2014, in Omaha, Neb., where he will be treated for the deadly disease.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/ashoka-mukpo-ebola-53fb01f923707c93a0b10ad22f30f794f318fbc1-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/ashoka-mukpo-ebola-53fb01f923707c93a0b10ad22f30f794f318fbc1-s800.jpg" class="img lazyOnLoad"  title="An ambulance transports Ashoka Mukpo, who contracted Ebola while working in Liberia, to the Nebraska Medical Center's specialized isolation unit on Oct. 6, 2014, in Omaha, Neb., where he will be treated for the deadly disease." alt="An ambulance transports Ashoka Mukpo, who contracted Ebola while working in Liberia, to the Nebraska Medical Center's specialized isolation unit on Oct. 6, 2014, in Omaha, Neb., where he will be treated for the deadly disease." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Dave Weaver/AP
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/ashoka-mukpo-ebola-53fb01f923707c93a0b10ad22f30f794f318fbc1-s1200.jpg" title="An ambulance transports Ashoka Mukpo, who contracted Ebola while working in Liberia, to the Nebraska Medical Center's specialized isolation unit on Oct. 6, 2014, in Omaha, Neb., where he will be treated for the deadly disease." alt="An ambulance transports Ashoka Mukpo, who contracted Ebola while working in Liberia, to the Nebraska Medical Center's specialized isolation unit on Oct. 6, 2014, in Omaha, Neb., where he will be treated for the deadly disease." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Dave Weaver/AP
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Ashoka Mukpo, a freelance photojournalist working for NBC News in Liberia, <a href="http://www.nbcnews.com/storyline/ebola-virus-outbreak/nbc-news-freelancer-africa-diagnosed-ebola-n217271" target="_blank">tests</a> positive for Ebola. He is returned to the United States and is taken to Nebraska Medical Center in Omaha, left, for treatment.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356169762" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356169663" class="bucket listitem simplelistitem">
+      <h3>10/1/2014: RELATIVES OF DALLAS PATIENT ARE PLACED UNDER QUARANTINE</h3>
+   <div id="res356181890" class="bucketwrap image medium" previewTitle="The Ivy Apartments, where the confirmed Ebola virus patient was staying with family members, is seen on Oct. 1, 2014 in Dallas, Texas.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/ebola-quarantine-286214fc2f690d54da42abd5b6ee19ee6b2da3c2-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/ebola-quarantine-286214fc2f690d54da42abd5b6ee19ee6b2da3c2-s800.jpg" class="img lazyOnLoad"  title="The Ivy Apartments, where the confirmed Ebola virus patient was staying with family members, is seen on Oct. 1, 2014 in Dallas, Texas." alt="The Ivy Apartments, where the confirmed Ebola virus patient was staying with family members, is seen on Oct. 1, 2014 in Dallas, Texas." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Tom Pennington/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/ebola-quarantine-286214fc2f690d54da42abd5b6ee19ee6b2da3c2-s1200.jpg" title="The Ivy Apartments, where the confirmed Ebola virus patient was staying with family members, is seen on Oct. 1, 2014 in Dallas, Texas." alt="The Ivy Apartments, where the confirmed Ebola virus patient was staying with family members, is seen on Oct. 1, 2014 in Dallas, Texas." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Tom Pennington/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Texas authorities place relatives of Ebola patient Thomas Eric Duncan under quarantine in their apartment, left. They're later moved to a private house and the apartment is decontaminated.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356169663" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356169394" class="bucket listitem simplelistitem">
+      <h3>9/30/2014: FIRST U.S. EBOLA CASE IS CONFIRMED IN DALLAS, TEXAS</h3>
+   <div id="res356399237" class="bucketwrap image medium" previewTitle="A man diagnosed with the Ebola virus this week is being treated at Texas Health Presbyterian Hospital in Dallas. The patient recently traveled to Dallas from Liberia.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/15/hospital-70a4d218ea7fb5997a047a254b4018bee620cec0-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/15/hospital-70a4d218ea7fb5997a047a254b4018bee620cec0-s800.jpg" class="img lazyOnLoad"  title="A man diagnosed with the Ebola virus this week is being treated at Texas Health Presbyterian Hospital in Dallas. The patient recently traveled to Dallas from Liberia." alt="A man diagnosed with the Ebola virus this week is being treated at Texas Health Presbyterian Hospital in Dallas. The patient recently traveled to Dallas from Liberia." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Mike Stone/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/15/hospital-70a4d218ea7fb5997a047a254b4018bee620cec0-s1200.jpg" title="A man diagnosed with the Ebola virus this week is being treated at Texas Health Presbyterian Hospital in Dallas. The patient recently traveled to Dallas from Liberia." alt="A man diagnosed with the Ebola virus this week is being treated at Texas Health Presbyterian Hospital in Dallas. The patient recently traveled to Dallas from Liberia." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Mike Stone/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Officials at Texas Health Presbyterian Hospital in Dallas say Thomas Eric Duncan has been <a href="http://www.npr.org/2014/10/01/352925378/first-u-s-ebola-case-confirmed-in-dallas" target="_blank">diagnosed</a> with Ebola. Duncan arrived in Dallas from Liberia on Sept. 20, and had gone to the hospital on Sept. 26 with a fever and stomach pain but was sent home. He returned to the hospital much sicker on Sept. 28 and was admitted.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356169394" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356169243" class="bucket listitem simplelistitem">
+      <h3>9/16/2014: PRESIDENT OBAMA OFFERS 3,000 TROOPS IN FIGHT AGAINST EBOLA</h3>
+   <div id="res356173610" class="bucketwrap image medium" previewTitle="President Obama spoke Tuesday about the U.S. plan to fight the Ebola epidemic in West Africa, speaking at the Centers for Disease Control and Prevention. The White House plan reportedly includes deploying 3,000 U.S. military personnel and training health care providers in Liberia.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/obama_ebola-dd49654bb04c14119e0de10ec9f1b88e03e0068d-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/obama_ebola-dd49654bb04c14119e0de10ec9f1b88e03e0068d-s800.jpg" class="img lazyOnLoad"  title="President Obama spoke Tuesday about the U.S. plan to fight the Ebola epidemic in West Africa, speaking at the Centers for Disease Control and Prevention. The White House plan reportedly includes deploying 3,000 U.S. military personnel and training health care providers in Liberia." alt="President Obama spoke Tuesday about the U.S. plan to fight the Ebola epidemic in West Africa, speaking at the Centers for Disease Control and Prevention. The White House plan reportedly includes deploying 3,000 U.S. military personnel and training health care providers in Liberia." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Mandel Ngan/AFP/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/obama_ebola-dd49654bb04c14119e0de10ec9f1b88e03e0068d-s1200.jpg" title="President Obama spoke Tuesday about the U.S. plan to fight the Ebola epidemic in West Africa, speaking at the Centers for Disease Control and Prevention. The White House plan reportedly includes deploying 3,000 U.S. military personnel and training health care providers in Liberia." alt="President Obama spoke Tuesday about the U.S. plan to fight the Ebola epidemic in West Africa, speaking at the Centers for Disease Control and Prevention. The White House plan reportedly includes deploying 3,000 U.S. military personnel and training health care providers in Liberia." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Mandel Ngan/AFP/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>President Obama <a href="http://www.npr.org/blogs/thetwo-way/2014/09/16/349036767/obama-gives-new-details-on-america-s-effort-to-fight-ebola" target="_blank">outlines </a>an increased response to fight Ebola, including building a military command center in Liberia and sending 3,000 U.S. troops to the region.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356169243" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356169061" class="bucket listitem simplelistitem">
+      <h3>9/4/2014: SCIENTISTS PREDICT THAT EBOLA WILL COME TO THE U.S.</h3>
+   <div id="res356180417" class="bucketwrap image medium" previewTitle="Air traffic connections from West Africa to the rest of the world: While Guinea, Liberia and Sierra Leone don't have many flights outside the region, Nigeria is well-connected to Europe and the U.S.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/ebolatrafficconnections4_custom-0f05dafeb87abcf63a00fad7dd8a999831cfdd10-s800-c15.png" data-original="http://media.npr.org/assets/img/2014/10/14/ebolatrafficconnections4_custom-0f05dafeb87abcf63a00fad7dd8a999831cfdd10-s800.png" class="img lazyOnLoad"  title="Air traffic connections from West Africa to the rest of the world: While Guinea, Liberia and Sierra Leone don't have many flights outside the region, Nigeria is well-connected to Europe and the U.S." alt="Air traffic connections from West Africa to the rest of the world: While Guinea, Liberia and Sierra Leone don't have many flights outside the region, Nigeria is well-connected to Europe and the U.S." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        <a href="http://currents.plos.org/outbreaks/article/assessing-the-international-spreading-risk-associated-with-the-2014-west-african-ebola-outbreak/" target="_blank">
+        PLOS Currents
+        </a>
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/ebolatrafficconnections4_enl-5665674eb29b25354e2f77147a42d03f206e5902-s1200.png" title="Air traffic connections from West Africa to the rest of the world: While Guinea, Liberia and Sierra Leone don't have many flights outside the region, Nigeria is well-connected to Europe and the U.S." alt="Air traffic connections from West Africa to the rest of the world: While Guinea, Liberia and Sierra Leone don't have many flights outside the region, Nigeria is well-connected to Europe and the U.S." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            <a href="http://currents.plos.org/outbreaks/article/assessing-the-international-spreading-risk-associated-with-the-2014-west-african-ebola-outbreak/" target="_blank">
+            PLOS Currents
+            </a>
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>An <a href="http://www.npr.org/blogs/goatsandsoda/2014/09/04/345767439/a-few-ebola-cases-likely-in-u-s-air-traffic-analysis-shows">analysis </a>of international air travel shows that it's likely that someone infected with Ebola will board a commercial flight to the U.S. in the next few months.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356169061" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356168914" class="bucket listitem simplelistitem">
+      <h3>9/2/2014: THIRD AMERICAN WORKER TESTS POSITIVE FOR EBOLA</h3>
+   <div id="res356178103" class="bucketwrap image medium" previewTitle="Dr. Rick Sacra, 51, has been working on and off in Liberia for 15 years. He went back to Monrovia in August to help deliver babies. It's still unknown how he caught Ebola.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/ricksacra-8c7ee9da5f34959cf5b30a146c382c709a72b1aa-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/ricksacra-8c7ee9da5f34959cf5b30a146c382c709a72b1aa-s800.jpg" class="img lazyOnLoad"  title="Dr. Rick Sacra, 51, has been working on and off in Liberia for 15 years. He went back to Monrovia in August to help deliver babies. It's still unknown how he caught Ebola." alt="Dr. Rick Sacra, 51, has been working on and off in Liberia for 15 years. He went back to Monrovia in August to help deliver babies. It's still unknown how he caught Ebola." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Courtesy of SIM 
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/ricksacra-8c7ee9da5f34959cf5b30a146c382c709a72b1aa-s1200.jpg" title="Dr. Rick Sacra, 51, has been working on and off in Liberia for 15 years. He went back to Monrovia in August to help deliver babies. It's still unknown how he caught Ebola." alt="Dr. Rick Sacra, 51, has been working on and off in Liberia for 15 years. He went back to Monrovia in August to help deliver babies. It's still unknown how he caught Ebola." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Courtesy of SIM 
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Dr. Rick Sacra, a Massachusetts doctor working in Liberia for the Christian aid group SIM, <a href="http://www.npr.org/blogs/goatsandsoda/2014/09/02/345290023/another-american-doctor-in-liberia-tests-positive-for-ebol" target="_blank">tests</a> positive for Ebola. He later recovers at a hospital in Nebraska, receiving transfusions of blood plasma from fellow survivor Dr. Kent Brantly.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356168914" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356168779" class="bucket listitem simplelistitem">
+      <h3>SEPTEMBER 2014: EXPERIMENTAL EBOLA VACCINE TESTED ON HUMANS</h3>
+   <div id="res356363728" class="bucketwrap image medium" previewTitle="Professor Adrian Hill, Director leader of the trials for the experimental Ebola vaccine holds a vial of the vaccine in Oxford, England on Sept. 17, 2014. The vaccine was developed by the U.S. National Institutes of Health and GlaxoSmithKline and targets the Zaire strain of Ebola, the cause of the ongoing outbreak in West Africa. A trial of the same vaccine has already begun in the U.S.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/15/glaxosmithkline-drug_custom-b003a48584d94857873f935755b1d9952d633b2c-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/15/glaxosmithkline-drug_custom-b003a48584d94857873f935755b1d9952d633b2c-s800.jpg" class="img lazyOnLoad"  title="Professor Adrian Hill, Director leader of the trials for the experimental Ebola vaccine holds a vial of the vaccine in Oxford, England on Sept. 17, 2014. The vaccine was developed by the U.S. National Institutes of Health and GlaxoSmithKline and targets the Zaire strain of Ebola, the cause of the ongoing outbreak in West Africa. A trial of the same vaccine has already begun in the U.S." alt="Professor Adrian Hill, Director leader of the trials for the experimental Ebola vaccine holds a vial of the vaccine in Oxford, England on Sept. 17, 2014. The vaccine was developed by the U.S. National Institutes of Health and GlaxoSmithKline and targets the Zaire strain of Ebola, the cause of the ongoing outbreak in West Africa. A trial of the same vaccine has already begun in the U.S." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Steve Parsons/AP
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/15/glaxosmithkline-drug_custom-b003a48584d94857873f935755b1d9952d633b2c-s1200.jpg" title="Professor Adrian Hill, Director leader of the trials for the experimental Ebola vaccine holds a vial of the vaccine in Oxford, England on Sept. 17, 2014. The vaccine was developed by the U.S. National Institutes of Health and GlaxoSmithKline and targets the Zaire strain of Ebola, the cause of the ongoing outbreak in West Africa. A trial of the same vaccine has already begun in the U.S." alt="Professor Adrian Hill, Director leader of the trials for the experimental Ebola vaccine holds a vial of the vaccine in Oxford, England on Sept. 17, 2014. The vaccine was developed by the U.S. National Institutes of Health and GlaxoSmithKline and targets the Zaire strain of Ebola, the cause of the ongoing outbreak in West Africa. A trial of the same vaccine has already begun in the U.S." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Steve Parsons/AP
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Drug company GlaxoSmithKline and the National Institutes of Health begin <a href="http://www.npr.org/blogs/health/2014/08/28/343967369/experimental-ebola-vaccine-will-be-put-to-human-test" target="_blank">testing</a> an Ebola vaccine on humans. The initial test involves 20 healthy volunteers.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356168779" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356168080" class="bucket listitem simplelistitem">
+      <h3>8/21/2014: EBOLA PATIENTS ARE RELEASED FROM HOSPITAL</h3>
+   <div id="res356177139" class="bucketwrap image medium" previewTitle="Dr. Kent Brantly (center), stands with his wife, Amber Brantly, during a press conference announcing his release from Emory Hospital on Aug. 21, 2014 in Atlanta, Georgia.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/kent-brantly-ad2a7e99e34fc2c925ee9de6727c25635c2a9011-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/kent-brantly-ad2a7e99e34fc2c925ee9de6727c25635c2a9011-s800.jpg" class="img lazyOnLoad"  title="Dr. Kent Brantly (center), stands with his wife, Amber Brantly, during a press conference announcing his release from Emory Hospital on Aug. 21, 2014 in Atlanta, Georgia." alt="Dr. Kent Brantly (center), stands with his wife, Amber Brantly, during a press conference announcing his release from Emory Hospital on Aug. 21, 2014 in Atlanta, Georgia." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Jessica McGowan/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/kent-brantly-ad2a7e99e34fc2c925ee9de6727c25635c2a9011-s1200.jpg" title="Dr. Kent Brantly (center), stands with his wife, Amber Brantly, during a press conference announcing his release from Emory Hospital on Aug. 21, 2014 in Atlanta, Georgia." alt="Dr. Kent Brantly (center), stands with his wife, Amber Brantly, during a press conference announcing his release from Emory Hospital on Aug. 21, 2014 in Atlanta, Georgia." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Jessica McGowan/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Dr. Kent Brantly, left with his wife, Amber, is released from Emory University Hospital after recovering from Ebola. Nancy Writebol, who also became infected while working in Africa, is <a href="http://www.npr.org/blogs/thetwo-way/2014/08/21/342107332/american-ebola-patients-will-leave-atlanta-hospital" target="_blank">released, too. </a>Both were treated with the experimental monoclonal antibody drug ZMapp.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356168080" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356168006" class="bucket listitem simplelistitem">
+      <h3>8/7/2014: FDA OKS EXPERIMENTAL DRUG FOR USE AGAINST EBOLA</h3>
+   <div id="res356369015" class="bucketwrap image medium" previewTitle="Tekmira Pharmaceuticals Corporation's head office is pictured in Burnaby, British Columbia on Aug. 5, 2014. Tekmira, based in Canada, was one of a few companies to have developed Ebola treatments advanced enough to be tested on people.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/15/tekmira-1-cd254e7e736b1e69b4bd8d242c97112a0eb053e1-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/15/tekmira-1-cd254e7e736b1e69b4bd8d242c97112a0eb053e1-s800.jpg" class="img lazyOnLoad"  title="Tekmira Pharmaceuticals Corporation's head office is pictured in Burnaby, British Columbia on Aug. 5, 2014. Tekmira, based in Canada, was one of a few companies to have developed Ebola treatments advanced enough to be tested on people." alt="Tekmira Pharmaceuticals Corporation's head office is pictured in Burnaby, British Columbia on Aug. 5, 2014. Tekmira, based in Canada, was one of a few companies to have developed Ebola treatments advanced enough to be tested on people." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Ben Nelms/Reuters/Landov
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/15/tekmira-1-cd254e7e736b1e69b4bd8d242c97112a0eb053e1-s1200.jpg" title="Tekmira Pharmaceuticals Corporation's head office is pictured in Burnaby, British Columbia on Aug. 5, 2014. Tekmira, based in Canada, was one of a few companies to have developed Ebola treatments advanced enough to be tested on people." alt="Tekmira Pharmaceuticals Corporation's head office is pictured in Burnaby, British Columbia on Aug. 5, 2014. Tekmira, based in Canada, was one of a few companies to have developed Ebola treatments advanced enough to be tested on people." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Ben Nelms/Reuters/Landov
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>The U.S. Food and Drug Administration allows use of an experimental drug, TKM-Ebola, in Ebola patients even though it hasn't gone through clinical trials.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356168006" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356167947" class="bucket listitem simplelistitem">
+      <h3>8/5/2014: EBOLA SCARE AT NEW YORK HOSPITAL</h3>
+   <div id="res356176218" class="bucketwrap image medium" previewTitle="Television trucks converged on Mount Sinai Hospital in New York on Monday after it announced that it was screening a patient for Ebola virus.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/mount-sinai_slide-55e35802774eead4f92bc6799030cdf53b08a279-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/mount-sinai_slide-55e35802774eead4f92bc6799030cdf53b08a279-s800.jpg" class="img lazyOnLoad"  title="Television trucks converged on Mount Sinai Hospital in New York on Monday after it announced that it was screening a patient for Ebola virus." alt="Television trucks converged on Mount Sinai Hospital in New York on Monday after it announced that it was screening a patient for Ebola virus." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Stan Honda/AFP/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/mount-sinai_slide-55e35802774eead4f92bc6799030cdf53b08a279-s1200.jpg" title="Television trucks converged on Mount Sinai Hospital in New York on Monday after it announced that it was screening a patient for Ebola virus." alt="Television trucks converged on Mount Sinai Hospital in New York on Monday after it announced that it was screening a patient for Ebola virus." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Stan Honda/AFP/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>New York's Mount Sinai Hospital, left, makes the <a href="http://www.npr.org/blogs/health/2014/08/05/338004105/why-u-s-hospitals-are-testing-people-for-ebola-virus" target="_blank">news</a> after screening a patient for Ebola. It turns out to be a false alarm.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356167947" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356167804" class="bucket listitem simplelistitem">
+      <h3>8/5/2014: SECOND EBOLA PATIENT ARRIVES IN THE U.S.</h3>
+   <div id="res356176084" class="bucketwrap image medium" previewTitle="Nancy Writebol, poses with children in Liberia. Nancy Writebol is one of two Americans working for a missionary group in Liberia who were infected with the Ebola virus, and who have been receiving treatment at Emory University Hospital, in Atlanta.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/nancy-writebol-97dc3d4056e5032b53686394aae50078444d23f2-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/nancy-writebol-97dc3d4056e5032b53686394aae50078444d23f2-s800.jpg" class="img lazyOnLoad"  title="Nancy Writebol, poses with children in Liberia. Nancy Writebol is one of two Americans working for a missionary group in Liberia who were infected with the Ebola virus, and who have been receiving treatment at Emory University Hospital, in Atlanta." alt="Nancy Writebol, poses with children in Liberia. Nancy Writebol is one of two Americans working for a missionary group in Liberia who were infected with the Ebola virus, and who have been receiving treatment at Emory University Hospital, in Atlanta." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        AP
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/nancy-writebol-97dc3d4056e5032b53686394aae50078444d23f2-s1200.jpg" title="Nancy Writebol, poses with children in Liberia. Nancy Writebol is one of two Americans working for a missionary group in Liberia who were infected with the Ebola virus, and who have been receiving treatment at Emory University Hospital, in Atlanta." alt="Nancy Writebol, poses with children in Liberia. Nancy Writebol is one of two Americans working for a missionary group in Liberia who were infected with the Ebola virus, and who have been receiving treatment at Emory University Hospital, in Atlanta." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            AP
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Nancy Writebol, who contracted Ebola while volunteering for the missionary group SIM in Liberia, is <a href="http://www.nytimes.com/2014/08/06/us/nancy-writebol-kent-brantly-ebola-atlanta.html" target="_blank">evacuated</a> to Emory University Hospital for treatment.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356167804" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356167487" class="bucket listitem simplelistitem">
+      <h3>8/2/2014: FIRST EBOLA PATIENT ARRIVES IN THE U.S.</h3>
+   <div id="res356183832" class="bucketwrap image medium" previewTitle="Dr. Kent Brantly, left, treats an Ebola patient at the Samaritan's Purse Ebola Case Management Center in Monrovia, Liberia. On Saturday, July 26, 2014, the North Carolina-based aid organization said Brantly tested positive for the disease and was being treated at a hospital in Monrovia.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/brantly-2bed760c79f7bfd4a830a93d2d74d9ed0377c7e1-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/brantly-2bed760c79f7bfd4a830a93d2d74d9ed0377c7e1-s800.jpg" class="img lazyOnLoad"  title="Dr. Kent Brantly, left, treats an Ebola patient at the Samaritan's Purse Ebola Case Management Center in Monrovia, Liberia. On Saturday, July 26, 2014, the North Carolina-based aid organization said Brantly tested positive for the disease and was being treated at a hospital in Monrovia." alt="Dr. Kent Brantly, left, treats an Ebola patient at the Samaritan's Purse Ebola Case Management Center in Monrovia, Liberia. On Saturday, July 26, 2014, the North Carolina-based aid organization said Brantly tested positive for the disease and was being treated at a hospital in Monrovia." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        AP
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/brantly-2bed760c79f7bfd4a830a93d2d74d9ed0377c7e1-s1200.jpg" title="Dr. Kent Brantly, left, treats an Ebola patient at the Samaritan's Purse Ebola Case Management Center in Monrovia, Liberia. On Saturday, July 26, 2014, the North Carolina-based aid organization said Brantly tested positive for the disease and was being treated at a hospital in Monrovia." alt="Dr. Kent Brantly, left, treats an Ebola patient at the Samaritan's Purse Ebola Case Management Center in Monrovia, Liberia. On Saturday, July 26, 2014, the North Carolina-based aid organization said Brantly tested positive for the disease and was being treated at a hospital in Monrovia." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            AP
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Dr. Kent Brantly, shown treating Ebola patients in Liberia at left, <a href="http://www.npr.org/blogs/thetwo-way/2014/08/02/337352925/first-ebola-patient-has-reportedly-arrived-in-u-s-from-liberia" target="_blank">arrives</a> at Emory University Hospital in Atlanta for treatment on Aug. 2. Brantly was diagnosed with Ebola on July 26. He was working for the missionary group Samaritan's Purse.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356167487" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356167485" class="bucket listitem simplelistitem">
+      <h3>3/31/2014: CDC SENDS A TEAM TO GUINEA</h3>
+   <div id="res356363911" class="bucketwrap image medium" previewTitle="Exterior of the Center for Disease Control (CDC) headquarters is seen on Oct. 13, 2014 in Atlanta, Georgia.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/15/cdc-building-e6d9ec5bf3c97b5a503acff8a6ce5779df27818d-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/15/cdc-building-e6d9ec5bf3c97b5a503acff8a6ce5779df27818d-s800.jpg" class="img lazyOnLoad"  title="Exterior of the Center for Disease Control (CDC) headquarters is seen on Oct. 13, 2014 in Atlanta, Georgia." alt="Exterior of the Center for Disease Control (CDC) headquarters is seen on Oct. 13, 2014 in Atlanta, Georgia." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Jessica McGowan/Getty Images
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/15/cdc-building-e6d9ec5bf3c97b5a503acff8a6ce5779df27818d-s1200.jpg" title="Exterior of the Center for Disease Control (CDC) headquarters is seen on Oct. 13, 2014 in Atlanta, Georgia." alt="Exterior of the Center for Disease Control (CDC) headquarters is seen on Oct. 13, 2014 in Atlanta, Georgia." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Jessica McGowan/Getty Images
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>The CDC <a href="http://www.cdc.gov/vhf/ebola/outbreaks/2014-west-africa/previous-updates.html" target="_blank">sends</a> five people to Guinea to assist the Ministry of Health in dealing with the Ebola outbreak there. Other Americans are in West Africa working for nonprofit groups like Doctors Without Borders and Samaritan's Purse.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356167485" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356167466" class="bucket listitem simplelistitem">
+      <h3>1994: RICHARD PRESTON WRITES 'THE HOT ZONE'</h3>
+   <div id="res356173991" class="bucketwrap image small" previewTitle="The cover of The Hot Zone.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/the-hot-zone_custom-678a90cb01ad1722d361f44e53eff331c715574c-s800-c15.jpeg" data-original="http://media.npr.org/assets/img/2014/10/14/the-hot-zone_custom-678a90cb01ad1722d361f44e53eff331c715574c-s800.jpeg" class="img lazyOnLoad"  title="The cover of The Hot Zone." alt="The cover of The Hot Zone." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        
+        Random House
+        
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/the-hot-zone_enl-678a90cb01ad1722d361f44e53eff331c715574c.jpeg" title="The cover of The Hot Zone." alt="The cover of The Hot Zone." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            
+            Random House
+            
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Richard Preston's riveting account of the 1989 Reston, Va., Ebola outbreak in laboratory monkeys introduces Ebola to popular American culture.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356167466" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+         <li><div id="res356167201" class="bucket listitem simplelistitem">
+      <h3>1989: EBOLA ARRIVES IN THE UNITED STATES</h3>
+   <div id="res356179581" class="bucketwrap image medium" previewTitle="The &quot;reston&quot; strain of the Ebola virus. It is one of the group of filoviruses, so-called for its thin and long shape.">
+            <div class="imagewrap" data-crop-type="">
+    <img src="http://media.npr.org/assets/img/2014/10/14/ebola-reston_custom-ca6d36aed84ddc993159665958dbca6bb10198aa-s800-c15.jpg" data-original="http://media.npr.org/assets/img/2014/10/14/ebola-reston_custom-ca6d36aed84ddc993159665958dbca6bb10198aa-s800.jpg" class="img lazyOnLoad"  title="The &quot;reston&quot; strain of the Ebola virus. It is one of the group of filoviruses, so-called for its thin and long shape." alt="The &quot;reston&quot; strain of the Ebola virus. It is one of the group of filoviruses, so-called for its thin and long shape." />
+    <a href="#" class="enlargebtn" title="Enlarge">i</a>
+</div>
+<div class="credit-caption">
+    <div class="caption">
+    </div>
+    <span class="credit">
+        <a href="http://www.sciencesource.com/" target="_blank">
+        CAMR/A. Barry Dowsett//ScienceSource
+        </a>
+    </span>
+</div>
+<div class="enlarge_measure">
+    <div class="img_wrap">
+        <img data-original="http://media.npr.org/assets/img/2014/10/14/ebola-reston_enl-ca6d36aed84ddc993159665958dbca6bb10198aa-s1200.jpg" title="The &quot;reston&quot; strain of the Ebola virus. It is one of the group of filoviruses, so-called for its thin and long shape." alt="The &quot;reston&quot; strain of the Ebola virus. It is one of the group of filoviruses, so-called for its thin and long shape." />
+    </div>
+</div>
+<div class="enlarge_html">
+    <div class="image_data">
+        <span class="credit">
+            <a href="http://www.sciencesource.com/" target="_blank">
+            CAMR/A. Barry Dowsett//ScienceSource
+            </a>
+        </span>
+    </div>
+</div>
+   </div>
+   <div class="bucketblock">
+            <p>Researchers from the U.S. Army Medical Research Institute of Infectious Diseases are shocked to discover that a strain of Ebola virus was killing laboratory monkeys at a quarantine facility in Reston, Va., just outside Washington, D.C. The outbreak ended when the monkeys were euthanized. No humans fell ill, though several tested positive for the virus.</p>
+   </div>
+   
+<!-- END CLASS="BUCKETBLOCK" -->
+</div>
+
+<!-- END ID="RES356167201" CLASS="BUCKET LISTITEM SIMPLELISTITEM" -->
+</li>
+      </ul>
+   </div>
+   
+<!-- END ID="RES356167055" CLASS="BUCKETWRAP LIST MEDIUM" -->
+</div>
+
+<!-- END ID="SUPPLEMENTARYCONTENT" CLASS="STORYLOCATION LINKLOCATION" -->
+<div class="tags">
+      <ul>
+            <li><a href="http://www.npr.org/tags/147820238/ebola">ebola</a></li>
+      <li><a href="http://www.npr.org/tags/137506347/public-health">public health</a></li>
+      <li><a href="http://www.npr.org/tags/128644964/united-states">United States</a></li>
+      <li><a href="http://www.npr.org/tags/126568156/infectious-disease">Infectious Disease</a></li>
+   </ul>
+</div>
+
+<!-- END CLASS="TAGS" -->
+<div class="social-wrap">
+      <div class="social">
+            <ul>
+                  <li class="share"><a class="sharemaintab" href="#" data-metrics='{"action":"Toggle Share Tools","category":"Share Tools"}' >Share</a><div class="sharepop">
+      <ul>
+            <li class="facebookLi"><a class="facebook fbStory356098903" href="javascript:void(0);" onclick="javascript:NPR.socialMedia.shareOnFacebook(356098903);" data-metrics='{"action":"Click Facebook","category":"Share Tools","label":"http:\/\/www.npr.org\/blogs\/health\/2014\/10\/15\/356098903\/ebola-in-the-united-states-what-happened-when"}' ><span class="name">Facebook</span></a></li>
+      <li class="twitterLi"><a class="retweetStory story356098903 twitter" href="javascript:void(0);" onclick="javascript:NPR.socialMedia.shareOnTwitter(356098903);" data-metrics='{"action":"Click Twitter","category":"Share Tools","label":"http:\/\/www.npr.org\/blogs\/health\/2014\/10\/15\/356098903\/ebola-in-the-united-states-what-happened-when"}' ><span class="name">Twitter</span></a></li>
+      <li class="googlePlusLi"><a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.npr.org%2Fblogs%2Fhealth%2F2014%2F10%2F15%2F356098903%2Febola-in-the-united-states-what-happened-when%3Futm_campaign%3Dstoryshare%26utm_source%3Dplus.google.com%26utm_medium%3Dsocial" onclick="window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" data-metrics='{"action":"Click Google Plus","category":"Share Tools","label":"http:\/\/www.npr.org\/blogs\/health\/2014\/10\/15\/356098903\/ebola-in-the-united-states-what-happened-when"}' ><span class="name">Google+</span></a></li>
+      <li class="email"><a href='javascript:void(0);' class='email eaf_link' data-story-id='356098903'  data-metrics='{"action":"Click Email a Friend","category":"Share Tools","label":"http:\/\/www.npr.org\/blogs\/health\/2014\/10\/15\/356098903\/ebola-in-the-united-states-what-happened-when"}' ><span class="name">Email</span></a></li>
+   </ul>
+</div>
+
+<!-- END CLASS="SHAREPOP" -->
+</li>
+         <li class="comment"><a class="comment-count" href="http://www.npr.org/blogs/health/2014/10/15/356098903/ebola-in-the-united-states-what-happened-when#commentBlock" data-storyid="356098903" data-shortname="nprhealth"  data-metrics='{"category":"Share Tools","action":"Click comments"}' ><span class="count"></span><span class="name">Comment</span></a></li>
+      </ul>
+   </div>
+   
+<!-- END CLASS="SOCIAL" -->
+</div>
+
+<!-- END CLASS="SOCIAL-WRAP" -->
+<div class="pnnavwrap">
+      <div class="pnnav">
+            <a id="prev_nav" class="prev" href="http://www.npr.org/blogs/health/2014/10/14/346174070/embryonic-stem-cells-restore-vision-in-preliminary-human-test"  data-metrics='{"action":"Click Previous Story","category":"Story to Story","label":"http:\/\/www.npr.org\/blogs\/health\/2014\/10\/14\/346174070\/embryonic-stem-cells-restore-vision-in-preliminary-human-test"}' >Embryonic Stem Cells Restore Vision In Preliminary Human Test <span class="date">October 14, 2014</span><span class="icon"></span></a>      <a id="next_nav" class="next" href="http://www.npr.org/blogs/health/2014/10/15/356398102/how-a-no-touch-thermometer-detects-a-fever"  data-metrics='{"action":"Click Next Story","category":"Story to Story","label":"http:\/\/www.npr.org\/blogs\/health\/2014\/10\/15\/356398102\/how-a-no-touch-thermometer-detects-a-fever"}' >How A No-Touch Thermometer Detects A Fever<span class="date">October 15, 2014</span><span class="icon"></span></a>
+   </div>
+   
+<!-- END CLASS="PNNAV" -->
+</div>
+
+<!-- END CLASS="PNNAVWRAP" -->
+<div id="resMore">
+       <!--googleoff: all-->   <div id="relatedstorieswrap">
+            <section id="relatedstories"><h1>More From Shots - Health News</h1>
+<div id="resMoreAPI" class="bucketwrap apiquery responsive_more">
+      <article id="story382612532" class="story clearfix"><a href="http://www.npr.org/blogs/health/2015/01/30/382612532/by-impersonating-her-mom-a-comedian-grows-closer-to-her" data-metrics='{"category" : "Story to Story", "action" : "Click Egg Carton", "label" : "http://www.npr.org/blogs/health/2015/01/30/382612532/by-impersonating-her-mom-a-comedian-grows-closer-to-her"}'><div class="storyimg"><img src="http://media.npr.org/assets/img/2015/01/30/tree_1_sq-ab170952aae6d25db3cef6506f5c7f09d0150426.jpeg?s=100" alt="Think of human relationships as entanglements. How do they bind you, how do they reveal who you really are?"></div>
+<div class="storyinfo">
+<h2 class="slug">Health</h2>
+<h3>By Impersonating Her Mom, A Comedian Grows Closer To Her</h3>
+</div></a></article><article id="story382659919" class="story clearfix"><a href="http://www.npr.org/blogs/health/2015/01/30/382659919/obama-wants-funding-for-research-on-more-precise-health-care" data-metrics='{"category" : "Story to Story", "action" : "Click Egg Carton", "label" : "http://www.npr.org/blogs/health/2015/01/30/382659919/obama-wants-funding-for-research-on-more-precise-health-care"}'><div class="storyimg"><img src="http://media.npr.org/assets/img/2015/01/30/precisemed_sq-26ae76dc6308b16ad988e5c45c846d919d3b0c87.jpg?s=100" alt="Harvard University student Elana Simon introduces President Obama before he spoke at the White House Friday about an initiative to encourage research into more precise medicine."></div>
+<div class="storyinfo">
+<h2 class="slug">Health</h2>
+<h3>Obama Wants Funding For Research On More Precise Health Care</h3>
+</div></a></article><article id="story382615662" class="story clearfix"><a href="http://www.npr.org/blogs/health/2015/01/30/382615662/experiments-with-coordinating-medical-care-deliver-mixed-results" data-metrics='{"category" : "Story to Story", "action" : "Click Egg Carton", "label" : "http://www.npr.org/blogs/health/2015/01/30/382615662/experiments-with-coordinating-medical-care-deliver-mixed-results"}'><div class="storyimg"><img src="http://media.npr.org/assets/img/2015/01/30/doctor-money_sq-8ff371143c3b1c0c22358009d81a2977de4c6954.jpg?s=100" alt="Tiny people lining up to put money into an IV drip."></div>
+<div class="storyinfo">
+<h2 class="slug">Health Care</h2>
+<h3>Experiments With Coordinating Medical Care Deliver Mixed Results</h3>
+</div></a></article><article id="story382172052" class="story clearfix last"><a href="http://www.npr.org/blogs/health/2015/01/30/382172052/diabetes-technology-inches-closer-to-an-artificial-pancreas" data-metrics='{"category" : "Story to Story", "action" : "Click Egg Carton", "label" : "http://www.npr.org/blogs/health/2015/01/30/382172052/diabetes-technology-inches-closer-to-an-artificial-pancreas"}'><div class="storyimg"><img src="http://media.npr.org/assets/img/2015/01/29/pancreas_sq-c63df98a23f326353533707ed8becbca1db20d2d.jpg?s=100" alt="The pancreas, shown with the much smaller gall bladder, produces insulin that regulates glucose levels in the body."></div>
+<div class="storyinfo">
+<h2 class="slug">Health</h2>
+<h3>Diabetes Technology Inches Closer To An Artificial Pancreas</h3>
+</div></a></article>
+</div>
+
+<!-- END ID="RESMOREAPI" CLASS="BUCKETWRAP APIQUERY RESPONSIVE_MORE" -->
+<a href="http://www.npr.org/blogs/health/" class="more"><b>More</b></a></section>
+   </div>
+   
+<!-- END ID="RELATEDSTORIESWRAP" -->
+    <!--googleon: all-->
+</div>
+
+<!-- END ID="RESMORE" -->
+<div id="commentBlock">
+      <h3 class="comment-head"><a href="#">Comments <span class="toggle"></span></a></h3>
+   <div id='disqus-npr'
+                                       data-shortname='nprhealth'
+                                       data-identifier='356098903'
+                                       data-url='http://www.npr.org/blogs/health/2014/10/15/356098903/ebola-in-the-united-states-what-happened-when'
+                                       data-title='Ebola In The United States: What Happened When'>
+            <a name="commentBlock">&nbsp</a>      <h5 class="commentBoxNotLoggedIn" id="login-overlay-link">You must be signed in to leave a comment. <a href="/templates/reg/login.php?returnUrl=%2Fblogs%2Fhealth%2F2014%2F10%2F15%2F356098903%2Febola-in-the-united-states-what-happened-when%23commentBlock">Sign In / Register</a></h5>
+      <p data-mod="pre">Please keep your community civil. All comments must follow the <a href="http://npr.org/discussionrules" target="new">NPR.org Community rules</a> and <a href="http://www.npr.org/about/termsofuse.html" target="new">terms of use</a>, and will be moderated prior to posting. NPR reserves the right to use the comments we receive, in whole or in part, and to use the commenter's name and location, in any medium. See also the <a href="http://www.npr.org/about/termsofuse.html" target="new">Terms of Use</a>, <a href="http://www.npr.org/about/privacypolicy.html" target="new">Privacy Policy</a> and <a href="http://npr.org/communityfaq" target="new">Community FAQ</a>.</p>      <div id='disqus_thread'>
+               </div>
+      
+<!-- END ID='DISQUS_THREAD' -->
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>      <div>
+                 <form style="display: hidden" action="#" method="POST" id="janrain-form">
+            <input type="hidden" id="janrain-token" name="token" value=""/>
+        </form>
+      </div>
+   </div>
+   
+<!-- END ID='DISQUS-NPR'
+                                       DATA-SHORTNAME='NPRHEALTH'
+                                       DATA-IDENTIFIER='356098903'
+                                       DATA-URL='HTTP://WWW.NPR.ORG/BLOGS/HEALTH/2014/10/15/356098903/EBOLA-IN-THE-UNITED-STATES-WHAT-HAPPENED-WHEN'
+                                       DATA-TITLE='EBOLA IN THE UNITED STATES: WHAT HAPPENED WHEN' -->
+</div>
+
+<!-- END ID="COMMENTBLOCK" -->
+ <!--googleoff: index--></article><header class="contentheader reprise" data-metrics-category="Shots - Health News"><div class="mobileheader">
+    <a class="sidebarButton" href="#sidebar"  data-metrics='{"action":"Toggle OffCanvas","category":"Global Navigation"}'>
+        <img src="http://media.npr.org/chrome/subnav_toggle.png" alt="NPR logo" />
+    </a>
+    
+    <a href="/" class="nprHome" data-metrics='{"action":"Click Logo","category":"Global Navigation"}'>
+        <img src="http://media.npr.org/chrome/news/nprlogo_138x46.gif" alt="NPR">        
+    </a>
+</div><div class="branding">
+      <a href="http://www.npr.org/blogs/health/"  data-metrics='{"action":"Click Header Logo","category":"Shots - Health News"}' ><img src="http://media.npr.org/branding/blogs/health/branding_icon-d1bf0f307a4bae536639f3790f308797103e8d05.png" class="icon" alt="Shots - Health News" /><img src="http://media.npr.org/branding/blogs/health/branding_main-c464b14085b5098ac853fd98e9e84c493d344e3e.png" class="main" alt="Shots - Health News" /><span class="tag">Health News From NPR</span>
+</a>
+</div>
+
+<!-- END CLASS="BRANDING" -->
+</header><footer id="contentfooter" data-metrics-category="Shots - Health News"><div class="branding">
+      <a href="http://www.npr.org/blogs/health/"  data-metrics='{"action":"Click Footer Logo"}' ><img src="http://media.npr.org/branding/blogs/health/branding_icon-d1bf0f307a4bae536639f3790f308797103e8d05.png" class="icon" alt="Shots - Health News" /><img src="http://media.npr.org/branding/blogs/health/branding_main-c464b14085b5098ac853fd98e9e84c493d344e3e.png" class="main" alt="Shots - Health News" /><span class="tag">Health News From NPR</span>
+</a>
+</div>
+
+<!-- END CLASS="BRANDING" -->
+<div class="modules">
+      <div class="module first">
+            <h3><a href="#"  data-metrics='{"action":"Toggle Footer Dropdown","label":"About","category":"Shots - Health News"}' >About</a></h3>
+      <div id="footer_module" class="agglocation linkLocation">
+                  <div id="res163940158" class="bucketwrap listtext">
+                        <div class="bucket">
+                              <p><em>Shots</em> is the online channel for health stories from the NPR Science Desk. We report on news that can make a difference for your health and show how policy shapes our health choices. Look to <em>Shots</em> for the latest on research and medical treatments, as well as the business side of health. Your hosts are <a href="http://www.npr.org/blogs/health/2011/06/08/133407592/scott-hensley-your-host-on-shots">Scott Hensley</a> and Nancy Shute. You can reach the <em>Shots</em> team via <a href="http://help.npr.org/npr/includes/customer/npr/custforms/contactus.aspx?sid=71">our contact form</a>.</p>
+            </div>
+            
+<!-- END CLASS="BUCKET" -->
+         </div>
+         
+<!-- END ID="RES163940158" CLASS="BUCKETWRAP LISTTEXT" -->
+      </div>
+      
+<!-- END ID="FOOTER_MODULE" CLASS="AGGLOCATION LINKLOCATION" -->
+   </div>
+   
+<!-- END CLASS="MODULE FIRST" -->
+   <div class="module second">
+    <h3><a href="#" data-metrics='{"action":"Toggle Footer Dropdown","label":"Subscribe"}'>Subscribe</a></h3>
+
+    <div>
+        <ul class="subscribe">
+            <li class="podcast"><a href="http://www.npr.org/rss/podcast/podcast_detail.php?siteId=89697157" data-metrics='{"action":"Click Podcast"}'>Podcast</a></li>
+            <li class="rss"><a href="feed://www.npr.org/rss/rss.php?id=103537970" data-metrics='{"action":"Click RSS"}'>RSS</a></li>
+            <li class="twitter"><a href="http://twitter.com/NPRHealth" data-metrics='{"action":"Click Twitter"}'>@NPRHealth</a></li>
+            <li class="twitter"><a href="http://twitter.com/scotthensley" data-metrics='{"action":"Click Twitter"}'>@scotthensley</a></li>
+        </ul>
+    </div>
+</div>
+<!-- end class="module second" -->
+
+<div class="module third">
+    <h3><a href="#" data-metrics='{"action":"Toggle Footer Dropdown","label":"On Health Podcast"}'>Your Health Podcast</a></h3>
+    <div class="promo-bucket" data-metrics-all data-metrics='{"action":"Click Footer Promo"}'>
+        <a href="http://www.npr.org/rss/podcast/podcast_detail.php?siteId=5421659"><img src="http://media.npr.org/images/podcasts/thumbnail/npr_yourhealth_image_75.jpg" alt="Health Podcast" class="pod" height="60" width="60"></a>
+        <div class="bucketblock">
+            <p>A weekly roundup of stories about personal health and fitness.</p>
+            <p class="more"><a href="http://www.npr.org/rss/podcast/podcast_detail.php?siteId=89697157">Subscribe</a></p>
+        </div>
+    </div>
+</div>
+<!-- end class="module third" -->
+</div>
+
+<!-- END CLASS="MODULES" -->
+</footer></section>
+   </div>
+   
+<!-- END ID="SECTIONWRAP" CLASS="CLEARFIX" -->
+   <div id="main_sidebar">
+            
+<!-- START UNDERWRITING -->
+      <div id="ad-desktop-wrap">
+    <div id="ad-desktop">
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                var loadImmediately = false;
+                var isMainstage = false;
+
+                    loadImmediately = true;
+
+
+                if (DFP.shouldRenderForDevice('desktop')) {
+                    DFP.visibilityCheck(function() {
+                        DFP.renderForLocation('desktop', loadImmediately, isMainstage);
+                    });
+                }
+
+            });
+        </script>
+    </div>
+    <p class="left">NPR thanks our sponsors</p><p class="right"><a href="/about-npr/186948703/corporate-sponsorship">Become an NPR sponsor</a></p>
+</div>
+      
+<!-- END UNDERWRITING -->
+   </div>
+   
+<!-- END ID="MAIN_SIDEBAR" -->
+</div>
+
+<!-- END ID="WRAPPER" -->
+<section id="navsidebar" role="complementary"><nav id="loginSidebar" data-metrics-category="Global Navigation">
+    <div class="nav-container">
+        <div class="nav-top-level">
+            <form action="/search/index.php" method="get" name="searchForm" id="searchForm_nav" class="search">
+                <label for="searchinput-aux-nav">Search</label>
+                <input type="search" name="searchinput" id="searchinput-aux-nav" class="textbox searchbox" />
+            </form>
+
+            <ul>
+                <li class="home"><a href="/" data-metrics='{"action":"Click NPR Home"}'>Home</a></li>
+                <li class="news"><a href="/sections/news/" data-metrics='{"action":"Click News"}'>News</a></li>
+                <li class="arts-and-life"><a href="/sections/arts/" data-metrics='{"action":"Click Arts &amp; Life"}'>Arts &amp; Life</a></li>
+                <li class="music"><a href="/music/" data-metrics='{"action":"Click Music"}'>Music</a></li>
+                <li class="topics"><a href="/" data-metrics='{"action":"Click Topics"}'>More Topics</a></li>
+                <li class="programs-sitewide"><a href="/" data-metrics='{"action":"Click Programs"}'>Programs</a></li>
+                <li class="donate"><a href="/stations/donate/index.php" data-metrics='{"action":"Click Business Link"}'>Donate</a></li>
+                <li class="stations" data-metrics='{"action":"Click Business Link"}'><a href="/templates/stations/stations/">Stations</a></li>
+                <li class="nprshop"><a href="http://shop.npr.org" data-metrics='{"action":"Click Business Link"}'>NPR Shop</a></li>
+                <li class="login-reg loggedOut">
+                    <a href="/templates/reg/login.php" data-metrics='{"action":"Click Profile Link"}'>Sign In / Register</a>
+                </li>
+            </ul>
+            <ul class="loggedIn">
+                <li class="userLogin">
+                    <span id="userLoginSidebar"></span>
+                </li>
+                <li class="login-reg">
+                    <a href="/templates/reg/logout.php" class="logout" data-metrics='{"action":"Click Profile Link"}'>Logout</a>
+                </li>
+            </ul>
+        </div> <!-- /.nav-top-level -->
+
+        <div class="subnavs subnavs-topics" data-metrics-all data-metrics-action="Click Topic">
+            <a class="back back-to-top-level"><b class="icn-back"></b>Back</a>
+
+            <h1><a href="/sections/news/">News</a></h1>
+            <ul>
+                <li><a href="/sections/us/">U.S.</a></li>
+                <li><a href="/sections/world/">World</a></li>
+                <li><a href="/sections/politics/">Politics</a></li>
+                <li><a href="/sections/business/">Business</a></li>
+                <li><a href="/sections/technology/">Technology</a></li>
+                <li><a href="/sections/science/">Science</a></li>
+                <li><a href="/sections/health/">Health</a></li>
+                <li><a href="/blogs/codeswitch/">Race &amp; Culture</a></li>
+                <li><a href="/blogs/ed/">Education</a></li>
+            </ul>
+
+            <h1><a href="/sections/arts/">Arts &amp; Life</a></h1>
+            <ul>
+                <li><a href="/sections/movies/">Movies</a></li>
+                <li><a href="/sections/pop-culture/">Pop Culture</a></li>
+                <li><a href="/sections/food/">Food</a></li>
+                <li><a href="/sections/art-design/">Art &amp; Design</a></li>
+                <li><a href="/sections/performing-arts/">Performing Arts</a></li>
+                <li><a href="/sections/photography/">Photography</a></li>
+            </ul>
+
+            <h1><a href="/books/">Books</a></h1>
+            <ul>
+                <li><a href="/sections/book-reviews/">Book Reviews</a></li>
+                <li><a href="/sections/author-interviews/">Author Interviews</a></li>
+            </ul>
+
+            <h1><a href="/music/">Music</a></h1>
+            <ul>
+                <li><a href="/series/98679384/first-listen">First Listen</a></li>
+                <li><a href="/series/122356178/songs-we-love">Songs We Love</a></li>
+                <li><a href="/series/100920965/music-articles/">Music Articles</a></li>
+                <li><a href="/series/tiny-desk-concerts/">Tiny Desk Concerts</a></li>
+                <li><a href="/sections/music-videos/">Videos</a></li>
+            </ul>
+
+            <h1><a href="/about-npr/198341814/npr-blog-directory">Our Blogs</a></h1>
+
+            <h1><a href="/templates/corrections/corrections.php">Corrections</a></h1>
+
+            <h1><a href="/about/aboutnpr/">All About NPR</a></h1>
+        </div> <!-- /.subnavs-topics -->
+
+        <div class="subnavs subnavs-programs-sitewide" data-metrics-all data-metrics-action="Click Program">
+            <div class="subnav subnav-programs-sitewide">
+                <a class="back back-to-top-level"><b class="icn-back"></b>Back</a>
+                <ul>
+                    <li><a class="news-talk">news &amp; conversations</a></li>
+                    <li><a class="entertainment-culture">storytelling &amp; humor</a></li>
+                    <li><a class="music">music</a></li>
+                    <li><a class="special-series">also heard on npr stations</a></li>
+                </ul>
+            </div>
+
+            <div class="subnav subnav-news-talk">
+                <a class="back back-to-programs"><b class="icn-back"></b>Back</a>
+                <ul>
+                    <li><a href="/programs/morning-edition/">Morning Edition</a></li>
+                    <li><a href="/programs/all-things-considered/">All Things Considered</a></li>
+                    <li><a href="/programs/fresh-air/">Fresh Air</a></li>
+                    <li><a href="http://hereandnow.wbur.org/">Here &amp; Now</a></li>
+                    <li><a href="http://thedianerehmshow.org">The Diane Rehm Show</a></li>
+                    <li><a href="/programs/latino-usa/">Latino USA</a></li>
+                    <li><a href="http://www.onthemedia.org">On The Media</a></li>
+                    <li><a href="http://www.onpointradio.org/">On Point</a></li>
+                    <li><a href="http://www.sciencefriday.com/">Science Friday</a></li>
+                    <li><a href="/programs/weekend-edition-saturday/">Weekend Edition Saturday</a></li>
+                    <li><a href="/programs/weekend-edition-sunday/">Weekend Edition Sunday</a></li>
+                </ul>
+            </div>
+
+            <div class="subnav subnav-entertainment-culture">
+                <a class="back back-to-programs"><b class="icn-back"></b>Back</a>
+                <ul>
+                    <li><a href="/programs/ask-me-another/">Ask Me Another</a></li>
+                    <li><a href="http://www.cartalk.com">The Best Of Car Talk</a></li>
+                    <li><a href="http://www.maximumfun.org/shows/bullseye">Bullseye</a></li>
+                    <li><a href="/programs/invisibilia/">Invisibilia</a></li>
+                    <li><a href="http://www.radiolab.org">Radiolab</a></li>
+            		<li><a href="/programs/snap-judgment/">Snap Judgment</a></li>
+                    <li><a href="http://storycorps.org" class="storycorps">StoryCorps</a></li>
+            		<li><a href="/programs/ted-radio-hour/">TED Radio Hour</a></li>
+                    <li><a href="/programs/wait-wait-dont-tell-me/">Wait Wait...Don't Tell Me!</a></li>
+                </ul>
+            </div>
+
+            <div class="subnav subnav-music">
+                <a class="back back-to-programs"><b class="icn-back"></b>Back</a>
+                <ul>
+                    <li><a href="/programs/all-songs-considered/">All Songs Considered</a></li>
+                    <li><a href="/series/alt-latino/">Alt.Latino</a></li>
+                    <li><a href="/series/98679384/first-listen">First Listen</a></li>
+                    <li><a href="http://www.fromthetop.org" target="_blank">From The Top</a></li>
+                    <li><a href="/series/347139849/jazz-night-in-america">Jazz Night In America</a></li>
+                    <li><a href="/blogs/metropolis/">Metropolis</a></li>
+                    <li><a href="/blogs/microphonecheck/">Microphone Check</a></li>
+                    <li><a href="/series/mountain-stage/">Mountain Stage</a></li>
+                    <li><a href="/programs/piano-jazz/">Piano Jazz</a></li>
+                    <li><a href="/series/150560513/song-travels/">Song Travels</a></li>
+                    <li><a href="/series/103063413/the-thistle-and-shamrock/">The Thistle &amp; Shamrock</a></li>
+                    <li><a href="/programs/world-cafe/">World Cafe</a></li>
+                </ul>
+            </div>
+
+            <div class="subnav subnav-special-series">
+                <a class="back back-to-programs"><b class="icn-back"></b>Back</a>
+                <ul>
+                    <li><a href="http://prairiehome.publicradio.org">A Prairie Home Companion <b>(APM)</b></a></li>
+					<li><a href="http://marketplace.publicradio.org">Marketplace <b>(APM)</b></a></li>
+                    <li><a href="http://www.sciencefriday.com/">Science Friday</a></li>
+                    <li><a href="http://www.thisamericanlife.org">This American Life <b>(PRX)</b></a></li>
+            		<li><a href="/programs/">Public Radio Programs A to Z</a></li>
+                </ul>
+            </div>
+        </div> <!-- /.subnavs-programs -->
+    </div> <!-- /.nav-container -->
+</nav>
+</section>
+<!-- START UNDERWRITING -->
+<div id="ad-88-wrap">
+    <div id="ad-88">
+        <div class="ad-88-text">Support comes from:</div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                var loadImmediately = false;
+                var isMainstage = false;
+
+                    loadImmediately = true;
+
+
+                if (DFP.shouldRenderForDevice('88')) {
+                    DFP.visibilityCheck(function() {
+                        DFP.renderForLocation('88', loadImmediately, isMainstage);
+                    });
+                }
+
+            });
+        </script>
+    </div>
+</div>
+
+<!-- END UNDERWRITING -->
+<div class="adwrapper housead">
+      <div class="adwrap">
+	<h3><a href="#">Support NPR</a></h3>
+	<div>
+		<img src="http://media.npr.org/images/shop_300x150-04.jpg" alt="Support NPR">
+		<h4><a href="http://shop.npr.org/?utm_source=Banners&utm_medium=ResponsiveAd&utm_content=General&utm_campaign=300x150">NPR Shop</a></h4>
+		<p>Support The Programs You Love</p>
+	</div>
+</div>
+</div>
+
+<!-- END CLASS="ADWRAPPER HOUSEAD" -->
+<div id="adhesion">
+      <div id="ad-mobile-wrap">
+    <div id="ad-mobile">
+            <script type="text/javascript">
+              if (DFP.shouldRenderForDevice('mobile')) {
+                var ord = window.ord || Math.floor(Math.random() * 1e16);
+                
+                // use the smaller size for phone, the larger size for tablet
+                var sizes = '640x100';
+                if (Modernizr.mq('only screen and (min-width: 768px)')) {
+                    sizes = '2048x180';
+                }
+                
+                var targets = ';';
+                targets += 'agg=103537970;';
+                targets += 'theme=103537970;';
+                targets += 'storyId=356098903;';
+                targets += 'blog=103537970;';
+                
+                document.write('<scr' + 'ipt type="text/javascript" src="http://ad.doubleclick.net/N6735/adj/n6735.nprmobile/News_Health' + targets + 'sz=' + sizes + ';ord=' + ord + '?"><\/script>');
+              }
+            </script>
+    </div>
+</div> 
+</div>
+
+<!-- END ID="ADHESION" -->
+<footer id="nprfooter"><div class="footer-wrapper">
+      <div class="primary" data-metrics-category="Global Footer" data-metrics-visible="scroll-down end" data-metrics-label="Footer">
+    <ul>
+        <li><a href="/" data-action="Click Logo" data-metrics='{"action":"Click Footer Logo"}'></a></li>
+        <li class="news" data-metrics-action="Click News" data-metrics-all>
+            <a href="/sections/news/">News</a>
+            <ul>
+                <li><a href="/sections/us/">U.S.</a></li>
+                <li><a href="/sections/world/">World</a></li>
+                <li><a href="/sections/politics/">Politics</a></li>
+                <li><a href="/sections/business/">Business</a></li>
+                <li><a href="/sections/technology/">Technology</a></li>
+                <li><a href="/sections/science/">Science</a></li>
+                <li><a href="/sections/health/">Health</a></li>
+                <li><a href="/blogs/codeswitch/">Race &amp; Culture</a></li>
+                <li><a href="/blogs/ed/">Education</a></li>
+            </ul>
+        </li>
+        <li class="artslife" data-metrics-action="Click Arts &amp; Life" data-metrics-all>
+            <a href="/sections/arts/">Arts &amp; Life</a>
+            <ul>
+                <li><a href="/books/">Books</a></li>
+                <li><a href="/sections/movies/">Movies</a></li>
+                <li><a href="/sections/pop-culture/">Pop Culture</a></li>
+                <li><a href="/sections/food/">Food</a></li>
+                <li><a href="/sections/art-design/">Art &amp; Design</a></li>
+                <li><a href="/sections/performing-arts/">Performing Arts</a></li>
+                <li><a href="/blogs/pictureshow">Photography</a></li>
+            </ul>
+        </li>
+        <li class="music" data-metrics-action="Click Music" data-metrics-all>
+            <a href="/music/">Music</a>
+            <ul>
+                <li><a href="/series/98679384/first-listen">First Listen</a></li>
+                <li><a href="/series/122356178/songs-we-love">Songs We Love</a></li>
+                <li><a href="/series/100920965/music-articles/">Music Articles</a></li>
+                <li><a href="/series/tiny-desk-concerts/">Tiny Desk Concerts</a></li>
+                <li><a href="/sections/music-videos/">Videos</a></li>
+            </ul>
+        </li>
+        <li class="programs" data-metrics-action="Click Programs" data-metrics-all>
+            <a href="/programs/">Programs</a>
+            <ul>
+                <li><a href="/programs/all-things-considered/">All Things Considered</a></li>
+                <li><a href="/programs/ask-me-another/">Ask Me Another</a></li>
+                <li><a href="http://www.cartalk.com" target="_blank">The Best Of Car Talk</a></li>
+                <li><a href="http://www.maximumfun.org/shows/bullseye" target="_blank">Bullseye</a></li>
+                <li><a href="/programs/invisibilia/">Invisibilia</a></li>
+                <li><a href="http://thedianerehmshow.org" target="_blank">The Diane Rehm Show</a></li>
+                <li><a href="/programs/fresh-air/">Fresh Air</a></li>
+                <li><a href="http://hereandnow.wbur.org/" target="_blank">Here &amp; Now</a></li>
+                <li><a href="/programs/latino-usa/">Latino USA</a></li>
+                <li><a href="/programs/morning-edition/">Morning Edition</a></li>
+                <li><a href="http://www.onthemedia.org" target="_blank">On The Media</a></li>
+                <li><a href="http://www.onpointradio.org/" target="_blank">On Point</a></li>
+                <li><a href="http://www.radiolab.org" target="_blank">Radiolab</a></li>
+                <li><a href="/programs/snap-judgment/" target="_blank">Snap Judgment</a></li>
+                <li><a href="http://storycorps.org" class="storycorps" target="_blank">StoryCorps</a></li>
+                <li><a href="/programs/ted-radio-hour/">TED Radio Hour</a></li>
+                <li><a href="/programs/wait-wait-dont-tell-me/">Wait Wait...Don't Tell Me!</a></li>
+                <li><a href="/programs/weekend-edition-saturday/">Weekend Edition <span>Saturday</span></a></li>
+                <li><a href="/programs/weekend-edition-sunday/">Weekend Edition Sunday</a></li>
+            </ul>
+        </li>
+        <li class="listen" data-metrics-action="Click Listen" data-metrics-all>
+            <a href="/listen/">Listen</a>
+            <ul>
+                <li><a href="javascript:NPR.Player.openPlayer(0,0,null,NPR.Player.Action.PLAY_NOW, NPR.Player.Type.NEWSCAST, NPR.Player.Mode.FROM_FILE);" class="hourlyNews">Hourly News</a></li>
+                <li><a href="javascript:NPR.Player.openPlayer(0,0,null,NPR.Player.Action.LIVE_STREAM, NPR.Player.Type.PROGRAM_STREAM, NPR.Player.Mode.FROM_FILE);" class="programStream">NPR Program Stream</a></li>
+                <li><a href="/stations/">Find Station Streams</a></li>
+                <li><a href="/podcasts">Podcasts</a></li>
+                <li><a href="/about-npr/187046089/ways-to-listen-to-npr">More Ways To Listen</a></li>
+            </ul>
+        </li>
+        <li class="about" data-metrics-action="Click About" data-metrics-all>
+            <a href="/about/">About</a>
+            <ul>
+                <li><a href="http://help.npr.org/npr/includes/customer/npr/custforms/contactus.aspx">Contact Us</a></li>
+                <li><a href="http://shop.npr.org">NPR Shop</a></li>
+                <li><a href="http://tours.npr.org/npr/Home/">Visit NPR</a></li>
+                <li><a href="http://www.npr.org/about-npr/181953728/work-at-npr">Careers at NPR</a></li>
+                <li><a href="/about/press/">Press Room</a></li>
+                <li><a href="/blogs/thisisnpr/">'This Is NPR' Blog</a></li>
+                <li><a href="/about/support/">Support and Sponsor</a></li>
+                <li><a href="/templates/corrections/corrections.php">Corrections</a></li>
+                <li><a href="/blogs/ombudsman/">NPR Ombudsman</a></li>
+                <li><a href="/about-npr/179881519/rights-and-permissions-information">Permissions</a></li>
+                <li><a href="/email/">Email Newsletters</a></li>
+                <li><a href="/rss/">RSS Feeds</a></li>
+                <li><a href="/api/">The NPR API</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="secondary">
+    <p class="copyright tablet">&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> NPR</p>
+    <ul>
+        <li><a href="http://help.npr.org">Help</a></li>
+        <li id="footerContact"><a href="http://help.npr.org/npr/includes/customer/npr/custforms/contactus.aspx">Contact</a></li>
+        <li><a href="/about-npr/179876898/terms-of-use">Terms of Use</a></li>
+        <li><a href="/about-npr/179878450/privacy-policy">Privacy</a></li>
+        <li class="sponsorship-choices"><a href="/about-npr/179878450/privacy-policy#opting-out-of-cookies-and-web-beacons">Sponsorship Choices</a></li>
+        <li><a href="http://thin.npr.org/">Text-Only</a></li>
+    </ul>
+    <p class="copyright mobile desktop">&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> NPR</p>
+</div>
+</div>
+</footer><script type="text/javascript" src="http://s.npr.org/templates/javascript/generated/fingerprint/baseStory-596bf388333166528e0507094a0fd0530d55fee6.js">
+   </script>
+</body></html><!--  Burned on demand at 2015-01-30 18:55:45--><!-- LIVE -->

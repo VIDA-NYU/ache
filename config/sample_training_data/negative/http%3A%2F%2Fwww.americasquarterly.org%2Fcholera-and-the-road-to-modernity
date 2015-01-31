@@ -1,0 +1,682 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script>
+<link rel="shortcut icon" href="http://www.americasquarterly.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortlink" href="/node/3778" />
+<link rel="canonical" href="/cholera-and-the-road-to-modernity" />
+<meta property="og:image" content="http://www.americasquarterly.org/sites/default/files/WEIGEL-AND-FARMER-Cropped-5.gif" />
+  <title>Cholera and the Road to Modernity: Lessons from One Latin American Epidemic for Another | Americas Quarterly</title>
+  <style type="text/css" media="all">@import url("http://www.americasquarterly.org/modules/system/system.base.css?nhrtt2");
+@import url("http://www.americasquarterly.org/modules/system/system.menus.css?nhrtt2");
+@import url("http://www.americasquarterly.org/modules/system/system.messages.css?nhrtt2");
+@import url("http://www.americasquarterly.org/modules/system/system.theme.css?nhrtt2");</style>
+<style type="text/css" media="all">@import url("http://www.americasquarterly.org/modules/aggregator/aggregator.css?nhrtt2");
+@import url("http://www.americasquarterly.org/modules/book/book.css?nhrtt2");
+@import url("http://www.americasquarterly.org/sites/all/modules/date/date_api/date.css?nhrtt2");
+@import url("http://www.americasquarterly.org/modules/field/theme/field.css?nhrtt2");
+@import url("http://www.americasquarterly.org/sites/all/modules/google_cse/google_cse.css?nhrtt2");
+@import url("http://www.americasquarterly.org/modules/node/node.css?nhrtt2");
+@import url("http://www.americasquarterly.org/modules/poll/poll.css?nhrtt2");
+@import url("http://www.americasquarterly.org/modules/search/search.css?nhrtt2");
+@import url("http://www.americasquarterly.org/modules/user/user.css?nhrtt2");
+@import url("http://www.americasquarterly.org/sites/all/modules/views/css/views.css?nhrtt2");</style>
+<style type="text/css" media="all">@import url("http://www.americasquarterly.org/sites/all/modules/expanding_images/shadowbox_module.css?nhrtt2");
+@import url("http://www.americasquarterly.org/sites/all/modules/ctools/css/ctools.css?nhrtt2");
+@import url("http://www.americasquarterly.org/sites/all/modules/mostpopular/css/mostpopular-basic.css?nhrtt2");
+@import url("http://www.americasquarterly.org/sites/all/modules/mostpopular/css/mostpopular-full.css?nhrtt2");
+@import url("http://www.americasquarterly.org/sites/all/modules/views/css/views-admin.seven.css?nhrtt2");</style>
+<style type="text/css" media="screen">@import url("http://www.americasquarterly.org/sites/all/themes/aq/aq.css?nhrtt2");
+@import url("http://www.americasquarterly.org/sites/all/themes/aq/defaults.css?nhrtt2");</style>
+  <script type="text/javascript" src="http://www.americasquarterly.org/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://www.americasquarterly.org/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://www.americasquarterly.org/misc/drupal.js?nhrtt2"></script>
+<script type="text/javascript" src="http://www.americasquarterly.org/sites/all/modules/google_cse/google_cse.js?nhrtt2"></script>
+<script type="text/javascript" src="http://www.americasquarterly.org/sites/all/modules/google_analytics/googleanalytics.js?nhrtt2"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-2256422-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.americasquarterly.org/misc/jquery.cookie.js?nhrtt2"></script>
+<script type="text/javascript" src="http://www.americasquarterly.org/sites/all/modules/mostpopular/js/fade.js?nhrtt2"></script>
+<script type="text/javascript" src="http://www.americasquarterly.org/sites/all/modules/mostpopular/js/mostpopular.js?nhrtt2"></script>
+<script type="text/javascript" src="http://www.americasquarterly.org/sites/all/themes/aq/js/jquery.js?nhrtt2"></script>
+<script type="text/javascript" src="http://www.americasquarterly.org/sites/all/themes/aq/js/jquery.featureList-1.0.0.js?nhrtt2"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"aq","theme_token":"eHKkAPvZRLWfjZvyK7rXJ-1ya4wOBohyB4aUqGA8nvg","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/google_cse\/google_cse.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"misc\/jquery.cookie.js":1,"sites\/all\/modules\/mostpopular\/js\/fade.js":1,"sites\/all\/modules\/mostpopular\/js\/mostpopular.js":1,"sites\/all\/themes\/aq\/js\/jquery.js":1,"sites\/all\/themes\/aq\/js\/jquery.featureList-1.0.0.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/book\/book.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/google_cse\/google_cse.css":1,"modules\/node\/node.css":1,"modules\/poll\/poll.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/expanding_images\/shadowbox_module.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/mostpopular\/css\/mostpopular-basic.css":1,"sites\/all\/modules\/mostpopular\/css\/mostpopular-full.css":1,"sites\/all\/modules\/views\/css\/views-admin.seven.css":1,"sites\/all\/themes\/aq\/aq.css":1,"sites\/all\/themes\/aq\/defaults.css":1}},"googleCSE":{"cx":"000745647938122424099:o27jcyyrffw","language":"","resultsWidth":940,"domain":"www.google.com"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"mostpopular":{"url":"\/mostpopular\/ajax"}});
+//--><!]]>
+</script>
+ 
+ 
+ <script>
+
+
+$(function() {
+
+   $("a[href*='http://']:not([href*='"+location.hostname.replace
+           ("www.","")+"'])").each(function() {
+       $(this).click(function(event) {
+             event.preventDefault();
+             event.stopPropagation();
+             window.open(this.href, '_blank');
+        }).addClass('externalLink');
+   });
+});
+
+
+
+</script>
+
+
+
+
+
+</head>
+<body>
+    
+
+
+
+
+<div id="logo-left"><img src="/themes/aqsiteWider/images/logo_612x130.gif" width="612" height="130" border="0" usemap="#aq" /><map name="aq" id="aq">  <area shape="rect" coords="-3,109,610,128" href="http://www.as-coa.org/" target = "new"/>
+  <area shape="rect" coords="47,2,525,102" href="/current" />
+</map><div id="blog-left"></div></div>
+
+<div id = "header-middle">
+<table cellpadding="0" cellspacing="0" border = "0" >
+<tr><td height = "30" ><a href="https://www.pubservice.com/subnew1page.aspx?PC=AQ&FC=UNITED+STATES"><img src="/themes/aqsiteWider/images/btn_subscribe-top.gif" alt="btn_subscribe-top" width="120" height="30" border = "0" style = "margin:0px;padding:0px;border:0px;display:block;" /></a></td></tr>
+
+<tr><td height = "26"><a href="http://www.subnow.com/AQ/GiftOffer"><img src="/themes/aqsiteWider/images/btn_give-a-gift.gif" alt="btn_give-a-gift" width="120" height="26" style = "margin:0px;padding:0px;" border = "0" /></a></td></tr>
+
+<tr><td><a href="http://www.americasquarterly-digital.org/americasquarterly/current/templates/login"><img src="/themes/aqsiteWider/images/btn_login.gif" alt="btn_login" width="120" height="33" border = "0" /></a></td></tr>
+
+<tr><td><a href="/online_updates"><img src="/themes/aqsiteWider/images/btn_signup.gif" alt="btn_signup" width="120" height="41" border = "0" /></a></td></tr>
+
+</table>
+
+
+</div>
+
+<div id = "header-left">
+<form method="post" action="/retailers">
+<input type="hidden" name="dist" value="12" /><input type="hidden" name="units" value="mi" />
+<table border = "0" width = "100%" cellpadding="0" cellspacing="0" style = "">
+<tr><td colspan = "3"><a href = "/rss"><img src="/themes/aqsiteWider/images/btn_rss.gif" alt="btn_rss" width="90" border = "0" height="30"/></a></td>
+</tr>
+<tr><td width=110> </td><td align = "right" valign = "middle"><input type="text" id="zip" name="zip" style = "width:80px;margin-top:0px;" value = "ENTER ZIP CODE" onFocus="doClear(this)"></td><td width = "42"><input type="image" src="/themes/aqsiteWider/images/btn_go.gif" style = "margin-left:5px;margin-right:12px;" alt="Submit button"></td></tr>
+</table>
+</form>
+
+  <div class="region region-search">
+    <div id="block-search-form" class="block block-search">
+
+    
+  <div class="content">
+    <form class="google-cse" action="/cholera-and-the-road-to-modernity" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-QtsVm78s0WPL69hDWqkkXWjrVltoHmFXlBdtIkLEPU4" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>  </div>
+</div>
+  </div>
+
+
+
+
+</div><div style = "clear:both;"></div>
+
+
+
+
+
+<div id = "top_navigation"> 
+
+	<ul >
+		<li class="subscribe" title="Subscribe"><a href="https://www.pubservice.com/subnew1page.aspx?PC=AQ&FC=UNITED+STATES" id = "subscribe">Subscribe</a></li>
+		<li class="about" title="About"><= "clear:both;"></div>
+
+
+
+
+
+<div id = "top_navigation"> 
+
+	<ul >
+		<li class="subscribe" title="Subscribe"><a href="https://www.pubsera href="/about" id = "about">About</a></li>
+		<li class="blog" title="Blog"><a href="/aqblog" id = "blog">Blog</a></li>
+		<li class="news" title="News"><a href="/news" id = "news">News</a></li>
+		<li class="contact" title="Contact"><a href="/contact" id = "contact">Contact</a></li>
+		<li class="advertise" title="Advertise"><a href="/advertise" id = "advertise">Advertise</a></li>
+		<li class="archive" title="Archive"><a href="/archive" id = "archive">Archive</a></li>
+		<li class="partners" title="Partners"><a href="/node/644" id = "partners">Partners</a></li>
+		
+		
+	</ul>
+
+</div>
+
+  <div id="branding" class="clearfix">
+                      </div>
+
+
+<div id="colmask" >
+		<div id="colleft" >
+			<div id="content" >
+    				  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="article">
+<h1><img src='/sites/all/themes/aq/images/archive.gif'></h1>From issue: <strong>Gender Equality: Political Backrooms, Corporate Boardrooms and Classrooms</strong> (Summer 2012)
+<br><BR>
+
+
+
+<h4 class="content_type">
+<img alt="AQ Feature" src="/themes/aqsite/images/content_types/aqfeature.gif">
+</h4>
+<h1>Cholera and the Road to Modernity: Lessons from One Latin American Epidemic for Another</h1>		
+		<div style = "width:185px;float:right;margin-top:0px;margin-bottom:7px;">
+			<? //  include 'footer-delicio.php'; ?>
+			
+			<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f5e347b6f100dae"></script>
+<!-- AddThis Button END -->
+
+
+
+		</div>
+ 
+    <h4 class="byline">BY 
+	<a href="/content/jonathan-weigel">Jonathan Weigel</a> and <a href="/content/paul-farmer">Paul Farmer</a>	
+	</h4>
+
+	<div class="content-header">
+		<h2 class="nomargin">
+  A bold, comprehensive campaign to control cholera in Haiti could save thousands of lives. So why the holdup?</br>		</h2>
+	</div>
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>Haiti is currently battling the world’s largest cholera epidemic in half a century. An integrated, comprehensive response—including case-finding and rapid treatment, water and sanitation efforts, and vaccination—could bring cholera to heel on Hispaniola and help prevent its spread elsewhere in the region.<sup>1</sup> But the local and international response has, to date, fallen short. Tens of thousands of cases and hundreds of deaths were reported in May and June of this year.<sup>2</sup></p>
+<p>If the disease had appeared in the United States or elsewhere in the developed world, all available control tools would have been deployed. But the safe, effective and inexpensive cholera vaccine has only recently become available in Haiti. In April, the Haitian Ministry of Health and two healthcare nonprofits began delivering vaccines to about 91,000 people in rural and urban Haiti.</p>
+<p>If this pilot project is deemed successful at integrating vaccination into the ongoing response, should a similar comprehensive approach be scaled up nationwide?</p>
+<p>An answer might be found by exploring the history of the Latin American cholera epidemic of the 1990s. Some public health experts have argued that the 1990s epidemic was finally curbed as a result of the development of water and sanitation systems in the afflicted countries. But the profound biosocial complexity associated with the ebb and flow of cholera—which is shaped by manifold epidemiological, environmental and social factors in all settings—challenges such claims of causality.<sup>3</sup></p>
+<p>Amid such uncertainty and different interpretations of what accounted for the end of the last epidemic, vaccination should be integrated into the ongoing response to cholera in Haiti as a bridging intervention to save lives and buy time while water and sanitation systems are reinforced in the years ahead. A bold, comprehensive response, led by the Haitian Ministry of Health and bolstered by local and international groups, could slow—and perhaps stop—cholera in Haiti and help prevent its spread elsewhere.</p>
+<h3>Cholera in Haiti</h3>
+<p>On October 17, 2010, the community hospital in Mirebalais, a market town in central Haiti, saw an influx of patients with acute watery diarrhea. A few days later, a hospital in St-Marc, a coastal city downstream on the Artibonite River from Mirebalais, was overrun with patients with the same symptoms.<sup>4</sup></p>
+<p>Within a month, cases had been reported in every department of Haiti, as well as in neighboring Dominican Republic and in Florida. Hospitals and clinics in rural and urban Haiti were unprepared for this explosion of need. Many lacked necessary supplies, from soap to intravenous fluids to hospital beds. Nearly 1 in 10 patients with cholera died in the first weeks of the epidemic—among the highest fatality rates recorded in recent history.<sup>5</sup></p>
+<p>A year and a half later, the cholera epidemic in Haiti continues to claim lives and fill hospitals every week. Nineteen months after <i>Vibrio cholerae</i> was first detected, there have been 7,278 deaths and 557,397 cases reported by the Haitian Ministry of Health.<sup>6</sup> The true figures are surely higher, as cholera’s burden has tended to be greatest in rural areas that have little in the way of reporting capacity—not to mention treatment facilities. Prior to this outbreak, which may have been introduced by UN peacekeeping forces from South Asia<sup>7</sup>, cholera had not been documented in Haiti for over a century. Yet this country of 10 million currently faces the world’s largest epidemic since the seventh cholera pandemic began 50 years ago in Indonesia.<sup>8</sup></p>
+<p>Since the Haitian epidemic exploded, hundreds of local and international relief teams—headed by the Ministry of Health—have worked to deliver rapid treatment to the sick, find new cases, provide safe drinking water and modern sanitation, and disseminate information about cholera prevention and treatment. Important strides have been made: case-fatality rates dropped to a national average of 1.3 percent.<sup>9</sup> Fewer cases have been reported for most of 2012.</p>
+<p>But it would be naïve to turn the page on the Haitian epidemic. Cholera transmission is expected to decrease during the dry season (November–April) and increase during the rainy season (May–October). Last summer, incidence more than doubled in the space of a few weeks.<sup>10</sup></p>
+<p>A resurgence of the epidemic is likely this summer, too, as increased cases and fatality in May and June attest. The Pan American Health Organization has predicted up to 250,000 cases in 2012.<sup>11</sup> And it is likely that cholera will remain in Haiti for years: <i>V. cholerae</i> can persist indefinitely in brackish waters,<sup>12</sup> and Hispaniola offers many such natural reservoirs. Indeed, the combination of elevated alkalinity in Haitian waters after the 2010 earthquake, one of the hottest summers on record, and widespread flooding due to Hurricane Tomás created an ideal environment for a galloping epidemic of cholera.<sup>13</sup></p>
+<p>Moreover, the strain of <i>V. cholerae</i> circulating in Haiti has been evolving. The Inaba strain, a serotype of El Tor-biotype cholera, was first documented in Haiti in March 2012. If it becomes established in the country, individuals who have been infected with the Ogawa strain, the principal agent in the Haitian epidemic, may be vulnerable to reinfection.<sup>14</sup> Recent research has also documented the appearance of non-O1/O139 cholera, serogroups of <i>V. cholerae</i> that cause somewhat less severe disease, since shortly after the epidemic began—further testament to the many faces of cholera in Haiti.<sup>15</sup></p>
+<p>Most important, the great majority of Haitians still live without ready access to safe drinking water or sanitation. Even before a devastating earthquake hit Haiti in January 2010, only 63 percent of the population had access to an improved drinking water source, such as treated water from a pipe or well, and only 17 percent had access to improved sanitation facilities, such as piped sewer systems or pit latrines.<sup>16</sup> Since the earthquake, an estimated $592 million has been allocated to essential water and sanitation initiatives, such as providing clean water and chlorine tablets in cholera-affected areas.<sup>17</sup> But durable water and sanitation systems remain rare in urban and rural Haiti alike.</p>
+<p>What is to be done? The components of an integrated and comprehensive response to cholera in Haiti have not changed since the first weeks of the epidemic: aggressive case-finding and treatment to keep mortality low; water and sanitation efforts to help curb transmission of cholera and other waterborne diseases; and vaccination to save lives while water and sanitation infrastructure is improved.<sup>18</sup></p>
+<p>The benefits of vaccination as a complementary intervention are increasingly well understood, even as vaccine remains scarce in Haiti and most cholera-affected regions of the world.<sup>19</sup> Oral cholera vaccine is administered in two doses and protects about 70 percent of those who receive a full course for two to three years.<sup>20</sup> So-called “herd immunity” effects would further boost protection.<sup>21</sup>	<div class="middle_image">
+	<div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="http://www.americasquarterly.org/sites/default/files/WEIGEL-AND-FARMER-Cropped-5.gif" width="510" height="418" alt="" /></div></div></div>	</div>
+        <div class="photocredits">
+	<div class="field field-name-field-photo-credits field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even">A nation’s pain: Theophil Gilot waits for his son, Alexandro, to be treated for cholera in a Samaritan’s Purse treatment facility in Cabaret, Haiti. (Joe Raedle/Getty)</div></div></div>        </div>        
+<div class="bottom_text">
+	<div style = "border:1px #999 dotted;padding:9px 9px 9px 9px;width:205px;background-color:#fff;float:left;margin-right:10px">
+	<table border = "0" style = "margin:0;width:230px;" align = "center">
+	<tr>
+		<td>
+			<fb:like send="false" width="205" show_faces="true"></fb:like>
+		</td>
+	</tr>
+	<tr>
+<td style = "text-align:right;padding-top:15px;">
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style " style = "margin:-4px;padding-bottom:10px;">
+
+<a class="addthis_button_tweet"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4deeb0045ea1893d"></script>
+<!-- AddThis Button END -->
+
+</td>
+</tr>
+</table>
+<div style = "clear:both;"></div>
+<a href = "#commenting">Comment on this post</a>
+</div>
+</p>
+<p>Two mathematical models of the epidemic in Haiti have predicted substantial benefits from vaccination: one estimated that 10 percent coverage would avert 63,000 cases and 900 deaths;<sup>22</sup> the other estimated that 30 percent coverage would lead to a 55 percent reduction in cases.<sup>23</sup> Yet despite the severity of the epidemic, oral cholera vaccine remains largely unavailable in Haiti.</p>
+<p>One small pilot project is seeking to integrate vaccination into broader efforts to reduce the burden of water-borne pathogens. In April 2012,<br />the Haitian Ministry of Health and two health care nonprofits—Partners In Health and the Centres GHESKIO—began rolling out vaccine in rural and urban Haiti to protect vulnerable populations and to ascertain<br />the feasibility of integrating vaccination into the ongoing response to cholera nationwide.<sup>24</sup></p>
+<p>Early results have been promising. Approximately 91,000 Haitians had received the vaccine by June 2012, with an estimated completion rate—the percentage of enrolled individuals who receive both doses of vaccine—of over 85 percent. Demand for the vaccine in the population is high. Moreover, vaccination has strengthened other cholera control efforts and the local health system, too. Community-based vaccination teams, trained in prevention linked to care, have also promoted clean water and sanitation. Cold chain capacity has been expanded, and the cholera vaccine pilot dovetailed with a national polio vaccination program in rural Artibonite Haiti.</p>
+<p>Even if this pilot project is successful, should it be scaled up across Haiti? Not all health policymakers are sure. While some have supported a comprehensive, integrated response, including vaccination,<sup>25</sup> many public health experts have, since the first weeks of the epidemic, discouraged use of vaccine in Haiti in favor of water and sanitation efforts. But others have argued that these should be designed as complementary, not competing, interventions.<sup>26</sup></p>
+<p>No one would disagree that the long-term goal is robust water and sanitation systems across Haiti. That is the surest way to prevent cholera transmission for years to come. However, such systems will take years to build, especially in a fragile setting like post-earthquake Haiti. Might oral cholera vaccine serve as a bridging intervention in the meantime?</p>
+<p>The history of control efforts during the last major cholera epidemic—registered in Central and South America during the 1990s—offers insights relevant to this question. Some public health experts credit the decline of the previous epidemic in the Americas with water and sanitation programs launched within afflicted countries, and now leverage this claim to promote water and sanitation efforts at the exclusion of vaccination in Haiti.<sup>27</sup></p>
+<p>If cholera once disappeared from Latin America without vaccine, the argument goes, why couldn’t the same scenario occur in Haiti today?</p>
+<p>For one, the current vaccines were not available during the previous Latin American epidemic. Older vaccines were less effective; some were injectable and therefore more difficult to deliver.<sup>28</sup></p>
+<p>Moreover, the premise of the argument—that water and sanitation improvements alone eliminated cholera from Latin America—demands closer scrutiny. <i>V. cholerae</i> is a complex pathogen. Cholera epidemics are determined by myriad biological, social and environmental factors. The reasons for the subsidence of the 1990s Latin American epidemic are still disputed within expert circles. The reduction in cases observed by the mid-1990s may, for example, have as much to do with the epidemic’s natural course as with the effects of medical and public health interventions. Understanding such biosocial complexity and its relationship to the decline of the Latin American epidemic in the 1990s will point the way to how we can better control cholera in Haiti today.</p>
+<h3>Latin America in the Time of Cholera</h3>
+<p>In January 1991, hundreds of cases of severe watery diarrhea were reported in three coastal cities in Peru. By the second week of February, tens of thousands of cases—by then, confirmed as cholera in laboratory—had been reported in almost every region of Peru, from the coast over the Andes to the Amazon.<sup>29</sup> In the next months, almost every other country in Central and South America reported outbreaks; only Uruguay was spared. From 1991 to 1997, the Latin American epidemic resulted in 1.2 million cases and claimed some 12,000 lives.<sup>30</sup></p>
+<p>The precise origins of cholera in Latin America remain unknown. Some have suggested bilge or ballast water from a ship from Asia or Africa (released too close to land) as the likely source.<sup>31</sup> Others have suggested that climatic factors offer a more plausible explanation for the origins of the epidemic.<sup>32</sup> In particular, the El Niño climate pattern, during which heavy rains wash nutrients from the land into the sea and raise water surface temperatures, typically causes a plankton bloom, creating ideal conditions for a cholera outbreak. (Such conditions would occur in Haiti almost two decades later in the aftermath of Hurricane Tomás.)</p>
+<p>Indeed, <i>V. cholerae</i> has adapted to persist indefinitely in association with flora and fauna, such as copepods, in surface waters of riverine, estuarial and marine environments, even in the absence of human hosts.<sup>33</sup> A single colonized copepod can contain sufficient numbers of viable <i>V. cholerae</i> to provide an infectious inoculum if ingested by a human.<sup>34</sup> By accounting for such climatic factors, a biosocial account better explains the dispersed appearance of cholera outbreaks along the coast of Peru—and also the higher incidence of disease in coastal regions elsewhere in Latin America throughout the epidemic—than do narrow point-source accounts.<sup>35</sup> Documented cases of profuse secretory diarrhea in coastal regions of Peru months before the confirmed start of the outbreak bolster the hypothesis that marine and estuarial waters off Peru’s coast functioned as a reservoir for <i>V. cholerae </i>some time before January 1991.<sup>36</sup></p>
+<p>The return of cholera in the 1990s—a disease that had been absent from the Americas since the late nineteenth century—provoked “panic, pain and death,” to quote one historian of the epidemic.<sup>37</sup> Its rapid spread across Central and South America and its high initial case-fatality rate prompted predictions of millions of cases and hundreds of thousands of deaths. As usual, the heaviest burden of disease fell on the poor, especially on those living in countries without modern water supplies and sanitary infrastructure—such as Peru, Ecuador, Guatemala, and Bolivia. (The poor also shouldered the principal burden of blame for the epidemic: in the eyes of many Latin American elites, cholera was a disease of the “filthy wretches” in urban slums.<sup>38</sup>)</p>
+<p>Although cases were reported in Latin America during the past decade, the cholera epidemic had largely abated by 1996. The great majority of reported cholera cases in Latin America occurred during the first few years of the outbreak. In contrast, endemic and epidemic cholera in Asia and Africa continue to cause disease and death, as they have for decades. Indeed, the ongoing seventh pandemic of cholera began in 1961 in Indonesia and spread rapidly across Southeast and South Asia; in the early 1970s, it reached Africa, where it has remained entrenched ever since. What explains the decline of cholera in the Americas?</p>
+<p>The diminution of the Latin American epidemic is often interpreted as a triumph of global public health. Improvements in water security and sanitation infrastructure, the story goes, defeated cholera across Central and South America. Can we accept such claims with certainty?</p>
+<p>This hypothesis may be applicable in certain settings. The Mexican government, for example, launched an effective national control program based on treating cases, epidemiological surveillance, expanded laboratory capacity, public education about cholera prevention and treatment, and large-scale sanitation efforts. Most scholars and policymakers have credited the campaign with improving access to safe water and modern sanitation in many parts of the country.<sup>39</sup> It’s not unreasonable to suggest that the 1991 cholera epidemic in Mexico precipitated efforts to build municipal water and sanitation systems, as did the three ninteenth-century cholera outbreaks in the United States.<sup>40</sup> Chile made similar improvements to its national sanitation infrastructure, which have been credited with helping control not only cholera but also hepatitis A, typhoid fever and other waterborne diseases.<sup>41</sup></p>
+<p>Nevertheless, although many countries made significant strides toward improving sanitation and access to safe water, such advances were hardly uniform across Latin America. Many afflicted countries were slow to react to cholera, and some did more to suppress news of its spread than to control it. Predictably, poorer countries (and poorer regions of middle-income cater, such advances were hardly uniform across Latin Amountries) have made the least progress in shoring up water and sanitation infrastructure. And yet the broad strokes of the Latin American cholera epidemic were surprisingly similar. Peaks and troughs in incidence occurred, as expected, at different times, primarily according to climatic factors that vary regionally.<sup>42</sup></p>
+<p>But by 1993, high initial attack rates of cholera began falling steadily across Latin America—in countries rich and poor, some of which had robust national control efforts and some of which did not. By 2000, only a handful of cases were reported in the region. It is difficult to explain this widespread trend as a result of specific interventions implemented in specific countries.</p>
+<h3>The Immodest Claims of Causality</h3>
+<p>Peru is a telling example of the complexities associated with explaining the diminution of the Latin American cholera epidemic. Its epidemic was particularly devastating: 54 percent of the region’s cases and 39 percent of deaths were reported in Peru.<sup>43</sup> Barely half its population had access to safe water in 1991; in rural areas, this figure was closer to 20 percent.<sup>44</sup> Peru’s economy, and that of several afflicted countries, suffered during the peak stages of the epidemic: tourism and foreign investment dried up; food-based exports declined.<sup>45</sup> The government declared a state of emergency on February 8, 1991.</p>
+<p>In the first months of the epidemic, Minister of Health Carlos Vidal led a national campaign to boost rapid case-finding and treatment efforts (using oral rehydration therapy, mainly), and to promote “hygienic behavior,” especially avoiding ingestion of untreated water or food that had not been thoroughly cooked. In the immediate aftermath of the outbreak in Peru, Vidal’s efforts seemed to have increased access to safe food, clean water and modern sanitation. But within a month, opinion turned against Vidal’s strategy, which was blamed for attracting negative attention to Peru in the international press and for triggering local upheaval.</p>
+<p>Cycles of accusation and counteraccusation engulfed the country, and in March, Vidal stepped down from his position. With then-president Alberto Fujimori more concerned with hyperinflation and the encroachments of Maoist guerillas, the country’s response to cholera became fragmented and (at times) desultory. “With the departure of Vidal,” writes Marco Cueto, an historian of the epidemic, “the campaign lost visibility and coordination. [. . .] Fujimori did not lead a coherent policy of seeking international resources to improve Peru’s sanitation infrastructure.”<sup>46</sup></p>
+<p>While the politicians were bickering, doctors and nurses across the country launched aggressive treatment efforts, including replacing the polyelectrolytic solutions with simple saline or sodium chloride solutions. These initiatives saved countless lives. The success of such treatment innovations has since shaped global norms for the clinical management of cholera.<sup>47</sup></p>
+<p>Despite the effectiveness of decentralized treatment efforts in keeping case-fatality rates low, cholera control efforts in Peru were meager at best. There is little evidence, for example, that they brought sustained improvements in sanitation or water security.</p>
+<p>“It is difficult to consider the campaign a success story,” writes Cueto, “because it did not solve the acute problems of water and sewage systems in Peru. [. . .] Sanitation lagged behind the extensive use and distribution of [oral rehydration therapy]. The campaign also reinforced previous traditions that emphasized the use of limited resources not on infrastructure, sanitation and prevention, but on treatment of the sick.”<sup>48</sup></p>
+<p>Although there is ample evidence that access to clean water and modern sanitation has improved in the past decade, such improvements primarily occurred after the Peruvian cholera epidemic had abated. Although it should in every instance be applauded, long-term water and sanitation system development was not solely responsible for the falling cholera incidence in the mid-1990s in Peru.</p>
+<p>Moreover, Peru’s national response to cholera in fact stands out among Latin American nations. Most countries, fearful of the negative press generated by the cholera epidemic in Peru, did little in the way of national cholera control; what paltry national efforts existed were characterized by “denial, containment, and underreporting.”<sup>49</sup> In Belize, Costa Rica and Mexico, for example, cases of severe watery diarrhea were reported as cholera only following laboratory testing, mostly unavailable in the towns and neighborhoods worst affected.<sup>50</sup> National caseloads were thus almost certainly underreported.<sup>51</sup> (And any infectious disease doctor will attest to the unmistakable clinical presentation of severe cholera.)</p>
+<p>Manipulating case reporting is just one example of the ways in which governments sought to cover up—not control—the cholera epidemic. Like many countries, Venezuela triumphantly declared an end to the epidemic in 1993, even as thousands of people continued to develop clear symptoms of cholera, including death, in poor rural regions such as the Amacuro Delta.<sup>52</sup></p>
+<p>In fact, many Latin American countries from which cholera all but disappeared in the late 1990s still have relatively weak water and sanitation systems. Although the region as a whole has made impressive progress in increasing use of improved drinking-water sources, local disparities, especially in rural areas, remain. An estimated 50 percent to 75 percent of the population uses improved water sources in rural areas of Peru, Bolivia, Guatemala, and several other countries that were seriously affected by the 1990s cholera epidemic.<sup>53</sup> Rural household access to piped water remains even scarcer across the region.<sup>54</sup></p>
+<p>Progress toward expanding access to modern sanitation has been more modest, except in a few countries, such as Ecuador and Mexico.<b> [See Figure] </b>Although important strides have been made in the past two decades, only 55 percent of the population used improved sanitation facilities across the Americas region in 2010.<sup>55</sup> In Bolivia, this figure is a meager 25 percent, and only 8 percent in rural areas.<sup>56</sup> The improvements in sanitation in countries highly affected by cholera during the 1990s do not appear significant enough to explain the abatement of the epidemic.</p>
+<p style="text-align: center;"><img src="/sites/default/files/images/Table1_530x276.jpg" height="276" width="530" /></p>
+<p>Can a 6 percent increase in the use of improved sanitation facilities explain why the Peruvian cholera epidemic subsided between 1991 and 2000? Only 27 percent of rural populations in Peru used improved sanitation facilities in 2000.<sup>56</sup></p>
+<p>Another indicator of access to safe water and modern sanitation is incidence of other diarrheal diseases. In the late 1990s, many countries in Central and Latin America had relatively high rates of waterborne diseases that are transmitted by the fecal-oral route, as is cholera. For example, as late as 2004, diarrheal diseases still claimed some 2,500 lives per year and 4.1 disability-adjusted life years—an aggregate measure of mortality and morbidity—per capita per year in Peru.<sup>57</sup></p>
+<p>Intestinal parasites and diarrheal diseases increased as a relative cause of illness in outpatient health clinics in El Salvador after 1995; nearly 300,000 cases of acute diarrhea were reported there from June 2003 to June 2004.<sup>58</sup> If cholera had been eliminated from Latin America thanks to the development of water and sanitation systems, it is unlikely that other diarrheal diseases—many of which are caused by less hardy and adaptable microbes than <i>V. cholerae</i>—would have remained in circulation in these same settings.</p>
+<p>Water and sanitation initiatives in the early and mid-1990s surely deserve a good deal of credit for slowing the cholera epidemic in Central and South America, as do medical teams across the region that sought out patients and provided rapid treatment. As we have seen, however, a close look at the context and course of the 1990s epidemic casts doubt on the claim that improved water and sanitation was exclusively, or even primarily, responsible for the decline of cholera by the end of the decade. There is profound biosocial complexity associated with all epidemics of infectious disease.<sup>59</sup> Such complexities are greater in settings of poverty and political upheaval (such as Peru, Guatemala and many countries in Central and South America in the early 1990s).<sup>60</sup></p>
+<p>The association between <i>V. cholerae </i>outbreaks and climatic factors further complicates the extent to which public health initiatives can claim full credit for the decreases in cholera incidence. A perhaps equally compelling narrative explains such decreases as the natural course of the epidemic.<sup>61</sup> One 1998 review on the prospect of eradication in Latin America (co-authored by one of the architects of Mexico’s successful cholera control endeavors) put it this way: “<i>V. cholerae</i>’s tight link to the water environment, plankton and marine fauna, along with its particular biological and genetic imprints, defies any eradication strategy designed to break the biological chain supporting cholera ecology and its transmission dynamics.”<sup>62</sup></p>
+<h3>How to Curb the Tragedy</h3>
+<p>One of the few firm conclusions that can be drawn from accounts of the 1990s epidemic in Latin America is that claims of causality about the ebb and flow of cholera will always be fraught with biosocial complexity.</p>
+<p>There is a great deal about the decline of the previous Latin American epidemic that is still not well understood. How might this history guide ongoing efforts to control cholera in Haiti and other endemic and epidemic settings around the globe?</p>
+<p>Given the uncertainties associated with the rise and fall of cholera in Latin America, and indeed the uncertainties associated with every manifestation of epidemic and endemic cholera around the world, an integrated, comprehensive approach using every control tool available is the most sensible response to cholera in Haiti and elsewhere.</p>
+<p>Fortunately, we have proven means of diagnosing, preventing and treating cholera. No one would dispute the fact that rapid treatment efforts and provision of clean water and sanitation should be the bulwark of the response to cholera in any setting. Since the mid-nineteenth century, improved water and sanitation systems have been the foundation of public health. Building such systems in Haiti would help control not just cholera but also other pathologies of poverty, including malnutrition and waterborne diseases like hepatitis A and poliomyelitis.</p>
+<p>Improving water and sanitation infrastructure, such as sewage-treatment plants and municipal water systems, would require substantial investment and time. These infrastructure improvements are sorely needed in Haiti. But vaccination, though far from perfect, can protect the most vulnerable; it has an important complementary role to play in controlling cholera. A national strategy to implement all of these interventions could reduce mortality and transmission so that cholera would no longer be a serious problem in Haiti.</p>
+<p>What might such a strategy look like?</p>
+<p>The Haitian Ministry of Health could lead local and international teams in an effort to integrate all available interventions nationwide. Like the pilot project completed in June, a national campaign could tackle cholera while also strengthening the Haitian health system. Community health workers could be trained to identify and refer cases in remote regions, provide soap and water-treatment supplies, and deliver oral cholera vaccine. Existing facilities could be refurbished and restocked with necessary diagnostics, preventatives and therapeutics. Supply chains could be improved, and referral capacity between communities, clinics and hospitals could be bolstered. Cholera vaccine could be delivered in conjunction with a renewed childhood immunization campaign.</p>
+<p>Implementing this comprehensive control strategy would require significant resources. But, as noted, nearly $600 million has been allocated to water and sanitation initiatives since the 2010 earthquake. Of that funding, $167 million has not yet been disbursed. A broad base of partners could surely mobilize the resources—financial and human—to get the job done.</p>
+<p>Historian Charles Rosenberg notes that the appearance and defeat of cholera in the U.S. was both a symptom and a cause of the country’s fitful jolt into modernity. “The cholera pandemics were transitory phenomena,” he writes, “destined to occupy the world stage for only<br />a short time—the period during which public health and medical science were catching up with urbanization and the transportation revolution.”<sup>63</sup> Cholera thus provided a stimulus for city, state and federal authorities in the U.S. to build municipal water systems and improve public health infrastructure. In Mexico and Chile and a few other countries in Latin America, cholera prompted a similar impetus to modernize public health systems.</p>
+<p>May it do so in Haiti, as well. In the interim, case-finding and treatment, point-of-use water and sanitation tools, and vaccination can save lives and help slow the current epidemic. These interventions can, in short, buy time to build modernity.</p>
+<p><a href="/farmer">View Endnotes</a></p>
+</div></div></div>
+	<script>
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=155640114506219";
+		fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));
+	</script>
+</div>
+
+</div>
+
+
+<p><strong>To read more from <em>Americas Quarterly</em>, <a href="https://www.pubservice.com/subnew.aspx?PC=AQ&amp;PK=MTRIAL" target="new">sign up for a free trial</a> issue of the print magazine. No risk, no commitment.</strong></p>
+
+
+<hr>
+<a name = "commenting"></a>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'americasquarterly'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </div>
+</div>
+  </div>
+				<br />&nbsp;<br />&nbsp;
+			</div>
+			<div id="rightbar">
+								<div id="right-rest">
+							  <div class="region region-right">
+    <div id="block-block-15" class="block block-block">
+
+    
+  <div class="content">
+    <p><a href="https://www.pubservice.com/subnew1page.aspx?PC=AQ&amp;PK=MPUBGFT"><img alt="" src="/sites/default/files/images/2014%20fall%20issue%20ad%20with%20transparent%20background.png" style="width: 358px; height: 316px;" /></a></p>
+  </div>
+</div>
+<div id="block-block-47" class="block block-block">
+
+    
+  <div class="content">
+    <div class="popularPosts" style="margin-top:25px;padding-left:0px;">
+<h3 style="margin-bottom: 0px;"><em>Americas Quarterly</em>'s Cuba Coverage</h3>
+<p style="padding:10px 0 10px 10px;">Check in with <em>AQ </em>for updates on U.S.-Cuba normalization.</p>
+<div style="margin-left:20px;"><a href="http://www.americasquarterly.org/content/cuba-us-normalization-continuous-coverage-americas-quarterly" target="_blank"><img alt="" src="/sites/default/files/images/Cuba_Doug%20Wheller_0.jpg" style="width: 325px; height: 217px;" /></a></div>
+</div>
+<p> </p>
+  </div>
+</div>
+<div id="block-block-19" class="block block-block">
+
+    
+  <div class="content">
+    <div class="popularPosts" style="margin-top: 25px; padding-left: 0px;">
+<h3 style="margin-left: 0px;">Connect with <em>AQ</em></h3>
+<p></p><center><br /><table style="width: 250px;" height="68" width="124" align="center" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="text-align: center;"><a href="https://www.facebook.com/americasquarterly" target="_blank"><img src="/sites/default/files/images/facebook.jpg" style="margin-right: 0px; border-width: 0px; border-style: solid; width: 50px; height: 50px;" /></a></td>
+<td style="text-align: center;"><a href="http://twitter.com/AmerQuarterly" target="new"><img alt="Twitter" src="/sites/default/files/images/twitter.jpg" style="margin-left: 6px; border-width: 0px; border-style: solid; width: 50px; height: 50px; margin-right: 6px;" /></a></td>
+<td style="text-align: center;"><a href="http://www.youtube.com/americasquarterly" target="_blank"><img alt="YouTube" src="/sites/default/files/images/YouTube.jpg" style="width: 50px; height: 50px; margin-left: 0px; margin-right: 0px;" /></a></td>
+<td style="text-align: center;"><a href="https://itunes.apple.com/us/app/americas-quarterly/id576858714?mt=8 " target="_blank"><img alt="Itunes App Store" src="/sites/default/files/images/itunes-app-store-logo.png" style="width: 115px; height: 40px; margin: 5px 6px;" /></a></td>
+</tr></tbody></table><p></p><center> </center></center></div>
+  </div>
+</div>
+<div id="block-mostpopular-1" class="block block-mostpopular">
+
+    <h2>Most Popular</h2>
+  
+  <div class="content">
+    <div style="margin-top:25px;padding-left:0px;" class="popularPosts">
+<h3 style="margin-left:0px;">MOST POPULAR ON <i>AQ</i> ONLINE</h3>
+<div style="padding:10px;">
+
+  <div  data-bid="1" class="mostpopular-block">
+    <div class="item-list"><ul class="mostpopular--services"><li data-sid="2" class="first last">Most Viewed</li>
+</ul></div>    <div class="item-list"><ul class="mostpopular--intervals"><li class="mostpopular--label first">Past:</li>
+<li data-iid="1">1 day</li>
+<li data-iid="2">1 week</li>
+<li data-iid="3">1 month</li>
+<li data-iid="4" class="last">1 year</li>
+</ul></div>    <div class="mostpopular--content"></div>
+  </div>
+
+</div>
+</div>
+
+  </div>
+</div>
+<div id="block-views-web-exclusive-block" class="block block-views">
+
+    
+  <div class="content">
+    <div class="view view-web-exclusive view-id-web_exclusive view-display-id-block view-dom-id-32cd946d19e7b11798131e7de1e23834">
+        
+  
+  
+      <div class="view-content">
+      
+<div style="margin-top:10px;" class="popularPosts">  
+
+<div class="item-list">  <h3 style="margin-bottom:0px;">WEB EXCLUSIVES</h3>
+  <div style="width:310px;padding:10px;margin-bottom:0px;">
+    
+  <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">    <div class="onlineFeaturesTitle">
+        <a href="/content/aq-video-entrevista-con-sergio-dahbar">AQ Video: Entrevista con Sergio Dahbar</a>    </div>
+    <h4 class="onlineFeaturesDate">
+    <em>
+        <span class="date-display-single"><div class="field field-name-field-date field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">January 6, 2015</span></div></div></div></span>
+    </em>
+    </h4>
+    
+    by 
+	<a href="/node/578">AQ Online</a>	
+    <br>
+    <div style="width:100px;padding-top:5px;float:left;margin-right:8px;">
+        <a class="imagefield imagefield-nodelink imagefield-field_thumbnail" href="/content/aq-video-entrevista-con-sergio-dahbar">
+            <div class="field field-name-field-thumbnail field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/content/aq-video-entrevista-con-sergio-dahbar"><img src="http://www.americasquarterly.org/sites/default/files/Freedom%20of%20expression%20100x100_0.jpg" width="100" height="100" alt="" /></a></div></div></div>        </a>
+    </div>
+    <div style="width:200px;padding-top:5px;float:left;">
+        <div class="field field-name-field-dek field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even">El periodista venezolano Sergio Dahbar habla con Americas Quarterly sobre el clima para hacer periodismo en Venezuela hoy.</div></div></div>    </div>
+    <div style="clear:both;"></div></li>
+          <li class="views-row views-row-2 views-row-even views-row-last">    <div class="onlineFeaturesTitle">
+        <a href="/content/incumbents-arent-latin-americas-problem">Incumbents Aren’t Latin America’s Problem</a>    </div>
+    <h4 class="onlineFeaturesDate">
+    <em>
+        <span class="date-display-single"><div class="field field-name-field-date field-type-date field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single">November 6, 2014</span></div></div></div></span>
+    </em>
+    </h4>
+    
+    by 
+	<a href="/content/kevin-lees">Kevin Lees</a>	
+    <br>
+    <div style="width:100px;padding-top:5px;float:left;margin-right:8px;">
+        <a class="imagefield imagefield-nodelink imagefield-field_thumbnail" href="/content/incumbents-arent-latin-americas-problem">
+            <div class="field field-name-field-thumbnail field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/content/incumbents-arent-latin-americas-problem"><img src="http://www.americasquarterly.org/sites/default/files/11333263144_ea926f1bb3_q.jpg" width="100" height="100" alt="" /></a></div></div></div>        </a>
+    </div>
+    <div style="width:200px;padding-top:5px;float:left;">
+        <div class="field field-name-field-dek field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even">It’s been an exceptionally good year for incumbents in Latin America.</div></div></div>    </div>
+    <div style="clear:both;"></div></li>
+      </ul></div>
+
+    <div style="margin-bottom:0px;text-align:left;" class="redLink">
+    <a style="font-size:11px;font-weight:bold;padding: 10px;" href="/webexclusives">MORE WEB EXCLUSIVES »</a>
+  </div>
+
+  </div>
+
+</div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+<div id="block-block-46" class="block block-block">
+
+    
+  <div class="content">
+    <p><a href="http://www.hsbc.com/" target="_blank"><img alt="" src="/sites/default/files/sponsor_hsbc.png" style="width: 313px; height: 108px;margin-left:10px;margin-top:12px" /></a></p>
+  </div>
+</div>
+<div id="block-block-35" class="block block-block">
+
+    
+  <div class="content">
+    <div class="popularPosts" style="margin-top:25px;padding-left:0px;">
+<h3 style="margin-left:0px;"><a href="http://www.americasquarterly.org/node/3869" style="color:#738457;font-weight:bold;"><em>AQ</em> Course Packets: Now Available for Your Classroom!</a></h3>
+<div style="padding-left:10px;text-align:left;padding-top:10px;"><center><a href="http://www.americasquarterly.org/node/3869"><img alt="AQ-course-packets" border="0" src="/images/AQ-course-packets.jpg" /></a></center><a href="http://www.americasquarterly.org/node/3869" style="color:#613070;font-weight:bold;">Browse our catalogue.</a></div>
+</div>
+<p> </p>
+<div> </div>
+  </div>
+</div>
+<div id="block-block-43" class="block block-block">
+
+    
+  <div class="content">
+    <div class="popularPosts" style="margin-top:25px;padding-left:0px;">
+<h3 style="margin-bottom:0px;">AQ and Efecto Naím: NTN24 Partnership</h3>
+<p style="padding:10px 0 10px 10px;">June 1: This <em>AQ</em>-Efecto Naím segment looks at sustainable cities in the hemisphere.</p>
+<div style="margin-left:20px;">
+<iframe allowfullscreen="" src="//www.youtube.com/embed/MfENUfgD4t0" frameborder="0" height="216" width="288"></iframe></div>
+</div>
+<p> </p>
+  </div>
+</div>
+<div id="block-block-18" class="block block-block">
+
+    
+  <div class="content">
+      <div class = "popularPosts" style = "margin-top:25px;padding-left:0px;">  <script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
+    <script type="text/javascript">
+    /*
+    *  How to use the Feed Control to grab, parse and display feeds.
+    */
+    
+    google.load("feeds", "1");
+    
+    function OnLoad() {
+      // Create a feed control
+      var feedControl = new google.feeds.FeedControl();
+    
+      // Add two feeds.
+      feedControl.addFeed("http://www.as-coa.org/rss/", "");
+       
+        feedControl.setNumEntries(3);
+        
+        feedControl.setLinkTarget(google.feeds.LINK_TARGET_BLANK);
+   
+
+
+
+
+    
+    
+      // Draw it.
+      feedControl.draw(document.getElementById("ascoafeed"));
+    }
+    
+    google.setOnLoadCallback(OnLoad);
+    </script>
+ 
+ 
+
+
+
+ <h3 style = "margin-left:0px;">NOW ON AS/COA ONLINE</h3>
+<div style = "padding-left:10px;">
+
+
+
+
+
+    <div id="ascoafeed" style = "margin-bottom:5px;">Loading...</div>
+   <br /><center><a href = "http://www.as-coa.org/" target = "new"  ><img src = "/themes/aqsite/images/rightbar/ascoa_logo.gif"  border = "0" /></a></center>
+</div>
+</div>  </div>
+</div>
+<div id="block-block-17" class="block block-block">
+
+    
+  <div class="content">
+         <div class = "popularPosts" style = "margin-top:25px;">  
+    <script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
+    <script type="text/javascript">
+    /*
+    *  How to use the Feed Control to grab, parse and display feeds.
+    */
+    google.load("feeds", "1");
+    
+    function OnLoad() {
+      // Create a feed control
+      var feedControl = new google.feeds.FeedControl();
+    
+      // Add two feeds.
+      feedControl.addFeed("http://www.terra.com/templates/modules/noticias/noticias.xml");
+  
+        feedControl.setNumEntries(2);
+   
+
+      // Draw it.
+      feedControl.draw(document.getElementById("terrafeed"));
+    }
+    
+    google.setOnLoadCallback(OnLoad);
+    </script>
+
+    <script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
+    <script type="text/javascript">
+    /*
+    *  How to use the Feed Control to grab, parse and display feeds.
+    */
+    
+    google.load("feeds", "1");
+    
+    function OnLoad() {
+      // Create a feed control
+      var feedControl = new google.feeds.FeedControl();
+    
+      // Add two feeds.
+      feedControl.addFeed("http://www.ft.com/rss/companies/americas", "World");
+        feedControl.addFeed("http://www.ft.com/rss/world/americas", "Companies");
+        feedControl.setNumEntries(1);
+   
+
+    
+      // Draw it.
+      feedControl.draw(document.getElementById("ftimesfeed"));
+    }
+    
+    google.setOnLoadCallback(OnLoad);
+    </script>
+ 
+ 
+
+ <h3 style = "margin-bottom:10px;"><em>AQ</em> MEDIA PARTNER</h3>
+
+  <div style = "width:310px;padding:10px;margin-bottom:10px;">
+  <a href = "http://www.ft.com/" target = "new"><img src="/images/ftimes_feed.gif" style = "margin-bottom:12px;"/></a>
+    <div id="ftimesfeed">Loading...</div>
+
+<!--<img src="/images/subsButton33off.jpg" alt="subsButton33off" width="141" height="22" border = "0" /> -->
+    
+
+
+</div>
+</div>  </div>
+</div>
+  </div>
+				</div><br />&nbsp;<br />&nbsp;
+			</div>
+		</div>
+	</div>
+<img src ="http://www.americasquarterly.org/images/blog_link.gif" style = "margin:0;padding:0;" width = "1" height = "1"/>
+
+
+
+
+ <script>
+
+		 function doClear(theText) {
+		     if (theText.value == theText.defaultValue) {
+		         theText.value = ""
+		     }
+		 }
+
+
+ jQuery('document').ready(function(){
+
+   jQuery('#edit-search-block-form--2').css('background','none');
+   jQuery('#edit-search-block-form--2').css('background-color','#FFF');
+   jQuery('#edit-search-block-form--2').css('width','180px');
+   jQuery('#search-block-form.google-cse').find('.form-submit').hide();
+   jQuery('<input type="image" src="/themes/aqsiteWider/images/btn_go.gif" style="margin-left:5px;margin-right:12px;vertical-align:text-top" alt="Submit button">').insertBefore(jQuery('#search-block-form.google-cse').find('.form-submit'));
+   jQuery('#edit-search-block-form--2').css('margin-top','35px');
+   jQuery('#edit-search-block-form--2').css('margin-left','11px');
+   jQuery('#edit-search-block-form--2').attr('value','SEARCH OUR SITE');
+   jQuery('#edit-search-block-form--2').attr('onfocus','doClear(this)');
+  
+ });
+</script>
+
+<script type="text/javascript" src="http://americasquarterly.org/charticles/shadowbox-3.0.3/shadowbox.js?nb79j6"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+Shadowbox.init({handleOversize: "resize",modal: false,onOpen: function() {$("#sb-title").after($("#sb-info"));} });
+//--><!]]>
+</script>
+
+
+    <a href="https://plus.google.com/116735769768056150638" rel="publisher"></a>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-6.newrelic.com","licenseKey":"4962ac208a","applicationID":"1081763","transactionName":"bldWYEJYD0FUU0VYWlcdYUZZFk5bW1RUSRtJWkQ=","queueTime":0,"applicationTime":15,"ttGuid":"","agentToken":"","atts":"QhBVFgpCHE8=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script></body>
+</html>
+
+

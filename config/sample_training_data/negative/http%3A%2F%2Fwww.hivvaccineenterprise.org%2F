@@ -1,0 +1,978 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Welcome! | Global HIV Vaccine Enterprise</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://www.hivvaccineenterprise.org/xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title="Welcome! | Global HIV Vaccine Enterprise &raquo; Feed" href="http://www.hivvaccineenterprise.org/feed" />
+<link rel="alternate" type="application/rss+xml" title="Welcome! | Global HIV Vaccine Enterprise &raquo; Comments Feed" href="http://www.hivvaccineenterprise.org/comments/feed" />
+<script type='text/javascript' src='http://www.hivvaccineenterprise.org/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://www.hivvaccineenterprise.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.hivvaccineenterprise.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.hivvaccineenterprise.org/wp-includes/wlwmanifest.xml" /> 
+<style type="text/css">body{text-align:center;margin:0;padding:0;font-family:tahoma,arial,sans-serif;font-size:0.8em;color:#000000;background:#ffffff}a:link,a:visited,a:active{color:#666666;font-weight:bold;text-decoration:none;}a:hover{color:#CC0000;font-weight:bold;text-decoration:underline}ul,ol,dl,p,h1,h2,h3,h4,h5,h6{margin-top:10px;margin-bottom:10px;padding-top:0;padding-bottom:0;}ul ul,ul ol,ol ul,ol ol{margin-top:0;margin-bottom:0}code,pre{font-family:"Courier New",Courier,monospace;font-size:1em}pre{overflow:auto;word-wrap:normal;padding-bottom:1.5em;overflow-y:hidden;width:99%}abbr[title],acronym[title]{border-bottom:1px dotted}hr{display:block;height:2px;border:none;margin:0.5em auto;color:#cccccc;background-color:#cccccc}table{font-size:1em;}div.post,ul.commentlist li,ol.commentlist li{word-wrap:break-word;}pre,.wp_syntax{word-wrap:normal;}div#wrapper{text-align:center;margin-left:auto;margin-right:auto;display:block;width:99%}div#container{padding:0;width:auto;margin-left:auto;margin-right:auto;text-align:left;display:block}table#layout{font-size:100%;width:100%;table-layout:fixed}.colone{width:200px}.colone-inner{width:200px}.coltwo{width:100% }.colthree-inner{width:200px}.colthree{width:200px}div#header.full-width{width:100%}div#header,td#header{width:auto;padding:0}table#logoarea,table#logoarea tr,table#logoarea td{margin:0;padding:0;background:none;border:0}table#logoarea{width:100%;border-spacing:0px}img.logo{display:block;margin:0 10px 0 0}td.logoarea-logo{width:1%}h1.blogtitle,h2.blogtitle{ display:block;margin:0;padding:0;letter-spacing:-1px;line-height:1.0em;font-family:tahoma,arial,sans-serif;font-size:240%;font-smooth:always}h1.blogtitle a:link,h1.blogtitle a:visited,h1.blogtitle a:active,h2.blogtitle a:link,h2.blogtitle a:visited,h2.blogtitle a:active{ text-decoration:none;color:#666666;font-weight:bold;font-smooth:always}h1.blogtitle a:hover,h2.blogtitle a:hover{ text-decoration:none;color:#000000;font-weight:bold}p.tagline{margin:0;padding:0;font-size:1.2em;font-weight:bold;color:#666666}td.feed-icons{white-space:nowrap;}div.rss-box{height:1%;display:block;padding:10px 0 10px 10px;margin:0;width:280px}a.comments-icon{height:22px;line-height:22px;margin:0 5px 0 5px;padding-left:22px;display:block;text-decoration:none;float:right;white-space:nowrap}a.comments-icon:link,a.comments-icon:active,a.comments-icon:visited{background:transparent url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/comment-gray.png) no-repeat scroll center left}a.comments-icon:hover{background:transparent url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/comment.png) no-repeat scroll center left}a.posts-icon{height:22px;line-height:22px;margin:0 5px 0 0;padding-left:20px;display:block;text-decoration:none;float:right;white-space:nowrap}a.posts-icon:link,a.posts-icon:active,a.posts-icon:visited{background:transparent url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/rss-gray.png) no-repeat scroll center left}a.posts-icon:hover{background:transparent url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/rss.png) no-repeat scroll center left}a.email-icon{height:22px;line-height:22px;margin:0 5px 0 5px;padding-left:24px;display:block;text-decoration:none;float:right;white-space:nowrap}a.email-icon:link,a.email-icon:active,a.email-icon:visited{background:transparent url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/email-gray.png) no-repeat scroll center left}a.email-icon:hover{background:transparent url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/email.png) no-repeat scroll center left}td.search-box{height:1%}div.searchbox{height:35px;border:1px dashed #cccccc;border-bottom:0;width:200px;margin:0;padding:0}div.searchbox-form{margin:5px 10px 5px 10px}div.horbar1,div.horbar2{font-size:1px;clear:both;display:block;poeat scroll center left}td.search-box{height:1%}div.searchbox{height:35px;border:1px dashed #cccccc;border-bottom:0;width:sition:relative;padding:0;margin:0}div.horbar1{height:5px;background:#ffffff;border-top:dashed 1px #cccccc}div.horbar2{height:5px;background:#ffffff;border-bottom:dashed 1px #cccccc}div.header-image-container-pre{position:relative;margin:0;padding:0;height:150px;}div.header-image-container{position:relative;margin:0;padding:0;height:150px;}div.codeoverlay{position:absolute;top:0;left:0;width:100%;height:100%}div.opacityleft{position:absolute;z-index:2;top:0;left:0;background-color:#FFFFFF;height:150px;width:200px;filter:alpha(opacity=40);opacity:.40}div.opacityright{position:absolute;z-index:2;top:0;right:0;background-color:#FFFFFF;height:150px;width:200px;filter:alpha(opacity=40);opacity:.40}a.divclick:link,a.divclick:visited,a.divclick:active,a.divclick:hover{width:100%;height:100%;display:block;text-decoration:none}td#left{vertical-align:top;border-right:dashed 1px #CCCCCC;padding:10px 10px 10px 10px;background:#ffffff}td#left-inner{vertical-align:top;border-right:dashed 1px #CCCCCC;padding:10px 10px 10px 10px;background:#ffffff}td#right{vertical-align:top;border-left:dashed 1px #CCCCCC;padding:10px 10px 10px 10px;background:#ffffff}td#right-inner{vertical-align:top;border-left:dashed 1px #CCCCCC;padding:10px 10px 10px 10px;background:#ffffff}td#middle{vertical-align:top;width:100%;padding:10px 15px}div#footer.full-width{width:100%}div#footer,td#footer{wi10px 10px;background:#ffffff}td#right-inner{vertical-align:top;border-left:dashed 1px #CCCCCC;padding:10px 10px 10px 10px;background:#ffffff}td#middledth:auto;background-color:#ffffff;border-top:dashed 1px #cccccc;padding:10px;text-align:center;color:#777777;font-size:95%}div#footer a:link,div#footer a:visited,div#footer a:active,td#footer a:link,td#footer a:visited,td#footer a:active{text-decoration:none;color:#777777;font-weight:normal}div#footer a:hover,td#footer a:hover{text-decoration:none;color:#777777;font-weight:normal}div.widget{display:block;width:auto;margin:0 0 15px 0}div.widget-title{display:block;width:auto}div.widget-title h3,td#left h3.tw-widgettitle,td#right h3.tw-widgettitle,td#left ul.tw-nav-list,td#right ul.tw-nav-list{padding:0;margin:0;font-size:1.6em;font-weight:bold}div.widget ul,div.textwidget{display:block;width:auto}div.widget select{width:98%;margin-top:5px;}div.widget ul{list-style-type:none;margin:0;padding:0;width:auto}div.widget ul li{display:block;margin:2px 0 2px 0px;padding:0 0 0 5px;border-left:solid 7px #cccccc}div.widget ul li:hover,div.widget ul li.sfhover{display:block;width:auto;border-left:solid 7px #000000;}div.widget ul li ul li{margin:2px 0 2px 5px;padding:0 0 0 5px;border-left:solid 7px #cccccc;}div.widget ul li ul li:hover,div.widget ul li ul li.sfhover{border-left:solid 7px #000000;}div.widget ul li ul li ul li{margin:2px 0 2px 5px;padding:0 0 0 5px;border-left:solid 7px #cccccc;}div.widget ul li ul li ul li:hover,div.widget ul li ul li ul li.sfhover{border-li ul li:hover,div.widget ul li ul li.sfhover{border-left:solid 7px #000000;}div.widget ul li ul li ul li{margin:2px 0 2px 5px;padding:0 0 0 5px;bordeleft:solid 7px #000000;}div.widget a:link,div.widget a:visited,div.widget a:active,div.widget td a:link,div.widget td a:visited,div.widget td a:active,div.widget ul li a:link,div.widget ul li a:visited,div.widget ul li a:active{text-decoration:none;font-weight:normal;color:#666666;font-weight:normal;}div.widget ul li ul li a:link,div.widget ul li ul li a:visited,div.widget ul li ul li a:active{color:#666666;font-weight:normal;}div.widget ul li ul li ul li a:link,div.widget ul li ul li ul li a:visited,div.widget ul li ul li ul li a:active{color:#666666;font-weight:normal;}div.widget a:hover,div.widget ul li a:hover{color:#000000;}div.widget ul li ul li a:hover{color:#000000;}div.widget ul li ul li ul li a:hover{color:#000000;}div.widget ul li a:link,div.widget ul li a:visited,div.widget ul li a:active,div.widget ul li a:hover{display:inline}* html div.widget ul li a:link,* html div.widget ul li a:visited,* html div.widget ul li a:active,* html div.widget ul li a:hover{height:1%; } div.widget_nav_menu ul li,div.widget_pages ul li,div.widget_categories ul li{border-left:0 !important;padding:0 !important}div.widget_nav_menu ul li a:link,div.widget_nav_menu ul li a:visited,div.widget_nav_menu ul li a:active,div.widget_pages ul li a:link,div.widget_pages ul li a:visited,div.widget_pages ul li a:active,div.widget_categories ul li a:link,div.widget_categories ul li get_nav_menu ul li a:link,div.widget_nav_menu ul li a:visited,div.widget_nav_menu ul li a:active,div.widget_pages ul li a:link,div.widget_pages ul li a:visited,div.widget_categories ul li a:active{padding:0 0 0 5px;border-left:solid 7px #cccccc}div.widget_nav_menu ul li a:hover,div.widget_pages ul li a:hover,div.widget_categories ul li a:hover{border-left:solid 7px #000000;}div.widget_nav_menu ul li ul li a:link,div.widget_nav_menu ul li ul li a:visited,div.widget_nav_menu ul li ul li a:active,div.widget_pages ul li ul li a:link,div.widget_pages ul li ul li a:visited,div.widget_pages ul li ul li a:active,div.widget_categories ul li ul li a:link,div.widget_categories ul li ul li a:visited,div.widget_categories ul li ul li a:active{padding:0 0 0 5px;border-left:solid 7px #cccccc}div.widget_nav_menu ul li ul li a:hover,div.widget_pages ul li ul li a:hover,div.widget_categories ul li ul li a:hover{border-left:solid 7px #000000;}div.widget_nav_menu ul li ul li ul li a:link,div.widget_nav_menu ul li ul li ul li a:visited,div.widget_nav_menu ul li ul li ul li a:active,div.widget_pages ul li ul li ul li a:link,div.widget_pages ul li ul li ul li a:visited,div.widget_pages ul li ul li ul li a:active,div.widget_categories ul li ul li ul li a:link,div.widget_categories ul li ul li ul li a:visited,div.widget_categories ul li ul li ul li a:active{padding:0 0 0 5px;border-left:solid 7px #cccccc}div.widget_nav_menu ul li ul li ul li a:hover,div.widget_pages ul li ul li ul li a:hover,div.widget_categories ul li ul li ul les ul li ul li ul li a:visited,div.widget_categories ul li ul li ul li a:active{padding:0 0 0 5px;border-left:solid 7px #cccccc}div.widget_nav_menu uli a:hover{border-left:solid 7px #000000;}div.widget_nav_menu ul li a:link,div.widget_nav_menu ul li a:active,div.widget_nav_menu ul li a:visited,div.widget_nav_menu ul li a:hover,div.widget_pages ul li a:link,div.widget_pages ul li a:active,div.widget_pages ul li a:visited,div.widget_pages ul li a:hover{display:block !important}div.widget_categories ul li a:link,div.widget_categories ul li a:active,div.widget_categories ul li a:visited,div.widget_categories ul li a:hover{display:inline !important}table.subscribe{width:100%}table.subscribe td.email-text{padding:0 0 5px 0;vertical-align:top}table.subscribe td.email-field{padding:0;width:100%}table.subscribe td.email-button{padding:0 0 0 5px}table.subscribe td.post-text{padding:7px 0 0 0;vertical-align:top}table.subscribe td.comment-text{padding:7px 0 0 0;vertical-align:top}div.post,div.page{display:block;margin:0 0 30px 0}div.sticky{background:#eee url('http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa /images/sticky.gif') 99% 5% no-repeat;border:dashed 1px #cccccc;padding:10px}div.post-kicker{margin:0 0 5px 0}div.post-kicker a:link,div.post-kicker a:visited,div.post-kicker a:active{color:#000000;text-decoration:none;text-transform:uppercase}div.post-kicker a:hover{color:#cc0000}div.post-headline{}div.post-headline h1,div.post-headline h2{ margin:0; padding:0;padding:0;margin:0}div.post-headline er a:visited,div.post-kicker a:active{color:#000000;text-decoration:none;text-transform:uppercase}div.post-kicker a:hover{color:#cc0000}div.post-headlh2 a:link,div.post-headline h2 a:visited,div.post-headline h2 a:active,div.post-headline h1 a:link,div.post-headline h1 a:visited,div.post-headline h1 a:active{color:#666666;text-decoration:none}div.post-headline h2 a:hover,div.post-headline h1 a:hover{color:#000000;text-decoration:none}div.post-byline{margin:5px 0 10px 0}div.post-byline a:link,div.post-byline a:visited,div.post-byline a:active{}div.post-byline a:hover{}div.post-bodycopy{}div.post-bodycopy p{margin:1em 0;padding:0;display:block}div.post-pagination{}div.post-footer{clear:both;display:block;margin:0;padding:5px;background:#eeeeee;color:#666;line-height:18px}div.post-footer a:link,div.post-footer a:visited,div.post-footer a:active{color:#333;font-weight:normal;text-decoration:none}div.post-footer a:hover{color:#333;font-weight:normal;text-decoration:underline}div.post-kicker img,div.post-byline img,div.post-footer img{border:0;padding:0;margin:0 0 -1px 0;background:none}span.post-ratings{display:inline-block;width:auto;white-space:nowrap}div.navigation-top{margin:0 0 10px 0;padding:0 0 10px 0;border-bottom:dashed 1px #cccccc}div.navigation-middle{margin:10px 0 20px 0;padding:10px 0 10px 0;border-top:dashed 1px #cccccc;border-bottom:dashed 1px #cccccc}div.navigation-bottom{margin:20px 0 0 0;padding:10px 0 0 0;border-top:dashed 1px #cccccc}div.navigation-comments-above{margin:0 0 10px 0;padding:5le{margin:10px 0 20px 0;padding:10px 0 10px 0;border-top:dashed 1px #cccccc;border-bottom:dashed 1px #cccccc}div.navigation-bottom{margin:20px 0 0 0;ppx 0 5px 0}div.navigation-comments-below{margin:0 0 10px 0;padding:5px 0 5px 0}div.older{float:left;width:48%;text-align:left;margin:0;padding:0}div.newer{float:right;width:48%;text-align:right;margin:0;padding:0;}div.older-home{float:left;width:44%;text-align:left;margin:0;padding:0}div.newer-home{float:right;width:44%;text-align:right;margin:0;padding:0;}div.home{float:left;width:8%;text-align:center;margin:0;padding:0}form,.feedburner-email-form{margin:0;padding:0;}fieldset{border:1px solid #cccccc;width:auto;padding:0.35em 0.625em 0.75em;display:block;}legend{color:#000000;background:#f4f4f4;border:1px solid #cccccc;padding:2px 6px;margin-bottom:15px;}form p{margin:5px 0 0 0;padding:0;}div.xhtml-tags p{margin:0}label{margin-right:0.5em;font-family:arial;cursor:pointer;}input.text,input.textbox,input.password,input.file,input.TextField,textarea{padding:3px;color:#000000;border-top:solid 1px #333333;border-left:solid 1px #333333;border-right:solid 1px #999999;border-bottom:solid 1px #cccccc;background:url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/inputbackgr.gif) top left no-repeat}textarea{width:96%;}input.inputblur{color:#777777;width:95%}input.inputfocus{color:#000000;width:95%}input.highlight,textarea.highlight{background:#e8eff7;border-color:#37699f}.button,.Button,input[type=submit]{padding:0 2px;height:24px;line-height:16px;background-color:#777777;color:#ffffff;border:solid 2px #555555;font-weight:bold}input.buttonhover{padding:0 2px;cursor:pointer;background-color:#6b9c6b;color:#ffffff;border:solid 2px #496d49}form#commentform input#submit{ padding:0 .25em; overflow:visible}form#commentform input#submit[class]{width:auto}form#commentform input#submit{padding:4px 10px 4px 10px;font-size:1.2em;line-height:1.5em;height:36px}table.searchform{width:100%}table.searchform td.searchfield{padding:0;width:100%}table.searchform td.searchbutton{padding:0 0 0 5px}table.searchform td.searchbutton input{padding:0 0 0 5px}blockquote{height:1%;display:block;clear:both;color:#555555;padding:1em 1em;background:#f4f4f4;border:solid 1px #e1e1e1}blockquote blockquote{height:1%;display:block;clear:both;color:#444444;padding:1em 1em;background:#e1e1e1;border:solid 1px #d3d3d3}div.post table{border-collapse:collapse;margin:10px 0}div.post table caption{width:auto;margin:0 auto;background:#eeeeee;border:#999999;padding:4px 8px;color:#666666}div.post table th{background:#888888;color:#ffffff;font-weight:bold;font-size:90%;padding:4px 8px;border:solid 1px #ffffff;text-align:left}div.post table td{padding:4px 8px;background-color:#ffffff;border-bottom:1px solid #dddddd;text-align:left}div.post table tfoot td{}div.post table tr.alt td{background:#f4f4f4}div.post table tr.over td{background:#e2e2e2}#caid 1px #ffffff;text-align:left}div.post tablelendar_wrap{padding:0;border:none}table#wp-calendar{width:100%;font-size:90%;border-collapse:collapse;background-color:#ffffff;margin:0 auto}table#wp-calendar caption{width:auto;background:#eeeeee;border:none;;padding:3px;margin:0 auto;font-size:1em}table#wp-calendar th{border:solid 1px #eeeeee;background-color:#999999;color:#ffffff;font-weight:bold;padding:2px;text-align:center}table#wp-calendar td{padding:0;line-height:18px;background-color:#ffffff;border:1px solid #dddddd;text-align:center}table#wp-calendar tfoot td{border:solid 1px #eeeeee;background-color:#eeeeee}table#wp-calendar td a{display:block;background-color:#eeeeee;width:100%;height:100%;padding:0}div#respond{margin:25px 0;padding:25px;background:#eee;-moz-border-radius:8px;-khtml-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}p.thesetags{margin:10px 0}h3.reply,h3#reply-title{margin:0;padding:0 0 10px 0}ol.commentlist{margin:15px 0 25px 0;list-style-type:none;padding:0;display:block;border-top:dotted 1px #cccccc}ol.commentlist li{padding:15px 10px;display:block;height:1%;margin:0;background-color:#ffffff;border-bottom:dotted 1px #cccccc}ol.commentlist li.alt{display:block;height:1%;background-color:#eeeeee;border-bottom:dotted 1px #cccccc}ol.commentlist li.authorcomment{display:block;height:1%;background-color:#ffecec}ol.commentlist span.authorname{font-weight:bold;font-size:110%#cccccc}ol.commentlist li.alt{display:block;height:1%;background-color:#eeeeee;border-bottom:dotted 1px #cccccc}ol.commentlist li.authorcomment{displa}ol.commentlist span.commentdate{color:#666666;font-size:90%;margin-bottom:5px;display:block}ol.commentlist span.editcomment{display:block}ol.commentlist li p{margin:2px 0 5px 0}div.comment-number{float:right;font-size:2em;line-height:2em;font-family:georgia,serif;font-weight:bold;color:#ddd;margin:-10px 0 0 0;position:relative;height:1%}div.comment-number a:link,div.comment-number a:visited,div.comment-number a:active{color:#ccc}textarea#comment{width:98%;margin:10px 0;display:block}ul.commentlist{margin:15px 0 15px 0;list-style-type:none;padding:0;display:block;border-top:dotted 1px #cccccc}ul.commentlist ul{margin:0;border:none;list-style-type:none;padding:0}ul.commentlist li{padding:0; margin:0;display:block;clear:both;height:1%;}ul.commentlist ul.children li{ margin-left:30px}ul.commentlist div.comment-container{padding:10px;margin:0}ul.children div.comment-container{background-color:transparent;border:dotted 1px #ccc;padding:10px;margin:0 10px 8px 0; border-radius:5px}ul.children div.bypostauthor{}ul.commentlist li.thread-even{background-color:#ffffff;border-bottom:dotted 1px #cccccc}ul.commentlist li.thread-odd{background-color:#eeeeee;border-bottom:dotted 1px #cccccc}ul.commentlist div.bypostauthor{background-color:#ffecec}ul.children div.bypostauthor{border:dotted 1px #ffbfbf}ul.commentlist span.authorname{font-size:110%}div.comment-meta a:link,div.thread-odd{background-color:#eeeeee;border-bottom:dotted 1px #cccccc}ul.commentlist div.bypostauthor{background-color:#ffecec}ul.children div.bypostaucomment-meta a:visited,div.comment-meta a:active,div.comment-meta a:hover{font-weight:normal}div#cancel-comment-reply{margin:-5px 0 10px 0}div.comment-number{float:right;font-size:2em;line-height:2em;font-family:georgia,serif;font-weight:bold;color:#ddd;margin:-10px 0 0 0;position:relative;height:1%}div.comment-number a:link,div.comment-number a:visited,div.comment-number a:active{color:#ccc}.page-numbers{padding:2px 6px;border:solid 1px #000000;border-radius:6px}span.current{background:#ddd}a.prev,a.next{border:none}a.page-numbers:link,a.page-numbers:visited,a.page-numbers:active{text-decoration:none;color:#666666;border-color:#666666}a.page-numbers:hover{text-decoration:none;color:#CC0000;border-color:#CC0000}div.xhtml-tags{display:none}abbr em{border:none !important;border-top:dashed 1px #aaa !important;display:inline-block !important;background:url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/commentluv.gif) 0% 90% no-repeat;margin-top:8px;padding:5px 5px 2px 20px !important;font-style:normal}p.subscribe-to-comments{margin-bottom:10px}div#gsHeader{display:none;}div.g2_column{margin:0 !important;width:100% !important;font-size:1.2em}div#gsNavBar{border-top-width:0 !important}p.giDescription{font-size:1.2em;line-height:1 !important}p.giTitle{margin:0.3em 0 !important;font-size:1em;font-weight:normal;color:#666}div#wp-email img{borgin:0 !important;width:100% !important;font-size:1.2em}div#gsNavBar{border-top-width:0 !important}p.giDescription{font-size:1.2em;line-height:1 !imporder:0;padding:0}div#wp-email input,div#wp-email textarea{margin-top:5px;margin-bottom:2px}div#wp-email p{margin-bottom:10px}input#wp-email-submit{ padding:0; font-size:30px; height:50px; line-height:50px; overflow:visible;}img.WP-EmailIcon{ vertical-align:text-bottom !important}.tw-accordion .tw-widgettitle,.tw-accordion .tw-widgettitle:hover,.tw-accordion .tw-hovered,.tw-accordion .selected,.tw-accordion .selected:hover{ background:transparent !important; background-image:none !important}.tw-accordion .tw-widgettitle span{ padding-left:0 !important}.tw-accordion h3.tw-widgettitle{border-bottom:solid 1px #ccc}.tw-accordion h3.selected{border-bottom:none}td#left .without_title,td#right .without_title{ margin-top:0;margin-bottom:0}ul.tw-nav-list{border-bottom:solid 1px #999;display:block;margin-bottom:5px !important}td#left ul.tw-nav-list li,td#right ul.tw-nav-list li{padding:0 0 1px 0;margin:0 0 -1px 5px; border:solid 1px #ccc;border-bottom:none;border-radius:5px;border-bottom-right-radius:0;border-bottom-left-radius:0;background:#eee}td#left ul.tw-nav-list li.ui-tabs-selected,td#right ul.tw-nav-list li.ui-tabs-selected{ background:none;border:solid 1px #999;border-bottom:solid 1px #fff !important}ul.tw-nav-list li a:link,ul.tw-nav-list li a:visited,ul.tw-nav-list li a:active,ul.tw-nav-list li a:hover{padding:0 8px !important;background:none;border-left:none bs-selected{ background:none;border:solid 1px #999;border-bottom:solid 1px #fff !important}ul.tw-nav-list li a:link,ul.tw-nav-list li a:visited,ul.tw-!important;outline:none}td#left ul.tw-nav-list li.ui-tabs-selected a,td#left li.ui-tabs-selected a:hover,td#right ul.tw-nav-list li.ui-tabs-selected a,td#right li.ui-tabs-selected a:hover{ color:#000000; text-decoration:none;font-weight:bold;background:none !important;outline:none}td#left .ui-tabs-panel,td#right .ui-tabs-panel{ margin:0; padding:0}img{border:0}#dbem-location-map img{ background:none !important}.post img{padding:5px;border:solid 1px #dddddd;background-color:#f3f3f3;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px}.post img.size-full{max-width:96%;width:auto;margin:5px 0 5px 0}div.post img[class~=size-full]{height:auto;}.post img.alignleft{float:left;margin:10px 10px 5px 0;}.post img.alignright{float:right;margin:10px 0 5px 10px;}.post img.aligncenter{display:block;margin:10px auto}.aligncenter,div.aligncenter{ display:block; margin-left:auto; margin-right:auto}.alignleft,div.alignleft{float:left;margin:10px 10px 5px 0}.alignright,div.alignright{ float:right; margin:10px 0 5px 10px}div.archives-page img{border:0;padding:0;background:none;margin-bottom:0;vertical-align:-10%}.wp-caption{max-width:96%;width:auto 100%;height:auto;display:block;border:1px solid #dddddd;text-align:center;background-color:#f3f3f3;padding-top:4px;margin:10px 0 0 0;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border:0;vertical-align:-10%}.wp-caption{max-width:96%;width:auto 100%;height:auto;display:block;border:1px solid #dddddd;text-align:center;background-color-radius:3px;border-radius:3px}* html .wp-caption{height:100%;}.wp-caption img{ margin:0 !important; padding:0 !important; border:0 none !important}.wp-caption p.wp-caption-text{font-size:0.8em;line-height:13px;padding:2px 4px 5px;margin:0;color:#666666}img.wp-post-image{float:left;border:0;padding:0;background:none;margin:0 10px 5px 0}img.wp-smiley{ float:none;border:none !important;margin:0 1px -1px 1px;padding:0 !important;background:none !important}img.avatar{float:left;display:block;margin:0 8px 1px 0;padding:3px;border:solid 1px #ddd;background-color:#f3f3f3;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px}#comment_quicktags{text-align:left;padding:10px 0 2px 0;display:block}#comment_quicktags input.ed_button{background:#f4f4f4;border:2px solid #cccccc;color:#444444;margin:2px 4px 2px 0;width:auto;padding:0 4px;height:24px;line-height:16px}#comment_quicktags input.ed_button_hover{background:#dddddd;border:2px solid #666666;color:#000000;margin:2px 4px 2px 0;width:auto;padding:0 4px;height:24px;line-height:16px;cursor:pointer}#comment_quicktags #ed_strong{font-weight:bold}#comment_quicktags #ed_em{font-style:italic}@media print{body{background:white;color:black;margin:0;font-size:10pt !important;font-family:arial,sans-serif;}div.post-footer{line-height:normal !important;color:#555 !important;font-size:9pt !imporeight:bold}#comment_quicktags #ed_em{font-style:italic}@media print{body{background:white;color:black;margin:0;font-size:10pt !important;font-family:atant}a:link,a:visited,a:active,a:hover{text-decoration:underline !important;color:#000}h2{color:#000;font-size:14pt !important;font-weight:normal !important}h3{color:#000;font-size:12pt !important;}#header,#footer,.colone,.colone-inner,.colthree-inner,.colthree,.navigation,.navigation-top,.navigation-middle,.navigation-bottom,.wp-pagenavi-navigation,#comment,#respond,.remove-for-print{display:none}td#left,td#right,td#left-inner,td#right-inner{width:0;display:none}td#middle{width:100% !important;display:block}*:lang(en) td#left{ display:none}*:lang(en) td#right{ display:none}*:lang(en) td#left-inner{ display:none}*:lang(en) td#right-inner{ display:none}td#left:empty{ display:none}td#right:empty{ display:none}td#left-inner:empty{ display:none}td#right-inner:empty{ display:none}}ul.rMenu,ul.rMenu ul,ul.rMenu li,ul.rMenu a{display:block;margin:0;padding:0}ul.rMenu,ul.rMenu li,ul.rMenu ul{list-style:none}ul.rMenu ul{display:none}ul.rMenu li{position:relative;z-index:1}ul.rMenu li:hover{z-index:999}ul.rMenu li:hover > ul{display:block;position:absolute}ul.rMenu li:hover{background-position:0 0} ul.rMenu-hor li{float:left;width:auto}ul.rMenu-hRight li{float:right}ul.sub-menu li,ul.rMenu-ver li{float:none}div#menu1 ul.sub-menu,div#menu1 ul.sub-menu ul,div#menu1 ul.rMenu-ver,div#menu1 ul.rMenu-ver ul{width:11em}div#menu2 ul.sub-menu,div#menu2 ul.sub-menu ul,div#menu2at:left;width:auto}ul.rMenu-hRight li{float:right}ul.sub-menu li,ul.rMenu-ver li{float:none}div#menu1 ul.sub-menu,div#menu1 ul.sub-menu ul,div#menu1 u ul.rMenu-ver,div#menu2 ul.rMenu-ver ul{width:11em}ul.rMenu-wide{width:100%}ul.rMenu-vRight{float:right}ul.rMenu-lFloat{float:left}ul.rMenu-noFloat{float:none}div.rMenu-center ul.rMenu{float:left;position:relative;left:50%}div.rMenu-center ul.rMenu li{position:relative;left:-50%}div.rMenu-center ul.rMenu li li{left:auto}ul.rMenu-hor ul{top:auto;right:auto;left:auto;margin-top:-1px}ul.rMenu-hor ul ul{margin-top:0;margin-left:0px}ul.sub-menu ul,ul.rMenu-ver ul{left:100%;right:auto;top:auto;top:0}ul.rMenu-vRight ul,ul.rMenu-hRight ul.sub-menu ul,ul.rMenu-hRight ul.rMenu-ver ul{left:-100%;right:auto;top:auto}ul.rMenu-hRight ul{left:auto;right:0;top:auto;margin-top:-1px}div#menu1 ul.rMenu{background:#FFFFFF;border:dashed 1px #cccccc}div#menu2 ul.rMenu{background:#777777;border:solid 1px #000000}div#menu1 ul.rMenu li a{border:dashed 1px #cccccc}div#menu2 ul.rMenu li a{border:solid 1px #000000}ul.rMenu-hor li{margin-bottom:-1px;margin-top:-1px;margin-left:-1px}ul#rmenu li{}ul#rmenu li ul li{}ul.rMenu-hor{padding-left:1px }ul.sub-menu li,ul.rMenu-ver li{margin-left:0;margin-top:-1px; }div#menu1 ul.sub-menu,div#menu1 ul.rMenu-ver{border-top:dashed 1px #cccccc}div#menu2 ul.sub-menu,div#menu2 ul.rMenu-ver{border-top:solid 1px #000000}div#menu1 ul.rMenu li a{padding:4px 5px}div#menu2 ul.rMenu li a{padding:4px 5px}div#menu1 ul.rMenu li a:link,div#menu1 ul.rMenu li a:hove ul.rMenu-ver{border-top:dashed 1px #cccccc}div#menu2 ul.sub-menu,div#menu2 ul.rMenu-ver{border-top:solid 1px #000000}div#menu1 ul.rMenu li a{padding:r,div#menu1 ul.rMenu li a:visited,div#menu1 ul.rMenu li a:active{text-decoration:none;margin:0;color:#777777;text-transform:uppercase;font:11px Arial,Verdana,sans-serif;}div#menu2 ul.rMenu li a:link,div#menu2 ul.rMenu li a:hover,div#menu2 ul.rMenu li a:visited,div#menu2 ul.rMenu li a:active{text-decoration:none;margin:0;color:#FFFFFF;text-transform:uppercase;font:11px Arial,Verdana,sans-serif;}div#menu1 ul.rMenu li{background-color:#FFFFFF}div#menu2 ul.rMenu li{background-color:#777777}div#menu1 ul.rMenu li:hover,div#menu1 ul.rMenu li.sfhover{background:#DDDDDD}div#menu2 ul.rMenu li:hover,div#menu2 ul.rMenu li.sfhover{background:#000000}div#menu1 ul.rMenu li.current-menu-item > a:link,div#menu1 ul.rMenu li.current-menu-item > a:active,div#menu1 ul.rMenu li.current-menu-item > a:hover,div#menu1 ul.rMenu li.current-menu-item > a:visited,div#menu1 ul.rMenu li.current_page_item > a:link,div#menu1 ul.rMenu li.current_page_item > a:active,div#menu1 ul.rMenu li.current_page_item > a:hover,div#menu1 ul.rMenu li.current_page_item > a:visited{background-color:#EEEEEE;color:#000000}div#menu1 ul.rMenu li.current-menu-item a:link,div#menu1 ul.rMenu li.current-menu-item a:active,div#menu1 ul.rMenu li.current-menu-item a:hover,div#menu1 ul.rMenu li.current-menu-item a:visited,div#menu1 ul.rMenu li.current_page_item a:link,div#menu1 ul.rMenu li.current_page_item a:active,diem a:link,div#menu1 ul.rMenu li.current-menu-item a:active,div#menu1 ul.rMenu li.current-menu-item a:hover,div#menu1 ul.rMenu li.current-menu-item a:vv#menu1 ul.rMenu li.current_page_item a:hover,div#menu1 ul.rMenu li.current_page_item a:visited,div#menu1 ul.rMenu li a:hover{background-color:#EEEEEE;color:#000000}div#menu2 ul.rMenu li.current-menu-item > a:link,div#menu2 ul.rMenu li.current-menu-item > a:active,div#menu2 ul.rMenu li.current-menu-item > a:hover,div#menu2 ul.rMenu li.current-menu-item > a:visited,div#menu2 ul.rMenu li.current-cat > a:link,div#menu2 ul.rMenu li.current-cat > a:active,div#menu2 ul.rMenu li.current-cat > a:hover,div#menu2 ul.rMenu li.current-cat > a:visited{background-color:#CC0000;color:#FFFFFF}div#menu2 ul.rMenu li.current-menu-item a:link,div#menu2 ul.rMenu li.current-menu-item a:active,div#menu2 ul.rMenu li.current-menu-item a:hover,div#menu2 ul.rMenu li.current-menu-item a:visited,div#menu2 ul.rMenu li.current-cat a:link,div#menu2 ul.rMenu li.current-cat a:active,div#menu2 ul.rMenu li.current-cat a:hover,div#menu2 ul.rMenu li.current-cat a:visited,div#menu2 ul.rMenu li a:hover{background-color:#CC0000;color:#FFFFFF}div#menu1 ul.rMenu li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.r li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a{padding-right:15px;padding-left:5px;background-repeat:no-repeat;background-position:100% 50%;background-image:url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/expand-right.gif)}div#menu2 ul.rMenu li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a{padding-right:15px;padding-left:5px;background-repeat:no-repeat;background-position:100% 50%;background-image:url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/expand-right-white.gif)}ul.rMenu-vRight li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenand li.rMenu-expand li.rMenu-expand li.rMenu-u-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-vRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.nu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-erMenu-expand li.rMenu-expand a,ul.rMenu-hRight li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand a{padding-right:5px;padding-left:20px;background-image:url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/expand-left.gif);background-repeat:no-repeat;background-position:-5px 50%}div#menu1 ul.rMenu-hor li.rMenu-expand a{padding-left:5px;padding-right:15px !important;background-position:100% 50%;background-image:url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/expand-down.gif)}div#menu2 ul.rMenu-hor li.rMenu-expand a{padding-left:5px;padding-right:15px !important;background-position:100% 50%;background-image:url(http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/expand-down-white.gif)}div#menu1 ul.rMenu li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a{background-image:none;padding-right:5px;padding-left:5px}div#menu2 ul.rMenu li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li div#menu1 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a{background-image:none;padding-right:5px;paddina,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a,div#menu2 ul.rMenu li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li.rMenu-expand li a{background-image:none;padding-right:5px;padding-left:5px}* html ul.rMenu{display:inline-block;display:block;position:relative;position:static}* html ul.rMenu ul{float:left;float:none}ul.rMenu ul{background-color:#fff}* html ul.sub-menu li,* html ul.rMenu-ver li,* html ul.rMenu-hor li ul.sub-menu li,* html ul.rMenu-hor li ul.rMenu-ver li{width:100%;float:left;clear:left}*:first-child+html ul.sub-menu > li:hover ul,*:first-child+html ul.rMenu-ver > li:hover ul{min-width:0}ul.rMenu li a{position:relative;min-width:0}* html ul.rMenu-hor li{width:6em;width:auto}* html div.rMenu-center{position:relative;z-index:1}html:not([lang*=""]) div.rMenu-center ul.rMenu li a:hover{height:100%}html:not([lang*=""]) div.rMenu-center ul.rMenu li a:hover{height:auto}* html ul.rMenu ul{display:block;position:absolute}* html ul.rMenu ul,* html ul.rMenu-hor ul,* html ul.sub-menu ul,* html ul.rMenu-ver ul,* html ul.rMenu-vRight ul,* html ul.rMenu-hRight ul.sub-menu ul,* html ul.rMenu-hRight ul.rMenu-ver ul,* html ul.rMenu-hRight ul{left:-10000px}* html ul.rMenu li.sfhover{z-index:999}* html ul.rMenu li.sfhover ul{left:autoub-menu ul,* html ul.rMenu-ver ul,* html ul.rMenu-vRight ul,* html ul.rMenu-hRight ul.sub-menu ul,* html ul.rMenu-hRight ul.rMenu-ver ul,* html ul.rMe}* html ul.rMenu li.sfhover ul ul,* html ul.rMenu li.sfhover ul ul ul{display:none}* html ul.rMenu li.sfhover ul,* html ul.rMenu li li.sfhover ul,* html ul.rMenu li li li.sfhover ul{display:block}* html ul.sub-menu li.sfhover ul,* html ul.rMenu-ver li.sfhover ul{left:60%}* html ul.rMenu-vRight li.sfhover ul,* html ul.rMenu-hRight ul.sub-menu li.sfhover ul* html ul.rMenu-hRight ul.rMenu-ver li.sfhover ul{left:-60%}* html ul.rMenu iframe{position:absolute;left:0;top:0;z-index:-1}* html ul.rMenu{margin-left:1px}* html ul.rMenu ul,* html ul.rMenu ul ul,* html ul.rMenu ul ul ul,* html ul.rMenu ul ul ul ul{margin-left:0}.clearfix:after{ content:".";display:block;height:0;clear:both;visibility:hidden}.clearfix{min-width:0;display:inline-block;display:block}* html .clearfix{height:1%;}.clearboth{clear:both;height:1%;font-size:1%;line-height:1%;display:block;padding:0;margin:0}h1{font-size:34px;line-height:1.2;margin:0.3em 0 10px;}h2{font-size:28px;line-height:1.3;margin:1em 0 .2em;}h3{font-size:24px;line-height:1.3;margin:1em 0 .2em;}h4{font-size:19px;margin:1.33em 0 .2em;}h5{font-size:1.3em;margin:1.67em 0;font-weight:bold;}h6{font-size:1.15em;margin:1.67em 0;font-weight:bold;}</style>
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+/* JQUERY */
+jQuery(document).ready(function(){ 
+    
+   
+  
+
+	/* jQuery('ul#rmenu').superfish(); */
+	/* jQuery('ul#rmenu')ght:bold;}h6{font-size:1.15em;margin:1.67em 0;font-weight:bold;}</style>
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+/* JQUERY */
+jQuery(docu.superfish().find('ul').bgIframe({opacity:false}); */
+ 
+	/* For IE6 */
+	if (jQuery.browser.msie && /MSIE 6\.0/i.test(window.navigator.userAgent) && !/MSIE 7\.0/i.test(window.navigator.userAgent) && !/MSIE 8\.0/i.test(window.navigator.userAgent)) {
+
+		/* Max-width for images in IE6 */		
+		var centerwidth = jQuery("td#middle").width(); 
+		
+		/* Images without caption */
+		jQuery(".post img").each(function() { 
+			var maxwidth = centerwidth - 10 + 'px';
+			var imgwidth = jQuery(this).width(); 
+			var imgheight = jQuery(this).height(); 
+			var newimgheight = (centerwidth / imgwidth * imgheight) + 'px';	
+			if (imgwidth > centerwidth) { 
+				jQuery(this).css({width: maxwidth}); 
+				jQuery(this).css({height: newimgheight}); 
+			}
+		});
+		
+		/* Images with caption */
+		jQuery("div.wp-caption").each(function() { 
+			var captionwidth = jQuery(this).width(); 
+			var maxcaptionwidth = centerwidth + 'px';
+			var captionheight = jQuery(this).height();
+			var captionimgwidth =  jQuery("div.wp-caption img").width();
+			var captionimgheight =  jQuery("div.wp-caption img").height();
+			if (captionwidth > centerwidth) { 
+				jQuery(this).css({width: maxcaptionwidth}); 
+				var newcaptionheight = (centerwidth / captionwidth * captionheight) + 'px';
+				var newcaptionimgheight = (centerwidth / captionimgwidth * captionimgheight) + 'px';
+				jQuerwidth > centerwidth) { 
+				jQuery(this).css({width: maxcaptionwidth}); 
+				var newcaptionheight = (centerwidth / captionwidth * captionheight) + 'y(this).css({height: newcaptionheight}); 
+				jQuery("div.wp-caption img").css({height: newcaptionimgheight}); 
+				}
+		});
+		
+		/* sfhover for LI:HOVER support in IE6: */
+		jQuery("ul li").
+			hover( function() {
+					jQuery(this).addClass("sfhover")
+				}, 
+				function() {
+					jQuery(this).removeClass("sfhover")
+				} 
+			); 
+
+	/* End IE6 */
+	}
+	
+	
+	
+	/* Since 3.7.8: Auto resize videos (embed and iframe elements) 
+	TODO: Parse parent's dimensions only once per layout column, not per video
+	*/
+	function bfa_resize_video() {
+		jQuery('embed, iframe').each( function() {
+			var video = jQuery(this),
+			videoWidth = video.attr('width'); // use the attr here, not width() or css()
+			videoParent = video.parent(),
+			videoParentWidth = parseFloat( videoParent.css( 'width' ) ),
+			videoParentBorder = parseFloat( videoParent.css( 'border-left-width' ) ) 
+										+  parseFloat( videoParent.css( 'border-right-width' ) ),
+			videoParentPadding = parseFloat( videoParent.css( 'padding-left' ) ) 
+										+  parseFloat( videoParent.css( 'padding-right' ) ),
+			maxWidth = videoParentWidth - videoParentBorder - videoParentPadding;
+
+			if( videoWidth > maxWidth ) {
+				var videoHeight = video.attr('height'),
+				videoMaxHeight = ( maxWidth / videoWidth * videoHeight );
+				video.attr({ width: maxWidth, height: videoMaxHeight });
+		dth - videoParentBorder - videoParentPadding;
+
+			if( videoWidth > maxWidth ) {
+				var videoHeight = video.attr('height'),
+				videoMaxHeight = (	} 
+
+		});	
+	}
+	bfa_resize_video();
+	jQuery(window).resize( bfa_resize_video );
+
+		
+	jQuery(".post table tr").
+		mouseover(function() {
+			jQuery(this).addClass("over");
+		}).
+		mouseout(function() {
+			jQuery(this).removeClass("over");
+		});
+
+	
+	jQuery(".post table tr:even").
+		addClass("alt");
+
+	
+	jQuery("input.text, input.TextField, input.file, input.password, textarea").
+		focus(function () {  
+			jQuery(this).addClass("highlight"); 
+		}).
+		blur(function () { 
+			jQuery(this).removeClass("highlight"); 
+		})
+	
+	jQuery("input.inputblur").
+		focus(function () {  
+			jQuery(this).addClass("inputfocus"); 
+		}).
+		blur(function () { 
+			jQuery(this).removeClass("inputfocus"); 
+		})
+
+		
+
+	
+	jQuery("input.button, input.Button, input#submit").
+		mouseover(function() {
+			jQuery(this).addClass("buttonhover");
+		}).
+		mouseout(function() {
+			jQuery(this).removeClass("buttonhover");
+		});
+
+	/* toggle "you can use these xhtml tags" */
+	jQuery("a.xhtmltags").
+		click(function(){ 
+			jQuery("div.xhtml-tags").slideToggle(300); 
+		});
+
+	/* For the Tabbed Widgets plugin: */
+	jQuery("ul.tw-nav-list").
+		addClass("clearfix");
+
+		
+	
+});
+
+//]]>
+</script>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+<body class="home blog category-gin: */
+	jQuery("ul.tw-nav-list").
+		addClass("clearfix");
+
+		
+	
+});
+
+//]]>
+</script>
+	<style type="text/css">.recentcomments a{display:inlinhiv">
+
+<div id="wrapper">
+<div id="container">
+<table id="layout" border="0" cellspacing="0" cellpadding="0">
+<colgroup>
+<col class="colone" /><col class="coltwo" />
+<col class="colthree" /></colgroup> 
+
+
+	<tr>
+
+		<!-- Header -->
+		<td id="header" colspan="3">
+
+		<div id="menu1" class="menu-top-menu-container"><ul id="rmenu2" class="clearfix rMenu-hor rMenu"><li id="menu-item-56"  class="rMenu-expand menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-56"><a href="http://www.hivvaccineenterprise.org/node/7"><span>about</span></a>
+<ul class="rMenu-ver sub-menu">
+	<li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59"><a href="http://www.hivvaccineenterprise.org/content/executive-directors-message"><span>Executive Director&#8217;s Message</span></a></li>
+	<li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="http://www.hivvaccineenterprise.org/content/history-of-the-global-hiv-vaccine-enterprise"><span>History</span></a></li>
+	<li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="http://www.hivvaccineenterprise.org/content/enterprise-stakeholders"><span>Enterprise stakeholders</span></a></li>
+	<li id="menu-item-67" class="menu-item menu-item-type-custom menu-iem menu-item-type-custom menu-item-object-custom menu-item-64"><a href="http://www.hivvaccineenterprise.org/content/enterprise-stakeholders"><span>Enttem-object-custom menu-item-67"><a href="http://www.hivvaccineenterprise.org/content/governance"><span>Governance</span></a></li>
+	<li id="menu-item-70" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70"><a href="http://www.hivvaccineenterprise.org/content/enterprise-secretariat"><span>Enterprise Secretariat</span></a></li>
+</ul>
+</li>
+<li id="menu-item-75" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a href="http://www.hivvaccineenterprise.org/content/hiv-vaccine-state-of-the-field"><span>State of the Field</span></a></li>
+<li id="menu-item-76"  class="rMenu-expand menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a href="http://www.hivvaccineenterprise.org/content/scientific-strategic-plan"><span>Scientific Strategic Plan</span></a>
+<ul class="rMenu-ver sub-menu">
+	<li id="menu-item-77" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77"><a href="http://www.hivvaccineenterprise.org/content/immunogens-and-antigen-processing"><span>Immunogens</span></a></li>
+	<li id="menu-item-78" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-78"><a href="http://www.hivvaccineenterprise.org/content/host-genetics-and-hiv-diversity"><span>Host Genetics</span></a></li>
+	<li id="menu-item-79" class="menu-item menu-item-type-culass="menu-item menu-item-type-custom menu-item-object-custom menu-item-78"><a href="http://www.hivvaccineenterprise.org/content/host-genetics-and-hivstom menu-item-object-custom menu-item-79"><a href="http://www.hivvaccineenterprise.org/content/novel-approaches-to-hiv-vaccine-research-development"><span>Novel Approaches</span></a></li>
+	<li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a href="http://www.hivvaccineenterprise.org/content/bridging-the-gaps-between-fundamental-preclinical-and-clinical-research"><span>Bridging the Gaps</span></a></li>
+	<li id="menu-item-81" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-81"><a href="http://www.hivvaccineenterprise.org/content/young-and-early-career-investigators-yeci"><span>yeci</span></a></li>
+</ul>
+</li>
+<li id="menu-item-123"  class="rMenu-expand menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-123"><a href="http://www.hivvaccineenterprise.org/content/support-the-global-hiv-vaccine"><span>advacates</span></a>
+<ul class="rMenu-ver sub-menu">
+	<li id="menu-item-122" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-122"><a href="http://www.hivvaccineenterprise.org/content/achieving-vision"><span>Get Involved</span></a></li>
+</ul>
+</li>
+<li id="menu-item-126"  class="rMenu-expand menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-126"><a href="http://www.hivvaccineenterprise.org/contet/achieving-vision"><span>Get Involved</span></a></li>
+</ul>
+</li>
+<li id="menu-item-126"  class="rMenu-expand menu-item menu-item-type-custom menu-itnt/meetings"><span>Meeting</span></a>
+<ul class="rMenu-ver sub-menu">
+	<li id="menu-item-129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-129"><a href="http://www.hivvaccineenterprise.org/content/aids-vaccine-conferences"><span>AIDS Vaccine Conferences</span></a></li>
+	<li id="menu-item-132" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-132"><a href="http://www.hivvaccineenterprise.org/content/conference-archives"><span>Conference Archives</span></a></li>
+	<li id="menu-item-139" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-139"><a href="http://www.hivvaccineenterprise.org/content/aids-walk-new-york-2010"><span>AIDS Walk New York 2010</span></a></li>
+	<li id="menu-item-142" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-142"><a href="http://www.hivvaccineenterprise.org/content/future-utility-of-rv144"><span>Future Utility of RV144</span></a></li>
+	<li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145"><a href="http://www.hivvaccineenterprise.org/content/nyas-hiv-aids-vaccines"><span>NYAS: HIV / AIDS Vaccines</span></a></li>
+</ul>
+</li>
+<li id="menu-item-178" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-178"><a href="http://www.haswifi.com/overstock-coupon-code.html"><span>overstas-hiv-aids-vaccines"><span>NYAS: HIV / AIDS Vaccines</span></a></li>
+</ul>
+</li>
+<li id="menu-item-178" class="menu-item menu-item-type-custom menu-iock coupon</span></a></li>
+<li id="menu-item-183" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183"><a href="http://www.haswifi.com/medifast-coupons.html"><span>medifast coupons</span></a></li>
+<li id="menu-item-192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192"><a href="http://free-coupon.com/"><span>best buy coupon code</span></a></li>
+<li id="menu-item-194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-194"><a href="http://www.getnymilk.com/eset-nod32-promo-codes/"><span>eset promo code</span></a></li>
+</ul></div> <table id="logoarea" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td rowspan="2" valign="middle" class="logoarea-logo"><a href="http://www.hivvaccineenterprise.org/"><img class="logo" src="http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/logo.png" alt="Welcome! | Global HIV Vaccine Enterprise" /></a></td><td rowspan="2" valign="middle" class="logoarea-title"><h1 class="blogtitle"><a href="http://www.hivvaccineenterprise.org/">Welcome! | Global HIV Vaccine Enterprise</a></h1><p class="tagline"></p></td><td class="feed-icons" valign="middle" align="right"><div class="clearfix rss-box"><a class="comments-icon" href="http://www.hivvaccineenterprise.org/comments/feed" title="Subscribe to the COMMENTS feed">Comments</a><a class="posts-icon" href="http://www.hivvaccineenterprise.org/feed" title="Subscribe to the POSTS feed">Posts</a></div></td></tr><tr><td valign="bottom" class="search-box" align="right"><div class="searchbox">
+					<form method="get" class="searchform" action="http://www.hivvaccineenterprise.org/">
+					<div class="searchbox-form"><input type="text" class="text inputblur" onfocus="this.value=''" 
+						value="" onblur="this.value=''" name="s" /></div>
+					</form>
+				</div>
+				</td></tr></table> <div class="horbar1">&nbsp;</div> <div id="imagecontainer-pre" class="header-image-container-pre">    <div id="imagecontainer" class="header-image-container" style="background: url('http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/header/1-IMG_1479.jpg') top center no-repeat;"></div><div class="codeoverlay"></div><div class="opacityleft">&nbsp;</div><div class="opacityright">&nbsp;</div></div> <div class="horbar2">&nbsp;</div>
+		</td>
+		<!-- / Header -->
+
+	</tr>
+	<!-- Main Body -->	
+	<tr id="bodyrow">
+
+				<!-- Left Sidebar -->
+		<td id="left">
+
+			<div id="search-2" class="widget widget_search"><form method="get" class="searchform" action="http://www.hivvaccineenterprise.org/">
+<table class="searchform" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="searchfield">
+<input type="text" class="text inputblur" value="" nadget_search"><form method="get" class="searchme="s" />
+</td>
+<td class="searchbutton">
+<input name="submit" value="Search" type="image" src="http://www.hivvaccineenterprise.org/wp-content/themes/atahualpa/images/magnifier2-gray.gif" style="display: block; border:none; padding: 0 0 0 5px; margin: 0;" />
+</td>
+</tr></table>
+</form></div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<div class="widget-title"><h3>Recent Posts</h3></div>		<ul>
+					<li>
+				<a href="http://www.hivvaccineenterprise.org/coupons/lids-coupons-dont-squander-another-cent-begin-to-use-vouchers-nowadays">lids coupons &#8211; Don&#8217;t Squander Another Cent: Begin To Use Vouchers Nowadays!</a>
+						</li>
+					<li>
+				<a href="http://www.hivvaccineenterprise.org/coupons/overstock-coupon-extremely-approaches-to-spend-less-with-outstanding-promotion-ideas">overstock coupon &#8211; Extremely Approaches To Spend Less With Outstanding Promotion Ideas</a>
+						</li>
+					<li>
+				<a href="http://www.hivvaccineenterprise.org/coupons/hotels-com-coupon-the-very-best-promotion-advice-you-could-discover">hotels.com Coupon &#8211; The Very Best Promotion Advice You Could Discover</a>
+						</li>
+					<li>
+				<a href="http://www.hivvaccineenterprise.org/coupons/best-buy-coupons-advice-on-spending-less-with-coupons">best buy coupons &#8211; Advice On Spending Less With Coupons</a>
+						</li>
+					<li>
+				<a href=" Could Discover</a>
+						</li>
+					<li>
+				<a href="http://www.hivvaccineenterprise.org/coupons/best-buy-coupons-advice-on-spending-less-with-coupohttp://www.hivvaccineenterprise.org/content/nyas-hiv-aids-vaccines">NYAS: HIV / AIDS Vaccines</a>
+						</li>
+				</ul>
+		</div><div id="recent-comments-2" class="widget widget_recent_comments"><div class="widget-title"><h3>Recent Comments</h3></div><ul id="recentcomments"></ul></div><div id="archives-2" class="widget widget_archive"><div class="widget-title"><h3>Archives</h3></div>		<ul>
+	<li><a href='http://www.hivvaccineenterprise.org/2014/09'>September 2014</a></li>
+		</ul>
+</div><div id="categories-2" class="widget widget_categories"><div class="widget-title"><h3>Categories</h3></div>		<ul>
+	<li class="cat-item cat-item-8"><a href="http://www.hivvaccineenterprise.org/category/conference_archive/2009" >2009</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://www.hivvaccineenterprise.org/category/conference/2011" >2011</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://www.hivvaccineenterprise.org/category/category" >category</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.hivvaccineenterprise.org/category/conference" >conference</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.hivvaccineenterprise.org/category/conference_archive" >conference_archive</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.hivvaccineenterprise.org/category/content" >content</a>
+</li>
+	<li class="cat-item cat-item-12"><a h href="http://www.hivvaccineenterprise.org/category/conference_archive" >conference_archive</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http:/ref="http://www.hivvaccineenterprise.org/category/coupons" >coupons</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://www.hivvaccineenterprise.org/category/hiv" >hiv</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.hivvaccineenterprise.org/category/node" >node</a>
+</li>
+		</ul>
+</div><div id="meta-2" class="widget widget_meta"><div class="widget-title"><h3>Meta</h3></div>			<ul>
+						<li><a href="http://www.hivvaccineenterprise.org/wp-login.php">Log in</a></li>
+			<li><a href="http://www.hivvaccineenterprise.org/feed">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.hivvaccineenterprise.org/comments/feed">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</div>
+		</td>
+		<!-- / Left Sidebar -->
+		
+				
+
+		<!-- Main Column -->
+		<td id="middle">
+
+    
+		
+		
+								<div class="post-5 post type-post status-publish format-standard sticky hentry category-hiv odd" id="post-5">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/hiv/the-global-hiv-vaccine-enterprise-the-enterprise" rel="bookmark" title="Permanent Link to The Global HIV Vaccine Enterprise (the Enterprise)">
+				T" id="post-5">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/hiv/the-global-hiv-vaccine-enterprise-the-enterphe Global HIV Vaccine Enterprise (the Enterprise)</a></h2></div>				<div class="post-bodycopy clearfix"><p><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/2010-conference-logo.jpg"><img class="alignnone size-full wp-image-6" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/2010-conference-logo.jpg" alt="2010-conference-logo" width="240" height="241" /></a></p>
+<p>The Global HIV Vaccine Enterprise (the Enterprise) is a unique alliance of independent organizations around the world dedicated to accelerating the development of a preventive HIV vaccine. The Enterprise will put forward a Scientific Strategic Plan for HIV vaccine research and development in 2010. Five working groups involving more than 100 scientists from around the world have been convened under the Enterprise to put forward recommendations for investment of finances and resources to further the field and the <a href="http://www.hivvaccineenterprise.org/node/7">Enterprise&#8217;s mission</a>. These recommendations will inform the <a href="http://www.hivvaccineenterprise.org/content/scientific-strategic-plan">2010 Scientific Strategic Plan</a>.</p>
+<p>&nbsp;</p>
+<p><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/work-group-01.jpg"><img class="alignnone size-full wp-image-7" src="http://www.hivvaccineenterprise.org/wp-content/uploadlan">2010 Scientific Strategic Plan</a>.</p>
+<p>&nbsp;</p>
+<p><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/work-group-01.jpgs/2014/09/work-group-01.jpg" alt="work-group-01" width="166" height="214" /></a><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/work-group-02.jpg"><img class="alignnone size-full wp-image-8" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/work-group-02.jpg" alt="work-group-02" width="167" height="214" /></a><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/work-group-03.jpg"><img class="alignnone size-full wp-image-9" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/work-group-03.jpg" alt="work-group-03" width="166" height="214" /></a><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/work-group-04.jpg"><img class="alignnone size-full wp-image-10" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/work-group-04.jpg" alt="work-group-04" width="167" height="214" /></a><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/work-group-05.jpg"><img class="alignnone size-full wp-image-11" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/work-group-05.jpg" alt="work-group-05" width="162" height="214" /></a></p>
+<div id="home_history_title"><strong>HISTORY of the SCIENTIFIC STRATEGIC PLAN</strong></div>
+<div id="home_history">In the February 2005 issue of Public Library of Science (PLoS) &#8211; Medicine, the Enterprise published a scientific strategic plan for accelerating HIV vaccine research. The Plan described the major challenges facing the field at that time and made recommendations in six priority areas<a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/history-of-the-plan.jpg"><img class="alignnone size-full wp-image-12" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/history-of-the-plan.jpg" alt="history-of-the-plan" width="94" height="121" /></a></div>
+<div>
+<ul>
+<li>Vaccine discovery</li>
+<li>Laboratory standardization</li>
+<li>Product development &amp; manufacturing</li>
+<li>Clinical trials capacity</li>
+<li>Intellectual property issues</li>
+<li>Regulatory considerations</li>
+</ul>
+<p>The 2005 Plan catalyzed major, new activities and funding commitments of a number of government and non-government organizations. It also led to the creation of new research structures and new ways of collaborating on a global scale.</p>
+<p><a href="http://www.hivvaccineenterprise.org/content/2005-scientific-strategic-plan">Learn More..</a></p>
+<p><strong>STAKEHOLDER ORGANIZATIONS</strong></p>
+<p><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/stakeholder-orgs.gif"><img class="alignnone size-medium wp-image-13" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/stakeholder-orgs-300x169.gif" alt="stakeholder-orgs" width="300" height="169" /></a></p>
+<div id="home_middle_panel">
+<div id="home_stakeholder_panel">The Enterprise is a unique alliance of organizations that has the convening power to bring together an inclusive global alliance of top researchers, funders, advocacy groups, and stakeholders to catalyze fresh thinking, set new directions and advance global cooperation to develop an HIV vaccine.</div>
+<div></div>
+</div>
+<div id="front_news_section">
+<div id="front_news_title">ENTERPRISE NEWS</div>
+<div>Top 10 lessons learned from HIV vaccine trials presented at M2010 &#8211; May 26, 2010<br />
+New Commercial BioScience Center Planned for New York City &#8211; May 20, 2010<br />
+International HIV Vaccine Day: Message from UNAIDS Executive Director Mr. Michel Sidibé &#8211; May 18, 2010<br />
+Turning the Page in HIV Prevention Research: An AIDS Vaccine is Possible—AVAC Examines The Way Forward &#8211; May 17, 2010<br />
+HIV Vaccine Awareness Day: A Message from MHRP Director COL Michael &#8211; May 14, 2010<br />
+IAVI Statement for World AIDS Vaccine Day &#8211; May 14, 2010</div>
+<div></div>
+<div><span class="bottom-address"><b>Follow Us:</b></span></div>
+<div><a href="https://twitter.com/HIVEnterprise/"><img class="alignnone  wp-image-14" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/logo-twitter.jpg" alt="logo-twitter" width="62" height="61" /></a> <a href="http://www.facebook.com/pages/New-York-NY/Global-HIV-Vaccine-Enterprise/149450963068"><img class="alignnone  wp-image-15" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/logo-facebook.jpg" alt="logo-facebook" width="60" height="60" /></a></div>
+</div>
+</div>
+</div>						<div class="post-footer">September 9th, 2014 |  Category: <a class="hiv" href="http://www.hivvaccineenterprise.org/category/hiv" title="View all posts in hiv">hiv</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+								<div class="post-71 post type-post status-publish format-standard sticky hentry category-content even" id="post-71">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/content/hiv-vaccine-state-of-the-field" rel="bookmark" title="Permanent Link to HIV Vaccine State of the Field">
+				HIV Vaccine State of the Field</a></h2></div>				<div class="post-bodycopy clearfix"><p>The development of a safe and effective preventive vaccine against HIV would transform the lives of hundreds of millions of people around the world. It is one of the most complex scientific challenges ever undertaken.</p>
+<p>The story of the field’s progress is best told by our partners &#8211; the organizations that comprise the Global HIV Vaccine Enterprise. Please visis of people around the world. It is one of the most complex scientific challenges ever undertakt the links below for facts and statistics on HIV/AIDS around the world, information on vaccines, and a historical review of HIV vaccine development.</p>
+<p>Our best chance at developing a vaccine requires:</p>
+<ul>
+<li>a deepening biological understanding of the human immune response and genetic diversity;</li>
+<li>new ideas and new minds;</li>
+<li>dynamic and close interaction between fundamental, preclinical and clinical research;</li>
+<li>development of knowledge-rich exploratory phase 1 trials; and</li>
+<li>inclusive discussion on the social, ethical, regulatory, intellectual property, access and legal issues.</li>
+<li><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/trials_map.gif"><img class="alignnone size-full wp-image-72" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/trials_map.gif" alt="trials_map" width="486" height="264" /></a></li>
+<li>
+<div><strong>Countries Conducting HIV Clinical Trials</strong></div>
+<p><strong>State of the HIV Vaccine Field: Related Links</strong><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/to-help.gif"><img class="alignnone size-full wp-image-73" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/to-help.gif" alt="to-help" width="254" height="316" /></a></li>
+<li></li>
+<li><a href="http://www3.niaid.nih.gov/topics/HIVAIDS/Understandin"><img class="alignnone size-full wp-image-73" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/to-help.gif" alt="to-help" width="2g/links.htm" target="_blank">An Understanding of HIV/AIDS</a> &#8211; Provides HIV/AIDS statistics, information on testing and treatment and facts including causes, symptoms and risk factors (Source: National Institute of Allergy and Infectious Disease)</li>
+<li><a href="http://www.unaids.org/en/PolicyAndPractice/default.asp" target="_blank">AIDS Policy and Practice</a> &#8211; Offers a comprehensive overview of the state of HIV-related issues including: gender issues, emergency and humanitarian response, counseling and testing, HIV prevention, treatment, care and support, sexual and reproductive health, science and research (Source: UNAIDS)</li>
+<li><a href="http://www.aidsvaccineclearinghouse.org/" target="_blank">AIDS Vaccine Clearinghouse</a> – Provides a gateway to information about AIDS vaccine research (Source: AVAC: Global Advocacy for HIV Prevention)</li>
+<li><a href="http://www.chvi-icvv.gc.ca/hiv_vacc-eng.html" target="_blank">Developing an HIV Vaccine</a> &#8211; Provides an overview of HIV/AIDS, a historical review of the quest for an HIV vaccine and an HIV vaccine FAQ (Canadian HIV Vaccine Initiative)</li>
+<li><a href="http://www.cavd.org/about/Pages/History.aspx" target="_blank">History of the Collaborations for AIDS Vaccine Discovery</a> &#8211; Provides a historical review about the need to address collaborate to further HIV vaccine develoitiative)</li>
+<li><a href="http://www.cavd.org/about/Pages/History.aspx" target="_blank">History of the Collaborations for AIDS Vaccine Discovery</a> &pment (Source: Bill &amp; Melinda Gates Foundation)</li>
+<li><a href="http://www.who.int/hiv/data/en/" target="_blank">HIV/AIDS Data and Statistics</a> &#8211; Presents worldwide HIV/AIDS data and statistics in the form of reports (Source: World Health Organization)</li>
+<li><a href="http://www.avac.org/timeline-website/index.htm" target="_blank">HIV Prevention Research: A Comprehensive Timeline</a> &#8211; Summarizes the major HIV prevention research trials that are underway today (Source: AVAC: Global Advocacy for HIV Prevention)</li>
+<li><a href="http://www.hvtn.org/science/strategies.html" target="_blank">Possible HIV Vaccine Strategies</a> &#8211; Presents information on the various types of experimental HIV vaccines (Source: HIV Vaccine Trials Network)</li>
+<li><a href="http://www.hvtn.org/science/outcomes.html" target="_blank">Possible HIV Vaccine Outcomes</a> &#8211; Offers details about the variety of ways that scientists believe a preventive HIV vaccine might work (Source: HIV Vaccine Trials Network)</li>
+<li><a href="http://www.iavi.org/why-a-vaccine/Pages/the-pandemic.aspx" target="_blank">Why a Vaccine</a> &#8211; Provides an overview of the HIV pandemic, indicates measures to respond, provide information on the types of vaccines and how a vaccine might be accepted worldwide if it were developed (Source: International AIDS Vaccine Initiative)</lVaccine</a> &#8211; Provides an overview of the HIV pandemic, indicates measures to respond, provide information on the types of vaccines and how a vai>
+</ul>
+</div>						<div class="post-footer">September 9th, 2014 |  Category: <a class="content" href="http://www.hivvaccineenterprise.org/category/content" title="View all posts in content">content</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+								<div class="post-60 post type-post status-publish format-standard sticky hentry category-content odd" id="post-60">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/content/history-of-the-global-hiv-vaccine-enterprise" rel="bookmark" title="Permanent Link to History of the Global HIV Vaccine Enterprise">
+				History of the Global HIV Vaccine Enterprise</a></h2></div>				<div class="post-bodycopy clearfix"><p class="body-text">Soon after HIV was identified as the cause of AIDS in 1983, there was an expectation that an effective vaccine would be tested, developed and deployed within several years. The intense research effort conducted during the last 20 years has produced important information on the virus and the disease, but an effective vaccine remains elusive. To confront this challenge, in June 2003, a group of 24 leaders in the field of HIV vaccines published a Policy Forum article in the journal, Science, proposing the creation of the Global HIV Vaccine Enterprise. The authors recognized that current attempts to develop such hallenge, in June 2003, a group of 24 leaders in the field of HIV vaccines published a Policy Forum article in the journal, Science, proposing the crea vaccine were insufficient in scale and focus, and that a renewed HIV vaccine research effort was required.</p>
+<p>The development of the Enterprise has gone through four phases: conceptualization (2003), planning (2004), initiation of activities (2005 – 2007), and implementation (2008 and beyond).</p>
+<p>The Enterprise model represents a new global way of thinking about scientific problems and approaches to resolving them through the formulation of a shared Scientific Strategic Plan. The plan is based on the identification of gaps and opportunities, the use of common tools, optimized resources, and iterative learning. Most importantly, it represents a new way for scientists to engage as a global community of problem-solvers, sharing materials and information, and balancing collaboration with healthy competition.</p>
+<p><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/timeline.gif"><img class="alignnone size-full wp-image-61" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/timeline.gif" alt="timeline" width="797" height="460" /></a></p>
+</div>						<div class="post-footer">September 9th, 2014 |  Category: <a class="content" href="http://www.hivvaccineenterprise.org/category/content" title="View all posts in content">content</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+			st-footer">September 9th, 2014 |  Category: <a class="content" href="http://www.hivvaccineenterprise.org/category/content" title="View all posts in cont					<div class="post-165 post type-post status-publish format-standard hentry category-coupons tag-lids tag-lids-coupons even" id="post-165">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/coupons/lids-coupons-dont-squander-another-cent-begin-to-use-vouchers-nowadays" rel="bookmark" title="Permanent Link to lids coupons &#8211; Don&#8217;t Squander Another Cent: Begin To Use Vouchers Nowadays!">
+				lids coupons &#8211; Don&#8217;t Squander Another Cent: Begin To Use Vouchers Nowadays!</a></h2></div>				<div class="post-bodycopy clearfix"><div id="attachment_166" style="width: 310px" class="wp-caption alignnone"><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/1277403736store_detail_lids.jpg"><img class="size-medium wp-image-166" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/1277403736store_detail_lids-300x210.jpg" alt="lids coupons" width="300" height="210" /></a><p class="wp-caption-text">lids coupons</p></div>
+<p>&nbsp;</p>
+<p>Don&#8217;t Squander Another Cent: Begin To Use <a href="http://free-coupon.com/lids-coupons/"><strong>lids coupons</strong></a> Nowadays! and save your money at lids.com</p>
+<p>It can save you an effective amount of your money employing discount coupons.You may use only one particular every couple of months approximately in a favored cafe. Or yo"><strong>lids coupons</strong></a> Nowadays! and save your money at lids.com</p>
+<p>It can save you an effective amount of your money employing discouu spend some lots of time cutting vouchers from numerous Weekend papers. Whatever your existing voucher exercise stage is, the subsequent suggestions will help you have more for less.</p>
+<p>Don&#8217;t just acquire an item due to the fact you own a voucher for it. It&#8217;s easy for anyone to invest more while shopping with vouchers simply because they purchase goods they don&#8217;t really need. Only use discount coupons on items that were in fact going to buy in any case to prevent spending needless dollars.</p>
+<p>Find out the plans in the shops that you regular.</p>
+<p>Usually create a collection when you&#8217;re on the supermarket with discount coupons. You need to also write the amount of every product you need.</p>
+<p>Use the supermarket rivalry to your great advantage. Discount coupons offered at a single retailer can often be used in the competition&#8217;s retailer. This means that you cut costs and steer clear of going to many different retailers.You could potentially basically neutralize your financial savings in lost time as well as energy.</p>
+<p>Sign up for an online group that posts discounts and discounts. There are several web sites and a few have electronic mail reminders which will warn you of prospective savings and forums where you can go over other methods to save lots of with others.</p>
+<p>Be sure that you know whenever yos discounts and discounts. There are several web sites and a few have electronic mail reminders which will warn you of prospective savings and forums where your coupon codes usually do not previous eternally. Some coupon codes only great for each day. Other people will monthly or even more. Make sure that you check out regular to determine if you have expired coupon codes.This procedure will help make certain you efficiently use your vouchers before they end.</p>
+<p>They might have bargains in position that you simply join and order a definite variety of Weekend paperwork weekly.</p>
+<p>You will probably find that you could store multiple merchants as a way to acquire the most financial savings.</p>
+<p>Work with a coupon for items carry on transaction. This will provide you with by far the most bang for your coupon codes. Several coupons final for about ninety days, so keep these all around right up until that great deal is available together.It can save you a significant amount of money once you pile discount coupons with in retailer sales.</p>
+<p>Clip vouchers for the items you will purchase frequently. This may stop you from overspending on needless items for the reason that you may not require. Getting unnecessary things that you do not have will be the big good reason that a lot of people quit employing coupons. This strategy may also helps you to always keep your coupon codes neatly collected and bought.</p>
+<p>Store regular to finest use your savings from vouchers. Merchants manage regular promotion choiceood reason that a lot of people quit employing coupons. This strategy may also helps you to always keep your coupon codes neatly collected and bought.s that you can use to save as much as possible.</p>
+<p>Don&#8217;t truly feel humiliated having a bunch of coupons at the store&#8217;s check out-out range. If you&#8217;re equipped and arrange it won&#8217;t get a long time until you are accomplished looking at.</p>
+<p>Have you been one of those particular shoppers who only uses one of the most valuable discount coupons, or do you trawl advertisements and websites in pursuit of warm offers? What ever your existing couponing routines are, it is possible to achieve new savings degrees by utilizing the following tips. Go over this post again to discover ideas you haven&#8217;t however experimented with.</p>
+</div>						<div class="post-footer">September 30th, 2014 | Tags: <a href="http://www.hivvaccineenterprise.org/tag/lids" rel="tag">lids</a>, <a href="http://www.hivvaccineenterprise.org/tag/lids-coupons" rel="tag">lids coupons</a> |  Category: <a class="coupons" href="http://www.hivvaccineenterprise.org/category/coupons" title="View all posts in coupons">coupons</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+								<div class="post-163 post type-post status-publish format-standard hentry category-coupons tag-overstock tag-overstock-coupon odd" id="post-163">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/coupons/overstock-coupodiv class="post-163 post type-post status-publish format-standard hentry category-coupons tag-overstock tag-overstock-coupon odd" id="post-163">
+				n-extremely-approaches-to-spend-less-with-outstanding-promotion-ideas" rel="bookmark" title="Permanent Link to overstock coupon &#8211; Extremely Approaches To Spend Less With Outstanding Promotion Ideas">
+				overstock coupon &#8211; Extremely Approaches To Spend Less With Outstanding Promotion Ideas</a></h2></div>				<div class="post-bodycopy clearfix"><p>Extremely Approaches To Spend Less With Outstanding Promotion Ideas</p>
+<p>Are you presently interested in regularly spending less by way of discount coupons weekly? Have you been concerned with investing a lot of if you do proceed to the retailer? The expert consultancy on this page will give you in on the key benefits of coupons.</p>
+<p>Find out the <a href="http://free-coupon.com/overstock-coupon-code/">overstock coupon</a> policies of the retailers you retail outlet.</p>
+<p>Use all the coupons whenever feasible every time you shop. This procedure lets you buy considerably more acquisitions of fundamentals while shopping. This is a good strategy to stockpile on the things that you apply probably the most. When you have 5 vouchers for ketchup you&#8217;ll be using regular, try and rely on them all at one time.</p>
+<p>Set up 1 day weekly for discount actions. This may cause your promotion time.</p>
+<p>Generally check out your coupons&#8217; expiry dates. There are some discount coupons available that m7;ll be using regular, try and rely on them all at one time.</p>
+<p>Set up 1 day weekly for discount actions. This may cause your promotion time.</p>
+<ight basically be good with a presented day time. A few of them is going to be great for 1 month. Ensure that you check weekly to ascertain if you now have expired vouchers.This will aid ensure you to acquire total importance out of your discount coupons.</p>
+<p>They can have bargains set up which you join and get a particular quantity of Weekend reports per week.</p>
+<p>When you know that the object you wish to buy will likely be available for sale quickly, consider discount clipping services to get a variety of that promotion. There are many clipping solutions readily available through promotion websites, and you can preserve a lot of money by using their services.</p>
+<p>Make use of a discount for goods previously discounted. This will increase the volume you to definitely optimize your savings. Most coupon codes don&#8217;t expire to get a 30 days or so, so save your valuable coupons till the up coming sale. You can save a significant sum of money should you do this.</p>
+<p>If you&#8217;re distressed to get discount coupons, you may try looking in the trash! You will see that individuals toss the vouchers apart.</p>
+<p>&#8220;Like&#8221; organizations and brands on Facebook or twitter for additional valuable coupons or offers. &#8220;Preference&#8221; a brand&#8217;s web page could make you with usage of exclusive discount rates and coupons made especials apart.</p>
+<p>&#8220;Like&#8221; organizations and brands on Facebook or twitter for additional valuable coupons or offers. &#8220;Preference&#8221;ly for &#8220;good friends&#8221;. The firms typically incentive their most loyal followers, so take advantage of this.</p>
+<p>There are numerous coupon websites online that will let you produce coupon codes. You may print a bunch on one site and them eliminate. Utilize these as with any other coupon codes that you lower from papers or magazines.</p>
+<p>Constantly make use of the savings that discount coupons supply. You save lots of money regular by using coupons. Try to use more coupons to save lots of more cash after a while.</p>
+</div>						<div class="post-footer">September 28th, 2014 | Tags: <a href="http://www.hivvaccineenterprise.org/tag/overstock" rel="tag">overstock</a>, <a href="http://www.hivvaccineenterprise.org/tag/overstock-coupon" rel="tag">overstock coupon</a> |  Category: <a class="coupons" href="http://www.hivvaccineenterprise.org/category/coupons" title="View all posts in coupons">coupons</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+								<div class="post-149 post type-post status-publish format-standard hentry category-coupons tag-expedia-coupon tag-hotels-com tag-hotels-com-coupon even" id="post-149">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/coupons/hotels-com-coupon-the-very-best-promotion-advice-you-could-discover" rel="bookmark" title="Permanentn tag-hotels-com tag-hotels-com-coupon even" id="post-149">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/cou Link to hotels.com Coupon &#8211; The Very Best Promotion Advice You Could Discover">
+				hotels.com Coupon &#8211; The Very Best Promotion Advice You Could Discover</a></h2></div>				<div class="post-bodycopy clearfix"><div id="attachment_150" style="width: 310px" class="wp-caption alignnone"><a title="hotels.com coupon" href="http://www.getnymilk.com/hotels.com-coupon-code/"><img class="size-medium wp-image-150" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/hotels.com_logo-300x177.jpg" alt="hotels.com Coupon" width="300" height="177" /></a><p class="wp-caption-text">hotels.com Coupon</p></div>
+<p>Save at hotels.com with best <a href="	http://www.getnymilk.com/hotels.com-coupon-code/"><strong>hotels.com Coupon</strong></a> our discount coupons could help you save big  of money at hotels.com</p>
+<p>Making use of your discount coupons could help you save big quantities of money each month. Many people don&#8217;t understand the grocery store. The following tips you will be efficient and helpful. Read on to actually have the same potential for much more.</p>
+<p>Use coupons when you can find purchase one purchase one cost-free product sales at your store. You will get 1 product totally free then an effective selling price about the other obtain. You might find which you pay regarding a quarter from the preliminary selling price.</p>
+<p> find purchase one purchase one cost-free product sales at your store. You will get 1 product totally free then an effective selling price about the otDon&#8217;t make use of discount coupons because you have them.</p>
+<p>Use the cutthroat techniques of food store levels of competition to save money. Discount coupons from one store will often be thankful at one more contesting retailer. Because of this you will not need to go from a retailer to another one to save money and prevent planing a trip to numerous shops. You could potentially basically neutralize your financial savings do today to the gasoline fees by driving a vehicle from a spot to another.</p>
+<p>The World Wide Web has exceeded the Weekend paper being a wonderful way to find discount coupons. You can get great discount coupons on the web for almost everything on-line. You can steer clear of hrs of cutting. Which is the best benefit! Just produce and there you are!</p>
+<p>Make certain all your vouchers appropriately check on take a look at.A lot of coupon codes won&#8217;t check out effectively, some coupons just won&#8217;t skim inside the funds sign up.</p>
+<h2><a title="expedia coupon" href="http://www.haswifi.com/expedia-coupon.html">expedia coupon</a></h2>
+<p>Make sure you use coupons are paired track of store income. This will raise the sum you in maximizing your cost savings. Most vouchers are ideal for at the very least 3 months, you are able to keep onto your coupons for some time. Vouchers when combined with shop income can help you  paired track of store income. This will raise the sum you in maximizing your cost savings. Most vouchers are ideal for at the very least 3 months, yosave around 90Per cent on your full shopping bill.</p>
+<p>Buck retailers typically supply fantastic way to obtain savings. Many of these buck retailers will help you to utilize your voucher within a community &#8216;dollar&#8217; retail store. These lower end retailers often get overstocked goods. This will be to your advantage because this coupon may be used in the reduced price.</p>
+<p>Look in the neighbor&#8217;s trash in case you are eager for vouchers. You may be shocked to find out the number of coupons end up inside the garbage.</p>
+<p>Only clip vouchers for things that your loved ones makes use of. This lets you reduce additional spending on unnecessary items for the reason that you do not need to have. Purchasing products you don&#8217;t want or should use is what some individuals stop making use of coupons. This may also aid in maintaining your coupon codes much better prepared.</p>
+<p>Certain areas will double or triple coupons. Ask around to determine which community supermarkets accomplish this. Also you can request folks diverse spots.</p>
+<p>Other excellent strategies include setting up by expiration day or even the aisles at your residence food market, even though this is a great technique for some. Make use of the business strategy works for you.</p>
+<p>Go searching for a coupon code, prior to getting anything on the web. A lot of stores offiration day or even the aisles at your residence food market, even though this is a great technique for some. Make use of the business strategy works er you online coupons which you can use in order to save when you&#8217;re acquiring products. Use Google or any other of your respective preferred search engine to look for them. Make use of the 12 months and calendar month to get much more recent offers and gives.</p>
+<p>To obtain the most financial savings from all of the your discount coupons, you have to get out of salary to paycheck dwelling. Discounts will elude you as you cannot afford them for those who have no money to get stocking up. You might be utilizing coupons to save when food shopping, but you might also be lacking on chances to maintain stocks of dried up goods or papers merchandise.</p>
+<p>Utilizing discount coupons successfully could help you save a substantial amount of funds, as previously mentioned. You may go on a big nibble from most of your household&#8217;s store shopping charges by studying the recommendations offered here and building a routine from implementing it you&#8217;ll be an expert promotion customer before you know it!</p>
+<p>haswifi.com have a lot of <strong><a title="expedia coupon" href="http://www.haswifi.com/expedia-coupon.html">expedia coupon</a></strong> for you will save money .Expedia</p>
+</div>						<div class="post-footer">September 20th, 2014 | Tags: <a href="http://www.hivvaccineenterprise.org/tag/expedia-coupon" rel="tag">expedia coupon</a>, <a href="httpia-coupon.html">expedia coupon</a></strong> for you will save money .Expedia</p>
+</div>						<div class="post-footer">September 20th, 2014 | Tags: <a ://www.hivvaccineenterprise.org/tag/hotels-com" rel="tag">hotels.com</a>, <a href="http://www.hivvaccineenterprise.org/tag/hotels-com-coupon" rel="tag">hotels.com Coupon</a> |  Category: <a class="coupons" href="http://www.hivvaccineenterprise.org/category/coupons" title="View all posts in coupons">coupons</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+								<div class="post-146 post type-post status-publish format-standard hentry category-coupons tag-best-buy-coupon-code tag-best-buy-coupons tag-best-buy-promo-code odd" id="post-146">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/coupons/best-buy-coupons-advice-on-spending-less-with-coupons" rel="bookmark" title="Permanent Link to best buy coupons &#8211; Advice On Spending Less With Coupons">
+				best buy coupons &#8211; Advice On Spending Less With Coupons</a></h2></div>				<div class="post-bodycopy clearfix"><p>you can save your money when use <strong>best buy coupons</strong> when buy at bestbuy.com</p>
+<p><strong>Best Buy Coupon Code &#8211; Advice On Spending Less With Coupons</strong></p>
+<div id="attachment_147" style="width: 280px" class="wp-caption alignnone"><a title="best buy coupon code" href="http://free-coupon.com/"><img class="size-full wp-image-147" src="http://www.hivvaccineenterprise.org/wp-content/uploads Coupons</strong></p>
+<div id="attachment_147" style="width: 280px" class="wp-caption alignnone"><a title="best buy coupon code" href="http://free-cou/2014/09/Best-Buy.jpg" alt="best buy copon code" width="270" height="193" /></a><p class="wp-caption-text"><strong>best buy copon code</strong></p></div>
+<h2><a title="Best Buy Promo Code" href="http://free-coupon.com/">Best Buy Promo Code</a></h2>
+<p>&nbsp;</p>
+<p>Are you presently looking to keep your cash on goods from household goods and family goods? The easiest method to find the best possible is via vouchers. In which are you able to look for locate these excellent vouchers? These information and facts will provide you with discount recommendations that you have to use to save money.</p>
+<p>Set-aside some day each week for vouchers. This will help you to organize as best as possible.</p>
+<p>It can save you a lot more using a coupon cutting company to purchase some of the same voucher if there is a product or service you desire and it will surely be discounted. You can get cutting solutions promoted on several promotion websites, and this can extra you the fee for magazines.</p>
+<p>Devote sufficient time searching for discount coupons. If you can carry out some significant promotion cutting, schedule time for your personal couponing. Allocate at the very least 30 minutes daily to locating and cutting discount coupons.</p>
+<p>Don&#8217;t just get every item because you occur have got a coupon for. A lot of people invest excessive money when they&#8217;rime for your personal couponing. Allocate at the very least 30 minutes daily to locating and cutting discount coupons.</p>
+<p>Don&#8217;t just get evee using their vouchers simply because they buy anything they have coupon codes for. If you do not apply it, you might have misplaced funds, even though it might look like a good deal.</p>
+<p>Keep in mind that the vouchers you will get at checkout can&#8217;t be more than doubled.</p>
+<p>As an example, &#8216;BOGO&#8217; stands for &#8216;buy 1, you can get one particular cost-free. Or &#8216;MIR&#8217; identifies a snail mail in rebate? When you don&#8217;t recognize these phrases, Acronyms are all more than promotion entire world.You will possibly not use any voucher properly.</p>
+<p>Ask friends and relations to save lots of their Saturday paper or periodicals. This will allow you an improved chance of getting the greatest list of discount coupons to save money.</p>
+<p>Even though this useful for many, there are other ways to coordinate such as by expiration particular date or how each store is organized. What ever method makes stuff basic for yourself is what you must use.</p>
+<p>Don&#8217;t make use of the local newspaper to obtain vouchers. Discount coupons can be found in many forms in today&#8217;s electronic digital age group.You can find loads of coupon internet sites on the web.</p>
+<p>Before you go coupon searching, make a note of your grocery set of groceries. Or even, it is possible to transform increase your wants to maximize your cost savings, ctronic digital age group.You can find loads of coupon internet sites on the web.</p>
+<p>Before you go coupon searching, make a note of your grocery sdespite the fact that much of your acquisitions will probably have coupons accessible for them.</p>
+<p>Come up with a storage area in your house therefore you will buy with coupons. Should you stumble upon the kind of deeply discount which makes purchasing in bulk a beautiful prospect, you&#8217;ll require the storage area to be able to stockpile the merchandise.</p>
+<p>Maintain stocks of distinct things you will need when utilizing your discount coupons. You possibly will not want to purchase a whole lot, however when you consider it, you are going to save more if you buy items in number while they are for sale.</p>
+<p>Don&#8217;t bring in vouchers for items that you&#8217;re never use. Don&#8217;t purchase something basically since you can get it at a bargain cost. A lot of people physique they save money just mainly because they are constantly employing coupons quickly indicates saving money. Even so, if you&#8217;re purchasing an item you won&#8217;t be employing, you happen to be just losing money.</p>
+<p>Use a baseball greeting card holders to hold your vouchers organized. These crystal clear holders will help find and manage your coupon codes in the most beneficial way possible. Also you can see if the discount applies or has expired while not having to eliminate them.</p>
+<p>Once you start to work with the vouchers, you&#8217;ll be amazed at much casill help find and manage your coupon codes in the most beneficial way possible. Also you can see if the discount applies or has expired while not havih you will save. If you find every one of the appropriate discount coupons, you&#8217;ll have the ability to preserve a ton on the food. Just to be a promotion specialist, use exactly what this post educated you.</p>
+<p><a href="https://plus.google.com/111557456754327496017/posts">https://plus.google.com/111557456754327496017/posts</a></p>
+<p><a href="http://www.youtube.com/channel/UCQevLhDpVDscJ6fJGiLBQwg">http://www.youtube.com/channel/UCQevLhDpVDscJ6fJGiLBQwg</a></p>
+<p><a href="http://www.youtube.com/watch?v=TbKYzYw3BxQ">youtube</a></p>
+<p><a href="https://www.facebook.com/crickrock.dhanasin/posts/383542155128399">https://www.facebook.com/crickrock.dhanasin/posts/383542155128399</a></p>
+</div>						<div class="post-footer">September 18th, 2014 | Tags: <a href="http://www.hivvaccineenterprise.org/tag/best-buy-coupon-code" rel="tag">best buy coupon code</a>, <a href="http://www.hivvaccineenterprise.org/tag/best-buy-coupons" rel="tag">best buy coupons</a>, <a href="http://www.hivvaccineenterprise.org/tag/best-buy-promo-code" rel="tag">Best Buy Promo Code</a> |  Category: <a class="coupons" href="http://www.hivvaccineenterprise.org/category/coupons" title="View all posts in coupons">coupons</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+								<div class="post-143 post type-post status-publish format-standard hentry chivvaccineenterprise.org/category/coupons" title="View all posts in coupons">coupons</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Pategory-content even" id="post-143">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/content/nyas-hiv-aids-vaccines" rel="bookmark" title="Permanent Link to NYAS: HIV / AIDS Vaccines">
+				NYAS: HIV / AIDS Vaccines</a></h2></div>				<div class="post-bodycopy clearfix"><div id="content-area">
+<div id="node-159" class="node node-type-page">
+<div class="node-inner-0">
+<div class="node-inner-1">
+<div class="node-inner-2">
+<div class="node-inner-3">
+<div class="content clearfix">
+<table width="600" cellpadding="3">
+<tbody>
+<tr>
+<td colspan="2">
+<div> <a href="http://web.archive.org/web/20100813114052/http://www.nyas.org/AIDS"><br />
+</a></div>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<div>This meeting will tackle a range of challenges facing HIV vaccine researchers, and will counter each presented challenge with a possible solution. These challenges include development of HIV vaccines to prevent or control infection, genetic diversity of the virus, and predictive models of infection. The symposium will also cover other (non-scientific) challenges and mechanisms that can be used to reduce HIV transmission now, and in conjunction with a future vaccine.<strong>Organizers</strong><br />
+<strong>Sarah Schlesinger</strong>, The Rockefeller University<br />
+<strong>Yegor Voronin</strong>, Global HIV Vaccine Enterprise<br />
+<strong>Je to reduce HIV transmission now, and in conjunction with a future vaccine.<strong>Organizers</strong><br />
+<strong>Sarah Schlesinger</strong>, The Rocknnifer Henry</strong>, The New York Academy of Sciences<br />
+<strong> </strong></p>
+</div>
+<div><strong>Confirmed Speakers</strong></div>
+<div><strong>Dan Barouch,</strong> Beth Israel Deaconess Medical Center</div>
+<div><strong>Alan Bernstein</strong>, Global HIV Vaccine Enterprise</div>
+<div><strong>Jerome Kim,</strong> Walter Reed Army Institute of Research</div>
+<div><strong>Julie McElrath,</strong> Fred Hutchinson Cancer Research Center</div>
+<div><strong>Chris Miller</strong>, University of California</div>
+<div><strong>Louis Picker</strong>, Oregon Health &amp; Sciences University</div>
+<div><strong>Sanjay Phogat</strong>, IAVI</div>
+<div><strong>Robert Seder</strong>, NIH</div>
+<div><strong>Michael Worobey</strong>, University of Arizona</div>
+<div></div>
+<div>Sponsored by the <strong>Global HIV Vaccine Enterprise</strong> and the <strong>Vaccine Science Discussion Group</strong> at the <strong>New York Academy of Sciences</strong>.</div>
+<div></div>
+<div>An eBriefing that captures the highlights of the symposium will be available for individuals who are unable to attend the meeting in person.</div>
+</td>
+<td valign="top">
+<h2>May 19, 2010</h2>
+<h2>9:00 a.m. &#8211; 5:30 p.m.</h2>
+<div></div>
+<div></div>
+<div>Registration<br />
+All Members: $10<br />
+Non-Member (Corporate): $65<br />
+Non-Member (Academic / Non-Profit): $45<br />
+Non-Member (Student>
+</td>
+<td valign="top">
+<h2>May 19, 2010</h2>
+<h2>9:00 a.m. &#8211; 5:30 p.m.</h2>
+<div></div>
+<div></div>
+<div>Registration<br />
+All Members: $10<b / Postdoc): $25Location<br />
+The New York Academy of Sciences<br />
+7 World Trade Center<br />
+250 Greenwich St, 40th Fl<br />
+New York, NY 10007</p>
+<p>For additional info, e-mail nymeetings@nyas.org or call 212.298.3725</p>
+<p>Sponsorship Opportunities<br />
+For sponsorship opportunities, please contact Cristine Barreto at cbarreto@nyas.org</p>
+<p>Image: CDC/ Dr. A. Harrison;<br />
+Dr. P. Feorino</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>						<div class="post-footer">September 18th, 2014 |  Category: <a class="content" href="http://www.hivvaccineenterprise.org/category/content" title="View all posts in content">content</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+								<div class="post-140 post type-post status-publish format-standard hentry category-content odd" id="post-140">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/content/future-utility-of-rv144" rel="bookmark" title="Permanent Link to Future Utility of RV144">
+				Future Utility of RV144</a></h2></div>				<div class="post-bodycopy clearfix"><p>The Global HIV Vaccine Enterprise, the Thailand Ministry of Public Health, the U.S. Military HIV Research Program (MHRP), and WHO-UNAIDS hosted a meeting of scientists, clinical trial specialists, public health offi	<div class="post-bodycopy clearfix"><p>The Global HIV Vaccine Enterprise, the Thailand Ministry of Public Health, the U.S. Military HIV Research Progrcials, and others to make recommendations on the future utility of RV144, the vaccine regimen that demonstrated the first proof of concept that a vaccine can confer some degree of protection against HIV acquisition in humans. The meeting was held in Bangkok, Thailand, 16 &#8211; 18 March 2010.</p>
+<p>The recommendations from this meeting will be presented at various upcoming meetings to help determine the future course of the HIV vaccine program in Thailand and future applications of the RV144 regimen.</p>
+<p>To access the information from the RV144 meeting, click the links below:<br />
+&#8211;       Meeting Agenda and Overview<br />
+&#8211;       <strong>Full Meeting Report</strong><br />
+&#8211;       Clinical Trial Design and Statistics Working Group Report<br />
+&#8211;       Ethical, Regulatory and Community Issues Working Group Report<br />
+&#8211;       Public Health and Future Access Working Group Report<br />
+&#8211;       Science and Vaccine Development Working Group Report</p>
+</div>						<div class="post-footer">September 18th, 2014 |  Category: <a class="content" href="http://www.hivvaccineenterprise.org/category/content" title="View all posts in content">content</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+								<div class="post-135 post type-post status-publish fornt" href="http://www.hivvaccineenterprise.org/category/content" title="View all posts in content">content</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+					mat-standard hentry category-content even" id="post-135">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/content/aids-walk-new-york-2010" rel="bookmark" title="Permanent Link to AIDS Walk New York 2010">
+				AIDS Walk New York 2010</a></h2></div>				<div class="post-bodycopy clearfix"><p><a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/AIDS-Walk-Team-1.jpg"><img class="alignnone wp-image-136 size-medium" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/AIDS-Walk-Team-1-300x232.jpg" alt="" width="300" height="232" /></a> <a href="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/AIDS-Walk_0.jpg"><img class="alignnone size-full wp-image-137" src="http://www.hivvaccineenterprise.org/wp-content/uploads/2014/09/AIDS-Walk_0.jpg" alt="AIDS Walk_0" width="300" height="248" /></a></p>
+<p>This year marked the 25th anniverary of AIDS Walk New York, the east coast’s first and the world’s largest such event. On Sunday, 16 May 2010, more than 45,000 walkers gathered in Central Park and participated in the 10k walk, including the Enterprise Secretariat. The event helped to raise vital funds for GMHC and dozens of local AIDS service organizations in the New York area. <strong> The Enterprise Secretariat raised more than $4,400 for the cause.</strong>  While the walk hancluding the Enterprise Secretariat. The event helped to raise vital funds for GMHC and dozens of local AIDS service organizations in the New York area. <strong>s ended, you can still support our AIDS Walk team be clicking</p>
+</div>						<div class="post-footer">September 18th, 2014 |  Category: <a class="content" href="http://www.hivvaccineenterprise.org/category/content" title="View all posts in content">content</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+								<div class="post-133 post type-post status-publish format-standard hentry category-content odd" id="post-133">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/content/133" rel="bookmark" title="Permanent Link to ">
+				</a></h2></div>				<div class="post-bodycopy clearfix"><table border="0" width="901" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td valign="top">
+<table border="0" width="901" cellspacing="0" cellpadding="0">
+<tbody>
+<tr valign="top">
+<td rowspan="7"><img src="http://web.archive.org/web/20100616062639im_/http://www.hivvaccineenterprise.org/themes/ghve_main/images/background/inside-column-01-left.jpg" alt="" width="37" height="37" /></td>
+<td class="headline" colspan="3"></td>
+<td rowspan="7"><img src="http://web.archive.org/web/20100616062639im_/http://www.hivvaccineenterprise.org/themes/ghve_main/images/background/inside-column-02-right.jpg" alt="" width="67" height="37" /></td>
+</tr>
+<tr>
+<td colspan="3">
+<div alig"3"></td>
+<td rowspan="7"><img src="http://web.archive.org/web/20100616062639im_/http://www.hivvaccineenterprise.org/themes/ghve_main/images/backgrounn="left">
+<div id="content">
+<div id="printReady">
+<div id="content-inner">
+<div id="content-header" class="clearfix"><a id="main-content" name="main-content"></a></div>
+<div id="content-area">
+<div id="node-168" class="node node-teaser node-type-page">
+<div class="node-inner-0">
+<div class="node-inner-1">
+<div class="node-inner-2">
+<div class="node-inner-3">
+<h2 class="title">Enterprise Board Meeting, February 17, 2010 &#8211; March 30, 2010</h2>
+<div class="content clearfix">
+<p>The Enterprise Board met on February 17, 2010 in San Francisco, CA USA.  Minutes from the meeting are below.</p>
+</div>
+<div class="actions clearfix">
+<ul class="links inline">
+<li class="upload_attachments first last">1 attachment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="node-153" class="node node-teaser node-type-page">
+<div class="node-inner-0">
+<div class="node-inner-1">
+<div class="node-inner-2">
+<div class="node-inner-3">
+<h2 class="title">Enterprise Science Committee Meeting &#8211; February 4, 2010 &#8211; March 10, 2010</h2>
+<div class="content clearfix">
+<p>The Enterprise Science Committee and Chairs of the Enterprise Scientific Strategic Plan (the Plan) Working Groups met on February 4, 2010 to discuss and review the draft Priorities and Recommendations that would make up the 2010 Plan.  Minutes from the meeting are below.</p>
+</div>
+<div class="acs of the Enterprise Scientific Strategic Plan (the Plan) Working Groups met on February 4, 2010 to discuss and review the draft Priorities and Recommendtions clearfix">
+<ul class="links inline">
+<li class="upload_attachments first last">1 attachment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="node-132" class="node node-teaser node-type-page">
+<div class="node-inner-0">
+<div class="node-inner-1">
+<div class="node-inner-2">
+<div class="node-inner-3">
+<h2 class="title">Enterprise Board Meeting Minutes &#8211; October 17, 2009 &#8211; January 11, 2010</h2>
+<div class="content clearfix">
+<p>The Enterprise Board met on October 17, 2009 in Paris.  Minutes from the meeting are below.</p>
+</div>
+<div class="actions clearfix">
+<ul class="links inline">
+<li class="upload_attachments first last">1 attachment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="node-138" class="node node-teaser node-type-page">
+<div class="node-inner-0">
+<div class="node-inner-1">
+<div class="node-inner-2">
+<div class="node-inner-3">
+<h2 class="title">Enterprise Council Meeting Minutes &#8211; October 18, 2009 &#8211; January 7, 2010</h2>
+<div class="content clearfix">
+<p>The Enterprise Council met on October 18, 2009 in Paris.  Minutes from the meeting are below.</p>
+</div>
+<div class="actions clearfix">
+<ul class="links inline">
+<li class="upload_attachments first last">1 attachment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="node-107" class="node node-teaser node-type-page">
+<div clasre below.</p>
+</div>
+<div class="actions clearfix">
+<ul class="links inline">
+<li class="upload_attachments first last">1 attachment</li>
+</ul>
+</div>
+</dis="node-inner-0">
+<div class="node-inner-1">
+<div class="node-inner-2">
+<div class="node-inner-3">
+<h2 class="title">Meeting of the Enterprise Coordinating Group &#8211; October 1, 2009 &#8211; December 3, 2009</h2>
+<div class="content clearfix">
+<p>The Enterprise Coordinating Group to Prepare for the Release of HIV Vaccine Efficacy Trial Results (Coordinating Group) met on October 1, 2009 in New York to discuss the results of the Prime Boost Thai Trial announced in September. Minutes from the meeting are below.</p>
+</div>
+<div class="actions clearfix">
+<ul class="links inline">
+<li class="upload_attachments first last">1 attachment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="node-124" class="node node-teaser node-type-page">
+<div class="node-inner-0">
+<div class="node-inner-1">
+<div class="node-inner-2">
+<div class="node-inner-3">
+<h2 class="title">2010 Scientific Strategic Plan: Bridging the Gaps between Fundamental, Preclinical, and Clinical Research Working Group &#8211; September 17 &#8211; 18, 2009 &#8211; September 17, 2009</h2>
+<div class="content clearfix">
+<p>The Bridging the Gaps Working Group met September 17 &#8211; 18, 2009 in New York.  Recommendations coming out of this Working Group will inform the 2010 Scientific Strategic Plan.  Minutes from the meeting are below.
+</p></div>
+<div class="actions clearfix">
+<ul class="linps Working Group met September 17 &#8211; 18, 2009 in New York.  Recommendations coming out of this Working Group will inform the 2010 Scientific Strateks inline">
+<li class="upload_attachments first last">1 attachment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="node-122" class="node node-teaser node-type-page">
+<div class="node-inner-0">
+<div class="node-inner-1">
+<div class="node-inner-2">
+<div class="node-inner-3">
+<h2 class="title">2010 Scientific Strategic Plan: Host Genetics and HIV Diversity Working Group &#8211; September 4, 2009 &#8211; September 3, 2009</h2>
+<div class="content clearfix">
+<p>The Host Genetics and HIV DiversityWorking Group met September 3 &#8211; 4, 2009 in New York.  Recommendations coming out of this Working Group will inform the 2010 Scientific Strategic Plan.  Minutes from the meeting are below.</p>
+</div>
+<div class="actions clearfix">
+<ul class="links inline">
+<li class="upload_attachments first last">1 attachment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="node-123" class="node node-teaser node-type-page">
+<div class="node-inner-0">
+<div class="node-inner-1">
+<div class="node-inner-2">
+<div class="node-inner-3">
+<h2 class="title">Scientific Strategic Plan: Novel Approaches to HIV Vaccine Research &amp; Development Working Group &#8211; August 11, 2009 &#8211; August 11, 2009</h2>
+<div class="content clearfix">
+<p>The Novel Approaches to HIV Vaccine Research &amp; Development Working Group met August 10 &#8211; 11, 2009 in Seattle.  Recne Research &amp; Development Working Group &#8211; August 11, 2009 &#8211; August 11, 2009</h2>
+<div class="content clearfix">
+<p>The Novel Approaches tommendations coming out of this Working Group will inform the 2010 Scientific Strategic Plan.  Minutes from the meeting are below.</p>
+</div>
+<div class="actions clearfix">
+<ul class="links inline">
+<li class="upload_attachments first last">1 attachment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="node-129" class="node node-teaser node-type-page">
+<div class="node-inner-0">
+<div class="node-inner-1">
+<div class="node-inner-2">
+<div class="node-inner-3">
+<h2 class="title">Enterprise Young and Early Career Investigator Committee Meeting &#8211; July 28, 2009 &#8211; July 28, 2009</h2>
+<div class="content clearfix">
+<p>The Enterprise Young and Early Career Investigator Committee Meeting met July 27 &#8211; 28, 2009 in New York.  Meeting Minutes are below.</p>
+</div>
+<div class="actions clearfix">
+<ul class="links inline">
+<li class="upload_attachments first last">1 attachment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="node-121" class="node node-teaser node-type-page">
+<div class="node-inner-0">
+<div class="node-inner-1">
+<div class="node-inner-2">
+<div class="node-inner-3">
+<h2 class="title">2010 Scientific Strategic Plan: Immunogens and Antigen Processing Working Group &#8211; July 16, 2009 &#8211; July 16, 2009</h2>
+<div class="content clearfix">
+<p>The Immunogens and Antigen Processing Working Group met July 15 &#8211; 1
+<h2 class="title">2010 Scientific Strategic Plan: Immunogens and Antigen Processing Working Group &#8211; July 16, 2009 &#8211; July 16, 2009</h2>
+<div6, 2009 in New York.  Recommendations coming out of this Working Group will inform the 2010 Scientific Strategic Plan.  Minutes from the meeting are below.</p>
+</div>
+<div class="actions clearfix">
+<ul class="links inline">
+<li class="upload_attachments first last">1 attachment</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>						<div class="post-footer">September 18th, 2014 |  Category: <a class="content" href="http://www.hivvaccineenterprise.org/category/content" title="View all posts in content">content</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+								<div class="post-130 post type-post status-publish format-standard hentry category-content even" id="post-130">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/content/conference-archives" rel="bookmark" title="Permanent Link to Conference Archives">
+				Conference Archives</a></h2></div>				<div class="post-bodycopy clearfix"><p>The annual AIDS Vaccine 2009 conference held in Paris, France October 19-22, brought together more than 1,000 scientists from across the world engaged in an exciting new phase of AIDS vaccine research and development.</p>
+</div>						<div class="post-footer">September 18th, 2014 |  Category:ce held in Paris, France October 19-22, brought together more than 1,000 scientists from across the world engaged in an exciting new phase of AIDS vacci <a class="content" href="http://www.hivvaccineenterprise.org/category/content" title="View all posts in content">content</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+		
+								<div class="post-127 post type-post status-publish format-standard hentry category-content odd" id="post-127">
+						<div class="post-headline"><h2>				<a href="http://www.hivvaccineenterprise.org/content/aids-vaccine-conferences" rel="bookmark" title="Permanent Link to AIDS Vaccine Conferences">
+				AIDS Vaccine Conferences</a></h2></div>				<div class="post-bodycopy clearfix"><p>Since the first conference, organized in Paris in 2000, the AIDS Vaccine conference has become one of the most important annual events for the exchange of scientific information relating to HIV vaccine research and development. Beginning in 2007, the annual conference is organized under the aegis of the Enterprise and contributes to the goals of the Enterprise by:</p>
+<ol>
+<li>Providing a venue for an international exchange of information in HIV vaccine research and development</li>
+<li>Cross-fertilizing scientific areas of research</li>
+<li>Increasing coordination and communication among international groups</li>
+<li>Monitoring progress in the field</li>
+</ol>
+<p>Applications for the 2012 Local Host of the AIDS Vaccine conference are now being considered. The Local reas of research</li>
+<li>Increasing coordination and communication among international groups</li>
+<li>Monitoring progress in the field</li>
+</ol>
+<pHost will be announced in October.</p>
+</div>						<div class="post-footer">September 18th, 2014 |  Category: <a class="content" href="http://www.hivvaccineenterprise.org/category/content" title="View all posts in content">content</a> | <strong>Comments are closed</strong> </div>		</div><!-- / Post -->	
+						
+	
+					<div class="clearfix navigation-bottom">
+			<div class="older"> &nbsp;</div><div class="newer">&nbsp; <a href="http://www.hivvaccineenterprise.org/page/2" >Older Entries &raquo;</a></div></div>
+    
+
+</td>
+<!-- / Main Column -->
+
+<!-- Right Inner Sidebar -->
+
+<!-- Right Sidebar -->
+<td id="right">
+
+		
+		<!-- Default content here -->
+    	<div class="widget"><div class="widget-title"><h3>Recent Posts</h3></div>
+					<ul>
+					<li><a href="http://www.hivvaccineenterprise.org/coupons/lids-coupons-dont-squander-another-cent-begin-to-use-vouchers-nowadays">lids coupons &#8211; Don&#8217;t Squander Another Cent: Begin To Use Vouchers Nowadays!</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/coupons/overstock-coupon-extremely-approaches-to-spend-less-with-outstanding-promotion-ideas">overstock coupon &#8211; Extremely Approaches To Spend Less With Outstanding Promotion Ideas</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/coupons/hotels-com-coupon-the-very-best-promotion-advice-you-could-discoverng-promotion-ideas">overstock coupon &#8211; Extremely Approaches To Spend Less With Outstanding Promotion Ideas</a></li>
+    				<li><a href="http:/">hotels.com Coupon &#8211; The Very Best Promotion Advice You Could Discover</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/coupons/best-buy-coupons-advice-on-spending-less-with-coupons">best buy coupons &#8211; Advice On Spending Less With Coupons</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/content/nyas-hiv-aids-vaccines">NYAS: HIV / AIDS Vaccines</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/content/future-utility-of-rv144">Future Utility of RV144</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/content/aids-walk-new-york-2010">AIDS Walk New York 2010</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/content/133">133</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/content/conference-archives">Conference Archives</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/content/aids-vaccine-conferences">AIDS Vaccine Conferences</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/content/meetings">Meetings</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/content/support-the-global-hiv-vaccine">Support the Global HIV Vaccine</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/content/achieving-vision">Achieving The Vision</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.or.org/content/support-the-global-hiv-vaccine">Support the Global HIV Vaccine</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/contentg/content/about-enterprise-secretariat">About the Enterprise</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/content/spread-word">Spread The Word</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/conference/dr_manit_teeratantikanont">Dr. Manit Teeratantikanont</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/content/terms-use">Terms of Use</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/node/936">Professional Development</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/node/963">AIDS Vaccine Research Subcommittee: Meeting Report</a></li>
+    				<li><a href="http://www.hivvaccineenterprise.org/conference_archive/2009">AIDS Vaccine 2009 &#8211; Scientific Program</a></li>
+    	    	</ul>
+    			</div>
+
+    	<div id="linkcat-99" class="widget widget_links"><div class="widget-title">
+    	    	</div>
+
+    	<div class="widget"><div class="widget-title">
+    	<h3>Meta</h3>
+    	</div>
+    	<ul>
+    		    		<li><a href="http://www.hivvaccineenterprise.org/wp-login.php">Log in</a></li>
+    		<li><a href="http://wordpress.org/" title="
+    		Powered by WordPress, state-of-the-art semantic personal publishing platform.">
+    		WordPress</a></li>
+    		    	</ul>
+    	</div>
+
+	
+</td>
+<!-- / Right Sidebar -->
+
+</tr>
+<!-- / Main Body -->
+
+<tr>
+
+<!-- Footer -->
+<td id="footer" colspan="3">
+    Copyright &copy; 2015 <a href="http://www.hivvaccineenterprise.org/">Welcome! | Global HIV Vaccine Enterprise</a> - All Rights Reserved<br />Powered by <a href="http://wordpress.org/">WordPress</a> &amp; <a href="http://forum.bytesforall.com/">Atahualpa</a>    
+    
+    </td>
+
+
+</tr>
+
+</table><!-- / layout -->
+</div><!-- / container -->
+</div><!-- / wrapper -->
+
+</body>
+</html>r />Powered by <a href="http://wordpress.org/">WordPress</a> &amp; <a href="http://forum.bytesforall.com/">Atahualpa</a>    
+    
+    </td>
+
+
+</tr>
+
+</table><!-- / layout -->
+</div><!-- / container -->
+</div><!-- / w

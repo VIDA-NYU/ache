@@ -1,0 +1,2730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:fb="https://www.facebook.com/2008/fbml">
+	<head>
+		<meta name="Description" content="Definition of AIDS from the Merriam-Webster Online Dictionary with audio pronunciations, thesaurus, Word of the Day, and word games." />
+		<meta name="Keywords" content="AIDS, definition, define, meaning, dictionary, glossary, free, online, english, language, word, words, webster, websters, merriam-webster" />
+		<meta name="robots" content="Index, follow" />
+		<meta property="fb:app_id" content="178450008855735">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Aids - Definition and More from the Free Merriam-Webster Dictionary</title>
+		
+		<style type="text/css">
+			#results_ad{margin-bottom: 15px;padding-bottom: 15px;}
+        </style>
+
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="/styles/default/interface.css" type="text/css" />
+		<link rel="stylesheet" href="/styles/default/mw-ref.css" type="text/css" />
+		<link rel="canonical" href="http://www.merriam-webster.com/dictionary/AIDS" />
+				<script type="text/javascript" src="/js/mbox.js"></script>
+		<script type="text/javascript" src="/scripts/jquery.js"></script>
+		<script type="text/javascript" src="/scripts/jquery.autocomplete.js"></script>
+		<script type="text/javascript" src="/styles/default/scripts/mw-ref.js"></script>
+		<script type="text/javascript" src="/styles/default/scripts/global.js"></script>
+		<script type="text/javascript" src="/styles/default/scripts/wordclick.js"></script>
+		<script type="text/javascript">
+			/** Video functions **/
+			function getCookie (c_name, def_value) {
+			if ( document.cookie.length > 0 ) {
+					var c_start = document.cookie.indexOf(c_name + "=");
+					if ( c_start != -1 )
+							{       c_start = c_start + c_name.length + 1;
+							c_end = document.cookie.indexOf(";", c_start);
+							if ( c_end == -1) c_end=document.cookie.length;
+									return unescape(document.cookie.substring(c_start,c_end));
+					};
+				};
+				return def_value;
+			};
+
+			function setCookie10Min (c_name, value, expiredays){
+				var exdate = new Date();
+				exdate.setTime(exdate.getTime() + (10 * 60 * 1000));
+				var domain = document.location.href;
+				domain = domain.replace(/http:\/\/([^$|\/]+)[^$]*/, "$1");
+				domain = domain.replace(/(.*?)\.([^\.]+\.[^$]+)/, ".$2");
+				document.cookie=c_name+ "=" +escape(value)+ ";expires="+exdate.toGMTString() + ";path=/;domain=" + domain;
+			};
+		</script>
+		<script type="text/javascript">
+		function set_companion_ad ()
+			{	//alert('Setting companion ad... [' + document.getElementById('main_ad') + ' : ' + document.getElementById('div-gpt-ad-200112412664386076-2') + ']');
+				//alert('Companion ad....');
+				output_creative("div-gpt-ad-200112412664386076-2");
+			};
+		</script>
+		<script type="text/javascript">
+			// Test page view count.
+			var page_view = parseInt("" + getCookie("page-view", 1));
+			setCookie10Min("page-view", page_view + 1);
+			
+       	</script>
+
+        <!-- Begin Amazon DTB JavaScript library & call getAds() to request ads from Amazon -->
+        <script type='text/javascript' src='http://c.amazon-adsystem.com/aax2/amzn_ads.js'></script>
+        <script type='text/javascript'>
+            try {
+                /*
+                   *** IMPORTANT ***
+                   
+                   The id '3022' below is Merriam-Webster's ID for match buy. Use it for this demo page as well as when setting up test page for match buy and in production. 
+                */
+                amznads.getAds('3022');
+            } catch (e) { console.log(e); }
+        </script>
+		<!-- End Amazon DTB JavaScript library & call getAds() to request ads from Amazon -->
+
+		<style type="text/css">
+body-dev
+{	background: white;
+	font-family: arial, verdana, sans-serif;
+	font-size: x-small;
+	margin: 0;
+	padding: 0;
+}
+#app
+{	border-dev: solid 1px red;
+	display: table;
+}
+#middle
+{	display: table-row;
+	margin-top: 10px;
+}
+#content
+{	border-dev: solid 1px orange;
+	display: table-cell;
+	float: left;
+	margin: 0 0 0 175px;
+	padding-right: 15px;
+	vertical-align: top;
+	width: 465px;
+}
+#left-column
+{	border-dev: solid 1px green;
+	display: table-cell;
+	float: left;
+	margin-left: -658px;
+	vertical-align: top;
+}
+#right-column
+{	border-dev: solid 1px blue;
+	display: table-cell;
+	float: none;
+	margin-left: 695px;
+	vertical-align: top;
+}
+</style>        
+        <!--// Begin OpenX Bidder //--> 
+        <script type="text/javascript" >
+        (function() {
+          var src = '//www.googletagservices.com/tag/js/gpt.js';
+          document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+        </script>
+        <script type="text/javascript" >
+        (function() {
+            var src = '//ox-d.merriamwebster.servedbyopenx.com/w/1.0/jstag?nc=34444486-merriamwebster';
+            document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+        </script>
+        <!--// End OpenX Bidder //-->
+
+		<!--// Start: GPT Async
+		<script type='text/javascript'>
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+			(function(){ var gads = document.createElement('script');
+			gads.async = true; gads.type = 'text/javascript';
+			var useSSL = 'https:' == document.location.protocol;
+			gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+			})();
+		</script> //-->
+        
+		<script type="text/javascript">
+			googletag.cmd.push(function() {
+
+
+				//Adslot 1 declaration
+				//Empty ad slot
+
+				//Adslot 2 declaration
+				//var slot2= googletag.defineSlot('/34444486/Merriam-Webster/MW_DICTIONARY', [[728,90]],'div-gpt-ad-894456462400224661-2').setTargeting('POS',['TOP']).addService(googletag.pubads());
+
+				//Adslot 3 declaration
+				var slot3= googletag.defineSlot('/34444486/Merriam-Webster/MW_DICTIONARY', [[160,600]],'div-gpt-ad-894456462400224661-3').setTargeting('POS',['TOP']).addService(googletag.pubads());
+
+				//Adslot 4 declaration
+				var slot4= googletag.defineSlot('/34444486/Merriam-Webster/MW_DICTIONARY', [[300,250]],'div-gpt-ad-894456462400224661-4').setTargeting('POS',['TOP']).addService(googletag.pubads());
+
+				//Adslot 5 declaration
+				var slot5= googletag.defineSlot('/34444486/Merriam-Webster/MW_DICTIONARY', [[300,250]],'div-gpt-ad-894456462400224661-5').setTargeting('POS',['BOT2']).addService(googletag.pubads());
+
+				//Adslot 6 declaration
+				//var slot6= googletag.defineSlot('/34444486/Merriam-Webster/MW_DICTIONARY', [[300,250]],'div-gpt-ad-894456462400224661-6').setTargeting('POS',['BOT2']).addService(googletag.pubads());
+
+				//Adslot 7 declaration
+				// var slot7= googletag.defineSlot('/34444486/Merriam-Webster/MW_DICTIONARY', [[728,90]],'div-gpt-ad-894456462400224661-7').setTargeting('POS',['BOT']).addService(googletag.pubads());
+				
+				var slot8= googletag.defineSlot('/34444486/Merriam-Webster/MW_DICTIONARY', [[300,250]],'div-gpt-ad-148753587139584500-8').setTargeting('POS',['BOT']).addService(googletag.pubads());
+				
+				//Adslot 3 declaration
+				var slot9= googletag.defineSlot('/34444486/Merriam-Webster/MW_DICTIONARY', [[160,600]],'div-gpt-ad-894456462400224661-9').setTargeting('POS',['BOT']).addService(googletag.pubads());
+
+				//Begin Amazon DTB Ad Slot
+				amznads.setTargetingForGPTAsync('amznslots');
+				//End Amazon DTB Ad Slot
+
+				//alert('Making ad call.');
+
+				googletag.pubads().enableSingleRequest();
+				googletag.pubads().setTargeting('Subject',['MD+MB']).setTargeting('SEARCH',['AIDS']).setTargeting('QSEGS',get_qsegs()).setTargeting('PAGE',[parseInt("" + getCookie("page-view", 1)) - 1]);
+				googletag.pubads().enableAsyncRendering();
+				googletag.enableServices();
+								
+				/** Adding Popunder variables **/
+				/**
+				googletag.defineSlot('/34444486/MW_POP', [1, 1], 'div-gpt-ad-1386213726740-0').addService(googletag.pubads());
+				googletag.defineOutOfPageSlot('/34444486/MW_POP', 'div-gpt-ad-1386213726740-0-oop').addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+				**/
+			});
+		</script>
+		<!-- End: GPT -->
+        
+		
+<!--// BEGIN SCRIPT FOR GOOGLE ANALYTICS TRACKING //-->
+<script type="text/javascript">
+	$(window).delegate('.GA_analytics_t', 'click', function(e) {
+        var link          = $(this);
+        var trackName     = link.attr('data-category');
+        var trackPosition = link.attr('data-action');
+        var trackDesc     = link.attr('data-label');
+        var url           = link.attr('href');
+        _gaq.push(['_trackEvent', trackName, trackPosition, trackDesc]); 
+	});
+	$(window).delegate('.GA_analytics', 'click', function(e) {e.preventDefault();
+        var link = $(this);
+        var trackName = link.attr('data-category');
+        var trackPosition = link.attr('data-action');
+        var trackDesc = link.attr('data-label');
+        var url = link.attr('href');
+   
+        _gaq.push(['_set','hitCallback',function() {
+		if ( url != '#' ) {
+			document.location = url;
+		};
+        }]);
+        _gaq.push(['_trackEvent', trackName, trackPosition, trackDesc]);
+	});
+</script>
+<!--// END SCRIPT FOR GOOGLE ANALYTICS TRACKING //-->
+					
+		
+		<style type="text/css">
+/** Layout Changes: 07-16-2014 **/
+#eb-logo {
+margin-left: 1px !important;
+margin-top: 7px !important;
+}	
+
+#logo {
+margin-left: 2px !important;
+margin-top: 35px !important;
+}	
+
+#left-column {
+padding-top: 235px !important;
+}
+
+/** Padding for IE11 **/
+@media all and (-ms-high-contrast:none) {
+
+#left-column {
+padding-top: 234px !important;
+}
+
+}
+
+#default-template #middle {
+margin-top: 10px !important;
+}
+
+#default-template #content {
+margin-left: 175px !important;
+}
+
+#default-template #left-column {
+margin-left: -2px !important;
+}
+
+#teaser-template #middle {
+margin-top: 12px !important;
+}
+
+.spelling-help #content {
+margin-left: 175px !important;
+}
+
+.spelling-help #middle {
+margin-top: 10px !important;
+}
+
+.spelling-help #left-column {
+margin-left: -3px !important;
+}
+
+#spelling-help #left-column {
+margin-left: -2px !important;
+}
+
+#content .section-links {
+margin-top: 0 !important;
+}
+
+#content .definition {
+padding-top: 5px !important;
+}
+
+#right-column {
+padding-top: 22px !important;
+}
+
+.c300x250-advert {
+height: 250px;
+width: 300px;
+}
+
+#app {
+padding-top: 15px !important;
+}
+
+.left_rail_tout {
+margin-bottom: 23px !important;
+}
+
+body.game-page .page_content_box {
+padding-top: 35px !important;
+}
+
+.stay-connected {
+margin-top: 10px !important;
+}
+
+/** This forces the 2nd tower ad to never overlap the first tower ad.
+
+.left-advert {
+padding-bottom: 650px !important;
+}
+
+**/
+
+</style>		<script type="text/javascript">
+
+function setupAds () 
+{
+	//alert("Footer:" + document.getElementById('footer').offsetTop);
+	//alert("Tower Ad 2 Div:" + document.getElementById('tower-advert2').offsetTop);	
+	var ad 				= document.getElementById('footer');
+	var footer_offset 	= ad ? ad.offsetTop : 0;
+
+	// Display the second tower advertisement.
+	if ( true ||  footer_offset >= 1890 ) { 
+		var container = document.getElementById('tower-advert2');
+		if ( container ) {
+			container.innerHTML = 
+				'<iframe src="/towerad2.php?page=' + page_view + '&ord=' + 2147483648*Math.random() + '.' + new Date().getTime() + '&id=MW_DICTIONARY&subj=MD+MB&search=AIDS" frameborder="0" framespacing="0" height="600" width="160" marginheight="0" marginwidth="0"  scrolling="no" style="border: 0; width: 160px; height: 600px; position: absolute; z-index: 999; margin-top: -645px; orig-margin-top: -605px; margin-left: -5px; orig-margin-left: -180px;"></iframe>'; 
+		};
+	};
+};
+
+</script>
+	</head>
+	<body>
+
+		<div id="app">
+			<div id="logo"><a href="/"><img src="/styles/default/images/interface/mwol2010_mw_logo_header.gif" /></a></div>
+			<div id="eb-logo"><a href="http://www.britannica.com/" target="_blank"><img src="/styles/default/images/interface/brit.jpg" /></a></div>
+			<div id="middle">
+				<div id="content">
+					<script type="text/javascript">
+	// The function shows the facebook login.
+	var FB_callback = null;
+	function showFBLogin (callback)
+		{	// document.getElementById('facebook-login-win').style.display = 'table';
+			try
+				{	FB.curr_user.callback = FB_callback = typeof(callback) !== 'undefined' ? callback : null;			
+				}
+
+			catch (exp)
+				{	
+				};
+			
+			try
+				{	FB.login(null,{perms:''});
+				}
+
+			catch (exp)
+				{
+				};
+
+			return false;
+		};
+
+	// Override FB status changes.
+	function onFBStatusChange (response)
+		{	if ( typeof(updateMySavedWordsDisplay) !== 'undefined' )
+				{	updateMySavedWordsDisplay();		
+				};
+			i;
+				}
+
+			catch (exp)
+				{
+				};
+
+			return false;
+		};
+
+	// Ovf ( FB.curr_user.callback && FB.curr_user.callback !== null )
+				{	FB.curr_user.callback();
+					FB.curr_user.callback = null;
+				};
+		};
+
+
+
+	// This function checks if a user is currently logged into the My Words feature.
+	function my_words_logged_in (callback)
+		{	if ( getCookie('my_saved_logged_in', 0) == 1 )
+				{	return true;
+				}
+
+			else
+				{	showFBLogin(callback);
+					return false;
+				};
+		};
+</script>
+<style type="text/css">
+#content .section-links ol li a,
+#content .section-links ol li a:active,
+#content .section-links ol li a:link,
+#content .section-links ol li a:visited
+{	font-size: 11px;
+	padding-top: 3px;
+	width: 106px;	
+}
+#content .section-links ol li.word-games a,
+#content .section-links ol li.word-games a:active,
+#content .section-links ol li.word-games a:link,
+#content .section-links ol li.word-games a:visited
+{	width: 115px;
+}
+#content .section-links ol li.new-words a,
+#content .section-links ol li.new-words a:active,
+#content .section-links ol li.new-words a:link,
+#content .section-links ol li.new-words a:visited
+{	width: 80px;
+}
+#content .section-links ol li.video a,
+#content .section-links ol li.video a:active,
+#content .section-links ol li.video a:link,
+#content .section-links ol li.video a:visited
+{	width: 47px;
+}
+#content .section-links ol li.share a,
+#content .section-links ol li.share a:active,
+#content .section-links ol li.share a:link,
+#content .section-links ol li.share a:visited
+{	background: url(/images/my-saved-words/my_words_star_icon.gif) no-repeat 7px top;	
+	border-top: solid 1px white;
+	height: 19px;
+	padding-left: 30px;
+	text-align: left;
+	width: 70px;
+}
+#content .section-links ol li
+{	height: 21px;
+}
+#content .section-links ol
+{	height: 21px;
+}
+#share-tab div.notice
+{	border: solid 1px #d10f1e;
+	background: white;
+	padding: 10px;
+	font-size: 12px;
+	display: none;
+	line-height: 17px;
+	margin-left: -55px;
+	margin-top: 22px;
+	position: absolute;
+	z-index: 999999;
+}
+#share-tab:hover div.notice
+{	display: block;	
+}
+					</style>
+					<div class="section-links">
+						<ol>
+							<li class="word-games"><a class="GA_analytics" data-category="Universal Nav" data-action="Position1" data-label="Quizzes & Games" href="/game/index.htm">Quizzes & Games</a></li>
+							<li class="word-of-the-day"><a class="GA_analytics" data-category="Universal Nav" data-action="Position2" data-label="Word of the Day" href="/word-of-the-day/">Word of the Day</a></li>
+							<li class="video"><a class="GA_analytics" data-category="Universal Nav" data-action="Position3" data-label="Video" href="/video/index.php">Video</a></li>
+							<li class="new-words"><a class="GA_analytics" data-category="Universal Nav" data-action="Position4" data-label="New Words" href="http://nws.merriam-webster.com/opendictionary/">New Words</a></li>
+							<li id="share-tab" class="share"><a class="GA_analytics" data-category="Universal Nav" data-action="Position5" data-label="My Favorites" href="/my-saved-words/manage-list.htm" onclick="return my_words_logged_in(function() { document.location = '/my-saved-words/manage-list.htm'; });">My Favorites</a><div class="notice"><strong>View your list of saved words.</strong><br />(You can log in using Facebook.)</div></li>
+							<!-- li class="share"><a href="/my-saved-words/manage-list.htm" onclick="return my_words_logged_in(function() { document.location = '/my-saved-words/manage-list.htm'; });"><img src="/images/my-saved-words/my_words_nav.jpg" ></a></li -->
+							<!--
+							<li class="share"><a href="http://twitter.com/merriamwebster" class="twitter"><img src="/styles/default/images/interface/twitter-menu-button.jpg" /></a><a href="http://www.facebook.com/merriamwebster"  class="facebook"><img src="/styles/default/images/interface/facebook-menu-button.jpg" /></a></li> -->
+						</ol>
+						<div style="float: none;">&nbsp;</div>
+					</div>					<!-- script type="text/javascript" src="/styles/default/scripts/search-box.js"></script -->
+					<form id="ref-search-box" action="#" method="get" class="search-box-no-focus" onsubmit="return doReferenceSearch(this);">
+	<ol class="dictionary">
+		<li class="dictionary"><a href="#" onclick="this.parentNode.parentNode.className = this.parentNode.className; document.getElementById('ref').value = this.parentNode.className; doReferenceSwitch (1); return false;"><span>Dictionary</span></a></li>
+		<li class="thesaurus"><a href="#" onclick="this.parentNode.parentNode.className = this.parentNode.className; document.getElementById('ref').value = this.parentNode.className; doReferenceSwitch (2); return false;"><span>Thesaurus</span></a></li>
+		<li class="medical"><a href="#" onclick="this.parentNode.parentNode.className = this.parentNode.className; document.getElementById('ref').value = this.parentNode.className; doReferenceSwitch (4); return false;"><span>Medical</span></a></li>
+		<li class="concise"><a href="#" onclick="this.parentNode.parentNode.className = this.parentNode.className; document.getElementById('ref').value = this.parentNode.className; doReferenceSwitch (5); return false;"><span>Concise Encyclopedia</span></a></li>
+        <li class="spanishcentral_url"><a href="http://www.spanishcentral.com/" onclick="var word = document.getElementById('search_box_terms').value.trim(); if ( word !== '' ) { document.location = 'http://www.spanishcentral.com/translate/' + encodeURIComponent(word); return false; }; return true;"><span class="new">New!</span> Spanish Central <img src="/styles/default/images/interface/spanish_central_blue_arrow.gif" /></a></li>
+
+	</ol>
+	<div>
+		<input id="ref" name="ref" type="hidden" value="dictionary" />
+		<input type="submit" class="search-button" value="" />
+		<input id="search_box_terms" name="word" type="text" value="aids" class="word" autocomplete="no" onfocus="document.getElementById('ref-search-box').className='search-box-focus';" onblur="document.getElementById('ref-search-box').className='search-box-no-focus';" />
+		<span id="selection"></span>
+	</div>
+</form>
+<script type="text/javascript">
+// <--
+// This function performs a reference search.
+function doReferenceSearch (the_form)
+	{	document.location = '/' + the_form.ref.value + '/' + the_form.word.value.replace(/\?/g, '_');
+		return false;
+	};
+
+// This function performs a reference switch.
+function doReferenceSwitch (ref)
+        {       //var search_box = document.getElementById('search_box_terms');
+                //search_box.autocomplete.cachedResponse = [];
+                //search_box.focus();
+				if ( document.getElementById('search_box_terms').value.replace(/\s+/, '') != '' )
+					{	document.location = '/' + document.getElementById('ref').value + '/' + encodeURIComponent(document.getElementById('search_box_terms').value);
+					};
+                return false;
+        };
+
+// Set it up.
+jQuery(function()
+	{	// This callback handles all suggestion clicks.
+		var onAutocompleteSelect = function(value, data)
+			{	// $('#selection').html('<img src="\/global\/flags\/small\/' + data + '.png" alt="" \/> ' + value);
+				// alert(data);
+				document.location = "/" + document.getElementById('ref').value + "/" + value;
+			};
+
+		// Autocomplete options.
+		var options =
+			{	serviceUrl: '/autocomplete',
+				width: 434,
+				delimiter: /(,|;)\s*/,
+				onSelect: onAutocompleteSelect,
+				deferRequestBy: 0, //miliseconds
+				params: { ref: function() { var ids= {'dictionary' : 1, 'thesaurus' : 2, 'spanish' : 3, 'medical' : 4, 'concise' : 5 }; return ids[document.getElementById('ref').value] } },
+				noCache: false // set to true, to disable caching
+			};
+
+		// Set up the autocomplete field.
+		a1 = $('#search_box_terms').autocomplete(options);				
+		//document.getElementById('search_box_terms').autocomplete = a1;
+	});
+
+// -->
+</script>
+					<div class="definition">					
+						<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+						<h1>AIDS</h1>
+			<form id="entry" action="/dictionary/aids" method="post" class="results-pagination">
+				<div class="pag-count">
+					<input name="start" type="hidden" value="0" />
+					<input name="show" type="hidden" value="0" />
+					<input name="ref" type="hidden" value="dictionary" />							<span class="pag-text">15 ENTRIES FOUND:</span>				</div>
+				<div class="page_results">
+				<ol class="results"><li class="dictionary-selected"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '0'; form.submit(); return false;" href="/dictionary/AIDS">AIDS</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '1'; form.submit(); return false;" href="/dictionary/aid[1]">aid</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '2'; form.submit(); return false;" href="/dictionary/AIDS-related complex">AIDS-related complex</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '3'; form.submit(); return false;" href="/dictionary/AIDS virus">AIDS virus</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '4'; form.submit(); return false;" href="/dictionary/anti-">anti-</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '5'; form.submit(); return false;" href="/dictionary/deaf-aid">deaf-aid</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '6'; form.submit(); return false;" href="/dictionary/filter aid">filter aid</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '7'; form.submit(); return false;" href="/dictionary/first aid">first aid</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '8'; form.submit(); return false;" href="/dictionary/foreign aid">foreign aid</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '9'; form.submit(); return false;" href="/dictionary/grinding aid">grinding aid</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '10'; form.submit(); return false;" href="/dictionary/hearing aid">hearing aid</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '11'; form.submit(); return false;" href="/dictionary/mutual aid">mutual aid</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '12'; form.submit(); return false;" href="/dictionary/state aid">state aid</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '13'; form.submit(); return false;" href="/dictionary/teaching aid">teaching aid</a></li>
+<li class="dictionary"><a onclick="var form = document.getElementById('entry'); form.start.value = 0; form.show.value = '14'; form.submit(); return false;" href="/dictionary/training aid">training aid</a></li>
+					</ol>
+				</div>
+			</form><br />
+
+<div id="ROS_textAd" style="margin:0 auto 10px auto;padding:0;width:450px;">
+	<script type="text/javascript">adsonar_placementId=1583228;adsonar_pid=1823767;adsonar_ps=-1;adsonar_zw=450;adsonar_zh=75;adsonar_jv='ads.adsonar.com';</script><script language="JavaScript" src="http://js.adsonar.com/js/adsonar.js"></script>
+</div><!--ROS_textAd--><style type="text/css">
+#mwEntryData div + div.headword {padding-top: 10px;}
+</style>
+<style type="text/css">
+.assembly
+{	float: left;
+	font-family: arial, verdana, sans-serif;
+	font-size: 7pt;
+	line-height: 8pt;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	padding-top: 8px;
+	width: 120px;
+}
+.assembly p
+{	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+</style><div id="wordclick" class="wordclick"><div class="border-top"><div class="border-left"><div class="border-right"><div class="border-bottom"><div class="corner-top-left"><div class="corner-top-right"><div class="corner-bottom-left"><div class="corner-bottom-right"><div id="mwEntryData"><div class="headword" id="headword"><h2>AIDS</h2><input type="button" onclick="return au('aids0001', 'AIDS');" class="au" title="Listen to the pronunciation of AIDS"/> <span class="main-fl"><em>noun</em></span> <span class="pr">\<span class="unicode">ˈ</span>ādz\</span>                                                <style type="text/css">
+                                                    .headword .ld_on_collegiate { margin:10px 0 0 0;padding:0 0 0 19px; width: 405px;}
+                                                    .ld_on_collegiate p {margin:0 0 10px 0;padding:0;line-height:20px; }
+                                                    .ld_on_collegiate p.bottom_entry {margin:0 0 3px 0;padding:0;line-height:20px;}
+                                                    #mwEntryData div.headword .ld_on_collegiate p em,
+                                                    .ld_on_collegiate p em { color: black; font-weight: normal; }
+					            #mwEntryData div.headword + div.d { margin-top: -7px; }
+						    .ld_on_collegiate .bnote { font-weight: bold; }
+						    .ld_on_collegiate .sl, .ld_on_collegiate .ssl { font-style: italic; }
+                                                    </style>
+                                                    
+                                                    <div class="ld_on_collegiate">
+                                                        <p class="bottom_entry">: a serious disease of the immune system that is caused by infection with a virus</p>
+                                                    </div></div><div class="d"><div class="dictButtons"><div class="citeBtn">
+				<script type="text/javascript">
+				/* <![CDATA[ */ 
+				   EBcitation = {
+					"source": "website",
+					"npnd": "yes",
+					"website": {
+						"title": "AIDS"
+					},
+					"pubonline": {
+						"title": "Merriam-Webster.com",
+						"url": "http://www.merriam-webster.com/dictionary/AIDS",
+						"inst": "Merriam-Webster"
+					},
+					"contributors": [
+						{
+							"function": "author",
+						}
+					]
+				};
+				   EBversion  = "1.0";
+				   document.write(unescape("%3Cscript src='http://media.easybib.com/citethis/"+EBversion+"/widget_mini.js' type='text/javascript'%3E%3C/script%3E"));
+				/* ]]> */
+				</script> 
+
+    </div><div class="gplusBtn"><div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://www.merriam-webster.com/dictionary/AIDS"></div></div><div class="facebookBtn"><fb:like href="http://www.merriam-webster.com/dictionary/AIDS" send="false" layout="button_count" show_faces="false" width="90" show_faces="false" font=""></fb:like></div></div><h2 class="def-header"><span>Full Definition of <em>AIDS</em></span></h2><div class="sense-block-one"><div class="scnt"><span class="ssens"> <strong>:</strong>  a disease of the human immune system that is characterized cytologically especially by reduction in the numbers of CD4-bearing helper T cells to 20 percent or less of normal thereby rendering the subject highly vulnerable to life-threatening conditions (as Pneumocystis carinii pneumonia) and to some (as Kaposi's sarcoma) that become life-threatening and that is caused by infection with HIV commonly transmitted in infected blood especially during illicit intravenous drug use and in bodily secretions (as semen) during sexual intercourse </span></div></div><style type="text/css">
+.learners-link div.learners-link-content
+{	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	padding: 0 5px 0 22px;
+}
+.learners-link div.learners-link-content a .word
+{	text-decoration: none;
+}
+.learners-link div.learners-link-content a:hover .word
+{	color: #5358a9;
+	text-decoration: underline;
+}
+#content .definition div.d .learners-link a,
+#content .definition div.d .learners-link a:hover,
+#content .definition div.d .learners-link a:link,
+#content .definition div.d .learners-link a:visited
+{	color: black;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-variant: normal;
+	font-size: 13px;
+	text-decoration: none;
+}
+</style><div class="learners-link" ><div class="learners-link-content"><a href="http://www.learnersdictionary.com/search/AIDS"><img src="/styles/default/images/reference/external.jpg" /> See <span style="color: #1122CC;" class="word">AIDS</span> defined for English-language learners <span style="color: #1122CC;">&#187;</span></a></div></div><style type="text/css">
+.wcentral-link div.wcentral-link-content
+{	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	padding: 0 5px 0 0;
+}
+.wcentral-link div.wcentral-link-content a .word
+{	text-decoration: none;
+}
+.wcentral-link div.wcentral-link-content a:hover .word
+{	color: #5358a9;
+	text-decoration: underline;
+}
+#content .definition div.d .wcentral-link a,
+#content .definition div.d .wcentral-link a:hover,
+#content .definition div.d .wcentral-link a:link,
+#content .definition div.d .wcentral-link a:visited
+{	color: black;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-variant: normal;
+	font-size: 13px;
+	text-decoration: none;
+}
+</style><div class="wcentral-link" ><div class="wcentral-link-content" style="padding-left: 38px;"><a href="http://www.wordcentral.com/cgi-bin/student?book=Student&va=AIDS">See <span style="color: #1122CC;" class="word">AIDS</span> defined for kids <span style="color: #1122CC;">&#187;</span></a></div></div><div class="etymology"><h2><span>Origin of <em>AIDS</em></span></h2><div class="content"><em>a</em>cquired <em>i</em>mmuno<em>d</em>eficiency <em>s</em>yndrome<div style="margin-top: 5px;">First Known Use: 1982</div></div></div><style type="text/css">
+.synonyms-reference .default .collapse {
+display: none;
+}
+
+#content .definition div.d .synonyms-reference div.expanded a.close,
+#content .definition div.d .synonyms-reference div.default a.more,
+#content .definition div.d .synonyms-reference div.expanded a:hover.close,
+#content .definition div.d .synonyms-reference div.default a:hover.more {
+color: rgb(113, 114, 116);
+}
+
+</style>
+<div class="rhyming-dictionary"><h2><span>Other Medicine Terms</span></h2><div class="content"><a onclick="_gaq.push(['_trackEvent', 'Subject - Medicine Terms', 'Clicked', 'analgesia']);" href="analgesia">analgesia</a>, <a onclick="_gaq.push(['_trackEvent', 'Subject - Medicine Terms', 'Clicked', 'angina']);" href="angina">angina</a>, <a onclick="_gaq.push(['_trackEvent', 'Subject - Medicine Terms', 'Clicked', 'diabetes']);" href="diabetes">diabetes</a>, <a onclick="_gaq.push(['_trackEvent', 'Subject - Medicine Terms', 'Clicked', 'hepatitis']);" href="hepatitis">hepatitis</a>, <a onclick="_gaq.push(['_trackEvent', 'Subject - Medicine Terms', 'Clicked', 'homeopathy']);" href="homeopathy">homeopathy</a>, <a onclick="_gaq.push(['_trackEvent', 'Subject - Medicine Terms', 'Clicked', 'logorrhea']);" href="logorrhea">logorrhea</a>, <a onclick="_gaq.push(['_trackEvent', 'Subject - Medicine Terms', 'Clicked', 'palliate']);" href="palliate">palliate</a>, <a onclick="_gaq.push(['_trackEvent', 'Subject - Medicine Terms', 'Clicked', 'pandemic%5B2%5D']);" href="pandemic%5B2%5D">pandemic</a><script type="text/javascript">
+_gaq.push(['_trackEvent', 'Subject - Medicine Terms', 'Displayed', 'AIDS']);
+</script>
+</div></div><script type="text/javascript" src="/styles/default/scripts/truncator.js"></script><div class="rhyming-dictionary"><h2><span>Rhymes with <em>AIDS</em></span></h2><div id="rhm-content" class="content"><a href="Glades">Glades</a></div></div><script type="text/javascript">
+$(function() { $('#rhm-content').truncate({max_length: 200, less: '<span class="icon">[-]</span><span class="text">hide</span>', more: '<span class="icon">[+]</span><span class="text">more</span>'}); });
+</script></div><div class="headword" id="headword"><h2>AIDS</h2> <input type="button" onclick="return au('aids0001', 'AIDS');" class="au" title="Listen to the pronunciation of AIDS"/> <span class="main-fl"><em xmlns:mwref="http://www.m-w.com/mwref">noun</em> </span> <span xmlns:mwref="http://www.m-w.com/mwref" class="pr">\<span class="unicode">ˈ</span>ādz\</span>&nbsp;&nbsp;&nbsp;<em>(Medical Dictionary)</em></div><div class="d"><h2 class="def-header"><span>Medical Definition of <em>AIDS </em></span></h2><jum/><cryp/><div class="d"><div class="sense-block-one"><div class="scnt"><span class="ssens"><strong>:</strong> a disease of the human immune system that is characterized cytologically especially by a reduction in the numbers of CD4-bearing helper T cells to 20 percent or less of normal thereby rendering the subject highly vulnerable to life-threatening conditions (as Pneumocystis carinii pneumonia) and to some that become life threatening (as Kaposi's sarcoma) and that is caused by infection with HIV commonly transmitted in infected blood especially during illicit intravenous drug use and in bodily secretions (as semen) during sexual intercourse—called also <em>acquired immune deficiency syndrome,   acquired immunodeficiency syndrome</em> </span></div></div></div><style type="text/css">
+.synonyms-reference .default .collapse {
+display: none;
+}
+
+#content .definition div.d .synonyms-reference div.expanded a.close,
+#content .definition div.d .synonyms-reference div.default a.more,
+#content .definition div.d .synonyms-reference div.expanded a:hover.close,
+#content .definition div.d .synonyms-reference div.default a:hover.more {
+color: rgb(113, 114, 116);
+}
+
+</style>
+</.definition div.d .synonyms-reference div.default a.more,
+#content .definition div.d .synonyms-reference div.exdiv><div class="headword" id="headword"><h2>AIDS</h2> <span class="main-fl"> <em xmlns:mwref="http://www.m-w.com/mwref">noun</em> </span>&nbsp;&nbsp;&nbsp;<em>(Concise Encyclopedia)</em></div><div class="d"><div class="sense-block-one"><div class="scnt"><span class="ssens"><p>Transmissible disease of the <a class="xref" href="/concise/immune system">immune system</a> caused by <a class="xref" href="/concise/HIV">HIV</a>. AIDS is the last stage of HIV infection, during which time the individual develops frequently fatal infections and cancers, including <em>Pneumocystis carinii</em> <a class="xref" href="/concise/pneumonia">pneumonia</a>, <a class="xref" href="/concise/cytomegalovirus (CMV)">cytomegalovirus (CMV)</a>, <a class="xref" href="/concise/lymphoma">lymphoma</a>, and <a class="xref" href="/concise/Kaposi sarcoma">Kaposi sarcoma</a>. The first AIDS cases were identified in 1981, HIV was isolated in 1983, and blood tests were developed by 1985. According to the UN's 2004 report on AIDS, some 38 million people are living with HIV, approximately 5 million people become infected annually, and about 3 million people die each year from AIDS. Some 20 million people have died of the disease since 1981. Sub-Saharan Africa accounts for some 70 percent of all HIV infections. Rates of infection are lower in other parts of the world, but the epidemic is spreading rapidly in eastern Europe, India, South and Southeast Asia, Latin America, and the Caribbean.</p> </span></div></div><div class="variant"><h2><span>Variants of <em>AIDS</em></span></h2><div class="content"><strong>AIDS</strong> in full <strong xmlns:mwref="http://www.m-w.com/mwref">acquired immunodeficiency syndrome</strong></div></div><style type="text/css">
+.synonyms-reference .default .collapse {
+display: none;
+}
+
+#content .definition div.d .synonyms-reference div.expanded a.close,
+#content .definition div.d .synonyms-reference div.default a.more,
+#content .definition div.d .synonyms-reference div.expanded a:hover.close,
+#content .definition div.d .synonyms-reference div.default a:hover.more {
+color: rgb(113, 114, 116);
+}
+
+</style>
+</div><div style="background: #e8ecf5; height: 5px;"></div><div class="d"><style type="text/css">
+#spanish_reference .learn_more
+{	margin-bottom: 16px;
+}
+</style><div class="browse learn_more"><h2><span>Learn More About <em>AIDS</em></span></h2><div class="content"><div style="padding-bottom: 3px;"><a href="http://www.spanishcentral.com/translate/AIDS" style="background: url(/images/lma_span.jpg) no-repeat left 1px; padding-left: 20px; line-height: 16px; padding-bottom: 10px; text-decoration: none; color: black; font-weight: normal;">Spanish Central: </a><a href="http://www.spanishcentral.com/translate/AIDS">Spanish translation of "AIDS"</a></div>
+<div style="list-style-type: none;"><a href="/scrabble/finder/AIDS" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAA3NCSVQICAjb4U/gAAAAM1BMVEX///9ylMFylMFylMH////3+fvl6/Tc5fDT3uy5yuCww9ynvNiettSVr9GNqM17m8VylMFo282/AAAAEXRSTlMARIiq/////////////////9nes00AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAVdEVYdENyZWF0aW9uIFRpbWUAMTAvOC8xNHTqRFQAAAAedEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzUuMasfSOsAAABkSURBVAiZVY/BAoAgCEMhySwz+P+vbavM2gF4h8EQEdEUUFK5NGGuFWXqFHmJm5W9mR3sKvB5K2alOfwSNdujXEPCBzrwZRCRi6iGkasGJh7abd62maiMsRa4vKyfWNFD/l44AckJBrj3sQyoAAAAAElFTkSuQmCC); background-repeat: no-repeat; background-position: 1px 2px; padding-left: 20px; line-height: 16px; margin-top: 7px; padding-bottom: 10px; text-decoration: none; color: black; font-weight: normal;">SCRABBLE<div style="margin:2px 0 0 0;padding:0;display:inline-block;vertical-align:top;font-size:11px;">&reg;</div>: </a><a href="/scrabble/finder/AIDS">Playable words you can make from "AIDS"</a></div><div style="margin:0 0 2px 0;"><a href="http://www.britannica.com/EBchecked/topic/10414/AIDS" style="background: url(/images/lma_enc.jpg) no-repeat left 1px; padding-left: 20px; text-decoration: none; color: black; font-weight: normal;">Britannica.com: </a><a href="http://www.britannica.com/EBchecked/topic/10414/AIDS">Encyclopedia article about "AIDS"</a></div></div></div><div class="browse"><h2><span>Browse</span></h2><div class="content"><span>Next Word in the Dictionary: <a href="/dictionary/AIDS-related complex">AIDS–related complex</a></span><br /><span>Previous Word in the Dictionary: <a href="/dictionary/aid prayer">aid prayer</a></span><br /><span>All Words Near: <a href="/browse/dictionary/AIDS">AIDS</a></span></div></div><style type="text/css">
+
+#video-overlay {
+left: 0;
+height: 100%;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 99999998;
+}
+
+#video-overlay .overlay-bkg {
+background: black;
+height: 100%;
+opacity: .55;
+position: fixed;
+width: 100%;
+z-index: 999991;
+}
+
+#video-overlay .overlay-close-btn {
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAA3NCSVQICAjb4U/gAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAedEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzUuMasfSOsAAAGnSURBVDhPpVNNSwJRFD2jMrmINn1YpNR+/MJkiJDwf7ho5z6oRbt2LYz6RyEiYRKlgZataqGY+gP8nOmdmyMmFkYH7rz7zj33vjt33mi2wuXlNUqlMv6CaDSCk5NjaJnMlV2tPiMQ8GN9fQO67hpL5qPft9But/D29o5QyIDb59s6393dwfb2JtxubSz7GdSsrCxD01yo1V4hx62urmE4BNLpNMLhqPjzjDFq6DOHkAIej0c2t7d3iMdjSCQOZD8NcoxRQ+i6LqsUsCxL7OHhEdXqizopKGKHp0+OMWocnvg6egq5XB7dbhemGYfX6xWOycXivdgsvnXgWKFQRLn8JIk0+uRmdZMC/8HcDth+JBJWl+tJjD65WR0hM7AsWzZEMnmIWCwiLTsT50z29001+SVksznhHIw7sMVMc0+9s6EmXUY+fb2JtxubSz7GdSsrCxD01yo1V4hx62urmE4BNLpNMLhqPjzjDFq6DOHkAIej0c2t7d3iMdjSCQOZD8NcoxRQ+i6LqsUsX5jw9MkxRo3DTwoMhwP1tOVb89Sbm6zsp40cY193xFZXuqdWQEuljmy/3z+5WYui2Wyi1fqAKxgMol6vo9FooNfrYzQa/WqDwUCSO502DMOA/M4XFxlUKpVx7cXA5LOzU3wCypghPoW+NPoAAAAASUVORK5CYII=);
+background-repeat: no-repeat;
+background-position: left, top;
+disabled-background: url('/video/assets/close-window-X.gif') no-repeat left top;
+cursor: pointer !important;
+display: block;
+font-family: arial, verdana, sans-serif;
+font-size: 18px;
+font-weight: bold;
+height: 17px;
+margin: 10px 0 0 1237px;
+padding: 0;
+position: absolute;
+text-decoration: none;
+width: 17px;
+z-index: 99999999;
+}
+
+#video-overlay .overlay-content {
+height: 100%;
+position: fixed;
+text-align: center;
+width: 100%;
+z-index: 999992;
+}
+
+#video-overlay .overlay-content > div iframe {
+background: white !important;
+border: 0;
+height: 721px; /* changed from 790px to maintain 16:9 aspect ratio. */
+margin: 0;
+padding: 0;
+width: 1282px; 
+}
+
+#video-overlay .overlay-content > div {
+border: 0;
+box-shadow: 1px 0 10px #222222;
+height: 721px; /* changed from 790px to maintain 16:9 aspect ratio. */
+margin: 0 auto;
+padding: 0;
+width: 1282px;
+position: relative;
+top: 50%;
+/* Firefox */
+top: -moz-calc(50% - 360px);
+/* WebKit */
+top: -webkit-calc(50% - 360px);
+/* Opera */
+top: -o-calc(50% - 360px);
+/* Standard */
+top: calc(50% - 360px);
+}
+
+.small-desktop #video-overlay .overlay-close-btn {
+margin-left: 955px !important;
+}
+
+.small-desktop #video-overlay .overlay-content > div iframe {
+height: 562px !important;
+width: 1000px;
+}
+
+.small-desktop #video-overlay .overlay-content > div {
+height: 562px !important;
+width: 1000px;
+/* Firefox */
+top: -moz-calc(50% - 281px);
+/* WebKit */
+top: -webkit-calc(50% - 281px);
+/* Opera */
+top: -o-calc(50% - 281px);
+/* Standard */
+top: calc(50% - 281px);
+}
+
+.small-desktop.tiny-desktop #video-overlay .overlay-close-btn {
+margin-left: 705px !important;
+}
+
+
+.small-desktop.tiny-desktop #video-overlay .overlay-content > div iframe {
+height: 422px !important;
+width: 750px;
+}
+
+.small-desktop.tiny-desktop #video-overlay .overlay-content > div {
+height: 422px !important;
+width: 750px;
+/* Firefox */
+top: -moz-calc(50% - 211px);
+/* WebKit */
+top: -webkit-calc(50% - 211px);
+/* Opera */
+top: -o-calc(50% - 211px);
+/* Standard */
+top: calc(50% - 211px);
+}
+
+.small-desktop #video-overlay.tiny-desktop .overlay-close-btn {
+margin-left: 955px !important;
+}
+
+/* Small Screens ------------- */
+
+/*
+@media only screen 
+and (max-device-height: 900px) {
+
+#video-overlay .overlay-content > div {
+top: 0 !important;
+}
+
+}
+*/
+
+/* Tablets (landscape) ----------- */
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1281px)
+and (orientation: landscape) {
+
+/*
+#video-overlay .overlay-content {
+left: 0;
+top: 0;
+}
+
+#video-overlay .overlay-content > div {
+left: 0 !important;
+margin: 0 0 0 0 !important;
+position: fixed !important;
+top: 0 !important;
+-webkit-transform: translateY(0) !important;
+-ms-transform: translateY(0) !important;
+transform: translateY(0) !important;
+
+}
+
+#video-overlay .overlay-content > div iframe {
+height: 675px !important;
+}
+
+#video-overlay .overlay-close-btn {
+margin-left: 1200px !important;
+}
+
+}
+
+**/
+
+</style>
+<script type="text/javascript">
+
+	// This function shows the video overlay.
+	function videoOverlay (elem, vid)
+	{
+
+		// Get the id.
+		var pid = 'mw_test';
+		var docurl = "" + document.location.href;
+		
+		var m2pid = [
+			{
+				match: /\/(dictionary|thesaurus|medical|concise)\//,
+				id: 'mw_results'
+			},
+			{
+				match: /\/video\//,
+				id: 'mw_video'
+			},
+			{
+				match: /\/game\//,
+				id: 'mw_games'
+			}
+		];
+		
+		for ( var index = 0; index < m2pid.length; index++ ) {
+			if ( m2pid[index].match.test(docurl) ) {
+				pid = m2pid[index].id;
+				break;
+			};
+		};
+
+		// This isn't a desktop; therefore, load the overlay in its own document.
+		if ( typeof(window.orientation) !== 'undefined' ) {
+			document.location.href = '/video/' + vid + '.html?pid=' + pid;
+			
+		// The screen height is not big enough for the overlay.
+		//} else if ( screen.width <= 800 && screen.height <= 600 ) {
+		//	document.location.href = '/video/' + vid + '.html?pid=' + pid;
+		
+		// This is a desktop machine so we will load the video in the overlay.
+		} else {
+		
+			// Flag this as small desktop.
+			if ( screen.width <= 1600 || screen.height <= 900 ) {
+				if ( document.body.className.indexOf(' small-desktop') < 0 ) {
+					document.body.className += ' small-desktop';
+				};
+			};
+			
+			// Flag this as tiny desktop.
+			if ( screen.width <= 800 && screen.height <= 600 ) {
+				if ( document.body.className.indexOf(' tiny-desktop') < 0 ) {
+					document.body.className += ' tiny-desktop';
+				};
+			};
+		
+			// Get the overlay.
+			var overlay = document.getElementById('video-overlay');
+			
+			// Create it for the first time.
+			if ( !overlay ) {
+				// Create it.
+				overlay = document.createElement('div');
+				overlay.id = 'video-overlay';
+				document.body.appendChild(overlay);
+				
+				// This method closes the overlay.
+				overlay.close = function ()
+				{
+					this.style.display = 'none';
+					this.parentNode.removeChild(this);
+				};
+			};
+			
+			// Add its content.
+			overlay.innerHTML = 
+				'<div class="overlay-bkg">&nbsp;</div>' + 
+				'<div class="overlay-content">' + 
+					'<div>' + 
+						'<a id="close-video-btn" href="#" class="overlay-close-btn" onclick="document.getElementById(\'video-overlay\').close(); return false;">&nbsp;</a>' + 
+						'<iframe src="/video/' + vid + '.html?pid=' + pid + '" scrolling="no" style="background-color: white;" bgcolor="white"></iframe>' +
+					'</div>' + 
+				'</div>';
+			
+			overlay.style.display = 'block';
+		};
+		
+		return false;
+	};
+	
+</script>
+<style type="text/css">
+
+.ask-the-editors {
+height: 230px;
+width: 100%;
+}
+
+.ask-the-editors .background {
+background: #3E3E40;
+height: 142px;
+margin-left: -10px;
+position: absolute;
+width: 461px;
+}
+
+.ask-the-editors .content {
+margin-left: -10px;
+position: absolute;
+width: 465px;
+}
+
+.ask-the-editors .slide-content .slide .thumbnail {
+padding: 10px;
+};
+
+.ask-the-editors .content .slide-content {
+display: table;
+width: 100%;
+}
+
+.ask-the-editors .slide {
+display: none;
+}
+
+.ask-the-editors .content .slide-content > div > div {
+display: table-cell;
+vertical-align: top;
+text-align: center;
+width: 50% !important;
+}
+
+.ask-the-editors .content .slide-content > div > div img {
+width: 95%;
+}
+
+#content .definition div.d .ask-the-editors .content .video-title,
+.ask-the-editors .content .video-title {
+font-family: arial, verdana, sans-serif !important;
+font-size: 12px;
+font-weight: bold;
+line-height: 12px;
+font-variant: normal !important; 
+padding-top: .5em;
+}
+
+.ask-the-editors .pagination {
+margin-top: 10px;
+text-align: center;
+width: 100%;
+}
+
+.ask-the-editors h2 span b {
+display: inline-block;
+}
+
+.ask-the-editors h2 span b.quoted:before {
+background-image: url(data:image/gif;base64,R0lGODlhCwAIAMQAAP38/f/9//78+v38/P7///7+/v///fz5+f37+f3+//z///z59/38+vv18/77/P359//9/v35+f/8/f/+/sODePr19f/+//34+f78/MOEecOFegAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAALAAgAAAU1oGJJmhYkxJRR11MChmVl2nSVEgIJdAGVj0gEQxswMKXSoZLUIJuNZIbWZNIomVtp4XhqHCEAOw==);
+content: ' ';
+display: inline-block;
+height: 8px;
+margin: 0 4px 0 0;
+padding: 0;
+width: 11px;
+}
+
+.ask-the-editors h2 > span > b.quoted:after {
+background-image: url(data:image/gif;base64,R0lGODlhCwAIAMQAAMOCd//9//35+v/+/v/9/vz///7//f38+sOBd/79+////f78+sODef3+//7///38/P77/P78/MOEef/+/////8OFegAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAALAAgAAAU1IFRJVQQZTFVNo1o9gCurS+pG8uPI0fGoEcogoZo4SAuBglCkkCAQRUOVmCAqFEcjQJpMCiEAOw==);
+content: ' ';
+display: inline-block;
+height: 8px;
+margin: 0 3px 0 4px;
+padding: 0;
+width: 11px;
+}
+
+.ask-the-editors a.btn,
+.ask-the-editors a.btn:active,
+.ask-the-editors a.btn:hover,
+.ask-the-editors a.btn:link,
+.ask-the-editors a.btn:visited {
+background-image: url(data:image/jpeg;base64,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);
+background-position: -35px -3px;
+display: inline-block;
+height: 13px;
+text-decoration: none;
+width: 13px;
+}
+
+.ask-the-editors a.btn.goto-previous,
+.ask-the-editors a.btn.goto-previous:active,
+.ask-the-editors a.btn.goto-previous:hover,
+.ask-the-editors a.btn.goto-previous:link,
+.ask-the-editors a.btn.goto-previous:visited {
+background-image: url(data:image/jpeg;base64,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);
+background-position: left -21px;
+}
+
+.ask-the-editors .slide-1 a.btn.goto-previous,
+.ask-the-editors .slide-1 a.btn.goto-previous:active,
+.ask-the-editors .slide-1 a.btn.goto-previous:hover,
+.ask-the-editors .slide-1 a.btn.goto-previous:link,
+.ask-the-editors .slide-1 a.btn.goto-previous:visited {
+background-image: url(data:image/jpeg;base64,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);
+background-position: left -3px;
+}
+
+.ask-the-editors a.btn.goto-next,
+.ask-the-editors a.btn.goto-next:active,
+.ask-the-editors a.btn.goto-next:hover,
+.ask-the-editors a.btn.goto-next:link,
+.ask-the-editors a.btn.goto-next:visited {
+background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAZAAA/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAwMDAwMDAwMDAwEBAQEBAQECAQECAgIBAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD/8AAEQgAJABhAwERAAIRAQMRAf/EAaIAAAAGAgMBAAAAAAAAAAAAAAcIBgUECQMKAgEACwEAAAYDAQEBAAAAAAAAAAAABgUEAwcCCAEJAAoLEAACAQMEAQMDAgMDAwIGCXUBAgMEEQUSBiEHEyIACDEUQTIjFQlRQhZhJDMXUnGBGGKRJUOhsfAmNHIKGcHRNSfhUzaC8ZKiRFRzRUY3R2MoVVZXGrLC0uLyZIN0k4Rlo7PD0+MpOGbzdSo5OkhJSlhZWmdoaWp2d3h5eoWGh4iJipSVlpeYmZqkpaanqKmqtLW2t7i5usTFxsfIycrU1dbX2Nna5OXm5+jp6vT19vf4+foRAAIBAwIEBAMFBAQEBgYFbQECAxEEIRIFMQYAIhNBUQcyYRRxCEKBI5EVUqFiFjMJsSTB0UNy8BfhgjQlklMYY0TxorImNRlUNkVkJwpzg5NGdMLS4vJVZXVWN4SFo7PD0+PzKRqUpLTE1OT0laW1xdXl9ShHV2Y4doaWprbG1ub2Z3eHl6e3x9fn90hYaHiImKi4yNjo+DlJWWl5iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMRAD8A3wd69gbX2DQfe7hyCQPICaPHwBZ8nkGUWK0lIGDMLmzSOUiS41Ot7+/de6QnT3aVd2fWbwqJqCDF4zES4aLFUiO01SErBljUTVtUdImnl+2ThVVEAsLm7H3XuhiyOQoMRj67K5WupMbjMZSVGQyWRyFTFR0FBQUcL1NZW1tXUvHT0tJS00bSSSOyoiKSSACfdHdIkMkhCooJJOAABUk/IDp62trm9uY7OzjeW7ldUREUs7uxCqqqoJZmYgAAEkmgz0W34+fM/wCMHypr924roDuHbfZGU2NLEm58djKbNYyuoYJ55KaHJU1JuDF4ioy+EmqIii5CiWooi5UeW7KCT7VzFsu9ySJtVwkzxfEBUEVxXuAqKjiKj59Sj7j+x3ux7R21lee42yXW2Wm4A+A7tFIjEAMUZoZJBHKFIJhlKS0qdFAaGTyWSocRQVWTylVDQ46igeoq6uocJDDCliWdrnm5sALljwASQPZ31FHTRtjeO2t50UtftnLU+WpYJvt52hSeGWCawYJPTVUUFTFrU3UsgVgDYmx9+691Lz+4cLtfGz5nP5CDGY2nKLJUz6yNUh0xxRxRJJNPNI30RFZj/Tj37r3XeA3Fhd0YyDMYDIw5PHVBdY6mDWo1xnTJHLHKkc0E0Z+qOqsP6e/de6aNz7+2hsyShh3NnaTFTZFiKSKZaiWWRVIVpnSmhnaCnVjYySBYwfzwffuvdKyKWKeJJ4HSaGZElilidXjljdQySRupKPG6EEEGxHv3XuiVfPP5K7s+KfUe1u09p4fEbgkPaW3Nt53BZozw02V25lMHuqqyFJT19KTPi8gZsbC8FSFlWN0GuORC0be690ovi580elflbhBPsXN/wreVHSpPuHrncEkFJurEMoAqKimhD+HP4dJGAFbRmSNQyCZYJG8Q917o2usf6pP+Sx/xT37r3QMdn9K7c7G15IO+H3MkKRxZeBTLFVJEhWCDJ0bOsdREo9KuumVRbllAX37r3SV+P+w9y7Aq99YzcVEIDNNt9qGtp282PyUUS5oST0U+lC6r5F1IypKmoa1W49+690LnZGxMD2n17vzrLdAqm2x2Nszc+xNxrj6g0le2B3dg67b+XWiqwkhpatsfkJBHJpbQ9jY2t7S3drFeWstnLXwZo2RqcdLKVNPyOPn0e8r8w7jyjzLt3Ne0aBuu130F3DrXUni20qTR6lqNS60FRUVGOqv/AOXZ/KS2J/L87D7E7OxnbO4e0tzbz23JsfEHJbYotpUG3NnVOcxm4a2iqKOjzecGdzdZkMFQlq3VSRokDKlOvkY+wXypyJbcq3c16k7zzyJoFVCBUqCRgtUnSvdjhwFesrvvL/fI5i+8dy1tnKt3s9rtG12N0LqXRO1w89ysTwo6s0UXgxKkstIqSMS4LSnSOrT947Wo957Zy22K+WanpstTpE08Gny08sFRFWU0yK3pfxVVOjFTYMARcX9j7rDTpIdV9VUPV9FlYIMpPl6zMVFNJV1klMtFEIaFZ1o4YaRaiq8ZQ1chZjIxcsOABb37r3Tx2TsGi7I24236ytmxxjrYMhR1sEQnNPWU0c8KtLTtJCtTC0FVIpTWh5uCCPfuvdd9bbAouuNuLt+jrJ8iZK2fI1lbNEsHnrKiOCFmip1kmFPCsFJGoTW54uSST7917pHdpdJ43s3KYrLS5qqw1ZQUox8xipI6yOroI6iWqjiRHqKf7aeOWpktJ6wQ3Kmw9+690L+JxtPh8VjMRR6xSYrH0eNpfI/kk+2oaaOlg8j8a38UYufyffuvdV7fzO+m+x++OhNodd9Wbaqtz7oyPc206r7WCSClpMdjabbe9ErcxmMjVyQ0mNxNEZ0Ek0jqNbpGuqR0Rvde6Snwv/lldefG2pxHYu/a2DsXuaiVaiiyKJPDtHZNVLC0cq7Xx8yxT5PIRLM6fxKtQPpsYYKZtRb3XurROf6j/bH/AIr7917pszOZxG3sXX5zPZTHYXDYqlmr8plstWU2OxuOoqdDJPWV1bWSQ0tJTQqt2kkdVUfUj37r3Reegflb1Z8ldw9oYrqipyGaw3VtXtrHV+7Z6V6LEbhr9wLnpG/u9FUaK+pxuPXCafuZo4hO0hMamMLJJ7r3Rlj/AI8gH/bXP+HHH+8e/de68G+lj/ha4v8AXn/bEe9Vp9nXuuVwfofr/wAa5H4N7+99e67vf/iv/FPfuvde/P1t/vvrf/D37r3Xv999f6+/de68Tb6/X6f6/wDgPz/yL37r3Xv68/7H+n4/2/v3XukTvnfOI2BjcfmM6lUcfWZemxEs9JGJpKNqmlralaqSG4eaGM0dnVLvY3UEjSfde6UeIzOLz1BT5TD5CmyWPqlDQVdHKksL/wCqW4uY5UY2dGs6EEMAwI9+69058/1H+2P/ABX37r3VUH8yz4j/ACG+RO36TLdT9jZLMYHb9LHPXdCVlRRYTFZmupSzjO4XKQJRxZfOqLaaXLySLHZjSzxMxhk917oDP5KmAzm1ovlHtzcmIyeAz+F3H1lj8thczQ1OMy2MrYKPfazUtfj62OKppZoz9VdQf8B7917q5DtnAbt3X1d2VtbYG4zs3fe5dg7wwGy93/uj+6m7Mxt3I47bm5L06vP/ALg8xUQ1XoVn/a4BNh7R38M89lNBbPouJInVG/hZkIVvyND0I+Ttx2XZ+btq3fmO1+u5ftdytprq2x/jFvFNG80PcQv6sasmSBnqiz+TV8FfnB8T+0u8d0/JTKSYbYm7tvjFUO0T2Fjt9neu+juOgyEPZn+4nKZWnoDjsPS1tL5KxqfI1P8AE/XEBFf3Gft9y1zLsV9c3G8NptnSgXxPE1vUHxO0mlKNg0PdkY6z/wDvvfeC9hfeHlLl/afa6Hx+YbO58R7j6N7X6S1ELIbGskcbPrlaOTTEHgj8Dtcl+r4OwsRnM/srcGH25W/Y5qvoRFQ1AmanJKzwyz0/3C8wCtpY3hL8AeS5I9yx1zd6DfoPZG89k4XNUu7ZDElbXU0uMxDV0Nf9h4EnFZU+WmlnpY/vzJH6UckeG5AJt7917pS90bY3Ru7ZNRiNpVBiyDV1LPUUwqUo/wCKUESzrNjhUu8cUZeaSOSzsqN4tJIB9+6917pfa+59o7JpsRuuo8uRWuqp6elNUtYcXQSrAsOONRG8kTlJYpJLIzIvk0gnT7917oOe+euewt6ZjbtXtOc1GOoqbwS0AykWOGPyAqpJTl/3poBKZKeSNLx6pE8PA9Xv3XujF4SmrqLDYijyVV9/kaTGUFNkK31f5bXQUkUVXVAtY/5RUIz8/wBffuvdAF8okaTrzGxIjO77vxaIiAs7O2NzQQKoBLFmNgLHn37r3SO6E6r7AwFbHuPKZWt2tiKjRJLtoqstXmV02T+J0dQrQ4xQOAxT7tQCo8d9Xv3Xujhe/de69x/vP+8/j/Y+/de6TlD/AHV/vLn/AOHfwD+9n8PwP95/sf4f/eH+Gasv/dj+PeD/AHI/ZavvvsPP6L+fxf2/fuvdP7/7D683/wCN8e9Yz9nXuuQtbm3+Nr2+n/FPe/8AD17rl/vv97+n+Pv3Xuvf77/evfuvddcX/wAbn/euf9h7917rv/e/+I5t7917rri4/wBj9Pp+L39+69137917purP4Zrx/wDEPsdf38f8M+88Gv8AiX29R4vsvP8A8p32vmt4/wBzRqtxf37r3U/8c/1F7fS9ubf7T9ffuvde4/2r/k/37r3X/9k=);
+background-position: -83px -3px;
+}
+
+.ask-the-editors .slide-4 a.btn.goto-next,
+.ask-the-editors .slide-4 a.btn.goto-next:active,
+.ask-the-editors .slide-4 a.btn.goto-next:hover,
+.ask-the-editors .slide-4 a.btn.goto-next:link,
+.ask-the-editors .slide-4 a.btn.goto-next:visited {
+background-image: url(data:image/jpeg;base64,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);
+background-position: -83px -21px;
+}
+
+.ask-the-editors a.btn span {
+display: none;
+}
+
+.ask-the-editors a .play-icon {
+background: transparent;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAaCAMAAADorg53AAAAA3NCSVQICAjb4U/gAAAAclBMVEX///94eHxvb3Nvb3RoaGtoaGxiYmb////f3+GZmZyZmZmVlZmTk5eRkZWPj5ONjZKLi5CLi4+Kio2JiY+IiIuHh42Hh4qFhYuBgYR+foR6eoB6en90dHhycnZxcXZoaGxmZmpiYmZgYGReXmJcXGBbW19Jo+6iAAAAJnRSTlMAREREzMzM3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3SMLXAgAAAAJcEhZcwAADpwAAA6cAQeUU90AAAAedEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzUuMasfSOsAAAC4SURBVCiRjdHtEoIgEEBRLEPND0QzxShN4f1fMbAGgxi2+3PnzMIAimIJFEconpss2GU+IUHDJsuuEskcQrlA8gymUA5moVVwAiKZDouPKVSYZJJoVhVOLtJM8BJCmq2cOqg0fdB26L3Z536kGJssVJm+0TDtcz/abhVGKVt5XVUWIqb3E7CFU2LlIkUePSEhpLf8kA3VJvXBbe1JIQqmUAv2D+oUYh3QKBF+3voQ6ccFoyMWQPjwAueCPlB3rZBqAAAAAElFTkSuQmCC);
+background-position: 99.5% 99.5%;
+background-repeat: no-repeat;
+display: inline-block;
+height: 120px;
+opacity: .8;
+position: absolute;
+width: 215px;
+z-index: 999;
+}
+
+
+.ask-the-editors .slide-1 .slide-1 {
+display: table-row;
+}
+
+.ask-the-editors .slide-1 a.btn.goto-slide-1 {
+background-image: url(data:image/jpeg;base64,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);
+background-position: -20px -3px;
+}
+
+
+.ask-the-editors .slide-2 .slide-2 {
+display: table-row;
+}
+
+.ask-the-editors .slide-2 a.btn.goto-slide-2 {
+background-image: url(data:image/jpeg;base64,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);
+background-position: -20px -3px;
+}
+
+
+.ask-the-editors .slide-3 .slide-3 {
+display: table-row;
+}
+
+.ask-the-editors .slide-3 a.btn.goto-slide-3 {
+background-image: url(data:image/jpeg;base64,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);
+background-position: -20px -3px;
+}
+
+
+.ask-the-editors .slide-4 .slide-4 {
+display: table-row;
+}
+
+.ask-the-editors .slide-4 a.btn.goto-slide-4 {
+background-image: url(data:image/jpeg;base64,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);
+background-position: -20px -3px;
+}
+
+
+</style>
+<div class="ask-the-editors">
+	<h2><span><b class="quoted">Ask The Editor</b> Videos</span></h2>
+	<div class="background"></div>
+	<div class="content slide-1">
+		<div class="slide-content">
+			<div class="slide slide-1">					<div class="video">
+						<a href="0058-mw_woty2014" onclick="return videoOverlay(this, '0058-mw_woty2014');">
+						<div class"thumbnail"><span class="play-icon">&nbsp;</span><img src="/video/assets/images/module/0058-mw_woty2014_206x116.jpg" class="thumbnail" /></div>
+						<div class="video-title">2014 Word of the Year: Behind the Scenes</div>
+						</a>
+					</div>
+										<div class="video">
+						<a href="0057-month_names" onclick="return videoOverlay(this, '0057-month_names');">
+						<div class"thumbnail"><span class="play-icon">&nbsp;</span><img src="/video/assets/images/module/0057-month_names_206x116.jpg" class="thumbnail" /></div>
+						<div class="video-title">How the Months Got Their Names</div>
+						</a>
+					</div>
+					</div><div class="slide slide-2">					<div class="video">
+						<a href="0056-1864dictionary" onclick="return videoOverlay(this, '0056-1864dictionary');">
+						<div class"thumbnail"><span class="play-icon">&nbsp;</span><img src="/video/assets/images/module/0056-1864dictionary_206x116.jpg" class="thumbnail" /></div>
+						<div class="video-title">Webster's Dictionary of 1864</div>
+						</a>
+					</div>
+										<div class="video">
+						<a href="0055-oldschoolgrammar" onclick="return videoOverlay(this, '0055-oldschoolgrammar');">
+						<div class"thumbnail"><span class="play-icon">&nbsp;</span><img src="/video/assets/images/module/0055-oldschoolgrammar_206x116.jpg" class="thumbnail" /></div>
+						<div class="video-title">Old-School Grammar</div>
+						</a>
+					</div>
+					</div><div class="slide slide-3">					<div class="video">
+						<a href="0054-schwa" onclick="return videoOverlay(this, '0054-schwa');">
+						<div class"thumbnail"><span class="play-icon">&nbsp;</span><img src="/video/assets/images/module/0054-schwa_206x116.jpg" class="thumbnail" /></div>
+						<div class="video-title">Schwa</div>
+						</a>
+					</div>
+										<div class="video">
+						<a href="0051-that_vs_which" onclick="return videoOverlay(this, '0051-that_vs_which');">
+						<div class"thumbnail"><span class="play-icon">&nbsp;</span><img src="/video/assets/images/module/0051-that_vs_which_206x116.jpg" class="thumbnail" /></div>
+						<div class="video-title">That vs. Which</div>
+						</a>
+					</div>
+					</div><div class="slide slide-4">					<div class="video">
+						<a href="0050-ie_vs_eg" onclick="return module/0051-that_vs_which_206x116.jpg" class="thumbnail" /><videoOverlay(this, '0050-ie_vs_eg');">
+						<div class"thumbnail"><span class="play-icon">&nbsp;</span><img src="/video/assets/images/module/0050-ie_vs_eg_206x116.jpg" class="thumbnail" /></div>
+						<div class="video-title">i.e. vs. e.g.</div>
+						</a>
+					</div>
+										<div class="video">
+						<a href="0048-longest_word_in_dictionary" onclick="return videoOverlay(this, '0048-longest_word_in_dictionary');">
+						<div class"thumbnail"><span class="play-icon">&nbsp;</span><img src="/video/assets/images/module/0048-longest_word_in_dictionary_206x116.jpg" class="thumbnail" /></div>
+						<div class="video-title">Longest Word in the Dictionary</div>
+						</a>
+					</div>
+								</div>
+		</div>
+		<div class="pagination">
+			<a href="#" onclick="var parent = this.parentNode.parentNode; var slide = parent.slide = Math.max(1, typeof(parent.slide) != 'undefined' ? parent.slide - 1 : 1); parent.className = 'content slide-' + slide; return false;" class="btn goto-previous"><span>&nbsp;</span></a>
+					<a href="#" onclick="var parent = this.parentNode.parentNode; parent.className = 'content slide-1'; parent.slide = 1; return false;" class="btn goto-slide-1"><span>&nbsp;</span></a>
+					<a href="#" onclick="var parent = this.parentNode.parentNode; parent.className = 'content slide-2'; parent.slide = 2; return false;" class="btn goto-slide-2"><span>&nbsp;</span></a>
+					<a href="#" onclick="var parent = this.parentNode.parentNode; parent.className = 'content slide-3'; parent.slide = 3; return false;" class="btn goto-slide-3"><span>&nbsp;</span></a>
+					<a href="#" onclick="var parent = this.parentNode.parentNode; parent.className = 'content slide-4'; parent.slide = 4; return false;" class="btn goto-slide-4"><span>&nbsp;</span></a>
+					<a href="#" onclick="var parent = this.parentNode.parentNode; var slide = parent.slide = Math.min(4, typeof(parent.slide) != 'undefined' ? parent.slide + 1 : 2); parent.className = 'content slide-' + slide; return false;" class="btn goto-next"><span>&nbsp;</span></a>
+		</div>		
+	</div>
+</div>
+<h2><span><img src="/images/seen-heard-left-quote.gif" width="11" height="8" /> Seen &amp; Heard <img src="/images/seen-heard-right-quote.gif" width="11" height="8" /></span></h2><p>What made you want to look up <em>AIDS</em>? Please tell us where you read or heard it (including the quote, if possible).</p><div id="fb-comments"><div class="fb-comments" data-href="http://www.merriam-webster.com/dictionary/AIDS" data-width="440" data-num-posts="5" mobile="false" data-order-by="reverse_time"></div></div><div style="margin:5px 0;padding:0;"><a style="font-family:Arial, Helvetica, sans-serif;font-variant:normal;font-size:12px;font-weight:bold;color:#1122CC;"
+	href="/seen-and-heard/archive/page-1.htm">View Seen &amp; Heard highlights from around the site &raquo;</a></div><div style="margin:0;padding:0;float:left;"><a style="font-family:Arial, Helvetica, sans-serif;font-variant:normal;font-size:12px;color:#1122CC;" href="http://www.facebook.com/merriamwebster?ref=ts&sk=wall">Merriam-Webster on Facebook</a></div><div id="facebook" style="margin:0 0 0 5px;padding:0;float:left;width:100px;"><div class="fb-like" data-href="http://www.facebook.com/merriamwebster?ref=ts&sk=wall" data-width="100" data-send="false" data-layout="button_count" data-show-faces="true" data-font="arial"></div></div><script type="text/javascript" src="http://stats.merriam-webster.com/tally.php?word=AIDS&t=1420620098"></script></div></div></div></div></div></div></div></div></div></div></div>					
+					</div>								
+				</div>
+
+				<div id="left-column">
+                    <style type="text/css">
+.quiz_tout_container {margin:-17px 0 30px 0;padding:0;}
+.quiz_tout_container .quiz_icon {margin:0;padding:0;vertical-align:top;display:inline-block;width:50px;}
+.quiz_tout_container .quiz_icon img {margin:0;padding:0;display:block;width:100%;}
+.quiz_tout_container .quiz_btn {margin:18px 0 0 0;padding:0;vertical-align:top;display:inline-block;width:94px;}
+.quiz_tout_container .quiz_btn img {margin:0;padding:0;display:block;width:100%;}
+.quiz_tout_container .quiz_title {margin:3px 0 5px 0;padding:0;}
+.quiz_tout_container .quiz_title a {font-size:14px;font-family:georgia,arial,verdana,sans-serif;font-weight:bold;color:#ca0403;text-decoration:none;}
+.quiz_tout_container .quiz_title a:hover {text-decoration:underline;}
+.quiz_tout_container .quiz_blurb {margin:0;padding:0;}
+.quiz_tout_container .quiz_blurb a {font-size:12px;font-family:Arial,Verdana,sans-serif;font-weight:bold;color:#000000;text-decoration:none;}
+.quiz_tout_container .quiz_blurb a:hover {text-decoration:underline;}
+</style>
+
+<div class="quiz_tout_container">
+	<div class="quiz_icon">
+    	<a class="GA_analytics" data-category="Quiz Promo" data-action="LR1-Position1" data-label="Vocabulary Quiz" href="/quiz/index.htm"><img src="/images/vocab-quiz/vocab-quiz-logo-50x50.gif" /></a>
+    </div>
+    <div class="quiz_btn">
+        <a class="GA_analytics" data-category="Quiz Promo" data-action="LR1-Position1" data-label="Vocabulary Quiz" href="/quiz/index.htm"><img class="quiz-button" src="/images/vocab-quiz/quiz-button-94x33.gif" /></a>
+   	</div>
+	<div class="quiz_title">
+    	<a class="GA_analytics" data-category="Quiz Promo" data-action="LR1-Position1" data-label="Vocabulary Quiz" href="/quiz/index.htm">Test Your Vocabulary</a>
+    </div>
+    <div class="quiz_blurb">
+		<a class="GA_analytics" data-category="Quiz Promo" data-action="LR1-Position1" data-label="Vocabulary Quiz" href="/quiz/index.htm">Take Our 10-Question Quiz</a> 
+    </div>
+</div>					<div class="left-advert">
+						<script type="text/javascript">
+						// <!--
+
+							output_creative('div-gpt-ad-894456462400224661-3');
+
+						// -->
+						</script>
+					</div><!--left-advert-->					
+					<div class="results-left-promo">
+					</div>
+				</div>
+				<div id="right-column">
+					<div style="width:320px;height:272px;" id="adaptvDiv">
+                         <div id="ask-the-editors">
+<script type="text/javascript">
+ if ( navigator.mimeTypes ["application/x-shockwave-flash"] == undefined ) {
+               document.write('<a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt=""></a>');
+                };
+</script>
+</div>
+	<script type="text/javascript" src="/video/jwplayer/jwplayer-6.10/jwplayer.js"></script>
+        <script type="text/javascript">jwplayer.key="OdjJyYN49OngMGhZzqouyjgt5MnrwNm7fDOTBVeyHVU=";</script>
+<script type="text/javascript">
+  var adStarted = false;
+  function adaptv_jsstartBreak()
+  {
+    adStarted = true;
+    console.info('ad started');
+  }
+  function adaptv_jsbreakEnded()
+  {
+    if (adStarted) {
+      console.info('ad ended');
+    }
+    else {
+      console.info('no ads available');
+    }
+  }
+  function adaptv_jscompanion()
+  {    console.info('companion shown');
+  }
+  function adaptv_jsclickThru()
+  {
+    console.info('ad clicked');
+  }
+</script>
+
+<script type="text/javascript">
+                <!--
+function loadPlayer() {
+    var options = {
+    primary: 'flash',
+    height: "240",
+    width: "320",
+    mute: getCookie("jw-mute", "true"),
+    wmode: 'transparent',
+    plugins: {
+        'http://redir.adap.tv/redir/integrations/jw/adaptvjw6.swf' : {
+        key: 'nj232',
+        //key: 'bbe_test',
+	zid: 'mwvideo_autosilent_nocomp',
+	companionid: 'comp_ad'
+        }
+    },
+    file: "http://video.merriam-webster.com/0058-mw_woty2014.mp4?ec_rate=72",
+    image: "/video/assets/images/0058-mw_woty2014.jpg",
+    description: encodeURIComponent("The inside scoop behind our 2014 Word of the Year selections."),
+    title: "2014 Word of the Year: Behind the Scenes", // The title of the video
+    duration: "266",
+    vid: "0058-mw_woty2014",
+    videoplayerid: "ask-the-editors",
+    context: {
+        customKey1: 'test1',
+        customKey2: 'test2'
+    },
+    skin: 'bekle',
+    autostart: "true"
+    }
+    jwplayer("ask-the-editors").setup(options);
+};
+loadPlayer();
+-->
+</script>
+
+					</div>
+                                        <div id="main_ad" class="right-advert">
+					<script type="text/javascript">
+						// <!--
+
+							 output_creative('div-gpt-ad-894456462400224661-4');
+							 
+						// -->
+					</script>
+					</div>
+					<!--// <script type="text/javascript" src="/styles/default/scripts/vocabulary-quiz-promo.js"></script> //-->
+					<style type="text/css">
+.more_quizzes_container {margin:0 0 10px 0;padding:0;width:310px;}
+.more_quizzes_container .more_quizzes_section_header {margin:0 0 10px 0;padding:0;width:301px;}
+.more_quizzes_container .more_quizzes_section_header img {margin:0;padding:0;display:block;width:100%;}
+.more_quizzes_container .featured_quiz {margin:0;padding:0;clear:both;overflow:hidden;}
+.featured_quiz .quiz_icon {margin:4px 10px 0 10px;padding:0;width:74px;float:left;vertical-align:top;}
+.featured_quiz .quiz_icon img {margin:0;padding:0;display:block;width:100%;}
+.featured_quiz .quiz_title {margin:0 0 3px 0;padding:0;color:#CA0403;font-family:georgia, arial, verdana, sans-serif;font-size:14px;font-weight:bold;}
+.featured_quiz .quiz_title a {color:#CA0403;text-decoration:none;font-family:georgia, arial, verdana, sans-serif;font-size:14px;font-weight:bold;}
+.featured_quiz .quiz_title a:hover {color:#CA0403;text-decoration:underline;}
+.featured_quiz .quiz_blurb {margin:0 0 3px 0;padding:0;color:#000000;font-size:12px;font-weight:normal;font-family:helvetica,verdana,arial;}
+.featured_quiz .quiz_blurb a {color:#000000;text-decoration:none;font-size:12px;font-weight:normal;font-family:helvetica,verdana,arial;}
+.featured_quiz .quiz_blurb a:hover {color:#000000;text-decoration:underline;}
+.featured_quiz .quiz_links {margin:0;padding:0;color:#1122CC;font-size:12px;font-weight:bold;font-family:helvetica,verdana,arial;}
+.featured_quiz .quiz_links a {color:#1122CC;text-decoration:none;font-size:12px;font-weight:bold;font-family:helvetica,verdana,arial;}
+.featured_quiz .quiz_links a:hover {color:#1122CC;text-decoration:underline;}
+.more_quizzes_container .spacer_dots {margin:8px auto 12px auto;padding:0;border-bottom:1px dotted #999999;width:291px;}
+</style>
+
+<div class="more_quizzes_container">
+	<div class="more_quizzes_section_header">
+    	<img src="/images/promos/quizzes/hdr_more_quizzes.gif" />
+    </div>
+    
+    <div class="featured_quiz">
+    	<div class="quiz_icon">
+            <a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position1" data-label="Name That Thing" href="/namethatthing/index.htm"><img src="/images/promos/quizzes/icon_home_quiz_62x43_namethatthing.gif" /></a>
+        </div>
+        <div class="quiz_title">
+        	<a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position1" data-label="Name That Thing" href="/namethatthing/index.htm">Name That Thing</a>
+        </div>
+        <div class="quiz_blurb">
+        	<a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position1" data-label="Name That Thing" href="/namethatthing/index.htm">Take our visual vocabulary quiz</a>
+        </div>
+        <div class="quiz_links">
+        	<a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position1" data-label="Name That Thing" href="/namethatthing/index.htm">Test Your Knowledge &raquo;</a>
+        </div>
+    </div>
+    
+    <div class="spacer_dots"></div>
+    
+    <div class="featured_quiz">
+    	<div class="quiz_icon">
+        	<a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position2" data-label="True or False" href="/true-or-false/index.htm"><img src="/images/promos/quizzes/icon_home_quiz_62x43_trueorfalse.gif" /></a>
+        </div>
+        <div class="quiz_title">
+        	<a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position2" data-label="True or False" href="/true-or-false/index.htm">True or False?</a>
+        </div>
+        <div class="quiz_blurb">
+        	<a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position2" data-label="True or False" href="/true-or-false/index.htm">A quick quiz about stuff worth knowing</a>
+        </div>
+        <div class="quiz_links">
+        	<a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position2" data-label="True or False" href="/true-or-false/index.htm">Take It Now&nbsp;&raquo;</a>
+        </div>
+    </div>
+    
+    <div class="spacer_dots"></div>
+    
+    <div class="featured_quiz">
+    	<div class="quiz_icon">
+        	<a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position3" data-label="Spell It" href="/spell-it/index.htm"><img src="/images/promos/quizzes/icon_home_quiz_62x43_spellit.gif" /></a>
+        </div>
+        <div class="quiz_title">
+        	<a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position3" data-label="Spell It" href="/spell-it/index.htm">Spell It</a>
+        </div>
+        <div class="quiz_blurb">
+        	<a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position3" data-label="Spell It" href="/spell-it/index.htm">The commonly misspelled words quiz</a>
+        </div>
+        <div class="quiz_links">
+        	<a class="GA_analytics" data-category="Quiz Promo" data-action="RR3-Position3" data-label="Spell It" href="/spell-it/index.htm">Hear It, Spell It &raquo;</a>
+        </div>
+    </div>
+</div>					<div class="c300x250-advert">
+					<script type="text/javascript">
+						// <!--
+
+							 output_creative('div-gpt-ad-148753587139584500-8');
+							 
+						// -->
+					</script>
+					</div>
+					<script type="text/javascript" src="/top-ten-lists/scripts/top-ten-side-carosel.js"></script>
+					<!--// BEGIN YIW PROMO (Note: YIW promo HTML located in promo-right-rail-photo-contest.html)
+
+<style type="text/css">
+.yiw_right_rail_promo {margin:5px 0 20px 0;padding:0;width:307px;}
+.yiw_right_rail_promo .blue_header {margin:0 0 9px 0;padding:0;width:307px;height:25px;}
+.yiw_right_rail_promo .blue_header img {margin:0;padding:0;width:100%;display:block;}
+.yiw_right_rail_promo .yiw_promo_image {margin:1px 10px 0 0;padding:0;width:138px;height:87px;float:left;}
+.yiw_right_rail_promo .yiw_promo_image img {margin:0;padding:0;width:100%;display:block;}
+.yiw_right_rail_promo .yiw_promo_content {margin:0;padding:0;}
+.yiw_promo_content .promo_title {margin:0;padding:0 0 4px 0;}
+.yiw_promo_content .promo_title a {text-decoration:none;color:#ca0403;font-family:georgia,arial,verdana,sans-serif;font-size:14px;font-weight:bold;}
+.yiw_promo_content .promo_title a:hover {text-decoration:underline;color:#ca0403;}
+.yiw_promo_content .promo_descr {margin:0;padding:0 0 4px 0;}
+.yiw_promo_content .promo_descr a {text-decoration:none;color:#000000;font-family:helvetica,verdana,arial;font-size:12px;font-weight:normal;}
+.yiw_promo_content .promo_descr a:hover {text-decoration:underline;color:#000000;}
+.yiw_promo_content .promo_url {margin:0;padding:0;}
+.yiw_promo_content .promo_url a {text-decoration:none;color:#1122CC;font-family:helvetica,verdana,arial;font-size:12px;font-weight:bold;}
+.yiw_promo_content .promo_url a:hover {text-decoration:underline;color:#1122CC;}
+</style>
+
+<div class="yiw_right_rail_promo">
+	<div class="blue_header">
+    	<a href="/the-year-in-words/2013-entries.htm"><img src="/content/the-year-in-words/assets/images/hdr_special_feature_homepage.gif" /></a>
+    </div>
+	
+    <div class="yiw_promo_image">
+    	<a href="/the-year-in-words/2013-entries.htm"><img src="/content/the-year-in-words/assets/images/collage2013_yiw_resultspg.jpg" /></a>
+    </div>
+    
+    <div class="yiw_promo_content">
+		<div class="promo_title">
+        	<a href="/the-year-in-words/2013-entries.htm">The Year in Words</a>
+        </div>
+        <div class="promo_descr">
+        	<a href="/the-year-in-words/2013-entries.htm">Words that spiked in lookups because of events in the news.</a>
+        </div>
+        <div class="promo_url">
+        	<a href="/the-year-in-words/2013-entries.htm">View the List &raquo;</a>
+        </div>
+    </div>
+</div>
+
+<!--// END YIW PROMO //-->
+
+<!--// BEGIN LAW PROMO
+
+<style type="text/css">
+.LAWRightRailPromo {margin:10px 0 20px 0;padding:0;width:301px;}
+.LAWRightRailPromo .header {margin:0 0 8px 0;padding:0;width:301px;height:25px;}
+.LAWRightRailPromo .LAWpromoImage {margin:0;padding:0;display:inline-block;vertical-align:top;}
+.LAWRightRailPromo .LAWpromoContent {margin:0 0 0 5px;padding:0;display:inline-block;vertical-align:top;}
+.LAWpromoContent .LAWpromoTitle {margin:0;padding:0 0 5px 0;font-family:georgia,arial,verdana,sans-serif;font-size:16px;font-weight:bold;}
+.LAWpromoContent .LAWpromoTitle a {font-family:georgia,arial,verdana,sans-serif;font-size:16px;font-weight:bold;text-decoration:none;color:#ca0403;}
+.LAWpromoContent .LAWpromoTitle a:hover {text-decoration:underline;color:#ca0403;}
+.LAWpromoContent .LAWpromoDescr {margin:0;padding:0 0 5px 0;font-family:helvetica,verdana,arial;font-size:12px;font-weight:normal;width:150px;}
+.LAWpromoContent .LAWpromoDescr a {font-family:helvetica,verdana,arial;font-size:12px;font-weight:normal;text-decoration:none;color:#000000;}
+.LAWpromoContent .LAWpromoDescr a:hover {text-decoration:underline;color:#000000;}
+.LAWpromoContent .LAWpromoURL {margin:0;padding:0;font-family:helvetica,verdana,arial;font-size:12px;font-weight:bold;text-decoration:none;}
+.LAWpromoContent .LAWpromoURL a {font-family:helvetica,verdana,arial;font-size:12px;font-weight:bold;text-decoration:none;text-decoration:none;color:#1122CC;}
+.LAWpromoContent .LAWpromoURL a:hover {text-decoration:underline;color:#1122CC;}
+</style>
+
+<div class="LAWRightRailPromo">
+	<div class="header">
+    	<a href="/looking-at-words/submissions/serendipity/butterfly-leaf.htm"><img src="/looking-at-words/assets/images/hdr_green_photo_contest_winners_301x25.gif" /></a>
+    </div>
+    
+    <div class="LAWpromoImage">
+    	<a href="/looking-at-words/submissions/serendipity/butterfly-leaf.htm"><img src="/looking-at-words/assets/images/mw_law_resultspg_contest2_winners.jpg" /></a>
+    </div>
+    <div class="LAWpromoContent">
+		<div class="LAWpromoTitle">
+        	<a href="/looking-at-words/submissions/serendipity/butterfly-leaf.htm">"Serendipity"</a>
+        </div>
+		<div class="LAWpromoDescr">
+        	<a href="/looking-at-words/submissions/serendipity/butterfly-leaf.htm">You showed us hundreds of ways to look at "serendipity."</a>
+        </div>
+        <div class="LAWpromoURL">
+        	<a href="/looking-at-words/submissions/serendipity/butterfly-leaf.htm">View the Top 15 &raquo;</a>
+        </div>
+    </div>
+</div>
+
+<!--// END LAW PROMO //-->					<!--// <script type="text/javascript" src="/trend-watch/scripts/trend-watch-side-carosel.js"></script> //-->
+					<div id="floating-advert" class="floating-advert relative-position">
+					<script type="text/javascript">
+						// <!--
+
+							output_creative('div-gpt-ad-894456462400224661-5');
+
+						// -->
+					</script>		
+					</div>
+										<style type="text/css">
+.floating-advert.relative-position {
+disabled-border: solid 7px blue;
+position: relative;
+}
+
+.floating-advert.fixed-position {
+disabled-border: solid 7px red;
+position: fixed;
+top: 15px;
+z-index: 9999;
+}
+
+.floating-advert.absolute-position {
+position: absolute;
+z-index: 9999;
+}
+
+                                        </style>
+                                        <script type="text/javascript">
+                                                $(function(){
+                                                        $(window).scroll(function(){
+                                                                var scrollTop = $(this).scrollTop();
+                                                                if ( scrollTop > 1280 ) {
+									var footer = $('#footer');
+                                                                        var offset = footer ? footer.offset() : false;
+									 if ( offset !== false && (scrollTop + 250) >= offset.top ) {
+                                                                                $('#floating-advert').removeClass('relative-position');
+                                                                                $('#floating-advert').removeClass('fixed-position');
+                                                                                $('#floating-advert').addClass('absolute-position');
+                                                                                $('#floating-advert')[0].style.top = (offset.top - 255) + 'px';
+									} else { 
+	                                                                        $('#floating-advert').removeClass('relative-position').removeClass('absolute-position').addClass('fixed-position');
+										$('#floating-advert')[0].style.top = '75px';
+									};
+                                                                } else {
+                                                                        $('#floating-advert').removeClass('fixed-position').removeClass('absolute-position').addClass('relative-position');
+                                                                };
+                                                        });
+							$(window).scroll();
+                                                });
+                                        </script>
+									</div>
+			</div>
+
+			<script language="javascript">
+                <!--
+                function popWin(URL){
+                aWindow=window.open(URL,"audio_window","toolbar=no,scrollbars=yes,status=no,resizable=yes,menubar=no,width=604,height=300");}
+                // -->
+            </script>
+			<script type="text/javascript">
+			<!--
+
+				setupEntry();
+
+			-->
+			</script>
+
+				
+		<style type="text/css">
+		
+.sticky-header {
+background: #245FA1;
+box-shadow: 0px 0px 1p,height=300");}
+                // -->
+            </script>
+			<script type="text/javascript">
+			<!x #000;
+display: block;
+height: 57px;
+disabled-overflow: hidden;
+padding: 0 auto 0 auto;
+position: fixed;
+text-align: center !important;
+top: 0;
+width: 100%;
+z-index: 9999999;
+}		
+
+.sticky-header * {
+disabled-webkit-font-smoothing: antialiased;
+}
+
+.sticky-header.hidden {
+display: none !important;
+}
+
+.sticky-header .container {
+display: table !important;
+margin: auto 0 !important;
+disabled-table-layout: fixed !important;
+width: 1120px;
+}
+
+.sticky-header .container .row {
+display: table-row  !important;
+}
+
+.sticky-header .container > .row > div {
+disabled-border: solid 1px red;
+display: table-cell  !important;
+vertical-align: top;
+}
+
+/* Word of the Day Promo Styles */
+
+.sticky-header .word-of-the-day {
+background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/7AARRHVja3kAAQAEAAAAPAAA/9sAQwACAQECAQECAgICAgICAgMFAwMDAwMGBAQDBQcGBwcHBgcHCAkLCQgICggHBwoNCgoLDAwMDAcJDg8NDA4LDAwM/9sAQwECAgIDAwMGAwMGDAgHCAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8AAEQgAOwAzAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A+Uvm9qSSNZY3Vv46X5vaj5vav6sP5zOduI2ikdW/gpvze1aPiC3+dJf7/wAjVnfN7UAHze1Hze1Hze1Hze1AB83tRR83tRQB0nze1Hze1Hze1Hze1AEd5b/arZ1rn/m9q6T5vasbXLfyrjd/C9AFT5vaj5vaj5vaj5vagBGXDfN1oqOX7/4Ciq5X5nNKlr8SX/b9vwtodT83tR83tR83tR83tUnSHze1Qanb/arJl/jT51qf5vaj5vagDm/m9qPm9qsapb/Zbx/7r/OtV/m9qAGFsnnrRT/m9qKPe6SZnKlFu7Ok+b2o+b2r9wfh5/wR9/Z017xlqlrd/DszW8NhY3CL/b+prh5YyXORcgnJ5weB2xTfhl/wSA/Z18QaF4jmvPh550ljqd3bwH+3tTXZHGTsXAuACB75r87/AOImZX/JU+6P/wAmfaf6k47+eH3y/wDkT8QPm9qPm9q/bn/h0P8As7+f4kX/AIV7xYyxrAP7d1P5AXUEf8fHPBI5z1rS8cf8EeP2ctI8QeRb/Dry4lslmC/29qZ+Y3MUeebn+6xGOlH/ABEzK/5Kn3R/+TD/AFJx388Pvl/8ifhPrlv5tvu/iSsj5vav3F8M/wDBJr9n7UrfRzP4A8z7Zrl3aTZ1zUh5kScKp/0jtzz15Pqa6uX/AIIrfszr8R4dPHw2b7I1i0xT/hI9W+/523OftWfukjr3o/4iZlf8lT7o/wDyYf6k47+eH3y/+RPwP+b2or+hT/hxz+y3/wBEv/8ALj1b/wCSqKf/ABEvK/5Kn3R/+TK/1Ix388Pvl/8AIn//2Q==);
+background-position: right center;
+background-repeat: no-repeat;
+padding-right: 50px;
+width: 200px;
+}
+
+.sticky-header .word-of-the-day.small-word {
+width: 185px;
+}
+
+.sticky-header .word-of-the-day > a {
+disable-background-image: url(data:image/jpeg;base64,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);
+background-position: left center;
+background-repeat: no-repeat;
+display: block;
+overflow-y: hidden !important;
+disable-padding-left: 70px;
+padding-left: 0;
+width: 100%;
+}
+
+.sticky-header .word-of-the-day .word {
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAATCAYAAAB/TkaLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpDQjhGRUNERDA3MjA2ODExOEJGNzk2NkE2QkM4QjcwRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3RjE1QTgzNDU3QzkxMUU0OUVCM0VCMEMyN0NENTg3NCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3RjE1QTgzMzU3QzkxMUU0OUVCM0VCMEMyN0NENTg3NCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTI4NEQ4RENGMjIwNjgxMThCRjc5NjZBNkJDOEI3MEQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0I4RkVDREQwNzIwNjgxMThCRjc5NjZBNkJDOEI3MEQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4Pwr+9AAAB1ElEQVR42qSUTSjDcRjHN61ZJi9ZXpbD5jBKxI2Sg1oSDjgRO2iiyA7Ky9FBXBwcRLtIcUSJvJSUclCrFReUxsHLBSFiXub7rO/q379t/ranPv1+Pc/2/f+el99Pf2Yr1iVplcAFxhyB03dxGP7xZz0IqXx5YBvkgjTQK84UDWJ2MAMKosQewSL3Pef2EqcW0Q5wAAZVp7SBDBBEysP8jWQyDWFTLFEH2ADLoBA8KUQrwJEIKH4/zrUMONWiRjACDkGjqp4Rq2ENu0ETfftgl/tWEZ0E82AO7IEpYIlTEi/wsXSecFqBU8lihfFq6X4fyPrHFATBBFgDVaihFaI32PsZz5evvSQwm1KeZ5AOiui74wf1KQkO/CubJ5bJ9S1ZUWmoWSEmlsrLFBJRUwKiMlbZ4ANc0WehcFjZz+smHbRyXP6yIY7ZCbikr5S+RxFtoDMiKiPVGUfQpZhPLzr/w30zV5+k/0NE9Bp0gTZwHEP0HnyDHbAgDoxVOZYWxtdjNWoV1IJZdtSsiG3yVP3gi75R9uZWrne87svIDIA6PhhGRWwLXEgNcUo31nb65U19MGgc9HrV/Y9YDq+5ju/qktb3VOyTZYhWXw8zceOUUmvdrwADAM9Ubi+qN6G6AAAAAElFTkSuQmCC);
+background-position: right calc(50% + 2px);
+background-repeat: no-repeat;
+color: white;
+font-family: "Century Gothic", arial, verdana, sans-serif;
+font-size: 22pt;
+disable-line-height: 58px;
+disable-margin: -5px 0 0 0;
+padding: 0 35px 0 0;
+text-align: left;
+text-decoration: none;
+text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-header .word-of-the-day .word,
+.sticky-header .word-of-the-day .audio {
+display: inline-block;
+}
+
+.sticky-header .word-of-the-day .label {
+color: #0099cc;
+display: inline-block;
+font-family: "Century Gothic", arial, sans-serif;
+font-size: 10pt !important;
+line-height: 11pt;
+padding: 1px 8px 0 0;
+margin: 0;
+text-decoration: none;
+}
+
+.sticky-header .word-of-the-day .wod-container {
+display: table;
+height: 57px;
+overflow-y: hidden;
+width: 100%;
+}
+
+.sticky-header .word-of-the-day .wod-container > div {
+display: table-row;
+}
+
+.sticky-header .word-of-the-day .wod-container > div > div {
+display: table-cell;
+vertical-align: middle !important;
+text-align: left;
+}
+
+.sticky-header .word-of-the-day .wod-container > div > div:first-child {
+width: 63px !important;
+}
+
+.sticky-header .word-of-the-day .wod-container > div > div > div {
+overflow: hidden;
+}
+
+.sticky-header .word-of-the-day.small-word {
+width: 180px !important;
+}
+
+.sticky-header .word-of-the-day.small-word .wod-container > div > div .word {
+font-size: 22pt;
+}
+
+.sticky-header .word-of-the-day.medium-word {
+width: 260px !important;
+}
+
+.sticky-header .word-of-the-day.medium-word .wod-container > div > div .word {
+font-size: 22pt;
+}
+
+.sticky-header .word-of-the-day.large-word {
+width: 260px !important;
+}
+
+.sticky-header .word-of-the-day.large-word .wod-container > div > div .word {
+font-size: 14pt;
+line-height: 16.5pt;
+}
+
+.sticky-header .word-of-the-day.huge-word {
+width: 260px !important;
+}
+
+.sticky-header .word-of-the-day.huge-word .word {
+background-size: auto 17px;
+}
+
+.sticky-header .word-of-the-day.huge-word .wod-container > div > div .word {
+font-size: 10pt;
+line-height: 12pt;
+}
+
+/* Quiz Styles */
+
+.sticky-header .container > .row > div.quiz {
+background: #1B5698;
+background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/7AARRHVja3kAAQAEAAAAPAAA/9sAQwACAQECAQECAgICAgICAgMFAwMDAwMGBAQDBQcGBwcHBgcHCAkLCQgICggHBwoNCgoLDAwMDAcJDg8NDA4LDAwM/9sAQwECAgIDAwMGAwMGDAgHCAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8AAEQgAOwApAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A+LSNww2Np4NczqVqbS5eNv4TkfQ1053e1ZniOz8yETfxR/Kfxr+ron84yMOiiiqJCiiigDr/AJvamyx+dEyNjawINO+b2pDnHaszQ5e4t/ImkVux4+lQ1reJ7PEizL6Yk+vasmtDMKKKKAOv+b2pQSD2pPm9qPm9qzNCK8tRdWTxt1IJX69q5dkaJmDfwnFdYc47Vg+IrPyboTL92Yc/WqiTIz6KKKok6/5vaj5vav6FP+HHP7Lf/RL/APy49W/+SqP+HHP7Lf8A0S//AMuPVv8A5Kr84/4iXlf8lT7o/wDyZ9t/qRjv54ffL/5E/nr59qrarZm9smjXqvzV/Q7/AMOOf2W/+iX/APlx6t/8lUh/4Icfstkf8kv/APLk1f8A+Sqf/ETMr/kqfdH/AOTD/UjHfzw++X/yJ/OA4wx/vLwaZX9HJ/4IQfspMxP/AAqv73X/AIqXWP8A5LpP+HDv7KP/AESkf+FLrH/yXVLxMyt/8u6n3R/+TJ/1Gx388Pvl/wDIn//Z);
+background-position: right top;
+background-repeat: no-repeat;
+padding-left: 0;
+text-align: left;
+vertical-align: middle !important;
+width: 200px;
+}
+
+.sticky-header .quiz a {
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpDQjhGRUNERDA3MjA2ODExOEJGNzk2NkE2QkM4QjcwRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyNTQ2ODBCRDU3QzkxMUU0OUVCM0VCMEMyN0NENTg3NCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyNTQ2ODBCQzU3QzkxMUU0OUVCM0VCMEMyN0NENTg3NCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QjAxOUE3N0ZGMTIwNjgxMThCRjc5NjZBNkJDOEI3MEQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0I4RkVDREQwNzIwNjgxMThCRjc5NjZBNkJDOEI3MEQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5mGfsjAAAEkElEQVR42rxYe2yTVRT/9bGunV07imyTTTZhDiEBN6LMqQmKIONlfCziA9FEE2PC4v7wgYGIzAcjOiOJgQQhUyJBgwGdUxhIdIEQRZn4oGELskw31u7Z9eH6rufe3tZtof1um7GT/nJvv56e7/ed+7vn3vup2ovnIg2bT7CINmYjhEuETsJQqgG1KfhWEZ4SrUXB9yzhCGEfoV8muEoiI3cTGgiL08icm7CTUC/6CU2d5Dcj4RDhVJokYjE2E7oID6VDpITwK6Eak2NsKA8LUtJE2NP/JMhMtr1F+IygURIru/lRCTEi665KTK+tEUpTwd1yHMMfNcqQWScEXJOIiE5owiITLaOwAIbbFsW/B3t7U8nMRsJpwudXI/I6oUw20r9nfoR90xaKQCFCYfg6OlIdpl2EE7GaE9NIAeHlVKIEeq4gaO9D9qoqqLON8P1pTUfA2ybWkQ8IL8r8WzMtBzkb1nMCutL/9cxIeVpPwbH/AHwXrFBlZsLy/HP8mve33xOF8xOKCDZGxECdbhlt6MtuRf77O6C7qZh/Dw0OAhH6hMPQ5s7g1yJeL/reeBvuEydR3PI1wj4fup98BoGuvxOFfYXwLiOymjrNSiQy589D4Sd7obl+OkZ/acPQ7j3wnmuD2mxG2OUi8RbCvP5xmB99hPt7vm+Fq6kZuW9uxcCOBjg+PZgo9HlCORPrcsV1gNKct72Ok/D+cYGL1P/X5WhWRpzRdtgB76ubodLpYHpwLa67dwkR+QZdVQ8gaLMnC7+AjYZaZqYYVyyDfuECnt6ep5+F/3JnQl/bS5vg/OII7xsqK7ioI6FQUtkxMmqZCsqEycxx4CB/ckQiiZ3ppsN7G3lrXH4fF7eElWhlRKorvZm3PuvF8bqZdwuMy5byp/ZdbEeEhMn6fspc4EovMm4sREZRUZS8wlTWioqaXCPaaN3T5uWNu26ouB3BoSGYH6uG2mhEsH8AA/XvkSZsY/Slk6oKWrFPMCfzCns80SL2T/e4664vm5C9ZhX66t6Bv+MSIoEAHzYmbpUmuq6FXW4ZIqNMIz1KXt6283HRjpODY4RPS1ZVI35/XDtsDdLOvAGB7h74OztliNgYkXYlL+dX0TJjqn4YWXcshjrLkFhPc2bDsvGFaMaav0Vk1CtDxMqItCrm7ezPcNIwaMwmFDTugb786jNebTIhv6Gek2WiHd73sQwJtuhZmUaOyXj3122HbtYs6BeVYeaunRg5dBju4yehzc9FaGAQmXNLYX5iHXQlcxB2OmGnesKuSxi7fyi26J0hVCoveNOQu20LsteuTujD9GLfWhfXlYStZGRiRKTWm/jujFLPyOjLFkKTk4Ow28NF6W75Dq6jLXzhkzR27KiYeJz4gbAEU2v3xDQ6dvNcK/YHU2VNYyeKesJyXDtFJFjJ2JDsOLFb4FoaOyOvEW3Scw3b5n94jUiwReh+cVhXPGCFBJmaSdYMmyHlok3p7MuycqdM5ZUYitfEDLGlcwhndk4EWJkGoX7xJmC2eBswOhnvR44JzBCn+qViZ2cWLbuJVbSnhW9KxP8TYABuF4t2oPGeEAAAAABJRU5ErkJggg==);
+background-position: left center;
+background-repeat: no-repeat;
+display: inline-block;
+height: 47px;
+padding-left: 45px;
+padding-top: 10px;
+text-decoration: none;
+width: 200px;
+}
+
+.sticky-header .quiz div {
+color: white;
+font-family: "Century Gothic", arial, sans-serif;
+font-size: 12pt;
+line-height: 9pt;
+padding-top: 5px;
+text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-header .quiz div + div {
+font-size: 10pt;
+}
+
+.sticky-header .quiz div + div span.icon {
+color: red;
+display: inline-block;
+font-family: 'Myriad Pro', arial, sans-serif;
+font-size: 11pt;
+padding-left: 4px;
+}
+
+/* Search Form Styles */
+
+.sticky-header .search-form {
+background: #0E4B8E;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpDQjhGRUNERDA3MjA2ODExOEJGNzk2NkE2QkM4QjcwRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyNTQ2ODBDMTU3QzkxMUU0OUVCM0VCMEMyN0NENTg3NCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyNTQ2ODBDMDU3QzkxMUU0OUVCM0VCMEMyN0NENTg3NCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MEQ4NEQ4RENGMjIwNjgxMThCRjc5NjZBNkJDOEI3MEQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0I4RkVDREQwNzIwNjgxMThCRjc5NjZBNkJDOEI3MEQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66PVzCAAAEG0lEQVR42qxWS0iUURSef8bxT2cyH0MPihp6kaTZlD2cyqhseodBEgSmQ24MN6LQqmJwkdRGVFzkwtCNtQhE3BSlQaWzUETHUDNQQsMUDJ0ejjPzd85wjtxuv45UFz7++/rPuedxv3MVw9JNEb6KMOamAcLSOGpTlphDGAEmAUZhf5gQAgSFcVTFis4YBccQYgXE0BpbtkCYF/ohWtdWolAhS1CwCogjrCKwQgMJDpCyH4Dv1A8IFmvR4sTKULiVUVBQsLW4uPiS3W7P4J/m5+f9vb29byorK192dnZOwtQcwC8oDkaz1EhWJQI2AXY7nU5XX1/fM22ZFggE/I2NjXdh/wHADsA6Oqh5ifxYtA4tWw3YAEjNyso6MzMz81EUPjc392ViYsI3Pj4+ICvu6upqgv8yAVsBKRQK03IKVdqIPxwcGxt7JyqqqKi4A/PnAKcBroyMjGsdHR1PRaVk6R7yUMJyVuJJLGRdWlVVVSkLmZ6eHk1PT78O86cAhwAOwD7AEcBZj8dzj/f6/X6MZRa5NoWM0FWI7lwD2IJuGRoaesFCyLJTpGQ7nX4zYBfgMFrt8/naeX9TUxPuT6PDxwtZ/VtD05NIoBNPytbB+AIJ3kantgqx3g3ILikpKZVi6aCDWfUUGoVvBBaLZS2l/je6zHzfED+Fu4f9hdra2g+L3KZpIkPp0WHEnQbhzmg68dWjOGYiE8Q4QVKoLEdtIlVFeHFycrIfF2w2mx2EJVGKWwWsJkTG5eXl2Sxsdnb2u8C5ylIKmaoi7hsYGHiLE7GxsfHV1dVXSHgixdBG3whSU1M35ubmXmVhdXV1PWy5ECZFTylagbHbBZf+LDIIJ0Jra+tjSp4TgKOYKJidoOwmeOMT7+uHBvM3ADmUUGspU2NEpWy6mRYxHslwiS/n5+d7eBMwzHvgTi/gYzgcNubk5DgdDsdxVVXjxJN3d3d3ZWZmPoTuZwDey6/Er0GhkiwSdzy5DNlmf0tLywPR0pW2np4eDMl5urubKRyq7F620kquQKWOwsLCvOHh4ed6iiFBptqh6SkF0n8N/58k164nJou4Vn5GcNGNI4st1FdramoOhEIhI6a+1+udam5unsH1+vr6M0VFRW45MQYHB19BnG9Dd0py7R/VnuOZRKdDyttJp00jgt5L1eEY4GJDQ8MjPUtHR0fbiKWSmVtjdB5BXDy5qv8UirNRKmko5Jvb7X5iNpsX8vLyCvE6scCRkZHuaIVYzl4TWazSS4BdHU/3M5kLNlaQsrKyWxzvtra2+zCXLpcrUxTFmmAtv9BEhAQE4LnxGbjYGwwGfS6Xq5meHj+IfyPXQjH8fZMTTaWvmdZF4ufH1T8plF0vxzkseSD8PxTKLz8xqTTpda4ZopWSv1SslweL7ZcAAwDMHmwCd1R0PAAAAABJRU5ErkJggg==);
+background-position: 32px center;
+background-repeat: no-repeat;
+padding-left: 33px;
+vertical-align: middle !important;
+text-align: left !important;
+width: 360px;
+}
+
+.sticky-header .search-form div {
+display: inline-block;
+}
+
+.sticky-header .search-form input {
+height: 20px;
+margin-left: 37px;
+margin-right: 13px;
+padding-left: 6px !important;
+vertical-align: middle;
+width: 214px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.sticky-header .search-form input {
+disabled-margin-left: -2px !important;
+}
+}
+
+.sticky-header .search-form button {
+background: transparent;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAfCAYAAACmupBxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpDQjhGRUNERDA3MjA2ODExOEJGNzk2NkE2QkM4QjcwRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCQzg2MzM3RjU3QzkxMUU0OUVCM0VCMEMyN0NENTg3NCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCQzg2MzM3RTU3QzkxMUU0OUVCM0VCMEMyN0NENTg3NCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDk4NEQ4RENGMjIwNjgxMThCRjc5NjZBNkJDOEI3MEQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0I4RkVDREQwNzIwNjgxMThCRjc5NjZBNkJDOEI3MEQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz76Xo9wAAADyElEQVR42uxaS0gVYRQ+PlASvWleNLxaKEpoYkGBUYtCKHATxBU0CtICrU26SFq5EFchRIWLFMpaBAYStAghwXRRZPSQ6CVJUmZkWJqKUiR1vpl7pn/mZvfO2F31f3CYB/9jzvd/33/mXibucWEZObCVYxtHAmkIljkecYyoNxOV890c3Rz5mqsVMc5RxzGEi/jQzVqOQU1cROSHeAJfFMe2xY2nHKmam6ixwFEG5bVq4lwDfLWCvArNhSdUgLyA5sET1sdrDjwjQZO3CmjyVoFEL52y649S2q5ymr87TFNdl417yXm5lF65z9Zutu82fZt4/1vna33kr66i+Xv3afHZi7Axrdf5uTma4b7LX+fC+mJeAHNPX++12vhrqozjdE+vbUzMg/n+hqzaw/T5xk2edz625OGBcpobjYfCEQCBSUyeXAvQRiUvg8lFm+meQBh5zr6Z1UEaPXDQIq7wSiellJZY/dA+u76OxmobjHvplXvDyEObD+3nI5KXWr6d1gX30+tDx1wR6Nq2WHk8LBKbaGkzVl/F2JEGelK0xQjnQ2dxslAKVAKlOoFE0Q9HEJW2c4f5Wn+h3WiPOdVYfG5fHK94e7rFOBZdu0QJvrTYkQe7ILG8thZjlVVrAZI0AoqxSOdrEPCOCUcfp8WBpLyA0Q5HsS/64N5UV7dNrTjHQtms7fNZcwvxUf3qZ7VBdW4JdG1b06IBUz0bcmn8ZLMtAdV+SE7U568JGgljH0wpLTYsJ/ulAGOqexfaCwlOm/8JWLjCq53e/jZhAt8cb6LNg320pngTLQw/jE3BgF0l2ZxTjda1WE8Sha3UYgKyQMb3iUmzAHB/dY/CORYE+6c6pux7kYB5Mb/ADZFQW8HFc7T0apSWXo7GxrYgIjmUHFQkSlETgNoQoshMVp0UGyQEy0tRUAFSpzq7jfFlXBnHXxMM338d1oTNZe5IRcJJHOwKuCkarpSH1S8ZuGWtMBTi3PNQ9WAfeVX5wQnhFQOqmu3rt1kMFgcBaqKSOIqLqBL7HdqicMyExsjgeaBmdWvwio1n2kzbnmhyVW1dkQeioDgoRyzhtJeqRGPPYhuC9E9MgFoZkTAUCbKdyUN9GF9sLXsj9kkpNHiWaF5DosFs/x36wu95boH/8356sS5Uhz3NqbxYQ6z6L0hbLTyRp6F/22ryNHmavP8OyyBvUvPgCR9B3oDmwROGQN5ZMj8n0HBhWY52kIfvL5o0H64AvkakYHRw7CHzWwyNlTEe4qnD+dsWH68UkPmFlISGCbjzAZlfSln4JcAALKbMQ1kvpc8AAAAASUVORK5CYII=);
+border: 0;
+color: white;
+cursor: pointer;
+height: 31px;
+width: 79px;
+vertical-align: middle;
+}
+
+/* Logo Styles */
+
+.sticky-header .logo {
+background: -webkit-linear-gradient(left, #0E4B8E, #245FA1); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(right, #0E4B8E, #245FA1); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(right, #0E4B8E, #245FA1); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to right, #0E4B8E , #245FA1); /* Standard syntax */
+width: 80px !important;
+}
+
+.sticky-header .logo div {
+disabled-background: url('/styles/default/images/interface/mwol2010_mw_logo_header.gif') no-repeat left top;
+background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAABYCAYAAACeV1sKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExODA4M0VCODNDNjJCRDdDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4Mjc4MTUzQjVDNUYxMUU0ODUwN0M4MzRBMTlEM0I1QiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4Mjc4MTUzQTVDNUYxMUU0ODUwN0M4MzRBMTlEM0I1QiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDM0OUNGRUYwODIwNjgxMUE3QkFGQjI4Q0FBMDdEMEMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Rjc3RjExNzQwNzIwNjgxMTgwODNFQjgzQzYyQkQ3QzEiLz4gPC9yZGY6RGVzY3Jp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");
+background-repeat: no-repeat;
+background-size: 100% auto;
+background-position: left top;
+display: div;
+height: 88px;
+margin-left: -10px;
+margin-top: -17px;
+position: absolute;
+width: 89px;
+z-index: 99999;
+}
+
+.sticky-header .autocomplete div {
+display: block;
+}
+
+		</style>
+		<div id="sticky-header" class="sticky-header hidden"><center>
+			<div class="container">
+				<div class="row">
+					<div class="word-of-the-day  small-word">
+						<a href="/word-of-the-day/" class="GA_analytics" data-category="dropdown01 - pos1" data-action="WOTD" data-label="word with audio icon">
+							<div class="wod-container">
+								<div>
+									<div><div class="label">Word of<br />the Day</div></div>
+									<div><div class="word">virtuoso</div></div>
+									<!-- div><div class="audio"></div></div -->
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="quiz">
+						<a href="/quiz/index.htm" class="GA_analytics" data-category="dropdown01 – pos2" data-action="Vocab Quiz" data-label="3 minute break try">
+							<div>Take a 3 minute break</div>
+							<div>Play our vocab quiz<span class="icon">&raquo;</span></div>
+						</a>
+					</div>
+					<div class="search-form">
+						<form action="#" method="post" enctype="multipart/form-data" onsubmit="return stickySubmit(this.word.value);">
+							<div id="sticky-auto-container"><input id="sticky-header-search-box" name="word" type="text" autocomplete="no" /></div>
+							<div><button type="submit" value="Search" /></div>
+						</form>
+					</div>
+					<div class="logo"><div></div></div>
+				</div>
+			</div></center>
+		</div>
+		<script type="text/javascript">
+
+			function stickySubmit (word)
+			{
+				this.document.location = '/dictionary/' + word;
+				return false;
+			};
+			
+			function stickyUpdateCSS ()
+			{
+				var isDesktop = typeof(window.orientation) == 'undefined'; 
+
+				if ( isDesktop ) {
+
+					// Get the window.
+					var win = $('#sticky-auto-container div')[0];
+					var box = $('#sticky-header-search-box')[0];
+					var pos = $(box).offset();
+					
+					// Change styles.
+					win.style.position	= 'fixed';
+					win.style.margin	= '0 0 0 2px';
+					win.style.top		= '34px';
+					win.style.left		= pos.left + 'px';
+				
+					// Hide the shadow.
+					$(win).find('.autocomplete-w1')[0].style.background = 'none';
+				};
+			};
+			
+			jQuery(function()
+			{	// This callback handles all suggestion clicks.
+				var onAutocompleteSelectHeader = function(value, data)
+					{	document.location = "/dictionary/" + value;
+					};
+
+				// Autocomplete options.
+				var options =
+					{	serviceUrl: '/autocomplete',
+						width: 222,
+						delimiter: /(,|;)\s*/,
+						onSelect: onAutocompleteSelectHeader,
+						deferRequestBy: 0,
+						params: { ref: function() { stickyUpdateCSS(); return 1; } },
+						noCache: false // set to true, to disable caching
+					};
+
+				// Set up the autocomplete field.
+				a1 = $('#sticky-header-search-box').autocomplete(options);	
+				
+				// Get the autocomplete window.
+				var win = $('#' + a1.mainContainerId)[0];
+				
+				// Reposition it.
+				$('#sticky-auto-container')[0].appendChild(win);
+				
+				// Update the css.
+				stickyUpdateCSS();
+			});
+			
+			$(function(){
+				var isDesktop = typeof(window.orientation) == 'undefined';
+
+				if ( isDesktop ) { 
+					$(window).scroll(function(){
+						var scrollTop = $(this).scrollTop();					
+						if ( scrollTop > 150 ) {
+							var hidden = !$('#sticky-header').hasClass('shown');
+							$('#sticky-header').removeClass('hidden').addClass('shown');
+							if ( hidden ) {
+								$('#sticky-header').css('top', '-80px');
+								$('#sticky-header').animate({top: 0}, 350); // hide().fadeIn();
+							};
+						} else {
+							var shown = $('#sticky-header').hasClass('shown');
+							$('#sticky-header').removeClass('shown');
+							if ( shown ) {
+								$('#sticky-header').animate({top: '-80px'}, 350);
+							};
+						};
+					});
+					$(window).scroll();
+				};
+			});
+			
+			$(function(){
+				$(window).resize(function() {
+					stickyUpdateCSS();
+				});
+			});
+			
+			document.body.insertBefore($('#sticky-header')[0], document.body.childNodes[0]);
+			
+		</script>		
+			
+			<style type="text/css">
+div.popularity-score
+{	float: right;
+	font-family: arial, verdana, sans-serif;
+	font-size: 12pt;
+	font-weight: normal;
+	margin-top: -5px;
+	padding-right: 0px;
+	padding-top: 5px;
+	text-align: left;
+}
+div.popularity-score img
+{	vertical-align: bottom;
+}
+div.popularity-score a span
+{	color: #0a0a0a;
+}
+div.popularity-score a span em
+{	color: #0000ee;
+	font-style: normal;
+	font-weight: bold;
+}
+div.popularity-score p a
+{	text-decoration: underline;
+}
+div.popularity-score a,
+div.popularity-score a img
+{	text-decoration: none;
+}
+#popularity-info
+{	font-size: 10pt;
+	line-height: 17px;
+	margin: 7px 0 0 -233px;
+	padding: 10px 0 0 0;
+	text-align: left;
+	width: 290px;
+}
+#popularity-info p
+{	font-size: 12px;
+	margin: 0 10px 10px 10px;
+}
+#popularity-info p.heading
+{	padding-right: 8px;
+}
+div.popularity-score a img.gauge
+{	margin: 0 5px 0 0;
+}
+div.popularity-score a img.movement-arrow
+{	margin: 0 3px 0 0;
+	padding: 0;
+}
+div.popularity-score a.close-window
+{	display: block;
+	margin: -10px 0 0 263px;
+	padding: 0;
+	position: absolute;
+	z-index: 999;
+}
+div.popularity-score a.close-window img
+{	margin: 0;
+	padding: 0;
+}
+div.popularity-score .title
+{	color: #2965c7;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+div.popularity-score .meter-image
+{	margin: 0;
+	padding: 0 0 0 12px;
+}
+div.popularity-score .meter-image a
+{	margin: 0;
+	padding: 0;
+}
+#homograph-tool-tip
+{	background: white;
+	border: solid 1px #d10f1e;
+	font-size: 12px;
+	font-family: arial,verdana,sans-serif;
+	line-height: 17px;
+	margin-top: 7px;
+	margin-left: 142px;
+	padding: 10px 15px 10px 10px;
+	position: absolute;
+	z-index: 1019128;
+	text-align: left;
+	width: 295px;
+}
+#homograph-tool-tip a
+{	margin-left: 295px;
+	margin-top: -6px;
+	position: absolute;
+	z-index: 1019129;
+}
+</style>
+<div id="popularity-score" class="popularity-score" style="display: none;"></div>
+<script type="text/javascript">
+// <!--
+
+var cmp = document.getElementById('popularity-score');
+cmp.onPopularityScore = function (data)
+	{	var	div				= document.createElement('div');
+		div.className		= 'popularity-score';
+		var p_anchor		= document.createElement('a');
+		p_anchor.href		= '#';
+		p_anchor.style.cursor = 'default';
+		p_anchor.onmousedown = function () { return false; };
+		// p_anchor.onblur		= function () { if ( this.popup != false ) this.popup.style.display = 'none'; return false; };
+		p_anchor.onmouseover	= function ()
+								{	if ( this.popup == false )
+										{	this.popup = document.createElement('div');
+											this.popup.className	= 'popularity-info';
+											this.popup.id			= 'popularity-info';
+											this.popup.style.background	= 'white';
+											this.popup.style.border	= 'solid 1px #d10f1e';
+											this.popup.style.position = 'absolute';
+											this.popup.style.zIndex = '999';
+											this.popup.innerHTML =
+												'<p class="heading"><a href="#" onclick="this.parentNode.parentNode.style.display = \'none\'; return false;" class="close-window"><img src="http://stats.merriam-webster.com/images/popularity/close-window.jpg" /></a>' +
+												'<strong>' + this.data.lex +
+												'</strong> is currently ' + this.data.label + ' on Merriam-Webster.com.</p>' +
+												( this.data.movement > 0 ? '<p>A green arrow <img src="http://stats.merriam-webster.com/images/popularity/movement-up.gif" class="movement-arrow" style="padding-bottom: 3px;" /> indicates a fast mover: this word increased significantly in lookups over the past seven days.</p>' : '' ) +
+												'<p><a href="/popular-words/index.htm">See a list of the most popular words.</a></p>';
+											this.parentNode.appendChild(this.popup);
+										};
+									this.popup.style.display = 'block'; // this.popup.style.display == 'block' ? 'none' : 'block';
+									var elm = document.getElementById('my_saved_words_notice'); if ( elm ) { elm.style.display = 'none'; }
+									if ( document.getElementById('homograph-tool-tip') )
+										{	document.getElementById('homograph-tool-tip').style.display = 'none';
+										};
+									return false;
+								};
+		p_anchor.innerHTML	=
+			'<span class="title">Popularity</span>' +
+			'<span class="meter-image"><img src="' + data.img + '" class="gauge" />' +
+			( data.movement > 0 ? '<img src="http://stats.merriam-web						};
+									return false;ster.com/images/popularity/movement-up.gif" class="movement-arrow" style="padding-bottom: 2px;" />' : '<img src="http://stats.merriam-webster.com/images/popularity/movement-none.jpg" class="movement-arrow" />' ) + '</span>';
+		p_anchor.data		= data;
+		p_anchor.popup		= false;
+		div.appendChild(p_anchor);
+		//this.insertBefore(div, this.childNodes[0]);
+		this.appendChild(div);
+	};
+
+// -->
+</script>
+<script type="text/javascript">
+
+	var pop_parent 	= $('.definition h1')[0]; 
+	var popularity	= $('#popularity-score')[0]; 
+	pop_parent.appendChild(popularity);
+	popularity.style.display = 'block';
+	
+</script>
+<script type="text/javascript" src="http://stats.merriam-webster.com/pop-score.php?word=AIDS&t=1420620098&id=popularity-score"></script>
+			<script type="text/javascript">
+
+// This method updates the status of the saved words display.
+function updateMySavedWordsDisplay (data)
+	{	if ( typeof(FB) != 'undefined' && typeof(FB.curr_user) !== 'undefined' && FB.curr_user.access_token != null )
+			{	var script	= document.createElement('script');
+				script.type	= 'text/javascript';
+				script.src	= 'http://stats.merriam-webster.com/my-saved-words/app.php?action=words.in_list&word=/dictionary/AIDS&success=onUpdateMySavedWords&failure=onMySavedWordsError&uid=' + escape(FB.curr_user.uid) + '&access_token=' + escape(FB.curr_user.access_token);
+				docum'http://stats.merriam-webster.com/my-saved-words/app.php?action=words.in_list&word=/dictionary/AIDS&success=onUpdateMySavedWords&failure=onMySavedWordent.getElementById('my-saved-words').appendChild(script);		
+			}
+		else
+			{	updateMySavedWords('my-saved-words', -1, '');
+			};
+	};
+
+// This function handles the action of adding a word
+function onAddedToMySavedWords (data)
+	{	updateMySavedWords('my-saved-words', 1, data.content.word);
+	};
+
+// This function handles words which couldn't be savd.
+function onMySavedWordsAddError (data)
+	{	alert("Sorry, your word wasn't saved. Please try reloading this page and saving the word again.");		
+	};
+
+// This function handles all My Saved Words error messages.
+function onMySavedWordsError (data)
+	{	updateMySavedWords('my-saved-words', -1, data.content.word);
+	};
+
+// This function updates the My Saved Words content.
+function onUpdateMySavedWords (data)
+	{	updateMySavedWords('my-saved-words', data.social_id == 'null' ? -1 : (data.content.exists == 1 ? 1 : 0), data.content.word);		
+	};
+
+// This function saves a word to the My Saved Words list.
+function saveToMySavedWords ()
+	{	var node	= document.createElement('script');
+		node.type	= 'text/javascript';
+		node.src	= 'http://stats.merriam-webster.com/my-saved-words/app.php?action=words.save&word=/dictionary/AIDS&success=onAddedToMySavedWords&failure=onMySavedWordsAddError&uid=' + escape(FB.curr_user.uid) + '&access_token=' + escape(FB.curr_user.access_token);		
+		//alert(node.src);
+		document.getElementById('my-saved-words').appendChild(node);					
+
+		// Make the cookie "permanent."
+		var exdate=new Date();
+		exdate.setDate(exdate.getDate() + (400 * 40));
+		var c_value=escape('yes') + "; expires="+exdate.toUTCString();
+		document.cookie='my_saved_words_seen' + "=" + c_value;
+
+		// Track the click.
+		var url = 'http://www.merriam-webster.com/my-saved-words/dictionary/starclick/save/AIDS';
+		_gaq.push(['_trackPageview', url]);
+
+		return;
+	};
+
+// This function saves a word to the My Saved Words list.
+function deleteFromMySavedWords (container, word)
+	{	if ( FB.curr_user.uid == null ) return;
+		var node	= document.createElement('script');
+		node.type	= 'text/javascript';
+		node.src	= 'http://stats.merriam-webster.com/my-saved-words/app.php?action=words.delete&word[]=' + word + '&success=updateMySavedWordsDisplay&failure=updateMySavedWordsDisplay&uid=' + escape(FB.curr_user.uid) + '&access_token=' + escape(FB.curr_user.access_token)
+		container.appendChild(node);
+
+		// Track the click.
+		var url = 'http://www.merriam-webster.com/my-saved-words/dictionary/starclick/unsave/AIDS';
+		_gaq.push(['_trackPageview', url]);
+
+		return;
+	};
+
+// This method updates the display of the My Saved Words view.
+function updateMySavedWords (id, which, word)
+	{	var no_homograph_tip = !document.getElementById('homograph-tool-tip');
+
+		// The word is already saved.
+		if ( which == 1 )
+			{	document.getElementById(id).innerHTML = '';
+
+				var node		= document.createElement('a');
+				node.word		= word;
+				node.className	= 'my_saved_words_link';
+				node.href		= "/my-saved-words/manage-list.htm";
+				node.style.display = 'block';
+				node.style.padding = '0 0 0 0';	
+				node.style.margin = '0 0 0 -4px';
+				node.onclick	= function () { return my_words_logged_in(function() { document.location = '/my-saved-words/manage-list.htm'; }); };
+				node.onmouseover = function () { var elm = document.getElementById('popularity-info'); if ( elm ) { elm.style.display = 'none'; if ( document.getElementById('homograph-tool-tip') ) {	document.getElementById('homograph-tool-tip').style.display = 'none'; }; };};
+				node.innerHTML	= 'Saved';
+				document.getElementById(id).appendChild(node);
+
+				node		= document.createElement('a');
+				node.className	= 'my_saved_words_icon';
+				node.word		= word;
+				node.href		= '#';
+				node.onclick	= function () { deleteFromMySavedWords(this.parentNode, this.word); return false; };
+				node.onmouseover = function () { var elm = document.getElementById('popularity-info'); if ( elm ) { elm.style.display = 'none'; if ( document.getElementById('homograph-tool-tip') ) {	document.getElementById('homograph-tool-tip').style.display = 'none'; }; };};
+				node.innerHTML	= '<img src="/images/my-saved-words/saved.gif" />';				
+				node.style.display = 'block';
+				node.style.margin = '2px 0 0 0';				
+				node.style.width = '40px;'												
+				document.getElementById(id).appendChild(node);			
+				
+				// Make the cookie "permanent."
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate() + (400 * 40));
+				var c_value=escape('yes') + "; expires="+exdate.toUTCString();
+				document.cookie='my_saved_words_seen' + "=" + c_value;
+			}
+
+		// Show the login bubble.
+		else if ( which == -1 )
+			{	document.getElementById(id).innerHTML = '';
+
+				node			= document.createElement('a');				
+				node.className	= 'my_saved_words_link';
+				node.word		= word;
+				node.href		= '#';
+				node.innerHTML	 = 'Save';
+				node.onclick	= function () { showFBLogin(saveToMySavedWords); return false; };
+				node.onmouseover = function () { document.getElementById('my_saved_words_notice').style.display = 'block'; var elm = document.getElementById('popularity-info'); if ( elm ) { elm.style.display = 'none'; }; if ( document.getElementById('homograph-tool-tip') ) {	document.getElementById('homograph-tool-tip').style.display = 'none'; }; };
+				node.style.display = 'block';
+				document.getElementById(id).appendChild(node);
+
+				node		= document.createElement('a');
+				node.className	= 'my_saved_words_icon';
+				node.word		= word;
+				node.href		= word;
+				node.onclick	= function () { showFBLogin(saveToMySavedWords); return false; };
+				node.onmouseover = function () { document.getElementById('my_saved_words_notice').style.display = 'block'; var elm = document.getElementById('popularity-info'); if ( elm ) { elm.style.display = 'none'; }; if ( document.getElementById('homograph-tool-tip') ) {	document.getElementById('homograph-tool-tip').style.display = 'none'; }; };
+				node.innerHTML	= '<img src="/images/my-saved-words/save.gif" />';	
+				node.style.display = 'block';
+				node.style.margin = '-2px 0 1px 4px';
+				node.style.padding = '0 0 0 0';
+				node.style.width = '40px';
+				document.getElementById(id).appendChild(node);				
+
+				node			= document.createElement('div');
+				node.className	= 'notice';
+				node.id			= 'my_saved_words_notice';
+				node.innerHTML	= '';
+				if ( no_homograph_tip && !/(^|;\s*)my_saved_words_seen=/.test(document.cookie) )
+					{	var exdate=new Date();
+						exdate.setDate(exdate.getDate() + 7);
+						var c_value=escape('yes') + "; expires="+exdate.toUTCString();
+						document.cookie='my_saved_words_seen' + "=" + c_value;
+						node.style.display = 'block';						
+					}
+				else
+					{	node.onmouseout = function () { this.style.display = 'none'; };
+					};
+				node.innerHTML = '<a id="my_saved_words_close_button" href="#" onclick="document.getElementById(\'my_saved_words_notice\').clear(); this.parentNode.style.display = \'none\'; return false;" class="close-window" style="position: absolute; margin-left: 263px; margin-top: -6px;"><img src="http://stats.merriam-webster.com/images/popularity/close-window.jpg" /></a>';
+				
+				node.innerHTML	+= '<strong>Save this word to your Favorites.</strong><br />If you\'re logged into Facebook, you\'re ready to go.';
+				node.clear = function () 
+					{	/**
+
+						// Removed 08-31-2012 to place close button back in per request.
+						if ( document.getElementById('my_saved_words_close_button') ) 
+							{ document.getElementById('my_saved_words_close_button').style.display = 'none'; 
+							}; 
+						this.onmouseout = function () 
+							{ this.style.display = 'none'; 
+							}; 
+						**/
+					};
+				document.getElementById(id).appendChild(node);
+			}
+
+		// The user hasn't saved this word yet.
+		else
+			{	document.getElementById(id).innerHTML = '';
+
+				node			= document.createElement('a');
+				node.className	= 'my_saved_words_link';
+				node.word		= word;
+				node.href		= '#';
+				node.onclick	= function () { saveToMySavedWords(); return false; };
+				node.onmouseover = function () { document.getElementById('my_saved_words_notice').style.display = 'block'; var elm = document.getElementById('popularity-info'); if ( elm ) { elm.style.display = 'none'; }; };
+				node.innerHTML	 = 'Save';
+				node.style.display = 'block';
+				document.getElementById(id).appendChild(node);
+
+				node			= document.createElement('a');
+				node.word		= word;
+				node.href		= '#';
+				node.className	= 'my_saved_words_icon';
+				node.onclick	= function () { saveToMySavedWords(); return false; };
+				node.innerHTML	= '<img src="/images/my-saved-words/save.gif" />';	
+				node.onmouseover = function () { document.getElementById('my_saved_words_notice').style.display = 'block'; var elm = document.getElementById('popularity-info'); if ( elm ) { elm.style.display = 'none'; }; if ( document.getElementById('homograph-tool-tip') ) {	document.getElementById('homograph-tool-tip').style.display = 'none'; }; };
+				node.style.display = 'block';
+				node.style.margin = '-2px 0 1px 0';	
+				node.style.width = '40px';
+				document.getElementById(id).appendChild(node);
+
+				node			= document.createElement('div');
+				node.id			= 'my_saved_words_notice';
+				node.className	= 'notice';
+				node.innerHTML	= '';						
+				if ( no_homograph_tip && !/(^|;\s*)my_saved_words_seen=/.test(document.cookie) )
+					{	var exdate=new Date();
+						exdate.setDate(exdate.getDate() + 7);
+						var c_value=escape('yes') + "; expires="+exdate.toUTCString();
+						document.cookie='my_saved_words_seen' + "=" + c_value;
+						node.style.display = 'block';						
+						node.innerHTML = '<a id="my_saved_words_close_button" href="#" onclick="document.getElementById(\'my_saved_words_notice\').clear(); this.parentNode.style.display = \'none\'; return false;" class="close-window" style="position: absolute; margin-left: 263px; margin-top: -6px;"><img src="http://stats.merriam-webster.com/images/popularity/close-window.jpg" /></a>';
+					}
+				else
+					{	node.onmouseout = function () { this.style.display = 'none'; };
+					};
+				node.innerHTML += '<strong>Save this word to your Favorites.</strong><br />If you\'re logged into Facebook, you\'re ready to go.';
+				node.clear = function () { if ( document.getElementById('my_saved_words_close_button') ) { document.getElementById('my_saved_words_close_button').style.display = 'none'; }; this.onmouseout = function () { this.style.display = 'none'; }; };
+				document.getElementById(id).appendChild(node);		
+			};		
+	};	
+
+</script>
+<style type="text/css">
+#mwEntryData div.headword
+{	padding-right: 60px; /** Prevent My Saved Words Star from appearing over headword, function label, and pron text. **/
+}
+#my-saved-words div.notice
+{	border: solid 1px #d10f1e;
+	background: white;
+	font-family: arial, verdana, sans-serif;
+	line-height: 17px;
+	padding: 10px;
+	font-size: 10px;
+	display: none;
+	position: absolute;
+	z-index: 999;
+}
+#my-saved-words div.notice
+{	font-size: 12px;
+	line-height: 17px;
+	margin: 3px 0 0 -192px;
+	text-align: left;
+	width: 270px;
+}
+#my-saved-words:hover div.notice
+{	display: block;	
+}
+#my-saved-words a.text
+{	margin-top: -4px;
+	margin-bottom: -1px;
+	width: 40px;
+}
+#my-saved-words a.text:hover
+{	margin-top: -4px;
+	margin-bottom: -1px;
+}
+#my-saved-words a.text img
+{	border-bottom: solid 1px #345bb6;
+}
+.my_saved_words_link,
+.my_saved_words_link:active,
+.my_saved_words_link:hover,
+.my_saved_words_link:link,
+.my_saved_words_link:visited
+{	color: #2965c7;
+	font-size: 10px;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	text-decoration: none;
+	margin-bottom: 4px;
+}
+.my_saved_words_link:hover
+{	text-decoration: underline;
+}
+a.my_saved_words_icon
+{	text-align: 'center';
+	padding: 0 0 0 4px;
+}
+</style>
+<div id="my-saved-words" style="display: none; margin-left: 360px; margin-top: 0; position: absolute; z-index: 999;"></div>
+<script type="text/javascript">
+
+	var definition 		= $('.definition')[0];
+	var my_saved_words	= $('#my-saved-words')[0];
+	definition.insertBefore(my_saved_words, definition.childNodes[0]);
+	my_saved_words.style.display = 'block';
+	
+</script>
+			<div id="footer">				
+				<div id="comp_ad" style="overflow: hidden; width: 0; height: 0; padding: 0; margin: 0;"></div>
+				<div id="tower-advert2" style="position: absolute; overflow: hidden; z-index: 9999; margin-left: -5px; margin-top: -646px;">
+					<script type="text/javascript">
+						// <!--
+
+							output_creative('div-gpt-ad-894456462400224661-9');
+
+						// -->
+						</script>
+				</div>				
+				                <!-- BEGIN OFFERINGS ... FIRST ROW -->
+                <div class="offeringsTop">
+                    <div class="offer1">
+                        <div class="featTitle">
+                            The Merriam-Webster <br /> Unabridged Dictionary
+                        </div><!--featTitle-->
+                        
+                        <div class="featImage_1">
+                            <a class="GA_analytics" data-category="Site Promos" data-action="Top4-Position1" data-label="Unabridged Promo" href="http://unabridged.merriam-webster.com/?refr=U_mwol_other"><img src="/styles/default/images/footer-promos/unabridged-promo.gif" /></a>
+                        </div><!--featImage-->
+                        
+                        <div class="featDescr">
+                            Online access to a <br /> legendary resource <br /> <a class="GA_analytics" data-category="Site Promos" data-action="Top4-Position1" data-label="Unabridged Promo" href="http://unabridged.merriam-webster.com/?refr=U_mwol_promo">Log In</a> or <a class="GA_analytics" data-category="Site Promos" data-action="Top4-Position1" data-label="Unabridged Promo" href="/info/subscribe.php?refr=U_mwol_promo">Sign Up&nbsp;&raquo;</a>
+                        </div><!--featDescr-->
+                    </div><!--offer1-->
+                    
+                    <div class="offer2">
+                        <div class="featTitle">
+                            Learning English? <br />We can help.
+                        </div><!--featTitle-->
+                        
+                        <div class="featImage_2">
+                            <a class="GA_analytics" data-category="Site Promos" data-action="Top4-Position2" data-label="Learner's Dictionary Promo" href="http://www.learnersdictionary.com/"><img src="/styles/default/images/footer-promos/learners-promo.gif" /></a>
+                        </div><!--featImage-->
+                        
+                        <div class="featDescr">
+                            Visit our free site designed <br /> especially for learners and <br /> teachers of English <br /> <a class="GA_analytics" data-category="Site Promos" data-action="Top4-Position2" data-label="Learner's Dictionary Promo" href="http://www.learnersdictionary.com/">LearnersDictionary.com&nbsp;&raquo;</a>
+                        </div><!--featDescr-->
+                    </div><!--offer2-->
+                    
+                    <div class="offer3">
+                        <div class="featImage_3">
+                            <a class="GA_analytics" data-category="Site Promos" data-action="Top4-Position3" data-label="Mobile Apps Promo" href="/dictionary-apps/android-ipad-iphone-windows.htm"><img src="/styles/default/images/footer-promos/iphone-app-woman-with-cell.jpg" /></a>
+                        </div><!--featImage-->
+                        
+                        <div class="featTitle">
+                            Our Dictionary, <br /> On Your Devices
+                        </div><!--featTitle-->
+                                
+                        <div class="featDescr">
+                            Merriam-Webster, <br /> <em>With Voice Search</em> <br /> <a class="GA_analytics" data-category="Site Promos" data-action="Top4-Position3" data-label="Mobile Apps Promo" href="/dictionary-apps/android-ipad-iphone-windows.htm">Get the Free Apps! &raquo;</a>
+                        </div><!--featDescr-->
+                    </div><!--offer3-->
+                    
+                    <div class="offer4">
+                        <div class="featTitle">
+                        	The Official SCRABBLE&reg; <br /> Players Dictionary
+                        </div><!--featTitle-->
+                        
+                        <div class="featImage_4">
+                            <a class="GA_analytics" data-category="Homepage - Site Promos" data-action="First Row - Position4" data-label="SCRABBLE Fifth Edition Promo" href="/shop/products/books/scrabble-dictionary-fifth-edition.htm"><img src="/styles/default/images/footer-promos/mw_scrabble_thumb_for_mwol_home.gif" border="0" /></a>
+                        </div><!--featImage-->
+                        
+                        <div class="featDescr">
+                            5,000 new words added to <br /> the Fifth Edition including <br /> BROMANCE, MOJITO, <br /> and GEOCACHE! <br /> <a class="GA_analytics" data-category="Homepage - Site Promos" data-action="First Row - Position4" data-label="SCRABBLE Fifth Edition Promo" href="/shop/products/books/scrabble-dictionary-fifth-edition.htm">Learn more about the book &raquo;</a> <br /> <a href="/scrabble" target="_blank">Go to the website &raquo;</a>
+                        </div><!--featDescr-->
+                    </div><!--offer4-->
+                </div><!--offeringsTop-->
+                <!-- END OFFERINGS ... FIRST ROW -->				<!-- div class="footer-advert">
+					<script type="text/javascript">
+
+							output_creative('div-gpt-ad-894456462400224661-7');
+
+					</script>
+				</div --><!--footer-advert-->
+				                <!-- BEGIN OFFERINGS ... SECOND ROW -->
+                    <div class="offeringsBottom">
+                        <div class="offer5">
+                            <div class="featTitle">
+                                Join Us
+                            </div><!--featTitle-->
+                            
+                            <div class="twitter">
+                                <div class="twLogo">
+                                    <a class="GA_analytics" data-category="Homepage - Site Promos" data-action="Second Row - Position1" data-label="Twitter/Facebook Promo" href="http://twitter.com/merriamwebster"><img src="/images/social-media/twitter-logo-33x33.png" /></a>
+                                </div><!--twLogo-->
+                                <div class="twDescr">
+                                    <a class="GA_analytics" data-category="Homepage - Site Promos" data-action="Second Row - Position1" data-label="Twitter/Facebook Promo" href="http://twitter.com/merriamwebster">Merriam-Webster<br />on Twitter&nbsp;&raquo;</a>
+                                </div><!--twDescr-->
+                            </div><!--twitter-->
+                            
+                            <div class="facebook">
+                                <div class="fbLogo">
+                                    <a class="GA_analytics" data-category="Homepage - Site Promos" data-action="Second Row - Position1" data-label="Twitter/Facebook Promo" href="http://www.facebook.com/merriamwebster"><img src="/images/social-media/facebook-logo-33x33.png" /></a>
+                                </div><!--fbLogo-->
+                                <div class="fbDescr">
+                                    <a class="GA_analytics" data-category="Homepage - Site Promos" data-action="Second Row - Position1" data-label="Twitter/Facebook Promo" href="http://www.facebook.com/merriamwebster">Merriam-Webster<br />on Facebook&nbsp;&raquo;</a>
+                                </div><!--fbDescr-->
+                            </div><!--facebook-->
+                        </div><!--offer5-->
+                        
+                        <div class="offer6">
+                            <div class="featTitle">
+                                Bookstore: Digital and Print
+                            </div><!--featTitle-->
+                            <div class="bookstoreDescr">
+                                Merriam-Webster references for Mobile, Kindle, print, and more. <a class="GA_analytics" data-category="Homepage - Site Promos" data-action="Second Row - Position2" data-label="Bookstore Promo" href="http://www.merriam-webster.com/shop/index.htm">See all&nbsp;&raquo;</a>
+                            </div><!--bookstoreDescr-->
+                        </div><!--offer6-->
+                        
+                        <div class="offer7">
+                            <div class="featTitle">
+                                Other Merriam-Webster Dictionaries
+                            </div><!--featTitle-->
+    6-->
+                        
+                        <div class="offer7">
+                            <div class="featTitle">
+                                Other Merriam-Webster Dictionaries
+                                   
+                            <div class="other_dictionaries" style="margin:0 8px 0 0;">
+                                <a class="GA_analytics_t" data-category="Homepage - Site Promos" data-action="Second Row - Position3" data-label="Other Dictionaries Promo" href="http://www.spanishcentral.com/" target="_blank">Spanish Central&nbsp;&raquo;</a> 
+                                <a class="GA_analytics_t" data-category="Homepage - Site Promos" data-action="Second Row - Position3" data-label="Other Dictionaries Promo" href="http://www.learnersdictionary.com/" target="_blank">Learner's ESL Dictionary&nbsp;&raquo;</a>
+                            	<a class="GA_analytics_t" data-category="Homepage - Site Promos" data-action="Second Row - Position3" data-label="Other Dictionaries Promo" href="http://www.wordcentral.com/" target="_blank">WordCentral for Kids&nbsp;&raquo;</a>
+            					<a class="GA_analytics_t" data-category="Homepage - Site Promos" data-action="Second Row - Position3" data-label="Other Dictionaries Promo" href="http://visual.merriam-webster.com/" target="_blank">Visual Dictionary&nbsp;&raquo;</a>
+                            </div>
+                            
+                            <div class="other_dictionaries">
+            					<a class="GA_analytics_t" data-category="Homepage - Site Promos" data-action="Second Row - Position3" data-label="Other Dictionaries Promo" href="/scrabble" target="_blank">SCRABBLE&reg; Word Finder&nbsp;&raquo;</a>
+                            	<a class="GA_analytics_t" data-category="Homepage - Site Promos" data-action="Second Row - Position3" data-label="Other Dictionaries Promo" href="http://unabridged.merriam-webster.com/?refr=U_mwol_other" target="_blank">Webster's Unabridged Dictionary&nbsp;&raquo;</a>
+            					<a class="GA_analytics_t" data-category="Homepage - Site Promos" data-action="Second Row - Position3" data-label="Other Dictionaries Promo" href="http://arabic.britannicaenglish.com/en" target="_blank">Britannica English &#150; Arabic Translation&nbsp;&raquo;</a>
+                            </div>
+                        </div><!--offer7-->
+                        <div style="clear:left;"></div>
+                    </div><!--offeringsBottom-->
+                <!-- END OFFERINGS ... SECOND ROW -->				<script type="text/javascript">
+
+	function display_additional_ad ()
+		{	document.getElementById('additional-ad').innerHTML +=
+				'<table class="house-ads">' +
+							'<tr><td>' + getCreativeIFrame('General/MW_GEN_120_LEFT', 'AIDS', 'MD+MB', false) + '</td>' +
+							'<td>' + getCreativeIFrame('General/MW_GEN_120_RIGHT', 'AIDS', 'MD+MB', false) + '</td></tr>' +
+				'</table>' +
+				'<iframe src="/xtra_ad.php?subj=MD%2BMB&search=AIDS&ref=dictionary" frameborder="0" framespacing="0" height="250" width="300" marginheight="0" marginwidth="0"  scrolling="no" style="border: 0; width: 300px; height: 250xp;"></iframe>';
+		};
+
+	function report_page_length ()
+		{	var the_script = document.createElement('script');
+			the_script.type = 'text/javascript';
+			the_script.src = 'http://stats.merriam-webster.com/apis/meta/index.php?ref=dictionary&field=tower.offset&value=' + document.getElementById('footer').offsetTop + '&keyword=AIDS';
+			document.body.appendChild(the_script);
+			//alert('Reporting page length...' + the_script.src);
+		};
+
+	function mw_on_meta (action, keyword, ref, field, value)
+		{	/**
+			if ( action == 'set' && field == 'tower.offset' )
+				{	if ( parseInt(value) > 2150 )
+						{	display_additional_ad();
+						};
+				};
+			**/
+		};
+
+</script>
+				<div class="browse-dictionary">
+    <a class="GA_analytics" data-category="Reference - Footer Links" data-action="Browse Links" data-label="Browse the Dictionary" href="/browse/dictionary/a.htm">Browse the Dictionary</a>
+</div>
+<div class="major-links">
+    <ol>
+        <li><a class="GA_analytics" data-category="Reference - Footer Links" data-action="First Row - Pos1" data-label="Home Link" href="/">Home</a></li>
+        <li><a class="GA_analytics" data-category="Reference - Footer Lss="major-links">
+    <ol>
+        <li><a class="GA_analytics" data-category="Reference - Footer Links" data-action="First Row - Pos1" data-label="Home Link" href="/">Home</a></li>
+        <liinks" data-action="First Row - Pos2" data-label="Help Link" href="/help/index.htm">Help</a></li>
+        <li><a class="GA_analytics" data-category="Reference - Footer Links" data-action="First Row - Pos3" data-label="About Us Link" href="/info/index.htm">About Us</a></li>
+        <li><a class="GA_analytics" data-category="Reference - Footer Links" data-action="First Row - Pos4" data-label="Shop Link" href="/shop/index.htm">Shop</a></li>
+        <li><a class="GA_analytics" data-category="Reference - Footer Links" data-action="First Row - Pos5" data-label="Advertising Info Link" href="/advertising/">Advertising Info</a></li>
+        <li><a class="GA_analytics" data-category="Reference - Footer Links" data-action="First Row - Pos6" data-label="Dictionary API Link" href="http://www.dictionaryapi.com/" target="_blank">Dictionary API</a></li>
+    </ol>
+</div>
+<div class="browse-dictionary">
+    <a class="GA_analytics" data-category="Reference - Footer Links" data-action="Browse Links" data-label="Browse the Thesaurus" href="/browse/thesaurus/a.htm">Browse the Thesaurus</a>
+</div>
+<div class="minor-links">
+    <ol>
+        <li><a class="GA_analytics" data-category="Reference - Footer Links" data-action="Second Row - Pos1" data-label="Privacy Policy Link" href="/info/privacy.htm">Privacy Policy</a></li>
+        <li><a class="GA_analytics" data-category="Reference - Footer Links" data-action="Second Row - Pos2" data-label="About Our Ads Link" href="/info/about-our-ads.htm">About Our Ads</a></li>
+        <li><a class="GA_analytics" data-category="Reference - Footer Links" data-action="Second Row - Pos3" data-label="Contact Us Link" href="/info/contact.htm">Contact Us</a></li>
+        <li><a class="GA_analytics" data-category="Reference - Footer Links" data-action="Second Row - Pos4" data-label="Browser Tools Link" href="/browser-tools/google-chrome.htm">Browser Tools</a></li>
+    </ol>
+</div>
+<div class="browse-dictionary">
+    <a class="GA_analytics" data-category="Reference - Footer Links" data-action="Browse Links" data-label="Browse the Spanish-English Dictionary" href="http://www.spanishcentral.com/browse/a" target="_blank">Browse the Spanish-English Dictionary</a>
+</div>
+<div class="copyright">
+    <a class="GA_analytics" data-category="Reference - Footer Links" data-action="Third Row - Pos1" data-label="Copyright Link" href="/info/copyright.htm">&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Merriam-Webster, Incorporated</a>
+</div>
+<div class="browse-dictionary" style="clear:both;">
+    <a class="GA_analytics" data-category="Reference - Footer Links" data-action="Browse Links" data-label="Browse the Medical Dictionary" href="/browse/medical/a.htm">Browse the Medical Dictionary</a>
+</div>
+<div class="browse-dictionary" style="clear:both;">
+    <a class="GA_analytics" data-category="Reference - Footer Links" data-action="Browse Links" data-label="Browse the Concise Encyclopedia" href="/browse/concise/a.htm">Browse the Concise Encyclopedia</a>
+</div>
+			</div><!--footer-->
+		</div>
+
+        <script type="text/javascript">
+        _qoptions=
+            {	qacct:"p-2a93ALTZSnZrY"
+				, labels: "Dictionary.MD,Dictionary.MB"            };
+        </script>
+        <script type="text/javascript" src="http://pixel.quantserve.com/seg/p-2a93ALTZSnZrY.js"></script>
+        <script type="text/javascript">
+	//<!--
+        function _quantgc(n) {
+        var c=document.cookie;if(!c)return '';
+        var i=c.indexOf(n+"=");if(-1==i)return '';
+        var len=i+n.length+1;
+        var end=c.indexOf(";", len);
+        return c.substring(len,end<0?c.length:end);
+        }
+        quantSegs = "";
+        var _qsegs = _quantgc('__qseg').split('|');
+        for (var i=0;i < _qsegs.length;i++) {
+        var qArr=_qsegs[i].split("_")
+        if (qArr.length>1) { if (quantSegs.length >= 1){ quantSegs += ",";} quantSegs += qArr[1]; }
+        }
+	// -->
+        </script>
+        <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+        <noscript>
+            <div><img src="http://pixel.quantserve.com/pixel/p-2a93ALTZSnZrY.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/></div>
+        </noscript>
+        <!-- End Quantcast tag -->
+
+        <!-- Begin comScore Tag -->
+        <script>!
+        document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+        </script>
+        <script>
+        COMSCORE.beacon({
+        c1:2,
+        c2:6035486,
+        c3:"",
+        c4:"",
+        c5:"",
+        c6:"",
+        c15:""
+        });
+        </script>
+        <noscript>
+        <img src="http://b.scorecardresearch.com/b?c1=2&c2=6035486&c3=&c4=&c5=&c6=&c15=&cv=1.3&cj=1" style="display:none" width="0" height="0" alt="" />
+        </noscript>
+        <!-- End comScore Tag -->
+
+		<!-- Load Facebook Connect Code -->
+		<!-- Load Facebook Connect Code -->
+<div id="fb-root"></div>
+<script type="text/javascript" src="/js/facebook-connect.js"></script>
+<!-- div id="facebook-login-win" style="background: red; display: none; height: 100px; left: 0; opacity2: .8; position: fixed; top: 0; width: 100%; z-index: 999999;"><div style="display: table-cell; vertical-align: middle; width: 100%; opacity: 1; text-align: center;"><fb:login-button autologoutlink="true" perms="email,user_birthday,status_update,publish_stream"></fb:login-button></div></div --></body>
+</html>
+99;"><div style="display: table-cell; vertical-align: middle; width: 100%; opacity: 1; text-align: center;"><fb:login-button autologoutlink="true" perms="email,user_birthday,status_update,publish_stream"></fb:login-button></div></div --></body>
+</html

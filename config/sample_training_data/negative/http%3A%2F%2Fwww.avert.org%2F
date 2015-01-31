@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8" />
+<meta name="robots" content="follow, index" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="http://avert.org/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortlink" href="http://avert.org/" />
+<link rel="canonical" href="http://avert.org/" />
+<meta name="description" content="HIV &amp; AIDS information focusing on regional and global responses to the epidemic. AVERT also provides HIV and AIDS education resources, sex education and advice for people of all age groups." />
+<meta name="keywords" content="AIDS, HIV, What is HIV, What is AIDS, HIV and AIDS, worldwide HIV/AIDS information, HIV and AIDS news, HIV/AIDS, AVERT, avert.org" />
+<meta name="copyright" content="AVERT" />
+  <title>HIV and AIDS information and resources | AVERT</title>
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+  <link type="text/css" rel="stylesheet" href="http://avert.org/sites/default/files/advagg_css/css__iZQRxW5IfHixHumg86iKPcwhvrrJ8snqmeyUePG5f0E__1MpiIsEZSC8zE-tzwMuU9DveuaniLslGObHq1VnMO4A__T9KQa7daKSAg8fI6kK1CmOIgqVE1HgP5-rE--4Ec9ow.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://avert.org/sites/default/files/advagg_css/css__35o9k6fHpc5QtBXf4xMeiVgRI-LdrV2zud1MLKScfUw__nbn1xYcw7CZ4c1xrGiuXUcsmmLWKao6olt2SFKq7QSA__T9KQa7daKSAg8fI6kK1CmOIgqVE1HgP5-rE--4Ec9ow.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://avert.org/sites/default/files/advagg_css/css__q_42A9y6-n7iFOXxhSYJEFru9o1D0DAwIucpRZ_cUfk__GGuDIeYyhdvYZOsZ9fNXkW13vOZpoiV8kSqUlPK7aKQ__T9KQa7daKSAg8fI6kK1CmOIgqVE1HgP5-rE--4Ec9ow.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://avert.org/sites/default/files/advagg_css/css__cyovLqvuk_orgA2kRnxF-ck8gfRWJZVUipaLryudf4c__NjKevugcKXzlnMG4X2cwcFzOaDXhPp8irq-jmTvGLrg__T9KQa7daKSAg8fI6kK1CmOIgqVE1HgP5-rE--4Ec9ow.css" media="all" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery||document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js'>\x3C/script>");</script>
+<script src="http://avert.org/sites/default/files/advagg_js/js__H5AFmq1RrXKsrazzPq_xPQPy4K0wUKqecPjczzRiTgQ__pvMy9xuoSPQFd66KrT2VKWaMlgLMOpiRiOjd0EZRxs8__T9KQa7daKSAg8fI6kK1CmOIgqVE1HgP5-rE--4Ec9ow.js"></script>
+<script src="http://avert.org/sites/default/files/advagg_js/js__DZf5cIl00hFz_iU-MHjsbTNlS1zJuB0mHabWrG0PmtY__dqd7cJD4mCiF2kynqQVcpkMXXeAY7zSPIpYQKsDDOLo__T9KQa7daKSAg8fI6kK1CmOIgqVE1HgP5-rE--4Ec9ow.js"></script>
+<script src="http://avert.org/sites/default/files/advagg_js/js__d2SRwgnF7jjyIR-eRQl1XaVc3OTvZKjlYkEyHWcNdPA__hNhox9LzIALkMFzw1JioXfx2zVwwyyU_aCxXzdoBgzs__T9KQa7daKSAg8fI6kK1CmOIgqVE1HgP5-rE--4Ec9ow.js"></script>
+<script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-1240026-1"]);_gaq.push(["_trackPageview"]);(function(){var ga=document.createElement("script");ga.type="text/javascript";ga.async=true;ga.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga,s)})();</script>
+<script src="http://avert.org/sites/default/files/advagg_js/js__eS53_UUxRYMOkg6kHn60nnJ6vSaYvX665GM_zQPoCy0__CiZMIQnQUtEOF9gMYlGVq4NVVx9_bTrDUBKQ23bD63s__T9KQa7daKSAg8fI6kK1CmOIgqVE1HgP5-rE--4Ec9ow.js"></script>
+<script>jQuery.extend(Drupal.settings,{basePath:"\/",pathPrefix:"",ajaxPageState:{theme:"avert_theme",theme_token:"0fo_1QWAbdnvDbrBvGYgntwUjpQMsl4nA1AvLun07KE",css:{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/footnotes\/footnotes.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/quiz\/quiz.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/workflow\/workflow_admin_ui\/workflow_admin_ui.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/caption_filter\/caption-filter.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/rate\/rate.css":1,"sites\/all\/modules\/panels_extra_layouts\/plugins\/layouts\/three_four_adaptive\/three_four_adaptive.css":1,"sites\/all\/libraries\/nivo-slider\/nivo-slider.css":1,"sites\/all\/libraries\/nivo-slider\/themes\/default\/default.css":1,"sites\/all\/modules\/views_nivo_slider\/views_nivo_slider.css":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/libraries\/superfish\/css\/superfish-smallscreen.css":1,"sites\/all\/libraries\/superfish\/style\/space.css":1,"sites\/all\/themes\/avert_theme\/system.menus.css":1,"sites\/all\/themes\/avert_theme\/css\/normalize.css":1,"sites\/all\/themes\/avert_theme\/css\/wireframes.css":1,"sites\/all\/themes\/avert_theme\/css\/layouts\/fixed-width.css":1,"sites\/all\/themes\/avert_theme\/css\/page-backgrounds.css":1,"sites\/all\/themes\/avert_theme\/css\/tabs.css":1,"sites\/all\/themes\/avert_theme\/css\/pages.css":1,"sites\/all\/themes\/avert_theme\/css\/blocks.css":1,"sites\/all\/themes\/avert_theme\/css\/navigation.css":1,"sites\/all\/themes\/avert_theme\/css\/views-styles.css":1,"sites\/all\/themes\/avert_theme\/css\/nodes.css":1,"sites\/all\/themes\/avert_theme\/css\/comments.css":1,"sites\/all\/themes\/avert_theme\/css\/forms.css":1,"sites\/all\/themes\/avert_theme\/css\/fields.css":1,"sites\/all\/themes\/avert_theme\/css\/print.css":1},js:{"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.7.1\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/caption_filter\/js\/caption-filter.js":1,"sites\/all\/modules\/floating_block\/floating_block.js":1,"sites\/all\/modules\/jcaption\/jcaption.js":1,"sites\/all\/libraries\/nivo-slider\/jquery.nivo.slider.pack.js":1,"sites\/all\/modules\/views_nivo_slider\/views_nivo_slider.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/sfsmallscreen.js":1,"sites\/all\/libraries\/superfish\/supposition.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/libraries\/superfish\/supersubs.js":1,"sites\/all\/modules\/superfish\/superfish.js":1}},floating_block:{"#navigation":[]},jcaption:{jcaption_selectors:[".content img","img.caption"],jcaption_alt_title:"alt",jcaption_requireText:1,jcaption_copyStyle:1,jcaption_removeStyle:1,jcaption_removeClass:1,jcaption_removeAlign:1,jcaption_copyAlignmentToClass:0,jcaption_copyFloatToClass:1,jcaption_copyClassToClass:1,jcaption_autoWidth:1,jcaption_keepLink:0,jcaption_styleMarkup:"font-size: 12px; color: #000; font-style: bold; text-align: left;",jcaption_animate:0,jcaption_showDuration:"200",jcaption_hideDuration:"200"},views_nivo_slider:{"views-nivo-slider-home_carousel-block_1":{startSlide:0,effect:"fade",slices:15,animSpeed:500,pauseTime:6e3,directionNav:false,directionNavHide:true,controlNav:true,controlNavThumbs:false,pauseOnHover:true,manualAdvance:false,captionOpacity:0.8,version:"2.7.x",controlNavThumbsFromRel:false,keyboardNav:true}},googleanalytics:{trackOutbound:1,trackMailto:1,trackDownload:1,trackDownloadExtensions:"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},superfish:{"1":{id:"1",sf:{animation:{opacity:"show",height:"show"},speed:"\u0027fast\u0027"},plugins:{smallscreen:{mode:"window_width",title:"Main menu"},supposition:true,supersubs:true}}}});</script>
+      <!--[if lt IE 9]>
+    <script src="/sites/all/themes/zen-old/js/html5-respond.js"></script>
+    <![endif]-->
+  </head>
+<body class="html front not-logged-in no-sidebars page-home page-panels" >
+      <p id="skip-link">
+      <a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
+    </p>
+      <header id="header" role="banner"><div class="region region-header"><div id="block-block-24" class="block block-block avert-top-bar first odd"><style>#edit-search-block-form--2{
+width: 170px;
+line-height: 16px;
+}
+button, input {
+}.page-search-node #page-title{
+margin-left: 30px;
+}
+.page-news #content {
+height: 1622px;
+}
+#hdr-bar-search{
+font-size: 13px;
+letter-spacing: 0px;
+}
+#superfish-1{
+font-size: 14px;
+}
+.avert-header {
+margin-top: 8px;
+margin-bottom: 5px;
+}
+#hdr-bar-search a:nth-child(1), #hdr-bar-search a:nth-child(2), #hdr-bar-search a:nth-child(3), #hdr-bar-search a:nth-child(4), #hdr-bar-search a:nth-child(5), #hdr-bar-search a:nth-child(6) {
+margin-left: 10px;
+margin-right: 10px;
+}
+</style><div id="green-bar"><div class="avert-header-bar-search"><div id="header-bar" style="margin-left: -4px; margin-right: -4px;"><div id="header-bar-wrapper"><div style="position: absolute; padding-right: 4px; margin-left: 4px;">
+<a style="background-color:#8ed800;" href="/">
+<img src="/sites/all/themes/avert_theme/images/H-icon-16x14.png" style="margin-top: 10px;"/></a></div><form onsubmit="if(this.search_block_form.value==&#039;SEARCH&#039;){ alert(&#039;Please enter a search&#039;); return false; }" action="/taxonomy/term/1506" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline"><div id="hdr-bar-search">
+<a href="/about-avert.htm">About AVERT</a> |
+<a href="/avert-overseas-partners.htm">Our Partners</a> |
+<a href="/resources">Learning Resources</a> |
+<a href="/contacting-us.htm">Contact us</a> |
+<a href="/donate">
+<font color= "#CC000">DONATE</font></a> |
+<a href="/fundraising-hivaids-charity-avert.htm">
+<font color="#15415c">FUNDRAISING</font></a>&nbsp;
+<a href="/newsletter">
+<img width="30" height="19" style="height: 19px; width: 30px;" src="/sites/all/themes/avert_theme/images/socialmedia-newsletter.png" alt="Newsletter"></img></a>
+<a href="http://www.linkedin.com/groups?gid=4447318&trk=myg_ugrp_ovr">
+<img width="28" height="19" style="height: 19px; width: 28px;" src="/sites/all/themes/avert_theme/images/socialmedia-linkedin.png" alt="LinkedIn"></img></a>
+<a href="http://twitter.com/#!/avert_org">
+<img width="26" height="19" style="height: 19px; width: 26px;" src="/sites/all/themes/avert_theme/images/socialmedia-twitter.png" alt="Twitter"></img></a>
+<a href="http://www.facebook.com/pages/AVERT/127620750605019">
+<img width="21" height="19" style="height: 19px; width: 21px;" src="/sites/all/themes/avert_theme/images/socialmedia-facebook.png" alt="Facebook"></img></a><h2 class="element-invisible">Search form</h2><div class="form-item form-type-textfield form-item-search-block-form">
+<label class="element-invisible" for="edit-search-block-form--2">SEARCH </label>
+<input title="Enter the terms you wish to search for." onblur="if (this.value == &#039;&#039;) {this.value = &#039;SEARCH&#039;;}" onfocus="if (this.value == &#039;SEARCH&#039;) {this.value = &#039;&#039;;}" class="" placeholder="SEARCH" type="text" id="edit-search-block-form--2" name="search_block_form" value="SEARCH" size="20" maxlength="128" /></div><div class="form-actions form-wrapper" id="edit-actions">
+<input type="image" id="edit-submit" name="submit" src="/sites/all/themes/avert_theme/images/search-bar.png" class="form-submit" /></div>
+<input type="hidden" name="form_build_id" value="form-pgbUVlgX3H8DlqDy4U0oaXV0S5KtAGf_cAFk_mHNDM8" />
+<input type="hidden" name="form_id" value="search_block_form" /></div></div></div></form></div></div></div></div></div><div id="block-block-1" class="block block-block avert-header last even"><style>
+.block-menu-block a:link, a:visited{
+background-color: transparent;
+}
+</style><div id="avert-logo-outer"><div id="avert-logo">
+<a href="http://www.avert.org">
+<img src="/sites/all/themes/avert_theme/images/header-bar-wad1.png" width="149" height="100" style="height: auto;"></a></div></div></div></div> </header><div id="page"><div id="main"><div id="content-homev id="avert-logo">
+<a href="http://ww" class="column" role="main">
+<a id="main-content"></a><div class="panel-display panel-three-four-adaptive clear-block" ><div class="panel-panel line"><div class="panel-panel unit panel-one-hundred lastUnit"><div class="panel-pane pane-views pane-home-carousel" ><div class="pane-content"><div class="view view-home-carousel view-id-home_carousel view-display-id-block_1 view-dom-id-2d3d8532281b939d0a04ef416043fe45"><div class="view-content"><div class="views-nivo-slider-view slider-wrapper theme-default"><div id="views-nivo-slider-home_carousel-block_1" class="views-nivo-slider clearfix">
+<a href="http://www.avert.org/fact-sheet-hiv-testing.htm" class="views-processed">
+<img typeof="foaf:Image" src="http://avert.org/sites/default/files/styles/slide-980-368/public/feature-680x250.png?itok=b7135MDa" width="680" height="250" alt="" title="#home-carousel-block-1-field-carousel-title-0" /></a>
+<a href="http://www.avert.org/avert-small-grants-programme" class="views-processed">
+<img typeof="foaf:Image" src="http://avert.org/sites/default/files/styles/slide-980-368/public/680x250_5_1.jpg?itok=LYJxppCi" width="680" height="250" alt="" title="#home-carousel-block-1-field-carousel-title-1" /></a>
+<a href="http://www.avert.org/update-your-status.htm" class="views-processed">
+<img typeof="foaf:Image" src="http://avert.org/sites/default/files/styles/slide-980-368/public/carrousel680x250_1.jpg?itok=JIPH-GtP" width="680" height="250" alt="" title="#home-carousel-block-1-field-carousel-title-2" /></a>
+<a href="http://www.avert.org/fundraising-hiv-and-aids-charity-avert.htm" class="views-processed">
+<img typeof="foaf:Image" src="http://avert.org/sites/default/files/styles/slide-980-368/public/fundraising-uni-680x250.jpg?itok=ADKYapL6" width="680" height="250" alt="" title="#home-carousel-block-1-field-carousel-title-3" /></a></div><div id="home-carousel-block-1-field-carousel-title-0" class="nivo-html-caption"><div class="carousel-title">
+<a href="/fact-sheet-hiv-testing.htm">HIV Testing Week 22-30 November</a></div><div class="carousel-line"></div><div class="carousel-summary"><p>It's HIV Testing Week in the UK!</p><p>Testing is key to preventing the transmission of HIV. If people know their HIV status they can take action to protect themselves and others from infection.</p><p>However, an estimated 24% of all people living with HIV in the UK are still unaware of their status.</p><p>Learn how to protect yourself from HIV using our
+<a href="/fact-sheet-hiv-testing.htm" target="_self"><strong>HIV Testing Fact Sheet &gt;&gt;</strong></a></p></div></div><div id="home-carousel-block-1-field-carousel-title-1" class="nivo-html-caption"><div class="carousel-title">
+<a href="/avert-small-grants-programme">AVERT Small Grants Programme</a></div><div class="carousel-line"></div><div class="carousel-summary"><p>AVERT is delighted to announce the launch of our new Small Grants Programme!</p><p>We are calling for project proposals from charitable organisations in Malawi, Swaziland or Lesotho working to increase comprehensive knowledge and understanding of HIV and AIDS among young people aged between 15 and 24.</p><p><strong>Applications are due by Midnight, 25 November 2014.</strong></p><p>
+<a href="/avert-small-grants-programme" target="_self"><strong>Find out more and download the application form &gt;&gt;</strong></a></p></div></div><div id="home-carousel-block-1-field-carousel-title-2" class="nivo-html-caption"><div class="carousel-title">
+<a href="/update-your-status">Update Your Status!</a></div><div class="carousel-line"></div><div class="carousel-summary"><p>AVERT has launched
+<a href="/update-your-status.htm" target="_self"><strong>Update Your Status (UYS)</strong></a>, a campaign calling on young people to test regularly for HIV and urging key stakeholders to remove barriers to testing.</p><p>UYS promotes the benefits of HIV testing and tackles why young people don't go for a test – play the
+<a href="/update-your-status/" target="_self"><strong>game</strong></a> to bust the myths around HIV tests!</p><p>Read and share our
+<a href="/media/pdfs/update-your-status-advocacy-paper.pdf" target="_self"><strong>advocacy paper</strong> </a>calling on donors to prioritise research and investment into youth-friendly HIV testing and education.</p></div></div><div id="home-carousel-block-1-field-carousel-title-3" class="nivo-html-caption"><div class="carousel-title">
+<a href="/fundraising-hiv-and-aids-charity-avert.htm">Help us to help others</a></div><div class="carousel-line"></div><div class="carousel-summary"><p>Do something amazing - <strong>Fundraise for AVERT this World AIDS Day!</strong></p><p><strong>Get together with friends, family or colleagues, raise funds and increase awareness about HIV and AIDS this December 1st.</strong></p><p>We can provide you with all the ideas, help &amp; resources you need to put on a fantastic fundraising event.</p><p>
+<a href="/fundraising-hiv-and-aids-charity-avert.htm"><strong>Visit our fundraising pages to get started &gt;&gt;</strong></a></p></div></div></div></div></div></div></div></div></div><div class="panel-panel line"><div class="panel-panel unit panel-one-hundred lastUnit"><div class="panel-pane pane-node" ><div class="pane-content">
+<article class="node-4421 node node-html-block view-mode-full clearfix" about="/home-main-block-html-block.htm" typeof="sioc:Item foaf:Document"><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><script type='text/javascript' src='http://code.jquery.com/jquery-1.4.2.js'></script>
+<style type="text/css">
+.block-menu-block a:link, a:visited{
+background-color: transparent;
+}
+#footer-outer{
+margin-top:-13px;
+}
+#container {
+//cursor:pointer;
+font-family:Helvetica,Arial,sans-serif;
+background:#8ED800;
+margin:0px;
+padding: 5px 10px;
+color: #FFFFFF;
+font-size: 15px;
+font-weight: lighter;
+text-align: left;
+top: 0;
+width: 300px;
+position: absolute;
+z-index: 1;
+opacity: 0.9;
+}
+#hover-area {
+background:#8ED800;
+padding-top: 0px;
+height:10px;
+text-align: left;
+width: 300px;
+}
+#caption-area1 {
+height:10px;
+overflow-y:hidden;
+padding: 0px;
+}
+#caption-area h1 {
+font:bold 18px/1.5 Helvetica,Arial,sans-serif;
+}
+.new-feature-block-wrapper {
+overflow: hidden;
+}
+.new-feature-block-left {
+float: left;
+width: 320px;
+}
+.new-feature-block-middle {
+float: left;
+width: 320px;
+margin-left: 20px;
+}
+.new-feature-block-right {
+float: left;
+width: 320px;
+margin-left: 20px;
+}div.views-nivo-slider-view.slider-wrapper.theme-default{
+display:none;
+}
+.panel-col-thirty-three{
+display:none;
+}
+#beapart{
+width: 1000px;
+height: 150px;
+background-color: black;
+margin-top: -5px;
+}
+#social_logos{
+width: 30px;
+margin-left: 25px;
+padding-top: 33px;
+}
+#logo_face, #logo_twitt{
+margin-bottom: 4px;
+}
+#title_wad{
+position: relative;
+left: 259px;
+margin-top: -126px;
+}
+#uys_zebra{
+position: relative;
+left: 808px;
+margin-top: -155px;
+}
+#pod{
+width: 1000px;
+height: 230px;
+text-align: center;
+padding-top:50px;
+padding-bottom:50px;
+}
+#pod1, #pod2{
+padding-right: 90px;
+}#link_uys{
+width: 935px;
+height: 150px;
+position: absolute;
+right: 0;
+margin-top: -149px;
+cursor:pointer;
+}
+#imagen{
+position: absolute;
+left: 40px;
+top: 85px;
+}
+* a{
+text-decoration: none;
+}</style><style type="text/css">
+#caption-area3 { height:10px; overflow-y:hidden; padding: 0px;}</style>
+<script type='text/javascript'>
+$(document).ready(function(){
+$("#img_videowad").click(function(){
+$("#img_videowad").hide();
+$("#content_videowad").show();
+});
+$("#link_uys").click(function(){
+window.location=$(this).find("#link_to_uys").attr("href");
+return false;
+});
+})
+</script>
+<div class="new-feature-block-wrapper"><iframe id="content_videowad" width="1000" height="563" src="//www.youtube.com/embed/dfFzEzubw9Q?rel=0&amp;autoplay=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe><script>
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
+function onYouTubeIframeAPIReady() {
+player = new YT.Player('content_videowad', {
+events: {
+'onReady': onPlayerReady,
+'onStateChange': onPlayerStateChange
+}
+});
+}
+function onPlayerReady(event) {
+}
+var done = false;
+function onPlayerStateChange(event) {
+$("#imagen").hide();
+if (event.data == YT.PlayerState.ENDED && !done) {
+done = true;
+$("#imagen").show();
+}
+}
+function stopVideo() {
+player.stopVideo();
+}
+</script>
+
+<img id="imagen" src="/sites/default/files/images/title_onvideo.png"/><div id="beapart"><div id="social_logos">
+<a rel="nofollow" href="http://www.facebook.com/sharer.php?u=http://www.avert.org/update-your-status" target="_blank">
+<img id="logo_face" src="/sites/default/files/images/wad-facebook.png"></a>
+<a rel="nofollow" href="https://twitter.com/intent/tweet?text=First Date Sex Fail: Watch the video. Test for %23HIV. Share %26 help %23endAIDS this %23WAD2014 %23UpdateYourStatus&url=http://bit.ly/11i8eZ4" target="_blank">
+<img id="logo_twitt" src="/sites/default/files/images/wad-twitter.png"></a>
+<a rel="nofollow" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://www.avert.org/update-your-status" target="_blank">
+<img id="logo_goog" src="/sites/default/files/images/wad-google.png"></a></div><div id="title_wad">
+<img src="/sites/default/files/images/wadtitle.png"></div><div id="uys_zebra">
+<img src="/sites/default/files/images/uyszebra.png"></div></a></div><div id="link_uys">
+<a id="link_to_uys" href="http://www.avert.org/update-your-status"></a></div><div id="pod" style="background-image: url('http://www.avert.org/sites/default/files/images/background_pod.png');">
+<a href="http://www.avert.org/fact-sheet-hiv-testing.htm">
+<img id="pod1" src="/sites/default/files/images/wadpod1.png" width="250" height="259" alt="learn about hiv"></a>
+<a href="http://www.avert.org/donate.php">
+<img id="pod2" src="/sites/default/files/images/wadpod2.png" width="251" height="259" alt="donate"></a>
+<a href="http://www.avert.org/news">
+<img id="pod3" src="/sites/default/files/images/wadpod3.png" width="252" height="259" alt="world aids day blog"></a></div></div></div></div></div> </article></div></div></div></div><div class="panel-panel line"><div class="panel-panel unit panel-col-thirty-three"><div class="inside"><div class="panel-pane pane-node" ><div class="pane-content">
+<article class="node-4446 node node-html-block view-mode-full clearfix" about="/homepage-feature-2nd-row-1st.htm" typeof="sioc:Item foaf:Document"><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+var $ca = $('#caption-area1');
+var cahOrig = $ca.height();
+$ca.css('height','auto');
+var cahAuto = $ca.height();
+$ca.css('height',cahOrig+'px');
+$('.feature-block-320x100-frame-1').bind('mouseenter', function(e) {
+$ca.animate({'height':cahAuto+'px'},200);
+});
+$('.feature-block-320x100-frame-1').bind('mouseleave', function(e) {
+$ca.animate({'height':cahOrig+'px'},200);
+});
+});//]]>
+</script>
+<div class="feature-block-left-2nd-row"><div class="feature-block-320x100-frame-1">
+<a href="/media-gallery">
+<img class="feature-img" src="/sites/default/files/images/HM-Media-Gallery.jpg" width="320" height="160"></a><div id="container"><div id="hover-area"><strong>Media Gallery</strong></div><div id="caption-area1"><p>Use videos and graphics in AVERT's Media Gallery to learn and educate about sexual health, HIV & AIDS.
+<a href="/media-gallery"><strong>View gallery >></strong></a></p></div></div></div></div></div></div> </article></div></div></div></div><div class="panel-panel unit panel-col-thirty-three"><div class="inside"><div class="panel-pane pane-node" ><div class="pane-content">
+<article class="node-4448 node node-html-block view-mode-full clearfix" about="/homepage-feature-2nd-row-2nd.htm" typeof="sioc:Item foaf:Document"><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><style type='text/css'>
+#caption-area2 { height:10px; overflow-y:hidden; padding: 0px;}
+</style>
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+var $ca = $('#caption-area2');
+var cahOrig = $ca.height();
+$ca.css('height','auto');
+var cahAuto = $ca.height();
+$ca.css('height',cahOrig+'px');
+$('.feature-block-middle-2nd-row').bind('mouseenter', function(e) {
+$ca.animate({'height':cahAuto+'px'},200);
+});
+$('.feature-block-middle-2nd-row').bind('mouseleave', function(e) {
+$ca.animate({'height':cahOrig+'px'},200);
+});
+});//]]>
+</script>
+<div class="feature-block-middle-2nd-row">
+<a href="games">
+<img class="feature-img" src="/sites/default/files/images/play-and-learn.jpg" width="320" height="160"></a><div id="container"><div id="hover-area"><strong>Play and Learn - HIV Quizzes</strong></div><div id="caption-area2"><p>How much do you know about sex, condoms, pregnancy and HIV? Test yourself -
+<a href="quizzes"><strong>Take the quizzes >></strong></a></p></div></div></div></div></div> </article></div></div></div></div><div class="panel-panel unit panel-col-thirty-three lastUnit"><div class="inside"><div class="panel-pane pane-node" ><div class="pane-content">
+<article class="node-4447 node node-html-block view-mode-full clearfix" about="/homepage-feature-2nd-row-3rd.htm" typeof="sioc:Item foaf:Document"><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><style type="text/css">
+#caption-area-2-3 { height:10px; overflow-y:hidden; padding: 0px;}</style>
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+var $ca = $('#caption-area-2-3');
+var cahOrig = $ca.height();
+$ca.css('height','auto');
+var cahAuto = $ca.height();
+$ca.css('height',cahOrig+'px');
+$('.feature-block-320x100-frame-2-3').bind('mouseenter', function(e) {
+$ca.animate({'height':cahAuto+'px'},200);
+});
+$('.feature-block-320x100-frame-2-3').bind('mouseleave', function(e) {
+$ca.animate({'height':cahOrig+'px'},200);
+});
+});//]]>
+</script>
+<div class="feature-block-right-resources"><div class="feature-block-320x100-frame-2-3">
+<a href="resources">
+<img class="feature-img" height="160" src="/sites/default/files/images/HM-7-Resources.jpg" width="320" /></a><div id="container"><div id="hover-area"><strong>Self-educating HIV Resources</strong></div><div id="caption-area-2-3"><p>Self-educating HIV & sexual health resources for young people, parents, teachers, expecting mothers, community leaders and individuals.
+<a href="resources"><strong>Learn more >></strong></a></p></div></div></div></div></div></div></div> </article></div></div></div></div></div><div class="panel-panel line"><div class="panel-panel unit panel-one-hundred lastUnit"><div class="panel-pane pane-node" ><div class="pane-content">
+<article class="node-4394 node node-html-block view-mode-full clearfix" about="/homepage-blank-html-block-2.htm" typeof="sioc:Item foaf:Document"> </article></div></div></div></div></div></div><div id="navigation"><div class="region region-navigation"><div id="block-superfish-1" class="block block-superfish first last odd"><ul id="superfish-1" class="menu sf-menu sf-main-menu sf-horizontal sf-style-space sf-total-items-8 sf-parent-items-7 sf-single-items-1"><li id="menu-6577-1" class="first odd sf-item-1 sf-depth-1 sf-no-children">
+<a href="/fact-sheets-hiv-prevention.htm" title=" How to Prevent HIV" class="main-menu sf-depth-1">Fact Sheets: How to Prevent HIV</a></li><li id="menu-280-1" class="middle even sf-item-2 sf-depth-1 sf-total-children-9 sf-parent-children-5 sf-single-children-4 menuparent">
+<a href="/hiv-prevention.htm" title="Prevention of HIV Transmission" class="main-menu sf-depth-1 menuparent">HIV Prevention</a><ul><li id="menu-2434-1" class="first odd sf-item-1 sf-depth-2 sf-no-children">
+<a href="/post-exposure-prophylaxis-pep.htm" title="Post-Exposure Prophylaxis (PEP) - Emergency HIV Prevention" class="sf-depth-2">Emergency HIV Prevention - PEP</a></li><li id="menu-2435-1" class="middle even sf-item-2 sf-depth-2 sf-no-children">
+<a href="/pre-exposure-prophylaxis.htm" title="PrEP - Pre-Exposure Prophylaxis" class="sf-depth-2">PrEP Treatment</a></li><li id="menu-2579-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children">
+<a href="/hiv-and-breastfeeding.htm" title="HIV and Breastfeeding" class="sf-depth-2">Breastfeeding</a></li><li id="menu-2429-1" class="middle even sf-item-4 sf-depth-2 sf-no-children">
+<a href="/prevention-sexual-transmission-hiv.htm" title="Preventing Sexual Transmission of HIV" class="sf-depth-2">Sexual Transmission Prevention</a></li><li id="menu-284-1" class="middle odd sf-item-5 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent">
+<a href="/condom-use-types-sizes.htm" title="Using Condoms, Condom Types and Sizes" class="sf-depth-2 menuparent">Condom Use</a><ul><li id="menu-2177-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/female-condom.htm" title="The female condom" name="The Female Condom NODE" class="sf-depth-3">Female Condom</a></li><li id="menu-2190-1" class="last even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/condoms-spermicide-questions.htm" title="Condoms &amp; Spermicide questions" name="Condoms &amp; Spermicides questions" class="sf-depth-3">Condoms &amp; Spermicide Questions</a></li></ul></li><li id="menu-2141-1" class="middle even sf-item-6 sf-depth-2 sf-total-children-6 sf-parent-children-0 sf-single-children-6 menuparent">
+<a href="/sexuality-and-safer-sex.htm" title="Sexuality &amp; Safer Sex" name="Sexuality &amp; Safer Sex" class="sf-depth-2 menuparent">Sexuality &amp; Safer Sex</a><ul><li id="menu-3173-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/how-to-have-sex.htm" title="How to have sex" class="sf-depth-3">Sex</a></li><li id="menu-2586-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/oral-sex.htm" title="How safe is oral sex?" class="sf-depth-3">Oral Sex</a></li><li id="menu-2537-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/gay-bisexual-men-sex.htm" title="Gay Men, Sex and Safer Sex" class="sf-depth-3">Gay &amp; Bisexual Men</a></li><li id="menu-2538-1" class="middle even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/lesbians-bisexual-women-sex.htm" title="Lesbian and Bisexual Women Sex &amp; Safer Sex" class="sf-depth-3">Lesbian &amp; Bisexual Women</a></li><li id="menu-3422-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children">
+<a href="/homosexual.htm" title="What is homosexual" class="sf-depth-3">What is Homosexuality</a></li><li id="menu-3327-1" class="last even sf-item-6 sf-depth-3 sf-no-children">
+<a href="/sex-questions.htm" title="Sex Questions" class="sf-depth-3">Sex Questions</a></li></ul></li><li id="menu-2425-1" class="middle odd sf-item-7 sf-depth-2 sf-total-children-3 sf-parent-children-1 sf-single-children-2 menuparent">
+<a href="/sex-education-works.htm" title="Sex Education That Works" class="sf-depth-2 menuparent">Sex Education That Works</a><ul><li id="menu-2426-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/introduction-hiv-and-aids-education.htm" title="Prevention by Educating" class="sf-depth-3">HIV &amp; AIDS Education Overview</a></li><li id="menu-2427-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-education-young-people.htm" title="HIV &amp; AIDS education for young people as prevention" class="sf-depth-3">Young People HIV &amp; AIDS Education</a></li><li id="menu-2428-1" class="last odd sf-item-3 sf-depth-3 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent">
+<a href="/hiv-aids-lessons-and-activity-plans.htm" title="Resources for HIV &amp; AIDS Educators" class="sf-depth-3 menuparent">HIV &amp; AIDS Educators Tools</a><ul><li id="menu-3329-1" class="first odd sf-item-1 sf-depth-4 sf-no-children">
+<a href="/lesson-and-activity-plans-learning-facts-about-aids.htm" title="Lesson and Activity Plans Learning Facts About AIDS" class="sf-depth-4">Lesson One</a></li><li id="menu-3330-1" class="middle even sf-item-2 sf-depth-4 sf-no-children">
+<a href="/lesson-and-activity-plans-learning-about-transmission.htm" title="Lesson and Activity Plans Learning About Transmission" class="sf-depth-4">Lesson Two</a></li><li id="menu-3332-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children">
+<a href="/lesson-and-activity-plans-attitudes-hiv-aids.htm" title="Lesson and Activity Plans about Attitudes to HIV &amp; AIDS" class="sf-depth-4">Lesson Three</a></li><li id="menu-3333-1" class="last even sf-item-4 sf-depth-4 sf-no-children">
+<a href="/lesson4.htm" title="Lesson and Activity Plans on Talking About Sex" class="sf-depth-4">Lesson Four</a></li></ul></li></ul></li><li id="menu-2420-1" class="middle even sf-item-8 sf-depth-2 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent">
+<a href="/prevention-hiv-transmission-through-blood.htm" title="Prevention of HIV transmission through contact with blood" class="sf-depth-2 menuparent">Blood Safety</a><ul><li id="menu-3175-1" class="firstandlast odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/hiv-blood-safety.htm" title="HIV and Blood Safety" class="sf-depth-3">HIV and Blood Safety</a></li></ul></li><li id="menu-2142-1" class="last odd sf-item-9 sf-depth-2 sf-total-children-7 sf-parent-children-0 sf-single-children-7 menuparent">
+<a href="/stis-stds.htm" title="STDs/STIs" name="STDs/STIs" class="sf-depth-2 menuparent">STDs/STIs</a><ul><li id="menu-2540-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/chlamydia.htm" title="Chlamydia" class="sf-depth-3">Chlamydia</a></li><li id="menu-2541-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/genital-warts-hpv.htm" title="Genital Warts HPV" class="sf-depth-3">Genital Warts</a></li><li id="menu-2542-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/gonorrhea.htm" title="Gonorrhea" class="sf-depth-3">Gonorrhea</a></li><li id="menu-2543-1" class="middle even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/hepatitis-b-c.htm" title="Hepatitis A, B &amp; C" class="sf-depth-3">Hepatitis A, B &amp; C</a></li><li id="menu-2544-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children">
+<a href="/herpes.htm" title="Herpes simplex virus (HSV)" class="sf-depth-3">Herpes</a></li><li id="menu-2545-1" class="middle even sf-item-6 sf-depth-3 sf-no-children">
+<a href="/syphilis.htm" title="Syphilis" class="sf-depth-3">Syphilis</a></li><li id="menu-2546-1" class="last odd sf-item-7 sf-depth-3 sf-no-children">
+<a href="/std-pictures.htm" title="STD Pictures" class="sf-depth-3">STD Pictures</a></li></ul></li></ul></li><li id="menu-2139-1" class="middle odd sf-item-3 sf-depth-1 sf-total-children-6 sf-parent-children-1 sf-single-children-5 menuparent">
+<a href="/hiv-transmission.htm" title="How is HIV transmitted and tested" name="HIV Transmission" class="sf-depth-1 menuparent">Transmission &amp; Testing</a><ul><li id="menu-2577-1" class="first odd sf-item-1 sf-depth-2 sf-no-children">
+<a href="/can-you-get-hiv.htm" title="Can you get HIV from?" class="sf-depth-2">Transmission Routes</a></li><li id="menu-2578-1" class="middle even sf-item-2 sf-depth-2 sf-no-children">
+<a href="/hiv-transmission-questions-answers.htm" title="HIV Transmission FAQs" class="sf-depth-2">HIV Transmission FAQs</a></li><li id="menu-2580-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children">
+<a href="/criminal-transmission-hiv.htm" title="HIV Criminal Transmission" class="sf-depth-2">Criminal Transmission</a></li><li id="menu-2581-1" class="middle even sf-item-4 sf-depth-2 sf-no-children">
+<a href="/hiv-aids-symptoms.htm" title="HIV and AIDS Symptoms" class="sf-depth-2">HIV Symptoms</a></li><li id="menu-2471-1" class="middle odd sf-item-5 sf-depth-2 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent">
+<a href="/hiv-testing.htm" title="HIV Testing / HIV Test" class="sf-depth-2 menuparent">HIV Testing</a><ul><li id="menu-2576-1" class="firstandlast odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/hiv-testing-frequently-asked-questions.htm" title="HIV Testing Questions" class="sf-depth-3">HIV Test FAQs</a></li></ul></li><li id="menu-2556-1" class="last even sf-item-6 sf-depth-2 sf-no-children">
+<a href="/hiv-aids-fear-and-anxiety.htm" class="sf-depth-2">HIV/AIDS Fear &amp; Anxiety</a></li></ul></li><li id="menu-2444-1" class="middle even sf-item-4 sf-depth-1 sf-total-children-8 sf-parent-children-2 sf-siven sf-item-6 sf-depth-2 sf-no-children">
+<a href="/hiv-aids-fear-and-anxiety.htm" class="sf-depth-2">HIV/AIDS Fear &amp; Anxiety</a></li></ul></li><li id="menu-2444-ngle-children-6 menuparent">
+<a href="/hiv-and-aids-treatment-care.htm" title="Treatment &amp; Care" class="sf-depth-1 menuparent">Treatment &amp; Care</a><ul><li id="menu-2448-1" class="first odd sf-item-1 sf-depth-2 sf-no-children">
+<a href="/starting-monitoring-switching-hiv-treatment.htm" title="Starting, monitoring &amp; switching HIV treatment" class="sf-depth-2">Starting Treatment</a></li><li id="menu-2447-1" class="middle even sf-item-2 sf-depth-2 sf-no-children">
+<a href="/hiv-treatment-children.htm" title="HIV Treatment for Children" class="sf-depth-2">Treatment for Children</a></li><li id="menu-2456-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children">
+<a href="/alternative-hiv-treatment.htm" title="Alterantive HIV Treatment" class="sf-depth-2">Alternative Treatment</a></li><li id="menu-2449-1" class="middle even sf-item-4 sf-depth-2 sf-total-children-3 sf-parent-children-0 sf-single-children-3 menuparent">
+<a href="/treatment-access.htm" title="Access to HIV Treatment" class="sf-depth-2 menuparent">Treatment Access</a><ul><li id="menu-2450-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/universal-access-hiv-treatment.htm" title="Universal Access to HIV Treatment" class="sf-depth-3">Universal Access</a></li><li id="menu-2451-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/antiretroviral-drug-prices.htm" title="Antiretroviral Drug Prices and Availability" class="sf-depth-3">ARV Drug Prices</a></li><li id="menu-6185-1" class="last odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/hiv-drugs-patents-legislation.htm" title="HIV Drugs Patents Legislation" class="sf-depth-3">HIV Drugs Patents Legislation</a></li></ul></li><li id="menu-2453-1" class="middle odd sf-item-5 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent">
+<a href="/antiretroviral-drugs.htm" title="Antiretroviral Drugs (ARVs)" class="sf-depth-2 menuparent">Antiretroviral Drugs</a><ul><li id="menu-2454-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/hiv-drugs-development.htm" title="Drug development and drug types" class="sf-depth-3">Drug development</a></li><li id="menu-2455-1" class="last even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/generic-arv-drugs.htm" title="Generic Antiretroviral Drugs" class="sf-depth-3">Generic ARVS</a></li></ul></li><li id="menu-2452-1" class="middle even sf-item-6 sf-depth-2 sf-no-children">
+<a href="/antiretroviral-drugs-side-effects.htm" class="sf-depth-2">ARV Side Effects</a></li><li id="menu-2458-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children">
+<a href="/hiv-aids-home-based-care.htm" title="Home-based Care" class="sf-depth-2">Home-based Care</a></li><li id="menu-2459-1" class="last even sf-item-8 sf-depth-2 sf-no-children">
+<a href="/palliative-care.htm" title="HIV &amp; AIDS Palliative Care" class="sf-depth-2">Palliative Care</a></li></ul></li><li id="menu-2166-1" class="middle odd sf-item-5 sf-depth-1 sf-total-children-7 sf-parent-children-2 sf-single-children-5 menuparent">
+<a href="/living-hiv.htm" title="Living with HIV" name="Living with HIV" class="main-menu sf-depth-1 menuparent">Living with HIV</a><ul><li id="menu-2167-1" class="first odd sf-item-1 sf-depth-2 sf-no-children">
+<a href="/learning-you-are-hiv-positive.htm" title="Learning you are HIV Positive" name="Newly Diagnosed" class="sf-depth-2">Learning you are HIV Positive</a></li><li id="menu-2170-1" class="middle even sf-item-2 sf-depth-2 sf-no-children">
+<a href="/emotional-needs-and-support.htm" title="Emotional Needs &amp; Support" name="Care &amp; Support" class="sf-depth-2">Emotional Needs &amp; Support</a></li><li id="menu-2457-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children">
+<a href="/hiv-and-nutrition.htm" title="Understanding HIV, food and nutrition" class="sf-depth-2">HIV, Food &amp; Nutrition</a></li><li id="menu-2461-1" class="middle even sf-item-4 sf-depth-2 sf-no-children">
+<a href="/hiv-related-pain.htm" title="HIV-related pain and pain relief" class="sf-depth-2">HIV-related Pain</a></li><li id="menu-2462-1" class="middle odd sf-item-5 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent">
+<a href="/hiv-opportunistic-infections.htm" title="HIV-related Infections" name="Understanding HIV opportunistic Infections " class="sf-depth-2 menuparent">Opportunistic Infections</a><ul><li id="menu-2470-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/common-hiv-opportunistic-infections.htm" title="Common Opportunistic Infections" class="sf-depth-3">Common Opportunistic Infections</a></li><li id="menu-2469-1" class="last even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/tuberculosis-and-hiv.htm" title="TB and HIV Interaction" class="sf-depth-3">TB &amp; HIV Interaction</a></li></ul></li><li id="menu-4737-1" class="middle even sf-item-6 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent">
+<a href="/growing-older-and-ageing-hiv.htm" title="HIV and Ageing" class="sf-depth-2 menuparent">HIV and Ageing</a><ul><li id="menu-4739-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/hiv-ageing-and-comorbidities.htm" title="HIV, Ageing &amp; Other Health Conditions" class="sf-depth-3">HIV, Ageing &amp; Other Health Conditions</a></li><li id="menu-4738-1" class="last even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/growing-older-hiv-and-drug-interactions.htm" title="Drug Interactions" class="sf-depth-3">Drug Interactions</a></li></ul></li><li id="menu-2467-1" class="last odd sf-item-7 sf-depth-2 sf-no-children">
+<a href="/living-hiv-stories.htm" title="Experiences from people living with HIV" class="sf-depth-2">Living with HIV Stories</a></li></ul></li><li id="menu-282-1" class="middle even sf-item-6 sf-depth-1 sf-total-children-16 sf-parent-children-12 sf-single-children-4 menuparent">
+<a href="/global-hiv-aids-epidemic.htm" title="Global Epidemic" class="main-menu sf-depth-1 menuparent">Global Epidemic</a><ul><li id="menu-5528-1" class="first odd sf-item-1 sf-depth-2 sf-total-children-11 sf-parent-children-0 sf-single-children-11 menuparent">
+<a href="/un-political-declaration-hivaids.htm" title="UN Political Declaration on HIV/AIDS" class="sf-depth-2 menuparent">UN Political Declaration on HIV/AIDS</a><ul><li id="menu-5529-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/political-declaration-target-1-sexual-transmission-hiv.htm" title="Reduce sexual transmission of HIV by 50% by 2015" class="sf-depth-3">Target 1 - Reduce Sexual Transmission of HIV</a></li><li id="menu-5530-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/political-declaration-target-2-people-who-inject-drugs.htm" title="Halve the transmission of HIV among people who inject drugs by 2015" class="sf-depth-3">Target 2 - People who Inject Drugs</a></li><li id="menu-5531-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/political-declaration-target-3-children-and-maternal-deaths.htm" title="Target 3 - Children and Maternal Deaths" class="sf-depth-3">Target 3 - Children and Maternal Deaths</a></li><li id="menu-5532-1" class="middle even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/political-declaration-target-4-antiretroviral-treatment-access.htm" title="Target 4 - Antiretroviral Treatment Access" class="sf-depth-3">Target 4 - Antiretroviral Treatment Access</a></li><li id="menu-5533-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children">
+<a href="/political-declaration-target-5-tuberculosis.htm" title="Target 5 - Halve Tuberculosis Deaths" class="sf-depth-3">Target 5 - Halve Tuberculosis Deaths</a></li><li id="menu-5534-1" class="middle even sf-item-6 sf-depth-3 sf-no-children">
+<a href="/political-declaration-target-6-aids-resource-gap.htm" title="Target 6 - AIDS Resource Gap" class="sf-depth-3">Target 6 - AIDS Resource Gap</a></li><li id="menu-5539-1" class="middle odd sf-item-7 sf-depth-3 sf-no-children">
+<a href="/political-declaration-target-7-gender-inequalities.htm" class="sf-depth-3">Target 7 - Gender Inequalities</a></li><li id="menu-5536-1" class="middle even sf-item-8 sf-depth-3 sf-no-children">
+<a href="/political-declaration-target-8-hiv-related-stigma.htm" title="Eliminate HIV-related stigma, discrimination, punitive laws and practices" class="sf-depth-3">Target 8 - Eliminate HIV-Related Stigma</a></li><li id="menu-5537-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children">
+<a href="/political-declaration-target-9-hiv-related-restrictions.htm" title="Eliminate HIV-related restrictions on entry, stay and residence" class="sf-depth-3">Target 9 - Eliminate HIV-related Restrictions</a></li><li id="menu-5538-1" class="middle even sf-item-10 sf-depth-3 sf-no-children">
+<a href="/political-declaration-target-10-hiv-integration.htm" title="Political Declaration Target 10 - Strengthen HIV integration" class="sf-depth-3">Target 10 - Strengthen HIV Integration</a></li><li id="menu-6619-1" class="last odd sf-item-11 sf-depth-3 sf-no-children">
+<a href="/90-90-90-targets.htm" title="90-90-90 Targets" class="sf-depth-3">90-90-90 Targets</a></li></ul></li><li id="menu-2516-1" class="middle even sf-item-2 sf-depth-2 sf-total-children-14 sf-parent-children-1 sf-single-children-13 menuparent">
+<a href="/hiv-aids-sub-saharan-africa.htm" title="HIV &amp; AIDS in sub-Saharan Africa" class="sf-depth-2 menuparent">Sub-Saharan Africa</a><ul><li id="menu-2745-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/impact-hiv-and-aids-sub-saharan-africa.htm" title="Impact of HIV/AIDS in Africa" class="sf-depth-3">Impact on Society</a></li><li id="menu-3486-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-botswana.htm" title="HIV &amp; AIDS in Botswana" class="sf-depth-3">Botswana</a></li><li id="menu-2744-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-kenya.htm" title="HIV &amp; AIDS in Kenya" class="sf-depth-3">Kenya</a></li><li id="menu-3466-1" class="middle even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-lesotho.htm" title="HIV &amp; AIDS in Lesotho" class="sf-depth-3">Lesotho</a></li><li id="menu-2736-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-malawi.htm" title="HIV &amp; AIDS in Malawi" class="sf-depth-3">Malawi</a></li><li id="menu-3492-1" class="middle even sf-item-6 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-nigeria.htm" title="HIV &amp; AIDS in Nigeria" class="sf-depth-3">Nigeria</a></li><li id="menu-2741-1" class="middle odd sf-item-7 sf-depth-3 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent">
+<a href="/hiv-aids-south-africa.htm" title="HIV &amp; AIDS in South Africa" target="_self" class="sf-depth-3 menuparent">South Africa</a><ul><li id="menu-4405-1" class="firstandlast odd sf-item-1 sf-depth-4 sf-no-children">
+<a href="/history-hiv-aids-south-africa.htm" title="History of HIV &amp; AIDS in South Africa" class="sf-depth-4">South Africa HIV &amp; AIDS History</a></li></ul></li><li id="menu-3467-1" class="middle even sf-item-8 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-swaziland.htm" title="HIV &amp; AIDS in Swaziland" class="sf-depth-3">Swaziland</a></li><li id="menu-2816-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-tanzania.htm" title="HIV &amp; AIDS in Tanzania" class="sf-depth-3">Tanzania</a></li><li id="menu-3485-1" class="middle even sf-item-10 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-uganda.htm" title="HIV &amp; AIDS in Uganda" class="sf-depth-3">Uganda</a></li><li id="menu-2743-1" class="middle odd sf-item-11 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-zambia.htm" title="HIV &amp; AIDS in Zambia" class="sf-depth-3">Zambia</a></li><li id="menu-2742-1" class="middle even sf-item-12 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-zimbabwe.htm" title="HIV &amp; AIDS in Zimbabwe" target="_self" class="sf-depth-3">Zimbabwe</a></li><li id="menu-4406-1" class="middle odd sf-item-13 sf-depth-3 sf-no-children">
+<a href="/timeline-aids-africa.htm" title="Africa HIV &amp; AIDS Timeline" class="sf-depth-3">Africa HIV &amp; AIDS Timeline</a></li><li id="menu-4407-1" class="last even sf-item-14 sf-depth-3 sf-no-children">
+<a href="/history-hiv-aids-africa.htm" title="History of HIV &amp; AIDS in Africa" class="sf-depth-3">Africa HIV &amp; AIDS History</a></li></ul></li><li id="menu-2520-1" class="middle odd sf-item-3 sf-depth-2 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent">
+<a href="/hiv-and-aids-asia.htm" title="HIV &amp; AIDS in Asia" class="sf-depth-2 menuparent">Asia</a><ul><li id="menu-3191-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-china.htm" title="HIV &amp; AIDS in China" class="sf-depth-3">China</a></li><li id="menu-3192-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-india.htm" title="HIV &amp; AIDS in India" class="sf-depth-3">India</a></li><li id="menu-3195-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-thailand.htm" title="HIV &amp; AIDS in Thailand" class="sf-depth-3">Thailand</a></li><li id="menu-3194-1" class="last even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/asia-hiv-aids-timeline.htm" title="Asia HIV/AIDS Timeline" class="sf-depth-3">Asia HIV &amp; AIDS Timeline</a></li></ul></li><li id="menu-6569-1" class="middle even sf-item-4 sf-depth-2 sf-no-children">
+<a href="/hiv-aids-middle-east-north-africa-mena.htm" title="HIV &amp; AIDS in the Middle East and North Africa (MENA)" class="sf-depth-2">Middle East &amp; North Africa</a></li><li id="menu-2150-1" class="middle odd sf-item-5 sf-depth-2 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent">
+<a href="/hiv-aidsin the Middle East and North Africa (MENA)" class="sf-depth-2">Middle East &amp; North Africa</a></li><li id="menu-2150-1" class="middle odd sf-item-5 sf-depth-2 sf-total-children-1 sf-parent-children-0 sf-single-children-1 m-latin-america.htm" title="HIV &amp; AIDS in Latin America" name="HIV and AIDS in Latin America" class="sf-depth-2 menuparent">Latin America</a><ul><li id="menu-2519-1" class="firstandlast odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-brazil.htm" title="HIV &amp; AIDS in Brazil" class="sf-depth-3">Brazil</a></li></ul></li><li id="menu-2518-1" class="middle even sf-item-6 sf-depth-2 sf-no-children">
+<a href="/hiv-aids-caribbean.htm" title="HIV &amp; AIDS in the Caribbean" class="sf-depth-2">The Caribbean</a></li><li id="menu-2149-1" class="middle odd sf-item-7 sf-depth-2 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent">
+<a href="/hiv-aids-usa.htm" title="HIV &amp; AIDS in the United States" name="HIV &amp; AIDS in America" class="sf-depth-2 menuparent">USA</a><ul><li id="menu-2749-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-among-african-americans.htm" title="HIV &amp; AIDS Among African Americans" class="sf-depth-3">African Americans</a></li><li id="menu-2750-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/hiv-aids-help-and-advice-us.htm" title="HIV/AIDS Help and Advice in the United States" class="sf-depth-3">Help &amp; Advice</a></li><li id="menu-2748-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/hiv-treatment-usa.htm" title="HIV/AIDS Treatment &amp; Care in the U.S." class="sf-depth-3">Treatment &amp; Care</a></li><li id="menu-2751-1" class="last even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/history-hiv-aids-usa.htm" title="U.S. HIV &amp; AIDS history" class="sf-depth-3">U.S. AIDS History</a></li></ul></li><li id="menu-3197-1" class="middle even sf-item-8 sf-depth-2 sf-no-children">
+<a href="/hiv-aids-russia-eastern-europe-central-asia.htm" title="HIV &amp; AIDS in Russia, Eastern Europe and Central Asia" class="sf-depth-2">Russia, Eastern Europe &amp; Central Asia</a></li><li id="menu-3196-1" class="middle odd sf-item-9 sf-depth-2 sf-total-children-1 sf-parent-children-1 sf-single-children-0 menuparent">
+<a href="/hiv-aids-western-central-europe.htm" title="HIV &amp; AIDS in Western and Central Europe" class="sf-depth-2 menuparent">Western &amp; Central Europe</a><ul><li id="menu-3198-1" class="firstandlast odd sf-item-1 sf-depth-3 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent">
+<a href="/hiv-aids-uk.htm" title="HIV &amp; AIDS in the United Kingdom" class="sf-depth-3 menuparent">UK</a><ul><li id="menu-3201-1" class="first odd sf-item-1 sf-depth-4 sf-no-children">
+<a href="/hiv-treatment-uk.htm" title="HIV Treatment in the UK" class="sf-depth-4">HIV Treatment</a></li><li id="menu-3199-1" class="middle even sf-item-2 sf-depth-4 sf-no-children">
+<a href="/uk-hi" class="first odd sf-item-1 sf-depth-4 sf-nov-aids-history-1981-1995.htm" title="UK HIV &amp; AIDS History between 1981-1995" class="sf-depth-4">UK HIV &amp; AIDS from 1981-1995</a></li><li id="menu-3200-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children">
+<a href="/uk-hiv-aids-history-1996-onwards.htm" title="History of HIV and AIDS in the UK from 1996 onwards" class="sf-depth-4">UK HIV &amp; AIDS from 1996 Onwards</a></li><li id="menu-3203-1" class="last even sf-item-4 sf-depth-4 sf-no-children">
+<a href="/aids-help-uk.htm" title="Help and Advice for HIV/AIDS in the UK" class="sf-depth-4">UK Help &amp; Advice</a></li></ul></li></ul></li><li id="menu-2478-1" class="middle even sf-item-10 sf-depth-2 sf-total-children-11 sf-parent-children-0 sf-single-children-11 menuparent">
+<a href="/worldwide-hiv-aids-statistics.htm" title="Global HIV &amp; AIDS statistics" class="sf-depth-2 menuparent">Statistics</a><ul><li id="menu-2490-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/africa-hiv-aids-statistics.htm" title="Sub-Saharan Africa HIV &amp; AIDS Statistics" class="sf-depth-3">Sub-Saharan Africa Statistics</a></li><li id="menu-2491-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/south-africa-hiv-aids-statistics.htm" title="HIV &amp; AIDS Statistics in South Africa" class="sf-depth-3">South Africa Statistics</a></li><li id="menu-2492-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/south-east-asia-hiv-aids-statistics.htm" title="HIV &amp; AIDS Statistics in South East Asia" class="sf-depth-3">Asia Statistics (South East)</a></li><li id="menu-2493-1" class="middle even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/india-hiv-aids-statistics.htm" title="HIV &amp; AIDS Statistics in India" class="sf-depth-3">India Statistics</a></li><li id="menu-2483-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children">
+<a href="/latin-america-hiv-aids-statistics.htm" title="HIV &amp; AIDS Statistics Latin America" class="sf-depth-3">Latin America Statistics</a></li><li id="menu-2482-1" class="middle even sf-item-6 sf-depth-3 sf-no-children">
+<a href="/caribbean-hiv-aids-statistics.htm" class="sf-depth-3">Caribbean Statistics</a></li><li id="menu-2479-1" class="middle odd sf-item-7 sf-depth-3 sf-no-children">
+<a href="/usa-hiv-aids-statistics.htm" title="HIV &amp; AIDS Statistics USA" class="sf-depth-3">USA Statistics</a></li><li id="menu-2480-1" class="middle even sf-item-8 sf-depth-3 sf-no-children">
+<a href="/canada-hiv-aids-statistics.htm" title="Canada HIV &amp; AIDS Statistics" class="sf-depth-3">Canada Statistics</a></li><li id="menu-2495-1" class="middle odd sf-item-9 sf-depth-3 sf-no-children">
+<a href="/european-hiv-aids-statistics.htm" title="HIV Statistics in Europe" class="sf-depth-3">Europe Statistics</a></li><li id="menu-2496-1" class="middle even sf-item-10 sf-depth-3 sf-no-children">
+<a href="/uk-hiv-aids-statistics.htm" title="UK HIV &amp; AIDS Statistics" class="sf-depth-3">UK Statistics</a></li><li id="menu-2494-1" class="last odd sf-item-11 sf-depth-3 sf-no-children">
+<a href="/australia-hiv-aids-statistics.htm" title="HIV &amp; AIDS Statistics Australia" class="sf-depth-3">Australia Statistics</a></li></ul></li><li id="menu-2526-1" class="middle odd sf-item-11 sf-depth-2 sf-total-children-9 sf-parent-children-0 sf-single-children-9 menuparent">
+<a href="/hiv-aids-vulnerable-groups.htm" title="HIV &amp; vulnerable groups" class="sf-depth-2 menuparent">Vulnerable Groups</a><ul><li id="menu-2532-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/men-who-have-sex-men-msm-hiv-aids.htm" title="Men Who Have Sex with Men (MSM) and HIV" class="sf-depth-3">Men Who Have Sex With Men</a></li><li id="menu-2535-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/people-inject-drugs-hiv-aids.htm" title="People Who Inject Drugs and HIV/AIDS" class="sf-depth-3">People Who Inject Drugs</a></li><li id="menu-2533-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/prisoners-hivaids.htm" title="Prisons, Prisoners and HIV/AIDS" class="sf-depth-3">Prisoners</a></li><li id="menu-2531-1" class="middle even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/women-and-hiv-aids.htm" title="Women and HIV/AIDS" class="sf-depth-3">Women</a></li><li id="menu-2555-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children">
+<a href="/transgender-hiv.htm" title="Transgender People and HIV" class="sf-depth-3">Transgender People</a></li><li id="menu-2539-1" class="middle even sf-item-6 sf-depth-3 sf-no-children">
+<a href="/young-men-who-have-sex-men-ymsm-hiv-aids.htm" title="HIV/AIDS &amp; Young Gay Men" class="sf-depth-3">Young MSM</a></li><li id="menu-2530-1" class="middle odd sf-item-7 sf-depth-3 sf-no-children">
+<a href="/children-and-hiv-aids.htm" title="Children and HIV/AIDS" class="sf-depth-3">Children</a></li><li id="menu-2529-1" class="middle even sf-item-8 sf-depth-3 sf-no-children">
+<a href="/children-orphaned-hiv-and-aids.htm" title="Children Orphaned by HIV and AIDS" class="sf-depth-3">Orphaned Children</a></li><li id="menu-6644-1" class="last odd sf-item-9 sf-depth-3 sf-no-children">
+<a href="/young-people-adolescents-and-hiv.htm" title="Young People, Adolescents and HIV" class="sf-depth-3">Young People &amp; Adolescents</a></li></ul></li><li id="menu-2430-1" class="middle even sf-item-12 sf-depth-2 sf-total-children-4 sf-parent-children-2 sf-single-children-2 menuparent">
+<a href="/hiv-prevention-programmes.htm" title="HIV Prevention Programmes" class="sf-depth-2 menuparent">HIV Prevention Programmes</a><ul><li id="menu-2331-1" class="first odd sf-item-1 sf-depth-3 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent">
+<a href="/prevention-mother-child-transmission-pmtct-hiv.htm" title="Prevention of Mother-to-Child Transmission (PMTCT) of HIV" class="sf-depth-3 menuparent">Prevention of Mother-to-Child Transmission</a><ul><li id="menu-2419-1" class="firstandlast odd sf-item-1 sf-depth-4 sf-no-children">
+<a href="/who-guidelines-pmtct-breastfeeding.htm" title="WHO Guidelines for PMTCT &amp; Breastfeeding" class="sf-depth-4">WHO PMTCT Guidelines</a></li></ul></li><li id="menu-2422-1" class="middle even sf-item-2 sf-depth-3 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent">
+<a href="/harm-reduction-hiv-prevention.htm" title="Harm Reduction and HIV Prevention" class="sf-depth-3 menuparent">Harm Reduction &amp; HIV Prevention</a><ul><li id="menu-2421-1" class="firstandlast odd sf-item-1 sf-depth-4 sf-no-children">
+<a href="/needle-exchange.htm" title="Needle Exchange and Harm Reduction" class="sf-depth-4">Needle Exchange &amp; HIV Prevention</a></li></ul></li><li id="menu-2431-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/voluntary-medical-male-circumcision-vmmc-hiv-prevention.htm" title="Voluntary Medical Male Circumcision (VMMC) for HIV Prevention" class="sf-depth-3">Voluntary Medical Male Circumcision</a></li><li id="menu-2433-1" class="last even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/hiv-treatment-as-prevention.htm" title="HIV Treatment as Prevention (TasP)" class="sf-depth-3">HIV Treatment as Prevention</a></li></ul></li><li id="menu-2536-1" class="middle odd sf-item-13 sf-depth-2 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent">
+<a href="/hiv-aids-stigma-and-discrimination.htm" title="HIV &amp; AIDS stigma and discrimination" class="sf-depth-2 menuparent">Stigma &amp; Discrimination</a><ul><li id="menu-2583-1" class="firstandlast odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/homophobia-hiv-and-aids.htm" title="Homophobia, HIV and AIDS" class="sf-depth-3">Homophobia</a></li></ul></li><li id="menu-2522-1" class="middle even sf-item-14 sf-depth-2 sf-no-children">
+<a href="/funding-hiv-and-aids.htm" title="Funding for HIV &amp; AIDS" class="sf-depth-2">Funding</a></li><li id="menu-2155-1" class="middle odd sf-item-15 sf-depth-2 sf-total-children-8 sf-parent-children-0 sf-single-children-8 menuparent">
+<a href="/history-hiv-and-aids.htm" title="Global history of HIV &amp; AIDS" name="History of HIV &amp; AIDS" class="sf-depth-2 menuparent">History</a><ul><li id="menu-2782-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/aids-timeline.htm" title="AIDS Timeline" class="sf-depth-3">HIV &amp; AIDS Timeline</a></li><li id="menu-2796-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/history-aids-1986.htm" title="History of AIDS Up to 1986" class="sf-depth-3">History of AIDS Up to 1986</a></li><li id="menu-2797-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/history-aids-1987-1992.htm" title=" 1987-1992" class="sf-depth-3">History of AIDS: 1987-1992</a></li><li id="menu-2798-1" class="middle even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/history-aids-1993-1997.htm" title=" 1993-1997" class="sf-depth-3">History of AIDS: 1993-1997</a></li><li id="menu-2799-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children">
+<a href="/history-aids-1998-2002.htm" title=" 1998-2002" class="sf-depth-3">History of AIDS: 1998-2002</a></li><li id="menu-2800-1" class="middle even sf-item-6 sf-depth-3 sf-no-children">
+<a href="/history-aids-2003-2006.htm" title=" 2003-2006" class="sf-depth-3">History of AIDS: 2003-2006</a></li><li id="menu-2801-1" class="middle odd sf-item-7 sf-depth-3 sf-no-children">
+<a href="/history-aids-2007-2010.htm" title=" 2007-2010" class="sf-depth-3">History of AIDS: 2007-2010</a></li><li id="menu-5491-1" class="last even sf-item-8 sf-depth-3 sf-no-children">
+<a href="/history-aids-2011-onwards.htm" title=" 2011 Onwards" class="sf-depth-3">History of AIDS: 2.htm" title=" 2007-2010" class011 Onwards</a></li></ul></li><li id="menu-2527-1" class="last even sf-item-16 sf-depth-2 sf-total-children-2 sf-parent-children-1 sf-single-children-1 menuparent">
+<a href="/world-aids-day.htm" title="World AIDS Day" class="sf-depth-2 menuparent">World AIDS Day</a><ul><li id="menu-4723-1" class="first odd sf-item-1 sf-depth-3 sf-total-children-8 sf-parent-children-0 sf-single-children-8 menuparent">
+<a href="/you-me-hiv.htm" title="You, Me &amp; HIV" class="sf-depth-3 menuparent">You, Me &amp; HIV</a><ul><li id="menu-4728-1" class="first odd sf-item-1 sf-depth-4 sf-no-children">
+<a href="/you-me-hiv-uk.htm" title="UK" class="sf-depth-4">UK</a></li><li id="menu-4724-1" class="middle even sf-item-2 sf-depth-4 sf-no-children">
+<a href="/you-me-hiv-brazil.htm" title="Brazil" class="sf-depth-4">Brazil</a></li><li id="menu-4725-1" class="middle odd sf-item-3 sf-depth-4 sf-no-children">
+<a href="/you-me-hiv-uae.htm" title="UAE" class="sf-depth-4">UAE</a></li><li id="menu-4726-1" class="middle even sf-item-4 sf-depth-4 sf-no-children">
+<a href="/you-me-hiv-usa.htm" title="USA" class="sf-depth-4">USA</a></li><li id="menu-4727-1" class="middle odd sf-item-5 sf-depth-4 sf-no-children">
+<a href="/you-me-hiv-pakistan.htm" title="Pakistan" class="sf-depth-4">Pakistan</a></li><li id="menu-4729-1" class="middle even sf-item-6 sf-depth-4 sf-no-children">
+<a href="/you-me-hiv-china.htm" title="China" class="sf-depth-4">China</a></li><li id="menu-4730-1" class="middle odd sf-item-7 sf-depth-4 sf-no-children">
+<a href="/you-me-hiv-thailand.htm" title="Thailand" class="sf-depth-4">Thailand</a></li><li id="menu-4731-1" class="last even sf-item-8 sf-depth-4 sf-no-children">
+<a href="/you-me-hiv-kenya.htm" title="Kenya" class="sf-depth-4">Kenya</a></li></ul></li><li id="menu-2528-1" class="last even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/a-new-generation-of-awareness.htm" title="Reflections on the Epidemic" class="sf-depth-3">Reflections on the Epidemic</a></li></ul></li></ul></li><li id="menu-2497-1" class="middle odd sf-item-7 sf-depth-1 sf-total-children-11 sf-parent-children-0 sf-single-children-11 menuparent">
+<a href="/hiv-and-aids-science.htm" title="What scientists and researchers say about HIV &amp; AIDS" name="HIV Science" class="main-menu sf-depth-1 menuparent">HIV &amp; AIDS Science</a><ul><li id="menu-2498-1" class="first odd sf-item-1 sf-depth-2 sf-no-children">
+<a href="/hiv.htm" title="What is HIV?" class="sf-depth-2">What is HIV?</a></li><li id="menu-2499-1" class="middle even sf-item-2 sf-depth-2 sf-no-children">
+<a href="/aids.htm" title="What is AIDS?" class="sf-depth-2">What is AIDS?</a></li><li id="menu-2500-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children">
+<a href="/hiv-causes-aids.htm" title="HIV Causes AIDS" class="sf-depth-2">HIV Causes AIDS</a></li><li id="menu-2501-1" class="middle even sf-item-4 sf-depth-2 sf-no-children">
+<a href="/hiv-structure-and-life-cycle.htm" title="HIV Lifecycle and Structure" class="sf-depth-2">HIV Lifecycle</a></li><li id="menu-2512-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children">
+<a href="/hiv-types.htm" title="HIV Strains, Types, and Subtypes Groups" class="sf-depth-2">HIV Strains/Types</a></li><li id="menu-2176-1" class="middle even sf-item-6 sf-depth-2 sf-no-children">
+<a href="/stages-hiv-infection.htm" title="The Different Stages of HIV Infection" name="The Different Stages of HIV Infection" class="sf-depth-2">Stages of HIV Infection</a></li><li id="menu-2514-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children">
+<a href="/origin-hiv-aids.htm" title="How did HIV Start" class="sf-depth-2">HIV Origins</a></li><li id="menu-2509-1" class="middle even sf-item-8 sf-depth-2 sf-no-children">
+<a href="/cure-aids.htm" title="Cure for AIDS" class="sf-depth-2">AIDS Cure</a></li><li id="menu-2510-1" class="middle odd sf-item-9 sf-depth-2 sf-no-children">
+<a href="/hiv-and-aids-vaccine.htm" title="HIV and AIDS vaccine development" class="sf-depth-2">HIV &amp; AIDS Vaccine</a></li><li id="menu-2513-1" class="middle even sf-item-10 sf-depth-2 sf-no-children">
+<a href="/microbicides.htm" title="Microbicides" class="sf-depth-2">Microbicides</a></li><li id="menu-5500-1" class="last odd sf-item-11 sf-depth-2 sf-no-children">
+<a href="/hiv-aids-glossary.htm" title="HIV &amp; AIDS Glossary of terms used on avert.org" class="sf-depth-2">Glossary of Terms</a></li></ul></li><li id="menu-289-1" class="last even sf-item-8 sf-depth-1 sf-total-children-8 sf-parent-children-5 sf-single-children-3 menuparent">
+<a href="/teens-young-people-sexual-health.htm" title="Young People" name="Teens &amp; Young People Zone" class="main-menu sf-depth-1 menuparent">Young People</a><ul><li id="menu-6542-1" class="first odd sf-item-1 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent">
+<a href="/update-your-status" title="Update Your Status" class="sf-depth-2 menuparent">Update Your Status</a><ul><li id="menu-6544-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="http://www.avert.org/update-your-status-game/" title="Update Your Status Game" class="sf-depth-3">Update Your Status Game</a></li><li id="menu-6545-1" class="last even sf-item-2 sf-depth-3 sf-no-children">
+<a href="http://www.avert.org/media/pdfs/update-your-status-advocacy-paper.pdf" title="Update Your Status Advocacy Paper" class="sf-depth-3">Update Your Status Advocacy Paper</a></li></ul></li><li id="menu-2551-1" class="middle even sf-item-2 sf-depth-2 sf-total-children-6 sf-parent-children-0 sf-single-children-6 menuparent">
+<a href="/feelings-sex-relationships.htm" title="Sex, Feelings and Relationships" class="sf-depth-2 menuparent">Sex &amp; Relationships</a><ul><li id="menu-2550-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/am-i-ready-sex.htm" title="Am I ready to have sex" class="sf-depth-3">Am I Ready for Sex</a></li><li id="menu-2552-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/having-sex-first-time.htm" title="Having Sex For The First Time" class="sf-depth-3">First Time Sex</a></li><li id="menu-2554-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/having-sex.htm" title="Having Sex" class="sf-depth-3">Having Sex</a></li><li id="menu-2553-1" class="middle even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/sexual-attraction-and-sexuality.htm" title="Sexual attraction and Sexuality" class="sf-depth-3">Sexual Attraction</a></li><li id="menu-3461-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children">
+<a href="/coming-out.htm" title="What is coming out" class="sf-depth-3">Coming Out</a></li><li id="menu-4507-1" class="last even sf-item-6 sf-depth-3 sf-no-children">
+<a href="/gay-school.htm" title="Being Gay at School" class="sf-depth-3">Being Gay at School</a></li></ul></li><li id="menu-2158-1" class="middle odd sf-item-3 sf-depth-2 sf-total-children-6 sf-pare" class="last even sf-item-6 sf-depth-3 sf-no-children">
+<a href="/gay-school.htm" title="Being Gay at School" class="sf-depth-3">Being Gay at School</a></li></ul></li><li id="menu-2158-1" class="middle odd sf-item-3 sf-depth-2 sf-total-chint-children-0 sf-single-children-6 menuparent">
+<a href="/sex-fun-safety.htm" title="Sex, fun and staying safe" name="Sex, fun and staying safe" class="sf-depth-2 menuparent">Sex, Fun &amp; Safety</a><ul><li id="menu-2563-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/hiv-information-young-people.htm" title="HIV Info for Young People" class="sf-depth-3">HIV Info for Young People</a></li><li id="menu-2560-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/teens-condom-tips.htm" title="Condom Tips for Teens" class="sf-depth-3">Condom Tips</a></li><li id="menu-2561-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/contraception-young-people.htm" title="Contraception for young people" class="sf-depth-3">Contraception</a></li><li id="menu-2562-1" class="middle even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/stis-stds-young-people.htm" title="About STIs &amp; STDs for Young People" class="sf-depth-3">STIs, STDs &amp; You</a></li><li id="menu-2557-1" class="middle odd sf-item-5 sf-depth-3 sf-no-children">
+<a href="/sex-internet-technology.htm" title="Sex, the Internet and Young People" class="sf-depth-3">Sex &amp; the Internet</a></li><li id="menu-2558-1" class="last even sf-item-6 sf-depth-3 sf-no-children">
+<a href="/alcohol-drugs-sex.htm" title="Risks of mixing alcohol, drugs and sex" class="sf-depth-3">Alcohol, Drugs &amp; Sex</a></li></ul></li><li id="menu-2160-1" class="middle even sf-item-4 sf-depth-2 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent">
+<a href="/hiv-positive-life.htm" title="HIV-positive life" name="HIV-positive life" class="sf-depth-2 menuparent">HIV-positive Life</a><ul><li id="menu-2566-1" class="first odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/hiv-diagnosis-young-people.htm" title="Finding Out That You&#039;re HIV-positive" class="sf-depth-3">Being HIV Positive</a></li><li id="menu-2567-1" class="middle even sf-item-2 sf-depth-3 sf-no-children">
+<a href="/friends-attitudes-hiv.htm" title="Dealing with attitudes to HIV and your friends" class="sf-depth-3">Telling Friends</a></li><li id="menu-2568-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children">
+<a href="/being-hiv-positive-and-healthy.htm" class="sf-depth-3">Staying Healthy</a></li><li id="menu-2569-1" class="last even sf-item-4 sf-depth-3 sf-no-children">
+<a href="/relationships-hiv-positive-young-people.htm" title="How to manage relationships and sex life" class="sf-depth-3">Having Relationships</a></li></ul></li><li id="menu-2565-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children">
+<a href="/teens-young-people-questions-about-sex.htm" title="Sex Questions Answered for young people" class="sf-depth-2">Sex Questions Answered</a></li><li id="menu-2564-1" class="middle even sf-item-6 sf-depth-2 sf-no-children">
+<a href="/puberty-and-sexual-organs.htm" title="Your Body, Puberty and Sexual Organs" class="sf-depth-2">Puberty</a></li><li id="menu-2584-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children">
+<a href="/age-of-consent.htm" title="Age of Consent" class="sf-depth-2">Age of Consent</a></li><li id="menu-4690-1" class="last even sf-item-8 sf-depth-2 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent">
+<a href="/get-plugged-in.htm" title="Get Plugged In" class="sf-depth-2 menuparent">Get Plugged In</a><ul><li id="menu-4691-1" class="firstandlast odd sf-item-1 sf-depth-3 sf-no-children">
+<a href="/reflections-epidemic-world-development-information-day-2013.htm" title="Reflections from Young People" class="sf-depth-3">Reflections from Young People</a></li></ul></li></ul></li></ul></div></div></div></div></div><div id="footer-outer">
+<footer id="footer" class="region region-footer"><div id="block-block-2" class="block block-block first last odd"><div id="footer"><table width="1000" class="footer"><tbody><tr><td width="20"></td><td valign="top" width="195"><div class="footer-title">STOP NEW INFECTIONS</div><div class="footer-links"><p>
+<a href="/post-exposure-prophylaxis-emergency-treatment-prevent-hiv-infection.htm">Emergency prevention</a>
+<br />
+<a href="/condom.htm">Use condoms</a>
+<br />
+<a href="/hiv-testing.htm">Know your status</a>
+<br />
+<a href="/preventing-mother-child-transmission-hiv.htm">During pregnancy</a>
+<br />
+<a href="/prevention-hiv-transmission-through-blood.htm">Use safe blood</a>
+<br />
+<a href="/hiv-and-aids-treatment-care.htm">Get treatment</a>
+<br />
+<a href="/teens-young-people-sexual-health.htm">Educate young people</a>
+<br />
+<a href="/hiv-transmission.htm">Get the facts</a>
+<br />
+<a href="/stis-stds.htm">Stay clear of STIs</a></p></div></td><td valign="top" width="195"><div class="footer-title">RESOURCES</div><div class="footer-links"><p>
+<a href="/hiv-aids-lessons-and-activity-plans.htm">Teachers & schools</a>
+<br />
+<a href="/sex-education-works.htm">Parents & carers</a>
+<br />
+<a href="/preventing-mother-child-transmission-hiv.htm">Expecting parents</a>
+<br />
+<a href="/sexuality-and-safer-sex.htm">Sexuality</a>
+<br />
+<a href="/hivaids-fear-and-anxiety.htm">Afraid & anxious</a>
+<br />
+<a href="/stories">Personal Stories</a>
+<br />
+<a href="/media-gallery">Media Gallery</a>
+<br />
+<a href="/resources">HIV & AIDS self-education resources</a>
+<br />
+<a href="/hiv-aids-glossary.htm">Glossary of terms</a>
+<br /></p></div></td><td valign="top" width="195"><div class="footer-title">SUPPORT US</div><div class="footer-links"><p>
+<a href="/donate">Ways to give</a>
+<br />
+<a href="/fundraising-hiv-and-aids-charity-avert.htm">Help us fundraise</a>
+<br />
+<a href="/work-and-careers.htm">Volunteering</a>
+<br />
+<a href="/work-and-careers.htm">Work and Careers</a>
+<a href="/avert-overseas-partners.htm">Our Partners</a></p></div></td><td valign="top" width="195"><div class="footer-title">FURTHER INFORMATION</div><div class="footer-links"><p>
+<a href="/hiv-and-aids-charity-avert.htm">About AVERT</a>
+<br />
+<a href="/site-information.htm">About this website</a>
+<br />
+<a href="/copyright.htm">Copyright information</a>
+<br />
+<a href="/cookies.htm">Cookies</a>
+<br />
+<a href="/privacy-policy.htm">Privacy</a>
+<br />
+<a href="/disclaimer.htm">Disclaimer</a>
+<br />
+<a href="/contact">Contact us</a></p></div></td><td valign="top" width="195"><div class="footer-title">FOLLOW US</div><div class="footer-links"><p>
+<a href="https://www.facebook.com/avertAIDS">Facebook.com/avertAIDS</a>
+<br />
+<a href="https://twitter.com/avert_org">Twitter @avert_org</a>
+<br />
+<a href="http://www.linkedin.com/groups?gid=4447318&trk=myg_ugrp_ovr">LinkedIn AVERT Group</a>
+<br />
+<a href="/newsletter">Newsletter</a>
+<br /></p></div></td></tr></tbody></table></div>
+<a href="http://www.avert.org/consanguineousroman.php"></a>
+<a href="http://www.avert.org/consanguineousroman.php" style="display: none;">nectarofthegods</a><div style="display: none;">
+<a href="http://www.avert.org/consanguineousroman.php">nectarofthegods</a></div>
+<a href="http://www.avert.org/consanguineousroman.php"></a></div> </footer></div><div id="copyright-outer"><div id="copyright">All material on www.avert.org is copyright AVERT 1986 - 2014 (unless stated otherwise). All rights reserved. Registered UK charity number: 1074849.
+<a href="/copyright.htm">More about copyright</a>.</div></div>  </body>
+</html>
+outer"><div id="copyright">All material on www.avert.org is copyright AVERT 1986 - 2014 (u

@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:description" content="AVAC advocates for HIV prevention to end AIDS. The end of the global AIDS epidemic is within reach. With partners worldwide, we push for funding, focus, implementation and research to make it happen." />
+<meta property="og:site_name" content="AVAC" />
+<meta property="og:image" content="http://avac.org/sites/default/files/AVAC_FacebookOpenGraph.png" />
+<link rel="shortcut icon" href="http://www.avac.org/sites/default/files/index.png" type="image/png" />
+<link rel="country_geojson" href="sites/all/modules/custom/avac_partner_map/js/countries.js" type="application/json" />
+<link rel="country_geojson" href="sites/all/modules/custom/avac_trial_map/js/countries.js" type="application/json" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<meta name="description" content="AVAC advocates for HIV prevention to end AIDS. The end of the global AIDS epidemic is within reach. With partners worldwide, we push for funding, focus, implementation and research to make it happen." />
+<link rel="canonical" href="http://www.avac.org/" />
+<meta content="Home" about="/node/128" property="dc:title" />
+<link rel="shortlink" href="http://www.avac.org/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AVAC" />
+<meta property="og:url" content="http://www.avac.org/" />
+  <title>AVAC</title>
+  <link type="text/css" rel="stylesheet" href="http://www.avac.org/sites/default/files/css/css_pbm0lsQQJ7A7WCCIMgxLho6mI_kBNgznNUWmTWcnfoE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.avac.org/sites/default/files/css/css__r408iefJFDp7tkJY64xde0BtyLdHU1-GytpTja6H4w.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.avac.org/sites/default/files/css/css_aOGlRSidogZVfhmHJ8YYhQ1wEFRo_Pprentl6ll6HYo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.avac.org/sites/default/files/css/css_QD63kTJ5rtTq9PQIaQ8rzZahUI44h-XQoW8JApeLvGQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.avac.org/sites/default/files/css/css_mDxCF8ImVBb6oiL7Rq6KarwvxmvDV5PjnhYNE29pt_0.css" media="print" />
+  <script type="text/javascript" src="http://www.avac.org/sites/default/files/js/js_Cbg4I6rbAALVJBrMxSk3QK6LvTA_GqX1ruwUpc9-XtA.js"></script>
+<script type="text/javascript" src="http://www.avac.org/sites/default/files/js/js_xmx5ai2MvbCbVXRgcmyuBoQk1tLddVwF-3M3-vGGO2o.js"></script>
+<script type="text/javascript" src="http://www.avac.org/sites/default/files/js/js_obMs5Mmfhf6FOlFGGVJhzyAOhfLO8uy9D-_wNzuHRJQ.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-8897743-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.avac.org/sites/default/files/js/js_D2yIu4vYuKuM-svGW8Jo-jD_Te0DfEHUYbt_9atgdqw.js"></script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-520a7fb24b80a035"></script>
+<script type="text/javascript" src="http://www.avac.org/sites/default/files/js/js_9LxQYNcHez42saCSnQXHePouksOl8pzxQr4SokgRx18.js"></script>
+<script type="text/javascript" src="http://www.avac.org/sites/default/files/js/js_nqGwOksvNWdgxpqIC61hG4QbMLVvxTAF--lvalVrPIc.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"avac_basic","theme_token":"yjyHpwN7j7HYzbMnZdbS7eFVF57aeE5ZWbXriGe7iwc","js":{"sites\/all\/modules\/contrib\/extlink_extra\/extlink_extra.js":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/splashify\/js\/jquery.json-2.3.min.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/libraries\/jstorage\/jstorage.min.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"sites\/all\/modules\/contrib\/custom_search\/js\/custom_search.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/avac_basic\/js\/page-home.js":1,"http:\/\/s7.addthis.com\/js\/300\/addthis_widget.js#pubid=xa-520a7fb24b80a035":1,"sites\/all\/modules\/contrib\/hide_submit\/hide_submit.js":1,"sites\/all\/modules\/contrib\/splashify\/js\/splashify_init_min.js":1,"sites\/all\/themes\/avac_basic\/js\/modernizr.js":1,"sites\/all\/themes\/avac_basic\/js\/onload.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/themes\/avac_basic\/css\/tabs.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/contrib\/custom_search\/custom_search.css":1,"sites\/all\/modules\/contrib\/hide_submit\/hide_submit.css":1,"sites\/all\/themes\/avac_basic\/css\/style.css":1,"sites\/all\/themes\/avac_basic\/css\/print.css":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true},"splashify":{"js_splash_always":"0","js_expire_after":31536000,"js_mode":"colorbox","js_mode_settings":{"mode":"fullscreen","system_splash":"\/splashify-splash","urls":"","size_width":"650","size_height":"450"},"js_disable_referrer_check":1},"extlink":{"extTarget":"_blank","extClass":0,"extSubdomains":0,"extExclude":"","extInclude":"","extAlert":0,"extAlertText":{"value":"  \u003Ch2\u003EYou are leaving the  [site:name] website\u003C\/h2\u003E\r\n  \u003Cp\u003EYou are being directed to a third-party website:\u003C\/p\u003E\r\n  \u003Cp\u003E\u003Cstrong\u003E[extlink:external-url]\u003C\/strong\u003E\u003C\/p\u003E\r\n  \u003Cp\u003EThis link is provided for your convenience. Please note that this third-party website is not controlled by [site:name] or subject to our privacy policy.\u003C\/p\u003E\r\n  \u003Cp\u003EThank you for visiting our site. We hope your visit was informative and enjoyable.\u003C\/p\u003E\r\n  \r\n  \u003Cdiv class=\u0022extlink-extra-actions\u0022\u003E\r\n      \u003Cdiv class=\u0022extlink-extra-back-action\u0022\u003E\u003Ca title=\u0022Cancel\u0022 href=\u0022[extlink:back-url]\u0022\u003ECancel\u003C\/a\u003E\u003C\/div\u003E\r\n      \u003Cdiv class=\u0022extlink-extra-go-action\u0022\u003E\u003Ca class=\u0022ext-override\u0022 title=\u0022Go to link\u0022 href=\u0022[extlink:external-url]\u0022\u003EGo to link\u003C\/a\u003E\u003C\/div\u003E\r\n  \u003C\/div\u003E\r\n  \u003Cbr\/\u003E\u003Cbr\/\u003E\r\n  [extlink:timer]\r\n  ","format":"full_html"},"mailtoClass":0},"extlink_extra":{"extlink_alert_type":"","extlink_alert_timer":"0","extlink_alert_url":"\/now-leaving","extlink_cache_fix":0,"extlink_exclude_warning":"","extlink_508_fix":0,"extlink_508_text":" [external link]"},"custom_search":{"form_target":"_self","solr":0},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"hide_submit":{"hide_submit_status":true,"hide_submit_method":"hide","hide_submit_css":"hide-submit-disable","hide_submit_abtext":"","hide_submit_atext":"","hide_submit_hide_css":"hide-submit-processing","hide_submit_hide_text":"Processing...","hide_submit_hide_fx":0,"hide_submit_reset_time":5000}});
+//--><!]]>
+</script>
+  <meta name="viewport" content="width=device-width">
+</head>
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-128 node-type-page role-anonymous-user" >
+  <div id="skip">
+    <a href="#main-menu">Jump to Navigation</a>
+  </div>
+    <div id="page" class="page with-navigation">
+
+  <!-- ______________________ HEADER _______________________ -->
+
+  <header>
+    <div class="top-header">
+            <div class="top-header-inner">
+        <a href="/" title="Return to the homepage" id="logo">
+          <img src="/sites/all/themes/avac_basic/images/logo.png" alt="AVAC logo" />
+        </a>
+        
+        <div id="header-icons" class="no-cart">
+          <a href="/donate" title="Donate now" id="donate" id="logo">Donate</a>
+
+          <div id="mailchimp-signup">
+            <h2>Email Updates</h2>
+<div id="mc_embed_signup">
+<form action="http://avac.us7.list-manage.com/subscribe/post?u=57d869773227fef9486fa97dd&amp;id=6fd730be57" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+<div class="mc-field-group"><label for="mce-EMAIL">Sign up for updates from AVAC </label> <input class="required email" id="mce-EMAIL" name="EMAIL" value="" type="email"><input style="display:none;" type="checkbox" value="1" name="group[7521][1]" id="mce-group[7521]-7521-0" checked><input class="button" id="mc-embedded-subscribe" name="subscribe" value="Subscribe" type="submit"></div>
+<div class="clear" id="mce-responses"><div class="response" id="mce-error-response" style="display:none">&nbsp;</div><div class="response" id="mce-success-response" style="display:none">&nbsp;</div></div></form></div><!--End mc_embed_signup-->          </div>
+
+                  </div>
+          
+        <form class="search-form" action="/" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <input title="Enter the terms you wish to search for." class="custom-search-box form-text" placeholder="Site Search" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input style="display:none;" type="submit" id="edit-submit" name="op" value="" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-6muTelMBc51RsLEJG4fS1nHZYsEvvB-spb1uIIIPNo8" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>      </div>
+    </div>
+          <div class="bot-header">
+          <div class="region region-header">
+    <div id="block-menu_block-2" class="block block-menu-block block-odd first clearfix">
+  <div class="block-inner">
+
+            
+
+    <div class="content" >
+      <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first expanded menu-mlid-803 about-us mid-803"><a href="/about-us" title="Our Story, Our Team &amp; Support Information"><span class="title">About Us</span><span class="description">Our Story, Our Team & Support Information</span></a><ul class="menu"><li class="first leaf menu-mlid-765 our-story mid-765"><a href="/our-story">Our Story</a></li>
+<li class="leaf menu-mlid-1030 our-global-partner-network mid-1030"><a href="/our-global-partner-network">Our Global Partner Network</a></li>
+<li class="leaf menu-mlid-767 board mid-767"><a href="/board">Board</a></li>
+<li class="leaf menu-mlid-766 staff mid-766"><a href="/staff">Staff</a></li>
+<li class="leaf menu-mlid-770 job-opportunities mid-770"><a href="/job-opportunities-avac">Job Opportunities</a></li>
+<li class="leaf menu-mlid-769 financial-information mid-769"><a href="/financial-information">Financial Information</a></li>
+<li class="leaf menu-mlid-855 donors mid-855"><a href="/donors">Donors</a></li>
+<li class="last leaf has-children menu-mlid-768 support-avac mid-768"><a href69 financial-information mid-769"><a href="/financial-information">Financial Information</a></li>
+<li class="leaf menu-mlid-855 donors mid-855"><a href="/donors">Donors</a></li>
+<li class="last leaf has-children menu-mlid-768 s="/support-avac">Support AVAC</a></li>
+</ul></li>
+<li class="expanded menu-mlid-772 what-we-do mid-772"><a href="/what-we-do" title="Advocacy to Achieve the End of AIDS"><span class="title">What We Do</span><span class="description">Advocacy to Achieve the End of AIDS</span></a><ul class="menu"><li class="first leaf has-children menu-mlid-965 advocate-for-policies-and-actions mid-965"><a href="/advocate-policies-and-actions">Advocate for Policies and Actions</a></li>
+<li class="leaf has-children menu-mlid-777 build-rapid-response-networks mid-777"><a href="/build-rapid-response-networks">Build Rapid-Response Networks</a></li>
+<li class="leaf has-children menu-mlid-774 improve-research-conduct mid-774"><a href="/improve-research-conduct">Improve Research Conduct</a></li>
+<li class="leaf menu-mlid-778 provide-tools-for-decision-making mid-778"><a href="/provide-tools-decision-makers">Provide Tools for Decision-Making</a></li>
+<li class="last leaf menu-mlid-776 translate-share-the-latest-information mid-776"><a href="/translate-share-latest-information">Translate &amp; Share the Latest Information</a></li>
+</ul></li>
+<li class="expanded menu-mlid-749 our-focus mid-749"><a href="/our-focus" title="Interventions to End the Epidemic"><span class="title">Our Focus</span><span class="description">Interventions to End the Epidemic</span></a><ul class="menu"><li class="first leaf has-children menu-mlid-437 aids-vaccines mid-437"><a href="/prevention-option/aids-vaccines" title="">AIDS Vaccines</a></li>
+<li class="leaf menu-mlid-1038 combination-prevention mid-1038"><a href="/prevention-option/combination-prevention" title="">Combination Prevention</a></li>
+<li class="leaf menu-mlid-1028 male-and-female-condoms mid-1028"><a href="/prevention-option/condoms" title="">Male and Female Condoms</a></li>
+<li class="leaf has-children menu-mlid-431 cure mid-431"><a href="/prevention-option/cure" title="">Cure</a></li>
+<li class="leaf has-children menu-mlid-1040 hormonal-contraceptives-and-hiv mid-1040"><a href="/prevention-option/hormonal-contraceptives-and-hiv" title="">Hormonal Contraceptives and HIV</a></li>
+<li class="leaf has-children menu-mlid-434 microbicides- mid-434"><a href="/prevention-option/microbicides" title="">Microbicides </a></li>
+<li class="leaf has-children menu-mlid-1039 multipurpose-prevention-technologies mid-1039"><a href="/prevention-option/multipurpose-prevention-technologies" title="">Multipurpose Prevention Technologies</a></li>
+<li class="leaf has-children menu-mlid-435 prep- mid-435"><a href="/prevention-option/prep" title="">PrEP </a></li>
+<li class="leaf has-children menu-mlid-436 treatment-as-prevention- mid-436"><a href="/prevention-option/treatment-prevention" title="">Treatment as Prevention </a></li>
+<li class="leaf has-children menu-mlid-438 voluntary-medical-male-circumcision- mid-438"><a href="/prevention-option/voluntary-medical-male-circumcision" title="">Voluntary Medical Male Circumcision </a></li>
+<li class="last leaf menu-mlid-956 how-research-happens mid-956"><a href="/how-research-happens">How Research Happens</a></li>
+</ul></li>
+<li class="expanded menu-mlid-974 resources mid-974"><a href="/resources" title="Publications, Infographics, Events &amp; More"><span class="title">Resources</span><span class="description">Publications, Infographics, Events & More</span></a><ul class="menu"><li class="first leaf menu-mlid-1013 advocates-network mid-1013"><a href="/advocates-network">Advocates&#039; Network</a></li>
+<li class="leaf menu-mlid-785 resource-database mid-785"><a href="/resources-search" title="Reports, Infographics, Events &amp; More">Resource Database</a></li>
+<li class="leaf menu-mlid-1023 avac-publications mid-1023"><a href="/avac-publications">AVAC Publications</a></li>
+<li class="leaf menu-mlid-800 infographics-gallery mid-800"><a href="/resources/infographics">Infographics Gallery</a></li>
+<li class="leaf menu-mlid-1029 research-development-database mid-1029"><a href="/pxrd">Research &amp; Development Database</a></li>
+<li class="leaf menu-mlid-849 calendar-of-events mid-849"><a href="/upcoming-events" title="">Calendar of Events</a></li>
+<li class="last leaf menu-mlid-850 webinar-meeting-reports mid-850"><a href="/past-events" title="">Webinar &amp; Meeting Reports</a></li>
+</ul></li>
+<li class="expanded menu-mlid-801 media mid-801"><a href="/media-0" title="Information &amp; Resources for the Press"><span class="title">Media</span><span class="description">Information & Resources for the Press</span></a><ul class="menu"><li class="first leaf menu-mlid-781 avac-in-the-news mid-781"><a href="/media/news">AVAC in the News</a></li>
+<li class="leaf menu-mlid-782 press-releases mid-782"><a href="/media/press-releases">Press Releases</a></li>
+<li class="leaf menu-mlid-783 media-inquiries mid-783"><a href="/media-inquiries">Media Inquiries</a></li>
+<li class="last leaf menu-mlid-851 weekly-newsdigest mid-851"><a href="/media/news-digests" title="">Weekly NewsDigest</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-784 our-blog mid-784"><a href="/blog" title="Prevention News &amp; Perspective"><span class="title">Our Blog</span><span class="description">Prevention News & Perspective</span></a></li>
+</ul></div>
+    </div>
+
+  </div>
+</div> <!-- /block-inner /block --><div id="block-block-10" class="block block-block block-even clearfix">
+  <div class="block-inner">
+
+            
+
+    <div class="content" >
+      <p><a class="social-media twitter" href="https://twitter.com/hivpxresearch" target="_blank">AVAC on Twitter</a> <a class="social-media facebook" href="http://www.facebook.com/pages/AVAC-Global-Advocacy-for-HIV-Prevention/165621763235" target="_blank">AVAC on Facebook</a> <a class="social-media youtube" href="http://www.youtube.com/hivpxresearch" target="_blank">AVAC on YouTube</a></p>
+    </div>
+
+  </div>
+</div> <!-- /block-inner /block -->  </div>
+      </div>
+      </header> <!-- /header -->
+
+  <!-- ______________________ MAIN _______________________ -->
+
+  <div id="main" class="clearfix">
+
+    
+    <section id="content">
+
+                  <div id="content-header">
+
+            
+                          <div id="highlighted">  <div class="region region-highlighted">
+    <div id="block-avac_helper-addthis" class="block block-avac-helper block-odd first clearfix">
+  <div class="block-inner">
+
+            
+
+    <div class="content" >
+      <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+    <a class="addthis_button_twitter" addthis:title="Home""></a>
+    <a class="addthis_button_facebook"></a>
+    <a class="addthis_button_google_plusone_share"></a>
+    <a class="addthis_button_email"></a>
+    </div>
+    <!-- AddThis Button END -->    </div>
+
+  </div>
+</div> <!-- /block-inner /block -->  </div>
+</div>
+            
+            
+                          <h1 class="title">Home</h1>
+            
+                                    
+                          <div class="tabs"></div>
+            
+            
+          </div> <!-- /#content-header -->
+        
+        <div id="content-area" class="content-area">
+	<div class="content-area-pre-inner">
+		<div class="content-area-inner">
+			<div class="region region-content">
+				<div id="block-system-main" class="block block-system block-odd first last clearfix">
+  <div class="block-inner">
+
+            
+
+    <div class="content" >
+      <article id="node-128" class="node node-page node-odd has-no-image">
+
+  
+  <div class="content">
+    
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><h2>Achieving<br>the<br>End of AIDS</h2><div class="intro-right"><p>The world is talking about ending AIDS. AVAC’s advocacy is dedicated to realizing that vision. To get there we must:</p><ul><li>Deliver <span>proven tools for immediate impacts.</span></li><li>Demonstrate <span>and roll out new HIV prevention tools.</span></li><li>Develop <span>long-term solutions to end the epidemic.</span></li></ul></div><p><a class="learn-more" href="/achieving-end-aids">Learn more</a></p></div>
+      </div>
+</div>
+  </div> <!-- /content -->
+
+  
+      <div class="links">
+          </div> <!-- /links -->
+  
+  </article> <!-- /article #node -->    </div>
+
+  </div>
+</div> <!-- /block-inner /block -->				<div class="spotlight-resources">
+					<div class="spotlight">
+						<h2 class="block-title">Spotlight</h2>
+						<div class="view view-spotlight view-id-spotlight view-display-id-default view-dom-id-faec1bcff3f3c6aa456c17bacb922f5f">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first"><div  about="/blog/will-2015-be-year-prep-and-women" typeof="sioc:Item foaf:Document" class="ds-1col node node-blog node-even has-no-image view-mode-spotlight clearfix">
+
+  
+  
+<div class="field field-name-field-date field-type-datetime field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-01-05T00:00:00-05:00">January 5, 2015</span></div>
+      </div>
+</div>
+
+<div class="field field-name-title field-type-ds field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="dc:title"><h3><a href="/blog/will-2015-be-year-prep-and-women">Will 2015 be the year for PrEP and women?</a></h3></div>
+      </div>
+</div>
+
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded">A number of great pieces focusing on women and PrEP recently came out, including new data on PrEP knowledge and attitudes, a video depicting one of our favorite stories of early PrEP use in the Bay Area, another great webinar from the US Women and PrEP Working Group, and a piece from a freelance journalist who took on the question of why so many women are still being infected with HIV when there’s a pill to prevent it.</div>
+      </div>
+</div>
+</div>
+
+</li>
+          <li class="views-row views-row-2 views-row-even"><div  about="/blog/overcoming-hiv-obstacles-2015" typeof="sioc:Item foaf:Document" class="ds-1col node node-blog node-odd has-no-image view-mode-spotlight clearfix">
+
+  
+  
+<div class="field field-name-field-date field-type-datetime field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-01-01T00:00:00-05:00">January 1, 2015</span></div>
+      </div>
+</div>
+
+<div class="field field-name-title field-type-ds field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="dc:title"><h3><a href="/blog/overcoming-hiv-obstacles-2015">Overcoming HIV Obstacles in 2015</a></h3></div>
+      </div>
+</div>
+
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>AVAC's Executive Director, Mitchell Warren, speaks with the <em>Voice of America</em> about the opportunities and challenges for the AIDS response in 2015.</p></div>
+      </div>
+</div>
+</div>
+
+</li>
+          <li class="views-row views-row-3 views-row-odd"><div  about="/blog/undetectable-new-resources-doctors-without-borders-viral-load-testing" typeof="sioc:Item foaf:Document" class="ds-1col node node-blog node-even has-no-image view-mode-spotlight clearfix">
+
+  
+  
+<div class="field field-name-field-date field-type-datetime field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2014-12-18T00:00:00-05:00">December 18, 2014</span></div>
+      </div>
+</div>
+
+<div class="field field-name-title field-type-ds field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="dc:title"><h3><a href="/blog/undetectable-new-resources-doctors-without-borders-viral-load-testing">Undetectable: New resources from Doctors Without Borders on viral load testing</a></h3></div>
+      </div>
+</div>
+
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>New MSF report features additional data from a five-country study of viral load implementation and MSF’s own operational experience in viral load scale-up.</p></div>
+      </div>
+</div>
+</div>
+
+</li>
+          <li class="views-row views-row-4 views-row-even views-row-last"><div  about="/blog/hiv-prevention-line" typeof="sioc:Item foaf:Document" class="ds-1col node node-blog node-odd has-no-image view-mode-spotlight clearfix">
+
+  
+  
+<div class="field field-name-field-date field-type-datetime field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2014-12-01T00:00:00-05:00">December 1, 2014</span></div>
+      </div>
+</div>
+
+<div class="field field-name-title field-type-ds field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="dc:title"><h3><a href="/blog/hiv-prevention-line">HIV Prevention on the Line</a></h3></div>
+      </div>
+</div>
+
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>AVAC has developed a briefing paper, <em>HIV Prevention on the Line</em>, and associated advocacy tools that frame key issues for HIV prevention advocates. The resources provide messages and recommendations that address the fact that today HIV prevention is at a crucial moment. It is indispensable and advancing in leaps and bounds. Yet it is also in jeopardy.</p></div>
+      </div>
+</div>
+</div>
+
+</li>
+      </ul></div>    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <h3><a href="/blog">Read more on our blog, <em>P-Values</em></a></h3>
+    </div>
+  
+  
+</div>					</div>
+					<div class="find-resources">
+						<h2 class="block-title">Find Resources</h2>
+						<p>AVAC has an extensive online resource library with hundreds of <i>Reports, Publications, Infographics &amp; more</i>. And it includes powerful search features to find exactly what you’re looking for.</p><ul><li><a href="/resources-search">Search resources</a></li><li><a href="/resources/infographics">Browse infographics</a></li><li><a href="/resource-tracking">HIV resource tracking</a></li><li><a href="http://www.avac.org/pxrd">Research &amp; Development Database</a></li></ul>					</div>
+				</div>
+				<div class="what-we-do">
+					<div id="block-block-4" class="block block-block block-odd first clearfix">
+  <div class="block-inner">
+
+              <h2 class="block-title">What We Do</h2>
+        
+
+    <div class="content" >
+      <p>AVAC uses education, policy analysis, advocacy, community mobilization and a network of global collaborations to accelerate ethical development and global delivery of biomedical HIV prevention options. <a class="read-more" href="/what-we-do">Read more</a></p>    </div>
+
+  </div>
+</div> <!-- /block-inner /block -->				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="px-methods">
+	<div class="px-methods-inner">
+		<h2 class="block-title">Px Methods</h2>
+		<div class="view view-home-prevops view-id-home_prevops view-display-id-default view-dom-id-4021f001c3c99760dc02cdb084a1f703">
+            <div class="view-header">
+      <p>AVAC advocates for a comprehensive response to the epidemic, involving smart use of every proven HIV prevention option available today and sustained research into many new strategies.</p>
+    </div>
+  
+  
+  
+      <div class="view-content">
+      <table class="views-view-grid cols-3">
+  
+  <tbody>
+          <tr class="row-1">
+                  <td class="col-1 tid-1">
+              
+          <a href="/prevention-option/aids-vaccines">AIDS Vaccines</a>            </td>
+                  <td class="col-2 tid-27">
+              
+          <a href="/prevention-option/hormonal-contraceptives-and-hiv">Hormonal Contraceptives and HIV</a>            </td>
+                  <td class="col-3 tid-6">
+              
+          <a href="/preventio   <td class="col-2 tidn-option/treatment-prevention">Treatment as Prevention</a>            </td>
+              </tr>
+          <tr class="row-2">
+                  <td class="col-1 tid-30">
+              
+          <a href="/prevention-option/combination-prevention">Combination Prevention</a>            </td>
+                  <td class="col-2 tid-2">
+              
+          <a href="/prevention-option/microbicides">Microbicides</a>            </td>
+                  <td class="col-3 tid-3">
+              
+          <a href="/prevention-option/voluntary-medical-male-circumcision">Voluntary Medical Male Circumcision</a>            </td>
+              </tr>
+          <tr class="row-3">
+                  <td class="col-1 tid-8">
+              
+          <a href="/prevention-option/cure">Cure</a>            </td>
+                  <td class="col-2 tid-4">
+              
+          <a href="/prevention-option/prep">PrEP</a>            </td>
+                  <td class="col-3">
+                      </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>	</div>
+</div>
+        
+    </section> <!-- /content-inner /content -->
+
+     <!-- /sidebar-first -->
+
+     <!-- /sidebar-second -->
+
+  </div> <!-- /main -->
+
+  <!-- ______________________ FOOTER _______________________ -->
+
+      <footer id="footer">
+        <div class="region region-footer">
+    <div id="block-menu_block-3" class="block block-menu-block block-odd first clearfix">
+  <div class="block-inner">
+
+            
+
+    <div class="content" >
+      <div class="menu-block-wrapper menu-block-3 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first expanded menu-mlid-803 about-us mid-803"><a href="/about-us" title="Our Story, Our Team &amp; Support Information">About Us</a><ul class="menu"><li class="first leaf menu-mlid-765 our-story mid-765"><a href="/our-story">Our Story</a></li>
+<li class="leaf menu-mlid-1030 our-global-partner-network mid-1030"><a href="/our-global-partner-network">Our Global Partner Network</a></li>
+<li class="leaf menu-mlid-767 board mid-767"><a href="/board">Board</a></li>
+<li class="leaf menu-mlid-766 staff mid-766"><a href="/staff">Staff</a></li>
+<li class="leaf menu-mlid-770 job-opportunities mid-770"><a href="/job-opportunities-avac">Job Opportunities</a></li>
+<li class="leaf menu-mlid-769 financial-information mid-769"><a href="/financial-information">Financial Information</a></li>
+<li class="leaf menu-mlid-855 donors mid-855"><a href="/donors">Donors</a></li>
+<li class="last leaf has-children menu-mlid-768 support-avac mid-768"><a href="/support-avac">Support AVAC</a></li>
+</ul></li>
+<li class="expanded menu-mlid-772 what-we-do mid-772"><a href="/what-we-do" title="Advocacy to Achieve the End of AIDS">What We Do</a><ul class="menu"><li class="first leaf has-children menu-mlid-965 advocate-for-policies-and-actions mid-965"><a href="/advocate-policies-and-actions">Advocate for Policies and Actions</a></li>
+<li class="leaf has-children menu-mlid-777 build-rapid-response-networks mid-777"><a href="/build-rapid-response-networks">Build Rapid-Response Networks</a></li>
+<li class="leaf has-children menu-mlid-774 improve-research-conduct mid-774"><a href="/improve-research-conduct">Improve Research Conduct</a></li>
+<li class="leaf menu-mlid-778 provide-tools-for-decision-making mid-778"><a href="/provide-tools-decision-makers">Provide Tools for Decision-Making</a></li>
+<li class="last leaf menu-mlid-776 translate-share-the-latest-information mid-776"><a href="/translate-share-latest-information">Translate &amp; Share the Latest Information</a></li>
+</ul></li>
+<li class="expanded menu-mlid-749 our-focus mid-749"><a href="/our-focus" title="Interventions to End the Epidemic">Our Focus</a><ul class="menu"><li class="first leaf has-children menu-mlid-437 aids-vaccines mid-437"><a href="/prevention-option/aids-vaccines" title="">AIDS Vaccines</a></li>
+<li class="leaf menu-mlid-1038 combination-prevention mid-1038"><a href="/prevention-option/combination-prevention" title="">Combination Prevention</a></li>
+<li class="leaf menu-mlid-1028 male-and-female-condoms mid-1028"><a href="/prevention-option/condoms" title="">Male and Female Condoms</a></li>
+<li class="leaf has-children menu-mlid-431 cure mid-431"><a href="/prevention-option/cure" title="">Cure</a></li>
+<li class="leaf has-children menu-mlid-1040 hormonal-contraceptives-and-hiv mid-1040"><a href="/prevention-option/hormonal-contraceptives-and-hiv" title="">Hormonal Contraceptives and HIV</a></li>
+<li class="leaf has-children menu-mlid-434 microbicides- mid-434"><a href="/prevention-option/microbicides" title="">Microbicides </a></li>
+<li class="leaf has-children menu-mlid-1039 multipurpose-prevention-technologies mid-1039"><a href="/prevention-option/multipurpose-prevention-technologies" title="">Multipurpose Prevention Technologies</a></li>
+<li class="leaf has-children menu-mlid-435 prep- mid-435"><a href="/prevention-option/prep" title="">PrEP </a></li>
+<li class="leaf has-children menu-mlid-436 treatment-as-prevention- mid-436"><a href="/prevention-option/treatment-prevention" title="">Treatment as Prevention </a></li>
+<li class="leaf has-children menu-mlid-438 voluntary-medical-male-circumcision- mid-438"><a href="/prevention-option/voluntary-medical-male-circumcision" title="">Voluntary Medical Male Circumcision </a></li>
+<li class="last leaf menu-mlid-956 how-research-happens mid-956"><a href="/how-research-happens">How Research Happens</a></li>
+</ul></li>
+<li class="expanded menu-mlid-974 resources mid-974"><a href="/resources" title="Publications, Infographics, Events &amp; More">Resources</a><ul class="menu"><li class="first leaf menu-mlid-1013 advocates-network mid-1013"><a href="/advocates-network">Advocates&#039; Network</a></li>
+<li class="leaf menu-mlid-785 resource-database mid-785"><a href="/resources-search" title="Reports, Infographics, Events &amp; More">Resource Database</a></li>
+<li class="leaf menu-mlid-1023 avac-publications mid-1023"><a href="/avac-publications">AVAC Publications</a></li>
+<li class="leaf menu-mlid-800 infographics-gallery mid-800"><a href="/resources/infographics">Infographics Gallery</a></li>
+<li class="leaf menu-mlid-1029 research-development-database mid-1029"><a href="/pxrd">Research &amp; Development Database</a></li>
+<li class="leaf menu-mlid-849 calendar-of-events mid-849"><a href="/upcoming-events" title="">Calendar of Events</a></li>
+<li class="last leaf menu-mlid-850 webinar-meeting-reports mid-850"><a href="/past-events" title="">Webinar &amp; Meeting Reports</a></li>
+</ul></li>
+<li class="expanded menu-mlid-801 media mid-801"><a href="/media-0" title="Information &amp; Resources for the Press">Media</a><ul class="menu"><li class="first leaf menu-mlid-781 avac-in-the-news mid-781"><a href="/media/news">AVAC in the News</a></li>
+<li class="leaf menu-mlid-782 press-releases mid-782"><a href="/media/press-releases">Press Releases</a></li>
+<li class="leaf menu-mlid-783 media-inquiries mid-783"><a href="/media-inquiries">Media Inquiries</a></li>
+<li class="last leaf menu-mlid-851 weekly-newsdigest mid-851"><a href="/media/news-digests" title="">Weekly NewsDigest</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-784 our-blog mid-784"><a href="/blog" title="Prevention News &amp; Perspective">Our Blog</a></li>
+</ul></div>
+    </div>
+
+  </div>
+</div> <!-- /block-inner /block --><div id="block-block-11" class="block block-block block-even clearfix">
+  <div class="block-inner">
+
+            
+
+    <div class="content" >
+      <p><a class="social-media twitter" href="https://twitter.com/hivpxresearch" target="_blank">AVAC on Twitter</a><a class="social-media facebook" href="http://www.facebook.com/pages/AVAC-Global-Advocacy-for-HIV-Prevention/165621763235" target="_blank">AVAC on Facebook</a><a class="social-media youtube" href="http://www.youtube.com/hivpxresearch" target="_blank">AVAC on YouTube</a></p>
+    </div>
+
+  </div>
+</div> <!-- /block-inner /block --><div id="block-block-5" class="block block-block block-odd clearfix">
+  <div class="block-inner">
+
+            
+
+    <div class="content" >
+      <p><a href="/contact">Contact us</a></p>
+    </div>
+
+  </div>
+</div> <!-- /block-inner /block --><div id="block-block-6" class="block block-block block-even clearfix">
+  <div class="block-inner">
+
+            
+
+    <div class="content" >
+      <p>AVAC uses education, policy analysis, advocacy and a network of global collaborations to accelerate the ethical development and global delivery of AIDS vaccines, male circumcision, microbicides, PrEP and other emerging HIV prevention options.</p>
+    </div>
+
+  </div>
+</div> <!-- /block-inner /block --><div id="block-block-7" class="block block-block block-odd clearfix">
+  <div class="block-inner">
+
+            
+
+    <div class="content" >
+      <div id="copyright">© 2014 AVAC: Global Advocacy for HIV Prevention | <a href="/privacy-policy">Privacy Policy</a></div>
+<div id="powered">Powered by: <a href="http://www.echoditto.com/" id="echo" target="_blank">EchoDitto</a><span id="separator">+</span><a href="http://www.nealmaher.com/" id="maher" target="_blank">Neal Maher</a></div>
+    </div>
+
+  </div>
+</div> <!-- /block-inner /block -->  </div>
+    </footer> <!-- /footer -->
+  
+</div> <!-- /page -->
+  <script type="text/javascript" src="http://www.avac.org/sites/default/files/js/js_Z5cIJqB1ZqzABryJjBdUiDDafKkg2breserBikRMXmg.js"></script>
+</body>
+</html>div> <!-- /block-inner /block -->  </div>
+    </footer> <!-- /footer -->
+  
+</div> <!-- /page -->
+  <script type="text/javascript" src="http://www.avac.org/sites/default/files/js/js_Z5cIJqB1ZqzABryJjBdUiDDafKkg2breserBik

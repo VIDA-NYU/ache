@@ -1,0 +1,608 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="title" content="Fluzone Influenza Vaccine" />
+<meta name="description" content="The official site of the Fluzone influenza vaccine, including information on the Fluzone Intradermal, Pediatric, and High Dose vaccines."/>
+<meta name="keywords" content="fluzone, fluzone vaccine, fluzone intradermal, flu shot, flu vaccine, fluzone high dose" />
+<meta name="viewport" content="initial-scale=1">
+
+
+	<link rel="canonical" href="http://www.fluzone.com/" />
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/fluzone.css"/>
+<link rel="stylesheet" type="text/css" href="/stylesheets/fluzoneMobile.css"/>
+
+<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="/js/core.js"></script>
+<script type="text/javascript" src="/js/fluzone.js"></script>
+<script type="text/javascript" src="/js/omniture.js"></script>
+
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ie6.css"/>
+    
+    <![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ie8.css"/>
+    
+    <![endif]-->
+<script>
+    $(document).ready(function(){
+       $(".newcallouts, #callouts").css("display","none");
+   });
+</script>
+<title>Fluzone Influenza Vaccine</title>
+
+<meta name="google-site-verification" content="6GNKUgRFHfz4SXjDVnZkIDWKz1MWi6IAJ63Kf7k6wOw" />
+
+<script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-442682-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+</script>
+<script type="text/javascript" src="js/browser_selector.js"></script>
+</head>
+
+
+<body>
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Fluzone_DTC_Homepage
+URL of the webpage where the tag is expected to be placed: http://www.fluzone.com/
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 04/30/2013
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="http://3012733.fls.doubleclick.net/activityi;src=3012733;type=fluzo109;cat=fluzo297;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="http://3012733.fls.doubleclick.net/activityi;src=3012733;type=fluzo109;cat=fluzo297;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+<!-- SiteCatalyst code version: H.24.2.
+Copyright 1996-2012 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<script language="javascript" type="text/javascript" src="js/s_code.js"></script>
+<script language="javascript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on the next lines */
+s.pageName="FluzoneDTC:Home"
+s.eVar23="FluzoneDTC"
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="javascript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src="http://sanofipasteur.d1.sc.omtrdc.net/b/ss/sp-global-prod/1/H.24.2--NS/0"
+height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.24.2. -->
+
+
+<div id="wrapper" class="index">
+	
+<script type="text/javascript" src="/js/omniture.js"></script>
+<!-- tracking.js | Google Analytics -->
+<script type="text/javascript" src="/js/tracking.js"></script>
+<div id="header_section">
+    <div class="headerNavMobile">
+       <div>
+       <span class="gray">For US Residents Only</span>
+       <span class="navSeparator">|</span>
+    	<a href="http://www.fluzone.com/health-care-professionals/index.cfm"> Visit Health Care Professionals Site</a>
+       </div>
+    </div>
+	<div class="top">
+		<a target="_blank" href="http://www.sanofipasteur.us/"><img src="/images/headerNew/sanofi-logo.png" alt="Sanofi Pasteur: The vaccines division of Sanofi-Aventis group" /></a><br />
+	</div>
+	<div class="header">
+		<div class="logo">
+			<a href="index.cfm"><img src="/images/headerNew/fluzone-logo.png" width="158" height="71" alt="Fluzone&reg;, Influenza Virus Vaccine"/></a>
+		</div>
+		<div class="headerNav">
+			<span class="gray">For US Residents Only</span>
+			|
+			<a href="http://www.fluzone.com/health-care-professionals/index.cfm"> Visit Health Care Professionals Site</a>
+			|
+			<a href="#ISI_section">Safety Information</a>
+			|
+			<a  href="#PI_section">Prescribing Information</a>
+			<a  id="home-printpdf" href="#" onclick="_gaq.push(['_trackEvent', 'Share', 'Print']);"><img title="Print" src="/images/header/print.jpg" alt="Image: Print button" id="printnewimage"></a>
+			<a id="home-email" onclick="setDefaults(); showShareLightboxTool(); _gaq.push(['_trackEvent', 'Share', 'Email']);"><img src="/images/header/email.jpg" alt="Image: E-mail button" id="email"></a>
+		</div>
+        <div class="headerNavMobileRight">
+          <a class="blueArrow" href="#ISI_section">Safety Information<span class="bA">&nbsp;</span></a>
+		  <a class="blueArrow" href="#PI_section">Prescribing Information<span class="bA">&nbsp;</span></a>
+          <!--<a class="blueArrow nowrap" type="application/pdf" href="http://fluloc.digitashealth.com/fluzone-intradermal-vaccine.cfm#PI_section" target="_blank">Prescribing Information</a> -->
+        </div>
+	</div>
+      <div id="mainNavMobileBottom">
+      <div id="mainNavMobileBottomMenu">
+         <a class="menuHBars" href="#footer">MENU</a>
+      </div>
+      <div id="mainNavMobileBottomFluzonLocator">
+       <a class="FluzonLocator" href="#" onclick="" >FLUZONE LOCATOR<span>&nbsp;</span></a>
+      </div>
+    </div>
+	<div class="mainNav">
+		<div class="leftNav">
+		<div class="indicator"></div>
+			<a href="http://www.fluzone.com/fluzone-pediatric-vaccine.cfm">Fluzone Vaccine</a>
+			|
+			<a href="http://www.fluzone.com/fluzone-intradermal-vaccine.cfm">Fluzone Intradermal Vaccine</a>
+			|
+			<a href="http://www.fluzone.com/fluzone-high-dose-vaccine.cfm">Fluzone High-Dose Vaccine</a>
+			|
+			<div class="submenu-holder">
+				<a id="flufactsnavparent" href="#">Flu Facts</a>
+				<ul class="submenu">
+					<li>
+						<a href="http://www.fluzone.com/flu-facts.cfm">About the Flu <span>&#9658;</span></a>
+					</li>
+					<li>
+						<a href="http://www.fluzone.com/flu-symptoms.cfm">Flu Symptoms <span>&#9658;</span></a>
+					</li>
+					<li>
+						<a href="http://www.fluzone.com/flu-treatment.cfm">Flu Treatment <span>&#9658;</span></a></li>
+					<li class="last">
+						<a href="http://www.fluzone.com/about-the-flu-shot.cfm">About the Flu Shot <span>&#9658;</span></a>
+					</li>
+				</ul>
+			</div>
+			<script>
+				$(function() {
+					
+					$('#flufactsnavparent').click(function() {
+						$('.submenu').toggle();
+						$('.submenu-holder').css('height', '200px');
+					});
+					
+					$('.submenu-holder').mouseenter(function() {
+						$('.submenu').show();
+						$(this).css('height', '200px');
+					});
+
+					$('.submenu-holder').mouseleave(function() {
+						$('.submenu').hide();
+						$(this).css('height', '20px');
+					});
+
+				});
+			</script>
+		</div>
+		<div class="searchNav">
+			<a href="#">Find Fluzone Vaccines Near You</a>
+		</div>
+	</div>
+  
+</div>
+<div id="lightboxShare" class="popUp">
+    <div class="gradientBG"></div>
+    <div id="lightboxTool" class="popUpContent">   
+         <div id="boxLight" class="box left">
+            <div class="box_top left"> <a id="closeBtn" onclick="hideElement('#lightboxShare');">Close X</a></div>
+            <div class="box_center left">
+            	<div id="lightBoxContent">
+                	<div id="share_title">
+                        <p class="title">Tell Your Family and Friends</p> 
+                        <p class="text"> Fill out the form below to share information about Fluzone vaccine with a family member or friend. E-mail addresses will not be stored or used for any other purpose.</p>
+                     </div>
+                    <div id="inputFields">
+                    <form id="shareEmailForm" name="myform" method="post" action="mailbounceback.cfm" onsubmit="$('#sendBtn1').click();return false;">
+                        <label id="txtFirstN" class="normalState" for="txtFirstName">Your Name:</label>
+                        <input id="nameField" type="text" value="Your Name"  onfocus="javascript:showOffF('nameField');" onblur="javascript:showOnF('nameField');" name="fromname">
+                        <span id="txtFirstNameError" class="inputError">&nbsp;</span>
+                        
+                        <label id="txtyourEmail" class="normalState" for="youremailField">Your E-mail:</label>
+                        <input id="youremailField" type="text" value="Your E-mail"  onfocus="javascript:showOffF('youremailField');" onblur="javascript:showOnF('youremailField');" name="fromemail">
+                        <span id="txtyourEmailError" class="inputError">&nbsp;</span>
+                        
+                        <label id="txtFriendsN" class="normalState" for="txtFriendsName">Friend's Name:</label>
+                        <input id="friendField" type="text" value="Friend's Name"  onfocus="javascript:showOffF('friendField');" onblur="javascript:showOnF('friendField');" name="toname">
+                        <span id="txtFriendNameError" class="inputError">&nbsp;</span>
+                        
+                        <label id="txtFriendsE" class="normalState" for="txtFriendsEmail">Friend's E-mail:</label>
+                        <input id="friendEmailField" type="text" value="Friend's E-mail"  onfocus="javascript:showOffF('friendEmailField');" onblur="javascript:showOnF('friendEmailField');" name="to">
+                        <span id="txtFriendEmailError" class="inputError">&nbsp;</span>
+                        
+                        
+                        <input type="hidden" name="from" value="noreply@fluzone.com" />
+                        <input type="hidden" name="subject" id="subject" value="Shared this information from Fluzone.com" />
+                        <input type="hidden" name="template" value="Fluzone_Consumer_Share" />
+                        <input type="hidden" name="continue" value="dummyconfirm.htm" />
+                        <input type="hidden" name="sharelink" id="sharelink" value="" />
+                        
+						<div>
+                        <a id="sendBtn1" onclick="if(validateFields()){setEmailText(); successScreen();}"><div id="sharesubmitLeft" class="btn_left_green left"></div> <div id="sharesubmitCenter" class="btn_center_green left"><p class="btn"><span id="sendBtn" class="letters">Send</span> <span id="giveArrow" class="whiteArrow left"></span></p></div><div id="sharesubmitRight" class="btn_right_green left"></div></a>
+						</div>
+                        <input name="sendM" type="image" value="sendIt" id="sendMe" />
+                    </form>
+                    </div>
+                    <div id="successScreen">
+	                    <p class="title left">Tell Your Family and Friends </p>
+                        <p class="text left" >Thank you for sharing. An e-mail has been sent to </p>
+                        <p id="setEmail" class="text left"> </p>
+                        <a id="shareBtn1" class="left" onclick="start();"><div id="shareagainleft" class="btn_left_green left"></div> <div id="shareagaincenter" class="btn_center_green left"><p class="btn"><span id="shareBtn" class="letters left">Share again</span> <span id="giveArrow" class="whiteArrow left"></span></p></div><div id="shareagainright" class="btn_right_green left"></div></a>
+                    </div>
+                </div>          
+            </div>
+            <div class="box_bottom left"></div>
+        </div>
+    </div>
+</div>
+<div id="content_section">
+    <div id="leftSide" class="left desktop"></div>
+    <div id="centerSide" class="left">
+    	<script type="text/javascript">
+$(document).ready(function() {
+  try {
+
+	$('.slideshow').before('<div id="progress" class="left">') .cycle({ 
+			fx:    'scrollHorz', 
+			speed:  2500,
+			pager: '#progress',
+     		next: '#rightArrow',
+     		prev: '#leftArrow' ,
+			pagerAnchorBuilder: function(index, el) {
+				return '<a class="ball" onclick="" slide="slide_' + (index+1) + '"></a>'; // create our own pager links so that we don't get the numbers on the pager buttons
+			}
+ 	});	
+	// stop the animation if the user clicks on a button in the pager
+	$('#progress .ball').click(function() {
+		$('.slideshow').cycle('pause');
+        var omniture = $.omniture();
+        var options = {};
+        var slide = $(this).attr('slide');
+        omniture.link( options, 'FluzoneDTC:Homepage_'+slide+'_by_pager', 'o');
+	}); 
+				
+	$('#rightArrow, #leftArrow').click(function() {
+		$('.slideshow').cycle('pause');
+        var slide = $('.activeSlide').attr('slide');
+        var omniture = $.omniture();
+        var options = {};
+        omniture.link( options, 'FluzoneDTC:Homepage_'+slide+'_by_arrow', 'o' );
+	}); 
+
+  } catch (e) {
+  }
+
+});
+</script>
+
+	<h1 class="homepage" align="center">Influenza can turn into a family affair. Fluzone vaccine has you covered.</h1>
+
+	<div class="callouts">
+		<div class="mother">
+			<img src="/images/headerNew/mother-and-child.png" width="306" height="241" alt="Image: Mother and child" />
+			<h2>Fluzone Vaccine</h2>
+			<p>for patients ages 6 months and older</p>
+			<a href="http://www.fluzone.com/fluzone-pediatric-vaccine.cfm"><img src="/images/headerNew/go-now.png" alt="Image: Go Now button" width="135" height="43" /></a>
+      
+		</div>
+		<div class="youngC">
+			<img src="/images/headerNew/younger-couple.png" width="306" height="241" alt="Image: Younger couple" />
+			<h2>Fluzone Intradermal Vaccine</h2>
+			<p>for patients ages 18 &ndash; 64 years old</p>
+			<a href="http://www.fluzone.com/fluzone-intradermal-vaccine.cfm"><img src="/images/headerNew/go-now.png" alt="Image: Go Now button" width="135" height="43" /></a>
+      <a onclick="_gaq.push(['_trackEvent', 'Flu ID', 'Find it Near You', '']);"  href="http://www.fluzone.com/flu-shot-locator.cfm">Find it near you</a>
+		</div>
+		<div class="oldC">
+			<img src="/images/headerNew/older-couple.png" width="306" height="241" alt="Image: Older couple" />
+			<h2>Fluzone High-Dose Vaccine</h2>
+			<p>for patients ages 65 years and older</p>
+			<a href="http://www.fluzone.com/fluzone-high-dose-vaccine.cfm"><img src="/images/headerNew/go-now.png" alt="Image: Go Now button" width="135" height="43" /></a>
+		  <a onclick="_gaq.push(['_trackEvent', 'Flu HD', 'Find it Near You', '']);" href="http://www.fluzone.com/flu-shot-locator.cfm">Find it near you</a>
+    </div>
+	</div>
+
+<!-- <div class="slidingBanner left desktop">
+<div id="mainBannerSection">
+    <div id="leftArrow" class="left"></div>
+    
+    <div class="slideshow left">
+    			<div id="slide1" class="centralContentBanner one left">
+                            <div id="infoBanner" class="left">
+                        <p class="title">Tiny needle. Big protection.</p>
+                        <p class="text">This flu season, ask for Fluzone <br />Intradermal vaccine &mdash; the flu vaccine <br /> with a 90% smaller needle.<sup><a href="#refer">1</a>-<a href="#refer">3</a></sup></p>
+                        <a id="giveBtn1" href="http://www.fluzone.com/intradermal-vaccine/index.cfm" onclick="_gaq.push(['_trackEvent', 'Homepage', 'Give It a Shot', 'Give It a Shot'])"><div class="btn_left_green left"></div> <div class="btn_center_green left"><p class="btn"><span id="giveBtn" class="letters left">Give it a shot</span> <span id="giveArrow" class="whiteArrow left"></span></p></div><div class="btn_right_green left"></div></a>
+                    </div>
+                   
+                </div>   
+                
+                
+                <div id="slide2" class="centralContentBanner two left">
+                            <div id="infoBanner" class="left">
+                        <p class="title">Short is the new long.</p>
+                        <p class="text">"This is gonna be big. <br />I mean small. <br />I mean big." </p>
+                        <a id="giveBtn2" href="http://www.fluzone.com/intradermal-vaccine/index.cfm" onclick="_gaq.push(['_trackEvent', 'Homepage', 'See How Small', 'See How Small'])"><div class="btn_left_green left"></div> <div class="btn_center_green left"><p class="btn"><span id="giveBtn" class="letters left">See how small</span> <span id="giveArrow" class="whiteArrow left"></span></p></div><div class="btn_right_green left"></div></a>
+                    </div>
+                    
+                </div>  
+                
+                
+                
+                 <div id="slide3" class="centralContentBanner three left">
+                            <div id="infoBanner" class="left">
+                        <p class="title"> 90% smaller needle.<sup><a href="#refer">1</a>-<a href="#refer">3</a></sup> <br /> That's the point.</p>                        
+                        <p class="text">See the flu vaccine with a needle <br />that's the width of a penny.<sup><a href="#refer">3</a>,<a href="#refer">4</a></sup></p>
+                        <a id="giveBtn3" href="http://www.fluzone.com/intradermal-vaccine/index.cfm" onclick="_gaq.push(['_trackEvent', 'Homepage','Take A Closer Look', 'Take A Closer Look'])">
+                        <div class="btn_left_green left">
+                        	</div> 
+                            <div class="btn_center_green left">
+                            	<p class="btn">
+                                	<span id="giveBtn" class="letters left">Take a closer look</span> 									<span id="giveArrow" class="whiteArrow left"></span></p></div>				
+                                    <div class="btn_right_green left">
+                                    </div>
+                                    </a>
+                    </div>
+                   
+                   
+                   
+                   
+                </div>  
+                
+        </div>
+        
+    <div id ="rightArrow" class="left"></div>
+    
+    <div id="titleLink" class="left desktop"><h3>Learn About Other Fluzone Vaccines</h3></div>
+     <div id="linksBottom" class="left desktop">
+                        <ul>
+                            <li id="calloutHome1" class="brandBox">
+                                <a class="dark" href="http://www.fluzone.com/fluzone-pediatric-vaccine.cfm"><div class=" arrowBlue left"></div>Fluzone Vaccine</a>
+                                <p>For patients ages 6 months and older</p>
+                                <a class="green" href="http://www.fluzone.com/fluzone-pediatric-vaccine.cfm" onclick="_gaq.push(['_trackEvent', 'Fluzone Vaccine For Patients', 'Visit Page Fluzone Vaccine', 'Visit Page Fluzone Vaccine']);">Go now<div class="greenArrow"></div></a>
+                            </li>
+                            <li><div class=" separator left"></div></li>
+                            <li id="calloutHome2">
+                                <a class="dark" href="http://www.fluzone.com/fluzone-high-dose-vaccine.cfm"><div class=" arrowPurple left"></div>Fluzone High-Dose Vaccine</a>
+                                <p>For patients ages 65 years and older</p>
+                                <a class="green" href="http://www.fluzone.com/fluzone-high-dose-vaccine.cfm" onclick="_gaq.push(['_trackEvent','Fluzone HD', 'Visit Page Fluzone HD', 'Visit Page Fluzone HD']);">Go now<div class="greenArrow"></div></a>
+                            </li>
+                        </ul>
+                    </div> 
+</div>
+</div> --->
+
+ <div id="locatorTool" class="left" >
+ 
+<div id="LocatortopArea">
+
+</div>
+<div id="locator_info" class="left">
+
+<form id="locatorSearch" name="myform" method="post" action="http://www.fluzone.com/flu-shot-locator.cfm">
+    <div id="textfield1" class="textfield left"><div class="textfield_left left"></div> <div class="textfield_center left">
+    <input id="zip" type="text" onclick="_gaq.push(['_trackEvent', 'Find Fluzone Vaccines', 'Enter Zip Code', 'Find it Now']);" value="Enter a ZIP code or address" onfocus="javascript:showOff('zip');" onblur="javascript:showOn('zip');" name="searchZip" />
+    </div><div class="textfield_right left"></div></div>
+    <div id="find-Fluzon-globe">
+      <img src="images/mobile/fluzone-vaccine-locator.png" width="269" height="35" alt="Image: Find Fluzone Vaccines Near You" />
+    </div>
+    <div id="searchBy" class="box left">
+        <div class="box_top left desktop"></div>
+        <p id="search_text" class="mobile">Search by Practice or Pharmacy</p>
+        <div class="box_center left">
+           <p class="left desktop">Search by practice or pharmacy (optional)</p>
+            <div id="min_plus_btn" class="minus left plus search_by_other" onclick="_gaq.push(['_trackEvent', 'Fluzone Locator', 'Click_SearchByOther']);"></div>
+            <div id="textfield2" class="textfield left"><div class="textfield_left left"></div> <div class="textfield_center left">
+            
+            <input id="dr" type="text" onclick="_gaq.push(['_trackEvent', 'Find Fluzone Vaccines', 'Enter Practice or Pharmacy', 'Find it Now']);"  value="Enter a practice or pharmacy" onfocus="javascript:showOff('dr');" onblur="javascript:showOn('dr');" name="searchDr" />
+            </div><div class="textfield_right left"></div></div>
+        </div>
+        <div class="box_bottom left desktop"></div>
+    </div>
+	<div style="clear: both"></div>
+    
+    <a id="findBTN" onclick="_gaq.push(['_trackEvent', 'Fluzone Locator', 'Click_FindTheShot']);"><div class="btn_left_green left"></div> <div class="btn_center_green left"><p class="btn"> <span id="findArrow" class="letters whiteArrow left">Find it now</span></p></div><div class="btn_right_green left"></div></a>
+    
+    <input name="submitM" type="image" value="findit" id="submitMe" />
+    </form>
+</div>
+<div id="ask" class="left">
+	<p>Ask your health care provider about Fluzone <br /> Intradermal or Fluzone High-Dose vaccine</p>  
+</div>
+ <!-- <div id="logos">
+        <ul>
+            <li><div id="logo3"></div></li>
+            <li><div id="logo4"></div></li>
+            <li><div id="logo1"></div></li>
+            <li><div id="logo2"></div></li>
+        </ul>
+</div> -->
+ </div>
+   <div id="quick_Links" class="mobile">
+    <div class="quick_link"><a href="http://www.fluzone.com/intradermal-vaccine/index.cfm">About Intradermal Vaccination</a></div><hr />
+		<div class="quick_link"><a href="http://www.fluzone.com/flu-shot-locator.cfm">Where to Get Vaccinated</a></div><hr />
+		<div class="quick_link"><a href="http://www.fluzone.com/flu-facts.cfm">Facts About the Flu</a></div><hr />
+  </div> 
+         <h1 class="mobileHeader bannerMobile">Influenza can turn into a family affair.<br class="mobile" /> Fluzone vaccine has you covered.</h1>
+         <img id="homeImg" class="bannerMobile" src="images/mobile/mother-child-and-couples.png" width="292" height="103" alt="Image: Mother and child, younger couple, older couple" />
+          <div id="mobile-callouts">
+      <ul>
+        <li>
+        <a href="http://www.fluzone.com/fluzone-pediatric-vaccine.cfm">
+        <span>Fluzone Vaccine</span><br />
+        <span class="dark-Blue">for patients ages 6 months and older</span>
+        </a>
+		<span class="greena"></span>		
+        </li>
+         <li>
+          <a href="http://www.fluzone.com/fluzone-intradermal-vaccine.cfm">
+        <span>Fluzone Intradermal Vaccine</span><br />
+        <span class="light-blue"><strong>for patients ages 18 &ndash; 64 years old</strong></span>
+        </a><span class="greena"></span>
+         </li>
+          <li>
+           <a href="http://www.fluzone.com/fluzone-high-dose-vaccine.cfm">
+        <span>Fluzone High-Dose Vaccine</span><br />
+        <span class="purple"><strong>for patients ages 65 years and older</strong></span>
+        </a><span class="greena"></span>
+          </li>
+           <li>
+            <a href="http://www.fluzone.com/flu-facts.cfm">
+        <span class="spanHeight">Flu Facts</span>
+        
+        </a><span class="greena"></span>
+           </li>
+      </ul>
+    </div>
+      <div class="mobile">
+        <div id="callouts">
+	<div id="callout" class="box">
+		<p class="title">There&rsquo;s a Fluzone vaccine for you.</p>
+        <p id="flu-facts-head" class="title">Learn About Other Fluzone Vaccines.</p>
+		<div id="linksBottom">
+			<ul>
+				<li id="calloutHome1">
+					<a class="dark" href="http://www.fluzone.com/fluzone-pediatric-vaccine.cfm"><div class=" arrowBlue left"></div>Fluzone Vaccine</a>
+					<p>For patients ages 6 months - 64 years.</p>
+					<a class="green" href="http://www.fluzone.com/fluzone-pediatric-vaccine.cfm">Visit page<div class="greenArrow"></div></a>
+				</li>
+				<li id="calloutHome2">
+					<a class="dark" href="http://www.fluzone.com/fluzone-high-dose-vaccine.cfm"><div class=" arrowPurple left"></div>Fluzone High-Dose Vaccine</a>
+					<p>For patients 65 years and older.</p><a class="green" href="http://www.fluzone.com/fluzone-high-dose-vaccine.cfm">Visit page<div class="greenArrow"></div></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<img src="images/headerNew/calloutShadow.png" width="284" height="22" /><BR />
+	<div id="callout2">
+		<p class="titleQuestion">Have questions? Get answers.</p>
+		<a id="linksBottom" class="green" href="http://www.fluzone.com/flu-facts.cfm" onclick="_gaq.push(['_trackEvent', 'Fluzone ID', 'Fluzone ID Get Answers', 'Fluzone ID Get Answers']);">How can I learn more about influenza?</a>
+     <a class="linksBottom green"  href="http://www.fluzone.com/flu-shot-locator.cfm">Where can I get Fluzone Intradermal vaccine? </a>
+     <a class="linksBottom green"  href="http://www.fluzone.com/fluzone-intradermal-videos.cfm">Where can I watch videos and get more information?</a>
+	</div>
+	<div id="callout3" class="box box3">
+		<p class="title">There&rsquo;s a Fluzone vaccine for you.</p>
+		<div id="linksBottom">
+			<ul>
+				<p>Fluzone High-Dose vaccine is the first and only influenza vaccine designed specifically for people 65 years of age and older.<sup><a href="#refer">4</a></sup></p>
+				<li id="calloutHome1">
+					<a class="dark" href="http://www.fluzone.com/fluzone-pediatric-vaccine.cfm"><div class=" arrowBlue left"></div>Fluzone Vaccine</a>
+					<p>For patients ages 6 months to 64 years.</p>
+					<a class="green" href="http://www.fluzone.com/fluzone-pediatric-vaccine.cfm">Visit Page<div class="greenArrow"></div></a>
+				</li>
+				<li id="calloutHome2">
+					<a class="dark" href="http://www.fluzone.com/fluzone-high-dose-vaccine.cfm"><div class=" arrowPurple left"></div>Fluzone High-Dose Vaccine</a>
+					<p>For patients 65 years and older.</p>
+					<a class="green" href="http://www.fluzone.com/fluzone-high-dose-vaccine.cfm">Visit page<div class="greenArrow"></div></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+    
+</div>
+
+      </div>
+      <div id="ISI_section" class="left index ISI_section">
+	<h1>Important Safety Information</h1>
+	<h2>Indication</h2>
+
+	<p>Fluzone, Fluzone Intradermal, and Fluzone High-Dose vaccines are given to help prevent influenza disease caused by influenza A and B strains contained in each vaccine.</p>
+	 
+	<p>Fluzone vaccine is intended for persons 6 months of age and older. Fluzone Intradermal vaccine is intended for persons 18 through 64 years of age. Fluzone High-Dose vaccine is intended for persons 65 years of age and older.</p>
+
+	<p> Approval of Fluzone High-Dose vaccine is based on superior immune response relative to Fluzone vaccine. Data demonstrating a decrease in influenza disease after vaccination with Fluzone High-Dose vaccine relative to Fluzone vaccine are not available.</p>
+
+	<h2>Safety Information</h2>
+	
+	<p>Side effects to Fluzone and Fluzone High-Dose vaccines include pain, redness, and swelling at the injection site; muscle aches, fatigue, headache, and fever (irritability, abnormal crying, drowsiness, appetite loss, and vomiting in young children receiving Fluzone vaccine). Redness, firmness, swelling, and itching at the injection site occur more frequently with Fluzone Intradermal vaccine than with Fluzone vaccine. Other side effects to Fluzone Intradermal vaccine include pain at the injection site.  Other side effects may occur. Fluzone, Fluzone Intradermal, and Fluzone High-Dose vaccines should not be administered to anyone with a severe allergic reaction (eg, anaphylaxis) to any vaccine component, including eggs, egg products, or thimerosal (the multidose vial is the only presentation containing thimerosal), or to a previous dose of any influenza vaccine.</p>
+
+	<p>Tell the doctor if you/your child has ever experienced Guillain-Barr&eacute; syndrome (severe muscle weakness) after a previous dose of influenza vaccine. If you notice any other problems or symptoms following vaccination, please contact your health care professional immediately. Vaccination with Fluzone, Fluzone Intradermal, or Fluzone High-Dose vaccine may not protect all individuals.</p>
+	
+	<a name="PI_section"></a>
+
+	<p>For more information about <a href="https://www.vaccineshoppe.com/image.cfm?pi=flu&image_type=product_pdf#page=21" target="_blank">Fluzone</a>, <a href="https://www.vaccineshoppe.com/image.cfm?pi=fluID&image_type=product_pdf#page=19" target="_blank">Fluzone Intradermal</a>, and <a href="https://www.vaccineshoppe.com/image.cfm?pi=fluHD&image_type=product_pdf#page=17" target="_blank">Fluzone High-Dose vaccines</a>, talk to your health care professional and see complete Patient Information. </p>
+
+	<div>
+		<div style="float:left"></div>
+	</div>
+</div>
+
+      
+    </div>
+    <div id ="rightSide" class="left desktop"></div>
+<div> <div id="footer">
+	<div class="column01"><a href="http://www.fluzone.com/index.cfm">Home</a> <a href="http://www.fluzone.com/fluzone-pediatric-vaccine.cfm">Fluzone Vaccine</a> <a href="http://www.fluzone.com/fluzone-intradermal-vaccine.cfm">Fluzone Intradermal Vaccine</a> <a href="http://www.fluzone.com/fluzone-high-dose-vaccine.cfm">Fluzone High-Dose Vaccine</a> 
+	<a class="footernolink" href="http://www.fluzone.com/flu-facts.cfm">Flu Facts</a>
+	<a href="http://www.fluzone.com/flu-facts.cfm" class="flu-inner footersublink">About the Flu</a>
+	<a href="http://www.fluzone.com/flu-symptoms.cfm" class="flu-inner footersublink">Flu Symptoms</a>
+	<a href="http://www.fluzone.com/flu-treatment.cfm" class="flu-inner footersublink">Flu Treatment</a>
+	<a href="http://www.fluzone.com/about-the-flu-shot.cfm" class="flu-inner footersublink">About the Flu Shot</a>
+
+	<a href="http://www.fluzone.com/flu-shot-locator.cfm">Find Flu Vaccines Near You</a>  <a href="http://www.fluzone.com/sitemap.cfm">Site Map</a> </div>
+	<div class="column02"><span class="mobile"><a href="#ISI_section">Important Safety Information</a> <a  type="application/pdf" href="#PI_section">Prescribing Information</a></span> <a target="_blank" href="http://www.vaccineplace.com/privacypolicy/privacypolicy.html" class="green" id="footerOne">Privacy Policy</a> <a target="_blank" href="http://www.vaccineplace.com/privacypolicy/terms.html">Terms and Conditions</a> <a target="_blank" href="http://www.vaccineplace.com/privacypolicy/terms.html" class="green" id="footerTwo">Legal Notice</a></div>
+	<div class="column03">&nbsp;</div>
+	<div class="column04"><a target="_blank" href="http://www.sanofipasteur.us"><img src="/images/header/sanofi-logo-m.png" alt="Sanofi Pasteur: The vaccines division of Sanofi-Aventis Group"></a>
+		<p>This site is intended for US residents only.</p>
+		<p><strong>1-800-VACCINE (1-800-822-2463)</strong></p>
+		<p>&copy; 2014 Sanofi Pasteur Inc.</p>
+		<p>Last modified: 25-July-2014.</p>
+	</div>
+	<div class="backToTop">
+		<a href="#top">back to top <img src="images/mobile/bacToTopArrow.png" width="12" height="17" /></a>
+	</div>
+</div>
+<div id="first">
+	<div class="interstitial">
+		<h1>PLEASE NOTE</h1>
+		<p>Bst modified: 25-July-2014.</p>y clicking on this link, you will be leaving this Sanofi Pasteur website and going to another, entirely independent website. Sanofi Pasteur provides this link as a service to its website visitors; however, it takes no responsibility for the information presented on any website but its own.</p>
+		<p>This link has opened in a new window. To return to your original site, please close this new window. </p>
+		<a class="go" href="#">Click here to go to the page you requested.</a> <a href="" onclick='closePopUp(); return false;'>Click here to close this window and return to the site.</a>
+	</div>
+</div>
+
+</div>
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Fluzone_DTC_IntradermalVaccine
+URL of the webpage where the tag is expected to be placed: http://www.fluzone.com/index.cfm
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 01/18/2013
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="http://3782481.fls.doubleclick.net/activityi;src=3782481;type=fluzo534;cat=fluzo176;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="http://3782481.fls.doubleclick.net/activityi;src=3782481;type=fluzo534;cat=fluzo176;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Fluzone Find it Now
+URL of the webpage where the tag is expected to be placed: http://www.fluzone.com/
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 05/02/2013
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="http://3012733.fls.doubleclick.net/activityi;src=3012733;type=fluzo109;cat=fluzo991;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="http://3012733.fls.doubleclick.net/activityi;src=3012733;type=fluzo109;cat=fluzo991;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+</body>
+
+</html>
+
+12733.fls.doubleclick.net/activityi;src=3012733;type=fluzo109;cat=fluzo991;

@@ -1,0 +1,628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+
+  <base href="http://www.lifehealthchoices.com/the-center/education/vaccines/shots-plague-flu-a-you" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="flu shots, plague shots, should we get flu shots, do we need vaccines to fight disease" />
+  <meta name="title" content="Shots: Plague, Flu & You" />
+  <meta name="description" content="The plague, the flu and you, Orthomolecular Medicine News Service" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Shots: Plague, Flu &amp; You</title>
+  <link href="/templates/vax/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/media/system/js/caption.js"></script>
+  <link type='text/css' href='http://lifehealthchoices.com/modules/mod_swmenufree/styles/menu.css' rel='stylesheet' />
+  <script type="text/javascript" src="http://lifehealthchoices.com/modules/mod_swmenufree/transmenu_Packed.js"></script>
+
+<script language="javascript">
+function play_selectd_video(video_source){
+var br_name = navigator.appName
+if (br_name == "Microsoft Internet Explorer" )
+{
+			
+				document.test_video_player.movie=video_source;	
+			
+		  
+}
+else
+{
+document.getElementById('watch-player-div').innerHTML ='<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="test_video_player" name="movie_player" width="660" height="525"><param name="id" value="test_video_player" /><param name="name" value="movie_player" /><param name="width" value="660" /><param name="height" value="525" /><param name="bgcolor" value="#000000" /><param name="allowscriptaccess" value="always" /><param name="allowfullscreen" value="true" /><param name="quality" value="high" /><param name="src" value="http://www.youtube.com/v/UhSd3ydaRqg&hl=en&fs=1&color1=0x006699&color2=0x54abd6" /><param name="autostart" value="true" /><param name="wmode" value="transparent" /><embed type="application/x-shockwave-flash" id="test_video_player" name="movie_player" width="660" height="525" bgcolor="#000000" allowscriptaccess="always" allowfullscreen="true" quality="high" src="'+video_source+'" autostart="true" wmode="transparent"></embed></object>'	
+
+}
+
+}
+</script>
+<link  rel="stylesheet" href="http://www.lifehealthchoices.com/templates/vax/css/lifeheath_style_inner.css" type="text/css" />
+<link  rel="stylesheet" href="http://www.lifehealthchoices.com/templates/vax/css/text.css" type="text/css" />
+<link  rel="stylesheet" href="http://www.lifehealthchoices.com/templates/vax/css/sample_test.css" type="text/css" />
+<link  rel="stylesheet" href="http://www.lifehealthchoices.com/templates/vax/css/sample_lifechoice.css" type="text/css" />
+<link  rel="stylesheet" href="http://www.lifehealthchoices.com/video_style.css" type="text/css" />
+<script type="text/javascript" src="http://www.lifehealthchoices.com/dolphin.js" />
+
+
+
+<script language="javascript">
+function showarchive(){
+ document.getElementById("archivenews1").style.display="block";
+
+}
+function get_STOF_url(){
+
+if(document.getElementById("S_TO_F"))
+{
+			var theSuffix = document.getElementById("S_TO_F").href;
+			document.getElementById("S_TO_F1").href = theSuffix;
+			//document.getElementById("S_TO_F11").href = theSuffix;
+}
+else
+{
+		theSuffix="http://www.lifehealthchoices.com/index.php?option=com_mailto&amp;tmpl=component&amp;link=aHR0cDovL3BocC5zZWFyY2gtZW5naW5lLXdlYi1wcm9tb3Rpb24ubmV0L2xpZmVjaG9pY2UvaW5kZXgucGhwP29wdGlvbj1jb21fY29udGVudCZ2aWV3PWFydGljbGUmaWQ9NTc6aG9tZSZjYXRpZD0zODpvdGhlcnBhZ2VzJkl0ZW1pZD03Mw==";
+		document.getElementById("S_TO_F1").href = theSuffix;
+		//document.getElementById("S_TO_F11").href = theSuffix;
+}
+
+feednews();
+
+}
+</script>
+<script language="javascript">
+function feednews(){
+//alert("vijay");
+
+if(document.getElementById('feedzeel_vax1')){
+document.getElementById('feedzeel_vax1').innerHTML ="<div align='center' style='width:300px;'><iframe src='http://www.feedzilla.com/tools/flash_new.asp?myp=homepage&id=0230085402766&code=html&c=&scroll=v&prov=keywords&width=300&height=600&cat=Top%20news&cat2=&num_articles=10&show_video=Yes&show_border=Yes&show_summaries=Yes&show_sources=Yes&show_dates=Yes&title=&keywords=Environment&andor=and&url=&headers_size=14pt&title_size=11pt&title_bold=Yes&font_size=10pt&font_family=Arial&text_alignment=Left&space=Yes&titlecolor=%23000000&fcolor=%230188cc&desccolor=%232E576B&sourcecolor=%23F9740B&datecolor=%23088C41&bordercolor=%23cccccc&bgcolor=%23FFFFFF&kwd=' width='300' height='600' scrpt&title_bold=Yes&font_size=10pt&font_family=Arial&text_alignment=Left&space=Yes&titlecolor=%23000000&fcolor=%230188cc&desccoolling='no' frameborder='0' marginwidth='0' marginheight='0' allowtransparency='True' style='border:1px solid #cccccc'></iframe><BR><font style='font-size:10px;'><font style='font-size:10px;'><a href='http://www.feedzilla.com/' style='text-decoration:none;font-size:10px;'>Feed widgets</a> - <a href='http://www.feedzilla.com/' style='text-decoration:none;font-size:10px;'>Feedzilla.com</a></font></div>"
+}
+
+}
+
+function sendtofriend(sendurl)
+{
+
+//newwindow=window.open('http://localhost/vax/sendtofriend.php?link='+sendurl,'win2','width=500,height=500,menubar=yes,resizable=yes');
+newwindow=window.open('http://www.lifehealthchoices.com/sendtofriend.php?link='+sendurl,'win2','width=500,height=500,menubar=yes,resizable=yes');
+
+if (window.focus) {newwindow.focus()}
+ 
+return false;
+
+}
+
+function subscribenews(){
+newwindow=window.open('http://madmimi.com/promotions/14519702565147/raw','win2','width=620,height=700,menubar=yes,resizable=yes');
+if (window.focus) {newwindow.focus()}
+ 
+return false;
+}
+</script>
+
+<style>
+.mainlevel-virtumart-category-list{
+float:left;
+font-family: Arial, Helvetica, sans-serif;
+color:#FF0000;
+font-size:15px;
+padding-left:5px;
+padding-right:5px;
+text-decoration:none;
+
+}
+.module-virtumart-virtumart-manufacturers-list div{
+float:left;
+padding-right:5px;
+}
+
+.module-virtumart-virtumart-manufacturers-list div sans-serif;
+color:#FF0000;
+font-size:15px;
+padding-left:5px;
+padding-right:5px;
+text-decoration:none;
+
+}
+.module-virtumart-virtumart-manufactua{
+color:#FFFFFF;
+font-size:12px;
+text-decoration:none;
+}
+
+.module-virtumart-virtumart-manufacturers-list div a:hover{
+text-decoration:underline;
+}
+
+
+.ourfaves{
+color:#FFFFFF;
+font-size:12px;
+height:48px;
+}
+.mainlevelourfaves{
+color:#FFFFFF;
+font-size:12px;
+}
+
+#ourfaves {
+list-style:none;
+margin:0px;
+padding:0px;
+}
+#ourfaves li a{
+color:#FFFFFF;
+font-size:12px;
+text-decoration:none;
+}
+
+#ourfaves li a:hover{
+text-decoration:underline;
+}
+
+
+.vax-product-title{
+font-weight:bold;
+color:#424649; 
+font-size:14px;
+}
+
+.vax-product-price{
+
+color:#424649; 
+font-size:12px;
+}
+.vax-product-price2{
+color:#89c41c; 
+font-size:16px;
+font-weight:bold;
+}
+.vmCartModule a{
+color:#FFFFFF;
+font-size:12px;
+}
+
+</style>
+
+</head>
+<body onload="feednews()" >
+<div id="container">
+  <div id="header">
+    <div id="header1">
+      <div style="float:left;clear:none"><a href="http://www.lifehealthchoices.com/"><img src="http://www.lifehealthchoices.com/templates/vax/images/inv.gif" border="0px;" width="370px" height="111px;" /></a></div>
+      <!--<div id="header_containts">
+        <table width="88%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="24" colspan="4" align="right" id="subtop" ><div align="right" id="subtop" ><table width="100%" border="0" cellpadding="0" cellspacing="1"><tr><t       <table width="88%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="24" colspan="4" align="right" id="subtod nowrap="nowrap"><a href="http://www.lifehealthchoices.com/index.php" class="mainlevel_toplinkhead" >Home</a><span class="mainlevel_toplinkhead"> | </span><a href="/contactus" class="mainlevel_toplinkhead" >Contact</a><span class="mainlevel_toplinkhead"> | </span><a href="/news" class="mainlevel_toplinkhead" >News</a><span class="mainlevel_toplinkhead"> | </span><a href="/blog/" class="mainlevel_toplinkhead" >Blog</a></td></tr></table> </div></td>
+          </tr>
+          <tr>
+            <td height="35" colspan="4" valign="middle"><form id="form1" name="form1" method="post" action="" style="padding:0px;margin:0px">
+              <div align="right"  style="padding-right:5px;">
+                <table width="90" border="0" align="right" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td ><form action="index.php" method="post">
+	<div class="search">
+		<input name="searchword" id="mod_search_searchword" maxlength="20" alt="Search" class="inputbox" type="text" size="20" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" />	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+</form></td>
+                    <td align="center" valign="bottom" ><input type="image" src="http://www.lifeh') this.value='';" />	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+</formealthchoices.com/templates/vax/images/search.jpg"  name="Submit" value="" width="85px"  height="26px"  /></td>
+                  </tr>
+                </table>
+              </div>
+            </form></td>
+          </tr>
+          <tr><td width="13%" align="center" valign="middle"><table width="78" height="26" border="0" align="center" cellpadding="0" cellspacing="0" style="background-image:url(http://www.lifehealthchoices.com/templates/vax/images/share_this.jpg)" ><tr><Td align="center" valign="middle" style="padding-left:11px; padding-top:5px;"> <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=fe7b76a3-77f7-436e-bf18-5959a9e509d2&amp;type=website&amp;buttonText=Share"></script></Td></tr></table></td>
+            <td width="29%"><a href="/volunteer.php" onclick="window.open(this.href,'win2','width=550,height=700,menubar=yes,resizable=yes'); return false;"><img src="http://www.lifehealthchoices.com/templates/vax/images/volunteer.jpg" width="85" height="26" border="0" /></a></td>
+           
+            <td width="31%"><a href="#" title="Subscribe for newsletter" onclick="subscribenews()"><img src="http://www.lifehealthchoices.com/templates/vax/images/subscribe.jpg" width="95" height="26" border="0" /></a></td>
+            <td width="27%" align="left" style="padding-right:5px"><a href="http://www.lifehealthcher" onclick="subscribenews()"><img src="http://www.lifehealthchoices.com/templates/vax/images/subscribe.jpg" width="95" height="26" border="0" /></a><oices.com/index.php?option=com_content&view=article&id=162&Itemid=160"><img src="http://www.lifehealthchoices.com/templates/vax/images/dontate.jpg" width="74" height="26" border="0" /></a></td>
+			 
+          </tr>
+        </table>
+      </div>-->
+	   <div id="header_containts" style="padding-right:15px;">
+        <table width="88%" border="0" cellspacing="0" cellpadding="0" >
+          <tr>
+            <td height="24" colspan="4" align="right"  style="padding-right:5px;" ><div align="right" id="subtop" ><table width="100%" border="0" cellpadding="0" cellspacing="1"><tr><td nowrap="nowrap"><a href="http://www.lifehealthchoices.com/index.php" class="mainlevel_toplinkhead" >Home</a><span class="mainlevel_toplinkhead"> | </span><a href="/contactus" class="mainlevel_toplinkhead" >Contact</a><span class="mainlevel_toplinkhead"> | </span><a href="/news" class="mainlevel_toplinkhead" >News</a><span class="mainlevel_toplinkhead"> | </span><a href="/blog/" class="mainlevel_toplinkhead" >Blog</a></td></tr></table> </div></td>
+          </tr>
+          <tr>
+            <td height="35" colspan="4" valign="middle"><form id="form1" name="form1" method="post" action="" style="padding:0px;margin:0px">
+              <div align="right"  style="padding-right:5px;">
+                <table width="90" border="0" align="right" cellpadding="0" cellspacing="0">
+       dle"><form id="form1" name="form1" method="post" action="" style="padding:0px;margin:0px">
+              <div align="right"  style="padding-right:5px           <tr>
+                    <td ><form action="index.php" method="post">
+	<div class="search">
+		<input name="searchword" id="mod_search_searchword" maxlength="20" alt="Search" class="inputbox" type="text" size="20" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" />	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+</form></td>
+                    <td align="center" valign="bottom" ><a style="cursor:pointer;"  onclick="javascript:document.form1.submit();" title="Search"><img src="http://www.lifehealthchoices.com/templates/vax/images/search.jpg" border="0px;"  name="Submit" value="Submit" width="85px"  height="26px"  /></a></td>
+                  </tr>
+                </table>
+              </div>
+            </form></td>
+          </tr>
+          <tr><td width="29%"><a href="/volunteer.php" onclick="window.open(this.href,'win2','width=550,height=700,menubar=yes,resizable=yes'); return false;"><img src="http://www.lifehealthchoices.com/templates/vax/images/volunteer.jpg" width="85" height="26" border="0" /></a></td>
+		  <td width="13%" align="center" valign="middle"><table width="78" height="26" border="0" align="center" cellpadding="0" cellspacing="0" style="background-image:url(http://www.lifevax/images/volunteer.jpg" width="85" height="26" border="0" /></a></td>
+		  <td width="13%" align="center" valign="middle"><table width="78" height="healthchoices.com/templates/vax/images/share_this.jpg)" ><tr><Td align="center" valign="middle" style="padding-left:11px; padding-top:2px;"> <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=fe7b76a3-77f7-436e-bf18-5959a9e509d2&amp;type=website&amp;buttonText=Share"></script></Td></tr></table></td>
+           
+            <td width="31%"><a href="#" title="Subscribe for newsletter" onclick="subscribenews()"><img src="http://www.lifehealthchoices.com/templates/vax/images/subscribe.jpg" width="95" height="26" border="0" /></a></td>
+            <td width="27%" align="left" style="padding-right:10px"><a href="http://www.lifehealthchoices.com/index.php?option=com_content&view=article&id=162&Itemid=160"><img src="http://www.lifehealthchoices.com/templates/vax/images/dontate.jpg" width="74" height="26" border="0" /></a></td>
+			 
+          </tr>
+        </table>
+      </div>
+	  
+      <div style="padding-top:119px; padding-left:280px; text-align:center;">
+        
+<!--swMenuFree5.0J_1.5 transmenu by http://www.swmenupro.com-->
+<div id="wrap" class="menu" align="left">
+<table cellspacing="0" cellpadding="0" id="menu" class="menu" > 
+<tr> 
+<td> 
+<a id="menu53" href="/lifehealthchoices" >Life Health Choices</a>
+</td><td id='test'>&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+<td id='trans-active'> 
+<a id="menu54" href="/the-center" >T>
+<table cellspacing="0" cellpadding="0" id="menu" class="menu" > 
+<tr> 
+<td> 
+<a id="menu53" href="/lifehealthchoices" >Life Health Choices</a>
+</td>he Center</a>
+</td><td id='test'>&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+<td> 
+<a id="menu58" href="/getting-started" >Getting Started</a>
+</td><td id='test'>&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+<td class="last"> 
+<a id="menu59" href="/community" >Community</a>
+</td><td id='test'>&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+</tr> 
+</table></div> 
+<div id="subwrap"> 
+<script type="text/javascript">
+<!--
+if (TransMenu.isSupported()) {
+var ms = new TransMenuSet(TransMenu.direction.down, -2,0, TransMenu.reference.bottomLeft);
+var menu53 = ms.addMenu(document.getElementById("menu53"));
+ menu53.addItem("Message from the Founder", "/lifehealthchoices/message-from-the-founder", "0");
+menu53.addItem("Welcome", "/lifehealthchoices/welcome", "0");
+menu53.addItem("About Us", "/lifehealthchoices/about-us", "0");
+menu53.addItem("Mission", "/lifehealthchoices/mission", "0");
+menu53.addItem("Testimonials", "/lifehealthchoices/testimonials", "0");
+menu53.addItem("Contact Us", "/lifehealthchoices/contact-us", "0");
+var menu54 = ms.addMenu(document.getElementById("menu54"));
+ menu54.addItem("Education", "/the-center/education", "0");
+var menu80 = menu54.addMenu(menu54.items[0],0,0);
+menu80.addItem("Vaccines", "/the-center/education/vaccines", "0");
+var menu86 = menu80.addMenu(menu80.items[0],0,0);
+menu86.addItem("Vaccination Choices", "/the-center/education/vaccines/vaccination-choices", "0");
+menu86.addIddMenu(menu54.items[0],0,0);
+menu80.addItem("Vaccines", "/the-center/education/vaccines", "0");
+var menu86 = menu80.addMenu(menu80.items[0],0,0);
+menutem("Adverse Vaccine Reactions", "/the-center/education/vaccines/adverse-vaccine-reactions", "0");
+menu86.addItem("Meet the Vaccines", "/the-center/education/vaccines/meet-the-vaccines", "0");
+menu86.addItem("Are Vaccines Safe?", "/the-center/education/vaccines/are-vaccines-safe", "0");
+menu86.addItem("Do Vaccines Work?", "/the-center/education/vaccines/do-vaccines-work", "0");
+menu86.addItem("What Others Do?", "/the-center/education/vaccines/what-others-do", "0");
+menu86.addItem("Shots: Plague, Flu & You", "/the-center/education/vaccines/shots-plague-flu-a-you", "0");
+menu86.addItem("Your Vaccine Letters", "/the-center/education/vaccines/your-vaccine-letters", "0");
+menu80.addItem("Food", "/the-center/education/food", "0");
+var menu232 = menu80.addMenu(menu80.items[1],0,0);
+menu232.addItem("Seafood & Mercury", "/the-center/education/food/seafood-mercury", "0");
+menu232.addItem("History of Monsanto", "/the-center/education/food/history-of-monsanto", "0");
+menu232.addItem("GMOs & Irradiation", "/the-center/education/food/gmos-a-irradiation", "0");
+menu232.addItem("Food Politics", "/the-center/education/food/foodpolitics", "0");
+menu80.addItem("Environment", "/the-center/education/environment", "0");
+var menu218 = menu80.addMenu(menu80.items[2],0,0);
+menu218.addItem("Our Bees and Babies", "/the-center/education/environment/our-bees-and-babies", "0");
+menu218.aoodpolitics", "0");
+menu80.addItem("Environment", "/the-center/education/environment", "0");
+var menu218 = menu80.addMenu(menu80.items[2],0,0);
+menu21ddItem("Safe Water", "/the-center/education/environment/safe-water", "0");
+menu218.addItem("Fluoride", "/the-center/education/environment/fluoride", "0");
+menu218.addItem("Pesticides", "/the-center/education/environment/pesticides", "0");
+menu218.addItem("CFLs", "/the-center/education/environment/cfls", "0");
+menu80.addItem("Drugs", "/the-center/education/drugs", "0");
+var menu231 = menu80.addMenu(menu80.items[3],0,0);
+menu231.addItem("Pregnancy & Antidepressants", "/the-center/education/drugs/pregnancy-antidepressants", "0");
+menu80.addItem("Birth & Infant Feeding", "/the-center/education/birth-infant-feeding", "0");
+menu80.addItem("School", "/the-center/education/school", "0");
+menu80.addItem("Parenting", "/the-center/education/parenting", "0");
+menu54.addItem("Advocacy", "/the-center/advocacy", "0");
+var menu116 = menu54.addMenu(menu54.items[1],0,0);
+menu116.addItem("Advocacy 101", "/the-center/advocacy/advocacy-101", "0");
+menu116.addItem("Political Advocacy", "/the-center/advocacy/political-advocacy", "0");
+var menu254 = menu116.addMenu(menu116.items[1],0,0);
+menu254.addItem("Thanks, Chris", "/the-center/advocacy/political-advocacy/thanks-chris", "0");
+menu116.addItem("Take Action", "/the-center/advocacy/take-action", "0");
+var menu211 = menu116.addMenu(menu116.items[2],0,0);
+menu211.addItem("Open Letter to Obama", "/the-center/advocacy/take-action/openr/advocacy/political-advocacy/thanks-chris", "0");
+menu116.addItem("Take Action", "/the-center/advocacy/take-action", "0");
+var menu211 = menu116.addM-letter-to-obama", "0");
+menu211.addItem("Merck MMR Campaign", "/the-center/advocacy/take-action/merck-mmr-campaign", "0");
+menu116.addItem("Collaborate", "/the-center/advocacy/collaborate", "0");
+menu54.addItem("Health Options", "/the-center/health-options", "0");
+var menu104 = menu54.addMenu(menu54.items[2],0,0);
+menu104.addItem("What Is Health?", "/the-center/health-options/whatishealth", "0");
+menu104.addItem("Food Changes Everything", "/the-center/health-options/food-changes-everything", "0");
+menu104.addItem("Homotoxicology", "/the-center/health-options/homotoxicology", "0");
+menu104.addItem("Homeoprophylaxis", "/the-center/health-options/homeoprophylaxis", "0");
+menu104.addItem("An Alternative Model", "/the-center/health-options/an-alternative-model", "0");
+menu104.addItem("Did You Know?", "/the-center/health-options/did-you-know", "0");
+var menu58 = ms.addMenu(document.getElementById("menu58"));
+ menu58.addItem("Quick Tips", "/getting-started/quick-tips", "0");
+var menu201 = menu58.addMenu(menu58.items[0],0,0);
+menu201.addItem("Vaccine Tips", "/getting-started/quick-tips/vaccine-tips", "0");
+menu201.addItem("Food Tips", "/getting-started/quick-tips/food-tips", "0");
+menu58.addItem("Quiz", "/getting-started/quiz", "0");
+menu58.addItem("More Support", "/getting-started/more-support", "0");
+menu58.addItem("Newsletter", "/getting-started/newsletter", "0"addItem("Food Tips", "/getting-started/quick-tips/food-tips", "0");
+menu58.addItem("Quiz", "/getting-started/quiz", "0");
+menu58.addItem("More Support);
+var menu198 = menu58.addMenu(menu58.items[3],0,0);
+menu198.addItem("Archived Newsletters", "/getting-started/newsletter/archived-newsletters", "0");
+menu58.addItem("Breaking News", "/getting-started/breaking-news", "0");
+var menu219 = menu58.addMenu(menu58.items[4],0,0);
+menu219.addItem("Archives", "/getting-started/breaking-news/archives", "0");
+var menu59 = ms.addMenu(document.getElementById("menu59"));
+ menu59.addItem("Forum", "/community/forum", "0");
+menu59.addItem("Blog", "/blog/", "0");
+menu59.addItem("Events", "/community/events/month.calendar/2015/1/7/-", "0");
+var menu148 = menu59.addMenu(menu59.items[2],0,0);
+menu148.addItem("Events Listing", "/community/events/events-listing", "0");
+menu59.addItem("Special Features", "/community/special-features", "0");
+var menu142 = menu59.addMenu(menu59.items[3],0,0);
+menu142.addItem("Personal Stories", "/community/special-features/personal-stories", "0");
+menu59.addItem("Video & Photos", "/community/videophotos", "0");
+function init() {
+if (TransMenu.isSupported()) {
+TransMenu.initialize();
+menu53.onactivate = function() {document.getElementById("menu53").className = "hover"; };
+ menu53.ondeactivate = function() {document.getElementById("menu53").className = ""; };
+ menu54.onactivate = function() {document.getElementById("menu54").className = "hover"; };
+ menu54.ondeactivate = function() {document.getElemenlassName = "hover"; };
+ menu53.ondeactivate = function() {document.getElementById("menu53").className = ""; };
+ menu54.onactivate = function() {documetById("menu54").className = ""; };
+ menu58.onactivate = function() {document.getElementById("menu58").className = "hover"; };
+ menu58.ondeactivate = function() {document.getElementById("menu58").className = ""; };
+ menu59.onactivate = function() {document.getElementById("menu59").className = "hover"; };
+ menu59.ondeactivate = function() {document.getElementById("menu59").className = ""; };
+ }}
+TransMenu.spacerGif = "http://lifehealthchoices.com/modules/mod_swmenufree/images/transmenu/x.gif";
+TransMenu.dingbatOn = "http://lifehealthchoices.com/modules/mod_swmenufree/images/transmenu/submenu-on.gif";
+TransMenu.dingbatOff = "http://lifehealthchoices.com/modules/mod_swmenufree/images/transmenu/submenu-off.gif"; 
+TransMenu.sub_indicator = true; 
+TransMenu.menuPadding = 0;
+TransMenu.itemPadding = 0;
+TransMenu.shadowSize = 2;
+TransMenu.shadowOffset = 3;
+TransMenu.shadowColor = "#888";
+TransMenu.shadowPng = "http://lifehealthchoices.com/modules/mod_swmenufree/images/transmenu/grey-40.png";
+TransMenu.backgroundColor = "#68AFCD";
+TransMenu.backgroundPng = "http://lifehealthchoices.com/modules/mod_swmenufree/images/transmenu/white-90.png";
+TransMenu.hideDelay = 600;
+TransMenu.slideTime = 300;
+TransMenu.selecthack = 1;
+TransMenu.autoposition = 1;
+TransMenu.renderAll();
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", init, false );
+ensmenu/white-90.png";
+TransMenu.hideDelay = 600;
+TransMenu.slideTime = 300;
+TransMenu.selecthack = 1;
+TransMenu.autoposition = 1;
+TransMenu.renderAll(lse if ( typeof window.attachEvent != "undefined" ) {
+window.attachEvent( "onload", init);
+}else{
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+init();
+}
+}else
+window.onload = init();
+}
+}
+-->
+</script>
+</div>
+
+<!--End swMenuFree menu module-->
+
+      </div>
+    </div>
+  </div>
+  <div id="containts">
+    <!--[if IE 7]> <div id="containts_holder"><![endif]-->
+    <!-- page structure like home/thechenter/.. -->
+        <div id="pathway">
+      <span class="breadcrumbs pathway">
+<a href="http://lifehealthchoices.com/" class="pathway">Home</a> <img src="/images/M_images/arrow.png" alt=""  /> <a href="/the-center" class="pathway">The Center</a> <img src="/images/M_images/arrow.png" alt=""  /> <a href="/the-center/education" class="pathway">Education</a> <img src="/images/M_images/arrow.png" alt=""  /> <a href="/the-center/education/vaccines" class="pathway">Vaccines</a> <img src="/images/M_images/arrow.png" alt=""  /> Shots: Plague, Flu &amp; You</span>
+
+    </div>
+        <!-- end page structure like home/thechenter/.. -->
+        <div id="center_column">       <br />
+      <br />
+              
+		                 
+<table class="contentpaneopen">
+
+
+
+<tr>
+<td valign="top">
+<div align="justify"><h1 class="tytneMCE_h2"><a href="http://orthomolecular.org/resources/omns/v05n05.shtmid="center_column">       <br />
+      <br />
+              
+		                 
+<table class="contentpaneopen">
+
+
+
+<tr>
+<td valign="top">
+<l" target="_blank">Shots Or Not?  The Plague, the Flu & You</a><br /></h1><p><span class="tytneMCE_p">Swine flu. Bird flu. The media has everyone worrying about epidemics and pandemics. Yet there is nothing said about one of the great communicable diseases of all time: the plague. The Black Death. No, it is not extinct. There are new cases of plague in the United States every year, totaling over 400 cases since 1950. </span></p> </div><p align="justify"><span class="tytneMCE_p">And yes, <a href="http://www.cdc.gov/mmwr/preview/mmwrhtml/00044836.htm" target="_blank">there is a vaccination for it</a>.</span>  </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">So have you had your plague shot?  </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">You haven't?  </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">Why isn't your doctor urging you to get one? Do you know anyone who has had a plague vaccination? Then why is there no plague epidemic? And why is vaccination supposedly the only way to stop a flu epidemic? </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">One proffered explanation is that the diseases are dissimilar, because influenza is viral, and plague is bacterial. But tetanus is bacterial, and we aggressively vaccinate against that. Indeed, the <a href="http://www.cdc.gov/ncytneMCE_p" align="justify">One proffered explanation is that the diseases are dissimilar, because influenza is viral, and plague is bacterial. But tetaird/dbd.htm" target="_blank">CDC</a> specifies a considerable number of <a href="http://www.cdc.gov/ncird/dbd.html#meningvpd" target="_blank">Vaccine Preventable Diseases</a> which are bacterial. These include, among others: anthrax, bacterial meningitis, diphtheria, Haemophilus influenzae serotype b, and, of course, pertussis (whooping cough). </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">Plague is not even on the CDC's list. Wait a minute! The Black Death, the disease that killed at least a quarter of Europe, hasn't even made the list of Vaccine Preventable Diseases? </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">Worldwide, there are over 2,000 cases, and hundreds of deaths, every year from the plague. In the United States, <a href="http://www.dhpe.org/infect/plague.html" target="_blank">human plague cases</a> average about 10 to 15 per year.  <a href="http://www.cdc.gov/ncidod/dvbid/plague/plagwest.htm" target="_blank">Most cases are in the Southwest</a>.  CDC states that "persons who have regular contact with wild rodents or their fleas" in areas in which plague has occurred should be vaccinated. That's right, it isn't just rats that carry the fleas that carry the plague. Squirrels, mice, rabbits, coyotes, woodchucks, cats and dogs all carry fleas. Fleas are found everywhere. Then why isn't plague everywheplague has occurred should be vaccinated. That's right, it isn't just rats that carry the fleas that carry the plague. Squirrels, mice, rabbits, coyotesre? </p><div align="justify"> </div><p align="justify"><span class="tytneMCE_p">One explanation is that plague is climate related. This map shows plague distribution in the US:  If incidence were related merely to the heat of the day, we might expect a fair share of plague cases in Florida, Georgia, Louisiana, and Alabama. But there aren't. If plague is temperature-dependent, it is a confusing illness to say the least: how come almost all USA cases are in the warm, dry Southwest and yet plague decimated Europe in the 1300s? Most of Europe is a lot cooler than the American southwest. Indeed, <a href="http://www.reuters.com/article/environmentNews/idUSL24636220080902" target="_blank">too warm a climate may actually stop the spread of plague</a>. </span> </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">Perhaps plague does not spread because disease-carrying insects don't migrate very much. You wish. Insects spread rather rapidly. The Japanese beetle is an example. First discovered in the US in 1916, and seemingly limited to a one-half square mile area, in less than five years it had <a href="http://www.mosquito.rutgers.edu/jb.htm" target="_blank">spread to 213 square miles of New Jersey</a>. In far less than a human lifetime, these insects took over twenty states, from Maine to Montana to South Carolina. Insects are everywhere. That does ef="http://www.mosquito.rutgers.edu/jb.htm" target="_blank">spread to 213 square miles of New Jersey</a>. In far less than a human lifetime, these insecnot exclude fleas. </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">Unfortunately, rats have spread everywhere, too. No major city, town or farm is free of them.  </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">What is striking about the plague is that it is still around and practically no one gets it. One must keep in mind that this disease killed 50 million people. Eventually, the great Black Death epidemics ended. Somehow. The epidemics were not stopped by killing every flea, every rodent or every house pet. The epidemics were not stopped by antibiotics, nor were the epidemics stopped by mass vaccination. Neither were available. </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">So if you, and the entire population of the USA, are not vaccinated against the plague, why doesn't it spread now in 2009 the way it spread in the past, killing at least one in four? </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">Generally, improved sanitation and improved nutrition are credited with such a victory.  </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">If these work with plague, they might make a rather big impact on the flu.   </p><div align="justify"> </div><p align="justify"><span class="tytneMCE_p">Flu shots can have serious side effects. Perhaps even more impv><p class="tytneMCE_p" align="justify">If these work with plague, they might make a rather big impact on the flu.   </p><div align="justify"> </div><ortantly, they are <a href="http://orthomolecular.org/resources/omns/v04n17.shtml" target="_blank">largely ineffective</a>. </span>  </p><div align="justify"> </div><p align="justify"><span class="tytneMCE_p">There is a ready alternative: to build up our immune systems, we can utilize large, orthomolecular doses of nutrients. Vitamin D, niacin, thiamine (vitamin B1), and vitamin C reduce the duration and severity of influenza. Many physicians consider <a href="http://orthomolecular.org/resources/omns/v01n12.shtml" target="_blank">high doses of vitamin C to be so powerful an antiviral</a> that it may be considered the "other" immunization for a variety influenza strains. <a href="http://orthomolecular.org/resources/omns/v01n12.shtml" target="_blank"></a></span>  </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">Flu shots are big news, and not a few would say that they are big business. But there has been no governmental push whatsoever for plague vaccination. </p><div align="justify"> </div><p class="tytneMCE_p" align="justify">How come we supposedly need the one shot, and not the other?   </p><div align="justify">  <!-- <p><b>References:</b></p> <p>(1) Bronstein AC, Spyker DA, Cantilena LR Jr, Green JL, Rumack BH, Heard SE; American Association of Poison Control Centers. 2007 Annual Report of the American Association of Poison Control C   </p><div align="justify">  <!-- <p><b>References:</b></p> <p>(1) Bronstein AC, Spyker DA, Cantilena LR Jr, Green JL, Rumack BH, Heard SE; American Asenters' National Poison Data System (NPDS): 25th Annual Report. Clin Toxicol (Phila). 2008 Dec;46(10):927-1057. Full text article available for free download at <a href="http://www.aapcc.org/DNN/Portals/0/NPDS%20reports/2008%20AAPCC%20Annual%20Report.pdf" target="_blank">http://www.aapcc.org/DNN/Portals/0/NPDS%20reports/2008%20AAPCC%20Annual%20Report.pdf</a> Vitamins statistics are found in Table 22B, journal pages 1027-1028. Minerals are in the same table, page 1024. </p> </p>  <p><b>For Further Reading:</b></p> <p> Download any Annual Report of the American Association of Poison Control Centers from 1983-2007 free of charge at: <a href="http://www.aapcc.org/dnn/NPDS/AnnualReports/tabid/125/Default.aspx" target="_blank">http://www.aapcc.org/dnn/NPDS/AnnualReports/tabid/125/Default.aspx</a> The "Vitamin" category is usually near the very end of the report.  </p> -->    <!-- <p><b>For more information:</b> <br /><br /> <br /><br /> <br /><br /> </p> -->  </div><p align="justify"><strong>Nutritional Medicine is Orthomolecular Medicine</strong></p><div align="justify"> </div><p align="justify"><span class="tytneMCE_p">Orthomolecular medicine uses safe, effective nutritional therapy to fight illness. </span> </p><div align="justify">  </div><p class="tytneMCE_p" align="justify">The peer-reviewed <a href="http://www.orthomolecular.org" target="_blank">OrthomolecueMCE_p">Orthomolecular medicine uses safe, effective nutritional therapy to fight illness. </span> </p><div align="justify">  </div><p class="tytneMCElar Medicine News Service</a> is a non-profit and non-commercial informational resource. <a href="http://www.orthomolecular.org/forms/omns_subscribe.shtml" target="_blank">Subscribe</a>, at no charge. <a href="http://orthomolecular.org/resources/omns/index.shtml " target="_blank">OMNS archives</a>.</p><div align="justify">    </div><p align="justify"><strong>Editorial Review Board:</strong></p><div align="justify"> </div><p class="tytneMCE_p" align="justify">Carolyn Dean, M.D., N.D. <br />Damien Downing, M.D.  <br />Michael Gonzalez, D.Sc., Ph.D. <br />Steve Hickey, Ph.D.  <br />James A. Jackson, PhD <br />Bo H. Jonsson, MD, Ph.D <br />Thomas Levy, M.D., J.D.  <br />Jorge R. Miranda-Massari, Pharm.D. <br />Erik Paterson, M.D.  <br />Gert E. Shuitemaker, Ph.D. </p><div align="justify">  </div><p align="justify"><strong>Andrew W. Saul, Ph.D., Editor and contact person: 
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy70130 = '&#111;mns' + '&#64;';
+ addy70130 = addy70130 + '&#111;rth&#111;m&#111;l&#101;c&#117;l&#97;r' + '&#46;' + '&#111;rg';
+ document.write( '<a ' + path + '\'' + prefix + ':' + addy70130 + '\'>' );
+ document.write( addy70130 );
+ document.write( '<\/a>' );
+ //-->\n </script> <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.w&#97;r' + '&#46;' + '&#111;rg';
+ document.write( '<a ' + path + '\'' + prefix + ':' + addy70130 + '\'>' );
+ document.write( addy70130 );
+ document.wririte( '<span style=\'display: none;\'>' );
+ //-->
+ </script>This e-mail address is being protected from spambots. You need JavaScript enabled to view it
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '</' );
+ document.write( 'span>' );
+ //-->
+ </script> </strong></p><div align="justify"><span class="tytneMCE_p">Reprinted with permission from the Orthomolecular Medicine News Service</span><span class="tytneMCE_p"><strong><br /></strong>October 27, 2009<strong><br /></strong><a href="http://www.orthomolecular.org/subscribe.html" target="new"></a></span></div></td>
+</tr>
+
+</table>
+<span class="article_separator">&nbsp;</span>
+
+               	 		
+    </div>
+    <!-- right coloum start -->
+    <div id="right_column" >
+      <div class="div_seperate_top_inner">
+        
+      </div>
+           <!-- <div id="right_footer" style="padding:0px; margin:0px;" >&nbsp;</div>-->
+            <div class="rightcontents">
+        <table border="0" cellspacing="2" cellpadding="1">
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://www.lifehealthchoices.com/templates/vax/images/right.jpg" width="43" height="54" /></td>
+            <td valign="top"><div style="padding-top:8px;" ><span class="rightcontents_heading_quote">Overwhelmed?</span> <br />
+              &nbsp;<a href="http://www.lifehealthchoices.comtemplates/vax/images/right.jpg" width="43" height="54" /></td>
+            <td valign="top"><div style="padding-top:8px;" ><span class="rightcontents/getting-started/quick-tips" class="toplinkhead1">Click here</a> for some quick tips</div> </td>
+          </tr>
+        </table>
+      </div>
+      <div class="rightcontents">
+        <table border="0" cellspacing="2" cellpadding="1">
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://www.lifehealthchoices.com/templates/vax/images/tick.jpg" width="43" height="54"/></td>
+            <td valign="top"><div style="padding-top:8px;" ><span class="rightcontents_heading_quote">What's Your IQ?</span>
+              &nbsp;&nbsp;<table width="100%" border="0" cellpadding="0" cellspacing="1"><tr><td nowrap="nowrap"><a href="http://www.lifehealthchoices.com/getting-started/quiz" class="mainlevel" >Take a quiz and find out</a></td></tr></table></div> </td>
+          </tr>
+        </table>
+      </div>
+	   <div class="rightcontents">
+        <table border="0" cellspacing="2" cellpadding="1">
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://www.lifehealthchoices.com/templates/vax/images/pazzlepieces.jpg" /></td>
+            <td valign="top" ><div style="padding-top:8px;" ><span class="rightcontents_heading_quote">Take Action</span><br />
+               &nbsp;<a href="http://www.lifehealthchoices.com/the-center/advocacy/take-action" class="toplinkhead1">Click here </a></div>  </td>
+          </tr>
+        </tabop:8px;" ><span class="rightcontents_heading_quote">Take Action</span><br />
+               &nbsp;<a href="http://www.lifehealthchoices.com/the-centele>
+      </div>
+	   <div class="rightcontents">
+        <table border="0" cellspacing="2" cellpadding="1">
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://www.lifehealthchoices.com/templates/vax/images/swinflu.jpg" /></td>
+            <td valign="top" ><div style="padding-top:8px;" ><span class="rightcontents_heading_quote">Swine Flu Alert</span><table width="100%" border="0" cellpadding="0" cellspacing="1"><tr><td nowrap="nowrap"><a href="/swine-flu-alert-2" class="mainlevel" >What was it all about?</a></td></tr></table></div></td>
+          </tr>
+        </table>
+      </div>
+     <div class="rightcontents">
+        <table border="0" cellpadding="1" cellspacing="2">
+          <tr>
+            <td width="57" align="right"    valign="top"><img src="http://www.lifehealthchoices.com/templates/vax/images/diploma.gif" width="43" height="54" /></td>
+            <td width="170"  valign="top"><div style="padding-top:8px;" ><span class="rightcontents_heading_quote">Professionals Only</span><table width="100%" border="0" cellpadding="0" cellspacing="1"><tr><td nowrap="nowrap"><a href="/health-practitioners" class="mainlevel" >Health Practitioners</a></td></tr></table></div>
+            </td>
+          </tr>
+        </table>
+      </div>	  <div class="rightcontents_quotes">
+        <table cellpadding="0" cellspacing="0" bord href="/health-practitioners" class="mainlevel" >Health Practitioners</a></td></tr></table></div>
+            </td>
+          </tr>
+        </tableer="0" width="100%;">
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td class="rightcontents_heading_quote" style="padding-top:10px;">Quote of the week</td>
+          </tr>
+        </table>
+      </div>
+      <div class="rightcontents_quotes_middle" >
+        <table width="width:180px"  cellpadding="0" cellspacing="
+	  " border="0">
+          <tr>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td style="padding-right:8px; padding-left:10px;;"><b><br />"Life and health are about choices." <br /><br />- Suzanne Somers, Knockout, page 5</td>
+          </tr>
+        </table>
+      </div>
+      <div class="rightcontents_quotes_bottom">&nbsp;</div>
+	  	   <div  style=" float:right; width:180px; padding-right:35px;"><br /><div class="bannergroup_rightbanner">
+
+<div class="banneritem_rightbanner"><a href="/component/banners/click/25" target="_blank"><img src="http://lifehealthchoices.com/images/banners/ncpa.jpg" alt="Banner" /></a><div class="clr"></div>
+	</div>
+
+</div></div>
+	    <div  style=" float:right; width:180px; padding-right:35px;"><br /><a href="/component/rd_rss/?id=1"> <img src="/images/M_images/feed-48x48.png" border="0" alt="RSS Feed" /></a></div>
+      <!--[if IE 7]> </div><![endif]-->	  div>
+
+</div></div>
+	    <div  style=" float:right; width:180px; padding-right:35px;"><br /><a href="/component/rd_rss/?id=1"> <img src="/images/M_i
+    </div>
+  </div>
+    <div style="clear:both;">
+    <table align="center">
+      <tr>
+        <td><div class="bannergroup_bannerfooter">
+
+
+</div></td>
+      </tr>
+    </table>
+  </div>
+    <div id="footer">
+    <div id="footer_left"></div>
+    <div id="footer_center">
+      <table cellpadding="0" cellspacing="0" border="0" align="center"  >
+        <tr>
+          <td align="center"><table width="100%" border="0" cellpadding="0" cellspacing="1"><tr><td nowrap="nowrap"><a href="http://www.lifehealthchoices.com/" class="mainlevel_bottom" >Home</a><span class="mainlevel_bottom"> | </span><a href="/life-health-choices" class="mainlevel_bottom" >Life Health Choices</a><span class="mainlevel_bottom"> | </span><a href="/the-center" class="mainlevel_bottom" >The Center</a><span class="mainlevel_bottom"> | </span><a href="/community" class="mainlevel_bottom" >Community</a><span class="mainlevel_bottom"> | </span><a href="/getting-started" class="mainlevel_bottom" >Getting Started</a><span class="mainlevel_bottom"> | </span><a href="/contactus" class="mainlevel_bottom" >Contact</a><span class="mainlevel_bottom"> | </span><a href="/donate" class="mainlevel_bottom" >Donate</a><span class="mainlevel_bottom"> | </span><a href="/mediaphotos" class="mainlevel_bottom" >Video/Photos</a><span class="mainlevel_bottom"> | </span><a href="/our-friends" class="mevel_bottom"> | </span><a href="/donate" class="mainlevel_bottom" >Donate</a><span class="mainlevel_bottom"> | </span><a href="/mediaphotos" class="maainlevel_bottom" >Our Friends</a><span class="mainlevel_bottom"> | </span><a href="/privacy" class="mainlevel_bottom" >Privacy</a><span class="mainlevel_bottom"> | </span><a href="/sitemap" class="mainlevel_bottom" >Sitemap</a></td></tr></table></td>
+        </tr>
+        <tr>
+          <td align="center">&copy;2009 Life Health Choices, LLC. All rights reserved. <span style="text-decoration:underline"><a href="http://lifehealthchoices.com/privacy" style="text-decoration:underline" >Full disclaimer</a></span> Design by <a href="http://www.asenka.com" target="_blank" class="bottomlinkhead">Asenka</a>. Developed by <a href="http://www.india-web-designers.com" title="Joomla Integration by India web designers" class="bottomlinkhead">Integerz</a></td>
+        </tr>
+      </table>
+    </div>
+    <div id="footer_right"></div>
+  </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10015884-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>t + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10015884-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</b

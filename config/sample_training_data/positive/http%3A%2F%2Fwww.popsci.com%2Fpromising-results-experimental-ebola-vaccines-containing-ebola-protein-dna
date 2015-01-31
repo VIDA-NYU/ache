@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="media: http://search.yahoo.com/mrss/
+atom: http://www.w3.org/2005/Atom
+content: http://purl.org/rss/1.0/modules/content/
+dc: http://purl.org/dc/terms/
+foaf: http://xmlns.com/foaf/0.1/
+og: http://ogp.me/ns#
+rdfs: http://www.w3.org/2000/01/rdf-schema#
+sioc: http://rdfs.org/sioc/ns#
+sioct: http://rdfs.org/sioc/types#
+skos: http://www.w3.org/2004/02/skos/core#
+xsd: http://www.w3.org/2001/XMLSchema#
+">
+  <head>
+    <meta charset="utf-8" />
+<meta property="fb:admins" content="https://www.facebook.com/auddev.bonniercorp" />
+<link rel="shortlink" href="http://www.popsci.com/node/223255" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<meta property="og:site_name" content="Popular Science" />
+<link rel="canonical" href="http://www.popsci.com/promising-results-experimental-ebola-vaccines-containing-ebola-protein-dna" />
+<meta property="og:type" content="article" />
+<link rel="shortcut icon" href="http://www.popsci.com/sites/popsci.com/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="twitter:url" content="http://www.popsci.com/promising-results-experimental-ebola-vaccines-containing-ebola-protein-dna" />
+<meta name="twitter:site" content="@popsci" />
+<meta property="og:url" content="http://www.popsci.com/promising-results-experimental-ebola-vaccines-containing-ebola-protein-dna" />
+<meta name="twitter:domain" content="http://www.popsci.com" />
+<meta name="twitter:image:src" content="http://www.popsci.com/sites/popsci.com/files/ebola-vaccine.jpg" />
+<meta property="article:publisher" content="https://www.facebook.com/PopSci" />
+<meta name="apple-itunes-app" content="app-id=364049283, affiliate-data=11l9Mn" />
+<meta name="com.silverpop.cothost" content="engage3.silverpop.com" />
+<meta name="com.silverpop.brandeddomains" content="www.pages03.net,atvrideronline.com,baggersmag.com,boatingmag.com,cruisingworld.com,cycleworld.com,dirtrider.com,flyingmag.com,hotbikeweb.com,marlinmag.com,marlinuniversity.com,motorcyclecruiser.com,motorcyclistonline.com,productdesign-biz.com,sailingworld.com,saltwatersportsman.com,sportfishingmag.com,sportrider.com,streetchoppermag.com,superstreetbike.com,www.atvrideronline.com,www.baggersmag.com,www.boatingmag.com,www.cruisingworld.com,www.cycleworld.com,www.dirtrider.com,www.flyingmag.com,www.hotbikeweb.com,www.marlinmag.com,www.marlinuniversity.com,www.motorcyclecruiser.com,www.motorcyclistonline.com,www.productdesign-biz.com,www.sailingworld.com,www.saltwatersportsman.com,www.sportfishingmag.com,www.sportrider.com,www.streetchoppermag.com,www.superstreetbike.com,www.yachtingmagazine.com,yachtingmagazine.com,www.popsci.com,popsci.com
+" />
+<meta name="description" content="A study of an experimental vaccine against Ebola has shown promising results in volunteers in Uganda." />
+<meta property="og:title" content="Promising Results For Experimental Ebola Vaccine" />
+<meta name="twitter:title" content="Promising Results For Experimental Ebola Vaccine" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="http://www.popsci.com/sites/popsci.com/files/ebola-vaccine.jpg" />
+<meta property="og:description" content="Studies of more potent versions of the vaccine are already underway" />
+<meta name="twitter:description" content="A study of an experimental vaccine against Ebola has shown promising results in volunteers in Uganda." />
+    <title>Promising Results For Experimental Ebola Vaccine | Popular Science</title>
+    <link type="text/css" rel="stylesheet" href="http://www.popsci.com/sites/popsci.com/files/css/css_791YXBaKKm1ORM_7huSKEsIV9tSWq6wmRkERhuXpN6w.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.popsci.com/sites/popsci.com/files/css/css_apBXwwD-gSHn_u-JXhgRghnQr46i7tw674C2pWiok3o.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.popsci.com/sites/popsci.com/files/css/css_k8VkjPMhX-oumsO8aGTZDKX2qyK2N9hZVbio2tp-4GI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.popsci.com/sites/popsci.com/files/css/css_kluUv-xXPwDBeOSnAYh_tFWpoc-J1Q3hopOd8udbHkE.css" media="all" />
+    <script type="text/javascript" src="http://www.popsci.com/sites/popsci.com/files/js/js_zzcIWOou_jnX0ZWAIA4sb6Xy_p5a8FZNA0GySvuWjPU.js"></script>
+<script type="text/javascript" src="http://www.popsci.com/sites/popsci.com/files/js/js_KgCNQm_jdlbuilvxNQyCuzPIxbaHFd56Yhs0Gn31sJo.js"></script>
+<script type="text/javascript" src="http://www.popsci.com/sites/popsci.com/files/js/js_yyhXo4H68fBOApKt9GjtaB4FETMuG7r2gNvOROZ8Hjs.js"></script>
+<script type="text/javascript" src="http://www.popsci.com/sites/popsci.com/files/js/js_-JxhQSUW81p1XU4iTP5Wo38cVjis8GeJvKNpS_FEYNY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+  (function () {
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = '//' + ('https:' === document.location.protocol ? 's' : 'i') + '.po.st/share/script/post-widget.js';
+    var x = document.getElementsByTagName("script")[0];
+    x.parentNode.insertBefore(s,x);
+  })();
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+deviceRec.trackName = document.title;
+deviceRec.trackUrl = document.location.href;
+deviceRec.displayValues = false;
+deviceRec.init();
+jQuery(window).load(function(){csTracking.init()});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(
+    Drupal.settings, {
+      "clickstream_tracking" : {
+        "mobile" : deviceRec.mobileBrowser, 
+        "device" : deviceRec.device
+      }
+    }
+    )
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.popsci.com/sites/popsci.com/files/js/js_yitBWolTezDDCpau45g5JRozh2XxaocG8khetB12zcM.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","pathToTheme":"sites\/popsci.com\/themes\/bonnier_theme","ajaxPageState":{"theme":"bonnier_theme","theme_token":"VBgSfoTeRh0S7KxZBu1ckEApn_YVbLiSm5eU6MjrXmc","js":{"sites\/popsci.com\/modules\/bonnier\/track_click\/js\/tracking.js":1,"sites\/popsci.com\/modules\/contrib\/jquery_update\/replace\/jquery\/1.5\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/popsci.com\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/popsci.com\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/popsci.com\/modules\/contrib\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/popsci.com\/modules\/contrib\/borrowed_pane\/js\/borrowed-pane.js":1,"sites\/popsci.com\/modules\/bonnier\/post_social\/js\/post_social.js":1,"sites\/popsci.com\/modules\/bonnier\/silverpop_engage\/js\/silverpop_engage.js":1,"sites\/popsci.com\/modules\/bonnier\/smartapp_banners\/js\/smartapp_banners.js":1,"sites\/popsci.com\/modules\/bonnier\/user_contest\/js\/user_contest.js":1,"sites\/popsci.com\/modules\/contrib\/gpt\/js\/gpt.js":1,"sites\/popsci.com\/modules\/bonnier\/bonnier_ads_circ\/js\/bonnier_ads_circ.js":1,"misc\/progress.js":1,"sites\/popsci.com\/modules\/contrib\/ctools\/js\/modal.js":1,"sites\/popsci.com\/modules\/contrib\/modal_forms\/js\/modal_forms_popup.js":1,"sites\/popsci.com\/modules\/contrib\/panels\/js\/panels.js":1,"sites\/popsci.com\/modules\/bonnier\/bonnier_analytics\/providers\/clickstream_tracking\/js\/device_recognition.js":1,"sites\/popsci.com\/modules\/bonnier\/bonnier_analytics\/providers\/clickstream_tracking\/js\/clickstream_tracking.js":1,"sites\/popsci.com\/modules\/bonnier\/bonnier_analytics\/providers\/omniture\/js\/omniture.js":1,"sites\/popsci.com\/modules\/bonnier\/solr_client_form\/js\/solr_client_form.js":1,"sites\/popsci.com\/libraries\/lodash\/lodash.compat.min.js":1,"sites\/popsci.com\/modules\/bonnier\/bonnier_publications\/js\/bonnier_publications.js":1,"sites\/popsci.com\/modules\/bonnier\/genesis_media\/genesis_media.js":1,"sites\/popsci.com\/modules\/bonnier\/in_content_ads\/js\/in-content-ads.js":1,"sites\/popsci.com\/modules\/bonnier\/beg_video\/js\/beg_video_front_end.js":1,"sites\/popsci.com\/modules\/bonnier\/infinite_scroll\/infinite_scroll.js":1,"0":1,"1":1,"2":1,"sites\/popsci.com\/themes\/bonnier_theme\/js\/libraries\/jquery.html5.js":1,"sites\/popsci.com\/themes\/bonnier_theme\/js\/libraries\/jquery.unveil.js":1,"sites\/popsci.com\/themes\/bonnier_theme\/js\/libraries\/jquery.flexslider.js":1,"sites\/popsci.com\/themes\/bonnier_theme\/js\/libraries\/jquery.colorbox.js":1,"sites\/popsci.com\/themes\/bonnier_theme\/js\/libraries\/jquery.history.js":1,"sites\/popsci.com\/themes\/bonnier_theme\/js\/libraries\/responsive-video.js":1,"sites\/popsci.com\/themes\/bonnier_theme\/js\/libraries\/bonnier.js":1,"sites\/popsci.com\/themes\/bonnier_theme\/js\/structure.js":1,"sites\/popsci.com\/themes\/bonnier_theme\/js\/carousels.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/popsci.com\/modules\/bonnier\/bonnier_publications\/theme\/bonnier_publications.css":1,"modules\/comment\/comment.css":1,"sites\/popsci.com\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/popsci.com\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/popsci.com\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/popsci.com\/modules\/bonnier\/user_contest\/css\/user_contest.css":1,"sites\/popsci.com\/modules\/contrib\/views\/css\/views.css":1,"sites\/popsci.com\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/popsci.com\/modules\/contrib\/ctools\/css\/modal.css":1,"sites\/popsci.com\/modules\/contrib\/modal_forms\/css\/modal_forms_popup.css":1,"sites\/popsci.com\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/popsci.com\/modules\/contrib\/typogrify\/typogrify.css":1,"sites\/popsci.com\/themes\/bonnier_theme\/layouts\/bonnier\/content_basic_sidebar\/content_basic_sidebar.css":1,"sites\/popsci.com\/themes\/bonnier_theme\/layouts\/bonnier\/site_layout\/site_layout.css":1,"sites\/popsci.com\/themes\/bonnier_theme\/layouts\/bonnier\/content_onecol\/content_onecol.css":1,"sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_social.css":1,"sites\/popsci.com\/themes\/bonnier_theme\/layouts\/bonnier\/content_twocol\/content_twocol.css":1,"sites\/popsci.com\/themes\/bonnier_theme\/shared\/css\/shared.css":1,"sites\/popsci.com\/themes\/bonnier_theme\/css\/colorbox.css":1,"sites\/popsci.com\/themes\/bonnier_theme\/css\/structure.css":1}},"bonnier_ads_circ":{"server":"http:\/\/cas.bonniercorp.com","account":"PSC","ad_blocks":[]},"CToolsModal":{"loadingText":"Loading...","closeText":"Close Window","closeImage":"\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022Close window\u0022 title=\u0022Close window\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022Close window\u0022 title=\u0022Close window\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 \/\u003E\u003C\/noscript\u003E","throbber":"\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022Loading\u0022 title=\u0022Loading...\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022Loading\u0022 title=\u0022Loading...\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 \/\u003E\u003C\/noscript\u003E"},"modal-popup-small":{"modalSize":{"type":"fixed","width":300,"height":300},"modalOptions":{"opacity":0.85,"background":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 \/\u003E\u003C\/noscript\u003E","closeText":"Close"},"modal-popup-medium":{"modalSize":{"type":"fixed","width":550,"height":450},"modalOptions":{"opacity":0.85,"background":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 \/\u003E\u003C\/noscript\u003E","closeText":"Close"},"modal-popup-large":{"modalSize":{"type":"scale","width":0.8,"height":0.8},"modalOptions":{"opacity":0.85,"background":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 \/\u003E\u003C\/noscript\u003E","closeText":"Close"},"trackClick":[{"n":"Logo","s":".main-header  #logo","c":"dom=psc\u0026loc=headerlogo"},{"n":"Main nav","s":".main-nav li:nth-last-child(n+1) a","c":"dom=psc\u0026loc=mainnav\u0026lnk=%"},{"n":"Corporate Links Hamburger Menu","s":".corporate-nav li:nth-child(n) a","c":"dom=psc\u0026loc=hamburger\u0026lnk=%"},{"n":"Content Links Hamburger Menu","s":".hamburger-nav li:nth-child(n) a","c":"dom=psc\u0026loc=hamburger\u0026lnk=%"},{"n":"Email Social Hamburger Menu","s":".social-nav li.first a","c":"dom=psc\u0026loc=hamburger\u0026lnk=email"},{"n":"FB Social Hamburger Menu","s":".social-nav li:eq(10) a","c":"cmpid=fbhamburger"},{"n":"Tw Social Hamburger Menu","s":".social-nav li:eq(11) a","c":"cmpid=twhamburger"},{"n":"Gplus Social Hamburger Menu","s":".social-nav li:eq(12) a","c":"cmpid=gphamburger"},{"n":"Instagram Social Hamburger Menu","s":".social-nav li:eq(13) a","c":"cmpid=ighamburger"},{"n":"Tumblr Social Footer","s":".social-nav li:eq(14) a","c":"cmpid=tmhamburger"},{"n":"Pinterest Social Hamburger Menu","s":".social-nav li:eq(15) a","c":"cmpid=pinhamburger"},{"n":"YouTube Social Hamburger Menu","s":".social-nav li:eq(16) a","c":"cmpid=ythamburger"},{"n":"RSS Social Hamburger Menu","s":".social-nav li:eq(17) a","c":"cmpid=rsshamburger"},{"n":"Fb Social Header","s":".social-icons .item-list li:eq(0) a","c":"cmpid=fbheader"},{"n":"Footer Links - subs","s":".first.leaf.menu-mlid-907 a","c":"dom=psc\u0026loc=footer\u0026lnk=%"},{"n":"Footer Links","s":".main-footer .menu li:nth-child(n) a","c":"dom=psc\u0026loc=footer\u0026lnk=%"},{"n":"TW Social Header","s":".social-icons .item-list li:eq(1) a","c":"cmpid=twheader"},{"n":"Gplus Social Header","s":".social-icons .item-list li:eq(2) a","c":"cmpid=gpheader"},{"n":"1st Home Page Content Well","s":".field-page-sections.headlines a","c":"dom=psc\u0026loc=contentwell\u0026lnk=%"},{"n":"Editor\u0027s Picks","s":".full-cell.cell.listing-cell.titles-three-of-three a","c":"dom=psc\u0026loc=editorspicks\u0026lnk=%"},{"n":"DIY\/Projects","s":".full-cell.cell.listing-cell.titles-two-of-three a","c":"dom=psc\u0026loc=diyprojects\u0026lnk=%"},{"n":"Ask Anything","s":".full-cell.cell.listing-cell.titles-one-of-three a","c":"dom=psc\u0026loc=askanything\u0026lnk=%"},{"n":"Remaining Home Page Content Well","s":".custom-section.listing-cell a","c":"dom=psc\u0026loc=contentwell\u0026lnk=%"},{"n":"Top story","s":".field-page-sections a","c":"dom=psc\u0026loc=topstory\u0026lnk=%"}],"bonnier_analytics":{"analytics":{"domain":"bonniercorp.local","property":"UA-44713841-1"},"comscore":{"c1":"2","c2":"6035029","pageviewPath":"sites\/popsci.com\/modules\/bonnier\/bonnier_analytics\/providers\/comscore\/js\/comscore-pageview.php"},"omniture":{"settings":{"s_account":"bonndev","page_name":"devsite","dynamic_account_list":"timepopsci=http:\/\/www.popsci.com, timepopsci=https:\/\/www.popsci.com","link_track_vars":"","link_track_events":"","link_form_list":"","var_used":"","event_list":"","ignore_vocab":"","scode_path":"","tracking_server":"","visitor_migration_server":"","visitor_migration_key":"","link_internal_filters":"","ignore_query_string":"dom,loc,lnk","file":"http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/bonnier_analytics\/providers\/omniture\/js\/s_code.js"},"omniture":{"omid":"101","key_value":"basic_content","name":"Basic Content","conditions":{"nodetype":["basic_content"]},"weight":"4","date_modified":"1410189298","scode":{"s.channel":{"spid":"1","name":"s.channel","description":"Section channel","weight":"0","enabled":"1","system":"1","value":"[node:field_primary_channel]","output":"\u0022health\u0022;\n"},"s.pageName":{"spid":"2","name":"s.pageName","description":"Page name","weight":"1","enabled":"1","system":"1","value":"[node:field_primary_channel]:[node:title]","output":"\u0022health:promising results for experimental ebola vaccine\u0022;\n"},"s.prop2":{"spid":"3","name":"s.prop2","description":"Author name","weight":"2","enabled":"1","system":"1","value":"[node:field_author]","output":"\u0022francie diep\u0022;\n"},"s.prop3":{"spid":"4","name":"s.prop3","description":"Article tags","weight":"3","enabled":"1","system":"1","value":"[node:field_tags]","output":"\u0022ebola, vaccines, dna, health\u0022;\n"},"s.prop4":{"spid":"5","name":"s.prop4","description":"Usually the node type, section, subsection, article, contest, site","weight":"4","enabled":"1","system":"1","value":"[node:content-type]","output":"\u0022basic content\u0022;\n"},"s.prop16":{"spid":"6","name":"s.prop16","description":"Sub section","weight":"5","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop5":{"spid":"7","name":"s.prop5","description":"Sponsor Name","weight":"6","enabled":"1","system":"1","value":"[omni:sponsor]","output":"\u0022\u0022;\n"},"s.prop8":{"spid":"8","name":"s.prop8","description":"SOLR Facets","weight":"7","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop18":{"spid":"9","name":"s.prop18","description":"Term being search on the result page","weight":"8","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop20":{"spid":"10","name":"s.prop20","description":"Number of results","weight":"9","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.pageType":{"spid":"11","name":"s.pageType","description":"Used ONLY on error page","weight":"10","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.events":{"spid":"12","name":"s.events","description":"Webform thank you page","weight":"11","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop14":{"spid":"16","name":"s.prop14","description":"Media location","weight":"17","enabled":"1","system":"1","value":"[omni:content:media_location]","output":"\u0022\u0022;\n"},"s.prop6":{"spid":"13","name":"s.prop6","description":"Custom Attribute type","weight":"20","enabled":"1","system":"1","value":"[omni:content:attribute]","output":"\u0022article, infinite scroll\u0022;\n"},"s.prop13":{"spid":"14","name":"s.prop13","description":"Gallery count","weight":"20","enabled":"1","system":"1","value":"[omni:content:gallery_count]","output":"\u0022\u0022;\n"},"s.prop7":{"spid":"15","name":"s.prop7","description":"Comma delimited prop","weight":"20","enabled":"1","system":"1","value":"[omni:content:attribute]","output":"\u0022article, infinite scroll\u0022;\n"},"s.prop61":{"spid":"17","name":"s.prop61","description":"User ID of content","weight":"25","enabled":"1","system":"1","value":"[node:author]","output":"\u0022fcdiep\u0022;\n"},"s.prop66":{"spid":"18","name":"s.prop66","description":"Published date in MM-DD-YY","weight":"26","enabled":"1","system":"1","value":"[node:created:custom:m-d-y]","output":"\u002212-23-14\u0022;\n"}}},"pass_thru":2,"scode_array":{"s.channel":"\u0022health\u0022;\n","s.pageName":"\u0022health:promising results for experimental ebola vaccine\u0022;\n","s.prop2":"\u0022francie diep\u0022;\n","s.prop3":"\u0022ebola, vaccines, dna, health\u0022;\n","s.prop4":"\u0022basic content\u0022;\n","s.prop16":"\u0022\u0022;\n","s.prop5":"\u0022\u0022;\n","s.prop8":"\u0022\u0022;\n","s.prop18":"\u0022\u0022;\n","s.prop20":"\u0022\u0022;\n","s.pageType":"\u0022\u0022;\n","s.events":"\u0022\u0022;\n","s.prop14":"\u0022\u0022;\n","s.prop6":"\u0022article, infinite scroll\u0022;\n","s.prop13":"\u0022\u0022;\n","s.prop7":"\u0022article, infinite scroll\u0022;\n","s.prop61":"\u0022fcdiep\u0022;\n","s.prop66":"\u002212-23-14\u0022;\n"}},"quantcast":{"account":"p-cafODhhaQOlCs"}},"gpt":{"network_code":"6747\/n6747.popsci","targeted_ad_unit":"health","async":1,"sra":0,"collapse":1,"refresh":0,"targeting":{"remnant":[{"value":"yes","eval":0}],"device":[{"value":"drupalsettingsclickstream_trackingdevice","eval":"1"}],"site":[{"value":"popsci","eval":0}],"id":[{"value":"223255","eval":false}],"kw":[{"value":"Ebola","eval":false},{"value":"dna","eval":false},{"value":"vaccines","eval":false},{"value":"Health","eval":false}]},"pageLevelTargeting":false},"silverpop_engage":{"silverpop_engage_src":"http:\/\/contentz.mkt932.com\/lp\/static\/js\/iMAWebCookie.js?10e3816-115da282854-f528764d624db129b32c21fbca0cb8d6\u0026h=www.pages03.net"},"smartapp_banners":{"smartapp_banners_enabled":1,"smartapp_banners_iphone":0,"smartapp_banners_ipad":1,"smartapp_banners_app_id":"364049283","smartapp_banners_g":"C5F1C470-1DF3-4882-906A-06DBB2F7D248","smartapp_banners_src":"https:\/\/www.emagazines.com\/insight\/javascript\/emags_fingerprint.js","module_path":"sites\/popsci.com\/modules\/bonnier\/smartapp_banners"},"inContentAds":{"unit":"in_content","selector":".field-body","ad":{"outofpage":0,"refresh":0,"size":{"0":[[300,250]],"1000":null},"targeting":{"pos":[{"value":"in_content","eval":0}]}}},"infiniteScroll":{"items":[{"time":"1419363000","type":"node","id":"223255","url":"\/promising-results-experimental-ebola-vaccines-containing-ebola-protein-dna","title":"Promising Results For Experimental Ebola Vaccine","content":"\u003Cdiv class=\u0022content-basic-wrapper basic-sidebar clearfix\u0022\u003E\n    \u003Cheader class=\u0022content-header basic-sidebar\u0022\u003E\u003Cdiv class=\u0022panel-pane pane-panels-mini pane-node-header\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cdiv class=\u0022content-onecol one-col\u0022 id=\u0022mini-panel-node_header-1\u0022\u003E\n    \u003Cdiv\u003E\u003Cdiv class=\u0022panel-pane pane-primary-channel\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cdiv class=\u0022primary-channel-eyebrow\u0022\u003E\u003Ca href=\u0022\/tags\/health\u0022\u003EHealth\u003C\/a\u003E\u003C\/div\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003Ch1\u003EPromising Results For Experimental Ebola Vaccine\u003C\/h1\u003E\n\n  \u003Cdiv class=\u0022field-subtitle\u0022\u003E\n    \u003Cp\u003EStudies of more potent versions of the vaccine are already underway\u003C\/p\u003E\n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-byline\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cspan class=\u0022author\u0022\u003E\u003Cspan class=\u0022label\u0022\u003EBy\u003C\/span\u003E\n  \n    \u003Ca href=\u0022\/popsci-authors\/francie-diep\u0022 typeof=\u0022Concept\u0022 property=\u0022prefLabel\u0022 datatype=\u0022\u0022\u003EFrancie Diep\u003C\/a\u003E  \n\u003C\/span\u003E \u003Cspan class=\u0022date\u0022 data-timestamp=\u00221419363000\u0022\u003E\u003Cspan class=\u0022label\u0022\u003Eposted\u003C\/span\u003E Dec 23rd, 2014 at 2:30pm\u003C\/span\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003C\/div\u003E\n\u003C\/div\u003E\n  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-block pane-post-social-post-social-block\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n        \u003Cdiv class=\u0022inactive-postButtons postButtons-node-223255\u0022 data-img=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/medium_1x_\/public\/ebola-vaccine.jpg?itok=42sFsi6f\u0022 pw:url=\u0022http:\/\/www.popsci.com\/promising-results-experimental-ebola-vaccines-containing-ebola-protein-dna\u0022 pw:title=\u0022Promising Results For Experimental Ebola Vaccine\u0022 style=\u0022float:left;\u0022\u003E\u003C\/div\u003E\n    \u003Ca href=\u0022#\u0022 pw:url=\u0022http:\/\/www.popsci.com\/promising-results-experimental-ebola-vaccines-containing-ebola-protein-dna\u0022 pw:title=\u0022Promising Results For Experimental Ebola Vaccine\u0022 class=\u0022inactive-customIcon pw-widget-customIcon\u0022 name=\u0022customIcon\u0022\u003E\n      \u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003C\/noscript\u003E\n    \u003C\/a\u003E\n    \u003Cspan class=\u0022pw-counter-custom1\u0022\u003E\n      \u003Cspan class=\u0022pw-button-counter_custom1\u0022\u003E\n        \u003Cb class=\u0022customCounter\u0022 style=\u0022font-weight: normal!important;\u0022\u003E0\u003C\/b\u003E\n      \u003C\/span\u003E\n    \u003C\/span\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003C\/header\u003E\n  \u003Carticle class=\u0022content-basic basic-sidebar\u0022\u003E\n    \u003Cdiv class=\u0022content-main basic-sidebar\u0022\u003E\u003Cdiv class=\u0022panel-pane pane-entity-field pane-node-body\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \n  \u003Cdiv class=\u0022field-body\u0022\u003E\n    \u003Cp\u003E\u003Cdiv class=\u0022media media-element-container media-default full-width\u0022\u003E\u003Cimg class=\u0022full-width\u0022 typeof=\u0022foaf:Image\u0022 width=\u00221000\u0022 height=\u0022517\u0022 alt=\u0022illustration showing a person in a hazmat suit holding up a bottle like those used to hold vaccines\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-smsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/small_1x_\/public\/ebola-vaccine.jpg?itok=RoMPG--k\u0022 data-medsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/medium_1x_\/public\/ebola-vaccine.jpg?itok=42sFsi6f\u0022 data-lgsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/large_1x_\/public\/ebola-vaccine.jpg?itok=qib9-eKP\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg class=\u0022full-width\u0022 typeof=\u0022foaf:Image\u0022 width=\u0022600\u0022 height=\u0022310\u0022 alt=\u0022illustration showing a person in a hazmat suit holding up a bottle like those used to hold vaccines\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/medium_1x_\/public\/ebola-vaccine.jpg?itok=42sFsi6f\u0022 \/\u003E\u003C\/noscript\u003E\n  \u003Cdiv class=\u0022field-title\u0022\u003E\n    \u003Cp\u003EA Vaccine for Ebola\u003C\/p\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022field-credit\u0022\u003E\n    \u003Cp\u003EState Department\/Doug Thompson\u003C\/p\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\u003C\/p\u003E\n\n\u003Cp\u003EAn experimental vaccine against Ebola has shown promising results in volunteers in Uganda. The study, published today in \u003Ca href=\u0022http:\/\/www.thelancet.com\/journals\/lancet\/article\/PIIS0140-6736(14)62385-0\/fulltext\u0022\u003E\u003Cem\u003EThe Lancet\u003C\/em\u003E\u003C\/a\u003E, is the first to report an Ebola vaccine candidate to be both safe and effective in an African population, said lead author Julie Ledgerwood \u003Ca href=\u0022http:\/\/www.eurekalert.org\/pub_releases\/2014-12\/tl-tlt121914.php\u0022\u003Ein a statement\u003C\/a\u003E. Ledgerwood specializes in testing experimental vaccines for the U.S. National Institute of Allergy and Infectious Disease.\u003C\/p\u003E\n\n\u003Cp\u003EThe results are exciting because there aren\u0027t any fully proven Ebola immunizations or treatments. Hopefully, some will be \u003Ca href=\u0022http:\/\/www.popsci.com\/what-expect-2015-vital-ebola-drugs-reach-west-africa\u0022\u003Eready by 2015\u003C\/a\u003E. But there\u0027s still plenty of work left to do. Because the vaccine they tested is so new, Ledgerwood and her team gave test subjects low-potency doses of it. The dose was not enough to give the volunteers long-lasting protection against Ebola, and about half of the test subjects who received the vaccine didn\u0027t get any protection at all. However, the fact that the low-potency vaccine gave about half of people short-term protection, while triggering few side effects, is good news.\u003C\/p\u003E\n\n\u003Cp\u003ENormally, with results like this, the next step would be to try higher or more potent doses. In this case, public health officials \u003Ca href=\u0022http:\/\/www.popsci.com\/article\/science\/how-fast-track-ebola-vaccine\u0022\u003Ehave fast-tracked\u003C\/a\u003E the development and testing of Ebola treatments, so studies of more potent versions of this vaccine are already underway. Just last month, researchers working on one of those trials \u003Ca href=\u0022http:\/\/www.nejm.org\/doi\/full\/10.1056\/NEJMoa1410863\u0022\u003Epublished promising results\u003C\/a\u003E from 20 study volunteers. (The trial being reported today tested 108 volunteers and included volunteers receiving a placebo. The 20-person trial included no placebo.)\u003C\/p\u003E\n\n\u003Cp\u003EThe vaccine Ledgerwood\u0027s team is reporting on today contains a fragment of Ebola DNA. The DNA codes for the proteins that pepper the surfaces of Ebolaviruses of the Sudan and Zaire strains. Those surface proteins alone aren\u0027t enough to make people sick with Ebola, but exposing the body to them helps the immune system learn to quickly recognize those proteins and clear them out.\u003C\/p\u003E\n\n\u003Cp\u003EThe National Institute of Allergy and Infectious Disease has tried making a number of DNA vaccines against Ebola before. The vaccines have generally proven safe, but not quite effective enough to trigger a strong, long-lasting response from the immune system. This team appears to have overcome that problem by encasing the DNA inside a cold virus that normally infects chimpanzees. The cold virus itself is harmless to people, but it helps deliver the Ebola DNA into people\u0027s cells, helping to trigger a stronger immune response.\u003C\/p\u003E\n  \u003C\/div\u003E\n  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-entity-field pane-node-field-tags\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cdiv class=\u0022field-tags inline\u0022\u003E\n      \u003Cspan class=\u0022field-label\u0022\u003E\n      Tags:\n    \u003C\/span\u003E\n  \n  \u003Cul\u003E\n          \u003Cli\u003E\n        \u003Ca href=\u0022\/tags\/ebola\u0022 typeof=\u0022skos:Concept\u0022 property=\u0022rdfs:label skos:prefLabel\u0022 datatype=\u0022\u0022\u003EEbola\u003C\/a\u003E      \u003C\/li\u003E\n          \u003Cli\u003E\n        \u003Ca href=\u0022\/tags\/vaccines\u0022 typeof=\u0022skos:Concept\u0022 property=\u0022rdfs:label skos:prefLabel\u0022 datatype=\u0022\u0022\u003Evaccines\u003C\/a\u003E      \u003C\/li\u003E\n          \u003Cli\u003E\n        \u003Ca href=\u0022\/tags\/dna\u0022 typeof=\u0022skos:Concept\u0022 property=\u0022rdfs:label skos:prefLabel\u0022 datatype=\u0022\u0022\u003Edna\u003C\/a\u003E      \u003C\/li\u003E\n          \u003Cli\u003E\n        \u003Ca href=\u0022\/tags\/health\u0022 typeof=\u0022skos:Concept\u0022 property=\u0022rdfs:label skos:prefLabel\u0022 datatype=\u0022\u0022\u003EHealth\u003C\/a\u003E      \u003C\/li\u003E\n      \u003C\/ul\u003E\n\u003C\/div\u003E\n  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-block pane-post-social-post-social-block\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n        \u003Cdiv class=\u0022inactive-postButtons postButtons-node-223255\u0022 data-img=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/medium_1x_\/public\/ebola-vaccine.jpg?itok=42sFsi6f\u0022 pw:url=\u0022http:\/\/www.popsci.com\/promising-results-experimental-ebola-vaccines-containing-ebola-protein-dna\u0022 pw:title=\u0022Promising Results For Experimental Ebola Vaccine\u0022 style=\u0022float:left;\u0022\u003E\u003C\/div\u003E\n    \u003Ca href=\u0022#\u0022 pw:url=\u0022http:\/\/www.popsci.com\/promising-results-experimental-ebola-vaccines-containing-ebola-protein-dna\u0022 pw:title=\u0022Promising Results For Experimental Ebola Vaccine\u0022 class=\u0022inactive-customIcon pw-widget-customIcon\u0022 name=\u0022customIcon\u0022\u003E\n      \u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003C\/noscript\u003E\n    \u003C\/a\u003E\n    \u003Cspan class=\u0022pw-counter-custom1\u0022\u003E\n      \u003Cspan class=\u0022pw-button-counter_custom1\u0022\u003E\n        \u003Cb class=\u0022customCounter\u0022 style=\u0022font-weight: normal!important;\u0022\u003E0\u003C\/b\u003E\n      \u003C\/span\u003E\n    \u003C\/span\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003C\/div\u003E\n  \u003C\/article\u003E\n  \u003Caside class=\u0022sidebar sidebar-right basic-sidebar\u0022\u003E\u003C\/aside\u003E\n\u003C\/div\u003E\n","sidebar":{"ads":[{"identifier":"is-gpt-ad-node-223255-right1","ad":{"outofpage":0,"refresh":1,"size":{"0":null,"1000":[[300,250],[300,600],[300,1050]]},"targeting":{"pos":[{"value":"right1","eval":0}],"remnant":[{"value":"yes","eval":0}],"device":[{"value":"drupalsettingsclickstream_trackingdevice","eval":"1"}],"site":[{"value":"popsci","eval":0}],"id":[{"value":"223255","eval":false}],"kw":[{"value":"Ebola","eval":false},{"value":"dna","eval":false},{"value":"vaccines","eval":false},{"value":"Health","eval":false}]},"networkCode":"6747\/n6747.popsci","targetedAdUnit":"health","skipPageTargeting":true}}]},"below":{"ads":[{"identifier":"is-gpt-ad-node-223255-middle","ad":{"outofpage":0,"refresh":1,"size":{"0":[[300,250],[320,50]],"728":[[728,90],[640,400]],"1000":[[970,415],[970,250],[970,66],[960,660],[728,90],[640,400]]},"targeting":{"pos":[{"value":"middle","eval":0}],"remnant":[{"value":"yes","eval":0}],"device":[{"value":"drupalsettingsclickstream_trackingdevice","eval":"1"}],"site":[{"value":"popsci","eval":0}],"id":[{"value":"223255","eval":false}],"kw":[{"value":"Ebola","eval":false},{"value":"dna","eval":false},{"value":"vaccines","eval":false},{"value":"Health","eval":false}]},"networkCode":"6747\/n6747.popsci","targetedAdUnit":"health","skipPageTargeting":true}}]},"analytics":{"omniture":{"settings":{"s_account":"bonndev","page_name":"devsite","dynamic_account_list":"timepopsci=http:\/\/www.popsci.com, timepopsci=https:\/\/www.popsci.com","link_track_vars":"","link_track_events":"","link_form_list":"","var_used":"","event_list":"","ignore_vocab":"","scode_path":"","tracking_server":"","visitor_migration_server":"","visitor_migration_key":"","link_internal_filters":"","ignore_query_string":"dom,loc,lnk","file":"http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/bonnier_analytics\/providers\/omniture\/js\/s_code.js"},"omniture":{"omid":"101","key_value":"basic_content","name":"Basic Content","conditions":{"nodetype":["basic_content"]},"weight":"4","date_modified":"1410189298","scode":{"s.channel":{"spid":"1","name":"s.channel","description":"Section channel","weight":"0","enabled":"1","system":"1","value":"[node:field_primary_channel]","output":"\u0022health\u0022;\n"},"s.pageName":{"spid":"2","name":"s.pageName","description":"Page name","weight":"1","enabled":"1","system":"1","value":"[node:field_primary_channel]:[node:title]","output":"\u0022health:promising results for experimental ebola vaccine\u0022;\n"},"s.prop2":{"spid":"3","name":"s.prop2","description":"Author name","weight":"2","enabled":"1","system":"1","value":"[node:field_author]","output":"\u0022francie diep\u0022;\n"},"s.prop3":{"spid":"4","name":"s.prop3","description":"Article tags","weight":"3","enabled":"1","system":"1","value":"[node:field_tags]","output":"\u0022ebola, vaccines, dna, health\u0022;\n"},"s.prop4":{"spid":"5","name":"s.prop4","description":"Usually the node type, section, subsection, article, contest, site","weight":"4","enabled":"1","system":"1","value":"[node:content-type]","output":"\u0022basic content\u0022;\n"},"s.prop16":{"spid":"6","name":"s.prop16","description":"Sub section","weight":"5","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop5":{"spid":"7","name":"s.prop5","description":"Sponsor Name","weight":"6","enabled":"1","system":"1","value":"[omni:sponsor]","output":"\u0022\u0022;\n"},"s.prop8":{"spid":"8","name":"s.prop8","description":"SOLR Facets","weight":"7","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop18":{"spid":"9","name":"s.prop18","description":"Term being search on the result page","weight":"8","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop20":{"spid":"10","name":"s.prop20","description":"Number of results","weight":"9","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.pageType":{"spid":"11","name":"s.pageType","description":"Used ONLY on error page","weight":"10","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.events":{"spid":"12","name":"s.events","description":"Webform thank you page","weight":"11","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop14":{"spid":"16","name":"s.prop14","description":"Media location","weight":"17","enabled":"1","system":"1","value":"[omni:content:media_location]","output":"\u0022\u0022;\n"},"s.prop6":{"spid":"13","name":"s.prop6","description":"Custom Attribute type","weight":"20","enabled":"1","system":"1","value":"[omni:content:attribute]","output":"\u0022article, infinite scroll\u0022;\n"},"s.prop13":{"spid":"14","name":"s.prop13","description":"Gallery count","weight":"20","enabled":"1","system":"1","value":"[omni:content:gallery_count]","output":"\u0022\u0022;\n"},"s.prop7":{"spid":"15","name":"s.prop7","description":"Comma delimited prop","weight":"20","enabled":"1","system":"1","value":"[omni:content:attribute]","output":"\u0022article, infinite scroll\u0022;\n"},"s.prop61":{"spid":"17","name":"s.prop61","description":"User ID of content","weight":"25","enabled":"1","system":"1","value":"[node:author]","output":"\u0022fcdiep\u0022;\n"},"s.prop66":{"spid":"18","name":"s.prop66","description":"Published date in MM-DD-YY","weight":"26","enabled":"1","system":"1","value":"[node:created:custom:m-d-y]","output":"\u002212-23-14\u0022;\n"}}},"pass_thru":2,"scode_array":{"s.channel":"\u0022health\u0022;\n","s.pageName":"\u0022health:promising results for experimental ebola vaccine\u0022;\n","s.prop2":"\u0022francie diep\u0022;\n","s.prop3":"\u0022ebola, vaccines, dna, health\u0022;\n","s.prop4":"\u0022basic content\u0022;\n","s.prop16":"\u0022\u0022;\n","s.prop5":"\u0022\u0022;\n","s.prop8":"\u0022\u0022;\n","s.prop18":"\u0022\u0022;\n","s.prop20":"\u0022\u0022;\n","s.pageType":"\u0022\u0022;\n","s.events":"\u0022\u0022;\n","s.prop14":"\u0022\u0022;\n","s.prop6":"\u0022article, infinite scroll\u0022;\n","s.prop13":"\u0022\u0022;\n","s.prop7":"\u0022article, infinite scroll\u0022;\n","s.prop61":"\u0022fcdiep\u0022;\n","s.prop66":"\u002212-23-14\u0022;\n"}}},"inContentAds":{"outofpage":0,"refresh":0,"size":{"0":[[300,250]],"1000":null},"targeting":{"pos":[{"value":"in_content","eval":0}],"remnant":[{"value":"yes","eval":0}],"device":[{"value":"drupalsettingsclickstream_trackingdevice","eval":"1"}],"site":[{"value":"popsci","eval":0}],"id":[{"value":"223255","eval":false}],"kw":[{"value":"Ebola","eval":false},{"value":"dna","eval":false},{"value":"vaccines","eval":false},{"value":"Health","eval":false}]},"networkCode":"6747\/n6747.popsci","targetedAdUnit":"health","skipPageTargeting":true}},{"time":"1422628222","type":"node","id":"223558","url":"\/month-plague-measles-disneyland-guinea-worm-eradication-and-more","title":"The Month In Plague: Measles In Disneyland, Guinea Worm Eradication, And More","content":"\u003Cdiv class=\u0022content-basic-wrapper basic-sidebar clearfix\u0022\u003E\n      \u003Cdiv class=\u0022content-basic-header basic-sidebar\u0022\u003E\u003Cdiv class=\u0022panel-pane pane-panels-mini pane-node-blog-banner\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cdiv class=\u0022content-onecol one-col\u0022 id=\u0022mini-panel-node_blog_banner-1\u0022\u003E\n    \u003Cdiv\u003E\n  \u003Cdiv class=\u0022field-blog-channel-reference\u0022\u003E\n    \u003Ca href=\u0022\/blog-network\u0022\u003EPopular Science Blogs\u003C\/a\u003E  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-heading-image\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cdiv class=\u0022element-hidden\u0022\u003E\u003Ch2\u003EOur Modern Plagues\u003C\/h2\u003E\n\n  \u003Cdiv class=\u0022field-subtitle\u0022\u003E\n    \u003Cp\u003EHumanity\u0027s contagions and infestations, both real and imagined. By Brooke Borel\u003C\/p\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\u003Ca href=\u0022\/blog-network\/our-modern-plagues\u0022\u003E\n  \u003Cdiv class=\u0022field-blog-post-header\u0022\u003E\n    \u003Cimg typeof=\u0022foaf:Image\u0022 width=\u00221000\u0022 height=\u002245\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-smsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/small_1x_\/public\/bn-eb-our-modern-plagues_0.jpg?itok=0O3om_Z6\u0022 data-medsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/medium_1x_\/public\/bn-eb-our-modern-plagues_0.jpg?itok=P4QA5lTn\u0022 data-lgsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/large_1x_\/public\/bn-eb-our-modern-plagues_0.jpg?itok=q8XVKUZZ\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 width=\u00221000\u0022 height=\u002245\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/large_1x_\/public\/bn-eb-our-modern-plagues_0.jpg?itok=q8XVKUZZ\u0022 \/\u003E\u003C\/noscript\u003E  \u003C\/div\u003E\n\u003C\/a\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003C\/div\u003E\n\u003C\/div\u003E\n  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003C\/div\u003E\n    \u003Cheader class=\u0022content-header basic-sidebar\u0022\u003E\u003Cdiv class=\u0022panel-pane pane-panels-mini pane-node-header\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cdiv class=\u0022content-onecol one-col\u0022 id=\u0022mini-panel-node_header-1\u0022\u003E\n    \u003Cdiv\u003E\u003Ch1\u003EThe Month In Plague: Measles In Disneyland, Guinea Worm Eradication, And More\u003C\/h1\u003E\n\n  \u003Cdiv class=\u0022field-subtitle\u0022\u003E\n    \u003Cp\u003EYour monthly roundup of infestations, contagions, and controls from around the web\u003C\/p\u003E\n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-byline\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cspan class=\u0022author\u0022\u003E\u003Cspan class=\u0022label\u0022\u003EBy\u003C\/span\u003E\n  \n    \u003Ca href=\u0022\/popsci-authors\/brooke-borel-0\u0022 typeof=\u0022Concept\u0022 property=\u0022prefLabel\u0022 datatype=\u0022\u0022\u003EBrooke Borel\u003C\/a\u003E  \n\u003C\/span\u003E \u003Cspan class=\u0022date\u0022 data-timestamp=\u00221422628222\u0022\u003E\u003Cspan class=\u0022label\u0022\u003Eposted\u003C\/span\u003E Jan 30th, 2015 at 9:30am\u003C\/span\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003C\/div\u003E\n\u003C\/div\u003E\n  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-block pane-post-social-post-social-block\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n        \u003Cdiv class=\u0022inactive-postButtons postButtons-node-223558\u0022 data-img=\u0022\u0022 pw:url=\u0022http:\/\/www.popsci.com\/month-plague-measles-disneyland-guinea-worm-eradication-and-more\u0022 pw:title=\u0022The Month In Plague: Measles In Disneyland, Guinea Worm Eradication, And More\u0022 style=\u0022float:left;\u0022\u003E\u003C\/div\u003E\n    \u003Ca href=\u0022#\u0022 pw:url=\u0022http:\/\/www.popsci.com\/month-plague-measles-disneyland-guinea-worm-eradication-and-more\u0022 pw:title=\u0022The Month In Plague: Measles In Disneyland, Guinea Worm Eradication, And More\u0022 class=\u0022inactive-customIcon pw-widget-customIcon\u0022 name=\u0022customIcon\u0022\u003E\n      \u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003C\/noscript\u003E\n    \u003C\/a\u003E\n    \u003Cspan class=\u0022pw-counter-custom1\u0022\u003E\n      \u003Cspan class=\u0022pw-button-counter_custom1\u0022\u003E\n        \u003Cb class=\u0022customCounter\u0022 style=\u0022font-weight: normal!important;\u0022\u003E0\u003C\/b\u003E\n      \u003C\/span\u003E\n    \u003C\/span\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003C\/header\u003E\n  \u003Carticle class=\u0022content-basic basic-sidebar\u0022\u003E\n    \u003Cdiv class=\u0022content-main basic-sidebar\u0022\u003E\u003Cdiv class=\u0022panel-pane pane-entity-field pane-node-body\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \n  \u003Cdiv class=\u0022field-body\u0022\u003E\n    \u003Cp\u003E\u003Cdiv class=\u0022media media-element-container media-default full-width\u0022\u003E\u003Cimg class=\u0022full-width\u0022 typeof=\u0022foaf:Image\u0022 width=\u00221000\u0022 height=\u0022670\u0022 alt=\u0022Disneyland bronze sculpture of white rabbit alice in wonderland\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-smsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/small_1x_\/public\/disneyland.jpg?itok=JvleuD9G\u0022 data-medsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/medium_1x_\/public\/disneyland.jpg?itok=Eqohg-Ya\u0022 data-lgsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/large_1x_\/public\/disneyland.jpg?itok=UMOq_nBF\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg class=\u0022full-width\u0022 typeof=\u0022foaf:Image\u0022 width=\u0022600\u0022 height=\u0022402\u0022 alt=\u0022Disneyland bronze sculpture of white rabbit alice in wonderland\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/medium_1x_\/public\/disneyland.jpg?itok=Eqohg-Ya\u0022 \/\u003E\u003C\/noscript\u003E\n  \u003Cdiv class=\u0022field-title\u0022\u003E\n    \u003Cp\u003EWorries in Disneyland\u003C\/p\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022field-credit\u0022\u003E\n    \u003Cp\u003E\u003Ca href=\u0022https:\/\/www.flickr.com\/photos\/ldcross\/2564163458\u0022\u003EDenise Cross\u003C\/a\u003E\u003C\/p\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\u003C\/p\u003E\n\n\u003Cp\u003EYour monthly roundup of infestations, contagions, and controls from around the web:\u003C\/p\u003E\n\n\u003Cp\u003E\u003Cstrong\u003EIn outbreak news\u003C\/strong\u003E\u003C\/p\u003E\n\n\u003Cp\u003EA measles outbreak at Disneyland has now \u003Ca href=\u0022http:\/\/www.pbs.org\/newshour\/bb\/completely-avoidable-vaccine-saved-victims-disneyland-measles-outbreak\/\u0022\u003Einfected a reported 100 people\u003C\/a\u003E \u003Ca href=\u0022http:\/\/www.theguardian.com\/us-news\/2015\/jan\/26\/disneyland-measles-outbreak-spreads-michigan\u0022\u003Ein several US states\u2014mostly California\u2014as well as in Mexico\u003C\/a\u003E. Some experts \u003Ca href=\u0022http:\/\/www.wired.com\/2015\/01\/vaccinated-people-get-measles-disneyland-blame-unvaccinated\/\u0022\u003Esay the spread is directly related to the anti-vaccine movement\u003C\/a\u003E, although \u003Ca href=\u0022http:\/\/blogs.discovermagazine.com\/collideascape\/2015\/01\/23\/disneyland-measles-outbreak-spotlights-vaccine-averse-behavior-generates-media-herd-narrative\/#.VMZGumTF-GY\u0022\u003Eothers point out that it\u2019s a little more complicated\u003C\/a\u003E. And \u003Ca href=\u0022http:\/\/www.vox.com\/2015\/1\/29\/7929791\/measles-outbreak-2014\u0022\u003E\u003Cem\u003EVox\u003C\/em\u003E has a great piece\u003C\/a\u003E explaining the nuances of recent measles outbreaks across the U.S.\u003C\/p\u003E\n\n\u003Cp\u003EMeanwhile, Ebola cases are thankfully \u003Ca href=\u0022http:\/\/www.vox.com\/2015\/1\/23\/7878095\/ebola-outbreak-end\u0022\u003Edropping in West Africa\u003C\/a\u003E. Earlier this month, Thomas Frieden, the director of the Centers for Disease Control and Prevention, \u003Ca href=\u0022http:\/\/www.nytimes.com\/2015\/01\/14\/world\/africa\/cdc-chief-confident-on-ebola.html?_r=0\u0022\u003Esaid he expected the outbreak to be brought under control\u003C\/a\u003E, although recovery will be difficult for the affected countries. And the \u003Ca href=\u0022http:\/\/www.bbc.com\/news\/health-30974649\u0022\u003EWorld Health Organization announced that it would reexamine its approach\u003C\/a\u003E for future outbreaks, partly in response to criticism that it was too slow to act on the Ebola crisis.\u003C\/p\u003E\n\n\u003Cp\u003EAnd speaking of Ebola, \u003Ca href=\u0022http:\/\/www.slate.com\/articles\/health_and_science\/medical_examiner\/2015\/01\/preparing_for_pandemics_what_diseases_will_be_the_next_ebolas.html\u0022\u003E\u003Cem\u003ESlate\u003C\/em\u003E published a story\u003C\/a\u003E earlier this month describing the \u201cnext Ebolas,\u201d or the next zoonotic viruses that could cause a human pandemic.\u003C\/p\u003E\n\n\u003Cp\u003E\u003Cstrong\u003EIn antibiotics news\u003C\/strong\u003E\u003C\/p\u003E\n\n\u003Cp\u003E\u003Ca href=\u0022http:\/\/phenomena.nationalgeographic.com\/2015\/01\/07\/antibiotic-resistance-teixobactin\/\u0022\u003EScientists discovered a new class of antibiotics\u003C\/a\u003E called teixobactin, which the researchers claim may be unusually impervious to bacterial resistance, \u003Ca href=\u0022http:\/\/www.micro-blog.info\/2015\/01\/teixobactin-a-resistance-proof-antibiotic-no-chance\/\u0022\u003Ealthough not everyone agrees this is possible\u003C\/a\u003E. The researchers used a \u003Ca href=\u0022http:\/\/www.popsci.com\/ichip-new-way-find-antibiotics-and-other-key-drugs\u0022\u003Erelatively new technique to find the antibiotic, which could lead to a new era of drug discovery\u003C\/a\u003E.\u003C\/p\u003E\n\n\u003Cp\u003ELike many antibiotics before it, teixobactin comes from soil. Researchers at Rockefeller University in New York are \u003Ca href=\u0022http:\/\/www.bbc.com\/news\/health-30877343\u0022\u003Enow asking citizen scientists to send in soil samples from around the world\u003C\/a\u003E, so that they may be tested for other new drugs.\u003C\/p\u003E\n\n\u003Cp\u003EAnd \u003Ca href=\u0022http:\/\/www.npr.org\/blogs\/goatsandsoda\/2015\/01\/23\/378919882\/taking-antibiotics-during-travel-fosters-drug-resistant-germs?utm_medium=RSS\u0026amp;utm_campaign=science\u0022\u003Eaccording to this story at NPR\u003C\/a\u003E, taking prophylactic antibiotics to thwart traveler\u2019s diarrhea may actually help spread antibiotic-resistant bugs.\u003C\/p\u003E\n\n\u003Cp\u003E\u003Cstrong\u003EIn vaccine news\u003C\/strong\u003E\u003C\/p\u003E\n\n\u003Cp\u003EThe flu shot was \u003Ca href=\u0022http:\/\/www.washingtonpost.com\/national\/health-science\/from-an-uncertain-process-of-guesses-and-science-each-years-flu-vaccines-emerge\/2015\/01\/08\/efc6e010-9744-11e4-aabd-d0b93ff613d5_story.html\u0022\u003Ewoefully ineffective this year\u003C\/a\u003E, at just \u003Ca href=\u0022http:\/\/www.washingtonpost.com\/news\/to-your-health\/wp\/2015\/01\/15\/cdc-flu-vaccine-only-23-percent-effective-this-season-but-still-better-than-nothing\/\u0022\u003E23 percent\u003C\/a\u003E. \u003Ca href=\u0022http:\/\/www.vox.com\/2015\/1\/15\/7553583\/flu-vaccine-shot-effective\u0022\u003E\u003Cem\u003EVox\u003C\/em\u003E explains\u003C\/a\u003E why it\u2019s still a good idea to get it anyway\u2014a little protection is better than none.\u003C\/p\u003E\n\n\u003Cp\u003ESpeaking of the flu vaccine, researchers are trying to develop one that is more universally effective against different strains of the virus, and the \u003Ca href=\u0022http:\/\/www.smithsonianmag.com\/science-nature\/measles-vaccine-universal-flu-influenza-cdc-disease-outbreak-180954020\/?no-ist\u0022\u003E\u003Cem\u003ESmithsonian\u003C\/em\u003E has an update on the progress\u003C\/a\u003E.\u003C\/p\u003E\n\n\u003Cp\u003E\u003Ca href=\u0022http:\/\/qz.com\/329851\/vaccinating-a-child-in-a-poor-country-costs-nearly-70-times-more-than-it-did-in-2001\/\u0022\u003E\u003Cem\u003EQuartz\u003C\/em\u003E reports\u003C\/a\u003E that vaccinating kids in poor countries is getting increasingly expensive\u2014the cost is 70 times higher than it was in 2001.\u003C\/p\u003E\n\n\u003Cp\u003EAnd \u003Cem\u003EThe Atlantic\u003C\/em\u003E has a neat story about \u003Ca href=\u0022http:\/\/m.theatlantic.com\/entertainment\/archive\/2015\/01\/how-fashion-defeated-the-18th-century-anti-vaxxers\/384696\/\u0022\u003Ehistorical pro-vaccine fashion\u003C\/a\u003E.\u003C\/p\u003E\n\n\u003Cp\u003E\u003Cstrong\u003EIn GMO news\u003C\/strong\u003E\u003C\/p\u003E\n\n\u003Cp\u003EWe have a new GMO potato, but as \u003Ca href=\u0022http:\/\/www.npr.org\/blogs\/thesalt\/2015\/01\/13\/376184710\/gmo-potatoes-have-arrived-but-will-anyone-buy-them?utm_medium=RSS\u0026amp;utm_campaign=science\u0022\u003EDan Charles at \u003Cem\u003ENPR\u003C\/em\u003E asks\u003C\/a\u003E: Will anyone buy it?\u003C\/p\u003E\n\n\u003Cp\u003E\u003Ca href=\u0022http:\/\/modernfarmer.com\/2015\/01\/gmo-debate-aimed-pig-testicles\/\u0022\u003E\u003Cem\u003EModern Farmer\u003C\/em\u003E has a story\u003C\/a\u003E about pigs that could be genetically engineered to avoid \u201ctaint,\u201d an unsavory feature of meat that comes from an intact boar (an engineered boar could avoid painful castration). Although such a project is unlikely to get much traction, let alone bring a GMO pig to market, the story brings up intriguing philosophical questions about the possibility of GMOs focused on animal welfare.\u003C\/p\u003E\n\n\u003Cp\u003EAnd researchers led by a team at Harvard Medical School \u003Ca href=\u0022http:\/\/www.nytimes.com\/2015\/01\/22\/science\/scientists-genetically-modified-organisms-bioengineering.html?partner=rss\u0026amp;emc=rss\u0022\u003Ehave developed a GMO bacterium\u003C\/a\u003E with a genetic code that is not found in nature\u2014it requires a synthetic amino acid to survive. \u003Ca href=\u0022http:\/\/www.npr.org\/blogs\/health\/2015\/01\/21\/378820888\/scientists-give-genetically-modified-organisms-a-safety-switch?utm_medium=RSS\u0026amp;utm_campaign=science\u0022\u003EThe technology could point to a way to contain GMOs in the environment\u003C\/a\u003E.\u003C\/p\u003E\n\n\u003Cp\u003E\u003Cstrong\u003EIn creepy crawly news\u003C\/strong\u003E\u003C\/p\u003E\n\n\u003Cp\u003EEver wonder what would happen if all the world\u0027s parasites disappeared overnight? Wonder no more--\u003Ca href=\u0022http:\/\/www.bbc.com\/earth\/story\/20150127-what-if-all-the-pests-vanished\u0022\u003E\u003Cem\u003EBBC Earth\u003C\/em\u003E has you covered\u003C\/a\u003E. (Spoiler alert: It wouldn\u0027t be as great as you\u0027d think.)\u003C\/p\u003E\n\n\u003Cp\u003EResearchers \u003Ca href=\u0022http:\/\/io9.com\/millions-of-mutated-mosquitoes-could-be-unleashed-in-fl-1681781555?utm_campaign=socialflow_io9_twitter\u0026amp;utm_source=io9_twitter\u0026amp;utm_medium=socialflow\u0022\u003Eare considering releasing genetically engineered mosquitoes in Florida\u003C\/a\u003E to combat tropical diseases including dengue and Chikungunya. Christie Wilcox has a \u003Ca href=\u0022http:\/\/blogs.discovermagazine.com\/science-sushi\/2015\/01\/27\/journalists-vector-gm-fears-fda-considers-oxitecs-keys-mosquito-plan\/#.VMgg3WTF-GY\u0022\u003Elong post at \u003Cem\u003EDiscover\u003C\/em\u003E\u003C\/a\u003E explaining why relevant headlines are overblown or flat-out wrong. And Helen Thompson has a \u003Ca href=\u0022http:\/\/www.smithsonianmag.com\/smithsonian-institution\/could-gm-mosquitoes-pave-way-chikungunya-virus-panama-180953847\/?no-ist\u0022\u003Estory at \u003Cem\u003ESmithsonian\u003C\/em\u003E\u003C\/a\u003E that explains why this may be a bad idea.\u003C\/p\u003E\n\n\u003Cp\u003EBad news for mosquito nets, at least in some contexts. \u003Cem\u003EThe Verge\u003C\/em\u003E has a \u003Ca href=\u0022http:\/\/www.theverge.com\/2015\/1\/5\/7493967\/mosquito-insecticide-resistant-nets-malaria\u0022\u003Egood story\u003C\/a\u003E describing how nets dipped in insecticides may be driving insecticide-resistance in mosquitoes. Meanwhile, the \u003Ca href=\u0022http:\/\/www.nytimes.com\/2015\/01\/25\/world\/africa\/mosquito-nets-for-malaria-spawn-new-epidemic-overfishing.html?smid=tw-share\u0022\u003E\u003Cem\u003ENew York Times\u003C\/em\u003E has a disturbing account\u003C\/a\u003E of insecticide-treated mosquito nets being used to catch fish, which may harm fragile fisheries as well as aquatic ecosystems.\u003C\/p\u003E\n\n\u003Cp\u003EAnd some good news: \u003Ca href=\u0022http:\/\/www.theatlantic.com\/health\/archive\/2015\/01\/carter-center-guinea-worm-jimmy-carter-parasite-pipe-filter\/384557\/\u0022\u003EWe may soon eradicate the Guinea worm\u003C\/a\u003E, which would be the second disease to ever be totally wiped from humans.\u003C\/p\u003E\n  \u003C\/div\u003E\n  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-entity-field pane-node-field-tags\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cdiv class=\u0022field-tags inline\u0022\u003E\n      \u003Cspan class=\u0022field-label\u0022\u003E\n      Tags:\n    \u003C\/span\u003E\n  \n  \u003Cul\u003E\n          \u003Cli\u003E\n        \u003Ca href=\u0022\/tags\/health\u0022 typeof=\u0022skos:Concept\u0022 property=\u0022rdfs:label skos:prefLabel\u0022 datatype=\u0022\u0022\u003EHealth\u003C\/a\u003E      \u003C\/li\u003E\n      \u003C\/ul\u003E\n\u003C\/div\u003E\n  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-block pane-post-social-post-social-block\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n        \u003Cdiv class=\u0022inactive-postButtons postButtons-node-223558\u0022 data-img=\u0022\u0022 pw:url=\u0022http:\/\/www.popsci.com\/month-plague-measles-disneyland-guinea-worm-eradication-and-more\u0022 pw:title=\u0022The Month In Plague: Measles In Disneyland, Guinea Worm Eradication, And More\u0022 style=\u0022float:left;\u0022\u003E\u003C\/div\u003E\n    \u003Ca href=\u0022#\u0022 pw:url=\u0022http:\/\/www.popsci.com\/month-plague-measles-disneyland-guinea-worm-eradication-and-more\u0022 pw:title=\u0022The Month In Plague: Measles In Disneyland, Guinea Worm Eradication, And More\u0022 class=\u0022inactive-customIcon pw-widget-customIcon\u0022 name=\u0022customIcon\u0022\u003E\n      \u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003C\/noscript\u003E\n    \u003C\/a\u003E\n    \u003Cspan class=\u0022pw-counter-custom1\u0022\u003E\n      \u003Cspan class=\u0022pw-button-counter_custom1\u0022\u003E\n        \u003Cb class=\u0022customCounter\u0022 style=\u0022font-weight: normal!important;\u0022\u003E0\u003C\/b\u003E\n      \u003C\/span\u003E\n    \u003C\/span\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003C\/div\u003E\n  \u003C\/article\u003E\n  \u003Caside class=\u0022sidebar sidebar-right basic-sidebar\u0022\u003E\u003C\/aside\u003E\n\u003C\/div\u003E\n","sidebar":{"ads":[{"identifier":"is-gpt-ad-node-223558-right1","ad":{"outofpage":0,"refresh":1,"size":{"0":null,"1000":[[300,250],[300,600],[300,1050]]},"targeting":{"pos":[{"value":"right1","eval":0}],"remnant":[{"value":"yes","eval":0}],"device":[{"value":"drupalsettingsclickstream_trackingdevice","eval":"1"}],"site":[{"value":"popsci","eval":0}],"id":[{"value":"223558","eval":false}],"kw":[{"value":"Health","eval":false},{"value":"Our Modern Plagues","eval":false},{"value":"blogs","eval":false}]},"networkCode":"6747\/n6747.popsci","targetedAdUnit":"blogs","skipPageTargeting":true}}]},"below":{"ads":[{"identifier":"is-gpt-ad-node-223558-middle","ad":{"outofpage":0,"refresh":1,"size":{"0":[[300,250],[320,50]],"728":[[728,90],[640,400]],"1000":[[970,415],[970,250],[970,66],[960,660],[728,90],[640,400]]},"targeting":{"pos":[{"value":"middle","eval":0}],"remnant":[{"value":"yes","eval":0}],"device":[{"value":"drupalsettingsclickstream_trackingdevice","eval":"1"}],"site":[{"value":"popsci","eval":0}],"id":[{"value":"223558","eval":false}],"kw":[{"value":"Health","eval":false},{"value":"Our Modern Plagues","eval":false},{"value":"blogs","eval":false}]},"networkCode":"6747\/n6747.popsci","targetedAdUnit":"blogs","skipPageTargeting":true}}]},"analytics":{"omniture":{"settings":{"s_account":"bonndev","page_name":"devsite","dynamic_account_list":"timepopsci=http:\/\/www.popsci.com, timepopsci=https:\/\/www.popsci.com","link_track_vars":"","link_track_events":"","link_form_list":"","var_used":"","event_list":"","ignore_vocab":"","scode_path":"","tracking_server":"","visitor_migration_server":"","visitor_migration_key":"","link_internal_filters":"","ignore_query_string":"dom,loc,lnk","file":"http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/bonnier_analytics\/providers\/omniture\/js\/s_code.js"},"omniture":{"omid":"101","key_value":"basic_content","name":"Basic Content","conditions":{"nodetype":["basic_content"]},"weight":"4","date_modified":"1410189298","scode":{"s.channel":{"spid":"1","name":"s.channel","description":"Section channel","weight":"0","enabled":"1","system":"1","value":"[node:field_primary_channel]","output":"\u0022health\u0022;\n"},"s.pageName":{"spid":"2","name":"s.pageName","description":"Page name","weight":"1","enabled":"1","system":"1","value":"[node:field_primary_channel]:[node:title]","output":"\u0022health:the month in plague: measles in disneyland, guinea worm eradication, and more\u0022;\n"},"s.prop2":{"spid":"3","name":"s.prop2","description":"Author name","weight":"2","enabled":"1","system":"1","value":"[node:field_author]","output":"\u0022brooke borel\u0022;\n"},"s.prop3":{"spid":"4","name":"s.prop3","description":"Article tags","weight":"3","enabled":"1","system":"1","value":"[node:field_tags]","output":"\u0022health\u0022;\n"},"s.prop4":{"spid":"5","name":"s.prop4","description":"Usually the node type, section, subsection, article, contest, site","weight":"4","enabled":"1","system":"1","value":"[node:content-type]","output":"\u0022basic content\u0022;\n"},"s.prop16":{"spid":"6","name":"s.prop16","description":"Sub section","weight":"5","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop5":{"spid":"7","name":"s.prop5","description":"Sponsor Name","weight":"6","enabled":"1","system":"1","value":"[omni:sponsor]","output":"\u0022\u0022;\n"},"s.prop8":{"spid":"8","name":"s.prop8","description":"SOLR Facets","weight":"7","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop18":{"spid":"9","name":"s.prop18","description":"Term being search on the result page","weight":"8","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop20":{"spid":"10","name":"s.prop20","description":"Number of results","weight":"9","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.pageType":{"spid":"11","name":"s.pageType","description":"Used ONLY on error page","weight":"10","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.events":{"spid":"12","name":"s.events","description":"Webform thank you page","weight":"11","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop14":{"spid":"16","name":"s.prop14","description":"Media location","weight":"17","enabled":"1","system":"1","value":"[omni:content:media_location]","output":"\u0022\u0022;\n"},"s.prop6":{"spid":"13","name":"s.prop6","description":"Custom Attribute type","weight":"20","enabled":"1","system":"1","value":"[omni:content:attribute]","output":"\u0022blog, infinite scroll\u0022;\n"},"s.prop13":{"spid":"14","name":"s.prop13","description":"Gallery count","weight":"20","enabled":"1","system":"1","value":"[omni:content:gallery_count]","output":"\u0022\u0022;\n"},"s.prop7":{"spid":"15","name":"s.prop7","description":"Comma delimited prop","weight":"20","enabled":"1","system":"1","value":"[omni:content:attribute]","output":"\u0022blog, infinite scroll\u0022;\n"},"s.prop61":{"spid":"17","name":"s.prop61","description":"User ID of content","weight":"25","enabled":"1","system":"1","value":"[node:author]","output":"\u0022brookeborel\u0022;\n"},"s.prop66":{"spid":"18","name":"s.prop66","description":"Published date in MM-DD-YY","weight":"26","enabled":"1","system":"1","value":"[node:created:custom:m-d-y]","output":"\u002201-30-15\u0022;\n"}}},"pass_thru":2,"scode_array":{"s.channel":"\u0022health\u0022;\n","s.pageName":"\u0022health:the month in plague: measles in disneyland, guinea worm eradication, and more\u0022;\n","s.prop2":"\u0022brooke borel\u0022;\n","s.prop3":"\u0022health\u0022;\n","s.prop4":"\u0022basic content\u0022;\n","s.prop16":"\u0022\u0022;\n","s.prop5":"\u0022\u0022;\n","s.prop8":"\u0022\u0022;\n","s.prop18":"\u0022\u0022;\n","s.prop20":"\u0022\u0022;\n","s.pageType":"\u0022\u0022;\n","s.events":"\u0022\u0022;\n","s.prop14":"\u0022\u0022;\n","s.prop6":"\u0022blog, infinite scroll\u0022;\n","s.prop13":"\u0022\u0022;\n","s.prop7":"\u0022blog, infinite scroll\u0022;\n","s.prop61":"\u0022brookeborel\u0022;\n","s.prop66":"\u002201-30-15\u0022;\n"}}},"inContentAds":{"outofpage":0,"refresh":0,"size":{"0":[[300,250]],"1000":null},"targeting":{"pos":[{"value":"in_content","eval":0}],"remnant":[{"value":"yes","eval":0}],"device":[{"value":"drupalsettingsclickstream_trackingdevice","eval":"1"}],"site":[{"value":"popsci","eval":0}],"id":[{"value":"223558","eval":false}],"kw":[{"value":"Health","eval":false},{"value":"Our Modern Plagues","eval":false},{"value":"blogs","eval":false}]},"networkCode":"6747\/n6747.popsci","targetedAdUnit":"blogs","skipPageTargeting":true}},{"time":"1422563449","type":"node","id":"223612","url":"\/how-we-used-talk-about-measles","title":"How We Used To Talk About Measles","content":"\u003Cdiv class=\u0022content-basic-wrapper basic-sidebar clearfix\u0022\u003E\n    \u003Cheader class=\u0022content-header basic-sidebar\u0022\u003E\u003Cdiv class=\u0022panel-pane pane-panels-mini pane-node-header\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cdiv class=\u0022content-onecol one-col\u0022 id=\u0022mini-panel-node_header-1\u0022\u003E\n    \u003Cdiv\u003E\u003Cdiv class=\u0022panel-pane pane-primary-channel\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cdiv class=\u0022primary-channel-eyebrow\u0022\u003E\u003Ca href=\u0022\/tags\/health\u0022\u003EHealth\u003C\/a\u003E\u003C\/div\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003Ch1\u003EHow We Used To Talk About Measles\u003C\/h1\u003E\n\n  \u003Cdiv class=\u0022field-subtitle\u0022\u003E\n    \u003Cp\u003EA  trip down measles memory lane with the \u003Cem\u003EPopular Science\u003C\/em\u003E archives\u003C\/p\u003E\n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-byline\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cspan class=\u0022author\u0022\u003E\u003Cspan class=\u0022label\u0022\u003EBy\u003C\/span\u003E\n  \n    \u003Ca href=\u0022\/authors\/lydia-ramsey\u0022 typeof=\u0022Concept\u0022 property=\u0022prefLabel\u0022 datatype=\u0022\u0022\u003ELydia Ramsey\u003C\/a\u003E  \n\u003C\/span\u003E \u003Cspan class=\u0022date\u0022 data-timestamp=\u00221422563449\u0022\u003E\u003Cspan class=\u0022label\u0022\u003Eposted\u003C\/span\u003E Jan 29th, 2015 at 3:30pm\u003C\/span\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003C\/div\u003E\n\u003C\/div\u003E\n  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-block pane-post-social-post-social-block\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n        \u003Cdiv class=\u0022inactive-postButtons postButtons-node-223612\u0022 data-img=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/medium_1x_\/public\/measles-virus.jpg?itok=PhC8gUTb\u0022 pw:url=\u0022http:\/\/www.popsci.com\/how-we-used-talk-about-measles\u0022 pw:title=\u0022How We Used To Talk About Measles\u0022 style=\u0022float:left;\u0022\u003E\u003C\/div\u003E\n    \u003Ca href=\u0022#\u0022 pw:url=\u0022http:\/\/www.popsci.com\/how-we-used-talk-about-measles\u0022 pw:title=\u0022How We Used To Talk About Measles\u0022 class=\u0022inactive-customIcon pw-widget-customIcon\u0022 name=\u0022customIcon\u0022\u003E\n      \u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003C\/noscript\u003E\n    \u003C\/a\u003E\n    \u003Cspan class=\u0022pw-counter-custom1\u0022\u003E\n      \u003Cspan class=\u0022pw-button-counter_custom1\u0022\u003E\n        \u003Cb class=\u0022customCounter\u0022 style=\u0022font-weight: normal!important;\u0022\u003E0\u003C\/b\u003E\n      \u003C\/span\u003E\n    \u003C\/span\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003C\/header\u003E\n  \u003Carticle class=\u0022content-basic basic-sidebar\u0022\u003E\n    \u003Cdiv class=\u0022content-main basic-sidebar\u0022\u003E\u003Cdiv class=\u0022panel-pane pane-entity-field pane-node-body\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \n  \u003Cdiv class=\u0022field-body\u0022\u003E\n    \u003Cp\u003E\u003Cdiv class=\u0022media media-element-container media-default full-width\u0022\u003E\u003Cimg class=\u0022full-width\u0022 typeof=\u0022foaf:Image\u0022 width=\u00221000\u0022 height=\u0022750\u0022 alt=\u0022\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-smsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/small_1x_\/public\/measles-virus.jpg?itok=gSBW9o8a\u0022 data-medsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/medium_1x_\/public\/measles-virus.jpg?itok=PhC8gUTb\u0022 data-lgsrc=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/large_1x_\/public\/measles-virus.jpg?itok=qrUauG6S\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg class=\u0022full-width\u0022 typeof=\u0022foaf:Image\u0022 width=\u0022600\u0022 height=\u0022450\u0022 alt=\u0022\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/medium_1x_\/public\/measles-virus.jpg?itok=PhC8gUTb\u0022 \/\u003E\u003C\/noscript\u003E\n  \u003Cdiv class=\u0022field-title\u0022\u003E\n    \u003Cp\u003EMeasles Virus\u003C\/p\u003E\n  \u003C\/div\u003E\n\n  \u003Cdiv class=\u0022field-credit\u0022\u003E\n    \u003Cp\u003E\u003Ca href=\u0022https:\/\/www.flickr.com\/photos\/sanofi-pasteur\/5279798333\/in\/photolist-93ym6K-93BsfE\u0022\u003ESanofi Pasteur via Flickr By CC 2.0\u003C\/a\u003E\u003C\/p\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\u003C\/p\u003E\n\n\u003Cp\u003EThe happiest place on Earth isn\u0027t so cheerful these days. In December, a large number of people \u003Ca href=\u0022http:\/\/www.latimes.com\/local\/lanow\/la-me-ln-measles-cases-tied-to-disneyland-california-adventure-20150107-story.html\u0022\u003Estarted coming down\u003C\/a\u003E with measles after visiting Disneyland in California. About 80 measles cases have been reported in the state, an unusually large number for a virus that has long been under control.\u003C\/p\u003E\n\n\u003Cp\u003EIn 2000, the measles virus reached \u003Ca href=\u0022http:\/\/www.cdc.gov\/measles\/cases-outbreaks.html\u0022\u003Eelimination status\u003C\/a\u003E in the United States. Elimination is not the same as eradication, which indicates that a disease has been extinguished worldwide. Elimination \u003Ca href=\u0022http:\/\/www.cdc.gov\/measles\/about\/faqs.html\u0022\u003Emeans\u003C\/a\u003E a disease is no longer native to a country, but cases could still exist because of infected people traveling to that country. Despite this definition, the recent outbreak doesn\u0027t look good for sustaining elimination, as more and more unvaccinated people contract the disease.\u003C\/p\u003E\n\n\u003Cp\u003E\u003Ca href=\u0022http:\/\/www.cdc.gov\/measles\/cases-outbreaks.html\u0022\u003EMore than 600 cases of measles\u003C\/a\u003E were reported across the country in 2014, the highest count in 20 years. \u003Ca href=\u0022http:\/\/www.latimes.com\/local\/education\/la-me-school-vaccines-20140903-story.html#page=1\u0022\u003EExperts say\u003C\/a\u003E the reason for the uptick in cases is partly because more parents have actively chosen not to vaccinate their children. The Centers for Disease Control and Eradication \u003Ca href=\u0022http:\/\/www.cdc.gov\/measles\/vaccination.html\u0022\u003Erecommends\u003C\/a\u003E children get two doses of the vaccine, one when they\u2019re 12 to 15 months old and the other when they\u2019re 4 to 6 years old.\u003C\/p\u003E\n\n\u003Cp\u003EVaccination is the only known way to prevent the disease. The more people who are immune, the less the disease can spread, which creates what is known as \u003Ca href=\u0022http:\/\/www.vaccines.gov\/basics\/protection\u0022\u003Eherd immunity\u003C\/a\u003E. This means that even if there is a small number of people who are not vaccinated, they\u0027ll generally be protected from a large outbreak, as long as a large percentage of people are vaccinated.\u003C\/p\u003E\n\n\u003Cp\u003EThe Federal Drug Administration licensed the first measles vaccination in 1963, contributing to a steady decline in reported cases. Here\u2019s an excerpt from a \u003Ca href=\u0022http:\/\/www.popsci.com\/archive-viewer?id=ByEDAAAAMBAJ\u0026amp;pg=33\u0026amp;query=measles\u0022\u003EFebruary 1962\u003C\/a\u003E \u003Cem\u003EPopular Science\u003C\/em\u003E article title \u201cNot-so-funny measles\u201d discussing two potential measles vaccines in development. At that point, there was an estimated 4 million annual cases of measles in the United States.\u003C\/p\u003E\n\n\u003Cblockquote\u003E\n  \u003Cp\u003EJust about everybody gets measles. The pink spots are usually greeted with smiling relief\u2014it isn\u0027t anything serious. But medical scientists are no longer amused. For measles can be a serious disease. While hardly in a class with cancer or automobile accidents, it kills about twice as many American children as does polio (in a population fairly well needled with Salk vaccine), and is a worrisome cause of drastic brain damage. In poorer countries, measles is a vicious plague\u2014 the death rate runs higher than 20 percent in some sections of Nigeria.\u003C\/p\u003E\n  \n  \u003Cp\u003ENow a remedy seems to be at hand. Measles is caused by a virus\u2014tiny molecules that are on the borderline between living organisms and inanimate chemicals.  Viruses cannot be knocked out by germ killers like penicillin, but they can be blocked in advance with vaccines, which stimulate the body to produce its own virus-dissolving antibodies.\u003C\/p\u003E\n\u003C\/blockquote\u003E\n\n\u003Cp\u003EBut this time, instead of being \u0022greeted with smiling relief,\u0022 the multi-state outbreak has been faced with a CDC \u003Ca href=\u0022http:\/\/emergency.cdc.gov\/han\/han00376.asp\u0022\u003Ehealth advisory\u003C\/a\u003E and increased attention. Medical scientists are still not amused.\u003C\/p\u003E\n  \u003C\/div\u003E\n  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-entity-field pane-node-field-tags\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n    \u003Cdiv class=\u0022field-tags inline\u0022\u003E\n      \u003Cspan class=\u0022field-label\u0022\u003E\n      Tags:\n    \u003C\/span\u003E\n  \n  \u003Cul\u003E\n          \u003Cli\u003E\n        \u003Ca href=\u0022\/tags\/measles\u0022 typeof=\u0022skos:Concept\u0022 property=\u0022rdfs:label skos:prefLabel\u0022 datatype=\u0022\u0022\u003Emeasles\u003C\/a\u003E      \u003C\/li\u003E\n          \u003Cli\u003E\n        \u003Ca href=\u0022\/tags\/measles-outbreak\u0022 typeof=\u0022skos:Concept\u0022 property=\u0022rdfs:label skos:prefLabel\u0022 datatype=\u0022\u0022\u003EMeasles outbreak\u003C\/a\u003E      \u003C\/li\u003E\n          \u003Cli\u003E\n        \u003Ca href=\u0022\/tags\/health\u0022 typeof=\u0022skos:Concept\u0022 property=\u0022rdfs:label skos:prefLabel\u0022 datatype=\u0022\u0022\u003EHealth\u003C\/a\u003E      \u003C\/li\u003E\n      \u003C\/ul\u003E\n\u003C\/div\u003E\n  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003Cdiv class=\u0022panel-pane pane-block pane-post-social-post-social-block\u0022 \u003E\n  \n                \n  \n  \u003C!--\u003Cdiv class=\u0022pane-content\u0022\u003E--\u003E\n        \u003Cdiv class=\u0022inactive-postButtons postButtons-node-223612\u0022 data-img=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/files\/styles\/medium_1x_\/public\/measles-virus.jpg?itok=PhC8gUTb\u0022 pw:url=\u0022http:\/\/www.popsci.com\/how-we-used-talk-about-measles\u0022 pw:title=\u0022How We Used To Talk About Measles\u0022 style=\u0022float:left;\u0022\u003E\u003C\/div\u003E\n    \u003Ca href=\u0022#\u0022 pw:url=\u0022http:\/\/www.popsci.com\/how-we-used-talk-about-measles\u0022 pw:title=\u0022How We Used To Talk About Measles\u0022 class=\u0022inactive-customIcon pw-widget-customIcon\u0022 name=\u0022customIcon\u0022\u003E\n      \u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022\/sites\/popsci.com\/modules\/bonnier\/sandcastle\/images\/placeholder.gif\u0022 data-src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003Cnoscript\u003E\u003Cimg typeof=\u0022foaf:Image\u0022 alt=\u0022\u0022 src=\u0022http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/post_social\/theme\/post_icon_24.png\u0022 \/\u003E\u003C\/noscript\u003E\n    \u003C\/a\u003E\n    \u003Cspan class=\u0022pw-counter-custom1\u0022\u003E\n      \u003Cspan class=\u0022pw-button-counter_custom1\u0022\u003E\n        \u003Cb class=\u0022customCounter\u0022 style=\u0022font-weight: normal!important;\u0022\u003E0\u003C\/b\u003E\n      \u003C\/span\u003E\n    \u003C\/span\u003E  \u003C!--\u003C\/div\u003E--\u003E\n\n  \n  \u003C\/div\u003E\n\u003C\/div\u003E\n  \u003C\/article\u003E\n  \u003Caside class=\u0022sidebar sidebar-right basic-sidebar\u0022\u003E\u003C\/aside\u003E\n\u003C\/div\u003E\n","sidebar":{"ads":[{"identifier":"is-gpt-ad-node-223612-right1","ad":{"outofpage":0,"refresh":1,"size":{"0":null,"1000":[[300,250],[300,600],[300,1050]]},"targeting":{"pos":[{"value":"right1","eval":0}],"remnant":[{"value":"yes","eval":0}],"device":[{"value":"drupalsettingsclickstream_trackingdevice","eval":"1"}],"site":[{"value":"popsci","eval":0}],"id":[{"value":"223612","eval":false}],"kw":[{"value":"measles","eval":false},{"value":"Health","eval":false},{"value":"Measles outbreak","eval":false}]},"networkCode":"6747\/n6747.popsci","targetedAdUnit":"health","skipPageTargeting":true}}]},"below":{"ads":[{"identifier":"is-gpt-ad-node-223612-middle","ad":{"outofpage":0,"refresh":1,"size":{"0":[[300,250],[320,50]],"728":[[728,90],[640,400]],"1000":[[970,415],[970,250],[970,66],[960,660],[728,90],[640,400]]},"targeting":{"pos":[{"value":"middle","eval":0}],"remnant":[{"value":"yes","eval":0}],"device":[{"value":"drupalsettingsclickstream_trackingdevice","eval":"1"}],"site":[{"value":"popsci","eval":0}],"id":[{"value":"223612","eval":false}],"kw":[{"value":"measles","eval":false},{"value":"Health","eval":false},{"value":"Measles outbreak","eval":false}]},"networkCode":"6747\/n6747.popsci","targetedAdUnit":"health","skipPageTargeting":true}}]},"analytics":{"omniture":{"settings":{"s_account":"bonndev","page_name":"devsite","dynamic_account_list":"timepopsci=http:\/\/www.popsci.com, timepopsci=https:\/\/www.popsci.com","link_track_vars":"","link_track_events":"","link_form_list":"","var_used":"","event_list":"","ignore_vocab":"","scode_path":"","tracking_server":"","visitor_migration_server":"","visitor_migration_key":"","link_internal_filters":"","ignore_query_string":"dom,loc,lnk","file":"http:\/\/www.popsci.com\/sites\/popsci.com\/modules\/bonnier\/bonnier_analytics\/providers\/omniture\/js\/s_code.js"},"omniture":{"omid":"101","key_value":"basic_content","name":"Basic Content","conditions":{"nodetype":["basic_content"]},"weight":"4","date_modified":"1410189298","scode":{"s.channel":{"spid":"1","name":"s.channel","description":"Section channel","weight":"0","enabled":"1","system":"1","value":"[node:field_primary_channel]","output":"\u0022health\u0022;\n"},"s.pageName":{"spid":"2","name":"s.pageName","description":"Page name","weight":"1","enabled":"1","system":"1","value":"[node:field_primary_channel]:[node:title]","output":"\u0022health:how we used to talk about measles\u0022;\n"},"s.prop2":{"spid":"3","name":"s.prop2","description":"Author name","weight":"2","enabled":"1","system":"1","value":"[node:field_author]","output":"\u0022lydia ramsey\u0022;\n"},"s.prop3":{"spid":"4","name":"s.prop3","description":"Article tags","weight":"3","enabled":"1","system":"1","value":"[node:field_tags]","output":"\u0022measles, measles outbreak, health\u0022;\n"},"s.prop4":{"spid":"5","name":"s.prop4","description":"Usually the node type, section, subsection, article, contest, site","weight":"4","enabled":"1","system":"1","value":"[node:content-type]","output":"\u0022basic content\u0022;\n"},"s.prop16":{"spid":"6","name":"s.prop16","description":"Sub section","weight":"5","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop5":{"spid":"7","name":"s.prop5","description":"Sponsor Name","weight":"6","enabled":"1","system":"1","value":"[omni:sponsor]","output":"\u0022\u0022;\n"},"s.prop8":{"spid":"8","name":"s.prop8","description":"SOLR Facets","weight":"7","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop18":{"spid":"9","name":"s.prop18","description":"Term being search on the result page","weight":"8","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop20":{"spid":"10","name":"s.prop20","description":"Number of results","weight":"9","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.pageType":{"spid":"11","name":"s.pageType","description":"Used ONLY on error page","weight":"10","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.events":{"spid":"12","name":"s.events","description":"Webform thank you page","weight":"11","enabled":"1","system":"1","value":"","output":"\u0022\u0022;\n"},"s.prop14":{"spid":"16","name":"s.prop14","description":"Media location","weight":"17","enabled":"1","system":"1","value":"[omni:content:media_location]","output":"\u0022\u0022;\n"},"s.prop6":{"spid":"13","name":"s.prop6","description":"Custom Attribute type","weight":"20","enabled":"1","system":"1","value":"[omni:content:attribute]","output":"\u0022article, infinite scroll\u0022;\n"},"s.prop13":{"spid":"14","name":"s.prop13","description":"Gallery count","weight":"20","enabled":"1","system":"1","value":"[omni:content:gallery_count]","output":"\u0022\u0022;\n"},"s.prop7":{"spid":"15","name":"s.prop7","description":"Comma delimited prop","weight":"20","enabled":"1","system":"1","value":"[omni:content:attribute]","output":"\u0022article, infinite scroll\u0022;\n"},"s.prop61":{"spid":"17","name":"s.prop61","description":"User ID of content","weight":"25","enabled":"1","system":"1","value":"[node:author]","output":"\u0022lydia ramsey\u0022;\n"},"s.prop66":{"spid":"18","name":"s.prop66","description":"Published date in MM-DD-YY","weight":"26","enabled":"1","system":"1","value":"[node:created:custom:m-d-y]","output":"\u002201-29-15\u0022;\n"}}},"pass_thru":2,"scode_array":{"s.channel":"\u0022health\u0022;\n","s.pageName":"\u0022health:how we used to talk about measles\u0022;\n","s.prop2":"\u0022lydia ramsey\u0022;\n","s.prop3":"\u0022measles, measles outbreak, health\u0022;\n","s.prop4":"\u0022basic content\u0022;\n","s.prop16":"\u0022\u0022;\n","s.prop5":"\u0022\u0022;\n","s.prop8":"\u0022\u0022;\n","s.prop18":"\u0022\u0022;\n","s.prop20":"\u0022\u0022;\n","s.pageType":"\u0022\u0022;\n","s.events":"\u0022\u0022;\n","s.prop14":"\u0022\u0022;\n","s.prop6":"\u0022article, infinite scroll\u0022;\n","s.prop13":"\u0022\u0022;\n","s.prop7":"\u0022article, infinite scroll\u0022;\n","s.prop61":"\u0022lydia ramsey\u0022;\n","s.prop66":"\u002201-29-15\u0022;\n"}}},"inContentAds":{"outofpage":0,"refresh":0,"size":{"0":[[300,250]],"1000":null},"targeting":{"pos":[{"value":"in_content","eval":0}],"remnant":[{"value":"yes","eval":0}],"device":[{"value":"drupalsettingsclickstream_trackingdevice","eval":"1"}],"site":[{"value":"popsci","eval":0}],"id":[{"value":"223612","eval":false}],"kw":[{"value":"measles","eval":false},{"value":"Health","eval":false},{"value":"Measles outbreak","eval":false}]},"networkCode":"6747\/n6747.popsci","targetedAdUnit":"health","skipPageTargeting":true}}],"config":{"type":"basicContent","tids":[],"begin":"recent","excludeId":"223255","scope":"channel","channel":"health","sidebarThrottle":30,"scrollThrottle":250},"recircTitle":"Related Content","adjustSidebarAds":1,"loadingPhrases":["Loading content"],"loadingDelay":10,"loadingPoint":-300},"post_social":{"settings":{"click":false,"track":"query","copypaste":false,"sharequote":false,"twitter_handle":"PopSci","publisher_key":"am3ljo5ms1qhfnpfgkj5"},"widget":{"container":"toolbox","size":"medium","buttons":[{"id":"facebook"},{"id":"twitter"},{"id":"email"}],"services":{"twitter":{"via":"PopSci"}}}}});
+//--><!]]>
+</script>
+  </head>
+  <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-223255 node-type-basic-content"  class="html not-front not-logged-in no-sidebars page-node page-node- page-node-223255 node-type-basic-content">
+    <div id="skip-link">
+      <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+    </div>
+    <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+Drupal.GPT = new Drupal.GPTClass(Drupal.settings.gpt);
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+Drupal.GPT.pageOptions.sra ? jQuery(document).ready(Drupal.GPT.run) : googletag.cmd.push(Drupal.GPT.run);
+//--><!]]>
+</script>
+<!-- Begin Facebook Conversion tag -->
+    <script type="text/javascript">
+    (function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = "//connect.facebook.net/en_US/fbds.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+      }
+      _fbq.push(["addPixelId", "1482788748627554"]);
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(["track", "PixelInitialized", {}]);
+  </script>
+  <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1482788748627554&amp;ev=NoScript" /></noscript>
+  <!-- End Facebook Conversion tag -->    <div class="wrapper" id="page-wrapper">
+  <div class="hidden-ads"><div class="panel-pane pane-block pane-ad-manager-interstitial" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div id="ad-manager-ad-interstitial-0" class="ad-manager-ad gpt-ads"><script type="text/javascript">Drupal.GPT.registerSlot('ad-manager-ad-interstitial-0',{"outofpage":true,"refresh":false,"size":{},"targeting":{}});</script></div>  <!--</div>-->
+
+  
+  </div>
+</div>
+  <div class="primary-nav">
+          <nav class="hamburger-nav"><div class="panel-pane pane-menu-tree pane-hamburger-menu" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div class="menu-block-wrapper menu-block-ctools-hamburger-menu-1 menu-name-hamburger-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first expanded menu-mlid-6516"><span class="nolink">TRENDING</span><ul class="menu"><li class="first leaf menu-mlid-6540"><a href="http://www.popsci.com/ceres">DAWN AT CERES</a></li>
+<li class="leaf menu-mlid-6520"><a href="/tags/our-robot-overlords">OUR ROBOT OVERLORDS</a></li>
+<li class="leaf menu-mlid-6537"><a href="/ces">CES 2015</a></li>
+<li class="leaf menu-mlid-6413"><a href="/tags/rise-drones">RISE OF DRONES</a></li>
+<li class="leaf menu-mlid-6415"><a href="/tags/end-privacy">END OF PRIVACY</a></li>
+<li class="leaf menu-mlid-6518"><a href="/tags/new-space-race">NEW SPACE RACE</a></li>
+<li class="leaf menu-mlid-6519"><a href="/tags/ebola">EBOLA</a></li>
+<li class="leaf menu-mlid-6432"><a href="/tags/3-d-printed-world">3-D PRINTED WORLD</a></li>
+<li class="last leaf menu-mlid-6522"><a href="/tags/future-energy">FUTURE OF ENERGY</a></li>
+</ul></li>
+<li class="expanded menu-mlid-6498"><span class="nolink">TOPICS</span><ul class="menu"><li class="first leaf menu-mlid-6433"><a href="/tags/animals">ANIMALS</a></li>
+<li class="leaf menu-mlid-6534"><a href="/tags/aviation">AVIATION</a></li>
+<li class="leaf menu-mlid-6418"><a href="/tags/cars">CARS</a></li>
+<li class="leaf menu-mlid-6421"><a href="/tags/diy">DIY</a></li>
+<li class="leaf menu-mlid-6435"><a href="/tags/energy">ENERGY</a></li>
+<li class="leaf menu-mlid-6436"><a href="/tags/entertainment">ENTERTAINMENT</a></li>
+<li class="leaf menu-mlid-6437"><a href="/tags/environment">ENVIRONMENT</a></li>
+<li class="leaf menu-mlid-6417"><a href="/tags/gadgets">GADGETS</a></li>
+<li class="leaf menu-mlid-6438"><a href="/tags/health">HEALTH</a></li>
+<li class="leaf menu-mlid-6440"><a href="/tags/military">MILITARY</a></li>
+<li class="leaf menu-mlid-6419"><a href="/tags/science">SCIENCE</a></li>
+<li class="leaf menu-mlid-6441"><a href="/tags/space">SPACE</a></li>
+<li class="last leaf menu-mlid-6420"><a href="/tags/technology">TECHNOLOGY</a></li>
+</ul></li>
+<li class="expanded menu-mlid-6442"><a href="/blog-network">BLOGS</a><ul class="menu"><li class="first leaf menu-mlid-6515"><a href="/blog-network/boxplot">BOXPLOT</a></li>
+<li class="leaf menu-mlid-6509"><a href="/blog-network/do-try-home">DO TRY THIS AT HOME</a></li>
+<li class="leaf menu-mlid-6504"><a href="/blog-network/eastern-arsenal">EASTERN ARSENAL</a></li>
+<li class="leaf menu-mlid-6512"><a href="/blog-network/eek-squad">EEK SQUAD</a></li>
+<li class="leaf menu-mlid-6513"><a href="/blog-network/kinderlab">KINDERLAB</a></li>
+<li class="leaf menu-mlid-6507"><a href="/blog-network/our-modern-plagues">OUR MODERN PLAGUES</a></li>
+<li class="leaf menu-mlid-6503"><a href="/blog-network/speed-lab">SPEED LAB</a></li>
+<li class="leaf menu-mlid-6499"><a href="/blog-network/sure-house">SURE HOUSE</a></li>
+<li class="leaf menu-mlid-6511"><a href="/blog-network/under-microscope">UNDER THE MICROSCOPE</a></li>
+<li class="leaf menu-mlid-6510"><a href="/blog-network/vintage-space">VINTAGE SPACE</a></li>
+<li class="last leaf menu-mlid-6514"><a href="/blog-network/zero-moment">ZERO MOMENT</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-6526"><a href="/videos/video-channel">VIDEOS</a></li>
+</ul></div>
+  <!--</div>-->
+
+  
+  </div>
+</nav>
+              <nav class="corporate-nav"><div class="panel-pane pane-menu-tree pane-corporate-menu" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div class="menu-block-wrapper menu-block-ctools-corporate-menu-1 menu-name-corporate-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-6389"><a href="http://www.popsci.com/topnav">Subscribe</a></li>
+<li class="expanded menu-mlid-6529"><span class="nolink">Terms &amp; Policies</span><ul class="menu"><li class="first leaf menu-mlid-6496"><a href="/abuse">Abuse</a></li>
+<li class="leaf menu-mlid-6461"><a href="/privacy-policy">Privacy Policy</a></li>
+<li class="last leaf menu-mlid-6495"><a href="/terms-of-use">Terms of Use</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-6497"><a href="/contact">Contact Us</a></li>
+</ul></div>
+  <!--</div>-->
+
+  
+  </div>
+</nav>
+              <nav class="social-nav"><div class="panel-pane pane-block pane-social-plugins-social-plugins-footer-icons" >
+  
+                <h2 class="pane-title">Follow Us</h2>
+          
+  
+  <!--<div class="pane-content">-->
+    <div class="social-icons-black social-plain"><div class="item-list"><ul><li class="first"><a href="http://preferences.bonniercorp.com/domain/popsci" class="email icon-plain" target="_blank"><i class="fa fa-envelope"></i></a></li>
+<li><a href="http://www.facebook.com/PopSci" class="facebook icon-plain" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a href="https://twitter.com/PopSci" class="twitter icon-plain" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<li><a href="https://plus.google.com/+PopularScience" class="googleplus icon-plain" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+<li><a href="http://instagram.com/popsci" class="instagram icon-plain" target="_blank"><i class="fa fa-instagram"></i></a></li>
+<li><a href="http://popsci.tumblr.com" class="tumblr icon-plain" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+<li><a href="http://www.pinterest.com/popularscience" class="pinterest icon-plain" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+<li><a href="http://www.youtube.com/Popscivideo" class="youTube icon-plain" target="_blank"><i class="fa fa-youtube"></i></a></li>
+<li class="last"><a href="http://www.popsci.com/rss" class="rss icon-plain" target="_blank"><i class="fa fa-rss"></i></a></li>
+</ul></div></div>  <!--</div>-->
+
+  
+  </div>
+</nav>
+      </div>
+  <header class="main-header">
+        <div class="header-content">
+      <div class="header-content-inner inner-wrapper">
+        <div class="primary-icons">
+          <a id="btn-hamburger-nav" class="btn-hamburger"><i class="fa fa-reorder"></i></a>
+          <a id="btn-search-nav" class="btn-search"><i class="fa fa-search"></i></a>
+        </div>
+        <div class="logo"><div class="panel-pane pane-page-logo" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <a href="/" rel="home" id="logo" title="Home"><img src="http://www.popsci.com/sites/popsci.com/themes/bonnier_theme/logo.png" alt="Home" /></a>  <!--</div>-->
+
+  
+  </div>
+</div>
+        <div class="social-icons"><div class="panel-pane pane-block pane-social-plugins-social-plugins-header-icons pane-social-buttons" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div class="social-icons-white social-plain"><div class="item-list"><ul><li class="first"><a href="http://www.facebook.com/PopSci" class="facebook icon-plain" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a href="https://twitter.com/PopSci" class="twitter icon-plain" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<li class="last"><a href="https://plus.google.com/+PopularScience" class="googleplus icon-plain" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+</ul></div></div>  <!--</div>-->
+
+  
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="search"><div class="panel-pane pane-solr-client-form" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <form accept-charset="UTF-8" method="post" action="/find" class="solr_client_form">
+<input type="text" maxlength="128" size="15" placeholder="Site Search" name="apachesolr_panels_search_form" class="solr_client_form_search" title="Enter the terms you wish to search for.">
+<input type="hidden" value="apachesolr_panels_search_form" name="form_id">
+<button id="edit-submit" class="search-submit form-submit" type="submit"><i class="fa fa-search"></i></button>
+<input type="hidden" value="find" name="apache_solr_page_path" class="solr_client_path" />
+</form>  <!--</div>-->
+
+  
+  </div>
+</div>
+    <div class="header-nav">
+              <nav class="main-nav">
+          <div class="main-nav-inner inner-wrapper"><div class="panel-pane pane-menu-tree pane-main-menu main-menu-sticky-hidden" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div class="menu-block-wrapper menu-block-ctools-main-menu-1 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-6525"><span id="trending" class="nolink">TRENDING:</span></li>
+<li class="leaf menu-mlid-6541"><a href="http://www.popsci.com/ceres">DAWN AT CERES</a></li>
+<li class="leaf menu-mlid-6407"><a href="/tags/rise-drones">RISE OF DRONES</a></li>
+<li class="leaf menu-mlid-6412"><a href="/tags/3-d-printed-world">3-D PRINTED WORLD</a></li>
+<li class="expanded menu-mlid-6411"><span id="more" class="nolink">MORE</span><ul class="menu"><li class="first leaf menu-mlid-6463"><a href="/tags/our-robot-overlords">OUR ROBOT OVERLORDS</a></li>
+<li class="leaf menu-mlid-6465"><a href="/tags/new-space-race">NEW SPACE RACE</a></li>
+<li class="leaf menu-mlid-6466"><a href="/ces">CES 2015</a></li>
+<li class="leaf menu-mlid-6409"><a href="/tags/end-privacy">END OF PRIVACY</a></li>
+<li class="leaf menu-mlid-6408"><a href="/tags/ebola">EBOLA</a></li>
+<li class="last leaf menu-mlid-6523"><a href="/tags/future-energy">FUTURE OF ENERGY</a></li>
+</ul></li>
+<li class="leaf menu-mlid-6524"><a href="/videos/video-channel">VIDEOS</a></li>
+<li class="last leaf menu-mlid-6490"><a href="https://subscribe.popsci.com/servlet/OrdersGateway?cds_mag_code=PPS&amp;cds_page_id=172184&amp;cds_response_key=IWAPLAYC0&amp;cds_misc_1=web-i-pps&amp;cds_misc_2=TN-TXT&amp;cds_misc_3=&amp;cds_misc_4=&amp;cds_misc_5=" id="subscribe" class="expanded dropdown-processed">SUBSCRIBE</a></li>
+</ul></div>
+  <!--</div>-->
+
+  
+  </div>
+</div>
+        </nav>
+                </div>
+  </header>
+  <div class="content-wrapper">
+    <div class="content-wrapper-inner inner-wrapper"><div class="panel-pane pane-block pane-ad-manager-x90" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div id="ad-manager-ad-x90-0" class="ad-manager-ad gpt-ads"><script type="text/javascript">Drupal.GPT.registerSlot('ad-manager-ad-x90-0',{"outofpage":false,"refresh":true,"size":{"0":[[320,50]],"767":[[728,90]],"1000":[[728,90],[970,90],[970,250]]},"targeting":{"pos":[{"value":"x90","eval":0}]}});</script></div>  <!--</div>-->
+
+  
+  </div>
+<div class="panel-pane pane-page-content" >
+  
+  
+  
+  <!--<div class="pane-content">-->
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div class="content-basic-wrapper basic-sidebar clearfix">
+    <header class="content-header basic-sidebar"><div class="panel-pane pane-panels-mini pane-node-header" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div class="content-onecol one-col" id="mini-panel-node_header">
+    <div><div class="panel-pane pane-primary-channel" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div class="primary-channel-eyebrow"><a href="/tags/health">Health</a></div>  <!--</div>-->
+
+  
+  </div>
+<h1>Promising Results For Experimental Ebola Vaccine</h1>
+
+  <div class="field-subtitle">
+    <p>Studies of more potent versions of the vaccine are already underway</p>
+  </div>
+<div class="panel-pane pane-byline" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <span class="author"><span class="label">By</span>
+  
+    <a href="/popsci-authors/francie-diep" typeof="Concept" property="prefLabel" datatype="">Francie Diep</a>  
+</span> <span class="date" data-timestamp="1419363000"><span class="label">posted</span> Dec 23rd, 2014 at 2:30pm</span>  <!--</div>-->
+
+  
+  </div>
+</div>
+</div>
+  <!--</div>-->
+
+  
+  </div>
+<div class="panel-pane pane-block pane-post-social-post-social-block" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+        <div class="postButtons" style="float:left;"></div>
+    <a href="#" class="customIcon pw-widget-customIcon" name="customIcon">
+      <img typeof="foaf:Image" alt="" src="/sites/popsci.com/modules/bonnier/sandcastle/images/placeholder.gif" data-src="http://www.popsci.com/sites/popsci.com/modules/bonnier/post_social/theme/post_icon_24.png" /><noscript><img typeof="foaf:Image" alt="" src="http://www.popsci.com/sites/popsci.com/modules/bonnier/post_social/theme/post_icon_24.png" /></noscript>
+    </a>
+    <span class="pw-counter-custom1">
+      <span class="pw-button-counter_custom1">
+        <b class="customCounter" style="font-weight: normal!important;">0</b>
+      </span>
+    </span>  <!--</div>-->
+
+  
+  </div>
+</header>
+  <article class="content-basic basic-sidebar">
+    <div class="content-main basic-sidebar"><div class="panel-pane pane-entity-field pane-node-body" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    
+  <div class="field-body">
+    <p><div class="media media-element-container media-default full-width"><img class="full-width" typeof="foaf:Image" width="1000" height="517" alt="illustration showing a person in a hazmat suit holding up a bottle like those used to hold vaccines" src="/sites/popsci.com/modules/bonnier/sandcastle/images/placeholder.gif" data-smsrc="http://www.popsci.com/sites/popsci.com/files/styles/small_1x_/public/ebola-vaccine.jpg?itok=RoMPG--k" data-medsrc="http://www.popsci.com/sites/popsci.com/files/styles/medium_1x_/public/ebola-vaccine.jpg?itok=42sFsi6f" data-lgsrc="http://www.popsci.com/sites/popsci.com/files/styles/large_1x_/public/ebola-vaccine.jpg?itok=qib9-eKP" /><noscript><img class="full-width" typeof="foaf:Image" width="600" height="310" alt="illustration showing a person in a hazmat suit holding up a bottle like those used to hold vaccines" src="http://www.popsci.com/sites/popsci.com/files/styles/medium_1x_/public/ebola-vaccine.jpg?itok=42sFsi6f" /></noscript>
+  <div class="field-title">
+    <p>A Vaccine for Ebola</p>
+  </div>
+
+  <div class="field-credit">
+    <p>State Department/Doug Thompson</p>
+  </div>
+</div></p>
+
+<p>An experimental vaccine against Ebola has shown promising results in volunteers in Uganda. The study, published today in <a href="http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(14)62385-0/fulltext"><em>The Lancet</em></a>, is the first to report an Ebola vaccine candidate to be both safe and effective in an African population, said lead author Julie Ledgerwood <a href="http://www.eurekalert.org/pub_releases/2014-12/tl-tlt121914.php">in a statement</a>. Ledgerwood specializes in testing experimental vaccines for the U.S. National Institute of Allergy and Infectious Disease.</p>
+
+<p>The results are exciting because there aren't any fully proven Ebola immunizations or treatments. Hopefully, some will be <a href="http://www.popsci.com/what-expect-2015-vital-ebola-drugs-reach-west-africa">ready by 2015</a>. But there's still plenty of work left to do. Because the vaccine they tested is so new, Ledgerwood and her team gave test subjects low-potency doses of it. The dose was not enough to give the volunteers long-lasting protection against Ebola, and about half of the test subjects who received the vaccine didn't get any protection at all. However, the fact that the low-potency vaccine gave about half of people short-term protection, while triggering few side effects, is good news.</p>
+
+<p>Normally, with results like this, the next step would be to try higher or more potent doses. In this case, public health officials <a href="http://www.popsci.com/article/science/how-fast-track-ebola-vaccine">have fast-tracked</a> the development and testing of Ebola treatments, so studies of more potent versions of this vaccine are already underway. Just last month, researchers working on one of those trials <a href="http://www.nejm.org/doi/full/10.1056/NEJMoa1410863">published promising results</a> from 20 study volunteers. (The trial being reported today tested 108 volunteers and included volunteers receiving a placebo. The 20-person trial included no placebo.)</p>
+
+<p>The vaccine Ledgerwood's team is reporting on today contains a fragment of Ebola DNA. The DNA codes for the proteins that pepper the surfaces of Ebolaviruses of the Sudan and Zaire strains. Those surface proteins alone aren't enough to make people sick with Ebola, but exposing the body to them helps the immune system learn to quickly recognize those proteins and clear them out.</p>
+
+<p>The National Institute of Allergy and Infectious Disease has tried making a number of DNA vaccines against Ebola before. The vaccines have generally proven safe, but not quite effective enough to trigger a strong, long-lasting response from the immune system. This team appears to have overcome that problem by encasing the DNA inside a cold virus that normally infects chimpanzees. The cold virus itself is harmless to people, but it helps deliver the Ebola DNA into people's cells, helping to trigger a stronger immune response.</p>
+  </div>
+  <!--</div>-->
+
+  
+  </div>
+<div class="panel-pane pane-entity-field pane-node-field-tags" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div class="field-tags inline">
+      <span class="field-label">
+      Tags:
+    </span>
+  
+  <ul>
+          <li>
+        <a href="/tags/ebola" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Ebola</a>      </li>
+          <li>
+        <a href="/tags/vaccines" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">vaccines</a>      </li>
+          <li>
+        <a href="/tags/dna" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">dna</a>      </li>
+          <li>
+        <a href="/tags/health" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Health</a>      </li>
+      </ul>
+</div>
+  <!--</div>-->
+
+  
+  </div>
+<div class="panel-pane pane-block pane-post-social-post-social-block" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+        <div class="postButtons" style="float:left;"></div>
+    <a href="#" class="customIcon pw-widget-customIcon" name="customIcon">
+      <img typeof="foaf:Image" alt="" src="/sites/popsci.com/modules/bonnier/sandcastle/images/placeholder.gif" data-src="http://www.popsci.com/sites/popsci.com/modules/bonnier/post_social/theme/post_icon_24.png" /><noscript><img typeof="foaf:Image" alt="" src="http://www.popsci.com/sites/popsci.com/modules/bonnier/post_social/theme/post_icon_24.png" /></noscript>
+    </a>
+    <span class="pw-counter-custom1">
+      <span class="pw-button-counter_custom1">
+        <b class="customCounter" style="font-weight: normal!important;">0</b>
+      </span>
+    </span>  <!--</div>-->
+
+  
+  </div>
+</div>
+  </article>
+  <aside class="sidebar sidebar-right basic-sidebar"></aside>
+</div>
+  </div>
+</div>
+  <!--</div>-->
+
+  
+  </div>
+</div>
+  </div>
+  <footer class="main-footer">
+    <div class="main-footer-inner inner-wrapper">
+      <div class="footer-ads"><div class="panel-pane pane-block pane-ad-manager-006-footerform-960x250" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div id="ad-manager-ad-006-footerform-960x250-0" class="ad-manager-ad bonnier-ads-circ-ads"><script type="text/javascript">BonnierAdsCirc.addAd('ad-manager-ad-006-footerform-960x250-0', '006_footerForm_970x250');</script></div>  <!--</div>-->
+
+  
+  </div>
+</div>
+      <div class="footer-content"><div class="panel-pane pane-panels-mini pane-social-footer social-icons-black" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div class="content-leftcol two-col"><div class="panel-pane pane-block pane-social-plugins-social-plugins-footer-logo" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <a href="/"><img typeof="foaf:Image" alt="" src="/sites/popsci.com/modules/bonnier/sandcastle/images/placeholder.gif" data-src="http://www.popsci.com/sites/popsci.com/files/monkey.png" /><noscript><img typeof="foaf:Image" alt="" src="http://www.popsci.com/sites/popsci.com/files/monkey.png" /></noscript></a>  <!--</div>-->
+
+  
+  </div>
+</div>
+<div class="content-rightcol two-col"><div class="panel-pane pane-block pane-social-plugins-social-plugins-footer-icons pane-social-buttons" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div class="social-icons-black social-plain"><div class="item-list"><ul><li class="first"><a href="http://preferences.bonniercorp.com/domain/popsci" class="email icon-plain" target="_blank"><i class="fa fa-envelope"></i></a></li>
+<li><a href="http://www.facebook.com/PopSci" class="facebook icon-plain" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a href="https://twitter.com/PopSci" class="twitter icon-plain" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<li><a href="https://plus.google.com/+PopularScience" class="googleplus icon-plain" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+<li><a href="http://instagram.com/popsci" class="instagram icon-plain" target="_blank"><i class="fa fa-instagram"></i></a></li>
+<li><a href="http://popsci.tumblr.com" class="tumblr icon-plain" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+<li><a href="http://www.pinterest.com/popularscience" class="pinterest icon-plain" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+<li><a href="http://www.youtube.com/Popscivideo" class="youTube icon-plain" target="_blank"><i class="fa fa-youtube"></i></a></li>
+<li class="last"><a href="http://www.popsci.com/rss" class="rss icon-plain" target="_blank"><i class="fa fa-rss"></i></a></li>
+</ul></div></div>  <!--</div>-->
+
+  
+  </div>
+<div class="panel-pane pane-solr-client-form" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <form accept-charset="UTF-8" method="post" action="/find" class="solr_client_form">
+<input type="text" maxlength="128" size="15" placeholder="Site Search" name="apachesolr_panels_search_form" class="solr_client_form_search" title="Enter the terms you wish to search for.">
+<input type="hidden" value="apachesolr_panels_search_form" name="form_id">
+<button id="edit-submit" class="search-submit form-submit" type="submit"><i class="fa fa-search"></i></button>
+<input type="hidden" value="find" name="apache_solr_page_path" class="solr_client_path" />
+</form>  <!--</div>-->
+
+  
+  </div>
+</div>
+  <!--</div>-->
+
+  
+  </div>
+<div class="panel-pane pane-menu-tree pane-menu-footer-menu social-icons-black" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div class="menu-block-wrapper menu-block-ctools-menu-footer-menu-1 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-907"><a href="https://subscribe.popsci.com/servlet/OrdersGateway?cds_mag_code=PPS&amp;cds_page_id=172184&amp;cds_response_key=IWACLAYG0&amp;cds_misc_1=web-i-pps&amp;cds_misc_2=FT-TXT&amp;cds_misc_3=&amp;cds_misc_4=&amp;cds_misc_5=" data-menu_circ_ads="002_footerLink_HTML" target="_blank">Subscribe to Popular Science</a></li>
+<li class="leaf menu-mlid-3965"><a href="/privacy-policy">Privacy Policy</a></li>
+<li class="leaf menu-mlid-3966"><a href="/terms-of-use">Terms of Use</a></li>
+<li class="leaf menu-mlid-6528"><a href="/abuse">Abuse</a></li>
+<li class="leaf menu-mlid-6535"><a href="/masthead">Masthead</a></li>
+<li class="leaf menu-mlid-6527"><a href="/contact">Contact Us</a></li>
+<li class="last leaf menu-mlid-6536"><a href="http://www.popularscience.tv/" rel="nofollow" target="_blank">Popular Science TV</a></li>
+</ul></div>
+  <!--</div>-->
+
+  
+  </div>
+<div class="panel-pane pane-copyright social-icons-black" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    Copyright © 2015 Popular Science. A <a href="http://www.bonniercorp.com/">Bonnier Corporation</a> Company. All rights reserved. Reproduction in whole or in part without permission is prohibited.  <!--</div>-->
+
+  
+  </div>
+<div class="panel-pane pane-panels-mini pane-bonnier-footer social-icons-black" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <div class="content-leftcol two-col"><div class="panel-pane pane-bonnier-small-logo" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <a href="http://www.bonniercorp.com" target="_blank"><img typeof="foaf:Image" alt="" src="/sites/popsci.com/modules/bonnier/sandcastle/images/placeholder.gif" data-src="http://www.popsci.com/sites/popsci.com/modules/bonnier/bonnier_publications/theme/bonnier-logo-black.png" /><noscript><img typeof="foaf:Image" alt="" src="http://www.popsci.com/sites/popsci.com/modules/bonnier/bonnier_publications/theme/bonnier-logo-black.png" /></noscript></a>  <!--</div>-->
+
+  
+  </div>
+</div>
+<div class="content-rightcol two-col"><div class="panel-pane pane-block pane-bonnier-publications-bonnier-publications" >
+  
+                
+  
+  <!--<div class="pane-content">-->
+    <form action="/promising-results-experimental-ebola-vaccines-containing-ebola-protein-dna" method="post" id="-bonnier-publications-listings" accept-charset="UTF-8"><div><div class="form-item form-type-select form-item-bonnier-publications-options">
+ <select onchange="_bonnier_publications_onchange_callback(this)" id="edit-bonnier-publications-options" name="bonnier_publications_options" class="form-select"><option value="" selected="selected">Visit Our Sister Sites</option><optgroup label="Travel, Dive and Epicurean"><option value="http://www.destinationweddingmag.com/">Destination Weddings &amp; Honeymoon</option><option value="http://www.floridatravellife.com/">Florida Travel + Life</option><option value="http://www.islands.com/">Islands</option><option value="http://www.saveur.com/">Saveur</option><option value="http://www.scubadiving.com/">Scuba Diving</option><option value="http://www.sportdiver.com/">Sport Diver</option></optgroup><optgroup label="Marine &amp; Aviation"><option value="http://www.boatingmag.com/">Boating</option><option value="http://www.cruisingworld.com/">Cruising World</option><option value="http://www.flyingmag.com/">Flying</option><option value="http://www.marlinmag.com/">Marlin</option><option value="http://www.marlinuniversity.com/">Marlin University</option><option value="http://www.sailingworld.com/">Sailing World</option><option value="http://www.saltwatersportsman.com/">Salt Water Sportsman</option><option value="http://www.sportfishingmag.com/">Sport Fishing</option><option value="http://www.wakeboardingmag.com/">Wakeboarding</option><option value="http://www.waterskimag.com/">WaterSki</option><option value="http://www.yachtingmagazine.com/">Yachting</option></optgroup><optgroup label="Men's Group"><option value="http://www.americanphotomag.com">American Photo</option><option value="http://www.fieldandstream.com/">Field &amp; Stream</option><option value="http://www.outdoorlife.com/">Outdoor Life</option><option value="http://www.popsci.com/">Popular Science</option><option value="http://www.popphoto.com/">Popular Photography</option><option value="http://www.shotbusiness.com/">SHOT Business</option><option value="http://www.atvrider.com">ATV Rider</option><option value="http://www.baggersmag.com">Baggers</option><option value="http://www.cycleworld.com">Cycle World</option><option value="http://www.dirtrider.com">Dirt Rider</option><option value="http://www.hotbikeweb.com">Hot Bike</option><option value="http://www.motorcyclecruiser.com">Motorcycle Cruiser</option><option value="http://www.motorcyclistonline.com">Motorcyclist</option><option value="http://www.sportrider.com">Sport Rider</option><option value="http://www.streetchopperweb.com">Street Chopper</option><option value="http://www.superstreetbike.com">Super Streetbike</option></optgroup><optgroup label="Working Mother"><option value="http://www.workingmother.com/">Working Mother</option></optgroup><optgroup label="Entertainment / Events"><option value="http://www.world-ent.com">World Entertainment Services</option><option value="http://www.bonniercorp.com/brands/World-Sports-Marketing.html">World Sports &amp; Marketing</option></optgroup></select>
+</div>
+<input type="hidden" name="form_build_id" value="form-2WYQwna8mzGIphIoibbHRo-vwADzIj4Fvk-3vDZHWE0" />
+<input type="hidden" name="form_id" value="_bonnier_publications_listings" />
+</div></form>  <!--</div>-->
+
+  
+  </div>
+</div>
+  <!--</div>-->
+
+  
+  </div>
+</div>
+    </div>
+  </footer>
+</div>
+    <!-- Start analytics tag -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', Drupal.settings.bonnier_analytics.analytics.property, Drupal.settings.bonnier_analytics.analytics.domain);
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+jQuery(window).bind('bonnierPageView', function(){
+  ga('send', {
+    'hitType': 'pageview',
+    'page': window.location.pathname + window.location.search,
+    'title': document.title
+  });
+});
+</script>
+<!-- End analytics tag -->
+      <!-- Start quantcast tag -->
+      <script type="text/javascript">
+      _qacct = Drupal.settings.bonnier_analytics.quantcast.account;
+      // function to refresh the tag, creating a new page hit
+      function quantcast_refresh() {
+        _qevents.push({
+        qacct: Drupal.settings.bonnier_analytics.quantcast.account,
+        event: "refresh"
+        });
+      }
+      // Load script once windows load
+      jQuery.getScript('http://edge.quantserve.com/quant.js', function (data, textStatus, jqxhr) {});
+      jQuery(window).bind('bonnierPageView', function(event) {
+        quantcast_refresh();
+      });
+      </script>
+      <noscript><img src="http://pixel.quantserve.com/pixel/p-cafODhhaQOlCs.gif" style="display:none" height="1" width="1" alt="Quantcast" /></noscript>
+      <!-- End quantcast tag -->
+    <script type="text/javascript">
+  var s_account = Drupal.settings.bonnier_analytics.omniture.settings.s_account;
+  var s_dynamicAccountList = Drupal.settings.bonnier_analytics.omniture.settings.dynamic_account_list;
+  var s_linkTrackVars = Drupal.settings.bonnier_analytics.omniture.link_track_vars;
+  var s_linkTrackEvents = Drupal.settings.bonnier_analytics.omniture.link_track_events;
+  var s_formList = Drupal.settings.bonnier_analytics.omniture.link_form_list;
+  var s_varUsed = Drupal.settings.bonnier_analytics.omniture.settings.var_used;
+  var s_eventList = Drupal.settings.bonnier_analytics.omniture.settings.event_list;
+</script>
+<script type="text/javascript" src="http://www.popsci.com/sites/popsci.com/modules/bonnier/bonnier_analytics/providers/omniture/js/s_code.js"></script>
+<script type="text/javascript"><!--
+  // function to reload the tag, creating another page hit
+  function omniture_refresh() {
+    if (typeof s !== 'undefined') {
+      void(s.t());
+    };
+  }
+
+      // Omniture Key Condition - basic_content
+          s.channel = "health";
+          s.pageName = "health:promising results for experimental ebola vaccine";
+          s.prop2 = "francie diep";
+          s.prop3 = "ebola, vaccines, dna, health";
+          s.prop4 = "basic content";
+          s.prop16 = "";
+          s.prop5 = "";
+          s.prop8 = "";
+          s.prop18 = "";
+          s.prop20 = "";
+          s.pageType = "";
+          s.events = "";
+          s.prop14 = "";
+          s.prop6 = "article, infinite scroll";
+          s.prop13 = "";
+          s.prop7 = "article, infinite scroll";
+          s.prop61 = "fcdiep";
+          s.prop66 = "12-23-14";
+        
+    
+    
+    
+    
+      omniture_cleanup(Drupal.settings.bonnier_analytics.omniture.scode_array,Drupal.settings.bonnier_analytics.omniture.pass_thru);
+    
+  
+  /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+  var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+  <script type="text/javascript"><!--
+  if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+  //--></script><noscript><img src="http://bonniercorp.122.2o7.net/b/ss//1/H.22.1--NS/0"
+  height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+  <!-- End SiteCatalyst code version: H.22.1. -->
+
+    <!-- Begin comScore Tag -->
+    <script type="text/javascript">
+      var _comscore = _comscore || [];
+      _comscore.push({ c1: Drupal.settings.bonnier_analytics.comscore.c1, c2: Drupal.settings.bonnier_analytics.comscore.c2 });
+      (function() {
+      var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+      s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+      el.parentNode.insertBefore(s, el);})();
+      jQuery(window).bind("bonnierPageView", function(){
+        // Attempt to log comScore pageview.
+        if (typeof COMSCORE !== "undefined") {
+          COMSCORE.beacon({ c1: Drupal.settings.bonnier_analytics.comscore.c1, c2: Drupal.settings.bonnier_analytics.comscore.c2 });
+          jQuery.ajax({
+            url: Drupal.settings.basePath + Drupal.settings.bonnier_analytics.comscore.pageviewPath,
+            dataType: "script"
+          });
+        }
+      });
+    </script>
+    <noscript>
+      <img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6035029&amp;cv=2.0&amp;cj=1" style="display:none" width="0" height="0" alt="" />
+    </noscript>
+    <!-- End comScore Tag -->
+  <!-- Start nielsen tag -->
+  <script type="text/javascript">
+    function Nielsen_Event() {
+      var d = new Image(1, 1);
+      d.onerror = d.onload = function () { d.onerror = d.onload = null; };
+
+      d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-903454h&cg=0&cc=1&si=",
+      escape(window.location.href), 
+      "&rp=", escape(document.referrer),
+      "&ts=compact&c0=usergen,1&rnd=",(new Date()).getTime()].join('');
+    };
+    // Track the initial page load.
+    Nielsen_Event();
+    jQuery(window).bind('bonnierPageView', function(event) {
+      Nielsen_Event();
+    });
+  </script>
+  <noscript><div><img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-903454h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" /></div></noscript>
+  <!-- End nielsen tag -->
+        <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = '//widgets.outbrain.com/outbrain.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        //--><!]]>
+        </script>      <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = Drupal.settings.silverpop_engage.silverpop_engage_src;
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        //--><!]]>
+        </script><script type="text/javascript" src="http://www.popsci.com/sites/popsci.com/files/js/js_7MCpYEnU_2efrrDXJ3DkYNDdhe_WLJYR6sXDMBWt86s.js"></script>
+  </body>
+</html>

@@ -1,0 +1,487 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" id="no-js">
+<head>  
+ <title>Ebola | Disease Directory | Travelers&#39; Health | CDC</title><meta name="title" content="Ebola | Disease Directory | Travelers&amp;#39; Health | CDC" />     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />      <meta name="description" content="Ebola" />      <meta name="keywords" content=" | Travelers&#39; Health | CDC" />      <meta name="dc.date.reviewed" content="2015-01-20" />      <meta name="dc.date.created" content="2014-07-31" />     <meta name="dc.subject" content="travel health" />
+    <meta name="dc.publisher" content="Centers for Disease Control and Prevention" />
+    <meta name="template.version" content="2.7.1" />
+    <meta name="verify-v1" content="QgNWnEgcBTh4dpn9Y0xbZ2ZCWwGOHR6DJLa61KkMaGs=" />
+    <meta name="msvalidate.01" content="149B31BC38DC9B7425C5DC64BB53E4F1" />
+    <meta name="y_key" content="d509505b79c1962b" />
+    <meta name="google-site-verification" content="FuESBBtzrAANFjr1nqoCNFMlaEGI-Ki73ucfiLt4YUY" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.cdc.gov/TemplatePackage/css/B/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.cdc.gov/TemplatePackage/css/B/newMods.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://www.cdc.gov/TemplatePackage/js/B/jquery/libs/flexslider/flexSlider.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="http://www.cdc.gov/TemplatePackage/css/B/print.css" />
+    <!-- compliance patch for microsoft browsers -->
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://www.cdc.gov/TemplatePackage/css/B/ie6_fixes.css" />
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="http://www.cdc.gov/TemplatePackage/css/B/ie7_fixes.css" />
+    <![endif]-->
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="http://www.cdc.gov/TemplatePackage/css/B/ie8_fixes.css" />
+    <![endif]-->
+    <!-- /end compliance patch for microsoft browsers -->
+    
+    <script type="text/javascript">(function (H) { H.id = H.id.replace('no-', ''); })(document.documentElement)</script>
+    <script type="text/javascript" src="/travel/scripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/jquery.watermark.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/common.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/startup.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/socialMedia.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/blocks-ie.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/video.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/navScripts.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/govdelivery.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/anchor.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/syndicateThisPage.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/css-include.js"></script>
+
+    <!-- compliance patch for microsoft browsers -->
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/pngfix.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/blocks-ie6.js"></script>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="http://www.cdc.gov/TemplatePackage/css/B/ie7_fixes.css" />
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/jquery.curvycorners.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/cdc-gridCompatibility.js"></script>
+
+    <script type="text/javascript" src="/travel/scripts/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="/travel/scripts/jquery.qtip.min.js"></script>
+
+    <link rel="shortcut icon" href="http://www.cdc.gov/TemplatePackage/images/home/favicon.ico" />
+    <link rel="home" href="/travel/" title="Home" />
+
+    
+    <link rel="stylesheet" type="text/css" href="http://www.cdc.gov/TemplatePackage/js/B/jquery/themes/base/jquery.ui.accordion.css" />
+    
+    <script type="text/javascript" src="/travel/scripts/jquery.ui.min.js"></script>
+
+
+    <script type="text/javascript" src="http://www.cdc.gov/JScript/foresee/foresee-trigger.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/JScript/foresee-variables.js"></script>
+    
+        
+    <link rel="stylesheet" href="/travel/content/css/custom.min.css?v=2" />
+    <link rel="stylesheet" href="/travel/content/css/pre-rd-temp.min.css" />
+    <link rel="stylesheet" href="/travel/content/css/custom-print.min.css?v=2" media="print" />
+    <link rel="stylesheet" href="/travel/content/css/jquery.qtip.min.css"/>
+
+    
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var n = new CDC.LeftNav("nav-primary", "/travel/diseases/ebola", true, true, false);
+        n.render();
+        $("#nav-informationcenters").parent().children().each(function () {
+            if ($(this).get(0).nodeName.toLowerCase() == "ul") {
+                $(this).removeClass("ulHide");
+                $(this).show();
+                $(this).children().each(function () {
+                    $(this).removeClass("ulHide");
+                    $(this).show();
+                });
+            }
+        });
+
+        $("#nav-destination_clinician").parent().each(function () { $(this).css("background-color", "#E4DABC"); });
+        $("#nav-destination_traveler").parent().each(function () { $(this).css("background-color", "#D7E4CC"); });
+    });
+</script>
+
+</head>
+<body id="contentPageStandard" class="secondTier v270 localSearch">
+    <div id="top"></div>
+    
+<div id="skipmenu">
+	<a href="#searchBoxLocal" class="skippy" title="Salte directo a la b&uacute;squeda">Salte directo a la b&uacute;squeda</a>
+	<a href="#az" class="skippy" title="Salte directo al listado de A-Z">Salte directo al listado de A-Z</a>
+	<a href="#nav" class="skippy" title="Salte directo a la navegaci&oacute;n">Salte directo a la navegaci&oacute;n</a>
+	<a href="#content-main" class="skippy" title="Salte directo al contenido">Salte directo al contenido</a>
+	<a href="#content-secondary" class="skippy" title="Salte directo a las opciones de la p&aacute;gina">Salte directo a las opciones de la p&aacute;gina</a>
+</div><div id="wrapper">
+    <div id="wrapper-inner">
+        <div id="branding">
+            <span id="homeward"><a href="http://www.cdc.gov/" title="Return to the CDC Home Page">CDC Home</a></span>
+<div id="branding-logo">
+	<div id="branding-logoImage"><img src="http://www.cdc.gov/TemplatePackage/images/cdcHeaderLogo.gif" width="470" height="47" alt="CDC. Centers for Disease Control and Prevention. CDC 24/7: Saving Lives. Protecting People." border="0" /><a href="http://www.cdc.gov/" title="CDC 24/7: Saving Lives. Protecting People.&trade;"><span>CDC 24/7: Saving Lives. Protecting People.&trade;</span></a></div>
+
+            
+
+		<script type="text/javascript">
+			<!--//
+			$().ready(function(){
+				$("#searchBoxLocal").watermark({html:"Choose a topic above"});
+				$("form#searchCDCLocal").append($("<input />").attr("id", "input508").attr("type", "hidden"));
+				$("form#searchCDCLocal span label").attr("for", "input508");
+			});
+			//-->
+		</script>
+		<div id="searchFormLocal" class="searchResize">
+			<form id="searchCDCLocal" method="get" action="http://www.cdc.gov/search.do" >
+				<fieldset>
+					<div class="searchRadio">
+						<div id="cdc-local-radial">
+<input id="searchCDCLocal2" type="radio" name="subset" checked="checked" value="travel" />
+<label for="searchCDCLocal2">Travelers' Health</label>
+						</div>
+						<div id="cdc-global-radial">
+							<input id="searchCDCGlobal" type="radio" name="subset" value="" />
+							<label for="searchCDCGlobal">All CDC Topics</label>
+						</div>
+					</div>
+					<div id="cdc-Query">
+						<label for="searchBoxLocal" class="overlabel structural">Search The CDC</label>
+						<input id="searchBoxLocal" class="searchBox" name="queryText" maxlength="256" type="text" />
+					</div>
+					<div id="cdc-Submit">
+						<!-- label for="searchButtonLocal" class="structural">Search Button:</label -->
+						<input id="searchButtonLocal" class="searchButton" src="http://www.cdc.gov/TemplatePackage/images/home/search_button.gif" name="searchButton" alt="Search" type="image" />
+						<input name="action" value="search" type="hidden" />
+					</div>
+				</fieldset>
+			</form>
+		</div>
+
+            
+            </div>
+<noscript>
+<div class="noscript"> Note: Javascript is disabled or is not supported by your browser. For this reason, some items on this page will be unavailable. For more information about this message, please visit this page: <a href="http://www.cdc.gov/Other/about_cdcgov.html" title="Browser requirements for CDC.gov">About CDC.gov</a>.</div>
+</noscript>
+<!--<div id="emergency-alert">
+<h1></h1> 
+<p></p>
+<a href="#"></a>
+</div>-->
+        </div>
+        <div id="content">
+            <div id="topic-title">
+                <h2><a href="/travel/"><span>Travelers' Health: Travel Safe, Travel Smart</span></a></h2>
+            </div>
+            <div id="content-inner">
+                
+                <div id="breadBox">
+                    <ul id="breadcrumbs"><li style="display: none;"></li></ul>
+                </div>
+                <div id="socialMediaContainer">
+	<div class="addthis_container noLinking">
+	 	<a class="addthis_button_facebook" title="Facebook" href="#"><span id="addthis_facebook" class="facebookRecommend"></span></a>
+	 	<a class="addthis_button_twitter" title="Twitter" href="#"><span id="addthis_twitter" class="twitterTweet"></span></a>
+		<a class="addthis_button noLinking" href="http://www.addthis.com/bookmark.php"><img src="http://s7.addthis.com/static/btn/sm-plus.gif" width="16" height="16" border="0" alt="Share" /><span class="shareButtonEn">Share</span><span class="shareButtonEs">Compartir</span></a>
+	</div>
+</div>
+
+                <div id="content-main">
+
+                    <div class="main-inner">
+                        <h1>Ebola</h1>
+                        
+<div id="disease-directory">    
+        <div id="onthispage">
+            <div class="rounders grey">
+                <div class="inner">
+                    <div class="t"></div>
+                    <h4 class="header">On This Page</h4>
+                    <div class="subColumns">
+                        <div class="subc">
+                            <ul class="bulleted-links">
+                                    <li><a href="#travelnotices" title="">Travel Notices</a></li>                                                           
+                                    <li><a href="#humanitarianaid" title="">Humanitarian Aid</a></li>                                                           
+                                    <li><a href="#studentsschoolscollegesanduniversities" title="">Students, Schools, Colleges, and Universities</a></li>                                                           
+                                    <li><a href="#airlinesairportsandportsofentry" title="">Airlines, Airports, and Ports of Entry</a></li>                                                           
+                                    <li><a href="#otherinformationfortravelers" title="">Other Information for Travelers</a></li>                                                           
+                                    <li><a href="#generalinformationaboutebola" title="">General Information about Ebola</a></li>                                                           
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="b"><div></div>
+                </div>
+            </div>
+        </div>
+
+    
+    <div><h3 id="travelnotices">Travel Notices</h3></div>
+<ul>
+    <li><strong><span class="txt-red">Warning - Avoid nonessential travel: </span><a href="/travel/notices/warning/ebola-liberia">Ebola in Liberia</a></strong></li>
+    <li><strong><span class="txt-red">Warning - Avoid nonessential travel:</span><span class="txt-red"> </span><a href="/travel/notices/warning/ebola-guinea">Ebola in Guinea</a></strong></li>
+    <li><strong><span class="txt-red">Warning - Avoid nonessential travel: </span><a href="/travel/notices/warning/ebola-sierra-leone">Ebola in Sierra Leone</a></strong></li>
+</ul>
+<div><h3 id="humanitarianaid">Humanitarian Aid</h3></div>
+<ul>
+    <li><a href="/travel/page/advice-humanitarian-aid-organizations-ebola">Ebola Outbreak: Advice for Humanitarian Aid Organizations</a></li>
+    <li><a href="/travel/page/humanitarian-workers-ebola">Advice for Humanitarian Aid Workers Traveling to Guinea, Liberia, or Sierra Leone during the Ebola Outbreak</a></li>
+</ul>
+<div><h3 id="studentsschoolscollegesanduniversities">Students, Schools, Colleges, and Universities</h3></div>
+<ul>
+    <li><a href="/travel/page/advice-for-colleges-universities-and-students-about-ebola-in-west-africa">Recommendations about International Travel for Education Purposes and the Ebola Outbreak in West Africa</a></li>
+    <li><a href="http://www.cdc.gov/vhf/ebola/children/k-12-school-guidance.html">Addressing Ebola Virus Infection Concerns in K-12 Schools: Interim Guidance for District and School Administrators</a></li>
+</ul>
+<div><h3 id="airlinesairportsandportsofentry">Airlines, Airports, and Ports of Entry</h3></div>
+<ul>
+    <li><a href="/travel/page/ebola-outbreak-communication-resources">Ebola Outbreak: Airport, Border, &amp; Port of Entry Resources for Use by International Partners</a></li>
+    <li><a href="http://wwwdev.cdc.gov/vhf/ebola/airports/">Information for Use at Airports</a></li>
+    <li><a href="http://wwwdev.cdc.gov/vhf/ebola/airlines/">Information for Airlines</a></li>
+</ul>
+<div><h3 id="otherinformationfortravelers">Other Information for Travelers</h3></div>
+<ul>
+    <li><a href="http://www.cdc.gov/vhf/ebola/travelers/ebola-screening-factsheet.html">Fact Sheet: Screening of Travelers at Airports</a></li>
+    <li><a href="http://www.cdc.gov/vhf/ebola/exposure/monitoring-symptoms-controlling-movement.html">Fact Sheet: Monitoring Symptoms and Controlling Movement to Stop Spread of Ebola</a></li>
+    <li><a href="http://www.cdc.gov/vhf/ebola/exposure/qas-monitoring-and-movement-guidance.html">Questions and Answers about CDC&#39;s Ebola Monitoring &amp; Movement Guidance</a></li>
+    <li><a href="http://www.cdc.gov/vhf/ebola/travelers/care-kit.html">Ebola Check and Report Ebola (CARE) Kit</a></li>
+</ul>
+<div><h3 id="generalinformationaboutebola">General Information about Ebola</h3></div>
+<ul>
+    <li><a href="http://www.cdc.gov/vhf/ebola/">CDC Ebola home page</a></li>
+    <li><a href="http://www.cdc.gov/vhf/ebola/outbreaks/2014-west-africa/index.html">2014 Ebola Outbreak in West Africa</a></li>
+    <li><a href="http://www.cdc.gov/vhf/ebola/resources/index.html">Ebola Communication Resources</a></li>
+    <li><a href="http://www.cdc.gov/vhf/ebola/outbreaks/2014-west-africa/communication-resources/west-africans-in-usa.html">Ebola Information for West Africans Living in the United States</a></li>
+</ul>
+
+    
+
+</div>
+
+                    </div>
+<div id="linkPolicy">&nbsp;</div>                </div>
+            </div>
+            
+            <div id="content-secondary">
+                <div class="pageOptions">
+                    <div class="pageOptions-inner">
+                        <ul id="services" class="services">
+                            <li class="print"><a href="javascript:window.print();" title="Print page.">Print page</a></li>
+                        </ul>
+                        <ul class="services top-divide">
+                            <li class="twitter"><a href="http://twitter.com/CDCtravel/" target="_blank">Our Twitter</a></li>
+                            <li class="facebook"><a href="https://www.facebook.com/CDCTravelersHealth" target="_blank">Our Facebook page</a></li>
+                            <li class="subscribe"><a href="http://service.govdelivery.com/service/subscribe.html?code=USCDC_4_1">Get email updates</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="contact-info">
+    <h5>Contact Us:</h5>
+    <ul class="noBullet">
+        <li class="mail">Centers for Disease Control and Prevention<br />
+            1600 Clifton Rd<br />
+            Atlanta, GA 30333</li>
+        <li class="phone">800-CDC-INFO<br />
+            (800-232-4636)<br />
+            TTY: (888) 232-6348</li>
+        <li><a href="http://www.cdc.gov/cdc-info/requestform.html">Contact CDC-INFO</a></li>
+    </ul>
+</div>
+
+                
+
+            </div>
+            
+            
+            <div id="nav-container">
+                <div id="nav"><h3><a href="/travel/">Home</a></h3><ul id="nav-primary"><li><a href="/travel/destinations/list" title="Destinations">Destinations</a></li><li><a href="/travel/notices" title="Travel Notices">Travel Notices</a></li><li><a href="/travel/page/find-clinic">Find a Clinic</a><ul><li><a href="/travel/yellow-fever-vaccination-clinics/search">Yellow Fever Vaccinations Clinics</a><ul><li><a href="/travel/page/yellow-fever-registry-faq">FAQ</a></li></ul></li></ul></li><li><a href="/travel/diseases" title="Disease Directory (38)">Disease Directory (38)</a><ul><li><a href="/travel/diseases/ebola">Ebola</a></li></ul></li><li><a href="/travel/page/travel-information-centers" id="nav-informationcenters">Information Centers</a><ul><li><a href="/travel/page/traveler-information-center">For Travelers</a><ul><li><a href="/travel/page/common-travel-health-topics">Common Travel Health Topics</a><ul><li><a href="/travel/page/adopting-child-another-country">Adopting a Child from Another Country</a></li><li><a href="/travel/page/adventure">Adventure Travel</a></li><li><a href="/travel/page/be-safe-around-animals">Animals</a></li><li><a href="/travel/page/avoid-bug-bites">Bug Bites</a></li><li><a href="/travel/page/business">Business Travel</a></li><li><a href="/travel/page/children">Children</a></li><li><a href="/travel/page/counterfeit-medicine">Counterfeit Drugs</a></li><li><a href="/travel/page/cruise-ship">Cruise Ship Travel</a></li><li><a href="/travel/page/travel-to-cold-climates">Cold Climates</a></li><li><a href="/travel/page/dvt">Deep Vein Thrombosis</a></li><li><a href="/travel/page/fish-poisoning-ciguatera-scombroid">Fish Poisoning in Travelers</a></li><li><a href="/travel/page/food-water-safety">Food and Water</a></li><li><a href="/travel/page/getting-health-care-abroad">Health Care Abroad</a></li><li><a href="/travel/page/travel-to-high-altitudes">High Altitudes</a></li><li><a href="/travel/page/travel-to-hot-climates">Hot Climates</a></li><li><a href="/travel/page/humanitarian-aid-workers">Humanitarian Aid Workers</a><ul><li><a href="/travel/page/humanitarian-workers-ebola">Humanitarian Aid Workers During Ebola Outbreak</a></li></ul></li><li><a href="/travel/page/insurance">Insurance</a></li><li><a href="/travel/page/jet-lag">Jet Lag</a></li><li><a href="/travel/page/last-minute-travelers">Last-Minute Travel</a></li><li><a href="/travel/page/long-term-travelers-expatriates">Long-Term Travel</a></li><li><a href="/travel/page/travel-to-mass-gatherings">Mass Gatherings</a><ul><li><a href="/travel/page/travel-to-hajj-2013">Health Information for Travel to Hajj</a></li></ul></li><li><a href="/travel/page/medical-tourism">Medical Tourism</a></li><li><a href="/travel/page/mental-health">Mental Health</a></li><li><a href="/travel/page/motion-sickness">Motion Sickness</a></li><li><a href="/travel/page/natural-disasters">Natural Disasters</a></li><li><a href="/travel/page/pregnant-travelers">Pregnant Travelers</a></li><li><a href="/travel/page/road-safety">Road Safety</a></li><li><a href="/travel/page/senior-citizens">Senior Citizens</a></li><li><a href="/travel/page/sex-tourism">Sex Tourism</a></li><li><a href="/travel/page/std">STDs</a></li><li><a href="/travel/page/getting-sick-after-travel">Sick After Travel</a></li><li><a href="/travel/page/studying-abroad">Study Abroad</a><ul><li><a href="/travel/page/recommendations-international-travel-for-education-purposes-ebola-outbreak-west-africa">Recommendations about International Travel for Education Purposes and the Ebola Outbreak in West Africa</a></li></ul></li><li><a href="/travel/page/sun-exposure">Sun Exposure</a></li><li><a href="/travel/page/safe-swimming-diving">Swimming and Diving</a></li><li><a href="/travel/page/travelers-diarrhea">Travelers' Diarrhea</a></li><li><a href="/travel/page/chronic-illnesses">Travelers with Chronic Illnesses</a></li><li><a href="/travel/page/weakened-immune-systems">Travelers with Weakened Immune Systems</a></li><li><a href="/travel/page/disability">Traveling with a Disability</a></li><li><a href="/travel/page/pets">Traveling with Your Pet</a></li><li><a href="/travel/page/vfr">Visiting Friends or Relatives</a></li><li><a href="/travel/page/water-disinfection">Water Disinfection</a></li></ul></li><li><a href="/travel/page/infographics-travelers">Infographics for Travelers</a><ul><li><a href="/travel/page/infographic-2014-world-cup-in-brazil">2014 World Cup in Brazil</a></li><li><a href="/travel/page/infographic-mers-poster">MERS Health Advisory poster</a></li><li><a href="/travel/page/infographic-food-water-whats-safer">Food and Water: What's Safer</a></li><li><a href="/travel/page/infographic-mers-pictogram">Health Advisory: MERS Pictograms</a></li><li><a href="/travel/page/infographic-food-water-risky-safer">Risky vs. Safer</a></li><li><a href="/travel/page/infographic-food-water-what-to-know">Food and Water: What to Know</a></li><li><a href="/travel/page/infographic-travelers-health-site-guide">Website Guide</a></li><li><a href="/travel/page/infographic-going-to-caribbean">Going to the American Tropics?</a></li><li><a href="/travel/page/infographic-recently-in-caribbean">Recently in the American Tropics?</a></li><li><a href="/travel/page/ebola-inbound-infographic">Ebola Outbreak - Recently in West Africa?</a></li><li><a href="/travel/page/ebola-outbound-infographic">Ebola Outbreak - Going to West Africa?</a></li></ul></li><li><a href="/travel/page/survival-guide">Traveler Survival Guide</a><ul><li><a href="/travel/page/learn-about-destination">Learn About Destination</a></li><li><a href="/travel/page/see-doctor">See a Doctor</a><ul><li><a href="/travel/page/preparing-for-appointment">Pre-Travel Appointment</a></li></ul></li><li><a href="/travel/page/health-status">Your Health Status</a><ul><li><a href="/travel/page/infectious-diseases">How Diseases Spread</a></li></ul></li><li><a href="/travel/page/pack-smart">Pack Smart</a></li><li><a href="/travel/page/plan-ahead">Plan Ahead</a></li><li><a href="/travel/page/sick-during-trip">Sick While Traveling</a></li><li><a href="/travel/page/important-info">Know and Share Info</a><ul><li><a href="/travel/page/register-contact-info">Traveler Registration</a></li><li><a href="/travel/page/register-contact-info">Traveler Registration</a></li><li><a href="/travel/page/health-during-trip">During Trip</a></li></ul></li><li><a href="/travel/page/after-trip">After Trip</a></li></ul></li><li><a href="/travel/page/cdc-tv-travel-videos">CDC-TV Videos</a></li></ul></li><li><a href="/travel/page/clinician-information-center">For Clinicians</a><ul><li><a href="/travel/page/in-clinic-quick-links">In-Clinic Quick Links</a></li><li><a href="/travel/page/clinician-updates">Clinician Updates</a><ul><li><a href="/travel/news-announcements">Clinical Updates</a></li></ul></li><li><a href="/travel/page/ce-courses-training">CE Courses and Training</a><ul><li><a href="/travel/page/presentations-health-pros">Presentations for Health Professionals</a></li></ul></li><li><a href="/travel/page/travel-medicine-references">Travel Medicine References: Books, Journals, Articles & Websites</a></li></ul></li><li><a href="/travel/page/travel-industry-information-center">Travel Industry</a><ul><li><a href="/travel/page/ebola-outbreak-communication-resources">Ebola Outbreak: Airport, Border, & Port of Entry Resources</a></li></ul></li></ul></li><li><a href="/travel/page/yellowbook-home-2014">Yellow Book</a><ul><li><a href="/travel/yellowbook/2014/table-of-contents" title="Contents">Contents</a><ul><li><a href="/travel/yellowbook/2014/table-of-contents#32" title="Chapter 1">Chapter 1</a><ul><li><a href="/travel/yellowbook/2014/chapter-1-introduction/introduction-to-travel-health-and-the-yellow-book" title="Introduction to Travel Health &amp;amp; the Yellow Book">Introduction to Travel Health &amp; the Yellow Book</a></li><li><a href="/travel/yellowbook/2014/chapter-1-introduction/planning-for-healthy-travel-responsibilities-and-resources" title="Planning for Healthy Travel: Responsibilities &amp;amp; Resources">Planning for Healthy Travel: Responsibilities &amp; Resources</a></li><li><a href="/travel/yellowbook/2014/chapter-1-introduction/travel-epidemiology" title="Travel Epidemiology">Travel Epidemiology</a></li><li><a href="/travel/yellowbook/2014/chapter-1-introduction/travel-medicine-data-collection-geosentinel-and-global-travepinet" title="Travel Medicine Data Collection: GeoSentinel &amp;amp; Global TravEpiNet">Travel Medicine Data Collection: GeoSentinel &amp; Global TravEpiNet</a></li><li><a href="/travel/yellowbook/2014/chapter-1-introduction/perspectives-the-role-of-the-traveler-in-translocation-of-disease" title="Perspectives: The Role of the Traveler in Translocation of Disease"><em>Perspectives: The Role of the Traveler in Translocation of Disease</em></a></li><li><a href="/travel/yellowbook/2014/chapter-1-introduction/perspectives-why-guidelines-differ" title="Perspectives: Why Guidelines Differ"><em>Perspectives: Why Guidelines Differ</em></a></li></ul></li></ul></li><li><a href="/travel/yellowbook/2014/list/tables" title="Tables">Tables</a></li><li><a href="/travel/yellowbook/2014/list/maps" title="Maps">Maps</a></li><li><a href="/travel/yellowbook/2014/list/figures" title="Figures">Figures</a></li><li><a href="/travel/yellowbook/2014/list/boxes" title="Boxes">Boxes</a></li><li><a href="/travel/page/2014-yellow-book-updates">Updates</a></li><li><a href="/travel/page/2014-yellow-book-about">About</a></li></ul></li><li><a href="/travel/page/apps-about">Mobile Apps</a></li><li><a href="/travel/page/rss">RSS Feeds</a></li></ul></div><div class="bottom"></div>
+                
+<script type="text/javascript">
+    $.viewdataDestinationSelectorLeftRail = { TravelerType: '', FormId: '#leftrail_destination_selector' };
+</script>
+                    <div class="relatedMaterial roundem grey" id="disease-selector-leftrail">
+        <div class="inner">
+            <form id="disease-selector-form" action="" method="get">
+            
+                <h4 class="title">Disease Directory</h4>
+                <label for="disease-selector-dropdown">Learn more about travel-related diseases.</label>
+                <p>
+                    <select id="disease-selector-dropdown">
+                            <option value="/travel/diseases/african-sleeping-sickness-african-trypansosomiasis">African Sleeping Sickness (African Trypanosomiasis)</option>
+                            <option value="/travel/diseases/african-tick-bite-fever">African Tick-Bite Fever</option>
+                            <option value="/travel/diseases/avian-bird-flu">Avian/Bird Flu</option>
+                            <option value="/travel/diseases/chagas-disease-american-trypanosomiasis">Chagas disease (American Trypanosomiasis)</option>
+                            <option value="/travel/diseases/chikungunya">Chikungunya</option>
+                            <option value="/travel/diseases/dengue">Dengue</option>
+                            <option value="/travel/diseases/diphtheria">Diphtheria</option>
+                            <option value="/travel/diseases/ebola">Ebola</option>
+                            <option value="/travel/diseases/hiv">HIV Infection</option>
+                            <option value="/travel/diseases/hand-foot-and-mouth-disease">Hand, Foot, &amp; Mouth Disease</option>
+                            <option value="/travel/diseases/hepatitis-a">Hepatitis A</option>
+                            <option value="/travel/diseases/hepatitis-b">Hepatitis B</option>
+                            <option value="/travel/diseases/hepatitis-c">Hepatitis C</option>
+                            <option value="/travel/diseases/hepatitis-e">Hepatitis E</option>
+                            <option value="/travel/diseases/influenza-seasonal-zoonotic-and-pandemic">Influenza (Seasonal, Zoonotic, &amp; Pandemic)</option>
+                            <option value="/travel/diseases/japanese-encephalitis">Japanese Encephalitis</option>
+                            <option value="/travel/diseases/leptospirosis">Leptospirosis</option>
+                            <option value="/travel/diseases/malaria">Malaria</option>
+                            <option value="/travel/diseases/measles">Measles</option>
+                            <option value="/travel/diseases/meningococcal-disease">Meningitis (Meningococcal disease)</option>
+                            <option value="/travel/diseases/mumps">Mumps</option>
+                            <option value="/travel/diseases/murray-valley-encephalitis-virus">Murray Valley Encephalitis Virus</option>
+                            <option value="/travel/diseases/pertussis">Pertussis</option>
+                            <option value="/travel/diseases/plague-bubonic-pneumonic-septicemic">Plague (Bubonic, Pneumonic, Septicemic)</option>
+                            <option value="/travel/diseases/pneumococcal-disease-streptococcus-pneumoniae">Pneumococcal Disease (Streptococcus pneumoniae)</option>
+                            <option value="/travel/diseases/poliomyelitits">Polio</option>
+                            <option value="/travel/diseases/rabies">Rabies</option>
+                            <option value="/travel/diseases/rift-river-valley">Rift River Valley</option>
+                            <option value="/travel/diseases/routine">Routine vaccines</option>
+                            <option value="/travel/diseases/rubella">Rubella</option>
+                            <option value="/travel/diseases/scabies-sarcoptic-itch-sarcoptic-acariasis">Scabies (Sarcoptic itch, Sarcoptic acariasis)</option>
+                            <option value="/travel/diseases/schistosomiasis">Schistosomiasis</option>
+                            <option value="/travel/diseases/tetanus">Tetanus</option>
+                            <option value="/travel/diseases/tickborne-encephalitis">Tickborne Encephalitis</option>
+                            <option value="/travel/diseases/tuberculosis">Tuberculosis (TB)</option>
+                            <option value="/travel/diseases/typhoid">Typhoid</option>
+                            <option value="/travel/diseases/west-nile-virus">West Nile virus</option>
+                            <option value="/travel/diseases/yellow-fever">Yellow Fever</option>
+                    </select>
+                    <input type="button" value="Go" class="go-button" id="disease-selector-dropdown-send" />
+                </p>
+            </form>
+        </div>
+    </div>
+
+                <div id="before-you-travel" class="relatedMaterial roundem grey">
+    <p>Before you travel make sure you speak with your doctor.</p>
+</div>
+
+                
+            </div>
+        </div>
+        <div class="preFoot">
+            <div id="plugin-legend">
+			<h3>File Formats Help:</h3>
+			<ul>
+				<li class="plugin-pdf"><a href="http://www.cdc.gov/Other/plugins/#pdf"><img src="http://www.cdc.gov/TemplatePackage/images/icon_pdf.gif" alt="Adobe PDF file" /></a></li>
+				<li class="plugin-word"><a href="http://www.cdc.gov/Other/plugins/#doc"><img src="http://www.cdc.gov/TemplatePackage/images/icon_word.gif" alt="Microsoft Word file" /></a></li>
+				<li class="plugin-excel"><a href="http://www.cdc.gov/Other/plugins/#xls"><img src="http://www.cdc.gov/TemplatePackage/images/icon_excel.gif" alt="Microsoft Excel file" /></a></li>
+				<li class="plugin-ppt"><a href="http://www.cdc.gov/Other/plugins/#ppt"><img src="http://www.cdc.gov/TemplatePackage/images/icon_ppt.gif" alt="Microsoft PowerPoint file" /></a></li>
+				<li class="plugin-wmv"><a href="http://www.cdc.gov/Other/plugins/#wmv"><img src="http://www.cdc.gov/TemplatePackage/images/icon_wmv.gif" alt="Audio/Video file" /></a></li>
+				<li class="plugin-zip"><a href="http://www.cdc.gov/Other/plugins/#zip"><img src="http://www.cdc.gov/TemplatePackage/images/icon_zip.gif" alt="Zip Archive file" /></a></li>
+				<li class="plugin-real"><a href="http://www.cdc.gov/Other/plugins/#ram"><img src="http://www.cdc.gov/TemplatePackage/images/icon_real.gif" alt="RealPlayer file" /></a></li>
+				<li class="plugin-qt"><a href="http://www.cdc.gov/Other/plugins/#qt"><img src="http://www.cdc.gov/TemplatePackage/images/icon_qt.gif" alt="Apple Quicktime file" /></a></li>
+			</ul>
+			<p><a href="http://www.cdc.gov/Other/plugins/"><span class="tp-label">How do I view different file formats (PDF, DOC, PPT, MPEG) on this site?</span>&nbsp;<img src="http://www.cdc.gov/TemplatePackage/images/btn_dblArrows.gif" alt="double arrows." /></a></p>
+		</div>
+            <div class="pageOptions-horizontal">
+                <ul class="services">
+                    <li class="print"><a href="javascript:window.print();" title="Print page.">Print page</a></li>
+                    <li class="twitter"><a href="http://twitter.com/CDCtravel/" target="_blank">Our Twitter</a></li>
+                    <li class="facebook"><a href="https://www.facebook.com/CDCTravelersHealth" target="_blank">Our Facebook page</a></li>
+                    <li class="subscribe"><a href="http://service.govdelivery.com/service/subscribe.html?code=USCDC_4_1">Get email updates</a></li>
+                </ul>
+            </div>
+            <div id="datestamp">
+	<ul>
+ <li class="created">Page created: <span>July 31, 2014</span></li> 		 <li class="last-updated">Page last updated: <span>January 20, 2015</span></li>          <li class="last-reviewed">Page last reviewed: <span>January 20, 2015</span></li> 		<li class="content-source">Content source: <a href="http://www.cdc.gov/">Centers for Disease Control and Prevention</a><br /> <a href="http://www.cdc.gov/ncezid/">National Center for Emerging and Zoonotic Infectious Diseases (NCEZID)</a><br /> <a href="http://www.cdc.gov/ncezid/dgmq/index.html">Division of Global Migration and Quarantine (DGMQ)</a></li>
+
+	</ul>
+</div>
+        </div>
+        <div id="siteinfo">
+	<div id="siteinfo-nav">
+		<ul class="menu">
+			<li><a href="http://www.cdc.gov/">Home</a></li>
+			<li><a href="http://www.cdc.gov/az/a.html">A-Z Index</a></li>
+			<li><a href="http://www.cdc.gov/Other/policies.html">Policies</a></li>
+			<li><a href="http://www.cdc.gov/Other/about_cdcgov.html">Using this Site</a></li>
+			<li><a href="http://www.cdc.gov/Other/link.html">Link to Us</a></li>
+			<li class="last-child"><a href="http://www.cdc.gov/contact/">Contact CDC</a></li>
+		</ul>
+	</div>
+	<div id="siteinfo-credits">
+		<div id="siteinfo-logos"><a href="http://www.usa.gov/"><img id="logo_usagov" src="http://www.cdc.gov/TemplatePackage/images/logo_usagov.gif" alt="USA.gov: The U.S. Government's Official Web Portal" width="188" height="55" border="0" /></a><a href="http://www.hhs.gov/"><img id="logo_dhhs" src="http://www.cdc.gov/TemplatePackage/images/logo_dhhs.gif" alt="Department of Health and Human Services" width="61" height="55" border="0" /></a></div>
+		<address>Centers for Disease Control and Prevention &nbsp; 1600 Clifton Road Atlanta, GA 30329-4027, USA<br />
+		800-CDC-INFO (800-232-4636)	TTY: (888) 232-6348 - <a href="http://www.cdc.gov/cdc-info/requestform.html">Contact CDC&ndash;INFO</a></address>
+	</div>
+</div>
+
+        <div id="AZlist-container"><a name="az"></a>
+	<span>A-Z Index</span>
+	<ol class="AZlist">
+		<li><a href="http://www.cdc.gov/az/a.html">A</a></li>
+		<li><a href="http://www.cdc.gov/az/b.html">B</a></li>
+		<li><a href="http://www.cdc.gov/az/c.html">C</a></li>
+		<li><a href="http://www.cdc.gov/az/d.html">D</a></li>
+		<li><a href="http://www.cdc.gov/az/e.html">E</a></li>
+		<li><a href="http://www.cdc.gov/az/f.html">F</a></li>
+		<li><a href="http://www.cdc.gov/az/g.html">G</a></li>
+		<li><a href="http://www.cdc.gov/az/h.html">H</a></li>
+		<li><a href="http://www.cdc.gov/az/i.html">I</a></li>
+		<li><a href="http://www.cdc.gov/az/j.html">J</a></li>
+		<li><a href="http://www.cdc.gov/az/k.html">K</a></li>
+		<li><a href="http://www.cdc.gov/az/l.html">L</a></li>
+		<li><a href="http://www.cdc.gov/az/m.html">M</a></li>
+		<li><a href="http://www.cdc.gov/az/n.html">N</a></li>
+		<li><a href="http://www.cdc.gov/az/o.html">O</a></li>
+		<li><a href="http://www.cdc.gov/az/p.html">P</a></li>
+		<li><a href="http://www.cdc.gov/az/q.html">Q</a></li>
+		<li><a href="http://www.cdc.gov/az/r.html">R</a></li>
+		<li><a href="http://www.cdc.gov/az/s.html">S</a></li>
+		<li><a href="http://www.cdc.gov/az/t.html">T</a></li>
+		<li><a href="http://www.cdc.gov/az/u.html">U</a></li>
+		<li><a href="http://www.cdc.gov/az/v.html">V</a></li>
+		<li><a href="http://www.cdc.gov/az/w.html">W</a></li>
+		<li><a href="http://www.cdc.gov/az/x.html">X</a></li>
+		<li><a href="http://www.cdc.gov/az/y.html">Y</a></li>
+		<li><a href="http://www.cdc.gov/az/z.html">Z</a></li>
+		<li><a href="http://www.cdc.gov/az/0.html">#</a></li>
+	</ol>
+</div>
+
+    </div>
+    
+</div>
+
+    <script type="text/javascript" src="/travel/scripts/jquery.fancybox.init.min.js"></script>
+    <script type="text/javascript" src="/travel/scripts/yellowbook-styles.min.js"></script>
+    <script type="text/javascript" src="http://www.cdc.gov/TemplatePackage/js/B/jquery/jquery.cookie.js"></script>
+    
+    
+
+
+    <script type="text/javascript" src="/travel/scripts/views/shared/_mastercontrol.min.js?v=2"></script>
+
+    
+    <div id="metrics">
+        
+        <script type="text/javascript" src="//www.cdc.gov/JScript/metrics/google/google-cdc-a.js"></script>
+        
+        <script type="text/javascript" src="//www.cdc.gov/JScript/metrics/topic_levels.js"></script>
+        <script type="text/javascript" src="//www.cdc.gov/JScript/metrics/s_code_v21_cdcgov.js"></script>
+        <script type="text/javascript">
+            var t = "Ebola | Disease Directory | Travelers&#39; Health | CDC";
+            s.pageName = t;
+            s.channel = "Travelers' Health";
+            siteCatalyst.setAzEntry("Travelers' Health");
+            siteCatalyst.setLevel1("NCEZID");
+            siteCatalyst.setLevel2("DGMQ");
+            siteCatalyst.setLevel3("Travelers' Health");
+                        s.prop26 = t; s.prop30 = t; s.prop31 = window.location.href; s.prop46 = window.location.href; s.server = "wwwnc.cdc.gov"; updateVariables(s);
+            CDC.Metrics.GoogleAnalytics.SetAccountNumber('UA-32199000-6', 'cdc.gov');
+            var s_code = s.t(); if (s_code) { document.write(s_code); }
+        //-->
+        </script>
+        <script type="text/javascript"><!-- 
+            if (navigator.appVersion.indexOf('MSIE') >= 0) document.write(unescape('%3C') + '\!-' + '-');
+        //--></script>
+        <noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="http://mtrics.cdc.gov/b/ss/cdcgov/1/H.21--NS/0" height="1" width="1" alt="Web Analytics" /></a></noscript><!--/DO NOT REMOVE/-->
+        
+        
+        <script type="text/javascript" src="//www.cdc.gov/JScript/metrics/google/google-cdc-c.js"></script>
+        
+    </div>
+
+
+<!-- 'Disease', 'DiseasePage' -->
+</body>
+</html>

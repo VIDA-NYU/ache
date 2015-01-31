@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB" lang="en-GB"><head profile="http://dublincore.org/documents/dcq-html/"><title>BBC - History - 
+				British History in depth: Smallpox: Eradicating the Scourge</title><style type="text/css">
+        #archive-mothballed-message a:hover span {
+            text-decoration:underline;
+        }
+        #blq-container #archived-mothball-message a {
+            padding-left:250px;
+            padding-top:17px;
+            background-position: 180px 10px;
+        }
+        #ttd-masthead #archived-mothball-message a {
+            padding-left:250px;
+            padding-top:17px;
+            background-position: 180px 10px;
+        }
+        #k-masthead-container #archived-mothball-message a {
+            padding-left:250px;
+            padding-top:17px;
+            background-position: 180px 10px;
+        }
+        #archived-mothball-message a {
+            display:block;
+            height:56px;
+            background:url(/globalresources/mothball-images/i.gif)
+                100px 10px no-repeat;
+            color:#666;
+            text-decoration:none;
+            padding-left:160px;
+            padding-top:12px;
+            font-size:20px;
+            font-family: verdana,helvetica,arial,sans-serif;
+            font-weight: normal;
+        }
+    </style><meta name="description" content="An estimated 300 million people died from smallpox in the 20th century alone. "><meta name="keywords" content="smallpox, vaccination, 'Speckled Monster',  disease, virus, Edward Jenner, immunity"><link rel="schema.dcterms" href="http://purl.org/dc/terms/"><meta name="dcterms.created" content="2002-02-01"><meta name="dcterms.modified" content="2011-02-17"><!-- Glow cachebust:    
+                --><!-- Barlesque 2.72.2 --><link rel="schema.dcterms" href="http://purl.org/dc/terms/"><link rel="index" href="http://www.bbc.co.uk/a-z/" title="A to Z"><link rel="copyright" href="http://www.bbc.co.uk/terms/" title="Terms of Use"><link rel="icon" href="http://www.bbc.co.uk/favicon.ico" type="image/x-icon"><meta name="viewport" content="width = 974"><link rel="stylesheet" type="text/css" href="/staticarchive/c808749ad4d537416e40591def8e05c130d72722.css"><script type="text/javascript">/*<![CDATA[*/ (function(undefined){if(!window.bbc){window.bbc={}}var ROLLING_PERIOD_DAYS=30;window.bbc.Mandolin=function(id,segments,opts){var now=new Date().getTime(),storedItem,DEFAULT_START=now,DEFAULT_RATE=1,COOKIE_NAME="ckpf_mandolin";opts=opts||{};this._id=id;this._segmentSet=segments;this._store=new window.window.bbc.Mandolin.Storage(COOKIE_NAME);this._opts=opts;this._rate=(opts.rate!==undefined)?+opts.rate:DEFAULT_RATE;this._startTs=(opts.start!==undefined)?new Date(opts.start).getTime():new Date(DEFAULT_START).getTime();this._endTs=(opts.end!==undefined)?new Date(opts.end).getTime():daysFromNow(ROLLING_PERIOD_DAYS);this._signupEndTs=(opts.signupEnd!==undefined)?new Date(opts.signupEnd).getTime():this._endTs;this._segment=null;if(typeof id!=="string"){throw new Error("Invalid Argument: id must be defined and be a string")}if(Object.prototype.toString.call(segments)!=="[object Array]"){throw new Error("Invalid Argument: Segments are required.")}if(opts.rate!==undefined&&(opts.rate<0||opts.rate>1)){throw new Error("Invalid Argument: Rate must be between 0 and 1.")}if(this._startTs>this._endTs){throw new Error("Invalid Argument: end date must occur after start date.")}if(!(this._startTs<this._signupEndTs&&this._signupEndTs<=this._endTs)){throw new Error("Invalid Argument: SignupEnd must be between start and end date")}removeExpired.call(this,now);if((storedItem=this._store.getItem(this._id))){this._segment=storedItem.segment}else{if(this._startTs<=now&&now<this._signupEndTs&&now<=this._endTs&&this._store.isEnabled()===true){this._segment=pick(segments,this._rate);if(opts.end===undefined){this._store.setItem(this._id,{segment:this._segment})}else{this._store.setItem(this._id,{segment:this._segment,end:this._endTs})}log.call(this,"mandolin_segment")}}log.call(this,"mandolin_view")};window.bbc.Mandolin.prototype.getSegment=function(){return this._segment};function log(actionType,params){var that=this;require(["istats-1"],function(istats){istats.log(actionType,that._id+":"+that._segment,params?params:{})})}function removeExpired(expires){var items=this._store.getItems(),expiresInt=+expires;for(var key in items){if(items[key].end!==undefined&&+items[key].end<expiresInt){this._store.removeItem(key)}}}function getLastExpirationDate(data){var winner=0,rollingExpire=daysFromNow(ROLLING_PERIOD_DAYS);for(var key in data){if(data[key].end===undefined&&rollingExpire>winner){winner=rollingExpire}else{if(+data[key].end>winner){winner=+data[key].end}}}return(winner)?new Date(winner):new Date(rollingExpire)}window.bbc.Mandolin.prototype.log=function(params){log.call(this,"mandolin_log",params)};window.bbc.Mandolin.prototype.convert=function(params){log.call(this,"mandolin_convert",params);this.convert=function(){}};function daysFromNow(n){var endDate;endDate=new Date().getTime()+(n*60*60*24)*1000;return endDate}function pick(segments,rate){var picked,min=0,max=segments.length-1;if(typeof rate==="number"&&Math.random()>rate){return null}do{picked=Math.floor(Math.random()*(max-min+1))+min}while(picked>max);return segments[picked]}window.bbc.Mandolin.Storage=function(name){this._cookieName=name;this._isEnabled=(bbccookies.isAllowed(this._cookieName)===true&&bbccookies.cookiesEnabled()===true)};window.bbc.Mandolin.Storage.prototype.setItem=function(key,value){var storeData=this.getItems();storeData[key]=value;this.save(storeData);return value};window.bbc.Mandolin.Storage.prototype.isEnabled=function(){return this._isEnabled};window.bbc.Mandolin.Storage.prototype.getItem=function(key){var storeData=this.getItems();return storeData[key]};window.bbc.Mandolin.Storage.prototype.removeItem=function(key){var storeData=this.getItems();delete storeData[key];this.save(storeData)};window.bbc.Mandolin.Storage.prototype.getItems=function(){return deserialise(this.readCookie(this._cookieName)||"")};window.bbc.Mandolin.Storage.prototype.save=function(data){window.bbccookies.set(this._cookieName+"="+encodeURIComponent(serialise(data))+"; expires="+getLastExpirationDate(data).toUTCString()+";")};window.bbc.Mandolin.Storage.prototype.readCookie=function(name){var nameEQ=name+"=",ca=window.bbccookies.get().split(";"),i,c;for(i=0;i<ca.length;i++){c=ca[i];while(c.charAt(0)===" "){c=c.substring(1,c.length)}if(c.indexOf(nameEQ)===0){return decodeURIComponent(c.substring(nameEQ.length,c.length))}}return null};function serialise(o){var str="";for(var p in o){if(o.hasOwnProperty(p)){str+='"'+p+'"'+":"+(typeof o[p]==="object"?(o[p]===null?"null":"{"+serialise(o[p])+"}"):'"'+o[p].toString().replace(/"/g,'\\"')+'"')+","}}return str.replace(/,\}/g,"}").replace(/,$/g,"")}function deserialise(str){var o;eval("o = {"+str+"}");return o}})(); /*]]>*/</script><script type="text/javascript">/*<![CDATA[*/ if (typeof bbccookies_flag === 'undefined') { bbccookies_flag = 'ON'; } showCTA_flag = true; cta_enabled = (showCTA_flag && (bbccookies_flag === 'ON') ); (function(){var e="ckns_policy",m="Thu, 01 Jan 1970 00:00:00 GMT",k={ads:true,personalisation:true,performance:true,necessary:true};function f(p){if(f.cache[p]){return f.cache[p]}var o=p.split("/"),q=[""];do{q.unshift((o.join("/")||"/"));o.pop()}while(q[0]!=="/");f.cache[p]=q;return q}f.cache={};function a(p){if(a.cache[p]){return a.cache[p]}var q=p.split("."),o=[];while(q.length&&"|co.uk|com|".indexOf("|"+q.join(".")+"|")===-1){if(q.length){o.push(q.join("."))}q.shift()}f.cache[p]=o;return o}a.cache={};function i(o,t,p){var z=[""].concat(a(window.location.hostname)),w=f(window.location.pathname),y="",r,x;for(var s=0,v=z.length;s<v;s++){r=z[s];for(var q=0,u=w.length;q<u;q++){x=w[q];y=o+"="+t+";"+(r?"domain="+r+";":"")+(x?"path="+x+";":"")+(p?"expires="+p+";":"");bbccookies.set(y,true)}}}window.bbccookies={_setEverywhere:i,cookiesEnabled:function(){var o="ckns_testcookie"+Math.floor(Math.random()*100000);this.set(o+"=1");if(this.get().indexOf(o)>-1){g(o);return true}return false},set:function(o){return document.cookie=o},get:function(){return document.cookie},_setPolicy:function(o){return h.apply(this,arguments)},readPolicy:function(o){return b.apply(this,arguments)},_deletePolicy:function(){i(e,"",m)},isAllowed:function(){return true},_isConfirmed:function(){return c()!==null},_acceptsAll:function(){var o=b();return o&&!(j(o).indexOf("0")>-1)},_getCookieName:function(){return d.apply(this,arguments)},_showPrompt:function(){var o=(!this._isConfirmed()&&window.cta_enabled&&this.cookiesEnabled()&&!window.bbccookies_disable);return(window.orb&&window.orb.fig)?o&&(window.orb.fig("no")||window.orb.fig("ck")):o}};bbccookies._getPolicy=bbccookies.readPolicy;function d(p){var o=(""+p).match(/^([^=]+)(?==)/);return(o&&o.length?o[0]:"")}function j(o){return""+(o.ads?1:0)+(o.personalisation?1:0)+(o.performance?1:0)}function h(r){if(typeof r==="undefined"){r=k}if(typeof arguments[0]==="string"){var o=arguments[0],q=arguments[1];if(o==="necessary"){q=true}r=b();r[o]=q}else{if(typeof arguments[0]==="object"){r.necessary=true}}var p=new Date();p.setYear(p.getFullYear()+1);p=p.toUTCString();bbccookies.set(e+"="+j(r)+";domain=bbc.co.uk;path=/;expires="+p+";");bbccookies.set(e+"="+j(r)+";domain=bbc.com;path=/;expires="+p+";");return r}function l(o){if(o===null){return null}var p=o.split("");return{ads:!!+p[0],personalisation:!!+p[1],performance:!!+p[2],necessary:true}}function c(){var o=new RegExp("(?:^|; ?)"+e+"=(\\d\\d\\d)($|;)"),p=document.cookie.match(o);if(!p){return null}return p[1]}function b(o){var p=l(c());if(!p){p=k}if(o){return p[o]}else{return p}}function g(o){return document.cookie=o+"=;expires="+m+";"}function n(){var o='<script type="text/javascript" src="http://static.bbci.co.uk/frameworks/bbccookies/0.6.6/script/bbccookies.js"><\/script>';if(window.bbccookies_flag==="ON"&&!bbccookies._acceptsAll()&&!window.bbccookies_disable){document.write(o)}}n()})(); /*]]>*/</script><script type="text/javascript"> if (! window.gloader) { window.gloader = [ "glow", {map: "http://node1.bbcimg.co.uk/glow/glow/map.1.7.7.js"}]; } </script><script type="text/javascript" src="http://node1.bbcimg.co.uk/glow/gloader.0.1.6.js"></script><script type="text/javascript" src="/staticarchive/21f604032d29edfa0a166f89bd41c95004718ed2.js"></script><script type="text/javascript">  bbcRequireMap = {"jquery-1":"/staticarchive/6cabfa9be6f12b6fec5ddf61c2dca1dde868555e", "jquery-1.4":"/staticarchive/cce0a0919c693f9473535d6941613bad16a4b40f", "jquery-1.9":"/staticarchive/14a082a42c1074b40bedae2666d3204e142899f5", "swfobject-2":"/staticarchive/b02e05aa3b12cfe8510390c7eccecd0af315b0a6", "demi-1":"/staticarchive/a916559c328a465dafcc30056734651ac8fdbb4b", "gelui-1":"/staticarchive/0159feca9179b145c659298e302b55dc76dfa15d", "cssp!gelui-1/overlay":"/staticarchive/fee6b4a3b22c51a59dd3ddebfb1b765049c683f6.css", "istats-1":"/staticarchive/d59662762550f5cb2a29abc9a10c0e502ab34287", "relay-1":"/staticarchive/ab39b61cf0980994246594bebe70fe460df87a42", "clock-1":"/staticarchive/7b8bb05c3fa19067c2c4c99144d21702cc15704f", "canvas-clock-1":"/staticarchive/703fd8b8a1b4ecf9cf624195bfb9691c648d3919", "cssp!clock-1":"/staticarchive/85ca997ae2f6bd2990765422dcc5b1c386c9d0cb.css", "jssignals-1":"/staticarchive/238f1d675d1626860f85815b7ab638cd41811a06", "jcarousel-1":"/staticarchive/3b38690b91f14468826c5f05f6e3da9beb55f4b1", "gelui-1/widget": "/staticarchive/fcf01fd866ac629bad5a92592c208c3b04184cd3", "gelui-1/carousel": "/staticarchive/562f83c33cfe04062d95de8024ba03636cd0af4c", "gelui-1/core": "/staticarchive/d69cc93987af4e17f910996164dc15516614353e", "gelui-1/overlay": "/staticarchive/84bd061f5e14f0728caa8c933fe6d758b54fec5a", "gelui-1/autosuggest": "/staticarchive/ca81d8400ee443b0c31a47f1eea1c6872091dd48"}; require({ baseUrl: 'http://'+location.host+'/', paths: bbcRequireMap, waitSeconds: 30 }); </script><script type="text/javascript" src="/staticarchive/1b2549937977a29e048af5c307e7f73044570f03.js"></script><!--[if (IE 6)|(IE 7)|(IE 8)]> <style type="text/css"> html{font-size:125%} body{font-size:50%} .blq-tooltipped:hover {background-position:0 0} #blq-autosuggest ul li { zoom:normal; } .skylightTheme #blq-mast-home, .doveTheme #blq-mast-home, .tealTheme #blq-mast-home, .aquaTheme #blq-mast-home, .greenTheme #blq-mast-home, .violetTheme #blq-mast-home, .purpleTheme #blq-mast-home, .pinkTheme #blq-mast-home, .oliveTheme #blq-mast-home, .suedeTheme #blq-mast-home, .redTheme #blq-mast-home, .orangeTheme #blq-mast-home { filter: none; -ms-filter: ""; } #blq-nav-main { background-position: 96% 17px; } </style> <![endif]--><!--[if IE 7]> <link rel="stylesheet" href="http://static.bbci.co.uk/frameworks/barlesque/2.72.2/desktop/2.8/style/ie7.css" type="text/css" /> <style type="text/css"> .blq-clearfix {display: inline-block} </style> <![endif]--><!--[if IE 6]> <link rel="stylesheet" href="http://static.bbci.co.uk/frameworks/barlesque/2.72.uk/frameworks/barlesque/2.72.2/desktop/2.8/style/ie7.css" type="text/css" /> <style type="text/css"> .blq-clearfix {display2/desktop/2.8/style/ie6.css" type="text/css" /> <style type="text/css"> .blq-js #blq-nav-foot div {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.bbci.co.uk/frameworks/barlesque/2.72.2/desktop/2.8/img/panel.png', sizingMethod='image');margin-top:-139px}  #blq-container {height: 15%} #blq-mast-home span.blq-home { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod='crop', src='/staticarchive/2e00d1d53e9c3bd91993196aa19a1d88589969f0.png');} #blq-mast #blq-search-btn { background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://static.bbci.co.uk/frameworks/barlesque/2.72.2/desktop/2.8/img/blq-search_grey_alpha.png', sizingMethod='image'); } </style>  <script type="text/javascript"> try { document.execCommand("BackgroundImageCache",false,true); } catch(e) {} </script> <![endif]--><script type="text/javascript"> blq.assetPath="http://static.bbci.co.uk/frameworks/barlesque/2.72.2/desktop/2.8/"; blqOnDomReady(function() {  blq.suggest_short = false; blq.addAutoSuggest(); });  blq.setEnvironment('live');  if (! /bbc\.co\.uk$/i.test(window.location.hostname) ) { document.documentElement.className += ' blq-not-bbc-co-uk'; }  </script><script type="text/javascript"> /*<![CDATA[*/ function oqsSurveyManager(w, flag) {  var defaultThreshold = 0, usePulseThreshold = (flag === 'OFF')? 1 : defaultThreshold, activeThreshold; w.oqs = w.oqs || {}; /* we support cookie override for testing */ if ( w.document.cookie.match(/(?:^|; *)ckns_oqs_usePulseThreshold=([\d.]+)/) ) { activeThreshold = RegExp.$1; } /* we support clientside override */ else if (typeof w.oqs_usePulseThreshold !== 'undefined') { activeThreshold = w.oqs_usePulseThreshold; } else { activeThreshold = usePulseThreshold; } w.oqs.usePulse = (w.Math.random() < activeThreshold); if (!w.oqs.usePulse) {  w.document.write('<script type="text/javascript" src="http://static.bbci.co.uk/frameworks/barlesque/2.72.2/desktop/2.8/script/vendor/edr.js"><'+'/script>'); } } oqsSurveyManager(window, 'ON'); /*]]>*/ </script><!-- ISTATS --><script type="text/javascript"> /* <![CDATA[ */ define('id-statusbar-config', { 'translation_signedout': "Sign in", 'translation_signedin': "Your account", 'use_overlay' : false, 'signin_url' : "https://ssl.bbc.co.uk/id/signin", 'locale' : "en-GB", 'policyname' : "", 'ptrt' : "http://www.bbc.co.uk/" }); /* ]]> */ </script><script type="text/javascript"> (function () { if (! window.require) { throw new Error('idcta: could not find require'); } var map = {}; map['idapp-1'] = 'http://static.bbci.co.uk/idapp/0.63.23/modules/idapp/idapp-1'; map['idcta/idcta-1'] = 'http://static.bbci.co.uk/id/0.23.4/modules/idcta/idcta-1'; require({paths: map}); define('id-config', {"idapp":{"version":"0.63.23","hostname":"ssl.bbc.co.uk","insecurehostname":"www.bbc.co.uk","tld":"bbc.co.uk"},"idtranslations":{"version":"0.29.1"},"identity":{"baseUrl":"https:\/\/talkback.live.bbc.co.uk\/identity"},"pathway":{"name":null,"staticAssetUrl":"http:\/\/static.bbci.co.uk\/idapp\/0.63.23\/modules\/idapp\/idapp-1\/View.css"}}); })(); </script><style type="text/css">
+	@import '/staticarchive/de138284d8eceb705f73af8711ffe078b1fe323f.css';
+	@import '/staticarchive/67f790428e1dc1baf083f87e41c9f6785a11c0fe.css';
+	@import '/staticarchive/3e670a904ae54eff0cac6844b0c25704a7f34bec.css';
+	
+</style><link rel="stylesheet" type="text/css" media="screen" href="/staticarchive/cdd880bb3b0a705b9104f2f18e5bcacd83a0d582.css"><link rel="stylesheet" type="text/css" media="screen" href="/staticarchive/31dbeb26a643b393c4df74ee88952f651ab8464c.css"><link rel="stylesheet" type="text/css" media="print" href="/staticarchive/7e24410b9b1b41d15ef363a38479a8006b090ff6.css"><!-- Barlesque: --><script type="text/javascript">
+<!-- 
+	if (document.documentElement && document.getElementById){
+		document.documentElement.className += " js";
+	}	
+// -->		
+</script><!-- Glow library : core modules --><script type="text/javascript">
+	gloader.load(["glow", "1", "glow.anim", "glow.net", "glow.dom", "glow.embed"]);
+</script><!-- EMP embed support --><script type="text/javascript" src="/staticarchive/296b7e9b01b56142aec1bfa4760e2eb86073b802.js"></script><script type="text/javascript" src="/staticarchive/880927e055ea2d75cc32254b7274b0e4a04822c2.js"></script><!-- Live Stats Variable --><!-- End of Live Stats Variable Settings --></head><body class="blue prg-content-lhn article">
+		
+		<div><a name="top"> </a></div>                <script type="text/javascript">/*<![CDATA[*/ bbcFlagpoles_istats = 'ON'; istatsTrackingUrl = '//sa.bbc.co.uk/bbc/bbc/s?name=SET-COUNTER&app_type=web&ml_name=SSI&ml_version=0.21.0&language=en-GB'; if (window.istats_countername) { istatsTrackingUrl = istatsTrackingUrl.replace(/([?&]name=)[^&]+/ig, '$1' + istats_countername); } (function() { if ( /\bIDENTITY=/.test(document.cookie) ) { istatsTrackingUrl += '&bbc_identity=1'; } var c = (document.cookie.match(/\bckns_policy=(\d\d\d)/)||[]).pop() || ''; istatsTrackingUrl += '&bbc_mc=' + (c? 'ad'+c.charAt(0)+'ps'+c.charAt(1)+'pf'+c.charAt(2) : 'not_set'); if ( /\bckns_policy=\d\d0/.test(document.cookie) ) { istatsTrackingUrl += '&ns_nc=1'; } var screenWidthAndHeight = 'unavailable'; if (window.screen && screen.width && screen.height) { screenWidthAndHeight = screen.width + 'x' + screen.height; } istatsTrackingUrl += ('&screen_resolution=' + screenWidthAndHeight); istatsTrackingUrl += '&blq_s=2.8d&blq_r=2.7&blq_v=default-domestic'; })(); /*]]>*/</script><!-- Begin iStats 20100118 (UX-CMC 1.1009.3) --><script type="text/javascript">/*<![CDATA[*/ (function() { window.istats || (istats = {}); var cookieDisabled = (document.cookie.indexOf('NO-SA=') != -1), hasCookieLabels = (document.cookie.indexOf('sa_labels=') != -1), hasClickThrough = /^#sa-(.*?)(?:-sa(.*))?$/.test(document.location.hash), runSitestat = !cookieDisabled && !hasCookieLabels && !hasClickThrough && !istats._linkTracked; if (runSitestat && bbcFlagpoles_istats === 'ON') { sitestat(istatsTrackingUrl); } else { window.ns_pixelUrl = istatsTrackingUrl; /* used by Flash library to track */ } function sitestat(n){var j=document,f=j.location,b="";if(j.cookie.indexOf("st_ux=")!=-1){var k=j.cookie.split(";");var e="st_ux",h=document.domain,a="/";if(typeof ns_!="undefined"&&typeof ns_.ux!="undefined"){e=ns_.ux.cName||e;h=ns_.ux.cDomain||h;a=ns_.ux.cPath||a}for(var g=0,f=k.length;g<f;g++){var m=k[g].indexOf("st_ux=");if(m!=-1){b="&"+unescape(k[g].substring(m+6))}}document.cookie=e+"=; expires="+new Date(new Date().getTime()-60).toGMTString()+"; path="+a+"; domain="+h}ns_pixelUrl=n;n=ns_pixelUrl+"&ns__t="+(new Date().getTime())+"&ns_c="+((j.characterSet)?j.characterSet:j.defaultCharset)+"&ns_ti="+escape(j.title)+b+"&ns_jspageurl="+escape(f&&f.href?f.href:j.URL)+"&ns_referrer="+escape(j.referrer);if(n.length>2000&&n.lastIndexOf("&")){n=n.substring(0,n.lastIndexOf("&")+1)+"ns_cut="+n.substring(n.lastIndexOf("&")+1,n.lastIndexOf("=")).substring(0,40)}(j.images)?new Image().src=n:j.write('<p><i'+'mg src="'+n+'" height="1" width="1" alt="" /></p>')}; })(); /*]]>*/</script><noscript><p style="position: absolute; top: -999em;"><img src="//sa.bbc.co.uk/bbc/bbc/s?name=SET-COUNTER&amp;app_type=web&amp;ml_name=SSI&amp;ml_version=0.21.0&amp;language=en-GB&amp;blq_s=2.8d&amp;blq_r=2.7&amp;blq_v=default-domestic" height="1" width="1" alt=""></p></noscript> <!-- End iStats (UX-CMC) -->    <div id="blq-container" class="blq-lang-en-GB blq-gvl-2-8"> <div id="blq-pre-mast" lang="en-GB"> <!-- Pre mast -->  </div>  <script type="text/html" id="blq-bbccookies-tmpl"><![CDATA[ <div id="bbccookies-prompt" class="bbccookies-d"> <h2> Cookies on the BBC website </h2> <p> We use cookies to ensure that we give you the best experience on our website.<span class="bbccookies-international-message"> We also use cookies to ensure we show you advertising that is relevant to you.</span> If you continue without changing your settings, we'll assume that you are happy to receive all cookies on the BBC website. However, if you would like to, you can <a href="/privacy/cookies/managing/cookie-settings.html">change your cookie settings</a> at any time. </p> <ul> <li id="bbccookies-continue"> <button type="button" id="bbccookies-continue-button">Continue</button> </li> <li id="bbccookies-more"><a href="/privacy/cookies/bbc">Find out more</a></li></ul> </div> ]]></script><script type="text/javascript">/*<![CDATA[*/ (function(){if(bbccookies._showPrompt()){var i=document,b=i.getElementById("blq-pre-mast"),f=i.getElementById("blq-global"),h=i.getElementById("blq-container"),c=i.getElementById("blq-bbccookies-tmpl"),a,g,e;if(b&&i.createElement){a=i.createElement("div");a.id="bbccookies";e=c.innerHTML;e=e.replace("<"+"![CDATA[","").replace("]]"+">","");a.innerHTML=e;if(f){f.insertBefore(a,b)}else{h.insertBefore(a,b)}g=i.getElementById("bbccookies-continue-button");g.onclick=function(){a.parentNode.removeChild(a);return false};bbccookies._setPolicy()}}})(); /*]]>*/</script><span id="blq-mast-background"></span> <div id="blq-container-inner" lang="en-GB">  <div id="blq-acc" class="blq-rst">  <p id="blq-mast-home" class="blq-no-images"><a href="/" hreflang="en-GB"> <span id="blq-blocks-wrapper"> <span class="blq-home">British Broadcasting Corporation</span><img src="/staticarchive/2e00d1d53e9c3bd91993196aa19a1d88589969f0.png" alt="BBC" id="blq-blocks" width="84" height="24"><span class="blq-span">Home</span> </span> </a></p>  <p class="blq-hide"><strong><a id="page-top">Accessibility links</a></strong></p> <ul id="blq-acc-links"><li><a href="#blq-content">Skip to content</a></li>  <li><a href="#blq-local-nav">Skip to local navigation</a></li>  <li><a href="#blq-nav-main">Skip to bbc.co.uk navigation</a></li> <li><a href="#blq-search">Skip to bbc.co.uk search</a></li>  <li><a href="/accessibility/">Accessibility Help</a></li>   </ul></div>   <div id="blq-main" class="blq-clearfix">        
+
+		<div id="archived-mothball-message" style="
+            background:url(/globalresources/mothball-images/bg.jpg)
+                        0 0 repeat-x #fbfbfb;
+    ">
+        <a href="/globalresources/mothballing" style="
+
+        ">
+            This page has been archived and is no longer updated.
+            <span style="
+                display:block;
+                font-size:0.5em;
+                padding:10px 0 0 70px;
+                font-weight:bold;
+            ">
+                <span style="
+                color:#1A75BB; margin-left:100px;
+                ">Find out more about page archiving.</span>
+            </span>
+        </a>
+    </div><!--START PROGRAMMES CONTENT CONTAINER SHELL-->
+		<div id="prg-masthead">
+		<!--<p><a href="/history/british/" title="Go to British History in-depth">British History in-depth</a></p>-->
+
+	<p><a href="/history/" title="Go to the History homepage">History</a></p>
+
+<div id="blq-local-nav">
+	<ul><li><a href="/history/ancient/" title="Go to the Ancient History section">Ancient History</a></li>
+		<li class="stick"><a href="/history/british/" title="Go to the British History section">British History</a></li>
+		<li><a href="/history/worldwars/" title="Go to the World Wars section">World Wars</a></li>
+		<li><a href="/history/historic_figures/" title="Go to the Historic Figures section">Historic Figures</a></li>
+		<li><a href="/history/familyhistory/" title="Go to the Family History section">Family History</a></li>
+		<li><a href="/history/handsonhistory" title="Go to the Hands On History section">Hands on History</a></li>
+		<li><a href="/history/forkids" title="Go to the History for Kids section">History for Kids</a></li>
+		<li class="last"><a href="/history/on_this_day/" title="Go to the On This Day section">On This Day</a></li>
+	</ul></div>
+		</div>
+		<div class="prg-wrapper" id="prg-wrapper-shell">
+		<div id="blq-content">
+		
+		<div id="prg-wrapper-featured"><!-- START MAIN CONTENT AREA -->
+		<div class="box top_promo">
+		<div class="header"><h1>Smallpox: Eradicating the Scourge</h1><p><em>By Colette Flight<br>
+		Last updated 2011-02-17</em></p></div>
+		<div class="content">
+		<img alt="Image of a young boy receiving vacination against smallpox" height="162" src="/staticarchive/615ab5c5a429b56f0b096d74f16252ef4777de4f.jpg" width="196"><p>The story of man's victory over smallpox is one of determination, scientific endeavour and vaccination on a global scale. Colette Flight delves into the dark history of the 'Speckled Monster'.</p>
+		</div>
+		<div class="footer"> </div>
+		</div>
+		
+		<div class="p-grp p-grp-a p-grp-theme-n nth-row-n">
+		<!--LEFT HAND NAV-->
+		<div class="left-nav">
+		<h2>On this page</h2>
+		<ul><li><a href="#one">The scourge of the world</a></li>
+		<li><a href="#two">Edward Jenner's breakthrough</a></li>
+		<li><a href="#three">Draconian measures in Yugoslavia</a></li>
+		<li><a href="#four">Containment</a></li>
+		<li><a href="#five">A new threat?</a></li>
+		<li><a href="#six">Find out more</a></li>
+		</ul><h3>Page options</h3>
+		<ul class="tools"><li class="print"><a href="#" onclick="window.print();return false;">Print this page</a></li>
+		</ul></div>
+		
+		<div class="center">
+		
+		<div class="content-main-header"> </div>
+		<div class="p-mod nth-child-1 content-main">
+		<div class="promo">
+		<h2 class="heading-nth-1" id="one">The scourge of the world</h2>
+		
+		
+			
+			
+			<p>An estimated 300 million people died from smallpox in the 20th century alone. This virulent disease, which kills a third of those it infects, is known to have co-existed with human beings for thousands of years. As the world's population grew, and travel increased, so the virus that Edward Jenner called the "speckled monster" grasped every opportunity to colonise the world.</p>
+
+			<p><span class="image_with_caption float_left" style="width:136px;">
+		<img alt="Image of a cow tied down on a grid for inspection" height="109" src="/staticarchive/d0b1b8cbbff20a120c6c742814884e00b6409e42.jpg" width="136"><span class="caption" style="width:126px;">
+		The first stages of preparing vaccine
+		 <a href="/history/about/copyright.shtml">©</a></span>
+		</span>
+		The earliest physical evidence of smallpox is the pustular rash on the mummified body of Pharaoh Ramesses V of Egypt, who died in 1157 BC. Traders carried the disease from Egypt to India during the 1st millennium BC. From there it swept into China in the 1st century AD and reached Japan in the 6th century. Returning crusaders provided a way for smallpox to spread through Europe in the 11th and 12th centuries.</p>
+
+			<p>Smallpox was particularly successful in virgin populations. The Spanish inadvertently owe much of their success in conquering the Aztecs and Incas in Mexico in the 16th century to smallpox. Unlike the Spanish, the native Indians had no immunity to the disease, having never encountered it before. It wiped out huge numbers of them. A century later the North American Indians suffered a similar devastation. In the 18th century smallpox decimated the aborigines when it reached Australia, the last corner of the world to have escaped its ravages.</p>
+
+			
+		<div class="content_promo fr">
+		<div class="promo p-quote">
+		<div class="q-open"> </div><blockquote><p>he Spanish inadvertently owe much of their success in conquering the Aztecs and Incas in Mexico in the 16th century to smallpox.</p></blockquote><div class="q-closed"> </div>
+		</div>
+		</div>
+		
+		
+
+			<p>People struggled to find ways to battle with smallpox. Variolation was a process developed in the 10th century in China and India. It involves taking pus from the pocks of someone suffering from smallpox and inoculating healthy people with it. Usually a mild case of smallpox developed, giving lifelong immunity afterwards. There was a risk of death from this, but in a world where smallpox was rife the odds made it worthwhile; about 0.5-2 percent of people died after variolation, compared with 20-30 per cent after natural smallpox. A major disadvantage of the practice was that variolated people could pass on severe smallpox to others.</p>
+
+		<div class="article_end"><a href="#top" title="go to the top"><span class="top_anchor">Top</span></a></div>
+		</div><!--End: promo -->
+		<div class="promo">
+		<h2 id="two">Edward Jenner's breakthrough</h2>
+		
+		
+			
+			
+			<p>Lady Mary Wortley Montagu (1689-1762) is credited with introducing variolation to Britain in 1721. Severely pockmarked herself after surviving the illness, she learnt about variolation in Constantinople, where her husband was the British Ambassador. She had her children inoculated and persuaded the Princess of Wales to do the same.</p>
+
+			<p><span class="image_with_caption float_right" style="width:125px;">
+		<img alt="A statue of Edward Jenner" height="164" src="/staticarchive/f275cc8a343585359fb0537fb205e3a1521133ef.jpg" width="125"><span class="caption" style="width:115px;">
+		Image of a statue of Edward Jenner vaccinating a baby
+		 <a href="/history/about/copyright.shtml">©</a></span>
+		</span>
+		The real breakthrough in fighting the virus came in 1796, when Edward Jenner carried out his famous experiment. He inserted pus extracted from a cowpox pustule on the hand of a milkmaid, into an incision on the arm of an eight-year-old boy, James Phipps. Jenner was testing his theory, drawn from the folklore of the countryside, that milkmaids who suffered the mild disease of cowpox never contracted smallpox. Jenner proved conclusively that contracting cowpox provided immunity against smallpox as well. He was quick to realise the enormous potential of vaccination. In 1801 he wrote 'It now becomes too manifest to admit of controversy, that the annihilation of the Small Pox, the most dreadful scourge of the human species, must be the final result of this practice.'</p>
+	
+			<p><span class="image_with_caption float_left" style="width:125px;">
+		<img alt="Edward Jenner" height="195" src="/staticarchive/70807c8c466dfff75cf9de3b4cf07e60785e45a9.jpg" width="125"><span class="caption" style="width:115px;">
+		Edward Jenner
+		 <a href="/history/about/copyright.shtml">©</a></span>
+		</span>
+		It was to be well over a hundred years before Jenner's vision finally began to be realised. In 1959 the World Health Assembly passed a resolution to undertake the global eradication of smallpox. The goal of eradication made sense to the developed countries in Europe and North America. Although vaccination had largely wiped out the disease from these areas, they all continued to suffer outbreaks of smallpox caused by imports from developing countries where the disease was endemic.</p>
+
+			<p>There were a number of outbreaks that demonstrated how a few smallpox cases could spark mass panic and large-scale disruption. In 1947 a Mexican businessman, unaware he was incubating smallpox, travelled by bus to New York. Worried that a smallpox epidemic would spiral out of control in the densely populated city, the health authorities decided to act pre-emptively and mass vaccinate New Yorkers. Over six million people were vaccinated within a month at hundreds of vaccination stations in hospitals, firehouses, and police stations. In all, 12 people caught smallpox and two of them, including the Mexican, died. Ironically six people also died from adverse reactions to the vaccine.</p>
+			
+		<div class="article_end"><a href="#top" title="go to the top"><span class="top_anchor">Top</span></a></div>
+		</div><!--End: promo -->
+		<div class="promo">
+		<h2 id="three">Draconian measures in Yugoslavia</h2>
+		
+		
+			
+			
+			<p><span class="image_with_caption float_left" style="width:125px;">
+		<img alt="Photo of Dusanka Stupar" height="183" src="/staticarchive/804f98a0daaf3b48cb6eb1deca70455f12aa45d9.jpg" width="125"><span class="caption" style="width:115px;">
+		Dusanka Stupar
+		 <a href="/history/about/copyright.shtml">©</a></span>
+		</span>
+		In Wales in 1962 a traveller from Pakistan seeded a smallpox outbreak in the Rhondda. Twenty-five people contracted smallpox, and six of them died, including a nine-month-old baby. As the epidemic grew, so did the public clamour for vaccination, and 900,000 people were eventually vaccinated in South Wales.</p>
+
+			<p>One of the last major European outbreaks was in Yugoslavia in 1972. Smallpox was not diagnosed until the epidemic was well under way, and Tito's Communist government took draconian measures to bring the outbreak under control. Despite this, there were still 175 cases and 35 deaths. A Muslim pilgrim had returned from Mecca to his village in Kosovo via Iraq, where there were cases of smallpox, and spread the disease to friends and relatives. A man called Ljatif Muzza in nearby Djakovica also became infected.</p>
+	
+			<p>Muzza fell ill and because of the seriousness of his condition was treated in a series of hospitals, ending up in Belgrade on 10th March. Nurse Dusanka Stupar was on duty that night with her colleague Dusica Spasic. Muzza had been misdiagnosed as suffering from a bad reaction to penicillin. In fact he had contracted the most virulent and highly contagious form of smallpox - hemorrhagic - in which the patient bleeds to death before developing pustules. He died later that night.</p>
+
+			
+		<div class="content_promo fr">
+		<div class="promo p-quote">
+		<div class="q-open"> </div><blockquote><p>It was a place of waiting for life or death... for the next 15 days we will live together and wait to see whose turn it is next...</p></blockquote><div class="q-closed"> </div>
+		</div>
+		</div>
+		
+		
+
+			<p>The morning after Muzza's death Dusanka came down with measles and was forced to take a few weeks off work. During her absence the first smallpox cases appeared in Belgrade. Incredibly Muzza infected 38 people, eight of whom died. The first Dusanka knew about the epidemic was when health officials turned up at her home on 23rd March to take her in to quarantine. A few days later she discovered that her friend, Dusica, had already died of the disease. Enforced mass quarantine was instigated to stop the virus in its tracks. Dusanka recorded her experience of it in a diary. She was kept in a hotel guarded by armed police. It was 'a place of waiting for life or death... from today for the next 15 days we will live together and wait to see whose turn it is next.' Dusanka smuggled the diary out in her underwear; it was forbidden to take possessions out of quarantine for fear of infection.</p>
+			
+		<div class="article_end"><a href="#top" title="go to the top"><span class="top_anchor">Top</span></a></div>
+		</div><!--End: promo -->
+		<div class="promo">
+		<h2 id="four">Containment</h2>
+		
+		
+			
+			
+			<p>Dr Suvakovic, who had seen smallpox in India, was part of a special team sent to Kosovo from Belgrade to deal with the epidemic. He was shocked when he reached the smallpox hospital in Dakovica. Having never encountered smallpox before, the terrified doctors had abandoned their patients. Dr Birtasevic, an army medical doctor, remembers the strict measures taken to prevent the epidemic spreading outside Kosovo.</p>
+
+			<p><span class="image_with_caption float_left" style="width:125px;">
+		<img alt="Photo of Dr Suvakovic" height="185" src="/staticarchive/12ff87d1b58f82a4f6d71a9c684cc07801fdc846.jpg" width="125"><span class="caption" style="width:115px;">
+		Dr Suvakovic
+		 <a href="/history/about/copyright.shtml">©</a></span>
+		</span>
+		The province was isolated, and no one allowed in or out without having been vaccinated. Public events, meetings and weddings were forbidden. He and his team vaccinated throughout the region. 'The working day was from when the sun came up to when it went down. It was very exhausting; there were no breaks, no Sundays or public holidays.' In the end almost the entire Yugoslavian population of 18 million people was vaccinated.</p>
+
+			
+		<div class="content_promo fr">
+		<div class="promo p-quote">
+		<div class="q-open"> </div><blockquote><p>...almost the entire Yugoslavian population of 18 million people was vaccinated.</p></blockquote><div class="q-closed"> </div>
+		</div>
+		</div>
+		
+		
+
+			<p>It was fear of these kinds of epidemics that encouraged developed countries to fund the smallpox eradication campaign. Seven years after it had been proposed the campaign began in earnest in 1966 with the appointment of DA Henderson. Although mass vaccination calmed fears, it was not always the most medically efficient way to combat the disease. Henderson and his team developed a strategy of containment and surveillance. Every time there was an outbreak, a WHO team would arrive, vaccinate and isolate those who were ill and trace and vaccinate all their contacts. Effectively they ring-fenced the disease until it had no way of moving on to its next victim. The eradication teams also actively hunted down the disease, travelling with a 'recognition card' showing a baby with smallpox, to explain to people what the illness looked like. Rewards were offered to encourage reporting of cases.</p>
+	
+			<p>The last natural case of smallpox was in Somalia in October 1977. Ali Maow Maalin, a 23-year-old hospital cook in Merca, had never been successfully vaccinated. After his diagnosis, an intensive tracing and vaccination campaign led to 54,777 people being vaccinated in the next two weeks. The disease was cornered, with no vulnerable hosts nearby to spread to. DA Henderson and his team rejoiced at the thought there would never be another case of this horrendous disease again. There were no official announcements, however, until a two-year period of intense surveillance was completed, making sure the disease was finally gone.</p>
+			
+			
+			
+		<div class="article_end"><a href="#top" title="go to the top"><span class="top_anchor">Top</span></a></div>
+		</div><!--End: promo -->
+		<div class="promo">
+		<h2 id="five">A new threat?</h2>
+		
+		
+			
+			
+			<p>It was just as well. Smallpox made one last attempt to stage a comeback. In September 1978 Janet Parker, a medical photographer at the University of Birmingham, was accidentally infected with smallpox and later died. Her illness was initially diagnosed as a drug rash, but soon afterwards pustules appeared on her body. Mrs Parker's mother also developed smallpox, but survived. The ensuing investigation never eam, was accidentally infected with smallpox and later dstablished exactly how the smallpox virus had escaped from the university's laboratory.</p>
+
+			<p><span class="image_with_caption float_left" style="width:160px;">
+		<img alt="Photo of a man showing children a picture of baby with smallpox" height="126" src="/staticarchive/e8d33b5c0558c26b4b63b2ff4d1370355c7672d8.jpg" width="160"><span class="caption" style="width:150px;">
+		Public education about smallpox; rewards were offered to encourage reporting of cases
+		 <a href="/history/about/copyright.shtmlwho">©</a></span>
+		</span>
+		This accident was a sharp reminder that humans remained vulnerable to the disease, especially as routine vaccination had ended in many countries in the 1970s. Following their jubilant announcement in 1980 that smallpox had finally been eradicated from the world, the World Health Organization lobbied for the numbers of laboratories holding samples of the virus to be reduced. In 1984 it was agreed that smallpox be kept in only two WHO approved laboratories, in Russia and America.</p>
+
+			
+		<div class="content_promo fr">
+		<div class="promo p-quote">
+		<div class="q-open"> </div><blockquote><p>Twenty-two years after eradication, the world has little herd immunity and we have never been so vulnerable to smallpox.</p></blockquote><div class="q-closed"> </div>
+		</div>
+		</div>
+		
+		
+
+			<p>Today these stocks still exist at the State Research Center of Virology and Biotechnology (Vector) in Koltsovo, Russia, and at the Centers for Disease Control and Prevention (CDC), Atlanta, in the United States. The World Health Assembly has passed resolutions to destroy the stocks, but each time the date of destruction has been postponed to allow ongoing research. In May 1999 it was decided to postpone destruction until 2002. The Americans announced in November 2001 that they have now decided not to destroy their stocks.</p>
+
+			<p>In 2002, twenty-two years after eradication, the people of the world have little herd immunity to smallpox, and we have never been so vulnerable to it. In the late 1990s the public discovered that we still have reason to fear this virus. While the rest of the planet had celebrated the elimination of this horrendous disease, the Russians had embarked on an ambitious smallpox programme of their own; to turn it into an effective weapon.</p>
+				
+		<div class="article_end"><a href="#top" title="go to the top"><span class="top_anchor">Top</span></a></div>
+		</div><!--End: promo -->
+		<div class="promo">
+		<h2 id="six">Find out more</h2>
+		
+		
+			
+			
+			<h2>Read on</h2>
+			
+			<p><em>Smallpox 1961-62 - Reports on Public Health and Medical Subjects, no 109</em> (Ministry of Health, HMSO,1963)</p>
+			
+			<p><em>Smallpox and its Eradication</em> by F Fenner, DA Henderson, I Arita,more</h2>
+		
+		
+			
+			
+			<h2>Read on</h2>
+			 Z Jezek, ID Ladnyi (World Health Organization, 1988)</p>
+			
+			<p><em>The Global Eradication of Smallpox: Final Report of the Global Commission for the Certification of Smallpox Eradication</em> (World Health Organization, Geneva, 1980)</p>
+
+		<div class="article_end"><a href="#top" title="go to the top"><span class="top_anchor">Top</span></a></div>
+		</div><!--End: promo -->
+		<div class="promo">
+<h2>About the author</h2>
+<p>Collette Flight was an Assistant Producer on <em>Smallpox 2002 - Silent Weapon</em>, a WalltoWall production for BBC Current Affairs.</p>
+<div class="article_end"><a title="go to the top" href="#top"><span class="top_anchor">Top</span></a></div>
+</div></div>
+		<div class="content_bottom"> </div>
+		
+		
+
+		</div>
+		
+		</div><!--closes Row - single column -->
+		
+		</div><!-- End: main content area -->
+		<div id="prg-wrapper-extra">
+		<div class="product_button">
+		<h2>
+		<span class="arrow">«;</span>
+		<a href="/history/british/empire_seapower" title="Go to the Empire and Seapower Homepage">More <span>Empire and Seapower</span></a>
+		</h2>
+		</div>
+		<div class="p-grp">
+		<div class="p-mod">
+		 
+		<!-- INTERACTIVE TIMELINE PROMO -->
+<div class="promo">
+	<div class="rhn_header">
+		<h2>British History Timeline</h2>
+	</div>
+	<div class="rhn_body">
+		<a href="/history/british/launch_tl_british.shtml" class="rhn_promo">
+			<img src="-mod">
+		 
+		<!-- INTERACTIVE TIMELINE PROMO -->
+<div class="promo">
+	<div class="rhn_header">
+		<h2>British History Timeline</h2>
+	</div>
+	<div c/staticarchive/582aef44e92872dece7a6a122b8e55cd53183d0a.jpg" width="116" height="65" alt="The British History Timeline" title="The British History Timeline"></a>
+		<ul class="float_left"><li>Explore <a href="/history/british/launch_tl_british.shtml">the British History Timeline</a> from the Neolithic to the present day</li>
+		</ul><div class="clear_both"> </div>
+	</div>
+	<div class="module_footer"> </div>
+</div>
+
+
+<div class="promo">
+	<div class="rhn_header">
+		<h2>World War One Centenary</h2>
+	</div>
+	<div class="rhn_body">
+		<a href="http://www.bbc.co.uk/ww1/" class="rhn_promo">
+			<img src="/staticarchive/b83623508ad5dc6b7d615989b4b3e89cd6946136.jpg" width="116" height="65" alt="World War One Centenary"></a>
+		<ul class="float_left"><li>Find out more about how the BBC is covering the <a href="http://www.bbc.co.uk/ww1/">World War One Centenary</a>, and see the 
+
+latest programmes and online content</li>
+		</ul><div class="clear_both"> </div>
+	</div>
+	<div class="module_footer"> </div>
+</div>
+
+<div class="promo">
+	<div class="rhn_header">
+		<h2>Surviving the trenches<h2>
+	</h2></h2></div>
+	<div class="rhn_body">
+		<a href="http://www.bbc.co.uk/history/0/23931340" class="rhn_promo">
+			<img src="/staticarchive/d1d0b631292a97387706beece67a69e09cc02e46.jpg" width="116" height="65" alt="How did so many soldiers survive the trenches?"></a>
+		<ul class="float_left"><li>Dan Snow asks <a href="http://www.bbc.co.uk/guides/z3kgjxs">why so many soldiers survived the trenches</a> in WW1</li>
+		</ul><div class="clear_both"> </div>
+	</div>
+	<div class="module_footer"> </div>
+</div>
+
+
+		<!-- BATTLE OF BRITAIN PROMO
+<div class="promo">
+	<div class="rhn_header">
+		<h2>Battle of Britain</h2>
+	</div>
+	<div class="rhn_body">
+		<a href="http://www.bbc.co.uk/history/battle_of_britain/" class="rhn_promo">
+			<img src="/history/images/rhn/battle_of_britain.jpg" width="116" height="65" alt="An RAF fighter squadron scrambles after receiving the signal to engage the enemy during the Battle of Britain (Getty images)"/>
+		</a>
+		<ul class="float_left">
+			<li>Explore <a href="http://www.bbc.co.uk/history/battle_of_britain/">the Battle of Britain</a> with clips from BBC programmes</li>
+		</ul>
+		<div class="clear_both"> </div>
+	</div>
+	<div class="module_footer"> </div>
+</div> -->
+<div class="promo">
+	<div class="rhn_header">
+		<h2>The History of the Home</h2>
+	</div>
+	<div class="rhn_body">
+		<a href="/history/british/middle_ages/history_of_home.shtml" class="rhn_promo">
+			<img src="/staticarchive/ce4cc0016049491ad4da1f696ad27217e5b51080.jpg" width="116" height="65" alt="Dr Lucy Worsley (If Walls Could Talk)"></a>
+		<ul class="float_left"><li>Take a journey through the<a href="/history/british/middle_ages/history_of_home.shtml"> history of the home</a>. Each room tells a different story. </li>
+		</ul><div class="clear_both"> </div>
+	</div>
+	<div class="module_footer"> </div>
+</div>
+		
+		</div>
+		</div>
+		<div class="clear_both"> </div>
+		</div></div>
+		</div>
+		
+		               </div>   <div id="blq-mast" class="blq-rst blq-default-domestic blq-new-nav" lang="en-GB"> <div id="blq-sign-in">   <div id="id-status" class="blq-id-v4"> <div class="id-out id-gel"> <h2 class="blq-hide">BBC iD</h2> <a href="https://ssl.bbc.co.uk/id/status" id="blq-idstatus-link"> <span class="id-icon"> <span></span> </span> <span id="blq-idstatus-text"> BBC iD </span> <span class="id-spinner"></span> <span class="blq-dropdown-arrow"> <span></span> </span> </a> </div> <div id="id-status-nav"> <div class="id-in blq-rst"> <ul><li> <a name="idDash" class="blq-nogo has-ptrt idDash" href="https://ssl.bbc.co.uk/id/settings"> Settings </a> </li> <li> <a name="idSignout" class="blq-nogo has-ptrt idSignout" href="https://ssl.bbc.co.uk/id/signout"> Sign out </a> </li> </ul></div> </div> </div>          </div>  <form method="get" id="blq-search-form" action="http://search.bbc.co.uk/search" accept-charset="utf-8"> <p id="blq-nav-search">  <input type="hidden" name="go" value="toolbar"><input type="hidden" name="uri" value="/history/british/empire_seapower/smallpox_01.shtml"><label for="blq-search" class="blq-hide">Search term:</label> <input id="blq-search" type="text" name="q" value="" maxlength="128"><input id="blq-search-btn" type="submit" value="Search"></p> </form>   <h2 class="blq-hide">BBC navigation</h2> <ul id="blq-nav-main" class="blq-not-uk"><li id="blq-nav-n"><a href="http://www.bbc.co.uk/news/" hreflang="en-GB">News</a></li>  <li id="blq-nav-s"><a href="http://www.bbc.co.uk/sport/" hreflang="en-GB">Sport</a></li> <li id="blq-nav-w"><a href="http://www.bbc.co.uk/weather/" hreflang="en-GB">Weather</a></li>  <li id="blq-nav-i">  <a href="/iplayer/" hreflang="en-GB">iPlayer</a>  </li>  <li id="blq-nav-t"><a href="/tv/" hreflang="en-GB">TV</a></li>  <li id="blq-nav-r"><a href="/radio/" hreflang="en-GB">Radio</a></li> <li id="blq-nav-m"><a href="#blq-nav">More…</a></li>  </ul></div>  <div id="blq-nav" class="blq-blue"> <div id="blq-nav-links" class="blq-clearfix" lang="en-GB"> <div id="blq-nav-links-inner">  <ul class="blq-nav-sub blq-first"><li><a href="/cbbc/">CBBC</a></li> <li><a href="/cbeebies/">CBeebies</a></li> <li><a href="/comedy/">Comedy</a></li> <li><a href="/food/">Food</a></li> <li><a href="/history/">History</a></li> </ul><ul class="blq-nav-sub"><li><a href="/learning/">Learning</a></li> <li><a href="/music/">Music</a></li> <li><a href="/science/">Science</a></li> <li><a href="/nature/">Nature</a></li> <li><a href="/local/">Local</a></li> </ul><ul class="blq-nav-sub blq-last"><li><a href="/northernireland/">Northern Ireland</a></li> <li><a href="/scotland/">Scotland</a></li> <li><a href="/wales/">Wales</a></li> <li id="blq-az"><a href="/a-z/">Full A-Z<span class="blq-hide"> of BBC sites</span></a></li> </ul></div> </div> </div>  <!--[if IE 6]> <div id="blq-ie6-upgrade"> <p> <span>You're using the Internet Explorer 6 browser to view the BBC website. Our site will work much better if you change to a more modern browser. It's free, quick and easy.</span> <a href="http://www.browserchoice.eu/">Find out more <span>about upgrading your browser</span> here&hellip;</a> </p> </div> <![endif]-->  <div id="blq-foot" lang="en-GB" class="blq-rst blq-clearfix blq-foot-grey">  <div id="blq-footlinks"> <h2 class="blq-hide">BBC links</h2> <ul><li class="blq-footlinks-row"> <ul class="blq-footlinks-row-list"><li><a href="http://m.bbc.co.uk/">Mobile site</a></li>      <li><a href="/terms/">Terms of Use</a></li>       <li><a href="/aboutthebbc/">About the BBC</a></li>  </ul></li> <li class="blq-footlinks-row"> <ul class="blq-footlinks-row-list"><li><a href="/privacy/">Privacy</a></li>       <li><a href="/accessibility/">Accessibility Help</a></li>  </ul></li> <li class="blq-footlinks-row"> <ul class="blq-footlinks-row-list"><li><a href="/privacy/bbc-cookies-policy.shtml">Cookies</a></li>        <li><a href="/contact/">Contact the BBC</a></li>   </ul></li> <li class="blq-footlinks-row"> <ul class="blq-footlinks-row-list"><li><a href="/guidance/">Parental Guidance</a></li>  </ul></li>  </ul></div>   <div id="blq-foot-blocks" class="blq-footer-image-light"><img src="/staticarchive/a8e42f8fe987b7cc9bf2d43b74b2c74b2448d2e3.png" width="84" height="24" alt="BBC"></div> <p id="blq-disclaim"><span id="blq-copy">BBC © 2014</span> <a href="/help/web/links/">The BBC is not responsible for the content of external sites. Read more.</a></p> <div id="blq-obit"><p><strong>This page is best viewed in an up-to-date web browser with style sheets (CSS) enabled. While you will be able to view the content of this page in your current browser, you will not be able to get the full visual experience. Please consider upgrading your browser software or enabling style sheets (CSS) if you are able to do so.</strong></p></div> </div> </div>  </div>  <script type="text/javascript"> if (typeof require !== 'undefined') { require(['istats-1'], function(istats){ istats.track('external', { region: document.getElementById('blq-main') }); istats.track('download', { region: document.getElementById('blq-main') }); }); } </script><!-- progs scripts --><script type="text/javascript" src="/staticarchive/7e06d56c105e40ac2586df1fdee6dc2c4de3522b.js"></script><script type="text/javascript" src="/staticarchive/9db0e83f69a5e9abafddc192847b0cfd316cb3da.js"></script><script type="text/javascript" src="/staticarchive/c22b3ff9cd32a6a8c384665fef98785674d88408.js"></script><script type="text/javascript" src="/staticarchive/290c74c7c0fce7cf3c54f4747d56712839f0da48.js"></script><script type="text/javascript" src="/staticarchive/159117ef9f66736fed7c12cf0096784ffa74c3d5.js"></script><div id="vision-prod-livestats-bug">
+	<!-- LiveStats -->
+<div class="blq-hide"><img id="livestats" width="1" height="1" alt="" src="/staticarchive/56d45f8a17f5078a20af9962c992ca4678450765.gif"></div>
+
+<!-- LiveStats heatmap -->
+<script src="/staticarchive/e48c065d50111cc7095426d5ae5646c41b799914.js" type="text/javascript"></script></div>
+
+		<script type="text/javascript" src="/staticarchive/db28d92f0509ca6112a0d4b8bac2048ed4633c3f.js"> </script></body></html>eStats heatmap -->
+<scrip

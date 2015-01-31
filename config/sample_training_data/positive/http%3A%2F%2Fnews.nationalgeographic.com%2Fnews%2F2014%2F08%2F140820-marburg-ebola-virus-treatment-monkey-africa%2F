@@ -1,0 +1,5112 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"  xmlns:fb="http://www.facebook.com/2008/fbml">
+
+
+
+    
+    <head>
+    
+    
+
+    
+        
+	
+        <!-- Required for Membership/SSO -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Uw4AWVVADAoDUFlW"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:21,2:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:22,2:21,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,2:21,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,2:21,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&f&&f.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=l.proto+t.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document,u="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-515.min.js"},l=e.exports={offset:i(),origin:p,features:{}};f[u]?(f[u]("DOMContentLoaded",o,!1),c[u]("load",n,!1)):(f[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:20,handle:"D5DuLP"}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-1.newrelic.com","queueTime":0,"licenseKey":"114b3a1f69","agent":"js-agent.newrelic.com/nr-515.min.js","transactionName":"NFVSbRBSCxFYAUBeWA0fdkwMUBELVgwbR1YEVR5PC1YSERcSVVBSEApGUAdEOhJYBVE=","applicationID":"493484","errorBeacon":"bam.nr-data.net","applicationTime":6769}</script>
+        <meta http-equiv="Content-Language" content="en-us" />
+
+        <!-- Robots metadata -->
+        <meta name="robots" content="all" />
+        <meta name="google-site-verification" content="2ixYEN-8M4fZTstcEhbqVJHmtIpX5dj2v5yOMypYkJ4" />
+
+        <!-- Pinterest Blocker -->
+        <meta name="pinterest" content="nopin" />
+
+        <!-- Smart Banners for iOS -->
+        
+        
+        <!-- Copyright metadata -->
+        <meta name="copyright" content="National Geographic" />
+        <!-- (c) Copyright  by National Geographic All Rights Reserved. -->
+
+        <!-- Page metadata -->
+        <meta name="description" content="An experimental therapy showed success in monkeys with Marburg virus, offering hope for new treatments for related Ebola virus." />
+        <meta name="keywords" content="Ebola, Marburg, virus, treatment, monkey, Africa, Guinea, Sierra Leone, Nigeria" />
+
+        
+            <meta name="news_keywords" content="Ebola, Marburg, virus, treatment, monkey, Africa, Guinea, Sierra Leone, Nigeria" />
+        
+        
+            
+                <meta name="author" content="Susan Brink" />
+            
+        
+        
+	
+		<link rel="alternate" type="application/rss+xml" title="National Geographic News [RSS]" href="http://feeds.nationalgeographic.com/ng/News/News_Main">
+	
+	
+
+
+
+        
+        <link rel="canonical" href="http://news.nationalgeographic.com/news/2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/" />
+
+        
+            <meta name="twitter:title" content="Successful Marburg Virus Treatment Offers Hope for Ebola Patients" />
+            <meta name="twitter:description" content="An experimental therapy showed success in monkeys with Marburg virus, offering hope for new treatments for related Ebola virus." />
+            
+                <meta name="twitter:card" content="summary"/>
+                <meta name="twitter:site" content="@NatGeo"/>
+                <meta name="twitter:site:id" content="17471979"/>
+            
+        
+
+        
+            
+            <meta property="article:publisher" content="https://www.facebook.com/natgeo" />
+            
+            <meta property="fb:admins" content="1442858697"/> <meta property="fb:admins" content="506432430" /> <meta property="fb:admins" content="104276" /> <meta property="fb:admins" content="7800037" />
+            <meta name="site_name" property="og:site_name" content="National Geographic" />
+            <meta property="og:title" content="Successful Marburg Virus Treatment Offers Hope for Ebola Patients" />
+            <meta name="description" property="og:description" content="An experimental therapy showed success in monkeys with Marburg virus, offering hope for new treatments for related Ebola virus."/>
+            <meta name="content_type" property="og:type" content="article" />
+            <meta property="og:url" content="http://news.nationalgeographic.com/news/2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/" />
+            
+                
+                  
+                    <meta name="image" property="og:image" content="http://news.nationalgeographic.com/u/TvyamNb-BivtNwpvn7Sct0VFDulyAfA9wBcU0gVHVnqC5ghmdMnigb7v6rjmD8k5D1I9ORG5dKtmf0-7_SU/" />
+                  
+                  
+                  
+                        
+                            <meta name="image" property="og:image" content="http://images.nationalgeographic.com/wpf/sites/common/i/presentation/NGLogo560x430.png"/>
+                            <meta name="image" property="og:image:secure_url" content="https://images.nationalgeographic.com/wpf/sites/common/i/presentation/NGLogo560x430.png"/>
+                        
+                  
+                
+            
+        
+
+        
+        <link rel="icon" type="image/x-icon" href="//images.nationalgeographic.com/wpf/sites/common/i/icons/favicon-cb1274471343.ico" />
+        
+
+        
+        <title>Successful Marburg Virus Treatment Offers Hope for Ebola Patients</title>
+        
+
+        
+            <!-- Google Corporate Contact Info -->
+            <script type="application/ld+json">
+                {
+                    "@context" : "http://schema.org",
+                    "@type" : "Organization",
+                    "url" : "http://www.nationalgeographic.com/",
+                    "contactPoint" : 
+                        [
+                            {
+                                "@type" : "ContactPoint",
+                                "telephone" : "+1-800-647-5463",
+                                "contactType" : "customer service",
+                                "areaServed" : ["US","CA"]
+                            },
+                            {
+                                "@type" : "ContactPoint",
+                                "telephone" : "+1-813-979-6845",
+                                "contactType" : "customer service"
+                            }
+                        ]      
+                }
+            </script>
+            <!-- End Google Corporate Contact Info -->
+        
+    
+
+    
+        <!-- CSS -->
+        
+	
+        <link rel="stylesheet" href="//images.nationalgeographic.com/wpf/CACHE/css/480f5b911119-cb1416402487.css" type="text/css" media="screen" charset="utf-8" />
+
+
+        <!-- JS-enabled styles -->
+        <link href="//images.nationalgeographic.com/wpf/sites/common/c/js_enabled-cb1409744283.css" media="screen" rel="stylesheet" type="text/css" />
+
+        <!-- start css js manager -->
+<!-- site_files -->
+
+<!-- taxi_files -->
+
+<!-- greedy_url_files -->
+
+<!-- url_files -->
+
+<!-- end css js manager -->
+
+        
+	<link href="//images.nationalgeographic.com/wpf/sites/news/c/screen-cb1401708157.css" media="screen" rel="stylesheet" type="text/css" /><!-- Controls News Site Elements -->
+
+
+        
+	
+        <link rel="stylesheet" href="//images.nationalgeographic.com/wpf/CACHE/css/b92759a2c6ca-cb1403695716.css" type="text/css" media="print" charset="utf-8" />
+
+        
+	<link href="//images.nationalgeographic.com/wpf/sites/common/c/print-cb1377172118.css" media="print" rel="stylesheet" type="text/css" /><!-- Controls Print Style -->
+
+
+        
+    <!--[if IE 7]>
+        <link href="//images.nationalgeographic.com/wpf/sites/themes/global/c/ie7-cb1291920458.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="//images.nationalgeographic.com/wpf/sites/themes/unified/c/ie7-cb1274462936.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="//images.nationalgeographic.com/wpf/sites/common/c/ie7-cb1315395344.css" media="screen" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link href="//images.nationalgeographic.com/wpf/sites/themes/global/c/ie6-cb1274462930.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="//images.nationalgeographic.com/wpf/sites/themes/unified/c/ie6-cb1274462936.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="//images.nationalgeographic.com/wpf/sites/common/c/ie6-cb1312282972.css" media="screen" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!--[if IE]>
+        <link href="//images.nationalgeographic.com/wpf/sites/themes/global/c/ie-cb1357792894.css" media="screen" rel="stylesheet" type="text/css" />
+    <![endif]-->
+        
+    
+
+    
+        <script src="//images.nationalgeographic.com/wpf/sites/common/j/modernizr-cb1312282973.js" type="text/javascript"></script>
+
+        
+        <script src="//images.nationalgeographic.com/wpf/sites/common/j/jquery/jquery.min-cb1322821703.js" type="text/javascript" ></script>
+        
+
+        <script type="text/javascript" src="//assets.nationalgeographic.com/modules-livefyre/js/livefyre_auth.js"></script><script type="text/javascript" src="//assets.nationalgeographic.com/modules-livefyre/js/livefyre_manager.js"></script><script type="text/javascript">
+
+if ('undefined' == typeof livefyreConfig) {
+    var livefyreConfig = {
+        "global" : {
+            "network": "natgeo.fyre.co"
+        },
+        "streams": []
+    }
+}
+
+if (window.getScript){
+    window.getScript("http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js").then(function() {
+        _M.ready(function(core) {
+            var lf_debug =  false; 
+            window.livefyreManager = new LivefyreManager(core, lf_debug);
+        });
+    });
+}
+</script>
+
+    
+
+    
+    
+	
+            <script type="text/javascript" src="//images.nationalgeographic.com/wpf/CACHE/js/85f9734275a6-cb1396614252.js" charset="utf-8"></script>
+        
+
+    
+	<script src="//images.nationalgeographic.com/wpf/sites/common/j/jquery.rating.pack-cb1274471350.js" type="text/javascript" ></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            //Add tracking code to news video.
+            $("#content_mainA>.subsection>.aside>.primary>.promo_collection.links_list>ul").find('a[href]').each(function(index, item) { 
+                $(item).attr('href', $(item).attr('href') + '?source=newsbundlearticles') 
+            });
+        });
+    </script>
+
+
+    
+        <script type="text/javascript" src="//images.nationalgeographic.com/wpf/CACHE/js/9a5b343d5797-cb1414755311.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            $(document).ready(function(){
+                if(getURLParam('from_bing') != 'null'){
+                    $('#headerboard').prepend("<div style='width:997px;height:40px;margin-bottom:10px;background-color:#000;'><a href='http://www.bing.com' title='Bing'><img src='http://s.ngm.com/img/bing-promo.jpg' alt='Bing' /></a></div>");
+                }
+
+                function getURLParam(name) {
+                    return unescape((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
+                }
+            });
+            //]]>
+        </script>
+        <!-- start css js manager -->
+<!-- site_files -->
+
+<!-- taxi_files -->
+
+<!-- greedy_url_files -->
+
+<!-- url_files -->
+
+<!-- end css js manager -->
+
+        <script type="text/javascript">
+        function OnSubmitGlobalSearchForm()
+        {
+            var collection=document.header_search_video.collection;
+            var rad=document.header_search_video.search_dest;
+            for(var i=0;i<rad.length;i++){
+                if(rad[i].checked){
+                    switch(rad[i].value){
+                    case 'video':
+                        // do video-only search
+                        if (collection.value === "cms_ngkids"){
+                            document.header_search_video.action ="/video/kids/search/";
+                        }else{
+                            document.header_search_video.action ="http://video.nationalgeographic.com/video/search/";
+                        }
+                        break;
+                    case 'content':
+                    default:
+                        // do site-wide google content search
+                        if (collection.value === "cms_ngkids"){
+                            document.header_search_video.action ="http://kids.nationalgeographic.com/kids/search/";
+                        }else{
+                            document.header_search_video.action ="http://www.nationalgeographic.com/search/";
+                        }
+                        document.header_search_video.site="default_collection"
+                        document.header_search_video.client="default_frontend"
+                        document.header_search_video.proxystylesheet="default_frontend"
+                        break;
+                    }
+                }
+            }
+
+          return true;
+        }
+        </script>
+        
+            
+
+<script type="text/javascript" src="//images.nationalgeographic.com/wpf/CACHE/js/ee4266c4edb1-cb1402403745.js" charset="utf-8"></script>
+
+
+        
+    
+
+
+    
+        
+        <script type="text/javascript" charset="utf-8">
+        var taxName = 'news.nationalgeographic.com::news::Health';
+        var taxBreak = taxName.split("::");
+        taxBreak[2] = taxBreak[2].replace(/&amp;/g,"&");
+        taxBreak[2] = taxBreak[2].replace(/A-Z/g, "A–Z");
+        taxonomy = {site:taxBreak[0],name:taxBreak[2]};
+        </script>
+        
+    
+
+    
+        
+    
+
+    
+    </head>
+    
+
+
+
+
+    <body class="news boxgrid news level_3 article">
+        <div id="flyout_container"><!-- advertising -->
+
+
+    
+    <img src="//images.nationalgeographic.com/wpf/sites/common/i/presentation/clear-cb1297875254.gif">
+
+</div>
+        
+
+
+    <!-- Analytics -->
+    <!-- webanalytics -->
+<script>
+var ngs_furl="/2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/",
+    ngs_contentgroup="News|News",
+    ngs_reportsuite="natgeonews",
+    ngs_channel="",
+    ngs_pagenumber="",
+    ngs_sections="",
+    ngs_authors="Susan Brink",
+    // regex: ^/[.]*,
+    ngs_event="",
+    isAuthenticated = ('False' === 'True') ? true : false;
+</script>
+<!-- Begin Analytics tag -->
+
+  
+    
+      
+        
+          
+            
+            <script type="text/javascript" src="//images.nationalgeographic.com/wpf/CACHE/js/4d4abdc27e9f-cb1422447439.js" charset="utf-8"></script>
+          
+        
+      
+    
+  
+
+<!-- End Analytics tag -->
+<!-- Google Tag Manager -->
+<script>
+  dataLayer = [{
+    'pageCategory': 'News|News'
+     }];
+</script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-S6J5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-S6J5');</script>
+<!-- End Google Tag Manager -->
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=3005368&cv=2.0&cj=1" />
+</noscript>
+<!-- /webanalytics -->
+
+
+
+
+	
+    
+        
+    
+
+    
+	
+        <div id="ad_1x1_top">
+        
+        <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule1x1">
+            
+
+            <!--
+                // unit: interstitial-1x1
+                // uri: /2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/
+                // site_name: news
+                // zone: health
+                // width: 1
+                // height: 1
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 26008980
+                // tile: 155
+                // refreshable: False
+                // regex: ^/[.]*
+                // page_taxonomy: news.nationalgeographic.com::news::Health
+                // ad_taxonomy: news.nationalgeographic.com::news::Health
+                // taxonomy_match: True
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"news/health",
+                            'dimensions':"1x1",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "1", "variability": 100, "height": "1"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.news/health');
+                    inc.push('sz=1x1');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+        </div>
+    
+	<!-- Google Code for News.NationalGeographic.com (For Digital Media) Remarketing List -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1071678606;
+	var google_conversion_language = "en";
+	var google_conversion_format = "3";
+	var google_conversion_color = "666666";
+	var google_conversion_label = "lDOmCOX8gAIQjomC_wM";
+	var google_conversion_value = 0;
+	/* ]]> */
+	</script>
+	<div id="googleAd">
+		<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js"></script>
+	</div>
+	<noscript>
+	<div style="display:inline; position: absolute;">
+	<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1071678606/?label=lDOmCOX8gAIQjomC_wM&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+
+
+
+    
+        
+
+
+
+
+    
+
+
+
+
+    
+        
+
+        <script type="text/javascript">
+            isHTTPS = !!document.location.protocol.match('https:');
+
+            // Set variable to the window as we need to reference it in a few other locations on this page
+            // Need to see if we need to load assets for HTTPS sites
+            window.globalnavURL = (isHTTPS ? "https://www-s.nationalgeographic.com/wpf/" : "//images.nationalgeographic.com/wpf/");
+
+            if (!$("link[href='" + window.globalnavURL + "sites/themes/global/c/global_nav.css']").length) {
+                if (document.createStyleSheet) {
+                    // Covers all IE, but needed to load the CSS in IE8
+                    document.createStyleSheet(window.globalnavURL + 'sites/themes/global/c/global_nav.css');
+                } else {
+                    console.log("Loading the global nav css");
+                    $('<link href="' + window.globalnavURL + 'sites/themes/global/c/global_nav.css" media="screen" rel="stylesheet">').appendTo("head");
+                };
+            };
+        </script>
+
+    
+
+    
+        <!--[if IE 8]>
+            <script type="text/javascript">
+                var ie8CSS = window.globalnavURL + 'sites/themes/global/c/ie8.css';
+                if (document.createStyleSheet) {
+                    document.createStyleSheet(ie8CSS);
+                };
+            </script>
+        <![endif]-->
+    
+
+    
+        
+        <!-- JAVASCRIPT -->
+        <script type="text/javascript">
+            var articleKey,
+                staticURL = '//images.nationalgeographic.com/wpf/',
+                geoipCountryEndpoint = 'http://www.nationalgeographic.com/geoip/country.js',
+                django_page_id = '28029',
+                baseURL = window.location.hostname, 
+                pathURL = window.location.pathname, 
+                _sf_startpt=(new Date()).getTime(); 
+        </script>
+
+        
+
+    
+
+
+
+
+
+<div id="navigation_global_container">
+    <p id="skip_navigation" class="hidden"><a href="#content">Skip to this page's content</a></p>
+    <div id="navigation_advertising"><!-- Top Advertising -->
+        
+        
+        <!-- HEADER ADVERTISEMENT -->
+        <div id="headerboard">
+            
+                    
+                        
+                            
+                                
+                                <!-- advertising -->
+
+
+    
+        
+        
+            
+<div class="pushdown advertisement hidden">
+	<h3 class="hidden">Advertisement</h3>
+	
+	<!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule970x66">
+            
+
+            <!--
+                // unit: pushdown-970x66
+                // uri: /2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/
+                // site_name: news
+                // zone: health
+                // width: 970
+                // height: 66
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 684670514
+                // tile: 162
+                // refreshable: False
+                // regex: ^/[.]*
+                // page_taxonomy: news.nationalgeographic.com::news::Health
+                // ad_taxonomy: news.nationalgeographic.com::news::Health
+                // taxonomy_match: True
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"news/health",
+                            'dimensions':"970x66",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "970", "variability": 100, "height": "66"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.news/health');
+                    inc.push('sz=970x66');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+</div><!-- .pushdown .advertisement -->
+<div class="leaderboard advertisement hidden">
+	<h3 class="hidden">Advertisement</h3>
+	
+        
+            
+                
+                    
+                    <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule728x90">
+            
+
+            <!--
+                // unit: leaderboard-728x90
+                // uri: /2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/
+                // site_name: news
+                // zone: health
+                // width: 728
+                // height: 90
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 778625200
+                // tile: 174
+                // refreshable: False
+                // regex: ^/[.]*
+                // page_taxonomy: news.nationalgeographic.com::news::Health
+                // ad_taxonomy: news.nationalgeographic.com::news::Health
+                // taxonomy_match: True
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"news/health",
+                            'dimensions':"728x90",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "728", "variability": 100, "height": "90"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.news/health');
+                    inc.push('sz=728x90');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+            	
+        	
+        
+	
+</div><!-- .leaderboard .advertisement -->
+        
+    
+
+
+                            
+                        
+                    
+            
+            <div class="secondary_ad hidden">
+                <h3 class="hidden">Advertisement</h3>
+                
+                        
+                            
+                                
+                                    
+                                    <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule257x90">
+            
+
+            <!--
+                // unit: leaderboard-257x90
+                // uri: /2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/
+                // site_name: news
+                // zone: health
+                // width: 257
+                // height: 90
+                // css_class: ad-after
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 830051207
+                // tile: 170
+                // refreshable: False
+                // regex: ^/[.]*
+                // page_taxonomy: news.nationalgeographic.com::news::Health
+                // ad_taxonomy: news.nationalgeographic.com::news::Health
+                // taxonomy_match: True
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"news/health",
+                            'dimensions':"257x90",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "257", "variability": 100, "height": "90"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.news/health');
+                    inc.push('sz=257x90');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+                                
+                            
+                        
+                
+            </div><!-- .secondary_ad -->
+        </div><!-- #headerboard -->
+        
+        
+    </div>
+    <div id="navigation_tophat_container"><!-- Logo + social + search + Sign In / Join -->
+        <div id="navigation_mainA">
+        <div id="group_header_logo">
+            <div id="header_logo" class="vcard">
+                <a class="url fn org hiddenText" href="http://www.nationalgeographic.com/">National Geographic Society</a>
+                <div class="adr hiddenText">
+                    <span class="post-office-box">P.O. Box 98199</span>
+                    <span class="locality">Washington</span>,
+                    <abbr title="District of Columbia" class="region">DC</abbr>
+                    <span class="postal-code">20090-8199</span>
+                    <span class="country-name">USA</span>
+                </div>
+                <div class="geo hiddenText">
+                    <span class="latitude">38.90531943278526</span>,
+                    <span class="longitude">-77.0376992225647</span>
+                </div>
+                <div class="tel hiddenText">800-647-5463</div>
+            </div><!-- #header_logo -->
+        </div><!-- #group_header_logo -->
+
+        <div id="shared-header"></div>
+
+        <!-- google search parameters -->
+        <form name="global_search" method="GET" id="global_search" action="http://www.nationalgeographic.com/search/">
+        <div class="hidden">
+            
+            <input type="hidden" name="frontend" value="default_frontend">
+            
+
+            <input type="hidden" name="output_format" value="xml_no_dtd">
+            <input type="hidden" name="num_results" value="25">
+            <input type="hidden" name="filter" value="p">
+
+            
+            <input type="hidden" name="collection" value="default_collection">
+            
+
+            
+            <input type="hidden" name="meta_field_to_return" value="ngs-gsa-feed-title">
+            <input type="hidden" name="meta_field_to_return" value="ngs-gsa-feed-slug">
+            <input type="hidden" name="meta_field_to_return" value="ngs-gsa-feed-description">
+            <input type="hidden" name="meta_field_to_return" value="ngs-gsa-feed-keywords">
+            <input type="hidden" name="meta_field_to_return" value="ngs-gsa-feed-thumbnail">
+            
+
+            
+            <input type="hidden" name="required_meta_field_1" value="ngs-gsa-feed-mediaType:video">
+
+            <input type="hidden" name="required_meta_field" value="ngs-gsa-feed-video-source:animals|ngs-gsa-feed-video-source:environment|ngs-gsa-feed-video-source:movies|ngs-gsa-feed-video-source:music|ngs-gsa-feed-video-source:news|ngs-gsa-feed-video-source:places|ngs-gsa-feed-video-source:specials|ngs-gsa-feed-video-source:science|ngs-gsa-feed-video-source:nat-geo-wild|ngs-gsa-feed-video-source:national-geographic-channel|ngs-gsa-feed-video-source:kids|ngs-gsa-feed-video-source:the-magazine">
+            
+
+            
+            <input type="hidden" name="meta_field_filter" value="ngs-gsa-feed-title">
+            <input type="hidden" name="meta_field_filter" value="ngs-gsa-feed-description">
+            <input type="hidden" name="meta_field_filter" value="ngs-gsa-feed-keywords">
+            
+
+            <input type="hidden" name="oe" value="utf-8" />
+        </div>
+    
+    <span class="hidden">Search National Geographic</span>
+
+     <div class="field">
+         <label for="header_search_input" class="hidden">Search<span class="hidden">nationalgeographic.com</span></label>
+
+        
+        <input id="header_search_input" type="search" name="search" placeholder="Search" maxlength="256" autocomplete="off" value="">
+        
+        <ul id="search_type">
+            <li class="selected" data-url="http://www.nationalgeographic.com/search/">Search NationalGeographic.com</li>
+            <li data-url="http://video.nationalgeographic.com/video/search/">Search Video</li>
+        </ul>
+
+        
+        <button type="submit" name="btnG" id="header_search_submit" value="Go" class="hidden">Submit</button>
+        
+
+        
+        <input type="hidden" name="start" value="0">
+        
+
+        
+        <input type="hidden" name="sort" value="">
+        
+
+      </div>
+    
+
+ </form><!-- #header_search -->
+
+        <ul id="social" class="inline_list">
+            <li>Connect:</li>
+            <li><a href="http://www.facebook.com/natgeo" class="facebook"></a></li>
+            <li><a href="http://www.twitter.com/NatGeo" class="twitter"></a></li>
+        </ul>
+    </div><!-- #navigation_mainA -->
+
+    <nav id="navigation_mainB" class="cf">
+        <div class="navigation_mainB_container">
+            <ul class="primary_nav inline-list">
+                <li class="home active"><a href="http://www.nationalgeographic.com">Home</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li><a href="http://news.nationalgeographic.com/news/">News</a></li>
+                            <li><a href="http://ngm.nationalgeographic.com">The Magazine</a></li>
+                            <li><a href="http://maps.nationalgeographic.com">Maps</a></li>
+                            <li><a href="http://news.nationalgeographic.com/science/">Science</a></li>
+                            <li><a href="http://news.nationalgeographic.com/education/">Education</a></li>
+                            <li><a href="http://games.nationalgeographic.com">Games</a></li>
+                            <li><a href="http://events.nationalgeographic.com/">Events</a></li>
+                            <li><a href="http://blogs.nationalgeographic.com">Blogs</a></li>
+                            <li><a href="http://news.nationalgeographic.com/movies/">Movies</a></li>
+                            <li><a href="http://news.nationalgeographic.com/explorers/">Explorers</a></li>
+                            <li><a href="http://www.nationalgeographic.com/apps/">Apps</a></li>
+                            <li><a href="http://www.nationalgeographicexpeditions.com/?utm_source=NGdotcom-Home&utm_medium=Link&utm_content=TopNav_Trips&utm_campaign=NGdotcom">Trips</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li class="video"><a href="http://news.nationalgeographic.com/video/">Video</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+    <li><a href="http://news.nationalgeographic.com/video/">Video Home</a></li>
+    <li><a href="http://news.nationalgeographic.com/video/national-geographic-channel/">Nat Geo TV</a></li>
+    <li><a href="http://news.nationalgeographic.com/video/nat-geo-wild/">Nat Geo Wild</a></li>
+    <li><a href="http://news.nationalgeographic.com/video/kids/">Kids</a></li>
+</ul>
+<div class="spotlight">
+</div>
+                    </nav>
+                </li>
+                <li class="photography"><a href="http://news.nationalgeographic.com/photography/">Photography</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://news.nationalgeographic.com/photography/">Photography Home</a></li>
+                            <li ><a href="http://proof.nationalgeographic.com">Blog</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/photography/photo-of-the-day/">Photo of the Day</a></li>
+                            <li ><a href="http://ngm.nationalgeographic.com/your-shot/">Your Shot</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/photography/wallpapers/">Wallpapers</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/photography/photogalleries/">Galleries</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/photography/photo-tips/">Photo Tips</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/photography/photographers/">Photographers</a></li>
+                            <li ><a href="http://national-geographic.cafepress.com/art?utm_source=nationalgeographic.com&utm_medium=link&utm_campaign=photographybuyprints">Buy Prints</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="animals"><a href="http://news.nationalgeographic.com/animals/">Animals</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://news.nationalgeographic.com/animals/">Animals Home</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/animals/facts/">Facts</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/animals/photos/">Photos</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/video/player/animals/">Video</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/animals/conservation/">Animal Conservation</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/animals/big-cats/">Big Cats Initiative</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="environment"><a href="http://news.nationalgeographic.com/environment/">Environment</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://news.nationalgeographic.com/environment/">Environment Home</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/environment/energy/">Energy</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/environment/freshwater/">Freshwater</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/environment/global-warming/">Global Warming</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/environment/habitats/">Habitats</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/environment/natural-disasters/">Natural Disasters</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/ocean/">The Ocean</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="travel"><a href="http://news.nationalgeographic.com/travel/">Travel</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://news.nationalgeographic.com/travel/">Travel Home</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/travel/top-10/">Top 10</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/travel/destinations-a-z/">Destinations A-Z</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/travel/trip-ideas/">Trip Ideas</a></li>
+                            <li ><a href="http://intelligenttravel.nationalgeographic.com/">Travel Blogs</a></li>
+                            <li ><a class="geoip" href="http://news.nationalgeographic.com/travel/traveler-magazine/" data-rename="true" >Traveler Magazine</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/travel/travel-photos/">Photos</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/video/player/places/">Video</a></li>
+                            <li ><a href="http://www.nationalgeographicexpeditions.com/?utm_source=travel.nationalgeographic.com&utm_medium=Link&utm_content=TopNav_Our_Trips&utm_campaign=NGdotcom">Our Trips</a></li>
+                            <li><a href="http://www.nationalgeographiclodges.com/?utm_source=NGdotcom-Travel&utm_medium=TopNav&utm_content=20150106_TopNav_OurLodges&utm_campaign=NGdotcom">Our Lodges</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="adventure"><a href="http://news.nationalgeographic.com/adventure/">Adventure</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://news.nationalgeographic.com/adventure/">Adventure Home</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/adventure/gear/?source=NavAdvHome ">Gear</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/adventure/ultimate-adventurers/">Ultimate Adventurers</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/adventure/trip-ideas/">Trip Ideas</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/travel/national-parks/">Parks</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/adventure/adventure-photos/">Photos</a></li>
+                            <li ><a href="http://news.nationalgeographic.com/video/player/adventure/">Video</a></li>
+                            <li ><a href="http://adventureblog.nationalgeographic.com/">Blog</a></li>
+                            <li ><a href="http://www.nationalgeographicexpeditions.com/?utm_source=NGdotcom-Adventure&utm_medium=Link&utm_content=TopNav_Nat_Geo_Trips&utm_campaign=NGdotcom">Nat Geo Trips</a></li>
+                            <li ><a href="http://alltrails.com/a/100077/">AllTrails</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="television"><a href="http://channel.nationalgeographic.com/channel/">Television</a>
+                    <nav class="sub_nav left">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://channel.nationalgeographic.com/channel/">National Geographic Channel</a></li>
+                            <li ><a href="http://channel.nationalgeographic.com/wild/">Nat Geo Wild</a></li>
+                            <li ><a href="http://channel.nationalgeographic.com/channel/schedule/daily/">TV Schedule</a></li>
+                            <li ><a href="http://channel.nationalgeographic.com/channel/shows/">Shows</a></li>
+                            <li ><a href="http://video.nationalgeographic.com/video/national-geographic-channel/">Video</a></li>
+                            <li ><a href="http://tvblogs.nationalgeographic.com">Blogs</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="kids"><a class="geoip" data-killflyoff="true" href="http://news.nationalgeographic.com/kids/">Kids</a>
+                    <nav class="sub_nav left">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://news.nationalgeographic.com/kids/">Kids Home</a></li>
+                            <li ><a href="http://kids.nationalgeographic.com/kids/games/">Games</a></li>
+                            <li ><a href="http://video.nationalgeographic.com/video/player/kids/">Videos</a></li>
+                            <li ><a href="http://kids.nationalgeographic.com/kids/animals/">Animals</a></li>
+                            <li ><a href="http://kids-myshot.nationalgeographic.com/">My Shot</a></li>
+                            <li ><a href="http://www.animaljam.com/">Animal Jam</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="subscribe geoip" data-killspotlight="true">
+                    <a class="geoip" href="http://www.nationalgeographic.com/magazines/lp/nav/">Subscribe</a>
+                    <nav class="sub_nav left">
+
+                        <ul class="secondary_nav">
+                            <li >
+                                <a class="geoip" href="http://www.nationalgeographic.com/magazines/lp/navsubs/">National Geographic Magazine</a>
+                            </li>
+                            <li>
+                                <a class="geoip" href="https://ngkidsubs.nationalgeographic.com/servlet/Show?WESPAGE=OrderPages/ngk/1310/landing_01A3.jsp&MSRSMAG=WO&EFK1=WOAL2S8&EFK2=WOAL2U4&EFK3=&MSCCMPLX=FLYOUT7">National Geographic Kids</a>
+                            </li>
+                            <li >
+                                <a href="https://secure.customersvc.com/servlet/Show?WESPAGE=OrderPages/ng/NLK/1311/landing_01A3.jsp&MSRSMAG=LS&EFK1=LSADQQ9&EFK2=&EFK3=&MSCCMPLX=FLYOUT7">National Geographic Little Kids</a>
+                            </li>
+                            <li >
+                                <a class="geoip" data-rename="true" href="https://secure.customersvc.com/servlet/Show?WESPAGE=OrderPages/tr/1311/landing_15A1.jsp&MSRSMAG=TR&EFK1=TRAJ5G5&EFK2=TRAJ5H3&EFK3=TRAJ5J8&MSCCMPLX=FLYOUT7">National Geographic Traveler</a>
+                            </li>
+                        </ul>
+                            <div class="spotlight">
+                            </div>
+                    </nav>
+                </li>
+
+                <li class="shop">
+                        <a class="geoip" data-killflyoff="true" href="http://shop.nationalgeographic.com/ngs/index.jsp?code=NG94000&amp;source=NavShopHome">Shop</a>
+                        <nav class="sub_nav left">
+                            <ul class="secondary_nav">
+                                <li><a href="http://shop.nationalgeographic.com/ngs/index.jsp?code=NG94001&amp;source=NavShopHome" title="National Geographic Shop - Home">Store Home</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/browse/categorySeries.jsp?categoryId=S061&amp;addFacet=9004:S061&amp;code=NG94007&amp;source=NavShopServ" title="National Geographic Shop - Genographic Kits">Genographic Kits</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/category/shop-by/best-sellers?code=NG94232" title="National Geographic Shop - Best Sellers">Best Sellers</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/category/shop-by/new?code=NG94233" title="National Geographic Shop - New">New</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A091&amp;addFacet=9004:A091&amp;code=NG94004&amp;source=NavShopKids" title="National Geographic Shop - Kids">Kids Shop</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A245&amp;addFacet=9004:A245&amp;code=NG94002&amp;source=NavShopGift" title="National Geographic Shop - Gift Finder">Gift Finder</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/category/dvds/national-geographic-channel-dvds?code=NG94003" title="National Geographic Shop - Channel">Channel Shop</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/category/shop-by/sale?code=NG94008" title="National Geographic Shop - Sale">Sale</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/category/shop-by/shop-by-catalog?code=NG94005" title="National Geographic Shop - Shop By Catalog">Shop by Catalog</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/browse/emailRegistration.jsp?code=NG94056" title="National Geographic Shop - Email Signup">Email Signup</a></li>
+                            </ul>
+                            <div class="spotlight">
+                            </div>
+                        </nav>
+
+                </li>
+            </ul><!-- .primary_nav -->
+        </div><!-- .navigation_mainB_container -->
+    </nav><!-- #navigation_mainB -->
+</div><!-- #navigation_tophat_container -->
+    <div id="navigation_secondary">
+        <!-- Secondary navigation bar (depends of the Main) -->
+    </div>
+</div><!-- #navigation_global_container -->
+
+
+
+
+    
+        <!-- Maintain order -->
+<script>
+    (function(window, undefined) {
+        window.memFragConfig = {
+            mmdbHost: 'https://mmdb.nationalgeographic.com',
+            force_desktop: true,
+            show_app_switcher: false,
+            memcenHost: 'https://members.nationalgeographic.com',
+            notificationsHost: 'https://notifications.nationalgeographic.com',
+            notificationsKey: 'e6c4b4af844c454fc2110a4d09828559489837313bd2e519cf',
+            noSSL: false,
+            staticMedia: '//assets.nationalgeographic.com/ngs-header/',
+            crossDomain: false,
+            serverSideLogin: false,
+            refreshOnLogin: false,
+            refreshOnLogout: true,
+            headerContainer: '#shared-header',
+            alertContainerSelector: '#dialog-alert',
+            debug:  false,
+            debug_lvl: 0,
+            whitelist: {
+                origins: [
+                    
+                        '*.nationalgeographic.com', 
+                    
+                        '*.natgeo.vm'
+                    
+                ],
+                targets: [
+                    
+                        'mmdb', 
+                    
+                        'mc', 
+                    
+                        'geodata'
+                    
+                ]
+            }
+        };
+
+        var head = document.head || document.getElementsByTagName("head")[0],
+        isHTTPS = !!document.location.protocol.match('https:'),
+        gigyaCDN = (isHTTPS ? "https://cdns.gigya.com" : "http://cdn.gigya.com"),
+        gigyaConfig = new Object(),
+        gs;
+
+        // Create Gigya Global Configuration Object and add to window
+        gigyaConfig.siteName = 'nationalgeographic.com';
+        gigyaConfig.enabledProviders = 'facebook';
+        gigyaConfig.autoLogin = true;
+        window.__gigyaConf = gigyaConfig;
+
+        // Append Gigya Socialize.js script to DOM
+        gs = document.createElement('script');
+        gs.type = 'text/javascript';
+        gs.setAttribute('src', gigyaCDN + '/JS/socialize.js?apikey=3_LOaUF9fHrs7lFHW7YFFA22qD6MhVsbO_bpqkn6nnKj9-AbGRsec864eKWqmR2Jdu');
+        head.appendChild(gs);
+    })(window);
+</script>
+
+
+    <script>
+	(function(window, undefined) {
+	    var DeferredPromise, promise, scriptElement, head, done;
+
+	    DeferredPromise = function(resolve, reject) {
+		this._resolve = resolve;
+		this._reject = reject;
+                this._linkedPromises = [];
+	    };
+	    DeferredPromise.prototype.then = function(resolve, reject) {
+		var linkedDeferredPromise = new DeferredPromise(resolve, reject);
+		if (this._resolved) {
+		    linkedDeferredPromise.resolve(this._resolved_value);
+		}
+                this._linkedPromises.push(linkedDeferredPromise);
+		return linkedDeferredPromise;
+	    };
+	    DeferredPromise.prototype.resolve = function(value) {
+		this._resolved = true;
+		this._resolved_value = value;
+		if (this._resolve!== undefined) {
+		    value = this._resolve(value);
+		}
+                this._linkedPromises.forEach(function(linkedPromise) {
+                    linkedPromise.resolve(value);
+                });
+	    };
+	    DeferredPromise.prototype.reject = function(reason) {
+		if (this._reject !== undefined) {
+		    reason = this._reject(reason);
+		}
+                this._linkedPromises.forEach(function(linkedPromise) {
+                    linkedPromise.reject(reason);
+                });
+	    };
+
+	    promise = new DeferredPromise();
+	    scriptElement = document.createElement('script');
+	    scriptElement.type = 'text/javascript';
+	    scriptElement.setAttribute('src', '//assets.nationalgeographic.com/ngs-header/bootstrap.js');
+	    scriptElement.async = true;
+	    scriptElement.onload = scriptElement.onreadystatechange = function(){
+		if (!done) {
+		    done = true;
+		    promise.resolve(_M);
+		}
+	    };
+	    head = document.head || document.getElementsByTagName("head")[0];
+	    head.appendChild(scriptElement);
+	    window.ngsHeaderScriptLoad = promise;
+	})(window);
+    </script>
+
+
+        <script>
+            window.getScript = function(resource) {
+                var $def = new $.Deferred();
+                window.ngsHeaderScriptLoad.then(function(_M) {
+                    _M.ready(function(){
+                        window.yepnope({
+                            load: resource,
+                            complete: function() { $def.resolve(); }
+                        });
+                    });
+                });
+                return $def.promise();
+            };
+        </script>
+    
+
+    <script type="text/javascript">
+        window.getScript(window.globalnavURL + 'sites/common/j/html5shiv.js');
+    </script>
+
+    <!--GEOIP-->
+    
+    <!-- END GEOIP -->
+
+    
+    
+    <script type="text/javascript">
+        window.getScript(window.globalnavURL +
+                         'sites/themes/global/j/global-nav.js');
+        
+            
+        
+
+        $(window).on('hashchange', function () {
+            var currentHash = window.location.hash;
+
+            if (currentHash === '#logout') {
+                $.get('/accounts/sign-out/');
+            }
+        });
+    </script>
+    
+
+
+        <script type="text/javascript">highlightNavItem();</script>
+    
+
+    
+        <div id="body_wrap">
+            <div id="container">
+    
+    
+	<div id="header_site">
+		<div class="advertisement">
+		<!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule210x50">
+            
+
+            <!--
+                // unit: leaderboard-210x50
+                // uri: /2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/
+                // site_name: news
+                // zone: health
+                // width: 210
+                // height: 50
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 108525773
+                // tile: 176
+                // refreshable: False
+                // regex: ^/[.]*
+                // page_taxonomy: news.nationalgeographic.com::news::Health
+                // ad_taxonomy: news.nationalgeographic.com::news::Health
+                // taxonomy_match: True
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"news/health",
+                            'dimensions':"210x50",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "210", "variability": 100, "height": "50"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.news/health');
+                    inc.push('sz=210x50');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+			
+		</div>
+		<span><a href="/news/">National Geographic News</a></span>
+	</div>	
+	
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+    
+    
+
+		
+		
+			
+            
+			
+			
+	 		
+
+
+
+<!-- start nav module content -->
+	
+		<!-- start object content -->
+		<div class="general">		
+			
+
+
+
+
+
+
+
+	
+	
+		
+		 
+		
+		
+		<ul class="nav ">
+			
+			
+			
+			 	
+					
+						
+							<li class="nav1 selected"><a href="/news/" title="Home">Home</a></li>
+						
+					
+				
+					
+						
+							
+								<li class="nav2 "><a href="http://news.nationalgeographic.com/news/archives/animals/" title="Animals">Animals</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav3 "><a href="http://news.nationalgeographic.com/news/archives/ancient-world/" title="Ancient">Ancient</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav4 "><a href="/news/archives/energy/" title="Energy">Energy</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav5 "><a href="http://news.nationalgeographic.com/news/archives/environment/" title="Environment">Environment</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav6 "><a href="http://news.nationalgeographic.com/news/archives/cultures/" title="Travel/Cultures">Travel/Cultures</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav7 "><a href="http://news.nationalgeographic.com/news/archives/space-and-tech/" title="Space/Tech">Space/Tech</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav8 "><a href="http://news.nationalgeographic.com/news/archives/water-crisis/" title="Water">Water</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav9 "><a href="http://news.nationalgeographic.com/news/archives/weird-wild/" title="Weird &amp; Wild">Weird &amp; Wild</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav10 "><a href="http://news.nationalgeographic.com/news/archives/photos/" title="News Photos">News Photos</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav11 "><a href="http://video.nationalgeographic.com/video/player/news/" title="News Video">News Video</a></li>
+							
+						
+					
+					
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+		</div>
+		<!-- end object content -->
+		<script type="text/javascript">if(taxonomy != undefined)hiLiteSubNavByTaxonomy();</script>
+		
+	
+<!-- end nav module content -->
+
+			
+	             		
+		
+		
+
+    
+
+
+		
+		
+
+    
+
+	
+
+        
+            
+        
+
+        
+                <!-- ### PAGE TITLE WITH SPONSORSHIP ### -->
+                <div id="page_head">
+            
+
+            
+
+    
+
+            
+
+            
+	<h1>Successful Marburg Virus Treatment Offers Hope for Ebola Patients</h1>
+	
+	
+		<h2 class="subtitle">A new approach, similar to one previously tested on Ebola, saved monkeys up to three days after infection with Marburg virus.  </h2>		
+	
+	
+
+                </div>
+        
+
+                <div id="content">
+        
+
+        
+
+        
+
+		
+
+		<div id="content_page_specific">
+			
+			<!-- ### LEFT COLUMN ### -->
+			<div id="content_mainA" class="">
+				
+	
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+    
+    
+
+		
+		
+			
+            
+			
+			
+	 		
+
+
+
+  
+    
+    
+
+
+
+<script type="text/javascript" src="//assets.nationalgeographic.com/modules-livefyre/js/livefyre_auth.js"></script>
+<script type="text/javascript" src="//assets.nationalgeographic.com/modules-livefyre/js/livefyre_manager.js"></script>
+<script type="text/javascript">
+
+if ('undefined' == typeof livefyreConfig) {
+    var livefyreConfig = {
+        "global" : {
+            "network": "natgeo.fyre.co"
+        },
+        "streams": []
+    }
+}
+
+if (window.getScript){
+    window.getScript("http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js").then(function() {
+        _M.ready(function(core) {
+            var lf_debug =  false; 
+            window.livefyreManager = new LivefyreManager(core, lf_debug);
+        });
+    });
+}
+</script>
+
+
+
+
+
+        
+        
+            
+            
+
+            <div class="subsection">
+                <div class="primary_photo">
+                    
+
+                            
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/828/cache/marburg-ebola-medicine-01_82828_600x450.jpg"  width="600" height="435" alt="A photo comparing the Marburg virus, left, and the Ebola virus, right." />	
+
+
+                        
+
+                        
+                            <div class="caption"><p>The related Marburg virus (left) and Ebola virus (right) both cause hemorrhagic fevers and can be transmitted to both humans and primates.</p></div>
+                        
+
+                        
+                            <p class="credit">Photographs by (left) <span>Science VU/CDC/Visuals Unlimited, Corbis (right) CDC via Getty</span></p>
+                        
+                </div><!-- .primary_photo -->
+                <script type="text/javascript">timerCount('primary_photo');</script>
+            </div>
+            
+        
+
+
+<div class="subsection">
+
+    <div class="article_body">
+
+
+        
+        
+
+            
+            
+
+                
+            
+
+        
+
+            
+        
+            
+
+        
+
+        
+            <p class="author">Susan Brink</p>
+        
+
+        
+            <p class="publication">for <a href="http://news.nationalgeographic.com">National Geographic</a></p>
+        
+
+        
+            
+                <p class="publication_time">Published August 20, 2014</p>
+            
+        
+
+        <div class="article_text">
+            <p>A new treatment has successfully protected monkeys infected with <a href="http://www.who.int/csr/disease/marburg/en/">Marburg virus</a>, a disease with a course so similar to <a href="http://www.who.int/csr/disease/ebola/en/">Ebola</a>'s that it's impossible to clinically differentiate the two, scientists announced Wednesday.</p><p dir="ltr">Though the technique has not yet been tested in people, the development has researchers noting that what's helpful for Marburg could well be helpful for Ebola, which is now seeing its worst-ever outbreak, claiming more than 1,350 lives in West Africa.</p><p dir="ltr">"This technology may have potential for combatting Ebola," says <a href="http://microbiology.utmb.edu/faculty/Geisbert.asp">Thomas Geisbert</a> of the University of Texas Medical Branch in Galveston, senior author of the study, published in the journal <em><a href="http://stm.sciencemag.org/">Science Translational Medicine</a>.</em></p><p dir="ltr">The study marks the first time that a group of primates could be protected from the Marburg disease at a late stage of infection, including after symptoms were already present.</p><p dir="ltr">Science is still in the animal-research stages for both Ebola and Marburg viruses. Like the experimental treatment used to care for three health workers sickened with Ebola, this treatment for Marburg virus has yet to be tried in humans. But results from the monkey study are promising.</p><p dir="ltr">In the new study, 16 macaques were infected with highly lethal doses of Marburg virus. The monkeys were treated with the experimental therapy, siRNA, at different times, ranging from 45 minutes to three days after infection. All 16 of the treated monkeys survived. A control group of macaques were similarly infected with Marburg, and all of them died by the eighth day.</p><p dir="ltr">With funding, a clinical trial of the anti-Marburg approach could be done in about a year, says Geisbert.</p><p dir="ltr"><strong>Viral Siblings</strong></p><p dir="ltr">Ebola and Marburg viruses are close and deadly kin. The viruses are the only two known members of the filovirus family, which can cause severe hemorrhagic fever and often death.</p><p dir="ltr">Both viruses spread to humans from animals, then spread among humans through contact with bodily fluids. Both are marked by severe bleeding from orifices, and neither has an approved vaccine or drug for treatment.</p><p dir="ltr">"This is a major step toward treatment of Marburg, which can be as lethal as Ebola," says <a href="http://pathology.wustl.edu/divisions/labmed/faculty.php">Gaya Amarasinghe</a>, a biochemist at Washington University in St. Louis. "These findings are from a monkey model, and that's a very relevant model for filoviral infections."</p><p dir="ltr">In fact, researchers including Geisbert found they could protect monkeys from Ebola virus using the same technology as in the new Marburg study, a result <a href="http://www.thelancet.com/journals/lancet/article/PIIS0140-6736%2810%2960357-1/fulltext">published in 2010 in the journal <em>Lancet</em></a>.</p><p dir="ltr">"It was the same species of Ebola in the current outbreak," says Geisbert. "The difference is that that study examined treatment shortly after exposure. It did not look at initiating treatment at signs of illness."</p><p dir="ltr"><strong>Combining Tactics</strong></p><p dir="ltr">An experimental treatment for Ebola called <a href="http://www.cdc.gov/vhf/ebola/outbreaks/guinea/qa-experimental-treatments.html">ZMapp</a> leapt ahead of normal research and approval processes when two American health workers and a Spanish priest were treated experimentally, before any human trials were conducted.</p><p dir="ltr">The Americans are so far doing well, while the Spanish man has died.</p><p dir="ltr">The two experimental treatments follow different biological routes. ZMapp is composed of three monoclonal antibodies from the tobacco plant that bind to the protein of the Ebola virus. "Basically, [ZMapp] interferes with the way that Ebola virus attaches to and enters the host cells," says Geisbert.</p><p dir="ltr">The other technology is an siRNA, or "small interfering RNA," consisting of small pieces of RNA that can inhibit protein production. This interferes with how the virus grows once it gets into cells.</p><p dir="ltr">Because the two treatments work differently, combining them might work better than either one alone, an approach that Geisbert's team is developing. Mixing and mingling promising treatments harkens back to scientists working on AIDS treatments in the 1990s who discovered that combination retroviral therapy produced better results than any one drug.</p><p dir="ltr">"Combining successful therapies will likely extend the treatment window, if these different approaches can work well together," says Amarasinghe.</p><p dir="ltr"><strong>Behind the Clock</strong></p><p dir="ltr">While the <a href="http://www.who.int/mediacentre/news/statements/2014/ebola-ethical-review-summary/en/">World Health Organization has concluded</a> that it is ethical to use unproven drugs to try to combat the outbreak of Ebola, experimental drugs simply are not available in sufficient quantity. In an <a href="http://www.nature.com/news/scale-up-the-supply-of-experimental-ebola-drugs-1.15736">opinion piece published Wednesday in the journal <em>Nature</em></a>, University of Oxford epidemiologist Oliver Brady writes that "even under a conservative scenario, up to 30,000 people would have so far required treatment or prophylaxis in the current outbreak."</p><p dir="ltr">The world's medicine cabinet has thus far been able to provide experimental drugs to only three people.</p><p dir="ltr">The real challenge right now, says <a href="http://law.wisc.edu/profiles/racharo@wisc.edu">Alta Charo</a>, professor of law and bioethics at the University of Wisconsin, Madison, is stopping the current outbreak using available methods. That means providing gloves and protective suits for health care workers in West Africa, increasing the number of health care workers, isolating the sick, educating affected communities, supplying antibiotics, and promoting alternatives to dangerous cultural practices like close handling of the newly dead.</p><p dir="ltr">Whether for a future outbreak of Marburg, or today's outbreak of Ebola, "the most important way to reduce the death toll is through public health measures," Charo says.</p><p dir="ltr"><em>Update: The number of Ebola deaths has been updated to reflect the most recent numbers from the World Health Organization as of August 20.</em></p><p dir="ltr"><strong>RELATED:</strong></p><p dir="ltr">—<a href="http://news.nationalgeographic.com/news/2014/07/140731-ebola-drugs-vaccines-research-containment-science-health/">Promising Ebola Drugs Stuck in Lab Limbo as Outbreak Rages in Africa</a></p><p dir="ltr">—<a href="http://news.nationalgeographic.com/news/2014/08/140814-ebola-africa-america-medicine-science-world/">Q&amp;A: American Virus Expert in Africa's Ebola Zone: 'This is Like War'</a></p><p dir="ltr">—<a href="http://news.nationalgeographic.com/news/2014/08/140812-ebola-drugs-treatment-ethics-who-bioethics/">International Panel Clears Untested Ebola Drugs as Death Toll Hits 1,000</a></p><p dir="ltr">—<a href="http://news.nationalgeographic.com/news/2014/08/140802-ebola-epidemic-africa-medicine-science-world-connect-dots/">World Turns Its Attention to West African Ebola Crisis</a></p><p>—<a href="http://news.nationalgeographic.com/news/2014/07/140729-ebola-america-disease-epidemic-africa-medicine-science/">Why Deadly Ebola Virus Is Likely to Hit the U.S. But Not Spread</a></p>
+        </div><!-- .article_text-->
+
+        
+
+        
+        
+        <div class="social_buttons">
+            <!--<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+            <fb:like width="437" show_faces="false" href="http://news.nationalgeographic.com/news/2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/"></fb:like>-->
+            <div class="addthis_toolbox" >
+    	        <a class="addthis_button_facebook_like"></a>
+    			<a class="addthis_button_tweet" tw:via="NatGeo" tw:text="Successful Marburg Virus Treatment Offers Hope for Ebola Patients" tw:url="http://news.nationalgeographic.com/news/2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/" tw:counturl="http://news.nationalgeographic.com/news/2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/"></a>
+    			<a class="addthis_button_google_plusone"></a>
+    			<a class="addthis_button_email"></a>
+    	        <a class="addthis_button_expanded">More &raquo;</a>
+    		</div>
+        </div>
+        
+
+        
+
+          
+            
+            <div id="livefyre">
+                <script type="text/javascript">
+if('undefined' !== typeof livefyreConfig) {
+    livefyreConfig.streams.push({
+        "siteId": 318027,
+        "articleId": "wpf:article:10034",
+        "el": "livefyre",
+        "collectionMeta": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJ1cmwiOiAiaHR0cDovL25ld3MubmF0aW9uYWxnZW9ncmFwaGljLmNvbS9uZXdzLzIwMTQvMDgvMTQwODIwLW1hcmJ1cmctZWJvbGEtdmlydXMtdHJlYXRtZW50LW1vbmtleS1hZnJpY2EvIiwgImNoZWNrc3VtIjogImJjOGViZTRhNjU0NjE4NDczNTEwMWQzZTkyZmUyOWE4IiwgInRhZ3MiOiBudWxsLCAiYXJ0aWNsZUlkIjogIndwZjphcnRpY2xlOjEwMDM0IiwgInRpdGxlIjogInt7IHBhZ2VfaGVscGVyLmFydGljbGUubmFtZSB9fSJ9.D7utZSAmlYWrIBEvhi8mW-4BkRDb4710f_PAGY64cDc",
+        "checksum": "bc8ebe4a6546184735101d3e92fe29a8",
+        "signed": true
+    });
+}
+</script>
+
+                <script>
+  (function() {
+    
+   var a=this;var b,c,d,e,f;function g(){return a.navigator?a.navigator.userAgent:null}f=e=d=c=b=!1;var h;if(h=g()){var i=a.navigator;b=0==h.indexOf("Opera");c=!b&&-1!=h.indexOf("MSIE");e=(d=!b&&-1!=h.indexOf("WebKit"))&&-1!=h.indexOf("Mobile");f=!b&&!d&&"Gecko"==i.product}var j=c,k=f,l=d,m=e;var n;if(b&&a.opera){var o=a.opera.version;"function"==typeof o&&o()}else k?n=/rv\:([^\);]+)(\)|;)/:j?n=/MSIE\s+([^\);]+)(\)|;)/:l&&(n=/WebKit\/(\S+)/),n&&n.exec(g());var p=document,q=p.createElement("link");q.rel="stylesheet";q.type="text/css";q.href="http://zor.fyre.co/wjs/v3.0/css/livefyre_"+(m?"mobile":"embed")+".css";q.media="all";p.getElementsByTagName("head")[0].appendChild(q);var r="header hgroup footer article section aside nav figure figcaption embed audio video canvas details summary time mark".split(" "),s=p.createDocumentFragment(),t;for(t=0; t<r.length; t++){s.appendChild(p.createElement(r[t]))};
+   })();    
+</script>
+<div class="fyre fyre-width-large fyre-bootstrap">
+  <div class="fyre-widget">
+    <div class="fyre-stream-stats">
+      <div class="fyre-comment-count">
+        <span>3 comments</span>
+      </div>
+
+      <div class="fyre-divider"></div>
+
+      <div class="fyre-help">
+        <div class="fyre-box-wrapper">
+          <a href="http://livefyre.com" target="_blank"><span class="fyre-logo-drop">&nbsp</span>
+          <img class="fyre-logo-help" src="http://zor.fyre.co/wjs/v3.0/images/lf-logo.png" alt="Livefyre" /></a>
+          
+          <ul class="fyre-box-list">
+            <li><a href="http://livefyre.com" target="_blank" title="Get Livefyre">Get
+            Livefyre</a></li>
+
+            <li><a href="http://support.livefyre.com" target="_blank" title=
+            "FAQ">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="fyre-auth">
+      <div class="fyre-login-bar"><a rel="nofollow" href="#" class="fyre-user-loggedout">Sign in</a></div>
+    </div>
+
+    <div class="fyre-editor">
+      <div class="fyre-editor-container">
+        <div class="fyre-editor-editable" style="height: 100px;"></div>
+
+        <div class="fyre-editor-toolbar">
+          <div class="goog-toolbar goog-toolbar-horizontal" style=
+          "-webkit-user-select: none;" role="toolbar" aria-activedescendant="">
+            <div class="goog-inline-block fyre-button-left fyre-format-button" title=""
+            role="button" style="-webkit-user-select: none;" id=":0">
+              <div class="goog-inline-block fyre-button-left-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-left-inner-box" style=
+                "-webkit-user-select: none;"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-left fyre-mention-button" title=""
+            role="button" style="-webkit-user-select: none;" id=":1">
+              <div class="goog-inline-block fyre-button-left-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-left-inner-box" style=
+                "-webkit-user-select: none;"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-left fyre-follow-button" title=""
+            role="button" style="-webkit-user-select: none;" id=":2">
+              <div class="goog-inline-block fyre-button-left-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-left-inner-box" style=
+                "-webkit-user-select: none;">
+                  + Follow
+                </div>
+              </div>
+            </div>
+
+            <div class=
+            "goog-inline-block fyre-button-right fyre-post-button fyre-post-button-enabled"
+            title="" role="button" style="-webkit-user-select: none;" id=":3">
+              <div class="goog-inline-block fyre-button-right-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-right-inner-box" style=
+                "-webkit-user-select: none;">
+                  Post comment
+                </div>
+              </div>
+            </div>
+
+            <div class=
+            "goog-inline-block fyre-button-right fyre-post-to fyre-post-to-facebook"
+            title="" role="button" style="-webkit-user-select: none;" id=":4">
+              <div class="goog-inline-block fyre-button-right-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-right-inner-box" style=
+                "-webkit-user-select: none;"></div>
+              </div>
+            </div>
+
+            <div class=
+            "goog-inline-block fyre-button-right fyre-post-to fyre-post-to-twitter"
+            title="" role="button" style="-webkit-user-select: none;" id=":5">
+              <div class="goog-inline-block fyre-button-right-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-right-inner-box" style=
+                "-webkit-user-select: none;"></div>
+              </div>
+            </div>
+
+            <div class=
+            "goog-inline-block fyre-button-right fyre-post-to fyre-post-to-linkedin"
+            title="" role="button" style="-webkit-user-select: none;" id=":7">
+              <div class="goog-inline-block fyre-button-right-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-right-inner-box" style=
+                "-webkit-user-select: none;"></div>
+              </div>
+            </div>
+
+            <div class="goog-toolbar-separator goog-inline-block" style=
+            "-webkit-user-select: none;" role="separator" id=":6">
+              &nbsp;
+            </div>
+          </div>
+
+          <div class="fyre-format-toolbar" style="display: none;">
+            <div class="goog-toolbar goog-toolbar-horizontal" style=
+            "-webkit-user-select: none;" role="toolbar" tabindex="-1">
+              <div class="goog-inline-block goog-toolbar-button" title="Bold"
+              aria-pressed="true" role="button" style="-webkit-user-select: none;" id=
+              "+bold">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-icon tr-bold" style="-webkit-user-select: none;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Italic"
+              aria-pressed="true" role="button" style="-webkit-user-select: none;" id=
+              "+italic">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-icon tr-italic" style="-webkit-user-select: none;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Underline"
+              aria-pressed="true" role="button" style="-webkit-user-select: none;" id=
+              "+underline">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-icon tr-underline" style="-webkit-user-select: none;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title=
+              "Add or remove link" aria-pressed="true" role="button" style=
+              "-webkit-user-select: none;" id="+link">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-link" style="-webkit-user-select: none;">
+                      Link
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Numbered list"
+              aria-pressed="true" role="button" style="-webkit-user-select: none;" id=
+              "+insertOrderedList">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-icon tr-insertOrderedList" style=
+                    "-webkit-user-select: none;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Bullet list"
+              aria-pressed="true" role="button" style="-webkit-user-select: none;" id=
+              "+insertUnorderedList">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-icon tr-insertUnorderedList" style=
+                    "-webkit-user-select: none;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fyre-comment-stream" style="">
+      <div class="fyre-stream-sort">
+        <a class="fyre-stream-sort-newest">Newest</a> | <a class="fyre-stream-sort-oldest">Oldest</a>
+      </div>
+
+      <div class="fyre-stream-content">      
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://avatars.fyre.co/a/203/adfd0695f73bd1a2f37d76b6641dda87/50.jpg?v=1413669290" class=
+    "fyre-user-avatar" alt="Larry Morris" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Larry Morris</a> 
+    
+    
+    <span class="fyre-comment-user-rating" style="display: none;">5pts</span>
+    <span class="fyre-comment-like" style="float: right;">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>The biggest US cities with people from Ebola-impacted countries in West Africa. It would seem that there is likely to be travel between those countries and these cities.<br/><br/><a href="http://www.towncharts.com/Ebola-Top-500-Cities-in-the-US-for-Total-Born-People-From-West-Africa.html" target="_blank" rel="nofollow">http://www.towncharts.com/Ebola-Top-500-Cities-in-the-US-for-Total-Born-People-From-West-Africa.html</a><br/><br/>New York city is at the top of this list with far and away the largest population of West Africans. I don’t see how its not helpful to have a travel ban to help us control this?</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://avatars.fyre.co/a/anon/50.jpg" class=
+    "fyre-user-avatar" alt="Kevin Worldsavior" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Kevin Worldsavior</a> 
+    
+    
+    <span class="fyre-comment-user-rating" style="display: none;">5pts</span>
+    <span class="fyre-comment-like" style="float: right;">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>There is nothing more successful on Earth to win the war on infections than doing my Personal Virus And Cancer Killer - any viruses (Ebola, Bubonic, West Nile, SARS, HIV, Colds, Flues, Malaria, Dengue, Yellow Fever, Yosemite Rodents, etc.) and any bioterrorist bugs are killed the moment they touch us.<br/></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://avatars.fyre.co/a/anon/50.jpg" class=
+    "fyre-user-avatar" alt="Rob Parker" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Rob Parker</a> 
+    
+    
+    <span class="fyre-comment-user-rating" style="display: none;">5pts</span>
+    <span class="fyre-comment-like" style="float: right;">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>...why the hell wasn't this kind of research done during the last outbreaks in '09 and '12.<br/></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+            </div>
+            <div id="powered_by_livefyre" class="powered_by_livefyre"><a href="http://livefyre.com" target="_blank">Powered by Livefyre</a></div>
+            
+        
+        <script type="text/javascript">timerCount('article_body');</script>
+    </div><!-- .article_body-->
+
+    
+
+<div class="aside">
+	
+
+	
+	
+	<div id="share_buttons">
+		<h3 class="title">Share</h3>
+		<div class="addthis_toolbox" >
+	        <p><a class="addthis_button_facebook_like"></a></p>
+			<p><a class="addthis_button_tweet" tw:via="NatGeo" tw:text="Successful Marburg Virus Treatment Offers Hope for Ebola Patients"	tw:url="http://news.nationalgeographic.com/news/2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/?now=2014-08-20-00:01" tw:counturl="http://news.nationalgeographic.com/news/2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/?now=2014-08-20-00:01"></a></p>
+			<p class="google_addthis"><a class="addthis_button_google_plusone"></a></p>
+			<p><a class="addthis_button_email">Email</a></p>
+	        <p><a class="addthis_button_expanded">More &raquo;</a></p>
+		</div>
+	</div><!-- #share -->
+	
+	
+	
+	
+
+    
+
+		
+			
+
+
+
+
+
+
+
+    
+    
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+    
+    
+
+
+
+		
+		
+
+    
+		
+
+</div><!-- .aside-->
+
+
+</div><!-- .subsection -->
+
+
+
+
+
+			
+	             		
+		
+		
+
+    
+
+
+
+		
+		
+
+    
+
+	
+
+    
+
+		
+			
+
+
+
+
+
+<div class="subsection" >
+    
+	
+	
+    
+    
+
+</div>
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+<div class="subsection" >
+    
+	
+    
+		
+	
+	       
+			
+			<div  class="primary full_width">
+				
+	            
+			
+				
+		 		
+
+
+
+
+
+ 
+
+
+
+<div class="promo_collection thumbnail_grid">
+	
+	
+	
+		
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h3 class="title">Our Latest News Videos</h3>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="wide ">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+
+
+	
+	<li class="first video">
+		
+		    <a href="http://video.nationalgeographic.com/video/news/150129-news-under-cane-chronic-kidney-disease-vin" title="The Human Cost of Sugar Harvesting" class="video-image">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/882/overrides/sugarcane-workers_88226_160x120.jpg"  width="160" height="120" alt="Picture of a sugarcane worker" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://video.nationalgeographic.com/video/news/150129-news-under-cane-chronic-kidney-disease-vin" title="The Human Cost of Sugar Harvesting" >The Human Cost of Sugar Harvesting</a></p>
+</li>
+
+
+
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class=" video">
+		
+		    <a href="http://video.nationalgeographic.com/video/news/150120-passive-house-vin" title="Most Earth-Friendly Home Ever Built?" class="video-image">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/878/cache/150119-passive-house-vin_87875_160x120.jpg"  width="160" height="120" alt="Volunteers installing a three-paned window in Passive House. Video." />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://video.nationalgeographic.com/video/news/150120-passive-house-vin" title="Most Earth-Friendly Home Ever Built?" >Most Earth-Friendly Home Ever Built?</a></p>
+</li>
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class=" video">
+		
+		    <a href="http://video.nationalgeographic.com/video/news/150115-fountain-pens-binder-vin" title="Fountain Pens Are Actually Fascinating" class="video-image">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/878/cache/150115-fountain-pens-binder-vin_87876_160x120.jpg"  width="160" height="120" alt="150115-fountain-pens-binder-vin.jpg" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://video.nationalgeographic.com/video/news/150115-fountain-pens-binder-vin" title="Fountain Pens Are Actually Fascinating" >Fountain Pens Are Actually Fascinating</a></p>
+</li>
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class=" video">
+		
+		    <a href="http://video.nationalgeographic.com/video/news/150114-news-american-foulbrood-dog" title="This Dog&#39;s Nose Saves Bees" class="video-image">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/877/overrides/150114-news-american-foulbrood-dog_87796_160x120.jpg"  width="160" height="120" alt="KlinkerThumb4.jpg" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://video.nationalgeographic.com/video/news/150114-news-american-foulbrood-dog" title="This Dog&#39;s Nose Saves Bees" >This Dog's Nose Saves Bees</a></p>
+</li>
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class=" video">
+		
+		    <a href="http://video.nationalgeographic.com/video/news/150108-venomous-sea-snakes-vin" title="Is Eating Venomous Sea Snakes a Bad Thing?" class="video-image">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/876/cache/150108-venomous-sea-snakes-vin_87623_160x120.jpg"  width="160" height="120" alt="150108-venomous-sea-snakes-vin.jpg" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://video.nationalgeographic.com/video/news/150108-venomous-sea-snakes-vin" title="Is Eating Venomous Sea Snakes a Bad Thing?" >Is Eating Venomous Sea Snakes a Bad Thing?</a></p>
+</li>
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="last video">
+		
+		    <a href="http://video.nationalgeographic.com/video/news/150106-korea-dog-meat-farm-rescue-vin" title="Pups Rescued From Dog Meat Farm Need Adoption" class="video-image">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/875/overrides/150106-korea-dog-meat-farm-rescue-vin_87593_160x120.jpg"  width="160" height="120" alt="One of the dogs rescued from a dog meat farm in South Korea." />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://video.nationalgeographic.com/video/news/150106-korea-dog-meat-farm-rescue-vin" title="Pups Rescued From Dog Meat Farm Need Adoption" >Pups Rescued From Dog Meat Farm Need Adoption</a></p>
+</li>
+
+
+
+							
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+	
+	
+	
+
+
+	
+
+
+	
+</div><!-- .promo_collection -->
+
+
+
+
+				
+		             		
+			</div>	
+			
+		
+	
+	
+    
+    
+
+</div>
+
+
+		
+		
+
+    
+
+		
+					
+		
+
+    
+
+		
+					
+		
+
+    
+
+		
+					
+		
+
+    
+
+		
+					
+		
+
+    
+
+		
+					
+		
+
+    
+
+		
+			
+
+
+
+
+
+<div class="subsection " >
+    
+	
+	
+    
+    	
+		
+	       
+	       
+	       
+			
+			<div class="secondary">
+
+				
+	            
+			
+				
+		 		
+
+
+
+
+
+  
+    
+	<div >
+	
+		
+		
+	    
+		    	<style>
+
+<!--.article #content_mainA div
+{
+	border-right-width:0!important;
+}
+
+#content_mainA .aside
+{
+	display:none;
+}
+
+.subsection
+{
+	border-top:0!important;
+	min-width:600px;
+}
+/*
+.article_text p:first-child
+{
+	font-size:18px;
+	font-weight:700;
+}
+*/
+.article_text > ul.bullets li
+{
+	font-size:16px;
+	font-weight:700;
+	line-height:1.5;
+	margin:0 0 5px 50px;
+	padding-bottom:.5em;
+}
+.article_text .promo_collection h2, .seven h2, h3.title {
+	background: none;
+	padding-left:0;
+}
+
+.article_text .promo_collection ul.bullets li {
+	
+	font-size:13px;
+	font-weight:700;
+	line-height:1.5;
+	padding-bottom:1em;
+	list-style:none !important;
+	margin:0 !important;
+	
+}
+.article_text .aside div.promo_collection {
+	
+}
+
+
+
+
+#page_head h1,.article #page_head h1,.small_article #page_head h1
+{
+	font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size:32px;
+	padding-top:20px;
+	width:100%;
+	margin-bottom: 5px;
+}
+
+#page_head .subtitle,.level_3 #page_head .subtitle
+{
+	color:#000;
+	padding-top:0;
+	width:initial;
+	font-family: "Minion W08","Minion Pro",Georgia,serif;
+	font-style: italic;
+	line-height: 1.5;
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-size: 21px;
+}
+
+#page_head h5.series,.level_3 #page_head h5.series {
+	
+		
+	letter-spacing: .12em;
+	font-weight: 700;
+	margin-left: .1em;
+	margin-bottom: .5em; 
+	text-transform: uppercase;
+	margin-top:	1em;
+	font-size: 15px;
+	
+}
+
+
+
+#content #content_mainA .article_body .extended, #content #content_mainA .article_body .aside .extended
+
+{
+	border-left:0!important;
+	float:right;
+	margin:30px -30px 60px 50px;
+	padding:0;
+	left: 0px;
+	width: 180px; 
+	display: block;
+	
+}
+
+img[width=391]
+{
+	border:0!important;
+	height:initial;
+	margin:2em 0;
+	width:100%;
+}
+
+.subsection .secondary
+{
+	border:0;
+}
+
+.aside > div,.subsection > div > div
+{
+	border:0;
+}
+
+.article .article_body
+{
+	border-left:0 solid;
+	padding:0 50px 0 70px;
+	width:510px;
+}
+
+.article #content_mainA
+{
+	border:0 solid!important;
+	margin-right:0;
+}
+
+.blackbackground
+{
+	background-color:#000;
+	color:#fff;
+}
+
+.blackbackground h2,.blackbackground h3
+{
+	color:#282e5c;
+}
+
+.blackbackground .credit
+{
+	color:#999;
+}
+
+.bluebackground
+{
+	background-color:#282e5c;
+	color:#fff;
+}
+
+.article_text p
+{
+	font-size:16px;
+	margin-bottom:1.5em;
+	margin-top:0;
+}
+
+.article #page_head
+{
+	padding: 20px 0 15px 0;
+}
+
+p.author,p.publication,p.caption
+{
+	font-size:12px;
+}
+
+p.author:before
+{
+	content:"By ";
+}
+
+p.author
+{
+	padding-top:1em;
+}
+
+p.publication_time
+{
+	font-size:11px;
+	padding-bottom:2em;
+	padding-top:1em;
+	text-transform:uppercase;
+}
+
+.primary_photo img
+{
+	border:none!important;
+}
+
+.greybackground,.article_text .fullwidthphoto .greybackground,.article_text .fullwidthphoto .greybackground h3,.article_text .fullwidthphoto .greybackground h2,.greybackground h2,.greybackground h3
+{
+	background-color:#474948;
+	color:#fff!important;
+}
+
+.article_text blockquote
+{
+	border:none!important;
+	clear:left;
+	color:#282e5c;
+	float:left;
+	font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size:36px;
+	font-weight:700;
+	margin:0 0 2em -70px;
+	padding:40px 40px 0;
+	width:200px;
+}
+
+.article_text .fullwidthquote:before,.article_text blockquote:before
+{
+	content:"“";
+	left:-.55em;
+	margin-left:-.55em;
+}
+
+.article_text .fullwidthquote:after,.article_text blockquote:after
+{
+	content:"”";
+}
+
+.article_text .fullwidthquote
+{
+	border:none!important;
+	color:#282e5c;
+	font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size:36px;
+	font-weight:700;
+	margin:50px 0 2em -70px;
+	padding:20px 70px;
+	width:100%;
+}
+
+.article_text .sidebar
+{
+	display:block;
+	float:right;
+	margin:40px 0 40px 40px;
+}
+
+.article_text .social_buttons
+{
+	display:block;
+	float:right;
+	height:initial!important;
+	margin:0 -70px 40px 50px;
+}
+
+.article_text .social_buttons p
+{
+	font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size:11px;
+	font-weight:400;
+	text-align:right;
+}
+
+.article_text .social_buttons .addthis_button_expanded span
+{
+	display:none;
+}
+
+.article_text .social_buttons .im_this
+{ 	text-indent:27px;
+}
+
+.article_text .social_buttons p a span
+{
+	float:left;
+	margin-right:10px;
+}
+
+.article_text .social_buttons p a
+{
+	clear:both;
+	display:block;
+	margin-bottom:5px;
+	padding:5px;
+}
+
+.article_text .social_buttons p a:hover
+{ 
+	opacity:1;
+}
+
+.article_text .social_buttons .hidden
+{
+	width:0;
+}
+
+.article_text .sidebar .title,.article_text .social_buttons .title
+{
+	background:none!important;
+	padding-left:5px!important;
+}
+
+.article_text .rightfloatphoto
+{
+	float:right;
+	margin:0 -81px 40px 40px;
+}
+
+.article_text .rightfloatphoto .caption
+{
+	font-size:14px;
+	font-weight:400;
+	margin:.5em .5em .5em 20px !important;
+	text-align:right;
+}
+
+.article_text .rightfloatphoto .credit,.article_text .rightfloatphoto .credit p
+{
+	color:#999!important;
+	font-size:11px;
+	font-style:normal;
+	margin:.5em .5em .5em 20px !important;
+	text-align:right;
+	text-transform:uppercase;
+}
+
+.article_text .fullwidthslider
+{
+	border:none!important;
+	margin:5em 0 7em -70px;
+	width:650px;
+}
+
+.article_text img, .article_body img
+{
+	border:none !important;
+}
+
+.article_text .fullwidthphoto
+{
+	margin:5em 0 7em -70px;
+	width:650px;
+}
+
+.article_text .fullwidthphoto img
+{
+	margin:0;
+	width:650px;
+}
+
+.article_text .textwidthphoto
+{
+	margin:5em 0 7em;
+	width:500px;
+}
+
+.article_text .textwidthphoto img
+{
+	margin:0;
+	width:500px;
+}
+.article_text .insetphoto
+{
+	margin:5em auto 7em;
+	width:400px;
+}
+
+.article_text .insetphoto img
+{
+	margin:0;
+	width:400px;
+}
+
+.article_text .fullwidthphoto h2,.article_text .fullwidthphoto h3
+{
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.article_text .textwidthphoto h2,.article_text .textwidthphoto h3
+{
+	padding-left:0;
+	padding-right:0;
+}
+
+.article_text .fullwidthphoto h2,.article_text .textwidthphoto h2,.article_text .fullwidthphoto h3,.article_text .textwidthphoto h3, .article_text .insetphoto h2, .article_text .insetphoto h2
+{
+	font-family:Helvetica Neue, Helvetica Neue, Helvetica, Arial, sans-serif;
+	padding-bottom:20px;
+}
+
+.article_text .fullwidthphoto h2,.article_text .textwidthphoto h2,.article_text .insetphoto h2
+{
+	font-size:24px;
+	font-weight:700;
+	padding-top:40px;
+}
+
+.article_text .fullwidthphoto h3,.article_text .textwidthphoto h3, .article_text .insetphoto h3
+{
+	font-size:18px;
+	font-weight:400;
+	padding-top:20px;
+}
+
+.primary_photo .caption
+{
+	margin:15px 25px 10px 0;
+	width:650px;
+}
+
+.caption
+{
+	font-size:14px;
+	font-weight:400;
+	text-align:left;
+}
+
+.article .caption,.primary_photo .caption
+{
+	font-weight:400;
+}
+
+.article_text .fullwidthphoto .caption
+{
+	margin-left:20px;
+	margin-right:20px;
+}
+
+.article_text .textwidthphoto .caption,.article_text .fullwidthphoto .caption, .article_text .insetphoto .caption
+{
+	margin-bottom:10px;
+	margin-top:15px;
+}
+
+.credit,.credit p,.article_text .credit
+{
+	color:#aaa!important;
+	font-size:11px;
+	font-style:normal;
+	text-align:left;
+	text-transform:uppercase;
+}
+
+.primary_photo .credit,.primary_photo .credit p
+{
+	margin:15px 25px 10px 0;
+}
+
+.article_text .fullwidthphoto .credit,.article_text .fullwidthphoto .credit p
+{
+	margin-left:20px!important;
+	margin-right:20px!important;
+}
+
+.article_text .fullwidthphoto .credit,.article_text .fullwidthphoto .credit p,.article_text .textwidthphoto .credit,.article_text .textwidthphoto .credit p, .article_text .insetphoto .credit, .article_text .insetphoto .credit p
+{
+	margin-bottom:1em!important;
+	margin-top:1em!important;
+}
+
+.article_text blockquote.twitter-tweet:before 
+{
+	content: "Tweet";
+	text-transform: uppercase;
+	font-size: 12px;
+	position:relative;
+	left: .5em;
+	top:-1em;
+}
+.article_text blockquote.twitter-tweet:after 
+{
+	content: "";
+}
+.article_text blockquote.twitter-tweet  {
+	font-size: 12px !important;
+	font-weight: 400;
+	margin-top: 2em;
+	margin-bottom: 4em;
+
+}
+
+.article_text blockquote.twitter-tweet > p {
+	font-size: 16px !important;
+  }
+  
+  
+  
+
+.article_body .aside {
+	font-size: 1.0em;
+	clear:right;	
+	
+}
+
+.article_body .aside p {
+	margin-bottom:0px; 
+	
+}
+.article #content_mainA div.aside {
+	float: right;
+	left: 50px;
+	position: relative;
+	margin-bottom: 2.5em;
+	margin-top: 2.5em;
+}
+#share_buttons h3.title {
+	background: none;
+	padding-left: 4px;
+}
+
+
+
+-->
+
+
+
+
+</style>
+ <div class="clear"></div>
+<div class="addthisbox">
+<script type="text/javascript">
+    var addthis_config = {
+        services_expanded: 'blogger, tumblr, wordpress, stumbleupon, digg, reddit, googlereader, linkedin, orkut, sinaweibo, vk',
+data_track_clickback: false
+    };
+</script>
+
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ng-dmg"></script></div>
+
+
+
+<script type="text/javascript"><!--
+
+function doHeadFixup() {
+	if (! $(".article_text").length || ! $("#page_head").length || ! $(".article_body").length) {
+		setTimeout(doHeadFixup,100);
+		return false;
+	} 
+
+	if ($(".article_text h5.series").length) {
+		$("#page_head").prepend($(".article_text h5.series").eq(0));
+	}
+	if ($(".article_text h5.photographer").length) {
+		$(".article_body .author").append( "<br />" + $(".article_text h5.photographer").eq(0).text() );
+		$(".article_body h5.photographer").remove();
+	}
+		
+	$("h1").each(function() {
+	  var wordArray = $(this).text().split(" ");
+	  if (wordArray.length && wordArray.length > 1) {
+	    wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
+	    wordArray.pop();
+	    $(this).html(wordArray.join(" "));
+	  }
+	} ) ; 
+	 
+	 
+	 try {
+	$("#content_mainA div.article_text p:nth-child(1)").first().after($("#content_mainA .aside"));
+	$("#content_mainA div.aside").css({"display":"block"});
+	 } catch (err) {};
+	 
+	return true;
+
+}
+
+
+
+function doPhotoFixup() {
+	
+	var allPhotoClasses=document.getElementsByClassName("primary_photo");
+	
+	for (var b=0; b < allPhotoClasses.length; b++) {
+	
+	
+	try {
+		var thePhoto=allPhotoClasses[b].getElementsByTagName("img")[0];
+			thePhoto.src=thePhoto.src.replace(/600x450/,"990x742").replace(/420x315/,"990x742").replace(/overrides/,"cache");
+		
+		
+		var oldwidth=thePhoto.width;
+		var oldheight=thePhoto.height; 
+		
+		if (! mainPhotoWidth) {
+			var mainPhotoWidth=650;
+		}
+		
+		var desiredMargin=( ( 650-mainPhotoWidth ) /2 - 20 );
+		if (thePhoto.parentNode.parentNode.className=="article_body" || b > 0) {
+			desiredMargin -= 50; // fix for vertical templates and old secondary embeds. 
+		
+		}
+		
+		
+		
+		thePhoto.width=thePhoto.style.width=mainPhotoWidth;
+		thePhoto.height=thePhoto.style.height=(mainPhotoWidth/oldwidth)*oldheight;
+		thePhoto.parentNode.style.marginLeft=desiredMargin + "px";
+		
+		if (b>0) {
+			thePhoto.parentNode.className=thePhoto.parentNode.className.replace(/primary_photo/,"fullwidthphoto");
+		}
+		
+		
+	
+		var theCaptions=thePhoto.parentNode.getElementsByClassName('caption') ;
+		for (var i=0; i<theCaptions.length; i++) {
+			if(mainPhotoWidth > 610) {
+				theCaptions[i].style.marginLeft="20px";
+			}
+				
+			theCaptions[i].style.width=mainPhotoWidth-40 + "px";		
+		}
+			
+		var theCredits=thePhoto.parentNode.getElementsByClassName('credit') ;
+		for (var i=0; i<theCredits.length; i++) {
+			if(mainPhotoWidth > 610) { 
+				theCredits[i].style.marginLeft="20px";		
+			}
+			
+			theCredits[i].style.width=mainPhotoWidth-40 + "px";			
+		}
+	} catch(err){}
+
+
+}
+
+	
+	 
+}
+
+doPhotoFixup();
+$( document ).ready( doPhotoFixup );
+$( document ).load( doPhotoFixup );
+setTimeout(doPhotoFixup,500);
+doHeadFixup();
+
+
+
+-->
+</script>
+
+
+	    
+	
+	</div>
+	
+
+
+
+				
+		             		
+			</div>	
+			
+			
+		
+	
+    
+
+</div>
+
+
+		
+		
+
+    
+
+
+			</div><!-- #content_mainA -->
+
+			<hr class="hidden" />
+
+			<!-- ### RIGHT COLUMN ### -->
+           	<div id="content_mainB" class="aside">
+				
+
+					
+					  
+					    
+  					    
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+  
+    
+	<div >
+	
+		
+		
+	    
+		     <script type="text/javascript">var addthis_config = {"data_track_addressbar":true,
+            data_track_clickback: false,
+            data_ga_property: 'UA-28236326-1',
+	        data_ga_social : true
+};</script>
+<!-- AddThis Button END --><!-- AddThis Trending Content BEGIN -->
+<div id="addthis_trendingcontent"
+></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#username=ng-dmg"></script>
+<script type="text/javascript">
+addthis.box("#addthis_trendingcontent", {
+    feed_title : "Trending Now",
+    feed_type : "trending",
+    feed_period : "day",
+    num_links : 4,
+    height : "auto",
+    width : "auto",
+domain : "",
+
+ 
+  transform : function(link, layer) {
+        if (link.url && ( link.url.indexOf('admin.nationalgeographic') < 0 ) && ( link.url.indexOf('news') >= 0 || link.url.indexOf('phenomena') >= 0 )  && (link.title.indexOf('Daily Nature and Science News and Headlines') < 0 ) ) {
+            link.title=link.title.replace(/\|.*/,"");
+
+            link.title=link.title.replace(/[-––]+ National Geographic.*/,"");
+            link.title=link.title.replace(/[-—–]+ News Watch.*/,"");
+            link.title=link.title.replace(/[-—–]+ Phenomena.*/,"");
+
+
+
+ 			return link;
+        } else { 
+            return false;
+        }
+    }
+
+    });
+</script> 
+
+
+<style>
+<!-- 
+#content_mainB {
+counter-reset: addthistrending;
+}
+
+.addthis-content-row:before {
+counter-increment: addthistrending;
+content: counter(addthistrending, decimal-leading-zero);
+font-weight: 300;
+margin-left:-2em;
+position:absolute;
+}
+
+.addthis-content-row, .addthis-content-title, p.addthis-content-title, div.addthis-content-footer, .addthis-content-footer {
+/*margin-left: 0px;
+padding-left: 0px;*/
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.addthis-content-row {
+margin-left:2em;
+font-size: 10pt;
+font-weight: 300;
+padding: 0em 20px .3em 20px;
+}
+p.addthis-content-title, .addthis-content-title {
+font-size: 14pt;
+font-weight: 700;
+color: #999;
+margin-top: 0em;
+padding: 0em 20px .6em 20px;
+}
+
+div.addthis-content-footer {
+margin: 2em 20px;
+padding:0px;
+
+}
+#content_mainB .addthis_toolbox {
+margin:18px;
+overflow:hidden;
+
+}
+.aside > div {
+border:0px;
+}
+.addthis-content-footer {
+margin-bottom: -30px !important;
+}
+.addthis_trendingcontent {
+margin-bottom: -10px;
+/* margin-top:-30px; */
+overflow: hidden !important;
+}
+
+-->
+</style>
+        
+	    
+	
+	</div>
+	
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+  					  
+					  
+					
+
+                    
+
+    
+        
+					
+    					<div class="advertisement box">
+    						<h3>Advertisement</h3>
+    						
+    							
+    								
+    									
+    
+    										<!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule300x250">
+            
+
+            <!--
+                // unit: box1-300x250
+                // uri: /2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/
+                // site_name: news
+                // zone: health
+                // width: 300
+                // height: 250
+                // css_class: 
+                // gpt_dimensions: 300x250,300x600
+                // keywords: 
+                // bust: 955264052
+                // tile: 105
+                // refreshable: False
+                // regex: ^/[.]*
+                // page_taxonomy: news.nationalgeographic.com::news::Health
+                // ad_taxonomy: news.nationalgeographic.com::news::Health
+                // taxonomy_match: True
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"news/health",
+                            'dimensions':"300x250",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "300", "variability": 90.0, "height": "250"}, {"width": 300, "variability": 10.0, "height": 600}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.news/health');
+                    inc.push('sz=300x250');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+    										
+    								
+    							
+    						
+    					</div>
+					
+    				
+    
+    
+
+                    
+                    
+					    
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+
+ 
+
+	
+	
+	<div class="promo_collection features_module custom" id="none">
+	
+	
+		
+			
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h2>Popular Stories</h2>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="first ">
+			
+				
+				  
+					  <a href="http://news.nationalgeographic.com/news/energy/2015/01/150130-yellowstone-river-oil-spill-ice-cleanup/" title="Ice Complicates Cleanup in Yellowstone&#39;s Rare Oil Spill"><img src="/exposure/core_media/ngphoto/image/88211_0_391x293.jpg" width="391" height="293" alt="Ice Complicates Cleanup in Yellowstone's Rare Oil Spill" /></a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://news.nationalgeographic.com/news/energy/2015/01/150130-yellowstone-river-oil-spill-ice-cleanup/" title="Ice Complicates Cleanup in Yellowstone&#39;s Rare Oil Spill">Ice Complicates Cleanup in Yellowstone's Rare Oil Spill</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>The Yellowstone River's oil spill was the first in U.S. frozen water in two-plus decades.</p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class=" ">
+			
+				
+				  
+					  <a href="http://video.nationalgeographic.com/video/short-film-showcase/dolls-replace-people-in-this-deserted-town" title="A Town Where Dolls Replace People"><img src="/exposure/core_media/ngphoto/image/88189_0_391x293.jpg" width="391" height="293" alt="A Town Where Dolls Replace People" /></a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://video.nationalgeographic.com/video/short-film-showcase/dolls-replace-people-in-this-deserted-town" title="A Town Where Dolls Replace People">A Town Where Dolls Replace People</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>Welcome to Nagoro, Japan. Human population: 37. Doll population: 350. <span>When villagers die or move away, a woman makes a life-size doll and places it in a spot that was meaningful to that person.</span><span> </span></p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="last ">
+			
+				
+				  
+					  <a href="http://news.nationalgeographic.com/news/2015/01/150127-maya-water-temple-drought-archaeology-science/" title="Sacred Maya Water Temple Unearthed"><img src="/exposure/core_media/ngphoto/image/88120_0_391x293.jpg" width="391" height="293" alt="Sacred Maya Water Temple Unearthed" /></a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://news.nationalgeographic.com/news/2015/01/150127-maya-water-temple-drought-archaeology-science/" title="Sacred Maya Water Temple Unearthed">Sacred Maya Water Temple Unearthed</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>As an ancient drought took hold, a water temple saw more offerings from desperate Maya, archaeologists report.</p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+							
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+		
+		
+
+	
+
+
+	
+
+
+	
+	
+	</div><!-- .promo_collection -->
+	
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+
+	<div class="openHTML">
+		
+	    
+	    
+	    	
+    	    	<style>
+<!--
+img[width='391']
+{
+	border:0!important;
+	height:initial;
+	margin:2em 0;
+	width:100%;
+} -->
+</style>
+    	    
+	    
+	</div>
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+
+ 
+
+	
+	
+	<div class="promo_collection features_module custom" id="none">
+	
+	
+		
+			
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h2>The Future of Food  </h2>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="first ">
+			
+				
+				  
+					  <a href="http://food.nationalgeographic.com/?source=rr" title="Why Food Matters"><img src="/exposure/core_media/ngphoto/image/85569_0_391x293.jpg" width="391" height="293" alt="Why Food Matters" /></a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://food.nationalgeographic.com/?source=rr" title="Why Food Matters">Why Food Matters</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><!-- SANITIZE EXEMPT -->
+<p>How do we feed nine billion people by 2050, and how do we do so sustainably?</p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="last ">
+			
+				
+				  
+					  <a href="http://theplate.nationalgeographic.com/2014/10/14/download-the-future-of-food-mobile-app/" title="Download: Free iPad App"><img src="/exposure/core_media/ngphoto/image/85570_0_391x293.jpg" width="391" height="293" alt="Download: Free iPad App" /></a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://theplate.nationalgeographic.com/2014/10/14/download-the-future-of-food-mobile-app/" title="Download: Free iPad App">Download: Free iPad App</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>We've made our magazine's best stories about the future of food available in a free iPad app.</p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+							
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+		
+		
+
+	
+
+
+	
+	<p class="action"><a href="http://food.nationalgeographic.com/">See more food news, photos, and videos &raquo;</a></p>
+	
+
+
+	
+	
+	</div><!-- .promo_collection -->
+	
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+	
+		
+			<div class="promo_collection links_list something-to-share ">
+		
+		
+		
+			
+				
+				    
+					    
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h3 class="title">Something to Share?</h3>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="bullets ">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+	
+
+
+	
+		
+
+
+
+
+
+
+<li class="first">
+
+    <a href="mailto:newsdesk@ngs.org" title="E-mail Us at Newsdesk@ngs.org" >E-mail Us at Newsdesk@ngs.org</a>
+
+	
+
+</li>
+
+	
+	
+	
+
+
+
+
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+	
+
+
+	
+		
+
+
+
+
+
+
+<li class="last">
+
+    <a href="http://yourshot.nationalgeographic.com/" title="Send Us Your Photos" >Send Us Your Photos</a>
+
+	
+
+</li>
+
+	
+	
+	
+
+
+
+
+							
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+					
+				
+			
+				
+
+
+	
+
+
+		
+		
+		
+			</div><!-- .promo_collection -->
+		
+	
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+<div class="promo_collection advertisement small">
+	<div class="special_ad_section">
+		<h3>Special Ad Section</h3>
+		
+		<ul>
+		    <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div style="padding:0; margin: 0">
+            
+
+            <!--
+                // unit: box1-300x125
+                // uri: /2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/
+                // site_name: news
+                // zone: health
+                // width: 300
+                // height: 125
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 562069251
+                // tile: 143
+                // refreshable: False
+                // regex: ^/[.]*
+                // page_taxonomy: news.nationalgeographic.com::news::Health
+                // ad_taxonomy: news.nationalgeographic.com::news::Health
+                // taxonomy_match: True
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"news/health",
+                            'dimensions':"300x125",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "300", "variability": 100, "height": "125"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.news/health');
+                    inc.push('sz=300x125');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+            <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div style="padding:0; margin: 0">
+            
+
+            <!--
+                // unit: box2-300x125
+                // uri: /2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/
+                // site_name: news
+                // zone: health_2
+                // width: 300
+                // height: 125
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 13611558
+                // tile: 189
+                // refreshable: False
+                // regex: ^/[.]*
+                // page_taxonomy: news.nationalgeographic.com::news::Health
+                // ad_taxonomy: news.nationalgeographic.com::news::Health
+                // taxonomy_match: True
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"news/health_2",
+                            'dimensions':"300x125",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "300", "variability": 100, "height": "125"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.news/health_2');
+                    inc.push('sz=300x125');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+        </ul>
+	</div><!-- .special_ad_section -->
+</div><!-- .promo_collection -->
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+					
+					
+                   
+
+    
+                       <div class="advertisement sponsored_links">
+                           <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule300x250">
+            
+
+            <!--
+                // unit: box2-300x250
+                // uri: /2014/08/140820-marburg-ebola-virus-treatment-monkey-africa/
+                // site_name: news
+                // zone: ng2_health
+                // width: 300
+                // height: 250
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 893837338
+                // tile: 173
+                // refreshable: False
+                // regex: ^/[.]*
+                // page_taxonomy: news.nationalgeographic.com::news::Health
+                // ad_taxonomy: news.nationalgeographic.com::news::Health
+                // taxonomy_match: True
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"news/ng2_health",
+                            'dimensions':"300x250",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "300", "variability": 100, "height": "250"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.news/ng2_health');
+                    inc.push('sz=300x250');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+                       </div><!-- .advertisement -->
+                   
+
+				
+				
+
+           	</div><!-- content_mainB -->
+
+		</div><!-- #content_page_specific -->
+
+		<hr class="hidden" />
+
+		
+		    
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+  
+	
+	<div class="promo_collection carousel js_enabled seven">
+	
+		
+			
+				
+
+
+
+
+
+
+
+	
+	
+		
+		    
+		        <h2>More From National Geographic</h2>
+		    
+		
+	
+		
+		 
+		
+		
+		<ul class="jcarousel-skin-geocore restrain  seven">
+			
+			
+			
+			 	
+					
+						
+							
+
+
+
+
+
+
+	
+	<li class="first ">
+		
+		    <a href="http://food.nationalgeographic.com/?source=btm" title="How to Feed Our Growing Planet" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/828/cache/ngm-man-holding-chicking_82841_100x75.jpg"  width="100" height="75" alt="ngm-man-holding-chicking.jpg" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://food.nationalgeographic.com/?source=btm" title="How to Feed Our Growing Planet" >How to Feed Our Growing Planet</a></p>
+</li>
+
+
+
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="http://news.nationalgeographic.com/space/?source=btm" title="Space" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/805/overrides/space-planet-europa-nasa_80567_100x75.jpg"  width="100" height="75" alt="Picture of Jupiter moon Europa " />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://news.nationalgeographic.com/space/?source=btm" title="Space" >Space</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="http://yourshot.nationalgeographic.com/?source=btm" title="Join Our Photo-Sharing Community" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/828/cache/25644_82844_100x75.jpg"  width="100" height="75" alt="Bear with a salmon" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://yourshot.nationalgeographic.com/?source=btm" title="Join Our Photo-Sharing Community" >Join Our Photo-Sharing Community</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="http://travel.nationalgeographic.com/travel/?source=btm" title="Travel " class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/736/cache/balancing-boulders-australia_73685_100x75.jpg"  width="100" height="75" alt="Picture of a man between two round balancing boulders" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://travel.nationalgeographic.com/travel/?source=btm" title="Travel " >Travel </a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="/photography/photo-of-the-day/?source=btm" title="Photo of the Day" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/124/cache/celebes-sea-fishing-dl_12419_100x75.jpg"  width="100" height="75" alt="70074.jpg" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="/photography/photo-of-the-day/?source=btm" title="Photo of the Day" >Photo of the Day</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="http://www.nationalgeographic.com/explorers/?source=btm" title="Meet Our Explorers" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/768/cache/lee-sunshine-crop_76888_100x75.jpg"  width="100" height="75" alt="Picture of Lee Berger outside covered in cave dirt" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://www.nationalgeographic.com/explorers/?source=btm" title="Meet Our Explorers" >Meet Our Explorers</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="last ">
+		
+		    <a href="http://animals.nationalgeographic.com/animals/?source=btm" title="Animals" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/808/cache/travel-trip-big-cats-z_80850_100x75.jpg"  width="100" height="75" alt="Picture of big cats in Africa" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://animals.nationalgeographic.com/animals/?source=btm" title="Animals" >Animals</a></p>
+</li>
+
+
+
+							
+						
+					
+					
+			
+			
+
+		
+		</ul>
+
+
+
+
+	
+			
+		
+		
+	
+	
+
+
+	
+
+
+	
+	</div><!-- .promo_collection -->
+
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+
+                </div><!-- #content -->
+
+    
+
+
+    
+                <hr class="hidden"/>
+    
+
+    
+                <!-- ### SITE FOOTER ### -->
+                <div class="footer" id="footer_site">
+                    
+                    <div id="footer_breadcrumb">
+                        <ul>
+                            <li class="nav1"><a href="http://www.nationalgeographic.com" id="intl_link_breadcrumb_home">National Geographic Home &raquo;</a></li>
+                            
+                                
+                            <li class="nav2 "><a href="/news">News &raquo;</a></li>
+                                
+
+                                
+                            <li class="nav3 selected">Successful Marburg Virus Treatment Offers Hope for Ebola Patients</li>
+                                
+                            
+                        </ul>
+                        
+                    </div><!-- #footer_breadcrumb -->
+                    
+                </div><!-- #footer_site -->
+    
+
+    
+            </div><!-- #container -->
+        </div><!-- #body_wrap -->
+    
+
+    
+        <hr class="hidden"/>
+    
+
+    
+        
+<!-- ### GLOBAL FOOTER (UNIFIED THEME) ### --> 
+<div class="footer section" id="footer_global">
+    <ul class="nav nav_global_tierA"> 
+        <li class="nav1"><a href="http://www.nationalgeographic.com/" id="intl_link_footer_home">Home</a></li> 
+        <li class="nav2"><a href="http://video.nationalgeographic.com/video/player/">Video</a></li>
+        <li class="nav3"><a href="/photography/">Photography</a></li> 
+        <li class="nav4"><a href="/animals/">Animals</a></li> 
+        <li class="nav5"><a href="/environment/">Environment</a></li>
+        <li class="nav6"><a href="/travel/">Travel</a></li>
+
+
+
+
+
+
+        <li class="nav7"><a href="/adventure/">Adventure</a></li>
+        <li class="nav8"><a href="//channel.nationalgeographic.com/channel/" id="intl_link_footer_natgeotv">Television</a></li>
+        <li class="nav9"><a href="//kids.nationalgeographic.com/kids/" id="intl_link_footer_kids">Kids</a></li>
+
+
+
+
+
+
+        <li class="nav10"><a href="//shop.nationalgeographic.com/ngs/index.jsp?code=NG94010" id="intl_link_footer_shop">Shop</a></li>
+
+
+
+
+
+
+    </ul>
+    <ul class="nav nav_global_tierB">
+        <li class="nav13"><a href="/news/">News</a></li>
+        <li class="nav01"><a href="http://ngm.nationalgeographic.com/">The Magazine</a></li>
+        <li class="nav02"><a href="/maps/">Maps</a></li>
+        <li class="nav04"><a href="/science/">Science &amp; Space</a></li>
+        <li class="nav05"><a href="/education/">Education</a></li>
+        <li class="nav06"><a href="http://games.nationalgeographic.com/">Games</a></li>
+        <li class="nav08"><a href="http://events.nationalgeographic.com/">Events</a></li>
+        <li class="nav09"><a href="http://blogs.nationalgeographic.com/">Blogs</a></li>
+        <li class="nav10"><a href="/movies/">Movies</a></li>
+        <li class="nav11"><a href="/explorers/">Explorers</a></li>
+        <li class="nav12"><a href="/mobile">Mobile</a></li>
+        <li class="nav13"><a href="/siteindex/">Site Index</a></li>
+    </ul> 
+    <ul class="nav nav_global_tierC"> 
+        
+             
+                <li class="nav01"><a href="/magazines/" id="intl_link_footer_subscriptions">Magazine Subscriptions</a></li>
+            
+        
+        <li class="nav02"><a href="http://national-geographic.cafepress.com/art?utm_source=nationalgeographic.com&utm_medium=link&utm_campaign=photographybuyprints">Buy Prints</a></li> 
+        <li class="nav03"><a href="http://www.ngdigitalmotion.com/">Stock Footage</a></li> 
+        <li class="nav03"><a href="http://www.nationalgeographicSTOCK.com">Stock Photos</a></li> 
+        <li class="nav04"><a href="http://www.nationalgeographicexpeditions.com/home?utm_source=travel.nationalgeographic.com&amp;utm_medium=Link&amp;utm_content=Footer_link_Our_Trips&amp;utm_campaign=NGdotcom">Our Trips</a></li> 
+        <li class="nav06"><a href="/jobs/">Jobs</a></li> 
+        <li class="nav07"><a href="/siteindex/international/">Global Sites</a></li> 
+        <li class="nav07"><a href="/environment/national-geographic-sustainability/">Sustainability</a></li> 
+        <li class="nav08"><a href="/about/">About</a></li> 
+        <li class="nav09"><a href="/community/email/">Contact</a></li> 
+    </ul> 
+    <ul class="nav nav_global_tierC"> 
+        <li class="nav01">
+             
+                <a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A245&code=NG90414">Gifts</a>
+            
+        </li> 
+        <li class="nav02">
+             
+                <a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A054&addFacet=9004:A054&code=NG90415">DVD's</a>
+            
+        </li> 
+        <li class="nav03">
+            
+                <a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A001&addFacet=9004:A001&code=NG90416">Books</a>
+            
+        </li> 
+        <li class="nav04">
+            
+                <a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A106&addFacet=9004:A106&code=NG90417">Maps &amp; Globes</a>
+            
+        </li> 
+        <li class="nav05">
+            
+                <a href="http://shop.nationalgeographic.com/ngs/browse/category_sale.jsp?categoryId=A223&addFacet=9004:A223&code=NG90413">Sale</a>
+            
+        </li> 
+        <li class="nav06"><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A169&addFacet=9004:A169&code=NG90419">Travel Gear</a></li>
+        <li class="nav07"><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A161&addFacet=9004:A161&code=NG90420">Photography Gear</a></li>
+    </ul>
+    <ul class="nav nav_global_tierD">		
+        <li class="nav03"><a href="https://donate.nationalgeographic.org/Page.aspx?pid=184">Donate</a></li> 
+        <li class="nav04"><a href="http://press.nationalgeographic.com/">Press Room</a></li> 
+        <li class="nav05"><a href="/siteindex/customer/">Customer Service</a></li> 
+        <li class="nav06"><a href="http://www.nationalgeographic.com/mediakit/">Advertise With Us</a></li> 
+        <li class="nav07"><a href="/community/terms/">Terms of Service</a></li> 
+        <li class="nav08"><a href="/community/privacy/">Privacy Policy</a></li> 
+    </ul> 
+    <p id="copyright">&copy; 1996-2015 National Geographic Society. All rights reserved.</p> 
+</div><!-- #footer_global -->
+
+
+    
+    <script type="text/javascript" src="http://loadus.exelator.com/load/?p=390&g=001&ctg=health&subctg=&kw=&refkw=&gd=" ></script>
+    
+
+
+    
+
+    
+
+
+    <script type="text/javascript">
+
+        
+        var addthis_ng_custom_titleElement = document.getElementsByTagName('title')[0].text;
+        var addthis_ng_custom_pagehref = 'http://on.natgeo.com/1rZtxpB';
+        var addthis_share = {
+            templates: { twitter: addthis_ng_custom_titleElement + ': {{url}} via @NatGeo' },
+
+            url_transforms: {
+                shorten: {
+                    twitter: 'bitly',
+                    facebook: 'bitly'
+                }
+            },
+            shorteners: {
+                bitly: {}
+            }
+
+        };
+
+
+        var addthis_config = {
+            services_expanded: 'blogger, tumblr, wordpress, stumbleupon, digg, reddit, googlereader, linkedin, orkut, sinaweibo, vk',
+            data_track_clickback: false,
+            data_ga_property: 'UA-28236326-1',
+            data_ga_social : true
+        };
+    </script>
+
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ng-dmg"></script>
+        
+
+
+
+
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+window.fbAsyncInit = function() {
+    FB.init({
+        appId        :     '130939060280023',
+        status       :     true, // check login status
+        cookie       :     true, // enable cookies to allow the server to access the session
+        xfbml        :     true,  // parse XFBML
+        channelUrl   :     'http://images.nationalgeographic.com/wpf/sites/common/inc/channel.html'
+    });
+};
+
+(function() {
+    var e = document.createElement('script');
+    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+    e.async = true;
+    document.getElementById('fb-root').appendChild(e);
+}());
+</script>
+
+
+    <div id="gigya_login_div"></div>
+
+
+
+
+
+        
+
+
+</body>
+
+
+
+</html>
+

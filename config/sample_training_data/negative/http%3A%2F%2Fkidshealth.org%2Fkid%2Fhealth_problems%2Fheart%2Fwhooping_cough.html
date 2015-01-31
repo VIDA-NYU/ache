@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script src="//cdn.optimizely.com/js/520560191.js"> </script><script type="text/javascript" src="/misc/javascript/mobDesk.js"> </script><script type="text/javascript">
+							mothershipDesktopURL='';
+							
+							
+							
+							
+							
+							mothershipMobileURL = 'http://m.kidshealth.org/kid/health_problems/heart/whooping_cough.html';
+						</script>
+	
+	<script>
+			// Set common mobile vars
+		arrivingURL=window.location.href;
+		lowercaseURL=arrivingURL.toLowerCase();
+		insert2URL="";
+		hashLocation=lowercaseURL.indexOf("#");
+		
+		function createCookie22(name,value,days) {
+	
+			if (days) {
+				var date = new Date();
+				date.setTime(date.getTime()+(days*24*60*60*1000));
+				var expires = "; expires="+date.toGMTString();
+			}
+			else var expires = "";
+			document.cookie = name+"="+value+expires+";path=/;domain=kidshealth.org";
+		}
+			
+		function readCookie22(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+		}
+			
+		function dynamicWellnessCenter2Category() {
+			// check if wellness center and switch pageset
+			/*if(lowercaseURL.indexOf("ps=180")!=-1 || lowercaseURL.indexOf("ps=280")!=-1 || lowercaseURL.indexOf("ps=380")!=-1) {
+				arrivingURL=arrivingURL.replace("ps=180","ps=103");
+				arrivingURL=arrivingURL.replace("ps=280","ps=203");
+				arrivingURL=arrivingURL.replace("ps=380","ps=303");
+			}*/
+			/* Newest version pre WC lookup removal... removing this to nullify wc js redirect/rewrite
+			if(mobileWcURL!='') { mobileURL = mobileWcURL; }
+			*/
+		}
+
+		function urlify() {
+		//mobileURL=arrivingURL.substr(0,7)+insert2URL+arrivingURL.substr(7);
+		//alert("the lcurl is"+lowercaseURL+"and the hash location is"+hashLocation);
+			
+		
+			if(lowercaseURL.indexOf("pagemanager")!=-1 && lowercaseURL.indexOf("#")!=-1) {
+					mobileURL=arrivingURL.substr(0,hashLocation)+"\&m=y"+arrivingURL.substr(hashLocation);
+					dynamicWellnessCenter2Category();
+			}
+			
+			else if(lowercaseURL.indexOf("pagemanager")!=-1) {
+					mobileURL=arrivingURL+"\&m=y";
+					dynamicWellnessCenter2Category();
+			}
+			
+			else {
+				//mobileURL=arrivingURL.substr(0,7)+insert2URL+arrivingURL.substr(7);
+				mobileURL=mothershipMobileURL;
+			}
+			
+			if(mobileURL.indexOf("lic=1&")!=-1) {
+				mobileURL=mobileURL.replace('lic=1','lic=152');	
+			//document.write(mobileURL);
+			}
+			
+		}
+	
+		function mobileDesktop() {
+			//alert("mobile Desktop function run");
+			thisScreen=screen.width;
+			thisUA=navigator.userAgent;
+			thisUA=thisUA.toLowerCase();
+		if(thisUA.indexOf("iphone")!=-1||thisUA.indexOf("iemobile")!=-1||thisUA.indexOf("blackberry")!=-1||thisUA.indexOf("opera m")!=-1||thisUA.indexOf("symbian")!=-1||thisUA.indexOf("dsi")!=-1) {
+				window.device="mobile";	
+			}
+			else if(thisUA.indexOf("android")!=-1&&thisUA.indexOf("mobile")!=-1) {
+				window.device="mobile";
+			}
+			else if(thisScreen<=599) {
+				window.device="mobile";
+			}
+			else{ window.device="desktop"};
+			
+			if(device=="mobile") {
+				urlify();
+				document.location=mobileURL;
+			}
+			else {desktop152To1();}
+		}
+	
+		function desktopPrefCookieCheck() {
+			var desktopPreferred = readCookie22('desktopPref');
+			if(desktopPreferred==1) {
+				// do nothing unless licensee is 152
+				// desktop152To1();
+			}
+			else {
+				//alert("mobile"+desktopPreferred);
+				mobileDe
+		function desktopPrefCookieCheck() {
+			var desktopPreferred = readCookie22('desktopPref');
+			if(desktopPreferred==1) {
+				// do nothing unless licensee is 152sktop();
+			}
+		}
+	
+		function linkToMobile() {
+			urlify();
+			document.location=mobileURL;
+			alert("hey, this is used!");
+		}
+		
+		function desktop152To1() {
+			if(device=="desktop" && lowercaseURL.indexOf("lic=152") !=-1) {
+				mothershipDesktopFrom152=arrivingURL.replace('lic=152','lic=1');
+				document.location=mothershipDesktopFrom152;
+			}
+		}
+		
+		desktopPrefCookieCheck();
+	
+		</script>
+		
+	<meta name="robots" content="NOODP"/><meta name="keywords" content="coughs, whooping cough, hooping cough, caff, kaff, koff, pertussis, infections, germs, bacteria, lungs, breathing tubes, mucus, saliva, bacteriologists, vaccines, shots, immunizations, dtap, whooping sounds, breathing problems, snot, mucus, pulmonology"/><meta name="description" content="Kids who have whooping cough make a &quot;whoop&quot; sound when they cough. Find out more in this article for kids."/><meta name="notify" content="N"/><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><link href="/css/khcontent_style.css" type="text/css" rel="stylesheet"/><link href="/licensees/standard_licensee/css/moreResourcesStyles.css" type="text/css" rel="stylesheet"/><link href="/licensees/licensee1/css/reset.css" rel="stylesheet" type="text/css"/><!--[if IE 6]>
+					<link rel="stylesheet" type="text/css" href="/css/IE6Styles.css" />
+				<![endif]--><!--[if IE 7]>
+					<link rel="styleshe="text/css" rel="stylesheet"/><link href="/licensees/licensee1/css/reset.css" rel="stylesheet" type="text/css"/><!--[if IE 6]>
+					<link rel="styleseet" type="text/css" href="/css/IE7Styles.css" />
+				<![endif]--><link type="text/css" rel="stylesheet" href="/css/wellnessCenterMain.css"/><link href="/css/K_khcontent_style.css" type="text/css" rel="stylesheet"/><!--[if IE 6]>
+					<link rel="stylesheet" type="text/css" href="/licensees/standard_licensee/css/moreResourcesStylesIE6.css" />
+					<![endif]--><!--[if IE 7]>
+					<link rel="stylesheet" type="text/css" href="/licensees/standard_licensee/css/moreResourcesStylesIE7.css" />
+					<![endif]--><link href="/css/khcontent_printstyle.css" media="print" type="text/css" rel="stylesheet"/><title>The Woes of Whooping Cough </title><script src="/licensees/standard_licensee/js/functions.js" language="JavaScript" type="text/javascript"> </script><script src="/misc/javascript/khCommon.js" language="JavaScript" type="text/javascript"> </script><script type="text/javascript" src="/misc/movie/flashobject.js"> </script><script type="text/javascript" src="/licensees/standard_licensee/js/moreResourcesJS.js"> </script><script src="/licensees/standard_licensee/js/pageNavigate.js" type="text/javascript"> </script><script type="text/javascript">
+			var KHAdSection = "kid";
+			var KHAdCat = "kid_health_problems";
+			var KHAdSubCat = "kid_health_problems_heart";
+			
+			
+			var KHAdTitle = "20768";
+			 
+			</script><!--
+			gamtags:-
+			Section: kid
+			Category: kid_health_pt type="text/javascript">
+			var KHAdSection = "kid";
+			var KHAdCat = "kid_health_problems";
+			var KHAdSubCat = "kid_health_problems_heart";
+			
+			roblems
+			SubCategory: kid_health_problems_heart
+			Article: kid_health_problems_heart_20768
+			??
+		--><meta name="site" content="MOTHERSHIP"/><meta name="MSL" content="%26ps=304%26article_set=20768%26cat_id=20079"/><script src="/licensees/standard_licensee/js/common_functions_mothership.js" language="JavaScript" type="text/javascript"> </script><script src="/licensees/licensee1/js/whatOthersAreReading.js" language="JavaScript" type="text/javascript"> </script><script type="text/javascript">
+						function clearText(field){
+							if (field.defaultValue == field.value) field.value = '';
+							else if (field.value == '') field.value = field.defaultValue;
+							}
+							
+						function articleFontSize(changedFontSize) {
+							fontSize = document.getElementById('khcontent');
+							fontSize.style.fontSize = changedFontSize;
+							}
+					</script><link href="/licensees/licensee1/css/kidStyles.css" type="text/css" rel="stylesheet"/><!--[if IE 6]>
+										<link rel="stylesheet" type="text/css" href="/licensees/licensee1/css/kidIE6styles.css" />
+										<![endif]--><!--[if IE 7]>
+										<link rel="stylesheet" type="text/css" href="/licensees/licensee1/css/kidIE7styles.css" />
+										<![endif]--><script src="http://f1.na.readspeaker.com/script/5202/ReadSpeaker.js?pids=embhl" type="text/javascript"> </script><script type="text/javascript" src="/misc/jesheet" type="text/css" href="/licensees/licensee1/css/kidIE7styles.css" />
+										<![endif]--><script src="http://f1.na.readspeaker.com/script/520avascript/customRS.js"> </script><link href="/css/customRS.css" type="text/css" rel="stylesheet"/><script type="text/javascript" src="/licensees/standard_licensee/js/tsClear.js"> </script></head><body onload="KH_loadFunctions();reInitializeCookie();"><div class="hider"><p><a href="#mainContentContainer">Skip Navigation</a></p></div><div id="mainContainer"><div id="outerLeft"> </div><div id="mainSite"><div id="mainHeader"><div id="logoImage"> </div><div id="logoContainer"><h1><a href="http://kidshealth.org"><span class="hider">KidsHealth</span></a></h1><h2><a href="http://www.nemours.org" target="_blank"><span class="hider">from Nemours</span></a></h2></div><div id="tabsImage"> </div><div id="tabsContainer"><h3><a href="/parent/index.jsp?tracking=P_Home"><span class="hider">for Parents</span></a></h3><h4><a href="/kid/index.jsp?tracking=K_Home"><span class="hider">for Kids</span></a></h4><h5><a href="/teen/index.jsp?tracking=T_Home"><span class="hider">for Teens</span></a></h5></div></div><div id="mainBody"><div id="leftNav"><div id="leftNavSearch"><form name="SeekForm" method="post" action="/Search01.jsp" onsubmit="return validateQT();" id="KLNseekForm"><input type="hidden" name="SearchSection" value="3"/><input type="hidden" name="Mode" value="Search"/><input type="text" alt="Enter Search Text Here" name="SearchTextArea" maxlength="250" value="Search here..submit="return validateQT();" id="KLNseekForm"><input type="hidden" name="SearchSection" value="3"/><input type="hidden" name="Mode" value="Search"/><." onclick="clearText(this)" onblur="clearText(this)"/><input type="submit" value="Search Submit" id="searchButton"/></form></div><div id="mainNav"><ul><li><a href="/kid">Kids Home</a></li><li><a href="/kid/htbw/">How the Body Works</a></li><li><a href="/kid/grow/">Puberty & Growing Up</a></li><li><a href="/kid/stay_healthy/">Staying Healthy</a></li><li><a href="/kid/recipes/">Recipes & Cooking</a></li><li><a href="/kid/watch/">Staying Safe</a></li><li><a href="/kid/health_problems/">Health Problems</a></li><li><a href="/kid/ill_injure/">Illnesses & Injuries</a></li><li class="biggerButton" id="bb3"><a href="/kid/grownup/">Health Problems of<br />Grown Ups</a></li><li class="biggerButton" id="bb1"><a href="/kid/feel_better/">People, Places &<br />Things That Help</a></li><li><a href="/kid/feeling/">Feelings</a></li><li><a href="/kid/talk/">Q&A</a></li><li><a href="/kid/closet/">Movies & More</a></li><li><a href="/kid/quizzes/">Quizzes</a></li><li><a href="/kid/games/">Games</a></li><li class="biggerButton" id="bb2"><a href="/kid/word/">Kids' Medical<br />Dictionary</a></li><li><a href="/kid/centers/spanish_center_esp.html">En Espa&#241;ol</a></li></ul></div><div id="whatOthersAreReading"><h4><span class="hider">What Other Kids Are Reading</span></h4><ul id="whatOthersWant"><li><a href="/kid/feeling/school/middle_school.html">Moving to Middle School</a></li><enter_esp.html">En Espa&#241;ol</a></li></ul></div><div id="whatOthersAreReading"><h4><span class="hider">What Other Kids Are Reading</span></h4><ul ili><a href="/kid/feeling/school/back_to_school.html">Going Back to School</a></li><li><a href="/kid/watch/house/homealone.html">When It's Just You After School</a></li><li><a href="/kid/health_problems/infection/ebola.html">Ebola</a></li><li><a href="/kid/htbw/htbw_main_page.html">How the Body Works Main Page</a></li><li><a href="/kid/feeling/friend/pls.html">The Pink Locker Society</a></li></ul></div><script type="text/javascript" language="JavaScript">setWhatOthersWant('Kids')</script><script type="text/javascript" src="/licensees/licensee1/js/kh_kidsLeftNavInclude.js"> </script><br clear="all"/></div><div id="mainContentContainer"><div id="articleHeaderGraphic"><img alt="The Woes of Whooping Cough" src="/kid/health_problems/heart/headers_86791/Kwhooping_cough.gif"/><h1>The Woes of Whooping Cough</h1></div><div id="breadcrumbsContainer"><div id="breadcrumbs"><a href="/index.html">KidsHealth</a>&gt;
+				<a href="/kid/">Kids</a>&gt;
+		<a href="/kid/health_problems/">Health Problems</a>&gt;
+		<a href="/kid/health_problems/">Heart & Lungs</a>&gt;
+		The Woes of Whooping Cough</div><div id="breadcrumbsExtras"><ul><li id="breadcrumbsExtraPrintButton"><a href="javascript:printWindow('/PageManager.jsp?dn=KidsHealth&amp;lic=1&amp;ps=307&amp;cat_id=20079&amp;article_set=20768')">
+							Print</a></li><li id="breadcrumbsExtraTextSizer"><a id="textSizer1" onclick="textl><li id="breadcrumbsExtraPrintButton"><a href="javascript:printWindow('/PageManager.jsp?dn=KidsHealth&amp;lic=1&amp;ps=307&amp;cat_id=20079&amp;articSizer('1');" title="regular">A</a><a id="textSizer2" onclick="textSizer('2');" title="larger">A</a><a id="textSizer3" onclick="textSizer('3');" title="largest">A</a><br/>
+						Text Size</li></ul></div></div><div id="subCatBox" class="kh_en_content"><h5 id="subCatHeaderLink" class="subCatClosed"><a href="javascript:void(0);" onclick="toggleLayer('subCatLinks'); toggleClass('subCatHeaderLink','subCatClosed','subCatOpen');"><strong>What's in this article?</strong></a></h5><ul id="subCatLinks"><li><a href="#a_How_Is_Whooping_Cough_Spread_">How Is Whooping Cough Spread?</a></li><li><a href="#a_What_Are_the_Symptoms_">What Are the Symptoms?</a></li><li><a href="#a_What_s_the_Treatment_">What's the Treatment?</a></li><li><a href="#a_Pertussis_Prevention">Pertussis Prevention</a></li></ul></div><div class="clearBox">&#160;</div><div id="khcontent"><div id="xp1"> </div><br clear="all" style="width: 0; height: 0; line-height: 0; font-size: 0;"/><div id="khcontent_article" lang="en-US"><div id="NavigatePage1"><div id="whichRead_1"><span class="ISI_MESSAGE"><!--
+														
+														The following article is from KidsHealth.
+													The Woes of Whooping Cough--></span><br clear="all" class="ie8ClearanceSpecial"/><div class="rs_skip rs_skip_en rsbtn_kidshealth rs_preserve" id="readspeaker_button1"><script type="text/javascript">
+											var theRSURL = (esm KidsHealth.
+													The Woes of Whooping Cough--></span><br clear="all" class="ie8ClearanceSpecial"/><div class="rs_skip rs_skip_en rsbtn_kidshcape(document.location.href));
+											var rsAudioTitle = document.title.replace(/ |\'|\?/g,"_");
+											var whichReadPage = 1;
+											//var doesItGotFlash = '';
+											
+													var doesItGotFlash = '';
+												
+											makeTheRSLinkEN();
+											var readSpeakerDownloadLink = "http://app.readspeaker.com/cgi-bin/rsent?customerid=5202&amp;lang=en_us&amp;voice=Kate&amp;speed=100&amp;readid=khcontent_article&amp;url="+theRSURL+"&amp;audiofilename=KidsHealth_"+rsAudioTitle+"";
+										</script></div><p>Everyone's had a cough before, right? Coughs often come with a <a href="/kid/ill_injure/sick/colds.html">cold</a>. And they usually go away without causing too much trouble. But sometimes the illnesses that cause coughs can make kids, especially little kids and babies, really sick.</p>
+
+<p><strong>Whooping cough</strong> (say: <strong>hoop</strong>-ing <strong>kof</strong>) &mdash; also called <strong>pertussis</strong> (say: pur-<strong>tus</strong>-is) &mdash; is one of those illnesses. It's a bacterial infection of the respiratory system, which includes your <a href="/kid/body/lungs_noSW.html">lungs</a> and breathing tubes in your lungs and airway. Whooping cough got its name because kids who had it would cough a lot, and in between coughs they'd make a "whoop" sound when they tried to get a breath.</p>
+
+<p>Thousands of kids once gs_noSW.html">lungs</a> and breathing tubes in your lungs and airway. Whooping cough got its name because kids who had it would cough a lot, and in becaught whooping cough, which can be a deadly illness. But in 1906, two French scientists discovered the pertussis bacteria. That was the first step to creating a vaccine, or shot, to prevent it.</p>
+
+<p>Today, kids get a series of shots to protect them from getting whooping cough. Some kids still get it, but it's less common than it once was. Babies who have had none or just some of the shots in the series are particularly at risk for the illness and often have to go to the hospital if they get it.</p>
+
+<p class="center_this"><img alt="" src="/kid/health_problems/heart/images_86791/1095862764968.K_whooping_cough.gif" /></p>
+
+<h3 id="a_How_Is_Whooping_Cough_Spread_">How Is Whooping Cough Spread?</h3>
+
+<p>Pertussis bacteria can live in the saliva in your mouth and the <a href="/kid/word/m/word_mucus.html">mucus</a> in your nose. Kids usually catch whooping cough by breathing in tiny droplets that are released into the air by other people's coughs and sneezes. You can't see them, but they're there.</p>
+
+<p>A lot of colds are spread through tiny droplets in the air, too. It's a good reason to cover your mouth and nose whenever you sneeze or cough.</p>
+
+<h3 id="a_What_Are_the_Symptoms_">What Are the Symptoms?</h3>
+
+<p>The first symptoms of whooping cough are like a <a href="/kid/ill_injure/sick/colds.html">cold</a> &mdash; <a href="/kid/talk/qa/sneeze.html">sneezd nose whenever you sneeze or cough.</p>
+
+<h3 id="a_What_Are_the_Symptoms_">What Are the Symptoms?</h3>
+
+<p>The first symptoms of whooping cough are ling</a>, <a href="/kid/talk/qa/nose_run.html">runny nose</a>, slight <a href="/kid/ill_injure/sick/fever.html">fever</a>, and a cough that may get worse at night. But unlike a cold, whooping cough sticks around and within 2 weeks the cough gets stronger. The person has fits of coughing that seem to go on and on. During the cough, a person's face can turn red and if it's really bad the lips or skin may turn purple or blue. In between coughs, the person may make a "whoop" sound when taking a breath. The coughing can be so bad that the person throws up.</p>
+
+<p>Most of the time, symptoms of whooping cough &mdash; especially the cough &mdash; can last for more than 2 months. But sometimes, kids are better within 3 to 6 weeks.</p>
+
+<h3 id="a_What_s_the_Treatment_">What's the Treatment?</h3>
+
+<p>Your parent should call the doctor if you might have whooping cough or even if you've been near someone who had it, since it is pretty contagious.</p>
+
+<p>If a doctor thinks a kid might have whooping cough, he or she might take a sample of mucus (snot) from the back of the kid's nose. The snot can be tested in a lab to see if there's any pertussis bacteria in it. The doctor also may order blood tests and a chest X-ray.</p>
+
+<p>A kid who has whooping cough will need rest, plenty of fluids to drink, and healthy food. Someone with whooping cough will need to stay home from sc if there's any pertussis bacteria in it. The doctor also may order blood tests and a chest X-ray.</p>
+
+<p>A kid who has whooping cough will need resthool and probably take antibiotics (<a href="/kid/feel_better/things/kidmedic.html">medicines</a> that fight infections from bacteria). These medicines can keep the pertussis bacteria from infecting others, because pertussis is really contagious.</p>
+
+<p>Even if you don't feel sick but you've been around someone who has whooping cough, your doctor will probably give you antibiotics. While getting better, people with whooping cough need to see a doctor to make sure their breathing and cough are improving.</p>
+
+<p>In addition to getting better, parents need to make sure a kid with pertussis doesn't spread it to other kids, especially babies who haven't had their pertussis vaccination yet. Pertussis can be a very serious illness for a baby.</p>
+
+<h3 id="a_Pertussis_Prevention">Pertussis Prevention</h3>
+
+<p>You can avoid whooping cough by getting the pertussis vaccine, called the DTaP, which is part of the normal vaccine schedule the doctor gives you. The shot prevents two other illnesses &mdash; diphtheria and tetanus &mdash; in addition to pertussis.</p>
+
+<p>Today, kids are usually given five doses of the vaccine against whooping cough. The first three shots are given while a kid is a baby. Another is given when a kid is a toddler and the fifth one is given between ages 4 to 6. And now, doctors want to give another shot when a kid is older &mdash; like 11 or 1ine against whooping cough. The first three shots are given while a kid is a baby. Another is given when a kid is a toddler and the fifth one is given2 &mdash; to make sure he or she is still protected.</p>
+
+<p>Have you had your DTaPs? If so, whoop it up because you're protected from whooping cough!</p>
+
+<p>Reviewed by: <a href="/parent/misc/reviewers.html">Yamini Durani, MD</a><br />
+Date reviewed: January 2012<br />
+Originally reviewed by: <a href="/parent/misc/reviewers.html#p">Raj Padman, MD</a></p><span class="ISI_MESSAGE"><!--Thank you for listening to this KidsHealth audio cast. The information you heard, is for educational purposes only. If you need medical advice, diagnoses, or treatment, consult your doctor. This audio cast is Copyrighted by KidsHealth and The Nemours Foundation. All rights are reserved. Visit w w w dot KidsHealth dot org for more.--></span></div></div></div></div><div id="relatedBoxParents"><div id="navTabs"><ul id="navTabsPKT"><li id="PKTtabTeens" class="wascurrent"><a onclick="PKTJS('Teens');"><span>For Teens</span></a></li><li id="PKTtabKids" class="wascurrent"><a onclick="PKTJS('Kids');"><span>For Kids</span></a></li><li id="PKTtabParents" class="current"><a onclick="PKTJS('Parents');"><span>For Parents</span></a></li></ul></div><div id="mainBar"> </div><div id="mrLinks"><h2 id="moreOnThisTopicHeader">MORE ON THIS TOPIC</h2><ul id="relatedArticlesListKids"><li><a href="/kid/talk/qa/nose_run.html?tracking=K_RelatedArticle">Why Does My Nose Run?</a></li><li><a href="/kid/ill_</div><div id="mainBar"> </div><div id="mrLinks"><h2 id="moreOnThisTopicHeader">MORE ON THIS TOPIC</h2><ul id="relatedArticlesListKids"><li><a href="/injure/sick/sinuses.html?tracking=K_RelatedArticle">When Sinuses Attack!</a></li><li><a href="/kid/ill_injure/sick/colds.html?tracking=K_RelatedArticle">Chilling Out With Colds</a></li><li><a href="/kid/h1n1_center/flu-basics/flu.html?tracking=K_RelatedArticle">Flu</a></li> </ul></div><div id="boxBreaker"> </div><div id="zeroTester"> </div><div id="relatedButtonsHolder"><div id="relatedButtonsLeft"><ul><li id="relatedEmailUsButton"><a target="_blank" href="/contact_us.jsp?p=refk">Contact Us</a></li><li id="relatedPrinterButton"><a href="javascript:printWindow('/PageManager.jsp?dn=KidsHealth&amp;lic=1&amp;ps=307&amp;cat_id=20079&amp;article_set=20768')">
+														Print</a></li><li id="relatedAdditionalButton"><a href="/PageManager.jsp?dn=KidsHealth&amp;lic=1&amp;article_set=20768&amp;cat_id=20079&amp;&amp;ps=305">Additional resources</a></li></ul></div><div id="relatedButtonsRight"><ul><li id="relatedEmailFriendButton"><a href="javascript:newWindow('/EmailToFriend.jsp?lic=1&amp;sec=3&amp;cat_id=20079&amp;article_id=86791')">Send to a friend</a></li><li id="relatedReprintButton"><a href="/media/permissions" target="_blank">Reprint guidelines</a></li>
+												<!--[if gte IE 6]>
+												<li id="relatedBookmarkButton"><a href="javascript:window.external.AddFavorite(window.location.href,document.title)">Bookmark this page</a></li>
+												<![endifs" target="_blank">Reprint guidelines</a></li>
+												<!--[if gte IE 6]>
+												<li id="relatedBookmarkButton"><a href="javascript:window.ex]-->
+												</ul></div></div><br clear="all"/></div><br clear="all"/><script type="text/javascript" language="JavaScript">setVars();PKTChoose(0,4,0,0);</script><br clear="all"/><div id="newsletterBannerLink"><a href="/ExpressEmail/" target="_blank"><span class="hider">Sign up for our free weekly eNewsletters here</span></a><br clear="all"/></div></div><br clear="all"/></div></div><div id="outerRight"><script type="text/javascript" src="/licensees/licensee1/js/kh_kidsRightBanners.js"> </script></div><div id="kidsHealthFooter"><ul><li><a href="/kid/kh_misc/about.html">About KidsHealth</a></li><li><a href="/kid/kh_misc/nemours.html">About Nemours</a></li><li><a href="/contact_us.jsp?p=refk" target="_blank">Contact Us</a></li><li><a href="/parent/kh_misc/partners.html">Partners</a></li><li><a href="/kid/kh_misc/editorial_policy.html">Editorial Policy</a></li><li id="footerLastLink"><a href="/kid/kh_misc/policy.html">Privacy Policy & Terms of Use</a></li></ul><div id="NemoursLink"><a href="http://www.nemours.org" target="_blank"><span class="hider">Visit the Nemours Web site.</span></a></div><p>Note: All information on KidsHealth&#174; is for educational purposes only. For specific medical advice, diagnoses, and treatment, consult your doctor.</p><p>&#169; 1995-<script type="text/javascript" language="javascript">document.write(KHcopyDate);</script> The Nemoormation on KidsHealth&#174; is for educational purposes only. For specific medical advice, diagnoses, and treatment, consult your doctor.</p><p>&#169urs Foundation. All rights reserved.</p><div id="kh_footer_image_credits">
+					Images provided by The Nemours Foundation, iStock, Getty Images, Corbis, Veer, Science Photo Library, Science Source Images, Shutterstock, and Clipart.com
+				</div><script type="text/javascript">
+			function getCurrentDate(){
+			var nwDate = new Date();
+			return nwDate.getFullYear();
+			//test
+			}
+		</script></div></div>
+	
+		<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-T4Ks3kAYmHaDA"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="http://pixel.quantserve.com/pixel/p-T4Ks3kAYmHaDA.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+			
+	</body></html>
+t:"p-T4Ks3kAYmHaDA"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="http://pixel.quantserve.com/pixel/p-T4Ks3kAYmHaDA.gif" border="0" height="1" width="1" al

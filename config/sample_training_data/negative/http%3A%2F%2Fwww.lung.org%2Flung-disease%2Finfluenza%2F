@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:fb="https://www.facebook.com/2008/fbml">
+<head prefix="og: http://ogp.me/ns# object: http://ogp.me/ns/object#">
+
+
+
+
+
+<meta name="generator" content="Convio CMS" /> 
+<script language="JavaScript" type="text/javascript" src="/components/cookie/cookie.js"></script>
+
+
+<script language="JavaScript" type="text/javascript" src="/components/print/printer-friendly.js"></script>
+
+
+
+<script type="text/javascript">
+if (typeof CONVIO=="undefined" || ! CONVIO) { var CONVIO = {}; }
+CONVIO.pageUserName = '3264:0';
+CONVIO.pageSessionID = 'E21C603BD890ABAE850D42FF726EE9B5.app331a';
+CONVIO.pageSessionName = 'JSESSIONID';
+</script>
+
+<script type="text/javascript" src="/system/auth/session-status.jsp?nocache=1420620326007"></script>
+<script type="text/javascript">
+
+// The original referrer may have been lost from the session-status.jsp javascript redirect.
+// Read the original referrer from the cookie.
+if (typeof CONVIO=="undefined" || ! CONVIO) { var CONVIO = {}; }
+CONVIO.referrer = getCookie("CONVIO.referrer");
+deleteCookie("CONVIO.referrer");
+</script>
+
+
+
+<!-- Convio's CRM JS library -->
+<script type="text/javascript" src="http://action.lung.org/js/utils.js"></script>
+
+
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+<meta property="og:title" content="Influenza - American Lung Association" />
+<meta property="og:type" content="non_profit" />
+<meta property="og:url" content="http://www.lung.org/lung-disease/influenza/" />
+
+
+<meta property="og:image" content="http://www.lung.org/assets/images/logos/alalogo-facebook-share.jpg" />
+
+<meta property="og:description" content="Influenza, or flu, is a serious respiratory illness. It is easily spread from person to person and can lead to severe complications, even death." />
+
+<meta property="og:site_name" content="American Lung Association" />
+<meta property="fb:app_id" content="210438675660265" />
+
+<meta content="secure3.convio.net/bfre/site/" name="linksite_{Secure}"/>
+
+<link rel="SHORTCUT ICON" href="http://www.lung.org/assets/images/favicon.ico"/>
+<link rel="stylesheet" type="text/css" media="all" href="http://www.lung.org/assets/css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="http://www.lung.org/assets/css/styles.css" id="regular"/>
+<link rel="stylesheet" type="text/css" media="print" href="http://www.lung.org/assets/css/print.css" />
+<link rel="alternate stylesheet" type="text/css" media="screen" href="/assets/css/font-larger.css" title="larger" id="larger" rev="stylesheet"/>
+<link rel="alternate stylesheet" type="text/css" media="screen" href="/assets/css/font-largest.css" title="largest" id="largest" rev="stylesheet"/>
+<link rel="alternate stylesheet" type="text/css" media="screen" href="/assets/css/print.css" title="Print Preview" id="printPreviewStyle" rev="stylesheet"/>
+<!-- <link rel="stylesheet" href="http://www.lung.org/assets/css/collapse-css.css" /> -->
+<!-- <link rel="image_src" href="http://www.lung.org/assets/images/american-lung-association-thumbnail.png" /> -->
+
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+<script type="text/javascript" src="/assets/js/css_browser_selector.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+function getCookie(name) {
+  if (document.cookie.length > 0) {
+    var start = document.cookie.indexOf(name + "=");
+    if (start != -1) { 
+      start = start + name.length + 1; 
+      var end = document.cookie.indexOf(";", start);
+      if (end == -1) end = document.cookie.length;
+      return unescape(document.cookie.substring(start, end));
+    } 
+  }
+  ret
+    if (start != urn "";
+}
+
+</script>
+<script type="text/javascript">
+<!-- Gracefully hide from old browsers
+var this_weekday_name_array = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday") //predefine weekday names
+var this_month_name_array = new Array("January","February","March","April","May","June","July","August","September","October","November","December") //predefine month names
+var this_date_timestamp=new Date() //get current day-time stamp
+var this_weekday = this_date_timestamp.getDay() //extract weekday
+var this_date = this_date_timestamp.getDate() //extract day of month
+var this_month = this_date_timestamp.getMonth() //extract month
+var this_year = this_date_timestamp.getYear() //extract year
+if (this_year < 1000)
+	this_year+= 1900; //fix Y2K problem
+if (this_year==101)
+	this_year=2001; //fix Netscape browsers - it displays the year as being the year 101!
+var copyright_string = this_year //concat long date string
+// -->
+</script>
+<script type="text/javascript">addOnLoadHandler(addLinkerEvents);</script>
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/assets/css/ie8.css" /><![endif]-->
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="all" href="/assets/css/ie7.css" /><![endif]-->
+<!--[if  IE 6]><link rel="stylesheet" type="text/css" media="all" href="/assets/css/ie6.css" /><![endif]-->
+<!-- update for lung disease finder results-->
+
+
+
+
+<title>Influenza - American Lung Association</title>
+
+<meta name="keywords" content="influenza, flu, the flu, seasonal flu, pneumonia, cold or flu, do I have the flu" />
+<meta name="description" content="Influenza, or flu, is a serious respiratory illness. It is easily spread from person to person and can lead to severe complications, even death." />
+
+
+</head>
+<body class="subpage"><!-- SUBPAGE -->
+<!-- Adding universal version of Google Analytics embed code on just the Donate landing page -->
+
+<a name="top"></a>
+<div id="wrapper"><!-- WRAPPER -->
+<div id="header"><!-- HEADER -->
+<h1><a href="http://www.lung.org"><img src="http://www.lung.org/assets/images/wrpr/header-logo.png" width="184" height="79" alt="American Lung Association - Fighting For Air" class="logo"/></a></h1>
+<!-- /* Upper Midwest Give-A-Car Conditional */ -->
+
+<div id="item-57189578" style="DISPLAY: inline">
+
+
+
+
+
+  
+
+<ul id="topnav">
+  <li id="first-topnav"><a href="http://www.lung.org/about-us/" title="About Us">About Us</a><span class="stick">|</span></li>
+  <li><a href="http://www.lung.org/about-us/publications">Publications</a><span class="stick">|</span></li>
+  <li><a href="http://www.lung.org/press-room/" title="Press Room">Press Room</a><span class="stick">|</span></li>
+  <li id="spanish"><a href="http://www.lung.org/espanol/" title="Bienvenidos a la American Lung Association!">Recursos en Espa&ntilde;ol</a><span class="stick">|</span></li>
+  <li id="last-topnav">
+    
+     <a href="http://action.lung.org/site/UserLogin?NEXTURL=http://www.lung.org/lung-disease/influenza/index.jsp" class="lock">My Lung.org Login</a> 
+    
+  </li>
+</ul>
+
+</div>
+<div id="search"><!-- SEARCH -->
+<form name="searchform" id="searchform" action="http://action.lung.org/site/Search" method="get">
+<input type="text" name="query" maxlength="100" class="text" value="Search" onfocus="if (this.value=='Search') {this.value='';}" />
+<input type="image" src="http://www.lung.org/assets/images/wrpr/go.gif" value="Go" class="go"/>
+</form>
+</div><!-- #SEARCH -->
+<!-- /* Upper Midwest Give-A-Car Conditional */ -->
+
+<div id="item-57605977" style="DISPLAY: inline">
+
+
+
+
+
+  
+
+<ul class="nav" id="nav">
+<li><a class="nav-yourlungs" href="http://www.lung.org/your-lungs/">Your Lungs</a></li> 
+<li><a class="nav-lungdisease" href="http://www.lung.org/lung-disease/">Lung Disease</a></li> 
+<li><a class="nav-findingcures" href="http://www.lung.org/finding-cures/">Finding Cures</a></li> 
+<li><a class="nav-healthyair" href="http://www.lung.org/healthy-air/">Healthy Air</a></li> 
+<li><a class="nav-stopsmoking" href="http://www.lung.org/stop-smoking/">Stop Smoking</a></li> 
+<li class="getinvolved"><a href="http://www.lung.org/get-involved/">Get Involved</a></li> 
+<li class="donate"><a href="http://www.lung.org/donate/">Donate</a></li></ul>
+</div>
+</div><!-- #HEADER -->
+<div id="page" class="layout-section"><!-- PAGE -->
+<div id="subnav-column"><!-- SUBNAV-COLUMN -->
+<script type="text/javascript">
+var local = getCookie("alaChapter");
+var name = getCookie ("alaName");
+if (local != "") {
+  document.write('<p class="returntochapter"><a href="' + local + '">'+ name+ ' - Home</a></p>');
+} 
+</script>
+<div class="subnav-sect"><!-- SUBNAV-SECT -->
+<div id="sectionNavigation-75321233" style="DISPLAY: inline">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+     
+     
+	 
+	 
+     <h3 class="nav-sectionname"><a href="http://www.lung.org/lung-disease/">Lung Disease</a></h3>
+     <ul class="subnav">
+     
+       
+        
+        
+     
+     
+     
+	 
+	 
+       
+         
+         
+            
+            <li><a href="http://www.lung.org/lung-disease/asthma/">Asthma</a></li>
+          
+        
+        
+        
+     
+     
+     
+	 
+	 
+       
+         
+         
+            
+            <li><a href="http://www.lung.org/lung-disease/copd/">COPD</a></li>
+          
+        
+        
+        
+     
+     
+     
+	 
+	 
+       
+          
+            
+            <li class="on"><a href="http://www.lung.org/lung-disease/influenza/">Influenza</a></li>
+         
+          
+        
+        
+        
+     
+     
+     
+	 
+	 
+       
+         
+         
+            
+            <li><a href="http://www.lung.org/lung-disease/lung-cancer/">Lung Cancer</a></li>
+          
+        
+        
+        
+     
+     
+     
+	 
+	 
+       
+         
+         
+            
+            <li><a href="http://www.lung.org/lung-disease/disparities-reports/">Disparities Reports</a></li>
+          
+        
+        
+        
+     
+     
+     
+	 
+	 
+       
+         
+         
+            
+            <li><a href="http://www.lung.org/lung-disease/finder.html">Lung Disease Finder</a></li>
+          
+        
+        
+        
+     
+     
+     
+	 
+	 
+       
+         
+         
+            
+            <li><a href="http://www.lung.org/lung-disease/list.html">Lung Disease List</a></li>
+          
+        
+        
+        
+     
+     </ul>
+</div>
+</div><!-- #SUBNAV-SECT -->
+<div id="item-76833853" style="DISPLAY: inline">
+
+
+
+
+
+  
+
+<h3>Lung HelpLine</h3>
+<p>Questions about your lung health? Need help finding healthcare? Ask an&nbsp;expert.<br />Call <a href="tel:18005864872" style="white-space: nowrap;">1-800-LUNGUSA</a>  or<br /><a href="tel:18005864872" style="white-space: nowrap;">1-800-586-4872</a>.<br /><a href="http://www.lung.org/about-us/lung-helpline.html" class="highlight" title="Lung HelpLine">&raquo;&nbsp;Learn&nbsp;More</a></p>
+</div>
+<!-- E-NEWSLETTER -->
+
+<div id="item-76834019" style="DISPLAY: inline">
+
+
+
+
+
+  
+
+<H3>E-Newsletter</H3>
+<P>Receive the latest information on lung health and healthy air&nbsp;in your&nbsp;email.<BR><A class=highlight href="http://www.lung.org/get-involved/sign-up.html">&raquo; Register for ENews</A></P>
+</div>
+</div><!-- #SUBNAV-COLUMN -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contentDiv">
+
+
+<script type="text/javascript" src="/components/form/form.js"></script>
+
+<div id="content">
+   <div id="breadcrumbs"><div id="breadcrumb-57863998" style="DISPLAY: inline">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="breadcrumbComponent">      
+
+    <a class="breadcrumb" href="/">Home</a>&nbsp;<span class="breadcrumbseparator">></span>&nbsp;<a class="breadcrumb" href="/lung-disease/">Lung Disease</a>&nbsp;<span class="breadcrumbseparator">></span>&nbsp;<a class="breadcrumb" href="/lung-disease/influenza/">Influenza</a>
+
+  
+
+</span>
+</div></div>
+  <div id="content-well">
+    <h2>Influenza</h2>
+    
+      <p>Influenza, or flu, is a serious respiratory illness. It is easily spread from person to person and can lead to severe complications, even death.</p>
+<p>We ALL are at risk for getting and spreading the flu. Having the flu may keep you home from work or school. If you have asthma or other lung diseases, you are at higher risk of developing complications from the flu.</p>
+<p>Each year in the U.S., influenza and its related complications result in an estimated 226,000 hospitalizations and anywhere from around 3,000 to 49,000 deaths.</p>
+<ul>
+<li><a href="http://www.lung.org/lung-disease/influenza/understanding-influenza.html" title="Understanding Influenza">Understanding Influenza</a></li>
+<li><a href="http://www.lung.org/lung-disease/influenza/symptoms-diagnosis-treatment.html" title="Symptoms, Diagnosis and Treatment">Symptoms, Diagnosis and Treatment</a></li>
+<li><a href="http://www.lung.org/lung-disease/influenza/preventing-influenza.html" title="Preventing Influenza">Preventing Influenza</a></li>
+<li><a href="http://www.lung.org/lung-disease/influenza/in-depth-resources/" title="In-Depth Resources">In-Depth Resources</a></li>
+</ul>
+<p>Health officials recommend that everyone six months of age and older receive an influenza vaccination each and every year. Most likely, this includes you and your entire family.</p>
+<p>We encourage you to speak with your healthcare provider to learn more about influenza and annual vaccination.</p>
+<h2>Flu Vaccine Finder</h2>
+<p>Finding a flu clinic is easy with the Flu Vaccine Finder. If you are a provider of flu vaccine you may also sign up to list your clinics on the Flu Vaccine Finder. <a class="highlight" href="http://www.lung.org/lung-disease/influenza/flu-vaccine-finder/" title="Find a Flu Shot">&raquo; Learn more</a></p>
+<p></p>
+<div style="text-align: center; background-color: #efefef; margin-top: 20px; padding: 5px 5px 0px 5px; border: solid 1px #cccccc; display: block; clear: both;">
+<p style="text-align: center;"><span style="font-family: Verdana, Arial, sans-serif; font-size: 12px; font-weight: normal; line-height: 16px;"><a href="http://www.lung.org/lung-disease/pneumonia/pneumonia-influenza/" title="Relationship between Influenza and Pneumonia">Learn more about the connection between pneumonia and influenza &raquo;</a></span></p>
+</div>
+<!-- Start Quantcast Tag -->
+<script src="https://secure.quantserve.com/quant.js" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+ 
+var _qevents = _qevents || [];
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+_qevents.push(
+{qacct:"p-4AHck-U536KzA",labels:"_fp.event.Influenza Landing Page"}
+);
+// ]]></script>
+<noscript>&lt; img src="/preview!www.lung.org//pixel.quantserve.com/pixel/p-4AHck-U536KzA.gif?labels=_fp.event.Influenza+Landing+Page" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/&gt;</noscript><!-- End Quantcast tag -->
+
+  </div>
+  <!-- content-well -->
+</div>
+<!-- #content -->
+<div id="sidebar">
+  <!-- tools -->
+  <div id="item-57861908" style="DISPLAY: inline">
+
+
+
+
+
+  
+
+<div id="tools">
+        <ul id="font-resizer">
+          <li><a href="javascript:void(0);" class="regular" onclick="setActiveStyleSheet('regular'); return false;">A</a></li>
+          <li><a href="javascript:void(0);" class="larger" onclick="setActiveStyleSheet('larger'); return false;">A</a></li>
+          <li><a href="javascript:void(0);" class="largest" onclick="setActiveStyleSheet('largest'); return false;">A</a></li>
+        </ul>
+<script type="text/javascript">var myttl = document.getElementsByTagName("title")[0].innerHTML; var addthis_pub="americanlungassoc"; var addthis_disable_flash = true;</script>
+        <a href="http://www.addthis.com/bookmark.php"   class="share" onMouseOver="return addthis_open(this, '', '', myttl);" onMouseOut="addthis_close();" onClick="return addthis_sendto();">Share</a>
+        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js"></script>
+        <!-- AddThis Button END -->
+        <script type="text/javascript">
+if (brow=='Safari') {var addthis_offset_top = 0;}else {var addthis_offset_top = -10;}var addthis_offset_left = 0;
+var addthis_header_color = "#ffffff";
+var addthis_header_background = "#6caede";
+var addthis_options = 'email, facebook, twitter, delicious, digg, favorites, google, myspace, stumbleupon, more';
+
+</script>
+
+
+<div id="printer_friendly-407375106" style="DISPLAY: inline">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN: Printer-Friendly -->
+
+  <a class="printerFriendlyLink" href="javascript:doPrinterFriendly()">Print</a>
+
+<!-- END: Printer-Friendly -->
+
+</div>
+</div>
+
+</div>
+  <div id="sidebar-content">
+    
+    
+  
+
+<style>
+#promo-slot-1 .promo, #promo-slot-2 .promo, #promo-slot-3 .promo, .more-disease {display: none;}
+</style>
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------- Promo Slot 1 -->
+
+<div id="promo-slot-1" >
+<!--This is the disease match-->
+<div id="templatelist-210822140" style="display: inline;">
+
+
+
+
+  
+
+</div>
+
+<!--This is the global match-->
+<div id="templatelist-210822708" style="display: inline;">
+
+
+
+
+  
+
+
+
+
+
+<div class="promo clearfix">
+
+<h3>State of the Air 2014</h3>
+
+
+
+
+<p><a href="http://www.stateoftheair.org" target="_blank"><img alt="State of the Air 2014" border="0" src="http://www.lung.org/assets/images/promo-thumbs/sota2014_promo.jpg" /></a></p>
+
+</div>
+
+
+
+</div>
+</div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------- #Promo Slot 1 -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------- Promo Slot 2 -->
+
+<div id="promo-slot-2" >
+
+
+
+<!--This is the disease match-->
+
+<div id="templatelist-210823793" style="display: inline;">
+
+
+
+
+  
+
+</div>
+
+
+
+<!--This is the global match-->
+
+<div id="templatelist-210824062" style="display: inline;">
+
+
+
+
+  
+
+</div>
+
+
+
+
+</div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------- #Promo Slot 2 -->
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------- Promo Slot 3 -->
+
+<div id="promo-slot-3" >
+
+
+
+<!--This is the disease match-->
+
+<div id="templatelist-210824291" style="display: inline;">
+
+
+
+
+  
+
+</div>
+
+
+
+<!--This is the global match-->
+<div id="templatelist-210824567" style="display: inline;">
+
+
+
+
+  
+
+</div>
+
+
+
+
+</div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------- #Promo Slot 3 -->
+
+<!----------------------------------------------------------------------------------------------------------------------------------SCRIPT-->
+<script type="text/javascript">
+//Find promo slots and show first item only
+function togglePromos() 
+{
+                for (i=0;i<=5;i++) 
+                {
+                                var promoName = 'promo-slot-'+i;
+                                if(document.getElementById(promoName)) {//div#promo-slot-N 
+                                                pm = document.getElementById(promoName);
+                                                for (var ac = pm.childNodes, ai = 0, aj = ac && ac.length || 0, ae; ai < aj; ai++) {
+                                                                if (ac[ai].nodeType === 1) { //div#templatelist-N
+                                                                                pmc = ac[ai];
+                                                                                for (var bc = pmc.childNodes, bi = 0, bj = bc && bc.length || 0, be; bi < bj; bi++) {
+                                                                         pmc = ac[ai];                                                                                             if (bc[bi].nodeType === 1) { //div.promo
+                                                                                                                pmgc = bc[bi];
+                                                                                                                pmgc.style.display="block"; 
+                                                                                                                ai=99; //break tempaltelist-N
+                                                                                                                break;   //break div.promo                                                                          
+                                                                                                }
+                                                                                }
+                                                                }                                              
+                                                }
+                                                
+                                }
+                }
+}
+togglePromos();
+</script>
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------#SCRIPT-->
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------Local Promos-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------#Local Promos-->
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------Top Stories-->
+
+
+
+<!--show disease top stories-->
+<div id="templatelist-210826389" style="display: inline;">
+
+
+
+
+  
+
+
+<!--I have top stories to match-->
+<style>
+#top-stories-issue-topic-page {display: none;}
+</style>
+<div class="promo"><!-- PROMO -->
+<h3 class="disease-headline">Top Stories</h3>
+<p class="more-disease"><strong> News:</strong></p>
+<ul>
+
+<li>
+
+
+
+<a href="http://www.lung.org/about-us/our-impact/top-stories/vaccination-still-best-way-to-avoid-flu.html">Vaccination Still Best Way to Avoid Flu</a>
+
+
+December&nbsp;30,&nbsp;2014
+
+</li>
+
+<li>
+
+
+
+<a href="http://www.lung.org/about-us/our-impact/top-stories/RAN-Awards-2014.html">Lung Association Is Proud to Announce Research Awards </a>
+
+
+November&nbsp;6,&nbsp;2014
+
+</li>
+
+<li>
+
+
+
+<a href="http://www.lung.org/about-us/our-impact/top-stories/flu-season-time-to-get-vaccinated-2014.html">Flu Season - Time to Get Vaccinated</a>
+
+
+October&nbsp;8,&nbsp;2014
+
+</li>
+
+</ul>
+
+<a href="http://www.lung.org/about-us/our-impact/top-stories/?association=&disease=" class="highlight">&raquo;&nbsp;More</a></div>
+
+
+</div>
+
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------#Top Stories-->
+
+
+
+    
+  </div>
+  <!--#sidebar-content-->
+</div>
+<!-- #sidebar -->
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/system/components/logging/logging.js"></script>
+
+
+
+
+
+
+				 
+
+
+</div><!-- #PAGE -->
+<div id="footer"><!-- FOOTER -->
+<!-- /* Upper Midwest Give-A-Car Conditional */ -->
+
+<div id="item-57864687" style="DISPLAY: inline">
+
+
+
+
+
+  
+
+<div id="org-info"><!-- ORG-INFO -->
+<strong>American Lung Association</strong><br />55 W. Wacker Drive, Suite 1150, Chicago, IL 60601<br />T: <a href="tel:18005864872" style="color: #000000; text-decoration: none;">1-800-LUNGUSA</a> | F: <a href="fax:2024251805" style="color: #000000; text-decoration: none;">202-452-1805</a> | <a href="http://www.lung.org/about-us/contact-us.html" title="Contact Us">Contact Us</a><br /><img src="http://www.lung.org/assets/images/wrpr/charitynavigator-bbb.gif" border="0" style="margin-top: 10px;" alt="Charity Navigator">
+</div><!--#ORG-INFO-->
+<div id="links-info"><!-- LINKS-INFO -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td align="right">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td><font style="font-size: 10px;"><strong>Connect with Us:</strong></font></td>
+<td width="8"></td>
+<td><a href="http://www.lung.org/rss/" title="RSS Feeds"><img src="http://www.lung.org/assets/images/wrpr/rss-icon.gif" border="0" alt="RSS"></a></td>
+<td width="7"></td>
+<td><a href="http://www.facebook.com/lungusa" target="_blank"><img src="http://www.lung.org/assets/images/wrpr/facebook-icon.gif" border="0" alt="Facebook"></a></td>
+<td width="7"></td>
+<td><a href="http://twitter.com/lungassociation" target="_blank"><img src="http://www.lung.org/assets/images/wrpr/twitter-icon.gif" border="0" alt="Twitter"></a></td>
+<td width="7"></td>
+<td><a href="http://www.youtube.com/user/americanlung" target="_blank"><img src="http://www.lung.org/assets/images/wrpr/youtube-icon.gif" border="0" alt="YouTube"></a></td>
+<td width="7"></td>
+<td><!-- Place this code where you want the badge to render. -->
+<a href="https://plus.google.com/117579164691479256809/posts" rel="publisher" target="_blank" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border:0;width:16px;height:16px;"/></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+American Lung Association &copy;<script language="JavaScript">document.write(copyright_string)</script><br /><a href="http://www.lung.org/rss">RSS</a> | <a href="http://www.lung.org/about-us/terms-of-use.html" title="Terms of Use">Terms of Use</a> | <a href="http://www.lung.org/about-us/privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
+</div><!-- #LINKS-INFO -->
+</div>
+</div><!-- #FOOTER -->
+<div id="poweredBy" style="DISPLAY: inline">
+
+
+
+
+
+<!-- BEGIN: Powered By -->
+<style type="text/css">
+#cv-poweredBy {
+  text-align: center;
+}
+
+#cv-poweredBy a {
+  color: #ccc;
+  font-family: arial,sans-serif;
+  font-size: 9px;
+  text-decoration: none;
+}
+</style>
+
+<div id="cv-poweredBy">
+  <a href="http://www.convio.com" title="online fundraising, advocacy &amp; donor database">
+    <img src="/assets/poweredby.gif" border="0" alt="Powered by Convio" /><br />
+    nonprofit software</a>
+</div>
+<!-- END: Powered By -->
+</div>
+</div><!-- #WRAPPER -->
+
+<!-- Hiding old versions of Google Analytics embed code on just the Donate landing page -->
+
+
+  <!-- /* Upper Midwest Give-A-Car Conditional */ -->
+  
+  
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  
+  
+  <script type="text/javascript">
+  try{
+  var nationalTracker = _gat._getTracker("UA-2228733-13");
+  nationalTracker._setAllowLinker(true);
+  nationalTracker._setAllowHash(false);
+  if (CONVIO.referrer.length > 0) { 
+      nationalTracker._setReferrerOverride(CONVIO.referrer); 
+  }
+  nationalTracker._trackPageview();
+  } catch(err) {}
+  if ( document.location.href.indexOf("lung.org") != -1 ) {
+       nationalTracker._setDomainName(".lung.org");
+  } else {
+       nationalTracker._setDomainName("none");
+  }
+  </script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2228733-13']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  
+  
+
+
+
+<!-- EOY Giving Pop-Up -->
+<div id="item-602183798" style="display: inline;">
+
+
+
+
+
+  
+
+<!-- Slide Toggle Ad Script + Styles Starts -->
+<style>
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,700italic);
+
+#promo {padding-top: 264px; }
+
+.slide {width: 100% !important; /*margin-top: 100px;*/ position: fixed; bottom: 0px; left: 0px;}
+
+#slidebutton {background-color: transparent !important; width: 912px; margin: 0 auto 0 auto; border: none; text-align: right; cursor: pointer; z-index: 505; padding: 0; position: relative; top: 36px;}
+
+button img {width: 22px; margin: 0px; padding: 0px;}
+
+.slide .inner {text-align: left; background: transparent url('http://www.lung.org/assets/images/promo-thumbs/eoy-popup-bckgrnd.png') repeat-x 0 18px; width: 100% !important; height: 216px; z-index: 501;}
+
+.inner #HCsquare {background-color: #ffffff; -moz-box-shadow: 0px 0px 0px 0px #ffffff; -webkit-box-shadow: 0px 0px 0px 0px #ffffff; box-shadow: 0px 0px 0px 0px #ffffff; width: 892px; height: 198px; margin-left: auto; margin-right: auto; padding-top: 18px; padding-left: 24px; padding-right: 24px; z-index: 502;}
+
+/*.inner #HCsquare img {margin: 23px 0 0 21px; padding: 0px; float: left;}*/
+
+/*.inner #HCsquare img.float {margin: -19px 0 0 0; padding: 0; float: right;}*/
+
+/*.inner #HCsquare a#link img {width: 217px; height: 37px; margin: 0; padding: 0px; z-index: 506; margin-top: -35px; position: relative; left: 540px;}*/
+
+.inner #HCsquareInner {background-color: #bad80a; width: 480px; margin-right: 12px; padding-bottom: 18px; border-top-left-radius: 12px; border-bottom-right-radius: 12px; display: inline-block; float: left;}
+
+.inner #HCsquareInner p {font-family: 'Lato', sans-serif; font-weight: 400; font-size: 15px; color: #555559; line-height: 18px; text-align: left; width: inherit; margin: 18px 0 0 0; padding: 0; position: relative; left: 54px;}
+
+.inner #HCsquareInner p strong {font-size: 16px; text-transform: uppercase;}
+
+.inner #HCsquareInner p img {width: 400px; margin: -6px 0px 0px 0px; position: relative; left: -18px;}
+
+.inner #HCsquareBlock {background-color: #555559; width: 374px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; display: inline-block; float: left;}
+
+.inner #HCsquareBlock p {font-family: 'Lato', sans-serif; font-weight: 400; font-size: 15px; color: #ffffff; line-height: 21px; text-align: center; margin: 0; padding: 18px 18px 30px 18px;}
+
+.inner #HCsquareBlock p a {font-family: 'Lato', sans-serif; font-weight: 900; font-size: 16px; color: #ffffff; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; background-color: #ed1b2d; margin-left: 24px; margin-right: 24px; margin-bottom: -20px; padding: 18px 30px; border-radius: 6px; position: relative; top: 6px; display: block;}
+
+.inner #HCsquareBlock p a:hover {background-color: #00a5db;}
+
+.js #slidebottom .inner, .js #slidebottom #slidebutton {display: none;}
+--&gt;</style>
+<div id="promo" style="display: none;">
+<div class="slide" id="slidebottom"><button id="slidebutton" onclick="this.style.display = 'none'"><img border="0" src="http://www.lung.org/assets/images/promo-thumbs/reason-to-give-close.png" /></button>
+<div class="inner">
+<div id="HCsquare">
+<div id="HCsquareInner"><p><strong>Reason #33:</strong><br />Because 33 million people suffer from chronic lung disease.</p>
+<p><img src="http://www.lung.org/assets/images/promo-thumbs/reason-to-give-txt.png" border="0" /></p>
+</div>
+
+<div id="HCsquareBlock">
+<p><a href="http://action.lung.org/site/Donation2?df_id=25961&25961.donation=form1" onClick="_gaq.push(['_trackEvent', 'End-of-Year', 'Pop-Up', 'Interior']); this.style.display = 'none';">Make a Donation</a></p>
+<p>Help fund research, programs, advocacy and <em>hope</em> with a donation to the American Lung Association.</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">// <![CDATA[
+function setCookie(c_name, value, exdays) {
+	var exdate = new Date();
+	if (exdays) exdate.setDate(exdate.getDate() + exdays);
+    var c_value = escape(value) + ((exdays) ? '; expires=' + exdate.toUTCString() : '');
+	document.cookie = c_name + "=" + c_value + "; path=/";
+}
+function getCookie(name) {
+    var re = new RegExp(name + "=([^;,]+)");
+    var value = re.exec(document.cookie);
+    return (value !== null) ? unescape(value[1]) : null;
+}
+if (!getCookie('sawEoyPromo01')) {
+    document.getElementById('promo').style.display = 'block';
+}
+document.getElementById('promo').getElementsByTagName('a')[0].onclick = function () {
+document.getElementById('promo').style.display = 'none';
+setCookie('sawEoyPromo01', '1', 60);
+};
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+document.documentElement.className = 'js';
+// ]]></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+$(document).ready(function() {
+$('.inner').slideToggle();
+$('#slidebutton').slideToggle();
+});
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+$(document).ready(function() {
+$('#slidebottom button').click(function() {
+$(this).next().slideToggle();
+setCookie('sawEoyPromo01', '1', 30);
+});
+});
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+function hideToggle() {
+document.getElementById('slidebottom').style.display='none';
+document.getElementById('slidebutton').style.display='none';
+};
+// ]]></script>
+<!-- Slide Toggle Ad Script + Styles Ends -->
+</div>
+
+</body>
+</html><!-- Powered by Convio -->
+<!-- 10.12.0.40:8901 -->
+
+mentById('slidebottom').style.display='none';
+document.getElementById('slidebutton').style.display='none';
+};
+// ]]></script>
+<!-- Slide Toggle Ad Script + Styles Ends -->
+</div>
+
+</body

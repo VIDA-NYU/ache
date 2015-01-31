@@ -1,0 +1,2174 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Flu conference, flu Congress in USA, Flu congress, Influenza, Flu 2015, International Flu Conference, world flu conference, influenza USA , USA vaccines studies, flu conference in Chicago, flu research, scientific conference flu, flu vaccine, flu vaccinations, anti-viral, anti-retro viral , infectious diseases, pandemic influenza, influenza epidemic, influenza research, virology , Flu conference 2016, Flu conference chicago,Flu conference india, Flu conference brussels, Flu conference las vegas,Flu conference london
+"/>
+<meta name="description" content="Influenza 2015 conference, will be organized during  June 8-10, 2015 at Chicago, USA on the theme Understanding the Flu; pathology, prevention, containment and risk analysis"/>
+<title>Medical Conferences | Flu 2015 | Chicago|USA |OMICS Group</title>
+
+<link href="css/2015-styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.10.2.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/fadeslideshow.js"></script>
+
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+</head>
+
+<body>
+
+<div class="main">
+	<div class="main-inner">
+        
+
+
+
+
+
+<head>
+<style>
+.dropdown:hover>a {
+	background: #f2f2f2;
+	color: #696464;
+}
+.top-search {
+	margin: 0 0px 10px 0;
+float: right;
+
+position: relative;
+z-index: 100;
+}
+#top-search-form {
+	/*background: #e1e1e1; /* Fallback color for non-css3 browsers 
+	 Gradients 
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0, rgb(243,243,243)), color-stop(1, rgb(225,225,225)));
+	background: -moz-linear-gradient( center top, rgb(243,243,243) 0%, rgb(225,225,225) 100%);*/
+	/* Rounded Corners */
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	/* Shadows 
+	box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);
+	-moz-box-shadow: 1px 1px 2px rgba(0,0,0,.3), 0 0 2px rgba(0,0,0,.3);*/
+}
+/*** TEXT BOX ***/
+#keyword {
+	background: #fafafa; /* Fallback color for non-css3 browsers */
+	/* Gradients */
+	background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(250,250,250)), color-stop(1, rgb(230,230,230)));
+	background: -moz-linear-gradient( center top, rgb(250,250,250) 0%, rgb(230,230,230) 100%);
+	float: left;
+	border: 0;
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid rgba(255,255,255,.8);
+	font-size: 12px;
+	margin: 4px;
+	padding: 4px;
+	width: 210px;
+	/* Rounded Corners */
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	/* Shadows */
+	box-shadow: -1px -1px 2px rgba(0,0,0,.3), 0 0 1px rgba(0,0,0,.2);
+	-webkit-box-shadow: -1px -1px 2px rgba(0,0,0,.3), 0 0 1px rgba(0,0,0,.2);
+	-moz-box-shadow: -1px -1px 2px rgba(0,0,0,.3), 0 0 1px rgba(0,0,0,.2);
+}
+/*** USER IS FOCUSED ON TEXT BOX ***/
+#keyword:focus {
+	outline: none;
+	background: #fff; /* Fallback color for non-css3 browsers */
+	/* Gradients */
+	background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(255,255,255)), color-stop(1, rgb(235,235,235)));
+	background: -moz-linear-gradient( center top, rgb(255,255,255) 0%, rgb(235,235,235) 100%);
+}
+/*** SEARCH BUTTON ***/
+#top-search-form input[type="submit"] {
+	background: #1a6fab;
+	background-image: -moz-linear-gradient(#2a95d9, #0776bc);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #0776bc), color-stop(1, #2a95d9));
+	border: 1px solid #006b9c;
+	color: #eee;
+	cursor: pointer;
+	float: left;
+	font: 14px Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	height: 25px;
+	margin: 4px 4px 0;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+
+	outline: none;
+	/* Rounded Corners */
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	/* Shadows */
+	box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
+	-moz-box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.2);
+	-webkit-box-shadow: -1px -1px 1px rgba(255,255,255,.5), 1px 1px 0 rgba(0,0,0,.4);
+}
+/*** SEARCH BUTTON HOVER ***/
+#top-search-form input[type="submit"]:hover {
+	background: #1a6fab;/* Fallback color for non-css3 browsers */
+	/* Gradients */
+	background: #1a6fab;
+	background-image: -moz-linear-gradient(#0776bc, #2a95d9);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2a95d9), color-stop(1, #0776bc));
+	
+}
+#top-search-form input[type="submit"]:active {
+	background: #1a6fab;/* Fallback color for non-css3 browsers */
+	/* Gradients */
+	background: #1a6fab;
+	background-image: -moz-linear-gradient(#0776bc, #2a95d9);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2a95d9), color-stop(1, #0776bc));
+	
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+ *zoom: 1;
+}
+
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48830226-1', 'pharmaceuticalconferences.com');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- search  function   -->
+
+<script language="javascript" type="text/javascript" src="js/jquery.coolautosuggest.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.coolfieldset.js"></script>
+<link rel="stylesheet" type="text/css" href="css/main-coolautosuggest.css" />
+
+<!-- search  function   -->
+
+ 
+</head>
+
+<div class="header">
+            <!--<div class="conf-number">169<sup>th</sup> OMICS Group Conference</div>-->
+        	<div class="logo">
+            <a href="index.php" title="OMICS Group Conferences"></a>
+            </div>
+            <!--<div class="icca"><a href="http://www.iccaworld.com/" target="_blank">&nbsp;</a></div>-->
+            <div class="title">
+            <span class="span1">International Conference on</span><br />
+             Flu<br />
+            <span class="span1">June 08-10, 2015 Chicago, USA </span>
+            </div>
+            <div class="top-search">
+          <form id="top-search-form" method="post" action="http://www.omicsgroup.com/advance_search.php" class="clearfix">
+            <input type="text" name="keyword" id="keyword" placeholder="City, Country, Month and Subject" style="color:#3e3e3e;" required/>
+               <input type="submit" name="search_in" value="Search 300+ Conferences" />
+          </form>
+        </div>
+              </div>
+<div class="clear"></div>
+<link rel="shortcut icon" href="images/animated_favicon.gif" />
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"AQs4j1a4ZP00a6", domain:"conferenceseries.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=AQs4j1a4ZP00a6" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->   
+
+<!--Google Analytics Code Start-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-29271993-7', 'pharmaceuticalconferences.com');
+  ga('send', 'pageview');
+
+</script>
+<!--Google Analytics Code End-->        <div class="clear"></div>
+        <div style="padding-bottom:5px;">
+<link rel="stylesheet" type="text/css" href="css/jqueryslidemenu.css" />
+
+<!--[if lte IE 7]>
+<style type="text/css">
+html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+</style>
+<![endif]--> 
+<script type="text/javascript" src="scripts/jquery-1.10.2.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jqueryslidemenu.js"></script>
+   
+<div id="myslidemenu" class="jqueryslidemenu"> 
+<ul>
+<li><a href="http://omicsgroup.com" title="Home">Home</a></li>
+<li><a href="http://omicsonline.org/about.php" title="About Us">About Us</a></li>
+<li><a href="symposium.php" title="Symposium">Symposium</a></li>
+<li><a href="http://omicsonline.org/open-access.php" title="Open Access">Open Access</a></li>
+<li><a href="#" title="Conferences">Conferences</a>
+	<ul>
+    <li><a href="http://www.omicsgroup.com/" target="_blank" title="Upcoming Conferences">Upcoming Conferences</a></li>
+    <li><a href="http://www.omicsgroup.com/previous.php" title="Previous Conferences" target="_blank">Previous Conferences</a></li>
+    </ul>
+</li>
+<li><a href="#" title="Journals">Journals</a>
+	<ul>
+    <li><a href="http://www.omicsonline.org/open-access-journals-list.php" target="_blank" title="A-Z Journals">A-Z Journals</a></li>
+    <li><a href="http://www.omicsonline.org/scientific-journals.php" target="_blank" title="Browse by Subject">Browse by Subject</a></li>
+    <li><a href="http://www.omicsonline.org/newly-launched-journals.php" target="_blank" title="Newly Launched Journals">Newly Launched Journals</a></li>
+    </ul>
+</li>
+<li><a href="abstract-submission.php" title="Abstract Submission">Abstract</a></li>
+<li><a href="registration.php" title="Registration">Registration</a> </li>
+<li><a href="venue-hospitality.php" title="Venue">Venue</a></li>
+<li><a href="#" title="Supporters">Supporters</a>
+    <ul>
+    <li><a href="http://www.omicsonline.org/sponsors-2013.php" title="2013 Supporters" target="_blank">2013 Supporters</a></li>
+    <li><a href="http://www.omicsonline.org/sponsors-2012.php" title="2012 Supporters" target="_blank">2012 Supporters</a></li>
+    <li><a href="http://www.omicsonline.org/sponsors-2011.php" title="2011 Supporters" target="_blank">2011 Supporters</a></li>
+    </ul>
+</li>
+<li><a href="faq.php" title="FAQ's">FAQ's</a></li>
+</ul>
+<br style="clear: left" />
+</div>
+
+</a></li>
+    <li><a href="http://www.omicsonline.org/sponsors-2011.php" title="2011 Supporters" target="_blank">2011 Supporters</a></li>
+    </ul>
+</li>
+<li><a href="faq.php" title="FA</div>
+        <div class="clear"></div>
+        <div style="padding-left:5px; padding-top:5px; padding-bottom:3px;">
+        <div style="float:left; width:200px; height:250px; background:url(images/quick-bg.png) no-repeat;">
+        <div class="quickLinks-heading">Quick Links</div>
+<div class="quickLinks"><a href="conference-brochure.php" title="Conference Brochure">Conference Brochure</a></div>
+<div class="quickLinks"><a href="young-researchers-forum.php" title="Young Researchers Forum">Young Researchers Forum</a></div>
+<div class="quickLinks"><a href="poster-competition.php" title="Poster Competition">Poster Competition</a></div>
+<div class="quickLinks"><a href="call-for-abstracts.php" title="Call for Abstracts">Call for Abstracts</a></div>
+<div class="quickLinks"><a href="abstract-submission.php" title="Abstracts Submission">Abstracts Submission&nbsp;<img src="images/new_icon.gif" alt="Abstracts Submission" title="Abstracts Submission"  /></a></div>
+<div class="quickLinks"><a href="registration.php" title="Registration">Registration&nbsp;&nbsp;&nbsp;<img src="images/new_icon.gif" alt="Registration" title="Registration"  /></a></div>
+ 
+            </div>
+        <div style="float:left; padding-left:10px;"><iframe frameborder="0" src="slide-show/demo.htm" width="780" height="250" style="overflow:hidden;" scrolling="no"></iframe></div></div>
+        <div class="clear"></div>
+                <div class="clear"></div>
+        <div class="bodyPart">
+        	<div class="leftMenu">
+			<script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.mousewheel.min.js"></script>
+<script src="scripts/slickcustomscroll.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $( document ).ready( function() {
+		$( "div[rel='upcoming2014']" ).customscroll( { direction: "vertical" } );
+        $( "div[rel='upcoming2015']" ).customscroll( { direction: "vertical" } );
+		$( "div[rel='previous2014']" ).customscroll( { direction: "vertical" } );
+		$( "div[rel='previous2013']" ).customscroll( { direction: "vertical" } );
+		$( "div[rel='previous2012']" ).customscroll( { direction: "vertical" } );
+		$( "div[rel='previous2011']" ).customscroll( { direction: "vertical" } );
+		$( "div[rel='past2014']" ).customscroll( { direction: "vertical" } );
+		$( "div[rel='past2013']" ).customscroll( { direction: "vertical" } );
+		$( "div[rel='past2012']" ).customscroll( { direction: "vertical" } );
+		$( "div[rel='past2011']" ).customscroll( { direction: "vertical" } );
+    });
+</script>
+<script type="text/javascript">
+var mygallery=new fadeSlideShow({
+	wrapperid: "journals", //ID of blank DIV on page to house Slideshow
+	dimn: "vertical" } );
+		$( "div[rel='past2011']" ).cuensions: [204, 279], //width/height of gallery in pixels. Should reflect dimensions of largest image
+	imagearray: [
+		["images/journals/jaa.jpg", "http://www.omicsonline.org/antivirals-antiretrovirals.php", "_new", "Journal of Antivirals & Antiretrovirals"],
+		["images/journals/jcep.jpg", "http://www.omicsonline.org/clinical-experimental-pathology.php", "_new", "Journal of Clinical & Experimental Pathology"],
+		["images/journals/cmo.jpg", "http://www.esciencecentral.org/journals/clinical-microbiology.php", "_new", "Clinical Microbiology: Open Access"],
+		["images/journals/jidt.jpg", "http://www.esciencecentral.org/journals/infectious-diseases-and-therapy.php", "_new", "Journal of Infectious Diseases and Therapy"],
+		["images/journals/virology.jpg", "http://www.omicsonline.org/virology-mycology.php", "_new", "Virology & Mycology"]
+		//<--no trailing comma after very last image element!
+	],
+	displaymode: {type:'auto', pause:2500, cycles:0, wraparound:false},
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 500, //transition duration (milliseconds)
+	descreveal: "ondemand",
+	togglerid: ""
+})
+</script>
+
+<style type="text/css">
+   div[rel='upcoming2014'] { width: 100%; height: 400px;}
+  /* Basic CSS for the elements - If rel is "scrollcontent1", style its scrollbar by referring to ".scrollcontent-content", ".scrollcontent-bar", etc. */
+  .upcoming2014-content { /* background: #eee; */ } /* for vertical content, no explicit width is required for inner DIV */
+  .upcoming2014-bar { width: 11px; background: #d4fcff; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .upcoming2014-drag { background: #0c6269; border-radius: 4px; cursor: pointer; }
+    
+  /* Height & width for the container - The rest is done by the jQuery part. */
+  div[rel='upcoming2015'] { width: 100%; height: 400px;}
+  
+  /* Basic CSS for the elements - If rel is "scrollcontent1", style its scrollbar by referring to ".scrollcontent-content", ".scrollcontent-bar", etc. */
+  .upcoming2015-content { /* background: #eee; */ } /* for vertical content, no explicit width is required for inner DIV */
+  .upcoming2015-bar { width: 11px; background: #d4fcff; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .upcoming2015-drag { background: #0c6269; border-radius: 4px; cursor: pointer; }
+  
+  
+  div[rel='previous2014'] { width: 100%; height: 400px;}
+  /* Basic CSS for the elements - If rel is "scrollcontent1", style its scrollbar by referring to ".scrollcontent-content", ".scrollcontent-bar", etc. */
+  .previous2014-content { /* background: #eee; */ } /* for vertical content, no explicit width is required for inner DIV */
+  .pts - If rel is "scrollcontent1", style its screvious2014-bar { width: 11px; background: #d4fcff; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .previous2014-drag { background: #0c6269; border-radius: 4px; cursor: pointer; }
+  
+  div[rel='previous2013'] { width: 100%; height: 400px;}
+  
+  /* Basic CSS for the elements - If rel is "scrollcontent1", style its scrollbar by referring to ".scrollcontent-content", ".scrollcontent-bar", etc. */
+  .previous2013-content { /* background: #eee; */ } /* for vertical content, no explicit width is required for inner DIV */
+  .previous2013-bar { width: 11px; background: #d4fcff; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .previous2013-drag { background: #0c6269; border-radius: 4px; cursor: pointer; }
+  
+  div[rel='previous2012'] { width: 100%; height: 400px;}
+  
+  /* Basic CSS for the elements - If rel is "scrollcontent1", style its scrollbar by referring to ".scrollcontent-content", ".scrollcontent-bar", etc. */
+  .previous2012-content { /* background: #eee; */ } /* for vertical content, no explicit width is required for inner DIV */
+  .previous2012-bar { width: 11px; background: #d4fcff; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .previous2012-drag { background: #0c6269; border-radius: 4px; cursor: pointer; }
+  
+  div[rel='previous2011'] { width: 100%; height: 400px;}
+  
+  /* Basic CSS for the elements - If rel is "scrollcontent1", style its scrollbar by referring to ".scrollcontent-content", ".scrollcontent-bar", etc. */
+  .previous2011-content { /* background: #eee; */ } /* for vertical content, no explicit width is required for inner DIV */
+  .previous2011-bar { width: 11px; background: #d4fcff; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .previous2011-drag { background: #0c6269; border-radius: 4px; cursor: pointer; }
+  
+  
+  div[rel='past2014'] { width: 100%; height: 400px;}
+  
+  /* Basic CSS for the elements - If rel is "scrollcontent1", style its scrollbar by referring to ".scrollcontent-content", ".scrollcontent-bar", etc. */
+  .past2014-content { /* background: #eee; */ } /* for vertical content, no explicit width is required for inner DIV */
+  .past2014-bar { width: 11px; background: #d4fcff; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .past2014-drag { background: #0c6269; border-radius: 4px; cursor: pointer; }
+  
+  div[rel='past2013'] { width: 100%; height: 400px;}
+  
+  /* Basic CSS for the elements - If rel is "scrollcontent1", style its scrollbar by referring to ".scrollcontent-content", ".scrollcontent-bar", etc. */
+  .past2013-content { /* background: #eee; */ } /* for vertical content, no0%; height: 400px;}
+  
+  /* Basic CSS for t explicit width is required for inner DIV */
+  .past2013-bar { width: 11px; background: #d4fcff; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .past2013-drag { background: #0c6269; border-radius: 4px; cursor: pointer; }
+  
+  div[rel='past2012'] { width: 100%; height: 400px;}
+  
+  /* Basic CSS for the elements - If rel is "scrollcontent1", style its scrollbar by referring to ".scrollcontent-content", ".scrollcontent-bar", etc. */
+  .past2012-content { /* background: #eee; */ } /* for vertical content, no explicit width is required for inner DIV */
+  .past2012-bar { width: 11px; background: #d4fcff; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .past2012-drag { background: #0c6269; border-radius: 4px; cursor: pointer; }
+ 
+   div[rel='past2011'] { width: 100%; height: 400px;}
+  
+  /* Basic CSS for the elements - If rel is "scrollcontent1", style its scrollbar by referring to ".scrollcontent-content", ".scrollcontent-bar", etc. */
+  .past2011-content { /* background: #eee; */ } /* for vertical content, no explicit width is required for inner DIV */
+  .past2011-bar { width: 11px; background: #d4fcff; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; }
+  .past2011-drag { background: #0c6269; border-radius: 4px; cursor: pointer; }
+ 
+  /* Not needed eleed for inner DIV */
+  .past2011-bar { width: 11px; background: #d4fcff; border-radius: 4px; box-shadow: inset 0px 0px 5px #444444; overflow: hidden; ments */
+  #contentwrap { padding: 5px; border: 1px #444444 solid; display: block; width: 300px; border-radius: 10px; }
+  .scrollcontent1-content p, .scrollcontent2-content p {margin:0; padding:0}
+    
+</style>
+<style type="text/css">
+   body{font-size:14px; color:#000000; font-family:Calibri; margin:0px;}
+   h2 {font-weight:bold; color:#000099; margin:10px 0px; }
+   p span {color:#006600; font-weight:bold; }
+   a, a:link, a:visited {color:#0000FF;}
+   textarea {width: 100%; padding: 10px; margin: 10px 0 15px 0; font-size: 13px; font-family: Consolas,monospace;}
+   textarea.html {height: 300px;}
+   p {margin: 0 0 10px 0;}
+   code, pre {font-family: Consolas,monospace; color: green;}
+   ol li {margin: 0 0 15px 0;}
+   .headingMenu{background-color:#0d6a72; color:#FFF; font-size:14px; font-weight:bold; height:35px; line-height:35px; width:189px; padding-left:10px; margin-top:1px; margin-bottom:1px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;}
+</style>
+<style type="text/css">/* Some stylesheet reset */
+#cssmenu  > ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	line-height: 1;
+	z-index:999999;
+}
+
+/* The container */
+#cssmenu  > ul {
+	display: block;
+	position: relative;
+	width: 200px;
+}
+
+	/* The list elements which contail {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	line-height: 1;
+	z-index:999999;
+}
+
+/* The container */
+#cssmenun the links */
+	#cssmenu  > ul li {
+		display: block;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		width: 200px;	
+	}
+
+		/* General link styling */
+		#cssmenu  > ul li a {
+			/* Layout */
+			display: block;
+			position: relative;
+			margin: 0;
+			border-top: 1px solid #fff;
+			border-bottom: 1px solid #cccccc;
+			padding: 10px 20px;
+			width: 160px;
+
+			/* Typography */
+			font-family: Helvetica, Arial, sans-serif;
+			color: #282828;
+			text-decoration: none;
+			text-transform: none;
+			text-shadow: 0 1px 1px #fff;
+			font-size: 13px;
+			font-weight: 300;			
+
+			/* Background & effects */
+			background: #e4e4e4;
+		}
+
+		/* Rounded corners for the first link of the menu/submenus */
+		#cssmenu  > ul li:first-child>a {
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+			border-top: 0;
+		}
+
+		/* Rounded corners for the last link of the menu/submenus */
+		#cssmenu  > ul li:last-child>a {
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+			border-bottom: 0;
+		}
+
+
+		/* The hover state of the menu/submenu links */
+		#cssmenu  > ul li>a:hover, #cssmenu  > ul li:hover>a {
+			color: #fff;
+			text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+			background: #128f9a;
+			background: -webkit-linear-gradient(bottom, #128f9a, #0f7a83);
+			background: -ms-linear-gradient(bottom, #128f9a, #0f7a83); 
+			background: -moz-linear-gradient(bottom, #128f9a, #0f7a83);
+			background: -o-linear-gradient(bottom, #128f9a, #0f7a83);
+			border-color: transparent;
+		}
+
+		/* The arrow indicating a submenu */
+		#cssmenu  > ul .has-sub>a::after {
+			content: '';
+			position: absolute;
+			top: 13px;
+			right: 10px;
+			width: 0px;
+			height: 0px;
+
+			/* Creating the arrow using borders */
+			border: 4px solid transparent;
+			border-left: 4px solid #282828;
+
+		}
+
+		/* The same arrow, but with a darker color, to create the shadow effect */
+		#cssmenu  > ul .has-sub>a::before {
+			content: '';
+			position: absolute;
+			top: 14px;
+			right: 10px;
+			width: 0px;
+			height: 0px;
+
+			/* Creating the arrow using borders */
+			border: 4px solid transparent;
+			border-left: 4px solid #fff;
+		
+		}
+
+		/* Changing the color of the arrow on hover */
+		#cssmenu  > ul li>a:hover::after, #cssmenu  > ul li:hover>a::after {
+			border-left: 4px solid #fff;
+		}
+
+		#cssmenu  > ul li>a:hover::before, #cssmenu  > ul li:hover>a::before {
+			border-left: 4px solid rgba(0, 0, 0, .3);
+		}
+
+	
+		/* THE SUBMENUS */
+		#cssmenu  > ul ul {
+			position: absolute;
+			left: 198px;
+			top: -9999px;
+			padding-left: 5px;
+			opacity: 0;
+			/* The fade effect, created using an opacity transition */
+			-webkit-transition: opacity .3s ease-in;
+			-moz-transition: opacity .3s ease-in;
+			-o-transition: opacity .3s ease-in;
+			-ms-transition: opacity .3s ease-in;
+			-moz-box-shadow:5px 5px 5px #222222;
+			-webkit-box-shadow:5px 5px 5px #222222;
+			box-shadow:5px 5px 5px #222222;
+		}
+
+		/* Showing the submenu when the user is hovering the parent link */
+		#cssmenu  > ul li:hover>ul {
+			top: 0px;
+			opacity: 1;
+		}
+        </style>
+<div id='cssmenu'>
+<ul>
+   <div class="headingMenu">OMICS Group Conferences</div>
+   <!--<li><a href='http://omicsgroup.com/conferences/past-conference-reports/metabolomics-systems-biology-2014-past/' target="_blank"><span><blink>Metabolomics-2014 Past Report</blink></span></a></li>-->
+   <li class='has-sub'><a href='#' title="Upcoming"><span>Upcoming</span></a>
+   <ul>
+         
+         <li class='has-sub'><a href='#' title="2015 Conferences"><span>2015 Conferences</span></a>
+            <ul style="height:400px; width:211px;">
+            <div rel="upcoming2015">
+               ><span>Upcoming</span></a>
+   <ul>
+         
+         <li class='ha
+
+               <li><a href="http://nanotechnology.omicsgroup.com/" title="Nanotechnology-2015" target="_blank">Nanotechnology-2015</a></li>
+            	               <li><a href="http://cytopathology.conferenceseries.com/" title="Cytopathology-2015" target="_blank">Cytopathology-2015</a></li>
+            	               <li><a href="http://glycobiology.conferenceseries.com/" title="Glycobiology-2015" target="_blank">Glycobiology-2015</a></li>
+            	               <li><a href="http://syntheticbiology.conferenceseries.com" title="Synthetic Biology-2015" target="_blank">Synthetic Biology-2015</a></li>
+            	               <li><a href="http://healtheconomics.global-summit.com/" title=" Health Economics 2015" target="_blank"> Health Economics 2015</a></li>
+            	               <li><a href="http://healthcare.global-summit.com/middleeast/" title="Dubai Healthcare-2015" target="_blank">Dubai Healthcare-2015</a></li>
+            	               <li><a href="http://asiapacific.pharmaceuticalconferences.com/" title="Asiapharma-2015" target="_blank">Asiapharma-2015</a></li>
+            	               <li><a href="http://gastro.conferenceseries.com/" title="Gastro-2015" target="_blank">Gastro-2015</a></li>
+            	               <li><a href="http://prostatecancer.cancersummit.org/" title="Prostate Cancer-2015" target="_blank">Prostate Cancer-2015</a></li>
+            	               <li><a href="http://cloudcomputing.conferenceseries.com/" title="Cloud Computing-2015" target="_blank">Cloud Computing-2015</a></li>
+            	               <li><a href="http://nursing.conferenceseries.com/europe/" title="Euro Nursing 2015" target="_blank">Euro Nursing 2015</a></li>
+            	               <li><a href="http://parkinsons.conferenceseries.com/" title="Parkinsons-2015" target="_blank">Parkinsons-2015</a></li>
+            	               <li><a href="http://american.pharmaceuticalconferences.com/" title="American Pharma-2015" target="_blank">American Pharma-2015</a></li>
+            	               <li><a href="http://medicalphysics.conferenceseries.com/" title="Medical Physics-2015" target="_blank">Medical Physics-2015</a></li>
+            	               <li><a href="http://globaleconomics.conferenceseries.com/" title="Global Economics-2015" target="_blank">Global Economics-2015</a></li>
+            	               <li><a href="http://food.indoglobalsummit.com/" title="Food India-2015" target="_blank">Food India-2015</a></li>
+            	               <li><a href="http://middleeast.pharmaceuticalconferences.com/abu-dhabi/" title="Pharmamiddleeast-2015" target="_blank">Pharmamiddleeast-2015</a></li>
+            	               <li><a href="http://mobilecomputing.conf></li>
+            	               <li><a href="hterenceseries.com/" title="Mobile Computing-2015" target="_blank">Mobile Computing-2015</a></li>
+            	               <li><a href="http://vaccines.global-summit.com/asia-pacific" title="Vaccines Aisa Pacific 2015" target="_blank">Vaccines Aisa Pacific 2015</a></li>
+            	               <li><a href="http://molecularimaging-dynamics.conferenceseries.com/" title="Molecular Imaging-2015" target="_blank">Molecular Imaging-2015</a></li>
+            	               <li><a href="http://flu.conferenceseries.com/" title="Flu 2015" target="_blank">Flu 2015</a></li>
+            	               <li><a href="http://painmedicine.conferenceseries.com/" title="Pain Medicine 2015" target="_blank">Pain Medicine 2015</a></li>
+            	               <li><a href="http://vaccines.global-summit.com/middleeast/" title=" Vaccines Dubai-2015" target="_blank"> Vaccines Dubai-2015</a></li>
+            	               <li><a href="http://oil-gas.omicsgroup.com/" title="Oil Gas Expo-2015" target="_blank">Oil Gas Expo-2015</a></li>
+            	               <li><a href="http://petroleum.omicsgroup.com/" title="Petroleum 2015" target="_blank">Petroleum 2015</a></li>
+            	               <li><a href="http://weightloss.global-summit.com/middleeast/" title="Dubai Weight loss-2015" target="_blank">Dubai Weight loss-2015</a></li>
+            	               <li><a href="http://childpsychology.conferenceseries.com/" title="Child Psychology 2015" target="_blank">Child Psychology 2015</a></li>
+            	               <li><a href="http://smartmaterials-structures.conferenceseries.com/" title="Smart Materials 2015" target="_blank">Smart Materials 2015</a></li>
+            	               <li><a href="http://womenhealth.indoglobalsummit.com/" title="Indo Women Healthcare-2015" target="_blank">Indo Women Healthcare-2015</a></li>
+            	               <li><a href="http://humanresilience.omicsgroup.com/" title="Human Resilience 2015" target="_blank">Human Resilience 2015</a></li>
+            	               <li><a href="http://weightloss.indoglobalsummit.com/" title=" Indo Weight loss-2015" target="_blank"> Indo Weight loss-2015</a></li>
+            	               <li><a href="http://biodiversity.conferenceseries.com/" title="Biodiversity 2015" target="_blank">Biodiversity 2015</a></li>
+            	               <li><a href="http://tumormodel.cancersummit.org/" title="Tumor Model-2015" target="_blank">Tumor Model-2015</a></li>
+            	               <li><a href="http://earthscience.conferenceseries.com/" title="Earth Science 2015" target="_blank">Earth Science 2015</a></li>
+            	               <li><a href="http://euroveterinary.omicsgroup.com/" title="Euro Veterinary-2015" target="_blank"   <li><a href="http://earthscience.conferenc>Euro Veterinary-2015</a></li>
+            	               <li><a href="http://languages.global-summit.com/" title="Languages Summit 2015" target="_blank">Languages Summit 2015</a></li>
+            	               <li><a href="http://healthcare.global-summit.com/europe/" title="Euro Healthcare-2015" target="_blank">Euro Healthcare-2015</a></li>
+            	               <li><a href="http://dentalcongress.com/europe/" title="Euro Dental Congress 2015" target="_blank">Euro Dental Congress 2015</a></li>
+            	               <li><a href="http://digitalmarketing-socialmedia-conference.omicsgroup.com/" title="Marketing-2015" target="_blank">Marketing-2015</a></li>
+            	               <li><a href="http://novel-drugdelivery-systems.pharmaceuticalconferences.com/" title="Pharmaceutica-2015" target="_blank">Pharmaceutica-2015</a></li>
+            	               <li><a href="http://eurowomenhealth.global-summit.com" title="Euro Women Health Care 2015" target="_blank">Euro Women Health Care 2015</a></li>
+            	               <li><a href="http://biosummit.conferenceseries.net/" title="Dubai Bio Expo 2015" target="_blank">Dubai Bio Expo 2015</a></li>
+            	               <li><a href="http://food.global-summit.com/europe/" title="Euro Food 2015" target="_blank">Euro Food 2015</a></li>
+            	               <li><a href="http://i Bio Expo 2015" target="_blank">Dubai Bio Expo 2015</a></li>
+            	               <li><a href="http://food.global-summit.com/europe/" title="dentistry.conferenceseries.com/" title="Dentistry 2015" target="_blank">Dentistry 2015</a></li>
+            	               <li><a href="http://weightloss.global-summit.com/europe/" title="Euro Weightloss 2015" target="_blank">Euro Weightloss 2015</a></li>
+            	               <li><a href="http://otolaryngology.conferenceseries.net/" title="Otolaryngology 2015" target="_blank">Otolaryngology 2015</a></li>
+            	               <li><a href="http://geology.conferenceseries.com/" title="Geology 2015" target="_blank">Geology 2015</a></li>
+            	               <li><a href="http://www.oceanographyconference.com/" title="Oceanography 2015" target="_blank">Oceanography 2015</a></li>
+            	               <li><a href="http://sports.conferenceseries.com/" title="Sports Medicine 2015" target="_blank">Sports Medicine 2015</a></li>
+            	               <li><a href="http://stemcell.omicsgroup.com/" title="Stemcell 2015" target="_blank">Stemcell 2015</a></li>
+            	               <li><a href="http://cosmetology-trichology.conferenceseries.com/" title="Cosmetology 2015" target="_blank">Cosmetology 2015</a></li>
+            	               <li><a href="http://biomedical.conferenceseries.com/" title="BioMedical 2015" target="_blank">BioMedical 2015</a></li>
+            	               <li><a href="http://condensedmatterphysics.conferenceseries.com/" title="Condensed Matter Physics 2015" target="_blank">Condensed Matter Physics 2015</a></li>
+            	               <li><a href="http://cardiology.conferenceseries.com/" title="Cardiology 2015" target="_blank">Cardiology 2015</a></li>
+            	               <li><a href="http://nutraceuticals.pharmaceuticalconferences.com/" title="Nutraceuticals 2015" target="_blank">Nutraceuticals 2015</a></li>
+            	               <li><a href="http://www.metabolomicsconference.com" title="Metabolomics 2015" target="_blank">Metabolomics 2015</a></li>
+            	               <li><a href="http://fitness.conferenceseries.com/" title="Fitness 2015" target="_blank">Fitness 2015</a></li>
+            	               <li><a href="http://stressmanagement.global-summit.com/" title="Stress Management 2015" target="_blank">Stress Management 2015</a></li>
+            	               <li><a href="http://datamining.conferenceseries.com/" title="Data Mining 2015" target="_blank">Data Mining 2015</a></li>
+            	               <li><a href="http://bioprocess.conferenceseries.com/" title="Bioprocess 2015" target="_blank">Bioprocess 2015</a></li>
+            	               <li><a href="http://lung.conferenceseries.com" title="Lung 2015" target="_blank">Lung 2015</a></li>
+            	               <li><a href="http://steroids./" title="Bioprocess 2015" target="_blank">Bioprocessglobal-summit.com/" title="Steroids 2015" target="_blank">Steroids 2015</a></li>
+            	               <li><a href="http://nephrology.conferenceseries.com" title="Nephro 2015" target="_blank">Nephro 2015</a></li>
+            	               <li><a href="http://massspectra.com/" title="Mass Spectrometry 2015" target="_blank">Mass Spectrometry 2015</a></li>
+            	               <li><a href="http://gynecology.conferenceseries.com/" title="Gynecology 2015" target="_blank">Gynecology 2015</a></li>
+            	               <li><a href="http://pathology.conferenceseries.com/" title="Pathology 2015" target="_blank">Pathology 2015</a></li>
+            	               <li><a href="http://physicalmedicine.conferenceseries.com/" title="Physical Medicine 2015" target="_blank">Physical Medicine 2015</a></li>
+            	               <li><a href="http://dermatology.conferenceseries.com/" title="Dermatology 2015" target="_blank">Dermatology 2015</a></li>
+            	               <li><a href="http://pediatrics.conferenceseries.com/" title="Pediatrics 2015" target="_blank">Pediatrics 2015</a></li>
+            	               <li><a href="http://occupationalhealth.conferenceseries.com/" title="Occupational Health 2015" target="_blank">Occupational Health 2015</a></li>
+            	               <li><a href="http://controlsystem.conferenceseries.com/" title="Control System 2015" target="_blank">Control System 2015</a></li>
+            	               <li><a href="http://thrombosis-hemostasis.conferenceseries.com/" title="Thrombosis-2015" target="_blank">Thrombosis-2015</a></li>
+            	               <li><a href="http://www.biotechnologycongress.com/asia-pacific/" title="Bio Asia Pacific 2015" target="_blank">Bio Asia Pacific 2015</a></li>
+            	               <li><a href="http://hepatitis.omicsgroup.com/" title="Hepatitis 2015" target="_blank">Hepatitis 2015</a></li>
+            	               <li><a href="http://laser-technology.conferenceseries.com/" title="Laser Tech 2015" target="_blank">Laser Tech 2015</a></li>
+            	               <li><a href="http://gastroenterology.conferenceseries.com/" title="Gastroenterology 2015" target="_blank">Gastroenterology 2015</a></li>
+            	               <li><a href="http://neuroimmunology.omicsgroup.com/" title="Neuroimmunology 2015" target="_blank">Neuroimmunology 2015</a></li>
+            	               <li><a href="http://industrialautomation.conferenceseries.com/" title="Industrial Automation 2015" target="_blank">Industrial Automation 2015</a></li>
+            	               <li><a href="http://americanwomenhealth.global-summit.com/" title="American Women Healthcare 2015" target="_blank">American Women Healthcare 2015<Industrial Automation 2015" target="_blank">I/a></li>
+            	               <li><a href="http://agriculture-horticulture.conferenceseries.com/" title="Agri 2015" target="_blank">Agri 2015</a></li>
+            	               <li><a href="http://drug-processing-labeling-packaging.pharmaceuticalconferences.com/" title="Drug Packaging 2015" target="_blank">Drug Packaging 2015</a></li>
+            	               <li><a href="http://recycling.omicsgroup.com" title="Recycling Expo 2015" target="_blank">Recycling Expo 2015</a></li>
+            	               <li><a href="http://Innateimmunity.conferenceseries.com" title="Innate Immunity 2015" target="_blank">Innate Immunity 2015</a></li>
+            	               <li><a href="http://biobanking.conferenceseries.com" title="Biobanking 2015" target="_blank">Biobanking 2015</a></li>
+            	               <li><a href="http://urology.conferenceseries.com/" title="Urology 2015" target="_blank">Urology 2015</a></li>
+            	               <li><a href="http://psychiatry.global-summit.com/euro/" title="Euro Psychiatry Summit 2015" target="_blank">Euro Psychiatry Summit 2015</a></li>
+            	               <li><a href="http://aquaculture-fisheries.conferenceseries.com/" title="Aquaculture 2015" target="_blank">Aquaculture 2015</a></li>
+            	               <li><a href="http://cancer.global-summit.com/asia-pacific" title="Cancer      	               <li><a href="http://aquaculture-fisheries.conferenceseries.com/" title="Aquaculture 2015" target="_blank">Aquaculture 2015</a></lSummit  Asia 2015" target="_blank">Cancer Summit  Asia 2015</a></li>
+            	               <li><a href="http://pharmacology.pharmaceuticalconferences.com" title="Pharmacology 2015" target="_blank">Pharmacology 2015</a></li>
+            	               <li><a href="http://dentalcongress.com/asia-pacific/" title="Dental Congress Asia 2015" target="_blank">Dental Congress Asia 2015</a></li>
+            	               <li><a href="http://tissuescience-regenerativemedicine.conferenceseries.com/" title="Tissue Science 2015" target="_blank">Tissue Science 2015</a></li>
+            	               <li><a href="http://biomechanics-implantdesign.conferenceseries.com/" title="Biomechanics 2015" target="_blank">Biomechanics 2015</a></li>
+            	               <li><a href="http://www.neurologyconference.com/" title="Neurology 2015" target="_blank">Neurology 2015</a></li>
+            	               <li><a href="http://hotel-hospitality-management.conferenceseries.com/" title="Hotel Management 2015" target="_blank">Hotel Management 2015</a></li>
+            	               <li><a href="http://clinicaltrials.conferenceseries.com/" title="Clinical Trails-2015" target="_blank">Clinical Trails-2015</a></li>
+            	               <li><a href="http://transcriptomics.conferenceseries.com/" title="Transcriptomics 2015" target="_blank">Transcriptomics 2015</a></li>
+            	               <li><a href="http://researchinstruments-equipmentexpo.conferenceseries.com/" title="Instrument Expo 2015" target="_blank">Instrument Expo 2015</a></li>
+            	               <li><a href="http://food.global-summit.com/america" title="American Food 2015" target="_blank">American Food 2015</a></li>
+            	               <li><a href="http://addictiontherapy.conferenceseries.com/" title="Addiction Therapy 2015" target="_blank">Addiction Therapy 2015</a></li>
+            	               <li><a href="http://drug-discovery.pharmaceuticalconferences.com/" title="Drug Discovery 2015" target="_blank">Drug Discovery 2015</a></li>
+            	               <li><a href="http://weightloss.global-summit.com/asia-pacific/" title="Weightloss 2015" target="_blank">Weightloss 2015</a></li>
+            	               <li><a href="http://www.biotechnologycongress.com/america/" title="Bio America 2015" target="_blank">Bio America 2015</a></li>
+            	               <li><a href="http://www.biotechnologycongress.com/europe/" title="Euro Biotechnology 2015" target="_blank">Euro Biotechnology 2015</a></li>
+            	               <li><a href="http://dentalcongress.com/india" title="Indian Dental Congress 2015" target="_blank">Indian Dental Congress 2015</a></li>
+            	               <li><a href="http://stroke.global-summit.com/" title="Stroke 2015" target="_blank">Stroke 2015</a></li>
+            	               <li><a href="http://breastcancer.omicsgroup.com/" title="Breast Cancer 2015" target="_blank">Breast Cancer 2015</a></li>
+            	               <li><a href="http://www.proteomicsconference.com/" title="Proteomics 2015" target="_blank">Proteomics 2015</a></li>
+            	               <li><a href="http://multimedia.global-summit.com/" title="Multimedia 2015" target="_blank">Multimedia 2015</a></li>
+            	               <li><a href="http://radiology.conferenceseries.com/" title="Radiology 2015" target="_blank">Radiology 2015</a></li>
+            	               <li><a href="http://novelphysiotherapies.conferenceseries.com/" title=" Novel Physiotherapies 2015" target="_blank"> Novel Physiotherapies 2015</a></li>
+            	               <li><a href="http://signalprocessing.conferenceseries.com/" title="Signal Processing 2015" target="_blank">Signal Processing 2015</a></li>
+            	               <li><a href="http://medicaldevices.omicsgroup.com/" title="Medical Devices 2015" target="_blank">Medical Devices 2015</a></li>
+            	               <li><a href="http://molecularmedicine.conferenceseries.com/" title="Molecular Medicine 2015" target="_blank">Molecular Medicine 2015</a></li>
+            	              ces 2015" target="_blank">Medical Devices 2015</a></li>
+            	               <li><a href="http://molecularmedicine.conferenceseries.com/" title="Molecular Medicine 2015" target="_blank">Molecular <li><a href="http://microbiology.omicsgroup.com/" title="Microbiology 2015" target="_blank">Microbiology 2015</a></li>
+            	               <li><a href="http://antibodies.conferenceseries.com" title="Antibodies 2015" target="_blank">Antibodies 2015</a></li>
+            	               <li><a href="http://vaccines.global-summit.com/europe" title="Euro Vaccines 2015" target="_blank">Euro Vaccines 2015</a></li>
+            	               <li><a href="http://industrial-biotechnology.omicsgroup.com/" title="Industrial Bio 2015" target="_blank">Industrial Bio 2015</a></li>
+            	               <li><a href="http://influenza.conferenceseries.com" title="Influenza 2015" target="_blank">Influenza 2015</a></li>
+            	               <li><a href="http://antibiotics.omicsgroup.com/" title="Antibiotics 2015" target="_blank">Antibiotics 2015</a></li>
+            	               <li><a href="http://cancer.global-summit.com/america" title="Cancer Therapy 2015" target="_blank">Cancer Therapy 2015</a></li>
+            	               <li><a href="http://vaccines.global-summit.com/america" title="American Vaccines 2015" target="_blank">American Vaccines 2015</a></li>
+            	               <li><a href="http://cancer.global-summit.com/middleeast" title="Dubai Cancer Summit 2015" target="_blank">Dubai Cancer Summit 2015</a></li>
+            	               <li><a href="http://hiv-aids-std.conferenceseries.com" title="HIV-STDS 2015" target="_blank">HIV-STDS 2015</a></li>
+            	               <li><a href="http://retrovirus.conferenceseries.com/" title="Retrovirus 2015" target="_blank">Retrovirus 2015</a></li>
+            	               <li><a href="http://livestocknutrition.conferenceseries.com" title="Livestock Nutrition 2015" target="_blank">Livestock Nutrition 2015</a></li>
+            	               <li><a href="http://protein-engineering.conferenceseries.net/" title="Protein Engineering 2015" target="_blank">Protein Engineering 2015</a></li>
+            	               <li><a href="http://regulatoryaffairs.pharmaceuticalconferences.com/" title="Regulatory Affairs 2015" target="_blank">Regulatory Affairs 2015</a></li>
+            	               <li><a href="http://ceramics.conferenceseries.com" title="Ceramics-2015" target="_blank">Ceramics-2015</a></li>
+            	               <li><a href="http://traditionalmedicine.conferenceseries.com/" title="Traditional Medicine 2015" target="_blank">Traditional Medicine 2015</a></li>
+            	               <li><a href="http://chemotherapy.conferenceseries.com/" title="Chemotherapy 2015" target="_blank">Chemotherapy 2015</a></li>
+            	               <li><a href="http://ophthalmology.conferenceseries.com/" title="Ophthalmol           	               <li><a href="http:ogy 2015" target="_blank">Ophthalmology 2015</a></li>
+            	               <li><a href="http://integrativebiology.conferenceseries.com/" title="Integrative Biology 2015" target="_blank">Integrative Biology 2015</a></li>
+            	               <li><a href="http://bacteriology.omicsgroup.com/" title="Bacteriology 2015" target="_blank">Bacteriology 2015</a></li>
+            	               <li><a href="http://epidemiology.conferenceseries.com/" title="Epidemiology 2015" target="_blank">Epidemiology 2015</a></li>
+            	               <li><a href="http://foodtechnology.conferenceseries.com/" title="Food Technology 2015" target="_blank">Food Technology 2015</a></li>
+            	               <li><a href="httP://infection.omicsgroup.com" title="Infectious Diseases 2015" target="_blank">Infectious Diseases 2015</a></li>
+            	               <li><a href="http://pharmacovigilance.pharmaceuticalconferences.com/" title="Pharmacovigilance 2015" target="_blank">Pharmacovigilance 2015</a></li>
+            	               <li><a href="http://cellgenetherapy.conferenceseries.com/" title="Gene Therapy-2015" target="_blank">Gene Therapy-2015</a></li>
+            	               <li><a href="http://biopolymers-bioplastics.conferenceseries.com/" title="Biopolymers & Bioplastics 2015" target="_blank">Biopolymers & Bioplastics 2015</a></li>
+            	               <li><a href="http://broadcasting-media-film-industry.conferenceseries.com/" title="Broadcasting Media 2015" target="_blank">Broadcasting Media 2015</a></li>
+            	               <li><a href="http://separationtechniques.conferenceseries.com/" title="Separation Techniques 2015" target="_blank">Separation Techniques 2015</a></li>
+            	               <li><a href="http://sleepmedicine.conferenceseries.net/" title="Sleep Medicine-2015" target="_blank">Sleep Medicine-2015</a></li>
+            	               <li><a href="http://hearingdevices.conferenceseries.com/" title="Hearing Devices 2015" target="_blank">Hearing Devices 2015</a></li>
+            	               <li><a href="http://foodsafety-hygiene.conferenceseries.com/" title="Food Safety 2015" target="_blank">Food Safety 2015</a></li>
+            	               <li><a href="http://smartapps.conferenceseries.com/" title="Smart Apps 2015" target="_blank">Smart Apps 2015</a></li>
+            	               <li><a href="http://bioavailability-bioequivalence.pharmaceuticalconferences.com/" title="BABE 2015" target="_blank">BABE 2015</a></li>
+            	               <li><a href="http://parenterals-injectables.pharmaceuticalconferences.com/" title="Parenterals 2015" target="_blank">Parenterals 2015</a></li>
+            	               <li><a href="http://satell"_blank">BABE 2015</a></li>
+            	   ite.conferenceseries.com/" title="Satellite-2015" target="_blank">Satellite-2015</a></li>
+            	               <li><a href="http://braindisorders.conferenceseries.com" title="Brain Disorders 2015" target="_blank">Brain Disorders 2015</a></li>
+            	               <li><a href="http://electronicwaste.conferenceseries.com/" title="e-Waste Management-2015" target="_blank">e-Waste Management-2015</a></li>
+            	               <li><a href="http://parasitology.conferenceseries.com/" title="Parasitology 2015" target="_blank">Parasitology 2015</a></li>
+            	               <li><a href="http://pregnancy.omicsgroup.com/" title="Pregnancy Summit 2015" target="_blank">Pregnancy Summit 2015</a></li>
+            	               <li><a href="http://toxicogenomics.conferenceseries.com/" title="Toxicogenomics 2015" target="_blank">Toxicogenomics 2015</a></li>
+            	               <li><a href="http://europe.pharmaceuticalconferences.com/" title="Pharma Europe 2015" target="_blank">Pharma Europe 2015</a></li>
+            	               <li><a href="http://magneticmaterials-super-conductivity.conferenceseries.com/" title="Super Conductivity 2015" target="_blank">Super Conductivity 2015</a></li>
+            	               <li><a href="http://biofuels-bioenergy.conferenceseries.com/" title="Biofuels & Bioenergy 2015" target="_blank">Biofuels & Bioenergy 2015</a></li>
+            	               <li><a href="http://pediatriccardiology.conferenceseries.com/" title="Pediatric Cardiology 2015" target="_blank">Pediatric Cardiology 2015</a></li>
+            	               <li><a href="http://beneficialmicrobes.omicsgroup.com/" title="Beneficial Microbes 2015" target="_blank">Beneficial Microbes 2015</a></li>
+            	               <li><a href="http://alzheimers-dementia.conferenceseries.com/" title="Dementia 2015" target="_blank">Dementia 2015</a></li>
+            	               <li><a href="http://americanveterinary.omicsgroup.com" title="American Veterinary 2015" target="_blank">American Veterinary 2015</a></li>
+            	               <li><a href="http://biomarkers.conferenceseries.com/" title="Biomarkers 2015" target="_blank">Biomarkers 2015</a></li>
+            	               <li><a href="http://geriatrics-gerontology.conferenceseries.com/" title="Geriatrics 2015" target="_blank">Geriatrics 2015</a></li>
+            	               <li><a href="http://automobile.conferenceseries.com/" title="Automobile 2015" target="_blank">Automobile 2015</a></li>
+            	               <li><a href="http://www.pharmaceuticalconferences.com/analytical-bioanalytical-techniques-2015/" title="Analytica2015" target="_blank">Analytica2015</a></li>
+            	               <lit="_blank">Automobile 2015</a></li>
+            	   ><a href="http://personalizedmedicine.conferenceseries.net/" title="Personalized Medicine 2015" target="_blank">Personalized Medicine 2015</a></li>
+            	               <li><a href="http://optics.conferenceseries.com/" title="Optics 2015" target="_blank">Optics 2015</a></li>
+            	               <li><a href="http://www.omicsgroup.com/materials-science-engineering-conference-2015" title="Materials Science 2015" target="_blank">Materials Science 2015</a></li>
+            	               <li><a href="http://diabeticmedications.conferenceseries.com/" title="Diabetic Medications 2015" target="_blank">Diabetic Medications 2015</a></li>
+            	               <li><a href="http://greenchemistry.conferenceseries.com/" title="Green Chemistry 2015" target="_blank">Green Chemistry 2015</a></li>
+            	               <li><a href="http://biopharmaceutics.pharmaceuticalconferences.com/" title="Biopharma 2015" target="_blank">Biopharma 2015</a></li>
+            	               <li><a href="http://wirelesscommunication.conferenceseries.net/" title="Wireless Communication2015" target="_blank">Wireless Communication2015</a></li>
+            	               <li><a href="http://epilepsytreatment.conferenceseries.net/" title="Epilepsy 2015" target="_blank">Epilepsy 2015</a></li>
+            	               <li><a href="http://greenenergy.conferencreless Communication2015</a></li>
+            	               <li><a href="http://epilepsytreatment.conferenceseries.net/" title="Epilepsy 2015" targeseries.com" title="Green Energy 2015" target="_blank">Green Energy 2015</a></li>
+            	               <li><a href="http://computergraphics-animation.conferenceseries.com/" title="Computer Graphics 2015" target="_blank">Computer Graphics 2015</a></li>
+            	               <li><a href="http://genomics.conferenceseries.com/" title="Genomics 2015" target="_blank">Genomics 2015</a></li>
+            	               <li><a href="http://diabetesexpo.com/middleeast/" title="Dubai Diabetes Expo 2015" target="_blank">Dubai Diabetes Expo 2015</a></li>
+            	               <li><a href="http://immunology.conferenceseries.com" title="Immunology Summit 2015" target="_blank">Immunology Summit 2015</a></li>
+            	               <li><a href="http://forensicresearch.conferenceseries.com/" title="Forensic Research 2015" target="_blank">Forensic Research 2015</a></li>
+            	               <li><a href="http://biosensors.conferenceseries.com/" title="Biosensors & Bioelectronics 2015" target="_blank">Biosensors & Bioelectronics 2015</a></li>
+            	               <li><a href="http://toxicology.global-summit.com/" title="Toxicology 2015" target="_blank">Toxicology 2015</a></li>
+            	               <li><a href="http://healthinformatics.conferenceseries.com/" title="HITC 2015" target="_blank">HITC 2015</a></li>
+            	   oxicology.global-summit.com/" title="Toxicology 2015" target="_blank">Toxicology 2015</a></li>
+            	               <li><a href="http://health            <li><a href="http://clinicalmicrobiology.conferenceseries.com/" title="Clinical Microbiology 2015" target="_blank">Clinical Microbiology 2015</a></li>
+            	               <li><a href="http://nursing.conferenceseries.com/" title="Nursing 2015" target="_blank">Nursing 2015</a></li>
+            	               <li><a href="http://mechanical-aerospace.conferenceseries.com" title="Mech Aero 2015" target="_blank">Mech Aero 2015</a></li>
+            	               <li><a href="http://industrialengineering.conferenceseries.com/" title="Industrial Engineering 2015" target="_blank">Industrial Engineering 2015</a></li>
+            	               <li><a href="http://drugdelivery.pharmaceuticalconferences.com" title="Drug Delivery 2015" target="_blank">Drug Delivery 2015</a></li>
+            	               <li><a href=" http://construction-steel-structure.omicsgroup.com/" title="Steel Structure 2015" target="_blank">Steel Structure 2015</a></li>
+            	               <li><a href="http://diabetesexpo.com/india/" title="Indo Diabetes Summit 2015" target="_blank">Indo Diabetes Summit 2015</a></li>
+            	               <li><a href="http://www.nutritionalconference.com/" title="Nutrition Science 2015" target="_blank">Nutrition Science 2015</a></li>
+            	               <li><a href="http://gmp-gcp-quality-control.pharmaceuticalconferences.com/" title="GMP Summit 2015" target="_blank">GMP Summit 2015</a></li>
+            	               <li><a href="http://pharmaceuticalconferences.com/pharmacognosy-phytochemistry-natural-products-2015/" title="Pharmacognosy 2015" target="_blank">Pharmacognosy 2015</a></li>
+            	               <li><a href="http://translationalmedicine.conferenceseries.com/" title="Translational Medicine 2015" target="_blank">Translational Medicine 2015</a></li>
+            	               <li><a href="http://eye.conferenceseries.com/" title="Eye 2015" target="_blank">Eye 2015</a></li>
+            	               <li><a href="http://orthopedics-rheumatology.conferenceseries.com/" title="Orthopedics 2015" target="_blank">Orthopedics 2015</a></li>
+            	               <li><a href="http://biosimilars-biologics.pharmaceuticalconferences.com/" title="Biosimilars 2015 " target="_blank">Biosimilars 2015 </a></li>
+            	               <li><a href="http://hematology.conferenceseries.com/" title="Hematology 2015" target="_blank">Hematology 2015</a></li>
+            	               <li><a href="http://endocrinology.conferenceseries.com/" title="Endocrinology 2015" target="_blank">Endocrinology 2015</a></li>
+            	               <li><a href="http://medicinalchemistry.pharmaceuticalconferences.com/" title="MedChem and CADD 2015" target="_blatp://endocrinology.conferenceseries.com/" titnk">MedChem and CADD 2015</a></li>
+            	               <li><a href="http://advertising-marketing.conferenceseries.com" title="AddMark 2015" target="_blank">AddMark 2015</a></li>
+            	               <li><a href="http://electricalengineering.global-summit.com/" title="Electrical Engineering 2015 " target="_blank">Electrical Engineering 2015 </a></li>
+            	               <li><a href="http://cancer.global-summit.com/europe/" title="Euro Cancer Summit 2015" target="_blank">Euro Cancer Summit 2015</a></li>
+            	               <li><a href="http://probiotics.conferenceseries.net/" title="Probiotics 2015" target="_blank">Probiotics 2015</a></li>
+            	               <li><a href="http://biodynamics-organicfarming.conferenceseries.com/" title="Biodynamics-2015" target="_blank">Biodynamics-2015</a></li>
+            	               <li><a href="http://biometrics-biostatistics.conferenceseries.com/" title="Biostatistics 2015" target="_blank">Biostatistics 2015</a></li>
+            	               <li><a href="http://nanotechnologyexpo.conferenceseries.com/" title="Nanotek 2015" target="_blank">Nanotek 2015etrics-biostatistics.conferenceseries.com/" title="Biostatistics 2015" target="_blank">Biostatistics 2015</a></li>
+    </a></li>
+            	               <li><a href="http://petrochemistry.omicsgroup.com/" title="Petrochemistry 2015" target="_blank">Petrochemistry 2015</a></li>
+            	               <li><a href="http://www.biotechnologycongress.com/" title="Biotechnology 2015" target="_blank">Biotechnology 2015</a></li>
+            	               <li><a href="http://surgery.conferenceseries.com/" title="Surgery and Anesthesia 2015" target="_blank">Surgery and Anesthesia 2015</a></li>
+            	               <li><a href="http://clinicalpharmacy.pharmaceuticalconferences.com/" title="Clinical Pharmacy 2015" target="_blank">Clinical Pharmacy 2015</a></li>
+            	               <li><a href="http://virology.omicsgroup.com/" title="Virology 2015" target="_blank">Virology 2015</a></li>
+            	               <li><a href="http://obesity.conferenceseries.com/" title="Obesity 2015" target="_blank">Obesity 2015</a></li>
+            	               <li><a href="http://dentalcongress.com/america" title="American Dental Congress 2015" target="_blank">American Dental Congress 2015</a></li>
+            	               <li><a href="http://diabetesexpo.com/europe/" title="Euro Diabetes Summit 2015" target="_blank">Euro Diabetes Summit 2015</a></li>
+            	                </div>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li clas 	               <li><a href="http://diabetesexpo.com/europe/" title="Euro Diabetes Summit 2015" target="_blank">Euro Diabetes Summit 2015</a></li>
+       s='has-sub'><a href='#' title="Previous"><span>Previous</span></a>
+   <ul>
+         <li class='has-sub'><a href='#' title="2014 Conferences"><span>2014 Conferences</span></a>
+           <ul style="height:400px; width:211px;">
+   			<div rel="previous2014">
+               
+
+            <li><a href="http://nanotechnology2014.conferenceseries.net/" title="Nanotek 2014" target="_blank">Nanotek 2014</a></li>
+                        <li><a href="http://translationalmedicine2014.conferenceseries.net/" title="Translational Medicine 2014" target="_blank">Translational Medicine 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/diabetes-metabolism-conference-2014/" title="Diabetes 2014" target="_blank">Diabetes 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/petrochemistry-chemical-engineering-conference-2014/" title="Petrochemistry 2014" target="_blank">Petrochemistry 2014</a></li>
+                        <li><a href="http://personalizedmedicine2014.conferenceseries.net/" title="Personalized Medicine 2014" target="_blank">Personalized Medicine 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/hiv-aids-std-conference-2014/" title="STD-AIDS 2014" target="_blank">STD-AIDS 2014</a></li>
+                        <li><a href="http://cellgenetherapy2014.conferenceseries.net/" title="Cell Therapy 2014" target="_blank">Cell Therapy 2014</a></li>
+                        <li><a href="http://www.pharmaceuticalconferences.com/biowaivers-biosimilars-2014/" title="Biosimilars 2014" target="_blank">Biosimilars 2014</a></li>
+                        <li><a href="http://omicsgroup.com/conferences/agricultural-horticultural-2014/" title="Agri 2014" target="_blank">Agri 2014</a></li>
+                        <li><a href="http://endocrinology2014.conferenceseries.net/" title="Endocrinology 2014" target="_blank">Endocrinology 2014</a></li>
+                        <li><a href="http://toxicology2014.conferenceseries.net/" title="Toxicology 2014" target="_blank">Toxicology 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/health-informatics-technology-conference-2014/" title="HITC 2014" target="_blank">HITC 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/biometrics-biostatistics-conference-2014/" title="Biostatistics 2014" target="_blank">Biostatistics 2014</a></li>
+                        <li><a href="http://regulatoryaffairs2014.pharmaceuticalconferences.com/" title="Regulatory Affairs-2014" target="_blank">Regulatory Affairs-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/animal-dairy-science-2014/" title="Animal Science-2014" target="_blank">Animal Science-20calconferences.com/" title="Regulatory Affair14</a></li>
+                        <li><a href="http://pharmaceuticalconferences.com/green-chemistry-2014/" title="Green Chemistry-2014" target="_blank">Green Chemistry-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/traditional-alternative-medicine-conference-2014/" title="Traditional Medicine-2014" target="_blank">Traditional Medicine-2014</a></li>
+                        <li><a href="http://www.nutritionalconference.com/2014" title="Nutritional Science-2014" target="_blank">Nutritional Science-2014</a></li>
+                        <li><a href="http://pharmaceuticalconferences.com/pharmacognosy-phytochemistry-natural-products-2014/" title="Pharmacognosy-2014" target="_blank">Pharmacognosy-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/epidemiology-evolutionary-genetics-conference-2014/" title="Epidemiology-2014" target="_blank">Epidemiology-2014</a></li>
+                        <li><a href="http://www.pharmaceuticalconferences.com/analytical-bioanalytical-techniques-2014/" title="Analytica Acta-2014" target="_blank">Analytica Acta-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/biosensors-bioelectronics-conference-2014/" title="Biosensors-2014" target="_blank">Biosensors-2014</a></li>
+                        <li><a href="http://integrativebiology2014.conferenceseries.net/" title="Integrative Biology-2014" target="_blank">Integrative Biology-2014</a></li>
+                        <li><a href="http://addictiontherapy2014.conferenceseries.net/" title="Addiction Therapy-2014" target="_blank">Addiction Therapy-2014</a></li>
+                        <li><a href="http://www.proteomicsconference.com/2014/" title="Proteomics-2014" target="_blank">Proteomics-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/orthopedics-rheumatology-conference-2014" title="Orthopedics & Rheumatology  2014" target="_blank">Orthopedics & Rheumatology  2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/earth-science-climate-change-conference-2014" title="Earth Science-2014" target="_blank">Earth Science-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/gastroenterology-urology-conference-2014/" title="Gastroenterology-2014" target="_blank">Gastroenterology-2014</a></li>
+                        <li><a href="http://foodtechnology2014.conferenceseries.net" title="Food Technology-2014" target="_blank">Food Technology-2014</a></li>
+                        <li><a href="http://www.oceanographyconference.com/2014" title="Oceanography-2014" target="_blank">Oceanography-2014</a></li>
+                        <li><a href="http://cosmetology2014.conferenceseries.net/" titly-2014</a></li>
+                        <li>e="Cosmetology-2014" target="_blank">Cosmetology-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/physical-medicine-rehabilitation-conference-2014" title="Physical Medicine-2014" target="_blank">Physical Medicine-2014</a></li>
+                        <li><a href="http://ophthalmology2014.conferenceseries.net/" title="Ophthalmology-2014" target="_blank">Ophthalmology-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/computer-graphics-media-design-conference-2014/" title="Computer Graphics-2014" target="_blank">Computer Graphics-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/womens-health-gynecology-obstetrics-conference-2014/" title="Gynecology-2014" target="_blank">Gynecology-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/geriatrics-gerontology-conference-2014/" title="Geriatrics-2014" target="_blank">Geriatrics-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/bioprocess-conference-2014/" title="Bioprocess-2014" target="_blank">Bioprocess-2014</a></li>
+                        <li><a href="http://nephrology2014.conferenceseries.net/" title="Nephro-2014" target="_blank">Nephro-2014</a></li>
+                        <li><a href="http://www.biotechnologycongress.com/2014" title="Biotechnology-2014" target="_blank">Biotechnology-2014</a></li>
+                        <li><a href="http://occupationalhealth2014.conferenceseries.net/" title="Occupational Health-2014" target="_blank">Occupational Health-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/biodiversity-sustainable-energy-conference-2014/" title="Biodiversity-2014" target="_blank">Biodiversity-2014</a></li>
+                        <li><a href="http://www.conferenceseries.net/cell-science-stem-cell-research-congress-2014/" title="Cell Science-2014" target="_blank">Cell Science-2014</a></li>
+                        <li><a href="http://dentaloralhealth2014.conferenceseries.net/" title="Dental-2014" target="_blank">Dental-2014</a></li>
+                        <li><a href="http://pathology2014.conferenceseries.net/" title="Pathology-2014" target="_blank">Pathology-2014</a></li>
+                        <li><a href="http://dermatology2014.conferenceseries.net/" title="Dermatology-2014" target="_blank">Dermatology-2014</a></li>
+                        <li><a href="http://cardiology2014.conferenceseries.net/" title="Cardiology-2014" target="_blank">Cardiology-2014</a></li>
+                        <li><a href="http://metabolomicsconference.com/2014" title="Metabolomics 2014" target="_blank">Metabolomics 2014</a></li>
+                        <li><a href="http://pharmaceutica2014.14" target="_blank">Cardiology-2014</a></li>
+       pharmaceuticalconferences.com/" title="Pharmaceutica-2014" target="_blank">Pharmaceutica-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/conferences/agricultural-horticultural-2014-Feb" title="Agri-2014" target="_blank">Agri-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/mechanical-aerospace-engineering-conference-2014/" title="Mech Aero-2014" target="_blank">Mech Aero-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/lasers-optics-photonics-conference-2014" title="Optics-2014" target="_blank">Optics-2014</a></li>
+                        <li><a href="http://www.neurologyconference.com/2014" title="Neuro-2014" target="_blank">Neuro-2014</a></li>
+                        <li><a href="http://genomics2014.conferenceseries.net/" title="Genomics-2014" target="_blank">Genomics-2014</a></li>
+                        <li><a href="http://probiotics2014.conferenceseries.net/" title="Probiotics-2014" target="_blank">Probiotics-2014</a></li>
+                        <li><a href="http://omicsgroup.com/hydrology-meteorology-2014" title="Hydrology-2014" target="_blank">Hydrology-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/alzheimers-disease-dementia-conference-2014" title="Dementia-2014" target="_blank">Dementia-2014</a></li>
+                        <e="Hydrology-2014" target="_blank">Hydrology-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/alzheimers-disease-dementiali><a href="http://www.cancersummit.org/global-cancer-conference-medicare-summit/" title="GCC-2014" target="_blank">GCC-2014</a></li>
+                        <li><a href="http://www.pharmaceuticalconferences.com/pharmacovigilance-clinical-trials-2014/" title="Pharmacovigilance 2014" target="_blank">Pharmacovigilance 2014</a></li>
+                        <li><a href="http://clinicalmicrobiology2014.conferenceseries.net/" title="Clinical Microbiology-2014" target="_blank">Clinical Microbiology-2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/broad-casting-media-film-industry-conference-2014/" title="Broadcasting Media 2014" target="_blank">Broadcasting Media 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/tissue-science-regenerative-medicine-conference-2014/" title="Tissue Science-2014" target="_blank">Tissue Science-2014</a></li>
+                        <li><a href="http://cancerscience2014.conferenceseries.net/" title="Cancer Science 2014" target="_blank">Cancer Science 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/vaccines-vaccination-conference-2014/" title="Vaccines-2014" target="_blank">Vaccines-2014</a></li>
+                        <li><a href="http://gmp-gcp-quality-control.pharmaceuticalconferences.com/" title="GMP Summit-2014" target="_blank">GMP Summit-201vaccines-vaccination-conference-2014/" title="Vaccines-2014" target="_blank">Vaccines-2014</a></li>
+                        <li><a href="http://gmp-g4</a></li>
+                        <li><a href="http://babe2014.pharmaceuticalconferences.com/" title="BABE 2014" target="_blank">BABE 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/bacteriology-infectious-diseases-conference-2014" title="Bacteriology 2014" target="_blank">Bacteriology 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/hematology-blood-disorders-conference-2014" title="Hematology 2014" target="_blank">Hematology 2014</a></li>
+                        <li><a href="http://nursing2014.conferenceseries.net/" title="Nursing 2014" target="_blank">Nursing 2014</a></li>
+                        <li><a href="http://www.pharmaceuticalconferences.com/medicinal-chemistry-aided-drug-designing-2014" title="MedChem & CADD 2014" target="_blank">MedChem & CADD 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/surgery-anesthesia-conference-2014/" title="Surgery and Anesthesia 2014" target="_blank">Surgery and Anesthesia 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/industrial-engineering-2014/" title="Industrial Engineering 2014" target="_blank">Industrial Engineering 2014</a></li>
+                        <li><a href="http://immunologysummit2014.conferenceseries.net/" title="Immunology Summit 2014" target="_blank">Immunology Summit 2014</a></li>
+                        <li><a href="http://obesity2014.conferenceseries.net/" title="Obesity 2014" target="_blank">Obesity 2014</a></li>
+                        <li><a href="http://www.omicsgroup.com/materials-science-engineering-conference-2014" title="Materials Science 2014" target="_blank">Materials Science 2014</a></li>
+                        <li><a href="http://clinicalpharmacy2014.pharmaceuticalconferences.com/" title="Clinical Pharmacy 2014" target="_blank">Clinical Pharmacy 2014</a></li>
+                        <li><a href="http://virology2014.conferenceseries.net/" title="Virology 2014" target="_blank">Virology 2014</a></li>
+                        <li><a href="http://forensicresearch2014.conferenceseries.net/" title="Forensic Research 2014" target="_blank">Forensic Research 2014</a></li>
+                        </div>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#' title="2013 Conferences"><span>2013 Conferences</span></a>
+            <ul style="height:400px; width:211px;">
+   			<div rel="previous2013">
+               
+
+               <li><a href="http://www.omicsgroup.com/conferences/traditional-medicine-2013/" title="Traditional Medicine-2013" target="_blank">Traditional Medicine-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/obesity-weight-management-2p://www.omicsgroup.com/conferences/traditiona013/" title="Obesity-2013" target="_blank">Obesity-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/nursing-emergency-medicine-2013/" title="Nursing-2013" target="_blank">Nursing-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/clinical-pharmacy-dispensing-summit-2013/" title="Clinical Pharmacy-2013" target="_blank">Clinical Pharmacy-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/bacteriology-infectious-diseases-2013/" title="Bacteriology-2013" target="_blank">Bacteriology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/virology-2013" title="Virology-2013" target="_blank">Virology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/petrochemistry-chemical-engineering-2013/" title="Petrochemistry-2013" target="_blank">Petrochemistry-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/pharmacovigilance-clinical-trials-2013/" title="Pharmacovigilance-2013" target="_blank">Pharmacovigilance-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/cellscience-2013/" title="Cell Science-2013" target="_blank">Cell Science-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/nanotek-nanotechnology-2013/" title="Nanotek-2013" target="_blank">Nanotek-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/functional-comparative-genomics-2013/" title="Genomics-2013" target="_blank">Genomics-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/food-processing-technology-2013/" title="Food Technology-2013" target="_blank">Food Technology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/fermentation-technology-bioprocessing-cell-culture-2013/" title="Bioprocess-2013" target="_blank">Bioprocess-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/cosmetology-trichology-2013/" title="Cosmetology-2013" target="_blank">Cosmetology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/gmp-quality-control-validation-2013/" title="GMP-2013" target="_blank">GMP-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/hiv-aids-std-sti-2013/" title="STD-AIDS-2013" target="_blank">STD-AIDS-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/cell-gene-therapy-2013/" title="Cell Therapy-2013" target="_blank">Cellup.com/conferences/hiv-aids-std-sti-2013/" title="STD Therapy-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/probiotics-functional-foods-2013/" title="Probiotics-2013" target="_blank">Probiotics-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/cancer-science-therapy-2013" title="Cancer Science-2013" target="_blank">Cancer Science-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/pharmacognosy-phytochemistry-natural-products-2013/" title="Pharmacognosy-2013" target="_blank">Pharmacognosy-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/clinical-cellular-immunology-2013" title="Immunology Summit-2013" target="_blank">Immunology Summit-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/medicinal-chemistry-computer-aided-drug-designing-2013/" title="MedChem & CADD-2013" target="_blank">MedChem & CADD-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/analytical-bioanalytical-techniques-2013" title="Analytica Acta-2013" target="_blank">Analytica Acta-2013</a></li>
+            	               <li><a href=" http://www.omicsgroup.com/conferences/materials-science-engineering-2013/" title="Materials Science-2013" target="_blank">Materials Science-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/toxicology-2013" title="Toxicology-2013" target="_blank">Toxicology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/forensic-technology-2013/" title="Forensic Research-2013" target="_blank">Forensic Research-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/lasers-optics-photonics-2013/" title="Optics-2013" target="_blank">Optics-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/psychology-autism-alzheimers-2013/" title="PsychoAAD-2013" target="_blank">PsychoAAD-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/mechanical-aerospace-engineering-2013/" title="Mech Aero-2013" target="_blank">Mech Aero-2013</a></li>
+            	               <li><a href="http://www.geriatricsconference.com/" title="Geriatrics-2013" target="_blank">Geriatrics-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/biowaivers-biosimilars-2013/" title="Biosimilars-2013" target="_blank">Biosimilars-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/biotechnology-congress-2013/" title="Biotechnology-2013" target="_blank">Biotechnology-2013</a>ilars-2013/" title="Biosimilars-2013" target=</li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/hematology-blood-disorders-2013/" title="Hematology- 2013" target="_blank">Hematology- 2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/surgery-anesthesia-2013/" title="Surgery & Anesthesia-2013" target="_blank">Surgery & Anesthesia-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/omics-studies-2013/" title="Omicsstudies-2013" target="_blank">Omicsstudies-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/entomology-2013/" title="Entomology-2013" target="_blank">Entomology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/tissue-science-regenerative-2013/" title="Tissue Science-2013" target="_blank">Tissue Science-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/endocrinology-2013/" title="Endocrinology-2013" target="_blank">Endocrinology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/molecular-epidemiology-evolutionary-genetics-2013/" title="Epidemiology-2013" target="_blank">Epidemiology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/hydrology-groundwater-expo-2013/" title="Hydrology-2013" target="_blank">Hydrology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/aquatic-marine-biology-2013" title="Oceanography-2013" target="_blank">Oceanography-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/biodefense-natural-disasters-2013/" title="Natural Disasters-2013" target="_blank">Natural Disasters-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/orthopedics-rheumatology-2013" title="Orthopedics & Rheumatology-2013" target="_blank">Orthopedics & Rheumatology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/dental-oral-health-care-2013/" title="Dental-2013" target="_blank">Dental-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/genetic-engineering-genetically-modified-organisms-2013/" title="Genetic Engineering-2013" target="_blank">Genetic Engineering-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/biodiversity-sustainable-energy-development-2013/" title="Biodiversity-2013" target="_blank">Biodiversity-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/pathology-2013/" title="Pathology-2013" target="_blank">Pathoersity-sustainable-energy-development-2013/" logy-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/diabetes-metabolism-2013/" title="Diabetes-2013" target="_blank">Diabetes-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/radiology-imaging-2013/" title="Radiology-2013" target="_blank">Radiology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/personalized-medicine-molecular-diagnostics-2013/" title="Personalized Medicine-2013" target="_blank">Personalized Medicine-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/integrative-biology-summit-2013/" title="Integrative Biology-2013" target="_blank">Integrative Biology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/translational-medicine-2013/" title="Translational Medicine- 2013" target="_blank">Translational Medicine- 2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/vaccines-vaccination-2013/" title="Vaccines-2013" target="_blank">Vaccines-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/nephrology-therapeutics-2013/" title="Nephro-2013" target="_blank">Nephro-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/dairy-animal-science-2013/" title="Animal Science-2013" target="_blank">Animal Science-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/earth-science-climate-change-2013/" title="Earth Science-2013" target="_blank">Earth Science-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/addiction-therapy-2013/" title="Addiction Therapy - 2013" target="_blank">Addiction Therapy - 2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/proteomics-bioinformatics-2013/" title="Proteomics-2013" target="_blank">Proteomics-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/nutritional-science-therapy-2013/" title="Nutritional Science-2013" target="_blank">Nutritional Science-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/biomarkers-clinical-research-2013/" title="Biomarkers-2013" target="_blank">Biomarkers-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/biosensors-bioelectronics-2013/" title="Biosensors & Bioelectronics-2013" target="_blank">Biosensors & Bioelectronics-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/neurology-therapeutics-2013/" title="Neces/biosensors-bioelectronics-2013/" title="Biosensoruro-2013" target="_blank">Neuro-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/biometrics-biostatistics-2013/" title="Biometrics-2013" target="_blank">Biometrics-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/gastroenterology-urology-2013/" title="Gastroenterology-2013" target="_blank">Gastroenterology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/occupational-health-safety-2013/" title="Occupational Health-2013" target="_blank">Occupational Health-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/bioequivalence-bioavailability-2013/" title="BABE-2013" target="_blank">BABE-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/ophthalmology-2013/" title="Ophthalmology-2013" target="_blank">Ophthalmology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/cardiology-2013/" title="Cardiology-2013" target="_blank">Cardiology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/dermatology-2013/" title="Dermatology-2013" target="_blank">Dermatology-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/metabolomics-systems-biology-2013/" title="Metabolomics-2013" target="_blank">Metabolomics-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/pharmaceutics-2013/" title="Pharmaceutica-2013" target="_blank">Pharmaceutica-2013</a></li>
+            	               <li><a href="http://www.omicsgroup.com/conferences/watech2013/" title="Watech-2013" target="_blank">Watech-2013</a></li>
+            	                </div>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#' title="2012 Conferences"><span>2012 Conferences</span></a>
+		    <ul style="height:400px; width:211px;">
+   			<div rel="previous2012">
+	
+
+	<li><a href="http://omicsonline.org/obesity2012/" title="Obesity-2012" target="_blank">Obesity-2012</a></li>
+    	<li><a href="http://omicsonline.org/nanotek2012/" title="Nanotek-2012" target="_blank">Nanotek-2012</a></li>
+    	<li><a href=" http://www.omicsonline.org/foodtechnology2012" title="Food Technology-2012" target="_blank">Food Technology-2012</a></li>
+    	<li><a href="http://omicsonline.org/bioproducts2012" title="Bioproducts-2012" target="_blank">Bioproducts-2012</a></li>
+    	<li><a href="http://omicsonline.org/cellscience2012/" title="Cell Science-2012" target="_blank">Cell Science-2012</a></li>
+    	<li><a href="http://omicsonline.org/probiotics2012/" title="Probiotics-2012" target="__blank">Bioproducts-2012</a></li>
+    	<li><blank">Probiotics-2012</a></li>
+    	<li><a href="http://omicsonline.org/trichology2012/" title="Trichology-2012" target="_blank">Trichology-2012</a></li>
+    	<li><a href="http://www.omicsonline.org/analyticaacta2012/" title="Analytica Acta-2012" target="_blank">Analytica Acta-2012</a></li>
+    	<li><a href="http://omicsonline.org/gmp-gcp2012" title="GMP & GCP-2012" target="_blank">GMP & GCP-2012</a></li>
+    	<li><a href="http://omicsonline.org/qualitycontrol2012/" title="Quality Control-2012" target="_blank">Quality Control-2012</a></li>
+    	<li><a href="http://omicsonline.org/genetherapy2012/" title="Gene Therapy-2012" target="_blank">Gene Therapy-2012</a></li>
+    	<li><a href="http://omicsonline.org/pharma2012/" title="Pharma-2012" target="_blank">Pharma-2012</a></li>
+    	<li><a href="http://omicsonline.org/anesthesia2012/" title="Anesthesia-2012" target="_blank">Anesthesia-2012</a></li>
+    	<li><a href="http://omicsonline.org/regenerativemedicine2012/" title="Regenerative Medicine-2012" target="_blank">Regenerative Medicine-2012</a></li>
+    	<li><a href="http://omicsonline.org/toxicology2012/" title="Toxicology-2012" target="_blank">Toxicology-2012</a></li>
+    	<li><a href="http://omicsonline.org/analytrix2012/" title="Analytrix-2012" target="_blank">Analytrix-2012</a></li>
+    	<li><a href="http://omicsonline.org/forensicresearch2012/012/" title="Toxicology-2012" target="_blank">Toxicology-2012</a></li>
+    	<li><a href="http://omicsonline.org/analytrix2012/" title="Analytrix-2012" title="Forensic Research-2012" target="_blank">Forensic Research-2012</a></li>
+    	<li><a href="http://omicsonline.org/otolaryngology2012/" title="Otolaryngology -2012" target="_blank">Otolaryngology -2012</a></li>
+    	<li><a href="http://omicsonline.org/diabetes2012/" title="Diabetes-2012" target="_blank">Diabetes-2012</a></li>
+    	<li><a href="http://omicsonline.org/pediatrics2012/" title="Pediatrics-2012" target="_blank">Pediatrics-2012</a></li>
+    	<li><a href="http://omicsonline.org/translationalmedicine2012/" title="Translational Medicine-2012" target="_blank">Translational Medicine-2012</a></li>
+    	<li><a href="http://www.omicsonline.org/biotechnology2012/" title="Biotechnology-2012" target="_blank">Biotechnology-2012</a></li>
+    	<li><a href="http://omicsonline.org/biodiversity2012/" title="Biodiversity-2012" target="_blank">Biodiversity-2012</a></li>
+    	<li><a href="http://www.omicsonline.org/agri2012/" title="Agri-2012" target="_blank">Agri-2012</a></li>
+    	<li><a href="http://omicsonline.org/management2012/" title="Management-2012" target="_blank">Management-2012</a></li>
+    	<li><a href="http://omicsonline.org/hydrology2012/" title="Hydrology-2012" target="_blank">Hydrology-2012</a></li>
+    	<li><a href="http://omicsonline.org/cancerscience2012/" title="Cancer Science-2012" target="_blank">Cancer Science-2012</a></li>
+   	<li><a href="http://omicsonline.org/hydrology2012/" title="Hydrology-2012" target="_blank">Hydrology-2012</a></li>
+    	<li><a href="http://omicson  	<li><a href="http://omicsonline.org/centralnervoussystem2012/" title="Central Nervous System-2012" target="_blank">Central Nervous System-2012</a></li>
+    	<li><a href="http://omicsonline.org/pathology2012/" title="Pathology-2012" target="_blank">Pathology-2012</a></li>
+    	<li><a href=" http://omicsonline.org/nutritionalscience2012/" title="Nutritional Science-2012" target="_blank">Nutritional Science-2012</a></li>
+    	<li><a href="http://omicsonline.org/addictiontherapy2012/" title="Addiction Therapy-2012" target="_blank">Addiction Therapy-2012</a></li>
+    	<li><a href="http://omicsonline.org/virology2012/" title="Virology-2012" target="_blank">Virology-2012</a></li>
+    	<li><a href=" http://www.omicsonline.org/earthscience2012" title="Earth Science-2012" target="_blank">Earth Science-2012</a></li>
+    	<li><a href="http://omicsonline.org/orthopedics2012/" title="Orthopedics-2012" target="_blank">Orthopedics-2012</a></li>
+    	<li><a href="http://omicsonline.org/rheumatology2012/" title="Rheumatology-2012" target="_blank">Rheumatology-2012</a></li>
+    	<li><a href="http://omicsonline.org/biomarkers2012/" title="Biomarkers-2012" target="_blank">Biomarkers-2012</a></li>
+    	<li><a href="http://omicsonline.org/proteomics2012/" title="Proteomics-2012" target="_blank">Proteomics-2012</a></li>
+    	<li><a href="http://omicsonline.org/biosensors2012/" title="Biosensors & Bioelectronics-2012" target="_blank">Biosensors & Bioelectronics-2012</a></li>
+    	<li><a href="http://omicsonline.org/neuro2012/" title="Neuro-2012" target="_blank">Neuro-2012</a></li>
+    	<li><a href="http://www.omicsonline.org/BABE2012/" title="BABE-2012" target="_blank">BABE-2012</a></li>
+    	<li><a href="http://www.omicsonline.org/nano2012/" title="NANO-2012" target="_blank">NANO-2012</a></li>
+    	<li><a href="http://www.omicsonline.org/gastroenterology2012/" title="Gastroenterology-2012" target="_blank">Gastroenterology-2012</a></li>
+    	<li><a href="http://omicsonline.org/biometrics2012/" title="Biometrics-2012" target="_blank">Biometrics-2012</a></li>
+    	<li><a href="http://omicsonline.org/dermatology2012/" title="Dermatology-2012" target="_blank">Dermatology-2012</a></li>
+    	<li><a href="http://omicsonline.org/ophthalmology2012/" title="Ophthalmology-2012" target="_blank">Ophthalmology-2012</a></li>
+    	<li><a href="http://omicsonline.org/cardiology2012/" title="Cardiology-2012" target="_blank">Cardiology-2012</a></li>
+    	<li><a href="http://www.omicsonline.org/metabolomics2012/" title="Metabolomics-2012" target="_blank">Metabolomics-2012</a></li>
+    	<li><a href="http://omicsonline.org/pharmaceutica2012/" title="Pharmaceutica-2012" target="_blank">Pharmaceutica-2012</a></li>
+    	<li><a hwww.omicsonline.org/metabolomics2012/" title="Metabolref="http://www.omicsonline.org/immunology2012/" title="Immunology 2012" target="_blank">Immunology 2012</a></li>
+                </div>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#' title="2011 Conferences"><span>2011 Conferences</span></a>
+			<ul style="height:400px; width:211px;">
+   			<div rel="previous2011">
+				
+
+			    <li><a href="http://omicsonline.org/analyticaacta2011/" title="Analytica Acta-2011" target="_blank">Analytica Acta-2011</a></li>
+			    			    <li><a href="http://www.omicsonline.org/diabetes2011/" title="Diabetes-2011" target="_blank">Diabetes-2011</a></li>
+			    			    <li><a href="http://www.omicsonline.org/pediatrics2011/" title="Pediatrics 2011" target="_blank">Pediatrics 2011</a></li>
+			    			    <li><a href="http://omicsonline.org/cellscience2011/" title="Cell Science-2011" target="_blank">Cell Science-2011</a></li>
+			    			    <li><a href="http://omicsonline.org/biotechnology2011/" title="Biotechnology-2011" target="_blank">Biotechnology-2011</a></li>
+			    			    <li><a href="http://omicsonline.org/vaccines2011/" title="Vaccines-2011" target="_blank">Vaccines-2011</a></li>
+			    			    <li><a href="http://www.omicsonline.org/biomarkers2011/" title="Biomarkers-2011" target="_blank">Biomarkers-2011</a></li>
+			    			    <li><a href="http://www.omicsonline.org/pharma2011" title="Pharma-2011" target="_blank">Pharma-2011</a></li>
+			    			    <li><a href="http://www.omicsonline.org/virology2011/" title="Virology-2011" target="_blank">Virology-2011</a></li>
+			    			    <li><a href="http://omicsonline.org/cancerscience2011/" title="Cancer Science-2011" target="_blank">Cancer Science-2011</a></li>
+			    			    <li><a href="http://omicsonline.org/dermatologyophthalmology/" title="Clinical Research-2011" target="_blank">Clinical Research-2011</a></li>
+			    			    <li><a href="http://www.omicsonline.org/proteomicsbioinformatics2011/" title="Proteomics-2011" target="_blank">Proteomics-2011</a></li>
+			    			    <li><a href="http://www.omicsonline.org/biopharma2011/" title="Biopharma-2011" target="_blank">Biopharma-2011</a></li>
+			    			    <li><a href="http://www.omicsonline.org/BABE2011/" title="BABE-2011" target="_blank">BABE-2011</a></li>
+			    			    <li><a href="http://omicsonline.org/pharmaceutica2011/" title="Pharmaceutica-2011" target="_blank">Pharmaceutica-2011</a></li>
+			    			    <li><a href="http://www.omicsonline.org/biotechnology-2011/" title="Biotechnology-2011" target="_blank">Biotechnology-2011</a></li>
+			                </div>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#' title="2010 Conferences"><span>2010 Conferences</span></a>
+           <ul>
+               
+
+    -2011" target="_blank">Biotechnology-2011</a>        <li><a href="http://www.omicsonline.org/diabetes2010/" title="Diabetes-2010" target="_blank">Diabetes-2010</a></li>
+                        <li><a href="http://www.omicsonline.org/biomarkers2010/" title="Biomarkers-2010" target="_blank">Biomarkers-2010</a></li>
+                        <li><a href="http://omicsonline.org/analbioanal2010/" title="Anal & BioAnal-2010" target="_blank">Anal & BioAnal-2010</a></li>
+                        <li><a href="http://www.omicsonline.org/Conferences/ICB2010/lectures.html" title="BIOBIO-2010" target="_blank">BIOBIO-2010</a></li>
+                        <li><a href="http://www.omicsonline.org/Conferences/NCI2010/index.html" title="NCI 2010" target="_blank">NCI 2010</a></li>
+                        </ul>
+         </li>
+         <li class='has-sub'><a href='#' title="2009 Conferences"><span>2009 Conferences</span></a>
+            <ul>
+               
+
+            <li><a href="http://www.bitlifesciences.com/wcg2009/Program.asp" title="GENE 2009" target="_blank">GENE 2009</a></li>
+                        <li><a href="http://www.iddst.com/iddst2009" title="IDDST 2009" target="_blank">IDDST 2009</a></li>
+                        <li><a href="http://www.omicsonline.com/ArchiveJPB/2009/SpecialIssueJPB.php" title="WSA 2009" target="_blank">WSA 2009</a></li>
+                        <li><a href="http://www.omicsonline.org/calender/Announcements.html" title="CCSB-2009" target="_blank">CCSB-2009</a></li>
+                        </ul>
+         </li>
+         <li class='has-sub'><a href='#' title="2008 Conferences"><span>2008 Conferences</span></a>
+            <ul>
+               
+
+            <li><a href="http://www.omicsonline.com/ArchiveJPB/2008/SpecialIssueJPB.php" title="PRICPS 2008" target="_blank">PRICPS 2008</a></li>
+                        <li><a href="http://www.omicsonline.com/ArchiveJPB/2008/SpecialIssue95ISCA.php" title="ISCA 2008" target="_blank">ISCA 2008</a></li>
+                        </ul>
+         </li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#' title="Past Conference Reports"><span>Past Conference Reports</span></a>
+   <ul>
+         <li class='has-sub'><a href='#' title="2014 Conference Reports"><span>2014 Conference Reports</span></a>
+			<ul style="height:400px; width:211px;">
+   			<div rel="past2014">
+               
+
+               <li><a href="http://conferenceseries.com/Past_Reports/toxicology-2014-past/" title="Toxicology-2014" target="_blank">Toxicology-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/STD-AIDS-2014-past/" title="STD AIDS-2014" target="_blank">STD AIDS-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/petrochemistry-20</li>
+			                 <li><a href="http:14-past/" title="Petrochemistry-2014" target="_blank">Petrochemistry-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/babe-2014-past/" title="BABE-2014" target="_blank">BABE-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/endocrinology-2014-past/" title="Endocrinology-2014" target="_blank">Endocrinology-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/biostastics-2014-past/" title="Biostatistics-2014" target="_blank">Biostatistics-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/Healthinormatics_2014/" title="HITC-2014" target="_blank">HITC-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/broadcasting-media-2014-past/" title="Broadcasting Media-2014" target="_blank">Broadcasting Media-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/immunology-summit-2014-past/" title="Immunology Summit-2014" target="_blank">Immunology Summit-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/cellgenetherapy-2014-past/" title="cell therapy-2014" target="_blank">cell therapy-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/agri-2014-past/" title="Agri-2014" target="_blank">Agri-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/radiology-2014-past/" title="Radiology-2014" target="_blank">Radiology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/Hydrology-2014-past/" title="Hydrology-2014" target="_blank">Hydrology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/forensic-research-2014-past/" title="Forensic Research-2014" target="_blank">Forensic Research-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/materials-science-2014-past/" title="Materials Science 2014" target="_blank">Materials Science 2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/hematology-2014-past/" title="Hematology-2014" target="_blank">Hematology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/global-cancer-2014-past/" title="GCC-2014" target="_blank">GCC-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/probiotics-2014-past/index.php" title="probiotics-2014" target="_blank">probiotics-2014</aal-cancer-2014-past/" title="GCC-2014" target="_blank></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/biosimilars-2014-past" title="Biosimilars-2014" target="_blank">Biosimilars-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/industrial-engineering-2014-past/" title="Industrial-Engineering-2014" target="_blank">Industrial-Engineering-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/Personalizedmedicine-2014-past/" title="Personalized Medicine-2014" target="_blank">Personalized Medicine-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/Cancerscience-2014-past/" title="Cancer Science-2014" target="_blank">Cancer Science-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/diabetes-2014-past/" title="Diabetes-2014" target="_blank">Diabetes-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/nanotek_2014-past/" title="Nanotek-2014" target="_blank">Nanotek-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/Surgery-2014-past/" title="Surgery Anesthesia-2014" target="_blank">Surgery Anesthesia-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/translational-medicine-2014-past/" title="Translational Medicine-2014" target="_blank">Translational Medicine-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/nursing-2014-past/" title="Nursing-2014" target="_blank">Nursing-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/pharmacovigilance-2014-past/" title="pharmacovigilance-2014" target="_blank">pharmacovigilance-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/Bacteriology-2014-past/" title="Bacteriology-2014" target="_blank">Bacteriology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/Nutritional-Science-2014-past/" title="Nutritional Conference-2014" target="_blank">Nutritional Conference-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/obesity-2014-past/" title="Obesity-2014" target="_blank">Obesity-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/clinicalpharmacy-2014-past/" title="Clinical Pharmacy-2014" target="_blank">Clinical Pharmacy-2014</a></li>
+			                 <li><a href="http://conferenceseries.com/Past_Reports/medicinal-chemistry-2014-past/" title="Medicinal Chemistry-2014" target="_blank">Medicinal Chemistry-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-repli><a href="http://conferenceseries.com/Past_orts/mechanical-aerospace-engineering-2014-past/" title="Mech Aero-2014" target="_blank">Mech Aero-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/Biosensors-2014-past/" title="Biosensors & Bioelectronics-2014" target="_blank">Biosensors & Bioelectronics-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/cellscience-2014-past/" title="Cell Science-2014" target="_blank">Cell Science-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/gynecology-2014-past/" title="Gynecology-2014" target="_blank">Gynecology-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/Earth-Science-2014-past/" title="Earth Science-2014" target="_blank">Earth Science-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/integrativebiology-2014-past/" title="Integrative Biology-2014" target="_blank">Integrative Biology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/biodiversity-2014-past/" title="biodiversity-2014" target="_blank">biodiversity-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/oceanography-2014-past" title="Oceanography-2014" target="_blank">Oceanography-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/orthopedics-2014-past/" title="Orthopedics & Rheumatology-2014" target="_blank">Orthopedics & Rheumatology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/cosmetology-2014-past/" title="Cosmetology-2014" target="_blank">Cosmetology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/food-technology-2014-past/" title="Food Technology-2014" target="_blank">Food Technology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/cosmetology-2014-past/" title="Cosmetology-2014" target="_blank">Cosmetology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/computer-graphics-2014-past/" title="Computer Graphics-2014" target="_blank">Computer Graphics-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/physical-medicine-2014-past/" title="Physical-medicine-2014" target="_blank">Physical-medicine-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/ophthalmology-2014conferences/past-conference-reports/physical--past/" title="Ophthalmology-2014" target="_blank">Ophthalmology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/greenchemistry-2014-past/" title="Green Chemistry-2014" target="_blank">Green Chemistry-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/epidemiology-2014-past/" title="Epidemiology-2014" target="_blank">Epidemiology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/pharmacognosy-2014-past/" title="Pharmacognosy-2014" target="_blank">Pharmacognosy-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/clinical_microbiology-2014-past/" title="Clinical Microbiology-2014" target="_blank">Clinical Microbiology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/dementia-2014-past/" title="Dementia-2014" target="_blank">Dementia-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/gmp-summit-2014-past/" title="GMP Summit-2014" target="_blank">GMP Summit-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/vaccines-2014-past/" title="Vaccines-2014" target="_blank">Vaccines-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/animal-dairy-science-2014-past/" title="animal-dairy-science-2014" target="_blank">animal-dairy-science-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/regulatoryaffairs-2014-past/" title="Regulatory Affairs-2014" target="_blank">Regulatory Affairs-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/lasers-optics-photonics-conference-2014-past/" title="Optics-2014" target="_blank">Optics-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/genomics-2014-past/" title="Genomics-2014" target="_blank">Genomics-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/neuro-2014-past/" title="Neuro-2014" target="_blank">Neuro-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/Tissue-Science-2014-past/" title="Tissue Science-2014" target="_blank">Tissue Science-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/gastrentorology-2014-past/" title="Gastroenterology-2014" target="_blank">Gastroenterology-2014</a></li>
+			          arget="_blank">Tissue Science-2014</a></li>
+			            <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/traditionalmedicine-2014-past/" title="Traditional Medicine-2014" target="_blank">Traditional Medicine-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/geriatrics-2014-past/" title="Geriatrics-2014" target="_blank">Geriatrics-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/biotechnology-2014-past/" title="Biotechnology-2014" target="_blank">Biotechnology-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/proteomics-2014-past/" title="Proteomics-2014" target="_blank">Proteomics-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/analytical-bioanalytical-techniques-2014-past/" title="Analytica Acta-2014" target="_blank">Analytica Acta-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/bioprocess-2014-past/" title="Bioprocess-2014" target="_blank">Bioprocess-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/occupational-health-2014-past/" title="Occupational Health-2014" target="_blank">Occupational Health-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/addiction-therapy-2014-past/" title="Addiction Therapy-2014" target="_blank">Addiction Therapy-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/nephro-2014-past/" title="Nephro-2014" target="_blank">Nephro-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/dental-2014-past/" title="Dental-2014" target="_blank">Dental-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/biomarkers-clinical-research-conference-2014-past/" title="Biomarkers-2014" target="_blank">Biomarkers-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/pathology-2014-past" title="Pathology-2014" target="_blank">Pathology-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/dermatology-2014-past/" title="Dermatology-2014" target="_blank">Dermatology-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/cardiology-2014-past/" title="Cardiology-2014" target="_blank">Cardiology-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/phahref="http://www.omicsgroup.com/conferences/prmaceutics-2014-past/" title="Pharmaceutica-2014" target="_blank">Pharmaceutica-2014</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/metabolomics-systems-biology-2014-past/" title="Metabolomics-2014" target="_blank">Metabolomics-2014</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/agricultural-horticultural-2014/" title="Agri-2014" target="_blank">Agri-2014</a></li>
+			   
+              </div>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#' title="2013 Conference Reports"><span>2013 Conference Reports</span></a>
+			<ul style="height:400px; width:211px;">
+   			<div rel="past2013">
+               
+
+               <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/traditional-medicine-2013-past/" title="Traditional Medicine-2013" target="_blank">Traditional Medicine-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/nursing-emergency-medicine-2013-past/" title="Nursing-2013" target="_blank">Nursing-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/nanotek-nanotechnology-2013-past" title="Nanotek-2013" target="_blank">Nanotek-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/obesity-weight-management-2013-past/" title="Obesity-2013" target="_blank">Obesity-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/bacteriology-2013-past/" title="Bacteriology-2013" target="_blank">Bacteriology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/clinical-pharmacy-2013-past" title="Clinical Pharmacy-2013" target="_blank">Clinical Pharmacy-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/virology-2013-past/" title="Virology-2013" target="_blank">Virology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/ophthalmology-2013-past/" title="Ophthalmology-2013" target="_blank">Ophthalmology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/cosmetology-2013-past/" title="Cosmetology-2013" target="_blank">Cosmetology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/gmp-quality-control-validation-2013-past/" title="GMP-2013" target="_blank">GMP-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/petrochemisww.omicsgroup.com/conferences/past-conferencetry-chemical-engineering-2013-past/" title="Petrochemistry-2013" target="_blank">Petrochemistry-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/pharmacovigilance-clinical-trials-2013-past/" title="Pharmacovigilance-2013" target="_blank">Pharmacovigilance-2013</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/cell-science-2013-past" title="Cell Science-2013" target="_blank">Cell Science-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/genomics-2013-past/" title="Genomics-2013" target="_blank">Genomics-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/hiv-aids-std-sti-2013-past/" title="STD-AIDS-2013" target="_blank">STD-AIDS-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/pharmacognosy-2013-past/" title="Pharmacognosy-2013" target="_blank">Pharmacognosy-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/food-processing-technology-2013-past/" title="Food Technology-2013" target="_blank">Food Technology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/probiotics-2013-past" title="Probiotics-2013" target="_blank">Probiotics-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/cell-gene-therapy-2013-past/" title="Cell Therapy-2013" target="_blank">Cell Therapy-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/medicinal-chemistry-computer-aided-drug-designing-past-2013/" title="MedChem & CADD-2013" target="_blank">MedChem & CADD-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/immunology-2013-past" title="Immunology Summit-2013" target="_blank">Immunology Summit-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/cancer-science-2013-past/" title="Cancer Science-2013" target="_blank">Cancer Science-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/pharmaceutical-regulatory-affairs-2013-past" title="Regulatory Affairs-2013" target="_blank">Regulatory Affairs-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/analytica-acta-2013-past/" title="Analytica Acta-2013" target="_blank">Analytica Acta-2013</a></li>
+			                 <li><a href="http://www.omic</a></li>
+			                 <li><a href="http://wwsgroup.com/conferences/past-conference-reports/materials-science-engineering-2013-past" title="Materials Science-2013" target="_blank">Materials Science-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/toxicology-2013-past/" title="Toxicology-2013" target="_blank">Toxicology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/biomolecularengg-2013-past/" title="Bio Molecular Engg-2013" target="_blank">Bio Molecular Engg-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/clinicalmicrobiology-2013-past/" title="Clinical Microbiology-2013" target="_blank">Clinical Microbiology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/surgery-anesthesia-2013-past" title="Surgery-Anesthesia 2013" target="_blank">Surgery-Anesthesia 2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/omics-studies-2013-past/" title="Omics Studies 2013" target="_blank">Omics Studies 2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/Forensic-Research-2013-past/" title="Forensic Research-2013" target="_blank">Forensic Research-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/lasers-optics-photonics-2013-past/" title="Optics-2013" target="_blank">Optics-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/mechanical-aerospace-engineering-2013-past" title="Mech Aero-2013" target="_blank">Mech Aero-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/biotechnology-2013-past/" title="Biotechnology-2013" target="_blank">Biotechnology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/psychology-autism-alzheimers-2013-past" title="PsychoAAD-2013" target="_blank">PsychoAAD-2013</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/biosimilars-2013-past" title="Biosimilars-2013" target="_blank">Biosimilars-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/hematology-blood-disorders-2013-past/" title="Hematology-2013" target="_blank">Hematology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/hydrology-2013-past/" title="Hydrology-2013" target="_blank">Hydrology-2013</a></li>
+			                 <li><a href="hrget="_blank">Hematology-2013</a></li>
+			  ttp://www.omicsgroup.com/conferences/past-conference-reports/endocrinology-2013-past/" title="Endocrinology-2013" target="_blank">Endocrinology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/tissue-science-2013-past/" title="Tissue Science-2013" target="_blank">Tissue Science-2013</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/epidemiology-2013-past/" title="Epidemiology-2013" target="_blank">Epidemiology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/oceanography-2013-past" title="Oceanography-2013" target="_blank">Oceanography-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/biodefense-natural-disasters-2013-past" title="Natural Disasters-2013" target="_blank">Natural Disasters-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/Biodiversity-2013-past/" title="Biodiversity-2013" target="_blank">Biodiversity-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/orthopedics-rheumatology-2013-past" title="Orthopedics & Rheumatology-2013" target="_blank">Orthopedics & Rheumatology-2013</a></li>
+			             /a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/orthopedics-rheumatology-2013-past" title="Or    <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/pathology-2013-past/" title="Pathology-2013" target="_blank">Pathology-2013</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/dental-2013-past/" title="Dental-2013" target="_blank">Dental-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/Physical-Medicine-2013-past/" title="Physical Medicine2013" target="_blank">Physical Medicine2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/diabetes-2013-past" title="Diabetes-2013" target="_blank">Diabetes-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/radiology-2013-past" title="Radiology-2013" target="_blank">Radiology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/personalized-medicine-2013-past" title="Personalized Medicine-2013" target="_blank">Personalized Medicine-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/integrative-biology-summit-2013-past/" title="Integrative Biology-2013" target="_blank">Integrative Biology-2013</a></li>
+			                 <li><a href="http://www.omicsgrou    <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/integrative-biology-summit-2013-past/" title="Integrative Biology-2013"p.com/conferences/past-conference-reports/translational-medicine-2013-past/" title="Translational medicine-2013" target="_blank">Translational medicine-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/nephrology-2013-past/" title="Nephrology-2013" target="_blank">Nephrology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/vaccines-2013-past/" title="Vaccines-2013" target="_blank">Vaccines-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/addiction-therapy-2013-past/" title="Addiction Therapy-2013" target="_blank">Addiction Therapy-2013</a></li>
+			                 <li><a href="http://omicsgroup.com/conferences/past-conference-reports/earth-science-2013-past/" title="Earth Science-2013" target="_blank">Earth Science-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/animal-science-2013-past" title="Animal Science-2013" target="_blank">Animal Science-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/proteomics-2013-past/" title="Proteomics-2013" target="_blank">Proteomics-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/biomarkers-2013-past/" title="Biomarkers-2013" target="_blank">Biomarkers-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/nutritional-science-2013-past" title="Nutritional Science-2013" target="_blank">Nutritional Science-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/biosensors-bioelectronics-2013-past/" title="Biosensors & Bioelectronics-2013" target="_blank">Biosensors & Bioelectronics-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/Neuro-2013-past/" title="Neuro-2013" target="_blank">Neuro-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/biometrics-biostatistics-2013-past/" title="Biometrics-2013" target="_blank">Biometrics-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/gastroenterology-urology-2013-past/" title="Gastroenterology-2013" target="_blank">Gastroenterology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/BABE-2013-past/" title="BABE-2013" target="_blank">BABE-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-confa></li>
+			                 <li><a href="http://www.erence-reports/occupational-health-2013-past/" title="Occupational Health-2013" target="_blank">Occupational Health-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/cardiology-2013-past/" title="Cardiology-2013" target="_blank">Cardiology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/dermatology-2013-past/" title="Dermatology-2013" target="_blank">Dermatology-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/metabolomics-2013-past/" title="Metabolomics-2013" target="_blank">Metabolomics-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/pharmaceutics-2013-past" title="Pharmaceutica-2013" target="_blank">Pharmaceutica-2013</a></li>
+			                 <li><a href="http://www.omicsgroup.com/conferences/past-conference-reports/watech-2013-past/" title="Watech-2013" target="_blank">Watech-2013</a></li>
+			   
+            </div>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#' title="2012 Conference Reports"><span>2012 Conference Reports</span></a>
+        	<ul style="height:400px; width:211px;">
+   			<div rel="past2012">
+               
+
+               <li><a href="http://www.omicsonline.org/analyticaacta-2012-past" title="Analytica Acta-2012" target="_blank">Analytica Acta-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/toxicology-2012-Past/" title="Toxicology-2012" target="_blank">Toxicology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/cellscience-2012-Past" title="Cell Science-2012" target="_blank">Cell Science-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/obesity-2012-Past" title="Obesity-2012" target="_blank">Obesity-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/foodtechnology-2012-past/" title="Food Technology-2012" target="_blank">Food Technology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/pharma-2012-past" title="Pharma-2012" target="_blank">Pharma-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/immunology-2012-Past/" title="Immunology-2012" target="_blank">Immunology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/nanotek-2012-Past/" title="Nanotek-2012" target="_blank">Nanotek-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/gmp-gcp-2012-Past/" title="GMP,GCP,QA,QC&Validation-2012" target="_blank">GMP,GCP,QA,QC&Validation-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/clinicalmicra></li>
+			                 <li><a href="httobiology-2012-past/" title="Clinical Microbiology-2012" target="_blank">Clinical Microbiology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/regenerative-medicine-2012-past/" title="Regenrative Medicine-2012" target="_blank">Regenrative Medicine-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/trichology-2012-past/" title="Trichology-2012" target="_blank">Trichology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/anesthesia-2012-past/" title="Anesthesia-2012" target="_blank">Anesthesia-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/surgery-2012-past/" title="Surgery-2012" target="_blank">Surgery-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/cosmetology-2012-past/" title="Cosmetology-2012" target="_blank">Cosmetology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/bioproduct-2012-past/" title="Bioproducts-2012" target="_blank">Bioproducts-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/genetherapy-2012-past/" title="Gene Therapy-2012" target="_blank">Gene Therapy-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/probiotics-2012-past/" title="Probiotics-2012" target="_blank">Probiotics-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/respiratory-medicine-2012-past/" title="Respiratory Medicine-2012" target="_blank">Respiratory Medicine-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/cadd-2012-past/" title="CADD-2012" target="_blank">CADD-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/material-science-2012-past/" title="Materials Science-2012" target="_blank">Materials Science-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/analytrix-2012-past/" title="Analytrix-2012" target="_blank">Analytrix-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/otolaryngology-2012-past/" title="Otolaryngology-2012" target="_blank">Otolaryngology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/biodefence-2012-past/" title="Biodefense-2012" target="_blank">Biodefense-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/forensic-research-2012-past/" title="Forensic Research-2012" target="_blank">Forensic Research-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/pharmacovigilance-2012-past/" title="Pharmacovigilance-2012" target="_blank">Pharmacovigilance-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/celltherapy-2012-past/" title="Cell Therapy-2012" target="_blank">Cell Therapy-2012</a></li>ovigilance-2012-past/" title="Pharmacovigilan
+			                 <li><a href="http://www.omicsonline.org/tissuescience-2012-past/" title="Tissue Science-2012" target="_blank">Tissue Science-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/diabetes-2012-past/" title="Diabetes-2012" target="_blank">Diabetes-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/pediatrics-2012-past/" title="Pediatrics-2012" target="_blank">Pediatrics-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/biotechnology-2012-past/" title="Biotechnology-2012" target="_blank">Biotechnology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/translational-medicine-2012-past/" title="Translational Medicine-2012" target="_blank">Translational Medicine-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/management-2012-past/" title="Management-2012" target="_blank">Management-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/biodiversity-2012-past/" title="Biodiversity-2012" target="_blank">Biodiversity-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/agri-2012-past/index.html" title="Agri-2012" target="_blank">Agri-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/nephro-2012-past/" title="Nephro-2012" target="_blank">Nephro-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/Cancer-Science-2012-past/" title="Cancer Science-2012" target="_blank">Cancer Science-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/hydrology-2012-past/" title="Hydrology-2012" target="_blank">Hydrology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/rheumatology-2012-past/" title="Rheumatology-2012" target="_blank">Rheumatology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/occupational-health-2012-past/" title="Occupational Health-2012" target="_blank">Occupational Health-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/central-nervous-system-2012-past/" title="Central Nervous System-2012" target="_blank">Central Nervous System-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/biosimilars-2012-past/" title="Biosimilars-2012" target="_blank">Biosimilars-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/Earth-Science-2012-past" title="Earth Science-2012" target="_blank">Earth Science-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/vaccines-2012-past/" title="Vaccines-2012" target="_blank">Vaccines-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/nutritional-science-2012-past/" title=012</a></li>
+			                 <li><a href="http:/"Nutritional Science-2012" target="_blank">Nutritional Science-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/pathology-2012-past" title="Pathology-2012" target="_blank">Pathology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/addiction-therapy-2012-past/" title="Addiction Therapy - 2012" target="_blank">Addiction Therapy - 2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/virology-2012-past" title="Virology-2012" target="_blank">Virology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/Biomarkers-2012-past/" title="Biomarkers-2012" target="_blank">Biomarkers-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/orthopedics-2012-past/" title="Orthopedics-2012" target="_blank">Orthopedics-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/Proteomics-2012-past/" title="Proteomics-2012" target="_blank">Proteomics-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/neuro-2012-past/" title="Neuro-2012" target="_blank">Neuro-2012</a></li>
+			                 <li><a href="http://omicsonline.org/biosensors-2012-past" title="Biosensors & Bioelectronics-2012" target="_blank">Biosensors & Bioelectronics-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/Biometrics-2012-past/" title="Biometrics-2012" target="_blank">Biometrics-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/babe-2012-past/" title="BABE-2012" target="_blank">BABE-2012</a></li>
+			                 <li><a href="http://omicsonline.org/nano-2012-past/" title="Nano-2012" target="_blank">Nano-2012</a></li>
+			                 <li><a href="http://omicsonline.org/gastro-2012-past/" title="Gastroenterology-2012" target="_blank">Gastroenterology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/cardiology-2012-past/" title="Cardiology-2012" target="_blank">Cardiology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/ophthalmology-2012-past" title="Ophthalmology-2012" target="_blank">Ophthalmology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/dermatology-2012-past" title="Dermatology-2012" target="_blank">Dermatology-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/pharmaceutica-2012-past/" title="Pharmaceutica-2012" target="_blank">Pharmaceutica-2012</a></li>
+			                 <li><a href="http://www.omicsonline.org/metabolomics-2012-past/" title="Metabolomics-2012" target="_blank">Metabolomics-2012</a></li>
+			   
+            </div>
+            </ul>
+         </li>
+        <li class='has-sub'><a href='#' title="2011 Conference Repef="http://www.omicsonline.org/metabolomics-2orts"><span>2011 Conference Reports</span></a>
+        	<ul style="height:400px; width:211px;">
+   			<div rel="past2011">
+               
+
+               <li><a href="http://omicsonline.org/analytica-acta-2011-past/" title="Analytica Acta-2011" target="_blank">Analytica Acta-2011</a></li>
+			                 <li><a href="http://www.omicsonline.org/diabetes-2011-past/" title="Diabetes-2011" target="_blank">Diabetes-2011</a></li>
+			                 <li><a href="http://omicsonline.org/pediatrics-2011-past/" title="Pediatrics-2011" target="_blank">Pediatrics-2011</a></li>
+			                 <li><a href="http://omicsonline.org/vaccines2011-past/" title="Vaccines2011" target="_blank">Vaccines2011</a></li>
+			                 <li><a href="http://omicsonline.org/biotechnology2011-past" title="Biotechnology-2011" target="_blank">Biotechnology-2011</a></li>
+			                 <li><a href="http://omicsonline.org/cellscience2011-past/" title="Cell Science-2011" target="_blank">Cell Science-2011</a></li>
+			                 <li><a href="http://www.omicsonline.org/biomarkers2011-past/" title="Biomarkers-2011" target="_blank">Biomarkers-2011</a></li>
+			                 <li><a href="http://www.omicsonline.org/biotechnology-2011/gallery.html " title="Biotechnology-2011" target="_blank">Biotechnology-2011</a></li>
+			                 <li><a href="http://omic1" target="_blank">Biomarkers-2011</a></li>
+			                 <li><a href="http://www.omicsonline.org/biotechnology-2011/gallery.html " title="Biotsonline.org/pharma-2011-past/" title="Pharma-2011" target="_blank">Pharma-2011</a></li>
+			                 <li><a href="http://omicsonline.org/virology2011-past/" title="Virology-2011" target="_blank">Virology-2011</a></li>
+			                 <li><a href="http://omicsonline.org/cancerscience2011-past" title="Cancer Science-2011" target="_blank">Cancer Science-2011</a></li>
+			                 <li><a href="http://www.omicsonline.org/proteomics-2011-past/" title="Proteomics-2011" target="_blank">Proteomics-2011</a></li>
+			                 <li><a href="http://www.omicsonline.org/biopharma2011/gallery.html" title="Biopharma-2011" target="_blank">Biopharma-2011</a></li>
+			                 <li><a href="http://www.omicsonline.org/BABE2011_pcr/index.php" title="BABE & Pharmaceutica-2011" target="_blank">BABE & Pharmaceutica-2011</a></li>
+			   
+            </div>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#' title="2010 Conference Reports"><span>2010 Conference Reports</span></a>
+            <ul>
+               
+
+               <li><a href="http://www.omicsonline.org/diabetes2010/gallery.html" title="Diabetes-2010" target="_blank">Diabetes-2010</a></li>
+			                 <li><a href="http://www.omicsonline.org/ana_pcr/index.html" title="Analbional-2010" target="_blank">Analbional-2010</a></li>
+			                 <li><a href="http://www.omicsonline.org/biobio2010/photogallery/" title="Biobio-2010" target="_blank">Biobio-2010</a></li>
+			   
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <!--<li><a href='http://www.omicsgroup.com/conferences/past-conference-reports/psychology-autism-alzheimers-2013-past/' target="_blank"><span>Past Conference Report</span></a></li>-->
+   <div class="headingMenu">Conference Event</div>
+   <li><a href='index.php' title="Home"><span>Home</span></a></li>
+  <li class='has-sub'><a href='#' title="Scientific Program"><span>Scientific Program</span></a>
+   <ul>
+               <li><a href='abstract-submission.php'><span>Day 1: June 8, 2015</span></a></li>
+               <li><a href='abstract-submission.php'><span>Day 2: June 9, 2015</span></a></li>
+               <li class='last'><a href='abstract-submission.php'><span>Day 3: June 10, 2015</span></a></li>
+   </ul>    
+   </li>
+   <li><a href='organizing-committee.php' title="Organizing Committee"><span>Organizing Committee</span></a></li>
+   <li><a href='speaker-guidelines.php' title="Speaker Guidelines"><span>Speaker Guidelines</span></a></li>
+   <li><a href='venue-hospitality.php' title="Venue &amp; Hospitality"><span>Venue &amp; Hospitality</span></a></li>
+   <li class='has-sub'><a href='#' title="About City"><span>About City</span></a>
+   <ul>
+               <li><a href='conference-city.php' title="City Guide"><span>City Guide</span></a></li>
+                  </ul>   
+   </li>
+   <li><a href='sponsors.php' title="Sponsors"><span>Sponsors</span></a></li>
+   <li><a href='exhibitors.php' title="Exhibition"><span>Exhibition</span></a></li>
+   <li><a href="http://network.conferenceseries.com/index.php?id=440" title="B2B"><span>B2B</span></a></li>
+   <li><a href="http://www.omicsgroup.com/conferences/ACS/conference/pdfs/flu2015_Conferenceguide.pdf" title="Conference Guide"><span>Conference Guide</span></a></li>
+               
+
+
+
+
+
+   <!--<li><a href='#'><span>B2B</span></a></li>-->
+   <li class='has-sub'><a href='index.php' title="Authorization Policy"><span>Authorization Policy</span></a>
+   <ul>
+               <li><a href='#'><div style="font-size:10px;">By registering for the conference you grant permission to OMICS Group to photograph, film or record and use your name, likeness, image, voice and comments and to publish, reproduce, exhibit, distribute, broadcast, edit and/or digitize the resulting images and materials in publications, advertising materials, or in any other form worldwide without compensation. Taking of photographs and/or videotaping during any session is prohibited. Contact us for any queries.</div></a></li>
+   </ul>   
+   </li>
+   <li class='has-sub'><a href='#' title="Conference Contacts"><span>Conference Contacts</span></a>
+   	<ul>
+		<!--<li><a href='venuecontacts.php'><span>Venue Phone Number</span></a></li>-->
+    	<li class='last'><a href='help-desk.php' title="Help Desk"><span>Help Desk</span></a></li>
+   </ul>   
+   </li>
+   <li><a href='cancellation-policy.php' title="Terms &amp; Conditions"><span>Terms &amp; Conditions</span></a></li>
+</ul>
+</div>
+<div style="text-align:center; font-size:24px; color:#0d6971; border-bottom:2px solid #d05207;">Operated by</div>
+            <div id="journals"></div>
+            <div style="margin: 0 0 40px 0;"></div>
+<div style="clear:both;">&nbsp;</div>
+            <div style="clear:both;">&nbsp;</div>
+            
+            </div>
+            <div class="bodyContent">
+
+
+
+
+
+<script type="text/javascript" src="scripts/jquery-1.10.2.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/fadeslideshow.js"></script>
+<script type="text/javascript">
+var mygallery=new fadeSlideShow({
+	wrapperid: "fadeshow1", //ID of blank DIV on page to house Slideshow
+	dimensions: [175, 150], //width/height of gallery in pixels. Should reflect dimensions of largest image
+	imagearray: [
+		["images/media-partners/brownwalker.jpg", " ", "_new", "brownwalker"],
+		["images/media-partners/scientistsolutions.jpg", " ", "_new", "scientistsolutions"],
+		["images/media-partners/lanyrd.jpg", " ", "_new", "lanyrd"],
+		["images/media-partners/10times.jpg", " ", "_new", "10times"],
+		["images/media-partners/eventbrite.jpg", " ", "_new", "eventbrite"]
+		
+		//<--no trailing comma after very last image element!
+	],
+	displaymode: {type:'auto', pause:2500, cycles:0, wraparound:false},
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 500, //transition duration (milliseconds)
+	descreveal: "ondemand",
+	togglerid: ""
+})
+
+/*var mygallery=new fadeSlideShow({
+	wrapperid: "fadeshow2", //ID of blank DIV on page to house Slideshow
+	dimensions: [175, 180], //width/height of gallery in pixels. Should reflect dimensions of largest image
+	imagearray: [
+		["images/press-release/1.jpg", "http://www.omicsgroup.com", "_new", ""],
+		["images/press-release/2.jpg", "http://www.omicsgroup.com", "_new", ""]
+		//<--no trailing comma after very last image element!
+	],
+	displaymode: {type:'auto', pause:2500, cycles:0, wraparound:false},
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 500, //transition duration (milliseconds)
+	descreveal: "ondemand",
+	togglerid: ""
+})*/
+</script>
+<link href="css/index-body-styles.css" rel="stylesheet" type="text/css" />
+<div class="mainBody">
+	<div class="theme"><span>Theme: </span>Understanding the Flu;ansition duration (milliseconds)
+	descreveal: "ondemand",
+	togglerid: ""
+})*/
+</script>
+<link href="css/index-body-styles.css" rel="stylesheet" type="text/css" />
+<div class="mainBody">
+	<div class="theme"><span>Theme: </span>Understanding t pathology, prevention, containment and risk analysis</div>
+	<!--<div class="featured">Featured Speakers</div>
+    <div style="padding-left:15px;">
+	    <iframe frameborder="0" src="featured-speakers/index.html" width="780" height="213" style="overflow:hidden;" scrolling="no"></iframe>
+    </div>-->
+    
+    <div class="contentBlocks welcomeMsg">
+   	 <p class="welcomeMsgHeading" style="margin-left:200px">About Flu-2015</p>
+    <p><p><a href="http://omicsonline.org/">Omics Group</a> welcomes you to The International Conference on Flu to be held from June 8-10<sup>th</sup> , 2015 in Chicago, USA. The theme of Flu-2015 is &ldquo;Understanding the Flu; pathology, prevention, containment and risk analysis.&rdquo; Omics Group International organizes 300+ <a href="http://www.omicsgroup.com/" title="Conferences">Conferences</a>&nbsp; every year across &nbsp;the globe with support from 1000 more scientific <a href="http://omicsonline.org/international-societies-world-fedarations-scientific-associations.php" title="societies">societies</a> and Publishes 400+ <a href="http://omicsonline.org/open-access-journals-list.php" title="Open access journals">Open access journals</a> which contains over 30000 eminent personalities, reputed scientists as editorial board members. The conference expects the&nbsp; participation of experts from various cross disciplines likes-list.php" title="Open access journals">Open access journals</a> which contains over 30000 eminent personalities, reputed scientists as editorial boa virologists, immunologists, microbiologists, epidemiologists, doctors, public health planners, pharmacologists, computational biologists, and those in applied fields conducting influenza related research.</p>
+<p>&nbsp;</p>
+<p>As the world shrinks the ease with which an infectious diseases spreads amongst the population increases exponentially. Influenza or flu as it is commonly known is one such disease. The flu virus is unstable and mutates often. This virus while mostly non-lethal can easily develop the ability to kill and infect millions of people, as seen with the Spanish Flu of 1918. The scientific community must therefore work together to make sure any new influenza strain is constantly monitored and with the help of surveillance programs prevent a lethal influenza epidemic.Due to the non-stable nature of the flu virus many companies are trying to develop a universal vaccine which will work against all strains of influenza.&nbsp; The NIH has 5 Centers of Excellence for Influenza Research and Surveillance where groundbreaking research is carried out. The amount of influenza vaccines doses ordered increases by 5% yearly and the NIH spends around $ 312 million dollars on influenza related research yearly. &nbsp;The need for consensus amongst academia and business has been recognized by <a href="http://omicsgroup.com/">Omics Group International&nbsp; </reases by 5% yearly and the NIH spends around $ 312 million dollars on influenza related research yearly. &nbsp;The need for consensus amongst academia>&nbsp;and so we are proud to host the International&nbsp;Conference on Flu.</p>
+<p>&nbsp;</p>
+<p>For more information please visit:&nbsp; <a href="http://conferenceseries.com/flu-influenzavirus-fluvaccine-pandemicinfluenza-antiretroviral.php">Market Report on Flu </a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</p>
+    </div>
+    <div class="contentBlocksSmall">
+        <p class="welcomeMsgHeading">Conference Highlights</p>
+        <div class="cHighlights">
+		        <li class="cHighlightsList">Containment of  Flu Outbreaks </li>
+                <li class="cHighlightsList">Threat of Cross-Species Strains</li>
+                <li class="cHighlightsList">Mutation and Influenza Virus</li>
+                <li class="cHighlightsList">Flu and Vaccines</li>
+                <li class="cHighlightsList">Potential Drug Targets</li>
+                <li class="cHighlightsList">Influenza Strains : Detection and Differentiation </li>
+                <li class="cHighlightsList">Influenza Co-infection </li>
+                <li class="cHighlightsList">Influenza : Alternate Treatment Methods</li>
+                <li class="cHighlightsList">Molecular Biology of Influenza Viruses</li>
+                <li class="cHighlightsList">Immune Responses to Influenza Infections</li>
+                </div>
+    </div>
+    <div class="mediaPartners">
+    <div class="mediaPartnersHeading">media partners</div>
+    <div style="padding:0px 10px 20px 30px;"><div id="fadeshow1"></div></div>
+    </div>
+    <div class="clear"></div>
+    <div class="toShare">To share your views and research, please <a href="registration.php">click here</a> to register for the Conference.</div>
+    <div class="clear"></div>
+    <div class="contentBlocksSmall">
+        <p class="toCollaborate">To Collaborate Scientific Professionals<br>around the World</p>
+                <div class="cHighlights">
+        <div class="toCollaborate1st">Conference Date</div><div class="toCollaborate2nd">June 08-10, 2015</strong></div>
+        <div class="clear"></div>
+                <div class="toCollaborate1st">Sponsors & Exhibitors</div><div class="toCollaborate2nd"><a href="Sponsorship.pdf">Click here for Sponsorship Opportunities</a></div>
+                <div class="clear"></div>
+        <div class="toCollaborate1st">Speaker Opportunity</div><div class="toCollaborate3rd">Day 1</div><div class="toCollaborate3rd">Day 2</div><div class="toCollaborate3rd">Day 3</div>
+        <div class="clear"></div>
+        <div class="toCollaborate1st">&nbsp;</div><div class="toCollaborate3rd"><a href="abstract-submission.php">Available</a></div><div class="toCollaborate3rd"><a href="abstract-submission.php">Available</a></div><div class="toCollaborate3rd"><a href="a       <div class="toCollaborate1st">&nbsp;</div><divbstract-submission.php">Available</a></div>
+        <div class="clear"></div>
+        <div class="toCollaborate1st">Poster Opportunity</div><div class="toCollaborate2nd"><a href="#">Available</a></div>
+        <div class="clear"></div>
+        <div style="height:33px;">&nbsp;</div>
+        </div>
+    </div>
+    <div class="mediaPartners">
+    <div class="mediaPartnersHeading">Press Release</div>
+    <div style="padding:20px 10px 20px 30px;"><div id="fadeshow2"></div></div>
+    </div>
+    <div class="clear"></div>
+    <div class="crossref"> 
+    <p class="mediaPartnersHeading">Special Issues</p>
+    <p>All accepted abstracts will be published in respective OMICS Group Journals.<br>
+     <div style="width:530px;overflow:hidden;height:auto">
+    <a href="http://omicsonline.org/virology-mycology.php" target="_blank" title="Journal of Virology & Mycology" style="text-decoration:none;color:#128f9a;">Journal of Virology & Mycology</a> | <a href="http://esciencecentral.org/journals/clinical-microbiology.php" target="_blank" title="Journal of Clinical Microbiology " style="text-decoration:none;color:#128f9a;">Journal of Clinical Microbiology </a> | <a href="http://esciencecentral.org/journals/infectious-diseases-and-therapy.php" target="_blank" title="Journal of Infectious Diseases and Therapy" style="text-decoration:none;color:#128f9a;">Journal of Infectious Diseases and Therapy</a>
+    </div>
+    Abstracts will be provided with Digital Object Identifier by</p>
+    </div>
+</div>
+<div style="padding-top:20px;"></div></div>
+           <div class="clear"></div>
+<div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+@charset "utf-8";
+/* CSS Document */
+#footer-main *, #footer-main *:before, #footer-main *:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+    }
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table
+    }
+
+.clearfix:after {
+    clear: both
+    }
+
+ul, li, div, p, h1, h2, h3, h4, dl, dt, dd, html, body {
+    margin: 0;
+    padding: 0
+    }
+
+#footer ul, #footer dl, #footer li {
+    list-style: none;
+    text-align: left
+    }
+
+#footer a {
+    text-decoration: none
+    }
+
+#footer-main {
+    background: rgb(8, 39, 43);
+    border-top: 2px solid #A29B66;
+    min-width: 1000px
+    }
+
+#footer {
+    width: 1000px;
+    padding: 0 6px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: normal
+    }
+
+#footer h2, #footer h3, #footer h4 {
+    color: #d7ceb2;
+    text-shadow: 1px 1px 0 #2C2E38, 1px 0 0 #5C5F72;
+    letter-spacing: 1margin: 0 auto;
+    font-family: Arial, Helvpx
+    }
+
+#footer .top-footer-block {
+    float: left;
+    color: #fff;
+    width: 32%;
+    margin-right: 10px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 180px;
+    }
+
+#footer .top-footer-block dl dt {
+    margin-bottom: 2px
+    }
+
+#footer .top-footer-block dl dd {
+    margin-bottom: 10px
+    }
+
+#footer .top-footer-block h3 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+    border-bottom: 2px solid #f60;
+    padding-bottom: 5px;
+    margin-bottom: 10px
+    }
+
+#footer dl dd {
+    padding-left: 8px
+    }
+
+#footer dl dd a:link {
+    font-size: 12px;
+    color: rgb(150, 185, 153);
+    text-shadow: 1px 1px 1px #0C0909;
+    background: url(images/countries-social-sprite.png) no-repeat left;
+    background-position: -951px -14px;
+    padding-left: 22px;
+    text-decoration: none;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+    }
+
+#footer dl dd a:hover {
+    text-decoration: underline;
+    margin-left: 5px;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+    }
+
+#footer-main #footer .top-footer-block li a:link,#footer-main #feft: 5px;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    trooter .top-footer-block li a:visited {
+    display: block;
+    font-size: 12px;
+    color: rgb(150, 185, 153);
+    text-shadow: 1px 1px 1px #0C0909;
+    line-height: 1.8;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    border-bottom: 1px dotted #A29B66
+    }
+
+#footer .top-footer-block li a:hover {
+    margin-left: 5px
+    }
+
+#footer .top-footer-block:last-child {
+    border: none;
+    float: right;
+    margin: 0
+    }
+
+#footer .bottom-footer {
+    margin-bottom: 20px
+    }
+
+#footer .conference-destinations h3 {
+    text-align: center;
+    margin: 10px auto;
+    font-variant: small-caps;
+    width: 50%;
+    font-size: 16px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    font-weight: normal;
+    color: #fff;
+    padding: 2px 10px;
+    border: 1px solid #0E958B
+    }
+
+#footer .conference-destinations h3 span {
+    color: orange;
+    text-shadow: 1px 1px 1px #0C0909
+    }
+
+#footer .conference-destinations div {
+    margin: 10px 18px 0 0;
+    height: 250px
+    }
+
+#footer .conference-destinations div h4 {
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: normal;
+   er .conference-destinations div {
+    margin: 10px 18px 0 0;
+    height: 250px
+    }
+
+#footer .conference-destinations div h4 {
+    text-align:  background: rgb(14, 149, 139);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px
+    }
+
+#footer .conference-destinations div.countries {
+    float: left;
+    width: 200px
+    }
+
+#footer .conference-destinations div.places {
+    float: left;
+    width: 360px;
+    padding: 0 10px;
+    border-left: 1px solid orange;
+    border-right: 1px solid orange
+    }
+
+#footer .conference-destinations div.subject {
+    float: right;
+    width: 392px;
+    margin-right: 0
+    }
+
+#footer .conference-destinations div ul {
+    float: left;
+    margin-right: 12px;
+    padding-left: 0
+    }
+
+#footer .conference-destinations div.countries ul {
+    width: 80px
+    }
+
+#footer .conference-destinations div.countries ul li a {
+    width: 80px
+    }
+
+#footer .conference-destinations div ul:last-child {
+    margin-right: 0
+    }
+
+#footer .conference-destinations div ul li {
+    position: relative
+    }
+
+#footer .conference-destinations div ul li {
+height:25px;
+    }
+
+#footer .conference-destinations div ul li a {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: rgb(162, 155, 102);
+    text-shadow: 1px 1px 1px rgb(12, 9, 9);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px
+    }
+
+#footer .country {
+    width:rial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: rgb(162, 155, 102);
+    text-shadow: 1px 1px 1px rgb(12, 9, 9);
+    -moz-border-radiu 23px;
+    background: url(images/countries-social-sprite.png) left no-repeat;
+    padding-left: 25px
+    }
+
+#footer .india {
+    background-position: -208px -13px
+    }
+
+#footer .usa {
+    background-position: -538px -13px
+    }
+
+#footer .aus {
+    background-position: -10px -13px
+    }
+
+#footer .uae {
+    background-position: -472px -13px
+    }
+
+#footer .italy {
+    background-position: -241px -13px
+    }
+
+#footer .germany {
+    background-position: -175px -13px
+    }
+
+#footer .uk {
+    background-position: -505px -13px
+    }
+
+#footer .canada {
+    background-position: -76px -13px
+    }
+
+#footer .spain {
+    background-position: -439px -13px
+    }
+
+#footer .china {
+    background-position: -109px -13px
+    }
+
+#footer .france {
+    background-position: -142px -13px
+    }
+
+#footer .japan {
+    background-position: -274px -13px
+    }
+
+#footer .brazil {
+    background-position: -43px -13px
+    }
+
+#footer .south-korea {
+    background-position: -307px -13px
+    }
+
+#footer .malaysia {
+    background-position: -340px -13px
+    }
+
+#footer .singapore {
+    background-position: -373px -13px
+    }
+
+#footer .south-africa {
+    background-position: -406px -13px
+    }
+
+#footer .conference-destinations li a:hover {
+    color: #0E958B;
+    text-decoration: underline
+    }
+
+/*Social Links Styles*{
+    background-position: -373px -13px
+    }
+
+#footer .south-africa {
+    background-position: -406px -13px
+    }
+
+#footer .conference-destin/
+#social-main {
+    background: #333;
+    padding: 10px;
+    border-top: 2px solid #e3e3e3
+    }
+
+.socialTab {
+    width: 1012px;
+    margin: 0 auto
+    }
+
+.socialTab p {
+    color: #808080;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    margin: 10px 0 0 45px
+    }
+
+#footer-main .socialTab p a {
+    color: #0E958B;
+    text-decoration: none
+    }
+
+#footer-main .socialTab p a:hover {
+    text-decoration: underline
+    }
+
+#socialNav {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    float: left
+    }
+
+#socialNav li {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    display: block;
+    margin-right: 5px;
+    float: left
+    }
+
+#socialNav li a {
+    position: absolute;
+    background: url(images/countries-social-sprite.png) no-repeat;
+    display: block;
+    margin-right: 5px;
+    width: 28px;
+    height: 28px;
+    text-indent: -9999em
+    }
+
+#socialNav li a.facebook {
+    background-position: -609px -8px
+    }
+
+#socialNav li a.twitter {
+    background-position: -875px -7px
+    }
+
+#socialNav li a.linkedin {
+    background-position: -723px -8px
+    }
+
+#socialNav li a.youtube {
+    background-position: -913px -8px
+    }
+
+#socialNav li a.googleplus {
+    background-position: -685px -7px
+    }
+
+#socialNav li a.rss {
+    background-position: -799px -8px
+    }
+
+#socialNav li a.blog {
+    background-position: -571px -7px
+    }
+
+#socialNav li a.pinterest {
+    background-position: -761px -8px
+    }
+
+#socialNav li a.flicker {
+    background-position: -647px -8px
+    }
+
+#socialNav li a.slideshare {
+    background-position: -837px -7px
+    }
+    </style>
+</head>
+
+<body>
+
+
+<div id="footer-main">
+<div id="footer">
+<div class="bottom-footer">
+    <div class="footerSection">
+      <div class="conference-destinations clearfix">
+        <h3><span>OMICS</span> International Conferences</h3>
+        <div class="countries">
+        <h4>By Country</h4>
+        <ul>
+        <li class="country usa"><a href="http://conferenceseries.net/international-conferences-2014-2015-USA/" title="USA">USA</a></li>
+          
+          
+          <li class="country aus"><a href="http://omicsgroup.com/conference-destinations.php" title="Australia">Australia</a></li>
+          <li class="country uae"><a href="http://conferenceseries.com/uae-conferences.php" title="UAE" >UAE</a></li>
+          <li class="country italy"><a href="http://conferenceseries.com/italy-conferences.php" title="Italy" >Italy</a></li>
+          <li class="country germany"><a "><a href="http://conferenceseries.com/uae-cohref="http://omicsgroup.com/conference-destinations.php" title="Germany" >Germany</a></li>
+          <li class="country uk"><a href="http://conferenceseries.com/uk-conferences.php" title="UK" >UK</a></li>
+           <li class="country japan"><a href="http://conferenceseries.com/japan-conferences.php" title="Japan" >Japan</a></li>
+            <li class="country brazil"><a href="http://conferenceseries.com/brazil-conferences.php" title="Brazil" >Brazil</a></li>
+             <li class="country south-korea"><a href="http://conferenceseries.com/south-korea-conferences.php" title="South Korea" >South Korea</a></li>
+        </ul>
+        <ul>
+           <li class="country spain"><a href="http://conferenceseries.com/spain-conferences.php" title="Spain" >Spain</a></li>
+          <li class="country canada"><a href="http://omicsgroup.com/conference-destinations.php" title="Canada" >Canada</a></li>
+         
+          <li class="country china"><a href="http://conferenceseries.com/china-conferences.php" title="China" >China</a></li>
+          <li class="country france"><a href="http://conferenceseries.com/france-conferences.php" title="France" >France</a></li>
+          <li class="country india"><a href="http://conferenceseries.com/india-conferences.php" title="India" >India</a></li>
+          <li class="country malaysia"><a href="http://conferenceseries.comce-conferences.php" title="France" >France</a></li>
+          <li class="country india"><a href="http://conferenceseries.com/india-conferences.php" t/malaysia-conferences.php" title="Malaysia" >Malaysia</a></li>
+          <li class="country singapore"><a href="http://conferenceseries.com/singapore-conferences.php" title="Singapore" >Singapore</a></li>
+          <li class="country south-africa"><a href="http://conferenceseries.com/southafrica-conferences.php" title="South Africa" >South Africa</a></li>
+        </ul>
+        </div><!--countries end here-->
+        <div class="places">
+        <h4>By City</h4>
+        <ul class="no-flags">
+        <li><a href="http://www.conferenceseries.com/chicago-conferences-events-medical-pharma-business.php" title="Chicago">Chicago</a></li>
+         
+          
+          
+           <li><a href="http://www.conferenceseries.com/florida-conferences-events-medical-pharma-business.php" title="Florida">Florida</a></li>
+         
+          <li><a href="http://www.conferenceseries.com/philadelphia-conferences-events-medical-pharma-business.php" title="Philadelphia">Philadelphia</a></li>
+          <li><a href="http://www.conferenceseries.com/baltimore-conferences-events-medical-pharma-business.php" title="Baltimore">Baltimore</a></li>
+          <li><a href="http://www.conferenceseries.com/boston-conferences-events-medical-pharma-business.php" title="Boston">Boston</a></li>
+          <li><a href="http://www.conferenceseries.com/seattle-conferences-events-medicaore">Baltimore</a></li>
+          <li><a href="http://www.conferenceseries.com/boston-conferences-events-medical-pharma-business.php" title="Boston">l-pharma-business.php" title="Seattle">Seattle</a></li>
+          <li><a href="http://www.conferenceseries.com/neworleans-conferences-events-medical-pharma-business.php" title="New Orleans">New Orleans</a></li>
+           <li><a href="http://www.conferenceseries.com/bengaluru-conferences-events-medical-pharma-business.php" title="Bengaluru">Bengaluru</a></li>
+          
+        </ul>
+        <ul class="no-flags">
+         <li><a href="http://www.conferenceseries.com/valencia-conferences-events-medical-pharma-business.php" title="Valencia">Valencia</a></li>
+         <li><a href="http://www.conferenceseries.com/alicante-conferences-events-medical-pharma-business.php" title="Alicante">Alicante</a></li>
+          <li><a href="http://www.conferenceseries.com/rome-conferences-events-medical-pharma-business.php" title="Rome">Rome</a></li>
+         
+          <li><a href="http://www.conferenceseries.com/birmingham-conferences-events-medical-pharma-business.php" title="Birmingham">Birmingham</a></li>
+          <li><a href="http://www.conferenceseries.com/lexington-conferences-events-medical-pharma-business.php" title="Lexington">Lexington</a></li>
+          <li><a href="http://www.conferenceseries.com/atlanta-conferences-events-medical-pharma-business.php" title="Atlanta">Atlanta</a></li>
+          <li><a href="http://www.conferenceseries.com/brisbane-co.php" title="Lexington">Lexington</a></li>
+          <li><a href="http://www.conferenceseries.com/atlanta-conferences-events-medical-pharma-business.nferences-events-medical-pharma-business.php" title="Brisbane">Brisbane</a></li>
+          <li><a href="http://www.conferenceseries.com/newdelhi-conferences-events-medical-pharma-business.php" title="New Delhi">New Delhi</a></li>
+          
+        </ul>
+        <ul class="no-flags">
+        <li><a href="http://www.conferenceseries.com/dubai-conferences-events-medical-pharma-business.php" title="Dubai" >Dubai</a></li>
+          <li><a href="http://www.conferenceseries.com/london-conferences-events-medical-pharma-business.php" title="London">London</a></li>
+          
+          
+          
+          <li><a href="http://www.conferenceseries.com/beijing-conferences-events-medical-pharma-business.php" title="Beijing">Beijing</a></li>
+          <li><a href="http://www.conferenceseries.com/houston-conferences-events-medical-pharma-business.php" title="Houston">Houston</a></li>
+          <li><a href="http://www.conferenceseries.com/sanantonio-conferences-events-medical-pharma-business.php" title="San Antonio">San Antonio</a></li>
+          <li><a href="http://www.conferenceseries.com/abudabhi-conferences-events-medical-pharma-business.php" title="Abu dhabi">Abu dhabi</a></li>
+        </ul>
+        <ul class="no-flags">
+         <li><a href="http://www.conferenceseries.com/hyderabad-conferences-events-medical-pharma-business.php" title="Hyderabad">Hyes-events-medical-pharma-business.php" title="Abu dhabi">Abu dhabi</a></li>
+        </ul>
+        <ul class="no-flags">
+         <li><a href="http:derabad</a></li>
+          <li><a href="http://www.conferenceseries.com/sanfrancisco-conferences-events-medical-pharma-business.php" title="San Francisco">San Francisco</a></li>
+          <li><a href="http://www.conferenceseries.com/toronto-conferences-events-medical-pharma-business.php" title="Toronto">Toronto</a></li>
+          <li><a href="http://www.conferenceseries.com/barcelona-conferences-events-medical-pharma-business.php" title="Barcelona">Barcelona</a></li>
+          <li><a href="http://www.conferenceseries.com/lasvegas-conferences-events-medical-pharma-business.php" title="Las Vegas">Las Vegas</a></li>
+          
+          
+         
+          
+        </ul>
+        </div><!--places end here-->
+        <div class="subject">
+         <h4 style="width:380px;">By Subject</h4>
+        <ul class="no-flags">
+        <li><a href="http://omicsonline.org/medical-conferences.php" title="Medical">Medical</a></li>
+          <li><a href="http://www.omicsonline.org/food-technology-conferences.php" title="Agri, Food  &amp; Aqua">Agri, Food  &amp; Aqua</a></li>
+         
+          <li><a href="http://omicsonline.org/chemical-engineering-conferences.php" title="Chemical Engineering">Chemical Engineering</a></li>
+          <li><a href="http://omicsonline.org/chemistry-conferences.php" title="Chemistry">Chemistry</a></li>
+          <li><a href="http://conferenceseries.com/clinical-research-conferences.php" title="Clinical">Clinical</a></li>
+          <li><a href="http://conferenceseries.com/earth-science-conferences.php" title="Earth Science">Earth Science</a></li>
+          <li><a href="http://www.omicsonline.org/electrical-engineering-conferences.php" title="EEE">EEE</a></li>
+         
+          
+        </ul>
+        <ul class="no-flags">
+        <li><a href="http://www.omicsonline.org/pharma-conferences.php" title="Pharma">Pharma</a></li>
+          <li><a href="http://www.omicsonline.org/genetics-conferences-list.php" title="Genetics">Genetics</a></li>
+          <li><a href="http://www.omicsonline.org/nursing-conferences.php" title="Health care">Health care</a></li>
+           <li><a href="http://omicsonline.org/immunology-conferences.php" title="Immunology">Immunology</a></li>
+          <li><a href="http://omicsonline.org/international-scientific-conferences/" title="Massmedia">Massmedia</a></li>
+          <li><a href="http://conferenceseries.com/materials-science-conferences.php" title="Materials Science">Materials Science</a></li>
+          
+          <li><a href="http://conferenceseries.com/microbiology-conferences.php" title="Microbiology">Microbiology</a></li>
+           
+          
+        </ul>
+        <ul class="no-flags">
+         <li><a href="http://www.omicsonline.o
+          
+          <li><a href="http://corg/business-conferences.php" title="Business &amp; Management">Business &amp; Management</a></li>
+         <li><a href="http://www.omicsonline.org/genetics-conferences-list.php" title="Molecular Biology">Molecular Biology</a></li>
+          <li><a href="http://www.omicsonline.org/neuroscience-conferences.php" title="Neuroscience">Neuroscience</a></li>
+          <li><a href="http://www.omicsonline.org/nursing-conferences.php" title="Nursing">Nursing</a></li>
+          
+         
+         
+         
+          
+          <li><a href="http://www.omicsonline.org/physics-conferences.php" title="Physics">Physics</a></li>
+            <li><a href="http://www.omicsonline.org/veterinary-conferences.php" title="Veterinary">Veterinary</a></li>
+              <li><a href="http://www.omicsonline.org/electrical-engineering-conferences.php" title="Engineering">Engineering</a></li>
+        </ul>
+        </div><!--subjects end here-->
+      </div><!--conference-destinations end here-->
+      
+    </div><!--footerSection ends here-->
+  </div><!--bottom-footer ends here-->
+  <div class="top-footer clearfix">
+    <div class="top-footer-block">
+
+      <h3>Mail us at</h3>
+      <dl>
+        <dt>Drop us an email for Program enquiry.</dt>
+        <dd><a href="mailto:flu@conferenceseries.net">flu@conferenceseries.net</a></dd>
+        <dt>Sponsors / Exhibiting / Advertising.</dt>
+         <dd><a href="mailto:flu@conferenceseries.com">flu@conferenceseries.com</a></dd>
+        <dt>General Queries.</dt>
+        <dd><a href="mailto:flu@omicsgroup.com">flu@omicsgroup.com</a></dd>
+      </dl>
+    </div><!--top-footer-block 1 ends here-->
+    <div class="top-footer-block">
+      <h3>Be a member and support us</h3>
+      <ul>
+        <li><a href="join_our_mailing_list.php" title="Join Our Mailing List">Join Our Mailing List</a></li>
+        <li><a href="suggest_speaker.php" title="Suggest A Speaker">Suggest A Speaker</a></li>
+        <li><a href="suggestions.php" title="Suggestions">Suggestions</a></li>
+        <li><a href="invite_proposals.php" title="Invite Proposals">Invite Proposals</a></li>
+      </ul>
+         </div><!--top-footer-block 2 ends here-->
+    <div class="top-footer-block">
+     &nbsp;
+    </div><!--top-footer-block 3 ends here-->
+  </div><!--top-footer ends here-->
+  
+  
+  
+  </div><!--footer ends here-->
+  <div id="social-main">
+  <div class="socialTab clearfix">
+    <ul id="socialNav">
+      <li><a href="http://www.omicsgroup.com/current-conferences.xml" target="_blank" title="RSS Feed" class="rss">RSS Feed</a></li>
+      <li><a href="https://www.facebook.com/pages/World-Conference-on-Flu/1446742405603690" target="_blank" title="FaceBook" class="facebook">FaceBook</a></li>
+ com/current-conferences.xml" target="_blank"      <li><a href="https://twitter.com/FluConference" target="_blank" title="Twitter" class="twitter">Twitter</a></li>
+      <li><a href="http://www.linkedin.com/pub/josh-nazareth/a2/a9/793" target="_blank" title="LinkedIn" class="linkedin">LinkedIn</a></li>
+      <li><a href="https://www.youtube.com/user/omicsgroupinc" target="_blank" title="youtube" class="youtube">youtube</a></li>
+      <li><a href="https://plus.google.com/u/0/b/112598227232768391910/112598227232768391910/posts" target="_blank" title="googleplus" class="googleplus">googleplus</a></li>
+      <li><a href="http://fluconference.blogspot.in/" target="_blank" title="RSS Feed" class="blog">blog</a></li>
+      <li><a href="http://www.pinterest.com/omicspublishing/conferences-by-omics-group/" target="_blank" title="pinterest" class="pinterest">pinterest</a></li>
+      <li><a href="https://www.flickr.com/photos/omics-publishing-group/sets/" target="_blank" title="flicker" class="flicker">flicker</a></li>
+      <li><a href="" target="_blank" title="slideshare" class="slideshare">slideshare</a></li>
+    </ul>
+    <p>Copyright &copy; 2014 <a href="http://omicsonline.org/" title="OMICS Group">OMICS Group</a>, All Rights Reserved.</p>
+  </div><!--socialTab Ends here-->
+  </div><!--social-main ends here-->
+</div><!--footer main ends here-->
+
+</body>
+</html>
+</div>
+        </div>
+	</div>
+</div>
+</body>
+</html>
+
+ title="OMICS Group">OMICS Group</a>, All Rights Reserved.</p>
+  </div><!--socialTab Ends here-->
+  </div><!--social-ma

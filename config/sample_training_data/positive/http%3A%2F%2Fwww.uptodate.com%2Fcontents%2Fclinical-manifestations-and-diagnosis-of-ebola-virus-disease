@@ -1,0 +1,1564 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!DOCTYPE HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class=" ui-en">
+<head>
+<!-- SERVER: ecapp0506p.utd.com -->
+<!-- templateRoot - TOPIC_PROFESSIONAL PROFESSIONAL --> 
+
+
+
+
+<title>Clinical manifestations and diagnosis of Ebola virus disease</title>
+
+
+
+
+	
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="copyright" content="2015 UpToDate"/>
+
+<meta name="description" content="The familyFiloviridaeconsists of two genera, the Ebola and Marburg viruses, which are among the most virulent pathogens of humans. The Zaire species of Ebola virus, discovered in an outbreak in Zaire (the present Democratic Republic of the Congo) in "/>	
+<meta name="keywords" content="Ebolavirus infection, Marburg virus infection, Bioterrorism, Bradyarrhythmias, ELISA assay, Infection control, Polymerase chain reaction, Postexposure prophylaxis, Rapid diagnostic tests, Medical resource-limited settings, Altered mental status, Dengue hemorrhagic fever, Disseminated intravascular coagulation, Fatigue, Fever, Hantavirus cardiopulmonary syndrome, Hypotension, Interferon, Leptospirosis, Malaria, Measles, Petechiae, Rash, Ribavirin, Rubella, Salmonella infection, Sepsis, Shigella infection, Shock, Therapeutic plasma exchange, Thrombocytopenia, Toxic shock syndrome, Typhoid fever, Viral culture"/>	
+
+
+
+
+
+
+ 
+
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+
+
+<link rel="search" type="application/opensearchdescription+xml" title="UpToDate Search Plugin" href="/xml/search.xml" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/uio/css/jquery-ui-1.8rc3.custom.css?hash=525">
+<link rel="stylesheet" type="text/css" href="/uio/css/jquery.qtip.min.css?hash=525">
+<link rel="stylesheet" type="text/css" href="/uio/css/layout.css?hash=525">
+
+<link rel="stylesheet" type="text/css" href="/css/topic.css?hash=525">
+
+
+
+
+
+
+
+	
+	
+		<link rel="stylesheet" media="print" type="text/css" href="/css/print.css?hash=525"/>
+	
+
+
+<link rel="stylesheet" media="print" type="text/css" href="/css/printPreview.css?hash=525"/>
+
+
+
+
+
+
+
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/uio/js/vendor/modernizr.custom.05358.js?hash=525"></script>
+<![endif]-->
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class=" hdrT4 ">
+
+	
+
+
+
+<!-- menuMessage.jsp -->
+
+
+<!-- /menuMessage.jsp -->
+	
+	
+<noscript>
+<div id="javascriptDisabled">
+It seems to us that you have your JavaScript turned off on your browser. JavaScript is required in order for our site to behave correctly.  Please enable your JavaScript to continue use our site.
+</div>
+</noscript>
+	
+	
+	
+
+
+
+
+
+
+<header>
+	
+		
+	
+	
+	
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div id="hTier1">
+				<div id="tier1_content">
+					<div id="headerLogo">
+						<a href="/contents/search">
+							<img src="/images/UTD3_masthead.png" alt="UpToDate">
+						</a>
+						
+
+
+
+
+
+
+					</div>
+					<div id="headerLinks">
+						
+
+
+<div id="hdnLangCont" class="hidden">
+	<div id="setLanguageContainer">
+		<div id="setLanguageHeader">Search in your own language:</div>
+		<div id="setLanguageContent">
+		<form method="post" action="">
+			<div class="searchLangText">UpToDate allows you to search in the languages below.  
+				Please select your preference.  Topics will continue to be in English.
+			</div>
+			
+			
+			<div class="clearfix">
+				<div id="supported_languages">
+					<ul id="supported_languages_left" class="utd-radio">
+				
+					
+						
+						<li id="zh-Hans" class="clearfix
+						">
+						<a class="langpic lngsel-zh-Hans" href="">简体中文</a>
+						
+						</li>
+				
+					
+						
+						<li id="zh-Hant" class="clearfix
+						">
+						<a class="langpic lngsel-zh-Hant" href="">繁體中文</a>
+						
+						</li>
+				
+					
+						
+						<li id="de" class="clearfix
+						">
+						<a class="langpic lngsel-de" href="">Deutsch</a>
+						
+						</li>
+				
+					
+						
+						<li id="en" class="clearfix
+						active">
+						<a class="langpic lngsel-en" href="">English</a>
+						
+						</li>
+				
+					
+						
+						<li id="es" class="clearfix
+						">
+						<a class="langpic lngsel-es" href="">Español</a>
+						
+						</li>
+				
+					
+					</ul>
+					<ul id="supported_languages_right" class="utd-radio">
+					
+						
+						<li id="fr" class="clearfix
+						">
+						<a class="langpic lngsel-fr" href="">Français</a>
+						
+						</li>
+				
+					
+						
+						<li id="it" class="clearfix
+						">
+						<a class="langpic lngsel-it" href="">Italiano</a>
+						
+						</li>
+				
+					
+						
+						<li id="ja" class="clearfix
+						">
+						<a class="langpic lngsel-ja" href="">日本語</a>
+						
+						</li>
+				
+					
+						
+						<li id="ko" class="clearfix
+						">
+						<a class="langpic lngsel-ko" href="">한국어</a>
+						
+							<span class="redBeta">*</span>
+						
+						</li>
+				
+					
+						
+						<li id="pt" class="clearfix
+						">
+						<a class="langpic lngsel-pt" href="">Português</a>
+						
+						</li>
+				
+					</ul>
+				</div>
+			</div>
+			<span class="redBeta">*Currently in beta testing.</span>		
+			<div id="setLanguageButtons">
+				<input id="setLanguageSubmit" type="submit" class="submit" value="Submit">
+				<input id="setLanguageCancel" type="submit" value="Cancel">
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+						<a id="headerLanguage" class="setFBLanguage pointer">Languages</a>
+						<a id="headerHelp" href="/home/help" target="_blank">Help</a>
+					</div>
+				</div>
+			</div>
+			<div id="hTier2">
+				<div id="tier2_content">
+					
+					<p>
+						<strong>Welcome,</strong>
+						
+						
+							
+							
+								NYU Hospitals Center and NYU School of M
+							
+						
+					</p>
+					<div id="rightLinks">
+						
+						
+						
+						
+							
+							
+								
+								<a id="headerLogin" class="redpill" href="/login-register"><span id="headerLogin" class="redpill-left"></span>Log In / Register</a>
+							
+						
+					</div>
+				</div>
+			</div>
+			
+			<div id="hTier3">
+				<div id="t3Wrap">
+					<div id="topSearchBar" class="wideSearch">
+						 
+							
+
+
+
+
+
+
+
+
+
+
+
+
+<form name="SearchForm" method="get" action="/contents/search.do" class="float">
+
+
+	
+	
+		
+		
+			
+		
+		
+		
+	
+
+
+
+
+
+
+
+
+<div id="smallSearchBox">
+	<div id="new_search">
+		<div id="searchbox_dd">
+			
+				<span id="searchbox_dd_submit" title="Search">Search</span>
+			
+			
+			<span id="searchbox_dd_type" title="Change Search Type">
+				<span id="searchbox_dd_type_name"></span>
+			</span>
+			<div id="box">
+				
+					
+						<input id="txtSearch" type="text" name="search" maxlength="200" value="" autocomplete="off" 
+							placeholder=""/>
+					
+					
+				
+				<span id="iSearchTerm"></span>
+			</div>
+		</div>
+		
+			<div id="searchbox_dd_dropdown">
+				<ul id="searchbox_dd_dropdown_topics" class="utd-radio">
+					<li id="searchoption_topic_all" class="active">All Topics</li>
+					<li id="searchoption_topic_adult" >Adult </li>
+					<li id="searchoption_topic_pediatric" >Pediatric </li>
+					<li id="searchoption_topic_patient" >Patient </li>
+				</ul>
+				<ul id="searchbox_dd_dropdown_graphics" class="utd-radio">
+					<li id="searchoption_graphics" >Graphics</li>
+				</ul>
+			</div>
+		
+		<input id="spinput" type="hidden" name="sp" value="0" />
+		<!-- the real searchType input, value is copied from above radio buttons with jquery
+			because the radio buttons are moved outside of the form (for display purposes) -->
+		<input id="searchType" type="hidden" name="searchType" value="0" />
+		<input type="hidden" name="source" value="USER_INPUT" id="source">
+		<input type="hidden" name="searchControl" value="TOP_PULLDOWN" id="searchControl">
+		<input type="hidden" name="searchOffset" value="">
+		
+	</div>
+</div>
+
+</form>
+
+
+
+						
+						<div class="float clearfix">
+							<a id="browseTab" href="/contents/table-of-contents">Contents</a>
+						</div>
+					</div>
+					<nav id="headerNav" class="clearfix">
+						<ul>
+							<li id="overflowMenu" class="hidden"></li>
+							<li id="lexiTab"><a href="/contents/drug-interaction" target="_blank" style="padding-right: 0px;">Drug Interactions</a></li>
+							<li id="calcTab"><a href="/contents/table-of-contents/calculators">Calculators</a></li>
+							<li id="pcus"><a href="/contents/practice-changing-updates" title="Practice Changing Updates">PCUs</a></li>
+							<li id="whatsNewTab"><a href="/contents/table-of-contents/whats-new">What&#039;s New</a></li>
+							<li id="patientInfoTab"><a href="/contents/table-of-contents/patient-information">Patient Info</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			
+		
+		
+	
+	
+	
+	
+	
+
+
+
+
+
+		<div id="hTier4">
+			<div class="topShadow"></div>
+			<div id="tier4Wrap">
+				<div id="rightFixed" class=" fip topicTool">
+					
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+			
+			<div id="fitHBW">
+				<input type="text" id="findInPageGBBox" class="fitBox" size="24" value="" autocomplete="off">
+			</div>
+			
+			<a class="findInPageLink icontxt buttonLink" href="#" title="Find in Topic">Find</a>
+		
+		
+			<a href="#PATIENT_INFORMATION" class="patientInformationLink icontxt textLink" title="Patient Info">Patient </a>
+		
+		
+			
+			  
+				
+			
+			
+			
+			  
+				
+			
+			
+			
+			
+			  
+				
+			
+			
+		
+		
+			<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease?topicKey=ID%2F3022&amp;elapsedTimeMs=4&amp;view=print&amp;displayedView=full" class="icontxt textLink" title="Print This Topic">Print</a>
+		
+		
+			<a class="icontxt textLink etacLink" href="#" title="Email This Topic">Email</a>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+<div id="findInPage" title="Find in Topic">
+	<div id="findInPageInput">
+		<div id="fitWrap"><input id="findInPageTerm" type="text" autocomplete="off"></div>
+		<input id="findInPageFind" type="button" class="bluBlk" value="Find">
+		<div class="clear"></div>
+		<div id="clearFIP" title="Clear Search Term" style="display:none;"></div>
+		<div id="clrTxt" title="Clear Search Term" style="display:none;"></div>
+	</div>
+	 <div id="findInPageCtrls">
+	 	<span id="count" title="Number of Results">0</span>
+	 	<a href="javascript:;" id="syn" title="Show or Hide Term Synonyms">Find synonyms</a>
+	 	<span id="backfor">
+			<a href="javascript:;" id="back" title="Previous Result"></a>
+			<a href="javascript:;" id="forward" title="Next Result"></a>
+			<div class="clear"></div>
+		</span>
+		<p style="display:none;">
+			<input type="radio" name="findInPageSearchType" value="syn" checked="checked"><span class="icontxt">Find synonyms</span>
+			<input type="radio" name="findInPageSearchType" value="exact"><span class="icontxt">Find exact match</span>
+		</p>
+		<div class="clear"></div>
+	 </div>
+	 
+	
+</div>
+		
+				</div>
+				<div id="leftVar">
+					
+			<div id="titleOuter">
+				<div id="titleInner">
+					<div id="titleText">
+						<strong>Clinical manifestations and diagnosis of Ebola virus disease</strong>
+					</div>
+				</div>
+			</div>
+		
+				</div>
+				
+			</div>
+			<div class="bottomShadow"></div>
+		</div>
+	
+
+</header>
+
+
+	
+	 
+
+
+
+
+<div id="printHeader" class="simpleHeader clearfix">
+	<div id="headerSimpleLeft" class="float">
+		
+		
+			
+			
+				<img src="/images/UTD3_masthead.png" alt="UpToDate">
+			
+		
+		
+		
+
+
+
+
+
+
+
+		
+			
+			<div id="printHeaderText"> Official reprint from  UpToDate<sup>&reg;</sup> <br><a href="http://www.uptodate.com">www.uptodate.com</a>
+				&copy;2015 UpToDate<sup>&reg;</sup>
+			</div>
+			
+			
+			
+
+	</div>
+	
+	<div id="headerSimpleRight" class="right">
+		
+			<img src="/images/logos/woltersKluwerHealth.png" id="wkLogo" alt="Wolters Kluwer Health">
+		
+	
+
+		<div id="printHeaderLinks">		
+		
+			
+				<a id="printHeaderPrint" rel="4" class="TOPIC" href="#" title="Click here to print">Print</a>
+			
+			
+		
+		
+			<span class="pipeSpace">|</span>
+			<a id="printHeaderBack" href="#" title="Back to normal view">Back</a>
+		
+		</div>
+
+	</div>
+</div>
+
+	
+	<div id="main" class="">
+		
+		
+		
+		<div id="content" class="">
+			
+	<!-- TC:TOPIC_PAGE -->
+	<!-- topic.jsp -->
+
+	<div id="topicContent">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+			
+			
+				<div id="topicTitle">Clinical manifestations and diagnosis of Ebola virus disease</div>
+				
+					<div id="topicContributors">
+					<div><a id="authors"></a><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/contributors" class="contributor contributor_credentials contributorType">Authors</a><br/><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/contributors" class="contributor contributor_credentials">Mike Bray, MD, MPH</a><br/><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/contributors" class="contributor contributor_credentials">Daniel S Chertow, MD, MPH</a><br/></div><div><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/contributors" class="contributor contributor_credentials contributorType">Section Editor</a><br/><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/contributors" class="contributor contributor_credentials">Martin S Hirsch, MD</a><br/></div><div><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/contributors" class="contributor contributor_credentials contributorType">Deputy Editor</a><br/><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/contributors" class="contributor contributor_credentials">Jennifer Mitty, MD, MPH</a><br/></div>
+					</div>
+					
+					
+					
+						 
+					
+				
+								
+				
+				
+				<div id="disclosures">
+				  	<div id="disclosures-scroller">
+						
+						<p><em><strong>Disclosures:</strong></em>
+						
+							<strong>Mike Bray, MD, MPH </strong>
+							
+						  	
+						    	Nothing to disclose.
+						    
+						    
+							
+						
+							<strong>Daniel S Chertow, MD, MPH </strong>
+							
+						  	
+						    	Nothing to disclose.
+						    
+						    
+							
+						
+							<strong>Martin S Hirsch, MD </strong>
+							
+						  	
+						    	Nothing to disclose.
+						    
+						    
+							
+						
+							<strong>Jennifer Mitty, MD, MPH </strong>
+							
+						  	
+						    
+								Employee of UpToDate, Inc.
+							
+							
+						
+						</p>
+
+						
+						
+
+						
+						
+							
+							
+								<p class="contributorDisclosureInfo" >Contributor disclosures are reviewed for conflicts of interest by the editorial group. When found, these are addressed by vetting through a multi-level review process, and through requirements for references to be provided to support the content. Appropriately referenced content is required of all authors and must conform to UpToDate standards of evidence. </p>
+								<p class="contributorDisclosurePolicy" >
+								<a href="/home/conflict-interest-policy" target="_blank">Conflict of interest policy</a></p>
+							  
+						 
+						
+ 					</div>
+				</div>
+				
+			  
+		 
+		
+		<div id="reviewProcess">
+			<span>All topics are updated as new evidence becomes available and our <a href="/home/editorial-policy" target="_blank">peer review process</a> is complete.</span>
+		</div>
+
+
+		<div id="literatureReviewDate"> 
+			<span class="emphasis">
+				Literature review current through:
+			</span>
+			Dec 2014.
+			<span class="pipeSpace">|</span>
+			<span class="emphasis">
+				This topic last updated:
+			</span>
+			Jan 29, 2015.
+		</div>
+		
+		
+		<!-- NEWER VERSION OF TOPIC MESSAGE -->
+		
+		
+	
+ 
+
+		<div id="topicText">
+			<p class="headingAnchor" id="H1"><span class="h1">INTRODUCTION</span>&#160;&#8212;&#160;The family <em>Filoviridae </em>consists of two genera, the Ebola and Marburg viruses, which are among the most virulent pathogens of humans [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/1" class="abstract_t">1</a>]. The Zaire species of Ebola virus, discovered in an outbreak in Zaire (the present Democratic Republic of the Congo) in 1976, is the causative agent of the 2014 epidemic in West Africa, where the case fatality rate is estimated to be as high as70 percent [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/2" class="abstract_t">2</a>]; rates in earlier outbreaks reached 80 to 90 percent [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/3" class="abstract_t">3</a>]. </p><p>Epidemics of Ebola virus disease are generally thought to begin when an individual becomes infected through contact with the body fluids of an infected animal. Once the individual becomes ill or dies, the virus spreads to others who come into direct contact with their blood or other body fluids. On rare occasions, Ebola virus disease has resulted from accidental laboratory infections, and there is concern that the virus might be used as an agent of bioterrorism.</p><p>The clinical manifestations and diagnosis of Ebola virus disease will be reviewed here. The epidemiology, pathogenesis, treatment, and prevention of this disease are discussed elsewhere. (See <a href="/contents/epidemiology-and-pathogenesis-of-ebola-virus-disease?source=see_link" class="medical medical_review">&quot;Epidemiology and pathogenesis of Ebola virus disease&quot;</a> and <a href="/contents/treatment-and-prevention-of-ebola-virus-disease?source=see_link" class="medical medical_review">&quot;Treatment and prevention of Ebola virus disease&quot;</a>.)</p><p class="headingAnchor" id="H134221"><span class="h1">CLINICAL MANIFESTATIONS</span>&#160;&#8212;&#160;During the nearly 40 years since the first recognized Ebola outbreaks in Zaire and Sudan in 1976, a number of publications have described the clinical and laboratory features of this disease [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/1,4,5" class="abstract_t">1,4,5</a>]. That information is now being supplemented by a rapidly increasing number of case reports and large patient series from the epidemic in West Africa that describe the clinical manifestations and disease course of Ebola virus disease among those in West Africa, as well as those treated in American and European hospitals (<a href="/contents/image?imageKey=ID%2F99186&amp;topicKey=ID%2F3022&amp;source=see_link" class="graphic graphic_table graphicRef99186 ">table 1</a>) [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/6-10" class="abstract_t">6-10</a>]. </p><p>Although most features of Ebola virus disease in West Africa match earlier descriptions, two aspects appear to differ: </p><p class="bulletIndent1"><span class="glyph">&#9679;</span>Hemorrhage is a less common and less clinically important aspect of the syndrome. Thus, the term &quot;Ebola virus disease&quot; is now being used, rather than the earlier name &quot;Ebola hemorrhagic fever.&quot; </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>Volume losses from vomiting and diarrhea make a greater contribution to severe illness than previously recognized. </p><p/><p class="headingAnchor" id="H134397"><span class="h2">Incubation period</span>&#160;&#8212;&#160;Patients with Ebola virus disease typically have an abrupt onset of symptoms 6 to 12 days after exposure (range 2 to 21 days) [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/6,11,12" class="abstract_t">6,11,12</a>]. There is no evidence that asymptomatic persons still in the incubation period are infectious to others. All symptomatic individuals should be assumed to have virus in the blood and other body fluids, and appropriate safety precautions should be taken [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/13" class="abstract_t">13</a>]. (See <a href="/contents/epidemiology-and-pathogenesis-of-ebola-virus-disease?source=see_link&amp;anchor=H8#H8" class="medical medical_review">&quot;Epidemiology and pathogenesis of Ebola virus disease&quot;, section on 'Transmission'</a> and <a href="/contents/treatment-and-prevention-of-ebola-virus-disease?source=see_link&amp;anchor=H606182952#H606182952" class="medical medical_review">&quot;Treatment and prevention of Ebola virus disease&quot;, section on 'Infection control precautions'</a>.)</p><p class="headingAnchor" id="H134474"><span class="h2">Signs and symptoms</span></p><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Initial syndrome</strong> &mdash; Most cases of Ebola virus disease begin with the abrupt onset of fever, chills, and general malaise, but low-grade fever and malaise may also precede the development of more severe symptoms [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/14" class="abstract_t">14</a>].</p><p/><p class="bulletIndent1">Common signs and symptoms reported from the 2014 West Africa outbreak include fever, fatigue, headache, vomiting, diarrhea, and loss of appetite [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/6,11,15" class="abstract_t">6,11,15</a>]. Reports have also described weakness, myalgias, as well as a high fever accompanied by relative bradycardia as seen in typhoid fever [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/5,14" class="abstract_t">5,14</a>].</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Rash</strong> &mdash; A diffuse erythematous, nonpruritic maculopapular rash may develop by day five to seven of illness. The rash usually involves the face, neck, trunk, and arms, and can desquamate [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/4,5,16-19" class="abstract_t">4,5,16-19</a>]. During the 2014 outbreak in West Africa, rash was reported as rare in Sierra Leone [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/6" class="abstract_t">6</a>]; however, it was clearly described in case reports of infected healthcare workers [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/10,14" class="abstract_t">10,14</a>]. </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Gastrointestinal</strong> &mdash; Gastrointestinal signs and symptoms are common, and usually develop within the first few days of illness. These include watery diarrhea, nausea, vomiting, and abdominal pain. During the 2014 West African outbreak, vomiting and diarrhea have resulted in severe fluid loss, potentially leading to dehydration, hypotension, and shock [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/6-9" class="abstract_t">6-9</a>].</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Hemorrhage</strong> &mdash; Despite the traditional name of &quot;Ebola hemorrhagic fever&quot;, major bleeding is not a common finding. Case series from the 2014 outbreak in West Africa indicate that approximately 20 percent of patients have unexplained hemorrhage, most commonly manifested as blood in the stool (about 6 percent), petechiae, ecchymoses, oozing from venipuncture sites, pregnancy related hemorrhage, <span class="nowrap">and/or</span> mucosal hemorrhage [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11,20" class="abstract_t">11,20</a>]. Major bleeding is seen most commonly in the terminal phase of illness.</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Neurologic</strong> &mdash; Patients may develop a syndrome suggestive of meningoencephalitis, with findings such as an altered level of consciousness, stiff neck, <span class="nowrap">and/or</span> seizures. These clinical manifestations present later in the course of disease, typically after day 10 [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/9" class="abstract_t">9</a>]. </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Other findings</strong> &mdash; Patients with Ebola virus disease may also develop hiccups, chest pain, <span class="nowrap">and/or</span> shortness of breath. In addition, conjunctival injection and dark red discoloration of the soft palate are common physical findings [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/17" class="abstract_t">17</a>]. Pregnant women may experience spontaneous miscarriages [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/20" class="abstract_t">20</a>]. </p><p/><p>Reports of past outbreaks have largely focused on cases of severe and fatal illness, but the spectrum of Ebola virus infection may include milder cases that have escaped detection [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/21-23" class="abstract_t">21-23</a>]. A brief report of an outbreak in Gabon from 2000 suggested that some family members of patients developed &quot;asymptomatic&quot; infections after providing care [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/22" class="abstract_t">22</a>]. However, this observation is difficult to interpret since the report did not provide a description of physical examination findings, while laboratory data suggested the subjects were undergoing an intense inflammatory response. Further information on the occurrence of mild cases of Ebola virus infection is expected to emerge from the 2014 epidemic.</p><p class="headingAnchor" id="H134730"><span class="h2">Laboratory findings</span>&#160;&#8212;&#160;Patients with Ebola virus disease typically develop leukopenia, thrombocytopenia, and serum transaminase elevations, as well as renal and coagulation abnormalities [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/4" class="abstract_t">4</a>]. Other laboratory findings include a marked decrease in total plasma protein (reflective of a capillary leak syndrome) and elevated amylase levels (<a href="/contents/image?imageKey=ID%2F99186&amp;topicKey=ID%2F3022&amp;source=see_link" class="graphic graphic_table graphicRef99186 ">table 1</a>).</p><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Leukopenia</strong> &mdash; Leukopenia usually presents as lymphopenia, followed by an elevated neutrophil count [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11" class="abstract_t">11</a>]. Immature granulocytes and abnormal lymphocytes, including plasmacytoid cells and immunoblasts, may be seen in blood smears.</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Thrombocytopenia </strong>&mdash; Platelet counts are usually in the range of 50,000 to <span class="nowrap">100,000/microL</span> [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11" class="abstract_t">11</a>]. Platelet counts typically reach a nadir around day six to eight of illness [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/16,17" class="abstract_t">16,17</a>].</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Transaminase elevations</strong> &mdash; Because Ebola virus can cause multifocal hepatic necrosis, blood chemistry tests usually demonstrate elevated serum aspartate aminotransferase (AST) and alanine aminotransferase (ALT) levels. As an example, among 39 patients with confirmed Ebola virus disease in Sierra Leone, the mean AST and ALT levels were 793 <span class="nowrap">U/L</span> and 257 <span class="nowrap">U/L,</span> respectively [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/6" class="abstract_t">6</a>].</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Coagulation abnormalities</strong> &mdash; Prothrombin (PT) and partial thromboplastin times (PTT) can be prolonged, and fibrin degradation products elevated, consistent with disseminated intravascular coagulation (DIC). These changes are most prominent in severe and fatal cases. </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Renal abnormalities</strong> &mdash; Proteinuria is a common finding, and renal insufficiency with elevated blood urea nitrogen and creatinine occurs with progression of illness [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/6" class="abstract_t">6</a>]. When these findings occur early in the course of illness, they are largely due to excessive fluid loss from diarrhea and vomiting without adequate volume replacement. </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Electrolyte abnormalities</strong> &mdash; Patients may develop significant electrolyte disturbances (eg, hyponatremia, hypokalemia, hypomagnesemia, and hypocalcemia) secondary to the gastrointestinal manifestations of the disease. Such individuals may require frequent repletion of electrolytes to prevent cardiac arrhythmias. (See <a href="/contents/treatment-and-prevention-of-ebola-virus-disease?source=see_link&amp;anchor=H344737195#H344737195" class="medical medical_review">&quot;Treatment and prevention of Ebola virus disease&quot;, section on 'Supportive care'</a>.)</p><p/><p class="headingAnchor" id="H107362722"><span class="h2">Disease course</span>&#160;&#8212;&#160;Patients who survive Ebola virus disease typically begin to improve during the second week of illness [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11" class="abstract_t">11</a>]. Fatal disease has been characterized by more severe clinical signs and symptoms early during infection, with progression to multiorgan failure with death typically occurring in the second week. (See <a href="/contents/treatment-and-prevention-of-ebola-virus-disease?source=see_link&amp;anchor=H132411#H132411" class="medical medical_review">&quot;Treatment and prevention of Ebola virus disease&quot;, section on 'Prognostic factors'</a>.) </p><p>Some patients develop secondary complications related to their disease <span class="nowrap">and/or</span> the treatments they receive [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/24,25" class="abstract_t">24,25</a>]. These include bacterial sepsis, respiratory failure associated with aggressive fluid resuscitation, <span class="nowrap">and/or</span> lung and kidney injury. (See <a href="/contents/treatment-and-prevention-of-ebola-virus-disease?source=see_link&amp;anchor=H344737195#H344737195" class="medical medical_review">&quot;Treatment and prevention of Ebola virus disease&quot;, section on 'Supportive care'</a>.) </p><p class="headingAnchor" id="H107362808"><span class="h2">Convalescence</span>&#160;&#8212;&#160;The convalescent period of Ebola virus disease is prolonged, and marked by weakness, fatigue, and failure to regain weight that was lost during illness. Extensive sloughing of skin and hair loss are commonly observed, which may be due to virus-induced necrosis of infected sweat glands and other dermal structures [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/26" class="abstract_t">26</a>]. The formation of antigen-antibody complexes during recovery may also cause acute arthralgias and other symptoms [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/27" class="abstract_t">27</a>]. During convalescence, viral RNA and infectious virus may persist in certain bodily fluids (eg, urine, semen). A discussion on viral persistence if found elsewhere. (See <a href="/contents/epidemiology-and-pathogenesis-of-ebola-virus-disease?source=see_link&amp;anchor=H450820627#H450820627" class="medical medical_review">&quot;Epidemiology and pathogenesis of Ebola virus disease&quot;, section on 'Risk of transmission through different body fluids'</a>.)</p><p class="headingAnchor" id="H3"><span class="h1">DIAGNOSIS</span>&#160;&#8212;&#160;Although there are no approved specific therapies for Ebola virus disease, it is essential to make the diagnosis as early as possible, in order to initiate supportive measures before the development of irreversible shock and to institute infection control procedures. Thus, providers should ask patients who present with fever <span class="nowrap">and/or</span> other symptoms consistent with Ebola virus disease if they have travelled to the epidemic area or had contact with a patient with possible Ebola virus disease within 21 days prior to the onset of symptoms [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11,28-32" class="abstract_t">11,28-32</a>]. (See <a href="/contents/epidemiology-and-pathogenesis-of-ebola-virus-disease?source=see_link&amp;anchor=H357230390#H357230390" class="medical medical_review">&quot;Epidemiology and pathogenesis of Ebola virus disease&quot;, section on '2014 outbreak in West Africa'</a>.)</p><p>Whether Ebola virus disease is initially considered in the differential diagnosis of a patient with fever and flu-like symptoms will vary markedly with the circumstances. In the setting of the current 2014 epidemic, there is a heightened level of suspicion, both in local residents and in healthcare workers returning from West Africa to their home countries. </p><p>However, clinicians should remember that the acute onset of a febrile illness in a person who lives in, or has recently been in West or Central Africa can result from a variety of local infectious diseases, including malaria and other causes of fever, such as Lassa and Marburg virus. (See <a href="#H430767503" class="local">'Differential diagnosis'</a> below and <a href="/contents/evaluation-of-fever-in-the-returning-traveler?source=see_link" class="medical medical_review">&quot;Evaluation of fever in the returning traveler&quot;</a> and <a href="/contents/diseases-potentially-acquired-by-travel-to-west-africa?source=see_link" class="medical medical_review">&quot;Diseases potentially acquired by travel to West Africa&quot;</a>.)</p><p class="headingAnchor" id="H1105548"><span class="h2">General approach</span>&#160;&#8212;&#160;The approach to evaluating patients with possible Ebola virus disease depends upon whether or not the individual displays appropriate signs and symptoms, how likely it is that the exposure will result in disease (ie, the level of risk), and when the exposure occurred.</p><p class="bulletIndent1"><span class="glyph">&#9679;</span>Patients who present with signs and symptoms consistent with Ebola virus disease (fever <span class="nowrap">and/or</span> severe headache, weakness, muscle pain, vomiting, diarrhea, abdominal pain, or unexplained hemorrhage) should be immediately assessed to determine their risk of exposure to Ebola virus. (See <a href="#H150254047" class="local">'Determining the risk of exposure'</a> below.) </p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Infection control precautions should be used for all symptomatic patients who may have been exposed to Ebola virus (ie, those who have had a high, some, or low-risk exposure). Infection control precautions should also be used for patients whose risk of exposure is unclear at the time of their initial presentation, until a medical evaluation can be performed. (See <a href="#H448916757" class="local">'Symptomatic patients with identifiable risk'</a> below and <a href="#H150254840" class="local">'Patients with no identifiable risk'</a> below and <a href="/contents/treatment-and-prevention-of-ebola-virus-disease?source=see_link&amp;anchor=H606182952#H606182952" class="medical medical_review">&quot;Treatment and prevention of Ebola virus disease&quot;, section on 'Infection control precautions'</a>.)</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Testing for Ebola virus by RT-PCR should generally be performed for patients who have symptoms consistent with Ebola virus disease <strong>and</strong> have had an exposure that puts them at risk. In addition, they should be evaluated for other possible febrile diseases including those that are common in areas where the patient traveled or resided (eg, malaria, typhoid, influenza). (See <a href="#H381319109" class="local">'Indications for initial testing for Ebola virus infection'</a> below.)</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>By comparison, asymptomatic individuals who have had a possible exposure to Ebola should be monitored so that they can be isolated if signs or symptoms occur; additional restrictions may also be required, depending upon the type of exposure. (See <a href="#H523732030" class="local">'Asymptomatic individuals with identifiable risk'</a> below.)</p><p/><p>The specific triage system and type of personal protective equipment (PPE) used during the initial assessment of a patient with possible Ebola virus disease may vary depending upon the setting (eg, emergency department, ambulatory clinic), risk of transmission in the community (eg, <a href="http://www.cdc.gov/vhf/ebola/hcp/international/determining-risk.html" target="_blank" class="external">low versus high risk</a>), and the patient's clinical symptoms [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/29,33-37" class="abstract_t">29,33-37</a>]. As examples, medical facilities, especially those in areas with widespread Ebola transmission, should designate areas for screening patients [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/35,38" class="abstract_t">35,38</a>]. In addition, the types of PPE that are recommended for healthcare personnel caring for a patient whose condition is associated with a high risk of direct contact with body fluids (eg, presence of vomiting, diarrhea, bleeding) are different from those used when evaluating a patient who does not present a hazard due to body fluid exposure [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/39" class="abstract_t">39</a>]. In all settings, only essential personnel who are trained in proper donning and removal of PPE should interact with the patient. A more detailed discussion on infection control precautions is found below. (See <a href="/contents/treatment-and-prevention-of-ebola-virus-disease?source=see_link&amp;anchor=H606182952#H606182952" class="medical medical_review">&quot;Treatment and prevention of Ebola virus disease&quot;, section on 'Infection control precautions'</a>.)</p><p>In response to the 2014 outbreak in West Africa, the United States Centers for Disease Control and Prevention (CDC), the World Health Organization (WHO), and other international organizations have provided recommendations for the evaluation and management of persons who may have been exposed to Ebola virus [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11,30,31,40-45" class="abstract_t">11,30,31,40-45</a>]. Their approaches depend upon when the exposure occurred, if the exposure was high risk or low risk, and whether or not the individual is displaying signs and symptoms consistent with Ebola virus disease. </p><p>The discussion that follows is consistent with the recommendations from the CDC in the United States [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11,28,30,32,39" class="abstract_t">11,28,30,32,39</a>]. Clinicians in other countries should consult with their ministries of health <span class="nowrap">and/or</span> the <a href="http://www.who.int/csr/disease/ebola/en/" target="_blank" class="external">WHO</a> for specific recommendations [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/42,44,45" class="abstract_t">42,44,45</a>]. In general, the WHO and CDC provide similar recommendations for evaluating individuals with a possible exposure to Ebola virus disease [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/41-43" class="abstract_t">41-43</a>]. In addition, the WHO includes a history of sexual intercourse with a sick person or a person recovering from Ebola virus disease when determining the risk of infection.</p><p class="headingAnchor" id="H1106099"><span class="h2">Initial assessment for Ebola virus disease</span></p><p class="headingAnchor" id="H150254047"><span class="h3">Determining the risk of exposure</span>&#160;&#8212;&#160;The risk of exposure to Ebola virus helps to guide the evaluation and management of both symptomatic and asymptomatic individuals. The level of exposure risk ranges from high to low to no known identifiable risk. For healthcare workers, the level of exposure risk can vary depending upon the intensity of the epidemic at their work site (ie, the risk of exposure is greater in areas of widespread Ebola virus transmission). The level of risk defined below is consistent with <a href="http://www.cdc.gov/vhf/ebola/exposure/risk-factors-when-evaluating-person-for-exposure.html" target="_blank" class="external">CDC recommendations</a>, which take into account uncertainty about the extent of Ebola virus spread in some urban areas in West Africa [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/46" class="abstract_t">46</a>]. </p><p class="bulletIndent1"><strong>High risk</strong> &ndash; A high-risk exposure includes any of the following:</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Percutaneous (eg, needle stick) or mucous membrane exposure to blood or body fluids (eg, feces, saliva, sweat, urine, vomit, and semen) of a person with symptomatic Ebola virus disease</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Exposure to the blood or body fluids of a person with symptomatic Ebola virus disease without appropriate personal protective equipment (PPE)</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Processing blood or other body fluids of a person with symptomatic Ebola virus disease without appropriate PPE or standard biosafety precautions</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Direct contact with a dead body without appropriate PPE in <a href="http://www.cdc.gov/vhf/ebola/exposure/risk-factors-when-evaluating-person-for-exposure.html" target="_blank" class="external">a&nbsp;country with widespread transmission or cases in urban areas with uncertain control measures</a></p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Having lived in the immediate household and provided direct care to a person with symptomatic Ebola virus disease</p><p/><p class="bulletIndent1"><strong>Some risk</strong> &ndash; Some risk of exposure includes any of the following:</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>In <a href="http://www.cdc.gov/vhf/ebola/exposure/risk-factors-when-evaluating-person-for-exposure.html" target="_blank" class="external">countries with widespread transmission or cases in urban areas with uncertain control measures</a>:</p><p/><p class="bulletIndent3"><span class="glyph">&#45;</span>Direct contact while using appropriate PPE with a person with symptomatic Ebola virus disease (or their body fluids) </p><p/><p class="bulletIndent3"><span class="glyph">&#45;</span>Any direct patient care in other healthcare settings</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Close contact in households, healthcare facilities, or community settings with a person with symptomatic Ebola virus disease. Close contact is defined as being within approximately three feet (one meter) of the infected person for a prolonged period of time while not wearing appropriate PPE </p><p/><p class="bulletIndent1"><strong>Low (but not zero) risk </strong>&ndash; A low-risk exposure includes any of the following:</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Having been in a&nbsp;<a href="http://www.cdc.gov/vhf/ebola/outbreaks/2014-west-africa/distribution-map.html" target="_blank" class="external">country with widespread transmission or cases in urban areas with uncertain control measures</a>&nbsp;within the past 21 days <strong>and</strong> having no known exposures to Ebola virus</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Having brief direct contact (eg, shaking hands), while not wearing appropriate PPE, with a person with Ebola while the person was in the early stage of disease</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Brief proximity, such as being in the same room for a brief period of time, with a person with symptomatic Ebola virus disease</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Direct contact while using appropriate PPE with a person with symptomatic Ebola virus disease (or their body fluids) in countries <strong>without</strong> widespread transmission or cases in urban settings with uncertain control measures</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Traveled on an aircraft with a person with Ebola virus disease while the person was symptomatic </p><p/><p class="bulletIndent1"><strong>No identifiable risk </strong>&ndash; Some exposures or situations have no identifiable risk of infection. These include: </p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Contact with an asymptomatic person who had contact with a person with Ebola virus disease</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Contact with a person with Ebola virus disease before the person developed symptoms</p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Having been more than 21 days previously in a <a href="http://www.cdc.gov/vhf/ebola/outbreaks/2014-west-africa/distribution-map.html" target="_blank" class="external">country with widespread transmission or cases in urban areas with uncertain control measures</a></p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Having been in a country with Ebola virus cases, but <strong>without</strong> widespread transmission or cases in urban settings with uncertain control measures, and not having any other exposure as defined above (eg, direct contact with a patient with Ebola virus disease) </p><p/><p class="bulletIndent2"><span class="glyph">&#8226;</span>Having&nbsp;remained on or in the immediate vicinity&nbsp;of an aircraft or ship during the entire time that the conveyance was present in a&nbsp;<a href="http://www.cdc.gov/vhf/ebola/outbreaks/2014-west-africa/distribution-map.html" target="_blank" class="external">country with widespread transmission or cases in urban areas with uncertain control measures</a>, and having had no direct contact with anyone from the community</p><p/><p>These guidelines have been used to identify at-risk individuals during the 2014 outbreak in West Africa. Individuals may also be at risk for Ebola disease if they have handled bats, rodents, or non-human primates from other endemic areas of Africa. (See <a href="/contents/epidemiology-and-pathogenesis-of-ebola-virus-disease?source=see_link&amp;anchor=H450821472#H450821472" class="medical medical_review">&quot;Epidemiology and pathogenesis of Ebola virus disease&quot;, section on 'Transmission from animals'</a>.) </p><p class="headingAnchor" id="H448916757"><span class="h3">Symptomatic patients with identifiable risk</span>&#160;&#8212;&#160;Clinical findings that are consistent with Ebola virus disease include fever <span class="nowrap">and/or</span> severe headache, weakness, muscle pain, vomiting, diarrhea, abdominal pain, or unexplained hemorrhage [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11,40" class="abstract_t">11,40</a>] (see <a href="#H134221" class="local">'Clinical manifestations'</a> above). Infection control precautions should be used for <strong>all</strong> symptomatic patients who have an identifiable risk for Ebola virus disease. (See <a href="#H150254047" class="local">'Determining the risk of exposure'</a> above.) </p><p>Such patients should be isolated in a single room with a private bathroom and with the door to the hallway closed, and all healthcare workers should use standard, contact, and droplet precautions (eg, gown, facemask, eye protection, and gloves). In addition, the hospital infection control program and other appropriate staff should be notified, as well as local and state health departments. In patients who are suspected of having Ebola virus disease, phlebotomy and laboratory testing should be limited to tests that are essential for care [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/47" class="abstract_t">47</a>]. In the United States, certain hospitals may be designated as &quot;Ebola assessment hospitals,&quot; which are prepared to evaluate and care for patients with possible Ebola virus disease until a diagnosis can be confirmed or ruled out [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/48" class="abstract_t">48</a>]. Such patients who have confirmed Ebola virus disease should be transferred to specialized <a href="http://www.cdc.gov/vhf/ebola/hcp/current-treatment-centers.html" target="_blank" class="external">Ebola treatment centers</a>. (See <a href="/contents/treatment-and-prevention-of-ebola-virus-disease?source=see_link&amp;anchor=H606182952#H606182952" class="medical medical_review">&quot;Treatment and prevention of Ebola virus disease&quot;, section on 'Infection control precautions'</a>.)</p><p>The next step in management is the decision whether to test for Ebola virus infection [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11,28,30-32,46" class="abstract_t">11,28,30-32,46</a>]. (See <a href="#H381319109" class="local">'Indications for initial testing for Ebola virus infection'</a> below.) </p><p class="headingAnchor" id="H523732030"><span class="h3">Asymptomatic individuals with identifiable risk</span>&#160;&#8212;&#160;Monitoring for symptoms and signs of Ebola virus disease should be performed for asymptomatic persons who have had an exposure to Ebola virus at any risk level (ie, high, some, or low risk) (see <a href="#H150254047" class="local">'Determining the risk of exposure'</a> above). Such individuals should be monitored for 21 days after the last known exposure and should immediately report the development of fever or other clinical manifestations suggestive of Ebola virus disease [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/30" class="abstract_t">30</a>]. </p><p>The type of monitoring (eg, self-monitoring and reporting versus direct observation by a designated health official), as well as the need for travel restrictions, restricted movement within the community, <span class="nowrap">and/or</span> quarantine depend, in part, upon the exposure risk level, and are described in detail in the CDC guidance for the <a href="http://www.cdc.gov/vhf/ebola/hcp/monitoring-and-movement-of-persons-with-exposure.html" target="_blank" class="external">monitoring and movement of persons with Ebola virus exposure</a> [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/30" class="abstract_t">30</a>]. Local authorities may also have specific regulations for management of asymptomatic individuals with Ebola virus exposure.</p><p class="headingAnchor" id="H150254840"><span class="h3">Patients with no identifiable risk</span>&#160;&#8212;&#160;If after initial evaluation, patients are determined to have no identifiable risk for Ebola virus infection, monitoring or diagnostic testing for Ebola virus disease is not warranted. However, if patients have fever and other signs or symptoms of infection, they should be evaluated for other causes of febrile disease (eg, malaria, Lassa fever, influenza). Appropriate infection control precautions will depend upon the patient's clinical findings, as well as the specific pathogens that are being considered. (See <a href="#H150254047" class="local">'Determining the risk of exposure'</a> above and <a href="#H430767503" class="local">'Differential diagnosis'</a> below and <a href="/contents/general-principles-of-infection-control?source=see_link" class="medical medical_review">&quot;General principles of infection control&quot;</a>.) </p><p class="headingAnchor" id="H381319109"><span class="h2">Indications for initial testing for Ebola virus infection</span>&#160;&#8212;&#160;Evaluation of all patients with suspected Ebola virus disease should be done in conjunction with local and state health departments [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11,30,49" class="abstract_t">11,30,49</a>]. In the United States, certain hospitals may be designated as &quot;Ebola assessment hospitals,&quot; which are prepared to evaluate and care for patients with possible Ebola virus disease until a diagnosis can be confirmed or ruled out [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/48" class="abstract_t">48</a>]. </p><p class="bulletIndent1"><span class="glyph">&#9679;</span>Testing for Ebola virus infection is performed in symptomatic patients with any possible risk of exposure to Ebola virus (high, some, or low risk). (See <a href="#H448916757" class="local">'Symptomatic patients with identifiable risk'</a> above.) </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>Testing is not warranted for patients who have an identifiable risk but no signs or symptoms of Ebola virus disease. These patients should be monitored and tested if they become ill. (See <a href="#H523732030" class="local">'Asymptomatic individuals with identifiable risk'</a> above.)</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>Testing is not warranted for patients without any identifiable risk of exposure to Ebola virus. (See <a href="#H150254840" class="local">'Patients with no identifiable risk'</a> above.)</p><p/><p>Ebola virus is generally detectable in blood samples by reverse-transcription polymerase chain reaction (RT-PCR) within three days after the onset of symptoms; repeat testing may be needed for patients with symptoms for fewer than three days duration [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/50" class="abstract_t">50</a>]. According to CDC guidelines for <a href="http://www.cdc.gov/vhf/ebola/hcp/considerations-discharging-pui.html" target="_blank" class="external">discharging a person who is under investigation</a> for Ebola virus disease, a negative RT-PCR test that is collected &ge;72 hours after the onset of symptoms excludes Ebola virus disease [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/51" class="abstract_t">51</a>]. (See <a href="#H8" class="local">'Laboratory diagnosis'</a> below.) </p><p>Patients who have confirmed Ebola virus disease should be transferred to specialized <a href="http://www.cdc.gov/vhf/ebola/hcp/current-treatment-centers.html" target="_blank" class="external">Ebola treatment centers</a>.</p><p class="headingAnchor" id="H8"><span class="h2">Laboratory diagnosis</span>&#160;&#8212;&#160;The laboratory diagnosis of Ebola virus infection is made by the detection of viral antigens or RNA in blood or other body fluids. This can be done using immunoassays or nucleic acid testing. </p><p class="headingAnchor" id="H430767024"><span class="h3">Guidance during the 2014 outbreak</span>&#160;&#8212;&#160;In response to the 2014 outbreak in West Africa, the CDC has released guidelines for the evaluation of patients in the United States suspected of having Ebola virus disease [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11,31" class="abstract_t">11,31</a>]. If testing is indicated, the local or state health department should be contacted immediately. Additional details on specimen collection and handling can be found in the <a href="http://www.cdc.gov/vhf/ebola/hcp/interim-guidance-specimen-collection-submission-patients-suspected-infection-ebola.html" target="_blank" class="external">CDC interim guidance for laboratory testing</a> and <a href="http://www.cdc.gov/ncezid/dhcpp/vspb/specimens.html" target="_blank" class="external">submission information</a> for patients with suspected Ebola virus disease [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/50,52,53" class="abstract_t">50,52,53</a>]. Clinicians, nurses, and laboratory workers should be aware that <a href="http://www.cdc.gov/vhf/ebola/hcp/select-agent-regulations.html" target="_blank" class="external">CDC select agent regulations</a> apply to the handling of patient specimens confirmed to contain infectious Ebola virus [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/54" class="abstract_t">54</a>]. For clinicians outside the United States, the World Health Organization (WHO) has also issued guidance for the <a href="http://apps.who.int/iris/bitstream/10665/134009/1/WHO_EVD_GUIDANCE_LAB_14.1_eng.pdf" target="_blank" class="external">diagnosis</a>, <a href="http://www.who.int/csr/resources/publications/ebola/blood-collect-en.pdf?ua=1" target="_blank" class="external">safe collection</a>, and <a href="http://www.who.int/csr/resources/publications/ebola/blood-shipment-en.pdf?ua=1" target="_blank" class="external">shipment of samples</a> from patients with suspected Ebola virus disease [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/55-57" class="abstract_t">55-57</a>].</p><p class="headingAnchor" id="H9"><span class="h3">Diagnostic tests</span>&#160;&#8212;&#160;Rapid diagnostic tests for Ebola virus infection are the most commonly used tests for diagnosis. Rapid blood tests can detect specific RNA sequences by RT-PCR. </p><p>Most acute infections are diagnosed through the use of RT-PCR. Viral RNA is generally detectable by RT-PCR within three days after the onset of symptoms [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/7,50" class="abstract_t">7,50</a>].</p><p class="bulletIndent1"><span class="glyph">&#9679;</span>Repeat testing may be needed for patients with symptoms for fewer than three days duration [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/50" class="abstract_t">50</a>]. </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>A negative RT-PCR test that is collected &ge;72 hours after the onset of symptoms rules out Ebola virus disease [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/7,51" class="abstract_t">7,51</a>]. </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>The demonstration of genetic diversity and rapid accumulation of sequence changes of Ebola virus in the West African epidemic indicates that careful monitoring will be needed to ensure the continued sensitivity of RT-PCR diagnostics [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/58" class="abstract_t">58</a>]. </p><p/><p>In past outbreaks, testing for viral antigens by enzyme-linked immunosorbent assay (ELISA) was also frequently performed [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/59-65" class="abstract_t">59-65</a>]. </p><p class="headingAnchor" id="H430767503"><span class="h1">DIFFERENTIAL DIAGNOSIS</span>&#160;&#8212;&#160;When evaluating a patient for possible Ebola virus disease, it is important to consider alternative <span class="nowrap">and/or</span> concurrent diagnoses, including infectious and non-infectious disorders. The differential diagnosis depends, in part, upon the patient&rsquo;s age, comorbid conditions, and where the individual has travelled or resides [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11,20,66" class="abstract_t">11,20,66</a>]. Since most patients suspected of possible Ebola virus disease will have travelled to <span class="nowrap">and/or</span> reside in West or Central Africa, the following disorders should be considered:</p><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Malaria</strong>: Travelers returning from West or Central Africa should be evaluated for malaria [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/11" class="abstract_t">11</a>]. Malaria can present with similar findings to Ebola virus disease and may occur concurrently. Microscopic examination of blood smears <span class="nowrap">and/or</span> rapid antigen testing are typically used to diagnose Malaria. (See <a href="/contents/diagnosis-of-malaria?source=see_link" class="medical medical_review">&quot;Diagnosis of malaria&quot;</a> and <a href="/contents/clinical-manifestations-of-malaria?source=see_link" class="medical medical_review">&quot;Clinical manifestations of malaria&quot;</a>.)</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Lassa Fever: </strong>Lassa fever is a viral infection that is restricted to West Africa, though imported cases have been seen in the United States. Although symptoms may be mild, approximately 20 percent of patients develop a severe clinical syndrome that can progress to fatal shock. Transmission to humans occurs primarily through exposure to the aerosolized excretions of local rodents (multimammate rats), or in rare cases, through contact with body fluids of infected individuals. Diagnosis is made by reverse-transcription polymerase chain reaction (RT-PCR) testing <span class="nowrap">and/or</span> serology [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/67" class="abstract_t">67</a>]. (See <a href="/contents/diseases-potentially-acquired-by-travel-to-west-africa?source=see_link" class="medical medical_review">&quot;Diseases potentially acquired by travel to West Africa&quot;</a>.)</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Typhoid:</strong> Typhoid fever is characterized by a systemic illness with fever and abdominal pain. The organism responsible for the enteric fever syndrome is <em>S. enterica</em> serotype <em>Typhi</em> (formerly <em>S. typhi</em>). Worldwide, typhoid fever is most prevalent in impoverished areas that are overcrowded, with poor access to sanitation. The diagnosis is typically made through identification of the organism in blood cultures. (See <a href="/contents/epidemiology-microbiology-clinical-manifestations-and-diagnosis-of-typhoid-fever?source=see_link" class="medical medical_review">&quot;Epidemiology, microbiology, clinical manifestations, and diagnosis of typhoid fever&quot;</a>.) </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Meningococcal disease</strong>: Patients with meningococcal disease can present with meningitis <span class="nowrap">and/or</span> bacteremia, and certain signs and symptoms (headache, fever) may overlap with those seen in Ebola virus disease. Cultures of blood or cerebral spinal fluid are used to make the diagnosis. (See <a href="/contents/epidemiology-of-neisseria-meningitidis-infection?source=see_link" class="medical medical_review">&quot;Epidemiology of Neisseria meningitidis infection&quot;</a> and <a href="/contents/clinical-manifestations-of-meningococcal-infection?source=see_link" class="medical medical_review">&quot;Clinical manifestations of meningococcal infection&quot;</a>.) </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Influenza</strong>: Influenza often presents with the abrupt onset of fever, headache, myalgia, and malaise, similar to the presenting signs and symptoms of Ebola virus disease. However, with influenza, these manifestations are often accompanied by respiratory signs and symptoms, such as nonproductive cough, sore throat, and nasal discharge, which are not part of the Ebola syndrome. Direct fluorescent antibody or other rapid assays are used to diagnose influenza. (See <a href="/contents/clinical-manifestations-of-seasonal-influenza-in-adults?source=see_link" class="medical medical_review">&quot;Clinical manifestations of seasonal influenza in adults&quot;</a> and <a href="/contents/diagnosis-of-seasonal-influenza-in-adults?source=see_link" class="medical medical_review">&quot;Diagnosis of seasonal influenza in adults&quot;</a>.) </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span><strong>Marburg virus disease</strong>: Marburg virus causes clinical manifestations similar to Ebola virus disease. Cases have been identified in Central Africa, but not in West Africa. The diagnosis is typically made by RT-PCR testing. </p><p/><p>A more detailed discussion of fever in the returning traveler is found elsewhere. (See <a href="/contents/evaluation-of-fever-in-the-returning-traveler?source=see_link" class="medical medical_review">&quot;Evaluation of fever in the returning traveler&quot;</a> and <a href="/contents/diseases-potentially-acquired-by-travel-to-west-africa?source=see_link" class="medical medical_review">&quot;Diseases potentially acquired by travel to West Africa&quot;</a>.)</p><p class="headingAnchor" id="H422128455"><span class="h1">BIOTERRORISM</span>&#160;&#8212;&#160;Ebola virus is classified as a Category A bioterror agent by the United States Centers for Disease Control and Prevention (CDC) and the National Institute of Allergy and Infectious Diseases (NIAID) [<a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/68,69" class="abstract_t">68,69</a>]. During the current Ebola epidemic, clinicians are focused on identifying a history of exposure to Ebola virus in patients presenting with fever and other signs and symptoms. In the case of a bioterror attack employing Ebola virus, patients with no possible exposure to an Ebola patient would develop the same disease and would be seen in doctors' offices or hospital emergency departments. The appearance of multiple patients with a similar, rapidly progressive illness would be especially suggestive of bioterrorism. Any clinician suspecting that such an event is unfolding should report it promptly to local and state health authorities. General concepts regarding bioterrorism are discussed elsewhere. (See <a href="/contents/identifying-and-managing-casualties-of-biological-terrorism?source=see_link" class="medical medical_review">&quot;Identifying and managing casualties of biological terrorism&quot;</a>.)</p><p class="headingAnchor" id="H19"><span class="h1">ADDITIONAL RESOURCES AND CONTACT INFORMATION</span>&#160;&#8212;&#160;The following documents provide additional guidance on the clinical manifestations and diagnosis of filoviral infections.</p><p>WHO consolidated Ebola virus disease preparedness checklist, 2014</p><p><a href="http://www.who.int/csr/disease/ebola/evd-preparedness-checklist-en.pdf?ua=1" target="_blank" class="external">http://www.who.int/csr/disease/ebola/evd-preparedness-checklist-en.pdf?ua=1</a></p><p>WHO frequently asked questions on Ebola virus disease, 2014</p><p><a href="http://www.who.int/csr/disease/ebola/faq-ebola/en/" target="_blank" class="external">http://www.who.int/csr/disease/ebola/faq-ebola/en/</a></p><p>WHO Ebola virus disease fact sheet N&deg;103 (Updated September 2014)</p><p><a href="http://www.who.int/mediacentre/factsheets/fs103/en/" target="_blank" class="external">http://www.who.int/mediacentre/factsheets/fs103/en/</a></p><p>CDC for general healthcare settings in West Africa: Guidance for drawing blood safely when caring for patients with confirmed or suspected Ebola</p><p><a href="http://www.cdc.gov/vhf/ebola/hcp/international/drawing-blood-safely.html" target="_blank" class="external">http://www.cdc.gov/vhf/ebola/hcp/international/drawing-blood-safely.html</a></p><p>CDC resources for parents, schools, and pediatric healthcare professionals</p><p><a href="http://www.cdc.gov/vhf/ebola/children/index.html" target="_blank" class="external">http://www.cdc.gov/vhf/ebola/children/index.html</a></p><p>CDC is it Flu or Ebola, 2014</p><p><a href="http://www.cdc.gov/vhf/ebola/pdf/is-it-flu-or-ebola.pdf" target="_blank" class="external">http://www.cdc.gov/vhf/ebola/pdf/is-it-flu-or-ebola.pdf</a></p><p>CDC healthcare workers - could it be Ebola? 2014</p><p><a href="http://www.cdc.gov/vhf/ebola/pdf/could-it-be-ebola.pdf" target="_blank" class="external">http://www.cdc.gov/vhf/ebola/pdf/could-it-be-ebola.pdf</a></p><p>CDC what you need to know about Ebola, 2014</p><p><a href="http://www.cdc.gov/vhf/ebola/pdf/what-need-to-know-ebola.pdf" target="_blank" class="external">http://www.cdc.gov/vhf/ebola/pdf/what-need-to-know-ebola.pdf</a></p><p>CDC healthcare provider preparedness checklist for Ebola virus disease, 2014</p><p><a href="http://www.cdc.gov/vhf/ebola/pdf/healthcare-provider-checklist-for-ebola.pdf" target="_blank" class="external">http://www.cdc.gov/vhf/ebola/pdf/healthcare-provider-checklist-for-ebola.pdf</a></p><p>CDC healthcare facility preparedness checklist for Ebola virus disease, 2014 </p><p><a href="http://www.cdc.gov/vhf/ebola/pdf/healthcare-facility-checklist-for-ebola.pdf" target="_blank" class="external">http://www.cdc.gov/vhf/ebola/pdf/healthcare-facility-checklist-for-ebola.pdf</a></p><p>CDC questions and answers on Ebola</p><p><a href="http://www.cdc.gov/vhf/ebola/outbreaks/guinea/qa.html" target="_blank" class="external">http://www.cdc.gov/vhf/ebola/outbreaks/guinea/qa.html</a></p><p class="headingAnchor" id="PATIENT_INFORMATION"><span class="h1">INFORMATION FOR PATIENTS</span>&#160;&#8212;&#160;UpToDate offers two types of patient education materials, &quot;The Basics&quot; and &quot;Beyond the Basics.&quot; The Basics patient education pieces are written in plain language, at the 5<sup>th</sup> to 6<sup>th</sup> grade reading level, and they answer the four or five key questions a patient might have about a given condition. These articles are best for patients who want a general overview and who prefer short, easy-to-read materials. Beyond the Basics patient education pieces are longer, more sophisticated, and more detailed. These articles are written at the 10<sup>th</sup> to 12<sup>th</sup> grade reading level and are best for patients who want in-depth information and are comfortable with some medical jargon.</p><p>Here are the patient education articles that are relevant to this topic. We encourage you to print or e-mail these topics to your patients. (You can also locate patient education articles on a variety of subjects by searching on &quot;patient info&quot; and the keyword(s) of interest.) </p><p class="bulletIndent1"><span class="glyph">&#9679;</span>Basics topic (see <a href="/contents/ebola-the-basics?source=see_link" class="medical medical_basics">&quot;Patient information: Ebola (The Basics)&quot;</a>)</p><p/><p class="headingAnchor" id="H20"><span class="h1">SUMMARY AND RECOMMENDATIONS</span></p><p class="bulletIndent1"><span class="glyph">&#9679;</span>The Zaire species of Ebola virus, the causative agent of the 2014 West African epidemic, is one of the most virulent human pathogens. (See <a href="#H1" class="local">'Introduction'</a> above.)</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>The incubation period is typically 6 to 12 days, but can range from 2 to 21 days. (See <a href="#H134397" class="local">'Incubation period'</a> above.)</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>Patients with Ebola virus disease usually have an abrupt onset of non-specific symptoms and signs, such as fever, malaise, headache, and myalgias. As the illness progresses, vomiting and diarrhea may develop, often leading to significant fluid loss. Patients with worsening disease display hypotension and electrolyte imbalances leading to shock and multiorgan failure, sometimes accompanied by hemorrhage (<a href="/contents/image?imageKey=ID%2F99186&amp;topicKey=ID%2F3022&amp;source=see_link" class="graphic graphic_table graphicRef99186 ">table 1</a>). (See <a href="#H134474" class="local">'Signs and symptoms'</a> above.)</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>During the 2014 Ebola epidemic, clinicians worldwide should evaluate patients to determine if they have clinical findings consistent with the disease (ie, fever <span class="nowrap">and/or</span> severe headache, weakness, muscle pain, vomiting, diarrhea, abdominal pain, or unexplained hemorrhage) and obtain a careful history to determine if they have had a possible exposure to Ebola virus within 21 days prior to the onset of symptoms. (See <a href="#H3" class="local">'Diagnosis'</a> above and <a href="#H150254047" class="local">'Determining the risk of exposure'</a> above.)</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>All patients who have or are suspected of having Ebola virus disease should be promptly isolated. Infection control precautions should include hand hygiene; standard, contact, and droplet precautions; as well as the correct use of appropriate personal protective equipment. Hospital infection control staff, as well as the local or state health department, should be contacted immediately. (See <a href="#H448916757" class="local">'Symptomatic patients with identifiable risk'</a> above.)</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>Monitoring for symptoms and signs of Ebola virus disease should be performed for asymptomatic persons who have had an exposure to Ebola virus at any risk level (ie, high, some, or low risk). (See <a href="#H523732030" class="local">'Asymptomatic individuals with identifiable risk'</a> above.) </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>Medical evaluation of symptomatic patients with a history of exposure generally includes testing for Ebola virus and other likely pathogens. Whether or not laboratory testing for Ebola virus should be performed depends, in part, upon the relative likelihood that a patient was exposed to the virus and the presence of compatible clinical symptoms <span class="nowrap">and/or</span> laboratory findings. (See <a href="#H381319109" class="local">'Indications for initial testing for Ebola virus infection'</a> above.)</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>Rapid diagnostic tests for Ebola virus infection are in use and are principally based upon the detection of specific RNA sequences by reverse-transcription polymerase chain reaction (RT-PCR) in blood or other body fluids. Ebola virus is generally detectable in blood samples within three days after the onset of symptoms; repeat testing may be needed for patients with symptoms for fewer than three days duration. (See <a href="#H8" class="local">'Laboratory diagnosis'</a> above.) </p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>The differential diagnosis will vary markedly with the clinical and epidemiologic circumstances. As an example, travelers returning from West or Central Africa should be evaluated for illnesses commonly seen in those areas, such as malaria. (See <a href="#H430767503" class="local">'Differential diagnosis'</a> above.)</p><p/><p class="bulletIndent1"><span class="glyph">&#9679;</span>Because of its virulence and high infectivity, Ebola virus is classified as a Category A bioterror agent. (See <a href="#H422128455" class="local">'Bioterrorism'</a> above.)</p>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="topicAgreement">
+	Use of UpToDate is subject to the <a href="/contents/license" target="_blank" class="licenseLink" id="sla_in_page">Subscription and License Agreement</a>.
+</div>
+		
+			<div id="references" class="headingAnchor">
+			<h1>REFERENCES</h1>
+			<ol id="reference"><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/1" class="nounderline abstract_t">Feldmann H, Geisbert TW. Ebola haemorrhagic fever. Lancet 2011; 377:849.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/2" class="nounderline abstract_t">WHO Ebola Response Team. Ebola virus disease in West Africa--the first 9 months of the epidemic and forward projections. N Engl J Med 2014; 371:1481.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/3" class="nounderline abstract_t">Bray M, Murphy FA. Filovirus research: knowledge expands to meet a growing threat. J Infect Dis 2007; 196 Suppl 2:S438.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/4" class="nounderline abstract_t">Kortepeter MG, Bausch DG, Bray M. Basic clinical and laboratory features of filoviral hemorrhagic fever. J Infect Dis 2011; 204 Suppl 3:S810.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/5" class="nounderline abstract_t">Bwaka MA, Bonnet MJ, Calain P, et al. Ebola hemorrhagic fever in Kikwit, Democratic Republic of the Congo: clinical observations in 103 patients. J Infect Dis 1999; 179 Suppl 1:S1.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/6" class="nounderline abstract_t">Schieffelin JS, Shaffer JG, Goba A, et al. Clinical illness and outcomes in patients with Ebola in Sierra Leone. N Engl J Med 2014; 371:2092.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/7" class="nounderline abstract_t">Chertow DS, Kleine C, Edwards JK, et al. Ebola virus disease in West Africa--clinical manifestations and management. N Engl J Med 2014; 371:2054.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/8" class="nounderline abstract_t">Bah EI, Lamah MC, Fletcher T, et al. Clinical presentation of patients with Ebola virus disease in Conakry, Guinea. N Engl J Med 2015; 372:40.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/9" class="nounderline abstract_t">Kreuels B, Wichmann D, Emmerich P, et al. A case of severe Ebola virus infection complicated by gram-negative septicemia. N Engl J Med 2014; 371:2394.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/10" class="nounderline abstract_t">Lyon GM, Mehta AK, Varkey JB, et al. Clinical care of two patients with Ebola virus disease in the United States. N Engl J Med 2014; 371:2402.</a></li><li>Centers for Disease Control and Prevention. Ebola virus disease information for clinicians in U.S. healthcare settings http://www.cdc.gov/vhf/ebola/hcp/clinician-information-us-healthcare-settings.html (Accessed on October 17, 2014).</li><li>World Health Organziation. Travel and transport risk assessment: Recommendations for public health authorities and transport sector. http://www.who.int/ith/updates/20140421/en/ (Accessed on August 12, 2014).</li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/13" class="nounderline abstract_t">Peters CJ, Jahrling PB, Khan AS. Patients infected with high-hazard viruses: scientific basis for infection control. Arch Virol Suppl 1996; 11:141.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/14" class="nounderline abstract_t">Parra JM, Salmer&oacute;n OJ, Velasco M. The first case of Ebola virus disease acquired outside Africa. N Engl J Med 2014; 371:2439.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/15" class="nounderline abstract_t">Ansumana R, Jacobsen KH, Idris M, et al. Ebola in Freetown Area, Sierra Leone - A Case Study of 581 Patients. N Engl J Med 2014.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/16" class="nounderline abstract_t">Formenty P, Hatz C, Le Guenno B, et al. Human infection due to Ebola virus, subtype C&ocirc;te d'Ivoire: clinical and biologic presentation. J Infect Dis 1999; 179 Suppl 1:S48.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/17" class="nounderline abstract_t">Martini GA. Marburg agent disease: in man. Trans R Soc Trop Med Hyg 1969; 63:295.</a></li><li>Piot P, Breman JG, Heymann DL, et al. Clinical aspects of Ebola virus infection in Yambuku area, Zaire, 1976. In: Ebola Virus Haemorrhagic Fever, Pattyn S (Ed), Elsevier/North-Holland, Amsterdam 1978. p.17.</li><li>Isaacson M, Sureau P, Courteille G, Pattyn SR. Clinical aspects of Ebola virus disease at the Ngaliema Hospital, Kinshasa, Zaire. In: Ebola Virus Haemorrhagic Fever, Pattyn S (Ed), Elsevier/North-Holland, Amsterdam 1978. p.22.</li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/20" class="nounderline abstract_t">Jamieson DJ, Uyeki TM, Callaghan WM, et al. What obstetrician-gynecologists should know about ebola: a perspective from the centers for disease control and prevention. Obstet Gynecol 2014; 124:1005.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/21" class="nounderline abstract_t">Bellan S, et al. Ebola control: effect of asymptomatic infection and acquired immunity. Lancet 2014; 384:1499.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/22" class="nounderline abstract_t">Leroy EM, Baize S, Volchkov VE, et al. Human asymptomatic Ebola infection and strong inflammatory response. Lancet 2000; 355:2210.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/23" class="nounderline abstract_t">Heffernan RT, Pambo B, Hatchett RJ, et al. Low seroprevalence of IgG antibodies to Ebola virus in an epidemic zone: Ogoou&eacute;-Ivindo region, Northeastern Gabon, 1997. J Infect Dis 2005; 191:964.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/24" class="nounderline abstract_t">Wolf T, Kann G, Becker S, et al. Severe Ebola virus disease with vascular leakage and multiorgan failure: treatment of a patient in intensive care. Lancet 2014.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/25" class="nounderline abstract_t">West TE, von Saint Andr&eacute;-von Arnim A. Clinical presentation and management of severe Ebola virus disease. Ann Am Thorac Soc 2014; 11:1341.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/26" class="nounderline abstract_t">Rowe AK, Bertolli J, Khan AS, et al. Clinical, virologic, and immunologic follow-up of convalescent Ebola hemorrhagic fever patients and their household contacts, Kikwit, Democratic Republic of the Congo. Commission de Lutte contre les Epid&eacute;mies &agrave; Kikwit. J Infect Dis 1999; 179 Suppl 1:S28.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/27" class="nounderline abstract_t">Mahanty S, Bray M. Pathogenesis of filoviral haemorrhagic fevers. Lancet Infect Dis 2004; 4:487.</a></li><li>Centers for Disease Control and Prevention. Ebola virus disease: algorithm for evaluation of the returned traveler. http://www.cdc.gov/vhf/ebola/pdf/ebola-algorithm.pdf (Accessed on October 17, 2014).</li><li>Centers for Disease Control and Prevention. Identify, isolate, inform: emergency department evaluation and management for patients who present with possible Ebola virus. Disease http://www.cdc.gov/vhf/ebola/hcp/ed-management-patients-possible-ebola.html (Accessed on October 27, 2014).</li><li>Centers for Disease Control and Prevention. Interim Guidance for Monitoring and Movement of Persons with Ebola Virus Disease Exposure. http://www.cdc.gov/vhf/ebola/hcp/monitoring-and-movement-of-persons-with-exposure.html (Accessed on October 28, 2014).</li><li>Centers for Disease Control and Prevention. Safe management of patients with Ebola virus disease (EVD) in U.S. hospitals. http://www.cdc.gov/vhf/ebola/hcp/patient-management-us-hospitals.html (Accessed on October 22, 2014).</li><li>Centers for Disease Control and Prevention. When caring for suspect or confirmed patients with Ebola. http://www.cdc.gov/vhf/ebola/hcp/caring-for-ebola-suspects.html (Accessed on October 20, 2014).</li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/33" class="nounderline abstract_t">Wu HM, Fairley JK, Steinberg J, Kozarsky P. The potential ebola-infected patient in the ambulatory care setting: preparing for the worst without compromising care. Ann Intern Med 2015; 162:66.</a></li><li>The Centers for Disease Control and Prevention. Identify, isolate, inform: ambulatory care evaluation of patients with possible Ebola virus disease (Ebola). http://www.cdc.gov/vhf/ebola/pdf/ambulatory-care-evaluation-of-patients-with-possible-ebola.pdf (Accessed on November 03, 2014).</li><li>Centers for Disease Control and Prevention. For general healthcare settings in West Africa: managing patient flow during triage, isolation, and care of patients with confirmed or suspected Ebola. http://www.cdc.gov/vhf/ebola/hcp/international/managing-patient-flow.html (Accessed on December 01, 2014).</li><li>Centers for Disease Control and Prevention. Determining risk of Ebola transmission in healthcare and community settings. http://www.cdc.gov/vhf/ebola/hcp/international/determining-risk.html (Accessed on December 01, 2014).</li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/37" class="nounderline abstract_t">Isakov A, Jamison A, Miles W, Ribner B. Safe management of patients with serious communicable diseases: recent experience with ebola virus. Ann Intern Med 2014; 161:829.</a></li><li>Centers for Disease Control and Prevention. Questions and answers: infection control in general healthcare settings in countries with widespread Ebola Transmission (Guinea, Liberia, and Sierra Leone) http://www.cdc.gov/vhf/ebola/hcp/qa-infection-control-general-healthcare-widespread-ebola-transmission.html (Accessed on November 03, 2014).</li><li>Centers for Disease Control and Prevention. Identify, isolate, inform: emergency department evaluation and management for patients who present with possible Ebola virus. http://www.cdc.gov/vhf/ebola/pdf/ed-algorithm-management-patients-possible-ebola.pdf (Accessed on October 27, 2014).</li><li>Centers for Disease Control and Prevention. Case Definition for Ebola Virus Disease (EVD). http://www.cdc.gov/vhf/ebola/hcp/case-definition.html. (Accessed on October 28, 2014).</li><li>World Heatlh Organization: Travel and transport risk assessment: interim guidance for public health authorities and the transport sector. http://www.who.int/csr/resources/publications/ebola/travel-guidance/en/ (Accessed on October 23, 2014).</li><li>World Health Organization.Ebola and Marburg virus disease epidemics: preparedness, alert, control,and evaluation. http://apps.who.int/iris/bitstream/10665/130160/1/WHO_HSE_PED_CED_2014.05_eng.pdf?ua=1 (Accessed on August 14, 2014).</li><li>World Health Organizaiton. Case definition recommendations for Ebola or Marburg Virus Diseases. http://who.int/csr/resources/publications/ebola/ebola-case-definition-contact-en.pdf (Accessed on August 18, 2014).</li><li>Public Health Agency of Canada. Ebola clinical care guidelines: A guide for clincians in Canada. http://www.ammi.ca/media/73235/Ebola%20Clinical%20Care%20Guidelines%20v2%2028%20Oct%202014.pdf (Accessed on November 03, 2014).</li><li>European Centre for Disease Prevention and Control. Critical aspects of the safe use 
+of personal protective equipment. http://www.ecdc.europa.eu/en/publications/Publications/safe-use-of-ppe.pdf (Accessed on November 03, 2014).</li><li>Centers for Disease Control and Prevention. Epidemiologic risk factors to consider when evaluating a person for exposure to Ebola virus. http://www.cdc.gov/vhf/ebola/exposure/risk-factors-when-evaluating-person-for-exposure.html (Accessed on October 28, 2014).</li><li>Centers for Disease Control and Prevention. Checklist for patients being evaluated for Ebola virus disease (EVD) in the United States http://www.cdc.gov/vhf/ebola/pdf/checklist-patients-evaluated-us-evd.pdf (Accessed on October 24, 2014).</li><li>Centers for Disease Control and Prevention. Interim guidance for U.S. hospital preparedness for patients with possible or confirmed Ebola virus disease: a framework for a tiered approach. http://www.cdc.gov/vhf/ebola/hcp/us-hospital-preparedness.html (Accessed on December 03, 2014).</li><li>Centers for Disease Control and Prevention. Ebola update: updated CDC guidance monitoring symptoms and controlling movement to stop spread of Ebola. http://www.cdc.gov/media/releases/2014/fs1027-monitoring-symptoms-controlling-movement.pdf (Accessed on October 28, 2014).</li><li>Centers for Disease Control and Prevention. Interim guidance for specimen collection, transport, testing, and submission for patients with suspected infection with Ebola virusvdisease http://www.cdc.gov/vhf/ebola/pdf/ebola-lab-guidance.pdf (Accessed on October 24, 2014).</li><li>Considerations for discharging persons under investigation (PUI) for Ebola virus disease. http://www.cdc.gov/vhf/ebola/hcp/considerations-discharging-pui.html (Accessed on November 03, 2014).</li><li>Centers for Disease Control and Prevention. Interim Guidance for Specimen Collection, Transport, Testing, and Submission for Patients with Suspected Infection with Ebola Virus Disease http://www.cdc.gov/vhf/ebola/hcp/interim-guidance-specimen-collection-submission-patients-suspected-infection-ebola.html (Accessed on August 11, 2014).</li><li>Centers for Disease Control and Prevention. Specimen Submission Information. http://www.cdc.gov/ncezid/dhcpp/vspb/specimens.html (Accessed on August 12, 2014).</li><li>Centers for Disease Control and Prevention. Interim guidance regarding compliance with select agent regulations for laboratories handling patient specimens that are known or suspected to contain Ebola virus. http://www.cdc.gov/vhf/ebola/hcp/select-agent-regulations.html (Accessed on September 12, 2014).</li><li>World Health Organization.How to safely collect blood samples from persons suspected to be infected with highly infectious blood-borne pathogens (e.g. Ebola). http://www.who.int/csr/resources/publications/ebola/blood-collect-en.pdf?ua=1.</li><li>World Health Organization.In-Country shipment : How to safely ship human blood samples from suspected Ebola cases within a country by road, rail and sea. http://www.who.int/csr/resources/publications/ebola/blood-shipment-en.pdf?ua=1.</li><li>World Health Organization.Laboratory guidance for the diagnosis of Ebola virus disease, interim recommendations. http://apps.who.int/iris/bitstream/10665/134009/1/WHO_EVD_GUIDANCE_LAB_14.1_eng.pdf (Accessed on October 03, 2014).</li><li>Gire SK, Goba A, Andersen KG, et al. Genomic surveillance elucidates Ebola virus origin and transmission during the 2014 outbreak. http://www.sciencemag.org/content/early/2014/08/27/science.1259657.full.pdf (Accessed on October 17, 2014).</li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/59" class="nounderline abstract_t">Ksiazek TG, West CP, Rollin PE, et al. ELISA for the detection of antibodies to Ebola viruses. J Infect Dis 1999; 179 Suppl 1:S192.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/60" class="nounderline abstract_t">Drosten C, G&ouml;ttig S, Schilling S, et al. Rapid detection and quantification of RNA of Ebola and Marburg viruses, Lassa virus, Crimean-Congo hemorrhagic fever virus, Rift Valley fever virus, dengue virus, and yellow fever virus by real-time reverse transcription-PCR. J Clin Microbiol 2002; 40:2323.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/61" class="nounderline abstract_t">Towner JS, Rollin PE, Bausch DG, et al. Rapid diagnosis of Ebola hemorrhagic fever by reverse transcription-PCR in an outbreak setting and assessment of patient viral load as a predictor of outcome. J Virol 2004; 78:4330.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/62" class="nounderline abstract_t">Towner JS, Sealy TK, Ksiazek TG, Nichol ST. High-throughput molecular detection of hemorrhagic fever virus threats with applications for outbreak settings. J Infect Dis 2007; 196 Suppl 2:S205.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/63" class="nounderline abstract_t">Baize S, Pannetier D, Oestereich L, et al. Emergence of Zaire Ebola virus disease in Guinea. N Engl J Med 2014; 371:1418.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/64" class="nounderline abstract_t">Del Rio C, Mehta AK, Lyon GM 3rd, Guarner J. Ebola hemorrhagic fever in 2014: the tale of an evolving epidemic. Ann Intern Med 2014; 161:746.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/65" class="nounderline abstract_t">Feldmann H. Ebola--a growing threat? N Engl J Med 2014; 371:1375.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/66" class="nounderline abstract_t">Peacock G, Uyeki TM, Rasmussen SA. Ebola virus disease and children: what pediatric health care professionals need to know. JAMA Pediatr 2014; 168:1087.</a></li><li>The Centers for Disease Control and Prevention. Lassa fever. http://www.cdc.gov/vhf/lassa/ (Accessed on November 04, 2014).</li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/68" class="nounderline abstract_t">Franz DR, Jahrling PB, Friedlander AM, et al. Clinical recognition and management of patients exposed to biological warfare agents. JAMA 1997; 278:399.</a></li><li><a href="/contents/clinical-manifestations-and-diagnosis-of-ebola-virus-disease/abstract/69" class="nounderline abstract_t">Rotz LD, Khan AS, Lillibridge SR, et al. Public health assessment of potential biological terrorism agents. Emerg Infect Dis 2002; 8:225.</a></li></ol>
+			</div>
+		
+		<div id="topicFooter">
+			<div id="topicVersionRevision">Topic 3022 Version 45.0</div>
+		</div>
+	</div>	
+	
+
+		</div>
+		
+		
+		
+		<div id="left" class="col  scroll-y">
+			
+			
+			
+			<div id="topicOutline">
+				
+				
+				<input type="hidden" id="collapse" value="Collapse Topic Outline"/>
+				<input type="hidden" id="show" value="Show Topic Outline"/> 
+				<div id="innerOutline">
+				
+					
+							
+					<h1>Topic Outline</h1>
+					<div id="outline">
+						<ul><li><a href="#H20" id="summRecButton" class="sr_button"><span>SUMMARY &amp; RECOMMENDATIONS</span></a></li><li class="plainItem"><a class="outlineLink" href="#H1">INTRODUCTION</a></li><li class="plainItem"><a class="outlineLink" href="#H134221">CLINICAL MANIFESTATIONS</a></li><li class="bulletItem"><a class="outlineLink" href="#H134397">Incubation period</a></li><li class="bulletItem"><a class="outlineLink" href="#H134474">Signs and symptoms</a></li><li class="bulletItem"><a class="outlineLink" href="#H134730">Laboratory findings</a></li><li class="bulletItem"><a class="outlineLink" href="#H107362722">Disease course</a></li><li class="bulletItem"><a class="outlineLink" href="#H107362808">Convalescence</a></li><li class="plainItem"><a class="outlineLink" href="#H3">DIAGNOSIS</a></li><li class="bulletItem"><a class="outlineLink" href="#H1105548">General approach</a></li><li class="bulletItem"><a class="outlineLink" href="#H1106099">Initial assessment for Ebola virus disease</a></li><li class="dashItem"><a class="outlineLink" href="#H150254047">- Determining the risk of exposure</a></li><li class="dashItem"><a class="outlineLink" href="#H448916757">- Symptomatic patients with identifiable risk</a></li><li class="dashItem"><a class="outlineLink" href="#H523732030">- Asymptomatic individuals with identifiable risk</a></li><li class="dashItem"><a class="outlineLink" href="#H150254840">- Patients with no identifiable risk</a></li><li class="bulletItem"><a class="outlineLink" href="#H381319109">Indications for initial testing for Ebola virus infection</a></li><li class="bulletItem"><a class="outlineLink" href="#H8">Laboratory diagnosis</a></li><li class="dashItem"><a class="outlineLink" href="#H430767024">- Guidance during the 2014 outbreak</a></li><li class="dashItem"><a class="outlineLink" href="#H9">- Diagnostic tests</a></li><li class="plainItem"><a class="outlineLink" href="#H430767503">DIFFERENTIAL DIAGNOSIS</a></li><li class="plainItem"><a class="outlineLink" href="#H422128455">BIOTERRORISM</a></li><li class="plainItem"><a class="outlineLink" href="#H19">ADDITIONAL RESOURCES AND CONTACT INFORMATION</a></li><li class="plainItem"><a class="outlineLink" href="#PATIENT_INFORMATION">INFORMATION FOR PATIENTS</a></li><li class="plainItem"><a class="outlineLink" href="#H20">SUMMARY AND RECOMMENDATIONS</a></li><li class="plainItem"><a href="#references">REFERENCES</a></li></ul>
+					</div>
+						
+					<h1>
+		         	
+					
+						<div id="ID/3022" class="openRelatedGraphics" rel="outline_link">
+							GRAPHICS
+							<a href="#" title="View All Related Graphics" class="graphics_icon">
+								View All
+							</a>
+						</div>
+					
+		         	</h1>
+			        <div id="relatedGraphics">
+						<ul><li class="plainItem"><div id="ID/3022|TAB" class="openRelatedGraphics"><a title="TABLES" href="#">TABLES</a></div></li><li class="bulletItem"><a href="/contents/image?imageKey=ID/99186&amp;topicKey=ID%2F3022&amp;source=outline_link" title="table 1" class="graphic graphic_table">Clinical and laboratory manifestations of Ebola virus disease</a></li></ul>
+			        </div>
+						
+						
+		       			
+					<h1>RELATED TOPICS</h1>
+					<div id="relatedTopics">
+					<ul><li class="plainItem"><a href="/contents/clinical-manifestations-of-malaria?source=related_link" class="medical medical_review">Clinical manifestations of malaria</a></li><li class="plainItem"><a href="/contents/clinical-manifestations-of-meningococcal-infection?source=related_link" class="medical medical_review">Clinical manifestations of meningococcal infection</a></li><li class="plainItem"><a href="/contents/clinical-manifestations-of-seasonal-influenza-in-adults?source=related_link" class="medical medical_review">Clinical manifestations of seasonal influenza in adults</a></li><li class="plainItem"><a href="/contents/diagnosis-of-malaria?source=related_link" class="medical medical_review">Diagnosis of malaria</a></li><li class="plainItem"><a href="/contents/diagnosis-of-seasonal-influenza-in-adults?source=related_link" class="medical medical_review">Diagnosis of seasonal influenza in adults</a></li><li class="plainItem"><a href="/contents/diseases-potentially-acquired-by-travel-to-west-africa?source=related_link" class="medical medical_review">Diseases potentially acquired by travel to West Africa</a></li><li class="plainItem"><a href="/contents/epidemiology-and-pathogenesis-of-ebola-virus-disease?source=related_link" class="medical medical_review">Epidemiology and pathogenesis of Ebola virus disease</a></li><li class="plainItem"><a href="/contents/epidemiology-of-neisseria-meningitidis-infection?source=related_link" class="medical medical_review">Epidemiology of Neisseria meningitidis infection</a></li><li class="plainItem"><a href="/contents/epidemiology-microbiology-clinical-manifestations-and-diagnosis-of-typhoid-fever?source=related_link" class="medical medical_review">Epidemiology, microbiology, clinical manifestations, and diagnosis of typhoid fever</a></li><li class="plainItem"><a href="/contents/evaluation-of-fever-in-the-returning-traveler?source=related_link" class="medical medical_review">Evaluation of fever in the returning traveler</a></li><li class="plainItem"><a href="/contents/general-principles-of-infection-control?source=related_link" class="medical medical_review">General principles of infection control</a></li><li class="plainItem"><a href="/contents/identifying-and-managing-casualties-of-biological-terrorism?source=related_link" class="medical medical_review">Identifying and managing casualties of biological terrorism</a></li><li class="plainItem"><a href="/contents/ebola-the-basics?source=related_link" class="medical medical_basics">Patient information: Ebola (The Basics)</a></li><li class="plainItem"><a href="/contents/treatment-and-prevention-of-ebola-virus-disease?source=related_link" class="medical medical_review">Treatment and prevention of Ebola virus disease</a></li></ul>
+					</div>
+						
+							
+				
+				</div>
+			</div>
+			
+
+
+	<div id="toggleDragger">
+		<a id="togglePanel" title="Drag here to resize the topic outline">Drag here to resize the topic outline</a>
+	</div>	
+
+		
+		</div>
+		
+		
+		
+	</div>
+	
+	
+		<footer class="row">
+			
+
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="fTier1" class="footer_row footer_gradient">
+		<div id="footerTopLeft">
+			
+			<a href="/contents/license" class="footerlink licenseLink" id="sla_footer">Subscription and License Agreement</a>
+			<span class="pipeSpace">|</span>
+			
+			<a href="/home/policies" target="_blank">Policies</a>
+			<span class="pipeSpace">|</span>
+			<a class="pointer footerlink" id="sinfo_footer">Support Tag</a>
+			<div id="supportTagTooltip" class="hidden">
+				<form id="frmEmlSpt">	
+					Release:23.1<br />
+					Content: C23.19<br />
+					Licensed To: <span class="emphasis">NYU Hospitals Center and NYU School of M</span><br />
+					Support Tag:<br/>[0506-128.238.182.77-3740B11879-I1783.14]<br />
+					<span id="serviceEmailInput">
+					<p>
+						<label class="infield" for="ticketNumber">Enter case reference ID</label>
+						<input type="text" id="ticketNumber" value="" />
+						<input type="button" id="btnEmailSupport" value="Submit" />
+					</p>
+					<span id="msgSupportResponse">
+					
+					</span>
+					<p>
+						<label for="rbTktOpt2">No case reference ID?
+							<a href="/home/contact-us" target="_blank">Contact Us</a></label>
+					</p>				
+					</span>
+				</form>
+			</div>
+			
+		</div>
+		
+		<div id="footer_social" class="clearfix">
+			<a id="sfiFacebook" href="https://www.facebook.com/UpToDateEBM" target="_blank" title="Facebook">Facebook</a>
+			<a id="sfiTwitter" href="https://twitter.com/UpToDate" target="_blank" title="Twitter">Twitter</a>
+			<a id="sfiLinkedIn" href="http://www.linkedin.com/company/uptodate?trk=hb_tab_compy_id_21924" target="_blank" title="LinkedIn">LinkedIn</a>
+			<a id="sfiYouTube" href="http://www.youtube.com/uptodateebm" target="_blank" title="YouTube">YouTube</a>
+		</div>
+		
+	</div>
+	<div id="fTier2" class="footer_body">
+		<div class="footer_group">
+			<div id="footerLogo">
+				<a href="http://www.wolterskluwerhealth.com/" target="_blank">Wolters Kluwer Health</a>
+			</div>
+		</div>
+		<div class="clearfix">
+			<div class="footer_group">
+				
+				
+				<h4>Using UpToDate</h4>
+				<div class="footer_group_col footer_first_col">
+					<a href="/home/contact-us" target="_blank">Contact Us</a>
+					<a href="/home/help" target="_blank">Help</a> 
+				</div>
+				<div class="footer_group_col footer_second_col">
+					<a href="/home/help-demo" target="_blank">Demos</a>
+					<a href="/home/uptodate-news" target="_blank">UpToDate News</a>
+				</div>
+				<div class="footer_group_col">
+					<a href="/home/uptodate-mobile-access" target="_blank">Access Options for UpToDate</a>
+					<a href="/home/training-resource-center" target="_blank">Training Center </a>
+				</div>
+				
+			</div>
+		</div>
+		<p>&copy; 2015 UpToDate, Inc. All rights reserved.</p>
+	</div>
+	
+	<div id="fTier3" class="footer_gradient clearfix">
+		<a href="http://www.wolterskluwerhealth.com/" target="_blank">Wolters Kluwer Health</a> 
+		<span class="pipeSpace">|</span>
+		<a href="http://www.factsandcomparisons.com/" target="_blank">Facts &amp; Comparisons&reg;</a> 
+		<span class="pipeSpace">|</span>
+		<a href="http://www.healthlanguage.com/" target="_blank">Health Language&reg;</a> 
+		<span class="pipeSpace">|</span>
+		<a href="http://www.lexi.com/" target="_blank">Lexicomp&reg;</a> 
+		<span class="pipeSpace">|</span>
+		<a href="http://www.medispan.com/" target="_blank">Medi-Span&reg;</a> 
+		<span class="pipeSpace">|</span>
+		<a href="http://www.medicom.com.cn/" target="_blank">Medicom&reg;</a> 
+		<span class="pipeSpace">|</span>
+		<a href="http://pharmacyonesource.com/" target="_blank">Pharmacy OneSource&reg;</a> 
+		<span class="pipeSpace">|</span>
+		<a href="http://www.provationmedical.com/" target="_blank">ProVation&reg; Medical</a> 
+		<span class="pipeSpace">|</span>
+		<a href="http://www.provationordersets.com/" target="_blank">ProVation&reg; Order Sets</a> 
+		 
+	</div>
+	
+
+
+	
+	
+
+
+		</footer>
+	
+	
+	
+
+
+ <a id="topicFeedbackBug" href="#">Topic Feedback</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="versionDetails"><p>
+
+
+
+
+
+All topics are updated as new information becomes available. Our peer review process typically takes one to six weeks depending on the issue.
+
+	
+	
+	
+
+</p></div>
+
+
+	<div id="hdnGfxCont" class="hidden">
+	<div id="graphics_overlay">
+		<span id="graphics_overlay_background"></span>
+		<div id="graphics_overlay_container">
+			<div id="graphics_toolbar">
+				
+
+
+
+<!-- TC:SEARCH_RESULT -->
+
+
+
+
+
+
+
+<ul id="graphics_toolbar_links" class="hidden">
+	
+	<li>
+		<a target="_blank" href="" id="exportPwrPntLink">Export to PowerPoint</a>
+	</li>
+	
+	
+	<li>
+		<a target="_blank" href="" id="graphicsPrintLink">Print</a>
+	</li>
+	
+	
+	<li>
+		<a target="_blank" href="" id="graphicsEmailLink">Email</a>
+	</li>
+	
+	<li>
+		<a target="_blank" href="" id="graphicsFullViewLink">Full View</a>
+	</li>
+	<li>
+		<a id="graphicsFeedback" href="#">Feedback	</a>
+	</li>	
+</ul>	
+<ul id="graphics_toolbar_info" class="hidden">
+	<li id="graphicsFor">
+		
+	</li>
+</ul>
+<span id="graphicsForTxt" class="hidden">Graphics for:&nbsp;</span>
+<p style=""></p>				
+			</div>
+			<div id="overlay_content" style="overflow-y: scroll;"></div>
+		</div>
+		<div id="overlay_close"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+		
+	
+	
+
+
+
+
+
+
+
+	
+	
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- TC:SLA_MESSAGE -->
+
+		
+		<div id="slaCheckUrl" data-url="/services/AgreementWebService?topicId=3022" class="hidden"></div>
+		<div id="slaMessageContainer">						
+			
+				
+				
+					<div id="closeMessage">
+						<a href="" id="close">Close </a>
+					</div>
+					<div id="slaMessage">
+						The use of UpToDate is subject to the 
+					<a href="#" id="sla_message">Subscription and License Agreement</a>.
+					</div>		
+				
+			
+
+			
+				
+		</div>
+		
+			
+			
+		<div id="hdnSLADialog" class="hidden">
+			<div id="slaDialog" class="dialog">
+				<div class="slaDialogTitle">
+				Subscription and License Agreement &nbsp;
+				<a href="/contents/license?view=print" target="_blank" class="icontxt" onclick=""><img src="/images/icn_print.gif" height="20" width="24" align="middle" border="0" alt="Print this page">Print</a>
+				</div>
+				
+				<div class="boxDialog">				
+					<strong class="largeGreenHeader">Subscription and License Agreement</strong>
+
+<p>By clicking the &quot;accept&quot; button (or opening and using
+the software/content package if applicable), you agree to become bound
+by the terms of this Subscription and License Agreement (the
+&quot;Agreement&quot;). If you do not agree to these terms, if using the
+online version of UpToDate<sup>&#174; </sup> software/content, click &quot;decline&quot;
+or do not open the package (and promptly return it). READ THE FOLLOWING
+TERMS IN THIS AGREEMENT CAREFULLY BEFORE INDICATING YOUR ACCEPTANCE. In
+this Agreement, the term &quot;you&quot; refers to: (i) an entity
+entering into this Agreement for use of its employees, (ii) an
+individual purchasing an UpToDate subscription under this Agreement,
+either on his or her own behalf (or as agent for a corporation or other
+entity or organization); or (iii) an individual entering into this
+Agreement as a condition of using UpToDate through a subscription
+purchased by a hospital, medical school, or other institution
+(&quot;Institution&quot;), where the individual is employed by or
+affiliated with the Institution.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LICENSE: UpToDate, Inc. (&quot;UpToDate&quot;), in consideration of the
+subscription fee and acceptance of this Agreement, grants you a
+non-exclusive, non-transferable license and right to use and access the
+UpToDate database and software (the &quot;Licensed Materials&quot;) in
+accordance with the applicable subscription terms (as may be provided in
+UpToDate&apos;s separate invoice terms):</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+INDIVIDUAL: An individual subscription permits one individual to access
+and use the Licensed Materials for his or her own use only by loading
+the software on a single computer (i.e., within a single CPU) at a fixed
+location, by loading the PDA software on a single Personal Digital
+Assistant (PDA), or by using his or her unique user name and password to
+access the Licensed Materials from any location via the Internet.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+b.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+STANDALONE WORKSTATION: A standalone subscription permits multiple users
+employed by or affiliated with you to access and use the Licensed
+Materials only for a purpose related to your business by loading the
+software on a single computer (i.e., within a single CPU) owned or
+controlled by you, with a hard drive owned or controlled by you
+connected directly to such computer. You may not install the software on
+more than one computer. A Standalone Workstation license does not
+include Internet access to the Licensed Materials.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+c.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+INSTITUTIONAL SUBSCRIPTION: An Institutional Subscription permits only
+individuals who are employed by or affiliated with the relevant
+institution to access and use the Licensed Materials at any
+Internet-connected computer validated for such use by UpToDate, but only
+for the clinical, educational or research purposes of the Institution.
+Further, access may be restricted to particular websites per the
+applicable invoice terms.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+OWNERSHIP: The Licensed Materials, including without limitation all
+copyrights and other intellectual property rights therein, are the sole
+and exclusive property of UpToDate (or its parents, subsidiaries,
+affiliates, or designees) or its suppliers. By indicating that you
+accept these terms, you do not become the owner of the Licensed
+Materials, but are entitled to use them only according to the terms of
+this Agreement.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PERMITTED USES: You may print out, or email to a colleague, individual
+articles containing only insubstantial portions of the most current
+version of the Licensed Materials, but only for a) your personal
+clinical, educational or research use; b) teaching healthcare
+professionals; or c) consulting with individual colleagues, provided
+that any printed or emailed articles include a source reference to
+UpToDate and its copyright notice. You are not permitted to print or
+email substantial portions of the Licensed Materials, nor to email
+individual articles to large numbers of recipients.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PROHIBITED USES: Except as expressly permitted in this Agreement, any
+copying, distribution or modification of the Licensed Materials is
+strictly prohibited. No part of the Licensed Materials may be copied for
+resale or other commercial use, or posted on public bulletin boards, web
+sites, Internet domains, or online chatrooms. No part of the Licensed
+Materials may be reverse engineered or included in other software.
+UpToDate electronically monitors compliance with this Agreement, and
+reserves the right in its sole discretion to change and or cancel an
+individual's user name and password or to disable an IP address without
+notice in the event of multiple concurrent logins, excessive search
+quantities or excessive download traffic volumes. You agree to comply
+with all applicable laws, including all US export laws and regulations,
+in connection with the Licensed Materials.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SUBSCRIPTION TERM: You have obtained the right to use and access the
+Licensed Materials for a specific limited period of time, i.e., the
+subscription period for which you or your Institution have agreed to pay
+subscription fees. At the end of this period, your license and your
+associated rights, such as technical support, will expire automatically,
+unless you or your Institution have renewed your subscription on
+UpToDate's then-current terms. UpToDate may embed technology in the
+Licensed Materials causing them to become inaccessible after your
+subscription term. The Agreement and your license to use the Licensed
+Materials will also terminate if you fail to comply with any term or
+condition in this Agreement.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+RESTRICTION AGAINST TRANSFER: You may not sublicense, assign, share,
+sell, rent, lease, or otherwise transfer your right to use the Licensed
+Materials (including your username and password) whether by merger,
+operation of law, or otherwise.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+USE OF PROFESSIONAL JUDGMENT: The editors and authors of the Licensed
+Materials have conscientiously and carefully tried to create the
+identified diagnosis measures, treatment alternatives and drug dosages
+in the Licensed Materials that conform to the standards of professional
+practice that prevailed at the time of publication. However, standards
+and practices in medicine change as new data become available and the
+individual medical professional should consult a variety of sources. For
+this reason, only the most current release of the Licensed Materials
+should be consulted when information is sought. New updates of the
+Licensed Materials are issued periodically; do not rely on older
+versions. In addition, when prescribing medications, the user is advised
+to check the product information sheet accompanying each drug to verify
+conditions of use and identify any changes in dosage schedule or
+contraindications, particularly if the agent to be administered is new,
+infrequently used or has a narrow therapeutic range.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The Licensed Materials describe basic principles of diagnosis and
+therapy. The information provided in the Licensed Materials is no
+substitute for individual patient assessment based upon the healthcare
+provider's examination of each patient and consideration of laboratory
+data and other factors unique to the patient. The Licensed Materials
+should be used as a tool to help the user reach diagnostic and treatment
+decisions, bearing in mind that individual and unique circumstances may
+lead the user to reach decisions not presented in the Licensed
+Materials. The opinions expressed in the Licensed Materials are those of
+its authors and editors and may or may not represent the official
+position of any medical societies cooperating with, endorsing or
+recommending the Licensed Materials.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LIMITED RIGHTS NOTICE. Any access to the Licensed Materials provided
+under contract to the Government are provided with limited rights. The
+Licensed Materials may be reproduced and used by the Government with the
+express limitation that they will not, without written permission of
+UpToDate, be used for purposes of manufacture nor disclosed outside the
+Government. The term &quot;Government&quot; as used herein shall have
+the meaning ascribed to it in 48 CFR 52.227-14.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+9.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LIMITED WARRANTY: If UpToDate has supplied physical media to you
+containing the Licensed Materials and they are defective, such media
+will be replaced without charge if returned to the place of purchase
+within 60 days after date of payment of the license fee. EXCEPT AS SET
+FORTH IN THE FOREGOING SENTENCE, NEITHER UPTODATE NOR ANY OTHER PARTY OR
+MEDICAL SOCIETY MAKES ANY WARRANTY OR REPRESENTATION, EXPRESSED OR
+IMPLIED, WITH RESPECT TO THE LICENSED MATERIALS, WHICH ARE LICENSED
+&quot;AS IS&quot;. ALL OTHER WARRANTIES ARE EXPRESSLY EXCLUDED AND
+DISCLAIMED, INCLUDING WITHOUT LIMITATION IMPLIED WARRANTIES OF
+MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, AND ANY WARRANTIES
+ARISING BY STATUTE OR OTHERWISE IN LAW OR FROM COURSE OF DEALING, COURSE
+OF PERFORMANCE, OR USE OF TRADE. ANY STATEMENTS OR REPRESENTATIONS MADE
+BY ANY OTHER PERSON OR ENTITY ARE VOID. YOU ASSUME ALL RISK AS TO THE
+QUALITY, FUNCTION, PERFORMANCE, AND ACCURACY OF THE LICENSED MATERIALS.</p>
+
+<p>LIMITATION OF LIABILITY: IN NO EVENT WILL UPTODATE OR ANY OTHER
+PARTY WHO HAS BEEN INVOLVED IN THE CREATION, PRODUCTION, PROMOTION OR
+MARKETING OF THE LICENSED MATERIALS BE LIABLE TO YOU OR ANY OTHER PARTY
+FOR ANY SPECIAL, INDIRECT, INCIDENTAL, RELIANCE, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES, INCLUDING LOSS OF DATA OR PROFITS, OR FOR
+INABILITY TO USE THE LICENSED MATERIALS, EVEN IF UPTODATE OR SUCH OTHER
+PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN NO EVENT
+SHALL UPTODATE OR SUCH OTHER PARTY'S LIABILITY FOR ANY DAMAGES OR LOSS
+TO YOU OR ANY OTHER PARTY EXCEED THE LICENSE FEE PAID FOR THE LICENSED
+MATERIALS.</p>
+
+<p>Some jurisdictions do not allow limitations on how long an
+implied warranty lasts and some jurisdictions do not allow the exclusion
+or limitation of special, indirect, incidental, exemplary, or
+consequential damages, or the limitation of liability to specified
+amounts, so the above limitation and exclusion may not apply to you if
+prohibited by applicable law. You may also have other rights which vary
+from jurisdiction to jurisdiction. You agree that this Agreement shall
+not be subject to the United Nations Convention on Contracts for the
+International Sale of Goods.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+10.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+GENERAL: If any provision of this Agreement is determined to be invalid
+or unenforceable under any applicable law, it shall be deemed omitted
+and the remaining provisions shall continue in full force and effect.
+This Agreement may be modified only in writing authorized by UpToDate.
+UpToDate's waiver of any right shall not constitute a waiver of that or
+any other right in the future. This Agreement shall be governed by and
+construed in accordance with the laws and in the state and federal
+courts of the Commonwealth of Massachusetts, USA. This Agreement
+constitutes the entire understanding between the parties with respect to
+the subject matter hereof, and all prior agreements, representations,
+statements, and undertakings, oral or written, are hereby expressly
+superseded and canceled. Sections 2 and 4-9 survive in full force and
+effect following expiration or termination of this Agreement.</p>
+
+<p>Should you have any questions regarding this Agreement, you may
+contact UpToDate at the email address or telephone numbers set forth
+below.</p>
+
+<p>UpToDate, Inc.<br />
+<a href="#" id="infoEmail">info@uptodate.com</a>
+<br />
+Telephone: 1-800-998-6374 or +1-781-392-2000
+</p>
+
+				</div>		
+				<div class="slaButtons">
+					<input type="button" class="closeSLABtn" value=Close />
+				</div>	
+			</div>
+		</div>
+	
+	
+
+
+	
+
+	<ul id="autoCompleteList"></ul>
+	<div id="headerShadow"></div>
+	<div id='overflowDropdown'><ul></ul></div>
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	<script type="text/javascript" src="/uio/js/utd.min.js?hash=525"></script>
+	
+
+
+
+	<script type="text/javascript">
+		// Call to initialize UTD, passing in any custom settings
+		$.utd.init({
+			contextPath: '',
+			topicType: 'MEDICAL_REVIEW',
+			topicClass: 'MEDICAL',
+			topicKey: 'global/4841',
+			topicLanguage : 'en-US',
+			pageType: 'TOPIC_PROFESSIONAL',
+			imageKey: '',
+			imageTitle: '',
+			searchTerm: '',
+			isPrintView: false,		
+			isSearchResults: false,
+			tabId: '',
+			onReadyUrl: '/services/AutoComplete',
+			showSurvey: 
+			false,
+			locale: 'en',
+			 removeTxt: 'Remove',
+			exportPowerpoint: true
+			 ,
+			 userEngagement: 
+			 	true,			 	
+			acceptUrl: '/services/AgreementWebService?type=accept',
+			declineUrl: '/home/contact-us',
+			licenseUrl: '/contents/license',
+			pwUrl: '/account/contact?method=cancel',
+			autoCompleteLength: '{"latinLength":1,"nonLatinLength":1}',
+			providerTranslationURL: '',
+			translation: '',
+			detectedLang: '',
+			uiClickEventUrls: '^/contents/table-of-contents/([^/]+)$,/home/training-resource-center,http://www.healthlanguage.com/,/contents/license,^/contents/practice-changing-updates,http://www.factsandcomparisons.com/,http://pharmacyonesource.com/,/home/uptodate-mobile-access,/home/policies,^/account/index,http://www.youtube.com/uptodateebm,http://www.wolterskluwerhealth.com/,/home/contact-us,/contents/drug-interaction,^/account/cme/process,http://www.provationmedical.com/,/home/help-demo$,https://twitter.com/UpToDate,http://www.medicom.com.cn/,https://www.facebook.com/UpToDateEBM,http://www.medispan.com/,/home/help$,http://learn.uptodate.com/global,http://www.provationordersets.com/,^http://www.linkedin.com/company/uptodate,http://www.lexi.com/',
+			searchResultsState: 'EXPANDED',
+			searchResultsOutline: true
+			,
+			appType: 'BROWSER_DEFAULT',
+			charRemainingMessage: 'characters remaining',
+			pleaseWaitMessage: 'Please wait',
+			isTrack: false,
+			lastTopicViewedDatabaseId: "-1"
+		});
+	</script>
+
+    
+	
+	
+	
+		<script type="text/javascript">
+	var $SAT = $SAT || [];
+	$SAT.push(['setContent','user_identity','Enterprise_Customer']);
+	$SAT.push(['setContent','user_ip_address','128.238.182.77']);
+	$SAT.push(['setContent','user_language','en']);
+	$SAT.push(['setContent','user_country','US']);
+	$SAT.push(['setContent','user_display_format','BROWSER_DEFAULT']);
+	$SAT.push(['setContent','topic_id','3022']);
+	$SAT.push(['setContent','topic_content_version','23.19']);
+	$SAT.push(['setContent','topic_title','Clinical manifestations and diagnosis of Ebola virus disease']);
+	$SAT.push(['setContent','program_id','1783']);
+	$SAT.push(['setContent','secondary_program_id','14']);
+	$SAT.push(['setContent','program_access_type','EI']);
+	$SAT.push(['setContent','secondary_program_access_type','PR']);
+	$SAT.push(['setUser', '9340265']);
+	(function() {
+		var sa = document.createElement('script'); sa.type = 'text/javascript';
+		sa.src = 'http' + ('https:' == document.location.protocol ? 's' : '') + '://scout.uptodate.com/p4kh9-2/sat.ashx';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(sa);
+	})();
+</script>
+
+		
+</body>
+</html>

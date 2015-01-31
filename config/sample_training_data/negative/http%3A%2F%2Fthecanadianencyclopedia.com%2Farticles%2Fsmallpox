@@ -1,0 +1,876 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html
+class="no-js ie8 lt-ie10" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html
+class="no-js ie9 lt-ie10" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html
+class="no-js" lang="en"> <!--<![endif]-->
+  <head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+  <meta charset="utf-8">
+  <title>Smallpox - The Canadian Encyclopedia</title>
+<!--  <meta name="viewport" content="initial-scale=1,maximum-scale=1,width=device-width">-->
+  <meta name="viewport" content="width=1024" />
+
+  
+      <meta name="description" content="History, politics, arts, science & more: the Canadian Encyclopedia is your reference on Canada. Articles, timelines & resources for teachers, students & public." />
+  
+
+  <!-- Stylesheets -->
+      <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="canonical" href="http://www.thecanadianencyclopedia.ca/en/article/smallpox/" />
+  <link rel="stylesheet" href="https://tce-live.s3.amazonaws.com/static/assets/stylesheets/screen-TCE.css">
+  <link rel="stylesheet" href="https://tce-live.s3.amazonaws.com/static/assets/stylesheets/sb.css">
+  <link rel="stylesheet" href="https://tce-live.s3.amazonaws.com/static/assets/stylesheets/jquery.fileupload-ui.css">
+  
+  <link href="https://tce-live.s3.amazonaws.com/static/assets/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="https://tce-live.s3.amazonaws.com/static/assets/stylesheets/awwwards.css" />
+  <!--[if IE]>
+   <link href="https://tce-live.s3.amazonaws.com/static/assets/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-45002979-1', 'thecanadianencyclopedia.ca');
+ga('send', 'pageview');
+</script>
+
+  
+<meta property="fb:app_id" content="1418755658343332" />
+
+
+<meta property="og:description" content="Smallpox (variola) is an infectious disease caused by a DNA virus of the genus orthopox." />
+<meta property="og:title" content="Smallpox" />
+
+<meta property="og:site_name" content="The Canadian Encyclopedia" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.thecanadianencyclopedia.ca/en/article/smallpox/" />
+
+
+
+    <meta name="author" content="W.B. Spaulding">
+
+
+
+  <script src="http://jwpsrv.com/library/EqsDqjXFEeOl_yIACusDuQ.js"></script>
+</head>
+<body class="articles lang-en">
+<div id="fb-root"></div>
+
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '1418755658343332',                        // App ID from the app dashboard
+      channelUrl : '/static/channel.html', // Channel file for x-domain comms
+      status     : true,                                 // Check Facebook Login status
+      xfbml      : true                                  // Look for social plugins on the page
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+  STATIC_PATH = "https://tce-live.s3.amazonaws.com/static/";
+  MEDIA_PATH = "http://tce-live.s3-website-us-east-1.amazonaws.com/media/";
+  
+</script>
+<header class="main-header">
+  <div class="container_12">
+    <nav class="main-nav">
+      <ul class="menu">
+        <li class="openonipad"><a class="no-ipad" href="#"></a>
+          <ul>
+            
+            <li><a href="http://www.historicacanada.ca/" target="_blank">Historica Canada</a></li>
+            <li><a href="http://www.our-story.ca/" target="_blank">Aboriginal Arts &amp; Stories</a></li>
+            <li><a href="http://www.canadiancitizenshipchallenge.ca/" target="_blank">Citizenship Challenge</a></li>
+            <li><a href="https://www.ewc-rdc.ca/en/home.html" target="_blank">Encounters with Canada</a></li>
+            <li><a href="http://www.gotaminute.ca" target="_blank">Got A Minute?</a></li>
+            <li><a href="http://www.myparkspass.ca/" target="_blank">My Parks Pass</a></li>
+            <li><a href="http://www.passagestocanada.com/en/" target="_blank">Passages Canada</a></li>
+            <li><a href="http://www.thememoryproject.com/" target="_blank">The Memory Project</a></li>
+            <li><a href="http://www.citiesintime.ca/toronto" target="_blank">Toronto in Time</a></li>
+            <li><a href="http://www.historicacanada.ca/1812" target="_blank">War of 1812</a></li>
+            
+          </ul>
+        </li>
+        <li><a href="/">home</a></li>
+        <li><a href="/about/">about</a></li>
+        <li><a href="/exhibits">exhibits</a></li>
+        <li><a href="/map/">your canada</a></li>
+        <li><a href="/en/learningcentre/">learning centre</a></li>
+      </ul>
+    </nav>
+    <div class="user-panel">
+      <ul>
+        <li class="twitter"><a href="/twitter/">twitter</a></li>
+
+
+      
+        <li class="login logged-out"><a href="/userlogin/?action=log" class="profileopener">log in</a></li>
+        
+        <form action="/i18n/setlang/" method="post">
+          <input type='hidden' name='csrfmiddlewaretoken' value='sy1yqidCrOip0ydyGUgICkIKjJL731Sd' />
+          <input type="hidden" name='language' />
+          <input type="hidden" name='next' />
+          <li id="enlangitem" class="lang "><a rel='en' href="">en</a></li>
+          <li class="lang in-active"><a rel='fr' href="">fr</a></li>
+        </form>
+      </ul>
+    </div>
+  </div>
+</header>
+
+      
+
+
+
+<section class="sub-page mast">
+	<div class="container_12">
+    <a href="/en/" class="logo">The Canadian Encylcopedia</a>
+		<div class="filter smallfilter">
+      <form action="/en/search/" class="search">
+        <input id="smallhotsearch" placeholder="Search" type="text" name="keyword" value="" />
+      </form>
+
+            
+      <ul class="inline base filters wide">
+        
+        <li><a rel="49" href="#">Events</a></li>
+        
+        <li><a rel="21" href="#">People</a></li>
+        
+        <li><a rel="47" href="#">Places</a></li>
+        
+        <li><a rel="48" href="#">Things</a></li>
+        		
+      </ul>
+
+      <div id="smallfilter-categories">
+
+          <ul class="smallcats" rel="49">
+            
+            <li class="realcat"><a href="/en/browse/Events/Athletic/">Athletic</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Awards/">Awards</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Commemorations/">Commemorations</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Commissions%20&%20Reports/">Commissions & Reports</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Competitions/">Competitions</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Festivals/">Festivals</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Firsts/">Firsts</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Historical/">Historical</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Holidays/">Holidays</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Law%20&%20Policy/">Law & Policy</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Military%20Engagements/">Military Engagements</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Performances/">Performances</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Political/">Political</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Strikes%20&%20Protests/">Strikes & Protests</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Events/Weather%20Phenomena/">Weather Phenomena</a></li>
+            
+          </ul>
+
+          <ul class="smallcats" rel="21">
+            
+            <li class="realcat"><a href="/en/browse/People/Aboriginal%20Peoples/">Aboriginal Peoples</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Actors%20&%20Broadcasters/">Actors & Broadcasters</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Architects,%20Builders%20&%20Planners/">Architects, Builders & Planners</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Artists/">Artists</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Athletes/">Athletes</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Businessmen%20&%20Businesswomen/">Businessmen & Businesswomen</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Directors%20&%20Producers/">Directors & Producers</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Diverse%20Communities/">Diverse Communities</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Doctors%20&%20Health%20Administrators/">Doctors & Health Administrators</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Educators%20&%20Public%20Servants/">Educators & Public Servants</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Environmentalists/">Environmentalists</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Explorers/">Explorers</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/French%20Canadians/">French Canadians</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Gamers/">Gamers</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Historical%20Figures/">Historical Figures</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Inventors%20&%20Innovators/">Inventors & Innovators</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Lawyers,%20Judges%20&%20Criminals/">Lawyers, Judges & Criminals</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Leaders%20&%20Activists/">Leaders & Activists</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Military%20Figures/">Military Figures</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Musicians/">Musicians</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Other/">Other</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Politicians/">Politicians</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Scientists%20&%20Technologists/">Scientists & Technologists</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Women/">Women</a></li>
+            
+            <li class="realcat"><a href="/en/browse/People/Writers%20&%20Academics/">Writers & Academics</a></li>
+            
+          </ul>
+
+          <ul class="smallcats" rel="47">
+            
+            <li class="realcat"><a href="/en/browse/Places/Cities/">Cities</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Cities%20&%20Populated%20Places/">Cities & Populated Places</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Cn/browse/Places/Cities/">Cities</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Cities%20&%20Populated%20Places/">Cities & Populated Places</a></li>
+            
+            <li class="realcat"oastal%20Regions/">Coastal Regions</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Exploration/">Exploration</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Geography/">Geography</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Halls%20&%20Theatres/">Halls & Theatres</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Historical/">Historical</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Islands/">Islands</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Lakes%20&%20Reservoirs/">Lakes & Reservoirs</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Land/">Land</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Landmarks%20&%20Monuments/">Landmarks & Monuments</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Mountains/">Mountains</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Museums,%20Galleries%20&%20Archives/">Museums, Galleries & Archives</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Parks%20&%20Historic%20Sites/">Parks & Historic Sites</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Parks%20&%20National%20Historic%20Sites/">Parks & National Historic Sites</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Passes%20&%20Trails/">Passes & Trails</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Populated%20Places/">Populated Places</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Provinces%20&%20Territories/">Provinces & Territories</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Rivers/">Rivers</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Schools%20&%20Institutions/">Schools & Institutions</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Schools%20&%20Universities/">Schools & Universities</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Places/Waterfalls/">Waterfalls</a></li>
+            
+          </ul>
+
+          <ul class="smallcats" rel="48">
+            
+            <li class="realcat"><a href="/en/browse/Things/Agriculture/">Agriculture</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Art%20&%20Architecture/">Art & Architecture</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Awards/">Awards</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Business/">Business</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Communications/">Communications</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Culture/">Culture</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Education/">Education</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Entertainment/">Entertainment</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Environment/">Environment</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Government/">Government</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/History/">History</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Innovations%20&%20Technology/">Innovations & Technology</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Law/">Law</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Literature/">Literature</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Military/">Military</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Music/">Music</a></li>
+            
+            <li class="realcat"><a href="/en/bro          
+            <li class="realcat"><a href="/en/browse/Things/Military/">Military</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Music/">Music</a></li>
+ wse/Things/Organizations%20&%20Movements/">Organizations & Movements</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Politics/">Politics</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Religion%20&%20Philosophy/">Religion & Philosophy</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Science%20&%20Medicine/">Science & Medicine</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Sociology/">Sociology</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Sports/">Sports</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Transportation/">Transportation</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Urban%20Affairs/">Urban Affairs</a></li>
+            
+            <li class="realcat"><a href="/en/browse/Things/Zoology/">Zoology</a></li>
+            
+          </ul>
+
+      </div>
+
+      
+		<div class="media-objects grid_11" style="display:none;">
+		        <header class="media-header">
+		          <h2>popular</h2>
+		          <h2>recommended</h2>
+		        </header>
+		
+		        <ul id="popularContainer" class="popular" style="min-height: 200px;"></ul>
+		        <div id="resultcontainer"></div>
+		      </div>
+		
+		
+		</div><!--.filter-->
+	</div><!--.container-->
+</section><!--.sub-page.mast-->
+
+
+
+
+
+
+<div class="container_12 article">
+
+  <aside class="content-aside">
+    <div class="meta-info-block item core">
+      
+
+      
+        <p>
+          article by
+                  <span>
+                  
+                    
+                      W.B. Spaulding
+                    
+                  
+                  </span>
+        </p>
+      
+
+      
+
+      
+        <p>published
+          <time datetime="2001-01-31">02/07/06</time>
+        </p>
+      
+      
+        <p>last edited
+          <time datetime="2001-01-31">12/16/13</time>
+        </p>
+      
+    </div>
+    <!--.meta-info-block-->
+
+    <div class="item links core icon static">
+      <ul class="base">
+        <li class="first no-print"></li>
+        <li class="no-print"><a href="#top">top</a></li>
+        
+        <li class="no-print"><a href="#related-articles">related articles</a></li>
+        <li class="no-print"><a href="#links">links</a></li>
+      </ul>
+      <ul class="social no-print">
+        <li class="comment-count light"><a title="comments" class="comments-sidebar" href="#comments">0</a></li>
+        <li class="share"><a href="">share</a>
+          <ul class="share-menu links core">
+            <li><a class="share-via-twitter" href="">twitter</a></li>
+            <li><a class="share-via-facebook" href="">facebook</a></li>
+            <li><a class="share-via-email" href="">email</a></li>
+          </ul>
+        </li>
+        <li class="quote"><a title="citation" href=""></a>
+          <ul class="citation-menu links core">
+            <li>
+              <h6>MLA 7<span>th</span> Edition</h6>
+              <p>
+        Spaulding, W.B.. "Smallpox". <i>The Canadian Encyclopedia</i>.
+        Toronto: Historica Canada, 2006. Web. 8 Feb 2006.
+        </p>
+              <textarea>Spaulding, W.B.. &quot;Smallpox&quot;. The Canadian Encyclopedia.
+        Toronto: Historica Canada, 2006. Web. 8 Feb 2006.</textarea>
+            </li>
+            <li>
+              <h6>APA 6<span>th</span> Edition</h6>
+              <p>
+        Spaulding, W.. R. The Canadian Encyclopedia. (2006). <i>Smallpox</i>.
+        Retrieved January 7, 2015 From http://thecanadianencyclopedia.com/en/article/smallpox/.
+        </p>
+              <textarea>Spaulding, W.. R. The Canadian Encyclopedia. (2006). Smallpox.
+        Retrieved January 7, 2015 From http://thecanadianencyclopedia.com/en/article/smallpox/.</textarea>
+            </li>
+            <li>
+              <h6>Chicago 16<span>th</span> Edition</h6>
+              <p>
+        Spaulding, W.B.. "Smallpox." In The Canadian Encyclopedia.
+        Historica Canada, 1985—. Article published February 8, 2006
+        </p>
+              <textarea>Spaulding, W.B.. &quot;Smallpox.&quot; In The Canadian Encyclopedia.
+        Historica Canada, 1985—. Article published February 8, 2006</textarea>
+            </li>
+            <li>
+              <h6>Turabian</h6>
+              <p>
+        Spaulding, W.B.. 2006. Smallpox. <i>The Canadian Encyclopedia</i>
+        http://thecanadianencyclopedia.com/en/article/smallpox/ (accessed January 7, 2015).
+        </p>
+              <textarea>Spaulding, W.B.. 2006. Smallpox. The Canadian Encyclopedia
+        http://thecanadianencyclopedia.com/en/article/smallpox/ (accessed January 7, 2015).</textarea>
+            </li>
+            <li>
+              <p>
+                While every effort has been made to follow citation style rules, there may be some discrepancies. Please refer to the appropriate style manual or other sources if you have any questions.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li class="bookmark"><a title="save item" data-article-id="79918" href="#"></a></li>
+        <li class="print"><a title="print" href=""></a></li>
+      </ul>
+    </div>
+    <!--.links-->
+
+
+    <a href="#" class="jump-button"></a>
+
+    <div class="jump-wrap">
+      <div class="item links core icon jump">
+        <ul class="base">
+          <li class="first"><a href="#">jump to</a></li>
+          <li><a href="#top">top</a></li>
+          
+          <li><a href="#related-articles">related articles</a></li>
+          <li><a href="#links">links</a></li>
+        </ul>
+        <ul class="social">
+          <li class="comment-count light"><a title="comments" class="comments-sidebar" href="#comments">0</a></li>
+          <li class="share"><a href="#">share</a>
+            <ul class="share-menu links core">
+              <li><a class="share-via-twitter" href="">twitter</a></li>
+              <li><a class="share-via-facebook" href="">facebook</a></li>
+              <li><a class="share-via-email" href="">email</a></li>
+            </ul>
+          </li>
+          <li class="quote"><a title="citation" href=""></a>
+            <ul class="citation-menu links core">
+              <li>
+                <h6>MLA 7<span>th</span> Edition</h6>
+                
+                  <p>
+                    W.B. Spaulding "Smallpox" The Canadian Encyclopedia. Eds. . Toronto: Historica Canada, 2006. Web. 7 Jan. 2015.
+                  </p>
+                  <textarea>W.B. Spaulding "Smallpox" The Canadian Encyclopedia. Eds. . Toronto: Historica Canada, 2006. Web. 7 Jan. 2015.</textarea>
+                
+              </li>
+              <li>
+                <h6>APA 6<span>th</span> Edition</h6>
+                
+                  <p>
+                    W.B. Spaulding, R. The Canadian Encyclopedia. (2006). Smallpox. Retrieved January 7, 2015, from http://www           </li>
+              <li>
+                <h6>APA 6<span>th</span> Edition</h6>
+                
+                  <p>
+                    W.B. Spaulding, R. The Canadian Encyclopedia. (2006). Smallpox. Retrieved January 7, 2015, from.thecanadianencyclopedia.ca/en/article/smallpox/
+                  </p>
+                  <textarea>W.B. Spaulding, R. The Canadian Encyclopedia. (2006). Smallpox. Retrieved January 7, 2015, from http://www.thecanadianencyclopedia.ca/en/article/smallpox/</textarea>
+                
+              </li>
+              <li>
+                <h6>Chicago 16<span>th</span> Edition</h6>
+                
+                  <p>
+                    W.B. Spaulding. "Smallpox" In The Canadian Encyclopedia. Historica Canada, 1985–. Article published February 7, 2006. http://www.thecanadianencyclopedia.ca/en/article/smallpox/.
+                  </p>
+                  <textarea>W.B. Spaulding. "Smallpox" In The Canadian Encyclopedia. Historica Canada, 1985–. Article published February 7, 2006. http://www.thecanadianencyclopedia.ca/en/article/smallpox/.</textarea>
+                
+              </li>
+              <li>
+                <h6>Turabian</h6>
+                
+                  <p>
+                    W.B. Spaulding. 2006. Smallpox. The Canadian Encyclopedia http://www.thecanadianencyclopedia.ca/en/article/smallpox/ (accessed January 7, 2015).
+                  </p>
+                  <textarea>W.B. Spaulding. 2006. Smallpox. The Canadian Encyclopedia http://www.thecanadianencyclopedia.ca/en/article/smallpox/ (accessed January 7, 2015).</textarea>
+                
+              </li>
+              <li>
+                <p>
+                  While every effort has been made to follow citation style rules, there may be some discrepancies. Please refer to the appropriate style manual or other sources if you have any questions.
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li class="bookmark"><a title="bookmark" data-article-id="79918" href="#"></a></li>
+          <li class="print"><a title="print" href=""></a></li>
+        </ul>
+      </div>
+      <!--.links-->
+    </div>
+    <!--.jump-wrap-->
+
+    
+
+    <div class="contact item">
+      <p>Updates? Omissions? Article suggestions? We want to hear from you!</p>
+      <a href="/en/contact/" class="cat secondary">contact us</a>
+    </div>
+    <!--.contact-->
+
+    <div id="twitter-article-feed" class="twitter item">
+      <h6>@cdnenclyclopedia</h6>
+
+      <a href="https://twitter.com/CdnEncyclopedia" target="_blank" class="cat secondary">view on twitter</a>
+    </div>
+
+    
+
+    
+
+  </aside>
+  <!--.article-aside-->
+
+    <div class="sub-content">
+        <a name="top"></a>
+        <ul class="breadcrumb inline base">
+            <li><a href="/">home</a></li>
+            
+                <li><a href="/browse/Things">Things</a></li>
+                <li><a href="/browse/Things/Science &amp; Medicine">Science & Medicine</a></li>
+            
+        </ul>
+        <article class="article-content" data-id="79918">
+            <h1>Smallpox</h1>
+
+            
+            <p class="lead">Smallpox (variola) is an infectious disease caused by a DNA virus of the genus orthopox.</p>
+
+            
+            <!--.timeline-->
+
+            <div id="slider-template">
+                <figure>
+                    <a href="" class="mediaopener"><img src="" alt=""/></a>
+                    <div class="caption">
+                        <h5></h5>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </figure>
+                <ul class="nav">
+                    <li class="prev"><a href="#"></a></li>
+                    <li class="next"><a href="#"></a></li>
+                </ul>
+            </div>
+            <!--.slider-->
+
+            
+            <div class="article-body"><h3>Smallpox</h3><p>Smallpox (variola) is an infectious disease caused by a DNA virus of the genus orthopox. The smallpox virus is distinct from that of cowpox, a disease of the udders of cows, but infection with cowpox virus (&QUOT;vaccination,&QUOT; from vaccus, a cow) confers immunity against smallpox without significant illness. Smallpox is spread by droplets from the nose and throat or by dried viral particles on blankets and clothing. After infection, the nonimmune subject is well for an incubation period of about 12 days. The illness usually begins with backache, fever and prostration, followed by a pustular rash affecting chiefly the face and limbs. During the phase of the rash, which lasts a few weeks, the patient is likely to infect from 3 to 5 close contacts. The rash leaves pitted scars or pocks. Complications include pneumonia, blindness, infection of joints or bones. A haemorrhagic form is invariably fatal. In variola major the mortality rate is 30-40%, whereas in variola minor the rate is only 1-2%. </p> <p>Smallpox may have been prevalent in Asia in ancient times but was first described for certain by Rhazes in the 9th century AD in Asia Minor. The disease was brought to America by Spaniards visiting and conquering Caribbean islands (1507) and Mexico (1519). It was reported first in New France in 1616 near Tadoussac, brought by French settlers to the St Lawrence and Saguenay River regions. Because the Indians were totally devoid of immunity, they were ravaged by smallpox, which quickly spread to tribes in the Maritimes, James Bay and Great Lakes area. Between 1636 and 1640 Jesuit priests introduced smallpox into <a href="/article/huronia/">HURONIA</a> west of Lake Simcoe and south of Georgian Bay. Because priests baptized the sick and dying Indians their visits spread the disease which Indians perceived as the evil &QUOT;medicine of the black robes.&QUOT; </p> <p>Smallpox played a significant role in the struggles of French, British and Americans to dominate the St Lawrence area. The worst epidemic in French Canada occurred between 1755 and 1757 and spread to New England. De Vaudreuil, the French commander, was forced to abandon his invasion of New England. In 1757 Montcalm reported 2500 cases in Québec City, of whom 20% died. British troops besieging Louisbourg and attempting to invade Québec were affected. In 1763 the British used blankets exposed to smallpox as germ warfare in their attempt to subdue the Indian uprising led by <a href="/article/pontiac/">PONTIAC</a>. In 1775 during the <a href="/article/american-revolution/">AMERICAN REVOLUTION</a> American troops besieging Québec City were stricken with smallpox. </p> <p>Vaccination was introduced into North America in 1798 by the Reverend John Clinch, a classmate of Edward Jenner, who first proved that vaccination prevented smallpox. The widespread use of vaccination, advocated by public-health leaders, met with much resistance by anti-vaccinationists. Although provincial legislation was passed making vaccination of schoolchildren mandatory and empowering municipalities and townships to carry out general vaccination when an epidemic threatened, passive resistance was widespread. In Montréal in 1885 a major outbreak occurred, ultimately resulting in over 3000 deaths. Many French Canadians in Montréal opposed vaccination. The attempts to enforce control measures, plus the announcement in September 1885 that Louis Riel, leader of the North-West Rebellion, had been sentenced to death, resulted in street rioting which could only be suppressed by calling out the militia. </p> <p>Smallpox smouldered in Canada during the first half of the 20th century. In 1924 in Windsor, Ont, there were 67 cases with 32 deaths, all in unvaccinated persons. The disease was finally eradicated in 1979 by a vigorous vaccination campaign in S America, Africa and Asia carried out by the World Health Organization. Smallpox is the first major disease to have been wiped out by public-health measures. </p></div>
+
+            
+            
+            
+                <div class="external-links">
+                    <a name="links"></a>
+                    <h2>Links to other sites</h2>
+                    <ul>
+                        
+                            
+                            <li><a href='http://www.our-story.ca/'><strong>Canadian Aboriginal Writing and Arts Challenge</strong>The website for the Canadian Aboriginal Writing and Arts Challenge, which features Canada's largest essay writing competition for Aboriginal youth (ages 14-29) and a companion program for those who prefer to work through painting, drawing and photography. See their guidelines, teacher resources, profiles of winners, and more. From Historica Canada.</a></li>
+                        
+                    </ul>
+                </div>
+            
+            
+                <section class="media-highlights">
+                    <a name="related-articles"></a>
+                    <header class="media-header">
+                        
+                            <h2>recommended</h2>
+                        
+                        
+                            <h2>your friends are reading</h2>
+                        
+                    </header>
+                    
+                    <div class="item">
+                        
+                            <div class="media attribution light hl">
+                                <div class="img">
+                                    
+                                        <a href="/article/"><img src="https://tce-live.s3.amazonaws.com/static/assets/images/article_icon.png" alt="media" /></a>
+                                    
+                                    
+                                </div>
+                                <div class="bd">
+                                    <a href="/en/article/abortion/"><h4>Abortion</h4></a>
+                                    <span class="comment-count dark"><a href="/en/article/abo                </div>
+                rtion/#comments">0</a></span>
+                                </div>
+                            </div>
+                        
+                            <div class="media attribution light hl">
+                                <div class="img">
+                                    
+                                        <a href="/article/"><img src="https://tce-live.s3.amazonaws.com/static/assets/images/article_icon.png" alt="media" /></a>
+                                    
+                                    
+                                </div>
+                                <div class="bd">
+                                    <a href="/en/article/sir-frederick-grant-banting/"><h4>Sir Frederick Grant Banting </h4></a>
+                                    <span class="comment-count dark"><a href="/en/article/sir-frederick-grant-banting/#comments">0</a></span>
+                                </div>
+                            </div>
+                        
+                            <div class="media attribution light hl">
+                                <div class="img">
+                                    
+                                        <a href="/article/"><img src="https://tce-live.s3.amazonaws.com/static/assets/images/article_icon.png" alt="media" /></a>
+                                    
+                                    
+                                </div>
+                                <div class="bd">
+                                    <a href="/en/article/multiple-sclerosis/"><h4>Multiple Sclerosis</h4></a>
+                                    <span class="comment-count dark"><a href="/en/article/multiple-sclerosis/#comments">0</a></span>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    
+                    
+                    <div class="item">
+                        
+                            <div class="media attribution light hl">
+                                <div class="img">
+                                    
+                                        <a href="/article/second-world-war-wwii"><img style="width:100px" src="http://tce-live.s3-website-us-east-1.amazonaws.com/media/cache/media/42ee5f20-25f2-4a1d-9409-8e60091eec5f_fit_100_100.jpg" alt="media" /></a>
+                                    
+                                    
+                                </div>
+                                <div class="bd">
+                                    <a href="/en/article/second-world-war-wwii/"><h4>Second World War (WWII)</h4></a>
+                                    <span class="comment-count dark"><a href="/en/article/second-world-war-wwii/#comments">1</a></span>
+                                </div>
+                            </div>
+                        
+                            <div class="media attribution light hl">
+                                <div class="img">
+                                    
+                                        <a href="/article/vimy-ridge"><img style="width:100px" src="http://tce-live.s3-website-us-east-1.amazonaws.com/media/cache/media/d1177985-fd10-4407-9251-d2f1b59aa39b_fit_100_100.jpg" alt="media" /></a>
+                                    
+                                    
+                                </div>
+                                <div class="bd">
+                                    <a href="/en/article/vimy-ridge/"><h4>Vimy Ridge</h4></a>
+                                    <span class="comment-count dark"><a href="/en/article/vimy-ridge/#comments">0</a></span>
+                                </div>
+                            </div>
+                        
+                            <div class="media attribution light hl">
+                                <div class="img">
+                                    
+                                        <a href="/article/samuel-de-champlain"><img style="width:100px" src="http://tce-live.s3-website-us-east-1.amazonaws.com/media/cache/media/fa6e34bc-f537-491b-918c-c90ffb04629e_fit_100_100.jpg" alt="media" /></a>
+                                    
+                                    
+                                </div>
+                                <div class="bd">
+                                    <a href="/en/article/samuel-de-champlain/"><h4>Samuel de Champlain</h4></a>
+                                    <span class="comment-count dark"><a href="/en/article/samuel-de-champlain/#comments">0</a></span>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    
+                </section>
+            
+            <!--.media-hightlights-->
+
+            <a name="comments"></a>
+            <section class="comments comments-total-0">
+                <header class="comments-header">
+                    <span class="comment-count grey"><a class="commenttoupdate" href="#comments">0</a></span>
+                    <h2>comments</h2>
+                </header>
+                <!--.comments-header-->
+                <div id="comment-template" class="media comment">
+                    <div class="img">
+                        <img src="" alt="media" />
+                    </div>
+                    <div class="bd">
+                        <span>posted by <strong>You</strong><time></time></span>
+                        <p></p>
+                    </div>
+                </div>
+                <div id="commentlist">
+                    
+                </div>
+                
+                    <h4>You must be logged in to post a comment.</h4>
+                    <div class="action-wrap">
+                        <input id="comments_log_in_now" type="submit" value="log in now">
+                    </div>
+                
+            </section>
+            <!--.comments-->
+        </article>
+        <!--.article-content-->
+    </div>
+    <!--.sub-content-->
+
+</div><!--.container-->
+
+
+
+
+
+
+<footer class="main-footer" id="footer-tout">
+  <div class="container_12">
+    <div class="ad grid_8">
+      <img src="https://tce-live.s3.amazonaws.com/media/general/ads/WWI_Footer_final2.jpg" alt="footer ad text"/>
+      <div class="info">
+
+        
+
+        <h2>First World War Collection Page<span>This collection brings together a number of our resources on the First World War.</span></h2><div class="download"><p>View the Collection</p>
+          <a href="http://www.thecanadianencyclopedia.ca/en/collection/first-world-war/" target="_blank" class="btn secondary">First World War</a>
+          <a href="http://www.thecanadianencyclopedia.ca/en/search/?filter_articles=collection" target="_blank" class="btn secondary">View all Collections</a>
+
+        
+
+
+        </div>
+      </div>
+    </div><!--/.ad-->
+    <div class="social grid_4">
+      <div class="counttp://www.thecanadianencyclopedia.ca/en/search/?filter_articles=collection" target="_blank" class="btn secondary">View all Collections</a>
+
+        
+
+
+        </div>
+      </div>
+    </div><!--/.ad-->
+    <div class="social grid_4">
+      <der">
+        <span><em>19152</em></span>
+        <p>articles and counting!</p>
+      </div>
+      <h2 style="padding-bottom: 10px;">Follow Us Elsewhere</h2>
+      <ul class="base">
+        <li><a class="social-twitter" target="_blank" href="http://twitter.com/CdnEncyclopedia">twitter</a></li>
+        <li><a class="social-youtube" target="_blank" href="http://www.youtube.com/user/canadianencyclopedia">youtube</a></li>
+        <li><a class="social-facebook" target="_blank" href="http://www.facebook.com/pages/The-Canadian-Encyclopedia/25128859552?ref=search">facebook</a></li>
+        <li><a class="social-blog" target="_blank" href="http://blog.thecanadianencyclopedia.com/blog/">blog</a></li>
+      </ul>
+    </div><!--/.social-->
+  </div><!--/.container-->
+  <aside class="meta">
+  <div class="container_12">
+    <ul class="inline grid_6 base">
+      <li><a href="/about/">about</a></li>
+      <li><a href="/contact/">contact</a></li>
+      <li><a href="/about/partners/">partners</a></li>
+      <li><a href="/copyright/">copyright</a></li>
+    </ul>
+
+        
+          <p class="grid_6"></p>
+        
+
+  </div>
+  </aside>
+</footer>
+<script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/underscore/underscore.js"></script>
+<script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/jquery-1.9.1.js"></script>
+<script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/popup.min.js"></script>
+<script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/jquery.dotdotdot.min.js"></script>
+<script src="https://tce-live.s3.amazonaws.com/static/application/home/base.js"></script>
+<script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/jquery.iframe-transport.js" type="text/javascript"></script>
+<script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/jquery.fileupload.js" type="text/javascript"></script>
+ 
+    <script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/TweenMax.min.js"></script>
+    <script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/jquery.dotdotdot.min.js"></script>
+    <script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/twitterFetcher_v10_min.js"></script>
+    <script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/jwplayer/jwplayer.js"></script>
+    <script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/imagesloaded.pkgd.min.js"></script>
+    <script src="https://tce-live.s3.amazonaws.com/static/application/articles/articles.js"></script>
+
+
+     <!--[if lt IE 9]>
+     <script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/selectivizr.js" type="text/javascript"></script>
+     <script src="https://tce-live.s3.amazonaws.com/static/assets/js/libs/jquery-extra-selectors.js" type="text/javascript"></script>
+     <![endif]-->
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ ga('create', 'UA-45002979-1', 'thecanadianencyclopedia.ca');
+ ga('send', 'pageview');
+
+</script>
+
+
+<script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-3.newrelic.com","ab8b00bf8d","2458466","YVJabEpRVhVVAUJQWFgYfk1WU0wPWwwZX0VZWUxdVlQWEF0HQUoZV0VMUVtcXRUOA0RNXlVbXQ==",0,371,new Date().getTime(),"","","","",""]);</script></body>
+</html>
+=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-3.newrelic.com","ab8b00bf8d","2458466","YVJabEpRVhVV

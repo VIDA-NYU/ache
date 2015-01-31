@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html><head data-ad='{"gpt":{"targeting":{"collection":"ebola","device":"desktop","ptype":"deep_story","cid":"ebola","env":"prod"},"adConfig":{"network":{"dev":8264,"qa":8264,"prod":8264},"method":"async-inline","regions":[{"region":"uk","countries":["gb","ie","za","bh","kw","om","qa","sa","ae","iq","eg","ye"]},{"region":"fr","countries":["fr"]},{"region":"au","countries":["au","nz"]},{"region":"asia","countries":["sg","my","ph","th","id","vn","hk","in"]}],"adUnits":{"intromercial":{"outOfPage":true},"skin":{"sizes":[[1600,1000]],"position":"top","eventCallbacks":{"slotRenderEnded":"skin"}},"resourceCenterTop":{"sizes":[[301,301]],"position":"top"},"resourceCenterBottom":{"sizes":[[632,160]],"position":"bottom"},"mpuPlusTop":{"sizes":[[300,600],[300,250],[300,1050]],"position":"top"},"marqueeTop":{"sizes":[[234,60]],"position":"top"},"mpuTop":{"sizes":[[300,250]],"position":"top"},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"leaderPlusTop":{"sizes":[[728,90],[970,66],[970,250]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":false,"eventCallbacks":{"slotRenderEnded":"leaderboardTop"}},"leaderTop":{"sizes":[[728,90],[970,66]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":false,"eventCallbacks":{"slotRenderEnded":"leaderboardTop"}},"buttonTop":{"sizes":[[88,31]],"position":"top"},"marqueeBottom":{"sizes":[[234,60]],"position":"bottom"},"marquee300Top":{"sizes":[[300,60]],"position":"top"},"marquee300Middle":{"sizes":[[300,60]],"position":"middle"},"mpuMiddle":{"sizes":[[300,250]],"position":"middle"},"leaderBottom":{"sizes":[[728,90],[970,66]],"position":"bottom"},"buttonMiddle":{"sizes":[[88,31]],"position":"middle"},"buttonBottom":{"sizes":[[88,31]],"position":"bottom"},"sponsorContentTop":{"sizes":[[381,211]],"position":"top"},"sponsorContentSmallTop":{"sizes":[[301,151]],"position":"top"},"sponsorContentTextTop":{"sizes":[[306,77]],"position":"top"},"sponsorBar980Top":{"sizes":[[980,36]],"position":"top"},"sponsorBar620Top":{"sizes":[[620,36]],"position":"top"}},"mobile":{"adUnits":{"intromercial":{"outOfPage":true},"mobileBannerTop":{"sizes":[[320,50],[6,1]]},"mobileBannerMpuHptoOverlay":{"outOfPage":true},"mobileMpuBottom":{"sizes":[[300,250]]},"mobileBanner1":{"sizes":[[320,50]],"position":1},"mobileBanner2":{"sizes":[[320,50]],"position":2},"mobileBanner3":{"sizes":[[320,50]],"position":3},"mobileMarquee320Top":{"sizes":[[320,60]],"position":"top"},"mobileSponsorContentTextTop":{"sizes":[[306,77]],"position":"top"}}},"tablet":{"adUnits":{"resourceCenterTop":{"sizes":[[300,300]],"position":"top"},"resourceCenterBottom":{"sizes":[[632,160]],"position":"bottom"},"mpuPlusTop":{"sizes":[[300,600],[300,250]]},"marqueeTop":{"sizes":[[234,60]],"position":"top"},"mpuTop":{"sizes":[[300,250],[300,600]],"position":"top"},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"leaderTop":{"sizes":[[728,90],[970,66]],"position":"bottom"},"leaderPlusTop":{"sizes":[[728,90],[970,66],[970,250]],"position":"top"}}},"siteName":"cbsnews","collapseEmptyDiv":true,"setRefreshUnfilledSlots":false,"setClearUnfilledSlots":true,"disableInitialLoad":false,"disableInitialLoadCompanions":true,"enableSingleRequest":true,"enableAsyncRendering":true,"defaultRegion":"aw","adOrder":["intromercial","leader_top","leader_plus_top","skin","mpu_top","mpu_plus_top","resource_center_top","marquee_top","marquee300_top","button_top","sponsor_content_top","sponsor_content_small_top","sponsor_content_text_top","sponsor_bar980_top","sponsor_bar620_top","mpu_middle","marquee300_middle","button_middle","leader_bottom","button_bottom"]},"containerId":"54cc19c7e88dc","slotVars":{"network":"8264","siteName":"cbsnews","collapseEmptyDiv":"1","topics":"world","platform":"desktop"},"adType":"gpt","adDivIds":["marquee-top-54cc19c7e88dc","sponsor-content-small-top-54cc19c7e88dc","mpu-top-54cc19c7e88dc","mpu-bottom-54cc19c7e88dc","intromercial-54cc19c7e88dc","skin-54cc19c7e88dc","leader-top-54cc19c7e88dc"]},"cookieName":"cbsnews_ad","cookieServicePath":"\/ad\/ad-cookie\/","session":4,"useFirstPageTargeting":true}'><title>Ebola Virus - News, Pictures, Videos &amp; Facts on the deadly outbreak - CBS News</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQIHWFZbGwAFVFZRAAM="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script><meta name="robots" content="index, follow"><meta name="description" content="View coverage on the Ebola Virus outbreak in West Africa and its arrival in the U.S., including news, pictures, videos, facts, symptoms and more ."><meta name="keywords" content="Ebola virus outbreak,cbs news, cbsnews.com"><meta name="viewport" content="width=device-width"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="canonical" href="http://www.cbsnews.com/ebola/"><link rel="shortcut icon" type="image/x-icon" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/favicon.ico"><link rel="apple-touch-icon" sizes="144x144" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/apple-touch-icon-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/apple-touch-icon-precomposed.png"><link rel="apple-touch-icon-precomposed" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/apple-touch-icon-precomposed.png"><link rel="stylesheet" href="http://cbsnews1.cbsistatic.com/fly/bundles/cbsnewscore/css/main.desktop.css"><!--[if IE 8]>
+    <link rel="stylesheet" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/css/desktop/ie8.css" />
+    <![endif]--><!--[if IE]>
+    <link rel="stylesheet" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/css/desktop/ie.css" />    
+    <![endif]--><script src="http://cbsnews2.cbsistatic.com/fly/bundles/flyjs/js/libs/guid-1.0.js"></script><script type="text/javascript">
+    var __tealium_data_guid = null;
+    if (typeof window.uuid.v1 === 'function'){
+        __tealium_data_guid=window.uuid.v1();
+    }
+
+    var _utag_obj={"isEnabled":true,"articlePubDate":"2014-07-30 19:41:37","collectionId":"92b906aa-94ec-4c48-b8bc-b70245915a22","collectionName":"ebola virus outbreak","deviceType":"desktop","isDev":"0","pageType":"deep_story","siteHier":["world"],"siteSection":"world","siteType":"responsive web","topicId":["6075f408-758d-11e2-9d12-0018fe8a00b0"],"topicName":["world"],"bkSiteId":3330,"limit":4,"siteName":"cbsnews","tealium":{"profile":"cbsnewssite","env":"prod"}};    
+    _utag_obj.pageViewGuid=__tealium_data_guid;
+    var utag_data=_utag_obj;
+</script><!--[if lt IE 9]>
+    <script src="http://cbsnews1.cbsistatic.com/fly/bundles/cbsnewscore/js/libs/html5shiv-printshiv.js"></script>
+    <![endif]--><script type="text/javascript" src="http://cbsnews1.cbsistatic.com/fly/bundles/flyjs/js/libs/require-2.1.2.js"></script><script type="text/javascript">
+    require.config({"baseUrl":"http:\/\/cbsnews2.cbsistatic.com\/fly\/bundles\/cbsnewscore\/js-build","config":{"version":{"fly\/libs\/easy-xdm":"2.4.17.1","fly\/libs\/jquery.widget":"1.9.2","fly\/libs\/jquery.cookie":"1.2","fly\/libs\/jquery.throttle-debounce":"1.1","fly\/libs\/omniture.s-code":"1.0","fly\/libs\/urs":"1.0","fly\/utils\/data-prefix":"1.0","fly\/utils\/data-selector":"1.0","fly\/utils\/function-natives":"1.0","fly\/utils\/guid":"1.0","fly\/utils\/log":"1.0","fly\/utils\/object-helper":"1.0","fly\/utils\/string-helper":"1.0","fly\/utils\/string-vars":"1.0","fly\/utils\/url-helper":"1.0","fly\/managers\/components":"1.0","fly\/managers\/cookie":"1.0","fly\/managers\/debug":"1.0","fly\/managers\/ad":"2.0","fly\/managers\/gpt":"4.0","fly\/managers\/geo":"1.0","fly\/managers\/image-resolution":"1.0","fly\/managers\/social-authentication":"1.0","fly\/managers\/tracking":"1.0","fly\/managers\/user":"1.0","fly\/components\/accordion":"1.0","fly\/components\/alert":"1.0","fly\/components\/base":"1.0","fly\/components\/carousel":"1.0","fly\/components\/dependent-field":"1.0","fly\/components\/dropdown":"1.0","fly\/components\/form-validate":"1.0","fly\/components\/iframe-messenger":"1.0","fly\/components\/image-gallery":"1.0","fly\/components\/livefyre-conversation":"1.0","fly\/components\/livefyre-commentcount":"1.0","fly\/components\/loading":"1.0","fly\/components\/load-more":"1.0","fly\/components\/nrelate":"1.0","fly\/components\/modal":"1.0","fly\/components\/modal-async":"1.0","fly\/components\/modal-iframe":"1.0","fly\/components\/social-button":"1.0","fly\/components\/social-counts":"1.0","fly\/components\/social-links":"1.0","fly\/components\/tabs":"1.0","fly\/managers\/clicktale":"1.0","fly\/components\/poll":"1.0","fly\/managers\/history":"1.0","fly\/components\/scrollbar":"1.0","fly\/components\/fixate":"1.0","fly\/components\/image-gallery-thumb":"1.0"}},"shim":{"tealium":["jquery"]},"map":{"*":{"gpt":"\/\/www.googletagservices.com\/tag\/js\/gpt.js","typekit":"\/\/fonts.cbsnews.com\/hzk1prl.js","livefyre":"\/\/zor.livefyre.com\/wjs\/v3.0\/javascripts\/livefyre.js","livefyre-commentcount":"\/\/zor.livefyre.com\/wjs\/v1.0\/javascripts\/CommentCount.js","nrelate":"\/\/c7.static.nrcdn.com\/common_js\/0.52.1\/nr_loader.min.js","urs":"\/\/urs.cbsnews.com\/sdk\/urs.js","outbrain":"\/\/widgets.outbrain.com\/outbrain.js","recirc":"\/\/ddlmj2furo6f2.cloudfront.net\/addontrain\/recommendations\/53f6c74c1344a01ee2000139.js","tealium":"\/\/tags.tiqcdn.com\/utag\/cbsi\/cbsnewssite\/prod\/utag.js"}}});
+    require(['main.desktop']);
+</script><script type="text/javascript" src="//fonts.cbsnews.com/hzk1prl.js"></script><script type="text/javascript">try{Typekit.load();}catch(e){}</script><script type="text/javascript">
+var _vrq = _vrq || [];
+_vrq.push(['id', 516]);
+_vrq.push(['automate', 'false' ]);
+_vrq.push(['track', function(){}]);
+(function(d, a){
+var s = d.createElement(a),
+x = d.getElementsByTagName(a)[0];
+s.async = true;
+s.src = 'http://a.visualrevenue.com/vrs.js';
+x.parentNode.insertBefore(s, x);
+})(document, 'script');
+</script></head><body data-tracking='{"isEnabled":true,"articlePubDate":"2014-07-30 19:41:37","collectionId":"92b906aa-94ec-4c48-b8bc-b70245915a22","collectionName":"ebola virus outbreak","deviceType":"desktop","isDev":"0","pageType":"deep_story","siteHier":["world"],"siteSection":"world","siteType":"responsive web","topicId":["6075f408-758d-11e2-9d12-0018fe8a00b0"],"topicName":["world"],"bkSiteId":3330,"limit":4,"siteName":"cbsnews","tealium":{"profile":"cbsnewssite","env":"prod"}}' data-ad='{"gpt":{"targeting":{"collection":"ebola","device":"desktop","ptype":"deep_story","cid":"ebola","env":"prod"},"adConfig":{"network":{"dev":8264,"qa":8264,"prod":8264},"method":"async-inline","regions":[{"region":"uk","countries":["gb","ie","za","bh","kw","om","qa","sa","ae","iq","eg","ye"]},{"region":"fr","countries":["fr"]},{"region":"au","countries":["au","nz"]},{"region":"asia","countries":["sg","my","ph","th","id","vn","hk","in"]}],"adUnits":{"intromercial":{"outOfPage":true},"skin":{"sizes":[[1600,1000]],"position":"top","eventCallbacks":{"slotRenderEnded":"skin"}},"resourceCenterTop":{"sizes":[[301,301]],"position":"top"},"resourceCenterBottom":{"sizes":[[632,160]],"position":"bottom"},"mpuPlusTop":{"sizes":[[300,600],[300,250],[300,1050]],"position":"top"},"marqueeTop":{"sizes":[[234,60]],"position":"top"},"mpuTop":{"sizes":[[300,250]],"position":"top"},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"leaderPlusTop":{"sizes":[[728,90],[970,66],[970,250]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":false,"eventCallbacks":{"slotRenderEnded":"leaderboardTop"}},"leaderTop":{"sizes":[[728,90],[970,66]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":false,"eventCallbacks":{"slotRenderEnded":"leaderboardTop"}},"buttonTop":{"sizes":[[88,31]],"position":"top"},"marqueeBottom":{"sizes":[[234,60]],"position":"bottom"},"marquee300Top":{"sizes":[[300,60]],"position":"top"},"marquee300Middle":{"sizes":[[300,60]],"position":"middle"},"mpuMiddle":{"sizes":[[300,250]],"position":"middle"},"leaderBottom":{"sizes":[[728,90],[970,66]],"position":"bottom"},"buttonMiddle":{"sizes":[[88,31]],"position":"middle"},"buttonBottom":{"sizes":[[88,31]],"position":"bottom"},"sponsorContentTop":{"sizes":[[381,211]],"position":"top"},"sponsorContentSmallTop":{"sizes":[[301,151]],"position":"top"},"sponsorContentTextTop":{"sizes":[[306,77]],"position":"top"},"sponsorBar980Top":{"sizes":[[980,36]],"position":"top"},"sponsorBar620Top":{"sizes":[[620,36]],"position":"top"}},"mobile":{"adUnits":{"intromercial":{"outOfPage":true},"mobileBannerTop":{"sizes":[[320,50],[6,1]]},"mobileBannerMpuHptoOverlay":{"outOfPage":true},"mobileMpuBottom":{"sizes":[[300,250]]},"mobileBanner1":{"sizes":[[320,50]],"position":1},"mobileBanner2":{"sizes":[[320,50]],"position":2},"mobileBanner3":{"sizes":[[320,50]],"position":3},"mobileMarquee320Top":{"sizes":[[320,60]],"position":"top"},"mobileSponsorContentTextTop":{"sizes":[[306,77]],"position":"top"}}},"tablet":{"adUnits":{"resourceCenterTop":{"sizes":[[300,300]],"position":"top"},"resourceCenterBottom":{"sizes":[[632,160]],"position":"bottom"},"mpuPlusTop":{"sizes":[[300,600],[300,250]]},"marqueeTop":{"sizes":[[234,60]],"position":"top"},"mpuTop":{"sizes":[[300,250],[300,600]],"position":"top"},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"leaderTop":{"sizes":[[728,90],[970,66]],"position":"bottom"},"leaderPlusTop":{"sizes":[[728,90],[970,66],[970,250]],"position":"top"}}},"siteName":"cbsnews","collapseEmptyDiv":true,"setRefreshUnfilledSlots":false,"setClearUnfilledSlots":true,"disableInitialLoad":false,"disableInitialLoadCompanions":true,"enableSingleRequest":true,"enableAsyncRendering":true,"defaultRegion":"aw","adOrder":["intromercial","leader_top","leader_plus_top","skin","mpu_top","mpu_plus_top","resource_center_top","marquee_top","marquee300_top","button_top","sponsor_content_top","sponsor_content_small_top","sponsor_content_text_top","sponsor_bar980_top","sponsor_bar620_top","mpu_middle","marquee300_middle","button_middle","leader_bottom","button_bottom"]},"containerId":"54cc19c7e88dc","slotVars":{"network":"8264","siteName":"cbsnews","collapseEmptyDiv":"1","topics":"world","platform":"desktop"},"adType":"gpt","adDivIds":["marquee-top-54cc19c7e88dc","sponsor-content-small-top-54cc19c7e88dc","mpu-top-54cc19c7e88dc","mpu-bottom-54cc19c7e88dc","intromercial-54cc19c7e88dc","skin-54cc19c7e88dc","leader-top-54cc19c7e88dc"]},"cookieName":"cbsnews_ad","cookieServicePath":"\/ad\/ad-cookie\/","session":4,"useFirstPageTargeting":true}' data-img-res='{"breakpoint":620,"cookieName":"fly_img","breakpointOptions":null,"pixelRatio":1,"pixelRatioOptions":[1]}' data-apex='{"SITE":"162","PTYPE":"deep_story","NODE":"","CID":["6075f408-758d-11e2-9d12-0018fe8a00b0"]}' data-component="livefyreCommentcount" data-user='{"environment":"LIVE","secureHost":"secure-fly.cbsnews.com","appId":1501}' data-cms-edit='{"url":null}' class="">
+            
+    <!-- src/CbsNews/CoreBundle/Resources/views/Layout/default.desktop.html.twig -->
+
+                <!-- comscorekw=world -->
+        
+
+    
+    <div id="fb-root"></div>
+                    <div id="intromercial-54cc19c7e88dc" class="ad-intromercial" data-ad="intromercial" style="display:none">
+    <script>
+        window.console && console.log && console.log("ADS: queuing intromercial-54cc19c7e88dc for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("intromercial-54cc19c7e88dc");
+    </script></div>
+
+    	<div class="body-container">
+    
+                    <img src="http://dw.cbsi.com/levt/ria/e.gif?event=log&amp;siteid=162&amp;mapp=hi-pagetracker&amp;comptyp=pagetype&amp;comp=deep_story&amp;riaevent=view&amp;s6=top&amp;s7=desktop" border="0" height="1" width="1" alt="" class="tracking-gif"><!-- src/CbsNews/CoreBundle/Resources/views/Core/header.html.twig --><header class="site-header "><div id="breakingNewsBanner" data-component="ticker">
+        <include src="http://oaktree.cbsnews.com/feedfiles/breakingnews.desktop.html" onerror="continue"></include></div>
+    
+
+        
+    <div class="supplemental">
+    <div class="container">
+        <div class="col-9">
+            
+        <nav class="site-shows"><ul class="items"><li><a class="selected module-click-tracking" href="/" data-tracking="site header-show-nav|CBS News" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/ebola/ Show-nav|CBS News"}'>CBS News</a></li>
+                                <li><a class="module-click-tracking" href="/evening-news/" data-tracking="site header-show-nav|CBS Evening News" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/ebola/ Show-nav|CBS Evening News"}'>CBS Evening News</a></li>
+                                <li><a class="module-click-tracking" href="/cbs-this-morning/" data-tracking="site header-show-nav|CBS This Morning" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/ebola/ Show-nav|CBS This Morning"}'>CBS This Morning</a></li>
+                                <li><a class="module-click-tracking" href="/48-hours/" data-tracking="site header-show-nav|48 Hours" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/ebola/ Show-nav|48 Hours"}'>48 Hours</a></li>
+                                <li><a class="module-click-tracking" href="/60-minutes/" data-tracking="site header-show-nav|60 Minutes" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/ebola/ Show-nav|60 Minutes"}'>60 Minutes</a></li>
+                                <li><a class="module-click-tracking" href="/sunday-morning/" data-tracking="site header-show-nav|Sunday Morning" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/ebola/ Show-nav|Sunday Morning"}'>Sunday Morning</a></li>
+                                <li><a class="module-click-tracking" href="/face-the-nation/" data-tracking="site header-show-nav|Face The Nation" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/ebola/ Show-nav|Face The Nation"}'>Face The Nation</a></li>
+                                <li><a class="module-click-tracking" href="http://cbsn.cbsnews.com/?ftag=CNMdaef904" data-tracking="site header-show-nav|CBSN" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/ebola/ Show-nav|CBSN"}'>CBSN</a></li>
+            </ul></nav></div>
+        
+        <div class="col-3">
+            <form class="site-search" method="get" action="/search/" data-component="search" data-search-options='{"path":"\/search\/","param":"q"}'>
+    <div class="search-wrapper" data-component="placeholder">
+        <input class="query" type="search" name="q" maxlength="255" placeholder="Search"></div>
+    <button class="submit core-search-header" type="submit">GO</button>
+</form>
+<ul class="login-wrapper logged-in"><li>
+        <!--<li class="site-section-tab"><a href="https://secure-fly.cbsnews.com/user/registration/" data-user-show="register"><span>Join</span></a></li>-->
+                     <a class="site-login" href="#" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Channel Button"}'><span class="text">Log In</span></a>
+                <div class="menu-wrapper sign-in">
+            <span class="hover-padding"></span>
+            <span class="arrow"></span>
+            <ul class="login"><li><a data-user-show="login" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Login"}'>Log In</a></li>
+                    <li><a data-user-show="register" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Join CBSNews"}'>Join CBSNews.com</a></li>
+                    <li class="social-icons">
+                        <span class="sign-in-with">Sign in with</span>
+                                                    <span class="social-site facebook" data-user-social="facebook" data-user-flow="modal" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Sign In with:  facebook"}'>&nbsp;</span>
+                                                    <span class="social-site google" data-user-social="google" data-user-flow="modal" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Sign In with:  google"}'>&nbsp;</span>
+                                                    <span class="social-site yahoo" data-user-social="yahoo" data-user-flow="modal" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Sign In with:  yahoo"}'>&nbsp;</span>
+                                                    <span class="social-site twitter" data-user-social="twitter" data-user-flow="modal" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Sign In with:  twitter"}'>&nbsp;</span>
+                                            </li>
+                            </ul></div>
+    </li>
+</ul></div>
+    </div>
+</div>
+    <div class="primary content-inverse">
+        <div class="container">
+                         <div class="logo core-logo"><a href="/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|Branding"}'>CBSNews.com - Breaking News</a></div>
+                        <nav class="site-sections"><ul class="items"><li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/video\/section"}'><a href="/videos/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|Video"}'><span>Video</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/us\/section"}'><a href="/us/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|US"}'><span>US</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/world\/section"}'><a href="/world/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|World"}'><span>World</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/politics\/section"}'><a href="/politics/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|Politics"}'><span>Politics</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/entertainment\/section"}'><a href="/entertainment/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|Entertainment"}'><span>Entertainment</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/health\/section"}'><a href="/health/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|Health"}'><span>Health</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/moneywatch\/section"}'><a href="/moneywatch/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|MoneyWatch"}'><span>MoneyWatch</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/tech\/section"}'><a href="/tech/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|SciTech"}'><span>SciTech</span></a>
+                                                    </li>
+                                                                                                                                                                                                <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/crime\/section"}'><a href="/crimesider/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|Crime"}' data-vanity-rewritten="true"><span>Crime</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab  "><a href="http://www.cbssports.com/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|Sports"}'><span>Sports</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/pictures\/section"}'><a href="/pictures/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|Photos"}'><span>Photos</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab  dropdown" data-component="moreDropdown" data-more-dropdown-options='{"event":"hover"}'><a href="#" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|More"}'><span>More</span></a>
+                                                            <div class="dropdown-content dropdown-menu">
+                                    <div class="listing-basic">
+                                        <ul class="items col-3"><li class="label"><h4 class="label">Blogs</h4></li>
+                                                                                                                                                <li><a href="/politics/battleground/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|More-Blogs-Battleground" }' class="title"><span>Battleground</span></a></li>
+                                                                                                                                                                                                <li><a href="/politics/white-house/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|More-Blogs-The WH" }' class="title"><span>The WH</span></a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul><ul class="items col-3"><li class="label"><h4 class="label">Web Shows</h4></li>
+                                                                                                                                                                                                                                                                                                                                        <li><a href="/60-minutes/overtime/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|More-Web Shows-60 Overtime" }' class="title"><span>60 Overtime</span></a></li>
+                                                                                                                                                                                                <li><a href="/face-the-nation/face-to-face/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|More-Web Shows-Face to Face" }' class="title"><span>Face to Face</span></a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul><ul class="items col-3"><li class="label"><h4 class="label">Resources</h4></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li><a href="/mobile/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|More-Resources-Mobile" }' class="title"><span>Mobile</span></a></li>
+                                                                                                                                                                                                <li><a href="/radio/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|More-Resources-Radio" }' class="title"><span>Radio</span></a></li>
+                                                                                                                                                                                                <li><a href="/local/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|More-Resources-Local" }' class="title"><span>Local</span></a></li>
+                                                                                                                                                                                                <li><a href="/in-depth/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/ebola/ Flyout-nav|More-Resources-In Depth" }' class="title"><span>In Depth</span></a></li>
+                                                                                                                                    </ul></div>
+                                </div>
+                                                    </li>
+                                    </ul></nav></div>
+    </div>
+    
+        </header><div id="mantle_skin" class="content-primary ">
+                  <div id="skin-54cc19c7e88dc" class="ad-skin" data-ad="skin" style="display:none">
+    <script>
+        window.console && console.log && console.log("ADS: queuing skin-54cc19c7e88dc for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("skin-54cc19c7e88dc");
+    </script></div>
+
+                        <div id="leader-top-54cc19c7e88dc" class="ad-leader-top" data-ad="leader-top">
+    <script>
+        window.console && console.log && console.log("ADS: queuing leader-top-54cc19c7e88dc for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("leader-top-54cc19c7e88dc");
+    </script></div>
+
+                        <div class="container">
+                <div class="row">
+                    <div class="col-8 content-main">
+                            
+    <div class="deep-story-body">
+        <div class="container">
+    <div class="row">
+                    <div class="row">
+        <div class="col-12">
+                                            <div class="row">
+                                    <div class="col-8">
+                                                    
+                                                        
+                                            
+    
+<div class="deep-story">
+
+    
+    <div class="deep-story-header inverse-header inverted" data-component="deepStoryLoader" data-deep-story-loader-slugs="hl-highlights,medical-facts,">
+    <div class="container">
+        <div class="main-content">
+            <strong class="label-strong">In Depth</strong>
+            <h1>Ebola virus outbreak</h1>
+            <p>The deadly disease has affected several countries, including the U.S.</p>
+
+            
+
+
+<div data-component="sharebar" class="social sharebar_condensed
+            theme-dark
+    
+             header-style
+    ">
+    <div class="social-icons social-button-group" data-dropdown-toggle>
+        <a class="share-text">Share:</a>
+    
+        <ul><li class="icon"><span class="facebook">facebook</span></li>
+            <li class="icon"><span class="twitter">twitter</span></li>
+            <li class="icon"><span class="more">more</span></li>
+        </ul><div class="share-dropdown" data-dropdown-el="content">
+            <span class="triangle triangle-outer"></span>
+            <span class="triangle triangle-inner"></span>
+            <div class="dropdown-container" data-component="socialButton" data-social-button-options='{"mode":"horizontal","via":"cbsnews","title":"Ebola virus outbreak","description":"The deadly disease has affected several countries, including the U.S.","url":"http:\/\/www.cbsnews.com\/feature\/ebola","facebookAppId":"79439656165","location":"condensed"}'>
+                <ul><li>
+                        <div class="social-button" data-button="facebook"></div>
+                    </li>
+                    <li>
+                        <div class="social-button" data-button="twitter"></div>
+                    </li>
+                    <li>
+                        <div class="social-button" data-button="stumbleupon"></div>
+                    </li>
+                </ul></div>
+        </div>
+    </div>
+
+</div>
+        </div>
+        <nav><ul class="items tabs" data-component="tabs"><li data-char-count="40" data-click-tracking="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Deep Story-Page-Header|Thread-home-Label"}'>
+                    <a data-target="#home" data-item="trigger" data-thread-slug="home" data-load-slug="/feature/ebola" class="selected">Home</a>
+                </li>
+                                                                                                                                    <li data-char-count="224" data-click-tracking="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Deep Story-Page-Header|Thread-1-Label"}'>
+                            <a data-target="#medical-facts" data-item="trigger" data-thread-slug="medical-facts" data-load-slug="/feature/ebola/medical-facts/xhr">Medical Facts (47)</a>
+                        </li>
+                                                </ul></nav></div>
+</div>
+</div>
+
+
+
+                                                                    </div>
+            <div class="col-4">
+                                                    
+                                                        
+                                            
+
+                    <div id="marquee-top-54cc19c7e88dc" class="ad-marquee-top" data-ad="marquee-top" style="display:none">
+    <script>
+        window.console && console.log && console.log("ADS: queuing marquee-top-54cc19c7e88dc for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("marquee-top-54cc19c7e88dc");
+    </script></div>
+                                                                        </div>
+                                </div>
+                        </div>
+            </div>
+                <div class="row">
+        <div class="col-12">
+                                            <div class="row">
+                                    <div class="col-4">
+                                                    
+                                                        
+                                            <div class="module module-listing boom">
+    <h2 class="module-heading title">Latest</h2>
+    <div class="listing-basic-lead">
+        <ul class="items" id="uid-492814400" data-component="deepStoryLoadMore" data-deep-story-load-more-options='{"url":"\/feature\/ebola\/latest\/xhr","data":{"page":2},"pushState":{"enabled":true,"route":"\/feature\/ebola\/{page}\/","title":"More from Ebola virus outbreak - Page {page} - CBS News"},"loader":{"template":"&lt;a href=\u0022http:\/\/www.cbsnews.com\/feature\/ebola\/2\/\u0022 class=\u0022{baseClass} {stateClass}\u0022&gt;&lt;span class=\u0022text\u0022&gt;{text}&lt;\/span&gt;&lt;\/a&gt;"}}'><li class="item">
+
+        <a href="/news/nurse-infected-with-ebola-donating-blood-for-research/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-1"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Nurse infected with Ebola donating blood for research</h3>
+                        <p class="dek">Amber Vinson gave blood to a biotech firm to help develop a drug to fight the disease</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">January 21, 5:40 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="6d872f76-c9ff-436f-b6ce-0dcf6129d6af" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="1"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/videos/headlines-liberia-ebola-centers-built-by-u-s-nearly-empty/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-2"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Headlines: Liberia Ebola centers built by U.S. nearly empty</h3>
+                        <p class="dek">"CBS This Morning" takes a looks at some of the headlines making news from around the globe.</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">January 19, 7:58 AM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Play Video-2"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Left Rail|Asset|Play Video-2"}'>Video</span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/mali-declared-free-of-ebola-health-minister-says/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-3"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Mali declared free of Ebola, health minister says</h3>
+                        <p class="dek">After the disease came back after the nation had nearly eradicated it, no new cases have been recorded in over a month and a half</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">January 18, 7:18 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="24ba7f65-e3f4-4282-898d-46d81ee9fe52" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="3"></span>
+
+            </div>
+        </a>
+    </li>
+                    <div id="sponsor-content-small-top-54cc19c7e88dc" class="ad-sponsor-content-small-top" data-ad="sponsor-content-small-top" style="display:none">
+    <script>
+        window.console && console.log && console.log("ADS: queuing sponsor-content-small-top-54cc19c7e88dc for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("sponsor-content-small-top-54cc19c7e88dc");
+    </script></div>
+
+        <li class="item">
+
+        <a href="/news/ebola-hotspots-remain-but-un-sees-progress/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-4"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Ebola hotspots remain, but U.N. sees progress</h3>
+                        <p class="dek">Officials see some hopeful signs amid the devastation, as death toll in West Africa tops 8,300</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">January 16, 10:28 AM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="b76ba4b1-16c2-4b51-9ae6-698bbd9de5e8" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="4"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/red-cross-nurse-dies-of-ebola/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-5"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Red Cross nurse dies of Ebola</h3>
+                        <p class="dek">First Red Cross worker to die in Sierra Leone had contact with many other people who are being monitored</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">January 15, 10:33 AM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="bfde5cb0-0cd2-47a4-bfa9-a2fffa3bf9c6" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="5"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/videos/doctor-who-survived-ebola-heads-back-to-treat-others/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-6"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Doctor who survived Ebola heads back to treat others</h3>
+                        <p class="dek">Dr. Rick Sacra, an American physician who contracted Ebola in Liberia, says he's heading back to West Africa to volunteer again now that he's recovered from the disease.</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">January 12, 4:10 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Play Video-6"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Left Rail|Asset|Play Video-6"}'>Video</span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/ebola-survivor-dr-rick-sacra-returning-to-liberia/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-7"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Ebola survivor Dr. Rick Sacra returning to Liberia</h3>
+                        <p class="dek">American doctor who recovered from Ebola is going back to West Africa to treat mothers, children and the chronically ill</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">January 12, 2:50 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="44b1b787-e646-4444-bc8f-4470f03eb8ca" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="7"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/ebola-vaccines-safe-who-says-but-tests-could-take-six-months/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-8"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>WHO: Ebola vaccines show "acceptable safety"</h3>
+                        <p class="dek">Tests on healthy volunteers set to begin and could take 6 more months to prove success of drugs</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">January 9, 9:38 AM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="5ad655a3-df65-4ac3-97d1-fbfb82cc856e" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="8"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/ebola-death-toll-rises-in-west-africa-while-us-interest-wanes/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-9"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Ebola death toll rises while U.S. interest wanes</h3>
+                        <p class="dek">A chart tells the story: U.S. interest peaked and then plummeted, even as the outbreak spiraled out of control overseas</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">January 8, 5:26 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="eb5f0257-9b66-4ade-8af8-b4f4cda3f9ac" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="9"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/ebola-drug-trial-for-brincidofovir-underway-in-liberia/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-10"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Ebola drug trial underway in Liberia</h3>
+                        <p class="dek">Doctors Without Borders offers patients with deadly disease an experimental drug in effort to prove it can be an effective treatment</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">January 7, 10:24 AM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="7edfdb20-35f0-4b15-a295-7d4f9274ed8f" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="10"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/sen-coons-calls-for-change-in-u-s-ebola-strategy/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-11"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Sen. Coons calls for change in U.S. Ebola strategy</h3>
+                        <p class="dek">Recently returned from Liberia, Delaware senator says, "We can't declare mission accomplished and withdraw too early here"</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">January 4, 1:24 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="57d7463d-4c19-4553-a580-252407b12aed" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="11"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/ebola-childs-encounter-with-a-bat-may-have-started-outbreak/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-12"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Encounter with bat may have sparked Ebola outbreak</h3>
+                        <p class="dek">New research may have found how the deadly epidemic got started, with a curious 2-year-old exploring a hollow tree</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 30, 3:01 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="439e686b-6b17-4641-b5af-fbe66b29265f" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="12"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/nurse-with-ebola-transfered-from-scotland-to-london-hospital/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-13"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Nurse with Ebola transferred to London hospital</h3>
+                        <p class="dek">Nurse became sick after returning home to Scotland from Sierra Leone; officials work to trace her contacts</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 30, 11:21 AM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="aea253ad-4d18-4354-bb65-692bbab3f9c3" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="13"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/ebola-case-in-glasgow-scotland/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-14"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Health officials confirm Ebola case in Scotland</h3>
+                        <p class="dek">A health care worker who just returned from Sierra Leone is diagnosed in Glasgow after flying through London Heathrow airport</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 29, 3:37 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="30d38245-2a99-4898-927d-2a77edce6565" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="14"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/the-forgotten-epidemic-malaria-kills-thousands-more-than-ebola/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-15"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>The forgotten epidemic? Malaria kills more than Ebola</h3>
+                        <p class="dek">Fear of Ebola is making it even harder for patients to seek treatment for one of Africa's biggest killers</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 29, 11:41 AM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="e2a20962-cd5b-40b1-897d-25aecc3d726b" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="15"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/blood-test-for-ebola-wins-emergency-fda-approval/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-16"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Blood test for Ebola wins emergency FDA approval</h3>
+                        <p class="dek">Rapid diagnosis could help improve patients' chances of survival</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 29, 10:23 AM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="076daf1d-8bbf-44b5-b756-d459abe2769a" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="16"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/ebola-czar-americans-should-be-proud-of-the-cdcs-work/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-17"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Ebola Czar: Americans should be "proud" of the CDC's work</h3>
+                        <p class="dek">Ron Klain, who is coordinating the Obama administration's response to the Ebola virus, said a onetime exposure to the virus at the CDC should be kept in context</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 28, 1:11 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="7e919e7e-9866-4965-9bb4-c96ed0e3eac8" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="17"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/videos/ebola-czar-americans-should-be-proud-of-cdc/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-18"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Ebola czar: Americans should be "proud" of CDC</h3>
+                        <p class="dek">Ron Klain, the federal government's Ebola response coordinator, says the mishandling of Ebola materials at the CDC was "unacceptable," but he urges people to keep the mistake in "perspective."</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 28, 11:30 AM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Play Video-18"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Left Rail|Asset|Play Video-18"}'>Video</span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/videos/ebola-sample-may-have-been-accidentally-sent-to-wrong-lab/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-19"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Ebola sample may have been accidentally sent to wrong lab</h3>
+                        <p class="dek">A mistake may have exposed a lab worker to Ebola in another breakdown in procedure at the CDC. The technician is waiting for test results this morning, and will be monitored for 21 days. It's the latest in a string of errors at the agency and the investigation has begun into what went wrong. Juliana Goldman reports.</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 26, 7:52 AM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Play Video-19"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Left Rail|Asset|Play Video-19"}'>Video</span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/videos/ebola-cancels-christmas-in-sierra-leone/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-20"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Ebola cancels Christmas in Sierra Leone</h3>
+                        <p class="dek">As Sierra Leone struggles to control the deadly outbreak, government officials have been forced to cancel all public holiday celebrations. Debora Patta reports on why the infection rate has been so hard to manage in the West African nation.</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 25, 8:18 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Play Video-20"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Left Rail|Asset|Play Video-20"}'>Video</span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/no-christmas-for-ebola-ravaged-sierra-leone/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-21"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>No Christmas for Ebola-ravaged Sierra Leone</h3>
+                        <p class="dek">The country's government banned all public holiday celebrations as it struggles to control the deadly outbreak</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 25, 7:53 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="22a67749-a59c-44c9-8915-4ad55db78282" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="21"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/the-cdcs-bad-year-just-got-worse/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-22"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>The CDC's bad year just got worse</h3>
+                        <p class="dek">The agency's latest mishap with the Ebola virus underlines a year that saw a litany of mistakes</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 25, 7:27 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="c2b14d51-d296-4f3f-be40-8a8f7c983a12" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="22"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/ebola-survival-improving-in-sierra-leone/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-23"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Ebola survival rate improving in Sierra Leone</h3>
+                        <p class="dek">Better supportive care gives health officials reason for "cautious optimism" that the deadly outbreak may be slowing down</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 25, 12:19 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="a1375138-5a77-40ec-abec-cf0e95beb6fe" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="23"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/cdc-lab-worker-may-have-been-exposed-to-ebola/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-24"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>CDC lab worker may have been exposed to Ebola</h3>
+                        <p class="dek">Deadly virus sample was sent to a less-secure lab by mistake; technician will be monitored for symptoms</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 24, 5:37 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="8e884c65-3cf7-41fa-8627-554226300761" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="24"></span>
+
+            </div>
+        </a>
+    </li>
+                <li class="item">
+
+        <a href="/news/promising-results-from-new-ebola-vaccine-trial/">
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Latest|Asset|Headline-25"}' data-omniture-track-collection-data='{"colguid": "1", "colnm": "Ebola virus outbreak"}'>Promising results from new Ebola vaccine trial</h3>
+                        <p class="dek">In an early human trial, experimental vaccines for Ebola and the Marburg virus were shown to be safe and relatively effective</p>
+            
+            <div class="meta-label social-count">
+                                    <span class="meta-prep">On</span>
+                    <span class="date">December 23, 3:23 PM </span>
+                
+                                                
+                                                
+
+                
+
+                
+                <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="6c744505-4633-47ad-b496-bc42e012e519" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="25"></span>
+
+            </div>
+        </a>
+    </li>
+        </ul><div data-item="load-more"><a href="http://www.cbsnews.com/feature/ebola/2/" class="load-more"><span class="text">Load More</span></a></div>    </div>
+</div>
+                                                                    </div>
+            <div class="col-4">
+                                                    
+                                                        
+                                            
+
+            <div class="module module-listing">
+            <h2 class="module-heading title">Highlights</h2>            <div class="listing-full-lead-media">
+                <ul class="items"><li class="item">
+                                                                                                
+                                <a href="/news/mali-declared-free-of-ebola-health-minister-says/">
+                                    <h3 class="title " data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-1"}'>Mali declared free of Ebola, health minister says</h3>
+
+                                    <figure class="media-block overlay-article" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-1"}'><figcaption class="meta-label"><span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="4fc573c3-b87a-4f5e-aa25-4d1f3aaf5dff" data-lf-format="numberCommentsNotZeroAlt" data-lf-minimum="1"></span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/19/726867e7-71ad-4dc6-91b1-ad79f6a2bf5a/thumbnail/300x190/4f730ee5612008ae82c3e0208a6ae6b2/ap707166878293.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/doctor-who-survived-ebola-heads-back-to-treat-others/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-2"}'>Doctor who survived Ebola heads back to treat others</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-2"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-2"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-2"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/12/94706f2d-38c7-4b33-85e7-a9d7b4d520bd/thumbnail/300x190/d4ec720733939057d25fef01abc5f33d/mond123backtoliberia330312640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/ebola-czar-americans-should-be-proud-of-cdc/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-3"}'>Ebola czar: Americans should be "proud" of CDC</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-3"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-3"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-3"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/12/28/7f705570-5b12-4bc3-b6eb-e37a84ff5cc4/thumbnail/300x190/be15cc12be04f6a7b5658db373c434a1/ftnklain1228325474640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/obama-we-cannot-beat-ebola-without-more-funding/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-4"}'>Obama: &ldquo;We cannot beat Ebola without more funding&rdquo;</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-4"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-4"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-4"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2014/12/02/110d8e6f-bb9f-40a9-98d3-50628aa274cb/thumbnail/300x190/13c97536f02e5acda3e05065ac2cad9f/politicsobamanih120214315344640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/first-nih-test-shows-ebola-vaccine-appears-to-be-safe/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-5"}'>First NIH test shows Ebola vaccine appears to be safe</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-5"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-5"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-5"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/11/27/e4535c15-b971-4848-9700-c0b70c73eb1d/thumbnail/300x190/d87900984e1511293f9dfd1ef5db18bb/ctm1127ebolavaccine313760640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/questions-surround-man-tasked-with-nycs-ebola-cleanup/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-6"}'>Questions surround man tasked with NYC's Ebola cleanup</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-6"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-6"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-6"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2014/11/21/d0e0bd94-0356-4254-acc5-52ed508e6831/thumbnail/300x190/783bbc58588d9375ae7c0fb4599e5199/ctm112114scamartist311592640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/surgeon-who-was-treated-for-ebola-in-nebraska-hospital-dies/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-7"}'>Surgeon who was treated for Ebola in Nebraska hospital dies</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-7"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-7"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-7"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/11/17/bbc3e5a3-cbda-41ea-8950-cb87b513fb2d/thumbnail/300x190/ef4ac4ee073985519464458d75fb3b4e/ctm111714eboladeath309705640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/60-minutes-gets-inside-look-at-a-liberian-hospital-treating-ebola/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-8"}'>"60 Minutes" gets inside look at a Liberian hospital treating Ebola</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-8"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-8"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-8"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/11/07/58cee07b-2984-4085-a4ad-1bdfcf5c4f5c/thumbnail/300x190/61b73149829e38920eaad12a3123dae3/ctm110760minebola305440640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/ebola-infected-surgeon-in-his-own-words/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-9"}'>Ebola-infected surgeon in his own words</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-9"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-9"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-9"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2014/11/15/ce7d8150-7c76-4711-9611-b68db82d670a/thumbnail/300x190/b156ef3cc3a8ed20ae370da9d499011c/web1115salia1309099640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/the-ebola-hot-zone/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-10"}'>The Ebola Hot Zone</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-10"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-10"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-10"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/11/10/af574945-41ab-4ea5-a3c1-2957cd34fa19/thumbnail/300x190/445536bfcbe05bb1605eb903776f4221/601109logan306279640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/back-from-liberia-21-days-in-self-quarantine/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-11"}'>Back from Liberia: 21 days in self-quarantine</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-11"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-11"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-11"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2014/11/10/96edba95-1fa0-46fb-8f1d-96b0e6874135/thumbnail/300x190/92b02e4eaa4271b16f889f507a36fdc9/60otlogancandid110914306271640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/could-doctors-use-robots-to-treat-ebola-patients/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-12"}'>Could doctors use robots to treat Ebola patients?</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-12"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-12"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-12"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2014/11/07/43d85c3a-bdba-49ff-b411-b3e156b7537a/thumbnail/300x190/675230f07d584c76960ef8685fbc9b73/web1107ebolarobot305509640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/volunteer-medic-heads-to-ebola-hot-zone/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-13"}'>Volunteer medic heads to Ebola hot zone</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-13"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-13"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-13"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/11/05/238656ea-7c4a-4f2e-90d1-6d91cd6541af/thumbnail/300x190/1343c3ab9f8ef4b32f50063244117763/np1105ebolavolunteer304733640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/samantha-power-sees-positive-signs-in-the-fight-against-ebola/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-14"}'>Samantha Power sees &ldquo;positive signs&rdquo; in the fight against Ebola</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-14"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-14"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-14"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2014/11/02/57f21d59-2dee-43ea-9cfd-2f0cb9b7d2c8/thumbnail/300x190/e2fe487009b1481e62592e92a5a78f8e/ftn1102samanthapower303434640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                                                                                            
+                            <li class="item">
+                                                                                                
+                                <a href="/videos/the-children-orphaned-by-ebola/">
+                                    <h3 class="title grey-separator" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Headline-15"}'>The children orphaned by Ebola</h3>
+
+                                    <figure class="media-block overlay-video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Thumbnail-15"}'><figcaption class="meta-label"><span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-15"}'>Play</span><span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Deep Story Page|Highlights|Asset|Play Video-15"}'>Video</span>
+
+                                        </figcaption><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/10/20/329e40d6-0a07-4d2e-a8e1-d61a816d6528/thumbnail/300x190/d2c349cb0deb4bf364d3537a7cbf7b80/en102014patta298387640x360.jpg" alt=""></span>
+                                    </figure></a>
+                            </li>
+                                                            </ul></div>
+        </div>
+                                                                        </div>
+            <div class="col-4">
+                                                    
+                                                        
+                                            
+
+                    <div id="mpu-top-54cc19c7e88dc" class="ad-mpu-top" data-ad="mpu-top" style="display:none">
+    <script>
+        window.console && console.log && console.log("ADS: queuing mpu-top-54cc19c7e88dc for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("mpu-top-54cc19c7e88dc");
+    </script></div>
+                                                                                    
+                                                        
+                                            
+
+
+
+    
+    
+<div class="module module-mobile-apps download-app">
+        <h2 class="module-heading title"><span class="span-title">Watch CBSN Live</span></h2>
+        <a href="http://cbsn.cbsnews.com/?ftag=CNM647193a">
+        <figure><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/2014/11/26/5a1f6610-05b3-4f46-8b07-8f284c7c741a/47592a5b9b31fc569cb8aff80d726cd1/rightrailwithtextv2.jpg" alt=""></span>
+                    </figure></a>
+    <div class="promo-feature">
+        <p class="dek">Watch CBS News anytime, anywhere with the new 24/7 digital news network.  Stream CBSN live or on demand for FREE on your TV, computer, tablet, or smartphone.</p>
+        <button class="btn"><a href="http://cbsn.cbsnews.com/?ftag=CNM647193a">Watch Now</a></button>
+    </div>
+</div>
+                                                                                
+                                    <!-- Component template not found: familyName: editorial typeName: mixed_editorial - view: null -->
+                                                            
+                                    <!-- Component template not found: familyName: editorial typeName: component_editorial_component - view: null -->
+                                                            
+                                                        
+                                            
+
+
+<div class="module module-listing">
+    <h2 class="module-heading title">Most Popular</h2>
+
+    
+<div class="listing-mini-number ">
+    <ul class="media-list items"><li>
+    <a href="/news/comcast-apologizes-for-changing-customers-billing-name-to-profanity/"> 
+        <div class="media-figure">
+            <span class="number" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Rank Indicator-1"}'>01</span>
+        </div>
+    
+        <div class="media-body">
+                            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Headline-1"}'>Comcast apologizes for changing customer's billing name to profanity</h4>
+            
+                                    <div class="meta-label view-count">
+                <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-1"}'>434787</span>
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-1"}'>views</span>
+            </div>
+                                </div>
+    </a>
+</li>
+                            
+                                                
+<li>
+    <a href="/news/blizzard-2015-may-be-falling-short-of-predictions/"> 
+        <div class="media-figure">
+            <span class="number" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Rank Indicator-2"}'>02</span>
+        </div>
+    
+        <div class="media-body">
+                            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Headline-2"}'>Blizzard 2015 may be falling short of predictions</h4>
+            
+                                    <div class="meta-label view-count">
+                <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-2"}'>111566</span>
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-2"}'>views</span>
+            </div>
+                                </div>
+    </a>
+</li>
+                            
+                                                
+<li>
+    <a href="/news/girl-helps-paramedics-through-sign-language-skills/"> 
+        <div class="media-figure">
+            <span class="number" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Rank Indicator-3"}'>03</span>
+        </div>
+    
+        <div class="media-body">
+                            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Headline-3"}'>Girl helps paramedics through sign language skills</h4>
+            
+                                    <div class="meta-label view-count">
+                <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-3"}'>104997</span>
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-3"}'>views</span>
+            </div>
+                                </div>
+    </a>
+</li>
+                            
+                                                
+<li>
+    <a href="/news/telemarketers-phone-call-helps-save-beaten-oregon-woman/"> 
+        <div class="media-figure">
+            <span class="number" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Rank Indicator-4"}'>04</span>
+        </div>
+    
+        <div class="media-body">
+                            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Headline-4"}'>Telemarketer's call helps save beaten Oregon woman</h4>
+            
+                                    <div class="meta-label view-count">
+                <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-4"}'>82434</span>
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-4"}'>views</span>
+            </div>
+                                </div>
+    </a>
+</li>
+                            
+                                                
+<li>
+    <a href="/news/blizzard-2015-cities-states-begin-shutting-down/"> 
+        <div class="media-figure">
+            <span class="number" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Rank Indicator-5"}'>05</span>
+        </div>
+    
+        <div class="media-body">
+                            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Headline-5"}'>Blizzard 2015: Cities, states begin shutting down</h4>
+            
+                                    <div class="meta-label view-count">
+                <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-5"}'>60931</span>
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-5"}'>views</span>
+            </div>
+                                </div>
+    </a>
+</li>
+                </ul></div></div>                                                                                
+                                                        
+                                            
+            
+<div class="listing-media-feature" data-component="carousel" data-carousel-options='{"autoplayDelay":0,"transitionDuration":0}'>
+    <div class="viewport" data-item="viewport">
+        <ul class="canvas" data-item="canvas"><li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/teslas-insane-mode-makes-passengers-freak-out/" title="Tesla's &quot;insane&quot; mode makes passengers freak out">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-1"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/ac444e3b-64d6-4c36-bc79-48fe4c962fde/thumbnail/300x190/623f5a9d345b8178fdfc8ae5102a8528/feedwrapup01302015764002338181640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-1"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-1"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-1"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-1"}'>Tesla's "insane" mode makes passengers freak out</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/security-stubhub-super-bowl-2015-ticket-operations/" title="Security behind StubHub's Super Bowl ticket operations">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-2"}'><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/30/13951367-0285-4779-a4e6-423c393bb338/thumbnail/300x190/09ff10032c6f31e2305e4ff7a0d77b21/ctmstubhub013015338428640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-2"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-2"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-2"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-2"}'>Security behind StubHub's Super Bowl ticket operations</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/are-men-who-take-lots-of-selfies-psychopaths/" title="Are men who take lots of selfies psychopaths?">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-3"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/0f22472b-d66d-4edc-aa82-2a0801c9ecc2/thumbnail/300x190/6dc96909d44262d5cf6825f4723bfa2a/psych338368640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-3"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-3"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-3"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-3"}'>Are men who take lots of selfies psychopaths?</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/saved-by-a-sales-call-telemarketers-help-after-overhearing-attack/" title="Saved by a sales call: Telemarketers help after overhearing attack">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-4"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/1d9848f1-bb71-4045-b5a1-c4e5b5d882f4/thumbnail/300x190/c1091385a2c10e5e2cbb5d5ff8fc6186/ctmwomansaved013015338411640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-4"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-4"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-4"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-4"}'>Saved by a sales call: Telemarketers help after overhearing attack</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/delta-jet-forced-to-make-emergency-landing-after-captain-gets-locked-out-of-cockpit/" title="Delta jet forced to make emergency landing after captain gets locked out of cockpit">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-5"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/0fa12721-ef88-430f-99d1-da726fe74cf8/thumbnail/300x190/37c43fdf72e606bfbf4dcda355b7da1a/ctmpilotlocked013015338405640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-5"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-5"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-5"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-5"}'>Delta jet forced to make emergency landing after captain gets locked out of cockpit</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/stroke-risk-for-middle-aged-heavy-drinkers/" title="Stroke risk for middle-aged heavy drinkers">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-6"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/e8c17ed2-f150-40a1-94c4-b3f3da95d591/thumbnail/300x190/d87792b5ba3dbb37b866ed93ce2ac181/ctm0130drinking338432640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-6"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-6"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-6"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-6"}'>Stroke risk for middle-aged heavy drinkers</h3>
+        </div>
+    </a>
+</div>
+</li>                    </ul><div class="paging">
+            <a class="prev" data-to="prev" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Right Rail|Media Promo|Carousel|Left-6"}'>Previous</a>
+            
+            <a class="next" data-to="next" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Right Rail|Media Promo|Carousel|Right-6"}'>Next</a>
+        </div>
+    </div>
+</div>    
+                                                                                
+                                                        
+                                            
+
+
+<div class="module module-listing">
+    <h2 class="module-heading title">Most Shared</h2>
+
+    
+<div class="listing-mini-sub ">
+    <ul class="media-list items"><li>
+    <a href="/news/comcast-apologizes-for-changing-customers-billing-name-to-profanity/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Image-1"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/29/558b7011-0f80-47af-8152-7319f990c651/thumbnail/60x60/1a4f56c3ddefa93617a63aceca2403fa/screen-shot.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Headline-1"}'>Comcast apologizes for changing customer's billing name to profanity
+            </h4>
+                                                </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/on-29th-anniversary-of-challenger-disaster-nasas-day-of-remembrance/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Image-2"}'><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/28/2de435be-71e7-4079-94c1-1a9d459b3e00/thumbnail/60x60/22b79a51a1ceeac7d22d15007412799d/challenger.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Headline-2"}'>On Challenger anniversary, NASA's day of remembrance
+            </h4>
+                                                </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/girl-helps-paramedics-through-sign-language-skills/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Image-3"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/28/d92135ad-951d-4ef8-847c-2f81276ef11c/thumbnail/60x60/648cabca1ae426a1638ccb17905e03a2/yesenia.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Headline-3"}'>Girl helps paramedics through sign language skills
+            </h4>
+                                                </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/ernie-banks-former-chicago-cubs-player-dies-at-83/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Image-4"}'><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/24/a157a1ab-26ee-43fe-acce-4c5f78534f7b/thumbnail/60x60/087fb5917846993133ff8096f1c0fd6c/ernie-banks-0129.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Headline-4"}'>Ernie Banks, Hall of Famer known as "Mr. Cub," dies at 83
+            </h4>
+                                                </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/telemarketers-phone-call-helps-save-beaten-oregon-woman/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Image-5"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/766b07f8-e621-4692-a161-05c9f39ec1fb/thumbnail/60x60/6abb2dd1eea7464ea56d6745e77d992d/americare-call-center.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Headline-5"}'>Telemarketer's call helps save beaten Oregon woman
+            </h4>
+                                                </div>
+    </a>
+</li>
+
+                        </ul></div></div>
+
+
+                                                                                
+                                                        
+                                            
+            
+<div class="listing-media-feature" data-component="carousel" data-carousel-options='{"autoplayDelay":0,"transitionDuration":0}'>
+    <div class="viewport" data-item="viewport">
+        <ul class="canvas" data-item="canvas"><li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/pictures/photos-of-the-week-jan-24-30-2015/" title="Photos of the Week: Jan. 24-30, 2015">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Thumbnail-1"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/154011f5-6cb5-4128-8baf-13907eaa5fc0/thumbnail/300x190/e9d6ab38da9362dfb5182384a5aab71e/462356904.jpg" alt=""></span>
+        </figure><div class="meta-overlay ">
+            <span class="asset-icon gallery" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Button-1"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-1"}'>23</span>
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-1"}'>Photos</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Headline-1"}'>Photos of the Week: Jan. 24-30, 2015</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/pictures/a-look-back-at-super-bowl-halftime-shows/" title="A look back at Super Bowl halftime shows">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Thumbnail-2"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/28/d22ceb67-8c0a-4fc2-a70d-855b1d080c88/thumbnail/300x190/5f1669821d0f99e1331456cd81dbb76a/160973397.jpg" alt=""></span>
+        </figure><div class="meta-overlay ">
+            <span class="asset-icon gallery" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Button-2"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-2"}'>31</span>
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-2"}'>Photos</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Headline-2"}'>A look back at Super Bowl halftime shows</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/pictures/sundance-2015-portraits/" title="Sundance 2015 portraits">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Thumbnail-3"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/28/cd63a1d5-796d-46d4-bcfe-2a6dcffe1e1a/thumbnail/300x190g2/e9b10203835024a79fc7a404cb436b1b/462372460.jpg" alt=""></span>
+        </figure><div class="meta-overlay ">
+            <span class="asset-icon gallery" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Button-3"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-3"}'>66</span>
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-3"}'>Photos</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Headline-3"}'>Sundance 2015 portraits</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/pictures/hospital-explodes-in-mexico-city/" title="Explosion at hospital in Mexico City">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Thumbnail-4"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/29/c2785b02-bfbc-4cad-90e2-a3f2de79c43b/thumbnail/300x190/9ef964ae4911dde0e2571a308721375a/462468926.jpg" alt=""></span>
+        </figure><div class="meta-overlay ">
+            <span class="asset-icon gallery" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Button-4"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-4"}'>23</span>
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-4"}'>Photos</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Headline-4"}'>Explosion at hospital in Mexico City</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/pictures/deadliest-cars-on-the-road/" title="Deadliest (and safest) cars on the road">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Thumbnail-5"}'><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/29/2e93803f-6801-4821-bf17-c513dcabf7de/thumbnail/300x190/3c8e07dc495497fb7023b4a893cf4e1b/kiario.jpg" alt=""></span>
+        </figure><div class="meta-overlay ">
+            <span class="asset-icon gallery" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Button-5"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-5"}'>25</span>
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-5"}'>Photos</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Headline-5"}'>Deadliest (and safest) cars on the road</h3>
+        </div>
+    </a>
+</div>
+</li>                    </ul><div class="paging">
+            <a class="prev" data-to="prev" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Right Rail|Media Promo|Carousel|Left-8"}'>Previous</a>
+            
+            <a class="next" data-to="next" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Right Rail|Media Promo|Carousel|Right-8"}'>Next</a>
+        </div>
+    </div>
+</div>    
+                                                                                
+                                                        
+                                            
+
+
+<div class="module module-listing">
+    <h2 class="module-heading title">Most Discussed</h2>
+
+    
+<div class="listing-mini-sub ">
+    <ul class="media-list items"><li>
+    <a href="/news/no-snub-from-netanyahu-with-speech-to-congress-white-house-says/">
+        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/21/a61bdf3c-9edd-401a-b36f-4d4f942f2389/thumbnail/60x60/b5b1875c0588dee994f441189794e0fd/114948964.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title">White House tries to downplay Netanyahu controversy
+            </h4>
+                            <div class="meta-label comment-count">
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="d6b49c19-daa6-4ab6-b539-b1b1fcdb99b0" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/the-dismal-state-of-americas-child-poverty/">
+        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/28/b7115644-1fc1-4d74-a189-e96e339f6e57/thumbnail/60x60/801f1868e39731b03f0de764d9e54691/child.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title">1 in 5 American kids rely on food stamps
+            </h4>
+                            <div class="meta-label comment-count">
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="49d017a9-e425-4a6c-9f21-dadfdb061443" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/israeli-pm-benjamin-netanyahu-weighs-in-on-dispute-with-obama/">
+        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/25/c498dbd6-d191-4997-9be0-0439f551752c/thumbnail/60x60/e5335a818f62a81791ec72844ea4b882/netanyahu461479844.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title">Netanyahu weighs in on dispute with Obama
+            </h4>
+                            <div class="meta-label comment-count">
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="28c17f2f-2f92-4251-9b3d-efecf9c571c9" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/should-parents-be-allowed-to-choose-whether-to-vaccinate-their-kids/">
+        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/24/11903586-1f95-455b-a732-ca6346fc3cbe/thumbnail/60x60/1ba8cad4e2c0accb8300c6c43cef294d/measles-vaccination.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title">Should parents be allowed to choose whether to vaccinate their kids?
+            </h4>
+                            <div class="meta-label comment-count">
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="3c73d5f0-7b57-4580-b1e1-9ce016e43566" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/16-us-states-where-the-middle-class-is-shrinking/">
+        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/20/a5f9ffaf-0172-4e68-94ec-d7617401ce46/thumbnail/60x60/fc03a81796255d35d6998aa57639a3b6/inequality.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title">16 U.S. states where the middle-class is hurting
+            </h4>
+                            <div class="meta-label comment-count">
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="0b24405f-6313-4179-b17f-77d641999e06" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                        </ul></div></div>
+
+
+                                                                                
+                                                        
+                                            
+
+                    <div id="mpu-bottom-54cc19c7e88dc" class="ad-mpu-bottom" data-ad="mpu-bottom" style="display:none">
+    <script>
+        window.console && console.log && console.log("ADS: queuing mpu-bottom-54cc19c7e88dc for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("mpu-bottom-54cc19c7e88dc");
+    </script></div>
+                                                                        </div>
+                                </div>
+                        </div>
+            </div>
+        </div>
+</div>
+
+
+    </div>
+    
+                    </div>
+
+                    <div class="col-4 content-side">
+                                            </div>
+                </div>
+            </div>
+            </div>
+    
+        
+            <img src="http://dw.cbsi.com/levt/ria/e.gif?event=log&amp;siteid=162&amp;mapp=hi-pagetracker&amp;comptyp=pagetype&amp;comp=deep_story&amp;riaevent=view&amp;s6=bottom&amp;s7=desktop" border="0" height="1" width="1" alt="" class="tracking-gif"><footer class="site-footer content-inverse"><div class="container">
+                        <div class="row">
+            <div class="col-2 link-block">
+                <h5 class="title">CBSNews.com</h5>
+                
+                <ul class="items"><li><a href="/sitemap/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site footer|Site Map"}'>Site Map</a></li>
+                    <li><a href="https://cbsi.secure.force.com/CBSi/knowledgehome" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Help"}'>Help</a></li>
+                                        <li><a href="http://audienceservices.cbs.com/feedback/feedback.htm" rel="nofollow" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Contact Us"}'>Contact Us</a></li>
+
+                    <li><a href="/team/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Footer|CBS Bios"}' data-vanity-rewritten="true">CBS Bios</a></li> 
+                    <li><a href="https://cbs.avature.net/cbsfilmscareers" data-omniture-track-data='{"clickProperty": "Site Footer|Careers"}'>Careers</a></li>
+                    <li><a href="/news/cbs-news-internship-program/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Footer|Internships"}'>Internships</a></li> 
+                    <li><a href="/news/cbs-news-associates-program/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Footer|Development Programs"}'>Development Programs</a></li>
+                </ul></div>
+            
+            <div class="col-2 link-block">
+                <h5 class="title">CBS Interactive</h5>
+                
+                <ul class="items"><li><a href="http://legalterms.cbsinteractive.com/privacy" rel="nofollow" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Privacy Policy"}'>Privacy Policy</a></li>
+                    <li><a href="http://legalterms.cbsinteractive.com/terms-of-use" rel="nofollow" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Terms of Use"}'>Terms of Use</a></li>
+                    <li><a href="http://legalterms.cbsinteractive.com/eula" rel="nofollow" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Mobile User Agreement"}'>Mobile User Agreement</a></li>
+                    <li><a href="http://www.cbscorporation.com/" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|About CBS"}'>About CBS</a></li>
+                    <li><a href="http://www.cbsinteractive.com/advertise/" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Advertise"}'>Advertise</a></li>
+                    <li><a href="http://cbsimedia.cbs.com/captioning/info.html" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Closed Captioning"}'>Closed Captioning</a></li>
+                </ul></div>
+            
+            <div class="col-2 link-block">
+                <h5 class="title">Follow Us</h5>
+                
+                <ul class="items"><li><a href="https://www.facebook.com/CBSNews" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Facebook"}'>Facebook</a></li>
+                    <li><a href="http://twitter.com/CBSNews" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Twitter"}'>Twitter</a></li>
+                    <li><a href="http://www.cbsnews.com/rss/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site footer|RSS"}'>RSS</a></li>
+                    <li><a href="/newsletters/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site footer|Email Newsletters"}'>Email Newsletters</a></li>
+                    <li><a href="http://www.youtube.com/user/CBSNewsOnline" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|YouTube"}'>YouTube</a></li>
+                    <li><a href="/radio/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site footer|CBS Radio News"}'>CBS Radio News</a></li>
+                    <li><a href="/local/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site footer|CBS Local"}'>CBS Local</a></li>
+                </ul></div>
+            
+            <div class="col-4 push-2">
+                <div class="site-brand">
+                    <div class="logo core-logo"><a href="/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Footer-Branding"}'>CBS News</a></div>
+                    
+                    <p class="copyright">Copyright &copy; 2015 CBS Interactive Inc.<br>All rights reserved.</p>
+                </div>
+                
+                <form class="site-search" action="/search/" method="get" data-component="search" data-search-options='{"path":"\/search\/","param":"q"}'>
+                    <input type="search" class="query" maxlength="255" name="q" placeholder="Search..."><button type="submit" class="submit core-search-footer">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer></div> 	<script type="text/javascript">var a=document.createElement("script");a.type="text/javascript";a.async=!0;var b=["http://ceb03ce30efbc4c7bc5a-2b3ed55b02fdd3c5792fe5b7e08e479e.r42.cf2.rackcdn.com","https://c22b3592290c7d8da67e-2b3ed55b02fdd3c5792fe5b7e08e479e.ssl.cf2.rackcdn.com"];a.src=("https:"==document.location.protocol?b[1]:b[0])+"/562pr8c1zkhl.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(a,c);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-4.newrelic.com","licenseKey":"8178a7f262","applicationID":"3507372","transactionName":"ZAZXNkNRCkEHBxAMX11MdAFFWQtcSQABAEBsEEENQ0k=","queueTime":0,"applicationTime":1219,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script></body></html>

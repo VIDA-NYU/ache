@@ -1,0 +1,2196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="us" lang="us">
+    <head>
+                <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+        <base href="http://labtestsonline.org/" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        
+        <title>Influenza Tests: The Test</title>
+        <meta name="keywords" content="influenza test, flu test, rapid flu test, influenza A, influenza B, flu symptoms, flu-like symptoms, Influenza antigen test, H1N1, Rapid influenza diagnostic test, RIDT, flu PCR, influenza, flu, rapid flu test, rapid influenza test" />
+        <meta name="description" content="Describes how influenza (flu) tests are used, when flu tests are ordered, and what the results of a flu test might mean" />
+        
+
+        
+        <script type="text/javascript" src="mysite/javascript/jquery/jquery-1.3.2.min.js"></script>
+
+        
+        <script type="text/javascript" src="mysite/javascript/jquery/plugins/cookie/jquery.cookie.js"></script>
+
+        <script language="javascript" type="text/javascript">
+    
+    var themeDir = "themes/lto";
+    var countryCode = "US";
+    var isOpenExternalLinksInNewWindow = "1";
+
+    
+    
+    
+
+    var isContactUsForm = 0;
+    var isCommentsForm = 0;
+    var isHelpfulForm = 0;
+    var isAskUsForm = 1;
+    var isAnalytePageWithSubarticle = 0;
+    var isSubarticlePage = 0;
+
+    var stakeholdersServerURL = "//stakeholders.labtestsonline.org";
+    var isEnableSponsoredPages = 1;
+    var isAdmin = 0;
+
+    
+    var isShowAds = getIsShowAds();
+
+
+    /**
+     * Determine whether or not to show ads by comparing referrer domain against
+     * list of ad-free domains.
+     *
+     * NOTE: this function only compares domains!  Even if the function determines
+     *       that ads should be displayed, there still could be no ads for the page
+     *       if its keywords and title doesn't match up with the ad keywords; the
+     *       latter logic is processed in Page_Controller::AdScript().
+     *
+     *       So if this function determines that ads should be displayed based on domains, but
+     *       Page_Controller::AdScript() returns null, then no ads are displayed since the template
+     *       variable  (see TopAd.ss and SideAd.ss) is null.
+     *
+     *       In summary, two factors determine whether ads are displayed:
+     *       1. referrer domain compared to ad-free domain list (getIsShowAds())
+     *       2. page keywords and title compared to Ad keywords (Page_Controller::AdScript(), TopAd.ss, SideAd.ss)
+     *
+     */
+    function getIsShowAds() {
+
+        /* initialize the return value */
+        var isDisplayAds = true;
+
+        var queryString = location.search;
+        /* don't show ads if in print preview mode */
+        if (queryString && queryString.match(/printpreview=1/i)) {
+            isDisplayAds = false;
+            return isDisplayAds;
+        }
+
+        /* get this website's domain (removing any possible port number */
+        var thisSiteDomain = (location.host).replace(/^(.*):.*$/, "$1");
+
+        /* get the referring URL, may or may not be available depending of response header */
+        var referrerUrl = document.referrer;
+
+        /* Admins only: for testing, can set 'referrer' query string in URL */
+        if (isAdmin) {
+            var queryString = location.search; // eg, ?a=b&c=d
+            if (queryString) {
+                queryString = queryString.replace('?','');
+                var matches = queryString.match(/referrer=[^&]+/i);
+                if (matches) {
+                    referrerUrl = matches[0].replace('referrer=', '');
+                }
+       
+                queryString = queryString.     }
+        }
+
+        /* extract the domain from the referrer URL */
+        var referrerDomain = referrerUrl.replace(/^https*:\/\/([^\/]+)\/.*$/i, "$1");
+
+        var externalReferrerDomain = jQuery.cookie('ExternalReferrerDomain');
+
+        /* if Ad cookie exists and is set to 'no', then don't show any ads for the rest of the session
+         * unless:
+         *     1. the referrer domain has changed and
+         *     2. the referrer domain is not the current site.
+         *
+         * Use case: visitor comes to LTO from an ad-free domain, visitor should see no ads and ad cookie is set to 'no';
+         *           if visitor then searches for a term from a search engine and clicks on a link to the LTO website,
+         *           then ads should be displayed again.  (Session cookie is valid a acroos all browser tabs and is
+         *           only auto cleared when entire browser is shut down but not when a tab is closed or re-used
+         */
+        var isCookieShowAds = jQuery.cookie('IsCookieShowAds');
+        if (isCookieShowAds && isCookieShowAds == 'no') {
+            if (externalReferrerDomain && (externalReferrerDomain != referrerDomain) && (referrerDomain != thisSiteDomain)) {
+                //alert(['Ad cookie is NO and referrer domain is DIFFERENT than previous external domain'].join(' | '));
+
+                /* on a different domain, so set a new external domain and delete Ad cookies;
+                   the new external domain will undergo domain analysis below */
+                jQuery.cookie('ExternalReferrerDomain', referrerDomain, {path: '/'});
+                jQuery.cookie('IsCookieShowAds', null, {path: '/'});
+            }
+            else {
+                //alert(['Ad cookie is NO and referrer domain is SAME as previous domain.  Exiting.'].join(' | '));
+                /* haven't left the LTO site since coming from the ad-free domain, so continue to not display ads;
+                   no domain analysis needed */
+                isDisplayAds = false;
+                return isDisplayAds;
+            }
+        }
+
+        /* at this stage, go through the domain analysis and determine if Ads should be displayed on this page based on referrer domain;
+           also set a session cookie if the referrer domain is in the ad-free list AND the ad cookie does not yet exist */
+
+        /* JS array of ad-free domains and exclusion subdomains (generated by SS) */
+        var adFreeDomains = [/nih\.gov/i];
+        var adFreeExclusionSubDomains = "";
+
+        var numAdFreeDomains = adFreeDomains.length;
+        var numAdFreeExclusionSubDomains = adFreeExclusionSubDomains.length
+
+        if (referrerDomain && ((adFreeDomains instanceof Array) && numAdFreeDomains)) {
+
+            //alert(['referrer Url, referrer Domain, Ad Free Domains, Ad Free Exclusion Subdomains',referrerUrl, referrerDomain, adFreeDomains, adFreeExclusionSubDomains].join('|'));
+
+            /* check if referrer domain is in the ad-free domains array */
+            var isExclusionSubDomainMatch = false;
+            for (var i = 0; i < numAdFreeDomains; i++) {
+                //alert(['referrerDomain, adFreeDomains[i], match', referrerDomain, adFreeDomains[i], referrerDomain.match(adFreeDomains[i])].join(' | '));
+                if (referrerDomain.match(adFreeDomains[i])) {
+                    isDisplayAds = false;
+                    if (adFreeExclusionSubDomains instanceof Array && numAdFreeExclusionSubDomains) {
+                        isExclusionSubDomainMatch = false;
+                        for (var j = 0; j < numAdFreeExclusionSubDomains; j++) {
+                            //alert(['referrerDomain, adFreeExclusionSubDomains[j], match', referrerDomain, adFreeExclusionSubDomains[j], referrerDomain.match(adFreeExclusionSubDomains[j])].join(' | '));
+                            if (referrerDomain.match(adFreeExclusionSubDomains[j])) {
+                                isDisplayAds = true;
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+            /* if Ad cookie doesn't exist and Ads should not be displayed, then set
+             * a session cookie to NOT show ads for the browsing session; also set
+             * the external referral domain */
+            if (!isCookieShowAds && !isDisplayAds) {
+                /* this is a session cookie since there is no 'expires' property set */
+                jQuery.cookie('IsCookieShowAds', 'no', {path: '/'});
+                jQuery.cookie('ExternalReferrerDomain', referrerDomain, {path: '/'});
+                //alert(['Ad cookie does not exist and not displaying ads  based on referrer url; setting no ad display cookie'].join(' | '));
+            }
+        }
+        else {
+            if (typeof console == "object") { console.log('WARNING: browser did not report any referrer URL or adFreeDomains is not valid' + [referrerUrl, adFreeDomains].join(' | ')); }
+        }
+
+        //alert(['isDisplayAds based on comparing domains only', isDisplayAds].join(' | '));
+        return isDisplayAds;
+    }
+
+</script>
+
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+        
+        
+            <link rel="alternate" hreflang="pt-BR" href="http://labtestsonline.org.br/understanding/analytes/flu/tab/test/" />
+        
+            <link rel="alternate" hreflang="zh-CN" href="http://labtestsonline.org.cn/understanding/analytes/flu/tab/test/" />
+        
+            <link rel="alternate" hreflang="tr-TR" href="http://labtestsonline.org.tr/understanding/analytes/flu/tab/test/" />
+        
+            <link rel="alternate" hreflang="en-GB" href="http://labtestsonline.org.uk/understanding/analytes/flu/tab/test/" />
+        
+            <link rel="alternate" hreflang="en-US" href="http://labtestsonline.org/understanding/analytes/flu/tab/test/" />
+        
+        
+        
+
+        
+            <link rel="canonical" href="http://labtestsonline.org/understanding/analytes/flu/tab/test/" />
+        
+
+        
+            <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', "UA-5562595-1"]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+        
+    <link rel="stylesheet" type="text/css" href="http://labtestsonline.org/themes/lto/css/my_layout_2_col_960.css?m=1415005721" />
+<link rel="stylesheet" type="text/css" href="http://labtestsonline.org/mysite/javascript/jquery/plugins/bookmark/jquery.bookmark.css?m=1319705749" />
+<link rel="stylesheet" type="texbtestsonline.org/themes/lto/css/my_layout_2_col_960.css?m=1415005721" />
+<link rel="stylesheet" type="text/css" href="http://labtestsonline.org/mysite/javascript/jquery/plugins/bookmark/jquery.bookmark.css?m=1319705749" />
+<link rel="stylest/css" href="http://labtestsonline.org/mysite/javascript/jquery/plugins/bookmark/lto.jquery.bookmark.css?m=1319705749" />
+<link rel="stylesheet" type="text/css" href="http://labtestsonline.org/mysite/javascript/jquery/plugins/cluetip/jquery.cluetip.css?m=1319705749" />
+<link rel="stylesheet" type="text/css" href="http://labtestsonline.org/themes/lto/css/screen/date_tips.css?m=1415005725" />
+<link rel="stylesheet" type="text/css" media="print" href="http://labtestsonline.org/themes/lto/css/print/print.css?m=1415005722" />
+<link rel="stylesheet" type="text/css" href="http://labtestsonline.org/themes/lto/css/locale/US/locale.css?m=1404982078" />
+<!--[if lte IE 7]>
+            <link href="themes/lto/css/patches/patch_my_layout_2_col.css" rel="stylesheet" type="text/css" />
+        <![endif]-->
+        <!--[if lte IE 8]>
+            <link href="themes/lto/css/patches/all_ie_versions.css" rel="stylesheet" type="text/css" />
+        <![endif]-->
+</head>
+    <body id="AnalytePage">
+        <div class="page_margins">
+            <div class="page">
+                <a name="top"></a>
+                						<div class="top-ad-wrapper">
+								<div class="top-ad"><script language="javascript" type="text/javascript">
+if (isShowAds) {
+var ehs_site="ehs.con.labtest.labtest";
+var ehs_zone="";
+var ehs_inter=1;
+var ehs_kw="";
+var ehs_size="728x90";
+var ehs_vpos="t";
+var ehs_hpos="l";
+var ehs_puid="";
+var ehs_kv=ehs_kv || [];
+ehs_kv.push("mcat1=co10;");
+ehs_kv.push("mcat2=null;");
+ehs_kv.push("mcat3=null;");
+ehs_kv.push("mcon1=f47u;");
+ehs_kv.push("mcon2=null;");
+ehs_kv.push("mcon3=null;");
+var ehs_protocol=(document.location.protocol=="https:") ? "https://" : "http://";
+var ehs_tagsrc=ehs_protocol+'ads.ehealthcaresolutions.com/uat/?'+ehs_site+';'+ehs_puid+';'+Math.random()*1e16;
+document.write('<scr'+'ipt type="text/javascript" src="'+ehs_tagsrc+'"></scr'+'ipt>');
+}
+</script></div>
+							<div class="top-ad-note">Proceeds from website advertising help sustain Lab Tests Online. AACC is a not-for-profit organization and does not endorse non-AACC products and services.</div>
+							<div class="top-ad-links">Advertising &amp; Sponsorship:  <a href="/site/policies/start/6" title="Ad Policy">Policy</a> | <a href="/sponsorship" title="Ad Opportunities">Opportunities</a></div>
+						</div>
+                <div id="header">
+                    <noscript><div class="noindex" id="no_script">PLEASE NOTE: Your web browser does not have
+                                            <a href="http://en.wikipedia.org/wiki/Javascript" title="JavaScript definition">JavaScript</a> enabled.
+                                            Unless you
+                                            <a href="http://www.google.com/support/websearch/bin/answer.py?hl=en&answer=23852" title="Enable JavaScript">enable Javascript</a>,
+                                            your ability to navigate and access the features of this website will be limited.
+</div></noscript>
+                    <div class="noindex">                
+                   <a href="/"><img id="banner" src="themes/lto/css/locale/US/images/banner_960.png" alt="Lab Tests Online" /></a>
+                
+
+</div>
+                    <div class="noindex">                        
+                        <ul id="flags">
+                           <li class="first"><a href="http://www.labtestsonline.org/" title="US English"><img src="themes/lto/images/flags/flag_us_home.jpg" alt="US English" /></a></li>
+<li class="last"><a href="http://www.labtestsonline.org.uk/" title="UK English"><img src="themes/lto/images/flags/flag_uk.jpg" alt="UK English" /></a></li>
+<li class=""><a href="http://www.labtestsonline.org.tr/" title="T&#252;rk&#231;e"><img src="themes/lto/images/flags/flag_tr.jpg" alt="T&#252;rk&#231;e" /></a></li>
+<li class=""><a href="http://www.labtestsonline.ro/" title="rom&acirc;n"><img src="themes/lto/images/flags/flag_ro.jpg" alt="rom&acirc;n" /></a></li>
+<li class=""><a href="http://www.labtestsonline-pt.org/" title="em Portugu&#234;s"><img src="themes/lto/images/flags/flag_pt.jpg" alt="em Portugu&#234;s" /></a></li>
+<li class=""><a href="http://www.labtestsonline.pl/" title="po polsku"><img src="themes/lto/images/flags/flag_pl.jpg" alt="po polsku" /></a></li>
+<li class=""><a href="http://www.labtestsonline.kr/" title="Korean"><img src="themes/lto/images/flags/flag_kr.jpg" alt="Korean" /></a></li>
+<li class=""><a href="http://www.labtestsonline.it/" title="in italiano"><img src="themes/lto/images/flags/flag_it.jpg" alt="in italiano" /></a></li>
+<li class=""><a href="http://www.labtestsonline.hu/" title="magyarul"><img src="themes/lto/images/flags/flag_hu.jpg" alt="magyarul" /></a></li>
+<li class=""><a href="http://www.labtestsonline.gr/" title="&#963;&#964;&#945; &#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;"><img src="themes/lto/images/flags/flag_gr.jpg" alt="&#963;&#964;&#945; &#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;" /></a></li>
+<li class=""><a href="http://www.labtestsonline.fr/" title="en fran&#231;ais"><img src="themes/lto/images/flags/flag_fr.jpg" alt="en fran&#231;ais" /></a></li>
+<li class=""><a href="http://www.labtestsonline.es/" title="en espa&#241;ol"><img src="themes/lto/images/flags/flag_es.jpg" alt="en espa&#241;ol" /></a></li>
+<li class=""><a href="http://www.labtestsonline.de/" title="auf Deutsch"><img src="themes/lto/images/flags/flag_de.jpg" alt="auf Deutsch" /></a></li>
+<li class=""><a href="http://www.labtestsonline.cz/" title="v &#269;e&#353;tin&#283;"><img src="themes/lto/images/flags/flag_cz.jpg" alt="v &#269;e&#353;tin&#283;" /></a></li>
+<li class=""><a href="http://www.labtestsonline.org.cn/" title="&#20013;&#25991;&#29256;"><img src="themes/lto/images/flags/flag_cn.jpg" alt="&#20013;&#25991;&#29256;" /></a></li>
+<li class=""><a href="http://www.labtestsonline.org.br/" title="em Portugu&#234;s"><img src="themes/lto/images/flags/flag_br.jpg" alt="em Portugu&#234;s" /></a></li>
+<li class=""><a href="http://labtestsonline.org.au/" title="Australian English"><img src="themes/lto/images/flags/flag_au.jpg" alt="Australian English" /></a></li>
+
+                        </ul>
+                        
+                        <div class="clear"></div>
+</div>
+                    <div class="noindex"><div id="nav">
+    <!--
+
+    Search form
+
+    -->
+    <form  id="SphinxSearchForm_SearchForm" action="http://labtestsonline.org/understanding/analytes/flu/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+	<fieldset>
+		<legend></legend>
+		
+			<div id="Search" class="field text  nolabel"><div class="middleColumn"><input type="text" class="text nolabel" id="SphinxSearchForm_SearchForm_Search" name="Search" value="" /></div></div>
+		
+		
+			<input class="action " id="SphinxSearchForm_SearchForm_action_ProcessSphinxSearchForm" type="submit" name="action_ProcessSphinxSearchForm" value="Go" title="Go" />
+		
+	</fieldset>
+</form>
+
+    
+    <div><a id="search_help" href="http://labtestsonline.org/search-help/" title="Search Help">Search<br />Help?</a></div>
+    
+
+    <form class="main_nav" id="horiz_main_nav" name="main_nav" method="post" action="">
+        <!--
+
+        Analytes
+
+        -->
+        <select id="tests" name="tests">
+            <option value="" selected="selected">Tests</option>
+            
+            	<option value="http://labtestsonline.org/map/aindex/">List of all tests and synonyms</option>
+            
+            
+                
+                    <option value="/understanding/analytes/1a111/" title="Test not listed?">Test not listed?</option>
+                
+                    <option value="/understanding/analytes/5hiaa/" title="5-HIAA">5-HIAA</option>
+                
+                    <option value="/understanding/analytes/6-17hydroxy/" title="17-Hydroxyprogesterone">17-Hydroxyprogesterone</option>
+                
+                    <option value="/understanding/analytes/tp/" title="A/G Ratio">A/G Ratio</option>
+                
+                    <option value="/understanding/analytes/a1c/" title="A1c">A1c</option>
+                
+                    <option value="/understanding/analytes/differential/" title="Absolute neutrophils">Absolute neutrophils</option>
+                
+                    <option value="/understanding/analytes/ace/" title="ACE">ACE</option>
+                
+                    <option value="/understanding/analytes/acetaminophen/" title="Acetaminophen">Acetaminophen</option>
+                
+                    <option value="/understanding/analytes/cholinesterase/" title="Acetylcholinesterase">Acetylcholinesterase</option>
+                
+                    <option value="/understanding/analytes/achr-antibody/" title="AChR Antibody">AChR Antibody</option>
+                
+                    <option value="/understanding/analytes/microalbumin/" title="ACR">ACR</option>
+                
+                    <option value="/understanding/analytes/act/" title="ACT">ACT</option>
+                
+                    <option value="/understanding/analytes/acth/" title="ACTH">ACTH</option>
+                
+                    <option value="/understanding/analytes/adenosine-deaminase/" title="Adenosine Deaminase">Adenosine Deaminase</option>
+                
+                    <option value="/understanding/analytes/adh/" title="ADH">ADH</option>
+                
+                    <option value="/understanding/analytes/afb-culture/" title="AFB Testing">AFB Testing</option>
+                
+                    <option value="/understanding/analytes/triple-screen/" title="AFP Maternal">AFP Maternal</option>
+                
+                    <option value="/understanding/analytes/afp-tumor/" title="AFP Tumor Markers">AFP Tumor Markers</option>
+                
+                    <option value="/understanding/analytes/albumin/" title="Albumin">Albumin</option>
+                
+                    <option value="/understanding/analytes/aldolase/" title="Aldolase">Aldolase</option>
+                
+                    <option value="/understanding/analytes/aldosterone/" title="Aldosterone">Aldosterone</option>
+                
+                    <option value="/understanding/analytes/alk-mutation/" title="ALK Mutation (Gene Rearrangement)">ALK Mutation (Gene Rearrangement)</option>
+                
+                    <option value="/understanding/analytes/allergy/" title="Allergy Blood Testing">Allergy Blood Testing</option>
+                
+                    <option value="/understanding/analytes/alp/" title="ALP">ALP</option>
+                
+                    <option value="/understanding/analytes/alpha1-antitrypsin/" title="Alpha-1 Antitrypsin">Alpha-1 Antitrypsin</option>
+                
+                    <option value="/understanding/analytes/alt/" title="ALT">ALT</option>
+                
+                    <option value="/understanding/analytes/ama/" title="AMA">AMA</option>
+                
+                    <option value="/understanding/analytes/aminoglycosides/" title="Amikacin">Amikacin</option>
+                
+                    <option value="/understanding/analytes/aminoglycosides/" title="Aminoglycoside Antibiotics">Aminoglycoside Antibiotics</option>
+                
+                    <option value="/understanding/analytes/ammonia/" title="Ammonia">Ammonia</option>
+                
+                    <option value="/understanding/analytes/amnio/" title="Amniocentesis">Amniocentesis</option>
+                
+                    <option value="/understanding/analytes/amylase/" title="Amylase">Amylase</option>
+                
+                    <option value="/understanding/analytes/ana/" title="ANA">ANA</option>
+                
+                    <option value="/understanding/analytes/anca/" title="ANCA">ANCA</option>
+                
+                    <option value="/understanding/analytes/androstenedione/" title="Androstenedione">Androstenedione</option>
+                
+                    <option value="/understanding/analytes/ccp/" title="Anti-CCP">Anti-CCP</option>
+                
+                    <option value="/understanding/analytes/adb/" title="Anti-DNase B">Anti-DNase B</option>
+                
+                    <option value="/understanding/analytes/anti-dsdna/" title="Anti-dsDNA">Anti-dsDNA</option>
+                
+                    <option value="/understanding/analytes/anti-lkm-1/" title="Anti-LKM-1">Anti-LKMB</option>
+                
+                    <option value="/understandi-1</option>
+                
+                    <option value="/understanding/analytes/anti-mullerian-hormone/" title="Anti-Mullerian Hormone">Anti-Mullerian Hormone</option>
+                
+                    <option value="/understanding/analytes/rbc-antibody/" title="Antibody ID, RBC">Antibody ID, RBC</option>
+                
+                    <option value="/understanding/analytes/anticentromere-antibody/" title="Anticentromere Antibody">Anticentromere Antibody</option>
+                
+                    <option value="/understanding/analytes/antiphospholipids/" title="Antiphospholipids">Antiphospholipids</option>
+                
+                    <option value="/understanding/analytes/antithrombin/" title="Antithrombin">Antithrombin</option>
+                
+                    <option value="/understanding/analytes/factor-v-and-pt20210/" title="APC Resistance">APC Resistance</option>
+                
+                    <option value="/understanding/analytes/apoa/" title="Apo A-I">Apo A-I</option>
+                
+                    <option value="/understanding/analytes/apob/" title="Apo B">Apo B</option>
+                
+                    <option value="/understanding/analytes/apoe/" title="APOE Genotyping, Alzheimer Disease">APOE Genotyping, Alzheimer Disease</option>
+                
+                    <option value="/understanding/analytes/apoe-cvd/" title="APOE Genotyping, CVD">APOE Genotyping, CVD</option>
+                
+                    <option value="/understanding/analytes/aptt/" title="aPTT">aPTT</option>
+                
+                    <option value="/understanding/analytes/arbovirus-testing/" title="Arbovirus Testing">Arbovirus Testing</option>
+                
+                    <option value="/understanding/analytes/blood-gases/" title="Arterial Blood Gases">Arterial Blood Gases</option>
+                
+                    <option value="/understanding/analytes/asca/" title="ASCA">ASCA</option>
+                
+                    <option value="/understanding/analytes/asma/" title="ASMA">ASMA</option>
+                
+                    <option value="/understanding/analytes/aso/" title="ASO">ASO</option>
+                
+                    <option value="/understanding/analytes/ast/" title="AST">AST</option>
+                
+                    <option value="/understanding/analytes/autoantibodies/" title="Autoantibodies">Autoantibodies</option>
+                
+                    <option value="/understanding/analytes/b-vitamins/" title="B Vitamins">B Vitamins</option>
+                
+                    <option value="/understanding/analytes/bcgr/" title="B-cell Ig Gene Rearrangement">B-cell Ig Gene Rearrangement</option>
+                
+                    <option value="/understanding/analytes/bcr-abl/" title="BCR-ABL1">BCR-ABL1</option>
+                
+                    <option value="/understanding/analytes/beta-2-glycoprotein-1-antibodies/" title="Beta-2 Glycoprotein 1 Antibodies">Beta-2 Glycoprotein 1 Antibodies</option>
+                
+                    <option value="/understanding/analytes/beta-microglob-kd/" title="Beta-2 Microglobulin Kidney Disease">Beta-2 Microglobulin Kidney Disease</option>
+                
+                    <option value="/understanding/analytes/beta-microglob/" title="Beta-2 Microglobulin Tumor Marker">Beta-2 Microglobulin Tumor Marker</option>
+                
+                    <option value="/understanding/analytes/co2/" title="Bicarbonate">Bicarbonate</option>
+                
+                    <option value="/understanding/analytes/bilirubin/" title="Bilirubin">Bilirubin</option>
+                
+                    <option value="/understanding/analytes/blood-culture/" title="Blood Culture">Blood Culture</option>
+                
+                    <option value="/lab/bloodbank/" title="Blood Donation">Blood Donation</option>
+                
+                    <option value="/understanding/analytes/blood-gases/" title="Blood Gases">Blood Gases</option>
+                
+                    <option value="/understanding/analytes/blood-ketones/" title="Blood Ketones">Blood Ketones</option>
+                
+                    <option value="/understanding/analytes/blood-smear/" title="Blood Smear">Blood Smear</option>
+                
+                    <option value="/lab/bloodbank/" title="Blood Transfusion">Blood Transfusion</option>
+                
+                    <option value="/understanding/analytes/blood-typing/" title="Blood Typing">Blood Typing</option>
+                
+                    <option value="/understanding/analytes/bmp/" title="BMP">BMP</option>
+                
+                    <option value="/understanding/analytes/bnp/" title="BNP">BNP</option>
+                
+                    <option value="/understanding/analytes/body-fluid/" title="Body Fluid Analysis">Body Fluid Analysis</option>
+                
+                    <option value="/understanding/analytes/bone-markers/" title="Bone Markers">Bone Markers</option>
+                
+                    <option value="/understanding/analytes/bone-marrow/" title="Bone Marrow">Bone Marrow</option>
+                
+                    <option value="/understanding/analytes/brca/" title="BRCA">BRCA</option>
+                
+                    <option value="/understanding/analytes/breast-genex/" title="Breast Cancer, Gene Expression">Breast Cancer, Gene Expression</option>
+                
+                    <option value="/understanding/analytes/bun/" title="BUN">BUN</option>
+                
+                    <option value="/understanding/analytes/anca/" title="c-ANCA">c-ANCA</option>
+                
+                    <option value="/understanding/analytes/c-peptide/" title="C-peptide">C-peptide</option>
+                
+                    <option value="/understanding/analytes/bone-markers/" title="C-telopeptide">C-telopeptide</option>
+                
+                    <option value="/understanding/analytes/cdiff/" title="C. difficile">C. difficile</option>
+                
+                    <option value="/understanding/analytes/ca15-3/" title="CA 15-3">CA 15-3</option>
+                
+                    <option value="/understanding/analytes/ca19-9/" title="CA 19-9">CA 19-9</option>
+                
+                    <option value="/understanding/analytes/ca15-3/" title="CA 27.29">CA 27.29</option>
+                
+                    <option value="/understanding/analytes/ca125/" title="CA-125">CA-125</option>
+                
+                    <option value="/understanding/analytes/theophylline/" title="Caffeine">Caffeine</option>
+                
+                    <option value="/understanding/analytes/calcitonin/" title="Calcitonin">Calcitonin</option>
+                
+                    <option value="/understanding/analytes/calcium/" title="Calcium"ffeine">Caffeine</option>
+                
+                    <option value="/understanding/analytes/calcitonin/" title="Calcitonin">Calcitonin</option>
+                
+                    <option value="/understanding/analytes/calcium/" >Calcium</option>
+                
+                    <option value="/understanding/analytes/calprotectin/" title="Calprotectin">Calprotectin</option>
+                
+                    <option value="/understanding/analytes/carbamazepine/" title="Carbamazepine">Carbamazepine</option>
+                
+                    <option value="/understanding/analytes/cardiac-biomarkers/" title="Cardiac Biomarkers">Cardiac Biomarkers</option>
+                
+                    <option value="/understanding/analytes/cardiac-risk/" title="Cardiac Risk">Cardiac Risk</option>
+                
+                    <option value="/understanding/analytes/cardiolipin/" title="Cardiolipin Antibodies">Cardiolipin Antibodies</option>
+                
+                    <option value="/understanding/analytes/catecholamine/" title="Catecholamines">Catecholamines</option>
+                
+                    <option value="/understanding/analytes/cbc/" title="CBC">CBC</option>
+                
+                    <option value="/understanding/analytes/ccp/" title="CCP Antibody">CCP Antibody</option>
+                
+                    <option value="/understanding/analytes/cd4/" title="CD4 and CD8">CD4 and CD8</option>
+                
+                    <option value="/understanding/analytes/cea/" title="CEA">CEA</option>
+                
+                    <option value=           <option value="/understanding/analytes/cd4/" title="CD4 and CD8">CD4 and CD8</option>
+                
+                    <option value="/"/understanding/analytes/celiac-disease/" title="Celiac Disease Tests">Celiac Disease Tests</option>
+                
+                    <option value="/understanding/analytes/cell-free-fetal-dna/" title="Cell-Free Fetal DNA">Cell-Free Fetal DNA</option>
+                
+                    <option value="/understanding/analytes/ceruloplasmin/" title="Ceruloplasmin">Ceruloplasmin</option>
+                
+                    <option value="/understanding/analytes/cf-gene/" title="CF Mutation Panel">CF Mutation Panel</option>
+                
+                    <option value="/understanding/analytes/bmp/" title="Chem 7">Chem 7</option>
+                
+                    <option value="/understanding/analytes/chem-panel/" title="Chemistry Panels">Chemistry Panels</option>
+                
+                    <option value="/understanding/analytes/chickenpox/" title="Chickenpox">Chickenpox</option>
+                
+                    <option value="/understanding/analytes/chlamydia/" title="Chlamydia">Chlamydia</option>
+                
+                    <option value="/understanding/analytes/chloride/" title="Chloride">Chloride</option>
+                
+                    <option value="/understanding/analytes/cholesterol/" title="Cholesterol">Cholesterol</option>
+                
+                    <option value="/understanding/analytes/cholinesterase/" title="Cholinesterase">Cholinesterase</option>
+                
+                    <option value="/understanding/analytes/chromogranin/" title="Chromogranin A">Chromogranin A</option>
+                
+                    <option value="/understanding/analytes/chromosome-analysis/" title="Chromosome Analysis">Chromosome Analysis</option>
+                
+                    <option value="/understanding/analytes/trypsin/" title="Chymotrypsin">Chymotrypsin</option>
+                
+                    <option value="/understanding/analytes/ck/" title="CK">CK</option>
+                
+                    <option value="/understanding/analytes/ckmb/" title="CK-MB">CK-MB</option>
+                
+                    <option value="/understanding/analytes/clopidogrel/" title="Clopidogrel">Clopidogrel</option>
+                
+                    <option value="/understanding/analytes/cmp/" title="CMP">CMP</option>
+                
+                    <option value="/understanding/analytes/cmv/" title="CMV">CMV</option>
+                
+                    <option value="/understanding/analytes/co2/" title="CO2, Total">CO2, Total</option>
+                
+                    <option value="/understanding/analytes/coag-cascade/" title="Coagulation Cascade">Coagulation Cascade</option>
+                
+                    <option value="/understanding/analytes/c2, Total">CO2, Total</option>
+               oagulation-factors/" title="Coagulation Factors">Coagulation Factors</option>
+                
+                    <option value="/understanding/analytes/cold-agglutinins/" title="Cold Agglutinins">Cold Agglutinins</option>
+                
+                    <option value="/understanding/analytes/complement-levels/" title="Complement">Complement</option>
+                
+                    <option value="/understanding/analytes/antiglobulin-direct/" title="Coombs, Direct">Coombs, Direct</option>
+                
+                    <option value="/understanding/analytes/antiglobulin-indirect/" title="Coombs, Indirect">Coombs, Indirect</option>
+                
+                    <option value="/understanding/analytes/copper/" title="Copper">Copper</option>
+                
+                    <option value="/understanding/analytes/cortisol/" title="Cortisol">Cortisol</option>
+                
+                    <option value="/understanding/analytes/creatinine/" title="Creatinine">Creatinine</option>
+                
+                    <option value="/understanding/analytes/creatinine-clearance/" title="Creatinine Clearance">Creatinine Clearance</option>
+                
+                    <option value="/understanding/analytes/crp/" title="CRP">CRP</option>
+                
+                    <option value="/understanding/analytes/hscrp/" title="CRP, high-sensitivity">CRP, high-sensitivity</option>
+                
+                    <option value="/understanding/analytes/cryoglobulin/" title="Cryoglobulins">Cryoglobulins</option>
+                
+                    <option value="/understanding/analytes/csf/" title="CSF Analysis">CSF Analysis</option>
+                
+                    <option value="/understanding/analytes/cyclosporine/" title="Cyclosporine">Cyclosporine</option>
+                
+                    <option value="/understanding/analytes/cystatin-c/" title="Cystatin C">Cystatin C</option>
+                
+                    <option value="/understanding/analytes/d-dimer/" title="D-dimer">D-dimer</option>
+                
+                    <option value="/understanding/analytes/dcp/" title="DCP">DCP</option>
+                
+                    <option value="/understanding/analytes/dengue/" title="Dengue Fever">Dengue Fever</option>
+                
+                    <option value="/understanding/analytes/dheas/" title="DHEAS">DHEAS</option>
+                
+                    <option value="/understanding/analytes/diabetes-auto/" title="Diabetes Autoantibodies">Diabetes Autoantibodies</option>
+                
+                    <option value="/understanding/analytes/differential/" title="Differential">Differential</option>
+                
+                    <option value="/understanding/analytes/digoxin/" title="Digoxin">Digoxin</option>
+                
+                    <option value="/understanding/analytes/lupus-anticoagulant/" title="Dilute Russell Viper Venom Test">Dilute Russell Viper Venom Test</option>
+                
+                    <option value="/understanding/analytes/antiglobulin-direct/" title="Direct Antiglobulin Test">Direct Antiglobulin Test</option>
+                
+                    <option value="/understanding/analytes/dldl/" title="Direct LDL-C">Direct LDL-C</option>
+                
+                    <option value="/understanding/analytes/drug-abuse/" title="Drugs of Abuse Testing">Drugs of Abuse Testing</option>
+                
+                    <option value="/understanding/analytes/e-coli/" title="E. coli (Shiga toxin-producing)">E. coli (Shiga toxin-producing)</option>
+                
+                    <option value="/understanding/analytes/ebv/" title="EBV Antibodies">EBV Antibodies</option>
+                
+                    <option value="/understanding/analytes/gfr/" title="eGFR">eGFR</option>
+                
+                    <option value="/understanding/analytes/egfr-her1/" title="EGFR [Her-1]">EGFR [Her-1]</option>
+                
+                    <option value="/understanding/analytes/electrolytes/" title="Electrolytes">Electrolytes</option>
+                
+                    <option value="/understanding/analytes/electrophoresis/" title="Electrophoresis">Electrophoresis</option>
+                
+                    <option value="/understanding/analytes/emergency/" title="Emergency/Overdose Drug Testing">Emergency/Overdose Drug Testing</option>
+                
+                    <option value="/understanding/analytes/ena-panel/" title="ENA Panel">ENA Panel</option>
+                
+                    <option value="/understanding/analytes/erythrop/" title="Erythropoietin">Erythropoietin</option>
+                
+                    <option value="/understanding/analytes/esr/" title="ESR">ESR</option>
+                
+                    <option value="/understanding/analytes/estrogen/" title="Estradiol">Estradiol</option>
+                
+                    <option value="/understanding/analytes/progesterone-receptors/" title="Estrogen/Progesterone Receptors">Estrogen/Progesterone Receptors</option>
+                
+                    <option value="/understanding/analytes/estrogen/" title="Estrogens">Estrogens</option>
+                
+                    <option value="/understanding/analytes/ethanol/" title="Ethanol">Ethanol</option>
+                
+                    <option value="/understanding/analytes/factor-v-and-pt20210/" title="Factor V Leiden">Factor V Leiden</option>
+                
+                    <option value="/understanding/analytes/fecal-fat/" title="Fecal Fat">Fecal Fat</option>
+                
+                    <option value="/understanding/analytes/fecal-occult-blood/" title="Fecal Occult Blood Test">Fecal Occult Blood Test</option>
+                
+                    <option value="/understanding/analytes/ferritin/" title="Ferritin">Ferritin</option>
+                
+                    <option value="/understanding/analytes/ffn/" title="fFN">fFN</option>
+                
+                    <option value="/understanding/analytes/fibrinogen/" title="Fibrinogen">Fibrinogen</option>
+                
+                    <option value="/understanding/analytes/fip1l1-pdgfra/" title="FIP1L1-PDGFRA">FIP1L1-PDGFRA</option>
+                
+                    <option value="/understanding/analytes/first-tri/" title="First Trimester Screen">First Trimester Screen</option>
+                
+                    <option value="/understanding/analytes/flu/" title="Flu Tests">Flu Tests</option>
+                
+                    <option value="/understanding/analytes/vitamin-b12/" title="Folate">Folate</option>
+                
+                    <option value="/understanding/analytes/free-light/" title="Free Light Chains">Free Light Chains</option>
+                
+                    <option value="/understanding/analytes/t3/" title="Free T3">Free T3</option>
+                
+                    <option value="/understanding/analytes/t4/" title="Free T4">Free T4</option>
+                
+                    <option value="/understanding/analytes/fructosamine/" title="Fructosamine">Fructosamine</option>
+                
+                    <option value="/understanding/analytes/fsh/" title="FSH">FSH</option>
+                
+                    <option value="/understanding/analytes/fungal/" title="Fungal Tests">Fungal Tests</option>
+                
+                    <option value="/understanding/analytes/g6pd/" title="G6PD">G6PD</option>
+                
+                    <option value="/understanding/analytes/gastrin/" title="Gastrin">Gastrin</option>
+                
+                    <option value="/understanding/analytes/cancer-therapy/" title="Genetic Tests for Targeted Cancer Therapy">Genetic Tests for Targeted Cancer Therapy</option>
+                
+                    <option value="/understanding/analytes/aminoglycosides/" title="Gentamicin">Gentamicin</option>
+                
+                    <option value="/understanding/analytes/gfr/" title="GFR">GFR</option>
+                
+                    <option value="/understanding/analytes/ggt/" title="GGT">GGT</option>
+                
+                    <option value="/understanding/analytes/glucose/" title="Glucose">Glucose</option>
+                
+                    <option value="/understanding/analytes/gonorrhea/" title="Gonorrhea">Gonorrhea</option>
+                
+                    <option value="/understanding/analytes/gram-stain/" title="Gram Stain">Gram Stain</option>
+                
+                    <option value="/understanding/analytes/group-b-strep/" title="Group B Strep Screen">Group B Strep Screen</option>
+                
+                    <option value="/understanding/analytes/growth-hormone/" title="Growth Hormone">Growth Hormone</option>
+                
+                    <option value="/understanding/analytes/h-pylori/" title="H pylori">H pylori</option>
+                
+                    <option value="/understanding/analytes/haptoglobin/" title="Haptoglobin">Haptoglobin</option>
+                
+                    <option value="/understanding/analytes/hcg/" title="hCG Pregnancy">hCG Pregnancy</option>
+                
+                    <option value="/understanding/analytes/hcg-tumor/" title="hCG Tumor Marker">hCG Tumor Marker</option>
+                
+                    <option value="/understanding/analytes/hdl/" title="HDL">HDL</option>
+                
+                    <option value="/understanding/analytes/heavy-metals/" title="Heavy Metals">Heavy Metals</option>
+                
+                    <option value="/understanding/analytes/hematocrit/" title="Hematocrit">Hematocrit</option>
+                
+                    <option value="/understanding/analytes/hemoglobin/" title="Hemoglobin">Hemoglobin</option>
+                
+                    <option value="/understanding/analytes/a1c/" title="Hemoglobin A1c">Hemoglobin A1c</option>
+                
+                    <option value="/understanding/analytes/hemoglobin-var/" title="Hemoglobinopathy Eval">Hemoglobinopathy Eval</option>
+                
+                    <option value="/understanding/analytes/heparin/" title="Heparin Anti-Xa">Heparin Anti-Xa</option>
+                
+                    <option value="/understanding/analytes/hepatitis-a/" title="Hepatitis A">Hepatitis A</option>
+                
+                    <option value="/understanding/analytes/hepatitis-b/" title="Hepatitis B">Hepatitis B</option>
+                
+                    <option value="/understanding/analytes/hepatitis-c/" title="Hepatitis C">Hepatitis C</option>
+                
+                    <option value="/understanding/analytes/hepatitis-panel/" title="Hepatitis Panel">Hepatitis Panel</option>
+                
+                    <option value="/understanding/analytes/her2neu/" title="HER2/neu">HER2/neu</option>
+                
+                    <option value="/understanding/analytes/herpes/" title="Herpes">Herpes</>Hepatitis Panel</option>
+                
+                    <option value="/understanding/analytes/her2neu/" title="HER2/neu">HER2/neu</option>
+                
+                option>
+                
+                    <option value="/understanding/analytes/histamine/" title="Histamine">Histamine</option>
+                
+                    <option value="/understanding/analytes/histone-antibody/" title="Histone Antibody">Histone Antibody</option>
+                
+                    <option value="/understanding/analytes/heparin-induced-thrombocytopenia-antibody/" title="HIT Antibody">HIT Antibody</option>
+                
+                    <option value="/understanding/analytes/hiv-antibody/" title="HIV Antibody">HIV Antibody</option>
+                
+                    <option value="/understanding/analytes/hiv-genotypic/" title="HIV Genotypic Resistance">HIV Genotypic Resistance</option>
+                
+                    <option value="/understanding/analytes/viral-load/" title="HIV Viral Load">HIV Viral Load</option>
+                
+                    <option value="/understanding/analytes/hla-testing/" title="HLA Testing">HLA Testing</option>
+                
+                    <option value="/understanding/analytes/hla-b27/" title="HLA-B27">HLA-B27</option>
+                
+                    <option value="/understanding/analytes/home-tests/" title="Home Tests">Home Tests</option>
+                
+                    <option value="/understanding/analytes/homocysteine/" title="Homocysteine">Homocysteine</option>
+                
+                    <option value="/understanding/analytes/hpv/" title="HPV">HPV</option>
+                
+                    <option value="/understanding/analytes/hscrp/" title="hs-CRP">hs-CRP</option>
+                
+                    <option value="/understanding/analytes/htlv/" title="HTLV">HTLV</option>
+                
+                    <option value="/understanding/analytes/total-ige/" title="IgE, Total">IgE, Total</option>
+                
+                    <option value="/understanding/analytes/igf1/" title="IGF-1">IGF-1</option>
+                
+                    <option value="/understanding/analytes/ima/" title="IMA">IMA</option>
+                
+                    <option value="/understanding/analytes/electrophoresis/" title="Immunoelectrophoresis">Immunoelectrophoresis</option>
+                
+                    <option value="/understanding/analytes/immunoglobulins/" title="Immunoglobulins">Immunoglobulins</option>
+                
+                    <option value="/understanding/analytes/immunophenotyping/" title="Immunophenotyping">Immunophenotyping</option>
+                
+                    <option value="/understanding/analytes/flu/" title="Influenza Tests">Influenza Tests</option>
+                
+                    <option value="/understanding/analytes/triple-screen/" title="Inhibin A">Inhibin A</option>
+                
+                    <option value="/understanding/analytes/pt/" title="INR">INR</option>
+                
+                    <option value="/understanding/analytes/insulin/" title="Insulin">Insulin</option>
+                
+                    <option value="/understanding/analytes/interleukin-6/" title="Interleukin-6">Interleukin-6</option>
+                
+                    <option value="/understanding/analytes/intrinsic-factor-antibody/" title="Intrinsic Factor Antibody">Intrinsic Factor Antibody</option>
+                
+                    <option value="/understanding/analytes/calcium/" title="Ionized Calcium">Ionized Calcium</option>
+                
+                    <option value="/understanding/analytes/iron/" title="Iron Tests">Iron Tests</option>
+                
+                    <option value="/understanding/analytes/serum-iron/" title="Iron, serum">Iron, serum</option>
+                
+                    <option value="/understanding/analytes/jak2/" title="JAK2 Mutation">JAK2 Mutation</option>
+                
+                    <option value="/understanding/analytes/free-light/" title="Kappa/Lambda Ratio">Kappa/Lambda Ratio</option>
+                
+                    <option value="/understanding/analytes/chromosome-analysis/" title="Karyotyping">Karyotyping</option>
+                
+                    <option value="/understanding/analytes/blood-ketones/" title="Ketones, blood">Ketones, blood</option>
+                
+                    <option value="/understanding/analytes/kidney-stone-analysis/" title="Kidney Stone Analysis">Kidney Stone Analysis</option>
+                
+                    <option value="/understanding/analytes/kidney-stone-risk/" title="Kidney Stone Risk Panel">Kidney Stone Risk Panel</option>
+                
+                    <option value="/understanding/analytes/kras-mutation/" title="KRAS Mutation">KRAS Mutation</option>
+                
+                    <option value="/understanding/analytes/lactate/" title="Lactate">Lactate</option>
+                
+                    <option value="/understanding/analytes/lactoferrin/" title="Lactoferrin">Lactoferrin</option>
+                
+                    <option value="/understanding/analytes/lactose-tolerance/" title="Lactose Tolerance Tests">Lactose Tolerance Tests</option>
+                
+                    <option value="/understanding/analytes/ldh/" title="LD">LD</option>
+                
+                    <option value="/understanding/analytes/ldl/" title="LDL">LDL</option>
+                
+                    <option value="/understanding/analytes/lipoprotein-subfractions/" title="LDL Particle Testing">LDL Particle Testing</option>
+                
+                    <option value="/understanding/analytes/lead/" title="Lead">Lead</option>
+                
+                    <option value="/understanding/analytes/legionella/" title="Legionella">Legionella</option>
+                
+                    <option value="/understanding/analytes/leptin/" title="Leptin">Leptin</option>
+                
+                    <option value="/understanding/analytes/levetiracetam/" title="Levetiracetam">Levetiracetam</option>
+                
+                    <option value="/understanding/analytes/lh/" title="LH">LH</option>
+                
+                    <option value="/understanding/analytes/lipase/" title="Lipase">Lipase</option>
+                
+                    <option value="/understanding/analytes/lipid/" title="Lipid Profile">Lipid Profile</option>
+                
+                    <option value="/understanding/analytes/lithium/" title="Lithium">Lithium</option>
+                
+                    <option value="/understanding/analytes/liver-panel/" title="Liver Panel">Liver Panel</option>
+                
+                    <option value="/understanding/analytes/lp-a/" title="Lp(a)">Lp(a)</option>
+                
+                    <option value="/understanding/analytes/lp-pla2/" title="Lp-PLA2">Lp-PLA2</option>
+                
+                    <option value="/understanding/analytes/lupus-anticoagulant/" title="Lupus Anticoagulant Testing">Lupus Anticoagulant Testing</option>
+                
+                    <option value="/understanding/analytes/lyme/" title="Lyme Disease">Lyme Disease</option>
+                
+                    <option value="/understanding/analytes/magnesium/" title="Magnesium">Magnesium</option>
+                
+                    <option value="/understanding/analytes/rdw/" title="MCH">MCH</option>
+                
+                    <option value="/understanding/analytes/rdw/" title="MCHC">MCHC</option>
+                
+                    <option value="/understanding/analytes/rdw/" title="MCV">MCV</option>
+                
+                    <option value="/understanding/analytes/measles/" title="Measles">Measles</option>
+                
+                    <option value="/understanding/analytes/mercury/" title="Mercury">Mercury</option>
+                
+                    <option value="/understanding/analytes/metanephrines/" title="Metanephrines">Metanephrines</option>
+                
+                    <option value="/understanding/analytes/methotrexate/" title="Methotrexate">Methotrexate</option>
+                
+                    <option value="/understanding/analytes/microalbumin/" title="Microalbumin">Microalbumin</option>
+                
+                    <option value="/understanding/analytes/mma/" title="MMA">MMA</option>
+                
+                    <option value="/understanding/analytes/mono/" title="Mono Test">Mono Test</option>
+                
+                    <option value="/understanding/analytes/mpa/" title="MPA">MPA</option>
+                
+                    <option value="/understanding/analytes/mrsa/" title="MRSA Screening">MRSA Screening</option>
+                
+                    <option value="/understanding/analytes/mthfr/" title="MTHFR Mutation">MTHFR Mutation</option>
+                
+                    <option value="/understanding/analytes/measles/" title="Mumps">Mumps</option>
+                
+                    <option value="/understanding/analytes/mycoplasma/" title="Mycoplasma">Mycoplasma</option>
+                
+                    <option value="/understanding/analytes/myoglobin/" title="Myoglobin">Myoglobin</option>
+                
+                    <option value="/understanding/analytes/nicotine/" title="Nicotine / Cotinine">Nicotine / Cotinine</option>
+                
+                    <option value="/understanding/analytes/cell-free-fetal-dna/" title="NIPT">NIPT</option>
+                
+                    <option value="/understanding/analytes/bnp/" title="NT-proBNP">NT-proBNP</option>
+                
+                    <option value="/understanding/analytes/op/" title="O&amp;P">O&amp;P</option>
+                
+                    <option value="/understanding/analytes/osmolality/" title="Osmolality">Osmolality</option>
+                
+                    <option value="/understanding/analytes/anca/" title="p-ANCA">p-ANCA</option>
+                
+                    <option value="/understanding/analytes/bone-markers/" title="P1NP">P1NP</option>
+                
+                    <option value="/understanding/analytes/p24/" title="p24">p24</option>
+                
+                    <option value="/understanding/analytes/pap/" title="Pap Smear">Pap Smear</option>
+                
+                    <option value="/understanding/analytes/first-tri/" title="PAPP-A">PAPP-A</option>
+                
+                    <option value="/understanding/analytes/parietal-cell-antibody/" title="Parietal Cell Antibody">Parietal Cell Antibody</option>
+                
+                    <option value="/understanding/analytes/parvo/" title="Parvovirus B19">Parvovirus B19</option>
+                
+                    <option value="/understanding/analytes/pericardial/" title="Pericardial Fluid Analysis">Pericardial Fluid Analysis</option>
+                
+                    <option value="/understanding/analytes/peritoneal/" title="Peritoneal Fluid Analysis">Peritoneal Fluid Analysis</option>
+                
+                    <option value="/understandricardial Fluid Analysis</option>
+                
+                    <option value="/understanding/analytes/peritoneal/" title="Peritoneal Fluid Analysis">Peritoneal Fluid Analysing/analytes/pertussis/" title="Pertussis">Pertussis</option>
+                
+                    <option value="/understanding/analytes/pharmacogenetic-tests/" title="Pharmacogenetic Tests">Pharmacogenetic Tests</option>
+                
+                    <option value="/understanding/analytes/phenobarbital/" title="Phenobarbital">Phenobarbital</option>
+                
+                    <option value="/understanding/analytes/phenytoin/" title="Phenytoin">Phenytoin</option>
+                
+                    <option value="/understanding/analytes/phosphorus/" title="Phosphorus">Phosphorus</option>
+                
+                    <option value="/understanding/analytes/plasma-metanephrine/" title="Plasma Metanephrines">Plasma Metanephrines</option>
+                
+                    <option value="/understanding/analytes/platelet/" title="Platelet Count">Platelet Count</option>
+                
+                    <option value="/understanding/analytes/platelet-function/" title="Platelet Function Tests">Platelet Function Tests</option>
+                
+                    <option value="/understanding/analytes/pleural/" title="Pleural Fluid Analysis">Pleural Fluid Analysis</option>
+                
+                    <option value="/understanding/analytes/pml-rara/" title="PML-RARA">PML-RARA</option>
+                
+                    <optionanding/analytes/pleural/" title="Pleural Fluid Analysis">Pleural Fluid Analysis</option>
+                
+                    <option value="/understa value="/understanding/analytes/porphyrins/" title="Porphyrins">Porphyrins</option>
+                
+                    <option value="/understanding/analytes/potassium/" title="Potassium">Potassium</option>
+                
+                    <option value="/understanding/analytes/prealbumin/" title="Prealbumin">Prealbumin</option>
+                
+                    <option value="/understanding/analytes/hcg/" title="Pregnancy Test">Pregnancy Test</option>
+                
+                    <option value="/understanding/analytes/pregnenolone/" title="Pregnenolone">Pregnenolone</option>
+                
+                    <option value="/understanding/analytes/procalcitonin/" title="Procalcitonin">Procalcitonin</option>
+                
+                    <option value="/understanding/analytes/progesterone/" title="Progesterone">Progesterone</option>
+                
+                    <option value="/understanding/analytes/progesterone-receptors/" title="Progesterone Receptors">Progesterone Receptors</option>
+                
+                    <option value="/understanding/analytes/prolactin/" title="Prolactin">Prolactin</option>
+                
+                    <option value="/understanding/analytes/protein-c-and-s/" title="Protein C">Protein C</option>
+                
+                    <option value="/understanding/analytes/electrophoresis/" title="Protein Electrophoresis">Protein Electrophoresis</option>
+                
+                    <option value="/understanding/analytes/protein-c-and-s/" title="Protein S">Protein S</option>
+                
+                    <option value="/understanding/analytes/psa/" title="PSA">PSA</option>
+                
+                    <option value="/understanding/analytes/psen1/" title="PSEN1">PSEN1</option>
+                
+                    <option value="/understanding/analytes/cholinesterase/" title="Pseudocholinesterase">Pseudocholinesterase</option>
+                
+                    <option value="/understanding/analytes/pt/" title="PT">PT</option>
+                
+                    <option value="/understanding/analytes/factor-v-and-pt20210/" title="PT 20210">PT 20210</option>
+                
+                    <option value="/understanding/analytes/pth/" title="PTH">PTH</option>
+                
+                    <option value="/understanding/analytes/aptt/" title="PTT">PTT</option>
+                
+                    <option value="/understanding/analytes/triple-screen/" title="Quad Screen">Quad Screen</option>
+                
+                    <option value="/understanding/analytes/rbc/" title="RBC">RBC</option>
+                
+                    <option value="/understanding/analytes/rbc-antibody/" title="RBC Antibody ID"Quad Screen">Quad Screen</option>
+           >RBC Antibody ID</option>
+                
+                    <option value="/understanding/analytes/antiglobulin-indirect/" title="RBC Antibody Screen">RBC Antibody Screen</option>
+                
+                    <option value="/understanding/analytes/rdw/" title="RDW">RDW</option>
+                
+                    <option value="/understanding/analytes/aldosterone/" title="Renin">Renin</option>
+                
+                    <option value="/understanding/analytes/reticulocyte/" title="Reticulocyte Count">Reticulocyte Count</option>
+                
+                    <option value="/understanding/analytes/rheumatoid/" title="Rheumatoid Factor">Rheumatoid Factor</option>
+                
+                    <option value="/understanding/analytes/rsv/" title="RSV">RSV</option>
+                
+                    <option value="/understanding/analytes/rubella/" title="Rubella">Rubella</option>
+                
+                    <option value="/understanding/analytes/salicylates/" title="Salicylates">Salicylates</option>
+                
+                    <option value="/understanding/analytes/triple-screen/" title="Second Trimester Screen">Second Trimester Screen</option>
+                
+                    <option value="/understanding/analytes/semen/" title="Semen Analysis">Semen Analysis</option>
+                
+                    <option value="/understanding/analytes/susceptibility/" title="Sensitivity Testing">Sensitivity Testing</option>
+                
+                    <option value="/understanding/analytes/serotonin/" title="Serotonin">Serotonin</option>
+                
+                    <option value="/understanding/analytes/serum-iron/" title="Serum Iron">Serum Iron</option>
+                
+                    <option value="/understanding/analytes/shbg/" title="SHBG">SHBG</option>
+                
+                    <option value="/understanding/analytes/chickenpox/" title="Shingles">Shingles</option>
+                
+                    <option value="/understanding/analytes/sickle/" title="Sickle Cell Tests">Sickle Cell Tests</option>
+                
+                    <option value="/understanding/analytes/sirolimus/" title="Sirolimus">Sirolimus</option>
+                
+                    <option value="/understanding/analytes/asma/" title="Smooth Muscle Antibody">Smooth Muscle Antibody</option>
+                
+                    <option value="/understanding/analytes/smrp/" title="SMRP">SMRP</option>
+                
+                    <option value="/understanding/analytes/sodium/" title="Sodium">Sodium</option>
+                
+                    <option value="/understanding/analytes/soluble-transferrin-receptor/" title="Soluble Transferrin Receptor">Soluble Transferrin Receptor</option>
+                
+                    <option value="/understanding/analytes/sputum-culture/" title="Sputum Culture">Sputum Culture</option>
+                
+                    <option value="/understanding/analytes/stool-culture/" title="Stool Culture">Stool Culture</option>
+                
+                    <option value="/understanding/analytes/strep/" title="Strep Throat Test">Strep Throat Test</option>
+                
+                    <option value="/understanding/analytes/susceptibility/" title="Susceptibility Testing">Susceptibility Testing</option>
+                
+                    <option value="/understanding/analytes/sweat-chloride/" title="Sweat Test">Sweat Test</option>
+                
+                    <option value="/understanding/analytes/synovial/" title="Synovial Fluid Analysis">Synovial Fluid Analysis</option>
+                
+                    <option value="/understanding/analytes/syphilis/" title="Syphilis">Syphilis</option>
+                
+                    <option value="/understanding/analytes/tcgr/" title="T-Cell Receptor Gene Rearrangement">T-Cell Receptor Gene Rearrangement</option>
+                
+                    <option value="/understanding/analytes/t3/" title="T3">T3</option>
+                
+                    <option value="/understanding/analytes/t4/" title="T4">T4</option>
+                
+                    <option value="/understanding/analytes/tacrolimus/" title="Tacrolimus">Tacrolimus</option>
+                
+                    <option value="/understanding/analytes/tau/" title="Tau/Aß42">Tau/Aß42</option>
+                
+                    <option value="/understanding/analytes/tb-skin/" title="TB Screening Tests">TB Screening Tests</option>
+                
+                    <option value="/understanding/analytes/testosterone/" title="Testosterone">Testosterone</option>
+                
+                    <option value="/understanding/analytes/theophylline/" title="Theophylline">Theophylline</option>
+                
+                    <option value="/understanding/analytes/therapeutic-drug/" title="Therapeutic Drug Monitoring">Therapeutic Drug Monitoring</option>
+                
+                    <option value="/understanding/analytes/strep/" title="Throat Culture">Throat Culture</option>
+                
+                    <option value="/understanding/analytes/thrombin-time/" title="Thrombin Time">Thrombin Time</option>
+                
+                    <option value="/understanding/analytes/thyroglobulin/" title="Thyroglobulin">Thyroglobulin</option>
+                
+                    <option value="/understanding/analytes/thyroid-antibodies/" title="Thyroid Antibodies">Thyroid Antibodies</option>
+                
+                    <option value="/understanding/analytes/thyroid-panel/" title="Thyroid Panel">Thyroid Panel</option>
+                
+                    <option value="/understanding/analytes/tibc/" title="TIBC">TIBC</option>
+                
+                    <option value="/understanding/analytes/aminoglycosides/" title="Tobramycin">Tobramycin</option>
+                
+                    <option value="/understanding/analytes/torch/" title="TORCH">TORCH</option>
+                
+                    <option value="/understanding/analytes/tp/" title="Total Protein">Total Protein</option>
+                
+                    <option value="/understanding/analytes/toxoplasmosis/" title="Toxoplasmosis">Toxoplasmosis</option>
+                
+                    <option value="/understanding/analytes/tpmt/" title="TPMT">TPMT</option>
+                
+                    <option value="/understanding/analytes/trace-minerals/" title="Trace Minerals">Trace Minerals</option>
+                
+                    <option value="/understanding/analytes/tibc/" title="Transferrin">Transferrin</option>
+                
+                    <option value="/understanding/analytes/trichomonas/" title="Trichomonas">Trichomonas</option>
+                
+                    <option value="/understanding/analytes/triglycerides/" title="Triglycerides">Triglycerides</option>
+                
+                    <option value="/understanding/analytes/triple-screen/" title="Triple Screen">Triple Screen</option>
+                
+                    <option value="/understanding/analytes/troponin/" title="Troponins">Troponins</option>
+                
+                    <option value="/understanding/analytes/trypsin/" title="Trypsin">Trypsin</option>
+                
+                    <option value="/understanding/analytes/trypsinogen/" title="Trypsinogen">Trypsinogen</option>
+                
+                    <option value="/understanding/analytes/tryptase/" title="Tryptase">Tryptase</option>
+                
+                    <option value="/understanding/analytes/tsh/" title="TSH">TSH</option>
+                
+                    <option value="/understanding/analytes/celiac-disease/" title="tTG Antibody">tTG Antibody</option>
+                
+                    <option value="/understanding/analytes/tumor-markers/" title="Tumor Markers">Tumor Markers</option>
+                
+                    <option value="/understanding/analytes/tibc/" title="UIBC">UIBC</option>
+                
+                    <option value="/understanding/analytes/urine-protein/" title="UP/CR">UP/CR</option>
+                
+                    <option value="/understanding/analytes/uric-acid/" title="Uric Acid">Utitle="UIBC">UIBC</option>
+                
+                    <option value="/understanding/analytes/urine-protein/" title="UP/CR">UP/Cric Acid</option>
+                
+                    <option value="/understanding/analytes/urinalysis/" title="Urinalysis">Urinalysis</option>
+                
+                    <option value="/understanding/analytes/microalbumin/" title="Urine Albumin">Urine Albumin</option>
+                
+                    <option value="/understanding/analytes/urine-culture/" title="Urine Culture">Urine Culture</option>
+                
+                    <option value="/understanding/analytes/urine-metanephrine/" title="Urine Metanephrines">Urine Metanephrines</option>
+                
+                    <option value="/understanding/analytes/urine-protein/" title="Urine Protein">Urine Protein</option>
+                
+                    <option value="/understanding/analytes/valproic-acid/" title="Valproic Acid">Valproic Acid</option>
+                
+                    <option value="/understanding/analytes/vancomycin/" title="Vancomycin">Vancomycin</option>
+                
+                    <option value="/understanding/analytes/vitamin-a/" title="Vitamin A">Vitamin A</option>
+                
+                    <option value="/understanding/analytes/vitamin-b12/" title="Vitamin B12">Vitamin B12</option>
+                
+                    <option value="/understanding/analytes/vitamin-d/" title="Vitamin D">Vitamin D</option>
+                
+                    <option value="/understanding/analytes/vitamin-k/" title="Vitamin K">Vitamin K</option>
+                
+                    <option value="/understanding/analytes/vldl/" title="VLDL">VLDL</option>
+                
+                    <option value="/understanding/analytes/vma/" title="VMA">VMA</option>
+                
+                    <option value="/understanding/analytes/vwf/" title="von Willebrand Factor">von Willebrand Factor</option>
+                
+                    <option value="/understanding/analytes/warfarin-sensitivity-testing/" title="Warfarin Sensitivity Testing">Warfarin Sensitivity Testing</option>
+                
+                    <option value="/understanding/analytes/wbc/" title="WBC">WBC</option>
+                
+                    <option value="/understanding/analytes/differential/" title="WBC Differential">WBC Differential</option>
+                
+                    <option value="/understanding/analytes/west-nile/" title="West Nile Virus">West Nile Virus</option>
+                
+                    <option value="/understanding/analytes/pertussis/" title="Whooping Cough">Whooping Cough</option>
+                
+                    <option value="/understanding/analytes/widal/" title="Widal Test">Widal Test</option>
+                
+                    <option value="/understanding/analytes/wound-culture/" title="Wound Culture">Wound Culture</option>
+                
+                    <option value="/understanding/analytes/xylose-absorption-test/" title="Xylose Absorption">Xylose Absorption</option>
+                
+                    <option value="/understanding/analytes/zpp/" title="ZPP">ZPP</option>
+                
+            
+        </select>
+        <!--
+
+        Conditions and diseases
+
+        -->
+        <select id="conditions_diseases" name="conditions_diseases">
+            <option value="" selected="selected">Conditions/Diseases</option>
+            
+            	<option value="http://labtestsonline.org/map/cindex/">List of all conditions/diseases</option>
+            
+            
+                
+                    <option value="/understanding/conditions/1a111/" title="Condition not listed?">Condition not listed?</option>
+                
+                    <option value="/understanding/conditions/acidosis/" title="Acidosis/Alkalosis">Acidosis/Alkalosis</option>
+                
+                    <option value="/understanding/conditions/heart-attack/" title="ACS">ACS</option>
+                
+                    <option value="/understanding/conditions/addisons-disease/" title="Addison Disease">Addison Disease</option>
+                
+                    <option value="/understanding/conditions/addisons-disease/" title="Adrenal Insufficiency">Adrenal Insufficiency</option>
+                
+                    <option value="/understanding/conditions/alcoholism/" title="Alcoholism">Alcoholism</option>
+                
+                    <option value="/understanding/conditions/allergies/" title="Allergies">Allergies</option>
+                
+                    <option value="/understanding/conditions/alzheimers/" title="Alzheimer Disease">Alzheimer Disease</option>
+                
+                    <option value="/understanding/conditions/anemia/" title="Anemia">Anemia</option>
+                
+                    <option value="/understanding/conditions/angina/" title="Angina">Angina</option>
+                
+                    <option value="/understanding/conditions/ankylosing/" title="Ankylosing Spondylitis">Ankylosing Spondylitis</option>
+                
+                    <option value="/understanding/conditions/anthrax/" title="Anthrax">Anthrax</option>
+                
+                    <option value="/understanding/conditions/antiphospholipid/" title="Antiphospholipid Syndrome">Antiphospholipid Syndrome</option>
+                
+                    <option value="/understanding/conditions/arthritis/" title="Arthritis">Arthritis</option>
+                
+                    <option value="/understanding/conditions/asthma/" title="Asthma">Asthma</option>
+                
+                    <option value="/understanding/conditions/autoimmune/" title="Autoimmune Disorders">Autoimmune Disorders</option>
+                
+                    <option value="/understanding/conditions/bioterrorism/" title="Bioterrorism Agents">Bioterrorism Agents</option>
+                
+                    <option value="/understanding/conditions/bleeding-disorders/" title="Bleeding Disorders">Bleeding Disorders</option>
+                
+                    <option value="/understanding/conditions/bone-marrow-disorders/" title="Bone Marrow Disorders">Bone Marrow Disorders</option>
+                
+                    <option value="/understanding/conditions/bph/" title="BPH">BPH</option>
+                
+                    <option value="/understanding/conditions/breast/" title="Breast Cancer">Breast Cancer</option>
+                
+                    <option value="/understanding/conditions/cah/" title="CAH">CAH</option>
+                
+                    <option value="/understanding/conditions/celiac/" title="Celiac Disease">Celiac Disease</option>
+                
+                    <option value="/understanding/conditions/cervical/" title="Cervical Cancer">Cervical Cancer</option>
+                
+                    <option value="/understanding/conditions/chf/" title="CHF">CHF</option>
+                
+                    <option value="/understanding/conditions/std/" title="Chlamydia">Chlamydia</option>
+                
+                    <option value="/understanding/conditions/cfs/" title="Chronic Fatigue Syndrome">Chronic Fatigue Syndrome</option>
+                
+                    <option value="/understanding/conditions/cirrhosis/" title="Cirrhosis">Cirrhosis</option>
+                
+                    <option value="/understanding/conditions/colon/" title="Colon Cancer">Colon Cancer</option>
+                
+                    <option value="/understanding/conditions/conn/" title="Conn Syndrome">Conn Syndrome</option>
+                
+                    <option value="/understanding/conditions/cushing/" title="Cushing Syndrome">Cushing Syndrome</option>
+                
+                    <option value="/understanding/conditions/cvd/" title="CVD">CVD</option>
+                
+                    <option value="/understanding/conditions/cystic-fibrosis/" title="Cystic Fibrosis">Cystic Fibrosis</option>
+                
+                    <option value="/understanding/conditions/dehydration/" title="Dehydration">Dehydration</option>
+                
+                    <option value="/understanding/conditions/diabetes/" title="Diabetes">Diabetes</option>
+                
+                    <option value="/understanding/conditions/diarrhea/" title="Diarrhea">Diarrhea</option>
+                
+                    <option value="/understanding/conditions/dic/" title="DIC">DIC</option>
+                
+                    <option value="/understanding/conditions/down-syndrome/" title="Down Syndrome">Down Syndrome</option>
+                
+                    <option value="/understanding/conditions/meningitis/" title="Encephalitis">Encephalitis</option>
+                
+                    <option value="/understanding/conditions/endocrine/" title="Endocrine Syndromes">Endocrine Syndromes</option>
+                
+                    <option value="/understanding/conditions/epilepsy/" title="Epilepsy">Epilepsy</option>
+                
+                    <option value="/understanding/conditions/hypercoagulable-disorders/" title="Excessive Clotting Disorders">Excessive Clotting Disorders</option>
+                
+                    <option value="/understanding/conditions/fibromyalgia/" title="Fibromyalgia">Fibromyalgia</option>
+                
+                    <option value="/understanding/conditions/vitaminb12/" title="Folate Deficiency">Folate Deficiency</option>
+                
+                    <option value="/understanding/conditions/food-and-waterborne-illness/" title="Food and Waterborne Illness">Food and Waterborne Illness</option>
+                
+                    <option value="/understanding/conditions/funga       
+                    <ol/" title="Fungal Infections">Fungal Infections</option>
+                
+                    <option value="/understanding/conditions/std/" title="Gonorrhea">Gonorrhea</option>
+                
+                    <option value="/understanding/conditions/gout/" title="Gout">Gout</option>
+                
+                    <option value="/understanding/conditions/graves/" title="Graves Disease">Graves Disease</option>
+                
+                    <option value="/understanding/conditions/guillain/" title="Guillain-Barre Syndrome">Guillain-Barre Syndrome</option>
+                
+                    <option value="/understanding/conditions/hashimoto/" title="Hashimoto Thyroiditis">Hashimoto Thyroiditis</option>
+                
+                    <option value="/understanding/conditions/heart-attack/" title="Heart Attack">Heart Attack</option>
+                
+                    <option value="/understanding/conditions/heart/" title="Heart Disease">Heart Disease</option>
+                
+                    <option value="/understanding/conditions/hematuria/" title="Hematuria">Hematuria</option>
+                
+                    <option value="/understanding/conditions/hemochrom/" title="Hemochromatosis">Hemochromatosis</option>
+                
+                    <option value="/understanding/conditions/hemoglobin-abnormalities/" title="Hemogl              
+                    <option value="/understanding/conditions/hemochrom/" title="Hemochromatosis">Hemochromatosis</option>
+             obin Abnormalities">Hemoglobin Abnormalities</option>
+                
+                    <option value="/understanding/conditions/hep/" title="Hepatitis">Hepatitis</option>
+                
+                    <option value="/understanding/conditions/std/" title="Herpes">Herpes</option>
+                
+                    <option value="/understanding/conditions/hiv/" title="HIV">HIV</option>
+                
+                    <option value="/understanding/conditions/std/" title="HPV">HPV</option>
+                
+                    <option value="/understanding/conditions/huntington-disease/" title="Huntington Disease">Huntington Disease</option>
+                
+                    <option value="/understanding/conditions/hypertension/" title="Hypertension">Hypertension</option>
+                
+                    <option value="/understanding/conditions/hyperthyroidism/" title="Hyperthyroidism">Hyperthyroidism</option>
+                
+                    <option value="/understanding/conditions/hypothyroidism/" title="Hypothyroidism">Hypothyroidism</option>
+                
+                    <option value="/understanding/conditions/infertility/" title="Infertility">Infertility</option>
+                
+                    <option value="/understanding/conditions/inflammatory-bowel/" title="Inflammatory Bowel Disease">Inflammatory Bowel Disease</option>
+                
+                    <option value="/understanding/conditions/influenza/" title="Influenza">Influenza</option>
+                
+                    <option value="/understanding/conditions/insulin-resistance/" title="Insulin Resistance">Insulin Resistance</option>
+                
+                    <option value="/understanding/conditions/jaundice/" title="Jaundice">Jaundice</option>
+                
+                    <option value="/understanding/conditions/jra/" title="Juvenile Rheumatoid Arthritis">Juvenile Rheumatoid Arthritis</option>
+                
+                    <option value="/understanding/conditions/kidney/" title="Kidney Disease">Kidney Disease</option>
+                
+                    <option value="/understanding/conditions/lactose-intolerance/" title="Lactose Intolerance">Lactose Intolerance</option>
+                
+                    <option value="/understanding/conditions/leadpoison/" title="Lead Poisoning">Lead Poisoning</option>
+                
+                    <option value="/understanding/conditions/leukemia/" title="Leukemia">Leukemia</option>
+                
+                    <option value="/understanding/conditions/liver-disease/" title="Liver Disease">Liver Disease</option>
+                
+                    <option value="/understanding/conditions/lung-cancer/" title="Lung Cancer">Lung Cancer</option>
+                
+                    <option value="/understanding/conditions/lung-diseases/" title="Lung Diseases">Lung Diseases</option>
+                
+                    <option value="/understanding/conditions/lupus/" title="Lupus">Lupus</option>
+                
+                    <option value="/understanding/conditions/lyme/" title="Lyme Disease">Lyme Disease</option>
+                
+                    <option value="/understanding/conditions/lymphoma/" title="Lymphoma">Lymphoma</option>
+                
+                    <option value="/understanding/conditions/malabsorption/" title="Malabsorption">Malabsorption</option>
+                
+                    <option value="/understanding/conditions/malaria/" title="Malaria">Malaria</option>
+                
+                    <option value="/understanding/conditions/malnutrition/" title="Malnutrition">Malnutrition</option>
+                
+                    <option value="/understanding/conditions/meningitis/" title="Meningitis and Encephalitis">Meningitis and Encephalitis</option>
+                
+                    <option value="/understanding/conditions/menopause/" title="Menopause">Menopause</option>
+                
+                    <option value="/understanding/conditions/metabolic/" title="Metabolic Syndrome">Metabolic Syndrome</option>
+                
+                    <option value="/understanding/conditions/staph/" title="MRSA">MRSA</option>
+                
+                    <option value="/understanding/conditions/mult-myeloma/" title="Multiple Myeloma">Multiple Myeloma</option>
+                
+                    <option value="/understanding/conditions/multiplesclerosis/" title="Multiple Sclerosis">Multiple Sclerosis</option>
+                
+                    <option value="/understanding/conditions/myasthenia-gravis/" title="Myasthenia Gravis">Myasthenia Gravis</option>
+                
+                    <option value="/understanding/conditions/myelodysplastic-syndrome/" title="Myelodysplastic Syndrome">Myelodysplastic Syndrome</option>
+                
+                    <option value="/understanding/conditions/myelopro-disorders/" title="Myeloproliferative Neoplasms">Myeloproliferative Neoplasms</option>
+                
+                    <option value="/understanding/conditions/neural-tube/" title="Neural Tube Defects">Neural Tube Defects</option>
+                
+                    <option value="/understanding/conditions/neuropathy/" title="Neuropathy">Neuropathy</option>
+                
+                    <option value="/understanding/conditions/ntm/" title="Nontuberculous Mycobacteria">Nontuberculous Mycobacteria</option>
+                
+                    <option value="/understanding/conditions/osteo/" title="Osteoarthritis">Osteoarthritis</option>
+                
+                    <option value="/understanding/conditions/osteoporosis/" title="Osteoporosis">Osteoporosis</option>
+                
+                    <option value="/understanding/conditions/ovarian/" title="Ovarian Cancer">Ovarian Cancer</option>
+                
+                    <option value="/understanding/conditions/pancreatic-cancer/" title="Pancreatic Cancer">Pancreatic Cancer</option>
+                
+                    <option value="/understanding/conditions/pancreatic-diseases/" title="Pancreatic Diseases">Pancreatic Diseases</option>
+                
+                    <option value="/understanding/conditions/pancreatic-insuf/" title="Pancreatic Insufficiency">Pancreatic Insufficiency</option>
+                
+                    <option value="/understanding/conditions/pancreatitis/" title="Pancreatitis">Pancreatitis</option>
+                
+                    <option value="/understanding/conditions/parathyroid-diseases/" title="Parathyroid Diseases">Parathyroid Diseases</option>
+                
+                    <option value="/understanding/conditions/pcos/" title="PCOS">PCOS</option>
+                
+                    <option value="/understanding/conditions/peptic-ulcer/" title="Peptic Ulcer">Peptic Ulcer</option>
+                
+                    <option value="/understanding/conditions/pid/" title="PID">PID</option>
+                
+                    <option value="/understanding/conditions/pituitary/" title="Pituitary Disorders">Pituitary Disorders</option>
+                
+                    <option value="/understanding/conditions/pneumonia/" title="Pneumonia">Pneumonia</option>
+                
+                    <option value="/understanding/conditions/porphyria/" title="Porphyria">Porphyria</option>
+                
+                    <option value="/understanding/wellness/pregnancy/" title="Pregnancy">Pregnancy</option>
+                
+                    <option value="/understanding/conditions/prostate/" title="Prostate Cancer">Prostate Cancer</option>
+                
+                    <option value="/understanding/conditions/proteinuria/" title="Proteinuria">Proteinuria</option>
+                
+                    <option value="/understanding/conditions/reactive/" title="Reactive Arthritis">Reactive Arthritis</option>
+                
+                    <option value="/understanding/conditions/rheumatoid/" title="Rheumatoid Arthritis">Rheumatoid Arthritis</option>
+                
+                    <option value="/understanding/conditions/sarcoidosis/" title="Sarcoidosis">Sarcoidosis</option>
+                
+                    <option value="/understanding/conditions/scleroderma/" title="Scleroderma">Scleroderma</option>
+                
+                    <option value="/understanding/conditions/sepsis/" title="Sepsis">Sepsis</option>
+                
+                    <option value="/understanding/conditions/septic/" title="Septic Arthritis">Septic Arthritis</option>
+                
+                    <option value="/understanding/conditions/shingles/" title="Shingles">Shingles</option>
+                
+                    <option value="/understanding/conditions/sickle/" title="Sickle Cell Anemia">Sickle Cell Anemia</option>
+                
+                    <option value="/understanding/conditions/sjogren/" title="Sjögren Syndrome">Sjögren Syndrome</option>
+                
+                    <option value="/understanding/conditions/staph/" title="Staph Wound Infections">Staph Wound Infections</option>
+                
+                    <option value="/understanding/conditions/std/" title="STDs">STDs</option>
+                
+                    <option value="/understanding/conditions/stroke/" title="Stroke">Stroke</option>
+                
+                    <option value="/understanding/conditions/std/" title="Syphilis">Syphilis</option>
+                
+                    <option value="/understanding/conditions/testicular/" title="Testicular Cancer">Testicular Cancer</option>
+                
+                    <option value="/understanding/conditions/thalassemia/" title="Thalassemia">Thalassemia</option>
+                
+                    <option value="/understanding/conditions/thyroid/" title="Thyroid Diseases">Thyroid Diseases</option>
+                
+                    <option value="/understanding/conditions/travelers/" title="Travelers' Diseases">Travelers' Diseases</option>
+                
+                    <option value="/understanding/conditions/std/" title="Trichomonas">Trichomonas</option>
+                
+                    <option value="/understanding/conditions/tuberculosis/" title="Tuberculosis">Tuberculosis</option>
+                
+                    <option value="/understanding/conditions/uti/" title="UTI">UTI</option>
+                
+                    <option value="/understanding/conditions/vaginitis/" title="Vaginitis/Vaginosis">Vaginitis/Vaginosis</option>
+                
+                    <option value="/understanding/conditions/vasculitis/" title="Vasculitis">Vasculitis</option>
+                
+                    <option value="/understanding/conditions/vitaminb12/" title="Vitamin B12 Deficiency">Vitamin B12 Deficiency</option>
+                
+                    <option value="/understanding/conditions/vitamink/" title="Vitamin K Deficiency">Vitamin K Deficiency</option>
+                
+                    <option value="/understanding/conditions/westnile/" title="West Nile Virus">West Nile Virus</option>
+                
+                    <option value="/understanding/conditions/wilsons/" title="Wilson Disease">Wilson Disease</option>
+                
+                    <option value="/understanding/conditions/wound-infections/" title="Wound and Skin Infections">Wound and Skin Infections</option>
+                
+            
+            </select>
+        <!--
+
+        Screening
+
+        -->
+        <select id="screening" name="screening">
+            <option value="" selected="selected">Screening</option>
+            
+            	<option value="http://labtestsonline.org/map/sindex/">List of screening recommendations</option>
+            
+            
+                
+                    <option value="/understanding/wellness/a-newborn-1/" title="Newborns">Newborns</option>
+                
+                    <option value="/understanding/wellness/ab-infant-1/" title="Infants">Infants</option>
+                
+                    <option value="/understanding/wellness/b-children-1/" title="Children">Children</option>
+                
+                    <option value="/understanding/wellness/c-teen-1/" title="Teens">Teens</option>
+                
+                    <option value="/understanding/wellness/c-youngadult1-1/" title="Young Adu"Children">Children</option>
+                
+                    <option vallts">Young Adults</option>
+                
+                    <option value="/understanding/wellness/d-adult-1/" title="Adults">Adults</option>
+                
+                    <option value="/understanding/wellness/e-over50-1/" title="Adults 50+">Adults 50+</option>
+                
+                    <option value="/understanding/wellness/pregnancy/" title="Pregnancy">Pregnancy</option>
+                
+            
+        </select>
+    </form>
+    <div class="clear"></div>
+</div>
+</div>
+                </div>
+
+                <div id="main">
+                    <div id="col1">
+                        <div id="col1_content" class="clearfix">
+                            <div class="main_content clearfix">
+                            	<div id="heading_share" class="clearfix">
+                                    <h1 class="analyte_title">Influenza Tests</h1>
+									<!-- Share this page -->
+
+
+
+
+
+<div class="custom-print">
+    				<a href="javascript:window.open('http://labtestsonline.org/understanding/analytes/flu/tab/all?printpreview=1','','width=1024,height=500,scrollbars,resizable');" title="Print this article"><img id="print" src="themes/lto/images/print_page.png" alt="Print this article" /></a>
+</div>
+
+<!-- AddThis Share BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
+<!-- add -->	<a class="addthis_button_compact"></a>
+<!-- print -->	<a class="addthis_button_print"></a>
+<!-- email -->	<a class="addthis_button_email"></a>
+<!-- G+ -->	<a class="addthis_button_google_plusone" g:plusone:annotation="none"></a>
+<!-- Twitter -->	<a class="addthis_button_twitter"></a>
+<!-- FB-->	<a class="addthis_button_facebook"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4fa09f61583c02ab"></script>
+<!-- AddThis Share END -->
+
+<div id="share_text">Share this page:</div>
+
+
+
+                            	</div>
+								<div class="noindex">                                </div>
+								<div class="noindex">
+	<!-- Hide the util widget -->
+	
+		
+			<div id="util_social_donate">
+				<!-- Was This Page Helpful -->
+				<div class="util_content"><a href="/helpful" title="Was this page helpful?">Was this page helpful?</a></div>
+			</div>
+		
+	
+</div>
+								                        <!--
+
+                        ------------------------------
+                        * Overview type analyte page *
+                        ------------------------------
+
+                        -->
+                        
+                                
+                                    <div class="aka"><strong>Also known as:</strong> Flu Test; Rapid Flu Test; Influenza Antigen Test; H1N1; Rapid Influenza Diagnostic Test; RIDT; Flu PCR</div>
+                                
+                                
+                                    <div class="aka"><strong>Formal name:</strong> Influenza Rapid Antigen Test; Influenza Type A and B Antigen Detection; Influenza A and B Culture; Influenza Type A H1N1; PCR for Influenza Virus</div>
+                                
+                                
+                                    <div class="aka"><strong>Related tests:</strong> <a href="/understanding/analytes/strep">Strep Throat Test</a>; <a href="/understanding/analytes/blood-culture">Blood Culture</a>; <a href="/understanding/analytes/pertussis">Pertussis Tests</a>; <a href="/understanding/analytes/rsv">RSV Testing</a></div>
+                                
+                                
+                                <!--
+
+                                medical codes (currently not displayed on web site)
+
+                                -->
+                                
+                                
+                                <!--
+
+                                tab navigation
+
+                                -->
+                                
+    <ul id="analyte_tabs">
+        
+            <li ><a href="http://labtestsonline.org/understanding/analytes/flu/tab/glance/" title="At a Glance">At a Glance</a></li>
+        
+            <li ><a href="http://labtestsonline.org/understanding/analytes/flu/tab/sample/" title="Test Sample">Test Sample</a></li>
+        
+            <li  class="current" ><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test/" title="The Test">The Test</a></li>
+        
+            <li ><a href="http://labtestsonline.org/understanding/analytes/flu/tab/faq/" title="Common Questions">Common Questions</a></li>
+        
+            <li ><a href="http://labtestsonline.org/understanding/analytes/flu/tab/ask/" title="Ask Us">Ask Us</a></li>
+        
+            <li ><a href="http://labtestsonline.org/understanding/analytes/flu/tab/related/" title="Related Pages">Related Pages</a></li>
+        
+    </ul>
+
+
+                                <!--
+
+                                tab content
+
+                                -->
+                                <div id="analyte_content">
+
+                                    <!-- At a Glace
+                                     -------------------------------------------------------------->
+                                    <div id="glance"  class="hideTabContent">
+                                        <h2>At a Glance</h2>
+                                        
+                                            <h3>Why Get Tested?</h3>
+                                            <div class="paragraph"><p>To determine whether or not you have an <a href="/understanding/conditions/influenza">influenza infection</a>; to help your health practitioner make treatment decisions; to help determine whether or not the flu has spread to your community</p></div>
+                                        
+                                        
+                                            <h3>When to Get Tested?</h3>
+                                            <div class="paragraph"><p>When it is flu season and your health practitioner wants to determine whether your symptoms are due to seasonal influenza A or B or to other causes; within 48 hours of the onset of your symptoms to help determine treatment options</p></div>
+                                        
+                                        
+                                            <h3>Sample Required?</h3>
+                                            <div class="paragraph"><p>Depends on the requirements for the manufacturer's product being used; usually a sample collected on a swab from the <a href="http://labtestsonline.org/glossary/nasopharynx/">nasopharynx</a> or a nasal <a class="popup-note" title="aspirate" href="/glossary/aspiration">aspirate</a>; under approved circumstances, a throat swab</p></div>
+                                        
+                                        
+                                            <h3>Test Preparation Needed?</h3>
+                                            <div class="paragraph"><p>None</p></div>
+                                        
+                                    </div>
+
+                                    <!-- Test Sample
+                                     -------------------------------------------------------------->
+                                    <div id="sample"  class="hideTabContent">
+                                        <h2>The Test Sample</h2>
+                                        
+                                            <h3>What is being tested?</h3>
+                                            <div class="paragraph"><p><a href="/understanding/conditions/influenza">Influenza</a> (the flu) is a <a class="popup-note" href="/glossary/virus">viral</a> respiratory infection that tends to be seasonal, usually beginning in late fall and disappearing in early spring. Influenza testing detects the presence of the virus in a sample of respiratory secretions.</p>
+<p>Influenza is a common respiratory illness that affects 30 to 50 million Americans each season. Symptoms like headache, fever, chills, muscle pains, exhaustion, a stuffy nose, sore throat, and a cough tend to be more severe and longer lasting than the flu-like symptoms caused by the common cold.</p>
+<p>Two types of influenza virus, A and B, cause annual flu <a href="http://labtestsonline.org/glossary/pandemic/">pandemics</a> and most <a href="http://labtestsonline.org/glossary/epidemic/">epidemics</a>. Type C can cause mild respiratory illness and is not thought to cause epidemics. There are numerous subtypes of influenza A viruses, and they are named using two designations, H and N. The most common influenza A viruses currently infecting humans have the subtypes H1N1 and H3N2. (For more on this, see the condition article on <a href="http://labtestsonline.org/understanding/conditions/influenza/">Influenza</a>.)</p>
+<p>It is common for health practitioners to diagnose and treat the flu without laboratory testing, especially during peak influenza season and when influenza has already been documented in an area. However, influenza testing can help rule out other illnesses and reduce the chances of people using unnecessary antibiotics, while increasing the chances that they will receive anti-viral therapy early in the illness, when it is most effective.</p>
+<p>Also, if there is an outbreak of respiratory illness in a confined setting like a hospital, nursing home, or school, diagnostic testing will help determine the cause of the outbreak. Influenza testing also helps local and state health departments, and the Centers for Disease Control and Preventio (CDC), track influenza in communities. Since the flu virus changes every year, testing also helps the CDC to monitor the subtypes and strains of flu that are circulating that year, to collect information for developing flu <a href="http://labtestsonline.org/glossary/vaccine/">vaccines</a>, and to monitor strains for resistance to anti-viral drugs.</p>
+<p>There are several different kinds of influenza tests and they serve different purposes. For example, rapid diagnostic tests have become more widely available and can help with individual treatment decisions. However, they are still not very sensitive and can result in misleading, <a href="http://labtestsonline.org/glossary/false-negative/">false-negative</a> results.</p>
+<p>Some, but not all, rapid diagnostic tests can distinguish between the two different types of influenza subtypes. However, they cannot identify which subtype, or influenza strain, someone has. Therefore, molecular tests (<a href="http://labtestsonline.org/understanding/features/methods/start/5">polymerase chain reaction, PCR</a>) and viral <a href="http://labtestsonline.org/glossary/culture/">cultures</a> are still very important because they identify specific viral strains, something necessary for things like identifying which strains to include in the next year's flu vaccine and finding new types of influenza A that could be a pandemic threat.</p></div>
+                                        
+                                        
+                                            <h3>How is the sample collected for testing?</h3>
+                                            <div class="paragraph"><p>Sample collection technique is critical in influenza testing, and different kinds of influenza tests rely on different collection techniques. The best sample is usually a nasal <a class="popup-note" title="aspirate" href="/glossary/aspiration">aspirate</a>, but the most frequently used sample is a swab from the <a href="http://labtestsonline.org/glossary/nasopharynx/">nasopharynx</a>.</p>
+<p>Health practitioners usually use nasopharyngeal swabs for adults but may choose to do a nasal wash or aspirate for a child. In some circumstances, a health practitioner may use a throat swab, but this contains less of the virus than a nasopharyngeal aspirate and so may not be appropriate for use in rapid testing where <a href="http://labtestsonline.org/glossary/sensitivity/">sensitivity</a> is a concern.</p>
+<p>For an aspirate, the person collecting the sample will use a syringe to push a small amount of sterile saline into the nose, then apply gentle suction to collect the resulting fluid (saline and mucus). To preserve the organisms in the sample, the sample is put into a special container, referred to as "viral transport media" or VTM, for delivery to the laboratory.</p>
+<p>The nasopharyngeal swab is collected by having the person tip his or her head back, then a Dacron swab (like a long Q-tip® ) is gently inserted into one of the nostrils until resistance is met (about 1 to 2 inches in), then rotated several times and withdrawn. This is not painful, but it may tickle a bit and cause the eyes to tear.</p></div>
+                                            
+                                                
+                                                    <p class="note">NOTE: If undergoing medical tests makes you or someone you care for anxious, embarrassed, or even difficult to manage, you might consider reading one or more of the following articles: <a href="/understanding/features/coping">Coping with Test Pain, Discomfort, and Anxiety</a>, <a href="/understanding/testtips/bloodtips">Tips on Blood Testing</a>, <a href="/understanding/testtips/kidtips">Tips to Help Children through Their Medical Tests</a>, and <a href="/understanding/testtips/elderlytips">Tips to Help the Elderly through Their Medical Tests</a>.</p>
+                                                    <p class="note">Another article, <a href="/lab/samples">Follow That Sample</a>, provides a glimpse at the collection and processing of a blood sample and throat culture.</p>
+                                                
+                                            
+                                        
+                                        
+                                            <h3>Is any test preparation needed to ensure the quality of the sample?</h3>
+                                            <div class="paragraph"><p>No test preparation is needed.</p></div>
+                                        
+                                    </div>
+
+                                    <!-- The Test
+                                     -------------------------------------------------------------->
+                                    <div id="test"  class="showTabContent">
+                                        <h2>The Test</h2>
+                                        
+                                            <ol class="nav_links" id="test_links">
+                                                
+                                                    <li><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#how">How is it used?</a></li>
+                                                
+                                                
+                                                    <li><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#when">When is it ordered?</a></li>
+                                                
+                                                
+                                                    <li><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#what">What does the test result mean?</a></li>
+                                                
+                                                
+                                                    <li><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#is">Is there anything else I should know?</a></li>
+                                                
+                                            </ol>
+                                        
+                                        <div class="nav_content" id="test_content">
+                                            <a name="how"></a>
+                                            <h3>How is it used?</h3>
+                                            <div class="paragraph">
+                                                <p>Influenza testing may be used to help diagnose an <a href="http://labtestsonline.org/understanding/conditions/influenza/">influenza infection (flu)</a> and sometimes to help document the presence of influenza in the community. Testing may also be used to identify the type and/or the strain of influenza causing the infection.</p>
+<p>Two types of influenza virus, A and B, cause annual flu <a href="http://labtestsonline.org/glossary/pandemic/">pandemics</a> and most <a href="http://labtestsonline.org/glossary/epidemic/">epidemics</a>. Numerous subtypes of influenza A viruses exist and they are categorized according to two designations, H and N. For example, H1N1 and H3N2 are the two most common strains in humans.</p>
+<p>Typically, cases of influenza are diagnosed without testing if it is the flu season and it is known that the flu has reached a community. This is especially true if someone has clinical symptoms that are essentially the same as the symptoms of other people with known cases of the flu. If it is outside the 48-hour window when antiviral treatment is effective and there is no evidence of severe illness or secondary complications, the person may simply be sent home to rest, drink fluids, and soothe their symptoms with over-the-counter remedies. </p>
+<p>However, the flu can be deadly and knowing that it is in the community can help health practitioners minimize its spread and treat patients to lessen its severity, if it is diagnosed early, so testing may be performed for those reasons. The Centers for Disease Control and Prevention (CDC) recommends testing in certain situations:</p>
+<ul><li>For patients in the hospital, or with high-risk conditions, who are suspected of having the flu</li>
+<li>For cases in which an influenza diagnosis will guide care or affect actions taken to control the spread of the virus to others in close contact and/or in the community </li>
+<li>For people who had severe symptoms and died from a suspected case of influenza </li>
+</ul><p>Testing is also performed to monitor the type (strain) of influenza viruses that are circulating, where outbreaks are happening, to look for new strains of viruses to help prevent possible pandemics, to monitor for antiviral resistance, and prepare for the next year's flu vaccine.</p>
+<p>There are several influenza tests available that may be used to help make a diagnosis. The method used often depends on the circumstances and reason for testing.</p>
+<ul><li><strong>Rapid influenza diagnostic test (RIDT)</strong> – used to detect the virus in nasal secretions and one of the most common methods used to diagnose this infection. Depending on the method, it may be completed in the doctor's office in less than 15 minutes or be sent to a laboratory, with the results available the same day. It can help differentiate influenza from other <a class="popup-note" href="/glossary/virus">viral</a> and <a class="popup-note" href="/glossary/bacterium">bacterial</a> infections with similar symptoms that may be serious and must be treated differently.</li>
+<p>Rapid flu tests are best used within the first 48 hours of the onset of symptoms to help diagnose influenza and determine whether or not antiviral drugs are a treatment option.</p>
+<p>Rapid tests vary in their ability to detect influenza. Some types can only detect influenza A; others can detect both A and B but not distinguish between the two. Still others can detect and distinguish between influenza A and B. However, none of them are able to differentiate between the strains of influenza A, such as H1N1.</p>
+<p>The main disadvantage of the rapid influenza antigen test is the high rate of <a href="http://labtestsonline.org/glossary/false-negative/">false-negative</a> results. Rapid tests will generally detect 40-70% of influenza cases. Therefore, the CDC recommends not withholding treatment from people with suspected influenza, even if they test negative. If someone needs confirmation from a laboratory diagnosis, it will be necessary to follow a negative test with a viral culture or RT-PCR test.</p>
+<p>RIDTs will occasionally be positive when someone does not actually have the flu.</p>
+<li><strong>Viral culture</strong> has been considered the "gold standard" for diagnosing influenza, but it can take up to 3-10 days for results. It can be used for confirmation of a positive rapid test result, to check a negative test result, or when someone is suspected to have flu. In this test, the influenza virus is actually grown and further identified in the laboratory. It has the advantage of identifying which viruses (A, B, or another respiratory virus) and which strains of virus are present. A faster culture method, known as shell vial culture, may detect the presence of a respiratory virus in 24-48 hours; however, a traditional viral culture performed in a large test tube may require several days before the virus can be detected.
+<p>Growing the virus in <a class="popup-note" href="/glossary/culture">culture</a> is useful for documenting which strains of influenza are circulating in the community and which antiviral agents are effective in treating these viruses. Identifying these outbreaks can assist health care workers in preventing and treating the flu throughout a community. Influenza virus grown in culture can be sent to a public health laboratory to determine if the strain of influenza A is H5N1, found in birds and chickens, or the 2009 H1N1 influenza virus. Viral cultures can also be used to identify other viral infections that cause clinical symptoms similar to the flu.</p>
+</li>
+<li><strong>Real time RT-PCR and other molecular tests</strong> – molecular tests detect viral genetic material in respiratory samples like a nasal or throat swab and are the most <a href="http://labtestsonline.org/glossary/sensitivity/">sensitive</a> for influenza virus. These tests may be ordered to diagnose influenza A infection, especially in those who are seriously ill (hospitalized), and to help track influenza outbreaks. Some false negatives can occur with this method. Some molecular tests can distinguish between A and B virus and between different types of influenza A virus.</li>
+</ul><p>Additional tests may be used to help rule out other types of infections with similar symptoms and/or if the cause of the infection is unclear. These may include an <a href="http://labtestsonline.org/understanding/analytes/rsv/">RSV antigen test</a> to detect respiratory syncytial virus, a virus that often infects young children and the elderly, or bacterial tests, such as a <a href="http://labtestsonline.org/understanding/analytes/strep/">strep test</a> to check for group A streptococcus, the bacteria that cause strep throat.</p>
+                                            </div>
+                                            <p class="back_to_top"><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#top">^ Back to top</a></p>
+                                            <a name="when"></a>
+                                            <h3>When is it ordered?</h3>
+                                            <div class="paragraph">
+                                                <p>Flu tests are mostly ordered during flu season (late fall through early spring). Not everyone who has symptoms of <a href="/understanding/conditions/influenza">influenza</a> requires testing. However, testing is optimal within 48 hours of the onset of symptoms, when a greater amount of the virus is present to be detected and antiviral treatment can have the greatest impact. The most common symptoms of influenza include the following:</p>
+<ul><li>Headaches </li>
+<li>Fever, chills</li>
+<li>Muscle aches </li>
+<li>Weakness, fatigue </li>
+<li>Stuffy nose </li>
+<li>Sore throat</li>
+<li>Cough</li>
+<li>With some flu strains, diarrhea and vomiting</li>
+</ul><p>Testing is recommended in particular for people who are hospitalized, have weakened immune systems, or are otherwise at an increased risk of serious complications. If influenza has already been identified in the community, a health practitioner may order a flu test to confirm the diagnosis and validate possible antiviral treatment.</p>
+<p>When influenza has not yet been documented in the community, a health practitioner may order a rapid flu test both to document the presence of influenza in the area and to help diagnose an individual's current illness.</p>
+<p>Sometimes testing may be done when someone who died had a severe, <a class="popup-note" href="/glossary/acute">acute</a> illness and influenza was the suspected cause.</p>
+<p>In rare instances, someone will contract influenza outside of the regular flu season. This may ha may be done when someone who died had a severe, <a class="popup-note" href="/glossary/acute">acute</a> illness and influenza was the suspected cause.</p>
+<pppen when someone travels outside of the continental U.S. to a part of the world where the flu is currently infecting that area's residents. In this case, the health practitioner may order a respiratory viral culture in order to have a more definitive diagnosis.</p>
+                                            </div>
+                                            <p class="back_to_top"><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#top">^ Back to top</a></p>
+                                            <a name="what"></a>
+                                            <h3>What does the test result mean?</h3>
+
+                                            
+												
+                                                
+                                            
+                                            <div class="paragraph">
+                                                <p>A positive flu test means that the affected person most likely has <a href="/understanding/conditions/influenza">influenza A or B</a>, and treatment with antiviral medication may be prescribed to minimize symptoms. However, it may not tell the health practitioner which strain of influenza is causing the infection, how severe the symptoms are likely to be, or whether or not a person may experience any secondary complications.</p>
+<p>A negative influenza test may mean that the person has something other than influenza, that the test is not detecting the influenza strain, or that there is not sufficient virus in the specimen to allow it to be detected. This may be due to either a poor specimen collection or because a person has had the flu for several days and less virus is being shed. New strains of influenza may circulate that diagnostic tests cannot reliably detect.</p>
+<p>A positive molecular test result (RT-PCR) indicates that the person tested has influenza. Some of the tests that use this method can further identify the subtypes of influenza A, such as H1N1.</p>
+<p>A viral culture, if positive, can be used to identify the virus present. If the virus present is influenza, further tests can be performed to characterize which strain is present and its susceptibility to antiviral agents.</p>
+                                            </div>
+                                            <p class="back_to_top"><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#top">^ Back to top</a></p>
+                                            <a name="is"></a>
+                                            <h3>Is there anything else I should know?</h3>
+                                            <div class="paragraph">
+                                                <p>Treated or untreated, most influenza infections will go away within one or two weeks, although fatigue and a cough may last a while longer. A few people, however, may develop serious secondary complications. These complications often arise just as influenza symptoms are fading.</p>
+<p>Anyone is susceptible to complications from the flu, but the very young, the elderly, and people who are <a class="popup-note" title="immune compromised" href="/glossary/immunocompromised">immunocompromised</a> or who have pre-existing <a href="/understanding/conditions/lung-diseases">lung disease</a> are most affected. Complications such as <a href="/understanding/conditions/pneumonia">pneumonia</a>, <a href="/understanding/conditions/sepsis">sepsis</a>, and <a href="/understanding/conditions/meningitis">encephalitis</a> can be very serious and may require immediate medical treatment.</p>
+                                            </div>
+                                            <p class="back_to_top"><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#top">^ Back to top</a></p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Common Questions (FAQ)
+                                     -------------------------------------------------------------->
+                                    <div id="faq"  class="hideTabContent">
+                                        <h2>Common Questions</h2>
+                                        
+                                            <ol class="nav_links" id="faq_links">
+                                                
+                                                     <li><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#1" title="Question 1">What other tests might my doctor order to diagnose my flu-like symptoms?</a></li>
+                                                
+                                                     <li><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#2" title="Question 2">Why is the flu such a big deal?</a></li>
+                                                
+                                                     <li><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#3" title="Question 3">Can I still get the flu if I've had the vaccination?<a name="flunet"> </a></a></li>
+                                                
+                                                     <li><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#4" title="Question 4">How do they decide what strains are in the vaccine each year?</a></li>
+                                                
+                                                     <li><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#5" title="Question 5">Is there a blood test for the flu?</a></li>
+                                                
+                                            </ol>
+                                        
+                                        <div class="nav_content" id="faq_content">
+                                            
+                                                <h3>
+                                                    <a name="1"></a>
+                                                    1.&nbsp;&nbsp;What other tests might my doctor order to diagnose my flu-like symptoms?
+                                                </h3>
+                                                <div class="paragraph answer"><p>Your doctor may order a <a href="/understanding/analytes/strep">strep test</a> to check for strep throat, <a href="/understanding/analytes/blood-culture">blood cultures</a> to check for bacterial infections in the blood, an <a href="/understanding/analytes/rsv">RSV antigen test</a> (respiratory syncytial virus, a virus that often infects young children and the elderly), or a <a href="/understanding/analytes/sputum-culture">sputum culture</a> to look for bacterial and/or fungal causes of a respiratory infection. Your health practitioner may also order blood tests such as a <a href="/understanding/analytes/cmp">comprehensive metabolic panel (CMP)</a> or <a href="/understanding/analytes/cbc">complete blood count (CBC)</a> to monitor the health and function of organs such as the lungs and kidneys.</p></div>
+                                                <p class="back_to_top"><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#top">^ Back to top</a></p>
+                                            
+                                                <h3>
+                                                    <a name="2"></a>
+                                                    2.&nbsp;&nbsp;Why is the flu such a big deal?
+                                                </h3>
+                                                <div class="paragraph answer"><p><p>The flu is an important general and public health concern because it can be deadly and because every few decades an especially lethal influenza strain emerges.  The worst on record is the 1918 Spanish flu <a class="popup-note" title="pandemic" href="/glossary/pandemic">pandemic</a>, which killed 20 to 50 million people worldwide, and more than 500,000 in the United States alone.  In 1957 and 1968, hundreds of thousands died in the U.S. from Asian and Hong Kong flu variants.</p>
+<p>A strain of influenza A, named for its unique viral antigens (H5N1), is circulating in birds and chickens in Asia. It has infected humans who have had close contact with the infected birds and has a high mortality rate.  There is concern of a worldwide pandemic if this virus is able to mutate to allow human-to-human transmission of the virus.</p></p></div>
+                                                <p class="back_to_top"><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#top">^ Back to top</a></p>
+                                            
+                                                <h3>
+                                                    <a name="3"></a>
+                                                    3.&nbsp;&nbsp;Can I still get the flu if I've had the vaccination?<a name="flunet"> </a>
+                                                </h3>
+                                                <div class="paragraph answer"><p>No <a href="/glossary/vaccine">vaccine</a> is 100% effective, so it is possible to get the flu after being vaccinated.  However, if you get the flu after being vaccinated, it is usually a milder disease and quicker recovery. It also takes a few weeks after vaccination before it provides protection. Occasionally, a new strain circulates that is not in the current vaccine, so you would not be protected against infection with that strain of the virus.</p></div>
+                                                <p class="back_to_top"><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#top">^ Back to top</a></p>
+                                            
+                                                <h3>
+                                                    <a name="4"></a>
+                                                    4.&nbsp;&nbsp;How do they decide what strains are in the vaccine each year?
+                                                </h3>
+                                                <div class="paragraph answer"><p><p>Each year the flu <a href="/glossary/vaccine">vaccine</a>, containing inactivated virus, is targeted to protect against the expected strains, based on the observations and experience of doctors and scientists. Doctors and researchers carefully track the influenza virus and try to anticipate the strain(s) that will eventually appear locally the next season.</p>
+<p>As influenza travels through communities around the world, it undergoes spontaneous changes (called "antigenic drift") that allow it to evade the protective <a href="/glossary/antibody">antibodies</a> formed from previous infections and vaccinations. The amount of "antigenic drift" varies from year to year. Bigger antigenic drifts, known as "antigenic shifts," result in more severe illnesses since more people will be susceptible to the virus.</p>
+<p>Sometimes the flu strain will have  significant antigenic drift during the season so that the virus will appear slightly different to the body's <a href="/glossary/immune-system">immune system</a>, decreasing the effectiveness of the vaccine's protection. Or, the flu that predominates may end up being an unexpected strain, not the ones that the vaccine was developed to protect against.</p>
+<p>Usually, in these cases, the vaccination will at least lessen the severity of the infection. In individual high-risk patients (those with heart, kidney, and lung ailments, for instance), doctors may bolster the protection by prescribing antiviral treatments before the person gets sick to provide short-term protection while influenza moves through the community.</p></p></div>
+                                                <p class="back_to_top"><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#top">^ Back to top</a></p>
+                                            
+                                                <h3>
+                                                    <a name="5"></a>
+                                                    5.&nbsp;&nbsp;Is there a blood test for the flu?
+                                                </h3>
+                                                <div class="paragraph answer"><p>Yes, there are blood tests available that detect and measure influenza <a href="/glossary/antibody">antibodies</a>, immune proteins produced in response to an infection. However, these are not used for diagnosing the flu. They may be used to determine whether someone has developed antibodies following <a href="/glossary/vaccine">vaccination</a>, but this is usually only in research settings.</p></div>
+                                                <p class="back_to_top"><a href="http://labtestsonline.org/understanding/analytes/flu/tab/test#top">^ Back to top</a></p>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <!-- Ask Us
+                                     -------------------------------------------------------------->
+                                    
+                                        <div id="ask"  class="hideTabContent">
+                                            <h2>Ask a Laboratory Scientist</h2>
+                                            
+                                                
+                                                
+
+<h3>Form temporarily unavailable</h3><strong><p>Due to a dramatic increase in the number of questions submitted to the volunteer laboratory scientists who respond to our users, we have had to limit the number of questions that can be submitted each day.  Unfortunately, we have reached that limit today and are unable to accept your inquiry now.  We understand that your questions are vital to your health and peace of mind, and recommend instead that you speak with your doctor or another healthcare professional.  We apologize for this inconvenience.</p>    <p>This was not an easy step for us to take, as the volunteers on the response team are dedicated to the work they do and are often inspired by the help they can provide.  We are actively seeking to expand our capability so that we can again accept and answer all user questions.  We will accept and respond to the same limited number of questions tomorrow, but expect to resume the service, 24/7, as soon as possible.</p></strong>
+                                            
+                                        </div>
+                                    
+                                    <!-- Related Links
+                                     -------------------------------------------------------------->
+                                    <div id="related"  class="hideTabContent">
+                                        <h2>Related Pages</h2>
+
+                                        <h3>On This Site</h3>
+                                        <div class="paragraph">
+                                            
+                                                <p>Conditions: <a href="/understanding/conditions/influenza">Influenza</a>, <a href="http://labtestsonline.org/understanding/conditions/pneumonia/">Pneumonia</a>, <a href="http://labtestsonline.org/understanding/conditions/lung-diseases/">Lung Diseases</a><br/>In the News: <a href="http://labtestsonline.org/news/140218flu/">High Influenza Activity in the U.S.</a> (2014), <a href="http://labtestsonline.org/news/130524avian/">Novel H7N9 Influenza Virus Infecting People in China</a> (2013), <a href="http://labtestsonline.org/news/121212flu/">Study Finds Rapid Flu Tests Fairly Accurate, but Should Be Done Soon After Symptoms Appear</a> (2012), <a href="http://labtestsonline.org/news/120910h3n2v/">Increase Seen in H3N2v Influenza, Infections Linked to Contact with Swine </a>(2012)</p>
+                                            
+                                        </div>
+
+                                        <h3>Elsewhere On The Web</h3>
+                                        <div class="paragraph">
+                                            
+                                                <p><a href="http://www.cdc.gov/flu/">Centers for Disease Control and Prevention (CDC): Influenza</a> <br/><a href="http://www.cdc.gov/flu/fluiq.htm/index.html?s_cid=seasonalflu-btn-004&amp;utm_source=external&amp;utm_medium=ban               ner&amp;utm_content=0613-Flu-004&amp;utm_campaign=seasonalflu">CDC: Test Your Flu IQ</a> <br/><a href="http://www.cdc.gov/flu/swineflu/">CDC: Swine Influenza (Swine Flu)</a><br/><a href="http://www.cdc.gov/flu/avian/index.htm">CDC: Avian Influenza (Bird Flu)</a> <br/><a href="http://www.nlm.nih.gov/medlineplus/influenza.html">NIH, MEDLINEplus Health Information: Influenza</a> <br/><a href="http://www.who.int/topics/influenza/en/">World Health Organization: Influenza</a><br/><a href="http://www.flu.gov/">Flu.gov</a></p>
+                                            
+                                        </div>
+
+                                        
+                                            
+                                                <p class="note">
+                                                    <a href="http://labtestsonline.org/understanding/analytes/flu/tab/sources" title="sources page">&#187; See all Article Sources</a>
+                                                </p>
+                                            
+                                        
+                                    </div>
+
+                                    <!-- Sources
+                                     -------------------------------------------------------------->
+                                    <div id="sources"  class="hideTabContent">
+                                        <h2>Article Sources</h2>
+                                        
+                                            <p><a href="http://labtestsonline.org/understanding/analytes/flu//tab/related" title="Return to Related Links page">&laquo; Return to Related Pages</a></p>
+                                        
+                                        <p class="note">
+                                            NOTE: This article is based on research that utilizes the sources cited here as well as the collective experience of the Lab Tests Online <a href="/site/o-editorial">Editorial Review Board</a>. This article is periodically reviewed by the Editorial Board and may be updated as a result of the review.  Any new sources cited will be added to the list and distinguished from the original sources used.
+                                        </p>
+										
+                                        <div class="paragraph"><p><strong>Sources Used in Current Review</strong></p>
+<p>Reviewed March 2013. Influenza Virus. Arup Consult. Available online at http://www.arupconsult.com/Topics/InfluenzaVirus.html through <a href="http://www.arupconsult.com">http://www.arupconsult.com</a>. Accessed November 2013.</p>
+<p>Reviewed December 2012. Laboratory Support for Surveillance of Vaccine-Preventable Diseases. Centers for Disease Control and Prevention. Available online at http://www.cdc.gov/vaccines/pubs/surv-manual/chpt22-lab-support.html through <a href="http://www.cdc.gov/">http://www.cdc.gov/</a>. Accessed November 2013.</p>
+<p>Reviewed March 2012. Guidance for Clinicians on the Use of RT-PCR and Other Molecular Assays for Diagnosis of Influenza Virus Infection. Centers for Disease Control and Prevention. Available online at http://www.cdc.gov/flu/professionals/diagnosis/molecular-assays.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>. Accessed November 2013.</p>
+<p>Reviewed December 2011. Influenza Symptoms and the Role of Laboratory Diagnostics. Centers for Disease Control and Prevention. Available online at http://www.cdc.gov/flu/professionals/diagnosis/labrolesprocedures.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>. Accessed November 2013.</p>
+<p>Reviewed October 2013. Overview of Influenza Surveillance in the United States. Centers for Disease Control and Prevention.  Available online at http://www.cdc.gov/flu/weekly/overview.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>. Accessed November 2013.</p>
+<p>Updated February 2012. Diagnostic Influenza Tests. Medscape. Available online at http://emedicine.medscape.com/article/2053517-overview through <a href="http://emedicine.medscape.com">http://emedicine.medscape.com</a>. Accessed November 2013.</p>
+<p><strong>Sources Used in Previous Reviews</strong></p>
+<p>Thomas, Clayton L., Editor (1997). Taber's Cyclopedic Medical Dictionary. F.A. Davis Company, Philadelphia, PA [18th Edition].</p>
+<p>Pagana, Kathleen D. &amp; Pagana, Timothy J. (2001). Mosby's Diagnostic and Laboratory Test Reference 5th Edition: Mosby, Inc., Saint Louis, MO.</p>
+<p>Ault, A. (2002 October 7). CDC Urges Flu, Pneumococcal Shots for Seniors. MEDLINEplus &amp; Reuters Health Information [On-line information]. Available online at <a href="http://www.nlm.nih.gov/medlineplus/news/fullstory_9746.html">http://www.nlm.nih.gov/medlineplus/news/fullstory_9746.html</a>.</p>
+<p>NIAID (2001 July). Flu. Fact Sheet, National Institute of Allergy and Infectious Diseases, National Institutes of Health [On-line information]. Available online at http://www.niaid.nih.gov/factsheets/flu.htm through <a href="http://www.niaid.nih.gov">http://www.niaid.nih.gov/factsheets/flu.htm</a>.</p>
+<p>CDC (2002 September 20, Updated). Flu Facts for Everyone. Centers For Disease Control (CDC) [On-line information]. Available online at http://www.cdc.gov/nip/Flu/Public.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>.</p>
+<p>CDC (2002 July 9, Reviewed). Influenza: The Disease. National Center for Infectious Diseases [On-line information]. Available online at http://www.cdc.gov/ncidod/diseases/flu/fluinfo.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>.</p>
+<p>CDC (2002 July 9, Reviewed). Antiviral Drug Information. National Center for Infectious Diseases [On-line information]. Available online at http://www.cdc.gov/ncidod/diseases/flu/fluviral.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>.</p>
+<p>CDC (2002). Laboratory Diagnostic Procedures for Influenza, Diagnosis of influenza. National Center for Infectious Diseases [On-line information]. Available online at http://www.cdc.gov/ncidod/diseases/flu/flu_dx_table.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>.</p>
+<p>CDC (2001 November 27, Modified). Inhalational Anthrax, Influenza, or Influenza-like Illness? Centers for Disease Control and Prevention [On-line information]. Available online at http://www.cdc.gov/nip/Flu/MMWR_summary_11-9.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>.</p>
+<p>Hurtado, R. (2002 March 1). Influenza. MEDLINEplus Health Information, Encylopedia [On-line information]. Available online at <a href="http://www.nlm.nih.gov/medlineplus/ency/article/000080.htm">http://www.nlm.nih.gov/medlineplus/ency/article/000080.htm</a>.</p>
+<p>Montato, N., et. al. (2000 December 1). Updated Treatment for Influenza A and B. American Family Physician [On-line information]. Available online at http://www.aafp.org/afp/20001201/2467.html through <a href="http://www.aafp.org">http://www.aafp.org</a>.</p>
+<p>Kingston, B. and Wright, C. (2002 January 1). Influenza in the Nursing Home. American Family Physician [On-line journal]. Available online at http://www.aafp.org/afp/20020101/75.html through <a href="http://www.aafp.org">http://www.aafp.org</a>.</p>
+<p>Baylor College of Medicine (2002). Virology Question of the Month, How accurate are the new rapid tests for flu? Diagnostic Virology Laboratory Newsletter [On-line newsletter]. Available online at http://www.bcm.tmc.edu/pedi/infect/dvl/nws10_2001.htm through <a href="http://www.bcm.tmc.edu">http://www.bcm.tmc.edu</a>.</p>
+<p>Locke, J. (2001 July 9). Rapid Infectious Disease Testing (Strep and Flu Diagnostics) - The Promise and Pitfalls. <em>Clinical Laboratory Strategies</em> [Unpublished version of published article]. Available E-mail: jtechwriter@yahoo.com</p>
+<p>Harvard (2002 October). Fleeing crummy? Is it the flu? Harvard Health Letter [Newsletter]. Associated online at <a href="http://www.health.harvard.edu">http://www.health.harvard.edu</a>.</p>
+<p>College of American Pathology (2002 October 09). CLIA Waived Test List. CAP Laboratory Improvement, Surveys/EXCEL (On-line serial). Available online at http://www.cap.org/html/lip/waived.html through <a href="http://www.cap.org">http://www.cap.org</a>.</p>
+<p>(Updated 2009 December 24). H1N1 Flu: Diagnosis and Lab Testing. Centers for Disease Control and Prevention, [On-line information]. Available online at http://www.cdc.gov/h1n1flu/diagnosis/ through <a href="http://www.cdc.gov">http://www.cdc.gov</a>. Accessed March 2010.</p>
+<p>Chang, H. (2009 November 4). Influenza. JAMA. 2009;302(17):1926 On-line information]. Available online at http://jama.ama-assn.org/cgi/reprint/302/17/1926.pdf through <a href="http://jama.ama-assn.org">http://jama.ama-assn.org</a>. Accessed March 2010.</p>
+<p>(Updated 2009 December 7). Updated Interim Recommendations for the Use of Antiviral Medications in the Treatment and Prevention of Influenza for the 2009-2010 Season. Centers for Disease Control and Prevention, [On-line information]. Available online at http://www.cdc.gov/h1n1flu/recommendations.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>. Accessed March 2010.</p>
+<p>(2009 September 29). Questions &amp; Answers, Influenza Diagnostic Testing During the 2009-2010 Flu Season. Centers for Disease Control and Prevention [On-line information]. Available online at http://www.cdc.gov/h1n1flu/diagnostic_testing_public_qa.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>. Accessed March 2010.</p>
+<p>(2010 February 10). Questions &amp; Answers, 2009 H1N1 Flu ("Swine Flu") and You. Centers for Disease Control and Prevention [On-line information]. Available online at <a href="http://www.cdc.gov">http://www.cdc.gov</a>. Accessed March 2010.</p>
+<p>Derlet, R. et. al. (Updated 2009 December 8). Influenza. eMedicine [On-line information]. Available online at http://emedicine.medscape.com/article/219557-overview through <a href="http://emedicine.medscape.com">http://emedicine.medscape.com</a>. Accessed March 2010.</p>
+<p>Bronze, M. S. (Updated 2010 January 27). H1N1 Influenza (Swine Flu) eMedicine [On-line information]. Available online at http://emedicine.medscape.com/article/1807048-overview through <a href="http://emedicine.medscape.com">http://emedicine.medscape.com</a>. Accessed March 2010.</p>
+<p>Katz, M. et. al. (2009 March 13). Use of Rapid Tests and Antiviral Medications for Influenza Among Primary Care Providers in the United States. Medscape Today from <em>Influenza Resp Viruses</em>. 2009;3(1):29-35 [On-line information]. Available online at http://www.medscape.com/viewarticle/588778 through <a href="http://www.medscape.com">http://www.medscape.com</a>. Accessed March 2010.</p>
+<p>(2009 November 13). Fact Sheet for Healthcare Providers: Interpreting ELITech Molecular Diagnostics 2009-H1N1 Influenza A virus Real-Time RT-PCR Test Results ARUP Laboratories [On-line information]. PDF available for download at http://www.arup-lab.com/Testing-Information/resources/HotLines/H1N1-HealthcarePrs: Interpreting ELITech Molecular Diagnostics 2009-H1N1 Influenza A virus Real-Time RT-PCR Test Results ARUP Laboratories [On-line information]. PDF available for download at http:/oviders-InterpretingTestResults.pdf through <a href="http://www.arup-lab.com">http://www.arup-lab.com</a>. Accessed March 2010.</p>
+<p>Hillyard, D. et. al. (Updated 2010 February). Influenza Virus. ARUP Consult [On-line information]. Available online at http://www.arupconsult.com/Topics/InfluenzaVirus.html?client_ID=LTD through <a href="http://www.arupconsult.com">http://www.arupconsult.com</a>. Accessed March 2010.</p>
+<p>Mayo Clinic Staff (2009 September 30). H1N1 flu (swine flu). MayoClinic.com [On-line information]. Available online at http://www.mayoclinic.com/health/swine-flu/DS01144 through <a href="http://www.mayoclinic.com">http://www.mayoclinic.com</a>. Accessed March 2010.</p>
+<p>Mayo Clinic Staff (2009 September 11). Influenza (flu). MayoClinic.com [On-line information]. Available online at http://www.mayoclinic.com/health/influenza/DS00081 through <a href="http://www.mayoclinic.com">http://www.mayoclinic.com</a>. Accessed March 2010.</p>
+<p>(2009 August 10). Interim Guidance for the Detection of Novel Influenza A Virus Using Rapid Influenza Diagnostic Tests. Centers for Disease Control and Prevention [On-line information]. Available online at http://www.cdc.gov/h1n1flu/guidance/rapid_testing.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>. Accessed March 2010.</p>
+<p>(Updated 2010 March 8). CDC Estimates of 2009 H1N1 Influenza Cases, Hospitalizations and Deaths in the United States, April 2009 – February 13, 2010. Centers for Disease Control and Prevention [On-line information]. Available online at http://www.cdc.gov/h1n1flu/estimates_2009_h1n1.htm through <a href="http://www.cdc.gov">http://www.cdc.gov</a>. Accessed March 2010.</p>
+<p>Wu, A. (© 2006). Tietz Clinical Guide to Laboratory Tests, 4th Edition: Saunders Elsevier, St. Louis, MO. Pp 1225, 1578.</p>
+<p>Forbes, B. et. al. (© 2007). Bailey &amp; Scott's Diagnostic Microbiology, 12th Edition: Mosby Elsevier Press, St. Louis, MO. Pp 729.</p></div>
+                                    </div>
+                                    <!--
+
+                                    previous/next buttons
+
+                                    -->
+                                                                        <div id="pagination">
+                                        
+                                        
+                                            <a href="http://labtestsonline.org/understanding/analytes/flu/tab/sample" title="Previous"><img src="themes/lto/css/locale/US/images/btn_previous.jpg" alt="Previous" /></a>
+                                        
+                                        
+                                            <a href="http://labtestsonline.org/understanding/analytes/flu/tab/faq" title="Next"><img src="themes/lto/css/locale/US/images/btn_next.jpg" alt="Next" /></a>
+                                        
+                                    </div>
+
+                                </div>
+                        
+
+
+                            </div>
+                            <!-- <div class="clear"></div> -->
+                        </div>
+                    </div>
+                    <div id="col3">
+                        <div id="col3_content" class="clearfix">
+                            <div class="noindex">    
+
+    
+    <div class="left_features_white" id="page-sponsor">
+       <img alt="subnav top" src="themes/lto/images/bck_subnav_top.jpg" class="subnav_top">
+        <div class="left_features_content">
+            <h2>Proudly sponsored by ...</h2>
+            
+            <a><div class="table-row"><div class="table-cell"><img class="winning-logo" /></div></div></a>
+        </div>
+        <img alt="subnav bottom" src="themes/lto/images/bck_subnav_bottom.jpg" class="subnav_bottom">
+    </div>
+
+    
+    <div class="left_features_white" id="house-ad">
+       <img alt="subnav top" src="themes/lto/images/bck_subnav_top.jpg" class="subnav_top">
+        <div class="left_features_content">
+            <h2>Learn more about ...</h2>
+            <img class="pointer" src="themes/lto/css/locale/US/images/arrow_down_cf0f0f.png" alt="pointer" />
+            
+            <a><div class="table-cell"></div></a>
+        </div>
+        <img alt="subnav bottom" src="themes/lto/images/bck_subnav_bottom.jpg" class="subnav_bottom">
+    </div>
+
+
+    <img alt="subnav top" src="themes/lto/images/bck_subnav_top.jpg" class="subnav_top">
+    <!--
+
+
+    First level pages
+
+
+    -->
+    <ul class="subnav_content">
+        
+            <li class="section first" id="collapsed">
+                <a title="Understanding Your Tests" href="http://labtestsonline.org/understanding/">Understanding Your Tests</a>
+                
+            </li>
+        
+            <li class="link " id="collapsed">
+                <a title="Inside the Lab" href="http://labtestsonline.org/lab/">Inside the Lab</a>
+                
+            </li>
+        
+            <li class="link " id="collapsed">
+                <a title="In the News" href="http://labtestsonline.org/news/">In the News</a>
+                
+            </li>
+        
+            <li class="link " id="collapsed">
+                <a title="Article Index" href="http://labtestsonline.org/map/">Article Index</a>
+                
+            </li>
+        
+            <li class="link " id="collapsed">
+                <a title="About This Site" href="http://labtestsonline.org/site/">About This Site</a>
+                
+            </li>
+        
+            <li class="link last" id="collapsed">
+                <a title="Send Us Your Comments" href="http://labtestsonline.org/comments/">Send Us Your Comments</a>
+                
+            </li>
+        
+    </ul>
+    <img alt="subnav bottom" src="themes/lto/images/bck_subnav_bottom.jpg" class="subnav_bottom">
+
+                                
+                            
+                                
+                           </div>
+                            <div class="noindex"><!-- Donate -->
+
+
+<!-- Get the Apps -->
+
+    	<div id="mobile" class="left_features_white clearfix">
+		<img src="themes/lto/css/locale/US/images/lto_logo_28x27.jpg" alt="LTO logo" />
+		<h2>Get the Mobile App</h2>
+		<div id="stores"><a href="//itunes.apple.com/us/app/labtestsonline-m/id447858911" title="iTunes">iTunes</a>|<a href="https://play.google.com/store/apps/details?id=com.livewirekiosk.lwk.labtestsonline" title="Android">Android</a>|<a href="//www.amazon.com/American-Association-for-Clinical-Chemistry/dp/B006P6AJJ0" title="Kindle">Kindle</a></div>
+	</div>
+
+
+<!-- Follow Us -->
+
+    	<div id="follow" class="left_features_white">
+	<h2>Follow Us</h2>
+	<!--
+
+Note: using custom (actually, just resized) images below
+
+
+-->
+<!-- AddThis Follow BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_facebook_follow" addthis:userid="LabTestsOnline"><img src="/themes/lto/images/follow_fb_27x27.jpg" title="Follow us on Facebook" width="27" height="27" /></a>
+<a class="addthis_button_twitter_follow" addthis:userid="LabTestsOnline"><img src="/themes/lto/images/follow_tw_27x27.jpg" title="Follow us on Twitter" width="27" height="27" /></a>
+<a class="addthis_button_google_follow" addthis:userid="108618580363700141471"><img src="/themes/lto/images/follow_gp_27x27.jpg" title="Follow us on Google+" width="27" height="27" /></a>
+<a class="lto_email_signup" href="/subscribe"><img src="/themes/lto/images/follow_email_27x27.jpg" title="Subscribe to our newsletter" width="27" height="27" /></a><!-- newsletter subscription -->
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4fa09f61583c02ab"></script>
+<!-- AddThis Follow END -->
+	</div>
+
+</div>
+                        </div>
+                        <!-- IE Column Clearing -->
+                        <div id="ie_clearing"> &#160; </div>
+                    </div>
+                </div>
+                <!-- begin: #footer -->
+                <div id="footer">
+                    <div class="noindex">    
+        <div id="mod_dates">
+            
+                <!-- Output the "last review" and "last modified" date
+                 ----------------------------------------------------------------------->
+                This article was <span class="date_note" id="last_reviewed" rel="#desc_reviewed">last reviewed</span> on February  6, 2014.&nbsp;&nbsp;|&nbsp;&nbsp;This article was <span class="date_note" id="last_modified" rel="#desc_modified">last modified</span> on February 18, 2014.
+
+                <!-- Descriptions of the above dates; hidden content displayed by jQuery
+                 ----------------------------------------------------------------------->
+                <div class="date_desc" id="desc_reviewed">The review date indicates when the article was last reviewed from beginning to end to ensure that it reflects the most current science. A review may not require any modifications to the article, so the two dates may not always agree.</div>
+                <div class="date_desc" id="desc_modified">The modified date indicates that one or more changes were made to the article. Such changes may or may not result from a full review of the article, so the two dates may not always agree.</div>
+            
+        </div>
+    
+</div>
+                    <div class="noindex">                    <div id="links">
+						
+							<a href="http://labtestsonline.org/understanding/" title="Understanding Your Tests">Understanding Your Tests</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+						
+							<a href="http://labtestsonline.org/lab/" title="Inside the Lab">Inside the Lab</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+						
+							<a href="http://labtestsonline.org/news/" title="In the News">In the News</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+						
+							<a href="http://labtestsonline.org/map/" title="Article Index">Article Index</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+						
+							<a href="http://labtestsonline.org/site/" title="About This Site">About This Site</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+						
+							<a href="http://labtestsonline.org/comments/" title="Send Us Your Comments">Send Us Your Comments</a>
+						
+                    </div>
+                    <div id="notes">
+                                &copy;2001 -
+        <script language="javascript" type="text/javascript">
+            var today = new Date();
+            var current_year = today.getFullYear()
+            document.write(current_year);
+        </script>
+        by American Association for Clinical Chemistry&nbsp;&nbsp;&#8226;&nbsp;&nbsp; <a href="/contact" title="Contact Us">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/site/policies?start=2" title="Terms of Use">Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/site/policies?start=4" title="Privacy">Privacy</a>
+                    </div>
+
+                    
+						<div id="produced_by_generic">
+							<div id="honcode">
+								
+									        <a href="https://www.healthonnet.org/HONcode/Conduct.html?HONConduct253967" title="This website is certified by Health On the Net Foundation. Click to verify.">
+            <img src="//www.honcode.ch/HONcode/Seal/HONConduct253967_s1.gif" alt="This website is certified by Health On the Net Foundation. Click to verify." />
+        </a>
+        <p>We comply with the <a href="http://www.healthonnet.org/HONcode/Conduct.html" title="HONcode standard for trustworthy health information">HONcode standard</a> for<br />trustworthy health information.<br /> <a href="https://www.healthonnet.org/HONcode/Conduct.html?HONConduct253967" title="This website is certified by Health On the Net Foundation. Click to verify.">Verify Compliance</a>.</p>
+								
+							</div>
+							<div id="aacc">
+								<span>Produced by</span> <a href="http://www.aacc.org" title="AACC website"><img src="/assets/images/logo_producer_footer.gif" alt="AACC logo" /></a>
+							</div>
+							<div class="clear"></div>
+						</div>
+                    </div>
+                </div>
+            </div>
+            <div class="side-ad"><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/jquery/plugins/shadowbox-2.0/shadowbox-2.0.js?m=1319705749"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/jquery/plugins/bookmark/lto.jquery.bookmark.js?m=1319705749"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/jquery/plugins/cluetip/jquery.dimensions-1.2.js?m=1319705749"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/jquery/plugins/cluetip/jquery.hoverIntent.js?m=1319705749"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/jquery/plugins/cluetip/jquery.cluetip.js?m=1319705749"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/jquery/plugins/media/jquery.media.js?m=1319705749"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/jquery/plugins/oembed/jquery.oembed.js?m=1319705749"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/jquery/plugins/metadata/jquery.metadata.js?m=1394104040"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/date_tips.js?m=1415005727"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/global_ready.js?m=1415005727"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/media-stuff.js?m=1415005729"></script><script type="text/javascript" src="http://labtestsonline.org/sapphire/javascript/i18n.js?m=1386360001"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/lang/en_US.js?m=1319705749"></script><script type="text/javascript" src="http://labtestript" src="http://labtestsonline.org/sapphire/javascript/i18n.js?m=1386360001"></script><script type="text/javascript" src="http://labtestsonline.org/mysite/javascript/lang/en_US.js?m=1319705749"></script><script type="text/javassonline.org/sapphire/thirdparty/prototype/prototype.js?m=1386360001"></script><script type="text/javascript" src="http://labtestsonline.org/sapphire/thirdparty/behaviour/behaviour.js?m=1386360001"></script><script type="text/javascript" src="http://labtestsonline.org/sapphire/javascript/prototype_improvements.js?m=1386353744"></script><script type="text/javascript" src="http://labtestsonline.org/sapphire/javascript/lang/en_US.js?m=1386360001"></script><script type="text/javascript" src="http://labtestsonline.org/sapphire/javascript/Validator.js?m=1386353744"></script><script type="text/javascript">//<![CDATA[
+Behaviour.register({
+	'#SphinxSearchForm_SearchForm': {
+		validate : function(fromAnOnBlur) {
+			initialiseForm(this, fromAnOnBlur);
+			
+
+			var error = hasHadFormError();
+			if(!error && fromAnOnBlur) clearErrorMessage(fromAnOnBlur);
+			if(error && !fromAnOnBlur) focusOnFirstErroredField();
+			
+			return !error;
+		},
+		onsubmit : function() {
+			if(typeof this.bypassValidation == 'undefined' || !this.bypassValidation) return this.validate();
+		}
+	},
+	'#SphinxSearchForm_SearchForm input' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				// Don't perform instant validation for CalendarDateField fields; it creates usability wierdness.
+				if(this.parentNode.className.indexOf('calendardate') == -1 || this.value) {
+					return $('SphinxSearchForm_SearchForm').validate(this);
+				} else {
+					return true;
+				}
+			}
+		}
+	},
+	'#SphinxSearchForm_SearchForm textarea' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+			if(!this.old_onfocus) this.old_onfocus = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SphinxSearchForm_SearchForm').validate(this);
+			}
+		}
+	},
+	'#SphinxSearchForm_SearchForm select' : {
+		initialise: function() {
+			if(!this.old_onblur) this.old_onblur = function() { return true; } 
+		},
+		onblur : function() {
+			if(this.old_onblur()) {
+				return $('SphinxSearchForm_SearchForm').validate(this); 
+			}
+		}
+	}
+});
+
+//]]></script><script language="javascript" type="text/javascript">
+if (isShowAds) {
+var ehs_site="ehs.con.labtest.labtest";
+var ehs_zone="";
+var ehs_inter=1;
+var ehs_kw="";
+var ehs_size="160x600,120x600";
+var ehs_vpos="t";
+var ehs_hpos="l";
+var ehs_puid="";
+var ehs_kv=ehs_kv || [];
+ehs_kv.push("mcat1=co10;");
+ehs_kv.push("mcat2=null;");
+ehs_kv.push("mcat3=null;");
+ehs_kv.push("mcon1=f47u;");
+ehs_kv.push("mcon2=null;");
+ehs_kv.push("mcon3=null;");
+var ehs_protocol=(document.location.protocol=="https:") ? "https://" : "http://";
+var ehs_tagsrc=ehs_protocol+'ads.ehealthcaresolutions.com/uat/?'+ehs_site+';'+ehs_puid+';'+Math.random()*1e16;
+document.write('<scr'+'ipt type="text/javascript" src="'+ehs_tagsrc+'"></scr'+'ipt>');
+}
+</script></div>
+
+        </div>
+        <div id="bottom_corner"></div>
+
+		
+    </body>
+</html>
+
+
+resolutions.com/uat/?'+ehs_site+';'+ehs_puid+';'+Math.random()*1e16;
+document.write('<scr'+'ipt type="text/javascript" src="'+ehs_tagsrc+'"></scr'+'ipt>');
+}
+</script></div>
+
+        </div>
+        <div id="bottom_corner"></div>
+

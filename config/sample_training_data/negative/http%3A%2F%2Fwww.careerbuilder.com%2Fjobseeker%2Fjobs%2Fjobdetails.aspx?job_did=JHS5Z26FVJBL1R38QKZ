@@ -1,0 +1,703 @@
+<!doctype html>
+<html id="html" lang="en-US">
+    <head><meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"beacon-4.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"b89f89c1db","applicationID":"4446408","transactionName":"YAdVZhYHWBEFB0NcWVlNdmE0SVwNBhdSUF1SEBhGDANbBwAOWFcZRBZWXAAHRAZKBURFTg==","queueTime":0,"applicationTime":277,"ttGuid":"BE0DFABEB0A296AE","agent":"js-agent.newrelic.com/nr-476.min.js"}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwUEUl5TGwcEUFdWBwk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return Jrn void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof ForSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Language" content="en-US"><meta name="google-site-verification" content="FPWKt6e3SsrSwYTgl1vezPZmueP1qMcox7KlaIk1s3A"><meta http-equiv="expires" content="Fri, 06 Feb 2015 04:59:59 GMT"><meta name="GOOGLEBOT" content="unavailable_after: 05-Feb-2015 23:59:59 GMT"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Grant Manager Jobs in New York, NY - International Aids Vaccine Inititive (IAVI)
+</t5 04:59:59 GMT"><meta name="GOOGLEBOT" content="unavailable_after: 05-Feb-2015 23:59:59 GMT"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Grant Manager Jobs in New York, NY - International Aids Vaccine Inititive (itle><link rel="stylesheet" type="text/css" href="http://img.icbdr.com/v29.72/css/jobseeker/global/jsglobal_no_nav.css" /><link rel="stylesheet" type="text/css" href="http://img.icbdr.com/v29.72/css/jobseeker/global/jsglobal_responsive.css" /><link rel="stylesheet" type="text/css" href="http://img.icbdr.com/v29.72/css/jobseeker/themedjob/jobdetailsfeedback.css" /><link rel="stylesheet" type="text/css" href="http://img.icbdr.com/v29.72/css/talentnetwork/shared/join.css" /><link rel="stylesheet" type="text/css" href="http://img.icbdr.com/v29.72/css/jobseeker/themedjob/standard.css" /><link rel="stylesheet" type="text/css" href="http://img.icbdr.com/css/jqueryui/jquery-ui-1.9.2.css" /><link rel="stylesheet" type="text/css" href="http://img.icbdr.com/v29.72/css/jobseeker/themedjob/similarjobsuc.css" /><link rel="stylesheet" type="text/css" href="http://img.icbdr.com/v29.72/css/jobseeker/jobseekerprofile/loginmodal.css" /><script type="text/javascript">    var ScriptVariables = function(){
+        var _vars = new Array();
+            _vars['currentVer'] = 'v29.72';
+            _vars['EmailThisJobURL'] = 'http://www.careerbuilder.com/ajax/emailthisjob.aspx';
+            _vars['hasExtLinkEmailCapture'] = true;
+            _vars['SiteCatalystEmailTracking'] = true;
+            _vars['ReferringURL'] = '';
+            _vars['JobThemeType'] = 'Standard';
+            _vars['ListOfABExperiments'] = 'none';
+            _vars['CachedSenderEmail'] = '';
+            _vars['externalApplyLink'] = 'http://www.careerbuilder.com/applyonline/externalapply.aspx?useframes=false&Job_DID=JHS5Z26FVJBL1R38QKZ&companyname=International+Aids+Vaccine+Inititive+(IAVI)';
+            _vars['sAtlasTallyUrl'] = 'http://www.careerbuilder.com/ajax/jquerytallytimingerror.aspx';
+            _vars['IsJobExternal'] = true;
+            _vars['SaveThisJobURL'] = 'http://www.careerbuilder.com/ajax/savethisjob.aspx';
+            _vars['JobDetailsFeedbackURL'] = 'http://www.careerbuilder.com/ajax/jobdetailsfeedback.aspx';
+            _vars['usertype'] = 'NotSet';
+            _vars['IsBot'] = true;
+            _vars['hasEmailApplyCapture'] = true;
+            _vars['hasEmailCapture'] = true;
+            _vars['addJoinTN'] = true;
+            _vars['Company'] = 'International Aids Vaccine Inititive (IAVI)';
+            _vars['JobDID'] = 'JHS5Z26FVJBL1R38QKZ';
+            _vars['ReportJobAjaxUrl'] = 'http://www.careerbuilder.com/ajax/reportjob.aspx';
+            _vars['CachedRecipientEmail'] = '';
+            _vars['sPageNamePath'] = '/JobSeeker/ThemedJob/Standard.aspx';
+            _vars['JoinTalentNetworkButton'] = false;
+            _vars['CachedEmailName'] = '';
+            _vars['CompanyDID'] = 'C8C0Q05X29K73R8WZF8';
+            _vars['externalLink'] = 'http://www.careerbuilder.com/applyonline/externallinkapply.aspx?useframes=false&Job_DID=JHS5Z26FVJBL1R38QKZ&companyname=International+Aids+Vaccine+Inititive+(IAVI)';
+            _vars['hostsite'] = 'US';
+            _vars['ButtonText'] = 'Sign In';
+            _vars['UserID'] = '';
+            _vars['SignInHeader'] = 'Sign in';
+            _vars['emailReq'] = true;
+            _vars['SignedInText'] = 'Save Job';
+            _vars['iframeSrc'] = 'https://www.careerbuilder.com/share/login.aspx?modal=true';
+            _vars['Onet'] = '11-9151.00';
+            _vars['AuthenticationLevel'] = 'Unknown';
+        return{
+            Contains: function(sVarName){
+                     return (typeof(_vars[sVarName]) != 'undefined');
+            },
+            Get: function(sVarName){
+                     var returnValue = '';
+                     if(ScriptVariables.Contains(sVarName)){
+                         returnValue = _vars[sVarName];
+                     }
+                     return returnValue;
+            }
+        };
+    }();
+</script><script type="text/javascript">
+    var dataLayer = [{
+            'currentVer': 'v29.72'
+            , 'browserID': ''
+            , 'job': {'onet': '11-9151.00', 'company_name': 'International Aids Vaccine Inititive (IAVI)', 'posted_date': '1/6/2015 12:00:00 AM', 'state': 'NY', 'city': 'New York', 'country': 'US', 'experience': 'At least 5 year(s)', 'screener': false, 'employment_type': 'Full-Time', 'degree_required':true, 'company_did': 'C8C0Q05X29K73R8WZF8', 'has_video': false, 'has_street_address': true, 'job_theme_type': 'Standard', 'apply_type': {'apply_online': false, 'shared_apply': false, 'has_screener': false, 'resume_capture': false, 'external_apply': true, 'apply_url': 'https://careers-iavi.icims.com/jobs/1093/grant-manager/job', 'skip_resume': false, 'email_required': true, 'contact_capture': false}}
+            , 'userStatus': 'Unknown'
+            , 'join_talent_network_button': false
+            , 'isInternal': false
+            , 'sessionID': 'BOTIPSID8bec42669eada034795663a7-100608002-9c-2'
+            , 'visitorID': ''
+            , 'siteID': 'cbnsv'
+    }];
+</script><script type="text/javascript">var ajaxRelativePrefix = '../../AJAX/';</script><script type="text/javascript" src="http://img.icbdr.com/Common/js/cblibraryajaxbase.min.js"></script><script type="text/javascript" src="http://static.criteo.net/js/ld/ld.js" async="true"></script>
+
+        <!--[if lt IE 9]>
+            <script>
+                document.createElement('header');
+                document.createElement('nav');
+                document.createElement('article');
+                document.createElement('section');
+                document.createElement('aside');
+                document.createElement('footer');
+            </script>
+            <style>
+                header, nav, article, section, aside, footer { display: block; }
+            </style>
+        <![endif]-->
+        <script>
+            (function (e) { var t = "500", n = document, r, i, s = { http: "http://cdn.mplxtms.com/s/MasterTMS.min.js", https: "https://secure-cdn.mplxtms.com/s/MasterTMS.min.js" }, o = s[/\w+/.exec(window.location.protocol)[0]]; i = n.createElement("script"), i.type = "text/javascript", i.async = !0, i.src = o + "#" + t, r = n.getElementsByTagName("script")[0], r.parentNode.insertBefore(i, r), i.readyState ? i.onreadystatechange = function () { if (i.readyState === "loaded" || i.readyState === "complete") i.onreadystatechange = null } : i.onload = function () { try { e() } catch (t) { } } })(function () { });
+        </script>
+
+        
+        <!-- Start Visual Website Optimizer Asynchronous Code -->
+            <script type='text/javascript'>
+                var _vwo_code = (function () {
+                    var account_id = 61602,
+                    settings_tolerance = 2000,
+                    library_tolerance = 2500,
+                    use_existing_jquery = false,
+                    // DO NOT EDIT BELOW THIS LINE
+                    f = false, d = document; return { use_existing_jquery: function () { return use_existing_jquery; }, library_tolerance: function () { return library_tolerance; }, finish: function () { if (!f) { f = true; var a = d.getElementById('_vis_opt_path_hides'); if (a) a.parentNode.removeChild(a); } }, finished: function () { return f; }, load: function (a) { var b = d.createElement('script'); b.src = a; b.type = 'text/javascript'; b.innerText; b.onerror = function () { _vwo_code.finish(); }; d.getElementsByTagName('head')[0].appendChild(b); }, init: function () { settings_timer = setTimeout('_vwo_code.finish()', settings_tolerance); this.load('//dev.visualwebsiteoptimizer.com/j.php?a=' + account_id + '&u=' + encodeURIComponent(d.URL) + '&r=' + Math.random()); var a = d.createElement('style'), b = 'body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}', h = d.getElementsByTagName('head')[0]; a.setAttribute('id', '_vis_opt_path_hides'); a.setAttribute('type', 'text/css'); if (a.styleSheet) a.styleSheet.cssText = b; else a.appendChild(d.createTextNode(b)); h.appendChild(a); return settings_timer; } };
+                }()); _vwo_settings_timer = _vwo_code.init();
+                </script>
+                <!-- End Visual Website Optimizer Asynchronous Code -->
+        <link rel="search" href="http://img.icbdr.com/images/MarketingWeb/OpenSearch/OpenSearch2.xml" type="application/opensearchdescription+xml" title="CareerBuilder" />
+<link rel="canonical" href="http://www.careerbuilder.com/jobseeker/jobs/jobdetails.aspx?job_did=JHS5Z26FVJBL1R38QKZ" />
+<link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.careerbuilder.com/job/JHS5Z26FVJBL1R38QKZ" />
+<link rel='alternate' href='android-app://com.careerbuilder.SugarDrone/careerbuilder/careerbuilder.com/job?JHS5Z26FVJBL1R38QKZ' />
+<style>
+.content-main { margin-right: 340px; }
+.content-extra { margin-right: 20px; }
+.company-buttons a { border-radius: 0px; color: #FFFFFF; font-size: px; font-family: Arial; background-color: #0252A2; }
+.content-asides { border: solid 3px #063453; border-radius: 10px; background-color: #063453; }
+aside { border-radius: 7px; }
+.aside-body { color: #000000; font-size: 14px; font-family: Arial; background-color: #6fa3c5; background-size: 100%; }
+aside h2 { color: #FFFFFF; font-family: Arial; background-color: #0062a3; border-bottom: solid 6px #063453; }
+sec border-radius: 7px; }
+.aside-body { color: #000000; font-size: 14px; font-family: Arial; background-color: #6fa3c5; background-size: 100%;tion h2 { color: #000000; font-size: 18px; font-family: Arial; }
+header { border-color: #0062a3; border-radius: 10px; border-width: 3px; }
+.page-bounds { border-bottom: solid 3px #0062a3; border-right: solid 3px #0062a3; border-left: solid 3px #0062a3; }
+.bottom-content { border-radius: 10px; }
+</style>
+
+</head>
+    <body>
+        
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NXB4FH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-NXB4FH');</script>
+<!-- End Google Tag Manager -->
+   
+
+
+
+        <div class="skip-navigation">
+            <a href="#main-content">Skip navigation</a>
+        </div>
+
+        
+        
+
+        
+    <form name="aspnetForm" method="post" action="Standard.aspx?job_did=JHS5Z26FVJBL1R38QKZ&amp;showNewJDP=yes" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE3NDM2MjIyMDdkZE6a1zr+CQL8tGPppHi7IIgsJL8H" />
+
+
+<script src="http://img.icbdr.com/Common/js/AJAXLibs/System.Web.Extensions/3.5.0.0/3.5.30729.196/MicrosoftAjax.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/v29.72/Common/js/cbatlascore.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/Common/js/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/Common/js/jquery/jquery.cblibrary.min.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/Common/js/jqueryui/jquery-ui-1.9.2.css.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/Common/js/jquery/jqueryui/jquery-ui-1.9.2.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/v29.72/Common/js/jobseeker/themedjob/jobdetailsfeedback.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/Common/js/jquery/jquery.ba-bbq.min.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/v29.72/Common/js/jobseeker/themedjob/jobdetails.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/v29.72/Common/js/autocomplete/cbautocomplete.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/v29.72/Common/js/jobseeker/talentnetwork/joinxdmparent.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/v29.72/Common/js/jobseeker/ads/delayedad.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/v29.72/Common/js/jobseeker/loginmodal/jobseekerloginmodalcontrol.js" type="text/javascript"></script>
+<script src="http://img.icbdr.com/v29.72/Common/js/jobseeker/loginmodal/postmessage.js" type="text/javascript"></script>
+        <div id="CBBody_FloatyBar" class="floaty-bar">
+	
+            <div class="floaty-left">
+                <div class="floaty-title">Grant Manager</div>
+                <div class="floaty-byline">
+                    <span id="CBBody_FloatyCompanyName">International Aids Vaccine Inititive (IAVI)</span>
+                    <span id="CBBody_FloatyLocation">New York, NY</span>
+                    <span id="CBBody_FloatyPosted">1/6/2015</span>
+                </div>
+            </div>
+            <div class="floaty-right">
+                <ul class="floaty-actions">
+                    
+                        <li>
+                            <a id="FloatingLoginProxy">Save Job</a>
+                        </li>
+                    
+                    
+                        <li><a id = "email-job-floaty" class="email-job">Email</a></li>
+                    
+                </ul>
+                <div class="floaty-apply">
+                    <a id="cbhlApplyFloaty" class="btn" href="http://www.careerbuilder.com/applyonline/externalapply.aspx?aourl=http%3a%2f%2fapi.careerbuilder.com%2fv1%2fapplication%2fapplylink%3fJobDID%3dJHS5Z26FVJBL1R38QKZ%26TrackingID%3dCBWG7KSY%26HostSite%3dUS&amp;useframes=True&amp;Job_DID=JHS5Z26FVJBL1R38QKZ">Apply Now</a>
+                </div>
+            </div>
+        
+</div>
+        <div id="CBBody_pnlTopNav" class="top-bar">
+	
+            <nav>
+                <a id="CBBody_CBHyperLink1" class="logo" href="http://www.careerbuilder.com/"><img src="http://img.icbdr.com/images/jdt/cb-logo.png" alt="CareerBuilder" border="0" /></a>
+                <div class="return">
+    <strong></strong>
+    
+    <strong><a id="CBBody_MagellanBackToResults1_cbhlStartNewSearch" title="Start a new Job Search" class="RXhide" href="http://www.careerbuilder.com/jobseeker/jobs/jobfindadv.aspx">Start a new search</a></strong>
+
+</div>
+            </nav>
+        
+</div>
+        <div class="page-bounds">
+            <div id="CBBody_pagebounds" class=" white-page-bounds">
+	
+                <div class="branding-bounds">
+                    
+                    
+                    <div style="height:20px;"></div>
+                    <div id="CBBody_pnlPremiumStaticHeader" class="premium-static-wrapper">
+		
+                        <img id="CBBody_staticHeader" class="premium-static-header standard" src="http://img.icbdr.com/MediaManagement/CW/MWN2W75ZFBFSCQS17CW.jpg" border="0" />
+                    
+	</div>
+                        
+                    <article>
+                        <header id="CBBody_header">
+                            <a href="#" id="main-content"></a>
+                            <h1 id="job-title">Grant Manager</h1>
+                            <div class="header-info">
+                                <div class="header-byline">
+                                    <span id="CBBody_CompanyName" class="company-name">International Aids Vaccine Inititive (IAVI)</span>
+                                    <span id="CBBody_Location">New York, NY</span>
+                                    <span id="CBBody_Posted">1/6/2015</span>
+                                </div>
+                                <ul id="CBBody_topActionButtons" class="header-actions">
+                                    
+                                        <li class="header-actions-save">
+                                            
+<div class="cb_style2011">
+    <div class="jsOn">
+        <a id="CBBody_JobSeekerLoginModal1_cbhlSignInModal" class="cbhlSignInModal">Save Job</a>
+        <input name="CBBody:JobSeekerLoginModal1:hiddenUserType" type="text" id="CBBody_JobSeekerLoginModal1_hiddenUserType" style="display:none;" />
+
+            
+                <div id="dialog-modal">
+                </div>
+            
+
+        
+        
+    </div>
+
+    
+    <noscript>
+        <style type="text/css">
+            div.cb_style2011 div.jsOn {
+                display: none ;
+            }
+        </style>
+    </noscript>
+    <noscript>
+        <a id="CBBody_JobSeekerLoginModal1_NoJSSignIn" class="cbhlSignInModal" href="https://www.careerbuilder.com/share/login.aspx?NextUrl=http%3a%2f%2fwww.careerbuilder.com%2fjobseeker%2fthemedjob%2fstandard.aspx">Sign in Now</a>
+    </noscript>
+    
+
+</div>
+                                        </li>
+                                    
+
+                                    
+                                        <li class="header-actions-email">
+                                            <a class="email-job">Email</a>
+                                        </li>
+                                    
+
+                                    <li class="header-actions-print">
+                                        <a id="PrintJob" rel="nofollow" href="http://www.careerbuilder.com/jobseeker/jobs/jobdetails.aspx?lr=&amp;job_did=JHS5Z26FVJBL1R38QKZ&amp;pf=true" target="_blank">Print</a>
+                                    </li>
+                            
+                                    
+                                        <li class="header-actions-report">
+                                            <a id="ReportJob" href="http://www.careerbuilder.com/jobseeker/accessible/jobfeedback.aspx?job_did=JHS5Z26FVJBL1R38QKZ">Report</a>
+                                        </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div id="pnlTopApply" class="header-apply">
+		
+                                <a id="cbhlApplyOnlineTop" class="btn" href="http://www.careerbuilder.com/applyonline/externalapply.aspx?aourl=http%3a%2f%2fapi.careerbuilder.com%2fv1%2fapplication%2fapplylink%3fJobDID%3dJHS5Z26FVJBL1R38QKZ%26TrackingID%3dCBWG7KSY%26HostSite%3dUS&amp;useframes=True&amp;Job_DID=JHS5Z26FVJBL1R38QKZ">Apply Now</a>
+                            
+	</div>                            
+                        
+                        </header>
+                        
+                        <div class="bottom-content clearfix">
+                           <div> 
+                            <div id="contentwrapper">
+                                <div id="CBBody_contentmain" class="content-main standard" class="content-main">
+		
+                                <div class="content-sections">
+
+                                     
+
+                                    
+                                        <section id="job-description-section" class="minimized">
+                                            <h2>Job Description</h2>
+                                            <div id="pnlJobDescription" class="section-body">
+			
+                                                <p><strong>The Organization</strong> - The International AIDS Vaccine Initiative (IAVI) is a nonprofit scientific and charitable organization founded in 1996 whose mission is to ensure the development of safe, effective, accessible, preventive HIV vaccines for use throughout the world. IAVI will help advance the development of an AIDS vaccine by: 1) adding value to the HIV vaccine field by identifying opportunities and gaps in vaccine discovery and development where IAVI&rsquo;s capabilities can best be leveraged; 2) partnering to advance quality HIV vaccine candidates to the clinic; and 3) ensuring that investments in HIV prevention and AIDS vaccine R&amp;D remain central to the public policy and international health and development agendas by serving as a voice for the field in partnership with stakeholders and donors.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>IAVI is a young, dynamic and mission-driven organization, and the work environment is fast-paced and intellectually stimulating, relying on the good cheer and high level of collaboration amongst its committed staff members.</p>
+<div></div>
+<div>Responsibilities: </div>
+<div>
+<div>
+<div>
+<p>The International AIDS Vaccine Initiative (IAVI) is a nonprofit scientific and charitable organization founded in 1996 whose mission is to ensure the development of safe, effective, accessible, preventive HIV vaccines for use throughout the world. IAVI's work focuses on four areas: accelerating scientific progress; mobilizing public support through issue advocacy and education; encouraging industrial involvement in AIDS vaccine development; and working to assure global access to a vaccine. IAVI is a young, dynamic and mission-driven organization, and the work environment is fast-paced and intellectually stimulating, relying on the good cheer and high level of cooperation of its committed members.</p>
+<p>&nbsp;</p>
+<p><strong>Position:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grant Manager Grants, Contracts &amp; Compliance (New York Office)</p>
+<p><strong>Reports To:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Director, Grants, Contracts &amp; Compliance</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline">Position Summary:</span></p>
+<p>The Grant Manager works within the Finance and Administration department to support the organization's grant management functions, specifically addressing the pre- and post- award management of IAVI grants; including but not limited to, federal, non-federal and foundation grants.</p>
+<p><strong><span style="text-decoration: underline">Key Responsibilities:</span></strong></p>
+<ul>
+    <li>Assist in preparing budget-related materials and supporting documents required for submission with grant proposals, funding renewals, financial reports, grant extension requests, work plans and reports, etc.</li>
+    <li>Manage and lead the post award administration of grants including; accurate and timely progress and financial reporting to donors, ongoing monitoring of grant budgets and spending to ensure targets are met, preparation of financial analyses as needed, ongoing monitoring of donor compliance requirements and performance of close out procedures.</li>
+    <li>Create and maintain grant management documents and reports as required by donors including work plans, reports, and perform financial analyses as needed.</li>
+    <li>Maintain systems, policies, and procedures compliant with donor funding requirements.</li>
+    <li>Assist in the maintenance of IAVI&rsquo;s Grants Management Intranet.</li>
+    <li>Provide coverage for the grant management functions of other grant managers as needed.</li>
+</ul>
+<div></div>
+</div>
+</div>
+</div>
+<div>&nbsp;</div> 
+                                                <div id="jobDescriptionTextFade"></div>
+                                            
+		</div>
+                                        </section> 
+                                          
+                                    
+                                        <section id="job-requirements">
+                                            <h2>Job Requirements</h2>
+                                            <div class="section-body">
+                                                <div>Qualifications: </div>
+<div>
+<div>
+<div>
+<p>&nbsp;</p>
+<ul>
+    <li>Bachelors Degree required; advanced degree desirable.</li>
+    <li>Minimum of 5 years progressive work experience in challenging finance/administrative roles; particularly in pre- and post-award grants management.</li>
+    <li>Minimum of 2-3 year experience in administering grants and contracts; experience with grants funded by USAID and other government agencies is highly desirable.</li>
+    <li>Meticulous organizational skills, ability to prioritize projects, follow through on detail with high-level accuracy.</li>
+    <li>Previous work experience in a university or non-profit organization; particularly in research settings, highly desirable.</li>
+    <li>Excellent communication skills, including written and oral communication and the ability to present to groups of all sizes.</li>
+    <li>Excellent organizational and interpersonal skills; tact, patience, diplomacy, and appropriate assertiveness.</li>
+    <li>Demonstrated ability to work effectively under pressure and handle multiple simultaneous tasks and demands.</li>
+    <li>Proficiency in Microsoft Office, PowerPoint and other software.&nbsp; High Excel proficiency required; advanced Excel skills a plus.</li>
+</ul>
+</div>
+</div>
+</div>
+                                            </div>
+                                        </secncy in Microsoft Office, PowerPoint and other software.&nbsp; High Excel proficiency required; advanced Excel skills a plus.</li>tion>
+                                    
+                                        <section id="job-snapshot-section">
+                                            <h2>Job Snapshot</h2>
+                                            <div class="section-body">
+                                                
+                                                        <div class="snap-line">
+                                                            <strong>Employment Type</strong>
+                                                            <span>Full-Time</span>
+                                                        </div>                                        
+                                                    
+                                                        <div class="snap-line">
+                                                            <strong>Job Type</strong>
+                                                            <span>Nonprofit - Social Services</span>
+                                                        </div>                                        
+                                                    
+                                                        <div class="snap-line">
+                                                            <strong>Education</strong>
+                                                            <span>4 Year Degree</span>
+                                                        </div>                                        
+                                                    
+                                                        <div class="snap-line">
+                                                            <strong>Experience</strong>
+                                                            <span>At least 5 year(s)</span>
+                                                        </div>                                        
+                                                    
+                                                        <div class="snap-line">
+                                                            <strong>Manages Others</strong>
+                                                            <span>No</span>
+                                                        </div>                                        
+                                                    
+                                                        <div class="snap-line">
+                                                            <strong>Relocation</strong>
+                                                            <span>No</span>
+                                                        </div>                                        
+                                                    
+                                                        <div class="snap-line">
+                                                            <strong>Industry</strong>
+                                                            <span>Accounting - Finance</span>
+                                                        </div>                                        
+                                                    
+                                                        <div class="snap-line">
+                                                            <strong>Required Travel</strong>
+                                                            <span>None</span>
+                                                        </div>                                        
+                                                    
+                                            </div>
+                                        </section>
+                                    
+                                                                       
+                                    
+                                    
+                                    
+                                </div>                              
+                                <div id="pnlBottomApply" class="content-apply">
+			
+                                    <div id="apply-container">
+                                        <a id="cbhlApplyOnlineBottom" class="btn" href="http://www.careerbuilder.com/applyonline/externalapply.aspx?aourl=http%3a%2f%2fapi.careerbuilder.com%2fv1%2fapplication%2fapplylink%3fJobDID%3dJHS5Z26FVJBL1R38QKZ%26TrackingID%3dCBWG7KSY%26HostSite%3dUS&amp;useframes=True&amp;Job_DID=JHS5Z26FVJBL1R38QKZ">Apply Now</a>
+                                    </div>
+                                    
+                                
+		</div>
+                                   
+                            
+	</div>
+                            </div>
+                            <div class="content-extra">
+                                
+                                
+                                <div id="CBBody_pnlCompOverview" class="content-asides">
+		
+                                    <aside>
+                                
+                                        <h2>Company Overview</h2>
+                                        <div class="aside-body">
+
+                                            
+                                                <div class="companyImageCon">
+                                                    <img id="CBBody_CompanyImage" class="CompanyImage" src="http://img.icbdr.com/MediaManagement/MX/MWK1SX6J2YZHVP8P0MX.jpg" alt="International Aids Vaccine Inititive (IAVI)" border="0" />
+                                                </div>
+                                                <div>
+                                                    <b>International Aids Vaccine Inititive (IAVI)</b>
+                                                    <br />
+                                                    Our core mission is to support in every way the development of preventive AIDS vaccines that are not only safe and effective, but also accessible to all people. To that end, IAVI invests the bulk of its resources in the research and clinical assessment of candidate vaccines against strains of HIV that are prevalent in the developing world, where some 95% of new HIV infections occur. 
+                                                    <br />
+                                                    <a id="CBBody_CompanyDetailsLink" href="http://www.careerbuilder.com/jobs/company/c8c0q05x29k73r8wzf8/international-aids-vaccine-inititive--iavi-">Learn More</a>
+                                                </div>
+                                            
+                                            <h3>Contact Information</h3>
+                                            <div class="contact-bits">
+                                                <span id="CBBody_ContactAddress">125 Broad St<br>New York, NY</span>
+                                                <span id="CBBody_ContactName">Tim Corbley</span>
+                                                <span id="CBBody_ContactPhone">Phone: 212-328-7429</span>
+                                                <span id="CBBody_ContactFax">Fax: 212-847-1112</span>
+                                            </div>
+                                            <div class="company-buttons">
+                                                <a id="CBBody_viewAllJobs" class="blue btn company-button" href="http://www.careerbuilder.com/jobseeker/jobs/jobresults.aspx?ncc=%22International+Aids+Vaccine+Inititive+(IAVI)%22">View All Jobs</a>
+                                            </div> 
+                                            
+                                            
+                                        </div>
+                                    </aside>
+                                
+	</div>
+
+                                
+                            </div>
+                        <div id ="themedfooter">
+                            <img id="CBBody_ThemedJobFooter" src="http://img.icbdr.com/MediaManagement/DN/MWS3336JJ7R884GBGDN.jpg" border="0" />
+                        </div>
+                              </div>
+                            </div>
+                    </article>
+                    
+                </div>
+                
+                <div id="CBBody_cbadvice" class="content-advice">
+		
+                    <div class="content-advice-header">CareerBuilder Tip:</div>
+                    <div class="content-advice-blurb">
+                        For your
+                        <a id="CBBody_CBHyperLink2" href="http://www.careerbuilder.com/jobseeker/info/privacy.aspx">privacy and protection</a>,
+                        when applying to a job online, never give your social security number to a prospective
+                        employer, provide credit card or bank account information, or perform any sort of
+                        monetary transaction.
+                        <a id="CBBody_CBHyperLink3" href="http://www.careerbuilder.com/jobseeker/info/privacy.aspx">Learn more</a>.<br>
+                        <br>
+                        By applying to a job using CareerBuilder.com you are agreeing to comply with and
+                        be subject to the CareerBuilder.com
+                        <a id="CBBody_CBHyperLink4" href="http://www.careerbuilder.com/jobseeker/info/hhterms.aspx">Terms and Conditions</a>
+                        for use of our website. To use our website, you must agree with the
+                        <a id="CBBody_CBHyperLink5" href="http://www.careerbuilder.com/jobseeker/info/hhterms.aspx">Terms and Conditions</a>
+                        and both meet and comply with their provisions.
+                    </div>
+                
+	</div>
+                
+            
+            
+</div>
+        </div>
+
+        
+
+        <div id="ExtLinkModal" class="job-modal">
+	
+            <div class="modal-body ">
+                <div class="extCapture">Submit your email address to continue to <b>International Aids Vaccine Inititive (IAVI)</b></div>
+                <div>Email Address:</div>
+                <div class="extCapture"><input type="text" id="extEmailCaptureField" size="40"/><span class="Required" id="extEmailInvalid">Invalid!</span></div>
+                <div class="extCapture">
+                    <button id="emailCaptureSubmit" class="button">Continue</button>
+                    <a id="emailCaptureCancel" href="#" class="cancel-note-save">Cancel</a>
+                </div>
+            </div>
+        
+</div>        
+        <div id="saveJobModal" class="job-modal">
+	     
+            <p>Grant Manager</p>
+            <br />
+            <div class="small-modal-text">
+                <p>Enter notes about this job:</p>
+            </div>
+            <textarea name="CBBody:txtSavedJobNotes" rows="5" cols="25" id="CBBody_txtSavedJobNotes" class="modal-textarea">
+</textarea>
+              
+            <button id="btnSaveNotes" class="button">Save Notes</button>
+            <a id="lnkCancelNoteSave" href="#">Cancel</a>
+        
+</div>
+    
+        <div id="emailJobModal" class="job-modal">
+	
+            <div class="modal-title"></div>
+            <div class="modal-body">
+                <div class="email-field">
+                    <div id="email-from">From (your email)</div>
+                    <div>
+                        <input name="CBBody:txtSenderEmail" id="CBBody_txtSenderEmail" class="email-textbox" PlaceHolder="Sender Email" type="email" />
+                        <div id="sender-validation-icon" class="validation-icon">
+                        </div>
+                    </div>
+                    <div id="email-sender-error-message">
+                        <span class ="textError" id="senderTextError">Please enter valid email address.</span>
+                    </div>
+                </div>
+                <div class="email-field">
+                    <div id="email-to">To (recipient's email)</div>
+                    <div>
+                        <input name="CBBody:txtRecipientEmail" id="CBBody_txtRecipientEmail" class="email-textbox" PlaceHolder="Recipient Email" type="email" />
+                        <div id="recipient-validation-icon" class="validation-icon">
+                        </div>
+                    </div>
+                    <div id="email-recipient-error-message">
+                        <span class ="textError" id="recipientTextError">Please enter valid email address.</span>
+                    </div>
+                </div>
+                <div class="clear">
+                    <div id="email-name">Your Name</div>
+                    <div>
+                        <input name="CBBody:txtEmailName" type="text" id="CBBody_txtEmailName" class="email-textbox" PlaceHolder="Your Name" />
+                    </div>
+                </div>
+                <div class="margin-bottom-modal-text">
+                    <div id="email-notes">Notes</div>
+                    <div>
+                        <textarea name="CBBody:txtEmailNotes" rows="5" cols="25" id="CBBody_txtEmailNotes" class="modal-textarea" PlaceHolder="Notes">
+</textarea>
+                        <span id="CBBody_lblEmailNoteCharCount"></span>
+                    </div>
+                </div>        
+                <div id="btn-container">
+                    <button id="btnSendEmail" class="button">Send Email</button>
+                    <a id="lnkCancelEmail" href="#">Cancel</a>
+                </div>
+            </div>            
+        
+</div>
+
+        <div id="ReportModal" class="report-modal">
+	
+            <div class="modal-title"></div>
+            <div class="modal-body">
+                <div class="report-blurb">
+                    Please help us monitor our job postings by providing us feedback on this job. If
+                    you feel this job is miscategorized or some type of spam please let us know. Once
+                    a job has been reported to us, we will investigate it further and make the appropriate
+                    adjustments. If you require a response please submit your question or concern to
+                    our <a href="http://www.fuzeqna.com/careerbuilder/consumer/question.asp?catid=48" target="_blank">Trust and Site Security Team</a>.
+                </div>
+                <div class="report-fields">
+                    <label for="ReportType">Select a report type:</label>
+                    <select id="ReportType">
+                        <option value="CHARGE">Fee or investment required</option>
+                        <option value="CANTAP">Cannot apply/broken link</option>
+                        <option value="SCAM">Possible Scam</option>
+                        <option value="MULJOB">Multiple positions in one posting</option>
+                        <option value="MISCAT">Miscategorized</option>
+                        <option value="NOTCOM">Company not identified</option>
+                        <option value="NOTKEY">Irrelevant keywords</option>
+                        <option value="OFFENS">Offensive content</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                    <label for="ReportComments">Comments:</label>
+                    <textarea id="ReportComments"></textarea>
+                </div>
+                <div class="report-error"></div>
+                <div class="report-buttons">
+                    <button id="ReportSubmit" class="button">Submit</button>
+                    <img src="http://img.icbdr.com/images/js/loading.gif" class="report-sending" />
+                    <a id="ReportCancel" class="cancel-note-save">Cancel</a>
+                </div>
+            </div>
+        
+</div>
+
+        
+    <script type="text/javascript">
+            window.criteo_q = window.criteo_q || []; 
+            window.criteo_q.push(   { event: "setAccount", account: "4442" },
+                                    { event: "setCustomerId", id: "" },
+                                    { event: "setSiteType", type: "d" },
+                                    { event: "viewItem", item: "JHS5Z26FVJBL1R38QKZ" } );
+    </script>
+
+
+         
+    
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAfeQK8lAmBtXXrV+vlmPqbjPO4TuY7+iDOkXAj4bomR2ww0yPv1Xxxj/l/h/GCoioJSjVdLl4S8rwiSM+IPl9OaA7h+UDoSSMiO2gu7ZBv8oZP3bX1oUtVcG34vjei2XfkLfoHHcqzoUC2WR/yOR9EkENHX1pxNveIWi8+jRw9Gzf7YVIA=" /></form>
+
+
+        
+<div style="display: none;">
+<!-- SiteCatalyst code version: H.0.
+    Copyright 1997-2006 Omniture, Inc. More info available at http://www.omniture.com -->
+    <script language="JavaScript">var s_account = 'cbglobal';</script>
+    <script language="JavaScript" src="http://img.icbdr.com/common/js/SiteCatalystH243.js"></script>
+    <script language="JavaScript"><!--
+        s_cb.pageName='jobseeker : find jobs : job details';
+        s_cb.server='www';
+        s_cb.channel='jobseeker';
+        s_cb.prop1='job details';
+        s_cb.prop4='New JDP Action Buttons';
+        s_cb.prop11='find jobs';
+        s_cb.prop19='brandstandard';
+        s_cb.prop20='NavVersion_fresh';
+        s_cb.eVar7='International Aids Vaccine Inititive (IAVI)';
+        s_cb.eVar8='jobseeker : find jobs : job details';
+        s_cb.eVar11='NotRegistered';
+        s_cb.eVar15='NO_NotRegistered';
+        s_cb.eVar19='brandstandard';
+        s_cb.eVar20='NavVersion_fresh';
+        s_cb.eVar21='jobseeker : find jobs : job details';
+        s_cb.eVar51='find jobs';
+        s_cb.eVar70='none';
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s_cb.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><noscript><img src = "http://cbglobal.112.2O7.net/b/ss/cbglobal/1/H.0--NS/0" height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.0. -->
+</div>
+
+
+        <!-- Begin comScore Tag -->
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b")
++ ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script>
+<script>
+COMSCORE.beacon({
+c1:2,
+c2:6035061,
+c3:"",
+c4:"",
+c5:"",
+c6:"",
+c15:""
+});
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&c2=&c3=&c4=&c5=&c6=&c15=&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+        
+
+        
+
+
+
+
+
+        
+
+          
+    </body>
+</html>",
+c5:"",
+c6:"",
+c15:""
+});

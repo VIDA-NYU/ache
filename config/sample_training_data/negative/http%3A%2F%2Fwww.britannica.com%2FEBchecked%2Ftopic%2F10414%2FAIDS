@@ -1,0 +1,969 @@
+<!doctype html>
+
+<!--[if IE 7]><html data-ytrk-page="TOPIC PAGINATED PAGINATED" class="no-js  lt-ie10 lt-ie9 lt-ie8 ie7" lang="en"><![endif]-->
+<!--[if IE 8]><html data-ytrk-page="TOPIC PAGINATED PAGINATED" class="no-js  lt-ie10 lt-ie9 ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html data-ytrk-page="TOPIC PAGINATED PAGINATED" class="no-js  lt-ie10 ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html data-ytrk-page="TOPIC PAGINATED PAGINATED" class="no-js " lang="en"><!--<![endif]-->
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# ">
+
+
+    <!--[if lte IE 9 ]>
+    <script type="text/javascript" src="/resources/js/polyfills.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        Mendel = {};
+        $UI = {};
+        (function() {
+            var html = document.getElementsByTagName('html')[0];
+            html.className = html.className.replace( 'no-js', '');
+        })();
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Transmissible disease of the immune system caused by the human immunodeficiency virus (HIV). HIV is a lentivirus (literally meaning &ldquo;slow virus&rdquo;; a member of the retrovirus family)..." /><meta name="keywords" content="AIDS, encyclopedia, encyclopaedia, britannica, article" /><meta name="canonical" content="http://www.britannica.com/EBchecked/topic/10414/AIDS" />
+        <link rel="canonical" href="http://www.britannica.com/EBchecked/topic/10414/AIDS" />
+    <meta name="next" content="http://www.britannica.com/EBchecked/topic/10414/AIDS/272475/Groups-and-subtypes-of-HIV" /><link rel="next" href="http://www.britannica.com/EBchecked/topic/10414/AIDS/272475/Groups-and-subtypes-of-HIV" /><meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@britannica" />
+<meta name="twitter:title" content="AIDS | disease" />
+<meta name="twitter:description" content="Transmissible disease of the immune system caused by the human immunodeficiency virus (HIV). HIV is a lentivirus (literally meaning &ldquo;slow virus&rdquo;; a member of the retrovirus family)..." />
+<meta name="twitter:image:src" content="http://media-2.web.britannica.com/eb-media/29/117429-004-7A4C16AC.jpg" />
+<meta name="twitter:url" content="http://www.britannica.com/EBchecked/topic/10414/AIDS" />
+
+<meta property="og:type"  content="article"/>
+<meta property="og:title" content="AIDS | disease"/>
+<meta property="og:description" content="Transmissible disease of the immune system caused by the human immunodeficiency virus (HIV). HIV is a lentivirus (literally meaning &ldquo;slow virus&rdquo;; a member of the retrovirus family)..."/>
+<meta property="og:site_name" content="Encyclopedia Britannica" />
+<meta property="og:url" content="http://www.britannica.com/EBchecked/topic/10414/AIDS"/>
+<meta property="og:image" content="http://media-2.web.britannica.com/eb-media/29/117429-004-7A4C16AC.jpg" />
+<meta property="og:image:type" content="image/jpg" />
+<script type="text/javascript">
+Mendel.openGraph = {
+    type: 'article',
+    title: 'AIDS | disease',
+    description: 'Transmissible disease of the immune system caused by the human immunodeficiency virus (HIV). HIV is a lentivirus (literally meaning \u201Cslow virus\u201D; a member of the retrovirus family)...',
+    siteName: 'Encyclopedia Britannica',
+    url: 'http://www.britannica.com/EBchecked/topic/10414/AIDS',
+    image: 'http://media-2.web.britannica.com/eb-media/29/117429-004-7A4C16AC.jpg',
+    imageType: 'image/jpg'
+    
+};
+</script>
+
+<title>AIDS | disease | Encyclopedia Britannica</title>
+
+    <link href="//fonts.googleapis.com/css?family=Coustard|Asap:400,700|Open+Sans:400,700,800" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/libs/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/resources/css/min-mendel.css?v=2.24.23" />
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+
+    <script type="text/javascript">
+	Mendel.config = {
+        page: 'Topic',
+        testVersion: 'A',
+		server: 'http://www.britannica.com',
+        mediaServer: "http://media.web.britannica.com",
+		currentUrl: 'http://www.britannica.com/EBchecked/topic/10414/AIDS',
+        sharedUrl: 'http://www.britannica.com/EBchecked/topic/10414/AIDS',
+        userType: 'BOL',
+        userInfo: { statId: '301360'
+                    ,userId: ''
+                    ,currency: 'USD'
+                    ,country: 'US'
+                    ,bcomId: '-5765350523129296819'
+                    
+                    ,provider: 'NONE'
+                    ,preferences: {}
+        },
+        isLoggedInAsUser: false,
+        hasAds: true,
+		
+		hasVideoAds: true,
+        
+        adapTvId: 'nj232',
+        
+        n0ticeReturnUrl: 'http://projects.britannica.com/signin/return',
+        
+        logGoogleGPT: false,
+        isMobile: false,
+        isTablet: false,
+        isPhone: false,
+        analytics: [
+            
+            { type: 'google', id: 'UA-6636134-11', logClickAction: true, logPageLoad: true, logFakePageLoad: true },
+            { type: 'eb', logClickAction: false, logPageLoad: false, logFakePageLoad: true }
+            
+        ],
+        logAnalytics: false,
+        includeGigya: true,
+        gigyaProviders: 'facebook,twitter,googleplus,linkedin,yahoo'
+        ,topicUrl: '/EBchecked/topic/10414/AIDS'
+        ,topicContentType: 'ARTICLE'
+        ,freeTopicReason: 'PREMIUM_INST_USER'
+        ,channel: 'SCIENCE_AND_TECHNOLOGY'
+        ,topicId: 10414
+        ,topicTitle: 'AIDS'
+	    ,topicAkw: 'science technology,health medicine'
+        ,isIndexEntry: false
+        ,template: 'PAGINATED'
+        ,hasToc: true
+        ,pageNumber: 1
+    };
+
+    </script>
+
+    <script type="text/javascript" src="//pixel.quantserve.com/seg/p-fePJXh17dNmkk.js"></script>
+    <script type="text/javascript">
+    Mendel._quantsegs = null;
+    Mendel._getQsegs = function() {
+        if ( Mendel._quantsegs != null ) { return Mendel._quantsegs; }
+        var cn = '__qseg';
+        var c=document.cookie;if(!c)return '';
+        var i=c.indexOf(cn+"=");if(-1==i)return '';
+        var len=i+cn.length+1;
+        var end=c.indexOf(";", len);
+        var value = c.substring(len,end<0?c.length:end);
+        var quantSegs = [];
+        var _qsegs = value.split('|');
+        for (i=0;i < _qsegs.length;i++) { var qArr=_qsegs[i].split("_"); if (qArr.length>1) { quantSegs.push( qArr[1] ); } }
+        Mendel._quantsegs = quantSegs.join(',');
+        return Mendel._quantsegs;
+    }
+    </script><script type="text/javascript" src="//c.amazon-adsystem.com/aax2/amzn_ads.js"></script>
+<script type="text/javascript">
+   	try { amznads.getAds('3022'); }
+    catch(e) { /*ignore*/}
+</script>
+<script type="text/javascript">
+         (function() {
+           var src = '//www.googletagservices.com/tag/js/gpt.js';
+           document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+         })();
+        </script>
+	    <script src="http://js.indexww.com/ht/bri2.js"></script>
+	    <script type="text/javascript">
+         (function() {
+            var src = '//ox-d.merriamwebster.servedbyopenx.com/w/1.0/jstag?nc=34444486-EB';
+            document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+         })();
+        </script>
+    <script type="text/javascript">
+    try { amznads.setTargetingForGPTAsync('amznslots'); }
+    catch(e) { /*ignore*/}
+</script>
+<script type="text/javascript">
+    var googletagSlots = [];
+    googletag.cmd.push(function() {
+        
+                    googletagSlots.push(
+                        googletag.defineSlot('/34444486/EB_A/ARTICLES_UA', [300,250],'div-gpt-ad-bfeb2f7e-2235-4cd6-b48e-a1d5661ce608')
+                             .setTargeting('POS',['TOP'])
+                             .addService(googletag.pubads())
+                    );
+                
+                    googletagSlots.push(
+                        googletag.defineSlot('/34444486/EB_A/ARTICLES_UA', [300,250],'div-gpt-ad-5c9a4d16-7c52-439f-91c9-78da9ecd2ed1')
+                             .setTargeting('POS',['BOT'])
+                             .addService(googletag.pubads())
+                    );
+                
+                    googletagSlots.push(
+                        googletag.defineSlot('/34444486/EB_A/ARTICLES_UA', [300,250],'div-gpt-ad-84eebbbc-1230-4b9c-a64e-7356b3b8e2e0')
+                             .setTargeting('POS',['BOT2'])
+                             .addService(googletag.pubads())
+                    );
+                
+                    googletagSlots.push(
+                        googletag.defineSlot('/34444486/EB_A/ARTICLES_UA', [728,90],'div-gpt-ad-361f4826-3726-45f6-8021-f834b6ca4776')
+                             .setTargeting('POS',['BOT'])
+                             .addService(googletag.pubads())
+                    );
+                
+
+        googletag.pubads().setTargeting('dc_ref',['http://www.britannica.com/EBchecked/topic/10414/AIDS']);
+        if ( this.Mendel && this.Mendel._getQsegs ) { googletag.pubads().setTargeting('QSEGS',[ Mendel._getQsegs() ]); }
+        googletag.pubads().setTargeting('ARTICLE',['10414']);googletag.pubads().setTargeting('CAT',['science technology,health medicine']);googletag.pubads().setTargeting('PAGE',[1]);
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().enableAsyncRendering();
+        googletag.enableServices();
+  });
+</script><script type="text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({article:'auto'});
+        !function (e, f, u) { e.async = 1; e.src = u; f.parentNode.insertBefore(e, f);
+        }(document.createElement('script'),document.getElementsByTagName('script')[0], '//cdn.taboola.com/libtrc/merriamwebster-ebcom/loader.js');
+    </script><!--[if lte IE 8]>
+    <script type="text/javascript">
+        ( function() {
+            var tags = [ 'header', 'footer', 'aside', 'nav', 'section', 'article', 'figure', 'figcaption', 'time' ];
+            for ( var i = 0; i < tags.length; document.createElement( tags[i++] ) );
+        })();
+    </script>
+    <![endif]-->
+
+</head>
+
+<body ng-app class="topicPage topic-page-paginated user-BOL md-desktop font-sans has-footer-ad leg-a">
+
+    <div class="md-page-wrapper">
+
+        <header class="font-sans-ui">
+
+    <div class="header-content">
+
+        <div class="header-title">
+
+            <h4>
+	            <a class="logo-homepage" href="/"><img src="/resources/images/header/eb-logo-header.png" alt="Encyclopedia Britannica" /></a>
+                <a class="header-thistle" href="/"></a>
+            </h4>
+            <nav class="header-nav">
+    <ul>
+        <li><a data-ytrk="127" href="http://help.eb.com/premium2/index.htm" target="_blank">Help</a></li>
+        <li><a data-ytrk="27" href="http://info.eb.com" target="_blank">School & Library Products</a></li>
+        <li>
+                <a data-ytrk="25" href="http://store.britannica.com" target="_blank">SHOP</a>
+            </li>
+        </ul>
+</nav>
+
+
+<div class="header-login ">
+                <div class="header-login-links">
+                    <span data-ytrk="262" class="md-header-join-link">JOIN</span><span data-ytrk="17" class="login-link" >LOGIN</span>
+                        </div>
+                </div>
+
+        </div>
+    </div>
+
+</header>
+
+<div id="header-global-nav" data-position-fixed="0">
+
+    <div class="header-global-nav-content">
+
+        <ul id="header-global-nav-buttons" data-title="navigation" >
+            <li><a data-ytrk="/439" href="/popular-topics/browse" data-content-url="/globalnav/ajax/popular-topics">Popular Topics</a></li>
+            <li><a data-ytrk="/440" href="/quiz/browse" data-content-url="/globalnav/ajax/quizzes">quizzes</a></li>
+            <li><a data-ytrk="/441" href="/gallery/browse" data-content-url="/globalnav/ajax/galleries">galleries</a></li>
+            <li><a data-ytrk="/442" href="/list/browse" data-content-url="/globalnav/ajax/lists">lists</a></li>
+            <li><a data-ytrk="303" href="http://projects.britannica.com" target="_blank">projects</a></li>
+            </ul>
+
+        <div class="search-form">
+            <form method="get" browse" data-content-url="/globalnav/ajax/lists">lists</a></li>
+            <li><a data-ytrk="303" href="http://projects.britannica.com" target="_blank">projects</a></li>
+     action="/search" id="searchCriteria" class="">
+    <div class="search-box">
+        <input name="query" type="text" id="header-query" placeholder="Search Britannica..." class="query font-sans"  maxlength="200" />
+        <button data-ytrk="21" type="submit" class="search-submit" value=""><i class="fa fa-search"></i></button>
+    </div>
+</form>
+</div>
+
+    </div>
+
+    <a href="http://academic.eb.com" class="md-go-to-school">
+        You have reached Britannica's public Web site. Click here for ad-free access to your Britannica School or Library account.</a>
+</div>
+
+<div id="content" class="md-content">
+
+            <div class="md-before-content"><div id="md-page-toolbar-horizontal" class="font-sans-ui">
+
+    <div id="page-socialbar-horizontal"></div>
+    <div class="toolbar-small-buttons">
+             <ul>
+                 <li data-ytrk="117" class="t-cite"><span>Citations</span></li>
+                 <li data-ytrk="111" class="t-print"><a href="/print/topic/10414" target="_blank" rel="nofollow"><span>Print</span></a></li>
+                 <li data-ytrk="112" class="t-email"><span>Email</span></li>
+                 </ul>
+         </div>
+
+     </div></div>
+            <div class="md-left-rail hide-on-edit font-sans-ui vertical"><div class="md-primary-contributor">
+     
+    Written by <a href="/bps/user-profile/5429/robert-siliciano-md" class="md-pc-contributor-link" data-ytrk="/212">Robert Siliciano, M.D.</a>
+
+    </div>
+<div class="md-topic-last-modification">
+        Last Updated<time>8-19-2014</time>
+    </div>
+<div class="page-socialbar-actions" data-position-fixed="50">
+
+    <div id="page-socialbar"></div>
+    <div class="toolbar-small-buttons vertical">
+            <ul>
+                <li data-ytrk="117" class="t-cite"><span>Citations</span></li>
+                <li data-ytrk="111" class="t-print"><a href="/print/topic/10414" target="_blank" rel="nofollow"><span>Print</span></a></li>
+                <li data-ytrk="112" class="t-email"><span>Email</span></li>
+                </ul>
+        </div>
+
+    </div></div>
+            <div class="md-page-h1-wrapper">
+
+                <h1><span>AIDS</span></h1><ul class="md-topic-title-links">
+    <li>
+        <span id="md-topic-title-link-read">Read</span></li>
+    <li>
+        <a class="md-topic-title-link-edit" href="#" rel="nofollow" data-ytrk="263">Edit</a>
+    </li>
+    <li>
+        <a id="md-topic-title-link-history" data-ytrk="/291" href="/topic/10414/history" rel="nofollow">View History</a></li>
+    <li>
+        <a id="md-topic-title-link-feedback" href="/topic/10414/feedback" data-ytrk="/267" rel="nofollow">Feedback</a></li>
+</ul></div>
+
+            <div id="edit-toolbar-placeholder"></div>
+        <div id="topic-navigator" class="hide-on-edit">
+    <ul>
+        <li><div class="topic-navigator-arrow"><span></span></div>Article</li><li><a href="/topic/10414/websites" data-ytrk="/295" >Web sites</a></li><li><a href="/topic/10414/bibliography" data-ytrk="/294" >Bibliography</a></li><li><a href="/topic/10414/year-in-review" data-ytrk="/211" >Year in Review</a></li><li><a href="/topic/10414/related-people-to-aids" data-ytrk="/210" >Related Content</a></li><li><a href="/topic/10414/contributors" data-ytrk="/292" rel="nofollow">Contributors</a></li></ul>
+</div>
+<div class="md-topic-alternate-titles font-sans-ui">
+        <strong>Alternate titles: </strong>
+        acquired immune deficiency syndrome; acquired immunodeficiency syndrome; slim</div><div class="md-content-wrapper  topic-content">
+                <div class="md-primary-contributor">
+     
+    Written by <a href="/bps/user-profile/5429/robert-siliciano-md" class="md-pc-contributor-link" data-ytrk="/212">Robert Siliciano, M.D.</a>
+
+    </div>
+<div class="md-topic-last-modification">
+        Last Updated<time>8-19-2014</time>
+    </div>
+<article class="font-sans-ui content-body" vocab="http://schema.org" resource="http://semantic.britannica.com/accepted_headword/core/10414/AIDS" typeof="Article">
+            <meta property="url" href="/EBchecked/topic/10414/AIDS" />
+            <meta property="owl:sameAs" href="http://dbpedia.org/page/HIV/AIDS" /><meta property="name" content="AIDS" />
+
+            <div class="md-toc md-small-toc hide-on-edit">
+                    <div class="topic-toc-title">Table of Contents</div>
+                    <div class="topic-toc-tree">
+                        <ul class="toc-ul"><li class="lv1" data-section="10414main" data-toc="10414main"><a href="/EBchecked/topic/10414/AIDS" data-ytrk="131">Introduction</a></li><li class="lv1" data-section="10414main" data-toc="300547"><a href="/EBchecked/topic/10414/AIDS#toc300547" data-ytrk="131">The emergence of AIDS</a></li><li class="lv1" data-section="10414main" data-toc="300548"><a href="/EBchecked/topic/10414/AIDS#toc300548" data-ytrk="131">Prevalence and distribution of HIV/AIDS</a></li><li class="lv1" data-section="10414main" data-toc="225029"><a href="/EBchecked/topic/10414/AIDS#toc225029" data-ytrk="131">The origin of HIV</a></li><li class="lv1" data-section="272475" data-toc="272475"><a href="/EBchecked/topic/10414/AIDS/272475/Groups-and-subtypes-of-HIV" data-ytrk="/131">Groups and subtypes of HIV</a></li><li class="lv1" data-section="272475" data-toc="225030"><a href="/EBchecked/topic/10414/AIDS/272475/Groups-and-subtypes-of-HIV#toc225030" data-ytrk="/131">Transmission</a></li><li class="lv1" data-section="225031" data-toc="225031"><a href="/EBchecked/topic/10414/AIDS/225031/Life-cycle-of-HIV" data-ytrk="/131">Life cycle of HIV</a></li><li class="lv1" data-section="283505" data-toc="283505"><a href="/EBchecked/topic/10414/AIDS/283505/Genome-of-HIV" data-ytrk="/131">Genome of HIV</a></li><li class="lv1" data-section="283505" data-toc="225032"><a href="/EBchecked/topic/10414/AIDS/283505/Genome-of-HIV#toc225032" data-ytrk="/131">Course of infection</a></li><li class="lv1" data-section="283505" data-toc="225033"><a href="/EBchecked/topic/10414/AIDS/283505/Genome-of-HIV#toc225033" data-ytrk="/131">Diagnosis, treatment, and prevention</a><ul><li class="lv2" data-section="283505" data-toc="294306"><a href="/EBchecked/topic/10414/AIDS/283505/Genome-of-HIV#toc294306" data-ytrk="/591">Tests and screening</a></li><li class="lv2" data-section="294307" data-toc="294307"><a href="/EBchecked/topic/10414/AIDS/294307/Antiretroviral-medications" data-ytrk="/591">Antiretroviral medications</a></li><li class="lv2" data-section="294308" data-toc="294308"><a href="/EBchecked/topic/10414/AIDS/294308/Condoms-vaccines-gels-and-other-prevention-methods" data-ytrk="/591">Condoms, vaccines, gels, and other prevention methods</a></li></ul></li><li class="lv1" data-section="322636" data-toc="322636"><a href="/EBchecked/topic/10414/AIDS/322636/HIV-and-pregnancy" data-ytrk="/131">HIV and pregnancy</a></li><li class="lv1" data-section="225034" data-toc="225034"><a href="/EBchecked/topic/10414/AIDS/225034/Social-legal-and-cultural-aspects" data-ytrk="/131">Social, legal, and cultural aspects</a></li></ul></div>
+                </div>
+<section id="toc10414main" class="eb-topic-section" print-toc="toc-10414main-10414main">
+ <p>
+  <!--[START-FIRST-PARAGRAPH]--><b><span class="srTitle">AIDS</span></b><b>,</b>&nbsp;byname of <span class="alternate">acquired immunodeficiency syndrome</span>,&nbsp; transmissible disease of the <a name="ref751026" id="ref751026"></a><a data-ytrk="/548" href="/EBchecked/topic/283636/immune-system"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/283636/immune-system">immune system</span></a> caused by the human immunodeficiency <a data-ytrk="/548" href="/EBchecked/topic/630244/virus"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/630244/virus">virus</span></a> (<a name="ref750977" id="ref750977"></a><a data-ytrk="/548" href="/EBchecked/topic/668671/HIV"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/668671/HIV">HIV</span></a>). <a data-ytrk="/548" href="/EBchecked/topic/668671/HIV"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/668671/HIV">HIV</span></a> is a lentivirus (literally meaning “slow virus”; a member of the <a data-ytrk="/548" href="/EBchecked/topic/500146/retrovirus"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/500146/retrovirus">retrovirus</span></a> family) that slowly attacks and destroys the <a data-ytrk="/548" href="/EBchecked/topic/283636/immune-system"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/283636/immune-system">immune system</span></a>, the body’s defense against <a data-ytrk="/548" href="/EBchecked/topic/287461/infection"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/287461/infection">infection</span></a>, leaving an individual vulnerable to a variety of other infections and certain malignancies that eventually cause death. AIDS is the final stage of HIV infection, during which time fatal infections and cancers frequently arise.</p>
+ <div id="md-media-strip-loaded" class="wait hide-on-edit"></div>
+</section>
+<!--[END-FIRST-SECTION]-->
+<section class="eb-topic-section" id="toc300547" print-toc="toc-10414main-300547">
+ <h2 class="h2"><span>The emergence of AIDS</span></h2>
+ <p>On June 5, 1981, the <a name="ref751028" id="ref751028"></a><a data-ytrk="/548" href="/EBchecked/topic/616563/United-States"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/616563/United-States">U.S.</span></a> <a data-ytrk="/548" href="/EBchecked/topic/959855/Centers-for-Disease-Control-and-Prevention-CDC"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/959855/Centers-for-Disease-Control-and-Prevention-CDC">Centers for Disease Control and Prevention</span></a> (CDC) published a report describing a rare <a data-ytrk="/548" href="/EBchecked/topic/351473/lung"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/351473/lung">lung</span></a> infection known as <em><a name="ref1113593" id="ref1113593"></a><a data-ytrk="/548" href="/EBchecked/topic/465479/Pneumocystis-carinii"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/465479/Pneumocystis-carinii">Pneumocystis carinii</span></a></em> <a data-ytrk="/548" href="/EBchecked/topic/465483/pneumonia"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/465483/pneumonia">pneumonia</span></a> in five homosexual men in Los Angeles. Expert review of the cases suggested that the disease likely was acquired through sexual contact and that it appeared to be associated with immune dysfunction caused by exposure to some factor that predisposed the affected individuals to opportunistic infection. The following month the CDC published a report describing an outbreak of cases of a rare <a data-ytrk="/548" href="/EBchecked/topic/92230/cancer"><span property="about" href="http://semantic.britaposed the affected individuals to opportunistic infection. The following month the CDC published a report describing an outbreak of cases of a rare <a data-ytrk="/548" href="/EBchecked/topic/922nnica.com/accepted_headword/core/92230/cancer">cancer</span></a> called <a name="ref1113594" id="ref1113594"></a><a data-ytrk="/548" href="/EBchecked/topic/311778/Kaposi-sarcoma"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/311778/Kaposi-sarcoma">Kaposi sarcoma</span></a> in homosexual men in New York City and San Francisco. The report noted that in many instances the cancers were accompanied by opportunistic infections, such as <em>P. carinii</em> <a data-ytrk="/548" href="/EBchecked/topic/465483/pneumonia"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/465483/pneumonia">pneumonia</span></a>. The infections and cancers were later determined to be manifestations of AIDS. In addition to affecting <a name="ref751022" id="ref751022"></a><a data-ytrk="/548" href="/EBchecked/topic/270637/homosexuality"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/270637/homosexuality">homosexual</span></a> men, the disease was detected in intravenous <a name="ref751023" id="ref751023"></a><a data-ytrk="/548" href="/EBchecked/topic/172024/drug-use"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/172024/drug-use">drug users</span></a>, who became infected mainly by sharing contaminated hypodermic needles.</p>
+ <p>In 1983 French af="/EBchecked/topic/172024/drug-use"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/172024/drug-use">drug users</span></a>nd American researchers isolated the causative agent, HIV. (In 2008 French virologists <a data-ytrk="/548" href="/EBchecked/topic/1473980/Francoise-Barre-Sinoussi"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/1473980/Francoise-Barre-Sinoussi">Françoise Barré-Sinoussi</span></a> and <a data-ytrk="/548" href="/EBchecked/topic/663129/Luc-Montagnier"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/663129/Luc-Montagnier">Luc Montagnier</span></a> were awarded the Nobel Prize for Physiology or Medicine for their discovery of HIV.) By 1985 serological tests to detect the <a data-ytrk="/548" href="/EBchecked/topic/630244/virus"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/630244/virus">virus</span></a> had been developed.</p>
+</section>
+<section class="eb-topic-section" id="toc300548" print-toc="toc-10414main-300548">
+ <h2 class="h2"><span>Prevalence and distribution of HIV/AIDS</span></h2>
+ <p>According to the 2013 United Nations report on AIDS, roughly 35.3 million people were living with HIV, approximately 2.3 million people were newly infected with HIV, and about 1.6 million people died of AIDS and AIDS-related conditions in 2012. Since 1981 more than 36 million people have died from HIV infection. Between 2001 and 2012, however, the annual number of new infections in some 26 countries dropped by at least half, and since about 2005 the annual number of deaths from AIDS globally has also declined. The latter trend has been due in large part to improved access to treatment for the afflicted. Thus, there has been an increase in the overall number of people living with AIDS.</p>
+ <p>About 70 percent of all infections occur in people living in sub-Saharan <a name="ref750978" id="ref750978"></a><a data-ytrk="/548" href="/EBchecked/topic/7924/Africa"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/7924/Africa">Africa</span></a>, and in some countries of the region the <a data-ytrk="/548" href="/EBchecked/topic/475625/prevalence"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/475625/prevalence">prevalence</span></a> of HIV infection of inhabitants exceeded 10 percent of the population. Rates of infection are lower in other parts of the world, but different subtypes of the virus have spread to <a data-ytrk="/548" href="/EBchecked/topic/195686/Europe"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/195686/Europe">Europe</span></a>, India, South and <a data-ytrk="/548" href="/EBchecked/topic/556489/Southeast-Asia"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/556489/Southeasc.britannica.com/accepted_headword/core/195686/t-Asia">Southeast Asia</span></a>, Latin America, and the Caribbean. Rates of infection have leveled off somewhat in the <a data-ytrk="/548" href="/EBchecked/topic/616563/United-States"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/616563/United-States">United States</span></a> and Europe. In the United States more than 1.1 million people are living with HIV/AIDS, and about 44 percent of all new infections are among African Americans. In Asia sharp increases in HIV infections have occurred in China and Indonesia. Access to retroviral treatment for AIDS remains limited in some areas of the world, although more people are receiving treatment today than in the past.</p>
+</section>
+<section class="eb-topic-section" id="toc225029" print-toc="toc-10414main-225029">
+ <h2 class="h2"><span>The origin of HIV</span></h2>
+ <p>Details of the origin of HIV remain unclear. However, a lentivirus that is genetically similar to HIV has been found in <a name="ref751025" id="ref751025"></a><a data-ytrk="/548" href="/EBchecked/topic/111627/chimpanzee"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/111627/chimpanzee">chimpanzees</span></a> and gorillas in western equatorial <a data-ytrk="/548" href="/EBchecked/topic/7924/Africa"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/7924/Africa">Africa</span></a>. That virus is known as <a name="ref750986" id="ref750986"></a><a data-ytrk="/548" href="/EBchecked/topic/766580/SIV"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/766580/SIV">simian immunodeficiency virus</span></a> (<a data-ytrk="/548" href="/EBchecked/topic/766580/SIV"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/766580/SIV">SIV</span></a>), and it was once widely thought to be harmless in chimpanzees. However, in 2009 a team of researchers investigating <a data-ytrk="/548" href="/EBchecked/topic/111627/chimpanzee"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/111627/chimpanzee">chimpanzee</span></a> populations in Africa found that <a data-ytrk="/548" href="/EBchecked/topic/766580/SIV"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/766580/SIV">SIV</span></a> in fact causes AIDS-like illness in the animals. SIV-infected chimpanzees have a death rate that is 10 to 16 times higher than their uninfected counterparts. The practice of hunting, butchering, and eating the meat of chimpanzees may have allowed transmission of the virus to humans, probably in the late 19th or early 20th century. The strain of SIV found in gorillas is known as SIVgor, and it is distinct from the strain found in chimpanzees. Because primates are suspected of being the source of HIV, AIDS is considered a <a name="ref750982" id="ref750982"></a><a data-ytrk="/548" href="/EBchecked/topic/657986/zoonotic-disease"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/657986/zoonotic-disease">zoonosis</span></a>, an infection that is shared by humans and other vertebrate animals.</p>
+ <p>Genetic studies of a <a data-ytrk="/548" href="/EBchecked/topic/441085/pandemic"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/441085/pandemic">pandemic</span></a> strain of HIV, known as <a name="ref750981" id="ref750981"></a>HIV-1 group M, have indicated that the virus emerged between 1884 and 1924 in central and western Africa. Researchers estimate that that strain of the virus began spreading throughout those areas in the late 1950s. Later, in the mid-1960s, an evolved strain called HIV-1 group M subtype B spread from Africa to <a data-ytrk="/548" href="/EBchecked/topic/251961/Haiti"><span property="about" href="http://semantic.britannica.com/accepted_headword/core/251961/Haiti">Haiti</span></a>. In Haiti that subtype acquired unique characteristics, presumably through the process of genetic recombination. Sometime between 1969 and 1972, the virus migrated from Haiti to the United States. The virus spread within the United States for about a decade before it was discovered in the early 1980s. The worldwide spread of HIV-1 was likely facilitated by several factors, including increasing urbanization and long-distance travel in Africa, international travel, changing sexual mores, and intravenous drug use.</p>
+</section><noscript>
+	<ul>
+	<li>
+			<a href="/EBchecked/media/119969/Human-immunodeficiency-virus-infects-a-type-of-white-blood-cell?topicId=10414">
+				<img src="http://media-3.web.britannica.com/eb-media/29/117429-004-7A4C16AC.jpg" alt="HIV: infection of T cell" />
+				<span>Human immunodeficiency virus (HIV) infects a type of white blood cell known as a helper T cell, which plays a central role in mediating normal immune responses. (Bright yellow particles are HIV, and purple is epithelial tissue.)</span></a>
+		</li>
+	<li>
+			<a href="/EBchecked/media/157161/The-June-5-1981-edition-of-MMWR-published-by-the?topicId=10414">
+				<img src="http://media-2.web.britannica.com/eb-media/00/150100-004-640A584E.jpg" alt="HIV/AIDS; &lt;em&gt;MMWR&lt;/em&gt;, June 5, 1981" />
+				<span>The June 5, 1981, edition of <em>MMWR</em> (<em>Morbidity and Mortality Weekly Report</em>), published by the U.S. Centers for Disease Control and Prevention, described a rare lung infection, known as <em>Pneumocystis carinii</em> pneumonia, in five homosexual men in Los Angeles. The infections were later linked to AIDS.</span></a>
+		</li>
+	<li>
+			<a href="/EBchecked/media/138581/False-colour-scanning-electron-micrograph-of-a-T-cell-infected?topicId=10414">
+				<img src="http://media-3.web.britannica.com/eb-media/36/21136-004-3AFCA4E3.jpg" alt="T cell infected with HIV" />
+				<span>False-colour scanning electron micrograph of a T cell infected with HIV (human immunodeficiency virus), the agent that causes AIDS (acquired immunodeficiency syndrome).</span></a>
+		</li>
+	<li>
+			<a href="/EBchecked/media/157162/In-August-2009-scientists-at-the-University-of-North-Carolina?topicId=10414">
+				<img src="http://media-1.web.britannica.com/eb-media/37/134737-004-D7A23088.jpg" alt="HIV genome" />
+				<span>In August 2009 scientists at the University of North Carolina at Chapel Hill reported having decoded the structure of a complete HIV genome.</span></a>
+		</li>
+	<li>
+			<a href="/EBchecked/media/155240/A-three-dimensional-X-ray-crystallographic-image-showing-a-broadly?topicId=10414">
+				<img src="http://media-2.web.britannica.com/eb-media/83/146583-004-B8AA7021.jpg" alt="neutralizing antibody; HIV" />
+				<span>A three-dimensional X-ray crystallographic image showing a broadly neutralizing antibody (green) bound to a vaccine target (yellow) on an HIV-1 gp120 molecule (red).</span></a>
+		</li>
+	<li>
+			<a href="/EBchecked/media/91967/A-nurse-hands-out-information-about-HIVAIDS-to-migrant-workers?topicId=10414">
+				<img src="http://media-2.web.britannica.com/eb-media/89/91189-004-4792E9A8.jpg" alt="AIDS: nurse hands out HIV/AIDS information" />
+				<span>A nurse hands out information about HIV/AIDS to migrant workers in Chengdu, China.</span></a>
+		</li>
+	<li>
+			<a href="/EBchecked/media/157163/A-worker-at-the-Gay-Mens-Health-Crisis-in-New?topicId=10414">
+				<img src="http://media-1.web.britannica.com/eb-media/99/150099-004-627A22A0.jpg" alt="HIV/AIDS" />
+				<span>A worker at the Gay Men’s Health Crisis in New York City in 1985 displaying a poster and an information booklet that were distributed to inform people about HIV/AIDS.</span></a>
+		</li>
+	<li>
+			<a href="/EBchecked/media/107977/Gambian-Pres?topicId=10414">
+				<img src="http://media-2.web.britannica.com/eb-media/88/106488-004-BE1C7F8C.jpg" alt="Gambia, The" />
+				<span>Gambian Pres. Yahya Jammeh (right) prays while administering his alleged herbal HIV cure to a patient.</span></a>
+		</li>
+	<li>
+			<a href="/EBchecked/media/93021/Saint-Kitts-and-Nevis-Prime-Minister-Denzil-Douglas-addresses-the?topicId=10414">
+				<img src="http://media-1.web.britannica.com/eb-media/53/97353-004-03653B4B.jpg" alt="Saint Kitts and Nevis" />
+				<span>Saint Kitts and Nevis Prime Minister Denzil Douglas addresses the High-Level Meeting on AIDS in the addresses-the?topicId=10414">
+				<img src="http://media-1.web.britannica.com/eb-media/53/97353-004-03653B4B.jpg" alt="Saint Kitts and Nevis" />
+UN General Assembly on June 2.</span></a>
+		</li>
+	<li>
+			<a href="/EBchecked/media/94556?topicId=10414">
+				<img src="http://media-1.web.britannica.com/eb-media/60/98460-004-F6873FEB.jpg"  />
+				</a>
+		</li>
+	</ul>
+</noscript>
+</article>
+
+        <div id="md-media-strip-load">
+             <div id="md-media-strip" class="md-media-strip font-sans-ui">
+
+    <ul id="md-media-strip-tabs" class="ui-tabs md-media-strip-tabs nav nav-tabs font-sans">
+
+        <li id="md-media-strip-tab-IMAGE" class="has-carousel"><a data-ytrk="87" href="#md-media-strip-tab-IMAGE-content">Images</a></li>
+		        <li id="md-media-strip-tab-VIDEO" class="has-carousel"><a data-ytrk="88" href="#md-media-strip-tab-VIDEO-content">Videos</a></li>
+		        <li id="md-media-strip-tab-INTERACTIVE" class="has-carousel"><a href="#md-media-strip-tab-INTERACTIVE-content">Interactive</a></li>
+		        <li id="md-media-strip-tab-quizzes" class="green has-carousel" >
+            <a data-ytrk="177" href="#md-media-strip-tab-quizzes-content">quizzes</a>
+        </li>
+
+        <li id="md-media-strip-tab-lists" class="green has-carousel">
+            <a data-ytrk="178" href="#md-media-strip-tab-lists-content">Lists</a>
+        </li>
+    </ul>
+
+    <div class="ui-tabs-content">
+
+        <div id="md-media-strip-tab-IMAGE-content" class="md-medis-strip-media-content" rel="/ajax/topic/10414/images/US"></div>
+	    <div id="md-media-strip-tab-VIDEO-content"  class="md-medis-strip-media-content" rel="/ajax/topic/10414/videos"></div>
+	    <div id="md-media-strip-tab-AUDIO-content"  class="md-medis-strip-media-content" rel="/ajax/topic/10414/audios"></div>
+	    <div id="md-media-strip-tab-INTERACTIVE-content"  class="md-medis-strip-media-content" rel="/ajax/topic/10414/interactives"></div>
+        <div id="md-media-strip-tab-quizzes-content" rel="/ajax/topic/10414/quizzes"></div>
+        <div id="md-media-strip-tab-lists-content" rel="/ajax/topic/10414/lists"></div>
+    </div>
+</div>
+
+</div>
+
+        <div id="topic-pagination" class="pagination hide-on-edit">
+
+    <ul>
+        
+        <li class="active"><span>1</span></li><li><a data-ytrk="/75" href="/EBchecked/topic/10414/AIDS/272475/Groups-and-subtypes-of-HIV" title="Groups and subtypes of HIV">2</a></li><li><a data-ytrk="/75" href="/EBchecked/topic/10414/AIDS/225031/Life-cycle-of-HIV" title="Life cycle of HIV">3</a></li><li><a data-ytrk="/75" href="/EBchecked/topic/10414/AIDS/283505/Genome-of-HIV" title="Genome of HIV">4</a></li><li><a data-ytrk="/75" href="/EBchecked/topic/10414/AIDS/294307/Antiretroviral-medications" title="Antiretroviral medications">5</a></li><li><a data-ytrk="/75" href="/EBchecked/topic/10414/AIDS/294308/Condoms-vaccines-gels-and-other-prevention-methods" title="Condoms, vaccines, gels, and other prevention methods">6</a></li><li><a data-ytrk="/75" href="/EBchecked/topic/10414/AIDS/322636/HIV-and-pregnancy" title="HIV and pregnancy">7</a></li><li><a data-ytrk="/75" href="/EBchecked/topic/10414/AIDS/225034/Social-legal-and-cultural-aspects" title="Social, legal, and cultural aspects">8</a></li></ul>
+
+    <a class="pagination-next-button" data-ytrk="/130" href="/EBchecked/topic/10414/AIDS/272475/Groups-and-subtypes-of-HIV" title="Groups and subtypes of HIV">
+                Next Page
+                <span class="pagination-button-arrow"></span>
+            </a>
+        </div>
+<div id="taboola-below-article-thumbnails" class="hide-on-edit"></div>
+    <script type="text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({
+            mode: 'organic-thumbs-1r',
+            container: 'taboola-below-article-thumbnails',
+            placement: 'PAGINATED Below Article Thumbnails',
+            target_type: 'mix'
+        });
+    </script>
+
+    <div class="md-fb-comments hide-on-edit">
+         <div id="didnt-know" class="md-extra-content-title">
+             What made you want to look up AIDS?
+         </div>
+         <div id="gigya-comments"></div>
+     </div></div>
+
+            <aside class="md-sidebar "><div class="hide-on-edit">
+	        <div class="google-ad-iframe">
+		        <div class="sliding-box-300x50">
+		        <a href="https://safe1.britannica.com/registrations/signup.do?partnerCode=EBOK_300x50_A" class="sidebar-in-house-upsell"><img src="http://safe.britannica.com/safeimages/EBOK_300x200A.jpg"/></a>
+	            </div>
+	            </div>
+	        <div id="adaptvDiv" class="md-video-player-wrapper ui-hide-on-modal" style="width: 300px; height: 250px;" data-media-info="{'id':85822,'renditionPaths':['http:\/\/video-4.web.britannica.com\/eb-media\/22\/85822-024-2D669E44.mp4','http:\/\/video-3.web.britannica.com\/eb-media\/22\/85822-047-CB6F4EC6.flv'],'width':320,'height':240,'poster':'http:\/\/video-2.web.britannica.com\/eb-media\/22\/85822-049-07A9E4B4.jpg','posterWidth':320,'posterHeight':240}">
+    <div class="md-video-player-container"></div>
+    <div class="md-video-player-poster">
+        <img src="http://video-2.web.britannica.com/eb-media/22/85822-049-07A9E4B4.jpg" />
+        <div class="md-video-player-loading"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="div-gpt-ad-bfeb2f7e-2235-4cd6-b48e-a1d5661ce608" class="google-ad-iframe ui-hide-on-modal ">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-bfeb2f7e-2235-4cd6-b48e-a1d5661ce608'); });</script>
+</div>
+
+
+<div class="google-ad-iframe"><div class="sliding-box-300x50">
+    <a href="http://projects.britannica.com" target="_blank" data-ytrk="306" >
+        <img src="http://media-1.web.britannica.com/eb-media/mendel/projects-promo/default_small.png" />
+    </a>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="div-gpt-ad-5c9a4d16-7c52-439f-91c9-78da9ecd2ed1" class="google-ad-iframe ui-hide-on-modal ">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-5c9a4d16-7c52-439f-91c9-78da9ecd2ed1'); });</script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+<div class="md-sidebar-box font-sans sidebar-quiz-box">
+
+    <div class="md-sidebar-box-title font-sans-ui">
+        <span>FEATURED QUIZZES</span>
+    </div>
+
+    <div class="md-sidebar-box-content md-sidebar-box-content-list">
+        
+
+
+
+
+
+
+
+
+
+
+
+<ul>
+    
+        
+            
+            
+        
+        <li class="font-sans-ui">
+            <a data-ytrk="/438" href="/quiz/10000/vocabulary-quiz"  alt="" >
+                
+                    
+                    <img src="http://media-1.web.britannica.com/eb-media/94/178194-118-7A636614.jpg" />
+                
+                <span class="md-sidebar-list-item-title">Vocabulary Quiz</span>
+            </a>
+        </li>
+    
+        
+            
+            
+        
+        <li class="font-sans-ui">
+            <a data-ytrk="/438" href="/quiz/11000/true-or-false"  alt="" >
+                
+                    
+                    <img src="http://media-1.web.britannica.com/eb-media/95/178195-118-019518C4.jpg" />
+                
+                <span class="md-sidebar-list-item-title">True or False</span>
+            </a>
+        </li>
+    
+        
+            
+            
+        
+        <li class="last font-sans-ui">
+            <a data-ytrk="/438" href="/quiz/13000/name-that-thing"  alt="" >
+                
+                    
+                    <img src="http://media-3.web.britannica.com/eb-media/96/178196-118-49DC431A.jpg" />
+                
+                <span class="md-sidebar-list-item-title">Name That Thing</span>
+            </a>
+        </li>
+    
+</ul>
+        
+             <a data-ytrk="/85" href="/quiz/browse" data-title="FEATURED QUIZZES" class="md-sidebar-list-all">See More...</a>
+         
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+<div class="md-sidebar-box font-sans sidebar-quiz-box">
+
+    <div class="md-sidebar-box-title font-sans-ui">
+        <span>MORE QUIZZES</span>
+    </div>
+
+    <div class="md-sidebar-box-content md-sidebar-box-content-list">
+        
+
+
+
+
+
+
+
+
+
+
+
+<ul>
+    
+        
+            
+            
+        
+        <li class="font-sans-ui">
+            <a data-ytrk="/135" href="/quiz/131/fire-in-the-sky-fact-or-fiction"  alt="This massive sphere of gas lights our way and provides our energy, but how much do you really know about the Sun? Sort fact from fiction&mdash;and light from darkness&mdash;in this illuminating quiz." >
+                
+                    
+                    <img src="http://media-1.web.britannica.com/eb-media/55/166855-118-32A82F10.jpg" />
+                
+                <span class="md-sidebar-list-item-title">Fire in the Sky: Fact or Fiction?</span>
+            </a>
+        </li>
+    
+        
+            
+            
+        
+        <li class="font-sans-ui">
+            <a data-ytrk="/135" href="/quiz/41/science-quiz"  alt="Put your science smarts under the microscope and see how much you know about bloodstones, biomes, buoyancy, and more! " >
+                
+                    
+                    <img src="http://media-2.web.britannica.com/eb-media/35/142335-118-34767C54.jpg" />
+                
+                <span class="md-sidebar-list-item-title">Science Quiz</span>
+            </a>
+        </li>
+    
+        
+            
+            
+        
+        <li class="last font-sans-ui">
+            <a data-ytrk="/135" href="/quiz/588/climate-change"  alt="Which gases play an important role in climate change? What percentage of scientists agree that humans contribute to this process? Test your knowledge of this &quot;hot&quot; topic with this quiz." >
+                
+                    
+                    <img src="http://media-2.web.britannica.com/eb-media/66/158166-118-72CE0C9D.jpg" />
+                
+                <span class="md-sidebar-list-item-title">Climate Change</span>
+            </a>
+        </li>
+    
+</ul>
+        
+             <a data-ytrk="/85" href="/quiz/browse" data-title="MORE QUIZZES" class="md-sidebar-list-all">See More...</a>
+         
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="div-gpt-ad-84eebbbc-1230-4b9c-a64e-7356b3b8e2e0" class="google-ad-iframe ui-hide-on-modal ">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-84eebbbc-1230-4b9c-a64e-7356b3b8e2e0'); });</script>
+</div></div></aside>
+            <div class="md-page-wrapper-bottom hide-on-edit"></div>
+
+        </div>
+
+    </div>
+
+    <footer id="md-footer" class="footer-wrapper hide-on-edit">
+
+    <div class="footer-ad">
+            
+
+
+
+
+
+
+
+
+<div id="div-gpt-ad-361f4826-3726-45f6-8021-f834b6ca4776" class="google-ad-iframe ui-hide-on-modal ">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-361f4826-3726-45f6-8021-f834b6ca4776'); });</script>
+</div>
+
+
+</div>
+    <div class="footer-bck">
+        <ul class="md-footer-slim">
+            <li><a data-ytrk="59" href="http://corporate.britannica.com" target="_blank">About Us</a></li>
+            <li><a data-ytrk="129" href="http://corporate.britannica.com/privacy.html" target="_blank" rel="nofollow">About Our Ads</a></li>
+            <li><a data-ytrk="37" href="http://corporate.britannica.com/contact/consumer/" target="_blank" rel="nofollow">Contact Us</a></li>
+            <li><a data-ytrk="60" href="http://corporate.britannica.com/privacy.html" target="_blank" rel="nofollow">Privacy Policy</a></li>
+            <li><a data-ytrk="61" href="http://corporate.britannica.com/termsofuse.html" target="_blank" rel="nofollow">Terms of Use</a></li>
+        </ul>
+        &copy;2015 Encyclop&aelig;dia Britannica, Inc.
+    </div>
+
+</footer><form method="POST" action="/print/topic/10414" id="md-print-dialog" title="Create printer friendly version" class="ui-hidden" target="_blank">
+    <div class="md-print-desc font-sans">Please select the sections you want to print<div class="btn small" id="md-print-dialog-all">Select All</div></div>
+    <div id="md-print-dialog-toc">
+        <input type="checkbox" id="md-toc-print-toc" name="section[]" value="toc"/><label for="md-toc-print-toc" class="ui-form-label-right">Table of contents</label>
+    </div>
+    <input type="submit" value="Print" id="md-print-dialog-submit" disabled="disabled"/><button>Cancel</button>
+</form>
+<div id="md-citations" class="md-overlay-citations ui-hidden" title="Citations">
+
+    <dl>
+        <dt>MLA style:</dt>
+        <dd>"AIDS".&nbsp;<em>Encyclop&aelig;dia Britannica. Encyclop&aelig;dia Britannica Online.</em><br/>Encyclop&aelig;dia Britannica Inc., 2015. Web. 07 Jan. 2015<br/>&lt;<span class="citation-url">http://www.britannica.com/EBchecked/topic/10414/AIDS</span>&gt;.</dd>
+        <dt>APA style:</dt>
+        <dd>AIDS.&nbsp;(2015). In <em>Encyclop&aelig;dia Britannica</em>. Retrieved from <span class="citation-url">http://www.britannica.com/EBchecked/topic/10414/AIDS</span></dd>
+        <dt>Harvard style:</dt>
+        <dd>AIDS.&nbsp;2015. <em>Encyclop&aelig;dia Britannica Online</em>. Retrieved 07 January, 2015, from <span class="citation-url">http://www.britannica.com/EBchecked/topic/10414/AIDS</span></dd>
+        <dt>Chicago Manual of Style:</dt>
+        <dd><em>Encyclop&aelig;dia Britannica Online</em>, s. v. "AIDS", accessed January 07, 2015, <span class="citation-url">http://www.britannica.com/EBchecked/topic/10414/AIDS</span>.</dd>
+    </dl>
+
+    <p class="md-citations-warning">
+        While every effort has been made to follow citation style rules, there may be some discrepancies.<br/>
+        Please refer to the appropriate style manual or other sources if you have any questions.
+    </p>
+
+</div>
+<div id="md-edit-divs">
+
+<div id="md-edit-toolbar" data-position-fixed="50" class="ui-hidden">
+
+    <ul id="md-edit-toolbar-tabs" class="ui-tabs">
+        <li id="md-edit-edit-tab"><a href="#md-edit-toolbar-edit" data-ytrk="282" class="font-serif-ui">Update</a><span class="md-edit-toolbar-tab-arrow"></span></li>
+        <li id="md-edit-link-tab"><a href="#md-edit-toolbar-link" data-ytrk="283" class="font-serif-ui">Link</a><span class="md-edit-toolbar-tab-arrow"></span></li>
+    </ul>
+
+    <div class="ui-tabs-content">
+
+        <div id="md-edit-toolbar-edit">
+
+            Click anywhere inside the article to add text or insert superscripts, subscripts, and special characters.<br/>
+            You can also highlight a section and use the tools in this bar to modify existing content:
+
+            <div class="md-edit-toolbar-styles">
+                <ul>
+                    <li><button id="edit-bold" title="Bold" data-ui-editor-action="bold"></button></li>
+                    <li><button id="edit-italic" title="Italic" data-ui-editor-action="italic"></button></li>
+                    <li><button id="edit-sup" title="Superscript" data-ui-editor-action="superscript"></button></li>
+                    <li><button id="edit-sub" title="Subscript" data-ui-editor-action="subscript"></button></li>
+                    <li><button id="edit-ul" title="Bulleted List" data-ui-editor-action="insertunorderedlist"></button></li>
+                    <li><button id="edit-ol" title="Ordered List" data-ui-editor-action="insertorderedlist"></button></li>
+                    <li><button id="edit-special-char" title="Insert Special Character" data-ui-editor-action="special-characters"></button></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="md-edit-toolbar-link">
+
+            Add links to related Britannica articles!<br/>
+            
+                    You can double-click any word or highlight a word or phrase in the text below and then select an article from the search box.<br/>
+                    Or, simply highlight a word or phrase in the article, then enter the article name or term you'd like to link to in the search box below, and select from the list of results.
+                <div class="md-toolbar-link-form-container">
+                <form method="get" action="/search" id="md-edit-toolbar-link-form" class="">
+    <div class="search-box">
+        <input name="query" type="text" id="md-edit-toolbar-link-query" placeholder="Search Britannica..." class="md-edit-toolbar-link-query"  maxlength="200" />
+        <button data-ytrk="" type="submit" class="search-submit" value=""><i class="fa fa-search"></i></button>
+    </div>
+</form>
+<div class="md-edit-toolbar-link-note">
+                    <b>Note:</b> we do not allow links to external resources in editor.<br/>
+                    Please click the <a href="/topic/10414/websites"><strong>Web sites</strong></a> link for this article to add citations for<br />
+                    external Web sites.
+                </div>
+           </div>
+
+        </div>
+    </div>
+
+    <div class="md-edit-help">
+       <strong>Editing Tools:</strong>
+       <ul>
+           <li><a href="#" id="md-edit-help-toc" data-ytrk="281">Table of Contents</a></li><li><a href="#" id="md-edit-help-tips" data-ytrk="280">Tips for Editing</a></li>
+       </ul>
+    </div>
+
+</div>
+
+<div id="md-edit-submission-toolbar" class="ui-hidden">
+    <div class="md-edit-submission-toolbar-container">
+        <div class="md-edit-submission-toolbar-buttons">
+            <button class="btn font-serif-ui" id="md-edit-cancel" data-ytrk="284">Leave Edit Mode</button>
+            <button class="btn btn-primary font-serif-ui" id="md-edit-submit" data-ytrk="285">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div id="md-edit-editing-tips" title="Tips for Editing" class="md-edit-help-box ui-hidden">
+    We welcome suggested improvements to any of our articles.<br/>
+    You can make it easier for us to review and, hopefully, publish your contribution by keeping a few points in mind:<br/>
+    <ol>
+        <li>Encyclopaedia Britannica articles are written in a neutral, objective tone for a general audience.</li>
+        <li>You may find it helpful to search within the site to see how similar or related subjects are covered.</li>
+        <li>Any text you add should be original, not copied from other sources.</li>
+        <li>At the bottom of the article, feel free to list any sources that support your changes, so that we can fully understand their context. (Internet URLs are best.)</li>
+    </ol>
+    Your contribution may be further edited by our staff, and its publication is subject to our final approval. Unfortunately, our editorial approach may not be able to accommodate all contributions.
+</div>
+
+<div id="md-edit-toc-placeholder"></div>
+
+</div><div id="md-media-overlay" class="ui-hidden"></div>
+ <div id="md-media-overlay-ad" class="ui-hidden">
+         <iframe id="media-overlay-ad-iframe" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="160" height="600"></iframe>
+     </div><form method="POST" id="md-email-dialog" class="ui-hidden">
+    <label for="md-email-dialog-form-to">To</label><input class="span6" type="text" name="to" data-validation="email" required="true" id="md-email-dialog-form-to" />
+    <label for="md-email-dialog-form-from">From</label><input class="span6" type="text" name="from" data-validation="email" required="true" id="md-email-dialog-form-from" />
+    <label for="md-email-dialog-form-subject">Subject</label><input class="span6" type="text" name="subject" id="md-email-dialog-form-subject"  />
+    <label for="md-email-dialog-form-comments">Comments</label><textarea class="span6" name="comments" id="md-email-dialog-form-comments" maxlength="900" ></textarea>
+    <div class="md-email-dialog-form-msg">(Please limit to 900 characters)</div>
+    <input type="hidden" name="url" id="md-email-dialog-url" />
+    <input type="hidden" name="title" id="md-email-dialog-title" />
+    <input type="submit" value="Send"/><button>Cancel</button>
+</form><div id="loginbox-dialog" class="ui-hidden">
+    <div id="loginbox-dialog-iframe-container"></div>
+    <div class="loginbox-continue-container">
+        <p>Or click <strong>Continue</strong> to submit anonymously:</p>
+        <div class="btn loginbox-btn" id="loginbox-continue">Continue</div>
+    </div>
+</div><!--[if lt IE 9]>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('<script src="/resources/js/libs/jquery-1.11.1.min.js"><\/script>');</script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('<script src="/resources/js/libs/jquery-2.1.1.min.js"><\/script>');</script>
+<!--<![endif]--><script type="text/javascript" src="http://cdn.gigya.com/js/socialize.js?apiKey=3_QkFp1fFi8gwTK97KWaFi_v2eOF3cwcvUA9vC26R9gFKQjRikRuijZ1eOnERznNEN">
+            {
+                siteName: 'britannica.com (Production - Consumer)',
+                enabledProviders: 'facebook,twitter,googleplus,linkedin,yahoo',
+                connectWithoutLoginBehavior: "alwaysLogin"
+            }
+        </script>
+        <script type="text/javascript" src="http://cdn.gigya.com/js/gigyaGAIntegration.js"></script>
+    <script src="/resources/js/min-mendel.js?v=2.24.23"></script>
+
+    <script type="text/javascript" src="/resources/files/jwplayer6/jwplayer.js"></script>
+<script type="text/javascript">jwplayer.key='OdjJyYN49OngMGhZzqouyjgt5MnrwNm7fDOTBVeyHVU=';</script>
+<script type="text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({flush: true});
+    </script><script type="text/javascript">
+        $( function() {
+            Mendel.Page.init();
+            if ($.isDefined(Mendel.TopicPage)) { Mendel.TopicPage.init(); }
+        });
+
+    </script>
+
+    <!--[if lt IE 8 ]>
+    	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    	<script type="text/javascript">window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+    <script type="text/javascript" >
+        var _qevents = _qevents || [];
+        _qevents.push( { qacct:"p-fePJXh17dNmkk"} );
+    </script>
+    <script type="text/javascript" src="//edge.quantserve.com/quant.js"></script>
+    <noscript>
+        <div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-fePJXh17dNmkk.gif" height="1" width="1" alt="Quantcast"/></div>
+    </noscript><script type="text/javascript">
+        var _gaq = _gaq || [];
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+<script type="text/javascript">
+        function CE_READY() {
+            CE2.set( 1, 'BOL' );
+            CE2.set( 2, 'A' );
+            CE2.set( 3, 'TOPIC PAGINATED PAGINATED' );
+            
+        }
+    </script>
+    <script type="text/javascript">
+        setTimeout(function(){
+            var a=document.createElement("script");
+            var b=document.getElementsByTagName("script")[0];
+            a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/3876.js?"+Math.floor(new Date().getTime()/3600000);
+            a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)
+        }, 1);
+    </script>
+<script src="http://www.britannica.com/webstats/mendelstats.js?v=1"></script>
+    <script>
+        
+        var EBStat={accountId:301360,host:'www.britannica.com',domain:'www.britannica.com'};
+        try{writeStat(null,{accountId:301360,hostnameOverride:'www.britannica.com',domain:'www.britannica.com',json:''});}
+        catch(err){}
+    </script>
+</body>
+</html>at={accountId:301360,host:'www.britannica.com',domain:'www.britannica.com'};
+        try{writeStat(null,{accountId:301360,hostnameOverride:'www.britannica.com',domain:'www.britannica.com',json:''});}
+        catch(err

@@ -1,0 +1,767 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+  <!--[if lt IE 7]>      <html class="ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html>         <!--<![endif]-->
+<html lang="en" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://www.historytoday.com/sites/default/files/HT%20FAVICON_2.png" type="image/png" />
+<meta name="description" content="Cruising the northwest coastline of America in 1792, Captain George Vancouver was troubled." />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="http://www.historytoday.com/elizabeth-fenn/great-smallpox-epidemic" />
+<link rel="shortlink" href="http://www.historytoday.com/node/8165" />
+  <title>The Great Smallpox Epidemic | History Today</title>
+  <link type="text/css" rel="stylesheet" href="http://www.historytoday.com/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.historytoday.com/sites/default/files/css/css_Jg-OzhHk3P6QCDqub61Svhjk5IwQZUuN5RPcYWNsrDA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.historytoday.com/sites/default/files/css/css_5Jgd9k5A4qRvmYf718Bnirdyfk5uYZ5mLfNFd3jfDRA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.historytoday.com/sites/default/files/css/css_YsxXti-QWDkuu5SFi87pZMKcHll8J4PM4-Zm1Li780k.css" media="all" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script defer="defer" src="http://www.historytoday.com/sites/all/libraries/modernizr/modernizr.min.js?nhn88i"></script>
+<script src="http://www.historytoday.com/sites/all/libraries/respondjs/respond.min.js?nhn88i"></script>
+<script src="http://www.historytoday.com/sites/default/files/js/js_rq-cYeOqvht6rGqr3Iy7SFrV-HvWkRnkaFMp9RySnIQ.js"></script>
+<script src="http://www.historytoday.com/sites/default/files/js/js_WH2vpvTPFftdBKJA0Y74YLQkqceA1hkdnZcuxoV-AJM.js"></script>
+<script src="http://www.historytoday.com/sites/default/files/js/js_foAd-DXGIigUA6W96tPCmax0ILT92tZV9eYEENUQ4Po.js"></script>
+<script>var switchTo5x = true;</script>
+<script src="http://w.sharethis.com/button/buttons.js"></script>
+<script>if (stLight !== undefined) { stLight.options({"publisher":"dr-c4a1fb2f-89b-9359-fd00-1fe6ba61c44e","version":"5x"}); }</script>
+<script src="http://www.historytoday.com/sites/default/files/js/js_cOqW9mll-ePFb8uE9dMesmBUToSFFHc1wUcOpNZFrrk.js"></script>
+<script>var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-4917399-1"]);89b-9359-fd00-1fe6ba61c44e","version":"5x"}); }</script>
+<script src="http://www.historytoday.com/sites/default/files/js/js_cOqW9mll-ePFb8uE9dMesmBUToSFFHc1wUcOpNZFrrk.js"></script>
+<scr_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();</script>
+<script src="http://www.historytoday.com/sites/default/files/js/js_-65C8y7hKKzLDO9AppZNJ8d8hrWRW0nhaJtsP-1Blx4.js"></script>
+<script src="http://www.historytoday.com/sites/default/files/js/js_GAp1oFvcFAseoVr1nC4fvlwXdvr7T2LELzqdVZ1MIu4.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"historytoday","theme_token":"x1lc8-oMYkudoANPMqhalOhexyoBAcxZjoPGNDltU08","js":{"\/js\/rrssb.min.js":1,"modules\/statistics\/statistics.js":1,"sites\/all\/themes\/bootstrap\/js\/bootstrap.js":1,"sites\/all\/libraries\/modernizr\/modernizr.min.js":1,"sites\/all\/libraries\/respondjs\/respond.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/equalheights\/jquery.equalheights.js":1,"sites\/all\/modules\/contrib\/equalheights\/equalheights.js":1,"sites\/all\/modules\/custom\/ht_roleexpirydate\/ht_roleexpiry.js":1,"sites\/all\/modules\/custom\/ht_roleexpirydate\/moment.js":1,"sites\/all\/modules\/contrib\/image_caption\/image_caption.min.js":1,"0":1,"http:\/\/w.sharethis.com\/button\/buttons.js":1,"1":1,"sites\/all\/libraries\/imagesloaded\/jquery.imagesloaded.min.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/modules\/contrib\/simpleads\/js\/simpleads.cycle.js":1,"sites\/all\/libraries\/jquery.cycle\/jquery.cycle.all.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/affix.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/alert.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/button.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/carousel.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/collapse.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/dropdown.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/modal.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/tooltip.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/popover.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/scrollspy.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/tab.js":1,"sites\/all\/themes\/historytoday\/bootstrap\/js\/transition.js":1,"sites\/all\/themes\/historytoday\/js\/historytoday.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"sites\/all\/modules\/contrib\/mollom\/mollom.css":1,"sites\/all\/modules\/contrib\/simpleads\/css\/simpleads.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/print\/print_ui\/css\/print_ui.theme.css":1,"sites\/all\/modules\/contrib\/field_group\/field_group.css":1,"sites\/all\/modules\/contrib\/rrssb\/css\/rrssb-overrides.css":1,"\/css\/rrssb.css":1,"sites\/all\/themes\/historytoday\/\/less\/css\/style.css":1}},"field_group":{"div":"recent_stories"},"equalHeightsModule":{"classes":[{"selector":".view-archive-taxonomies .views-row","mediaquery":"","minheight":"","maxheight":"","overflow":"auto"}],"imagesloaded_ie8":1},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"statistics":{"data":{"nid":"8165"},"url":"\/modules\/statistics\/statistics.php"},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto top","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-8165 node-type-article" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    
+	<section id="topbar">
+		<div class="container">
+				<div class="span">
+		        <div class="region region-topbar">
+    <section id="block-views-ht-advertisement-blocks-block-1" class="block block-views block-first block-last clearfix">
+
+      <div class="block-inner">
+  <div class="view view-ht-advertisement-blocks view-id-ht_advertisement_blocks view-display-id-block_1 view-dom-id-84c11a25412e20643f31c99d6eff6643">
+        
+  
+  
+      <div class="view-content">
+      <div data-fx="fade" data-speed="1000" class="simpleads-wrapper">
+
+  
+    
+      <div class="simpleads-item simpleads-item-1 first last" data-id="14601">
+    
+          <a href="http://global.oup.co3">
+        
+  
+  
+      <div class="view-content">
+      <div data-fx="fade" data-speed="m/whoswho/about/news/freeaccess/" target="_blank"><img typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/field/image/WW-History-Today.gif" width="728" height="90" alt="Who&#039;s Who" title="Who&#039;s Who" /></a>  </div>
+
+    
+  
+</div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+
+</section> <!-- /.block -->
+  </div>
+				</div>
+			</div>
+	</section>
+
+<header role="banner" id="page-header">
+ 	<div class="container">
+ 	 <div class="row">
+  		<div class="col-sm-4 col-xs-5">
+
+  		      <a class="logo navbar-btn" href="/" title="Home">
+        <img src="http://www.historytoday.com/sites/default/files/logo_4.png" alt="Home" />
+      </a>
+      			</div>
+
+			<div class="col-sm-8">
+    	  <div class="region region-header">
+    <section id="block-menu-block-3" class="block block-menu-block block-first clearfix">
+
+      <div class="block-inner">
+  <div class="menu-block-wrapper menu-block-3 menu-name-user-menu parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first leaf menu-mlid-667"><a href="/user/login" title="">Sign in</a></li>
+<li class="last leaf menu-mlid-668"><a href="/user/register">Register</a></li>
+</ul></div>
+</div>
+
+</section> <!-- /.block -->
+<section id="block-block-8" class="block block-block mobile-search mobile-only clearfix">
+
+      <div class="block-inner">
+  <div id="mobile-toggle-subscribe"><a href="/subscribe">Subscribe</a></div>
+<div id="mobile-toggle-search">Search</div>
+</div>
+
+</section> <!-- /.block -->
+<section id="block-block-11" class="block block-block subscribe-mag clearfix">
+
+      <div class="block-inner">
+  <p><a href="/magazine"><img class="media-element file-default" typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/jan_news.jpg" alt="" /></a></p>
+<p><a class="sub" href="/shop/print-subscription" style="outline: 0px; color: rgb(27, 117, 94); text-align: center; text-decoration: underline;">Subscribe Today</a></p>
+<p><a class="click" href="http://historytoday.com/shop/gift-subscription" style="line-height: 1.75;">Give a Gift</a></p>
+</div>
+
+</section> <!-- /.block -->
+<section id="block-search-api-page-history-today-search" class="block block-search-api-page block-last clearfix">
+
+      <div class="block-inner">
+  <form action="/elizabeth-fenn/great-smallpox-epidemic" method="post" id="search-api-page-search-form-history-today-search" accept-charset="UTF-8"><div><div class="form-type-textfield form-item-keys-1 form-item form-group">
+  <label class="element-invisible" for="edit-keys-1">Enter your keywords </label>
+ <input placeholder="Enter your keywords" class="form-control form-text" type="text" id="edit-keys-1" name="keys_1" value="" size="15" maxlength="128" />
+</div>
+<input type="hidden" name="id" value="1" />
+<button classkeys-1">Enter your keywords </label>
+ <input ="btn btn-primary form-submit" id="edit-submit-1" name="op" value="Search" type="submit">Search</button>
+<input type="hidden" name="form_build_id" value="form-ju4dHbqQi0SVdrqj7RNAqRTdq7xKpei4HjcpJNm7MrY" />
+<input type="hidden" name="form_id" value="search_api_page_search_form_history_today_search" />
+</div></form></div>
+
+</section> <!-- /.block -->
+  </div>
+    	</div>
+    </div>
+  </div>
+</header> <!-- /#page-header -->
+
+<header id="navbar" role="banner" >
+	  <div class="navbar container navbar-default">
+	    <div class="navbar-header">
+	      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	    </div>
+
+	   		      <div class="navbar-collapse collapse">
+	        <nav role="navigation">
+	             <div class="region region-navigation">
+    <section id="block-menu-block-1" class="block block-menu-block block-first block-last clearfix">
+
+      <div class="block-inner">
+  <div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first leaf has-children menu-mlid-584"><a href="/magazine">The Magazine</a></li>
+<li class="leaf has-children active-trail menu-mlid-578"><a href="/archive" class="active-trail">The Archive</a></li>
+<li class="leaf menu-mlid-2846"><a href="/history-matters">History Matters</a></li>
+<li class="leaf menu-mlid-577"><a href="/reviews">Reviews</a></li>
+<li class="leaf menu-mlid-583"><a href="/blog">Blog</a></li>
+<li class="leaf menu-mlid-574"><a href="/podcast">Podcast</a></li>
+<li class="leaf menu-mlid-587"><a href="/digital-edition-ipad-kindle-fire-android">Digital Edition</a></li>
+<li class="leaf menu-mlid-3258"><a href="/subscribe">Subscribe</a></li>
+<li class="leaf menu-mlid-586"><a href="/contact">Contact</a></li>
+<li class="leaf menu-mlid-2194"><a href="/user/login" class="mobile-only">Sign in</a></li>
+<li class="last leaf menu-mlid-2195"><a href="/user/register" class="mobile-only">Register</a></li>
+</ul></div>
+</div>
+
+</section> <!-- /.block -->
+  </div>
+	         </nav>
+	      </div>
+	     
+		</div>
+
+	  <div class="ht-mini-header-wrapper">
+                <div class="region region-mini-header">
+    <section id="block-block-6" class="block block-block block-first clearfix">
+
+      <div class="logo-bg"></div>
+  <p><a href="/homepage"><img class="media-element file-default" typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/logosmaller.png" alt="" /></a></p>
+
+</section> <!-- /.block -->
+<section id="block-menu-block-4" class="block block-menu-block clearfix">
+
+      <div class="block-inner">
+  <div class="menu-block-wrapper menu-block-4 menu-name-menu-mini-header-menu parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first leaf menu-mlid-2844"><a href="/site-search">Search</a></li>
+<li class="leaf menu-mlid-836"><a href="/magazine">Magazine</a></li>
+<li class="leaf menu-mlid-837"><a href="/archive">Archive</a></li>
+<li class="leaf menu-mlid-2848"><a href="/history-matters">History Matters</a></li>
+<li class="leaf menu-mlid-838"><a href="/reviews">Reviews</a></li>
+<li class="leaf menu-mlid-842"><a href="/podcast">Podcast</a></li>
+<li class="last leaf menu-mlid-841"><a href="/blog">Blog</a></li>
+</ul></div>
+</div>
+
+</section> <!-- /.block -->
+<section id="block-block-7" class="block block-block block-last clearfix">
+
+      <div class="block-inner">
+  <p><a class="sub" href="/subscribe">Subscribe</a></p>
+</div>
+
+</section> <!-- /.block -->
+  </div>
+          </div>
+</header>
+
+
+<div class="main-container">
+	<div class="container">
+
+		
+	  <div class="row">
+          </div>
+
+	  <div class="row">
+          </div>
+
+	  <div class="row">
+
+<div class="main-content-wrapper">
+	<div class="main-content-inner">
+	    <section class="col-sm-8">
+	      	      	      <a id="main-content"></a>
+	      	      	        <h1 class="page-header">The Great Smallpox Epidemic</h1>
+	      	      	      	      	        	      	      	      	        <div class="region region-content">
+    <section id="block-system-main" class="block block-system block-first clearfix">
+
+      <div class="block-inner">
+  <div  about="/elizabeth-fenn/great-smallpox-epidemic" typeof="sioc:Item foaf:Document" class="ds-1col node node-article view-mode-full clearfix">
+
+  
+  <div class="group-author-publish-info field-group-div"><div class="view view-node-tags view-id-node_tags view-display-id-entity_view_2 view-dom-id-0995be4223e2e4bce4d69d5bf0d5b631">
+      
+  
+  
+      <div class="view-content">
+      <div class="group-wrapper">
+                <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+              
+  <div class="views-field views-field-field-author">        <div class="field-content">By <a href="/author/elizabeth-fenn" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Elizabeth A. Fenn</a></div>  </div>        </div>
+    </div><!--end your div-->    </div>
+  
+  
+  
+  
+  
+  
+</div> <div class="view view-ht-issue-details view-id-ht_issue_details view-display-id-entity_view_1 view-dom-id-47ec090229bab7632813931743b03568">
+      
+  
+  
+      <div class="view-content">
+      <div class="group-wrapper">
+                <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+              
+  <div class="views-field views-field-nothing">        <span class="field-content">Published in <a href="/archive/history-today/latest" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">History Today</a> <a href="/archive/history-today/volume-53-issue-8-august-2003" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Volume 53 Issue 8 August 2003</a> </span>  </div>        </div>
+    </div><!--end your div-->    </div>
+  
+  
+  
+  
+  
+  
+</div> </div><div class="group-tag-wrapper field-group-div"><ul class="links list-inline"><li class="print_html first"><a href="/print/8165" title="Display a printer-friendly version of this page." class="print-page" onclick="window.open(this.href); return false" rel="nofollow">Print</a></li>
+<li class="print_mail last"><a href="/printmail/8165" title="Send this page by email." class="print-mail" rel="nofollow">Email</a></li>
+</ul><div class="view view-node-tags view-id-node_tags view-display-id-entity_view_1 view-dom-id-30f85ae8f119cc691b635e9f4d775e44">
+      
+  
+  
+      <div class="view-content">
+      <div class="group-wrapper">
+                <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+              
+  <span class="views-field views-field-field-period">        <span class="field-content"><a href="-content">
+      <div class="group-wrapper">
+                <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+              
+  <span class="views-field views-field-field-period">        <span class="field-con/early-modern-16th-18thc" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Early Modern (16th-18thC)</a></span>  </span>  
+  <span class="views-field views-field-field-location">        <span class="field-content"><a href="/archive/location/north-america" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">North America</a></span>  </span>  
+  <span class="views-field views-field-field-themes">        <span class="field-content"><a href="/archive/themes/medicine-disease" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Medicine &amp; Disease</a>, <a href="/archive/themes/social" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Social</a></span>  </span>        </div>
+    </div><!--end your div-->    </div>
+  
+  
+  
+  
+  
+  
+</div> </div><div class="field field-name-field-summary field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Elizabeth A. Fenn examines a little known catastrophe that reshaped the history of a continent.</p>
+</div></div></div><!--
+THIS FILE IS NOT USED AND IS HERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
+See http://api.drupal.org/api/function/theme_field/7 for details.
+After copying this file to your theme's folder and customizing it, remove this
+HTML comment.
+-->
+<div class="field field-name-body field-typHERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
+See http://api.drupal.org/api/function/theme_field/7 for details.
+After copying this file to your thee-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p><img src="/sites/default/files/smallpox.jpg" alt="Drawing accompanying text in Book XII of the 16th-century Florentine Codex (compiled 1540–1585), showing Nahuas of conquest-era central Mexico suffering from smallpox." title="Drawing accompanying text in Book XII of the 16th-century Florentine Codex (compiled 1540–1585), showing Nahuas of conquest-era central Mexico suffering from smallpox." style="margin: 10px 0px;" class="caption " height="472" width="612" />Cruising the northwest coastline of America in 1792, Captain George Vancouver was troubled. Where, he wondered, were all the natives? The land was abundant, with a seemingly unlimited supply of salmon and fresh water, but there were strikingly few people. Instead, the British navigator found deserted villages. The first, encountered south of Vancouver Island on the shores of Discovery Bay, was ‘over-run with weeds; amongst which were found several human skulls, and other bones, promiscuously scattered about’.</p>
+<p>As Vancouver charted the Strait of Juan de Fuca, the scene repeated itself regularly. ‘During this Expedition’, crew member Thomas Manby noted, ‘we saw a great many deserted Villages some of them ... capable of holding many hundred Inhabitants’. For Manby, the conclusion was inescapable: ‘By some event, this country has been considerably depopulated, but from what cause is hard to determine.’ Vancouver agreed. All the evidence, he believed, indicated ‘that at no very remote period this country had been far more populous than at present’.</p>
+<p>There had indeed been a disaster, one so vast, in fact, that even its witnesses and victims could not appreciate its extent. In the years from 1775 to 1782, as the Revolutionary War reshaped society and politics along the eastern seaboard, a very different cataclysm shook the entire North American continent. The cataclysm, huge and hideous, was smallpox.</p>
+<p>Caused by a moderately contagious virus known as <em>Variola major</em> , the initial signs of smallpox came twelve days after exposure, usually by infection of the respiratory tract. Mild at first, the early symptoms were much like those of the flu. They included headache, backache, fever, vomiting and general malaise. In many cases, victims began feeling better after the first day or two, often thinking that they had indeed suffered a bout of influenza.</p>
+<p>Relief, however, was fleeting. By day four, the face flushed and the first painful lesions appeared – not on the surface of the skin, but in the mouth, throat and nasal passages. Within twenty-four hours, the distinctive skin rash surfaced. On some, the rash turned inward, haemorrhaging beneath the skin and through the mucous membranes. These patients died early, bleeding from the eyes, nose, gums or vagina. On most patients, however, the pustules pushed to the surface of the skin. If  they did not run together the prognosis was fairly good. But if the pustules ran into each other in what was called ‘confluent’ smallpox, patients stood at least a 60 per cent chance of dying.</p>
+<p>As the rash progressed in the mouth and throat, drinking became difficult, and dehydration often set in. Around day ten, when the pustules softened and turned blistery, many dehydrated patients simply reabsorbed the fluid they contained. Soon thereafter, in the words of an eighteenth-century Boston physician, the sores began ‘to crack run and smell’. Even under hygienic conditions, secondary bacterial infections might well set in, with consequences fully as severe as those of the smallpox. Near the end of the second week, scabs started to form. In his description of smallpox among the Narragansett Indians in 1634, William Bradford described this condition:</p>
+<blockquote><p>... they lye on their hard matts, the poxe breaking and mattering, and runing one into another, their skin cleaving (by reason therof) to the matts they lye on; when they turne them, a whole side will flea of[f] at once.<his condition:</p>
+<blockquote><p>... they lye on their hard matts, the poxe breaking and mattering, and runing one into another, their skin cleaving (by reason therof) to the matts they lye on; when they turne them, a whole side /p>
+</blockquote>
+<p>By week three, mortality dropped off sharply. Fever subsided, and patients generally improved as unsightly scars replaced scabs and pustules. The usual course of the disease, from initial onset to the loss of all scabs, took roughly one month. Survivors, though often scarred and on rare occasions even blinded by the disease, were also blessed. Having endured smallpox once, they were now immune. They would never catch the disease again.</p>
+<p>Fearsome though it was, eighteenth-century Americans did not face smallpox unarmed. Even without an understanding of virology, they employed two weapons against the disease: isolation and inoculation. Isolation or quarantine simply meant avoiding contact between individuals sick with the disease and individuals susceptible to it. Bed linens and clothing might receive special handling. Done properly, quarantine could often halt further contagion. In the colonial period, isolation was used by colonists and Native Americans alike.</p>
+<p>The second weapon – employed even after Edward Jenner’s discovery of vaccination in 1796 – was inoculation. Unlike vaccination, which utilised the cowpox virus, inoculation involved the deliberate infection of a susceptible individual with Variola virus, usually through an incision on the hand. For reasons that elude scientists to this day, inoculated smallpox walike vaccination, which utilised the cowpox virus, inoculation involved the deliberate infection of a susceptible individual with Variola virus, usually thrs in most cases much less virulent than the ‘natural’ form of the disease. Survivors won lifelong immunity, just as they would from ‘natural’ smallpox, but mortality was notably lower.</p>
+<p>There was, however, a catch: individuals under inoculation did come down with smallpox, and they were therefore fully capable of infecting others with the disease. Unless practised under strict quarantine, the operation was as likely to start an epidemic as to stop one. For this reason, inoculation was highly controversial in the English colonies, where smallpox outbreaks were comparatively rare. In England, however, the disease had long been endemic, and the procedure achieved wider acceptance. These combined factors meant that in the early stages of the American Revolution the British forces were far more likely than the Americans to have acquired immunity to the <em>Variola </em>virus. </p>
+<p>There had been devastating outbreaks of smallpox from the time of early Spanish exploration, but none can be so fully documented as the epidemic of which Vancouver had glimpsed the grim remains. The first signs came during the early conflicts of the American Revolution in 1775-76. In three different episodes – the siege of Boston, the siege of Quebec, and the mobilisation of Dunmore’s Ethiopian regiment – smallpox reared its head. In the end, these episodes, partame during the early conflicts of the American Revolution in 1775-76. In three different episodes – the siege of Boston, the siege of Quebec, and the mobilisation oficularly the first two, pushed General George Washington and his medical staff to make important policy decisions regarding smallpox control in the Continental Army.</p>
+<p>By 1775, the preliminaries were done with. The Sugar Act, the Stamp Act, the Tea Party, the Boston Massacre – each had contributed to the growing rift between the colonies and the mother country. With each new action, meetings convened, crowds gathered, and messengers raced back and forth between the colonies. Historical metaphors that describe the colonists becoming ‘infected’ with a ‘contagion of liberty’ thus seem appropriate:  conditions were indeed perfect for actual contagion.</p>
+<p>Epidemic smallpox surfaced first in Boston, that hotbed of revolutionary fervor. Isolated incidents had occurred in surrounding towns in 1774, but by January of 1775, the disease had taken hold in Boston itself. </p>
+<p>The first battle of the war took place in April, and the disease festered through the summer while the Continental Army was entrenched around the city. To prevent it from taking hold among their troops, the Americans set up a dedicated smallpox hospital at Fresh Pond near Cambridge. On July 4th, 1775, Washington ordered:</p>
+<blockquote><p>No Person is to be allowed to go to Fresh-water pond a fishing or on any other occasion as there may be a danger of introducing the small pox into the army.</p>
+</blockquote>
+<p>Any soldier showing ‘the least symptoms of Small Pox’ faced immediate quarantine.</p>
+<p>The efforts at control were successful through the summer. But in November, as Bostonians turned indoors to fend off winter’s chill, the disease surged among them. At the same time, Washington and his men had to contend with a sizeable exodus of refugees from the stricken city. ‘General Howe has ordered 300 inhabitants of Boston to Point Shirley in destitute condition’, wrote Washington to Congress. ‘I ... am under dreadful apprehensions of their communicating the Smallpox as it is rife in Boston’. He banned the refugees from the American camp.</p>
+<p>Then, in the first week of December, four British deserters arrived with frightening news. Their commander, General William Howe, they claimed, had deliberately infected  fugitives ‘with a design to spread the Small-Pox among the Troops’. At first, Washington gave little credit to the rumour. But when smallpox broke out among the displaced Bostonians, the Americans were forced to redouble their efforts at smallpox control.</p>
+<p>These efforts paid off. The disease did not spread among the American forces until after the British withdrew on March 17th, 1776. Then, in the aftermath of the siege, people poured into Boston. ‘Boston’, wrote Moses Morse, ‘is become a hospital with the small-pox’. The epidemic peaked in July.</p>
+<p>Desperate to control its spread, the town select-men made a dramatic decision: although inoculation was traditionally banned in Boston, they waived the prohibition for a period of twelve days in July. The select-men posted sentinels around the city. No one susceptible could enter; no one with visible symptoms could leave. Finally, in mid-September, the epidemic burned itself out.</p>
+<p>There was no such good news from other fronts. On May 6th, 1776, after a miserable, five-month siege of the Canadian city of Quebec, more than 1,500 Americans fled up the St Lawrence River as 900 British regulars disembarked to relieve the Quebec garrison. Throughout the siege, the Americans had had to contend with both the British and the smallpox. While quarantine had worked  at Boston, it failed from the start at Quebec. On May 1st, 1776, five days before the retreat, 900 of the 1,900 American troops before Quebec were ill, primarily with smallpox.</p>
+<p>When the chaotic withdrawal began on May 6th, even the semblance of quarantine disappeared: men in the full throes of smallpox struggled through knee-deep snow alongside men who had never had the disease, while others unaware they were incubating smallpox mingled with healthy troops. ‘My pock had become so sore and troublesome’, soldier Lemuel Roberts recalled, ‘that my clothes stuck fast to my body, especially to my feet; and it became a severe trial to my fortitude, to bear my disorder’. </p>
+<p>By May 11th, the fleeing soldiers had begun arriving at Sorel, some fifty miles north-east of Montreal, where the Richelieu River enters the St Lawrence. ‘There is Some Regimts all Down in the Small pox not a Single man fit for duty’, wrote one officer on the scene. Among those taken ill was John Thomas, the newly arrived general who had taken charge on May 1st. Thomas relinquished his command on May 21st. By June 1st, he was dead.</p>
+<p>Reinforcements now poured into Sorel. The scenes that greeted them were terrifying, and they succumbed to the <em>Variola </em>virus almost as fast as they arrived. On June 11th, General Philip Schuyler wrote to George Washington from Albany, warning him that further reinforcements would ‘rather weaken than strengthen our Army’ unless they had already had smallpox.</p>
+<p>By early June, the sight of British sail approaching Sorel had forced the ‘Northern Army’ to continue its retreat along the Richelieu River, eventually pausing at Isle aux Noix near the north entrance of Lake Champlain. Isle aux Noix was hell on earth. ‘My eyes never before beheld such a seen’, wrote John Lacey of Pennsylvania, ‘nor do I ever desire to see such another – the Lice and Maggots seme to vie with each other, were creeping in Millions over the Victims’. Two mass graves consumed thirty to forty bodies per day. </p>
+<p>The raging infection caused General John Sullivan to order yet another withdrawal ‘or the Army will be lost, not by the enemy, but by sickness’. And so the army continued southwards to Ticonderoga. At Crown Point in July, the Connecticut painter John Trumbull visited the camp. ‘I did not look into a tent or a hut in which I did not find either a dead or dying man’, he wrote later. </p>
+<p>It took until September for the army to cleanse itself. ‘Thank Heaven’, an elated General Horatio Gates  wrote to Washington, ‘the small-pox is totally eradicated from amongst us’. The damage is hard to assess, but it is likely that smallpox carried away roughly a thousand men during the Canadian campaign. Returning soldiers, furthermore, launched outbreaks in Connecticut and possibly Pennsylvania.  </p>
+<p>Native Americans also contracted smallpox during the Quebec invasion, when a British force of Frenchmen and Seneca Indians routed reinforcements sent to the aid of a pox-ridden American garrison at the Cedars. The American patriot John Adams, who bemoaned the general havoc smallpox had created, later noted the results of this episode with satisfaction:</p>
+<blockquote><p>It is some small Consolation that the Scoundrell Savages have taken a large Dose of it. They plundered the Baggage, and stripped off the Cloaths of our Men, who had the Small Pox, out full upon them at the Cedars.</p>
+</blockquote>
+<p>In the months that followed, the disease also appeared further west, striking the Onondaga Iroquois and  Indians at Michilimackinac who had assisted in expelling the Americans from Canada.</p>
+<p>If the smallpox wreaked havoc on American soldiers retreating from Quebec, their plight remained less poignant than that of a small band of British sympathisers to the south at exactly the same time. The colony was Virginia, where the royal governor, John Murray, Lord Dunmore, had promised freedom to all slaves ‘appertaining to Rebels’ who would fight for the crown. At least 800 African-Americans joined Dunmore, donning uniforms adorned with the words ‘Liberty to Slaves’, and fighting in several skirmishes. But Variola, not patriot Virginians, would be their most formidable enemy.</p>
+<p>In February 1776, smallpox appeared among Dunmore’s troops, who had established a precarious camp on a spit of land near Portsmouth, Virginia. By May, nearly 300 had died, and the Governor’s surgeons recommended inoculation. Dunmore decided to leave his vulnerable mainland position and set up an inoculation camp at Gwynn’s Island, where the Piankatank Rivespit of land near Portsmouth, Virginia. By May, nearly 300 had died, and the Governor’s surgeons recommended inoculation. Dunmore decided to leave his vulnerable mainland position and set up an inoculation camp at Gwynn’s Island, where the Piankatank Rr flows into Chesapeake Bay. </p>
+<p>Gwynn’s Island was to Dunmore’s loyalist troops what Isle aux Noix was to the Americans in Canada. An American captive who escaped by swimming to shore in June 1776 claimed that Dunmore lost ‘nine or ten of his black regiment every day by the small pox, &amp;c’.</p>
+<p>In July, under a concerted attack by the Virginia rebels, Dunmore and his vastly reduced force gave up the island. Landing within hours of the loyalist departure, the Virginians were appalled at the scene. One described how:</p>
+<blockquote><p>On our arrival, we ... were struck with horrour at the number of dead bodies, in a state of putrefaction, strewed all the way from their battery to Cherry-Point, about two miles in length, without a shovelful of earth upon them.</p>
+</blockquote>
+<p>They found ‘others gasping for life; and some had crawled to the water’s edge, who could only make known their distress by beckoning to us’. In all, some 500 men had died on the island. The remainder sailed first to the Potomac, and then, in early August, to New York, St Augustine and England. As in the Canadian campaign, returning soldiers and deserters carried smallpox home with them, sparking outbreaks that lasted well into 1777 in tidewater Virginia and Maryland.</p>
+<p>In 1777 and 1778, the disease  seemed to fade away. In part, the momentary pause in smallpox was due to General Washington’s decision to inoculate the Continental Army. The decision stemmed largely from ‘the deplorable and melancholy situation, to which one of our Armies was reduced last Campaign by the Small pox’ and the certainty that the disease would again take hold if the army was vulnerable. At its core was the recognition that the Revolution had brought about new circumstances in which people and contagious disease circulated rapidly.</p>
+<p>So beginning in the spring of 1777 and continuing through the following winter, the American forces went through inoculation at West Point, Morristown, Valley Forge, Alexandria, Dumfries, and Fairfax. The procedure did not always go well for the troops, but quarantine seems to have been secure.  There were no complaints of the contagion spreading beyond the designated inoculation sites, and in the difficult Valley Forge winter of 1778, the army managed to keep its temporary debilitation a secret from the British.</p>
+<p>The year 1779 was a  milestone for smallpox in North America. As the theatre of war moved south, so did the smallpox, primarily affecting civilians, camp followers, and irregular troops in both armies. In early 1779, for example, a combined British force of Waldeckers (German troops) and loyalists from Pennsylvania and Maryland picked up smallpox in Jamaica and carried it imarily affecting civilians, camp followers, and irregular troops in to Pensacola Bay. </p>
+<p>By mid-October, the disease had reached the Indian town of Little Tallassee, where it ‘reduced them much, and those Towns who have not had it as yet, have fled with their Families into the Woods’. Smallpox also erupted in the cities of Charleston and Savannah, and in the two years that followed, it plagued the southern landscape right along with the war.</p>
+<p>Particularly hard hit were the slaves who fled to freedom behind British lines as Cornwallis’s army marched through the south. The retreat to Yorktown, in fact, hearkened back to the Gwynn’s Island epidemic of 1776. But in this instance the British turned their guns on desperately ill African Americans to whom they had promised freedom and instead forced them to return to their masters. Some eyewitnesses believed that this was an attempt to spread smallpox behind the American lines.</p>
+<p>But these events paled by comparison to smallpox’s ravages elsewhere. For in 1779, the <em>Variola </em>virus moved westwards, finding its way into the vast susceptible populations it needed to thrive. Now trade, colonial expansion, and the Spanish mission system joined with warfare in transporting and transmitting the disease.</p>
+<p>In August 1779, after an eighteen-year hiatus, smallpox struck Mexico City. It moved quickly, and by December 27th the disease had afflicted 44,286 people in the city. ‘A great part of the Mexican youth was cut down that year’, noted the explorer Alexander von Humboldt. By the time it was over, early in 1780, an estimated 18,000 had died.</p>
+<p> The virus nevertheless continued to travel.  Moving south from Mexico City, the epidemic eventually extended into the South American continent. Traveling north, it arrived in the frontier provinces of Texas and New Mexico in the fall and winter of 1780-81. The historian Hubert Howe Bancroft calculated that in New Mexico alone, the epidemic killed 5,025 mission Indians. If non-mission Indians were included, this number would be much larger. </p>
+<p>Even as smallpox ravaged the American southwest and followed Cornwallis’s troops through the southeast, it launched a simultaneous attack on the northern plains and Canadian shield. How did it get there? Very likely by way of the Comanche Indians, the mounted and warlike titans of the southern prairies, who engaged in a spirited horse and slave trade with their Shoshone kinfolk in western Wyoming and Montana.</p>
+<p>The great explorer David Thompson recorded the account of an Indian named Saukamappee, who described how, in the summer of 1781, the Piegan Blackfeet had raided a Shoshone village. Knives drawn, the warriors had slashed through their enemies’ tents, and then, Saukamappee said, ‘our war whoop rded the account of an Indian named Saukamappee, who described how, iinstantly stopt, our eyes were appalled with terror; there was no one to fight with but the dead and the dying, each a mass of corruption’. They took no scalps but plundered the village and returned home. Two days later, smallpox broke out.</p>
+<p>Before long the disease appeared among the Western Cree and the Assiniboine with whom these Blackfeet traded. On October 22nd, 1781, at a Hudson’s Bay Company post on the North Saskatchewan River, the first Indian turned up with the infection. The man, according to the trader William Walker, had left a tent on the southern prairies</p>
+<blockquote><p>... with Seven Indians laying dead in the Inside that died of the Small pox, and he himself is taken so bad that I believe he never will recover.</p>
+</blockquote>
+<p>Reports of death and disease now poured into the post. Five of Walker’s own men returned from foraging and told of meeting Indians covered with smallpox, trying to cool themselves in the waters of the Eagle River. The dead filled nearby tents, and those who survived ‘were in such a state of despair and despondence that they could hardly converse with us’. From what Walker’s men could discover, ‘three fifths had died under this disease’. </p>
+<p>Traders at Fort Vermilion, Portage la Loche, Hudson House, Cumberland House, York Factory, Severn, and Churchill all reported the impact of smallponverse with us’. From what Walker’s men could discover, ‘three fifths had died under this disease’. </p>
+<p>Traders at Fort Vermilion, Portage la Loche, Hudson House,ox in 1781-82. The trading houses of the Canadian Shield, like the missions of the south-west, became deadly centres of contagion, despite the fact that traders often tried to mitigate contact between sick and healthy Indians.</p>
+<p>The Shoshones, who were one source of the pestilence that devastated the Canadian interior, appear also to have transmitted the plague to the tribes of the upper Missouri River. Here, in 1805, the explorers Meriwether Lewis and William Clark noted numerous  village sites forsaken by the Mandans and Hidatsas ‘about 25 years’ earlier. These towns, Clark said, were ‘destroyed by the Sous [Sioux] &amp; Small Pox’.</p>
+<p>The Sioux marauders did not escape unscathed. The surviving evidence does not indicate precisely how the epidemic reached them, but it was very likely in their assaults on the corn-growing Missouri River tribes. The Sioux recorded their fatal encounter with the pestilence in annual chronologies called winter counts. One such count, kept by an Oglala Lakota man named American Horse, designated the year 1780–81 with the simple phrase ‘Many died of smallpox’. In all, the epidemic appears in at least thirteen different winter counts kept by plains Indians in the years 1779–83.</p>
+<p>Recorded eyewitness accounts of the pandemic of 1775–82 end at Hudson Bay and the northern plains. The epidemic, however, did not. It struck the northwest coast, where George Vancouver and others observed its depopulating effects.</p>
+<p>In 1787, on the coast of what is now south-east Alaska, explorer Nathaniel Portlock spotted what he expected to be a large Tlingit village. But upon landing, he found that only nine people lived there and that the adults bore the marks of smallpox. An animated old man described to Portlock ‘the excessive torments he endured whilst afflicted with the disorder that had marked his face’.</p>
+<p>References to abandoned villages and to smallpox-scarred Indians can be found in at least a dozen journals kept on seven different voyages to the Pacific north-west from 1787 to 1795. Even Lewis and Clark, returning through the Cascades in 1806, stopped at a nearly deserted Chinook village where they met an old woman ‘badly marked with the Small Pox’, who remained there still. The woman indicated that the disease had struck ‘about twenty-eight or thirty years past’.</p>
+<p>If it is clear that the epidemic did indeed strike the north-west coast, it is not clear exactly how or when it did so. It is most likely that the pox proceeded westward from the Shoshones, following native trade networks down the Columbia River to the sea. Yet no evidence proving this has been found.</p>
+<p>It is also possible that the pox arrived by sea. From 1775 to 1779t is most likely that the pox proceeded westward from the Shoshones, followi, four Spanish voyages cruised north from San Blas, Mexico, in an effort to stake out and protect territorial claims. Could one of these have carried the infection? Perhaps. But if so, it has not yet turned up in the historical record. Nor, for that matter, does mention of smallpox or depopulation appear in the journals of Captain James Cook’s 1778 voyage, perhaps indicating that the epidemic arrived after that date.</p>
+<p>Russians also frequented the north-western coastline, and they had already established trading posts in southern Alaska. Smallpox had ravaged Asia’s Kamchatka peninsula in 1768, and there is some evidence that it was present in 1774. But there is no clear indication that Russians carried the contagion eastwards in these years.</p>
+<p>We are left, then, with George Vancouver’s mystery. From 1775 to 1782, as conflict and political upheaval rocked the east coast, smallpox had wreaked its own havoc wherever it found access to susceptible populations. From Quebec to Mexico to Hudson Bay, the continent was alive with human activity. Variola found not just susceptible populations, but connections between them. Transported by human carriers between ports and along rivers, roads, lakes, and trails, the virus showed how closely linked seemingly disparate regions already were.  In so doing, it forged a horrific common experience that spanned the continent and reshaped life for years to come.</p>
+<p><strong>Further Reading:</strong></p>
+<ul><li>Blake, John B. <em>Public Health in the Town of Boston, 1630-1822</em> ( Harvard UP, 1959)</li>
+<li>Boyd, Robert <em>The Coming of the Spirit of Pestilence: Introduced Infectious Diseases and Population Decline among the Northwest Coast Indians, 1774-1874</em> (University of Washington Press, 1999)</li>
+<li>Fenn, Elizabeth A. <em>Pox Americana: The Great Smallpox Epidemic of 1775-82</em> (Hill and Wang, 2001)</li>
+<li>Fenner, F., D. A. Henderson, I. Arita, Z. Ježek, and I. D. Ladnyi <em>Smallpox and Its Eradication </em>(World Health Organization, 1988)</li>
+<li>Roberts, Kenneth, ed. <em>March to Quebec: Journals of the Members of Arnold's Expedition</em> (3rd ed. Doubleday, Doran &amp; Co., 1940)</li>
+</ul><p class="authorbio">Elizabeth A. Fenn is an assistant professor of history at Duke University in Durham, North Carolina. Her <em>Pox Americana</em> (Sutton Publishing, 2003) was joint winner of the Longman-History Today book of the year award 2002.</p>
+</div>
+      </div>
+  <div class="fade-wrapper"></div>
+</div>
+</div>
+
+</div>
+
+</section> <!-- /.block -->
+<section id="block-views-author-sidebar-block" class="block block-views block-last clearfix">
+
+      <div class="block-inner">
+  <div class="view view-author-sidebar view-id-author_sidebar view-display-id-block view-dom-id-b5cec326ed4b09be3c6a4e9b74eea0a0">
+            <div class="view-header">
+      <p></p>
+    </div>
+  
+  
+  
+      <div class="view-content">
+      <div class="group-wrapper">
+                <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+              
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/author/elizabeth-fenn">More by Elizabeth A. Fenn </a></span>  </div>        </div>
+    </div><!--end your div-->    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+
+</section> <!-- /.block -->
+  </div>
+	      	        <div id="content-bottom">  <div class="region region-content-bottom">
+    <section id="block-rrssb-rrssb" class="block block-rrssb block-first block-last clearfix">
+
+      <div class="block-inner">
+  <div class="item-list"><ul class="rrssb-buttons clearfix"><li class="facebook first"><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.historytoday.com/elizabeth-fenn/great-smallpox-epidemic" class="popup">
+                            <span class="icon">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                                    <pat1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space=h d="M27.825,4.783c0-2.427-2.182-4.608-4.608-4.608H4.783c-2.422,0-4.608,2.182-4.608,4.608v18.434
+                                        c0,2.427,2.181,4.608,4.608,4.608H14V17.379h-3.379v-4.608H14v-1.795c0-3.089,2.335-5.885,5.192-5.885h3.718v4.608h-3.726
+                                        c-0.408,0-0.884,0.492-0.884,1.236v1.836h4.609v4.608h-4.609v10.446h4.916c2.422,0,4.608-2.188,4.608-4.608V4.783z"/>
+                                </svg>
+                            </span>
+                            <span class="text">facebook</span>
+                        </a></li>
+<li class="twitter"><a href="http://twitter.com/home?status=The+Great+Smallpox+Epidemic%20http://www.historytoday.com/elizabeth-fenn/great-smallpox-epidemic" class="popup">
+                            <span class="icon">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                                <path d="M24.253,8.756C24.689,17.08,18.297,24.182,9.97,24.62c-3.122,0.162-6.219-0.646-8.861-2.32
+                                    c2.703,0.179,5.376-0.648,7.508-2.321c-2.072-0.247-3.818-1.661-4.489-3.638c0.801,0.128,1.62,0.076,2.399-0.155
+             <path d="M24.253,8.756C24.689,17.08,18.297,24.182,9.97,24.62c-3.122,0.162-6.219-0.646-8.861-2.32
+                                    c2.703,0.1                              C4.045,15.72,2.215,13.6,2.115,11.077c0.688,0.275,1.426,0.407,2.168,0.386c-2.135-1.65-2.729-4.621-1.394-6.965
+                                    C5.575,7.816,9.54,9.84,13.803,10.071c-0.842-2.739,0.694-5.64,3.434-6.482c2.018-0.623,4.212,0.044,5.546,1.683
+                                    c1.186-0.213,2.318-0.662,3.329-1.317c-0.385,1.256-1.247,2.312-2.399,2.942c1.048-0.106,2.069-0.394,3.019-0.851
+                                    C26.275,7.229,25.39,8.196,24.253,8.756z"/>
+                                </svg>
+                           </span>
+                            <span class="text">twitter</span>
+                        </a></li>
+<li class="googleplus"><a href="https://plus.google.com/share?url=The+Great+Smallpox+Epidemic%20http://www.historytoday.com/elizabeth-fenn/great-smallpox-epidemic" class="popup">
+                            <span class="icon">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <path d="M14.703,15.854l-1.219-0.948c-0.372-0.308-0.88-0.715-0.88-1.459c0-0.748,0.508-1.223,0.95-1.663
+                                                c1.42-1.119,2.839-2.309,2.839-4.817c0-2.58-1.621-3.937-2.399-4.581h2.097l2.202-1.383h-6.67c-1.83,0-4.467,0.433-6.398,2.027
+                                                C3.768,4.287,3.059,6.018,3.059,7.576c0,2.634,2.022,5.328,5.604,5.328c0.339,0,0.71-0.033,1.083-0.068
+                                                c-0.167,0.408-0.336,0.748-0.336,1.324c0,1.04,0.551,1.685,1.011,2.297c-1.524,0.104-4.37,0.273-6.467,1.562
+                                                c-1.998,1.188-2.605,2.916-2.605,4.137c0,2.512,2.358,4.84,7.289,4.84c5.822,0,8.904-3.223,8.904-6.41
+                                                c0.008-2.327-1.359-3.489-2.829-4.731H14.703z M10.269,11.951c-2.912,0-4.231-3.765-4.231-6.037c0-0.884,0.168-1.797,0.744-2.511
+                                                c0.543-0.679,1.489-1.12,2.372-1.12c2.807,0,4.256,3.798,4.256,6.242c0,0.612-0.067,1.694-0.845,2.478
+                                                c-0.537,0.55-1.438,0.948-2.295,0.951V11.951z M10.302,25.609c-3.621,0-5.957-1.732-5.957-4.142c0-2.408,2.165-3.223,2.911-3.492
+                                                c1.421-0.479,3.25-0.545,3.555-0.545c0.338,0,0.52,0,0.766,0.034c2.574,1.838,3.706,2.757,3.706,4.479
+                                                c-0.002,2.073-1.736,3.665-4.982,3.649L10.302,25.609z"/>.492
+                                        
+                                            <polygon points="23.254,11.89 23.254,8.521 21.569,8.521 21.569,11.89 18.202,11.89 18.202,13.604 21.569,13.604 21.569,17.004
+                                                23.254,17.004 23.254,13.604 26.653,13.604 26.653,11.89      "/>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="text">google+</span>
+                        </a></li>
+<li class="pinterest last"><a href="http://pinterest.com/pin/create/button/?url=http://www.historytoday.com/elizabeth-fenn/great-smallpox-epidemic&amp;media=http://kurtnoble.com/labs/rrssb/media/facebook-share.jpg&amp;description=The+Great+Smallpox+Epidemic" class="popup">
+                            <span class="icon">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
+                                <path d="M14.021,1.57C6.96,1.57,1.236,7.293,1.236,14.355c0,7.062,5.724,12.785,12.785,12.785c7.061,0,12.785-5.725,12.785-12.785
+                                    C26.807,7.294,21.082,1.57,14.021,1.57z M15.261,18.655c-1.161-0.0                            <path d="M14.021,1.57C6.96,1.57,1.236,7.293,1.236,14.355c0,7.062,5.724,12.785,12.785,12.785c7.061,0,12.785-5.725,12.785-129-1.649-0.666-2.559-1.219c-0.501,2.626-1.113,5.145-2.925,6.458
+                                    c-0.559-3.971,0.822-6.951,1.462-10.116c-1.093-1.84,0.132-5.545,2.438-4.632c2.837,1.123-2.458,6.842,1.099,7.557
+                                    c3.711,0.744,5.227-6.439,2.925-8.775c-3.325-3.374-9.678-0.077-8.897,4.754c0.19,1.178,1.408,1.538,0.489,3.168
+                                    C7.165,15.378,6.53,13.7,6.611,11.462c0.131-3.662,3.291-6.227,6.46-6.582c4.007-0.448,7.771,1.474,8.29,5.239
+                                    c0.579,4.255-1.816,8.865-6.102,8.533L15.261,18.655z"/>
+                                </svg>
+                            </span>
+                            <span class="text">pinterest</span>
+                        </a></li>
+</ul></div></div>
+
+</section> <!-- /.block -->
+  </div>
+</div>
+	      	    </section>
+
+	    	      <aside class="sidebar col-sm-4" role="complementary">
+	          <div class="region region-sidebar-second">
+    <section id="block-views-ht-advertisement-blocks-block-2" class="block block-views ad-block block-first odd clearfix">
+
+        <div class="block-inner">
+    <div class="view view-ht-advertisement-blocks view-id-ht_advertisement_blocks view-display-id-block_2 view-dom-id-4d4c4903609086f12533f6ceb59cd250">
+        
+  
+  
+      <div class="view-content">
+      <div data-fx="fade" data-speed="1000" class="simpleads-wrapper">
+
+  
+    
+      <div class="simpleads-item simpleads-item-1 first last" data-id="13675">
+    
+          <a href="/shop/print-subscription" target="_blank"><img typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/field/image/subscribeadnewsite_0.jpg" width="300" height="250" alt="Subscribe to History Today" title="Subscribe to History Today" /></a>  </div>
+
+    
+  
+</div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</section> <!-- /.block -->
+<section id="block-views-latest-magazine-block-4" class="block block-views even clearfix">
+
+        <h3 class="block-title">Editor&#039;s Pick</h3>
+      <div class="block-inner">
+    <div class="view view-latest-magazine view-id-latest_magazine view-display-id-block_4 view-dom-id-5e945a5703bc0a93193838acbd6a6051">
+        
+  
+  
+      <div class="view-content">
+      <div class="group-wrapper">
+                <div class="views-row views-row-1 views-row-odd views-row-first">
+            
+
+<div  about="/laura-ashe/1155-and-beginnings-fiction" typeof="sioc:Item foaf:Document" class="node node-feature view-mode-small_preview_with_thumbnail">
+    <div class="row">
+        <div class="col-sm-6 col-xs-6 left">
+      <div class="field field-name-field-images field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/laura-ashe/1155-and-beginnings-fiction"><img typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/styles/square_thumb_140/public/adameve.jpg?itok=RQ1JvVnE" width="160" height="160" alt="Eve is created from Adam&amp;#039;s rib, Souvigny Bible, 12th century. De Agostini Picture Library / Bridgeman Images" title="Eve is created from Adam&amp;#039;s rib, Souvigny Bible, 12th century. De Agostini Picture Library / Bridgeman Images" /></a></div></div></div>    </div>
+          <div class="col-sm-6 col-xs-6 right ">
+        <div class="group-title-lock-wrapper field-group-div"><div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h5><a href="/laura-ashe/1155-and-beginnings-fiction">1155 and the Beginnings of Fiction</a></h5></div></div></div></div><div class="field field-name-node-unlinked-tagged-author field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p>By Laura Ashe</p>
+</div></div></div><div class="field field-name-field-long-title field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">English fiction dates from the mid-12th century</div></div></div>      </div>
+      
+  </div>
+</div>
+
+
+<!-- Needed to activate display suite support on forms -->
+        </div>
+            <div class="views-row views-row-2 views-row-even">
+            
+
+<div  about="/tiziana-villani/warburg-postwar" typeof="sioc:Item foaf:Document" class="node node-article view-mode-small_preview_with_thumbnail">
+    <div class="row">
+        <div class="col-sm-6 col-xs-6 left">
+      <div class="field field-name-field-images field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/tiziana-villani/warburg-postwar"><img typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/styles/square_thumb_140/public/articles/warburg.jpg?itok=ymUBHX6-" width="160" height="160" alt="The Reading Room at the Warburg Institute, 1937" title="The Reading Room at the Warburg Institute, 1937" /></a></div></div></div>    </div>
+          <div class="col-sm-6 col-xs-6 right ">
+        <div class="group-title-lock-wrapper field-group-div"><div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h5><a href="/tiziana-villani/warburg-postwar">Warburg Postwar</a></h5></div></div></div></div><div class="field field-name-node-unlinked-tagged-author field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p>By Tiziana Villani</p>
+</div></div></div><div class="field field-name-field-long-title field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">The esteemed library played a key role after the Second World War.</div></div></div>      </div>
+      
+  </div>
+</div>
+
+
+<!-- Needed to activate display suite support on forms -->
+        </div>
+            <div class="views-row views-row-3 views-row-odd views-row-last">
+            
+
+<div  about="/sarah-mortimer/what-was-stake-putney-debates" typeof="sioc:Item foaf:Document" class="node node-feature view-mode-small_preview_with_thumbnail">
+    <div class="row">
+        <div class="col-sm-6 col-xs-6 left">
+      <div class="field field-name-field-images field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/sarah-mortimer/what-was-stake-putney-debates"><img typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/styles/square_thumb_140/public/ireton.jpg?itok=u-kn3M64" width="160" height="160" alt="Henry Ireton" title="Henry Ireton" /></a></div></div></div>    </div>
+          <div class="col-sm-6 col-xs-6 right ">
+        <div class="group-title-lock-wrapper field-group-div"><div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h5><a href="/sarah-mortimer/what-was-stake-putney-debates">What was at stake in the Putney Debates?</a></h5></div></div></div></div><div class="field field-name-node-unlinked-tagged-author field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p>By Sarah Mortimer</p>
+</div></div></div><div class="field field-name-field-long-title field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">The most dramatic arguments of the English Civil Wars</div></div></div>      </div>
+      
+  </div>
+</div>
+
+
+<!-- Needed to activate display suite support on forms -->
+        </div>
+    </div><!--end your div-->    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</section> <!-- /.block -->
+<section id="block-block-19" class="block block-block ad-block odd clearfix">
+
+        <h3 class="block-title">The Archive</h3>
+      <div class="block-inner">
+    <p style="text-align: center;"><a href="/archive/period"><img class="media-element file-default" typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/period_new.jpg" alt="" /></a></p>
+<p style="text-align: center;"><a href="/archive/location"><img class="media-element file-default" typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/location_new.jpg" alt="" /></a></p>
+<p style="text-align: center;"><a href="/archive/themes"><img class="media-element file-default" typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/theme_new.jpg" alt="" /></a></p>
+  </div>
+</section> <!-- /.block -->
+<section id="block-views-popular-block" class="block block-views block-last even clearfix">
+
+        <h3 class="block-title">Popular</h3>
+      <div class="block-inner">
+    <div class="view view-popular view-id-popular view-display-id-block view-dom-id-3c481f623d520230223c74358b2b2b97">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ol>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <span class="views-field views-field-title">        <span class="field-content"><a href="/ad-harvey/austria%E2%80%99s-diminutive-dictator-engelbert-dollfuss">Austria’s Diminutive Dictator: Engelbert Dollfuss</a></span>  </span></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <span class="views-field views-field-title">        <span class="field-content"><a href="/conor-meleady/new-caliphate-old-caliphate">New Caliphate, Old Caliphate</a></span>  </span></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <span class="views-field views-field-title">        <span class="field-content"><a href="/richard-cavendish/joan-arc-born-domr%C3%A9my">Joan of Arc born at Domrémy</a></span>  </span></li>
+          <li class="views-row views-row-4 views-row-even">  
+  <span class="views-field views-field-title">        <span class="field-content"><a href="/blog/2013/10/were-borgias-really-so-bad">Were the Borgias Really so Bad?</a></span>  </span></li>
+          <li class="views-row views-row-5 views-row-odd views-row-last">  
+  <span class="views-field views-field-title">        <span class="field-content"><a href="/ole-j-benedictow/black-death-greatest-catastrophe-ever">The Black Death: The Greatest Catastrophe Ever</a></span>  </span></li>
+      </ol></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</section> <!-- /.block -->
+  </div>
+	      </aside>  <!-- /#sidebar-second -->
+	    			<div class="clearfix"></div>
+		</div>
+</div>
+	  </div>
+	</div>
+</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="post-content-wrapper">
+				  <div class="region region-post-content">
+    <section id="block-views-recent-stories-block" class="block block-views block-first block-last clearfix">
+
+        <h2 class="block-title">Recent stories</h2>
+    <div class="block-inner">
+  <div class="view view-recent-stories view-id-recent_stories view-display-id-block views-6-col row view-dom-id-61c2867e39344de25de48d6701b2a119">
+        
+  
+  
+      <div class="view-content">
+      <div class="group-wrapper">
+                <div class="views-row views-row-1 views-row-odd views-row-first">
+            <div  about="/mark-ronan/music-resignation" typeof="sioc:Item foaf:Document" class="ds-1col node node-history-matters view-mode-recent_stories clearfix">
+
+  
+  <div class="field field-name-field-images field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/mark-ronan/music-resignation"><img typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/styles/square_thumb_140/public/history-matters/strauss_thumb.jpg?itok=BEz2Ld_J" width="160" height="160" /></a></div></div></div><div class="group-title-lock-wrapper field-group-div"><div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h5><a href="/mark-ronan/music-resignation">Music of Resignation</a></h5></div></div></div></div></div>
+
+        </div>
+            <div class="views-row views-row-2 views-row-even">
+            <div  about="/sandie-mchugh/changing-nature-happiness" typeof="sioc:Item foaf:Document" class="ds-1col node node-history-matters view-mode-recent_stories clearfix">
+
+  
+  <div class="field field-name-field-images field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/sandie-mchugh/changing-nature-happiness"><img typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/styles/square_thumb_140/public/history-matters/happiness.jpg?itok=G-CCypou" width="160" height="160" /></a></div></div></div><div class="group-title-lock-wrapper field-group-div"><div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h5><a href="/sandie-mchugh/changing-nature-happiness">The Changing Nature of  Happiness</a></h5></div></div></div></div></div>
+
+        </div>
+            <div class="views-row views-row-3 views-row-odd">
+            <div  about="/laura-ashe/1155-and-beginnings-fiction" typeof="sioc:Item foaf:Document" class="ds-1col node node-feature view-mode-recent_stories clearfix">
+
+  
+  <div class="field field-name-field-main-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/laura-ashe/1155-and-beginnings-fiction"><img typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/styles/square_thumb_140/public/features/fiction_main.jpg?itok=LISTf5jz" width="160" height="160" alt="Visions dreamt by Henry I in Normandy, 1130, an illustration from the Worcester Chronicle, 12th century. Corpus Christi College, Oxford / Bridgeman Images." title="Visions dreamt by Henry I in Normandy, 1130, an illustration from the Worcester Chronicle, 12th century. Corpus Christi College, Oxford / Bridgeman Images." /></a></div></div></div><div class="group-title-lock-wrapper field-group-div"><div class="field field-name-title field-type-ds Normandy, 1130, an illustration from the Worcester Chronicle, 12th century. Corpus Christi College, Oxford / Bridgeman Images." /></a></div></div></div><div class="group-title-lock-wrapper field-group-div"><div class="field field-name-titfield-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h5><a href="/laura-ashe/1155-and-beginnings-fiction">1155 and the Beginnings of Fiction</a></h5></div></div></div></div></div>
+
+        </div>
+            <div class="views-row views-row-4 views-row-even">
+            <div  about="/paul-lay/made-birmingham" typeof="sioc:Item foaf:Document" class="ds-1col node node-history-matters view-mode-recent_stories clearfix">
+
+  
+  <div class="field field-name-field-images field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/paul-lay/made-birmingham"><img typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/styles/square_thumb_140/public/history-matters/birmingham.jpg?itok=8Y4_AjX4" width="160" height="160" alt="Birmingham in 1732" title="Birmingham in 1732" /></a></div></div></div><div class="group-title-lock-wrapper field-group-div"><div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h5><a href="/paul-lay/made-birmingham">Made in Birmingham</a></h5></div></div></div></div></div>
+
+        </div>
+            <div class="views-row views-row-5 views-row-odd">
+            <div  about="/sarah-mortimer/what-was-stake-putney-debates" typeof="sioc:Item foaf:Document" class="ds-1col node node-feature view-mode-recent_stories clearfix">
+
+  
+  <div class="field field-name-field-main-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/sarah-mortimer/what-was-stake-putney-debates"><img typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/styles/square_thumb_140/public/features/putneymain.jpg?itok=_EwM2Dww" width="160" height="160" /></a></div></div></div><div class="group-title-lock-wrapper field-group-div"><div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h5><a href="/sarah-mortimer/what-was-stake-putney-debates">What was at stake in the Putney Debates?</a></h5></div></div></div></div></div>
+
+        </div>
+            <div class="views-row views-row-6 views-row-even views-row-last">
+            <div  about="/jacqueline-riding/hogarth%E2%80%99s-new-britain" typeof="sioc:Item foaf:Document" class="ds-1col node node-history-matters view-mode-recent_stories clearfix">
+
+  
+  <div class="field field-name-field-images field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/jacqueline-riding/hogarth%E2%80%99s-new-britain"><img typeof="foaf:Image" src="http://www.historytoday.com/sites/default/files/styles/square_thumb_140/public/d-type-image field-label-hidden"><div class="history-matters/guards.jpg?itok=KJfkq4T9" width="160" height="160" alt="Call to liberty: The March of the Guards to Finchley." title="Call to liberty: The March of the Guards to Finchley." /></a></div></div></div><div class="group-title-lock-wrapper field-group-div"><div class="field field-name-title field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even" property="dc:title"><h5><a href="/jacqueline-riding/hogarth%E2%80%99s-new-britain">Hogarth’s New Britain</a></h5></div></div></div></div></div>
+
+        </div>
+    </div><!--end your div-->    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+
+</section> <!-- /.block -->
+  </div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+
+<div id="footerwrap">
+
+	<footer class="footer-second">
+		<div class="container">
+			  <div class="region region-footer-second">
+    <section id="block-menu-block-2" class="block block-menu-block block-first clearfix">
+
+      <div class="block-inner">
+  <div class="menu-block-wrapper menu-block-2 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first leaf menu-mlid-609"><a href="/about-us">About Us</a></li>
+<li class="leaf menu-mlid-3259"><a href="/staff">Staff</a></li>
+<li class="leaf menu-mlid-611"><a href="/contact">Contact</a></li>
+<li class="leaf menu-mlid-610"><a href="/advertising">Advertising</a></li>
+<li class="leaf menu-mlid-3266"><a href="/subscribe">Subscribe</a></li>
+<li class="leaf menu-mlid-16306"><a href="/find">Where to Buy</a></li>
+<li class="leaf menu-mlid-1385"><a href="/rss">RSS feeds</a></li>
+<li class="leaf menu-mlid-612"><a href="/ebooks">Ebooks</a></li>
+<li class="leaf menu-mlid-613"><a href="/submissions">Submit an Article</a></li>
+<li class="leaf menu-mlid-3255"><a href="/jobs">Jobs</a></li>
+<li class="last leaf menu-mlid-16146"><a href="/cookies-policy">Cookie policy</a></li>
+</ul></div>
+</div>
+
+</section> <!-- /.block -->
+<section id="block-block-1" class="block block-block block-last clearfix">
+
+      <div class="block-inner">
+  <p>© Copyright 2014 History Today Ltd. Company no. 1556332.</p>
+</div>
+
+</section> <!-- /.block -->
+  </div>
+		</div>
+	</footer>
+</div>
+  <script src="http://www.historytoday.com/sites/default/files/js/js_pdFuOMG2d1HWESo6XEJBWA6Laa8YW3P2DE87wbTPCBU.js"></script>
+<script src="http://www.historytoday.com/sites/default/files/js/js_B2uv6dkjoYobfQVyuXdchgrpnnx4oM0TkP_bDVf8Qrg.js"></script>
+</body>
+</html>
+="http://www.historytoday.com/sites/default/files/js/js_pdFuOMG2d1HWESo6XEJBW

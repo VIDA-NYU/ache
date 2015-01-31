@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Small Pox Herbal Treatment, Prevention, Symptoms, Causes, Cured By
+</title><link rel="stylesheet" type="text/css" href="Css_remedy/Remedy_Details.css" /><link rel="shortcut icon" type="image/x-icon" href="http://herbpathy.com/images/favicon.ico.gif" /><meta http-equiv="content-type" content="application/x-javascript" /><meta http-equiv="content-type" content="application/javascript; charset=utf-8" /><meta name="Revisit-after" content="10 days" /><meta /><meta name="ROBOTS" content="INDEX,FOLLOW" /><meta name="KEYWORDS" content="Small Pox Herbal Treatment, Prevention, Symptoms, Causes, Cured By" /><meta name="DESCRIPTION" content="Most effective herbal treatment for Small Pox and herbs for Small Pox. Causes and Symptoms of Small Pox. Herbal treatment of Small Pox by natural herbs is given in repertory format." /></head>
+<body onclick="HideList()">
+    <form name="form1" method="post" action="Remedy_details.aspx?P=Small-Pox&amp;catid=220" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzODI0NDgzNzhkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYHBQxSZHRvX0Rpc2Vhc2UFCVJkdG9fSGVyYgULUmR0b19BY3Rpb24FCFJkdG9fTnV0BQtSZHRvX09yaWdpbgUKUmR0b19Hcm93bgUNUmR0b19HbG9zc2Fyeaac3uw0yYDzX/Q5T7phpTFRpKhf" />
+
+    <div id="main-container" style="width: 1007px;">
+        <div id="div_header" class="header1">
+            <div class="fl" style="margin-top: 9px; margin-left: 12px;">
+                <a href="Default.aspx">Home</a>
+            </div>
+            <span class="fl" style="margin-top: 9px; margin-left: 12px;"><a href="Health/Default.aspx">
+                My Health</a> </span><span class="fl" style="margin-top: 9px; margin-left: 12px;"><a
+                    href="Health/PostQuery.aspx">Get Expert Advice</a> </span><span class="fl" style="margin-top: 9px;
+                        margin-left: 12px;"><a href="Health/GetAllQueries.aspx">All Queries</a>
+            </span><span class="fl" style="margin-top: 9px; margin-left: 12px;"><a href="Blog/Default.aspx">
+                Blogs</a> </span><span class="fl" style="margin-top: 9px; margin-left: 12px;"><a
+                    href="Health/AddKnowledge.aspx">Write Blog</a> </span>
+            <div class="fr mt4" style="height: 25px;">
+                <span id="GPlus">
+                    <g:plusone size="large"></g:plusone>
+                </span>
+            </div>
+            <div class="clr">
+                <div class="logo fl">
+                    <a href="http://herbpathy.com/">
+                        <img src="images/Herb_H_2nd_page.png" alt="Herbpathy.com" class="br0" /></a>
+                </div>
+                <div class="fr w76 ht110">
+                    <div class="w500 fl">
+                        <div class="tabmenu2 mar10">
+                            <ul>
+                                <li id="Rdto_Dis" onclick="ChangeTab(1)" class="active">Disease</li>
+                                <li id="Rdto_He" onclick="ChangeTab(2)">Herb</li>
+                                <li id="Rdto_Ac" onclick="ChangeTab(3)">Action</li>
+                                <li id="Rdto_N" onclick="ChangeTab(4)">Nutrient</li>
+                                <li id="Rdto_Gr" onclick="ChangeTab(5)">Grown In</li>
+                                <li id="Rdto_Gl" onclick="ChangeTab(6)">Glossary</li>
+                            </ul>
+                            <div class="fr w100 mar10 mt19" style="display: none;">
+                                <div class="fl">
+                                    <span class="radiospan">
+                                        <label for="Rdto_Disease" style="float: left; width: 119px;">
+                                            <input value="1" name="rdTo" type="radio" id="Rdto_Disease" onchange="ChangeRadioBtn();" checked="checked" />
+                                            Disease
+                                        </label>
+                                        <label for="Rdto_Herb" style="float: left; width: 93px;">
+                                            <input value="2" name="rdTo" type="radio" id="Rdto_Herb" onchange="ChangeRadioBtn();" />
+                                            Herb</label>
+                                        <label for="Rdto_Action" style="float: left; width: 93px;">
+                                            <input value="3" name="rdTo" type="radio" id="Rdto_Action" onchange="ChangeRadioBtn();" />
+                                            Action</label>
+                                        <input type="submit" name="Btn_Change" value="" id="Btn_Change" style="display: none;" />
+                                    </span>
+                                </div>
+                                <div class="fl">
+                                    <div class="more" onclick="show_More();" style="margin-left: 25px;">
+                                        More
+                                        <img alt="" src="http://Herbpathy.com/images/smallDownArrow.gif" />                                <div class="more" onclick="show_More();" style="margin-left: 2</div>
+                                    <div id="Drp_More" class="dropmenu" style="display: none;">
+                                        <div>
+                                            <label for="Rdto_Nut">
+                                                <input value="4" name="rdTo" type="radio" id="Rdto_Nut" onchange="ChangeRadioBtn();" />
+                                                Nutrient
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label for="Rdto_Origin">
+                                                <input value="5" name="rdTo" type="radio" id="Rdto_Origin" onchange="ChangeRadioBtn();" />
+                                                Origin</label>
+                                        </div>
+                                        <div>
+                                            <label for="Rdto_Grown">
+                                                <input value="6" name="rdTo" type="radio" id="Rdto_Grown" onchange="ChangeRadioBtn();" />
+                                                Grown In</label></div>
+                                        <div>
+                                            <label for="Rdto_Glossary">
+                                                <input value="7" name="rdTo" type="radio" id="Rdto_Glossary" onchange="ChangeRadioBtn();" />
+                                                Glossary</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fl w80">
+                                <div class=" fl">
+                                    <div class="srch_outr2">
+                                        <input name="TextTitle" type="text" value="Small Pox" maxlength="70" id="TextTitle" autocomplete="off" onkeypress="return onkey(this.value, event);" onclick="javascript:clr();return false;" onkeyup="return showResultTitle(this.value, event);" class="SearchBox" style="color:Black;" />
+                                        <input type="button" class="search_button fl" name="search" onclick="javascript:return GoToGetCmn(event)"
+                                            id="Button1" value="Search" />
+                                        <div id="div_TitleSug" class="livesearchTitle cl fl">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fl">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fr w200 m20">
+                        <span id="FB" class="fr"></span>
+                        <div class="clear">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+                <div id="divScript" style="display: none;">
+                </div>
+            </div>
+            <!--header_search close-->
+        </div>
+        <div class="fl mrtp7" id="Div_CntrMain" style="width: 1007px;">
+            <div id="div_leftlink" class="fl w16 pd5 ml10"><div style="clear:both; min-height: 3px;"></div><script type="text/javascript">google_ad_client = "ca-pub-0803530076129388";google_ad_slot = "2713886206";google_ad_width = 160;google_ad_height = 600;google_page_url = "http://herbpathy.com/Herbal-Treatment-for-Small-Pox-Cid220";</script>  <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> </script> </div>
+            <div id="Div_Cntr" class="cntnt1">
+                <div id="Div_addCnt" style="margin-left: 2px; margin-top: 0px; text-align: center;"><script type="text/javascript">google_ad_client = "ca-pub-0803530076129388";width = document.documentElement.clientWidth;google_ad_slot = "2756276200";google_ad_width = 468;google_ad_height = 60;if (width >1024) {google_ad_slot = "1279543001";google_ad_width = 728;google_ad_height = 90;}google_page_url = "http://herbpathy.com/Herbal-Treatment-for-Small-Pox-Cid220";</script> <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></script> </div>
+                <div id="div_contnt" class="cntnt" style="width:99%;"><h1 id="fill" class="pl10" >Small Pox Herbal Treatment, Prevention, Symptoms, Causes, Cured By</h1><div style="font-size:14px; text-align:center; font-weight:bold;text-align:center;">Repertory</div><div class="cl"> &nbsp;</div><div class="inside"> General Name  </div><div class="inside1"> Small Pox</div><div class="cl"> &nbsp;</div><div class="inside">Medical Name  </div><div class="inside1"> Small Pox</div><div class="cl"> &nbsp;</div><div class="inside"> Hindi Name    </div><div class="inside1">Cecaka, Chechak, Chaichak</div><div class="cl"> &nbsp;</div><div class="inside"> Common Names  </div><div id="Div_More" runat="server" style="overflow: hidden; height: auto;" class="inside1"><div class="fl inaddnew"><a class="fl" title="Cecaka" onclick = "RdtDis('Cecaka','2')" href="javascript:void(0)" >Cecaka</a></div><div class="fl inaddnew"><a class="fl" title="Chaichak" onclick = "RdtDis('Chaichak','2')" href="javascript:void(0)" >Chaichak</a></div><div class="fl inaddnew"><a class="fl" title="Chechak" onclick = "RdtDis('Chechak','2')" href="javascript:void(0)" >Chechak</a></div><div class="fl inaddnew"><a class="fl" title="Small Pox" onclick = "RdtDis('Small-Pox','2')" href="javascript:void(0)" >Small Pox</a></div></div><div class="cl"> &nbsp;</div><div class="inside"> Body Part(s)  </div> <div class="inside1"><div class="fl inaddnew">Skin</div></div><div class="cl"> &nbsp;</div><div class="inside" style="font-size: 13px; font-weight: normal;"> <strong>Skin Diseases</strong></div> <div class="inside1"><div class="fl inaddnew"><a class="fl" title="Abscess" href="http://herbpathy.com/Herbal-Treatment-for-Abscess-Cid3340">Abscess</a> </div><div class="fl inaddnew"><a class="fl" title="Acariasis" href="http://herbpathy.com/Herbal-Treatment-for-Acariasis-Cid4393">Acariasis</a> </div><div class="fl inaddnew"><a class="fl" title="Age Spots" href="http://herbpathy.com/Herbal-Treatment-for-Age-Spots-Cid2566">Age Spots</a> </div><div class="fl inaddnew"><a class="fl" title="Albinism" href="http://herbpathy.com/Herbal-Treatment-for-Albinism-Cid3969">Albinism</a> </div><div class="fl inaddnew"><a class="fl" title="Argyria" href="http://herbpathy.com/Herbal-Treatment-for-Argyria-Cid4629">Argyria</a> </div><div class="fl inaddnew"><a class="fl" title="Blackheads" href="http://herbpathy.com/Herbal-Treatment-for-Blackheads-Cid3117">Blackheads</a> </div><div class="fl inaddnew"><a class="fl" title="Blemishes" href="http://herbpathy.com/Herbal-Treatment-for-Blemishes-Cid2576">Blemishes</a> </div><div class="fl inaddnew"><a class="fl" title="Blisters" href="http://herbpathy.com/Herbal-Treatment-for-Blisters-Cid3042">Blisters</a> </div><div class="fl inaddnew"><a class="fl" title="Callus" href="http://herbpathy.com/Herbal-Treatment-for-Callus-Cid4873">Callus</a> </div><div class="fl inaddnew"><a class="fl" title="Carbuncle" href="http://herbpathy.com/Herbal-Treatment-for-Carbuncle-Cid4561">Carbuncle</a> </div><div class="fl inaddnew"><a class="fl" title="Chapped Hands" href="http://herbpathy.com/Herbal-Treatment-for-Chapped-Hands-Cid3637">Chapped Hands</a> </div><div class="fl inaddnew"><a class="fl" title="Craw Craw" href="http://herbpathy.com/Herbal-Treatment-for-Craw-Craw-Cid4227">Craw Craw</a> </div><div class="fl inaddnew"><a class="fl" title="Diaper Rash" href="http://herbpathy.com/Herbal-Treatment-for-Diaper-Rash-Cid4554">Diaper Rash</a> </div><div class="fl inaddnew"><a class="fl" title="Dracunculiasis" href="http://herbpathy.com/Herbal-Treatment-for-Dracunculiasis-Cid4422">Dracunculiasis</a> </div><div class="fl inaddnew"><a class="fl" title="Dry Skin" href="http://herbpathy.com/Herbal-Treatment-for-Dry-Skin-Cid247">Dry Skin</a> </div><div class="fl inaddnew"><a class="fl" title="Dull Skin" href="http://herbpathy.com/Herbal-Treatment-for-Dull-Skin-Cid4886">Dull Skin</a> </div><div class="fl inaddnew"><a class="fl" title="Ecchymosis" href="http://herbpathy.com/Herbal-Treatment-for-Ecchymosis-Cid4890">Ecchymosis</a> </div><div class="fl inaddnew"><a class="fl" title="Eczema" href="http://herbpathy.com/Herbal-Treatment-for-Eczema-Cid141">Eczema</a> </div><div class="fl inaddnew"><a class="fl" title="Elephantiasis" href="http://herbpathy.com/Herbal-Treatment-for-Elephantiasis-Cid2315">Elephantiasis</a> </div><div class="fl inaddnew"><a class="fl" title="Erysipelas" href="http://herbpathy.com/Herbal-Treatment-for-Erysipelas-Cid1474">Erysipelas</a> </div><div class="fl inaddnew"><a class="fl" title="Eschar" href="http://herbpathy.com/Herbal-Treatment-for-Eschar-Cid4696">Eschar</a> </div><div class="fl inaddnew"><a class="fl" title="Freckles" href="http://herbpathy.com/Herbal-Treatment-for-Freckles-Cid4650">Freckles</a> </div><div class="fl inaddnew"><a class="fl" title="Frostbite" href="http://herbpathy.com/Herbal-Treatment-for-Frostbite-Cid29">Frostbite</a> </div><div class="fl inaddnew"><a class="fl" title="Hyperpigmentation" href="http://herbpathy.com/Herbal-Treatment-for-Hyperpigmentation-Cid427">Hyperpigmentation</a> </div><div class="fl inaddnew"><a class="fl" title="Impetigo" href="http://herbpathy.com/Herbal-Treatment-for-Impetigo-Cid4163">Impetigo</a> </div><div class="fl inaddnew"><a class="fl" title="Itching" href="http://herbpathy.com/Herbal-Treatment-for-Itching-Cid2598">Itching</a> </div><div class="fl inaddnew"><a class="fl" title="Leprosy" href="http://herbpathy.com/Herbal-Treatment-for-Leprosy-Cid585">Leprosy</a> </div><div class="fl inaddnew"><a class="fl" title="Leucoderma" href="http://herbpathy.com/Herbal-Treatment-for-Leucoderma-Cid120">Leucoderma</a> </div><div class="fl inaddnew"><a class="fl" title="Marfan Syndrome" href="http://herbpathy.com/Herbal-Treatment-for-Marfan-Syndrome-Cid4869">Marfan Syndrome</a> </div><div class="fl inaddnew"><a class="fl" title="Oily Skin" href="http://herbpathy.com/Herbal-Treatment-for-Oily-Skin-Cid4474">Oily Skin</a> </div><div class="fl inaddnew"><a class="fl" title="Pemphigus" href="http://herbpathy.com/Herbal-Treatment-for-Pemphigus-Cid4575">Pemphigus</a> </div><div class="fl inaddnew"><a class="fl" title="Psora" href="http://herbpathy.com/Herbal-Treatment-for-Psora-Cid4603">Psora</a> </div><div class="fl inaddnew"><a class="fl" title="Psoriasis" href="http://herbpathy.com/Herbal-Treatment-for-Psoriasis-Cid4505">Psoriasis</a> </div><div class="fl inaddnew"><a class="fl" title="Rosacea" href="http://herbpathy.com/Herbal-Treatment-for-Rosacea-Cid4387">Rosacea</a> </div><div class="fl inaddnew"><a class="fl" title="Sallow Skin" href="http://herbpathy.com/Herbal-TreaPsoriasis</a> </div><div class="fl inaddnew"><a class="fl" title="Rosacea" href="http://herbpathy.com/Herbal-Treatment-for-Rosacea-Cid4387">Rosacea</a> </div><div class="fl inaddnetment-for-Sallow-Skin-Cid88">Sallow Skin</a> </div><div class="fl inaddnew"><a class="fl" title="Sandfly Bite" href="http://herbpathy.com/Herbal-Treatment-for-Sandfly-Bite-Cid2335">Sandfly Bite</a> </div><div class="fl inaddnew"><a class="fl" title="Scabies" href="http://herbpathy.com/Herbal-Treatment-for-Scabies-Cid150">Scabies</a> </div><div class="fl inaddnew"><a class="fl" title="Skin Cancer" href="http://herbpathy.com/Herbal-Treatment-for-Skin-Cancer-Cid4389">Skin Cancer</a> </div><div class="fl inaddnew"><a class="fl" title="Skin Diseases" href="http://herbpathy.com/Herbal-Treatment-for-Skin-Diseases-Cid2975">Skin Diseases</a> </div><div class="fl inaddnew"><a class="fl" title="Splinter Embedded in Skin" href="http://herbpathy.com/Herbal-Treatment-for-Splinter-Embedded-in-Skin-Cid4700">Splinter Embedd...</a> </div><div class="fl inaddnew"><a class="fl" title="Sunburn" href="http://herbpathy.com/Herbal-Treatment-for-Sunburn-Cid2826">Sunburn</a> </div><div class="fl inaddnew"><a class="fl" title="Tan" href="http://herbpathy.com/Herbal-Treatment-for-Tan-Cid4899">Tan</a> </div><div class="fl inaddnew"><a class="fl" title="Urticaria" href="http://herbpathy.com/Herbal-Treatment-for-Urticaria-Cid4439">Urticaria</a> </div><div class="fl inaddnew"><a class="fl" title="Whitlow" href="http://herbpathy.com/Herbal-Treatment-for-Whitlow-Cid4038">Whitlow</a> </div><div class="fl inaddnew"><a class="fl" title="Wrinkles" href="http://herbpathy.com/Herbal-Treatment-for-Wrinkles-Cid51">Wrinkles</a> </div><div class="fl inaddnew"><a class="fl" title="Yaws" href="http://herbpathy.com/Herbal-Treatment-for-Yaws-Cid4257">Yaws</a> </div></div><div class="cl"> &nbsp;</div><div class="cl"> &nbsp;</div><div class="inside"> Small Pox Symptoms </div><div class="inside1"><div style="float: left; width: 52%;  word-wrap: break-word;">Fatigue<br/>Bleeding<br/>Diarrhea<br/>Vomiting<br/>Delirium<br/>Backache<br/>Headache<br/><b>Malaise </b><br/><b>Lesions </b><br/><b>Pus filled Blisters </b><br/></div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:180px;height:90px" data-ad-client="ca-pub-0803530076129388" data-ad-slot="3452450200"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="cl"> &nbsp;</div><div class="inside" style="font-size: 15px;  width: 57%;"> Small Pox Cured By </div><div class="cl"> &nbsp;</div><div class="inside" style="font-size: 13px; font-weight: normal;">Most Effective</div><div class="inside1"><div style="margin-bottom: 4px;" class="fl w100"><div class="fl inaddnew"><a class="fl" title="Polygala Amara" href="http://herbpathy.com/Uses-and-Benefits-of-Polygala-Amara-Cid2722">Polygala Amara</a></div></div></div><div class="cl"> &nbsp;</div><div class="inside" style="font-size: 13px; font-weight: normal;">Highly Effective</div><div id="Highly_Effect" runat="server" class="inside1"></div><div class="cl"> &nbsp;</div><div class="inside" style="font-size: 13px; font-weight: normal;">Effective </div><div id="Div_MCure" runat="server" style="overflow: hidden; height: 57px;" class="inside1"><div style="margin-bottom: 4px;" class="fl w100"><div class="fl inaddnew"><a class="fl" title="Alkanet" href="http://herbpathy.com/Uses-and-Benefits-of-Alkanet-Cid4027">Alkanet</a></div><div class="fl inaddnew"><a class="fl" title="Arrowroot" href="http://herbpathy.com/Uses-and-Benefits-of-Arrowroot-Cid2554">Arrowroot</a></div><div class="fl inaddnew"><a class="fl" title="Asparagus Racemosus" href="http://herbpathy.com/Uses-and-Benefits-of-Asparagus-Racemosus-Cid2519">Asparagus Racem...</a></div><div class="fl inaddnew"><a class="fl" title="Avicennia Officinalis" href="http://herbpathy.com/Uses-and-Benefits-of-Avicennia-Officinalis-Cid5255">Avicennia Offic...</a></div><div class="fl inaddnew"><a class="fl" title="Azadirachta Indica" href="http://herbpathy.com/Uses-and-Benefits-of-Azadirachta-Indica-Cid1177">Azadirachta Ind...</a></div><div class="fl inaddnew"><a class="fl" title="Bay Leaf" href="http://herbpathy.com/Uses-and-Benefits-of-Bay-Leaf-Cid90">Bay Leaf</a></div><div class="fl inaddnew"><a class="fl" title="Bistort" href="http://herbpathy.com/Uses-and-Benefits-of-Bistort-Cid2501">Bistort</a></div><div class="fl inaddnew"><a class="fl" title="Blessed Thistle" href="http://herbpathy.com/Uses-and-Benefits-of-Blessed-Thistle-Cid2662">Blessed Thistle</a></div><div class="fl inaddnew"><a class="fl" title="Burdock" href="http://herbpathy.com/Uses-and-Benefits-of-Burdock-Cid2155">Burdock</a></div><div class="fl inaddnew"><a class="fl" title="Careya Arborea" href="http://herbpathy.com/Uses-and-Benefits-of-Careya-Arborea-Cid492">Careya Arborea</a></div><div class="fl inaddnew"><a class="fl" title="Cassava" href="http://herbpathy.com/Uses-and-Benefits-of-Cassava-Cid3805">Cassava</a></div><div class="fl inaddnew"><a class="fl" title="Catnip" href="http://herbpathy.com/Uses-and-Benefits-of-Catnip-Cid276">Catnip</a></div><div class="fl inaddnew"><a class="fl" title="Chocolate Weed" href="http://herbpathy.com/Uses-and-Benefits-of-Chocolate-Weed-Cid5870">Chocolate Weed</a></div><div class="fl inaddnew"><a class="fl" title="Coriander" href="http://herbpathy.com/Uses-and-Benefits-of-Coriander-Cid216">Coriander</a></div><div class="fl inaddnew"><a class="fl" title="Cypripedium Pubescens" href="http://herbpathy.com/Uses-and-Benefits-of-Cypripedium-Pubescens-Cid2546">Cypripedium Pub...</a></div><div class="fl inaddnew"><a class="fl" title="Ebony Tree" href="http://herbpathy.com/Uses-and-Benefits-of-Ebony-Tree-Cid3986">Ebony Tree</a></div><div class="fl inaddnew"><a class="fl" title="Fagonia Cretica" href="http://herbpathy.com/Uses-and-Benefits-of-Fagonia-Cretica-Cid4236">Fagonia Cretica</a></div><div class="fl inaddnew"><a class="fl" title="Finger Millet" href="http://herbpathy.com/Uses-and-Benefits-of-Finger-Millet-Cid609">Finger Millet</a></div><div class="fl inaddnew"><a class="fl" title="Gloriosa Superba" href="http://herbpathy.com/Uses-and-Benefits-of-Gloriosa-Superba-Cid819">Gloriosa Superb...</a></div><div class="fl inaddnew"><a class="fl" title="Golden Seal" href="http://herbpathy.com/Uses-and-Benefits-of-Golden-Seal-Cid1547">Golden Seal</a></div><div class="fl inaddnew"><a class="fl" title="Holly" href="http://herbpathy.com/Uses-and-Benefits-of-Holly-Cid3767">Holly</a></div><div class="fl inaddnew"><a class="fl" title="Indian Borage" href="http://herbpathy.com/Uses-and-Benefits-of-Indian-Borage-Cid534">Indian Borage</a></div><div class="fl inaddnew"><a class="fl" title="Indian Mulberry" href="http://herbpathy.com/Uses-and-Benefits-of-Indian-Mulberry-Cid3308">Indian Mulberry</a></div><div class="fl inaddnew"><a class="fl" title="Indian Posy" href="http://herbpathy.com/Uses-and-Benefits-of-Indian-Posy-Cid2878">Indian Posy</a></div><div class="fl inaddnew"><a class="fl" title="Indian Trumpet" href="http://herbpathy.com/Uses-and-Benefits-of-Indian-Trumpet-Cid974">Indian Trumpet</a></div><div class="fl inaddnew"><a class="fl" title="Indigo" href="http://herbpathy.com/Uses-and-Benefits-of-Indigo-Cid1219">Indigo</a></div><div class="fl inaddnew"><a class="fl" title="Juniperus Occidentalis" href="http://herbpathy.com/Uses-and-Benefits-of-Juniperus-Occidentalis-Cid6890">Juniperus Occid...</a></div><div class="fl inaddnew"><a class="fl" title="Lychee" href="http://herbpathy.com/Uses-and-Benefits-of-Lychee-Cid3938">Lychee</a></div><div class="fl inaddnew"><a class="fl" title="Marigold" href="http://herbpathy.com/Uses-and-Benefits-of-Marigold-Cid1491">Marigold</a></div><div class="fl inaddnew"><a class="fl" title="Melastoma Malabathricum" href="http://herbpathy.com/Uses-and-Benefits-of-Melastoma-Malabathricum-Cid4793">Melastoma Malab...</a></div><div class="fl inaddnew"><a class="fl" title="Mikania Micrantha" href="http://herbpathy.com/Uses-and-Benefits-of-Mikania-Micrantha-Cid5955">Mikania Micrant...</a></div><div class="fl inaddnew"><a class="fl" title="Mint" href="http://herbpathy.com/Uses-and-Benefits-of-Mint-Cid390">Mint</a></div><div class="fl inaddnew"><a class="fl" title="Pandanus Amaryllifolius" href="http://herbpathy.com/Uses-and-Benefits-of-Pandanus-Amaryllifolius-Cid6018">Pandanus Amaryl...</a></div><div class="fl inaddnew"><a class="fl" title="Pandanus Fascicularis" href="http://herbpathy.com/Uses-and-Benefits-of-Pandanus-Fascicularis-Cid987">Pandanus Fascic...</a></div><div class="fl inaddnew"><a class="fl" title="Pennyroyal" href="http://herbpathy.com/Uses-and-Benefits-of-Pennyroyal-Cid317">Pennyroyal</a></div><div class="fl inaddnew"><a class="fl" title="Pothos Scandens" href="http://herbpathy.com/Uses-and-Benefits-of-Pothos-Scandens-Cid5107">Pothos Scandens</a></div><div class="fl inaddnew"><a class="fl" title="Pterospermum Acerifolium" href="http://herbpathy.com/Uses-and-Benefits-of-Pterospermum-Acerifolium-Cid4800">Pterospermum Ac...</a></div><div class="fl inaddnew"><a class="fl" title="Rose Apple" href="http://herbpathy.com/Uses-and-Benefits-of-Rose-Apple-Cid3973">Rose Apple</a></div><div class="fl inaddnew"><a class="fl" title="Russian Thistle" href="http://herbpathy.com/Uses-and-Benefits-of-Russian-Thistle-Cid4682">Russian Thistle</a></div><div class="fl inaddnew"><a class="fl" title="Sansevieria Cylindrica" href="http://herbpathy.com/Uses-and-Benefits-of-Sansevieria-Cylindrica-Cid6155">Sansevieria Cyl...</a></div><div class="fl inaddnew"><a class="fl" title="Senega" href="http://herbpathy.com/Uses-and-Benefits-of-Senega-Cid2743">Senega</a></div><div class="fl inaddnew"><a class="fl" title="Swamp Pea" href="http://herbpathy.com/Uses-and-Benefits-of-Swamp-Pea-Cid1412">Swamp Pea</a></div><div class="fl inaddnew"><a class="fl" title="Tamarind" href="http://herbpathy.com/Uses-and-Benefits-of-Tamarind-Cid417">Tamarind</a></div><div class="fl inaddnew"><a class="fl" title="Tansy" href="http://herbpathy.com/Uses-and-Benefits-of-Tansy-Cid2776">Tansy</a></div><div class="fl inaddnew"><a class="fl" title="Yarrow" href="http://herbpathy.com/Uses-and-Benefits-of-Yarrow-Cid378">Yarrow</a></div><div class="fl inaddnew"><a class="fl" title="Yellow Dock" href="http://herbpathy.com/Uses-and-Benefits-of-Yellow-Dock-Cid2154">Yellow Dock</a></div></div></div> <div id="Div_MrCures" style="margin-right:22px;" runat="server"><a class="fr"  href="javascript:void(0)" onclick="V_Effect_More();"  id="Btn_More_Cures" runat="server">  <img id="img_More_Cures" runat="server" src="http://herbpathy.com/images/more.png" alt="more" runat="server">  </a> </div><div class="inside" style="font-size: 13px; font-weight: normal;">&nbsp;</div><div id="Div_UnACure" runat="server" style="overflow: hidden; height: auto;" class="inside1"><div class="fl w100"><div title="Blue Panicgrass" class="fl inaddnew">Blue Panicgrass</div><div title="Cinderella Weed" class="fl inaddnew">Cinderella Weed</div><div title="Grewia Carpinifolia" class="fl inaddnew">Grewia Carpinif...</div><div title="Lime Essential Oil" class="fl inaddnew">Lime Essential ...</div><div title="Pitcher Plant" class="fl inaddnew">Pitcher Plant</div><div title="Pith Plant" class="fl inaddnew">Pith Plant</div><div title="Pyrrosia Piloselloides" class="fl inaddnew">Pyrrosia Pilose...</div><div title="Skimmia" class="fl inaddnew">Skimmia</div><div title="Small Flowered Rungia" class="fl inaddnew">Small Flowered ...</div></div></div><div class="cl"> &nbsp;</div><div class="cl"> &nbsp;</div><div class="discription"><span class="fnt15"><strong>Description</strong></span> <br/>Small Pox is a disease of the Skin.<br/>The disease caused by Variola minor is Smallpox.<br/>It is a contagious disease.<br/>Smallpox enters to the body through respiratory tract.<br/>At initial stages small pus filled blisters appear in the throat, tongue, palate and mouth. <br/><br/><b>Causes of Small Pox</b><br/>Family History<br/>Variola minor Virus<br/> <br/><b>If not treated properly, Smallpox may cause</b><br/>Blindness <br/>Limb Deformities<br/>Permanent scars<br/> <br/></div><div class="cl"> &nbsp;</div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:468px;height:15px" data-ad-client="ca-pub-0803530076129388" data-ad-slot="1703188606"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><div class="discript"><div style="font-size:14px; text-align:center; font-weight:bold;text-align:center;"><h2 id="h2tag" runat="server"> <u>Materia Medica for Small Pox</u></h2></div> <span class="fnt15" style="color: #000000;font-size: 17px;"><strong>Single Herb</strong></span><br/><br/> <span style="float: left; width: 100%;"><strong> Vinegar ( Sirka ) for Small pox </strong><br/> Take sponge bath by adding 3 tablespoon of  Apple Cider Vinegar in 1/2  jug of  water. Have bath once a day. <br/></span> <span style="float: left; width: 100%;"><strong> Swamp Pea for Small Pox </strong><br/> Make a decoction with bark of Swamp Pea.  Take 2 tsp of it once a day. <br/></span> <span style="float: left; width: 100%;"><strong> Azadirachta Indica ( Neem ) for Small Pox </strong><br/> Sprikle Azadirachta Indica ( Neem ) leaves on you bed before sleeping. <br/></span> <span style="float: left; width: 100%;"><strong> Tansy for Small Pox </strong><br/> Make an infusion of the leaves of Tansy.  Wash the affected area. <br/></span> <span style="float: left; width: 100%;"><strong> Yarrow for Small Pox </strong><br/> Take a cup of yarrow tea.  Start taking it as symtoms reflect in early stages. <br/></span> <span style="float: left; width: 100%;"><strong> Bistort ( Amli ) for Small Pox </strong><br/> Prepare a decoction of the leaves of Bistort.  Sponge the whole body with this water. <br/></span> <span style="float: left; width: 100%;"><strong> Pennyroyal for Small Pox </strong><br/> Prepare an infusion of the Pennyroyal plant.  Have three- four teaspoon three tpo four times a day. <br/></span> <span style="float: left; width: 100%;"><strong> Golden Seal ( Pit Kanad ) for Small Pox </strong><br/> Prepare a decoction of the Goldenseal root.  Add few drops of Linseed oil to it.  Sponge the body with it. <br/></span><div class="cl"> &nbsp;</div> <span class="fnt15" style="color: #000000;font-size: 17px;"><strong>Multiple Herbs</strong></span><br/><br/> <span style="float: left; width: 100%; margin-bottom: 12px;"><strong>Herbal Combination for Small Pox 1 </strong> <br/>Take Burdock root, Yellow Dock root and Golden seal in equal quantity.  Prepare a tea. Have bath with this tea. <br/></span> <span style="float: left; width: 100%; margin-bottom: 12px;"><strong>Herbal Combination for Small Pox 2 </strong> <br/>Prepare a mixture of Yarrow, Indian Posy and Cypripedium Pubescens by taking them in equal quantity.  Boil it in one litre of water. sponge the body with this water. <br/></span> <span style="float: left; width: 100%; margin-bottom: 12px;"><strong>Herbal Combination for Small Pox 3 </strong> <br/>Prepare a tea by taking equal parts of Catnip, Raspberry and Mint leaf.  Have it 3-4 times a day. <br/></span> <span style="float: left; width: 100%; margin-bottom: 12px;"><strong>Herbal Combination for Small Pox 4 </strong> <br/>Add quarter tsp Banana seeds with 1 tsp Coriander juice.  Take it once a day. <br/></span></div><div class="cl"> &nbsp;</div></div>
+                <div id="div_Disclaimer" style="font-size: 13px;" class="cntnt">
+                    <div id="Div_Claim" style="font-size: 11px; color: Grey; padding: 10px; text-align: justify; line-height: 17px;">
+                    </div>
+                    <div class="cl">
+                    </div>
+                </div>
+            </div>
+            <div id="Div_RightBnr" class="fr wid30" style="padding-left: 2px;">
+                <div id="div_add" class="fl mar5"><div style="clear:both; min-height: 3px;"></div><script type="text/javascript">google_ad_client = "ca-pub-0803530076129388";google_ad_slot = "4528696604";google_ad_width = 300;google_ad_height = 250;google_page_url = "http://herbpathy.com/Herbal-Treatment-for-Small-Pox-Cid220";</script>  <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> </script> </div>
+                <div class="clr">
+                    &nbsp;</div>
+                  
+                <div id="div_add2" class="fl" style="margin-left: 4px;
+                    width: 297px;"><div class="link-fr"><div class="link-fr-hdr"> <div class="link-fr-hdr-txt">Recently visited links</div></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Indian Elm Herb - Uses, Benefits, Cures, Side Effects, Nutrients" href="http://herbpathy.com/Uses-and-Benefits-of-Indian-Elm-Cid973">Indian Elm Herb - Uses, Benefits, Cures, Side Effects, Nutrients</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Ceriops Tagal Herb - Uses, Benefits, Cures, Side Effects, Nutrients" href="http://herbpathy.com/Uses-and-Benefits-of-Ceriops-Tagal-Cid3855">Ceriops Tagal Herb - Uses, Benefits, Cures, Side Effects, Nutrients</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Couchgrass Herb - Uses, Benefits, Cures, Side Effects, Nutrients" href="http://herbpathy.com/Uses-and-Benefits-of-Couchgrass-Cid2719">Couchgrass Herb - Uses, Benefits, Cures, Side Effects, Nutrients</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Salacia Oblonga Herb - Uses, Benefits, Cures, Side Effects, Nutrients" href="http://herbpathy.com/Uses-and-Benefits-of-Salacia-Oblonga-Cid6565">Salacia Oblonga Herb - Uses, Benefits, Cures, Side Effects, Nutrients</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Carallia Brachiata Herb - Uses, Benefits, Cures, Side Effects, Nutrients" href="http://herbpathy.com/Uses-and-Benefits-of-Carallia-Brachiata-Cid5475">Carallia Brachiata Herb - Uses, Benefits, Cures, Side Effects, Nutrients</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Dipsacus Herb - Uses, Benefits, Cures, Side Effects, Nutrients" href="http://herbpathy.com/Uses-and-Benefits-of-Dipsacus-Cid3773">Dipsacus Herb - Uses, Benefits, Cures, Side Effects, Nutrients</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Pedalium Murex Herb - Uses, Benefits, Cures, Side Effects, Nutrients" href="http://herbpathy.com/Uses-and-Benefits-of-Pedalium-Murex-Cid1172">Pedalium Murex Herb - Uses, Benefits, Cures, Side Effects, Nutrients</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Jojoba Herb - Uses, Benefits, Cures, Side Effects, Nutrients" href="http://herbpathy.com/Uses-and-Benefits-of-Jojoba-Cid3230">Jojoba Herb - Uses, Benefits, Cures, Side Effects, Nutrients</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Diarrhea- Herbal Treatment, Prevention, Symptoms, Causes, Cured By" href="http://herbpathy.com/Herbal-Treatment-for-Diarrhea-Cid17">Diarrhea - Herbal Treatment, Prevention, Symptoms, Causes, Cured By</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Dengue- Herbal Treatment, Prevention, Symptoms, Causes, Cured By" href="http://herbpathy.com/Herbal-Treatment-for-Dengue-Cid2504">Dengue - Herbal Treatment, Prevention, Symptoms, Causes, Cured By</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Tinnitus- Herbal Treatment, Prevention, Symptoms, Causes, Cured By" href="http://herbpathy.com/Herbal-Treatment-for-Tinnitus-Cid2827">Tinnitus - Herbal Treatment, Prevention, Symptoms, Causes, Cured By</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Breast Diseases- Herbal Treatment, Prevention, Symptoms, Causes, Cured By" href="http://herbpathy.com/Herbal-Treatment-for-Breast-Diseases-Cid816">Breast Diseases - Herbal Treatment, Prevention, Symptoms, Causes, Cured By</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Autoimmune Diseases- Herbal Treatment, Prevention, Symptoms, Causes, Cured By" href="http://herbpathy.com/Herbal-Treatment-for-Autoimmune-Diseases-Cid4417">Autoimmune Diseases - Herbal Treatment, Prevention, Symptoms, Causes, Cured By</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Eschar- Herbal Treatment, Prevention, Symptoms, Causes, Cured By" href="http://herbpathy.com/Herbal-Treatment-for-Eschar-Cid4696">Eschar - Herbal Treatment, Prevention, Symptoms, Causes, Cured By</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Prickly Heat- Herbal Treatment, Prevention, Symptoms, Causes, Cured By" href="http://herbpathy.com/Herbal-Treatment-for-Prickly-Heat-Cid3927">Prickly Heat - Herbal Treatment, Prevention, Symptoms, Causes, Cured By</a></div><div class="w100 mt5 fl mb5"><div class="link-fr-icon"></div><a class="link-fr-txt" title="Nephritis- Herbal Treatment, Prevention, Symptoms, Causes, Cured By" href="http://herbpathy.com/Herbal-Treatment-for-Nephritis-Cid3017">Nephritis - Herbal Treatment, Prevention, Symptoms, Causes, Cured By</a></div></div></div>
+            </div>
+            <div class="cl hght6">
+                &nbsp;</div>
+           
+            <div class="feed" id="div_fImage">
+                <a id="A1" onclick="feed();">
+                    <img src="images/feedback.png" />
+                </a>
+            </div>
+            <div id="Div_FData" class="table" style="display: none;">
+                <a id="A2" onclick="feed();">
+                    <img src="images/feedback2.png" alt="submit" style="margin-left: 199px;"></a>
+                <div id="Div_T2" class="table2">
+                    <div class="clr h10">
+                    </div>
+         ="A2" onclick="feed();">
+                    <img src="images/feedback2.png" alt="submit" style="margin-           <div class="field">
+                        <div id="S_Intration" class="field">
+                        </div>
+                    </div>
+                    <div id="Div_Msg" style="text-align: center;">
+                    </div>
+                    <div class="clr h10">
+                    </div>
+                    <div style="float: left; width: 247px;" class="field">
+                        <span class="question-label">Message</span> <span class="mandatory">*</span>
+                        <div class="clr h10">
+                        </div>
+                        <textarea name="Txt_Message" id="Txt_Message" class="textarea" onclick="AlrtHide();"></textarea>
+                    </div>
+                    <div class="field" style="float: right; width: 199px;">
+                        <span class="question-label">Email</span>
+                        <div class="clr h10">
+                        </div>
+                        <input name="Txt_Email" type="text" id="Txt_Email" maxlength="50" onclick="AlrtHide();" class="text" />
+                        <div class="clr h10">
+                        </div>
+                        <span class="question-label">Mobile Number</span>
+                        <div class="clr h10">
+                        </div>
+                        <input name="Txt_Mobile" type="text" id="Txt_Mobile" maxlength="12" onclick="AlrtHide();" class="text2 fl" />
+                        <div class="clr h10">
+                        </div>
+                        <div class="fr">
+                            <a onclick="fBck();" id="A3">
+                                <img alt="submit" src="images/submit.png" />
+                            </a>
+                        </div>
+                        <div class="clr h10">
+                        </div>
+                    </div>
+                    <div class="clr">
+                    </div>
+                </div>
+                <div id="Div_T3" style="display: none;" class="table3">
+                    <div id="Div_Thanks" style="text-align: center; padding: 10px;">
+                    </div>
+                    <div class="clr">
+                    </div>
+                </div>
+            </div>
+            <div id="div_footer" class="footer size11 mT85 cl">&copy&nbsp;2015&nbsp;Herbpathy – <a href='http://herbpathy.com/staticpages/AboutUs.aspx'>About Us</a>&nbsp;&nbsp;<a href='http://herbpathy.com/staticpages/PrivacyPolicy.aspx'>Privacy Policy</a>&nbsp;&nbsp;<a href='http://herbpathy.com/staticpages/Contact_Us.aspx'>Contact Us</a>&nbsp;&nbsp;<a href='http://herbpathy.com/staticpages/Disclaimer.aspx'>Disclaimer</a>&nbsp;&nbsp;</div>
+        </div>
+        <div class="clr">
+            &nbsp;</div>
+    </div>
+    <!--main close-->
+    <input type="hidden" name="hdn_value" id="hdn_value" value="Small Pox" />
+    </form>
+    <script type="text/javascript" src="js/JS_LVAuto.js"></script>
+    <script type="text/javascript">
+        if (document.documentElement.clientWidth > '1024') {
+
+            document.getElementById('Div_CntrMain').style.width = '1263px';
+            document.getElementById('main-container').style.width = '1263px';
+            //   document.getElementById('div_LCR').style.width = '1251px';
+            document.getElementById('Div_Cntr').style.width = '59%';
+            document.getElementById('div_leftlink').style.margin = '0 0 0 9px';
+            document.getElementById('Div_RightBnr').style.margin = '0 9px 0 0';
+            //  document.getElementById('div_topmenu').style.width = '1242px';
+            //  document.getElementById('div_topmenu').style.margin = 'auto';
+
+        }
+        else {
+
+            document.getElementById('Div_CntrMain').style.width = '1007px';
+            document.getElementById('main-container').style.width = '1007px';
+            document.getElementById('div_leftlink').style.width = '163px';
+            document.getElementById('Div_Cntr').style.width = '51%';
+            //    document.getElementById('div_topmenu').style.margin = 'auto';
+        }
+    
+
+
+    </script>
+    <script type="text/javascript">
+        SelDisable1();
+        function SelDisable1() {
+            disableSelection(document.getElementById('div_contnt'));
+            disableSelection(document.getElementById('div_Disclaimer'));
+        }
+        document.onkeyup = KeyCheck;
+        function KeyCheck(e) {
+
+            var KeyID = (window.event) ? event.keyCode : e.keyCode;
+            var el = (typeof event !== 'undefined') ? event.srcElement : e.target
+            var targetId = el.id;
+            document.onselectstart = function () { return false; }
+        }
+        //document.getElementById('Cover').onfocus = function () { document.onselectstart = null; };
+        document.onselectstart = function () { return false; }
+
+        function disableSelection(target) {
+            if (typeof target.onselectstart != "undefined") //IE route
+            {
+
+            }
+            else if (typeof target.style.MozUserSelect != "undefined") //Firefox route
+            {
+                target.style.MozUserSelect = "none"
+            }
+            else //All other route (ie: Opera)
+            {
+                target.onmousedown = function () { return false }
+                target.style.cursor = "default"
+            }
+        }
+//        div_add2.innerHTML = '<iframe src=\"http://www.flipkart.com/affiliate/displayWidget?affrid=WRID-140981353403182677\" style=\"width:120px;height:240px;margin:5px 6px 5px 20px\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" ></iframe>';
+//        div_add2.innerHTML += '<iframe src=\"http://www.flipkart.com/affiliate/displayWidget?affrid=WRID-140981367629732573\" style=\"width:120px;height:240px;margin:5px 0 5px 0\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" ></iframe>';
+//        div_add2.innerHTML += '</div>';
+
+        // div_add2.innerHTML = '<iframe src=\"http://www.flipkart.com/affiliate/displayWidget?affrid=WRID-140973476705063134\" frameborder=0 height=254 width=300></iframe>';
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-42584331-1', 'herbpathy.com');
+        ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+</body>
+</html>
+-analytics.c

@@ -1,0 +1,747 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html lang="en" dir="ltr" version="HTML+RDFa 1.1"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://www.iasusa.org/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <title>IAS-USA | Physician Education: Bridging Clinical Research and Patient Care</title>
+  <link type="text/css" rel="stylesheet" href="http://www.iasusa.org/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.iasusa.org/sites/default/files/css/css_vZ_wrMQ9Og-YPPxa1q4us3N7DsZMJa-14jShHgRoRNo.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="http://www.iasusa.org/sites/default/files/css/css_ugmd-SSDbm1OKE5izFKyWoDlN0VLzOd_7qwRN49enDo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.iasusa.org/sites/default/files/css/css_yBnbSq95COf3UKw4TO04nW0kBxPAi45oZyiUpHdi9Ps.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.iasusa.org/sites/default/files/css/css_-7grzT_UiSdrPv2auoSvOLMfDL-jVGAt1GBt1Hq8r7A.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.iasusa.org/sites/default/files/css/css_mMGX_vx7SuZC2HzgUM8x3U_rKW9s6rMwRpUCoiBokQ8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.iasusa.org/sites/default/files/css/css_EE9qQSIXBWRuIlS8t_RGU3Y-3MUOFHccfftYSHnjAPQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.iasusa.org/sites/default/files/css/css_VN1VgXG0X96PzfQHnZq0apMWIdwFDxmv9Tq0YsezYCk.css" media="all" />
+   <!--[if lte IE 7]>
+        <style type="text/css" media="all">
+        .zone-branding-wrapper {height: 90px;}
+        #block-menu-block-2 ul.menu li {float: left;}
+        #block-menu-block-2 ul.menu li ul li {float: none;}
+        ul.nice-menu ul, #block-nice-menus-3 {display:none;}
+        </style>
+        <![endif]-->
+  <script type="text/javascript" src="http://www.iasusa.org/sites/default/files/js/js_0gj6QcpfRH2jzTbCQqf7kEkm4MXY0UA_sRhwPc8jC1o.js"></script>
+<script type="text/javascript" src="http://www.iasusa.org/sites/default/files/js/js_kIFoMnPg1BTEB1IWW5pGhIn5hwG06ziztGL511OC03M.js"></script>
+<script type="text/javascript" src="http://www.iasusa.org/sites/default/files/js/js_SaopUEjdJLWwbh3GpPXQ_QBnIRC-5xHoAL7FpW1kBtc.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-33533207-1"]);_gaq.push(["_setDomainName", ".iasusa.org"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.iasusa.org/sites/default/files/js/js_43n5FBy8pZxQHxPXkf-sQF7ZiacVZke14b0VlvSA554.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"iasusa","theme_token":"FJLcZTXDHuMaSEkCrNNf-xhLn6oZ9U3F1DIyr9H8TAA","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/views_slideshow\/js\/views_slideshow.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.tabs.min.js":1,"sites\/all\/libraries\/jquery.cycle\/jquery.cycle.all.js":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/js\/views_slideshow_cycle.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"sites\/all\/modules\/panels_tabs\/js\/panels_tabs.js":1,"0":1,"sites\/all\/themes\/omega\/omega\/js\/jquery.formalize.js":1,"sites\/all\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.tabs.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/logintoboggan\/logintoboggan.css":1,"sites\/all\/modules\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/quiz\/quiz.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/views_slideshow_cycle.css":1,"sites\/all\/modules\/nice_menus\/css\/nice_menus.css":1,"sites\/all\/modules\/nice_menus\/css\/nice_menus_default.css":1,"sites\/default\/files\/css\/follow.css":1,"sites\/all\/themes\/iasusa\/css\/rules-message.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-reset.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-alpha.css":1,"sites\/all\/themes\/omega\/omega\/css\/formalize.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-text.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-branding.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-menu.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-forms.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-visuals.css":1,"sites\/all\/themes\/iasusa\/css\/global.css":1,"normal::sites\/all\/themes\/iasusa\/css\/iasusa-alpha-default.css":1,"normal::sites\/all\/themes\/iasusa\/css\/iasusa-alpha-default-normal.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1}},"viewsSlideshow":{"front_page_carousel-panel_pane_1":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0}},"viewsSlideshowPager":{"front_page_carousel-panel_pane_1":{"bottom":{"type":"viewsSlideshowPagerFields"}}},"viewsSlideshowPagerFields":{"front_page_carousel-panel_pane_1":{"bottom":{"activatePauseOnHover":0}}},"viewsSlideshowCycle":{"#views_slideshow_cycle_main_front_page_carousel-panel_pane_1":{"num_divs":3,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"front_page_carousel-panel_pane_1","effect":"fade","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":1,"pause_on_click":0,"action_advanced":0,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":0,"cleartypenobg":0,"advanced_options":"{}"}},"panelsTabs":{"tabsID":["tabs-0-top_left","tabs-0-bottom_left"]},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip|docx|pptx|xlsx","trackDomainMode":"1"},"omega":{"layouts":{"primary":"normal","order":["narrow","normal","wide"],"queries":{"narrow":"all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)","normal":"all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)","wide":"all and (min-width: 1220px)"}}}});
+//--><!]]>
+</script>
+
+  <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body class="html front not-logged-in page-frontpage">
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+
+    <div class="page clearfix" id="page">
+      <header id="section-header" class="section section-header">
+  <div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">  
+  <div id="zone-branding" class="zone zone-branding clearfix container-12">
+    <div class="grid-12 region region-branding" id="region-branding">
+  <div class="region-inner region-branding-inner">
+        <div class="branding-data clearfix">
+            <div class="logo-img">
+        <a href="/" rel="home" title="" class="active"><img src="http://www.iasusa.org/sites/default/files/iasusalogo-new.png" alt="" id="logo" /></a>      </div>
+                        <hgroup class="site-name-slogan">        
+                                <h6 class="site-slogan">Physician Education: <span class="site-blurb">Bridging Clinical Research and Patient Care</span></h6>
+              </hgroup>
+          </div>
+        <div class="block block-system block-menu block-user-menu block-system-user-menu odd block-without-title" id="block-system-user-menu">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="menu"><li class="first leaf"><a href="/user/login" title="User login link">Log in</a></li>
+<li class="leaf"><a href="/user/register" title="Register new user">Register</a></li>
+<li class="leaf"><a href="/subscriptions" title="Manage your subscriptions">Subscriptions</a></li>
+<li class="last leaf"><a href="/contact" title="">Contact</a></li>
+</ul>    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div><div id="zone-menu-wrapper" class="zone-wrapper zone-menu-wrapper clearfix">  
+  <div id="zone-menu" class="zone zone-menu clearfix container-12">
+    <div class="grid-12 region region-menu" id="region-menu">
+  <div class="region-inner region-menu-inner">
+        <div class="block block-nice-menus block-1 block-nice-menus-1 odd block-without-title" id="block-nice-menus-1">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="nice-menu nice-menu-down nice-menu-main-menu" id="nice-menu-1"><li class="menu-3715 menu-path-front first odd "><a href="/" title="Homepage" class="active">Home</a></li>
+<li class="menu-3321 menuparent  menu-path-node-1344  even "><a href="/attend">Attend a Live Course</a><ul><li class="menu-1506 menu-path-node-15 first odd "><a href="/series/HIV">HIV Courses</a></li>
+<li class="menu-1504 menu-path-node-16  even "><a href="/series/Hepatitis">Hepatitis C Virus Courses</a></li>
+<li class="menu-1369 menu-path-node-609  odd "><a href="/content/past-courses">Past Courses</a></li>
+<li class="menu-3298 menu-path-node-1333  even "><a href="/content/about-ias%E2%80%93usa-live-courses" title="Overview of the general educational objectives for courses, IAS-USA faculty, and ACCME accreditation.">About IAS–USA Courses</a></li>
+<li class="menu-5629 menu-path-node-3372  odd last"><a href="/frequently-asked-questions">Frequently Asked Questions</a></li>
+</ul></li>
+<li class="menu-457 menuparent  menu-path-node-2  odd "><a href="/learn" title="Free CME when you need it">Earn CME Online</a><ul><li class="menu-847  menu-path-node-25 first odd "><a href="/cow"><em>Cases on the Web</em> (<em>COW</em>s)</a></li>
+<li class="menu-699  menu-path-node-22  even "><a href="/webcasts">Webcasts</a></li>
+<li class="menu-4314  menu-path-node-1747  odd "><a href="/webinars">Webinars</a></li>
+<li class="menu-2077 menu-path-node-33  even last"><a href="/tam/cme-issues"><em>Topics in Antiviral Medicine&trade;</em> (<em>TAM</em>)</a></li>
+</ul></li>
+<li class=
+<li class="menu-4314  menu-path-node-1747  odd "><a hre"menu-458 menuparent  menu-path-node-3  even "><a href="/publications">Access Publications</a><ul><li class="menu-854  menu-path-node-32 first odd "><a href="/pub"><em>Topics in Antiviral Medicine</em>™ (<em>TAM</em>)</a></li>
+<li class="menu-851  menu-path-node-29  even last"><a href="/guidelines">Practice Guidelines</a></li>
+</ul></li>
+<li class="menu-459 menuparent  menu-path-node-4  odd "><a href="/resources">Find Resources</a><ul><li class="menu-878  menu-path-node-45 first odd "><a href="/resources/pocket-cards">Pocket Cards</a></li>
+<li class="menu-881 menu-path-node-48  even "><a href="/resources/podcasts">Podcasts</a></li>
+<li class="menu-882 menu-path-node-49  odd "><a href="/resources/slides">Slides</a></li>
+<li class="menu-5631 menu-path-node-4712  even last"><a href="/content/links-events">Links to Events</a></li>
+</ul></li>
+<li class="menu-460 menuparent  menu-path-node-5  even last"><a href="/about">About IAS–USA</a><ul><li class="menu-3716  menu-path-node-56 first odd "><a href="/board-directors">Board of Directors</a></li>
+<li class="menu-4473 menu-path-node-1663  even "><a href="/viral-hepatitis-advisory-board" title="">Viral Hepatitis Advisory Board</a></li>
+<li class="menu-4466 menu-path-node-1142  odd "><a href="/committees-panels-boards">Steering Committees, Panels, and Boards</a></li>
+<li class="menu-3717 menu-path-node-12  even "><a href="/core-faculty">Core Faculty</a></li>
+<li class="menu-3891 menu-path-node-1665  odd "><a href="/content/ias-usa-award-recipients" title="">IAS–USA Award Recipients</a></li>
+<li class="menu-896 menu-path-node-57  even "><a href="/staff">Staff</a></li>
+<li class="menu-5574 menu-path-node-4405  odd "><a href="/content/conference-management-croi">Conference Management for CROI</a></li>
+<li class="menu-906 menu-path-node-59  even "><a href="/contact">Contact</a></li>
+<li class="menu-862  menu-path-node-40  odd "><a href="/cme">CME</a></li>
+<li class="menu-863 menu-path-node-41  even "><a href="/content/website-policies">Website Policies</a></li>
+<li class="menu-897 menu-path-node-58  odd "><a href="/content/ias%E2%80%93usa-funding-sources-and-industry-interactions">Funding Information</a></li>
+<li class="menu-5587  menu-path-node-4613  even "><a href="/employment-opportunities">Employment Opportunities</a></li>
+<li class="menu-866 menu-path-node-44  odd "><a href="/donate">Donate</a></li>
+<li class="menu-5630 menu-path-node-1679  even last"><a href="/comments-and-suggestions">Comments and Suggestions</a></li>
+</ul></li>
+</ul>
+    </div>
+  </div>
+</div><div class="block block-apachesolr-panels block-search-form block-apachesolr-panels-search-form even block-without-title" id="block-apachesolr-panels-search-form">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <form action="/" method="post" id="apachesolr-panels-search-block" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-apachesolr-panels-search-form">
+  <label class="element-invisible" for="edit-apachesolr-panels-search-form">Search </label>
+ <input title="Enter the terms you wish to search for." onblur="if (this.value == &#039;&#039;) {this.value = &#039;Search website&#039;;}" onfocus="if (this.value == &#039;Search website&#039;) {this.value = &#039;&#039;;}" type="text" id="edit-apachesolr-panels-search-form" name="apachesolr_panels_search_form" value="Search website" size="12" maxlength="128" class="form-text" />
+</div>
+<input type="hidden" name="form_build_id" value="form-jWdu4u49LEZHCDY0_bx3Rv8Wz2KKpV5rMCbN-BXtrM0" />
+<input type="hidden" name="form_id" value="apachesolr_panels_search_block" />
+<div class="form-actions form-wrapper" id="edit-actions--2"><input type="submit" id="edit-submit--2" name="op" value="Go" class="form-submit" /></div></div></form>    </div>
+  </div>
+</div><section class="block block-nice-menus block-3 block-nice-menus-3 odd" id="block-nice-menus-3">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Browse Topics</h2>
+            
+    <div class="content clearfix">
+      <ul class="nice-menu nice-menu-right nice-menu-menu-browse-topics" id="nice-menu-3"><li class="menu-6551 menu-path-topics-aging-and-hiv first odd "><a href="/topics/aging_and_HIV" title="">Aging and HIV</a></li>
+<li class="menu-6291 menu-path-taxonomy-term-5  even "><a href="/topics/basic-science" title="">Basic Science</a></li>
+<li class="menu-6292 menu-path-taxonomy-term-7  odd "><a href="/topics/clinical-care" title="">Clinical Care</a></li>
+<li class="menu-6293 menu-path-taxonomy-term-6  even "><a href="/topics/diagnosis-and-testing" title="">Diagnosis and Testing</a></li>
+<li class="menu-6294 menu-path-taxonomy-term-4  odd "><a href="/topics/epidemiology" title="">Epidemiology</a></li>
+<li class="menu-6305 menu-path-taxonomy-term-2524  even "><a href="/topics/hepatitis" title="">Hepatitis</a></li>
+<li class="menu-6295 menu-path-taxonomy-term-3  odd "><a href="/topics/overview-and-history" title="">Overview and History</a></li>
+<li class="menu-6296 menu-path-taxonomy-term-10  even "><a href="/topics/prevention-and-public-health" title="">Prevention and Public Health</a></li>
+<li class="menu-6297 menu-path-taxonomy-term-9  odd "><a href="/topics/related-conditions" title="">Related Conditions</a></li>
+<li class="menu-6298 menu-path-taxonomy-term-8  even "><a href="/topics/treatment" title="">Treatment</a></li>
+<li class="menu-6299 menu-path-taxonomy-term-34  odd last"><a href="/topics/other" title="">Other</a></li>
+</ul>
+    </div>
+  </div>
+</section>  </div>
+</div>
+  </div>
+</div></header>    
+      <section id="section-content" class="section section-content">
+  <div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">  
+  <div id="zone-content" class="zone zone-content clearfix container-12">    
+        
+        <div class="grid-12 region region-content" id="region-content">
+  <div class="region-inner region-content-inner">
+    <a id="main-content"></a>
+        <div class="tabs clearfix"></div>        <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="panel-display fourcol-frontpage" id="homepage">
+  
+  <div class="grid-9 alpha">
+    <div class="row-1 clearfix">
+      <div class="panel-panel grid-3 alpha top-left">
+        <div class="inside"><div id="tabs-0-top_left"><div class="item-list"><ul><li class="first"><a href="#tabs-0-top_left-1">Live Courses</a></li><li><a href="#tabs-0-top_left-2">HIV</a></li><li class="last"><a href="#tabs-0-top_left-3">Hepatitis</a></li></ul></div><div id="tabs-0-top_left-1"><div class="panel-pane pane-node"   class="panel-pane pane-node">
+  
+      
+  
+  <div class="pane-content">
+    <article about="/attend" typeof="foaf:Document" class="node node-page node-teaser node-published node-not-promoted node-not-sticky author-rickiellen even clearfix" id="node-page-1344">
+    
+    
+    
+  
+  <div class="content clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded">IAS–USA live activities include full-day advanced courses, clinical updates, and intensive workshops in HIV and viral hepatitis. Register for an upcoming course or learn more about our educational approach and our live HIV Courses, HCV Courses, and webinars.</div></div></div>  </div>
+  
+  <div class="clearfix">
+          <nav class="links node-links clearfix"></nav>
+    
+      </div>
+</article>  </div>
+
+  
+  </div>
+</div><div id="tabs-0-top_left-2"><div class="panel-pane pane-views-panes pane-courses-panel-pane-29"   class="panel-pane pane-views-panes pane-courses-panel-pane-29">
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-courses view-id-courses view-display-id-panel_pane_29 view-dom-id-3f283f6136a158c1add951a6f78941e3">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">      <h3><a href="http://www.iasusa.org//content/2015-improving-management-hiv-disease">2015 Improving the Management of HIV Disease</a></h3>
+    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/spring-2015-atlanta-hiv-cme-course"><a href="/content/spring-2015-atlanta-hiv-cme-course">Atlanta, GA</a> - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-03-10T00:00:00-07:00">March 10, 2015</span> </a></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/spring-2015-san-francisco-hiv-cme-course"><a href="/content/spring-2015-san-francisco-hiv-cme-course">San Francisco, CA</a> - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-03-20T00:00:00-07:00">March 20, 2015</span> </a></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/spring-2015-new-york-hiv-cme-course"><a href="/content/spring-2015-new-york-hiv-cme-course">New York, NY</a> - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-03-31T00:00:00-07:00">March 31, 2015</span> </a></span>  </div></li>
+          <li class="views-row views-row-4 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/spring-2015-los-angeles-hiv-cme-course"><a href="/content/spring-2015-los-angeles-hiv-cme-course">Los Angeles, CA</a> - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-04-29T00:00:00-07:00">April 29, 2015</span> </a></span>  </div></li>
+          <li class="views-row views-row-5 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/spring-2015-washington-dc-hiv-cme-course"><a href="/content/spring-2015-washington-dc-hiv-cme-course">Washington, DC</a> - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-05-13T00:00:00-07:00">May 13, 2015</span> </a></span>  </div></li>
+          <li class="views-row views-row-6 views-row-even views-row-last">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/spring-2015-chicago-hiv-cme-course"><a href="/content/spring-2015-chicago-hiv-cme-course">Chicago, IL</a> - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-05-18T00:00:00-07:00">May 18, 2015</span> </a></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+</div><div id="tabs-0-top_left-3"><div class="panel-pane pane-views-panes pane-courses-panel-pane-15"   class="panel-pane pane-views-panes pane-courses-panel-pane-15">
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-courses view-id-courses view-display-id-panel_pane_15 view-dom-id-d0c0a138ecb191e860e2cb634ea439ae">
+        
+  
+  
+      <div class="view-content">
+        <h3><a href="http://www.iasusa.org//content/2015-viral-hepatitis-workshops">2015 Half-Day Intensive Viral Hepatitis Workshops</a></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-atlanta-hep-cme-workshop-basic">Atlanta, GA</a> - Basic - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-03-09T00:00:00-07:00">March 9, 2015</span></li></ul></span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-atlanta-hep-cme-workshop-advanced">Atlanta, GA</a> - Advanced - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-03-09T00:00:00-07:00">March 9, 2015</span></li></ul></span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-san-francisco-hep-cme-workshop-advanced">San Francisco, CA</a> - Advanced - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-03-19T00:00:00-07:00">March 19, 2015</span></li></ul></span>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-san-francisco-hep-cme-workshop-basic">San Francisco, CA</a> - Basic - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-03-19T00:00:00-07:00">March 19, 2015</span></li></ul></span>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-new-york-hep-cme-workshop-basic">New York, NY</a> - Basic - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-04-01T00:00:00-07:00">April 1, 2015</span></li></ul></span>  </div>  </div>
+  <div class="views-row views-row-6 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-new-york-hep-cme-workshop-advanced">New York, NY</a> - Advanced - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-04-01T00:00:00-07:00">April 1, 2015</span></li></ul></span>  </div>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-los-angeles-hep-cme-workshop-basic">Los Angeles, CA</a> - Basic - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-04-28T00:00:00-07:00">April 28, 2015</span></li></ul></span>  </div>  </div>
+  <div class="views-row views-row-8 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-los-angeles-hep-cme-workshop-advanced">Los Angeles, CA</a> - Advanced - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-04-28T00:00:00-07:00">April 28, 2015</span></li></ul></span>  </div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-washington-dc-hep-cme-workshop-advanced">Washington, DC</a> - Advanced - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-05-12T00:00:00-07:00">May 12, 2015</span></li></ul></span>  </div>  </div>
+  <div class="views-row views-row-10 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-washington-dc-hep-cme-workshop-basic">Washington, DC</a> - Basic - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-05-12T00:00:00-07:00">May 12, 2015</span></li></ul></span>  </div>  </div>
+  <div class="views-row views-row-11 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-chicago-hep-cme-workshop-basic">Chicago, IL</a> - Basic - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-05-19T00:00:00-07:00">May 19, 2015</span></li></ul></span>  </div>  </div>
+  <div class="views-row views-row-12 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/spring-2015-chicago-hep-cme-workshop-advanced">Chicago, IL</a> - Advanced - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-05-19T00:00:00-07:00">May 19, 2015</span></li></ul></span>  </div>  </div>
+  <h3><a href="http://www.iasusa.org//content/2015-viral-hepatitis-courses">2015 Full-Day Viral Hepatitis Course</a></h3>
+  <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><ul><li><a href="/content/fall-2015-new-york-hep-cme-course">New York, NY</a> - All - <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2015-09-09T00:00:00-07:00">September 9, 2015</span></li></ul></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+</div></div></div>
+      </div>
+      <div class="panel-panel grid-6 omega top-center">
+        <div class="inside"><div class="panel-pane pane-views-panes pane-front-page-carousel-panel-pane-1"   class="panel-pane pane-views-panes pane-front-page-carousel-panel-pane-1">
+  
+        <h2 class="pane-title">Learn Online</h2>
+    
+  
+  <div class="pane-content">
+    <div class="view view-front-page-carousel view-id-front_page_carousel view-display-id-panel_pane_1 view-dom-id-5333be8299308a0c775cc15174cb09b1">
+        
+  
+  
+      <div class="view-content">
+      
+  <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_front_page_carousel-panel_pane_1" class="views_slideshow_cycle_main views_slideshow_main"><div id="views_slideshow_cycle_teaser_section_front_page_carousel-panel_pane_1" class="views-slideshow-cycle-main-frame views_slideshow_cycle_teaser_section">
+  <div id="views_slideshow_cycle_div_front_page_carousel-panel_pane_1_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-odd views-row-first">
+    
+  <div class="views-field views-field-field-carousel-image float-left">        <div class="field-content"><a href="http://www.iasusa.org/content/essential-management-hiv-infection"><img typeof="foaf:Image" src="http://www.iasusa.org/sites/default/files/images/carousel/hiv-drug-resistance-400x355.jpg" width="200" height="175" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.iasusa.org/content/essential-management-hiv-infection">HIV Drug Resistance Mutations</a></span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>The HIV Drug Resistance Mutations Figures and User Notes are regularly revised and disseminated by the IAS–USA Drug Resistance Mutations Group, a volunteer panel of experts, derived from the...</div>  </div>  
+  <div class="views-field views-field-field-carousel-link">        <div class="field-content"><a href="http://www.iasusa.org/content/essential-management-hiv-infection" class="carousel-learn-more">Learn More</a></div>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_front_page_carousel-panel_pane_1_1" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-1 views-row-even">
+    
+  <div class="views-field views-field-field-carousel-image float-left">        <div class="field-content"><a href="http://www.iasusa.org/cow"><img typeof="foaf:Image" src="http://www.iasusa.org/sites/default/files/images/carousel/medical-records.jpg" width="200" height="180" alt="Medical Records" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.iasusa.org/cow">COW</a></span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p><em>Cases on the Web (COW)</em> is a series of case-driven CME activities sponsored by the International Antiviral Society–USA. The <em>COW</em> program was created to offer physicians convenient...</div>  </div>  
+  <div class="views-field views-field-field-carousel-link">        <div class="field-content"><a href="http://www.iasusa.org/cow" class="carousel-learn-more">Learn More</a></div>  </div></div>
+</div>
+<div id="views_slideshow_cycle_div_front_pv>  </div>  
+  <div class="views-field views-field-field-carousel-link">        <div class="field-content"><a href="http://www.iasusa.org/cow" class="carousel-learn-more">Learn More</a></div>  </div></div>
+</div>
+<div id="views_slidage_carousel-panel_pane_1_2" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-2 views-row-odd views-row-last">
+    
+  <div class="views-field views-field-field-carousel-image float-left">        <div class="field-content"><a href="http://www.iasusa.org/pub"><img typeof="foaf:Image" src="http://www.iasusa.org/sites/default/files/images/carousel/tam-dec2011.jpg" width="200" height="180" alt="Topics in Antiviral Medicine cover " /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.iasusa.org/pub">Articles</a></span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p><em>Topics in Antiviral Medicine</em> is published 4 to 6 times a year and is intended to be a resource for physicians, physician assistants, nursing professionals, and other health care...</div>  </div>  
+  <div class="views-field views-field-field-carousel-link">        <div class="field-content"><a href="http://www.iasusa.org/pub" class="carousel-learn-more">Learn More</a></div>  </div></div>
+</div>
+</div>
+</div>
+          <div class="views-slideshow-controls-bottom clearfix">
+        <div id="widget_pager_bottom_front_page_carousel-panel_pane_1" class="views-slideshow-pager-fields widget_pager widget_pager_bottom views_slideshow_pager_field">
+  <div id="views_slideshow_pager_field_item_bottom_front_page_carousel-panel_pane_1_0" class="views-slideshow-pager-field-item views_slideshow_pager_field_item views-row-odd views-row-first">
+  <div class="views-field-title">
+    <div class="views-content-title">
+    HIV Drug Resistance Mutations  </div>
+</div>
+</div>
+<div id="views_slideshow_pager_field_item_bottom_front_page_carousel-panel_pane_1_1" class="views-slideshow-pager-field-item views_slideshow_pager_field_item views-row-even">
+  <div class="views-field-title">
+    <div class="views-content-title">
+    COW  </div>
+</div>
+</div>
+<div id="views_slideshow_pager_field_item_bottom_front_page_carousel-panel_pane_1_2" class="views-slideshow-pager-field-item views_slideshow_pager_field_item views-row-odd views-row-last">
+  <div class="views-field-title">
+    <div class="views-content-title">
+    Articles  </div>
+</div>
+</div>
+</div>
+      </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+</div>
+      </div>
+    </div>
+  
+    <div class="row-2">
+      <div class="panel-panel grid-3 alpha bottom-left">
+        <div class="inside"><div id="tabs-0-bottom_left"><div class="item-list"><ul><li class="first"><a href="#tabs-0-bottom_left-1">Resources</a></li><li><a href="#tabs-0-bottom_left-2">Podcasts</a></li><li><a href="#tabs-0-bottom_left-3">HIV</a></li><li class="last"><a href="#tabs-0-bottom_left-4">HCV</a></li></ul></div><div id="tabs-0-bottom_left-1"><div class="panel-pane pane-views-panes pane-pocket-cards-panel-pane-1"   class="panel-pane pane-views-panes pane-pocket-cards-panel-pane-1">
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-pocket-cards view-id-pocket_cards view-display-id-panel_pane_1 view-dom-id-4593c82918ff6c9fd7fb4ba0b476289e">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-field-pcard-image float-left">        <div class="field-content"><a href="/content/essential-management-hiv-infection"><img typeof="foaf:Image" src="http://www.iasusa.org/sites/default/files/styles/list-thumbnail/public/2014-drug-resistance-mutations-hiv-1-cover.jpg?itok=l6fEM0Yb" width="52" height="68" alt="2014 Drug Resistance Mutations in HIV-1" title="2014 Drug Resistance Mutations in HIV-1" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/essential-management-hiv-infection">HIV Drug Resistance Mutations Figures and User Notes</a></span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-field-pcard-image float-left">        <div class="field-content"><a href="/content/dermatologic-manifestations-hiv-disease"><img typeof="foaf:Image" src="http://www.iasusa.org/sites/default/files/styles/list-thumbnail/public/derm-card-400x355.jpg?itok=0xp2pUo3" width="52" height="46" alt="Dermatologic Manifestations of HIV Disease image" title="Dermatologic Manifestations of HIV Disease image" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/dermatologic-manifestations-hiv-disease">Pocket Cards: Dermatologic Manifestations of HIV Disease</a></span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+      
+  <div class="views-field views-field-field-pcard-image float-left">        <div class="field-content"><a href="/content/oral-manifestations-hiv-disease"><img typeof="foaf:Image" src="http://www.iasusa.org/sites/default/files/styles/list-thumbnail/public/oral-manifestations-400x355.jpg?itok=2BAArhvj" width="52" height="46" alt="Oral Manifestations Resource Card" title="Oral Manifestations Resource Card" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/oral-manifestations-hiv-disease">Pocket Cards: Oral Manifestations of HIV Disease</a></span>  </div>  </div>
+    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/resources/pocket-cards">
+    See Pocket Cards page  </a>
+</div>
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+</div><div id="tabs-0-bottom_left-2"><div class="panel-pane pane-views-panes pane-webcasts-podcasts-panel-pane-6"   class="panel-pane pane-views-panes pane-webcasts-podcasts-panel-pane-6">
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-webcasts-podcasts view-id-webcasts_podcasts view-display-id-panel_pane_6 view-dom-id-8ff57bd61b2b39081303eaab450af963">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/summary-presentations-and-closing-remarks-11">Summary of Presentations and Closing Remarks</a></span>  </div>  
+  <div class="views-field views-field-field-present-presenters">        <div class="field-content">Roy M Gulick MD, MPH, Scott M Hammer MD</div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/hcv-treatment-golden-age">HCV Treatment: The Golden Age?</a></span>  </div>  
+  <div class="views-field views-field-field-present-presenters">        <div class="field-content">Kristen Marks MD</div>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/statin-use-hiv-new-guidelines-less-guidance">Statin Use in HIV: New Guidelines, With Less Guidance</a></span>  </div>  
+  <div class="views-field views-field-field-present-presenters">        <div class="field-content">Judith S Currier MD</div>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/antiretroviral-strategies-case-based-panel-discussion">Antiretroviral Strategies: A Case-Based, Panel Discussion</a></span>  </div>  
+  <div class="views-field views-field-field-present-presenters">        <div class="field-content">Scott M Hammer MD</div>  </div>  </div>
+  <div class="views-row views-row-5 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/hiv-and-primary-care-new-york-state-past-present-and-future-considerations">HIV and Primary Care in New York State: Past, Present, and Future Considerations</a></span>  </div>  
+  <div class="views-field views-field-field-present-presenters">        <div class="field-content">Peter Gordon MD</div>  </div>  </div>
+  <div class="views-row views-row-6 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/clinically-significant-drug-interactions-and-hiv-how-quickly-we-forget">Clinically Significant Drug Interactions and HIV: How Quickly We Forget!</a></span>  </div>  
+  <div class="views-field views-field-field-present-presenters">        <div class="field-content">Charles W Flexner MD</div>  </div>  </div>
+  <div class="views-row views-row-7 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/ias-icaac-and-idweek-2014-focus-art">IAS, ICAAC, and IDWeek 2014: Focus on ART</a></span>  </div>  
+  <div class="views-field views-field-field-present-presenters">        <div class="field-content">Roy M Gulick MD, MPH</div>  </div>  </div>
+  <div class="views-row views-row-8 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/hiv-preexposure-prophylaxis-prep-real-world">HIV Preexposure Prophylaxis (PrEP) in the Real World</a></span>  </div>  
+  <div class="views-field views-field-field-present-presenters">        <div class="field-content">Demetre C Daskalakis MD, MPH</div>  </div>  </div>
+  <div class="views-row views-row-9 views-row-odd">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/what-will-it-take-cure-hiv">What Will It Take to Cure HIV?</a></span>  </div>  
+  <div class="views-field views-field-field-present-presenters">        <div class="field-content">Jintanat Ananworanich MD, PhD</div>  </div>  </div>
+  <div class="views-row views-row-10 views-row-even views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/pathogenesis-hiv-persistence-during-therapy">Pathogenesis of HIV Persistence During Therapy</a></span>  </div>  
+  <div class="views-field views-field-field-present-presenters">        <div class="field-content">Steven G Deeks MD</div>  </div>  </div>
+    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/resources/podcasts">
+    See more on Podcasts page  </a>
+</div>
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+</div><div id="tabs-0-bottom_left-3"><div class="panel-pane pane-custom pane-1"   class="panel-pane pane-custom pane-1">
+  
+      
+  
+  <div class="pane-content">
+    The IAS–USA Drug Resistance Mutations Group, an independent volunteer panel of experts focused on identifying key HIV-1 drug resistance mutations strives to provide current, accurate, and unbiased information on these mutations for HIV practitioners.  </div>
+
+  
+  </div>
+</div><div id="tabs-0-bottom_left-4"><div class="panel-pane pane-views-panes pane-pocket-cards-panel-pane-7"   class="panel-pane pane-views-panes pane-pocket-cards-panel-pane-7">
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-pocket-cards view-id-pocket_cards view-display-id-panel_pane_7 view-dom-id-2c10cabe8fb78163f2c63b108c1ec640">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-field-slide-image">        <div class="field-content"><img typeof="foaf:Image" src="http://www.iasusa.org/sites/default/files/styles/thumbnail/public/images/hcv_chart_2013.jpg?itok=5LMRiKZ-" width="77" height="100" alt="" /></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content">HCV Drug Resistance Mutations</span>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>View the <a href="https://www.iasusa.org/sites/default/files/uploads/hcv_chart_2013.pdf">mutations in hepatitis C virus (HCV) that impact susceptibility to HCV drugs approved by the US Food and Drug Administration (FDA) and to investigational drugs </a>updated in January 2013. Adapted from Wyles, <em>Top Antivir Ther</em>, 2012.</p></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+</div></div></div>
+      </div>
+      <div class="panel-panel grid-3 bottom-center">
+        <div class="inside"><div class="panel-pane pane-views-panes pane-guidelines-panel-pane-1"   class="panel-pane pane-views-panes pane-guidelines-panel-pane-1">
+  
+        <h2 class="pane-title">Guidelines/Guidance</h2>
+    
+  
+  <div class="pane-content">
+    <div class="view view-guidelines view-id-guidelines view-display-id-panel_pane_1 view-dom-id-436c1f28ba9494b1981390310c3903df">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/antiretroviral-treatment-adult-hiv-infection-2014-recommendations-international-antiviral-society-usa-panel">Antiretroviral Treatment of Adult HIV Infection: 2014 Recommendations of the International Antiviral Society-USA Panel</a>  -- <p>2014</p></span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/hiv-prevention-clinical-care-settings-2014-recommendations-international-antiviral-society-usa-panel">HIV Prevention in Clinical Care Settings: 2014 Recommendations of the International Antiviral Society-USA Panel</a>  -- <p>2014</p></span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/aasldidsaias%E2%80%93usa-recommendations-testing-managing-and-treating-hepatitis-c">AASLD/IDSA/IAS–USA Recommendations for Testing, Managing, and Treating Hepatitis C</a>  -- <p>2014</p></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+</div>
+      </div>
+      <div class="panel-panel grid-3 omega bottom-right">
+        <div class="inside"><div class="panel-pane pane-node"   class="panel-pane pane-node">
+  
+        <h2 class="pane-title">CROI</h2>
+    
+  
+  <div class="pane-content">
+    <article about="/content/conference-management-croi" typeof="foaf:Document" class="node node-page node-teaser node-published node-not-promoted node-not-sticky author-michelle-valderama odd clearfix" id="node-page-4405">
+    
+    
+    
+  
+  <div class="content clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><span style="color: #800000;"><strong>The CROI 2015 general registration system is now open. </strong></span>For more information, visit the <a href="http://www.CROIconference.org">CROI 2015 Website</a>. </p>
+<p><img src="http://www.iasusa.org/sites/default/files/images/boston_mark_calendar_175.png" alt="" /></p><p>CROI 2016 will be held at the Hynes Convention Center in Boston, Massachusetts, from February 22 to 25, 2016.</p>
+<p><a href="http://www.croiconference.org/abstract-guidelines"><strong>General abstracts submission is now CLOSED for CROI 2015. Late-breaking abstract submission is now open till January 8, 2015.</strong></a></p><p><strong><a href="http://www.iasusa.org/content/croi-2015">CROI 2015</a><br />Location:</strong> Seattle, WA, USA <br /><strong>Dates:</strong> Monday, February 23 to Thursday, February 26, 2015</p>
+</div></div></div>  </div>
+  
+  <div class="clearfix">
+          <nav class="links node-links clearfix"></nav>
+    
+      </div>
+</article>  </div>
+
+  
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid-3 right-sidebar omega">
+    <div class="panel-panel">
+      <div class="inside"><div class="panel-pane pane-block pane-block-1"   class="panel-pane pane-block pane-block-1">
+  
+      
+  
+  <div class="pane-content">
+    <div id="fb-root"></div>
+<script>
+<!--//--><![CDATA[// ><!--
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+//--><!]]>
+</script><div style="float:left; margin-right:10px;" class="fb-like" data-href="https://www.facebook.com/theiasusa" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+<div style="float:left; margin-bottom: 10px;"><a href="https://twitter.com/IAS_USA" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @IAS_USA</a>
+<script>
+<!--//--><![CDATA[// ><!--
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+//--><!]]>
+</script></div>
+<div class="sharethis addthis_toolbox addthis_default_style" style="clear:both">
+<p><a class="addthis_button_preferred_1"></a><a class="addthis_button_preferred_2"></a><a class="addthis_button_preferred_3"></a><a class="addthis_button_compact">Share this page</a></p>
+</div>
+<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=chiucsf"></script>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-user-login"   class="panel-pane pane-block pane-user-login">
+  
+        <h2 class="pane-title">Login</h2>
+    
+  
+  <div class="pane-content">
+    <form action="/frontpage?destination=frontpage" method="post" id="user-login-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-name">
+  <label for="edit-name">Username or e-mail <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required" />
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required" />
+</div>
+<div class="item-list"><ul><li class="first"><a href="/user/register?destination=frontpage" title="Create a new user account.">Create new account</a></li><li class="last"><a href="/user/password" title="Request new password via e-mail.">Request new password</a></li></ul></div><input type="hidden" name="form_build_id" value="form-2pAmqVPnKm-cZmuVL-71Qf4vFBZSVwtYfgNVFtnawsY" />
+<input type="hidden" name="form_id" value="user_login_block" />
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Log in" class="form-submit" /></div></div></form>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views-panes pane-news-panel-pane-1"  id="anon-news"  class="panel-pane pane-views-panes pane-news-panel-pane-1">
+  
+        <h2 class="pane-title">New on IAS–USA</h2>
+    
+  
+  <div class="pane-content">
+    <div class="view view-news view-id-news view-display-id-panel_pane_1 view-dom-id-ecf0c64c79daf09ff601742dab3ddf14">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <strong class="field-content">The CROI 2015 general registration system is now open.</strong>  </div>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>For more information, visit the <a href="http://www.CROIconference.org">CROI 2015 Website</a>.</p></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+</div>
+    </div>
+  </div>
+  
+</div>
+    </div>
+  </div>
+</div>      </div>
+</div>  </div>
+</div></section>    
+  
+      <footer id="section-footer" class="section section-footer">
+  <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">  
+  <div id="zone-footer" class="zone zone-footer clearfix container-12">
+    <div class="grid-12 region region-footer-first" id="region-footer-first">
+  <div class="region-inner region-footer-first-inner">
+    <div class="block block-menu-block block-2 block-menu-block-2 odd block-without-title" id="block-menu-block-2">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf active menu-mlid-3715"><a href="/" title="Homepage" class="active">Home</a></li>
+<li class="expanded menu-mlid-3321"><a href="/attend">Attend a Live Course</a><ul class="menu"><li class="first leaf menu-mlid-1506"><a href="/series/HIV">HIV Courses</a></li>
+<li class="leaf menu-mlid-1504"><a href="/series/Hepatitis">Hepatitis C Virus Courses</a></li>
+<li class="leaf menu-mlid-1369"><a href="/content/past-courses">Past Courses</a></li>
+<li class="leaf menu-mlid-3298"><a href="/content/about-ias%E2%80%93usa-live-courses" title="Overview of the general educational objectives for courses, IAS-USA faculty, and ACCME accreditation.">About IAS–USA Courses</a></li>
+<li class="last leaf menu-mlid-5629"><a href="/frequently-asked-questions">Frequently Asked Questions</a></li>
+</ul></li>
+<li class="expanded menu-mlid-457"><a href="/learn" title="Free CME when you need it">Earn CME Online</a><ul class="menu"><li class="first expanded menu-mlid-847"><a href="/cow"><em>Cases on the Web</em> (<em>COW</em>s)</a><ul class="menu"><li class="first leaf menu-mlid-850"><a href="/cows/active" title="">Active <em>COW</em>s</a></li>
+<li class="leaf menu-mlid-849"><a href="/cows/archive">Archive</a></li>
+<li class="leaf menu-mlid-848"><a href="/content/about-cows" title="">About <em>COW</em>s</a></li>
+<li class="last leaf menu-mlid-5645"><a href="/content/recently-updated-cows">Recently Updated <em>COW</em>s</a></li>
+</ul></li>
+<li class="expanded menu-mlid-699"><a href="/webcasts">Webcasts</a><ul class="menu"><li class="first last leaf menu-mlid-846"><a href="/content/instructions-and-faqs">Instructions and FAQs</a></li>
+</ul></li>
+<li class="expanded menu-mlid-4314"><a href="/webinars">Webinars</a><ul class="menu"><li class="first last leaf menu-mlid-4315"><a href="/webinars/archive" title="Archived Webinars">Archive</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-2077"><a href="/tam/cme-issues"><em>Topics in Antiviral Medicine&trade;</em> (<em>TAM</em>)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-458"><a href="/publications">Access Publications</a><ul class="menu"><li class="first expanded menu-mlid-854"><a href="/pub"><em>Topics in Antiviral Medicine</em>™ (<em>TAM</em>)</a><ul class="menu"><li class="first leaf has-children menu-mlid-858"><a href="/tam/previous-issues">Previous Issues</a></li>
+<li class="leaf menu-mlid-856"><a href="/content/about-topics-antiviral-medicine" title="">About <em>TAM</em></a></li>
+<li class="leaf menu-mlid-855"><a href="/cme" title="">About CME</a></li>
+<li class="last leaf menu-mlid-982"><a href="/content/tam-author-contributor-guidelines" title=""><em>TAM</em> Author and Contributor Guidelines</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-851"><a href="/guidelines">Practice Guidelines</a><ul class="menu"><li class="first last leaf menu-mlid-853"><a href="/guidelines-archive">Archive</a></li>
+</ul></li>
+</ul></li>
+<li class="expanded menu-mlid-459"><a href="/resources">Find Resources</a><ul class="menu"><li class="first expanded menu-mlid-878"><a href="/resources/pocket-cards">Pocket Cards</a><ul class="menu"><li class="first leaf menu-mlid-1248"><a href="/content/essential-management-hiv-infection" title="">Essential Management of HIV Infection</a></li>
+<li class="leaf menu-mlid-1246"><a href="/content/dermatologic-manifestations-hiv-disease" title="">Dermatologic Manifestations of HIV Disease</a></li>
+<li class="last leaf menu-mlid-1247"><a href="/content/oral-manifestations-hiv-disease" title="">Oral Manifestations of HIV Disease</a></li>
+</ul></li>
+<li class="leaf menu-mlid-881"><a href="/resources/podcasts">Podcasts</a></li>
+<li class="leaf menu-mlid-882"><a href="/resources/slides">Slides</a></li>
+<li class="last leaf menu-mlid-5631"><a href="/content/links-events">Links to Events</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-460"><a href="/about">About IAS–USA</a><ul class="menu"><li class="first expanded menu-mlid-3716"><a href="/board-directors">Board of Directors</a><ul class="menu"><li class="first last leaf menu-mlid-3738"><a href="/content/ias-usa-board-directors-disclosure-information">Disclosure Information</a></li>
+</ul></li>
+<li class="leaf menu-mlid-4473"><a href="/viral-hepatitis-advisory-board" title="">Viral Hepatitis Advisory Board</a></li>
+<li class="leaf menu-mlid-4466"><a href="/committees-panels-boards">Steering Committees, Panels, and Boards</a></li>
+<li class="leaf menu-mlid-3717"><a href="/core-faculty">Core Faculty</a></li>
+<li class="leaf menu-mlid-3891"><a href="/content/ias-usa-award-recipients" title="">IAS–USA Award Recipients</a></li>
+<li class="leaf menu-mlid-896"><a href="/staff">Staff</a></li>
+<li class="leaf menu-mlid-5574"><a href="/content/conference-management-croi">Conference Management for CROI</a></li>
+<li class="leaf menu-mlid-906"><a href="/contact">Contact</a></li>
+<li class="expanded menu-mlid-862"><a href="/cme">CME</a><ul class="menu"><li class="first last leaf menu-mlid-894"><a href="/about/program-development-policy">Program Development Policy</a></li>
+</ul></li>
+<li class="leaf menu-mlid-863"><a href="/content/website-policies">Website Policies</a></li>
+<li class="leaf menu-mlid-897"><a href="/content/ias%E2%80%93usa-funding-sources-and-industry-interactions">Funding Information</a></li>
+<li class="expanded menu-mlid-5587"><a href="/employment-opportunities">Employment Opportunities</a></li>
+<li class="leaf menu-mlid-866"><a href="/donate">Donate</a></li>
+<li class="last leaf menu-mlid-5630"><a href="/comments-and-suggestions">Comments and Suggestions</a></li>
+</ul></li>
+</ul></div>
+    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div></footer>  </div>  
+</body>
+</html><a href="/donate">Donate</a></li>
+<li class="last leaf menu-mlid-5630"><a href="/comments-and-suggestions">Comments and Sugge

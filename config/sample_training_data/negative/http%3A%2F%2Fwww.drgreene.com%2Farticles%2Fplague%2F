@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plague: A-to-Z Guide from Diagnosis to Treatment to Prevention &ndash; DrGreene.com</title>
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok2v=1613a3a185/"},atok:"13902f4bdd3be78420d9cbc098c0bcba",petok:"4ed3a45892d204aeda404174a985312963083e7e-1420621509-1800",zone:"drgreene.com",rocket:"0",apps:{"abetterbrowser":{"ie":"8"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok2v=919620257c/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://www.drgreene.com/xmlrpc.php">
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-152x152-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
+<!-- or, set /favicon.ico for IE10 win -->
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/tileicon.png">
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.7.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://www.drgreene.com/articles/plague/" />
+<link rel="publisher" href="https://plus.google.com/+DrgreeneCom/posts"/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Plague: A-to-Z Guide from Diagnosis to Treatment to Prevention &ndash; DrGreene.com" />
+<meta property="og:description" content="Related concepts: Black death, Bubonic plague, Pneumonic plague, Meningeal plague, Septicemic plague, Yersinia pestis Introduction to plague: Plague is responsible for some of the worst epidemics in human history. 100 million people died in the epidemic of 542 A.D.. During the Middle Ages, the Black Death killed about one third of the population of Europe. &hellip;" />
+<meta property="og:url" content="http://www.drgreene.com/articles/plague/" />
+<meta property="og:site_name" content="DrGreene.com" />
+<meta property="article:tag" content="Diseases &amp; Conditions" />
+<meta property="article:section" content="Articles" />
+<meta property="og:image" content="http://www.drgreene.com/wp-content/uploads/Plague1.jpg" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="Related concepts: Black death, Bubonic plague, Pneumonic plague, Meningeal plague, Septicemic plague, Yersinia pestis Introduction to plague: Plague is responsible for some of the worst epidemics in human history. 100 million people died in the epidemic of 542 A.D.. During the Middle Ages, the Black Death killed about one third of the population of Europe. [&hellip;]"/>
+<meta name="twitter:title" content="Plague: A-to-Z Guide from Diagnosis to Treatment to Prevention &ndash; DrGreene.com"/>
+<meta name="twitter:site" content="@DrGreene"/>
+<meta name="twitter:domain" content="DrGreene.com"/>
+<meta name="twitter:creator" content="@DrGreene"/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel='stylesheet' id='mashsb-styles-css'  href='http://www.drgreene.com/wp-content/plugins/mashsharer/templates/mashsb.min.css?ver=2.1.9' type='text/css' media='all' />
+<style type='text/css'>
+
+        .mashsb-count {
+        color: #cccccc;
+        }
+        .mashsb-box .mashsb-count {
+            display: none;
+        }
+    .mashsb-buttons a {
+    min-width: 177px;}
+</style>
+<link rel='stylesheet' id='recipress_front-css'  href='http://www.drgreene.com/wp-content/plugins/recipress/css/front.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://www.drgreene.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='drg-bootstrap-css'  href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css?ver=3.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='drg-font-awesome-css'  href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css?ver=4.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='drg-fonts-css'  href='http://fonts.googleapis.com/css?family=Quicksand%3A300%2C400%2C700%7CMerriweather%3A300%2C400%2C400italic%2C700%7CMerriweather+Sans&#038;ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='drg-style-print-css'  href='http://www.drgreene.com/wp-content/themes/drgreene/style-print.css?ver=4.0.1' type='text/css' media='print' />
+<link rel='stylesheet' id='drg-style-css'  href='http://www.drgreene.com/wp-content/themes/drgreene/style.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-css'  href='http://www.drgreene.com/wp-content/plugins/ubermenu/pro/assets/css/ubermenu.min.css?ver=3.1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-flat-green-bar-css'  href='http://www.drgreene.com/wp-content/plugins/ubermenu-skins-flat/skins/green-bar.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-font-awesome-css'  href='http://www.drgreene.com/wp-content/plugins/ubermenu/assets/css/fontawesome/css/font-awesome.min.css?ver=4.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://code.jquery.com/jquery-2.1.0.min.js?ver=2.1.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mashsb = {"shares":"0","round_shares":"","animate_shares":"0","share_url":"http:\/\/www.drgreene.com\/articles\/plague\/","title":"Plague%3A+A-to-Z+Guide+from+Diagnosis+to+Treatment+to+Prevention","image":"http:\/\/www.drgreene.com\/wp-content\/uploads\/Plague1.jpg","desc":"Related concepts:\r\nBlack death, Bubonic plague, Pneumonic plague, Meningeal plague, Septicemic plague, Yersinia pestis\r\nIntroduction to plague:\r\nPlague is responsible for some of the worst epidemics in human history. 100 million people died in the epidemic of 542 \u2026","hashtag":"","subscribe":"content","subscribe_url":"","activestatus":"1","singular":"1","twitter_popup":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.drgreene.com/wp-content/plugins/mashsharer/assets/js/mashsb.min.js?ver=2.1.9'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js?ver=4.0.1'></script>
+<script type='text/javascript' src='http://www.drgreene.com/wp-content/themes/drgreene/includes/js/bootstrap-wp.js?ver=4.0.1'></script>
+<meta name="generator" content="WordPress 4.0.1" />
+<style id="ubermenu-custom-generated-css">
+/** UberMenu Responsive Styles (Breakpoint Setting) **/
+@media screen and (min-width: 1025px){
+  .ubermenu{ display:block !important; } .ubermenu-responsive .ubermenu-item.ubermenu-hide-desktop{ display:none !important; } .ubermenu-responsive.ubermenu-retractors-responsive .ubermenu-retractor-mobile{ display:none; } .ubermenu-responsive-toggle{ display:none; }
+}
+@media screen and (max-width: 1024px){
+   .ubermenu-responsive-toggle, .ubermenu-sticky-toggle-wrapper { display: block; }  .ubermenu-responsive{ width:100%; max-height:500px; visibility:visible; overflow:visible;  -webkit-transition:max-height 1s ease-in; transition:max-height .3s ease-in; }  .ubermenu-responsive.ubermenu-responsive-nocollapse, .ubermenu-repsonsive.ubermenu-no-transitions{ display:block; max-height:none; }  .ubermenu-responsive.ubermenu-responsive-collapse{ max-height:none; visibility:visible; overflow:visible; } .ubermenu-responsive.ubermenu-responsive-collapse{ max-height:0; overflow:hidden !important; visibility:hidden; } .ubermenu-responsive.ubermenu-in-transition, .ubermenu-responsive.ubermenu-in-transition .ubermenu-nav{ overflow:hidden !important; visibility:visible; } .ubermenu-responsive.ubermenu-responsive-collapse:not(.ubermenu-in-transition){ border-top-width:0; border-bottom-width:0; }  .ubermenu-responsive .ubermenu-item-level-0{ width:50%; } .ubermenu-responsive .ubermenu-item.ubermenu-item-level-0 > .ubermenu-target{ border:none; box-shadow:none; } .ubermenu-responsive .ubermenu-item.ubermenu-has-submenu-flyout{ position:static; } .ubermenu-responsive.ubermenu-sub-indicators .ubermenu-submenu-type-flyout .ubermenu-has-submenu-drop > .ubermenu-target:after{ content:"\f107"; }  .ubermenu-responsive .ubermenu-nav .ubermenu-item .ubermenu-submenu.ubermenu-submenu-drop{ width:100%; min-width:100%; max-width:100%; top:auto; left:0 !important; } .ubermenu-responsive .ubermenu-active > .ubermenu-submenu-type-mega{     max-height:none;     height:auto;/*prevent overflow scrolling since android is still finicky*/ } .ubermenu-responsive.ubermenu-transition-slide .ubermenu-item.ubermenu-in-transition > .ubermenu-submenu-drop{ max-height:1000px; /* because of slide transition */ } .ubermenu .ubermenu-submenu-type-flyout .ubermenu-submenu-type-mega{ min-height:0; } .ubermenu.ubermenu-responsive .ubermenu-column, .ubermenu.ubermenu-responsive .ubermenu-column-auto{ min-width:50%; } .ubermenu.ubermenu-responsive .ubermenu-autoclear > .ubermenu-column{ clear:none; } .ubermenu.ubermenu-responsive .ubermenu-column:nth-of-type(2n+1){ clear:both; } .ubermenu.ubermenu-responsive .ubermenu-submenu-retractor-top:not(.ubermenu-submenu-retractor-top-2) .ubermenu-column:nth-of-type(2n+1){ clear:none; } .ubermenu.ubermenu-responsive .ubermenu-submenu-retractor-top:not(.ubermenu-submenu-retractor-top-2) .ubermenu-column:nth-of-type(2n+2){ clear:both; }   .ubermenu.ubermenu-responsive .ubermenu-tabs, .ubermenu.ubermenu-responsive .ubermenu-tabs-group, .ubermenu.ubermenu-responsive .ubermenu-tab, .ubermenu.ubermenu-responsive .ubermenu-tab-content-panel{ /** TABS SHOULD BE 100%  ACCORDION */ width:100%; min-width:100%; max-width:100%; left:0; } .ubermenu.ubermenu-responsive .ubermenu-tabs, .ubermenu.ubermenu-responsive .ubermenu-tab-content-panel{ min-height:0 !important;/* Override Inline Style from JS */ } .ubermenu.ubermenu-responsive .ubermenu-tab-content-panel{ z-index:20; } .ubermenu-responsive .ubermenu-tab > .ubermenu-target{ border-width:0 0 1px 0; } .ubermenu-responsive.ubermenu-sub-indicators .ubermenu-tabs > .ubermenu-tabs-group > .ubermenu-tab.ubermenu-has-submenu-drop > .ubermenu-target:after{ content:"\f107"; }  .ubermenu-responsive .ubermenu-tabs > .ubermenu-tabs-group > .ubermenu-tab > .ubermenu-tab-content-panel{ position:relative; border-width:0 0 2px 0; } .ubermenu-responsive .ubermenu-tab-layout-bottom > .ubermenu-tabs-group{ position:relative; }   .ubermenu-reponsive .ubermenu-item-level-0 > .ubermenu-submenu-type-stack{ /* Top Level Stack Columns */ position:relative; }  .ubermenu-responsive .ubermenu-submenu-type-stack .ubermenu-column, .ubermenu-responsive .ubermenu-submenu-type-stack .ubermenu-column-auto{ /* Stack Columns */ width:100%; max-width:100%; }   .ubermenu-responsive .ubermenu-item-mini{ /* Mini items */ min-width:0; width:auto; float:left; clear:none !important; } .ubermenu-responsive .ubermenu-item.ubermenu-item-mini > a.ubermenu-target{ padding:20px; }   .ubermenu-responsive .ubermenu-item.ubermenu-hide-mobile{ /* Hiding items */ display:none !important; }  .ubermenu-responsive.ubermenu-hide-bkgs .ubermenu-submenu.ubermenu-submenu-bkg-img{ /** Hide Background Images in Submenu */ background-image:none; }  .ubermenu-responsive-toggle{ display:block; }
+}
+@media screen and (max-width: 480px){
+  .ubermenu.ubermenu-responsive .ubermenu-item-level-0{ width:100%; } .ubermenu.ubermenu-responsive .ubermenu-column, .ubermenu.ubermenu-responsive .ubermenu-column-auto{ min-width:100%; } .ubermenu.ubermenu-responsive .ubermenu-item-mini{ min-width:0; width:auto; }
+}
+
+
+/** UberMenu Custom Menu Styles (Customizer) **/
+/* main */
+.ubermenu-main { background:#00a8a2; }
+.ubermenu-main .ubermenu-item-level-0 > .ubermenu-target { font-size:16px; color:#015c59; padding-left:2em; padding-right:2em; }
+.ubermenu.ubermenu-main .ubermenu-item-level-0:hover > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-active > .ubermenu-target { background:#14978f; }
+.ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-item > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-parent > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-ancestor > .ubermenu-target { background:#14978f; }
+.ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop { background-color:#ffffff; border-color:#e8e8e8; color:#3c464f; }
+
+
+/* Status: Loaded from Transient */
+
+</style><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=157173237688568";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <style type="text/css">.broken_link, a.broken_link {
+	text-decoration: line-through;
+}</style></head>
+
+<body class="single single-azguide postid-1092 single-format-standard group-blog azguide-plague">
+	<div id="page-wrap" class="tk-athelas">
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="container">
+			<div class="row">
+				<div class="site-header-inner col-sm-12">
+
+					
+					<div class="site-branding">
+						<span class="logo-container"><a href="/" class="logo"></a></span>
+						<div id="mobile-top-links">
+						</div>
+					</div>
+					<a class="hide-nav-jump" href="#nav">Jump to Navigation</a>
+				</div>
+			</div>
+		</div><!-- .container -->
+	</header><!-- #masthead -->
+
+	<div class="main-content">
+		<div class="container main">
+				<div class="row">
+										
+	
+		<h1 class="page-title">Plague: A-to-Z Guide from Diagnosis to Treatment to Prevention</h1>
+<div id="content" class="main-content-inner col-sm-12 col-md-8 col-lg-8">
+<article id="post-1092" class="post-1092 azguide type-azguide status-publish format-standard has-post-thumbnail hentry category-articles tag-diseases-conditions">
+		<div class="entry-content">
+		
+                    <aside class="mashsb-container">
+                    <div class="mashsb-box"><div class="mashsb-count"><div class="counts mashsbcount">0</div><span class="mashsb-sharetext">SHARES</span></div><div class="mashsb-buttons"><a style="" class="mashicon-facebook" href="http://www.facebook.com/sharer.php?u=http://www.drgreene.com/articles/plague/" target="_blank"><span class="icon"></span><span class="text">Share&nbsp;on&nbsp;Facebook</span></a><a style="" class="mashicon-twitter" href="https://twitter.com/intent/tweet?text=Plague%3A+A-to-Z+Guide+from+Diagnosis+to+Treatment+to+Prevention&amp;url=http://www.drgreene.com/articles/plague/" target="_blank"><span class="icon"></span><span class="text">Share&nbsp;on&nbsp;Twitter</span></a><a style="" class="mashicon-subscribe" href="#" target="_blank"><span class="icon"></span><span class="text">Subscribe</span></a><div class="onoffswitch2" style="display:none;"></div></div></div>
+                    <div style="clear:both;"></div><div class="mashsb-toggle-container"></div></aside>
+                        <!-- Share buttons made by mashshare.net - Version: 2.1.9--> 
+		<p><a href="http://www.drgreene.com/articles/plague/plague-2/" rel="attachment wp-att-41802"><img class="alignnone size-full wp-image-41802" title="Plague" src="http://www.drgreene.com/wp-content/uploads/Plague1.jpg" alt="" width="507" height="338" /></a></p>
+<h4>Related concepts:</h4>
+<p>Black death, Bubonic plague, Pneumonic plague, Meningeal plague, Septicemic plague, Yersinia pestis</p>
+<h4>Introduction to plague:</h4>
+<p>Plague is responsible for some of the worst epidemics in human history. 100 million people died in the epidemic of 542 A.D.. During the Middle Ages, the Black Death killed about one third of the population of Europe.</p>
+<p>Plague can occur on its own, but it is also caused by one of the few bacteria most likely to be used in an act of bioterrorism or biological warfare.<span id="more-1092"></span></p>
+<h4>What is plague?</h4>
+<p>Plague is caused by a species of <a href="/qa/bacteria-vs-viruses">bacteria</a> called Yersinia pestis. It is an infection primarily of rodents and their fleas, but without proper treatment it can cause devastating infections in humans and other animals.</p>
+<h4>Who gets plague?</h4>
+<p>People get plague if they are bitten by an infected flea. They can also get plague from close <a href="/azguide/body-fluid-transmission">contact with infected animals and their bodily fluids</a>.</p>
+<p>In the United States, plague is most common in rural areas, especially in the western states.</p>
+<p>People can also get plague from <a href="/azguide/droplet-transmission">inhaling infected droplets or aerosols</a>.</p>
+<p>Children would be expected to be affected disproportionately in a biological attack.</p>
+<h4>What are the symptoms of plague?</h4>
+<p>Plague has several forms, depending on who is infected, how sick they are, and where the bacteria enter the body.</p>
+<p>In bubonic plague, caused by flea or rodent bites from infected animals, people have a sudden <a href="/blog/2001/06/19/high-fevers-brain-damage-and-febrile-seizures">high fever</a> and exquisitely painful swollen glands (called buboes). These are most common in the groin, but may occur under the arms or in the neck. Bubonic plague is the most common form seen in children.</p>
+<p>In pneumonic plague, caused by inhaling the bacteria, the sudden high fever may be accompanied by a shortness of breath and a cough, perhaps coughing up blood.</p>
+<p>Meningeal plague looks like <a href="/azguide/meningitis">meningitis</a> at the outset.</p>
+<p>Children with septicemic plague often first show up with shock and bleeding.</p>
+<p>Most children with any type of plague have <a href="/qa/fevers">fever</a>, <a href="/azguide/headache">headache</a>, shaking chills, and tend to get worse very rapidly. The name Black Death comes from dark bleeding or bruising under the skin.</p>
+<p>About half of kids with any type of plague also have abdominal pain, nausea, <a href="/azguide/vomiting">vomiting</a>, and bloody <a href="/azguide/diarrhea">diarrhea</a>. Sometimes these are even the major symptoms at the beginning.</p>
+<h4>Is plague contagious?</h4>
+<p>Plague is somewhat contagious from person to person (or from cat or dog to person), especially through respiratory droplets.</p>
+<h4>How long does plague last?</h4>
+<p>Symptoms usually begin suddenly 3 or 4 days after exposure – though they can begin within only a few hours. Sometimes it takes as long as a week or ten days.</p>
+<p>Without treatment, many die within 24 hours. With treatment, most turn the corner within about 3 days, and treatment is continued for 7 to 10 days.</p>
+<h4>How is plague diagnosed?</h4>
+<p>Plague may be suspected based on the history or physical exam, but is diagnosed based on blood or tissue tests.</p>
+<h4>How is plague treated?</h4>
+<p>Appropriate <a href="/article/guidelines-antibiotic-use">antibiotics</a> are more than 90 percent effective at treating plague, if started in time. They are usually given via shot or IV. Other treatment depends on the course of the disease.</p>
+<h4>How can plague be prevented?</h4>
+<p>People exposed to a patient with any form of plague may require antibiotics to prevent infection. In the United States, there is currently no commercially available vaccination for plague. Vaccination is currently only recommended and used for biologists and other laboratory workers who are at highest risk of contracting plague.</p>
+<p>Children should be taught never to handle sick or dead animals, especially rodents. Rodent control and flea control for pets can also help prevent plague.</p>
+<p><a href="/azguide/droplet-transmission">Droplet precautions</a> are important whenever anyone is around someone with plague, or when plague is thought to be in the air.</p>
+<h4>Related A-to-Z Information:</h4>
+<p><a href="/azguide/airborne-transmission">Airborne Transmission</a>, <a href="/azguide/anthrax">Anthrax</a>, <a href="/azguide/appendicitis">Appendicitis</a>, <a href="/azguide/campylobacter">Campylobacter</a>, <a href="/azguide/clostridium-perfringens">Clostridium Perfringens</a>, <a href="/azguide/cough">Cough</a>, <a href="/azguide/diarrhea">Diarrhea</a>, <a href="/azguide/diphtheria">Diphtheria</a>, <a href="/azguide/droplet-transmission">Droplet Transmission</a>, <a href="/azguide/gastroenteritis">Gastroenteritis</a>, <a href="/azguide/giardia-lamblia">Giardia Lamblia</a>, <a href="/azguide/headache">Headache</a>, <a href="/azguide/hematuria">Hematuria</a>, <a href="/azguide/hiv">HIV</a>, <a href="/azguide/lyme-disease">Lyme Disease</a>, <a href="/azguide/measles">Measles</a>, <a href="/azguide/meningitis">Meningitis</a>, <a href="/azguide/norwalk-virus">Norwalk Virus</a>, <a href="/azguide/rabies">Rabies</a>, <a href="/azguide/respiratory-distress">Respiratory Distress</a>, <a href="/azguide/reye-syndrome">Reye Syndrome</a>, <a href="/azguide/rotavirus">Rotavirus</a>, <a href="/azguide/rsv">RSV (Respiratory syncytial virus)</a>, <a href="/azguide/salmonella">Salmonella</a>, <a href="/azguide/smallpox">Smallpox</a>, <a href="/azguide/tetanus">Tetanus</a>, <a href="/azguide/tuberculosis">Tuberculosis</a>, <a href="/azguide/vomiting">Vomiting</a>, <a href="/azguide/wheezing">Wheezing</a></p>
+					<footer class="entry-meta">
+							<span class="post-tags"><strong>Tags:</strong> <a href="http://www.drgreene.com/tag/diseases-conditions/" rel="tag">Diseases &amp; Conditions</a></span>						<p class="post-date-info"><strong>Reviewed by:</strong> Khanh-Van Le-Bucklin, Liat Simkhay Snyder <strong>on</strong> October 10, 2013<span> / </span><strong>Originally Published on: </strong>November 2, 2002</p>						</footer><!-- .entry-meta -->
+			    
+    <div class="author-bio-snippet format_text">
+        
+        <h4 class="author-name fn n"><a href="http://www.drgreene.com/author/drgreene/" title="Posts by Dr. Alan Greene" rel="author">Dr. Alan Greene</a></h4>
+        
+        <img src="http://www.drgreene.com/wp-content/uploads/userphoto/5.jpeg" alt="Dr. Alan Greene" width="240" height="300" class="photo" />        <p>Dr. Greene is the founder of DrGreene.com (cited by the AMA as “the pioneer physician Web site”), a practicing pediatrician, father of four, & author of <em><a href="http://www.amazon.com/Raising-Baby-Green-Earth-Friendly-Childbirth/dp/078799622X/ref=sr_1_1?s=books&ie=UTF8&qid=1362696425&sr=1-1&keywords=Raising+Baby+Green" rel="nofollow">Raising Baby Green</a></em>  & <a href="http://www.amazon.com/Feeding-Baby-Green-Nutrition-Pregnancy/dp/0470425245/ref=sr_1_1?ie=UTF8&qid=1362696339&sr=8-1&keywords=Feeding+Baby+Green" rel="nofollow"><em>Feeding Baby Green</a></em>. He appears frequently in the media including such venues as the The New York Times, the TODAY Show, Good Morning America, & the Dr. Oz Show. </p>
+                <div class="clear"></div>
+    </div>
+    			<!-- <img class="fakead" src="/wp-content/themes/drgreene/images/fake-ad2.png" alt=""> -->
+			<div id="post-email-sign-up">
+				<h4>Sign-up for DrGreene's Newsletter</h4>
+				<p>About once a month we send updates with most popular content, childrens' health alerts and other information about raising healthy children. We will not share your email address and never spam.</p>
+				
+<form class="epm-sign-up-form" name="epm-sign-up-form" action="#" method="post">
+
+	
+	<div class="epm-form-field">
+		<label for="epm-email">Email Address</label>
+		<input type="email" placeholder="Email Address" name="epm-email" tabindex="8" class="email" id="epm-email" value=""/>
+	</div>
+
+	<input type="hidden" name="epm_submit" id="epm_submit" value="true" />
+	<input type="hidden" name="epm_list_id" id="epm_list_id" value="" />
+	
+	<button type="submit" name="epm-submit-chimp" data-wait-text="Please wait..." tabindex="10" class="button btn epm-sign-up-button epm-submit-chimp fa fa-arrow-right"></button>
+
+</form>			</div>
+		
+	</div><!-- .entry-content -->
+</article><!-- #post-## -->
+
+				
+							
+
+	</div><!-- close .main-content-inner -->
+	<div class="sidebar col-sm-12 col-md-4 col-lg-4">
+				<div class="sidebar-padder">
+
+										<aside>
+					<div class="relatedposts"><h3>Related Posts</h3><ul>				<li>
+					<div class="relatedthumb">
+						<a href="http://www.drgreene.com/articles/inconspicuous-penis/" ><img width="377" height="240" src="http://www.drgreene.com/wp-content/uploads/Inconspicuous-Penis-377x240.jpg" class="attachment-recipe-sidebar wp-post-image" alt="Inconspicuous Penis" /></a>
+					</div>
+					<div class="relatedcontent">
+						<h4><a href="http://www.drgreene.com/articles/inconspicuous-penis/" rel="bookmark" title="Inconspicuous Penis: Your A-to-Z Guide from Diagnosis to Treatment to Prevention">Inconspicuous Penis: Your A-to-Z Guide from Diagnosis to Treatment to Prevention</a></h4>
+						<p>Related concepts: Absent penis, Buried penis, Concealed penis, Hidden penis, Micropenis, Penile agenesis, Trapped penis, Webbed penis Introduction to inconspicuous penis: &#8220;It&#8217;s a boy!&#8221; When we first glimpse our...</p>
+					</div>
+				</li>
+							<li>
+					<div class="relatedthumb">
+						<a href="http://www.drgreene.com/21st-century-surgery/" ><img width="377" height="240" src="http://www.drgreene.com/wp-content/uploads/21st-Century-Surgery-377x240.jpg" class="attachment-recipe-sidebar wp-post-image" alt="21st Century Surgery" /></a>
+					</div>
+					<div class="relatedcontent">
+						<h4><a href="http://www.drgreene.com/21st-century-surgery/" rel="bookmark" title="21st Century Surgery">21st Century Surgery</a></h4>
+						<p>The FDA has approved a surgical robot, part of the da Vinci Surgical System, for use in thoracic surgery, general laparoscopic surgery, and for surgical assistance. The robot has...</p>
+					</div>
+				</li>
+							<li>
+					<div class="relatedthumb">
+						<a href="http://www.drgreene.com/history-germs/" ><img width="377" height="240" src="http://www.drgreene.com/wp-content/uploads/The-History-of-Germs-377x240.jpg" class="attachment-recipe-sidebar wp-post-image" alt="The History of Germs" /></a>
+					</div>
+					<div class="relatedcontent">
+						<h4><a href="http://www.drgreene.com/history-germs/" rel="bookmark" title="The History of Germs">The History of Germs</a></h4>
+						<p>In our life time the role of germs in infection has been an accepted fact, but it wasn&#8217;t always so. Before this important discovery life was very different. I&#8217;ve...</p>
+					</div>
+				</li>
+			</ul></div>				</aside>
+				<!-- <aside class="ad2">
+										<img src="/wp-content/themes/drgreene/images/fake-ad.png" alt="">
+				</aside> -->
+
+			
+		</div><!-- close .sidebar-padder -->
+				</div><!-- close .*-inner (main-content or sidebar, depending if sidebar is used) -->
+			</div><!-- close .row -->
+		</div><!-- close .container -->
+	</div><!-- close .main-content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="site-footer-inner">
+					<div class="col-lg-2 col-md-2 col-sm-5 col-xs-6">
+						<h6>DrGreene.com Information</h6>
+						<ul id="footer-about-links" class="footer-about-links">
+						<div class="menu-footer-about-links-container"><li id="menu-item-50336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50336"><a href="http://www.drgreene.com/contact/">Contact Us</a></li>
+<li id="menu-item-50338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50338"><a href="http://www.drgreene.com/mission-statement/">Mission Statement</a></li>
+<li id="menu-item-50337" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50337"><a href="http://www.drgreene.com/history/">History of DrGreene.com</a></li>
+<li id="menu-item-50335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50335"><a href="http://www.drgreene.com/awards/">Awards</a></li>
+<li id="menu-item-50613" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50613"><a href="http://www.drgreene.com/partners-supporters/">Partners and Supporters</a></li>
+<li id="menu-item-50340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50340"><a href="http://www.drgreene.com/terms-of-use/">Terms of Use</a></li>
+<li id="menu-item-50339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50339"><a href="http://www.drgreene.com/privacy/">Privacy Policy</a></li>
+</div>						</ul>
+					</div>
+					<div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-5 col-xs-offset-1 footer-about">
+						<h6>Content Links</h6>
+						<ul id="footer-contact-links" class="footer-contact-links">
+						<div class="menu-footer-content-links-container"><li id="menu-item-50341" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50341"><a href="http://www.drgreene.com/dr-greenes-blog/">Dr. Greene&#8217;s Blog</a></li>
+<li id="menu-item-50342" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50342"><a href="http://www.drgreene.com/guest-posts/">Guest Posts</a></li>
+<li id="menu-item-50344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50344"><a href="http://www.drgreene.com/recipes/">Recipes</a></li>
+<li id="menu-item-50343" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50343"><a href="http://www.drgreene.com/press-room/">Press Room</a></li>
+<li id="menu-item-50603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50603"><a href="http://www.drgreene.com/books/">Books by Dr. Greene</a></li>
+</div>							<li><a href="/web-design/">Web Design</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-4 col-md-4 col-md-offset-2 col-lg-offset-2 logo-mission">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-5">
+								<a class="footer-logo" href="/"></a>
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-7">
+								<p class="mission">Our goal is to improve children's health by inspiring parents to become knowledgable partners who can work with their children's physicians in new and rich ways.</p>
+								<div class="footer-social">
+									<span>Follow us: </span>	<a rel="nofollow" href="https://twitter.com/drgreene"><i class="fa fa-twitter"></i></a>
+	<a rel="nofollow" href="https://www.facebook.com/DrGreenecom"><i class="fa fa-facebook last"></i></a>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-social-mobile">
+					<a rel="nofollow" href="https://twitter.com/drgreene"><i class="fa fa-twitter"></i></a>
+	<a rel="nofollow" href="https://www.facebook.com/DrGreenecom"><i class="fa fa-facebook last"></i></a>
+				</div>
+			<div class="col-sm-12 all-rights">
+				<p>&copy; 2015 Greene Ink, Inc. All Rights Reserved.</p>
+			</div>
+		</div><!-- close .container -->
+	</footer><!-- close #colophon -->
+	<nav class="site-navigation" id="nav">
+		<div class="container">
+			<div class="row">
+				<div class="site-navigation-inner">
+					<!--<span class="nav-mark-slider"><img src="" alt="DrGreene.com Mark"></span> -->
+					<div class="navbar navbar-default">
+					<!-- The WordPress Menu goes here -->
+													<a class="ubermenu-responsive-toggle ubermenu-responsive-toggle-main ubermenu-skin-flat-green-bar ubermenu-loc-" data-ubermenu-target="ubermenu-main-1056"><i class="fa fa-bars"></i>Menu</a><nav id="ubermenu-main-1056" class="ubermenu ubermenu-nojs ubermenu-main ubermenu-menu-1056 ubermenu-responsive ubermenu-responsive-1024 ubermenu-responsive-collapse ubermenu-horizontal ubermenu-transition-slide ubermenu-trigger-click ubermenu-skin-flat-green-bar ubermenu-bar-align-full ubermenu-items-align-left ubermenu-bound ubermenu-sub-indicators ubermenu-retractors-responsive"><ul id="ubermenu-nav-main-1056" class="ubermenu-nav"><li id="menu-item-50288" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-50288 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Ages &#038; Stages</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-50288 ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item" ><li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-50294 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-50294"><ul class="ubermenu-submenu ubermenu-submenu-id-50294 ubermenu-submenu-type-stack" ><li id="menu-item-50296" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-50296 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/parenting-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Parenting</span></a></li><li id="menu-item-50297" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-50297 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/prenatal-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Prenatal</span></a></li><li id="menu-item-50298" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-50298 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/newborn-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Newborn</span></a></li><li id="menu-item-50299" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-50299 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/infant-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Infant</span></a></li></ul></li><li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-50295 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-50295"><ul class="ubermenu-submenu ubermenu-submenu-id-50295 ubermenu-submenu-type-stack" ><li id="menu-item-50300" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-50300 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/toddler-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Toddler</span></a></li><li id="menu-item-50301" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-50301 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/preschool-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Preschool</span></a></li><li id="menu-item-50302" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-50302 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/school-age-health-center/"><span class="ubermenu-target-title ubermenu-target-text">School Age</span></a></li><li id="menu-item-50303" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-50303 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/teen-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Teen</span></a></li></ul></li><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li></ul></li><li id="menu-item-50289" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-50289 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Health Centers</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-50289 ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item" ><li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-50304 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-50304"><ul class="ubermenu-submenu ubermenu-submenu-id-50304 ubermenu-submenu-type-stack" ><li id="menu-item-50315" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50315 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/adhd-health-center/"><span class="ubermenu-target-title ubermenu-target-text">ADHD Health Center</span></a></li><li id="menu-item-50308" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50308 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/allergies-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Allergies</span></a></li><li id="menu-item-50309" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50309 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/asthma-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Asthma</span></a></li><li id="menu-item-50310" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50310 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/behavior-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Behavior</span></a></li><li id="menu-item-50311" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50311 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/breastfeeding-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Breastfeeding</span></a></li><li id="menu-item-50312" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50312 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/cancer-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Cancer</span></a></li></ul></li><li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-50305 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-50305"><ul class="ubermenu-submenu ubermenu-submenu-id-50305 ubermenu-submenu-type-stack" ><li id="menu-item-50313" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50313 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/childhood-obesity-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Childhood Obesity</span></a></li><li id="menu-item-50314" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50314 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/childrens-safety-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Children&#8217;s Safety</span></a></li><li id="menu-item-50316" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50316 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/cold-flu-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Cold &#038; Flu</span></a></li><li id="menu-item-50317" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50317 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/diseases-conditions-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Diseases &#038; Conditions</span></a></li><li id="menu-item-50318" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50318 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/ear-infections-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Ear Infections</span></a></li><li id="menu-item-50319" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50319 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/environmental-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Environmental Health</span></a></li></ul></li><li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-50306 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-50306"><ul class="ubermenu-submenu ubermenu-submenu-id-50306 ubermenu-submenu-type-stack" ><li id="menu-item-50321" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50321 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/family-nutrition-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Family Nutrition</span></a></li><li id="menu-item-50322" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50322 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/genetics-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Genetics</span></a></li><li id="menu-item-50323" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50323 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/infant-nutrition-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Infant Nutrition</span></a></li><li id="menu-item-50324" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50324 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/medical-treatment-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Medical Treatment</span></a></li><li id="menu-item-50325" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50325 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/mental-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Mental Health</span></a></li><li id="menu-item-50326" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50326 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/organics-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Organics</span></a></li></ul></li><li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-50421 ubermenu-item-level-1 ubermenu-coclass="ubermenu-target-title ubermenu-target-text">Organics</span></a></li></ul></li><li class="  ubermenu-item ubermenu-item-type-customlumn ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-50421"><ul class="ubermenu-submenu ubermenu-submenu-id-50421 ubermenu-submenu-type-stack" ><li id="menu-item-50327" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50327 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/outdoor-fun-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Outdoor Fun</span></a></li><li id="menu-item-50328" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50328 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/potty-training-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Potty Training</span></a></li><li id="menu-item-50329" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50329 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/pregnancy-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Pregnancy</span></a></li><li id="menu-item-50330" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50330 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/skin-rashes-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Skin &#038; Rashes</span></a></li><li id="menu-item-50331" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50331 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/sleep-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Sleep</span></a></li><li id="menu-item-50332" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50332 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/vitamins-supplements-health-center/"><span class="ubermenu-target-title ubermenu-target-text">Vitamins &#038; Supplements</span></a></li></ul></li><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li></ul></li><li id="menu-item-50290" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-50290 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Blogs</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-50290 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item" ><li id="menu-item-50333" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50333 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/dr-greenes-blog/"><span class="ubermenu-target-title ubermenu-target-text">Dr. Greene&#8217;s Blog</span></a></li><li id="menu-item-50334" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50334 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/guest-posts/"><span class="ubermenu-target-title ubermenu-target-text">Guest Posts</span></a></li><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li></ul></li><li id="menu-item-50291" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-50291 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/recipes/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Recipes</span></a></li><li id="menu-item-50604" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50604 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/books/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Books</span></a></li><li id="menu-item-50292" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-50292 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">About</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-50292 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item" ><li id="menu-item-50418" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50418 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/contact/"><span class="ubermenu-target-title ubermenu-target-text">Contact Us</span></a></li><li id="menu-item-50420" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50420 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/press-room/"><span class="ubermenu-target-title ubermenu-target-text">Press Room</span></a></li><li id="menu-item-50416" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50416 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/history/"><span class="ubermenu-target-title ubermenu-target-text">History of DrGreene.com</span></a></li><li id="menu-item-50417" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50417 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/mission-statement/"><span class="ubermenu-target-title ubermenu-target-text">Mission Statement</span></a></li><li id="menu-item-50419" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50419 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/awards/"><span class="ubermenu-target-title ubermenu-target-text">Awards</span></a></li><li id="menu-item-50570" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50570 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/meet-dr-greene/"><span class="ubermenu-target-title ubermenu-target-text">Meet Dr. Greene</span></a></li><li id="menu-item-50569" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50569 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/team/"><span class="ubermenu-target-title ubermenu-target-text">DrGreene.com Team</span></a></li><li id="menu-item-50612" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-50612 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.drgreene.com/partners-supporters/"><span class="ubermenu-target-title ubermenu-target-text">Partners and Supporters</span></a></li><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li></ul></li><li id="menu-item-50293" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-50293 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="#" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Search</span></a></li></ul></nav>											</div><!-- .navbar -->
+				</div>
+			</div>
+		</div><!-- .container -->
+		<div class="overlay">
+			<span class="close-this"><i class="fa fa-times"></i></span>
+			<p class="search-help">Search DrGreene.com:</p>
+			<input type="text" class="addsearch" />
+			
+		</div>
+	</nav><!-- .site-navigation -->
+
+	<script>
+jQuery(window).load(function() {
+	jQuery('.epm-submit-chimp').click(function() {
+
+		//get form values
+		var epm_form = jQuery(this);
+		var epm_list_id = jQuery(epm_form).parent().find('#epm_list_id').val();
+		var epm_firstname = jQuery(epm_form).parent().find('#epm-first-name').val();
+		var epm_lastname = jQuery(epm_form).parent().find('#epm-last-name').val();
+		var epm_email = jQuery(epm_form).parent().find('#epm-email').val();
+		//change submit button text
+		var submit_wait_text = jQuery(this).data('wait-text');
+		var submit_orig_text = jQuery(this).val();
+		jQuery(this).val(submit_wait_text);
+
+		jQuery.ajax({
+			type: 'POST',
+			context: this,
+			url: "http://www.drgreene.com/wp-admin/admin-ajax.php",
+			data: {
+				action: 'epm_mailchimp_submit_to_list',
+				epm_list_id: epm_list_id,
+				epm_firstname: epm_firstname,
+				epm_lastname: epm_lastname,
+				epm_email: epm_email
+			},
+			success: function(data, textStatus, XMLHttpRequest){
+				var epm_ajax_response = jQuery(data);
+				jQuery(epm_form).parent().find('.epm-message').remove(); // remove existing messages on re-submission
+				jQuery(epm_form).parent().prepend(epm_ajax_response);
+				jQuery(epm_form).val(submit_orig_text); // restore submit button text
+								//jQuery(epm_form_field).hide(); // restore submit button text
+				jQuery(epm_form).parent().find('.epm-form-field').remove();
+				jQuery(epm_form).parent().find('button.epm-submit-chimp').remove();
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown){
+				alert('Something Went Wrong!');
+			}
+		});
+		return false;
+
+	});
+});
+</script>
+<script>var jquery_placeholder_url = 'http://www.drgreene.com/wp-content/plugins/gravity-forms-placeholder-support-add-on/jquery.placeholder-1.0.1.js';</script>	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-3703224-1', 'auto');
+	  ga('send', 'pageview');
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 10 seconds')",10000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 20 seconds')",20000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 30 seconds')",30000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 45 seconds')",45000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 1 minute')",60000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 1.5 minute')",90000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 2 minutes')",120000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 2.5 minutes')",150000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 3 minutes')",180000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 3.5 minutes')",210000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 4 minutes')",240000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 5 minutes')",300000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 6 minutes')",360000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 7 minutes')",420000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 8 minutes')",480000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 9 minutes')",540000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 10 minutes')",600000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 15 minutes')",900000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 17.5 minutes')",1050000);
+	  setTimeout("ga('send','event','Time Spent Engagement','time on page more than 20 minutes')",1200000);
+	</script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://www.drgreene.com/wp-content/themes/drgreene/includes/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type='text/javascript' src='https://addsearch.com/js/?key=6f5885eebdb9e3dc2e86c8727d4b0489&#038;ver=4.0.1'></script>
+<script type='text/javascript' src='//maps.googleapis.com/maps/api/js?sensor=false&#038;ver=4.0.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ubermenu_data = {"remove_conflicts":"on","reposition_on_load":"off","intent_delay":"300","intent_interval":"100","intent_threshold":"7","scrollto_offset":"50","scrollto_duration":"1000","responsive_breakpoint":"1024","accessible":"on","retractor_display_strategy":"responsive","touch_off_close":"on","v":"3.1.0.1","ajax_url":"http:\/\/www.drgreene.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.drgreene.com/wp-content/plugins/ubermenu/assets/js/ubermenu.min.js?ver=3.1.0.1'></script>
+<script type='text/javascript' src='http://www.drgreene.com/wp-content/themes/drgreene/includes/js/scripts.js?ver=4.0.1'></script>
+<script type='text/javascript' src='http://www.drgreene.com/wp-content/plugins/gravity-forms-placeholder-support-add-on/gfplaceholderaddon.js?ver=1.0'></script>
+
+</div> <!-- close #page-wrap -->
+
+</body>
+</html>udes/js/scripts.js?ver=4.0.1'></script>
+<script type='text/javascript' src='http://www.drgreene.com/wp-content/plugins/gravity-forms-placeholde

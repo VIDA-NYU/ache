@@ -1,0 +1,1335 @@
+<!doctype html>
+
+<!--[if lt IE 7]><html lang="en-US" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html lang="en-US" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html lang="en-US" class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US" class="no-js"><!--<![endif]-->
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwEAUl9VGwcJVVhSDwk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+
+		<!-- Google Chrome Frame for IE -->
+		<meta property="fb:app_id" content="all(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+
+	164157850314499" />
+		<meta name="alexaVerifyID" content="dGrz2XCLZB6RpbZbl1FUqzgCMG4" />
+		<meta name="bitly-verification" content="1787d16a90b6"/>
+		<meta name="y_key" content="f282393706a5fd85">
+
+		<title>Whooping Cough Prevention Is Best Medicine</title>
+
+		<!-- mobile meta (hooray!) -->
+		<meta name="HandheldFriendly" content="True">
+		<meta content="width=1024px, minimum-scale=1.0, maximum-scale=1.0" />
+
+
+		<link rel="apple-touch-icon" href="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/logos/inq-apple.png">
+		<link rel="icon" href="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/logos/favicon.ico">
+
+		<meta name="msapplication-TileColor" content="#c10000">
+		<meta name="msapplication-TileImage" content="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/logos/inq-win.png">
+
+		<link rel="pingback" href="http://www.inquisitr.com/wp/xmlrpc.php">
+
+		<!-- wordpress head functions -->
+		
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-51256-5', 'auto');
+			  ga('send', 'pageview', {
+  					'dimension6':  'health','dimension1':  'michael-dolce','dimension2':  'michael-dolce','dimension5':  'michael-dolce','dimension8':  'michael-dolce-health','dimension4':  'health','dimension9':  '1235929'				});
+			  ga('send', 'event', 'view', 'author', 'michael-dolce', 0, {nonInteraction:true});
+			</script>
+
+		<link rel="alternate" type="application/rss+xml" title="The Inquisitr News &raquo; Feed" href="http://www.inquisitr.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Inquisitr News &raquo; Comments Feed" href="http://www.inquisitr.com/comments/feed/" />
+
+			<script type="application/ld+json">
+				{"@context":"http://schema.org","@type":"NewsArticle","headline":"Whooping Cough Prevention Is Best Medicine","url":"http://www.inquisitr.com/1235929/whooping-cough-prevention-is-best-medicine/","thumbnailUrl":"http://cdn.inquisitr.com/wp-content/uploads/2014/05/Whooping-Cough-Prevention.jpg","dateCreated":"2015-01-07T09:11:27+0000","articleSection":"health","creator":"michael-dolce","keywords":["whooping-cough","whooping-cough-prevention","whooping-cough-vaccination"]}			</script>
+
+		<link rel="alternate" type="application/rss+xml" title="The Inquisitr News &raquo; Whooping Cough Prevention Is Best Medicine Comments Feed" href="http://www.inquisitr.com/1235929/whooping-cough-prevention-is-best-medicine/feed/" />
+<link rel='stylesheet' idnk rel="alternate" type="application/rss+xml"='abase-stylesheet-css'  href='http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/css/style.css?v=9904a3&#038;av=8fa14c' type='text/css' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='abase-ie-only-css'  href='http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/css/ie.css?v=9904a3&#038;av=8fa14c' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?v=9904a3&#038;av=8fa14c'></script>
+	<script>
+		// Declare the aBase namespace
+		aBase = jQuery.extend({},{
+			authenticated: 0,
+			template_uril: "http://cdn.inquisitr.com/wp-content/themes/inquisitr", // A path to the theme template from root
+			home_url: "http://www.inquisitr.com",
+			ajax_url: "http://www.inquisitr.com/wp/wp-admin/admin-ajax.php"
+		})
+	</script>
+	<link rel='shortlink' href='http://www.inquisitr.com/?p=1235929' />
+<link rel="author" href="https://plus.google.com/+MichaelDolceSire/" />
+			<!-- Start of Facebook Meta Tags -->
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content="Whooping Cough Prevention Is Best Medicine" />
+			<meta property="og:url" content="http://www.inquisitr.com/1235929/whooping-cough-prevention-is-best-medicine/" />
+			<meta property="og:image" content="http://cdn.inquisitr.com/wp-content/uploads/2014/05/Whooping-Cough-Prevention-665x385.jpg" />
+			<meta property="og:site_name" content="The Inquisitr News"/>
+			<meta property="og:description" content="Whooping cough is everywhere these days. With epidemics on the rise in California, Maine and other areas, coinciding with a decrease in vaccinations, it&#8217;s" />
+			<!-- End of Facebook Meta Tags -->
+
+			<!-- Start of Twitter Meta Tags -->
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@theinquisitr"/>
+			<meta name="twitter:image:src" content="http://cdn.inquisitr.com/wp-content/uploads/2014/05/Whooping-Cough-Prevention-670x409.jpg" />
+			<meta name="twitter:image:width" content="665">
+			<meta name="twitter:image:height" content="385">
+			<meta name="twitter:description" content="Whooping cough is everywhere these days. With epidemics on the rise in California, Maine and other areas, coinciding with a decrease in vaccinations, it&#8217;s" />
+			<!-- End of Twitter Meta Tags -->
+
+		
+<!-- All in One SEO Pack 2.2.4 by Michael Torbert of Semper Fi Web Design[721,772] -->
+<link rel="author" href="https://plus.google.com/+MichaelDolceSire/" />
+<meta name="description" itemprop="description" content="Whooping cough is everywhere these days. With epidemics on the rise in California, Maine and other areas, coinciding with a decrease in vaccinations, it's" />
+
+<meta name="keywords" itemprSire/" />
+<meta name="description" itemprop="op="keywords" content="whooping cough,whooping cough prevention,whooping cough vaccination" />
+
+<link rel="canonical" href="http://www.inquisitr.com/1235929/whooping-cough-prevention-is-best-medicine/" />
+<!-- /all in one seo pack -->
+<!--[if lt IE 9]><script src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/js/scripts.ie.9904a3.js"></script><![endif]--><!--[if lt IE 10]><script src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/js/scripts.ie9.9904a3.js"></script><![endif]--><!--[if lt IE 9]><script src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/js/scripts.ie8.9904a3.js"></script><![endif]-->		<!-- end of wordpress head -->
+		<script>
+			var siteurl = 'http://www.inquisitr.com';
+			var singleID = '1235929';
+			var google_adnum = 0;
+		</script>
+
+		<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=7443,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+(function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script>
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+googletag.cmd.push(function() {
+
+googletag.pubads().enableAsyncRendering();
+googletag.defineSlot('/3945829/IQ_C_ATF_728x90', [728, 90], 'div-gpt-ad-1394023803607-0').addService(googletag.pubads());
+googletag.defineSlot('/3945829/IQ_C_ATF_Side_300x250', [300, 250], 'div-gpt-ad-1394023803607-1').addService(googletag.pubads());
+googletag.defineSlot('/3945829/IQ_C_BTF_160x600', [160, 600], 'div-gpt-ad-1394023803607-2').addService(googletag.pubads());
+googletag.defineSlot('/3945829/IQ_C_BTF_300x250', [300, 250], 'div-gpt-ad-1394023803607-3').addService(googletag.pubads());
+googletag.defineSlot('/3945829/IQ_C_BTF_728x90', [728, 90], 'div-gpt-ad-1394023803607-4').addService(googletag.pubads());
+googletag.defineSlot('/3945829/IQ_ContentAd_300x600', [300, 600], 'div-gpt-ad-1394023803607-5').addService(googletag.pubads());
+googletag.defineSlot('/3945829/IQ_MediaForce_260x410', [260, 410], 'div-gpt-ad-1394023803607-6').addService(googletag.pubads());
+googletag.defineSlot('/3945829/IQ_MediaForce_670x250', [670, 250], 'div-gpt-ad-1394023803607-7').addService(googletag.pubads());
+googletag.defineSlot('/3945829/IQ_Spec1_300x250', [300, 250], 'div-gpt-ad-1394023803607-8').addService(googletag.pubads());
+googletag.defineSlot('/3945829/IQ_Under_Content', [300, 250], 'div-gpt-ad-1411394610486-0').addService(googletag.pubads());
+googletag.defineSlot('/3945829/IQ_Spec2_300x250', [300, 250], 'div-gpt-ad-1394023803607-9').addService(googletag.pubads());
+inqMediaAd = googletag.defineSlot('/3945829/IQ_Spec_Video_300x250', [300, 250], 'div-gpt-ad-1394023803607-10').addService(googletag.pubads());
+inqMediaAdId = 'div-gpt-ad-1394023803607-10';
+googletag.pubads().enableAsyncRendering();
+googletag.enableServices();
+
+});
+</script>
+
+<script type="text/javascript">(function (){var sct = document.createElement("script"),sctHl = document.getElementsByTagName("script")[0];sct.type = "text/javascript";sct.src = 'http://contextual.media.net/inslmedianet.js?cid=8CUH7MPU5&crid=527115768&size=641x481';sct.async = "async";sctHl.parentNode.insertBefore(sct, sctHl);})();</script>
+		<link rel="alternate" type="application/rss+xml" title="Full RSS Feed" href="http://feeds.inquisitr.com/google/yDYq" />
+		<link rel="alternate" type="application/rss+xml" title="Twitter" href="http://twitter.com/theinquisitr" />
+		<link rel="alternate" type="application/rss+xml" title="Tech RSS Feed" href="http://feeds.inquisitr.com/TheInquisitrTechnology" />
+		<link rel="alternate" type="application/rss+xml" title="Gaming RSS Feed" href="http://feeds.inquisitr.com/TheInquisitrGaming" />
+		<link rel="alternate" type="application/rss+xml" title="News RSS Feed" href="http://feeds.inquisitr.com/TheInquisitrNews" />
+		<link rel="alternate" type="application/rss+xml" title="Sports RSS Feed" href="http://feeds.inquisitr.com/TheInquisitrSport" />
+		<link rel="alternate" type="application/rss+xml" title="Entertainment RSS Feed" href="http://feeds.inquisitr.com/TheInquisitrEntertainment" />
+		<link rel="alternate" type="application/rss+xml" title="Funny &amp; Strange RSS Feed" href="http://feeds.inquisitr.com/TheInquisitrFunnyStrange" />
+		<link rel="alternate" type="application/rss+xml" title="World RSS Feed" href="http://feeds.inquisitr.com/TheInquisitrWorld" />
+		<link rel="alternate" type="application/rss+xml" title="Health Feed" href="http://feeds.inquisitr.com/TheInquisitrHealth" />
+		<link rel="alternate" type="application/rss+xml" title="Lifestyle Feed" href="http://feeds.inquisitr.com/TheInquisitrLifestyle" />
+		<link rel="pingback" href="http://www.inquisitr.com/xmlrpc.php" />
+
+	</head>
+
+	<body class="single single-post postid-1235929 single-format-standard segment segment-health">
+
+		<noscript>
+			<style>
+				[data-lazy-src]{
+					display:none;
+				}
+			</style>
+			<!-- <meta http-equiv="refresh" content="0; ./?javascript=false"> -->
+		</noscript>
+		<div id="container">
+
+			<header class="header" role="banner">
+				<div id="inner-header" class="wrap clearfix">
+
+					
+					<p id="logo" class="h1">
+
+						<a href="http://www.inquisitr.com"><img src="http://cdn.inquisitr.com/wp-content/themes/inquisitr//dist/images/logos/inquisitr-312x75.png" alt="The Inquisitr" title="The Inquisitr" width="312" height="75"></a>
+
+					</p>
+
+					<div id="header-search">
+		<ul>
+			<li class="search"><form m"><img src="http://cdn.inquisitr.com/wp-content/themes/inquisitr//dist/images/logos/inquisitr-312x75.png" alt="The Inquisitr" title="The Inquisitr" width="312" height="75"></a>
+
+					</p>
+
+					<div id="header-search">
+		<ul>
+			<li class=role="search" method="get" id="searchform" action="http://www.inquisitr.com/" >
+	<input type="text" value="" name="s" id="s" placeholder="Search..." /></form><a href="" class="icon icon-search"></a></li>
+			<li class="twitter"><a href="http://twitter.com/theinquisitr" class="icon icon-twitter" title="Twitter"></a></li>
+			<li class="fb"><a href="http://www.facebook.com/theinquisitr" class="icon icon-facebook" title="Facebook"></a></li>
+			<li class="rss"><a href="http://feeds.inquisitr.com/google/yDYq" class="icon icon-rss" title="RSS Feed"></a></li>
+		</ul>
+</div>
+
+					<nav role="navigation">
+						<ul id="menu-header" class="nav top-nav clearfix"><li id="menu-item-959371" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-depth-0 menu-depth-0 menu-item-959371"><a href="http://www.inquisitr.com">Home</a></li>
+<li id="menu-item-979594" class="menu-item menu-item-type-post_type menu-item-object-segment menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-979594"><a href="http://www.inquisitr.com/entertainment/">Entertainment<i class="icon icon-menu-arrow-down"></i></a>
+		<div class="massive-menu">
+
+<ul class="sub-menu">
+	<li id="menu-item-959373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959373"><a href="http://www.inquisitr.com/category/entertainment/pop/">Celebrity News</a>	</li>
+	<li id="menu-item-959374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959374"><a href="http://www.inquisitr.com/category/entertainment/famous-relationships/">Famous Relationships</a>	</li>
+	<li id="menu-item-959414" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959414"><a href="http://www.inquisitr.com/category/entertainment/music/">Music</a>	</li>
+	<li id="menu-item-959375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959375"><a href="http://www.inquisitr.com/category/entertainment/movies/">Movies</a>	</li>
+	<li id="menu-item-959415" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959415"><a href="http://www.inquisitr.com/category/entertainment/online-videos/">Online Videos</a>	</li>
+	<li id="menu-item-979601" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-979601"><a href="http://www.inquisitr.com/category/entertainment/tv-entertainment/">TV</a>	</li>
+	<li id="menu-item-979605" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-979605"><a href="http://www.inquisitr.com/category/entertainment/celebrity-rumors-news/">Rumors</a>	</li>
+</ul>
+<div class='massive-menu-right eightcol'>
+	<section class="massive-menu-items">
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1734237/youve-got-mail-loveland-co-gets-ready-for-valentines-day/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/6a00d834515a1f69e20120a7f95237970b-800wi-100x100.jpg" data-attID="1734311" class="attachment-thumbnail wp-post-image" alt="loveland" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/6a00d834515a1f69e20120a7f95237970b-800wi-100x100.jpg" data-attID="1734311" class="attachment-thumbnail wp-post-image" alt="loveland" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1734237/youve-got-mail-loveland-co-gets-ready-for-valentines-day/">You&#8217;ve Got Mail: Loveland, Colorado, Gets Ready For Valentine&#8217;s Day</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1732421/weight-watchers-my-butt-youtube-commercial-gets-2-2m-views-video/"  data-format="video">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/weight-watchers-my-butt-commercial-100x100.jpg" data-attID="1732482" class="attachment-thumbnail="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/weight-watchers-my-butt-commercial-1 wp-post-image" alt="Weight Watchers" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/weight-watchers-my-butt-commercial-100x100.jpg" data-attID="1732482" class="attachment-thumbnail wp-post-image" alt="Weight Watchers" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1732421/weight-watchers-my-butt-youtube-commercial-gets-2-2m-views-video/">Weight Watchers: ‘My Butt’ YouTube Commercial Gets 2.2M Views [Video]</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1732216/hogwarts-grad-emma-watson-ellen-page-keira-knightley-zac-efron-blake-lively-in-30-under-30-video/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Emma-Watson-Daniel-Radcliffe-Harry-Potter-100x100.jpg" data-attID="1732317" class="attachment-thumbnail wp-post-image" alt="Emma Watson with &quot;Harry Potter&quot; stars" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Emma-Watson-Daniel-Radcliffe-Harry-Potter-100x100.jpg" data-attID="1732317" class="attachment-thumbnail wp-post-image" alt="Emma Watson with &quot;Harry Potter&quot; stars" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1732216/hogwarts-grad-emma-watson-ellen-page-keira-knightley-zac-efron-blake-lively-in-30-under-30-video/">Hogwarts Grad Emma Watson, Ellen Page, Keira Knightley, Zac Efron, Blake Lively In &#8217;30 Under 30&#8242; [Video]</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1727240/all-about-that-bass-parody-calls-out-meghan-trainor/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/ParodyShot-100x100.png" data-attID="1728662" class="attachment-thumbnail wp-post-image" alt="Parody of &quot;All About That Bass&quot; calls out Meghan Trainor for body shaming and sexism." /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/ParodyShot-100x100.png" data-attID="1728662" class="attachment-thumbnail wp-post-image" alt="Parody of &quot;All About That Bass&quot; calls out Meghan Trainor for body shaming and sexism." /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1727240/all-about-that-bass-parody-calls-out-meghan-trainor/">&#8216;All About That Bass&#8217; Parody Calls Out Meghan Trainor</a></span>
+			</article>
+					<artng and sexism." /></noscript>				</a>
+				<span cicle class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1728063/disney-visitor-gets-owned-by-costumed-gaston-character-in-push-up-contest-video/"  data-format="video">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Gaston-in-a-Push-Up-contest-100x100.png" data-attID="1728117" class="attachment-thumbnail wp-post-image" alt="Gaston Disney" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Gaston-in-a-Push-Up-contest-100x100.png" data-attID="1728117" class="attachment-thumbnail wp-post-image" alt="Gaston Disney" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1728063/disney-visitor-gets-owned-by-costumed-gaston-character-in-push-up-contest-video/">Disney Visitor Gets Owned By Costumed Gaston Character In Push-Up Contest [Video]</a></span>
+			</article>
+		
+		<a href="" class="hp-readmore">See More</a>
+	</section>
+</div>
+</div ></li>
+<li id="menu-item-979593" class="menu-item menu-item-type-post_type menu-item-object-segment menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-979593"><a href="http://www.inquisitr.com/news/">News and Politics<i class="icon icon-menu-arrow-down"></i></a>
+		<div class="massive-menu">
+
+<ul class="sub-menu">
+	<li id="menu-item-959387" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959387"><a href="http://www.inquisitr.com/category/opinion/">Opinion</a>	</li>
+	<li id="menu-item-959383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959383"><a href="http://www.inquisitr.com/category/news/business/">Business</a>	</li>
+	<li id="menu-item-959384" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959384"><a href="http://www.inquisitr.com/category/news/education-news/">Education</a>	</li>
+	<li id="menu-item-979600" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-979600"><a href="http://www.inquisitr.com/category/news/politics/">Politics</a>	</li>
+	<li id="menu-item-979603" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-979603"><a href="http://www.inquisitr.com/category/world/">World</a>	</li>
+</ul>
+<div class='massive-menu-right eightcol'>
+	<section class="massive-menu-items">
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1734392/missing-plane-found-airasia-flight-8501-tail-found-black-box-recorders-may-be-in-reach/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazyquisitr.com/1734392/missing-plane-found-airas-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Missing-Plane-Found-AirAsia-Flight-8501-Tail-Found-Black-Box-Recorders-May-Be-In-Reach-100x100.jpg" data-attID="1734422" class="attachment-thumbnail wp-post-image" alt="Missing Plane Found? AirAsia Flight 8501 Tail Found, Black Box Recorders May Be In Reach" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Missing-Plane-Found-AirAsia-Flight-8501-Tail-Found-Black-Box-Recorders-May-Be-In-Reach-100x100.jpg" data-attID="1734422" class="attachment-thumbnail wp-post-image" alt="Missing Plane Found? AirAsia Flight 8501 Tail Found, Black Box Recorders May Be In Reach" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1734392/missing-plane-found-airasia-flight-8501-tail-found-black-box-recorders-may-be-in-reach/">Missing Plane Found? AirAsia Flight 8501 Tail Found, Black Box Recorders May Be In Reach</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1734003/sony-claims-no-financial-damage-as-the-interview-earns-digital-millions/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/sony-100x100.jpg" data-attID="1734175" class=ons/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-la"attachment-thumbnail wp-post-image" alt="Sony Corp Chief Executive Officer Kazuo Hirai" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/sony-100x100.jpg" data-attID="1734175" class="attachment-thumbnail wp-post-image" alt="Sony Corp Chief Executive Officer Kazuo Hirai" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1734003/sony-claims-no-financial-damage-as-the-interview-earns-digital-millions/">Sony Claims No Financial Damage As &#8216;The Interview&#8217; Earns Digital Millions</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1733985/lana-del-rey-new-album-honeymoon/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Lana-Del-Rey-Honeymoon-100x100.jpg" data-attID="1734155" class="attachment-thumbnail wp-post-image" alt="Lana Del Rey" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Lana-Del-Rey-Honeymoon-100x100.jpg" data-attID="1734155" class="attachment-thumbnail wp-post-image" alt="Lana Del Rey" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1733985/lana-del-rey-new-album-honeymoon/t/uploads/2015/01/Lana-Del-Rey-Honeymoon-100x100.jpg" data-attID="1734155" class="attachment-thumbnail wp-post-image" alt="Lana Del Rey" /></noscript>">Lana Del Rey Announces &#8216;Honeymoon&#8217;, Her New Album</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1733925/bill-gates-drinks-human-poop-something-tasty/"  data-format="video">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Bill-Gates-drinking-Water-100x100.jpg" data-attID="1734145" class="attachment-thumbnail wp-post-image" alt="Bill Gates" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Bill-Gates-drinking-Water-100x100.jpg" data-attID="1734145" class="attachment-thumbnail wp-post-image" alt="Bill Gates" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1733925/bill-gates-drinks-human-poop-something-tasty/">Watch As Bill Gates Drinks Human Poop Transformed Into Something Tasty!</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1733908/cassandra-fortin-chemotherapy-forced-on-connecticut-teen-who-doesnt-want-cancer-treatment/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Cassandra-Fortin-Chemotherapy-Forced-On-Connecticut-Teen-Who-Doesnt-Want-Cancer-Treatment-100x100.jpg" data-attID="1734070" class="attachment-thumbnail wp-post-image" alt="Cassandra Fortin: Chemotherapy Forced On Connecticut Teen Who Doesn&#039;t Want Cancer Treatment" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Cassandra-Fortin-Chemotherapy-Forced-On-Connecticut-Teen-Who-Doesnt-Want-Cancer-Treatment-100x100.jpg" data-attID="1734070" class="attachment-thumbnail wp-post-image" alt="Cassandra Fortin: Chemotherapy Forced On Connecticut Teen Who Doesn&#039;t Want Cancer Treatment" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1733908/cassandra-fortin-chemotherapy-forced-on-connecticut-teen-who-doesnt-want-cancer-treatment/">Cassandra Fortin: Chemotherapy Forced On Connecticut Teen Who Doesn&#8217;t Want Cancer Treatment</a></span>
+			</article>
+		
+		<a href="" class="hp-readmore">See More</a>
+	</section>
+</div>
+</div ></li>
+<li id="menu-item-959370" class="menu-item menu-item-type-post_type menu-item-object-segment menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-959370"><a href="http://www.inquisitr.com/sports/">Sports<i class="icon icon-menu-arrow-down"></i></a>
+		<div class="massive-menu">
+
+<ul class="sub-menu">
+	<li id="menu-item-959388" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959388"><a href="http://www.inquisitr.com/category/sports/baseball/">Baseball</a>	</li>
+	<li id="menu-item-959389" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959389"><a href="http://www.inquisitr.com/category/sports/basketball/">Basketball</a>	</li>
+	<li id="menu-item-959390" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959390"><a href="http://www.inquisitr.com/category/sports/boxing-news/">Boxing</a>	</li>
+	<li id="menu-item-959391" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959391"><a href="http://www.inquisitr.com/category/sports/football/">Football</a>	</li>
+	<li id="menu-item-959392" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959392"><a href="http://www.inquisitr.com/category/sports/golf-news/">Golf</a>	</li>
+	<li id="menu-item-959393" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959393"><a href="http://www.inquisitr.com/category/sports/hockey-sport/">Hockey</a>	</li>
+	<li id="menu-item-959395" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959395"><a href="http://www.inquisitr.com/category/sports/nascar-sport/">NASCAR</a>	</li>
+</ul>
+<div class='massive-menu-right eightcol'>
+	<section class="massive-menu-items">
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1734263/the-ice-bowl-1967-was-the-coldest-nfl-game-ever-packers-vs-cowboys-at-lambeau-field-may-be-ice-bowl-2/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/The-Ice-Bowl-1967-Was-The-Coldest-NFL-Game-Ever-Packers-Vs.-Cowboys-At-Lambeau-Field-May-Be-Ice-Bowl-2-100x100.jpg" data-attID="1734299" class="attachment-thumbnail wp-post-image" alt="The Ice Bowl 1967 Was The Coldest NFL Game Ever: Packers Vs. Cowboys At Lambeau Field May Be Ice Bowl 2?" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/The-Ice-Bowl-1967-Was-The-Coldest-NFL-Game-Ever-Packers-Vs.-Cowboys-At-Lambeau-Field-May-Be-Ice-Bowl-2-100x100.jpg" data-attID="1734299" class="attachment-thumbnail wp-post-image" alt="The Ice Bowl 1967 Was The Coldest NFL Game Ever: Packers Vs. Cowboys At Lambeau Field May Be Ice Bowl 2?" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1734263/the-ice-bowl-1967-was-the-coldest-nfl-game-ever-packers-vs-cowboys-at-lambeau-field-may-be-ice-bowl-2/">The Ice Bowl 1967 Was The Coldest NFL Game Ever: Packers Vs. Cowboys At Lambeau Field May Be Ice Bowl 2?</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1733385/wwe-news-erick-rowan-dolph-ziggler-ryback-all-added-to-wwe-alumni-section-after-firing/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/erick-rowan-ziggler-ryback-100x100.jpg" data-attID="1733411" class="attachment-thumbnail wp-post-image" alt="Erick Rowan Dolph Ziggler Ryback Fired WWE" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/erick-rowan-ziggler-ryback-100x100.jpg" data-attID="1733411" class="attachment-thumbnail wp-post-image" alt="Erick Rowan Dolph Ziggler Ryback Fired WWE" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1733385/wwe-news-erick-rowan-dolph-ziggler-ryback-all-added-to-wwe-alumni-section-after-firing/">WWE News: Erick Rowan, Dolph Ziggler, Ryback All Added To WWE Alumni Section After Firing</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1716477/cm-punk-not-trying-to-follow-in-brock-lesnars-steps-no-plans-for-title-shot/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/CM-Punk-Not-Looking-To-Follow-100x100.png" data-attID="1732086" class="attachment-thumbnail wp-post-image" alt="CM Punk Not Expecting Title Shot" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/CM-Punk-Not-Looking-To-Follow-100x100.png" data-attID="1732086" class="attachment-thumbnail wp-post-image" alt="CM Punk Not Expecting Title Shot" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1716477/cm-punk-not-trying-to-follow-in-brock-lesnars-steps-no-plans-for-title-shot/">CM Punk &#8216;Not Trying To Follow In Brock Lesnar&#8217;s Steps,&#8217; No Plans For Title Shot</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1731996/oj-simpson-lapd-stolen-heisman/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/O.J.-Simpson-100x100.jpg" data-attID="1732036" class="attachment-thumbnail wp-post-image" alt="O.j. Simpson" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/O.J.-Simpson-100x100.jpg" data-attIads/2015/01/O.J.-Simpson-100x100.jpg" data-attID="1732036" class="attachment-thumbnail wp-post-image" alt="O.j. Simpson" /><noscript><iD="1732036" class="attachment-thumbnail wp-post-image" alt="O.j. Simpson" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1731996/oj-simpson-lapd-stolen-heisman/">O.J. Simpson: LAPD Looking For Stolen Heisman, Has Search Warrant</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1731935/dallas-cowboys-call-reversal-controversy-top-nfl-official-says-ref-was-wrong/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Dallas-Cowboys-Call-Reversal-100x100.png" data-attID="1731947" class="attachment-thumbnail wp-post-image" alt="Dallas Cowboys Call Official Weighs In" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Dallas-Cowboys-Call-Reversal-100x100.png" data-attID="1731947" class="attachment-thumbnail wp-post-image" alt="Dallas Cowboys Call Official Weighs In" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1731935/dallas-cowboys-call-reversal-controversy-top-nfl-official-says-ref-was-wrong/">Dallas Cowboys Call Reversal Controversy: Top NFL Official Says Ref Was Wrong</a></span>
+			</article>
+		
+		<a href="" class="hp-readmore">See More</a>
+	</section>
+</div>
+</div ></li>
+<li id="menu-item-979591" class="menu-item menu-item-type-post_type menu-item-object-segment menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-979591"><a href="http://www.inquisitr.com/life/">Lifestyle<i class="icon icon-menu-arrow-down"></i></a>
+		<div class="massive-menu">
+
+<ul class="sub-menu">
+	<li id="menu-item-959378" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959378"><a href="http://www.inquisitr.com/category/lifestyle/">Lifestyle</a>	</li>
+	<li id="menu-item-959419" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959419"><a href="http://www.inquisitr.com/category/health/nutrition-news/">Nutrition</a>	</li>
+	<li id="menu-item-959379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959379"><a href="http://www.inquisitr.com/category/lifestyle/fashion/">Fashion</a>	</li>
+	<li id="menu-item-959402" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959402"><a href="http://www.inquisitr.com/category/lifestyle/shopping/">Shopping</a>	</li>
+	<li id="menu-item-979604" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-979604"><a href="http://www.inquisitr.com/category/lifestyle/travel-lifestyle/">Travel</a>	</li>
+</ul>
+<div class='massive-menu-right eightcol'>
+	<section  id="menu-item-979604" class="menu-item menu-class="massive-menu-items">
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1733063/flat-white-coffee-prices-are-rising-how-to-save-money/"  data-format="video">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Flat-White-Coffee-100x100.jpg" data-attID="1733147" class="attachment-thumbnail wp-post-image" alt="Starbucks&#039; Flat White Coffee" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Flat-White-Coffee-100x100.jpg" data-attID="1733147" class="attachment-thumbnail wp-post-image" alt="Starbucks&#039; Flat White Coffee" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1733063/flat-white-coffee-prices-are-rising-how-to-save-money/">Flat White Coffee Prices Are Rising, Here&#8217;s How To Save Money [Video]</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1731238/gigi-hadids-bare-breasts/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Gigi-Hadid-Guess-Jeans-Ad-100x100.jpg" data-attID="1731347" class="attachment-thumbnail wp-post-image" alt="Guess Jeans Ad" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Gigi-Hadid-Guess-Jeans-Ad-100x100.jpg" data-attID="1731347" class="attachment-thumbnail wp-post-image" alt="Guess Jeans Ad" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1731238/gigi-hadids-bare-breasts/">Guess Jeans Ad Gets Gigi Hadid&#8217;s Bare Breasts</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1730696/year-without-god-pastor-ryan-bell-no-longer-believes-atheists-arent-the-nihilists-christians-think-they-are/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Ryan-Bell-Doesnt-Believe-In-God-After-Year-Without-Him-100x100.jpg" data-attID="1730709" class="attachment-thumbnail wp-post-image" alt="Ryan Bell No Longer Believes In God" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Ryan-Bell-Doesnt-Believe-In-God-After-Year-Without-Him-100x100.jpg" data-attID="1730709" class="attachment-thumbnail wp-post-image" alt="Ryan Bell No Longer Believes In God" /></noscript>				</a>
+				<span class="h4"><a itr.com/wp-content/uploads/2015/01/Ryan-Bell-href="http://www.inquisitr.com/1730696/year-without-god-pastor-ryan-bell-no-longer-believes-atheists-arent-the-nihilists-christians-think-they-are/">&#8216;Year Without God&#8217; Pastor Ryan Bell No Longer Believes: &#8216;Atheists Aren&#8217;t The Nihilists Christians Think They Are&#8217;</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1729001/flight-passengers-stranded-for-over-12-hours-on-middle-eastern-tarmac/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/airway-100x100.jpg" data-attID="1729039" class="attachment-thumbnail wp-post-image" alt="airway" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/airway-100x100.jpg" data-attID="1729039" class="attachment-thumbnail wp-post-image" alt="airway" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1729001/flight-passengers-stranded-for-over-12-hours-on-middle-eastern-tarmac/">Flight Passengers Stranded For Over 12 Hours On Middle Eastern Tarmac</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1728105/man-suspected-of-vandalizing-islamic-cultural-center-hate-crime/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Hate-Crime-At-Islamic-Cultural-Center-100x100.jpg" data-attID="1728215" class="attachment-thumbnail wp-post-image" alt="Hate Crime Involving Vandalism?" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Hate-Crime-At-Islamic-Cultural-Center-100x100.jpg" data-attID="1728215" class="attachment-thumbnail wp-post-image" alt="Hate Crime Involving Vandalism?" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1728105/man-suspected-of-vandalizing-islamic-cultural-center-hate-crime/">Man Suspected Of Vandalizing Islamic Cultural Center: Hate Crime?</a></span>
+			</article>
+		
+		<a href="" class="hp-readmore">See More</a>
+	</section>
+</div>
+</div ></li>
+<li id="menu-item-1689151" class="menu-item menu-item-type-post_type menu-item-object-segment menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-1689151"><a href="http://www.inquisitr.com/health/">Health<i class="icon icon-menu-arrow-down"></i></a>
+		<div class="massive-menu">
+
+<ul class="sub-menu">
+	<li id="menu-item-1689152" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1689152"><a"http://www.inquisitr.com/health/">Health<i c href="http://www.inquisitr.com/category/health/">Health</a>	</li>
+	<li id="menu-item-1689153" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1689153"><a href="http://www.inquisitr.com/category/health/health-studies-news/">Health Studies</a>	</li>
+	<li id="menu-item-1689154" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1689154"><a href="http://www.inquisitr.com/category/health/medicine-news/">Medicine</a>	</li>
+	<li id="menu-item-1689155" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1689155"><a href="http://www.inquisitr.com/category/health/nutrition-news/">Nutrition</a>	</li>
+</ul>
+<div class='massive-menu-right eightcol'>
+	<section class="massive-menu-items">
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1734275/notion-of-healthy-obesity-largely-a-myth-new-study-says/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/healthy-obesity-100x100.jpg" data-attID="1734296" class="attachment-thumbnail wp-post-image" alt="Healthy Obesity?" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/healthy-obesity-100x100.jpg" data-attID="1734296" class="attachment-thumbnail wp-post-image" alt="Healthy Obesity?" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1734275/notion-of-healthy-obesity-largely-a-myth-new-study-says/">Notion of &#8216;Healthy Obesity&#8217; Largely a Myth, New Study Says</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1733477/dash-diet-named-1-best-diet-overall-as-the-bulletproof-diet-gains-popularity/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/weight-scale-woman-inquisitr-size-100x100.jpg" data-attID="1733663" class="attachment-thumbnail wp-post-image" alt="DASH Diet" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/weight-scale-woman-inquisitr-size-100x100.jpg" data-attID="1733663" class="attachment-thumbnail wp-post-image" alt="DASH Diet" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1733477/dash-diet-named-1-best-diet-overall-as-the-bulletproof-diet-gains-popularity/">&#8216;DASH Diet&#8217; Named No. 1 Best Diet Overall As &#8216;The Bulletproof Diet&#8217; Gains Popularity</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1731866/heart-attack-risk-cut-by-73-with-these-6-steps/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/woman_jogging_1280x800-100x100.jpg" data-attID="1732138" class="attachment-thumbnail wp-post-image" alt="woman_jogging" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/woman_jogging_1280x800-100x100.jpg" data-attID="1732138" class="attachment-thumbnail wp-post-image" alt="woman_jogging" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1731866/heart-attack-risk-cut-by-73-with-these-6-steps/">Heart Attack Risk Cut By 73 Percent With These 6 Steps</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1725883/cell-phones-may-cause-cancer-here-are-a-few-facts-to-consider/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/cell-phone-radiation-100x100.jpg" data-attID="1725894" class="attachment-thumbnail wp-post-image" alt="cell phone radiation" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/cell-phone-radiation-100x100.jpg" data-attID="1725894" class="attachment-thumbnail wp-post-image" alt="cell phone radiation" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1725883/cell-phones-may-cause-cancer-here-are-a-few-facts-to-consider/">Cell Phones May Cause Cancer? Here Are A Few Facts To Consider</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1725959/obesity-not-as-unhealthy-for-some-according-to-new-study/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Obesity-Study-Comes-Up-With-Surprising-Finds-100x100.jpg" data-attID="1725975" class="attachment-thumbnail wp-post-image" alt="Obesity And Fast Food Not Bad Combination" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Obesity-Study-Comes-Up-With-Surprising-Finds-100x100.jpg" data-attID="1725975" class="attachment-thumbnail wp-post-image" alt="Obesity And Fast Food Not Bad Combination" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1725959/obesity-not-as-unhealthy-for-some-according-to-new-study/">Obesity Not As Unhealthy For Some, According To New Study</a></span>
+			</article>
+		
+		<a href="" class="hp-readmore">See More</a>
+	</section>
+</div>
+</div ></li>
+<li id="menu-item-979592" class="menu-item menu-item-type-post_type menu-item-object-segment menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-979592"><a href="http://www.inquisitr.com/tech/">Science and Tech<i class="icon icon-menu-arrow-down"></i></a>
+		<div class="massive-menu">
+
+<ul class="sub-menu">
+	<li id="menu-item-959396" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959396"><a href="http://www.inquisitr.com/category/science-news/">Science</a>	</li>
+	<li id="menu-item-959399" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959399"><a href="http://www.inquisitr.com/category/tech/">Technology</a>	</li>
+	<li id="menu-item-959381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959381"><a href="http://www.inquisitr.com/category/lifestyle/geek-culture/">Geek Culture</a>	</li>
+	<li id="menu-item-959376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959376"><a href="http://www.inquisitr.com/category/gaming/">Gaming</a>	</li>
+	<li id="menu-item-959397" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959397"><a href="http://www.inquisitr.com/catem-object-category menu-item-959376"><a href="http://www.inquisitr.com/category/gaming/">Gaming</a>	</li>
+	<li id="menu-item-959397" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959397"><a href="http://www.inqgory/science-news/space-news-science-news/">Space</a>	</li>
+	<li id="menu-item-959398" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-959398"><a href="http://www.inquisitr.com/category/science-news/theories/">Theories</a>	</li>
+</ul>
+<div class='massive-menu-right eightcol'>
+	<section class="massive-menu-items">
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1730450/two-halo-5-forge-created-maps-revealed-choose-which-will-be-in-beta/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/h5-mp-beta-regret-shoulder-drop-75900f71927741bc90fd516d41cbb996-100x100.jpg" data-attID="1730681" class="attachment-thumbnail wp-post-image" alt="Halo 5: Guardians Multiplayer Beta (Xbox One)" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/h5-mp-beta-regret-shoulder-drop-75900f71927741bc90fd516d41cbb996-100x100.jpg" data-attID="1730681" class="attachment-thumbnail wp-post-image" alt="Halo 5: Guardians Multiplayer Beta (Xbox One)" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1730450/two-halo-5-forge-created-maps-revealed-choose-which-will-be-in-beta/">Two &#8216;Halo 5&#8217; Forge Created Maps Revealed, Choose Which Will Be In Beta</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1728252/the-original-kinect-reaches-end-of-life-for-windows-in-2015/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Original-Kinect-End-of-Life-100x100.jpg" data-attID="1728739" class="attachment-thumbnail wp-post-image" alt="Original Kinect End of Life" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Original-Kinect-End-of-Life-100x100.jpg" data-attID="1728739" class="attachment-thumbnail wp-post-image" alt="Original Kinect End of Life" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1728252/the-original-kinect-reaches-end-of-life-for-windows-in-2015/">The Original Kinect Reaches End Of Life For Windows In 2015</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1728155/swatting-call-sends-about-20-police-officers-to-gamergate-critic-grace-lynns-former-house/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Grace-Lynn-Swatted-By-GamerGate-100x100.jpg" data-attID="1728559" class="attachment-thumbnail wp-post-image" alt="Grace Lynn Swatted By GamerGate" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Grace-Lynn-Swatted-By-GamerGate-100x100.jpg" data-attID="1728559" class="attachment-thumbnail wp-post-image" alt="Grace Lynn Swatted By GamerGate" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1728155/swatting-call-sends-about-20-police-officers-to-gamergate-critic-grace-lynns-former-house/">Swatting Call Sends &#8216;About 20&#8217; Police Officers To GamerGate Critic Grace Lynn&#8217;s Former House</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1727746/new-video-game-releases-for-the-week-of-january-4-2015/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/New-Video-Game-Releases-January-4-Funk-of-the-Titans-100x100.jpg" data-attID="1728127" class="attachment-thumbnail wp-post-image" alt="New Video Game Releases January 4 Funk of the Titans" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.c-Video-Game-Releases-January-4-Funk-of-the-Titans-100x100.jpg" data-attID="1728127" class="attachment-thumbnail wp-post-image" alt="New Video Game Releases January 4 Funk of the Titans" /><noscriom/wp-content/uploads/2015/01/New-Video-Game-Releases-January-4-Funk-of-the-Titans-100x100.jpg" data-attID="1728127" class="attachment-thumbnail wp-post-image" alt="New Video Game Releases January 4 Funk of the Titans" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1727746/new-video-game-releases-for-the-week-of-january-4-2015/">New Video Game Releases For The Week Of January 4, 2015</a></span>
+			</article>
+					<article class="massive-menu-item  first">
+				<a href="http://www.inquisitr.com/1727471/far-cry-4-player-ninjas-his-way-through-24-enemies-in-two-minutes/"  data-format="">
+					<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Far-Cry-4-100x100.jpg" data-attID="1727481" class="attachment-thumbnail wp-post-image" alt="Far Cry 4 player ninjas some enemies" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Far-Cry-4-100x100.jpg" data-attID="1727481" class="attachment-thumbnail wp-post-image" alt="Far Cry 4 player ninjas some enemies" /></noscript>				</a>
+				<span class="h4"><a href="http://www.inquisitr.com/1727471/far-cry-4-player-ninjas-his-way-through-24-enemies-in-two-minutes/">&#8216;Far Cry 4&#8217; Player Ninjas His Way Through 24 Enemies In Two Minutes</a></span>
+			</article>
+		
+		<a href="" class="hp-readmore">See More</a>
+	</section>
+</div>
+</div ></li>
+<li id="menu-item-979608" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-depth-0 menu-depth-0 menu-item-979608"><a href="http://www.inquisitr.com/category/buzzworthy/">BuzzWorthy</a></li>
+<li id="menu-item-959403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-959403"><a href="http://feeds.inquisitr.com/google/yDYq">SUBSCRIBE<i class="icon icon-menu-arrow-down"></i></a>
+		<div class="massive-menu">
+
+<ul class="sub-menu">
+	<li id="menu-item-959404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-959404"><a href="http://feeds.inquisitr.com/google/yDYq">Full RSS Feed</a>	</li>
+	<li id="menu-item-959405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-959405"><a href="http://feeds.inquisitr.com/TheInquisitrNews">Latest News Feed</a>	</li>
+	<li id="menu-item-959406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-959406"><a href="http://feeds.inquisitr.com/TheInquisitrEntertainment">Entertainment News Feed</a>	</li>
+	<li id="menu-item-959407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-959407"><a href="http://feeds.inquistom menu-item-959406"><a href="http://feeds.inquisitritr.com/TheInquisitrWorld">World News</a>	</li>
+	<li id="menu-item-959408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-959408"><a href="http://feeds.inquisitr.com/TheInquisitrTechnology">Tech Feed</a>	</li>
+	<li id="menu-item-959409" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-959409"><a href="http://feeds.inquisitr.com/TheInquisitrGaming">Gaming Feed</a>	</li>
+	<li id="menu-item-959410" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-959410"><a href="http://feeds.inquisitr.com/TheInquisitrSport">Sports Feed</a>	</li>
+	<li id="menu-item-959411" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-959411"><a href="http://feeds.inquisitr.com/TheInquisitrFunnyStrange">Funny &#038; Strange Feed</a>	</li>
+	<li id="menu-item-959412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-959412"><a href="http://feeds.inquisitr.com/TheInquisitrHealth">Health Feed</a>	</li>
+	<li id="menu-item-959413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-959413"><a href="http://feeds.inquisitr.com/TheInquisitrLifestyle">Lifestyle Feed</a>	</li>
+	<li id="menu-item-1060125" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1060125"><a href="http://feeds.inquisitr.com/TheInquisitrNewsBuzzworthy">BuzzWorthy Feed</a>	</li>
+</ul>
+<div class='massive-menu-right eightcol'>
+	<section class="mailchimp_form">
+		<header><h3>Delivered To Your <span>INBOX</span></h3></header>
+<div id="mc_signup">
+	<form method="post" action="#mc_signup" id="mc_signup_form">
+		<input type="hidden" id="mc_submit_type" name="mc_submit_type" value="html" />
+		<input type="hidden" name="mcsf_action" value="mc_submit_signup_form" />
+		<input type="hidden" id="_mc_submit_signup_form_nonce" name="_mc_submit_signup_form_nonce" value="bc1501b7d2" />
+			<div id="mc_subheader">
+			Get Inquisitr's daily viral news by e-mail and never miss the internet's hottest stories!		</div><!-- /mc_subheader -->
+		
+	<div class="mc_form_inside">
+
+		<div class="updated" id="mc_message">
+					</div><!-- /mc_message -->
+
+		
+<div class="mc_merge_var">
+		<label for="mc_mv_EMAIL" class="mc_var_label mc_header mc_header_email">Email Address</label>
+	<input type="text" size="18" placeholder="" name="mc_mv_EMAIL" id="mc_mv_EMAIL" class="mc_input"/>
+</div><!-- /mc_merge_var -->
+		<div class="mc_signup_submit">
+			<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Go" class="button" />
+		</div><!-- /mc_signup_submit -->
+
+
+		
+	</div><!-- /mc_form_inside -->
+	</form><!-- /mc_signup_form -->
+</div><!-- /mc_signup_container -->
+		</section>
+</div>
+</div ></li>
+</ul>					</nav>
+
+				</div> <!-- end #inner-heade" value="Go" class="button" />
+		</div><!-- /r -->
+
+				<div class="holder">
+					<!-- IQ_C_ATF_728x90 -->
+<div id='div-gpt-ad-1394023803607-0' style='width:728px; height:90px;margin: 0 auto;'>
+<script type='text/javascript'>
+if (!jQuery('body').hasClass("page")) {
+     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1394023803607-0'); });
+}else{
+jQuery('#div-gpt-ad-1394023803607-0').hide()
+}
+</script>
+</div>				</div>
+
+			</header> <!-- end header -->
+
+			<div id="content">
+
+				<div id="inner-content" class="wrap clearfix">
+
+					<div id="main" class="eightcol first clearfix" role="main">
+
+													<div class="socialShare">
+								<div class="fb-like"  data-ref="singleSocial"  data-href="http://www.inquisitr.com/1235929/whooping-cough-prevention-is-best-medicine/"  data-send="false" data-width="60" data-show-faces="false" data-action="like" data-layout="box_count"></div>
+								<a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="theinquisitr" data-related="theinquisitr, @Michael_Dolce"></a>
+								<div class="g-plusone" data-size="tall"></div>
+								<div style="transform:scale(1,.9);-webkit-transform:scale(1,.9);">
+									<a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-height="28" ><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_28.png" /></a>
+								</div>
+							</div>
+							<article id="post-1235929" class="post-1235929 post type-post status-publish format-standard has-post-thumbnail hentry category-health tag-whooping-cough tag-whooping-cough-prevention tag-whooping-cough-vaccination clearfix is-featured" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+								<header class="article-header">
+									<div class="meta">
+										Posted in: <a href="http://www.inquisitr.com/category/health/" rel="category tag">Health</a>
+										<time datetime="2014-05-02" pubdate>
+											Posted: <span>May 2, 2014</span>
+										</time>
+									</div>
+									<h1 class="entry-title single-title" itemprop="headline">Whooping Cough Prevention Is Best Medicine																		</h1>
+								</header> <!-- end article header -->
+
+
+								<img width="665" height="385" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2014/05/Whooping-Cough-Prevention-665x385.jpg" data-attID="1235997" class="single-leader wp-post-image" alt="Whooping-Cough-Prevention" /><noscript><img width="665" height="385" src="http://cdn.inquisitr.com/wp-content/uploads/2014/05/Whooping-Cough-Prevention-665x385.jpg" data-attID="1235997" class="single-leader wp-post-image" alt="Whooping-Cough-Prevention" /></noscript>
+								<section class=pt><img width="665" height="385" src="http://"entry-content clearfix" itemprop="articleBody">
+																	<p>Whooping cough is everywhere these days. With epidemics on the rise in California, Maine and other areas, coinciding with a decrease in vaccinations, it&#8217;s important to understand the best medicine is often prevention.</p><div id="ym_667311138333727814" class="ym"></div>
+<p>According to <a title="whooping-cough-aint-much-fun-3-easy-ways-prevent-spread-bacterial-disease" href="http://www.medicaldaily.com/whooping-cough-aint-much-fun-3-easy-ways-prevent-spread-bacterial-disease-279990" target="_blank"><em>Medical Daily</em></a> there are three easy steps to preventing the spread of this infectious disease: &#8220;Take vitamin C, take probiotics and stay hydrated.&#8221;</p>
+<p>Vitamin C helps boost the immune system. As <em>Medical Daily</em> reports: &#8220;Vitamin C in high doses will help you and your child as they develop a lasting immunity to pertussis.&#8221; Pertussis is the clinical term for whooping cough and it can affect individuals both new and old. Probiotics meanwhile &#8220;can help strengthen a child&#8217;s immune system, and it&#8217;s the easiest way to ensure that the body contains &#8216;healthy&#8217; bacteria.&#8221;</p>
+<p>And finally, staying hydrated allows the body to combat the dangerous effects of whooping cough. Toss in a good night&#8217;s rest and one can safely prevent a common cold from developing into this dangerous disease.</p>
+<p>As mentioned earlier, whooping cough has made a comeback in states like California, most notably in the <a title="San Diego, Canada Whooping Cough Immunization: What You Need To Know" href="http://www.inquisitr.com/1208166/san-diego-canada-whooping-cough-immunization-what-you-need-to-know/" target="_blank">San Diego area</a>. According to <a title="Whooping-cough-still-a-problem-in-San-Diego" href="http://www.upi.com/Health_News/2014/05/02/Whooping-cough-still-a-problem-in-San-Diego/4721399030196/" target="_blank"><em>UPI.com</em></a>, &#8220;there have been 298 cases of whooping cough reported since the beginning of 2014.&#8221;</p>
+<p>For many, the symptoms related to the illness can often be mistaken for the common cold so it&#8217;s important to understand what whooping cough symptoms actually are. <a title="whooping-cough-pertussis-topic-overview" href="http://www.webmd.com/children/tc/whooping-cough-pertussis-topic-overview" target="_blank"><em>WebMD</em></a> describes whooping cough in the following way:</p>
+<blockquote><p>&#8220;Whooping cough is a disease that causes very severe coughing that may last for months. You can cough so hard that you hurt a rib. Whooping cough is contagious. This means it spreads easily from one person to another. You can prevent whooping cougp>&#8220;Whooping cough is a disease that cauh by getting shots, called vaccines, that protect you from the disease.&#8221;</p></blockquote>
+<p>The lack of vaccinations, as many claim, is the significant reason for the uptick in cases of pertussis. A study in California, <a title="whooping-cough-epidemic-fueled-by-vaccine-refusal" href="http://www.inquisitr.com/976660/whooping-cough-epidemic-fueled-by-vaccine-refusal/" target="_blank">as previously reported by <em>Inquistr</em></a>, showed that a refusal to get vaccinated for the illness lead to a resurgence in cases of pertussis. In fact, CBS News reported that, &#8220;researchers have linked parents not vaccinating their children for who0ping cough to outbreaks of the disease that occurred in 2010 in California.&#8221;</p>
+<p>Meanwhile, San Diego county public health officer Dr. Wilma Wooten encourages parents to make sure their kids get the whooping cough vaccination. According to the <a title="whooping-cough-on-the-rise/" href="http://guardianlv.com/2014/05/whooping-cough-on-the-rise/" target="_blank"><em>Guardian</em></a>, the current whooping cough outbreak &#8220;has shown no signs of slowing down and this high level of activity should be a concern for parents and caregivers.&#8221;</p>
+<p>Vaccines aside, as with most treatable diseases like whooping cough, prevention is always the best medicine.</p>
+</p>								</section> <!-- end article section -->
+
+								
+								<div style="width:100%; text-align:center;">  </div>
+								<div style="width:100%; text-align:center;"> <div id="ym_667311461026700359" class="ym"></div>
+<script id="mNCC" language="javascript">  medianet_width='670';  medianet_height= '175';  medianet_crid='967774781';  medianet_fd='inquisitr.com'  </script>  <script id="mNSC" src="http://contextual.media.net/nmedianet.js?cid=8CUH7MPU5" language="javascript"></script>
+ </div>
+
+																<footer class="article-footer clearfix">
+																		<div id="by-author" class="fourcol first">
+										<a href="http://www.inquisitr.com/author/michael-d/" title="Posts by Michael Dolce" rel="author"><img id="authorbox-photo" title="Michael Dolce" alt='Michael Dolce' src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://1.gravatar.com/avatar/747cf4a94858211bfcb426dab6717536?s=90&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D90&amp;r=G" class='avatar avatar-90 photo' height='90' width='90' /><noscript><img id="authorbox-photo" title="Michael Dolce" alt='Michael Dolce' src="http://1.gravatar.com/avatar/747cf4a94858211bfcb426dab6717536?s=90&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D90&amp;r=G" class='avatar avatar-90 photo' height='90' width='90' /></nosolce" alt='Michael Dolce' src="http://1.gravacript></a>										<h3 class="author"><a href="http://www.inquisitr.com/author/michael-d/" title="Posts by Michael Dolce" rel="author">Michael Dolce</a></h3>
+										<ul><li><a href="http://twitter.com/Michael_Dolce" class="icon icon-twitter" title="Follow Michael Dolce on Twitter."></a></li><li><a href="https://plus.google.com/+MichaelDolceSire/" class="icon icon-googleplus" title="Follow Michael Dolce on Google Plus."></a></li><li><a href="http://www.inquisitr.com/author/michael-d/feed/" class="icon icon-rss" title="Subscribe to Michael Dolce's RSS Feed ."></a></li></ul>									</div>
+									<ul id="article-footer-meta" class="eightcol last">
+										<li>Category: <a href="http://www.inquisitr.com/category/health/" rel="category tag">Health</a></li>
+
+										<li>Tags: <a href="http://www.inquisitr.com/tag/whooping-cough/" rel="tag">Whooping Cough</a>, <a href="http://www.inquisitr.com/tag/whooping-cough-prevention/" rel="tag">whooping cough prevention</a>, <a href="http://www.inquisitr.com/tag/whooping-cough-vaccination/" rel="tag">whooping cough vaccination</a></li>
+										 <!-- <li>Posted: May 2, 2014</li> -->
+										 <li><strong>Love it? Share it!</strong>
+
+											<div class="pw-widget pw-copypaste-tru e pw-size-large pw-counter-show pw-share-popups" pw:twitter-via="TheInquisitr" pw:image="http://cdn.inquisitr.com/wp-content/uploads/2014/05/Whooping-Cough-Prevention.jpg">
+
+												<a class="pw-button-facebook" href=""></a>
+												<a class="pw-button-twitter" href=""></a>
+												<a class="pw-button-digg" href=""></a>
+												<a class="pw-button-reddit" href=""></a>
+												<a class="pw-button-stumbleupon" href=""></a>
+												<a class="pw-button-pinterest" href=""></a>
+												<a class="pw-button-googleplus" href=""></a>
+												<a class="pw-button-post" href=""></a>
+
+											</div>
+
+
+										</li>
+									 </ul>
+								</footer> <!-- end article footer -->
+
+								<div id="taboola-ab-2r"></div>
+								<div id="taboola-ab-2-columns"></div>
+
+
+
+								
+								
+									<div style="width:100%; text-align:center;"> <!-- Inquisitr_670x250 -->
+
+<section>
+<header style="text-align:left;"><h2 class="icon-medal" style="background-color:#c10000;">Articles And Offers From The Web</h2></header>
+<div id='div-gpt-ad-1394023803607-7' style='width:670px; height:250px;position: relative;top: -6px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1394023803607-7'); });
+</script>
+</div>
+</section> </div>
+
+									<script>
+										var ten_percent = Math.floor(Math.random() * (10)) + 1;
+										window._taboola = window._taboola || [];
+
+										if(ten_percent == 10){
+											window._taboola.push({mode:"autosized-generated-2r",container:"taboola-ab-2r", placement:"higher-below-article-thumbs", target_type:"text"});
+											window._taboola.push({mode:"text-links-2-columns",container:"taboola-ab-2-columns", placement:"higher-below-article-text-links", target_type:"text"});
+										}else{
+																							document.MAX_ct0 ='';
+
+												var m3_u = (location.protocol=='https:'?'https://cas.criteo.com/delivery/ajs.php?':'http://cas.criteo.com/delivery/ajs.php?');
+
+												var m3_r = Math.floor(Math.random()*99999999999);
+
+												m3_u += "zoneid=182258" + "&nodis=1" + '&cb=' + m3_r;
+
+												if (document.MAX_used != ',') m3_u += "&exclude=" + document.MAX_used;
+
+												m3_u += (document.charset ? '&charset='+document.charset : (document.characterSet ? '&charset='+document.characterSet : ''));
+
+												m3_u += "&loc=" + escape(window.location);
+
+												if (document.referrer)
+													m3_u += "&referer=" + escape(document.referrer);
+
+												if (document.context)
+													m3_u += "&context=" + escape(document.context);
+
+												if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http'))
+													m3_u += "&ct0=" + escape(document.MAX_ct0);
+
+												if (document.mmm_fo) m3_u += "&mmm_fo=1";
+
+												document.write('<script type="text/javascript" src="'+m3_u+'"></'+'script>');
+											
+											window._taboola.push({mode:"text-links-2-columns",container:"taboola-text-links-2-columns", placement:"lower-below-article-text-links", target_type:"text"});
+										}
+									</script>
+
+									<div id="taboola-autosized-generated-2r"></div>
+									<div id="taboola-text-links-2-columns"></div>
+
+								
+								
+
+<section>
+	<header><h2 class="icon-comments">Comments</h2></header>
+<div data-lazy-class="like" dta-ref="singleBottom" data-lazy-href="http://www.inquisitr.com/1235929/whooping-cough-prevention-is-best-medicine/"  data-send="true" data-width="450" data-show-faces="true" data-action="recommend"></div>
+
+<div data-lazy-class="comments" data-lazy-href="http://www.inquisitr.com/1235929/whooping-cough-prevention-is-best-medicine/" data-num-posts="12" data-width="665" ></div>
+
+<!-- You can start editing here. -->
+<div style="display:none;">
+
+				<!-- If comments are open, but there are no comments. -->
+
+	
+</div>
+
+</section>
+
+								<div style="width:100%; text-align:center;"> <!-- IQ Under Content -->
+<div id='div-gpt-ad-1411394610486-0' style='width:300px; height:250px;margin: 0 auto;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1411394610486-0'); });
+</script>
+</div> </div>
+
+								<div id="taboola-below-article-thumbnails"></div>
+								<script type="tght:250px;margin: 0 auto;'>
+<script type='text/javascript'>
+googletag.cmd.push(function(ext/javascript">
+								  _taboola.push({
+								    mode: 'alternating-thumbnails-a',
+								    container: 'taboola-below-article-thumbnails',
+								    placement: 'Below Article Thumbnails',
+								    target_type: 'mix'
+								  });
+								</script>
+							</article> <!-- end article -->
+
+
+
+							<!-- <div class="OUTBRAIN" data-src="http://www.inquisitr.com/1235929/whooping-cough-prevention-is-best-medicine/" data-widget-id="FT_1" data-ob-template="inquisitr" ></div><!-- //Slide in. -->
+
+
+
+
+						
+						
+					</div> <!-- end #main -->
+
+									<div id="sidebar" class="sidebar last clearfix" role="complementary">
+
+					
+							<section id="getSocial">
+		<header>
+			
+				<h4 class="widgettitle icon-medal">Get Social</h2>
+					</header>
+		<ul>
+			<li class="twitter"><a href="http://twitter.com/theinquisitr" class="icon icon-twitter"></a></li>
+			<li class="fb"><a href="http://www.facebook.com/theinquisitr" class="icon icon-facebook"></a></li>
+			<li class="gplus"><a href="http://plus.google.com/+Inquisitr" rel="publisher" class="icon icon-googleplus"></a></li>
+			<li class="rss"><a href="http://feeds.inquisitr.com/google/yDYq" class="icon icon-rss"></a></li>
+		</ul>
+	</section>
+<section id="wp_widget_ad_manager-24" class="widget WP_Widget_Ad_manager"><!-- IQ_C_ATF_Side_300x250 -->
+<div id='div-gpt-ad-1394023803607-1' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() {googletag.display('div-gpt-ad-1394023803607-1');});
+</script>
+</div></section><section id="with_friends-3" class="widget widget_with_friends"><header><h4 class="icon-social-friends widgettitle">Join Us!</h4></header>			<div id="FBSocialReader"><i class="icon icon-spin"></i></div>
+		</section><section id="cmp_widget-2" class="widget widget_gmp_widget"><header><h4 class="widgettitle icon-popular">Most Popular</h4></header>
+	<div id="GMP-inner">
+
+		<article>
+
+			<a href="http://www.inquisitr.com/1700796/angelina-jolie-brad-pitt-are-supporting-daughter-shilohs-decision-to-be-called-john-report/" data-format="">
+
+				<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2014/12/Screen-Shot-2014-12-23-at-3_opt-100x100.png" data-attID="1700868" class="attachment-thumbnail wp-post-image" alt="Brad Pitt" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2014/12/Screen-Shot-2014-12-23-at-3_opt-100x100.png" data-attID="1700868" class="attachment-thumbnail wp-post-image" alt="Brad Pitt" /></noscript>
+			</a>
+
+			<a href="http://www.inquisitr.com/1700796/angelina-jolie-brad-pitt-are-supporting-daughter-shilohs-decision-to-be-called-john-rep-3_opt-100x100.png" data-attID="1700868" clasort/">Angelina Jolie, Brad Pitt Are Supporting Shiloh&#8217;s Decision To Be Called &#8216;John&#8217; [Report]</a>
+			<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1700796/angelina-jolie-brad-pitt-are-supporting-daughter-shilohs-decision-to-be-called-john-report/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+		</article>
+
+
+		<article>
+
+			<a href="http://www.inquisitr.com/1485160/prominent-michigan-cancer-doctor-pleads-guilty-i-knew-that-it-was-medically-unnecessary/" data-format="">
+
+				<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2014/09/Michigan-Cancer-Doctor-100x100.jpg" data-attID="1496704" class="attachment-thumbnail wp-post-image" alt="A Michigan doctor pleaded guilty to fraud for falsely providing patients with chemotherapy." /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2014/09/Michigan-Cancer-Doctor-100x100.jpg" data-attID="1496704" class="attachment-thumbnail wp-post-image" alt="A Michigan doctor pleaded guilty to fraud for falsely providing patients with chemotherapy." /></noscript>
+			</a>
+
+			<a href="http://www.inquisitr.com/1485160/prominent-michigan-cancer-doctor-pleads-guilty-i-knew-that-it-was-medically-unnecessary/">Prominent Michigan Cancer Doctor Pleads Guilty: &#8216;I Knew That It Was Medically Unnecessary&#8217;</a>
+			<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1485160/prominent-michigan-cancer-doctor-pleads-guilty-i-knew-that-it-was-medically-unnecessary/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+		</article>
+
+
+		<article>
+
+			<a href="http://www.inquisitr.com/1731217/gta-v-pc-version-still-expected-to-launch-as-scheduled-rockstar-games-denies-delay-rumors/" data-format="">
+
+				<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/GTAV08-100x100.jpg" data-attID="1731233" class="attachment-thumbnail wp-post-image" alt="GTA V" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/GTAV08-100x100.jpg" data-attID="1731233" class="attachment-thumbnail wp-post-image" alt="GTA V" /></noscript>
+			</a>
+
+			<a href="http://www.inquisitr.com/1731217/gta-v-pc-version-still-expected-to-launch-as-scheduled-rockstar-games-denies-delay-rumors/">&#8216;GTA V&#8217; PC Version Still Expected To Launch As Scheduled, Rockstar Games Denies Delay Rumors</a>
+			<div d			<a href="http://www.inquisitr.com/1731217/ata-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1731217/gta-v-pc-version-still-expected-to-launch-as-scheduled-rockstar-games-denies-delay-rumors/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+		</article>
+
+
+		<article>
+
+			<a href="http://www.inquisitr.com/1733331/adam-carolla-fires-alison-rosen-via-email-fans-react-rosen-reveals-as-her-podcast-hits-1/" data-format="">
+
+				<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Alison-And-Adam-100x100.jpg" data-attID="1734366" class="attachment-thumbnail wp-post-image" alt="Adam and Alison" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Alison-And-Adam-100x100.jpg" data-attID="1734366" class="attachment-thumbnail wp-post-image" alt="Adam and Alison" /></noscript>
+			</a>
+
+			<a href="http://www.inquisitr.com/1733331/adam-carolla-fires-alison-rosen-via-email-fans-react-rosen-reveals-as-her-podcast-hits-1/">Adam Carolla Fires Alison Rosen Via Email? Fans React, Rosen Reveals, As Her Podcast Hits #1</a>
+			<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1733331/adam-carolla-fires-alison-rosen-via-email-fans-react-rosen-reveals-as-her-podcast-hits-1/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+		</article>
+
+
+		<article>
+
+			<a href="http://www.inquisitr.com/1732475/los-angeles-lakers-rumors-kobe-bryant-could-be-on-trade-block-goran-dragic-a-target/" data-format="">
+
+				<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2014/09/Kobe-Bryant-100x100.jpg" data-attID="1510117" class="attachment-thumbnail wp-post-image" alt="Los Angeles Lakers Rumors" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2014/09/Kobe-Bryant-100x100.jpg" data-attID="1510117" class="attachment-thumbnail wp-post-image" alt="Los Angeles Lakers Rumors" /></noscript>
+			</a>
+
+			<a href="http://www.inquisitr.com/1732475/los-angeles-lakers-rumors-kobe-bryant-could-be-on-trade-block-goran-dragic-a-target/">Los Angeles Lakers Rumors: Kobe Bryant Could Be On Trade Block, Goran Dragic A Target</a>
+			<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1732475/los-angeles-lakers-rumors-kobe-bryant-could-be-on-trade-block-goran-dragic-a-target/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+		</a-lazy-href="http://www.inquisitr.com/1732475article>
+
+
+		<article>
+
+			<a href="http://www.inquisitr.com/1733327/shy-girl-violently-dragged-to-front-of-class-and-beaten-by-classmates-at-substitute-teachers-instructions/" data-format="video">
+
+				<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Screenshot-112-100x100.png" data-attID="1733416" class="attachment-thumbnail wp-post-image" alt="Screenshot (112)" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Screenshot-112-100x100.png" data-attID="1733416" class="attachment-thumbnail wp-post-image" alt="Screenshot (112)" /></noscript>
+			</a>
+
+			<a href="http://www.inquisitr.com/1733327/shy-girl-violently-dragged-to-front-of-class-and-beaten-by-classmates-at-substitute-teachers-instructions/">Shy Girl Violently Dragged To Front Of Class And Beaten By Classmates At Substitute Teacher&#8217;s Instructions</a>
+			<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1733327/shy-girl-violently-dragged-to-front-of-class-and-beaten-by-classmates-at-substitute-teachers-instructions/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+		</article>
+
+
+		<article>
+
+			<a href="http://www.inquisitr.com/1-class-and-beaten-by-classmates-at-substitute-teachers-instructions/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button721271/selena-gomez-engages-in-ankle-porn-disrespects-mosque/" data-format="image">
+
+				<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/selena-gomez-ankle-porn-1-100x100.jpg" data-attID="1728507" class="attachment-thumbnail wp-post-image" alt="selena gomez ankle porn 1" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/selena-gomez-ankle-porn-1-100x100.jpg" data-attID="1728507" class="attachment-thumbnail wp-post-image" alt="selena gomez ankle porn 1" /></noscript>
+			</a>
+
+			<a href="http://www.inquisitr.com/1721271/selena-gomez-engages-in-ankle-porn-disrespects-mosque/">Selena Gomez Engages In Ankle Porn, Disrespects Mosque</a>
+			<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1721271/selena-gomez-engages-in-ankle-porn-disrespects-mosque/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+		</article>
+
+
+		<article>
+
+			<a href="http://www.inquisitr.com/1676661/mom-sings-her-baby-to-sleep-and-becomes-a-viral-sensation-overnight-video/" data-format="">
+
+				<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="htwww.inquisitr.com/1676661/mom-sings-her-baby-to-sleep-and-becomes-a-viral-sensation-overnight-video/" data-format="">
+
+				<img width="100" height="10tp://cdn.inquisitr.com/wp-content/uploads/2014/12/Mom-Sings-Baby-100x100.png" data-attID="1676677" class="attachment-thumbnail wp-post-image" alt="Mom Sings Her Baby To Sleep" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2014/12/Mom-Sings-Baby-100x100.png" data-attID="1676677" class="attachment-thumbnail wp-post-image" alt="Mom Sings Her Baby To Sleep" /></noscript>
+			</a>
+
+			<a href="http://www.inquisitr.com/1676661/mom-sings-her-baby-to-sleep-and-becomes-a-viral-sensation-overnight-video/">Mom Sings Her Baby To Sleep And Becomes A Viral Sensation Overnight! [Video]</a>
+			<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1676661/mom-sings-her-baby-to-sleep-and-becomes-a-viral-sensation-overnight-video/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+		</article>
+
+
+		<article>
+
+			<a href="http://www.inquisitr.com/1733824/kailyn-lowry-teen-mom-2-star-denies-there-is-trouble-in-paradise/" data-format="">
+
+				<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/KailynLowryandJavi-100x100.jpg" data-attID="1733890" class="attachment-thumbnail wp-post-image" alt="Kailyn Lowry and husband, Javi Marrcontent/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/KailynLowryandJavi-100x100.jpg"oquin." /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/KailynLowryandJavi-100x100.jpg" data-attID="1733890" class="attachment-thumbnail wp-post-image" alt="Kailyn Lowry and husband, Javi Marroquin." /></noscript>
+			</a>
+
+			<a href="http://www.inquisitr.com/1733824/kailyn-lowry-teen-mom-2-star-denies-there-is-trouble-in-paradise/">Kailyn Lowry: &#8216;Teen Mom 2&#8217; Star Denies There Is &#8216;Trouble In Paradise&#8217;</a>
+			<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1733824/kailyn-lowry-teen-mom-2-star-denies-there-is-trouble-in-paradise/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+		</article>
+
+
+		<article>
+
+			<a href="http://www.inquisitr.com/1724673/bigfoot-bathing-in-forest-captured-by-fisherman-in-florida/" data-format="">
+
+				<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Bigfoot-Wide-100x100.jpg" data-attID="1724720" class="attachment-thumbnail wp-post-image" alt="Bigfoot bathing" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Bigfoot-Wide-100x100.jpg" data-attID="1724720" class="attachment-thumbnail wp-post1724720" class="attachment-thumbnail wp-post-image" alt="Bigfoot bathing" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-c-image" alt="Bigfoot bathing" /></noscript>
+			</a>
+
+			<a href="http://www.inquisitr.com/1724673/bigfoot-bathing-in-forest-captured-by-fisherman-in-florida/">Bigfoot Bathing In Forest Captured By Fisherman In Florida</a>
+			<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1724673/bigfoot-bathing-in-forest-captured-by-fisherman-in-florida/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+		</article>
+
+</div>
+<script>
+jQuery(function ($){
+	if(jQuery.fn.paginate)
+		$('#GMP-inner').paginate({
+			itemsperpage:5,
+			classname:'paginator',
+			element : 'article',
+			pagingtop: false
+		});
+});
+</script>
+</section><section id="wp_widget_ad_manager-25" class="widget WP_Widget_Ad_manager"><!-- IQ_C_BTF_300x250 -->
+<div id='div-gpt-ad-1394023803607-3' style='width:300px; height:250px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() {googletag.display('div-gpt-ad-1394023803607-3');});
+</script>
+</div></section><section id="facebook_box-6" class="widget widget_facebook_box"><header><h4 class="icon-facebook widgettitle">Facebook</h4></header>
+		<div data-lazy-class="like-box" data-lazy-href="http://www.facebook.com/theinquisitr" data-width="298" data-ref="sidebarLikeBox" data-show-faces="true" data-border-color="white" data-stream="false" data-header="true"></div>
+</section><section id="wp_widget_ad_manager-26" class="widget WP_Widget_Ad_manager"><!-- IQ_ContentAd_300x600 -->
+<div id='div-gpt-ad-1394023803607-5' style='width:300px; height:600px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() {googletag.display('div-gpt-ad-1394023803607-5');});
+</script>
+</div></section><section id="wp_widget_ad_manager-27" class="widget WP_Widget_Ad_manager"><header><h4 class="icon-medal widgettitle">NEWSMAX</h4></header>
+<div id="NmWg454" ></div></section><section id="featured_posts-8" class="widget widget_featured_posts"><header><h4 class="widgettitle icon-featured">Featured Articles</h4></header><div class="featured_wrap">				<article>
+					<a href="http://www.inquisitr.com/1734237/youve-got-mail-loveland-co-gets-ready-for-valentines-day/" data-format="" >
+						<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/6a00d834515a1f69e20120a7f95237970b-800wi-100x100.jpg" data-attID="1734311" class="attachment-thumbnail wp-post-image" alt="loveland" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/6a00d834515a1f69e20120a7f95237970b-800wi-100x100.jpg" data-attID="1734311" class="attachment-thumbnail wp-post-image" alt="loveland" /></nos alt="loveland" /><noscript><img width="100" cript>
+					</a>
+
+					<a href="http://www.inquisitr.com/1734237/youve-got-mail-loveland-co-gets-ready-for-valentines-day/">You&#8217;ve Got Mail: Loveland, Colorado, Gets Ready For Valentine&#8217;s Day</a>
+					<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1734237/youve-got-mail-loveland-co-gets-ready-for-valentines-day/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+				</article>
+								<article>
+					<a href="http://www.inquisitr.com/1734275/notion-of-healthy-obesity-largely-a-myth-new-study-says/" data-format="" >
+						<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/healthy-obesity-100x100.jpg" data-attID="1734296" class="attachment-thumbnail wp-post-image" alt="Healthy Obesity?" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/healthy-obesity-100x100.jpg" data-attID="1734296" class="attachment-thumbnail wp-post-image" alt="Healthy Obesity?" /></noscript>
+					</a>
+
+					<a href="http://www.inquisitr.com/1734275/notion-of-healthy-obesity-largely-a-myth-new-study-says/">Notion of &#8216;Healthy Obesity&#8217; Largely a Myth, New Study Says</a>
+					<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1734275/notion-of-healthy-obesity-largely-a-myth-new-study-says/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+				</article>
+								<article>
+					<a href="http://www.inquisitr.com/1734194/robin-thicke-girlfriend-april-love-geary-was-too-young-to-party-with-singer-on-nye/" data-format="" >
+						<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Robin-Thicke-Girlfriend-100x100.jpg" data-attID="1734230" class="attachment-thumbnail wp-post-image" alt="Robin Thicke: Girlfriend April Geary Was Too Young To Party With Singer On NYE" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Robin-Thicke-Girlfriend-100x100.jpg" data-attID="1734230" class="attachment-thumbnail wp-post-image" alt="Robin Thicke: Girlfriend April Geary Was Too Young To Party With Singer On NYE" /></noscript>
+					</a>
+
+					<a href="http://www.inquisitr.com/1734194/robin-thicke-girlfriend-april-love-geary-was-too-young-to-party-with-singer-on-nye/">Robin Thicke: Girlfriend April Love Geary Was Too Young To Party With Singer On NYE</a>
+					<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1734194/robin-thicke-girlfriend-april-lr.com/1734194/robin-thicke-girlfriend-april-love-geary-was-too-young-to-party-with-singer-on-nye/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+				</article>
+								<article>
+					<a href="http://www.inquisitr.com/1734003/sony-claims-no-financial-damage-as-the-interview-earns-digital-millions/" data-format="" >
+						<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/sony-100x100.jpg" data-attID="1734175" class="attachment-thumbnail wp-post-image" alt="Sony Corp Chief Executive Officer Kazuo Hirai" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/sony-100x100.jpg" data-attID="1734175" class="attachment-thumbnail wp-post-image" alt="Sony Corp Chief Executive Officer Kazuo Hirai" /></noscript>
+					</a>
+
+					<a href="http://www.inquisitr.com/1734003/sony-claims-no-financial-damage-as-the-interview-earns-digital-millions/">Sony Claims No Financial Damage As &#8216;The Interview&#8217; Earns Digital Millions</a>
+					<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1734003/sony-claims-no-financial-damage-as-the-interview-earns-digital-millions/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+				</article>
+								<article>
+					<a href="http://www.inquisitr.com/1733985/lana-del-rey-new-album-honeymoon/" data-format="" >
+						<img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/images/1x1.trans.png" data-lazy-src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Lana-Del-Rey-Honeymoon-100x100.jpg" data-attID="1734155" class="attachment-thumbnail wp-post-image" alt="Lana Del Rey" /><noscript><img width="100" height="100" src="http://cdn.inquisitr.com/wp-content/uploads/2015/01/Lana-Del-Rey-Honeymoon-100x100.jpg" data-attID="1734155" class="attachment-thumbnail wp-post-image" alt="Lana Del Rey" /></noscript>
+					</a>
+
+					<a href="http://www.inquisitr.com/1733985/lana-del-rey-new-album-honeymoon/">Lana Del Rey Announces &#8216;Honeymoon&#8217;, Her New Album</a>
+					<div data-lazy-class="like" data-lazy-href="http://www.inquisitr.com/1733985/lana-del-rey-new-album-honeymoon/" data-send="false" data-width="165" data-ref="sidebarPopular" data-layout="button_count" data-action="recommend"></div>
+				</article>
+				</div></section><section id="wp_widget_ad_manager-28" class="widget WP_Widget_Ad_manager"><!-- IQ_C_BTF_160x600 -->
+<div id='div-gpt-ad-1394023803607-2' style='width:160px; height:600px;margin:0 auto;'>
+<script type='tcommend"></div>
+				</article>
+				</div></seext/javascript'>
+googletag.cmd.push(function() {googletag.display('div-gpt-ad-1394023803607-2');});
+</script>
+</div></section><section id="text-4" class="widget widget_text">			<div class="textwidget"><div id='taboola-right-rail'></div>
+
+<script type="text/javascript">
+
+    window._taboola = window._taboola || [];
+
+    _taboola.push({mode:'thumbs-3r', container:'taboola-right-rail', placement:'right-rail'});
+
+</script></div>
+		</section>
+					
+				</div>
+									</div> <!-- end #inner-content -->
+
+			</div> <!-- end #content -->
+
+			<div class="holder"><!-- IQ_C_BTF_728x90 -->
+<div id='div-gpt-ad-1394023803607-4' style='width:728px; height:90px;margin: 0 auto;'>
+<script type='text/javascript'>
+if (!jQuery('body').hasClass("page")) {
+     googletag.cmd.push(function() {googletag.display('div-gpt-ad-1394023803607-4'); });
+}else{
+jQuery('#div-gpt-ad-1394023803607-4').hide()
+}
+</script>
+</div></div>
+			<footer class="footer" role="contentinfo">
+
+				<div id="inner-footer" class="wrap clearfix">
+
+					<div id="top-footer">
+						<ul id="menu-massive-footer" class="clearfix"><li id="menu-item-953796" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-953796"><a href="http://www.inquisitr.com/category/entertainment/">Entertainment</a>
+<ul class="sub-menu">
+	<li id="menu-item-953797" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953797"><a href="http://www.inquisitr.com/category/entertainment/pop/">Celebrity News</a></li>
+	<li id="menu-item-953858" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953858"><a href="http://www.inquisitr.com/category/entertainment/tv-entertainment/">TV</a></li>
+	<li id="menu-item-953798" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953798"><a href="http://www.inquisitr.com/category/entertainment/famous-relationships/">Famous Relationships</a></li>
+	<li id="menu-item-953799" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953799"><a href="http://www.inquisitr.com/category/entertainment/movie-trailers-entertainment/">Movie Trailers</a></li>
+	<li id="menu-item-953800" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953800"><a href="http://www.inquisitr.com/category/entertainment/movies/">Movies</a></li>
+	<li id="menu-item-953801" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953801"><a href="http://www.inquisitr.com/category/entertainment/music/">Music</a></li>
+	<li id="menu-item-953802" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953802"><a href="http://www.inquisitr.com/categorory menu-item-953801"><a href="http://www.inqy/entertainment/online-videos/">Online Videos</a></li>
+	<li id="menu-item-953857" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953857"><a href="http://www.inquisitr.com/category/entertainment/celebrity-rumors-news/">Rumors</a></li>
+</ul>
+</li>
+<li id="menu-item-953808" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-953808"><a href="http://www.inquisitr.com/category/lifestyle/">Lifestyle</a>
+<ul class="sub-menu">
+	<li id="menu-item-953859" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953859"><a href="http://www.inquisitr.com/category/lifestyle/shopping/">Shopping</a></li>
+	<li id="menu-item-953860" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953860"><a href="http://www.inquisitr.com/category/lifestyle/travel-lifestyle/">Travel</a></li>
+	<li id="menu-item-953809" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953809"><a href="http://www.inquisitr.com/category/lifestyle/fashion/">Fashion</a></li>
+	<li id="menu-item-953810" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953810"><a href="http://www.inquisitr.com/category/lifestyle/food-dining-news/">Food &#038; Dining</a></li>
+	<li id="menu-item-953811" class="menu-item mli id="menu-item-953810" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953810"><a href="http://www.inquisitr.com/categoenu-item-type-taxonomy menu-item-object-category menu-item-953811"><a href="http://www.inquisitr.com/category/lifestyle/geek-culture/">Geek Culture</a></li>
+	<li id="menu-item-953812" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953812"><a href="http://www.inquisitr.com/category/lifestyle/parenting-news/">Parenting</a></li>
+	<li id="menu-item-953813" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953813"><a href="http://www.inquisitr.com/category/lifestyle/religion/">Religion</a></li>
+</ul>
+</li>
+<li id="menu-item-953814" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-depth-0 menu-depth-0 menu-item-953814"><a href="http://www.inquisitr.com/category/news/">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-953815" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953815"><a href="http://www.inquisitr.com/category/news/animal-news/">Animal News</a></li>
+	<li id="menu-item-953817" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953817"><a href="http://www.inquisitr.com/category/news/crime/">Crime</a></li>
+	<li id="menu-item-953818" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953818"><a href="http://www.inquisitr.com/category/news/education-news/">Education</a></li>
+	://www.inquisitr.com/category/news/crime/">Crime</a></li>
+	<li id="menu-item-953818" class="menu-item menu-item-type-taxonomy menu-item-object-categor<li id="menu-item-953819" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953819"><a href="http://www.inquisitr.com/category/news/green-news/">Green News</a></li>
+	<li id="menu-item-953820" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953820"><a href="http://www.inquisitr.com/category/news/media/">Media Industry</a></li>
+	<li id="menu-item-953821" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953821"><a href="http://www.inquisitr.com/category/news/odd-news/">Odd News</a></li>
+	<li id="menu-item-953822" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953822"><a href="http://www.inquisitr.com/category/news/politics/">Politics</a></li>
+</ul>
+</li>
+<li id="menu-item-953804" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-953804"><a href="http://www.inquisitr.com/category/health/">Health</a>
+<ul class="sub-menu">
+	<li id="menu-item-953805" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953805"><a href="http://www.inquisitr.com/category/health/health-studies-news/">Health Studies</a></li>
+	<li id="menu-item-953806" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953806"><a href="http://www.inquisitr.com/category/health/medicine-news/">Medicine</a></li>
+	<li id="menu-item-953807" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953807"><a href="http://www.inquisitr.com/category/health/nutrition-news/">Nutrition</a></li>
+</ul>
+</li>
+<li id="menu-item-953855" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-953855"><a href="http://www.inquisitr.com/category/world/">World</a>
+<ul class="sub-menu">
+	<li id="menu-item-953856" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953856"><a href="http://www.inquisitr.com/category/world/south-america-news/">South America</a></li>
+	<li id="menu-item-953826" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953826"><a href="http://www.inquisitr.com/category/world/africa-news/">Africa</a></li>
+	<li id="menu-item-953827" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953827"><a href="http://www.inquisitr.com/category/world/asia-news/">Asia</a></li>
+	<li id="menu-item-953828" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953828"><a href="http://www.inquisitr.com/category/world/australia-news/">Australia News</a></li>
+	<li id="menu-item-953829" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953829"><a href="http://www.inquisitr.com/category/world/canada-news/">Canada</a></li>
+	<li id="menu-item-953830" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953830"><a href="http://www.inquisitr.com/category/world/europe-news/">Europe</a></li>
+	<li id="menu-item-953831" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953831"><a href="http://www.inquisitr.com/category/world/middle-east-news/">Middle East</a></li>
+</ul>
+</li>
+<li id="menu-item-953823" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-953823"><a href="http://www.inquisitr.com/category/odd/">Odd + Funny</a>
+<ul class="sub-menu">
+	<li id="menu-item-953824" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953824"><a href="http://www.inquisitr.com/category/odd/pics/">Pics</a></li>
+</ul>
+</li>
+<li id="menu-item-953825" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-depth-0 menu-depth-0 menu-item-953825"><a href="http://www.inquisitr.com/category/opinion/">Opinion</a></li>
+<li id="menu-item-953848" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-953848"><a href="http://www.inquisitr.com/category/sports/">Sports</a>
+<ul class="sub-menu">
+	<li id="menu-item-953836" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953836"><a href="http://www.inquisitr.com/category/sports/baseball/">Baseball</a></li>
+	<li id="menu-item-953837" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953837"><a href="http://www.inquisitr.com/category/sports/basketball/">Basketball</a></li>
+	<li id="menu-item-953838" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953838"><a href="http://www.inquisitr.com/category/sports/boxing-news/">Boxing</a></li>
+	<li id="menu-item-953839" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-953839"><a href="http://www.inquisitr.com/category/sports/football/">Football</a></li>
+	<li id="menu-item-953840" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953840"><a href="http://www.inquisitr.com/category/sports/golf-news/">Golf</a></li>
+	<li id="menu-item-953841" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953841"><a href="http://www.inquisitr.com/category/sports/hockey-sport/">Hockey</a></li>
+	<li id="menu-item-953842" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953842"><a href="http://www.inquisitr.com/category/sports/mma-news/">MMA</a></li>
+	<li id="menu-item-953843" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953843"><a href="http://www.inquisitr.com/category/sports/nascar-sport/">NASCAR</a></li>
+	<li id="menu-item-953849" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953849"><a href="http://www.inquisitr.com/category/sports/soccer-sport/">Soccer</a></li>
+	<li id="menu-item-953850" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953850"><a href="http://www.inquisitr.com/category/sports/tennis-news/">Tennis</a></li>
+</ul>
+</li>
+<li id="menu-item-953845" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-953845"><a href="http://www.inquisitr.com/category/science-news/">Science</a>
+<ul class="sub-menu">
+	<li id="menu-item-953844" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953844"><a href="http://www.inquisitr.com/category/science-news/discoveries/">Discoveries</a></li>
+	<li id="menu-item-953846" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953846"><a href="http://www.inquisitr.com/category/science-news/space-news-science-news/">Space</a></li>
+	<li id="menu-item-953847" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953847"><a href="http://www.inquisitr.com/category/science-news/theories/">Theories</a></li>
+</ul>
+</li>
+<li id="menu-item-953851" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-953851"><a href="http://www.inquisitr.com/category/tech/">Technology</a>
+<ul class="sub-menu">
+	<li id="menu-item-953832" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953832"><a href="http://www.inquisitr.com/category/tech/automotive/">Automotive</a></li>
+	<li id="menu-item-953834" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953834"><a href="http://www.inquisitr.com/category/tech/greentech/">Green Tech</a></li>
+	<li id="menu-item-953833" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953833"><a href="http://www.inquisitr.com/category/tech/gadgets/">Gadgets</a></li>
+	<li id="menu-item-953835" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953835"><a href="http://www.inquisitr.com/category/tech/mobile-tech/">Mobile</a></li>
+</ul>
+</li>
+<li id="menu-item-953803" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-depth-0 menu-depth-0 menu-item-953803"><a href="http://www.inquisitr.com/category/gaming/">Gaming</a></li>
+<li id="menu-item-953816" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-953816"><a href="http://www.inquisitr.com/category/news/business/">Business</a>
+<ul class="sub-menu">
+	<li id="menu-item-953852" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953852"><a href="http://www.inquisitr.com/category/tech/social-media/">Social Media</a></li>
+	<li id="menu-item-953853" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953853"><a href="http://www.inquisitr.com/category/tech/start-up/">Start-up</a></li>
+	<li id="menu-item-953854" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-953854"><a href="http://www.inquisitr.com/category/wire/">Wire</a></li>
+</ul>
+</li>
+<li id="menu-item-953795" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-depth-0 menu-depth-0 menu-item-953795"><a href="http://www.inquisitr.com/category/buzzworthy/">BuzzWorthy</a></li>
+</ul>					</div>
+
+					<script>
+						jQuery(document).ready(function(){
+							if(!jQuery('html').hasClass('lt-ie8')){
+								jQuery('.no-csscolumns #menu-massive-footer').masonry({
+									// options
+									itemSelector: '.menu-depth-0',
+									columnWidth: 101,
+									gutter:  42
+								});
+							}
+						});
+					</script>
+
+					<div id="middle-footer">
+
+						<nav role="navigation">
+							<ul id="menu-footer-friend-links" class="footer-friends clearfix"><li id="menu-item-751326" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-751326"><a >Info</a>
+<ul class="sub-menu">
+	<li id="menu-item-751329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-751329"><a href="http://www.inquisitr.com/about/">About</a></li>
+	<li id="menu-item-751330" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-751330"><a href="http://www.inquisitr.com/advertise/">Advertising</a></li>
+	<li id="menu-item-1091010" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1091010"><a href="http://www.inquisitr.com/write-for-inquisitr/">Write for Inquisitr</a></li>
+	<li id="menu-item-1152603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1152603"><a href="http://www.inquisitr.com/privacy-policy/">Privacy Policy</a></li>
+	<li id="menu-item-751331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-751331"><a href="http://www.inquisitr.com/contact/">Contact</a></li>
+</ul>
+</li>
+<li id="menu-item-751327" class="menu-item menu-item-type-custom menu-item-object-cusu-item-751331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-751331"><a href="http://www.inquisitr.com/contact/">Contact</a></li>
+</ul>
+</li>
+<li id="menu-item-tom menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-751327"><a >News Partners</a>
+<ul class="sub-menu">
+	<li id="menu-item-751335" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751335"><a href="http://www.opposingviews.com/">Opposing Views</a></li>
+	<li id="menu-item-751336" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751336"><a href="http://www.huffingtonpost.com/">Huffington Post</a></li>
+	<li id="menu-item-751337" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751337"><a href="http://www.fark.com/">Fark</a></li>
+	<li id="menu-item-751338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751338"><a href="http://www.buzzfeed.com/">Buzz Feed</a></li>
+</ul>
+</li>
+<li id="menu-item-751328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-751328"><a >Supported By</a>
+<ul class="sub-menu">
+	<li id="menu-item-751332" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751332"><a title="Ads Served" href="http://doubleclick.com">DoubleClick</a></li>
+	<li id="menu-item-751333" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751333"><a title="Advertising" href="http://adsense.com">Google Adsense</a></li>
+	<li id="menu-item-751334" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751334"><a title="Hosting" href="http://softlayer.com">Softlayer</a></li>
+</ul>
+</li>
+<li id="menu-item-751339" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-depth-0 has-child menu-depth-0 menu-item-751339"><a >Connect</a>
+<ul class="sub-menu">
+	<li id="menu-item-751340" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751340"><a href="http://www.facebook.com/theinquisitr">Facebook</a></li>
+	<li id="menu-item-751342" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751342"><a href="http://twitter.com/theinquisitr">Twitter</a></li>
+</ul>
+</li>
+</ul>						</nav>
+
+						<section class="mailchimp_form">
+							<header><h3>Delivered To Your <span>INBOX</span></h3></header>
+<div id="mc_signup">
+	<form method="post" action="#mc_signup" id="mc_signup_form">
+		<input type="hidden" id="mc_submit_type" name="mc_submit_type" value="html" />
+		<input type="hidden" name="mcsf_action" value="mc_submit_signup_form" />
+		<input type="hidden" id="_mc_submit_signup_form_nonce" name="_mc_submit_signup_form_nonce" value="bc1501b7d2" />
+			<div id="mc_subheader">
+			Get Inquisitr's daily viral news by e-mail and never miss the internet's hottest stories!		</div><!-- /mc_subheader -->
+		
+	<div en" id="_mc_submit_signup_form_nonce" name="_mc_submiclass="mc_form_inside">
+
+		<div class="updated" id="mc_message">
+					</div><!-- /mc_message -->
+
+		
+<div class="mc_merge_var">
+		<label for="mc_mv_EMAIL" class="mc_var_label mc_header mc_header_email">Email Address</label>
+	<input type="text" size="18" placeholder="" name="mc_mv_EMAIL" id="mc_mv_EMAIL" class="mc_input"/>
+</div><!-- /mc_merge_var -->
+		<div class="mc_signup_submit">
+			<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Go" class="button" />
+		</div><!-- /mc_signup_submit -->
+
+
+		
+	</div><!-- /mc_form_inside -->
+	</form><!-- /mc_signup_form -->
+</div><!-- /mc_signup_container -->
+							</section>
+
+					</div>
+
+					<div id="bottom-footer">
+
+						<p class="source-org copyright">All content &copy; 2008 - 2015 The Inquisitr News.</p>
+					</div>
+				</div> <!-- end #inner-footer -->
+
+			</footer> <!-- end footer -->
+
+		</div> <!-- end #container -->
+
+		<script type="text/javascript">(function(){var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="//wopdi.com/11/xttp1//inquisitr.com/arg?purl=yes---vdb=23";var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(s,x);})();</script>			<!-- START Parse.ly Include: Standard -->
+			<div id="parsely-root" style="display: none">
+				<div id="parsely-cfg" data-parsely-site="inquisitr.com"></div>
+			</div>
+			<script>
+				(function (s, p, d) {
+					var h = d.location.protocol, i = p + "-" + s,
+						e = d.getElementById(i), r = d.getElementById(p + "-root"),
+						u = h === "https:" ? "d1z2jf7jlzjs58.cloudfront.net"
+							: "static." + p + ".com";
+					if (e) return;
+					e = d.createElement(s);
+					e.id = i;
+					e.async = true;
+					e.src = h + "//" + u + "/p.js";
+					r.appendChild(e);
+				})("script", "parsely", document);
+			</script>
+			<!-- END Parse.ly Include -->
+
+		<!--[if lt IE 8]><script src="http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/js/scripts.ie7.9904a3.js"></script><![endif]--><script type='text/javascript'>try{jQuery.noConflict();}catch(e){};</script>
+<script type='text/javascript' src='http://cdn.inquisitr.com/wp/wp-includes/js/underscore.min.js?v=9904a3&#038;av=8fa14c'></script>
+<script type='text/javascript' src='http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/js/scripts.libs.9904a3.js?v=9904a3&#038;av=8fa14c'></script>
+<script type='text/javascript' src='http://cdn.inquisitr.com/wp-content/themes/inquisitr/dist/js/scripts.9904a3.js?v=9904a3&#038;av=8fa14c'></script>
+
+				
+		<script type="text/javascript">ggv2id='ab96aedc';</script>
+
+
+		
+			<script type="text/javascript">
+			window._taboola = window._taboola || [];
+			window._taboola.push({article:"auto"});
+			</script>
+
+			<script type="text/javascript">
+				var pwidget_config = {
+					putext/javascript">ggv2id='ab96aedc';</script>
+blisherKey:"Inquisitr.com-607",
+					onshare: function(network, targetUrl){
+							dmn.trackPostJs(network, targetUrl);
+					}
+				};
+				dmn.asyncLoad('http://apis.google.com/js/plusone.js');
+				dmn.asyncQueueLoad('http://assets.pinterest.com/js/pinit.js');
+				dmn.asyncQueueLoad('http://i.po.st/static/v3/post-widget.js');
+				dmn.asyncQueueLoad('http://widget.yavli.com/wl/137?url='+encodeURIComponent(window.location.href));
+				//dmn.asyncQueueLoad('http://widgets.outbrain.com/outbrain.js');
+
+			</script>
+
+		
+		
+		
+			<script type="text/javascript" src="http://cdn.taboolasyndication.com/libtrc/inquisitr-inquisitr/loader.js"></script>
+		
+		<script>
+			dmn.asyncLoad('http://platform.twitter.com/widgets.js', dmn.Twitt.init);
+			dmn.asyncLoad('http://connect.facebook.net/en_US/all.js');
+
+			window.fbAsyncInit = function() {
+				FB.init({appId: 164157850314499, status: true, cookie: true, xfbml: true, channelUrl: 'http://www.inquisitr.com/channel.html'});
+
+									FB.getLoginStatus(function(response){
+						dmn.FB.setUpFb();
+						dmn.FB.queueRead();
+					});
+				
+				dmn.FB.tracking();
+			};
+		</script>
+
+		<script type='text/javascript'>
+      if (!jQuery('body').hasClass("page")) {
+           dmn.asyncQueueLoad('http://www.beead.co.uk/api/choixPubJS.htm?pid=1217&screenLayer=1&mode=NONE&home=http://www.inquisitr.com/');
+            dmn.asyncLoad('http://g2.gumgum.com/javascripts/ggv2.js');
+            dmn.asyncQueueLoad('http://s.skimresources.com/js/17477X745560.skimlinks.js');
+       }
+</script>
+		<script type="text/javascript">
+dmn.asyncQueueLoad('https://cdn.nmcdn.us/js/connectV3.js', function(){NM.init({WidgetID: 454})});
+</script>
+<script>
+(function(w, d) {
+  var s1 = d.getElementsByTagName('script')[0],
+      s = d.createElement('script'),
+      cid = '242',
+      sfn;
+  s.src = '//tru.am/scripts/ta-pagesocial-sdk.js';
+  sfn = function() {
+    var l = window.location,
+        s = l.search,
+        h = l.hash;
+    if (!s && h && h.search(/utm_medium=trueAnthem/) !== -1) {
+      return '?' + h.slice(1);
+    }
+    return undefined;
+  };
+  if(s.addEventListener) {
+    s.addEventListener('load', function() {
+      w.TRUE_ANTHEM.configure(cid, {search: sfn()});
+    }, false);
+  } else {
+    s.onreadystatechange = function() {
+      if(s.readyState in {
+            loaded: 1,
+            complete: 1
+          }) {
+        s.onreadystatechange = null;
+        w.TRUE_ANTHEM.configure(cid, {search: sfn()});
+      }
+    };
+  }
+  s1.parentNode.insertBefore(s, s1);
+}(window, document));
+</script>
+
+				<script type='text/javascript'>
+			var _sf_async_config={};
+			/** CONFIGURATION START **/
+			_sf_async_config.uid = 47047;
+			_sf_async_config.domain = 'inquisitr.com';
+
+			_sf
+  s1.parentNode.insertBefore(s, s1);
+}(win_async_config.useCanonical = true;
+			_sf_async_config.sections = 'Featured:secondary,2014,Health';
+			_sf_async_config.authors = 'michael-d';
+			/** CONFIGURATION END **/
+
+			dmn.asyncLoad('http://static.chartbeat.com/js/chartbeat.js');
+
+		</script>
+
+	
+		   <!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">_atrk_opts = { atrk_acct: "4oMZe1a0mN00GN", domain:"inquisitr.com",dynamic: true};</script><noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=4oMZe1a0mN00GN" style="display:none" height="1" width="1" alt="" /></noscript>
+           <!-- End Alexa Certify Javascript -->
+           <!-- Quantcast Tag -->
+<script type="text/javascript">
+         var _qevents = _qevents || [];
+          _qevents.push({
+         qacct:"p-ZUyXfbm_M3Nv6"
+       });
+</script>
+<noscript>
+          <img src="//pixel.quantserve.com/pixel/p-ZUyXfbm_M3Nv6.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<script type='text/javascript'>
+      dmn.asyncQueueLoad('http://edge.quantserve.com/quant.js');
+      dmn.asyncLoad('https://d31qbv1cthcecs.cloudfront.net/atrk.js');
+      dmn.asyncLoad('http://static.yieldmo.com/ym.min.js');
+
+</script>
+<!-- start boomtrain -->
+<script type="text/javascript">
+  !function(a){function b(a,b){a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var rk.js');
+      dmn.asyncLoad('http://static.yieldmo.com/ym.min.js');
+
+</script>
+<!-- start boomtrain -->
+<script type="text/javascript">
+  !funcc="track identify alias initialize".split(" ");for(window._bt=a,i=0;i<c.length;i++)b(a,c[i]);var d=document.createElement("script");d.type="text/javascript",d.async=!0,d.src="//cdn.boomtrain.com/analyticstrain-1.min.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(d,e)}(window._bt||[]);
+  _bt.initialize("76d44983840c58afa81cb8e680747d53");
+if(singleID)
+    _bt.track("viewed", { 
+                    model: "article", 
+                    id: singleID
+                  }) 
+</script>
+<!-- end boomtrain -->
+		<div id="fb-root"></div>
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-1.newrelic.com","licenseKey":"05cf2520db","applicationID":"4919088","transactionName":"YAZXZEtVWBZXVUZdVllMdFNNXVkLGUVbWl5bBg==","queueTime":0,"applicationTime":1483,"ttGuid":"","agentToken":"","atts":"TEFAEgNPS0kUVxAOQkoe","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script></body>
+</html> <!-- end page. what a ride! -->

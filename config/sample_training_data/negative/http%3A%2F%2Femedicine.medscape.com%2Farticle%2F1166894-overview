@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Medscape: Medscape Access</title>
+
+<meta http-equiv="Cache-Control" content="no-cache" />
+<!-- POC report cookie -->
+<!-- /POC report cookie -->
+	<!-- GLOBAL FILES - DESKTOP -->
+<link rel="stylesheet" href="http://img.medscapestatic.com/medcss/global/global-desktop.css?v=20141230" type="text/css" media="screen">
+<link rel="stylesheet" href="http://img.medscapestatic.com/medcss/global/global-print.css?v=20141230" type="text/css" media="print">
+<script type="text/javascript" src="http://img.medscapestatic.com/pi/scripts/jquerylib/jquery-desktop.js?d=07262012"></script>
+<script type="text/javascript" src="http://img.medscapestatic.com/pi/scripts/global/global-desktop.js?v=20141230"></script>
+<!-- /GLOBAL FILES - DESKTOP -->
+
+
+<!-- Non-WWW, ALL devices -->
+
+	<!-- GLOBAL FILES - BOTTOM -->
+	<script type="text/javascript" src="http://img.medscapestatic.com/pi/scripts/global-lib-bottom.js?v=20141230"></script>
+	<script type="text/javascript" src="http://img.medscapestatic.com/pi/scripts/medscape-library.js?v=20141230"></script>
+	<script type="text/javascript" src="http://img.medscapestatic.com/pi/scripts/tandt/mbox-reduction.js?v=20141230"></script>
+	<meta name="format-detection" content="telephone=no" />
+	<!-- /GLOBAL FILES - BOTTOM-->
+
+		<link rel="stylesheet" href="http://img.medscapestatic.com/medcss/reference/ref-desktop.css?v=20141230" type="text/css" media="all">
+			<script src="http://img.medscapestatic.com/pi/scripts/reference/ref-desktop.js?v=20141230" type="text/javascript"></script>
+			<!-- /Non-WWW, ALL devices -->
+	<script src="//img.medscapestatic.com/pi/scripts/jquerylib/jquery-desktop.js"></script>
+
+<style type="text/css" media="all">
+<!--
+body { min-width: 758px; text-align: center; font-size: 76%; }
+#bodypadding { text-align: left; width: 758px; margin-left: auto; margin-right: auto; font-size: 1.15em; }
+.evergreenheader { margin: 20px 0 0 0; padding: 0 0 5px 0; width: 760px; height:30px; border-bottom: 1px solid #b3b3b3; }
+.evergreenbody { width: 760px; font-family: arial, sans-serif; }
+.evergreencontent { margin: 40px 0 0 75px; padding: 15px 0 0 0; border: 1px solid #b3b3b3; background-color: #f5f5f5; width: 600px; }
+p { margin: 0 15px 20px 15px; }
+a { color: #0d6ea5; }
+.poplayer {display:none; width:800px; height:370px; margin:20px auto; border-radius:6px; -webkit-border-radius:6px; border:1px solid #aaa;z-index:50; position:relative;  }
+.popcontent {margin: 50px 10px 10px; overflow-y:auto; height:300px; overflow-x:hidden; text-align:left;}
+.closebutton { display:block; width:50px; height:25px; margin:10px; background:#efefef; border:1px solid #aaa; clear:all; padding: 0 10px; line-height:25px; border-radius:6px; -webkit-border-radius:6px; cursor:pointer; text-align:center; position:absolute; right:0px; top:0px;}
+-->
+</style>
+<style>
+#nocookie_connect { display:none;}
+</style>
+
+<script>
+	 $(document).ready(function() {
+   $('.closebutton').click(function(){
+     $('div.poplayer').hide();
+   });
+   $('#showAccount').click(function(){
+      $('div.poplayer').hide();
+	 $('div#account').show();
+   });
+   $('.showPrivacy').click(function(){
+      $('div.poplayer').hide();
+	 $('div#privacy').show();
+   });
+ });
+	</script>
+</head>
+<body>
+
+<div id="bodypadding">
+
+<div id="nocookie_mscp">
+<div class="evergreenheader">
+<div style="float:left"><a href="http://www.medscape.com"><img src="//img.medscapestatic.com/pi/global/logos/mscp/logo_medscape117x30.gif" alt="Medscape from WebMD" width="117" height="30" border="0" style="margin: 0 9px 0 0;" /></a></div><!-- <div style="float:left; padding: 0 9px 0 9px; border-left: 1px solid #B3B3B3;"><a href="http://www.medscape.org"><img src="//img.medscapestatic.com/pi/global/logos/mscp/edu/logo_medscapeedu112x30.gif" alt="Medscape Education" width="112" height="30" border="0" /></a></div> -->
+</div>
+
+<div class="evergreenbody">
+<div class="evergreencontent">
+
+<p>In order to use Medscape, your browser must be set to accept cookies delivered by the Medscape site. To find out how to adjust your browser settings to accept cookies, please <a href="#" id="showAccount">click here</a>.</p>
+<p>Medscape uses cookies to customize the site based on the information we collect at registration. The cookies contain no personally identifiable information and have no effect once you leave the Medscape site. You can read more about our use of cookies in our <a href="#" class="showPrivacy">privacy policy</a>.</p>
+
+<div id="account" class="poplayer"><a class="closebutton">Close</a><div class="popcontent">
+<!-- help item -->
+<a name="cookies" id="cookies"></a>
+<h5 style="font-family: arial, sans-serif; font-size: 1.15em;font-weight: bold;color: #ff6600;margin: 7px 0px 3px 0px;">Medscape Cookies</h5>
+<p>Medscape believes strongly in member privacy. Medscape's cookies will not be transmitted to other sites and they will not be used to pass individual activity to third parties (see <a href="#" class="showPrivacy">Medscape's Policy on Member Privacy</a>).</p>
+<p>Medscape is currently issuing two varieties of browser "cookies":</p>
+<ul>
+<li class="indented"><b>Authentication Cookies.</b> These cookies are temporary or permanent. Temporary browser cookies are not saved to your hard drive as they are only persistent for each instance of your browser application.  Permanent cookies are saved on your hard drive and are permanent until removed.  In either case, the cookies allow your browser to automatically tell Medscape who you are, so that you are not required to sign in each visit.</li>
+<li class="indented"><b>To have Medscape save your account information permanently</b> click "Remember Me" on the "You are signed in as..." page (the page that is displayed when you sign in).  Once you save this information to your hard drive, you will never have to sign in again unless you Sign Out.</li>
+<li class="indented"><b>To have Medscape save your account information temporarily</b> click "Don't Remember Me" on the "You are signed in as..." page (the page that is displayed when you sign in).  This feature is useful if you are in a situation where it would not be prudent to save your information permanently &#8211; <i>i.e.</i>, a lab or shared computer.</li>
+<li class="indented"><b>Signing Out.</b> Once you have saved a permanent cookie, you can remove this cookie from your computer by clicking on the Sign Out button which is found at the top of the Home page (it replaces the Sign In button once you've signed in).  The page is very similar to the one you saw when you first signed in; click on "Don't Remember Me" and the permanent cookie with your information will be removed from your computer.<br /></li>
+<li class="indented"><b>Refpath Cookies.</b> Medscape uses cookies to drive advertisement and to collect member traffic data.  If you see a refpath cookie, these are used for such a purpose. All refpath cookies are temporary.</li>
+</ul><br />
+<p>Browser cookies are <b>computer-specific</b>. If you have a permanent cookie on your computer at work, you must save an additional one on your computer at home.  The information in both cookies can (and probably will) be the same, but you need one on both computers. The same is true for multiple Web browser applications.</p>
+<p>Medscape recommends that all members accept and save a permanent cookie for convenience.  However, Medscape also recognizes personal beliefs in regard to browser cookies, and as such, members that do not accept the cookies can still access the site &#8211; they will just have to sign in each visit.</p>
+<p>If you have additional questions or concerns about cookies, please use the <a href="/px/contactus">Technical Report Form</a> to send mail to the Webmaster.</p>
+<!-- /help item -->
+</div></div>
+</div>
+</div>
+
+</div>
+<!-- /mscp nocookie -->
+
+<div id="nocookie_connect">
+    <div id="header">
+      <div class="content"><a href="http://www.medscape.com">Medscape</a></div>
+    </div>
+    <div id="main">
+
+        <div class="topLogos"> <img src="//img.medscapestatic.com/pi/webmdconnect/logo-medscape-color-274x59.png" width="137" height="30" border="0" alt="Medscape" />
+        <span class="divider">&nbsp;</span>
+        <img src="//img.medscapestatic.com/pi/webmdconnect/logo-webmd-physician-directory-534x51.png" width="267" height="26" border="0" alt="WebMD Physician Directory">
+        </div>
+  </div>
+
+<div class="evergreenbody">
+<div class="evergreencontent">
+
+<p>In order to use Medscape, please set your browser to allow cookies. Then exit your browser completely before attempting to access the site again: close browser window (PC), or quit (Mac).</p>
+<p>Please review our <a href="#" class="showPrivacy">privacy policy</a> for more information about protecting your privacy.</p>
+<p>Please contact <a href="http://help.connect.webmd.com" target="_blank">customer service</a> if you continue to experience problems.</p>
+
+</div>
+</div>
+
+</div>
+<!-- /connect nocookie -->
+
+<div id="privacy" class="poplayer"><a class="closebutton">Close</a><div class="popcontent"><h2>The WebMD Health Professional Network Privacy Policy</h2>
+
+<h4>Services and Web Sites Covered</h4>
+<p>This policy describes what information may be collected about you when you use the services made available through the WebMD Health Professional Network (as defined below), how this information may be used, how you can control how your information is used and what precautions are taken against unauthorized access or use of your information. The services made available through the WebMD Health Professional Network may be provided in a variety of mediums and devices now known or hereinafter developed including mobile applications, and include without limitation news, reference tools and applications, sponsored programming, personalized content, continuing medical education, communication tools and discussion boards (collectively, the "Services"). You should read the privacy policy of each website that you visit after you leave any of the WebMD Health Professional Network websites. We are not responsible for how other websites treat your privacy once you leave one of our websites.</p>
+
+<p>The WebMD Health Professional Network is comprised of several websites including medscape.com, medscape.org, medscape.fr and medscapedeutschland.de (referred to collectively as the "Professional Sites"), including any mobile optimized versions of the Professional Sites and the Medscape Mobile Device Application ("Medscape Mobile").  These properties are owned and operated by our affiliated companies.  For example, WebMD LLC owns and operates medscape.com and Medscape Mobile, and Medscape, LLC owns and operates Medscape.org and WebMD Global LLC owns and operates medscape.fr and medscapedeutschland.de. References to "WebMD" in this Privacy Policy mean WebMD LLC, including any company that WebMD controls (for example a subsidiary that it owns) and references to "Medscape" mean Medscape, LLC, including any company that Medscape controls and references to "WebMD Global" mean WebMD Global LLC, including any company that WebMD Global controls.  We refer to WebMD and WebMD Global, together, as the "WebMD Companies" and the websites that they each operate as the "WebMD Sites." We refer to the websites that Medscape operates as the "Medscape Sites."   Reference to "we" or "our" means WebMD, Medscape and WebMD Global.  We may share information among the subsidiaries of WebMD Health Corp. (our parent company) and the respective Professional Sites that we each own or control, and they may use such information in acco "we" or "our" means WebMD, Medscape and WebMD Global.  We may share information among the subsidiaries of WebMD Health Corp. (our parent crdance with and subject to the terms of this Privacy Policy.</p>
+
+<p>You can visit our <a href="http://www.wbmd.com/" target="_blank">corporate site</a> at www.wbmd.com to learn more about us, obtain investor information, and obtain contact information.</p>
+
+<h4>Privacy Policy Changes</h4>
+
+<p>As this Privacy Policy changes in significant ways, we will take steps to inform you of the changes. Minor changes to this Privacy Policy may occur that will not significantly affect the ways in which we each use your personally identifiable information. In these instances, we may not inform you of such minor changes. When this Privacy Policy changes in a way that significantly affects the way we handle personal information, we will not apply the new Policy to information we have previously collected from you without giving you a choice as to whether or not we can apply the new Policy to your information going forward.</p>
+
+<h3>Information We Collect</h3>
+
+<p>In this section of our Privacy Policy, we discuss the different types of information that we may collect about you, and the ways in which such information may be collected.</p>
+
+<h4>Information We Collect from Unregistered Visitors</h4>
+
+<p>You must register to access all of the Services, however, you may be able to access certain limited areas of the Services without disclosing any personally identifiable information.  We collect non-personally identifiable information (i.e., information that is not traced back to any individual and is not used on its own to identify an individual) about your use of the Services through the use of cookies, even if you have not registered, including the referring website, if applicable, the type of browser you use, and the time and date that you accessed the Services.   The section of this Privacy Policy entitled "Cookies and Web Beacons," below, further describes how we use cookies and how you can limit our use of cookies.</p>
+
+<h4>Information We Collect When You Register</h4>
+
+<p>When you register for the Services, you are asked to provide identifying information such as your name, e-mail address, zip code, and other professional information (e.g., specialty). We may use your registration information to send you communications by e-mail about our products and services and the products and services of our third party sponsors.  By registering for the Services, you are consenting to receive these communications.  You may also subscribe to receive certain e-mail newsletters sent to registered users from time to time which you may manage through the newsletter subscriptions area within your account settings. If you are required to provide additional personally identifiable information to access a particular component letters sent to registered users from time toof the Services, or if we would like to use personally identifiable information that you have previously provided in a manner not otherwise permitted under this Privacy Policy, we will explain how we intend to use such personally identifiable information at the time of collection and will require your consent at that time to any such collection and use.</p>
+
+<h4>Continuing Medical Education</h4>
+<p>When you participate in a Continuing Medical Education (CME) or a Continuing Education (CE) activity through the Services, you may be asked to provide personally identifiable information such as your name and mailing address.  In addition to personally identifiable information, aggregated non-personally identifiable information about the activities undertaken by CME/CE participants is recorded. Information that you provide in connection with your participation in CME/CE activities, either when registering or requesting credit, may be used in several ways:</p>
+<ul>
+<li>Medscape is accredited by the Accreditation Council for Continuing Medical Education (ACCME) the American Nurses Credentialing Center, and the Accreditation Council for Pharmacy Education to provide continuing education to physicians, nurses and pharmacists, respectively. As an accredited entity, Medscape is required to periodically submit aggregated data about CME/CE participants and the CME/ CE activities that Medscape certifies. Medscape also provides personally identifiable information to other accredited CME/CE providers who certify CME/CE activities offered through the Services, as necessary for their fulfillment of their reporting obligations to the ACCME and other accrediting bodies. These reports may include personally identifiable information about you and credits issued to you, for the purpose of maintaining records that you can request from the accredited provider for up to six (6) years; and</li>
+<li>WebMD Global may provide personally identifiable information to entities who certify educational activities that it makes available through the Services, as necessary for their fulfillment of their reporting obligations and internal recordkeeping; and</li>
+<li>Supporters of CME/CE activities will receive only aggregated data about CME/CE activities that they support.</li>
+</ul>
+<p>The Medscape and WebMD Global editorial staffs have access to files containing personally identifiable information, including evaluation forms and aggregated CME /CE participant information. These files can be accessed in order to respond to your questions or comments. Medscape and WebMD Global may also use personally identifiable information, including registration information and evaluation data, in assessing educational needs and evaluating their education activities.</p>
+
+<h4>Information from Outside Sources</h4>
+
+<p>We may collect additional information about registered users from third party sources to assist us in providing the Services. For example, we use such information to verify and update registration information and confirm licensure status.</p>
+
+<h4>Other Information</h4>
+
+<ul>
+<li><strong>Discussion Boards:</strong> When you post a message to a discussion board, your basic profile will be available for all registered users to see. This basic profile consists of your name, specialty and geographic information. You may, at your option, choose to display additional information in your profile. You should not post any information about you or any other person (including any patient) to a discussion board or other public forum if you want to keep such information private or you are required by law to keep such information private. Information you post to discussion boards is considered public information and may be used by us and third parties, as further described in the WebMD Health Professional Network Terms of Use.<br /><br /></li>
+
+<li><strong>Tools:</strong> Clinical tools may be available through the Services. These tools may require you to provide information for the tools to operate. These tools may store information that you provide on our servers. <br /><br /></li>
+
+<li><strong>Additional Forms and Emails:</strong> We may also ask you to provide additional information after you register if you want to obtain additional services or information or to resolve complaints or concerns.<br /><br /></li>
+
+<li><strong>Market Research:</strong> From time to time, you may be invited to participate in a sponsored or unsponsored market research survey through an email invitation, on-site pop-up or some other means. The survey may be administered by one of our companies or a third party market research company.  When participating in such a survey, in addition to providing your responses to the survey questions you may be asked to provide personally identifiable information that may be combined with information that you have already provided at registration or that we have received from third party sources, as described in this Privacy Policy.  The section of this Privacy Policy entitled "Uses and Disclosures We Make of Information," below, describes how we use and disclose information about your participation in market research surveys offered through the Services.<br /><br /></li>
+</ul>
+
+<h4>Use of Cookies and Web Beacons</h4>
+
+<p>We collect non-personally identifiable information about your use of the Services through the use of cookies. A cookie is a small data file that your browser allows us to place on your hard drive so we can associate you with the device you are using. We may assign cookies to devices that accesses the Services to: (i) track usage across the Professional Sites and Services; (ii) help us dynamically generate advertising and content to users of the Services; and (iii) assess which Professional Site pages and Services you access. If you are a registered user of the WebMD Health Professional Network, we may elect to associate your registration information with our cookies. Associating a cookie with your registration data allows us to provide more customized content, including advertisements, and enhance personalization and functionality of the Services. As discussed below, when you download and install Medscape Mobile onto your mobile device, we assign a random number to your installation, and that random number is used in a manner similar to our use of cookies. </p>
+
+<p>Most browser software can be set to reject all cookies. If your browser is set to reject cookies, websites that are cookie-enabled will not recognize you when you return to the website, and some website functionality may be lost. The Help section of your browser will tell you about your options for managing your cookies.</p>
+
+<p>We may use web beacons and cookies to serve you targeted advertisements when you visit other websites owned and operated by WebMD. We may also use web beacons to track who has opened our emails. Web beacons are tiny graphic image files, embedded in a website page that notify the home server (which can belong to the host website, a network advertiser, or some other third party) on a non-personally identifiable basis that some interaction has taken place.  This notice may also result in a cookie being set on your device, as described above.  </p>
+
+<p>WebMD contracts with third parties whose web beacons may be placed on the WebMD Sites to assist WebMD in targeting its advertising that is served to you on websites that are not owned and operated by WebMD. These web beacons place cookies on your browser in order to enable these third parties to collect non-personally identifiable information about you. If your browser is set to reject cookies, this non-personally identifiable information will not be sent to these third parties.  Also, in connection with its sale of advertising, WebMD may allow a third party to place a cookie on your browser to enable advertisers to recognize your browser on a non-personally identifiable basis in order to deliver an advertisement to you when you visit a WebMD Site.  These advertisers are not permitted to collect any information based on your visits to a WebMD Site.</p>
+
+<p>Sponsors or advertisers that market to you through our Services may use their own cookies, web beacons or other online tracking technologies in the banner advertisements served to you. Some advertisers use companies other than WebMD to serve these ads and to monitor users' responses to ads, and these companies ("Ad Servers") may also collect non-personally identifiable information through the use of cookies or web beacons.  We do not control these third parties' use of cookies or web beacons, or how they manage the non-personally identifiable information they gather through them. However, our Advertising Policy prohibits sponsors, advertisers and Ad Servers who we authorize to collect cookie or web beacon information through the Services from collecting any personally identifiable information about you from your use of the Services through these means. Our Advertising Policy also prohibits advertisers from linking any non-personal cookie or web beacon information that they collect from your use of the Services to personally identifiable information that they or others collect in other ways or from other websites except as may be described in connection with a particular program or except as you may have agreed with the third party placing the cookie or web beacon.   </p>
+
+<p>Certain Ad Servers and third party firms that facilitate the serving of advertisements based on your browsing activities on the Internet allow you to prevent them from collecting data or serving advertisements through the use of their cookies. In order to do so, you must opt-out of such data collection with each individual website. Currently, you can opt-out of Cookies for several Ad Servers and marketing analytics firms by visiting the <a href="http://www.networkadvertising.org/managing/opt_out.asp" target="_blank">Network Advertising Initiative</a> gateway opt-out website. This website will also allow you to review the privacy policies of these Ad Servers and marketing analytics firms.  The Professional Sites do not respond to web browser "do not track" signals. </p>
+
+<h4>Mobile Device Application</h4>
+<p>When you download and install Medscape Mobile onto your mobile device, we assign a random number to your installation. We cannot use this number to identify you personally, and we cannot identify you personally unless you choose to become a registered user of Medscape Mobile.  We use this random number in a manner similar to our use of cookies as described in this Privacy Policy.  Unlike cookies, the random number is assigned to your installation of Medscape Mobile itself and not a browser, because Medscape Mobile does not work through your browser.  Therefore the random number cannot be removed through your device settings.  If you do not want us to use the random number for purposes similar to the purposes for which we use cookies, as described in this Privacy Policy, please do not use Medscape Mobile.  Also, if you do become a registered user of Medscape Mobile, we will use your registration information as described in this Privacy Policy to provide the Services to you through Medscape Mobile.  We do not obtain any information about your mobile device (through the random number, your registration information or otherwise) other than its brand, make and model and the type of operating software that it uses.</p>
+
+<h4>Children's Privacy</h4>
+
+<p>We are committed to protecting the privacy of children. The Professional Sites and Services are designed and intended for use by adults, and are not intended for, nor designed to be used by children under the age of 18. We do not collect personally identifiable information from any person we know is under the age of 18.</p>
+
+<h3>Uses and Disclosures We Make of Information</h3>
+
+<p>In this section of our Privacy Policy, we identify the ways we may use information about you that we have collected. In general, the personally identifiable information that you provide in connection with the Services will be used to provide the services you have requested or authorized.</p>
+
+<h4>Aggregate Data</h4>
+
+<p>We create aggregate data about users of our Services for product development and improvement activities. We also use it for market analysis. We may provide information about users of our Services in aggregate form to third parties. For example, WebMD may tell a client what percentage of registered users of the WebMD Health Professional Network reside in a particular geographical area or specialize in a particular clinical area, or what percentage of participants in a market research survey selected a particular response to a survey question. When aggregated information is provided to a third party, it is pooled with many individual records and stripped of any data that could be used to identify an individual. Any third party that receives aggregated information must agree not to attempt to re-identify the people it belongs to. Depending on our agreement with the third party, we may or may not charge for this information.</p>
+
+<h4>Marketing and Advertising</h4>
+
+<p>WebMD may target its advertising and marketing (e.g., through e-mail and on-site communications) based on information that you provide when you register for the Services and information that it receives from third party sources. For example, a user that WebMD knows is a cardiologist may be served cardiology-related advertisements on both WebMD-owned and third party websites that a neurologist will not see, or a user that WebMD knows is a healthcare professional who treats diabetes may be served advertisements for new diabetes therapies the served cardiology-related advertisements on both WebMD-owned and third party websites that a neurologist will not see, or a user that WebMD knows is a healthcare professional who treats diabetes may be served advertisements for new diaat other users would not see. WebMD serves these ads through the use of cookies and web beacons, as described above. Additionally, WebMD may geographically target its advertising to registered and unregistered users based on IP address.</p>
+
+<p>WebMD may also personalize the Services, including the content and advertising that registered users see on the WebMD Sites,  and through other communications such as e-mail,  based on their interests. For example, you may see different articles and advertisements in different places on medscape.com and in e-mails that we send to you based on information you have shared with WebMD such as your specialty, information that WebMD has obtained by observing your previous activity within the WebMD Professional Network, or information that WebMD has received from third party sources, as described in this Privacy Policy.</p>
+
+<h4>Third Parties</h4>
+
+<p>In addition to aggregate information (discussed previously), we each may each share some kinds of personally identifiable information with third parties as described below.</p>
+
+<ul>
+<li><strong>Other Companies:</strong> We have strategic relationships with other companies who offer products and services through the Services. When you are interacting with one of these companies, a different privacy policy may apply and will be presented to you at such time.<br /><br /></li>
+
+<li><strong>Companies and People Who Work for Us:</strong> We each contract with other companies and individuals to help us provide our respective services. For example, we may host some of our Professional Sites on another company's computers, hire technical consultants to maintain any Web-based clinical tools, work with companies to remove repetitive information from customer lists, analyze data, provide marketing assistance (including assisting us in targeting our advertisements as described herein), or provide customer service or fulfillment services. In addition, if you are a healthcare professional, we may request that a third party validate your licensure status and other information against available databases of healthcare professionals. In order to provide these services, these other companies may have limited access to some of the personally identifiable information we maintain about users of our Services. We require all such companies to comply with the terms of this Privacy Policy, to limit their access to any personal information to the minimum necessary to perform their obligations, and not to use the information they may access for purposes other than fulfilling their responsibilities to us.<br /><br /></li>
+
+<li><strong>Market Research:</strong> From time to time, we may invite you to participate in sponsored or unsponsored market research surveys as further described above.  We may provide aggregate information from the survey results to third parties including the survey sponsor, if applicable. If you receive remuneration for participating in a sponsored survey, we may be required to provide the sponsor with personally identifiable information about you for its recordkeeping and regulatory reporting purposes.  We will not provide any sponsor with your survey responses on an identifiable basis unless we obtain your consent prior to your participation in the survey.  If you participate in a survey administered by a third party market research company, this company may identify you when you participate in the survey.  We require these companies to agree that they will not provide the survey sponsor with personally identifiable information about you based on your participation in the survey, nor will they market to you based on such participation. <br /><br /></li>
+
+<li><strong>Sponsored Programs:</strong> When you use the Services through a WebMD Site, newsletter, Medscape Mobile or other means, you may be presented with advertisements and opportunities to engage in industry-sponsored informational programs consisting of sponsor-selected materials ("Sponsored Programs"). All advertisements and Sponsored Programs (including any links to Sponsored Programs) will be identified to you by the label Advertisement, Information from Industry, Sponsored, WebMD Professional or some similar designation indicating that the content has been selected by a third-party sponsor. Examples of Sponsored Programs include information resources featuring branded or unbranded commercial content, interactive programs that provide information about medical conditions, treatments and products, multi-media presentations including video featuring a key opinion leader and safety and regulatory information resources. We may make Sponsored Programs available to you through email or on-site media units, all of which will be identified as described above.<br /><br />
+
+When you choose to engage in a Sponsored Program, you may be asked to provide personally identifiable information (e.g., postal address, telephone number, e-mail address, etc.) which may be used to supplement information about you that we have already received during member registration. In addition, we may collect information in connection with a transaction that you have requested (e.g., sample request, sales rep visit, etc.), responses to Sponsored Program questions, and/or gift requests and issuance. Even if you do not provide us with personally identifiable information, we collect non-personally identifiable information about your use of Sponsored Programs through cookies and web beacons, as described above.<br /><br />
+
+The personally identifiable information that you provide when you engage in a Sponsored Program will be used to provide the services you have requested or authorized, respond to your questions, provide you the specific services you select and to send you emails about new programs and selected information from our sponsors as it relates to your specialty or area of clinical practice. You may also receive invitations to engage in other Sponsored Programs from the same sponsor. When you are exposed to an advertisement through the Services, whether on a WebMD Site or Medscape Mobile, in a newsletter or through some other means, or when you engage in a Sponsored Program, e.g., access a sponsored information resource or open a Sponsored Program e-mail from WebMD Professional, WebMD may identify you by name to the sponsor of the advertisement or Sponsored Program and/or its agents on the sponsor's behalf, as well as to potential sponsors of advertisements and Sponsored Programs that may be provided to you through the Services. We may also provide such third parties with your specialty and country where you reside, based on your registration profile. We will not provide these third parties with your personal contact information such as email or postal address. We are not responsible for how these third parties use your information and manage your privacy. Further, we may use non-personally identifiable information for research purposes, and we may provide this information in the aggregate to third parties. For example, we might inform third parties regarding the number of users of a Sponsored Program and the activities they conduct while engaged in the Program.<br /><br /></li>
+
+<li><strong>Business Transfers:</strong> If one of us transfers a business unit (such as a subsidiary) or an asset (such as a website) to another company, that company will be required to honor the applicable terms of this Privacy Policy.<br /><br /></li>
+
+<li><strong>Legal Requirements:</strong> We may release account and other personally identifiable information when we believe release (1) is required to comply with valid legal requirements such as a law, regulation, search warrant, subpoena or court order; or (2) is reasonable in response to a physical threat to you or others, to protect property or defend or assert legal rights. In the event that we are legally compelled to disclose your personally identifiable information to a third party, we will attempt to notify you unless doing so would violate the law, court order or government instruction. <br /><br /></li>
+
+<li><strong>Consent:</strong> We may release personally identifiable information to a third party in accordance with your consent, subject to the purposes and limits that we disclose when we request your consent. For example, when you choose to participate in a Sponsored Program, we may provide certain personally identifiable information to the sponsor of such program and to potential sponsors of programs, as further described above.<br /><br /></li>
+</ul>
+
+<p>If we discover that a third party inadvertently disclosed personally identifiable information about any of our users, we will take immediate action to prevent further occurrences.</p>
+
+<h3>Security of Information</h3>
+
+<p>In this section of our Privacy Policy, we discuss the security measures we take to protect information that we have collected about you.</p>
+
+<h4>General Policies</h4>
+
+<p>We have implemented technology and security policies, rules and other measures to protect the personal data that we have under our control from unauthorized access, improper use, alteration, unlawful or accidental destruction, and accidental loss. We also protect your information by requiring that all our employees and others who have access to or are associated with the processing of your data respect your confidentiality.</p>
+
+<p>We use security methods to determine the identity of registered users, so that appropriate rights and restrictions can be enforced for that user. Reliable verification of user identity is called authentication. We use both passwords and usernames to authenticate users. Users are responsible for maintaining their own passwords.</p>
+
+<h4>Employees</h4>
+<p>Employees are required to keep your information private, as a condition of their employment with us. Only selected, authorized employees are permitted to access health information.</p>
+<p>All employees and contractors must abide by our Privacy Policy, and those who violate that policy are subject to disciplinary action, up to and including termination of their employment and legal action.</p>
+
+<h3>Access to Information and Choices</h3>
+
+<p>In this section of this Privacy Policy, we tell you how to obtain and correct information we have about you, and how to choose what types of information you may share with us.</p>
+
+<h4>Correction of Information We Have About You</h4>
+
+<p>If you believe that there are errors in the registration information associated with your account, you may edit your personal profile any time that you like. You can directly edit your user profile on the Professional Site on which you initially registered. Requests for deletion of your record may result in your removal from the registry, but we may keep certain demographic information about you for product improvement purposes. You may contact Customer Support and ask for the changes that you would like to make.</p>
+
+<h3>Use of your Information Outside of the EEA</h3>
+<p>WebMD, Medscape and WebMD Global are located in the United States. We will collect, store, and process information about your use of the Services in countries outside of the European Economic Area (EEA) as necessary for our legitimate business purposes. By using the Services, you consent to such collection, storage and processing outside of the EEA, though not all countries outside the EEA may afford the same level of data protection as considered adequate in the European Union.  We will take reasonable steps to ensure your information is adequately protected.</p>
+
+<h3>Privacy Questions or Concerns</h3>
+<p>For privacy questions or concerns about one of our Web sites or Services, please contact <a href="mailto:MedscapePrivacy@webmd.net">MedscapePrivacy@webmd.net</a>. </p>
+
+<h4>Terms of Use</h4>
+
+<p>The WebMD Professional Network Terms of Use can be found <a href="/public/termsofuse">here</a>.</p>
+
+<p><em><strong>Effective date:</strong> February, 2014</em></p>
+&nbsp;</div></div>
+
+</div>
+<!-- /bodypadding -->
+
+</body>
+</html> Use</h4>
+
+<p>The WebMD Professional Network Terms of Use can be found <a href="/public/termsofuse">here</a>.

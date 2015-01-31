@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="ie ie7 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie ie8 lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="ZgN4TGJSaHzzTDjTBWagbLAh+l76gI1N36R8I3iNUbM=" name="csrf-token" />
+
+  <meta charset="utf-8">
+  <meta property="fb:app_id" content="127105130696839">
+  <script>
+  if (/iPad/.test(navigator.userAgent)) {
+    // 972px layout + 20px gutter on left & right.
+    document.write('<meta name="viewport" content="width=1012">');
+  } else {
+    document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
+  }
+</script>
+
+  
+  <meta content="Whatever you do, don’t turn to Twitter for news about Ebola. The volume and tone of tweets and retweets about the disease will make you wish you were watching the zombie apocalypse of The Walking Dead…" name="description" />
+<meta content="20141021" name="pubdate" />
+<meta content="analysis" name="searchtype" />
+<meta content="http://theconversation.com/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" name="original-source" />
+
+  <meta content="Alfred Hermida" name="author" />
+
+  <meta content="University of British Columbia " name="institution" />
+
+  <meta content="The Conversation" property="og:site_name" />
+<meta content="#Ebola in the USA: don&#39;t trust what you read on Twitter" property="og:title" />
+<meta content="Whatever you do, don’t turn to Twitter for news about Ebola. The volume and tone of tweets and retweets about the disease will make you wish you were watching the zombie apocalypse of The Walking Dead…" property="og:description" />
+<meta content="article" property="og:type" />
+<meta content="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/62257/width668/8bh5qvnp-1413818004.jpg" property="og:image" />
+<meta content="2015-01-30T13:00:33Z" property="og:updated_time" />
+<meta content="http://theconversation.com/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" property="og:url" />
+<meta content="https://www.facebook.com/theconversationUS" property="article:publisher" />
+
+  <meta content="summary_large_image" name="twitter:card" />
+<meta content="@US_Conversation" name="twitter:site" />
+<meta content="@hermida" name="twitter:creator" />
+
+
+  <!-- refspec 0b3be73 -->
+  <title>#Ebola in the USA: don&#39;t trust what you read on Twitter</title>
+  <link href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/application-b985fac5cdcc55e465913832cbfbe418.css" media="screen" rel="stylesheet" />
+
+
+
+<!--[if lt IE 9]><script src="/javascripts/vendor/shim.js"></script><![endif]-->
+
+<!--[if IE 7]><link href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/ie/ie7-9812702d50b2ed8774c636865aaa5fd8.css" media="screen" rel="stylesheet" /><![endif]-->
+<!--[if IE 8]><link href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/ie/ie8-00105a1d14c8e801d97a332c4594a560.css" media="screen" rel="stylesheet" /><![endif]-->
+
+<link href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/print-34e947b26866581a1ecf4990c2a4a2e3.css" media="print" rel="stylesheet" />
+
+  <link rel="apple-touch-icon-precomposed" href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/ios-logo-63701b211d227ecc2fb360aa4279459c.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+  
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', "UA-21436757-1"]);
+
+  _gaq.push(['_setCustomVar', 1, 'UserType', 'Reader', 2]);
+_gaq.push(['_setCustomVar', 2, 'CommissioningRegion', 'us', 3]);
+_gaq.push(['_setCustomVar', 3, 'ContentType', 'analysis', 3]);
+_gaq.push(['_setCustomVar', 5, 'RegionCode', 'us', 3]);
+
+
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+    
+    
+    <link href="http://theconversation.com/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" rel="canonical" />
+
+</head>
+<body class="region_us content content-show  presenting-article analysis">
+  
+  <div id="sm-sidebar">
+    <div id="sm-sidebar-content">
+      <h3>Sections <span id="sm-sidebar-close-button" class="icon-delete"></span></h3>
+      <ul>
+          <li class="home-page ">
+            <a class="" href="/us">Home<span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="arts ">
+            <a class="" href="/us/arts">Arts <span><span title="and">+</span> Culture</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="business ">
+            <a class="" href="/us/business">Economy <span><span title="and">+</span> Business</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="environment ">
+            <a class="" href="/us/environment">Environment <span><span title="and">+</span> Energy</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="health ">
+            <a class="active" href="/us/health">Health <span><span title="and">+</span> Medicine</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="politics ">
+            <a class="" href="/us/politics">Politics <span><span title="and">+</span> Society</span><span class="icon-chevron-right"></span></a>
+          </li>
+          <li class="technology last">
+            <a class="" href="/us/technology">Science <span><span title="and">+</span> Technology</span><span class="icon-chevron-right"></span></a>
+          </li>
+      </ul>
+
+      <h3>Services</h3>
+      <ul>
+          <li>
+            <a href="https://jobs.theconversation.com/?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=mobile-sidebar">
+              Job board <span class="icon-chevron-right"></span>
+</a>          </li>
+        <li>
+          <a href="/us/newsletter">
+            Newsletter <span class="icon-chevron-right"></span>
+</a>        </li>
+        <li id="google-currents-link">
+          <a href="http://www.google.com/newsstand/s/editions/CAowro6aAg">Read on Google Play<span class="icon-chevron-right"></span></a>
+        </li>
+      </ul>
+
+      <h3>Information</h3>
+      <ul>
+        <li><a class="" href="/us/who-we-are">Who we are <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/charter">Our charter <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/team">Our team <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/partners">Partners and funders <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/institutions">Contributing institutions <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/contact-us">Contact us <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/privacy-policy">Privacy policy <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/terms-and-conditions">Terms and conditions <span class="icon-chevron-right"></span></a></li>
+        <li><a class="" href="/us/corrections">Corrections <span class="icon-chevron-right"></span></a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div id="page-wrapper">
+    <div id="sm-topbar">
+
+  <div>
+    <span id="sm-topbar-menu-button" class="icon-menu"></span>
+  </div>
+
+  <div id="sm-region-select">
+    <div>
+      <span id="sm-region-current">
+        <span class="code">US</span>
+        <span class="name">United States</span>
+      </span>
+      <span class="icon-caret-down"></span>
+    </div>
+    <select id="sm-region-select-dropdown">
+        <option data-code="AU" value="/au">
+          Australia
+        </option>
+        <option data-code="UK" value="/uk">
+          United Kingdom
+        </option>
+        <option data-code="US" value="/us" selected="selected">
+          United States
+        </option>
+    </select>
+  </div>
+
+  <div>
+    <span id="sm-topbar-search-button" class="icon-search"></span>
+  </div>
+
+  <div id="sm-search">
+    <form action="/search">
+      <input type="text" name="q" placeholder="Search analysis, academics…">
+      <button type="submit" class="button active"><span class="icon-search"></span></button>
+    </form>
+  </div>
+
+  <div id="sm-overlay"></div>
+
+</div>
+
+    <section id="topbar">
+  <div class="wrapper clearfix">
+
+    <div id="edition-selector">
+      <ul>
+        <li><div>Edition:</div></li>
+          <li class="region au">
+            <a href="/au" title="Australia">
+              AU
+</a>          </li>
+          <li class="region uk">
+            <a href="/uk" title="United Kingdom">
+              UK
+</a>          </li>
+          <li class="region us active">
+            <a href="/us" title="United States">
+              US
+</a>          </li>
+      </ul>
+    </div>
+
+    <nav id="site-nav">
+      <ul>
+          <li class="tc-jobs">
+            <a href="https://jobs.theconversation.com/?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=topbar">Job Board</a>
+          </li>
+
+
+        <li class="newsletter">
+          <a href="/us/newsletter" title="Sign up to receive our daily email newsletter">Newsletter</a>
+        </li>
+
+        <li class="elsewhere">
+          <a href="https://www.facebook.com/theconversationUS" title="The Conversation on Facebook"><i class="icon-facebook"></i></a>
+          <a href="https://twitter.com/US_Conversation" title="The Conversation on Twitter"><i class="icon-twitter"></i></a>
+          <a class="rss" href="/us/feeds" title="The Conversation&#39;s Feeds"><i class="icon-rss"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="account-nav">
+        <ul class="auth">
+          <li>
+            <a href="/become-an-author">Become an author</a>
+          </li>
+          <li>
+            <a href="https://theconversation.com/sign_up?return_to=%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211">Sign up as a reader</a>
+          </li>
+          <li>
+            <a href="/sign_in?return_to=%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211">Sign in</a>
+          </li>
+        </ul>
+    </nav>
+  </div>
+</section>
+
+    
+  <section id="header">
+    <div class="wrapper nocontent">
+      <header id="masthead" class="clearfix">
+  <a class="masthead-home-link" href="/us">
+    <img alt="The Conversation" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/carlton/logos/logo-58b45b79a1a34a0ef48647158f02969a.svg" />
+</a>
+  <form class="masthead-search" action="/search" method="get">
+    <fieldset>
+  <legend>Search</legend>
+  <div class="row">
+    <div class="input-wrapper">
+      <label for="q"><i class="icon-search"></i></label>
+      <input id="q" name="q" placeholder="Search analysis, research, academics…" type="text" value="" />
+    </div>
+    <button type="submit" class="button" value="Search"></button>
+  </div>
+</fieldset>
+
+  </form>
+
+  <div class="masthead-tagline">
+    Academic rigor, journalistic flair
+  </div>
+</header>
+
+      <nav id="primary-navigation" class=" nocontent">
+  <ol>
+      <li class="arts ">
+        <a class="" href="/us/arts" title="Arts + Culture">Arts <span><span title="and">+</span> Culture</span></a>
+      </li>
+      <li class="business ">
+        <a class="" href="/us/business" title="Economy + Business">Economy <span><span title="and">+</span> Business</span></a>
+      </li>
+      <li class="environment ">
+        <a class="" href="/us/environment" title="Environment + Energy">Environment <span><span title="and">+</span> Energy</span></a>
+      </li>
+      <li class="health ">
+        <a class="current" href="/us/health" title="Health + Medicine">Health <span><span title="and">+</span> Medicine</span></a>
+      </li>
+      <li class="politics ">
+        <a class="" href="/us/politics" title="Politics + Society">Politics <span><span title="and">+</span> Society</span></a>
+      </li>
+      <li class="technology last">
+        <a class="" href="/us/technology" title="Science + Technology">Science <span><span title="and">+</span> Technology</span></a>
+      </li>
+  </ol>
+</nav>
+
+    </div>
+  </section>
+
+    
+
+    <section id="topics">
+      <div class="wrapper nocontent">
+          <section id="hot-topics" class=" clearfix nocontent">
+    <h3>
+      <a href="/us/topics">Follow Topics</a>
+    </h3>
+
+    <ol>
+        <li>
+          <a class="nocontent" data-slug="ebola" href="/us/topics/ebola">Ebola</a>
+        </li>
+        <li>
+          <a class="nocontent" data-slug="explainer" href="/us/topics/explainer">Explainer</a>
+        </li>
+        <li>
+          <a class="nocontent" data-slug="psychiatry" href="/us/topics/psychiatry">Psychiatry</a>
+        </li>
+        <li>
+          <a class="nocontent" data-slug="health-check" href="/us/topics/health-check">Health Check</a>
+        </li>
+        <li>
+          <a class="nocontent" data-slug="sexual-health" href="/us/topics/sexual-health">Sexual health</a>
+        </li>
+    </ol>
+  </section>
+
+      </div>
+    </section>
+
+
+    <div id="outer">
+      
+
+
+      <div id="page" class="wrapper">
+        <div id="body" class="clearfix">
+          
+
+
+<article id="article" class="clearfix" data-id="33211" itemscope itemtype="http://schema.org/Article">
+  
+    <header class="grid-prepend-four grid-twelve">
+      <time content="2014-10-21T09:57:23Z" datetime="2014-10-21T09:57:23Z" itemprop="datePublished" pubdate="pubdate">October 21 2014, 5.57am EDT</time>
+      <h1 class="entry-title grid-eight instapaper_title" itemprop="name">
+        #Ebola in the USA: don&rsquo;t trust what you read on&nbsp;Twitter
+      </h1>
+    </header>
+
+  
+    <div class="entry-summary" style="text-indent: 100%; white-space: nowrap; overflow: hidden;">
+      <p>Whatever you do, don’t turn to Twitter for news about Ebola. The volume and tone of tweets and retweets about the disease will make you wish you were watching the zombie apocalypse of The Walking Dead…</p>
+    </div>
+
+  <aside id="meta" class="grid-four">
+    
+      <section id="authors" class="module">
+  <h4>Author</h4>
+  <ol class="semantic">
+    <li class="vcard author-avatar large" id="author-141754" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <a href="/profiles/alfred-hermida-141754" rel="author">
+    <img alt="" height="54" itemprop="image" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/avatars/141754/thumb54/RackMultipart20141019-15227-1trpigy.jpg" width="54" />
+    <h3 class="fn">
+      <span itemprop="name">Alfred Hermida</span>
+    </h3>
+</a>  
+  <p>
+    <span class="role">Associate professor, Graduate School of Journalism at University of British Columbia </span>
+  </p>
+
+    </li>
+</ol>
+
+</section>
+
+      
+      
+      
+        <section id="disclosure-statement" class="module">
+    <h4>Disclosure Statement</h4>
+      <p>Alfred Hermida receives funding from the Canadian Media Research Consortium.</p>
+  </section>
+
+  
+  <section id="funding" class="module nocontent">
+    <p>
+      <strong>The Conversation is funded by</strong> Gordon and Betty Moore Foundation,
+      Howard Hughes Medical Institute, Robert Wood Johnson Foundation,
+      Alfred P Sloan Foundation and William and Flora Hewlett Foundation.
+      Our global publishing platform is funded by Commonwealth Bank of Australia.
+    </p>
+  </section>
+
+
+
+    
+      
+
+    
+      
+    <section class="jobs-events-list clearfix">
+      <h4>Events</h4>
+      
+  <ul>
+      <li class="event">
+        <p>
+          <a href="/us/events/23rd-annual-environmental-film-festival-in-the-nations-capital-1070" rel="nofollow" target="_blank">
+            <span class="name">23rd Annual Environmental Film Festival in the Nation&#39;s Capital</span>
+
+              &mdash;
+              <span class="institution"></span>
+
+              &mdash;
+              <span class="location">Washington, District of Columbia</span>
+</a>        </p>
+      </li>
+  </ul>
+
+  <a class="view-more" href="/us/events">
+    <i class="icon-the-conversation"></i>
+    <span class="action">More Events</span>
+</a>
+    </section>
+
+  </aside>
+
+  <div class="grid-twelve grid-last content-wrapper">
+    <div class="grid-twelve instapaper_body">
+      <div class="content entry-content">
+        
+              <figure class="lead-image grid-eight grid-last">
+    <img alt="" data-id="62257" itemprop="image" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/62257/width668/8bh5qvnp-1413818004.jpg" />
+      <figcaption>
+        Think twice before you over-react.
+        <span class="attribution"><a class="source" href="http://pictures.reuters.com/C.aspx?VP3=SearchResult&amp;ALID=2C0408WX24R18&amp;PBC=:2C0408WX24R18" rel="nofollow">Jim Bourg/Reuters</a></span>
+      </figcaption>
+  </figure>
+
+
+          
+
+          <div class="body grid-eight" itemprop="articleBody">
+            <p>Whatever you do, don’t turn to Twitter for news about Ebola. The volume and tone of tweets and retweets about the disease will make you wish you were watching the zombie apocalypse of The Walking Dead instead. It is much less scary.</p>
+
+<p>Ebola has been spreading since it was first diagnosed in <a href="http://healthmap.org/site/diseasedaily/article/first-recorded-cases-ebola-guinea-32314">March 2014 in Guinea</a>. More than two-thirds who got the disease in this current outbreak in West Africa didn’t survive.  Almost <a href="http://www.cdc.gov/vhf/ebola/outbreaks/2014-west-africa/index.html">4,500 have died so far</a>. It is the deadliest outbreak of Ebola in history.</p>
+
+<p>But if you’re reading this in a country with an advanced health care system, you’re highly unlikely to catch Ebola, even if there is an infected person on the same continent.</p>
+
+<p>Despite this, in the first two weeks of October, there were more than 2.2 million Ebola hashtag tweets tracked by <a href="http://www.crimsonhexagon.com/social-media-intelligence/forsight-platform">Crimson Hexagon’s Forsight</a> social media analytics tool. That is just a fraction of the chatter – there were more than 18 million tweets with the word “Ebola”.</p>
+
+<p><figure class="align-center zoomable">
+        <a href="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/62254/area14mp/rd26bz4t-1413817492.png"><img alt="" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/62254/width668/rd26bz4t-1413817492.png"></a>
+        <figcaption>
+          <span class="caption">Volume of #Ebola tweets by country.</span>
+          <span class="attribution"><span class="source">Crimson Hexagon</span>, <span class="license">Author provided</span></span>
+        </figcaption>
+      </figure></p>
+
+<p>This is just what happens when a crisis hits. When the world hiccups, Twitter twitches. People use hashtags to tag their tweets and make them visible to more than just their circle of contacts. They want to  be part of a discussion involving a dispersed audience.</p>
+
+<p>At times of a natural disaster such as an earthquake, the flood of real-time information on social media from the ground can help speed up rescue efforts, get supplies to where they are needed and raise money for relief efforts.</p>
+
+<p>Ebola, though, shows how social media serves as both a blessing and a curse. The <a href="https://twitter.com/WHO">World Health Organization</a>, <a href="https://twitter.com/UNICEF">UNICEF</a>, the UN and similar bodies have taken to Twitter to spread information and advice, and counter half-truths. Alongside are constant updates from news outlets about who in the West has contracted the disease or the level of preparedness of the local hospitals. And then there are the millions of other messages as people pile in to pass on the latest news reports, rumours or a witty snippet of snark.</p>
+
+<p>But my analysis of tweets using the Ebola hashtag since the start of October shows that only a handful have come from the ground in West Africa, where the crisis is most acute. The number of tweets from three of the most affected countries, Guinea, Sierra Leone and Liberia, can be counted in the hundreds using Crimson Hexagon’s Forsight tool. Even Nigeria, where <a href="http://www.budde.com.au/Research/Nigeria-Mobile-Market-Insights-Statistics-and-Forecasts.html">three-quarters of people have a mobile phone</a>, barely accounted for 1% of tweets with a geographic location.</p>
+
+<p>Guess where the bulk of the #Ebola tweets are from? The US. Out of the more than a million tweets with an identifiable location, around 60% have come from Americans. The figure holds for millions more messages that contain the word “Ebola.” So far, Canadians have been a more measured on #Ebola, making up barely 4% of the tweets. And 5% of tweets have come from the UK.</p>
+
+<p><figure class="align-center">
+        <img alt="" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/62255/width668/4zr4b6k3-1413817502.png">
+        <figcaption>
+          <span class="caption">The most frequent terms and prevalent themes on #Ebola. The inner rings represent frequently used terms and the outside rings provide a more granular look at words and terms and how they relate to the topics of conversation.</span>
+          <span class="attribution"><span class="source">Crimson Hexagon</span>, <span class="license">Author provided</span></span>
+        </figcaption>
+      </figure></p>
+
+<p>It all started when <a href="http://www.usatoday.com/story/news/nation/2014/10/17/ebola-duncan-congress-timeline/17456825/">Thomas Duncan</a>, who traveled from Liberia to Dallas, was diagnosed with Ebola. The background chatter on Twitter about the disease spiked as Americans discovered Ebola had made landfall. Duncan’s death a week later prompted another flurry in activity on the hashtag.</p>
+
+<p>The largest single spike of chatter on #Ebola was on October 16 after news emerged that <a href="http://www.wsbtv.com/news/news/local/4th-ebola-patient-arrives-atlanta-headed-emory/nhj8H/">Amber Vinson</a>, a nurse who treated Duncan, had contracted the virus. On that day, more than three-quarters of tweets came from the US.</p>
+
+<p>It hardly surprising that tweets about Ebola are dominated by Americans. After all, the US has the <a href="http://www.forbes.com/sites/victorlipman/2014/05/24/top-twitter-trends-what-countries-are-most-active-whos-most-popular/">largest number of Twitter users</a>. But it also gives cause to pause and remember that social media is no proxy for public opinion. Or, with Ebola, for the tone of the global conversation.</p>
+
+<p>Ebola largely reflects the hopes and fears of Americans, driven by the latest news tidbits about the disease on the US mainland. The real story is happening thousands of kilometers away, where doctors, nurses and medical workers are trying to contain the outbreak with stretched resources. Those tweets from West Africa are simply drowned out by the volume and visibility of Americans tweeting about Ebola.</p>
+            <script async="async" data-counter="https://counter.theconversation.edu.au/content/33211/count" id="theconversation_tracker_hook" src="https://theconversation.com/javascripts/lib/content_tracker_hook.js"></script>
+
+
+          </div>
+
+        <aside id="related-content" class="grid-three grid-prepend-one grid-last">
+          
+            <div class="republish-this-article">
+  <h4 class="double-bordered">Republish this article</h4>
+  <p>
+    We believe in the free flow of information. We use a
+    <a href="http://creativecommons.org/" target="_blank" title="Creative Commons">Creative Commons</a>
+    license, so you can republish our articles for free, online or in print.
+  </p>
+
+  <a href="#republish" class="steal-button" data-republish="/share/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211">
+    Republish
+  </a>
+</div>
+
+            <div class="social-media">
+  <h4 class="double-bordered slammed">Share</h4>
+  <ul>
+    <li class="email">
+      <a class="email-button" data-url="null" href="mailto:?subject=%23Ebola%20in%20the%20USA%3A%20don%27t%20trust%20what%20you%20read%20on%20Twitter%20on%20The%20Conversation&amp;body=Hi.%20I%20found%20this%20article%20on%20http%3A%2F%2Ftheconversation.com%20that%20you%20might%20like%3A%20%22%23Ebola%20in%20the%20USA%3A%20don%27t%20trust%20what%20you%20read%20on%20Twitter%22%20http%3A%2F%2Ftheconversation.com%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" target="_blank"><i class="icon-email"></i> <span>Email</span></a>
+    </li>
+
+    <li class="twitter">
+      <a class="twitter-button" data-url="http://theconversation.com/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" href="http://twitter.com/intent/tweet?text=%23Ebola+in+the+USA%3A+don%27t+trust+what+you+read+on+Twitter&amp;url=http%3A%2F%2Ftheconversation.com%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211&amp;utm_campaign=none&amp;utm_medium=tweetbutton&amp;utm_source=twitter&amp;via=US_Conversation" target="_blank"><i class="icon-twitter"></i> <span>Twitter</span></a><span class="data-count">32</span>
+    </li>
+
+    <li class="facebook">
+      <a class="facebook-button" data-url="http://theconversation.com/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftheconversation.com%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211&amp;utm_medium=facebookbutton&amp;utm_source=facebook" target="_blank"><i class="icon-facebook"></i> <span>Facebook</span></a>
+    </li>
+
+    <li class="linkedin">
+      <a class="linkedin-button" data-url="http://theconversation.com/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" href="http://www.linkedin.com/shareArticle?mini=true&amp;source=The+Conversation&amp;summary=Whatever+you+do%2C+don%E2%80%99t+turn+to+Twitter+for+news+about+Ebola.+The+volume+and+tone+of+tweets+and+retweets+about+the+disease+will+make+you+wish+you+were+watching+the+zombie+apocalypse+of+The+Walking+D...&amp;title=%23Ebola+in+the+USA%3A+don%27t+trust+what+you+read+on+Twitter&amp;url=http%3A%2F%2Ftheconversation.com%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211&amp;utm_medium=linkedinbutton&amp;utm_source=linkedin" target="_blank"><i class="icon-linkedin"></i> <span>LinkedIn</span></a>
+    </li>
+
+    <li class="reddit hide-on-mobile">
+      <a class="reddit-button" data-url="http://theconversation.com/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" href="http://www.reddit.com/submit?title=%23Ebola+in+the+USA%3A+don%27t+trust+what+you+read+on+Twitter&amp;url=http%3A%2F%2Ftheconversation.com%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" target="_blank"><i class="icon-reddit"></i> <span>Reddit</span></a>
+    </li>
+  </ul>
+</div>
+
+
+          <div class="interact-with-this-article">
+            <ul>
+              <li>
+                  <a class="favourite signed-out" href="/sign_in?return_to=%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211">
+    <i class="icon-favourite"></i> Sign in to Favourite
+</a>
+              </li>
+
+              <li>
+                <a href="#comments" class="comment-count">
+                  <i class="icon-comments"></i> <span>Comment</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          
+              <section id="related_topics" class="module">
+    <h4 class="double-bordered">Tags</h4>
+    <p>
+      <a href="/us/topics/social-media">Social media</a>, <a href="/us/topics/twitter">Twitter</a>, <a href="/us/topics/ebola">Ebola</a>
+    </p>
+  </section>
+
+              <section id="also-by-author" class="article-list module">
+    <h4 class="double-bordered">Articles by This Author</h4>
+      <article class="article">
+        <a href="/how-rumours-about-the-sydney-siege-spread-on-social-media-35536">
+          <time content="2014-12-16T01:39:55Z" datetime="2014-12-16T01:39:55Z" itemprop="datePublished" pubdate="pubdate">December 15 2014</time>
+          How rumours about the Sydney siege spread on social&nbsp;media
+</a>      </article>
+      <article class="article">
+        <a href="/how-terrorists-use-twitter-to-become-brand-ambassadors-35107">
+          <time content="2014-12-05T15:55:27Z" datetime="2014-12-05T15:55:27Z" itemprop="datePublished" pubdate="pubdate">December 5 2014</time>
+          How terrorists use Twitter to become ‘brand&nbsp;ambassadors’
+</a>      </article>
+  </section>
+
+              <div class="related-articles blockset blocks-1x1-vertical grid-last">
+    <h4>Related articles</h4>
+
+    <div class="blocks-1x1 slammed grid-last">
+      
+<article data-id="36991" class="clearfix placed analysis published">
+    <figure>
+      <a class="article-link" href="/explainer-is-the-ebola-virus-mutating-36991">
+        <img alt="" data-echo="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/70619/width324x324/image-20150130-25936-f2rb08.jpg" data-id="70619" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+</a>        <figcaption>
+            <span class="caption">
+              Under the microscope.
+            </span>
+            <span class="source" title="Source">NIAID</span>
+        </figcaption>
+    </figure>
+
+  <header>
+
+
+
+    <h2><a href="/explainer-is-the-ebola-virus-mutating-36991">Explainer: is the Ebola virus&nbsp;mutating?</a></h2>
+      <p class="byline">
+        <span><span>By </span><a href="http://theconversation.com/profiles/connor-bamford-131925">Connor Bamford</a><em>, University of Glasgow</em></span>
+      </p>
+  </header>
+
+</article>
+
+<article data-id="36873" class="clearfix placed analysis published">
+    <figure>
+      <a class="article-link" href="/when-facebook-goes-down-it-takes-big-chunks-of-the-internet-with-it-36873">
+        <img alt="" data-echo="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/70493/width324x324/image-20150129-22299-qyetat.png" data-id="70493" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+</a>        <figcaption>
+            <span class="caption">
+              It&rsquo;s not working for me.
+            </span>
+            <span class="source" title="Source">Kvarki1</span>
+        </figcaption>
+    </figure>
+
+  <header>
+
+
+
+    <h2><a href="/when-facebook-goes-down-it-takes-big-chunks-of-the-internet-with-it-36873">When Facebook goes down it takes big chunks of the internet with&nbsp;it</a></h2>
+      <p class="byline">
+        <span><span>By </span><a href="http://theconversation.com/profiles/ben-kirman-153053">Ben Kirman</a><em>, University of Lincoln</em> and <a href="http://theconversation.com/profiles/tom-feltwell-153054">Tom Feltwell</a><em>, University of Lincoln</em></span>
+      </p>
+  </header>
+
+</article>
+
+<article data-id="36722" class="clearfix placed analysis published">
+    <figure>
+      <a class="article-link" href="/net-expansion-driven-by-mobile-presents-risks-and-opportunities-for-marketers-36722">
+        <img alt="" data-echo="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/70286/width324x324/image-20150128-22299-h6n5od.png" data-id="70286" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+</a>        <figcaption>
+            <span class="caption">
+              Internet growth shows no sign of slowing.
+            </span>
+            <span class="source" title="Source">WeAreSocial.com</span>
+        </figcaption>
+    </figure>
+
+  <header>
+
+
+
+    <h2><a href="/net-expansion-driven-by-mobile-presents-risks-and-opportunities-for-marketers-36722">Net expansion driven by mobile presents risks and opportunities for&nbsp;marketers</a></h2>
+      <p class="byline">
+        <span><span>By </span><a href="http://theconversation.com/profiles/chris-archer-brown-151873">Chris Archer-Brown</a><em>, University of Bath</em></span>
+      </p>
+  </header>
+
+</article>
+
+<article data-id="36819" class="clearfix placed analysis published">
+    <figure>
+      <a class="article-link" href="/no-tony-abbott-you-cant-dismiss-social-media-as-electronic-graffiti-36819">
+        <img alt="" data-echo="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/files/70209/width324x324/image-20150127-17670-q7f724.jpg" data-id="70209" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+</a>        <figcaption>
+            <span class="caption">
+              As a former journalist, Tony Abbott should know that everyone who writes in public writes to be heard – whether it&rsquo;s on social media or elsewhere.
+            </span>
+            <span class="source" title="Source">AAP/Wayne King</span>
+        </figcaption>
+    </figure>
+
+  <header>
+
+
+
+    <h2><a href="/no-tony-abbott-you-cant-dismiss-social-media-as-electronic-graffiti-36819">No, Tony Abbott, you can&rsquo;t dismiss social media as &lsquo;electronic graffiti&rsquo;</a></h2>
+      <p class="byline">
+        <span><span>By </span><a href="http://theconversation.com/profiles/collette-snowden-5543">Collette Snowden</a><em>, University of South Australia</em></span>
+      </p>
+  </header>
+
+</article>
+
+    </div>
+  </div>
+
+
+          <div class="article-bottom grid-three grid-last">
+            
+
+              <div class="social-media">
+  <h4 class="double-bordered slammed">Share</h4>
+  <ul>
+    <li class="email">
+      <a class="email-button" data-url="null" href="mailto:?subject=%23Ebola%20in%20the%20USA%3A%20don%27t%20trust%20what%20you%20read%20on%20Twitter%20on%20The%20Conversation&amp;body=Hi.%20I%20found%20this%20article%20on%20http%3A%2F%2Ftheconversation.com%20that%20you%20might%20like%3A%20%22%23Ebola%20in%20the%20USA%3A%20don%27t%20trust%20what%20you%20read%20on%20Twitter%22%20http%3A%2F%2Ftheconversation.com%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" target="_blank"><i class="icon-email"></i> <span>Email</span></a>
+    </li>
+
+    <li class="twitter">
+      <a class="twitter-button" data-url="http://theconversation.com/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" href="http://twitter.com/intent/tweet?text=%23Ebola+in+the+USA%3A+don%27t+trust+what+you+read+on+Twitter&amp;url=http%3A%2F%2Ftheconversation.com%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211&amp;utm_campaign=none&amp;utm_medium=tweetbutton&amp;utm_source=twitter&amp;via=US_Conversation" target="_blank"><i class="icon-twitter"></i> <span>Twitter</span></a><span class="data-count">32</span>
+    </li>
+
+    <li class="facebook">
+      <a class="facebook-button" data-url="http://theconversation.com/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftheconversation.com%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211&amp;utm_medium=facebookbutton&amp;utm_source=facebook" target="_blank"><i class="icon-facebook"></i> <span>Facebook</span></a>
+    </li>
+
+    <li class="linkedin">
+      <a class="linkedin-button" data-url="http://theconversation.com/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" href="http://www.linkedin.com/shareArticle?mini=true&amp;source=The+Conversation&amp;summary=Whatever+you+do%2C+don%E2%80%99t+turn+to+Twitter+for+news+about+Ebola.+The+volume+and+tone+of+tweets+and+retweets+about+the+disease+will+make+you+wish+you+were+watching+the+zombie+apocalypse+of+The+Walking+D...&amp;title=%23Ebola+in+the+USA%3A+don%27t+trust+what+you+read+on+Twitter&amp;url=http%3A%2F%2Ftheconversation.com%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211&amp;utm_medium=linkedinbutton&amp;utm_source=linkedin" target="_blank"><i class="icon-linkedin"></i> <span>LinkedIn</span></a>
+    </li>
+
+    <li class="reddit hide-on-mobile">
+      <a class="reddit-button" data-url="http://theconversation.com/ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" href="http://www.reddit.com/submit?title=%23Ebola+in+the+USA%3A+don%27t+trust+what+you+read+on+Twitter&amp;url=http%3A%2F%2Ftheconversation.com%2Febola-in-the-usa-dont-trust-what-you-read-on-twitter-33211" target="_blank"><i class="icon-reddit"></i> <span>Reddit</span></a>
+    </li>
+  </ul>
+</div>
+
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="article-footer grid-sixteen grid-last">
+  <div class="grid-twelve">
+    
+      <div class="grid-four">
+        <div class="social-media-call-to-action for-facebook">
+          <a href="https://www.facebook.com/theconversationUS" target="_blank" title="The Conversation on Facebook">
+            <i class="icon-facebook"></i> Like us on Facebook
+</a>        </div>
+
+        <div class="social-media-call-to-action for-twitter">
+          <a href="https://twitter.com/US_Conversation" target="_blank" title="The Conversation on Twitter">
+            <i class="icon-twitter"></i> Follow us on Twitter
+</a>        </div>
+      </div>
+
+    
+      <div class="grid-eight grid-last">
+        <div class="newsletter-subscription-call-to-action newsletter-signup-form">
+          <h2><i class="icon-email"></i> Sign up to our free daily newsletter</h2>
+          <form action="/subscriptions" method="post" class="subscribe">
+  <fieldset>
+    <label class="subscribe-email-label" for="subscribe_email">
+      Email address
+    </label>
+
+    <div class="field-wrapper">
+      <input class="email" id="subscribe_email" name="subscribe[email]" placeholder="Your email address" spellcheck="false" type="email" value="" />
+      <i class="success">✔</i>
+      <i class="icon-delete failure"></i>
+      <img alt="Spinner" class="spinner" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/spinner-75cce4ffd6a6c7acf547f26bd292e418.gif" />
+    </div>
+
+    <input id="subscribe_location" name="subscribe[location]" type="hidden" value="call-to-action-from-article" />
+
+      <fieldset class="regions select-boxes">
+    <select autocomplete="off" id="subscribe_regions_" name="subscribe[regions][]"><option value="au">Australia</option>
+<option value="uk">United Kingdom</option>
+<option selected="selected" value="us">United States</option></select>
+  </fieldset>
+
+
+    <input class="subscribe button subtle" name="subscribe" type="submit" value="Subscribe" />
+  </fieldset>
+</form>
+
+        </div>
+      </div>
+  </div>
+
+  
+      <div class="grid-four grid-last">
+
+        <div class="jobs-information-call-to-action">
+          <a href="https://jobs.theconversation.com?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=bottom_of_article_call_to_action">
+            <span>Job Board</span>
+            Find career opportunities from intelligent institutions.
+</a>        </div>
+      </div>
+</div>
+
+
+
+
+
+        </div>
+      </div>
+        <div id="page-footer"></div>
+
+    </div>
+
+    
+  <div id="footers">
+    
+    <section id="sub-footer">
+  <header>
+    <div class="wrapper nocontent">
+      <h2>The Conversation</h2>
+    </div>
+  </header>
+
+  <div class="wrapper nocontent">
+    <section class="community grid-five">
+      <h6>Community</h6>
+      <nav>
+        <ul>
+          <li><a href="/us/community-standards">Community standards</a></li>
+          <li><a href="/us/republishing-guidelines">Republishing guidelines</a></li>
+            <li>
+              <a href="https://jobs.theconversation.com/?utm_source=theconversation.com&amp;utm_medium=website&amp;utm_campaign=footer">
+                <i class="icon icon-the-conversation"></i> Job Board
+</a>            </li>
+          <li><a href="/us/feeds"><i class="icon icon-rss-non-coloured"></i> Our feeds</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="company grid-five">
+      <h6>Company</h6>
+      <nav>
+        <ul>
+          <li><a href="/us/who-we-are">Who we are</a></li>
+          <li><a href="/us/charter">Our charter</a></li>
+          <li><a href="/us/team">Our team</a></li>
+          <li><a href="/columns/blog-26">Our blog</a></li>
+          <li><a href="/us/partners">Partners and funders</a></li>
+          <li><a href="/institutions">Contributing institutions</a></li>
+          <li><a href="/us/contact-us">Contact us</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="contact grid-five">
+      <h6>Contact</h6>
+      <nav>
+        <ul>
+          <li><span>Editorial</span> <a href="mailto:us-editorial@theconversation.com">us-editorial@theconversation.com</a></li>
+          <li><span>Support</span> <a href="mailto:support@theconversation.com">support@theconversation.com</a></li>
+        </ul>
+      </nav>
+      <div class="newsletter-signup-form">
+        <h6>Subscribe to our Newsletters</h6>
+        <form action="/subscriptions" method="post" class="subscribe">
+  <fieldset>
+    <label class="subscribe-email-label" for="subscribe_email">
+      Email address
+    </label>
+
+    <div class="field-wrapper">
+      <input class="email" id="subscribe_email" name="subscribe[email]" placeholder="Your email address" spellcheck="false" type="email" value="" />
+      <i class="success">✔</i>
+      <i class="icon-delete failure"></i>
+      <img alt="Spinner" class="spinner" src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/spinner-75cce4ffd6a6c7acf547f26bd292e418.gif" />
+    </div>
+
+    <input id="subscribe_location" name="subscribe[location]" type="hidden" value="footer" />
+
+      <fieldset class="regions check-boxes">
+      <label for="subscribe_au">
+        <input class="checkbox_au" id="subscribe_au" name="subscribe[regions][]" type="checkbox" value="au" />
+        <span class="full_name">Australia</span>
+        <span class="short_code">au</span>
+      </label>
+      <label for="subscribe_uk">
+        <input class="checkbox_uk" id="subscribe_uk" name="subscribe[regions][]" type="checkbox" value="uk" />
+        <span class="full_name">United Kingdom</span>
+        <span class="short_code">uk</span>
+      </label>
+      <label for="subscribe_us">
+        <input checked="checked" class="checkbox_us" id="subscribe_us" name="subscribe[regions][]" type="checkbox" value="us" />
+        <span class="full_name">United States</span>
+        <span class="short_code">us</span>
+      </label>
+  </fieldset>
+
+
+    <input class="subscribe button subtle" name="subscribe" type="submit" value="Subscribe" />
+  </fieldset>
+</form>
+
+      </div>
+    </section>
+  </div>
+</section>
+
+    <footer id="footer">
+  <div class="wrapper nocontent">
+    <nav>
+      <a href="/us/privacy-policy">Privacy policy</a>
+      <a href="/us/terms-and-conditions">Terms and conditions</a>
+      <a href="/us/corrections">Corrections</a>
+      
+  <script>
+    (function () {
+      var d = new Image(1, 1);
+      d.onerror = d.onload = function () {
+        d.onerror = d.onload = null;
+      };
+      d.src = ["//secure-au.imrworldwide.com/cgi-bin/m?ci=theconversation&cg=o&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+    })();
+  </script>
+  <noscript>
+    <div>
+      <img src="//secure-au.imrworldwide.com/cgi-bin/m?ci=theconversation&amp;cg=o&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="">
+    </div>
+  </noscript>
+
+      <script>
+  (function() {
+    var img = document.createElement('img'); img.width = 1; img.height = 1;
+    img.src = 'https://www.facebook.com/tr?id=1517004835184558&amp;ev=NoScript';
+    img.style.display = "none";
+    var s = document.getElementsByTagName('footer')[0]; s.parentNode.insertBefore(img, s);
+  })();
+</script>
+
+    </nav>
+    <p class="copyright">
+      <span>Copyright &copy; 2010–2015</span><span class="comma">, </span><span><a href="/us/who-we-are">The Conversation US, Inc.</a></span>
+    </p>
+  </div>
+</footer>
+
+  </div>
+
+    <nav id="editorial-menu">
+  </nav>
+
+  </div>
+
+  <script src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/vendored-5ef420b7fa885266da69ed41750c6ebe.js"></script>
+<script src="https://62e528761d0685343e1c-f3d1b99a743ffa4142d9d7f1978d9686.ssl.cf2.rackcdn.com/assets/application-f2bae9b512969c5fb40acef374342427.js"></script>
+  <script>
+//<![CDATA[
+
+    TC.time = new TC.TimeFormatter('en_us')
+    TC.currentUser = new TC.User(null);
+      TC.page = new TC.ContentPage({
+    content_id: 33211,
+    content_slug: "ebola-in-the-usa-dont-trust-what-you-read-on-twitter-33211",
+    comments_closed_at: ""
+  });
+
+
+//]]>
+</script>
+  
+</body>
+</html>

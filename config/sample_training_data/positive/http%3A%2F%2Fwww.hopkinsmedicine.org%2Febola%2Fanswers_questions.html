@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<title>Ebola: Answers to Common Questions | Johns Hopkins Medicine</title>
+<meta name="author" content="Jo Ann Day" />
+<meta name="generator" content="SiteExecutive v2013" />
+<meta name="date" content="2014-11-19T14:45:18-05:00" />
+<meta name="title" content="Ebola: Answers to Common Questions | Johns Hopkins Medicine" />
+<meta property="og:url" content="http://www.hopkinsmedicine.org/ebola/answers_questions.html" />
+<meta property="og:title" content="Ebola: Answers to Common Questions | Johns Hopkins Medicine" />
+<meta property="og:type" content="article" /> 
+	<link id="csspage" rel="stylesheet" type="text/css" media="screen,handheld,aural,braille,embossed,projection,tty,tv" href="/se/styles/out/6E0E8354C6DD8DF45F8850DFC4C4E223.css"/>
+	<link rel="stylesheet" type="text/css" media="print" href="/se/styles/out/DBAADB817110AD4962E7AF79ECB523C3.css" />
+	<link rel="stylesheet" type="text/css" href="/sebin/t/e/content_external.css" /> 
+<script type="text/javascript">
+//<![CDATA[
+function openFriendlyVersion()
+{
+	var printerFriendlyPage = "";
+
+	printerFriendlyPage = window.open('/se/util/display_mod.cfm?MODULE=/se-server/mod/modules/semod_printpage/mod_default.cfm&PageURL=/ebola/answers_questions.html&VersionObject=A91F49896806C8DBBD36723BFB5D94F2&Template=C3DCB6B2FEDE5BD04FFD54F6429A4331&PageStyleSheet=1DD8B8EA2404DA3607707FF796EDC73B&pdfExport=NO',"FriendlyWindow","location=no,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,width=800,height=600,screenX=10,screenY=10");
+	printerFriendlyPage.focus();
+}
+//]]>
+</script> 
+<script type='text/javascript' src='/se/util/setracker.cfm'></script>
+
+	
+	<!-- template head text -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+<link href="//cloud.webtype.com/css/27ac8aa2-abdb-4b51-94d2-dfaa26f47444.css" rel="stylesheet" type="text/css" />
+<link href="http://hopkinsmedicine.org/sebin/x/c/health-seminars.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/sebin/z/a/content_media_queries.css" rel="stylesheet" type="text/css">
+<link href="/sebin/d/i/responsive-template.css" rel="stylesheet" type="text/css">
+<link href="/sebin/p/a/responsive_navmod_base.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link href="/lib/css/redmond/jquery-ui-1.8.18.custom.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+.hide-section-menu {display:none;}
+</style>
+
+<script src="/lib/js/require.js"></script>
+<script>
+require.config({
+	baseUrl: 'http://www.hopkinsmedicine.org/lib/js/',
+	waitSeconds: 30,
+	paths: {
+		responsive: '',
+		jquery: 'jquery-1.8.3.min',
+		resjs: 'thincrust-responsive',
+		modernizr: 'modernizr.min',
+		modalHome:'jquery.modalHome.min',
+		photobooks:'photobooks.min'
+	},
+	shim: { 
+		modernizr: { exports: 'Modernizr' },
+		modalHome: {
+			deps: ['jquery'],
+			exports: 'modalHome'
+		},
+		photobooks: {
+			deps: ['modalHome'],
+			exports: 'photobooks'
+		}
+	}
+});
+
+define('responsive', function () { });
+
+require(['domready!', 'jquery', 'resjs' ], function (dom, $, resjs ) {
+	resjs.setupThincrustActions();
+	
+	// remove height and width attributes from images
+
+    $('.flex-wrapper img, .flex-33-left img, .flex-33-right img, .flex-50-left img, .flex-50-right img, .flex-100 img, .flex-callout-img img').each(function(){
+        $(this).removeAttr('width')
+        $(this).removeAttr('height');
+    });
+
+// hide section menu when less than 2 list items
+
+        if ($('#leftNavNavMod .divnav2 ul li').length < 2) {
+           $('a.leftNavModToggle').addClass('hide-section-menu');
+        }
+
+// top nav set each item to a certain percentage
+
+require(['jquery','modernizr'],function($,Moderizr){
+if (Moderizr.mq('only all')) { // requires media query support
+var topNavItems = $("#topNav .divnav1 ul li"),
+topNavItemWidth = Math.floor(100/topNavItems.length) + '%';
+topNavItems.each(function(i,e) { $(e).width(topNavItemWidth); });
+}
+});
+
+    // top nav check character count and set list class accordingly
+    
+    if ($('#topNavNavMod .divnav1 ul li a').text().length < 50) {
+        $('#topNavNavMod .divnav1 ul').addClass('narrow-list');
+    }
+
+    // add a "More..." list item to be shown on mobile tiers
+
+	var topNavWidth = 0;
+	$('#topNavNavMod .divnav1 ul li').each(function() {
+    	topNavWidth += $(this).outerWidth( true );
+	});
+
+    if ($(window).width() < topNavWidth) {
+    	$('#topNav .divnav1 ul').append('<li class="topNav-more"><a href="#">More</a></li>');
+    }
+
+    // top nav mobile stuffs
+
+    $('.topNav-more a').on('click', function(e) {
+		var moreLink = $(e.target);
+
+		$('#leftNav').hide();
+		$('.leftNavModToggle span.more').text('+');
+		$('.leftNavModToggle').removeClass('leftNavModToggleOpen');
+
+		if (moreLink.text() === 'More') {
+			moreLink.text('Less');
+			$('#topNav').addClass('topNav-open');
+		} else {
+			moreLink.text('More');
+			$('#topNav').removeClass('topNav-open');
+		}
+	});
+	
+    // left nav mobile stuffs
+	
+	$('.leftNavModToggle').on('click', function(e){
+		var $leftNavModToggle = $('.leftNavModToggle');
+		
+		$('.topNav-more a').text('More');
+		$('#topNav').removeClass('topNav-open');
+		
+		if ( $leftNavModToggle.hasClass('leftNavModToggleOpen') ) {
+			$('#leftNav').slideUp(0);
+                        // $('.leftNavModToggle span.more').text('+');
+                        $('.leftNavModToggle').removeClass('leftNavModToggleOpen');
+		} else {
+			$('#leftNav').slideDown(0);
+			// $('.leftNavModToggle span.more').text('-');
+			$('.leftNavModToggle').addClass('leftNavModToggleOpen');
+		}
+		
+		e.preventDefault();
+	});
+	
+	var wt = 0;
+    $(window).resize(function() {
+		clearTimeout(wt);
+		wt = setTimeout(function() {
+			if ($(window).width() > 740) {
+				$('.leftNavModToggle span.more').text('+');
+                                $('.leftNavModToggle').removeClass('leftNavModToggleOpen');
+				$('.topNav-more a').text('More');
+				$('#topNav').removeClass('topNav-open');
+				$('#leftNav').css('display', '');
+			}
+		}, 25);
+	});
+});
+
+</script>
+<!--Google Analytics Script - June 24, 2011-->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-561229-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" ></script>
+<script type="text/javascript" src="http://www.hopkinsmedicine.org/lib/js/jquery.slides.min.js"></script>
+<script type="text/javascript" src="/lib/js/jquery.ba-bbq.min.js" ></script>
+<script type="text/javascript" src="/lib/js/template-v2.js" ></script>
+<script type="text/javascript" src="/sebin/v/x/flex_firstlastchild.js"></script>
+<script type="text/javascript" src="http://www.hopkinsmedicine.org/lib/foresee/foresee-trigger.js"></script>
+
+<style type="text/css">
+.leftNavModToggleOpen {
+top: 0px;
+}
+</style>
+	<!-- page head text -->
+	<script type="text/javascript" src="http://www.hopkinsmedicine.org/lib/js/faq.min.js"></script>
+	<!-- end page head text -->
+</head>
+
+<body>
+	<div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;"><a href="#Skip" title="Skip Navigation, Go To Main Body Content">Skip Navigation</a></div><!-- skip navigation removed from included pages --><!-- skip navigation removed from included pages --><script>
+// default sub site search code
+
+define('jhmContext', function () {
+	return {};
+});
+</script><div id="jhm-wrapper"><div id="jhm-canvas"><div class="thincrust">
+	<div class="thincrust-inner">
+		<div id="explore-tools">
+			<a href="#" class="explore">
+				<span class="menu-button">
+					<span class="button1"></span>
+					<span class="button2"></span>
+					<span class="button3"></span>
+				</span>
+				<span class="menu-button-text">Explore Johns Hopkins Medicine</span>
+			</a>
+			<a href="#" class="search2"><span>Search</span></a>
+		</div>
+		<div class="topmenu-about-wrapper">
+			<div class="topmenu-patient-care-wrapper">
+				<div class="topmenu-research-wrapper">
+					<div class="topmenu-education-wrapper">
+						<ul class="topmenu">
+							<li class="topmenu-about"><a class="ImgAbout" href="http://www.hopkinsmedicine.org/about/index.html">About <span class="thincrust-more">+</span></a>
+								<ul>
+									<li class="hidden-link"><a href="http://www.hopkinsmedicine.org/about/index.html" class="subLink">About Johns Hopkins Medicine</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/about/centers_departments/index.html" class="subLink">Centers &amp; Departments</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/directions/index.html" class="subLink">Maps  &amp;  Directions</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/news/index.html" class="subLink">News &amp; Publications </a></li>
+									<li><a href="http://www.hopkinsmedicine.org/news/media/index.html" class="subLink">For the Media </a></li>
+									<li><a href="http://www.hopkinsmedicine.org/employment/index.html" class="subLink">Careers </a></li>
+									<li><a href="http://www.hopkinsmedicine.org/ContactUs/index.html" class="subLink">Contact Us</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/support/index.html" class="subLink">Make a Gift</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/" class="subLink">Hopkins Medicine Home</a></li>
+								</ul>
+							</li>
+							<li class="topmenu-patient-care"><a class="ImgCare" href="http://www.hopkinsmedicine.org/patient_care/index.html">Patient Care <span class="thincrust-more">+</span></a>
+								<ul>									
+									<li class="hidden-link"><a href="http://www.hopkinsmedicine.org/patient_care/index.html" class="subLink">Patient Care Home</a></li>
+									
+									<li><a href="http://www.hopkinsmedicine.org/patient_care/hospital_locations.html" class="subLink">Hospitals &amp; Patient Care Locations</a></li>
+<li><a href="http://www.hopkinsmedicine.org/health" class="subLink">Health Information</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/healthlibrary/conditions/adult/" class="subLink">Diseases &amp; Conditions</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/health_professionals/index.html" class="subLink">For Health Professionals</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/profiles/" class="subLink">Find a Doctor</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/health_professionals/physicians.html" class="subLink">Refer a Patient</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/patient_care/johns_hopkins_medicine_request_appointment.html" class="subLink">Request an Appointment</a></li>
+
+
+
+									<li><a href="http://www.hopkinsmedicine.org/international/patients" class="subLink">International Patients</a></li>
+
+									<li><a href="http://www.hopkinsmedicine.org/patient_care/pay_bill/pay_bill.html" class="subLink">Pay Your Bill</a></li>
+									<li><a href="http://trials.johnshopkins.edu/" class="subLink">Search Clinical Trials</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/healthseminars/" class="subLink">Attend a Health Seminar</a></li>
+									<li><a href="https://mychart.hopkinsmedicine.org/MyChart/" class="subLink">MyChart</a></li>
+								</ul>
+							</li>
+							<li class="topmenu-research"><a class="ImgResearch" href="http://www.hopkinsmedicine.org/research/index.html">Research <span class="thincrust-more">+</span></a>
+								<ul>
+									<li class="hidden-link"><a href="http://www.hopkinsmedicine.org/research/index.html" class="subLink">Research Home</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/Research/johns_hopkins_research_topics.html" class="subLink">Research Topics</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/Research/index_2.html" class="subLink">For Our Researchers</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/Research/academic_research_departments.html" class="subLink">Departments, Divisions &amp; Institutes</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/Research/research_centers.html" class="subLink">Research Centers</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/Research/core_facilities/index.html" class="subLink">Core Facilities</a></li>
+									<li><a href="http://trials.johnshopkins.edu/" class="subLink">Clinical Trials</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/Research/johns_hopkins_faculty_chairs.html" class="subLink">Faculty Directors</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/scical/" class="subLink">Events Calendar</a></li>
+								</ul>
+							</li>
+							<li class="topmenu-education"><a class="ImgEducation" href="http://www.hopkinsmedicine.org/education/index.html">Education <span class="thincrust-more">+</span></a>
+								<ul>
+									<li class="hidden-link"><a href="http://www.hopkinsmedicine.org/education/index.html" class="subLink">Education Home</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/som/" class="subLink">School of Medicine</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/education/johns_hopkins_students.html" class="subLink">Students</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/som/faculty/index.html" class="subLink">Faculty</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/education/residents_fellows.html" class="subLink">Residents &amp; Fellows</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/education/health_professionals.html" class="subLink">Health Professionals</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/education/johns_hopkins_alumni.html" class="subLink">Alumni &amp; Friends</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/education/johns_hopkins_schools.html" class="subLink">Schools</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/education/academic_research_departments.html" class="subLink">Departments</a></li>
+                                    <li><a href="http://www.hopkinsmedicine.org/institute_nursing/index.html" class="subLink">Institute for Nursing</a></li>
+									<li><a href="http://www.hopkinsmedicine.org/education/apply_to_johns_hopkins.html" class="subLink">Apply For Admissions</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- thincrust responsive end --><div id="wrapper-canvas"><script>
+require(['jquery','jhmContext','resjs'], function ( $, c, res) {
+	if(typeof c.gsa !== 'undefined') {
+		var searchOptDiv = document.createElement('div'),
+			jhmInpOpt = document.createElement('input'),
+			subSiteInpOpt = document.createElement('input'),
+			sitesearchInpOpt = document.createElement('input');
+		
+		$(jhmInpOpt).attr({
+			id: 'subSiteSearchOptMain',
+			value: 'site',
+			name: 'subSiteSearchFlag',
+			type: 'radio'
+		});
+		
+		$(subSiteInpOpt).attr({
+			id: 'subSiteSearchOptSub',
+			value: 'sitesearch',
+			name: 'subSiteSearchFlag',
+			type: 'radio'
+		});
+		
+		if (typeof c.gsa.subsiteurl !== 'undefined') {
+			$(sitesearchInpOpt).attr({
+				value: c.gsa.subsiteurl,
+				name: 'sitesearch',
+				type: 'hidden'
+			});
+		}
+		
+		if(c.gsa.defaultToSubSite) {
+			$(subSiteInpOpt).attr('checked',true);
+		} else {
+			$(jhmInpOpt).attr('checked',true);
+		}
+		
+		if(typeof c.gsa.external !== 'undefined') {
+			$('#jhmSubSiteSearch').attr('action',c.gsa.external);
+		}
+		
+		if(typeof c.gsa.inputName !== 'undefined') {
+			$('#subsite-search-field').attr('name',c.gsa.inputName);
+		}
+		
+		if(typeof c.gsa.client !== 'undefined') {
+			$('#jhmSubSiteSearch input[name="client"]').val(c.gsa.client);
+		}
+		
+		if(typeof c.gsa.proxystyle !== 'undefined') {
+			$('#jhmSubSiteSearch input[name="proxystylesheet"]').val(c.gsa.proxystyle);
+		}
+		
+		if(typeof c.gsa.collection !== 'undefined') {
+			$('#jhmSubSiteSearch input[name="site"]').val(c.gsa.collection);
+		}
+		
+		$(searchOptDiv).addClass('search-options')
+			.appendTo($('.search-field-wrapper'))
+			.append(jhmInpOpt)
+			.append('<label>Johns Hopkins Medicine</label>')
+			.append(subSiteInpOpt)
+			.append('<label>' + c.gsa.display + '</label>');
+			
+		$('#jhmSubSiteSearch').append(sitesearchInpOpt);
+	}
+	
+	res.setupSearchFunctions();
+});	
+</script>
+
+<div id="bannerWrapper">
+    <div id="banner">
+        <div id="logoAndTabs">
+            <a title="Johns Hopkins Medicine" href="http://www.hopkinsmedicine.org/"><img src="http://www.hopkinsmedicine.org/sebin/z/j/johns_hopkins_medicine.png" alt="Johns Hopkins Medicine" /></a>
+        </div>
+		<div id="jhm-search">
+			<form method="get" id="jhmSiteSearch" action="http://www.hopkinsmedicine.org/search">
+				<input type="hidden" name="client" value="hopkinsmedicine_frontend">
+				<input type="hidden" name="proxystylesheet" value="hopkinsmedicine_frontend">
+				<input type="hidden" name="output" value="xml_no_dtd">
+				<input type="hidden" name="site" value="hopkinsmedicine_collection">
+				<div class="search-box">
+					<div class="search-field-wrapper">
+						<div class="search-field-inner"></div>
+						<a class="search-logo">Search</a>
+						<input name="q" id="search-field" size="30" maxlength="256" title="Enter your search" type="text">
+					</div>
+					<button class="bannerSearchButton" name="btnG" type="submit" value="Search">Search</button>
+				</div>
+			</form>
+			<form method="get" id="jhmSubSiteSearch" action="http://www.hopkinsmedicine.org/search" style="display:none;">
+					<input type="hidden" name="q" id="subsite-search-field" size="30" maxlength="256">
+			        <input type="hidden" name="client" value="hopkinsmedicine_frontend">
+					<input type="hidden" name="proxystylesheet" value="hopkinsmedicine_frontend">
+					<input type="hidden" name="output" value="xml_no_dtd">
+					<input type="hidden" name="site" value="hopkinsmedicine_collection">	
+			</form>
+		</div>
+    </div>
+</div><h6 class="institution_title"><!-- skip navigation removed from included pages --><a class="" href="http://www.hopkinsmedicine.org/ebola/">Ebola</a></h6><div class="wrapperTop"><div class="wtLeft"><!-- skip navigation removed from included pages --><script type="text/javascript">
+var addthisScript = document.createElement('script');
+addthisScript.setAttribute('src', 'http://s7.addthis.com/js/300/addthis_widget.js#domready=1')
+document.body.appendChild(addthisScript)
+
+var addthis_config = addthis_config||{};
+addthis_config.pubid = 'ra-53a978d8567bf258';
+</script></div><div class="wtMiddle">&#160;</div><div class="wtRight">&#160;</div><div class="reset">&#160;</div></div><div class="wrapperBody"><div class="wrapperContent"><div id="leftNav"><div id="leftNavNavMod"><div class='divnavleft1'>
+<ul>
+<li class="navitemFirst">
+<a href='http://www.hopkinsmedicine.org/ebola/' title='Overview'>Overview</a>
+</li>
+<li class="navitem2">
+<a href='http://www.hopkinsmedicine.org/ebola/about-the-ebola-virus.html' title='What is Ebola?'>What is Ebola?</a>
+</li>
+<li class="navitem3">
+<a href='http://www.hopkinsmedicine.org/ebola/myth_versus_reality.html' title='Myth Versus Reality'>Myth Versus Reality</a>
+</li>
+<li class="navitem4">
+<a href='http://www.hopkinsmedicine.org/ebola/what_johns_hopkins_is_doing/' title='What Johns Hopkins Is Doing'>What Johns Hopkins Is Doing</a>
+</li>
+<li class="navitem5 activenavpage">
+<a href='http://www.hopkinsmedicine.org/ebola/answers_questions.html' title='Answers to Common Questions'>Answers to Common Questions</a>
+</li>
+<li class="navitemLast">
+<a href='http://www.hopkinsmedicine.org/ebola/news_resources/' title='News and Resources'>News and Resources</a>
+</li>
+</ul>
+</div></div></div><div class="subLeft1ColRight"><a href="#" class="leftNavModToggle"><span>In This Section&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a><!-- skip navigation removed from included pages --><!-- skip navigation removed from included pages --><div class="breadcrumb"><span class=""><a class="" href="http://www.hopkinsmedicine.org/">Home</a>&nbsp;&gt;&nbsp;<a class="" href="http://www.hopkinsmedicine.org/ebola/">Ebola</a></span></div><div id="toolBar"><div id="fontfloat"><div class="fontsizeImg"><script type="text/javascript">
+<!-- //
+require(['domready!','jquery'],function(d,$){
+	if (typeof changeTextSize == 'undefined' || !$.isFunction(changeTextSize)) {
+		function changeTextSize(sheetIndex){
+			$("head link[href*=fontSize]").remove();
+			$("head").append('<link rel="stylesheet" type="text/css" href="' + ["/sebin/p/v/fontSizeSmall.css","/sebin/p/x/fontSizeMedium.css","/sebin/t/d/fontSizeLarge.css"][sheetIndex] + '"/>');
+		}
+	}
+	
+	fontSize = function() {}
+	fontSize.level = -1;
+	fontSize.change = function(direction)
+	{
+		switch (direction)
+		{
+			case "+": fontSize.level++; break;
+			case "-": fontSize.level--; break;
+		}
+		if (fontSize.level > 1) fontSize.level = 1;
+		if (fontSize.level < -1) fontSize.level = -1;
+		switch (fontSize.level)
+		{
+			case -1:
+				$("#fontsize").css("background-position", "0px -17px");
+				$("#fontsize a.minus").removeAttr("href");
+				changeTextSize(0);
+			break;
+			case 0:
+				$("#fontsize").css("background-position", "0px 0px");
+				$("#fontsize a.minus").attr("href", "javascript:fontSize.change('-');");
+				$("#fontsize a.plus").attr("href", "javascript:fontSize.change('+');");
+				changeTextSize(1);
+			break;
+			case 1:
+				$("#fontsize").css("background-position", "0px -34px");
+				$("#fontsize a.plus").removeAttr("href");
+				changeTextSize(2);
+			break;
+		}
+	}
+});
+// -->
+</script>
+<span id="fontsize">
+	<a class="minus"></a>
+	<a href="javascript:fontSize.change('+');" class="plus"></a>
+</span></div><div class="printthispageImg"><div>
+			
+				<a	style="cursor: pointer;"
+					href=""
+					onclick="openFriendlyVersion(); return false;"
+					><img	src="/sebin/x/b/printThisPage.png"
+							width="116"
+							height="16"
+							border="0"
+							alt="Print This Page"
+							title="Print This Page"
+					/></a
+				>
+				
+		</div></div></div></div><div class="mainBodyContentData"><h1 class="mainBodyContentTitle"><span class="">Ebola: Answers to Common Questions</span></h1><div><a name="Skip"></a></div><p>With the heightened media coverage of the Ebola virus disease outbreak, it’s only natural to feel anxious about it. But it’s important to know the facts.&#160;</p><h2>Information for Our Patients</h2><div id="faq_accordion">
+   
+
+ <p class="faq_question">
+   Has Johns Hopkins Medicine ever dealt with situations like Ebola? </p>
+   <p class="faq_answer">
+     Johns Hopkins Medicine has considerable expertise in and experience with infection control. In our ongoing efforts to protect our patients, health care workers and the general public, we continually scrutinize our infection control practices and train our staff to deal with dangerous situations. </p>
+ 
+
+<p class="faq_question">
+      What is Johns Hopkins doing to ensure that patients and visitors are protected?</p>
+ <p class="faq_answer">
+       In our commitment to safety, Johns Hopkins Medicine is following the Centers for Disease Control and Prevention’s guidelines to detect potential cases of Ebola virus disease; protect patients, visitors and staff members; and respond appropriately. Each hospital within our system has identified designated units to care for patients suspected or confirmed to have Ebola. We have reviewed and identified equipment to be used by health care workers and are currently involved in rigorous training for those in teams most likely to care for these patients.<br/><br/><strong>There are no patients with Ebola at The Johns Hopkins Hospital or any other Johns Hopkins Medicine facility.</strong></p>
+ 
+
+<p class="faq_question">
+    How do doctors, nurses and other health care workers stay protected and keep from contracting Ebola?</p>
+ <p class="faq_answer">
+       Johns Hopkins Medicine’s health care workers will wear special protective clothing and equipment, and receive extensive, ongoing training to ensure the equipment is used properly and safely. <a href="https://www.youtube.com/watch?v=ao3za5qbSiM" target="_blank">View a brief video about personal protective equipment</a>. </p>
+ 
+
+ <p class="faq_question">
+    What should I expect when I come to my appointment?</p>
+    <p class="faq_answer">
+  In all care areas where patients are present—inpatient and outpatient settings and emergency departments—we have screenings in place for early identification and isolation of any patient with the relevant travel history and risk factors. Our staff will ask you a series of questions to determine if you are at risk of acquiring Ebola. Based on your responses, the clinical team may perform additional screening.<br/><br/>
+
+<a href="http://www.nbcnews.com/storyline/ebola-virus-outbreak/mtpsummit-experts-u-s-prepared-handle-ebola-virus-n229161" target="_blank">Learn more by watching Gabor Kelen, M.D.</a>, director of the Johns Hopkins Office of Critical Event Preparedness and Response and the Johns Hopkins Department of Emergency Medicine, on Meet the Press.   
+</p>
+   
+
+<p class="faq_question">
+    What does it mean that The Johns Hopkins Hospital is a designated site for potential patients with Ebola? </p>
+    <p class="faq_answer">
+    Being a designated site for patients with Ebola means that the Centers for Disease Control and Prevention recognizes that The Johns Hopkins Hospital has the resources—the facilities, equipment and clinical expertise—to care for a patient confirmed to have Ebola. We are providing extensive  training and safety protocols for our clinicians and the best care for our patients. Learn more about The Johns Hopkins Hospital’s <a href="http://www.hopkinsmedicine.org/ebola/maryland_strategy_treat_local_patients.html" target="_blank">role in treating local patients.</a>
+<br/><br/>
+Again, there are no patients with Ebola at The Johns Hopkins Hospital or any other Johns Hopkins Medicine facility.
+</p>
+
+<p class="faq_question">
+     How do I protect myself?</p>
+       <p class="faq_answer">
+    If you travel to affected countries or think you have been exposed to someone suspected or confirmed to have Ebola, follow the <a href="http://www.cdc.gov/vhf/ebola/outbreaks/2014-west-africa/qa.html" target="_blank">Centers for Disease Control and Prevention’s guidance</a> for protecting yourself. </p>
+
+
+  
+</div> <p><span>&#160;</span></p><h2><a name="about"></a>About Johns Hopkins Medicine</h2><div id="faq_accordion">
+   
+
+ <p class="faq_question">
+  What is Johns Hopkins doing to ensure its patients and visitors are protected? </p>
+   <p class="faq_answer">
+    Our staff receives regular training and frequently practices to ensure that our hospitals are prepared for all scenarios. If a patient is suspected to have Ebola virus disease, he or she will be placed in isolation, staff members will take enhanced precautions, and the patient will be evaluated by our specialists in coordination with the Maryland Department of Health and Mental Hygiene.</p>
+ 
+
+<p class="faq_question">
+      How do doctors, nurses and other health care workers stay protected and keep from contracting Ebola virus disease?</p>
+ <p class="faq_answer">
+      Johns Hopkins Medicine’s health care workers will wear special protective clothing and equipment, and they are being extensively trained in their proper use. Our infection control teams are training and educating our clinical staff members on proper procedures.</p>
+ 
+ 
+</div> <p><span>&#160;</span></p><h2>About Ebola</h2><div id="faq_accordion">
+   
+
+ <p class="faq_question">
+     What is Ebola virus disease? What are its symptoms?</p>
+   <p class="faq_answer">
+       Ebola virus is the cause of a viral hemorrhagic fever. Symptoms of Ebola virus disease include fever, severe headache, muscle pain, unexplained bleeding or bruising, vomiting, diarrhea and stomach pain.</p>
+ 
+
+<p class="faq_question">
+      How is Ebola virus disease spread?</p>
+ <p class="faq_answer">
+        Ebola virus disease is spread through direct contact with blood or bodily fluids of an infected symptomatic person, or through exposure to objects, such as needles, that have been contaminated with infectious bodily fluids. Standard precautions and safe injection practices are extremely important in preventing the spread of the disease. Ebola virus disease is not believed to be spread through the airborne route, unless the patient is undergoing aerosol-generating procedures—intubation, extubation, bronchoscopy, bilevel positive airway pressure (BiPAP), sputum induction and open suctioning of airways. Individuals who are not symptomatic are not contagious.</p>
+ 
+
+<p class="faq_question">
+      How contagious is Ebola virus disease?</p>
+ <p class="faq_answer">
+       We believe that people only become infectious once they start to have symptoms. The risk of becoming infectious in the early course of the disease is generally low. The risk of infection is much higher in the later stages but can be effectively addressed with the proper use of appropriate personal protective equipment.</p>
+ 
+
+ <p class="faq_question">
+     If I have the virus, how soon will I have symptoms?</p>
+    <p class="faq_answer">
+       Ebola virus disease is a severe acute viral illness that is often characterized by the sudden onset of fever, intense weakness, muscle pain, headache and sore throat. This is followed by vomiting, diarrhea, rash, impaired kidney and liver function, and, in some cases, both internal and external bleeding. Laboratory findings include low white blood cell and platelet counts and elevated liver enzymes. The incubation period, or the time interval from infection to onset of symptoms, is two to 21 days.</p>
+   
+
+<p class="faq_question">
+      Is there a vaccine or treatment for Ebola virus disease?</p>
+    <p class="faq_answer">
+      There is no licensed vaccine for Ebola virus disease, and there are no specific treatments available. Several vaccines are in test phase, and new drug therapies are being evaluated. Severely ill patients require intense supportive care.</p>
+  
+</div> <p><span>&#160;</span></p><h2>About International Travel Recommendations</h2><div id="faq_accordion">
+   
+
+ <p class="faq_question">
+    What are the current recommendations regarding travel to Guinea, Liberia, Mali and Sierra Leone?</p>
+   <p class="faq_answer">
+     The travel guidance above refers to all Johns Hopkins-related travel to Liberia, Guinea, Mali and Sierra Leone. For now, Johns Hopkins-related travel to the rest of West Africa is without restriction, although the guidance will be automatically extended to any country with a CDC Level-3 Travel Advisory for Ebola. CEPAR and Johns Hopkins Institutions do not have purview over personal (non-JHI related) travel decisions. However, we request that employees, students, and volunteers traveling to these countries on personal business unrelated to affiliation with Johns Hopkins register travel plans with the Johns Hopkins International Travel Registry. </p>
+ 
+
+<p class="faq_question">
+      How can I stay safe if I travel to these countries? </p>
+ <p class="faq_answer">
+       The best way to stay safe is to avoid travel to these countries and by following the CDC’s advice for avoiding contact with the blood and body fluids of people who are ill with Ebola. For more information, visit Outbreak of Ebola in Guinea, Liberia and Sierra Leone on the CDC Ebola website. </p>
+ 
+
+<p class="faq_question">
+      What if I get sick while in these countries? </p>
+ <p class="faq_answer">
+       If you have come into contact with Ebola infected patients and develop symptoms (fever, headache, diarrhea, vomiting, etc.), visit the U.S. Department of State website to find a list of local doctors and hospitals. Many foreign hospitals and clinics are accredited by the Joint Commission International. A list of accredited facilities is available at: <a href="http://www.jointcommissioninternational.org" target="_blank">www.jointcommissioninternational.org</a>. JHI employees are automatically enrolled in International SOS. Please contact them for assistance. Additionally, delay your travel home until after you have recovered or a qualified medical provider approves return travel. </p>
+ 
+
+ <p class="faq_question">
+     Is there anything I should do when I return from a country with a Level-3 Travel Advisory? </p>
+    <p class="faq_answer">
+      Should you choose to disregard the Johns Hopkins travel guidance against travel to a country with a Level-3 Travel Advisory, you should keep a symptom/fever journal for 21 days following your trip and immediately inform Occupational Health upon your return. </p>
+   
+
+<p class="faq_question">
+      Has the U.S. Centers for Disease Control issued any health guidance on this issue? </p>
+    <p class="faq_answer">
+  Yes, the CDC is concerned about this public health threat, and has information posted on a special CDC Web page for the general public and health care providers.</p>
+
+
+<p class="faq_question">
+     Does the CDC have any guidance for travelers to a country with a Level-3 Travel Advisory? </p>
+    <p class="faq_answer">
+    Yes, the CDC says “all non-essential travel to Sierra Leone, Guinea, Mali and Liberia should be avoided.” </p>
+  
+
+</div><!-- skip navigation removed from included pages --></div></div><div><!-- skip navigation removed from included pages --><div class="contentFooter"><div class="footerLeft"><ul><li><a href="http://www.hopkinsmedicine.org/index.html" ><strong>Home</strong></a></li><li><a href="http://www.hopkinsmedicine.org/about/" >About Johns Hopkins Medicine</a></li><li><a href="http://www.hopkinsmedicine.org/ContactUs/" >Contact Johns Hopkins Medicine</a></li><li><a href="http://www.hopkinsmedicine.org/about/centers_departments/" >Centers &amp; Departments</a></li><li><a href="http://www.hopkinsmedicine.org/directions/" >Maps &amp; Directions</a></li><li><a href="http://www.hopkinsmedicine.org/profiles/index.html" >Find a Doctor</a></li><li><a href="http://www.hopkinsmedicine.org/patient_care/" >Patient Care</a></li><li><a href="http://www.hopkinsmedicine.org/education/" >Education</a></li><li><a href="http://www.hopkinsmedicine.org/Research/" >Research</a></li><li><a href="http://www.hopkinsmedicine.org/news/" >News</a></li><li><a href="http://www.hopkinsmedicine.org/employment/index.html" >Careers</a></li></ul></div><div class="footerMiddle"><p><strong>Connect with Johns Hopkins Medicine</strong></p><div class="socialIcons"><a target="_blank" href="https://www.facebook.com/Johns.Hopkins.Medicine" ><img src="/sebin/n/b/facebook-footer-icon.png" alt="Facebook Icon" height="23" hspace="0" vspace="0" width="23" /> Facebook</a> <a target="_blank" href="https://twitter.com/HopkinsMedicine" ><img src="/sebin/p/g/twitter-footer-logo.png" alt="Twitter Icon" height="23" hspace="0" vspace="0" width="23" /> Twitter</a> <a target="_blank" href="http://www.youtube.com/user/JohnsHopkinsMedicine" ><img src="/sebin/r/d/icon_youtube.png" alt="YouTube Icon" height="23" hspace="0" vspace="0" width="23" /> YouTube</a> <a target="_blank" href="http://www.linkedin.com/company/johns-hopkins-medicine" ><img src="/sebin/x/u/linkedin-footer-icon.png" alt="LinkedIn Icon" height="23" hspace="0" vspace="0" width="23" /> LinkedIn</a><a target="_blank" href="https://plus.google.com/?wwc=1#117036896895720589586/about" ><img src="/sebin/d/k/google-plus-footer-logo.png" alt="Google Plus Icon" height="23" hspace="0" vspace="0" width="23" /> Google+</a><a target="_blank" href="http://instagram.com/hopkinsmedicine#" ><img src="/sebin/h/a/instagram-footer-icon.png" alt="Instagram Icon" height="23" hspace="0" vspace="0" width="23" /> Instagram</a><a target="_blank" href="http://www.pinterest.com/HopkinsMedicine/" ><img src="/sebin/h/m/pinterest_footer_icon.png" alt="Pinterest Icon" height="23" hspace="0" vspace="0" width="23" /> Pinterest</a><a target="_blank" href="http://www.sharecare.com/group/johns-hopkins-medicine" ><img src="/sebin/v/j/sharecare_icon.jpg" alt="Sharecare Icon" height="23" hspace="0" vspace="0" width="23" /> Sharecare</a><a href="http://www.hopkinsmedicine.org/news/e-newsletters/" ><img src="/sebin/l/s/enews-footer-icon.png" alt="E-News Icon" height="23" hspace="0" vspace="0" width="23" /> E-News</a><a href="http://www.hopkinsmedicine.org/news/audio/" ><img src="/sebin/x/q/podcast-footer-logo.png" alt="Podcast Icon" height="23" hspace="0" vspace="0" width="23" /> Podcasts</a></div><br /> <p><a href="http://www.hopkinsmedicine.org/social_media/" >Join Our Social Media Communities &gt;</a></p></div><div class="footerRight"><ul><li><a href="http://www.hopkinsmedicine.org/Privacy/patients.html" ><strong>Notice of Privacy Practices</strong></a><br /> (Patients &amp; Health Plan Members)</li><li><a href="http://www.hopkinsmedicine.org/Privacy/index.html" ><strong>Privacy Policy and Disclaimer</strong></a></li></ul><style>
+div.footerRight ul {padding:0;}
+div.footerRight ul li {
+list-style-type: none;
+font-weight: normal;
+margin: 0 0 20px 0;
+font-size:11px;
+line-height:18px;
+}
+div.footerRight ul li a {font-size:12px;}
+
+</style></div><div class="reset">&#160;</div></div></div></div></div><div class="wrapperBottom"><div class="wbLeft">�</div><div class="wbMiddle">�</div><div class="wbRight">�</div><div class="reset">�</div></div><div class="footerNav"><!-- skip navigation removed from included pages --><p class="floatleft">© The Johns Hopkins University, The Johns Hopkins Hospital, and Johns Hopkins Health System. All rights reserved.</p></div></div></div></div> 
+</body>
+</html>

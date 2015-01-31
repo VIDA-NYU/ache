@@ -1,0 +1,2062 @@
+<!--[if IE ]>
+<!doctype html>
+<![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+<head>
+<script src="//cdn.optimizely.com/js/1425218314.js"></script>
+        <script type="text/javascript">
+        // <![CDATA[
+        for(var i = 0; i < optimizely["activeExperiments"].length; i++){
+            var expid = optimizely["activeExperiments"][i];
+            var experimentname = optimizely.data.experiments[expid].name;
+            var variationname = optimizely.variationNamesMap[expid];
+            optimizely.$("head").prepend("<meta name=\"DCSext.opt\" content=\"" + experimentname + "-" + variationname +"\" />");
+        }
+        // ]]>
+    </script>
+<script type="text/javascript">
+           /* EPOCH time at the start of the page */
+
+           /*As IE8 doest support Date.now() functionality,using the diffrent one*/
+             if (!Date.now) {
+                    Date.now = function now() {
+                      return new Date().getTime();
+                   };
+              }
+
+              var pageStartTime = Date.now();
+</script>
+
+ <script src="//assets.adobedtm.com/71dcbb11123ce6b2e1ce4d47fd79a130aad3fc95/satelliteLib-1c3d0c3b3e3b492ca058647975687e6b485ad5c8.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
+<title>Ebola - Telegraph</title>
+
+
+
+<meta name="description" content="The Ebola outbreak in West Africa is said to be one of the most virulent viral diseases known to humankind, the virus causes death in 50 to 90 per cent of all clinically ill cases" />
+
+<meta name="keywords" content="News, World News, Ebola, ebola, outbreak, africa, disease, virus" />
+
+<meta name="tmgads.zone" content="news.worldnews.ebola" />
+<meta name="tmgads.channel" content="news" />
+<meta name="tmgads.section" content="news-worldnews-ebola" />
+
+<input type="hidden" value="section" id="pageType" name="pageType" />
+<input type="hidden" value="index" id="templateName" name="templateName" />
+<meta name="tmgads.pagetype" content="index" />
+<meta name="tmgads.level" content="3" />
+<meta name="tmgads.otherdata" content="" />
+
+
+
+<meta name="tmgads.geo" content="US" />
+
+
+
+
+
+<meta name="DCSext.akamigeo" content="US" />
+
+
+
+<meta name="section-id" content="8239" />
+
+<meta name="GSAMLC" content="worldnews/ebola" />
+<meta name="GSAChannel" content="news" />
+
+<meta name="GSAChannelName" content="News" />
+
+<meta name="GSACategory" content="ebola" />
+	<meta name="GSASectionUniqueName" content="worldnews-ebola" />
+
+<meta name="robots" content="noarchive,noodp" />
+	<meta name="standout" content="http://www.telegraph.co.uk/news/worldnews/ebola/" />
+<meta property="fb:app_id" content="120118784736295" />
+<meta property="fb:admins" content="686953094,531239902,100002344351237" />
+
+<meta property="og:description" content="The Ebola outbreak in West Africa is said to be one of the most virulent viral diseases known to humankind, the virus causes death in 50 to 90 per cent of all clinically ill cases" />
+<meta property="og:site_name" content="Telegraph.co.uk" />
+<meta property="og:title" content="Ebola - Telegraph" />
+<meta property="og:url" content="http://www.telegraph.co.uk/news/worldnews/ebola/" />
+
+<meta property="og:image" content="http://www.telegraph.co.uk/template/ver1-0/i/telegraphFacebook.jpg" />
+<meta property="og:type" content="author" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Telegraph" />
+
+<meta name="geo.placename" content="true"/>
+<link rel="canonical" href="http://www.telegraph.co.uk/news/worldnews/ebola/"/>
+
+<!--  Line no 278 normal.jsp where 1st code change should be made -->
+
+
+<link rel="stylesheet" type="text/css" href="/template/ver1-0/css/screen.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/template/ver1-0/css/newscreen.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/template/ver1-0/templates/fragments/common/tmglBrandCSS.jsp" media="screen" />
+	<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="/template/ver1-0/css/ie6.css" media="screen" />
+<![endif]-->
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="/template/ver1-0/css/ie7.css" media="screen" />
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="RSS Feed for Ebola articles - Telegraph.co.uk" href="http://www.telegraph.co.uk/news/worldnews/ebola/rss" />
+
+<script type="text/javascript" src="/template/ver1-0/js/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript" src="/template/ver1-0/js/jquery-1.11.1.min.js"></script>
+
+<script>
+    jq1_11=$.noConflict(true);
+</script>
+
+<script language="Javascript" type="text/javascript" src="/template/ver1-0/js/jquery.cookie.js"></script>
+
+<script src='//d3c3cq33003psk.cloudfront.net/opentag-35657-106653.js'></script>
+		<meta name="DCSext.MLC" content="/news/worldnews/ebola" />
+	<meta name="DCSext.Genre" content="ebola" />
+								<meta name="DCSext.Category" content="worldnews"/>
+									<meta name="WT.cg_s" content="worldnews"/>
+								<meta name="DCSext.Channel" content="news" />
+					<meta name="WT.cg_n" content="news" />
+						<meta name="DCSext.Content_Type" content="Index" />
+    <meta name="DCSext.Level" content="3" />
+	<meta name="DCSext.cmsSect" content="Home;News;Picture_Galleries;How_about_that" />
+	
+	
+
+
+<meta name="DCSext.cf" content="0"/>
+		<meta name="DCSext.cn" content="0"/>
+		<meta name="DCSext.cd" content="0"/>
+	<script src="/template/ver1-0/js/webtrends/WTDcsVid.js" type="text/javascript"></script>
+<script src="/template/ver1-0/js/webtrends/LIVE/WTID.js" type="text/javascript"></script>
+
+<script>
+window.webtrendsAsyncInit=function(){
+    var dcs=new Webtrends.dcs().init({
+        dcsid:"dcsshgbi400000gscd62rrg43_4o2o",
+        domain:"webtrends.telegraph.co.uk",
+        timezone:0,
+        adimpressions:true,
+        adsparam:"WT.ac",
+        offsite:false,
+        download:true,
+        downloadtypes:"xls,doc,pdf,txt,csv,zip,docx,xlsx,rar,gzip",
+        metanames:"DCSext.MLC, DCSext.source, DCSext.Category, DCSext.Genre, DCSext.Channel, DCSext.imageNo, DCSext.GalleryType, DCSext.Content_Type, DCSext.Level, DCSext.author, DCSext.articleFirstPublished, DCSext.articleId, DCSext.productProvider, DCSext.productName, DCSext.EA_Search_Type, DCSext.EA_Search_Engine, DCSext.EA_Search_Phrase, DCSext.oss, DCSext.ossType, DCSext.cf, DCSext.cn, DCSext.cd, DCSext.pd,DCSext.cmsSect",        
+        fpcdom:".telegraph.co.uk",
+        plugins:{
+            hm:{src:"/template/ver1-0/js/asyncwebtrends/webtrends.hm.js",hmurlparams:"frame,image"},
+            qbert: { src:"/template/ver1-0/js/asyncwebtrends/qbert-wtplugin.js" }
+        }
+        });
+    if ($.cookie("tmg_subs") != null){
+    	var ts = $.parseJSON($.cookie("tmg_subs"));
+        dcs.DCSext.location = ts.location;
+    	dcs.DCSext.trialDescription =ts.trialDescription;
+	    dcs.DCSext.subscriptionType = ts.subscriptionType;
+	    dcs.DCSext.flowType = ts.flowType;
+	    dcs.DCSext.productType = ts.productType;
+	    dcs.DCSext.serviceId = ts.serviceId;
+	    dcs.DCSext.servicePriceId = ts.servicePriceId;
+	
+	    dcs.DCSext.discountVoucher = ts.discountVoucher;
+	    dcs.DCSext.partnerName = ts.partnerName;
+	    dcs.DCSext.currentPromoName = ts.currentPromoName;
+	    dcs.DCSext.sourcePromoName = ts.sourcePromoName;
+	    dcs.DCSext.promoType = ts.promoType;
+	    dcs.DCSext.tCode = ts.tCode;
+	    dcs.DCSext.status = ts.status == true  && ts.acquisitionCompleted == true ? 'Active':'Inactive';
+
+   }
+   if( /Android|webOS|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { dcs.DCSext.platform="tablet";}    
+   dcs.track();
+
+};
+(function(){
+    var s=document.createElement("script"); s.async=true; s.src="/template/ver1-0/js/asyncwebtrends/webtrends.js";
+    var s2=document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s,s2);
+}());
+</script>
+
+<noscript>< img alt="dcsimg" id="dcsimg" width="1" height="1" src="//webtrends.telegraph.co.uk/dcsshgbi400000gscd62rrg43_4o2o/njs.gif?MLC=&amp;Channel=&amp;Genre=&amp;Category=&amp;Content_Type=&amp;Level=&amp;source=&amp;dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=10.2.10&amp;dcssip=www.telegraph.co.uk"/></noscript>
+
+<script type="text/javascript"> 
+//Events tracking for Google Analytics 
+function trackGoogle() { 
+try {var pageTracker = _gat._getTracker("UA-7226372-1");pageTracker._trackPageview();} catch(err) {} 
+} 
+
+//External links tracking through Google Analytics 
+function isLinkExternal(link) { 
+    var r = new RegExp('^https?://(?:www.)?' + location.host.replace(/^www./, '')); 
+        return !r.test(link); 
+} 
+$(document).ready(function() { 
+    $(document).bind('click', function(e) { 
+        var target = (window.event) ? e.srcElement : e.target; 
+        while (target) { 
+            if (target.href) break; 
+            target = target.parentNode; 
+        } 
+        if (!target || !isLinkExternal(target.href)) return true; 
+        var link = target.href; 
+        link = '/outgoing/' + link.replace(/:\/\//, '/'); 
+        _gaq.push(['_trackPageview', link]); 
+    }); 
+}); 
+
+  var _gaq = _gaq || []; 
+  _gaq.push(['_setAccount', 'UA-7226372-1']); 
+  _gaq.push(['_setDomainName', 'telegraph.co.uk']); 
+  _gaq.push(['_trackPageview']); 
+
+  (function() { 
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+  })(); 
+
+</script>		
+<script type="text/javascript">
+  var gs_channels="default";
+  // Last-updated: 2015-01-30 23:55:55.977
+gs_channels="halblacklist2014";
+
+</script>
+<script type="text/javascript">
+    // <![CDATA[
+  var qcSegs = ''; 
+  var qcResults = function(qc){ 
+    for (var i=0;i<=qc.segments.length-1;i++){ 
+      if(qc.segments[i].id != 'D' && qc.segments[i].id != 'T') qcSegs += ';qc='+qc.segments[i].id; 
+    } 
+  }
+    // ]]>
+</script> 
+<script type="text/javascript" src="http://pixel.quantserve.com/api/segments.json?a=p-gyXAHFFgnNQDj&callback=qcResults"></script>
+
+
+		
+			<script language="Javascript" type="text/javascript" src="/template/ver1-0/js/gpt.js"></script>
+		
+	
+<script src="http://s.telegraph.co.uk/toolbar/disqus_parameters_prod.js" type="text/javascript" ></script>
+
+<link rel="stylesheet" type="text/css" href="/template/utils/ooyala/styles/styles.css" media="screen" />
+	<script type="text/javascript" src="/template/utils/ooyala/scripts/stepcarousel.js"> </script>
+<link rel="stylesheet" type="text/css" href="/template/ver1-0/css/subscriber.css" media="screen" />
+<div bucket-id="mpu">
+</div><link href="http://cdn.inskinmedia.com/isfe/4.1/css/base.css" type="text/css" rel="stylesheet" />
+        <!--[if lt IE 7]><link href="http://cdn.inskinmedia.com/isfe/4.1/css/base-ie6.css" type="text/css" rel="stylesheet" /><![endif]-->
+        
+        <script type="text/javascript" src="http://cdn.inskinmedia.com/isfe/4.1/js/base/api/telegraph.js">
+        </script>
+        <!-- <script type="text/javascript" src="http://cdn.inskinmedia.com/isfe/4.1/js/base/api/telegraph.js"></script> -->
+	<script src='http://player.ooyala.com/v3/ZTIxYmJjZDM2NWYzZDViZGRiOWJjYzc5?platform=html5-fallback'></script>
+<script src="/template/ver1-0/js/ooyala.js" type="text/javascript"></script>
+
+<script language="Javascript" type="text/javascript" src="/template/ver1-0/js/ajax.js"></script>
+
+<script language="Javascript" type="text/javascript" src="/template/ver1-0/js/commWidget.js"></script>
+
+
+<!-- Begin KRUX Digital Control Tag for The Telegraph -->
+<!-- End KRUX Digital Control Tag for The Telegraph -->
+
+
+		<!-- Begin comScore Tag -->
+<script>
+	var _comscore = _comscore || [];
+	_comscore.push({
+		c1 : "2",
+		c2 : "6035736"
+	});
+	(function() {
+		var s = document.createElement("script"), el = document
+				.getElementsByTagName("script")[0];
+		s.async = true;
+		s.src = (document.location.protocol == "https:" ? "https://sb"
+				: "http://b")
+				+ ".scorecardresearch.com/beacon.js";
+		el.parentNode.insertBefore(s, el);
+	})();
+</script>
+<noscript>
+	<img src="http://b.scorecardresearch.com/p?c1=2&c2=6035736&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+<link rel="stylesheet" type="text/css" href="/template/ver1-0/css/majornews.css" media="screen" />
+</head>
+
+<body class="news" onload="startTrigger();">
+	<!-- invitationUrl contains the baseUrl for the invitation(paywall). The whole url is completed by the esi tags -->
+<script type="text/javascript">
+		var subsInfo = new Object();
+		subsInfo.channel =  $('meta[name="DCSext.Channel"]').attr("content");
+		if(subsInfo.channel==undefined){subsInfo.channel='';}
+		subsInfo.mlc = $('meta[name="DCSext.MLC"]').attr("content");
+		if(subsInfo.mlc==undefined){subsInfo.mlc='';}
+		subsInfo.category = $('meta[name="DCSext.Category"]').attr("content");
+		if(subsInfo.category==undefined){subsInfo.category='';}
+		subsInfo.level = $('meta[name="DCSext.Level"]').attr("content");
+		if(subsInfo.level==undefined){subsInfo.level='';}
+		subsInfo.author = $('meta[name="DCSext.author"]').attr("content");
+		if(subsInfo.author==undefined){subsInfo.author='';}
+		subsInfo.content_type = $('meta[name="DCSext.Content_Type"]').attr("content");
+		if(subsInfo.content_type==undefined){subsInfo.content_type='';}
+		subsInfo.articleId = $('meta[name="DCSext.articleId"]').attr("content");
+		if(subsInfo.articleId==undefined){subsInfo.articleId='';}
+		var subsJson = JSON.stringify(subsInfo);
+		$.cookie("tmg_subs_referer",subsJson, { path: '/', domain: 'telegraph.co.uk'});
+		var inviteWTUrlSuffix='?channel='+ subsInfo.channel+'&mlc='+subsInfo.mlc+'&category='+ subsInfo.category+'&level='+subsInfo.level+'&author='+subsInfo.author+'&content_type='+subsInfo.content_type+'&articleId='+subsInfo.articleId;
+		
+		<!-- default inviteUrl value is UK-->
+		var inviteUrl = "" + '/subscriptions/invitation/';
+		
+			
+				
+					var inviteUrl = "" + "/subscriptions/invitation-intl/";
+				
+			
+	
+		
+				
+				
+				
+			
+		var plink = "http://www.telegraph.co.uk/template/ver1-0/templates/fragments/common/toolBar-js.jsp";
+	</script>
+	<script src="" type="text/javascript" ></script>
+	<script src="http://s.telegraph.co.uk/toolbar/js/tmgMenu.js" type="text/javascript" ></script>
+<!--[if lte IE 6]>
+<div id="ieLteSix">
+	<div class="ieLteSixBanner">
+		<table cellspacing="0" cellpadding="0">
+			<tbody>
+				<tr>
+					<td class="ieLteSixLeft">
+						<p class="ieFirstP">We no longer check to see whether Telegraph.co.uk displays properly in Internet Explorer version 6 or earlier.</p>
+						<p class="ieSecondtP">To see our content at its best we recommend <a href="/browser-support/">upgrading if you wish to continue using IE or using another browser such as Firefox, Safari or Google Chrome.</a></p>
+					</td>
+					<td valign="top" class="ieLteSixRight">
+						<a href="#" id="ieX"><img width="20" height="20" border="0" alt="Hide this banner" src="/template/ver1-0/i/ieX.gif"></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<script language="Javascript" type="text/javascript" src="/template/ver1-0/js/ieSix.js"></script>
+<![endif]-->
+
+<a name="top"></a>
+
+<div class="hidden">
+	<p>Accessibility links</p>
+	<ul>
+	<li><a href="#topstories">Skip to content</a></li>
+		<li><a href="#mainsections">Skip to navigation</a></li>
+	</ul>
+</div><div id="tmglSite">
+	<div class="printLogo"><img src="/template/ver1-0/i/telegraph_print_190.gif"/></div>
+
+	<div id="tmglHeader" class="">
+	<div id="tmglBannerAd">
+    
+              <script type="text/javascript">
+                  /* EPOCH time at the start of banner Ad */
+                var bannerTimerStart = Date.now();
+              
+            </script>
+		<div class="access">Advertisement</div>
+<div class="adbanner" align="center">
+	<div id="banner" class="InSkinHide">
+		<div bucket-id="mpu">
+<script type="text/javascript">
+		document.write(tmgAdsBuildAdTag("ban", "970x250,970x90,940x250,728x90,468x60", "adj", "", 2));
+		</script>
+	</div></div>
+</div>
+
+
+
+
+
+
+</div>
+	<div id="tmglBrandLarge">
+			<a href="/">
+					<div id="brand">Telegraph.co.uk</div></a>
+			<div id="topBarRightContainer">
+				<div id="searchBar">
+					<div id="searchBlock">
+				<form name="otsn_search" id="otsn_search" method="get" action="/search/">
+					<input type="text" class="searchBox otsn"  value="" size="19" tabindex="1"  />
+					<input type="hidden" id="hiddenQueryText"  name="queryText"  value=""/>
+					<input type="hidden" name="sort" value="recent" checked="checked"/>
+					<input type="submit" class="formSubmit" tabindex="2" id="go" value="" />
+                                        <div class="searchText  new">
+                                        Search - enhanced by OpenText</div>
+
+				</form>
+				<div class="cl"></div>
+			</div>
+		</div>
+				<div id="tmgTopBar">
+				<div id="tmglTopRight" class="tmgTopBarDate">
+					<div id="tmglLasUpdatedDateFeed">
+	<p>
+		Friday 30 January 2015</p>
+</div>
+
+</div>
+			</div></div>
+			
+			<div class="cl"></div>
+		</div>
+		<div class="cl"></div>
+	</div>
+<script type="text/javaScript">
+/* EPOCH time at the  end of Header */
+var tmgHeaderTimerEnd=Date.now();
+</script>
+<div id="tmglMenu">
+	<div id="tmglPriExWrap">
+		<div id="tmglPrimaryNav" class="nonActiveNav">
+			<div class="access"><a name="mainsections"></a></div>
+	<ul class="mainNav">
+		<li class="first styleOne"><a href="http://www.telegraph.co.uk/">Home</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/telegraphtv/">Video</a></li>
+							<li class="selected styleOne" id="menuItemstyleOne"><a href="http://www.telegraph.co.uk/news/">News</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/news/worldnews/">World</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/sport/">Sport</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/finance/">Finance</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/comment/">Comment</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/culture/">Culture</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/travel/">Travel</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/lifestyle/">Life</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/women/">Women</a></li>
+							<li class="styleOne"><a href="http://fashion.telegraph.co.uk">Fashion</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/luxury/">Luxury</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/technology/">Tech</a></li>
+							<li class="styleOne"><a href="http://www.telegraph.co.uk/motoring/">Cars</a></li>
+							</ul></div>
+		<div id="tmglExtraNav">
+	<ul class="extraNav">
+		</ul>
+	<div class="cl"></div>
+</div> 
+<div class="cl"></div>
+	</div>
+
+	<div id="tmglSecondNav" class="activeNav styleOne">
+				<ul class="mainNav">
+						<li class="first styleOne"><a href="http://www.telegraph.co.uk/news/politics/">Politics</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/news/general-election-2015/">Election 2015</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/news/investigations/">Investigations</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/news/obituaries/">Obits</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/education/">Education</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/news/science/">Science</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/news/earth/">Earth</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/news/weather/">Weather</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/news/health/">Health</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/news/uknews/theroyalfamily/">Royal</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/news/celebritynews/">Celebrity</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/news/uknews/defence/">Defence</a></li>
+									<li class="styleOne"><a href="http://www.telegraph.co.uk/news/uknews/scotland/">Scotland</a></li></ul>
+					<div class="cl"></div>
+				</div>
+		<div id="tmglCrumbtrail">
+		<ol>
+			<li class="first"><a href="/">Home</a><span>&raquo;</span></li>
+			<li><a href="http://www.telegraph.co.uk/news/">News</a><span>&raquo;</span></li>
+					<li><a href="http://www.telegraph.co.uk/news/worldnews/">World News</a><span>&raquo;</span></li>
+					<li class="styleOne"><a href="http://www.telegraph.co.uk/news/worldnews/ebola/">Ebola</a></li></ol>
+		<div class="cl"></div>
+	</div>
+</div>
+
+<div id="tmglBody">
+	<div bucket-id="newsAlert_01">
+	</div><div class="twoThirdsThird">
+	<div class="twoThirds gutter">
+		<div id="tmglPageTitle">
+	<div class="iefix">
+
+		<div bucket-id="page_title_01" >	
+	<div>
+				
+		  <h1>Ebola</h1>
+			   <h2><p>
+The Ebola outbreak in West Africa is said to be one of the most virulent viral 
+  diseases known to humankind, the virus causes death in 50 to 90 per cent of 
+  all clinically ill cases
+</p>
+</h2>    
+             </div>
+			</div>
+	</div>
+</div>
+<div class="cl"></div></div>
+	<div class="oneThird">
+		<div class="summaryMedium">
+					</div>
+			</div>
+	<div class="cl"></div>
+		
+	</div>
+
+<div class="twoThirdsThird2 gutterUnder">
+
+	<div class="twoThirds gutter">
+
+		<div class="access"><a name="topstories"></a></div>
+
+		<div class="oneHalf gutter">
+			<div bucket-id="auto_stories_header_01" >	
+	<div class="headerOne styleOne">
+				<!-- 11013469 -->
+				<h2><span>Ebola latest</span>
+							</h2></div>
+		</div>
+	<div class="auto_03_initial_range">
+                            <div class="summaryBig">
+								<div class="summary headlineImageCentre">
+					<!-- 11378239 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11378239/Sierra-Leones-hi-tech-weapon-against-Ebola.html">Sierra Leone's hi-tech weapon against Ebola</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11378239/Sierra-Leones-hi-tech-weapon-against-Ebola.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03181/masanga-1_3181794c.jpg" alt="Students at the Masanga Hospital  in Sierra Leone learn about how to put on personal protection equipment when dealing with Ebola" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11378239/Sierra-Leones-hi-tech-weapon-against-Ebola.html" 
+                         	 
+                         >
+							<p>
+The Sierra Leonean hospital that is the subject of this year's Telegraph 
+  Christmas Charity Appeal is pioneering new ways to stop Ebola's spread
+</p></a>
+                </div><p class="dateCC">29 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	</div>
+
+							<div class="summaryMedium">
+								<div class="summary headlineImageCentre">
+					<!-- 11378361 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11378361/Ebola-virus-mutating-but-will-not-become-airborne-scientists-say.html">Ebola virus mutating but will not become airborne, scientists say</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11378361/Ebola-virus-mutating-but-will-not-become-airborne-scientists-say.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03181/ebola_3181704c.jpg" alt="MSF staff carry a dead body into the Ebola clinic in Monrovia, Liberia, where it will be cremated" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11378361/Ebola-virus-mutating-but-will-not-become-airborne-scientists-say.html" 
+                         	 
+                         >
+							<p>
+Experts at France's Institut Pasteur investigating whether virus is becoming 
+  more contagious
+</p></a>
+                </div><p class="dateCC">29 Jan 2015</p>
+	
+						| <span class="comments">
+							 <a href="/news/worldnews/ebola/11378361/Ebola-virus-mutating-but-will-not-become-airborne-scientists-say.html#disqus_thread" dsqid="11378361" class="autoCC">Comments</a>
+					      </span>
+					<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11375422 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11375422/Cuban-doctors-take-leading-role-in-fighting-Ebola.html">Cuban doctors take leading role in fighting Ebola</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11375422/Cuban-doctors-take-leading-role-in-fighting-Ebola.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03181/cuba_3181688c.jpg" alt="Dr Delgado at the hotel where the Cubans are staying in Freetown" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11375422/Cuban-doctors-take-leading-role-in-fighting-Ebola.html" 
+                         	 
+                         >
+							<p>
+After the UK, Cuba has sent the largest number of doctors to Sierra Leone to 
+  fight Ebola
+</p></a>
+                </div><p class="dateCC">29 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11369755 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11369755/Can-Irn-Bru-really-cure-Ebola.html">Can Irn Bru really cure Ebola?</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11369755/Can-Irn-Bru-really-cure-Ebola.html"><img src="http://i.telegraph.co.uk/multimedia/archive/01812/bru_1812192c.jpg" alt="Britvic, the company behind Robinsons and Tango, is in merger talks with Irn-Bru and Tizer maker AG Barr. " border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11369755/Can-Irn-Bru-really-cure-Ebola.html" 
+                         	 
+                         >
+							<p>
+Scottish nurse Pauline Cafferkey, who contracted Ebola working in Sierra 
+  Leone, has claimed the soft drink has helped fuel her recovery
+</p></a>
+                </div><p class="dateCC">26 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11362408 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11362408/The-Ebola-heroes-who-are-giving-their-lives-for-others.html">The Ebola heroes who are giving their lives for others</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11362408/The-Ebola-heroes-who-are-giving-their-lives-for-others.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03175/ebola_3175158c.jpg" alt="An MSF health worker shoulders a canister of chlorine in order to sterilise Ebola infected bodies and items of clothing" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11362408/The-Ebola-heroes-who-are-giving-their-lives-for-others.html" 
+                         	 
+                         >
+							<p>
+Disease is devastating Sierra Leone's health-care system, with a dozen medics 
+  and more than a hundred healthcare workers dead so far 
+</p></a>
+                </div><p class="dateCC">26 Jan 2015</p>
+	
+						| <span class="comments">
+							 <a href="/news/worldnews/ebola/11362408/The-Ebola-heroes-who-are-giving-their-lives-for-others.html#disqus_thread" dsqid="11362408" class="autoCC">Comments</a>
+					      </span>
+					<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11367630 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11367630/Ebola-nurse-Pauline-Cafferkey-leaves-hospital-after-making-full-recovery.html">Ebola nurse Pauline Cafferkey recovers: 'I'm happy to be alive'</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11367630/Ebola-nurse-Pauline-Cafferkey-leaves-hospital-after-making-full-recovery.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03175/pauline_3175722c.jpg" alt="Pauline Cafferkey has made a full recovery and has been discharged from hospital" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11367630/Ebola-nurse-Pauline-Cafferkey-leaves-hospital-after-making-full-recovery.html" 
+                         	 
+                         >
+							<p>
+Pauline Cafferkey, the British nurse who contracted Ebola while volunteering 
+  in Sierra Leone, has left hospital after making a complete recovery
+</p></a>
+                </div><p class="dateCC">24 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11366670 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11366670/Just-five-Ebola-cases-left-in-Liberia-government-says.html">Just five Ebola cases left in Liberia, government says</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11366670/Just-five-Ebola-cases-left-in-Liberia-government-says.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03175/liberia_ebola_3175312c.jpg" alt="A health worker disinfects a road in the Paynesville neighborhood of Monrovia, Liberia" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11366670/Just-five-Ebola-cases-left-in-Liberia-government-says.html" 
+                         	 
+                         >
+							<p>
+Tolbert Nyenswah, deputy health minister says Liberia could be free of the 
+  Ebola virus by the end of next month 
+</p></a>
+                </div><p class="dateCC">23 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11365426 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11365426/No-taste-of-Paradise-as-Ebola-fears-hit-Bounty-bar-beach.html">No 'taste of Paradise' as Ebola fears hit Bounty bar beach</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11365426/No-taste-of-Paradise-as-Ebola-fears-hit-Bounty-bar-beach.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03175/no2_river_beach_3175123c.jpg" alt="Since the outbreak last spring, tourism to Sierra Leone and the wider region has ground to a halt" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11365426/No-taste-of-Paradise-as-Ebola-fears-hit-Bounty-bar-beach.html" 
+                         	 
+                         >
+							<p>Sierra Leone's River No 2 Beach, scene of a famous TV ad, should be an idyllic tourist magnet but fear of the disease has left it empty of Western visitors </p></a>
+                </div><p class="dateCC">23 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11364508 -->
+					<h3>
+                    <a  href="/finance/newsbysector/pharmaceuticalsandchemicals/11364508/Ebola-British-drug-company-ships-experimental-vaccine-to-Liberia.html">Ebola: GSK ships first test vaccine to Liberia</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/finance/newsbysector/pharmaceuticalsandchemicals/11364508/Ebola-British-drug-company-ships-experimental-vaccine-to-Liberia.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03119/ebola_3119533c.jpg" alt="Liberian men paint on a wall as part of a sensitization programme about the deadly Ebola virus in Monrovia, Liberia" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/finance/newsbysector/pharmaceuticalsandchemicals/11364508/Ebola-British-drug-company-ships-experimental-vaccine-to-Liberia.html" 
+                         	 
+                         >
+							<p>
+GlaxoSmithKline to start vaccinating thousands of volunteers in the first 
+  trial of a new drug to be used in one of the countries that has suffered a 
+  widespread outbreak of the deadly virus 
+</p></a>
+                </div><p class="dateCC">23 Jan 2015</p>
+	
+						| <span class="comments">
+							 <a href="/finance/newsbysector/pharmaceuticalsandchemicals/11364508/Ebola-British-drug-company-ships-experimental-vaccine-to-Liberia.html#disqus_thread" dsqid="11364508" class="autoCC">Comments</a>
+					      </span>
+					<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11363433 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11363433/Ebola-has-killed-a-third-of-the-worlds-chimpanzees-and-gorillas.html">Ebola 'has killed a third of the world&rsquo;s chimpanzees and gorillas&rsquo;</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11363433/Ebola-has-killed-a-third-of-the-worlds-chimpanzees-and-gorillas.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03173/chimp-gorilla_3173772c.jpg" alt="A third of the world's chimps and gorillas have been killed by ebola" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11363433/Ebola-has-killed-a-third-of-the-worlds-chimpanzees-and-gorillas.html" 
+                         	 
+                         >
+							<p>
+Ebola has wiped out a third of the world&rsquo;s chimpanzee and gorilla populations 
+  since the 1990s, conservationists warn</p></a>
+                </div><p class="dateCC">22 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11354314 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11354314/PLEASE-PIC-AND-PUB-Mali-declared-Ebola-free.html">Mali declared Ebola free</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11354314/PLEASE-PIC-AND-PUB-Mali-declared-Ebola-free.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03168/PX9932800USA-EBOLA_3168944c.jpg" alt="A transmission electron micrograph shows Ebola virus particles" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11354314/PLEASE-PIC-AND-PUB-Mali-declared-Ebola-free.html" 
+                         	 
+                         >
+							<p>
+Mali government says it is Ebola free after 42 days without a new case
+</p></a>
+                </div><p class="dateCC">18 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineVideoAbstract">
+			<!-- 11352429 -->
+			<h3>
+                    <a  href="/news/worldnews/ebola/11352429/Ebola-crisis-Sierra-Leones-cemetary-full-of-children.html">Ebola crisis: Sierra Leone's cemetery full of children</a>
+                </h3>
+
+	<div class="gutterUnder">
+			<div id="InSkinContainer_myInSkin1" class="InSkinContainer inSkinContainerId-11352429" style="background: url('http://inskin.vo.llnwd.net/o21/InSkinFiles/jpgs/telegraph/story_player.jpg'); position: relative; width:100%; height:auto; overflow: hidden;">
+			<!--000000-->
+			<!--123923-->
+			<!--onplay-->
+			<!--%3Cdiv+bucket-id%3D%22mpu%22%3E%0D%0A%3Cscript+type%3D%22text%2Fjavascript%22+language%3D%22javascript%22+src%3D%22http%3A%2F%2Fads.telegraph.co.uk%2Fjs.ng%2Fsite%3Dnews%26section%3Dworldnews%2Febola%26pt%3Dhp4%26spaceid%3Dinskin%261x1ls%3Df%26lineupId%3D%26amp%3Bpsize%3D460x317%26ord%3Dqx5vP47v5z%26transactionID%3D1501302355550936%22%3E%3C%2Fscript%3E%0D%0A%0D%0A%09%0D%0A%09%09%3Cnoscript%3E%3Ca+href%3D%22http%3A%2F%2Fads.telegraph.co.uk%2Fclick.ng%2Fsite%3Dnews%26section%3Dworldnews%2Febola%26pt%3Dhp4%26spaceid%3Dinskin%261x1ls%3Df%26lineupId%3D%26amp%3Bpsize%3D460x317%26ord%3Dqx5vP47v5z%26transactionID%3D1501302355550936%22+target%3D%22_blank%22%3E%3Cimg+src%3D%22http%3A%2F%2Fads.telegraph.co.uk%2Fimage.ng%2Fsite%3Dnews%26section%3Dworldnews%2Febola%26pt%3Dhp4%26spaceid%3Dinskin%261x1ls%3Df%26lineupId%3D%26amp%3Bpsize%3D460x317%26ord%3Dqx5vP47v5z%26transactionID%3D1501302355550936%22+alt%3D%22Advertisement%22+border%3D%220%22%2F%3E%3C%2Fa%3E%3C%2Fnoscript%3E%0D%0A%09%09%3C%2Fdiv%3E-->
+			<!--60,30,30-->
+			<!--460x317-->
+			<!---->
+			<!--qx5vP47v5z-->
+            <div id="InSkinContentContainer_myInSkin1" class="InSkinContentContainer inSkinContentContainer-11352429" style="width: 400px; height: 227px;">
+            	<div class="videoPlayer" id='playerwrapper28850' style='width: 400px; height: 227px;'></div>
+    <script>
+var oplayer = null;
+if (typeof ooyala !== 'undefined') {
+	var ooyalaData = {
+	'targetId' : 'playerwrapper28850',
+	'width' : 400,
+	'height' : 227,
+	'vidEmbed' : 'tjdG90cjqBmc7AV1Q6KnKkwGZBB_5Wd3',
+	'autoPlay' : false,
+	'skipAdInt' : 20000,
+	'skipAdTxt' : 'skip advert',
+	'skipAdPos' : 'bottom right',
+	'volume' : 0.50,
+	'relatedVideo' : 'http://cdn.api.ooyala.com/v2/assets?where=embed_code+in+%28%27piY3hvcjrEzDhy4KN-nLim54-nXSesQJ%27%2C%27RteTY0cjo15f0H0D_WlpcMzsls_cbbHm%27%2C%279oN2xhbzoIVEXL0vpCO942E378rgA_X_%27%29&api_key=RvbGU6Z74XE_a3bj4QwRGByhq9h2.WFFAb&expires=1640995199&signature=egc%2FAVRyPxg%2FP3U%2FJj8SPz8%2FcT8%2FPz8QPD8%2Fe3YQdWA'
+	};
+	var oplayer = new ooyala.Player(ooyalaData);
+}
+</script></div>
+        </div>
+
+	</div>
+	<div class="labelAbstract">
+<span class="labelOnSec"><a href="http://www.telegraph.co.uk/news/newsvideo/"> Video</a></span>	
+<a href= "/news/worldnews/ebola/11352429/Ebola-crisis-Sierra-Leones-cemetary-full-of-children.html" 
+                         	 
+                         >
+							<p>
+<strong>Dispatch:</strong> The Telegraph reports from King Tom cemetery in Sierra Leone, 
+  where hundreds of children are buried every week
+</p></a>
+                </div><p class="dateCC">17 Jan 2015</p>
+	<div class="cl"></div>
+		</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11352472 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11352472/Ebola-Ground-Zero-Sierra-Leones-apocalyptic-overflowing-cemetery.html">Ebola: Sierra Leone's overflowing cemetery</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11352472/Ebola-Ground-Zero-Sierra-Leones-apocalyptic-overflowing-cemetery.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03168/EBOLA-sierra_leone_3168194c.jpg" alt="Mohamed Dumbuya, 22, a grave digger at the King Tom Hospital in Freetown Sierra Leone. He has just buried the third of three children, the youngest of which, Mamayo Cesay was two weeks old. " border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11352472/Ebola-Ground-Zero-Sierra-Leones-apocalyptic-overflowing-cemetery.html" 
+                         	 
+                         >
+							<p>
+<strong>Dispatch:</strong> Not since the brutal civil war of the 1990s has Sierra Leone 
+  witnessed such apocalyptic scenes as the King Tom cemetery struggles to bury 
+  the country's Ebola victims
+</p></a>
+                </div><p class="dateCC">17 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11349908 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11349908/Australian-nurse-treating-Ebola-patients-airlifted-to-Britain.html">Australian nurse treating Ebola patients airlifted to Britain</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11349908/Australian-nurse-treating-Ebola-patients-airlifted-to-Britain.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03136/sierra_leone_3136741c.jpg" alt="Health workers wear protective gear before entering the house of a person suspected to have died of the Ebola virus in Port Loko Community situated on the outskirts of Freetown, Sierra Leone" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11349908/Australian-nurse-treating-Ebola-patients-airlifted-to-Britain.html" 
+                         	 
+                         >
+							<p>
+Australia thanks Britain for agreeing to take nurse for 21-day Ebola 
+  observation following low-risk incident in Sierra Leone 
+</p></a>
+                </div><p class="dateCC">16 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11349873 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11349873/Australian-Ebola-fear-nurse-airlifted-to-Britain.html">Australian Ebola fears nurse airlifted to Britain</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11349873/Australian-Ebola-fear-nurse-airlifted-to-Britain.html"><img src="http://i.telegraph.co.uk/multimedia/archive/02869/ebola02_2869721c.jpg" alt="" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11349873/Australian-Ebola-fear-nurse-airlifted-to-Britain.html" 
+                         	 
+                         >
+							<p>
+Nurse treating Ebola patients in West Africa transferred to UK for treatment 
+  following 'low risk clinical incident'
+</p></a>
+                </div><p class="dateCC">16 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11348317 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11348317/Ebola-tests-negative-for-woman-in-Northampton.html">Ebola test results negative for woman in Northampton</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11348317/Ebola-tests-negative-for-woman-in-Northampton.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03165/BWJMB8_3165422c.jpg" alt="Northampton General Hospital" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11348317/Ebola-tests-negative-for-woman-in-Northampton.html" 
+                         	 
+                         >
+							<p>
+Public Health England confirms woman suspected of having Ebola in Northampton 
+  tests negative for deadly virus 
+</p></a>
+                </div><p class="dateCC">15 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11346870 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11346870/Woman-in-Northampton-tested-for-Ebola.html">Woman in Northampton tested for Ebola</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11346870/Woman-in-Northampton-tested-for-Ebola.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03165/BWJMB8_3165422c.jpg" alt="Northampton General Hospital" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11346870/Woman-in-Northampton-tested-for-Ebola.html" 
+                         	 
+                         >
+							<p>
+Northampton General Hospital confirm they have isolated a woman with suspected 
+  Ebola 
+</p></a>
+                </div><p class="dateCC">14 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11341936 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11341936/Patient-in-Manchester-tested-for-Ebola.html">Patient in Manchester tested for Ebola</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11341936/Patient-in-Manchester-tested-for-Ebola.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03163/manchester-hospita_3163056c.jpg" alt="Public Health England received a sample for Ebola testing relating to a patient presently at North Manchester General Hospital" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11341936/Patient-in-Manchester-tested-for-Ebola.html" 
+                         	 
+                         >
+							<p>
+Public Health England is awaiting results from a sample sent to it for Ebola 
+  testing relating to a patient presently at North Manchester General Hospital 
+</p></a>
+                </div><p class="dateCC">13 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11340372 -->
+					<h3>
+                    <a  href="/news/worldnews/ebola/11340372/Ebola-nurse-Pauline-Cafferkey-showing-signs-of-improvement.html">Ebola nurse Pauline Cafferkey 'is getting better'</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11340372/Ebola-nurse-Pauline-Cafferkey-showing-signs-of-improvement.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03150/Pauline-cafferkey-_3150847c.jpg" alt="Pauline Cafferkey" border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/worldnews/ebola/11340372/Ebola-nurse-Pauline-Cafferkey-showing-signs-of-improvement.html" 
+                         	 
+                         >
+							<p>
+The Royal Free Hospital in London says British nurse Pauline Cafferkey, who 
+  contracted Ebola in Sierra Leone, is no longer critically ill
+</p></a>
+                </div><p class="dateCC">12 Jan 2015</p>
+	<div class="cl"></div>
+				</div>
+	<div class="summary headlineImageCentre">
+					<!-- 11330700 -->
+					<h3>
+                    <a  href="/news/health/11330700/Sierra-Leoneans-want-to-understand-Ebola-and-we-can-help-them.html">Sierra Leoneans want to understand Ebola, and we can help them</a>
+                </h3>
+
+	<!-- imagePosition: centre, columnContext: oneHalf -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/health/11330700/Sierra-Leoneans-want-to-understand-Ebola-and-we-can-help-them.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03159/morris_3159860c.jpg" alt="Morris Marah, an advisor to the Sierra Leonean government on Ebola." border="0" width="460"  height="287" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<div class="labelAbstract">
+<a href= "/news/health/11330700/Sierra-Leoneans-want-to-understand-Ebola-and-we-can-help-them.html" 
+                         	 
+                         >
+							<p>
+International development specialist Morris Marah, recently back from Sierra 
+  Leone where he was advising the government on how to cope with the ebola 
+  crisis, says while funding is vital, they also need knowledge, training and 
+  expertise. 
+</p></a>
+                </div><p class="dateCC">12 Jan 2015</p>
+	
+						| <span class="comments">
+							 <a href="/news/health/11330700/Sierra-Leoneans-want-to-understand-Ebola-and-we-can-help-them.html#disqus_thread" dsqid="11330700" class="autoCC">Comments</a>
+					      </span>
+					<div class="cl"></div>
+				</div>
+	</div>
+                        </div>
+                        <script type="text/javascript">
+                            $('.auto_03_initial_range').find(".embedCode iframe, .embedCode object, .embedCode object embed, .embedCode img[alt='YouTube']").css({'width': '100%', 'height': '300px'});
+                        </script>
+                    <div class="summaryMedium" id="expandableArticleList">
+                            </div>
+                            <div class="summaryMedium" >
+                                <script type="text/javascript" src="/template/ver1-0/js/moreStoriesList.js"></script>
+    <script type="text/javascript">
+        
+        var loadingImg = new Image();
+        loadingImg.src = "/template/ver1-0/i/loading_small.gif";
+        
+                new MoreStoriesList('8239', '11171600,11235286,11169069,11153745,11123999', new Date(1421049916000), 20, 1, 'telegraphuk');
+            </script>
+	<div class="loadMoreArticles">
+		<div class="loader">
+			<a href="#">More stories from this section</a>
+		</div>
+	</div>
+	
+</div>
+                        </div>
+
+			<div class="oneSixth">
+				<div class="summaryMedium gutterUnder">
+					<div class="headerOne styleOne"><p>Related Sections</p></div>
+	
+	<div class="secRelSections">
+		<div class="summary">					
+						<div class="summaryMediumToSmall">							
+						<h3 style="font-size:1.2em;">						
+						<a href="http://www.telegraph.co.uk/news/worldnews/">World News</a>
+							</h3>
+						</div>
+					</div>
+				<div class="summary">					
+						<div class="summaryMediumToSmall">							
+						<h3 style="font-size:1.2em;">						
+						<a href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/guinea/">Guinea</a>
+							</h3>
+						</div>
+					</div>
+				<div class="summary">					
+						<div class="summaryMediumToSmall">							
+						<h3 style="font-size:1.2em;">						
+						<a href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/liberia/">Liberia</a>
+							</h3>
+						</div>
+					</div>
+				<div class="summary">					
+						<div class="summaryMediumToSmall">							
+						<h3 style="font-size:1.2em;">						
+						<a href="http://www.telegraph.co.uk/news/health/news/">Health News</a>
+							</h3>
+						</div>
+					</div>
+				</div>
+</div>			
+				<div class="summaryMedium gutterUnder">
+					</div>
+
+				<div class="summaryMedium secPuffs gutterUnder section-puffs">
+							<div class="headerOne styleOne"><p>In Ebola</p></div>
+							<div bucket-id="section_puffs_01" >	
+	<div class="summary imageCentreHeadline">
+			<div class="summarySmall">
+				<!-- imagePosition: centre, columnContext: oneSixth -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11171600/Ebola-facts-What-is-Ebola-and-how-is-it-transmitted.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03011/ebola-liberia_3011826g.jpg" alt="Ebola facts: What it is and how it's transmitted
+Health workers disinfect themselves in Monrovia, Liberia" border="0" width="140"  height="87" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<h3>
+                    <a  href="/news/worldnews/ebola/11171600/Ebola-facts-What-is-Ebola-and-how-is-it-transmitted.html">Ebola facts: What is it and how is it transmitted?</a>
+                </h3>
+
+	</div>
+		</div>
+	<div class="summary imageCentreHeadline">
+			<div class="summarySmall">
+				<!-- imagePosition: centre, columnContext: oneSixth -->
+<div class="piccentre containerdiv  ">
+        <a  href="/culture/culturepicturegalleries/11235286/Band-Aid-30-Who-sang-which-line-in-pictures.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03108/DO_NOT_REUSE-Band-_3108490g.jpg" alt="Top Row L-R: Kyle Simmons (Bastille),  William Farquarson (Bastille), Guy Garvey (Elbow), Chris 'Woody' Wood (Bastille), Chris Martin, Dan Smith (Bastille), Seal, Sir Bob Geldof, Karl Hyde (Underworld), Roger Taylor, Joe Suggs (Thatcher Joe Youtube), Alfie Deyes (Youtube), Milan Neil Amin-Smith (Clean Bandit) and Grace Chatto (Clean Bandit)
+Second Row L-R Louis Tomlinson, Zayn Malik, Liam Payne, Niall Horan, Harry Styles, Olly Murs, Sinead O'Connor, Ellie Goulding, Jessie Ware, Ed Sheeran, Zoella (Youtube), Angelique Kidjo, Emeli Sande, Paloma Faith.Front Row crouching L-R Midge Ure, Bono" border="0" width="140"  height="87" />
+									<span class="cornerimagephotocentre">&nbsp;</span></a>
+                </div>
+	
+<h3>
+                    <a  href="/culture/culturepicturegalleries/11235286/Band-Aid-30-Who-sang-which-line-in-pictures.html">Band Aid 30: Who sang what</a>
+                </h3>
+
+	</div>
+		</div>
+	<div class="summary imageCentreHeadline">
+			<div class="summarySmall">
+				<!-- imagePosition: centre, columnContext: oneSixth -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11169069/The-survivors-portraits-of-Liberians-who-recovered-from-Ebola.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03076/EBOLA_summery_3076394g.jpg" alt="Sontay Massaley, 37, smiles upon her release from the Doctors Without Borders (MSF), Ebola treatment center in Paynesville, Liberia. Massaley, who spent 8 days recovering from the disease in the center, said she worked as a vendor in a market before contracting the virus, which has an average 70 percent mortality rate, according to the World Health Organization" border="0" width="140"  height="87" />
+									<span class="cornerimagephotocentre">&nbsp;</span></a>
+                </div>
+	
+<h3>
+                    <a  href="/news/worldnews/ebola/11169069/The-survivors-portraits-of-Liberians-who-recovered-from-Ebola.html">The survivors; portraits of Liberians who recovered from Ebola</a>
+                </h3>
+
+	</div>
+		</div>
+	<div class="summary imageCentreHeadline">
+			<div class="summarySmall">
+				<!-- imagePosition: centre, columnContext: oneSixth -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11153745/Ebola-outbreak-in-pictures.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03071/Ebola__Texas_healt_3071015g.jpg" alt=" A member of the CG Environmental HazMat team disinfects the entrance to the residence of a health worker at the Texas Health Presbyterian Hospital who has contracted Ebola in Dallas, Texas" border="0" width="140"  height="87" />
+									<span class="cornerimagephotocentre">&nbsp;</span></a>
+                </div>
+	
+<h3>
+                    <a  href="/news/worldnews/ebola/11153745/Ebola-outbreak-in-pictures.html">Ebola outbreak in pictures</a>
+                </h3>
+
+	</div>
+		</div>
+	<div class="summary imageCentreHeadline">
+			<div class="summarySmall">
+				<!-- imagePosition: centre, columnContext: oneSixth -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/worldnews/ebola/11123999/Ebola-outbreak-Telegraph-photojournalist-Will-Wintercross-reports-from-Liberia.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03049/Ebola-Liberia-stre_3049462g.jpg" alt="MSF staff prepare to carry a woman into the Ebola clinic in Monrovia, Liberia" border="0" width="140"  height="87" />
+									<span class="cornerimagephotocentre">&nbsp;</span></a>
+                </div>
+	
+<h3>
+                    <a  href="/news/worldnews/ebola/11123999/Ebola-outbreak-Telegraph-photojournalist-Will-Wintercross-reports-from-Liberia.html">Ebola in Liberia: pictures</a>
+                </h3>
+
+	</div>
+		</div>
+	</div>
+	</div>
+					<div class="summaryMedium">
+					</div>				
+			</div>
+
+		<div class="cl"></div>
+	</div>
+	
+	
+
+	<div class="oneThird">
+		<div class="admpu gutterUnder">
+  <script type="text/javascript">
+     /* EPOCH time at the start of MPU Ad */
+     var mpuAdTimerStart = Date.now();
+  </script>
+<div class="access">Advertisement</div>
+<div id="mpu" class="InSkinHide">
+	<div bucket-id="mpu">
+<script type="text/javascript">
+		document.write(tmgAdsBuildAdTag("mpu", "300x250,300x600", "adj", "", 2));
+		</script>
+	</div></div>
+</div>
+
+<div class="summaryMedium  gutterUnder  tps5 top-stories05">
+				<div bucket-id="top_stories_05" >	
+	<div class="headerOne styleOne">
+				<!-- 10816946 -->
+				<p>
+							<a href="http://www.telegraph.co.uk/telegraphtv/"><span>Latest Video&#187;</span></a>
+							</p></div>
+		<div class="summaryMedium pictureGrid  oneThirdGrid">
+	<div class="summary picGrid-02">
+							<div class="summarySmall">
+								<!-- imagePosition: centre, columnContext: oneThirdWithGrid -->
+<div class="piccentre containerdiv  ">
+        <div class="playButton" style="width: 140px; height: 87px;"><a  href="/news/winston-churchill/11379865/Watch-Sir-Winston-Churchills-final-journey-on-the-Thames-recreated.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03182/Churchill-Havengor_3182428g.jpg" alt=" A wreath is cast onto the Thames from the Havengore boat  " border="0" width="140"  height="87" />
+									<span class="playBtt" style="width: 140px; opacity: 0; filter: alpha(opacity = 0);">&nbsp;</span><span class="playBttTop" style="width: 140px;"></span></a>
+                </div></div>
+	
+<h3>
+                    <a  href="/news/winston-churchill/11379865/Watch-Sir-Winston-Churchills-final-journey-on-the-Thames-recreated.html">Watch: Sir Winston Churchill's final journey recreated</a>
+                </h3>
+
+	</div>
+						</div>
+						
+						<div class="summary picGrid-03">
+							<div class="summarySmall">
+								<!-- imagePosition: centre, columnContext: oneThirdWithGrid -->
+<div class="piccentre containerdiv  ">
+        <div class="playButton" style="width: 140px; height: 87px;"><a  href="/sport/tennis/andymurray/11379775/Andy-Murrays-fiancee-Kim-Sears-in-60-seconds.html"><img src="http://i.telegraph.co.uk/multimedia/archive/02955/_Kim-Sears_2955823g.jpg" alt="British tennis player Andy Murray (L) and his girlfriend Kim Sears" border="0" width="140"  height="87" />
+									<span class="playBtt" style="width: 140px; opacity: 0; filter: alpha(opacity = 0);">&nbsp;</span><span class="playBttTop" style="width: 140px;"></span></a>
+                </div></div>
+	
+<h3>
+                    <a  href="/sport/tennis/andymurray/11379775/Andy-Murrays-fiancee-Kim-Sears-in-60-seconds.html">Andy Murray's fiancée Kim Sears in 60 seconds</a>
+                </h3>
+
+	</div>
+						</div>
+						
+						<div class="summary picGrid-04">
+							<div class="summarySmall">
+								<!-- imagePosition: centre, columnContext: oneThirdWithGrid -->
+<div class="piccentre containerdiv  ">
+        <a  href="/news/newstopics/howaboutthat/11381264/Watch-what-it-looks-like-to-send-a-12k-diamond-into-space.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03183/diamond1_3183115g.jpg" alt="Watch what it looks like to send a £12k diamond into space" border="0" width="140"  height="87" />
+									<span class="cornerimagecentre">&nbsp;</span></a>
+                </div>
+	
+<h3>
+                    <a  href="/news/newstopics/howaboutthat/11381264/Watch-what-it-looks-like-to-send-a-12k-diamond-into-space.html">Watch: Journey of £12k diamond launched into space</a>
+                </h3>
+
+	</div>
+						</div>
+						
+						<div class="summary picGrid-05">
+							<div class="summarySmall">
+								<!-- imagePosition: centre, columnContext: oneThirdWithGrid -->
+<div class="piccentre containerdiv  ">
+        <div class="playButton" style="width: 140px; height: 87px;"><a  href="/news/newsvideo/viral-video/11381045/Bear-attacks-eagle-over-whale-carcass-in-Alaska.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03182/bear1_3182969g.jpg" alt="Bear attacks eagle over whale carcass in Alaska" border="0" width="140"  height="87" />
+									<span class="playBtt" style="width: 140px; opacity: 0; filter: alpha(opacity = 0);">&nbsp;</span><span class="playBttTop" style="width: 140px;"></span></a>
+                </div></div>
+	
+<h3>
+                    <a  href="/news/newsvideo/viral-video/11381045/Bear-attacks-eagle-over-whale-carcass-in-Alaska.html">Watch: Bear attacks eagle over whale carcass</a>
+                </h3>
+
+	</div>
+						</div>
+						
+						<div class="summary picGrid-06">
+							<div class="summarySmall">
+								<!-- imagePosition: centre, columnContext: oneThirdWithGrid -->
+<div class="piccentre containerdiv  ">
+        <div class="playButton" style="width: 140px; height: 87px;"><a  href="/history/11366018/Winston-Churchill-50-year-anniversary-how-the-UK-honoured-its-wartime-leader.html"><img src="http://i.telegraph.co.uk/multimedia/archive/02612/Sir-Winston-Church_2612687g.jpg" alt="Winston Churchill" border="0" width="140"  height="87" />
+									<span class="playBtt" style="width: 140px; opacity: 0; filter: alpha(opacity = 0);">&nbsp;</span><span class="playBttTop" style="width: 140px;"></span></a>
+                </div></div>
+	
+<h3>
+                    <a  href="/history/11366018/Winston-Churchill-50-year-anniversary-how-the-UK-honoured-its-wartime-leader.html">Archive: how the UK honoured Churchill</a>
+                </h3>
+
+	</div>
+						</div>
+						
+						<div class="summary picGrid-07">
+							<div class="summarySmall">
+								<!-- imagePosition: centre, columnContext: oneThirdWithGrid -->
+<div class="piccentre containerdiv  ">
+        <div class="playButton" style="width: 140px; height: 87px;"><a  href="/sport/tennis/andymurray/11378007/Australian-Open-2015-Andy-Murrays-path-to-the-final-in-90-seconds.html"><img src="http://i.telegraph.co.uk/multimedia/archive/03181/murraynew1_3181678g.jpg" alt="Australian Open 2015: Andy Murray's path to the final in 90 seconds" border="0" width="140"  height="87" />
+									<span class="playBtt" style="width: 140px; opacity: 0; filter: alpha(opacity = 0);">&nbsp;</span><span class="playBttTop" style="width: 140px;"></span></a>
+                </div></div>
+	
+<h3>
+                    <a  href="/sport/tennis/andymurray/11378007/Australian-Open-2015-Andy-Murrays-path-to-the-final-in-90-seconds.html">Murray's path to the Australian Open final - in 90 seconds</a>
+                </h3>
+
+	</div>
+						</div>
+						
+						<div class="cl"> </div>
+	</div>
+</div>
+	</div>
+		<div class="summaryMedium gutterUnder">
+				<div bucket-id="widget_01">
+			
+                    
+                                <div class="headerOne styleOne">
+				<!-- 9648057 -->
+				<p>
+							<span>More from the web</span>
+							</p></div>
+		<div class="summary iframeSummary mnIframe">
+							<!-- 9880962 -->
+							<iframe width="300" height="300" marginwidth="0" scrolling="no" src="http://www.dunhilltraveldeals.com/iframes/telegraph/carouselads.php?page=sport" frameborder="0" marginheight="0"></iframe>
+						</div>
+                        
+		    </div>
+		</div>	
+		<div class="summaryMedium gutterUnder">
+	<div bucket-id="widget_02">
+			
+                    
+                                <div class="headerOne styleOne">
+				<!-- 9625766 -->
+				<p>
+							<span>More from the web </span>
+							</p></div>
+		<div class="summary iframeSummary mnIframe">
+							<!-- 9880801 -->
+							<iframe width="300" height="350" marginwidth="0" scrolling="no" src="http://s.telegraph.co.uk/international/newsmax/newsmaxusv1.html" frameborder="0" marginheight="0"></iframe>
+						</div>
+                        
+		    </div>
+		</div>	
+	<div class="adarea gutterUnder">
+			<div class="adsky">
+				<script type="text/javascript">
+     /* EPOCH time at the start of skyscraper Ad */
+     var startOfSkyscraper = Date.now();
+  </script>
+<div class="access">Advertisement</div>
+<div class="InSkinHide" align="center">
+	<div bucket-id="mpu">
+<script type="text/javascript">
+		document.write(tmgAdsBuildAdTag("hpg,sks,skl", "300x600,120x600,160x600", "adj", "", 2));
+		</script>
+	</div></div></div>
+	
+			<div class="cl"></div>
+		</div>
+		
+	<div class="summaryMedium gutterUnder">
+				<div bucket-id="widget_03">
+			
+                    
+                                <div class="headerOne styleOne">
+				<!-- 9054378 -->
+				<p>
+							<span>More from the web</span>
+							</p></div>
+		<div class="summary iframeSummary mnIframe">
+							<!-- 11348356 -->
+							<iframe width="300" height="400" marginwidth="0" scrolling="no" src="http://s.telegraph.co.uk/international/Findthebest/Findthebest300x400.html" frameborder="0" marginheight="0"></iframe>
+						</div>
+                        
+		    </div>
+		</div>		
+		<div class="OUTBRAIN" data-src="http://www.telegraph.co.uk/news/worldnews/ebola/" data-widget-id="AR_3" data-ob-template="telegraph" ></div>
+<script type="text/javascript"> 
+					(function() { 
+			        var outbrainScriptTag = document.createElement('script'); 
+			        outbrainScriptTag.type = 'text/javascript'; 
+			        outbrainScriptTag.async = true; 
+			        outbrainScriptTag.id = "outbrain"; 
+			        outbrainScriptTag.src = 'http://widgets.outbrain.com/outbrain.js' ; 
+			        var s = document.getElementsByTagName('script')[0]; 
+			        s.parentNode.insertBefore(outbrainScriptTag, s); 
+					})(); 
+					
+</script> 		 	
+<script type="text/javascript">
+           /* EPOCH time at the end of right hand column */
+              var rightHandTimer=Date.now();
+              </script>
+	</div>
+	<div class="cl"></div>
+
+</div>
+<input type="hidden" name="numofAds" id="numofAds" value="4">
+
+<div class="googleads ">
+		<div class="access">Advertisement</div>
+		
+		<script type="text/javascript">
+		<!--
+			google_ad_client = 'ca-telegraph_uk_nonarticle';
+			google_ad_channel = 'news,news_topic';
+			google_max_num_ads = '4';
+			google_ad_output="js";
+			google_ad_type="text";
+			google_language="en";
+			google_encoding="utf8";
+			google_safe="high";
+			
+			
+			
+							google_hints="worldnews,ebola"; 
+												
+		// -->
+		</script>
+		
+		<script type="text/javascript" src="/template/ver1-0/js/googleAds.js"></script>
+		
+	<div id="google-ads-container" class="google-ads-section"></div>
+			<div class="cl"></div>
+		<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+		<noscript>
+			<img height="1" width="1" border="0" src="http://pagead2.googlesyndication.com/pagead/imp.gif?client=ca-telegraph_uk_420x200&amp;event=noscript" alt=""/>
+		</noscript>
+	</div>
+
+<div id="trafficDrivers">
+
+	<div bucket-id="commercial_services_three_01" >	
+	<div class="headerOne styleOne">
+				<!-- 9612843 -->
+				<p>
+							<span>MORE FROM TELEGRAPH.CO.UK</span>
+							</p></div>
+		</div>
+	<div class="gutterUnder">							
+		<div id="tmgPortalRand">
+			
+						
+							<!-- 11255356 -->
+<div class="oneQuarter servicesSmall ">
+	<div class="summarySmall">
+		<div class="headerFive">		
+			<a href="http://www.telegraph.co.uk/news/worldnews/northamerica/usa/"> 
+				US News</a>
+		</div>
+		<!-- imagePosition: centre, columnContext: oneQuarter -->
+<div class="piccentre containerdiv  ">
+        <a  href="http://www.telegraph.co.uk/news/worldnews/northamerica/usa/">
+                                <img src="http://i.telegraph.co.uk/multimedia/archive/02626/obama_2626645f.jpg" alt="Barack Obama warns American dream is in danger of becoming a 'myth'" border="0" width="219"  height="137" /><span class="imgSlantOverlay">&nbsp;</span>
+                                </a>
+                            </div>
+	
+<h3>
+			<a  href="http://www.telegraph.co.uk/news/worldnews/northamerica/usa/">
+                                Latest and breaking stories from the United States</a>
+                            </h3>
+		<div class="traffdrivViewLink">
+			<a  href="http://www.telegraph.co.uk/news/worldnews/northamerica/usa/">
+                                View</a>
+                            </div>
+
+	</div>
+</div>
+					
+				
+
+			
+						
+							<!-- 11202156 -->
+<div class="oneQuarter servicesSmall ">
+	<div class="summarySmall">
+		<div class="headerFive">		
+			<a href="http://www.telegraph.co.uk/sport/football/"> 
+				Football</a>
+		</div>
+		<!-- imagePosition: centre, columnContext: oneQuarter -->
+<div class="piccentre containerdiv  ">
+        <a  href="http://www.telegraph.co.uk/sport/football/">
+                                <img src="http://i.telegraph.co.uk/multimedia/archive/03089/rooneyget_3089939f.jpg" alt="" border="0" width="219"  height="137" /><span class="imgSlantOverlay">&nbsp;</span>
+                                </a>
+                            </div>
+	
+<h3>
+			<a  href="http://www.telegraph.co.uk/sport/football/">
+                                Catch up on all the latest football news</a>
+                            </h3>
+		<div class="traffdrivViewLink">
+			<a  href="http://www.telegraph.co.uk/sport/football/">
+                                View</a>
+                            </div>
+
+	</div>
+</div>
+					
+				
+
+			
+						
+							<!-- 11143068 -->
+<div class="oneQuarter servicesSmall ">
+	<div class="summarySmall">
+		<div class="headerFive">		
+			<a href="http://www.telegraph.co.uk/motoring/festival-of-motoring/audi/10816464/Audi-r18-e-tron-quattro.html?WT.mc_id=605786&source=USTrafficDriver"> 
+				Audi</a>
+		</div>
+		<!-- imagePosition: centre, columnContext: oneQuarter -->
+<div class="piccentre containerdiv  ">
+        <a  href="http://www.telegraph.co.uk/motoring/festival-of-motoring/audi/10816464/Audi-r18-e-tron-quattro.html?WT.mc_id=605786&source=USTrafficDriver">
+                                <img src="http://i.telegraph.co.uk/multimedia/archive/02904/Homologation_for_t_2904842f.jpg" alt="" border="0" width="220"  height="146" /><span class="imgSlantOverlay">&nbsp;</span>
+                                </a>
+                            </div>
+	
+<h3>
+			<a  href="http://www.telegraph.co.uk/motoring/festival-of-motoring/audi/10816464/Audi-r18-e-tron-quattro.html?WT.mc_id=605786&source=USTrafficDriver">
+                                Audi R18 in pictures</a>
+                            </h3>
+		<div class="traffdrivViewLink">
+			<a  href="http://www.telegraph.co.uk/motoring/festival-of-motoring/audi/10816464/Audi-r18-e-tron-quattro.html?WT.mc_id=605786&source=USTrafficDriver">
+                                View</a>
+                            </div>
+
+	</div>
+</div>
+					
+				
+
+			
+						
+							<!-- 10995247 -->
+<div class="oneQuarter servicesSmall last">
+	<div class="summarySmall">
+		<div class="headerFive">		
+			<a href="http://www.telegraph.co.uk/motoring/festival-of-motoring/goodwood/?WT.mc_id=605787&source=TrafficDriver"> 
+				Goodwood</a>
+		</div>
+		<!-- imagePosition: centre, columnContext: oneQuarter -->
+<div class="piccentre containerdiv  ">
+        <a  href="http://www.telegraph.co.uk/motoring/festival-of-motoring/goodwood/10814590/moving-motor-show-images.html?WT.mc_id=605787&source=USTrafficDriver">
+                                <img src="http://i.telegraph.co.uk/multimedia/archive/02904/moving-motor-show-_2904112f.jpg" alt="" border="0" width="220"  height="146" /><span class="imgSlantOverlay">&nbsp;</span>
+                                </a>
+                            </div>
+	
+<h3>
+			<a  href="http://www.telegraph.co.uk/motoring/festival-of-motoring/goodwood/10814590/moving-motor-show-images.html?WT.mc_id=605787&source=USTrafficDriver">
+                                The very best of Goodwood's Moving Motor Show in pictures</a>
+                            </h3>
+		<div class="traffdrivViewLink">
+			<a  href="http://www.telegraph.co.uk/motoring/festival-of-motoring/goodwood/10814590/moving-motor-show-images.html?WT.mc_id=605787&source=USTrafficDriver">
+                                View</a>
+                            </div>
+
+	</div>
+</div>
+					
+				
+
+			
+						
+							
+					
+				
+
+			
+						
+							
+					
+				
+
+			
+						
+							
+					
+				
+
+			
+						
+							
+					
+				
+
+			
+						
+							
+					
+				
+
+			
+						
+							
+					
+				
+
+			
+						
+							
+					
+				
+
+			
+						
+							
+					
+				
+
+			
+						
+							
+					
+				
+
+			
+						
+							
+					
+				
+
+			
+						
+							
+					
+				
+
+			
+						
+							
+					
+				
+
+			<div class="cl"></div>		
+	</div>					
+</div>
+</div>
+</div>
+<script type="text/javascript">
+/* EPOCH time at the end of content Area */
+                var contentEndTimer = Date.now();
+            </script>
+<div class="backtotop"><p><a href="#top">Back to top</a></p></div>
+<div id="tmglFooterLarge">
+		<a href="http://www.telegraph.co.uk/" id="footerlogolink" title="Telegraph.co.uk: news, business, sport, the Daily Telegraph newspaper, Sunday Telegraph - Telegraph"></a>
+		<div id="tmglFooterLargeItems">		
+			<div class="footercolumn">									
+				<ul class="menu1"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/?utm_source=TMG&utm_medium=footer_home&utm_campaign=footerhomelink">HOME</a></li>								
+
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/news/">News</a></li>
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/news/uknews/">UK News</a></li>
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/news/politics/">Politics</a></li>
+					</ul>
+					
+					<ul class="menu2"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/news/features/">Long Reads</a></li>								
+
+					</ul>
+					
+					<ul class="menu3"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/news/wikileaks-files/">Wikileaks</a></li>								
+
+					<li><a  target="_parent" href="http://jobs.telegraph.co.uk/">Jobs</a></li>
+					</ul>
+					
+					</div> <div class="footercolumn">
+						<ul class="menu1"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/news/worldnews/">World News</a></li>								
+
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/news/worldnews/europe/">Europe</a></li>
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/news/worldnews/northamerica/usa/">USA</a></li>
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/news/worldnews/asia/china/">China</a></li>
+					</ul>
+					
+					<ul class="menu2"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/news/uknews/theroyalfamily/">Royal Family News</a></li>								
+
+					</ul>
+					
+					<ul class="menu3"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/news/celebritynews/">Celebrity news</a></li>								
+
+					<li><a  target="_parent" href="http://dating.telegraph.co.uk/s/a/4168">Dating</a></li>
+					</ul>
+					
+					</div> <div class="footercolumn">
+						<ul class="menu1"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/finance/">Finance</a></li>								
+
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/education/">Education</a></li>
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/news/uknews/defence/">Defence</a></li>
+					</ul>
+					
+					<ul class="menu2"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/news/newstopics/howaboutthat/">Weird News</a></li>								
+
+					</ul>
+					
+					<ul class="menu3"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/news/editors-choice/">Editor's Choice</a></li>								
+
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/financialservices/">Financial Services</a></li>
+					</ul>
+					
+					</div> <div class="footercolumn">
+						<ul class="menu1"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/news/picturegalleries/">Pictures</a></li>								
+
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/news/newsvideo/">Video</a></li>
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/news/matt/">Matt</a></li>
+					<li><a  target="_parent" href="http://www.telegraph.co.uk/finance/alex/">Alex</a></li>
+					</ul>
+					
+					<ul class="menu2"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/comment/">Comment</a></li>								
+
+					</ul>
+					
+					<ul class="menu3"><li class="itemfocus"><a target="_parent" href="http://blogs.telegraph.co.uk">Blogs</a></li>								
+
+					<li><a  target="_parent" href="http://puzzles.telegraph.co.uk/">Crossword</a></li>
+					</ul>
+					
+					</div> <div class="footercolumn">
+						<ul class="menu1"><li class="itemfocus"><a target="_parent" href="http://www.telegraph.co.uk/topics/about-us/">Contact Us</a></li>								
+
+					<li><a  target="_parent" href="/topics/about-us/3691972/Privacy-and-Cookie-Policy.html">Privacy and Cookies</a></li>
+					<li><a  target="_parent" href="/advertising/">Advertising</a></li>
+					<li><a  target="_parent" href="http://fantasyfootball.telegraph.co.uk/">Fantasy Football</a></li>
+					</ul>
+					
+					<ul class="menu2"><li class="itemfocus"><a target="_parent" href="http://tickets.telegraph.co.uk/">Tickets</a></li>								
+
+					</ul>
+					
+					<ul>
+					<li><a target="_parent" href="http://announcements.telegraph.co.uk/">Announcements</a></li>
+						<li><a target="_parent" href="http://3276.e-printphoto.co.uk/dailytelegraph/">Reader Prints</a></li>
+						<li><a target="_parent" href=""></a></li>
+						</ul>
+			</div>
+
+			<!-- RSSFeeds Menu-->
+			
+			<div id="footercolumn_last">
+				<ul class="imgBulletList">
+					<li class="footrss"><a target="_parent" href="http://www.telegraph.co.uk/topics/follow-us/">Follow Us</a></li>
+							<li class="footmobile"><a target="_parent" href="http://www.telegraph.co.uk/apps/">Apps</a></li>
+							<li class="footepaper"><a target="_parent" href="http://dailytelegraph.newspaperdirect.com/epaper/viewer.aspx ">Epaper</a></li>
+							<li class=""><a target="_parent" href="http://www.telegraph.co.uk/expat/">Expat</a></li>
+							</ul>
+			
+				<ul class="ullast">
+					<li><a target="_parent" href="http://www.telegraph.co.uk/promotions/">Promotions</a></li>
+						<li><a target="_parent" href="http://subscriber.telegraph.co.uk/loyalty/">Subscriber</a></li>
+						<li><a target="_parent" href="http://www.telegraph.co.uk/topics/syndication-services/">Syndication</a></li>
+						</ul>
+			</div>	
+			<div class="cl"></div>
+		</div> <!-- end of tmglFooterLargeItems div -->
+	
+<div id="footerinfo">
+			<p>&copy; Copyright of Telegraph Media Group Limited 2015</p>
+			<p><a target="_parent" href="http://www.telegraph.co.uk/termsandconditions">Terms and Conditions</a> </p>
+			<p><a target="_parent" href="/archive/2015-1-30.html">Today's News</a></p>
+			<p ><a target="_parent" href="http://www.telegraph.co.uk/archive/">Archive</a></p>
+					<p ><a target="_parent" href="http://www.telegraph.co.uk/topics/about-us/style-book/">Style Book</a></p>
+					<p class="last"><a target="_parent" href="/news/weather/4142730/Weather-forecast.html">Weather Forecast</a></p>
+					<div class="cl"></div>			
+		</div>
+	</div> <!-- end of tmglFooterLargeNew div -->
+	<script src="http://s.telegraph.co.uk/toolbar/js/pinConfigV4.js" type="text/javascript" ></script>
+	<script type="text/javascript">
+
+	var subscribtionPinWiget = (function(){
+
+		var settings = {
+			headline: "",
+			imageUrl: "",
+			bulletPoints: [null,null,null],
+			buttonText: "",
+			containerBgColor: "",
+			buttonBgColor: ""
+		};
+
+		var trackingId = "";
+		var destinationUrl = "";
+
+		var init = function(widgetSettings,widgetTrackingId,widgetDestinationUrl){
+			settings = widgetSettings;
+			trackingId = widgetTrackingId;
+			destinationUrl = widgetDestinationUrl;
+
+			if(showSubscriptionPin() === true) {
+				$('#tmglSite').append(buildSubscriptionPin());
+
+				$('#subscriptionPinCloseButton').click(function() {
+					$('#subscriptionPin').fadeOut(1000);
+					//do not show for 4 days
+					$.cookie('tmgSubscriptionPinClosed', 'true', { expires: 4, path: '/', domain: '.telegraph.co.uk'});
+					//tracking code for GA & webtrends
+					 _gaq.push(['_trackEvent', 'subscription_pin', 'click_close', 'version_1']);
+					dcsMultiTrack('WT.dl','53','DCSext.navigation','PIN'+trackingId+'_Close');
+				});
+
+				var displayed = false;
+				$(window).scroll(function() {
+					if ((displayed === false) && isOutOfView(document.getElementById("tmglMenu"))) {
+						$('#subscriptionPin').fadeIn(1000);
+						displayed = true;
+						//do not show more than once a day
+						$.cookie('tmgSubscriptionPinDisplayed', 'true', { expires: 1, path: '/', domain: '.telegraph.co.uk'});
+						//tracking code for GA & webtrends
+						_gaq.push(['_trackEvent', 'subscription_pin', 'display_open', 'version_1']);
+						dcsMultiTrack('WT.dl','53','DCSext.navigation','PIN'+trackingId+'_Display');
+					}
+				})
+			}
+		};
+
+		var isOutOfView = function(el){
+			var isOutOfView = el.getBoundingClientRect().bottom <= 0;
+			return isOutOfView;
+		};
+
+		// get the various data (segments and userid) required and store in the tmp object, we're after the Krux user and also the segment ids.
+		// NB: Keux segments are stored under the kxsegs cookie or localStorage name and are stored as a comma delimited string
+		// Once we have a list of segments we need to loop through them to see if the target segment 'oojk8yna1' is present
+		var isKruxUser = function(){
+			var segments;
+			var result = false;
+
+			if(window.localStorage != undefined){
+				// when localstorage is available do this.
+				segments = window.localStorage.kxprvx_segs;
+			} else {
+				// when localstorage not supported use cookies
+				segments = $.cookie('kxprvx_segs');
+			}
+			// now lets get each segment and create the final string top use in the tag.
+			if(segments !== null && segments !== undefined){
+				var tmpSegs = segments.split(",");
+				for(i in tmpSegs){
+					if(tmpSegs.hasOwnProperty(i) && tmpSegs[i]!=""){
+						//  check to see if this seg = regsitered user
+						if(tmpSegs[i]=="oojk8yna1"){
+							result = true;
+						}
+					}
+				}
+			}
+			return result;
+		};
+
+
+		var showSubscriptionPin = function(){
+
+			if($.cookie('tmgSubscriptionPinClosed') === 'true') {
+				return false;
+			}
+
+			if($.cookie('tmgSubscriptionPinDisplayed') === 'true') {
+				return false;
+			}
+
+			if(isKruxUser()) {
+				return false;
+			}
+
+			if(samPageUser.loggedIn === false) {
+				return true;
+			}
+
+			if(samPageUser.loggedIn === true && getCookieValue("tmg_p13n","subscriber") === 'false') {
+				return true;
+			}
+
+			return false;
+		};
+
+		var buildSubscriptionPin = function(){
+
+			var subLink = "";
+
+			if((typeof destinationUrl !== 'undefined') && (destinationUrl !== null) && (destinationUrl.length > 0 )){
+
+				subLink = destinationUrl;
+
+			} else {
+
+				if(typeof  samSubscribeLink != 'undefined') {
+					subLink = samSubscribeLink;
+				}
+
+				if(typeof  subscriptionsLink != 'undefined') {
+					subLink = subscriptionsLink;
+				}
+
+				subLink = subLink + '?WT.mc_id='+trackingId;
+			}
+
+			bulletPointsHtml = $('<ul></ul>');
+
+			$.each(settings.bulletPoints,function(key,value){
+				if(key > 2 ){return false;}
+				if(value!==null){
+					bulletPointsHtml.append('<li><img src="/template/ver1-0/i/subscriber/Bullet_icon_pin.png"/>'+value+'</li>');
+				}
+			});
+
+			var html='<div id="subscriptionPin" style="background-color:'+settings.containerBgColor+'">'+
+						'<div id="subscriptionPinInnerDiv">'+
+							'<img id="subscriptionPinCloseButton" src="/template/ver1-0/i/subscriber/Close_12x12.png"/>'+
+								'<a id="subscriptionPinLink" href="' + subLink + '">'+
+									'<div>'+
+										'<img src="/template/ver1-0/i/subscriber/Telegraph_logo_151x24.png"/>'+
+										'<p>'+settings.headline+'</p>'+
+										'<hr>'+
+										'<div id="subscriptionPinDesc">'+
+										'<div id="subscriptionPinImg"><img src="'+settings.imageUrl+'"/></div>'+
+					                    '<div id="subscriptionPinBulletPoints">'+bulletPointsHtml.wrap("<div></div>").parent().html()+'</div>'+
+										'</div>'+
+										'<div id="subPinBtn" style="background-color:'+settings.buttonBgColor+'">'+
+											'<p>'+settings.buttonText+'</p>'+
+										'</div>'+
+									'</div>'+
+								'</a>'+
+							'</div>'+
+						'</a>'+
+					'</div>'+
+				'</div>';
+
+		return html;
+		};
+
+		//public API
+		return {
+			settings:settings,
+			init: init
+		}
+	})();
+
+	$(document).ready(function() {
+		
+			var pinTrackingId = "602860";
+			
+			var pinTrackingIdNonUK = "602858";
+			
+
+
+		if(typeof subscriptionPinSettings !== 'undefined'){
+			destinationUrl = null;
+			destinationUrlNonUk = null;
+			
+				if($("meta[name=DCSext.akamigeo]").attr('content') === 'GB') {
+					
+					destinationUrl = "http://www.telegraph.co.uk/subscriptions/2/?WT.mc_id=602860";
+					
+					subscribtionPinWiget.init(subscriptionPinSettings.UK,pinTrackingId,destinationUrl);
+				}
+			
+				if($("meta[name=DCSext.akamigeo]").attr('content') !== 'GB') {
+					
+					destinationUrlNonUk = "http://www.telegraph.co.uk/subscriptions/international/international-2/?WT.mc_id=602858";
+					
+					subscribtionPinWiget.init(subscriptionPinSettings.nonUK,pinTrackingIdNonUK,destinationUrlNonUk);
+				}
+			
+		}
+
+	});
+
+	</script>
+<script type="text/javascript">
+/* EPOCH time at the end of footer */
+                var footerEndTimer = Date.now();
+            </script></div>
+<script type="text/javascript">
+    g_opt_ch = '{}';g_opt_cv = '{}';g_opt_b = true;g_opt_s = true;</script>
+<script type="text/javascript" src="/template/utils/ooyala/scripts/ooyala.js"> </script>
+<script type="text/javascript" src="/template/ver1-0/js/jquery-ui-1.8.4.custom.min.js"></script>
+<script type="text/javascript" src="/template/ver1-0/js/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="/template/ver1-0/js/jquery.ticker.js"></script>
+
+<script type="text/javascript" src="/template/ver1-0/js/common.js"></script>
+<script type="text/javascript" src="/template/ver1-0/js/viewabilityCode.js"></script>
+<script type="text/javascript" src="/template/ver1-0/js/tmglSlideShow.js"></script>
+<script type="text/javascript" src="/template/ver1-0/js/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="/template/ver1-0/js/supersleight.plugin.js"></script>
+<script type="text/javascript" src="/template/ver1-0/js/tracker.js"></script>
+<script type="text/javascript">
+			(function() {
+				var links = $("a[href*='disqus_thread']");
+				var query = "";
+				var blogQuery = "";
+				var normal = new Array();
+				var normalCounts = new Array();
+				var blog = new Array();
+				var blogCounts = new Array();
+
+				for(var i = 0; i < links.length; i++) {
+					if (links[i].getAttribute('dsqid')) {
+						var dsqid = links[i].getAttribute('dsqid');
+						if (links[i].className == 'dsqblog') { blogQuery += 'dsqid' + i + '=' + dsqid + '&'; } else { query += 'dsqid' + i + '=' + dsqid + '&'; }
+					}
+				}
+				if (query.length != "" && blogQuery.length != "") {
+					$("a[href*='disqus_thread']") && $("a.dsqblog").each(function(i) {
+						blog[i] = $(this).attr("href");
+						$(this).attr("href","blog_link");
+					});
+					loadScript("http://telegraphuk.disqus.com/get_num_replies_from_dsqid.js?" + query, function() {
+						$("a[href*='disqus_thread']").not(".dsqblog").each(function(i) {
+							normal[i] = $(this).attr("href");
+							normalCounts[i] = $(this).html();
+							$(this).attr("href","normal_link");
+						});
+
+						$("a[href*='blog_link']").each(function(i) { $(this).attr("href",blog[i]); });
+
+						loadScript("http://telegraphblogs.disqus.com/get_num_replies_from_dsqid.js?" + blogQuery, function() {
+							$("a[href*='normal_link']").each(function(i) { $(this).attr("href",normal[i]); });
+						});
+					});
+				} else {
+					document.write('<script charset="utf-8" type="text/javascript" src="http://telegraphuk.disqus.com/get_num_replies_from_dsqid.js?' + query + '"></' + 'script>');
+				}
+			})();
+		</script>
+		<script type="text/javascript" src="/template/ver1-0/js/tmglMultitrackSelector1.js"></script>
+<script type="text/javascript" src="/template/ver1-0/js/popup.js"></script>
+
+<script language="Javascript" type="text/javascript" src="/template/ver1-0/js/poll.js"></script>
+<script type="text/javascript">
+		var _sf_async_config={uid:22437,domain:"telegraph.co.uk"};
+
+		
+			_sf_async_config.sections = "Ebola";
+		
+
+		(function(){
+			function loadChartbeat() {
+			window._sf_endpt=(new Date()).getTime();
+			var e = document.createElement('script');
+			e.setAttribute('language', 'javascript');
+			e.setAttribute('type', 'text/javascript');
+			e.setAttribute('src',
+			(("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://") +
+			"static.chartbeat.com/js/chartbeat.js"); document.body.appendChild(e);
+		}
+		var oldonload = window.onload;
+		window.onload = (typeof window.onload != 'function') ?
+		loadChartbeat : function() { oldonload(); loadChartbeat(); }; })();
+	</script>
+<!-- START Nielsen Online SiteCensus V6.0 -->
+		<!-- COPYRIGHT 2010 Nielsen Online -->
+		<script type="text/javascript" src="//secure-uk.imrworldwide.com/v60.js">
+		</script>
+		<script type="text/javascript">
+			 var pvar = { cid: "uk-101665h", content: "0", server: "secure-uk" };
+			 var feat = { surveys_enabled: 1 };
+			 var trac = nol_t(pvar, feat);
+			 trac.record().post().do_sample();
+		</script>
+		<noscript>
+		 <div>
+			 <img src="//secure-uk.imrworldwide.com/cgi-bin/m?ci=uk-101665h&amp;cg=0&amp;cc=1&amp;ts=noscript"
+			 width="1" height="1" alt="" />
+		 </div>
+		</noscript>
+		<!-- END Nielsen Online SiteCensus V6.0 -->
+	<div bucket-id="mpu">
+<script type="text/javascript">
+		document.write(tmgAdsBuildAdTag("ftr", "1x1", "adj", "", 2));
+		</script>
+	</div><script type="text/javascript" src='/template/ver1-0/js/aws-sdk-2.0.0-rc9.min.js' async="async"></script> 
+<script type="text/javascript" src='/template/ver1-0/js/hmac-sha256.js' async="async"></script>	
+<script type="text/javascript" src='/template/ver1-0/js/sha256.js' async="async"></script>	
+<script type="text/javascript" src='/template/ver1-0/js/viewability.js' async="async"></script>
+<script type="text/javascript">_satellite.pageBottom();</script>
+    </body>
+</html>
+

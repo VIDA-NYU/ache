@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="ISO-8859-1"/>
+
+<link rel="stylesheet" href="/css/all-styles.min.css" media="all" type="text/css" />
+<script type="text/javascript" src="/js/all-js.min.js"></script>
+
+<!--[if IE 7]>
+	<link rel="stylesheet" href="/styles/core/ie/ie7.css" type="text/css" media="screen" />
+<![endif]-->
+
+<link rel="stylesheet" href="/styles/print.css" media="print" type="text/css" />
+
+<script src="//cdn.optimizely.com/js/28334410.js"></script>
+
+<!-- JSON OBJECT-->
+<script language="JavaScript" type="text/javascript">
+    var dataLayer,
+            siteAudience = "all";
+
+    //check audience
+    if (document.location.href.toLowerCase().indexOf("/hcp/") > -1) {
+        siteAudience = "hcp"
+    }
+
+    dataLayer = {
+        "siteName": "flufacts",
+        "businessUnit": "vspec",
+        "indication": "flu",
+        "siteAudience": siteAudience
+    };
+
+</script>
+<!-- END JSON OBJECT-->
+<!--start Ensighten bootstrap code -->
+<script type="text/javascript">
+    var s_env = "dev";
+    if (window.location.hostname.indexOf('flufacts-qa.gene.com') > -1) {
+        s_env = "stage";
+    } else if (window.location.hostname.indexOf('flufacts.com') > -1) {
+        s_env = "prod";
+    }
+
+    var ensightenUrl = "//nexus.ensighten.com/gene/" + s_env + "/Bootstrap.js";
+    document.write('\x3Cscript type="text/javascript" src="' + ensightenUrl+ '">\x3C/script>');
+</script>
+<!--end Ensighten bootstrap code -->
+
+
+    <title>Flu Symptoms & Flu Treatment Information | fluFACTS
+    </title>
+    <meta name="description" content="Get the FACTS about the flu, symptoms of the flu & flu treatment options. Read about influenza treatment & prevention options and discover ways to stay healthy."/>
+    <meta name="keywords" content="Flu, the flu, flu symptoms, symptoms of the flu, flu treatment, influenza, flu virus, flu vaccine, flu season, flu facts, flu virus symptoms, influenza treatment, flu symptoms and treatment, flu treatment options"/>
+
+
+    <link rel="stylesheet" href="/styles/core/bg-cycle.css" type="text/css" media="screen"/>
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/styles/core/ie/ie7.css" type="text/css" media="screen"/>
+    <![endif]-->
+
+<meta name="google-site-verification"content="rqOmhDJPy2Fj3d301GlRqYRCymZf8MomoqwrTKBNEbM" />
+
+</head>
+
+<body class="pcg home pc_home">
+<div class="container">
+	
+<!-- SiteCatalyst code version: H.23.3.
+Copyright 1996-2011 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com --> 
+<script language="JavaScript" type="text/javascript" src="/scripts/s_code.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel below. */
+
+
+
+
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script> 
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><!--/DO NOT REMOVE/--> 
+<!-- End SiteCatalyst code version: H.23.3. --> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18088451-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 
+
+'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+
+'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; 
+
+s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<div style="height:0; overflow:hidden;">
+
+
+
+<!--
+  Start of DoubleClick Floodlight Tag: Please do not remove
+  Activity name of this tag: Flufacts Home
+  URL of the webpage where the tag is expected to be placed: http://www.flufacts.com/index.jsp
+  This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+  Creation Date: 01/14/2011
+ -->
+<script type="text/javascript">
+	var axel = Math.random() + "";
+	var a = axel * 10000000000000;
+	document.write('<iframe src="//2486275.fls.doubleclick.net/activityi;src=2486275;type=tamif190;cat=flufa0;ord=' + a + '?" width="1" height="1" frameborder="0"></iframe>');
+</script>
+<noscript>
+	<iframe src="//2486275.fls.doubleclick.net/activityi;src=2486275;type=tamif190;cat=flufa0;ord=1?"
+			width="1" height="1" frameborder="0"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+
+<script>
+	function callStaticFL(source, type, cat) {
+		var axel = Math.random() + "";
+		var num = axel * 1000000000000000000;
+		var tag_url = new Image();
+		tag_url.src = "http://ad.doubleclick.net/activity;src=" + source + ";type=" + type + ";cat=" + cat + ";ord=1;num="+num+"?";
+	}
+</script>
+    </div>
+
+
+
+    <div class="decorativeBorder skinLeftBorder"></div>
+<div class="decorativeBorder skinRightBorder"></div>
+
+
+    <div class="page">
+        <div class="head pcg bgHomeboy">
+            <div class="line">
+                <div class="unit leftColWidth">
+                    <div class="homepageLogo">
+                        <a href="/">
+                            <img src="/images/header-logo.png" width="373" height="60"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="unit lastUnit">
+                    <div class="connectToCareWrapper">
+                        <div class="mod connectToCare">
+                        <b class="top"><b class="tl"></b><b class="tr"></b></b>
+
+                        <div class="inner">
+
+                            <div class="bd">
+                                <h3>FIND URGENT CARE</h3>
+
+                                <p>If you are experiencing
+                                    <a href="#" class="qtip_flu spotlight"><strong>flu symptoms</strong></a>, either:</p>
+
+                                <!-- hidden tip -->
+                                <div class="hidden">
+                                    <ul class="qtip_selector">
+                                        <li>Fever</li>
+                                        <li>Aches</li>
+                                        <li>Chills</li>
+                                        <li>Tiredness</li>
+                                        <li>Sudden onset</li>
+                                    </ul>
+                                </div>
+                                <!--/ end hidden tip -->
+
+                                <div id="callYourDoctor">
+                                    <ul class="whiteBullet">
+                                        <li class="one">
+                                            Call your doctor.
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr/>
+                                <!-- telemedicine by state
+                              div class="line">
+                                    <div class="unit size1of2">
+                                        <ul class="whiteBullet">
+                                            <li class="two whiteDesk">
+                                                <strong>Connect online with a doctor or nurse practitioner:</strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="unit size1of2">
+                                        <form id="connectToCareForm" class="connectToCareFormHome capsuleForm">
+                                            <div class="line">
+                                                <div class="unit">
+                                                    <select name="state">
+                                                        <option value="" selected="selected">Select state</option>
+                                               <div class="unit">
+                                                    <select name="state">
+                                                        <option value="" selected="selected">Select state</option>
+                                <option value="AL">Alabama &mdash; UNAVAILABLE</option>
+                                                        <option value="AK">Alaska</option>
+                                                        <option value="AZ">Arizona</option>
+                                                        <option value="AR">Arkansas &mdash; UNAVAILABLE</option>
+                                                        <option value="CA">California</option>
+                                                        <option value="CO">Colorado</option>
+                                                        <option value="CT">Connecticut</option>
+                                                        <option value="DE">Delaware &mdash; UNAVAILABLE</option>
+                                                        <option value="DC">District of Columbia &mdash; UNAVAILABLE</option>
+                                                        <option value="FL">Florida &mdash; UNAVAILABLE</option>
+                                                        <option value="GA">Georgia &mdash; UNAVAILABLE</option>
+                                                        <option value="HI">Hawaii &mdash; UNAVAILABLE</option>
+                                                        <option value="ID">Idaho &mdash; UNAVAILABLE</option>
+                                                        <option value="IL">Illinois</option>
+                                                        <option value="IN">Indiana &mdash; UNAVAILABLE</option>
+                                                        <option value="IA">Iowa &mdash; UNAVAILABLE</option>
+                                                        <option value="KS">Kansas</option>
+                                                        <option value="KY">Kentucky</option>
+                                                        <option value="LA">Louisiana &mdash; UNAVAILABLE</option>
+                                                        <option value="ME">Maine &mdash; UNAVAILABLE</option>
+                                                        <option value="MD">Maryland</option>
+                                                        <option value="MA">Massachusetts</option>
+                                                        <option value="MI">Michigan</option>
+                                                        <option value="MN">Minnesota</option>
+                                                        <option value="MS">Mississippi &mdash; UNAVAILABLE</option>
+                                                        <option value="MO">Missouri</option>
+                                                        <option value="MT">Montana &mdash; UNAVAILABLE</option>
+                                                        <option value="NE">Nebraska</option>
+                                                        <option value="NV">Nevada &mdash; UNAVAILABLE</option>
+                                                        <option value="NH">New Hampshire &mdash; UNAVAILABLE</option>
+                                                        <option value="NJ">New Jersey &mdash; UNAVAILABLE</option>
+                                                        <option value="NM">New Mexico</option>
+                                                        <option value="NY">New York</option>
+                                                        <option value="NC">North Carolina &mdash; UNAVAILABLE</option>
+                                                        <option value="ND">North Dakota</option>
+                                                        <option value="OH">Ohio</option>
+                                                        <option value="OK">Oklahoma &mdash; UNAVAILABLE</option>
+                                                        <option value="OR">Oregon &mdash; UNAVAILABLE</option>
+                                                        <option value="PA">Pennsylvania</option>
+                                                        <option value="RI">Rhode Island</option>
+                                                        <option value="SC">South Carolina &mdash; UNAVAILABLE</option>
+                                                        <option value="SD">South Dakota</option>
+                                                        <option value="TN">Tennessee &mdash; UNAVAILABLE</option>
+                                                        <option value="TX">Texas &mdash; UNAVAILABLE</option>
+                                                        <option value="UT">Utah &mdash; UNAVAILABLE&nbsp;&nbsp;</option>
+                                                        <option value="VT">Vermont &mdash; UNAVAILABLE</option>
+                                                        <option value="VA">Virginia &mdash; UNAVAILABLE</option>
+                                                        <option value="WA">Washington</option>
+                                                        <option value="WV">West Virginia &mdash; UNAVAILABLE</option>
+                                                        <option value="WI">Wisconsin</option>
+                                                        <option value="WY">Wyoming</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+
+                                </div>
+                                <!--/ end telemedicine by state -->
+
+                                <!-- find urgent care -->
+                                <div class="line">
+                                    <div class="unit size1of2">
+                                        <ul class="whiteBullet">
+                                            <li class="third">
+                                                <strong>Use the Urgent Care Locator to the right:</strong>
+                                            </li>
+                                         </ul>
+                                    </div>
+                                    <div class="unit size1of2">
+                                        <form id="findUrgentCareForm"
+                                              class="findUrgentCareForm capsuleForm capsuleFormMedium mrm mbm mts">
+                                            <div class="line">
+                                                <div class="unit zipCodeUnit">
+                                                    <input type="text" id="urgentCareLocator"
+                                                           name="findUrgentCareZipCode" class="box"
+                                                           maxlength="5"
+                                                           placeholder="ZIP code"/>
+                                                </div>
+                                                <div class="unit lastUnit">
+													<input type="submit" class="findUrgentCareFormSubmit btn"
+														onclick="callStaticFL('2486275', 'tamif190', 'flufa003');"
+														data-input="urgentCareLocator"
+														value="Go"/>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--/ end find urgent care -->
+                            </div>          <!-- end of bd-->
+                        </div>
+                        <b class="bottom"><b class="bl"></b><b class="br"></b></b>
+                    </div>
+                </div> <!--/ end sign up box -->
+                </div>
+            </div>
+
+
+        </div>
+        <div class="body">
+            <div class="leftCol">
+                
+<ul class="nav">
+	<li><span class="hd"><strong>Flu</strong> Basics</span>
+		<ul>
+			<li><a href="/know/what-is.jsp">What Is the Flu?</a></li>
+			<li><a href="/know/symptoms.jsp">Flu Symptoms</a></li>
+			<li><a href="/know/season.jsp">Flu Season</a></li>
+			<li><a href="/know/impact.jsp">Impact of the Flu</a></li>
+			<li><a href="/know/seasonal-pandemic.jsp">Seasonal Flu vs<br />Pandemic Flu</a></li>
+			<li><a href="/know/flu-iq.jsp">Activities</a></li>
+		</ul>
+	</li>
+	<li><span class="hd"><strong>Treat</strong> the Flu</span>
+		<ul>
+			<li><a href="/treat/options.jsp">Treatment Options</a></li>
+			<li><a href="/treat/relieving-symptoms.jsp">Relieving Flu Symptoms</a></li>
+            <li><a href="/treat/find-urgent-care.jsp">Find Urgent Care</a></li>
+		</ul>
+	</li>
+	<li><span class="hd"><strong>Prevent</strong> the Flu</span>
+		<ul>
+			<li><a href="/prevent/staying-healthy.jsp">Flu Prevention Tips</a></li>
+			<li><a href="/prevent/vaccine.jsp">The Flu Vaccine</a></li>
+		</ul>
+	</li>
+</ul>
+
+<ul class="arrowBullet smaller">
+<li><a href="/hcp/index.jsp"><strong>Information for Healthcare Professionals</strong></a></li>
+</ul>
+
+<ul class="arrowBullet smaller">
+<li><a href="/spanish-info.jsp"><strong>Informaci&oacute;n en Espa&ntilde;ol</strong></a></li>
+</ul>
+            </div>
+            <!-- /.leftCol -->
+
+            <div class="main pcg">
+                <div class="carousel">
+    <a class="buttons prev" href="#">left</a>
+    <div class="viewport">
+        <ul class="content">
+            <li class="item">
+                <h3>Flu Fighter Coloring Book</h3>
+                <div id="coloringBook">
+                    <p class="mbn">Arm your child with the F.A.C.T.S. about flu and have fun while doing it.</p>
+                    <div class="line">
+                        <div class="unit media">
+                            <div class="img">
+                                <a href="/know/flu-iq.jsp" target="_blank"><img src="/images/coloringbook_larg.jpg" align="right" alt="Fight flu App" width="130" style="padding: 10px 0 0 0;" /></a>
+                            </div>
+                            <div class="bd">
+                                <a class="" href="/know/flu-iq.jsp" style="padding:20px 0 0 5px; float: left; font-size: 1.2em; line-height: 1.1em;">Download coloring book ></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="footnote txtC">.</p>
+                    <p class="footnote txtC">Developed in partnership with NFID and NASN<br />
+                        (<a href="http://www.nfid.org/" target="_blank">National Foundation for Infectious Diseases</a> and <br />
+                        <a href="http://www.nasn.org/" target="_blank">National Association of School Nurses</a>)</p>
+
+
+                </div>
+            </li>
+            <li class="item">
+                <h3>Track the Flu</h3>
+                <p>See flu activity in the U.S. or your state.</p>
+                <div class="pcg-map">
+                    <a onclick="trackFluTracker(this,'pat');" href="/flu-tracker.jsp"></a>
+                </div>
+            </li>
+            <li class="item">
+                <h3>See our YouTube videos!</h3>
+                <p>Learn more about Flu prevention on YouTube. <a href="http://www.youtube.com/flufacts">Watch our videos ></a></p>
+                <div class="media">
+                    <div class="img"><a href="http://www.youtube.com/flufacts" target="_blank"><img src="/images/youtube_factslist.jpg" alt="YouTube Logo" /></a></div>
+                </div>
+            </li>
+            <li class="item">
+                <h3>Are You &ldquo;That Guy&rdquo;?</h3>
+
+                <p>If you think you have the flu, do the right thing.
+                    <a href="/know/flu-iq.jsp#are-you-that-guy">Watch the video &rsaquo;</a></p>
+                <div style="padding: 0px 0px 0px 30px;text-align:center;"><a href="/know/flu-iq.jsp#are-you-that-guy"><img src="/images/dont-be-that-guy.jpg" alt="Flu prevention" height="98" width="183" /></a></div>
+                <p>Sponsored by the <a href="http://www.nfid.org/" target="_blank">NFID</a> (National Foundation for Infectious Diseases)</p>
+            </li>
+            <li class="item">
+                <h3>Tips to Stay Flu-Free</h3>
+                <div class="media">
+                    <div class="imgExt"><img src="/images/get-your-flu-shot.jpg" alt="Get your flu shot" height="82" width="80" /></div>
+                    <div class="bd">
+                        <p class="man">
+                            Good preventive health habits, an annual flu vaccine, and prescription antivirals can help keep you and your family flu-free &mdash; all year long!
+                            <br /><a href="/prevent/staying-healthy.jsp">Learn more &rsaquo;</a>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <h3>Is It Flu?</h3>
+                <div class="media">
+                    <a class="imgExt nmt" href="/know/symptoms.jsp"><img src="/images/is-it-flu.jpg" alt="Flu symptoms" height="173" width="58"/></a>
+                    <div class="bd">
+                        <p class="man">You have sudden fever, aches, chills, and tiredness.<br />What to do?<br /><br /><a href="/know/symptoms.jsp">Check your symptoms &rsaquo;</a></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <a class="buttons next" href="#">right</a>
+</div>
+
+
+                <div class="unit line signUpBar_home size1of1">
+                    <p>&nbsp;</p>
+                </div>
+
+                <!-- MAIN CONTENT BEGINS HERE -->
+                <div class="media mbl mrl">
+                    <div class="bd">
+                        <img class="mbl" src="/images/know-flu-facts.jpg" alt="Know the Flu F.A.C.T.S." height="60"
+                             width="692"/>
+
+                        <p>Fever, aches, chills, tiredness, and sudden onset are common indicators of the flu.</p>
+
+                        <p>Knowing your flu symptoms can help you act to quickly protect yourself and your family.</p>
+                        <ul class="arrowList ml30 ptm">
+                            <li><a href="/know/symptoms.jsp">Symptom Checker</a></li>
+                            <li><a href="/prevent/questions.jsp">Doctor Discussion Guide</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="media mbl mll">
+                    <div class="imgExt">
+                        <img src="/images/treatment-options-1.png" alt="Flu symptom treatment options" height="320"
+                             width="340"/>
+                    </div>
+                    <div class="bd">
+                        <h2 class="h1 mlm"><strong>Treat the Flu</strong></h2>
+
+                        <p>If you're feeling flu symptoms like fever or aches, there's a good chance you might be coming
+                            down with the flu. But only your doctor can tell for sure.</p>
+
+                        <p>If it's the flu, your doctor can prescribe antiviral medications that can help stop the virus
+                            from spreading and shorten the time you are sick.</p>
+                        <ul class="arrowList">
+                            <li><a href="/prevent/questions.jsp">Questions to ask your doctor</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="media mrl">
+                    <div class="carousel-box-sm img">
+                        <div class="carousel_one_frame">
+	<a class="buttons prev" href="#">left</a>
+	<div class="viewport_one_frame">
+		<ul class="content">
+			<li class="item">
+				<div style="padding: 4px 0px 0px 4px;">
+					<img src="/images/flu-tip-1.jpg" alt="Wash your hands to prevent flu" height="228" width="330" />
+				</div>
+				<div class="tip-text">Tip #1: Wash Your Hands</div>
+			</li>
+			<li class="item">
+				<div style="padding: 4px 0px 0px 4px;">
+					<img src="/images/flu-tip-2.jpg" alt="Cough or sneeze into a tissue" height="228" width="330"  />
+				</div>
+				<div class="tip-text">Tip #2: Cough or Sneeze into a Tissue</div>
+			</li>
+			<li class="item">
+				<div style="padding: 4px 0px 0px 4px;">
+					<img src="/images/flu-tip-3.jpg" alt="Get a flu shot" height="228" width="330"  />
+				</div>
+				<div class="tip-text">Tip #3: Get an Annual Flu Shot</div>
+			</li>
+			<li class="item">
+				<div style="padding: 4px 0px 0px 4px;">
+					<img src="/images/flu-tip-4.jpg" alt="Stay at home with the flu" height="228" width="330" />
+				</div>
+				<div class="tip-text">Tip #4: Stay at Home for at Least 24 Hours after Fever Is Gone</div>
+			</li>
+		</ul>
+	</div>
+	<a class="buttons next" href="#">right</a>
+</div>
+                    </div>
+                    <div class="bd">
+                        <h2 class="h1 mlm"><strong>Prevent the Flu</strong></h2>
+
+                        <p>Don&rsquo;t wait for the flu to catch you. There is a lot you can do to help minimize the
+                            risk of getting the flu, even if you&rsquo;re exposed.</p>
+
+                        <p>Good preventive health habits, an annual flu shot, and prescription antivirals can help keep
+                            you and your family flu-free &mdash; even during flu season.</p>
+
+                        <ul class="arrowList">
+                            <li><a href="/prevent/staying-healthy.jsp">Flu Prevention Tips</a></li>
+                            <li><a href="/prevent/vaccine.jsp">Getting a flu vaccine</a></li>
+                        </ul>
+                        <div style="height:50px;           <li><a href="/pr">&nbsp;</div>
+                    </div>
+                </div>
+                <!-- MAIN CONTENT ENDS HERE -->
+            </div>
+            <!-- /.main -->
+
+            <div class="btn-talk-to-doctor mbm">
+	<a href="/prevent/questions.jsp">Do you still have questions? Be sure to talk to your doctor for more information.</a>
+</div>
+
+        </div>
+        <!-- /.body -->
+
+        <div class="searchModule searchSkinPcg">
+	<form class="siteSearchForm" name="siteSearchForm" id="siteSearchForm" method="get" action="/search-results.jsp">
+		<input type="text" class="search_text inputText inputSkinTeal" title="Search" id="search-field" maxlength="256" name="q"  value=""  />
+		<input type="submit" class="btn_small"  id="submit_search"  value="GO" />
+	</form>
+	<div class="share-icons">
+		<div class="icon-email"><a href="/tellAFriend"><img src="/images/icon-mail.png" alt="Email a friend about this page" height="14" width="21" /></a></div>
+		<div class="icon-share"><a href="/tellAFriend">Share</a></div>
+	</div>
+	<div class="youtube-icons">
+		<div class="icon-youtube"><a href="http://www.youtube.com/flufacts" target="_blank"><img src="/images/youtube_site_tool.png" alt="Find Flu FACTS on YouTube" height="24" width="24"></a></div>
+	</div>
+	
+</div>
+
+    </div>
+    <!-- /.page -->
+
+    <div class="foot pcg">
+	<div class="foot-inner page">
+	
+		<div class="media">
+			<div class="img">
+				<a href="http://www.gene.com/" onClick="_gaq.push(['_trackEvent', 'Exit Link', '/link/gene']); return true;" target="_blank"><img src="/images/logo-genentech-pcg.png" alt="Genentech" height="34" style="margin-left: 60px; margin-top:17px;" width="121" /></a>
+			</div>
+			<div class="img">
+				<img src="/images/vert-line.png" alt="" height="42" style="margin-left: 30px; margin-top:15px;" width="1" />
+			</div>
+			<ul class="bd footerText">
+				<li><a href="http://www.gene.com/gene/Inquiry.do" onClick="_gaq.push(['_trackEvent', 'Exit Link', 'outbound Link', 'Top Content - Page Name', '/link/gene']); return true;">Contact Us</a>  |  <a href="/site-map.jsp">Site Map</a>  |  <a href="/unsubscribe">Unsubscribe from Emails</a>  |  <a href="/hcp/">Information for Healthcare Professionals</a></li>
+				<li>&copy; Copyright 2014 Genentech USA, Inc. All rights reserved. This site is intended for US residents only.</li>
+				<li>Use and access of this site are subject to the terms and conditions as set out in our <a href="http://www.gene.com/gene/terms.html" onclick="_gaq.push(['_trackEvent', 'Exit Link', 'outbound Link', 'Top Content - Page Name', '/link/gene']); return true;">Legal Statement</a> and <a href="http://www.gene.com/gene/privacy.html" onclick="_gaq.push(['_trackEvent', 'Exit Link', 'outbound Link', 'Top Content - Page Name', '/link/gene']); return true;">Privacy Statement</a>.</li>
+			</ul>
+		</div>
+	
+	</div> <!-- /.foot-inner.page -->
+
+</div> <!-- /.foot -->
+<!--inline lightbox -->
+<!--exitsite lightbox-->
+<div style="display: none">
+    <div class="colorBoxWrapper" id="exitSite">
+        <h3 class="exitSiteHeading">You are now leaving FluF.A.C.T.S.com</h3>
+
+        <p>The link you have selected will take you away from this site to one that is owned by a third party and is
+            not owned or controlled by Genentech, Inc. Genentech, Inc., makes no representation as to the accuracy of
+            the information contained on sites we do not own or control. Genentech does not recommend and does not
+            endorse the content on any third-party website. Your use of third-party websites is at your own risk and
+            subject to the terms and conditions of use for such sites.</p>
+
+        <div class="line txtC">
+            <a href="#" class="button action exitSiteCancelButton mrs">Cancel</a>
+            <a href="#" class="button action exitSiteContinueButton mls"><span class="arrow">Continue to Site</span></a>
+        </div>
+    </div>
+</div>
+<!--/end exitsite lightbox -->
+<!--/end inline lightbox -->
+
+
+    <!-- Begin: www.iperceptions.com --> <script type="text/javascript"> ;(function (w, d, s, l) { var r = 100, js, fjs = d.getElementsByTagName(s)[0], id = "IPerceptionsJS", a = "async", b = "defer",go = function() { if(d.getElementById(id)) { return; } js = d.createElement(s);js.src = w.location.protocol + "//ips-invite.iperceptions.com/webValidator.aspx?sdfc=7ec9cc84-118428-9812e3e0-2797-4e1e-99d6-35b6aaa059a6&lID=1&source=91787"; js.id = id; js.type = "text/javascript"; js[a] = a; js[b] = b; fjs.parentNode.insertBefore(js, fjs); }; if(r < Math.floor(Math.random() * 100)) { d.cookie = "IPE_S_118428=0;Path=/;" } else if(!(/(^|;)\s*IPE(_S_)?118428=/.test(d.cookie))){ go(); } })(window, document, "script", "load");</script><!-- End: www.iperceptions.com -->
+
+<script type="text/javascript" src="/scripts/global.js"><!-- --></script>
+<script type="text/javascript" src="/scripts/primarySymptoms.js"><!-- --></script>
+<script type="text/javascript" src="/scripts/lib/jquery.qtip.js"><!-- --></script>
+<script type="text/javascript" src="/scripts/lib/jquery.uniform.js"><!-- --></script>
+<script type="text/javascript" src="/scripts/lightbox.js"><!-- --></script>
+<script type="text/javascript" src="/scripts/checkYourArea.js"><!-- --></script>
+
+<script type="text/javascript">
+// <![CDATA[
+/* GLOBAL JQUERY INITALIZATIONS */
+$(document).ready(function() {
+	// put placeholder text in form fields
+	activateFormPlaceholders();
+
+	// intialize tracking helper functions
+	trackingHelpers.attachClickListeners();
+	
+	$('.carousel .viewport').jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".prev",
+        visible: 3,
+        auto: 5000,
+        speed: 800
+    });
+    
+	$('.carousel_one_frame .viewport_one_frame').jCarouselLite({
+        btnNext: ".next",
+        btnPrev: ".prev",
+        visible: 1,
+        auto: 2400,
+        speed: 800,
+        pause: false
+    });
+	
+	$('a.zoom').fancyZoom({
+		scaleImg: true, 
+		closeOnClick: true
+	});
+	
+	if( $('#symptomchecker').length > 0 ) {
+		
+		var flashvars = {
+			root_path: "/flash/symptomchecker/"
+		};
+		var params = {
+			allowScriptAccess: "always"
+		};
+		
+		swfobject.embedSWF("../flash/symptomchecker/flufacts_SA_main.swf", "symptomchecker", "440", "320", "9.0.115", "", flashvars, params);		
+	
+	}
+});
+
+// ]]>
+</script>
+
+
+
+    <!-- Do Not Remove - Turn Tracking Beacon Code - Do Not Remove -->
+    <!-- Advertiser Name : Tamiflu -->
+    <!-- Beacon Name : FluFacts_Homepage -->
+    <!-- If Beacon is placed on a Transaction or Lead Generation based page, please populate the turn_client_track_id with your order/confirmation ID -->
+    <script type="text/javascript">
+        turn_client_track_id = "";
+    </script>
+    <script type="text/javascript"
+            src="https://r.turn.com/server/beacon_call.js?b2=pFNwup4QsikwKx9BWTtClHJkCSjBNIgjSPfEVN8ZOb7UVbP2_bOAOJ889l-NHwAmw24HQzGOMvfBLe8HlURU_Q">
+    </script>
+    <noscript>
+        <img border="0"
+             src="https://r.turn.com/r/beacon?b2=pFNwup4QsikwKx9BWTtClHJkCSjBNIgjSPfEVN8ZOb7UVbP2_bOAOJ889l-NHwAmw24HQzGOMvfBLe8HlURU_Q&cid=">
+    </noscript>
+    <!-- End Turn Tracking Beacon Code Do Not Remove -->
+
+</div>
+</body>
+</html>
+img border="0"
+             src="https://r.turn.com/r/beacon?b2=pFNwup4QsikwKx9BWTtClHJkCSjBNIgjSPfEVN8ZOb7UVbP2_bOAOJ889l-NHwAmw24HQzGOMvfBLe8HlURU_Q&cid=">
+    </noscript>
+    <!-- End Turn Tracking Beacon Code Do Not Remove -->
+
+</

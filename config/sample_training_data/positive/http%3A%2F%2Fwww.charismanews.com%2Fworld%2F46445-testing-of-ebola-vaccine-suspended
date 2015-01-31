@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="apple-itunes-app" content="app-id=488214570">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="inmobi-site-verification" content="70b34024615612b1c3826b3f092e5d6f">
+
+	
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="http://cdn.charismanews.com/templates/charisma_news/css/template.responsive.css?2.86" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="http://cdn.charismanews.com/templates/charisma_news/css/print.css?v=8" type="text/css" media="print" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	  <base href="http://www.charismanews.com/world/46445-testing-of-ebola-vaccine-suspended" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="vaccine, outbreak, Geneva, WHO, UN, Merck" />
+  <meta name="author" content="Lorie Johnson / CBN News" />
+  <meta name="autopopulate" content="1" />
+  <meta name="description" content="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far. " />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Testing of Ebola Vaccine Suspended</title>
+  <link href="http://cdn.charismanews.com/templates/charisma_news/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <style type="text/css">
+#nlWidgetMain {background-color:#eaeaea; padding:10px 10px; display:none;}
+#nlWidgetClose {height:108px; width:300px; }
+#nlWidgetClose a{display:inline; text-decoration:none; color:white; position:relative; top:-5px; }
+#nlWidgetAttn {margin:-6px 0 0 -10px; height: 0; width:300px; padding:0; background:none; background-color:#CCC !important;}
+#nlWidgetErrors {display:none; background-color:#FF9; padding:.5em 10px; border-top:1px solid #900; border-bottom:1px solid #900; }
+#nlWidgetLoader {width: 12%; display:none; margin-left:132px; margin-top:26px;}
+#nlWidgetSubmit {text-align:left; margin: 13px 0 5px 15px;}
+#nlWidgetMain .copy {font-size:12px; line-height:15px !important;}
+#nlWidgetDoor .ex {display:block; font-size:14px; margin-top:10px; color:#1893b8;}
+#nlWidgetDoor .ex a {color:#1893b8;}
+#nlWidgetDoor .ex .icon-chevron {margin-top:1px;}
+#nlWidgetDoor label {margin-bottom:0; vertical-align:middle;}
+#nlWidgetDoor p.info {margin:0 0 .5em 20px; padding:0; font-size:12px; line-height:15px;}
+#nlWidgetMain button {width:30%; height:28px; background:#b00; color:#fff; text-align:center; border:0; border-radius:3px; text-transform:uppercase; font-size:13px; vertical-align:middle;}
+#nlWidgetMain input[type=text] {width:65%; height:30px; vertical-align:middle;}
+#nlWidgetMain input[type=checkbox] {background-color:#FFFFFF; margin-top:2px; vertical-align:middle;}
+#nlWidgetMain .icon-chevron {display:inline-block; width:14px; height:14px; margin-top:4px; line-height:14px; vertical-align:text-top; background-image:url("http://charisma.net/icons/glyphicons-halflings.png"); background-position:-456px -72px; background-repeat:no-repeat;}
+#nlWidgetMain .letters b {font-size:.9em;}
+#nlWidgetMain .letters p {line-height:1.5;}
+#nlWidgetMain .priv {display:block; font-size:10px; margin-bottom:0;}
+  </style>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mootools/1.5.0/mootools-core-full-compat.min.js" type="text/javascript"></script>
+  <script src="http://cdn.charismanews.com/media/system/js/core.js" type="text/javascript"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/mootools-more/1.5.0/mootools-more-yui-compressed.min.js " type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+jQuery.noConflict();window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});
+						window.addEvent('load',function(){
+							// Smooth Scroll
+							new SmoothScroll({
+								duration: 500
+							});
+						});
+					var fontAdjTarget = 'article.mainContent, .blog article';
+  </script>
+  <script type="text/javascript">
+	function dggstc_checkShareCount() {
+		var cnt = jQuery('#dggsharethiscustom_sharecnt').html();
+		if(cnt=='-'||cnt=='') return;
+		window.clearTimeout(window.timeoutID);
+		if((cnt!='new' && cnt>100)|| cnt.slice(-1)=='K') {
+			jQuery('.dggsharethiscustom .counter .value').html(cnt);
+			jQuery('.dggsharethiscustom .counter').fadeIn();
+		}
+	}
+	
+	var __st_loadLate=false;
+	var switchTo5x=true;
+	var shareThis = document.createElement('script');
+	shareThis.type = 'text/javascript';
+	shareThis.src = 'http://w.sharethis.com/button/buttons.js';
+	shareThis.onload = function() {
+		stLight.options({
+			publisher:'db7f7575-7e1c-42ea-a7d6-5b646769ea28'
+					});
+		
+stButtons.getCount("http://www.charismanews.com/world/46445-testing-of-ebola-vaccine-suspended","sharethis",document.getElementById('dggsharethiscustom_sharecnt'));
+window.timeoutID = window.setInterval(dggstc_checkShareCount, 250);
+		stLight.onReady();
+
+		window.addEvent("domready",function(){
+			jQuery('.socialMediaMoreBtn').click(function() {
+				jQuery(this).parent().siblings('.canHide').toggleClass('hidden');
+				jQuery(this).toggleClass('active');
+			});
+		});
+
+	};
+	var scripts = document.getElementsByTagName('script')[0];
+	scripts.parentNode.insertBefore(shareThis, scripts);
+</script>
+<script type="text/javascript">
+(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/platform.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();
+</script>
+  <meta property="og:title" content="Testing of Ebola Vaccine Suspended" />
+  <meta property="og:url" content="http://www.charismanews.com/world/46445-testing-of-ebola-vaccine-suspended" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Charisma News" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:publisher" content="https://www.facebook.com/charismanews" />
+  <meta property="fb:app_id" content="105500956214009" />
+  <meta property="fb:admins" content="516933852" />
+  <meta property="og:description" content="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far. " />
+  <meta property="og:image" content="http://cdn.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg" />
+
+	<script src="http://cdn.charismanews.com/libraries/js/jquery.cookies-and-easing.min.js"></script>
+
+	<style>
+#toBtnLeft,
+#toBtnRight,
+#toImageMapLeft,
+#toImageMapRight,
+#toBtnTR {display:none;}
+
+@media only screen and (min-width : 980px)
+{
+	body {background:url('http://www.charismaadvertising.com/images/banners/other/site_takeover_assets/2014/charisma_PreSale/cmPreSaleTakeOverBackgroundSkin_JAN_1.jpg') center top no-repeat #fff; background-attachment:fixed; /*cursor:pointer;*/}
+	body > * {cursor:default;}
+	#toImageMapLeft {display:block; position:absolute; width:150px; height:675px; left:-157px; top:29px;}
+	#toImageMapRight {display:block; position:absolute; width:141px; height:148px; right:-146px; top:210px;}
+
+	/* Site Tweaks */
+	/* all */
+	#mainWrap {width:973px; padding:26px 15px 0; position:relative;}
+	footer.root {margin-top:0;}
+	footer.page .feedback {width:290px;}
+	#siteFooterBar {margin-top:0;}
+	.copyright {margin-bottom:0; padding-bottom:1em;}
+	/*home*/
+	#contentFpWrap {width:auto; padding:0 0 2em 0; background:white;}
+	/* inside */
+	body.VIEW_article .socialSharing_Article_BeforeContent {display:none;}
+	.contentAreaWrap
+	{
+		background:white; padding:0;
+		/* If you're considering putting overflow:auto here note that it will
+		break Disqus' ability to scroll the page, which is very useful functionality
+		for both admins and users. Try something else.*/
+	}
+	.extrasWrap-fr {padding-left:2px;}
+	#breadcrumbsWrap {background:white; padding-left:30px;}
+}
+
+@media only screen and (min-width : 1220px)
+{
+	#toBtnLeft {display:block; position:fixed; width:177px; height:100px; bottom:10px; left:0; z-index:1000; }
+	#toBtnRight {display:block; position:fixed; width:149px; height:154px; bottom:10px; right:0; z-index:1000; }
+	/*#toBtnTR { position:absolute; width:140px; height:280px; top:135px; right:-140px; z-index:1001; }*/
+}
+</style>
+			
+	<!--[if IE]>
+	<script src="http://cdn.charismanews.com/templates/charisma_news/javascript/html5shiv.js"></script>
+	<![endif]-->
+	<!--[if lte IE 6]>
+	<link href="http://cdn.charismanews.com/templates/charisma_news/css/ieonly.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if lte IE 7]>
+	<link href="http://cdn.charismanews.com/templates/charisma_news/css/ie7only.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+
+	<!--
+	Possible fix for scrollbar issues in IE8, see:
+	https://github.com/twbs/bootstrap/issues/10497
+	-->
+	<script>
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement("style");
+		msViewportStyle.appendChild(
+			document.createTextNode(
+				"@-ms-viewport{width:auto!important}"
+			)
+		);
+		document.getElementsByTagName("head")[0].
+			appendChild(msViewportStyle);
+	}
+	</script>
+
+
+	<script src="http://connect.facebook.net/en_US/all.js#xfbml=1&appId=105500956214009" async></script>
+		<script language="javascript" type="text/javascript">//<![CDATA[
+
+	var LazyLoad=new Class({Implements:[Options,Events],options:{range:200,elements:"img",container:window,mode:"vertical",realSrcAttribute:"data-src",useFade:true,placeholder:"http://cdn.charismanews.com/templates/charisma_news/images/blank.gif"},initialize:function(a){this.setOptions(a);this.container=document.id(this.options.container);this.elements=$$(this.options.elements);this.largestPosition=0;var b=this.options.mode=="vertical"?"y":"x";var c=this.container!=window&&this.container!=document.body?this.container:"";this.elements=this.elements.filter(function(a){if(a.get("src")!=this.options.placeholder)return false;if(this.options.useFade)a.setStyle("opacity",0);var d=a.getPosition(c)[b];if(d<this.container.getSize()[b]+this.options.range){this.loadImage(a);return false}return true},this);var d=function(a){var e=this.container.getScroll()[b];if(e>this.largestPosition){this.elements=this.elements.filter(function(a){if(a.get("src")!=this.options.placeholder)return false;if(e+this.options.range+this.container.getSize()[b]>=a.getPosition(c)[b]){this.loadImage(a);return false}return true},this);this.largestPosition=e}this.fireEvent("scroll");if(!this.elements.length){this.container.removeEvent("scroll",d);this.fireEvent("complete")}}.bind(this);this.container.addEvent("scroll",d)},loadImage:function(a){if(this.options.useFade){a.addEvent("load",function(){a.fade(1)})}a.set("src",a.get(this.options.realSrcAttribute));this.fireEvent("load",[a])}})
+
+	window.addEvent('domready', function() {
+		var lazyloader = new LazyLoad({
+			range: 500,
+			realSrcAttribute: "data-src",
+			useFade: true,
+			elements: 'img',
+			container: window
+		});
+	});
+	
+	//]]></script>
+	<script type="text/javascript">//<![CDATA[
+
+	window.addEvent('domready', function() {
+		jQuery('#commentGuidelinesLink').click(function() {
+			jQuery('#commentGuidelines').toggle('slow');
+		});
+		jQuery('#commentGuidelinesCloseLink').click(function() {
+			jQuery('#commentGuidelines').toggle('slow');
+		});
+	});
+	
+	//]]></script>
+	
+	<script>
+		window.google_analytics_uacct = "UA-1101388-67";
+		
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-1101388-67', 'charismanews.com');
+		ga('require', 'displayfeatures');
+		ga('send', 'pageview');
+	</script>
+
+</head>
+<script type="text/javascript">
+                            function addTag() {
+                                var tags = document.getElementById("tags");
+                                var tag_list = document.getElementById("tag_list");
+                                if (tags.value == "") {
+                                        tags.value = tag_list.options[tag_list.selectedIndex].value;
+                                } else if (tag_list.options[tag_list.selectedIndex].value == "--") {
+                                } else {
+                                    tags.value = tags.value + ", " + tag_list.options[tag_list.selectedIndex].value;
+                                }
+                            } 
+                            
+                               
+                            function addTags()
+                            {
+                                
+                                var tags = document.getElementById("tags");
+                                $$(".cktag").each(
+                                    function (el){
+                                       if (el.checked)
+                                       {
+                                            val = tags.value;
+                                            if (val.indexOf(el.value) == -1)
+                                                if (tags.value == "")
+                                                    tags.value = tags.value + el.value;
+                                                else
+                                                    tags.value = tags.value + ", " + el.value;
+                                       }
+                                })
+                                 $$("#all_tags").toggle();
+                                
+                            }
+                            
+                            function showTagDiv(){
+                                var tags = document.getElementById("tags").value;
+                                arr = tags.split(",");
+                                
+
+                                $$(".cktag").each(
+                                    function (el){
+                                        for(i=0;i<arr.length;i++)
+                                        {
+                                            if (arr[i].trim() == el.value)
+                                            {
+                                                el.checked = true;
+                                                break;
+                                             }
+                                         }
+                                })
+                                
+                                $$("#all_tags").toggle();
+                                        
+                            }
+
+                            
+                                
+                        </script><body class="M_102 COMP_com_content VIEW_article itemId_46445">
+<div id="fb-root"></div>
+
+<div id="mainWrap">
+
+	<a id="toImageMapLeft" target="_blank" href="https://secure.strangmagazines.com/~strangma/charisma/2014/two_books/?utm_campaign=two%20books&utm_source=charismanews.com&utm_medium=takeover%20ad%20callouttopleft"></a>
+	<div id="headerAreaWrapTMP">
+	<div id="headerAreaWrap">
+
+		<header class="page">
+
+			<aside id="mobAppCallout">
+				<div class="closeBtn"></div>
+
+				<img class="msg" width="151" height="43" alt="Charisma News smartphone app" src='http://cdn.charismanews.com/images/assets/dlappcallout_icon-and-text.png' />
+
+				<a class="viewBtn" href="http://www.charismamobile.com/" target="_blank">view</a>
+			</aside>
+
+			<div class="navWrapper">
+<nav class="menu_mainmenu navbar">
+	<div class="navbar-header">
+		<ul class="primary">
+			<li><a href="/menu" title="open menu" id="mTB_menu" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" onclick="return false;"><span><label>Menu</label></span></a></li>
+			<li><a href="/search" title="search site" id="mTB_search" class="navbar-toggle" onclick="return false;"><span><label>Search</label></span></a></li>
+		</ul>
+		<ul class="secondary">
+			<li><a href="http://www.facebook.com/charismanews" title="visit our facebook page" id="mTB_facebook"><span><label>Facebook</label></span></a></li>
+			<li><a href="http://twitter.com/#!/charisma_news" title="visit our twitter page" id="mTB_twitter"><span><label>Twitter</label></span></a></li>
+		</ul>
+	</div>
+
+	<div class="mTB_mainMenu">
+		<ul class="clearfix menuList">
+			<li class="menuitem menuitem_0 "><a href="/" title="Home" target="_self" id="menuId_101">Home</a></li>
+<li class="menuitem menuitem_1 "><a href="/us" title="News, articles and videos from around our nation" target="_self" id="menuId_105">U.S.</a></li>
+<li class="menuitem menuitem_2 active "><a href="/world" title="News, articles and videos from around the world" target="_self" id="menuId_102">World</a></li>
+<li class="menuitem menuitem_3 "><a href="/politics" title="Reports on the American government" target="_self" id="menuId_106">Politics</a></li>
+<li class="menuitem menuitem_4 "><a href="/culture" title="Hottest topics in pop culture and media" target="_self" id="menuId_107">Culture</a></li>
+<li class="menuitem menuitem_5 "><a href="/marketplace" title="Stories about business and the workplace" target="_self" id="menuId_108">Marketplace</a></li>
+<li class="menuitem menuitem_6 hasSub "><a href="/opinion" title="Commentary and insight from respected Christian leaders" target="_self" id="menuId_109">Opinion</a><div class="submenu">
+<div class="submenuHeader">Featured Blogs</div>
+<ul class="submenuList">
+<li class="submenuitem "><a href="/opinion/american-dispatch" title="American Dispatch" target="" id="menuId_269">American Dispatch</a></li>
+<li class="submenuitem "><a href="/opinion/in-the-line-of-fire" title="In the Line of Fire" target="" id="menuId_230">In the Line of Fire</a></li>
+<li class="submenuitem "><a href="/opinion/standing-with-israel" title="Standing With Israel" target="" id="menuId_268">Standing With Israel</a></li>
+<li class="submenuitem "><a href="/opinion/from-the-frontlines" title="From the Frontlines" target="" id="menuId_231">From the Frontlines</a></li>
+<li class="submenuitem "><a href="/opinion/watchman-on-the-wall" title="Watchman on the Wall" target="" id="menuId_232">Watchman on the Wall</a></li>
+<li class="submenuitem "><a href="/opinion/heres-the-deal" title="Here&#39;s the Deal" target="" id="menuId_234">Here's the Deal</a></li>
+<li class="submenuitem "><a href="/opinion/the-flaming-herald" title="The Flaming Herald" target="" id="menuId_264">The Flaming Herald</a></li>
+<li class="submenuitem "><a href="/opinion/clarion-call" title="Clarion Call" target="" id="menuId_233">Clarion Call</a></li>
+<li class="submenuitem "><a href="/opinion/the-pulse" title="The Pulse" target="" id="menuId_267">The Pulse</a></li>
+</ul>
+</div>
+</li>
+<li class="menuitem menuitem_16 "><a href="http://www.charismamag.com/" title="Don&#39;t miss Charisma magazine in print and digital" target="_blank" id="menuId_111">Magazine</a></li>
+		</ul>
+	</div>
+
+	<div class="mTB_mobileMenu">
+		<ul class="menu">
+			<li>
+				<a href="http://www.charismamag.com/" class="menuItem">Home</a>
+			</li>
+			<li>
+				<a href="/us" class="menuItem">US</a>
+			</li>
+			<li>
+				<a href="/world" class="menuItem">World</a>
+			</li>
+			<li>
+				<a href="/world" class="menuItem">Politics</a>
+			</li>
+			<li>
+				<a href="/world" class="menuItem">Culture</a>
+			</li>
+			<li>
+				<a href="/world" class="menuItem">Marketplace</a>
+			</li>
+			<li class="hasSub">
+				<a href="/opinion" class="menuItem">Opinion</a><!--
+				--><a class="subMenuBtn fa-chevron-right"></a><!--
+				--><ul class="subMenu">
+					<li><a href="/opinion/in-the-line-of-fire">In the Line of Fire</a></li>
+					<li><a href="/opinion/from-the-frontlines">From the Frontlines</a></li>
+					<li><a href="/opinion/watchman-on-the-wall">Watchman on the Wall</a></li>
+					<li><a href="/opinion/clarion-call">Clarion Call</a></li>
+					<li><a href="/opinion/heres-the-deal">Here's the Deal</a></li>
+					<li><a href="/opinion/the-flaming-herald">The Flaming Herald</a></li>
+				</ul>		
+			</li>
+			<li>
+				<a href="http://www.charismamag.com/" class="menuItem">Magazine</a>
+			</li>
+			<li><a href="/search" title="search site" id="mTB_search2" class="menuItem" onclick="return false;"><i class="fa fa-search"></i> <span>Search</span></a></li>
+		</ul>
+	</div>
+
+	<div class="collapse mTB_search">
+		<form class="navbar-form navbar-left" role="search" method="post" action="index.php">
+			<div class="form-group">
+				<input type="text" name="searchword" class="form-control" placeholder="Search">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+			<input type="hidden" value="search" name="task">
+			<input type="hidden" value="com_search" name="option">
+			<input type="hidden" value="101" name="itemId">
+		</form>
+	</div>
+</nav>
+</div>
+			<h1 class="siteTitle"><a href="http://www.charismanews.com/" class="siteLogo" title="Charisma News - Informing believers with news from a Spirit-filled perspective">Charisma News</a></h1>
+
+			<aside class="connectBtns">
+				<ul class="connectBtnList clearfix">
+					<li>
+						<ul class="iconBoxWrapper">
+							<li><a href="http://www.facebook.com/charismanews" target="_blank" class="facebook" title="Click here to connect to our Facebook page"></a></li>
+							<li><a href="http://twitter.com/#!/charisma_news" target="_blank" class="twitter" title="Click here to connect to our Twitter page"></a></li>
+							<li><a href="https://plus.google.com/105961042212678270443/" target="_blank" class="googleplus" title="Click here to connect to our Google Plus page"></a></li>
+							<li><a href="http://charismanews.com/newsletters/?sc=chmNews_TopIcons&utm_medium=TopSocialIcons" target="_blank" class="newsletters" title="Click here subscribe to our e-Newsletters"></a></li>
+							<!--<li><a href="http://charismanews.com/index.php/?format=feed&type=rss" target="_blank" class="rss" title="Click here for our news RSS feed"></a></li>-->
+						</ul>
+					</li>
+					<li class="phoneApp"><a href="http://www.strangmail.com/scripts/track_redirect/?go=13567&sc=ChmAboveSearchPhoneApp" target="_blank" title="Click here to download the Charisma News smartphone App">Download our smartphone app</a></li>
+					<li class="ipad"><a href="http://www.charismamag.com/digital/subscribe/" target="_blank" title="Click here to see an issue of Charisma Digital">Check out our digital magazine</a></li>
+				</ul>
+			</aside>
+		</header>
+
+		<section id="breakingNewsWrap">
+			<aside class="newsArea">
+	<h1>Big News:</h1>
+	<ul>
+					<li><a href="http://charismanews.com/index.php/search/?searchword=Ebola&areas[0]=gitags">Ebola</a></li>
+					<li><a href="http://charismanews.com/index.php/search/?searchword=Same-Sex Marriage&areas[0]=gitags">Same-Sex Marriage</a></li>
+					<li><a href="http://charismanews.com/index.php/search/?searchword=Islamic State&areas[0]=gitags">Islamic State</a></li>
+					<li><a href="http://charismanews.com/index.php/search/?searchword=Entertainment&areas[0]=gitags">Entertainment</a></li>
+			</ul>
+</aside>
+
+			<form id="breakingNewsSearch" method="post" action="index.php">
+				<input type="text" name="searchword" placeholder="Search Charisma..." onfocus="if(this.value=='Search Charisma...') this.value='';" value="Search Charisma..." ><input type="image" src="http://cdn.charismanews.com/templates/charisma_news/images/search-btn_breaking-news.png" name="searchSubmit" value="search" width="64" height="20">
+				<input type="hidden" value="search" name="task">
+				<input type="hidden" value="com_search" name="option">
+				<input type="hidden" value="101" name="itemId">
+			</form>
+		</section>
+
+		<aside id="topLeaderboardAd">
+			<div id="OXAd254549">
+				<script type="text/javascript">
+				if (!window.OX_ads) { OX_ads = []; }
+				OX_ads.push({"slot_id":"OXAd254549","auid":"254549","vars":{"interests":"world","highPerformance":"true"}});
+				</script>
+				<noscript><iframe id="516eabf2a5337" name="516eabf2a5337" src="http://ox-d.charisma.net/w/1.0/afr?auid=254549&cb=" frameborder="0" scrolling="no" width="728" height="90"><a href="http://ox-d.charisma.net/w/1.0/rc?cs=516eabf2a5337&cb="><img src="http://ox-d.charisma.net/w/1.0/ai?auid=254549&cs=516eabf2a5337&cb=" border="0" alt=""></a></iframe></noscript>
+			</div>
+		</aside>
+
+		<aside id="topInhouseAd">
+			
+
+<div class="custom"  >
+	<p><a title="Subscribe to Charisma Magazine" href="https://secure.strangmagazines.com/~strangma/charisma/2014/print_2/?utm_campaign=12%20for%2015&amp;utm_source=charismanews.com&amp;utm_medium=top-right%20banner" target="_blank"><img alt="Charisma Magazine cover photo" src="http://www.charismamag.com/images/banners/2015/1/cm_top-right_2015-1.jpg" height="194" width="185" /></a></p></div>
+
+					</aside>
+
+		
+		<aside id="familySites">
+			<ul>
+				<li><a href="http://modernenglishversion.com/?utm_source=charismanews.com&utm_medium=text_topOfPage&utm_campaign=crosspromotions" target="_blank">MEV Bible</a></li>
+
+				<li><a href="http://charismamag.com/?utm_source=charismanews.com&utm_medium=text_topOfPage&utm_campaign=crosspromotions" target="_blank">CharismaMagazine</a></li>
+				<li><a href="http://charismanews.com/?utm_medium=text_topOfPage&utm_campaign=crosspromotions" target="_blank">CharismaNews</a></li>
+				<!--<li><a href="http://christianlifenews.com/?utm_source=charismanews.com&utm_medium=text_topOfPage&utm_campaign=crosspromotions" target="_blank">ChristianLifeNews</a></li>
+				<li><a href="http://christianlife.com/?utm_source=charismanews.com&utm_medium=text_topOfPage&utm_campaign=crosspromotions" target="_blank">ChristianLife</a></li>-->
+				<li><a href="http://charismamag.com/life/men/?utm_source=charismanews.com&utm_medium=text_topOfPage&utm_campaign=crosspromotions" target="_blank">NewMan</a></li>
+				<li><a href="http://charismamag.com/life/women/?utm_source=charismanews.com&utm_medium=text_topOfPage&utm_campaign=crosspromotions" target="_blank">SpiritLedWoman</a></li>
+				<li><a href="http://ministrytodaymag.com/?utm_source=charismanews.com&utm_medium=text_topOfPage&utm_campaign=crosspromotions" target="_blank">MinistryToday</a></li>
+			</ul>
+		</aside>
+
+	</div>
+	</div>
+
+	
+		<aside id="mobileInsideAd">
+			<div id="OXAd536880603">
+				<script type="text/javascript">
+				if (!window.OX_ads) { OX_ads = []; }
+				OX_ads.push({"slot_id":"OXAd536880603","auid":"536880603","vars":{"interests":"world"}});
+				</script>
+				<noscript><iframe id="2138b9b3e1" name="2138b9b3e1" src="http://ox-d.charisma.net/w/1.0/afr?auid=536880603&cb=" frameborder="0" scrolling="no" width="320" height="50"><a href="http://ox-d.charisma.net/w/1.0/rc?cs=2138b9b3e1&cb=" ><img src="http://ox-d.charisma.net/w/1.0/ai?auid=536880603&cs=2138b9b3e1&cb=" border="0" alt=""></a></iframe></noscript>
+			</div>
+		</aside>
+		
+				
+		<div class="contentAreaWrap">
+			<section id="contentWrap-fr">
+				<div id="breadcrumbsWrap" class="roundable">
+					<aside class="fontAdjuster">
+	<span class="markers"></span>
+	<span class="btn decrease"><i class="fa fa-font">-</i></span>
+	<span class="btn increase"><i class="fa fa-font">+</i></span>
+</aside>
+
+<div class="breadcrumbs">
+<span class="showHere">You are here: </span><a href="/world" class="pathway">World</a> <img src="http://cdn.charismanews.com/media/system/images/arrow.png" alt=""  /> <span>Testing of Ebola Vaccine Suspended</span></div>
+
+				</div>
+		
+									<div id="returnLinkWrap" class="roundable">
+						<a href="/world">&uArr; back to "<span class="parentName">World</span>"</a>
+					</div>
+				
+				
+				<section class="item-page">
+
+	
+
+	<div class="articleHeaderWrap">
+
+		<aside class="afterArtTitleIcons">
+										<ul class="actions">
+															<li class="print-icon">
+						<a href="/world/46445-testing-of-ebola-vaccine-suspended?tmpl=component&amp;print=1&amp;layout=default&amp;page=" title="Print" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=yes,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow"><img src="http://cdn.charismanews.com/media/system/images/printButton.png" alt="Print"  /></a>						</li>
+								
+										
+										
+								
+				</ul>
+								</aside>
+
+					<h1>
+							Testing of Ebola Vaccine Suspended						</h1>
+		
+		<aside class="article-info">
+										<span class="published"><time>
+					7:00PM EST 12/12/2014				</time></span>
+										<span class="createdby"> 
+					<a href="/component/search/?searchword=Lorie%20Johnson%20/%20CBN%20News&amp;ordering=newest&amp;searchphrase=exact&amp;areas[0]=authors" >Lorie Johnson / CBN News</a>				</span>
+					</aside>
+
+	</div>
+
+	<aside class="dggsharethiscustom above">
+	<div class="likePlus">
+		<div class="fb_like">
+			<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended&amp;width=100&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21&amp;appId=105500956214009" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+		</div>
+		<div class="g_plus">
+			<div class="g-plusone" data-size="medium"></div>
+		</div>
+	</div>
+	<div class="counter">
+		<span class="value">-</span>
+		<span class="unit">Shares</span>
+	</div>
+	<div class="shareBtns">
+		<ul><!--
+			--><li><a
+				class="btn btn-share facebook_button st_facebook_custom"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Share</span></a></li><!--
+			--><li><a
+				class="btn btn-share twitter_button st_twitter_custom"
+				st_via='charismamag'
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Tweet</span></a></li><!--
+			--><li><a
+				class="btn btn-share email_button st_email_custom"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Email</span></a></li><!--
+			--><li><a
+				class="btn btn-share more_button socialMediaMoreBtn"
+				target="_blank"
+				onclick="return false;"
+				><span class="textNode icon">More</span></a></li><br><!--
+			--><li class="canHide hidden"><a
+				class="btn btn-share st_googleplus_custom google_button"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Google+</span></a></li><!--
+			--><li class="canHide hidden"><a
+				class="btn btn-share st_pinterest_custom pinterest_button"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Pinterest</span></a></li><!--
+			--><li class="canHide hidden"><a
+				class="btn btn-share reddit_button st_reddit_custom"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Reddit</span></a></li><!--
+			--><li class="canHide hidden"><a
+				class="btn btn-share stumbleupon_button st_stumbleupon_custom"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Stumbleupon</span></a></li><!--
+			--><li class="canHide hidden desktopMarginBuffer"><a
+				class="btn btn-share other_button st_sharethis_custom"
+				target="_blank"><span class="textNode icon">All Other Social Networks</span></a></li><!--
+		--></ul>
+	</div>
+</aside>
+	<article class="mainContent">
+							<figure class="leadFigure ">
+	<img src="http://cdn.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg" alt="ebola health worker" title="ebola health worker" >
+	<figcaption>A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.  (<span class="figCaptionSource">CBN News</span>)</figcaption>
+</figure>
+
+<!-- JoomlaWorks "DISQUS Comments for Joomla!" (v3.4) starts here -->
+
+<span id="startOfPage"></span>
+
+
+<p>Testing of an Ebola vaccine has been suspended until Jan. 5 after four patients given&nbsp;the drug in a&nbsp;trial complained of joint pain in their hands and feet.</p><p>A spokesperson close to the trials said checks are being conducted to make sure the symptoms are "benign and temporary."</p><p>Meanwhile, the delay is not worrying scientists, who say suspending trials is common in human drug testing.</p><p>"It's not a setback, not at all," Marie-Paule Kieny, vaccine expert at the World Health Organization, told reporters in Geneva.</p><p>She explained that the delay to the trial would allow time to see how widespread the problems are, but the trial should then be able to continue as originally planned.</p><p>Scientists are racing to approve a vaccine by June. A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&nbsp;</p><p>Aid efforts continue, but the lack of adequate education and medical facilities is making the Ebola outbreak nearly impossible to contain.&nbsp;&nbsp;</p><p>The symptoms reported by volunteers are from a study being conducted in Geneva of an Ebola vaccine licensed by the pharmaceutical company Merck.&nbsp;</p><p>"They are all fine and being monitored regularly by the medical team leading the study," a hospital spokesperson in Geneva said.</p><p>Meanwhile, another Ebola vaccine, developed by the pharmaceutical company GlaxoSmithKline is being tested on humans in Lausanne, Switzerland, and is progressing without major incident.&nbsp;</p><p>Professor Blaise Genton, who is leading the GSK trial of 120 volunteers in Lausanne, said the results so far are "satisfactory."</p><p>"General symptoms such as fever might be slightly more frequent," he commented, "though no serious adverse event has been observed so far."</p><p>The first results of the Lausanne hospital's trial of the GSK vaccine and whether it provides immunity against the virus are expected by the end of December.</p><p>Once an Ebola vaccine is approved for mass distribution it can be implemented. GAVI, the global vaccines alliance, pledged $300 million on Thursday to buy Ebola vaccines.</p> <aside class="dggsharethiscustom below">
+	<div class="likePlus">
+		<div class="fb_like">
+			<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended&amp;width=100&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21&amp;appId=105500956214009" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+		</div>
+		<div class="g_plus">
+			<div class="g-plusone" data-size="medium"></div>
+		</div>
+	</div>
+	<div class="counter">
+		<span class="value">-</span>
+		<span class="unit">Shares</span>
+	</div>
+	<div class="shareBtns">
+		<ul><!--
+			--><li><a
+				class="btn btn-share facebook_button st_facebook_custom"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Share</span></a></li><!--
+			--><li><a
+				class="btn btn-share twitter_button st_twitter_custom"
+				st_via='charismamag'
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Tweet</span></a></li><!--
+			--><li><a
+				class="btn btn-share email_button st_email_custom"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Email</span></a></li><!--
+			--><li><a
+				class="btn btn-share more_button socialMediaMoreBtn"
+				target="_blank"
+				onclick="return false;"
+				><span class="textNode icon">More</span></a></li><br><!--
+			--><li class="canHide hidden"><a
+				class="btn btn-share st_googleplus_custom google_button"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Google+</span></a></li><!--
+			--><li class="canHide hidden"><a
+				class="btn btn-share st_pinterest_custom pinterest_button"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Pinterest</span></a></li><!--
+			--><li class="canHide hidden"><a
+				class="btn btn-share reddit_button st_reddit_custom"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Reddit</span></a></li><!--
+			--><li class="canHide hidden"><a
+				class="btn btn-share stumbleupon_button st_stumbleupon_custom"
+				displayText=''
+				st_url='http%3A%2F%2Fwww.charismanews.com%2Fworld%2F46445-testing-of-ebola-vaccine-suspended'
+				st_title="Testing of Ebola Vaccine Suspended"
+				st_summary="A vaccine may be the only effective measure in controlling the Ebola outbreak in West Africa, which has claimed 6,000 lives so far.&#38;nbsp;"
+				st_image="http://www.charismanews.com/images/stories/2014/world/ebolahealthworker-cbn.jpg"
+				><span class="textNode icon">Stumbleupon</span></a></li><!--
+			--><li class="canHide hidden desktopMarginBuffer"><a
+				class="btn btn-share other_button st_sharethis_custom"
+				target="_blank"><span class="textNode icon">All Other Social Networks</span></a></li><!--
+		--></ul>
+	</div>
+</aside>
+<div id="dggsharethiscustom_sharecnt" style="display:none;">-</div><aside class="dggmagazinecallout">
+	<div>
+		<a href="https://secure.strangmagazines.com/~strangma/charisma/2014/print_2/?utm_campaign=End%20of%20article%20callout&utm_source=charismanews.com&utm_medium=Cover%20Magazine%20Callout&key_code=I5ATC2" target="_blank"><img src="http://www.discovercharismanow.com/images/current-issue-covers/4A_2015-01_130x171.jpg" alt="Charisma Magazine cover" /></a>
+		<div>
+			<h1>Charisma Magazine</h1>
+			<h2>January 2015</h2>
+			<ul><li><a href="https://secure.strangmagazines.com/~strangma/charisma/2014/print_2/?utm_campaign=End%20of%20article%20callout&utm_source=charismanews.com&utm_medium=Text%20Magazine%20Callout&key_code=I5ATC2" target="_blank">Subscribe</a></li><li><a href="https://secure.strangmagazines.com/~strangma/charisma/2014/print_2/?utm_campaign=End%20of%20article%20callout&utm_source=charismanews.com&utm_medium=Buy%20This%20Issue%20Text&key_code=I5ATC2" target="_blank">Buy This Issue</a></li><li><a href="http://strang.imirus.com/Mpowered/book/vcm14/i8/p1" target="_blank">Preview</a></li><li><a href="http://www.charismamag.com/magazine" target="_blank">Learn More</a></li>			</ul>
+		</div>
+	</div>
+</aside>
+<script>
+jQuery(".dggmagazinecallout a").click(function() {
+	var timestamp = Math.round((new Date().getTime())/1000);
+	var n = jQuery(this).text();
+	if(n=='')n='(issue cover)';
+	ga('send', 'event', 'End of article magazine callout', 'clicks', n, timestamp);
+	return true;
+});
+</script><aside class="plg_dggsendacorrection">
+	See an error in this article? <script type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy11993 = 'w&#101;bm&#97;st&#101;r' + '&#64;';
+ addy11993 = addy11993 + 'ch&#97;r&#105;sm&#97;m&#101;d&#105;&#97;' + '&#46;' + 'c&#111;m?s&#117;bj&#101;ct=W&#101;bs&#105;t&#101; c&#111;rr&#101;ct&#105;&#111;n f&#111;r http://www' + '&#46;' + 'ch&#97;r&#105;sm&#97;n&#101;ws' + '&#46;' + 'c&#111;m/w&#111;rld/46445-t&#101;st&#105;ng-&#111;f-&#101;b&#111;l&#97;-v&#97;cc&#105;n&#101;-s&#117;sp&#101;nd&#101;d';
+ var addy_text11993 = 'Send us a correction';
+ document.write('<a ' + path + '\'' + prefix + ':' + addy11993 + '\'>');
+ document.write(addy_text11993);
+ document.write('<\/a>');
+ //-->\n </script><script type='text/javascript'>
+ <!--
+ document.write('<span style=\'display: none;\'>');
+ //-->
+ </script>This email address is being protected from spambots. You need JavaScript enabled to view it.
+ <script type='text/javascript'>
+ <!--
+ document.write('</');
+ document.write('span>');
+ //-->
+ </script>
+</aside><aside class="gitags">Related topics: <a href="/component/search/?searchword=Africa&amp;areas[0]=gitags" >Africa</a> | <a href="/component/search/?searchword=disease&amp;areas[0]=gitags" >disease</a> | <a href="/component/search/?searchword=Ebola&amp;areas[0]=gitags" >Ebola</a></aside>
+<div id="adBladeDeskArt"><script>
+<!--
+var adBladeUnits = adBladeUnits || [];
+adBladeUnits.push({
+	"layout" : "desktop",
+	"placeholder" : "#adBladeDeskArt",
+	"cid" : "4554-2453535461",
+	"ad_width" : "600",
+	"ad_height" : "640",
+	"ad_host" : "web.adblade.com",
+	"tag_type" : "1",
+});
+-->
+</script></div>
+
+<div id="adblade" class="adBladeMobArt">
+
+	<div id="OXAd537180332">
+		<script type="text/javascript"><!--
+		if (!window.OX_ads) { OX_ads = []; }
+		OX_ads.push({"slot_id":"OXAd537180332","auid":"537180332","vars":{"interests":"world","highPerformance":"true"}});
+		--></script>
+		<noscript><iframe id="3cb1e59f66" name="3cb1e59f66" src="http://ox-d.charisma.net/w/1.0/afr?auid=537180332&cb=INSERT_RANDOM_NUMBER_HERE" frameborder="0" scrolling="no" width="300" height="250"><a href="http://ox-d.charisma.net/w/1.0/rc?cs=3cb1e59f66&cb=INSERT_RANDOM_NUMBER_HERE" ><img src="http://ox-d.charisma.net/w/1.0/ai?auid=537180332&cs=3cb1e59f66&cb=INSERT_RANDOM_NUMBER_HERE" border="0" alt=""></a></iframe></noscript>
+	</div>
+
+	<div id="OXAd537180362">
+		<script type="text/javascript"><!--
+		if (!window.OX_ads) { OX_ads = []; }
+		OX_ads.push({"slot_id":"OXAd537180362","auid":"537180362","vars":{"interests":"world"}});
+		--></script>
+		<noscript><iframe id="e555c85a58" name="e555c85a58" src="http://ox-d.charisma.net/w/1.0/afr?auid=537180362&cb=INSERT_RANDOM_NUMBER_HERE" frameborder="0" scrolling="no" width="300" height="250"><a href="http://ox-d.charisma.net/w/1.0/rc?cs=e555c85a58&cb=INSERT_RANDOM_NUMBER_HERE" ><img src="http://ox-d.charisma.net/w/1.0/ai?auid=537180362&cs=e555c85a58&cb=INSERT_RANDOM_NUMBER_HERE" border="0" alt=""></a></iframe></noscript>
+	</div>
+
+	<div id="OXAd537180363">
+		<script type="text/javascript"><!--
+		if (!window.OX_ads) { OX_ads = []; }
+		OX_ads.push({"slot_id":"OXAd537180363","auid":"537180363","vars":{"interests":"world"}});
+		--></script>
+		<noscript><iframe id="561c4646f2" name="561c4646f2" src="http://ox-d.charisma.net/w/1.0/afr?auid=537180363&cb=INSERT_RANDOM_NUMBER_HERE" frameborder="0" scrolling="no" width="728" height="90"><a href="http://ox-d.charisma.net/w/1.0/rc?cs=561c4646f2&cb=INSERT_RANDOM_NUMBER_HERE" ><img src="http://ox-d.charisma.net/w/1.0/ai?auid=537180363&cs=561c4646f2&cb=INSERT_RANDOM_NUMBER_HERE" border="0" alt=""></a></iframe></noscript>
+	</div>
+
+</div>
+<section class="articleCommentsWrap">
+
+	<header>
+		<h1>Your Turn</h1>
+		<a class="noHrefLink" id="commentGuidelinesLink">Comment Guidelines</a>
+	</header>
+
+	<div id="commentGuidelines" style="display:none;">
+		<p>Please follow these guidelines before commenting on our website:</p>
+		<ul>
+			<li>Please be considerate and respectful of your fellow posters. If Jesus and your mother would not approve of your writing, you should revise your comment before submitting.</li>
+			<li>Use standard writing style and punctuation. Complete sentences and proper grammar will help others understand you.</li>
+			<li>Do not use profanity, obscenities, abusive language or otherwise objectionable content (as determined by Charisma Media moderators, in their sole discretion). Comments should not harass, abuse or threaten another's personal safety or property, make false statements, defame or impersonate someone else.</li>
+			<li>Do not question others' faith just because you disagree with them. It adds nothing to the discussion and only causes strife.</li>
+			<li>Do not question why someone comes to this website just because they disagree with you or the content of the article.</li>
+			<li>Do not post personal information including phone numbers, email or mailing addresses, or credit card information belonging to you or others.</li>
+			<li>Do not include copyrighted content or other intellectual property that you do not own or have the explicit rights or lisenses to distribute.</li>
+			<li>Do not post, directly or through links, viruses, misleading, malicious or off-topic content.</li>
+		</ul>
+		<p>Please consider the following statements pertaining to comments posted by you and other visitors to our website:</p>
+		<ul>
+			<li>Appearance of comments, advertisements or hyperlinks made by other commenters on this site do not necessarily indicate or constitute acceptance of or endorsement of the products, companies, corporations, ministries, organizations or agencies in whole or in part by staff members and/or the members of the editorial board of Charisma Media.</li>
+			<li>Comments are not pre-screened before they post. Charisma Media reserves the right to modify or remove any comment that does not comply with the above guidelines and to deny access of your Disqus account to make additional comments to the website without any notice. If you have been denied access to comment due to a violation of these terms please do not create multiple accounts in an attempt to circumvent the system. The correct course of action is to request a review of your account status by contacting <a href="mailto:webmaster@charismamedia.com">webmaster@charismamedia.com</a>.</li>
+			<li>Charisma Media is not responsible or liable in any way for comments posted by its users.</li>
+			<li>If you believe a comment is in violation of the above guidelines, U.S. law or International treaties, or is legitimate "trolling" please flag the post or contact <a href="mailto:webmaster@charismamedia.com">webmaster@charismamedia.com</a>. Include a link to the comment, along with a statement explaining what you believe the violation is and any evidence backing your claim. Charisma Media moderators will consider your request and decide on the most appropriate action.</li>
+		</ul>
+		<a class="noHrefLink" id="commentGuidelinesCloseLink">close</a>
+	</div>
+
+	<a id="comments" name="comments"></a>
+
+	
+	<div id="showCommentsBtn">View/Add Comments</div>
+
+	<!-- DISQUS comments block -->
+	<div class="jwDisqusForm">
+		
+			<div id="disqus_thread"></div>
+			<script type="text/javascript">
+				//<![CDATA[
+				var disqus_shortname = 'charismanews';
+				var disqus_url = 'http://www.charismanews.com/world/46445-testing-of-ebola-vaccine-suspended';
+				var disqus_identifier = '8ebe1c7940_id46445';
+				var disqus_developer = '0';
+				var disqus_config = function(){
+					this.language = '';
+
+					this.callbacks.onNewComment = [function(comment) {
+						var timestamp = Math.round((new Date().getTime())/1000);
+						ga('send', 'event', 'Disqus', 'submits', 'New comment', 1);
+					}];
+
+				};
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+				//]]>
+			</script>
+			<noscript>
+				<a href="http://charismanews.disqus.com/?url=ref">View the discussion thread.</a>
+			</noscript>
+					<script>
+			// comment
+			if(window.location.hash.substr(1,7)==='comment') {
+				jQuery('#showCommentsBtn').hide();
+			} else {
+				jQuery('#disqus_thread').hide();
+				jQuery('#showCommentsBtn').click(function() {
+					jQuery('#disqus_thread').show();
+					jQuery(this).hide();
+				});
+			}
+		</script>
+	</div>
+	
+	<div class="clr"></div>
+
+</section>
+
+<!-- JoomlaWorks "DISQUS Comments for Joomla!" (v3.4) ends here -->
+			
+						
+						</article>
+
+	
+</section>
+
+
+				<section class="moduletableSimple mobile">
+		<div class="moduleContent">
+		<ul class="mostread mobile MRExpanded" id="mostread_mobile_bottom">
+<li>
+	<a href="/opinion/in-the-line-of-fire/47995-some-honest-questions-for-joseph-prince" rel="internal" title="Joseph Prince">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Joseph-Prince-YouTube-Screengrab.jpg" alt="Joseph Prince" width="124px" height="68px" border="0">
+		<h4>Some Honest Questions for Joseph Prince</h4>
+	</a>
+	<p> Dr. Michael Brown is&nbsp;seeking honest responses from Pastor Prince and those who embrace the ...</p>
+</li><li>
+	<a href="https://secure.strangmagazines.com/~strangma/charisma/2014/two_books/?utm_source=charismanews.com&utm_medium=most%20popular%20banner" rel="internal" title="Get R.T. Kendall&#39;s New Book &#38;amp; Devotional" id="{item->boxId}">
+		<img src="http://cdn.charismamag.com/images/stories/2014/native_ad_assets/holySpirit_Nov_Version1_sm.jpg" alt="Get R.T. Kendall&#39;s New Book &#38;amp; Devotional" width="124px" height="68px" border="0">
+		<h4>Get R.T. Kendall's New Book &amp; Devotional</h4>
+	</a>
+	<p>Experience the Holy Spirit in a way that will change your life!</p>
+</li><li>
+	<a href="/opinion/watchman-on-the-wall/47998-newsboys-cofounder-denounces-christianity-i-m-now-an-atheist" rel="internal" title="George Perdikis was a founding member of the Christian rock band Newsboys.">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/George-Perdikis-Youtube-Screengrab.jpg" alt="George Perdikis was a founding member of the Christian rock band Newsboys." width="124px" height="68px" border="0">
+		<h4>Newsboys Co-founder Denounces Christianity: ‘I’m Now an Atheist’</h4>
+	</a>
+	<p> George Perdikis is the latest Christian rocker to publicly reject Christ. What&#39;s behind this ...</p>
+</li><li>
+	<a href="/opinion/48057-the-ugly-truth-about-fifty-shades-of-gray-movie" rel="internal" title="Dakota Johnson and Jamie Dornan in &#39;Fifty Shades of Grey.&#39;">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/50-shades-of-grey-movie-trailer-screengrab-universal.jpg" alt="Dakota Johnson and Jamie Dornan in &#39;Fifty Shades of Grey.&#39;" width="124px" height="68px" border="0">
+		<h4>The Ugly Truth About 'Fifty Shades of Grey' Movie</h4>
+	</a>
+	<p> The National Center on Sexual Exploitation is promoting the #FiftyShadesisAbuse and ...</p>
+</li><li>
+	<a href="/opinion/in-the-line-of-fire/48018-reflections-on-newsboys-georger-perdikis-and-the-apostasy-of-christian-believers" rel="internal" title="Newsboys">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Newsboys-Tour-Dates.jpg" alt="Newsboys" width="124px" height="68px" border="0">
+		<h4>Reflections on Newsboys' George Perdikis and the Apostasy of Christian Believers</h4>
+	</a>
+	<p>Dr. Michael Brown asks a pointed question: Why are so many backsliding?</p>
+</li><li>
+	<a href="/opinion/the-pulse/48035-10-sure-signs-you-have-a-religious-spirit" rel="internal" title="religious spirit">
+		<img src="http://ministrytodaymag.com/images/stories/2015/misc/Angry-Christian.jpg" alt="religious spirit" width="124px" height="68px" border="0">
+		<h4>10 Sure Signs You Have a Religious Spirit</h4>
+	</a>
+	<p>Joseph Mattera offers 10 earmarks of hypocrisy and a clear warning to readers.</p>
+</li><li>
+	<a href="/world/47980-japanese-christian-lays-down-life-for-friend-isis-captured" rel="internal" title="Kenji Goto, left, converted to Christianity in 1997.">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/ISIS-Japanese-Hostages.jpg" alt="Kenji Goto, left, converted to Christianity in 1997." width="124px" height="68px" border="0">
+		<h4>Japanese Christian Lays Down Life for Friend ISIS Captured</h4>
+	</a>
+	<p> Kenji Goto is one of the two men ISIS is holding for $200 million in ransom. Greater love has no ...</p>
+</li><li>
+	<a href="/opinion/clarion-call/48019-matt-barber-gay-marriage-is-satanic" rel="internal" title="Is gay marriage satanic?">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/same-sex-guys1.jpg" alt="Is gay marriage satanic?" width="124px" height="68px" border="0">
+		<h4>Matt Barber: Gay Marriage Is Satanic</h4>
+	</a>
+	<p> If God designed biblical marriage and natural human sexuality, and He did, then can we doubt who ...</p>
+</li><li>
+	<a href="/culture/48002-christian-moms-say-this-pop-tart-commercial-crosses-the-line" rel="internal" title="Pop Tart commercial featuring the new PB&#38;J Pop Tart">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Poptart-Peanut-Butter-and-jelly-baby-youtube-funny-commercials.jpg" alt="Pop Tart commercial featuring the new PB&#38;J Pop Tart." width="124px" height="68px" border="0">
+		<h4>Christian Moms Say This Pop Tart Commercial Crosses the Line</h4>
+	</a>
+	<p>Have you seen Kellogg&#39;s new Pop Tart commercial? If so, you can&#39;t miss the double entendre.</p>
+</li></ul>
+<script>
+jQuery("#mostread_mobile_bottom a").click(function() {
+	ga('send', 'event', '"Most Popular" module', 'clicks', 'Mobile (bottom)');
+	return true;
+});
+
+jQuery("#custBox_aHR0cHM6Ly").click(function() {
+	ga('send', 'event', '"Most Popular" module', 'clicks', 'Mobile (bottom) - https://secure.strangmagazines.com/~strangma/charisma/2014/two_books/?utm_source=charismanews.com&utm_medium=most%20popular%20banner');
+	return true;
+});
+		
+</script>
+	</div>
+</section>
+		<section class="moduletableSimple">
+		<div class="moduleContent">
+		<ul class="mostread MRExpanded" id="mostread_article_bottom">
+<li>
+	<a href="/culture/48075-katy-perry-s-preacher-dad-has-plenty-to-say-about-pop-star-s-superbowl-performance" rel="internal" title="Katy Perry with her parents, Mary and Keith Hudson. Perry will be performing at the Super Bowl XLIX halftime show.">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Katy-Perry-With-Parents-Mary-and-Keith-Hudson-YouTube-Dish-Nation.jpg" alt="Katy Perry with her parents, Mary and Keith Hudson. Perry will be performing at the Super Bowl XLIX halftime show." width="124px" height="68px" border="0">
+		<h4>Katy Perry's Preacher Dad Has Plenty to Say About Pop Star's Superbowl Performance</h4>
+	</a>
+	<p> Keith Hudson has attended&nbsp;Perry&#39;s megaconcerts before, though he was disturbed by what he ...</p>
+</li><li>
+	<a href="https://secure.strangmagazines.com/~strangma/charisma/2014/two_books/?utm_source=charismanews.com&utm_medium=most%20popular%20banner" rel="internal" title="Get R.T. Kendall&#39;s New Book &#38;amp; Devotional" id="{item->boxId}">
+		<img src="http://cdn.charismamag.com/images/stories/2014/native_ad_assets/holySpirit_Nov_Version1_sm.jpg" alt="Get R.T. Kendall&#39;s New Book &#38;amp; Devotional" width="124px" height="68px" border="0">
+		<h4>Get R.T. Kendall's New Book &amp; Devotional</h4>
+	</a>
+	<p>Experience the Holy Spirit in a way that will change your life!</p>
+</li><li>
+	<a href="/us/48049-obama-addresses-those-who-question-his-faith-in-christ" rel="internal" title="First lady Michelle Obama, U.S. President Barack Obama and Indian Prime Minister Narendra Modi">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Reuters-Obama-and-Modi-by-Jim-Bourg.JPG" alt="First lady Michelle Obama, U.S. President Barack Obama and Indian Prime Minister Narendra Modi." width="124px" height="68px" border="0">
+		<h4>Obama Addresses Those Who Question His Faith in Christ</h4>
+	</a>
+	<p> By his response, it&#39;s clear that the president doesn&#39;t understand that Jesus is the only ...</p>
+</li><li>
+	<a href="/opinion/watchman-on-the-wall/48076-prophetic-word-sparks-purity-and-power-revival-in-virginia" rel="internal" title="Impact International Ministries is launching Awaken21, a power and purity revival.">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Impact-International-Ministries-awaken21-Facebook.jpg" alt="Impact International Ministries is launching Awaken21, a power and purity revival." width="124px" height="68px" border="0">
+		<h4>Prophetic Word Sparks Purity and Power Revival in Virginia</h4>
+	</a>
+	<p>&#34;Young people have been flooding the altar crying out for more and being set free.&#34;</p>
+</li><li>
+	<a href="/us/48067-fearing-apocalypse-parents-kill-children-and-commit-suicide" rel="internal" title="The Strack family">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Strack-family-Facebook.jpg" alt="The Strack family" width="124px" height="68px" border="0">
+		<h4>Fearing Apocalypse, Parents Kill Children and Commit Suicide</h4>
+	</a>
+	<p> &#34;It was a fairly common theme for the parents to talk about, the apocalypse, the end of days, ...</p>
+</li><li>
+	<a href="/opinion/48007-7-things-husbands-should-stop-doing" rel="internal" title="Honoring your wife">
+		<img src="http://www.charismamag.com/images/stories/2015/life/men/happy-senior-adult-couple.jpg" alt="Honoring your wife" width="124px" height="68px" border="0">
+		<h4>7 Things Husbands Should Stop Doing</h4>
+	</a>
+	<p>What are some other things you think husbands should stop doing?</p>
+</li><li>
+	<a href="/opinion/48008-the-call-to-kingly-intercession" rel="internal" title="man praying forcefully">
+		<img src="http://www.charismamag.com/images/archives/articles/Spirit/Prayer/1f-trimm-prayforcefully_istockphoto-juanmonino.jpg" alt="man praying forcefully" width="124px" height="68px" border="0">
+		<h4>The Call to Kingly Intercession</h4>
+	</a>
+	<p> Dutch Sheets says one of the things he hears the Lord saying is that&nbsp;in this new season, we ...</p>
+</li><li>
+	<a href="/world/47997-pentecostal-doctor-accused-of-casting-devil-out-of-patient" rel="internal" title="A doctor reportedly cast a demon out of his patient.">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/F-Dickerman.jpg" alt="A doctor reportedly cast a demon out of his patient." width="124px" height="68px" border="0">
+		<h4>Pentecostal Doctor Accused of Casting Devil Out of Patient</h4>
+	</a>
+	<p>This is one of the strangest attacks on Christianity you may see in a long while.</p>
+</li><li>
+	<a href="/us/47991-pastor-in-hot-water-for-his-take-on-ten-commandments" rel="internal" title="The Ten Commandments">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/10_commandments2.jpg" alt="The Ten Commandments" width="124px" height="68px" border="0">
+		<h4>Pastor in Hot Water for His Take on Ten Commandments</h4>
+	</a>
+	<p> Perry Noble is a Baptist favorite, but the president of the Southern Baptist Convention is not too ...</p>
+</li><li>
+	<a href="/us/47933-ihopkc-s-mike-bickle-calls-for-strong-intercession-over-franklin-graham" rel="internal" title="IHOPKC&#39;s Mike Bickle is calling for prayers for Franklin Graham.">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/prayer-intercession-creationswap.jpg" alt="IHOPKC&#39;s Mike Bickle is calling for prayers for Franklin Graham." width="124px" height="68px" border="0">
+		<h4>IHOPKC’s Mike Bickle Calls for Strong Intercession Over Franklin Graham</h4>
+	</a>
+	<p> &#34;He must be supported by much prayer at this time as he courageously speaks the truth in ...</p>
+</li><li>
+	<a href="/opinion/47922-why-evil-disproves-atheism" rel="internal" title="Demon witchcraft">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/witchcraft-demon.jpg" alt="Demon witchcraft" width="124px" height="68px" border="0">
+		<h4>Why Evil Disproves Atheism</h4>
+	</a>
+	<p> C.S. Lewis was once an atheist who thought evil disproved God. He later realized he was stealing ...</p>
+</li></ul>
+<script>
+jQuery("#mostread_article_bottom a").click(function() {
+	ga('send', 'event', '"Most Popular" module', 'clicks', 'Under Article (desktop)');
+	return true;
+});
+
+jQuery("#custBox_aHR0cHM6Ly").click(function() {
+	ga('send', 'event', '"Most Popular" module', 'clicks', 'Under Article (desktop) - https://secure.strangmagazines.com/~strangma/charisma/2014/two_books/?utm_source=charismanews.com&utm_medium=most%20popular%20banner');
+	return true;
+});
+		
+</script>
+	</div>
+</section>
+		
+			</section>
+		
+						<aside class="extrasWrap-fr">
+				<section class="moduletableRounded2-chromeless">
+	<div class="content">
+		<div class="t"></div>
+				<div class="moduleContent">
+			<div class="bannergroup-chromeless">
+
+	<div class="banneritem">
+										<div id="OXAd398684">
+	<script type="text/javascript">
+	if (!window.OX_ads) { OX_ads = []; }
+	OX_ads.push({"slot_id":"OXAd398684","auid":"398684","vars":{"interests":"world","highPerformance":"true"}});
+	</script>
+	<noscript><iframe id="81cf449ddc" name="81cf449ddc" src="http://ox-d.charisma.net/w/1.0/afr?auid=398684&cb=" frameborder="0" scrolling="no" width="300" height="250"><a href="http://ox-d.charisma.net/w/1.0/rc?cs=81cf449ddc&cb=" ><img src="http://ox-d.charisma.net/w/1.0/ai?auid=398684&cs=81cf449ddc&cb=" border="0" alt=""></a></iframe></noscript>
+</div>				<div class="clr"></div>
+		<div class="adMessage">advertisement</div>
+	</div>
+
+</div>
+		</div>
+	</div>
+	<div class="b"><div></div></div>
+</section>
+		<section class="moduletableRounded2">
+	<div class="content">
+		<div class="t"></div>
+				<div class="moduleContent">
+			<div id="nlWidgetMain">
+
+    <div id="nlWidgetClose">
+       <a href="#">
+           <h4 id="nlWidgetAttn">
+               <img id="nlWidgetMainImage" style="width: 100%;" src="http://cdn.charismanews.com/modules/mod_newsletter_widget/images/widgetHeadingMain.jpg" alt="FREE Christian Newsletters" />
+           </h4>
+       </a>
+    </div>
+
+    <div id="nlWidgetDoor">
+
+        <form id="newsletter_widget" method="post" action="" onsubmit="return false;">
+
+       <div class="letters">
+            <input name="910" value="910" type="checkbox" id="news_910" autocomplete="off" />
+            <label for="news_910"><b>Charisma Magazine Newsletter</b></label>
+            <p class="info">
+				<!--<img class="newFlag" width="45" height="16" alt="The following newsletter is new" src="http://www.strangmail.com/newsletters/signup/assets/new_flag.png">-->
+				Stay up-to-date with current issues, Christian teachings, entertainment news, videos &amp; more.
+			</p>
+        </div>
+
+        <div class="letters">
+            <input name="327" value="327" type="checkbox" id="news_327" autocomplete="off" />
+            <label for="news_327"><b>Charisma News Daily</b></label>
+            <p class="info">The latest breaking Christian news you need to know about as soon as it happens.</p>
+        </div>
+        
+		<!--
+        <div class="letters">
+            <input name="951" value="951" type="checkbox" id="news_951" autocomplete="off" />
+            <label for="news_951"><b>Watchman on the Wall</b></label>
+            <p class="info">Prophetic author Jennifer LeClaire sounds the alarm on key issues impacting the church & society. </p>
+        </div>
+		-->
+        
+        <div class="letters">
+            <input name="1001" value="1001" type="checkbox" id="news_1001" autocomplete="off" />
+            <label for="news_1001"><b>Charisma Digital Magazine</b></label>
+            <p class="info">Sign up to receive Charisma Digital Magazine FREE for a limited time.</p>
+        </div>
+		
+        <div class="letters">
+            <input name="321" value="321" type="checkbox" id="news_321" autocomplete="off" />
+            <label for="news_321"><b>Prophetic Insight</b></label>
+            <p class="info">Prophetic messages from respected leaders &  news of how God is moving throughout the world.</p>
+        </div>
+        
+		<!--
+        <div class="letters">
+            <input name="4" value="4" type="checkbox" id="news_4" autocomplete="off" />
+            <label for="news_4"><b>Fire In My Bones</b></label>
+            <p class="info">J. Lee Grady, brings the hard-hitting commentary about today's issues that need to be addressed. </p>
+        </div>
+		-->
+
+        <div class="letters">
+            <input name="5" value="5" type="checkbox" id="news_5" autocomplete="off" />
+            <label for="news_5"><b>Power Up! For Women</b></label>
+            <p class="info">Empowering teaching &amp; encouragement for women.</p>
+        </div>
+
+        <a class="ex" href="http://charismamag.com/newsletters/?sc=newsletter_widget&utm_medium=TopSocialIcons" target="_blank"><i class="icon-chevron"></i>More Newsletters</a>
+
+        <div id="nlWidgetErrors"></div>
+    
+        <img id="nlWidgetLoader" src="http://cdn.charismanews.com/modules/mod_newsletter_widget/images/ajax-loader_b.gif" alt="FREE Christian Newsletters" />
+
+        <div id="nlWidgetSubmit">
+            <input type="text" name="email" placeholder="E-mail" />
+			<button style="width:30%; height:28px; background:#b00; color:#fff; text-align:center; border:0; border-radius:3px; text-transform:uppercase; font-size:13px; vertical-align:middle;">Sign Up</button>
+            <input type="hidden" name="signup" value="1" />
+        </div>
+
+        </form>
+
+        <p class="copy">To receive email newsletters, updates, and special offers from Charisma, select your newsletters, enter your first and last name and email address, and click "Sign Up."</p>
+        <a class="priv" href="http://www.charismamag.com/about/privacy-policy" target="_blank">Privacy/Terms of Use</a>
+
+    </div>
+</div>
+<script type="text/javascript">
+// Newsletter Widget
+jQuery("#nlWidgetMain").show();jQuery("#nlWidgetClose").click(function(){jQuery("#nlWidgetDoor").toggle(200,function(){var e=jQuery("#nlWidgetAttn").children("img");if(e.attr("id")!=="newImage"){e.attr("src","/modules/mod_newsletter_widget/images/widgetHeadingClosed.jpg");e.attr("id","newImage");jQuery("#nlWidgetClose").css("height","80px")}else{e.attr("src","/modules/mod_newsletter_widget/images/widgetHeadingMain.jpg");e.attr("id","nlWidgetMainImage");e.show();jQuery("#nlWidgetClose").removeAttr("style");jQuery("#nlWidgetClose").css("height","108px")}});return false});jQuery("#newsletter_widget").submit(function(){form_info=jQuery(this).serializeArray();jQuery("#nlWidgetLoader").show();if(typeof ga=="function"){ga("send","pageview",{page:"/newsletters/",campaignSource:"charismanews.com",campaignMedium:"NewsletterWidget_RightCol"})}jQuery.ajax({url:"http://"+window.location.hostname+"/modules/mod_newsletter_widget/process.php?sc=newsletter_widget&ajax=1",type:"POST",data:form_info}).done(function(e){e=jQuery.parseJSON(e);if(e.success==true){jQuery("#nlWidgetLoader").hide();jQuery("#nlwidgeterrors").hide();jQuery("#nlWidgetDoor").fadeOut();jQuery("#nlWidgetClose").css("height","80px");jQuery("#nlWidgetAttn").children("img").attr("src","/modules/mod_newsletter_widget/images/widgetThankYou.jpg");if(typeof ga=="function"){ga("send","pageview",{page:"/newsletters/register/success",campaignSource:"charismanews.com",campaignMedium:"NewsletterWidget_RightCol"})}}else{jQuery("#nlWidgetLoader").hide();errorMsg="";if(e.errors.length==0){errorMsg="unknown error occurred."}else{errorMsg="Error:<br>\n";for(var t=0;t<e.errors.length;t++){errorMsg+=e.errors[t]+"<br>\n"}}jQuery("#nlWidgetErrors").html(errorMsg);jQuery("#nlWidgetErrors").show()}});return false})
+</script>
+		</div>
+	</div>
+	<div class="b"><div></div></div>
+</section>
+		<section class="moduletableRounded2-chromeless">
+	<div class="content">
+		<div class="t"></div>
+				<div class="moduleContent">
+			<ul class="mostread-chromeless MRExpanded" id="mostread_rightCol_top">
+<li>
+	<a href="/opinion/in-the-line-of-fire/47995-some-honest-questions-for-joseph-prince" rel="internal" title="Joseph Prince">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Joseph-Prince-YouTube-Screengrab.jpg" alt="Joseph Prince" width="124px" height="68px" border="0">
+		<h4>Some Honest Questions for Joseph Prince</h4>
+	</a>
+	<p> Dr. Michael Brown is&nbsp;seeking honest responses from Pastor Prince and ...</p>
+</li><li>
+	<a href="https://secure.strangmagazines.com/~strangma/charisma/2014/two_books/?utm_source=charismanews.com&utm_medium=most%20popular%20banner" rel="internal" title="Get R.T. Kendall&#39;s New Book &#38;amp; Devotional" id="{item->boxId}">
+		<img src="http://cdn.charismamag.com/images/stories/2014/native_ad_assets/holySpirit_Nov_Version1_sm.jpg" alt="Get R.T. Kendall&#39;s New Book &#38;amp; Devotional" width="124px" height="68px" border="0">
+		<h4>Get R.T. Kendall's New Book &amp; Devotional</h4>
+	</a>
+	<p>Experience the Holy Spirit in a way that will change your life!</p>
+</li><li>
+	<a href="/opinion/watchman-on-the-wall/47998-newsboys-cofounder-denounces-christianity-i-m-now-an-atheist" rel="internal" title="George Perdikis was a founding member of the Christian rock band Newsboys.">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/George-Perdikis-Youtube-Screengrab.jpg" alt="George Perdikis was a founding member of the Christian rock band Newsboys." width="124px" height="68px" border="0">
+		<h4>Newsboys Co-founder Denounces Christianity: ‘I’m Now an Atheist’</h4>
+	</a>
+	<p> George Perdikis is the latest Christian rocker to publicly reject Christ. ...</p>
+</li><li>
+	<a href="/opinion/48057-the-ugly-truth-about-fifty-shades-of-gray-movie" rel="internal" title="Dakota Johnson and Jamie Dornan in &#39;Fifty Shades of Grey.&#39;">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/50-shades-of-grey-movie-trailer-screengrab-universal.jpg" alt="Dakota Johnson and Jamie Dornan in &#39;Fifty Shades of Grey.&#39;" width="124px" height="68px" border="0">
+		<h4>The Ugly Truth About 'Fifty Shades of Grey' Movie</h4>
+	</a>
+	<p> The National Center on Sexual Exploitation is promoting the ...</p>
+</li><li>
+	<a href="/opinion/in-the-line-of-fire/48018-reflections-on-newsboys-georger-perdikis-and-the-apostasy-of-christian-believers" rel="internal" title="Newsboys">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Newsboys-Tour-Dates.jpg" alt="Newsboys" width="124px" height="68px" border="0">
+		<h4>Reflections on Newsboys' George Perdikis and the Apostasy of Christian Believers</h4>
+	</a>
+	<p>Dr. Michael Brown asks a pointed question: Why are so many backsliding?</p>
+</li><li>
+	<a href="/opinion/the-pulse/48035-10-sure-signs-you-have-a-religious-spirit" rel="internal" title="religious spirit">
+		<img src="http://ministrytodaymag.com/images/stories/2015/misc/Angry-Christian.jpg" alt="religious spirit" width="124px" height="68px" border="0">
+		<h4>10 Sure Signs You Have a Religious Spirit</h4>
+	</a>
+	<p> Joseph Mattera offers 10 earmarks of hypocrisy and a clear warning to ...</p>
+</li><li>
+	<a href="/world/47980-japanese-christian-lays-down-life-for-friend-isis-captured" rel="internal" title="Kenji Goto, left, converted to Christianity in 1997.">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/ISIS-Japanese-Hostages.jpg" alt="Kenji Goto, left, converted to Christianity in 1997." width="124px" height="68px" border="0">
+		<h4>Japanese Christian Lays Down Life for Friend ISIS Captured</h4>
+	</a>
+	<p> Kenji Goto is one of the two men ISIS is holding for $200 million in ...</p>
+</li></ul>
+<script>
+jQuery("#mostread_rightCol_top a").click(function() {
+	ga('send', 'event', '"Most Popular" module', 'clicks', 'Right Column (top)');
+	return true;
+});
+
+jQuery("#custBox_aHR0cHM6Ly").click(function() {
+	ga('send', 'event', '"Most Popular" module', 'clicks', 'Right Column (top) - https://secure.strangmagazines.com/~strangma/charisma/2014/two_books/?utm_source=charismanews.com&utm_medium=most%20popular%20banner');
+	return true;
+});
+		
+</script>
+		</div>
+	</div>
+	<div class="b"><div></div></div>
+</section>
+		<section class="moduletableRounded2-chromeless">
+	<div class="content">
+		<div class="t"></div>
+				<div class="moduleContent">
+			
+
+<div class="custom-chromeless"  >
+	<div class="miniNewsletterSignupForm"><div class="description">Get <img title="Charisma News" alt="Charisma News logo" src="http://cdn.charismanews.com/images/assets/charisma-news-logo-2.png" height="10" width="107" /> in Your Inbox</div><form action="http://charismanews.com/newsletters/" enctype="multipart/form-data" method="get"><input class="miniNewsletterSignTextInput" type="text" placeholder="Enter email..." value="" name="email" /> <input class="miniNewsletterSignupSubmit" type="submit" value="SIGN UP" name="miniNewsletterSignup" /> <input type="hidden" value="chmNewsCom_miniNewsletterSignupForm" name="sc" /> <input type="hidden" value="327" name="lists[]" /> <input type="hidden" value="RightCol_MiniCnoForm" name="utm_medium" /></form></div></div>
+		</div>
+	</div>
+	<div class="b"><div></div></div>
+</section>
+		<section class="moduletableRounded2-chromeless">
+	<div class="content">
+		<div class="t"></div>
+				<div class="moduleContent">
+			
+
+<div class="custom-chromeless"  >
+	<div id="adBladeDeskRCol2"><script>
+<!--
+var adBladeUnits = adBladeUnits || [];
+adBladeUnits.push({
+	"layout" : "desktop",
+	"placeholder" : "#adBladeDeskRCol2",
+	"cid" : "7400-3525968501",
+	"ad_width" : "312",
+	"ad_height" : "900",
+	"ad_host" : "web.adblade.com",
+	"tag_type" : "1",
+});
+-->
+</script></div></div>
+		</div>
+	</div>
+	<div class="b"><div></div></div>
+</section>
+		<section class="moduletableRounded2-chromeless">
+	<div class="content">
+		<div class="t"></div>
+				<div class="moduleContent">
+			<div class="bannergroup-chromeless">
+
+	<div class="banneritem">
+										<div id="OXAd537076469">
+	<script type="text/javascript">
+	if (!window.OX_ads) { OX_ads = []; }
+	OX_ads.push({"slot_id":"OXAd537076469","auid":"537076469","vars":{"interests":"world"}});
+	</script>
+	<noscript><iframe id="2c68b5b532" name="2c68b5b532" src="http://ox-d.charisma.net/w/1.0/afr?auid=537076469&cb=" frameborder="0" scrolling="no" width="300" height="250"><a href="http://ox-d.charisma.net/w/1.0/rc?cs=2c68b5b532&cb=" ><img src="http://ox-d.charisma.net/w/1.0/ai?auid=537076469&cs=2c68b5b532&cb=" border="0" alt=""></a></iframe></noscript>
+</div>				<div class="clr"></div>
+		<div class="adMessage">advertisement</div>
+	</div>
+
+</div>
+		</div>
+	</div>
+	<div class="b"><div></div></div>
+</section>
+		<section class="moduletableRounded2-chromeless">
+	<div class="content">
+		<div class="t"></div>
+				<div class="moduleContent">
+			
+
+<div class="custom-chromeless"  >
+	<div class="miniNewsletterSignupForm"><div class="description">Get <img title="Charisma News" alt="Charisma News logo" src="http://cdn.charismanews.com/images/assets/charisma-news-logo-2.png" height="10" width="107" /> in Your Inbox</div><form action="http://charismanews.com/newsletters/" enctype="multipart/form-data" method="get"><input class="miniNewsletterSignTextInput" type="text" placeholder="Enter email..." value="" name="email" />
+<input class="miniNewsletterSignupSubmit" type="submit" value="SIGN UP" name="miniNewsletterSignup" />
+<input type="hidden" value="chmNewsCom_miniNewsletterSignupForm" name="sc" />
+<input type="hidden" value="327" name="lists[]" />
+<input type="hidden" value="RightCol_MiniCnoForm" name="utm_medium" />
+</form></div></div>
+		</div>
+	</div>
+	<div class="b"><div></div></div>
+</section>
+		<section class="moduletableRounded2-chromeless">
+	<div class="content">
+		<div class="t"></div>
+				<div class="moduleContent">
+			<ul class="mostread-chromeless MRExpanded" id="mostread_rightCol_bottom">
+<li>
+	<a href="/opinion/clarion-call/48019-matt-barber-gay-marriage-is-satanic" rel="internal" title="Is gay marriage satanic?">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/same-sex-guys1.jpg" alt="Is gay marriage satanic?" width="124px" height="68px" border="0">
+		<h4>Matt Barber: Gay Marriage Is Satanic</h4>
+	</a>
+	<p> If God designed biblical marriage and natural human sexuality, and He did, ...</p>
+</li><li>
+	<a href="/opinion/48042-watch-ancient-end-times-bible-prophecy-rapidly-unfolding" rel="internal" title="The Wailing Wall in Jerusalem">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Wailing-wall-israel.jpg" alt="The Wailing Wall in Jerusalem" width="124px" height="68px" border="0">
+		<h4>WATCH: Ancient End-Times Bible Prophecy Rapidly Unfolding</h4>
+	</a>
+	<p> As prophecy unfolds before our eyes, watch this video to understand how ...</p>
+</li><li>
+	<a href="/culture/48002-christian-moms-say-this-pop-tart-commercial-crosses-the-line" rel="internal" title="Pop Tart commercial featuring the new PB&#38;J Pop Tart">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Poptart-Peanut-Butter-and-jelly-baby-youtube-funny-commercials.jpg" alt="Pop Tart commercial featuring the new PB&#38;J Pop Tart." width="124px" height="68px" border="0">
+		<h4>Christian Moms Say This Pop Tart Commercial Crosses the Line</h4>
+	</a>
+	<p> Have you seen Kellogg&#39;s new Pop Tart commercial? If so, you can&#39;t ...</p>
+</li><li>
+	<a href="/opinion/the-flaming-herald/47982-why-some-churches-are-becoming-trophies-of-hell" rel="internal" title="Are our churches becoming Hell&#39;s trophies?">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Line-of-trophies-Flickr-Brad.K.jpg" alt="Are our churches becoming Hell&#39;s trophies?" width="124px" height="68px" border="0">
+		<h4>Why Some Churches Are Becoming Trophies of Hell</h4>
+	</a>
+	<p> The Bible is full of good news but it is also full of bad news and severe ...</p>
+</li><li>
+	<a href="/opinion/47981-ellen-degeneres-and-anderson-cooper-larry-tomczak-has-a-word-for-you" rel="internal" title="Larry Tomczak responds to Ellen DeGeneres over the &#39;gay agenda.&#39;">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Larry-Tomczak-Ellen-Degeneres-response-Youtube.jpg" alt="Larry Tomczak responds to Ellen DeGeneres over the &#39;gay agenda.&#39;" width="124px" height="68px" border="0">
+		<h4>Ellen Degeneres, Larry Tomczak Has a Word for You</h4>
+	</a>
+	<p> After getting called out in national media over his take on immoral ...</p>
+</li><li>
+	<a href="/world/47924-watch-thousands-of-middle-east-muslims-accepting-christ" rel="internal" title="Egyptian Christians">
+		<img src="http://cdn.charismanews.com/images/stories/2015/featured-news/Reuters-Egypt-Christians-mourn-funeral-photog-Mohamed-Abd-El-Ghany.jpg" alt="Egyptian Christians" width="124px" height="68px" border="0">
+		<h4>WATCH: Thousands of Middle East Muslims Accepting Christ </h4>
+	</a>
+	<p> Christianity is multiplying into the millions, despite persecution by ...</p>
+</li></ul>
+<script>
+jQuery("#mostread_rightCol_bottom a").click(function() {
+	ga('send', 'event', '"Most Popular" module', 'clicks', 'Right Column (bottom)');
+	return true;
+});
+
+
+</script>
+		</div>
+	</div>
+	<div class="b"><div></div></div>
+</section>
+		<section class="moduletableRounded2-chromeless">
+	<div class="content">
+		<div class="t"></div>
+				<div class="moduleContent">
+			<div class="bannergroup-chromeless">
+
+	<div class="banneritem">
+										<div id="OXAd537149908">
+	<script type="text/javascript">
+	if (!window.OX_ads) { OX_ads = []; }
+	OX_ads.push({"slot_id":"OXAd537149908","auid":"537149908","vars":{"interests":"world"}});
+	</script>
+	<noscript><iframe id="f0bc627f4b" name="f0bc627f4b" src="http://ox-d.charisma.net/w/1.0/afr?auid=537149908&cb=" frameborder="0" scrolling="no" width="300" height="250"><a href="http://ox-d.charisma.net/w/1.0/rc?cs=f0bc627f4b&cb=" ><img src="http://ox-d.charisma.net/w/1.0/ai?auid=537149908&cs=f0bc627f4b&cb=" border="0" alt=""></a></iframe></noscript>
+</div>				<div class="clr"></div>
+		<div class="adMessage">advertisement</div>
+	</div>
+
+</div>
+		</div>
+	</div>
+	<div class="b"><div></div></div>
+</section>
+		<section class="moduletableRounded2-chromeless">
+	<div class="content">
+		<div class="t"></div>
+				<div class="moduleContent">
+			<div class="bannergroup-chromeless">
+
+	<div class="banneritem">
+										<div id="OXAd537149909">
+	<script type="text/javascript">
+	if (!window.OX_ads) { OX_ads = []; }
+	OX_ads.push({"slot_id":"OXAd537149909","auid":"537149909","vars":{"interests":"world"}});
+	</script>
+	<noscript><iframe id="31a1d24c8d" name="31a1d24c8d" src="http://ox-d.charisma.net/w/1.0/afr?auid=537149909&cb=" frameborder="0" scrolling="no" width="300" height="250"><a href="http://ox-d.charisma.net/w/1.0/rc?cs=31a1d24c8d&cb=" ><img src="http://ox-d.charisma.net/w/1.0/ai?auid=537149909&cs=31a1d24c8d&cb=" border="0" alt=""></a></iframe></noscript>
+</div>				<div class="clr"></div>
+		<div class="adMessage">advertisement</div>
+	</div>
+
+</div>
+		</div>
+	</div>
+	<div class="b"><div></div></div>
+</section>
+		<section class="moduletableRounded2-chromeless">
+	<div class="content">
+		<div class="t"></div>
+				<div class="moduleContent">
+			
+
+<div class="custom-chromeless"  >
+	<div class="miniNewsletterSignupForm"><div class="description">Get <img title="Charisma News" alt="Charisma News logo" src="http://cdn.charismanews.com/images/assets/charisma-news-logo-2.png" height="10" width="107" /> in Your Inbox</div><form action="http://charismanews.com/newsletters/" enctype="multipart/form-data" method="get"><input class="miniNewsletterSignTextInput" type="text" placeholder="Enter email..." value="" name="email" />
+<input class="miniNewsletterSignupSubmit" type="submit" value="SIGN UP" name="miniNewsletterSignup" />
+<input type="hidden" value="chmNewsCom_miniNewsletterSignupForm" name="sc" />
+<input type="hidden" value="327" name="lists[]" />
+<input type="hidden" value="RightCol_MiniCnoForm" name="utm_medium" />
+</form></div></div>
+		</div>
+	</div>
+	<div class="b"><div></div></div>
+</section>
+		
+			</aside>
+					</div>
+
+		
+
+	<aside id="bottomLeaderboard">
+		<div id="OXAd537149956">
+			<script type="text/javascript">
+				if (!window.OX_ads) { OX_ads = []; }
+				OX_ads.push({"slot_id":"OXAd537149956","auid":"537149956","vars":{"interests":"world"}});
+			</script>
+			<noscript><iframe id="73b63935b2" name="73b63935b2" src="http://ox-d.charisma.net/w/1.0/afr?auid=537149956&cb=" frameborder="0" scrolling="no" width="728" height="90"><a href="http://ox-d.charisma.net/w/1.0/rc?cs=73b63935b2&cb=" ><img src="http://ox-d.charisma.net/w/1.0/ai?auid=537149956&cs=73b63935b2&cb=" border="0" alt=""></a></iframe></noscript>
+		</div>
+	</aside>
+
+	<footer class="tableLayout page">
+
+		<div class="cellLayout channels roundable">
+			<h2>Charisma Media is...</h2>
+			<ul>
+				<li class="chm"><a href="http://www.charismamag.com/?utm_source=charismanews.com&utm_medium=text_footer&utm_campaign=crosspromotions" target="_blank">Charisma Magazine</a></li>
+				<li class="chmnews"><a href="http://www.charismanews.com/">Charisma News</a></li>
+				<!--<li class="cln"><a href="http://christianlifenews.com/?utm_source=charismanews.com&utm_medium=text_footer&utm_campaign=crosspromotions" target="_blank">Christian Life News</a></li>-->
+				<li class="cl"><a href="http://christianlife.com/?utm_source=charismanews.com&utm_medium=text_footer&utm_campaign=crosspromotions" target="_blank">Christian Life</a></li>
+				<li class="mnt"><a href="http://www.ministrytodaymag.com/?utm_source=charismanews.com&utm_medium=text_footer&utm_campaign=crosspromotions" target="_blank">Ministry Today</a></li>
+				<li class="slw"><a href="http://spiritledwoman.charismamag.com/?utm_source=charismanews.com&utm_medium=text_footer&utm_campaign=crosspromotions" target="_blank">Spiritled Woman</a></li>
+				<li class="nm"><a href="http://newman.charismamag.com/?utm_source=charismanews.com&utm_medium=text_footer&utm_campaign=crosspromotions" target="_blank">New Man</a></li>
+				<li class="vc"><a href="http://www.vidacristiana.com/?utm_source=charismanews.com&utm_medium=text_footer&utm_campaign=crosspromotions" target="_blank">Vida Cristiana</a></li>
+			</ul>
+		</div>
+
+		<div class="cellLayout sitemap">
+			<h2 hidden>Site Map</h2>
+			<div class="tableLayout">
+				<div class="cellLayout roundable">
+					<h3>Sections</h3>
+					<ul>
+						<li><a href="http://www.charismanews.com/us">U.S.</a></li>
+						<li><a href="http://www.charismanews.com/world">World</a></li>
+						<li><a href="http://www.charismanews.com/politics">Politics</a></li>
+						<li><a href="http://www.charismanews.com/culture">Culture</a></li>
+						<li><a href="http://www.charismanews.com/marketplace">Marketplace</a></li>
+						<li><a href="http://www.charismanews.com/opinion">Opinion</a></li>
+						<li><a href="http://www.charismamag.com/">Charisma Magazine</a></li>
+					</ul>
+				</div>
+				<div class="cellLayout roundable">
+					<h3>About</h3>
+					<ul>
+						<li><a href="http://www.charismanews.com/about-charisma-media">About Charisma Media</a></li>
+						<li><a href="http://www.charismanews.com/about">About Charisma News</a></li>
+						<li><a href="http://www.charismanews.com/charisma-media-editors">Meet the Editors</a></li>
+						<li><a href="http://www.charismanews.com/writers-guidelines">Writers Guidelines</a></li>
+						<li><a href="http://www.charismanews.com/media-kit">Media Kit</a></li>
+						<li><a href="http://charismamag.com/index.php/privacy-policy">Privacy Policy</a></li>
+						<li><a href="http://charismamag.com/index.php/component/content/article/18295">Statement of Faith</a></li>
+					</ul>
+				</div>
+				<div class="cellLayout roundable">
+					<h3>Connect</h3>
+					<ul>
+						<li><a href="http://www.charismanews.com/contact-charisma-news">Contact Us</a></li>
+						<li><a href="http://marketplaceplus.charismamag.com/">Christian Marketplace</a></li>
+						<li><a href="http://www.charismaadvertising.com/">Advertise With Us</a></li>
+						<li><a href="http://www.charismanews.com/contact-charisma-news">Customer Service</a></li>
+						<li><a href="http://charismanews.com/newsletters/?sc=chmnews_site_footer&utm_medium=SiteFooter_Newsletters">Newsletters</a></li>
+						<li><a href="http://www.strangmail.com/scripts/track_redirect/?go=13567&sc=chmnews_site_footer">Charisma News Smartphone App</a></li>
+						<li><a href="http://charismanews.com/widgets/cno/help.php?utm_medium=SiteFooter">Website Widget</a></li>
+						<li><a href="http://www.charismamedia.com/index.php/careers" target="_blank" title="Come work for us!">Careers</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="cellLayout feedback roundable">
+			<h2 hidden>Feedback</h2>
+			<a href="http://getsatisfaction.com/strang" target="_blank" class="feedbackLink"><img src="http://cdn.charismanews.com/templates/charisma_news/images/blank.gif" data-src="http://getsatisfaction.com/images/badges/badge_get_help.png" alt="Need help with anything? Connect to Get Satisfaction." height="68" width="200"></a>
+			<br><br>
+			<a href="http://getsatisfaction.com/strang" target="_blank" style="white-space:nowrap">Click here to enter our<br>customer service community</a>
+		</div>
+
+	</footer>
+	
+	<div id="forceDesktop">Use Desktop Layout</div>
+	
+	<div id="siteFooterBar">Charisma News - Informing believers with news from a Spirit-filled perspective</div>
+	
+	<div class="copyright roundable">
+		<a href="http://charismanews.com/index.php/log-in?return=aHR0cDovL3d3dy5jaGFyaXNtYW5ld3MuY29tL3dvcmxkLzQ2NDQ1LXRlc3Rpbmctb2YtZWJvbGEtdmFjY2luZS1zdXNwZW5kZWQ=" id="loginEasterEgg"></a>
+		&copy; Copyright 2015 <a href="http://www.charismamedia.com" target="_blank">Charisma Media</a>, All Rights Reserved.
+	</div>
+	
+		
+	<aside id="mobileStickyAd">
+		<div id="OXAd536872105">
+			<script type="text/javascript">
+			if (!window.OX_ads) { OX_ads = []; }
+			OX_ads.push({"slot_id":"OXAd536872105","auid":"536872105","vars":{"interests":"world","highPerformance":"true"}});
+			</script>
+			<noscript><iframe id="d3c05d5ab7" name="d3c05d5ab7" src="http://ox-d.charisma.net/w/1.0/afr?auid=536872105&cb=" frameborder="0" scrolling="no" width="320" height="50"><a href="http://ox-d.charisma.net/w/1.0/rc?cs=d3c05d5ab7&cb="><img src="http://ox-d.charisma.net/w/1.0/ai?auid=536872105&cs=d3c05d5ab7&cb=" border="0" alt=""></a></iframe></noscript>
+		</div>
+	</aside>
+</div>
+
+<link href="https://plus.google.com/105961042212678270443/" rel="publisher" />
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+<script src="http://cdn.charismanews.com/widgets/cno/cno.v0.2.js" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+CNO_Widget_Config = {width:"300",height:"400",title:"1",title_logo:"1",description:"0",teaser:"1",max_chars:"200",date:"0",images:"1",image_size:"150",id:"chm_widgets_cno",max_items:"6"}
+// ]]></script>
+
+
+
+
+<section id="NLInlinePopup">
+	<a class="popBg"></a>
+	<div class="popContentOutter">
+		<div class="popContentInner">
+			<header>
+				<h1>Newsletters from <img width="169" height="27" alt="Charisma" src="http://cdn.charismanews.com/modules/mod_dggnewslettersignupoverlay/tmpl/logo_charisma_169x27.png"></h1>
+				<p>Stay in touch with the news, bloggers and articles that you enjoy.</p>
+			</header>
+			<article>
+				<form action="" method="post" enctype="text/plain" id="NLInlinePopupForm" onSubmit="return false;">
+					<input type="hidden" name="signup" value="1">
+					<ul class="choices"></ul>
+					<div class="EmailSubRow">
+						<label for="NLInlinePopupEmail">Enter your email:</label>
+						<div class="inputCol">
+							<input type="text" name="email" id="NLInlinePopupEmail" value="" placeholder="example@somewhere.com">
+							<p><a href="#" class="termsBtn" onclick="return false;">Terms</a>, <a href="http://www.charismamag.com/about/privacy-policy" target="_blank">Privacy Policy</a></p>
+						</div>
+						<button class="subcribe">Subscribe</button>
+					</div>
+				</form>
+								
+				<p class="allNlsMsg">Or <a href="http://www.charismanewsletters.com">view our complete list</a> of FREE newsletters and downloadable resources.</p>
+			</article>
+			<aside class="closeBtns">
+				<a href="#" class="noThanks" onClick="return false;">No Thanks</a>
+				<a href="#" class="remind" onClick="return false;">Remind Me Later</a>
+			</aside>
+			<aside class="submitOverlay">
+				<div class="loading"><i class="fa fa-spinner fa-spin"></i><br />just a moment...</div>
+				<div class="success">
+					<p class="sucHead">Almost there!</p>
+					<p class="sucMsg">We sent you an email to confirm your newsletter subscription. You'll not receive any newsletters until you complete this step.</p>
+					<p class="sucClose">Close this window</p>
+					<p class="sucMsg"><a href="http://www.charismanewsletters.com">view our complete list</a> of FREE newsletters and downloadable resources.</p>
+				</div>
+				<div class="error">
+					<p class="errHead">Oops</p>
+					<p class="errMsg"></p>
+					<p class="errClose">Close this error window</p>
+				</div>
+				<div class="terms">
+					<p class="termsHead">How we use your email</p>
+					<p class="termsMsg">Protecting your privacy is very important to us. We will not rent, sell, or trade your e-mail address to any person or entity for any purpose. However, by subscribing you agree to receive occasional special offers on behalf of our advertising partners (they will not have access to any of your personal information). You can opt out of these third-party marketing emails at any time without affecting your newsletter subscription.</p>
+					<p class="termsClose">Close this window</p>
+				</div>
+			</aside>
+		</div>
+	</div>
+</section>
+<script>
+window.NLIP_positions = [];
+window.NLIP_maxPositions = 4;
+
+window.NLIP_fixedNls = {327 : 0,321 : 2};
+window.NLIP_nlData = [{id : '327',title : 'Charisma News Daily',desc : 'A daily digest of the most popular news, opinions, and articles.',},{id : '910',title : 'Charisma Magazine Newsletter',desc : 'Top-trending articles, Christian teachings, blogs and more from your favorite magazine and website.',},{id : '998',title : 'Christian Life',desc : 'The funniest, heartwarming, and spiritual videos and images.',},{id : '949',title : 'In the Line of Fire',desc : 'Moral, cultural and spiritual insights from Dr. Michael Brown (radio host, professor and author)',},{id : '951',title : 'Watchman of the Wall',desc : 'Prophetic author Jennifer LeClaire sounds the alarm on key issues impacting the church and society.',},{id : '952',title : 'Clarion Call',desc : 'Get an insider\'s perspective from attorney Matt Barber, vice president of Liberty Counsel Action.',},{id : '950',title : 'From the Frontlines',desc : 'News and views from the Christian frontlines around the world from evangelist Steve Hill.',},{id : '957',title : 'Here\'s the Deal',desc : 'Biblical perspectives from Larry Tomczak, best-selling author and cultural commentator.',},{id : '271',title : 'Strang Report',desc : 'Receive personal insights from Charisma\'s founder and CEO, Steve Strang.',},{id : '4',title : 'Fire in My Bones',desc : 'J. Lee Grady brings the hard-hitting commentary about today\'s issues that need to be addressed.',},{id : '321',title : 'Prophetic Insight',desc : 'Receive prophetic messages from respected leaders in the body of Christ.',}];
+
+if(!window.cookiesEnabled){window.cookiesEnabled=function(){var e=navigator.cookieEnabled?true:false;if(typeof navigator.cookieEnabled=="undefined"&&!cookieEnabled){document.cookie="t";e=document.cookie.indexOf("t")!=-1?true:false}return e}()}jQuery(document).ready(function(){if(!jQuery.isEmptyObject(NLIP_nlData)){for(var e=0;e<NLIP_nlData.length;){var t=NLIP_nlData[e].id;if(NLIP_fixedNls.hasOwnProperty(t)){NLIP_positions[NLIP_fixedNls[t]]=NLIP_nlData[e];NLIP_nlData.splice(e,1);continue}e++}for(var n=0;n<NLIP_maxPositions;n++){if(NLIP_positions.hasOwnProperty(n)){continue}if(NLIP_nlData.length>0){var r=Math.floor(Math.random()*NLIP_nlData.length);if(typeof NLIP_nlData[r]=="object"){NLIP_positions[n]=NLIP_nlData[r];NLIP_nlData.splice(r,1)}}else{break}}for(var n=0;n<NLIP_maxPositions;n++){if(NLIP_positions.hasOwnProperty(n)){var t=NLIP_positions[n].id;var i=NLIP_positions[n].title;var s=NLIP_positions[n].desc;jQuery("#NLInlinePopup .choices").append('<li><input type="checkbox" name="'+t+'" id="nl_'+t+'" value="'+t+'"><label for="nl_'+t+'">'+i+'</label><p class="Desc">'+s+"</p></li>")}}jQuery("#NLInlinePopupForm").submit(function(){formData=jQuery(this).serializeArray();jQuery("#NLInlinePopup .submitOverlay > *").hide();jQuery("#NLInlinePopup .submitOverlay .loading").show();jQuery("#NLInlinePopup .submitOverlay").show();if(typeof ga=="function"){ga("send","pageview",{page:"/newsletters/",campaignSource:window.location.hostname,campaignMedium:"NewsletterOverlay"});var e=Math.round((new Date).getTime()/1e3);ga("send","event","newsletter signup","submits","newsletter-overlay-form",e)}jQuery.ajax({url:"http://"+window.location.hostname+"/modules/mod_dggnewslettersignupoverlay/process.php?sc=newsletter_overlay&ajax=1",type:"POST",data:formData}).done(function(e){e=jQuery.parseJSON(e);if(e.success==true){jQuery("#NLInlinePopup .submitOverlay .loading").hide();jQuery("#NLInlinePopup .submitOverlay .success").show();jQuery("#NLInlinePopup .sucClose").click(function(e){jQuery.cookie("NLInlinePopup","converted",{path:"/",expires:365});e.stopPropagation();jQuery("#NLInlinePopup").hide()});if(typeof ga=="function"){ga("send","pageview",{page:"/newsletters/register/success",campaignSource:window.location.hostname,campaignMedium:"NewsletterOverlay"});var t=Math.round((new Date).getTime()/1e3);ga("send","event","newsletter signup","converts","newsletter-overlay-form",t)}}else{errorMsg="";if(e.errors.length==0){errorMsg="unknown error occurred."}else{errorMsg="";for(var n=0;n<e.errors.length;n++){errorMsg+=e.errors[n]+"<br>\n"}}jQuery("#NLInlinePopup .submitOverlay .loading").hide();jQuery("#NLInlinePopup .submitOverlay .errMsg").html(errorMsg);jQuery("#NLInlinePopup .submitOverlay .error").show();jQuery("#NLInlinePopup .errClose").click(function(e){e.stopPropagation();jQuery("#NLInlinePopup .submitOverlay").hide()})}});return false});jQuery("#NLInlinePopup .termsBtn").click(function(e){e.stopPropagation();jQuery("#NLInlinePopup .submitOverlay > *").hide();jQuery("#NLInlinePopup .submitOverlay .terms").show();jQuery("#NLInlinePopup .submitOverlay").show();jQuery("#NLInlinePopup .termsClose").click(function(e){e.stopPropagation();jQuery("#NLInlinePopup .submitOverlay").hide()})});if(cookiesEnabled&&jQuery.cookie("NLInlinePopup")===null&&jQuery.cookie("DggPrintOfferOverlay")!==null&&jQuery.cookie("DggPrintOfferOverlay2")===null){jQuery("#NLInlinePopup").fadeIn()}else if(!cookiesEnabled){var o=Math.floor(Math.random()*50+1);if(o==1){jQuery("#NLInlinePopup").fadeIn()}}}window.closeNLInlinePopup=function(e){e.stopPropagation();jQuery("#NLInlinePopup").hide()};jQuery("#NLInlinePopup").click(function(e){if(e.target.className=="popBg"||e.target.className=="remind"||jQuery(e.target).parents(".remind").length>0){jQuery.cookie("NLInlinePopup","remindmelater",{path:"/"});closeNLInlinePopup(e)}else if(e.target.className=="noThanks"||jQuery(e.target).parents(".noThanks").length>0){jQuery.cookie("NLInlinePopup","nothanks",{path:"/",expires:14});jQuery.cookie("NLInlinePopup2","nothanks",{path:"/"});closeNLInlinePopup(e)}else{e.stopPropagation()}})})
+
+
+</script><section id="DggPrintOfferOverlay">
+	<a class="popBg"></a>
+	<div class="popContentOutter">
+		<div class="popContentInner">
+			<article class="xs">
+				<a href="https://secure.strangmagazines.com/~strangma/charisma/2014/print_1/?utm_campaign=12%20for%2012&amp;utm_source=charismanews.com&amp;utm_medium=Popup" title="Subscribe Now!" class="offerLink"><img src="http://www.charismamag.com/images/banners/mod_dggprintofferoverlay/chm-magazine_print-sub_xs_1502.jpg" width="400" height="565" alt="Charisma Magazine print subscription offer" /></a>
+			</article>
+			<article class="m">
+				<a href="https://secure.strangmagazines.com/~strangma/charisma/2014/print_1/?utm_campaign=12%20for%2012&amp;utm_source=charismanews.com&amp;utm_medium=Popup" title="Subscribe Now!" class="offerLink"><img src="http://www.charismamag.com/images/banners/mod_dggprintofferoverlay/chm-magazine_print-sub_m_1502.jpg" width="400" height="500" alt="Charisma Magazine print subscription offer" /></a>
+			</article>
+			<article class="xl">
+				<a href="https://secure.strangmagazines.com/~strangma/charisma/2014/print_1/?utm_campaign=12%20for%2012&amp;utm_source=charismanews.com&amp;utm_medium=Popup" title="Subscribe Now!" class="offerLink"><img src="http://www.charismamag.com/images/banners/mod_dggprintofferoverlay/chm-magazine_print-sub_xl_1502.png" width="634" height="310" alt="Charisma Magazine print subscription offer" /></a>
+			</article>
+			<aside class="closeWrap">
+				<a href="#" class="noThanks fa fa-times" onClick="return false;"></a>
+				<a href="#" class="noThanks mobiVer" onClick="return false;">No Thanks.</a>
+			</aside>
+		</div>
+	</div>
+</section>
+<script>
+if(!window.cookiesEnabled){window.cookiesEnabled=function(){var e=navigator.cookieEnabled?true:false;if(typeof navigator.cookieEnabled=="undefined"&&!cookieEnabled){document.cookie="t";e=document.cookie.indexOf("t")!=-1?true:false}return e}()}jQuery(document).ready(function(){if(!window.cookiesEnabled||jQuery.cookie("DggPrintOfferOverlay")!==null){return}jQuery("#DggPrintOfferOverlay").click(function(e){console.dir(e.target);if(e.target.className.indexOf("popBg")>=0||e.target.className.indexOf("noThanks")>=0){e.stopPropagation();jQuery("#DggPrintOfferOverlay").hide()}else if(e.target.className.indexOf("offerLink")>=0||jQuery(e.target).parents(".offerLink").length>0){e.stopPropagation();jQuery("#DggPrintOfferOverlay").hide();return true}else{e.stopPropagation()}return false});jQuery("#DggPrintOfferOverlay").fadeIn();jQuery.cookie("DggPrintOfferOverlay","closed",{path:"/",expires:30});jQuery.cookie("DggPrintOfferOverlay2","closed",{path:"/"})})
+
+</script>
+
+<script>
+
+		jQuery('#forceDesktop').click(function() {document.cookie='forceDesktop=1; domain:charismanews.com; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';location.reload(true);});
+
+			window.addEvent("domready",function(){
+
+			
+						if(!Date.now){Date.now=function(){return(new Date).getTime()}}(function(){function t(t,n,r,i){if(e)return e[t];n=document.cookie.split("; ");e={};for(i=n.length-1;i>=0;i--){r=n[i].split("=");e[r[0]]=r[1]}return e[t]}function n(e,t){var n=Date.now()+31536e6;var r=(new Date(n)).toUTCString();document.cookie=encodeURIComponent(e)+"="+encodeURIComponent(t)+"; domain= .charismanews.com"+"; expires="+r+"; path=/"}var e;window.readCookie=t;window.setCookie=n})();var OXCV_sites=["http://www.charismamag.com","http://www.charismanews.com","http://ministrytodaymag.com"];var thisDomainIndex=1;var addToOpenxConfig=function(e){for(var t in e){for(var n=0;n<OX_ads.length;n++){varFound=false;for(var r in OX_ads[n]["vars"]){if(r==t){var i=OX_ads[n]["vars"][r].split(",");var s=e[t].split(",");for(var o=0;o<s.length;o++){var u=false;for(var a=0;a<i.length;a++){if(s[o]==i[a]){u=true;break}}if(!u){i.push(s[o])}}OX_ads[n]["vars"][r]=i.join(",");varFound=true;continue}}if(!varFound){if(OX_ads[n].hasOwnProperty("vars")){OX_ads[n]["vars"][t]=e[t]}else{OX_ads[n]["vars"]={key:e[t]}}}}}updateCookie()};var updateCookie=function(){if(typeof JSON.stringify!=="function")return;var e={};for(var t in OX_ads[0]["vars"]){if(t=="interests"){e[t]=OX_ads[0]["vars"][t]}}setCookie("OXCV",JSON.stringify(e))};var processThisDomain=function(){var e=readCookie("OXCV");if(!e){updateCookie();return}var t=JSON.parse(decodeURIComponent(e));if(typeof t!="object")return;addToOpenxConfig(t)};var receiveMessage=function(e){var t=false;for(var n=0;n<OXCV_sites.length;n++){if(OXCV_sites[n]==e.origin){t=true;break}}if(!t)return;if(e.data&&e.data!==0){var r=JSON.parse(e.data);addToOpenxConfig(r)}};if(window.OX_ads&&OX_ads.length){for(var i=0;i<OXCV_sites.length;i++){if(i==thisDomainIndex){processThisDomain()}else{var iframe=document.createElement("iframe");iframe.setAttribute("src",OXCV_sites[i]+"/plugins/system/dggopenxcustomvars/cookieServer.php?i="+thisDomainIndex);iframe.id="OXCV_"+i;iframe.style.width="1px";iframe.style.height="1px";iframe.style.visibility="hidden";iframe.style.position="absolute";document.body.appendChild(iframe)}}if(typeof window.addEventListener!="undefined"){window.addEventListener("message",receiveMessage,false)}else if(typeof window.attachEvent!="undefined"){window.attachEvent("onmessage",receiveMessage)}}
+						
+			function loadOpenX() {
+				//console.log('loadOpenX() called');
+				//console.dir(OX_ads);
+				var e = document.createElement('script');
+				e.src = '//ox-d.charisma.net/w/1.0/jstag';
+				e.async = true;
+				e.type = "text/javascript";
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(e, s);
+			}
+
+			//setTimeout(loadOpenX,1000);
+			loadOpenX();
+
+		});
+		
+	function processMenuBtnClick(e){var t=e.parent();if(t.hasClass("clicked")){t.removeClass("clicked");e.removeClass("fa-chevron-down").addClass("fa-chevron-right")}else{t.addClass("clicked");if(parseInt(e.css("border-radius"))!=0){t.siblings(".clicked").removeClass("clicked").children(".subMenuBtn").removeClass("fa-chevron-down").addClass("fa-chevron-right")}e.removeClass("fa-chevron-right").addClass("fa-chevron-down")}}function navRootBgCheck(){if(isSubMenuOpen()){jQuery(".navWrapper").addClass("mobSubMenuClicked")}else{jQuery(".navWrapper").removeClass("mobSubMenuClicked")}}function isSubMenuOpen(){var e=jQuery(".mTB_mobileMenu");if(e.hasClass("clicked")||e.find(".clicked").length>0||jQuery(".mTB_search").hasClass("clicked")){return true}else{return false}}jQuery("#mTB_menu").click(function(){jQuery(".mTB_search").removeClass("clicked");jQuery(".mTB_mobileMenu").toggleClass("clicked");processMenuBtnClick(jQuery(".mTB_mobileMenu .clicked .subMenuBtn"));navRootBgCheck()});jQuery("#mTB_search").click(function(){jQuery(".mTB_search").toggleClass("clicked");jQuery(".mTB_mobileMenu").removeClass("clicked");processMenuBtnClick(jQuery(".mTB_mobileMenu .clicked .subMenuBtn"));navRootBgCheck()});jQuery("#mTB_search2").click(function(){jQuery(".mTB_mobileMenu li.hasSub.clicked").removeClass("clicked");jQuery(".mTB_search").toggleClass("clicked");navRootBgCheck()});jQuery(".subMenuBtn").click(function(){processMenuBtnClick(jQuery(this));navRootBgCheck()});jQuery(".subMenuOnly").click(function(){processMenuBtnClick(jQuery(this).siblings(".subMenuBtn"));navRootBgCheck()});window.fixedMenu_lastScrollTop=0;jQuery(document).scroll(function(){var e=jQuery(".mTB_mobileMenu");var t=jQuery(".mTB_search");if(jQuery(window).width()>=980){e.removeClass("clicked");t.removeClass("clicked");jQuery(".navWrapper").show();return}var n=jQuery(".navWrapper");var r=jQuery("#mobAppCallout").is(":visible");var i=jQuery(document).scrollTop();if(window.fixedMenu_lastScrollTop>i){var s=0;if(r){s=72}if(i==0){n.stop(true,true);n.css("top",s+"px").show()}else{if(n.is(":hidden")&&n.queue("fx").length==0){n.css("top","-50px").show().animate({top:"0px"},500)}}}else{if(n.is(":visible")){if(!isSubMenuOpen()){if(n.queue("fx").length==0){var s=0;if(r&&i==0){s=72}n.css("top",0+s+"px").animate({top:"-="+(50+s)+"px"},500,function(){jQuery(this).hide()})}}else{n.css("top","0")}}}window.fixedMenu_lastScrollTop=i})
+	
+		
+	if(jQuery("iframe")!=null){function updateVidsDims(e){var t=true;if(jQuery("#mainWrap").width()<940)t=false;var n=jQuery('iframe[src*="'+e+'"]');n.each(function(){var e=jQuery(this);var n=e.attr("height");var r=e.attr("width");if(t){jQuery(this).css({"max-width":"100%",width:r+"px",height:n+"px"})}else{e.css({"max-width":r+"px",width:"100%"});var i=n/r*e.width();e.css("height",i+"px")}})}function checkForVideoIframe(e,t,n){if(jQuery('iframe[src*="'+e+'"]')!=null){updateVidsDims(e);jQuery(window).resize(function(){updateVidsDims(e)})}}["youtube.com/embed","magnify.net/video"].forEach(checkForVideoIframe)}
+			window.addEvent('domready', function() {
+		
+			if(jQuery.cookie('mobAppCallout') === null) {
+				jQuery('#mobAppCallout').show();
+				jQuery('header.page').css('margin-top','122px');
+				jQuery('div.navWrapper').css('top','72px');
+			}
+		
+			jQuery('#mobAppCallout .closeBtn').click(function() {
+				jQuery('#mobAppCallout').hide();
+				jQuery('header.page').css('margin-top','0');
+				jQuery('div.navWrapper').css('top','0');
+				jQuery.cookie("mobAppCallout", 'closed', {expires:21});
+			});
+		
+			jQuery('#mobAppCallout .viewBtn').click(function() {
+				jQuery('#mobAppCallout').hide();
+				jQuery('header.page').css('margin-top','0');
+				jQuery('div.navWrapper').css('top','0');
+				jQuery.cookie("mobAppCallout", 'viewed', {expires:365});
+			});
+		
+		});
+		
+		function updateIndicator(e){if(!articleOriginalSize){articleOriginalSize=parseInt(jQuery(fontAdjTarget).css("font-size"))}var t=jQuery(".markers"),n=0,r="";t.empty();n=Math.abs(Math.floor((e-articleOriginalSize)/adjustAmount));if(e>articleOriginalSize){r='<span class="fa fa-arrow-circle-o-up"></span>'}else if(e<articleOriginalSize){r='<span class="fa fa-arrow-circle-o-down"></span>'}for(var i=0;i<n;i++)t.append(r)}if(typeof fontAdjTarget=="undefined"||fontAdjTarget.length<2){var fontAdjTarget="article.mainContent"}var articleOriginalSize=0;var adjustAmount=2;jQuery(".fontAdjuster .decrease").click(function(){var e=jQuery(fontAdjTarget);var t=parseInt(e.css("font-size"))-adjustAmount;if(t>0){updateIndicator(t);e.css("font-size","-=2")}});jQuery(".fontAdjuster .increase").click(function(){var e=jQuery(fontAdjTarget);var t=parseInt(e.css("font-size"))+adjustAmount;if(t<200){updateIndicator(t);e.css("font-size","+=2")}})
+	//'
+
+				function ckAdBl(){if(adBladeUnits.length==0)return;var e=jQuery("body").width();if(desktopSeen&&e>=980)return;if(e<980){jQuery("#adblade").show();jQuery("#adBladeDeskArt").hide()}else{desktopSeen=true;adBladeUnits.forEach(function(e,t,n){if(e.layout!="desktop")return;window.adblade_cid=e.cid;window.adblade_ad_width=e.ad_width;window.adblade_ad_height=e.ad_height;window.adblade_ad_host=e.ad_host;window.adblade_tag_type=e.tag_type;(function(){var t=window,n=("https:"==document.location.protocol?"https":"http")+"://"+(t.adblade_ad_host?t.adblade_ad_host:"web.adblade.com")+"/",n=n+"impsc.php?",r=t.adblade_ad_width,i=t.adblade_ad_height,s=escape(t.top.location==t.location?document.location:document.referrer),n=n+("cid="+t.adblade_cid),n=n+("&url="+s.substring(0,512)),n=n+(t.adblade_rtbid?"&rtbid="+t.adblade_rtbid:""),n=n+(t.adblade_subid?"&subid="+t.adblade_subid:""),n=n+("&rnd="+(new Date).getTime()),n=n+("&output="+(t.adblade_output?t.adblade_output:"html")),n=n+(t.adblade_tp_url?"&tpUrl="+t.adblade_tp_url:"");"adblade_tag_type"in t||(t.adblade_tag_type=1);if(1==t.adblade_tag_type){jQuery(e.placeholder).append('<iframe name="adblade_ad_iframe" width="'+r+'" height="'+i+'" frameborder="0" src="'+n+'" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></iframe>')}})()})}}var desktopSeen=false;window.addEvent("domready",function(){ckAdBl();jQuery(window).resize(function(){ckAdBl()})})
+				
+	
+</script>
+
+
+<script src="http://www.charismaadvertising.com/js/detect-zoom.min.js"></script>
+<script>
+var lastZoom = detectZoom.zoom();
+function checkZoomChange() {
+	var curZoom = detectZoom.zoom();
+	if(lastZoom < curZoom) {
+		// they zoomed in
+		jQuery("#toBtnLeft").hide();
+		jQuery("#toBtnRight").hide();
+	} else if(lastZoom > curZoom) {
+		// they zoomed out
+		jQuery("#toBtnLeft").show();
+		jQuery("#toBtnRight").show();
+	} else {
+		return;
+	}
+	lastZoom = curZoom;
+}
+window.setInterval(checkZoomChange, 1000);
+
+// for fixed backgrounds with floating invisible buttons
+jQuery(window).scroll(function() {
+	if(jQuery('body').css('background-attachment')=='fixed') {
+		var d = jQuery(window).scrollTop();
+		if(jQuery("#toImageMapLeft").is(':visible')) {
+			// 29 = original "top" offset (px)
+			jQuery("#toImageMapLeft").css('top',29+d);
+		}
+		if(jQuery("#toImageMapRight").is(':visible')) {
+			jQuery("#toImageMapRight").css('top',210+d);
+		}
+	}
+});
+
+
+</script>
+
+<script type="text/javascript">
+var _qevents = _qevents || [];
+(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);})();
+_qevents.push({qacct:"p-043rizI9r-eDs"});
+</script>
+<noscript><div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-043rizI9r-eDs.gif" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+
+<img src="http://d.liadm.com/segment?s=16451"/>
+
+
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '1478057112437648']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1478057112437648&amp;ev=NoScript" /></noscript>
+
+
+
+				<!-- JoomlaWorks "DISQUS Comments for Joomla!" (v3.4) -->
+				<script type="text/javascript">
+					//<![CDATA[
+					var disqus_shortname = 'charismanews';
+					var disqus_config = function(){
+						this.language = '';
+					};
+					(function () {
+						var s = document.createElement('script'); s.async = true;
+						s.type = 'text/javascript';
+						s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+						(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+					}());
+					//]]>
+				</script>
+			
+
+</body>
+</html>

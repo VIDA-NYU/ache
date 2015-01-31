@@ -1,0 +1,2002 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+   <title>Ebola continues to spread in West Africa | Photos | The Big Picture | Boston.com</title>
+   <meta name="Description" content="The World Health Organization is reporting 887 deaths from the worst outbreak of the Ebola virus in history. A man with Ebola-like symptoms who had...">
+   <meta name="Keywords" content="photos,photojournalism,photography,images" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta property="og:title" content="Ebola continues to spread in West Africa" />
+   <meta property="og:site_name" content="Boston.com" />
+   <meta property="og:type" content="article" />
+   <meta property="og:description" content="The World Health Organization is reporting 887 deaths from the worst outbreak of the Ebola virus in history. A man with Ebola-like symptoms who had..." />
+   <meta property="og:image" content="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/archive/306109.jpg" />
+   <meta property="fb:app_id" content="135637993114591" />
+   <meta property="fb:admins" content="100001044693856" /> 
+   <meta property="og:url" content="http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html" /> 
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:site" content="@BostonDotCom" />
+   <meta name="twitter:creator" content="@big_picture" />
+   <meta property="article:publisher" content="https://www.facebook.com/boston.big.picture" />  
+   <link rel="stylesheet" type="text/css" href="http://cache.boston.com/universal/css/bcom_global_styles.css" /><link rel="search" type="application/opensearchdescription+xml" title="Boston.com Local Search" href="http://cache.boston.com/search/files/bostonsearch.xml" />
+
+<link rel="stylesheet" type="text/css" href="http://cache.boston.com/universal/css/bcom_blog_styles.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+<!--[if IE]><link rel="stylesheet" href="http://cache.boston.com/universal/css/bcom_global_styles_ie.css" type="text/css" /><![endif]-->
+
+<script language="Javascript"><!--
+metatags = document.getElementsByTagName("meta");for (cnt = 0; cnt < metatags.length; cnt++) var dttext = metatags[2].getAttribute("content");
+
+//--></script>
+
+
+<script type="text/javascript" src="http://cache.boston.com/universal/js/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript" src="http://cache.boston.com/universal/js/bcom_global_scripts.js"></script>
+
+<script type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
+<!-- Printer styles -->
+<link rel="stylesheet" type="text/css" href="http://cache.boston.com/universal/css/bcom_print_styles.css" media="print" />
+
+  <link rel="stylesheet" type="text/css" href="http://cache.boston.com/universal/css/bcom_textsize_default.css" title="default" />
+  <link rel="alternate stylesheet" type="text/css" href="http://cache.boston.com/universal/css/bcom_textsize_large.css" title="A++" />
+  <link rel="alternate stylesheet" type="text/css" href="http://cache.boston.com/universal/css/bcom_textsize_medium.css" title="A+" />
+  <link rel="alternate stylesheet" type="text/css" href="http://cache.boston.com/universal/css/bcom_textsize_small.css" title="A" />
+  <link rel="alternate stylesheet" type="text/css" href="http://cache.boston.com/universal/css/bcom_textsize_x-small.css" title="A-" />
+
+<script language="JavaScript" type="text/javascript" src="http://cache.boston.com/universal/js/bcom_article_tools.js"></script><script language="JavaScript" type="text/javascript" src="http://cache.boston.com/universal/js/bcom_textsize_supersizeMe.js"></script>
+
+
+
+<link rel="alternate" type="application/rss+xml" href="http://syndication.boston.com/bigpicture/index.xml" title="The Big Picture" />
+
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+ 
+<script type="text/javascript" src="http://cache.boston.com/universal/js/jquery-1.7.1.min.js"></script>
+
+<script src="http://cdn.gigya.com/js/socialize.js?apiKey=3_Wg9crmyjY3ezpaXBCfJH4s5tG0Ygid81wSzG8Z8bM-or7-rCwxK29QWEOLLjACs5"></script>
+
+<script type="text/javascript" src="http://boston.com/js/bcom-gigya.js"></script>
+
+<script type="text/javascript">
+
+$(function() {
+
+	// trigger a browser print when print link clicked
+	$('.print').click(function(e) {
+		window.print();
+	});
+
+});
+</script>
+
+<script type="text/javascript">
+//////////// src: scripts/_bcom-etaf.js ////////////
+
+if (typeof bcom === "undefined") { bcom = {}; }
+
+bcom.etaf = {
+
+	// validate the form, mark errors, and submit the email request via ajax
+	handleSubmit : function(etafFormData, successCallback, failureCallback) {
+
+		// validate the email fields (marking error classes as necessary)
+		var senderValid = this.checkEmailField(etafFormData.senderEmailField, false); 
+		var recipientValid = this.checkEmailField(etafFormData.recipientEmailField, true); 
+
+		// stop form submit if there were errors
+		if (senderValid === false || recipientValid === false) {
+			return false;
+		}
+
+		// prepare form data for email service
+		var dataString = 'sender_name='+ etafFormData.senderName.val() 
+			+ '&sender_email=' + etafFormData.senderEmailField.val()
+			+ '&recipient_email=' + etafFormData.recipientEmailField.val() 
+			+ '&message=' + etafFormData.message.val() 
+			+ '&story_url=' + encodeURIComponent(etafFormData.story.val());
+
+		// send ajax request to email service
+		console.log("Attempting to send email-to-a-friend request to /etaf/ backend service");
+		$.ajax({
+			type: "POST",
+			url: "/emtaf/",
+			data: dataString,
+			success: successCallback,
+			error: failureCallback
+		}); 
+
+		// don't reload the page
+		return false;
+	},
+
+	// return true if email field is valide
+	// returns false and adds in-error class if invalid
+	checkEmailField : function(emailField, allowMultipleAddresses) {
+		var fieldValid = true
+
+		// check multiple addresses in one field, if allowed
+		if (allowMultipleAddresses) {
+
+			// split addresses out
+			var emailAddresses = emailField.val().split(/ *, */); 
+			$.each(emailAddresses, function(k, emailAddress) {
+
+				// check if each address is invalid
+				if (bcom.etaf.isValidEmailAddress(emailAddress) == false) {
+					fieldValid = false;
+
+				} 
+			});
+
+		// check the one address
+		} else if (this.isValidEmailAddress(emailField.val()) == false) {
+			fieldValid = false;
+		}
+
+		// mark the field as in-error or not
+		if (fieldValid) {
+			emailField.addClass('noerr');
+			emailField.removeClass('error');
+		} else { 
+			emailField.addClass('error');
+			emailField.removeClass('noerr');
+ 		}
+
+ 		return fieldValid;
+	},
+
+	// returns true if the given email is a valid address (by regex)
+	isValidEmailAddress : function(emailAddress) {
+		var emailRegexStr = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+		return emailRegexStr.test(emailAddress);
+	},
+
+	// clears the given email field if the value is still the original default value
+	resetRecipientEmailField : function(recipientEmailField) {
+		if (recipientEmailField.attr('defaultValue') === recipientEmailField.val() ) {  
+			recipientEmailField.val('') ; 
+		}
+	}
+
+};
+
+
+//////////// src: scripts/_bcom-etaf-run.js ////////////
+
+$(function() {
+
+	// load the markup for the popup modal
+	$('#bdc_emailWidget').load('http://cache.boston.com/universal/etaf_modal.html', function() {
+
+		// set the story url
+		$("#story_url").val($("#bdc_emailWidget").attr("data-canonical"));
+
+		// clear form fields function
+		var clearFormFunc = function() {
+			$("#sender_name").val("");
+			$("#recipient_email").val(recipientEmailField.attr('defaultValue'));
+			$("#message").val("");
+			$("#sender_email").val("");
+		};
+
+		// bind "close popup" to "X" in corner
+		$("#closeWindow_etaf").click(function() {
+			$('#bdc_emailWidget').hide();
+
+			// clear the fields
+			clearFormFunc();
+		});
+
+		// bind "clear recipient email" functionality to field
+		var recipientEmailField = $("#recipient_email");
+		recipientEmailField.attr('defaultValue', recipientEmailField.val());
+		recipientEmailField.focus(function() {
+			bcom.etaf.resetRecipientEmailField($(recipientEmailField));
+		});
+
+		// bind submit handler to submit form button
+		$("#bdc_emailWidget .form-button").click(function() {
+		
+			// extract all data from form
+			var etafFormData = {
+				senderName : $("#sender_name"),
+				senderEmailField : $("#sender_email"),
+				recipientEmailField : $("#recipient_email"),
+				message : $("#message"),
+				story : $("#story_url")
+			}
+
+			// what to do after successful email
+			var success = function() {
+				console.log('Success submitting email-to-a-friend request.')
+
+				// close the popup
+				$('#theEMTOFForm').hide();
+				$('#bdc_EMTOF_sending').show();
+				$('#bdc_EMTOF_sending').fadeOut(3000, function() { 
+					$('#bdc_emailWidget').fadeOut(3000);
+					$('#bdc_EMTOF_sent').show();
+
+					// clear the fields
+					clearFormFunc();
+				});
+			}
+
+			// want to do on the first error / failure
+			var error = function(jqXHR, textStatus, errorThrown) {
+				console.log('Error submitting email-to-a-friend request.');
+
+				// close the popup
+				$('#theEMTOFForm').hide();
+				$('#bdc_EMTOF_sending').show();
+				$('#bdc_EMTOF_sending').fadeOut(3000, function() { 
+					$('#bdc_emailWidget').fadeOut(3000);
+					$('#bdc_EMTOF_sent').show();
+
+					// clear the fields
+					clearFormFunc();
+				});
+
+				// try one more time in the background
+				bcom.etaf.handleSubmit(etafFormData, function() {
+					console.log('Success submitting email-to-a-friend request on second try.');
+				}, function() {
+					console.log('Error submitting email-to-a-friend request on second try - done trying.');
+				});
+			}
+
+			// submit the form data for validation / possible sending
+			return bcom.etaf.handleSubmit(etafFormData, success, error);
+		});
+
+		// bind open modal trigger to each "email-to-a-friend" link
+		$('.etaf').each(function() {
+	  		
+			var $etaf = $(this);
+			$etaf.click(function(e) {
+
+				// position underneath etaf link clicked
+				var modalPopupDiv = $('#bdc_emailWidget');
+				$(modalPopupDiv).css({
+					position: "absolute",
+					left: ($etaf.position().left + 5), 
+					top: ($etaf.position().top + 10)
+				});
+
+				// show the modal popup
+				$("#pointer_top").show(); 
+				$("#pointer_bottom").hide(); 
+				$("#message").val('');
+				$("#theEMTOFForm").show();
+				$("#bdc_EMTOF_sent").hide();
+				$(modalPopupDiv).show() ;
+
+				
+			});
+		});
+	
+	});
+});
+</script>
+
+<style type="text/css">
+/* Gigya Social Sharing ~ March 2013 */
+/* line 3, ../../styles/bcom-share-tools.scss */
+.share-tools-container {
+  overflow: auto;
+}
+
+/* line 7, ../../styles/bcom-share-tools.scss */
+#gigya-top {
+  margin-bottom: 1em;
+  float: left;
+  padding-left: 75px;
+  background-image: url("http://cache.boston.com/images/share_pointer.png");
+  background-repeat: no-repeat;
+  background-position: -115px bottom;
+}
+
+/* line 17, ../../styles/bcom-share-tools.scss */
+#gigya-bottom {
+  margin: 1em 0;
+  float: left;
+  padding-left: 75px;
+  background-image: url("http://cache.boston.com/images/share_pointer.png");
+  background-repeat: no-repeat;
+  background-position: -115px bottom;
+}
+
+/* line 26, ../../styles/bcom-share-tools.scss */
+.share-tools {
+  margin: 0 0 0 0.75em;
+  padding: 0 0 0 1em;
+  float: left;
+  border-left: 1px dotted #3f5f9c;
+}
+
+/* line 32, ../../styles/bcom-share-tools.scss */
+.share-tools.bottom {
+  margin-top: 1em;
+}
+
+/* line 35, ../../styles/bcom-share-tools.scss */
+.share-tools li {
+  vertical-align: middle;
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font-family: arial;
+  font-size: 11px;
+  line-height: 17px;
+}
+
+/* line 46, ../../styles/bcom-share-tools.scss */
+.share-tools li a {
+  color: #838383;
+}
+
+/* line 49, ../../styles/bcom-share-tools.scss */
+.share-tools li.share-comments a {
+  font-weight: bold;
+  color: #45569C;
+}
+
+/* line 1, ../../styles/_bcom-share-tools-ie7.scss */
+.ie7 .share-tools-container {
+  overflow: visible;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+
+</style>
+
+<script>ifSafari();</script>
+
+   <link rel="alternate" type="application/rss+xml" title="The Big Picture - Boston Globe" href="http://www.boston.com/bigpicture/index.xml" />		
+   <link rel="search" type="application/opensearchdescription+xml" title="Boston.com Local Search" href="http://cache.boston.com/search/files/bostonsearch.xml" />
+  <link rel="canonical" href="http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html" />
+  <script>ifSafari();</script>
+
+   <style>
+      body {font-family:arial;font-size:11px}
+   </style>
+
+   <!-- Load Gigya's JS library -->
+
+   <!-- LotaMe includes -->
+<script type="text/javascript" src="http://ad.crwdcntrl.net/5/c=520/pe=y/var=ccauds"></script>
+<script type="text/javascript">
+    var ccKeywords="keyword=";
+    if(typeof(ccauds) != 'undefined') {
+        for(var cci = 0; cci < ccauds.Profile.Audiences.Audience.length; cci++){
+            if(cci > 0) ccKeywords += "&keyword=";
+            ccKeywords += ccauds.Profile.Audiences.Audience[cci].abbr;
+        }
+    }
+
+    OAS_query = ccKeywords;
+</script>
+
+
+<script type="text/javascript">
+  (function() {
+  var useSSL = 'https:' == document.location.protocol;
+  var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+  document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+  })();
+</script>
+
+<!-- Build Key/Value Object + Set adUnit Name -->
+<script>
+  var bcom = bcom || {};
+  bcom.dfp = {};
+  bcom.dfp.networkCode = 61381659;
+  bcom.dfp.adSlots =  ['ad_lead1', 'ad_outofpage']; ;
+  bcom.dfp.adUnit = 'boston.com/news/world';
+
+  var sArray = bcom.dfp.adUnit.split('/');
+  bcom.dfp.keyValuePairs = {
+    s1: sArray[0] || '',
+    s2: sArray[1] || '',
+    s3: sArray[2] || '',
+    s4: sArray[3] || '',
+    pgtype : 'blog',
+    pageurl : document.URL.substring(document.URL.indexOf('.com/')+5).replace(/\/|\./g,'_'),
+    meta: ''
+  };
+
+</script>
+
+<!-- Ad Catalog + Parse Key/Value Object -->
+<script src="http://cache.boston.com/universal/js/bcom-dfp.js"></script>
+
+
+
+
+   <style>
+/* --------------- NEW SHARETOOLS --------------- 
+   Note to future maintenance person: 
+   - You may(will) need to change the left attribute if you 
+     add/remove any providers. Sorry it's a bit hacked together.
+*/
+#top_share_bar{
+        float: left;
+	left: 12.5%;
+	margin: 0 !important;
+	padding: 0 !important;
+	position: relative;
+	text-align: left;
+}
+
+#bottom_share_bar{
+        float: left;
+	left: 12.5%;
+	margin: 0 !important;
+	padding: 0 !important;
+	position: relative;
+	text-align: left;
+}
+
+/** Email to a friend **/
+#bdc_emailWidget {
+	border: 0;
+	display: none;
+	filter: alpha(opacity=97);
+	height: auto;
+	khtml-opacity: 0.97;
+	margin: 0;
+	moz-opacity: 0.97;
+	opacity: 0.97;
+	overflow: visible;
+	padding: 24px 0;
+	position: absolute;
+	width: auto;
+	z-index: 1000000000;
+}
+#bdc_emailWidget .innerContainer {
+	background: #ededed;
+	border-color: #272727;
+	border-style: solid;
+	border-width: 0 4px 4px 4px;
+	height: auto;
+	width: 346px;
+}
+#bdc_emailWidget .titleBar {
+	background: #272727;
+	color: #fff;
+	height: 20px;
+	padding: 10px;
+	width: 330px;
+}
+#bdc_emailWidget .titleBar h3 {
+	color: #fff;
+	float: left;
+	margin: 0;
+}
+#bdc_emailWidget .titleBar a#closeWindow_etaf {
+	background: #fff url(http://cache.boston.com/universal/site_graphics/etaf/closeWindow.gif) no-repeat 100% 100%;
+	display: block;
+	float: right;
+	height: 21px;
+	width: 21px;
+}
+#bdc_emailWidget .titleBar a#closeWindow_etaf:hover {
+	background: #fff url(http://cache.boston.com/universal/site_graphics/etaf/closeWindow.gif) no-repeat 100% 0%;
+	border-bottom: none;
+	cursor: pointer;
+}
+
+/* ETAF Form elements */
+
+#bdc_emailWidget form {
+	height: auto;
+	margin: 0;
+	padding: 10px;
+	width: 325px;
+}
+#bdc_emailWidget label {
+	display: block;
+	float: left;
+	font: bold 11px/13px Arial, Helvetica, Verdana, sans-serif;
+	margin-bottom: 3px;
+}
+#bdc_emailWidget label em {
+	font-weight: normal;
+	line-height: 13px;
+	padding: 0 0 0 5px;
+}
+#bdc_emailWidget input,
+#bdc_emailWidget textarea {
+	border: 1px solid #666;
+	clear: both;
+	color: #000;
+	font: normal 12px/15px Arial, Helvetica, Verdana, sans-serif;
+	margin-bottom: 10px;
+	padding: 5px;
+	width: 97%;
+}
+#bdc_emailWidget textarea {
+	margin-bottom: 25px;
+	overflow: auto;
+}
+#bdc_emailWidget textarea#personalMessage {
+	height: 60px;
+}
+#bdc_emailWidget input#recipient_email {
+	color: #666;
+}
+#bdc_emailWidget input.form-button {
+	background: transparent url(http://cache.boston.com/universal/site_graphics/button_stretch.gif) repeat scroll 0 0;
+	border: 1px solid #2851A2;
+	color: #fff;
+	float: right;
+	font-weight: bold;
+	height: 26px;
+	padding-top: 3px;
+	width: 75px;
+}
+#bdc_emailWidget input.form-button:hover {
+	cursor: pointer;
+}
+#bdc_emailWidget input.error {
+	border: 2px solid #d2232a;
+	padding: 4px;
+}
+#bdc_emailWidget input.noerr {
+	border: 1px solid #666;
+	padding: 5px;
+}
+#bdc_emailWidget .errorMessage {
+	color: #d2232a;
+	float: right;
+	font: bold 11px/13px Arial, Helvetica, Verdana, sans-serif;
+	margin-bottom: 3px;
+	visibility: hidden;
+}
+
+/* EMTAF Pointers */
+
+#headTools #tools #bdc_emailWidget #pointer_top,
+#headTools #tools #bdc_emailWidget #pointer_bottom,
+#pointer_top, #pointer_bottom {
+	background-color: #fff;
+	border: 0 none;
+	display: block;
+	float: left;
+	height: 17px;
+	overflow: visible;
+	position: absolute;
+	width: 24px;
+	z-index: 1000;
+}
+#bdc_emailWidget img#pointer_top {
+	top: 7px;
+}
+
+/* Sending article */
+
+#bdc_emailWidget	.sendingArticle {
+	background-color: #EEEEEE;
+	display: none;
+	margin: 30% 0;
+	text-align: center;
+	width: 100%;
+}
+#bdc_emailWidget	.sendingArticle h4 {
+	font: normal 18px/32px Georgia, Times, "Times New Roman", serif;
+}
+.blogarticle #Col1 #headTools #tools #bdc_emailWidget	.sendingArticle img {
+	border: 0;
+	height: 16px;
+	width: 16px;
+}
+#bdc_EMTOF_sent {
+	display: none;
+}
+
+/*OLD SHARETOOLS */
+#sharetoolContainer {
+	float: right;
+	left: -50%;
+	margin: 0 !important;
+	padding: 0 !important;
+	position: relative;
+	text-align: left;
+}
+#sharetoolContainer ul {
+	left: 50%;
+	position: relative;
+}
+#sharetoolContainer ul li {
+	float: left;
+	margin: 0 4px 0 0;
+	padding: 0px 0px 0;
+	position: relative;
+}
+#sharetoolContainer .etaf {
+	background: url(http://cache.boston.com/universal/site_graphics/email_btn_text.png) top left no-repeat;
+	display: block;
+	font-size: 0;
+	height: 22px;
+	width: 50px;
+}
+#sharetoolContainer .recommendbutton {
+	background: url(http://cache.boston.com/universal/site_graphics/recommendbutton.png) top left no-repeat;
+	border: none;
+	display: block;
+	height: 24px;
+	overflow: hidden;
+	text-indent: -9999px;
+	width: 102px;
+}
+
+/* SHAREIFY COUNTER FOR SHARETOOLS */
+
+.share_button {
+	cursor: pointer;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: center;
+}
+.share_button a {
+	text-decoration: none;
+}
+.shareify_div {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.shareify_div img {
+	border: 0;
+	height: 22px;
+	margin: 0;
+	padding: 0;
+	width: 60px;
+}
+.shareify_count {
+	background-image: url('http://cache.boston.com/universal/site_graphics/share_fbarrow.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 20px;
+	margin: 0 0 0 5px;
+	padding: 0 0 0 3px;
+	width: 30px;
+}
+.shareify_count_number {
+	background: #ECEEF5;
+	border: 1px solid #CAD4E7;
+	border-radius: 4px;
+	color: #000;
+	font-family: sans-serif;
+	font-size: 11px;
+	height: 17px;
+	moz-border-radius: 4px;
+	padding-top: 3px;
+	position: relative;
+	text-decoration: none;
+	webkit-border-radius: 4px;
+	width: 25px;
+}
+
+
+#Col1, #Col2 {
+	margin: 0pt 0px;
+}
+body#blog #content {
+	padding-bottom: 0px;
+}
+span.topFrontPage {
+	display: none;
+}
+#container {
+	border: 0px;
+	width: 990px;
+}
+#containerBorder {
+	border: 0px;
+	padding: 0px;
+}
+#globalNavRedux {
+	background-image: none;
+	border-bottom: 1px solid #203C73;
+	margin-bottom: 4px;
+	padding: 0px 15px;
+}
+#headR {
+	width: 748px;
+}
+#header #signIn {
+	width: 745px;
+}
+#header {
+	width: 990px;
+}
+#content {
+	width: 990px;
+}
+.noimghide {
+	display: none;
+}
+.imghide {
+	background-color: #000;
+	color: #fff;
+	cursor: pointer;
+	font-family: arial,helvetica,sans-serif;
+	font-size: 13px;
+	position: relative;
+	text-align: center;
+	text-decoration: underline;
+}
+.bigpic {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 12px;
+	width: 990px;
+}
+#globalNavRedux .gnavContainer {
+	border-bottom: 0px;
+}
+#blogHeader {
+	margin-bottom: 10px;
+	padding-top: 8px;
+	text-align: right;
+}
+.bpMore p {
+	display: inline;
+}
+.bpCaption {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 13px;
+	padding: 4px 10px 4px 10px;
+}
+.bpCaption a {
+	color: #fff;
+	text-decoration: underline;
+}
+.emailLinks {
+	line-height: 20px;
+}
+#blogheadTools {
+	border-bottom: 1px solid #ccc;
+	height: 20px;
+	margin-bottom: 12px;
+	padding-left: 1px;
+}
+h2 {
+	font-size: 24px;
+	padding-bottom: 4px;
+}
+.pipe {
+	padding: 4px;
+}
+.bpBody {
+	padding: 0px 10px 0px 10px;
+}
+.blogleadOut {
+	font-size: 15px;
+	font-weight: bold;
+	margin: 4px 6px 0px 0px;
+}
+.blogComments {
+	padding: 0px 150px 0px 180px;
+}
+.comments-open-footer {
+	padding: 0px 150px 0px 180px;
+}
+.comments-open-moderated {
+	padding: 0px 150px 0px 180px;
+}
+#arcDiv {
+	float: right;
+}
+#arcDrop {
+	font-size: 12px;
+}
+.bpBoth {
+	background-color: #000;
+	border: 1px solid #000;
+	color: #fff;
+	margin-top: 35px;
+	width: 990px;
+}
+.bpImageTop {
+	background-color: #000;
+	border: 1px solid #000;
+	color: #fff;
+	margin-top: 8px;
+	width: 990px;
+}
+.bpImageTop a:hover, a:active, a:focus {
+	border: 0px;
+	text-decoration: none;
+}
+#headL {
+	margin-left: 5px;
+}
+#aboutBlog {
+	padding: 0px 60px 30px 60px;
+}
+.bpImageTop {
+	border-width: 2px;
+}
+#headerRight {
+	border: 0px solid #000;
+	float: right;
+	text-align: left;
+	width: 300px;
+}
+
+#moreList {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#arcDrop {
+	width: 135px;
+}
+.drp {
+	padding: 0px 4px 4px 4px;
+}
+.smHead {
+	font-size: 11px;
+	font-weight: bold;
+}
+#moreList li {
+	border-bottom: 1px solid #ddd;
+	color: #999;
+	font-size: 11px;
+	padding: 3px;
+}
+#blogHeader {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+#headerImg {
+	float: left;
+	height: 91px;
+	margin-top: 12px;
+	width: 679px;
+}
+.beLeftCol {
+	padding: 3px;
+	width: 200px;
+}
+.beMidCol {
+	border-left: 1px solid #ddd;
+	font-size: 11px;
+	padding: 3px;
+	width: 145px;
+}
+.beMidCol a {
+	color: #000;
+	text-decoration: none;
+}
+.beMidCol2 {
+	border-bottom: 1px solid #ddd;
+	padding: 3px;
+	width: 145px;
+}
+.beMidCol2 a {
+	color: #000;
+	text-decoration: none;
+}
+.beMidCol2 a:hover, .beMidCol a:hover {
+	border-bottom: 0px;
+}
+.beRightCol {
+	padding: 3px;
+	text-align: right;
+	width: 645px;
+}
+.be2LeftCol {
+	padding: 3px;
+	padding-top: 7px;
+	width: 345px;
+}
+.be2RightCol {
+	font-family: Georgia;
+	font-size: 15px;
+	line-height: 21px;
+	padding: 3px;
+	padding-top: 7px;
+}
+#commentCountTd {
+	padding: 0px;
+}
+.blackNoDot a {
+	color: #000;
+}
+.blackNoDot div a:visited {
+	color: #000;
+}
+.blackNoDot a:hover, .blackNoDot a:focus {
+	border: none;
+}
+.noDot a:hover, .noDot a:focus {
+	border: none;
+}
+#photoCountDiv a, #commentCountTd a {
+	color: #000;
+}
+.commCtDiv {
+	background: url(http://cache.boston.com/universal/site_graphics/blogs/bigpicture/icon_com.gif) no-repeat left center;
+	padding: 3px;
+	padding-left: 26px;
+	width: 125px;
+}
+.headDiv {
+	float: right;
+	width: 820px;
+}
+#commentCountTd a:hover, #photoCountDiv a:focus {
+	border: none;
+}
+#commentCount,#photoCount {
+	font-size: 16px;
+        font-weight: bold;
+	padding-right: 1px;
+}
+#commentIcon,#photoIcon {
+	padding: 4px;
+	padding-top: 2px;
+	vertical-align: top;
+}
+#dateline {
+	color: #888;
+	padding-left: 15px;
+}
+.bigText {
+	font-size: 15px;
+	line-height: 21px;
+}
+.imgCount {
+	color: #666;
+	float: left;
+	font-size: 30px;
+	line-height: 37px;
+	padding-right: 10px;
+}
+.imgCount a {
+	color: #666;
+	text-decoration: none;
+}
+.imgCount a:hover {
+	border-bottom: 0px;
+	color: #666;
+}
+.imgCount a:visited {
+	color: #666;
+}
+.bpBody a {
+	color: #000;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+.bpBody {
+	padding: 0px 10px 0px 24px;
+}
+.tableTop {
+	border-top: 1px solid #ddd;
+	margin-top: 50px;
+	width: 990px;
+}
+#dateline {
+	color: #000;
+	line-height: 20px;
+	padding-left: 10px;
+}
+.commCtDiv {
+	background: url(http://cache.boston.com/universal/site_graphics/blogs/bigpicture/icon_com.gif) no-repeat left center;
+	margin-right: -29px;
+	padding: 3px;
+	padding-left: 23px;
+	width: 120px;
+}
+h2 {
+	border-left: 1px solid #ddd;
+	margin-left: 126px;
+	padding: 6px 0px 10px 10px;
+}
+.bpBody {
+	border-left: 1px solid #ddd;
+	margin-left: 126px;
+	padding: 6px 20px 4px 10px;
+}
+#commentCountTd {
+	padding-right: 6px;
+	width: 120px;
+}
+.beLeftCol {
+	border-left: 1px solid #ccc;
+	padding: 3px;
+	width: 200px;
+}
+.morepics {
+	padding-top: 4px;
+}
+.morepics a:hover, .morepics a:focus {
+	border: none;
+}
+.morepics img {
+	height: 25px;
+	width: 996px;
+}
+#bpntease {
+	border-bottom: 1px solid #f0f0f0;
+	margin-top: 6px;
+	padding: 3px;
+	text-align: center;
+}
+.blogText img {
+	border: 0px;
+}
+#elsew {
+	border-bottom: 1px solid #ddd;
+	padding: 6px 0 4px 124px;
+	width: 866px;
+}
+#elsew a {
+	color: #006;
+}
+#elsew a:hover {
+	border-bottom: 0px;
+}
+
+/** Bottom Stuff **/
+#moreLinks{
+  float:right;
+  width:280px;
+  border:1px solid #ccc;
+  padding:0 10px;
+  height:288px;
+  font-size:14px;
+}
+
+#moreLinks #moreHeader{
+  text-transform:uppercase;
+  font-weight:bold;
+  padding-top:6px;
+}
+
+#moreLinks a{
+  font-weight:bold;
+}
+
+.moreLink {
+  padding-top:10px;
+}
+
+.bottomFrontPage { float: left !important; }
+
+#comments{
+  float:left;
+  width:69%;
+}
+
+#rnav{
+  float:left;
+  width:28%;
+  border-left:1px solid #ccc;
+  padding-left:14px;
+}
+
+#rnavRecent { font-weight:bold; }
+
+.bpCaption .photoNum a {
+  font-weight:bold;
+  text-decoration:none;
+  font-size:2.4em;
+  color:#ccc;
+  float:left;
+  padding-right:10px;
+}
+
+.bpCaption .photoNum a:hover {
+  text-decoration:none;
+  border: 0 !important;
+  color:#2851A2;
+}
+
+</style>
+
+<!--[if IE]> <style type="text/css">.bpImageTop{margin-top:20px;}</style> <![endif]-->
+<script>
+	var currImg = -2;
+	var imgArr;
+	var isLoaded = 0;
+	function getElementsByClassName(node, classname){
+	    var a = [];
+	    var re = new RegExp('\\b' + classname + '\\b');
+	    var els = node.getElementsByTagName("*");
+	    for(var i=0,j=els.length; i<j; i++)
+	        if(re.test(els[i].className))a.push(els[i]);
+	    return a;
+	}
+	var hideMsg="<br/><br/><br/>Warning:<br/>This image contains graphic<br/>or objectionable content<br/><br/>click here to view it."
+	var nHideMsg="<br/><br/><br/>This image may depict nudity or other possibly objectionable content<br/><br/>click here to view it."
+	function bpload(){
+		var getHid = getElementsByClassName(document.body,"imghide");
+		for(i=0;i<getHid.length;i++){
+			getHid[i].innerHTML=hideMsg
+		}
+		getHid = getElementsByClassName(document.body,"imghideN");
+		for(i=0;i<getHid.length;i++){
+			getHid[i].innerHTML=nHideMsg
+		}
+		imgArr = getElementsByClassName(document.body,"bpImage")
+		isLoaded = 1;
+		document.getElementById("mastSearch").onkeypress = function(e){
+			isLoaded = 0;
+		}
+	}
+	document.onkeypress = function(e){
+		if(!e) e=window.event;
+		key = e.keyCode ? e.keyCode : e.which;
+		if((key==107)&&(isLoaded)){
+			if(currImg>0){ currImg--; window.scrollTo(0,imgArr[currImg].offsetTop+174); }
+			else{ if(currImg==0){ currImg--; window.scrollTo(0,305) }else{ if(currImg<0){ window.scrollTo(0,305); } } }
+			e.cancelBubble = true;
+			if (e.stopPropagation) e.stopPropagation();
+		}
+		if((key==106)&&(isLoaded)){
+			if(currImg<imgArr.length-1){ 
+			if(currImg>0 && imgArr[currImg+1].className=="t402-elided-image"){}
+				else{currImg++; 
+				if(currImg==-1){ window.scrollTo(0,305)}
+				else{ window.scrollTo(0,imgArr[currImg].offsetTop+174); }}}
+			else{ if(currImg==imgArr.length-1){ window.scrollTo(0,imgArr[imgArr.length-1].offsetTop+174) } }
+			e.cancelBubble = true;
+			if (e.stopPropagation) e.stopPropagation();
+		}
+
+console.log(currImg);
+console.log(imgArr[currImg+1].className);
+console.log(imgArr);
+
+	}
+</script>
+	
+</head>
+	
+<body id="blog">
+<script type="text/javascript">
+(function() {
+  var ARTICLE_URL = window.location.href;
+  var CONTENT_ID = 'everything';
+  document.write(
+    '<scr'+'ipt '+
+    'src="//survey.g.doubleclick.net/survey?site=7487009'+
+    '&amp;url='+encodeURIComponent(ARTICLE_URL)+
+    (CONTENT_ID ? '&amp;cid='+encodeURIComponent(CONTENT_ID) : '')+
+    '&amp;random='+(new Date).getTime()+
+    '" type="text/javascript">'+'\x3C/scr'+'ipt>');
+})();
+</script>
+
+<div id="container">
+      <div id="containerBorder">
+        <style>
+#middleLeft .globeTrial a {color:#D2232A;}
+#MastheadAug2011 .bgicontext a span {text-transform:none;}
+</style>
+<div id="MastheadAug2011">
+<div id="mastHead">
+  <div id="mastHeadTop">
+    <div id="signIn">
+      <span id="login">
+        <script language="JavaScript"><!--
+        try{showLoginRRD(147);}catch(e){document.writeln('&nbsp;');}
+        //-->
+        </script>
+        <noscript>&nbsp;</noscript>
+      </span>
+    </div>
+    <div id="headerRight" class="radioBDC">
+      <!--passthru-->  <style>
+    #mastHeadTop #headerRight.radioBDC {
+      position: relative;
+      left:-40px;
+    }
+
+    #headerRight.radioBDC {
+      float:right;
+      font-size:14px;
+      font-weight:bold;
+      padding-bottom:5px;
+      width:324px;
+      overflow:hidden;
+    }
+
+    #now-playing-header {
+      overflow:hidden;
+      height:14px;
+      float:right;
+      width: 220px;
+      position: relative;
+      margin-top:5px;
+    }
+    
+    #now-playing-header .scrollMeAway {
+      position:absolute;
+      white-space:nowrap;
+      width:auto
+    }
+    a.listen-live {
+      color:#c33;
+    }
+  </style>
+<!--[if IE]>
+<style>
+#headerRight.radioBDC {width:323px}
+</style>
+<![endif]-->
+
+  <a href="http://www.boston.com/ae/radio/" class="radio-name"><img src="http://cache.boston.com/universal/site_graphics/player_iconlogo.png" alt="RadioBDC Logo" /></a>
+  <div id="now-playing-header">
+    <div class="scrollMeAway">
+      <script>var radioType = 'none'</script>
+      <!--passthru--><span class="np-song-title">Sleepyhead</span> | <span class="np-song-artist">Passion Pit</span>
+
+      <a class="listen-live imageLink"
+	 href="http://www.boston.com/ae/radio/player/"
+         onclick="openWindow('http://www.boston.com/ae/radio/player/','radioBDC','width=870,height=580,resizable=no,scrollbars=no,toolbar=no,location=no,menubar=no,status=no'); return false; var s=s_gi('nytbglobe');
+s.linkTrackVars='eVar29,events';
+s.linkTrackEvents='event24';
+s.eVar29='Bcom Header';
+s.events='event24';
+s.tl(this,'o','RadioBDC Player Launch - Header');">
+	Listen Live</a>
+    </div>
+  </div>
+
+    </div>
+&nbsp;</div>
+  <div id="middleLeft">
+    <a href="http://www.boston.com?mastheadLogo" class="imageLink" id="mastBcomLogo">Boston.com</a>
+    <!--[if lte IE 7]><div id="moveup10px" style="margin-top:-15px"><![endif]--> <!-- Yes this is a terrible implementation -->
+    <div id="mastSearch">
+      <script>otherTab = document.getElementById('searchLocal');</script>
+      <form action="http://search.boston.com/local/Search.do"> 
+        <input type="text" name="s.sm.query" value="Search" onclick="if(this.value=='Search'){this.value=''}" id="mastSearch">
+	 <input type="hidden" value="ssearch" name="s.tab" /> 
+        <input type="submit" value="&nbsp;" class="mastSearch" /> 
+      </form>
+    </div>
+    <!--[if lte IE 7]></div><![endif]-->
+  </div>
+  <div id="middleRight">
+<div align="center" cellpadding="0" cellspacing="0" border="0">
+  <div class="bannerAd" align="center">
+    <div id="ad_lead1" class="advertisement">
+  <script type="text/javascript">
+    googletag.cmd.push(function() { googletag.display('ad_lead1'); });
+  </script>
+</div>
+  </div>
+</div>
+</div></div><!-- end of masthead -->
+
+        <div id="globalNav">
+  <ul class="gnavContainer" id="nav">
+    <li id="ghome"><a href="http://www.boston.com/">Home</a></li>
+    <li id="gglobe"><a href="http://www.bostonglobe.com/">Today's Globe</a></li>
+    <li id="gnews"><a href="http://www.boston.com/news/">News</a></li>
+    <li style="width: 69px;"><a href="http://boston.com/weather/">Weather</a></li>
+    <li id="gsports"><a href="http://www.boston.com/sports/">Sports</a></li>
+    <li style="width: 112px;"><a href="http://boston.com/entertainment/">Entertainment</a></li>
+    <li id="gbusiness"><a href="http://www.boston.com/business/">Business</a></li>
+    <li id="glifestyle"><a href="http://www.boston.com/lifestyle/">Lifestyle</a></li>
+    <li style="width: 58px;"><a href="http://boston.com/health/">Health</a></li>
+    <li id="gtravel"><a href="http://www.boston.com/travel/">Travel</a></li>
+    <li id="gcars"><a href="http://www.boston.com/cars/">Cars</a></li>
+    <li id="gjobs"><a href="http://www.boston.com/jobs/">Jobs</a></li>
+    <li id="gre"><a href="http://www.boston.com/realestate/">Real Estate</a></li>
+  </ul>
+</div>
+<div id="ad_outofpage3"></div>
+
+<div id="ad_outofpage2"></div>
+<div style="margin: 33px"></div>
+<div id="ad_pencil"></div>
+
+        <div id="content" class="blog">
+           <div style="background-color:white;">
+
+<!-- blogheader -->
+
+<div id="blogHeader">
+<div id="headerRight">
+<table><tr><td class="drp">
+<span class="smHead">RECENT ENTRIES</span><br/>
+</td></tr>
+</table>
+
+<ul id="moreList">
+
+<li>&bull; <a href="http://www.boston.com/bigpicture/2014/08/ferguson_protests.html">Ferguson Protests</a> - 08.16</li>
+
+<li>&bull; <a href="http://www.boston.com/bigpicture/2014/08/supermoon_photographs_from_around_the_world.html">Supermoon photographs from around the world</a> - 08.11</li>
+
+<li>&bull; <a href="http://www.boston.com/bigpicture/2014/08/daily_life_august_2014.html">Daily life: July 2014</a> - 08.05</li>
+
+<li>&bull; <a href="http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html">Ebola continues to spread in West Africa</a> - 08.04</li>
+
+</ul>
+
+</div><img src="http://cache.boston.com/universal/site_graphics/blogs/bigpicture/big_picture_header.jpg" id="headerImg" alt="the Big Picture" usemap="#m01"><div class="cf"></div></div>
+
+<map name="m01" id="m01">
+    <area shape="rect" coords="554,43,585,60" href="http://www.boston.com/bigpicture/about.html#faq"/>
+    <area shape="rect" coords="590,43,630,60" href="http://www.boston.com/bigpicture/about.html"/>
+    <area shape="rect" coords="636,43,674,60" href="http://www.boston.com/bigpicture/index.xml"/>
+    <area shape="rect" coords="575,68,667,86" href="http://www.boston.com/bigpicture/about.html"/>
+    <area shape="default" coords="0,0 679,91" href="http://www.boston.com/bigpicture/" >
+</map>
+
+<div id="elsew">
+<a href="http://www.facebook.com/boston.big.picture">On Facebook</a> &nbsp;&#149;&nbsp; 
+<a href="http://twitter.com/big_picture">@big_picture on Twitter</a> &nbsp;&#149;&nbsp; 
+<a href="http://plus.google.com/+BigPicture">On Google+</a> &nbsp;&#149;&nbsp;
+<a href="http://alpha.app.net/BigPicture">On App.net</a> &nbsp;&#149;&nbsp;
+<a href="http://apps.microsoft.com/webpdp/en-us/app/the-big-picture/e18b2640-4033-48f8-9976-cb88cfcf6f34">Windows 8 app</a>
+</div>
+
+<!-- blogheader -->
+
+
+<body>
+  <br></br>
+  <div id="top_share_bar"></div>
+  <br></br>
+  <script>
+      /* Define an image media item: */
+      var image = {
+          type: 'image',
+          src: 'http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/archive/306109.jpg',
+          href: 'http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html'
+          }     
+
+      // Define a UserAction onject
+      var ua = new gigya.socialize.UserAction();
+      ua.setLinkBack("http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html");
+      ua.addMediaItem(image);
+     
+      // Define Share Bar plugin's Parameters
+      var shareBarParams ={
+          userAction:ua,
+          shareButtons: "facebook-like,twitter,pinterest,google-plusone,stumbleupon,reddit,email",
+          containerID: 'top_share_bar' // location of the Share Bar plugin
+      }
+
+      // Load Share Bar plugin
+      gigya.socialize.showShareBarUI(shareBarParams);
+  </script>
+</body>
+
+<div id="ad_outofpage" class="advertisement">
+  <script type="text/javascript">
+    googletag.cmd.push(function() { googletag.display('ad_outofpage'); });
+  </script>
+</div>
+
+<!-- blogEntry -->
+<style>
+.tableTop{border-top: 0px solid #ddd;margin-top:0px;}
+.goog-te-combo{float:left;font-size:11px !important;margin-right:4px !important}
+.goog-te-gadget{line-height:28px}
+#google_translate_element{float:left}
+#trans{float:left;line-height:28px;font-size:12px;margin-right:5px;}
+#bpTools{border:1px solid #e6f0fb;background-image: url(http://cache.boston.com/jobs/i/bptfade.gif);padding:0px 4px 0px 4px;margin:20px 10px 0px 0px;width:976px;line-height:28px;height:28px;}
+</style>
+
+<div id="bpTools" style="clear:both">
+  <div id="trans">Translate into: </div>
+  <div id="google_translate_element"></div>
+  <div style="color:#333;float:right">
+    (<b>Hint</b>: Use 'j' and 'k' keys to move up and down)
+  </div>
+  <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');}       </script>
+  <script src="http://translate.google.com/translate_a/element.js   cb=googleTranslateElementInit">
+  </script>
+</div>
+
+<div style="clear:both"></div>
+
+<table cellpadding="0" cellspacing="0" class="tableTop">
+  <tr valign="top">
+  <td id="commentCountTd"><span class="blackNodot"><div class="commCtDiv"><a href="http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html#comments"><span id="commentCount"><fb:comments-count href="http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html"></fb:comments-count></span> comments</a></div></span></td>
+	<td class="beLeftCol"><span id="dateline">August  4, 2014</span></td>
+	
+
+  </tr>
+</table>
+
+<div class="headDiv2">
+
+
+
+	<h2><a href="http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html">Ebola continues to spread in West Africa</a></h2>
+	<span class="blogText bigText"><div class="bpBody">The World Health Organization is reporting 887 deaths from the worst outbreak of the Ebola virus in history. A man with Ebola-like symptoms who had recently been to West Africa went to the emergency room at the Mount Sinai Hospital in Manhattan on Sunday and a nurse who treated Ebola victims will be the second American flown in a specially outfitted plane from Liberia to be treated for the virus. Emory University Hospital in Atlanta is expecting her to arrive on Tuesday. Kent Brantly, a doctor on her team is also being treated there. --<em>Thea Breite</em> (<a href="http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html">14 photos total</a>)</div><div class="bpImageTop"><a name="photo1"></a> <a href="http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html"><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp1.jpg" class="bpImage" style="height:657px;width:990px" /></a> <br/><div class="bpCaption">The Liberian daughter of a woman that died of Ebola is in tears as her mother is taken for burial from the isolation unit in Foya, Lofa County, Liberia July 2, 2014. (Ahmed Jallanzo/EPA)<div class="cf"></div></div></div></span><span class="bpMore"><div class="bpBoth"><a name="photo2"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp2.jpg" class="bpImage" style="height:660px;width:990px" /> <br/><div class="noimghide" style="margin-top:-660px;height:660px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo2">2</a></div>Medical staff working with Medecins sans Frontieres (MSF) put on their protective gear before entering an isolation area at the MSF Ebola treatment center in Kailahun July 20, 2014. (Tommy Trenchard/Reuters) <a href="#photo2">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo3"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp3.jpg" class="bpImage" style="height:635px;width:990px" /> <br/><div class="noimghide" style="margin-top:-635px;height:635px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo3">3</a></div>A Liberian man holds a Civet being sold on a roadside as bush meat in Lofa County, Liberia 03 July 2014. Bush meat is one of the major carriers of the Ebola virus. The Liberian government and International partners have warned people to not eat bush meat. (Ahmed Jallanzo/EPA) <a href="#photo3">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo4"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp4.jpg" class="bpImage" style="height:569px;width:990px" /> <br/><div class="noimghide" style="margin-top:-569px;height:569px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo4">4</a></div>Protective gear including boots, gloves, masks and suits, drying after being used in a treatment room in the ELWA hospital in the Liberian capital Monrovia on July 24. (Zoom Dosso/AFP/Getty Images) <a href="#photo4">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo5"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp5.jpg" class="bpImage" style="height:645px;width:990px" /> <br/><div class="noimghide" style="margin-top:-645px;height:645px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo5">5</a></div>A nurse from Liberia disinfects the waiting area for visitors at the ELWA Hospital in Monrovia, Liberia, July 28, 2014, where US doctor Kent Bradley was quarantined after contracting the Ebola virus. (Ahmed Jallanzo/EPA) <a href="#photo5">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo6"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp6.jpg" class="bpImage" style="height:660px;width:990px" /> <br/><div class="noimghide" style="margin-top:-660px;height:660px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo6">6</a></div>A boy walks through an empty class room on July 31, 2014 in Monrovia. Liberia announced on July 30 it was shutting all schools and placing "non-essential" government workers on 30 days' leave in a bid to halt the spread of the deadly Ebola epidemic raging in West Africa. (AFP/Getty Images) <a href="#photo6">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo7"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp7.jpg" class="bpImage" style="height:619px;width:990px" /> <br/><div class="noimghide" style="margin-top:-619px;height:619px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo7">7</a></div>A Liberian nurse is being sprayed with disinfectant after preparing several bodies of victims of Ebola for burial on August 1, 2014. (Ahmed Jallanzo/EPA) <a href="#photo7">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo8"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp8.jpg" class="bpImage" style="height:571px;width:990px" /> <br/><div class="noimghide" style="margin-top:-571px;height:571px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo8">8</a></div>People read the comments on current events on a blackboard in Monrovia, Liberia, Saturday Aug. 2, 2014, as the deadly Ebola virus claims hundreds of lives in the West Africa region. (Abbas Dulleh/AP) <a href="#photo8">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo9"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp9.jpg" class="bpImage" style="height:660px;width:990px" /> <br/><div class="noimghide" style="margin-top:-660px;height:660px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo9">9</a></div>Liberian Deputy Health Minister Tolbert Nyensuah talks with protesters on the importance of burying Ebola victims in Johnsonville outside Monrovia, Liberia August 2, 2014. The military police were called in to control youths from the Johnsonville community who staged a protest against the government's decision to bury Ebola victims in Johnsonville. (Ahmed Jallanzo/EPA) <a href="#photo9">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo10"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp10.jpg" class="bpImage" style="height:660px;width:990px" /> <br/><div class="noimghide" style="margin-top:-660px;height:660px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo10">10</a></div>Liberian children wash hands before entering a church service to pray for the end of Ebola at the Providence Baptist Church in Monrovia, Liberia, August 3, 2014.(Ahmed Jallanzo/EPA) <a href="#photo10">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo11"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp11.jpg" class="bpImage" style="height:660px;width:990px" /> <br/><div class="noimghide" style="margin-top:-660px;height:660px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo11">11</a></div>Liberian Christians hold holy communion in gloves to avoid contact with the deadly Ebola virus during a service at the Providence Baptist Church in Monrovia, Liberia August 3, 2014. (Ahmed Jallanzo/EPA) <a href="#photo11">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo12"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp12.jpg" class="bpImage" style="height:660px;width:990px" /> <br/><div class="noimghide" style="margin-top:-660px;height:660px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo12">12</a></div>Nigeria health officials wait to screen passengers at the arrival hall of Murtala Muhammed International Airport in Lagos, Nigeria, Monday, Aug. 4, 2014. Nigerian authorities on Monday confirmed a second case of Ebola in Africa's most populous country, an alarming setback as officials across the region battle to stop the spread of a disease. (Sunday Alamba/AP) <a href="#photo12">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo13"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp13.jpg" class="bpImage" style="height:596px;width:990px" /> <br/><div class="noimghide" style="margin-top:-596px;height:596px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo13">13</a></div>People queue outside a bank as fear spreads that some buildings dealing with the public might be closed due to the spread of the deadly Ebola virus, in the city of Monrovia, Liberia, Monday, Aug. 4, 2014. (Abbas Dulleh/AP) <a href="#photo13">#</a><div class="cf"></div></div></div> <div class="bpBoth"><a name="photo14"></a><img src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/080414_ebola/bp14.jpg" class="bpImage" style="height:660px;width:990px" /> <br/><div class="noimghide" style="margin-top:-660px;height:660px;width:990px"></div><div class="bpCaption"><div class="photoNum"><a href="#photo14">14</a></div>Liberian members of the Women of Peace Building Network in Monrovia, Liberia, August 4, 2014 as they observe two weeks of fasting and praying for God's intervention in eradicating the deadly Ebola virus. According to statistics from the United Nations, 887 people have died from the Ebola outbreak, making it the worst ever in history. The Liberian government has ordered that the bodies of people killed by the Ebola virus must be cremated following strong reactions from communities objecting against the burial of Ebola victims in their areas. (Ahmed Jallanzo/EPA) <a href="#photo14">#</a><div class="cf"></div></div></div> <br/><div id="moreLinks"><div id="moreHeader">More links and information</div><div class="moreLink"><a href="http://www.cnn.com/2014/08/04/health/experimental-ebola-serum/" target="_new">Experimental drug likely saved Ebola patients</a> - cnn.com, 8/4/14</div> <div class="moreLink"><a href="http://www.who.int/mediacentre/factsheets/fs103/en/" target="_new">Ebola virus disease</a> - who.int, 8/4/14</div> </div></span>
+
+
+<script type="text/javascript"> 
+var afterPhoto=4;//last photo to be shown free; 
+$('.bpBoth').slice(afterPhoto-1).addClass('p402_premium');
+bpload();
+if (!bcom_cookie.get('pathAuth'))
+{
+try { _402_Show(); } catch(e) {} 
+}
+</script>
+
+
+<div id="taboola-container" style="width:670px;"> 
+  <div id='taboola-bottom-main-column'></div> 
+  <script type="text/javascript"> 
+    window._taboola = window._taboola || []; 
+    _taboola.push({mode:'autosized-generated-text-under-1r', container:'taboola-bottom-main-column', placement:'bottom-main-column', target_type:'photo'}); 
+  </script> 
+  </div> 
+</div>
+
+<div class="cf"></div>
+
+<div class="bottomFrontPage">
+
+<a href="http://www.boston.com/bigpicture/">&lt; Back to front page</a></div>
+<div><ul id="blogentryPrevNext">
+
+<li class="prevNext"><span class="arrowLeft">&nbsp;</span><a href="http://www.boston.com/bigpicture/2014/07/conflict_continues_in_gaza.html">Previous entry</a></li>
+
+
+<li class="prevNext"><a href="http://www.boston.com/bigpicture/2014/08/daily_life_august_2014.html">Next entry</a><span class="arrowRight">&nbsp;</span></li>
+			</ul>
+<div style="padding-bottom:10px;">
+
+</div>
+</div>
+
+<div id="BF_WIDGET_1">&nbsp;</div> 
+<script type="text/javascript"> 
+(function( ){ 
+BF_WIDGET_JS=document.createElement("script"); BF_WIDGET_JS.type="text/javascript"; 
+BF_WIDGET_SRC="http://ct.buzzfeed.com/wd/UserWidget?u=boston.com&to=1&or=vb&wid=1&cb=" + (new Date()).getTime(); 
+setTimeout(function() {document.getElementById("BF_WIDGET_1").appendChild(BF_WIDGET_JS);BF_WIDGET_JS.src=BF_WIDGET_SRC},1);})(); 
+</script>
+
+<div class="hideMe" style="display:none;">
+</div>
+
+
+
+<!-- blogEntry -->
+
+<div style="clear:both"></div>
+<a name="comments"></a>
+
+<div class="commentDivide"></div>
+<script>
+var commTotal = 0;
+
+function displayCommNum (){
+if (commTotal > 1)
+  document.write('<span id="title">You can read all 0 archived comments <a href="http://www.boston.com/bigpicture/2014/08/comments_ebola_continues_to_spread_in_west_africa.html#comments">over here</a>.</span>');
+};
+displayCommNum();
+</script>
+
+<noscript><span id="title">You can read all 0 archived comments <a href="http://www.boston.com/bigpicture/2014/08/comments_ebola_continues_to_spread_in_west_africa.html#comments">over here</a>.</span></noscript>
+
+<div id="commentView"></div>
+
+
+<div id="comments" class="comments">
+
+
+<div id="commOl">
+
+<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html" num_posts="100" width="675"></fb:comments>
+
+</div>
+
+<script>
+if (commTotal >= commCutoff){
+  document.write('<center> <a href="http://www.boston.com/bigpicture/2014/08/comments_ebola_continues_to_spread_in_west_africa.html#comments">More comments...</a></center><br/><span id="title">Displaying only the last 100 comments. You can read all 0 comments <a href="http://www.boston.com/bigpicture/2014/08/comments_ebola_continues_to_spread_in_west_africa.html#comments">over here</a>.</span>');
+//document.getElementsByTagName("ol")[0].start=(0-99)
+};
+</script>
+<noscript><span id="title">0 comments so far...</span></noscript>
+</div>
+</div>
+<script>
+var jstr = "";
+
+for(j=bpCmId.length-1;j>=0;j--){ 
+jstr+='<div><a id="c' + bpCmId[j][0] + '"></a><div style="float:left;width:110px" class="cNum">' + ((100-j)+(commTotal-100)) + '</div><div style="float:right;" class="cBod"><div class="commentBodyText">' + bpCmId[j][1] + '</div><span class="author"><span>Posted by ' + bpCmId[j][2] + '</span> <span class="comment-date">' + bpCmId[j][3] + '</span></span></div></div><div style="clear:both;"></div>';
+}
+
+setTimeout("document.getElementById('commOl2').innerHTML=jstr",3000)
+</script>
+<div id="rnav">
+<table><tr><td class="drp">
+<span class="smHead">ARCHIVES</span><br/>
+<form style="display:inline;">
+<select id="arcDrop" name="destination" onchange="selecturl(destination)"><option>Select a month</option>
+<option value="http://www.boston.com/bigpicture/2014/08/">August 2014</option>
+<option value="http://www.boston.com/bigpicture/2014/07/">July 2014</option>
+<option value="http://www.boston.com/bigpicture/2014/06/">June 2014</option>
+<option value="http://www.boston.com/bigpicture/2014/05/">May 2014</option>
+<option value="http://www.boston.com/bigpicture/2014/04/">April 2014</option>
+<option value="http://www.boston.com/bigpicture/2014/03/">March 2014</option>
+<option value="http://www.boston.com/bigpicture/2014/02/">February 2014</option>
+<option value="http://www.boston.com/bigpicture/2014/01/">January 2014</option>
+<option value="http://www.boston.com/bigpicture/2013/12/">December 2013</option>
+<option value="http://www.boston.com/bigpicture/2013/11/">November 2013</option>
+<option value="http://www.boston.com/bigpicture/2013/10/">October 2013</option>
+<option value="http://www.boston.com/bigpicture/2013/09/">September 2013</option>
+<option value="http://www.boston.com/bigpicture/2013/08/">August 2013</option>
+<option value="http://www.boston.com/bigpicture/2013/07/">July 2013</option>
+<option value="http://www.boston.com/bigpicture/2013/06/">June 2013</option>
+<option value="http://www.boston.com/bigpicture/2013/05/">May 2013</option>
+<option value="http://www.boston.com/bigpicture/2013/04/">April 2013</option>
+<option value="http://www.boston.com/bigpicture/2013/03/">March 2013</option>
+<option value="http://www.boston.com/bigpicture/2013/02/">February 2013</option>
+<option value="http://www.boston.com/bigpicture/2013/01/">January 2013</option>
+<option value="http://www.boston.com/bigpicture/2012/12/">December 2012</option>
+<option value="http://www.boston.com/bigpicture/2012/11/">November 2012</option>
+<option value="http://www.boston.com/bigpicture/2012/10/">October 2012</option>
+<option value="http://www.boston.com/bigpicture/2012/09/">September 2012</option>
+<option value="http://www.boston.com/bigpicture/2012/08/">August 2012</option>
+<option value="http://www.boston.com/bigpicture/2012/07/">July 2012</option>
+<option value="http://www.boston.com/bigpicture/2012/06/">June 2012</option>
+<option value="http://www.boston.com/bigpicture/2012/05/">May 2012</option>
+<option value="http://www.boston.com/bigpicture/2012/04/">April 2012</option>
+<option value="http://www.boston.com/bigpicture/2012/03/">March 2012</option>
+<option value="http://www.boston.com/bigpicture/2012/02/">February 2012</option>
+<option value="http://www.boston.com/bigpicture/2012/01/">January 2012</option>
+<option value="http://www.boston.com/bigpicture/2011/12/">December 2011</option>
+<option value="http://www.boston.com/bigpicture/2011/11/">November 2011</option>
+<option value="http://www.boston.com/bigpicture/2011/10/">October 2011</option>
+<option value="http://www.boston.com/bigpicture/2011/09/">September 2011</option>
+<option value="http://www.boston.com/bigpicture/2011/08/">August 2011</option>
+<option value="http://www.boston.com/bigpicture/2011/07/">July 2011</option>
+<option value="http://www.boston.com/bigpicture/2011/06/">June 2011</option>
+<option value="http://www.boston.com/bigpicture/2011/05/">May 2011</option>
+<option value="http://www.boston.com/bigpicture/2011/04/">April 2011</option>
+<option value="http://www.boston.com/bigpicture/2011/03/">March 2011</option>
+<option value="http://www.boston.com/bigpicture/2011/02/">February 2011</option>
+<option value="http://www.boston.com/bigpicture/2011/01/">January 2011</option>
+<option value="http://www.boston.com/bigpicture/2010/12/">December 2010</option>
+<option value="http://www.boston.com/bigpicture/2010/11/">November 2010</option>
+<option value="http://www.boston.com/bigpicture/2010/10/">October 2010</option>
+<option value="http://www.boston.com/bigpicture/2010/09/">September 2010</option>
+<option value="http://www.boston.com/bigpicture/2010/08/">August 2010</option>
+<option value="http://www.boston.com/bigpicture/2010/07/">July 2010</option>
+<option value="http://www.boston.com/bigpicture/2010/06/">June 2010</option>
+<option value="http://www.boston.com/bigpicture/2010/05/">May 2010</option>
+<option value="http://www.boston.com/bigpicture/2010/04/">April 2010</option>
+<option value="http://www.boston.com/bigpicture/2010/03/">March 2010</option>
+<option value="http://www.boston.com/bigpicture/2010/02/">February 2010</option>
+<option value="http://www.boston.com/bigpicture/2010/01/">January 2010</option>
+<option value="http://www.boston.com/bigpicture/2009/12/">December 2009</option>
+<option value="http://www.boston.com/bigpicture/2009/11/">November 2009</option>
+<option value="http://www.boston.com/bigpicture/2009/10/">October 2009</option>
+<option value="http://www.boston.com/bigpicture/2009/09/">September 2009</option>
+<option value="http://www.boston.com/bigpicture/2009/08/">August 2009</option>
+<option value="http://www.boston.com/bigpicture/2009/07/">July 2009</option>
+<option value="http://www.boston.com/bigpicture/2009/06/">June 2009</option>
+<option value="http://www.boston.com/bigpicture/2009/05/">May 2009</option>
+<option value="http://www.boston.com/bigpicture/2009/04/">April 2009</option>
+<option value="http://www.boston.com/bigpicture/2009/03/">March 2009</option>
+<option value="http://www.boston.com/bigpicture/2009/02/">February 2009</option>
+<option value="http://www.boston.com/bigpicture/2009/01/">January 2009</option>
+<option value="http://www.boston.com/bigpicture/2008/12/">December 2008</option>
+<option value="http://www.boston.com/bigpicture/2008/11/">November 2008</option>
+<option value="http://www.boston.com/bigpicture/2008/10/">October 2008</option>
+<option value="http://www.boston.com/bigpicture/2008/09/">September 2008</option>
+<option value="http://www.boston.com/bigpicture/2008/08/">August 2008</option>
+<option value="http://www.boston.com/bigpicture/2008/07/">July 2008</option>
+<option value="http://www.boston.com/bigpicture/2008/06/">June 2008</option>
+<option value="http://www.boston.com/bigpicture/2008/05/">May 2008</option>
+
+</select></form>
+</td><td class="drp">
+<span class="smHead">CATEGORIES</span><br/>
+
+
+<form style="display:inline;">
+<select id="arcDrop" name="destination" onchange="selecturl(destination)"><option>Select a category</option>
+
+    
+<option value="http://www.boston.com/bigpicture/afghanistan/">afghanistan</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/africa/">africa</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/agriculture/">agriculture</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/americas/">americas</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/animals/">animals</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/art/">art</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/asia/">asia</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/astronomy/">astronomy</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/bosnia/">Bosnia</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/ceremony/">ceremony</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/crime/">crime</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/culture/">culture</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/dailylife/">dailylife</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/disaster/">disaster</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/earth/">earth</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/education/">education</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/environment/">environment</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/europe/">europe</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/health/">health</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/history/">history</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/holiday/">holiday</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/middleeast/">middleeast</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/notices/">notices</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/photographer/">photographer</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/politics/">politics</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/protest/">protest</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/religion/">religion</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/science/">science</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/society/">society</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/sports/">sports</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/technology/">technology</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/usa/">usa</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/war/">war</option>
+    
+
+    
+<option value="http://www.boston.com/bigpicture/weather/">weather</option>
+    
+
+</select></form>
+</td></tr>
+</table>
+
+
+<div id="rnavRecent">RECENT ENTRIES</div>
+<ul id="rnavMoreList">
+
+<li><a href="http://www.boston.com/bigpicture/2014/08/ferguson_protests.html">Ferguson Protests</a> - 08.16</li>
+
+<li><a href="http://www.boston.com/bigpicture/2014/08/supermoon_photographs_from_around_the_world.html">Supermoon photographs from around the world</a> - 08.11</li>
+
+<li><a href="http://www.boston.com/bigpicture/2014/08/daily_life_august_2014.html">Daily life: July 2014</a> - 08.05</li>
+
+<li><a href="http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html">Ebola continues to spread in West Africa</a> - 08.04</li>
+
+<li><a href="http://www.boston.com/bigpicture/2014/07/conflict_continues_in_gaza.html">Conflict continues in Gaza</a> - 07.25</li>
+
+<li><a href="http://www.boston.com/bigpicture/2014/07/typhoon_rammasun.html">Typhoon Rammasun </a> - 07.23</li>
+
+<li><a href="http://www.boston.com/bigpicture/2014/07/malaysian_jet_crashed_in_ukraine.html">Malaysian jet crashes in Ukraine</a> - 07.18</li>
+
+</ul>
+
+<br/><br/>
+
+
+<!--
+<div id="bkAd"><a href="http://services.bostonglobe.com/globestore/category.cgi?item=0-7627-5062-6"><img style="border:0px;height:324px;width336px;" class="bpImage" src="http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/secretspaces.gif"></a></div>
+-->
+
+
+<SCRIPT LANGUAGE="JavaScript">function selecturl(s) 
+{
+  var gourl = s.options[s.selectedIndex].value;
+  if ((s.selectedIndex!=0) && ((gourl != null) && (gourl != "") ))
+  {
+   window.top.location.href = gourl;
+  }
+}
+</SCRIPT>
+</div>
+
+<div style="clear:both;"></div>
+
+
+
+
+</div>
+<br></br>
+  <div id="bottom_share_bar"></div>
+
+  <script>
+      /* Define an image media item: */
+      var image = {
+          type: 'image',
+          src: 'http://inapcache.boston.com/universal/site_graphics/blogs/bigpicture/archive/306109.jpg',
+          href: 'http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html'
+          }     
+
+      // Define a UserAction onject
+      var ua = new gigya.socialize.UserAction();
+      ua.setLinkBack("http://www.boston.com/bigpicture/2014/08/ebola_continues_to_spread_in_west_africa.html");
+      ua.addMediaItem(image);
+     
+      // Define Share Bar plugin's Parameters
+      var shareBarParams ={
+          userAction:ua,
+          shareButtons: "facebook-like,twitter,pinterest,google-plusone,stumbleupon,reddit,email",
+          containerID: 'bottom_share_bar' // location of the Share Bar plugin
+      }
+
+      // Load Share Bar plugin
+      gigya.socialize.showShareBarUI(shareBarParams);
+  </script>
+
+
+
+
+
+
+<!-- SiteCatalyst code version: H.19.3 Copyright 1997-2003 Omniture, Inc. More info available at http://www.omniture.com -->
+<script language="JavaScript" src="http://cache.boston.com/omniture/hcode/s_code.js"></script>
+<script language="JavaScript"><!--
+
+s.pageName='News | World | The Big Picture | Ebola continues to spread in West Africa | Blog';
+s.channel='News',s.prop1='News | World';
+s.server='',s.pageType='',s.prop2='',s.prop3="Lane Turner",s.prop4='',s.prop5='',s.prop6='Blog',s.prop7='',s.prop8='08/19/2014',s.prop9='',s.prop10='',s.prop14='News | World | The Big Picture | Blog',s.prop17='Movable Type',s.prop41='Boston.com';
+
+if(document.location.search.indexOf('comments=all')!=-1) { s.prop6 += ' | Comments view'; }
+/* E-commerce Variables */
+s.campaign='',s.state='',s.zip='',s.events='',s.products='',s.purchaseID='',s.eVar1='',s.eVar2='',s.eVar3='',s.eVar4='',s.eVar5='',s.eVar6='',s.eVar7='',s.eVar8='',s.eVar9='',s.eVar10='',s.eVar41='Boston.com';
+
+
+
+var isFacebook = getCookie('fbsr_135637993114591'), isBCom_PA = getCookie('pathAuth'), isBCom_PAS = getCookie('pathAuthSess');
+    if(isFacebook != null) { s.prop35 = 'logged in', s.eVar20 = 'logged in', s.prop42 = 
+'facebook', s.eVar42 = 'facebook';
+}
+
+else { 
+    if((isBCom_PA != null) || ((isBCom_PA != null) && (isBCom_PAS != null))) {
+        s.prop35 = 'logged in', s.eVar20 = 'logged in', s.prop42 = 'Boston.com', s.eVar42 = 'Boston.com';
+} 
+    else { s.prop35 = 'logged out', s.eVar20='logged out', s.prop42 = 'n/a', s.eVar42 = 'n/a'; } 
+} 
+
+
+
+var s_code=s.t();if(s_code)document.write(s_code)
+//--></script>
+<script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script>
+<noscript><a href="http://www.omniture.com" title="Web Analytics"><img src="http://nytbglobe.112.2O7.net/b/ss/nytbglobe/1/H.19.3--NS/0" height="1" width="1" border="0" alt="" /></a></noscript><!--/DO NOT REMOVE/-->
+
+<!--Chartbeat--><script src="http://cache.boston.com/universal/js/bcom_chartbeat.js"></script><!-- End ChartBeat-->
+
+<div id="footer">
+
+
+  
+<div id="insideBcom"></div>
+    <div id="bottomLinks">
+    <ul class="gnavContainer">
+      <li><a rel="nofollow" href="http://www.boston.com/">Home</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/news/globe/">Today's Globe</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/news/">News</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/business/">Business</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/sports/">Sports</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/lifestyle/">Lifestyle</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/ae/">A&amp;E</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/thingstodo/">Things to Do</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/travel/">Travel</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/cars/" class="cfied">Cars</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/jobs/" class="cfied">Jobs</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/realestate/" class="cfied">Real Estate</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/search/" class="cfied">Local Search</a></li>
+    </ul>
+    <ul id="bcomLinks">
+      <li class="first"><a rel="nofollow" href="http://www.boston.com/help/bostoncom_info/">Contact Boston.com</a></li> <li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/help/">Help</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://services.bostonglobe.com/advertiser/online/online.aspx?id=13052">Advertise</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://services.bostonglobe.com/aboutus/career/default.aspx?id=7098">Work here</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/help/privacy_policy/">Privacy Policy</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/help/privacy_policy/#adchoice">Your Ad Choices</a></li><li class="listPipe">|</li>
+	  <li><a rel="nofollow" href="http://www.boston.com/help/memberagreement">Terms of Service</a></li><li class="listPipe">|</li>
+      <li><a href="http://www.boston.com/help/email">Newsletters</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/tools/mobile/">Mobile</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://www.boston.com/tools/rss/">RSS feeds</a></li><li class="listPipe">|</li>
+      <li><a href="http://spiderbites.boston.com/sitemap-service/Home.xml">Sitemap</a></li>
+    </ul>
+    <ul id="bglobeLinks">
+      <li class="first"><a rel="nofollow" href="http://bostonglobe.com/aboutus/contact_us/default.aspx">Contact The Boston Globe</a></li><li class="listPipe">|</li>
+      <li><a href="http://services.bostonglobe.com/order/zip.aspx?rc=WW049774&od=372">Subscribe</a></li><li class="listPipe">|</li>
+      <li><a rel="nofollow" href="http://services.bostonglobe.com/subscribers/custserv.aspx?id=5274">Manage your subscription</a></li><li class="listPipe">|</li>
+      <li><a href="http://services.bostonglobe.com/advertiser/default.aspx">Advertise</a></li><li class="listPipe">|</li>
+      <li><a rel-"nofollow" href="http://bostonglobe.com/insiders">Boston Globe Insiders</a></li><li class="listPipe">|</li> 
+      <li><a rel="nofollow" href="http://www.doriancolor.com/page3.html">The Boston Globe Gallery</a></li><li class="listPipe">|</li>
+      <li>&copy; <script> var crYear = new Date(); document.write(crYear.getFullYear());</script> Boston Globe Media Partners, LLC</li>
+    </ul>
+  </div>
+<script id="commentData" type="text/Javascript" language="JavaScript">
+  function blogEntryCheckComm(){
+    return;
+  }
+  function blogIndexCheckComm(){
+    return;
+  }
+
+  var pluckEntries = pluckEntries || [];
+
+  if (typeof pluckCats != 'undefined' && pluckCats == 'MT Blog')
+     {
+	$('#aComments').html('<div id="comments" class="ugc-comments comments mtype"><div class="loading-message" id="loading-comments">Loading comments...</div></div>');
+       uuid = pluckID;
+       var stylesheet = document.createElement("link");
+       stylesheet.type = "text/css";
+       stylesheet.href = "http://www.boston.com/css/bcom-comments.css?v=2"
+       stylesheet.rel = "stylesheet";
+       document.body.appendChild(stylesheet);
+	$.getScript('http://www.boston.com/js/lib/tinymce/tinymce.min.js?v=2', function(data, textStatus, jqxhr) {
+           var script   = document.createElement("script");
+           script.type  = "text/javascript";
+           script.src   = "http://www.boston.com/js/bcom-comments.js?v=2";
+           document.body.appendChild(script);
+        });   
+}
+  else if(pluckEntries.length>0){
+    var script = document.createElement('script');
+    script.type = "text/javascript";
+    script.src = "http://www.boston.com/js/bcom-blog-index.js?v=2";
+    document.body.appendChild(script);
+  }
+
+
+</script>
+
+<!-- BUZZFEED  -->
+<script type="text/javascript">
+
+(function(){BF_WIDGET_JS=document.createElement("script");BF_WIDGET_JS.type="text/javascript";BF_WIDGET_SRC="http://ct.buzzfeed.com/wd/UserWidget?u=boston.com&to=1&or=vb&wid=1&cb="
+  + (new Date()).getTime();setTimeout(function()
+  {document.getElementById("content").appendChild(BF_WIDGET_JS);BF_WIDGET_JS.src=BF_WIDGET_SRC},1);
+  })(); 
+
+ </script>
+
+<div id='DYSCR'></div>
+
+  <div id="bottomBanner"></div>
+        </div>
+      </div>
+    </div>
+  <!-- START Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2010 Nielsen Online -->
+<script type="text/javascript">
+  (function () {
+    var d = new Image(1, 1);
+    d.onerror = d.onload = function () {
+      d.onerror = d.onload = null;
+    };
+    d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-604060h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+  })();
+</script>
+<noscript>
+  <div>
+    <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-604060h&amp;cg=0&amp;cc=1&amp;ts=noscript"
+    width="1" height="1" alt="" />
+  </div>
+</noscript>
+<!-- END Nielsen Online SiteCensus V6.0 --> 
+<!-- lead2 -->
+<div id="ad_outofpage1" class="out-of-page-ad"></div>
+
+
+<div id='taboola-bmc'></div> 
+<script type="text/javascript"> 
+   window._taboola = window._taboola || []; 
+   _taboola.push({photo:'auto'}); 
+</script> 
+<script type="text/javascript" src="http://cdn.taboolasyndication.com/libtrc/boston/loader.js"></script> 
+</body>
+</html>

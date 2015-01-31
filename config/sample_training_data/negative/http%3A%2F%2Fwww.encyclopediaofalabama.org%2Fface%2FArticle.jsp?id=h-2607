@@ -1,0 +1,308 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	    
+	    
+		
+	    
+		
+	    
+	    
+	  
+	  
+	    
+	    
+		
+	    
+		
+	    
+	
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="en-us" />
+	<meta name="copyright" content="(c) Copyright 2005 Encyclopedia of Alabama" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link href="/face/styles/eoa.css" rel="stylesheet" type="text/css" />
+<link href="/face/styles/ajax.css" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 7]>
+ <link href="/face/styles/IEajax.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<script language="JavaScript" type="text/javascript" src="/face/js/article.js"></script>
+<script language="JavaScript" type="text/javascript" src="/face/js/ajax.js"></script>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false
+    &amp;key=ABQIAAAAmsXxv3niacUPx9ES5qMXhBS5TPHw_dcX5d2VfNNAr8alkDqA5RR-qRqBpSrujofVuDv0-yYzr3pBjA"
+    type="text/javascript">
+  </script>
+<script language="JavaScript" type="text/javascript" src="/face/js/googleMaps.js"></script>
+
+	<script language="javascript" src="/face/styles/NGE_javascript.js" type="text/javascript"></script>
+	<title>Encyclopedia of Alabama: Birmingham Cholera Outbreak of 1873</title>
+</head>
+
+<body onload="convertTrees();expandToItem('tree1','tree1');">
+
+<!-- Begin Page Wrapper -->
+<div id="pageWrapper">
+
+<!-- Begin Header -->
+<div id="header">
+	
+<a href="/face/Home.jsp"><img src="/face/assets/eoa_logo.gif" width="235" height="89" alt="Encyclopedia of Alabama" border="0" /></a>
+
+<!-- Begin Nav Bar -->
+
+
+<!-- Begin Nav Bar -->
+<a href="/face/Give.jsp""><img src="assets/give.gif" alt="Give to EOA" border="0" style="position:absolute; right:7px; top:8px; z-index:1"></a>
+<div id="navbar">
+<ul id="top" ><li id="glossary"><a href="GlossaryIndex.jsp">glossary</a></li><li id="indexes"><a href="Indexes.jsp">indexes</a></li><li id="about"><a href="About.jsp">about EOA</a></li><li id="contact"><a href="mailto:editor@encyclopediaofalabama.org">contact us</a></li></ul>
+<ul><li id="home"><a href="Home.jsp">home</a></li><li id="features"><a href="Features.jsp">features</a></li><li id="places"><a href="PlacesIndex.jsp">places</a></li><li id="galleries"><a href="Galleries.jsp">galleries</a></li><li id="quickfacts"><a href="QuickFacts.jsp">quick facts</a></li></ul>
+</div>
+<!-- End Nav Bar -->
+
+<!-- End Nav Bar -->
+
+<!-- Begin Utility Area -->
+<div id="utility-box">
+
+	<!-- Begin Search Utility -->
+<div id="utility-search">
+<h2>Search</h2>
+<br />
+<form method="post" action="SearchResult.jsp"><input name="searchTerms" size="20" style="" maxlength="100" />
+<input value="Go" alt="search" src="/face/assets/go-button.gif" border="0" width="29" height="24" type="image" style="vertical-align: middle;"/></form>
+</div>
+	<!-- End Search Utility -->
+
+		<!-- Begin Additional Utilities -->
+<div id="utility-additional">
+<h2><a href="../Teachers/index.jsp" class="teacher">For Teachers</a></h2><br />
+<a href="Partners.jsp" class="teacher">partners</a>&nbsp;&#8226;&nbsp;<a href="Sponsors.jsp" class="teacher">EOA sponsors</a>
+</div>
+		<!-- End Additional Utilities -->
+
+</div>
+<!-- End Utility Area -->
+
+</div>
+<!-- End Header -->
+
+<!-- Begin Content Wrapper -->
+<div id="content-wrapper" class="clearfix">
+
+	<!-- Begin Sidebar -->
+	<div id="sidebar">
+
+	<!-- Begin Category Nav -->
+	
+	
+<div id="category-nav" >
+<ul><li><a href="Categories.jsp?path=Agriculture/">Agriculture</a></li><li><a href="Categories.jsp?path=ArtsandLiterature/">Arts &amp; Literature</a></li><li><a href="Categories.jsp?path=BusinessandIndustry/">Business &amp; Industry</a></li><li><a href="Categories.jsp?path=Education/">Education</a></li><li><a href="Categories.jsp?path=Folklife/">Folklife</a></li><li><a href="Categories.jsp?path=GeographyandEnvironment/">Geography &amp; Environment</a></li><li><a href="Categories.jsp?path=GovernmentandPolitics/">Government &amp; Politics</a></li><li class="on" ><a href="Categories.jsp?path=History/">History</a></li><li><a href="Categories.jsp?path=PeoplesofAlabama/">Peoples of Alabama</a></li><li><a href="Categories.jsp?path=Religion/">Religion</a></li><li><a href="Categories.jsp?path=ScienceandTechnology/">Science &amp; Technology</a></li><li><a href="Categories.jsp?path=SportsandRecreation/">Sports &amp; Recreation</a></li></ul></div><!--<div id="category-nav"><ul> <li><a href="Categories.jsp?path=Agriculture/">Agriculture</a></li><li><a href="#">Arts &amp; Literature</a></li><li><a href="#">Business &amp; Industry</a></li><li><a href="#">Education</a></li><li><a href="#">Folklife</a></li><li><a href="#">Geography &amp; Environment</a></li><li><a href="#">Government &amp; Politics</a></li><li><a href="#">History</a></li><li><a href="#">Peoples of Alabama</a></li><li><a href="#">Religion</a></li><li><a href="#">Science &amp; Technology</a></li><li><a href="#">Sports &amp; Recreation</a></li></ul></div>-->
+	
+	<!-- End Category Nav -->
+
+	<!-- Begin Article Links -->
+	
+<div xmlns:MHsql="com.motorcode.nge.face.NgeSaxonDbExtension" id="article-links">
+   <h1>Related Links</h1>
+   <ul type="disc">
+      <li><a href="javascript:void(0);" onclick="window.open('http://www.uab.edu/reynolds/collect/reghistory/cholera','External','resizable=1,scrollbars=yes,toolbar=yes,location=yes,status=yes,menubar=yes,copyhistory=yes')">Article by M. H. Jordan at the UAB Reynolds Historical Library</a></li>
+      <li><a href="javascript:void(0);" onclick="window.open('http://www.usgwarchives.org/al/statewide/history/book/choleraepidemic/cholera.htm','External','resizable=1,scrollbars=yes,toolbar=yes,location=yes,status=yes,menubar=yes,copyhistory=yes')">USGenWeb Archives Project - Alabama</a></li>
+   </ul>
+</div>
+
+
+	<!-- End Article Links -->
+
+	</div>
+	<!-- End Sidebar-->
+
+<!-- Begin Breadcrumb -->
+
+
+<div id="breadcrumb">
+<ul>
+<li>&gt;&nbsp;<a href="/face/Home.jsp">Home</a></li>&nbsp;&gt;&gt;&nbsp;<li class="first"><a href="/face/Categories.jsp?path=History/">History</a></li>&nbsp;&gt;&gt;&nbsp;<li class="first"><a href="/face/Categories.jsp?path=History/SectionalismtheCivilWarandRecons-2/">1838-1874: Civil War and Reconstruction</a></li>&nbsp;&gt;&gt;&nbsp;
+			Birmingham Cholera Outbreak of 1873
+	
+</ul>
+</div>
+<!-- End Breadcrumb -->
+
+<!-- Begin Article Body -->
+
+<div xmlns:MHsql="com.motorcode.nge.face.NgeSaxonDbExtension" xmlns:date="http://exslt.org/dates-and-times" id="content-article">
+   <h1>Birmingham Cholera Outbreak of 1873</h1>
+   <div id="Social">
+      <ul>
+         <li><a href="/face/Map.jsp?id=h-2607"><img src="/face/assets/48px-Internet-web-browser.svg.png" alt="Map  it!">
+               Map it!
+               </a></li>
+         <li><script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#pub lisher=da028a69-db23-426f-ae82-adffce6e4bb7&amp;type=website"></script></li>
+         <li><a href="javascript:newWindow('/face/ArticlePrintable.jsp?id=h-2607',600,440,'yes' ,'yes','yes','no','no','no','no')"><img src="/face/assets/icon_print.gif" alt="Printable Version">
+               Print
+               </a></li>
+      </ul>
+   </div><br><p>Just two years after its founding, <a href="/face/Article.jsp?id=h-1421">Birmingham</a>, <a href="/face/Article.jsp?id=h-1370">Jefferson County</a>, was beset by a deadly cholera epidemic during the summer months of 1873 that killed 128 people. The disease spread rapidly
+      throughout the city after it entered the <a href="/face/Article.jsp?id=h-1645">water</a> supply. As the death toll rose, people fearing for their lives flooded out of the city; many chose not to return.
+   </p>
+   <p>Cholera, an intestinal infection caused by the bacterium <i>Vibrio cholerae</i>, is passed by contaminated food and water and causes severe diarrhea and dehydration. Birmingham was founded near profitable
+      natural resources and not in the vicinity of a major water supply, a factor which greatly assisted the spread of the disease.
+      The city's residents had only one sanitary source of water in 1873, a creek's reservoir located nearly two miles outside of
+      the city. In contrast, ground wells were the city's other option, but were located in the city's lowest elevations and filled
+      with groundwater that ran down from higher elevations, making them far less sanitary.
+   </p>
+   <p><span class="image-thumb-left"><a href="javascript:void(0); " onclick="window.open('/face/Multimedia.jsp?id=m-7052','Internal','width=600,height=460,resizable=yes,scrollbars=no,toolbar=no,location=no,status=no,menubar=no,copyhistory=no')"><IMG border="0" src="/media_content/m-7052_thumb.jpg" alt="Jefferson County native Mortimer H. Jordan (1844-1889) was " title="Mortimer Jordan"></a><span class="image-caption" style="width: 106px">Mortimer Jordan</span></span>The first reported case of cholera in Birmingham dates to June 12, 1873. The individual considered to be the first to carrier
+      of the disease, known to history only as Mr. Y., had recently moved to Birmingham from <a href="/face/Article.jsp?id=h-2498">Huntsville</a>. Mr. Y. was in Birmingham six weeks before falling ill with cholera, displaying symptoms three days after his bed and bed
+      accessories arrived from Huntsville, which was suffering through its own epidemic at that time. Thus, the disease is believed
+      to have arrived in Birmingham by way of Mr. Y.'s belongings. Mr. Y. died shortly after he began suffering from the vomiting
+      and diarrhea associated with cholera. Local physician Mortimer H. Jordan suspected cholera, but his records indicate that
+      the doctors who treated Mr. Y. did not identify the disease as the cause of death. Thus, doctors did not demand the proper
+      disposal of Mr. Y.'s bodily fluids or bedding. Typically, bodies, body fluids, and other items contacted by cholera victims
+      were disinfected with carbolic acid and buried, and bedding and clothing would have been burned. On June 17, two sisters came
+      down with the disease and died shortly after falling ill. As with Mr. Y., no one properly disposed of the sisters' body fluids.
+   </p>
+   <p>The <a href="/face/Article.jsp?id=h-1387">impoverished</a>, primarily African American neighborhood known as the "Baconsides" faced the greatest hardship during the first days of the
+      epidemic. The sisters who contracted cholera after the death of Mr. Y. lived on the hill just above the Baconsides, and it
+      is believed that their improperly managed body fluids contaminated the water supply in the community. Cholera was rampant
+      in the neighborhood during the final days of June. After roughly 10 days of widespread deaths there, the disease migrated
+      into the general population.
+   </p>
+   <p>None of the doctors in the Birmingham area had any direct experience with cholera, and they worked under several false assumptions.
+      At the time, they thought that the disease plaguing the city was airborne in nature. Therefore, pots of tar were burned on
+      street corners in the belief that the smoke would disinfect the air. On July 1, however, doctors acknowledged that the deaths
+      were the result of cholera, which was known to be transmitted by water. After that, community leaders took steps to rid the
+      city of the disease, including cleaning streets, draining and disinfecting city cesspools, and disinfecting and burying cholera-infected
+      body parts and fluids.
+   </p>
+   <p>Many of the city's doctors, including James B. Luckie and Jordan, remained in the city, as did a number of individuals who
+      stayed and bravely attempted to aid the ill. These community-minded residents included local madame <a href="/face/Article.jsp?id=h-1862">Louise Wooster</a> and city alderman Francis P. O'Brien, who became so sick a casket was ordered and his obituary printed in a local paper,
+      but he survived. Such acts of selflessness, however, were overshadowed by a mass exodus of people who feared for their lives.
+      Whereas approximately 4,000 people had settled in the city by June of 1873, only half that number remained by the end of the
+      summer.
+   </p>
+   <p>The local economy was devastated by the loss of population and an accompanying sharp decline in property values. Further,
+      a national economic depression arrived on the heels of the cholera epidemic, significantly adding to the city's problems.
+      One positive development arose out of the epidemic, however. City leaders, faced with the inadequacy of water services, improved
+      sanitary systems and increased the capacity of the recently established Birmingham Water Works, and Birmingham eventually
+      recovered. <br><br><b>Additional Resources</b>&nbsp;<br><br>Baggett, James L., ed. <i>A Woman of the Town: Louise Wooster, Birmingham's <i>Magdalen</i></i>. Birmingham: Birmingham Public Library Press, 2005.
+   </p>
+   <p>Bennett, James R. <i>Historic Birmingham <i>&amp;&nbsp;<i> <i>Jefferson County</i></i></i></i>. San Antonio, Texas: Historical Publishing Network, 2008.
+   </p>
+   <p>Caldwell, H. M. <i>History of the Elyton Land Company and Birmingham, Alabama</i>. 1892. Reprint, Birmingham:  Southc Birmingham <i>&amp;&nbsp;<i> <i>Jefferson County</i></i></i></i>. San Antonio, Texas: Historical Publishing Network, 2008.
+   </p>
+   <p>Caldwell, H. M. <i>History of the Elyton Land Company and Birmingham, Alabama</i>. 18ern University Press, 1972.
+   </p>
+   <p>Rosenberg, Charles. <i>The Cholera Years</i>. Chicago: University of Chicago Press, 1962. 
+   </p>
+   <p><i>Cholera Epidemic of 1873 in the United States. The Introduction of Epidemic Cholera Through the Agency of the Mercantile Marine:
+         Suggestions of Measures of Prevention</i>. Washington: Government Printing Office, 1875.
+   </p>
+   <p align="right">Jared&nbsp;Peoples<br><i>Odenville, Alabama</i></p><br><p class="pub-date">Published June 16, 2010<br>Last updated March 14, 2013
+   </p>
+</div>
+<!-- End Article Body -->
+
+<!-- End Content Wrapper -->
+</div>
+
+<!-- Begin Footer -->
+<div id="footer">
+<ul><li class="first"><a href="Home.jsp">Home</a></li><li><a href="Features.jsp">Features</a></li><li><a href="Galleries.jsp">Galleries</a></li><li><a href="BecomingAlabama.jsp">Becoming Alabama</a></li><li><a href="Indexes.jsp">Indexes</a></li><li><a href="../Teachers/index.jsp">For Teachers</a></li><li><a href="About.jsp">About EOA</a></li><li><a href="mailto:editor@encyclopediaofalabama.org">Contact Us</a></li></ul>
+<p>The Encyclopedia of Alabama TM &amp; &copy; 2013. <a href="http://www.alabamahumanities.org/">Alabama Humanities Foundation</a>. <a href="Legal.jsp">All Rights Reserved</a>.</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A service of <a href="http://www.auburn.edu">Auburn University</a>, <a href="http://www.ua.edu">The University of Alabama</a>, and <a href="http://www.alsde.edu">Alabama State Dept. of Education</a>.
+</div>
+
+<div id="infoLayer" style="visibility:hidden; position: absolute; top: 0; right: 0; z-index: 1000;">
+<table cellspacing="0" cellpadding="0" border="0" width="220">
+	<tr>
+	    <td width="21" height="21"><img src="/face/assets/ajax/cornerTL.png" alt="corner" width="21" height="21"/><br/></td>
+	    <td width="100%" height="21"><img src="/face/assets/ajax/lineT.png" alt="line" width="100%" height="21"/><br/></td>
+	    <td width="21" height="21"><img src="/face/assets/ajax/cornerTR.png" alt="corner" width="21" height="21"/><br/></td>
+	</tr>
+	<tr>
+	    <td class="top-left" width="21" height="100%"><div></div><br/></td>
+	    <td bgcolor="#660000"><div id="ajaxTitle" class="layerTitle">&nbsp;</div></td>
+	    <td class="top-right" width="21" height="100%"><div></div><br/></td>
+	</tr>
+	<tr>
+	    <td class="middle-left" width="21" height="100%"><div><!--  now in css - works there for some reason <img src="/face/assets/ajax/lineL.png" width="21" height="100%"/> --></div></td>
+	    <td width="100%" height="100%" bgcolor="#FFFFFF"><div id="ajaxBody" class="layerBody"></div></td>
+	    <td class="middle-right"  width="21" height="100%"><div><!--  now in css - works there for some reason  <img src="/face/assets/ajax/lineR.png" width="21" height="100%"/> --></div></td>
+	</tr><tr>
+	    <td width="21" height="21"><img src="/face/assets/ajax/cornerBL.png" alt="corner" width="21" height="21"/><br/></td>
+		<td width="100%" height="21"><img src="/face/assets/ajax/lineB.png"  alt="line" width="100%" height="21"/><br/></td>
+		<td width="21" height="21"><img src="/face/assets/ajax/cornerBR.png" alt="corner" width="21" height="21"/><br/></td>
+	</tr><tr>
+		<td><img src="/face/assets/ajax/spacer.gif" alt="spacer" width="21" height="1"/><br/></td>
+		<td><img src="/face/assets/ajax/spacer.gif" alt="spacer" width="178" height="1"/><br/></td>
+		<td><img src="/face/assets/ajax/spacer.gif" alt="spacer" width="21" height="1"/><br/></td>
+	</tr>
+</table>
+</div>
+<div id="ear" style="visibility:hidden; position: absolute; top: 0; right: 0; z-index: 1000;">
+	<table cellspacing="0" cellpadding="0" border="0" width="56">
+		<tr><td height="34" width="56"><img src="/face/assets/ajax/earOver.png" alt="earOver" width="56" height="34"/></td></tr>
+	</table>	
+</div>
+
+<!-- End Footer-->
+
+</div>
+<!-- End Page Wrapper -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5172540-1");
+
+pageTracker._trackPageview();
+
+</script>
+</body>
+</html>
+			c='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</scri

@@ -1,0 +1,13 @@
+package:
+    name: ache
+    version: 0.1.0
+
+build:
+    number: 0
+
+source:
+    git_url: git@github.com:ContinuumIO/ache.git
+    git_tag: 0.1.0
+
+about:
+    license: GPL 2.0

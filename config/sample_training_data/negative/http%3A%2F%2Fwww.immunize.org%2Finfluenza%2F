@@ -1,0 +1,2662 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Influenza Disease and Vaccination Information</title>
+<meta name="DESCRIPTION" content="Collected resources and information for influenza disease and vaccination: Access the latest recommendations, news, information, and resources from IAC, government agencies, professional journals, and other organizations in one spot on immunize.org.">
+<!-- Goes in the <head> section of every page under /subfolder -->
+<script type="text/javascript" language="JavaScript">
+<!--
+var appname = navigator.userAgent.toLowerCase();
+var isWin = (appname.indexOf("win") != -1);
+var mac = (appname.indexOf("mac") != -1);
+var n4 = (document.layers) ? true:false;
+var ie = (document.all)? true:false; 
+var ver4 =  (navigator.appVersion.substr(navigator.appVersion.lastIndexOf('.') - 1,1) == 4)? true:false;
+if (mac && ie && ver4) {
+        var macIE4 = true;
+}
+if (isWin & n4) {
+        document.write('<link rel="stylesheet" type="text/css" href="/inc_all/iac_global_ns.css">');
+} else {
+        document.write('<link rel="stylesheet" type="text/css" href="/inc_all/iac_global.css">');
+}
+//-->
+</script>
+
+<script language="JavaScript">
+<!--
+var loaded = false;
+
+function imageLoad() {
+if (document.images) {
+	arrow_y = new Image();arrow_y.src = "/images/arrow_y.gif"
+    arrow_r = new Image();arrow_r.src = "/images/arrow_r.gif"
+    return (loaded = true);
+ }
+}
+
+function ShowOff(itemName) {
+    if (document.images) {
+    document.images[itemName].src = "/images/arrow_y.gif";
+    }
+}
+
+function ShowOn(itemName) {
+    if (document.images && (loaded == true)) {
+    document.images[itemName].src = "/images/arrow_r.gif";
+}
+}
+//-->
+</script>
+
+
+
+
+
+<script language="javascript" type="text/javascript" src="/inc_all/dd3.js"></script>
+<link rel=stylesheet type="text/css" href="/inc_all/dd3.css">
+<link rel=stylesheet type="text/css" href="/inc_all/hh.css">
+
+<script language="JavaScript">
+
+function SetSiteTabs (itemName) {
+
+if (itemName == "siteitem4") {
+ShowImage('siteitem4','/images/homepage/healthpro-on-666666.jpg');
+ShowImage('siteitem5','/images/homepage/public-on-91A93E.jpg');
+ShowImage('siteitem6','/images/homepage/izcoalitions-91A93E.jpg');
+}
+
+if (itemName == "siteitem5") {
+ShowImage('siteitem4','/images/homepage/himages/homepage/healthpro-on-666666.jpg');
+ShowImage('siteitem5','/imaealthpro-on-666666.jpg');
+ShowImage('siteitem5','/images/homepage/public-on-666666.jpg');
+ShowImage('siteitem6','/images/homepage/izcoalitions-91A93E.jpg');
+}
+
+if (itemName == "siteitem6") {
+ShowImage('siteitem4','/images/homepage/healthpro-on-666666.jpg');
+ShowImage('siteitem5','/images/homepage/public-on-91A93E.jpg');
+ShowImage('siteitem6','/images/homepage/izcoalitions-666666.jpg');
+}
+}
+
+function SetSiteTabsBase (itemName) {
+ShowImage('siteitem4','/images/homepage/healthpro-on-666666.jpg');
+ShowImage('siteitem5','/images/homepage/public-on-91A93E.jpg');
+ShowImage('siteitem6','/images/homepage/izcoalitions-91A93E.jpg');
+}
+
+function OnClickSites (itemName) {
+SetSiteTabsBase(itemName);
+
+if (itemName == "siteitem4") {
+document.location.href='http://www.immunize.org';
+w.focus();
+}
+
+if (itemName == "siteitem5") {
+document.location.href='http://www.vaccineinformation.org';
+w.focus();
+}
+
+if (itemName == "siteitem6") {
+var w = window.open('http://www.izcoalitions.org');
+w.focus();
+}
+
+return false;
+}
+
+function ShowImage(itemName,ImgFileName) {
+    if (document.images) {
+    document.images[itemName].src = ImgFileName;
+    }
+}
+
+//-->
+</script>
+<style type="text/css">
+.disvax_inf {font-family:arial, sans-serif; font-size:10pt; color:#FF9900;}
+.bodytext9 {font-family:arial,sans-serif; color:#030303; font-size:9pt; }
+.gdocument.images[itemName].src = ImgFileName;
+    }
+}
+
+//-->
+</script>
+<style type="text/css">
+.disvax_inf {font-family:arial, sans-serif; font-eorgiatealorangelink14 {font-family: Georgia, "Times New Roman", Times, serif; font-size: 14pt; color:#006B91; }
+.georgiawhitetext14 {font-family: Georgia, "Times New Roman", Times, serif; font-size: 14pt; color:#FFFFFF; }
+.goldtext12 {font-family:Arial; font-size: 12pt; color:#E2A712; font-weight: normal; margin-bottom: 0.0em; margin-top: 0.0em}
+</style>
+</head>
+
+<!-- Outermost table for all pages: body_top_all.inc -->
+
+<body background="http://www.immunize.org/images/homepage/wings.gif" alink="#006B91" link="#006B91" vlink="#006B91"
+leftmargin=0 topmargin=0 marginwidth=0 marginheight=0 onload="imageLoad()">
+<!-- Outermost table controlling the whole page -->
+<div align="center" id="top">
+  <table border="0" style="border-collapse: collapse" bordercolor="#CCCCCC" cellspacing="0" width="980" cellpadding="0" bgcolor="#FFFFFF">
+    <tr>
+      <td><noscript>
+<p align="center"><b><font color="#E87610" face="Arial" size="2">This page uses 
+&quot;javascript&quot; to display properly.<br>
+Javascript is not enabled in your browser, so <br>
+some features on this page may not work correctly.</font></b></p></noscript>
+<!-- Start of page headers -->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#E8E8E8">
+        <tr>
+          <td height="12"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellb></p></noscript>
+<!-- Start of page headers -->
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#E8E8E8">
+        <tr>
+spacing="0" cellpadding="0">
+        <tr>
+          <td width="100%" valign="top" background="/images/homepage/top-curve-corner-grey.jpg"><table width="10%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+              <td height="2"></td>
+            </tr>
+            <tr>
+              <td nowrap><table width="20" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+      <td height="2"></td>
+              <td height="2"></td>
+            </tr>
+            <tr>
+              <td nowrap><table width="20" border="0" c            </tr>
+              </table></td>
+              <td height="10" nowrap><a href="/" style="text-decoration:none"
+      class="dkgreyorangelink8">Home</a></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td><b><font size="1" color="#030303" face="Arial">|</font></b></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td style="white-space:nowrap"><a href="/aboutus" style="text-decoration:none" class="dkgreyorangelink8">About IAC</a></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td><b><font size="1" color="#030303" face="Arial">|</font></b></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td nowrap><a href="/aboutus/contactus.asp" style="text-decoration:none" class="dr="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </tabkgreyorangelink8">Contact</a></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td><b><font size="1" color="#030303" face="Arial">|</font></b></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td style="white-space:nowrap"><a href="/a-z" style="text-decoration:none" class="dkgreyorangelink8">A-Z Index</a></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td><b><font size="1" color="#030303" face="Arial">|</font></b></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td style="white-space:nowrap"><a href="/support" style="text-decoration:none" class="dkgreyorangelink8">Donate</a></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <t   </table></td>
+              <td style="white-space:nowrap"><a href="/support" style="text-decoration:none" class="dkgreyorangelink8">Donate</a></tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td><b><font size="1" color="#030303" face="Arial">|</font></b></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td nowrap><a href="/shop" style="text-decoration:none" class="dkgreyorangelink8">Shop</a></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td><b><font size="1" color="#030303" face="Arial">|</font></b></td>
+              <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+              <td nowrap><b><a href="/subscribe" style="text-decoration:none" class="tealorangelink8">SUBSCRIBE</a></b></td>
+              <td nowrap><table width="20" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+              </table></td>
+            </tr>
+          </table></td>
+          <td align= nowrap><table width="20" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="3"></td>
+             "right"><table width="10%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+            <td style="cursor:pointer;" onClick="OnClickSites('siteitem4');"
+            onMouseOver="SetSiteTabs('siteitem4');return true;"
+            onMouseOut ="SetSiteTabsBase('siteitem4');return true;" >
+            <img name="siteitem4" border="0" src="/images/homepage/healthpro-on-666666.jpg" align="absmiddle" width="198" height="44"></td>
+              <td><table width="2" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+              </table></td>
+            <td style="cursor:pointer;" onClick="OnClickSites('siteitem5');"
+            onMouseOver="SetSiteTabs('siteitem5');return true;"
+            onMouseOut ="SetSiteTabsBase('siteitem5');return true;" > 
+            <img name="siteitem5" border="0" src="/images/homepage/public-on-91A93E.jpg" align="absmiddle" width="119" height="44"></td>              
+            <td><table width="2" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+              </table></td>
+            <td style="cursor:pointer;" onClick="OnClickSites('siteitem6');"
+            onMouseOver="SetSiteTabs('siteitem6');return true;"
+            onMouseOut ="Se         <td height="5"></td>
+                  </tr>
+              </table></td>
+            <td style="cursor:pointer;" onClick="OnClickSites('sitSiteTabsBase('siteitem6');return true;" >
+            <img name="siteitem6" border="0" src="/images/homepage/izcoalitions-91A93E.jpg" align="absmiddle" width="131" height="44"></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td>
+
+<!-- Outermost border table -->
+  <div align="left">
+    <table border="0" cellspacing="0" width="100%" cellpadding="0">
+    <tr>
+    <td width="98%" valign="top">
+        
+<!-- Start content table -->
+<div align="center">
+  <center>
+    <table border="0" cellspacing="0" width="100%" cellpadding="0">
+      <tr>
+        <td width="100%">
+          <div align="center">
+            <center>
+               
+              <table border="0" cellspacing="0" width="100%" cellpadding="0">
+                <tr>
+                  <td width="100%">
+                    <table border="0" cellspacing="0" width="100%" cellpadding="0">
+                        <tr>
+                          <td width="100%" height="41" align="right" nowrap bgcolor="#666666"><table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#666666">
+                            <tr>
+                              <td height="25" width="50%" align="left" nowrap bgcolor="#666666"><table width="10%" border="0" cellspacing="0" cellpadding="0">
+                                  ng="0" bgcolor="#666666">
+                            <tr>
+                              <td height="25" width="50%" align="left" nowrap bgcolor="#6<tr>
+                                    <td height="5"></td>
+                                  </tr>
+                                </table>
+                                <a href="http://www.immunize.org" style="text-decoration: none"> <img border="0" src="/images/space1.gif" align="left" width="6" height="10"> <img border="0" src="/images/space1.gif" align="left" width="3" height="10" /><font face="Arial" size="5" color="#FFFFFF">Immunization Action Coalition</font></a></td>
+                              <td valign="middle" style="white-space:nowrap"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td align="right" valign="middle"><form action="http://www.immunize.org/search/" id="cse-search-box">
+                                        <div>
+                                          <div align="right">
+                                            <input type="hidden" name="cx" value="017386553933306082099:5o7di6h-q-e" />
+                                            <input type="hidden" name="cof" value="FORID:10" />
+                                            <input type="hidden" name="ie" value="UTF-8" />
+                                            <input type="text" name="q" size="31" />
+                                            <input type="submiFORID:10" />
+                                            <input type="hidden" name="ie" value="UTF-8" />
+                                           t" name="sa" value="Search" />
+                                          </div>
+                                        </div>
+                                    </form>
+                                        <div align="right">
+                                          <script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en&amp;sitesearch=true"></script>
+                                      </div></td>
+                                  </tr>
+                              </table></td>
+                              <td valign="middle" style="white-space:nowrap"><table width="5" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td height="3"></td>
+                                </tr>
+                              </table></td>
+                            </tr>
+                          </table></td>
+                        </tr>
+                        <tr>
+                          <td align="right" nowrap><div align="center">
+                            <center>
+                              <table border="0" cellspacing="0" width="100%" cellpadding="0" bgcolor="#666666" style="border-collapse: collapse" bordercolor="#111111">
+                                <tr>
+                                  <td width="100%" height="5"                 <table border="0" cellspacing="0" width="100%" cellpadding="0" bgcolor="#666666" style="border-collapse: collapse" bordercolor="#1111></td>
+                                </tr>
+                              </table>
+                            </center>
+                          </div></td>
+                        </tr>
+                        <tr>
+                          <td height="25" align="right">
+                          
+                          
+                          
+
+                          
+                          
+<!-- #### Begin Dropdown HTML -->  
+              
+<div id="wrap">
+  <div id="topnav">
+    <ul id="sddm">
+    <li id="sddm1">
+     <a id="m1parent" href="/handouts" onMouseOver="mopen('m1')" onMouseOut="mclosetime()">&nbsp;Handouts for Patients &amp; Staff&nbsp;<br>
+     <img id="m1underline" src="/images/underline-blank.gif" align="left" border="0" width="195" height="4" /></a>
+       <div id="m1" onMouseOver="mcancelclosetime()" onMouseOut="mclosetime()">
+            
+        <table class="table-style-round">
+        <tr bgcolor="#006B91">      
+        <td height="10"><a href="#"><font style="font-size:2px"></font></a></td>
+        <td height="10"><a href="#"><font style="font-size:2px"></font></a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-18')" onMouseOut="arrow_off('arr1-18')"><a href="/handouts/view-all.asp"> 
+          <img id="arr1-18" src="/images/homepage/arrow-fffnt-size:2px"></font></a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-18')" onMouseOut="arrow_off('afff.gif" border="0" align="left" width="8" height="14">&nbsp;A-Z</a></td>
+          <td onMouseOver="arrow_on('arr1-11')" onMouseOut="arrow_off('arr1-11')"><a href="/handouts/screening-vaccines.asp"> <img id="arr1-11" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Screening Questionnaires&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-01')" onMouseOut="arrow_off('arr1-01')"><a href="/handouts/top-picks.asp"> 
+          <img id="arr1-01" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Most Popular</a></td>
+          <td onMouseOver="arrow_on('arr1-12')" onMouseOut="arrow_off('arr1-12')"><a href="/standing-orders/"> <img id="arr1-12" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Standing Orders</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-02')" onMouseOut="arrow_off('arr1-02')"><a href="/handouts">
+          <img id="arr1-02" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Clinic Resources</a></td>
+          <td onMouseOver="arrow_on('arr1-06')" onMouseOut="arrow_off('arr1-06')"><a href="/handouts/vaccine-storage-handling.asp"> <img id="arr1-06" src="/e/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Clinic Resources</a></td>
+          <td onMouseOver="arrow_on('arr1-06')" onMimages/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Storage &amp; Handling</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-03')" onMouseOut="arrow_off('arr1-03')"><a href="/handouts/?f=8"> 
+          <img id="arr1-03" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Vaccine Index</a></td>
+          <td onMouseOver="arrow_on('arr1-13')" onMouseOut="arrow_off('arr1-13')"><a href="/handouts/vaccine-clinic-supplies.asp"> <img id="arr1-13" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Supplies Checklist</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-04')" onMouseOut="arrow_off('arr1-04')"><a href="/handouts/administering-vaccines.asp"> 
+          <img id="arr1-04" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Administering Vaccines</a></td>
+          <td onMouseOver="arrow_on('arr1-20')" onMouseOut="arrow_off('arr1-20')"><a href="/handouts/temperature-logs.asp"> <img id="arr1-20" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Temperature Logs</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-21')" onmperature-logs.asp"> <img id="arr1-20" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Temperature Logs</aMouseOut="arrow_off('arr1-21')"><a href="/handouts/adult-vaccination.asp"> 
+          <img id="arr1-21" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Adult Vaccination&nbsp;&nbsp;</a></td>
+          <td onMouseOver="arrow_on('arr1-14')" onMouseOut="arrow_off('arr1-14')"><a href="/handouts/?f=7"> <img id="arr1-14" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Topics of Interest</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-05')" onMouseOut="arrow_off('arr1-05')"><a href="/handouts/document-vaccines.asp"> <img id="arr1-05" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Documenting Vaccination&nbsp;&nbsp;</a></td>
+          <td onMouseOver="arrow_on('arr1-15')" onMouseOut="arrow_off('arr1-15')"><a href="/handouts/?f=6"> <img id="arr1-15" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Translations&nbsp;&nbsp;&nbsp;</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-07')" onMouseOut="arrow_off('arr1-07')"><a href="/handouts/discussing-vaccines-parents.asp"> <img id="arr1-07" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Parent Handouts</   <td onMouseOver="arrow_on('arr1-07')" onMouseOut="arrow_off('arr1-07')"><a href="/handouts/discussing-vaccines-parents.asp"> <img id="arr1-07" src=a></td>
+          <td onMouseOver="arrow_on('arr1-16')" onMouseOut="arrow_off('arr1-16')"><a href="/handouts/vaccine-reactions.asp"> <img id="arr1-16" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Vaccine Reactions</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-08')" onMouseOut="arrow_off('arr1-08')"><a href="/handouts/vaccine-schedules.asp"> <img src="/images/homepage/arrow-ffffff.gif" alt="" width="8" height="14" border="0" align="left" id="arr1-08">&nbsp;Patient Schedules&nbsp;&nbsp;</a></td>
+          <td onMouseOver="arrow_on('arr1-19')" onMouseOut="arrow_off('arr1-19')"><a href="/handouts/vaccine-summaries.asp"> <img id="arr1-19" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Vaccine Summaries</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-09')" onMouseOut="arrow_off('arr1-09')"><a href="/handouts/vaccine-questions.asp"> <img src="/images/homepage/arrow-ffffff.gif" alt="" width="8" height="14" border="0" align="left" id="arr1-09">&nbsp;Questions and Answers</a></td>
+          <td onMouseOver="arrow_on('arr1-17')" onMouseOut="arrow_off('arr1-17')"><a href="/new/handouts.asp"> <img id="arr1-2" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" widn="left" id="arr1-09">&nbsp;Questions and Answers</a></td>
+          <td onMouseOver="arrow_on('arr1-17')" onMouseOut="arrow_off('arr1-17')"><a href=th="8" height="14">&nbsp;What's New: Handouts</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr1-10')" onMouseOut="arrow_off('arr1-10')"><a href="/handouts/vaccine-recommendations.asp"> <img id="arr1-10" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Recommendations&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>      
+        <td><a href="#" class="table-corner-a-left"><font style="font-size:3px">&nbsp;</font></a></td>
+        <td><a href="#" class="table-corner-a-right"><font style="font-size:3px">&nbsp;</font></a></td>
+        </tr>
+        </table>
+
+        </div>
+    </li>
+    
+    <li id="sddm2"><a id="m2parent" href="/clinic" onMouseOver="mopen('m2')" onMouseOut="mclosetime()">&nbsp;Clinic Resources&nbsp;<br>
+        <img id="m2underline" src="/images/underline-blank.gif" border="0" align="left" width="118" height="4" /></a>
+        <div id="m2" onMouseOver="mcancelclosetime()" onMouseOut="mclosetime()">
+
+       <table class="table-style-round">
+        <tr bgcolor="#006B91">
+        <td><a href="#"><font style="font-size:2px">&nbsp;</font></a></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><a href="#"><font style="font-size:2px">&nbsp;</font></a></td>
+      r bgcolor="#006B91">
+        <td><a href="#"><font style="font-size:2px">&nbsp;</font></a></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+        <tr>
+        <td bgcolor="#006B91" onMouseOver="arrow_on('arr2-01')" onMouseOut="arrow_off('arr2-01')"><a href="/clinic/administering-vaccines.asp">
+        <img id="arr2-01" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Administering Vaccines&nbsp;&nbsp;</a></td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td width="6" background="/images/homepage/vert-whiteline.gif">&nbsp;</td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td align="left" bgcolor="#006B91"><font face="arial" size="2" color="#FFFFFF">&nbsp;&nbsp;<b>Related Resources:</b></font></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr2-02')" onMouseOut="arrow_off('arr2-02')"><a href="/clinic/coding-billing.asp">
+        <img id="arr2-02" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Coding &amp; Billing&nbsp;&nbsp;&nbsp;</a></td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td width="6" background="/images/homepage/vert-whiteline.gif">&nbsp;</td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td onMouseOver="arrow_on('arr2-08')" onMouseOut="arrow_off('arr2-08')"><a href="/askexperts"> 
+        <img id="arr2-08" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Ask the Experts91">&nbsp;</td>
+        <td onMouseOver="arrow_on('arr2-08')" onMouseOut="arrow_off('arr2-08')"><a href="/askexperts"> 
+        <img id="arr2-08" sr&nbsp;&nbsp;&nbsp;</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr2-03')" onMouseOut="arrow_off('arr2-03')"><a href="/clinic/documenting-vaccination.asp">
+        <img id="arr2-03" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Documenting Vaccination&nbsp;&nbsp;</a></td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td width="6" background="/images/homepage/vert-whiteline.gif">&nbsp;</td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td onMouseOver="arrow_on('arr2-09')" onMouseOut="arrow_off('arr2-09')"><a href="/resources"> 
+        <img id="arr2-09" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Directory of Resources&nbsp;&nbsp;</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr2-05')" onMouseOut="arrow_off('arr2-05')"><a href="/clinic/scheduling-vaccines.asp"> 
+		  <img id="arr2-05" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Scheduling Vaccines</a></td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td width="6" background="/images/homepage/vert-whiteline.gif">&nbsp;</td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td onMouseOver="arrow_on('arr2-10')" onMouseOut="arrow_off('arr2-10')"><a href      <td bgcolor="#006B91">&nbsp;</td>
+        <td width="6" background="/images/homepage/vert-whiteline.gif">&nbsp;</td>
+        <td bgcolor="#006="/publications"> 
+        <img id="arr2-10" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;IAC Publications</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr2-06')" onMouseOut="arrow_off('arr2-06')"><a href="/clinic/screening-contraindications.asp"> 
+		  <img id="arr2-06" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Screening for Contraindications&nbsp;&nbsp;&nbsp;</a></td>
+          <td bgcolor="#006B91">&nbsp;</td>
+        <td width="6" background="/images/homepage/vert-whiteline.gif">&nbsp;</td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td onMouseOver="arrow_on('arr2-11')" onMouseOut="arrow_off('arr2-11')"><a href="/photos"> 
+        <img id="arr2-11" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Image Library</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+         <td onMouseOver="arrow_on('arr2-04')" onMouseOut="arrow_off('arr2-04')"><a href="/clinic/storage-handling.asp">
+        <img id="arr2-04" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Storage &amp; Handling</a></td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td width="6" background="/images/homepage/vert-whiteline.gif">&nbsp;</td2-04" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Storage &amp; Handling</a></td>
+        <td bgcolor>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td onMouseOver="arrow_on('arr2-12')" onMouseOut="arrow_off('arr2-12')"><a href="/journalarticles"> 
+        <img id="arr2-12" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Journal Articles</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr2-07')" onMouseOut="arrow_off('arr2-07')"><a href="/clinic/vaccine-recommendations.asp"> <img id="arr2-07" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Recommendations</a></td>
+         <td bgcolor="#006B91">&nbsp;</td>
+        <td width="6" background="/images/homepage/vert-whiteline.gif">&nbsp;</td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td onMouseOver="arrow_on('arr2-13')" onMouseOut="arrow_off('arr2-13')"><a href="/pocketguides"> 
+        <img id="arr2-13" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Pocket Guides</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+          <td bgcolor="#006B91">&nbsp;</td>
+          <td bgcolor="#006B91">&nbsp;</td>
+          <td background="/images/homepage/vert-whiteline.gif">&nbsp;</td>
+          <td bgcolor="#006B91">&nbsp;</td>
+        <td onMouseOver="arrow_on('arr2-14')" onMouseOut="arrow_off('arr2-14')"><a href="          <td bgcolor="#006B91">&nbsp;</td>
+          <td background="/images/homepage/vert-whiteline.gif">&nbsp;</td>
+          <td bgcolor="#006B9/resources/res_powerpoint.asp"> 
+        <img id="arr2-14" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;PowerPoint Presentations</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td width="6" background="/images/homepage/vert-whiteline.gif">&nbsp;</td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        <td onMouseOver="arrow_on('arr2-15')" onMouseOut="arrow_off('arr2-15')"><a href="/reports"> 
+        <img id="arr2-15" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Unprotected People Reports&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+        </tr>
+        <tr>
+        <td><a href="#" class="table-corner-a-left"><font style="font-size:3px">&nbsp;</font></a></td>
+        <td bgcolor="#006B91"><font style="font-size:3px">&nbsp;</font></td>
+        <td bgcolor="#006B91"><font style="font-size:3px">&nbsp;</font></td>
+        <td bgcolor="#006B91"><font style="font-size:3px">&nbsp;</font></td>
+        <td ><a href="#" class="table-corner-a-right"><font style="font-size:3px">&nbsp;</font></a></td>
+        </tr>
+        </table>
+
+        </div>
+    </li>
+    
+    <li id="sddm3"><a id="m3parent" href="/vis" onMouseOver="mopen('m3')" onMouseOut="mclosetime()">&nbsp;Vaccine Information Statements&nbsp;<br>
+    <img id="m3underline" src="/images/underline-blank.gif" border="0" align="left" width="210" height="4" /></a>
+
+        <div id="m3" onMouseOver="mcancelclosetime()" onMouseOut="mclosetime()">
+      
+       <table class="table-style-round">
+        <tr>      
+        <td><a href="#"><font style="font-size:2px">&nbsp;</font></a></td>
+        <td width="120"><a href="#"><font style="font-size:2px">&nbsp;</font></a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr3-01')" onMouseOut="arrow_off('arr3-01')"><a href="/vis">
+        <img id="arr3-01" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Vaccine Index</a></td>
+        <td bgcolor="#006B91">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr>        
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr3-04')" onMouseOut="arrow_off('arr3-04')"><a href="/vis/?f=9">
+        <img id="arr3-04" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Translations Index</a></td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        </tr>  
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr3-02')" onMouseOut="arrow_off('arr3-02')"><a href="/vis/vis_english.asp">
+        <img id="arr3-02" src="/images/homepage/
+        <td bgcolor="#006B91">&nbsp;</td>
+arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;English-language VISs</a></td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr3-03')" onMouseOut="arrow_off('arr3-03')"><a href="/vis/vis_spanish.asp">
+        <img id="arr3-03" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Spanish-language VISs&nbsp;&nbsp;&nbsp;</a></td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        </tr>      
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr3-05')" onMouseOut="arrow_off('arr3-05')"><a href="/new/vis.asp">
+        <img id="arr3-05" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;What's New: VISs</a></td>
+        <td bgcolor="#006B91">&nbsp;</td>
+        </tr>
+        <tr>      
+        <td><a href="#" class="table-corner-a-left"><font style="font-size:3px">&nbsp;</font></a></td>
+        <td><a href="#" class="table-corner-a-right"><font style="font-size:3px">&nbsp;</font></a></td>
+        </tr>
+        </table>
+        </div></li>
+        
+    <li id="sddm4"><a id="m4parent" href="/vaccines" onMouseOver="mopen('m4')" onMouseOut="mclosetime()">&nbsp;Diseases &amp; Vaccines&nbsp;<br>
+    <img id="m4underline" src="/images/underline-blank.gif" bord    </table>
+        </div></li>
+        
+    <li id="sddm4"><a id="m4parent" href="/vaccines" onMouseOver="mopen('m4')" onMouseOut="mclosetime()">er="0" align="left" width="145" height="4" /></a>
+        <div id="m4" onMouseOver="mcancelclosetime()" onMouseOut="mclosetime()">
+
+     <table class="table-style-round">
+        <tr>      
+        <td><a href="#"><font style="font-size:2px">&nbsp;</font></a></td>
+        <td><a href="#"><font style="font-size:2px">&nbsp;</font></a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr4-01')" onMouseOut="arrow_off('arr4-01')"><a href="/anthrax">
+        <img id="arr4-01" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Anthrax</a></td>
+        <td onMouseOver="arrow_on('arr4-12')" onMouseOut="arrow_off('arr4-12')"><a href="/pertussis">
+        <img id="arr4-12" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Pertussis</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr4-02')" onMouseOut="arrow_off('arr4-02')"><a href="/varicella">
+        <img id="arr4-02" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Chickenpox (varicella)&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+        <td onMouseOver="arrow_on('arr4-13')" onMouseOut="arrow_off('arr4-13')"><a href="/pneumococcal-pcv">
+        <img id="arr4-13" src="/images/homepage/arrow-ffffff.gif" border=ght="14">&nbsp;Chickenpox (varicella)&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+        <td onMouseOver="arrow_on('arr4-13')" onMouseOut="arrow_off('arr4-13')"0" align="left" width="8" height="14">&nbsp;PCV</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr4-03')" onMouseOut="arrow_off('arr4-03')"><a href="/diphtheria">
+        <img id="arr4-03" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Diphtheria</a></td>
+        <td onMouseOver="arrow_on('arr4-14')" onMouseOut="arrow_off('arr4-14')"><a href="/pneumococcal-ppsv">
+        <img id="arr4-14" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;PPSV</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr4-04')" onMouseOut="arrow_off('arr4-04')"><a href="/hepatitis-a">
+        <img id="arr4-04" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Hepatitis A</a></td>
+        <td onMouseOver="arrow_on('arr4-15')" onMouseOut="arrow_off('arr4-15')"><a href="/polio">
+        <img id="arr4-15" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Polio</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr4-05')" onMouseOut="arrow_off('arr4-05')"><a href="/hepatitis-b">
+        <img id="arr4-05" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14 </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr4-05')" onMouseOut="arrow_off('arr4-05')"><a href="/hepatitis-b">
+     ">&nbsp;Hepatitis B</a></td>
+        <td onMouseOver="arrow_on('arr4-16')" onMouseOut="arrow_off('arr4-16')"><a href="/rabies">
+        <img id="arr4-16" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Rabies</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr4-06')" onMouseOut="arrow_off('arr4-06')"><a href="/hpv">
+        <img id="arr4-06" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;HPV</a></td>
+        <td onMouseOver="arrow_on('arr4-17')" onMouseOut="arrow_off('arr4-17')"><a href="/rotavirus">
+        <img id="arr4-17" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Rotavirus</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr4-07')" onMouseOut="arrow_off('arr4-07')"><a href="/hib">
+        <img id="arr4-07" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;<i>H. influenzae </i>(Hib)&nbsp;&nbsp;</a></td>
+        <td onMouseOver="arrow_on('arr4-18')" onMouseOut="arrow_off('arr4-18')"><a href="/rubella">
+        <img id="arr4-18" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Rubella</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+   n('arr4-18')" onMouseOut="arrow_off('arr4-18')"><a href="/rubella">
+        <img id="arr4-18" src="/images/homepage/arrow-ffffff.gif" border="0" alig     <td onMouseOver="arrow_on('arr4-08')" onMouseOut="arrow_off('arr4-08')"><a href="/influenza">
+        <img id="arr4-08" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Influenza</a></td>
+        <td onMouseOver="arrow_on('arr4-19')" onMouseOut="arrow_off('arr4-19')"><a href="/zoster">
+        <img id="arr4-19" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Shingles (zoster)&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr4-09')" onMouseOut="arrow_off('arr4-09')"><a href="/measles">
+        <img id="arr4-09" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Measles</a></td>
+        <td onMouseOver="arrow_on('arr4-20')" onMouseOut="arrow_off('arr4-20')"><a href="/smallpox">
+        <img id="arr4-20" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Smallpox</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr4-10')" onMouseOut="arrow_off('arr4-10')"><a href="/meningococcal">
+        <img id="arr4-10" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Meningococcal</a></td>
+        <td onMouseOver="arrow_on('arr4-21')" onMousenMouseOut="arrow_off('arr4-10')"><a href="/meningococcal">
+        <img id="arr4-10" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" Out="arrow_off('arr4-21')"><a href="/tetanus">
+        <img id="arr4-21" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Tetanus</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr4-11')" onMouseOut="arrow_off('arr4-11')"><a href="/mumps">
+        <img id="arr4-11" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Mumps</a></td>
+        <td onMouseOver="arrow_on('arr4-22')" onMouseOut="arrow_off('arr4-22')"><a href="/vaccines">
+        <img id="arr4-22" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;View All&nbsp;&nbsp;&nbsp;</a></td>
+        </tr>
+        <tr>      
+        <td><a href="#" class="table-corner-a-left"><font style="font-size:3px">&nbsp;</font></a></td>
+        <td><a href="#" class="table-corner-a-right"><font style="font-size:3px">&nbsp;</font></a></td>
+        </tr>
+        </table>
+        </div>
+    </li>
+    
+    
+        <li id="sddm6"><a id="m6parent" href="/concerns"
+
+        onMouseOver="document.getElementById('sddm6').style.zIndex = 301; mopen('m6')"
+        onMouseOut ="document.getElementById('sddm6').style.zIndex = 106; mclosetime()">&nbsp;Talking about Vaccines&nbsp;<br>
+       
+        <img id="m6underline" src="/images/underline-blankt.getElementById('sddm6').style.zIndex = 301; mopen('m6')"
+        onMouseOut ="document.getElementById('sddm6').style.zIndex = 106; mclosetime()">&n.gif" border="0" align="left" width="157" height="4" /></a>
+        <div id="m6"
+        onMouseOver="document.getElementById('sddm6').style.zIndex = 301; mcancelclosetime()"
+        onMouseOut ="document.getElementById('sddm6').style.zIndex = 106; mclosetime()">
+
+     <table class="table-style-round">
+        <tr>      
+        <td><a href="#"><font style="font-size:2px">&nbsp;</font></a></td>
+        <td><a href="#"><font style="font-size:2px">&nbsp;</font></a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr6-01')" onMouseOut="arrow_off('arr6-01')"><a href="/concerns/adjuvants.asp">
+        <img id="arr6-01" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Adjuvants</a></td>
+        <td onMouseOver="arrow_on('arr6-12')" onMouseOut="arrow_off('arr6-12')"><a href="/concerns/poling.asp">
+        <img id="arr6-12" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Mitochondrial Disorders&nbsp;&nbsp;&nbsp;</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr6-02')" onMouseOut="arrow_off('arr6-02')"><a href="/concerns/altmed.asp">
+        <img id="arr6-02" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Alternative Medicine&nbsp;</a></td>onMouseOver="arrow_on('arr6-02')" onMouseOut="arrow_off('arr6-02')"><a href="/concerns/altmed.asp">
+        <img id="arr6-02" src="/images/homepage/a
+        <td onMouseOver="arrow_on('arr6-13')" onMouseOut="arrow_off('arr6-13')"><a href="/concerns/multi.asp">
+        <img id="arr6-13" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Multiple Injections</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr6-03')" onMouseOut="arrow_off('arr6-03')"><a href="/autism">
+        <img id="arr6-03" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Autism&nbsp;</a></td>
+        <td onMouseOver="arrow_on('arr6-14')" onMouseOut="arrow_off('arr6-14')"><a href="/concerns/religious.asp">
+        <img id="arr6-14" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Religious Concerns&nbsp;</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr6-04')" onMouseOut="arrow_off('arr6-04')"><a href="/concerns/drsears.asp">
+        <img id="arr6-04" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Dr. Sears' Schedule&nbsp;</a></td>
+        <td onMouseOver="arrow_on('arr6-15')" onMouseOut="arrow_off('arr6-15')"><a href="/concerns/comm_talk.asp">
+        <img id="arr6-15" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Talking with ></td>
+        <td onMouseOver="arrow_on('arr6-15')" onMouseOut="arrow_off('arr6-15')"><a href="/concerns/comm_talk.asp">
+        <img id="arr6-15" Parents</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr6-05')" onMouseOut="arrow_off('arr6-05')"><a href="/concerns/comm_import.asp">
+        <img id="arr6-05" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Importance of Vaccines&nbsp;&nbsp;&nbsp;</a></td>
+        <td onMouseOver="arrow_on('arr6-16')" onMouseOut="arrow_off('arr6-16')"><a href="/thimerosal">
+        <img id="arr6-16" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Thimerosal&nbsp;</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr6-06')" onMouseOut="arrow_off('arr6-06')"><a href="/concerns/mmr.asp">
+        <img id="arr6-06" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;MMR</a></td>
+        <td onMouseOver="arrow_on('arr6-17')" onMouseOut="arrow_off('arr6-17')"><a href="/safety">
+        <img id="arr6-17" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Vaccine Safety</a></td>
+        </tr>
+        <tr>      
+        <td><a href="#" class="table-corner-a-left"><font style="font-size:3px">&nbsp;</font></a></td>
+        <td><a href="#" class="table-corner-a-right"><font style="font-size:3px">&nbsp;</font></a></td>
+   ></td>
+        </tr>
+        <tr>      
+        <td><a href="#" class="table-corner-a-left"><font style="font-size:3px">&nbsp;</font></a></td>
+        </tr>
+        </table>
+        </div>
+    </li>
+    
+
+     
+    <li id="sddm5"><a id="m5parent" href="/iztopics"
+     onMouseOver="document.getElementById('sddm5').style.zIndex = 301; mopen('m5')"
+     onMouseOut ="document.getElementById('sddm5').style.zIndex = 106; mclosetime()">&nbsp;Topics&nbsp;<br>
+     <img id="m5underline" src="/images/underline-blank.gif" border="0" align="left" width="56" height="4" /></a>
+    
+     <div id="m5"
+      onMouseOver="document.getElementById('sddm5').style.zIndex = 301; mcancelclosetime()"
+      onMouseOut ="document.getElementById('sddm5').style.zIndex = 106; mclosetime()">
+      
+       <table class="table-style-round">
+        <tr>      
+        <td><a href="#"><font style="font-size:2px">&nbsp;</font></a></td>
+        <td><a href="#"><font style="font-size:2px">&nbsp;</font></a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr5-01')" onMouseOut="arrow_off('arr5-01')"><a href="/adoption">
+        <img id="arr5-01" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Adoption - International&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+        <td onMouseOver="arrow_on('arr5-08')" onMouseOut="arrow_off('arr5-08')"><a href="/msm"> <img id="arr5-08" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" heinbsp;Adoption - International&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+        <td onMouseOver="arrow_on('arr5-08')" onMouseOut="arrow_off('arr5-08')"><a hreght="14">&nbsp;Men+Men</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr5-02')" onMouseOut="arrow_off('arr5-02')"><a href="/birthdose">
+        <img id="arr5-02" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Birth Dose (HepB)</a></td>
+        <td onMouseOver="arrow_on('arr5-09')" onMouseOut="arrow_off('arr5-09')"><a href="/needlesafety"> <img id="arr5-09" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Needle Safety</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr5-03')" onMouseOut="arrow_off('arr5-03')"><a href="/dialysis">
+        <img id="arr5-03" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Dialysis</a></td>
+        <td onMouseOver="arrow_on('arr5-10')" onMouseOut="arrow_off('arr5-10')"><a href="/pregnancy"> <img id="arr5-10" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Pregnancy</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr5-04')" onMouseOut="arrow_off('arr5-04')">
+        <a href="/disparities">
+        <img id="arr5-04" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Disparities</a6B91">
+        <td onMouseOver="arrow_on('arr5-04')" onMouseOut="arrow_off('arr5-04')">
+        <a href="/disparities">
+        <img id="arr5-04" s></td>
+        <td onMouseOver="arrow_on('arr5-11')" onMouseOut="arrow_off('arr5-11')"><a href="/registries"> <img id="arr5-11" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Registries</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr5-05')" onMouseOut="arrow_off('arr5-05')"><a href="/hcw">
+        <img id="arr5-05" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Healthcare Personnel</a></td>
+        <td onMouseOver="arrow_on('arr5-13')" onMouseOut="arrow_off('arr5-13')"><a href="/tattoos">
+        <img id="arr5-13" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Tattoos &amp; Piercings&nbsp;&nbsp;&nbsp;</a></td>
+        </tr>
+        <tr bgcolor="#006B91">
+        <td onMouseOver="arrow_on('arr5-06')" onMouseOut="arrow_off('arr5-06')"><a href="/longtermcare">
+        <img id="arr5-06" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Long-Term Care</a></td>
+        <td onMouseOver="arrow_on('arr5-14')" onMouseOut="arrow_off('arr5-14')"><a href="/travel">
+        <img id="arr5-14" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Travel - International&nbsp;&nbsp;&nbsp;&nbsp;</a></td>
+   ="arrow_on('arr5-14')" onMouseOut="arrow_off('arr5-14')"><a href="/travel">
+        <img id="arr5-14" src="/images/homepage/arrow-ffffff.gif" border=     </tr>
+        <tr bgcolor="#006B91">
+          <td onMouseOver="arrow_on('arr5-07')" onMouseOut="arrow_off('arr5-07')"><a href="/exemptions"> 
+          <img id="arr5-07" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;Mandates &amp; Exemptions&nbsp;&nbsp;</a></td>
+          <td onMouseOver="arrow_on('arr5-15')" onMouseOut="arrow_off('arr5-15')"><a href="/iztopics"> 
+          <img id="arr5-15" src="/images/homepage/arrow-ffffff.gif" border="0" align="left" width="8" height="14">&nbsp;View all</a></td>
+        </tr>
+        <tr>      
+        <td><a href="#" class="table-corner-a-left"><font style="font-size:3px">&nbsp;</font></a></td>
+        <td><a href="#" class="table-corner-a-right"><font style="font-size:3px">&nbsp;</font></a></td>
+        </tr>
+        </table>
+
+        </div>
+      </li>
+</ul>
+</div>
+
+<div style="clear:both"></div>
+</div>
+                 
+                          
+                          
+<!-- #### End Dropdown HTML -->
+               
+                          
+                          
+                          </td>
+                        </tr>
+                        <tr bordercolor="#111111" bgcolor="#666666">
+                          <td height="5"></td>
+                        </tr>
+                      </table>
+
+
+<!-- End of page headers -->
+
+ 
+<div align="left">
+        <table border="0" cellspacing="0" width="100%" cellpadding="0">
+          <tr>
+            <td width="100%">
+            <img border="0" src="../images/space1.gif" width="148" height="24"></td>
+          </tr>
+        </table>
+      </div>
+
+<!-- Outermost border table -->
+  <div align="left">
+    <table border="0" cellspacing="0" width="100%" cellpadding="0">
+    <tr>
+    <td width="98%" valign="top">
+        
+<!-- Start content table -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="10%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table border="0" cellspacing="0" width="25" cellpadding="0">
+          <tr>
+            <td width="100%" height="5"></td>
+          </tr>
+        </table></td>
+        <td nowrap="nowrap"><a href="http://www.immunize.org" style="text-decoration:none" class="greyorangebreadcrumbs8">IAC Home</a></td>
+        <td><table border="0" cellspacing="0" width="10" cellpadding="0">
+          <tr>
+            <td width="100%" height="5"></td>
+          </tr>
+        </table></td>
+        <td><font class="greyorangebreadcrumbs8">|</font></td>
+        <td><table border="0" cellspacing="0" width="10" cellpadding="0">
+          <tr>
+            <td width="100%" height="5"></td>
+          </tr>
+        tr>
+        </table></td>
+        <td><font</table></td>
+        <td nowrap="nowrap"><a href="http://www.immunize.org/vaccines" style="text-decoration:none" class="greyorangebreadcrumbs8">Diseases &amp; Vaccines</a></td>
+        <td><table border="0" cellspacing="0" width="10" cellpadding="0">
+          <tr>
+            <td width="100%" height="5"></td>
+          </tr>
+        </table></td>
+        <td><font class="greyorangebreadcrumbs8">|</font></td>
+        <td><table border="0" cellspacing="0" width="10" cellpadding="0">
+          <tr>
+            <td width="100%" height="5"></td>
+          </tr>
+        </table></td>
+        <td nowrap="nowrap"><font class="orangebreadcrumbs8">Influenza</font></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="20" align="left"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table border="0" cellspacing="0" width="25" cellpadding="0">
+        <tr>
+          <td width="100%" height="5"></td>
+        </tr>
+    </table></td>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="50%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="10"><table width="1 width="50%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border=00%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="5"><h1 id="h1_black">Diseases and Vaccines</h1></td>
+                  </tr>
+                  <tr>
+                    <td height="3"></td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" cellspacing="0" cellpadding="5" border="1" style="border-collapse:collapse" bordercolor="#CCCCCC" bgcolor="#006B91">
+                        <tr>
+                          <td><h2 id="h2_white">Influenza</h2></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                </table>                </td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="1" bordercolor="#CCCCCC" style="border-collapse:collapse" bgcolor="#E1F4F9" cellspacing="0" cellpadding="12">
+                  <tr>
+                    <td><table width="100%" border="1" bordercolor="#CCCCCC" cellspacing="0" cellpadding="10" style="border-collapse:collapse" bgcolor="#FFFFFF">
+                      <tr>
+                        <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                            <tr  onclick="window.open('http://wwtyle="border-collapse:collapse" bgcolor="#FFFFFF">
+                      <tr>
+                        <td><table width="100%" border="0" cellpaddingw.cdc.gov/mmwr/preview/mmwrhtml/mm6332a3.htm', 'window11'); return false;"
+style="cursor:pointer;"
+onmouseover="ShowImage('item11','../images/diseases/triangle_orange_006B91_med.gif');return true;"
+onmouseout ="ShowImage('item11','../images/diseases/triangle_orange_FF9900_med.gif');return true;" >
+                              <td width="1%" bgcolor="#FFFFFF" valign="top"><img src="../images/diseases/triangle_orange_FF9900_med.gif" name="item11"
+ width="39" height="29" border="0" align="absmiddle" id="item11" /> </td>
+                              <td><a style="text-decoration:none" href="http://www.cdc.gov/mmwr/preview/mmwrhtml/mm6332a3.htm" target="_blank"><font face="Arial" size="2" color="006B91">Prevention and Control of Seasonal Influenza with Vaccines, 2014-15</font></a><br />
+                                  </font><font class="bodytext9">ACIP recommendations - 8/15/14</font></td>
+                            </tr>
+                        </table></td>
+                      </tr>
+                    </table>
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td height="8"></td>
+                        </tr>
+                      </table>
+                      <table width="100%" border="1" bordercolor="#CCCCCC" cellspacing="0" cellpadding="10" "0">
+                        <tr>
+                          <td height="8"></td>
+                        </tr>
+                      </table>
+   style="border-collapse:collapse" bgcolor="#FFFFFF">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><font size="3" face="Arial" color="#030303">Immunization Materials for Patients &amp; Staff<br>
+        </font></td>
+      </tr>
+      <tr>
+        <td height="8"></td>
+      </tr>
+    </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/handouts/influenza-vaccines.asp';"
+onmouseover="ShowImage('item80','../images/clinic-resources/arrow_006B91_med.gif');return true;"
+onmouseout ="ShowImage('item80','../images/clinic-resources/arrow_FF9900_med.gif');return true;" >
+          <td valign="top"><img src="../images/clinic-resources/arrow_FF9900_med.gif" name="item80"
+  width="28" height="20" border="0" align="absmiddle" id="item80" /></td>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr onclick="document.location.href='http://www.immunize.org/handouts/influenza-vaccines.asp'; return false;"
+style="cursor:pointer;"
+onmouseover="ShowImage('item80','../images/clinic-resources/arrow_006B91_med.gif');return true;"
+onmouseout ="ShowImage('item80','../images/clinic-resources/arrow_FF9900_med.gif');return true;" >
+ vaccines.asp'; return false;"
+style="cursor:pointer;"
+onmouseover="ShowImage('item80','../images/clinic-resources/arrow_006B91_med.gif');return true               <td width="100%"><a href="http://www.immunize.org/handouts/influenza-vaccines.asp" style="text-decoration:none"><font face="Arial" size="3" color="#006B91">Influenza</font><font face="Arial" size="3" color="#006B91"> Handouts<br />
+                </font></a><font class="bodytext10">Influenza-specific educational pieces for health professionals and their patients</font></td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td height="20"></td>
+          <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="8" align="left"></td>
+            </tr>
+            <tr>
+              <td height="10" align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="50%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td valign="top"><table width="100%" border="1" bordercolor="#CCCCCC" style="border-collapse:collapse" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td><img src="/images/influenza/vaccine-summaries-flu-parents.jpg" alt="Influenza - Make Sure Your Child is Protected" title="Influenza - Make Sure Your Child is Protectcellpadding="0">
+                              <tr>
+                                <td><img src="/images/influenza/vaccine-summaries-flu-parents.jped" width="60" height="77" /></td>
+                              </tr>
+                          </table></td>
+                          <td><table border="0" cellspacing="0" width="8" cellpadding="0">
+                              <tr>
+                                <td height="12"></td>
+                              </tr>
+                          </table></td>
+                          <td width="100%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td><font class="bodytext9"><b>Influenza - Make Sure Your Child is Protected</b></font></td>
+                              </tr>
+                              <tr>
+                                <td height="5"></td>
+                              </tr>
+                              <tr>
+                                <td><table width="10%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td><a href="http://www.immunize.org/catg.d/p4312.pdf" target="_blank" class="tealorangelink8" style="text-decoration:none"><b>English</b></a></td>
+                                      <td><table border="0" cellspacing="0" width="8" cellpadding="0">
+                                          <tr>
+                                         elink8" style="text-decoration:none"><b>English</b></a></td>
+                                      <td><table border="0" cellspacing="0" width="8" ce   <td height="5"></td>
+                                          </tr>
+                                      </table></td>
+                                      <td><font class="bodytext8"><b>|</b></font></td>
+                                      <td><table border="0" cellspacing="0" width="8" cellpadding="0">
+                                          <tr>
+                                            <td height="5"></td>
+                                          </tr>
+                                      </table></td>
+                                      <td><a href="http://www.immunize.org/catg.d/p4312-01.pdf" target="_blank" class="tealorangelink8" style="text-decoration:none"><b>Spanish</b></a></td>
+                                    </tr>
+                                </table></td>
+                              </tr>
+                          </table></td>
+                        </tr>
+                    </table></td>
+                    <td><table border="0" cellspacing="0" width="20" cellpadding="0">
+                        <tr>
+                          <td height="12"></td>
+                        </tr>
+                    </table></td>
+                    <td width="50%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td valign="top"><t                        </tr>
+                    </table></td>
+                    <td width="50%" valign="top"><table width="100%" border="0" cellable width="100%" border="1" bordercolor="#CCCCCC" style="border-collapse:collapse" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td><img src="/images/influenza/vaccine-summaries-flu-adults.jpg" alt="Protect Yourself from Influenza" title="Protect Yourself from Influenza" width="60" height="77" /></td>
+                              </tr>
+                          </table></td>
+                          <td><table border="0" cellspacing="0" width="8" cellpadding="0">
+                              <tr>
+                                <td height="12"></td>
+                              </tr>
+                          </table></td>
+                          <td width="100%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td><font class="bodytext9"><b>Protect Yourself from Influenza</b></font></td>
+                              </tr>
+                              <tr>
+                                <td height="5"></td>
+                              </tr>
+                              <tr>
+                                <td><table width="10%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td><a href="http://www.immuni  </tr>
+                              <tr>
+                                <td><table width="10%" border="0" cellspacing="0" cellpadding="0">
+     ze.org/catg.d/p4408.pdf" target="_blank" class="tealorangelink8" style="text-decoration:none"><b>English</b></a></td>
+                                      <td><table border="0" cellspacing="0" width="8" cellpadding="0">
+                                          <tr>
+                                            <td height="5"></td>
+                                          </tr>
+                                      </table></td>
+                                      <td><font class="bodytext8"><b>|</b></font></td>
+                                      <td><table border="0" cellspacing="0" width="8" cellpadding="0">
+                                          <tr>
+                                            <td height="5"></td>
+                                          </tr>
+                                      </table></td>
+                                      <td><a href="http://www.immunize.org/catg.d/p4408-01.pdf" target="_blank" class="tealorangelink8" style="text-decoration:none"><b>Spanish</b></a></td>
+                                    </tr>
+                                </table></td>
+                              </tr>
+                          </table></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td 
+                              </tr>
+                          </table></td>
+                        </tr>
+                    </table></td>
+    height="15" align="left"></td>
+            </tr>
+            <tr>
+              <td height="10" align="left"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                  <tr onclick="document.location.href='http://www.immunize.org/handouts/influenza-vaccines.asp'; return false;"
+style="cursor:pointer;"
+onmouseover="ShowImage('item14','/images/clinic-resources/arrow_006B91_xsml.gif');return true;"
+onmouseout ="ShowImage('item14','/images/clinic-resources/arrow_FF9900_xsml.gif');return true;" >
+                    <td width="1%" bgcolor="#FFFFFF" valign="top"><img src="/images/clinic-resources/arrow_FF9900_xsml.gif" name="item14" alt="Click this arrow to view all influenza handouts for patients and staff" width="21" height="16" border="0" align="absmiddle" id="item14" title="Click here to view all influenza handouts for patients and staff" /></td>
+                    <td><a style="text-decoration:none" href="http://www.immunize.org/handouts/influenza-vaccines.asp" class="teallink10">View All</a></td>
+                  </tr>
+              </table></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="10" align="left"></td>
+        </tr>
+        <tr>
+          <td align="left" b    </tr>
+          </table></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>ackground="/images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+              <tr>
+                <td height="5"></td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td height="10" align="left"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/vis/vis_flu_live.asp';"
+onmouseover="ShowImage('item82','../images/clinic-resources/arrow_006B91_med.gif');return true;"
+onmouseout ="ShowImage('item82','../images/clinic-resources/arrow_FF9900_med.gif');return true;" >
+          <td valign="top"><img src="../images/clinic-resources/arrow_FF9900_med.gif" name="item82"
+  width="28" height="20" border="0" align="absmiddle" id="item82" /></td>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="100%"><a href="http://www.immunize.org/vis/vis_flu_live.asp" style="text-decoration:none"><font face="Arial" size="3" color="#006B91">Vaccine Information Statements<br />
+                </font></a><font class="bodytext10">VISs explain both the benefits and risks of a vaccine</font></td>
+              </tr>
+          </table></td>
+        </tr>
+    "Arial" size="3" color="#006B91">Vaccine Information Statements<br />
+                </font></a><font class="bodytext10">VISs explain both the benef    <tr bgcolor="#FFFFFF">
+          <td height="20"></td>
+          <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="5"></td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr bgcolor="#FFFFFF" style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/vis/vis_flu_inactive.asp'; return false;"
+                                                onmouseover="ShowImage('item228','../images/clinic-resources/arrow_006B91_xsml.gif');return true;"
+                                                onmouseout ="ShowImage('item228','../images/clinic-resources/arrow_FF9900_xsml.gif');return true;" >
+                      <td bgcolor="#FFFFFF" valign="top"><img src="../images/clinic-resources/arrow_FF9900_xsml.gif" alt="HPV (Cervarix) VIS" name="item228"
+ width="21" height="16" border="0" align="absmiddle" id="item4" title="HPV (Cervarix) VIS" /> </td>
+                      <td nowrap="nowrap" width="100%"><font color="#006B91" size="2" face="Arial">Influenza (IIV) VIS</font></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="8"></td>
+              </tr>
+              <tr>
+          r="#006B91" size="2" face="Arial">Influenza (IIV) VIS</font></td>
+                    </tr>
+                </table></td>
+              </tr>
+          <td valign="top" width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr bgcolor="#FFFFFF" style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/vis/vis_flu_live.asp'; return false;"
+                                                onmouseover="ShowImage('item128','../images/clinic-resources/arrow_006B91_xsml.gif');return true;"
+                                                onmouseout ="ShowImage('item128','../images/clinic-resources/arrow_FF9900_xsml.gif');return true;" >
+                            <td bgcolor="#FFFFFF" valign="top"><img src="../images/clinic-resources/arrow_FF9900_xsml.gif" alt="HPV (Gardasil) VIS" name="item128"
+ width="21" height="16" border="0" align="absmiddle" id="item5" title="HPV (Gardasil) VIS" /> </td>
+                            <td nowrap="nowrap" width="100%"><font color="#006B91" size="2" face="Arial">Influenza (LAIV) VIS</font></td>
+                          </tr>
+                      </table></td>
+                    </tr>
+                </table></td>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+                    </table></td>
+                    </tr>
+                </table></td>
+              </tr>
+          </table></td>
+        </tr>        <td height="10" align="left"></td>
+        </tr>
+        <tr>
+          <td align="left" background="/images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+              <tr>
+                <td height="5"></td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td height="10" align="left"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/askexperts/experts_inf.asp'; return false;"
+onmouseover="ShowImage('item85','../images/clinic-resources/arrow_006B91_med.gif');return true;"
+onmouseout ="ShowImage('item85','../images/clinic-resources/arrow_FF9900_med.gif');return true;" >
+          <td bgcolor="#FFFFFF" valign="top"><img src="../images/clinic-resources/arrow_FF9900_med.gif" name="item85"
+ width="28" height="20" border="0" align="absmiddle" id="item85" /> </td>
+          <td width="100%"><a href="http://www.immunize.org/askexperts/experts_inf.asp" style="text-decoration:none"><font face="Arial" size="3" color="#006B91">Ask the Experts<br />
+          </font></a> <font class="bodytext10"> CDC's experts answer challenging questions about vaccines</font></td>
+        </tr>
+      </table>
+      <tastyle="text-decoration:none"><font face="Arial" size="3" color="#006B91">Ask the Experts<br />
+          </font></a> <font class="bodytext10"> CDC's ble width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="10" align="left"></td>
+        </tr>
+        <tr>
+          <td align="left" background="/images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+              <tr>
+                <td height="5"></td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td height="10" align="left"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/standing-orders'; return false;"
+onmouseover="ShowImage('item87','../images/clinic-resources/arrow_006B91_med.gif');return true;"
+onmouseout ="ShowImage('item87','../images/clinic-resources/arrow_FF9900_med.gif');return true;" >
+          <td bgcolor="#FFFFFF" valign="top"><img src="../images/clinic-resources/arrow_FF9900_med.gif" name="item87"
+ width="28" height="20" border="0" align="absmiddle" id="item87" /> </td>
+          <td width="100%"><a href="http://www.immunize.org/standing-orders" style="text-decoration:none"><font face="Arial" size="3" color="#006B91">Standing Orders<br />
+          </font></a> <font class="bodytext10"> Standing orders for administering vaccines</font></td>100%"><a href="http://www.immunize.org/standing-orders" style="text-decoration:none"><font face="Arial" size="3" color="#006B91">Standing Orders<br />
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="10" align="left"></td>
+        </tr>
+        <tr>
+          <td align="left" background="/images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+              <tr>
+                <td height="5"></td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td height="10" align="left"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/pocketguides'; return false;"
+onmouseover="ShowImage('item888','../images/clinic-resources/arrow_006B91_med.gif');return true;"
+onmouseout ="ShowImage('item888','../images/clinic-resources/arrow_FF9900_med.gif');return true;" >
+          <td bgcolor="#FFFFFF" valign="top"><img src="../images/clinic-resources/arrow_FF9900_med.gif" name="item888"
+ width="28" height="20" border="0" align="absmiddle" id="item6" /> </td>
+          <td width="100%"><a href="http://www.immunize.org/pocketguides" style="text-decoration:none"><font face="Arial" size="3" color="#006B91">Vaccine Pocket Guides<br />
+          </font></a> <font class="bodytext10">Intended for ="item6" /> </td>
+          <td width="100%"><a href="http://www.immunize.org/pocketguides" style="text-decoration:none"><font face="Arial" size="3" HCP, IAC has guides for influenza and pneumococcal vaccination</font></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="10" align="left"></td>
+        </tr>
+        <tr>
+          <td align="left" background="/images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+              <tr>
+                <td height="5"></td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td height="10" align="left"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/resources/dis_inf.asp'; return false;"
+onmouseover="ShowImage('item88','../images/clinic-resources/arrow_006B91_med.gif');return true;"
+onmouseout ="ShowImage('item88','../images/clinic-resources/arrow_FF9900_med.gif');return true;" >
+          <td bgcolor="#FFFFFF" valign="top"><img src="../images/clinic-resources/arrow_FF9900_med.gif" name="item88"
+ width="28" height="20" border="0" align="absmiddle" id="item88" /> </td>
+          <td width="100%"><a href="http://www.immunize.org/resources/dis_inf.asp" style="text-decoration:none"><font face="Arial" size="3" color="#006B910_med.gif" name="item88"
+ width="28" height="20" border="0" align="absmiddle" id="item88" /> </td>
+          <td width="100%"><a href="http://www.im">More Influenza Resources<br />
+          </font></a> <font class="bodytext10"> Vaccine-related resources from other organizations</font></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="10" align="left"></td>
+        </tr>
+        <tr>
+          <td align="left" background="/images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+              <tr>
+                <td height="5"></td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td height="10" align="left"></td>
+        </tr>
+      </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/cdc/schedules'; return false;"
+onmouseover="ShowImage('item89','../images/clinic-resources/arrow_006B91_med.gif');return true;"
+onmouseout ="ShowImage('item89','../images/clinic-resources/arrow_FF9900_med.gif');return true;" >
+          <td bgcolor="#FFFFFF" valign="top"><img src="../images/clinic-resources/arrow_FF9900_med.gif" name="item89"
+ width="28" height="20" border="0" align="absmiddle" id="item89" /> </td>
+          <td width="100%"><a href="http://www.immunize.org/cdc/schedules" style="text-decor valign="top"><img src="../images/clinic-resources/arrow_FF9900_med.gif" name="item89"
+ width="28" height="20" border="0" align="absmiddle" id="item8ation:none"><font face="Arial" size="3" color="#006B91">CDC Immunization Schedules<br />
+          </font></a><font class="bodytext10">Recommended immunization schedules for patients</font></td>
+        </tr>
+      </table>
+      </td>
+  </tr>
+</table></td>
+                  </tr>
+                </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="20"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="12"><img src="../images/diseases/GLT.jpg" alt="GLT" width="12" height="12" /></td>
+                      <td background="../images/diseases/GlineT.jpg"><table border="0" cellspacing="0" width="12" cellpadding="0">
+                          <tr>
+                            <td height="12"></td>
+                          </tr>
+                      </table></td>
+                      <td width="13"><img src="../images/diseases/GRT.jpg" alt="GRT" width="12" height="12" /></td>
+                    </tr>
+                    <tr>
+                      <td background="../images/diseases/GlineL.jpg">&nbsp;</td>
+                      <td valign="top"><table width="100%" border="0" cellspacing="0" cellpah="12" height="12" /></td>
+                    </tr>
+                    <tr>
+                      <td background="../images/diseases/GlineL.jpg">dding="0">
+                          <tr>
+                            <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="80%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td height="8"><font face="Arial" size="3" color="#333333">IAC Publications</font></td>
+                                        <td><table border="0" cellspacing="0" width="20" cellpadding="0">
+                                            <tr>
+                                              <td height="12"></td>
+                                            </tr>
+                                        </table></td>
+                                        <td width="20%" align="right"><table width="10%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                              <td style="white-space:nowrap"><a href="/publications" class="tealorangelink8" style="text-decoration:none"><b>LEARN MORE</b></a></td>
+                                              <td><table border="0" cellspacing="0" width="10" cellpadding="0">
+                                                  <tr>
+                    gelink8" style="text-decoration:none"><b>LEARN MORE</b></a></td>
+                                              <td><table border="0" cellspacing="0"                                 <td height="12"></td>
+                                                  </tr>
+                                              </table></td>
+                                              <td><font class="bodytext8">|</font></td>
+                                              <td><table border="0" cellspacing="0" width="10" cellpadding="0">
+                                                  <tr>
+                                                    <td height="12"></td>
+                                                  </tr>
+                                              </table></td>
+                                              <td><a href="/subscribe" class="tealorangelink8" style="text-decoration:none"><b>SUBSCRIBE</b></a></td>
+                                            </tr>
+                                        </table></td>
+                                      </tr>
+                                      <tr>
+                                        <td height="8" align="left"></td>
+                                        <td height="8" align="left"></td>
+                                        <td height="8" align="left"></td>
+                                      </tr>
+                                      <tr>
+                                        <td valign="top"><table width="100%" border="0" cellspac                                   <td height="8" align="left"></td>
+                                      </tr>
+                                   ing="0" cellpadding="0">
+                                            <tr>
+                                              <td><table width="100%" border="1" style="border-collapse:collapse" bordercolor="#CCCCCC" cellspacing="0" cellpadding="0">
+                                                  <tr>
+                                                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                          <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="6" bgcolor="#006B91">
+                                                              <tr>
+                                                                <td height="86" valign="top"><font class="georgiawhitetext14">IAC</font></td>
+                                                              </tr>
+                                                          </table></td>
+                                                          <td width="100%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="6">
+                                                              <tr>
+                                                                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              g="0" cellpadding="6">
+                                                              <tr>
+                                                                                                <tr>
+                                                                      <td align="left"><a style="text-decoration:none" class="georgiatealorangelink14" href="http://www.immunize.org/express">EXPRESS</a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                      <td><font class="bodytext9">Stay current with IAC's weekly email news service for health professionals</font></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                      <td height="5"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                      <td align="left"><table width="10%" border="0" cellspacing="0" cellpadding="0">
+                                                                          <tr bgcolor="#FFFFFF" style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/express'; return false;"
+                                                o>
+                                                                          <tr bgcolor="#FFFFFF" style="cursor:pointer;" onclick="document.location.nmouseover="ShowImage('item37','../images/clinic-resources/arrow_006B91_xsml.gif');return true;"
+                                                onmouseout ="ShowImage('item37','../images/clinic-resources/arrow_FF9900_xsml.gif');return true;" >
+                                                                            <td bgcolor="#FFFFFF" valign="top"><img src="../images/clinic-resources/arrow_FF9900_xsml.gif" alt="Image of an arrow" name="item37"
+ width="21" height="16" border="0" align="absmiddle" id="item37" title="Click here to read IAC Express," /> </td>
+                                                                            <td width="100%" nowrap="nowrap"><font color="#006B91" size="2" face="Arial">Read latest issue</font><br /></td>
+                                                                          </tr>
+                                                                      </table></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                              </tr>
+                                                          </table></td>
+                                                        </tr>
+                                                    </table></td>
+                                             </tr>
+                                                          </table></td>
+                                                                           </tr>
+                                              </table></td>
+                                            </tr>
+                                        </table></td>
+                                        <td><table border="0" cellspacing="0" width="20" cellpadding="0">
+                                            <tr>
+                                              <td height="12"></td>
+                                            </tr>
+                                        </table></td>
+                                        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                              <td width="50%" align="center"><a href="http://www.immunize.org/nt"><img src="../images/vaxservices/NT.jpg" width="77" height="100" border="0" title="Click here to read Needle Tips" alt="Needle Tips cover image" /></a></td>
+                                              <td><table border="0" cellspacing="0" width="20" cellpadding="0">
+                                                  <tr>
+                                                    <td height="12"></td>
+                                                  </tr>
+                                              </table></td>
+                                              <td width="5r>
+                                                    <td height="12"></td>
+                                                  </tr>
+              0%" align="center"><a href="http://www.immunize.org/va"><img src="../images/vaxservices/VA.jpg" width="77" height="100" border="0" title="Click here to read Vaccinate Adults" alt="Vaccinate Adults cover image" /></a></td>
+                                            </tr>
+                                        </table></td>
+                                      </tr>
+                                  </table></td>
+                                </tr>
+                            </table></td>
+                          </tr>
+                      </table></td>
+                      <td background="../images/diseases/GlineR.jpg">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td><img src="../images/diseases/GLB.jpg" alt="GLB" width="12" height="12" /></td>
+                      <td background="../images/diseases/GlineB.jpg"><table border="0" cellspacing="0" width="12" cellpadding="0">
+                          <tr>
+                            <td height="12"></td>
+                          </tr>
+                      </table></td>
+                      <td><img src="../images/diseases/GRB.jpg" alt="GRB" width="12" height="12" /></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+         d><img src="../images/diseases/GRB.jpg" alt="GRB" width="12" height="12" /></td>
+                    </tr>
+                  </table>
+                          <td height="20"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="1" cellspacing="0" cellpadding="5" bgcolor="#006B91" bordercolor="#CCCCCC" style="border-collapse:collapse">
+                    <tr>
+                      <td><a href="http://www.immunize.org/resources" style="text-decoration:none"><b><font size="2" face="Arial" color="#FFFFFF">Directory of Immunization Resources</font></b></a></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="5"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="1" bordercolor="#CCCCCC" style="border-collapse:collapse" bgcolor="#E1F4F9" cellspacing="0" cellpadding="12">
+                    <tr>
+                      <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="50%"><table width="100%" border="1" style="border-collapse:collapse" bordercolor="#CCCCCC" cellpadding="8" cellspacing="0" bgcolor="#FFFFFF">
+                                <tr>
+                                  <td><table width="100%" border="0" cellspacing="0" cellpadding="0">der="1" style="border-collapse:collapse" bordercolor="#CCCCCC" cellpadding="8" cellspacing="0" bgcolor="#FFFFFF">
+                                <tr
+                                      <tr>
+                                        <td width="100%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                              <td height="5"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                  <tr>
+                                                    <td width="100%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                          <td><a href="http://www.immunize.org/resources" style="text-decoration:none"><font size="2" face="Arial" color="#333333">IAC's Online Source of Reliable Information</font></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td height="8"></td>
+                                                        </tr>
+                                                      </table>
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                          <tr>
+  r>
+                                                      </table>
+                                                        <table width="100%" border                                                          <td nowrap><a href="http://www.immunize.org/resources/books_refer.asp" style="text-decoration:none"><font size="2" face="Arial">Book and Periodicals</font></a></td>
+                                                            <td><table border="0" cellspacing="0" width="20" cellpadding="0">
+                                                                <tr>
+                                                                  <td height="12"></td>
+                                                                </tr>
+                                                            </table></td>
+                                                            <td><a href="http://www.immunize.org/resources/res_hotlines.asp" style="text-decoration:none"><font size="2" face="Arial">Hotlines</font></a></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td height="5"></td>
+                                                            <td height="5"></td>
+                                                            <td></td>
+                                                          </tr>
+                                                          <tr>
+                                 <td height="5"></td>
+                                                            <td></td>
+                                                                                    <td nowrap><a href="http://www.immunize.org/resources/contedu.asp" style="text-decoration:none"><font size="2" face="Arial">Continuing Education</font></a></td>
+                                                            <td height="5"></td>
+                                                            <td nowrap><a href="http://www.immunize.org/resources/manufact_vax.asp" style="text-decoration:none"><font size="2" face="Arial">Manufacturers</font></a></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td height="5"></td>
+                                                            <td height="5"></td>
+                                                            <td></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td><a href="http://www.immunize.org/resources/emailnews.asp" style="text-decoration:none"><font size="2" face="Arial">Email News Service</font></a></td>
+                                                            <td height="5"></td>
+                                                            <td nowrap><a href="http://wwxt-decoration:none"><font size="2" face="Arial">Email News Service</font></a></td>
+                                                            <td hew.immunize.org/resources/res_powerpoint.asp" style="text-decoration:none"><font size="2" face="Arial">PowerPoint Slides</font></a></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td></td>
+                                                            <td height="5"></td>
+                                                            <td></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td nowrap><a href="http://www.immunize.org/resources/gov_us.asp" style="text-decoration:none"><font size="2" face="Arial">Government Agencies</font></a></td>
+                                                            <td height="5"></td>
+                                                            <td><a href="http://www.immunize.org/resources" style="text-decoration:none"><font size="2" face="Arial">More Resources</font></a></td>
+                                                          </tr>
+                                                      </table></td>
+                                                    <td><table border="0" cellspacing="0" width="20" cellpadding="0">
+                                                            </tr>
+                                                      </table></td>
+                                                                      <tr>
+                                                          <td height="12"></td>
+                                                        </tr>
+                                                    </table></td>
+                                                    <td align="right"><a href="http://www.immunize.org/resources"><img src="../images/vaxservices/resources_logo.jpg" width="120" height="90" border="0" title="Click here to visit IACs Directory of Immunization Resources" alt="Image of a computer monitor links to IACs Directory of Immunization Resources"></a></td>
+                                                  </tr>
+                                              </table></td>
+                                            </tr>
+                                        </table></td>
+                                      </tr>
+                                  </table></td>
+                                </tr>
+                            </table></td>
+                          </tr>
+                      </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table>              </td>
+          </tr>
+          
+        </table></td>
+        <td width="1"><table border="0" cellspacing="0" width="25" cellpadding="0">
+          <tr>
+      
+                  </table></td>
+              </tr>
+            </table>              </td>
+          </tr>
+          
+        </table></td>
+        <td height="12"></td>
+          </tr>
+        </table></td>
+        <td width="50%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="12"><img src="../images/diseases/GLT.jpg" alt="GLT" width="12" height="12"></td>
+            <td background="../images/diseases/GlineT.jpg"><table border="0" cellspacing="0" width="12" cellpadding="0">
+                <tr>
+                  <td height="12"></td>
+                </tr>
+            </table></td>
+            <td width="13"><img src="../images/diseases/GRT.jpg" alt="GRT" width="12" height="12"></td>
+          </tr>
+          <tr>
+            <td background="../images/diseases/GlineL.jpg">&nbsp;</td>
+            <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><b><font size="1" face="Arial" color="#000000">MORE DISEASES &amp; VACCINES</font></b></td>
+                    </tr>
+                    <tr>
+                      <td height="5"></td>
+                    </tr>
+                  </table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                                     <tr>
+                      <td height="5"></td>
+                    </tr>
+                  </table>
+                    <tabl       <td width="25%"><font size="2" face="Arial"><a class="disvax_ant" href="http://www.immunize.org/anthrax" style="text-decoration: none">Anthrax</a></font></td>
+                        <td><table border="0" cellspacing="0" width="15" cellpadding="0">
+                        <tr>
+                        <td height="12"></td>
+                        </tr>
+                        </table></td>
+		                <td width="25%"><font size="2" face="Arial"><a class="disvax_hpv" href="http://www.immunize.org/hpv" style="text-decoration: none">HPV</a></font></td>
+		                <td><table border="0" cellspacing="0" width="15" cellpadding="0">
+                        <tr>
+                        <td height="12"></td>
+                        </tr>
+                        </table></td>
+                        <td width="25%"><font size="2" face="Arial"><a class="disvax_pcv7" href="http://www.immunize.org/pneumococcal-pcv" style="text-decoration: none">PCV</a></font></td>
+                        <td><table border="0" cellspacing="0" width="15" cellpadding="0">
+                        <tr>
+                        <td height="12"></td>
+                        </tr>
+                        </table></td>
+                        <td width="25%"><font size="2" face="Arial"><a class="disvax_zost" href="http://www.immunize.org/zoster" style="text-deco                 <td height="12"></td>
+                        </tr>
+                        </table></td>
+                        <td width="25%">ration: none">Shingles</a></font></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><font size="2" face="Arial"><a class="disvax_varic" href="http://www.immunize.org/varicella" style="text-decoration: none">Chickenpox</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_inf" href="http://www.immunize.org/influenza" style="text-decoration: none">Influenza</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_ppsv" href="http://www.immunize.org/pneumococcal-ppsv" style="text-decoration: none">PPSV</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_sml" href="http://www.immunize.org/bioterror/smallpox.htm" style="text-decoration: none">Smallpox</a></font></td>
+                      </tr>
+                      <tr>
+                        <td></    <td><font size="2" face="Arial"><a class="disvax_sml" href="http://www.immunize.org/bioterror/smallpox.htm" style="text-decoration: none">Smallpoxtd>
+                        <td height="5"></td>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><font size="2" face="Arial"><a class="disvax_diph" href="http://www.immunize.org/diphtheria" style="text-decoration: none">Diphtheria</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_meas" href="http://www.immunize.org/measles" style="text-decoration: none">Measles</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_polio" href="http://www.immunize.org/polio" style="text-decoration: none">Polio</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_tet" href="http://www.immunize.org/tetanus" style="text-decoration: none">Tetanus</a></font></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                        <td height="5"></td>
+                        font></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td height="5"></td>
+<td></td>
+                        <td height="5"></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td nowrap><font size="2" face="Arial"><a class="disvax_hepa" href="http://www.immunize.org/hepatitis-a" style="text-decoration: none">Hepatitis A</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_menin" href="http://www.immunize.org/meningococcal" style="text-decoration: none">Meningo.</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_rab" href="http://www.immunize.org/rabies" style="text-decoration: none">Rabies</a></font></td>
+                        <td height="5"></td>
+                        <td height="5"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td nowrap><font size="2" face="Arial"><a class="disvax_hepb" href="http://www.immunize.org/
+                        <td height="5"></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+           hepatitis-b"  style="text-decoration: none">Hepatitis B</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_mumps" href="http://www.immunize.org/mumps" style="text-decoration: none">Mumps</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_rota" href="http://www.immunize.org/rotavirus" style="text-decoration: none">Rotavirus</a></font></td>
+                        <td height="5"></td>
+                        <td height="5"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                        <td height="5"></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><font size="2" face="Arial"><a class="disvax_hib" href="http://www.immunize.org/hib" style="text-decoration: none">Hib</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_pert" href="http://www.immunize.org/pertussis" style="text-decoration: none">Pertussis</a></font></tdration: none">Hib</a></font></td>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="dis>
+                        <td height="5"></td>
+                        <td><font size="2" face="Arial"><a class="disvax_rub" href="http://www.immunize.org/rubella" style="text-decoration: none">Rubella</a></font></td>
+                        <td height="5"></td>
+                        <td height="5"></td>
+                      </tr>
+                  </table></td>
+                </tr>
+            </table></td>
+            <td background="../images/diseases/GlineR.jpg">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><img src="../images/diseases/GLB.jpg" alt="GLB" width="12" height="12"></td>
+            <td background="../images/diseases/GlineB.jpg"><table border="0" cellspacing="0" width="12" cellpadding="0">
+                <tr>
+                  <td height="12"></td>
+                </tr>
+            </table></td>
+            <td><img src="../images/diseases/GRB.jpg" alt="GRB" width="12" height="12"></td>
+          </tr>
+        </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="20"></td>
+            </tr>
+          </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="10%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr bg     </tr>
+          </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="color="#FFFFFF"
+style="cursor:pointer;" onClick="document.location.href='http://www.immunize.org/influenza/h3n2v/'; return false;"
+onMouseOver="ShowImage('item52','../images/influenza/feature_influenza_on.jpg');return true;"
+onMouseOut ="ShowImage('item52','../images/influenza/feature_influenza_off.jpg');return true;" >
+                  <td bgcolor="#FFFFFF" valign="top"><img name="item52" border="0" src="../images/influenza/feature_influenza_off.jpg" align="absmiddle"
+ width="200" height="200" alt="H3N2v outbreak information" title="H3N2v outbreak information"> </td>
+                </tr>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="20"></td>
+                </tr>
+                <tr>
+                  <td height="20"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="1"><img src="../images/diseases/GLT.jpg" alt="GLT" width="12" height="12"></td>
+                      <td width="100%" background="../images/diseases/GlineT.jpg"><table border="0" cellspacing="0" width="12" cellpadding="0">
+                          <tr>
+                            <td height="12"></td>
+                          </tr>
+                      </table></td>
+                      <td wGlineT.jpg"><table border="0" cellspacing="0" width="12" cellpadding="0">
+                          <tr>
+                            <td height="12"idth="1"><img src="../images/diseases/GRT.jpg" alt="GRT" width="12" height="12"></td>
+                    </tr>
+                    <tr>
+                      <td background="../images/diseases/GlineL.jpg">&nbsp;</td>
+                      <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td><font color="#333333" size="3" face="Arial">Photos &amp; Videos</font></td>
+                          </tr>
+                          <tr>
+                            <td height="8"></td>
+                          </tr>
+                        </table>
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onClick="document.location.href='http://www.immunize.org/photos/flu-photos.asp'; return false;"
+onMouseOver="ShowImage('item71','../images/general/camera-FF9900.gif');return true;"
+onMouseOut ="ShowImage('item71','../images/general/camera-006B91.gif');return true;" >
+                              <td bgcolor="#FFFFFF" valign="top"><img name="item71" border="0" src="../images/general/camera-006B91.gif" align="absmiddle"
+ width="40" height="21" alt="Influenza photos" title="Influenza photos"> </td>
+                              <td width="100%"><a href="htor="#FFFFFF" valign="top"><img name="item71" border="0" src="../images/general/camera-006B91.gif" align="absmiddle"
+ width="40" height="21" alt="Infltp://www.immunize.org/photos/flu-photos.asp" style="text-decoration:none" class="teallink10">Photos<br>
+                              </a> <font class="bodytext8"> Access influenza-related images</font></td>
+                            </tr>
+                            <tr bgcolor="#FFFFFF">
+                              <td height="10"></td>
+                              <td height="10"></td>
+                            </tr>
+                            <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onClick="document.location.href='http://www.vaccineinformation.org/videos/index.asp?vid_cat=0022'; return false;"
+onMouseOver="ShowImage('item70','../images/general/video-FF9900.gif');return true;"
+onMouseOut ="ShowImage('item70','../images/general/video-006B91.gif');return true;" >
+                              <td bgcolor="#FFFFFF" valign="top"><img name="item70" border="0" src="../images/general/video-006B91.gif" align="absmiddle"
+ width="40" height="21" alt="Influenza videos" title="Influenza videos"> </td>
+                              <td><a href="http://www.vaccineinformation.org/videos/index.asp?vid_cat=0022" style="text-decoration:none" class="teallink10">Videos<br>
+                              </a> <font class="bodytext8"> Educational videos and PSAs about influenza</font></td>
+                            </tr>
+                        <asp?vid_cat=0022" style="text-decoration:none" class="teallink10">Videos<br>
+                              </a> <font class="bodytext8"> Educational /table></td>
+                      <td background="../images/diseases/GlineR.jpg">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td><img src="../images/diseases/GLB.jpg" alt="GLB" width="12" height="12"></td>
+                      <td background="../images/diseases/GlineB.jpg"><table border="0" cellspacing="0" width="12" cellpadding="0">
+                          <tr>
+                            <td height="12"></td>
+                          </tr>
+                      </table></td>
+                      <td><img src="../images/diseases/GRB.jpg" alt="GRB" width="12" height="12"></td>
+                    </tr>
+                  </table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td height="20"></td>
+                      </tr>
+                      <tr>
+                        <td height="20"><table width="100%" cellpadding="10" cellspacing="0" border="1" bordercolor="#CCCCCC">
+                            <tr>
+                              <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td height="8" align="center"><a href="http://www.immunize.org/honor-roll/influenza-mandates"><img src="../images/honor-roll/trop00%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td height="8" align="cehys-inf.jpg" alt="Mandatory Influenza Vaccination for Healthcare Personnel" width="144" height="144" border="0" title="Mandatory Influenza Vaccination for Healthcare Personnel" /></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="8"></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center"><font class="goldtext12">Mandatory Influenza Vaccination for Healthcare Personnel</font></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="5" align="center"></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                          <td align="center"><font class="bodytext9">This honor roll represents champions who have taken the lead in mandating influenza vaccination within their organization or institution</font></td>
+                                        </tr>
+                                        <tr>
+                                          <td height="8"></td>
+                           enza vaccination within their organization or institution</font></td>
+                                        </tr>
+                                             </tr>
+                                        <tr>
+                                          <td align="center"><table width="10%" border="0" cellspacing="0" cellpadding="0">
+                                              <tr>
+                                                <td><img src="../images/protectnewborns/asterix20-gold.gif" width="21" height="21" /></td>
+                                                <td><table border="0" cellspacing="0" width="10" cellpadding="0">
+                                                    <tr>
+                                                      <td height="12"></td>
+                                                    </tr>
+                                                </table></td>
+                                                <td style="white-space:nowrap"><font class="bodytext10"><b><a href="http://www.immunize.org/honor-roll/influenza-mandates"  class="tealorangelink9" style="text-decoration:none">Learn More</a></b></font></td>
+                                                <td><table border="0" cellspacing="0" width="10" cellpadding="0">
+                                                    <tr>
+                                                      <td height="12"></td>
+                                                    </tr>
+                                                </table></t
+                                                    <tr>
+                                                      <td height="12"></td>
+             d>
+                                                <td><img src="../images/protectnewborns/asterix20-gold.gif" width="21" height="21" /></td>
+                                              </tr>
+                                          </table></td>
+                                        </tr>
+                                    </table></td>
+                                  </tr>
+                              </table></td>
+                            </tr>
+                        </table></td>
+                      </tr>
+                      <tr>
+                        <td height="20"></td>
+                      </tr>
+                      <tr>
+                        <td height="20"></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr>
+                  <td height="2"></td>
+                </tr>
+              </table>
+              <table width="100%" border="1" cellspacing="0" cellpadding="5" bgcolor="#FF9900" bordercolor="#CCCCCC" style="border-collapse:collapse">
+                <tr>
+                  <td><b><font size="2" face="Arial" color="#FFFFFF">News &amp; Information </font></b></td>
+                </tr>
+              </table>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="5"="2" face="Arial" color="#FFFFFF">News &amp; Information </font></b></td>
+                </tr>
+              </table>
+              <table width="></td>
+                </tr>
+              </table>
+              <table width="100%" border="1" bordercolor="#CCCCCC" style="border-collapse:collapse" bgcolor="#FFFFE1" cellspacing="0" cellpadding="12">
+                    <tr>
+                      <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="50%"><table class="disvax_tableout" width="100%" cellpadding="5" cellspacing="0"
+                              style="border-collapse:collapse" bgcolor="#FFFFFF"
+ onmouseover="this.className='disvax_tableover';"
+ onmouseout="this.className='disvax_tableout';">
+                              <tr>
+                                <td style="cursor:pointer;" onClick="document.location.href='http://www.immunize.org/newreleases'; return false;"><a href="http://www.immunize.org/newreleases" style="text-decoration:none"><font size="2" color="#FF9900" face="Arial"> New Releases</font></a><br>
+                                    <font class="bodytext8">Vaccine licensures, resources, and recommendations</font></td>
+                              </tr>
+                          </table></td>
+                        </tr>
+                        <tr>
+                          <td height="8"></td>
+                        </tr>
+                        <tr>
+                                     </tr>
+                          </table></td>
+                        </tr>
+                        <tr>
+                              <td><table class="disvax_tableout" width="100%" cellpadding="5" cellspacing="0"
+                              style="border-collapse:collapse" bgcolor="#FFFFFF"
+ onmouseover="this.className='disvax_tableover';"
+ onmouseout="this.className='disvax_tableout';">
+                              <tr>
+                                <td style="cursor:pointer;" onClick="document.location.href='http://www.immunize.org/new'; return false;"><a href="http://www.immunize.org/new" style="text-decoration:none"><font size="2" color="#FF9900" face="Arial"> What's New at IAC</font></a><br>
+                                    <font class="bodytext8">Chronological listing of new and revised IAC materials </font></td>
+                              </tr>
+                          </table></td>
+                        </tr>
+                      </table>                      </td>
+                    </tr>
+                  </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="20"></td>
+                  </tr>
+                  <tr>
+                    <td align="left"><font size="3" face="Arial" color="#006B91">Related Topics</font></td>
+                  </tr>
+                  <tr>
+                    <td height="3" align="left"></td>
+               >
+                  <tr>
+                    <td align="left"><font size="3" face="Arial" color="#006B91">Related Topics</font></td>
+                 </tr>
+                  <tr>
+                    <td height="2" align="left" bgcolor="#006B91"></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td><a href="http://www.immunize.org/agedisparities/" style="text-decoration:none"><font size="2" face="Arial">Immunization Disparities</font></a></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr>
+                    <td align="left" background="../images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+                        <tr>
+                          <td height="5"></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td><a href="http://www.immunize.org/hcw/" style="text-decoration:none"><font size="2" face="Arial">Healthcare Personnel</font></a></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr>
+    /" style="text-decoration:none"><font size="2" face="Arial">Healthcare Personnel</font></a></td>
+                  </tr>
+                  <tr>
+                   <td align="left" background="../images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+                        <tr>
+                          <td height="5"></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td><a href="http://www.immunize.org/pregnancy/" style="text-decoration:none"><font size="2" face="Arial">Pregnancy</font></a></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr>
+                    <td align="left" background="../images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+                        <tr>
+                          <td height="5"></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td><a href="http://www.immunize.org/concerns" style="text-decoration:none"><font size="2" face="Arial">Vaccine Concerns</font></a></td> height="5" align="left"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td><a href="http://www.immuniz
+                  </tr>
+                </table>                </td>
+              <td width="1"><table border="0" cellspacing="0" width="25" cellpadding="0">
+                <tr>
+                  <td height="12"></td>
+                </tr>
+              </table></td>
+              <td  width="90%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td><iframe frameborder="0" height="151" marginheight="0" marginwidth="0" scrolling="no" src="http://www.flu.gov/widgets/vaccinelocator_2011.html" title="Flu Vaccine Locator" width="269"></iframe></td>
+                </tr>
+                <tr>
+                  <td height="20"></td>
+                </tr>
+              </table>
+              <table width="100%" border="1" cellspacing="0" cellpadding="5" bgcolor="#FF9900" bordercolor="#CCCCCC" style="border-collapse:collapse">
+                <tr>
+                  <td><b><font size="2" face="Arial" color="#FFFFFF">Articles &amp; Reports</font></b></td>
+                </tr>
+              </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+                </table>
+                <table width="100%" border="1" bordercolor="#CCCCCC" style="border-coll100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="5"></td>
+                  </tr>
+        apse:collapse" bgcolor="#FFFFE1" cellspacing="0" cellpadding="12">
+                  <tr>
+                    <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td height="8"><table class="disvax_tableout" width="100%" cellpadding="5" cellspacing="0" 
+                              style="border-collapse:collapse" bgcolor="#FFFFFF"
+ onmouseover="this.className='disvax_tableover';"
+ onmouseout="this.className='disvax_tableout';">
+                              <tr>
+                                <td style="cursor:pointer;" onClick="document.location.href='http://www.immunize.org/journalarticles/journal_flu.asp'; return false;"><a href="http://www.immunize.org/journalarticles/journal_flu.asp" style="text-decoration:none"><font size="2" color="#FF9900"face="Arial"> Influenza Journal Articles</font></a><br>
+                                    <font class="bodytext8">IAC's selection of practical, clinical, and programmatic articles</font></td>
+                              </tr>
+                          </table></td>
+                        </tr>
+                        <tr>
+                          <td width="50%" height="8"></td>
+                        </tr>
+                        <tr>
+                          <td><table class="disvax_tableout" width="100
+                        </tr>
+                        <tr>
+                          <td width="50%" height="8"></td>
+                        </t%" cellpadding="5" cellspacing="0" 
+                              style="border-collapse:collapse" bgcolor="#FFFFFF"
+ onmouseover="this.className='disvax_tableover';"
+ onmouseout="this.className='disvax_tableout';">
+                              <tr>
+                                <td style="cursor:pointer;" onClick="document.location.href='http://www.immunize.org/reports/influenza.asp'; return false;"><table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+                                    <tr>
+                                      <td nowrap><a href="http://www.immunize.org/reports/influenza.asp" style="text-decoration:none"><font color="#FF9900" size="2" face="Arial"> Unprotected People Reports</font></a></td>
+                                    </tr>
+                                    <tr>
+                                      <td><font class="bodytext8">Case reports, personal testimonies, and articles about influenza</font></td>
+                                    </tr>
+                                </table></td>
+                              </tr>
+                          </table></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                  </table></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                </table>
+                    <td height="20"></td>
+                  </tr>
+                  <tr>
+                    <td align="left"><font size="3" face="Arial" color="#006B91">Vaccine Policy &amp; Licensure</font></td>
+                  </tr>
+                  <tr>
+                    <td height="3" align="left"></td>
+                  </tr>
+                  <tr>
+                    <td height="2" align="left" bgcolor="#006B91"></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td><a href="http://www.immunize.org/acip/acipvax_inf.asp" style="text-decoration:none"><font size="2" face="Arial"> ACIP Recommendations</font></a><br>
+                        <font class="bodytext8">CDC's Advisory Committee on Immunization Practices </font></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr>
+                    <td align="left" background="../images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+                        <tr>
+                          <td height="5"></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+            edline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+                        <tr>
+                          <td height="5"></td>      <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td><a href="http://www.immunize.org/aap/aapvax_inf.asp" style="text-decoration:none"><font size="2" face="Arial"> AAP Policy Statements</font></a><br>
+                        <font class="bodytext8">Vaccine policy from the American Academy of Pediatrics</font></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr>
+                    <td align="left" background="../images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+                        <tr>
+                          <td height="5"></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td><a href="http://www.immunize.org/packageinserts/pi_influenza.asp" style="text-decoration:none"><font size="2" face="Arial"> Package Inserts</font></a><br>
+                        <font class="bodytext8">Manufacturers' labeling of vaccines licensed for use in the United States</font></td>
+                  </tr>
+   " style="text-decoration:none"><font size="2" face="Arial"> Package Inserts</font></a><br>
+                        <font class="bodytext8">Manufactur               <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr>
+                    <td align="left" background="../images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+                        <tr>
+                          <td height="5"></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td><a href="http://www.immunize.org/fda/pa_influenza.asp" style="text-decoration:none"><font size="2" face="Arial"> FDA Product Approval</font></a><br>
+                        <font class="bodytext8">Licensure information from the Food and Drug Administration </font></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr>
+                    <td align="left" background="../images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+                        <tr>
+                          <td height="5"></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+       border="0" cellspacing="0" width="8" cellpadding="0">
+                        <tr>
+                          <td height="5"></td>
+                              <td height="5" align="left"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td><a href="http://www.immunize.org/iom/iomvax_inf.asp" style="text-decoration:none"><font size="2" face="Arial"> IOM Publications</font></a><br>
+                        <font class="bodytext8">Immunization-related reports from the Institute of Medicine </font></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr>
+                    <td align="left" background="../images/homepage/dottedline.jpg"><table border="0" cellspacing="0" width="8" cellpadding="0">
+                        <tr>
+                          <td height="5"></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td height="5" align="left"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td><a href="http://www.immunize.org/who/whovax_inf.asp" style="text-decoration:none"><font size="2" face="Arial"> WHO Position Papers</font></a><br>
+                        <font class="bodytext8">World Health Organization publications on immunization</font></td>
+                  </tr>
+                </table>
+                <table><font size="2" face="Arial"> WHO Position Papers</font></a><br>
+                        <font class="bodytext8">World Health Organization publicatio width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="20"></td>
+                  </tr>
+                  <tr>
+                    <td height="20"><a href="http://www.preventinfluenza.org/" target="_blank"><img src="../images/influenza/NIVS-logo.jpg" alt="National Influenza Vaccine Summit" title="National Influenza Vaccine Summit" width="269" height="75" /></a></td>
+                  </tr>
+                  <tr>
+                    <td height="20"></td>
+                  </tr>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="12"><img src="../images/diseases/GLT.jpg" alt="GLT" width="12" height="12" /></td>
+                    <td background="../images/diseases/GlineT.jpg"><table border="0" cellspacing="0" width="12" cellpadding="0">
+                        <tr>
+                          <td height="12"></td>
+                        </tr>
+                    </table></td>
+                    <td width="13"><img src="../images/diseases/GRT.jpg" alt="GRT" width="12" height="12" /></td>
+                  </tr>
+                  <tr>
+                    <td background="../images/diseases/GlineL.jpg">&nbsp;</td>
+                    <td valign="top"><table width="100%" border=s/diseases/GRT.jpg" alt="GRT" width="12" height="12" /></td>
+                  </tr>
+                  <tr>
+                    <td background="../"0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td><font color="#333333" size="3" face="Arial">More From IAC</font></td>
+                              </tr>
+                              <tr>
+                                <td height="8"></td>
+                              </tr>
+                            </table>
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/subscribe'; return false;"
+onmouseover="ShowImage('item62','http://www.immunize.org/images/general/subscribe-on.gif');return true;"
+onmouseout ="ShowImage('item62','http://www.immunize.org/images/general/subscribe-off.gif');return true;" >
+                                  <td bgcolor="#FFFFFF" valign="top"><img src="../images/general/subscribe-off.gif" alt="Subscribe to IAC publications" name="item62"
+ width="40" height="29" border="0" align="absmiddle" id="item62" title="Subscribe to IAC publications" /> </td>
+                                  <td><a href="http://www.immunize.org/subscribe" style="text-decoration: to IAC publications" name="item62"
+ width="40" height="29" border="0" align="absmiddle" id="item62" title="Subscribe to IAC publications" /> </td>
+none"><font class="bodytext10">Subscribe to IAC</font></a><br />
+                                      <font class="bodytext8"> Periodicals and email news service - all free!</font></td>
+                                </tr>
+                                <tr>
+                                  <td height="10"></td>
+                                  <td height="10"></td>
+                                </tr>
+                                <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/support'; return false;"
+onmouseover="ShowImage('item61','http://www.immunize.org/images/general/donate-on.gif');return true;"
+onmouseout ="ShowImage('item61','http://www.immunize.org/images/general/donate-off.gif');return true;" >
+                                  <td bgcolor="#FFFFFF" valign="top"><img src="../images/general/donate-off.gif" alt="Support IAC" name="item61"
+ width="40" height="29" border="0" align="absmiddle" id="item61" title="Support IAC" /> </td>
+                                  <td><a href="http://www.immunize.org/support" style="text-decoration:none"><font class="bodytext10">Support IAC</font></a><br />
+                                      <font class="bodytext8"> Your support can make a difference!</font></td>
+                                </tr>
+                                <tcoration:none"><font class="bodytext10">Support IAC</font></a><br />
+                                      <font class="bodytext8"> Your support can r>
+                                  <td height="10"></td>
+                                  <td height="10"></td>
+                                </tr>
+                                <tr bgcolor="#FFFFFF"
+style="cursor:pointer;" onclick="document.location.href='http://www.immunize.org/shop'; return false;"
+onmouseover="ShowImage('item60','http://www.immunize.org/images/general/shop-on.gif');return true;"
+onmouseout ="ShowImage('item60','http://www.immunize.org/images/general/shop-off.gif');return true;" >
+                                  <td bgcolor="#FFFFFF" valign="top"><img src="../images/general/shop-off.gif" alt="Shop IAC" name="item60"
+ width="40" height="29" border="0" align="absmiddle" id="item60" title="Shop IAC" /> </td>
+                                  <td width="100%"><a href="http://www.immunize.org/shop" style="text-decoration:none"><font class="bodytext10">Shop IAC</font></a><br />
+                                      <font class="bodytext8"> DVDs, schedules, record cards, and more!</font></td>
+                                </tr>
+                            </table></td>
+                        </tr>
+                    </table></td>
+                    <td background="../images/diseases/GlineR.jpg">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><img src="../images/diseases/GLB.jpg"                       </tr>
+                    </table></td>
+                    <td background="../images/diseases/GlineR.jpg">&nbsp;</td>
+      alt="GLB" width="12" height="12" /></td>
+                    <td background="../images/diseases/GlineB.jpg"><table border="0" cellspacing="0" width="12" cellpadding="0">
+                        <tr>
+                          <td height="12"></td>
+                        </tr>
+                    </table></td>
+                    <td><img src="../images/diseases/GRB.jpg" alt="GRB" width="12" height="12" /></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>          </td>
+      </tr>
+    </table>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="25">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="5"><font class="bodytext8"><i>This page was reviewed
+            on January 16, 2014</i></font></td>
+        </tr>
+      </table></td>
+    <td><table border="0" cellspacing="0" width="25" cellpadding="0">
+        <tr>
+          <td width="100%" height="5"></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+<!-- Footer (across content section) for immunize.org -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td height="15"></td>
+  </tr>
+  <tr>
+    <td height="5" bgcolor="#666666"></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0th="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td height="15"></td>
+  </tr>
+  <tr>
+    <td height="5" bgcolo">
+      <tr>
+        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+          <tr>
+            <td height="10"></td>
+          </tr>
+          <tr>
+            <td><div align="center">
+              <table width="10%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="10" style="white-space:nowrap"><a href="/aboutus" class="tealorangelink8" style="text-decoration:none">About IAC</a></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td><font class="bodytext8">&bull;</font></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td style="white-space:nowrap"><a href="/aboutus/contactus.asp" class="tealorangelink8" style="text-decoration:none">Contact Us</a></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+              one">Contact Us</a></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                 <td><font class="bodytext8">&bull;</font></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td style="white-space:nowrap"><a href="/press" class="tealorangelink8" style="text-decoration:none">Press Room</a></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td><font class="bodytext8">&bull;</font></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td style="white-space:nowrap"><a href="/citeiac"
+      class="tealorangelink8" style="text-decoration:none">Cite IAC</a></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td><font class="bodytext8">&bull;</font></td>
+                  <td><table width="10" border="0ing="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+          " cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td style="white-space:nowrap"><a href="/linkiac" class="tealorangelink8" style="text-decoration:none">Link to IAC</a></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td><font class="bodytext8">&bull;</font></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td style="white-space:nowrap"><a href="/a-z" class="tealorangelink8" style="text-decoration:none">A-Z Index</a></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td><font class="bodytext8">&bull;</font></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td style="white-space:nowrap"><a href="/sitemap" class="tealorangelink8" style="text-decoration:none">Site Map</a></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td><font class="bodytext8">&bull;</font></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td style="white-space:nowrap"><a href="/iacadmin/disclaimer.asp" class="tealorangelink8" style="text-decoration:none">Disclaimer</a></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td><font class="bodytext8">&bull;</font></td>
+                  <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                  <td style="whi></td>
+                  <td><table width="1te-space:nowrap"><a href="/iacadmin/privacy.asp" class="tealorangelink8" style="text-decoration:none">Privacy</a></td>
+                </tr>
+              </table>
+            </div></td>
+          </tr>
+          <tr>
+            <td height="5"></td>
+          </tr>
+          <tr>
+            <td align="center"><div align="center"><font class="bodytext8">Immunization Action Coalition&nbsp; &bull;&nbsp; 2550 University Avenue West&nbsp; &bull;&nbsp; Suite 415 North&nbsp; &bull;&nbsp; Saint Paul, Minnesota&nbsp; &bull;&nbsp; 55114</font></div></td>
+          </tr>
+          <tr>
+            <td height="5"></td>
+          </tr>
+          <tr>
+            <td align="center"><div align="center"><font class="bodytext8"> tel 651-647-9009 &nbsp;&bull; &nbsp;fax 651-647-9131</font></div></td>
+          </tr>
+          <tr>
+            <td height="5"></td>
+          </tr>
+          <tr>
+            <td align="center"><div align="center"><font class="bodytext8">email </font><a class="tealorangelink8" href="mailto:admin@immunize.org" style="text-decoration:none">admin@immunize.org</a></b></div></td>
+          </tr>
+          <tr>
+            <td height="5"></td>
+          </tr>
+          <tr>
+            <td align="center"><div align="center">
+                <table width="10%" border="0" cellspacing="0" cellpadding="0">
+                  <>
+          </tr>
+          <tr>
+            <td height="5"></td>
+          </tr>
+          <tr>
+            <td align="center"><div align="centtr>
+                    <td height="10" style="white-space:nowrap"><a href="http://www.facebook.com/VaccineInformation" target="_blank"><img src="../images/homepage/facebook-20.jpg" width="20" height="20" border="0" /></a></td>
+                    <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td height="3"></td>
+                        </tr>
+                    </table></td>
+                    <td><font class="bodytext8">&bull;</font></td>
+                    <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td height="3"></td>
+                        </tr>
+                    </table></td>
+                    <td height="10" style="white-space:nowrap"><a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fplatform.twitter.com%2Fwidgets%2Ffollow_button.1379634856.html&amp;partner=undefined&amp;region=follow_link&amp;screen_name=ImmunizeAction&amp;tw_p=followbutton&amp;variant=2.0" target="_blank"><img src="../images/homepage/twitter-20.jpg" width="20" height="20" border="0" /></a></td>
+                    <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td height="3"></td>
+                        </tr>
+  r-20.jpg" width="20" height="20" border="0" /></a></td>
+                    <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                        </table></td>
+                    <td><font class="bodytext8">&bull;</font></td>
+                    <td><table width="10" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td height="3"></td>
+                        </tr>
+                    </table></td>
+                    <td height="10" style="white-space:nowrap"><a href="http://www.youtube.com/user/ImmunizationAction/" target="_blank"><img src="../images/homepage/youtube_20.jpg" width="20" height="20" border="0" /></a></td>
+                  </tr>
+                </table>
+            </div></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="15" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="3"></td>
+            </tr>
+        </table></td>
+        <td width="100%"><font class="bodytext8">This website is supported in part by a cooperative agreement from the National Center for Immunization and Respiratory Diseases (Grant No. 5U38IP000290) at the Centers for Disease Control and Prevention (CDC) in Atlanta, GA. The website content is the sole responsibility of IAC and doest by a cooperative agreement from the National Center for Immunization and Respiratory Diseases (Grant No. 5U38IP000290) at the Centers for Disease Co not necessarily represent the official views of CDC.</font></td>
+        <td><table width="15" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="3"></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table></td>
+      </tr>
+    </table>
+  </div>
+
+
+
+<!-- End Outermost table for all pages: body_bot_all.inc -->
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- 22 Feb 2010 -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12845215-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>+ "google-analytics.com/ga.js' type

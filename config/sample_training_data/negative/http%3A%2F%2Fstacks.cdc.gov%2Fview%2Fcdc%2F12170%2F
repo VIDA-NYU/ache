@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta content="IE=8; IE=9; IE=10;" http-equiv="X-UA-Compatible" /> 
+  <link rel="shortcut icon" type="image/x-icon" href="/sites/default/themes/stacks/images/favicon.ico"/>
+  <title>CDC Stacks | Prevention of plague; recommendations of the Advisory Committee on Immunization Practices (ACIP) - 12170 | Library Collection</title>
+  <!--[if lte IE 9]>
+   <link rel="stylesheet" type="text/css" media="all" href="/sites/default/themes/stacks/css/ie.css" />
+  <![endif]-->
+  <link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?0" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?0" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?0" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?0" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?0" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/modules/cck/theme/content-module.css?0" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/modules/islandora_solr_search/css/islandora_solr_search.css?0" />
+  <script type="text/javascript" src="/sites/default/modules/jquery_update/replace/jquery.min.js?0"></script>
+<script type="text/javascript" src="/misc/drupal.js?0"></script>
+<script type="text/javascript" src="/sites/default/modules/google_analytics/googleanalytics.js?0"></script>
+<script type="text/javascript" src="/sites/default/themes/stacks/scripts/exp_collapse.js?0"></script>
+<script type="text/javascript" src="/sites/default/themes/stacks/scripts/global.js?0"></script>
+<script type="text/javascript" src="/sites/default/themes/stacks/scripts/functions.js?0"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "ts/global.js?0"></script>
+<script type="text/javascript" src="/sites/default/themes/stacks/scripts/functions.js?0"></script>
+<script type="text/javascript">
+<!--//--rackOutbound": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" } });
+//--><!]]>
+</script>
+  
+  
+              <script type="text/javascript" src="/sites/default/themes/stacks/scripts/jquery.js"></script>
+  <script type="text/javascript" src="/misc/jquery.js?0"></script>
+<script type="text/javascript" src="/misc/drupal.js?0"></script>
+<script type="text/javascript" src="/sites/default/modules/google_analytics/googleanalytics.js?0"></script>
+<script type="text/javascript" src="/sites/default/themes/stacks/scripts/exp_collapse.js?0"></script>
+<script type="text/javascript" src="/sites/default/themes/stacks/scripts/global.js?0"></script>
+<script type="text/javascript" src="/sites/default/themes/stacks/scripts/functions.js?0"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOutbound": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" } });
+//--><!]]>
+</script>
+  
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/stacks/css/styles.css" />
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/stacks/css/local-grid.css" />
+  <link type="text/css" rel="stylesheet" media="all" href="/sites/default/themes/stacks/css/local-cdcstyles.css" />
+  <script type="text/javascript" src="/sites/default/themes/stacks/scripts/functions.js"></script>
+
+    <script type="text/JavaScript">
+  window.onload = function(){
+	  		 
+	  $('#searchTerms').val('');
+	  if($('#terms').val()=='Enter keyword or phrase...'){
+		  $('#icon').hide(); 
+	  }
+	  else if($('#terms').val()==''){
+		  $('#icon').hide();
+	  }
+	 
+	  else {
+		  $('#icon').show();
+	  }
+
+  }
+
+  
+</script>
+</head>
+
+
+<body>
+<div id="wrapper">
+<div id="wrapper-inner">
+<div id="branding">
+<span id="homeward"><a href="http://www.cdc.gov/" title="Return to the CDC Home Page">CDC Home</a></span>
+<div id="branding-logo">
+<div id="branding-logoImage">
+<img height="47" width="470" alt="CDC 24/7: Saving Lives. Protecting People. Saving Money through Prevention." src="/sites/default/themes/stacks/images/cdcheaderlogo.gif" />
+<a href="http://www.cdc.gov/" title="CDC 24/7: Saving Lives. Protecting People. Saving Money Through Prevention."><span>CDC 24/7: Saving Lives. Protecting People. Saving Money Through Prevention.</span></a>
+</div>
+</div><!-- /branding-logo -->
+</div>
+<br/>
+
+<div id="main-nav">
+<div class="browse-nav-options" id="left-nav-options">
+<ul class="top-nav-list">
+			<li ><a href="/welcome">Home</a></li>
+					<li ><a  href="/browse/collections" >Collections</a></li>
+					<li><a href="/browse/authors">Authors</a></li>
+					<li><a href="/browse/recent">Recent Additions</a></li>
+				<?php// Commented the code out for the coming soon page  //if(isset($currentUrl) && strpos($currentUrl, 'browse/comingsoon') !== FALSE){?>
+			<!-- <li><a href="" class="active">Coming Soon</a></li>  -->
+					<!--  <li><a href="">Coming Soon</a></li>  -->
+		</ul>
+</div>
+<div class="browse-nav-options" id="right-nav-options">
+<ul class="top-nav-list">
+
+<li><a href="/about">About Stacks</a></li>
+<li class="nav-seperator">|</li>
+<li><a href="/contact">Contact Us</a></li>
+<li class="nav-seperator">|</li>
+<li><a href="/help">Help</a></li>
+</ul>
+</div>
+</div>
+<noscript>
+     <div class="noscript">
+          Note: Javascript is disabled or is not supported by your browser. For this reason, some items on this page will be unavailable. For more information about this message, please visit this page: <a href="http://www.cdc.gov/Other/about_cdcgov.html">About CDC.gov</a>
+    </div>
+</noscript> 
+<div id="search-bar">
+		<form id="gsearch" onsubmit="preventDoubleSubmit(searchButton);" action='/gsearch' method="post">
+			  <fieldset id="searchBox">
+			   <select id="collection" name="collection" class="collectionList" >
+										 <option class="collectionListOption" value="" >All Collections</option>
+										 <option class="collectionListOption" value="cdc:102" >Library Collection</option>
+										 <option class="collectionListOption" value="cdc:100" >Guidelines and Recommendations</option>
+										 <option class="collectionListOption" value="cdc:4" >Influenza Surveillance Reports</option>
+										 <option class="collectionListOption" value="cdc:99" >CDC Open Access</option>
+										 <option class="collectionListOption" value="cdc:8231" >Reproductive Health</option>
+										 <option class="collectionListOption" value="cdc:101" >MMWR: The First 30 Years</option>
+										 <option class="collectionListOption" value="cdc:8278" >NIOSH</option>
+										 <option class="collectionListOption" value="cdc:13740" >EID</option>
+										 <option class="collectionListOption" value="cdc:19611" >PCD</option>
+										 <option class="collectionListOption" value="cdc:20712" >David J. Sencer CDC Museum</option>
+										 <option class="collectionListOption" value="cdc:24915" >Health Alert Network (HAN)</option>
+						
+				</select>	
+					<input type="text" maxlength="128" name="terms" 
+										value="Enter keyword or phrase..." 
+										onfocus="if/option>
+										 <option class="collectionListOption" value="cdc:24915" >Health Alert N(this.value=='Enter keyword or phrase...')this.value='';"
+										onblur="if(this.value==''){this.value='Enter keyword or phrase...';$('#icon').hide();}"
+										onkeypress="$('#icon').show();"
+										onkeydown="this.style.color = '#000000';"
+										id="terms" class="searchBox"
+										/>		
+				<span class="icon" id="icon" onclick="return clearSimpleSearchText();"><img class="delIcon" src="/sites/default/themes/stacks/images/delete_icon.png" alt="delete_icon" /></span>
+			
+				<input type="image" id="searchButtonSimple" class="searchButtonSimple" src="/sites/default/themes/stacks/images/search_button.png" alt="Search" />
+				<a id="simpleSearchHelp" href="/help"><img class="help-ques-mark" src="/sites/default/themes/stacks/images/qmark_icon.png" alt="Help"/></a>
+			</fieldset>
+		</form>		
+		
+		<a id="advanceSearchLink" class="advance-search-link" href="javascript:void(0)" onclick="return slideDown();">Advanced Search</a>	
+		<script type="text/javascript">
+					</script>
+		<div id="advanceSearch">
+			<form action="/view/cdc/12170/"  accept-charset="UTF-8" method="post" id="advance-search-block-form">
+<div>
+<form action="/advancesearch"  accept-charset="UTF-8" method="post" id="advance-search-block-form">
+						<div id="advSearchBox">
+												<div class="divCollectionList">
+									<select id="collectionId" name="collection" class="collectionList">
+																				 	<option class="collectionListOption" value=""  >All Collections</option>
+																				 	<option class="collectionListOption" value="cdc:102"  >Library Collection</option>
+																				 	<option class="collectionListOption" value="cdc:100"  >Guidelines and Recommendations</option>
+																				 	<option class="collectionListOption" value="cdc:4"  >Influenza Surveillance Reports</option>
+																				 	<option class="collectionListOption" value="cdc:99"  >CDC Open Access</option>
+																				 	<option class="collectionListOption" value="cdc:8231"  >Reproductive Health</option>
+																				 	<option class="collectionListOption" value="cdc:101"  >MMWR: The First 30 Years</option>
+																				 	<option class="collectionListOption" value="cdc:8278"  >NIOSH</option>
+																				 	<option class="collectionListOption" value="cdc:13740"  >EID</option>
+																				 	<option class="collectionListOption" value="cdc:19611"  >PCD</option>
+																				 	<option class="collectionListOption" value="cdc:20712"  >David J. Sencer CDC Museum</option>
+																				 	<option class="collectionListOption" value="cdc:24915"  >Health Alert Network (HAN)</option>
+											
+									</select>
+									<input type="text" value="Enter keyword or phrase..." id="advTerms" class="advSearchBox" disabled/>	
+						</div>	
+
+						<div id="advanceSearchForm" style="margin:20px 20px 0px 0px;background-color:#ebeaea;width:100%;height:228px;">
+						<table>
+						<tr>
+						<td  class="advsearchcolumn">
+							<div>
+								<div class="advancesearch-header">Advanced Search</div>
+								<div class="advancesearch-text">Select up to three search categories and corresponding keywords using the fields to the right.  Refer to the CDC Stacks <a href="/help"><u>Help</u></a> section for more detailed instructions.</div>
+							</div>
+						</td>	
+													<td>
+						<div id="advSearchDropdowns" style="margin-right:125px;position:relative;">
+						 <div>
+								 <select name="type1" class="selectAdvSearchDropDown" id="edit-type1" onchange="clearText(1);">
+								 								 	<option value="mods.title, mods.name_personal, mods.abstract, mods.subject_topic, mods.genre, mods.type_of_resource" >All Fields</option>; 
+								 								 	<option value="mods.title" >Title</option>; 
+								 								 	<option value="mods.name_personal" >Personal Author</option>; 
+								 								 	<option value="mods.name_corporate" >Corporate Author</option>; 
+								 								 	<option value="mods.name_conference" >Conference Name</option>; 
+								 								 	<option value="mods.abstract" >Description</option>; 
+								 								 	<option value="mods.subject_topic" >Subject</option>; 
+								 								 	<option value="mods.genre" >Genre</option>; 
+								 								 	<option value="mods.type_of_resource" >Document Type</option>; 
+								 								 </select>	
+								 <span class="adv-contains-text-font" >contains the word(s)</span>
+							
+									 <input type="text" maxlength="128" name="fedora_terms1" id="edit-fedora-terms1" size="50" 
+									    value="Enter keyword or phrase..."
+										onfocus="if(this.value=='Enter keyword or phrase...')this.value='';"
+										onblur="if(this.value==''){this.value='Enter keyword or phrase...';$('#icon1').hide();}" class="form-text"
+										onkeydown="this.style.color = '#000000'"
+										onkeypress="return inputFunctions(1);"/>
+								    <span class="icon" id="icon1" onclick="return clearText(1);"><img class="delIcon" src="/sites/default/themes/stacks/images/delete_icon.png" alt="delete_icon" /></span>
+							
+						   </div>
+						   <div class="adv-form-item" id="edit-andor1-wrapper">
+							  <select class="adv-boolean-dropdown" name="andor1" id="edit-andor1" >
+							  								  		<option value="AND" >AND</option>;
+							  	 							  		<option value="OR" >OR</option>;
+							  	 							  		<option value="NOT" >NOT</option>;
+							  	 							  </select>
+							</div>
+							
+							<div>
+								 <select name="type2" class="selectAdvSearchDropDown" id="edit-type2" onchange="clearText(2);">	
+								 								 	<option value="mods.title, mods.name_personal, mods.abstract, mods.subject_topic, mods.genre, mods.type_of_resource"  >All Fields</option>; 
+								 								 	<option value="mods.title"  >Title</option>; 
+								 								 	<option value="mods.name_personal"  >Personal Author</option>; 
+								 								 	<option value="mods.name_corporate"  >Corporate Author</option>; 
+								 								 	<option value="mods.name_conference"  >Conference Name</option>; 
+								 								 	<option value="mods.abstract"  >Description</option>; 
+								 								 	<option value="mods.subject_topic"  >Subject</option>; 
+								 								 	<option value="mods.genre"  >Genre</option>; 
+								 								 	<option value="mods.type_of_resource"  >Document Type</option>; 
+								 								 </select>
+								 <span class="adv-contains-text-font" >contains the word(s)</span>
+							
+									 <input type="text" maxlength="128" name="fedora_terms2" id="edit-fedora-terms2" size="50" 
+									    value="Enter keyword or phrase..." 
+										onfocus="if(this.value=='Enter keyword or phrase...')this.value='';"
+										onblur="if(this.value==''){this.value='Enter keyword or phrase...';$('#icon2').hide();}" class="form-text"
+										onkeydown="this.style.color = '#000000'"
+										onkeypress="return inputFunctions(2);"
+										disabled="disabled"/>
+									 <span class="icon" id="icon2" onclick="return clearText(2);"><img class="delIcon" src="/sites/default/themes/stacks/images/delete_icon.png" alt="delete_icon" /></span>
+							
+							</div>
+							
+								
+									<div class="adv-form-item" id="edit-andor2-wrapper">
+									<select name="andor2" class="adv-boolean-dropdown" id="edit-andor2" >
+							  										  				<option value="AND" >AND</option>;
+							  										  				<option value="OR" >OR</option>;
+							  										  				<option value="NOT" >NOT</option>;
+							  										 		</select>
+									</div>
+									<div>
+										<select name="type3" class="selectAdvSearchDropDown" id="edit-type3" onchange="clearText()">			
+																					<option value="mods.title, mods.name_personal, mods.abstract, mods.subject_topic, mods.genre, mods.type_of_resource" >All Fields</option>';
+																					<option value="mods.title" >Title</option>';
+																					<option value="mods.name_personal" >Personal Author</option>';
+																					<option value="mods.name_corporate" >Corporate Author</option>';
+																					<option value="mods.name_conference" >Conference Name</option>';
+																					<option value="mods.abstract" >Description</option>';
+																					<option value="mods.subject_topic" >Subject</option>';
+																					<option value="mods.genre" >Genre</option>';
+																					<option value="mods.type_of_resource" >Document Type</option>';
+												
+										</select>
+											  <span class="adv-contains-text-font" >contains the word(s)</span>
+											
+													  <input type="text" maxlength="128" name="fedora_terms3" id="edit-fedora-terms3ource" >Document Type</option>';
+												
+										</select>
+											  <span class="adv-contains-text-font" >contains the word(s)</span>
+											
+													  <input type="text" size="50" 
+													    value='Enter keyword or phrase...' 
+														onfocus="if(this.value=='Enter keyword or phrase...')this.value='';"
+														onblur="if(this.value==''){this.value='Enter keyword or phrase...';$('#icon3').hide();}" class="form-text"
+														onkeydown="this.style.color = '#000000'"
+														onkeypress="$('#icon3').show();"
+														disabled="disabled"/>
+											<span class="icon" id="icon3" onclick="return clearText(3);"><img id="deleteimage3" class="delIcon" src="/sites/default/themes/stacks/images/dor = '#000000'"
+														onkeypress="$('#icon3').show();"
+														disabled="disabled"/>
+											<span class="icon" id="icon3" onclick="return clearText(3);"><img id="deleteimage3" elete_icon.png" alt="delete_icon" /></span>
+											 
+									</div>
+														
+						   </div>
+		</td>
+		</tr>
+		<tr>
+							<td colspan="2" class="align-right">
+							<div class="align-right">
+								<div style="margin-top:10px">
+								<div  class="floatleft" style="margin-top:1px">
+									<a id= "clearalllink" class="clear-all-link" href="javascript:void(0)" onclick="return clearAll(3);">Clear All</a>
+								</div>
+							   <div  class="floatleft" style="margin-top:1px">
+									<a id= "simplelink" class="simple-search-link" href="javascript:void(0)" onclick="return slideDown();">Simple Search</a>
+								</div>	
+															
+								<div  class="floatleft">
+									<input type="image" id="advSearchButton" class="advSearchButton" src="/sites/default/themes/stacks/images/search_button.png" alt="Search" onclick="return onSubmit(3);"/>
+									
+								</div>
+								<div class="floatleft" style="margin-left:4px">
+									<a href="/help"><img class="adv-help-ques-mark" src="/sites/default/themes/stacks/images/qmark_icon.png" alt="Help"/></a>
+								</div>
+								</div>
+						   </div>
+						
+						    </td >	
+							</tr>								
+						
+						</table>						
+						</div>
+						
+						<input type="hidden" name="form_build_id" id="form-hk1SwfYqA3-DbjJI3_dIWqwrZzEx2r1Zsk9txVh72c8" value="form-hk1SwfYqA3-DbjJI3_dIWqwrZzEx2r1Zsk9txVh72c8"  />
+						<input type="hidden" name="form_id" id="edit-advance-search-block-form" value="advance_search_block_form"  />
+						
+					</div>
+		</form>
+</div></form>
+	
+			
+			<div><img src="/sites/default/themes/stacks/images/searchbar_shadow.png" alt="Search Bar Shadow" style="vertical-align:top;"/></div>					
+		</div>
+		
+
+</div>
+    <div id="page">    
+                                        <div id="main" class="main-full">
+                                                                        <div id="content"> 
+                  	
+<script type="text/javascript" src="/sites/default/themes/stacks/scripts/weblinks.js"></script>
+<script type="text/javascript" src="/sites/default/themes/stacks/scripts/exp_collapse.js"></script>
+<script type="text/javascript" src="/sites/default/themes/stacks/scripts/share.js"></script>
+<script type="text/javascript" src="/sites/default/themes/stacks/scripts/common.js"></script>
+<script>
+function openDocument(documentUrl, referer){
+	window.location = documentUrl;
+	openBookmarkSite(referer);
+}
+</script>
+		<div id="document-left-panel">
+				
+
+		<div id="left-top-panel">
+			<div id="large-thumb">
+												<a
+								href='/view/cdc/12170/cdc_12170_DS1.pdf'
+								onclick="javascript:_gaq.push(['_trackPageview','/view/cdc/12170/cdc_12170_DS1.pdf']); ">
+								<img width="200" height="200"
+								src='/ObjectView?pid=cdc%3A12170&dsid=THUMBNAIL_LARGE&mimeType=image%2Fpng'
+								alt="Prevention of plague; recommendations of the Advisory Committee on Immunization Practices (ACIP)" /> </a>
+	
+											
+							</div>
+			<!-- /large-thumb -->
+
+			<div id="tite-meta-details">
+				<!-- upper-details-container -->
+				<div id="upper-details-container">
+					<h1>
+						Prevention of plague; recommendations of the Advisory Committee on Immunization Practices (ACIP)					</h1>
+					<table cellspacing="0" cellpadding="0" border="0" width="98%">
+													<tr>
+								<td class="meta-title">Personal Authors:</td>
+								<td class="meta-details">
+																			<a href="/gsearch?c=Gage%2C%20Kenneth%20L."> 
+							  				Gage, Kenneth L.							  			</a>
+										;																				<a href="/gsearch?c=Dennis%2C%20David%20T.%20%28David%20Tappen%29%2C%201939-"> 
+							  				Dennis, David T. (David Tappen), 1939-							  			</a>
+										;																				<a href="/gsearch?c=Tsai%2C%20Theodore%20F."> 
+							  				Tsai, Theodore F.							  			</a>
+																													
+									<br />
+								</td>
+							</tr>
+																			<tr>
+								<td class="meta-title">Corporate Authors:</td>
+								<td class="meta-details">
+								United States, Immunization Practices Advisory Committee.; Centers for Disease Control and Prevention (U.S.); National Center for Infectious Diseases (U.S.), Division of Vector-Borne Infectious Diseases.								<br /></td>
+							</tr>
+																		
+													<tr>
+								<td class="meta-title">Published Date:</td>
+								<td class="meta-details">
+								1996								</td>
+							</tr>
+												
+																																									<tr>
+									<td class="meta-title">File Type:</td>
+										<td class="meta-data">
+																								<img src='/sites/default/themes/stacks/images/icon_acrobat.gif' alt="Filetype" style="vertical-align:middle;"/>[PDF - 318.71 KB]		
+																							 </td>
+								</tr>
+							 					 																		
+					</table>
+					<div class="clear"></div>
+				</div>
+															<div class="download-link">
+															<form action="/view/cdc/12170/cdc_12170_DS1.pdf" accept-charset="UTF-8" method="post" id="download-document">
+									<input type="submit" name="download-document-submit" 
+										onclick="javascript:_gaq.push(['_trackPageview','/view/cdc/12170/cdc_12170_DS1.pdf']); "
+										id="download-document-submit" value="Download"  class="download-document-btn" />
+																	</form>
+														
+						</div>
+										 		 
+				<br />
+							</div>			
+			<div class="clear"></div>
+		</div>
+		<!-- /left-top-panel -->
+
+		<div class="media-links">
+			<ul id="services" class="services">
+								<li><a href="/view/cdc/12170/Email"
+					onclick="emailThisPage('',window.location)">Email</a></li>
+				<li>|</li>
+				<li class="print"><a href="/view/cdc/12170/Print"
+					onclick="window.print();">Print Page</a></li>
+				<li>|</li>
+				<li id="share" class="share" ><a href="/view/cdc/12170/Share">Share</a>
+					<ul>
+						<li class="addthisto">Add this to...</li>
+						<li class="favorites"><a href="javascript:openDocument('/view/cdc/12170/Share', 'favorites');"
+							 class="skip">Favorites</a></li>
+						<li class="delicious"><a href="/view/cdc/12170/Share" class="skip"
+							onclick="openBookmarkSite('delicious');">Delicious</a></li>
+						<li class="digg"><a href="/view/cdc/12170/Share" class="skip"
+							onclick="openBookmarkSite('digg');">Digg</a></li>
+						<li class="facebook"><a href="/view/cdc/12170/Share" class="skip"
+							onclick="openBookmarkSite('facebook');">Facebook</a></li>
+						<li class="google"><a href="/view/cdc/12170/Share" class="skip"
+							onclick="openBookmarkSite('google');">Google Bookmarks</a></li>
+						<li class="twitter"><a 
+							onclick="openBookmarkSite('twitter');" class="skip" href="/view/cdc/12170/Share">Twitter</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div id="lower-details-container">
+		
+		   			
+			 				<div class="meta-title">Series:</div>
+				<div class="meta-details">
+					
+    
+      MMWR. Morbidity and mortality weekly report. Recommendations and reports ; v. 45, no. RR-14
+    
+  				</div>
+						
+						
+							<span class="meta-title">Keywords:</span>
+				<a id="plus-minus" style="text-decoration: none"
+					href="javascript:expandCollapse('mesh-keywords')">[+]</a>
+				<div>
+					<div id="mesh-keywords" class="meta-details" style="display: none">
+						Communicable Disease Control						<br />
+						Communicable Diseases/Prevention						<br />
+						Plague/Prevention						<br />
+						Plague/Prevention & Control						<br />
+						Plague Vaccine						<br />
+						Plague Vaccine/Administration & Dosage						<br />
+						Plague Vaccine/Adverse Effects						<br />
+						Plague Vaccine/Contraindications						<br />
+						Vaccination/Standards						<br />
+											</div>
+					<div class="clear"></div>
+				</div>
+				<br />
+						
+			
+			<div class="meta-title">Description:</div>
+			<div class="meta-details">
+									Introduction -- Characteristics of plague -- Plague vaccine -- Alernatives to vaccination and supplemental protection -- Conclusion -- References.						<br />
+						<br />				
+					These revised recommendations by the Advisory Committee on Immunization Practices concerning prevention of plague update previous recommendations (MMWR 1982;31:301-4). This repntal protection -- Conclusion -- References.						<br />
+						<br />				
+					These revised recommendations by the Advisory Committee on Immunization Practices concerning prevention of plague update previous recommendationort includes information and recommendations on vaccination, public health practices, and medical treatment to prevent plague among humans.						<br />
+						<br />
+								</div>
+
+			
+			<!-- LANGUAGE -->
+						
+		</div>
+		
+				<div id="datastreams">
+			<div class="meta-title">Downloadable Supporting Files:</div>
+			<table class="other-datastreams" border="0" cellspacing="4"
+				cellpadding="2">
+													<tr>
+						<td colspan="2">No Additional Files</td>
+					</tr>
+							</table>
+			<!-- /other-datastreams -->
+		</div>
+				
+		<!-- Peer Document -->
+<br>
+			<a id="in-anchor-tag" name="relatedDocuments">
+						</a>
+	</div>
+	<!-- /document-left-panel -->
+		
+	<div id="document-right-panel">
+		<div class="teal-box-container">
+			<div class="box-top">
+				<div class="top-left-corner"></div>
+				<div class="top-right-corner"></div>
+			</div>
+			<div class="box-content">
+				<div id="related-subjects">
+											<div id="subjects-container">
+							<div class="related-label">Related Subjects Across Collections:</div>
+							<div class="related-details">
+																			<a href="/gsearch?s=Administration%20%26%20Dosage">Administration & Dosage</a>,																						<a href="/gsearch?s=Adverse%20Effects">Adverse Effects</a>,																						<a href="/gsearch?s=Communicable%20Disease%20Control">Communicable Disease Control</a>,																						<a href="/gsearch?s=Communicable%20Diseases">Communicable Diseases</a>,																						<a href="/gsearch?s=Contraindications">Contraindications</a>,																						<a href="/gsearch?s=Plague">Plague</a>,																						<a href="/gsearch?s=Plague%20Vaccine">Plague Vaccine</a>,																						<a href="/gsearch?s=Prevention">Prevention</a>,																						<a href="/gsearch?s=Prevention%20%26%20Control">Prevention & Control</a>,																						<a href="/gsearch?s=Standards">Standards</a>,																						<a href="/gsearch?s=Vaccination">Vaccination</a>																		</div>
+						</div>
+									</div>
+
+									<div id="related-articles">
+						<div class="related-label">You may also like:</div>
+						<ol class="related-articles">
+															<li><a
+									href='/view/cdc/7244'>Prevention of Plague: Recommendations of the Advisory Committee on Immunization Practices (ACIP)</a></li>
+															<li><a
+									href='/view/cdc/7276'>Prevention of Hepatitis A through Active or Passive Immunization: Recommendations of the Advisory Committee on Immunization Practices (ACIP)</a></li>
+															<li><a
+									href='/view/cdc/7391'>Prevention and control of meningococcal disease. Recommendations of the Advisory Committee on Immunization Practices (ACIP).</a></li>
+															<li><a
+									href='/view/cdc/7423'>Prevention and control of influenza. Recommendations of the Advisory Committee on Immunization Practices (ACIP), 2007.</a></li>
+															<li><a
+									href='/view/cdc/7397'>Prevention and control of influenza. Recommendations of the Advisory Committee on Immunization Practices (ACIP).</a></li>
+													</ol>
+					</div>
+							</div>
+			<div class="box-bottom">
+				<div class="bottom-left-corner"></div>
+				<div class="bottom-right-corner"></div>
+			</div>
+		</div>
+		<!-- /teal-box-container -->
+	</div>
+
+
+ 
+                  	<div class="clear"></div>
+	                	            	<div id="version-info">Version 2.2.1</div>
+	            	<div class="clear"></div>
+                  </div>
+                              </div>    
+                <div class="clear"></div>
+
+        </div>
+		<div id="page-seperator"></div>
+		<div id="siteinfo">
+			<div id="siteinfo-nav">
+				<div class="cdcName">CDC.gov</div>
+				<ul class="menu">
+					<li><a href="http://www.cdc.gov/">Home</a></li>
+					<li><a href="http://www.cdc.gov/az/a.html">A-Z Index</a></li>
+					<li><a href="http://www.cdc.gov/Other/site_map.html">Site Map</a></li>
+					<li><a href="http://www.cdc.gov/Other/policies.html">Policies</a></li>
+					<li><a href="http://www.cdc.gov/Other/about_cdcgov.html">Using this Site</a></li>
+					<li><a href="http://www.cdc.gov/Other/link.html">Link to Us</a></li>
+					<li><a href="http://www.cdc.gov/Other/languages/">All Languages</a></li>
+					<li><a href="http://www.cdc.gov/?mobile=true">CDC Mobile</a></li>
+					<li class="last-child"><a href="http://www.cdc.gov/contact/">Contact CDC</a></li>
+				</ul>
+			</div>
+			<div id="siteinfo-credits">
+				<div id="siteinfo-logos"><a href="http://www.usa.gov/"><img id="logo_usagov" src="/sites/default/themes/stacks/images/logo_usagov.gif" alt="USA.gov: The U.S. Government's Official Web Portal" width="188" height="55" /></a><a href="http://www.hhs.gov/"><img id="logo_dhhs" src="/sites/default/themes/stacks/images/logo_dhhs.gif" alt="Department of Health and Human Services" width="61" height="55" /></a></div>
+				<address>Centers for Disease Control and Prevention &nbsp; 1600 Clifton Rd. Atlanta, GA 30333, USA<br />
+				800-CDC-INFO (800-232-4636)	TTY: (888) 232-6348 - <a href="http://www.cdc.gov/cdc-info/requestform.html">Contact CDC&ndash;INFO</a></address>
+			</div>
+		</div>	
+	<div class="clear"></div>
+  </div>
+</div>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-28584339-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+</body>
+
+</html>a.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(

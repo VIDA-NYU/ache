@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml" class="no-js hl-reset" lang="en">
+<head>
+  <META name="ROBOTS" content="NOODP"/>
+    <meta property="fb:app_id" content="1529595680591919"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Cholera: Causes, Symptoms &amp; Diagnosis</title>
+      <meta name="description" content="Cholera  is a  serious bacterial disease that can cause severe diarrhea and dehydration. The  disease is usually spread through contaminated water. Immediate treatment is  necessary because death can occur within hours if you have a severe case of" />
+    <meta http-equiv="content-language" content="en">
+<link rel="canonical" href="http://www.healthline.com/health/cholera" />
+        <!-- Open Graph Metatags -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cholera" />
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Healthline" />
+  <meta property="fb:app_id" content="1529595680591919" />
+  <meta property="og:image" content="http://www.healthline.com/resources/healthline/images/logo-lg.png" />
+  <meta property="og:url" content="http://www.healthline.com/health/cholera" />
+  <!-- Twitter Card Metatags -->
+  <script type="text/javascript">
+  if (roadblockId == null) var roadblockId = 0; //  NAVIGATOR: since -1 is DB default, a negative condition against 0 will pass and NOT roadblock any ads
+  </script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link href="http://www.healthline.com/resources/healthline/css/site.less?v=v1.20141222121153" type="text/css" rel="stylesheet"/>
+  <link href="http://www.healthline.com/resources/healthline/css/article-toc.less?v=v1.20141222121153" media="all" type="text/css" rel="stylesheet"/>
+<link href="http://www.healthline.com/resources/healthline/css/rwd/article-toc.less?v=v1.20141222121153" media="all" type="text/css" rel="stylesheet"/>
+<link href="http://www.healthline.com/resources/healthline/css/loading-mask.less?v=v1.20141222121153" media="all" type="text/css" rel="stylesheet"/>
+<link href="http://www.healthline.com/resources/healthline/css/title-area.less?v=v1.20141222121153" media="all" type="text/css" rel="stylesheet"/>
+<link href="http://www.healthline.com/resources/healthline/css/rwd/title-area.less?v=v1.20141222121153" media="all" type="text/css" rel="stylesheet"/>
+<link href="http://www.healthline.com/resources/healthline/css/sharebar.less?v=v1.20141222121153" media="all" type="text/css" rel="stylesheet"/>
+<link href="http://www.healthline.com/resources/healthline/css/tab-navigation.less?v=v1.20141222121153" media="all" type="text/css" rel="stylesheet"/>
+<link href="http://www.healthline.com/resources/healthline/css/rwd/tab-navigation.less?v=v1.20141222121153" media="all" type="text/css" rel="stylesheet"/>
+<link href="http://www.healthline.com/resources/healthline/css/content-promotion-widget-sliding.less?v=v1.20141222121153" media="all" type="text/css" rel="stylesheet"/>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+  <script src="//cdn.optimizely.com/js/1131552301.js" type="text/javascript"></script>
+
+  <script src="http://www.healthline.com/resources/base/js/lib/main.js?v=v1.20141222121153"></script>
+    <script>
+      requirejs.config({
+        baseUrl: '/'
+      });
+    </script>
+  <script>
+    define('hlutil',[],function(){
+      var exports = {};
+      var domain = exports.domain = "/";
+      exports.qualifyUrl = function(url) {
+        return url;
+      };
+      return exports;
+    });
+
+    // unica stub
+    var ntptEventTag = function() {};
+    var ntptLinkTag = function() {};
+    var ntptSubmitTag = function() {};
+  </script>
+
+  <script>
+
+    /* Widget data with health text needed to be placed inside the HEAD dom node. */
+
+    HLSHAREBAR = {};
+    HLSHAREBAR.page_url = "http://www.healthline.com/health/cholera";
+    HLSHAREBAR.page_title = "Cholera: Causes, Symptoms &amp;amp; Diagnosis";
+    HLSHAREBAR.page_description = "Cholera &amp;nbsp;is a &amp;nbsp;serious bacterial disease that can cause severe diarrhea and dehydration. The &amp;nbsp;disease is usually spread through contaminated water. Immediate treatment is &amp;nbsp;necessary because death can occur within hours if you have a severe case of";
+    HLSHAREBAR.email_page_url = "bzOu3gy8/HrOGb7WK8Syp5Kj2UHuHAeq6LiegR6NjJqdKPlyudwV7ooDEmBqVokv";
+    HLSHAREBAR.email_page_title = "BZA3Ob4HyfTlxPFhysVUTCXk8e7qdKkNAcT0TZIYxgqOfIQ7ahwJT1+7IT9ZBthh";
+
+  
+</script>
+<script>
+
+  require(['jquery'],function( $ ){
+
+  $(document).ready(function() {
+  $( '.hl-gallery-container' ).insertAfter( '.content_body:first p:first' );
+  });
+
+  });
+
+</script>
+<script>
+
+      var HL_ga_showNewsletterSignup = true;
+    
+</script>
+<script>
+  require([
+    'jquery',
+    'base/util/ga-custom-vars'
+  ], function( $ ){
+
+    //var _gaq = _gaq || [];
+
+    // add _gaq to global space
+    window._gaq = window._gaq || [];
+
+    
+    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+    _gaq.push(['hl._require', 'inpage_linkid', pluginUrl]);
+
+    
+    var HL_ga_marinId = "";
+    
+
+    var HL_ga_toolCount = "";
+    
+    var HL_ga_smartAnswerCount = "";
+    
+
+    if (HL_ga_showNewsletterSignup == "") {
+      var HL_ga_showNewsletterSignup = false;
+    }
+
+    var authorName = "";
+    
+    authorName = "Bree Normandin";
+    
+    var articleVars = '';
+    
+
+      articleVars = {
+        contentId: true ? "C-0418" : "",
+        language: true ? "en" : "",
+        imuid: false ? "" : "",
+        source: true ? "HL" : "",
+        hideRHSBox: true ? false : false,
+        hideTxtRszWdg: true ? false : false,
+        hideBottomRelated: true ? false : false,
+        hideRHSMr2Adv: true ? false : false,
+        hideWSLAdv: true ? true : false,
+        hideLBAdv: true ? false : false,
+        hidePencilAdv: true ? false : false,
+        hideShareBar: true ? false : false,
+        hideTitle: true ? false : false,
+        hideHeader: true ? false : false,
+        hideFooter: true ? false : false,
+        hideHelpfulArticle: true ? false : false,
+        hidePromoWidget: true ? false : false,
+        fullWidthEnabled: true ? false : false,
+        isResponsive: true ? true : false,
+        customFormat: true ? false : false,
+        syndication: true ? false : false,
+        notDisplayOnHL: true ? false : false,
+        galleryNid: false ? true : false,
+        factBox: false ? true : false,
+        pullQuote: false ? true : false,
+        navigator: true ? false : false,
+        responsiveImages: false ? true : false,
+        facebookCommenting: true ? false : false,
+        readMore: true ? false : false,
+        navTCBlocks: false ? true : false,
+        navigationStyle: true ? "tabs" : ""
+      }
+    
+    window.HL_ga_customVars = {
+      account: "UA-26124207-1",
+      domainName: ".healthline.com",
+      siteSpeedSampleRate: 10,
+      topiccenter: "",
+      isResponsive: true,
+      hcSubPage: "articlehrl",
+      toolCount: HL_ga_toolCount,
+      smartAnswerCount: HL_ga_smartAnswerCount,
+      isExpandableNav: true ? true : false,
+      dfpAdSite: "hn.us.hl.lc.x.x.x",
+      k1: "gastroenteritis",
+      k2: "digestive",
+      imuid: false ? "" : "",
+      micrositeId: false ? "" : "",
+      marinId: HL_ga_marinId,
+      isErrorPage: false ? true : false,
+      platformPageType: "articleTOC",
+      showNewsletterSignup: HL_ga_showNewsletterSignup,
+      authorName: authorName,
+      articleVars: articleVars
+    };
+    
+    HL_ga_setCustomVars(HL_ga_customVars);
+
+    var HL_ga_url_msId_fragment = '';
+    
+    // make sure to keep microsite id data in URL
+    _gaq.push(['hl._trackPageview', window.location.pathname + window.location.search + HL_ga_url_msId_fragment + window.location.hash]);
+    
+
+    _gaq.push(HL_ga_trackTimeOnPageWrapper);
+    _gaq.push(HL_ga_track90percentScrollWrapper);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+
+  }); // require module
+</script></head>
+<body class="tctopnav">
+
+<script type="text/javascript" language="JavaScript">
+  var hlnord=Math.random()*10000000000000000;
+  var ord=parseInt(hlnord, 10);
+  var dfpTileIdx = 1;
+  var gadc=0;var igadc=0;var tadc=0;var dadc=0;var cadc=0;var erpm=0;
+  /*var unicaEvents = new Array();
+   var unicaEventIdx = 0;*/
+  
+  var g_cfn="Cholera";
+  var g_cfn_bold = "Cholera";
+  var g_encoded_uri = encodeURI("\u002fhealth\u002fcholera");
+  document.write('<input id="ordName" name="ordName" type="hidden" value="'+ord+'">');
+  document.write('<input id="ordCount" name="ordCount" type="hidden" value="1">');
+  document.write('<input id="pv" name="pv" type="hidden" value="">');
+
+  var _kiq = _kiq || [];
+  (function(){
+    setTimeout(function(){
+      var d = document, f = d.getElementsByTagName('script')[0], s = d.createElement('script'); s.type = 'text/javascript';
+      s.async = true; s.src = '//s3.amazonaws.com/ki.js/55482/cd9.js'; f.parentNode.insertBefore(s, f);
+    }, 1);
+  })();
+</script>
+
+<div class="hl-page c">
+      <div class="hl hl-global-menu"></div>
+      <div class="hl-main-content">
+
+        <div class="hl headerblock">
+
+          <header id="hl_global_nav" class="c">
+
+            <div class="top-menu-sticky">
+
+              <div class="box-global-nav c">
+
+                <div class="link-global-nav">
+                  <span class="hl-icon-hamburger"></span>
+                  <span class="navigation-menu-title"></span>
+                </div>
+
+                <div class="logobox">
+                  <a href="http://www.healthline.com/" title="Healthline : Power of Intelligent Health"><img src="http://www.healthline.com/resources/healthline/images/v3/hl-logo.png" width="216" height="42" alt="Healthline : Power of Intelligent Health" /></a>
+                </div>
+
+                <div class="navbarcontainer">
+                  <ul class="nav-global">
+
+                        <li class="tab-global" id="tGATopicsTools">
+                          <a class="link-global" href="http://www.healthline.com/directory/topics">Topics & Tools  <span class="box-icon-arrow hl-icon-round-down-arrow"></span></a>
+                          <div class="submenubox" id="toolsAndTopicsTab">
+
+                            <div id="box-health-topics" class="innersubmenubox c">
+                              <h2><span class="hl-icon-docs"></span> Health Topics</h2>
+
+                                <ul>
+                                        <li><a href="http://www.healthline.com/health/gerd?ref=global">Acid Reflux</a></li>
+                                        <li><a href="http://www.healthline.com/health/adhd?ref=global">ADHD</a></li>
+                                        <li><a href="http://www.healthline.com/health/allergies?ref=global">Allergies</a></li>
+                                        <li><a href="http://www.healthline.com/health/alzheimers-disease?ref=global">Alzheimer's & Dementia</a></li>
+                                        <li><a href="http://www.healthline.com/health/bipolar-disorder?ref=global">Bipolar Disorder</a></li>
+                                        <li><a href="http://www.healthline.com/health/cancer?ref=global">Cancer</a></li>
+                                        <li><a href="http://www.healthline.com/health/chronic-pain?ref=global">Chronic Pain</a></li>
+                                        </ul>
+                                        <ul>
+                                        <li><a href="http://www.healthline.com/health/cold-flu?ref=global">Cold & Flu</a></li>
+                                        <li><a href="http://www.healthline.com/health/copd?ref=global">COPD</a></li>
+                                        <li><a href="http://www.healthline.com/health/crohns-disease?ref=global">Crohn's Disease</a></li>
+                                        <li><a href="http://www.healthline.com/health/depression?ref=global">Depression</a></li>
+                                        <li><a href="http://www.healthline.com/health/fibromyalgia?ref=global">Fibromyalgia</a></li>
+                                        <li><a href="http://www.healthline.com/health/heart-disease?ref=global">Heart Disease</a></li>
+                                        <li><a href="http://www.healthline.com/health/high-cholesterol?ref=global">High Cholesterol</a></li>
+                                        </ul>
+                                        <ul>
+                                        <li><a href="http://www.healthline.com/health/hiv-aids?ref=global">HIV</a></li>
+                                        <li><a href="http://www.healthline.com/health/high-blood-pressure-hypertension?ref=global">Hypertension</a></li>
+                                        <li><a href="http://wwealth/hiv-aids?ref=global">HIV</a></li>
+                                        <li><a href="http://www.healthline.com/health/high-blood-pressure-hypertension?ref=w.healthline.com/health/irritable-bowel-syndrome?ref=global">IBS</a></li>
+                                        <li><a href="http://www.healthline.com/health/menopause?ref=global">Menopause</a></li>
+                                        <li><a href="http://www.healthline.com/health/multiple-sclerosis?ref=global">Multiple Sclerosis (MS)</a></li>
+                                        <li><a href="http://www.healthline.com/health/osteoarthritis?ref=global">Osteoarthritis</a></li>
+                                        <li><a href="http://www.healthline.com/health/pregnancy?ref=global">Pregnancy</a></li>
+                                        </ul>
+                                        <ul>
+                                        <li><a href="http://www.healthline.com/health/psoriasis?ref=global">Psoriasis</a></li>
+                                        <li><a href="http://www.healthline.com/health/rheumatoid-arthritis?ref=global">Rheumatoid Arthritis</a></li>
+                                        <li><a href="http://www.healthline.com/health/skin-disorders?ref=global">Skin Disorders and Care</a></li>
+                                        <li><a href="http://www.healthline.com/health/sexually-transmitted-diseases?ref=global">STDs</a></li>
+                                        <li><a href="http://www.healthline.com/health/diabetes-type-2?ref=global">Type 2 Diabetes</a></li>
+                                        <li><a href="http://www.healthline.com/directory/topics?ref=global">More...</a></li>
+                                        </ul>
+                                        </div>
+                            <div id="box-health-tools" class="innersubmenubox c">
+
+                                <h2><span class="hl-icon-estethoscope"></span> Health Tools</h2>
+
+                                <ul>
+                                            <li><a href="http://www.healthline.com/symptomsearch?ref=global">Symptom Checker</a></li>
+                                        <li><a href="http://www.healthline.com/human-body-maps?ref=global">BodyMaps</a></li>
+                                        <li><a href="http://www.healthline.com/health/trial-reach-clinical-trials?ref=global">Clinical Trials</a></li>
+                                        </ul>
+                                              <ul>
+                                            <li><a href="http://www.healthline.com/treatments?ref=global">Treatment Search</a></li>
+                                        <li><a href="http://www.healthline.com/drug_directory?ref=global">Drug Search</a></li>
+                                        <li><a href="http://www.healthline.com/druginteractions?ref=global">Drug Interactions</a></li>
+                                        </ul>
+                                              <ul>
+                                            <li><a href="http://www.healthline.com/pill-identifier?ref=global">Pill Identifier</a></li>
+                                        <li><a href="http://www.healthline.com/drugcompare?ref=global">Drug Compare</a></li>
+                                        <li><a href="http://www.healthline.com/doctors?ref=global">Doctor Search</a></li>
+                                        </ul>
+                                              <ul>
+                                            <li><a href="http://www.healthline.com/health-news?ref=global">Health News</a></li>
+                                        <li><a href="http://www.healthline.com/newsletter-signup?ref=global">Newsletter Sign-Up</a></li>
+                                        </ul>
+                                        </div>
+                          </div></li>
+
+                      </ul>
+                    <div class="searchbox">
+                      <form id="sf1" name="sf1" action="/search" method="get">
+                      <input type="text" size="30" id="q1" name="q1" title="How can we help you?" value="How can we help you?" class="searchterm p" />
+                        <button type="submit" name="submitbtn" id="q1searchbtn" class="searchbtn">Search</button>
+                    </form>
+                    <div id="q1Results"></div>
+                  </div>
+
+                </div><div class="link-search-icon"><span class="hl-icon-magnifier"></span><span class="hl-icon-close">X</span></div>
+
+              </div></div></header>
+
+          <!--
+Healthline Ad Leaderboard:
+
+    hideLbFlag NOT empty
+    
+        AND false
+      
+-->
+
+<div class="ad-lb">
+      <div class="ads-box-header-lb" style="display:none;">Advertisement</div>
+    <div class="dfp-lb-wrapper">
+          <div class="dfp-lb lb1">
+            <div id="DFPAD_L" style="position:relative">
+
+              <iframe name="ifrmlb1" id="ifrmlb1" class="ifrmlb1" scrolling="no" frameborder="0" src="http://ads.healthline.com/v2/adajax?app=pre"></iframe>
+              
+              </div>
+          </div>
+        </div>
+
+        <div class="ads-box-right-lb"></div>
+      </div>
+</div><div class="hl">
+
+  <div class="persist-area">
+    <div class="persist-header">
+
+      <div class="box-outer-sticky">
+
+        <div class="box-sticky layerie7">
+          <div class="box-inner-sticky layerie7">
+
+            <div class="breadcrumb">
+              <ul>
+                <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+  <a href="http://www.healthline.com/" itemprop="url"><span itemprop="title">Healthline</span></a>  <span class="icon-sep">&rarr;</span>
+</li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://www.healthline.com/directory/reference-library-a" itemprop="url"><span itemprop="title">Reference Library</span></a>  <span class="icon-sep">&rarr;</span></li>
+                  <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">Cholera</span></li>
+              </ul>
+            </div>
+
+          </div><!-- box-inner-sticky -->
+
+          <div class="box-left-border-persist"><!-- left sticky box border --></div>
+          <div class="box-right-border-persist"><!-- right sticky box border --></div>
+
+        </div><!-- box-sticky -->
+
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- header --><div id="hl" class="hl">
+  <div class="container c">
+
+
+    <div class="hl-loading-mask">
+  <div class="hl-loading-mask-spinner hl-icon-spinner spinner--steps" aria-hidden="true"></div>
+</div>
+
+<div id="overlaySharebar" class="overlay-simple overlay-sharebar">
+  <div class="overlay-content">
+  </div>
+  <div class="overlay-footer">
+    <div class="overlay-close">Cancel</div>
+  </div>
+</div>
+
+
+
+<header class="hl-title-area">
+  <div itemprop="headline" class="article-header">
+      <h1>Cholera</h1>
+      </div>
+  <p id="byline" class="attribution">
+      
+        Written by Bree Normandin
+            | Published on <meta itemprop="datePublished" content="2012-06-04">June 4, 2012<br/>Medically Reviewed by <a href="http://www.healthline.com/health/medical-board">George Krucik, MD</a>
+        </p>
+  <div class="hl-widget-sharebar c"></div>
+
+  <div class="sharebarContainer"><a id="sharebarLink" class="link-sharebar" href="#overlaySharebar" rel="#overlaySharebar"></a></div>
+  </header>
+
+<nav class="hl-tab-navigation">
+  <div class="hl-arrow-tabnav hl-left-arrow-tabnav hl-icon-left-arrow"></div>
+  <div class="hl-lpipe-tabnav"></div>
+  <div class="hl-tabs-tabnav">
+    <ul>
+<li><a href="#Overview"> Overview</a></li>
+<li><a href="#Causes"> Causes</a></li>
+<li><a href="#RisksFactors"> Risks Factors</a></li>
+<li><a href="#Symptoms"> Symptoms</a></li>
+<li><a href="#DiagnosisandTreatment"> Diagnosis and  Treatment</a></li>
+<li><a href="#Complications"> Complications</a></li>
+<li><a href="#Prevention"> Prevention</a></li>
+</ul></div>
+  <div class="hl-rpipe-tabnav"></div>
+  <div class="hl-arrow-tabnav hl-right-arrow-tabnav hl-icon-right-arrow"></div>
+</nav>
+
+<div class="grid648">
+      <div id="fb-root"></div>
+<script>window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1529595680591919',
+    xfbml      : true,
+    version    : 'v2.1'
+  });
+};
+
+(function(d, s, id){
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div itemscope itemtype="http://schema.org/Article" class="container-article">
+
+  <article class="hl-article-toc">
+
+    <h2 id="TOC_TITLE_HDR_1" class="content_head"><a name="Overview"></a>Cholera </h2><div id="TOC_TITLE_1" class="content_body">
+<p><strong>Cholera</strong> is a  serious bacterial disease that can cause severe diarrhea and dehydration. The  disease is usually spread through contaminated water. Immediate treatment is  necessary because death can occur within hours if you have a severe case of  cholera, even if you were healthy before you caught it.</p>
+<p>Modern  sewage and water treatment have effectively eliminated cholera in most  countries. However, cholera is still a problem in countries in Asia, Latin  America, Africa, India, and the Middle East. Countries affected by war,  poverty, and natural disasters have the greatest risk for a cholera outbreak  because these conditions tend to force people to live in crowded situations  without proper sanitation.</p>
+</div>
+<h2 id="TOC_TITLE_HDR_2" class="content_head"><a name="Causes"></a>Causes of Cholera </h2>
+<div id="TOC_TITLE_2" class="content_body">
+<p>Cholera is  caused by bacteria called <em>Vibrio cholerae</em>.  The disease’s deadly effects are the result of a strong toxin known as CTX that  is produced by these bacteria in your small intestine. CTX interferes with the  normal flow of sodium and chloride when it binds to your intestinal walls. When  the bacteria attaches to the small intestine’s walls, your body begins to  secrete large amounts of water that leads to diarrhea and rapid loss of fluids  and salts.</p>
+<p>Dirty water  supplies are the primary source of cholera infection. Uncooked fruits,  vegetables, and other foods can also contain the bacteria that cause cholera. </p>
+<p>Cholera is  not usually passed from person to person through casual contact.</p>
+</div>
+<h2 id="TOC_TITLE_HDR_3" class="content_head"><a name="RisksFactors"></a>Are You at Risk? </h2>
+<div id="TOC_TITLE_3" class="content_body">
+<p>Anyone can  become sick with cholera. However, a few factors may make you more likely to  catch cholera and more likely to have a more severe case. These risk factors  include:</p>
+<ul>
+  <li>unclean conditions (such as poor sanitation  and contaminated water)</li>
+  <li>low levels of stomach acid (cholera bacteria  cannot live in highly acidic environments)</li>
+  <li>sick household members</li>
+  <li>type O blood (it’s not clear why this is true,  but more people with this blood type seem to be at risk for cholera)</li>
+  <li>eating raw shellfish (if the shellfish live in  dirty waters where the cholera bacteria live, there is greater risk of becoming  ill)</li>
+</ul>
+</div>
+<h2 id="TOC_TITLE_HDR_4" class="content_head"><a name="Symptoms"></a>Symptoms of Cholera </h2>
+<div id="TOC_TITLE_4" class="content_body">
+<p>The  majority of people exposed to cholera never become ill. In fact, in most cases,  you may never know you have been exposed. However, once you are infected, you  will continue to shed cholera bacteria in your waste from 7 to 14 days. Cholera  usually causes mild to moderate diarrhea, like other illnesses.</p>
+<p>One in 10  people who are infected will develop signs that are typical of cholera within  two to three days after infection.</p>
+<p>Common  symptoms of cholera can include:</p>
+<ul>
+  <li>sudden onset of diarrhea</li>
+  <li>nausea</li>
+  <li>vomiting</li>
+  <li>mild to severe dehydration</li>
+</ul>
+<p>The  dehydration caused by cholera is usually severe and can cause tiredness,  moodiness, sunken eyes, dry mouth, shriveled skin, extreme thirst, reduced  urine output, irregular heartbeat, and low blood pressure.</p>
+<p>Dehydration  may lead to loss of minerals in your blood. This can lead to an electrolyte  imbalance. The first sign of an electrolyte imbalance is severe muscle cramps.  An electrolyte imbalance can eventually lead to shock.</p>
+<p>Children  usually have the same cholera symptoms as adults. However, children may  experience:</p>
+<ul>
+  <li>severe drowsiness</li>
+  <li>fever</li>
+  <li>convulsions</li>
+  <li>coma</li>
+</ul>
+<p>Cholera  rarely occurs in first-world nations. If you follow proper food safety  practices, even in affected areas, the risk of infection is minor. Still,  cholera continues to occur worldwide. If you develop severe diarrhea after  visiting an area with a high rate of cholera, you should see a doctor.</p>
+</div>
+<h2 id="TOC_TITLE_HDR_5" class="content_head"><a name="DiagnosisandTreatment"></a>Diagnosing and Treating Cholera </h2>
+<div id="TOC_TITLE_5" class="content_body">
+<p>If you have  symptoms of cholera, you should contact your doctor. A doctor can confirm that  you have cholera by identifying bacteria in a stool sample.</p>
+<p>Common methods for treating cholera include:</p>
+<ul>
+  <li>oral rehydration salts</li>
+  <li>IV fluids</li>
+  <li>antibiotics</li>
+  <li>zinc supplements</li>
+</ul>
+<p>These treatments add to the  liquid in the body and rehydrate it. They also help reduce the length of time  you have diarrhea.</p>
+</div>
+<h2 id="TOC_TITLE_HDR_6" class="content_head"><a name="Complications"></a>Cholera Complications </h2>
+<div id="TOC_TITLE_6" class="content_body">
+<p>Cholera can  be fatal. In severe cases, rapid loss of fluids and electrolytes can cause death  in as little as two or three hours. Even in typical cases, if cholera is left  untreated, people can die of dehydration and shock in as little as 18 hours.</p>
+<p>Shock and  severe diarrhea are the most serious complications of cholera. However, other  problems may occur, such as:</p>
+<ul>
+  <li>low blood sugar</li>
+  <li>low potassium levels</li>
+  <li>kidney failure</li>
+</ul>
+</div>
+<h2 id="TOC_TITLE_HDR_7" class="content_head"><a name="Prevention"></a>Preventing Cholera  Infection </h2>
+<div id="TOC_TITLE_7" class="content_body">
+<p>If you are  traveling to an area where cholera is common, your chances of catching the  disease are still low if you:</p>
+<ul>
+  <li>wash your hands </li>
+  <li>drink only bottled or boiled water</li>
+  <li>avoid raw food and shellfish</li>
+  <li>avoid dairy foods</li>
+  <li>eat raw fruits and vegetables that you can  peel yourself</li>
+</ul>
+<p>Because cholera  vaccines do not work very well and most people have a slim chance of catching  cholera, your doctor is not likely to provide you with a vaccination. However, if  you have had the vaccine and are going to be in a country where cholera is a  threat, you may need a second dose or booster of the vaccine.</p>
+</div></article>
+
+  <div class="span12 box-share-help-feedback">
+      <div class="span5">
+  <div class="box-article-helpful">
+    <div class="box-helpful-question">
+      Was this article helpful? <span class="helpful-option-yes">Yes</span> <span class="helpful-option-no">No</span>
+    </div>
+    <div class="box-helpful-confirmation"></div>
+  </div>
+</div>
+<div class="span3">
+        <div class="box-link-feedback">
+    <span class="icon-email"></span> <a id="feedbackLink" class="link-feedback" href="#feedbackOverlay" rel="#feedbackOverlay">Feedback?</a>
+  </div>
+
+  <div id="feedbackOverlay" class="overlay-simple overlay-feedback">
+    <div class="overlay-content">
+
+      <div id="feedbackformdiv" class="box-form-feedback">
+        <form id="feedbackform" action="/v2/widgetemail">
+
+          <input type="hidden" name="to" value="hrl"/>
+          <input id="urlfield" type="hidden" name="urlfield" value=""/>
+
+          <h2>Send us your feedback</h2>
+
+          <p class="box-message">We are unable to respond directly to questions, but your feedback is greatly appreciated, and will be taken into account in our ongoing review of our Health Reference Library.<br/></p>
+
+          <p>
+            <label>Your Name:</label><br/>
+            <input id="nametext" type="text" class="field-name" name="nametext" placeholder="Name Here" />
+            <span id="box-msg-name" class="box-msg-error"><span class="icon-error">&#10006;</span> <span id="errorMsgName">Please enter your name</span></span>
+          </p>
+
+          <p>
+            <label>Your Email:</label><br />
+            <input id="feedbackemail" type="email" class="field-email-address" name="emailaddress" placeholder="name@example.com" />
+            <span id="box-msg-email" class="box-msg-error"><span class="icon-error">&#10006;</span> <span id="errorMsgEmail">Please enter your email</span></span>
+          </p>
+
+          <p>
+            <input id="copy" type="checkbox" name="copy"> <label>Send me a copy</label>
+          </p>
+
+          <p class="box-textarea">
+            <textarea id="feedbacktextarea" class="field-message" rows="4" cols="60" name="messagetext"></textarea>
+          </p>
+          <div id="charcount" class="textarea-char-count">0</div>
+
+          <p class="box-buttons">
+            <button type="button" class="btn-cancel" name="feedbackcancelbutton">Cancel</button>
+            <button class="btn-send-msg">Send Message</button>
+            <span class="box-loading"><img src="http://www.healthline.com/resources/base/images/ajax-loader.gif" alt="" /></span>
+          </p>
+
+        </form>
+
+        <p class="box-privacy"><span class="icon-lock"></span> Email addresses will not be shared with 3rd parties. See <a href="http://www.healthline.com/health/privacy-policy" target="_blank">privacy policy</a></p>
+
+      </div>
+
+      <div id="thankyou" class="box-thankyou">
+        <h2><span class="icon-green-checkmark"></span> Thank you.</h2>
+        <p>Your message has been sent.</p>
+      </div>
+
+      <div id="submissionerror" class="box-submit-error">
+        <h2>We're sorry, an error occurred.</h2>
+        <p>We are unable to collect your feedback at this time. However, your feedback is important to us. Please try again later.</p>
+      </div>
+
+    </div><div class="overlay-footer">
+      <div class="overlay-close">Close</div>
+    </div>
+  </div>
+
+  </div>
+    </div>
+
+    <div class="row12">
+  <div class="span12 hl-article-references">
+      <div class="hl-article-source">
+        <hr class="hl-references-line" style="width:100%;"/>
+        <p class="hl-references-title"><a href="#"><span class="view-references-title">Show</span> Sources</a> <span class="hl-hide-show-icon hl-icon-down-arrow"></span></p>
+        <div class="hl-references-body">
+          <div class="basesources">
+            <ul>
+  <li>Cholera. (n.d.). Centers for Disease Control and Prevention. Retrieved May 23,  2012, from <a href="http://www.cdc.gov/cholera/index.html">http://www.cdc.gov/cholera/index.html</a> </li>
+  <li>Cholera. (n.d.). Mayo Clinic. Retrieved May 23, 2012, from <a href="http://www.mayoclinic.com/health/cholera/DS00579">http://www.mayoclinic.com/health/cholera/DS00579</a></li>
+  <li>Cholera. (n.d.). National Center for Biotechnology Information. Retrieved May 23,  2012, from <a href="http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001348/">http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001348/</a></li>
+</ul></div>
+        </div>
+      </div><!-- end of article source block -->
+    </div>
+  </div><!-- row12 --><div class="toc-content-promotion">
+      <!--hl-linking-ignore-start-->
+            <div class="overlay-content-promotion">
+                <div class="content-promotion-header">
+                    <div class="triangle"></div>
+                    <div class="content-promotion-title">
+                      <p class="content-promotion-title-text">Recommended for You</p>
+                    </div>
+                    <div class="content-promotion-close"><a href="#" class="link-close-overlay-content-promotion"></a></div>
+                    </div>
+                <div class="content-promotion-stories">
+                  <div class="content-promotion-story click-link" data="/health-slideshow/10-worst-disease-outbreaks">
+                        <div class="content-promotion-title">10 Worst Outbreaks in U.S. History</div>
+                            <div class="content-promotion-image">
+                              <a title="10 Worst Outbreaks in U.S. History" href="http://www.healthline.com/health-slideshow/10-worst-disease-outbreaks"><img src="http://www.healthline.com/hlcmsresource/images/slideshow/worst-outbreaks-in-history/110x90_worst-outbreaks-history.jpg" alt="10 Worst Outbreaks in U.S. History"/></a>
+                            </div>
+                            <div class="content-promotion-text">
+                              <div class="content-promotion-disclaimer">Learn about the 10 worst disease outbreaks and epidemics in U.S. history, including the smallpox epidemic, cholera outbreaks, yellow fever, Spanish flu and more.</div>
+                              <div class="content-promotion-link summary-action">
+                                <a title="10 Worst Outbreaks in U.S. History" href="http://www.healthline.com/health-slideshow/10-worst-disease-outbreaks">
+                                
+                                    Read More
+                                  <span> &#187;</span></a>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+            </div>
+            <!--hl-linking-ignore-end-->
+        </div>
+
+    </div>
+
+  </div>
+    <div class="grid300">
+      <div class="below-article-specialtoc">
+
+  <div class="mr1block c">
+  <div class="box-ad-mr1">
+
+    <div class="ads-margin ads-box-header">Advertisement</div>
+    <div class="ads-medium-rect" >
+      <div id="DFPAD_MR" style="position:relative">
+        <iframe name="ifrmmr1" id="ifrmmr1" scrolling="no" frameborder="0" style="width:300px;height:250px;margin-top:0px;margin-left:0;border:0;overflow:hidden;position:absolute;top:0;left:0" src="http://ads.healthline.com/v2/adajax?app=pre"></iframe>
+            
+            </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mr2block c">
+
+    <div class="box-ad-mr2">
+
+    <div class="ads-margin ads-box-header">Advertisement</div>
+    <div id="ad-anchor" class="ads-box">
+      <div class="ads-medium-rect ads-margin">
+
+                  <iframe name="ifrmmr2" id="ifrmmr2" scrolling="no" frameborder="0" class="ifrmmr2" src="http://ads.healthline.com/v2/adajax?app=pre"></iframe>
+                </div>
+
+              </div>
+
+    </div>
+
+
+  </div>
+</div></div>
+  </div>
+</div>
+
+<!--
+Healthline Pencil Ad:
+
+    hidePencilAdv NOT empty
+    
+        AND false
+      
+-->
+<div class="ad-pb">
+    <div class="ads-box-header-pb" id="ads-box-header-pb">Advertisement</div>
+    <div class="dfp-pb-wrapper">
+          <div class="dfp-pb">
+            <div id="DFPAD_PB" style="position:relative">
+
+              <iframe name="ifrmpb" id="ifrmpb" scrolling="no" frameborder="0" style="width:978px;height:25px;margin:0;border:0;overflow:hidden;position:absolute;top:0;left:0" src="http://ads.healthline.com/v2/adajax?app=pre"></iframe>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+<!-- Begin comScore Tag -->
+<script>
+  document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script>
+<script>
+  COMSCORE.beacon({
+    c1:2,
+    c2:6035868,
+    c3:"",
+    c4:"",
+    c5:"",
+    c6:"",
+    c15:""
+  });
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/b?c1=2&c2=6035868&c3=&c4=&c5=&c6=&c15=&cv=1.3&cj=1" style="display:none" width="0" height="0" alt="" />
+</noscript>
+
+<div class="hl hl-box-container-footer">
+
+      <footer class="c">
+        <div class="grid978">
+
+          <div class="row12">
+            <div class="span12">
+
+              <div class="hl-box-footer c">
+
+                <div class="hl-box-footer-1 hl-body-text">
+                    <p>
+                    <strong>Healthline’s mission</strong> is to make the people of the world healthier through the power of information. We do this directly through <a href="http://www.healthline.com/">Healthline.com</a> and <a href="http://www.yourdoctor.com/">YourDoctor.com</a>, and indirectly through our work with the world’s leading healthcare payors, providers, and publishers.
+                  </p>
+                  <p>
+                    Our health information and technologies enable healthier living and better healthcare outcomes, and helps to lower the overall cost of healthcare delivery.
+                  </p></div>
+                <div class="hl-box-footer-2">
+
+                  <div class="registration c">
+  <div class="row12">
+    <div class="span12">
+      <div class="newsletterbox">
+
+        <p class="box-chevron"><span class="icon-chevron"></span> Sign Up for</p>
+        <p class="box-thanks"><span class="icon-chevron"></span> Thank you!</p>
+        <h3 id="general-health-title">Health Tips</h3>
+
+        <div id="signupBody" style="position:relative">
+
+              <p class="summarybox">Get the latest health & wellness advice delivered straight to your inbox, <a href="http://www.healthline.com/newsletter-signup">and check out our other newsletters.</a></p>
+
+              <form id="signUpForm">
+                    <span class="xclose"><a href="http://www.healthline.com/" class="xcloselink">X</a></span>
+                    <input type="text" id="hl-newsltr-email" name="email" class="hl-newsltr-email" title="Enter your email address" value="Enter your email address" />
+                    <button type="submit" name="emailsubmit" class="emailsubmit">
+                      Sign Up
+                      <div class="spinner spinner--steps hl-icon-spinner" aria-hidden="true"></div>
+                    </button>
+                    <input type="hidden" name="k1" value="generalhealth" />
+                  </form>
+
+                  <p class="hl-email-privacy"><span class="hl-icon-lock"></span>  Your <a href="http://www.healthline.com/health/privacy-policy" target="_blank">privacy</a> is important to us</p>
+                </div><!-- signupBody -->
+
+            </div><!-- newsletterbox -->
+    </div><!-- span12 -->
+  </div><!-- row12 -->
+</div><!-- registration --><div class="sharebar">
+                    <ul>
+                      <li class="heading">Find us on:</li>
+                      <li><a href="http://www.facebook.com/pages/Healthline/173263326992" class="hl-hp-facebook" target="window"><div class="hl-hp-content">Facebook</div><span class="hl-icon-facebook"></span></a></li>
+                      <li><a href="http://twitter.com/healthline" class="hl-hp-twitter" target="window"><div class="hl-hp-content">Twitter</div><span class="hl-icon-twitter"></span></a></li>
+                      <li><a href="https://plus.google.com/u/0/111626241908021736513/posts" class="hl-hp-gplus" target="window" rel="publisher"><div class="hl-hp-content">Google Plus</div><span class="hl-icon-google"></span></a></li>
+                      <li><a href="http://pinterest.com/healthline/" class="hl-hp-pinterest" target="window"><div class="hl-hp-content">Pinterest</div><span class="hl-icon-pinterest"></span></a></li>
+                    </ul>
+                  </div>
+
+                </div>
+                <div class="hl-box-footer-3">
+                  <ul>
+    target="window"><div class="hl-hp-content">Pinterest</div><span class="hl-icon-pinterest"></span></a></li>
+                    </ul>
+                  </div>
+
+                </div>
+                <div class="hl-box-                  <li class="ftsecthdr"><h3>Site Map</h3></li>
+                      <li><a href="http://www.healthline.com/directory/health-channels-a">Health Topics</a></li>
+                      <li><a href="http://www.healthline.com/directory/drugs-a">Drugs A-Z</a></li>
+                      <li><a href="http://www.healthline.com/health-blogs">Health Experts & Blogs</a></li>
+                      </ul>
+                  <ul>
+                      <li class="ftsecthdr"><h3>About Healthline</h3></li>
+                      <li><a href="http://www.healthline.com/health/staff">Our Staff</a></li>
+                      <li><a href="http://www.healthline.com/health/about-healthline">About Healthline.com</a></li>
+                      <li><a href="http://www.healthline.com/health/ad-sponsorship-policy">Advertising & Sponsorship Policy</a></li>
+                      <li><a href="http://corp.healthline.com/about-us/">About Healthline Corp</a></li>
+                      </ul>
+                  <ul>
+                      <li class="ftsecthdr"><h3>Get in Touch</h3></li>
+                      <li><a href="http://www.healthline.com/health/contact-us">Contact</a></li>
+                      <li><a href="http://corp.healthline.com/about-us/careers/">Careers</a></li>
+                      <li><a href="http://corp.healthline.com/solutions/marketing/">Advertise With Us</a></li>
+                      <li><a href="http://www.healthline.com/newsletter-signup">Newsletter Sign-Up</a></li>
+                      </ul>
+                  <ul class="hon-icon">
+                    <li><a href="https://www.healthonnet.org/HONcode/Conduct.html?HONConduct694855"><img src="http://www.honcode.ch/HONcode/Seal/HONConduct694855_s.gif" width="49" height="72" alt="This website is certified by Health On the Net Foundation. Click to verify."></a></li>
+                  </ul>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </footer>
+    </div>
+
+    <div class="hl hl-box-copyright">
+      <div class="hl-box-inner-copyright">
+      <div class="grid978">
+        <div class="row12">
+          <div class="span12">
+
+            <div class="copyright">
+                <p>Copyright © 2005 - 2015 Healthline Networks, Inc. All rights reserved for Healthline.
+                Healthline is for informational purposes and should not be considered medical advice, diagnosis or treatment recommendations. <a href="http://www.healthline.com/health/terms-of-use" rel="nofollow">Terms of Use</a> | <a href="http://www.healthline.com/health/privacy-policy" rel="nofollow">Privacy Policy</a></p></div>
+
+          </div>
+        </div>
+
+      </div>
+        </div>
+    </div>
+
+
+
+
+    </div><!-- hl-main-content -->
+    </div><!-- hl-page -->
+
+
+    <!-- Synvisc_HL_Survey -->
+<script type="text/javascript">// <![CDATA[
+  var ord = window.ord || Math.floor(Math.random() * 1e16);
+  document.write('<script type="text/javascript" src="http://ad.doubleclick.net/N4788/adj/Synvisc_HL_Survey;sz=1x1;ord=' + ord + '?"><\/script>');
+// ]]></script>
+<noscript>
+<a href="http://ad.doubleclick.net/N4788/jump/Synvisc_HL_Survey;sz=1x1;ord=[timestamp]?">
+<img src="http://ad.doubleclick.net/N4788/ad/Synvisc_HL_Survey;sz=1x1;ord=[timestamp]?" width="1" height="1" />
+</a>
+</noscript>
+
+
+
+<!-- Comscore Survey Script -->
+<script src="//siterecruit.comscore.com/sr/healthline/broker.js"></script>
+
+
+
+<!-- Insight Tracking Tag -->
+    <div id="ttdUniversalPixelTagab5d2702cb4346dfbe31c5c61e126b4a">
+        <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            (function(global) {
+                var universalPixelApi = new TTDUniversalPixelApi();
+                universalPixelApi.init("fcovtha", ["ihyjpsl"], "https://insight.adsrvr.org/track/up", "ttdUniversalPixelTagab5d2702cb4346dfbe31c5c61e126b4a");
+            })(this);
+        </script>
+    </div>
+<script>
+
+
+                // are these global variables needed?
+                // do they need to be global variables?
+                
+                    microsoft_adunit_kcb4346dfbe31c5c61e126b4a");
+            })(this);
+        </script>
+    </div>
+<script>
+
+
+                // are these global variables needed?
+                // do they need to be global variableywordhints = "Cholera";
+                  
+                u_microsoft_adunit_channelids = "";
+                microsoft_adunit_channelids = "";
+
+                // is this input field needed?
+                document.write('<input id="msftChannelIds1" name="msftChannelIds1" type="hidden" value="'+microsoft_adunit_channelids+'">');
+
+                require(["jquery","base/dfpmanager","base/responsive-ads","matchmedia"],function($,AppDfpmanager,AppResponsiveAds){
+
+                // default - show LB ad on page load
+                var isAdOnPageLoad = true;
+
+                
+
+                  var breakpointsToHideAd = [];
+                  var breakpointsToHideAdByPageType = [];
+
+                  
+                    breakpointsToHideAdByPageType = ['768','600'];
+                  
+
+                  isAdOnPageLoad =  AppResponsiveAds.getShowAdOnPageLoad("LB",breakpointsToHideAd,breakpointsToHideAdByPageType);
+
+                
+
+                var cfgDfpManager = {
+                    isAdOnPageLoad: isAdOnPageLoad,
+                    adshost : 'http://ads.healthline.com',
+                    
+                    logged_in : 'false',
+                    
+                    dfpAdSite : 'hn.us.hl.lc.x.x.x',
+                    btk1 : '',
+                    btk2 : '',
+                    kw : 'gastroenteritis,cholera,2791070',
+                    k1 : 'gastroenteritis',
+                    k2 : 'digestive',
+                    k3 : 'health',
+                    pos : 'lb',
+                    ugc : 'false',
+                    ac : '',
+                    uac : '',
+                    akh : 'Cholera',
+                    aks : '5000',
+                    env : '',
+                    msiteID : '',
+                    adTagPageUrl : encodeURIComponent('/health/cholera'),
+                    partner : 'www',
+                    pg_dart_site : 'hn.us.hl.lc.x.x.x',
+                    pg_dart_zone : 'gastroenteritis',
+                    pg_k2 : 'digestive',
+                    pHLID : '2791070',
+                    HLID : '2791070',
+                    visit_type : 'HCviewer',
+                    yeildex : 'true', targetsrc : ''
+
+                    };
+
+                    AppDfpmanager.lbIframeInit(cfgDfpManager);
+
+                });
+              
+</script>
+<script>
+
+      require(["healthline/header"], function(header){
+        header.setOptions({
+          isNews: false,
+          isNewsChecked: false
+        });
+      });
+      
+</script>
+<script>
+
+      require(["jquery"], function( $ ){
+        $(document).ready(function() {
+          $( '#box-health-tools' ).on( 'click', 'a', function(){
+              if( $( this ).text() == 'Doctor Search' ){
+                 _gaq.push( [ 'hl._link', $( this ).attr( 'href' ) ] );
+                 return !window._gat;
+              }
+              return true;
+            });
+        });
+      });
+    
+</script>
+<script>
+
+
+  require([ "base/loading-mask" ], function( WidgetLoadingMask ){
+    WidgetLoadingMask.initialize();
+  });
+
+
+</script>
+<script>
+
+
+    require([
+    'jquery',
+    'base/util/sharebar'
+    ],function( $ ) {
+
+    // todo: need to
+    // - fix bug regarding HTML encoding, apostrophes, double quotes and question mark characters with page title data that is passed to facebook via the name parameter
+    // - in FE, decode any HTML encoding in title data
+    // - in FE, escape the page title data
+    // - verify four uses cases:
+    // - html encoding
+    // - single quote
+    // - double quote
+    // - question mark
+
+    $(document).ready(function() {
+
+    var page_image;
+
+    
+
+    var customWidgets = new Array();
+    var stringWidget = "facebook,twitter,googleplus,email,print";
+    var isPrintFriendly = false;
+    
+    if( (typeof stringWidget) == "string" && stringWidget.length > 0) {
+      customWidgets = stringWidget.split(',');
+    }
+    else{
+      customWidgets = stringWidget;
+    }
+
+    ShareBar.init({
+    iconSize: "medium",
+    widgets: customWidgets,
+    containerId: ".hl-widget-sharebar",
+    facebookApiKey: "239371929577489",
+    facebookRedirect: "http://www.healthline.com/v2/windowclose",
+    page_url: HLSHAREBAR.page_url,
+    page_title: HLSHAREBAR.page_title,
+    isPrintFriendly: isPrintFriendly,
+    page_description: (HLSHAREBAR.page_description ? HLSHAREBAR.page_description : ''),
+    email_page_url: HLSHAREBAR.email_page_url,
+    email_page_title: HLSHAREBAR.email_page_title
+    //page_image: page_image
+    });
+
+    });
+
+    });
+
+  
+</script>
+<script>
+
+  require([
+    "base/title-area",
+    "base/overlay"
+  ], function( WidgetTitleArea, AppOverlay ){
+    WidgetTitleArea.initialize();
+
+    var onBeforeLoadFunc = function() {
+      $('.hl-main-content').css('z-index','auto');
+    };
+
+    var cfgOverlay = {
+      maskColor: '#555555',
+      maskLoadSpeed: 200,
+      maskOpacity: 0.5,
+      maskZindex: 9999999,
+      top: "center",
+      left: "center",
+      close: ".overlay-close",
+      onBeforeLoad: onBeforeLoadFunc
+    };
+
+    AppOverlay.initialize( cfgOverlay );
+  });
+
+  
+
+    require([ "base/rwd/title-area" ], function( WidgetTitleAreaResponsive ){
+      WidgetTitleAreaResponsive.initialize({
+        pubDateExists: true,
+        medReviewDateExists: false,
+        medReviewedBy: '',
+        reviewDate: ''
+      });
+    });
+
+  
+</script>
+<script>
+
+
+  require([ "base/tab-navigation" ], function( WidgetTabNavigation ){
+    var promoTitle = "",
+      partnerId = 28,
+      adRefresh = false,
+      cfg,
+      sponsorDisclaimerOffset = 0,
+      mr1RefreshTime = 4000,
+      isLargeLandscapeImage = false;
+
+    
+      promoTitle = "Recommended for You";
+    
+      partnerId = 28;
+    
+      adRefresh = true;
+    
+
+    if ( $( ".hl-sponsor-disclaimer" ).length ) {
+      sponsorDisclaimerOffset = 78;
+    }
+
+
+    cfg = {
+      promoTitle: promoTitle,
+      partnerId: partnerId,
+      contentPromoOffset: 70,
+      sponsorDisclaimerOffset: sponsorDisclaimerOffset,
+      adRefresh: adRefresh,
+      mr1RefreshTime: mr1RefreshTime,
+      isLargeLandscapeImage: isLargeLandscapeImage
+    }
+    WidgetTabNavigation.initialize(cfg);
+
+  });
+
+
+  
+</script>
+<script>
+
+  require([
+  'jquery'
+  ], function( $ ){
+
+    // activate toggle for hide/show FB comments
+    $(window).load(function() {
+
+      if( $('.fb-view-comments-bar').length ) {
+        $('.fb-view-comments-bar').click(function() {
+          $('.fb-view-comments-bar').toggleClass( 'open' );
+          if( $('.fb-view-comments-bar').hasClass( 'open' ) ) {
+            $('.fb-view-comments-bar span.fb-view-comments-arrow').removeClass( "hl-icon-right-solid-arrow" ).addClass('hl-icon-down-arrow');
+            $('#fb-view-count').hide();
+          } else {
+            $('.fb-view-comments-bar span.fb-view-comments-arrow').removeClass( "hl-icon-down-arrow" ).addClass('hl-icon-right-solid-arrow');
+            $('#fb-view-count').show();
+          }
+          if($('#fb-view-count').html() == '&nbsp;()') $('#fb-view-count').hide();
+        });
+      }
+
+    });
+  });
+
+</script>
+<script>
+
+    require(["jquery","base/overlay","base/feedback"],function($,AppOverlay){
+
+      var onBeforeLoadFunc = function() {
+        $('.hl-main-content').css('z-index','auto');
+        $('#feedbackformdiv').show();
+      };
+
+      var cfgOverlay = {
+        selectorValue: 'feedbackOverlay',
+        maskColor: '#555555',
+        maskLoadSpeed: 200,
+        maskOpacity: 0.5,
+        maskZindex: 9999999,
+        top: "center",
+        left: "center",
+        close: ".overlay-close",
+        onBeforeLoad: onBeforeLoadFunc
+      };
+
+      AppOverlay.initialize(cfgOverlay);
+
+    });
+  
+</script>
+<script>
+
+            require(['jquery', 'base/content-promotion-widget'],function($, AppContentPromotion){
+
+                var config = {
+                  contentPromotionParam: '',
+                  platformPageType: 'articleTOC'
+                };
+
+                AppContentPromotion.initialize(config);
+
+            });
+        
+</script>
+<script>
+
+
+              u_microsoft_adunit_channelids = ""
+              microsoft_adunit_channelids = "";
+              document.write('<input id="msftChannelIds1" name="msftChannelIds1" type="hidden" value="'+microsoft_adunit_channelids+'">');
+
+              require(['jquery',"base/dfpmanager","base/responsive-ads","matchmedia"],function($,AppDfpmanager,AppResponsiveAds){
+
+              // determine if mr1 ad is shown on page load
+              var isAdOnPageLoad = true;
+
+              
+
+                var breakpointsToHideAd = [];
+                var breakpointsToHideAdByPageType = [];
+
+                
+                  breakpointsToHideAdByPageType = ['768','600','480','320'];
+                
+
+                isAdOnPageLoad =  AppResponsiveAds.getShowAdOnPageLoad("MR1",breakpointsToHideAd,breakpointsToHideAdByPageType);
+              
+
+              var adSize = '300x250,300x600';
+              if(matchMedia('only screen and (max-width: 600px)').matches) {
+                adSize = '300x50,300x250';
+              }
+
+              var cfgDfpManager = {
+                    isAdOnPageLoad: isAdOnPageLoad,
+                    adshost : 'http://ads.healthline.com',
+                    adSize: adSize,
+                    dfpAdSite : 'hn.us.hl.lc.x.x.x',
+                    btk1 : '',
+                    btk2 : '',
+                    kw : 'gastroenteritis,cholera,2791070',
+                    k1 : 'gastroenteritis',
+                    k2 : 'digestive',
+                    k3 : 'health',
+                    pos : 'mr1',
+                    ugc : 'false',
+                    ac : '',
+                    uac : '',
+                    akh : 'Cholera',
+                    aks : '5000',
+                    env : '',
+                    msiteID : '',
+                    adTagPageUrl : encodeURIComponent('/health/cholera'),
+                    yeildex : 'true', targetsrc : ''
+                  };
+
+                  var mr1timeout = setTimeout(function() {
+
+                  AppDfpmanager.mr1IframeInit(cfgDfpManager);
+
+                  }, 300);
+
+              });
+
+            
+</script>
+<script>
+
+
+                    require(["jquery","base/dfpmanager","base/responsive-ads","matchmedia"],function($,AppDfpmanager,AppResponsiveAds){
+
+                      $(function() {
+
+                        // determine if mr2 ad is shown on page load
+                        var isAdOnPageLoad = true;
+
+                        
+
+                          var breakpointsToHideAd = [];
+                          var breakpointsToHideAdByPageType = [];
+                          
+                          
+                            breakpointsToHideAd = ['997','768','600','480','320'];
+                          
+
+                          var isAdOnPageLoad = AppResponsiveAds.getShowAdOnPageLoad("MR2",breakpointsToHideAd,breakpointsToHideAdByPageType);
+
+                        
+
+                        var cfgDfpManager = {
+                        isAdOnPageLoad: isAdOnPageLoad,
+                        adshost : 'http://ads.healthline.com',
+                        dfpAdSite : 'hn.us.hl.lc.x.x.x',
+                        btk1 : '',
+                        btk2 : '',
+                        kw : 'gastroenteritis,cholera,2791070',
+                        k1 : 'gastroenteritis',
+                        k2 : 'digestive',
+                        k3 : 'health',
+                        pos : 'mr2',
+                        ugc : 'false',
+                        ac : '',
+                        uac : '',
+                        env : '',
+                        msiteID : '',
+                        adTagPageUrl : encodeURIComponent('/health/cholera'),
+                        yeildex : 'true'
+
+                        
+                          , targetsrc : ''
+                        
+
+                        };
+
+                        AppDfpmanager.mr2IframeInit(cfgDfpManager);
+
+                      });  // dom ready
+
+                    });
+                  
+</script>
+<script>
+
+      var isWslAdDisplayed = false;
+    
+
+  // check if adPositionsToHide from Config file is not empty for current partner
+  // if true, then get values
+  // then compare values to this page adPositionsToHide
+  // - add new ones from config file to this page
+
+    var configAdPositionsToHide;
+    var addAdPosition = true;
+
+    var pageAdPositionsToHide = ['wsr'];  // page type specific ads to hide
+
+    if( !isWslAdDisplayed ) {
+    pageAdPositionsToHide.push('wsl');
+    }
+
+    
+
+  var rightRailNotSticky = false,
+  isBackToTop = false;
+
+  
+    rightRailNotSticky = false;
+  
+      require([
+        'base/article-toc',
+        'base/article-common'
+      ], function( AppArticleToc, AppArticleTocCommon ){
+        AppArticleToc.initialize({
+          isWslAdDisplayed: isWslAdDisplayed,
+          isArticleHelpful: false,
+          partnerId: 28,
+          titleAreaTop: '60px',
+          tabNavigationTop: '85px',
+          isBackToTop: isBackToTop,
+          tabNavMaxWidth: '1008px',
+          rightRailNotSticky: rightRailNotSticky,
+          tabArticleWidth: 978,
+          stickyTitlePaddingAuto: false,
+          isFbCommentsOn: false,
+          rightRailNotSticky: rightRailNotSticky
+        });
+
+        AppArticleTocCommon.initialize();
+      });
+    
+        var isMsiteId = false;
+      
+        var isMoveMr2 = true;
+        require([ "base/rwd/article-toc" ], function( AppArticleTocRwd ){
+          AppArticleTocRwd.initialize({
+            isMsiteId: isMsiteId,
+            adRBTimeDelay: 300,
+            isMoveMr2: isMoveMr2
+          });
+        });
+      
+
+    require([ "base/rwd/sharebar-mobile" ], function( AppSharebarMobile ){
+      AppSharebarMobile.initialize();
+    });
+
+    
+</script>
+<script>
+
+
+                require(['jquery',"base/dfpmanager","base/responsive-ads","matchmedia"],function($,AppDfpmanager,AppResponsiveAds){
+
+                $(function() {
+
+                // determine if pb ad is shown on page load
+                var isAdOnPageLoad = true;
+
+                
+
+                  var breakpointsToHideAd = [];
+                  var breakpointsToHideAdByPageType = [];
+
+                  
+                    breakpointsToHideAd = ['600','480','320'];
+                  
+
+                  var isAdOnPageLoad = AppResponsiveAds.getShowAdOnPageLoad("PB",breakpointsToHideAd,breakpointsToHideAdByPageType);
+
+                
+
+                var cfgDfpManager = {
+                isAdOnPageLoad: isAdOnPageLoad,
+                adshost : 'http://ads.healthline.com',
+                
+                logged_in : 'false',
+                
+                dfpAdSite : 'hn.us.hl.lc.x.x.x',
+                btk1 : '',
+                btk2 : '',
+                kw : 'gastroenteritis,cholera,2791070',
+                k1 : 'gastroenteritis',
+                k2 : 'digestive',
+                k3 : 'health',
+                pos : 'lb',
+                ugc : 'false',
+                ac : '',
+                uac : '',
+                akh : '',
+                aks : '5000',
+                env : '',
+                msiteID : '',
+                adTagPageUrl : encodeURIComponent('/health/cholera'),
+                partner : 'healthline',
+                pg_dart_site : 'hn.us.hl.lc.x.x.x',
+                pg_dart_zone : 'gastroenteritis',
+                pg_k2 : 'digestive',
+                pHLID : '2791070',
+                HLID : '2791070',
+                visit_type : 'HCviewer',
+                yeildex : 'true', targetsrc : ''
+
+                };
+
+                var pbtimeout = setTimeout(function() {
+                  AppDfpmanager.pbIframeInit(cfgDfpManager);
+                }, 300);
+
+                });  // dom ready
+
+                });
+              
+</script>
+<script>
+
+  var HL_adBlankMonitor = function(cfg) {
+    if(cfg.adBlankCodes.length > 0) {
+      for(var i = 0; i < cfg.adBlankCodes.length; i++) {
+        if (typeof HL_ga_sendTrackEvent === 'function') {
+          HL_ga_sendTrackEvent({
+          gaEventCategory : 'Ad Display',
+          gaEventAction : 'Blank Ad',
+          gaEventLabel : 'adBlankCode=' + cfg.adBlankCodes[i] + '&adspot=' + cfg.adPosition + '&pageUrl=' + window.location.pathname
+          });
+        }
+      }
+    }
+  };
+
+  require(["base/util/visit-tracker"],function(AppVisitTracker){
+    AppVisitTracker.initialize();
+  });
+
+
+</script>
+<script>
+
+              require([
+                'healthline/newsletter-signup'
+              ], function( newsletterSignup ){
+                newsletterSignup.setConfig({
+                  newsletterHost: 'newsletter.healthline.com'
+                });
+              });
+            
+</script>
+<script>
+
+      /* load module */
+      require(["healthline/footer"]);
+    
+</script>
+</body>
+</html> newsletterSignup.setConfig({
+                  newsletterHost: 'newsletter.healthline.com'
+               

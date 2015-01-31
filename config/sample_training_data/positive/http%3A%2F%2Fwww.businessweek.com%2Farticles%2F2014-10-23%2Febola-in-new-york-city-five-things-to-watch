@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 no-js light_layout" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 no-js light_layout" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 no-js light_layout" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js light_layout' lang='en'>
+<!--<![endif]-->
+<head>
+<title>Ebola in New York City: Five Things to Watch - Businessweek</title>
+<meta content='BW' name='source'>
+<meta content='article' name='content_type'>
+<meta content='Signs to watch for in the days ahead to tell if the U.S. has learned from earlier missteps over Ebola cases in Dallas' name='description'>
+<meta content='John Tozzi' name='author'>
+<meta content='politics_and_policy' name='channel'>
+<meta content='Health, Policy' name='department'>
+<meta content='2014-10-23T23:06:31-04:00' name='pub_date'>
+
+<meta content="Bellevue Hospital,craig spencer,Ebola,New York City,New York Ebola case,Thomas Eric Duncan" name="keywords" />
+<meta content="Bellevue Hospital,craig spencer,Ebola,New York City,New York Ebola case,Thomas Eric Duncan" name="news_keywords" />
+<meta content="http://www.businessweek.com/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch" name="standout" />
+
+<meta content="L7zxW9ChzqzPwbLIMzRbGzhn-Mly9AIDiF64J6DgQl0" name="google-site-verification" />
+<meta content="dEHOKZR1s6GmOfGrPHHJFrXJwDoZXW6BjpnhmxPzRCE" name="google-site-verification" />
+<meta content="nm_Na3kYYwG-eQKKUQs9A07nqn-GlhmC2qMzvutTDRA" name="google-site-verification" />
+
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-1.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"b220098848","applicationID":"138689","transactionName":"c1hbFURcXFsGRRYDRkReVg1TQB9EC1hO","queueTime":1,"applicationTime":503,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-515.min.js"}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgMEUVJACQAIUllb"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:21,2:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:22,2:21,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,2:21,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,2:21,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&f&&f.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=l.proto+t.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document,u="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-515.min.js"},l=e.exports={offset:i(),origin:p,features:{}};f[u]?(f[u]("DOMContentLoaded",o,!1),c[u]("load",n,!1)):(f[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:20,handle:"D5DuLP"}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script>
+<!-- * font definitions */ -->
+<style>
+  @font-face {
+    font-family: 'BloombergLBold';
+      src: url("http://static.btrd.net/assets/type/bloombergl_heavy.eot?#iefix") format('embedded-opentype'),
+           url('http://static.btrd.net/assets/type/bloombergl_heavy.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+  }
+  @font-face {
+    font-family:'BWHaasHead';
+    src: url('http://static.btrd.net/assets/type/hinted/haas/bwhaasgroteskhead-95black.eot?#iefix') format('eot'),
+         url('http://static.btrd.net/assets/type/hinted/haas/bwhaasgroteskhead-95black.woff') format('woff'),
+         url('http://static.btrd.net/assets/type/haas/bwhaasgroteskhead-95black.ttf') format('truetype');
+  
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+  }
+  @font-face {
+    font-family:'BWHaasHead75Bold';
+    src: url('http://static.btrd.net/assets/type/hinted/haas75/bwhaasgroteskhead-75bold.eot?#iefix') format('eot'),
+         url('http://static.btrd.net/assets/type/hinted/haas75/bwhaasgroteskhead-75bold.woff') format('woff'),
+         url('http://static.btrd.net/assets/type/haas75/bwhaasgrotesktext-75bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+  }
+  @font-face {
+    font-family:'BWHaasRegular';
+    src: url('http://static.btrd.net/assets/web_fonts/bwhaasgroteskhead-65medium.eot?#iefix') format('eot'),
+         url('http://static.btrd.net/assets/web_fonts/bwhaasgroteskhead-65medium.woff') format('woff'),
+         url('http://static.btrd.net/assets/web_fonts/bwhaasgrotesktext-65medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: normal;
+  }
+</style>
+<link href="http://static.btrd.net/assets/application-2965f151504559907746027d58a3b7ae.css" media="screen" rel="stylesheet" type="text/css" />
+
+<link href="http://static.btrd.net/assets/content-b0162cf4173963330e4669cb4bad8a69.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+<meta content="Businessweek.com" property="og:site_name" />
+<meta content="article" property="og:type" />
+<meta content="Ebola in New York: Five Things to Watch" property="og:title" />
+<meta content="Signs to watch for in the days ahead to tell if the U.S. has learned from earlier missteps over Ebola cases in Dallas" property="og:description" />
+<meta content="http://images.bwbx.io/cms/2014-10-23/1023-ebola-nyc-9701.jpg" property="og:image" />
+<meta content="summary" name="twitter:card" />
+<meta content="@BW" name="twitter:site" />
+
+
+<!-- BEGIN Krux Control Tag -->
+<script src="http://static.btrd.net/assets/krux-2219e2e7b21a9027972af37eaeb5ee88.js" type="text/javascript"></script>
+
+<script type='application/ld+json'>
+{
+"@context": "http://schema.org",
+"@type": "NewsArticle",
+"headline": "Ebola in New York: Five Things to Watch",
+"url": "http://www.businessweek.com/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch",
+"thumbnailUrl": "",
+"dateCreated": "2014-10-24T03:06:31Z",
+"articleSection": "Politics &amp; Policy",
+"creator": "John Tozzi",
+"keywords": "Health Care, Policy, Politics, Science, Social Issues, story"
+}
+</script>
+
+
+
+
+<script>
+  var AVAILABLE_BUCKETS = []
+</script>
+<script src="http://static.btrd.net/assets/buckets-d84e1f4dcb5b5442542ec0a4b3fb1865.js" type="text/javascript"></script>
+<meta content='width=1000px' name='viewport'>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement("script");
+    gads.async = true;
+    gads.type = "text/javascript";
+    var useSSL = "https:" == document.location.protocol;
+    gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+    var node =document.getElementsByTagName("script")[0];
+    node.parentNode.insertBefore(gads, node);
+   })();
+</script>
+
+<script src="http://static.btrd.net/assets/jquery.dfp.gpt.logger.override-33aaf061a2d76891ddeea42a7aa62b43.js" type="text/javascript"></script>
+<script>
+  var ROOT_URL          = "http://www.bloomberg.com/";
+  var FACEBOOK_APP_KEY  = "381515401910729";
+  var FACEBOOK_APP_NS   = "bw_prod";
+  var COOKIE_DOMAIN     = "businessweek.com";
+  var SECURE_DOMAIN_URL = "https://secure.businessweek.com";
+  var STICKY_NEWS_ENGINE= "none";
+  var VIDEO_AD_PREFIX   = "http://ad.doubleclick.net/N5262/pfadx/";
+  var VIDEO_SITE        = "mgh.bw.video";
+  var VIDEO_SUB_SITE    = "/general";
+  var DOUBLECLICK_URL_PREFIX = "http://ad.doubleclick.net/N5262";
+  var AD_SITE           = "bw";
+  var AD_LAYOUT_DESC    = "article story channel politics_and_policy";
+  var AD_SUB_SITE       = ".politicspolicy/health";
+  if (AD_LAYOUT_DESC.indexOf("video") >= 0){
+      AD_SITE           = VIDEO_SITE;
+      AD_SUB_SITE       = VIDEO_SUB_SITE;
+  }
+  var AD_ZONE           = ""; // TODO: this is used to tag "department" pages
+  var AD_KEYWORD        = ""; //TODO: This is used on article and department index pages
+  var AD_URL            = (window.location.pathname == undefined) ? "/" : window.location.pathname.replace(/\/?$/, '/');
+  var YIELDEX           = true;
+  var AD_INTERVAL_TO    = 450;
+  var AD_DEPT_TRACKING  = false; //Temporary flag to be removed when the time is right
+  
+  var VIDEO_AD_SIZE     = "1x1";
+  var VIDEO_AD_YIELD_EX = (YIELDEX) ? '"u=sz='+VIDEO_AD_SIZE+'|' + ';' : '';
+  var RANDOM_NUMBER     = ("1"+(""+Math.random()).substring(2,11));
+  var VIDEO_AD_SUFFIX   = ";sz="+VIDEO_AD_SIZE+";tile=15;tp_video=null;dcmt=text/html;"+encodeURIComponent(VIDEO_AD_YIELD_EX)+"ord="+RANDOM_NUMBER+";";
+  var TILE_NUMBER       = 1;
+  var URL_HASH          = window.location.hash.replace(/#video=/, '');
+  var google_ad_channel = "6537084077 3231123392";
+  var discus_car, lead_module_interval;
+  var NEGATIVE_AD_CATEGORIES = "bw_bpkeywords,bw_delta";
+  var AD_SLOTS = {};
+  var GPT_ADS_ENABLED = true;
+  var GPT_NETWORK_ID = 5262;
+  var SHOW_NATIVE = "true";
+  var NATIVE_PROPERTY_ID = "NA-BUSIWEEKCOM-11236051";
+</script>
+<script>
+  if (!GPT_ADS_ENABLED) {
+    var COMPANION_AD_SITE = AD_SITE + AD_SUB_SITE; //these create the video companion ads
+    googletag.cmd.push(function() {
+      googletag.defineSlot(COMPANION_AD_SITE, [728,  90], 'header-companion-ad').addService(googletag.companionAds()).addService(googletag.pubads());
+      googletag.defineSlot(COMPANION_AD_SITE, [300, 250], 'right-companion-ad').addService(googletag.companionAds()).addService(googletag.pubads());
+      googletag.defineSlot(COMPANION_AD_SITE, [728,  90], 'bottom-companion-ad').addService(googletag.companionAds()).addService(googletag.pubads());
+      googletag.companionAds().setRefreshUnfilledSlots(true);
+      //googletag.pubads().disableInitialLoad();
+      googletag.enableServices();
+    });
+  }
+</script>
+
+</head>
+<body class='article story channel politics_and_policy' data-action='show' data-controller='articles' itemscope itemtype='http://schema.org/WebPage'>
+<div id='fb-root'></div>
+
+<link href="//cdn.gotraffic.net/business/public/stylesheets/snippet_application.a45a8dde.css" rel='stylesheet' type='text/css'>
+<script data-exclude='true' src='//cdn.gotraffic.net/business/public/javascripts/application.24c97a10.js' type='text/javascript'></script>
+<script data-exclude='true' src='//cdn.gotraffic.net/projector/latest/bplayer.js' type='text/javascript'></script>
+<div class='business-snippet' id='snipper_header'>
+<div class="snippet-view business-snippet default-layout section-front" data-view-uid="snippetHeaderViews"><div data-view-uid="snippetHeaderViews_1"><div class="tophat">
+    <section class="tophat-menu">
+        <h1 class="tophat-menu__link-toggle">Bloomberg the Company</h1>
+        <a href="https://bba.bloomberg.net/?utm_source=bloomberg-menu" class="tophat-menu__link-bba">Bloomberg Anywhere Login</a>
+    </section>
+
+    <div class="tophat__sitemap">
+
+        <div class="tophat__categories">
+
+            <div class="tophat__close-sitemap-button"></div>
+
+            <section class="tophat-category">
+                <h1 class="tophat-category__title">Bloomberg</h1>
+                <div class="tophat-category__content">
+                    <p class="tophat-category__text">
+                        Connecting decision makers to a dynamic network of information, people and ideas, Bloomberg quickly and accurately delivers business and financial information, news and insight around the world.
+                    </p>
+                </div>
+            </section>
+
+            <section class="tophat-category">
+                <h1 class="tophat-category__title">Company</h1>
+                <ul class="tophat-category__content">
+                    <li><a href="http://www.bloomberg.com/company/?utm_source=bloomberg-menu" class="tophat-category__link">About</a></li>
+                    <li><a href="http://www.bloomberg.com/company/careers/?utm_source=bloomberg-menu" class="tophat-category__link">Careers</a></li>
+                    <li><a href="http://www.bloomberg.com/company/contacts/?utm_source=bloomberg-menu" class="tophat-category__link">Contacts</a></li>
+                    <li><a href="http://www.bloomberg.com/diversity-inclusion/?utm_source=bloomberg-menu" class="tophat-category__link">Diversity &amp; Inclusion</a></li>
+                    <li><a href="http://www.bloomberg.com/philanthropy/?utm_source=bloomberg-menu" class="tophat-category__link">Philanthropy &amp; Engagement</a></li>
+                    <li><a href="http://www.bloomberg.com/company/regional-sites/?utm_source=bloomberg-menu" class="tophat-category__link">Regional Sites</a></li>
+                    <li><a href="http://www.bloomberg.com/bcause/?utm_source=bloomberg-menu" class="tophat-category__link">Sustainability</a></li>
+                </ul>
+            </section>
+
+            <section class="tophat-category">
+                <h1 class="tophat-category__title">Financial Products</h1>
+                <ul class="tophat-category__content">
+                    <li><a href="http://www.bloomberg.com/professional/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Professional</a></li>
+                    <li><a href="http://www.bloombergtradebook.com?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Tradebook</a></li>
+                    <li><a href="http://www.bloombergbriefs.com?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Briefs</a></li>
+                    <li><a href="http://www.bloombergindexes.com?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Indexes</a></li>
+                    <li><a href="http://www.bloombergsef.com?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg SEF</a></li>
+                    <li><a href="http://about.bloomberginstitute.com?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Institute</a></li>
+                    <li><a href="http://www.bloomberglabs.com?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Labs</a></li>
+                    <li><a href="http://www.bloomberg.com/professional/systems-support/service-center/?utm_source=bloomberg-menu" class="tophat-category__link">Service Center</a></li>
+                </ul>
+            </section>
+
+            <section class="tophat-category">
+                <h1 class="tophat-category__title">Enterprise Products</h1>
+                <ul class="tophat-category__content">
+                    <li><a href="http://www.bloomberg.com/enterprise/?utm_source=bloomberg-menu" class="tophat-category__link">Enterprise Solutions</a></li>
+                    <li><a href="http://www.bloomberg.com/trading-solutions/?utm_source=bloomberg-menu" class="tophat-category__link">Trading Solutions</a></li>
+                    <li><a href="http://www.bloomberg.com/vault/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Vault</a></li>
+                </ul>
+            </section>
+
+            <section class="tophat-category">
+                <h1 class="tophat-category__title">Media</h1>
+                <ul class="tophat-category__content">
+                    <li><a href="http://www.bloomberg.com/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Business</a></li>
+                    <li><a href="http://www.bloomberg.com/politics/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Politics</a></li>
+                    <li><a href="http://www.bloombergview.com/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg View</a></li>
+                    <li><a href="http://www.bloomberg.com/businessweek/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Businessweek</a></li>
+                    <li><a href="http://www.bloomberg.com/markets/markets-magazine/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Markets</a></li>
+                    <li><a href="http://www.bloomberg.com/content-service/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Content Service</a></li>
+                    <li><a href="http://www.bloomberglive.com/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Live</a></li>
+                    <li><a href="http://www.bloombergmedia.com/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Media</a></li>
+                    <li><a href="http://www.bloomberg.com/mobile/?utm_source=bloomberg-menu" class="tophat-category__link">Mobile Apps</a></li>
+                </ul>
+            </section>
+
+            <section class="tophat-category">
+                <h1 class="tophat-category__title">Customer Support</h1>
+                <ul class="tophat-category__content">
+                    <li class="tophat-category__item">
+                        <p class="tophat-category__text">Americas</p>
+                        <p class="tophat-category__text">+1 212 318 2000</p>
+                    </li>
+                    <li class="tophat-category__item">
+                        <p class="tophat-category__text">Europe, Middle East, &amp; Africa</p>
+                        <p class="tophat-category__text">+44 20 7330 7500</p>
+                    </li>
+                    <li class="tophat-category__item">
+                        <p class="tophat-category__text">Asia Pacific</p>
+                        <p class="tophat-category__text">+65 6212 1000</p>
+                    </li>
+                </ul>
+            </section>                
+
+            <section class="tophat-category">
+                <h1 class="tophat-category__title">Follow Us</h1>
+                <ul class="tophat-category__content">
+                    <li><a href="http://www.facebook.com/Bloomberglp" class="tophat-category__social-link facebook" data-network="facebook" target="_blank">
+                        Facebook
+                    </a></li>
+
+                    <li><a href="https://twitter.com/bloomberg" class="tophat-category__social-link twitter" data-network="twitter" target="_blank">
+                        Twitter
+                    </a></li>
+
+                    <li><a href="https://www.linkedin.com/company/2494" class="tophat-category__social-link linkedin" data-network="linkedin" target="_blank">
+                        LinkedIn
+                    </a></li>
+                </ul>
+            </section>                                
+
+            <section class="tophat-category">
+                <h1 class="tophat-category__title">Industry Products</h1>
+                <ul class="tophat-category__content">
+                    <li><a href="http://about.bgov.com/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Government</a></li>
+                    <li><a href="http://www.bna.com/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg Law/BNA</a></li>
+                    <li><a href="http://about.bnef.com/?utm_source=bloomberg-menu" class="tophat-category__link">Bloomberg New Energy Finance</a></li>
+                </ul>
+            </section>                
+
+        </div>
+
+    </div>
+
+
+
+</div>
+</div><div class="persistent-header-placeholder" data-view-uid="snippetHeaderViews_2"><div class="persistent-header">
+    <div class="persistent-header__bounding-width">
+        <div class="persistent-header__container">
+
+            <div class="persistent-header__just-so-logo-link-isnt-full-width">
+                <a href="http://www.bloomberg.com/" class="persistent-header__logo-link make-svg-clickable" title="Bloomberg Business">
+                    <object class="persistent-header__logo-image normal" type="image/svg+xml" data="//cdn.gotraffic.net/business/public/images/logos/BB-Logo-H1.c318357b.svg" title="Bloomberg Business Logo">
+                    </object>
+
+                    <object class="persistent-header__logo-image vertical" type="image/svg+xml" data="//cdn.gotraffic.net/business/public/images/logos/BB-Logo-V.313783e5.svg" title="Bloomberg Business Logo">
+                    </object>
+
+                    <object class="persistent-header__logo-image horizontal" type="image/svg+xml" data="//cdn.gotraffic.net/business/public/images/logos/BB-Logo-H.37109099.svg" title="Bloomberg Business Logo">
+                    </object>
+
+                    <object class="persistent-header__logo-image special-section-front-vertical-logo" type="image/svg+xml" data="//cdn.gotraffic.net/business/public/images/logos/BB-Logo-V-SFF.84957dfc.svg" title="Bloomberg Business Logo">
+                    </object>
+
+                    <object class="persistent-header__logo-image special-section-front-horizontal-logo" type="image/svg+xml" data="//cdn.gotraffic.net/business/public/images/logos/BB-Logo-H-SFF.cfc95f5f.svg" title="Bloomberg Business Logo">
+                    </object>
+
+                </a>
+                <span class="persistent-header__menu">
+                    Menu
+                </span>
+            </div>
+
+            <div class="persistent-header__content">
+                <div class="persistent-header__content-container">
+                    <div class="persistent-header__nav">
+                            <div class="persistent-header__nav-item news" data-key="news">
+                                <a href="http://www.bloomberg.com/" class="persistent-header__link">
+                                    News
+                                </a>
+                            </div>
+                            <div class="persistent-header__nav-item markets" data-key="markets">
+                                <a href="http://www.bloomberg.com/markets" class="persistent-header__link">
+                                    Markets
+                                </a>
+                            </div>
+                            <div class="persistent-header__nav-item insights" data-key="insights">
+                                <a href="http://www.bloomberg.com/insights" class="persistent-header__link">
+                                    Insights
+                                </a>
+                            </div>
+                            <div class="persistent-header__nav-item live_tv" data-key="live_tv">
+                                <a href="http://www.bloomberg.com/live" class="persistent-header__link">
+                                    Live TV
+                                </a>
+                            </div>
+                    </div>
+
+                    <div class="persistent-header-reading-now">
+                        <span class="persistent-header-reading-now__title">Now Reading:</span>
+                        <span class="persistent-header-reading-now__headline"></span>
+                    </div>
+
+                    <div class="persistent-header__social showable">
+                        <div class="social-share__container">
+                            <div class="social-share">
+                                <div class="social-share__visible"></div>
+                                <div class="social-share__additional"></div>
+                                <div class="social-share__more"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="persistent-header__search-box">
+                    <div class="persistent-header__search-close"></div>
+                    <label class="persistent-header__search-label">
+                        <input type="search" class="persistent-header__search-input">
+                    </label>
+                </div>
+            </div>
+
+            <span class="persistent-header__search-button">
+                <a href="http://www.bloomberg.com/search" class="persistent-header__link">
+                    Search
+                </a>
+            </span>
+        </div>
+
+        <a class="mini-live-player" href="http://www.bloomberg.com/live">
+        <div data-view-uid="snippetHeaderViews_2_3"><div class="video-player live-video-player">
+    <div class="video-player__image">
+    </div>
+</div>
+</div></a>
+    </div>
+
+    <div class="persistent-header__submenu-container"><div data-view-uid="snippetHeaderViews_2_1"><section class="navigation-submenu">
+
+    <div class="navigation-submenu__container">
+
+            <div id="news" class="navigation-submenu__vertical">
+
+                <ul class="navigation-submenu__categories">
+                        <li class="navigation-submenu__category-item" id="latest" data-key="latest">
+                            <a href="http://www.bloomberg.com/" class="navigation-submenu__category-link">
+                                Latest
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="world" data-key="world">
+                            <a href="http://www.bloomberg.com/news/world" class="navigation-submenu__category-link">
+                                World
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="industries" data-key="industries">
+                            <a href="http://www.bloomberg.com/news/industries" class="navigation-submenu__category-link">
+                                Industries
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="science_energy" data-key="science_energy">
+                            <a href="http://www.bloomberg.com/news/science-energy" class="navigation-submenu__category-link">
+                                Science+Energy
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="technology" data-key="technology">
+                            <a href="http://www.bloomberg.com/technology" class="navigation-submenu__category-link">
+                                Technology
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="design" data-key="design">
+                            <a href="http://www.bloomberg.com/news/design" class="navigation-submenu__category-link">
+                                Design
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="culture" data-key="culture">
+                            <a href="http://www.bloomberg.com/news/culture" class="navigation-submenu__category-link">
+                                Culture
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="graphics" data-key="graphics">
+                            <a href="http://www.bloomberg.com/graphics" class="navigation-submenu__category-link">
+                                Graphics
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="pursuits" data-key="pursuits">
+                            <a href="http://www.bloomberg.com/pursuits" class="navigation-submenu__category-link">
+                                Pursuits
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="view" data-key="view">
+                            <a href="http://www.bloombergview.com" class="navigation-submenu__category-link">
+                                View
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="politics" data-key="politics">
+                            <a href="http://www.bloomberg.com/politics" class="navigation-submenu__category-link">
+                                Politics
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="businessweek" data-key="businessweek">
+                            <a href="http://www.bloomberg.com/businessweek" class="navigation-submenu__category-link">
+                                Businessweek
+                            </a>
+                        </li>
+                </ul>
+
+            </div>
+            <div id="markets" class="navigation-submenu__vertical">
+
+                <ul class="navigation-submenu__categories">
+                        <li class="navigation-submenu__category-item" id="stocks" data-key="stocks">
+                            <a href="http://www.bloomberg.com/markets/stocks" class="navigation-submenu__category-link">
+                                Stocks
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="currencies" data-key="currencies">
+                            <a href="http://www.bloomberg.com/markets/currencies" class="navigation-submenu__category-link">
+                                Currencies
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="commodities" data-key="commodities">
+                            <a href="http://www.bloomberg.com/markets/commodities/futures" class="navigation-submenu__category-link">
+                                Commodities
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="rates_bonds" data-key="rates_bonds">
+                            <a href="http://www.bloomberg.com/markets/rates-bonds" class="navigation-submenu__category-link">
+                                Rates+Bonds
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="magazine" data-key="magazine">
+                            <a href="http://www.bloomberg.com/markets/markets-magazine" class="navigation-submenu__category-link">
+                                Magazine
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="benchmark" data-key="benchmark">
+                            <a href="http://www.bloomberg.com/markets/benchmark" class="navigation-submenu__category-link">
+                                Benchmark
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="watchlist" data-key="watchlist">
+                            <a href="http://www.bloomberg.com/markets/watchlist" class="navigation-submenu__category-link">
+                                Watchlist
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="economic_calendar" data-key="economic_calendar">
+                            <a href="http://www.bloomberg.com/markets/economic-calendar" class="navigation-submenu__category-link">
+                                Economic Calendar
+                            </a>
+                        </li>
+                </ul>
+
+            </div>
+            <div id="insights" class="navigation-submenu__vertical">
+
+                <ul class="navigation-submenu__categories">
+                        <li class="navigation-submenu__category-item" id="latest" data-key="latest">
+                            <a href="http://www.bloomberg.com/insights" class="navigation-submenu__category-link">
+                                Latest
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="game_plan" data-key="game_plan">
+                            <a href="http://www.bloomberg.com/game-plan" class="navigation-submenu__category-link">
+                                Game Plan
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="business_schools" data-key="business_schools">
+                            <a href="http://www.bloomberg.com/business-schools" class="navigation-submenu__category-link">
+                                Business Schools
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="small_business" data-key="small_business">
+                            <a href="http://www.bloomberg.com/small-business" class="navigation-submenu__category-link">
+                                Small Business
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="personal_finance" data-key="personal_finance">
+                            <a href="http://www.bloomberg.com/personal-finance" class="navigation-submenu__category-link">
+                                Personal Finance
+                            </a>
+                        </li>
+                </ul>
+
+            </div>
+            <div id="live_tv" class="navigation-submenu__vertical">
+
+                <ul class="navigation-submenu__categories">
+                        <li class="navigation-submenu__category-item" id="watch_now" data-key="watch_now">
+                            <a href="http://www.bloomberg.com/live" class="navigation-submenu__category-link">
+                                Watch Now
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="video" data-key="video">
+                            <a href="http://www.bloomberg.com/video" class="navigation-submenu__category-link">
+                                Video
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="schedule_shows" data-key="schedule_shows">
+                            <a href="http://www.bloomberg.com/live/schedule-shows" class="navigation-submenu__category-link">
+                                Schedule + Shows
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="radio" data-key="radio">
+                            <a href="http://www.bloomberg.com/radio" class="navigation-submenu__category-link">
+                                Radio
+                            </a>
+                        </li>
+                        <li class="navigation-submenu__category-item" id="events" data-key="events">
+                            <a href="http://www.bloomberg.com/live/events" class="navigation-submenu__category-link">
+                                Events
+                            </a>
+                        </li>
+                </ul>
+
+            </div>
+
+        <div class="navigation-submenu__card-container">
+        </div>
+
+    </div>
+
+
+</section>
+</div></div>
+<div data-view-uid="snippetHeaderViews_2_2"><div class="reading-progress">
+    <div class="reading-progress__bar"></div>
+</div>
+</div></div>
+</div></div>
+</div>
+<script type="text/javascript">
+var SnippetApp = require('app/SnippetApp');
+var snippetApp = new SnippetApp({"appRoot":"","assetManifest":{"public/images/500error.gif":"//cdn.gotraffic.net/business/public/images/500error.96cb50c5.gif","public/images/bbiz404.gif":"//cdn.gotraffic.net/business/public/images/bbiz404.3020e8d7.gif","public/images/fallback.jpg":"//cdn.gotraffic.net/business/public/images/fallback.269a48ad.jpg","public/images/favicons/apple-touch-icon-114x114.png":"//cdn.gotraffic.net/business/public/images/favicons/apple-touch-icon-114x114.4aeb3b13.png","public/images/favicons/apple-touch-icon-120x120.png":"//cdn.gotraffic.net/business/public/images/favicons/apple-touch-icon-120x120.616b256f.png","public/images/favicons/apple-touch-icon-144x144.png":"//cdn.gotraffic.net/business/public/images/favicons/apple-touch-icon-144x144.166dda65.png","public/images/favicons/apple-touch-icon-152x152.png":"//cdn.gotraffic.net/business/public/images/favicons/apple-touch-icon-152x152.c9951ac7.png","public/images/favicons/apple-touch-icon-180x180.png":"//cdn.gotraffic.net/business/public/images/favicons/apple-touch-icon-180x180.dc9ca3d6.png","public/images/favicons/apple-touch-icon-57x57.png":"//cdn.gotraffic.net/business/public/images/favicons/apple-touch-icon-57x57.bd486901.png","public/images/favicons/apple-touch-icon-60x60.png":"//cdn.gotraffic.net/business/public/images/favicons/apple-touch-icon-60x60.f457f1df.png","public/images/favicons/apple-touch-icon-72x72.png":"//cdn.gotraffic.net/business/public/images/favicons/apple-touch-icon-72x72.7d226513.png","public/images/favicons/apple-touch-icon-76x76.png":"//cdn.gotraffic.net/business/public/images/favicons/apple-touch-icon-76x76.4fb8818e.png","public/images/favicons/apple-touch-icon-precomposed.png":"//cdn.gotraffic.net/business/public/images/favicons/apple-touch-icon-precomposed.c3e3dfeb.png","public/images/favicons/apple-touch-icon.png":"//cdn.gotraffic.net/business/public/images/favicons/apple-touch-icon.dc9ca3d6.png","public/images/favicons/favicon-160x160.png":"//cdn.gotraffic.net/business/public/images/favicons/favicon-160x160.9b14619b.png","public/images/favicons/favicon-16x16.png":"//cdn.gotraffic.net/business/public/images/favicons/favicon-16x16.8cab4be4.png","public/images/favicons/favicon-192x192.png":"//cdn.gotraffic.net/business/public/images/favicons/favicon-192x192.03482356.png","public/images/favicons/favicon-32x32.png":"//cdn.gotraffic.net/business/public/images/favicons/favicon-32x32.fa02118e.png","public/images/favicons/favicon-96x96.png":"//cdn.gotraffic.net/business/public/images/favicons/favicon-96x96.6dbd1316.png","public/images/favicons/favicon.ico":"//cdn.gotraffic.net/business/public/images/favicons/favicon.9628b26e.ico","public/images/favicons/mstile-144x144.png":"//cdn.gotraffic.net/business/public/images/favicons/mstile-144x144.539def7a.png","public/images/favicons/mstile-150x150.png":"//cdn.gotraffic.net/business/public/images/favicons/mstile-150x150.05f21a40.png","public/images/favicons/mstile-310x150.png":"//cdn.gotraffic.net/business/public/images/favicons/mstile-310x150.07f7515d.png","public/images/favicons/mstile-310x310.png":"//cdn.gotraffic.net/business/public/images/favicons/mstile-310x310.b5b6727a.png","public/images/favicons/mstile-70x70.png":"//cdn.gotraffic.net/business/public/images/favicons/mstile-70x70.1b6952cd.png","public/images/feature_article/feature-arrow.svg":"//cdn.gotraffic.net/business/public/images/feature_article/feature-arrow.159d059a.svg","public/images/icons/ad_choices_icon.png":"//cdn.gotraffic.net/business/public/images/icons/ad_choices_icon.49173bcd.png","public/images/logos/BB-Logo-H-HP-TOP.svg":"//cdn.gotraffic.net/business/public/images/logos/BB-Logo-H-HP-TOP.3d81db4e.svg","public/images/logos/BB-Logo-H-SFF.svg":"//cdn.gotraffic.net/business/public/images/logos/BB-Logo-H-SFF.cfc95f5f.svg","public/images/logos/BB-Logo-H.svg":"//cdn.gotraffic.net/business/public/images/logos/BB-Logo-H.37109099.svg","public/images/logos/BB-Logo-H1.svg":"//cdn.gotraffic.net/business/public/images/logos/BB-Logo-H1.c318357b.svg","public/images/logos/BB-Logo-V-HP-TOP.svg":"//cdn.gotraffic.net/business/public/images/logos/BB-Logo-V-HP-TOP.a8517901.svg","public/images/logos/BB-Logo-V-SFF.svg":"//cdn.gotraffic.net/business/public/images/logos/BB-Logo-V-SFF.84957dfc.svg","public/images/logos/BB-Logo-V.svg":"//cdn.gotraffic.net/business/public/images/logos/BB-Logo-V.313783e5.svg","public/images/logos/BB-Politics.svg":"//cdn.gotraffic.net/business/public/images/logos/BB-Politics.8ba9ea31.svg","public/images/logos/BB-View.svg":"//cdn.gotraffic.net/business/public/images/logos/BB-View.465688fb.svg","public/images/logos/bloombergGraphics.svg":"//cdn.gotraffic.net/business/public/images/logos/bloombergGraphics.59cde388.svg","public/images/masks/0.svg":"//cdn.gotraffic.net/business/public/images/masks/0.6673ff57.svg","public/images/masks/1.svg":"//cdn.gotraffic.net/business/public/images/masks/1.878a21c9.svg","public/images/masks/2.svg":"//cdn.gotraffic.net/business/public/images/masks/2.f0f70f59.svg","public/images/masks/3.svg":"//cdn.gotraffic.net/business/public/images/masks/3.cd142ccc.svg","public/images/masks/4.svg":"//cdn.gotraffic.net/business/public/images/masks/4.fac7b759.svg","public/images/masks/5.svg":"//cdn.gotraffic.net/business/public/images/masks/5.487be3a1.svg","public/images/masks/6.svg":"//cdn.gotraffic.net/business/public/images/masks/6.831d863f.svg","public/images/masks/7.svg":"//cdn.gotraffic.net/business/public/images/masks/7.257607a5.svg","public/images/masks/8.svg":"//cdn.gotraffic.net/business/public/images/masks/8.d7942ba7.svg","public/images/masks/9.svg":"//cdn.gotraffic.net/business/public/images/masks/9.4984fa8e.svg","public/images/masks/the_brief/1.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/1.320956b0.svg","public/images/masks/the_brief/10.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/10.e663fed1.svg","public/images/masks/the_brief/11.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/11.2059376b.svg","public/images/masks/the_brief/12.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/12.ed23d773.svg","public/images/masks/the_brief/13.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/13.ee7a5804.svg","public/images/masks/the_brief/14.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/14.ccf4047c.svg","public/images/masks/the_brief/15.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/15.14ec87a2.svg","public/images/masks/the_brief/16.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/16.c71241f4.svg","public/images/masks/the_brief/17.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/17.203c46e2.svg","public/images/masks/the_brief/18.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/18.bdf198b8.svg","public/images/masks/the_brief/19.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/19.a5f0a5d8.svg","public/images/masks/the_brief/2.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/2.b150f74f.svg","public/images/masks/the_brief/20.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/20.2e211202.svg","public/images/masks/the_brief/3.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/3.ba120ffe.svg","public/images/masks/the_brief/4.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/4.97d322bf.svg","public/images/masks/the_brief/5.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/5.427b4e45.svg","public/images/masks/the_brief/6.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/6.394d2c05.svg","public/images/masks/the_brief/7.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/7.f60dd6e3.svg","public/images/masks/the_brief/8.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/8.0fa2f2be.svg","public/images/masks/the_brief/9.svg":"//cdn.gotraffic.net/business/public/images/masks/the_brief/9.b7123eb5.svg","public/images/newsletter-loader.gif":"//cdn.gotraffic.net/business/public/images/newsletter-loader.47c1a967.gif","public/images/no-image-header-BREAKING.jpeg":"//cdn.gotraffic.net/business/public/images/no-image-header-BREAKING.475e12b5.jpeg","public/images/top-noimage-ph.jpeg":"//cdn.gotraffic.net/business/public/images/top-noimage-ph.5d911b62.jpeg","public/javascripts/application.js":"//cdn.gotraffic.net/business/public/javascripts/application.24c97a10.js","public/javascripts/previewModules.js":"//cdn.gotraffic.net/business/public/javascripts/previewModules.dcc88ffc.js","public/javascripts/tophat_snippet.js":"//cdn.gotraffic.net/business/public/javascripts/tophat_snippet.fe0b591b.js","public/stylesheets/application.css":"//cdn.gotraffic.net/business/public/stylesheets/application.a0f2ff04.css","public/stylesheets/snippet_application.css":"//cdn.gotraffic.net/business/public/stylesheets/snippet_application.a45a8dde.css","public/stylesheets/split/application-ie-blessed1.css":"//cdn.gotraffic.net/business/public/stylesheets/split/application-ie-blessed1.7f4d8b85.css","public/stylesheets/split/application-ie-blessed2.css":"//cdn.gotraffic.net/business/public/stylesheets/split/application-ie-blessed2.704006d6.css","public/stylesheets/split/application-ie.css":"//cdn.gotraffic.net/business/public/stylesheets/split/application-ie.f2256d5d.css","public/stylesheets/tophat_snippet.css":"//cdn.gotraffic.net/business/public/stylesheets/tophat_snippet.e3a2a1dc.css"},"bplayerJs":"//cdn.gotraffic.net/projector/latest/bplayer.js","videoPlayerConfig":{"shareOverlay":"true"},"searchHost":"http://search.bloomberg.com","clientApp":"app/ClientApp","snippetApp":"app/SnippetApp","snippetHost":"http://www.bloomberg.com","recommendation":{"site":"bbiz;Unknown","url":"http://personalization.bloomberg.com"},"newRelicAppId":"4892087","disqusShortname":"bloomberg","twitterUser":"business","twitterSite":"@business","tracking":{"chartbeat":{"domain":"bloomberg.com","uid":"15087"},"comscore":{"clientId":"3005059","site":"bloomberg","siteIdentifier":"004"},"googleAnalytics":{"gaAccount":"UA-11413116-1"},"personalization":{"site":"bbiz","trackingUrl":"http://tracking.bloomberg.com/images/tracking-pixel.gif"},"timeouts":{"iframe":2000,"message":3000,"request":3000},"urls":{"tracking":"http://tracking.bloomberg.com/images/tracking-pixel.gif"}}});
+snippetApp.start({"host":"http://www.bloomberg.com","viewFunctionNames":["snippetHeaderViews","snippetFooterViews"]});
+</script>
+
+<div class='clearfix' id='container'>
+<div class='clearfix' id='sign_in'>
+<div class='sign_in_frame'>
+<span class='login facebook'>
+Sign in with Facebook
+<span class='facebook_button'>
+<a href="#"><span class='inline_icon icons-connect_with_facebook facebook_login'></span>
+</a></span>
+
+</span>
+<span class='login'>Or use your Businessweek account</span>
+<div class='login_form'>
+<form accept-charset="UTF-8" action="https://secure.businessweek.com/login" class="new_user_form" id="new_user_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="zk/Cs/+eM0zrGCPsuonwwWChEkdQ9OaeZoi+Ite/q/k=" /></div>
+<label class="for_email" for="user_form_email">Email</label>
+<input class="" id="user_form_email" maxlength="100" name="user_form[email]" size="100" type="text" />
+<label class="password" for="user_form_password">Password</label>
+<a href="https://secure.businessweek.com/password/forgot" class="forgot_password">Forgot  password?</a>
+<input class="" id="user_form_password" maxlength="20" name="user_form[password]" size="20" type="password" />
+<input name="user_form[remember_me]" type="hidden" value="0" /><input id="user_form_remember_me" name="user_form[remember_me]" type="checkbox" value="1" />
+<label class="checkbox_label" for="user_form_remember_me">Remember me</label>
+<input class="button" name="commit" type="submit" value="Sign In" />
+</form>
+</div>
+<p class='bloomberg_user'>
+Already a Bloomberg.com user?
+</p>
+<p>Sign in with the same account.</p>
+<p class='other_options'>
+Don't have an account?
+<a href="https://secure.businessweek.com/register">Sign up.</a>
+</p>
+<p class='account-help'>
+<a href="https://secure.businessweek.com/users/forgot-account">Help! I can&#x27;t access my account.</a>
+</p>
+
+</div>
+</div>
+
+<span class='banner_ad top_banner_ad companion_replace'>
+<div class='gpt_ads_slot' id='leader_board'>
+<div class='gpt_ad_container' data-gpt-size='[[728, 90], [970, 66], [1, 1]]' data-original-position='leader_board' data-position='top' data-pt='t2' data-size='728x90,970x66,1x1' data-tile='3' data-tz='top'></div>
+</div>
+
+</span>
+<div id='flash'>
+</div>
+
+<div class='column_container clearfix'>
+<div class='column primary'>
+<div id='content'>
+<article class='businessweek' itemscope itemtype='http://schema.org/Article'>
+
+<div class='department_text'><h3>Health</h3></div>
+<h1 class='headline' itemprop='name headline'>Ebola in New York: Five Things to Watch</h1>
+<div id='authorial'>
+<span class='byline'>
+<span class='byline-text' itemscope itemtype='http://schema.org/Person'>
+By <a href="http://www.businessweek.com/authors/1416-john-tozzi" itemprop="name" rel="author">John Tozzi</a>
+</span>
+<a href="https://twitter.com/intent/user?screen_name=jtozz"><span class="inline_icon icons-twitter_follow_small"></span></a>
+
+</span>
+
+<time class='byline-text' datetime='2014-10-23T23:06:31-04:00' itemprop='datePublished'>
+October 23, 2014
+</time>
+</div>
+<hr>
+<div class='share_buttons' data-headline='Ebola in New York: Five Things to Watch' data-host='http://analytics.bloomberg.com/images/analytics-bw/dot1.gif' data-id='268bbb88-5b1e-11e4-ae6a-d8d38560fdc0' data-ping-uri='/,/politics-and-policy,/bw/politics-and-policy/health,/bw/politics-and-policy/policy,/authors/1416-john-tozzi' data-pub-date='2014-10-23 23:06:31 -0400' data-summary='Signs to watch for in the days ahead to tell if the U.S. has learned from earlier missteps over Ebola cases in Dallas' data-type='story' data-uri='http://www.bloomberg.com/bw/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch'>
+<span class='clickable share_button inline_icon icons-facebook_share tracked' data-action-type='Share via Facebook' data-actions='click' data-button-type='facebook' data-category='Sharing' data-label='/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch' title='Share on Facebook'></span>
+<span class='clickable share_button inline_icon icons-twitter_share tracked' data-action-type='Share via Twitter' data-actions='click' data-button-type='twitter' data-category='Sharing' data-label='/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch' title='Share on Twitter'></span>
+<span class='clickable share_button inline_icon icons-linked_in_share tracked' data-action-type='Share via LinkedIn' data-actions='click' data-button-type='linkedin' data-category='Sharing' data-label='/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch' title='Share on LinkedIn'></span>
+<span class='clickable share_button inline_icon icons-gplus_share tracked' data-action-type='Share via Google+' data-actions='click' data-button-type='google_plus' data-category='Sharing' data-label='/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch' title='Share on Google+'></span>
+<span class='clickable kindleWidget inline_icon icons-send_to_kindle tracked' data-action-type='Sent to Kindle' data-actions='click' data-button-type='kindle' data-category='Sharing' title='Share on Kindle'></span>
+</div>
+
+<div id="lead_graphic"></div>
+
+
+
+<div id='article_body' itemprop='articleBody'>
+<p>A doctor who recently returned from treating Ebola patients in Guinea <a href="http://www.nytimes.com/2014/10/24/nyregion/craig-spencer-is-tested-for-ebola-virus-at-bellevue-hospital-in-new-york-city.html?hp&amp;action=click&amp;pgtype=Homepage&amp;version=LedeSum&amp;module=first-column-region&amp;region=top-news&amp;WT.nav=top-news&amp;_r=0">tested positive</a> for the disease in New York on Thursday evening and is being <a href="http://www.nyc.gov/html/doh/html/diseases/ebola-stmt-nyc.shtml">isolated at Bellevue Hospital</a>. The diagnosis of Dr. Craig Spencer, 33, marks the second uncontrolled Ebola case imported to the U.S. (Other people stricken with the disease have been brought to the country for treatment.) In the previous case, a Liberian man named Thomas Eric Duncan spread the virus to two nurses at a Dallas hospital and eventually died. Handling of the first Ebola patient raised questions about America’s preparedness for the disease, and a diagnosis in New York unrelated to the Dallas case could show if things have improved since those earlier missteps. Here’s what to focus on in the days ahead.</p>
+<p><strong>1. How many people did the patient come into contact with? </strong>New York Governor Andrew Cuomo said at a news conference on Thursday evening that the patient had been in contact with four people. New York City Health Commissioner Mary Bassett identified the four as Spencer’s fiancée, two friends, and an Uber driver in whose vehicle Spencer was a passenger. Ebola is spread only through direct contact with the bodily fluid of someone who has symptoms.</p>
+<p>Spencer had been <a href="http://www.doctorswithoutborders.org/article/statement-returned-field-worker">working with Doctors Without Borders</a> in Guinea, and the medical organization said he monitored himself in accordance with the group’s guidelines.  There will be plenty of scrutiny regarding Spencer’s movements before he called Doctors Without Borders on Thursday morning to report a fever. The <em>New York Times</em> reported that he took a subway from Manhattan to Brooklyn the previous night. Even riding a subway train with an Ebola patient is low-risk because the disease is <a href="http://www.who.int/mediacentre/news/ebola/06-october-2014/en/">not transmitted through the air</a>. Still, workers who were potentially exposed at the Dallas hospital where Duncan was treated were asked not to take public transportation.</p>
+<p>Identifying and monitoring Spencer’s contacts is the first step in containing a new outbreak. If the list is only four names long, that’s a much smaller pool of potential contacts than those monitored after Duncan was diagnosed.</p>
+<p><strong>2. How ready is New York’s Bellevue Hospital? </strong>The first troubling sign in the Texas case was the fact that Duncan was misdiagnosed and sent home the first time he presented at the Dallas hospital with symptoms and a travel history consistent with Ebola. That put his family and people in the community at risk and delayed his treatment. No hospital in America wants to repeat that mistake. Bellevue has been <a href="http://www.bloomberg.com/news/2014-10-24/bellevue-readies-for-ebola-patient-with-upgraded-rooms.html">designated by New York State</a> as a destination for potential Ebola cases, and it has already dealt with some false alarms.</p>
+<p>Spencer was transported by specially trained medics wearing hazardous materials protective gear, the city health department said. Those steps should have reduced the risk of further transmission.</p>
+<p><strong>3. How fast is his apartment cleaned up? </strong>One of the most discouraging scenes in Texas was the apartment where Duncan had stayed. His family was left for days with contaminated linens and clothing, a clear sign that state and local officials didn’t have a handle on things. Other public health offices should have learned and prepared for a similar scenario. Spencer’s apartment in upper Manhattan was reportedly sealed off on Thursday. If New York officials don’t quickly have a plan in place for clearing out contaminated items and relocating anyone else who might live there, it means they haven’t learned from the missteps in Dallas.</p>
+<p><strong>4. Where’s the Centers for Disease Control? </strong>After two nurses caught the virus while treating Duncan, the CDC said it would immediately dispatch staff to hospitals with additional confirmed Ebola cases to make sure health-care workers take the recommended steps to protect themselves. Getting a site manager to Bellevue to oversee workers—especially as they put on and take off protective gear—is crucial to preventing the spread of Ebola to health-care workers.</p>
+<p><strong>5. How do the public and politicians react? </strong>The reaction to Ebola in the U.S. in some corners was way out of proportion to the risk. A Texas college said it <a href="http://www.slate.com/blogs/the_slatest/2014/10/15/navarro_college_in_texas_rejects_two_nigerian_students_because_of_ebola.html">wouldn’t welcome students from Nigeria</a> last month, and some parents have even pulled kids <a href="http://www.nytimes.com/2014/10/20/us/fear-of-ebola-closes-schools-and-shapes-politics.html">out of schools</a> that faced no risk of Ebola. Politicians have called on bans of travelers from Ebola-affected countries, many of them Americans such as Spencer, returning from aid work. The tenor of the reaction to the second imported Ebola case—in a media capital with a fierce tabloid tradition—will tell us a lot about how the U.S. will deal with future Ebola cases.</p>
+<p>With the epidemic still out of control in Guinea, Sierra Leone, and Liberia, the U.S. case diagnosed today is unlikely to be the last.</p>
+<div id='related_items'><!-- / For rendering related links inside the body of the article -->
+<div class='related_item tracked' data-action-type='Feature Template' data-actions='click' data-category='Inline Related Links' data-label='Position: 0'>
+<a href="http://www.businessweek.com/articles/2014-10-20/ebola-how-nigeria-averted-a-nightmare-in-densely-populated-lagos"><span class='related_item_label'>Story: </span>How to Avert an Ebola Nightmare: Lessons From Nigeria's Victory</a>
+</div>
+<div class='related_item tracked' data-action-type='Feature Template' data-actions='click' data-category='Inline Related Links' data-label='Position: 1'>
+<a href="http://www.businessweek.com/videos/2014-10-20/training-u-dot-s-dot-workers-to-fight-ebola-on-the-front-lines"><span class='related_item_label'>Video: </span>How Not to Get Ebola: Inside the CDC's Hazmat Training</a>
+</div>
+<div class='related_item tracked' data-action-type='Feature Template' data-actions='click' data-category='Inline Related Links' data-label='Position: 2'>
+<a href="http://www.businessweek.com/videos/2014-10-20/glaxo-working-to-accelerate-ebola-treatment"><span class='related_item_label'>Video: </span>Glaxo Working to Accelerate Ebola Treatment</a>
+</div>
+<div class='related_item tracked' data-action-type='Feature Template' data-actions='click' data-category='Inline Related Links' data-label='Position: 2'>
+<a href="http://www.businessweek.com/articles/2014-10-20/oshas-new-rules-to-protect-workers-from-ebola-could-be-years-away"><span class='related_item_label'>Story: </span>OSHA’s New Rules for Ebola and Other Diseases Could Be Years Away</a>
+</div>
+
+</div>
+</div>
+
+
+<div class='author_bio_container'>
+<div class='author_bio_image'>
+<span class="headshot"><img alt="John_tozzi" src="http://images.bwbx.io/cms/2012/04/john_tozzi.jpg" width="40" /></span>
+</div>
+<div class='author_short_bios'>
+<a href="mailto:jtozzi2@bloomberg.net">Tozzi</a> is a reporter for <cite>Bloomberg Businessweek</cite> in New York.
+</div>
+</div>
+
+<hr>
+<div class='sponsored_holder'>
+<div class='sponsored_module'>
+<div class='sponsored_container sponsor_spot' data-ad-label='nativewell3' data-ad-position='nativewell3' data-ad-server='dfp' data-ad-size='2x1' data-property-id='NA-BUSIWEEKCOM-11236051' data-target-location='.sponsored_container'></div>
+</div>
+</div>
+
+<div class='share_buttons' data-headline='Ebola in New York: Five Things to Watch' data-host='http://analytics.bloomberg.com/images/analytics-bw/dot1.gif' data-id='268bbb88-5b1e-11e4-ae6a-d8d38560fdc0' data-ping-uri='/,/politics-and-policy,/bw/politics-and-policy/health,/bw/politics-and-policy/policy,/authors/1416-john-tozzi' data-pub-date='2014-10-23 23:06:31 -0400' data-summary='Signs to watch for in the days ahead to tell if the U.S. has learned from earlier missteps over Ebola cases in Dallas' data-type='story' data-uri='http://www.bloomberg.com/bw/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch'>
+<span class='clickable share_button inline_icon icons-facebook_share tracked' data-action-type='Share via Facebook' data-actions='click' data-button-type='facebook' data-category='Sharing' data-label='/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch' title='Share on Facebook'></span>
+<span class='clickable share_button inline_icon icons-twitter_share tracked' data-action-type='Share via Twitter' data-actions='click' data-button-type='twitter' data-category='Sharing' data-label='/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch' title='Share on Twitter'></span>
+<span class='clickable share_button inline_icon icons-linked_in_share tracked' data-action-type='Share via LinkedIn' data-actions='click' data-button-type='linkedin' data-category='Sharing' data-label='/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch' title='Share on LinkedIn'></span>
+<span class='clickable share_button inline_icon icons-gplus_share tracked' data-action-type='Share via Google+' data-actions='click' data-button-type='google_plus' data-category='Sharing' data-label='/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch' title='Share on Google+'></span>
+<span class='clickable kindleWidget inline_icon icons-send_to_kindle tracked' data-action-type='Sent to Kindle' data-actions='click' data-button-type='kindle' data-category='Sharing' title='Share on Kindle'></span>
+</div>
+
+</article>
+
+<div class='taboola_bottom' id='taboola_wrapper'>
+<div id='taboola-below-main-column'></div>
+<div id='taboola-bmc-mix'></div>
+</div>
+
+<a href="https://subscribe.businessweek.com/servlet/OrdersGateway?cds_mag_code=BWK&amp;cds_page_id=160309" class="sub_sales"><div class='sub_sales-cover'>
+
+</div>
+<div class='sub_sales-background'>
+<div class='sub_sales-content'>
+<span class='sub_sales-offer'>
+LIMITED-TIME OFFER
+</span>
+<span class='sub_sales-subscribe'>
+SUBSCRIBE NOW
+</span>
+</div>
+</div>
+</a>
+<div id='disqus_thread'></div>
+
+<div class='slideout_container' data-show-slideout?='yes'></div>
+
+</div>
+</div>
+<div class='column rail'>
+<div class='module clearfix tabbed headlines '>
+<h3>
+<a href="http://www.businessweek.com/feeds/most-popular.rss">
+<span class='timestamp rss'>
+Feed
+<span class='inline_icon icons-rss'></span>
+</span>
+</a>
+Most Popular
+</h3>
+<ul class='tabs_controller'>
+<li class='tracked active not_last' data-action-type='Tab Switch' data-actions='click' data-category='Tabbed Module' data-label='Read'>
+<a class='active' href="#Read-Tab">
+Read
+</a>
+</li>
+<li class='tracked  not_last' data-action-type='Tab Switch' data-actions='click' data-category='Tabbed Module' data-label='Shared'>
+<a class='' href="#Shared-Tab">
+Shared
+</a>
+</li>
+<li class='tracked  last' data-action-type='Tab Switch' data-actions='click' data-category='Tabbed Module' data-label='Discussed'>
+<a class='' href="#Discussed-Tab">
+Discussed
+</a>
+</li>
+</ul>
+<div class='active tab_panel'>
+<a name='Read-Tab'></a>
+<ul>
+<li>
+<a href="http://www.businessweek.com/articles/2014-07-02/tinders-forgotten-woman-whitney-wolfe-sexism-and-startup-creation-myths#r=read">The Truth About Tinder and Women Is Even Worse Than You Think</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/articles/2014-11-06/2015-global-economic-outlook-better-than-2014-but-not-by-much#r=read">2015 Global Economic Outlook: Better Than 2014—but Not By Much</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/articles/2014-07-17/housings-30-percent-of-income-rule-is-near-useless#r=read">Housing's 30-Percent-of-Income Rule Is Nearly Useless</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/articles/2014-09-12/does-roger-goodell-really-deserve-74-million#r=read">Does Roger Goodell Truly Deserve $74 Million?</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/articles/2013-08-01/office-etiquette-the-farewell-e-mail#r=read">Office Etiquette: The Farewell E-Mail</a>
+</li>
+</ul>
+</div>
+<div class='tab_panel'>
+<a name='Shared-Tab'></a>
+<ul>
+<li>
+<a href="http://www.businessweek.com/articles/2014-12-05/starbucks-wants-to-be-fancy-again-opens-new-reserve-cafe#r=shared">Starbucks Wants to Be Fancy Again</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/articles/2014-11-03/mcdonalds-and-other-fast-food-chains-step-up-battle-for-loyal-customers-with-rewards#r=shared">McDonald’s Doesn’t Have a Loyalty Program, but It Could Use One</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/articles/2012-08-19/the-real-reason-americas-schools-stink#r=shared">The Real Reason America's Schools Stink</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/reports/business-schools/best-b-schools-2012#r=shared">Best B-Schools 2012</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/articles/2013-11-14/2014-outlook-warren-buffett-cashes-in-on-railroad-tank-cars#r=shared">Warren Buffett Cashes In on Railroad Tank Cars</a>
+</li>
+</ul>
+</div>
+<div class='tab_panel'>
+<a name='Discussed-Tab'></a>
+<ul>
+<li>
+<a href="http://www.businessweek.com/articles/2015-01-26/how-obama-s-3-trillion-health-care-overhaul-would-work#r=discussed">How Obama’s $3 Trillion Health-Care Overhaul Would Work</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/articles/2015-01-25/here-s-greece-s-simple-message-to-outsiders#r=discussed">Here's Greece's Simple Message To Outsiders</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/articles/2015-01-27/northeastern-blizzard-elicits-time-tested-conservative-responses-on-climate-change#r=discussed">Yep, Climate Change Is Still Causing Insane Storms</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/articles/2015-01-27/sanctions-aren-t-enough-to-stop-putin-and-he-knows-it#r=discussed">Sanctions Aren't Enough to Stop Putin, and He Knows It</a>
+</li>
+<li>
+<a href="http://www.businessweek.com/articles/2015-01-26/why-china-wants-to-rain-on-obama-s-india-parade#r=discussed">Why China Wants to Rain on Obama's India Parade</a>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div>
+<div class='sponsored_module'>
+<div class='sponsored_content sponsor_spot' data-ad-label='nativewell1' data-ad-position='nativewell1' data-ad-server='dfp' data-ad-size='2x1' data-property-id='NA-BUSIWEEKCOM-11236051' data-target-location='.sponsored_content'></div>
+</div>
+</div>
+
+<div class='module'>
+
+</div>
+<div class='module advertisement rectangle'>
+<div class='gpt_ads_slot' id='right2'>
+<div class='gpt_ad_container' data-gpt-size='[[300, 250], [300, 600], [300, 1050], [1, 1]]' data-original-position='right2' data-position='right2' data-pt='t2' data-size='300x250,300x600,300x1050,1x1' data-tile='4' data-tz='right2'></div>
+</div>
+
+</div>
+
+<div class='module' id='featured_items'>
+<h3>
+<a href="http://www.businessweek.com/" class="logo">Bloomberg Businessweek</a>
+</h3>
+<ul>
+<li>
+<a href="http://www.businessweek.com/videos/2015-01-30/should-amazon-spin-off-its-growing-cloud-business" class="thumbnail" title="Should Amazon Spin Off Its Growing Cloud Business?"><img alt="Should Amazon Spin Off Its Growing Cloud Business?" height="113" class="lazy" src="http://images.businessweek.com/grey.gif" data-original="http://www.bloomberg.com/image/iQS7_5YQ7fjA.jpg" width="200" /><noscript><img alt="Should Amazon Spin Off Its Growing Cloud Business?" height="113" src="http://www.bloomberg.com/image/iQS7_5YQ7fjA.jpg" width="200" /></noscript></a>
+<h4><a href="http://www.businessweek.com/videos/2015-01-30/should-amazon-spin-off-its-growing-cloud-business#r=lr-sr">Should Amazon Spin Off Its Growing Cloud Business?</a></h4>
+</li>
+<li>
+<a href="http://www.businessweek.com/videos/2015-01-30/tripadvisors-top-pick-chicagos-langham-hotel" class="thumbnail" title="TripAdvisor&#x27;s Top Pick: Chicago&#x27;s Langham Hotel"><img alt="TripAdvisor&#x27;s Top Pick: Chicago&#x27;s Langham Hotel" height="113" class="lazy" src="http://images.businessweek.com/grey.gif" data-original="http://www.bloomberg.com/image/iV0KDRsp81yY.jpg" width="200" /><noscript><img alt="TripAdvisor&#x27;s Top Pick: Chicago&#x27;s Langham Hotel" height="113" src="http://www.bloomberg.com/image/iV0KDRsp81yY.jpg" width="200" /></noscript></a>
+<h4><a href="http://www.businessweek.com/videos/2015-01-30/tripadvisors-top-pick-chicagos-langham-hotel#r=lr-sr">TripAdvisor's Top Pick: Chicago's Langham Hotel</a></h4>
+</li>
+<li>
+<a href="http://www.businessweek.com/videos/2015-01-30/how-many-condos-is-too-many-in-new-york-city" class="thumbnail" title="Too Many Condos in New York City?"><img alt="Too Many Condos in New York City?" height="112" class="lazy" src="http://images.businessweek.com/grey.gif" data-original="http://www.bloomberg.com/image/i45Du3XS4slI.jpg" width="200" /><noscript><img alt="Too Many Condos in New York City?" height="112" src="http://www.bloomberg.com/image/i45Du3XS4slI.jpg" width="200" /></noscript></a>
+<h4><a href="http://www.businessweek.com/videos/2015-01-30/how-many-condos-is-too-many-in-new-york-city#r=lr-sr">Too Many Condos in New York City?</a></h4>
+</li>
+<li>
+
+<h4><a href="http://www.businessweek.com/articles/2015-01-30/addiction-treatment-goes-public-aac-s-recovery-center-empire#r=lr-sr">Addiction Treatment Goes Public: AAC's Recovery-Center Empire</a></h4>
+</li>
+</ul>
+</div>
+
+
+<div class='module advertisement rectangle'>
+<div class='gpt_ads_slot' id='circ_right'>
+<div class='gpt_ad_container' data-gpt-size='[[300, 123], [1, 1]]' data-original-position='circ_right' data-position='circ_right' data-pt='t2' data-size='300x123,1x1' data-tile='5' data-tz='circ_right'></div>
+</div>
+
+</div>
+<div class='clearfix module' id='google_ads'>
+<h3>Ads by Google</h3>
+<ul></ul>
+</div>
+
+<div class='module advertisement rectangle'>
+<div class='gpt_ads_slot' id='right3'>
+<div class='gpt_ad_container' data-gpt-size='[[300, 250], [1, 1]]' data-original-position='right3' data-position='right3' data-pt='t2' data-size='300x250,1x1' data-tile='6' data-tz='right3'></div>
+</div>
+
+</div>
+
+
+<div id='bottom_ads'>
+<div class='bottom_ad1'>
+<div class='gpt_ads_slot' id='bottom1'>
+<div class='gpt_ad_container' data-gpt-size='[[120, 60], [1, 1]]' data-original-position='bottom1' data-position='bottom1' data-pt='t2' data-size='120x60,1x1' data-tile='7' data-tz='bottom1'></div>
+</div>
+
+</div>
+<div class='bottom_ad2'>
+<div class='gpt_ads_slot' id='bottom2'>
+<div class='gpt_ad_container' data-gpt-size='[[120, 60], [1, 1]]' data-original-position='bottom2' data-position='bottom2' data-pt='t2' data-size='120x60,1x1' data-tile='8' data-tz='bottom2'></div>
+</div>
+
+</div>
+<div id='text_bottom_ad'>
+<div class='gpt_ads_slot' id='bottom'>
+<div class='gpt_ad_container' data-gpt-size='[[300, 200], [1, 1]]' data-original-position='bottom' data-position='bottom' data-pt='t2' data-size='300x200,1x1' data-tile='9' data-tz='bottom'></div>
+</div>
+
+</div>
+</div>
+
+
+</div>
+</div>
+<div class='bottom_container clearfix'>
+<div class='bottom_column primary'>
+
+</div>
+<div class='bottom_column rail'>
+
+</div>
+</div>
+
+
+
+
+
+</div>
+<div class="snippet-view business-snippet default-layout section-front" data-view-uid="snippetFooterViews"><div data-view-uid="snippetFooterViews_1"><footer id="footer" class="footer">
+    <div class="footer__container">
+        <ul class="footer__links">
+            <li class="footer__link"><a href="http://www.bloomberg.com/tos">Terms of Service</a></li>
+            <li class="footer__link"><a href="http://www.bloomberg.com/trademarks">Trademarks</a></li>
+            <li class="footer__link"><a href="http://www.bloomberg.com/privacy">Privacy Policy</a></li>
+            <li>
+                <p class="footer__copyright">©2015 Bloomberg L.P. All Rights Reserved</p>
+            </li>
+        </ul>
+
+        <ul class="footer__links">
+            <li class="footer__link"><a href="http://jobs.bloomberg.com/">Careers</a></li>
+            <li class="footer__link"><a href="http://nytm.org/made-in-nyc">Made in NYC</a></li>
+            <li class="footer__link"><a href="http://www.bloomberg.com/privacy#advertisements">Ad Choices <img src="//cdn.gotraffic.net/business/public/images/icons/ad_choices_icon.49173bcd.png"></a></li>
+            <li class="footer__link"><a href="http://www.bloomberg.com/feedback">Website Feedback</a></li>
+            <li class="footer__link"><a href="http://www.bloomberg.com/help/">Help</a></li>
+            <li class="footer__link"><a href="http://www.bloomberg.com/sitemap">Sitemap</a></li>
+        </ul>
+    </div>
+</footer>
+</div></div>
+
+
+<script src="http://static.btrd.net/assets/gpt_ads-17bd6d266c9884f927d44c22606dea3e.js" type="text/javascript"></script>
+<script src="http://static.btrd.net/assets/application-aca93c88a964190da8ef4fb7ac9170a9.js" type="text/javascript"></script>
+<script>
+  var _gaq=[["_setAccount","UA-11413116-1"],["_trackPageview"],["_trackPageLoadTime"]];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+  g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+  s.parentNode.insertBefore(g,s)}(document,"script"));
+</script>
+
+<script src="http://static.btrd.net/assets/jquery.bloomberg_hat-7c768497a3670c3f9da1b9420a9c3801.js" type="text/javascript"></script>
+<script src="http://static.btrd.net/assets/jquery.truste-consent-1f59258579d7f178906f4d9042377f96.js" type="text/javascript"></script>
+
+
+<link href="http://cdn.gotraffic.net/projector/latest/bvp.css" media="screen" rel="stylesheet" type="text/css" /><script src="http://cdn.gotraffic.net/projector/latest/video.js" type="text/javascript"></script>
+<script>
+  googletag.cmd.push(function() { googletag.display('header-companion-ad'); });
+</script>
+<script>
+  try {
+    $(window).load(function() {
+      $('.branding_hat').bloomberg_hat({ 'active_link':'businessweek'}, function(){
+        BLOOMBERG.bw_user.init_sign_in_box();
+      }); //create the hat, all markup is in the jquery plugin file
+  
+    $.each(
+      $('.lazy'), function(index, value){ 
+        $(value).attr('src', $(value).attr('data-original')); 
+      }
+    );
+  
+    });
+  } catch(err){}
+  
+  try {
+    var tracking_code = window.location.hash.match(/#r=[a-zA-Z_-]*/);
+    if (tracking_code != null && tracking_code != "" && tracking_code.length > 0)
+      _gaq.push(['_trackEvent', tracking_code[0], document.referrer, location.href]);
+  } catch(err){}
+  
+  // Lazy load navigation submenus, see also layouts/_navigation
+  $('#global_nav').ready(function() {
+    var params = window.location.href.split('?');
+    if (params.length == 2) {
+      pass_along_params = "?" + params[1];
+    } else {
+      pass_along_params = "";
+    }
+  });
+</script>
+<script>
+  $(window).load(function() {
+    BLOOMBERG.track_event('Inline Related Links', 'View'); 
+  });
+</script>
+<script src='http://pagead2.googlesyndication.com/pagead/show_ads.js'></script>
+<script>
+  function disqus_config() {
+    this.callbacks.onNewComment = [function() { trackComment(); }];
+  };
+  
+  function trackComment(){
+    var tracking_img_src = "http://analytics.bloomberg.com/images/analytics-bw/dot1.gif?id=268bbb88-5b1e-11e4-ae6a-d8d38560fdc0&pub_date=2014-10-23 23:06:31 -0400&type=story&activity_type=discussed&uri=/,/politics-and-policy,/bw/politics-and-policy/health,/bw/politics-and-policy/policy,/authors/1416-john-tozzi";
+    $('body').append('<img src="'+tracking_img_src+'" style="visibility:hidden;" />');
+  };
+  
+  var disqus_shortname  = "bwbeta";
+  var disqus_identifier = "268bbb88-5b1e-11e4-ae6a-d8d38560fdc0";
+  var disqus_title      = "Ebola in New York: Five Things to Watch";
+  var disqus_developer  = 0;
+  var disqus_url        = "http://www.bloomberg.com/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch" ;
+  
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  $(window).load(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  });
+</script>
+<div id='BF_WIDGET_1'>&nbsp;</div>
+
+<!-- BEGIN DISQUS -->
+<a class='dsq-brlink' href="http://disqus.com" title='blog comments powered by'>
+blog comments powered by
+<span class='logo-disqus'>
+Disqus
+</span>
+</a>
+<!-- END DISQUS -->
+
+<script>
+  $(window).bind("load", function() {
+      var tracking_img_src = "http://analytics.bloomberg.com/images/analytics-bw/dot1.gif?id=268bbb88-5b1e-11e4-ae6a-d8d38560fdc0&pub_date=2014-10-23 23:06:31 -0400&type=story&activity_type=read&uri=/,/politics-and-policy,/bw/politics-and-policy/health,/bw/politics-and-policy/policy,/authors/1416-john-tozzi";
+      $('body').append('<img src="'+tracking_img_src+'" style="visibility:hidden;" />');
+  });
+</script>
+
+<script>
+  __reach_config = { 
+    pid: '530523d097b0c9220a00000b', 
+    title: "Ebola in New York City: Five Things to Watch - Businessweek", 
+    url: 'http://www.bloomberg.com/articles/2014-10-23/ebola-in-new-york-city-five-things-to-watch', 
+    date: '2014-10-23T23:06:31-04:00', 
+    authors: ["John Tozzi"], 
+    channels: ["politics_and_policy"], 
+    tags: [""], 
+    iframe: true, 
+    ignore_errors: false, 
+  }; 
+  
+  (function(){ 
+    var s = document.createElement('script'); 
+    s.async = true; 
+    s.type = 'text/javascript'; 
+    s.src = document.location.protocol + '//d8rk54i4mohrb.cloudfront.net/js/reach.js'; 
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s); 
+  })();
+</script>
+<div id='parsely-root' style='display: none'>
+<div data-parsely-site='businessweek.com' id='parsely-cfg'></div>
+</div>
+<script>
+  (function(s, p, d) {
+    var h=d.location.protocol, i=p+"-"+s,
+        e=d.getElementById(i), r=d.getElementById(p+"-root"),
+        u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+        :"static."+p+".com";
+    if (e) return;
+    e = d.createElement(s); e.id = i; e.async = true;
+    e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+  })("script", "parsely", document);
+</script>
+<script>
+  $(window).load(function() {
+    var REMOTE = "https://secure.businessweek.com";
+  
+    var xhr = new easyXDM.Rpc({
+        local: "/easyxdm/name.html",
+        swf: REMOTE + "/easyxdm/easyxdm.swf",
+        remote: REMOTE + "/easyxdm/cors/",
+        remoteHelper: REMOTE + "/easyxdm/name.html"
+    }, {
+        remote: {
+            request: {}
+        }
+    });
+  
+    BLOOMBERG.bw_user.ajax_sign_on = function(form) {
+  
+      $(".report_error").remove();
+      form.find('input').removeClass("error");
+  
+      request = {
+          url: "https://secure.businessweek.com/login",
+          method: "POST",
+          data: {
+                  email : $('#new_user_form #user_form_email').val(),
+                  password : $('#new_user_form #user_form_password').val(),
+                  remember_me : $('#new_user_form #user_form_remember_me').val()
+          }
+      }
+  
+      var responseHandler = function(response) {
+          var json = easyXDM.getJSONObject().parse(response.data);
+          if (json.message == "success") {
+            $('.sign_in_frame').fadeOut("fast", function() {BLOOMBERG.bw_user.replace_with_username('#sign_in')});
+          }
+      };
+  
+      var errorHandler = function(error) {
+          var json = easyXDM.getJSONObject().parse(error.data.data);
+          if(json.message == "migrate"){
+             window.location = json.url;
+          } else {
+            $("<span class='report_error'>"+json.message+"</span>").insertBefore($("#user_form_email"));
+            $('#new_user_form input').addClass("error");
+          }
+      };
+      xhr.request(request, responseHandler, errorHandler);
+    };
+  });
+</script>
+<script>
+  $(".facebook_button").bind('click', function(e) {
+    e.preventDefault();
+    FB.login(function(response) {
+      if(response && response.status == 'connected' ){
+        login_with_facebook();
+      }
+     }, {scope: 'email'});
+  });
+  
+  $(".facebook_link_button").bind('click', function(e) {
+    e.preventDefault();
+    FB.login(function(response) {
+      if(response && response.status == 'connected' ){
+        link_account(response);
+      }
+     }, {scope: 'email'});
+  });
+  
+  function show_protected_content(){
+    $("#facebook_wall").hide();
+    $('.protected_content').removeClass('protected_content');
+    if ( $('body').hasClass('article_old_article')){
+      $('body.article_old_article #story_body div.unprotected_content').remove();
+      $('body.article_old_article #story_body p.sign_in').remove();
+    }
+  };
+  
+  function login_with_facebook() {
+  
+    var REMOTE = "https://secure.businessweek.com";
+  
+    var xhr = new easyXDM.Rpc({
+        local: "/easyxdm/name.html",
+        swf: REMOTE + "/easyxdm/easyxdm.swf",
+        remote: REMOTE + "/easyxdm/cors/",
+        remoteHelper: REMOTE + "/easyxdm/name.html"
+    }, {
+        remote: {
+            request: {}
+        }
+    });
+  
+    request = {
+        url: "https://secure.businessweek.com/auth/facebook/callback",
+        method: "GET",
+        data: {
+        referrer_url : window.location.href
+        }
+    }
+  
+    var responseHandler = function(response) {
+        reg_enabled = "true";
+        if (reg_enabled == "true"){
+          $('.sign_in_frame').html('<span class="success">Success!</span>');
+          $('#sign_in a.opened').removeClass('opened');
+          $('.sign_in_frame').fadeOut("fast", function() {BLOOMBERG.bw_user.replace_with_username('#sign_in')});
+          if ($('body').hasClass('registration')){
+            var json_response = easyXDM.getJSONObject().parse(response.data)
+            window.location = json_response.url;
+          }
+        }
+    };
+  
+    var errorHandler = function(error) {
+    };
+    xhr.request(request, responseHandler, errorHandler);
+  };
+  
+  function link_account(facebook_user) {
+    $.ajax({
+      type: "POST",
+      data: facebook_user,
+      dataType: "json",
+      url: "https://secure.businessweek.com/users/link-account",
+      success: function(response) {
+        $('.facebook_account').html('<a href="http://www.businessweek.com/users/unlink-account" class="unlink_facebook"> Unlink your facebook account</a>');
+        $(".unlink_facebook").bind('click', function(e) {
+          e.preventDefault();
+          BLOOMBERG.bw_user.unlink_account(e);
+        });
+      },
+      error: function(response){
+        $('.errors').append(JSON.parse(response.responseText)["message"]);
+      }
+    });
+  }
+</script>
+<script>
+  $(window).load(function(){
+     if(true == true){
+        BLOOMBERG.bw_user.show_reg();
+     }
+  });
+</script>
+
+<!-- BEGIN DISQUS COMMENTS COUNT -->
+<script>
+  var disqus_shortname  = "bwbeta";
+  var disqus_developer  = 0;
+  var s = document.createElement('script'); s.async = true;
+  s.type = 'text/javascript';
+  s.src = ('https:' == document.location.protocol ? 'https://' : 'http://')  + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+</script>
+<!-- END DISQUS COMMENTS COUNT -->
+
+
+<script src="http://static.btrd.net/assets/interstitial-024ac073073e2eed55f3891bb6d35cbf.js" type="text/javascript"></script>
+<div id='showInterstitial'>
+<div id='backgroundInterstitial'></div>
+<div id='intro_ad_header'>
+<div id='skip_ad'>
+<a class='skip-ad' onclick='disableInterstitial(); return false;'>Continue to Businessweek</a>
+</div>
+</div>
+<div id='intro_ad'>
+<div id='ad-interstitial'>
+<script>
+  var interstitialStatus = 0;
+  hideIntroAd();
+</script>
+<script>
+  if (show_interstitial_ad()) {
+    var site = AD_SITE+AD_SUB_SITE+AD_ZONE;
+    var noad = 0;
+    var size = "640x480";
+    var url  = (window.location.pathname == undefined) ? "/" : ""+window.location.pathname;
+    var tile = 1;
+    var dcopt  = (parseInt(tile) == 1) ? "ist" : "";
+    var keyword = (AD_KEYWORD != "") ? AD_KEYWORD : "";
+    var tz = "interstitial";
+    var pt = "t2";
+    googletag.cmd.push(function() {
+      var slot = googletag.defineSlot('/' + GPT_NETWORK_ID + '/' + site, [640, 480], "ad-interstitial");
+      slot.addService(googletag.pubads());
+      slot.setTargeting("sz", size);
+      slot.setTargeting("url", url);
+      slot.setTargeting("tile", tile);
+      slot.setTargeting("dcopt", dcopt);
+      slot.setTargeting("keyword", keyword);
+      slot.setTargeting("page", pt);
+      slot.setTargeting(pt, tz);
+      googletag.enableServices();
+      googletag.cmd.push(function() { googletag.display("ad-interstitial") });
+    });
+  }
+</script>
+</div>
+</div>
+</div>
+
+<!-- BEGIN COMSCORE -->
+<script>
+  BBBW_comScore.params = {"name":null,"bb_c_type":"www story","bb_author":"John Tozzi","bb_pub_d":"20141023","bb_attributor":"","bb_cg_1":"Politics & Policy","bb_cg_2":"Health","bb_cg_3":"Ebola in New York: Five Things to Watch","bb_groupid":"","bb_brand":"bbiz","bb_migrated":"bw"};
+  if (_BUCKET != "" && _BUCKET_GROUP != ""){
+    BBBW_comScore.params['bb_bucket']       = _BUCKET;
+    BBBW_comScore.params['bb_bucket_group'] = _BUCKET_GROUP;
+  }
+  BBBW_comScore.track();
+  BBBW_comScore.write_cookie(comScore_track_key,"",-1);
+</script>
+<noscript>
+<p>
+<img alt='*' height='1' src='http://b.scorecardresearch.com/p?c1=2&amp;amp;c2=3005059' width='1'>
+</p>
+</noscript>
+<!-- END COMSCORE -->
+
+<!-- Chartbeat Monitoring -->
+<script>
+  var _sf_async_config= {uid: 15087, domain: "bloomberg.com"};
+  _sf_async_config.useCanonical = true;
+  
+  _sf_async_config.sections = "Politics & Policy";
+  _sf_async_config.authors = "John Tozzi";
+  
+  
+  (function(){
+    function loadChartbeat() {
+      window._sf_endpt=(new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src',
+        (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") + "static.chartbeat.com/js/chartbeat_pub.js");
+      document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+</script>
+
+
+
+<!-- Last Update: 2015-01-30 18:54:44 -0500 -->
+
+</body>
+</html>
+

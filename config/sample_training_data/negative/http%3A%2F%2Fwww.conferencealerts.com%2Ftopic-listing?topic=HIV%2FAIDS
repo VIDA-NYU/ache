@@ -1,0 +1,257 @@
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+        <link rel="stylesheet" type="text/css" href="site.css?ver=1600" media="screen" />
+        <link rel="icon" type="image/png" href="images/favicon.png" />
+        <title>Conference Alerts - Topic Listing</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="HIV/AIDS Conferences Worldwide Upcoming events in HIV, AIDS and related fields Hosted by Conference Alerts - Find details about academic conferences worldwide." />
+        <meta name="keywords" content="HIV, AIDS" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="JavaMd5.js"></script>
+        <script type="text/javascript" src="Utf8_Encode.js"></script>
+        <script type="text/javascript" src="ca.js"></script>
+        <script type="text/javascript" src="niftycube.js"></script>
+        <script type="text/javascript" src="jquery.autocomplete-min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(loadNifty);
+        </script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-39230874-1']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        </head>
+
+        <body>
+
+        <div id="homeLink"><a href="index" title="Home" id="homeLink">Home</a></div>
+
+        <div id="trademark">&reg;</div><a href="index"><img style="position: absolute; cursor: pointer; border-style: none; left: 19px;" src="images/bannerg.jpg?ver=1500" align="left" title="Home" /></a>
+
+        <div id="registerDiv"></div>
+
+        <div id="searchDiv">
+                    <form method="get" action="search">
+            <table id="searchBoxTable">
+                <tr>
+                    <td rowspan="2">
+                        <a href="faq">
+                            <div id="upgradeButton" class="upgradeButton textCenter">
+                                How to use our site
+                            </div>
+                        </a>
+                    </td>
+                    <td class="spacer20w"></td>
+                    <td><input id="searchText" type="text" name="searchTerm" value="Search" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" /></td>
+                    <td>&nbsp;&nbsp;&nbsp;<input id="searchImage" title="Search" type="image" src="images/search_small.png" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="center"><span id="smallText"><a href="advanced-search" onclick="loadSearchDatePickers()">(Advanced search)</a></span></td>
+                </tr>
+            </table>
+            </form>
+                </div>
+
+        <div id="loginDivContainer">
+                        <form action="javascript:login();" id="login_form">
+                <table id="logInTable">
+                    <tr>
+                        <td id="tablePad">
+                            <span id="loginText">Log in&nbsp;&nbsp;&nbsp;</span>
+                        </td>
+                        <td id="tablePad">
+                            <p>
+                                <label for="userNameTextBox">Username</label>
+                                <input id="userNameTextBox" type="text" name="username" value="" />
+                            </p>
+                        </td>
+                        <td id="tablePad">
+                            <p>
+                                <label for="passwordTextBox">Password</label>
+                                <input id="passwordTextBox" type="password" name="password" value="" />
+                            </p>
+                        </td>
+                        <td id="tablePad">
+                            &nbsp;&nbsp;<input id="loginButton" type="image" src="images/login.png" value="Log in" title="Log in" alt="Log in"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="tablePad">
+                        </td>
+                        <td align="left" id="tablePad">
+                            <span id="smallText">&nbsp;<a href="subscribe" title="Click here to create a Conference Alerts account">(Subscribe)</a></span>
+                        </td>
+                        <td align="left" id="tablePad">
+                            <span id="smallText">&nbsp;<a href="forgot-password" title="Click here to retrieve your Conference Alerts account password">(I forgot my password)</a></span>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+                    </div>
+
+        <br />
+        <div id="mainContainer">
+            <div id="searchListContainer" align="center" class="textLeft">
+                        <table align="center" id="spotlightTable">
+            <tr>
+                <td align="center"><a href="show-event?id=0"><img id="spotlightImage" src="spotlight?imId=1&pageType=subtopic_33" /></a></td>
+                <td align="center"><a href="show-event?id=0"><img id="spotlightImage" src="spotlight?imId=2&pageType=subtopic_33" /></a></td>
+                <td align="center"><a href="show-event?id=0"><img id="spotlightImage" src="spotlight?imId=3&pageType=subtopic_33" /></a></td>
+                <td align="center"><a href="show-event?id=0"><img id="spotlightImage" src="spotlight?imId=4&pageType=subtopic_33" /></a></td>
+            </tr>
+        </table>
+                        <br /><br />
+                <table align="left" width="100%">
+                    <tr>
+                        <!-- Featured event area -->
+                        <td align="center" width="240px">
+                            <script type="text/javascript"><!--
+                                    google_ad_client = "ca-pub-2475575566915822";
+                                    /* listing page */
+                                    google_ad_slot = "4647770957";
+                                    google_ad_width = 160;
+                                    google_ad_height = 600;
+                                    //-->
+                                    </script>
+                                    <script type="text/javascript"
+                                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                                    </script>                        </td>
+                        <!-- Result list -->
+                        <td class="textLeft verticalTop">
+                            <span id="searchHeading" class="textLeft">HIV/AIDS conferences worldwide</span>
+                                                            <br />
+                                <br />
+                                <span id="generalText" class="textLeft">Listing 11 events&nbsp;<a class="handCursor" onclick="history.go(-1); return true;">(go back)</a></span>
+                                <br />
+                                <br />
+                                <a style="text-decoration: none;" class="current" href="#">1</a> <a style="text-decoration: none;" class="paginate" href="javascript:changePaging('/topic-listing.php?page=1&ipp=All&topic=HIV/AIDS')">All</a> 
+                                <br />
+                                <br />
+                                <script type="text/javascript"><!--
+                                    google_ad_client = "ca-pub-2475575566915822";
+                                    /* listing under paging */
+                                    google_ad_slot = "9281392344";
+                                    google_ad_width = 728;
+                                    google_ad_height = 90;
+                                    //-->
+                                </script>
+                                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                                </script>
+                                <br />
+                                <table align="left" width="100%" id="searchResultTable" cellpadding="3px">
+                                                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                            <tr><td colspan="2" width="80%" id="eventMonthHeading" class="textLeft">January 2015</td></tr>
+                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                                                                            <tr>
+                                                    <td class="textLeft bold" align="left" width="2%">14th</td>
+                                                    <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=142151">The 17th Bangkok International Symposium on HIV Medicine</a></span> <span id="searchPlace">Bangkok, <span class="green">Thailand</span></span></td>
+                                                </tr>
+                                                <tr><td id="spacer5"></td></tr>                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                            <tr><td colspan="2" width="80%" id="eventMonthHeading" class="textLeft">February 2015</td></tr>
+                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                                                                            <tr>
+                                                    <td class="textLeft bold" align="left" width="2%">3rd</td>
+                                                    <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=140883">Short Course on Ultrasound in Infectious Diseases and Tropical Medicine</a></span> <span id="searchPlace">Pavia, <span class="green">Italy</span></span></td>
+                                                </tr>
+                                                <tr><td id="spacer5"></td></tr>                                                <tr>
+                                                    <td class="textLeft bold"                                        </tr>
+                                                <tr><td id="spacer5"></td></tr>                                                <tr>
+                                                    <td class="textLeft align="left" width="2%" style="font-weight: bold;">6th</td>
+                                                    <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=133448" style="font-size: 120%; font-weight: bold;">2nd International Conference on Biotechnology and Bioinformatics (ICBB-2015)</a></span> <span id="searchPlace" style="font-weight: bold;">Pune, <span class="green">India</span></span></td>
+                                                </tr>
+                                                <tr><td id="spacer5"></td></tr>                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                            <tr><td colspan="2" width="80%" id="eventMonthHeading" class="textLeft">March 2015</td></tr>
+                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                                                                            <tr>
+                                                    <td class="textLeft bold" align="left" width="2%">22nd</td>
+                                                    <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=145824">The Second Asian Conference on the Millennium Development Goals</a></span> <span id="searchPlace">Hiroshima, <span class="green">Japan                              <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=145824">The Second Asian Conference o</span></span></td>
+                                                </tr>
+                                                <tr><td id="spacer5"></td></tr>                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                            <tr><td colspan="2" width="80%" id="eventMonthHeading" class="textLeft">May 2015</td></tr>
+                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                                                                            <tr>
+                                                    <td class="textLeft bold" align="left" width="2%">16th</td>
+                                                    <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=142812">Be there or die? The role of themicroenvironment in B cell behaviour in health and disease</a></span> <span id="searchPlace">San Feliu de Guixols, <span class="green">Spain</span></span></td>
+                                                </tr>
+                                                <tr><td id="spacer5"></td></tr>                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                            <tr><td colspan="2" width="80%" id="eventMonthHeading" class="textLeft">July 2015</td></t><td id="spacer5"></td></tr>                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                            r>
+                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                                                                            <tr>
+                                                    <td class="textLeft bold" align="left" width="2%" style="font-weight: bold;">11th</td>
+                                                    <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=139198" style="font-size: 120%; font-weight: bold;">PHC 2015 - Public Health Conference 2015</a></span> <span id="searchPlace" style="font-weight: bold;">Bangkok, <span class="green">Thailand</span></span></td>
+                                                </tr>
+                                                <tr><td id="spacer5"></td></tr>                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                            <tr><td colspan="2" width="80%" id="eventMonthHeading" class="textLeft">August 2015</td></tr>
+                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                                                                            <tr>
+                                                    <td class="textLeft bold" align="left" width="2%">4th</td>
+                                                    <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=143638">3rd International conference on Epidemiology and Emerging diseases</a></span> <span id="searchPlace">Valencia, Spain, <span class="green">Spain</span></span></td>
+                                                </tr>
+                                                <tr><td id="spacer5"></td></tr>                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                            <tr><td colspan="2" width="80%" id="eventMonthHeading" class="textLeft">November 2015</td></tr>
+                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                                                                            <tr>
+                                                    <td class="textLeft bold" align="left" width="2%" style="font-weight: bold;">2nd</td>
+                                                    <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=135630" style="font-size: 120%; font-weight: bold;">Second International Conference on Tourism and Hospitality Management 2015 (ICTHM 2015)</a></span> <span id="searchPlace" style="font-weight: bold;">Colombo, <span class="green">Sri Lanka</span></span></td>
+                                                </tr>
+                                                <tr><td id="spacer5"></td></tr>                                                <tr>
+                                                    <td class="textLeft bold" align="left" width="2%">18th</td>
+                                                    <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=141557">9th World Congress of the World Society for Pediatric Infectious Diseases</a></span> <span id="searchPlace">Rio de Janeiro, <span class="green">Brazil</span></span></td>
+                                                </tr>
+                                                <tr><td id="spacer5"></td></tr>                                                <tr>
+                                                    <td class="textLeft bold" align="left" width="2%">30th</td>
+                                                    <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=143581">3rd International Conference on HIV/AIDS, STDs &amp; STIs- 2015</a></span> <span id="searchPlace">Atlanta, <span class="green">United States of America</span></span></td>
+                                                </tr>
+                                                <tr><td id="spacer5"></td></tr>                                  ="searchPlace">Atlanta, <span class="green">United States of America</span></span></td>
+                                                </tr>
+                                                <tr><td id="s          <tr><td id="spacer10" class="textLeft"></td></tr>
+                                            <tr><td colspan="2" width="80%" id="eventMonthHeading" class="textLeft">December 2015</td></tr>
+                                            <tr><td id="spacer10" class="textLeft"></td></tr>
+                                                                                            <tr>
+                                                    <td class="textLeft bold" align="left" width="2%" style="font-weight: bold;">8th</td>
+                                                    <td class="textLeft"><span id="searchName" class="textLeft"><a href="show-event?id=135670" style="font-size: 120%; font-weight: bold;">Seventh International Workshop on HIV Persistence, Reservoirs and Cure</a></span> <span id="searchPlace" style="font-weight: bold;">Miami, <span class="green">United States of America</span></span></td>
+                                                </tr>
+                                                <tr><td id="spacer5"></td></tr>                                <tr>
+                                    <td colspan="2">
+                                        <script type="text/javascript"><!--
+                                            google_ad_client = "ca-pub-2475575566915822";
+                                            /* listing under content */
+                                            google_ad_slot = "1060121547";
+                                            google_ad_width = 300;
+                                            google_ad_height = 250;
+                                            //-->
+                                        </script>
+                                        <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                                        </script>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr><td class="spacer20"></td></tr>
+                    <tr>
+                        <td></td>
+                        <td class="spacer30 verticalMiddle padding5">
+                            <a style="text-decoration: none;" class="current" href="#">1</a> <a style="text-decoration: none;" class="paginate" href="javascript:changePaging('/topic-listing.php?page=1&ipp=All&topic=HIV/AIDS')">All</a> 
+                        </td>
+                    </tr>
+                    <tr><td class="spacer100"></table>
+            </div>
+        </div>
+
+        </body>
+
+        </html>
+        aging('/topic-listing.php?page=1&ipp=All&topic=HIV/AIDS')">All</a> 
+                        </td>
+                    </tr>
+                    <tr><t

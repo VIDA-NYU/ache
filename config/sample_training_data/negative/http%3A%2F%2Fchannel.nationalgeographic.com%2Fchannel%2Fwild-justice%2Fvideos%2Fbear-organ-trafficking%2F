@@ -1,0 +1,1835 @@
+
+
+
+<!DOCTYPE html>
+<!--[if lte IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]--><!--[if gt IE 8]><!-->
+<html lang="en" xml:lang="en" class="no-js"><!--<![endif]-->
+<head>
+    
+    <script>var _sf_startpt=(new Date()).getTime()</script>
+
+    <meta charset="utf-8" />
+    <title>Bear Organ Trafficking | National Geographic Channel</title>
+
+    <!-- (c) Copyright by National Geographic All Rights Reserved. -->
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <meta name="description" property="og:description" content="Wardens catch a large hunting group suspected of selling bear organs on the black market." />
+
+    <meta name="keywords" content="Department Of Fish And Game Video, Bear Season, Bear Hunting, Illegal Hunting, Wild Justice, Channel, Wild Justice" />
+    
+
+    <meta name="robots" content="all" />
+
+
+    <meta name="google-site-verification" content="2ixYEN-8M4fZTstcEhbqVJHmtIpX5dj2v5yOMypYkJ4" />
+
+    
+    
+    <meta property="fb:app_id" content="205529552888226" />
+    
+<meta name="type" property="og:type" content="video.movie" /><meta property="video:duration" content="287" />
+
+    
+    <meta name="url" property="og:url" content="http://channel.nationalgeographic.com/channel/wild-justice/videos/bear-organ-trafficking/" />
+
+    
+
+    <meta name="image" property="og:image" content="http://channel.nationalgeographic.com/exposure/content/photo/photo/436294_bear-organ-trafficking49_epsicuaitwlfo42x7yedw6mpvtncurxrbvj6lwuht2ya6mzmafma_610x343.jpg" />
+
+
+    
+    <meta name="title" property="og:title" content="Bear Organ Trafficking | National Geographic Channel" />
+
+    
+
+    <meta name="video" property="og:video" content="http://channelhd-f.akamaihd.net/channel/feed/00813/08977_00_Bear-Organ-Traff_015.flv" />
+    <meta property="og:video:type" content="application/x-shockwave-flash" />
+
+    <meta property="og:video:width" content="610" />
+    <meta property="og:video:height" content="374" />
+
+    <meta name="site_name" property="og:site_name" content="National Geographic Channel" />
+    
+
+    
+    <link rel="shortcut icon" href="//media-channel.nationalgeographic.com/static-media/images/favicon.ico" />
+    <link rel="canonical" href="http://channel.nationalgeographic.com/channel/wild-justice/videos/bear-organ-trafficking/" />
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="//media-channel.nationalgeographic.com/static-media/compressor_cache/css/daef746109e2.css" type="text/css" />
+    
+    
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <link rel="stylesheet" data-norem href="//media-channel.nationalgeographic.com/static-media/css/ie8.css" />
+    <![endif]-->
+    
+
+    <link rel="stylesheet" href="//media-channel.nationalgeographic.com/static-media/sites/channel/css/site_style.css" />
+    
+    <link rel="stylesheet" href="//media-channel.nationalgeographic.com/static-media/sites/channel/css/subsection_channel.css" />
+    
+
+    
+
+    <link rel="stylesheet" href="//media-channel.nationalgeographic.com/static-media/css/video_auth.css" />
+
+
+    <link rel="stylesheet" href="//media-channel.nationalgeographic.com/static-media/css/video_auth.css" />
+
+
+
+    
+
+    
+    
+    
+        
+    
+    <script>
+    (function(w, pathname) {
+        var sl1, sl2, sl3;
+        pathname = w.location.pathname.split('/');
+        if (w.location.pathname[0] === '/') {
+            pathname.shift();
+        }
+        if (pathname.length > 1) {
+            sl1 = pathname.shift(); //channel
+            sl1 = (sl1 === 'channel' || sl1 === '') ? 'NGC' : sl1;
+            sl2 = pathname[0].toLowerCase()
+            if ( sl2 === 'series' || sl2 === 'episodes') { pathname.shift(); } //Get rid of it.
+            sl2 = 'Show' // cus "show" always needs to be there.
+            sl3 = pathname.shift(); //Series or Stand-alone episode
+            w.s_hier1 = [sl1, sl2, sl3, pathname.join('/')].join('|');
+        } else {
+            w.s_hier1 = ['NGC', pathname].join('|');
+        }
+        w.STATIC_URL = '//media-channel.nationalgeographic.com/static-media/';
+        w.ngs_reportsuite = w.location.pathname.split('/')[1] === 'wild' ? 'natnatgeongcwild' : 'natgeongccom';
+    })(window, location.pathname, undefined);
+    </script>
+        
+    <script>window.ngs_reportsuite = 'natgeovideo';</script>
+
+    <script src="//media-channel.nationalgeographic.com/static-media/js/modernizr.min.js"></script>
+    <script src="//media-channel.nationalgeographic.com/static-media/js/jquery.min.js"></script>
+    <script src="//media-channel.nationalgeographic.com/static-media/js/ng.js"></script>
+    <script src="//media-channel.nationalgeographic.com/static-media/js/jsManager.js"></script>
+    <script src="//media-channel.nationalgeographic.com/static-media/js/bootstrap-popover.min.js"></script>
+    <script src="//media-channel.nationalgeographic.com/static-media/js/ngc-auth-tooltip.js"></script>
+    
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <link rel="stylesheet" data-norem href="//media-channel.nationalgeographic.com/static-media/css/ie8.css" />
+    <![endif]-->
+    
+    <script src="//media-channel.nationalgeographic.com/static-media/sites/channel/js/channel.resources.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script></head>
+
+<body class="" data-require="" data-options='[
+]'>
+    <!-- Google Tag Manager -->
+
+    <script>
+      dataLayer = [{
+        'pageCategory': 'Video',
+        'pageSubCategory': 'bear-organ-trafficking'
+      }];
+    </script>
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-S6J5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-S6J5');</script>
+
+    <!-- End Google Tag Manager -->
+    <!--div id="fb-root" data-require-"facebook"></div> -->
+
+    <header>
+    
+    <!-- VIDEO AUTH CHROME KILLER start -->
+    
+    
+
+
+
+    <div id="leaderboard">
+        <div class="advertisement interstitial" data-require="ads" data-options='{"height": "1", "width": "1", "dcopt": "ist"}'></div>
+        <div class="advertisement pushdown" data-require="ads" data-options='{"height": "66", "width": "970", "pushdown": true }'></div>
+        <div class="advertisement primary" data-require="ads" data-options='{"height": "90", "width": "728"}'></div>
+        <div class="advertisement secondary" data-require="ads" data-options='{"height": "90", "width": "257"}'></div>
+    </div>
+
+
+<div id="masthead">
+    <hgroup>
+        <h1><a href="http://www.nationalgeographic.com" title="National Geographic Society">National Geographic Society</a></h1>
+    </hgroup>
+
+    <!-- Shared header controls -->
+    
+
+
+<script type="text/javascript" src="//media-members.nationalgeographic.com/static-media/header-built/modernizr.js"></script>
+
+
+<script type="text/javascript" src="//use.typekit.net/mvu2yek.js"></script>
+<script type="text/javascript">try{Typekit.load({});}catch(e){}</script>
+
+
+
+<!-- socialize.js script should only be included once -->
+<script type="text/javascript" src="https://cdns.gigya.com/js/socialize.js?apikey=3_LOaUF9fHrs7lFHW7YFFA22qD6MhVsbO_bpqkn6nnKj9-AbGRsec864eKWqmR2Jdu&dbg=1">
+    {
+        //siteName: '',
+        enabledProviders: 'facebook',
+        autoLogin: true
+    }
+</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="//media-members.nationalgeographic.com/static-media/header-built/header.css">
+
+
+<script>
+    var sharedHeaderConfig = {
+        controlsOnly: true,
+        headerDivId: 'shared_header',
+        staticUrl: '//media-members.nationalgeographic.com/static-media/header-built/../',
+        serverSideLogin: true,
+        refreshOnLogin: false,
+        refreshOnLogout: true,
+        mmdbHost: 'https://mmdb.nationalgeographic.com',
+        memcenHost: 'https://members.nationalgeographic.com',
+        alertContainerSelector: 'header:first',
+        mmdbSharedHeaderStaticHome: '//media-members.nationalgeographic.com/static-media/header-built/',
+        headerDebug: false,
+    
+    
+        notificationsApiHost: 'https://notifications.nationalgeographic.com'.replace('http:', window.location.protocol),
+        notificationsApiKey: 'e6c4b4af844c454fc2110a4d09828559489837313bd2e519cf',
+    
+    };
+</script>
+
+
+<script type="text/javascript" src="//media-members.nationalgeographic.com/static-media/header-built/header.js"></script>
+
+
+    <div id="shared_header"></div>
+
+    <!-- End shared header controls -->
+    
+    <search>
+        <form action="//www.nationalgeographic.com/search/" id="ngs_search">
+            <input name="search" value="" id="header_search_input" type="search" placeholder="Search" />
+            <!-- <input type="submit" value="Go" id="ngs_search_submit" /> -->
+        </form>
+    </search>
+
+    <social>
+        <ul id="social">
+            <li>Connect:</li>
+            <li><a href="http://www.facebook.com/natgeo" class="facebook"></a></li>
+            <li><a href="http://www.twitter.com/NatGeo" class="twitter"></a></li>
+        </ul>
+    </social>
+</div>
+
+    <!-- VIDEO AUTH CHROME KILLER end -->
+    
+<nav id="site_nav" role="navigation" class="inline-list" data-require="global_nav">
+    <h2>National Geographic Navigation</h2>
+    <ul class="primary_nav">
+        <li class="nav01">
+            <a href="//www.nationalgeographic.com/" title="National Geographic - Home">Home</a>
+            <ul>
+                <li><a href="//www.nationalgeographic.com/news/" title="National Geographic - Daily News">Daily News</a></li>
+                <li><a href="http://ngm.nationalgeographic.com" title="National Geographic - The Magazine">The Magazine</a></li>
+                <li><a href="http://maps.nationalgeographic.com" title="National Geographic - Maps">Maps</a></li>
+                <li><a href="//www.nationalgeographic.com/science/" title="National Geographic - Science">Science</a></li>
+                <li><a href="//www.nationalgeographic.com/education/" title="National Geographic - Education">Education</a></li>
+                <li><a href="http://games.nationalgeographic.com" title="National Geographic - Games">Games</a></li>
+                <li><a href="http://events.nationalgeographic.com/" title="National Geographic - Events">Events</a></li>
+                <li><a href="http://blogs.nationalgeographic.com" title="National Geographic - Blogs">Blogs</a></li>
+                <li><a href="//www.nationalgeographic.com/movies/" title="National Geographic - Movies">Movies</a></li>
+                <li><a href="//www.nationalgeographic.com/explorers/" title="National Geographic - Explorers">Explorers</a></li>
+                <li><a href="//www.nationalgeographic.com/apps/" title="National Geographic - Apps">Apps</a></li>
+                <li><a href="http://www.nation.nationalgeographic.com/explorers/" title="National Geographic - Explorers">Explorers</a></li>
+                <li><a href="//www.nationalgeographic.com/apps/" title="National Gealgeographicexpeditions.com/?utm_source=NGdotcom-Home&amp;utm_medium=Link&amp;utm_content=TopNav_Trips&amp;utm_campaign=NGdotcom" title="National Geographic - Trips">Trips</a></li>
+            </ul>
+        </li>
+        <li class="nav02">
+            <a href="//www.nationalgeographic.com/video/" title="National Geographic - Video">Video</a>
+            <nav class="sub_nav">
+                <section class="secondary_nav_container">
+                    <ul class="secondary_nav">
+                        <li><a href="//www.nationalgeographic.com/video/" title="Video - Home">Video Home</a></li>
+                        <li><a href="//www.nationalgeographic.com/video/national-geographic-channel/" title="Video - Nat Geo TV">Nat Geo TV</a></li>
+                        <li><a href="//www.nationalgeographic.com/video/nat-geo-wild/" title="Video - Nat Geo Wild">Nat Geo Wild</a></li>
+                        <li><a href="//www.nationalgeographic.com/video/animals/" title="Video - Animals">Animals</a></li>
+                        <li><a href="//www.nationalgeographic.com/video/kids/" title="Video - Kids">Kids</a></li>
+                        <li><a href="//www.nationalgeographic.com/video/news/" title="Video - News">News</a></li>
+                        <li><a href="//www.nationalgeographic.com/video/more/" title="Video - More">More</a></li>
+                    </ul>
+                </section>
+                <div class="spotlight">
+                </div>
+            </nav>
+        </li>
+        <li class="nav03">
+            <a href="//www.nationalgeographic.com/photography/" title="National Geographic - Photography">Photography</a>
+            <nav class="sub_nav">
+                <section class="secondary_nav_container">
+                    <ul class="secondary_nav">
+                        <li><a href="//www.nationalgeographic.com/photography/" title="Photography - Home">Photography Home</a></li>
+                        <li><a href="//www.nationalgeographic.com/photography/photo-of-the-day/" title="Photography - Photo of the Day">Photo of the Day</a></li>
+                        <li><a href="//www.nationalgeographic.com/photography/photogalleries/" title="Photography - Galleries">Galleries</a></li>
+                        <li><a href="//www.nationalgeographic.com/photography/wallpapers/" title="Photography - Wallpapers">Wallpapers</a></li>
+                        <li><a href="//www.nationalgeographic.com/photography/photo-tips/" title="Photography - Photo Tips">Photo Tips</a></li>
+                        <li><a href="//www.nationalgeographic.com/photography/photographers/" title="Photography - Photographers">Photographers</a></li>
+                        <li><a href="http://national-geographic.cafepress.com/art" title="Photography - Buy Prints">Buy Prints</a></li>
+                        <li><a href="http://video.nationalgeographic.com/video/player/photography/" title="Photography - Video">Video</a></li>
+                        <li><a href="//www.nationalgeographic.com/newsletter/" title="Photography - Newsletters">Newsletters</a></li>
+                    </ul>
+                </section>
+                <div class="spotlight">
+                </div>
+            </nav>
+        </li>
+        <li class="nav04">
+            <a href="//www.nationalgeographic.com/animals/" title="National Geographic - Animals">Animals</a>
+            <nav class="sub_nav">
+                <section class="secondary_nav_container">
+                    <ul class="secondary_nav">
+                        <li><a href="//www.nationalgeographic.com/animals/" title="Animals - Home">Animals Home</a></li>
+                        <li><a href="//www.nationalgeographic.com/animals/facts/" title="Animals - Facts">Facts</a></li>
+                        <li><a href="//www.nationalgeographic.com/animals/photos/" title="Animals - Photos">Photos</a></li>
+                        <li><a href="//www.nationalgeographic.com/video/player/animals/" title="Animals - Video">Video</a></li>
+                        <li><a href="//www.nationalgeographic.com/animals/conservation/" title="Animals - Animal Conversation">Animal Conservation</a></li>
+                    </ul>
+                </section>
+                <div class="spotlight">
+                </div>
+            </nav>
+        </li>
+        <li class="nav05">
+            <a href="//www.nationalgeographic.com/environment/" title="National Geographic - Environment">Environment</a>
+            <nav class="sub_nav">
+                <section class="secondary_nav_container">
+                    <ul class="secondary_nav">
+                        <li><a href="//www.nationalgeographic.com/environment/" title="Environment - Home">Environment Home</a></li>
+                        <li><a href="//www.nationalgeographic.com/environment/energy/" title="Environment - Energy">Energy</a></li>
+                        <li><a href="//www.nationalgeographic.com/environment/freshwater/" title="Environment - Freshwater">Freshwater</a></li>
+                        <li><a href="//www.nationalgeographic.com/environment/global-warming/" title="Environment - Global Warming">Global Warming</a></li>
+                        <li><a href="//www.nationalgeographic.com/environment/habitats/" title="Environment - Habitats">Habitats</a></li>
+                        <li><a href="//www.nationalgeographic.com/environment/natural-disasters/" title="Environment - Natural Disasters">Natural Disasters</a></li>
+                        <li><a href="//www.nationalgeographic.com/ocean/" title="Environment - the Ocean">The Ocean</a></li>
+                        <li><a href="http://greenliving.nationalgeographic.com/" title="Environment - the Green Guide">The Green Guide</a></li>
+                        <li><a href="//www.nationalgeographic.com/newsletter/" title="Environment - Newsletters">Newsletters</a></li>
+                    </ul>
+                </section>
+                <div class="spotlight">
+                </div>
+            </nav>
+        </li>
+        <li class="nav06">
+            <a href="//www.nationalgeographic.com/travel/" title="National Geographic - Travel">Travel</a>
+            <nav class="sub_nav">
+                <section class="secondary_nav_container">
+                    <ul class="secondary_nav">
+                        <li><a href="//www.nationalgeographic.com/travel/" title="Travel - Home">Travel Home</a></li>
+                        <li><a href="//www.nationalgeographic.com/travel/top-10/" title="Travel - Top 10">Top 10</a></li>
+                        <li><a href="//www.nationalgeographic.com/travel/destinations-a-z/" title="Travel - Destinations A-Z">Destinations A-Z</a></li>
+                        <li><a href="//www.nationalgeographic.com/travel/trip-ideas/" title="Travel - Trip Ideas">Trip Ideas</a></li>
+                        <li><a href="http://intelligenttravel.nationalgeographic.com/" title="Travel - Blogs">Travel Blogs</a></li>
+                        <li><a href="//www.nationalgeographic.com/travel/traveler-magazine/" title="Travel - Traveler Magazine">Traveler Magazine</a></li>
+                        <li><a href="//www.nationalgeographic.com/travel/travel-photos/" title="Travel - Photos">Photos</a></li>
+                        <li><a href="//www.nationalgeographic.com/video/player/places/" title="Travel - Video">Video</a></li>
+                        <li><a href="http://www.nationalgeographicexpeditions.com/?utm_source=travel.nationalgeographic.com&amp;utm_medium=Link&amp;utm_content=TopNav_Our_Trips&amp;utm_campaign=NGdotcom" title="Travel - Our Trips">Our Trips</a></li>
+                        <li><a href="//www.nationalgeographic.com/newsletter/" title="Travel - Newsletters">Newsletters</a></li>
+                    </ul>
+                </section>
+                <div class="spotlight">
+                </div>
+            </nav>
+        </li>
+        <li class="nav07">
+            <a href="http://adventure.nationalgeographic.com/adventure/" title="National Geographic - Adventure">Adventure</a>
+            <nav class="sub_nav">
+                <section class="secondary_nav_container">
+                    <ul class="secondary_nav">
+                        <li><a href="http://adventure.nationalgeographic.com/adventure/" title="Adventure - Home">Adventure Home</a></li>
+                        <li><a href="http://adventure.nationalgeographic.com/adventure/gear/" title="Adventure - Gear">Gear</a></li>
+                        <li><a href="http://adventure.nationalgeographic.com/adventure/ultimate-adventurers/" title="Adventure - Ultimate Adventurers">Ultimate Adventurers</a></li>
+                        <li><a href="http://adventure.nationalgeographic.com/adventure/trip-ideas/" title="Adventure - Trip Ideas">Trip Ideas</a></li>
+                        <li><a href="http://travel.nationalgeographic.com/travel/national-parks/" title="Adventure - Parks">Parks</a></li>
+                        <li><a href="http://adventure.nationalgeographic.com/adventure/adventure-photos/" title="Adventure - Photos">Photos</a></li>
+                        <li><a href="http://video.nationalgeographic.com/video/player/adventure/" title="Adventure - Video">Video</a></li>
+                        <li><a href="http://adventureblog.nationalgeographic.com/" title="Adventure - Blog">Blog</a></li>
+                        <li><a href="http://www.nationalgeographicexpeditions.com/?utm_source=NGdotcom-Adventure&amp;utm_medium=Link&amp;utm_content=TopNav_Nat_Geo_Trips&amp;utm_campaign=NGdotcom" title="Adventure - Nat Geo Trips">Nat Geo Trips</a></li>
+                        <li><a href="http://alltrails.com/a/100077/" title="Adventure - All Trails">AllTrails</a></li>
+                        <li><a href="//www.nationalgeographic.com/newsletter/" title="Adventure - Newsletters">Newsletters</a></li>
+                    </ul>
+                </section>
+                <div class="spotlight">
+                </div>
+            </nav>
+        </li>
+        <li class="nav08 selected">
+        
+            <a href="/" title="National Geographic Channel">Television</a>
+        
+            <ul class="secondary_nav_sub">
+                    <li><a href="/" title="National Geographic Channel - Home">National Geographic Channel</a></li>
+                    <li><a href="/wild/" title="Nat Geo Wild - Home">Nat Geo Wild</a></li>
+                    
+                        <li><a href="/channel/schedule/daily/" title="National Geographic Channel - TV Schedule">TV Schedule</a></li>
+                    
+                    
+                        <li><a href="/channel/shows/" title="National Geographic Channel - Shows">Shows</a></li>
+                    
+                    
+                        <li><a href="http://video.nationalgeographic.com/video/national-geographic-channel/" title="National Geographic Channel - Videos">Video</a></li>
+                    
+                    <li><a href="http://tvblogs.nationalgeographic.com" title="National Geographic Channel - Blogs">Blogs</a></li>
+                </ul>
+            <nav class="sub_nav">
+               <ul class="secondary_nav">
+                    <li><a href="/" title="National Geographic Channel - Home">National Geographic Channel</a></li>
+                    <li><a href="/wild/" title="Nat Geo Wild - Home">Nat Geo Wild</a></li>
+                    
+                        <li><a href="/channel/schedule/daily/" title="National Geographic Channel - TV Schedule">TV Schedule</a></li>
+                    
+                    
+                        <li><a href="/channel/shows/" title="National Geographic Channel - Shows">Shows</a></li>
+                    
+                    
+                        <li><a href="http://video.nationalgeographic.com/video/national-geographic-channel/" title="National Geographic Channel - Videos">Video</a></li>
+                    
+                    <li><a href="http://tvblogs.nationalgeographic.com" title="National Geographic Channel - Blogs">Blogs</a></li>
+                </ul>
+                <div class="spotlight">
+                </div>
+            </nav>
+        </li>
+        <li class="nav09">
+            <a href="//www.nationalgeographic.com/kids/" title="National Geographic - Kids">Kids</a>
+            <nav class="sub_nav left">
+                <section class="secondary_nav_container">
+                    <ul class="secondary_nav">
+                        <li><a href="//www.nationalgeographic.com/kids/" title="Kids - Home">Kids Home</a></li>
+                        <li><a href="//ad.doubleclick.net/clk;218355739;8304489;w?http://kids.nationalgeographic.com/kids/games/" title="Kids - Games">Games</a></li>
+                        <li><a href="//ad.doubleclick.net/clk;218355739;8304489;w?http://video.nationalgeographic.com/video/player/kids/" title="Kids - Videos">Videos</a></li>
+                        <li><a href="//ad.doubleclick.net/clk;218355739;8304489;w?http://kids.nationalgeographic.com/kids/animals/" title="Kids - Animals">Animals &amp; Pets</a></li>
+                        <li><a href="//ad.doubleclick.net/clk;218355739;8304489;w?http://kids.nationalgeographic.com/kids/photos/" title="Kids - Photos">Photos</a></li>
+                        <li><a href="//ad.doubleclick.net/clk;218355739;8304489;w?http://kids.nationalgeographic.com/kids/places/" title="Kids - Countries">Countries</a></li>
+                        <li><a href="//ad.doubleclick.net/clk;218355739;8304489;w?http://kids.nationalgeographic.com/kids/activities/" title="Kids - Fun Stuff">Fun Stuff</a></li>
+                        <li><a href="//ad.doubleclick.net/clk;218355739;8304489;w?http://kids.nationalgeographic.com/kids/community/" title="Kids - Community">Community</a></li>
+                        <li><a href="//ad.doubleclick.net/clk;218355739;8304489;w?http://kids.nationalgeographic.com/kids/stories/" title="Kids - News">News</a></li>
+                        <li><a href="//ad.doubleclick.net/clk;218355739;8304489;w?http://kids.nationalgeographic.com/kids/animal-jam/" title="Kids - Animal Jam">Animal Jam</a></li>
+                        <li><a href="//ad.doubleclick.net/clk;218355739;8304489;w?http://kidsblogs.nationalgeographic.com/littlekids/" title="Kids - Little Kids">Little Kids</a></li>
+                    </ul>
+                </section>
+                <div class="spotlight">
+                </div>
+            </nav>
+        </li>
+        <li class="nav10">
+            <a href="http://www.nationalgeographic.com/magazines/lp/20121024/nav-rdpg/" title="National Geographic Shop">Subscribe</a>
+            <nav class="sub_nav left">
+                <section class="secondary_nav_container">
+                    <ul class="secondary_nav">
+                        <li ><a href="https://secure.customersvc.com/servlet/Show?WESPAGE=OrderPages/ng/1209/order_15A1.jsp&amp;MSRSMAG=NG&amp;EFK1=NGB0F69&amp;EFK2=NGB0F85&amp;EFK3=NGB0GA9&amp;MSCCMPLX=RBMULTINV3">National Geographic Magazine</a></li>
+                        <li ><a href="https://kidsubs.nationalgeographic.com/servlet/ConvertibleGateway?cds_mag_code=NWO&amp;cds_page_id=118275&amp;cds_misc_5=FLYOUT7">National Geographic Kids</a></li>
+                        <li ><a href="https://littlekidsubs.nationalgeographic.com/servlet/ConvertibleGateway?cds_mag_code=NLK&amp;cds_page_id=118233&amp;cds_misc_5=FLYOUT7">National Geographic Little Kids</a></li>
+                        <li ><a href="https://secure.customersvc.com/servlet/Show?WESPAGE=OrderPages/tr/1304/order_15A1.jsp&amp;MSRSMAG=TR&amp;EK1=TRAJV00&amp;EK2=TRAJV18&amp;EK3=TRAJV26&amp;MSCCMPLX=FLYOUT7">National Geographic Traveler</a></li>
+                    </ul>
+                </section>
+                <div class="spotlight">
+                </div>
+            </nav>
+        </li>
+        <li class="nav11">
+            <a href="http://shop.nationalgeographic.com/ngs/index.jsp?code=NG94000&amp;source=NavShopHome" title="National Geographic Shop">Shop</a>
+            <nav class="sub_nav left">
+                <section class="secondary_nav_container">
+                    <ul class="secondary_nav">
+                        <li><a href="http://shop.nationalgeographic.com/ngs/index.jsp?code=NG94001&amp;source=NavShopHome" title="National Geographic Shop - Home">Store Home</a></li>
+                        <li><a href="http://shop.nationalgeographic.com/ngs/browse/categorySeries.jsp?categoryId=S061&amp;addFacet=9004:S061&amp;code=NG94007&amp;source=NavShopServ" title="National Geographic Shop - Genographic Kits">Genographic Kits</a></li>
+                        <li><a href="http://shop.nationalgeographic.com/ngs/browse/category_bestsellers.jsp?categoryId=A200&amp;addFacet=9004:A200&amp;code=NG94232" title="National Geographic Shop - Best Sellers">Best Sellers</a></li>
+                        <li><a href="http://shop.nationalgeographic.com/ngs/browse/category_new.jsp?categoryId=A211&amp;addFacet=9004:A211&amp;code=NG94233" title="National Geographic Shop - New">New</a></li>
+                        <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A091&amp;addFacet=9004:A091&amp;code=NG94004&amp;source=NavShopKids" title="National Geographic Shop - Kids">Kids Shop</a></li>
+                        <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A245&amp;addFacet=9004:A245&amp;code=NG94002&amp;source=NavShopGift" title="National Geographic Shop - Gift Finder">Gift Finder</a></li>
+                        <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A236&amp;addFacet=9004:A236&amp;code=NG94003&amp;source=NavShopChan" title="National Geographic Shop - Channel">Channel Shop</a></li>
+                        <li><a href="http://shop.nationalgeographic.com/ngs/browse/category_sale.jsp?categoryId=A223&amp;addFacet=9004:A223&amp;code=NG94008&amp;source=NavShopSale" title="National Geographic Shop - Sale">Sale</a></li>                    
+                        <li><a href="http://shop.nationalgeographic.com/ngs/category/shop-by-catalog?code=NG94005&amp;source=NavShopCat" title="National Geographic Shop - Shop By Catalog">Shop by Catalog</a></li>
+                        <li><a href="http://shop.nationalgeographic.com/ngs/browse/emailRegistration.jsp?code=NG94056" title="National Geographic Shop - Email Signup">Email Signup</a></li>
+                    </ul>
+                </section>
+                <div class="spotlight">
+                </div>
+            </nav>
+        </li>
+    </ul>
+</nav>
+
+
+    </header>
+
+    <div id="main_wrapper" class=" ">
+    
+
+
+
+<aside id="section_header">
+
+    <hgroup class="video_header">
+        <h1>Video</h1>
+    
+        <h2><a class="logo_section_ngc" href="//channel.nationalgeographic.com/" title="National Geographic Channel">National Geographic Channel</a></h2>
+    
+    </hgroup>
+
+
+<div class="supplemental">
+
+
+    
+        
+            <a class="logo_ngc" href="//channel.nationalgeographic.com/" title="National Geographic Channel">National Geographic Channel</a>
+        
+    
+    <div class="timezone" data-require="timezonePicker" data-options='{ "timezone": "EST" }'>
+        <label for="time_zone">Select Time Zone:</label>
+        <select name="time_zone">
+            <option value="ET" selected>ET</option>
+            <option value="CT">CT</option>
+            <option value="MT">MT</option>
+            <option value="PT">PT</option>
+            <option value="AT">AT</option>
+            <option value="HT">HT</option>
+        </select>
+    </div>
+
+
+</div>
+
+
+    <nav>
+        
+        <h4>National Geographic Wild Video Navigation</h4>
+        <ul>
+            <li><a href="http://video.nationalgeographic.com/video/national-geographic-channel/all-videos/">All Videos</a></li>
+            <li><a href="http://video.nationalgeographic.com/video/national-geographic-channel/full-episodes/">Full Episodes</a></li>
+            <li><a href="http://video.nationalgeographic.com/video/national-geographic-channel/shows/">Shows</a></li>
+            <li><a href="http://video.nationalgeographic.com/video/national-geographic-channel/specials-1/">Specials</a></li>
+            <li><a href="http://video.nationalgeographic.com/video/national-geographic-channel/extras/">Extras</a></li>
+        </ul>
+        
+    </nav>
+
+
+</aside>
+
+
+
+<article class="content_detail_video">
+
+
+
+
+
+
+    
+    <div id="detail_wrapper">
+    
+<header>
+
+    
+        
+        
+        <hgroup>
+            <h1><a href="//channel.nationalgeographic.com/wild/episodes/thrill-killer/" title="Learn More about Thrill Killer">Thrill Killer</a></h1>
+            <h2>Bear Organ Trafficking</h2>
+        </hgroup>
+        
+        
+        
+    
+
+</header>
+
+<figure id="ngplayer" class="video_item caption_hide">
+
+    
+        <div id="ngc_player_wrapper" class="noauth">
+    <div id="player"></div>
+
+  
+
+</div><!-- END #ngc_player_wrapper -->
+    
+
+    <figcaption>
+        <p>Wardens catch a large hunting group suspected of selling bear organs on the black market.</p>
+    </figcaption>
+</figure>
+<script>
+$(function (){
+
+
+    
+    ng.videoPromos = [
+        
+        
+        
+            
+        {
+            slug:"thrill\u002Dkiller",
+            title:"Thrill Killer",
+            time:"45:52",
+            url:"//channel.nationalgeographic.com/channel/wild\u002Djustice/videos/thrill\u002Dkiller/",
+            img:"/exposure/content/photo/photo/435546_thrill-killer49_epsicuaitwlfo42x7yedw6mpvtncurxrbvj6lwuht2ya6mzmafma_160x90.jpg"
+        },
+            
+        
+        
+        
+            
+        
+        
+        
+            
+        {
+            slug:"illegal\u002Dbear\u002Dpoaching",
+            title:"Illegal Bear Poaching",
+            time:"03:28",
+            url:"//channel.nationalgeographic.com/channel/wild\u002Djustice/videos/illegal\u002Dbear\u002Dpoaching/",
+            img:"/exposure/content/photo/photo/436316_illegal-bear-poaching49_epsicuaitwlfo42x7yedw6mpvtncurxrbvj6lwuht2ya6mzmafma_160x90.jpg"
+        },
+            
+        
+        
+    ];
+    
+
+
+});
+</script>
+
+
+
+
+<ul class="addthis_toolbox" data-require="addThis" data-options='{}'>
+    <li>
+    	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a></li>
+    	
+    <li><a 
+    	
+    	class="addthis_button_tweet" tw:count="horizontal" tw:via="natgeo"
+    	></a></li>
+    <li><a class="addthis_button_google_plusone" g:plusone:size="medium" g:plusone:annotation="bubble"></a></li>
+    
+        
+        <li><a class="addthis_button_compact addthis_bubble_style"><span class="icon-plus-sign icon-large"></span></a></li>
+    
+</ul>
+
+
+
+<section data-require="tabs" data-options='{ "tabs_style": "padded" }'>
+    <div>
+        <h3 title="Bear Organ Trafficking - Info">Info</h3>
+        
+        <div class="bottom_offset">
+            
+                Check your local listings.
+            
+        </div>
+        
+        <h4>Thrill Killer<span>: Bear Organ Trafficking</span></h4>
+        <footer>
+            
+
+
+
+
+            <small>Published <time datetime="2011-12-09T07:10:59">Dec. 9, 2011</time></small>
+        </footer>
+
+        <p>
+            Wardens catch a large hunting group suspected of selling bear organs on the black market.
+        </p>
+
+
+    </div>
+    <div data-require="videoEmbed" data-options='{ "embedUrl": "//channel.nationalgeographic.com/channel/wild-justice/videos/bear-organ-trafficking/embed/" }'>
+        <h3 title="Bear Organ Trafficking - Share">Share</h3>
+
+        <form name="share-embed" id="embed_share">
+            <fieldset>
+                <ol>
+                    <li>
+                        <label for="share_url">
+                            Share this URL:
+                            <input class="share_url" name="share_url" id="share_url" value="http://channel.nationalgeographic.com/channel/wild-justice/videos/bear-organ-trafficking/" />
+                        </label>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <ol>
+                    <li>
+                        <label for="embed_code">
+                            Or you can use the code below to embed the video. The code updates if you change the width/height. Minimum dimensions are 320x211 pixels.
+                            <textarea name="embed_code" id="embed_code">&lt;iframe width="640" height="391" src="http://channel.nationalgeographic.com/channel/wild-justice/videos/bear-organ-trafficking/embed/" frameborder="0" scrolling="no" allowfullscreen&gt;&lt;/iframe&gt;</textarea>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="embed-width">
+                            Width:
+                            <input type="text" name="embed-width" id="embed-width" maxlength="4" value="640" /> px
+                        </label>
+                    </li>
+                    <li>
+                        <label for="embed-height">
+                            Height:
+                            <input type="text" name="embed-height" id="embed-height" maxlength="4" value="391" /> px
+                        </label>
+                    </li>
+                </ol>
+            </fieldset>
+        </form>
+    </div>
+
+</section>
+
+
+    
+
+	
+    
+<script src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+if ('undefined' == typeof livefyreConfig) {
+    var livefyreConfig = {
+        "global" : {
+            "network": "natgeo.fyre.co"
+        },
+        "streams": []
+    }
+}
+</script>
+
+    
+
+<script type="text/javascript">
+if('undefined' !== typeof livefyreConfig) {
+    livefyreConfig.streams.push({
+        "siteId": 320973,
+        "articleId": "vii:channel:video:3066",
+        "el": "livefyre",
+        "collectionMeta": "eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJ1cmwiOiAiaHR0cDovL2NoYW5uZWwubmF0aW9uYWxnZW9ncmFwaGljLmNvbS9jaGFubmVsL3dpbGQtanVzdGljZS92aWRlb3MvYmVhci1vcmdhbi10cmFmZmlja2luZy8iLCAiY2hlY2tzdW0iOiAiOWMxODliYWIzM2EyZTdmNWU3ZDc3ZTkxZGM3YzczMDQiLCAidGFncyI6ICJEZXBhcnRtZW50IE9mIEZpc2ggQW5kIEdhbWUgVmlkZW8sIEJlYXIgU2Vhc29uLCBCZWFyIEh1bnRpbmcsIElsbGVnYWwgSHVudGluZywgV2lsZCBKdXN0aWNlLCBDaGFubmVsLCBXaWxkIEp1c3RpY2UiLCAiYXJ0aWNsZUlkIjogInZpaTpjaGFubmVsOnZpZGVvOjMwNjYiLCAidGl0bGUiOiAiQmVhciBPcmdhbiBUcmFmZmlja2luZyJ9.XyELLz-9nmU9nqRlj9JTQZsBTMELWfuQJwL7fFYqy-4",
+        "checksum": "9c189bab33a2e7f5e7d77e91dc7c7304",
+        "signed": true
+    });
+}
+
+</script>
+
+
+
+<div id="livefyre">
+    <script>
+  (function() {
+    
+   var a=this;var b,c,d,e,f;function g(){return a.navigator?a.navigator.userAgent:null}f=e=d=c=b=!1;var h;if(h=g()){var i=a.navigator;b=0==h.indexOf("Opera");c=!b&&-1!=h.indexOf("MSIE");e=(d=!b&&-1!=h.indexOf("WebKit"))&&-1!=h.indexOf("Mobile");f=!b&&!d&&"Gecko"==i.product}var j=c,k=f,l=d,m=e;var n;if(b&&a.opera){var o=a.opera.version;"function"==typeof o&&o()}else k?n=/rv\:([^\);]+)(\)|;)/:j?n=/MSIE\s+([^\);]+)(\)|;)/:l&&(n=/WebKit\/(\S+)/),n&&n.exec(g());var p=document,q=p.createElement("link");q.rel="stylesheet";q.type="text/css";q.href="http://zor.fyre.co/wjs/v3.0/css/livefyre_"+(m?"mobile":"embed")+".css";q.media="all";p.getElementsByTagName("head")[0].appendChild(q);var r="header hgroup footer article section aside nav figure figcaption embed audio video canvas details summary time mark".split(" "),s=p.createDocumentFragment(),t;for(t=0; t<r.length; t++){s.appendChild(p.createElement(r[t]))};
+   })();    
+</script>
+<div class="fyre fyre-width-large fyre-bootstrap">
+  <div class="fyre-widget">
+    <div classnvas details summary time mark".split(" "),s=p.createDocumentFragment(),t;for(t=0; t<r.length; t++){s.appendChild(p.createElement(r[t]))};
+   })();    
+</script>
+<div class="fyre fyre-width-large fyre-bootstrap">
+  <div="fyre-stream-stats">
+      <div class="fyre-comment-count">
+        <span>0 comments</span>
+      </div>
+
+      <div class="fyre-divider"></div>
+
+      <div class="fyre-help">
+        <div class="fyre-box-wrapper">
+          <a href="http://livefyre.com" target="_blank"><span class="fyre-logo-drop">&nbsp</span>
+          <img class="fyre-logo-help" src="http://zor.fyre.co/wjs/v3.0/images/lf-logo.png" alt="Livefyre" /></a>
+          
+          <ul class="fyre-box-list">
+            <li><a href="http://livefyre.com" target="_blank" title="Get Livefyre">Get
+            Livefyre</a></li>
+
+            <li><a href="http://support.livefyre.com" target="_blank" title=
+            "FAQ">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="fyre-auth">
+      <div class="fyre-login-bar"><a rel="nofollow" href="#" class="fyre-user-loggedout">Sign in</a></div>
+    </div>
+
+    <div class="fyre-editor">
+      <div class="fyre-editor-container">
+        <div class="fyre-editor-editable" style="height: 100px;"></div>
+
+        <div class="fyre-editor-toolbar">
+          <div class="goog-toolbar goog-toolbar-horizontal" style=
+          "-webkit-user-select: none;" role="toolbar" aria-activedescendant="">
+            <div class="goog-inline-block fyre-button-left fyre-format-button" title=""
+            role="button" style="-webkit-user-select: none;" id=":0">
+              <div class="goog-inline-block fyre-button-left-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-left-inner-box" style=
+                "-webkit-user-select: none;"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-left fyre-mention-button" title=""
+            role="button" style="-webkit-user-select: none;" id=":1">
+              <div class="goog-inline-block fyre-button-left-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-left-inner-box" style=
+                "-webkit-user-select: none;"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-left fyre-follow-button" title=""
+            role="button" style="-webkit-user-select: none;" id=":2">
+              <div class="goog-inline-block fyre-button-left-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-left-inner-box" style=
+                "-webkit-user-select: none;">
+                  + Follow
+                </div>
+              </div>
+            </div>
+
+            <div class=
+            "goog-inline-block fyre-button-right fyre-post-button fyre-post-button-enabltyle=
+                "-webkit-user-select: ned"
+            title="" role="button" style="-webkit-user-select: none;" id=":3">
+              <div class="goog-inline-block fyre-button-right-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-right-inner-box" style=
+                "-webkit-user-select: none;">
+                  Post comment
+                </div>
+              </div>
+            </div>
+
+            <div class=
+            "goog-inline-block fyre-button-right fyre-post-to fyre-post-to-facebook"
+            title="" role="button" style="-webkit-user-select: none;" id=":4">
+              <div class="goog-inline-block fyre-button-right-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-right-inner-box" style=
+                "-webkit-user-select: none;"></div>
+              </div>
+            </div>
+
+            <div class=
+            "goog-inline-block fyre-button-right fyre-post-to fyre-post-to-twitter"
+            title="" role="button" style="-webkit-user-select: none;" id=":5">
+              <div class="goog-inline-block fyre-button-right-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-right-inner-box" style=
+                "-webkit-user-select: none;"></div>
+              </diass="goog-inline-block fyre-button-right-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fv>
+            </div>
+
+            <div class=
+            "goog-inline-block fyre-button-right fyre-post-to fyre-post-to-linkedin"
+            title="" role="button" style="-webkit-user-select: none;" id=":7">
+              <div class="goog-inline-block fyre-button-right-outer-box" style=
+              "-webkit-user-select: none;">
+                <div class="goog-inline-block fyre-button-right-inner-box" style=
+                "-webkit-user-select: none;"></div>
+              </div>
+            </div>
+
+            <div class="goog-toolbar-separator goog-inline-block" style=
+            "-webkit-user-select: none;" role="separator" id=":6">
+              &nbsp;
+            </div>
+          </div>
+
+          <div class="fyre-format-toolbar" style="display: none;">
+            <div class="goog-toolbar goog-toolbar-horizontal" style=
+            "-webkit-user-select: none;" role="toolbar" tabindex="-1">
+              <div class="goog-inline-block goog-toolbar-button" title="Bold"
+              aria-pressed="true" role="button" style="-webkit-user-select: none;" id=
+              "+bold">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-icon tr-bold" style="-webkit-user-select: none;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Italic"
+              aria-pressed="true" role="button" style="-webkit-user-select: none;" id=
+              "+italic">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-icon tr-italic" style="-webkit-user-select: none;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Underline"
+              aria-pressed="true" role="button" style="-webkit-user-select: none;" id=
+              "+underline">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-icon tr-underline" style="-webkit-user-select: none;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title=
+              "Add or remove link" aria-pressed="true" role="button" style=
+              "-webkit-user-select: none;" id="+link">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-link" style="-webkit-user-select: none;">
+                      Link
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Numbered list"
+              aria-pressed="true" role="button" style="-webkit-user-select: none;" id=
+              "+insertOrderedList">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-icon tr-insertOrderedList" style=
+                    "-webkit-user-select: none;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Bullet list"
+              aria-pressed="true" role="button" style="-webkit-user-select: none;" id=
+              "+insertUnorderedList">
+                <div class="goog-inline-block goog-toolbar-button-outer-box" style=
+                "-webkit-user-select: none;">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box" style=
+                  "-webkit-user-select: none;">
+                    <div class="tr-icon tr-insertUnorderedList" style=
+                    "-webkit-user-select: none;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fyre-comment-stream" style="">
+      <div class="fyre-stream-sort">
+        <a class="fyre-stream-sort-newest">Newest</a> | <a class="fyre-stream-sort-oldest">Oldest</a>
+      </div>
+
+      <div class="fyre-stream-content">      
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+    
+
+<aside class="related_content">
+    <h2>Bear Organ Trafficking Related Content</h2>
+
+    
+
+
+<section>
+    
+    <h3><strong>Wild Justice</strong> Facts</h3>
+    <div class="carousel media_carousel horizontal" data-require="carousel" data-options='{ "itemsPerSet": "4" }'>
+        <ul class="markers"><li class="tease_item featured current"><figure><a href="/channel/wild-justice/articles/facts-california-stats/" title="California Arrest Stats"><img src="/exposure/content/photo/photo/44116_taking-aim_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_120x90.jpg" alt="Photo: Training for marijuana grow raids" /></a><figcaption><a href="/channel/wild-justice/articles/facts-california-stats/" title="California Arrest Stats">California Arrest Stats</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="/channel/wild-justice/articles/facts-raves-drugs-and-deer/" title="Raves, Drugs, and Deer Facts"><img src="/exposure/content/photo/photo/44102_paralyzing-moment_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_120x90.jpg" alt="Photo: Lt. Todd Tognazzini puts down a paralyzed fawn" /></a><figcaption><a href="/channel/wild-justice/articles/facts-raves-drugs-and-deer/" title="Raves, Drugs, and Deer Facts">Raves, Drugs, and Deer Facts</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="/channel/wild-justice/articles/facts-poaching-poppy-and-penalties/" title="Poaching, Poppy, and Penalties"><img src="/exposure/content/photo/photo/44090_drug-raid-disguise_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_120x90.jpg" alt="Photo: On a marijuana grow raid" /></a><figcaption><a href="/channel/wild-justice/articles/facts-poaching-poppy-and-penalties/" title="Poaching, Poppy, and Penalties">Poaching, Poppy, and Penalties</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="/channel/wild-justice/articles/facts-california-bears-and-marijuana/" title="California, Bears, and Marijuana"><img src="/exposure/content/photo/photo/44080_bear-feeding-bust_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_120x90.jpg" alt="Photo: Warden Steve Ulrich hides under a porch" /></a><figcaption><a href="/channel/wild-justice/articles/facts-california-bears-and-marijuana/" title="California, Bears, and Marijuana">California, Bears, and Marijuana</a></figcaption></figure></li></ul>
+    </div>
+    
+</section>
+
+
+
+
+
+    
+
+
+<section>
+    
+    <h3><strong>Behind-the-Scenes</strong> Producer Journals</h3>
+    <div class="carousel media_carousel horizontal" data-require="carousel" data-options='{ "itemsPerSet": "4" }'>
+        <ul class="markers"><li class="tease_item featured current"><figure><a href="/channel/wild-justice/articles/from-vegetarian-to-carnivore/" title="From Vegetarian to Carnivore"><img src="/exposure/content/photo/photo/44037_bear-rug-bait_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_120x90.jpg" alt="Photo: A bear rug is used as bait" /></a><figcaption><a href="/channel/wild-justice/articles/from-vegetarian-to-carnivore/" title="From Vegetarian to Carnivore">From Vegetarian to Carnivore</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="/channel/wild-justice/articles/one-heck-of-an-office/" title="One Heck of an &quot;Office&quot;"><img src="/exposure/content/photo/photo/44156_the-beauty-of-nature_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_120x90.jpg" alt="Photo: Warden Mike Beals enjoys nature" /></a><figcaption><a href="/channel/wild-justice/articles/one-heck-of-an-office/" title="One Heck of an &quot;Office&quot;">One Heck of an "Office"</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="/channel/wild-justice/articles/the-trick-you-dont-learn-in-film-school/" title="The Trick You Don&#39;t Learn in Film School"><img src="/exposure/content/photo/photo/44151_real-vs-fake-wardens_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_120x90.jpg" alt="Photo: Wardens surround the house of a suspect" /></a><figcaption><a href="/channel/wild-justice/articles/the-trick-you-dont-learn-in-film-school/" title="The Trick You Don&#39;t Learn in Film School">The Trick You Don't Learn in Film School</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="/channel/wild-justice/articles/tracking-the-poacher/" title="Tracking the Poacher"><img src="/exposure/content/photo/photo/44150_proceed-with-caution_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_120x90.jpg" alt="Photo: Approach suspects with caution" /></a><figcaption><a href="/channel/wild-justice/articles/tracking-the-poacher/" title="Tracking the Poacher">Tracking the Poacher</a></figcaption></figure></li></ul>
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+    
+
+
+<section class="thumbs_grid">
+    
+    <h3><strong>Explore</strong> More</h3>
+    
+    
+
+    
+    <figure class="tease_item">
+
+        
+        <a href="http://travel.nationalgeographic.com/travel/united-states/california-guide/" title="California Guide"><img src="/exposure/content/photo/photo/15939_california-profile_3fusmhqn3qzyyt5rll26hv5m43ncurxrbvj6lwuht2ya6mzmafma_180x135.jpg" alt="Photo: Golden Gate bridge" /></a>
+        
+
+        <figcaption>
+            <p><a href="http://travel.nationalgeographic.com/travel/united-states/california-guide/" title="California Guide">California Guide</a></p>
+        </figcaption>
+    </figure>
+    
+
+    
+    
+    
+
+    
+    <figure class="tease_item">
+
+        
+        <a href="http://travel.nationalgeographic.com/travel/united-states/your-california-photos/" title="Your California Photos"><img src="/exposure/content/photo/photo/37986_morro-bay_2blohrbscjcul3nx2kjp7s3kvtncurxrbvj6lwuht2ya6mzmafma_180x135.jpg" alt="Photo: Two equestrians trotting down the beach at Morro Bay" /></a>
+        
+
+        <figcaption>
+            <p><a href="http://travel.nationalgeographic.com/travel/united-states/your-california-photos/" title="Your California Photos">Your California Photos</a></p>
+        </figcaption>
+    </figure>
+    
+
+    
+    
+    
+
+    
+    <figure class="tease_item">
+
+        
+        <a href="http://ngm.nationalgeographic.com/2009/10/redwoods/nichols-photography" title="Redwoods Photos"><img src="/exposure/content/photo/photo/30600_northern-spotted-owl1_ov6heons5l34jtainiivhu6ox7ncurxrbvj6lwuht2ya6mzmafma_180x135.jpg" alt="A tagged northern spotted owl in a redwood forest." /></a>
+        
+
+        <figcaption>
+            <p><a href="http://ngm.nationalgeographic.com/2009/10/redwoods/nichols-photography" title="Redwoods Photos">Redwoods Photos</a></p>
+        </figcaption>
+    </figure>
+    
+
+    
+    
+    
+
+    
+    <figure class="tease_item">
+
+        
+        <a href="http://travel.nationalgeographic.com/travel/road-trips/california-pacific-coast-quiz/" title="California’s Pacific Coast"><img src="/exposure/content/photo/photo/24846_pacific-coast-quiz_mawkrnnofdejaaqpr4bxrhk5ihncurxrbvj6lwuht2ya6mzmafma_180x135.jpg" alt="35168.jpg" /></a>
+        
+
+        <figcaption>
+            <p><a href="http://travel.nationalgeographic.com/travel/road-trips/california-pacific-coast-quiz/" title="California’s Pacific Coast">California’s Pacific Coast</a></p>
+        </figcaption>
+    </figure>
+    
+
+    
+    
+    
+
+    
+    <figure class="tease_item">
+
+        
+        <a href="http://travel.nationalgeographic.com/travel/road-trips/california-pacific-coast-road-trip/" title="Plan a Pacific Coast Road Trip"><img src="/exposure/content/photo/photo/28634_californias-pacific-coast-highway_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_180x135.jpg" alt="Photo: Tree on coast of California Route 1" /></a>
+        
+
+        <figcaption>
+            <p><a href="http://travel.nationalgeographic.com/travel/road-trips/california-pacific-coast-road-trip/" title="Plan a Pacific Coast Road Trip">Plan a Pacific Coast Road Trip</a></p>
+        </figcaption>
+    </figure>
+    
+
+    
+    
+    
+
+    
+    <figure class="tease_item">
+
+        
+        <a href="http://adventure.nationalgeographic.com/adventure/trips/best-trails/world-hikes/#/yosemite-grand-traverse_35796_600x450.jpg" title="Yosemite, California"><img src="/exposure/content/photo/photo/36605_yosemite-half-dome-cables_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_180x135.jpg" alt="Photo: Climbers negotiate the steep pitch of the cable section of half Dome using steel cables" /></a>
+        
+
+        <figcaption>
+            <p><a href="http://adventure.nationalgeographic.com/adventure/trips/best-trails/world-hikes/#/yosemite-grand-traverse_35796_600x450.jpg" title="Yosemite, California">Yosemite, California</a></p>
+        </figcaption>
+    </figure>
+    
+
+    
+    
+    
+
+    
+    <figure class="tease_item">
+
+        
+        <a href=" http://adventure.nationalgeographic.com/adventure/trips/adventure-towns/san-luis-obispo-california/" title="San Luis Obispo, California"><img src="/exposure/content/photo/photo/26179_76-san-luis-obsipo-california-adventure-towns_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_180x135.jpg" alt="Photo: Mountain biker" /></a>
+        
+
+        <figcaption>
+            <p><a href=" http://adventure.nationalgeographic.com/adventure/trips/adventure-towns/san-luis-obispo-california/" title="San Luis Obispo, California">San Luis Obispo, California</a></p>
+        </figcaption>
+    </figure>
+    
+
+    
+    
+    
+
+    
+    <figure class="tease_item">
+
+        
+        <a href="http://travel.nationalgeographic.com/travel/road-trips/santa-barbara-california-road-trip/" title="The Santa Barbara Loop, California"><img src="/exposure/content/photo/photo/28757_the-santa-barbara-loop-california_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_180x135.jpg" alt="Photo: Pier off San Buenaventura Beach, California" /></a>
+        
+
+        <figcaption>
+            <p><a href="http://travel.nationalgeographic.com/travel/road-trips/santa-barbara-california-road-trip/" title="The Santa Barbara Loop, California">The Santa Barbara Loop, California</a></p>
+        </figcaption>
+    </figure>
+    
+
+    
+    
+    
+
+    
+    <figure class="tease_item">
+
+        
+        <a href="http://www.sierranevadageotourism.org/?source=ngtravel" title="Sierra Nevada MapGuide"><img src="/exposure/content/photo/photo/29368_mt-whitney_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_180x135.jpg" alt="Photo: Mt. Whitney" /></a>
+        
+
+        <figcaption>
+            <p><a href="http://www.sierranevadageotourism.org/?source=ngtravel" title="Sierra Nevada MapGuide">Sierra Nevada MapGuide</a></p>
+        </figcaption>
+    </figure>
+    
+
+    
+    
+
+    
+
+</section>
+
+
+
+
+
+</aside>
+
+
+    </div>
+
+    
+    <aside id="rail_wrapper">
+    <h2>Bear Organ Trafficking Rail Related Content</h2>
+
+    
+        
+    
+
+    
+
+
+
+<section>
+
+    <h3><strong>Wild Justice: Thrill Killer</>
+    </figure>
+    
+strong> Videos</h3>
+
+    <div>
+        <ul class="list_with_thumbs">
+        
+        
+            
+        
+        
+        
+            
+            <li class="video_item current_item">
+                <a href="//channel.nationalgeographic.com/channel/wild-justice/videos/bear-organ-trafficking/" title="Bear Organ Trafficking" class="video-image-link video-image-wide">
+                
+                   <div class="thumb-img-wrapper authenticated-ngw-video">
+                        <img src="/exposure/content/photo/photo/436294_bear-organ-trafficking49_epsicuaitwlfo42x7yedw6mpvtncurxrbvj6lwuht2ya6mzmafma_125x70.jpg" alt="Bear Organ Trafficking" />
+                        <div class="auth-thumb-overlay">4:47</div>
+                    </div>
+                
+                    <p>Bear Organ Trafficking</p>
+                </a>
+            </li>
+            
+        
+        
+        
+            
+            <li class="video_item">
+                <a href="//channel.nationalgeographic.com/channel/wild-justice/videos/illegal-bear-poaching/" title="Illegal Bear Poaching" class="video-image-link video-image-wide">
+                
+                   <div class="thumb-img-wrapper authenticated-ngc-video">
+                        <img src="/exposure/content/photo/photo/436316_illegal-bear-poaching49_epsicuaitwlfo42x7yedw6mpvtncurxrbvj6lwuht2ya6mzmafma_125x70.jpg" alt="Illegal Bear Poaching" />
+                        <div class="auth-thumb-overlay">3:28</div>
+                    </div>
+                
+                    <p>Illegal Bear Poaching</p>
+                </a>
+            </li>
+            
+        
+        
+        </ul>
+    </div>
+
+    
+
+</section>
+
+
+
+
+
+
+
+    
+    
+    
+        
+    
+    
+    
+
+    
+
+
+<section
+    class="advertisement"
+    data-require="ads" 
+    data-options='{
+        "refreshable": true, 
+        "site_name": "ngc",
+        "sizes": [["300x600",".1"],["300x250",".9"]]
+    }'
+></section>
+
+
+
+
+
+    <section data-require="rssList" data-options='{"feedUrl": "http://tvblogs.nationalgeographic.com/feed", "feedContainer": "#feed_448" }'>
+    
+
+    <h3><strong>Nat Geo</strong> TV Blogs</h3>
+
+    <ul id="feed_448" class="list_no_thumbs scrolling window_7">
+        <li>There are no items in this feed.</li>
+    </ul>
+
+    
+</section>
+
+
+
+
+    
+<section class="rail_social rail_social_twitter">
+    
+        <h3><strong>Latest</strong> Tweets</h3>
+    
+    <div class="carousel " data-require="carousel" data-options='{ "itemsPerSet": "4", "orientation": "vertical" }'>
+        <ul class="list_no_thumbs">
+        
+            <li id="counter_0" class="539509260154318849">
+                <p>
+                    
+                    We made the DMV fun for <a href="http://search.twitter.com/search?tag=CrowdControl" rel="external">#CrowdControl</a>: <a href="http://t.co/6JNupZt3oj" rel="external">http://t.co/6JNupZt3oj</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539509260154318849" title="See Tweet" target="_blank">about 25 minutes ago</a></small>
+                    
+                </p>
+            </li>
+        
+            <li id="counter_1" class="539479087203770368">
+                <p>
+                    
+                    What's in the "jungle juice" concoction from small town of Wollombi, Australia? <a href="http://search.twitter.com/search?tag=Chug" rel="external">#Chug</a> w/ @<a href="http://twitter.com/ZaneLamprey/" rel="external">ZaneLamprey</a> 10:30/9:30c <a href="http://t.co/R6vWdQhDza" rel="external">http://t.co/R6vWdQhDza</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539479087203770368" title="See Tweet" target="_blank">about 2 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539479087203770368" title="See Tweet" target="_blank">2 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_2" class="539469351900831744">
+                <p>
+                    
+                    @<a href="http://twitter.com/yournoodleface/" rel="external">yournoodleface</a> Thanks for your guesses! The theme was actually '90s movies. But DM us your address &amp; we'll send you a couple nat Geo items<br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539469351900831744" title="See Tweet" target="_blank">about 3 hours ago</a></small>
+                    
+                </p>
+            </li>
+        
+            <li id="counter_3" class="539466003693182977">
+                <p>
+                    
+                    @<a href="http://twitter.com/Immanuel_Bryant/" rel="external">Immanuel_Bryant</a> '90s not available for purchase. <a href="http://search.twitter.com/search?tag=StoryofFood" rel="external">#StoryofFood</a> can be found here: <a href="http://t.co/W0xFrSqBJK" rel="external">http://t.co/W0xFrSqBJK</a> and here: <a href="http://t.co/PqXxt57oxA" rel="external">http://t.co/PqXxt57oxA</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539466003693182977" title="See Tweet" target="_blank">about 3 hours ago</a></small>
+                    
+                </p>
+            </li>
+        
+            <li id="counter_4" class="539465272315609088">
+                <p>
+                    
+                    @<a href="http://twitter.com/Immanuel_Bryant/" rel="external">Immanuel_Bryant</a> Sure thing! Which documentaries are you interested in?<br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539465272315609088" title="See Tweet" target="_blank">about 3 hours ago</a></small>
+                    
+                </p>
+            </li>
+        
+            <li id="counter_5" class="539456464495345664">
+                <p>
+                    
+                    Gar fish are "living Fossils," because of unchanged biology over past 100 million years. <a href="http://t.co/PB6kQaOSEO" rel="external">http://t.co/PB6kQaOSEO</a> <a href="http://search.twitter.com/search?tag=EricisHungry" rel="external">#EricisHungry</a> 10/9c<br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539456464495345664" title="See Tweet" target="_blank">about 3 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539456464495345664" title="See Tweet" target="_blank">9 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_6" class="539449204025090048">
+                <p>
+                    
+                    RT @<a href="http://twitter.com/DanielPink/" rel="external">DanielPink</a>: Tonight on <a href="http://search.twitter.com/search?tag=crowdcontrol" rel="external">#crowdcontrol</a>: We crash a $19 million test aircraft to see who survives. 9pm ET (8pm CT) @<a href="http://twitter.com/NatGeoChannel/" rel="external">NatGeoChannel</a> <a href="http://t…" rel="external">http://t…</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539449204025090048" title="See Tweet" target="_blank">about 4 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539449204025090048" title="See Tweet" target="_blank">9 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_7" class="539418675506593793">
+                <p>
+                    
+                    How do people react when scooping dog poop becomes a competition? <a href="http://t.co/QtpRoyxMSy" rel="external">http://t.co/QtpRoyxMSy</a> <a href="http://search.twitter.com/search?tag=CrowdControl" rel="external">#CrowdControl</a> 9/8c<br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539418675506593793" title="See Tweet" target="_blank">about 6 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539418675506593793" title="See Tweet" target="_blank">4 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_8" class="539407338080600064">
+                <p>
+                    
+                    What is grumbo? <a href="http://t.co/9ugh8QnSOh" rel="external">http://t.co/9ugh8QnSOh</a> <a href="http://search.twitter.com/search?tag=EricisHungry" rel="external">#EricisHungry</a> 10/9c<br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539407338080600064" title="See Tweet" target="_blank">about 7 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539407338080600064" title="See Tweet" target="_blank">2 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_9" class="539250046408327168">
+                <p>
+                    
+                    78% of Americans have pulled all-nighters. <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539250046408327168" title="See Tweet" target="_blank">about 17 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539250046408327168" title="See Tweet" target="_blank">31 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_10" class="539247527909130240">
+                <p>
+                    
+                    27% dozed off during religious ceremony, 19% at stranger's home , 10% during work meeting and 5% on a date (5%)! <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539247527909130240" title="See Tweet" target="_blank">about 17 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539247527909130240" title="See Tweet" target="_blank">29 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_11" class="539246274193936385">
+                <p>
+                    
+                    51%  have used sleep aids and 36% of those using sleep aids rely on them a few times a week. <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539246274193936385" title="See Tweet" target="_blank">about 17 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539246274193936385" title="See Tweet" target="_blank">22 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_12" class="539242496875069441">
+                <p>
+                    
+                    54% agrees that stress is making them get less sleep than they'd prefer. <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539242496875069441" title="See Tweet" target="_blank">about 18 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539242496875069441" title="See Tweet" target="_blank">71 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_13" class="539238730121625603">
+                <p>
+                    
+                    57% would choose 8 hours sleep every night for a month instead of great sex for the same period of time. <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539238730121625603" title="See Tweet" target="_blank">about 18 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539238730121625603" title="See Tweet" target="_blank">29 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_14" class="539232430985842689">
+                <p>
+                    
+                    On average, it takes Americans 24 minutes to fall asleep, w/ 38% reporting 25 minutes or longer. <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539232430985842689" title="See Tweet" target="_blank">about 18 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539232430985842689" title="See Tweet" target="_blank">27 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_15" class="539227466624413696">
+                <p>
+                    
+                    The State of Sleep Deprivation:  <a href="http://t.co/8aG5qg2qjM" rel="external">http://t.co/8aG5qg2qjM</a> <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539227466624413696" title="See Tweet" target="_blank">about 19 hours ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539227466624413696" title="See Tweet" target="_blank">20 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_16" class="539224887626571777">
+                <p>
+                    
+                    73% of Americans sleep for less than eight hours every night. <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539224887626571777" title="See Tweet" target="_blank">about a day ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539224887626571777" title="See Tweet" target="_blank">110 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_17" class="539223628068691969">
+                <p>
+                    
+                    54% of Americans feel they need at least eight hours of sleep to feel well-rested. <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539223628068691969" title="See Tweet" target="_blank">about a day ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539223628068691969" title="See Tweet" target="_blank">46 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_18" class="539222378942050304">
+                <p>
+                    
+                    Discuss while you watch, use <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a> <a href="http://t.co/cjtkyJGyAb" rel="external">http://t.co/cjtkyJGyAb</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539222378942050304" title="See Tweet" target="_blank">about a day ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539222378942050304" title="See Tweet" target="_blank">17 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_19" class="539208525554397184">
+                <p>
+                    
+                    Can chronic sleep loss increase the chance of Alzheimer's?  <a href="http://t.co/40FXxHpsH0" rel="external">http://t.co/40FXxHpsH0</a> <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a> Tonight 8/7c<br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539208525554397184" title="See Tweet" target="_blank">about a day ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539208525554397184" title="See Tweet" target="_blank"//twitter.com/NatGeoChannel/status/539208525554397184" title="See Tweet" target="_blank">about a day ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/>18 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_20" class="539165747822747648">
+                <p>
+                    
+                    How does PTSD effect affect the sleep of couples?  <a href="http://t.co/DE3DD4bsoK" rel="external">http://t.co/DE3DD4bsoK</a> <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a> 8/7c<br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539165747822747648" title="See Tweet" target="_blank">about a day ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539165747822747648" title="See Tweet" target="_blank">21 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_21" class="539139328296103937">
+                <p>
+                    
+                    While sleep is a comfort for many, it is an enemy to others: <a href="http://t.co/Igzjg0eQoC" rel="external">http://t.co/Igzjg0eQoC</a> <a href="http://search.twitter.com/search?tag=SleeplessinAmerica" rel="external">#SleeplessinAmerica</a> 8/7c<br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539139328296103937" title="See Tweet" target="_blank">about a day ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539139328296103937" title="See Tweet" target="_blank">18 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_22" class="539067605542121475">
+                <p>
+                    
+                    RT @<a href="http://twitter.com/natgeowild/" rel="external">natgeowild</a>: Being a safari guide might be the coolest job in the world <a href="http://t.co/mepEDVCvYw" rel="external">http://t.co/mepEDVCvYw</a> <a href="http://search.twitter.com/search?tag=SafariLive" rel="external">#SafariLive</a> <a href="http://t.co/dm73FgaxPt" rel="external">http://t.co/dm73FgaxPt</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539067605542121475" title="See Tweet" target="_blank">about a day ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539067605542121475" title="See Tweet" target="_blank">14 retweets</a></small>
+                </p>
+            </li>
+        
+            <li id="counter_23" class="539048791203397633">
+                <p>
+                    
+                    When Columbus found the chili pepper, spices were so valuable he tried to pass it off as pepper. <a href="http://search.twitter.com/search?tag=StoryofFood" rel="external">#StoryofFood</a> 9amET <a href="http://t.co/wQ0nJG3i9e" rel="external">http://t.co/wQ0nJG3i9e</a><br />
+                    <small><a href="http://twitter.com/NatGeoChannel/status/539048791203397633" title="See Tweet" target="_blank">about a day ago</a></small>
+                    &middot; <small><a href="http://twitter.com/NatGeoChannel/status/539048791203397633" title="See Tweet" target="_blank">25 retweets</a></small>
+                </p>
+            </li>
+        
+        </ul>
+    </div>
+</section>
+
+
+
+
+    
+
+
+<section class="content_listing">
+    
+
+    <h3><strong>Watch</strong> Online</h3>
+
+    
+    
+
+    <article class="tease_item">
+
+    
+        
+            <a href="http://video.nationalgeographic.com/video/player/national-geographic-channel/full-episodes/explorer/" title="Watch Full Episodes">
+                <img src="/exposure/content/photo/photo/33212_ngc-full-eps-t-rex-walks-again_qmod4ykrry6y72drumbutsn6m3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="NGC-Full-Eps-T-rex-Walks-Again.jpg" />
+            </a>
+        
+    
+
+    
+        <h4><a href="http://video.nationalgeographic.com/video/player/national-geographic-channel/full-episodes/explorer/" title="Watch Full Episodes">Watch Full Episodes</a></h4>
+    
+        <footer>
+        
+            <time datetime="2012-06-11T08:42:09.946007">June 11, 2012</time>
+        
+        </footer>
+        <p>Find full episodes of your favorite National Geographic Channel shows and watch online.</p>
+    </article>
+    
+
+    
+    
+
+    <article class="tease_item">
+
+    
+        
+            <a href="http://video.nationalgeographic.com/video/player/national-geographic-channel/all-videos/" title="Amazing Videos">
+                <img src="/exposure/content/photo/photo/33210_ngc-videos-solar-storms_qmod4ykrry6y72drumbutsn6m3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="NGC-Videos-Solar-Storms.jpg" />
+            </a>
+        
+    
+
+    
+        <h4><a href="http://video.nationalgeographic.com/video/player/national-geographic-channel/all-videos/" title="Amazing Videos">Amazing Videos</a></h4>
+    
+        <footer>
+        
+            <time datetime="2012-06-11T08:42:09.946007">June 11, 2012</time>
+        
+        </footer>
+        <p>Next stop, everywhere! Explore a universe of amazing video from National Geographic shows!
+ </p>
+    </article>
+    
+
+    
+
+    
+
+    
+
+</section>
+
+
+
+
+
+    
+
+
+<section class="content_listing">
+    
+
+    <h3><strong>Do</strong>nate</h3>
+
+    
+    
+
+    <article class="tease_item">
+
+    
+        
+            <a href="//channel.nationalgeographic.com/channel/wild-justice/articles/support-the-wardens/" title="Support the Wardens">
+                <img src="/exposure/content/photo/photo/44125_poaching-raid_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_160x119.jpg" alt="Photo: Wardens pose during a briefing prior to a raid" />
+            </a>
+        
+    
+
+    
+        <h4><a href="//channel.nationalgeographic.com/channel/wild-justice/articles/support-the-wardens/" title="Support the Wardens">Support the Wardens</a></h4>
+    
+        <footer>
+        
+            <time datetime="2012-06-11T08:42:09">June 11, 2012</time>
+        
+        </footer>
+        <p>Learn More About the California Game Warden Foundation</p>
+    </article>
+    
+
+    
+
+    
+
+    
+
+</section>
+
+
+
+
+
+
+
+
+
+    </aside>
+
+    
+    
+
+<aside>
+    <h2>Bear Organ Trafficking Bottom Related Content</h2>
+
+    
+
+
+<section>
+    
+    <h3><strong>National Geographic</strong> TV Shows</h3>
+    <div class="carousel media_carousel horizontal" data-require="carousel" data-options='{ "itemsPerSet": "7" }'>
+        <ul class="markers"><li class="tease_item featured current"><figure><a href="//channel.nationalgeographic.com/channel/eat-the-story-of-food/" title="Eat: The Story of Food"><img src="/exposure/content/photo/photo/2087773_natgeoeat-right-rail-promo_j2nns446prss2wegrkufi7scm7ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="NatGeoEat Right Rail Promo" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/eat-the-story-of-food/" title="Eat: The Story of Food">Eat: The Story of Food</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/life-below-zero/" title="Life Below Zero"><img src="/exposure/content/photo/photo/1078259_life-below-zero_7hqdjmj4am3d2cszxsyeykq4xpncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Life Below Zero" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/life-below-zero/" title="Life Below Zero">Life Below Zero</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/live-free-or-die/" title="Live Free or Die "><img src="/exposure/content/photo/photo/2085783_live-free-or-die_uvhdsogk4caf4elzjl6uxwu4z3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Live Free or Die" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/live-free-or-die/" title="Live Free or Die ">Live Free or Die </a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/the-legend-of-mick-dodge/" title="The Legend of Mick Dodge"><img src="/exposure/content/photo/photo/2075508_the-legend-of-mick-dodge_uvhdsogk4caf4elzjl6uxwu4z3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="The Legend of Mick Dodge" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/the-legend-of-mick-dodge/" title="The Legend of Mick Dodge">The Legend of Mick Dodge</a></figcaption></figure></li><li class="series_item featured"><figure><a href="//channel.nationalgeographic.com/channel/chug/" title="Chug"><img src="/exposure/content/photo/photo/2088207_chug-overview1_wpqcl4sp5hrctsdllz4ccbpndxncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Chug Overview&#160;" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/chug/" title="Chug">Chug</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/drugs-inc/" title="Drugs, Inc."><img src="/exposure/content/photo/photo/44259_snorting-ketamine-lines_jfxeaqbh63vorhnrwcs4oomcjtncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Photo: Snorting a line of Ketamine" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/drugs-inc/" title="Drugs, Inc.">Drugs, Inc.</a></figcaption></figure></li><li class="series_item featured"><figure><a href="//channel.nationalgeographic.com/channel/eric-greenspan-is-hungry/" title="Eric Greenspan Is Hungry "><img src="/exposure/content/photo/photo/2088232_greenspan-overview_wpqcl4sp5hrctsdllz4ccbpndxncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Greenspan Overview" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/eric-greenspan-is-hungry/" title="Eric Greenspan Is Hungry ">Eric Greenspan Is Hungry </a></figcaption></figure></li><li class="series_item featured"><figure><a href="//channel.nationalgeographic.com/channel/crowd-control/" title="Crowd Control"><img src="/exposure/content/photo/photo/2087755_crowd-control_uvhdsogk4caf4elzjl6uxwu4z3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Crowd Control" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/crowd-control/" title="Crowd Control">Crowd Control</a></figcaption></figure></li><li class="series_item featured"><figure><a href="//channel.nationalgeographic.com/channel/the-pioneers/" title="The Pioneers"><img src="/exposure/content/photo/photo/2088251_the-pioneers1_hy2vhyamxp64qwf6l2cajezrbhcj7vq7fo25elzxyug5jje2fdsq_100x75.jpg" alt="The Pioneers" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/the-pioneers/" title="The Pioneers">The Pioneers</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/ultimate-survival-alaska/" title="Ultimate Survival Alaska"><img src="/exposure/content/photo/photo/2075901_ultimate-survival-alaska1_wonwekkij7yes6dcq3d2jsxpltncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Ultimate Survival Alaska" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/ultimate-survival-alaska/" title="Ultimate Survival Alaska">Ultimate Survival Alaska</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="http://braingames.nationalgeographic.com/" title="Brain Games"><img src="/exposure/content/photo/photo/925022_brain-games4_wonwekkij7yes6dcq3d2jsxpltncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Brain Games" /></a><figcaption><a href="http://braingames.nationalgeographic.com/" title="Brain Games">Brain Games</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/the-90s-the-last-great-decade/" title="The &#39;90s: The Last Great Decade?"><img src="/exposure/content/photo/photo/2082970_kurt-cobain-and-courtney-love_ov6heons5l34jtainiivhu6ox7ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Pictured: Courtney Love and Kurt Cobain circa 1992." /></a><figcaption><a href="//channel.nationalgeographic.com/channel/the-90s-the-last-great-decade/" title="The &#39;90s: The Last Great Decade?">The '90s: The Last Great Decade?</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/cosmos-a-spacetime-odyssey/" title="Cosmos: A Spacetime Odyssey"><img src="/exposure/content/photo/photo/2079281_neil-degrasse-tyson_7hqdjmj4am3d2cszxsyeykq4xpncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Neil deGrasse Tyson" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/cosmos-a-spacetime-odyssey/" title="Cosmos: A Spacetime Odyssey">Cosmos: A Spacetime Odyssey</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="/channel/alaska-state-troopers/" title="Alaska State Troopers"><img src="/exposure/content/photo/photo/24094_alaska-state-troopers-dl-ukchan_4caootdqes27krvarijfgcjw6xncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Alaska-State-Troopers-DL-UKchan--c.jpg" /></a><figcaption><a href="/channel/alaska-state-troopers/" title="Alaska State Troopers">Alaska State Troopers</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/total-riff-off/" title="Total Riff Off"><img src="/exposure/content/photo/photo/2080461_rifftrax_rkpzxpiscq6r3dtvvw5n64gwkdncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="RiffTrax" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/total-riff-off/" title="Total Riff Off">Total Riff Off</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/wicked-tuna/" title="Wicked Tuna"><img src="/exposure/content/photo/photo/225959_wicked-tuna3_wonwekkij7yes6dcq3d2jsxpltncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Wicked Tuna" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/wicked-tuna/" title="Wicked Tuna">Wicked Tuna</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/wicked-tuna-north-vs-south/" title="Wicked Tuna: North vs. South"><img src="/exposure/content/photo/photo/2085892_wicked-tuna-north-vs-south_7hqdjmj4am3d2cszxsyeykq4xpncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Wicked Tuna: North vs. South" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/wicked-tuna-north-vs-south/" title="Wicked Tuna: North vs. South">Wicked Tuna: North vs. South</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/killing-kennedy/" title="Killing Kennedy"><img src="/exposure/content/photo/photo/2073641_killing-kennedy1_mawkrnnofdejaaqpr4bxrhk5ihncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Killing Kennedy" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/killing-kennedy/" title="Killing Kennedy">Killing Kennedy</a></figcaption></figure></li><li class="series_item featured"><figure><a href="//channel.nationalgeographic.com/channel/building-wild/" title="Building Wild"><img src="/exposure/content/photo/photo/2076561_a-room-with-a-view_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="A side view of the cabin deck." /></a><figcaption><a href="//channel.nationalgeographic.com/channel/building-wild/" title="Building Wild">Building Wild</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/doomsday-preppers/" title="Doomsday Preppers"><img src="/exposure/content/photo/photo/66398_doomsday-preppers1_wonwekkij7yes6dcq3d2jsxpltncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Doomsday Preppers" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/doomsday-preppers/" title="Doomsday Preppers">Doomsday Preppers</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/american-blackout/" title="American Blackout"><img src="/exposure/content/photo/photo/2073884_small-spaces_7hqdjmj4am3d2cszxsyeykq4xpncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="A group of college students are late leaving their Boston dorm accommodation at the end of the academic year. They were all strangers prior to the blackout. Can the outage bring them together or will it tear the group apart? " /></a><figcaption><a href="//channel.nationalgeographic.com/channel/american-blackout/" title="American Blackout">American Blackout</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/inside-secret-america/" title="Inside: Secret America"><img src="/exposure/content/photo/photo/1402351_inside-secret-america1_deq2kuesklccf46ljqoaxnfpkdncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Investigative journalists Mariana van Zeller and Darren Foster take you inside America’s underground networks in an explosive and shocking documentary series. " /></a><figcaption><a href="//channel.nationalgeographic.com/channel/inside-secret-america/" title="Inside: Secret America">Inside: Secret America</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/diggers/" title="Diggers"><img src="/exposure/content/photo/photo/225687_diggers-overview_epsicuaitwlfo42x7yedw6mpvtncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Diggers" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/diggers/" title="Diggers">Diggers</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/miracle-landing-on-the-hudson/" title="Miracle Landing on the Hudson"><img src="/exposure/content/photo/photo/2082758_miracle-landing-on-the-hudson1_wpqcl4sp5hrctsdllz4ccbpndxncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Miracle Landing on the Hudson" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/miracle-landing-on-the-hudson/" title="Miracle Landing on the Hudson">Miracle Landing on the Hudson</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/inside-the-hunt-for-the-boston-bombers/" title="Inside the Hunt For the Boston Bombers"><img src="/exposure/content/photo/photo/2080669_police-converge-on-watertown_ov6heons5l34jtainiivhu6ox7ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Police officers walk near a crime scene Friday, April 19, 2013, in Watertown, Massachusetts. A tense night of police activity that left MIT police officer Sean Collier dead on campus just days after the Boston Marathon bombings and amid a hunt for two suspects caused officers to converge on a neighborhood outside Boston, where residents heard gunfire and explosions.  " /></a><figcaption><a href="//channel.nationalgeographic.com/channel/inside-the-hunt-for-the-boston-bombers/" title="Inside the Hunt For the Boston Bombers">Inside the Hunt For the Boston Bombers</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/live-from-space/" title="Live From Space"><img src="/exposure/content/photo/photo/2079376_live-from-space_wonwekkij7yes6dcq3d2jsxpltncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Live From Space&#160;" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/live-from-space/" title="Live From Space">Live From Space</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/going-deep-with-david-rees/" title="Going Deep With David Rees"><img src="/exposure/content/photo/photo/2084035_going-deep-with-david-rees_deq2kuesklccf46ljqoaxnfpkdncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Going Deep With David Rees" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/going-deep-with-david-rees/" title="Going Deep With David Rees">Going Deep With David Rees</a></figcaption></figure></li><li class="series_item featured"><figure><a href="//channel.nationalgeographic.com/channel/science-of-stupid/" title="Science of Stupid"><img src="/exposure/content/photo/photo/2082438_science-of-stupid_uvhdsogk4caf4elzjl6uxwu4z3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Science of Stupid&#160;" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/science-of-stupid/" title="Science of Stupid">Science of Stupid</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/the-savage-line/" title="The Savage Line"><img src="/exposure/content/photo/photo/2081358_the-savage-line-series-overview_cq5ojktpod7fvknkvtkr3leajr75b4q7rjyjjrgtt5hpvulms43q_100x75.jpg" alt="The Savage Line Series Overview&#160;" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/the-savage-line/" title="The Savage Line">The Savage Line</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/die-trying/" title="Die Trying"><img src="/exposure/content/photo/photo/2083986_die-trying_uvhdsogk4caf4elzjl6uxwu4z3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Die Trying" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/die-trying/" title="Die Trying">Die Trying</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/american-war-generals/" title="American War Generals"><img src="/exposure/content/photo/photo/2085774_american-generals-facts-thumbnail_yp5b3wfsnhtxwbp4pmfof7akrdncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="American Generals Facts Thumbnail" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/american-war-generals/" title="American War Generals">American War Generals</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/showdown-of-the-unbeatables/" title="Showdown of the Unbeatables"><img src="/exposure/content/photo/photo/2080199_showdown-of-the-unbeatables_uvhdsogk4caf4elzjl6uxwu4z3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Showdown of the Unbeatables" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/showdown-of-the-unbeatables/" title="Showdown of the Unbeatables">Showdown of the Unbeatables</a></figcaption></figure></li><li class="series_item featured"><figure><a href="//channel.nationalgeographic.com/channel/duck-quacks-dont-echo/" title="Duck Quacks Don&#39;t Echo"><img src="/exposure/content/photo/photo/2077103_duck-quacks-dont-echo_uvhdsogk4caf4elzjl6uxwu4z3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Duck Quacks Don't Echo" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/duck-quacks-dont-echo/" title="Duck Quacks Don&#39;t Echo">Duck Quacks Don't Echo</a></figcaption></figure></li><li class="series_item featured"><figure><a href="//channel.nationalgeographic.com/channel/a-night-of-exploration/" title="A Night of Exploration"><img src="/exposure/content/photo/photo/165178_a-night-of-exploration-marquee_uvhdsogk4caf4elzjl6uxwu4z3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="A Night of Exploration Marquee" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/a-night-of-exploration/" title="A Night of Exploration">A Night of Exploration</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/polygamy-usa/" title="Polygamy USA"><img src="/exposure/content/photo/photo/1053839_meet-the-cawleys2_rfs2eiz7ebypwq4qtmzehrmnu575b4q7rjyjjrgtt5hpvulms43q_100x75.jpg" alt="The Cawley Family" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/polygamy-usa/" title="Polygamy USA">Polygamy USA</a></figcaption></figure></li><li class="series_item featured"><figure><a href="//channel.nationalgeographic.com/channel/eyewitness-war/" title="Eyewitness War"><img src="/exposure/content/photo/photo/1377132_eyewitness-war_epsicuaitwlfo42x7yedw6mpvtncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Eyewitness War" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/eyewitness-war/" title="Eyewitness War">Eyewitness War</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/battleground-afghanistan/" title="Battleground Afghanistan"><img src="/exposure/content/photo/photo/1377129_battleground-afghanistan_epsicuaitwlfo42x7yedw6mpvtncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Battleground Afghanistan" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/battleground-afghanistan/" title="Battleground Afghanistan">Battleground Afghanistan</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/taboo/" title="Taboo"><img src="/exposure/content/photo/photo/53486_taboo-flyout_qnjmftymlz6dycityasqpwns4lncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="TABOO-flyout.jpg" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/taboo/" title="Taboo">Taboo</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/locked-up-abroad/" title="Locked Up Abroad"><img src="/exposure/content/photo/photo/48419_lucy-in-lockup_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Photo: Lucy Wright in prison" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/locked-up-abroad/" title="Locked Up Abroad">Locked Up Abroad</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/the-80s-the-decade-that-made-us/" title="The &#39;80s: The Decade That Made Us"><img src="/exposure/content/photo/photo/551348_the-80s-the-decade-that-made-us_cg3atex63zowyhg35ot44fddyr75b4q7rjyjjrgtt5hpvulms43q_100x75.jpg" alt="The '80s: The Decade That Made Us" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/the-80s-the-decade-that-made-us/" title="The &#39;80s: The Decade That Made Us">The '80s: The Decade That Made Us</a></figcaption></figure></li><li class="series_item featured"><figure><a href="//channel.nationalgeographic.com/channel/inside-combat-rescue/" title="Inside Combat Rescue"><img src="/exposure/content/photo/photo/431248_inside-combat-rescue-marquee_uvhdsogk4caf4elzjl6uxwu4z3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Inside Combat Rescue Marquee" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/inside-combat-rescue/" title="Inside Combat Rescue">Inside Combat Rescue</a></figcaption></figure></li><li class="series_item featured"><figure><a href="//channel.nationalgeographic.com/channel/the-numbers-game/" title="The Numbers Game"><img src="/exposure/content/photo/photo/2079715_numbers-game-marquee1_uvhdsogk4caf4elzjl6uxwu4z3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Numbers Game Marquee" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/the-numbers-game/" title="The Numbers Game">The Numbers Game</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/killing-lincoln/" title="Killing Lincoln"><img src="/exposure/content/photo/photo/432414_killing-lincoln_wonwekkij7yes6dcq3d2jsxpltncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Killing Lincoln" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/killing-lincoln/" title="Killing Lincoln">Killing Lincoln</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/border-wars/" title="Border Wars"><img src="/exposure/content/photo/photo/33218_armed-and-ready_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Photo: An armed official at the border" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/border-wars/" title="Border Wars">Border Wars</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/seal-team-six-the-raid-on-osama-bin-laden/" title="SEAL Team Six: The Raid on Osama Bin Laden"><img src="/exposure/content/photo/photo/66399_seal-team-six_wonwekkij7yes6dcq3d2jsxpltncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="SEAL Team Six" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/seal-team-six-the-raid-on-osama-bin-laden/" title="SEAL Team Six: The Raid on Osama Bin Laden">SEAL Team Six: The Raid on Osama Bin Laden</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/space-dive/" title="Space Dive"><img src="/exposure/content/photo/photo/66333_felix_ugua3tyjidoroz5v76c7zv3olhncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Felix Baumgartner of Austria seen during the bungee test for Red Bull Stratos, a mission to the edge of space to break the speed of sound in freefall, in Lancaster, California, USA on May 24, 2010." /></a><figcaption><a href="//channel.nationalgeographic.com/channel/space-dive/" title="Space Dive">Space Dive</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/american-colony-meet-the-hutterites/" title="American Colony: Meet the Hutterites"><img src="/exposure/content/photo/photo/51198_truck-stop_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Photo: Lori Hofer and Megan Hofer sitting on a truck" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/american-colony-meet-the-hutterites/" title="American Colony: Meet the Hutterites">American Colony: Meet the Hutterites</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/amish-out-of-order/" title="Amish: Out of Order"><img src="/exposure/content/photo/photo/45414_amish-out-of-order1_qmod4ykrry6y72drumbutsn6m3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Amish: Out of Order" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/amish-out-of-order/" title="Amish: Out of Order">Amish: Out of Order</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/wild-justice/" title="Wild Justice"><img src="/exposure/content/photo/photo/25672_ngc-wild-justice_v2r3iq2utb74ouyvkd3cidiqz3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Photo: Game wardens at the ready" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/wild-justice/" title="Wild Justice">Wild Justice</a></figcaption></gc-wild-justice_v2r3iq2utb74ouyvkd3cidiqz3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Photo: Game wardens at the ready" /></a><figcaption><a href="//channel.nationalgeographic.cofigure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/alien-deep/" title="Alien Deep With Bob Ballard"><img src="/exposure/content/photo/photo/56543_dr-bob-ballard_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Dr. Bob Ballard after snorkeling in the Mid-Atlantic Trench in Iceland." /></a><figcaption><a href="//channel.nationalgeographic.com/channel/alien-deep/" title="Alien Deep With Bob Ballard">Alien Deep With Bob Ballard</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/explorer/" title="Explorer"><img src="/exposure/content/photo/photo/39948_pow-camp-march_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Photo: American soldiers marching" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/explorer/" title="Explorer">Explorer</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/ultimate-factories/" title="Ultimate Factories"><img src="/exposure/content/photo/photo/19345_wall-to-wall-robots_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Photo: Robots that help build the Mack engines" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/ultimate-factories/" title="Ultimate Factories">Ultimate Factories</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/untamed-americas/" title="Untamed Americas"><img src="/exposure/content/photo/photo/50757_mountains-of-chile_u4otpkuoohegc34cxym6cgqbe3ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Photo: Torres del Paine National Park" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/untamed-americas/" title="Untamed Americas">Untamed Americas</a></figcaption></figure></li><li class="tease_item featured"><figure><a href="//channel.nationalgeographic.com/channel/titanic-100-years/" title="Titanic: 100 Years"><img src="/exposure/content/photo/photo/37483_adventure-on-the-titanic1_3fusmhqn3qzyyt5rll26hv5m43ncurxrbvj6lwuht2ya6mzmafma_100x75.jpg" alt="Adventure on the Titanic" /></a><figcaption><a href="//channel.nationalgeographic.com/channel/titanic-100-years/" title="Titanic: 100 Years">Titanic: 100 Years</a></figcaption></figure></li></ul>
+    </div>
+    
+</section>
+
+
+
+</aside>
+
+
+
+
+
+</article>
+
+
+
+    <footer>
+    <ul>
+        <li><a href="//www.nationalgeographic.com/" title="National Geographic Home">National Geographic Home</a></li>
+    
+        
+            <li><a href="//channel.nationalgeographic.com/" title="National Geographic Channel">National Geographic Channel</a></li>
+        
+        
+            
+        
+        
+            <li><a href="//channel.nationalgeographic.com/channel/wild-justice/" title="Wild Justice">Wild Justice</a></li>
+        
+            
+    </ul>
+
+    <nav id="footer_nav">
+        <h2>Main Footer Navigation</h2>
+        <ul>
+            <li><a href="//www.nationalgeographic.com/" title="National Geographic - Home">Home</a></li>
+            <li><a href="//video.nationalgeographic.com/video/player/" title="National Geographic - Video">Video</a></li>
+            <li><a href="//www.nationalgeographic.com/photography/" title="National Geographic - Photography">Photography</a></li>
+            <li><a href="//www.nationalgeographic.com/animals/" title="National Geographic - Animals">Animals</a></li>
+            <li><a href="//www.nationalgeographic.com/environment/" title="National Geographic - Environment">Environment</a></li>
+            <li><a href="//www.nationalgeographic.com/travel/" title="National Geographic - Travel">Travel</a></li>
+            <li><a href="//www.nationalgeographic.com/adventure/" title="National Geographic - Adventure">Adventure</a></li>
+            <li class="selected"><a href="//channel.nationalgeographic.com/" title="National Geographic Channel">Television</a></li>
+            <li><a href="//www.nationalgeographic.com/kids/" title="National Geographic - Kids">Kids</a></li>
+            <li><a href="http://shop.nationalgeographic.com/ngs/index.jsp?code=NG94010" title="National Geographic - Shop">Shop</a></li>
+        </ul>
+    </nav>
+
+    <div id="hot_links_footer">
+        <ul>
+            <li><a href="//www.nationalgeographic.com/news/" title="Daily News">Daily News</a></li>
+            <li><a href="http://ngm.nationalgeographic.com/" title="The Magazine">The Magazine</a></li>
+            <li><a href="//www.nationalgeographic.com/maps/" title="Maps">Maps</a></li>
+            <li><a href="//www.nationalgeographic.com/science/" title="Science &amp; Space">Science &amp; Space</a></li>
+            <li><a href="//www.nationalgeographic.com/education/" title="Education">Education</a></li>
+            <li><a href="http://games.nationalgeographic.com/" title="Games">Games</a></li>
+            <li><a href="http://greenliving.nationalgeographic.com/" title="Green Living">Green Living</a></li>
+            <li><a href="http://events.nationalgeographic.com/" title="Events">Events</a></li>
+            <li><a href="http://blogs.nationalgeographic.com/" title="Blogs">Blogs</a></li>
+            <li><a href="//www.nationalgeographic.com/movies/" title="Movies">Movies</a></li>
+            <li><a href="//www.nationalgeographic.com/explorers/" title="Explorers">Explorers</a></li>
+            <li><a href="//www.nationalgeographic.com/mobile" title="Mobile">Mobile</a></li>
+            <li><a href="//www.nationalgeographic.com/siteindex/" title="Site Index">Site Index</a></li>
+        </ul>
+        <ul>
+            <li><a href="//www.nationalgeographic.com/magazines/" title="Subscriptions">Subscriptions</a></li>
+            <li><a href="http://national-geographic.cafepress.com/art" title="Buy Prints">Buy Prints</a></li>
+            <li><a href="http://www.ngdigitalmotion.com/" title="Stock Footage">Stock Footage</a></li>
+            <li><a href="http://www.nationalgeographicSTOCK.com" title="Stock Photos">Stock Photos</a></li>
+            <li><a href="http://www.nationalgeographicexpeditions.com/home?utm_source=travel.nationalgeographic.com&amp;utm_medium=Link&amp;utm_content=Footer_link_Our_Trips&amp;utm_campaign=NGdotcom" title="Our Trips">Our Trips</a></li>
+            <li><a href="//www.nationalgeographic.com/newsletter/" title="Newsletters">Newsletters</a></li>
+            <li><a href="//www.nationalgeographic.com/jobs/" title="Jobs">Jobs</a></li>
+            <li><a href="//www.nationalgeographic.com/siteindex/international/" title="Global Sites">Global Sites</a></li>
+            <li><a href="//www.nationalgeographic.com/environment/national-geographic-sustainability/" title="Sustainability">Sustainability</a></li>
+            <li><a href="//www.nationalgeographic.com/about/" title="About">About</a></li>
+            <li><a href="//www.nationalgeographic.com/community/email/" title="Contact">Contact</a></li>
+        </ul>
+        <ul>
+            <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A245&amp;code=NG90414" title="Gifts">Gifts</a></li>
+            <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A054&amp;addFacet=9004:A054&amp;code=NG90415" title="DVD's">DVD's</a></li>
+            <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A001&amp;addFacet=9004:A001&amp;code=NG90416" title="Books">Books</a></li>
+            <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A106&amp;addFacet=9004:A106&amp;code=NG90417" title="Maps &amp; Globes">Maps &amp; Globes</a></li>
+            <li><a href="http://shop.nationalgeographic.com/ngs/browse/category_sale.jsp?categoryId=A223&amp;addFacet=9004:A223&amp;code=NG90413" title="Sale">Sale</a></li>
+            <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A169&amp;addFacet=9004:A169&amp;code=NG90419" title="Travel Gear">Travel Gear</a></li>
+            <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A161&amp;addFacet=9004:A161&amp;code=NG90420" title="Photography Gear">Photography Gear</a></li>
+        </ul>
+        <ul>
+            <li><a href="https://donate.nationalgeographic.org/Page.aspx?pid=184" title="Donate">Donate</a></li>
+            <li><a href="http://press.nationalgeographic.com/" title="Press Room">Press Room</a></li>
+            <li><a href="//www.nationalgeographic.com/siteindex/customer/" title="Customer Service">Customer Service</a></li>
+            <li><a href="http://www.nationalgeographic.com/mediakit/" title="Advertise With Us">Advertise With Us</a></li>
+            <li><a href="//www.nationalgeographic.com/community/terms/" title="Terms of Service">Terms of Service</a></li>
+            <li><a href="//www.nationalgeographic.com/community/privacy/" title="Privacy Policy">Privacy Policy</a></li>
+        </ul>
+    </div>
+
+    <figure>
+        <a href="//www.nationalgeographic.com" title="National Geographic Society"><img src="//media-channel.nationalgeographic.com/static-media/images/ng_logo_138x41.png" alt="National Geographic Society" width="138" height="41" /></a>
+        <figcaption>
+            <p>&copy; 1996&ndash;2014 National Geographic Society. All rights reserved.</p>
+        </figcaption>
+    </figure>
+</footer>
+
+    </div>
+    
+    <!-- Container for Adobe Pass swf object -->
+    <div id="AccessEnablerContainer"></div>
+
+
+<script>ng.initChartBeat();</script>
+<script src="//loadus.exelator.com/load/?p=390&g=001&ctg=Video&subctg=bear-organ-trafficking&kw=&refkw="></script>
+
+    
+        
+    <script src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script src="//media-channel.nationalgeographic.com/static-media/js/preflight_auth.js"></script>
+
+    
+
+
+
+
+    <script src="//media-channel.nationalgeographic.com/static-media/js/bootstrap-carousel.min.js"></script>
+        
+        <script src = "http://player.foxneodigital.com/ngc"></script>
+        
+    <script>
+        window.video_auth_resourceId = '<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>ngw</title><item><title>Bear Organ Trafficking</title><guid>ngc-8977</guid><media:rating scheme="urn:v-chip">TV-PG</media:rating></item></channel></rss>';
+        window.video_auth_playlist_url = 'http://link.theplatform.com/s/ngc/FMKGAG_Xd_91?feed=National+Geographic+-+Titles+%28NEO%29+with+auth&mbr=true';
+        window.video_auth_share_url = 'http://channel.nationalgeographic.com/channel/wild-justice/videos/bear-organ-trafficking/';
+        window.video_auth_embed_url = 'http://channel.nationalgeographic.com/channel/wild-justice/videos/bear-organ-trafficking/embed/';
+        window.video_network = 'Wild';
+        window.video_series = '';
+        window.video_title = 'Bear Organ Trafficking';
+        window.video_length = (parseInt('287', 10) > 420 ) ? 'long' : 'short';
+        window.video_is_auth = 'non-auth';
+        window.video_autoplay = true;
+    </script>
+    <script src="//media-channel.nationalgeographic.com/static-media/js/FDM_player_config.js"></script>
+    
+        <script src="//media-channel.nationalgeographic.com/static-media/js/video_no_auth.js"></script>
+    
+<script src="/static-media/js/scrollbar-plugins.js"></script>
+<script src="/static-media/js/sly.min.js"></script>
+<script src="/static-media/js/vertical-scrollbar.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-1.newrelic.com","queueTime":0,"licenseKey":"114b3a1f69","agent":"js-agent.newrelic.com/nr-476.min.js","transactionName":"NFVSbRBSCxFYAUBeWA0fdkwMUBELVgwbQlkKRlVLEVZLA0kSRxlUDF5EXAxHSxRQB0NEDTZDVUs2WggHYw1aUnQMXkRcDEchB00DXVthClVH","applicationID":"1623941","errorBeacon":"bam.nr-data.net","applicationTime":2267}</script></body>
+</html>
+.com/nr-476.min.js","transactionName":"NFVSbRBSCxFYAUBeWA0fdkwMUBELVgwbQlkKRlVLEVZLA

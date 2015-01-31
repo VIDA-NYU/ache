@@ -1,0 +1,1598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xml:lang="en" 
+      version="XHTML+RDFa 1.0" 
+      dir="ltr"
+      >
+
+  <head profile="http://www.w3.org/1999/xhtml/vocab">
+    <!--<meta name="viewport" content="initial-scale=1.0, width=device-width" />-->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://www.dengue.info/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+    <title>www.dengue.info</title>
+	<link charset="UTF-8" href="http://www.dengue.info/sites/dengue2.localhost/files/ctools/css/f620acfa3db39969dd1fc19ead8aa691.css" rel="stylesheet" type="text/css" />
+	<!--<link charset="UTF-8" href="http://www.dengue.info/sites/all/themes/basic/css/styleplus.css" rel="stylesheet" type="text/css" />-->
+        <style type="text/css" media="all">@import url("http://www.dengue.info/modules/system/system.base.css?nflib8");
+@import url("http://www.dengue.info/modules/system/system.menus.css?nflib8");
+@import url("http://www.dengue.info/modules/system/system.messages.css?nflib8");
+@import url("http://www.dengue.info/modules/system/system.theme.css?nflib8");</style>
+<style type="text/css" media="all">@import url("http://www.dengue.info/misc/ui/jquery.ui.core.css?nflib8");
+@import url("http://www.dengue.info/misc/ui/jquery.ui.theme.css?nflib8");
+@import url("http://www.dengue.info/modules/overlay/overlay-parent.css?nflib8");</style>
+<style type="text/css" media="all">@import url("http://www.dengue.info/modules/book/book.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/date/date_api/date.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?nflib8");
+@import url("http://www.dengue.info/modules/field/theme/field.css?nflib8");
+@import url("http://www.dengue.info/modules/node/node.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/views_slideshow_xtra/views_slideshow_xtra_overlay/css/views_slideshow_xtra_overlay.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/views/css/views.css?nflib8");</style>
+<style type="text/css" media="all">@import url("http://ll/modules/views_slideshow_xtra/views_slideshow_xtra_overlay/css/views_slideshow_xtra_overlay.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/views/css/views.css?nflib8");</style>
+<style typwww.dengue.info/sites/all/modules/colorbox/styles/stockholmsyndrome/colorbox_stockholmsyndrome.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/ctools/css/ctools.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/flickr/flickr.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/lightbox2/css/lightbox.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/panels/css/panels.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/views_slideshow/views_slideshow.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/wysiwyg_linebreaks/wysiwyg_linebreaks.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/extlink/extlink.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/panels/plugins/layouts/flexible/flexible.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/panels_extra_layouts/plugins/layouts/twocol_63_37_stacked/twocol_63_37_stacked.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/quicktabs/css/quicktabs.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/quicktabs/quicktabs_tabstyles/tabstyles/basic/basic.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/panels/plugins/layouts/twocol/twocol.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/wysiwyg_tools_plus/css/wysiwyg_tools_plus.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/views_slideshow/contrib/views_slideshow_cycle/views_slideshow_cycle.css?nflib8");
+@import url("http://www.dengue.info/sites/all/modules/views_slideshow/views_slideshow_controls_text.css?nflib8");
+@import url("http://www.dengue.info/sites/default/files/ctools/css/f620acfa3db39969dd1fc19ead8aa691_0.css?nflib8");</style>
+<style type="text/css" media="all">@import url("http://www.dengue.info/sites/all/themes/basic/css/reset.css?nflib8");
+@import url("http://www.dengue.info/sites/all/themes/basic/css/default.css?nflib8");
+@import url("http://www.dengue.info/sites/all/themes/basic/css/layout.css?nflib8");
+@import url("http://www.dengue.info/sites/all/themes/basic/css/style.css?nflib8");
+@import url("http://www.dengue.info/sites/all/themes/basic/css/styleplus.css?nflib8");
+@import url("http://www.dengue.info/sites/all/themes/basic/css/jScroolPane.css?nflib8");
+@import url("http://www.dengue.info/sites/all/themes/basic/css/jcarousel-tango.css?nflib8");</style>
+<style type="text/css" media="print">@import url("http://www.dengue.info/sites/all/themes/basic/css/print.css?nflib8");</style>
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+.youtube .article .videos_slide{height:237px;overflow-x :scroll;width:939px;overflow-y:hidden}#videogallery{width:1410pxwww.dengue.info/sites/all/themes/basic/css/pr !important;}.youtube .article #videogallery a{font-size:12px;color:#6a6a6a;text-transform:none;text-align:left;margin:0 16px 0 0;float:left;text-decoration:none}.youtube .article{width:941px;padding-top:16px;position:relative}
+
+/*]]>*/-->
+</style>
+    <script type="text/javascript" src="http://www.dengue.info/sites/default/files/js/js_3jHghlMLrjr9xXAC0JufqSSch3oAbkZstSqYdc4uuck.js"></script>
+<script type="text/javascript" src="http://www.dengue.info/sites/default/files/js/js_dSJVwToRyJrDJUqzts7vZbALyKhGCPzPXSgK07j0Anc.js"></script>
+<script type="text/javascript" src="http://www.dengue.info/sites/default/files/js/js_t-9-fabr_L59QgT7jHMMsB4Crs5HBmsZEFGhFakuCMw.js"></script>
+<script type="text/javascript" src="http://www.dengue.info/sites/default/files/js/js_oNXMXf7uNfbYx7LG9pJxnsJLuZxI6Lgvvf289RKqh4U.js"></script>
+<script type="text/javascript" src="http://www.dengue.info/sites/all/modules/lightbox2/js/lightbox.js?1420620119"></script>
+<script type="text/javascript" src="http://www.dengue.info/sites/default/files/js/js_-ASrUGrWP6Ulh3gOucLh-ZVpIAkL5cxEFFYnCL6gFLc.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-31145328-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.loca!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-31145328-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = documention.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.dengue.info/sites/default/files/js/js_7_fRR_SeGkn84Y7D4PXt3aXAqiNgPDnLoiSV2PZlBqc.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"basic","theme_token":"ZOuQHdRX4s2sKkzUzEXb3Qm8GyQy15pF5hYHHzZEEms","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/jquery.ba-bbq.js":1,"modules\/overlay\/overlay-parent.js":1,"sites\/all\/modules\/views_slideshow_xtra\/views_slideshow_xtra_overlay\/js\/views_slideshow_xtra_overlay.js":1,"misc\/progress.js":1,"sites\/all\/libraries\/colorbox\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/stockholmsyndrome\/colorbox_stockholmsyndrome.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/modules\/insertFrame\/insertFrame.js":1,"sites\/all\/modules\/lightbox2\/js\/lightbox.js":1,"sites\/all\/modules\/panels\/js\/panels.js":1,"sites\/all\/modules\/views_slideshow\/js\/vi"sites\/all\/modules\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/modules\/insertFrame\/insertFrame.js":1,"sites\/all\/modules\/lightbox2\/js\/liews_slideshow.js":1,"sites\/all\/modules\/extlink\/extlink.js":1,"sites\/all\/modules\/quicktabs\/js\/quicktabs.js":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/js\/views_slideshow_cycle.js":1,"sites\/all\/modules\/wysiwyg_tools_plus\/js\/tab_builder.js":1,"sites\/all\/libraries\/json2\/json2.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"sites\/all\/libraries\/jquery.cycle\/jquery.cycle.all.js":1,"0":1,"sites\/all\/themes\/basic\/js\/jscrollpane\/jquery.mousewheel.js":1,"sites\/all\/themes\/basic\/js\/jscrollpane\/jquery.jscrollpane.min.js":1,"sites\/all\/themes\/basic\/js\/xtcore.js":1,"sites\/all\/themes\/basic\/js\/galleria-1.2.6.min.js":1,"sites\/all\/themes\/basic\/js\/galleria.flickr.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"modules\/overlay\/overlay-parent.css":1,"modules\/book\/book.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/views_slideshow_xtra\/views_slideshow_xtra_overlay\/css\/views_slideshow_xtra_overlay.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/colorbox\/styles\/stockholmsyndrome\/colorbox_stockholmsyndrome.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/flickr\/flickr.css":1,"sites\/all\/modules\/lightbox2\/css\/lightbox.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow.css":1,"sites\/all\/modules\/wysiwyg_linebreaks\/wysiwyg_linebreaks.css":1,"sites\/all\/modules\/extlink\/extlink.css":1,"sites\/all\/modules\/panels\/plugins\/layouts\/flexible\/flexible.css":1,"sites\/all\/modules\/panels_extra_layouts\/plugins\/layouts\/twocol_63_37_stacked\/twocol_63_37_stacked.css":1,"sites\/all\/modules\/quicktabs\/css\/quicktabs.css":1,"sites\/all\/modules\/quicktabs\/quicktabs_tabstyles\/tabstyles\/basic\/basic.css":1,"sites\/all\/modules\/panels\/plugins\/layouts\/twocol\/twocol.css":1,"sites\/all\/modules\/wysiwyg_tools_plus\/css\/wysiwyg_tools_plus.css":1,"sites\/all\/modules\/views_slideshow\/contrib\/views_slideshow_cycle\/views_slideshow_cycle.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow_controls_text.css":1,"public:\/\/ctools\/css\/f620acfa3db39969dd1fc19ead8aa691_0.css":1,"sites\/all\/themes\/basic\/css\/reset.css":1,"sites\/all\/themes\/basic\/css\/default.css":1,"sites\/all\/themes\/basic\/css\/layout.css":1,"sites\/all\/themes\/basic\/css\/style.css":1,"sites\/all\/themes\/basic\/css\/styleplus.css":1,"sites\/all\/themes\/basic\/css\/jScroolPane.css":1,"sites\/all\/themes\/basic\/css\/jcarousel-tango.css":1,"sites\/all\/themes\/basic\/css\/print.css":1,"0":1}},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"100%","maxHeight":"100%","fixed":true,"__drupal_alter_by_ref":["stockholmsyndrome"]},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"lightbox2":{"rtl":"0","file_path":"\/(\\w\\w\/)public:\/","default_image":"\/sites\/all\/modules\/lightbox2\/images\/brokenimage.jpg","border_size":0,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":0,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":0,"loop_items":0,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":80,"iframe_height":80,"iframe_border":0,"enable_video":0},"overlay":{"paths":{"admin":"node\/*\/webform\nnode\/*\/webform\/*\nnode\/*\/webform-results\nnode\/*\/webform-results\/*\nnode\/*\/submission\/*\nnode\/*\/outline\nnode\/*\/outline\/remove\nfile\/*\/edit\nfile\/*\/delete\nmedia\/*\/edit\nmedia\/*\/multiedit\nmedia\/*\/delete\nnode\/*\/edit\nnode\/*\/delete\nnode\/*\/revisions\nnode\/*\/revisions\/*\/revert\nnode\/*\/revisions\/*\/delete\nnode\/add\nnode\/add\/*\noverlay\/dismiss-message\nuser\/register\nuser\/register\/*\nnode\/*\ncontent\/*\nexperts\/*\ndengue_info_updates\nadmin\nadmin\/*\nbatch\ntaxonomy\/term\/*\/edit\nuser\/*\/cancel\nuser\/*\/edit\nuser\/*\/edit\/*\nnode/*\/delete\nnode\/add\nnode\/add\/*\noverlay\/dismiss-message\nuser\/register\nuser\/regis\/*\/display\nuser\/*\/display\ntaxonomy\/term\/*\/display\nnode\/*\/panelizer*\ntaxonomy\/term\/*\/panelizer*\nuser\/*\/panelizer*","non_admin":"user\/register\/step\/2\nnode\/*\/edit"},"ajaxCallback":"overlay-ajax"},"extlink":{"extTarget":"_blank","extClass":0,"extSubdomains":0,"extExclude":"","extInclude":"","extAlert":"_blank","extAlertText":"By clicking on this link you will be leaving the dengue.info website to go to an external website. \r\nThis link is provided for information purposes only.\r\nSanofi Pasteur assumes no responsibility for the information presented on this external website.","mailtoClass":0},"viewsSlideshowXtraOverlay":{"views-slideshow-xtra-overlay--carrousel3--attachment-1":{"overlayDelay":850,"overlayFadeIn":0,"overlayFadeOut":0,"overlayFadeOutDelay":0}},"viewsSlideshow":{"carrousel3-block":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowXtraOverlay"],"transitionEnd":[]},"paused":0},"the_experts-block":{"methods""],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshow:{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"pause":["viewsSlideshowControls","viewsSlideshowCycle"],"play":["viewsSlideshowControls","viewsSlideshowCycle"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowCycle"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter","viewsSlideshowXtraOverlay"],"transitionEnd":[]},"paused":0}},"viewsSlideshowControls":{"carrousel3-block":{"bottom":{"type":"viewsSlideshowControlsText"}},"the_experts-block":{"bottom":{"type":"viewsSlideshowControlsText"}}},"viewsSlideshowCycle":{"#views_slideshow_cycle_main_carrousel3-block":{"num_divs":3,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"carrousel3-block","effect":"scrollHorz","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":0,"pause_on_click":0,"action_advanced":0,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":1,"cleartypenobg":1,"advanced_options":"{}","advanced_options_choices":0,:0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image"advanced_options_entry":""},"#views_slideshow_cycle_main_the_experts-block":{"num_divs":5,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"the_experts-block","effect":"scrollHorz","transition_advanced":1,"timeout":0,"speed":700,"delay":0,"sync":1,"random":0,"pause":0,"pause_on_click":0,"action_advanced":0,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_type":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":1,"cleartypenobg":1,"advanced_options":"{}","advanced_options_choices":0,"advanced_options_entry":""}},"quicktabs":{"qt_tabmap":{"name":"tabmap","tabs":[{"nid":"35","teaser":1,"hide_title":1},{"nid":"36","teaser":1,"hide_title":1},{"nid":"37","teaser":1,"hide_title":1}],"viewsSlideshowCycle":{"#views_slideshow_cycle_main_carrousel3-block":{"num_divs":3,"id_prefix":"#views_slideshow_cycle_main_","div_prefix":"#views_slideshow_cycle_div_","vss_id":"carrousel3-block","effect":"scrollHorz","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":0,"pause_on_click":0,"action_advanced":0,"start_paused":0,"remember_slide":0,"remember_slide_days":1,"pause_in_middle":0,"pause_when_hidden":0,"pause_when_hidden_ty","transition_advanced":0,"timeout":5000,"speed":700,"delay":0,"sync":1,"random":0,"pause":0,"pause_on_click":0,"action_advanced":0,"start_paused":0,"pe":"full","amount_allowed_visible":"","nowrap":0,"fixed_height":1,"items_per_slide":1,"wait_for_image_load":1,"wait_for_image_load_timeout":3000,"cleartype":1,"cleartypenobg":1,"advanced_options":"{}","advanced_options_choices":0,"advanced_options_entry":""}}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});
+//--><!]]>
+</script>
+
+    <script type="text/javascript">
+   
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+      //		function googleTranslateElementInit() {
+      //		  new google.translate.TranslateElement({
+      //			pageLanguage: 'en',
+      //			autoDisplay: false
+      //		  });
+      //		}
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  </head>
+  <body class="html front not-logged-in no-sidebars page-home" >
+    <div id="skip">
+      <a href="#main-menu">Jump to Navigation</a>
+    </div>
+
+            <div id="pgoogle.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  </head>
+  <body class="html front not-logged-in no-sidebars page-home" >age" class="page">
+
+  <!-- ______________________ HEADER_______________________ -->
+
+  <div id="header">  
+	<script>
+		var skippopin=0;
+	</script>
+        
+      
+    
+    
+  </div> <!-- /header -->
+
+  <!-- ______________________ MAIN _______________________ -->
+
+  <div id="main" class="clearfix">
+
+    <div id="content">
+      <div id="content-inner" class="inner column center">
+
+                  <div id="content-header">
+
+            
+            
+            
+                                    
+                          <div class="tabs"></div>
+            
+                        
+          </div> <!-- /#content-header -->
+        
+        <div id="content-area">
+            <div class="region region-content">
+    <div id="block-system-main" class="block block-system block-odd first last clearfix">
+  <div class="block-inner">
+
+                		
+		<div class="content" >
+		  <div class="panel-flexible panels-flexible-1 clearfix" >
+<div class="panel-flexible-inside panels-flexible-1-inside">
+<div class="rang rang-1-10 rang-first clearfix zone-logo">
+  <div class="inside rang-inside rang-1-10-inside rang-inside-first clearfix">
+<div class="region region-1-logo_sano region-first region-last ">
+  <div class="inside region-inside region-1-logo_sano-inside region-inside-first region-inside-last">
+<div class="panel-pane pane-block pane-block-9" >
+  
+      
+  
+  <div class="pane-content">
+     <p><a href="http://www.sanofipasteur.com/" title="Visit www.sanofipasteur.com"><img alt="Sanofi Pasteur" src="/sites/dengue2.localhost/files/illustrations/logo_top.jpg" /></a></p>
+   </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="rang rang-1-9 clearfix bandeau">
+  <div class="inside rang-inside rang-1-9-inside clearfix">
+<div class="region region-1-site_title region-first bandeau">
+  <div class="inside region-inside region-1-site_title-inside region-inside-first">
+<div class="panel-pane pane-block pane-block-8" >
+  
+      
+  
+  <div class="pane-content">
+    <div id="bandeau" style="width:640px">
+<h1 style="margin-top:0px; line-height:70px;">Dengue<span>.info</span></h1>
+<p style="float:left; width: 275px; margin:0px; padding:15px 15px 12px 20px; font:12px/14px Arial, sans-serif;"><strong>An informational website about dengue</strong><br/>and the Sanofi Pasteur dengue vaccine candidate<br/>For media only</p>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+</div>
+<div class="region region-1-tools region-last tools">
+  <div class="inside region-inside region-1-tools-inside region-inside-last">
+<div class="panel-pane pane-block pane-block-10"  id="tools">
+  
+      
+  
+  <div class="pane-content">
+    <div class="bandeau">
+	<div id="blocD"><span class="pictool"><a href="http://asia.dengue.info" style="line-height: 1.538em; text-decoration: underline;" title="Visit asia.dengue.info for information about dengue in Asia"><img alt="" src="/sites/dengue2.localhost/files/link_asia_dengue_small.jpg" style="width: 50px; height: 43px;" /> </a></span> <span class="pictool"> <a href="http://es.dengue.info" title="Visite es.dengue.info en español"><img alt="" src="/sites/dengue2.localhost/files/pictos/dengue-info-ES.png" style="width: 50px; height: 43px;" /></a> </span> <span class="pictool"><a href="content/subscribe-1" title="Sign up for updates"><img alt="" src="/sites/dengue2.localhost/files/pictos/signup.png" style="width: 45px; height: 39px;" /></a> </span> <span class="pictool"><a href="http://twitter.com/DengueInfo" onclick="go_out_ext('http://twitter.com/DengueInfo'); return false" target="_blank" title="Twitter"><img alt="Twitter" src="/sites/dengue2.localhost/files/illustrations/twitter_top.png" style="width: 45px; height: 39px;" /> </a> </span> <span class="pictool"> <a href="http://www.youtube.com/dengueinfo" target="_blank" title="Youtube"> <img alt="You Tube" src="/sites/dengue2.localhost/files/illustrations/youtube_top.png" style="width: 45px; height: 39px;" /></a></span><span class="pictool"><a class="imagefield-fancybox" href="dengue_info_updates" title="Dengue info updates">&nbsp;</a></span><span class="pictool"><a class="translate" href="#" id="google_translate" title="translate"><img alt="Google Translate" src="/sites/dengue2.localhost/files/illustrations/translate_top.png" style="width: 45px; height: 39px;" /> </a> </span></div>
+</div>
+<p>&nbsp;</p>
+  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="rang rang-1-main-row clearfix">
+  <div class="inside rang-inside rang-1-main-row-inside clearfix">
+<div class="region region-1-carousel region-first carousel">
+  <div class="inside region-inside region-1-carousel-inside region-inside-first">
+<div class="panel-pane pane-views pane-carrousel3"  id="carrousel-slide">
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-carrousel3 view-id-carrousel3 view-display-id-block view-dom-id-556a5e4d768f27c84220cd51239a8313">
+        
+  
+  
+      <div class="view-content">
+      
+  <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_carrousel3-block" class="views_slideshow_cycle_main views_slideshow_main"><div id="views_slideshow_cycle_teaser_section_carrousel3-block" class="views-slideshow-cycle-main-frame views_slideshow_cycle_teaser_section">
+  <div id="views_slideshow_cycle_div_carrousel3-block_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-first views-row-odd">
+  		<a href="http://www.nejm.org/doi/full/10.1056/NEJMoa1411037">
+		<img height="316" width="539" 
+			title="New England Journal of Medicine Publishes Results of Final Landmark Phase III Efficacy Clinical Study of Sanofi Pasteur's Dengue Vaccine Candidate" 
+			alt="New England Journal of Medicine Publishes Results of Final Landmark Phase III Efficacy Clinical Study of Sanofi Pasteur's Dengue Vaccine Candidate" 
+			src="http://www.dengue.info/sites/default/files/styles/carousel_header/public/logo_nejm.jpg" />
+	</a>
+
+
+</div>
+</div>
+<div id="views_slideshow_cycle_div_carrousel3-block_1" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-first views-row-odd">
+  		<a href="http://youtu.be/dSm-N-C7BA0">
+		<img height="316" width="539" 
+			title="Click the image to see the dengue mosquito, Aedes aegypti in action!" 
+			alt="Click the image to see the dengue mosquito, Aedes aegypti in action!" 
+			src="http://www.dengue.info/sites/default/files/styles/carousel_header/public/slide/dengue-mosquito-action-02.jpg" />
+	</a>
+
+
+</div>
+</div>
+<div id="views_slideshow_cycle_div_carrousel3-block_2" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-first views-row-odd">
+  		<a href="http://www.dengue.info/#overlay=content/research-phase-iii-preclinical-industrial-and-clinical-development-sanofi-pasteur">
+		<img height="316" width="539" 
+			title="Click image to read From research to phase III" 
+			alt="Click image to read From research to phase III" 
+			src="http://www.dengue.info/sites/default/files/styles/carousel_header/public/slide/photovaccination.jpg" />
+	</a>
+
+
+</div>
+</div>
+</div>
+</div>
+          <div class="views-slideshow-controls-bottom clearfix">
+        <div id="views_slideshow_controls_text_carrousel3-block" class="views-slideshow-controls-text views_slideshow_controls_text">
+  <span id="views_slideshow_controls_text_previous_carrousel3-block" class="views-slideshow-controls-text-previous views_slideshow_controls_text_previous"><a href="#">Previous</a></span>
+  <span id="views_slideshow_controls_text_pause_carrousel3-block" class="views-slideshow-controls-text-pause views_slideshow_controls_text_pause  views-slideshow-controls-text-status-play"><a href="#">Pause</a></span>
+  <span id="views_slideshow_controls_text_next_carrousel3-block" class="views-slideshow-controls-text-next views_slideshow_controls_text_next"><a href="#">Next</a></span>
+</div>
+      </div>
+      </div>
+    </div>
+  
+  
+      <div class="attachment attachment-after">
+      <div class="view view-carrousel3 view-id-carrousel3 view-display-id-attachment_1">
+        
+  
+  
+      <div class="view-content">
+      <div id="views-slideshow-xtra-overlay--carrousel3--attachment-1" class="views-slideshow-xtra-overlay">
+  <div class="views-slideshow-xtra-overlay-row views-slideshow-xtra-overlay-row-0">
+    
+  <div class="carousel-title">        <span>Final Landmark Phase III Study Published</span>  </div></div>
+<div class="views-slideshow-xtra-overlay-row views-slideshow-xtra-overlay-row-1">
+    
+  <div class="carousel-title">        <span>The Aedes aegypti mosquito, vector of dengue</span>  </div></div>
+<div class="views-slideshow-xtra-overlay-row views-slideshow-xtra-overlay-row-2">
+    
+  <div class="carousel-title">        <span>Working to change the lives of millions</span>  </div></div>
+</div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+  </div>
+</div>
+<div class="region region-1-outbreak_webcast region-last outbreak_webcast">
+  <div class="inside region-inside region-1-outbreak_webcast-inside region-inside-last">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-odd view-mode-bold_lite_one_line_h3 clearfix ">
+
+  
+  <div class="field field-name-bol-lite-one-line-h3 field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='header title'><h3 id='outbreak'><span class='bold'>DENGUE OUTBREAKS</span>  <span class='book'> WORLDWIDE<sup class="sup">1</sup></span></h3></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-outbreak outbreak-list-class"  id="outbreak-list-id">
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-outbreak view-id-outbreak view-display-id-block view-dom-id-27770ae469d1b0656c576247aa9b663e">
+        
+  
+  
+      <div class="view-content">
+      <div class="scroll-pane jspScrollable">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div>        <div><a href="http://outbreaknewstoday.com/australia-dengue-outbreak-confirmed-in-cairns-20967/">Australia: Dengue outbreak confirmed in Cairns</a></div>  </div>  
+  <div>        <div><span class="date-display-single">Monday, January 5, 2015</span></div>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div>        <div><a href="http://www.radionz.co.nz/international/pacific-news/262796/dengue-outbreak-in-tonga">Tonga: Dengue Outbreak</a></div>  </div>  
+  <div>        <div><span class="date-display-single">Tuesday, December 30, 2014</span></div>  </div></li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div>        <div><a href="http://www.radionz.co.nz/international/pacific-news/262796/dengue-outbreak-in-tonga">Tonga: Outbreak of dengue fever has been reported</a></div>  </div>  
+  <div>        <div><span class="date-display-single">Tuesday, December 30, 2014</span></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-1 link_to_all_outbreak_class"  id="link_to_all_outbreak_id">
+  
+      
+  
+  <div class="pane-content">
+    <a class="imagefield-fancybox" href="content/all-outbreak-0"><span class="to_all">&nbsp;</span></a><style type="text/css">#one-forecast-id div.field-content a { text-transform: none; }</style>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-forecast one-forecast-class"  id="one-forecast-id">
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-forecast view-id-forecast view-display-id-page_1 view-dom-id-a5bb9eceeb3250ef8eb70195138ad124">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last H3">  
+  <span>        y-id-page_1 view-dom-id-a5bb9eceeb3250ef8eb70195138ad124">
+        
+  
+  
+  <span class="book"><h3 id='forecast'><span class='bold'>Phase III Study</span>  <span class='book'>Publication</span></h3><br></span>  </span>  
+  <div class="views-field views-field-field-left-side">        <div class="field-content"><a href="/content/phase-iii-study-publication"> Detailed results of the final landmark phase III clinical efficacy study in Latin America published in The New England Journal of Medicine <span class="readmore">READ MORE</span></a></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-2 link_to_all_forecast_class"  id="link_to_all_forecast_id">
+  
+      
+  
+  <div class="pane-content">
+    <a href="content/topnews"><span class="to_all">&nbsp;</span></a>  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="rang rang-1-1 clearfix row-one">
+  <div class="inside rang-inside rang-1-1-inside clearfix">
+<div class="region region-1-region_1 region-first experts">
+  <div class="inside region-inside region-1-region_1-inside region-inside-first">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-even view-mode-one_line_two_light_word clearfix ">
+
+  
+  <div class="field field-name-1-little-line-h2-picto-title- field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class="one-line-title"><span class="picto"><a href=""><img src="http://www.dengue.info/sites/default/files/styles/petit-picto/public/pictos/meettheexpertsicon.jpg" alt=""  title="" /></a></span>
+<div class="header little title">
+<h2 id="meet-the-experts"><span class="bold">Meet</span><span class="book"> The experts</span></h2>
+</div>
+</div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-the-experts" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-the-experts view-id-the_experts view-display-id-block view-dom-id-180ea36886a366abeb0d6bd5f965d8f1">
+        
+  
+  
+      <div class="view-content">
+      
+  <div class="skin-default">
+    
+    <div id="views_slideshow_cycle_main_the_experts-block" class="views_slideshow_cycle_main views_slideshow_main"><div id="views_slideshow_cycle_teaser_section_the_experts-block" class="views-slideshow-cycle-main-frame views_slideshow_cycle_teaser_section">
+  <div id="views_slideshow_cycle_div_the_experts-block_0" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-1 views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-first views-row-odd">
+  <div class="panck_0" class="views-slideshow-cycle-main-frameel-display panel-2col clearfix" >
+  <div class="panel-panel panel-col-first">
+    <div class="inside">  
+  <div class="views-field views-field-field-portrait">        <div class="field-content"><a href="/experts/11392/dr-nicholas-jackson"><img src="http://www.dengue.info/sites/default/files/styles/portrait/public/portraits/dr_nicholas_jackson.jpg" width="109" height="116" alt="portrait" /></a></div>  </div></div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside">  
+  <div class="views-field views-field-field-function">        <div class="field-content name_and_function"><a href="/experts/11392/dr-nicholas-jackson"><span class="expert-name">Dr. Nicholas Jackson</span>
+<p>Head of R&amp;D Dengue Vaccine Program</p><p>Sanofi Pasteur, Lyon, France</p> <p>
+<a href="node/11392"><span class="readmore">Read More</span></a></a></div>  </div></div>
+  </div>
+</div>
+</div>
+</div>
+<div id="views_slideshow_cycle_div_the_experts-block_1" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-first views-row-odd">
+  <div class="panel-display panel-2col clearfix" >
+  <div class="panel-panel panel-col-first">
+    <div class="inside">  
+  <div class="views-field views-field-field-portrait">        <div class="field-content"><a href="/experts/408/guillaume-leroy"><img src="http://www.dengue.info/sites/default/files/styles/portrait/public/portraits/gleroy.png" width="109" height="116" alt="Guillaume Leroy" title="Guillaume Leroy" /></a></div>  </div></div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside">  
+  <div class="views-field views-field-field-function">        <div class="field-content name_and_function"><a href="/experts/408/guillaume-leroy"><span class="expert-name">Guillaume Leroy</span>
+<p>Vice President<br />Dengue Vaccine Head<br />Sanofi Pasteur</p> <p>
+<a href="node/408"><span class="readmore">Read More</span></a></a></div>  </div></div>
+  </div>
+</div>
+</div>
+</div>
+<div id="views_slideshow_cycle_div_the_experts-block_2" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-first views-row-odd">
+  <div class="panel-display panel-2col clearfix" >
+  <div class="panel-panel panel-col-first">
+    <div class="inside">  
+  <div class="views-field views-field-field-portrait">        <div class="field-content"><a href="/experts/1055/dr-melanie-saville"><img src="http://www.dengue.info/sites/default/files/stdiv class="panel-panel panel-col-first">
+    yles/portrait/public/portraits/melanie_saville.png" width="109" height="116" alt="portrait" /></a></div>  </div></div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside">  
+  <div class="views-field views-field-field-function">        <div class="field-content name_and_function"><a href="/experts/1055/dr-melanie-saville"><span class="expert-name">Dr. Melanie Saville</span>
+<p>Chief Medical and<br />Clinical Officer, Dengue<br />Sanofi Pasteur</p> <p>
+<a href="node/1055"><span class="readmore">Read More</span></a></a></div>  </div></div>
+  </div>
+</div>
+</div>
+</div>
+<div id="views_slideshow_cycle_div_the_experts-block_3" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-4 views_slideshow_cycle_hidden views-row-even">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-first views-row-odd">
+  <div class="panel-display panel-2col clearfix" >
+  <div class="panel-panel panel-col-first">
+    <div class="inside">  
+  <div class="views-field views-field-field-portrait">        <div class="field-content"><a href="/experts/122/antoine-quin"><img src="http://www.dengue.info/sites/default/files/styles/portrait/public/portraits/antoinequinn.jpg" width="109" height="116" alt="Antoine Quin" title="Antoine Quin" /></a></div>  </div></div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside">  
+  <div class="views-field views-field-field-function">        <div class="field-content name_and_function"><a href="/experts/122/antoine-quin"><span class="expert-name">Antoine Quin</span>
+<p>Vaccine<br />Production Site Manager</p> <p>
+<a href="node/122"><span class="readmore">Read More</span></a></a></div>  </div></div>
+  </div>
+</div>
+</div>
+</div>
+<div id="views_slideshow_cycle_div_the_experts-block_4" class="views-slideshow-cycle-main-frame-row views_slideshow_cycle_slide views_slideshow_slide views-row-5 views_slideshow_cycle_hidden views-row-odd">
+  <div class="views-slideshow-cycle-main-frame-row-item views-row views-row-0 views-row-first views-row-odd">
+  <div class="panel-display panel-2col clearfix" >
+  <div class="panel-panel panel-col-first">
+    <div class="inside">  
+  <div class="views-field views-field-field-portrait">        <div class="field-content"><a href="/experts/129/dr-michael-watson"><img src="http://www.dengue.info/sites/default/files/styles/portrait/public/portraits/michaelwatson.jpg" width="109" height="116" alt="Dr. Michael Watson " title="Dr. Michael Watson " /></a></div>  </div></div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside">  
+  <div class="views-field views-field-field-function">        <div class="field-content name_and_function"hael Watson " title="Dr. Michael Watson " /><><a href="/experts/129/dr-michael-watson"><span class="expert-name">Dr. Michael Watson</span>
+<p>V-P Global<br />
+Vaccination Policy</p>
+ <p>
+<a href="node/129"><span class="readmore">Read More</span></a></a></div>  </div></div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+          <div class="views-slideshow-controls-bottom clearfix">
+        <div id="views_slideshow_controls_text_the_experts-block" class="views-slideshow-controls-text views_slideshow_controls_text">
+  <span id="views_slideshow_controls_text_previous_the_experts-block" class="views-slideshow-controls-text-previous views_slideshow_controls_text_previous"><a href="#">Previous</a></span>
+  <span id="views_slideshow_controls_text_pause_the_experts-block" class="views-slideshow-controls-text-pause views_slideshow_controls_text_pause  views-slideshow-controls-text-status-play"><a href="#">Pause</a></span>
+  <span id="views_slideshow_controls_text_next_the_experts-block" class="views-slideshow-controls-text-next views_slideshow_controls_text_next"><a href="#">Next</a></span>
+</div>
+      </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+  </div>
+</div>
+<div class="region region-1-media_contact media-contact">
+  <div class="inside region-inside region-1-media_contact-inside">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-iv>
+
+  
+  </div>
+  </div>
+</div>
+<div class="region region-1-media_contact media-contact">
+  <div class="inside region-inside region-1-media_contact-i1col node node-block-header node-promoted node-even view-mode-one_line_two_light_word clearfix ">
+
+  
+  <div class="field field-name-1-little-line-h2-picto-title- field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class="one-line-title"><span class="picto"><a href=""><img src="http://www.dengue.info/sites/default/files/styles/petit-picto/public/pictos/contacticon.jpg" alt=""  title="" /></a></span>
+<div class="header little title">
+<h2 id="media-contact"><span class="bold">Media</span><span class="book"> Contact</span></h2>
+</div>
+</div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-block-1" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="underline-tel"><p><span class="expert-name">Alain Bernal</span><br /><span style="font-style: normal;">Vice President Communications</span></p><p><span class="link mail">+33 (0)4 37 37 50 38</span> <span class="link mail"> <a href="mailto:media@sanofipasteur.com">media@sanofipasteur.com</a> </span></p></div><p><span class="boutton-bleu">&nbsp;<a href="content/subscribe-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign up for updates&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p><p><a class="access_all" href="#maps" title="See Available Material">ACCESS TO ALL AVAILABLE CONTENT</a> <img alt="" src="/sites/dengue2.localhost/files/pictos/arrow-bottom.png" style="width: 15px; height: 17px;" /></p>  </div>
+
+  
+  </div>
+  </div>
+</div>
+<div class="region region-1-dengue_watch region-last dengue-watch">
+  <div class="inside region-inside region-1-dengue_watch-inside region-inside-last">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-even view-mode-one_line_two_light_word clearfix ">
+
+  
+  <div class="field field-name-1-little-line-h2-picto-title- field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class="one-line-title"><span class="picto"><a href=""><img src="http://www.dengue.info/sites/default/files/styles/petit-picto/public/pictos/mapsicon.jpg" alt=""  title="" /></a></span>
+<div class="header little title">
+<h2 id="dengue-maps"><span class="bold">Dengue</span><span class="book"> Maps</span></h2>
+</div>
+</div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-quicktabs-tabmap" >
+  
+      
+  
+  <div class="pane-content">
+    <div  id="quicktabs-tabmap" class="quicktabs-wrapper quicktabs-style-basic"><div class="item-list"><ul class="quicktabs-tabs quicktabs-style-basic"><li class="active first"><a href="/home?qt-tabmap=0#qt-tabmap" id="quicktabs-tab-tabmap-0" class="active">clinical  studies</a></li>
+<li><a href="/home?qt-tabmap=1#qt-tabmap" id="quicktabs-tab-tabmap-1" class="active">dengue watch</a></li>
+<li class="last"><a href="/home?qt-tabmap=2#qt-tabmap" id="quicktabs-tab-tabmap-2" class="active">expert opinions</a></li>
+</ul></div><div id="quicktabs-container-tabmap" class="quicktabs_main quicktabs-style-basic"><div  id="quicktabs-tabpage-tabmap-0" class="quicktabs-tabpage "><div class="ds-1col node node-map node-teaser node-odd view-mode-teaser clearfix ">
+
+  
+  <div class="field field-name-link-to-map field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a class="imagefield-fancybox" href="node/35"><img src="http://www.dengue.info/sites/default/files/maps/map01.jpg"/ class="Interactive Dengue Studies map" title="Interactive Dengue Studies map"></a></div></div></div><div class="even credit"><div class='credit'><a style="color: #444492; font: 12px/1.5em Arial,sans-serif;" href="https://maps.google.fr/maps/ms?msid=215436140149524131958.0004a2d6fef79c4e32a3a&msa=0&ll=1.409577,6.679687&spn=129.681069,316.054688 ">Sanofi Pasteur Dengue Clinical Studies</a></div></div></div></div><div  id="quicktabs-tabpage-tabmap-1" class="quicktabs-tabpage quicktabs-hide"><div class="ds-1col node node-map node-teaser node-even view-mode-teaser clearfix ">
+
+  
+  <div class="field field-name-link-to-map field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a class="imagefield-fancybox" href="node/36"><img src="http://www.dengue.info/sites/default/files/maps/map02.jpg"/ class="Interactive Denguewatch map" title="Interactive Denguewatch map"></a></div></div></div><div class="even credit"><div class='credit'>Map from <a style="color: #444492; font: 12px/1.5em Arial,sans-serif;" href="http://www.denguewatch.org/">DengueWatch.org</a> provided by DVI</div></div></div></div><div  id="quicktabs-tabpage-tabmap-2" class="quicktabs-tabpage quicktabs-hide"><div class="ds-1col node node-map node-teaser node-odd view-mode-teaser clearfix ">
+
+  
+  <div class="field field-name-link-to-map field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><a class="imagefield-fancybox" href="node/37"><img src="http://www.dengue.info/sites/default/files/maps/map03.jpg"/ class="Interactive Expert Opinions map" title="Interactive Expert Opinions map"></a></div></div></div><div class="even credit"><div class='credit'><a style="color: #444492; font: 12px/1.5em Arial,sans-serif;" href="https://maps.google.fr/maps/ms?msid=215436140149524131958.0004a416e9bb5757ced75&msa=0&ll=24.527135,-7.03125&spn=125.344611,316.054688">Dengue testimonials</a></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="rang rang-1-2 clearfix row-2">
+  <div class="inside rang-inside rang-1-2-inside clearfix">
+<div class="region region-1-dengue_info region-first dengue-info">
+  <div class="inside region-inside region-1-dengue_info-inside region-inside-first">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-even view-mode-one_line clearfix ">
+
+  
+  <div class="field field-name-bold-lite field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='one-line-title'><span class='picto'><a href='http://twitter.com/#!/DengueInfo'><img  src='http://www.dengue.info/sites/default/files/pictos/tweetericon.jpg' alt=""  title="" /></a></span><div class='header title'><h2 id='tweet-block'><span class='bold'>DENGUE</span><span class='book'> INFO</span></a></h2></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-panels-mini pane-les-tweets" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="panel-display panel-twocol-63-37-stacked clear-block" id="mini-panel-les_tweets">
+
+  <div class="panel-panel header">
+    <div class="inside">
+          </div>
+  </div>
+
+  <div class="panel-panel line">
+    <div class="panel-panel unit left">
+      <div class="inside">
+        <div class="panel-pane pane-views-panes pane-home-tweets-panel-pane-2" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-home-tweets view-id-home_tweets view-display-id-panel_pane_2 bloc1tweet view-dom-id-4c6415dcbf290f7b6c9f6b432b634b08">
+        
+  
+  
+      <div class="view-content">
+      <div class="tweets-list">    <ul class="tweets-list">          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+  <div>        <span class="tweet-account"><a href="http://twitter.com/#!/DengueInfo " class="account_name">DengueInfo</a></span>  </div>  
+  <div class="views-field views-field-text">        <div class="field-content tweet-message">Vulnerability To Dengue Virus: First Global Maps Published By UN University
+<a target="_blank" rel="nofollow" href="http://t.co/IDzZAxhKVE">http://t.co/IDzZAxhKVE</a> <a target="_blank" rel="nofollow" href="http://search.twitter.com/search?q=%23dengue">#dengue</a></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+      </div>
+    </div>
+
+    <div class="panel-panel right lastUnit">
+      <div class="inside">
+        <div class="panel-pane pane-views-panes pane-home-tweets-panel-pane-3"  id="pane-2-3-tweet">
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-home-tweets view-id-home_tweets view-display-id-panel_pane_3 bloc2-3tweet view-dom-id-82e1c2774aaefcf34781c11f3c97a0ac">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <span>        <span class="tweet-account"><a href="http://twitter.com/#!/DengueInfo " title="DengueInfo " class="account_name">DengueInfo</a></span>  </span>  
+  <span>        <div class="tweet-message">Dengue vaccine study in Mexico: 
+<a target="_blank" rel="nofollow" href="http://t.co/gDhR0DYpn2">http://t.co/gDhR0DYpn2</a> via <a target="_blank" rel="nofollow" href="http://twitter.com/YouTube">@YouTube</a> <a target="_blank" rel="nofollow" href="http://search.twitter.com/search?q=%23dengue">#dengue</a> </div>  </span>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last">
+      
+  <span>        <span class="tweet-account"><a href="http://twitter.com/#!/DengueInfo " title="DengueInfo " class="account_name">DengueInfo</a></span>  </span>  
+  <span>        <div class="tweet-message">Epidemiological Trends of Dengue Disease in Mexico (2000–2011) <a target="_blank" rel="nofollow" href="http://search.twitter.com/search?q=%23PLOSNTDs">#PLOSNTDs</a> <a target="_blank" rel="nofollow" href="http://t.co/fYoFGJE2nt">http://t.co/fYoFGJE2nt</a> 
+<a target="_blank" rel="nofollow" href="https://t.co/AJJcsHIXIA">https://t.co/AJJcsHIXIA</a> </div>  </span>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel-panel footer">
+    <div class="inside">
+          </div>
+  </div>
+</div>
+  </div>
+
+  
+  </div>
+  </div>
+</div>
+<div class="region region-1-dengue_matters region-last dengue-matters">
+  <div class="inside region-inside region-1-dengue_matters-inside region-inside-last">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-odd view-mode-one_line clearfix ">
+
+  
+  <div class="field field-name-bold-lite field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='one-line-title'><span class='picto'><a href='http://denguematters.info/'><img  src='http://www.dengue.info/sites/default/files/pictos/blogicon.jpg' alt=""  title="" /></a></span><div class='header title'><h2 id='BLOG'><span class='bold'>DENGUE</span><span class='book'> MATTERS</span></a></h2></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-blogs" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-blogs view-id-blogs view-display-id-home_blog_block view-dom-id-e5541b7c4818ea70826a6a28378e4ebe">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last"><div class="panel-display panel-2col clearfix" >
+  <div class="panel-panel panel-col-first">
+    <div class="inside">  
+          <a href="http://www.denguematters.info">Issue 16 | Dengue Updates - October 2014
+<p>
+_
+</p>
+<span class="readmore">READ MORE</span></a>  </div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside">  
+          <a href="http://www.denguematters.info"><p><strong>Dengue News from Around the World:</strong></p><p>In Past Decade, Dengue Cases Up Five-fold in the Americas</p><p><strong>Research News:</strong></p><p>Recent Reports Highlight Growing Concerns over Dengue &quot;Hyperendemicity&quot;</p><p>Cost of Dengue Outbreaks is Considerable, Data Collection Still a Challenge;&nbsp;</p></a>  </div>
+  </div>
+</div>
+</li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="rang rang-1-3 clearfix row-3">
+  <div class="inside rang-inside rang-1-3-inside clearfix">
+<div class="region region-1-special_reports region-first region-last special-reports">
+  <div class="inside region-inside region-1-special_reports-inside region-inside-first region-inside-last">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-even view-mode-one_line clearfix ">
+
+  
+  <div class="field field-name-bold-lite field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='one-line-title'><span class='picto'><a href='http://www.youtube.com/dengueinfo'><img  src='http://www.dengue.info/sites/default/files/pictos/youtubeicon.jpg' alt=""  title="" /></a></span><div class='header title'><h2 id='special'><span class='bold'>SPECIAL</span><span class='book'> REPORTS</span></a></h2></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-videogallery" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-videogallery view-id-videogallery view-display-id-page_2 view-dom-id-7e4f0fd6d74b65d0fa12fe9dc7a9f7b7">
+        
+  
+  
+      <div class="view-content">
+      <div class="videos_slide scroll-pane">    <ul class="video-liste">          <li class="views-row views-row-1 views-row-odd views-row-first film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/aedes-aegypti-dengue-mosquito-action" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_8.jpg" width="219" height="166" alt="Aedes Aegypti: the dengue mosquito in action" title="Aedes Aegypti: the dengue mosquito in action" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/aedes-aegypti-dengue-mosquito-action">Aedes Aegypti: the dengue mosquito in action</a></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/sanofi-pasteur-dengue-vaccine-candidate-under-study" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_13.jpg" width="219" height="166" alt="Sanofi Pasteur dengue vaccine candidate under study" title="Sanofi Pasteur dengue vaccine candidate under study" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/sanofi-pasteur-dengue-vaccine-candidate-under-study">Sanofi Pasteur dengue vaccine candidate under study</a></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/dengue-virus-infection" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_9.jpg" width="219" height="166" alt="Dengue virus infection" title="Dengue virus infection" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/dengue-virus-infection">Dengue virus infection</a></span>  </div></li>
+          <li class="views-row views-row-4 views-row-even film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/sanofi-pasteur-dengue-vaccine-candidate-clinical-trials" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_4.jpg" width="219" height="166" alt="Sanofi Pasteur dengue vaccine candidate clinical trials" title="Sanofi Pasteur dengue vaccine candidate clinical trials" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/sanofi-pasteur-dengue-vaccine-candidate-clinical-trials">Sanofi Pasteur dengue vaccine candidate clinical trials</a></span>  </div></li>
+          <li class="views-row views-row-5 views-row-odd film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/interviews-sanofi-pasteur-%E2%80%93-guillaume-leroy-july-11-2014" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_12.jpg" width="219" height="166" alt="Interviews with Sanofi Pasteur – Guillaume Leroy - July 11, 2014" title="Interviews with Sanofi Pasteur – Guillaume Leroy - July 11, 2014" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/interviews-sanofi-pasteur-%E2%80%93-guillaume-leroy-july-11-2014">Interviews with Sanofi Pasteur – Guillaume Leroy - July 11, 2014</a></span>  </div></li>
+          <li class="views-row views-row-6 views-row-even film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/interviews-sanofi-pasteur-%E2%80%93-nick-jackson-july-11-2014" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_10.jpg" width="219" height="166" alt="Interviews with Sanofi Pasteur – Nick Jackson - July 11, 2014" title="Interviews with Sanofi Pasteur – Nick Jackson - July 11, 2014" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/interviews-sanofi-pasteur-%E2%80%93-nick-jackson-july-11-2014">Interviews with Sanofi Pasteur – Nick Jackson - July 11, 2014</a></span>  </div></li>
+          <li class="views-row views-row-7 views-row-odd film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/interviews-sanofi-pasteur-%E2%80%93-m%C3%A9lanie-saville-july-11-2014" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_1.jpg" width="219" height="166" alt="Interviews with Sanofi Pasteur – Mélanie Saville - July 11, 2014" title="Interviews with Sanofi Pasteur – Mélanie Saville - July 11, 2014" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/interviews-sanofi-pasteur-%E2%80%93-m%C3%A9lanie-saville-july-11-2014">Interviews with Sanofi Pasteur – Mélanie Saville - July 11, 2014</a></span>  </div></li>
+          <li class="views-row views-row-8 views-row-even film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/interview-dr-gubler" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_0.jpg" width="219" height="166" alt="Interview with Dr Gubler" title="Interview with Dr Gubler" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/interview-dr-gubler">Interview with Dr Gubler</a></span>  </div></li>
+          <li class="views-row views-row-9 views-row-odd film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/b-roll-dengue" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_7.jpg" width="219" height="166" alt="B Roll Dengue" title="B Roll Dengue" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/b-roll-dengue">B Roll Dengue</a></span>  </div></li>
+          <li class="views-row views-row-10 views-row-even film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/b-roll-clinical-study-investigators" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_11.jpg" width="219" height="166" alt="B-roll - Clinical study investigators" title="B-roll - Clinical study investigators" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/b-roll-clinical-study-investigators">B-roll - Clinical study investigators</a></span>  </div></li>
+          <li class="views-row views-row-11 views-row-odd film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/dengue-vaccine-study-thailand" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_14.jpg" width="219" height="166" alt="Dengue Vaccine Study in Thailand" title="Dengue Vaccine Study in Thailand" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/dengue-vaccine-study-thailand">Dengue Vaccine Study in Thailand</a></span>  </div></li>
+          <li class="views-row views-row-12 views-row-even film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/dengue-vaccine-study-mexico" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_6.jpg" width="219" height="166" alt="Dengue vaccine study in Mexico" title="Dengue vaccine study in Mexico" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/dengue-vaccine-study-mexico">Dengue vaccine study in Mexico</a></span>  </div></li>
+          <li class="views-row views-row-13 views-row-odd views-row-last film">  
+  <div class="views-field views-field-field-yt-hqdefault">        <div class="field-content"><a href="/content/2010-dengue-fever-epidemic-martinique-testimonials" class="imagefield-fancybox"><img src="http://www.dengue.info/sites/default/files/styles/youtub-preview/public/hqdefault_3.jpg" width="219" height="166" alt="2010 Dengue Fever Epidemic in Martinique: testimonials" title="2010 Dengue Fever Epidemic in Martinique: testimonials" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/2010-dengue-fever-epidemic-martinique-testimonials">2010 Dengue Fever Epidemic in Martinique: testimonials</a></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="rang rang-1-4 clearfix row-4">
+  <div class="inside rang-inside rang-1-4-inside clearfix">
+<div class="region region-1-press_releases region-first press-releases">
+  <div class="inside region-inside region-1-press_releases-inside region-inside-first">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-odd view-mode-one_line clearfix ">
+
+  
+  <div class="field field-name-bold-lite field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='one-line-title'><span class='picto'><a href='content/all-press-releases'><img  src='http://www.dengue.info/sites/default/files/pictos/pressicon.jpg' alt=""  title="" /></a></span><div class='header title'><h2 id='press'><span class='bold'>PRESS</span><span class='book'> RELEASES</span></a></h2></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-press-releases" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-press-releases view-id-press_releases view-display-id-default view-dom-id-d027a8c901bc228b138d7c6ca18da812">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-field-date">        <div class="field-content"><span class="date-display-single">November 3, 2014</span></div>  </div>  
+  <div class="views-field views-field-title-1">        <span class="field-content"><a href="/content/new-england-journal-medicine-publishes-results-final-landmark-phase-iii-efficacy-clinical--0" class="imagefield-fancybox">The New England Journal of Medicine Publishes Results of Final Landmark Phase III Efficacy Clinical Study of Sanofi Pasteur&#039;s Dengue Vaccine Candidate</a></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-field-date">        <div class="field-content"><span class="date-display-single">September 3, 2014</span></div>  </div>  
+  <div class="views-field views-field-title-1">        <span class="field-content"><a href="/content/sanofi-pasteur%E2%80%99s-dengue-vaccine-candidate-successfully-completes-final-landmark-phase-iii-cl" class="imagefield-fancybox">Sanofi Pasteur’s Dengue Vaccine Candidate Successfully Completes Final Landmark Phase III Clinical Efficacy Study in Latin America</a></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <div class="views-field views-field-field-date">        <div class="field-content"><span class="date-display-single">July 11, 2014</span></div>  </div>  
+  <div class="views-field views-field-title-1">        <span class="field-content"><a href="/content/first-ever-dengue-vaccine-candidate-show-efficacy-against-dengue-fever-and-dengue-haemorrhag" class="imagefield-fancybox">First Ever Dengue Vaccine Candidate To Show Efficacy Against Dengue Fever and Dengue Haemorrhagic Fever in Asia</a></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-3" >
+  
+      
+  
+  <div class="pane-content">
+    <a href="content/all-press-releases"><span class="readmore">SEE ALL PRESS RELEASES</span></a>  </div>
+
+  
+  </div>
+  </div>
+</div>
+<div class="region region-1-publications region-last publications">
+  <div class="inside region-inside region-1-publications-inside region-inside-last">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-even view-mode-one_line clearfix ">
+
+  
+  <div class="field field-name-bold-lite field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='one-line-title'><span class='picto'><a href=''><img  src='http://www.dengue.info/sites/default/files/pictos/publicationsicon.jpg' alt=""  title="" /></a></span><div class='header title'><h2 id='publications'><span class='bold'></span><span class='book'> PUBLICATIONS</span></a></h2></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-publications" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-publications view-id-publications view-display-id-home_publication_block view-dom-id-32af6e8b5a1aa5ab35ddc915236bfb4c">
+        
+  
+  
+      <div class="view-content">
+      <div class="list-all">    <ul class="list-item">          <li class="views-row views-row-1 views-row-odd views-row-first list-row">  
+  <div>        <span class="date"><span class="date-display-single">October  2014</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/economic-and-disease-burden-dengue-illness-india" class="imagefield-fancybox">Economic and Disease Burden of Dengue Illness in India</a></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even list-row">  
+  <div>        <span class="date"><span class="date-display-single">July  2014</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/clinical-efficacy-and-safety-novel-tetravalent-dengue-vaccine-healthy-children-asia-phase-3-" class="imagefield-fancybox">Clinical efficacy and safety of a novel tetravalent dengue vaccine in healthy children in Asia: a phase 3, randomised, observer-masked, placebo-controlled trial</a></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd views-row-last list-row">  
+  <div>        <span class="date"><span class="date-display-single">August  2013</span></span>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/dengue-and-other-common-causes-acute-febrile-illness-asia-active-surveillance-study-children" class="imagefield-fancybox">Dengue and Other Common Causes of Acute Febrile Illness in Asia: An Active Surveillance Study in Children</a></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-4" >
+  
+      
+  
+  <div class="pane-content">
+    <a href="content/all-publications"><span class="readmore">SEE ALL PUBLICATIONS</span></a>  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="rang rang-1-5 clearfix row-5">
+  <div class="inside rang-inside rang-1-5-inside clearfix">
+<div class="region region-1-maps region-first Maps">
+  <div class="inside region-inside region-1-maps-inside region-inside-first">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-odd view-mode-one_line clearfix ">
+
+  
+  <div class="field field-name-bold-lite field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='one-line-title'><span class='picto'><a href='#maps'><img  src='http://www.dengue.info/sites/default/files/pictos/mapsicon2.jpg' alt=""  title="" /></a></span><div class='header title'><h2 id='maps'><span class='bold'>MAPS</span><span class='book'> </span></a></h2></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-block-5" >
+  
+      
+  
+  <div class="pane-content">
+     <p><img alt="map" src="/sites/dengue2.localhost/files/illustrations/map_clinical-studies_small.jpg" style="width: 209px; height: 113px;"></p>
+<p><div class="view view-maps view-id-maps view-display-id-maps_list_block view-dom-id-41a2002d2d5be94e3477f201986c047c">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul class="bleu">          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <span class="views-field views-field-title">        <span class="field-content"><a href="/content/clinical-studies" title="Clinical Studies"><strong>Clinical Studies </strong>(Interactive)</a></span>  </span></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <span class="views-field views-field-title">        <span class="field-content"><a href="/content/dengue-watch-0" title="Dengue watch"><strong>Dengue watch </strong>(Interactive)</a></span>  </span></li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <span class="views-field views-field-title">        <span class="field-content"><a href="/content/expert-opinions" title="Expert Opinions"><strong>Expert Opinions </strong>(Interactive)</a></span>  </span></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div></p>
+<ul class="bleu">
+<li><a href="/content/clinical-studies-0" title="Clinical studies"><strong>Clinical studies </strong>(Jpeg)</a></li>
+</ul>
+   </div>
+
+  
+  </div>
+  </div>
+</div>
+<div class="region region-1-r__f__rences ref">
+  <div class="inside region-inside region-1-r__f__rences-inside">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-odd view-mode-one_line clearfix ">
+
+  
+  <div class="field field-name-bold-lite field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='one-line-title'><span class='picto'><a href='#all-references'><img  src='http://www.dengue.info/sites/default/files/pictos/referencesicon.jpg' alt=""  title="" /></a></span><div class='header title'><h2 id='all-references'><span class='bold'>REFERENCES</span><span class='book'> </span></a></h2></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-references .article.ref" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-references view-id-references view-display-id-block view-dom-id-50bb1ab8461d8d5ec6c860b7a4f7420c">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.dengue.info/sites/default/files/fact_sheet-sanofi_pasteur_dengue_vaccine_candidate_0.pdf" target="_blank">Fact Sheet - Sanofi Pasteur Dengue Vaccine Candidate (October 2014)</a></span>  </div>  
+  <div class="views-field views-field-field-file-size">        <div class="field-content">[pdf - 334 Ko] </div>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.dengue.info/sites/default/files/cyd15_fact_sheet_20140903.pdf" target="_blank">Fact sheet - Phase III Efficacy Study of Sanofi Pasteur&#039;s Dengue Vaccine Candidate in Latin America (September 2014)</a></span>  </div>  
+  <div class="views-field views-field-field-file-size">        <div class="field-content">[pdf - 84 Ko] </div>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.dengue.info/sites/default/files/infographic-dengue-phase-3-efficacy-study-asia-en.pdf" target="_blank">Infographic - Dengue Vaccine Study in Asia</a></span>  </div>  
+  <div class="views-field views-field-field-file-size">        <div class="field-content">[pdf - 934 Ko] </div>  </div></li>
+          <li class="views-row views-row-4 views-row-even views-row-last">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.dengue.info/sites/default/files/fact_sheet_study_asia_20140704.pdf" target="_blank">Factsheet - Dengue Vaccine Study in Asia (July 2014)</a></span>  </div>  
+  <div class="views-field views-field-field-file-size">        <div class="field-content">[pdf - 100 Ko] </div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+  </div>
+</div>
+<div class="region region-1-photos region-last photos">
+  <div class="inside region-inside region-1-photos-inside region-inside-last">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-even view-mode-one_line clearfix ">
+
+  
+  <div class="field field-name-bold-lite field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='one-line-title'><span class='picto'><a href='/#overlay=content/flickr-album-1'><img  src='http://www.dengue.info/sites/default/files/pictos/photosicon.jpg' alt=""  title="" /></a></span><div class='header title'><h2 id='photos'><span class='bold'>PHOTOS</span><span class='book'> </span></a></h2></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-block-4" >
+  
+      
+  
+  <div class="pane-content">
+     <p><a href="https://www.flickr.com/photos/sanofi-pasteur/sets/72157625526944249/show" title="Photo mosaic - Dengue vaccine candidate clinical studies in Thailand - click!"><img alt="Photo mosaic - Dengue vaccine clinical studies in Thailand" src="/sites/dengue2.localhost/files/photos_lite-02.jpg" style="width: 301px; height: 140px;" /></a></p>
+<p><span style="float: right; padding-right: 27px;"><a href="http://www.flickr.com/photos/sanofi-pasteur/collections/72157629994026239/" style="font : 13px/1.5em Arial, sans-serif; color: #444492;"><strong>More images on Sanofi Pasteur Flickr</strong><img align="absmiddle" alt="More images on Sanofi Pasteur Flickr" src="/sites/all/themes/basic/img/plus_button.jpg" style="width: 22px; height: 20px;padding-left: 5px;" /></a></span></p>
+   </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="rang rang-1-6 clearfix row-6">
+  <div class="inside rang-inside rang-1-6-inside clearfix">
+<div class="region region-1-fact_sheet region-first region-last fact-sheet">
+  <div class="inside region-inside region-1-fact_sheet-inside region-inside-first region-inside-last">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-even view-mode-one_line clearfix ">
+
+  
+  <div class="field field-name-bold-lite field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='one-line-title'><span class='picto'><a href=''><img  src='http://www.dengue.info/sites/default/files/pictos/factsheeticon.jpg' alt=""  title="" /></a></span><div class='header title'><h2 id='dengue-facts'><span class='bold'>Dengue</span><span class='book'> Facts</span></a></h2></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-block-6" >
+  
+      
+  
+  <div class="pane-content">
+    <p>Dengue fever is a mosquito-borne disease caused by four dengue virus serotypes (1 to 4). Overall, the disease is a potential threat to almost half of the world&rsquo;s population. Of the estimated 100 million people infected annually, 500,000&mdash;mostly children&mdash;develop dengue hemorrhagic fever (DHF), a severe form of the disease. DHF is a leading cause of hospitalization, placing tremendous&nbsp; pressure on<!--column-->strained medical resources and having a heavy economic and societal impact.<br />&nbsp;<br />Many factors have contributed to the re-emergence and dramatic increase in dengue fever including urbanization and increased travel which facilitates dissemination of dengue viruses and the circulation of all four dengue virus serotypes. <!--column-->Sanofi Pasteur, a world leader in vaccines, has taken on the challenge of providing the first dengue vaccine for individuals living in endemic areas as well as for those who plan to travel to those areas.</p>  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="rang rang-1-7 clearfix row-7">
+  <div class="inside rang-inside rang-1-7-inside clearfix">
+<div class="region region-1-site_map region-first site_map">
+  <div class="inside region-inside region-1-site_map-inside region-inside-first">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-odd view-mode-one_line clearfix ">
+
+  
+  <div class="field field-name-bold-lite field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='one-line-title'><span class='picto'><a href=''><img  src='http://www.dengue.info/sites/default/files/pictos/sitemapicon.jpg' alt=""  title="" /></a></span><div class='header title'><h2 id='sitemap'><span class='bold'>SITE</span><span class='book'> MAP</span></a></h2></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-block-15" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="article site_map" title="Site Map">
+	<table border="0" cellpadding="1" cellspacing="1" style="width: 452px; height: 238px;">
+		<tbody>
+			<tr>
+				<td style="vertical-align: top; width: 150px;">
+					<ul>
+						<li><strong><a class="modale_invitation" href="/#overlay=content/topnews" title="Dengue news ">Top news</a></strong></li>
+						<li><strong><a class="rss" href="/#overlay=dengue_info_updates" title="DengueInfo Updates">Updates</a></strong></li>
+						<li><strong><a class="all_press_releases" href="/content/all-press-releases" title="Press Releases about dengue and dengue vaccine development">Press Release</a></strong></li>
+						<li><strong><a class="all_publication" href="/content/all-publications" title="Publications of interest on dengue">Publications</a></strong></li>
+						<li><strong><a href="#" title="Reference document on dengue">Press References</a></strong>
+							<ul>
+								<li><div class="view view-references view-id-references view-display-id-site_map view-dom-id-07193e2e7fa2414af9bbdb613f2604a9">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.dengue.info/sites/default/files/fact_sheet-sanofi_pasteur_dengue_vaccine_candidate_0.pdf " target="_blank">Fact Sheet - Sanofi Pasteur Dengue Vaccine Candidate (October 2014)</a></span>  </div></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.dengue.info/sites/default/files/cyd15_fact_sheet_20140903.pdf " target="_blank">Fact sheet - Phase III Efficacy Study of Sanofi Pasteur&#039;s Dengue Vaccine Ca...</a></span>  </div></li>
+          <li class="views-row views-row-3 views-row-odd">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.dengue.info/sites/default/files/infographic-dengue-phase-3-efficacy-study-asia-en.pdf " target="_blank">Infographic - Dengue Vaccine Study in Asia</a></span>  </div></li>
+          <li class="views-row views-row-4 views-row-even views-row-last">  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="http://www.dengue.info/sites/default/files/fact_sheet_study_asia_20140704.pdf " target="_blank">Factsheet - Dengue Vaccine Study in Asia (July 2014)</a></span>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div></li>
+							</ul>
+						</li>
+					</ul>
+					<p><strong><a href="#" title="Facts and information about dengue ">Dengue Facts</a></strong></p>
+				</td>
+				<td style="vertical-align: top; width: 150px;">
+					<ul>
+						<li><strong><a href="#" title="Meet the experts">Meet the experts</a></strong>
+							<ul>
+								<li><div class="view view-the-experts view-id-the_experts view-display-id-site_map view-dom-id-7db90a06067e873e5d7cfad6002225c4">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first">  
+          <a href="/experts/11392/dr-nicholas-jackson" class="imagefield-fancybox">Dr. Nicholas Jackson</a>  </li>
+          <li class="views-row views-row-2 views-row-even">  
+          <a href="/experts/1055/dr-melanie-saville" class="imagefield-fancybox">Dr. Melanie Saville</a>  </li>
+          <li class="views-row views-row-3 views-row-odd">  
+          <a href="/experts/408/guillaume-leroy" class="imagefield-fancybox">Guillaume Leroy</a>  </li>
+          <li class="views-row views-row-4 views-row-even">  
+          <a href="/experts/129/dr-michael-watson" class="imagefield-fancybox"> Dr. Michael Watson </a>  </li>
+          <li class="views-row views-row-5 views-row-odd views-row-last">  
+          <a href="/experts/122/antoine-quin" class="imagefield-fancybox">Antoine Quin</a>  </li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div></li>
+							</ul>
+						</li>
+						<li><strong><a href="#" title="Dengue outbreaks, clinical studies, expert testimonials">Maps</a></strong>
+							<ul>
+								<li style="height:10px;width:100%"><div class="view view-maps view-id-maps view-display-id-></li>
+							</ul>
+						</li>
+						<li><strong><a href="#" title="Dengue outbreaks, clinical studies, expert testimonials">Maps</a></strong>
+							<ul>
+								<li style="height:10px;width:100%"><div class="view view-maps view-id-msite_map view-dom-id-0e87ae6f5a557cd28edc555fecca4ac6">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul class="bleu">          <li class="views-row views-row-1 views-row-odd views-row-first">  
+  <span class="views-field views-field-title">        <span class="field-content"><a href="/content/clinical-studies"><strong>Clinical Studies </strong>(Interactive)</a></span>  </span></li>
+          <li class="views-row views-row-2 views-row-even">  
+  <span class="views-field views-field-title">        <span class="field-content"><a href="/content/dengue-watch-0"><strong>Dengue watch </strong>(Interactive)</a></span>  </span></li>
+          <li class="views-row views-row-3 views-row-odd views-row-last">  
+  <span class="views-field views-field-title">        <span class="field-content"><a href="/content/expert-opinions"><strong>Expert Opinions </strong>(Interactive)</a></span>  </span></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div></li>
+								<br />
+								<li style="height:10px;width:100%"><a href="/content/clinical-studies-0" title="Clinical studies">Clinical Studies (Jpeg)</a></li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>&nbsp;</p>
+  </div>
+
+  
+  </div>
+  </div>
+</div>
+<div class="region region-1-connect region-last connect">
+  <div class="inside region-inside region-1-connect-inside region-inside-last">
+<div class="panel-pane pane-node" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="ds-1col node node-block-header node-promoted node-odd view-mode-one_line clearfix ">
+
+  
+  <div class="field field-name-bold-lite field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class='one-line-title'><span class='picto'><a href=''><img  src='http://www.dengue.info/sites/default/files/pictos/connecticon.jpg' alt=""  title="" /></a></span><div class='header title'><h2 id='connect'><span class='bold'>CONNECT</span><span class='book'> </span></a></h2></div></div></div></div></div></div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-block-7" >
+  
+      
+  
+  <div class="pane-content">
+     <table border="0" cellpadding="1" cellspacing="1" style="width: 361px; height: 225px;">
+<tbody>
+<tr>
+<td style="width: 200px; text-align: left; vertical-align: top;">
+<ul>
+<li><a href="http://www.youtube.com/dengueinfo">Youtube </a>
+<ul>
+<li><a href="http://www.youtube.com/dengueinfo">Special Reports</a></li>
+</ul>
+</li>
+<li><a href="https://twitter.com/DengueInfo" target="_blank">Twitter</a>
+<ul>
+<li><a href="https://twitter.com/DengueInfo" target="_blank">Dengue Info</a></li>
+</ul>
+</li>
+<li><a href="http://www.flickr.com/photos/sanofi-pasteur/sets/72157625526944249/show">Flickr</a>
+<ul>
+<li><a href="http://www.flickr.com/photos/sanofi-pasteur/sets/72157625526944249/show">Sanofi Pasteur Gallery</a></li>
+</ul>
+</li>
+<li><a href="http://denguematters.info">Blog</a>
+<ul>
+<li><a href="http://denguematters.info">Dengue Matters</a></li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="vertical-align: top; width: 200px; text-align: left;">
+<ul>
+<li><a href="#media-contact">Contact</a>
+<ul>
+<li>&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="http://www.dengue.info/#overlay=content/subscribe-1">Sign up for weekly updates</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+   </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="rang rang-1-8 clearfix menu-toolbar">
+  <div class="inside rang-inside rang-1-8-inside clearfix">
+<div class="region region-1-toolbar region-first region-last toolbar">
+  <div class="inside region-inside region-1-toolbar-inside region-inside-first region-inside-last">
+<div class="panel-pane pane-block pane-menu-menu-navigation-bar" >
+  
+      
+  
+  <div class="pane-content">
+    <ul class="menu"><li class="first leaf id-img-class-imagemenu-image-imagemenu-833-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_01_0-png-alt-all-press-releases-title-all-press-releases- mid-833"><a href="/content/all-press-releases" title="All press releases" class="imagefield-fancybox"><img class="imagemenu-image imagemenu-833" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_01_0.png" alt="All press releases" title="All press releases" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-2182-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_02_1-png-alt-all-publications-title-all-publications- mid-2182"><a href="/content/all-publications" title="All publications"><img class="imagemenu-image imagemenu-2182" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_02_1.png" alt="All publications" title="All publications" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-835-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_03_0-png-alt-all-references-title-all-references- mid-835"><a href="/#all-references" title="All references" class="active"><img class="imagemenu-image imagemenu-835" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_03_0.png" alt="All references" title="All references" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-1323-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_04-png-alt-dengue-facts-title-dengue-facts- mid-1323"><a href="/#dengue-f title="All references" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenuacts" title="Dengue facts" class="active"><img class="imagemenu-image imagemenu-1323" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_04.png" alt="Dengue facts" title="Dengue facts" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-1324-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_05-png-alt-meet-the-experts-title-meet-the-experts- mid-1324"><a href="/#meet-the-experts" title="Meet the experts" class="active"><img class="imagemenu-image imagemenu-1324" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_05.png" alt="Meet the experts" title="Meet the experts" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-1325-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_06_0-png-alt-maps-title-maps- mid-1325"><a href="/#maps" title="Maps" class="active"><img class="imagemenu-image imagemenu-1325" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_06_0.png" alt="Maps" title="Maps" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-1326-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_07_0-png-alt-youtube-title-youtube- mid-1326"><a href="http://www.youtube.com/dengueinfo" title="Youtube"><img class="imagemenu-image imagemenu-1326" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_07_0.png" alt="Youtube" title="Youtube" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-1327-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_08_0-png-alt-twitter-title-twitter- mid-1327"><a href="http://twitter.com/#!/DengueInfo" title="Twitter"><img class="imagemenu-image imagemenu-1327" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_08_0.png" alt="Twitter" title="Twitter" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-3721-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_09_1-png-alt-photos-amp-infographics-title-photos-amp-infographics- mid-3721"><a href="http://www.flickr.com/photos/sanofi-pasteur/collections/72157629994026239/" title="Photos &amp; infographics"><img class="imagemenu-image imagemenu-3721" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_09_1.png" alt="Photos &amp; infographics" title="Photos &amp; infographics" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-1329-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_10-png-alt-blog-title-blog- mid-1329"><a href="http://raphics" title="Photos &amp; infographics" />denguematters.info/" title="Blog"><img class="imagemenu-image imagemenu-1329" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_10.png" alt="Blog" title="Blog" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-1331-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_12-png-alt-dengue-maps-title-dengue-maps- mid-1331"><a href="/#dengue-maps" title="Dengue maps" class="active"><img class="imagemenu-image imagemenu-1331" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_12.png" alt="Dengue maps" title="Dengue maps" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-1332-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_13-png-alt-media-contact-title-media-contact- mid-1332"><a href="/#media-contact" title="Media contact" class="active"><img class="imagemenu-image imagemenu-1332" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_13.png" alt="Media contact" title="Media contact" /></a></li>
+<li class="leaf id-img-class-imagemenu-image-imagemenu-1333-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_14-png-alt-connect-title-connect- mid-1333"><a href="/#connect" title="Connect" class="active"><img class="imagemenass="leaf id-img-class-imagemenu-image-imagemenu-1333-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-icons_14-png-altu-image imagemenu-1333" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/icons_14.png" alt="Connect" title="Connect" /></a></li>
+<li class="last leaf id-img-class-imagemenu-image-imagemenu-3713-src-http-www-dengue-info-sites-default-files-styles-icons_menu-public-imagemenu-signup-png-alt-sign-up-for-weekly-update-title-sign-up-for-weekly-update- mid-3713"><a href="/content/subscribe-1" title="Sign up for weekly update"><img class="imagemenu-image imagemenu-3713" src="http://www.dengue.info/sites/default/files/styles/icons_menu/public/imagemenu/signup.png" alt="Sign up for weekly update" title="Sign up for weekly update" /></a></li>
+</ul>  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="rang rang-1-11 rang-last clearfix footer">
+  <div class="inside rang-inside rang-1-11-inside rang-inside-last clearfix">
+<div class="region region-1-foot region-first region-last ">
+  <div class="inside region-inside region-1-foot-inside region-inside-first region-inside-last">
+<div class="panel-pane pane-block pane-block-14" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="footer"><p style="text-align: center;"><a class="top" href="#bandeau">TOP</a></p><div class="text_footer"><a href="http://www.sanofipasteur.com"><img alt="Sanofi Pasteur" class="floatR" src="/sites/dengue2.localhost/files/illustrations/logo_top.jp class="footer"><p style="text-align: center;"><a class="top" href="#bandeau">TOP</a></p><div class="text_footer"><a href="http://www.sanofipasteur.cog" style="float: right;" /></a>&nbsp;<p class="resposability">(1) Sanofi Pasteur declines all responsibility for the contents of linked external websites,<br />the responsibility of which lies solely with their respective authors and editors.</p><p class="copy">Copyright 2011 Sanofi Pasteur<br />All rights reserved<br /><span id="lastUpdate">&nbsp;</span></p><p class="bleu legal"><a href="http://www.sanofipasteur.com/en/legal-notice.aspx" target="_blank" title="Legal notes">LEGAL NOTES</a></p><a href="mailto:media@sanofipasteur.com?subject=Contact%20from%20DengueInfo" title="Contact us">CONTACT US</a></div></div><p>&nbsp;</p>  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+</div>
+		</div>
+
+  </div>
+</div> <!-- /block-inner /block -->  </div>
+          
+        </div>
+
+        
+      </div>
+    </div> <!-- /content-inner /content -->
+
+    
+     <!-- /sidebar-first -->
+
+     <!-- /sidebar-second-->
+
+  </div> <!-- /main -->
+
+  <!-- ______________________ FOOTER _______________________ -->
+
+     
+    <div id="hiddenLastUpdate" style="display:none;">
+              
+                                        This page last updated on January 06, 2015              
+    </div>
+    
+</div> <!-- /page -->
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    jQuery('#lastUpdate').html(jQuery("#hiddenLastUpdate").html());
+    
+    jQuery(".scroll-pane").jScrollPane({
+		showArrows: true,
+		horizontalGutter: 10,
+		maintainPosition: false
+	});
+
+    // specific html caracters
+      jQuery('.title > a').each(function() {
+            var r = jQuery(this).text().replace(/&#039;/gi, "'");
+            jQuery(this).text(r);
+      });
+  });
+</script>    
+    <script type="text/javascript">xtnv=document;xtsd="http://logi3";xtsite="80247";xtn2=137;xtdi="";</script>
+
+    <script type="text/javascript">var xt1=".sanofipasteur.com";</script>
+    <script type="text/javascript" src="/sites/all/themes/basic/js/xtcore.js"></script>
+    <noscript>
+      <img width=1 height=1 alt="" src="http://logi3.xiti.com/hit.xiti?s=80247&s2=137&p=home::dengue_media_room&di=&">
+    </noscript> 
+    <script type="text/javascript">
+      jQuery(document).ready(function(){
+        var l_lang;
+				
+        if (navigator.userLanguage){ // IE
+          l_lang = navigator.userLanguage;
+        }else if (navigator.language){ // FF
+          l_lang = navigator.language;
+        }else{
+          l_lang = "en";
+        }				
+					
+        l_lang="";
+        // alert (l_lang);
+				
+        if(l_lang.indexOf("fr") > -1 || l_lang.indexOf("en") > -1){ 
+          l_lang = "fr";
+        }else if  (l_lang.indexOf("es") > -1){
+          l_lang = "es";
+        }else if  (l_lang.indexOf("pt") > -1){
+          l_lang = "pt";
+        }						
+		
+        jQuery("#google_translate").attr('href', '../#overlay=content/scientific-collaboration/#googtrans(en|'+l_lang+')');
+        jQuery("#google_translate").click(function() {
+          window.location.href='#overlay=content/scientific-collaboration/#googtrans(en|'+l_lang+')';
+          window.location.reload(true);
+        });
+        
+      });
+    </script>
+
+ 
+        <script type="text/javascript">
+          l_lang="";
+          //   alert (l_lang);
+        </script>
+            <script>
+		if (skippopin!=1) {
+			function getCookieVal(offset) {
+				var endstr=document.cookie.indexOf (";", offset);
+				if (endstr==-1)
+						endstr=document.cookie.length;
+				return unescape(document.cookie.substring(offset, endstr));
+			}
+			function GetCookie (name) {
+				var arg=name+"=";
+				var alen=arg.length;
+				var clen=document.cookie.length;
+				var i=0;
+				while (i<clen) {
+					var j=i+alen;
+					if (document.cookie.substring(i, j)==arg)
+									return getCookieVal (j);
+							i=document.cookie.indexOf(" ",i)+1;
+									if (i==0) break;}
+				return null;
+			}
+
+			function SetCookie (name, value) {
+				var argv=SetCookie.arguments;
+				var argc=SetCookie.arguments.length;
+				var expires=(argc > 2) ? argv[2] : null;
+				var path=(argc > 3) ? argv[3] : null;
+				var domain=(argc > 4) ? argv[4] : null;
+				var secure=(argc > 5) ? argv[5] : false;
+				document.cookie=name+"="+escape(value)+
+					((expires==null) ? "" : ("; expires="+expires.toGMTString()))+
+					((path==null) ? "" : ("; path="+path))+
+					((domain==null) ? "" : ("; domain="+domain))+
+					((secure==true) ? "; secure" : "");
+			}
+			//var cookieDengue = readCookie('dengue_language_expire');
+			var cookieDengue = GetCookie("dengue_language_expire_js");
+			//alert(cookieDengue);
+			if (navigator.cookieEnabled && cookieDengue == null) {
+			var pathname=location.pathname;
+			var myDomain=pathname.substring(0,pathname.lastIndexOf('/')) +'/';
+			var date_exp = new Date();
+			date_exp.setTime(date_exp.getTime()+(4*24*3600*1000));
+			// Ici on définit une durée de vie de 4 jours
+			SetCookie("dengue_language_expire_js",true,date_exp,myDomain);
+				  jQuery.colorbox({
+					href:"poptranslate.php",
+					width:"450" ,
+					height:"575",
+					overlayClose:false,
+					onComplete: function(){
+					  var l_lang;
+					  //alert (l_lang);
+					  
+					  if (navigator.userLanguage){ // IE
+						l_lang = navigator.userLanguage;
+					  }else if (navigator.language){ // FF
+						l_lang = navigator.language;
+					  }else{
+						l_lang = "en";
+					  }
+					  
+					  l_lang="";	
+					  
+					  if(l_lang.indexOf("fr") > -1 || l_lang.indexOf("en") > -1){
+						l_lang = "fr";
+					  }else if  (l_lang.indexOf("es") > -1){
+						l_lang = "es";
+					  }else if  (l_lang.indexOf("
+						l_lang = "en";
+					  }
+					  
+					  l_lang="";	
+					  
+					  if(l_lang.indexOf("pt") > -1){
+						l_lang = "pt";
+					  }  
+				  
+					  var path = window.location.href;
+					  jQuery("#colorbox #google_translate").attr('href', path+'#overlay=content/scientific-collaboration/#googtrans(en|'+l_lang+')');
+					  
+					  jQuery("#colorbox #google_translate").click(function(e) {
+						window.location.href = this.href;
+						window.location.reload(true);
+					  });
+					  
+					}
+				  });
+			  }
+			  // Gestion Evenementiel
+			  /*jQuery.colorbox({
+				href:"popevent.php",
+				width:"450" ,
+				height:"450",
+				overlayClose:false,
+				onComplete: function(){
+				  
+				  var path = window.location.href;
+				  //jQuery("#colorbox #google_translate").attr('href', path+'#googtrans(en|'+l_lang+')');
+				  
+				  jQuery("#colorbox #eventevent").click(function(e) {
+					window.location.href = this.href;
+					window.location.reload(true);
+				  }); 
+				  
+				  jQuery("#colorbox #eventhome").click(function(e) {
+					window.location.href = this.href;
+					window.location.reload(true);
+				  }); 
+				  
+				}
+			  });*/
+		}
+        </script>
+        <!--div id="hiddenevent" style="display: none">
+        </div-->
+</body>"#colorbox #eventhome").click(function(e) {
+					window.location.href = this.href;
+					window.location.reload(true);
+				  }

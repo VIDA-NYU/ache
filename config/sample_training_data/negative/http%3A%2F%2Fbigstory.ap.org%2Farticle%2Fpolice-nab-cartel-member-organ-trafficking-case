@@ -1,0 +1,788 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html lang="en" dir="ltr" version="HTML+RDFa 1.1"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:fb="http://ogp.me/ns/fb#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"> 
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+ <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwEPUFdADQYFU1NT"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+<meta property="twitter:title" content="Police nab cartel member in organ trafficking case" />
+<meta property="twitter:description" content="MEXICO CITY (AP) — Police in Mexico&#039;s western state of Michoacan detained an alleged member of the Knights Templar cartel, saying he is suspected of trafficking organs. Michoacan state Public Safety Secretary Carlos Castellanos…" />
+<meta property="twitter:url" content="http://bigstory.ap.org/article/police-nab-cartel-member-organ-trafficking-case" />
+<meta property="twitter:site" content="@ap" />
+<meta property="article:publisher" content="https://www.facebook.com/APNews" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:app:name:iphone" content="AP Mobile" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta name="twitter:app:id:iphone" content="284901416" />
+<meta name="twitter:app:id:googleplay" content="mnn.Android" />
+<meta name="twitter:app:url:googleplay" content="apmobile://article/b26a24f2771f4cce898e8b82e6113100" />
+<link href="http://bigstory.ap.org/profiles/ap/themes/ap_vertical/touch-icon.png" rel="apple-touch-icon" />
+<meta name="twitter:app:name:googleplay" content="AP Mobile" />
+<meta name="twitter:app:url:ipad" content="apmobile://article/b26a24f2771f4cce898e8b82e6113100" />
+<meta name="twitter:app:url:iphone" content="apmobile://article/b26a24f2771f4cce898e8b82e6113100" />
+<meta name="twitter:app:name:ipad" content="AP Mobile" />
+<meta name="twitter:app:id:ipad" content="284901416" />
+<meta property="fb:app_id" content="118162278248556" />
+<meta property="og:description" obile://article/b26a24f2771f4cce898e8b82e6113100" />
+<meta name="twitter:app:name:ipad" content="AP Mobile" />
+<meta name="twitter:app:id:ipad" content="284901416" />
+<meta property="fb:app_id" content="1content="MEXICO CITY (AP) — Police in Mexico&#039;s western state of Michoacan detained an alleged member of the Knights Templar cartel, saying he is suspected of trafficking organs. Michoacan state Public Safety Secretary Carlos Castellanos…" />
+<meta property="al:ios:url" content="apmobile://article/b26a24f2771f4cce898e8b82e6113100" />
+<meta property="al:ios:app_store_id" content="284901416" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<link rel="shortcut icon" href="http://bigstory.ap.org/sites/bigstory/files/AP_Favicon_0_0.png" type="image/png" />
+<link rel="canonical" href="http://bigstory.ap.org/article/police-nab-cartel-member-organ-trafficking-case" />
+<link rel="shortlink" href="/node/7257076" />
+<meta property="og:url" content="http://bigstory.ap.org/article/police-nab-cartel-member-organ-trafficking-case" />
+<meta property="al:ios:app_name" content="AP Mobile" />
+<meta property="og:title" content="Police nab cartel member in organ trafficking case" />
+<meta property="og:site_name" content="The Big Story" />
+<meta property="al:android:url" content="apmobile://article/b26a24f2771f4cce898e8b82e6113100" />
+<meta property="al:web:url" content="http://bigstory.ap.org/article/police-nab-cartel-member-organ-trafficking-case" />
+<meta property="al:android:class" content="com.ap.facebook.FacebookShareActivity" />
+<meta property="al:android:app_name" content="AP Mobile" />
+<meta property="al:android:package" content="mnn.Android" />
+<meta name="description" content="MEXICO CITY (AP) — Police in Mexico&#039;s western state of Michoacan detained an alleged member of the Knights Templar cartel, saying he is suspected of trafficking organs. Michoacan state Public Safety Secretary Carlos Castellanos Becerra alleged that Manuel Plancarte Gaspar was part of a cartel ring that would target people with certain characteristics, especially children, for kidnapping and harvesting organs. He did not give any specifics or present cases. He said investigators are looking into alleged cases that occurred in previous years. &quot;We have several statements in open investigations,&quot; Castellenos said at a news conference Monday. Plancarte Gaspar, 34, was detained last week along with another suspect in a stolen car. The men were carrying cash and crystal meth, Castellanos Becerra said. He said Plancarte Gaspar is the nephew of Enrique Plancarte Solis, a top Knights Templar leader. The federal government generally handles cases of trafficking that have to do with cartels, such as drugs and in the case of the Knights Templar, iron ore. Federal officials were not immediately available for comment Monday, which was a holiday in Mexico. Mexican authorities have said drug trafficking is no longer the top source of income for the Knights Templar, which was once a top producer of crystal meth. The officials say the cartel&#039;s main sources of income are illegal mining, illegal logging and extortion." />
+<meta name="keywords" content="Smuggling, Drug cartels, Organized crime" />
+<meta name="rights" content="2012 Associated Press" />
+    <title>Police nab cartel member in organ trafficking case</title>  
+  <style type="text/css" media="all">@import url("http://bigstory.ap.org/modules/system/system.base.css?nfwubp");
+@import url("http://bigstory.ap.org/modules/system/system.menus.css?nfwubp");
+@import url("http://bigstory.ap.org/modules/system/system.messages.css?nfwubp");
+@import url("http://bigstory.ap.org/modules/system/system.theme.css?nfwubp");</style>
+<style type="text/css" media="all">@import url("http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_boxes/css/flyout.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/modules/contrib/date/date_api/date.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/modules/contrib/date/date_popup/themes/datepicker.1.7.css?nfwubp");
+@import url("http://bigstory.ap.org/modules/field/theme/field.css?nfwubp");
+@import url("http://bigstory.ap.org/modules/node/node.css?nfwubp");
+@import url("http://bigstory.ap.org/modules/search/search.css?nfwubp");
+@import url("http://bigstory.ap.org/modules/user/user.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/modules/contrib/views/css/views.css?nfwubp");</style>
+<style type="text/css" media="all">@import url("http://bigstory.ap.org/profiles/ap/modules/contrib/ctools/css/ctools.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/modules/custom/dev/ap_polar_ads/css/polar_ad_article_bs.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_microformats/ap_microformats.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/css/siro.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/css/glyphicon.css?nfwubp");</style>
+<style type="text/css" media="all">@import url("http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/css/fonts.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/css/foundation.min.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/css/styles-bigStory.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/css/style.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/css/magnific-popup.css?nfwubp");</style>
+<style type="text/css" media="all">@import url("http://bigstory.ap.org/profiles/ap/themes/omega/alpha/css/alpha-mobile.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/themes/omega/omega/css/omega-branding.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/themes/omega/omega/css/omega-menu.css?nfwubp");
+@import url("http://bigstory.ap.org/profiles/ap/themes/omega/omega/css/omega-visuals.css?nfwubp");</style>
+<style type="text/css" media="print">@import url("http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/css/print.css?nfwubp");</style>
+
+<!--[if (lt IE 9)&(!IEMobile)]>
+<style type="text/css" media="all">@import url("http://bigstory.ap.org/profiles/ap/themes/omega/alpha/css/grid/alpha_default/normal/alpha-default-normal-12.css?nfwubp");</style>
+<![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="/profiles/ap/themes/bigstory_v2/assets/js/responsive_ads.js"></script>
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.google_analytics_uacct = "UA-27590430-2";
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+googletag.slots = googletag.slots || {};
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/misc/drupal.js?nfwubp"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["topic_box_2"] = googletag.defineSlot("/15786418/BigStory/AP/site/node/7257076", [300, 250], "dfp-ad-topic_box_2")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["leaderboard"] = googletag.defineSlot("/15786418/BigStory/AP/site/node/7257076", [728, 90], "dfp-ad-leaderboard")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["mobileleaderboard"] = googletag.defineSlot("/15786418/BigStory/AP/site/node/7257076", [[300, 50], [320, 50]], "dfp-ad-mobileleaderboard")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["half_page"] = googletag.defineSlot("/15786418/BigStory/AP/site/node/7257076", [[300, 600], [300, 250]], "dfp-ad-half_page")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.slots["mediumrectangle"] = googletag.defineSlot("/15786418/BigStory/AP/site/node/7257076", [300, 250], "dfp-ad-mediumrectangle")
+  .addService(googletag.pubads());
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _sf_startpt=(new Date()).getTime()
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "11304492" });(function() { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); })();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_boxes/js/jquery.hoverIntent.minified.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_boxes/js/jquery.masonry.min.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_boxes/js/ap_boxes.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_boxes/js/ap_boxes_masonry.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_boxes/js/ap_boxes_flyout.js?nfwubp"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+googletag.cmd.push(function() {
+  googletag.pubads().enableAsyncRendering();
+  googletag.pubads().enableSingleRequest();
+});
+googletag.enableServices();
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+<!--Visual Revenue Reader Response Tracking Script (v6) -->
+    var _vrq = _vrq || [];
+    _vrq.push(["id", 113]);
+    _vrq.push(["automate", false]);
+    _vrq.push(["track", function(){}]);
+    (function(d, a){
+        var s = d.createElement(a),
+        x = d.getElementsByTagName(a)[0];
+        s.async = true;
+        s.src = "http://a.visualrevenue.com/vrs.js";
+        x.parentNode.insertBefore(s, x);
+    })(document, "script");
+<!-- End of VR RR Tracking Script - All rights reserved -->
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://content.zemanta.com/static/custom/bigstory/js/loader.js"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_article/js/dynamic-carousel.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_article/js/jquery.wmuslider.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/core/ap_article/js/ap_carousel.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/optional/responsive_dfp_box/js/responsive_dfp.js?nfwubp"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.CKEDITOR_BASEPATH = '/profiles/ap/libraries/ckeditor/'
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/contrib/google_analytics/googleanalytics.js?nfwubp"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-27590430-2"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/sites/bigstory/files/ap_polar_ads.js?nfwubp"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{Typekit.load();}catch(e){}
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{Typekit.load();}catch(e){}
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://use.typekit.com/uta3cck.js"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/package-quojs-2.3.6/quo.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/contrib/disqus/disqus.js?nfwubp"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var AP_SOCIAL = {"refresh_delay":"3600","node_id":"7257076"}
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/js/mondernizr.custom.min.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/vendor/modernizr.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/jquery-scrolltofixed.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/custom.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/magnific-popup/jquery.magnific-popup.min.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/magnific-popup/core.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/magnific-popup/gallery.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/bigstory_v2/assets/js/magnific-popup/image.js?nfwubp"></script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/themes/omega/omega/js/omega-mediaqueries.js?nfwubp"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"bigstory_v2","theme_token":"ElfUVy50oX5gk3fMTXoAcU2iDlx-pvO9i1nHzG6AGK8","js":{"0":1,"profiles\/ap\/modules\/custom\/optional\/ap_social\/js\/ap_social.min.js":1,"1":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"2":1,"http:\/\/www.googletagservices.com\/tag\/js\/gpt.js":1,"misc\/drupal.js":1,"3":1,"4":1,"5":1,"6":1,"7":1,"8":1,"9":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/js\/jquery.hoverIntent.minified.js":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/js\/jquery.masonry.min.js":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/js\/ap_boxes.js":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/js\/ap_boxes_masonry.js":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/js\/ap_boxes_flyout.js":1,"10":1,"11":1,"http:\/\/content.zemanta.com\/static\/custom\/bigstory\/js\/loader.js":1,"profiles\/ap\/modules\/custom\/core\/ap_article\/js\/dynamic-carousel.js":1,"profiles\/ap\/modules\/custom\/core\/ap_article\/js\/jquery.wmuslider.js":1,"profiles\/ap\/modules\/custom\/core\/ap_article\/js\/ap_carousel.js":1,"profiles\/ap\/modules\/custom\/optional\/responsive_dfp_box\/js\/responsive_dfp.js":1,"12":1,"profiles\/ap\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"13":1,"public:\/\/ap_polar_ads.js":1,"14":1,"15":1,"http:\/\/use.typekit.com\/uta3cck.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/package-quojs-2.3.6\/quo.js":1,"profiles\/ap\/modules\/contrib\/disqus\/disqus.js":1,"16":1,"profiles\/ap\/themes\/bigstory_v2\/js\/mondernizr.custom.min.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/vendor\/modernizr.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/jquery-scrolltofixed.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/custom.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/magnific-popup\/jquery.magnific-popup.min.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/magnific-popup\/core.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/magnific-popup\/gallery.js":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/js\/magnific-popup\/image.js":1,"profiles\/ap\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"profiles\/ap\/modules\/custom\/core\/ap_boxes\/css\/flyout.css":1,"profiles\/ap\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/ap\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"profiles\/ap\/modules\/contrib\/views\/css\/views.css":1,"profiles\/ap\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/ap\/modules\/custom\/dev\/ap_polar_ads\/css\/polar_ad_article_bs.css":1,"profiles\/ap\/modules\/custom\/core\/ap_microformats\/ap_microformats.css":1,"profiles\/ap\/themes\/bigstory_v2\/css\/siro.css":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/css\/glyphicon.css":1,"profiles\/ap\/themes\/bigstory_v2\/css\/fonts.css":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/css\/foundation.min.css":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/css\/styles-bigStory.css":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/css\/style.css":1,"profiles\/ap\/themes\/bigstory_v2\/assets\/css\/magnific-popup.css":1,"profiles\/ap\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"profiles\/ap\/themes\/omega\/omega\/css\/omega-branding.css":1,"profiles\/ap\/themes\/omega\/omega\/css\/omega-menu.css":1,"profiles\/ap\/themes\/omega\/omega\/css\/omega-visuals.css":1,"profiles\/ap\/themes\/bigstory_v2\/css\/print.css":1,"ie::normal::profiles\/ap\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1}},"responsive_dfp_box":{"responsive_leaderboard":{"desktop":"\n\u003Cdiv  id=\u0022dfp-ad-leaderboard\u0022 class=\u0022dfp-tag-wrapper\u0022\u003E\n    \u003Cscript type=\u0022text\/javascript\u0022\u003E\n    googletag.cmd.push(function() {\n      googletag.display(\u0022dfp-ad-leaderboard\u0022);\n    });\n  \u003C\/script\u003E\n\u003C\/div\u003E\n","mobile":"\n\u003Cdiv  id=\u0022dfp-ad-mobileleaderboard\u0022 class=\u0022dfp-tag-wrapper\u0022\u003E\n    \u003Cscript type=\u0022text\/javascript\u0022\u003E\n    googletag.cmd.push(function() {\n      googletag.display(\u0022dfp-ad-mobileleaderboard\u0022);\n    });\n  \u003C\/script\u003E\n\u003C\/div\u003E\n"}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"disqus":{"domain":"thebigstory","url":"http:\/\/bigstory.ap.org\/article\/police-nab-cartel-member-organ-trafficking-case","title":"Police nab cartel member in organ trafficking case","identifier":"node\/7257076"},"omega":{"layouts":{"primary":"normal","order":["narrow","normal"],"queries":{"narrow":"screen and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)","normal":"screen and (min-width: 1040px) and (min-device-width: 1040px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)"}}}});
+//--><!]]>
+</script>
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--[if lt IE 9]><link rel="stylesheet" href="/profiles/ap/themes/bigstory_v2/assets/css/fix-ie8.css"><![endif]-->
+  <!--[if lt IE 10]><link rel="stylesheet" href="/profiles/ap/themes/bigstory_v2/assets/css/fix-ie9.css"><![endif]-->
+  <!--[if lt IE 9]><script src="/profiles/ap/themes/bigstory_v2/assets/js/fix-ie8.js"></script><![endif]-->
+  <!--[if IE 9]><script src="/profiles/ap/themes/bigstory_v2/assets/js/fix-ie9.js"></script><![endif]-->
+  <!--[if lt IE 10]><script src="/profiles/ap/themes/bigstory_v2/assets/js/css3-multi-column.js"></script><![endif]-->
+  <script type="text/javascript">
+      $(function(){
+          if( $('body').hasClass("node-type-ap-article") ){
+              var script_quo = document.createElement('script')
+              script_quo.src = '/profiles/ap/themes/bigstory_v2/assets/js/package-quojs-2.3.6/quo.js'
+              document.documentElement.firstChild.appendChild(script_quo);
+          }
+      });
+  </script>
+</head>
+<body class="html not-front not-logged-in page-node page-node- page-node-7257076 node-type-ap-article context-article">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+
+  <div class="region region-page-top" id="region-page-top">
+  <div class="region-inner region-page-top-inner">
+      </div>
+</div>  <div class="page clearfix" id="page">
+      <header id="section-header" class="section section-header">
+  <div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">  
+  <div id="zone-branding" class="zone zone-branding clearfix container-12">
+    <header>
+    <nav class="top-bar" data-topbar="">
+        <ul class="title-area">
+            <li class="name">
+                <a class="logo" href="/">
+                    <!--[if gte IE 9]><!-->
+                    <img src="/profiles/ap/themes/bigstory_v2/assets/images/ap_logo_bigstory.svg" width="291" alt="">
+                    <!--<![endif]-->
+                    <!--[if lte IE 8]>
+                      <img class="fix-ie8-logo" src="/profiles/ap/themes/bigstory_v2/assets/images/ap_logo_bigstory.png" width="291" alt="">
+                    <![endif]-->
+                </a>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span><!-- menu --></span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <!--<nav id="nav">-->
+            <!--menu dinamico-->
+            <ul class="right medium-3 menuLinks">
+                
+                            <li class="hide-for-medium">
+            
+                            <a href="http://bigstory.ap.org/latest">
+                    Latest News                </a>
+            
+
+                        </li>
+           
+                        <li class="hide-for-small search-li dividerbigstory">
+                    <a id="idsearchform" type="button" data-options="align:left" data-dropdown="headerSearch" data-options="is_hover:false">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </a>
+                    <div data-dropdown-content="" class="small content searchform drop-left open" id="headerSearch" style="display: none; position: absolute; left: -295px; top: 3px;">
+                        
+                        <form action="/" method="post" id="search-block-form" accept-charset="UTF-8">
+                                
+                                    <!--<div class="container-inline">
+                                    <div class="form-item form-type-textfield form-item-search-block-form">-->
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <div class="row collapse">
+                                    <div class="small-10 colu">
+                                        <input title="Enter the terms you wish to search for." placeholder="Search..." type="text" id="edit-search-block-form--2" name="search_block_form" value=""  maxlength="128" class="form-text">
+                                    </div>
+                                    <div  class="small-2 colu" id="edit-actions">
+                                        <input id="butonsearch" class="button postfix" type="submit" name="op" value="Go" >
+                                    </div>
+                                    <input type="hidden" name="form_id" value="search_block_form">
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </li>
+                <li class="searchForm show-for-small">
+                    <form action="/" method="post" id="search-block-form" accept-charset="UTF-8" >
+                            <!--<div class="container-inline">-->
+                        <div class="">
+                            <div class="small-12 columns">
+                                <div class="row collapse" style="float:left">
+                                    <div class="small-10 columns">
+                                        <input title="Enter the terms you wish to search for." placeholder="Search..." type="text" id="edit-search-block-form--2" name="search_block_form" value=""  maxlength="128" class="form-text"/>
+                                    </div>
+                                    <div  class="small-2 columns" id="edit-actions2">
+                                        <input id="butonsearch" class="button postfix" type="submit" name="op" value="Go" />
+                                    </div>
+                                <input type="hidden" name="form_id" value="search_block_form"/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+                <li class="divider show-for-small"></li>
+                <!--<li class="ad_nav">
+                    <a href="#"><img src="/profiles/ap/themes/bigstory_v2/assets/sample/ad_88x31.png" alt=""></a>
+                </li>-->
+            </ul>
+            <!--</nav>-->
+        </section>
+    </nav>
+</header>
+<div class="block block-boxes block-boxes-responsive-dfp block-responsive-leaderboard block-boxes-responsive-leaderboard odd block-without-title" id="block-boxes-responsive-leaderboard">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div id='boxes-box-responsive_leaderboard' class='boxes-box'><div class="boxes-box-content"><div id="responsive_leaderboard-responsive-ad" class="responsive-ad"></div></div></div>    </div>
+  </div>
+
+</div>  </div>
+</div><!--<div>    <div id="whitelabel_header" class="clearfix">
+      </div>
+    <div class="menu-zone-inner-wrapper">
+	  <div>
+	    	  </div>
+  </div>
+</div>--></header>    
+      <section id="section-content" class="section section-content">
+  <div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">  
+  <div id="zone-content" class="zone zone-content clearfix container-12">    
+        
+            <div id="section-article-full">
+
+
+  <div class="region-inner region-content-inner">
+    <ant-wrapper" class="zone-wrapper zone-content-wrapper clearfix">  
+  <div id="zone-content" class="zone zone-content clearfix container-12">    
+        
+            <div id="section-article-full">
+
+
+  <div class=" id="main-content"></a>
+                 
+            <div class="tabs clearfix"></div>        <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    
+<section class="row article">
+<!-- Main article BEGIN -->
+<article class="large-9 medium-8 columns">
+    <section class="articleHeader">
+        
+        <div class="byline-dateline">
+            <!--
+                        <a href="/tags/drug-cartels">Drug cartels</a>
+                        -->
+        </div>
+
+                          <h1 class="story-heading">Police nab cartel member in organ trafficking case <span></span></h1>
+                
+      <div class="story-meta-footer">
+          
+        <div class="byline-dateline"> 
+            <div id="byline"><div class="field field-name-field-byline-original field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">By <a href="/content/olga-r-rodriguez">OLGA R. RODRIGUEZ</a></div></div></div></div>
+            <div id="dateline">
+                   <span  class="updated" title="2014-03-17T23:19:15-04:00">Mar. 17, 2014 11:19 PM EDT</span> 
+            </div>
+        </div>
+          
+      </div>
+
+    </section>
+
+    <!-- sticky Tool-bar BEGIN -->
+    <section class="article_toolbar sticky" id="sticky-article-toolbar">
+        <div class="small-12 left">
+            
+<a class="share_bt hide-for-small" id="facebook" href="#"><i></i></a>
+<a class="share_bt hide-for-small" id="twitter" href="#"><i></i></a>
+<a class="share_bt hide-for-small" id="email" href="mailto:?subject=AP Big Story: Police nab cartel member in organ trafficking case&body=From AP, %0D%0A %0D%0APolice nab cartel member in organ trafficking case. %0D%0A %0D%0AMEXICO CITY (AP) &#x2014; Police in Mexico's western state of Michoacan detained an alleged member of the Knights Templar cartel, saying he is suspected of trafficking organs.  %0D%0A %0D%0Ahttp://bigstory.ap.org/article/police-nab-cartel-member-organ-trafficking-case"><i></i></a>
+<a href="#" class="share_bt" id="shareAll" data-dropdown="social-dropdown" onclick="javascript:return false;"><i></i>
+  <span class="share_bt" id="sharesTotal"></span>
+</a>
+
+<div class="right">
+  <a href="#" class="share_bt right" id="commentsAnchor"><i></i><span id="comments-count"></span></a>
+</div>
+
+<div id="social-dropdown-parent">
+  <div id="social-dropdown" class="f-dropdown">
+    <h6>Share article</h6>
+    <ul class="small-block-grid-3">
+      <li><a class="share_bt" id="facebook" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="twitter" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="linkedin" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="googleplus" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="reddit" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="tumblr" href="#"><i></i></a></li>
+      <li><a class="share_bt" id="email" href="mailto:?subject=AP Big Story: Police nab cartel member in organ trafficking case&body=From AP, %0D%0A %0D%0APolice nab cartel member in organ trafficking case. %0D%0A %0D%0AMEXICO CITY (AP) &#x2014; Police in Mexico's western state of Michoacan detained an alleged member of the Knights Templar cartel, saying he is suspected of trafficking organs.  %0D%0A %0D%0Ahttp://bigstory.ap.org/article/police-nab-cartel-member-organ-trafficking-case"><i></i></a></li>
+    </ul>
+  </div>
+</div>
+        </div>
+    </section>
+    
+ <script type="text/javascript">var only_one_photo = 0;</script> 
+ 
+
+<div  class="hnews-hidden"><div  class="hnews-author-org">By: <span  class="author vcard"><a href="/content/olga-r-rodriguez" class="fn">OLGA R. RODRIGUEZ</a></span> (<span  class="source-org vcard"><span  class="org fn">AP</span></span>)</div><span  class="dateline">MEXICO CITY</span><a  rel="item-license" id="license-5072131b818c92bf2dc8153962ed6cae" href="#license-5072131b818c92bf2dc8153962ed6cae">Copyright 2014 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.</a><div  class="geo hnews-geo"><span  class="latitude">19.4285</span><span  class="longitude">-99.1277</span></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden entry-content"><div class="field-items"><div class="field-item even"><p><block><p>MEXICO CITY (AP) — Police in Mexico's western state of Michoacan detained an alleged member of the Knights Templar cartel, saying he is suspected of trafficking organs.</p>
+<p>Michoacan state Public Safety Secretary Carlos Castellanos Becerra alleged that Manuel Plancarte Gaspar was part of a cartel ring that would target people with certain characteristics, especially children, for kidnapping and harvesting organs.</p>
+<p>He did not give any specifics or present cases. He said investigators are looking into alleged cases that occurred in previous years.</p>
+<p>"We have several statements in open investigations," Castellenos said at a news conference Monday.</p>
+<p>Plancarte Gaspar, 34, was detained last week along with another suspect in a stolen car. The men were carrying cash and crystal meth, Castellanos Becerra said. He said Plancarte Gaspar is the nephew of Enrique Plancarte Solis, a top Knights Templar leader.</p>
+<p>The federal government generally handles cases of trafficking that have to do with cartels, such as drugs and in the l meth, Castellanos Becerra said. He said Plancarte Gaspar is the nephew of Enrique Plancarte Solis, a tcase of the Knights Templar, iron ore.</p>
+<p>Federal officials were not immediately available for comment Monday, which was a holiday in Mexico.</p>
+<p>Mexican authorities have said drug trafficking is no longer the top source of income for the Knights Templar, which was once a top producer of crystal meth. The officials say the cartel's main sources of income are illegal mining, illegal logging and extortion.</p>
+</block></p></div></div></div>
+</article>
+
+
+
+  <div class="loadMore show-full-article">
+    <section id="articleExpand">
+        <div class="fade"></div>
+	<button>SEE FULL ARTICLE</button>
+
+	<!-- ad -->
+        <section class="columns ad-block">
+            <div class="block block-dfp block-topic-box-2 block-dfp-topic-box-2 odd block-without-title" id="block-dfp-topic-box-2">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div id="dfp-ad-topic_box_2-wrapper" class="dfp-tag-wrapper"><div class="slug">Advertisement</div>
+<div  id="dfp-ad-topic_box_2" class="dfp-tag-wrapper">
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-topic_box_2");
+    });
+  </script>
+</div>
+</div>    </div>
+  </div>
+
+</div>            <!--<img src="/profiles/ap/themes/bigstory_v2/assets/sample/ad_300x250.png" alt="" />-->
+        </section>
+    </section>
+  </div>
+
+<!-- Pagination BEGIN -->
+<!--    <section id="pagination" class="large-8 medium-8 small-12 columns">
+        <a class="article-prev" href="#">
+            <span class="arrow"><img src="assets/images/pagination_arrows_prev.png" alt="" /></span>
+            <div class="title">
+                <span>&#60; Previous</span>
+                Article title Lorem ipsum dolor aner xculis Article title Lorem ipsum dolor
+                long Article title
+            </div>
+        </a>
+
+        <a class="article-next right" href="#">
+            <span class="arrow"><img src="assets/images/pagination_arrows_next.png" alt="" /></span>
+            <div class="title">
+                <span>Next &#62;</span>
+                Article title Lorem ipsum dolor aner xculis Article title Lorem ipsum dolor
+            </div>
+        </a>
+    </section> -->
+    <!-- Pagination END -->
+
+    <div class="loadMore hide-for-medium-up">
+        <button id="button_comments" class="small-12 left">SEE COMMENTS</button>
+    </div>
+    
+    <section id="articleComments" class="large-8 medium-8 left columns hide-for-small">
+	<h4>Comments</h4> -->
+
+    <div class="loadMore hide-for-medium-u
+	<div id="disqus_thread"><noscript><p><a href="http://thebigstory.disqus.com/?url=http%3A%2F%2Fbigstory.ap.org%2Farticle%2Fpolice-nab-cartel-member-organ-trafficking-case">View the discussion thread.</a></p></noscript></div>    </section>    
+
+</section>
+
+    </div>
+  </div>
+
+</div>      </div>
+</div><aside class="grid-4 region region-sidebar-first" id="region-sidebar-first">
+  <div class="region-inner region-sidebar-first-inner">
+    <div class="ap-recent-articles"><section class="block block-ap-misc block-ap-recent-articles block-ap-misc-ap-recent-articles odd" id="block-ap-misc-ap-recent-articles">
+  <div class="block-inner clearfix">
+                      <h2 class="block-title">Latest News</h2>
+            
+    <div class="content clearfix"   data-vr-zone='Latest News'>
+       <!-- sidebar BEGIN -->
+<article class="node node-ap-article hnews hentry item node-published node-not-promoted node-not-sticky author-admin even clearfix" id="node-ap-article-9701506">
+  <div class="article-list-node-content clearfix" data-vr-contentbox="">
+
+      	  <div class="article-list-header">
+	    		    <h4 class="entry-title node-title title" rel="bookmark"><a href="/article/ab34d1ff83294436ac2e3f1672af802c/bc-cotton-bale" title="BC-Cotton Bale"><a href="/article/ab34d1ff83294436ac2e3f1672af802c/bc-cotton-bale">BC-Cotton Bale</a></a></h4>
+		  		</div>  
+	  
+	  <div class="article-list-body">
+	    	  </div>
+		
+		<footer>
+		  <div class="article-data">
+		    <span  class="updated" title="2014-12-01T15:25:30-05:00">Dec. 1, 2014 3:25 PM EST</span>		  </div>
+	  </footer>
+  </div>
+</article>
+
+   <!-- sidebar BEGIN -->
+<article class="node node-ap-article hnews hentry item node-published node-not-promoted node-not-sticky author-admin odd clearfix" id="node-ap-article-9701431">
+  <div class="article-list-node-content clearfix" data-vr-contentbox="">
+
+      	  <div class="article-list-header">
+	    		    <h4 class="entry-title node-title title" rel="bookmark"><a href="/article/d4cd4f27d8c44872869b9a3e231bacc7/son-convicted-looting-brooke-astors-money-dies" title="Son convicted of looting Brooke Astor&#039;s money dies"><a href="/article/d4cd4f27d8c44872869b9a3e231bacc7/son-convicted-looting-brooke-astors-money-dies">Son convicted of looting Brooke Astor&#039;s money dies</a></a></h4>
+		  		</div>  
+	  
+	  <div class="article-list-body">
+	    	  </div>
+		
+		<footer>
+		  <div class="article-data">
+		    <span  class="updated" title="2014-12-01T15:25:27-05:00">Dec. 1, 2014 3:25 PM EST</span>		  </div>
+	  </footer>
+  </div>
+</article>
+
+   <!-- sidebar BEGIN -->
+<article class="node node-ap-article hnews hentry item node-published node-not-promoted node-not-sticky author-admin even clearfix" id="node-ap-article-9700381">
+  <div class="article-list-node-content clearfix" data-vr-contentbox="">
+
+            <div class="field field-name-field-ap-photo-ref field-type-ap-photo-ref field-label-hidden">
+        <div class="field-items" >
+          <div class="field-item even">
+              <a href="/article/b1b286306c4f4abdb6d9602b766c9a04/gop-aide-resigns-over-criticism-obama-daughters"><img src="http://binaryapi.ap.org/a85709b8d046453092dd9dae3760ebc5/115x.jpg" alt="Barack Obama, Malia Obama, Sasha Obama" title="Barack Obama, Malia Obama, Sasha Obama"></a>
+          </div>
+        </div>
+      </div>
+      	  <div class="article-list-header">
+	    		    <h4 class="entry-title node-title title" rel="bookmark"><a href="/article/b1b286306c4f4abdb6d9602b766c9a04/gop-aide-resigns-over-criticism-obama-daughters" title="GOP aide resigns over criticism of Obama daughters"><a href="/article/b1b286306c4f4abdb6d9602b766c9a04/gop-aide-resigns-over-criticism-obama-daughters">GOP aide resigns over criticism of Obama daughters</a></a></h4>
+		  		</div>  
+	  
+	  <div class="article-list-body">
+	    	  </div>
+		
+		<footer>
+		  <div class="article-data">
+		    <span  class="updated" title="2014-12-01T15:25:05-05:00">Dec. 1, 2014 3:25 PM EST</span>		  </div>
+	  </footer>
+  </div>
+</article>
+
+   <!-- sidebar BEGIN -->
+<article class="node node-ap-article hnews hentry item node-published node-not-promoted node-not-sticky author-admin odd clearfix" id="node-ap-article-9698996">
+  <div class="article-list-node-content clearfix" data-vr-contentbox="">
+
+            <div class="field field-name-field-ap-photo-ref field-type-ap-photo-ref field-label-hidden">
+        <div class="field-items" >
+          <div class="field-item even">
+              <a href="/article/c83d8dd04b27401d9c5ba627fcb83272/israeli-lightly-wounded-west-bank-attack"><img src="http://binaryapi.ap.org/375867d2e05e4b0898f618fd37c8e7ea/115x.jpg" alt="Mideast Israel Palestinians" title="Mideast Israel Palestinians"></a>
+          </div>
+        </div>
+      </div>
+      	  <div class="article-list-header">
+	    		    <h4 class="entry-title node-title title" rel="bookmark"><a href="/article/c83d8dd04b27401d9c5ba627fcb83272/israeli-lightly-wounded-west-bank-attack" title="Israeli lightly wounded in West Bank attack"><a href="/article/c83d8dd04b27401d9c5ba627fcb83272/israeli-lightly-wounded-west-bank-attack">Israeli lightly wounded in West Bank attack</a></a></h4>
+		  		</div>  
+	  
+	  <div class="article-list-body">
+	    	  </div>
+		
+		<footer>
+		  <div class="article-data">
+		    <span  class="updated" title="2014-12-01T15:25:02-05:00">Dec. 1, 2014 3:25 PM EST</span>		  </div>
+	  </footer>
+  </div>
+</article>
+
+   <!-- sidebar BEGIN -->
+<article class="node node-ap-article hnews hentry item node-published node-not-promoted node-not-sticky author-admin even clearfix" id="node-ap-article-9701501">
+  <div class="article-list-node-content clearfix" data-vr-contentbox="">
+
+      	  <div class="article-list-header">
+	    		    <h4 class="entry-title node-title title" rel="bookmark"><a href="/article/8221bc85776e4c3a8dc6cefbb0b47644/early-voting-data-looks-troublesome-landrieu" title="Early voting data looks troublesome for Landrieu"><a href="/article/8221bc85776e4c3a8dc6cefbb0b47644/early-voting-data-looks-troublesome-landrieu">Early voting data looks troublesome for Landrieu</a></a></h4>
+		  		</div>  
+	  
+	  <div class="article-list-body">
+	    	  </div>
+		
+		<footer>
+		  <div class="article-data">
+		    <span  class="updated" title="2014-12-01T15:23:57-05:00">Dec. 1, 2014 3:23 PM EST</span>		  </div>
+	  </footer>
+  </div>
+</article>
+
+    </div>
+  </div>
+
+</section></div><div class="block block-ap-polar-ads block-ap-polar-ad-article block-ap-polar-ads-ap-polar-ad-article even block-without-title" id="block-ap-polar-ads-ap-polar-ad-article">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div id="polar-article-content"><input type="hidden" id="polar-identifier" /></div>    </div>
+  </div>
+
+</div><div class="block block-dfp block-half-page block-dfp-half-page odd block-without-title" id="block-dfp-half-page">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div id="dfp-ad-half_page-wrapper" class="dfp-tag-wrapper"><div class="slug">Advertisement</div>
+<div  id="dfp-ad-half_page" class="dfp-tag-wrapper">
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-half_page");
+    });
+  </script>
+</div>
+</div>    </div>
+  </div>
+
+</div><div class="block block-block block-6 block-block-6 even block-without-title" id="block-block-6">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <style type="text/css">
+<!--/*--><![CDATA[/* ><!--*/
+
+#block-block-6
+{
+margin-top: 15px;
+}
+
+#block-block-6 .slug
+{
+position: relative;
+}
+/*--><!]]>*/
+</style><div class="slug">Advertisement</div>
+<div id="hgWdgBd"></div>
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+(function(window, undefined) {var d = window.document,s = d.getElementById("hgWdgBd"),f = d.createElement('IFRAME'),h;f.scrolling = 'no';f.style.border = 'none';f.style.width = '100%';f.src = "http://healthguides.healthgrades.com/ap-syndication-big-story?_embed=true&_format=_frame&refurl="+document.URL;s.parentNode.insertBefore(f, s);window.addEventListener('message', function(event) {var nh = parseInt(event.data, 10);if (h !== nh) {f.style.height = nh + 'px';h = nh;}}, false);})(window);
+
+//--><!]]>
+</script>    </div>
+  </div>
+
+</div><div class="block block-ap-misc block-ap-tags-detail block-ap-misc-ap-tags-detail odd block-without-title" id="block-ap-misc-ap-tags-detail">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div  class="ap-article-tags categories">
+    
+    
+    
+<h3 class="h3_tags">Topics</h3>
+<div class="tags">
+<a href="/tags/drug-cartels" rel="tag">Drug cartels</a>, <a href="/tags/smuggling" rel="tag">Smuggling</a>, <a href="/tags/organized-crime" rel="tag">Organized crime</a></div>
+</div>    </div>
+  </div>
+
+</div><div class="block block-dfp block-mediumrectangle block-dfp-mediumrectangle even block-without-title" id="block-dfp-mediumrectangle">
+  <div class="block-inner clearfix">
+                        
+    <div class="content clearfix"  >
+    <div id="dfp-ad-mediumrectangle-wrapper" class="dfp-tag-wrapper"><div class="slug">Advertisement</div>
+<div  id="dfp-ad-mediumrectangle" class="dfp-tag-wrapper">
+    <script type="text/javascript">
+    googletag.cmd.push(function() {
+      googletag.display("dfp-ad-mediumrectangle");
+    });
+  </script>
+</div>
+</div>    </div>
+  </div>
+
+</div>  </div>
+</aside>  </div>
+</div></section>    
+  
+      <footer id="section-footer" class="section section-footer">
+  <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">  
+  <div id="zone-footer" class="zone zone-footer clearfix container-12">
+    
+<footer>
+  <div id="siteFooter">
+    <div class="row">
+        <div class="medium-4 columns">
+            <h5>Get the AP Mobile app</h5>
+<a href="http://www.ap.org/apmobile/"><img src="http://bigstory.ap.org/sites/bigstory/files/Mobile%20App%20Download.png"></a>
+        </div>
+        <div class="medium-4 columns">
+            <h5>AP Sites</h5>
+            <ul class="">
+                <li><a href="http://wintergames.ap.org" >Winter Games</a></li>
+                <li><a href="http://collegebasketball.ap.org" >College Basketball</a></li>
+                <li><a href="http://racing.ap.org" >Auto Racing</a></li>
+                <li><a href="http://pro32.ap.org" >Football</a></li>
+            </ul>
+        </div>
+        <div class="medium-4 columns">
+            <h5>Follow AP</h5>
+            <ul class="">
+                <li><a href="https://www.facebook.com/pages/Associated-Press/107751995914945">Facebook</a></li>
+                <li><a href="https://twitter.com/AP">Twitter</a></li>
+                <li><a href="https://plus.google.com/+AP/">Google+</a></li>
+                <li><a href="https://www.linkedin.com/company/associated-press">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <hr>
+        <div class="medium-12 columns"> 
+            AP News | 
+           &copy; 2014 Associated Press  | 
+            <a href="/content/privacy-policy">Privacy Policy</a>  |  
+            <a href="/content/terms-use">Terms of Use</a>  |  
+            <a href="http://www.apimages.com/">AP Images</a>  |  
+            <a href="http://www.ap.org/">ap.org</a>
+        </div>
+    </div>
+</div></footer>  </div>
+</div></footer>  </div>  <div class="region region-page-bottom" id="region-page-bottom">
+  <div class="region-inner region-page-bottom-inner">
+    <noscript><img src="http://b.scorecardresearch.com/p?c1=2&c2=11304492&cv=2.0&cj=1" /></noscript>  </div>
+</div><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _sf_async_config={uid:11689,domain:""};(function() {function loadChartbeat() { window._sf_endpt=(new Date()).getTime(); var e = document.createElement('script'); e.setAttribute('language', 'javascript'); e.setAttribute('type', 'text/javascript'); e.setAttribute('src', (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") + "js/chartbeat.js"); document.body.appendChild(e); }var oldonload = window.onload;window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() { oldonload(); loadChartbeat(); };})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://bigstory.ap.org/profiles/ap/modules/custom/optional/ap_social/js/ap_social.min.js?nfwubp"></script>
+  <script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script>
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-1.newrelic.com","licenseKey":"560baa128a","applicationID":"555721","transactionName":"MlRTYkFSWkNUU0EKDQsecFVHWlteGl5aBwc6QVBRVmxCWVBH","queueTime":0,"applicationTime":820,"ttGuid":"","agentToken":"","atts":"HhNQFAlISU0=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script></body>
+</html>ansactionName":"MlRTYkFSWkNUU0EKDQsecFVHWlteGl5aBwc6QVBRVmxCWVBH","queueTime":0,"applicationTime":820,"ttGuid":"","agentToken":"","atts":"HhNQFAlISU0=","errorBeacon":"bam.nr-data.net",

@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+ <html lang="en" class="js-disabled">
+<head>
+	<meta charset="utf-8"/>
+
+	
+	
+						
+	
+		
+																					 																																					
+	<title>
+		How do you test an Ebola vaccine? : Nature News &amp; Comment
+	</title>
+
+	
+																																																					
+	<meta name="description" content="Scientists in West Africa are racing to determine what immunization strategies could be most effective to contain the epidemic."/>
+	<meta name="keywords" content="Diseases, Microbiology, Developing world, Immunology"/>
+
+			<meta property="og:type" content="article"/>
+		<meta property="og:site_name" content="Nature News &amp; Comment"/>
+		<meta property="og:title" content="How do you test an Ebola vaccine?"/>
+		<meta property="og:description" content="Scientists in West Africa are racing to determine what immunization strategies could be most effective to contain the epidemic."/>
+		<meta property="og:url" content="http://www.nature.com/news/how-do-you-test-an-ebola-vaccine-1.16579"/>
+											<meta property="og:image" content="http://www.nature.com/polopoly_fs/7.22589.1418925927!/image/HIRES%20AP715689018600%20reduced.jpg_gen/derivatives/nature_homepage/HIRES%20AP715689018600%20reduced.jpg"/>
+											<meta property="article:tag" content="Diseases"/>
+							<meta property="article:tag" content="Microbiology"/>
+							<meta property="article:tag" content="Developing world"/>
+							<meta property="article:tag" content="Immunology"/>
+							<meta property="article:section" content="News: Explainer"/>
+
+																
+	
+		<meta name="HandheldFriendly" content="True"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.2,user-scalable=yes"/>
+		<meta name="access" content="Yes"/>
+	<meta name="WT.cg_n" content="Nature News"/>
+	<meta name="WT.cg_s" content="News: Explainer"/>
+	<meta name="WT.z_cg_type" content="Nature News"/>
+
+						<meta name="citation_authors" content="Callaway, Ewen; "/>
+				<meta name="citation_journal_title" content="Nature News"/>
+		<meta name="citation_doi" content="doi:10.1038/nature.2014.16579"/>
+		<meta name="citation_title" content="How do you test an Ebola vaccine?"/>
+									
+
+	<!--[if IE]><![endif]-->
+
+	<script>(function(h){h.className=h.className.replace('js-disabled','js-enabled')})(document.getElementsByTagName('html')[0])</script>
+
+	<!--[if lt IE 9]><script>(function(e){for(var i=0;e[i];++i){document.createElement(e[i]);}})(['abbr','article','aside','audio','canvas','details','figcaption','figure','footer','header','hgroup','mark','meter','nav','output','progress','section','summary','time','video'])</script><![endif]-->
+	<!--[if IE 6]><script src="http://www.nature.com/common/scripts/ie-specific/ie-6.js"></script><![endif]-->
+
+			<!--[if (gt IE 8)|!(IE)]><!--><link rel="stylesheet" type="text/css" media="all" href="/polopoly_static/css/nature/news/compiled/tom5my8.css"/><!--<![endif]-->
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="/polopoly_static/css/nature/news/compiled/ie8-tom5my8.css"/><![endif]-->
+<!--[if (IE 6)|(IE 7)]><link rel="stylesheet" type="text/css" media="all" href="/polopoly_static/css/nature/news/compiled/ie-tom5my8.css"/><![endif]-->	
+	<link rel="shortcut icon" href="http://www.nature.com/favicon.ico"/>
+	<link rel="search" href="http://www.nature.com/search/executeSearch"/>
+	<link rel="search" type="application/opensearchdescription+xml" href="http://www.nature.com/opensearch/opensearch.xml"/>
+	<link rel="search" type="application/sru+xml" href="http://www.nature.com/opensearch/request"/>
+
+	<script src="//nexus.ensighten.com/npg/Bootstrap.js"></script>
+</head>
+<!--[if lt IE 6]><body class="lt-ie6"><![endif]-->
+<!--[if IE 6]><body class="ie6"><![endif]-->
+<!--[if IE 7]><body class="ie7"><![endif]-->
+<!--[if IE 8]><body class="ie8"><![endif]-->
+<!--[if gt IE 8]><body class="gt-ie8"><![endif]-->
+<!--[if !IE]>--><body><!--<![endif]-->
+
+	<div id="constrain">
+					<div id="foreword" class="cleared" role="banner">
+	<nav>
+		<h2 class="home" id="top"><a href="/">nature.com</a></h2>
+		<ul>
+			<li class="sitemap"><a href="/siteindex">Sitemap</a></li>	
+							<li class="register"><a href="/register">Register</a></li>
+				<li class="login"><a href="/foxtrot/svc/login">Login</a></li>
+					</ul>
+	</nav>
+</div>	
+									<div id="leaderboard" class="cleared single-ad">
+					
+        
+	
+									
+
+
+
+					
+
+
+<div class="ad ad-728x90 ad-1" data-ad-src="//ad.doubleclick.net/N285/adj/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;dcopt=ist;ptile=1;sz=728x90;pos=top;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=6053507538930295?">
+	<noscript><a href="//ad.doubleclick.net/N285/jump/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;dcopt=ist;ptile=1;sz=728x90;pos=top;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=6053507538930295?"><img src="//ad.doubleclick.net/N285/ad/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;dcopt=ist;ptile=1;sz=728x90;pos=top;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=6053507538930295?" alt="Advertisment"/></a></noscript>
+</div>
+			
+      				</div>
+					
+		<div id="main">
+			<div id="constrain-header" class="cleared">
+				
+        
+	
+									
+<header>
+	<div id="header">
+		<hgroup>
+			<h2><a href="/nature" class="hide-text">Nature</a></h2>
+			<h3>International weekly journal of science</h3>
+		</hgroup>
+	
+					
+
+<form method="get" action="/search/executeSearch" id="header-search" class="search-form" role="search">
+	<fieldset>
+		<label for="header-keyword">Search</label>
+		<input type="hidden" name="include-collections" value="journals_nature,crawled_content">
+		<input type="hidden" name="exclude-collections" value="journals_palgrave,lab_animal">
+		<input type="hidden" name="sp-c" value="25">
+		<input type="hidden" name="sp-s" value="date_descending">
+		<input type="hidden" name="sp-q-1" value="NATURE,NEWS,NNEWSB">		<input type="search" id="header-keyword" name="sp-q" placeholder="Search" value="" class="txt" maxlength="200">
+		<button type="submit" id="header-search-submit">Go</button>
+
+				<a
+		 href="/search/adv_search?sp-q-1=nature,news,nnewsb"
+		 class="search-link"
+		>Advanced search</a>
+			</fieldset>
+</form>
+				
+																						<nav>
+			<ul id="main-nav" class="cleared">
+				<li class="nav-home first"><a href="/nature/index.html"><span>Home</span></a></li>
+				<li class="nav-news active"><a href="http://www.nature.com/news/nature-news-comment-2.788"><span>News &amp; Comment</span></a></li>
+				<li class="nav-research"><a href="/nature/research/research_by_type.html"><span>Research</span></a></li>
+				<li class="nav-careers"><a href="/nature/careers/index.html"><span>Careers &amp; Jobs</span></a></li>
+				<li class="nav-current"><a href="/nature/current_issue.html"><span>Current Issue</span></a></li>
+				<li class="nav-archive"><a href="/nature/archive/index.html"><span>Archive</span></a></li>
+				<li class="nav-av"><a href="/nature/audio_video/index.html"><span>Audio &amp; Video</span></a></li>
+				<li class="nav-authors"><a href="/nature/authors/index.html"><span>For Authors</span></a></li>
+			</ul>
+		</nav>
+	</div>
+	
+			
+			
+						
+				
+													
+												
+									
+			
+												
+											
+				<div id="breadcrumbs">
+			<nav>
+				<ul id="sub-nav" class="cleared">
+																																														<li class="first parent parent-1"><a href="http://www.nature.com/news/nature-news-comment-2.788">News &amp; Comment</a></li>
+																																									<li class="parent parent-2"><a href="/nature/archive/category.html?code=archive_news">News</a></li>
+																																									<li class="parent parent-3"><a href="/nature/archive/category.html?code=archive_news">Explainer</a></li>
+																																									<li class="parent parent-4"><a href="/nature/archive/category.html?code=archive_news&amp;year=2015">2015</a></li>
+																																									<li class="parent parent-5"><a href="/nature/archive/category.html?code=archive_news&amp;year=2015&amp;month=01">January</a></li>
+																																														<li class="last current"><span>Article</span></li>
+								</ul>
+			</nav>
+		</div>
+		
+</header>			
+      			</div>
+
+						
+			<div id="constrain-content" class="cleared" role="main">
+				<div id="content" class="col">
+																									
+											
+
+<script>
+window.nature = window.nature || {};
+window.nature.showRelatedLinksPosition = 7;
+</script>
+<article>
+	<div id="article">
+		
+				
+	
+	<header>
+							<div class="top-row">
+				<p class="type-heading">
+					<span class="journal-title">Nature</span>
+					<span class="divider">|</span>
+					<span class="type">News: Explainer</span>
+				</p>
+
+				<div class="article-tools sharing">
+	<h3 class="visually-hidden">Sharing</h3>
+	<ul>
+		<li class="article-tool js-only">
+			<a class="icon print" href="javascript:window.print()">
+				<![if !(lte IE 7)]>
+				<img
+				 alt="Print"
+				 src="data:image/gif;base64,R0lGODlhEAAQAKECAIeHh46Ojv///////yH5BAEKAAMALAAAAAAQABAAAAIslIGpxgLdHpTQVTpbQPWAIGxcl4jKiaaLo55eC8fJ0VksTR4mu5QMFrm0GAUAOw=="
+				 class="inline-icon"
+				 data-tooltip="{alt}"
+				/>
+				<![endif]>
+				<!--[if lte IE 7]>
+				Print
+				<![endif]-->
+			</a>
+		</li>
+		<li class="article-tool">
+			<a
+			 class="icon email"
+			 href="/news/foxtrot/svc/mailform?doi=10.1038/nature.2014.16579&amp;file=/news/how-do-you-test-an-ebola-vaccine-1.16579"
+			>
+				<![if !(lte IE 7)]>
+				<img
+				 alt="Email"
+				 src="data:image/gif;base64,R0lGODlhEAAQAKECAIeHh46Ojv///////yH5BAEKAAMALAAAAAAQABAAAAIolI+piwEPY3RASGljvlvzC3UdKDgjWJ3o+gRqRQEuWz6vF7Myw/dJAQA7"
+				 class="inline-icon"
+				 data-tooltip="{alt}"
+				/>
+				<![endif]>
+				<!--[if lte IE 7]>
+				Email
+				<![endif]-->
+			</a>
+		</li>
+		<li class="article-tool social-tool popup-parent" data-role="popup-parent">
+			<h4 id="toggle-share" class="icon social">
+				<![if !(lte IE 7)]>
+				<img
+				 alt="Share/bookmark"
+				 src="data:image/gif;base64,R0lGODdhEAAQAOMOAIeHh4+Pj5aWlp6enqWlpa2trbS0tMPDw8rKytLS0tnZ2eHh4ejo6Pf39////////ywAAAAAEAAQAAAEU9DJSR0CQLBaF8YCRx0fJk5GCZyJoCKNQRSb4gZHkxwb8QU+XIOjAhCGomIAcfJhAi1AAUmJzTaNQmbh2HFPiEDmwzwxBqqThFRSOxilkPuSYUQAADs="
+				 class="inline-icon"
+				 data-tooltip="{alt}"
+				/>
+				<![endif]>
+				<!--[if lte IE 7]>
+				Share/bookmark
+				<![endif]-->
+			</h4>
+			<div id="share-links">
+				<ul class="social-options not-popup-content">
+					<li class="social-option">
+						<a href="http://www.facebook.com/share.php?u=http://www.nature.com/news/how-do-you-test-an-ebola-vaccine-1.16579" class="icon facebook">
+							<![if !(lte IE 7)]>
+							<img
+							 alt="Facebook"
+							 src="data:image/gif;base64,R0lGODlhEgASALMMAICdvoCcvkVuqujv+env+enw+WV5qIGdvkZuqkZvq0Zvqv///wAAAAAAAAAAAAAAACH5BAEAAAwALAAAAAASABIAAARykMlJq71YDpW6VwinEFSigIjXpSbFhYpwGsSytJMJispgLydXLBFKCGynYG4Fktk6SkmIlfj9cJLkKTEo2AoEECVFJiqenhJZYEIgESH1C/aEI1yBwyEA0NsAAAEKY3p8eQA2fAcJFAMsWnBJJBmUlRcRADs="
+							 class="inline-icon"
+							 data-alt-inline="true"
+							/>
+							<![endif]>
+							<!--[if lte IE 7]>
+							Facebook
+							<![endif]-->
+						</a>
+					</li>
+					<li class="social-option">
+						<a href="http://twitter.com/home/?status=How+do+you+test+an+Ebola+vaccine%3F+http://www.nature.com/news/how-do-you-test-an-ebola-vaccine-1.16579" class="icon twitter">
+							<![if !(lte IE 7)]>
+							<img
+							 alt="Twitter"
+							 src="data:image/gif;base64,R0lGODlhEgASANU/AD6p4T6p4P///zym3z2o4Tyl3zuj3j2o4Duk3z6q4T2n3zym4MXn9zuk3jqi3kS05T2n4EGx48bo9vP6/GDA6WC/6j+r4ki25crp+HPG60Ct4Tqi37fj9JbV8Y7S77zk9fv+/z+s4jyl4D+s4+b1/HvJ7P3//2LA6WLA6nfJ7HjJ68rp97Xh9G/F6Vu+50Ct4sDl9kS05bDg9T2o3/X8/j2n4UKy5Kzd9E235snq94LM7fT7/eDz+0Cu4sXn9v///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjBBODAxMTc0MDcyMDY4MTE4RjYyRDQ3RkZDRTI4OTIyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkMwNkVGMjMyREEyNDExRTE5QTI4Q0E4NDE4MDIxNkI3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkMwNkVGMjMxREEyNDExRTE5QTI4Q0E4NDE4MDIxNkI3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzZDRjkwNEMyNjIwNjgxMThGNjJENDdGRkNFMjg5MjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MEE4MDExNzQwNzIwNjgxMThGNjJENDdGRkNFMjg5MjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAA/ACwAAAAAEgASAAAGnMCfcEgsGo9IIWAZYDYDTwBxSV0eCgMC4RCYBiCNJqEQChgOS2KAcMFtBoqUT+ZxbaeIEq/ViEwEAiYZBV1DAAgoIDsMH4ACDCMLUoYIFDSOjjdwhUoDCSyYgCoOAJw/TQ4VJJgwFgNpQ002JxiOEjEGVFMEMR05Kxw6PQYJTFMAMwAvGgAGhKWwSk01CyKvVE2T0tlQ2VVJ4OFIQQA7"
+							 class="inline-icon"
+							 data-alt-inline="true"
+							/>
+							<![endif]>
+							<!--[if lte IE 7]>
+							Twitter
+							<![endif]-->
+						</a>
+					</li>
+					<li class="social-option">
+						<a href="http://del.icio.us/post?url=http://www.nature.com/news/how-do-you-test-an-ebola-vaccine-1.16579&amp;title=How+do+you+test+an+Ebola+vaccine%3F" class="icon delicious">
+							<![if !(lte IE 7)]>
+							<img
+							 alt="Delicious"
+							 src="data:image/gif;base64,R0lGODlhEgASAKIAAOPj4+Lj4wA2/+Pk5AA1/wAAAP///wAAACH5BAAAAAAALAAAAAASABIAAANQaLrc7kTIKN+KFFslst5EiIWbEXaiUIqsCrJiiZ6kUdz4PQQBsAcDRS43APQGyIBwqDP6fEEbswBE7pBLptVXzQ551qM35wSaxzjrFVjaJAAAOw=="
+							 class="inline-icon"
+							 data-alt-inline="true"
+							/>
+							<![endif]>
+							<!--[if lte IE 7]>
+							Delicious
+							<![endif]-->
+						</a>
+					</li>
+					<li class="social-option">
+						<a href="http://digg.com/submit?phase=2&amp;url=http://www.nature.com/news/how-do-you-test-an-ebola-vaccine-1.16579&amp;title=How+do+you+test+an+Ebola+vaccine%3F" class="icon digg">
+							<![if !(lte IE 7)]>
+							<img
+							 alt="Digg"
+							 src="data:image/gif;base64,R0lGODlhEgASALMMAOPj49bW1tXV1eLj4+zs7La2tre3t+3t7aurq+Pk5Kqqqv///wAAAAAAAAAAAAAAACH5BAEAAAwALAAAAAASABIAAARykMlJq704G1M2skg4GUu5KJVifkxRHgQ6qeahcAs8KJ1E5wmV6zAIAmS0QyKgUjgRCkTQtyAsBaqENjEoyhjQ0G14gAW/vlHOfLR8XQSlFs2IykgEgAHQnplQJEUFA31UOSguRQZzFE9QdVBOkhmUlRgRADs="
+							 class="inline-icon"
+							 data-alt-inline="true"
+							/>
+							<![endif]>
+							<!--[if lte IE 7]>
+							Digg
+							<![endif]-->
+						</a>
+					</li>
+					<li class="social-option">
+						<a href="https://plus.google.com/share?url=http://www.nature.com/news/how-do-you-test-an-ebola-vaccine-1.16579&amp;title=How+do+you+test+an+Ebola+vaccine%3F" class="icon googleplus">
+							<![if !(lte IE 7)]>
+							<img
+							 alt="Google+"
+							 src="data:image/gif;base64,R0lGODlhEgASAPcAAMTN0cjR1OoAAODk58zU1+sSEusAAMnR1O6HiP349L/IzcbO0u7//8DKzilnldDW2czU2PkAAMvS1c3T1srS1CC0D8PLzwBr1/X089bc3t3g4Yeov8LLz+fq6uvt7e3x/cXO0Ry0He+PkK/D0Cm4GwNPhliJqiy4HABMhZjYkwpWi3SbtpjYlZGvwpm1yc3U1tHX29HW2tDX2+rr6+Hl6MXMz5GvwwBLg/gAAL/L0rzK0sHLz//sQPjmT//pPeDl53uhu+Hl50N7oe/s6Xmettzh5MHR2/vpUF6OrgB01t7h5Ozt7ff1/0i/MzFvm9ba24W97Nfc38XN0cXM0JfWmwBz2dve3wB3zMTN0rXH0ezr6sTM0QA/fCaLxPfuoiSGzv/oM9ba3Ws+d2xBd9Xb3fr0/v72///8/w5ajOdGQCdpl7ajvNXf5dLX2NTZ3Onq6VmHqc7lnSiyLs3V2US5QpPXlCWyLePl5oa65yVolsnQ0+bp6R9klNrg43iet+Lm6ert777IzaPUMNPY2lSFqgBs1PXy7iGM2V2NrIWov0l+oubq6wBOhXadt/348wB74/Dw8K7WRfHrqvfwo//qPN7g4MPM0e3//8DJzN7i5cfO0Si3H/3rUhRdj1WGpz27NAB04tbb3v338//sNezw/drf4iSF0djd4AByx/jmVfPlb0B4n6TUMZu3yQFRh//sP9fc3LTJ1ke+Ntre4OwNDZOxxhJajuLm6H5cf9vg4wB55Z/SJdLY2//pMczT1R+zE1aGqfzqTf/qO+nr9/jmTB+0Hu/v74e84RyuImQ2bwN5ysXLzhKwEVGDpuDh4BFbjvb7+crR1OXn5uPk5Ovt78vR1Ovs7Ki/zvHx8egmHOXp68HKzx5kk/MmGu///9Ta3v/pPoa56Cu3IABx2wlWisjS1dLY3ABy2PjvosLM0ugmGvrz/+7y/vSHh9ne4OTo6uns7sHKzr7IzL/HzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAASABIAAAj/ANOoy9YN16EvprrQaSLrUyROR4KpomXAQAQxus6Nu2KHxKYQgl75ENajgAABOMY8SlJFmZwT4oqx4gGOUiqTAiIkA1XoAipkFX4x2zUKTC9iIhAgaLcGCp5wx6ikYFEnziQv6CR5Y8DgEjRRCRwlKLPOzBkmpD6wG0YNntu3bzGwIRQLGzxAexa92/vO2JK9How44eIC0jttQf4MGPDjFpBWHazVKmGL0bUZA2goydSnlDQtfJAYemNjQ6IbI+7kKjLLXYZTK4A9UwOnxbQhjVBk0RAqCplvvNw0c6CikwM/ViohcqUjDAxzMWRAIDAIFjcTzh4QeCKEXI4HEOa8UCAQIAAFX56ItDlwYEIeNOkkBCgXLQCA+wCq6dkCYIEURatYsgAAWGgCQjwIJthAPAtOwUGC21iwgzwUVmihAgpUGAgmNczj4YcghjjPMgEBADs="
+							 class="inline-icon"
+							 data-alt-inline="true"
+							/>
+							<![endif]>
+							<!--[if lte IE 7]>
+							Google+
+							<![endif]-->
+						</a>
+					</li>
+					<li class="social-option">
+						<a href="http://www.linkedin.com/cws/share?url=http://www.nature.com/news/how-do-you-test-an-ebola-vaccine-1.16579&amp;title=How+do+you+test+an+Ebola+vaccine%3F" class="icon linkedin">
+							<![if !(lte IE 7)]>
+							<img
+							 alt="LinkedIn"
+							 src="data:image/gif;base64,R0lGODlhEgASAPfIAKOwtlmgwABiiwBtmFqgwABxngBtmQBkjgBijABljgBnlI2Xm1+kwwBumfz9/V+Im1+InABijjuQswByoHawyziOsgBjjwBiiSmBpjKKr9zo7qOwtwBlkePt8nKcrQBpk6Kvtl6Kn/v8/fr8/S+EqgBvnD2Qs0mWuCSDqhh+phR8pSyHrS2Jrx55nneuxhx5nujx9XO20Cx/ourx9YC603+Wol+qytLS0uXu88bZ42uTpyyIr0GPsXiux/n7/Ozy9gBtmT6WvABvm26YqQBji/b5+wBwnf7+/1ipynmuxxx4nP39/aWyuGWPopedoCeFq62+xnuyzFCgw3SsxjNuhwBljkWVuABokbzIzyF5nZa1wrnU4WN/jUGStezz9qSoqa68wXO0zwBijSqIrgBolCyAowBnkSuApKWzuSl/owBjiwBmkdzo7gBnkuXl5V+JnABrlJzD1WCvzYWzyQBwmw56owBvm2Slwhx6oPDw8EWWuezy9efv9ABslxR6oMja5N/h43K30uPt8QBvm2q207vS3gBkj3KzzvL3+U+YuUyYumanxQBkjsPa5QB1o1ycufH1+CSJsr3CxCqGrDSMsQBrlXK0zTSIq8DX43ultBp5oHuxzF6JniN+pO309/j6/GCiwABjjRJzmXO+25C80QB5pm+10j2OsSuMsxl2m1efwCqHrjOHqvv9/aSwuFefwKzJ1jSLr9PU1F+KnrrR3WWmxQBhi8vc5Rh9pUiewTmUunuzzQBumgJ8qKW0uUuYugBjjABsl3GzznawzI+YnWaoxgBiiv///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAMgALAAAAAASABIAAAj/AJFhsRRDmMGDhw6GCaRlCSA5NCgMm0ixIoVdo6CAIbSoWDEGDDyKFFnLVCZfSAgQeBVl0ysCAWLKJGDDA5pciqzcOSIClJ5fQIP+kjKEiS4TFU402tJlFQtKY3ZUkCAhiA5XkVY8ydBjSoYkLhLFIRULxSRUTTaUSlGHxzFEp7wc83TsGCYVuHqFADBh0KBLI36w4nNszqMiDkgAmTALQIFgCjC0mtEJhw8/Ctgcw6CgwBsAg+BwOOMAhiZBn/CQ0ZxmDR0IABp8sFDmGKQXe461aNPhmAwLDR4AAGImQpZbhVLRyiHKEKw/SiIEEz6gShVGCMRUCYWAEXZbjKpUQ4IAooQxYMAECEi/Hpia9WqCcZJU4MoFY/jz678AzFGNPFwAwUswwQxg4AAEEgiEEVTIgowbXyxAzIQUVriAEzcgExAAOw=="
+							 class="inline-icon"
+							 data-alt-inline="true"
+							/>
+							<![endif]>
+							<!--[if lte IE 7]>
+							LinkedIn
+							<![endif]-->
+						</a>
+					</li>
+					<li class="social-option">
+						<a href="http://www.stumbleupon.com/submit?url=http://www.nature.com/news/how-do-you-test-an-ebola-vaccine-1.16579&amp;title=How+do+you+test+an+Ebola+vaccine%3F" class="icon stumbleupon">
+							<![if !(lte IE 7)]>
+							<img
+							 alt="StumbleUpon"
+							 src="data:image/gif;base64,R0lGODlhEgASAPcAAO5fOu5dN/n5+e1VLO5eOfz9/vj5+vr6+/r6+u1aMvn6+/39/+9oR/ezpu1YMexTKf39/e9xVOxSKO1UKfOSfvrNxO1ZMu5eOv39/f76+e5gPPWhkPn5+fF9Y+5cNu1ZMfXSzPnFu+xTKPB4XPKMdvWome9wUvKEbPWpmu1UKv3v7exRJv739vrKwfBqS/apmvj19fBzVvzg2/n5+vWei/e6rvKFbvzo5PnKwfWfjvnw7vKJcvWcif/9/e5fOe9rTPKMd/rRyv7x7vnJv/KAaPv8/fB6X/nt6/SVgvWjkve1qPfr6/78+/jx8fv7+/z8/fi9sv///vWikfj29/auoO9kQfewo+1VLe5dNvrOxfOVgfe1qPzk3/zj3/rLw/B4Xfn5+fj09PjEuvWjk/r4+Pzk3/e9sfF7YOxUKfzn5Pr09Pbg3e1WLvOQe/v7/Pn6+/e8sO1aNPjFu/KKc/r7/O5iPu9yVP729PBpSP/+/u1XMPfp6O5bNO1bNO9vUfatnvWllPbf3O1cNfB2W//9/fz8/P7+/u5cNe9rS+9mRfWiku1bNe1WLf39/u1XLu5fO+5gO////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAASABIAAAj/ACM9KbCgUYECjRIqJLigSCQMkSJGEgIFyYkTWuCokPjQjUQzLiYwcvCBERo8NSTSORApz5gHix5BgiQTkiAJOQhFesNyiwQAMwk4ckRgJoAVVnYeuFHHg8wAkChQ0AAVUgAAZXi+eGB0UYiIchYBhTQhyRsyHT7QXGQi0pAKkSLEhGTByBQdiDxA6vMgRiQqETZUYRSHKoMlRxgEsFACx5dIDTqUMCEGUIIAifaosbNoAFwSkf40iLQjSpYBi/w0QdCGESMakXTOARIpQyQpjNiQMIDAy4ALWBS14MHn0IYgKAhcSBGCNxMbAyANdfTokSM9jgBcIZKBd6Q0PxjRPRw/UzqDMpEMOInY5YyIBASq+0ggYoSMiDMMSWSxZQQkBw48MkgDd0gEEQZgJAgGDGuAAEIgYSgIRiGRBAQAOw=="
+							 class="inline-icon"
+							 data-alt-inline="true"
+							/>
+							<![endif]>
+							<!--[if lte IE 7]>
+							StumbleUpon
+							<![endif]-->
+						</a>
+					</li>
+					<li class="social-option">
+						<a href="http://www.reddit.com/s/http://www.nature.com/news/how-do-you-test-an-ebola-vaccine-1.16579" class="icon reddit">
+							<![if !(lte IE 7)]>
+							<img
+							 alt="Reddit"
+							 src="data:image/gif;base64,R0lGODlhEgASAPfnAMng9MPc8s/k9oet0c7j9tfp+tTm+NPq/oqy1oqy17a7wLe9wra7v9zt/IOrz9Dl+Yuw0p3C5L/b9NfV06OlqJqeopG10ZKgrqCxv5mqu6bB2Zmqup6605qeoZ6hpcvl/M3l/IODg+ro5qmrrWqAlrq/xOTk5bvAxMHCwrnU7tnr+pW73Y+01cTDwomw1Iat0JS616u5xbG+yPDw8Nfo+XuTqtLS0pO523qUq56nrpG53KnI5Mvi+JG424212JW838LAv5qru5KUlpG22P+TfKupqMTf+OX4/7fT7rbT7re8wY+01pG21oyy1P90U4qy1MnO1KOywP/39ZK53LnEzv+ahMfR2abA1/n5+am0vdTV1crFwXmXstbV056vv6issdvv/5WfqPPx8KHH6Iqv0Z61zL/Z8oeu0brY9P/6+f+6rLHB0Je94JCPjtbn9aG70//e1f+wn3icvJC01Orv75rA4tPo/JC219Xn+P39/b3R4r/a83uAhtPo+5zB4Yuw04qw05usu7vW7svi99jq+tXn+cfh97W6v4itzKm8zoWt0JK42ZG31q3I4pujq6jO78Pf+NDV2Y2z1pm/4Z3D5OLk5H6UqLnU7pq8267Q75q/4Njs/o6qxXybtniOo8zh9MvLy4qYo9HR0bDC1ImXpf/Lv4iv0ri5ub3Y8KK7067H3pytvbGwsJa83pnA4eXl5bzX74WGhbu/xLi+w6KtuKmqrJurvLrV7a67x6Cjpn6Hj6err4my18fh+MPh+6+urK3D1qa1w9zw/5GissPHy6CrtNHl+bvZ9bHT8qHG6L3Q4Wt5h32iw6KywaSlp3WEknCAkKGvvafL7Ja8226Dl5ueoqKgnoGlxv3//4OaruDd26Gfnoat0f6diMTGyZ/F5p6gotjp+tTn+JC11ISsz5yfo////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAOcALAAAAAASABIAAAj/AM9FcqMiXIEC4RIqLECogZU8JjY1MCCuokVxBvAUMkDjCBRiwggIGDmSwIM+dh58MkYADJUTBwDInMlDGa01Wb7oGXRAhqwPAYIKNRRtVCJwW6L0AoGrBCRBqPaYkXBJFalLvoDZugXLSIxZaJI0KvNmmKNdFHJcSHVFA5JjwRZk2hGmjZBK2MzppVMrhAcOyJotkIaJzy9zcKqkMRdHjbkWsTg9wqAk2TcSXcyVciLFHJFu5sQs8zPGi4IImjoB0cuatTZPdSKsUuBq0Z1nE8yhACXqFBYRuhDdmBSEAZslQ8hQ68Bqm7UizqBd68HiRwYGKwBBaOKDGZcalnDISEEgCcKfKRsOtVI0oL0pBAl4JXBxpj03HYG8TXvigJz//wA68AIlxcwQigWMzDHOggwyyAQM2WhxzisjVFPOhRhmWEEuNpwTEAA7"
+							 class="inline-icon"
+							 data-alt-inline="true"
+							/>
+							<![endif]>
+							<!--[if lte IE 7]>
+							Reddit
+							<![endif]-->
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+			</div>
+
+			
+			<h1 class="article-heading">How do you test an Ebola vaccine?</h1>
+												<div class="standfirst">
+						<p>Scientists in West Africa are racing to determine what immunization strategies could be most effective to contain the epidemic.</p>
+					</div>
+				
+				
+
+	    	    	    	
+    	    				    				    				    				    				    						
+		
+	
+
+
+	<ul class="authors cleared">
+					<li class="popup-parent" data-role="popup-parent">	
+	
+	
+											<span class="vcard"><a href="#auth-1" class="fn" data-popup-width="estimate">Ewen Callaway</a></span></li>
+			</ul>
+	
+										<div class="pubdate-and-corrections"><time datetime="2014-12-18" pubdate>18 December 2014</time></div>
+				
+				
+				<div class="cleared article-tools extra">
+	<h2 class="visually-hidden">Article tools</h2>
+		<a
+	 class="box icon rights"
+	 href="https://s100.copyright.com/AppDispatchServlet?author=Ewen+Callaway&amp;title=How+do+you+test+an+Ebola+vaccine%3F&amp;publisherName=NPG&amp;contentID=10.1038%2Fnature.2014.16579&amp;publicationDate=12%2F18%2F2014&amp;publication=Nature+News"
+	>Rights &amp; Permissions</a>
+	</div>
+						</header>
+
+	<section id="article-body">
+		<div class="section">
+			<div class="content no-heading cleared main-content">
+
+																						
+
+
+
+
+
+
+
+
+				
+
+
+
+
+	<div class="img img-middle" style="width:632px"> 		<div class="img-content cleared" style="padding:1px">
+		<img src="/polopoly_fs/7.22589.1418925927!/image/HIRES%20AP715689018600%20reduced.jpg_gen/derivatives/landscape_630/HIRES%20AP715689018600%20reduced.jpg" alt=""/>		<p class="credit">Alex Duval Smith/picture-alliance/dpa/AP Images</p>		<p class="caption">A volunteer receives an experimental Ebola vaccine in Mali during a preliminary safety trial in October.</p>		</div>
+	</div>
+
+																										<p>As the West African Ebola epidemic enters its second year small batches of experimental vaccines are on the cusp of reaching people in the affected countries. <i>Nature</i> tackles the questions that will determine whether vaccines play a role in ending the current epidemic — and can prevent future flare-ups.</p>																				<h2>What Ebola vaccines are being developed?</h2>																				<p>Two vaccines are leading contenders to be deployed in West Africa early next year. The furthest along is one co-developed by London-based drug firm GlaxoSmithKline (GSK) and the US National Institute for Allergy and Infectious Disease (NIAID) in Bethesda, Maryland. Their vaccine is made of an inactivated chimpanzee cold-causing adenovirus (called ChAd3) that has been engineered to produce an Ebola protein.</p>																											
+
+
+
+
+
+
+
+
+			
+
+
+
+
+	<div class="img img-right" style="width:166px"> 		<div class="img-content cleared" style="padding:1px">
+		<img src="/polopoly_fs/7.12926.1422024717!/image/top-picks_final.png_gen/derivatives/fullsize/top-picks_final.png" alt=""/>				<p class="caption"><ul>
+<li><a href="http://www.nature.com/news/science-pours-in-from-rosetta-comet-mission-1.16777">Science pours in from Rosetta comet mission</a></li>
+<li><a href="http://www.nature.com/news/gm-microbes-created-that-can-t-escape-the-lab-1.16758">GM microbes created that can’t escape the lab</a></li>
+<li><a href="http://www.nature.com/news/crunch-time-for-pet-theory-on-dark-matter-1.16757">Crunch time for pet theory on dark matter</a></li>
+</ul></p>		</div>
+	</div>
+
+																										<p>The second leading candidate is a vaccine from NewLink Genetics in Ames, Iowa. This is made from a weakened but active livestock virus, known as VSV. It was licensed in November to the New Jersey drug company Merck.</p>																				<p>A third possibility combines two vaccines: a 'prime' made from a different chimp adenovirus, developed by US drug firm Johnson &amp; Johnson and NIAID, and a 'booster' made by Bavarian Nordic in Denmark that is composed of a poxvirus that expresses an Ebola protein and given several weeks later.</p>																				<h2>Are they safe?</h2>																				<p>Many vaccines come with side effects, and Ebola inoculations are no different. “We’re not seeing anything on the safety side that’s unexpected,” says Ripley Ballou, head of GSK's Ebola vaccine programme in Rixensart, Belgium.</p>																				<p>The NewLink–Merck vaccine could pose greater safety concerns because it is made of a live virus that, although weakened (or 'attenuated'), can still divide in the body. On 11 December, a safety trial of 59 volunteers who received this vaccine was halted one week early, after four patients reported pain in their hands and feet. University Hospital in Geneva, Switzerland, which is running the trial, said that it would resume on 5 January 2015 with a maximum of 15 volunteers. Merck says that the Geneva trial will procede with lower doses. Meanwhile, other trials are testing a range of doses.</p>																				<h2>How will these vaccines be tested?</h2>																				<p>Only efficacy trials — slated for next year in Liberia and Sierra Leone — can determine whether a vaccine can prevent Ebola infection. But researchers are scouring data from safety trials to identify the doses and regimens that offer the best chances of working. Those decisions will be made by mid-January, according to Ballou.</p>																				<p>One big question is whether the GSK–NIAID vaccine will need to be accompanied with a booster shot (such as the one manufactured by Bavarian Nordic). Monkeys that were protected from Ebola infection by a similar vaccine had received a booster. But a single-shot regimen would be simpler to administer during the current epidemic in West Africa, as well as future Ebola outbreaks.</p>																				<p>Adrian Hill, a vaccine scientist at the University of Oxford, UK, who is leading a safety trial of the GSK–NIAID vaccine in the United Kingdom, is a proponent of a booster. Tests of vaccines against other diseases have shown that boosters can drastically increase the levels of infection-battling antibodies and T cells, a type of white blood cell. On 12 December he told a <a href="http://www.fda.gov/EmergencyPreparedness/Counterterrorism/MedicalCountermeasures/AboutMCMi/ucm424037.htm">Washington DC conference on Ebola immunology</a> that Bavarian Nordic's booster worked as expected. Fourteen volunteers who got the booster several weeks after their first shot produced higher levels of antibodies within a week (compared with levels in their blood after the first vaccination) and these responses were similar to those seen in monkeys protected from Ebola.</p>																				<p>Hill says that a booster might be the only way to get an Ebola vaccine that prevents infection. Others, such as NIAID director Anthony Fauci, argue that a booster shot is important mostly for prolonging vaccine protection and that higher doses of the first shot should be effective in the short term.</p>																				<h2>What’s going on with trials in West Africa?</h2>																				<p>Many details are still being hammered out, but at least two large-scale efficacy trials (phase 3 trials) are in the offing.</p>																				<p>The Liberia trial will probably enrol around 30,000 people living in Monrovia. The plan is for volunteers to be randomly assigned to receive either the GSK–NIAID vaccine, the NewLink–Merck vaccine or a saline-solution injection that will serve as a placebo control. But it is unclear how the suspension of the NewLink–Merck safety trial in Geneva will affect those plans. “If that means it is not going forward rapidly for safety reasons, it would impact on plans for the efficacy trial in Liberia,” Hill says. One possibility is to delay this arm of the trial until additional safety tests are completed.</p>																				<p>A phase 3 trial of around 6,000 health-care workers in Sierra Leone is also in the planning stages. The current strategy is for all the volunteers to receive a vaccine (yet to be selected) in a phased roll-out. Researchers will determine whether the vaccine works by comparing infection rates among vaccinated and unvaccinated people.</p>																				<p>Officials are also discussing the possibility of a third efficacy trial to test whether a strategy known as ring vaccination can quell the epidemic. In this approach, patients living around a newly diagnosed case are vaccinated, in an attempt to prevent transmission.</p>																				<h2>Will these trials include booster shots?</h2>																				<p>A booster shot may not be needed for the GSK–NIAID vaccine in the Liberian trial, because volunteers living in the community are unlikely to be regularly exposed to Ebola over a long period of time, Ballou says. “I think it’s important to know whether a single-dose vaccine is protective,” he adds. “For widespread population usage, a one-dose vaccine is fantastic.”</p>																				<p>Including a booster shot makes more sense among health workers, because they are facing a prolonged risk of infection, says Ballou. It will also be simpler to track down health workers for a second shot, compared to people in the general community. But no final decision has been made. One possibility is to give a booster to a subset of volunteers, so scientists can work out whether that regimen is any more effective at preventing Ebola infection, compared to a simpler single dose.</p>																				<h2>Who will pay for the vaccines?</h2>																				<p>On 11 December, GAVI, the Vaccine Alliance — a Geneva charity that helps low-income countries to afford vaccines — announced that it would commit up to US$300 million to purchase 12 million doses of Ebola vaccines, and up to another US$90 million to help roll out the vaccines and rebuild the health systems in Ebola-affected countries. These commitments depend on the World Health Organization recommending a vaccine for use. “I think it’s hugely significant,” says Ballou.<b> “</b>It’s extremely encouraging to these countries to know if one of these vaccines works, there will be a mechanism to have them pre-ordered, stockpiled and made available."</p>												
+			</div>
+			
+			<dl class="citation">
+				<dt>Journal name:</dt>
+				<dd class="journal-title">Nature</dd>
+																				<dt>DOI:</dt>
+				<dd class="doi"><abbr title="Digital Object Identifier">doi</abbr>:10.1038/nature.2014.16579</dd>
+							</dl>
+			
+					</div>
+	</section>
+	
+		
+		
+																																																																																																	<section id="related-links">
+			<div id="related-links" class="section expanded">
+				<h1 class="section-heading toggle">Related stories and links</h1>
+
+				<div class="content">
+									<h2>From nature.com</h2>
+					<ul class="related-links"><li><article><h1><a href="/doifinder/10.1038/nature.2014.16564">First trials of blood-based Ebola therapy kick off</a></h1><p><time datetime="2014-12-15" pubdate><span class="time">15 December 2014</span></time></p></article></li><li><article><h1><a href="/doifinder/10.1038/516015a">Positive results spur race for Ebola vaccine</a></h1><p><time datetime="2014-12-02" pubdate><span class="time">02 December 2014</span></time></p></article></li><li><article><h1><a href="/doifinder/10.1038/515177a">Ethical dilemma for Ebola drug trials</a></h1><p><time datetime="2014-11-11" pubdate><span class="time">11 November 2014</span></time></p></article></li><li><article><h1><a href="/doifinder/10.1038/513013a">Ebola drug trials set to begin amid crisis</a></h1><p><time datetime="2014-09-02" pubdate><span class="time">02 September 2014</span></time></p></article></li><li><article><h1><a href="/doifinder/10.1038/511520a">Ebola treatments caught in limbo</a></h1><p><time datetime="2014-07-29" pubdate><span class="time">29 July 2014</span></time></p></article></li></ul>
+												</div>
+			</div>
+		</section>
+		
+		
+	<div class="author-details-below">
+		
+
+	
+			
+	<section>
+		<div id="author-information" class="hidden">
+			<h1>Author information</h1>
+			<div class="content">
+												
+								
+								
+								<div class="author-details">
+					<h2>Author details</h2>
+					<ul>
+													<li id="auth-1">
+																<h3>Ewen Callaway</h3>
+								
+																									
+																												<p class="bio">Ewen joined <i>Nature</i> in August 2010, after 2 years at <i>New Scientist</i> as Boston-based biomedical reporter. He attended the science-writing programme at the University of California, Santa Cruz, and earned a master’s degree in microbiology at the University of Washington. He spends his free time learning&hellip;</p>
+										<p class="last"><a href="/nature/about/editors/index.html#EwenCallaway" class="more right-arrow">Read more</a></p>
+																																	<div class="author-search">
+									<h4>Search for this author in</h4>
+									<ul>
+										<li class="first"><a href="/search/executeSearch?sp-q=%22Ewen+Callaway%22&amp;sp-p=all&amp;pag-start=1&amp;sp-c=25&amp;sp-m=1&amp;sp-s=date_descending&amp;siteCode=nature&amp;sp-date-range=0&amp;sp-advanced=true&amp;sp-q-9%5BAM%5D=1&amp;sp-q-9%5BAPP_NOTES%5D=1&amp;sp-q-9%5BAVIANFLU%5D=1&amp;sp-q-9%5BCLIMATE%5D=1&amp;sp-q-9%5BNATURE%5D=1&amp;sp-q-9%5BNATUREJOBS%5D=1&amp;sp-q-9%5BNBT%5D=1&amp;sp-q-9%5BNCB%5D=1&amp;sp-q-9%5BNCHEM%5D=1&amp;sp-q-9%5BNCHEMBIO%5D=1&amp;sp-q-9%5BNCHINA%5D=1&amp;sp-q-9%5BNCLIMATE%5D=1&amp;sp-q-9%5BNCOMMS%5D=1&amp;sp-q-9%5BNEURO%5D=1&amp;sp-q-9%5BNG%5D=1&amp;sp-q-9%5BNGEO%5D=1&amp;sp-q-9%5BNI%5D=1&amp;sp-q-9%5BNINDIA%5D=1&amp;sp-q-9%5BNM%5D=1&amp;sp-q-9%5BNMAT%5D=1&amp;sp-q-9%5BNMETH%5D=1&amp;sp-q-9%5BNMIDDLEEAST%5D=1&amp;sp-q-9%5BNNANO%5D=1&amp;sp-q-9%5BNPHOTON%5D=1&amp;sp-q-9%5BNPHYS%5D=1&amp;sp-q-9%5BNPROT%5D=1&amp;sp-q-9%5BNSMB%5D=1&amp;sp-q-9%5BSCIENTIFICAMERICAN%5D=1&amp;sp-q-9%5BSCIENTIFICAMERICANMIND%5D=1&amp;sp-q-9%5BSREP%5D=1&amp;sp-q-9%5BSTEMCELLS%5D=1&amp;sp-q-9%5BBLOGS%5D=1">NPG journals</a></li>
+										<li><a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=search&amp;term=Ewen+Callaway%5Bauthor%5D">PubMed</a></li>
+										<li><a href="http://scholar.google.co.uk/scholar?as_q=&amp;num=10&amp;btnG=Search+Scholar&amp;as_epq=&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Ewen+Callaway&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;as_allsubj=all&amp;hl=en">Google Scholar</a></li>
+									</ul>
+								</div>
+							</li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	</div>
+
+		
+					
+
+
+		
+			
+
+
+   <p class="not-logged-in">For the best commenting experience, <a href="/foxtrot/svc/login?type=commenting">please login or register as a user</a> and agree to our <a href="/info/community-guidelines.html">Community Guidelines</a>. You will be re-directed back to this page where you will see comments updating in real-time and have the ability to recommend comments to other users.</p>
+
+	
+
+
+
+
+
+
+	
+<a id="comments" name="comments">Comments</a>
+	<h1 class="section-heading cleared"><span>Comments</span> <a href="https://naturenews.disqus.com/how_do_you_test_an_ebola_vaccine/latest.rss" class="rss-link">Subscribe to comments</a></h1>
+	<p>There are currently no comments.</p>
+
+	 	
+	</div>
+</article>
+						
+        
+	
+										<section>
+		<div class="carousel news-carousel">
+			<h2 class="section-heading">See other News &amp; Comment articles from <a href="/news"><i>Nature</i></a></h2>
+			<div class="content">
+				<ul class="slides" id="news-carousel-slides">
+																		<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/gravitational-waves-discovery-now-officially-dead-1.16830">
+											<h4>Gravitational waves discovery now officially dead</h4>
+											
+ 		
+
+
+
+
+
+				
+
+
+
+
+	<img src="/polopoly_fs/7.23367.1422643412!/image/1.16830WEB_Planck_view_of_BICEP2_field.jpg_gen/derivatives/box_118/1.16830WEB_Planck_view_of_BICEP2_field.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/obama-to-seek-215-million-for-precision-medicine-plan-1.16824">
+											<h4>Obama to seek $215 million for precision-medicine plan</h4>
+											
+ 		
+
+
+
+
+
+		
+
+
+
+
+	<img src="/polopoly_fs/7.23325.1422571988!/image/genetics-4.png_gen/derivatives/box_118/genetics-4.png" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/analysis-of-trial-data-revives-flu-drug-row-1.16820">
+											<h4>Analysis of trial data revives flu-drug row</h4>
+											
+ 		
+
+
+
+
+
+				
+
+
+
+
+	<img src="/polopoly_fs/7.23315.1422549643!/image/1.16820.jpg_gen/derivatives/box_118/1.16820.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/safety-review-for-yucca-mountain-site-released-1.16823">
+											<h4>Safety review for Yucca Mountain site released</h4>
+											
+ 		
+
+
+
+
+
+				
+
+
+
+
+	<img src="/polopoly_fs/7.23323.1422615624!/image/1.16823.jpg_gen/derivatives/box_118/1.16823.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/people-identified-through-credit-card-use-alone-1.16817">
+											<h4>People identified through credit-card use alone</h4>
+											
+ 		
+
+
+
+
+
+				
+
+
+
+
+	<img src="/polopoly_fs/7.23309.1422552212!/image/1.16817.jpg_gen/derivatives/box_118/1.16817.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/survey-finds-us-public-still-supports-science-1.16818">
+											<h4>Survey finds US public still supports science</h4>
+											
+ 		
+
+
+
+
+
+				
+
+
+
+
+	<img src="/polopoly_fs/7.23307.1422555802!/image/1.16818.jpg_gen/derivatives/box_118/1.16818.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/german-police-raid-animal-research-lab-1.16813">
+											<h4>German police raid animal-research lab</h4>
+											
+ 		
+
+
+
+
+
+			
+
+
+
+
+	<img src="/polopoly_fs/7.23291.1422619869!/image/Tubengen.jpg_gen/derivatives/box_118/Tubengen.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/mystery-childhood-paralysis-stumps-researchers-1.16812">
+											<h4>Mystery childhood paralysis stumps researchers</h4>
+											
+ 		
+
+
+
+
+
+				
+
+
+
+
+	<img src="/polopoly_fs/7.23293.1422469753!/image/rossmann-evd68CM.jpg_gen/derivatives/box_118/rossmann-evd68CM.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/nih-defends-monkey-experiments-1.16814">
+											<h4>NIH defends monkey experiments</h4>
+											
+ 		
+
+
+
+
+
+				
+
+
+
+
+	<img src="/polopoly_fs/7.23297.1422478280!/image/1.16814.jpg_gen/derivatives/box_118/1.16814.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/gutsy-university-chief-to-take-on-china-s-pollution-1.16810">
+											<h4>‘Gutsy’ university chief to take on China's pollution</h4>
+											
+ 		
+
+
+
+
+
+				
+
+
+
+
+	<img src="/polopoly_fs/7.23284.1422531222!/image/1.16810_getty.jpg_gen/derivatives/box_118/1.16810_getty.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/nature/journal/v517/n7536/full/517550a.html">
+											<h4>Sociobiology: Altruists together</h4>
+											
+ 		
+
+
+
+
+
+		
+
+
+
+
+	<img src="/polopoly_fs/7.23241.1422294124!/image/BA1.jpg_gen/derivatives/box_118/BA1.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/neanderthals-gain-human-neighbour-1.16802">
+											<h4>Neanderthals gain human neighbour</h4>
+											
+ 		
+
+
+
+
+
+				
+
+
+
+
+	<img src="/polopoly_fs/7.23252.1422372837!/image/for%20web%20Figure2%20reduced.jpg_gen/derivatives/box_118/for%20web%20Figure2%20reduced.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/nature/journal/v517/n7536/full/517551a.html">
+											<h4>Books in brief</h4>
+											
+ 		
+
+
+
+
+
+		
+
+
+
+
+	<img src="/polopoly_fs/7.23242.1422294426!/image/BA2.jpg_gen/derivatives/box_118/BA2.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/cultural-heritage-save-libyan-archaeology-1.16781">
+											<h4>Cultural heritage: Save Libyan archaeology</h4>
+											
+ 		
+
+
+
+
+
+				
+
+
+
+
+	<img src="/polopoly_fs/7.23212.1422288011!/image/Libya1.jpg_gen/derivatives/box_118/Libya1.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/seven-days-23-29-january-2015-1.16799">
+											<h4>Seven days: 23–29 January 2015</h4>
+											
+ 		
+
+
+
+
+
+			
+
+
+
+
+	<img src="/polopoly_fs/7.23263.1422370871!/image/7-1.jpg_gen/derivatives/box_118/7-1.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://blogs.nature.com/aviewfromthebridge/2015/01/28/the-wilder-side-of-hip-hop/">
+											<h4>The wilder side of hip-hop</h4>
+											
+ 		
+
+
+
+
+
+		
+
+
+
+
+	<img src="/polopoly_fs/7.23285.1422452659!/image/Album-Cover-Art.jpg_gen/derivatives/box_118/Album-Cover-Art.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/not-your-average-technician-1.16785">
+											<h4>Not your average technician</h4>
+											
+ 		
+
+
+
+
+
+			
+
+
+
+
+	<img src="/polopoly_fs/7.23233.1422282881!/image/Odd1.jpg_gen/derivatives/box_118/Odd1.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/gather-data-to-reveal-true-extent-of-doping-in-sport-1.16798">
+											<h4>Gather data to reveal true extent of doping in sport</h4>
+											
+ 		
+
+
+
+
+
+			
+
+
+
+
+	<img src="/polopoly_fs/7.23260.1422366612!/image/WV.jpg_gen/derivatives/box_118/WV.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/us-lawmakers-seek-to-revamp-biomedical-research-1.16807">
+											<h4>US lawmakers seek to revamp biomedical research</h4>
+											
+ 		
+
+
+
+
+
+		
+
+
+
+
+	<img src="/polopoly_fs/7.23277.1422403241!/image/pharmaceutics.png_gen/derivatives/box_118/pharmaceutics.png" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+																								<li class="carousel-slide">
+								<article>
+									<div class="teaser">
+										<a href="http://www.nature.com/news/soil-moisture-probe-readies-for-launch-1.16764">
+											<h4>Soil-moisture probe readies for launch</h4>
+											
+ 		
+
+
+
+
+
+				
+
+
+
+
+	<img src="/polopoly_fs/7.23250.1422378610!/image/1.16764.jpg_gen/derivatives/box_118/1.16764.jpg" alt=""/>
+
+										</a>
+									</div>
+								</article>
+							</li>
+															</ul>
+			</div>
+		</div>
+	</section>
+			
+      					
+																													</div>
+								<div id="extranav" class="col">
+											
+        
+	
+																	<section id="social-media-section" class="social-media-section">
+	<div class="social-media">
+		<h2 class="hidden">Social Media Box - AML</h2>
+		<div class="box">
+			<ul class="cleared items-4" style="margin:0 0 10px;">
+				<li class="email"><a href="http://www.nature.com/news/ealert-intermediate-page.html">E-alert</a></li>				<li class="rss"><a href="http://feeds.nature.com/NatureNewsComment">RSS</a></li>				<li class="facebook"><a href="http://www.facebook.com/NatureNews">Facebook</a></li>									<li class="twitter last">
+						<a href="https://twitter.com/naturenews" class="btn-twitter">Twitter</a>
+					</li>			</ul>
+						<div class="hidden" id="twitter-follow">
+				<a href="#" class="hide-text btn-close">Close</a>
+				<a href="https://twitter.com/naturenews" class="twitter-follow-button" data-show-count="false">Follow @naturenews</a>
+			</div>
+					</div>
+	</div>
+</section>
+											<section id="top-story-section">
+	<div class="box cleared top-story">
+						<h2 class="secondary-heading top-story-heading">Top story</h2>
+					<img
+ alt="Enterovirus"
+ class="top-story-image landscape"
+ src="/polopoly_fs/7.23365.1422629021!/sitegraphics/462925980.jpg_gen/derivatives/default/462925980.jpg"
+/>
+				<h3 class="top-story-title">
+			<a href="http://www.nature.com/news/mystery-childhood-paralysis-stumps-researchers-1.16812">Mystery childhood paralysis stumps researchers</a>
+		</h3>
+		<p>Pathogen related to polio and common cold could be the cause — but little is known for sure.</p>
+
+	</div>
+</section>
+											
+
+
+
+					
+
+
+<div class="ad ad-300x100 ad-3" data-ad-src="//ad.doubleclick.net/N285/adj/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;ptile=2;sz=300x100;pos=right;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=2675013634752851?">
+	<noscript><a href="//ad.doubleclick.net/N285/jump/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;ptile=2;sz=300x100;pos=right;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=2675013634752851?"><img src="//ad.doubleclick.net/N285/ad/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;ptile=2;sz=300x100;pos=right;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=2675013634752851?" alt="Advertisment"/></a></noscript>
+</div>
+											
+	
+				
+		
+				<section id="top-content-section">
+			<div id="top-content-article-page-tabbed-box" class="tabbed-box">
+				<h2 class="hidden">Top Content - Article Page</h2>
+		
+				<div class="tabs">
+									<div id="top-content-article-page-tabbed-box-1" class="tab active">
+						<h2 id="top-content-article-page-tabbed-box-tab-1" class="tab-label"><span>Recent</span></h2>
+						<div id="top-content-article-page-tabbed-box-pane-1" class="tab-pane">
+							<div class="tab-content fade-out"><ol class="article-feed">
+	<li>
+		<article>
+						
+			<h2><a href="http://www.nature.com/news/gravitational-waves-discovery-now-officially-dead-1.16830">Gravitational waves discovery now officially dead</a></h2>
+			<p><span class="journal-title">Nature</span> 
+				<time pubdate="pubdate" datetime="2015-01-30"><span class="time">30 January 2015</span></time>
+				
+							</p>
+		</article>
+	</li>
+	<li>
+		<article>
+						
+			<h2><a href="http://www.nature.com/news/obama-to-seek-215-million-for-precision-medicine-plan-1.16824">Obama to seek $215 million for precision-medicine plan</a></h2>
+			<p><span class="journal-title">Nature</span> 
+				<time pubdate="pubdate" datetime="2015-01-30"><span class="time">30 January 2015</span></time>
+				
+							</p>
+		</article>
+	</li>
+	<li>
+		<article>
+						
+			<h2><a href="http://www.nature.com/news/analysis-of-trial-data-revives-flu-drug-row-1.16820">Analysis of trial data revives flu-drug row</a></h2>
+			<p><span class="journal-title">Nature</span> 
+				<time pubdate="pubdate" datetime="2015-01-29"><span class="time">29 January 2015</span></time>
+				
+							</p>
+		</article>
+	</li>
+	<li>
+		<article>
+						
+			<h2><a href="http://www.nature.com/news/safety-review-for-yucca-mountain-site-released-1.16823">Safety review for Yucca Mountain site released</a></h2>
+			<p><span class="journal-title">Nature</span> 
+				<time pubdate="pubdate" datetime="2015-01-29"><span class="time">29 January 2015</span></time>
+				
+							</p>
+		</article>
+	</li>
+	<li>
+		<article>
+						
+			<h2><a href="http://www.nature.com/news/people-identified-through-credit-card-use-alone-1.16817">People identified through credit-card use alone</a></h2>
+			<p><span class="journal-title">Nature</span> 
+				<time pubdate="pubdate" datetime="2015-01-29"><span class="time">29 January 2015</span></time>
+				
+							</p>
+		</article>
+	</li>
+</ol></div>
+													</div>
+					</div>
+									<div id="top-content-article-page-tabbed-box-2" class="tab">
+						<h2 id="top-content-article-page-tabbed-box-tab-2" class="tab-label"><span>Read</span></h2>
+						<div id="top-content-article-page-tabbed-box-pane-2" class="tab-pane">
+							<div class="tab-content fade-out">
+	
+
+
+			<ol class="article-feed" start="1">
+					<li>
+				<article>
+					<h3><a href="http://www.nature.com/uidfinder/10.1038/nature.2015.16767">Genghis Khan's genetic legacy has competition</a></h3>
+																									
+					<p><span class="journal-title">Nature</span> <time datetime="2015-01-23" pubdate><span class="time">23 Jan 2015</span></time></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="http://www.nature.com/uidfinder/10.1038/517426a">Ageing research: Blood to blood</a></h3>
+																									
+					<p><span class="journal-title">Nature</span> <time datetime="2015-01-21" pubdate><span class="time">21 Jan 2015</span></time></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="http://www.nature.com/uidfinder/10.1038/nature.2015.16739">First atomic blast proposed as start of Anthropocene</a></h3>
+																									
+					<p><span class="journal-title">Nature</span> <time datetime="2015-01-16" pubdate><span class="time">16 Jan 2015</span></time></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="http://www.nature.com/uidfinder/10.1038/nature.2015.16732">Looking for the roots of terrorism</a></h3>
+																									
+					<p><span class="journal-title">Nature</span> <time datetime="2015-01-15" pubdate><span class="time">15 Jan 2015</span></time></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="http://www.nature.com/uidfinder/10.1038/nature.2015.16771">Sodium's explosive secrets revealed</a></h3>
+																									
+					<p><span class="journal-title">Nature</span> <time datetime="2015-01-26" pubdate><span class="time">26 Jan 2015</span></time></p>
+				</article>
+			</li>
+				</ol>
+	</div>
+							<div class="tab-footer fade-out"><a href="http://www.nature.com/news/top-content-article-page-7.799?article=1.16579&amp;tab=7.801" class="right-arrow">View all</a></div>						</div>
+					</div>
+									<div id="top-content-article-page-tabbed-box-3" class="tab">
+						<h2 id="top-content-article-page-tabbed-box-tab-3" class="tab-label"><span>Commented</span></h2>
+						<div id="top-content-article-page-tabbed-box-pane-3" class="tab-pane">
+							<div class="tab-content fade-out">
+
+
+
+
+
+			<ol class="article-feed" start="1">
+					<li>
+				<article>
+					<h3><a href="/doifinder/10.1038/517245a">The focus on bibliometrics makes papers less useful</a></h3>
+															<p><span class="journal-title">Nature</span> <time datetime="$item.date" pubdate><span class="time">13 Jan 2015</span></time> <span><a href="/doifinder/10.1038/517245a#comments">22 comments</a></span></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="/doifinder/10.1038/517243a">Science and satire</a></h3>
+															<p><span class="journal-title">Nature</span> <time datetime="$item.date" pubdate><span class="time">13 Jan 2015</span></time> <span><a href="/doifinder/10.1038/517243a#comments">14 comments</a></span></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="/doifinder/10.1038/nature.2015.16784">Italian court convicts lab-dog breeders</a></h3>
+															<p><span class="journal-title">Nature</span> <time datetime="$item.date" pubdate><span class="time">23 Jan 2015</span></time> <span><a href="/doifinder/10.1038/nature.2015.16784#comments">10 comments</a></span></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="/doifinder/10.1038/nature.2015.16739">First atomic blast proposed as start of Anthropocene</a></h3>
+															<p><span class="journal-title">Nature</span> <time datetime="$item.date" pubdate><span class="time">16 Jan 2015</span></time> <span><a href="/doifinder/10.1038/nature.2015.16739#comments">9 comments</a></span></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="/doifinder/10.1038/517426a">Ageing research: Blood to blood</a></h3>
+															<p><span class="journal-title">Nature</span> <time datetime="$item.date" pubdate><span class="time">21 Jan 2015</span></time> <span><a href="/doifinder/10.1038/517426a#comments">9 comments</a></span></p>
+				</article>
+			</li>
+				</ol>
+	</div>
+							<div class="tab-footer fade-out"><a href="http://www.nature.com/news/top-content-article-page-7.799?article=1.16579&amp;tab=7.11333" class="right-arrow">View all</a></div>						</div>
+					</div>
+									<div id="top-content-article-page-tabbed-box-4" class="tab">
+						<h2 id="top-content-article-page-tabbed-box-tab-4" class="tab-label"><span>Emailed</span></h2>
+						<div id="top-content-article-page-tabbed-box-pane-4" class="tab-pane">
+							<div class="tab-content fade-out">
+	
+
+
+			<ol class="article-feed" start="1">
+					<li>
+				<article>
+					<h3><a href="http://www.nature.com/uidfinder/10.1038/517244b">Out of the bag</a></h3>
+																									
+					<p><span class="journal-title">Nature</span> <time datetime="2015-01-14" pubdate><span class="time">14 Jan 2015</span></time></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="http://www.nature.com/uidfinder/10.1038/517426a">Ageing research: Blood to blood</a></h3>
+																									
+					<p><span class="journal-title">Nature</span> <time datetime="2015-01-21" pubdate><span class="time">21 Jan 2015</span></time></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="http://www.nature.com/uidfinder/10.1038/nature.2015.16732">Looking for the roots of terrorism</a></h3>
+																									
+					<p><span class="journal-title">Nature</span> <time datetime="2015-01-15" pubdate><span class="time">15 Jan 2015</span></time></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="http://www.nature.com/uidfinder/10.1038/news.2010.368">Advertising link causes blogger strike</a></h3>
+																									
+					<p><span class="journal-title">Nature</span> <time datetime="2010-07-21" pubdate><span class="time">21 Jul 2010</span></time></p>
+				</article>
+			</li>
+					<li>
+				<article>
+					<h3><a href="http://www.nature.com/uidfinder/10.1038/nature.2015.16739">First atomic blast proposed as start of Anthropocene</a></h3>
+																									
+					<p><span class="journal-title">Nature</span> <time datetime="2015-01-16" pubdate><span class="time">16 Jan 2015</span></time></p>
+				</article>
+			</li>
+				</ol>
+	</div>
+							<div class="tab-footer fade-out"><a href="http://www.nature.com/news/top-content-article-page-7.799?article=1.16579&amp;tab=7.12107" class="right-arrow">View all</a></div>						</div>
+					</div>
+								</div>
+			</div>
+		</section>
+	
+												
+
+
+
+					
+
+
+<div class="ad ad-300x250 ad-5" data-ad-src="//ad.doubleclick.net/N285/adj/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;ptile=3;sz=300x250;pos=right;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=683564676286364?">
+	<noscript><a href="//ad.doubleclick.net/N285/jump/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;ptile=3;sz=300x250;pos=right;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=683564676286364?"><img src="//ad.doubleclick.net/N285/ad/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;ptile=3;sz=300x250;pos=right;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=683564676286364?" alt="Advertisment"/></a></noscript>
+</div>
+											
+
+
+
+					
+
+
+<div class="ad ad-160x600 ad-6" data-ad-src="//ad.doubleclick.net/N285/adj/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;ptile=4;sz=160x600;pos=right;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=583769273591804?">
+	<noscript><a href="//ad.doubleclick.net/N285/jump/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;ptile=4;sz=160x600;pos=right;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=583769273591804?"><img src="//ad.doubleclick.net/N285/ad/newsnature.com/article;abr=!webtv;artid=nature.2014.16579;ptile=4;sz=160x600;pos=right;submeta=npg_subject_699;submeta=npg_subject_326;submeta=npg_subject_134;submeta=npg_subject_250;ord=583769273591804?" alt="Advertisment"/></a></noscript>
+</div>
+											
+	<section id="nature-jobs-section">
+		<div class="box posting-box fade-out">
+			<h2>Science jobs from <span class="nature">nature</span><span class="hidden"> </span><span class="site-name">jobs</span></h2>
+			<ul>
+									
+					<li>
+						<h3><a href="http://www.nature.com/naturejobs/science/jobs/460881-interventional-gastroenterology-physician-job">Interventional Gastroenterology Physician Job</a></h3>
+						<p>Kalispell Gastroenterology</p>
+					</li>
+									
+					<li>
+						<h3><a href="http://www.nature.com/naturejobs/science/jobs/463323-post-doctoral-position">Post-Doctoral Position</a></h3>
+						<p>Leibniz University of Hannover</p>
+					</li>
+									
+					<li>
+						<h3><a href="http://www.nature.com/naturejobs/science/jobs/470463-international-phd-program-in-microbiology">International PhD Program in Microbiology</a></h3>
+						<p>International Max Planck Research School for Environmental, Cellular, and Molecular Microbiology</p>
+					</li>
+									
+					<li>
+						<h3><a href="http://www.nature.com/naturejobs/science/jobs/471591-call-for-phd-students-15-open-positions-at-imprs-for-heart-and-lung-research">Call for PhD Students, 15 Open Positions at IMPRS for Heart and Lung Research</a></h3>
+						<p>Max Planck Insitute for Heart and Lung Research</p>
+					</li>
+									
+					<li>
+						<h3><a href="http://www.nature.com/naturejobs/science/jobs/473043-open-positions-in-proteomics-and-translational-medicine-the-national-center-for-protein-sciences-the-phoenix-center">Open Positions in Proteomics and Translational Medicine, The National Center for Protein Sciences (the PHOENIX Center)</a></h3>
+						<p>The National Center for Protein Sciences (the Phoenix Center)</p>
+					</li>
+							</ul>
+																																																																	<ul class="box-footer fade-out cleared"><li class="right-arrow first"><a href="http://www.nature.com/naturejobs/science/orders/new">Post a Free Job</a></li><li class="right-arrow"><a href="http://www.nature.com/naturejobs/science/jobs">More Science Jobs</a></li></ul>
+									</div>
+	</section>
+														
+      									</div>
+							</div>
+
+			<div id="constrain-footer" class="cleared">
+				
+        
+	
+									<footer>
+
+	<ul id="journal-meta" class="cleared">
+		<li class="journal-title">Nature</li>
+		<li class="issn"><abbr title="International Standard Serial Number">ISSN</abbr><span class="hidden">:</span> 0028-0836</li>
+		<li class="eissn"><abbr title="Electronic International Standard Serial Number">EISSN</abbr><span class="hidden">:</span> 1476-4687</li>
+	</ul>
+
+	<div id="footer">
+
+		<ul class="footer-links first">
+			<li><a href="/npg">About <abbr title="Nature Publishing Group">NPG</abbr></a></li>
+			<li><a href="/npg_/contact">Contact <abbr title="Nature Publishing Group">NPG</abbr></a></li>
+			<li><a href="/info/accessibility_statement.html">Accessibility statement</a></li>
+			<li><a href="/help">Help</a></li>
+		</ul>
+		<ul class="footer-links">
+			<li><a href="/info/privacy.html">Privacy policy</a></li>
+			<li><a href="/info/cookies.html">Use of cookies</a></li>
+			<li><a href="/info/legal_notice.html">Legal notice</a></li>
+			<li><a href="/info/tandc.html">Terms</a></li>
+		</ul>
+		<ul class="footer-links">
+			<li><a href="/naturejobs">Nature<span class="hidden"> </span>jobs</a></li>
+			<li><a href="http://www.natureasia.com">Nature Asia</a></li>
+			<li><a href="/scitable">Nature Education</a></li>
+			<li><a href="/webfeeds">RSS web feeds</a></li>
+		</ul>
+		<ul class="footer-links last">
+			<li><a href="/nature/about/index.html">About <strong>Nature</strong></a></li>
+			<li><a href="/nature/about/contact/index.html">Contact <strong>Nature</strong></a></li>
+			<li><a href="/nature/about/editors/index.html">About the Editors</a></li>
+			<li><a href="/nature/awards/index.html"><strong>Nature</strong> awards</a></li>
+		</ul>
+	
+					
+
+<form method="get" action="/search/executeSearch" id="footer-search" class="search-form" role="search">
+	<fieldset>
+		<label for="footer-keyword">Search</label>
+		<input type="hidden" name="include-collections" value="journals_nature,crawled_content">
+		<input type="hidden" name="exclude-collections" value="journals_palgrave,lab_animal">
+		<input type="hidden" name="sp-c" value="25">
+		<input type="hidden" name="sp-s" value="date_descending">
+				<input type="search" id="footer-keyword" name="sp-q" placeholder="Search" value="" class="txt" maxlength="200">
+		<button type="submit" id="footer-search-submit">Go</button>
+
+			</fieldset>
+</form>
+						
+		<p class="copyright">
+			<small><a href="/info/copyright_statement.html">&#169; 2015 Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.</a></small>
+			<small>partner of <a href="/info/partners.html">AGORA, HINARI, OARE, INASP, CrossRef and COUNTER</a></small>
+		</p>
+	
+	</div>
+</footer>			
+      			</div>
+		</div>
+
+	</div>
+		<div id="mob-ss"></div>
+	<div id="mob-ms"></div>
+
+			<script src="/polopoly_static/js/nature/news/compiled/o4nyy5e.js"> </script>	
+		
+	
+	<noscript>
+		<div><img alt="" id="DCSIMG" width="1" height="1" src="//statse.webtrendslive.com/dcs0zztfg00000s969s37qoal_2f6z/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=10.2.55"/></div>
+	</noscript>
+</body>
+</html>

@@ -1,0 +1,649 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+<html xmlns:mml="http://www.w3.org/1998/Math/MathML" lang="en" >
+<head>
+
+    
+<script type="text/javascript">
+	var JiffyParams = { jsStart: (new Date()).getTime()};
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+<meta name="robots" content="noarchive,noindex,nofollow,NOODP" />
+
+
+
+
+
+
+
+
+
+
+<meta name="MSSmartTagsPreventParsing" content="true"/>
+
+
+<title>JSTOR: An Error Occurred Setting Your User Cookie</title>
+<meta charset="UTF-8"/>
+<link rel="shortcut icon" href="/templates/jsp/favicon.ico" type="image/vnd.microsoft.icon" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="/jawrcss/N815843185/bundles/jstor.css" />
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,900|Roboto+Condensed:400,700" />   	
+<link href="/templates/jsp/_jstor/css/print.css" media="print" rel="stylesheet" type="text/css" />
+    
+
+
+<script type="text/javascript" src="/jawr/106044773/bundles/layoutBundle.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	var tAndCAccepted = false;
+</script>
+
+
+
+
+<!-- placeholder id=null, description=Branding CSS -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="apple-touch-icon" href="/templates/jsp/_jstor/images/apple-touch-icon.png" />
+
+<!--% Implement Test & Target  -->
+<script type="text/javascript" src="/targetGlobal/files/testTarget/js/mbox.js"></script>
+                                                                          
+</head>
+<body class="jstor-doc">
+<!--% Implement Test & Target  -->
+<div class="mboxDefault"> </div><script type="text/javascript">mboxCreate('legacy_mbox_global');</script>
+
+<script type="text/javascript">
+	Jiffy.mark("startBody");
+</script>
+
+
+
+
+
+
+
+ 
+
+
+
+<!-- on window.onload function check whether journal is Right to Left and invoke languageMatchAndWrap() function to wrap Hebrew text with <bdo> -->
+<input type="hidden" id="rightToLeft" name="rightToLeft" value =""/>
+<div class="page liquid  ">
+	<div class="head globalContainer">
+      <div id="ufo">
+      	<h1 class="ufo">JSTOR</h1>
+	  </div>
+      <div id="skipNav"><a href="#mainContent" class="ufo">Skip to Main Content</a></div>
+		
+
+
+
+
+
+
+
+
+    <ul id="globalNav" class="menu global">
+	<li><a id="home" href="/" title="JSTOR: Home">JSTOR Home</a></li>
+        <li class="search hasDropDown"><a href="/action/showAdvancedSearch" id="search">Search</a>
+		<ul>
+          <li><a href="/action/showAdvancedSearch">Advanced Search</a></li>
+          <li><a href="/action/showArticleLocator">Citation Locator</a></li>
+            </ul>
+        </li>
+        <li class=" hasDropDown"><a href="/action/showJournals" id="browse">Browse</a>
+		<ul>
+          <li><a href="/action/showJournals">by Subject</a></li>
+          <li><a href="/action/showJournals?browseType=title">by Title</a></li>
+          <li><a href="/action/showJournals?browseType=publisherInstance">by Publisher</a></li>
+            </ul>
+        </li>
+        <li class="hasDropDown"><a href="https://www.jstor.org/action/myJstorSettings" id="myjstor">MyJSTOR</a>
+    		<ul>
+    		    <li><a href="https://www.jstor.org/action/myJstorSettings">Saved Citations</a></li>
+    		    <li><a href="https://www.jstor.org/action/showAlertSettings?myJstor=true">Journal Alerts</a></li>
+    		    <li><a href="https://www.jstor.org/action/doSavedSearch?myJstor=true&amp;action=savedSearch">Search Alerts</a></li>
+                
+                    <li><a href="/action/showShelf">Shelf</a></li>
+                
+                <li><a href="/action/showSubscriptions">JPASS Downloads</a></li>               
+                <li><a href="/action/showPurchases">Purchase History</a></li>
+
+                <li ><a href="/action/showRegistrationUpdate?myJstor=true">My Profile</a></li>
+    		    
+              	
+               
+            </ul>
+        </li>
+        
+    </ul>
+
+	</div>
+
+	<div class="body jstor brandingStripe">
+		<div class="rightCol myYahoo">
+		
+		  <div id="rrSkipNav"><a href="#mainContent" class="ufo">Skip to Main Content</a></div>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+        
+        <div class="login">
+           <div id="logo"><a href="/" title="JSTOR: Home"><img src="/templates/jsp/_jstor/images/jstor_logo.jpg" height="60" width="47" alt="JSTOR" /></a></div>
+           <ul class="menu support">
+            <li>
+            
+            
+                <a href="https://www.jstor.org/action/showLogin?redirectUri=%2Faction%2FcookieAbsent" id="supportLogin">Login</a>
+                
+         
+        </li>
+            <li><a href="http://about.jstor.org/support-training/help">Help</a></li>
+            <li><a href="/action/showContactUSMain">Contact Us</a></li>
+            <li><a href="http://about.jstor.org">About</a></li>                                                                                         
+           </ul>
+        <div class="welcome">
+          
+              
+            
+          </div>        
+        </div>
+        
+        
+       
+          <div class="subContent">
+          	
+          	
+          	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+	<div class="providerAccess smTxt">
+		
+		 <p>Your access to JSTOR provided by <span class="impact">Polytechnic Institute of New York University</span></p>
+	</div>
+
+
+
+
+
+
+
+
+
+
+          	
+
+
+
+
+
+
+
+
+
+
+          	
+            
+          	
+          </div>
+        </div>
+
+		
+		        <div id="mainContent" class="main">
+		        <div class="mainInner">
+					
+						
+
+
+
+
+
+
+
+
+
+
+
+					
+		            <!-- placeholder id=null, description=Banner Message -->
+		            
+					<div class="banner">
+						
+						
+
+
+
+
+<div class="globalSearchContainer">
+<form action="/action/doBasicSearch" id="globalSearchForm" method="get"><div id="navSearchContainer">
+  	
+    
+
+
+
+
+
+        
+    
+    <input id="quickSearchBox" class="text" type="text" name="Query" maxlength="200" autocapitalize="off" />
+            
+        <input class="button globalSearchButton" type="submit" name="Search" value="Search">
+    	
+    <input type="hidden" name="wc" value="on" />
+    <input type="hidden" name="fc" value="off" />
+    <input name="globalSearch" type="hidden" />
+    <input name="sbbBox" id="sbbBox" type="hidden" value="" />
+    <input name="sbjBox" id="sbjBox" type="hidden" value="" />
+    <input name="sbpBox" id="sbpBox" type="hidden" value="" />  
+		  </div></form>
+</div>
+					</div>	   			  
+		   
+        
+    <h1>An Error Occurred Setting Your User Cookie</h1>
+    
+			<p>The JSTOR site requires that your browser allows JSTOR (<a href="http://www.jstor.org">http://www.jstor.org</a>) to set and modify cookies.</p>
+			<p>JSTOR uses cookies to maintain information that will enable access to the archive and improve the response time and performance of the system. Any personal information, other than what is voluntarily submitted, is not extracted in this process, and we do not use cookies to identify what other websites or pages you have visited.</p>
+
+    
+        </div>
+        </div>
+	</div>
+	<ce of the system. Any personal information, other than what is voluntarily submitted, is not extracted in this process, and we do not use codiv class="foot">
+		
+
+
+
+<ul id="footerNav" class="menu support">
+	<li><a href="/">JSTOR Home</a></li>
+	<li><a href="http://about.jstor.org">About</a></li>
+	<li><a href="/action/showAdvancedSearch">Search</a></li>
+	<li><a href="/action/showJournals">Browse</a></li>
+	<li><a href="/page/info/about/policies/terms.jsp">Terms and Conditions</a></li>
+	<li><a href="/page/info/about/policies/privacy.jsp">Privacy Policy</a></li>
+	<li><a href="http://about.jstor.org/content/jstors-use-cookies">Cookies</a></li>
+	<li><a href="/page/info/about/policies/accessibility.jsp">Accessibility</a></li>
+	<li><a href="http://about.jstor.org/support-training/help">Help</a></li>
+	<li><a href="/action/showContactSupportForm">Contact us</a></li>
+</ul>
+<div class="footer">
+    <div class="inner">
+        JSTOR is part of ITHAKA, a not-for-profit organization helping the academic community use digital technologies to preserve the scholarly record and to advance research and teaching in sustainable ways.<br/>
+        
+
+
+&copy;2000-2015 ITHAKA. All Rights Reserved. JSTOR&reg;, the JSTOR logo, JPASS&reg;, and ITHAKA&reg; are registered trademarks of ITHAKA.<br/>
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+	<div class="providerAccess smTxt">
+		
+		 <p>Your access to JSTOR provided by <span class="impact">Polytechnic Institute of New York University</span></p>
+	</div>
+
+
+
+
+
+
+
+
+
+
+        
+    </div>
+ </div>
+	</div>
+ </div>
+
+
+
+<!-- placeholder id=null, description=Per Page Scripts -->
+
+
+    
+
+    <script type="text/javascript" src="/jawr/1105425977/bundles/jstorSiteCatalyst.js" ></script>
+
+
+    <div id="SCDataSiteWide" data-institution="Polytechnic Institute of New York University" data-loginevent="" data-loginstatus="" data-registrationcomplete="" class="hide"></div>
+
+
+
+
+
+
+
+
+<!-- placeholder id=null, description=Site-wide Scripts --><!-- ABS Script -->
+<script type="text/javascript" src="/abs/main.js"></script>
+<script type="text/javascript">
+  var jstorLtrLangConfig = 3,
+      jstorAuthCheck = $("#SCDataSiteWide").data(),
+      jstorAuthInst = $("#SCData").data();
+  
+  jstor.feature.ltrInclude = true;
+  jstor.feature.searchOverlay = true;
+  
+  (function($){
+      if(window.location.protocol !== "https:"){
+          if(jstor.mobile.isTouchDevice() && (!jstor.willShowMobileSurvey)){
+              //only get the bookmark js and execute if mobile touch device
+              $(window).load(function(){
+                  $.getScript("/sda/28344/bookmark_bubble.js", function(){
+                      var jstorMobileBookmark = new google.bookmarkbubble.Bubble();
+                      
+                      jstorMobileBookmark.NUMBER_OF_TIMES_TO_DISMISS = 1;
+                      jstorMobileBookmark.mobileReturn = function(){
+                          if(window.localStorage){
+                              if(localStorage.getItem("fromMobile") === "true"){
+                                  return true;
+                              }
+                          }
+                          return false;
+                      };
+                      jstorMobileBookmark.hasHashParameter = function() {
+                          var eval = location.href.indexOf("#mobileBookmark") != -1 || location.href.indexOf("#globalNav") != -1;
+                          
+                          if(eval && window.localStorage){
+                              localStorage.setItem("fromMobile", "true");
+                          }
+                          
+                          return eval;
+                      };
+                      jstorMobileBookmark.setHashParameter = function() {
+                          if (!this.hasHashParameter()) {
+                              location.href = "#mobileBookmark";
+                          }
+                      };
+                      //1.5 second delay before bubble shows
+                      if(!jstorMobileBookmark.mobileReturn()){
+                          setTimeout(function(){
+                              jstorMobileBookmark.showIfAllowedWhenLoaded();
+                          }, 1500);
+                      }
+                      
+                  });
+              });      
+          }
+      
+          var curUrl = imgUrl = "http://beacon.cdn.jstor.org"  + window.location.pathname;
+          
+          $("body").append("<img id='dynImage' src='" + imgUrl + "' alt=' ' />");
+          $("#dynImage").error(function(){
+              $(this).remove();
+          });
+                    
+          //Begin: www.iperceptions.com
+          if(jstorAuthCheck.institution !== "" || jstorAuthCheck.loginstatus !== ""){
+              if(!$("#IPerceptionsJS").length){
+                  var js = document.createElement("script");
+                  
+                  function go(){
+                      js.src = "//ips-invite.iperceptions.com/webValidator.aspx?sdfc=87c67279-118539-68db5f31-5cd1-4521-aade-fae2b4973ab1&lID=1&source=91787";
+                      js.id = "IPerceptionsJS";
+                      js.type = "text/javascript";
+                      js["async"] = "async";
+                      js["defer"] = "defer";
+                      //document.head.appendChild(js);
+                      document.getElementsByTagName('head')[0].appendChild(js);
+                  }
+                  
+                  if (100 < Math.floor(Math.random() * 100)) {
+                        document.cookie = "IPE_S_118539=0;Path=/;";
+                  } else if (!(/(^|;)\s*IPE(_S_)?118539=/.test(document.cookie))) {
+                      if (window.addEventListener) {
+                          window.addEventListener("load", go, false);
+                      } else if (window.attachEvent) {
+                          window.attachEvent("onload", go);
+                      }
+                  }
+              }
+          }
+          //End: www.iperceptions.com
+
+      }
+
+      
+	//var43
+    if($("#myJstorUserid").length && $("#SCDataSiteWide").data("loginevent") === ""){ //if user is logged in and loginevent is empty
+         
+        if('localStorage' in window && window.localStorage !== null){ //check for storage support in browser to avoid js errors in IE6 & IE7
+            var storedValue = JSON.parse(localStorage.getItem("sentLoginEvent") || null),
+                currentTime = new Date().getTime();
+             
+            if(storedValue === null || storedValue.sent !== true){ //if storage item hasn't been set or not set to true
+             
+                var timeStamp = new Date().getTime(),
+                    saveValue = JSON.stringify({sent: true, time : timeStamp});
+                 
+                    $("#SCDataSiteWide").attr("data-loginevent", "loginSuccess");
+                    s.eVar43 = "Success";
+                    s.tl(); //send SC Request
+                     
+                    localStorage.setItem("sentLoginEvent", saveValue);
+                 
+            } 
+        }
+    } else { 
+        //if error window and login form both appear, and loginevent is empty, push Fail event to SC
+        if($(".mainInner .errorMessage").length && $("#indivLoginForm").length && $("#SCDataSiteWide").data("loginevent") === ""){ 
+            s.eVar43 = "Fail";
+            s.tl(); //send SC Request       
+        }
+        //if user not logged in, remove local storage item to allow future logins to be sent to SC
+        if('localStorage' in window && window.localStorage !== null){
+            localStorage.removeItem("sentLoginEvent");
+        }
+    } 
+    
+     
+	var js = document.createElement("script");
+	js.src="//p.j-img.org/targetGlobal/files/testTarget/js/successTracking.js";
+	js.type = "text/javascript";
+	js["async"] = "async";
+	js["defer"] = "defer";
+	document.getElementsByTagName('body')[0].appendChild(js);
+
+//libChat for Georgia College State University
+	if($("#SCData").data("institution") !== "" && $("#SCData").data("institution") == "Georgia College & State University.<br><br><br>To chat with a GCSU librarian, please use the LibChat widget below.")
+	{
+
+  		var libChat = "<div id='libchat_2b3a3b5e84e49af2bd00d3b006353a1f'></div><br>";
+  		$(libChat).insertAfter( $('p#provider-statement'));
+  		
+  		var js = document.createElement("script");
+		js.src="/v2.libanswers.com/load_chat.php?hash=2b3a3b5e84e49af2bd00d3b006353a1f";
+		js.type = "text/javascript";
+		js["async"] = "async";
+		js["defer"] = "defer";
+		$(js).insertAfter( $('p#provider-statement'));	
+		
+   }
+	
+/*** LibChat for gcsu.edu ***/
+var scdswInsStr = $("#SCDataSiteWide").data("institution"); 
+	
+if(scdswInsStr !== "" && scdswInsStr == "Georgia College & State University") {
+   	var libChat = "<br>To chat with a GCSU librarian, please use the LibChat widget below.<div id='libchat_2b3a3b5e84e49af2bd00d3b006353a1f'></div><br>";
+  	$(libChat).insertAfter( $('.subContent .providerAccess > p') );
+  	
+  	var js = document.createElement("script");
+	js.src="//v2.libanswers.com/load_chat.php?hash=2b3a3b5e84e49af2bd00d3b006353a1f";
+	js.type = "text/javascript";
+	js["async"] = "async";
+	js["defer"] = "defer";
+  	$(js).insertAfter( $('.subContent .providerAccess > p') );
+
+}
+
+
+  })(jQuery);
+
+jstor.starPushHelper = function(customParameters) {
+    for (var i=0; i < jstor.starBasicIdentities.length; i++) {
+        if(i > 0 && typeof jstor.starBasicIdentities[i].consortium != 'undefined' && jstor.starBasicIdentities[i].consortium.indexOf("+") < 0 ){
+            jstor.starBasicIdentities[i].consortium = "+" + jstor.starBasicIdentities[i].consortium;
+        }
+        var combinedOptions = $.extend({}, jstor.starBasicIdentities[i], customParameters);
+        combinedOptions = jstor.starSetDatabaseTitle(combinedOptions);
+        _$tarQ.push(['track', combinedOptions] );
+    };
+  
+};
+jstor.starRecordViewPush = function() {
+        if ($("#browseBook").length) {
+            jstor.starPushHelper({
+                itemtype : "RECORD_VIEW",
+                datatype : "BOOK"
+            });
+            jstor.starPushHelper({
+                itemtype : "RECORD_VIEW",
+                datatype : "DATABASE"
+            });
+        } else {
+            if (starItemType == "ABSTRACT") {
+                scData = $("#SCData").data();
+                jstor.starPushHelper({
+                    itemtype : "RECORD_VIEW",
+                    datatype : "JOURNAL"
+                });
+                jstor.starPushHelper({
+                    itemtype : "RECORD_VIEW",
+                    datatype : "DATABASE"
+                });
+            }
+        }
+    };
+jstor.starSetDatabaseTitle = function (customParameters){if(customParameters.title != "PAMPHLETS" && customParameters.datatype == "DATABASE"){customParameters.title="JSTOR"}return customParameters}
+</script>
+
+
+
+
+<script type="text/javascript">
+	
+	
+		
+		//Star Record_View push
+		if( starItemType == "ABSTRACT" || starItemType =="TOC" ){
+		    jstor.starRecordViewPush();
+		}
+	
+	
+	
+</script>
+
+<!-- IMPORTANT! This jiffy script needs to be the last script on this page - as it measures load time. DO NOT INCLUDE OTHER SCRIPTS IN THIS BLOCK!!! -->
+<script type="text/javascript">
+	Jiffy.measure("BodyTagTiming", "startBody");
+</script>
+				 	
+</body>
+</html>
+RTANT! This jiffy script needs to be the last script on this page - as it measures load time. DO NOT INCLUDE OTH

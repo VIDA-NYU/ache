@@ -1,0 +1,589 @@
+	<!DOCTYPE html><!--[if lt IE 8]>	 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en-US"> <![endif]--><!--[if IE 8]>	  <html class="no-js lt-ie9" lang="en-US"> <![endif]--><!--[if IE 9]>	<html class="no-js ie-9" lang="en-US"> <![endif]--><!--[if gt IE 9]><!--> <html class="no-js" lang="en-US"> <!--<![endif]--><!-- THIS IS OVERLORD --><head><meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=EDGE" /><script async type="text/javascript" src="http://kinja.com/api/profile/assets/javascripts/sso.js"></script>
+	<script type="text/javascript">
+		var _sf_startpt=(new Date()).getTime();
+		if (typeof(performance) !== 'undefined' && typeof performance.now === 'function') {
+			var _kinjaperf_start = performance.now();
+		}
+	</script>
+		
+	<script type="text/javascript">
+		(function () {
+		  var w = typeof window != 'undefined' ? window : exports,
+			  marks = [];
+		  w.performance || (w.performance = {});
+		  w.performance.now || (
+			w.performance.now = performance.now || performance.webkitNow ||
+									 performance.msNow || performance.mozNow);
+		  if (!w.performance.now){
+			var s = Date.now ? Date.now() : +(new Date());
+			if (performance.timing && performance.timing)
+			  s = performance.timing.navigationStart
+			w.performance.now = (function(){
+			  var n = Date.now ? Date.now() : +(new Date());
+			  return n-s;
+			});
+		  }
+		  w.performance.mark || (
+		  w.performance.mark =
+			w.performance.webkitMark ? w.performance.webkitMark :
+			(function (l) {
+			  marks.push({'name': l, 'entryType': 'mark', 'startTime': w.performance.now(), 'duration':0 });
+			}));
+		  w.performance.getEntriesByType || (
+		  w.performance.getEntriesByType =
+			w.performance.webkitGetEntriesByType ? w.performance.webkitGetEntriesByType :
+			(function (t) {
+			  return t == 'mark' ? marks : [];
+			}));
+		  w.performance.clearMarks || (
+			w.performance.clearMarks = w.performance.webkitClearMarks ? w.performance.webkitClearMarks :
+			(function () {
+			  marks = [];
+			}));
+		  w.markUserTime = function(l) {
+			setTimeout(function() {
+				if (typeof w.performance.mark === 'function') {
+					w.performance.mark(l);
+				}
+				if (w.console && w.console.timeStamp) {
+					w.console.timeStamp(l);
+				}
+			}, 0);
+		  };
+
+		}());
+	</script>
+		<script type='text/javascript' src='http://c.amazon-adsystem.com/aax2/amzn_ads.js'></script><script type='text/javascript'>
+		try {
+			amznads.getAds('3076');
+		} catch(e) { console.log(e.message);}
+		</script>	<script>
+	window.Krux || ((Krux = function () {
+		Krux.q.push(arguments);
+	}).q = []);
+	(function () {
+		function retrieve(n) {
+			var m, k = 'kx' + n;
+			if (window.localStorage) {
+				return window.localStorage[k] || "";
+			} else if (navigator.cookieEnabled) {
+				m = document.cookie.match(k + '=([^;]*)');
+				return (m && unescape(m[1])) || "";
+			} else {
+				return '';
+			}
+		}
+		Krux.user = retrieve('user');
+		Krux.segments = retrieve('segs') && retrieve('segs').split(',') || [];
+	})();
+	</script><!-- Included CSS Files --><!--[if IE 9]><link rel="stylesheet" href="http://c.kinja-static.com/assets/stylesheets/tiger-split-26aa039855e0e72a5efff757b712bcbc.css"><![endif]--><!--[if !IE]>--><link rel="stylesheet" href="http://c.kinja-static.com/assets/stylesheets/tiger-7d2b4dc6cf39f45c538fa64275a682ab.css"><!--<![endif]--><meta name="dynamic-stylesheet" id="editor-css-url" content="http://c.kinja-static.com/assets/stylesheets/editor-c8a1dfb041fb7f0defaf7c30b5fcab95.css"><!-- Site specific colors -->	<style type="text/css">
+				a, a:hover, a:focus { color: #c34b9e; }
+				.site-border-color { border-color: #c34b9e !important; }
+			</style><meta name="google-site-verification" content="K6wRvI0H8ILViUOVv2vsEYbx_XGrjrOFcjiQyebLccw" /><!-- IE Fix for HTML5 Tags --><!--[if lte IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--><meta charset="utf-8" /><!-- Set the viewport width to device width for mobile --><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0" /><!-- robots are not welcome now --><meta name="ROBOTS" content="INDEX, FOLLOW" /><title>How do you buy organs on the black market?</title><!-- favicon and touch icons --><link rel="shortcut icon" href="http://i.kinja-img.com/gawker-media/image/upload/s--09dOAwvj--/c_fill,fl_progressive,g_center,h_80,q_80,w_80/192oz432yr16epng.png" /><link rel="apple-touch-icon" href="http://i.kinja-img.com/gawker-media/image/upload/s--5JEMryrx--/c_fill,fl_progressive,g_center,h_200,q_80,w_200/192oz432yr16epng.png" /><meta name="msapplication-square70x70logo" content="http://i.kinja-img.com/gawker-media/image/upload/s--09dOAwvj--/c_fill,fl_progressive,g_center,h_80,q_80,w_80/192oz432yr16epng.png" /><meta name="msapplication-square150x150logo" content="http://i.kinja-img.com/gawker-media/image/upload/s--5JEMryrx--/c_fill,fl_progressive,g_center,h_200,q_80,w_200/192oz432yr16epng.png" /><!-- rss --><link rel="alternate" type="application/rss+xml" title="io9 - All stories" href="http://feeds.gawker.com/io9/full" /><!-- Open Graph/Facebook headers --><meta name="keywords" content="Medicine, Science, Sci, biology, Organs, Politics, Fb, io9" /><meta name="news_keywords" content="Medicine, Science, Sci, biology, Organs, Politics, Fb, io9" /><link rel="canonical" href="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market" /><meta name="twitter:url" content="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market" /><meta property="og:title" content="How do you buy organs on the black market?" /><meta property="og:type" content="article" /><meta name="twitter:image" content="http://i.kinja-img.com/gawker-media/image/upload/s--7YFLycix--/17hrfbdxak71wjpg.jpg" /><meta property="og:image" content="http://i.kinja-img.com/gawker-media/image/upload/s--7YFLycix--/17hrfbdxak71wjpg.jpg" /><meta name="author" content="Esther Inglis-Arkell" /><meta property="og:url" content="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market" /> <!-- permalink --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@io9"><meta name="twitter:title" content="How do you buy organs on the black market?"><meta name="twitter:description" content="Organ donors are scarce. Waiting lists are long. And life is short — especially if you really need a new heart or liver."><meta name="twitter:creator"><meta property="og:description" content="Organ donors are scarce. Waiting lists are long. And life is short — especially if you really need a new heart or liver." /><meta name="description" content="Organ donors are scarce. Waiting lists are long. And life is short — especially if you really need a new heart or liver." /><meta property="og:locale" content="en_US" /><meta property="og:site_name" content="io9" /><meta property="fb:app_id" content="31388860473"/><meta name="kinja:mode" content="live" /><meta name="kinja:page-type" content="permalink" /></head><body class="io9 custom-skin permalink en-US f_amazon_selective_clientside_render_on f_analyticstracking_on f_biztools_blogname_on f_cedexis_on f_chartbeat_everywhere_on f_chartbeatsidebar_on f_coredecorators_on f_coreinsets_on f_disable_ads_portrait_on f_dynamic_ad_slots_on f_dynamic_leftrail_ad_on f_editor_debug_log_on f_extendedapproval_on f_foobar_foo f_footer_new_chartbeat_on f_gns_on f_groupchats_force_synchronous_upload_on f_groupchats_indented_on f_groupchats_rendering_performance_on f_hide_html_mobile_on f_hide_pending_replies_on f_ie9_no_dynamic_ad_on f_iframe_defer_on f_inset_lists_on f_krux_on f_large_post_performance_on f_leftrail1_on f_leftrail_permalink_on f_limit_draft_controls_on f_marionette_annotations_on f_marionetteimages_direct_to_cloudinary_on f_moatads_headertag_on f_moatads_promoted_on f_mobile_ad_prototypes_on f_mobile_ad_prototypes_permalink_on f_morenotifresolving_on f_multioauth_on f_postflagging_on f_postlisttracking_on f_promoted_touch_on f_raven_on f_recommended_footer_on f_redactor_on f_scan_for_companies_on f_simplereach_expanded_on f_throttle_on f_throttle_measuring_off f_throttle_test_foo_lorem f_uidimages_on f_unify_amazon_insets_editor_on f_unify_amazon_insets_permalink_on f_universalanalytics_on f_userstats_on f_vidpreroll_on f_viewstats_via_service_on k_liveblog_appRevision_1 k_liveblog_pollIntervalMillis_10000 k_maintenance_off" data-timezone-offset="-28800000">	
+	<script type="text/javascript">
+		var readOnlyRequest;
+		var cn = "read-only";
+		var setReadOnly = function () {
+			document.body.className = (document.body.className === '') ? cn : document.body.className + ' ' + cn;
+		};
+		if (window.XMLHttpRequest) {
+			readOnlyRequest = new XMLHttpRequest();
+		} else if (window.ActiveXObject) {
+			readOnlyRequest = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		readOnlyRequest.onreadystatechange = function() {
+			if (readOnlyRequest.readyState == 4 && readOnlyRequest.status >= 500 && readOnlyRequest.status < 600) {
+				setReadOnly();
+			}
+		};
+    	readOnlyRequest.open('GET', "/ajax/readOnlyMode");
+    	readOnlyRequest.send();
+	</script>
+	<div id="js_off-canvas-wrap" class="off-canvas-wrap" data-offcanvas><div class="inner-wrap"><aside class="left-off-canvas-menu show-for-medium-down proxima nav-dropdown main-menu">	<div id="js_blogmenu--offcanvas">	<div class="search show-for-medium-down">	<form method="GET" class="search search-simple" action="/search" onsubmit="window.ga('send', 'event', 'Search', 'Submit', 'permalink');"><div class="input-with-icon"><span class="icon icon-search"></span><input type="text" placeholder="Search" name="q" class="mbn" data-focus-on-display/></div></form></div><div class="divider show-for-medium-down"></div><div class="js_login-links show-for-medium-down"></div><ul class="about-kinja show-for-medium-down"><li class="nohighlight"><a href="http://kinja.com" class="logo-kinja" data-ga="[Kinja Menu, Kinja.com Click, js_pageType]"><h1 class="kinja-title proxima">Kinja</h1></a><a href="http://kinja.com" class="text-center strong" data-ga="[Kinja Menu, About Kinja Click, js_pageType]">About Kinja</a></li></ul><div class="divider show-for-medium-down"></div><ul class="show-for-medium-down"><li class="add js_follow-controls js_follow-buttons follow-controls--blog-menu" data-blogid="8"><a href="#" class="js_followforuser proxima"><span class="icon icon-plus"></span> <span>Follow io9</span></a><a href="#" class="js_unfollowforuser proxima hide"><span class="icon icon-checkmark"></span> <span>Followed</span></a></li><li></li></ul><ul><li class="title">Related blogs</li>	<li><a href="http://observationdeck.io9.com" data-ga="[Kinja Menu, Related Blog Click, Observation Deck]"><span class="icon icon-sprite site-icon site-icon-default icon-prepend"></span>Observation Deck</a></li><li><a href="http://space.io9.com" data-ga="[Kinja Menu, Related Blog Click, Space]"><span class="icon icon-sprite site-icon site-icon-default icon-prepend"></span>Space</a></li><li><a href="http://animals.io9.com" data-ga="[Kinja Menu, Related Blog Click, Animals]"><span class="icon icon-sprite site-icon site-icon-default icon-prepend"></span>Animals</a></li><li><a href="http://toybox.io9.com" data-ga="[Kinja Menu, Related Blog Click, Toybox]"><span class="icon icon-sprite site-icon site-icon-default icon-prepend"></span>Toybox</a></li></ul><div class="divider"></div><ul><li class="title">Blogs you may like</li>	<li><a href="http://deadspin.com" data-ga="[Kinja Menu, Blogs You May Like Click, Deadspin]"><span class="icon icon-prepend icon-sprite site-icon site-icon-deadspin"></span>Deadspin</a></li><li><a href="http://gawker.com" data-ga="[Kinja Menu, Blogs You May Like Click, Gawker]"><span class="icon icon-prepend icon-sprite site-icon site-icon-gawker"></span>Gawker</a></li><li><a href="http://gizmodo.com" data-ga="[Kinja Menu, Blogs You May Like Click, Gizmodo]"><span class="icon icon-prepend icon-sprite site-icon site-icon-gizmodo"></span>Gizmodo</a></li><li><a href="http://io9.com" data-ga="[Kinja Menu, Blogs You May Like Click, io9]"><span class="icon icon-prepend icon-sprite site-icon site-icon-io9"></span>io9</a></li><li><a href="http://jalopnik.com" data-ga="[Kinja Menu, Blogs You May Like Click, Jalopnik]"><span class="icon icon-prepend icon-sprite site-icon site-icon-jalopnik"></span>Jalopnik</a></li><li><a href="http://jezebel.com" data-ga="[Kinja Menu, Blogs You May Like Click, Jezebel]"><span class="icon icon-prepend icon-sprite site-icon site-icon-jezebel"></span>Jezebel</a></li><li><a href="http://kotaku.com" data-ga="[Kinja Menu, Blogs You May Like Click, Kotaku]"><span class="icon icon-prepend icon-sprite site-icon site-icon-kotaku"></span>Kotaku</a></li><li><a href="http://lifehacker.com" data-ga="[Kinja Menu, Blogs You May Like Click, Lifehacker]"><span class="icon icon-prepend icon-sprite site-icon site-icon-lifehacker"></span>Lifehacker</a></li><li><a href="http://sploid.gizmodo.com/" data-ga="[Kinja Menu, Blogs You May Like Click, Sploid]"><span class="icon icon-prepend icon-sprite site-icon site-icon-sploid"></span>Sploid</a></li></ul></div><div class="divider"></div></aside><aside class="right-off-canvas-menu show-for-medium-down proxima nav-dropdown">	<dl class="tabs row" data-tab><dd class="js_usernacon icon-prepend icon-spritme-tab tab-title active small-6 columns"><a href="#js_usermenu--offcanvas" class="js_username">Username</a></dd><dd class="js_notif-tab tab-title small-6 columns"><a href="#js_notifications--offcanvas">Notifications</a></dd></dl><div class="tabs-content"><div class="content active" id="js_usermenu--offcanvas"><div class="divider"></div></div><div class="content notif-menu js_notif-panel" id="js_notifications--offcanvas"><div class="divider"></div></div></div></aside><a class="exit-off-canvas"></a>	<!--  md5!  --><div class="js_top-nav-wrap top-nav fixed shadow-bottom"><nav class="js_top-nav row proxima"><div class="header flex-container horizontal-nowrap"><div class="flex-item off-canvas-toggle__wrapper show-for-medium-down"><a class="left-off-canvas-toggle menu-square" data-ga="[Kinja Menu, Menu Click, js_pageType]"><span class="icon-hamburger"><span></span><span></span><span></span></span></a></div><div class="flex-item kinja-title__wrapper hide-for-medium-down"><a data-dropdown="global-blog" class="js_menu-button"><h1 class="kinja-title proxima" data-ga="[Kinja Menu, Menu Click, js_pageType]">Kinja</h1><span class="menu-arrow--tab down" data-ga="[Kinja Menu, Menu Click, js_pageType]"><label>Menu</label><span class="icon icon-chevron-down icon-white menu-arrow__icon"></span></span></a></div><div class="blog-title-region js_blog-title-region flex-item flex-grow" data-logo-src="http://i.kinja-img.com/gawker-media/image/upload/s--nKABgKFD--/c_fit,fl_progressive,q_80,w_600/y9jqgcewukbby4e2hlmo.png" data-image-asset-path="http://c.kinja-static.com/assets/images/"></div><div class="flex-item header-right"><div class="right user-bar js_right-user-bar"></div></div></div><div class="proxima f-dropdown content no-triangle nav-dropdown main-menu hide-for-medium-down" id="global-blog" data-dropdown-content><div id="js_blogmenu--dropdown">	<div class="search show-for-medium-down">	<form method="GET" class="search search-simple" action="/search" onsubmit="window.ga('send', 'event', 'Search', 'Submit', 'permalink');"><div class="input-with-icon"><span class="icon icon-search"></span><input type="text" placeholder="Search" name="q" class="mbn" data-focus-on-display/></div></form></div><div class="divider show-for-medium-down"></div><div class="js_login-links show-for-medium-down"></div><ul class="about-kinja show-for-medium-down"><li class="nohighlight"><a href="http://kinja.com" class="logo-kinja" data-ga="[Kinja Menu, Kinja.com Click, js_pageType]"><h1 class="kinja-title proxima">Kinja</h1></a><a href="http://kinja.com" class="text-center strong" data-ga="[Kinja Menu, About Kinja Click, js_pageType]">About Kinja</a></li></ul><div class="divider show-for-medium-down"></div><ul class="show-for-medium-down"><li class="add js_roxima">Kinja</h1></a><a href="http://kinja.cfollow-controls js_follow-buttons follow-controls--blog-menu" data-blogid="8"><a href="#" class="js_followforuser proxima"><span class="icon icon-plus"></span> <span>Follow io9</span></a><a href="#" class="js_unfollowforuser proxima hide"><span class="icon icon-checkmark"></span> <span>Followed</span></a></li><li></li></ul><ul><li class="title">Related blogs</li>	<li><a href="http://observationdeck.io9.com" data-ga="[Kinja Menu, Related Blog Click, Observation Deck]"><span class="icon icon-sprite site-icon site-icon-default icon-prepend"></span>Observation Deck</a></li><li><a href="http://space.io9.com" data-ga="[Kinja Menu, Related Blog Click, Space]"><span class="icon icon-sprite site-icon site-icon-default icon-prepend"></span>Space</a></li><li><a href="http://animals.io9.com" data-ga="[Kinja Menu, Related Blog Click, Animals]"><span class="icon icon-sprite site-icon site-icon-default icon-prepend"></span>Animals</a></li><li><a href="http://toybox.io9.com" data-ga="[Kinja Menu, Related Blog Click, Toybox]"><span class="icon icon-sprite site-icon site-icon-default icon-prepend"></span>Toybox</a></li></ul><div class="divider"></div><ul><li class="title">Blogs you may like</li>	<li><a href="http://deadspin.com" data-ga="[Kinja Menu, Blogs You May Like Click, Deadspin]"><span class="icon icon-prepend icon-sprite site-icon site-icon-deadspin"></span>Deadspin</div class="divider"></div><ul><li class="title">Blogs you may like</li>	<li><a href="http://deadspin.com" data-ga="[Kinja Menu, Blogs You May Like Clia></li><li><a href="http://gawker.com" data-ga="[Kinja Menu, Blogs You May Like Click, Gawker]"><span class="icon icon-prepend icon-sprite site-icon site-icon-gawker"></span>Gawker</a></li><li><a href="http://gizmodo.com" data-ga="[Kinja Menu, Blogs You May Like Click, Gizmodo]"><span class="icon icon-prepend icon-sprite site-icon site-icon-gizmodo"></span>Gizmodo</a></li><li><a href="http://io9.com" data-ga="[Kinja Menu, Blogs You May Like Click, io9]"><span class="icon icon-prepend icon-sprite site-icon site-icon-io9"></span>io9</a></li><li><a href="http://jalopnik.com" data-ga="[Kinja Menu, Blogs You May Like Click, Jalopnik]"><span class="icon icon-prepend icon-sprite site-icon site-icon-jalopnik"></span>Jalopnik</a></li><li><a href="http://jezebel.com" data-ga="[Kinja Menu, Blogs You May Like Click, Jezebel]"><span class="icon icon-prepend icon-sprite site-icon site-icon-jezebel"></span>Jezebel</a></li><li><a href="http://kotaku.com" data-ga="[Kinja Menu, Blogs You May Like Click, Kotaku]"><span class="icon icon-prepend icon-sprite site-icon site-icon-kotaku"></span>Kotaku</a></li><li><a href="http://lifehacker.com" data-ga="[Kinja Menu, Blogs You May Like Click, Lifehacker]"><span class="icon icon-prepend icon-sprite site-icon site-icon-lifehacker"></span>Lifehacker</a></li><li><a href="http://sploid.gizmodo.com/" data-ga="[Kinja Menu, Blogs You May Like Click, Sploid]"><span class="icon icon-prepend icon-sprite site-icon site-icon-sploid"></span>Sploid</a></li></ul></div><a class="menu-arrow--tab up js_close-main-menu"><span class="icon icon-chevron-down icon-white menu-arrow__icon r-up"></span></a></div><div class="proxima f-dropdown nav-dropdown content notif-menu" id="js_notifications--dropdown" data-dropdown-content></div><div class="js_global-user scrollable-container noskimlinks noskimwords"><div class="proxima f-dropdown nav-dropdown content user-menu user-menu--mobile" id="js_usermenu--dropdown" data-dropdown-content></div></div></nav></div><div id="ad-970x90-container" class="js_ad-top row ad-wide ad-top show-for-xlarge-up"><div class="column">		<div class="ad-unit ad-970x90 default desktop js_ad-unit" data-cb-ad-id="ad_970x90_default"><div class="ad-container js_ad-container"style="display: none;"id="ad-container-75925532" data-size="970x90" data-random="75925532" data-slot="default" data-zone-class="Zone_970x90" data-dfp-sz="970x90,728x90"></div></div></div></div><div class="row page js_page"><div class="large-4 columns sidebar hide-for-medium-down"><div class="sidebar-container js_sidebar-actual-container">			<div class="sidebar-content js_sidebar-container js_sidebar"><section id="js_leftrailmodule--trending" class="leftrailmodule leftrailmodule--trending">	<div class="strapline proxima text-upper text-micro strapline--leftrail"><span class="strapline-bg">Trending on Kinja</span></div><div class="js_related-module "><ol class="leftrail-list leftrail-list--trending js_leftrail-list">	<li class="row leftrail-item leftrail-item--trending js_leftrail-item"><div class="large-1 columns"><div class="leftrail-marker">1.</div></div><div class="large-5 columns"><a href="http://gizmodo.com/the-best-cyber-monday-deals-1646775845" data-ga="[Trending module click, position 1, js_pageType]"><img class="leftrail-image" src="http://i.kinja-img.com/gawker-media/image/upload/s--bCZJi_-5--/c_fill,fl_progressive,g_north,h_180,q_80,w_320/lq8dwudadsafnarowqvr.png" alt="The Best Cyber Monday Deals" /></a></div><div class="large-6 columns"><h6 class="headline"><a href="http://gizmodo.com/the-best-cyber-monday-deals-1646775845" data-ga="[Trending module click, position 1, js_pageType]">The Best Cyber Monday Deals</a></h6><div class="byline proxima text-small"> <a href="//gizmodo.com" class="text-light byline__source">on Gizmodo</a></div></div></li>	<li class="row leftrail-item leftrail-item--trending js_leftrail-item"><div class="large-1 columns"><div class="leftrail-marker">2.</div></div><div class="large-11 columns"><h6 class="headline"><a href="http://kotaku.com/the-best-cyber-monday-gaming-deals-1651933170" data-ga="[Trending module click, position 2, js_pageType]">The Best Cyber Monday Gaming Deals</a></h6><div class="byline proxima text-small"> <a href="//kotaku.com" class="text-light byline__source">on Kotaku</a></div></div></li>	<li class="row leftrail-item leftrail-item--trending js_leftrail-item"><div class="large-1 columns"><div class="leftrail-marker">3.</div></div><div class="large-11 columns"><h6 class="headline"><a href="http://gawker.com/the-gop-staffer-who-criticized-obamas-daughters-was-arr-1665208882" data-ga="[Trending module click, position 3, js_pageType]">The GOP Staffer Who Criticized Obama&apos;s Daughters Was Arrested as a Teen</a></h6><div class="byline proxima text-small"> <a href="//gawker.com" class="text-light byline__source">on Gawker</a></div></div></li></ol></div></section>	<div id="js_leftrailmodule--fixedad" class="leftrailmodule leftrailmodule--fixedad hide"><div id="ad-300x-container">		<div class="ad-unit ad-300x250 default desktop js_ad-unit" data-cb-ad-id="ad_300x250_default"><div class="ad-container js_ad-container"style="display: none;"id="ad-container-44529836" data-size="300x250" data-random="44529836" data-slot="default" data-zone-class="Zone_300x" data-dfp-sz="300x250"></div></div></div></div><section id="js_leftrailmodule--popular" class="leftrailmodule leftrailmodule--popular">	<div class="strapline proxima text-upper text-micro strapline--leftrail"><span class="strapline-bg">Written by <a href="//estheringlis-arkell.kinja.com/">Esther Inglis-Arkell</a></span></div><div class="js_related-module "><ol class="leftrail-list leftrail-list--popular js_leftrail-list">	<li class="row leftrail-item leftrail-item--popular js_leftrail-item recommended"><div class="row"><div class="large-12 columns leftrail-image-wrap"><a href="http://io9.com/yes-you-can-buy-the-scent-of-rain-in-a-desert-1664737073" data-ga="[Popular stories click, position 1, js_pageType]"><img class="leftrail-image" src="http://i.kinja-img.com/gawker-media/image/upload/s--99zvrQe4--/c_fill,fl_progressive,g_north,h_180,q_80,w_320/odrelutmyj3mswhebw63.jpg" alt="Yes, You Can Buy the Scent of Rain in a Desert" /></a></div></div><div class="row"><div class="large-12 columns"><h6 class="headline"><a href="http://io9.com/yes-you-can-buy-the-scent-of-rain-in-a-desert-1664737073" data-ga="[Popular stories click, position 1, js_pageType]">Yes, You Can Buy the Scent of Rain in a Desert</a></h6></div></div><div class="row"><div class="large-12 columns"><div class="leftrail-separator"></div></div></div></li>	<li class="row leftrail-item leftrail-item--popular js_leftrail-item recommended"><div class="row"><div class="large-12 columns leftrail-image-wrap"><a href="http://io9.com/why-atomic-clocks-are-the-most-reliable-timekeepers-in-1664992660" data-ga="[Popular stories click, position 2, js_pageType]"><img class="leftrail-image" src="http://i.kinja-img.com/gawker-media/image/upload/s--xWyEo5wt--/c_fill,fl_progressive,g_north,h_180,q_80,w_320/cvvxswqy2tddir3obh9z.jpg" alt="Why Atomic Clocks Are the Most Reliable Timekeepers in the World" /></a></div></div><div class="row"><div class="large-12 columns"><h6 class="headline"><a href="http://io9.com/why-atomic-clocks-are-the-most-reliable-timekeepers-in-1664992660" data-ga="[Popular stories click, position 2, js_pageType]">Why Atomic Clocks Are the Most Reliable Timekeepers in the World</a></h6></div></div><div class="row"><div class="large-12 columns"><div class="leftrail-separator"></div></div></div></li>	<li class="row leftrail-item leftrail-item--popular js_leftrail-item recommended"><div class="row"><div class="large-12 columns"><h6 class="headline"><a href="http://io9.com/watch-sulfuric-acid-melt-a-sponge-in-slow-motion-1664487195" data-ga="[Popular stories click, position 3, js_pageType]">Watch Sulfuric Acid Melt a Sponge In Slow-Motion</a></h6></div></div><div class="row"><div class="large-12 columns"><div class="leftrail-separator"></div></div></div></li></ol></div></section><div id="js_leftrailmodule--dynamicad" class="leftrailmodule leftrailmodule--dynamicad"></div></div></div></div><script>markUserTime('Content - Before main column');</script><div class="large-8 columns main-column">	<div id="fb-root"></div><div class="row content-header"><div class="js_site-header site-header medium-7 hide-for-medium-down columns"><a href="/" class="site-logo mln" title="io9"><img class="logo" src="http://i.kinja-img.com/gawker-media/image/upload/s--nKABgKFD--/c_fit,fl_progressive,q_80,w_600/y9jqgcewukbby4e2hlmo.png" alt="" /></a></div><div class="hide-for-medium-down medium-4 small-2 columns pln"><div class="add js_follow-controls js_follow-buttons follow-controls right header-action" data-blogid="8"><a href="#" class="js_followforuser follow-controls__link proxima hide" title="Follow io9"><span class="icon icon-plus"></span> <span class="hide-for-medium-down">Follow</span></a><a href="#" class="js_unfollowforuser proxima follow-controls__link hide" title="Unfollow io9"><span class="icon icon-checkmark"></span> <span class="hide-for-medium-down">Followed</span></a></div></div></div>		<section class="branch-wrapper ">	<div id="foreplay" class="reveal-modal js_foreplay foreplay proxima noskimlinks noskimwords" data-reveal><div id="jwPlayerVideo"></div><a href="#" class="close js_foreplay-close">In 5 seconds, click here to continue reading...</a>	<div class="ad-unit ad-16x9 default desktop js_ad-unit" data-cb-ad-id="ad_16x9_default"><div class="ad-container js_ad-container"style="display: none;"id="ad-container-92689425" data-size="16x9" data-random="92689425" data-slot="default" data-zone-class="Zone_16x9" data-dfp-sz="16x9" data-post-id="5896323" data-post-headline="How do you buy organs on the black market?" data-forced-ad-zone="collapse" data-tags="medicine,science,sci,biology,organs,politics,fb"></div></div></div>	<div class="js_ie-message hide"></div><div id="editorplaceholder" class="editorplaceholder"></div><div class="post-wrapper js_post-wrapper "  >	<article class="post hentry js_post_item status-published post-item-permalink commented js_amazon_module" data-id="5896323" id="post_5896323" data-model="%7B%22id%22%3A5896323%2C%22permalink%22%3A%22http%3A%2F%2Fio9.com%2F5896323%2Fhow-do-you-buy-organs-on-the-black-market%22%2C%22permalinkPath%22%3A%22%2F5896323%2Fhow-do-you-buy-organs-on-the-black-market%22%2C%22isBlip%22%3Afalse%2C%22isRecommended%22%3Afalse%2C%22publishTimeMillis%22%3A1332803373224%2C%22publishTime%22%3A%7B%22timestamp%22%3A1332803373224%2C%22timezone%22%3A%22America%2FLos_Angeles%22%2C%22MdyHm%22%3A%2203%2F26%2F2012%2016%3A09%22%2C%22MdyatHm%22%3A%2203%2F26%2F2012%20at%2016%3A09%22%2C%22rfc822%22%3A%22Mon%2C%2026%20Mar%202012%2023%3A09%3A33%20GMT%22%2C%22yMdHmsZ%22%3A%222012-03-26T16%3A09%3A33-07%3A00%22%2C%22hmma%22%3A%224%3A09pm%22%2C%22day%22%3A%22Monday%22%2C%22Mddyyhmma%22%3A%223%2F26%2F12%204%3A09pm%22%2C%22fullDate%22%3A%22March%2026%2C%202012%22%2C%22relative%22%3A%7B%22amount%22%3Anull%2C%22type%22%3A%22greaterthanweek%22%7D%7D%2C%22status%22%3A%22PUBLISHED%22%2C%22author%22%3A%7B%22id%22%3A%225717394218864607828%22%2C%22accountId%22%3A%225717394218864607828%22%2C%22screenName%22%3A%22estheringlis-arkell%22%2C%22displayName%22%3A%22Esther%20Inglis-Arkell%22%2C%22defaultBlogId%22%3A658%2C%22defaultBlog%22%3Anull%2C%22avatarUrl%22%3A%22chomp%3A%2F%2F183mxbihbxi4djpg%22%2C%22avatar%22%3A%7B%22uri%22%3A%22chomp%3A%2F%2F183mxbihbxi4djpg%22%2C%22id%22%3A%22183mxbihbxi4djpg%22%2C%22format%22%3A%22jpg%22%7D%7D%2C%22authorId%22%3A%225717394218864607828%22%2C%22byline%22%3A%22%22%2C%22isStarter%22%3Atrue%2C%22blogId%22%3A%5B658%2C8%5D%2C%22defaultBlogId%22%3A8%2C%22authorBlogId%22%3A658%2C%22authorBlogName%22%3A%22estheringlis-arkell%22%2C%22allowReplies%22%3Atrue%2C%22isBillboardPost%22%3Afalse%2C%22liveBlog%22%3Afalse%2C%22headline%22%3A%22How%20do%20you%20buy%20organs%20on%20the%20black%20market%3F%22%2C%22adZone%22%3A%22collapse%22%2C%22tagUrlNames%22%3A%22medicine%2Cscience%2Csci%2Cbiology%2Corgans%2Cpolitics%2Cfb%22%2C%22replyCount%22%3A52%2C%22sharedPostId%22%3Anull%2C%22images%22%3A%5B%7B%22src%22%3A%22http%3A%2F%2Fi.kinja-img.com%2Fgawker-media%2Fimage%2Fupload%2Fs--0DEn_GZl--%2Fc_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%2F17hrfbdxak71wjpg.jpg%22%2C%22uri%22%3A%22chomp%3A%2F%2F17hrfbdxak71wjpg%22%2C%22id%22%3A%2217hrfbdxak71wjpg%22%2C%22width%22%3A636%2C%22height%22%3A358%2C%22format%22%3A%22jpg%22%2C%22recommended%22%3Anull%7D%2C%7B%22src%22%3A%22http%3A%2F%2Fi.kinja-img.com%2Fgawker-media%2Fimage%2Fupload%2Fs--ggkl-HRv--%2Fc_fill%2Cfl_progressive%2Cg_north%2Ch_180%2Cq_80%2Cw_320%2F17hm7kvezgaacjpg.jpg%22%2C%22uri%22%3A%22chomp%3A%2F%2F17hm7kvezgaacjpg%22%2C%22id%22%3A%2217hm7kvezgaacjpg%22%2C%22width%22%3A320%2C%22height%22%3A180%2C%22format%22%3A%22jpg%22%2C%22recommended%22%3Anull%7D%2C%7B%22src%22%3A%22http%3A%2F%2Fi.kinja-img.com%2Fgawker-media%2Fimage%2Fupload%2Fs--n-JdfB-W--%2Fc_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%2F17hm8fq9kpcukjpg.jpg%22%2C%22uri%22%3A%22chomp%3A%2F%2F17hm8fq9kpcukjpg%22%2C%22id%22%3A%2217hm8fq9kpcukjpg%22%2C%22width%22%3A636%2C%22height%22%3A358%2C%22format%22%3A%22jpg%22%2C%22recommended%22%3Anull%7D%2C%7B%22src%22%3A%22http%3A%2F%2Fi.kinja-img.com%2Fgawker-media%2Fimage%2Fupload%2Fs--JAqlUE2o--%2Fc_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%2F17hm766mssx9sjpg.jpg%22%2C%22uri%22%3A%22chomp%3A%2F%2F17hm766mssx9sjpg%22%2C%22id%22%3A%2217hm766mssx9sjpg%22%2C%22width%22%3A636%2C%22height%22%3A358%2C%22format%22%3A%22jpg%22%2C%22recommended%22%3Anull%7D%2C%7B%22src%22%3A%22http%3A%2F%2Fi.kinja-img.com%2Fgawker-media%2Fimage%2Fupload%2Fs--YUZSvZZq--%2Fc_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%2F17hm9k6eefwa1jpg.jpg%22%2C%22uri%22%3A%22chomp%3A%2F%2F17hm9k6eefwa1jpg%22%2C%22id%22%3A%2217hm9k6eefwa1jpg%22%2C%22width%22%3A636%2C%22height%22%3A358%2C%22format%22%3A%22jpg%22%2C%22recommended%22%3Anull%7D%5D%2C%22videos%22%3A%5B%5D%2C%22parentId%22%3Anull%2C%22parentAuthorId%22%3Anull%2C%22starterId%22%3A5896323%7D" data-collapse>	<div class="row content-wrapper"><div class="column"><div class="row js_kinja-share-wrapper hide"><div class="column post-tools-above"><a href="#" class="js_kinja-share replywithshare inline-block"><span class="icon icon-reload"></span></a></div></div><header class=""><h1 class="headline hover-highlight entry-title"><a href="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market" data-id="">How do you buy organs on the black market?</a></h1></header>	<div class="meta-container without-dropdown">	<div class="meta-avatar js_author" data-blogid="658">	<span class="meta-tools"><div class="view-count-container"></div><a href="#" class="js_like button-recommend-post hover-icon" title="Recommend"><span class="js_like_count"></span><span class="icon icon-star icon-append js_like_icon"></span></a><div class="js_like-list-container"></div></span><div class="floated-container img-30" data-dropdownhover-container>	<div id="5896323-hovercard" class="f-dropdown content small whitelisted-links js_avatar-popover" data-dropdownhover-content><span class="floated-container img-60 avatar-container js_avatar-container"><span class="avatar"><span class="icon icon-checkmark icon-followed"></span><img data-src="http://i.kinja-img.com/gawker-media/image/upload/s--k8iEGfNr--/c_fill,fl_progressive,g_center,h_120,q_80,w_120/183mxbihbxi4djpg.jpg" alt="estheringlis-arkell" /></span><div class="js_follow-controls" data-blogid="658"><h4>Esther Inglis-Arkell</h4><a href="http://estheringlis-arkell.kinja.com" class="button tiny secondary mrs" target="_blank" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Hover card - profile button click');">Profile</a><a href="#" class="button tiny secondary js_followforuser mrs" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Hover card - follow button click');">Follow</a><a href="#" class="button tiny secondary js_unfollowforuser mrs hide">Unfollow</a></div></div>	<div class="avatar avatar-container js_avatar-container" data-dropdownhover="5896323-hovercard"><span class="icon icon-checkmark icon-followed"></span><a href="http://estheringlis-arkell.kinja.com"><span class="img-border"><img src="http://i.kinja-img.com/gawker-media/image/upload/s--Na97lwtH--/c_fill,fl_progressive,g_center,h_80,q_80,w_80/183mxbihbxi4djpg.jpg" /></span></a></div><div class="txt">	<span class="display-name author vcard"><a href="http://estheringlis-arkell.kinja.com" target="_self"   data-dropdownhover-anchor="5896323-hovercard" class="fn url">Esther Inglis-Arkell</a></span><div class="second-line">Filed to: 	<a class="first-tag " href="/tag/medicine" data-urlname="medicine" data-dropdown="taglist" data-options="is_hover:true">Medicine</a>	<div id="taglist" class="tiny f-dropdown text-upper" data-dropdown-content><div><ul>	<li class=""><a href="/tag/science" data-urlname="science">Science</a></li>	<li class=""><a href="/tag/sci" data-urlname="sci">Sci</a></li>	<li class=""><a href="/tag/biology" data-urlname="biology">biology</a></li>	<li class=""><a href="/tag/organs" data-urlname="organs">Organs</a></li>	<li class=""><a href="/tag/politics" data-urlname="politics">Politics</a></li>	<li class=""><a href="/tag/fb" data-urlname="fb">Fb</a></li></ul></div></div>	<span class="publish-time js_publish_time" data-publishtime="1332803373224"><a class="hover-switch" href="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market" target="_self" >		<span class="show-on-hover published updated">3/26/12 4:09pm</span><span class="hide-on-hover">	3/26/12 4:09pm</span></a></span></div></div></div></div><div class="post-dropdown-ct js_post-dropdown-ct js_post-dropdown-ct-sticky">	<a href="#" target="_self" class="button dropdown secondary transparent toggle-30 js_post-menu-toggler post-dropdown-trigger" data-dropdown="dropdown-5896323" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Drop down click');"></a><ul id="dropdown-5896323" class="f-dropdown proxima js_post-dropdown js_follow-controls whitelisted-links" data-postid="5896323" data-starterid="5896323" data-blogid="658" data-sourceblogid="8" data-dropdown-content><li class="js_edit-post hover-icon hide readonly-hide"><a href="#" rel="nofollow"><i class="icon icon-pencil icon-prepend"></i>Edit</a></li><li class="js_delete-post hover-icon hide readonly-hide"><a href="#" rel="nofollow"><i class="icon icon-x-circle icon-prepend"></i>Delete</a></li>	<li class="js_invite-to-post hover-icon hide" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Drop down - invite click');"><a href="#" rel="nofollow"><i class="icon icon-twitter icon-prepend"></i>Invite</a></li><li class="js_invite-to-post-manually hover-icon hide"><a href="#" rel="nofollow"><i class="icon icon-mail icon-prepend"></i>Invite manually</a></li><li class="js_promote hover-icon hide readonly-hide"><a href="#" rel="nofollow"><i class="icon icon-star-circle icon-prepend"></i>Promote</a></li><li class="js_dismiss hover-icon hide readonly-hide"><a href="#" class="dismiss" rel="nofollow" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Dismiss click');"><i class="icon icon-prepend notranslate">X</i>Dismiss</a><a href="#" class="undismisclass="js_dismiss hover-icon hide readonly-hide"><a href="#"s" rel="nofollow" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Undismiss click');"><i class="icon icon-prepend notranslate">X</i>Undismiss</a></li><li class="js_block hover-icon hide disabled readonly-hide" data-blogid="8" data-targetblogid="658" data-targetblogname="io9"><a href="#" rel="nofollow"><i class="icon icon-not-circle icon-prepend"></i><span>Block for io9</span></a></li><li class="js_hide-post hover-icon hide readonly-hide"><a href="#" rel="nofollow"><i class="icon icon-prepend icon-not-circle"></i>Hide</a></li><li class="js_kinja-share-block readonly-hide"><a class="js_kinja-share hover-icon" href="#" rel="nofollow"><i class="icon icon-share icon-prepend"></i>Share to Kinja</a></li><li class="js_external-share"><a class="js_share-post-item facebook hover-icon" rel="nofollow" href="http://facebook.com/sharer.php?u=http%3A%2F%2Fio9.com%2F5896323%2Fhow-do-you-buy-organs-on-the-black-market" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Drop down - Share to Facebook click');"><i class="icon icon-facebook icon-prepend"></i>Share to Facebook</a></li><li class="js_external-share"><a class="js_share-post-item twitter hover-icon" rel="nofollow" href="http://twitter.com/share?url=http%3A%2F%2Fio9.com%2F5896323%2Fhow-do-you-buy-organs-on-the-black-market&amp;text=POST_TITLE" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Drop down - Share to Twitter click');"><i class="icon icon-twitter icon-prepend"></i>Share to Twitter</a></li><li class="js_go-to-permalink"><a class="hover-icon" href="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Drop down - Go to permalink click');"><i class="icon icon-link icon-prepend"></i>Go to permalink</a></li><li class="repostblock js_repostblock hide"></li></ul></div></div><div class="post-content entry-content "><p class="has-media media-640" data-textannotation-id="9fa5486f939d5c38e8c659912dadfe7f"><span class="img-border"><img class="transform-WrappedArray(Width(636), Crop(fit), Flags(List(progressive)), Quality(80))" src="http://i.kinja-img.com/gawker-media/image/upload/s--RGO5qoDe--/c_fit,fl_progressive,q_80,w_636/17hrfbdxak71wjpg.jpg" width="636" height="368" alt="How do you buy organs on the black market?" data-chomp-id="17hrfbdxak71wjpg" data-asset-url="http://i.kinja-img.com/gawker-media/image/upload/s--RGO5qoDe--/c_fit,fl_progressive,q_80,w_636/17hrfbdxak71wjpg.jpg" data-format="jpg" /></span></p><div id="js_adsense-container"></div><script>
+
+window.google_analytics_uacct = 'UA-142218-29';
+var google_adnum = 0; /* only insert this line for your first ad unit */
+// conditional adsense core decorated
+function google_ad_request_done(google_ads) {
+	var domain = '';
+	var domainParts = document.referrer.split("/");
+	if (domainParts.length > 2) {
+		domainParts = domainParts[2].split(".");
+		domain = domainParts[domainParts.length - 2];
+	}
+	var companions = document.querySelectorAll('.js_ad300-companion');
+	var blockHeight = 0;
+	if (companions.length > 0) {
+		var companion = companions[0];
+		blockHeight = companion.offsetHeight;
+	}
+	var onKinja = location.host.substr(-1 * "kinja.com".length) === "kinja.com";
+	var fromSearch = (domain == "google") || (domain == "bing") || (domain == "yahoo") || (domain == "ask");
+	var cookieString = "fromSearch=1";
+	if (fromSearch) {
+		document.cookie = cookieString;
+	}
+	var inSearchSession = document.cookie.indexOf(cookieString) != -1;
+	var shouldShowAds = !onKinja && (fromSearch || inSearchSession);// &&  blockHeight > 400);
+	if (shouldShowAds) {
+		var s = '';
+		var i;
+		if (google_ads.length == 0) {
+			return;
+		}
+		s += '<aside class="referenced-wide google-adsense twelve columns">';
+		s += '<div class="container proxima">';
+		s += '<a href="' + google_info.feedback_url + '" class="by-google">Ads by Google</a><div class="google-ads ptm">' +
+			'<a href="' + google_ads[0].url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' + google_ads[0].visible_url + '\';return true" class="google-headline">' +
+			'<span> <b>' +google_ads[0].line1 +	'</b><br /></spgle-ads ptm">' +
+			'<a href="' + google_ads[0].url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' + google_ads[0].visible_url + '\';return true" class="google-headlinean></a> <span>' +
+			google_ads[0].line2 + ' ' + google_ads[0].line3 + '<br /></span>' +
+			'<a href="' + google_ads[0].url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' + google_ads[0].visible_url + '\';return true" class="google-link"><span>' + google_ads[0].visible_url + '</span></a><br /><br/>';
+		if (google_ads.length == 2) {
+			/* the XML parser chokes on a for loop, so we have to do it explicitly */
+			s += '<a href="' + google_ads[1].url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' + google_ads[1].visible_url + '\';return true" class="google-headline">' +
+				'<span> <b>' + google_ads[1].line1 +	'</b><br /></span></a> <span style="">' +
+				google_ads[1].line2 + ' ' + google_ads[1].line3 + '<br /></span>' +
+				'<a href="' + google_ads[1].url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' + google_ads[1].visible_url + '\';return true" class="google-link"><span>' + google_ads[1].visible_url + '</span></a><br />';
+		}
+		s += '</div></div></aside>';
+		if (google_ads[0].bidtype == 'CPC') { /* insert this snippet for each ad call */
+			google_adnum = google_adnum + google_ads.length;
+		}
+		document.write(s);
+	}
+}
+google_ad_client = 'ca-pub-0457527031304647';
+google_ad_output = 'js';
+google_max_num_ads = '1';
+google_ad_type = 'text';
+google_feedback = 'on';
+google_skip = google_adnum;
+google_ad_channel = '1102379497';
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="first-text" data-textannotation-id="13b89d8488e8559f7616139899f7d689">Organ donors are scarce. Waiting lists are long. And life is short — especially if you really need a new heart or liver.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="d1a31cc871a880030f64107c3c46a051">So it makes sense that there's a black market for organs out there. But how would you go about scoring an illicit pancreas if you desperately needed one? Follow the threads people take, when they need to buy kidneys. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="c18c2050bdbd1653dc809606c2f20229">Life on the organ transplant list is miserable. The wait can take years, while you work your way up a list of tens of thousands. Sixty thousand people are on the list for kidneys alone, and the average person will be there for about five years. Because the organs all work together, the failure of one of them can slowly destroy the rest, making the person sicker and sicker as the years stretch out. No one has a guarantee. In the US, about eighteen people die every day waiting for an organ. Eventually, many look for other options. But where do they start?</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="ec6ceae1bb94e05e8e9369d977e7c84b"><strong>All Quests Begin Online</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="1b8825e43d4212f5f354ef399cd8e5c9">The World Health Organization has instituted guidelines that forbid the practice of buying or selling organs. They were meant to prevent exploitation or coercion of the donors, and were endorsed by nearly two hundred countries, including the United States. The guidelines, however, were nonbinding, and though countries have their own local laws, the international traffic in organs is slipping through the cracks anywhere it can. Donors in Brazil, India, and South Africa are recruited and flown to various locations — South Africa and Turkey being popular but some do make it to the United States. Once they arrive, they have their organs taken out in improvised operating rooms, and have organs shipped to clinics that have a &quot;don't ask don't tell&quot; policy. Alternately, they have a policy of taking anyone who walks through the door claiming to be a friend of the patient willing to donate their organs — no matter how unlikely that friendship seems.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="has-media media-470" data-textannotation-id="c23e0254091b1922c467d1d253604889"><span class="lightBoxWrapper"><span class="img-border"><img class="transform-WrappedArray(Width(320), Crop(fit), Flags(List(progressive)), Quality(80))" src="http://i.kinja-img.com/gawker-media/image/upload/s--s0d5pvgn--/c_fit,fl_progressive,q_80,w_320/17hm7kvezgaacjpg.jpg" width="320" height="275" alt="How do you buy organs on the black market?" data-chomp-id="17hm7kvezgaacjpg" data-asset-url="http://i.kinja-img.com/gawker-media/image/upload/s--s0d5pvgn--/c_fit,fl_progressive,q_80,w_320/17hm7kvezgaacjpg.jpg" data-format="jpg" /></span><span class="magnifier lightBox hide"><span class="icon icon-white icon-search"></span><span class="text proxima"></span></span></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="9ca79fff31037047510409f2171741ef"> The simple first step for many people is to go online and look for clinics, both at home and abroad, that offer a higher rate of organ donation. As laws vary, so does the explicitness of the online talk. Israel in the mid-2000s, for example, had no law against the brokering of organs, and one high-profile broker was only put away for tax evasion. Some clinics will set up pages devoted to organ 'tourists' who could pay the prices necessary. Other clinics will only talk about fewer restrictions and a higher number of donor organs 'available.' The first step people take is just net surfing until they find the right place.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="f1d4e37da0f2de263784911bd5518352"><strong>Family Connections</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="43539d0d9888dbb3bb949d6841c73ec1">Some people don't trust their lives to what they read on the internet, for some reason. And if nothing online looks promising, a sprawling family or network of friends can do the job for you. The trade is so firmly international that anyone whose acquaintances touch enough countries can get a line on organs. Countries with a very rich class, a very poor class — and even better, both — tend to be the first places to look. South Africa endorsed the WHO guidelines but is one of the few countries that harvest organs locally, due to an extremely poor segment of the population. Yemen, one of the poorest countries in the Middle East, has a brisk trade. Indian women are sometimes forced to sell their kidneys by their husbands. One researcher found actual newspapers advertising for donors and for takers in Africa, Brazil, and Moldova.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="has-media media-640" data-textannotation-id="8e9b72e4d3e725f358479c3dca6f3b50"><span class="lightBoxWrapper"><span class="img-border"><img class="transform-WrappedArray(Width(636), Crop(fit), Flags(List(progressive)), Quality(80))" src="http://i.kinja-img.com/gawker-media/image/upload/s--GN52Papv--/c_fit,fl_progressive,q_80,w_636/17hm8fq9kpcukjpg.jpg" width="636" height="489" alt="How do you buy organs on the black market?" data-chomp-id="17hm8fq9kpcukjpg" data-asset-url="http://i.kinja-img.com/gawker-media/image/upload/s--GN52Papv--/c_fit,fl_progressive,q_80,w_636/17hm8fq9kpcukjpg.jpg" data-format="jpg" /></span><span class="magnifier lightBox hide"><span class="icon icon-white icon-search"></span><span class="text proxima"></span></span></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="1633ca536e231cc74cbe4b29c08b5b31"> Shoppers also get a lead on organs if they know anyone in countries with a poor donation system. Any country with a severe lack of publicly available organs turns toward an unofficial market system. A booming trade in Israel flew donors from Brazil to Turkey, where the operation was done. In Israel, there tends to be a slightly lower rate of donation, since some Jewish schools of thought hold that it is wrong to in any way 'mutilate' the body, and thus people don't want to donate. (Others, of course, refute that theory and encourage people to donate.)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="d871a45b8997e1d7b96349a474e7ed8f">The United Arab Emirates don't have a good system of harvesting from live donors, and only using dead ones limits the availability of many organs. This so severely decreases their organ pool that citizens have well-established services that fly them to poor Southeast Asian countries, where organs can be bought cheaply. And China's practice of harvesting organs from executed prisoners made them a massive destination for transplant tourists. (Doctors say that the transplants trickled off around the time of the Olympics but have rebounded since then.) A network of people in any of these countries often points sick people in the right direction.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="f29da3d73b4b7459943e4e97fcabf43b"><strong>The American Organ Trade</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="0d91d262f563bcaee6028c5170e3b389">Which isn't to say that America is a slouch in the organ trade. Since it was discovered that a kidney from a living donor will keep people alive two times as long as a kidney taken from a cadaver, the trade started up. Nick Rosen, an Israeli man and amateur filmmaker, sold his kidney for $15,000, making a documentary about it. He was given the money outside the Mount Sinai hospital in New York, which went ahead and did the surgery after Rosen told doctors that he was a friend of the patient who was paying him. A Maryland hospital, sensing something was amiss, declined to do the transplant. Nancy Scheper-Hughes, a researcher putting out fake feelers in America, was contacted by people from Brooklyn and Kentucky, looking to sell parts of their liver or their kidney to get money for their own, unrelated, hospital bills.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="has-media media-640" data-textannotation-id="b8d29f1df47181be79678471cc8a34e6"><span class="lightBoxWrapper"><span class="img-border"><img class="transform-WrappedArray(Width(636), Crop(fit), Flags(List(progressive)), Quality(80))" src="http://i.kinja-img.com/gawker-media/image/upload/s--s5v2E2Xt--/c_fit,fl_progressive,q_80,w_636/17hm766mssx9sjpg.jpg" width="636" height="477" alt="How do you buy organs on the black market?" data-chomp-id="17hm766mssx9sjpg" data-asset-url="http://i.kinja-img.com/gawker-media/image/upload/s--s5v2E2Xt--/c_fit,fl_progressive,q_80,w_636/17hm766mssx9sjpg.jpg" data-format="jpg" /></span><span class="magnifier lightBox hide"><span class="icon icon-white icon-search"></span><span class="text proxima"></span></span></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="493dc472eff3034a8af1dbd3ced9d49e"> But there's more than one kind of organ trade in the US. There are plenty of places that need tissue instead of full organs, and there are places to go to get that. The most popular place to look for donors was that last stop of the dead, the funeral home. Yes, it's illegal, but funeral home directors, especially those who do on-site cremation, can be certain that their handiwork isn't going to be checked. They can harvest tissue from the mouth and gums, and sometimes remove entire dead organs for lab technicians to practice on. (While writing <em>Bonk</em>, her book about the study of sexuality, Mary Roach came across a catalog of organs, including an entire vagina, with clitoris.)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="2ffbbf862d14b4d2cd8cd590ab5e889c">Oral surgeons are another place to go for living black-market tissue. They can remove a little extra tissue (or use the tissue they legitimately remove) and sell it to black market organ brokers. Any place that collects healthy living tissue can be hit up for involuntary donations.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="c9d57c50aa62c504e876885fb4aa61fb">Lastly, and legally, there's the morgues of the hospitals themselves. Although no good for many organs, long-dead tissue can be harvested by doctors in the morgue. It can even be harvested legally. Many states, and foreign countries, have 'routine removal' statutes, which allow doctors to remove corneas from corpses without the knowledge or consent of the person's family, or a signed consent form from the patient. Corneas are rarely checked for by anyone, and the statutes aren't publicized, so this quiet practice continues.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="f4928931d6637d86f3dcafdeefac22fd"><strong>The Solution?</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="de442b0fe05d7acf833ddeac5528dfb1">The thing is, routine removal works - in the sense that people aren't waiting for the better part of a decade for donated corneas. When waits for vital organs are five years on average, and thousands of people die every year waiting for a transplant, and many more would die if it weren't for the estimated fifteen percent of transplants that are bought and sold, perhaps other solutions are needed. Roughly one to two percent of deaths in the US result in eligible organs. But of those eligible people, only about half actually donate organs. Is it time to move towards presumed consent? Proponents argue that presumed consent - a system which assumes organ donation will occur unless the person in question puts themselves on a registry of abstainers - more precisely serves the will of the people. Ninety percent of people are in favor of organ donation, but not all make it official, or communicate their wishes to their family. Even if the person does say they want to donate, often the living family over-rides their wishes. Even though it negates the original person's will, the family is alive to sue, and the hospital doesn't want trouble. If allowing people to donate their organs is taken as seriously as refraining from doing so if they don't wish to donate, then presumed consent may be the best way to honor the wishes of most people, while saving a lot of lives and cutting down on organ brokering.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="12a1b8bc61d279c227c2d9ba99f4aced">Israel has another system that might up the number of donors. Those who aren't on the organ donation list, who then find that they need organs, will be placed on the bottom of the recipient list. This kind of low-level incentive might make people think twice about not signing up to be a donor.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="has-media media-640" data-textannotation-id="ab9c217294b3f6f043c01d88f65522ad"><span class="img-border"><img class="transform-WrappedArray(Width(636), Crop(fit), Flags(List(progressive)), Quality(80))" src="http://i.kinja-img.com/gawker-media/image/upload/s--mrDNwOKz--/c_fit,fl_progressive,q_80,w_636/17hm9k6eefwa1jpg.jpg" width="636" height="423" alt="How do you buy organs on the black market?" data-chomp-id="17hm9k6eefwa1jpg" data-asset-url="http://i.kinja-img.com/gawker-media/image/upload/s--mrDNwOKz--/c_fit,fl_progressive,q_80,w_636/17hm9k6eefwa1jpg.jpg" data-format="jpg" /></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="1d4a00ae36bde327b9d86c4ad719344f"> On the other end of the scale, there is the approach Iran took. Iran, uniquely, has set up a formal system of trade when it comes to organs. The nation itself pays for kidneys, and recipients can add to the pay, to entice donors. Although that opens up an imbalance in the care wealthy and poor people receive, it at least avoids the dangers of the illegal organ trade. Bringing in someone to have their organs harvested in a hospital is better than unofficial clinics. If organ donation were legal in all first world countries, it might still be third world donors - who have to go back to dangerous living conditions - who end up donating. An American will expect more money for a kidney than, say, a Brazilian to whom eight thousand dollars is nearly a decade's pay. A kidney, or slice of liver, will usually net something like six thousand dollars, though in some countries it goes up to fifteen thousand and in Kenya it's rumored to be as low as six hundred and fifty dollars. The only thing that would even out the price is the ability to dispense with the middle men. A six thousand dollar kidney can be sold between sixty and a hundred and twenty thousand dollars to the person who actually needs the organ. It's this discrepancy that is the loudest argument for paid donation - or at least it's the loudest argument against a black market. The current market hurts the poor both ways. Those forced by circumstance into selling their organs get a fraction of the price they would get if they could contact buyers directly. Meanwhile, only the wealthiest buyers can afford the prices demanded by the brokers. Is there another way?<br />
+<em><br />
+Top Image: <a href="http://www.navy.mil/view_single.asp?id=113626" target="_blank">US Navy</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="7259574fccc2ca9d1b3b44992ae7b20d"><em>Laptop Image: <a href="http://commons.wikimedia.org/wiki/File:Woman-typing-on-laptop.jpg" target="_blank">Matthew Bowden</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="c83c2925cafab500a4bed5e1f4a17e76"><em>Second Surgery Image: <a href="http://www.navy.mil/view_single.asp?id=82292" target="_blank">Matthew Jackson</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="cd02769e0d0cbc754b5d311f0617087b"><em>Scalpel Image: <a href="http://commons.wikimedia.org/wiki/File:OptoScalpel-3.jpg" target="_blank">Opto Scalpel</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="12edf62f90bff5645266ac7a86bcf03c"><em>US Currency: <a href="http://commons.wikimedia.org/wiki/File:Money_closeup.jpg" target="_blank">Pen Waggener</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p data-textannotation-id="1112998fdaa964240ccd5c6ad16d4ffa">Via <a href="http://www.npr.org/blogs/health/2010/01/iran_leads_in_innovation_on_or.html" target="_blank">NPR</a>, <a href="http://womenshealth.gov/publications/our-publications/fact-sheet/organ-donation.cfm" target="_blank">Women's Health</a>, <a href="http://www.nytimes.com/2004/05/23/world/organ-trade-global-black-market-tracking-sale-kidney-path-poverty-hope.html?pagewanted=all&amp;src=pm" target="_blank">NY Times</a>, <a href="http://articles.latimes.com/2005/aug/29/health/he-consent29/2" target="_blank">LA Times</a>, <a href="http://online.wsj.com/article/SB10001424052748703481004574646233272990474.html" target="_blank">WSJ</a>, <a href="http://www.havocscope.com/black-market-prices/organs-kidneys/" target="_blank">Havocscape</a>, <a href="http://www.thedailybeast.com/newsweek/2009/01/09/not-just-urban-legend.html" target="_blank">The Daily Beast</a>, <a href="http://www.arabianbusiness.com/uae-patients-buy-organs-on-asia-black-market-83772.html" target="_blank">Arabian Business</a>.</p><span class="core-decorated"></span></div><div class="row"><div class="post-bottom column"><a name="replies"></a><div class="post-tools-wrapper right" data-forpost="5896323">	<a href="#" class="js_like button-recommend-post text-small proxima hover-icon" title="Recommend"><span class="js_like_count"></span><span class="icon icon-star oversized icon-append js_like_icon"></span></a>	<span id="js_reply-count" class="proxima text-small mlm mrn" style="display: none">52<span class="icon icon-bubble-round oversized"></span></span><script>document.getElementById('js_reply-count').style.display = 'inline';</script><a id="js_reply-to-post" href="#" class="reply-to-post reply-count hover-icon proxima js_reply-to-post text-small readonly-hide" rel="nofollow" disabled>Reply</a><noscript>	<span id="js_reply-count" class="proxima text-small mlm mrn">52<span class="icon icon-bubble-round oversized"></span></span><script>document.getElementById('js_reply-count').style.display = 'inline';</script><a href="#" class="reply-to-post reply-count hover-icon proxima text-small" rel="nofollow">Discuss<span class="icon icon-bubble-round oversized"></span></a></noscript><div class="js_like-list-bottom-container"></div></div>	<div class="fb-like" data-href="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div></div></div></div></div></article></div></section><section class="js_replies " data-authorblogname=estheringlis-arkell data-replycount=52>	<div class="replies-wrapper fade"><div class="js_replycol js_ad300-companion">	<dl class="reply-filters-tabbed sub-nav-tabbed js_reply-filters"><dd class="js_reload-groupchats"><a href="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market" class="tab-followed hide" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Followed Chat click' );">Discussions from People followed by Esther Inglis-Arkell</a><a href="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market" class="tab-author" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Author Chat click' );"><span class="js_author-name">Esther Inglis-Arkell</span>’s Discussions</a><a href="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market" class="tab-popular hide" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Popular Chat click' );">Popular Discussion</a></dd><dd  class="js_allview"><a href="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market/all" data-currentview="" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'All Replies click', '__DEFAULT' );" title="View all 52 replies">All replies</a></dd></dl><div class="js_permalink-place permalink-place row" style="display: none;"><div class="row"><div class="twelve columns center"><a class="button secondary js_collapse-branch">Show all threads</a></div></div></div><div class="js_reply-form-container row"></div><div data-view="permalink" class="js_branch-permalink permalink-branch-list branch-list"></div><div data-view="author" class="js_branch-authorchat js_branch-list branch-list branch-authorchat"></div><div data-view="follower" class="js_branch-followchat branch-list"></div><div data-view="popular" class="js_branch-scorechat branch-list"></div><div data-view="user" class="js_branch-userchat branch-list"></div><div class="js_branch-grid other-threads"><h6 class="section-header js_header hide">Hosts of other popular chats</h6><div class="row js_grid"></div></div><div class="js_replymessage hide createnewreply"></div><div class="js_reply-loading-progress reply-spinner hide">	<span class="spinner bounce"><span class="one"></span><span class="two"></span><span class="three"></span></span></div><div class="js_discussionlinks discussionlinks row hide"></div><div class="js_load-more"></div>	<div class="text-right reply-views js_reply-views"><a class="js_reload-groupchats hide" href="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'Popular Chat click' );">View Esther Inglis-Arkell's discussions</a><a class="js_allview hide" href="http://io9.com/5896323/how-do-you-buy-organs-on-the-black-market/all" onclick="window.ga('send', 'event', 'Group Chats', 'click', 'All Replies click', '__DEFAULT' );">View all 52 replies</a></div></div></div><div class="js_loading-layer row hide"><div class="column"><div class="row"><div class="loading-layer"><div class="large-8 large-offset-4 columns"><div class="loading-layer-main-column">	<span class="spinner bounce"><span class="one"></span><span class="two"></span><span class="three"></span></span></div></div></div></div></div></div></section><script type="text/javascript">(function () {window.kinja = window.kinja || {}; window.kinja.postMeta = JSON.parse(decodeURIComponent( '%7B%22post%22%3A%7B%22id%22%3A5896323%2C%22headline%22%3A%22How%20do%20you%20buy%20organs%20on%20the%20black%20market%3F%22%2C%22permalink%22%3A%22http%3A%2F%2Fio9.com%2F5896323%2Fhow-do-you-buy-organs-on-the-black-market%22%2C%22first100Characters%22%3A%22Organ%20donors%20are%20scarce.%20Waiting%20lists%20are%20long.%20And%20life%20is%20short%20%E2%80%94%20especially%20if%20you%20really%20need%20a%22%2C%22firstSentence%22%3A%22Organ%20donors%20are%20scarce.%20%22%2C%22facebookImage%22%3A%7B%22src%22%3A%22http%3A%2F%2Fi.kinja-img.com%2Fgawker-media%2Fimage%2Fupload%2Fs--0DEn_GZl--%2Fc_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%2F17hrfbdxak71wjpg.jpg%22%2C%22uri%22%3A%22chomp%3A%2F%2F17hrfbdxak71wjpg%22%2C%22id%22%3A%2217hrfbdxak71wjpg%22%2C%22width%22%3A636%2C%22height%22%3A358%2C%22format%22%3A%22jpg%22%2C%22recommended%22%3Anull%7D%2C%22twitterCardType%22%3A%22summary_large_image%22%2C%22plaintext%22%3A%22Organ%20donors%20are%20scarce.%20Waiting%20lists%20are%20long.%20And%20life%20is%20short%20%E2%80%94%20especially%20if%20you%20really%20need%20a%20new%20heart%20or%20liver.%22%2C%22authorScreenName%22%3A%22estheringlis-arkell%22%2C%22tags%22%3A%5B%7B%22id%22%3A493850%2C%22name%22%3A%22medicine%22%2C%22desc%22%3A%22Medicine%22%2C%22urlName%22%3A%22medicine%22%7D%2C%7B%22id%22%3A410307%2C%22name%22%3A%22science%22%2C%22desc%22%3A%22Science%22%2C%22urlName%22%3A%22science%22%7D%2C%7B%22id%22%3A410779%2C%22name%22%3A%22sci%22%2C%22desc%22%3A%22Sci%22%2C%22urlName%22%3A%22sci%22%7D%2C%7B%22id%22%3A411817%2C%22name%22%3A%22biology%22%2C%22desc%22%3A%22biology%22%2C%22urlName%22%3A%22biology%22%7D%2C%7B%22id%22%3A80457892%2C%22name%22%3A%22organs%22%2C%22desc%22%3A%22Organs%22%2C%22urlName%22%3A%22organs%22%7D%2C%7B%22id%22%3A410788%2C%22name%22%3A%22politics%22%2C%22desc%22%3A%22Politics%22%2C%22urlName%22%3A%22politics%22%7D%2C%7B%22id%22%3A410290%2C%22name%22%3A%22fb%22%2C%22desc%22%3A%22Fb%22%2C%22urlName%22%3A%22fb%22%7D%5D%2C%22publishTimeMillis%22%3A1332803373224%2C%22adZone%22%3A%22collapse%22%2C%22sponsored%22%3Afalse%2C%22blogs%22%3A%5B%7B%22id%22%3A8%2C%22name%22%3A%22io9%22%2C%22displayName%22%3A%22io9%22%2C%22canonicalHost%22%3A%22io9.com%22%2C%22hosts%22%3A%5B%5D%2C%22applicationHost%22%3A%22kinja.com%22%2C%22status%22%3A%22ENABLED%22%2C%22createTimeMillis%22%3Anull%2C%22lastUpdateTimeMillis%22%3Anull%2C%22createdById%22%3Anull%2C%22ownerId%22%3Anull%2C%22description%22%3Anull%2C%22descriptionHtml%22%3Anull%2C%22properties%22%3A%22%7B%5C%22template%5C%22%3A%20%5C%22io9%5C%22%2C%20%5C%22googleSiteVerification%5C%22%3A%20%5C%22K6wRvI0H8ILViUOVv2vsEYbx_XGrjrOFcjiQyebLccw%5C%22%7D%22%2C%22adminProperties%22%3A%22%7B%5C%22fbAppId%5C%22%3A%5C%2231388860473%5C%22%2C%5C%22metaTitle%5C%22%3A%5C%22We%20come%20from%20the%20future.%5C%22%2C%20%5C%22blogGroup%5C%22%3A%20%5C%22io9%5C%22%2C%20%5C%22isGmgBlog%5C%22%3Atrue%2C%20%20%5C%22googleAnalyticsID%5C%22%3A%20%20%5C%22UA-142218-29%5C%22%2C%20%5C%22aboutPostId%5C%22%3A%20452391760%2C%20%5C%22kruxId%5C%22%3A%5C%22JO5G0zct%5C%22%7D%22%2C%22showLikesInLatest%22%3Anull%2C%22showRepliesInLatest%22%3Anull%2C%22timezone%22%3A%22America%2FLos_Angeles%22%2C%22timezoneOffset%22%3A-28800000%2C%22timezoneShortname%22%3A%22PST%22%2C%22avatar%22%3Anull%2C%22logo%22%3Anull%2C%22groupBlog%22%3Anull%7D%2C%7B%22id%22%3A658%2C%22name%22%3A%22estheringlis-arkell%22%2C%22displayName%22%3A%22estheringlis-arkell%22%2C%22canonicalHost%22%3A%22estheringlis-arkell.kinja.com%22%2C%22hosts%22%3A%5B%5D%2C%22applicationHost%22%3A%22kinja.com%22%2C%22status%22%3A%22ENABLED%22%2C%22createTimeMillis%22%3Anull%2C%22lastUpdateTimeMillis%22%3Anull%2C%22createdById%22%3Anull%2C%22ownerId%22%3Anull%2C%22description%22%3Anull%2C%22descriptionHtml%22%3Anull%2C%22properties%22%3Anull%2C%22adminProperties%22%3Anull%2C%22showLikesInLatest%22%3Anull%2C%22showRepliesInLatest%22%3Anull%2C%22timezone%22%3A%22America%2FNew_York%22%2C%22timezoneOffset%22%3A-18000000%2C%22timezoneShortname%22%3A%22EST%22%2C%22avatar%22%3Anull%2C%22logo%22%3Anull%2C%22groupBlog%22%3Anull%7D%5D%2C%22sharedPostId%22%3Anull%2C%22defaultBlogId%22%3A8%7D%2C%22starterId%22%3A5896323%2C%22tags%22%3A%22medicine%2Cscience%2Csci%2Cbiology%2Corgans%2Cpolitics%2Cfb%22%2C%22postId%22%3A5896323%2C%22authors%22%3A%22Esther%20Inglis-Arkell%22%2C%22postAuthorBlogName%22%3A%22estheringlis-arkell%22%7D' ));}());</script>		<div class="ad-unit ad-300x250 default mobile js_ad-unit hide-contents" data-cb-ad-id="ad_300x250_default"><div class="ad-container js_ad-container"style="display: none;"id="ad-container-30581117" data-size="300x250" data-random="30581117" data-slot="default" data-zone-class="Zone_Mobile" data-dfp-sz="300x250,320x50"></div></div><div class="js_recommended-footer recommended-footer show-for-small-only hide"></div>	
+		<!-- Begin SimpleReach for sponsored posts -->
+		<script>
+			__reach_config = {
+				pid: '5266d484e795480dd3000008',   // The SimpleReach assigned Publisher ID (pid)
+				title: 'How do you buy organs on the black market?',  //(remember that they should be escaped, not HTML or URL encoded)
+				url: 'http:\/\/io9.com\/5896323\/how-do-you-buy-organs-on-the-black-market',
+				date: new Date(1332803373224),
+				authors: ['estheringlis-arkell'],
+				channels: [],
+				tags: ['medicine','science','sci','biology','organs','politics','fb'],
+				iframe: true,		     // Send event through iframe
+				domain: 'io9.com'
+			};
+			(function(){
+				var s = document.createElement('script');
+				s.async = true;
+				s.type = 'text/javascript';
+				s.src = document.location.protocol + '//d8rk54i4mohrb.cloudfront.net/js/reach.js';
+				  (document.getElementsByTagName('head')[0] ||
+				   document.getElementsByTagName('body')[0]).appendChild(s);
+			})();
+		</script>
+		<!-- End SimpleReach for sponsored posts -->
+		<div class="js_stats" style="display: none;" data-trackurl="http://kinja.com/api/analytics/stats/track.gif?&objectType=permalinkTag&objectType=permalinkTag&objectType=permalinkTag&objectType=permalinkTag&objectType=permalinkTag&objectType=permalinkTag&objectType=permalinkTag&objectType=post&objectId=493850&objectId=410307&objectId=410779&objectId=411817&objectId=80457892&objectId=410788&objectId=410290&objectId=5896323&blogId=8&authorId=5717394218864607828"></div><div id="analytics-permalink-view" style="display: none;" data-analytics-api-root-url="http://kinja.com/api/analytics/" data-post-id="5896323" data-blog-id="8" data-author-id="5717394218864607828"></div></div></div><div class="row ad-wide ad-bottom pbs show-for-xlarge-up" id="ad-970x250-container"><div class="column">		<div class="ad-unit ad-970x250 default desktop js_ad-unit" data-cb-ad-id="ad_970x250_default"><div class="ad-container js_ad-container"style="display: none;"id="ad-container-39587109" data-size="970x250" data-random="39587109" data-slot="default" data-zone-class="Zone_970x250" data-dfp-sz="970x250,728x90"></div></div></div></div>	<footer class="row site-footer js_site-footer"><div class="large-8 large-offset-4 columns text-center"><ul class="list list-text text-light proxima"><li><a href="/about">About</a></li><li><a href="http://help.gawker.com/" target="_blank">Help</a></li><li><a href="http://legal.kinja.com/kinja-terms-of-use-90161644">Terms of Use</a></li><li><a href="http://legal.kinja.com/privacy-policy-90190742">Privacy</a></li><li><a href="http://advertising.gawker.com/">Advertising</a></li><li><a href="http://advertising.gawker.com/about/index.php#contact">Permissions</a></li><li><a href="http://legal.kinja.com/content-guidelines-90185358">Content Guidelines</a></li><li><a href="http://feeds.gawker.com/io9/full">RSS</a></li><li><a href="http://grnh.se/2ctqpi">Jobs</a></li></ul></div></footer>	
+	<!-- Begin comScore Tag -->
+	<noscript>
+		<img src="http://b.scorecardresearch.com/p?c1=2&c2=6770184&cv=2.0&cj=1" />
+	</noscript>
+	<!-- End comScore Tag -->
+	<div id="trackers" style="display: none;"></div><noscript><img src="http://pubads.g.doubleclick.net/activity;dc_iu=/4246/DFP_Audience_Pixel;dc_seg=22540930;blog=io9;ord=1?" width="1" height="1" border="0" /></noscript><script type="text/javascript">
+		Date.now = Date.now || function() { return +new Date; };
+		window.statsdTicks = [{
+			ms: Date.now(),
+			message: "JS init reached",
+			reporting: false
+		}];
+		</script><script>markUserTime("JS - Before Require load");</script><script type="text/javascript" src="http://c.kinja-static.com/assets/javascripts//lib/require.js?2"></script><script type="text/javascript">(function () {window.kinja = window.kinja || {}; window.kinja.meta = JSON.parse(decodeURIComponent( '%7B%22cloudinaryRequest%22%3A%7B%22default%22%3A%7B%22eager%22%3A%22c_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_358%2Cq_80%2Cw_636%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_636%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_264%2Cq_80%2Cw_470%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_470%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_180%2Cq_80%2Cw_320%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_180%2Cq_80%2Cw_320%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_320%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_77%2Cq_80%2Cw_137%22%2C%22timestamp%22%3A%221417465694%22%2C%22signature%22%3A%228f71f7d8a0602e1f298828effc5974aa4f799437%22%2C%22api_key%22%3A%22196565315244936%22%2C%22eager_async%22%3A%22true%22%7D%2C%22gif%22%3A%7B%22eager%22%3A%22c_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_358%2Cq_80%2Cw_636%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_636%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_264%2Cq_80%2Cw_470%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_470%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_180%2Cq_80%2Cw_320%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_180%2Cq_80%2Cw_320%7Cc_fit%2Cfl_progressive%2Cq_80%2Cw_320%7Cc_fill%2Cfl_progressive%2Cg_north%2Ch_77%2Cq_80%2Cw_137%7Cc_fill%2Cfl_progressive%2Cg_center%2Ch_77%2Cq_80%2Cw_137%22%2C%22timestamp%22%3A%221417465694%22%2C%22tags%22%3A%22gif%22%2C%22signature%22%3A%22a346f8c6b8563481fff385920574285e290b7fa0%22%2C%22api_key%22%3A%22196565315244936%22%2C%22eager_async%22%3A%22true%22%7D%7D%2C%22syncFeatures%22%3Anull%2C%22featuresLastUpdate%22%3A1417460186713%2C%22killswitches%22%3A%7B%22liveblog.pollIntervalMillis%22%3A%7B%22name%22%3A%22liveblog.pollIntervalMillis%22%2C%22value%22%3A%2210000%22%2C%22defaultValue%22%3A%2210000%22%2C%22meta%22%3Anull%7D%2C%22liveblog.appRevision%22%3A%7B%22name%22%3A%22liveblog.appRevision%22%2C%22value%22%3A%221%22%2C%22defaultValue%22%3A%221%22%2C%22meta%22%3Anull%7D%2C%22maintenance%22%3A%7B%22name%22%3A%22maintenance%22%2C%22value%22%3A%22off%22%2C%22defaultValue%22%3A%22off%22%2C%22meta%22%3Anull%7D%7D%2C%22mode%22%3A%22live%22%2C%22pageType%22%3A%22permalink%22%2C%22currentUrl%22%3A%22%2F5896323%2Fhow-do-you-buy-organs-on-the-black-market%22%2C%22locale%22%3A%22en-US%22%2C%22localeWithUnderscore%22%3A%22en_US%22%2C%22imageSizes%22%3A%7B%22KinjaCenteredMedium%22%3A%7B%22width%22%3A320%2C%22height%22%3A180%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22blg-logo%22%3A%7B%22width%22%3A600%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22blg-avt-%22%3A%7B%22width%22%3A100%2C%22height%22%3A100%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22kc-small%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22BlogLogo%22%3A%7B%22width%22%3A600%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22k-large%22%3A%7B%22width%22%3A470%2C%22height%22%3A264%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22kc-xlarge%22%3A%7B%22width%22%3A636%2C%22height%22%3A358%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaLarge%22%3A%7B%22width%22%3A470%2C%22height%22%3A264%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaCenteredSmall%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22k-small%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22AvatarMedium%22%3A%7B%22width%22%3A120%2C%22height%22%3A120%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22ku-xlarge%22%3A%7B%22width%22%3A636%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaSmall%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaExtraLarge%22%3A%7B%22width%22%3A636%2C%22height%22%3A358%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22ku-large%22%3A%7B%22width%22%3A470%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22avt-small%22%3A%7B%22width%22%3A80%2C%22height%22%3A80%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22k-medium%22%3A%7B%22width%22%3A320%2C%22height%22%3A180%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaMedium%22%3A%7B%22width%22%3A320%2C%22height%22%3A180%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22ku-medium%22%3A%7B%22width%22%3A320%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22avt-medium%22%3A%7B%22width%22%3A120%2C%22height%22%3A120%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22avt-large%22%3A%7B%22width%22%3A200%2C%22height%22%3A200%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22k-thumb%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22faces%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaThumb%22%3A%7B%22width%22%3A137%2C%22height%22%3A77%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22faces%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22AvatarSmall%22%3A%7B%22width%22%3A80%2C%22height%22%3A80%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22original%22%3A%7B%7D%2C%22k-xlarge%22%3A%7B%22width%22%3A636%2C%22height%22%3A358%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22north%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaUncroppedLarge%22%3A%7B%22width%22%3A470%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22BlogAvatar%22%3A%7B%22width%22%3A100%2C%22height%22%3A100%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22ku-inset%22%3A%7B%22width%22%3A75%2C%22height%22%3A100%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22AvatarLarge%22%3A%7B%22width%22%3A200%2C%22height%22%3A200%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaUncroppedExtraLarge%22%3A%7B%22width%22%3A636%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaUncroppedMedium%22%3A%7B%22width%22%3A320%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaUncroppedInset%22%3A%7B%22width%22%3A75%2C%22height%22%3A100%2C%22crop%22%3A%22fit%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22KinjaCenteredExtraLarge%22%3A%7B%22width%22%3A636%2C%22height%22%3A358%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22kc-medium%22%3A%7B%22width%22%3A320%2C%22height%22%3A180%2C%22crop%22%3A%22fill%22%2C%22gravity%22%3A%22center%22%2C%22flags%22%3A%22progressive%22%2C%22quality%22%3A80%7D%2C%22Original%22%3A%7B%7D%7D%2C%22blog%22%3A%7B%22id%22%3A8%2C%22name%22%3A%22io9%22%2C%22displayName%22%3A%22io9%22%2C%22canonicalHost%22%3A%22io9.com%22%2C%22applicationHost%2y%22%3A%22center%22%2C%22fl2%3A%22kinja.com%22%2C%22status%22%3A%22ENABLED%22%2C%22description%22%3A%22We%20come%20from%20the%20future.%22%2C%22descriptionHtml%22%3A%22%3Cp%3EScience%20and%20entertainment%20from%20the%20world%20of%20tomorrow.%3C%2Fp%3E%3Cp%3E%3Ca%20href%3D%5C%22http%3A%2F%2Fio9.com%2Ftag%2Fscience%5C%22%20rel%3D%5C%22nofollow%5C%22%3ESCIENCE%3C%2Fa%3E%20-%20%3Ca%20href%3D%5C%22http%3A%2F%2Fio9.com%2Ftag%2Fmovies%5C%22%20rel%3D%5C%22nofollow%5C%22%3EMOVIES%3C%2Fa%3E%20-%20%3Ca%20href%3D%5C%22http%3A%2F%2Fio9.com%2Ftag%2Ftelevision%5C%22%20rel%3D%5C%22nofollow%5C%22%3ETELEVISION%3C%2Fa%3E%20-%20%3Ca%20href%3D%5C%22http%3A%2F%2Fio9.com%2Ftag%2Fbooks%5C%22%20rel%3D%5C%22nofollow%5C%22%3EBOOKS%3C%2Fa%3E%20-%20%3Ca%20href%3D%5C%22http%3A%2F%2Fio9.com%2Ftag%2Ffuturism%5C%22%20rel%3D%5C%22nofollow%5C%22%3EFUTURISM%3C%2Fa%3E%20-%20%3Ca%20href%3D%5C%22http%3A%2F%2Fio9.com%2Ftag%2Fconcept-art%5C%22%20rel%3D%5C%22nofollow%5C%22%3ECONCEPT%20ART%3C%2Fa%3E%3C%2Fp%3E%22%2C%22showLikesInLatest%22%3Afalse%2C%22showRepliesInLatest%22%3Afalse%2C%22timezone%22%3A%22America%2FLos_Angeles%22%2C%22timezoneOffset%22%3A-28800000%2C%22timezoneShortname%22%3A%22PST%22%2C%22locale%22%3A%22en-US%22%2C%22robotsAllowed%22%3Atrue%2C%22fbAppId%22%3A%2231388860473%22%2C%22googleSiteVerification%22%3A%22K6wRvI0H8ILViUOVv2vsEYbx_XGrjrOFcjiQyebLccw%22%2C%22googleAnalyticsID%22%3A%22UA-142218-29%22%2C%22kruxId%22%3A%22JO5G0zct%22%2C%22template%22%3A%22io9%22%2C%22blogGroup%22%3A%22io9%22%2C%22isGmgBlog%22%3Atrue%2C%22groupBlog%22%3Atrue%2C%22showInsets%22%3Atrue%2C%22hasTouchIcon%22%3Afalse%2C%22avatar%22%3A%7B%22src%22%3A%22http%3A%2F%2Fi.kinja-img.com%2Fgawker-media%2Fimage%2Fupload%2Fs--5HNHcp8D--%2Fc_fill%2Cfl_progressive%2Cg_north%2Ch_358%2Cq_80%2Cw_636%2F192oz432yr16epng.png%22%2C%22uri%22%3Anull%2C%22id%22%3A%22192oz432yr16epng%22%2C%22width%22%3A636%2C%22height%22%3A358%2C%22format%22%3A%22png%22%2C%22recommended%22%3Anull%7D%2C%22logo%22%3A%7B%22src%22%3A%22http%3A%2F%2Fi.kinja-img.com%2Fgawker-media%2Fimage%2Fupload%2Fs--QRmjiIuV--%2Fy9jqgcewukbby4e2hlmo.png%22%2C%22uri%22%3A%22http%3A%2F%2Fi.kinja-img.com%2Fgawker-media%2Fimage%2Fupload%2Ft_k-xlarge2%2Fy9jqgcewukbby4e2hlmo.png%22%2C%22id%22%3A%22y9jqgcewukbby4e2hlmo%22%2C%22width%22%3A636%2C%22height%22%3A358%2C%22format%22%3A%22png%22%2C%22recommended%22%3Anull%7D%7D%2C%22blogOwner%22%3A%7B%22id%22%3A%225717795175536518860%22%2C%22accountId%22%3A%225717795175536518860%22%2C%22accountType%22%3A%22OAUTH%22%2C%22screenName%22%3A%22AnnaleeNewitz%22%2C%22displayName%22%3A%22Annalee%20Newitz%22%2C%22superUser%22%3Afalse%2C%22status%22%3A%22ENABLED%22%2C%22notificationsSeenUntil%22%3A1416861928525%2C%22createTimeMillis%22%3A1353309390427%2C%22lastUpdateTimeMillis%22%3A1379441774432%2C%22defaultBlogId%22%3A676%2C%22defaultBlog%22%3Anull%2C%22twitterScreenName%22%3Anull%2C%22avatarUrl%22%3A%22chomp%3A%2F%2F190gjqe8saq22jpg%22%2C%22avatar%22%3A%7B%22uri%22%3A%22chomp%3A%2F%2F190gjqe8saq22jpg%22%2C%22id%22%3A%22190gjqe8saq22jpg%22%2C%22format%22%3A%22jpg%22%7D%7D%2C%22blogSales%22%3A%7B%22blogId%22%3A8%2C%22amazonInsetsEnabled%22%3Atrue%2C%22amazonAffiliateTag%22%3A%22io9amzn-20%22%2C%22adsEnabled%22%3Atrue%2C%22adNetworkId%22%3A4246%2C%22adSiteName%22%3A%22gm.io9%22%2C%22tagsExcludedFromPartnerRss%22%3A%5B%5D%2C%22tagsForceSynced%22%3A%5B%5D%2C%22adSlotsDisabled%22%3A%5B%5D%2C%22stored%22%3Atrue%7D%2C%22imgassets%22%3A%22http%3A%2F%2Fc.kinja-static.com%2Fassets%2Fimages%2F%22%7D' ));}());</script><script type="text/javascript">(function () {/* This AMD configuration is used in these contexts:1) in-browser2) build process3) tests*/(function () {'use strict';/*globals requirejs, document */requirejs.config({paths: (function () {var paths = {'html-janitor': 'lib/html-janitor',jquery: 'lib/jquery',underscore: 'lib/underscore',backbone: 'lib/backbone','backbone.marionette': 'lib/backbone.marionette','backbone.stickit': 'lib/backbone.stickit',moment: 'lib/amd-wrapped/momentjs/moment','moment-timezone': 'lib/amd-wrapped/momentjs/moment-timezone','jquery.tap': 'lib/amd-wrapped/tap.js/jquery.tap',ace: 'lib/ace'};if (typeof document !== 'undefined') {paths.templates = 'templates/closure/' + (document.getElementsByTagName('html')[0].getAttribute('lang') || 'en-US');}return paths;}())});}());var modules = {"BaseApp": "-1df55d5b8b949199bd6014d033caa992","TagPageApp": "-a0e84ff24e0df352fdca1578ae8b8ef9","FrontPageApp": "-213d0c9960b1f7f5fb332b84e7e67641","Main": "-afeb4e8baca63bc1ae34a55a831501a6","PromotedPostPreview": "-bf8bad32b5ecb1043786079feb72fde2","SettingsPageApp": "-d0a2c8fdae703ce6d27a1ee9beebf7f8","RuleSystem": "-f0c010fbbc061178082b1d2bb27c503e","ImagePlaceholder": "-a006bdcfa95a783d4eff179caa434feb","ace": "-a486a39565033c80d86a498ff172dad1","AmazonStats": "-346a9344639b72b476d306864402f8be","GroupchatsModule": "-8f618f3da0751f6af853be83b69e7045","FeaturesPageApp": "-1dc932ae808cc2fe21479a881c7030d6","Commerce": "-a0131f5255fd0f07f755b9cde16dc133","LeaderboardStatsPageApp": "-1f9314d8da9b54fdd2aa6b77620aa5f0","ScribeEditor": "-4d0c06e4bae01160b36f69b96e86fecd","PrivatePageApp": "-9f542c9ca7767c6bc9d81720ad577ed5","PostDebugPageApp": "-454a769a1ab445c02bd85596ee4f1afc","PostApp": "-a986acfa58e59bd62684ebe7f1e3a422","StatsPageApp": "-923e07fc94efc9d198154fb000a66175","Foundation5": "-eca72c908883b2021aede721138ae330","FlaggedRepliesApp": "-fc27722b66dfd260599e582b9fffd8b6","MarionetteEditor": "-0c9530ff3814ce82b41da9f4f923b9f8","JWPlayer": "-bcb2726c49022f1b0a79203da422279b","GmgFeaturesPageApp": "-6457f125b09741173e6884abf2aa5fd6","DiscussionModule": "-8f3e73f218dc7d99fb8c8abb7c1fadf3","ErrorPageApp": "-2ff3872ca8fbf3c98c128088438af295","NotificationsPageApp": "-301a987ef5df35d26903962e252a2ddd","TipsApp": "-b839f4f0c071d3d4cb596abe337d7916","KinjaAnalytics": "-ab5076a5c52b59dee82d4a7dbfe18d1a","KinjaFeedApp": "-bfa8798b454ef93f4d960c98764e7658","AmazonInsetsModule": "-5b23bfe845ea642ff16ae6c2b26df787","SearchPageApp": "-809ebf100a39b43d1c7212cdfe3fdb6b","Raven": "-3467f3aed7fecb0be39f14c0d7095e44","UIKitApp": "-82f0238b4e411ed3b9a9aee8d6e3ebb8","StatsPerformanceApp": "-3e98e41eaf8413f58a654e14ce6dba3a"}, paths = {}, baseUrl = "http://c.kinja-static.com/assets/javascripts-min/", modulePath = "layer/"; for (var module in modules) {if (modules.hasOwnProperty(module)) {paths["module/" + module] = "module/" + module + "-en-US" + modules[module]; paths["layer/" + module] = "layer/" + module + "-en-US" + modules[module];}}require.config({waitSeconds: 0, baseUrl: baseUrl, paths: paths, map: {"*": {"config": "config"}}});markUserTime("JS - Before preload"); var mainModules = [modulePath + "Main", modulePath + "PostApp"];require(mainModules, function () {markUserTime("JS - After preload"); require(["module/Main"], function () {markUserTime("JS - After app init");});});}());</script><!--[if gte IE 9]> --><script>require(["module/Raven"]);</script><!-- <![endif]--></div><div class="reveal-modal-bg"></div><div class="ad-background"></div><div id="modalplaceholder"></div></div></div>	<div style="display:none;" id="read-only-warning"><div class="row"><div class="column small-12">Kinja is in read-only mode. We are working to restore service.</div></div></div></body></html>-background"></div><div id="modalplaceholder"></div></div></div>	<div style="display:none;" id="read-only-warning"><div class="row"><div class="column small-12">Kinja is in read-only mode. We are wo

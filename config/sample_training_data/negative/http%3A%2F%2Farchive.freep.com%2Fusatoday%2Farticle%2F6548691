@@ -1,0 +1,2038 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- COMO/GCI v1.28 Revision 8771 -->
+<!-- GEL Version: 1.28.3218 -->
+<!-- Built by: MOC-WN0336 -->
+
+<!-- connect to http://aws.gannett.com/m?p=mi-detroit.freep.com/news/article.htm&networkid=7103&pt=article for webservice call -->
+<!-- Network id is 7103 -->
+<!--Mon, 1 Dec 2014 20:27:52 UTC :Response :  {"dfp": { "networkid": "7103" },"siteid": "mi-freep-C1561", "inventory": [ "mi-freep-C1561","","news","",""], "pageType": ""}-->
+
+
+<head>
+		<script>
+__reach_config = {
+  pid: '510801384240cf6ef6000065', // The SimpleReach assigned Publisher ID (pid)
+  title: 'Police nab cartel member in organ trafficking case', // The title of the article (remember that they should be escaped, not HTML or URL encoded)
+  url: 'http://archive.freep.com/usatoday/article/6548691', // The canonical URL of the article. This is not the window.location, this the URL that you would give to a search engine for SEO purposes.
+  date: '2014-03-17 23:47:00 UTC', // Article publish date in UTC or any ISO8601 date
+  authors: [], // An array of the article author(s); (remember that they should be escaped, not HTML or URL encoded)
+  channels: [''], // An array of the article channel(s); (remember that they should be escaped, not HTML or URL encoded) (Main Category/Sub like file under)
+  tags: ['news'], // An array of the article tag(s); (remember that they should be escaped, not HTML or URL encoded) (Section from SSTS)
+  landing_url: window.location.href // Optional parameter for the main page of slideshows, galleries, multipage articles, etc. 
+};
+(function(){
+  var s = document.createElement('script');
+  s.async = true;
+  s.type = 'text/javascript';
+  s.src = document.location.protocol + '//d8rk54i4mohrb.cloudfront.net/js/reach.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>
+<title>Police nab cartel member in organ trafficking case | Detroit Free Press | freep.com</title>
+<meta property="og:title" content="Police nab cartel member in organ trafficking case">
+<meta property="og:type" content="article">
+<meta name="keywords" content=",freep.com,Detroit,Michigan,News,local news,headlines,stories,world news" />
+<meta name="description" content="Ring would kidnap children, take them to homes to have organs removed,  official said." />
+<meta property="og:description" content="Ring would kidnap children, take them to homes to have organs removed,  official said.">
+	<meta property="og:image" content="http://www.gannett-cdn.com/-mm-/ea26b0c24c9d0d23751fa60bb9b42a021bf4ab4e/c=334-0-5437-3836&r=490x368/local/-/media/USATODAY/USATODAY/2014/03/17//1395110400000-AP-Mexico-Vigilantes.jpg#IGNORE_QUERYSTRING&Border=0" />
+<meta property="og:site_name" content="Detroit Free Press">
+		<meta property="og:image" content="http://archive.freep.com/graphics/facebook/share_icon.jpg"/>
+<meta name="category" content=""/>
+	<link rel="canonical" href="http://archive.freep.com/usatoday/article/6548691" />
+	<meta property="og:url" content="http://archive.freep.com/usatoday/article/6548691">
+<meta name="robots" content="noodp">
+<meta name="robots" content="noydir">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="expires" content="0"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+<link href="/includes/css/ody/ody-local.css?odyv=1.28.3218" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/odygci/p1/ody-styles-min.css?odyv=1.28.3218"/>
+<!--[if lte ie 7]>
+<style type="text/css">
+.ody-skin .ody-article .ody-asset-breakout{margin-top:40px;}
+.ody-skin .ody-pgwrap .ody-pgcolumn1 .ody-activephoto h3 {position:absolute;margin-top:135px;margin-left:-75px; }
+.ody-skin .ody-pgwrap .ody-pgcolumn1 .ody-activephoto img {margin-top: expression((410 - this.height) / 2) }
+.ody-skin .ody-article .ody-buypic {bottom:3px;}
+.ody-skin .YahooXXLAd .ody-article .ody-bo-sm .ody-byline h5, .ody-skin .XXLAd .ody-article .ody-bo-sm .ody-byline h5, .ody-skin .FixedPanel .ody-article .ody-bo-sm .ody-byline h5 { margin-top: -2px; } /* IE7 bug in OPA "Written by" byline area. */
+.ody-skin .FixedPanel .ody-article .ody-asset-breakout, .ody-skin .FixedPanel .ody-article .ody-article-bodytext .ody-gallery-breakout, .ody-skin .FixedPanel .ody-gallerylink, .ody-skin .FixedPanel .ody-article .ody-article-bodytext .ody-gallery-breakout {margin-top:30px;}
+.ody-skin .XXLAd .ody-article .ody-asset-breakout, .ody-skin .XXLAd .ody-article .ody-article-bodytext .ody-gallery-breakout, .ody-skin .XXLAd .ody-gallerylink, .ody-skin .XXLAd .ody-article .ody-article-bodytext .ody-gallery-breakout{margin-top:30px;}
+.ody-skin .YahooXXLAd .ody-article .ody-asset-breakout, .ody-skin .YahooXXLAd .ody-article .ody-article-bodytext .ody-gallery-breakout, .ody-skin .YahooXXLAd .ody-gallerylink, .ody-skin .YahooXXLAd .ody-article .ody-article-bodytext .ody-gallery-breakout{margin-top:30px;}
+.ody-skin .ody-article .ody-photobylinewrapper{float:left;margin-bottom: 175px;}
+.ody-skin .XXLAd .ody-article .ody-photobylinewrapper .ody-photo-port .nocaption{width:240px;}
+.ody-skin .FixedPanel .ody-article .ody-photobylinewrapper .ody-photo-port .nocaption{width:240px;}
+.ody-skin .YahooXXLAd .ody-article .ody-photobylinewrapper .ody-photo-port .nocaption{width:240px;}
+.ody-skin .XXLAd .ody-sports-tickets, .ody-skin .FixedPanel .ody-sports-tickets, .ody-skin .YahooXXLAd .ody-sports-tickets {margin-top:30px;}
+.ody-skin .FixedPanel .ody-article .ody-photobylinewrapper{float:left;margin-bottom: 10px;}
+.ody-skin .FixedPanel .ody-article .ody-port{clear:both;}
+</style>
+<![endif]-->
+<!--[if IE 8]>
+<style type="text/css">
+.ody-skin #ody-nextstoryslider{filter:progid:DXImageTransform.Microsoft.Glow(Strength=5,Color='#b8b8b8');}
+.ody-skin .FixedPanel .ody-article  .ody-pgwrap .ody-pgcolumn1 .ody-photoarea {position:relative;}
+.ody-skin .FixedPanel .ody-article .ody-pgwrap .ody-pgcolumn1 .ody-activephoto {position:absolute;}
+.ody-skin .FixedPanel .ody-article .ody-pgtools {position:absolute;bottom:0px;}
+.ody-skin .FixedPanel .ody-article .ody-pgwrap .ody-pgcolumn1 .ody-pgarrows {position:relative;}
+.ody-skin .FixedPanel .ody-article .ody-pgphotosrc{max-width:480px;}
+.ody-skin .FixedPanel .ody-article .ody-photobylinewrapper{margin-top:-26px;padding-top:0;}
+.ody-skin .FixedPanel .ody-article-bodytext .content-wrap {padding-top:25px;}
+.ody-skin .YahooXXLAd .ody-article  .ody-pgwrap .ody-pgcolumn1 .ody-photoarea {position:relative;}
+.ody-skin .YahooXXLAd .ody-article .ody-pgwrap .ody-pgcolumn1 .ody-activephoto {position:absolute;}
+.ody-skin .YahooXXLAd .ody-article .ody-pgtools {position:absolute;bottom:0px;}
+.ody-skin .YahooXXLAd .ody-article .ody-pgwrap .ody-pgcolumn1 .ody-pgarrows {position:relative;}
+</style>
+<![endif]-->
+<meta property="fb:app_id" content="185931034751252" />
+<script type="text/javascript" src="/odygel/functions.js?odyv=1.28.3218"></script>
+<script type="text/javascript" src="/odygel/lib/core/core.js?odyv=1.28.3218"></script>
+<script type="text/javascript" src="/odygel/lib/3rdparty/jquery/jquery-1.7.2.min.js?odyv=1.28.3218"></script>
+<script type="text/javascript" src="//archive.freep.com/odygel/lib/3rdparty/jquery/flxhr-1.0.6/deploy/swfobject.js?odyv=1.28.3218"></script>
+<script type="text/javascript" src="//archive.freep.com/odygel/lib/3rdparty/jquery/flxhr-1.0.6/deploy/flXHR.js?odyv=1.28.3218"></script>
+<script type="text/javascript">
+if (typeof fireflyJQuery != 'object') {
+  fireflyJQuery = jQuery;
+}
+</script>
+<script type="text/javascript"> 
+/*Subsite Redirect*/
+var _bodyTimer= new GEL.util.benchmark.Timer("Body Load").start(); 
+GEL.thepage.on("ready", function() { _bodyTimer.end() } ); 
+/* GO4 Faster PageInfo */
+		(function(){ 
+var _c= GEL.config, 
+    _i= GEL.thepage.pageinfo={
+	sitecode: "C4",
+	articlesitecode: "C4",
+	key:"USAT6548691",
+	keyaid:"2014USAT6548691",
+	title:"Police nab cartel member in organ trafficking case",
+	type:"article",
+	categorymain:"Article",
+	categorymainid:"usatodayarticle",
+	categoryname:"Article",
+	categoryid:"USAT-NEWS-WORLD",
+	commentinturl: "/comments/usatodayarticle/6548691",
+	commentexturl: "http://archive.freep.com/comments/usatodayarticle/6548691",
+	articleinturl: "/usatoday/article/6548691",
+	articleprinturl: "/print/usatodayarticle/6548691",
+	articleemailurl: "/email/usatodayarticle/6548691",
+	isarticlefuture: "false",
+	shorturl:"",
+	canonicallinknotitle:"http://archive.freep.com/usatoday/article/6548691",
+	pic: {
+		mycapture: "enabled",
+		enablecategory:  "off",
+		domainname: "freep.mycapture.com"
+	},
+	url: { 
+		location: location.href,
+		hostname: "archive.freep.com",
+		domainname: "freep.com",
+		domainroot: "freep"
+	},
+	sn: { 
+		pluck: { 
+			url: "http://archive.freep.com/usatoday/article/6548691",
+			id: "20140317.freep.C4USAT6548691.article.USATnews",
+			author:""
+		}
+	},
+	option: {
+		commentdesign: "1",
+		articlerelated: ""
+	},
+	date: { 
+		isopuddate:"201403172347",
+		isomoddate:"201403172347",
+		rollover:"00:00",
+		timeoffset: "-04"
+	},
+	field:{ 
+		slug : "",
+		mogulus : "",
+		pagination : "1",
+		seokeywords : ""
+	},
+	ssts:{
+		adsiteid:"mi-detroit.freep.com",
+		section:"news",
+		subsection:"world",
+		topic:"",
+		subtopic:"",
+		adpagetype:"article.htm"
+	},
+	taxonomy:{
+		networkID:"7103",
+		siteID:"mi-freep-C1561",
+		unit1:"mi-freep-C1561",
+		unit2:"",
+		unit3:"news",
+		unit4:"",
+		unit5:"",
+		pageType:""
+	},
+	market: { 
+		name: "Detroit Free Press", 
+		state: "Michigan",
+		city: "Detroit"
+	},
+	comscore: { 
+		comscoreenable: "on",
+		c1: "2", 
+		c2: "6035223"
+	},
+	twitter: {
+		global: "@freep",
+		section: ""
+	},
+	navitemon: {
+		navon: ""
+	},
+	chatApp: {
+		url: "https://chat.gannett.com/HtmlChat.jsp",
+		starttime: "6",
+		endtime: "21",
+		pubid: "",
+		pubname: "Detroit Free Press"
+	},
+	gigyaapikey: '2_sips1I8zd1LU2znUdYkEPzOLEWqpPQC32BbBxULoj_SZnpuZKThRCQdUqPWBMtQ1',
+	enabledProviders: '',
+	GO4TurnOffZag: '1',
+	paletteOption: '1'
+};
+_i.date.moddate= _i.date.isomoddate.slice(0,8); 
+_i.date.puddate=_i.date.isopuddate.slice(0,8);
+_i.sn.pluck.trackview=(function(){
+	var 
+		_y = _i.date.puddate.slice(0,4),
+		_m = parseInt(_i.date.puddate.slice(4,6)-1),
+		_d = _i.date.puddate.slice(6,8),
+		_ad = new Date(_y,_m,_d),
+		_td = new Date(),
+		_diff = _i.date.age = parseInt(parseInt(_td.getTime()-_ad.getTime())/86400000)
+	;
+	if(_i.date.puddate=='99999999' || _diff>15)
+		return false;
+	else
+		return true;
+})();
+_c.cleanprint= { 
+enabled: "on",
+url: ""
+}; 
+(function(){
+	var 
+		_d = GEL.thepage.pageinfo.date,
+		_OFFSET = _d.timeoffset,
+		_a = _d.article = {},
+		_c = _d.current = {},
+		_t = new Date()
+	;
+	//_d.modified = '11:47 PM, Mar 17, 2014';
+	_c.year= _t.getFullYear();
+	_c.month = parseInt(_t.getMonth()+1);
+	_c.day = _t.getUTCDate();
+	_c.hours = _t.getHours();
+	_c.minutes = _t.getMinutes();
+	_c.dayminutes = parseInt(parseInt(_t.getHours()*60)+_t.getMinutes());
+	_a.newDate = (function(){
+		var _date = new Date('March 17, 2014 11:47 PM' + " GMT" + _OFFSET + "00");
+		return _date.toLocaleString();
+	})();
+	var _tt = new Date(_a.newDate);
+	_d.modified = (function(t){
+		var _l = t.toLocaleTimeString().split(' ');
+		var _t = _l[0].split(':');
+		if(_l.length == 1) {
+			//_l is in 24:00 format, convert to 12:00 am/pm
+			var _temp_int = parseInt(_t[0].replace(/^0*(?=[0-9]$)/, ''));
+			var _temp_hrs = (_temp_int > 11 ? _temp_int - 12 : _temp_int);
+			if(_temp_hrs == 0) _temp_hrs = 12;
+			_t[0] = _temp_hrs.toString();
+			_l[1] = (_temp_int > 11 ? 'PM' : 'AM');
+		}
+		var _time = _t[0] + ':' + _t[1] + ' ' + _l[1];
+		var _m = t.toString().split(' ')[1];
+		return _time+', '+_m+'. '+t.getDate()+', '+t.getFullYear();
+	})(_tt);
+	_a.year = parseInt(_tt.getFullYear());
+	_a.month = parseInt(_tt.getMonth()+1);
+	_a.day = parseInt(_tt.getDate());
+	_a.hours = parseInt(_tt.getHours());
+	_a.rollhours = '23:47';
+	_a.rolltime = 'Mar 17, 2014';
+	_a.minutes = parseInt(_tt.getMinutes());
+	_a.dayminutes = parseInt(parseInt(_a.hours*60)+_a.minutes);
+	_a.diffminutes = parseInt(_c.dayminutes - _a.dayminutes);
+	_a.diffhours = parseInt(_c.hours - _a.hours);
+	if(_a.rollhours=='00:00' || _a.rollhours ==_d.rollover)
+		_a.timestamp = _a.rolltime;
+	else if(_c.year!=_a.year || _c.month!=_a.month || _a.day!=_c.day)
+		_a.timestamp = _d.modified;
+	else
+		_a.timestamp = _d.modified;
+})();
+var cfg= GEL.namespace("config"); 
+/*gdn_auto_refresh*/
+cfg.gdn_auto_refresh = true; /*I don;t think this is needed anymore*/
+})(); 
+(function(){
+	GEL.thepage.initializer.addInitRoutine({ 
+		name: "CommentCountFB", 
+		namespace: "facebook",
+		callback: function () {
+		  function setCommentCountFromFacebook(response) {
+			GEL.thepage.pageinfo.commentCount = response.comments;
+			var _count = GEL.thepage.pageinfo.commentCount ? GEL.thepage.pageinfo.commentCount : 0;
+			/*if(GEL.ement("gslCommentsCount-1").element.className && _count!=0)
+				GEL.ement("gslCommentsCount-1").element.innerHTML =  _count+"&nbsp;" ;
+			if(GEL.ement("gslCommentsCount-2").element.className && _count!=0) {
+				GEL.ement("gslCommentsCount-2").element.previousSibling.appendData(' ');
+				GEL.ement("gslCommentsCount-2").element.innerHTML = '(' + _count + ')';
+			}*/
+		  }
+		  FB.api('/' + GEL.thepage.pageinfo.canonicallinknotent.className && _count!=0) {
+				GEL.ement("gslCommentsCount-2").element.previousSibling.appendData(' ');
+				GEL.ement("gslCommentsCount-2").element.innerHTML = '(' + _count itle, setCommentCountFromFacebook);
+		}, 
+		priority: 301
+	}); 
+})();
+GEL.thepage.pageinfo.EnableGemsApi="on";
+GEL.thepage.pageinfo.businessUnitCode="1008FP-E";
+GEL.thepage.pageinfo.noindex=false;
+GEL.thepage.pageinfo.siteinstance="";
+GEL.thepage.pageinfo.videooverlays="on";
+GEL.thepage.pageinfo.admail={
+	firsttime: false,
+	enable: "on",
+	show: false,
+	currentsubscriber: false
+};
+if(GEL.thepage.pageinfo.admail.enable.toLowerCase() == "on"){
+	GEL.thepage.pageinfo.admail.show= true;
+}
+GEL.thepage.pageinfo.sessiontime=0;
+GEL.thepage.pageinfo.useRevSci=true;
+GEL.thepage.pageinfo.trackingServer="gntbcstglobal.112.2o7.net";
+GEL.thepage.pageinfo.TrackSourceCode=2;
+GEL.thepage.pageinfo.UseSAM="";
+GEL.thepage.pageinfo.TrackSourceCodeValues={
+	TSCSliderFirst:"CPPWFIRST",
+	TSCSlider30:"CPPWSUB30",
+	TSCSlider1L:"CPPWSUB1L",
+	TSCSliderFinal:"CPPWSUBFIN"};
+GEL.thepage.pageinfo.gps_source=(function(){
+	function getUrlVars(){
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, 
+		function(m,key,value) {
+			vars[key] = value;
+		});
+		return vars;
+	};
+	var _gps_value = getUrlVars()["gps-source"];
+	return _gps_value;
+})();
+GEL.thepage.pageinfo.mediaMathPixel = {
+	mt_id:"348299",
+	mt_id_login:"355785",
+	mt_id_conversion:"348300"
+};
+GEL.thepage.pageinfo.dfpToggle = {
+	asyncRender:'',
+	multiRequest:''
+};
+/*GO4 Faster Semantics*/
+/* Banner configuration and Initialization */
+(function(){
+var 
+	_c= GEL.config,
+	_a = [],
+	_SI= GEL.namespace("thepage.pageinfo.semantics"), 
+	_ids= typeof _SI.uniqueids == 'object' ? _SI.uniqueids : [],
+	_keywords;
+for(var i=0, l= _ids.length,kw= _ids[i]; i < l ; kw= _ids[++i])
+	_a[_a.length]= "CW" + kw; 
+_c.KeyWords= _a.slice(); 
+_c.KeyValues= {cw: _ids.slice()}; 
+_c.AdPage="mi-detroit.freep.com/news/article.htm";
+_c.AdServer= "gannett.gcion.com";
+_c.AdNetworkId=5111.1;
+_c.PlacementId=parseInt(896084, 10);
+_c.gcion_section_front = "article"; 
+_c.gdn_section_front = "article"; 
+_c.PDurl = 'search.freep.com'; /*PDURL*/
+_c.PDskin = ''; /*PDSKIN*/
+/* Ad Server mode set for DFP  */
+GEL.thepage.bannerData = {};
+	_c.adprovider = "dfp";
+	_dfp= GEL.namespace("config.dfp");
+	_dfp.networkid = "7103";
+	_dfp.dataservice = "http://aws.gannett.com/m?";
+	_dfp.cmsid = "12408";
+	try{
+	eval('('+ 'GEL.thepage.bannerData =  {"dfp": { "networkid": "7103" },"siteid": "mi-freep-C1561", "inventory": [ "mi-freep-C1561","","news","",""], "pageType": ""}'+')');
+}catch(e){
+	GEL.thepage.bannerData.error=e;
+}
+GEL.thepage.initializer.addInitRoutine({ 
+	name: "banners", 
+	namespace: "widget.AdBanner", 
+	callback: bannerFinder, 
+	priority: 25
+}); 
+})(); 
+<!--Category Name: usatodayarticle-->
+
+/* This is for backward compatibility */
+window["OAS_AD"]= (function(){ 
+var _sMap= document.getElementsByTagName("SCRIPT"); 
+return function OAS_AD(pos, opts) {
+	opts= opts || {}; 
+	opts.position= pos; 
+	var 
+		_me= _sMap[_sMap.length - 1], 
+		_container= _container= GEL.ement("BANNER", opts);
+	_me.parentNode.insertBefore(_container.getElement(), _me); 
+}
+})(); 
+/****O4 Faster Omniture******/
+(function(){
+	var 
+		_PI= GEL.thepage.pageinfo
+	;
+	GEL.namespace('config.omniture', 'config.bus.properties', 'config.bus.providers');
+	GEL.config.bus.providers.sitecat= 20; 
+	GEL.config.bus.providers.bt= 10;
+(function(){ 
+	var _CFG= GEL.namespace("config.comscore"); 
+	_CFG.domain= "freep" || (function(){ 
+		var _a= window.location.host.split("."); 
+		return _a[_a.length - 2];
+	})(); 
+	_CFG.comscoreenable= "on";
+	_CFG.server= "b.scorecardresearch.com";
+	_CFG.scriptlib= "http://b.scorecardresearch.com/beacon.js";
+	_CFG.accountid= 6035223;
+	_CFG.c1= 2;
+	_CFG.c4= GEL.namespace("thepage.pageinfo").articleinturl || '';
+	_CFG.profile= ""; 
+	GEL.config.bus.providers.comscore= 100;
+})();
+/* This is the SiteCatalyst specific configuration  */
+	GEL.config.omniture= {
+		account: 'gpaper204,gntbcstglobal',
+		channel: '',
+		currencyCode: "USD",
+		trackDownloadLinks: true,
+		trackExternalLinks: true,
+		trackInlineStats: true,
+		linkDownloadFileTypes: "exe,zip,wav,mp3,mp4,m4v,mov,mpg,avi,wmv,doc,pdf,xls",
+		linkInternalFilters: "javascript:apartments,careerbuilder,cars,customcoupon,customwire.ap.org,eharmony,gannett,gbahn,highschoolsports,homefinder,homescape,infi,job,network,newsbank,newslibrary,mycapture,salary,topix,ur.gcion.com,usatoday,traffic,planetdiscover,metromix,mom",
+		linkLeaveQueryString: false,
+		linkTrackVars: "None",
+		usePlugins: true, 
+		linkTrackEvents: "None",
+		eventTrackLoad: "",
+		TrackSourceCode: "1",
+		UseSAM: ""
+	}
+/* 
+   These are the initial properties for Page View Tracking 
+	The config.bus.properties object will be iterated over 
+	and called against the pageTracker object like
+		setAttribute(key, value); 
+	Remember that key translation to Omniture prop_ values 
+	is maintained within the OMniture JavaScript provider. 
+*/
+	GEL.config.bus.properties= {
+		server: 'SAXO-GEL',
+		pagetype: '',
+		custom1: 'NewsMain',
+		custom2: 'dfp/usat',
+		custom3: 'dfp/usat/NEWS/article',
+		custom4: 'dfp/usat/NEWS/article',
+		custom5: '',
+		custom6: 'news',
+		custom7: "" || (function(){
+			var 
+				_cat = {
+					'': 'news_front' ,
+					'': 'entertainment_front',
+					'': 'classifieds_front',
+					'': 'customer_service_front',
+					'': 'community_front'
+				},
+				_pdefault = 'news_front',
+				_cid= _PI.categoryid
+			;
+			if(_cid in _cat) 
+				return _cat[_PI.categoryid];
+			else 
+				return _pdefault;
+		})(),
+		custom8 : '',
+		topstories: (function(){
+			var 
+				_top = {
+					frontpage: (function(){
+						return '';
+					})(),
+					article: (function(){
+						if(GEL.thepage.pageinfo.articleinturl){
+							var 
+								_arturl=GEL.thepage.pageinfo.articleinturl.split("/"),
+								_top
+							;
+							_top = '/article/'+_arturl[2]+"/"+_arturl[3]+"/"+_arturl[4];
+							return _top;
+						}
+					})(),		
+					section: (function(){
+						return '';
+					})(),
+					gallery: (function(){
+						return '';
+					})(),
+					error: (function(){
+						return '';
+					})()
+				},_type=_PI.type
+			;
+			if(_type in _top)
+				return _top[_type];
+		})(),
+		contenttype : 'article',
+		division: (function(){
+			var 
+				_p = GEL.env.url.qsv
+			;
+			if(_p.src)
+				return _p.src;
+		})(),
+		formname: (function(){
+			var 
+				_p = GEL.env.url.qsv
+			;
+			if(_p.src)
+				return _p.src;
+		})(),
+		location: document.location,
+		uri: (function(){
+			var 
+				_uri = {
+					frontpage: (function(){
+						var _uri = "/frontpage"
+						return _uri;
+					})(),
+					article: (function(){
+						if(GEL.thepage.pageinfo.articleinturl){
+							var 
+								_arturl=GEL.thepage.pageinfo.articleinturl.split("/"),
+								_uri
+							;
+							_uri = '/article/'+_arturl[2]+"/"+_arturl[3]+"/"+_arturl[4];					})(),
+					article: (function(){
+						if(GEL.thepage.pageinfo.articleinturl){
+							var 
+								_arturl=GEL.thepage.pageinfo.articleinturl.split("/"),
+								_uri
+							;
+							_uri = '/article/'+_arturl[2]+"/"+_arturl[3]+
+							return _uri;
+						}
+					})(),		
+					section: (function(){
+						var _uri = "/section/"+_PI.categoryid;
+						return _uri;
+					})(),
+					gallery: (function(){
+						return '/Gallery-TBD';
+					})(),
+					error: (function(){
+						return '/error';
+					})()
+				},_type=_PI.type
+			;
+			if(_type in _uri)
+				return _uri[_type];
+		})(),
+		pagedomain: _PI.url.domainname,
+		marketname: 'gpaper204',
+		authorbyline: 'USAT-',
+		isException : false,
+		useraction: (function(){
+			function getUrlVars(){
+				var vars = {};
+				var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, 
+				function(m,key,value) {
+					vars[key] = value;
+				});
+				return vars;
+			};
+			var _uaction = getUrlVars()["odyssey"],
+				_p = GEL.env.url.qsv;	
+			if(_p.template!='printphoto')
+				return _uaction;
+		})(),
+		internalreferrer : (function() {
+			var _dr = document.referrer;
+			if(_dr.match(/^tablet\./)) {
+				return 'tablet';
+			} else if(_dr.match(/^m\./)) {
+				return 'mobile';
+			}
+		})(),
+		ecommerceSource: (function(){
+			var 
+				_p = GEL.env.url.qsv
+			;
+			if(_p.source)
+				return _p.source;
+		})(),
+		semantics: (function(){
+			if(typeof(_PI.semantics)!='undefined' && typeof(_PI.semantics.uniqueids)!='undefined'){
+				var 
+					_c = _PI.semantics.uniqueids.join('+'),
+					_t = _PI.type,_u
+				;
+			_u = (_t=='frontpage') ? 'frontpage' : 
+					( (_t=='article') ? _PI.articleinturl.split('/').slice(1,5).join('/') : 
+						( (_t=='section') ? _PI.type +'/'+_PI.categoryid : '' ) )
+			; 
+				if(_c)
+					return 'CW:'+'/'+_u+':'+_PI.ssts.section+':'+_c;
+			}
+		})()
+	}
+})();
+</script> 
+<!-- concatenating the ssts value together into one variable -->
+<!-- clean up -->
+<!-- test display
+<br><br>
+ssts= mi-detroit.freep.com/news/world/article.htm<br><br>-->
+<script>
+	var responseFromINI = "";
+</script>
+	<script> 
+	responseFromINI = "mi-detroit.freep.com/news/world/article.htm";
+	</script>
+<script>
+var importFromINI = responseFromINI.split("|");
+var contentTopics = "";
+var contentType = "";
+var customContentCat = "";
+var customSection = "";
+for(var i=0; i<importFromINI.length; i++)
+{
+	switch(i)
+	{
+	case 0:
+		contentTopics = importFromINI[i].split(",");
+		break;
+	case 1:
+		contentType = importFromINI[i].split(",");	
+		break;
+	case 2:
+		customContentCat = importFromINI[i];
+		break;
+	case 3:
+		customSection = importFromINI[i].split(",");
+		break;
+	}
+}
+</script> 
+<!--
+category = category-USAT-NEWS-WORLD<br>
+type = type-article<br>
+Combination= category-USAT-NEWS-WORLD&type-article-->
+<script>
+	var categoryReturn = "category-USAT-NEWS-WORLD",
+	typeReturn = "type-article",
+	comboReturn = "category-USAT-NEWS-WORLD&type-article",
+	allReturn = "all",
+	responseFromLocalDataIni = "";
+	var responseFromLocalDataIniSplitAtTheBar = new Array();
+	if(categoryReturn.indexOf(":")>-1)
+	{
+		incorporateResponseStingIntoArray(categoryReturn);
+	}
+	if(typeReturn.indexOf(":")>-1)
+	{
+		incorporateResponseStingIntoArray(typeReturn);
+	}
+	if(comboReturn.indexOf(":")>-1)
+	{
+		incorporateResponseStingIntoArray(comboReturn);
+	}
+	if(allReturn.indexOf(":")>-1)
+	{
+		incorporateResponseStingIntoArray(allReturn);
+	}
+	for(var x=0; x<responseFromLocalDataIniSplitAtTheBar.length-1; x++)
+	{
+		instance = 0;
+		for(y in responseFromLocalDataIniSplitAtTheBar)
+		{
+			if(responseFromLocalDataIniSplitAtTheBar[x][0]==responseFromLocalDataIniSplitAtTheBar[y][0])
+			{
+				instance++;
+			}
+			if(instance>1)
+			{
+				responseFromLocalDataIniSplitAtTheBar[x][1] += "," + responseFromLocalDataIniSplitAtTheBar[y][1];
+				responseFromLocalDataIniSplitAtTheBar.splice(y,1);
+			}
+		}
+	}
+	for(var x=0; x<responseFromLocalDataIniSplitAtTheBar.length; x++)
+	{
+		temp = new Array();
+		tempArray = responseFromLocalDataIniSplitAtTheBar[x][1].split(",");
+		for(var i=0; i<tempArray.length; i++)
+		{
+			if(!contains(temp, tempArray[i])){
+				temp.length+=1;
+				temp[temp.length-1]=tempArray[i];
+			}
+		}
+		responseFromLocalDataIniSplitAtTheBar[x][1]=temp.join(",");
+	}
+	function contains(a,e)
+	{
+		for(var j=0;j<a.length;j++)if(a[j]==e)return true;
+		return false;
+	}
+	function incorporateResponseStingIntoArray(strInput)
+	{
+		var tempReturn;
+		if(strInput.indexOf("|")>-1)
+		{
+			tempReturn = strInput.split("|");
+		}
+		else
+		{
+			tempReturn = [strInput];
+		}
+		for(i in tempReturn)
+		{
+			match = 0;
+			for(var x=0; x<responseFromLocalDataIniSplitAtTheBar.length; x++)
+			{
+				if(responseFromLocalDataIniSplitAtTheBar[x][0] == tempReturn[i].split(":")[0] && match == 0)
+				{
+					responseFromLocalDataIniSplitAtTheBar[x][1] = responseFromLocalDataIniSplitAtTheBar[x][1]+","+tempReturn[i].split(":")[1];
+					match = 1;
+				}
+			}
+			if(match==0)
+			{
+				responseFromLocalDataIniSplitAtTheBar[responseFromLocalDataIniSplitAtTheBar.length]=tempReturn[i].split(":");
+			}
+		}
+	}
+</script>
+<script type="text/javascript">
+function get_aamCookie(c_name) {
+	var i,x,y,ARRcookies=document.cookie.split(";");
+	for (i=0;i<ARRcookies.length;i++) {
+		x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+		y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+		x=x.replace(/^\s+|\s+$/g,"");
+		if (x==c_name) {
+			return unescape(y);
+		}
+	}
+}
+</script>
+
+</head>
+
+<body class="ody-skin">
+<!-- connect to http://aws.gannett.com/m?p=mi-detroit.freep.com/news/article.htm&networkid=7103&pt=article for webservice call -->
+<!-- Network id is 7103 -->
+<!--Mon, 1 Dec 2014 20:27:54 UTC :Response :  {"dfp": { "networkid": "7103" },"siteid": "mi-freep-C1561", "inventory": [ "mi-freep-C1561","","news","",""], "pageType": ""}-->
+<!-- No ad scheduled for CustomAd. Slot will be suppressed -->
+<!-- 
+@ody_adposCustomAd=noad
+@ody_adOPAtype= <br>
+-->
+<div>
+
+	
+	<script type="text/javascript">
+  window['checkCookie']=(function(){ 
+var _={};
+for(
+	var
+		c=document.cookie.split(/\s*;\s*/),
+		i=0,
+		l=c.length,
+		a=c[i].split("=")
+	;
+	a=i<l&&c[i].split("=")
+	;
+	i++
+)_[a[0]]= a[1]; 
+return function (cookieName){return _[cookieName];}
+})();
+GEL.config.Interstitial= { 
+  placementid: parseInt("1273106"),
+  controlurl: ""
+}; 
+(function(){ 
+GEL.register("dateutil", { path: "dateutil/dateutil.js", optpath: GEL.env.gelpath.everypage, depends:[],requires:[]});
+if(checkCookie("pre_ad") == 'inter')
+	loadBannerLib(); 
+else
+	GEL.thepage.initializer.add({ 
+		name: "qinter", 
+		namespace: ["widget.AdBanner", "dateutil"], 
+		priority: 20, 
+		callback: interMgr
+	}); 
+function loadBannerLib(){ 
+	var 
+		_IMPORTER= GEL.util.importer
+		,_lib= _IMPORTER.require("widget.AdBanner")
+	;
+	_lib.addElement(_IMPORTER.require('dateutil')); 
+	_lib.setAttacher("inline"); 
+	_lib.attach(); 
+}
+function interMgr(){ 
+	var _IC= GEL.config.Interstitial || {}; 
+        _IC.id= _IC.id |.importer
+		,_lib= _IMPORTER.require("widget.AdBanner")
+	;
+	_lib.addElement(_IMPORTER.require('dateutil')); 
+	_lib.setAttacher("inline"); 
+	_lib.attach(); 
+}
+function interMgr(){ 
+	var _IC= GEL.config.Interstitial || {}; 
+        _| "inter"; 
+        _IC.controlurl= _IC.controlurl || 
+                (new (GEL.widget.AdBanner.Locator.getProvider())({ 
+                        attachTo: document.body, 
+                        keywords: ['inter'], 
+                        keyvalues: {}, 
+                        placementid: 1272948,
+                        position: "Interstitial",
+                        loadoninit: false 
+                })).getUrl(); 
+        GEL.thepage.bannerManager.add(_IC); 
+}
+})(); 
+</script>
+<div id="go4-interstitial" class="interstitial gel-hidden"> 
+<center class="go4-custom">
+ <div class="header-container"><div class="header-main"> <div class="header-wrap">
+  <div class="header-logo"><a href="#"></a></div> 
+  <a href="#" class="gel-hidden skip">Continue Reading&nbsp;&raquo;</a> 
+ </div></div></div>
+ <div class="aggit">Advertisement</div> 
+ <div class="ad"> 
+  <script type="text/javascript">
+    (function(){ 
+ 	var _M= GEL.thepage.bannerManager,_O,_I;
+	if (checkCookie("pre_ad") != "inter"){
+		return;
+	}else
+	if (
+		typeof _M != 'object' 
+		|| typeof _M.get != "function" 
+		|| !(_O= _M.get("inter")) 
+	){
+		_M.disable();
+		return; 
+	}
+	_M.disable(_O);
+	_O.config.mainselector= "DIV.ody-custom"; 
+	_O.config.css = "/odygci/interstitial/i.css";
+	_I= GEL.thepage.inter= 
+		new GEL.widget.AdBanner.Interstitial(_O.config); 
+	_I.sO= _M.get("inter")) 
+	){
+		_M.disable();
+		return; 
+	}
+	_M.disable(_O);
+	_O.config.mainselector= "DIV.ody-custom"; 
+	_O.config.css = "/odygci/ihow(); 
+})(); 
+  </script>
+ </div> 
+ <p class="redirect">
+  You will be redirected to the page you want to view in&nbsp;<span id="ad_countdown"></span>&nbsp;seconds.
+ </p> 
+</center> 
+</div> 
+
+	<div class="ody-custom">
+		<div id="modalouter" class="modal-outer-inactive"></div>
+		
+		<div class="main-container">
+			<!-- HEADER -->
+			<div id="fb-root"></div>
+<script type="text/javascript">
+try {
+	  window.fbAsyncInit = function() {
+		FB.init({
+		  appId      : '185931034751252', // App ID
+		  channelUrl : document.location.protocol + '//archive.freep.com/odygci/facebook/channel.html', // Channel File
+		  status     : true, // check login status
+		  cookie     : true, // enable cookies to allow the server to access the session
+		  oauth      : true,
+		  xfbml      : true  // parse XFBML
+		});
+		// Additional initialization code here
+		// Share Tools
+		FB.Event.subscribe('edge.create', function(href, widget) {
+			var _vt = GEL.thepage.viewTracker;
+			if (widget.dom.getAttribute("ref")) {
+				_vt.providers.sitecat.trackLink("sharethis:facebook:like:" + widget.dom.getAttribute("ref"));
+				}
+		});
+		FB.Event.subscribe('edge.remove', function(href, widget) {
+			var _vt = GEL.thepage.viewTracker;
+			if (widget.dom.getAttribute("ref")) {
+				_vt.providers.sitecat.trackLink("sharethis:facebook:unlike:" + widget.dom.getAttribute("r));
+				}
+		});
+		FB.Event.subscribe('edge.remove', function(href, widget) {
+			var _vt = GEL.thepage.viewTracker;
+			if (widget.dom.getAttributeef"));
+				}
+		});
+	  };
+	  // Load the SDK Asynchronously
+	  (function(d){
+		 var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+		 js = d.createElement('script'); js.id = id; js.async = true;
+		 js.src = "//connect.facebook.net/en_US/all.js";
+		 d.getElementsByTagName('head')[0].appendChild(js);
+	   }(document));
+ } catch (e) {}
+</script>
+		<!-- ody_topnavigationmenu.pbo -->
+<!-- @ody_adposnavbar:  -->
+<div class="header-container">
+	<div class="header-classified"> 
+		<div class="header-wrap">
+			<ul>
+				<li><strong>CLASSIFIEDS:</strong></li>
+<li><a href="http://www.michigan.com/cars" rel="nofollow">CARS</a></li>
+<li><a href="http://www.michigan.com/jobs" rel="nofollow">JOBS</a></li>
+<li><a href="http://www.michigan.com/realestate" rel="nofollow">HOMES</a></li>
+<li><a href="http://www.michigan.com/realestate/?tab=rnt" rel="nofollow">APARTMENTS</a></li>
+<li><a href="http://www.michigan.com/classifieds" rel="nofollow">CLASSIFIEDS</a></li>
+<li><a href="http://findnsave.freep.com" rel="nofollow">SHOPPING</a></li>
+<li><a href="http://findnsave.freep.com/Circulars" rel="nofollow">E-CIRCULARS</a></li>
+<li><a href="http://www.dealchicken.com/detroit-mi" rel="nofollow">DAILY DEALS</a></li>
+<li><a href="http://www.detroitmedia.com" rel="nofollow">ADVERTISE</a></li>
+<!-- note: do not change this link. change the alias if a new address is requested. -->
+<li><a href="http://www.freep.com/subscribe" rel="nofollow">SUBSCRIBE</a></li>
+				<!-- @NAVADPROMO= off -->
+			</ul>
+		</div>
+	</div>
+	<div class="header-main">
+		<div class="header-wrap">
+			<div class="header-logo">
+				<a name="top" href="http://archive.freep.com/" title="freep.com Home" alt="freep.com Home"></a>
+			</div>		
+			<div id="Nav">
+				<ul class="nav-tabs">
+					<li id="tab0" class="mega tab 0"><a href="http://www.freep.com/news/" class="first">News</a></li><li id="tab1" class="mega tab 1"><a  href="http://www.freep.com/sports/">Sports</a></li><li id="tab2" class="mega tab 2"><a  href="http://www.freep.com/autos/">Autos</a></li><li id="tab3" class="mega tab 3"><a  href="http://www.freep.com/business/">Business</a></li><li id="tab4" class="mega tab 4"><a  href="http://www.freep.com/life/">Life</a></li><li id="tab5" class="mega tab 5"><a  href="http://www.freep.com/entertainment/">Entertainment</a></li><li id="tab6" class="mega tab 6"><a  href="http://www.freep.com/opinion/">Opinion</a></li><li id="tab7" class="mega tab 7"><a class="special" href="http://www.freep.com/section/global/nation-now/">USA Today</a></li>
+				</ul>
+				<div style="clear:both"></div>
+				<div class="content-wrap c" id="nav-wrap"><div id="subtab0" class="subtab gel-hidden newslead"><div class="dropdown-container mega">
+	<div id="navmenutab1-dd" class="normal">
+		<div class="column1">
+			<div class="sectionTop">
+				<ul class="clear">
+				</ul>
+			</div>
+		</div>
+		<div class="column2Mega">
+			<div class="latestHeadlines">LATEST HEADLINES</div>
+		</div>
+	</div>
+</div>
+</div><div id="subtab1" class="subtab gel-hidden newslead"><div class="dropdown-container mega">
+	<div id="navmenutab2-dd" class="normal">
+		<div class="column1">
+			<div class="sectionTop">
+				<ul class="clear">
+				</ul>
+			</div>
+		</div>
+		<div class="column2Mega">
+			<div class="latestHeadlines">LATEST HEADLINES</div>
+		</div>
+	</div>
+</div>
+</div><div id="subtab2" class="subtab gel-hidden newslead"><div class="dropdown-container mega">
+	<div id="navmenutab3-dd" class="normal">
+		<div class="column1">
+			<div class="sectionTop">
+				<ul class="clear">
+				</ul>
+			</div>
+		</div>
+		<div class="column2Mega">
+			<div class="latestHeadlines">LATEST HEADLINES</div>
+		</div>
+	</div>
+</div>
+</div><div id="subtab3" class="subtab gel-hidden newslead"><div class="dropdown-container mega">
+	<div id="navmenutab4-dd" class="normal">
+		<div class="column1">
+			<div class="sectionTop">
+				<ul class="clear">
+				</ul>
+			</div>
+		</div>
+		<div class="column2Mega">
+			<div class="latestHeadlines">LATEST HEADLINES</div>
+		</div>
+	</div>
+</div>
+</div><div id="subtab4" class=>
+		<div class="column1">
+			<div class="sectionTop">
+				<ul class="clear">
+				</ul>
+			</div>
+		</div>
+		<div class="column2Mega">
+			<div class="latestHeadlines">LATEST HEADLINES</div"subtab gel-hidden newslead"><div class="dropdown-container mega">
+	<div id="navmenutab5-dd" class="normal">
+		<div class="column1">
+			<div class="sectionTop">
+				<ul class="clear">
+				</ul>
+			</div>
+		</div>
+		<div class="column2Mega">
+			<div class="latestHeadlines">LATEST HEADLINES</div>
+		</div>
+	</div>
+</div>
+</div><div id="subtab5" class="subtab gel-hidden newslead"><div class="dropdown-container mega">
+	<div id="navmenutab6-dd" class="normal">
+		<div class="column1">
+			<div class="sectionTop">
+				<ul>
+				</ul>
+			</div>
+		</div>
+		<div class="column2Mega">
+			<div class="latestHeadlines">LATEST HEADLINES</div>
+		</div>
+	</div>
+</div>
+<!-- tracking pixels -->
+<!-- end tracking pixels -->
+</div><div id="subtab6" class="subtab gel-hidden newslead"><div class="dropdown-container">
+	<div id="navmenutab7-dd" class="normal">
+		<div class="column1">
+			<div class="sectionTop">
+				<ul>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div><div id="subtab7" class="subtab gel-hidden newslead"><div class="dropdown-container">
+	<div id="navmenutab8-dd" class="normal">
+		<div class="column1">
+			<div class="sectionTop">
+				<ul>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div> 
+			</div>
+		</div>	
+	</div>
+	<div class="header-featured">
+		<div class="header-wrap">
+			<ul id="login-container" class="login-container"></ul>
+			<ul class="ody-navfeatured">
+				<!-- ody_navfeatured.pbo -->
+<li><strong>MORE:</strong></li><li><a href="http://www.freep.com/cancer">Surviving Cancer: A special section</a></li><li><a href="http://detroitmarathon.com">Marathon</a></li><li><a href="/e">eEdition</a></li><li><a href="http://www.freep.com/article/99999999/NEWS01/120322073&template=theme&theme=detroit_financial_crisis">Detroit bankruptcy</a></li><li><a href="http://www.freep.com/highschoolsports">High School Sports</a></li><li><a href="http://www.mitchalbom.com">MitchAlbom.com</a></li>
+			</ul>
+			<div class="pd-search">
+				<div class="searchbox-shift">
+<script>
+var search_default = "Find what you are looking for ...";
+var timer = null;
+function showOptions() {
+	var search_options = document.getElementById("search-options");
+	search_options.style.display = "";
+}
+function HideAllSearchOptions() {
+	var search_options = document.getElementById("search-options");
+	search_options.style.display = "none";
+}
+function submitFormAction() {
+    sanitizeKeywords();
+	var keywords = document.getElementById("searchbox").value;
+		if (keywords == search_default){
+			keywords = "";
+		}
+	var search_form = document.getElementById("pd-header-search");
+	var checked_option = "";
+	for(var i = 0; i < search_form.searchoption.length; i++) {
+		if(search_form.searchoption[i].checked) {
+			checked_option = search_form.searchoption[i].value;
+		}
+	}
+	var new_url = "";
+	if(checked_option === "OPTION1") new_url = "http://search.freep.com/sp?aff=1100&skin=&keywords=";
+	else if(checked_option === "OPTION2") new_url = "http://pqasb.pqarchiver.com/freep/results.html?st=basic&QryTxt=";
+	else if(checked_option === "OPTION3") new_url = "http://search.freep.com/sp?aff=1180&keywords=";
+	else if(checked_option === "OPTION4") new_url = "http://search.freep.com/sp?skin=&aff=1109&keywords=";
+	new_url = new_url + "" + keywords;
+	window.location.href = new_url;
+	return false; 
+}	
+function safeParam( key, def) { //get cleaned up keywords so they look pretty in the search box
+	    var defval = def|| ""; 
+	    var re = new RegExp( "[?&]" + key + "=([^&$]*)", "i" ); 
+	    var offset = location.search.search(re); 
+	    if ( offset == -1 || RegExp.$1 == '') return defval;
+	    var keywords = RegExp.$1;
+	    keywords = keywords.replace(/\+/g," ");
+	    keywords = keywords.replace(/%26/g,"&");
+	    keywords = keywords.replace(/%\w{2}/g," ");
+	    return keywords; 
+	}
+	function sanitizeKeywords() {
+		//clean up keywords for submit to avoid encoding
+		var temp = document.getElementById("searchbox").value;
+		temp = temp.replace(/<.*>/g,"");
+		temp = temp.replace(/%20/g," "); //get rid of whitespace encoding
+		temp = temp.replace(/%\w{2}/g, ""); //get rid of other encoding
+		temp = temp.replace(/&/g,"%26");
+		document.getElementById("searchbox").value = temp;
+	}	
+</script>
+<form method="get" id="pd-header-search" class="multi-search" action="javascript:submitFormAction();">
+	<div id="search-wrapper" class="clear">
+		<div id="search_border">
+			<input id="searchbox" type="text" size="34" maxlength="34" onfocus="if(this.value==='Find what you are looking for ...') this.value=''; showOptions();" onblur="if(this.value=='') this.value=safeParam('keywords','Find what you are looking for ...');timer=setTimeout('HideAllSearchOptions()',1500);" onkeydown="showOptions();"/>
+			<button class="search_btn" type="submit"> Search</button>
+		</div>
+		<div id="search-options" style="display:none;" onmouseover="clearTimeout(timer);" onmouseout="timer=setTimeout('HideAllSearchOptions()',1500);">
+			<p>Search in</p>
+			<div class="left">
+				<input class="submit" name="searchoption" type="radio" value="OPTION1" checked/>&nbsp;&nbsp;News<br/>
+				<input class="submit" name="searchoption" type="radio" value="OPTION2" />&nbsp;&nbsp;Archives
+	     	</div>
+	   		<div class="left">
+				<input class="submit" name="searchoption" type="radio" value="OPTION3" />&nbsp;&nbsp;Local Deals<br/>
+				<input class="submit" name="searchoption" type="radio" value="OPTION4" />&nbsp;&nbsp;Yellow Pages
+		    </div>       
+		</div>
+	</div>
+</form>
+<script type="text/javascript">document.getElementById("searchbox").value = safeParam('keywords',search_default);</script>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript"> 
+(function(){ 
+	var _id;
+	if((id=GEL.env.url.qsv.nav)){
+		var a= "mega,tab,on".split(","),n= GEL.ement("tab"+id); 
+		a.push(_id); 
+		for(var i=0,l=a.length;i < l; i++)
+			n.addClassName(a[i]); 
+	}
+	GEL.thepage.initializer.addInitRoutine({ 
+		name: "Nav", 
+		namespace: "widget.NavigationWidget",
+		callback: initNav, 
+		prioritlit(y: 15
+	}); 
+})();
+</script> 
+
+			
+			<!--LEADERBOARD-->
+			<div class="leaderboard-container-top">
+				<div><div>
+	<div class="ad_728x90">
+	<banner
+		 position=728x90_1 
+	></banner>
+		<div class="advertisement">ADVERTISEMENT</div>
+	</div>
+</div>
+</div>
+			</div>
+			<div class="ody-article">
+				<div id='modalinner' class="modal modal-inner-content">
+					<div id='ody-zoommodalcontent' class="photo"></div>
+					<a title="Close" class="ody-closeimg modalCloseImg simplemodal-close"></a>
+				</div>
+				<div class="ody-pgwrap">
+					<div id='ody-pgmodaldata' class="modal modal-inner-content">
+						<a class="ody-closeimg modalCloseImg simplemodal-close" title="Close"></a>
+					</div>
+				</div>
+			</div>
+			<div class="content-container">
+				<div class="container">
+
+							<div class="ody-hgroup">
+	<!-- HEAD --><h1>Police nab cartel member in organ trafficking case</h1><h2></h2>
+	<h6>
+	<div>
+	<div class="ad_88x31">
+	<banner
+		 position=88x31_1 
+	></banner>
+	</div>
+</div>
+	<span class="fb_recommend"><fb:like href="" send="false" width="429" show_faces="false" action="recommend" font="" ref="artrectop"></fb:like></span>
+		<div class="ody-arttime">
+			11:47 PM, March 17, 2014
+			&nbsp;&nbsp;|&nbsp;&nbsp;</div>
+	<a class="ody-comicon ody-sprite" href="/comments/usatodayarticle/6548691" title="Go to comments">	
+		<span id="gslCtl-article|comments|20140317.freep.C4USAT6548691.article.USATnews" class="gslArticleControlsByLine">		
+			<span class="gslCommentsLink">				
+				<span class="gslCommentsCount" id="gslCommentsCount-1">
+					<fb:comments-count style="display:inline-block" href=http://archive.freep.com/usatoday/article/6548691></fb:comments-count>
+				</span>				
+				<span class="gslCommentsLabel">Comments</span>		
+			</span>	
+		</span>
+	</a>
+	</h6>
+</div>
+	<div class="ody-article">
+		<div id="article-bodytext" class="ody-article-bodytext">
+					<div class="toolswrapper top">
+<div class="toolsArticle facetwitt clearfix" id="sharelinks" >
+	<div class="toolsShareWrap">
+		<div class="toolsShare2wrap">
+			<ul class="toolsShare2">
+				<li class="print tracklink"><a class="icnSharePrint ody-sprite" href="." onClick="CleanPrintPrintHtml(); return false"><span>Print</span></a></li>
+			</ul>
+			<ul class="toolsFontSize ">
+				<li class="fontsize fssm"><a href="javascript:void(null);"><span class="fontsize decrease-font minuson"></span></a></li>
+				<li class="fontsize fssm"><a href="javascript:void(null);"><span id="ody-smallfont" class="fontsize controller smallfont">A</span></a></li>
+				<!--<li class="fontsize fsmd"><a href="javascript:void(null);"><span id="ody-mediumfont" class="fontsize controller mediumfont on">A</span></a></li>-->
+				<li class="fontsize fslg"><a href="javascript:void(null);"><span id="ody-largefont" class="fontsize controller largefont">A</span></a></li>
+				<li class="fontsize fslg"><a href="javascript:void(null);"><span class="fontsize increase-font pluson"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">
+(function(){ 
+GEL.thepage.initializer.addInitRoutine({ 
+	name: "sharelinks",
+	namespace: ['widget.ArticleTools','org.jQuery'],
+	callback: function(){initShareThis('top', false, '185931034751252', 'regular', true);},
+	priority: 31
+});
+GEL.thepage.initializer.addInitRoutine({ 
+	name: "fontsize",
+	namespace: "widget.ArticleTools",
+	callback: function(){initFontSize();}, 
+	priority: 99
+});
+})();
+</script>
+  <!--HORIZONTAL PHOTO-->
+	<div class="ody-photo-land ody-photo" id="ody-mainphoto" style="position:relative;">
+		<div class="ody-land-nonfullwith">
+			<div class="ody-bottomdiv">
+				<img src="http://www.gannett-cdn.com/-mm-/ea26b0c24c9d0d23751fa60bb9b42a021bf4ab4e/c=334-0-5437-3836&r=490x368/local/-/media/USATODAY/USATODAY/2014/03/17//1395110400000-AP-Mexico-Vigilantes.jpg" />
+				<div class="ody-buypic">
+				</div>
+			</div>
+		</div>
+		<h6>In this Nov. 6, 2013, file photo, Jose Manuel Mireles, leader of his town's self-defense group, poses for a portrait on his property in Tepalcatepec, in the state of Michoacan, Mexico.  /  Dario Lopez-Mills, AP</h6>	
+	</div>
+<script type="text/javascript">
+/*Collect Image Information*/
+(function(){
+	var _id = 'http://www.gannett-cdn.com/-mm-/ea26b0c24c9d0d23751fa60bb9b42a021bf4ab4e/c=334-0-5437-3836';
+	if(_id)
+		GEL.thepage.pageinfo.pic[_id]= {
+			id: "http://www.gannett-cdn.com/-mm-/ea26b0c24c9d0d23751fa60bb9b42a021bf4ab4e/c=334-0-5437-3836&r=490x368/local/-/media/USATODAY/USATODAY/2014/03/17//1395110400000-AP-Mexico-Vigilantes.jpg-USAT6548691-http://www.gannett-cdn.com/-mm-/ea26b0c24c9d0d23751fa60bb9b42a021bf4ab4e/c=334-0-5437-3836-L",
+			link: "http://www.gannett-cdn.com/-mm-/ea26b0c24c9d0d23751fa60bb9b42a021bf4ab4e/c=334-0-5437-3836&r=490x368/local/-/media/USATODAY/USATODAY/2014/03/17//1395110400000-AP-Mexico-Vigilantes.jpg",
+			caption: "In%20this%20Nov.%206%2C%202013%2C%20file%20photo%2C%20Jose%20Manuel%20Mireles%2C%20leader%20of%20his%20town%27s%20self-defense%20group%2C%20poses%20for%20a%20portrait%20on%20his%20property%20in%20Tepalcatepec%2C%20in%20the%20state%20of%20Michoacan%2C%20Mexico.",
+			credit: "Dario Lopez-Mills, AP",
+			canBuyPhoto: "0",
+			width: "490",
+			height: ""
+		};	
+})();
+</script>
+			<div class="ody-bo-sm ">
+			<div class="ody-byline">
+				<!-- Byline --><div id="usatsportsbranding" class="usat_sportsnow gel-hidden"><a href="http://www.usatoday.com/sports/index" target="_blank"><img alt="USA Today" src="/odygci/p1/USATodaySports.png"></a><h5>by USA TODAY</h5></div><div id="usatbranding"><a href="http://www.usatoday.com/" target="_blank"><img alt="USA Today" src="/odygci/p1/usat_logo_byline.gif"></a><h5>by USA TODAY</h5></div><br> 
+						<ul class="ody-filed"><li class="ody-filed">Filed Under</li></ul>
+			<ul class="ody-sub-filed">
+					<li><a href="http://www.usatoday.com/news/">USA Today news</a></li>
+					<li><a href="http://www.usatoday.com/news/world/">USA Today world</a></li>
+			</ul>
+			<!--usatodayarticle-->
+			<script type="text/javascript">
+			var filed = GEL.ement("ody_filedunder");
+			if (typeof filed.element.innerHTML != "undefined")
+				filed.element.lastChild.className="last-child";
+			</script>
+			</div>
+		</div>
+		<script type="text/javascript">
+			GEL.thepage.initializer.addInitRoutine({
+				name: "widget.ArticleBreakout",
+				priority: 35,
+				namespace: ['widget.ArticleBreakout'],
+				callback: function(){artBreakout=new ArticleBreakout();}
+			});
+		</script>
+		<!--Begin promos-->
+	<div id="sponsoredlinks_left_wrapper"  class="ody-asset-breakout">
+	<div class="sponsoredlinks-article">
+		<div>
+	<div class="ad_sponsoredlinks">
+	<banner
+		 position=sponsoredlinks 
+		 bannertype=addotcom 
+		 adserver=http://js.adsonar.com/js/adsonar.js 
+		 pageposition=left 
+		 placementid=1583702 
+		 pid=3092768 
+	></banner>
+		<div class="advertisement">ADVERTISEMENT</div>
+	</div>
+</div>
+	</div>
+</div>
+		<div id="artpagination">
+			<p>MEXICO CITY (AP) - Police in Mexico's western state of Michoacan detained an alleged member of the Knights Templar cartel who is suspected of kidnapping children to harvest their organs, an official said Monday.</p>
+<p>Michoacan state Public Safety Secretary Carlos Castellanos Becerra alleged that Manuel Plancarte Gaspar was part of the cartel's organ-trafficking ring. The ring would kidnap children and take them to rented homes with medical equipment where their organs were removed, Castellanos Becerra charged.</p>
+<p>"We have several statements in open investigations that point to a network of several suspects who would identify people with certain characteristics, especially children, and kidnap them," he said.</p>
+<p>Castellanos Becerra said the cases go back several years, but he said he couldn't give any specific details or discuss evidence because the investigation is still open.</p>
+<p>Plancarte Gaspar, 34, was detained last week along with another suspect in a stolen car. The men were carrying cash and crystal meth, Castellanos Becerra said. He said Plancarte Gaspar is the nephew of Enrique Plancarte Solis, a top Knights Templar leader.</p>
+<p>Early in the day Castellanos Becerra sent an unusual Twitter message about the organ trafficking investigation. Mexican authorities don't normally make big announcement on Twitter.</p>
+<p>A leader of one of the local vigilante groups that sprang up last year in Michoacan to challenge the cartel's control told a radio station after hearing about the tweet that people in the area knew the Knights Templar gang was involved in organ trafficking because several children had been rescued in his town while being transported in a refrigerated container inside a van.</p>
+<p>"They were inside a refrigerated box, tightly wrapped in blankets," Dr. Jose Manuel Mireles, leader of the civilian "self-defense" group in Tepalcatepec, said in a morning interview with MVS radio.</p>
+<p>Mireles said the van carrying the children was headed to the port city of Lazaro Cardenas and ended up in Tepalcatepec after making a wrong turn.</p>
+<p>"They were all children from the same Mexico City school," he said.</p>
+<p>He said the children's parents had allohe van carrying the children was headed to the port city of Lazaro Cardenas and ended up in Tepalcatepec after making a wrong turn.</p>
+<pwed them to go on an outing to the beach when they were likely kidnapped. He said the children were turned over to their parents who traveled to Tepalcatepec.</p>
+<p>Mireles didn't say when the children were rescued and didn't answer his cellphone Monday.</p>
+<p>Mexican authorities have said drug trafficking is no longer the top source of income for the Knights Templar, which was once a top producer of crystal meth. The officials say the cartel's main sources of income are illegal mining, illegal logging and extortion.</p>
+<p><br><br><i>Copyright 2014 The Associated Press. All 
+rights reserved. This material may not be published, broadcast, rewritten or redistributed.</i><br><br></p><p>Read the original story: <a href=http://www.usatoday.com/story/news/world/2014/03/17/cartel-mexico-organ-trafficking/6548691/ target='blank'>Police nab cartel member in organ trafficking case</a></p><script type="text/javascript">var artTotalChar=2972;</script>
+			<!-- pagination on -->
+			<script type="text/javascript"> 
+			</script>
+			<div class="sharelinks-bottomwrapper"><div class="toolswrapper bottom">
+<div class="toolsArticle facetwitt bottom gel-hidden" id="sharelinks-bottom" >
+	<div class="toolsShareWrap">
+		<div class="toolsBorder"></div>
+		<div class="toolsShare2wrap">
+			<ul class="toolsShare2">
+				<li class="print tracklink"><a class="icnSharePrint ody-sprite" href="." onClick="CleanPrintPrintHtml(); return false"><span>Print</span></a></li>
+			</ul>
+			<ul class="toolsFontSize  bottomFontSize">
+				<li class="fontsize fssm"><a href="javascript:void(null);"><span class="fontsize decrease-font minuson"></span></a></li>
+				<li class="fontsize fssm"><a href="javascript:void(null);"><span id="ody-smallfont" class="fontsize controller smallfont">A</span></a></li>
+				<!--<li class="fontsize fsmd"><a href="javascript:void(null);"><span id="ody-mediumfont" class="fontsize controller mediumfont on">A</span></a></li>-->
+				<li class="fontsize fslg"><a href="javascript:void(null);"><span id="ody-largefont" class="fontsize controller largefont">A</span></a></li>
+				<li class="fontsize fslg"><a href="javascript:void(null);"><span class="fontsize increase-font pluson"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">
+(function(){ 
+GEL.thepage.initializer.addInitRoutine({ 
+	name: "sharelinks-bottom",
+	namespace: ['widget.ArticleTools','org.jQuery'],
+	callback: function(){initShareThis('bottom', true, '185931034751252', 'regular', true);},
+	priority: 31
+});
+GEL.thepage.initializer.addInitRoutine({ 
+	name: "fontsize",
+	namespace: "widget.ArticleTools",
+	callback: function(){initFontSize('bottom');}, 
+	priority: 99
+});
+})();
+</script>
+</div>
+		</div>
+	<script type="text/javascript">
+	(function(){
+		GEL.thepage.initializer.addInitRoutine({
+			name: 'shsize",
+	namespace: "widget.ArticleTools",
+	callback: function(){initFontSize('bottom');}, 
+	priority: 99
+});
+})();
+</script>
+</div>
+		</div>
+	<script type=areTools',
+			namespace: 'org.jQuery.waypoint',
+			callback: initShareToolsBottom,
+			priority: 101
+		});
+	})();
+	(function(){
+		/*FUNCTION:MyCapture & Zoom constructor*/
+		GEL.thepage.initializer.addInitRoutine({
+			name: "Mycapturelink",
+			namespace: ["widget.ArticleTools","widget.modal"],
+			callback: initMyCaptureLink, 
+			priority: 150
+		});
+	})();
+	</script>
+	<div class="clear"></div>
+	<div class="ody-comments">
+		<a class="ody-comiconLG ody-sprite" href="/comments/usatodayarticle/6548691"><strong>View Comments<span class="gslCommentsCount enclosed" id="gslCommentsCount-2"></span></strong></a>
+		&nbsp;|&nbsp;
+		<a href="/comments/usatodayarticle/6548691"><strong>Share your thoughts &raquo;</strong></a>
+	</div>
+	<script type="text/javascript" src="http://cdn.taboolasyndication.com/libtrc/gannett-freep/loader.js"></script>
+<script type="text/javascript">
+(function(){
+	GEL.thepage.initializer.addInitRoutine({
+		name: "loadtaboola",
+		callback: initTaboola,
+		priority: 10
+	});
+})();
+</script>
+	<div class="ody-ob-taboola-wrapper">
+	<div class="ody-ob-wrapper">
+		<div class="ody-ob-lite">
+			<!-- BEGIN OUTBRAIN CODE -->
+			<div class="OUTBRAIN" data-src="http://archive.freep.com/usatoday/article/6548691" data-widget-id="AR_2" data-ob-template="gannett" ></div>
+			<div class="OUTBRAIN" data-src="http://archive.freep.com/usatoday/article/6548691" data-widget-id="AR_3" data-ob-template="gannett" ></div>
+			<scriparchive.freep.com/usatoday/article/6548691" data-widget-idt type="text/javascript">
+			// Script from USAT to load widget on doc ready - no change
+			fireflyJQuery(document).ready(function(){
+			  fireflyJQuery.getScript("http://widgets.outbrain.com/outbrain.js",function(){// success script to be sure OBR exists
+				OBR.extern.onOdbReturn("AR_3",function(){                           //wait for last element to return
+				  var holder = fireflyJQuery(".OUTBRAIN:eq(1) .odb_li:eq(0)").detach();    //be sure you have only one rec there
+				  fireflyJQuery(".OUTBRAIN:eq(0) .ob_dual_left ul").append(holder);
+				});
+			  });
+			});
+			</script>
+			<!-- END OUTBRAIN CODE -->
+			<script type="text/javascript">
+			// needs to be loaded after Modernizr due to weird loading issue in WebKit (mostly Safari) [COMO-576]
+			GEL.thepage.initializer.addInitRoutine({ 
+				name: "Outbrain",
+				namespace: ["outbrain"],
+				callback: function (){ /* don't care */ },
+				priority: 200
+			});
+			</script>
+			<div id='taboola-story-bannerad'></div> 
+			<script type="text/javascript"> 
+				window._taboola = window._taboola || []; 
+				_taboola.push({mode : 'story-bannerad', container : 'taboola-story-bannerad' });
+			</script>
+			<script type="text/javascript" src="http://cdn.taboolasyndication.com/libtrc/gannett-freep/loader.js"></script>
+<script type="text/javascript">
+(function(){
+	GEL.thepage.initializer.addInitRoutine({
+		name: "loadtaboola",
+		callback: initTaboola,
+		priority: 10
+	});
+})();
+</script>
+		</div>
+	</div>
+</div>
+<![if gte IE 8.0]>
+<div id="ody-nextstoryslider" style="right:-420px;">
+	<h3>More In </h3>
+</div>
+<![endif]>
+<div id="ob_sponsor_container_0"></div>
+		</div>
+	</div>
+
+
+					<div class="ody-aside aside ggnoads">
+					<!-- ody_locations.pbo -->
+					<div id="companionad">
+						<div id="videoad">
+							<div>
+	<div class="ad_Flex">
+	<banner
+		 position=Flex_1 
+	></banner>
+	</div>
+</div>
+
+						</div>
+						<div id="remnantad" class="clearfix">
+							<div class="advertisement">ADVERTISEMENT</div>
+
+						</div>
+					</div>
+
+						 <!-- Couldn't retrieve the USAT feed due to :  The operation timed out
+-->
+<div id="most-popular-wrapper" class="gel-tab tabs">
+	<ul class="gel-nav tab_menu clearfix">
+		<li class="tabber pos1 on">Most Popular</li>
+		<li class="tabber pos2">Most Commented</li>
+		<li class="tabber pos3">More Headlines</li>
+	</ul>
+	<div id="most-popular" class="gel-content box">
+		<div class="gel-pane tab_item_selected">
+			<!--Disabled for GDP-->
+
+		</div>
+		<div class="gel-pane gel-hidden">
+			<!--Disabled for GDP-->
+
+		</div>
+		<div class="gel-pane gel-hidden">
+			<div id="ody-rightrail-moreheadlines-scroll-inside" class="box">
+<ul id="ody-rightrail-moreheadlines-scroll-list" class="box-items box-items1">
+<li id="ArticleUSAT19744233"><a href="/usatoday/article/19744233?odyssey=mod_sectionstories">Bell: Applaud, don't condemn Rams' players for taking a stand</a></li> <li id="ArticleUSAT19725229"><a href="/usatoday/article/19725229?odyssey=mod_sectionstories">15,000 robots usher in Amazon's Cyber Monday</a></li> <li id="ArticleUSAT19743185"><a href="/usatoday/article/19743185?odyssey=mod_sectionstories">Forget the obit, Kirk Douglas says he's still kicking!</a></li> <li id="ArticleUSAT19738783"><a href="/usatoday/article/19738783?odyssey=mod_sectionstories">From rap to Facebook, court wrestles with 'true threats'</a></li> <li id="ArticleUSAT19734959"><a href="/usatoday/article/19734959?odyssey=mod_sectionstories">She's still got it: Madonna topless in mag spread</a></li> <li id="ArticleUSAT70120308"><a href="/usatoday/article/70120308?odyssey=mod_sectionstories">Ferguson struggles to grasp why protests turned violent</a></li> </ul>
+</div>
+<script type="text/javascript">
+(function(){
+var _el = document.getElementById('Article'+GEL.thepage.pageinfo.key); // first look for the current article
+if (!_el) { // if not current article, find last article
+  try {
+    var _lis = document.getElementById('ody-rightrail-moreheadlines-scroll-list').getElementsByTagName('li');
+    _el = _lis[_lis.length - 1];
+  } catch (ex) {}
+}
+if (_el)  { _el.parentNode.removeChild(_el); } // remove article, if found
+// apply class to remove dotted line from last child
+try {
+  var _lis = document.getElementById('ody-rightrail-moreheadlines-scroll-list').getElementsByTagName('li');
+  _el = _lis[_lis.length - 1];
+  _el.className+=" last";
+} catch (ex) {}
+})(); 
+</script>
+
+		</div>
+	</div>
+	<span class="shdbot"></span>
+	<span class="shdtop"></span>
+	<div id="ody-mostpopular-multimedia" class="clearfix box">
+		<div class="box-head">
+			<h2>Most Viewed</h2>
+		</div>
+		<div class="clearfix mpsection">
+			<div id='taboola-article-column-c-new-no-google'></div> 
+		</div>
+		<div class="clearfix mpsection">
+			<div id='taboola-horizontalx2'></div>
+		</div>
+	</div>
+	<span class="shdbot"></span>
+</div>
+<span class="shdtop"></span>
+	<div id='taboola-article-column-c-new-google' class='box trc_related_container'></div>
+<span class="shdbot"></span>
+<script type="text/javascript">
+	window._taboola = window._taboola || []; 
+	_taboola.push({mode:'horizontalx2', container:'taboola-horizontalx2', target_type:'photo'});
+	_taboola.push({mode : 'article-column-c-new-no-google', container : 'taboola-article-column-c-new-no-google' });
+	_taboola.push({mode : 'article-column-c-new-google', container : 'taboola-article-column-c-new-google' });
+</script> 
+<script type="text/javascript"> 
+(function(){ 
+	GEL.thepage.initializer.addInitRoutine({ 
+		name: "rightrailtabs", 
+		callback: initRightRailTabs, 
+		namespace: ["widget.GELTabs", "remoting", "widget.TrackTabs"], 
+		priority: 150
+	}); 
+})();
+</script>
+
+
+						<div>
+	<div class="ad_Flex">
+	<bannthepage.initializer.addInitRoutine({ 
+		name: "rightrailtabs", 
+		callber
+		 position=Flex_2 
+	></banner>
+		<div class="advertisement">ADVERTISEMENT</div>
+	</div>
+</div>
+
+
+						<!-- SPONSORED LINKS -->
+<!--Begin promos-->
+	<div id="sponsoredlinks_right_wrapper" >
+	<div class="sponsoredlinks-article">
+		<div>
+	<div class="ad_sponsoredlinks">
+	<banner
+		 position=sponsoredlinks 
+		 bannertype=addotcom 
+		 adserver=http://js.adsonar.com/js/adsonar.js 
+		 pageposition=right 
+		 placementid=1583702 
+		 pid=3092768 
+	></banner>
+		<div class="advertisement">ADVERTISEMENT</div>
+	</div>
+</div>
+	</div>
+</div>
+
+
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div id="emailmodalcontent" class="emailcontent firefly modal modal-inner-content">
+ 	<div class="ody-pa-box ody-su-box clearfix">
+	<a><div id="ody-emailmodal-close" class="ody-close"></div></a>
+	<div class="ody-title">Email this article</div>
+	<div class="ody-email-signfb">
+		<div class="ody-email-subt">
+			<img src="http://www.gannett-cdn.com/-mm-/ea26b0c24c9d0d23751fa60bb9b42a021bf4ab4e/c=334-0-5437-3836&r=490x368/local/-/media/USATODAY/USATODAY/2014/03/17//1395110400000-AP-Mexico-Vigilantes.jpg#IGNORE_QUERYSTRING&MaxW=115&Border=0">
+			<h4>Police nab cartel member in organ trafficking case</h4>
+			<p>Ring would kidnap children, take them to homes to have organs removed,  official said. </p>
+			<p class="bold">A link to this page will be included in your message.</p>
+		</div>
+	</div>
+	<div class="ody-email-form" id="ody-emailiframe-container"></div>
+	<input type="hidden" id="toemails" name="toemails" value="">
+	<input type="hidden" id="emailpic" name="emailpic" value="http://www.gannett-cdn.com/-mm-/ea26b0c24c9d0d23751fa60bb9b42a021bf4ab4e/c=334-0-5437-3836&r=490x368/local/-/media/USATODAY/USATODAY/2014/03/17//1395110400000-AP-Mexico-Vigilantes.jpg#IGNORE_QUERYSTRING&MaxW=115&Border=0">
+	<input type="hidden" id="emailartdesc" name="emailartdesc" value="Ring would kidnap children, take them to homes to have organs removed,  official said.">
+</div>
+</div>
+
+			<div class="ody-bottom-caro" id="conveyorbottom"> 
+	<a title="Scroll left" class="button left prev carouselNXT"><span class="ody-caro-nxt"></span></a>
+	<div class=pane-container>
+		<div class="panes">
+			<div class="pane">
+				<div class="ody-caroSM">  
+					<p class="ody-bottom-title">
+	<strong>Nightlife</strong>
+</p>
+<div class="ody-blogs-bottom">
+<a href="http://www.freep.com/apps/pbcs.dll/gallery?Avis=C4&Dato=20140908&Kategori=ENT1005&Lopenr=309080150&Ref=PH"><img src="http://cmsimg.freep.com/apps/pbcsi.dll/bilde?Avis=C4&Dato=99999999&Kategori=MISC04&Lopenr=140911009&Ref=AR&MaxH=119&MaxW=119&q=100" border=0 /></a>
+<h5><a href="http://www.freep.com/apps/pbcs.dll/gallery?Avis=C4&Dato=20140908&Kategori=ENT1005&Lopenr=309080150&Ref=PH">Bacon Bash 2014</a></h5>
+</div>
+				</div> 
+				<div class="ody-caroLG">
+					<!--Most Popular119&MaxW=119&q=100" border=0 /></a>
+<h5><a href="http://www.freep.com/apps/pbcs.dll/gallery?Avis=C4&Dato=20140908&Kategori=ENT1005&Lopenr=309080150&Ref=PH">Bacon B -->
+<!--Disabled for GDP-->
+				</div> 
+				<div class="ody-caroSM">  
+					<div>
+	<p class="ody-bottom-title">
+		<strong>Subscribe!</strong>
+	</p>
+	<a href="http://www.freep.com/subscribe">
+		<img src="http://media.freep.com/frontpage/frontpage_12012014.jpg" style="width:100px; paddding:0px 15px;" /> 
+	</a>
+	<p>
+		<a href="http://www.freep.com/subscribe">Sign up</a> for home delivery today.
+	</p>
+</div>
+				</div> 
+				<div class="ody-caroMD">  
+					<div class="ody-popular-bottom">
+<p class="ody-list-t"><strong>Michigan news</strong></p>
+	<ul class="ody-list-a">
+<ul class="ody-list-a">
+			<li>
+	<a href="/article/20141030/NEWS06/310300006/State-charter-schools-How-Michigan-spends-1-billion-fails-hold-schools-accountable">State of charter schools: How Michigan spends $1 billion but fails to hold schools accountable</a>
+</li>
+		</ul>
+</ul>
+</div>
+				</div> 
+			</div>
+			<div class="pane">
+				<div class="ody-caroSM">  
+					<p class="ody-bottom-title">
+	<strong>Archives</strong>
+</p>
+<div class="ody-archive-bottom">
+	<p>View the last seven days</p>
+	<ul>
+		<li><a href='http://archive.freep.com/section/7daysarchives&archivedate=20141130'>Yesterday, <span class="date">Nov. 30</span></a></li>
+		<li><a href='http://archive.freep.com/section/7daysarchives&archivedate=20141129'>Saturday, <span class="date">Nov. 29</span></a></li>
+		<li><a href='http://archive.freep.com/section/7daysarchives&archivedate=20141128'>Friday, <span class="date">Nov. 28</span></a></li>
+		<li><a href='http://archive.freep.com/section/7daysarchives&archivedate=20141127'>Thursday, <span class="date">Nov. 27</span></a></li>
+		<li><a href='http://archive.freep.com/section/7daysarchives&archivedate=20141126'>Wednesday, <span class="date">Nov. 26</span></a></li>
+		<li><a href='http://archive.freep.com/section/7daysarchives&archivedate=20141125'>Tuesday, <span class="date">Nov. 25</span></a></li>
+		<li><a href='http://archive.freep.com/section/7daysarchives&archivedate=20141124'>Monday, <span class="date">Nov. 24</span></a></li>
+	</ul>
+	<p>See our <a href='http://pqasb.pqarchiver.com/freep/advancedsearch.html'>paid archives</a> for news older than a week.</p>
+</div>
+				</div> 
+				<div class="ody-caroLG">  
+					<div class="ody-popular-bottom">
+<p class="ody-list-t"><strong>High school sports</strong></p>
+	<ul class="ody-list-a">
+</ul>
+</div>
+				</div> 
+				<div class="ody-caroSM">  
+					<p class="ody-bottom-title">
+	<strong>On the go</strong>
+</p>
+<div class="ody-blogs-bottom">
+	<p>Free Press Apps for iPhone, Android now available.</p>
+	<h6><strong><a href="/iphone">Read more</a></strong></h6>
+</div>
+				</div> 
+				<div class="ody-caroMD">  
+					<p class="ody-bottom-title">
+	<strong>Mike Thompson</strong>
+</p>
+<div class="ody-blogs-bottom">
+	<h6><strong>More: <a href="/mikethompson">Cartoons</a> | <a href="/animations">Animations</a></strong></h6>
+</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript"> 
+(function(){ 
+GEL.thepage.initializer.addInitRoutine({ 
+	name: "conveyorbottom", 
+	namespace: ["widget.GELTabs", "anim.YUIAnimator"], 
+	priority: 150,
+	callback: initConveyorBottom
+}); 
+})(); 
+</script>
+
+				<!-- inteltxt -->
+	<!-- End inteltxt -->
+
+			<div class="footer-container">
+	<!-- ody custom content macro -->
+	<div class="ody-wrapper">
+	<div class="leaderboard-container">
+		<div>
+	<div class="ad_728x90">
+	<banner
+		 position=728x90_2 
+	></banner>
+		<div class="advertisement">ADVERTISEMENT</div>
+	</div>
+</div>
+	</div>
+	</div>
+	<div class="footer-content">
+		<div class="footer-top">
+	<div class="footer-wrap">
+		<div class="footer-logo">
+			<a href="http://archive.freep.com/"></a>
+		</div>
+		<div class="right"><a href="http://archive.freep.com/section/sitemaphtml">Site Map</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#top">Back to Top</a><span class="backtotop">&nbsp;</span></div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="footer-main">
+	<div class="footer-wrap">
+		<div class="left">
+			<ul><li><h4><a href=http://www.freep.com/news/>NEWS</a></h4></li><li><h4><a href=http://www.freep.com/life/>LIFE</a></h4></li></ul><ul><li><h4><a href=http://www.freep.com/sports/>SPORTS</a></h4></li><li><h4><a href=http://www.freep.com/entertainment/>ENTERTAINMENT</a></h4></li></ul><ul><li><h4><a href=http://www.freep.com/autos/>AUTOS</a></h4></li><li><h4><a href=http://www.freep.com/opinion/>OPINION</a></h4></li></ul><ul><li><h4><a href=http://www.freep.com/business/>BUSINESS</a></h4></li></ul>
+		</div>
+		<div class="right">
+			<ul>
+				<li><h4><a href=http://www.freep.com/section/global/nation-now/>USA TODAY</a></h4></li>
+			</ul>
+			<ul class="right_row">
+	<li><h4>FOLLOW US</h4></li>
+	<li class="icn_follow_twitter"><a href="http://archive.freep.com/twitter">Twitter</a></li>
+	<li class="icn_follow_facebook"><a href="http://archive.freep.com/facebook">Facebook</a></li>
+	<li class="icn_follow_mobile"><a href="http://archive.freep.com/mobile">Mobile</a></li>
+	<li class="icn_follow_rss"><a href="http://archive.freep.com/rss">RSS</a></li>
+	<li class="icn_follow_email"><a href="http://archive.freep.com/section/nlettersubscribe">E-mail Alerts</a></li>
+</ul>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+		<div class="partners_text">
+	<div class="container">
+		<ul>
+			<li><a target="_blank" href="http://www.usatoday.com" rel="nofollow">News</a></li>
+			<li>|</li>
+			<li><a target="_blank" href="http://www.michigan.com/jobs" rel="nofollow">Jobs</a></li>
+			<li>|</li>
+			<li><a target="_blank" href="http://www.michigan.com/cars" rel="nofollow">Cars for Sale</a></li>
+			<li>|</li>
+			<li><a target="_blank" href="http://www.michigan.com/realestate" rel="nofollow">Homes for Sale</a></li>
+			<li>|</li>
+			<li><a target="_blank" href="http://www.apartments.com/michigan/detroit" rel="nofollow">Apartments for Rent</a></li>
+			<li>|</li>
+			<li><a target="_blank" href="http://findnsave.freep.com/" rel="nofollow">Shopping</a></li>
+			<li>|</li>
+			<li><a target="_blank" href="http://www.michigan.com/classifieds" rel="nofollow">Classifieds</a></li>
+			<li>|</li>
+			<li><a target="_blank" href="http://findnsave.freep.com/Circulars" rel="nofollow">E-Circulars</a></li>
+			<li>|</li>
+			<li><a target="_blank" href="http://www.dealchicken.com/detroit-mi" rel="nofollow">Daily Deals</a></li>
+		</ul>
+	</div>
+</div>
+		<div class="footer-partners">
+	<div class="footer-wrap">
+		<ul>
+			<li><a class="footer-usatoday" href="http://www.usatoday.com" target="_blank" rel="nofollow"></a></li>
+			<li><a class="footer-cars" href="http://www.cars.com" target="_blank" rel="nofollow"></a></li>
+			<li><a class="footer-homefind" href="http://www.homefinder.com" target="_blank" rel="nofollow"></a></li>
+			<li><a class="footer-apts" href="http://www.apartments.com" target="_blank" rel="nofollow"></a></li>
+			<li><a class="footer-homegain" href="http://www.movingcompanyreviews.com" target="_blank" rel="nofollow"></a></li>
+			<li><a class="footer-shop" href="http://www.shoplocal.com" target="_blank" rel="nofollow"></a></li>
+			<li><a class="footer-career" href="http://www.careerbuilder.com" target="_blank" rel="nofollow"></a></li>
+			<li><a class="footer-eharmony" href="http://www.eharmony.com" target="_blank" rel="nofollow"></a></li>
+			<li><a href="http://www.detroitmedia.com" style="background:none;" target="_blank" rel="nofollow"><img border="0" src="http://www.freep.com/graphics/detroitmediasolutions.gif"></a></li>
+			<li><a href="http://www.michiganmediasolutions.com" style="background:none;" target="_blank" rel="nofollow"><img border="0" src="http://www.freep.com/graphics/Michigan_Media_Solutions-white-smaller.jpg"></a></li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</div>
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+_qevents.push({
+qacct:"p-c6yfstp8sVyKx"
+});
+</script>
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-c6yfstp8sVyKx.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+		<div class="footer-gannett">
+	<a href="http://www.gannett.com" target="_blank"><img src="//archive.freep.com/odygci/p1/ody_gannett_footer.gif" alt="Gannett" title="Gannett"></a>
+</div>
+<p class="footer-bottom">
+	Copyright &copy; 2014 archive.freep.com. All rights reserved.<br />
+	Users of this site agree to the <a href="http://archive.freep.com/section/terms">Terms of Service</a>, <a href="http://archive.freep.com/section/privacy">Privacy Notice/Your California Privacy Rights</a>, and <a href="http://archive.freep.com/section/privacy#adchoices">Ad Choices</a>
+</p>
+	</div>
+</div>
+<div id="UAModalcontainerwrapper" class="ody-UAmodalcontainer modal modal-inner-content">
+	<div id="UAModalcontainer"></div>
+</div>
+<!--Site Catalyst macro -->
+<!--Sitecatalyst Macro Settings -->
+<script type="text/javascript"> 
+ (function(){ 
+	var 
+		_CFG= GEL.namespace("config.bus"),
+		_provider, 
+		_pri
+	; 
+	(function(){ 
+		var _cfg_bus = GEL.config.bus.properties;
+		if(GEL.config.bus.properties.pageName)return;
+		GEL.config.bus.properties.pageName= (function(){
+			var 
+				_p='',_t,
+				_PI= GEL.thepage.pageinfo,
+				_cat= _PI.categoryname
+			;
+			var _sections = {
+				frontpage: 'Umbrella Page',
+				article: (function(){
+					var _artPN = '';
+					if(location.href.indexOf('cmsedit') > -1) _artPN = '(cmsedit) ';
+					_artPN += 'Police nab cartel member in organ trafficking case(C42014USAT6548691)';
+					return _artPN;
+				})(),
+				section: _cat + ' Index',
+				classifieds: 'Classifieds: '+_cat+' listings',
+				search: 'Publicus search results: ',
+				gallery: (function() {
+					if(_PI.title && _PI.date.isopuddate)
+						return 'Gallery Title: '+_PI.title+' ('+_PI.date.isopuddate+')';
+					else
+						return 'Gallery Title: Null';
+				})(),
+				tngallery: (function() {
+					if(_PI.title && _PI.date.isopuddate)
+						return 'tnGallery Title: '+_PI.title+' ('+_PI.date.isopuddate+')';
+					else
+						return 'tnGallery Title: Null';
+				})()
+			};
+			if(_PI.type in _sections) 
+				_p =  _p + _sections[_PI.type];
+			else
+				_p =  _p + location.href;
+			return _p;
+		})();
+	})(); 
+	if(!_CFG.providers) return; 
+	for(_provider in _CFG.providers) {
+		_pri= _CFG.providers[_provider]; 
+		GEL.thepage.initializer.addInitRoutine({ 
+			name: _provider, 
+			namespace: ["analytics", "util.Cookie", "remoting"], 
+			callback: (function(_p) { 
+					return function(){
+						load(_p); 
+					}
+				})(_provider), 
+			priority: _pri
+		}); 
+	}
+	function load(provider){ 
+		var _vt= GEL.thepage.viewTracker ||  
+			(function(){ 
+				var _o= GEL.thepage.viewTracker= 
+					new GEL.bus.PageTrack(); 
+				return _o; 
+			})();  
+		/* WARNING: DO NOT TRY THIS AT HOME
+		 *
+		 * This is done on the individual provider ONLY for initialization
+		 * so that we can support initializing different provider
+		 * at different times.   
+		 * 
+		 */
+		var _provs= _vt.init(provider); 
+		for(var i=0;i<_provs.length;i++)ME
+		 *
+		 * This is done on the individual provider ONLY for initialization
+		 * so that we can support initializing different provider
+		 * 
+			_provs[i].trackView(); 
+		if(GEL.thepage.viewTracker.providers && GEL.thepage.viewTracker.providers.bt && !window.DM_onSegsAvailable)
+			window.DM_onSegsAvailable = GEL.thepage.viewTracker.providers.bt.segmentsReceived;
+	}
+	/* 
+		Currently this must be done inline due to the fact that 
+		SiteCat's __constructor__ (of all things!) 
+		does this, which is not suppoted by DocumentOverwriter
+		{ ...
+			document.write("img src=..."); 
+			i= document.images[document.images.length-1]; 
+		....}
+		Within the site cat code we instantiate s_gi(), assigning it to 
+		GEL.config.bus.omniture.s_code 
+		Newer versions of site cat's s_code use a more mature 
+		method of inserting the image.  Once this is implemented, 
+		the inline attachment of the s_code here can be removed 
+	*/
+		var _s = GEL.ement("SCRIPT", { src: "/odygel/lib/vendor/omniture/sitecatalyst_H.3.js?odyv=1.28.3218" }); 
+	_s.setAttacher("inline"); 
+	_s.attach(); 
+		var _d = GEL.ement("SCRIPT", { src: "/odygel/lib/vendor/audiencemanager/dil.js?odyv=1.28.3218" }); 
+	_d.setAttacher("inline"); 
+	_d.attach();
+})(); 
+</script> 
+<noscript> 
+ <img src="http://gpaper204.112.2O7.net/b/ss/gpaper204,gntbcstglobal/1/H.3--NS/0"	height="1" width="1" border="0" alt="" />
+</noscript> 
+<!--Semantics Agency Trading Desk-->
+<div id="adsdaq"></div>
+<script type="text/javascript">
+</script>
+<script type="text/javascript">
+	setTimeout(function(){ GEL.thepage.initializer.init();}, 100); 
+</script> 
+<!-- ChartBeat (re)processing -->
+<script type="text/javascript">
+var _sf_async_config={};
+/** CONFIGURATION START **/
+var _sf_async_config = {
+	uid: 			47635,
+	domain: 		"freep.com",
+	useCanonical:	true,
+	sections:		GEL.thepage.pageinfo.categoryname
+};
+if (GEL.thepage.pageinfo.type == "article") {
+	_sf_async_config.authors = GEL.config.bus.properties.authorbyline;
+}
+/** CONFIGURATION END **/
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement("script");
+    e.setAttribute("language", "javascript");
+    e.setAttribute("type", "text/javascript");
+    e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != "function") ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+</script>
+
+		</div> <!--end main container-->
+	</div><!-- end ody-custom -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15354864-10']);
+  _gaq.push(['_setDomainName', 'freep.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+;
+    ga.src = 

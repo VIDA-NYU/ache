@@ -1,0 +1,1262 @@
+
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+
+	<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><meta name="title" content="Polio" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" media="screen,print" href="/stylesheets/gfo/style_AB09F982645CB6AB36B753CA39D33A33.min.css" /><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/gfo/responsive_052AD946ACD2569AD10E0FE244ACA9A3.min.css" /><link rel="stylesheet" type="text/css" media="screen,print" href="/stylesheets/gfo/search_D3D846FA5233880706E5018894B49F07.min.css" /><link rel="stylesheet" type="text/css" media="print" href="/stylesheets/gfo/print_B766AEC5C6F77AF4024B3FE6CED8543F.min.css" /><link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/gfo/jquery.loadmask_4EADE2AC96C5D7F472375E93C2B6A0B1.min.css" />
+		
+		<!-- JavaScript -->
+
+		<script src="https://use.typekit.net/fdu6nid.js"></script>
+		<script>try { Typekit.load(); } catch (e) { }</script>
+
+		<script src="/javascripts/gfo/libs/modernizr2.6.1.min.js?r=AE925DB196B41CC0F6D187A1F9F94F7C"></script>
+
+		<!-- Grab Google CDN's jQuery. Fall back to local if offline. -->
+		
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		
+		<script>
+			window.jQuery || document.write('<script src="/javascripts/gfo/libs/jquery-1.7.2.js"><\/script>')
+		</script>
+
+		<!--[if IE]>
+			<script src="/javascripts/gfo/libs/json2_C984103F6611A342C809C2173952B8B8.min.js"></script>
+		<![endif]-->
+
+		
+		<script src="/javascripts/gfo/libs/combined_AFA0ABD6A4239C79DFB7DEF6993B9F34.js"></script><script src="/javascripts/gfo/combined_7D984CD4FDF7FC98C99DAD90A661D34C.js"></script>
+			
+		<!-- Scripts for search pages. -->
+		
+			<script>
+				log = function () {};
+			</script>
+		
+		
+		<script>
+			jQuery(document).ready(function() {
+				var twoLetter = 'en';
+				var langStr = twoLetter != 'zh' ? twoLetter : 'zh-cn';
+				moment.lang(langStr); 
+			    
+                $('.read-more').readMore({button_text_open: 'Read More', button_text_close: 'Read Less'});
+			});
+			
+			SitecorePageMode = {
+				IsPageEditor: false,
+				IsNormal: true,
+				IsPreview: false,
+				IsProfiling: false,
+				IsDebugging: false
+			}
+		</script>
+	<title>
+	Polio - Bill &amp; Melinda Gates Foundation
+</title></head>
+
+	<body class="home">
+		<form name="form1" method="post" action="/What-We-Do/Global-Development/Polio" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+
+<script src="/javascripts/gfo/strategy.js?v=4163" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="76E37BA8" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="g7GmYhU6gU2+TLvOU4WtNxU1Kr9ICSpajRBRlbbQz6s8K+Arsj/BKUIQLxS4Cm1K7scIGOtzmntXQ28azryhvOEM5W+mYQBc/r9iXU/WGmVc34zELDyKXf3tgeL+TqfcFp0C5Wr/tjQivOvJJkb1NFpkqEKSb+y4KI05Yg==" />
+</div>
+			<div class="mainContainer">
+				<noindex>
+<header class="mainHeader" role="banner">
+	<div class="wrapper">
+		<h1>Bill &amp; Melinda Gates foundation
+			<a id="headerregion_0_hlLogo" href="/"><img src="/~/media/GFO/Site/Logo Images/icon_small_bill_melinda_gates_foundation_logo.png?h=178&amp;la=en&amp;w=178" alt="" width="178" height="178"></a>
+		</h1>
+		
+
+<div class="languageBar" role="menubar">
+	<a class="selector" href="#" role="menuitem" tabindex="0" aria-haspopup="true">
+		<span>Languages</span>
+		<span class="short">en</span>
+	</a>
+	<div class="subMenu" role="menu" aria-hidden="true">
+		
+			<ul>
+					<li role="menuitem" tabindex="-1">
+					    <a id="headerregion_0_langSel_rptLanguageSelector_ctl01_lnkLanguage" class="first omni-link-tracker" href="/" omni-title="Language: English" omni-events="event1" omni-vars="prop17,eVar17,events" omni-values="prop17=English;eVar17=English">
+					        <span>English</span>
+					        <span class="short">en</span>    
+					    </a>
+					</li>
+				
+					<li role="menuitem" tabindex="-1">
+					    <a id="headerregion_0_langSel_rptLanguageSelector_ctl02_lnkLanguage" class=" omni-link-tracker" href="/de" omni-title="Language: Deutsch" omni-events="event1" omni-vars="prop17,eVar17,events" omni-values="prop17=Deutsch;eVar17=Deutsch">
+					        <span>Deutsch</span>
+					        <span class="short">de</span>    
+					    </a>
+					</li>
+				
+					<li role="menuitem" tabindex="-1">
+					    <a id="headerregion_0_langSel_rptLanguageSelector_ctl03_lnkLanguage" class=" omni-link-tracker" href="/fr" omni-title="Language: Français" omni-events="event1" omni-vars="prop17,eVar17,events" omni-values="prop17=Français;eVar17=Français">
+					        <span>Français</span>
+					        <span class="short">fr</span>    
+					    </a>
+					</li>
+				
+					<li role="menuitem" tabindex="-1">
+					    <a id="headerregion_0_langSel_rptLanguageSelector_ctl04_lnkLanguage" class=" omni-link-tracker" href="/es" omni-title="Language: Español" omni-events="event1" omni-vars="prop17,eVar17,events" omni-values="prop17=Español;eVar17=Español">
+					        <span>Español</span>
+					        <span class="short">es</span>    
+					    </a>
+					</li>
+				
+					<li role="menuitem" tabindex="-1">
+					    <a id="headerregion_0_langSel_rptLanguageSelector_ctl05_lnkLanguage" class=" omni-link-tracker" href="/zh" omni-title="Language: 中文" omni-events="event1" omni-vars="prop17,eVar17,events" omni-values="prop17=中文;eVar17=中文">
+					        <span>中文</span>
+					        <span class="short">zh</span>    
+					    </a>
+					</li>
+				</ul>
+	</div>
+</div>
+
+		
+		<div class="searchForm">
+	
+
+	<div>
+		<input name="headerregion_0$searchBox$txtKeywords" type="text" id="headerregion_0_searchBox_txtKeywords" class="input-text has-placeholder" name="q" placeholder="Search" />
+		&nbsp;
+		<input type="submit" name="headerregion_0$searchBox$btnSearch" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;headerregion_0$searchBox$btnSearch&quot;, &quot;&quot;, true, &quot;headerSearch&quot;, &quot;&quot;, false, false))" id="headerregion_0_searchBox_btnSearch" class="searchButton" />
+		<div class="replacement">GO</div>
+	</div>
+	<a href="#" class="mobile ir">Expand Search<span></span></a>
+
+
+</div>
+
+		<nav role="navigation">
+				
+						<ul role="menubar">
+					
+						<li id="headerregion_0_rptMainNav_ctl01_liMainMenuItem" role="menuitem" tabindex="0" aria-haspopup="true" class="first">
+							
+							<a href="/Who-We-Are">Who We Are</a>
+							
+							<div class="subMenu" role="menu" aria-hidden="true">
+								<div class="wrapper">
+									
+									
+										
+									
+
+									
+									<div class="col">
+									
+											<h2>General Information</h2>
+											<ul>
+												
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl00_hlSubNavMenuItem" href="/Who-We-Are/General-Information/Letter-from-Bill-and-Melinda-Gates">Letter from Bill and Melinda Gates</a></li>
+														
+													
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl02_hlSubNavMenuItem" href="/Who-We-Are/General-Information/Leadership">Leadership</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl03_hlSubNavMenuItem" href="/Who-We-Are/General-Information/History">History</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl04_hlSubNavMenuItem" href="/Who-We-Are/General-Information/Foundation-Factsheet">Foundation Fact Sheet</a></li>
+														
+													
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl06_hlSubNavMenuItem" href="/Who-We-Are/General-Information/Financials">Financials</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl07_hlSubNavMenuItem" href="/Who-We-Are/General-Information/Contact-Us">Contact Us</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl08_hlSubNamation/Contact-Us">Contact Us</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctlvMenuItem" href="/What-We-Do/Global-Policy/Regional-Offices">Regional Offices</a></li>
+														
+													
+											</ul>
+									
+									</div>
+								
+									<div class="col">
+									
+											<h2>Resources &amp; Media</h2>
+											<ul>
+												
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl00_hlSubNavMenuItem" href="/Who-We-Are/Resources-and-Media/Annual-Letters-List">Annual Letters</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl01_hlSubNavMenuItem" href="/Who-We-Are/Resources-and-Media/Annual-Reports">Annual Reports</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl02_hlSubNavMenuItem" href="/Media-Center">Press Room</a></li>
+														
+													
+											</ul>
+									
+									</div>
+								
+									<div class="col">
+									
+											<h2>Quick Links</h2>
+											<ul>
+												
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl02_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl00_hlSubNavMenuItem" href="/Visitor-Center">Visitor Center</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl02_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl01_hlSubNavMenuItem" href="/Jobs">Jobs</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl01_rptSubNavColumns_ctl02_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl02_hlSubNavMenuItem" href="/Who-We-Are/General-Information/Contact-Us">Contact Us</a></li>
+														
+													
+											</ul>
+									
+									</div>
+								
+							
+								</div>
+							</div>
+							
+						</li>
+					
+						<li id="headerregion_0_rptMainNav_ctl02_liMainMenuItem" role="menuitem" tabindex="0" aria-haspopup="true">
+							
+							<a class="active" href="/What-We-Do">What We Do</a>
+							
+							<div class="subMenu" role="menu" aria-hidden="true">
+								<div class="wrapper">
+									
+									
+										
+									
+
+									
+									<div class="col">
+									
+											<h2>Global Health</h2>
+											<ul>
+												
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl00_hlSubNavMenuItem" href="/What-We-Do/Global-Health/Discovery-and-Translational-Sciences">Discovery &amp; Translational Sciences</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl01_hlSubNavMenuItem" href="/What-We-Do/Global-Health/Enteric-and-Diarrheal-Diseases">Enteric and Diarrheal Diseases</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl02_hlSubNavMenuItem" href="/What-We-Do/Global-Health/HIV">HIV</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl03_hlSubNavMenuItem" href="/What-We-Do/Global-Health/Malaria">Malaria</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl04_hlSubNavMenuItem" href="/What-We-Do/Global-Health/Neglected-Infectious-Diseases">Neglected Infectious Diseases</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl05_hlSubNavMenuItem" href="/What-We-Do/Global-Health/Pneumonia">Pneumonia</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl06_hlSubNavMenuItem" href="/What-We-Do/Global-Health/Tuberculosis">Tuberculosis</a></li>
+														
+													
+											</ul>
+									
+									</div>
+								
+									<div class="col">
+									
+											<h2>Global Development</h2>
+											<ul>
+												
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl00_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Agricultural-Development">Agricultural Development</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="h_rptSubNavSectionContentLinks_ctl00_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Agricultural-Development">Agricultural Development</a></li>
+														
+		eaderregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl01_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Emergency-Response">Emergency Response</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl02_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Family-Planning">Family Planning</a></li>
+														
+													
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl04_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Financial-Services-for-the-Poor">Financial Services for the Poor</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl05_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Global-Libraries">Global Libraries</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl06_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Integrated-Delivery">Integrated Delivery</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl07_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Maternal-Newborn-and-Child-Health">Maternal, Newborn &amp; Child Health</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl08_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Nutrition">Nutrition</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl09_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Polio">Polio</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl10_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Vaccine-Delivery">Vaccine Delivery</a></li>
+														
+					uitem" tabindex="-1"><a id="headerregion_0_rp								
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl11_hlSubNavMenuItem" href="/What-We-Do/Global-Development/Water-Sanitation-and-Hygiene">Water, Sanitation &amp; Hygiene</a></li>
+														
+													
+														
+													
+											</ul>
+									
+									</div>
+								
+									<div class="col">
+									
+											<h2>U.S. Program</h2>
+											<ul>
+												
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl02_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl00_hlSubNavMenuItem" href="/What-We-Do/US-Program/College-Ready-Education">College-Ready Education</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl02_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl01_hlSubNavMenuItem" href="/What-We-Do/US-Program/Postsecondary-Success">Postsecondary Success</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl02_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl02_hlSubNavMenuItem" href="/What-We-Do/US-Program/Washington-State">Washington State</a></li>
+														
+													
+											</ul>
+									
+											<h2>Global Policy &amp; Advocacy</h2>
+											<ul>
+												
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl02_rptSubNav_ctl01_rptSubNavSectionContentLinks_ctl00_hlSubNavMenuItem" href="/What-We-Do/Global-Policy/Tobacco-Control">Tobacco Control</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl02_rptSubNav_ctl01_rptSubNavSectionContentLinks_ctl01_hlSubNavMenuItem" href="/What-We-Do/Global-Policy/Charitable-Sector-Support">Charitable Sector Support</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl02_rptSubNav_ctl01_rptSubNavSectionContentLinks_ctl02_hlSubNavMenuItem" href="/What-We-Do/Global-Policy/G20-Report">G20 Report</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl02_rptSubNav_ctl01_rptSubNavSectionContentLinks_ctl03_hlSubNavMenuItem" href="/What-We-Do/Global-Policy/Vaccine-Summit">Vaccine Summit</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl02_rptSubNavColumns_ctl02_rptSubNav_ctl01_rptSubNavSectionContentLinks_ctl04_hlSubNavMenuItem" href="/What-We-Do/Global-Policy/Regional-Offices">Regional Offices</a></li>
+														
+													
+											</ul>
+									
+									</div>
+								
+							
+								</div>
+							</div>
+							
+						</li>
+					
+						<li id="headerregion_0_rptMainNav_ctl03_liMainMenuItem" role="menuitem" tabindex="0" aria-haspopup="true">
+							
+							<a href="/How-We-Work">How We Work</a>
+							
+							<div class="subMenu" role="menu" aria-hidden="true">
+								<div class="wrapper">
+									
+									
+										
+									
+
+									
+									<div class="col">
+									
+											<h2>General Information</h2>
+											<ul>
+												
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl00_hlSubNavMenuItem" href="/How-We-Work">How We Make Grants</a></li>
+														
+													
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl02_hlSubNaa></li>
+														
+													
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl0vMenuItem" href="/How-We-Work">How We Develop Strategy</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl03_hlSubNavMenuItem" href="/How-We-Work/General-Information/Information-Sharing-Approach">Information Sharing Approach</a></li>
+														
+													
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl05_hlSubNavMenuItem" href="/How-We-Work">Our Approach to Measurement and Evaluation</a></li>
+														
+													
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl07_hlSubNavMenuItem" href="/How-We-Work/General-Information/Grantseeker-FAQ">Grantseeker FAQ</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl08_hlSubNavMenuItem" href="/How-We-Work/General-Information/Grant-Opportunities">Grant Opportunities</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl09_hlSubNavMenuItem" href="/How-We-Work/General-Information/Grant-Seeking-Resources">Grant Seeking Resources</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl00_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl10_hlSubNavMenuItem" href="/How-We-Work/General-Information/What-We-Do-Not-Fund">What We Do Not Fund</a></li>
+														
+													
+														
+													
+														
+													
+											</ul>
+									
+									</div>
+								
+									<div class="col">
+									
+											<h2>Resources for Grantees</h2>
+											<ul>
+												
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl00_hlSubNavMenuItem" href="/How-We-Work/Resources/Our-Commitment-to-Grantees">Our Commitment to Grantees</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSeurces/Our-Commitment-to-Grantees">Our CommitmctionContentLinks_ctl01_hlSubNavMenuItem" href="/How-We-Work/Resources/Grantee-Profiles">Grantee Profiles</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl01_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl02_hlSubNavMenuItem" href="/How-We-Work/Resources/Grantee-and-Partner-Survey-Report">Grantee &amp; Partner Survey Report</a></li>
+														
+													
+														
+													
+														
+													
+											</ul>
+									
+									</div>
+								
+									<div class="col">
+									
+											<h2>Quick Links</h2>
+											<ul>
+												
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl02_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl00_hlSubNavMenuItem" href="/How-We-Work/Quick-Links/Grants-Database">Awarded Grants</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl02_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl01_hlSubNavMenuItem" href="/Who-We-Are/General-Information/Contact-Us">Contact Us</a></li>
+														
+													
+														
+														<li role="menuitem" tabindex="-1"><a id="headerregion_0_rptMainNav_ctl03_rptSubNavColumns_ctl02_rptSubNav_ctl00_rptSubNavSectionContentLinks_ctl02_hlSubNavMenuItem" href="/How-We-Work/Quick-Links/Program-Related-Investments">Program Related Investments</a></li>
+														
+													
+											</ul>
+									
+									</div>
+								
+							
+								</div>
+							</div>
+							
+						</li>
+					
+						</ul>
+					
+
+		</nav>
+
+		
+
+
+<ul class="globalSites">
+	<li class="gatesFoundation-item">
+		<a id="headerregion_0_globalHeader_lnkGFO" class="gatesFoundation" href="http://www.gatesfoundation.org/">GatesFoundation.org</a>
+	</li>
+	<li class="io-item">
+		<a id="headerregion_0_globalHeader_lnkIO" class="io" href="http://www.impatientoptimists.org/" target="_blank">Impatient Optimists</a>
+	</li>
+</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="header-print">
+		<img src="/images/gfo/icon_bill_melinda_gates_foundation-print.png" />
+  </div>
+</header>
+</noindex>
+
+				
+
+<div class="main" role="main">
+
+
+
+<noindex>
+<div id="bodyregion_0_leftnavigation_0_divSidebar" class="sidebar">
+	
+	<a href="javascript:void(0);" id="bodyregion_0_leftnavigation_0_hlMobile" class="section-selector">
+		Strategy Overview
+		<span class="arrow"></span>
+		<span class="close">Close</span>
+	</a>
+	
+	<div class="side-nav">
+		
+		
+		
+			
+			<div class="nav-wrapper">
+				<h2>
+					General Information
+				</h2>
+				<ul class="nav">
+					<li id="bodyregion_0_leftnavigation_0_liStrategy" class="active">
+						<a id="bodyregion_0_leftnavigation_0_hlStrategyHome" href="/What-We-Do/Global-Development/Polio">Strategy Overview</a></li>
+							
+						
+							<li id="bodyregion_0_leftnavigation_0_rptLeftNavStrategySingleItems_ctl01_liNavItem">
+									<a id="bodyregion_0_leftnavigation_0_rptLeftNavStrategySingleItems_ctl01_hlNavItem" href="/What-We-Do/Global-Development/Polio/Infographics">Infographics</a>
+								</li>
+						
+							<li id="bodyregion_0_leftnavigation_0_rptLeftNavStrategySingleItems_ctl02_liNavItem">
+									<a id="bodyregion_0_leftnavigation_0_rptLeftNavStrategySingleItems_ctl02_hlNavItem" href="/What-We-Do/Global-Development/Polio/Partners">Partners</a>
+								</li>
+						
+							
+						
+							<li id="bodyregion_0_leftnavigation_0_rptLeftNavStrategySingleItems_ctl04_liNavItem">
+									<a id="bodyregion_0_leftnavigation_0_rptLeftNavStrategySingleItems_ctl04_hlNavItem" href="/What-We-Do/Global-Development/Polio/Strategy-Leadership">Strategy Leadership</a>
+								</li>
+						
+							
+						
+				</ul>
+			</div>
+			
+			<div id="bodyregion_0_leftnavigation_0_resourcesNav" class="nav-wrapper">
+				<h2>
+					Resources</h2>
+				<ul class="nav">
+					
+							<li id="bodyregion_0_leftnavigation_0_rptResourseLinks_ctl00_liResourceItem">
+								<a id="bodyregion_0_leftnavigation_0_rptResourseLinks_ctl00_hlResourceLink" href="/What-We-Do/Global-Development/Polio/Press-Releases">Press Releases (36)</a>
+							</li>
+						
+				</ul>
+			</div>
+			
+			
+	</div>
+    
+</div>
+</noindex>
+
+    
+
+<div class="main-content">
+	
+<div class="head push-bottom-small">
+	
+	<h2>
+		<span class="line"></span>
+			What We Do
+		<span class="line"></span>
+	</h2>
+	
+	<h3>
+		Polio
+	</h3>
+	
+	<h4>
+		Strategy Overview
+	</h4>
+	
+	
+	<a name="pageTitle"></a>
+	<div class="divider">
+	</div>
+</div>
+
+
+	
+	
+
+
+
+<a class="print" href="#" onclick="window.print(); return false;">Print</a>
+
+	
+
+	<article class="articleWrapper">
+		<div id="bodyregion_0_interiorarticle_0_strategytopcomponents_0_figImage" class="figure big">
+	<img src="/~/media/GFO/Top Banners/POLIO_ChildVaccinatedAfghanBorder_702x279.jpg?h=279&amp;la=en&amp;mw=702&amp;w=702" alt="" width="702" height="279">
+	<div id="bodyregion_0_interiorarticle_0_strategytopcomponents_0_divCaption" class="ic_caption">
+		<p class="ic_category" >
+			Children crossing the border from Pakistan to Afghanistan are given oral polio vaccine through a program implemented by Rotary International.
+		</p>
+	</div>
+	<div id="bodyregion_0_interiorarticle_0_strategytopcomponents_0_figCaption" class="figcaption">
+		<h3>our goal: </h3>to eradicate polio worldwide.
+	</div>
+</div>
+
+		
+		<div class="strategySection">
+			<a id="TheChallenge"><h2>The Challenge</h2></a>
+			<div id="bodyregion_0_interiorarticle_0_plcRightRail" class="placeholder right">
+				
+
+<div class="anchorList right">
+    <span>In This Page</span>
+    <ul>
+    	<li><a id="bodyregion_0_interiorarticle_0_ctrlInThisPage_linkFirstSection">The Challenge</a></li>
+    	
+		        <li><a id="bodyregion_0_interiorarticle_0_ctrlInThisPage_rptSections_ctl00_linkSection">The Opportunity</a></li>
+			
+		        <li><a id="bodyregion_0_interiorarticle_0_ctrlInThisPage_rptSections_ctl01_linkSection">Our Strategy</a></li>
+			
+		        <li><a id="bodyregion_0_interiorarticle_0_ctrlInThisPage_rptSections_ctl02_linkSection">Areas of Focus</a></li>
+			
+    </ul>
+</div>
+				
+				
+
+<div class="aside">                          
+    <h4>
+    	At A Glance
+    </h4>
+    <div class="arrowWrapper"><a href="javascript:void(0);" class="arrow-up">up</a></div>
+    <div class="wrapper">
+        <div class="container">
+            <p>In 1988, when the Global Polio Eradication Initiative (GPEI) was launched, polio was endemic in 125 countries and paralyzed about 1,000 children per day.</p>
+<p>Since that time, the incidence of polio has decreased by more than 99 percent through immunization efforts that have reached about 2.5 biInitiative (GPEI) was launched, polio was endemic in 125 countries and paralyzed about 1,000 children per day.</p>
+<p>Since that time, the incidence of polio has decreased by more than 99 percent through immunization efforts that have reachllion children. </p>
+<p>India, long considered the most difficult place to end polio, was declared polio-free in February 2012. Only three countries remain polio endemic: Nigeria, Pakistan, and Afghanistan.</p>
+<p>The foundation is a key supporter of the GPEI, which is spearheaded by national governments, the World Health Organization (WHO), Rotary International, the U.S. Centers for Disease Control and Prevention, and UNICEF. </p>
+<p>Our Polio strategy, updated in 2012, is led by Jay Wenger, director, and is part of the foundation&rsquo;s Global Development Division.</p>
+        </div>
+    </div>
+    <div class="arrowWrapper"><a href="javascript:void(0);" class="arrow-down">down</a></div>
+</div>
+			</div>
+		
+			<p>Over the past two decades, tremendous progress has been made toward the eradication of polio. In 1988, when the World Health Assembly established the goal of eradicating the disease and the Global Polio Eradication Initiative (GPEI) was launched, wild poliovirus was endemic in 125 countries and about 350,000 people, primarily young children, were paralyzed by polio annually. Since then, immunization efforts have reduced the number of polio cases globally by more than 99 percent, saving more than 10 million children from paralysis. Polio remains endemic in just three countries&mdash;Nigeria, Pakistan, and Afghanistan&mdash;and fewer than 250 cases were reported in 2012, compared to 650 cases in 2011.</p>
+<p>The successes achieved through effective and safe vaccines and immunization campaigns, a global partnership, and a global mandate to eradicate polio are continually at risk, however. Since 2008, more than 20 countries have experienced outbreaks of polio imported from endemic countries&mdash;some of them multiple times. Efforts to reach unvaccinated children are often hampered by security risks, and geographic and cultural barriers. The high cost of vaccination campaigns&mdash;US$1 billion per year worldwide&mdash;is not sustainable in the long term. Failure to eradicate this highly contagious disease could, within a decade, lead to a resurgence of as many as 200,000 new cases each year.</p>
+		</div>
+
+		<div id="bodyregion_0_interiorarticle_0_strategysections_0_pnlSection" class="strategySection">
+	
+	<div id="bodyregion_0_interiorarticle_0_strategysections_0_divDivider" class="divider"></div>
+	
+	<div>
+	    <a id="TheOpportunity"><h2>The Opportunity</h2></a>
+		<div class="placeholder right">
+			
+
+<div class="section-toolbar">
+    
+
+<div class="shareComponent addthis_toolbox" addthis:url="http://www.gatesfoundation.org/What-We-Do/Global-Development/Polio#TheOpportunity" addthis:title="The Opportunity" >
+    <a class="share" href="#">Share</a>
+    <div class="shareWindow">
+        <a class="share" href="#">
+        	Share
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_0_ctrlScrollShare_addThis_omniFacebookLink" class="fb addthis_button_facebook omni-link-tracker" omni-title="Social Share: The Opportunity" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=facebook;prop41=The Opportunity" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_0_ctrlScrollShare_addThis_omniTwitterLink" class="twitter addthis_button_twitter omni-link-tracker" omni-title="Social Share: The Opportunity" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=twitter;prop41=The Opportunity" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_0_ctrlScrollShare_addThis_omniPinterestLink" class="pinterest addthis_button_pinterest omni-link-tracker" omni-title="Social Share: The Opportunig src="/images/spacer1x1.gif" />
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_0_ctrlScrollShare_addThis_omniPinterestLink" class="pinterest addthis_button_pinterest omni-link-tracker" omni-title="Social Sharety" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=pinterest;prop41=The Opportunity" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_0_ctrlScrollShare_addThis_omniEmailLink" class=" omni-link-tracker" CssClasslass="email addthis_button_email" omni-title="Social Share: The Opportunity" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=email;prop41=The Opportunity" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>    
+    </div>
+</div>  
+    <div class="verticalLine"></div>
+    <div class="sectionAnchor">
+        <a href="#" class="up">up</a>
+        <span class="label">Section</span>
+        <a href="#" class="down">down</a>
+    </div>
+</div> 
+		</div>
+        
+        <div class="placeholder">
+	            
+	    </div>
+        
+        <div id="bodyregion_0_interiorarticle_0_strategysections_0_plcLeftRail" class="placeholder left">
+			
+		</div>
+		<div>
+			<p>At the World Health Assembly in 2012, 194 member states declared the complete eradication of polio a “programmatic emergency for global public health.” A concerted effort to eradicate polio offers the chance to protect all children around the world from paralye World Health Assembly in 2012, 194 member states declared the complete eradication of polio a “programmatic emergency for global public health.” A concerted effort to eradisis forever. Estimates suggest that the GPEI’s efforts will generate net benefits of US$40 billion to US$50 billion over the two decades following eradication, with approximately 85 percent of the net benefits in low-income countries. This figure does not include additional health improvements resulting from other GPEI efforts such as vitamin A supplementation or the much larger net benefits of eradication for countries that eliminated polio before the GPEI started.</p>
+<p>India, which was declared polio-free in February 2012, is perhaps the best example of how a fully funded program driven by committed leaders and dedicated workers can achieve success. India was long considered the most difficult place to end polio due to its population density, high rates of migration, poor sanitation, high birth rates, and low rates of routine immunization.</p>
+<div class="placeholder left" sizset="4" sizcache029031649502238615="14">
+<div class="figure" sizset="4" sizcache029031649502238615="14"><img alt="" src="/~/media/GFO/What We Do/POLIO_TransitTeamIndia_450x300.jpg"> 
+<div class="ic_caption">
+<p class="ic_category">Polio vaccination teams pick up supplies at a railway station in the state of Bihar in northern India.</p></div></div></div>
+<p>Over several years of effort, a number of factors contributed to India’s success in eliminating polio, including highly targeted, data-driven planning; well-trained and motivated staff; rigorous monitoring; effective communications; mobilization of trusted community and religious leaders; political will at all levels; and adequate funding. India is now sharing technical assistance and best practices with Nigeria, Afghanistan, and Pakistan.</p>
+<p>Global collaboration and innovation have produced new tools and approaches that can help improve logistical planning for polio eradication. Refinements to the polio vaccine have improved the immune response to the remaining types of the disease. (Wild type 2 poliovirus was eliminated in 1999.) New diagnostic, monitoring, mapping, and modeling tools are allowing faster and more accurate tracking of polio cases and transmission patterns.</p>
+<p>To accelerate the effort to stop transmission in their countries, leaders in Nigeria, Pakistan, and Afghanistan have been implementing national emergency plans that are overseen by their respective heads of state and are helping to increase accountability and quality of polio vaccination campaigns from the national to the local level. WHO is providing unprecedented levels of technical assistance to these countries, and improved vaccination campaign tactics are ensuring that more children are being reached. Better planning and modeling approaches are ensuring better use of resources.</p>
+<p>These improvements have helped Pakistan reduce the number of polio cases from 198 in 2011 to 56 in 2012; Afghanistan saw a decrease from 80 to 35 during the same period. Cases in Nigeria increased from 62 in 2011 to 119 in 2012, but renewed efforts to improve campaign quality are showing some positive results.</p>
+<p>The GPEI is developing a six-year strategy through 2018 that will serve as the basis for all activities that are required to stop polio transmission and result in certification of a polio-free world. It includes the use of data and rigorous analysis to set specific country-level vaccination targets, as well as the use of new tools and approaches that will enable more effective and efficient program implementation. It estimates the cost of fully funding these efforts at approximately US$1 billion a year.</p>
+<p>Successful eradication of polio worldwide would set the tone for similar efforts to protect children in the poorest, least accessible areas from other vaccine-preventable diseases. Eradicating polio is also an important milestone for the Decade of Vaccines, a shared commitment by nearly 200 countries to extend the benefits of vaccines to every person by 2020.</p>
+		</div>
+	</div>
+
+</div>
+<div id="bodyregion_0_interiorarticle_0_strategysections_1_pnlSection" class="strategySection">
+	
+	<div id="bodyregion_0_interiorarticle_0_strategysections_1_divDivider" class="divider"></div>
+    
+	<div>
+	    <a id="OurStrategy"><h2>Our Strategy</h2></a>
+		<div class="placeholder">
+			
+
+<div class="section-toolbar">
+    
+
+<div class="shareComponent addthis_toolbox" addthis:url="http://www.gatesfoundation.org/What-We-Do/Global-Development/Polio#OurStrategy" addthis:title="Our Strategy" >
+    <a class="share" href="#">Share</a>
+    <div class="shareWindow">
+        <a class="share" href="#">
+        	Share
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_1_ctrlScrollShare_addThis_omniFacebookLink" class="fb addthis_button_facebook omni-link-tracker" omni-title="Social Share: Our Strategy" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=facebook;prop41=Our Strategy" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_1_ctrlScrollShare_addThis_omniTwitterLink" class="twitter addthis_button_twitter omni-link-tracker" omni-title="Social Share: Our Strategy" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=twitter;prop41=Our Strategy" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_1_ctrlScrollShare_addThis_omniPinterestLink" class="pinterest addthis_button_pinterest omni-link-tracker" omni-title="Social Share: Our Strategy" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=pinterest;prop41=Our Strategy" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_1_ctrlScrollShare_addThis_omniEmailLink" class=" omni-link-tracker" CssClasslass="email addthis_button_email" omni-title="Social Share: Our Strategy" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=email;prop41=Our Strategy" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>    
+    </div>
+</div>  
+    <div class="verticalLine"></div>
+    <div class="sectionAnchor">
+        <a href="#" class="up">up</a>
+        <span class="label">Section</span>
+        <a href="#" class="down">down</a>
+    </div>
+</div> 
+		</div>
+
+	    <div class="placeholder">
+	            
+	    </div>
+
+		<div id="bodyregion_0_interiorarticle_0_strategysections_1_plcRightRail" class="placeholder right">
+			
+		</div>
+		
+		<p>Polio eradication is a top priority of the Bill &amp; Melinda Gates Foundation. As a major supporter of the GPEI, we contribute technical and financial resources to our GPEI partners to accelerate efforts to eradicate polio. Many of these strategies are proven, such as targeted vaccination campaigns, community mobilization, and stronger routine immunization efforts. We are also working with partners on innovative ways to enhance polio surveillance and outbreak response, accelerate the development and use of safer and more effective polio vaccines, and galvanize financial and political support for polio eradication efforts from both donor and polio-affected countries.</p>
+<p>The foundation has a unique ability to contribute to polio eradication by taking big risks and by making nontraditional investments that can lead to valuable program improvements. Examples include our funding for Geographic Information System (GIS) mapping to replace hand-drawn maps for campaign planning, GPS tracking to monitor the movement of vaccination campaign teams, and investments in polio vaccine research.</p>
+	</div>
+
+</div>
+
+<div class="strategySection">
+	<div id="bodyregion_0_interiorarticle_0_strategysections_2_divDivider" class="divider"></div>
+    
+    <a id="AreasofFocus"><h2>Areas of Focus</h2></a>
+	<div class="placeholder right">
+		
+
+<div class="section-toolbar">
+    
+
+<div class="shareComponent addthis_toolbox" addthis:url="http://www.gatesfoundation.org/What-We-Do/Global-Development/Polio#AreasofFocus" addthis:title="Areas of Focus" >
+    <a class="share" href="#">Share</a>
+    <div class="shareWindow">
+        <a class="share" href="#">
+        	Share
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_2_ctrlScrollShare_addThis_omniFacebookLink" class="fb addthis_button_facebook omni-link-tracker" omni-title="Social Share: Areas of Focus" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=facebook;prop41=Areas of Focus" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_2_ctrlScrollShare_addThis_omniTwitterLink" class="twitter addthis_button_twitter omni-link-tracker" omni-title="Social Share: Areas of Focus" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=twitter;prop41=Areas of Focus" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_2_ctrlScrollShare_addThis_omniPinterestLink" class="pinterest addthis_button_pinterest omni-link-tracker" omni-title="Social Share: Areas of Focus" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=pinterest;prop41=Areas of FoctrlScrollShare_addThis_omniPinterestLink" class="pinterest addthis_button_pinterest omni-link-tracker" omni-title="Social Share: Areas of Focus" omni-events="event1,event7" cus" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>
+        <a id="bodyregion_0_interiorarticle_0_strategysections_2_ctrlScrollShare_addThis_omniEmailLink" class=" omni-link-tracker" CssClasslass="email addthis_button_email" omni-title="Social Share: Areas of Focus" omni-events="event1,event7" omni-vars="prop40,prop41,events" omni-values="prop40=email;prop41=Areas of Focus" style="text-decoration: none;">
+        	<img src="/images/spacer1x1.gif" />
+        </a>    
+    </div>
+</div>  
+    <div class="verticalLine"></div>
+    <div class="sectionAnchor">
+        <a href="#" class="up">up</a>
+        <span class="label">Section</span>
+        <a href="#" class="down">down</a>
+    </div>
+</div> 
+	</div>
+     
+    <div class="placeholder">
+	            
+	</div>
+
+	
+	<div class="placeholder left">
+		<div class="goToShortcuts">
+			<span class="label">Go To></></span>
+			<ul>
+				
+            			<li><a id="bodyregion_0_interiorarticle_0_strategysections_2_rptSubSectionLinks_ctl00_linkSubSection">Polio Vaccination Campaign</a></li>
+            		
+            			<li><a id="bodyregion_0_interiorarticle_0_strategysections_2_rptSubSectionLinks_ctl01_linkSubSection">Routine Immunization Systems</a></li>
+            		
+            			<li><a id="bodyregion_0_interiorarticle_0_strategysections_2_rptSubSectionLinks_ctl02_><a id="bodyregion_0_interiorarticle_0_strategysections_2_rptSubSectionLinks_ctl01_linkSubSection">Routine Immunization Systems</a></li>
+            linkSubSection">Surveillance and Monitoring</a></li>
+            		
+            			<li><a id="bodyregion_0_interiorarticle_0_strategysections_2_rptSubSectionLinks_ctl03_linkSubSection">Product Development and Market Access</a></li>
+            		
+            			<li><a id="bodyregion_0_interiorarticle_0_strategysections_2_rptSubSectionLinks_ctl04_linkSubSection">Data-Driven Decision Making</a></li>
+            		
+            			<li><a id="bodyregion_0_interiorarticle_0_strategysections_2_rptSubSectionLinks_ctl05_linkSubSection">Containment Policy</a></li>
+            		
+            			<li><a id="bodyregion_0_interiorarticle_0_strategysections_2_rptSubSectionLinks_ctl06_linkSubSection">Legacy Planning</a></li>
+            		
+            			<li><a id="bodyregion_0_interiorarticle_0_strategysections_2_rptSubSectionLinks_ctl07_linkSubSection">Advocacy and Communications</a></li>
+            		                                                      
+			</ul>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="article articleWrapper inset">
+		
+
+<div class="strategySubSection">
+	<a id="bodyregion_0_interiorarticle_0_strategysections_2_strategysubsections386d3915e4df4eabaf0bdb4e0da59315_0_lnkHeader"><h2>Polio Vaccination Campaign</h2></a>
+	<P>Through improvements in outreach, staffing, technical and programmatic innovation, and data collection and analysis, polio vaccination campaigns can achieve the required immunization coverage to reach GPEI goals. Our priority is to improve the quality of campaigns in Nigeria, Afghanistan, and Pakistan, as well as other areas of Africa that are at risk of polio importation.</P>
+<DIV class="placeholder left" sizset="5" sizcache029031649502238615="14">
+<DIV class=figure sizset="5" sizcache029031649502238615="14"><IMG alt="" src="/~/media/GFO/What We Do/POLIO_InaugurationCampaignNigeria_225x200.jpg"> 
+<DIV class=ic_caption>
+<P class=ic_category>Children receiving oral polio vaccine at an event inaugurating a polio vaccination campaign in Kano, Nigeria.</P></DIV></DIV></DIV>
+<P>A cornerstone of the GPEI polio eradication strategy is the goal of reaching all children in the first year of life in the highest-risk countries with multiple doses of oral polio vaccine (OPV), through both national and local vaccination campaigns. Efforts include door-to-door immunization in areas where poliovirus is known or suspected to be circulating, as well as in areas at risk of re-importation, with limited access to healthcare, high population density and mobility, poor sanitation, and low routine immunization coverage. </P>
+<P>We support work to understand and overcome local social, cultural, political, and religious barriers to improving vaccination coverage, and we seek ways to engage the cooperation and support of political leaders as well as health professionals, including private practitioners and medical associations. Expanded staffing and training of vaccination teams and greater technical assistance are also priorities.</P>
+<P>We promote the use of sophisticated mapping and tracking tools to help identify households in villages and help vaccination teams locate children who have not yet received OPV. Such tools also help vaccination teams track nomadic populations so they can be reached with the vaccine.</P>
+</div>
+
+<div class="strategySubSection">
+	<a id="bodyregion_0_interiorarticle_0_strategysections_2_strategysubsections386d3915e4df4eabaf0bdb4e0da59315_1_lnkHeader"><h2>Routine Immunization Systems</h2></a>
+	<p>With our partners, we are working to strengthen comprehensive routine immunization programs that include polio as well as a range of other vaccine-preventable diseases, including diphtheria, tetanus, whooping cough, and measles. Currently, 20 percent of the world&rsquo;s children do not receive immunizations of any kind.</p>
+<p>Reaching every community with routine immunization requires understanding local barriers to access as well as deploying sophisticated tracking and planning tools. A strong, coordinated immunization system can also serve as a platform for other important health interventions. Other teams at the foundation are working to bring together all the necessary components of such a system, and they look for ways to extend and modify polio tools and training programs so they can be used for routine immunization against a range of diseases.</p>
+</div>
+
+<div class="strategySubSection">
+	<a id="bodyregion_0_interiorarticle_0_strategysections_2_strategysubsections386d3915e4df4eabaf0bdb4e0da59315_2_lnkHeader"><h2>Surveillance and Monitoring</h2></a>
+	<P>It is essential to pinpoint where and how wild poliovirus is still circulating, and to verify eradication of the virus. A strong and sensitive surveillance system is critical for accurately targeting campaigns, making programmatic adjustments in a timely and efficient manner, and quickly identifying and addressing outbreaks.</P>
+<DIV class="placeholder right" sizset="6" sizcache029031649502238615="14">
+<DIV class=figure sizset="6" sizcache029031649502238615="14"><IMG alt="" src="/~/media/GFO/What We Do/POLIO_SurveillanceDoctorsIndia_225x200.jpg"> 
+<DIV class=ic_caption>
+<P class=ic_category>Doctors investigate a suspected case of polio in an infant in the state of Bihar, India.</P></DIV></DIV></DIV>
+<P>Surveillance for polio is especially challenging because only a small percentage of infections result in clinically apparent paralytic disease. Poliovirus infection is confirmed by collecting stool specimens from those suspected of being infected and analyzing it in a laboratory to see if poliovirus is present.</P>
+<P>We are making investments to evaluate and improve current surveillance efforts, focusing on the highest-risk areas. One area for improvement is environmental surveillance, which involves collecting and testing water samples from sewage networks and other water sources for evidence of poliovirus transmission in the surrounding community. We have invested in a technology that promises more sensitive sampling with lower specimen volume as well as more hygienic collection. We also fund efforts to develop less expensive and more reliable lab diagnostic tools, such as a diagnostic kit that enables smaller, local labs to rapidly rule out negative samples and send positive specimens to larger reference labs for confirmation.</P>
+</div>
+
+<div class="strategySubSection">
+	<a id="bodyregion_0_interiorarticle_0_strategysections_2_strategysubsections386d3915e4df4eabaf0bdb4e0da59315_3_lnkHeader"><h2>Product Development and Market Access</h2></a>
+	<P>Although current vaccines and detection tools have proven highly effective in eliminating wild poliovirus from most countries, they may not be adequate to achieve complete eradication. We are working with partners to improve the effectiveness of existing tools while accelerating development of safer vaccines, better diagnostic tools, new antiviral drugs, and other products. We also work with partners, suppliers, and governments to ensure sufficient vaccine supply and demand and to promote market competition. </P>
+<P>OPV, the polio vaccine used in most of the developing world, is safe, effective, easy to administer, and inexpensive. But OPV consists of live, weakened viruses, which in very rare cases—1 in every 2.7 million first doses of the vaccine—can cause paralysis. In settings with very low OPV coverage, OPV vaccine viruses can also mutate and begin to circulate in the population, just like wild polioviruses. </P>
+<P>We support the development of new OPV formulations that are not associated with the risk of mutation as well as vaccine alternatives to OPV. One of the most promising alternatives is inactivated polio vaccine (IPV), which is routinely used in most developed countries but has not been broadly used elsewhere because of its higher cost and the need to have a trained provider administer it by injection. We support efforts to lower the cost of IPV and put in place the training, supply, delivery, and communications infrastructure to expand its use. We also support efforts to develop antiviral drugs to respond to a future accidental or intentional reintroduction of poliovirus in the post-eradication era.</P>
+<P>Our investments also include the development of better tools to measure immunity to polio. Blood sampling is currently the only method available to directly measure polio immunity, but widespread blood testing has been hampered by obstacles such as the need for government approval to collect blood samples. We support the development of a simple, low-cost device to test oral fluid or another readily accessible specimen to measure the immune status of children against polio, tetanus, and measles.</P>
+</div>
+
+<div class="strategySubSection">
+	<a id="bodyregion_0_interiorarticle_0_strategysections_2_strategysubsections386d3915e4df4eabaf0bdb4e0da59315_4_lnkHeader"><h2>Data-Driven Decision Making</h2></a>
+	<p>Data collection and data sharing are critical to achieving polio eradication. We work to improve access to and use of data to inform program decision making, track progress, improve environmental surveillance, and guide the development of vaccines and diagnostic tools. We work with a consortium of modelers, led by the University of Pittsburghimprove access to and use of data to inform program decision making, track progress, improve environmental surveillance, and guide the  through the Vaccine Modeling Initiative, to develop an overall decision framework for polio eradication efforts that identifies key decision areas, the data needed to inform decisions, and the staff and partners needed to analyze the data and create models.</p>
+<p>We are also working with GPEI partners to shift from using polio cases to calculate progress and risk to using population immunity as a measure. We support Kid Risk, a nonprofit group with extensive polio risk-modeling experience that is developing a system to generate ongoing estimates of population immunity. The system is in the pilot stage using data from Nigeria and India and will be expanded to all priority countries in 2013. We are also working with Seattle-based Global Good to develop an immunity model and projections for stopping polio transmission in Nigeria and Pakistan based on sampling data.</p>
+<p>To increase data access and sharing, we are developing a data access platform at WHO that will house key polio data that is standardized, quality assured, and available for analysis and decision making.</p>
+</div>
+
+<div class="strategySubSection">
+	<a id="bodyregion_0_interiorarticle_0_strategysections_2_strategysubsections386d3915e4df4eabaf0bdb4e0da59315_5_lnkHeader"><h2>Containment Policy</h2></a>
+	<p>The containment and eventual destruction of wild poliovirus strains in laboratories is a key step in avoiding the escape of the virus and potential reemergence of disease. The most recent WHO containment guidelines, known as GAP III, have been in draft form since 2009. These guidelines and safety procedures must be updated to reflect recent developments and finalized well before polio transmission is stopped. </p>
+<p>We support our GPEI partners in urgently pushing for international consensus on issues such as the safe handling of residual polioviruses that will be essential for activities such as vaccine production, research, and diagnostic reagent production; procedures for inventorying and destroying the viruses; and criteria and processes for responding to any reintroduced or emergent polioviruses.</p>
+<p>Other critical issues include implementing relevant policies and ensuring the appropriate implementation and governance infrastructure at the global, regional, and national levels.</p>
+</div>
+
+<div class="strategySubSection">
+	<a id="bodyregion_0_interiorarticle_0_strategysections_2_strategysubsections386d3915e4df4eabaf0bdb4e0da59315_6_lnkHeader"><h2>Legacy Planning</h2></a>
+	<p>In its two decades of operation, the GPEI has trained and mobilized millions of staff and volunteers, identified and reached households and communities that had been untouched by other initiatives, and established a robust global surveillance and response system. </p>
+<p>Through polio eradication efforts, GPEI partners have learned how to overcome logistical, geographic, social, political, cultural, ethnic, gender, financial, and other barriers to working with people in the poorest and least accessible areas. The fight against polio has led to new ways to achieve real impact on human health in the developing world&mdash;whether through political engagement, funding, planning and management strategies, or research. As a result, the GPEI has developed a wide range of assets, including detailed knowledge of high-risk groups and migration patterns, effective planning and monitoring procedures, highly trained technical staff, local and regional technical advisory bodies, and a critical mass of political and organizational commitment based on successful partnerships between global national, religious, and local leaders.These assets have already been enlisted to respond to other public health threats and emergencies, including meningitis in western and central Africa, H1N1 flu in Sub-Saharan Africa and the Asian subcontinent, and flooding and tsunami disasters in South Asia. </p>
+<p>We are working with the GPEI to identify ways in which the polio infrastructure&mdash;including supply chains, surveillance and laboratory systems, and social mobilization networks&mdash;can be used to support other health initiatives and immunization programs in the long term, particularly after polio is successfully eradicated.</p>
+</div>
+
+<div class="strategySubSection">
+	<a id="bodyregion_0_interiorarticle_0_strategysections_2_strategysubsections386d3915e4df4eabaf0bdb4e0da59315_7_lnkHeader"><h2>Advocacy and Communications</h2></a>
+	<DIV class="placeholder left" sizset="7" sizcache029031649502238615="14">
+<DIV class=figure sizset="7" sizcache029031649502238615="14"><IMG alt="" src="/~/media/GFO/What We Do/POLIO_KickPolioOutNigeria_225x305.jpg"> 
+<DIV class=ic_caption>
+<P class=ic_category>&nbsp;A woman delivering vaccines house-to-house in Sokoto, Nigeria.</P></DIV></DIV></DIV>
+<P>We work closely with GPEI partners to mobilize funding and sustained global and national political momentum for polio eradication. This involves promoting efforts to increase polio funding from government donors as well as cultivating new and nontraditional donors. We also encourage governments and leaders of polio-affected countries to follow through on their commitments and be accountable for the success of polio campaigns, and we help them identify and implement sources of financing to fund those campaigns. </P>
+<P>We also work to align and mobilize other advocates in support of polio eradication, including influential community members such as religious leaders; volunteer organizations; and employers. With partners that include Rotary International, UNICEF, and the Global Poverty Project, we use both traditional and social media to build public awareness of and support for polio eradication and broader immunization activities in both donor countries and countries where polio still exists or where reintroduction is a risk. We also support efforts to tailor communications to particular social, cultural, and political contexts to build demand for vaccination and to dispel misperceptions about the safety and efficacy of vaccines.</P>
+</div>
+	</div>
+</div>
+	
+	</article>
+	
+	<div class="placeholder placeholder1">
+                
+			
+  				
+	</div>
+
+
+
+	
+	<noindex>
+		<div class="paginator">
+			<div class="next">
+				Next: <a id="bodyregion_0_NextButton_hlNext" href="/What-We-Do/Global-Development/Vaccine-Delivery">Vaccine Delivery</a></div>
+		</div>
+	</noindex>
+
+
+</div>
+<div class="clear">
+</div>
+	<a href="http://www.impatientoptimists.org/" id="bodyregion_0_ctl02_lnkIO" class="visitBlog" target="_blank"><span></span>Visit Our Blog</a>
+</div>
+
+				<noindex>
+
+<footer>
+		<div class="wrapper">
+			<div class="subMenus">
+				<ul class="subMenu">
+						<li>
+							
+							<a class="first" href="/Who-We-Are/General-Information/Foundation-get="_blank"><span></span>Visit Our Blog</a>
+</div>
+
+				<noindex>
+
+<footer>
+		Factsheet">Fact Sheet</a>
+						</li>
+					
+						<li>
+							
+							<a href="/How-We-Work/General-Information/Grantseeker-FAQ">Grantseeker FAQ</a>
+						</li>
+					
+						<li>
+							
+							<a href="/Who-We-Are/General-Information/Letter-from-Bill-and-Melinda-Gates">Letter from Bill &amp; Melinda Gates</a>
+						</li>
+					</ul>
+					
+						
+				<ul class="subMenu second">
+						<li>
+							
+							<a class="first" href="/Jobs">Jobs</a>
+						</li>
+					
+						<li>
+							
+							<a href="/Media-Center">Press Room</a>
+						</li>
+					
+						<li>
+							
+							<a href="/Who-We-Are/General-Information/Contact-Us">Contact Us</a>
+						</li>
+					</ul>
+
+			<figure class="teaser">
+				<img src="/~/media/GFO/Site/Footer Images/bg_bill_melinda_gates_foundation_visitor_center.jpg?h=69&amp;la=en&amp;mh=69&amp;mw=150&amp;w=150" alt="Visitor Center" width="150" height="69">
+				<figcaption>
+					<h3>VISITOR CENTER</h3>
+					<p>At the Bill &amp; Melinda Gates Foundation Visitor Center, you&rsquo;ll find stories of work that is improving lives, from Seattle to South Africa. <a href="/Visitor-Center" target="_blank">Plan Your Visit</a></p>
+				</figcaption>
+			</figure>
+			<div class="contactInfo">
+				<p><span>440 5th Ave N.,</span>
+<span>Seattle, WA 98109</span>
+<span>(206) 709-3100  ext.7100</span>
+<span>Hours: Tues - Sat</sf="/Visitor-Center" target="_blank">Plan Your Visit</a></p>
+				</figcaption>
+			</figure>
+			<div class="contactInfo">
+				<p><span>440 5th Ave Npan>
+<span>10 a.m. &ndash; 5 p.m.</span>
+<span>Admission: Free</span></p>
+			</div>
+			<div class="clear"></div>
+	</div>
+		</div>
+		<div class="bottomFooter">
+			<div class="wrapper">
+				<div class="copyright">
+				<p>
+					© 1999-2015 Bill &amp; Melinda Gates Foundation. All Rights Reserved.
+				</p>
+
+				<p>
+						<a class="privacyPolicy" href="/Privacy-Policy">Privacy Policy</a>
+					
+						<a href="/Terms-of-Use">Terms of Service</a>
+					</p>
+
+				</div>
+				<section class="connect">
+					<h3>Connect</h3>
+					
+							<ul class="socialIcons">
+						
+							
+<li>
+	<a id="footerregion_0_rptSprites_ctl01_sprite_hlSprite" class="ir socialIcon omni-link-tracker" omni-title="Social Connection: flickr" omni-events="event1,event4" omni-vars="events" omni-values="" href="http://www.flickr.com/photos/gatesfoundation" target="_blank">flickr
+		<span>
+			<img id="footerregion_0_rptSprites_ctl01_sprite_imgDefault" class="defaultState" src="/~/media/GFO/Social%20Icons/iconflickrdarkgray.png" style="border-width:0px;" /><img id="footerregion_0_rptSprites_ctl01_sprite_imgHover" class="hoverState" src="/~/media/GFO/Social%20Icons/iconflickrblack.png" style="border-width:0px;" />
+		</span>
+	</a>
+</li>
+						
+							
+<li>
+	<a id="footerregion_0_rptSprites_ctl02_sprite_hlSprite" class="ir socialIcon omni-link-tracker" omni-title="Social Connection: Facebook" omni-events="event1,event4" omni-vars="events" omni-values="" href="http://www.facebook.com/billmelindagatesfoundation" target="_blank">Facebook
+		<span>
+			<img id="footerregion_0_rptSprites_ctl02_sprite_imgDefault" class="defaultState" src="/~/media/GFO/Social%20Icons/iconfacebookdarkgray.png" style="border-width:0px;" /><img id="footerregion_0_rptSprites_ctl02_sprite_imgHover" class="hoverState" src="/~/media/GFO/Social%20Icons/iconfacebookblack.png" style="border-width:0px;" />
+		</span>
+	</a>
+</li>
+						
+							
+<li>
+	<a id="footerregion_0_rptSprites_ctl03_sprite_hlSprite" class="ir socialIcon omni-link-tracker" omni-title="Social Connection: Impatient Optimists" omni-events="event1,event4" omni-vars="events" omni-values="" href="http://www.impatientoptimists.org" target="_blank">Impatient Optimists
+		<span>
+			<img id="footerregion_0_rptSprites_ctl03_sprite_imgDefault" class="defaultState" src="/~/media/GFO/Social%20Icons/iconiodarkgray.png" style="border-width:0px;" /><img id="footerregion_0_rptSprites_ctl03_sprite_imgHover" class="hoverState" src="/~/media/GFO/Social%20Icons/iconioblack.png" style="border-width:0px;" />
+		</span>
+	</a>
+</li>
+						
+							
+<li>
+	<a id="footerregion_0_rptSprites_ctl04_sprite_hlSprite" class="ir socialIcon omni-link-tracker" omni-title="Social Connection: twitter" omni-events="event1,event4" omni-vars="events" omni-values="" href="http://twitter.com/gatesfoundation" target="_blank">twitter
+		<span>
+			<img id="footerregion_0_rptSprites_ctl04_sprite_imgDefault" class="defaultState" src="/~/media/GFO/Social%20Icons/icontwitterdarkgray.png" style="border-width:0px;" /><img id="footerregion_0_rptSprites_ctl04_sprite_imgHover" class="hoverState" src="/~/media/GFO/Social%20Icons/icontwitterblack.png" style="border-width:0px;" />
+		</span>
+	</a>
+</li>
+						
+							
+<li>
+	<a id="footerregion_0_rptSprites_ctl05_sprite_hlSprite" class="ir socialIcon omni-link-tracker" omni-title="Social Connection: youtube" omni-events="event1,event4" omni-vars="events" omni-values="" href="http://www.youtube.com/user/GatesFoundation" target="_blank">youtube
+		<span>
+			<img id="footerregion_0_rptSprites_ctl05_sprite_imgDefault" class="defaultState" src="/~/media/GFO/Social%20Icons/iconyoutubedarkgray.png" style="border-width:0px;" /><img id="footerregion_0_rptSprites_ctl05_sprite_imgHover" class="hoverState" src="/~/media/GFO/Social%20Icons/iconyoutubeblack.png" style="border-width:0px;" />
+		</span>
+	</a>
+</li>
+						
+							</ul>
+							
+				</section>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="print-footer">
+        <span>About the Foundation</span>
+        <p>
+            Guided by the belief that every life has equal value, the Bill & Melinda Gates Foundation aspires 
+            to help all people lead healthy, productive lives. We are dedicated to discovering and disseminating 
+            innovative approaches to addressing extreme poverty and poor health in developing countries and improving 
+            the U.S. education system.  Because our financial resources, while significant, represent a small fraction 
+            of what’s needed to address these challenges, we work in partnership with governments, the private sector, 
+            and other donors and organizations to achieve the greatest possible impact.
+            <a href="http://www.gatesfoundation.org">www.gatesfoundation.org</a>
+        </p>
+    </div>
+</footer></noindex>
+			</div>
+
+			
+
+<script type="text/javascript" language="javascript">var d= document;</script>
+<script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#username=gatesfoundation&domready=1"></script>
+<script type="text/javascript" language="javascript">
+	var addthis_config =	{
+		data_track_clickback: false,
+		pub_id: 'gatesfoundation',
+		ui_language: 'en'
+	};
+
+	var addthis_share = {
+		templates: {
+			twitter: "{{title}} {{url}} via @gatesfoundation"
+		},
+		url_transforms: {
+			shorten: {
+				twitter: 'bitly'
+			}
+		},
+		shorteners: {
+			bitly: {
+				login: 'gatesfoundation',
+				apiKey: 'R_1e5528c8252c17dcff3d30ee63b02233'
+			}
+		}
+	};
+
+      // Resets the AddThis button stacks, for use after loading AJAX content.
+	var script = 'https://s7.addthis.com/js/250/addthis_widget.js#username=gatesfoundation&async=1';
+	function ResetAddThis() {
+		
+		if (window.addthis) {
+			window.addthis = null;
+			window._adr = null;
+			window._atc = null;
+			window._atd = null;
+			window._ate = null;
+			window._atr = null;
+			window._atw = null;
+		}
+		jQuery.getScript(script);
+		jQuery('div[id*=at16]').remove();
+		console.log("In ResetAddThis");
+		return true;
+	}
+</script>
+		
+
+<script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function () { jQuery.getScript(script, function () { addthis.init(); }); });//]]>
+</script>
+</form>		
+	    
+    <script type="text/javascript">
+        var s_account = 'gatesfoundationcomgfoprd';
+    </script>
+    <script language="javascript" type="text/javascript" src="/javascripts/gfo/s_code.js"></script>
+    <script language="javascript" type="text/javascript"><!--
+	s.events = "event5";
+s.server = "FE02";
+s.channel = "What We Do";
+s.pageType = "";
+s.pageName = "Polio";
+s.prop3 = "'\x2fWhat-We-Do\x2fGlobal-Development\x2fPolio'";
+s.prop4 = "{3CFA772B-8095cript language="javascript" type="text/javascript"><!--
+	s.events = "event5";
+s.server = "FE02";
+s.channe-4D2F-883D-E4A1147DE4F7}";
+s.prop23 = "Strategy Page";
+s.prop26 = "";
+s.prop27 = "Polio";
+s.prop28 = "Global Development";
+s.prop32 = "";
+s.prop34 = "";
+s.prop35 = "";
+s.eVar23 = "Strategy Page";
+s.eVar27 = "Polio";
+
+	
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code;
+ //--></script>
+    <script language="JavaScript" type="text/javascript"><!--
+        if (navigator.appVersion.indexOf('MSIE') >= 0) document.write(unescape('%3C') + '\!-' + '-');
+//--></script>
+    <noscript>
+        <img src="http://omniture.gatesfoundation.org/b/ss/gatesfoundationcomgfoprd/1/H.20.3--NS/0" height="1" width="1" border="0" alt="" /></noscript><!--/DO NOT REMOVE/-->
+    <script language="javascript" type="text/javascript" src="/javascripts/gfo/omnitracker.js"></script>
+    
+    <script language="javascript" type="text/javascript"><!--
+        if (typeof noTrack == 'undefined' || noTrack == false) { omniTracker.TrackPage(); }
+//--></script>
+    
+
+	</body>
+</html>
+ s

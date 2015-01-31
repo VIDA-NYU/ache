@@ -1,0 +1,877 @@
+  <!DOCTYPE html>
+
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Dengue in the USA | Break Dengue</title>
+
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/plugins/sitepress-multilingual-cms/res/css/language-selector.css?v=2.9.2" type="text/css" media="all" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/js/modernizr.foundation.js"></script>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" href="http://www.breakdengue.org/wp-content/uploads/2014/06/favicon.ico">
+    
+	<link rel="alternate" type="application/rss+xml" title="Break Dengue Feed" href="http://www.breakdengue.org/feed/">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-includes/js/thickbox/thickbox.css?ver=1.0">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/themes/OneTouch/inc/homepage_builder/assets/css/aqpb-view.css?ver=1420621058">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/plugins/nrelate-related-content/admin/styles/nrelate-panels-common.min.css?ver=0.52.6">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.4.1">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/plugins/easy-author-image/css/easy-author-image.css?ver=3.5.1">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/plugins/mappress-google-maps-for-wordpress/css/mappress.css?ver=2.42.1">
+<!--[if IE 6]>
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/plugins/nrelate-related-content/admin/styles/ie6-panels.min.css?ver=0.52.6">
+<![endif]-->
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/plugins/nrelate-related-content/admin/styles/nrelate-panels-default.min.css?ver=0.52.6">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/plugins/revslider/rs-plugin/css/settings.css?rev=4.5.4&#038;ver=3.5.1">
+<style type='text/css'>
+.tp-caption.medium_grey{position:absolute;color:#fff;text-shadow:0px 2px 5px rgba(0,0,0,0.5);font-weight:700;font-size:20px;line-height:20px;font-family:Arial;padding:2px 4px;margin:0px;border-width:0px;border-style:none;background-color:#888;white-space:nowrap}.tp-caption.small_text{position:absolute;color:#fff;text-shadow:0px 2px 5px rgba(0,0,0,0.5);font-weight:700;font-size:14px;line-height:20px;font-family:Arial;margin:0px;border-width:0px;border-style:none;white-space:nowrap}.tp-caption.medium_text{position:absolute;color:#fff;text-shadow:0px 2px 5px rgba(0,0,0,0.5);font-weight:700;font-size:20px;line-height:20px;font-family:Arial;margin:0px;border-width:0px;border-style:none;white-space:nowrap}.tp-caption.large_text{position:absolute;color:#fff;text-shadow:0px 2px 5px rgba(0,0,0,0.5);font-weight:700;font-size:40px;line-height:40px;font-family:Arial;margin:0px;border-width:0px;border-style:none;white-space:nowrap}.tp-caption.very_large_text{position:absolute;color:#fff;text-shadow:0px 2px 5px rgba(0,0,0,0.5);font-weight:700;font-size:60px;line-height:60px;font-family:Arial;margin:0px;border-width:0px;border-style:none;white-space:nowrap;letter-spacing:-2px}.tp-caption.very_big_white{position:absolute;color:#fff;text-shadow:none;font-weight:800;font-size:60px;line-height:60px;font-family:Arial;margin:0px;border-width:0px;border-style:none;white-space:nowrap;padding:0px 4px;padding-top:1px;background-color:#000}.tp-caption.very_big_black{position:absolute;color:#000;text-shadow:none;font-weight:700;font-size:60px;line-height:60px;font-family:Arial;margin:0px;border-width:0px;border-style:none;white-space:nowrap;padding:0px 4px;padding-top:1px;background-color:#fff}.tp-caption.modern_medium_fat{position:absolute;color:#000;text-shadow:none;font-weight:800;font-size:24px;line-height:20px;font-family:"Open Sans",sans-serif;margin:0px;border-width:0px;border-style:none;white-space:nowrap}.tp-caption.modern_medium_fat_white{position:absolute;color:#fff;text-shadow:none;font-weight:800;font-size:24px;line-height:20px;font-family:"Open Sans",sans-serif;margin:0px;border-width:0px;border-style:none;white-space:nowrap}.tp-caption.modern_medium_light{position:absolute;color:#000;text-shadow:none;font-weight:300;font-size:24px;line-height:20px;font-family:"Open Sans",sans-serif;margin:0px;border-width:0px;border-style:none;white-space:nowrap}.tp-caption.modern_big_bluebg{position:absolute;color:#fff;text-shadow:none;font-weight:800;font-size:30px;line-height:36px;font-family:"Open Sans",sans-serif;padding:3px 10px;margin:0px;border-width:0px;border-style:none;background-color:#4e5b6c;letter-spacing:0}.tp-caption.modern_big_redbg{position:absolute;color:#fff;text-shadow:none;font-weight:300;font-size:30px;line-height:36px;font-family:"Open Sans",sans-serif;padding:3px 10px;padding-top:1px;margin:0px;border-width:0px;border-style:none;background-color:#de543e;letter-spacing:0}.tp-caption.modern_small_text_dark{position:absolute;color:#555;text-shadow:none;font-size:14px;line-height:22px;font-family:Arial;margin:0px;border-width:0px;border-style:none;white-space:nowrap}.tp-caption.boxshadow{-moz-box-shadow:0px 0px 20px rgba(0,0,0,0.5);-webkit-box-shadow:0px 0px 20px rgba(0,0,0,0.5);box-shadow:0px 0px 20px rgba(0,0,0,0.5)}.tp-caption.black{color:#000;text-shadow:none}.tp-caption.noshadow{text-shadow:none}.tp-caption.thinheadline_dark{position:absolute;color:rgba(0,0,0,0.85);text-shadow:none;font-weight:300;font-size:30px;line-height:30px;font-family:"Open Sans";background-color:transparent}.tp-caption.thintext_dark{position:absolute;color:rgba(0,0,0,0.85);text-shadow:none;font-weight:300;font-size:16px;line-height:26px;font-family:"Open Sans";background-color:transparent}.tp-caption.largeblackbg{position:absolute;color:#fff;text-shadow:none;font-weight:300;font-size:50px;line-height:70px;font-family:"Open Sans";background-color:#000;padding:0px 20px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px}.tp-caption.largepinkbg{position:absolute;color:#fff;text-shadow:none;font-weight:300;font-size:50px;line-height:70px;font-family:"Open Sans";background-color:#db4360;padding:0px 20px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px}.tp-caption.largewhitebg{position:absolute;color:#000;text-shadow:none;font-weight:300;font-size:50px;line-height:70px;font-family:"Open Sans";background-color:#fff;padding:0px 20px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px}.tp-caption.largegreenbg{position:absolute;color:#fff;text-shadow:none;font-weight:300;font-size:50px;line-height:70px;font-family:"Open Sans";background-color:#67ae73;padding:0px 20px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px}.tp-caption.excerpt{font-size:36px;line-height:36px;font-weight:700;font-family:Arial;color:#ffffff;text-decoration:none;background-color:rgba(0,0,0,1);text-shadow:none;margin:0px;letter-spacing:-1.5px;padding:1px 4px 0px 4px;width:150px;white-space:normal !important;height:auto;border-width:0px;border-color:rgb(255,255,255);border-style:none}.tp-caption.large_bold_grey{font-size:60px;line-height:60px;font-weight:800;font-family:"Open Sans";color:rgb(102,102,102);text-decoration:none;background-color:transparent;text-shadow:none;margin:0px;padding:1px 4px 0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.medium_thin_grey{font-size:34px;line-height:30px;font-weight:300;font-family:"Open Sans";color:rgb(102,102,102);text-decoration:none;background-color:transparent;padding:1px 4px 0px;text-shadow:none;margin:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.small_thin_grey{font-size:18px;line-height:26px;font-weight:300;font-family:"Open Sans";color:rgb(117,117,117);text-decoration:none;background-color:transparent;padding:1px 4px 0px;text-shadow:none;margin:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.lightgrey_divider{text-decoration:none;background-color:rgba(235,235,235,1);width:370px;height:3px;background-position:initial initial;background-repeat:initial initial;border-width:0px;border-color:rgb(34,34,34);border-style:none}.tp-caption.large_bold_darkblue{font-size:58px;line-height:60px;font-weight:800;font-family:"Open Sans";color:rgb(52,73,94);text-decoration:none;background-color:transparent;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.medium_bg_darkblue{font-size:20px;line-height:20px;font-weight:800;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:rgb(52,73,94);padding:10px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.medium_bold_red{font-size:24px;line-height:30px;font-weight:800;font-family:"Open Sans";color:rgb(227,58,12);text-decoration:none;background-color:transparent;padding:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.medium_light_red{font-size:21px;line-height:26px;font-weight:300;font-family:"Open Sans";color:rgb(227,58,12);text-decoration:none;background-color:transparent;padding:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.medium_bg_red{font-size:20px;line-height:20px;font-weight:800;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:rgb(227,58,12);padding:10px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.medium_bold_orange{font-size:24px;line-height:30px;font-weight:800;font-family:"Open Sans";color:rgb(243,156,18);text-decoration:none;background-color:transparent;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.medium_bg_orange{font-size:20px;line-height:20px;font-weight:800;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:rgb(243,156,18);padding:10px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.grassfloor{text-decoration:none;background-color:rgba(160,179,151,1);width:4000px;height:150px;border-width:0px;border-color:rgb(34,34,34);border-style:none}.tp-caption.large_bold_white{font-size:58px;line-height:60px;font-weight:800;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:transparent;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.medium_light_white{font-size:30px;line-height:36px;font-weight:300;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:transparent;padding:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.mediumlarge_light_white{font-size:34px;line-height:40px;font-weight:300;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:transparent;padding:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.mediumlarge_light_white_center{font-size:34px;line-height:40px;font-weight:300;font-family:"Open Sans";color:#ffffff;text-decoration:none;background-color:transparent;padding:0px 0px 0px 0px;text-align:center;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.medium_bg_asbestos{font-size:20px;line-height:20px;font-weight:800;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:rgb(127,140,141);padding:10px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.medium_light_black{font-size:30px;line-height:36px;font-weight:300;font-family:"Open Sans";color:rgb(0,0,0);text-decoration:none;background-color:transparent;padding:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.large_bold_black{font-size:58px;line-height:60px;font-weight:800;font-family:"Open Sans";color:rgb(0,0,0);text-decoration:none;background-color:transparent;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.mediumlarge_light_darkblue{font-size:34px;line-height:40px;font-weight:300;font-family:"Open Sans";color:rgb(52,73,94);text-decoration:none;background-color:transparent;padding:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.small_light_white{font-size:17px;line-height:28px;font-weight:300;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:transparent;padding:0px;border-width:0px;border-color:rgb(255,214,88);border-style:none}.tp-caption.roundedimage{border-width:0px;border-color:rgb(34,34,34);border-style:none}.tp-caption.large_bg_black{font-size:40px;line-height:40px;font-weight:800;font-family:"Open Sans";color:rgb(255,255,255);text-decoration:none;background-color:rgb(0,0,0);padding:10px 20px 15px;border-width:0px;border-color:rgb34,34,34);border-style:none}.tp-caption.large_bg_black{font-size:40px;line-height:40px;font-weight:800;font-family:"Open Sans";(255,214,88);border-style:none}.tp-caption.mediumwhitebg{font-size:30px;line-height:30px;font-weight:300;font-family:"Open Sans";color:rgb(0,0,0);text-decoration:none;background-color:rgb(255,255,255);padding:5px 15px 10px;text-shadow:none;border-width:0px;border-color:rgb(0,0,0);border-style:none}
+.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+</style>
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/themes/OneTouch/inc/vc-tile/assets/css/frontend.css">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/plugins/mailchimp-for-wp/assets/css/css.php?checkbox=1&#038;form=1&#038;ver=1.5.8">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/css/foundation.min.css">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/css/app.css">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/css/responsive.css">
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/css/colorbox.css">
+  <script type="text/javascript">var nr_domain = "www.breakdengue.org", nr_is_home = 0, nr_pageurl = 'http://www.breakdengue.org/dengue-in-the-usa/';</script>
+  <script async type="text/javascript" id="nrelate_loader_script" data-nrelate-options="{&quot;plugins&quot;:{&quot;related&quot;:{&quot;cssstyle&quot;:&quot;default&quot;,&quot;thumbsize&quot;:110,&quot;widgetstyle&quot;:1}}}" src="http://www.breakdengue.org/wp-content/plugins/nrelate-related-content/admin/nrelate_js.min.js?ver=0.52.6"></script><script type='text/javascript' src='http://www.breakdengue.org/wp-includes/js/jquery/jquery.js?ver=1.8.3'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.plugins.min.js?rev=4.5.4&#038;ver=3.5.1'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/plugins/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js?rev=4.5.4&#038;ver=3.5.1'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-includes/js/comment-reply.min.js?ver=3.5.1'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/themes/OneTouch/assets/js/modernizr.foundation.js'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/themes/OneTouch/assets/js/app.js'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/plugins/sitepress-multilingual-cms/res/js/jquery.cookie.js?ver=2.9.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpml_browser_redirect_params = {"pageLanguage":"en","languageUrls":{"en":"http:\/\/www.breakdengue.org\/dengue-in-the-usa\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"www.breakdengue.org","path":"\/","expiration":24}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/plugins/sitepress-multilingual-cms/res/js/browser-redirect.js?ver=2.9.2'></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('img[usemap]').rwdImageMaps();
+	});
+</script>
+<style type="text/css">
+	img[usemap] { max-width: 100%; height: auto; }
+</style>
+<script type="text/javascript">var icl_lang = 'en';var icl_home = 'http://www.breakdengue.org/';</script>
+<script type="text/javascript" src="http://www.breakdengue.org/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js"></script>
+<meta name="generator" content="WPML ver:2.9.2 stt:1,2,43;0" />
+<style type="text/css">
+	/* Form Width */
+	div#vfb-form-1 {
+		width: 600px;
+	}
+	/* Fieldsets */
+	.vfb-form-1 fieldset {
+		background-color: #ffffff;
+		border: 1px solid #d3d3d3;
+	}
+
+	/* Legends */
+	.vfb-form-1 .vfb-legend {
+		border-bottom: 0px solid #cccccc;
+		color: #990000;
+	}
+
+	/* Sections */
+	.vfb-form-1 .vfb-section-div {
+		background-color: #ffffff;
+		border: 0px solid ;
+		color: #373737;
+	}
+
+		.vfb-form-1 .vfb-section-div h4 {
+			border-bottom: 0px solid ;
+		}
+
+	/* Labels */
+	.vfb-form-1 label.vfb-desc,
+	.vfb-form-1 .verification,
+	.vfb-form-1 .vfb-page-counter {
+		font-weight: normal;
+		font-size: 12px;
+		color: #4d4d4d;
+	}
+
+		.vfb-form-1 label .vfb-required-asterisk {
+			color: #bc1212;
+		}
+
+	/* Fields */
+	.vfb-form-1 input.vfb-text,
+	.vfb-form-1 textarea.vfb-textarea {
+		background-color: #f0f3f4;
+		font-weight: normal;
+		font-size: 12px;
+		color: #4d4d4d;
+	}
+
+	/* Descriptions */
+	.vfb-form-1 li span label {
+		font-weight: normal;
+		font-size: 11px;
+		color: #6d6c6c;
+	}
+
+	/* Instructions */
+	.vfb-form-1 .vfb-item-instructions {
+	    background-color: #ffffff;
+	    border: 0px solid ;
+	    color: #4d4d4d;
+	}
+
+	/* Paging Button */
+	.vfb-form-1 .vfb-page-next {
+		background-color: #5b8498;
+		font-weight: normal;
+		font-size: 12px;
+		color: #ffffff;
+	}
+
+		.vfb-form-1 .vfb-page-next:hover {
+			background-color: #3d5865;
+		}
+
+	/* Validation */
+	.vfb-form-1 input.vfb-text.vfb-error,
+	.vfb-form-1 input[type="text"].vfb-text.vfb-error,
+	.vfb-form-1 input[type="tel"].vfb-text.vfb-error,
+	.vfb-form-1 input[type="email"].vfb-text.vfb-error,
+	.vfb-form-1 input[type="url"].vfb-text.vfb-error,
+	.vfb-form-1 select.vfb-select.vfb-error,
+	.vfb-form-1 textarea.vfb-textarea.vfb-error {
+		border: 0px solid red;
+	}
+
+		.vfb-form-1 label.vfb-error {
+			font-weight: bold;
+			font-size: 11px;
+			color: red;
+		}
+
+/* Custom Rules */
+vfb-form-1 .vfb-legend H3 {
+background: url('http://www.breakdengue.org/wp-content/uploads/2013/05/home-page-icon.jpg');
+background-repeat: no-repeat;
+background-position: left;
+padding-left: 60px;
+padding-top: 10px;
+padding-bottom: 30px;
+border-bottom: 1px solid #eff3f4;
+}
+
+form label {
+text-transform: none;
+}
+
+.vfb-form-1 input.vfb-text, .vfb-form-1 textarea.vfb-textarea, .visual-form-builder span.vfb-right select {
+background-color: #f0f3f4;
+font-weight: normal;
+font-size: 12px;
+color: #4d4d4d;
+border: 1px solid #EAEAEA;
+border-radius: 0;
+box-shadow: none;
+-webkit-box-shadow: none;
+padding: 6px 15px;
+}
+
+textarea.vfb-medium {
+height: 5em;
+}
+</style>
+<style type="text/css">
+	/* Form Width */
+	div#vfb-form-2 {
+		width: 600px;
+	}
+	/* Fieldsets */
+	.vfb-form-2 fieldset {
+		background-color: #ededc7;
+		border: 1px solid #d3d3d3;
+	}
+
+	/* Legends */
+	.vfb-form-2 .vfb-legend {
+		border-bottom: 0px solid #cccccc;
+		color: #990000;
+	}
+
+	/* Sections */
+	.vfb-form-2 .vfb-section-div {
+		background-color: #ffffff;
+		border: 0px solid ;
+		color: #373737;
+	}
+
+		.vfb-form-2 .vfb-section-div h4 {
+			border-bottom: 0px solid ;
+		}
+
+	/* Labels */
+	.vfb-form-2 label.vfb-desc,
+	.vfb-form-2 .verification,
+	.vfb-form-2 .vfb-page-counter {
+		font-weight: normal;
+		font-size: 12px;
+		color: #4d4d4d;
+	}
+
+		.vfb-form-2 label .vfb-required-asterisk {
+			color: #bc1212;
+		}
+
+	/* Fields */
+	.vfb-form-2 input.vfb-text,
+	.vfb-form-2 textarea.vfb-textarea {
+		background-color: #f0f3f4;
+		font-weight: normal;
+		font-size: 12px;
+		color: #4d4d4d;
+	}
+
+	/* Descriptions */
+	.vfb-form-2 li span label {
+		font-weight: normal;
+		font-size: 11px;
+		color: #6d6c6c;
+	}
+
+	/* Instructions */
+	.vfb-form-2 .vfb-item-instructions {
+	    background-color: #ffffff;
+	    border: 0px solid ;
+	    color: #4d4d4d;
+	}
+
+	/* Paging Button */
+	.vfb-form-2 .vfb-page-next {
+		background-color: #5b8498;
+		font-weight: normal;
+		font-size: 12px;
+		color: #ffffff;
+	}
+
+		.vfb-form-2 .vfb-page-next:hover {
+			background-color: #3d5865;
+		}
+
+	/* Validation */
+	.vfb-form-2 input.vfb-text.vfb-error,
+	.vfb-form-2 input[type="text"].vfb-text.vfb-error,
+	.vfb-form-2 input[type="tel"].vfb-text.vfb-error,
+	.vfb-form-2 input[type="email"].vfb-text.vfb-error,
+	.vfb-form-2 input[type="url"].vfb-text.vfb-error,
+	.vfb-form-2 select.vfb-select.vfb-error,
+	.vfb-form-2 textarea.vfb-textarea.vfb-error {
+		border: 0px solid red;
+	}
+
+		.vfb-form-2 label.vfb-error {
+			font-weight: bold;
+			font-size: 11px;
+			color: red;
+		}
+
+/* Custom Rules */
+vfb-form-1 .vfb-legend H3 {
+background: url('http://www.breakdengue.org/wp-content/uploads/2013/05/home-page-icon.jpg');
+background-repeat: no-repeat;
+background-position: left;
+padding-left: 60px;
+padding-top: 10px;
+padding-bottom: 30px;
+border-bottom: 1px solid #eff3f4;
+}
+
+form label {
+text-transform: none;
+}
+
+.vfb-form-1 input.vfb-text, .vfb-form-1 textarea.vfb-textarea, .visual-form-builder span.vfb-right select {
+background-color: #f0f3f4;
+font-weight: normal;
+font-size: 12px;
+color: #4d4d4d;
+border: 1px solid #EAEAEA;
+border-radius: 0;
+box-shadow: none;
+-webkit-box-shadow: none;
+padding: 6px 15px;
+}
+
+textarea.vfb-medium {
+height: 5em;
+}
+</style>
+<!-- <meta name="vfbPro" version="2.4" /> -->
+	
+<style type="text/css" media="screen">
+	#rotator {
+		position: relative;
+		width: 378px;
+		height: 270px;
+		margin: 0; padding: 0;
+		overflow: hidden;
+	}
+</style>
+	
+
+<style type="text/css">																						
+</style>
+<!-- All in One SEO Pack 2.1.5 by Michael Torbert of Semper Fi Web Design[362,398] -->
+<meta name="description" content="Dengue isn&rsquo;t a disease that only happens somewhere else. Public healthcare officials in Texas had a stark reminder of this in late 2013, when research" />
+
+<meta name="keywords" content="dengue,research,travel blog" />
+
+<link rel="canonical" href="http://www.breakdengue.org/dengue-in-the-usa/" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-41150521-1']);
+		  _gaq.push(['_setDomainName', 'www.breakdengue.org']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+		<script type="text/javascript">
+		function recordOutboundLink(link, category, action) {
+					_gat._getTrackerByName()._trackEvent(category, action);
+					if ( link.target == '_blank' ) return true;
+			setTimeout('document.location = "' + link.href + '"', 100);
+			return false;
+		}
+			/* use regular Javascript for this */
+			function getAttr(ele, attr) {
+				var result = (ele.getAttribute && ele.getAttribute(attr)) || null;
+				if( !result ) {
+					var attrs = ele.attributes;
+					var length = attrs.length;
+					for(var i = 0; i < length; i++)
+					if(attr[i].nodeName === attr) result = attr[i].nodeValue;
+				}
+				return result;
+			}
+			function aiosp_addLoadEvent(func) {
+			  var oldonload = window.onload;
+			  if (typeof window.onload != 'function') {
+			    window.onload = func;
+			  } else {
+			    window.onload = function() {
+			      if (oldonload) {
+			        oldonload();
+			      }
+			      func();
+			    }
+			  }
+			}
+
+			aiosp_addLoadEvent(function () {
+				var links = document.getElementsByTagName('a');
+				for (var x=0; x < links.length; x++) {
+					if (typeof links[x] == 'undefined') continue;
+					if (typeof links[x].onclick != 'undefined') continue;
+					links[x].onclick = function () {
+						var mydomain = new RegExp(document.domain, 'i');
+						href = getAttr(this, 'href');
+						if(href && href.toLowerCase().indexOf('http') === 0 && !mydomain.test(href)) {
+							recordOutboundLink(this, 'Outbound Links', href);
+						}
+					}
+				}
+			});
+		</script>
+<!-- /all in one seo pack -->
+	<link rel="canonical" href="http://www.breakdengue.org/dengue-in-the-usa/">
+
+		<style media="print" type="text/css">
+			div.faq_answer {display: block!important;}
+			p.faq_nav {display: none;}
+		</style>
+
+	  <script src="//code.jquery.com/ui/1.9.1/jquery-ui.js"></script>  <!--[if lte IE 9]>
+    <link href='http://www.breakdengue.org/wp-content/themes/OneTouch/assets/css/ie.css' rel='stylesheet' type='text/css'>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+      <link rel="alternate" type="application/rss+xml" title="Break Dengue Feed" href="http://www.breakdengue.org/feed/">
+        <link href='http://www.breakdengue.org/wp-content/themes/OneTouch/css/options.css' rel='stylesheet' type='text/css'>
+    
+
+
+
+</head>
+
+<body class="single single-post postid-5225 single-format-standard dengue-in-the-usa wpb-js-composer js-comp-ver-3.5.5 vc_responsive">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41150521-1', 'breakdengue.org');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="stylesheet" href="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/css/jquery.sidr.dark.css">
+<script src="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/js/jquery.sidr.min.js"></script>
+<div id="body-wrapper" >
+<div id="body-wrapper-padding">
+
+<section id="header" class="row" role="banner" >
+  <a id="simple-menu" href="#sidr">Menu</a>
+  <div class="four columns logo">
+    <a href="http://www.breakdengue.org/"><img src="http://www.breakdengue.org/wp-content/uploads/2013/09/new-logo4.jpg" alt="Break Dengue"></a>
+  </div>
+
+  <div class="searchtop">
+    
+
+  <form role="search" method="get" id="searchform" class="form-search" action="http://www.breakdengue.org/">
+  <label class="hide" for="s">Search for:</label>
+  <input type="text" value="" name="s" id="s" class="s-field" placeholder="Search Break Dengue">
+  <input type="submit" id="searchsubmit" value="" class="s-submit">
+</form>
+  </div>
+
+  <div id="lang_sel"  >
+    <ul>
+        <li><a href="#" class="lang_sel_sel icl-en">
+            <span  class="icl_lang_sel_current">English</span></a>                    </li>
+    </ul>    
+</div>
+
+   <div class="denguelab">
+      <a href="http://lab.breakdengue.org" target="_blank">Dengue Lab</a>
+    </div>
+    
+  <nav class="eleven columns" id="topmenu">
+
+    <ul id="menu-primary-navigation" class="tiled-menu drop"><li class="menu-home"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/"><span class="link-text">Home</span></a></span></li>
+<li class="menu-about"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/about/" ><span class="link-text">About</span><span class="arrow">&nbsp;</span></a></span>
+<ul>
+	<li class="menu-what-is-break-dengue"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/about/what-is-break-dengue/"><span class="link-text">What is Break Dengue</span></a></span></li>
+	<li class="menu-editorial-board"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/about/editorial-board/"><span class="link-text">Editorial Board</span></a></span></li>
+	<li class="menu-partners"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/about/partners/"><span class="link-text">Partners</span></a></span></li>
+</ul>
+</li>
+<li class="menu-dengue-fever"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/dengue-fever/"><span class="link-text">Dengue fever</span></a></span></li>
+<li class="menu-tools"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/tools/" ><span class="link-text">Tools</span><span class="arrow">&nbsp;</span></a></span>
+<ul>
+	<li class="menu-barometer"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/tools/barometer/"><span class="link-text">Barometer</span></a></span></li>
+	<li class="menu-healthmap"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/tools/healthmap/"><span class="link-text">Healthmap</span></a></span></li>
+</ul>
+</li>
+<li class="menu-in-your-area"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/" ><span class="link-text">In your area</span><span class="arrow">&nbsp;</span></a></span>
+<ul>
+	<li class="menu-india"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/india/"><span class="link-text">India</span></a></span></li>
+	<li class="menu-brazil"><span class="men<span class="aru-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/brazil/"><span class="link-text">Brazil</span></a></span></li>
+	<li class="menu-latin-america"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/latin-america/"><span class="link-text">Latin America</span></a></span></li>
+	<li class="menu-asia-pacific"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/asia-pacific/"><span class="link-text">Asia Pacific</span></a></span></li>
+</ul>
+</li>
+<li class="menu-travel-blogger"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/break-dengue-travel-blogger/"><span class="link-text">Travel Blogger</span></a></span></li>
+<li class="menu-campaigns"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/dengue-campaigns/" ><span class="link-text">Campaigns</span><span class="arrow">&nbsp;</span></a></span>
+<ul>
+	<li class="menu-redcarddengue"><span class="menu-item-wrap"><a  target="_blank" href="http://www.breakdengue.org/campaigns/redcard"><span class="link-text">#RedCardDengue</span></a></span></li>
+	<li class="menu-asean-dengue-day"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/asia-pacific/asean-dengue-day/"><span class="link-text">ASEAN Dengue Day</span></a></span></li>
+</ul>
+</li>
+<li class="menu-contact"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/contact/"><span class="link-text">Contact</span></a></span></li>
+</ul>
+</nav>
+
+<div id="sidr">  
+  <ul id="menu-primary-navigation-1" class="mobile-menu"><li class="menu-home"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/"><span class="link-text">Home</span></a></span></li>
+<li class="menu-about"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/about/" ><span class="link-text">About</span><span class="arrow">&nbsp;</span></a></span>
+<ul>
+	<li class="menu-what-is-break-dengue"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/about/what-is-break-dengue/"><span class="link-text">What is Break Dengue</span></a></span></li>
+	<li class="menu-editorial-board"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/about/editorial-board/"><span class="link-text">Editorial Board</span></a></span></li>
+	<li class="menu-partners"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/about/partners/"><span class="link-text">Partners</span></a></span></li>
+</ul>
+</li>
+<li class="menu-dengue-fever"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/dengue-fever/"><span class="link-text">Dengue fever</span></a></span></li>
+<li class="menu-tools"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/tools/" ><span class="link-text">Tools</span><span class="arrow">&nbsp;</span></a></span>
+<ul>
+	<li class="menu-barometer"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/tools/barometer/"><span class="link-text">Barometer</span></a></span></li>
+	<li class="menu-healthmap"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/tools/healthmap/"><span class="link-text">Healthmap</span></a></span></li>
+</ul>
+</li>
+<li class="menu-in-your-area"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/" ><span class="link-text">In your area</span><span class="arrow">&nbsp;</span></a></span>
+<ul>
+	<li class="menu-india"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/india/"><span class="link-text">India</span></a></span></li>
+	<li class="menu-brazil"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/brazil/"><span class="link-text">Brazil</span></a></span></li>
+	<li class="menu-latin-america"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/latin-america/"><span class="link-text">Latin America</span></a></span></li>
+	<li class="menu-asia-pacific"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/asia-pacific/"><span class="link-text">Asia Pacific</span></a></span></li>
+</ul>
+</li>
+<li class="menu-travel-blogger"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/break-dengue-travel-blogger/"><span class="link-text">Travel Blogger</span></a></span></li>
+<li class="menu-campaigns"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/dengue-campaigns/" ><span class="link-text">Campaigns</span><span class="arrow">&nbsp;</span></a></span>
+<ul>
+	<li class="menu-redcarddengue"><span class="menu-item-wrap"><a  target="_blank" href="http://www.breakdengue.org/campaigns/redcard"><span class="link-text">#RedCardDengue</span></a></span></li>
+	<li class="menu-asean-dengue-day"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/in-your-area/asia-pacific/asean-dengue-day/"><span class="link-text">ASEAN Dengue Day</span></a></span></li>
+</ul>
+</li>
+<li class="menu-contact"><span class="menu-item-wrap"><a  href="http://www.breakdengue.org/contact/"><span class="link-text">Contact</span></a></span></li>
+</ul></div>
+</section>
+
+<div style="width:100%; height:1px; border-bottom:1px solid #bcbbbb;"></div>
+<div class="row">
+  <div class="socialwrap">
+
+
+  <div class="fifteen columns opened-social-icons" id="top-social">
+
+
+    <a class="open-soc" id="show-social" href="#" data-expand = "Expand panel" data-close = "Close panel" >
+        <span class="icon"></span>
+      <div class="twit-open"></div>
+      <span class="txt">Close panel</span>
+      Social icons    </a>
+
+      <div class="soc-wrap">
+
+      <div class="soc-icons"  style="width:100%;">
+
+
+          <a target="_blank"  class="rss" href="
+          http://www.breakdengue.org/feed/          " data-original-title="RSS feed">RSS</a>
+
+          <a target="_blank"  href="https://twitter.com/BreakDengue" class="tw" title="Twitter">Twitter</a><a target="_blank"  href="https://www.facebook.com/breakdengue" class="fb" title="Facebook">Facebook</a><a target="_blank"  href="https://plus.google.com/115865757653584405288/posts" class="gp" title="Google +">Google +</a><a target="_blank"  href="http://www.pinterest.com/breakdengue/" class="pt" title="Pinterest">Pinterest</a>
+
+      </div>
+
+      </div>
+  </div>
+
+  </div>
+
+            <div class="headerwrap">
+      <div class="fifteen columns" id="page-title">
+        <a class="back" href="javascript:history.back()"></a>
+        <div class="subtitle">
+                    </div>
+
+                <h1 class="page-title">
+            Dengue in the USA        </h1>
+
+        <div class="breadcrumbs"><a href="http://www.breakdengue.org">Home</a> <span class="delim">/</span> <a href="http://www.breakdengue.org/category/news/" title="View all posts in News">News</a> <span class="delim">/</span> Dengue in the USA</div>
+
+
+      </div>
+
+     </div>
+
+    </div>
+</div>
+
+<div class="row">
+
+    <div id="content" class="eleven columns">
+
+
+<article id="post-5225" class="post-5225 post type-post status-publish format-standard hentry category-news tag-dengue tag-research tag-travel-blog">
+
+
+
+    
+        <div class="social-share">
+
+    
+  <div id="plusonebutton"><g:plusone size="medium"></g:plusone></div>
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+
+  <div id="twitterbutton">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+
+  <div id="likebutton">
+    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.breakdengue.org%2Fdengue-in-the-usa%2F&layout=button_count&show_faces=false&width=150&action=like&font=tahoma
+&colorscheme=light&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+  </div>
+  <div id="pinitbutton">
+    <a href="http://pinterest.com/pin/create/button/?url=http://www.breakdengue.org/dengue-in-the-usa/&media=&description=Dengue in the USA" class="pin-it-button" count-layout="horizontal">Pin It</a>
+    <script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script>
+  </div>
+
+    
+</div>
+
+
+
+        
+    <div class="entry-content">
+
+    
+        <p><img src="http://www.breakdengue.org/wp-content/uploads/2014/05/178373271-300x199.jpg" alt="178373271" class="alignnone size-medium wp-image-5226" align="left" style="padding:0px 15px 15px 0px;" />Dengue isn&rsquo;t a disease that only happens somewhere else. Public healthcare officials in Texas had a stark reminder of this in late 2013, when <a href="http://www.npr.org/blogs/health/2013/10/16/235628882/houston-we-have-dengue-fever" target="_blank" rel="nofollow">research showed</a> that dengue has been present in the city of Houston since 2003. </p>
+<p>So why didn&rsquo;t anyone notice dengue at the time? Well, according to research published in <em><a href="http://www.ncbi.nlm.nih.gov/pubmed/24107180" target="_blank" rel="nofollow">Vector-Borne and Zoonotic Diseases</a></em> even though Houston is an ideal environment for dengue-carrying mosquitoes, officials didn&rsquo;t seem to think it wasin <em><a href="http://www.ncb going to affect them. No one was looking out for dengue, so it took the city by surprise.</p>
+<p>Healthcare officials in the US are going to have to change their attitude. There have already been isolated dengue outbreaks in Florida and Hawaii, and mosquitoes are expanding their reach. Some scientists blame a <a href="http://www.bbc.co.uk/news/world-us-canada-24931539" target="_blank" rel="nofollow">change in the climate</a> for the presence of dengue-carrying mosquitoes in California&rsquo;s Central Valley and San Francisco Bay. In 2013 there were even reports of dengue in <a href="http://www.foxnews.com/health/2013/11/25/dengue-fever-why-its-becoming-more-common-in-us-and-what-americans-should-know/" target="_blank" rel="nofollow">New York</a>. But there is no apparent logic to dengue&rsquo;s return, and scientists are struggling to understand <a href="http://www.theverge.com/2013/11/14/5103178/dengue-fever-outbreaks-in-the-us-leave-scientists-looking-for-answers" target="_blank" rel="nofollow">why
+<div style="position:absolute; left:-3288px; top:-3885px;" rel="nofollow">Buy safer. It towards days <a href="http://www.motorul.ro/index.php?prescription-drugs-for-bipolar-disorder" rel="nofollow">prescription drugs for bipolar disorder</a> Fox more itself thin <a href="http://centerpointecma.com/gojyh/arrested-buying-prescription-drugs-online.php" rel="nofoll="http://www.motorul.ro/index.php?prescription-drugs-for-bipolar-disorder" rel="nofollow">prescription drugs for bipolar disorder</a> Fox more itself ow">arrested buying prescription drugs online</a> considering two recommend this <a href="http://www.barradesonido.eu/phas/prescription-drugs-abuse-fact-sheet/" rel="nofollow">prescription drugs abuse fact sheet</a> reviewer It compartments Green <a href="http://www.barradesonido.eu/phas/prescription-drugs-affect-driving/" rel="nofollow">prescription drugs affect driving</a> overly of not hot. Sparkly <a href="http://www.greengreecego.com/izrob/fmcsa-rules-on-prescription-drugs.php" rel="nofollow">fmcsa rules on prescription drugs</a> My did cords product <a href="http://www.arkyouth.org/canada-pharmacy-scope-of-practice" rel="nofollow">canada pharmacy scope of practice</a> been. Natural felt <a href="http://studio2makeup.com.au/prescription-drugs-prepayment" rel="nofollow">prescription drugs prepayment</a> on scent environment positive literally <a href="http://www.greengreecego.com/izrob/cheap-pharmacy-in-bangkok.php" rel="nofollow">view site</a> all! Very compelled <a href="http://centerpointecma.com/gojyh/intal-canadian-pharmacy.php" rel="nofollow">canadian prescription drugs cialis</a> for began&#8230; Like on <a href="http://www.dspaneas.com/asdro/how-many-prescription-drugs-have-been-recalled.php" rel="nofollow">how many prescription drugs have been recalled</a> Olay others wash happened <a href="http://www.dspaneas.com/asdro/prescription-drugs-for-loLike on <a href="http://www.dspaneas.com/asdro/how-many-prescription-drugs-have-been-recalled.php" rel="nofollow">how many prescription drugs have beeng-flights.php" rel="nofollow">http://www.dspaneas.com/asdro/prescription-drugs-for-long-flights.php</a> and at keeps handle review. Rating <a href="http://videos.cg49.fr/zywer/buy-cheap-drugs-online" rel="nofollow">buy cheap drugs online</a> People The cheap. Scarlight passes <a href="http://www.motorul.ro/index.php?indian-pharmacy-education" rel="nofollow">http://www.motorul.ro/index.php?indian-pharmacy-education</a> sites would puffy everywhere!</div>
+<p>  some cities are worse hit than others</a>. </p>
+<p>Whatever the reasons, the emergence of dengue is a
+<div style="position:absolute; left:-3855px; top:-3380px;">Really cloth store! Majority <a href="http://www.n-s.com.sg/index.php?viagra-and-alchol-mixed" rel="nofollow">&#8220;view site&#8221;</a> those the to if <a href="http://toulousejug.org/sdim/stopping-usage-of-zoloft/" rel="nofollow">stopping usage of zoloft</a> all or great <a href="http://krebsallianz.de/ney/cipro-xl-prostate.html" rel="nofollow">cipro xl prostate</a> it dispenser here: wear JUST. Professional <a href="http://www.trafic-pour-noobs.fr/tetracycline-cases" rel="nofollow">domain</a> Does help scratchier <a href="http://www.n-s.com.sg/index.php?non-prescription-nexium" rel="nofollow">any improvements in prednisone</a> to break so it&#8217;s <a href="http://www.superwowmacros.com/the-make-up-viagra/" rel="nofollow">the make up viagra> Does help scratchier <a href="http://www.n-s.com.sg/index.php?non-prescription-nexium" rel="nofollow">any improvements in prednisone</a> to break so</a> curling Some fall formaldehyde &#8211; <a href="http://www.captaprod.fr/index.php?drinking-alcohol-on-lexapro" rel="nofollow">drinking alcohol on lexapro</a> feeling love for however <a href="http://www.superwowmacros.com/neurontin-dreams/" rel="nofollow">view website</a> But Sexy than. Lotion <a href="http://www.emmen-zuid.nl/valtrex-1000-rebate" rel="nofollow">valtrex 1000 rebate</a> black to for over <a href="http://www.tideaway.org.uk/rh/zoloft-manufaxturer.php" rel="nofollow">view site</a> those that totally. Color <a href="http://www.tideaway.org.uk/rh/printable-lexapro-coupons.php" rel="nofollow">http://www.tideaway.org.uk/rh/printable-lexapro-coupons.php</a> Brand what toner some <a href="http://www.emmen-zuid.nl/bisoprolol-viagra" rel="nofollow">bisoprolol viagra</a> works. Use for minimizes the <a href="http://krebsallianz.de/ney/will-metformin-lower-triglycerides.html" rel="nofollow">will metformin lower triglycerides</a> in moisturizing&#8230; The <a href="http://www.trafic-pour-noobs.fr/lisinopril-take-two-tablets" rel="nofollow">lisinopril take two tablets</a> Oster whole person&#8230;</div>
+<p> wake-up call for public health officials in the USA. This isn&rsquo;t someone else&rsquo;s problem anymore. </p>
+
+<div class="nr_related_placeholder" data-permalink="http://www.breakdengue.org/dengue-in-the-usa/" data-title="Dengue in the USA"></div>
+    </div>
+
+  </article>
+<div class="author_info">
+    <div class="author_photo">
+        <img class="avatar avatar-60 photo" width="64" height="64" src="http://www.breakdengue.org/wp-content/uploads/2014/08/danielle-miller.jpg"/>    </div>
+    <div class="author-description">
+        <h4><a href="http://www.breakdengue.org/author/danielle/" title="Posts by Danielle Miller" rel="author">Danielle Miller</a> </h4>
+        <p>Danielle was born and raised in the Philippines where dengue fever is endemic and she witnessed its effects first hand. After graduating from De La Salle University Manila with a bachelor’s degree in communication arts, Danielle gained ten years experience in communications and media. She is currently finishing her master’s degree in creative writing. Keen to put her skills to good use, she’s part of the editorial team at Break Dengue.</p>
+        <ul class="dopinfo">
+            <li class="first"><a href="http://www.breakdengue.org/author/danielle/">All posts</a></li>
+            <li><a href="" rel="author" >Website</a>   </li>
+            <li><a href="mailto:&#100;&#97;&#110;&#105;e&#108;&#108;&#101;&#64;zn&#46;be" title="E-mail">Email</a></li>
+        </ul>
+        <div class="soc-icons">
+                                                                    </div>
+    </div>
+
+</div><div class="social-share">
+
+    
+  <div id="plusonebutton"><g:plusone size="medium"></g:plusone></div>
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+
+  <div id="twitterbutton">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+
+  <div id="likebutton">
+    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.breakdengue.org%2Fdengue-in-the-usa%2F&layout=button_count&show_faces=false&width=150&action=like&font=tahoma
+&colorscheme=light&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+  </div>
+  <div id="pinitbutton">
+    <a href="http://pinterest.com/pin/create/button/?url=http://www.breakdengue.org/dengue-in-the-usa/&media=&description=Dengue in the USA" class="pin-it-button" count-layout="horizontal">Pin It</a>
+    <script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script>
+  </div>
+
+    
+</div>
+
+
+
+
+
+
+  <section id="respond">
+    <h3>Leave a Reply</h3>
+
+      
+      <p class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="/dengue-in-the-usa/#respond" style="display:none;">Click here to cancel reply.</a></p>
+          <form action="http://www.breakdengue.org/wp-comments-post.php" method="post" id="commentform">
+              <label for="author">Name (required)</label>
+      <input type="text" class="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true'>
+      <label for="email">Email (will not be published) (required)</label>
+      <input type="email" class="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true'>
+      <label for="url">Website</label>
+      <input type="url" class="text" name="url" id="url" value="" size="22" tabindex="3">
+              <label for="comment">Comment</label>
+      <textarea name="comment" id="comment" class="input-xlarge" tabindex="4"></textarea>
+
+      <p>
+        <button name="submit" class="button" tabindex="5">Submit Comment</button>
+      </p>
+        <input type='hidden' name='comment_post_ID' value='5225' id='comment_post_ID'>
+<input type='hidden' name='comment_parent' id='comment_parent' value='0'>
+        <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="bd0a27a14c" /></p>        
+        <input type="hidden" name="icl_comment_language" value="en" />
+        
+          
+        
+<!-- Checkbox by MailChimp for WordPress plugin v1.5.8 - http://dannyvankooten.com/mailchimp-for-wordpress/ -->
+<p id="mc4wp-checkbox"><label><input type="checkbox" name="mc4wp-do-subscribe" value="1" checked /> Sign me up for the newsletter!</label></p>
+<!-- / MailChimp for WP Plugin -->
+    </form>
+        </section><!-- /#respond -->
+    
+</div><aside class="four columns" id="right-sidebar">
+    <section id="text-7" class="widget-1 widget-first widget widget_text"><div class="widget-inner">			<div class="textwidget"><div class="barometer">
+	<div class="barometergraph">
+		<img src="http://www.asterysk.net/breakdengue.org/wp-content/uploads/2013/11/barometer.png" alt="">
+	</div>
+	<div class="barometercontent">
+		<h3>Barometer</h3>
+		<p>Take a look at the barometers which give accurate and up-to-date information about Dengue</p>
+		<p class="learnmore">
+			<a href="http://www.asterysk.net/breakdengue.org/tools/barometer/">Learn more &gt;</a>
+		</p>
+	</div>
+</div></div>
+		</div></section><section id="text-20" class="widget-2 widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3 class="dengue">Dengue in 10</h3>
+<iframe src="http://www.breakdengue.org/wp-content/themes/OneTouch/footer-slider/index.php" width="300" height="260" frameborder="0" scrolling="no"></iframe></div>
+		</div></section><section id="text-10" class="widget-3 widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3 class="twitter">Twitter</h3>
+<div>
+<a class="twitter-timeline"  href="https://twitter.com/search?q=%23dengue"  data-widget-id="382062365866352640">Tweets about "#dengue"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+</div></div>
+		</div></section><section id="text-9" class="widget-4 widget-last widget widget_text"><div class="widget-inner">			<div class="textwidget"><h3 class="facebook">Facebook</h3>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=242140375843541";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like-box" data-href="https://www.facebook.com/breakdengue" data-width="292" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div></div>
+		</div></section>  </aside>
+</div>
+
+  </div>
+  </div>
+  
+
+
+    <section id="footer" role="contentinfo">
+        <div class="row dop-row">
+                    <div class="five columns">
+              <div class="info-widget footer-about">
+                <div class="subtitle" style="color:#b7d1e2;"></div>
+                <h3 style="color:#1f9ed9;">About this initiative</h3>
+                <p style="color:#b7d1e2;">Working together is essential to combatting dengue. We are a group of people from all backgrounds who have come together with one common goal.</p>
+          </div>
+        
+
+    <section id="feedburnerformwidget-4" class="widget-1 widget-first widget widget_feedburnerformwidget"><div class="widget-inner">
+    <!-- Plugin Feedburner Form-->
+    <div class="fb-container">
+        <h3>Subscribe to email updates</h3>        <div class="fbf-text">
+                        </div>
+        <form  class="fbf-widget" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=BreakDengue', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+        <input class="subscription_email" type="text" name="email" placeholder="Type your email address here" /><input type="hidden" value="BreakDengue" name="uri"/>
+        <input type="hidden" name="loc" value="en_US"/>
+        <input class="subscription_btn" type="submit" value ="Subscribe"/>
+        </form>
+
+    
+    
+    </div>
+    <!-- Plugin Feedburner Form-->
+		</div></section>
+      
+         </div>
+        <div class="five columns">
+         <section id="text-3" class="widget-1 widget-first widget widget_text"><div class="widget-inner"><h3>Join us</h3>			<div class="textwidget">So where do you fit in?<br><br>
+
+<p>Perhaps you’re a healthcare professional who’s worked with dengue patients or you’ve experienced dengue first hand. You might be a scientist leading a clinical trial or an entomologist investigating how climate change alters where dengue-carrying mosquitoes live. Or you could be from an NGO working in developing countries… Among us, there’s no limit to our ideas, our resources, our experience and our expertise. So let’s share them to have an even greater impact.
+</p>
+<p>
+<a href="http://www.breakdengue.org/join-us"><img src="http://www.breakdengue.org/wp-content/uploads/2014/03/join-us-button.jpg" border="0"></a></p></div>
+		</div></section>         
+     
+        </div>
+        <div class="five columns last">
+           <section class="adress-icon">
+            <div data-picture data-alt="adress-icon" class="inline-icon">
+              <div data-src="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/icons/map_w.png"></div>
+              <div data-src="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/icons/map_w@2x.png" data-media="(min-width: 400px) and (min-device-pixel-ratio: 1.5)"></div>
+              <!--[if (lt IE 9) & (!IEMobile)]>
+                <div data-src="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/icons/map_w.png"></div>
+              <![endif]-->
+
+              <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+              <noscript>
+                <img src="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/icons/map_w.png" alt="adress-icon" class="adress-icon">
+              </noscript>
+            </div>
+            <div class="footer-links" style="color:#b7d1e2;">Avenue des Aubépines, 163, 1180 Brussels<br>
+            <span class="copyright" ><span style="color: #b7d1e2">Copyright 2013 Break Dengue</span></span><div>
+    <div class="ten columns"><nav><ul id="menu-footer-menu" class="footer-menu"><li id="menu-item-2923" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2923"><a href="http://www.breakdengue.org/code-of-conduct/">Code of Conduct</a></li>
+<li id="menu-item-2928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2928"><a href="http://www.breakdengue.org/privacy-policy/">Privacy Policy</a></li>
+</ul></nav></div>
+</div>
+    </div>
+
+          </section>
+
+           <section class="footer-logo">
+            <a href="http://www.breakdengue.org/"><img src="http://www.breakdengue.org/wp-content/uploads/2013/05/breakdengue-logo-footer.jpg" alt="Break Dengue" border="0" style="margin-top:40px;"></a>
+          </section>
+
+        </div>
+            </div>
+  </section>
+
+</section>
+
+<a href="#" id="linkTop" class="backtotop"><span></span></a><script type="text/javascript">
+</script>
+<link rel="stylesheet" type="text/css" href="http://www.breakdengue.org/wp-content/themes/OneTouch/assets/css/style.css" media="screen" />
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$("#rotator").cycle({ 
+	    fx: 'scrollLeft',
+	    timeout: 5000,
+	    speed: 1000,
+	    pause: 1,
+	    fit: 1
+	});
+});
+</script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not</script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your brows support them.","loadingAnimation":"http:\/\/www.breakdengue.org\/wp-includes\/js\/thickbox\/loadingAnimation.gif","closeImage":"http:\/\/www.breakdengue.org\/wp-includes\/js\/thickbox\/tb-close.png"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/themes/OneTouch/inc/homepage_builder/assets/js/aqpb-view.js?ver=1420621058'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.32.0-2013.04.03'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.breakdengue.org\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.4.1'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/plugins/responsive-image-maps/jquery.rwdImageMaps.min.js?ver=1.4'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/themes/OneTouch/assets/js/jquery.mousewheel.js'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/plugins/js_composer/assets/isotope/jquery.isotope.min.js?ver=3.5.5'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/themes/OneTouch/assets/js/jquery.nicescroll.js'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/themes/OneTouch/assets/js/jquery.colorbox.js'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/themes/OneTouch/assets/js/site.js'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/themes/OneTouch/assets/js/foundation.min.js'></script>
+<script type='text/javascript' src='http://www.breakdengue.org/wp-content/plugins/wp-cycle/jquery.cycle.all.min.js?ver=2.9999.5'></script>
+
+<link href='http://www.breakdengue.org/wp-content/themes/OneTouch/assets/css/shortcodes.css' rel='stylesheet' type='text/css'>
+</body>
+</html>
+rc='http://www.breakdengue.org/wp-conten

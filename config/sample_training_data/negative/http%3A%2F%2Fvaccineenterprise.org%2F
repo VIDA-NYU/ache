@@ -1,0 +1,848 @@
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--content/welcome--><!-- /sites/all/themes/ghve_2013/page-front.tpl.php -->
+
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/sites/default/files/ghve_2013_favicon.ico" type="image/x-icon" />
+  <title>Welcome! | Global HIV Vaccine Enterprise</title>
+  
+	<link rel="alternate" type="application/rss+xml" title="Global HIV Vaccine Enterprise - General News [RSS]" href="/taxonomy/term/8/0/feed">
+
+	<link rel="alternate" type="application/rss+xml" title="Global HIV Vaccine Enterprise - Enterprise News [RSS]" href="/taxonomy/term/2/0/feed">
+	
+	<link rel="alternate" type="application/rss+xml" title="Global HIV Vaccine Enterprise - Stakeholder News [RSS]" href="/taxonomy/term/3/0/feed">
+	
+	<link rel="alternate" type="application/rss+xml" title="Global HIV Vaccine Enterprise - Other News [RSS]" href="/taxonomy/term/4/0/feed">
+
+	<link rel="alternate" type="application/rss+xml" title="Global HIV Vaccine Enterprise - News Archives [RSS]" href="/taxonomy/term/11/0/feed">
+
+	<link rel="alternate" type="application/rss+xml" title="Global HIV Vaccine Enterprise - Publications [RSS]" href="/taxonomy/term/5/0/feed">
+
+	<link rel="alternate" type="application/rss+xml" title="Global HIV Vaccine Enterprise - Multimedia Library [RSS]" href="/taxonomy/term/6/0/feed">
+
+	<link rel="alternate" type="application/rss+xml" title="Global HIV Vaccine Enterprise - Enterprise Events [RSS]" href="/taxonomy/term/12/0/feed">
+
+  
+  <link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/poll/poll.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/ctools/css/ctools.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date_popup/themes/jquery.timeentry.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/lightbox2/css/lightbox.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/user_relationships/user_relationships_ui/user_relationships_ui.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/video/css/video.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/modules/cck/theme/content-module.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/modules/filefield/filefield.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/modules/img_assist/img_assist.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/modules/wysiwyg_imageupload/plugins/imgupload/imgupload.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/forum/forum.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/misc/farbtastic/farbtastic.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/calendar/calendar.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/modules/cck/modules/fieldgroup/fieldgroup.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/default/modules/views/css/views.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/comment/comment.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/ghve_2013/layout.css?U" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/ghve_2013/style.css?U" />
+  
+  	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/ghve_2013/home_page.css" >
+    
+<!--[if IE]>
+    <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/ghve_2013/ie.css" >
+<![endif]-->
+   
+<!--[if IE 7]>
+    <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/ghve_2013/ie7.css" >
+<![endif]-->
+  
+  <script type="text/javascript" src="/sites/default/modules/jquery_update/replace/jquery.min.js?U"></script>
+<script type="text/javascript" src="/misc/drupal.js?U"></script>
+<script tdia="all" href="/sites/all/themes/ghve_2013/ie7.css" >
+<![endif]-->
+  
+  <script type="text/javascript" src="/sites/defaulype="text/javascript" src="/sites/all/modules/lightbox2/js/lightbox.js?U"></script>
+<script type="text/javascript" src="/sites/all/modules/user_relationships/user_relationships_ui/user_relationships_ui.js?U"></script>
+<script type="text/javascript" src="/sites/all/modules/video/js/video.js?U"></script>
+<script type="text/javascript" src="/sites/default/modules/google_analytics/googleanalytics.js?U"></script>
+<script type="text/javascript" src="/sites/default/modules/img_assist/img_assist.js?U"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "lightbox2": { "rtl": 0, "file_path": "/(\\w\\w/)sites/default/files", "default_image": "/sites/all/modules/lightbox2/images/brokenimage.jpg", "border_size": 10, "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.8", "overlay_color": "000", "disable_close_click": true, "resize_sequence": 0, "resize_speed": 400, "fade_in_speed": 400, "slide_down_speed": 600, "use_alt_layout": false, "disable_resize": false, "disable_zoom": false, "force_show_nav": false, "show_caption": true, "loop_items": false, "node_link_text": "View Image Details", "node_link_target": false, "image_count": "Image !current of !total", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca hue, "loop_items": false, "node_link_text": "View Image Details", "node_link_target": false, "image_count": "Image !current of !total", "video_count": ref=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "original", "image_node_sizes": "()", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": true, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": true, "slideshow_automatic_exit": true, "show_play_pause": true, "pause_on_next_click": false, "pause_on_previous_click": true, "loop_slides": false, "iframe_width": 600, "iframe_height": 400, "iframe_border": 1, "enable_video": false }, "user_relationships_ui": { "loadingimage": "/sites/all/modules/user_relationships/user_relationships_ui/images/loadingAnimation.gif", "savingimage": "/sites/all/modules/user_relationships/user_relationships_ui/images/savingimage.gif", "position": { "position": "absolute", "left": "0", "top": "0" } }, "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownlvingimage": "/sites/all/modules/user_relationships/user_relationships_ui/images/savingimage.gif", "position": { "position": "absolute", "left": "0", "oadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" } });
+//--><!]]>
+</script>
+ <script language="JavaScript" type="text/javascript" src="/Javascript/printable.js"> </script>
+ <script language="JavaScript" type="text/javascript" src="/Javascript/rollover.js"></script>
+ <script type="text/javascript" src="/sites/all/themes/ghve_2013/scripts/enterprise-features.js"></script>
+
+<style>
+	#sidebar-right {
+		width:201px;
+		float:left;
+		margin-left:24px;
+		font-family: 'Gill Sans MT', Arial, Helvetica, sans-serif; 	
+	}
+	#sidebar-right  div.views-field-title {
+		padding-bottom:7px !important;
+	}
+
+
+	.bottom-address #follow-links {
+		display:none;
+		visibility:hidden;	
+	}
+	#follow-links {
+		display:block !important;
+	}
+
+	.intersite-links {
+		float:left;
+		width:176px;
+		height:240px;
+		margin-left:15px;
+		padding: 6px;
+		padding-bottom:10px;
+		border:1px solid #d3d3d3;
+		font-family: 'Gill Sans MT', Arial, Helvetica, sans-serif;
+	}
+	.intersite-links p {
+		line-height: 1.3em;
+	}
+	
+	
+	#slideshow-container {
+		width: 597px;
+		padding: 0px 0px 0px 15px;
+		border: 1px solid #d8d5d1;
+		border-top: 4px double #d8d5d1;
+		box-shadow: 1px 2px 11px #AAA;
+	}
+	
+	#slideshow-shadow-container {
+		width:614px;
+		height:491px;e-height: 1.3em;
+	}
+	
+	
+	#slideshow-container {
+		width: 597px;
+		padding: 0px 0px 0px 15px;
+		border: 1px solid #d8d5d1;
+		border-top: 4px double #d8
+		overflow:hidden;	
+	}
+	
+	.feature-container {
+		height: 350px;
+		width: 597px;
+		background: white;
+	}
+	
+	#slideshow-container-text {
+		width: 195px;
+		font-size:14px;
+		font-family: 'Gill Sans MT', Arial, Helvetica, sans-serif;
+		color: #959083;
+		float:left;
+		line-height: 27px;
+	}
+	
+	#slideshow-container-text p {
+		margin:10px 0px -20px 0px;
+		line-height:22px;
+	}
+
+	
+	#slideshow-container-headline {
+		color: #249eb5;
+		font-size:22px;
+		margin:10px 0px -8px 0px;
+	}
+	
+	#slideshow-container-headline a {
+		color: #249eb5;
+	}
+	
+	#slideshow-container-headline a:hover {
+		color: #249eb5;
+	}
+		
+
+	#slideshow-image-container {
+		float:right;		
+	}
+	
+	
+	div.view.view-enterprise-features.view-id-enterprise_features.view-display-id-block_2.view-dom-id-2 {
+		margin-left:-11px;	
+	}
+
+	#slideshow-thumbnails {
+		border-top:1px solid #d8d5d1;
+		height:170px;
+		width:597px;
+		padding:15px 0px 0px 15px;
+		position:relative;
+		left:-15px;
+	}
+	
+	.slideshow-thumbnail-container {
+		width:139px;
+		height:155px;
+		float: left;
+		margin: 0px 10px 0px 0px;
+	}
+	
+	#thumbnail-shadow-container {
+		margin: 0px 0px -8px 0px;
+		width: 139px;
+		height: 115px;
+		overflow: hidden;
+	}
+	
+	#thumbnail-image {
+		width: 137px;
+		height: 105px;
+		overflow: hidden;
+		border-left: 1px solid #d8d5d1;
+		border-top: 1px solid #d8d5d1;
+		box-shadow: 1px 2px 3px #999;
+	}
+	#thumbnail-text {
+		color:#249eb5px;
+		height: 115px;
+		overflow: hidden;
+	}
+	
+	#thumbnail-image {
+		width: 137px;
+		height: 105px;
+		overflow: hidden;
+		border-left: 1px solid #d8d5d;
+		font-family: 'Gill Sans MT', Arial, Helvetica, sans-serif;
+		font-size:12px;
+		line-height:13px;
+		margin:6px 2px 0px 0px;	
+		
+	}
+
+	#thumbnail-text a {
+		color:#249eb5;
+		font-family: 'Gill Sans MT', Arial, Helvetica, sans-serif;
+		font-size:12px;
+		line-height:14px;	
+		
+	}
+	
+	#enterprise-news-container {
+		width:612px;
+		min-height: 200px;
+		margin: 14px 0px 0px 0px;
+	}
+	
+	#enterprise-news-banner {
+		width:612px;
+		height:43px;
+		background:url(/sites/all/themes/ghve_2013/images/front-page/enterprise-news-banner.jpg);
+		background-repeat:no-repeat;
+		margin: 0px 0px 25px 0px;
+	}
+	
+	.enterprise-news {
+		font-family: 'Gill Sans MT', Arial, Helvetica, sans-serif;
+		text-align:left;
+	}
+
+	.enterprise-news-story {
+		margin:0px 0px 0px 13px;
+	}
+	.enterprise-news-title {
+		font-family: 'Gill Sans MT', Arial, Helvetica, sans-serif;
+		color: #249eb5;
+		font-size: 24px;
+		line-height: 24px;
+		width: 540px;
+	}
+	
+	.enterprise-news-separator {
+		width: 600px;
+		background: url(/sites/all/themes/ghve_2013/images/front-page/enterprise-news-decoration.png);
+		background-repeat: no-repeat;
+		height: 15px;
+		margin: 4px 0px -2px -14px;
+	}
+	
+	.enterprise-news-body {
+		font-family: 'Gill Sans MT', Arial, Helvetica, sans-serif;
+		color:#87827e;
+		font-size:13px;
+		line-height: 1.3em;
+		margin-bottom:0px;
+	}
+	.enterprise-news-body p {
+		margin-top:5px;	
+	}
+	
+	.enterprise-newspx -2px -14px;
+	}
+	
+	.enterprise-news-body {
+		font-family: 'Gill Sans MT', Arial, Helvetica, sans-serif;
+		color:#87827e;
+		font-size:13px;
+		line-he-date {
+		font-family: 'Gill Sans MT', Arial, Helvetica, sans-serif;
+		color:#c0a755;
+		text-transform:uppercase;
+	}
+
+</style>
+
+
+</head>
+
+<body>
+<div align="center">
+  <table width="925" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top" background="/sites/all/themes/ghve_2013/images/background/outside-01-left-shadow.jpg"><img src="/sites/all/themes/ghve_2013/images/background/outside-01-left-shadow.jpg" alt="" width="12" height="100%"></td>
+      <td valign="top" bgcolor="#FFFFFF">
+		<table width="901" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+        
+        
+        
+        
+        <!-- sttrt -->
+        <tr>
+	
+    <td bgcolor="#5f8190">
+	
+    	<table width="901" border="0" cellpadding="0" cellspacing="0" bgcolor="#5f8190">
+            <tbody>
+            	<tr>
+              		<td rowspan="4"><a href="/"><div id="logo"></div></a></td>
+	            </tr>		  
+            	<tr>
+                    <td valign="top">
+                        <form name="search_form" method="POST" action="/search" style="margin-bottom:0px;">
+                        <table width="587" border="0" cellpadding="0" cellspacing="0" bgcolor="#5f8190">
+                            <tbody>
+                                <tr>						
+                                    <td background="/sites/all/themes/ghve_2013/images/nav-top-update/02-search7" border="0" cellpadding="0" cellspacing="0" bgcolor="#5f8190">
+                            <tbody>
+                                <tr>						
+      -bar.png" width="549" height="49"><input type="text" name="search_theme_form" id="search-site-input-box" size="23" value="" title="Enter the terms you wish to search for." class="search-form-text" style="position: relative; top:18px; left:279px; width:262px; height:11px; font-size:10px; font-family: Arial, Helvetica, sans-serif;" /></td>
+                                    <td>
+                                    	<input type="image" src="/sites/all/themes/ghve_2013/images/nav-top-update/02-search-bar-button.png" name="op" width="38" height="49" border="0"> <input type="hidden" name="form_id" id="edit-search-theme-form" value="search_theme_form" />
+                <input type="hidden" name="form_token" id="a-unique-id" value="70fd3e2ba98f3a62295b81443b8e7ead" />
+                                        </td>
+                                </tr>					
+                            </tbody>
+                        </table>
+                        </form>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align: top;">
+                        <table width="587" border="0" cellpadding="0" cellspacing="0" bgcolor="#5f8190">
+                            <tbody>
+                            	<tr>
+                 					<td><img src="/sites/all/themes/ghve_2013/images/nav-top-update/03-header-bar.png" alt="" width="587" height="14"></td>
+                              r="#5f8190">
+                            <tbody>
+                            	<tr>
+                 					<td><img src="/sites/all/themes/ghve_2013/ima  </tr>
+                                <tr>
+                                	<td>
+                                
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                                <tr>
+                                                	<td>
+                                                    	<img src="/sites/all/themes/ghve_2013/images/nav-top-update/04-mail-list.png" alt="" width="420" height="46">
+                                                        <div id="email-subscribe" style="position:relative;">
+                                                            <form action="/content/contact-us" id="mailing_list" method="post">
+                                                                <input type="text" id="email" name="email" value="" style="position:absolute; top:-31px; left:221px; height:11px;font-family:Arial, Helvetica, sans-serif; width:188px;" />
+                                                                <input type="image" src="/sites/all/themes/ghve_2013/images/nav-top-update/04-mail-list-button.png" onClick="submit()" style="position: absolute; top:-46px; left:420px;">
+                                                            </form>
+                                                        </div>
+           s/nav-top-update/04-mail-list-button.png" onClick="submit()" style="position: absolute; top:-46px; left:420px;">
+                                                                              </td>
+                                                    <td><a href="/content/contact-us"><img src="/sites/all/themes/ghve_2013/images/nav-top-update/04-mail-list-button.png" alt="Contact" name="contact" width="19" height="46" border="0"></a></td>
+                                                    <td><a href="/content/careers"><div id="careers"></div></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    
+                                	</td>
+                                </tr>
+                            </tbody>
+                        </table>			 
+			  		</td>
+	            </tr>	    
+			</tbody>
+		</table>
+	
+    </td>
+	  
+</tr><!-- end -->
+		
+	<tr>
+        
+          <td bgcolor="#c6b77b" style="background: url(/sites/all/themes/ghve_2013/images/navigation-bar/nav-bar-repeat.png);">
+		            <!-- Primary || Superfish -->
+          <div id="primary">
+            <div id="primary-inner">
+                              <div id="block-menu_block-1" class="block block-menu_block region-odd odd region-count-1 count-1">
+  <div class="block-inner">
+
+    
+    <div class="block-content">
+      <div class="block-content-inner">
+        <div class="menu-block-1 menu-name-       <div id="block-menu_block-1" class="block block-menu_block region-odd odd region-count-1 count-1">
+  <div class="block-inner">
+
+    
+    <div cprimary-links parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="expanded first menu-mlid-199"><a href="/content/about-enterprise-secretariat" title="About the Enterprise">About the Enterprise</a><ul class="menu"><li class="leaf first menu-mlid-248"><a href="/content/history-global-hiv-vaccine-enterprise" title="History of the Global HIV Vaccine Enterprise">History</a></li>
+<li class="leaf menu-mlid-206"><a href="/content/enterprise-stakeholders" title="Enterprise Stakeholders">Enterprise Stakeholders</a></li>
+<li class="leaf menu-mlid-207"><a href="/content/governance" title="Governance">Governance</a></li>
+<li class="leaf menu-mlid-296"><a href="/content/support-global-hiv-vaccine-enterprise" title="Support the Global HIV Vaccine Enterprise">Support the Enterprise</a></li>
+<li class="leaf menu-mlid-330"><a href="/content/enterprise-secretariat" title="Enterprise Secretariat">Enterprise Secretariat</a></li>
+<li class="leaf last menu-mlid-370"><a href="/G8-Endorsement" title="Group of 8 (G8) Endorsement of the Global HIV Vaccine Enterprise and Scientific Strategic Plan">G8 Endorsement</a></li>
+</ul></li>
+<li class="expanded menu-mlid-201"><a href="/scientific-strategic-plan" title="Scientific Strategic Plan">Scientific Strategic Plan</a><ul class="menu"><li class="leaf first menu-mlid-323"><a href="/content/history-scientific-strategic-plan" title="H/li>
+<li class="expanded menu-mlid-201"><a href="/scientific-strategic-plan" title="Scientific Strategic Plan">Scientific Strategic Plan</a><ul class=istory of the Scientific Strategic Plan">History of the SSP</a></li>
+<li class="leaf menu-mlid-299"><a href="/content/immunogens-and-antigen-processing" title="Immunogens and Antigen Processing">WG 1:  Immunogens</a></li>
+<li class="leaf menu-mlid-301"><a href="/content/host-genetics-and-hiv-diversity" title="Host Genetics and HIV Diversity">WG 2: Host Genetics</a></li>
+<li class="leaf menu-mlid-300"><a href="/content/novel-approaches-hiv-vaccine-research-development" title="Novel Approaches to HIV Vaccine Research &amp; Development">WG 3: Novel Approaches</a></li>
+<li class="leaf menu-mlid-302"><a href="/content/bridging-gaps-between-fundamental-preclinical-and-clinical-research" title="Bridging the Gaps Between Fundamental, Preclinical, and Clinical Research">WG 4:  Bridging the Gaps</a></li>
+<li class="leaf last menu-mlid-303"><a href="/content/young-and-early-career-investigators-yeci" title="Young and Early Career Investigators (YECI)">WG 5: YECI</a></li>
+</ul></li>
+<li class="expanded menu-mlid-203"><a href="/news" title="News &amp; Publications">News</a><ul class="menu"><li class="leaf first menu-mlid-208"><a href="/news" title="Enterprise News">Enterprise News</a></li>
+<li class="leaf last menu-mlid-211"><a href="/category/news-item/news-archives" title="">News Archives</a></li>
+</ul></li>
+<li class="expanded menu-mlid-204"><a href="/content/meetings" title="Meetings">Secretariat Programs</a><ul class="menu"><li class="leaf first menu-mlid-1980"><a href="/content/timely-topics-hiv-vaccines" title="Timely Topics in HIV Vaccines">Timely Topics in HIV Vaccines</a></li>
+<li class="leaf menu-mlid-1514"><a href="/content/enterprise-funders-meeting" title="Enterprise Funders&#039; Meeting">Funders&#039; Program</a></li>
+<li class="leaf menu-mlid-1927"><a href="/immunespace" title="The Immune Space">Immune Space</a></li>
+<li class="leaf menu-mlid-308"><a href="/category/news-item/meeting-minutes" title="Minutes of the Enterprise Meetings">Meeting Reports</a></li>
+<li class="leaf menu-mlid-1961"><a href="/content/how-complement-stimulates-b-cell-responses-virtual-mini-symposium" title="How Complement Stimulates B Cell Responses: A Virtual Mini-Symposium">Complement Symposium</a></li>
+<li class="leaf menu-mlid-1215"><a href="/content/meeting-archives" title="Meeting Archives">Archives</a></li>
+<li class="leaf last menu-mlid-1517"><a href="/content/hiv-vaccine-electronic-resource-hive" title="HIV Vaccine Electronic Resource (HIVe)">HIVe</a></li>
+</ul></li>
+<li class="expanded menu-mlid-381"><a href="/content/aids-vaccine-conferences" title="AIDS Vaccine menu">AIDS Vaccine Conference</a><ul class="menu"><li class="leaf first menu-mlid-382"><a href="http://www.vaccineenterprise.com/conference/2011" title="AIDS Vacciss="expanded menu-mlid-381"><a href="/contentne 2011 conference site">AIDS Vaccine 2011</a></li>
+<li class="leaf menu-mlid-383"><a href="/content/plan-to-attend-aids-vaccine-2012" title="">AIDS Vaccine 2012</a></li>
+<li class="leaf menu-mlid-1513"><a href="http://www.vaccineenterprise.com/conference/2013" title="">AIDS Vaccine 2013</a></li>
+<li class="leaf last menu-mlid-195"><a href="/content/conference-archives" title="Conference Archives">Conference Archives</a></li>
+</ul></li>
+<li class="leaf last menu-mlid-202"><a href="/content/P5Partnership" title="Get Involved">P5 Partnership</a></li>
+</ul></div>
+      </div>
+    </div>
+
+  </div>
+</div> <!-- /block -->                          </div> <!-- /inner -->
+          </div> <!-- /primary || superfish -->
+        			</td>
+        </tr>
+        <tr>
+          <td style="background: url('/sites/all/themes/ghve_2013/images/background/inside-content-top-shadow.jpg') repeat-x;">&nbsp;
+			
+		  </td>
+        </tr>
+        <tr>
+          <td valign="top"><table width="901" border="0" cellspacing="0" cellpadding="0">
+		  <tr valign="top">
+              <td rowspan="7" background="/sites/all/themes/ghve_2013/images/background/inside-column-01-left.jpg" width="37" height="37"></td>
+              <td colspan="3" class="headline"><div align="left"></div></td>
+              <td rowspan="7"><!--<img src="/sites/all/themes/ghve_2013/images/background/inside-column-02-right.jpg" alt="" width="67" height="37">--></td>
+            </tr>
+		
+            <tr>
+              <td colspan="3">
+              		
+                    <div align="left"  style="margin-right: 13px;margin-left: -10px;width: 601px; float: left;">
+         				<div id="slideshow-shadow-container">
+                            <div id="slideshow-container">
+                            	<div id="slideshow-featured-box" style="width:600px; height:290px; overflow:hidden;">
+                                    <!-- feature text and image -->
+                                    <div class="view view-enterprise-features view-id-enterprise_features view-display-id-block_1 view-dom-id-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field-nothing">
+                <span class="field-content"><div id="feature-container-19330" class="feature-container">
+  <div id="slideshow-container-text">
+    <div id="slideshow-container-headline">
+      <a href="http://www.vaccineenterprise.org/timely-topics/how-complement-stimulates-b-cell-responses-virtual-mini-symposium">
+         Timely Topics: How Complement Stimulates B-cell Responses
+      </a>
+    </div>
+  <p>Complement activation during vaccination may improve antigen presentation, antibody affinity maturation, and durability ocell-responses-virtual-mini-symposium">
+     f antibody responses.</p>
+  <br>
+  <a href="http://www.vaccineenterprise.org/timely-topics/how-complement-stimulates-b-cell-responses-virtual-mini-symposium">
+    <span>Read More...</span>
+</a>
+</div>
+
+<div id="slideshow-image-container">
+     <a href="http://www.vaccineenterprise.org/timely-topics/how-complement-stimulates-b-cell-responses-virtual-mini-symposium">
+          <img src="http://vaccineenterprise.org/sites/default/files/imagecache/enterprise_home_page_feature/Picture1_0.png" alt="" title=""  class="imagecache imagecache-enterprise_home_page_feature imagecache-default imagecache-enterprise_home_page_feature_default" width="377" height="290" />
+    </a>
+</div>
+</div>
+</span>
+  </div>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field-nothing">
+                <span class="field-content"><div id="feature-container-17688" class="feature-container">
+  <div id="slideshow-container-text">
+    <div id="slideshow-container-headline">
+      <a href="http://www.vaccineenterprise.org/timely-topics/bench-clinic-researchers-guide-move-candidate-vaccines-trials">
+         Timely Topics: Bench to Clinic Tool
+      </a>
+    </div>
+  <p>The Enterprise and partners will release ‘From Bench to Clinic – An Researchers Guide to Move Vaccine Candidates into Trials’ in September. The web-based guide will acquaint resear">
+         Timely Topics: Bench to Clinic Tool
+      </a>
+    </div>
+  <p>The Enterprise and partners will release ‘From Bench to Clinic – An Researchers Gchers, funders and...</p>
+  <br>
+  <a href="http://www.vaccineenterprise.org/timely-topics/bench-clinic-researchers-guide-move-candidate-vaccines-trials">
+    <span>Read More...</span>
+</a>
+</div>
+
+<div id="slideshow-image-container">
+     <a href="http://www.vaccineenterprise.org/timely-topics/bench-clinic-researchers-guide-move-candidate-vaccines-trials">
+          <img src="http://vaccineenterprise.org/sites/default/files/imagecache/enterprise_home_page_feature/BtoC Logo.jpg" alt="" title=""  class="imagecache imagecache-enterprise_home_page_feature imagecache-default imagecache-enterprise_home_page_feature_default" width="377" height="290" />
+    </a>
+</div>
+</div>
+</span>
+  </div>
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field-nothing">
+                <span class="field-content"><div id="feature-container-19041" class="feature-container">
+  <div id="slideshow-container-text">
+    <div id="slideshow-container-headline">
+      <a href="http://www.vaccineenterprise.org/timely-topics/capturing-participant-information-mucosal-sampling-investigators-guide">
+         Timely Topics: Capturing Participant Information for Mucosal Sampling
+      </a>
+    </div>
+  <p>A new resource for organizations and investigators engaging in clinical studies&nbsp;with a mucosal immunology component!</p>
+  <br>
+  <a href="http://www.vaccineenterprise.org/timely-topics/capturing-participant-information-mucosal-sampling-investigators-guide">
+    <span>Read More...</span>
+</a>
+</div>
+
+<div id="slideshow-image-container">
+     <a href="http://www.vaccineenterprise.org/timely-topics/capturing-participant-information-mucosal-sampling-investigators-guide">
+          <img src="http://vaccineenterprise.org/sites/default/files/imagecache/enterprise_home_page_feature/mucosal-slideshow-graphic.jpg" alt="" title=""  class="imagecache imagecache-enterprise_home_page_feature imagecache-default imagecache-enterprise_home_page_feature_default" width="377" height="290" />
+    </a>
+</div>
+</div>
+</span>
+  </div>
+  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+      
+  <div class="views-field-nothing">
+                <span class="field-content"><div id="feature-container-18874" class="feature-container">
+  <div id="slideshow-container-text">
+    <div id="slideshow-container-headline">
+      <a href="http://hivr4p.org/">
+         HIV R4P
+      </a>
+    </div>
+  <p>Join us for HIV Research for Prevention 2014, the world’s first international scientific meeting dedicated exclusively to biomedical HIV prevention research.</p>
+  <br>
+  <a href="http://hivr4p.org/">
+    <span>Read More...</span>
+</a>
+</div>
+
+<div id="slideshow-image-container">
+     <a href="http://hivr4p.org/">rst international scientific meeting dedicated 
+          <img src="http://vaccineenterprise.org/sites/default/files/imagecache/enterprise_home_page_feature/r4p-logo.jpg" alt="" title=""  class="imagecache imagecache-enterprise_home_page_feature imagecache-default imagecache-enterprise_home_page_feature_default" width="377" height="290" />
+    </a>
+</div>
+</div>
+</span>
+  </div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                                     <!-- end feature text and image -->
+                                </div>
+                                <div style="clear:both;"></div>
+                                <div id="slideshow-thumbnails">
+                                    <div class="view view-enterprise-features view-id-enterprise_features view-display-id-block_2 view-dom-id-2">
+    
+  
+  
+      <div class="view-content">
+      <table class="views-view-grid">
+  <tbody>
+                <tr class="row-1 row-first row-last">
+                  <td class="col-1">
+              
+  <div class="views-field-counter">
+                <span class="field-content"><div id="thumbnail-19330" class="slideshow-thumbnail-container">
+  <div id="thumbnail-shadow-container">
+    <div id="thumbnail-image">
+      <a href="http://www.vaccineenterprise.org/timely-topics/how-complement-stimulates-b-cell-responses-virtual-mini-symposium" id="19330" class="updateFeature">
+        <img src="http://vaccineenterprise.org/sites/default/files/imagecache/enterprise_home_page_feature_thumb/Picture1_0.png" alt="" title=""  class="imagecache imagecache-enterprise_home_page_feature_thumb imagecache-default imagecache-enterprise_home_page_feature_thumb_default" width="137" height="105" />
+      </a>
+    </div>
+    
+  </div>
+  <div id="thumbnail-text">
+    <a href="http://www.vaccineenterprise.org/timely-topics/how-complement-stimulates-b-cell-responses-virtual-mini-symposium">Timely Topics: How Complement Stimulates B-cell Responses</a>
+  </div>
+</div>
+</span>
+  </div>
+          </td>
+                  <td class="col-2">
+              
+  <div class="views-field-counter">
+                <span class="field-content"><div id="thumbnail-17688" class="slideshow-thumbnail-container">
+  <div id="thumbnail-shadow-container">
+    <div id="thumbnail-image">
+      <a href="http://www.vaccineenterprise.org/timely-topics/bench-clinic-researchers-guide-move-candidate-vaccines-trials" id="17688" class="updateFeature">
+        <img src="http://vaccineenterprise.org/sites/default/files/imagecache/enterprise_home_page_feature_thumb/BtoC Logo.jpg" alt="" title=""  class="imagecache imagecache-enterprise_home_page_feature_thumb imagecache-default imagecache-enterprise_home_page_feature_thumb_default" width="137" height="105" />
+      </a>
+    </div>
+    
+  </div>
+  <div id="thumbnail-text">
+  .jpg" alt="" title=""  class="imagecache imag  <a href="http://www.vaccineenterprise.org/timely-topics/bench-clinic-researchers-guide-move-candidate-vaccines-trials">Timely Topics: Bench to Clinic Tool</a>
+  </div>
+</div>
+</span>
+  </div>
+          </td>
+                  <td class="col-3">
+              
+  <div class="views-field-counter">
+                <span class="field-content"><div id="thumbnail-19041" class="slideshow-thumbnail-container">
+  <div id="thumbnail-shadow-container">
+    <div id="thumbnail-image">
+      <a href="http://www.vaccineenterprise.org/timely-topics/capturing-participant-information-mucosal-sampling-investigators-guide" id="19041" class="updateFeature">
+        <img src="http://vaccineenterprise.org/sites/default/files/imagecache/enterprise_home_page_feature_thumb/mucosal-slideshow-graphic.jpg" alt="" title=""  class="imagecache imagecache-enterprise_home_page_feature_thumb imagecache-default imagecache-enterprise_home_page_feature_thumb_default" width="137" height="105" />
+      </a>
+    </div>
+    
+  </div>
+  <div id="thumbnail-text">
+    <a href="http://www.vaccineenterprise.org/timely-topics/capturing-participant-information-mucosal-sampling-investigators-guide">Timely Topics: Capturing Participant Information for Mucosal Sampling</a>
+  </div>
+</div>
+</span>
+  </div>
+          </td>
+                  <td class="col-4">
+              
+  <div class="views-field-counter">
+                <span class="field-content"><div id="thumbnail-18874" class="slideshow-thumbnail-container">
+  <div id="thumbnail-shadow-container">
+    <div id="thumbnail-image">
+      <a href="http://hivr4p.org/" id="18874" class="updateFeature">
+        <img src="http://vaccineenterprise.org/sites/default/files/imagecache/enterprise_home_page_feature_thumb/r4p-logo.jpg" alt="" title=""  class="imagecache imagecache-enterprise_home_page_feature_thumb imagecache-default imagecache-enterprise_home_page_feature_thumb_default" width="137" height="105" />
+      </a>
+    </div>
+    
+  </div>
+  <div id="thumbnail-text">
+    <a href="http://hivr4p.org/">HIV R4P</a>
+  </div>
+</div>
+</span>
+  </div>
+          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                                 </div><!-- end slideshow-thumbnails-->
+                            </div><!-- end slideshow-container-->
+						</div><!-- end slideshow-shadow-container-->
+                        <div id="enterprise-news-container">
+                            <div id="enterprise-news-banner">
+                            </div>
+                            <div class="view view-front-page-news view-id-front_page_news view-display-id-block_2 view-dom-id-3">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-r           </div>
+                           ow-first">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/content/webinar-announcement-anti-hiv-activity-natural-killer-cells"><div class="enterprise-news-story">
+    <div class="enterprise-news-title">Webinar Announcement: The anti-HIV Activity of Natural Killer Cells</div>
+    <div class="enterprise-news-separator"></div>
+    <div class="enterprise-news-body">The Canadian HIV Vaccine Initiative (CHVI)&nbsp;Research and Development Alliance Coordinating Office (...</div>
+    <div class="enterprise-news-date">22 September 2014</div>
+</div></a></span>
+  </div>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/content/immune-space-concept-and-template-rationalizing-vaccine-development"><div class="enterprise-news-story">
+    <div class="enterprise-news-title">The Immune Space: A Concept and Template for Rationalizing Vaccine Development</div>
+    <div class="enterprise-news-separator"></div>
+    <div class="enterprise-news-body">The Enterprise and partners published a paper on "The Immune Space: A Concept and Template for...</div>
+    <div class="enterprise-news-date">21 August 2014</div>
+</div></a></span>
+  </div>
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field-ublished a paper on "The Immune Space: A Concept and Template for...</div>
+    <div class="enterprise-news-date">21 August 2014</div>
+</div></a></spantitle">
+                <span class="field-content"><a href="/content/keystone-symposium-hiv-vaccines-adaptive-immunity-and-beyond"><div class="enterprise-news-story">
+    <div class="enterprise-news-title">Keystone Symposium on HIV Vaccines: Adaptive Immunity and Beyond</div>
+    <div class="enterprise-news-separator"></div>
+    <div class="enterprise-news-body">The Keystone Symposium on HIV Vaccines: Adaptive Immunity and Beyond was held in Banff, Canada on 9-14...</div>
+    <div class="enterprise-news-date">22 April 2014</div>
+</div></a></span>
+  </div>
+  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/content/hiv-monoclonal-antibodies-new-opportunity-further-reduce-mother-child-hiv-transmission"><div class="enterprise-news-story">
+    <div class="enterprise-news-title">HIV Monoclonal Antibodies: A New Opportunity to Further Reduce Mother-to-Child HIV Transmission</div>
+    <div class="enterprise-news-separator"></div>
+    <div class="enterprise-news-body">In January 2013, the Enterprise held a consultation in Uganda on conducting efficacy trials of HIV...</div>
+    <div class="enterprise-news-date">14 April 2014</div>
+</div></a></span>
+  </div>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>                         </div>
+                    </div><!-- end lsft container-->
+
+                    
+                    
+                    
+                    <div id="sidebar-right">
+                    	<div style="padding:0px; width:201px; font-size:16px; line-height:21px; color:#959083; margin: 0px 0px 10px 0px; font-style:normal;">
+                        <span style="color:#528249; text-transform:uppercase; letter-spacing:1px;">The Global HIV Vaccine Enterprise</span>
+                        is <br />accelerating the development <br />of preventive HIV vaccines <br />through mutual coordination, <br />collaboration, knowledge <br />sharing and recruitment of <br />new resources and funders <br />to the field.
+                        
+                	                       
+                        </div>
+                        
+                        <div id="follow-links" style="margin:0px 0px 10px 0px;">
+                            <a href="http://www.facebook.com/pages/New-York-NY/Global-HIV-Vaccine-Enterprise/149450963068" target="_blank">
+                            	<img src="/sites/all/themes/ghve_2013/images/front-page/facebook-icon-small.png" alt="Follow us on Facebook">
+                            </a>
+                            <a href="http://twitter.com/HIVEnterprise/" target="_blank">
+                            	<img src="/sites/all/themes/ghve_2013/images/front-page/twitter-icon-small.png" alt="Follow us on Twitter"> 
+                            </a>
+                            <a href="#" target="_blank">
+                            	<img src="/sites/all/themes/ghve_2013/images/front-page/rss-icon-small.png" alt="Follow us using LinkedIn">
+                            </a>
+                            <a href="http://www.flickr.com/photos/global_hiv_vaccine_enterprise/" target="_blank">
+                            	<img src="/sites/all/themes/ghve_2013/images/front-page/flickr.png" alt="Flickr" style="position: relative; top: 2px; left: -2px;">
+                            </a>
+                            <a href="http://www.linkedin.com/companies/global-hiv-vaccine-enterprise" target="_blank">
+                            	<img src="/sites/all/themes/ghve_2013/images/front-page/linkedin.png" alt="LinkedIn" style="position: relative; top: 2px; left: -7px;">
+                            </a>
+                        </div>
+                        <div>
+                        	<a href="/content/timely-topics-hiv-vaccines">
+                            	<img src="/sites/all/themes/ghve_2013/images/front-page/timely-topics-button.png">
+                            </a>
+                        	<a href="/secretariat-news">
+                            	<img src="/sites/all/themes/ghve_2013/images/front-page/newsletter-button.png" styl/ghve_2013/images/front-page/timely-topics-button.png">
+                            </a>
+                        	<a href="/secretariat-news">
+                            	<img src="/sites/all/the="margin-top:20px;">
+                             </a>
+                        	<a href="/timely-topics/capturing-participant-information-mucosal-sampling-investigators-guide">
+                            	<img src="/sites/all/themes/ghve_2013/images/front-page/mucosal-tout-homepage.jpg" style="margin-top:20px;">
+                             </a>
+                        </div>
+                    </div>
+                            <div style="clear:none;"></div>
+                </td>
+      			  
+              </tr>
+
+            <tr>
+              <td colspan="3">
+			  <div align="left"><span class="bottom-address">
+			  Global HIV Vaccine Enterprise, 64 Beaver Street, # 352, New York, NY 10004 | +1 212-461-3692 or toll free at +1-866-966-4483
+ <br />
+All Content ©2005 - 2013 Global HIV Vaccine Enterprise &nbsp; | &nbsp; <a href="/content/terms-use">Terms of Use</a> &nbsp; | &nbsp; <a href="/content/global-hiv-vaccine-enterprise-privacy-policy">Privacy Policy</a> &nbsp; | &nbsp; <a href="/user">Log In / My Account</a>			  </span></div>
+              </td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td>&nbsp;  </td>
+        </tr>
+      </table></td>
+      <td valign="top" background="/sites/all/themes/ghve_2013/images/background/outside-02-right-shadow.jpg"><img src="/sites/all/themes/ghve_2013/images/background/outside-02-right-shadow.jpg" alt="" width="12" height="100%"></td>
+    </tr>
+    <tr>
+      <td colspan="3"><img src="/sites/all/themes/ghve_2013/images/background/outside-03-bottom-shadow.jpg" alt="" width="925" height="16"></td>
+    </tr>
+  </table>
+  <br>
+</div>
+
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-11474083-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+</body>
+</html>
+
+.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTag

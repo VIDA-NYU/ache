@@ -1,0 +1,948 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+
+
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <link href="/Content/Site.min.css?v=1" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/Content/Print.min.css?v=1" rel="stylesheet" type="text/css" media="print" />
+    <script src="/Scripts/lib/modernizr.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ede829916f12a8b&async=1"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js"></script>
+    <script>        window.jQuery || document.write('<script src="/Scripts/lib/jquery-1.6.4.min.js">\x3C/script>')</script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <script src="/Scripts/script.min.js?v=1" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="/Scripts/lib/selectivizr.js" type="text/javascript"></script>
+    <![endif]-->
+    
+
+
+
+
+<title>APIC | Ebola</title>
+<meta name="keywords" content="healthcare-acquired infections (HAIs), healthcare-associated infections, hospital infection rates, infection prevention and control, healthcare epidemiology, infection preventionists, aseptic technique, environmental hygiene, hand hygiene, disinfection and sterilization, outbreak investigation, surveillance, mandatory reporting, public health, cross-contamination, transmission-based precautions, infection control principles, evidence-based practices, multidrug-resistant organisms (MDROs), antibiotic resistance, MRSA infections, VRE infections, C. diff infections, Association for Professionals in Infection Control and Epidemiology (APIC)" />
+<meta name="description" content="A multi-disciplinary, voluntary, international organization promoting wellness and prevention of infection world-wide by advancing health care epidemiology." />
+    
+    <link href="/Content/Interior.css" rel="stylesheet" type="text/css" />
+    
+
+</head>
+<body>
+    <div class="canvas">
+        <div class="header">
+            <div class="page-section clearfix">
+                <h1>
+                    <a href="/">
+                        <img src="/Content/Images/Logo.jpg" alt="APIC" />
+                    </a>
+                </h1>
+                <div class="right">
+                    <ul class="links">
+
+    <li class="link"><a href="/For-Media/Newsroom-Overview" >Media</a></li>
+    <li class="link"><a href="/Member-Services/Member-Benefits" >Membership</a></li>
+    <li class="link"><a href="/About-APIC/Volunteering" >Volunteering</a></li>
+                        <li class="myapic myapic-bookmarks">
+                                <a href="#myapic-signup" class="toggle-content login">Sign In</a>
+                                <div class="signup" id="myapic-signup">
+<form action="/Login/Login?returnUrl=http%3A%2F%2Fwww.apic.org%2FResources%2FTopic-specific-infection-prevention%2FEbola%23showQuickLinks" method="post">                                        <h3>Sign In/Sign Up</h3>
+                                        <p>
+                                            <label class="placeholder" for="signup-username">Email Address/Username</label>
+                                            <input type="text" name="EmailAddress" class="required" id="signup-username" placeholder="Email Address/Username" />
+                                        </p>
+                                        <p>
+                                            <label class="placeholder" for="signup-password">Password</label>
+                                            <input type="password" name="Password" class="required" id="signup-password" placeholder="Password" />
+                                        </p>
+                                        <p>
+                                            <input type="submit" value="Sign In" />
+                                        </p>
+                                        <p>
+                                            Forgot your <a href="/ForgotPassword/Index">password?</a><br />
+                                            Not registered? <a href="/Member-Services/Join">Sign up now!</a>
+                                        </p>
+</form>                                </div>
+                        </li>
+                    </ul>
+                    <div class="search">
+<form action="/Search/Index" method="get">                            <fieldset>
+                                <label class="placeholder" for="searchval">Search keywords</label>
+                                <input type="text" class="searchval" id="searchval" name="Keywords" placeholder="Search keywords" />
+                                <input type="image" src="/Content/Images/Search.png" class="searchbtn" value="Search" />
+                            </fieldset>
+</form>                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-nav clearfix">
+           
+
+
+<ul class="clearfix">
+        <li >
+            <a href="/For-Consumers/Patient-safety-resources"  class="root">Consumers</a>
+                <div class="subnav">
+                    <ul>
+                            <li ><a href="/For-Consumers/Patient-safety-resources" >Overview</a></li>
+                            <li ><a href="/For-Consumers/Monthly-alerts-for-consumers" >Monthly alerts for consumers</a></li>
+                            <li ><a href="/For-Consumers/Materials-for-healthcare-facilities" >Materials for healthcare facilities</a></li>
+                            <li ><a href="/For-Consumers/Additional-patient-safety-resources" >Additional patient safety resources</a></li>
+                            <li ><a href="http://consumers.site.apic.org" >Infection Prevention and You website</a></li>
+                    </ul>
+                </div>
+        </li>
+        <li >
+            <a href="/Professional-Practice/Overview"  class="root">Professional Practice</a>
+                <div class="subnav">
+                    <ul>
+                            <li ><a href="/Professional-Practice/Overview" >Overview</a></li>
+                            <li ><a href="/Professional-Practice/Implementation-guides" >Implementation guides</a></li>
+                            <li ><a href="/Professional-Practice/Scientific-guidelines" >Scientific guidelines</a></li>
+                            <li ><a href="/Professional-Practice/Infection_preventionist_IP_competency_model" >Infection preventionist (IP) competency model</a></li>
+                            <li ><a href="/Professional-Practice/Research" >Research</a></li>
+                            <li ><a href="/Professional-Practice/Practice-Resources" >Practice resources</a></li>
+                            <li ><a href="/Professional-Practice/Emergency-Preparedness" >Emergency preparedness</a></li>
+                            <li ><a href="/Professional-Practice/AJIC" ><i>AJIC</i></a></li>
+                            <li ><a href="http://professionals.site.apic.org/the-week-iipw/" >International Infection Prevention Week</a></li>
+                    </ul>
+                </div>
+        </li>
+        <li >
+            <a href="/Education-and-Events/Overview"  class="root">Education &amp; Certification</a>
+                <div class="subnav">
+                    <ul>
+                            <li ><a href="/Education-and-Events/Overview" >Overview</a></li>
+                            <li         class="new"   
+><a href="/Education-and-Events/Certification" >CIC Certification</a></li>
+                            <li ><a href="/Education-and-Events/Event-Calendar" >Event calendar</a></li>
+                            <li ><a href="http://ac2015.site.apic.org" >Annual Conference 2015</a></li>
+                            <li ><a href="/Education-and-Events/Face-to-face" >Infection Prevention Academy</a></li>
+                            <li ><a href="/Education-and-Events/Online-learning" >Online learning</a></li>
+                            <li ><a href="http://webinars.apic.org" >Webinars</a></li>
+                    </ul>
+                </div>
+        </li>
+        <li class=active>
+            <a href="/Resources/Overview"  class="root">Resources</a>
+                <div class="subnav">
+                    <ul>
+                            <li ><a href="/Resources/Overview" >Overview</a></li>
+                            <li ><a href="/APICStore/Products" >Store</a></li>
+                            <li ><a href="http://text.apic.org" >APIC Text Online</a></li>
+                            <li ><a href="/Resources/Career-Center" >Career Center</a></li>
+                            <li ><a href="http://professionals.site.apic.org" >Infection Prevention and You resources</a></li>
+                            <li ><a href="http://consulting.site.apic.org/" >APIC Consulting Services Inc.</a></li>
+                            <li         class="new"   
+><a href="/Resources/Topic-specific-infection-prevention" >Topic-specific infection prevention</a></li>
+                            <li ><a href="/Resources/Cost-calculators" >Cost calculators</a></li>
+                    </ul>
+                </div>
+        </li>
+        <li >
+            <a href="/Advocacy/Government-Affairs-and-Advocacy"  class="root">Public Policy</a>
+                <div class="subnav">
+                    <ul>
+                            <li ><a href="/Advocacy/Government-Affairs-and-Advocacy" >Overview</a></li>
+                            <li ><a href="/Advocacy/Advocacy-Updates" >What's new</a></li>
+                            <li         class="new"   
+><a href="/Advocacy/Regulations" >Regulations</a></li>
+                            <li ><a href="/Advocacy/Legislation" >State legislation</a></li>
+                            <li ><a href="/Advocacy/Federal-legislation" >Federal legislation</a></li>
+                            <li ><a href="/Advocacy/advocacy-toolkit" >Advocacy Toolkit</a></li>
+                            <li ><a href="/Advocacy/Position-Statements" >Position statements</a></li>
+                            <li ><a href="http://capwiz.com/apic/home/" >Take action</a></li>
+                    </ul>
+                </div>
+        </li>
+        <li >
+            <a href="/About-APIC/About-APIC-Overview"  class="root">About</a>
+                <div class="subnav">
+                    <ul>
+                            <li ><a href="/About-APIC/About-APIC-Overview" >About APIC</a></li>
+                            <li ><a href="/About-APIC/Vision-and-Mission" >Vision and mission</a></li>
+                            <li         class="new"   
+><a href="/About-APIC/History" >History</a></li>
+                            <li ><a href="/About-APIC/Leadership" >Leadership</a></li>
+                            <li ><a href="/About-APIC/Awards" >Awards</a></li>
+                            <li ><a href="/About-APIC/Staff-Directory" >Staff directory</a></li>
+                            <li ><a href="/Member-Services/Chapters" >Chapters</a></li>
+                            <li ><a href="/About-APIC/Committees" >Committees</a></li>
+                            <li ><a href="/Resource_/TinyMceFileManager/APIC_bylaws_112012.pdf" >Bylaws</a></li>
+                            <li ><a href="/About-APIC/Membership-sections" >Membership sections</a></li>
+                            <li ><a href="/About-APIC/Work-at-APIC" >Work at APIC</a></li>
+                            <li ><a href="/About-APIC/Contact-Us" >Contact us</a></li>
+                            <li         class="new"   
+><a href="/About-APIC/Volunteering" >Volunteering</a></li>
+                    </ul>
+                </div>
+        </li>
+</ul>        </div>
+        
+        <div class="main-content">
+            
+
+}
+
+
+
+
+
+<div class="page-section clearfix content-has-aside">
+    <div class="main-content-wrap clearfix">
+            <div class="aside">
+
+
+<div class="section">
+    <h3 class="green_header">Resources</h3>
+    <ul class="nav">
+
+<li ><a href="/Resources/Overview" >Overview</a>
+</li>
+<li ><a href="/APICStore/Products" >Store</a>
+</li>
+<li ><a href="http://text.apic.org" >APIC Text Online</a>
+</li>
+<li ><a href="/Resources/Career-Center" >Career Center</a>
+</li>
+<li ><a href="http://professionals.site.apic.org" >Infection Prevention and You resources</a>
+</li>
+<li ><a href="http://consulting.site.apic.org/" >APIC Consulting Services Inc.</a>
+</li>
+<li ><a href="/Resources/Topic-specific-infection-prevention" >Topic-specific infection prevention</a>
+</li>
+<li ><a href="/Resources/Cost-calculators" >Cost calculators</a>
+</li>    </ul>
+</div>                <div class="section">                    
+
+
+
+                </div>
+            </div>
+        
+        <div class="body-container">
+			
+
+<p class="banner">
+    <img src="/Resource_/ContentTreeNodeInputModel/f7028a2e-ddf7-4e96-8754-c4baa71bcecd/HeaderImage/Ebola_subpageheader_1.jpg" alt="Ebola infection prevention and control resources" />   
+</p>
+            <div class="body">
+
+
+<div class="breadcrumbs">
+    <a href="/">Home</a>
+&gt; <a href="/Resources/Overview">Resources</a>
+&gt; <a href="/Resources/Topic-specific-infection-prevention">Topic-specific infection prevention</a>
+&gt; <a href="/Resources/Topic-specific-infection-prevention/Ebola">Ebola</a>
+</div>                <div class="page-header-toolbar clearfix">               
+                    <h2>
+Ebola infection prevention and control resources
+</h2>
+                    <ul class="toolbar">
+                        <li>
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style ">
+                            <a class="addthis_button_compact"></a>
+                            <a class="addthis_counter addthis_bubble_style"></a>
+                            </div>
+                            <!-- AddThis Button END -->
+
+                        </li>
+                    </ul>
+                </div>   
+                <div class="body-content">
+
+
+<div><script type="text/javascript">// <![CDATA[
+    document.write(<link href="http://apic.org/Manage/Webroot/Content/themes/base/jquery.ui.accordion.css" rel="stylesheet" type="text/css" />
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function() {
+    $("#testAccordion").accordion({ autoHeight: false,  active: false,navigation: true,
+        collapsible: true });
+  });
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function() {
+    $("#testAccordion1").accordion({ autoHeight: false,  active: false,navigation: true,
+        collapsible: true });
+  });
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function() {
+    $("#testAccordion2").accordion({ autoHeight: false,  active: false,navigation: true,
+        collapsible: true });
+  });
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    document.write("<style>#testAccordion2.ui-accordion .ui-accordion-header a {font-weight:bold;  color: #000000 !important;border:solid 2px #f0cfb7 ;background:#f0cfb7 !important;  }</style>");
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    document.write("<style>#testAccordion2.ui-accordion .ui-accordion-header  a:hover {background:#ffffff !important; color: #000000 !important;border:solid 2px #f0cfb7;}</style>");
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    document.write("<style>#testAccordion2.ui-accordion {min-height: auto !important; width: 85% !important;margin-left:7.5% !important; }</style>");
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    document.write("<style>#testAccordion.ui-accordion .ui-accordion-header {font-weight:bold; background:#d9f4ff; color: #000000 !important; border:solid 2px #d9f4ff; }</style>");
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    document.write("<style>#testAccordion.ui-accordion .ui-accordion-header a {font-weight:bold;  color: #000000 !important;border:solid 2px #d9f4ff; }</style>");
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    document.write("<style>#testAccordion.ui-accordion .ui-accordion-header  a:hover {background:#ffffff; color: #000000!important;border:solid 2px #d9f4ff;}</style>");
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    document.write("<style>#testAccordion.ui-accordion {min-height: auto !important; width: 85% !important;margin-left:7.5% !important; }</style>");
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    document.write("<style>#testAccordion1.ui-accordion .ui-accordion-header {font-weight:bold; background:#d9ecbf; color: #000000 !important; border:solid 2px #d9ecbf; }</style>");
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    document.write("<style>#testAccordion1.ui-accordion .ui-accordion-header a {font-weight:bold;  color: #000000 !important;border:solid 2px #d9ecbf;  }</style>");
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    document.write("<style>#testAccordion1.ui-accordion .ui-accordion-header  a:hover {background:#ffffff; color: #000000!important;border:solid 2px #d9ecbf; }</style>");
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    document.write("<style>#testAccordion1.ui-accordion {min-height: auto !important; width: 85% !important;margin-left:7.5% !important; }</style>");
+// ]]></script>
+<p style="float: right; margin-bottom: 1em; margin-left: 1em; margin-top: -1em;"><em>Last updated 1/21/15</em></p>
+<p>&nbsp;</p>
+<h4 style="text-align: center;">CDC</h4>
+<div id="testAccordion2" style="min-height: auto; width: 100%;" align="left">
+<h3><a href="#cdcEbolaWebsite">CDC Ebola website</a></h3>
+<div style="text-align: left;">
+<ul>
+<li>Access the <a href="http://www.cdc.gov/vhf/ebola/" target="_blank">CDC&rsquo;s Ebola webpage</a>.</li>
+<ul>
+<li><a href="/Resource_/TinyMceFileManager/Topic-specific/Key_Messages_11-19__FINAL.pdf" target="_blank">Ebola-related key messages and talking points</a>, November 19</li>
+</ul>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4 style="text-align: center;">APIC</h4>
+<div id="testAccordion1" style="min-height: auto; width: 100%;" align="left">
+<h3><a href="#ebolaRecognitionWall">Ebola Recognition Wall</a></h3>
+<div style="text-align: left;">
+<p>TIME magazine named &ldquo;The Ebola Fighters&rdquo; as <a href="http://time.com/time-person-of-the-year-ebola-fighters-choice/" target="_blank">person of the year</a>. Ebola fighters are indeed worthy of this acknowledgment and we are proud to recognize our members who have joined the effort. We thank all IPs for their ongoing efforts.&nbsp;</p>
+<p>Here we recognize IPs who have gone &ldquo;above and beyond,&rdquo; volunteering their time and expertise to help control the spread of Ebola domestically or abroad. If you have contributed to the effort, please let us know so we may list you on this page. Email Julie Blechman, APIC communications associate, (<a href="mailto:jblechman@apic.org" target="_blank">jblechman@apic.org</a>) and use the subject line &ldquo;Ebola IP&rdquo; and include: 1.) your full name and credentials, 2.) your Ebola activity with dates; and 3.) photos or a link to a blog (if applicable).</p>
+<div>&nbsp;</div>
+<p><strong>Simone Almeida, M(ASCP), CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Carla Alvarado, PhD</strong></p>
+<ul>
+<li>Member, APIC Task Force on Ebola&nbsp;</li>
+</ul>
+<p><strong>Angela M. Anttila, PhD, MSN, NP-C, CIC</strong></p>
+<ul>
+<li>Faculty member: CDC Safety Training for Healthcare Workers going to West Africa in Response to the 2014 Ebola Outbreak</li>
+</ul>
+<p><strong>Dorothy Belkoski, MSN, CIC</strong>&nbsp;</p>
+<ul>
+<li>Member of the Inova Health System Ebola Task force&nbsp;</li>
+<li>Project lead for hospital drills and trainings and Fire and Rescue drills in Virginia</li>
+</ul>
+<p><strong>Kelley Boston, MPH, CIC</strong></p>
+<ul>
+<li>Represented APIC on a CDC Rapid Ebola Preparedness assessment team in Galveston, TX&nbsp;</li>
+</ul>
+<p><strong>Amelia Bumsted, BS, RN, CRRN, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+<li>Presented the live webinar Q&amp;A Session for APIC: <a href="http://webinars.apic.org/session.php?id=14805" target="_blank">Ebola Response Q&amp;A Series: Developing an Ebola Center - What does it take?</a></li>
+</ul>
+<p><strong>Thomas Button, RN, NE-BC, CIC</strong></p>
+<ul>
+<li>Volunteered in Sierra Leone with WHO</li>
+<li><a href="http://fox4kc.com/2014/11/24/kansas-city-nurse-returns-from-ebola-work-in-west-africa/" target="_blank">Kansas City nurse returns from Ebola work in West Africa</a></li>
+</ul>
+<p><strong>Kevin Bussiere, RN-CIC</strong></p>
+<ul>
+<li>Headed Ebola preparedness for Sentara Healthcare System&nbsp;</li>
+</ul>
+<p><strong>Darlene Carey, RN, MSN, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Mary Ellen Casey, RN, M.Ed., CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Barbara Citarella, RN, BSN, MS, CHCE</strong></p>
+<ul>
+<li>Current chair of the Ebola Task Force for the National Association of Home Care and Hospice</li>
+</ul>
+<p><strong>Valerie Curry, BSN, MSIR, RN</strong></p>
+<ul>
+<li>Faculty member: CDC Safety Training for Healthcare Workers going to West Africa in Response to the 2014 Ebola Outbreak</li>
+<li>Contributed to the development of continuing education for the course: &ldquo;CDC Training for Healthcare Workers Going to Ebola Treatment Units in Africa&rdquo;</li>
+</ul>
+<p><strong>James Davis, MSN, RN, CCRN, CIC, HEM</strong></p>
+<ul>
+<li>Currently serves as a content expert and consultant on behalf of the Pennsylvania Department of Health (PA DOH) and the Patient Safety Authority on the Pennsylvania state lead assessment teams</li>
+<li>Served as a member of a CDC Rapid Ebola Preparedness assessment team assessments in Pennsylvania</li>
+</ul>
+<p><strong>Barbara DeBaun, MSN, RN, CIC&nbsp;</strong></p>
+<ul>
+<li>Member, APIC Task Force on Ebola&nbsp;</li>
+</ul>
+<p><strong>Susan Dolan, RN, MS, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Suzanne Donovan, MD&nbsp;</strong></p>
+<ul>
+<li>Volunteered in Sierra Leone, treating Ebola patients and training caregivers to care for Ebola patients</li>
+<li>Led the Ebola preparation of LA County Olive View-UCLA Medical Center, Sylmar, CA</li>
+</ul>
+<p><strong>Judith English, PhD, RN, CIC&nbsp;</strong></p>
+<ul>
+<li>Member, APIC Task Force on Ebola&nbsp;</li>
+</ul>
+<p><strong>Pamela Falk, MPH, F-SHEA, CIC</strong></p>
+<ul>
+<li>Member, APIC Task Force on Ebola&nbsp;</li>
+<li>Selected to attend and critique the CDC course for donning and doffing as a response to the Ebola crisis in Africa, Anniston, AL</li>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+<li>Developed and presented a course on donning and doffing to Eisenhower Medical Center for APIC Consulting in Palm Springs, CA</li>
+<li>Presented the same course to the Illinois Hospital Association for APIC Consulting in Chicago, IL</li>
+</ul>
+<p><strong>Annemarie Flood, RN, BSN, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Brenda Grant, RN, BSN, MPH, CIC, CHES</strong></p>
+<ul>
+<li>Represented APIC on a CDC Rapid Ebola Preparedness assessment team in Hartford, CT</li>
+</ul>
+<p><strong>Patti Grant, RN, BSN, MS, CIC</strong></p>
+<ul>
+<li>Wrote a step-by-step narrative for donning and doffing PPE using the buddy system, <a href="/Resource_/TinyMceFileManager/Topic-specific/PPE_Buddy_System_Process_10_27_14_at_MHfS.pdf" target="_blank">Buddy System for PPE Placement &amp; Removal</a>&nbsp;</li>
+</ul>
+<p><strong>Heather Gilmartin, PhD, NP, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Linda Greene, RN, MPS, CIC</strong></p>
+<ul>
+<li>Participated in 35 media interviews during the Ebola crisis. Linda made herself available at all times of the day, and on nights and weekends to help ensure that APIC delivered a strong message to the media, often doing 7 or more interviews in a single day. Here is a partial list of her major media interviews related to Ebola: Associated Press, New York Times, US News and World Report, Bloomberg News, Wall Street Journal, Los Angeles Times, National Public Radio, TIME Magazine, CBS News, and NBC News.</li>
+<li>Along with APIC leadership, Linda also participated in the Ebola telephone press briefing that APIC held on October 24 during which the results of APIC&rsquo;s Ebola Readiness Poll were shared.&nbsp;</li>
+</ul>
+<p><strong>Marguerite Gribogiannis, BS, MPA, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Janet Haas, DNSC, RN, CIC</strong></p>
+<ul>
+<li>Represented APIC on a CDC Rapid Ebola Preparedness assessment team in New York City, NY</li>
+</ul>
+<p><strong>Cheryl Herbert, RN, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Heather Hohenberger, RN, BSN, CIC, CNOR</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Kerri L. Huber, RN, MSN, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+<li>Acted in the web-based training modules on PPE</li>
+</ul>
+<p><strong>D. Kirk Huslage, RN, BSN, MSPH, CIC</strong></p>
+<ul>
+<li>Member, APIC Task Force on Ebola&nbsp;</li>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Donna Haiduven, PhD, RN, CIC</strong></p>
+<ul>
+<li>Faculty member: CDC Safety Training for Healthcare Workers going to West Africa in Response to the 2014 Ebola Outbreak</li>
+</ul>
+<p><strong>JoEllen Harris, RN, CIC&nbsp;</strong></p>
+<ul>
+<li>Developed training program with UNICEF, WHO, and the Democratic Republic of Congo Ministry of Health</li>
+<li>Member of the CDC Rapid Ebola Preparedness assessment team that went to NY-Glen Cove, North Shore, NY</li>
+</ul>
+<p><strong>Jill Holdsworth, MS, CIC</strong></p>
+<ul>
+<li>Organized a D.C. Metro area Ebola Summit that included the D.C. Department of Health and Virginia Emergency Preparedness Department</li>
+<li>Participated in media interviews about Ebola</li>
+</ul>
+<p><strong>Marsha Kemp, RN, BS, CIC, COHN</strong></p>
+<ul>
+<li>Represented APIC on a CDC Rapid Ebola Preparedness assessment team in Richmond, VA</li>
+</ul>
+<p><strong>Doe Kley, BS, RN, CIC</strong></p>
+<ul>
+<li>Trained more than 100 nurses and doctors on Tier 2 PPE at Kaiser Permanente Medical Center, San Jose, CA</li>
+</ul>
+<p><strong>Donna Kirkland, RN, BS</strong></p>
+<ul>
+<li>Currently setting up an Ebola treatment center in West Africa</li>
+</ul>
+<p><strong>Christina Khaokham, RN, MSN/MPH</strong></p>
+<ul>
+<li>Faculty member: CDC Safety Training for Healthcare Workers going to West Africa in Response to the 2014 Ebola Outbreak</li>
+</ul>
+<p><strong>Susan Kraska, RN, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Mary Alice Lavin, RN, MJ, CIC&nbsp;</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+<li>Represented APIC on a CDC Rapid Ebola Preparedness Assessment team in Illinois</li>
+<li>Assisted APIC Consulting with PPE donning and doffing training presented at the Metropolitan Chicago Healthcare Council for the Chicago Healthcare System Coalition for Preparedness and Response</li>
+</ul>
+<p><strong>Pancy Leung-Chen, RN, BSN, MPA, CIC, CPHQ</strong></p>
+<ul>
+<li>Faculty member: CDC Safety Training for Healthcare Workers going to West Africa in Response to the 2014 Ebola Outbreak</li>
+<li>Volunteered to film the training for CDC TV</li>
+</ul>
+<p><strong>Valerie Lyon, RN, BSN, CIC</strong></p>
+<ul>
+<li>Participated in Missouri State Emergency Management Agency (SEMA) Ebola briefing and planning meeting</li>
+<li>Led Ebola drills and table top exercises in Jefferson, MO</li>
+<li>Trained targeted healthcare workers and emergency medical services for the Missouri Department of Health and Senior Services</li>
+<li>Led Ebola drills for the Cole County EMS</li>
+</ul>
+<p><strong>Dorothy MacEachern, MS, MPH</strong></p>
+<ul>
+<li>Represented APIC on a CDC Rapid Ebola Preparedness Assessment team in Spokane, WA</li>
+</ul>
+<p><strong>Mary Lou Manning, PhD, CRNP, CIC, FAAN</strong></p>
+<ul>
+<li>Represented APIC on a CDC Rapid Ebola Preparedness Assessment team in Philadelphia, PA</li>
+<li>Faculty member: CDC Safety Training for Healthcare Workers going to West Africa in Response to the 2014 Ebola Outbreak in Anniston, AL</li>
+<li>Member, American Nurses Association (ANA) Expert Advisory Panel on Ebola</li>
+</ul>
+<p><strong>Captain Peter Masters</strong></p>
+<ul>
+<li>Trained Virginia county and Fairfax county hospitals in Ebola preparedness</li>
+<li>Spoke at the D.C. Metro Ebola Summit, educating many types of healthcare professionals</li>
+</ul>
+<p><strong>Jennie L. Mayfield, BSN, MPH, CIC</strong></p>
+<ul>
+<li>Participated in October 24 APIC press briefing to share results of Ebola Readiness Poll with news media</li>
+</ul>
+<p><strong>Carol McLay, DrPH, RN, CIC</strong></p>
+<ul>
+<li>Worked as an infection prevention specialist with WHO in Sierra Leone</li>
+<li>Read <a href="https://carolafrica.wordpress.com/" target="_blank">Carol&rsquo;s blog</a></li>
+</ul>
+<p><strong>Paola Montes, MPH, CIC, CHES</strong></p>
+<ul>
+<li>Consulted on the Ebola Response Operations team with WHO, Geneva, Switzerland</li>
+<li>Served on infection prevention and control activities with WHO in Guinea</li>
+</ul>
+<p><strong>Luz Nieves, RN, MPH, PhD &ndash; ABD</strong></p>
+<ul>
+<li>Faculty member: CDC Safety Training for Healthcare Workers going to West Africa in Response to the 2014 Ebola Outbreak</li>
+<li>Served as Ebola preparedness trainer, Poinciana Medical Center, Kissimmee, FL</li>
+</ul>
+<p><strong>Helen Paxton, MS, MT(ASCP), PhD, CIC</strong></p>
+<ul>
+<li>Provided in-services for out-patient facilities and church groups in the region</li>
+<li>Gathered disinfection materials, equipment, and supplies to be shipped to Sierra Leone</li>
+</ul>
+<p><strong>Kathy Roye-Horn, RN, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Terri Rebmann, PhD, RN, CIC&nbsp;</strong></p>
+<ul>
+<li>Member, APIC Task Force on Ebola&nbsp;</li>
+</ul>
+<p><strong>Tarry Samsel, BSN, RNC, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Joseph Scaletta, MPH, BSN, RN, CIC</strong></p>
+<ul>
+<li>Preparing to volunteer in Sierra Leone</li>
+</ul>
+<p><strong>Barbara A. Smith, BSN, MPA, CIC</strong></p>
+<ul>
+<li>Presented during an Ebola PPE demonstration organized by the Greater New York Hospital Association/1199SEIU</li>
+</ul>
+<p><strong>Alexander Tomich, DNP, RN, CIC</strong></p>
+<ul>
+<li>Member of the Illinois Ebola Task Force</li>
+<li>Presented the live webinar Q&amp;A Session for APIC: <a href="http://webinars.apic.org/session.php?id=14805" target="_blank">Ebola Response Q&amp;A Series: Developing an Ebola Center - What does it take?</a></li>
+</ul>
+<p><strong>Polly Trexler, MPH</strong></p>
+<ul>
+<li>Represented APIC on a CDC Rapid Ebola Preparedness Assessment team</li>
+</ul>
+<p><strong>Stephanie Turner, RN, BSN</strong></p>
+<ul>
+<li>Faculty member: CDC Safety Training for Healthcare Workers going to West Africa in Response to the 2014 Ebola Outbreak</li>
+</ul>
+<p><strong>Mary Virgallito, RN, MSN, CIC</strong></p>
+<ul>
+<li>Reviewed scripts and storyboards for the web-based training on PPE, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+</ul>
+<p><strong>Marc-Oliver Wright,&nbsp;</strong><strong>MT(ASCP), MS, CIC</strong></p>
+<ul>
+<li>Represented APIC on a CDC Rapid Ebola Preparedness Assessment team in Illinois</li>
+</ul>
+<p><strong>Kelene Youngs, RN, CIC</strong></p>
+<ul>
+<li>Serves on hospital planning team, community response team</li>
+<li>Led hospital and county Ebola table top drills&nbsp;</li>
+</ul>
+</div>
+<h3><a href="#ebolaReadinessSurvey">Ebola readiness survey</a></h3>
+<div style="text-align: left;">
+<p>APIC asked its 15,000 members to complete an online Ebola preparedness survey, October 10-15, 2014. The survey asked infection preventionists, &ldquo;How prepared is your facility to receive a patient with the Ebola virus?&rdquo; Results from this survey are based on the 1,039 U.S. infection preventionist respondents who practice in acute care hospitals.</p>
+<ul>
+<li>Read the&nbsp;<a href="/Resource_/TinyMceFileManager/Topic-specific/Ebola_survey_release_FINAL_8.pdf" target="_blank">news release</a>.&nbsp;</li>
+<li>Read the&nbsp;<a href="/Resource_/TinyMceFileManager/Topic-specific/Ebola_Readiness_Poll_Results_FINAL.pdf" target="_blank">survey summary report</a>.</li>
+</ul>
+</div>
+<h3><a href="#apicPressActivity">APIC press activity</a></h3>
+<div style="text-align: left;">
+<p>APIC organized a telephone press briefing on October 24 to publicize the <a href="/Resource_/TinyMceFileManager/Topic-specific/Ebola_Readiness_Poll_Results_FINAL.pdf" target="_blank">Ebola readiness survey</a>. APIC President Jennie Mayfield, BSN, MPH, CIC, CEO Katrina Crist, MBA, and senior advisor Linda Greene, RN, MPS, CIC, participated. More than 220 articles have appeared. The APIC media relations staff has facilitated more than 45 media interviews with infection prevention experts since the Ebola crisis began.</p>
+<ul>
+<li>Updated in the news:&nbsp;<a href="/Resource_/TinyMceFileManager/Topic-specific/APIC_Quotes_in_the_Media_Related_to_Ebola.pdf" target="_blank">APIC experts speak out</a>.</li>
+<li>Updated&nbsp;<a href="/Resource_/TinyMceFileManager/Topic-specific/Media_outlets_that_have_contacted_APIC_for_comments_and_info.pdf" target="_blank">list of media</a>&nbsp;for whom APIC has been a resource</li>
+</ul>
+</div>
+<h3><a href="#apicStatements">APIC statements, news releases, and positions</a></h3>
+<div style="text-align: left;">
+<ul>
+<li>October 31, 2014, <a href="/For-Media/News-Releases/Article?id=4c557eaf-b157-421d-8fff-b3c0c31c5dc1">News release</a>: APIC collaborates with Johns Hopkins Armstrong Institute for Patient Safety and Quality on Ebola PPE web training</li>
+<li>October 31, 2014&nbsp;<a href="/For-Media/News-Releases/Article?id=4d3c286c-1ef6-4aef-95f6-85f3f020af47" target="_blank">Joint statement</a>: Leading infectious disease medical societies oppose quarantine for asymptomatic healthcare personnel traveling from West Africa</li>
+<li>October 26, 2014,&nbsp;<a href="/For-Media/Announcements/Article?id=529c5389-b73b-4ae9-8889-e47c6305c3ea" target="_blank">Statement</a>: Opposition of mandatory quarantines for healthcare personnel returning from Ebola care in West Africa.&nbsp;</li>
+<li>October 24, 2014,&nbsp;<a href="/Resource_/TinyMceFileManager/Topic-specific/Ebola_survey_release_FINAL_8.pdf" target="_blank">News release</a>: Announcement of the results of the Ebola readiness survey of infection preventionists. .</li>
+<li>October 23, 2014,&nbsp;<a href="http://www.aami.org/news/2014/102314_Press_Multisociety_Statement_on_Processing_Biohazardous_Medical_Waste.html" target="_blank">Joint statement</a>: Processing biohazardous medical waste from patients with Ebola, with the Association for the Advancement of Medical Instrumentation and others.&nbsp;</li>
+<li>October 16, 2014,&nbsp;<a href="/For-Media/News-Releases/Article?id=61fda43a-d4d0-49e9-9347-f07ba245a669" target="_blank">Statement</a>: Issued by APIC to the media.&nbsp;</li>
+</ul>
+</div>
+<h3><a href="#apicWebinars">APIC webinars&nbsp;and web-based training</a></h3>
+<div style="text-align: left;">
+<ul>
+<li>Interactive,&nbsp;<a href="http://www.cdc.gov/vhf/ebola/hcp/ppe-training/index.html" target="_blank">web-based training on PPE</a>, developed by APIC, Johns Hopkins Armstrong Institute for Patient Safety and Quality, and CDC</li>
+<li>December 12, 2014,&nbsp;<a href="http://webinars.apic.org/session.php?id=14808" target="_blank">Ebola Response Q&amp;A Series: Ebola Laboratory Considerations for Patient Diagnosis and Management (U.S.)</a></li>
+<li>December 5, 2014, <a href="http://webinars.apic.org/session.php?id=14807" target="_self">ARCHIVED:&nbsp;Ebola Response Q&amp;A Series: Ebola Waste Management</a></li>
+<li>November 14, 2014,&nbsp;<a href="http://webinars.apic.org/session.php?id=14805" target="_blank">ARCHIVED:&nbsp;Ebola Response Q&amp;A Series: Developing an Ebola Center - What does it take?</a></li>
+<li>November 7, 2014,&nbsp;<a href="http://webinars.apic.org/session.php?id=14804" target="_blank">ARCHIVED:&nbsp;Ebola Response Q&amp;A Series: Ebola Preparation for Outpatient Settings</a></li>
+<li>October 31, 2014, <a href="http://webinars.apic.org/session.php?id=14800" target="_blank">ARCHIVED: Ebola Response Q&amp;A Series: PPE Donning and Doffing</a></li>
+<li>October 21, 2014, <a href="http://webinars.apic.org/session.php?id=14754" target="_blank">ARCHIVED: Updated Ebola Infection Prevention and Control Guidance</a></li>
+<li>August 13, 2014, <a href="http://webinars.apic.org/session.php?id=14306" target="_blank">ARCHIVED: What Infection Preventionists need to know about Ebola Preparations</a>. Access the archived session using the code APICPASS.</li>
+</ul>
+</div>
+<h3><a href="#apicPublications">APIC publications and resources</a></h3>
+<div style="text-align: left;">
+<ul>
+<li>Interactive, <a href="http://www.cdc.gov/vhf/ebola/hcp/ppe-training/index.html">web-based training on PPE</a>, developed by APIC, Johns Hopkins Armstrong Intitute for Patient Safety and Quality, and CDC</li>
+<li>APIC Text, chapter 120: <a href="/Resource_/TinyMceFileManager/Topic-specific/47901_CH120_R1.pdf" target="_blank">Infectious Disease Disasters: Bioterrorism, Emerging Infections, and Pandemics</a></li>
+<li>Emergency Medical Services (EMS) and Ebola Preparedness:&nbsp;<a href="/Resource_/TinyMceFileManager/Topic-specific/EPC_Ebola_Slide_Deck.ppt" target="_blank">Guidelines for responding to patients with suspected Ebola symptoms</a>&nbsp;(PowerPoint)</li>
+<li><em><a href="/Resource_/EliminationGuideForm/e1ac231d-9d35-4c42-9ca0-822c23437e18/File/EMS_Guide_web.pdf" target="_blank">Guide to Infection Prevention in Emergency Medical Services</a></em></li>
+</ul>
+</div>
+<h3><a href="#ebolaFAQs">Ebola FAQs</a></h3>
+<div style="text-align: left;">APIC has compiled <a href="/Resource_/TinyMceFileManager/Topic-specific/Ebola_FAQ_11172014.pdf" target="_blank">frequently asked clinical questions</a> about Ebola. The answers have been sourced from the Centers for Disease Control and Prevention (CDC), Doctors without Borders, the Environmental Protection Agency (EPA), and others. Additionally, we encourage you to see the CDC&rsquo;s compilation of its <a href="http://www.cdc.gov/vhf/ebola/qa.html" target="_blank">Ebola questions and answers</a> for additional information.</div>
+<h3><a href="#apicConsulting">APIC Consulting Services, Inc.</a></h3>
+<div style="text-align: left;">
+<p><a href="http://consulting.site.apic.org/" target="_blank">APIC Consulting</a> is available for onsite, customized, Ebola-preparedness consultations at individual acute care hospitals and hospital systems.&nbsp;Our primary training includes assistance in the hands-on practice of donning/doffing PPE specific to Ebola-related CDC guidance, as well as identification and implementation of a readiness plan. APIC Consultants are ready to assist individual acute care hospitals, hospital systems, ambulatory care, ASC, urgent care clinics, physician offices, and more. Train-the-trainer PPE courses are available as well for hospitals, hospital systems, state health departments, and state hospital associations. For more information, contact <a href="mailto:info@apicconsulting.com">info@apicconsulting.com</a> or call 202-464-4252.&nbsp;</p>
+</div>
+<h3><a href="#allMemberEmails">All-member emails from Katrina Crist, CEO</a></h3>
+<div style="text-align: left;">
+<ul>
+<li><a href="http://apic.informz.net/z/cjUucD9taT0zOTczMTE1JnA9MSZ1PTgxMDY5MjI0NyZsaT0yNDE4NzcyOQ/index.html" target="_blank">Friday, January 9, 2015</a></li>
+<li><a href="http://apic.informz.net/informzdataservice/onlineversion/ind/bWFpbGluZ2luc3RhbmNlaWQ9Mzk1MjMwMSZzdWJzY3JpYmVyaWQ9ODEwNjkyMjQ3" target="_blank">Friday, January 2, 2015</a></li>
+<li><a href="http://apic.informz.net/informzdataservice/onlineversion/ind/bWFpbGluZ2luc3RhbmNlaWQ9MzkzNDgzMiZzdWJzY3JpYmVyaWQ9ODEwNjkyMjQ3" target="_blank">Friday, December 19, 2014</a></li>
+<li><a href="http://apic.informz.net/informzdataservice/onlineversion/ind/bWFpbGluZ2luc3RhbmNlaWQ9MzkxMDU1MyZzdWJzY3JpYmVyaWQ9ODEwNjkyMjQ3" target="_blank">Friday, December 12, 2014</a></li>
+<li><a href="http://apic.informz.net/informzdataservice/onlineversion/ind/bWFpbGluZ2luc3RhbmNlaWQ9Mzg5ODI0NCZzdWJzY3JpYmVyaWQ9ODEwNjkyMjQ3" target="_blank">Monday, December 8, 2014</a></li>
+<li><a href="http://apic.informz.net/informzdataservice/onlineversion/ind/bWFpbGluZ2luc3RhbmNlaWQ9Mzg5NDA3MiZzdWJzY3JpYmVyaWQ9NzU3MDM0MDky" target="_blank">Friday, December 5, 2014</a></li>
+<li><a href="http://apic.informz.net/informzdataservice/onlineversion/ind/bWFpbGluZ2luc3RhbmNlaWQ9Mzg3Njg4NiZzdWJzY3JpYmVyaWQ9ODEwNjkyMjQ3" target="_blank">Monday,&nbsp;December 1, 2014</a></li>
+<li><a href="http://apic.informz.net/informzdataservice/onlineversion/ind/bWFpbGluZ2luc3RhbmNlaWQ9Mzg2NDU5NiZzdWJzY3JpYmVyaWQ9ODEwNjkyMjQ3" target="_blank">Monday, November 24, 2014</a></li>
+<li><a href="http://apic.informz.net/informzdataservice/onlineversion/ind/bWFpbGluZ2luc3RhbmNlaWQ9Mzg2MDA2OCZzdWJzY3JpYmVyaWQ9ODEwNjkyMjQ3" target="_blank">Friday, November 21, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9Mzg0Mzg4MCZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Monday, November 17, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9MzgzOTIyOCZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Friday, November 14, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9MzgyMzgzNiZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Monday, November 10, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9MzgxOTI0NiZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Friday,&nbsp;November 7, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9MzgwMjMxOCZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Monday, November 3, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9Mzc5NzQ1NiZzdWJzY3JpYmVySWQ9NzU0OTg0NTc0">Friday, October 31, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9Mzc5MzgzNyZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Thursday, October 30, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9Mzc4OTI3OSZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Wednesday, October 29, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9Mzc4NTMyNCZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Tuesday, October 28, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9Mzc4MTE3OCZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Monday, October 27, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9Mzc3NjE2MiZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Friday, October 24, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9Mzc3MjY4MCZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Thursday, October 23, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9Mzc2MzA2OSZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Tuesday, October 21, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9Mzc1ODkwNCZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Monday, October 20, 2014</a></li>
+<li><a href="http://apic.informz.net/InformzDataService/OnlineVersion/Ind/bWFpbGluZ0luc3RhbmNlSWQ9Mzc1MzkyMSZzdWJzY3JpYmVySWQ9ODEwNjkyMjQ3" target="_blank">Friday, October 17, 2014</a></li>
+<li><a href="http://archives.informz.net/clients/apic/archives/archive_3749636.html" target="_blank">Thursday, October 17, 2014</a></li>
+</ul>
+</div>
+<h3><a href="#ipTalkCommunity">APIC&rsquo;s IP Talk community</a></h3>
+<div style="text-align: left;">
+<p>Log on to <a href="http://community.apic.org/myapic/communities/viewcommunities/groupdetails?CommunityKey=a42080cc-43bc-4706-beba-216aa38f9940" target="_blank">IP Talk</a>, APIC&rsquo;s peer-to-peer online community, to engage in conversations about Ebola with other infection preventionists. Type &ldquo;Ebola&rdquo; in the search bar to review conversations and resources posted by other infection preventionists.</p>
+</div>
+<h3><a href="#ipBlog">Infection preventionist's blog</a></h3>
+<div style="text-align: left;">
+<p><span style="font-size: 1em;">APIC Communications Committee Chair Carol McLay, DrPH, RN, CIC, is currently volunteering in Sierra Leone to assist in the Ebola infection prevention and control effort. She has started a blog to document her experience there. <a href="http://carolafrica.wordpress.com/" target="_blank">Read it here.</a></span></p>
+</div>
+</div>
+<p>&nbsp;</p>
+<h4 style="text-align: center;">Other</h4>
+<div id="testAccordion" style="min-height: auto; width: 100%;" align="left">
+<h3><a href="#resourcesSharedapicMembers">Resources shared by APIC members</a></h3>
+<div style="text-align: left;">
+<ul>
+<li><a style="font-size: 1em; font-weight: normal;" href="/Resource_/TinyMceFileManager/PPE_Buddy_System_Process_10.27.14_at_MHfS.pdf">Buddy system for PPE placement and removal</a><span style="font-size: 1em; font-weight: normal;">&nbsp;(Methodist Hospital for Surgery)</span></li>
+<li><a href="/Resource_/TinyMceFileManager/Topic-specific/Donning_and_Doffing_PPE_COMPETENCY_VALIDATION_CHECKLIST.pdf" target="_blank">Donning and doffing PPE competency validation checklist</a> (American Association for Respiratory Care)</li>
+<li><a href="/Resource_/TinyMceFileManager/Topic-specific/Donning_and_Doffing_PPE_Competency_10282014_doc.pdf" target="_blank">Donning and doffing PPE for isolation of Ebola patients</a>&nbsp;(Pipestone County Medical Center and Family Clinic Avera)</li>
+<li><a href="/Resource_/TinyMceFileManager/Topic-specific/MDI_Donning_10.28.pdf" target="_blank">PPE donning checklist</a> (Mount Desert Island Hospital)</li>
+<li><a href="/Resource_/TinyMceFileManager/Topic-specific/MDI_Doffing_10.28.pdf" target="_blank">PPE doffing checklist</a>&nbsp;(Mount Desert Island Hospital)</li>
+<li><a href="/Resource_/TinyMceFileManager/Topic-specific/Ebola_Teaching_Points.pdf" target="_blank">Teaching points for nurse educators</a>&nbsp;(The Ohio State University)</li>
+</ul>
+</div>
+<h3><a href="#personalProtectiveEquipment">Personal protective equipment</a></h3>
+<div style="text-align: left;">
+<ul>
+<li><a href="http://www.cdc.gov/vhf/ebola/hcp/procedures-for-ppe.html" target="_blank">Guidance on Personal Protective Equipment To Be Used by Healthcare Workers During Management of Patients with Ebola Virus Disease in U.S. Hospitals, Including Procedures for Putting On (Donning) and Removing (Doffing)</a>&mdash;Centers for Disease Control and Prevention</li>
+<li>Interactive,&nbsp;<a href="http://www.cdc.gov/vhf/ebola/hcp/ppe-training/index.html">web-based training on PPE</a>, developed by APIC, Johns Hopkins Armstrong Intitute for Patient Safety and Quality, and CDC</li>
+<li><a href="http://www.who.int/csr/disease/ebola/put_on_ppequipment.pdf?ua=1" target="_blank">Steps to put on personal protective equipment (PPE)</a>&mdash;World Health Organization</li>
+<li><a href="http://www.who.int/csr/disease/ebola/remove_ppequipment.pdf?ua=1" target="_blank">Steps to remove personal protective equipment (PPE)</a> &mdash;World Health Organization</li>
+<li>Videos:&nbsp;</li>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=N6F61J93FvE" target="_blank">Donning and Doffing of Personal Protective Equipment (PPE) in Hospital Ebola Isolation Units</a>&mdash;North Carolina Preferred Guidance&nbsp;</li>
+<li><a href="https://www.youtube.com/watch?v=AxdlOqs2_ww" target="_blank">Ebola Education Session - Personal Protective Equipment (PPE) Demonstration</a>&mdash;GNYHA/1199SEIU</li>
+</ul>
+</ul>
+</div>
+<h3><a href="#resourcesOutsideOrganizations">Resources from additional outside organizations</a></h3>
+<div style="text-align: left;">
+<ul>
+<li><a href="http://www.allhealth.org/publications/Public_health/Ebola-Toolkit_161.pdf" target="_blank">Alliance for Health Reform</a>&mdash;Toolkit: Emergency Preparedness in the U.S.: The Ebola Threat</li>
+<li><a href="http://www.absa.org/resebola.html" target="_blank">American Biological Safety Association</a>&mdash;Ebola webpage</li>
+<li><a href="http://www.ama-assn.org/ama/pub/physician-resources/public-health/ebola-resource-center.page" target="_blank">American Medical Association</a>&mdash;Ebola resource center</li>
+<li><a href="http://www.getreadyforflu.org/EbolaFacts.htm" target="_blank">American Public Health Association</a>&mdash;Ebola: What you need to know if you live in the U.S.</li>
+<li><a href="http://www.aami.org/publications/AAMINews/Nov2014/ebola_outbreak.html" target="_blank">Association for the Advancement of Medical Instrumentation</a>&mdash;Healthcare Organizations Respond to Ebola Outbreak</li>
+<li><a href="http://www.aorn.org/Clinical_Practice/Clinical_FAQs/Ebola.aspx" target="_blank">Association of periOperative Registered Nurses</a>&mdash;Clinical FAQ</li>
+<li><a href="http://www.astho.org/Infectious-Disease/Top-Questions-On-Ebola-Simple-Answers-Developed-by-ASTHO/" target="_blank">Association of State and Territorial Health Officials</a>&mdash;Top Questions On Ebola: Simple Answers&nbsp;</li>
+<li><a href="http://www.cdc.gov/vhf/ebola/" target="_blank">Centers for Disease Control and Prevention</a>&mdash;</li>
+<ul>
+<li><a href="/Resource_/TinyMceFileManager/Topic-specific/Key_Messages_11-19__FINAL.pdf" target="_blank">Ebola-related key messages and talking points</a>, November 19</li>
+<li><a href="http://www.cdc.gov/vhf/ebola/hcp/procedures-for-ppe.html" target="_self">Guidance on Personal Protective Equipment to be used by healthcare workers during management of patients with Ebola virus disease in U.S. hospitals, including procedures for putting on (donning) and removing (doffing)</a></li>
+</ul>
+<li><a href="/Resource_/TinyMceFileManager/Topic-specific/CMS_Ebola_state_memo.pdf" target="_blank">Centers for Medicare &amp; Medicaid Services</a>&mdash;Emergency Medical Treatment and Labor Act (EMTALA) requirements and implications related to Ebola virus disease (Ebola) memo</li>
+<li><a href="/Resource_/TinyMceFileManager/Topic-specific/suspected_ebola_patient_packaging_guidance_final.pdf" target="_blank">Department of Transportation</a>&mdash;Procedural Guidance on the Proper Packaging of Ebola Suspected Waste</li>
+<li><a href="http://www.emoryhealthcare.org/ebola-protocol/pdf/ehc-evd-protocols.pdf" target="_blank">Emory Healthcare</a>&mdash;Ebola Preparedness Protocols</li>
+<li><a href="http://vimeo.com/109626204" target="_blank">Greater New York Hospital Association/1199SEIU Healthcare Education&nbsp;Project</a>&mdash;Personal protective equipment (PPE) training demonstration. October 21, 2014,&nbsp;ARCHIVED</li>
+<li><a href="http://www.idsociety.org/Index.aspx" target="_blank">Infectious Diseases Society of America</a></li>
+<li><a href="http://www.medscape.com/viewarticle/833907" target="_blank">Medscape</a>&mdash;Ebola: Donning and doffing of personal protective equipment (PPE)</li>
+<li><a href="https://www.unmc.edu/cce/neb_ebola.htm" target="_blank">The Nebraska Ebola method for clinicians</a>&nbsp;(The University of Nebraska Medical Center and Nebraska Medicine)</li>
+<li><a href="http://www.nln.org/facultyprograms/ebolaresources.htm" target="_blank">National League for Nursing</a>&mdash;Dealing with Ebola and other dire infectious diseases</li>
+<li><a href="http://disasterinfo.nlm.nih.gov/dimrc/ebola_2014.html" target="_blank">National Library of Medicine</a>&mdash;Disaster medicine and public health information resources</li>
+<li><a href="https://www.youtube.com/watch?v=N6F61J93FvE" target="_blank">North Carolina Preferred Guidance</a>&mdash;Donning and Doffing of Personal Protective Equipment (PPE) in Hospital Ebola Isolation Units</li>
+<li><a href="http://www.nslijalerts.com/homepage/ebola-virus/for-healthcare-organizations/north-shore-lij-ebola-virus-preparedness-manual/?utm_source=pr&amp;utm_medium=bitly&amp;utm_campaign=ebola-pr-bitly" target="_blank">North Shore-LIJ Health System</a>&mdash;Ebola Virus Disease (EVD) Preparedness Manual</li>
+<li><a href="http://www.dol.gov/osha/pdf/OSHA_FS-3761_PPE_Selection_Matrix_-_Ebola_(11-24-14).pdf" target="_blank">Occupational Safety and Health Administration</a>&mdash;PPE Selection Matrix for Occupational Exposure to Ebola Virus:&nbsp;Guidance for common exposure scenarios</li>
+<li><a href="http://www.shea-online.org/View/ArticleId/301/Ebola-Infection-Control-Resources.aspx" target="_blank">Society for Healthcare Epidemiology of America</a>&mdash;Ebola Infection Control Resources</li>
+<li><a href="http://www.jointcommission.org/topics/ebola_preparedness_resources.aspx" target="_blank">The Joint Commission</a>&mdash;Ebola preparedness resources
+<ul>
+<li><a href="http://www.jointcommission.org/assets/1/18/Joint_Commission_Standards_for_Managing_Ebola_Patient.pdf" target="_blank">Joint Commission Standards: Safely and Effectively Managing the Infectious Ebola Patient</a></li>
+<li><a href="http://www.jointcommission.org/important_ebola_information_for_laboratorians/" target="_blank">Ebola information for laboratories</a></li>
+</ul>
+</li>
+<li><a href="http://www.who.int/csr/disease/ebola/en/" target="_blank">World Health Organization</a>&mdash;Ebola Virus Disease</li>
+</ul>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>APIC is working with the&nbsp;<a href="http://www.cdc.gov/vhf/ebola/" target="_blank">Centers for Disease Control and Prevention</a>&nbsp;(CDC), the&nbsp;<a href="http://www.who.int/csr/disease/ebola/en/" target="_blank">World Health Organization</a>&nbsp;(WHO), and other domestic and international partners in response to the current outbreak by helping and coordinating needed expertise with the relevant government agencies and keeping our members updated on what they need to know to be effective in the U.S.</p>
+<p>APIC members served as faculty for the&nbsp;<a href="http://www.cdc.gov/vhf/ebola/hcp/safety-training-course/index.html?s_cid=cs_1344" target="_blank">CDC training course</a>&nbsp;that prepare U.S. healthcare workers before deploying to West Africa.</p>
+<p>Infection preventionists who are interested in working directly with the Ebola response teams in West Africa need to work through the relevant agencies, including&nbsp;<a href="http://www.who.int/csr/disease/ebola/en/" target="_blank">WHO</a>,&nbsp;<a href="http://www.doctorswithoutborders.org/our-work/medical-issues/ebola" target="_blank">Doctors Without Borders</a>, and&nbsp;<a href="http://www.cdc.gov/vhf/ebola/hcp/safety-training-course/index.html?s_cid=cs_1344" target="_blank">CDC</a>. CDC directs people to&nbsp;<a href="http://www.usaid.gov/ebola/volunteers" target="_blank">USAID</a>.</p>
+<p>APIC will continuously notify members of updated&nbsp;Ebola-related resources&nbsp;from APIC, CDC, and other organizations.&nbsp;</p></div>  
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="footer-tagline">
+            <div class="page-section clearfix">
+                <p class="left tagline">
+                    Spreading Knowledge. Preventing Infection.&reg;
+                </p>
+                <div class="social-media">
+                    <span>Find APIC on</span>
+
+<ul class="social-media-links clearfix">
+    <li><a href="http://community.apic.org/" target="_blank"><img src="/Resource_/SocialMediaLinkForm/156233fc-7b0d-4f3e-b59a-29a5a7edca81/IconImage/MyAPIC_Screen_Icon_16x16.jpg" alt="MyAPIC" /></a></li>
+    <li><a href="http://twitter.com/#!/apic" target="_blank"><img src="/Resource_/SocialMediaLinkForm/ba8e690a-3c1e-4764-8ab8-9196578aa664/IconImage/Twitter.png" alt="Twitter" /></a></li>
+    <li><a href="http://www.youtube.com/user/APICInc" target="_blank"><img src="/Resource_/SocialMediaLinkForm/18f8d8e3-88c1-4a30-a65d-941107c84621/IconImage/YouTube.png" alt="YouTube" /></a></li>
+    <li><a href="https://www.facebook.com/APICInfectionPreventionandYou" target="_blank"><img src="/Resource_/SocialMediaLinkForm/b717b0dc-497c-452c-a742-f807746c7d52/IconImage/FB-fLogo-online.jpg" alt="Facebook" /></a></li>
+    <li><a href="http://www.linkedin.com/groups/Association-Professionals-in-Infection-Control-5186466" target="_blank"><img src="/Resource_/SocialMediaLinkForm/319f09dc-f496-46a7-a47b-4bf5a493c76e/IconImage/linkedin.png" alt="LinkedIn" /></a></li>
+</ul>                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="page-section clearfix">
+
+<div class="bookmarks clearfix">
+        <div class="bookmark">
+            <h3>Store</h3>
+            <ul>
+                    <li><a href="/APICStore/Products" >Books</a></li>
+            </ul>
+        </div>
+        <div class="bookmark">
+            <h3>Member Services</h3>
+            <ul>
+                    <li><a href="/Member-Services/About-Membership" >About membership</a></li>
+                    <li><a href="/Member-Services/Join" >Join/Renew membership</a></li>
+                    <li><a href="/Member-Services/Member-Benefits" >Member benefits</a></li>
+                    <li><a href="/Member-Services/Chapters" >Chapters</a></li>
+                    <li><a href="/Member-Services/Membership-Sections" >Membership Sections</a></li>
+                    <li><a href="/Member-Services/Publications" >Publications</a></li>
+                    <li><a href="/Member-Services/Awards" >APIC awards</a></li>
+            </ul>
+        </div>
+        <div class="bookmark">
+            <h3>Partners</h3>
+            <ul>
+                    <li><a href="/Partners/APIC-Partners" >APIC Partners</a></li>
+                    <li><a href="/Partners/Strategic-Partners" >Strategic Partners</a></li>
+                    <li><a href="/Partners/Building-Bridges" >Building Bridges</a></li>
+                    <li><a href="/Partners/Sponsorship" >Sponsorship/Support APIC</a></li>
+                    <li><a href="/Partners/Patron-Program-Benefits" >Patron Program Benefits</a></li>
+            </ul>
+        </div>
+        <div class="bookmark">
+            <h3>Additional Links</h3>
+            <ul>
+                    <li><a href="/About-APIC/Contact-Us" >Contact us</a></li>
+                    <li><a href="/privacy-policy" >Privacy policy</a></li>
+                    <li><a href="/Terms-and-Conditions" >Terms and Conditions</a></li>
+            </ul>
+        </div>
+</div>
+                <div class="right">
+                    <address>
+                        1275 K St., NW, Suite 1000<br />
+                        Washington, DC, 20005-4006<br />
+                        (p)202-789-1890 (f)202-789-1899<br />
+                        <a href="mailto:info@apic.org">info@apic.org</a>
+                    </address>
+                    <p class="copyright">
+                        Association for Professionals in<br />
+                        Infection Control and Epidemiology, Inc.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/Scripts/plugins/jquery.tmpl.js" type="text/javascript"></script>
+    <script src="/Scripts/lib/knockout.js" type="text/javascript"></script>
+    <script src="/Scripts/plugins/knockout.mapping.js" type="text/javascript"></script>
+    <script src="/Scripts/global.js" type="text/javascript"></script>
+    
+    
+
+    <script>
+        ko.applyBindings(window.viewModel);
+    </script>
+</body>
+
+
+
+
+<script type='text/javascript' src='http://apic.org/Resource_/TinyMceFileManager/js/jquery.slicknav.min.js'></script>
+<link rel="stylesheet" href="http://apic.org/Resource_/TinyMceFileManager/js/slicknav.css" type="text/css"/>
+		<script type='text/javascript'>
+			jQuery(function($) {
+			$('.main-nav').slicknav();
+			});
+			</script>
+
+
+
+
+
+
+<script src="//www.google-analytics.com/urchin.js" type="text/javascript"> 
+</script>
+<script type="text/javascript">
+    _uacct = "UA-344476-1";
+    urchinTracker();
+</script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-344476-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('a.external').click(function () {
+            _gaq.push(['_trackEvent', 'External Links', 'Click', $(this).attr('href')]);
+        });
+    });
+</script>
+<script type="text/javascript">
+    if (typeof jQuery != 'undefined') {
+        jQuery(document).ready(function ($) {
+            var filetypes = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i;
+            var baseHref = '';
+            if (jQuery('base').attr('href') != undefined)
+                baseHref = jQuery('base').attr('href');
+            jQuery('a').each(function () {
+                var href = jQuery(this).attr('href');
+                if (href && (href.match(/^https?\:/i)) && (!href.match(document.domain))) {
+                    jQuery(this).click(function () {
+                        var extLink = href.replace(/^https?\:\/\//i, '');
+                        _gaq.push(['_trackEvent', 'External', 'Click', extLink]);
+                        if (jQuery(this).attr('target') != undefined && jQuery(this).attr('target').toLowerCase() != '_blank') {
+                            setTimeout(function () { location.href = href; }, 200);
+                            return false;
+                        }
+                    });
+                }
+                else if (href && href.match(/^mailto\:/i)) {
+                    jQuery(this).click(function () {
+                        var mailLink = href.replace(/^mailto\:/i, '');
+                        _gaq.push(['_trackEvent', 'Email', 'Click', mailLink]);
+                    });
+                }
+                else if (href && href.match(filetypes)) {
+                    jQuery(this).click(function () {
+                        var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+                        var filePath = href;
+                        _gaq.push(['_trackEvent', 'Download', 'Click-' + extension, filePath]);
+                        if (jQuery(this).attr('target') != undefined && jQuery(this).attr('target').toLowerCase() != '_blank') {
+                            setTimeout(function () { location.href = baseHref + href; }, 200);
+                            return false;
+                        }
+                    });
+                }
+            });
+        });
+    }
+</script>
+</html>

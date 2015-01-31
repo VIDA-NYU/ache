@@ -1,0 +1,1733 @@
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+		<title>Ebola In America: Where The Ebola Patients Are - Forbes</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, maximum-scale=2.0" />
+		<meta name="description" content="Ebola is in America&#39;s hospitals, although not very many of them: Just three hospitals are currently treating four Ebola patients. Writing at the Advisory Board Daily Briefing, we&#39;ve been tracking the implications of Ebola for U.S. hospitals, with ongoing news alerts and a regularly updated map. Here&#39;s a quick look at where [...]" />
+		<meta name="keywords" content="Healthcare Innovation,Pharma and Health,Pharma &amp;amp; Healthcare" />
+		<meta name="author" content="Dan Diamond" />
+		<meta name="apple-itunes-app" content="app-id=588647136" />
+		<meta name="news_keywords" content="ebola, nina pham, amber vinson, national institutes of health" />
+		<meta property="author" content="Dan Diamond" />
+		<meta property="og:title" content="Ebola In America: Where The Ebola Patients Are" />
+		<meta property="og:site_name" content="Forbes" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/" />
+		<meta property="og:image" content="http://blogs-images.forbes.com/dandiamond/files/2014/10/26317_DB_ebola_US_101714-3.jpg" />
+		<meta name="sailthru.image.full" content="http://blogs-images.forbes.com/dandiamond/files/2014/10/26317_DB_ebola_US_101714-3.jpg" />
+		<meta property="og:description" content="Ebola is in America&#39;s hospitals, although not very many of them: Just three hospitals are currently treating four Ebola patients. Writing at the Advisory Board Daily Briefing, we&#39;ve been tracking the implications of Ebola for U.S. hospitals, with ongoing news alerts and a regularly updated map. Here&#39;s a quick look at where [...]" />
+		<meta property="fb:app_id" content="123694841080850" />
+		<meta property="article:published_time" content="2014-10-17" />
+		<meta name="date" content="2014-10-17" />
+		<meta property="article:author" content="http://www.forbes.com/sites/dandiamond/" />
+		<meta name="sailthru.author" content="Dan Diamond" />
+		<meta property="article:author" content="http://www.forbes.com/sites/dandiamond/" />
+		<meta name="sailthru.author" content="DD Constructed" />
+		<meta property="article:section" content="Healthcare Innovation" />
+		<meta property="article:section" content="Pharma & Healthcare" />
+		<meta property="article:tag" content="Healthcare Innovation" />
+		<meta property="article:tag" content="Pharma and Health" />
+		<meta property="article:tag" content="Pharma &amp; Healthcare" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@forbes" />
+		<meta name="twitter:creator" content="ddiamond" />
+		<link rel="canonical"   href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/" />
+		<link rel="next"   href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/2/" />
+		<link rel="shortlink"   href="http://onforb.es/1zficd4" />
+	    	<link rel="author" href="https://plus.google.com/+DanDiamond/posts" />
+	<script type="text/javascript" src="http://images.forbes.com/scripts/js_options.js"></script>
+
+		<script type="text/javascript">
+			var forbes = forbes || {};
+			forbes.gtm = {
+		dfp_site : "fdc.forbes",
+		dfp_zone : "article-new"
+			}
+		</script>
+	<script type="text/javascript">
+    	(function (){
+
+			window.displayedChannel = 'business';
+			window.displayedSection = 'dandiamondblog';
+
+			// Check if welcome ad is not disabled
+			if(typeof forbes !== "undefined" && typeof forbes.js_options !== "undefined" && !forbes.js_options.welcome_ad_disable ){
+
+				var midnight = new Date(),
+					offset = -5 // if offset is not set, by default time is UTC 6:00am i.e EST 1am & EDT 12am for dailyWelcomeCookie expiration
+				;
+
+				if(midnight.getUTCHours() >= -offset)
+					midnight.setUTCDate(midnight.getUTCDate()+1)
+				;
+
+				midnight.setUTCHours(-offset);
+				midnight.setUTCMinutes(00);
+				midnight.setUTCSeconds(00);
+
+
+				var welcomeCookie = "welcomeAd=sessionCookie",
+					interstitial_cookie = '_forbes_exit_interstitial_timer',
+					tomorrow = new Date(),
+					month = tomorrow.getMonth(),
+					day = tomorrow.getDate(),
+					dailyWelcomeCookie = 'dailyWelcomeCookie=dailyCookie',
+					browser_user_agent = window.navigator.userAgent.toLowerCase(),
+					page_type = 'article',
+					swimlane = '',
+					brand_voice = 'false'
+				;
+
+				if ((document.cookie.indexOf(welcomeCookie)==-1 || document.cookie.indexOf(dailyWelcomeCookie) == -1)
+					&& (window.navigator.userAgent.indexOf("Mozilla")>-1)
+					&& (browser_user_agent.indexOf("googlebot")==-1)
+					&& (browser_user_agent.indexOf("google web preview")==-1)
+					&& (window.location.host.indexOf("forbes.com")!=-1)
+					&& (window.location.search.indexOf("partner=yahoo")==-1)
+					&& (window.location.search.indexOf("partner=msn")==-1)
+					&& (window.location.search.indexOf("partner=aol")==-1)
+					&& (window.location.search.indexOf("partner=omg")==-1)
+					&& (window.location.search.indexOf("partner=huffpo")==-1)
+					&& (window.location.search.indexOf('nowelcome')==-1)
+					&& (swimlane.indexOf("rico")!=0 || page_type != 'article')
+					&& brand_voice==='false'){
+
+					if(document.cookie.indexOf(welcomeCookie) == -1 ){
+						document.cookie = welcomeCookie +'__welcome'+(month+1)+day+'; path=/; domain=.forbes.com';
+					}
+
+					if(document.cookie.indexOf(dailyWelcomeCookie) == -1){
+						document.cookie = dailyWelcomeCookie+'_forDate'+(month+1)+day+'; path=/; domain=.forbes.com; expires=' + midnight.toGMTString();
+					}
+
+					// check if interstitial's cookie hasn't been set already
+					if(document.cookie.indexOf( interstitial_cookie ) == -1){
+
+						// it doesn't exist; let's create the interstitial cookie and set it
+						// with the current timestamp
+
+						var now = new Date(),
+							now_time = now.getTime(),
+							expiration_date = new Date()
+						;
+
+						expiration_date
+							.setDate( expiration_date.getDate() + 365)
+						;
+
+						// set interstitial cookie to the current time
+						document.cookie = interstitial_cookie + '='+ now_time +'; path=/; domain=.forbes.com; expires=' + expiration_date.toUTCString();
+					}
+
+					if (document.cookie.indexOf(welcomeCookie) != -1 || document.cookie.indexOf(dailyWelcomeCookie) != -1){
+
+						// this cookie is used by interstitial_ad.js to determine if the user received a
+						// welcome ad before viewing the current page.
+						document.cookie="last_welcomead_url"+ "=" +escape(document.URL)+";path=/; domain=.forbes.com";
+						document.cookie="referrer"+ "=" +escape(document.referrer)+";path=/; domain=.forbes.com";
+						document.cookie="toURL"+ "=" +escape(document.URL)+";path=/; domain=.forbes.com";
+						document.cookie="refURL"+ "=" +escape(document.referrer)+";path=/; domain=.forbes.com";
+						this.location='http://www.forbes.com/fdc/welcome_mjx.shtml';
+					}
+				}
+
+			}
+		})();
+	</script>
+        <script type="text/javascript">
+			var forbes = ( function( forbes_namespace ) {
+
+
+				forbes_namespace.page_meta = {
+		channel : "business",
+		section : "dandiamondblog",
+		primary_channel : "business",
+		primary_section : "pharma",
+		special_slot : "healthcare-2025-14",
+		preview : false,
+		sitepage : "forbes.com/business/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/",
+		published : "2014-10-17T17:33:00Z",
+		post_id : "3640",
+		blog_id : "2238",
+		natural_id : "blogAndPostId/blog/post/2238-3640",
+		type : "blog",
+		title : "Ebola In America: Where The Ebola Patients Are",
+		site_slug : "dandiamond",
+		content_id : "content_54413fd8e4b0d253499da478",
+		blogtype : "individual",
+		authorType : "individual",
+		contribType : "Contributor",
+		brandvoice : false,
+		categories : ["Healthcare Innovation","Pharma & Healthcare"],
+
+						 author: {
+		natural_id : "blogAuthorId/blog/author/353761",
+		user_id : "353761",
+		display_name : "Dan Diamond",
+		type : "individual"
+						},
+
+						
+						simple_reach: {
+		iframe : true,
+		pid : "50e4a8434240cf5c4b000009",
+		url : "http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/",
+		title : "Ebola In America: Where The Ebola Patients Are",
+		date : "2014-10-17T17:33:00Z",
+		authors : ["Dan Diamond"],
+		channels : ["business"],
+							tags: ["site::dandiamond", "slot::healthcare-2025-14" ,"Healthcare Innovation","Pharma and Health","Pharma &amp; Healthcare"]
+						}
+				};
+                return forbes_namespace;
+            }( forbes || {} ) );
+        </script>
+	<script type='text/javascript'>
+
+	var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+  var gads = document.createElement('script');
+  gads.async = true;
+  gads.type = 'text/javascript';
+  var useSSL = 'https:' == document.location.protocol;
+  gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+  var node = document.getElementsByTagName('script')[0];
+  node.parentNode.insertBefore(gads, node);
+})();
+
+	</script>
+		<link rel="stylesheet" type="text/css" href="http://i.forbesimg.com/scripts/combined/css/global.d0d8ae4ebe59c35638201aabb1ef3d3a8b44cf31.css" />
+		<link rel="stylesheet" type="text/css" href="http://i.forbesimg.com/scripts/combined/css/article-responsive.13b732e5532f0006d817b229e9a70f3ea054f897.css" />
+		<script type="text/javascript" src="http://i.forbesimg.com/scripts/combined/js/head.5052956a0949a7529a94f7def4f84a95c6425cfc.js"></script>
+
+	<script type="text/javascript" src="http://i.forbesimg.com/assets/js/forbes/polar/vest_pocket_article.js"></script>
+	<script type="text/javascript" src="http://images.forbes.com/scripts/simple_reach.js"></script>
+
+
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" type="text/css" href="//i.forbesimg.com/assets/css/forbes/article_responsive/article_ie_unbreaker.css">
+	<![endif]-->
+
+
+</head>
+
+<body class="body_article infinite follow_bar_disabled"
+	data-header-mode="default"
+	data-base-url="/"
+	data-stream-data-url="/pepe2/get_article.php"
+	data-max-stream-pages="3">
+
+		
+<header class="ar_global enable_sticky_header">
+
+	<span class="edittools-goggles-hitmask">
+		<span class="edittools-goggles-hitarea">
+			<span class="edittools-goggles-toggle attach-click" title="Toggle Edit Tools"></span>
+		</span>
+	</span>
+	<span class="edittools-goggles-rule"></span>
+</header>
+
+<header class="mini_header">
+	<div class="wrap">
+		<div class="logo">
+			<a href="/" class="logo_menu_toggle">
+				<img class="svg icon_expanded" alt="Forbes" src="/assets/img/forbes_logo/forbes_logo.svg" onerror="this.src='/assets/img/forbes_logo/forbes_logo.gif'">
+				<img class="svg icon_collapsed" alt="Forbes" src="/assets/img/forbes_logo/forbes_logo_white.svg" onerror="this.src='/assets/img/forbes_logo/forbes_logo_white.png'">
+				<span class="icon arrow"></span>
+			</a>
+		</div>
+		<nav>
+			<ul class="main_categories">
+				<li data-id="new_posts">
+					<a href="http://www.forbes.com/real-time/" class="button" data-ga-event="Header,LinkFollowed,realtime" data-ga-event-trigger="click">
+						<span class="text">New Posts</span>
+						<sup class="post_count">+14</sup>
+					</a>
+				</li>
+				<li data-id="most_popular">
+					<a href="http://www.forbes.com/most-popular/" class="button" data-ga-event="Header,LinkFollowed,popular" data-ga-event-trigger="click">
+						<span class="text">Most Popular</span>
+					</a>
+				</li>
+				<li data-id="lists">
+					<a href="http://www.forbes.com/lists/" class="button" data-ga-event="Header,LinkFollowed,lists" data-ga-event-trigger="click">
+						<span class="text">Lists</span>
+					</a>
+				</li>
+				<li data-id="video">
+					<a href="http://www.forbes.com/video/" class="button" data-ga-event="Header,LinkFollowed,video" data-ga-event-trigger="click">
+						<span class="text">Video</span>
+					</a>
+				</li>
+				<li data-id="promo">
+					<a href="http://bit.ly/1aqPJ4p">
+						<span class="text">2 Free Issues of Forbes</span>
+					</a>
+				</li>
+				<li data-id="global_search">
+	<div class="header_search global_search_control typeahead_anchor">
+		<form class="form_global_search" action="/search/">
+			<div class="input_holder">
+				<input name="q" class="search_input" type="text" value="" placeholder="Search" data-placeholder-short="Search" data-placeholder-long="Search companies, people and lists" autocomplete="off">
+				<input class="form_submit" type="submit" value="submit">
+				<span class="loading_msg"></span>
+				<span class="loading_spinner"><img src="http://i.forbesimg.com/assets/img/loading_spinners/16px_grey.gif" height="16" width="16" alt=""></span>
+			</div>
+		</form>
+
+		<div class="typeahead_results_holder">
+			<div class="results"><ul></ul></div>
+		</div><!-- end div.typeahead_results_holder -->
+		
+	</div><!-- end li.search-->
+				</li>
+				<li data-id="user_info">
+
+<div class="user hover togglable collapsed">
+	<div class="account_wrapper">
+		<a class="button account toggle" href="http://blogs.forbes.com/account/" data-ga-event="Header,LinkFollowed,account" data-ga-event-trigger="click" data-content-outer=".toggle_dropdown" data-content-inner=".toggle_dropdown_content">
+			<img src="http://i.forbesimg.com/assets/img/anon_avatar.png" alt="">
+			<span class="icon arrow"></span>
+		</a>
+
+		<div class="toggle_dropdown">
+			<div class="toggle_dropdown_content rollover">
+				<div class="user_login clearfix">
+
+
+
+				<div class="one_column">
+
+					<div class="external_auth_options">
+						<h3>Log in with your social account:</h3>
+						<div id="gigya_accountdropdown_extralarge_div"></div>
+						<div class="clear"></div>
+					</div>
+
+					<hr class="dotted">
+
+					<h3>Or, you can
+						<a class="ajaxify unireg_login" href="http://blogs.forbes.com/account/login/" label="login">log in</a>
+						or
+						<a class="ajaxify unireg_register" href="http://blogs.forbes.com/account/register/" label="signup">sign up</a>
+						using Forbes.
+					</h3>
+				</div>
+
+
+				</div><!-- .user_login -->
+			</div><!-- .toggle_dropdown_content -->
+		</div><!-- .toggle_dropdown -->
+	</div><!-- .account_wrapper -->
+</div><!-- .user -->
+
+				</li>
+			</ul><!-- .main_categories -->
+		</nav>
+	</div><!-- .wrap -->
+</header><!-- .mini_header -->
+<div data-nav-ajax-url="/header/channels" class="ar_global_logo_rollover">
+	<div class="rollover rollover_box">
+
+	</div><!-- .rollover.rollover_box -->
+</div><!-- .ar_global_logo_rollover -->
+
+
+<div id="header_userinfo" class="clearfix">
+		<div class="login_header">
+		<!-- login header -->		<div class="gigya_chicklet_mask">			<div class="ribbon-item ribbon-item-gigya">				<div class="login_options">					<span>Connect</span>				</div>				<div id="gigyalogindiv" class="gigya_chicklet_holder"></div>			</div>		</div>		<span class="divider">|</span>		<div class="ribbon-item">			<a class="unireg_register ajaxify regbutton regbutton-signup" href="http://blogs.forbes.com/account/register/" title="Sign up for a Forbes account" data-ga-event="Account,Signup,headersignuptext" data-ga-event-trigger="click">Sign up</a>		</div>		<span class="divider">|</span>		<div class="ribbon-item">			<a class="unireg_login ajaxify regbutton regbutton-login" href="http://blogs.forbes.com/account/login/" title="Log in to your Forbes account" data-ga-event="Account,Login,headerlogintext" data-ga-event-trigger="click">Log in</a>		</div><!-- end login header -->
+		</div>
+	<div class="legal_header"><div class="ribbon-item"><a class="inlink inlink-topnav" href="http://blogs.forbes.com/help/">Help</a></div><span class="divider">|</span><div class="ribbon-item"><a onclick="(function(){var s=document.createElement('script');s.src='http://preferences.truste.com/js/buildJsFilev2.jsp?domain=forbes.com&amp;type=epref';s.onreadystatechange=function(){if(script.readyState=='loaded'||script.readyState=='complete'){view(trusteId);}};s.onload=function(){view(trusteId);};document.getElementsByTagName('head')[0].appendChild(s);})()">AdChoices</a></div><span class="divider">|</span><div class="ribbon-item"><a title="Terms and Conditions" href="/terms">Terms</a></div><span class="divider">|</span><div class="ribbon-item"><a title="Privacy Statement" href="http://www.forbes.com/fdc/privacy.html">Privacy</a></div></div>
+</div><!--end #header_userinfo -->
+
+	<div id="article_container_0" class="article_container container">
+
+		<!--start:ajax_content_inner-->
+
+		<div class="article_stats_data" data-stats='{&quot;user_meta&quot;:{},&quot;page_meta&quot;:{&quot;channel&quot;:&quot;business&quot;,&quot;section&quot;:&quot;dandiamondblog&quot;,&quot;primary_channel&quot;:&quot;business&quot;,&quot;primary_section&quot;:&quot;pharma&quot;,&quot;displaychannel&quot;:&quot;business&quot;,&quot;displaysection&quot;:&quot;dandiamondblog&quot;,&quot;special_slot&quot;:&quot;healthcare-2025-14&quot;,&quot;type&quot;:&quot;blog&quot;,&quot;template_type&quot;:&quot;standard&quot;,&quot;title&quot;:&quot;Ebola In America: Where The Ebola Patients Are&quot;,&quot;site_slug&quot;:&quot;dandiamond&quot;,&quot;blog_name&quot;:&quot;DD Constructed&quot;,&quot;contrib_type&quot;:&quot;Contributor&quot;,&quot;categories&quot;:[&quot;Healthcare Innovation&quot;,&quot;Pharma & Healthcare&quot;],&quot;preview&quot;:false,&quot;sitepage&quot;:&quot;forbes.com\/business\/sites\/dandiamond\/2014\/10\/17\/ebola-in-america-where-the-ebola-patients-are\/&quot;,&quot;author&quot;:{&quot;natural_id&quot;:&quot;blogAuthorId\/blog\/author\/353761&quot;,&quot;user_id&quot;:&quot;353761&quot;,&quot;display_name&quot;:&quot;Dan Diamond&quot;,&quot;type&quot;:&quot;individual&quot;},&quot;post_id&quot;:&quot;3640&quot;,&quot;blog_id&quot;:&quot;2238&quot;,&quot;natural_id&quot;:&quot;blogAndPostId\/blog\/post\/2238-3640&quot;,&quot;content_id&quot;:&quot;content_54413fd8e4b0d253499da478&quot;,&quot;published&quot;:&quot;Fri Oct 17 13:33:00 EDT 2014&quot;,&quot;blog_type&quot;:&quot;individual&quot;,&quot;author_type&quot;:&quot;individual&quot;,&quot;brandvoice&quot;:false,&quot;simple_reach&quot;:{&quot;iframe&quot;:true,&quot;pid&quot;:&quot;50e4a8434240cf5c4b000009&quot;,&quot;url&quot;:&quot;http:\/\/www.forbes.com\/sites\/dandiamond\/2014\/10\/17\/ebola-in-america-where-the-ebola-patients-are\/&quot;,&quot;title&quot;:&quot;Ebola In America: Where The Ebola Patients Are&quot;,&quot;date&quot;:&quot;2014-10-17T17:33:00Z&quot;,&quot;authors&quot;:&quot;Dan Diamond&quot;,&quot;channels&quot;:&quot;business&quot;,&quot;tags&quot;:[&quot;site::dandiamond&quot;,&quot;slot::healthcare-2025-14&quot;,&quot;Healthcare Innovation&quot;,&quot;Pharma and Health&quot;,&quot;Pharma &amp; Healthcare&quot;],&quot;landing_url&quot;:&quot;&quot;}}}'></div>
+		<div class="article_dfp_data" data-dfp='{&quot;id&quot;:&quot;blogandpostid\/blog\/post\/2238-3640&quot;,&quot;specialslot&quot;:&quot;healthcare-2025&quot;,&quot;site&quot;:&quot;fdc.forbes&quot;,&quot;zone&quot;:&quot;article-new&quot;}'></div>
+
+		<div class="leaderboard"></div>
+
+
+	<div class="row">
+		<div class="col-sm-12">
+			<hr class="article_rule">
+		</div>
+	</div>
+
+	<section class="row" itemscope itemtype="http://schema.org/Article">
+		<div class="col-md-2 entity_block_wrapper">
+
+
+
+
+
+
+		<div class="article_entity entity_block">
+			<div class="type_article_block">
+				<div class="entity_preview">
+						<a class="avatar" href='http://www.forbes.com/sites/dandiamond/'><img src="http://1.gravatar.com/avatar/bf7ca6fa4f314cfaccc04259e5f9410f?s=136&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D136&amp;r=G" alt="Dan Diamond" /></a>
+
+							<a class="user_name" href="http://www.forbes.com/sites/dandiamond/">
+								<span itemprop="author">Dan Diamond</span>
+							</a>
+							<span class="title">Contributor</span>
+
+
+
+
+
+
+    <div class="followable_block initializing" data-target-type="author" data-target-id="blogAuthorId/blog/author/353761" data-object-json="{&quot;title&quot;:&quot;Dan Diamond&quot;,&quot;avatar_src&quot;:&quot;http://1.gravatar.com/avatar/bf7ca6fa4f314cfaccc04259e5f9410f?s=136&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D136&amp;r=G&quot;,&quot;follow_count&quot;:&quot;141&quot;}" data-type-advoice="false" data-target-name="" data-tracking-link-name="articleLink_ContribBylineFollow">
+
+    <div class="follow_unireg">
+		<a href="javascript://follow" class="follow_unireg_link">
+			<span class="option_follow">Follow</span>
+	
+			<span class="option_following">Following</span>
+	
+			<span class="option_unfollow">Unfollow</span>
+		</a>
+    </div>
+    </div>
+
+						<p class="preview_bio">
+								I write sharp takes on the health, policy and wonk news of the day.
+
+							<span class="show_more_copy">full bio &rarr;</span>
+						</p>
+
+	            			<p class="disclaimer">Opinions expressed by Forbes Contributors are their own.</p>
+
+						<div class="social_icons">
+							<div class="label" style="display:none;">
+								<div class="arrow"></div>
+								<span class="text"></span>
+							</div>
+							<ul class="entity_links">
+
+								<li class="twitter">
+									<a target="blank" href="http://twitter.com/ddiamond">
+										<span>Follow Dan Diamond on Twitter</span>
+									</a>
+								</li>
+
+
+			                    <li class="facebook">
+									<a target="blank" href="http://www.facebook.com/dm.diamond">
+										<span>Follow Dan Diamond on Facebook</span>
+									</a>
+								</li>
+
+
+								<li class="linked_in">
+	    							<a target="blank" href="https://www.linkedin.com/profile/view?id=13154701">
+										<span>Follow Dan Diamond on LinkedIn</span>
+									</a>
+								</li>
+
+								<li class="google_plus">
+			    						<a target="blank" href="http://plus.google.com/+DanDiamond/posts">
+											<span>Follow Dan Diamond on Google+</span>
+										</a>
+								</li>
+
+							<li class="rss">
+								<a href="http://www.forbes.com/sites/dandiamond/feed/">
+									<span>Dan Diamond&#8217;s RSS Feed</span>
+								</a>
+							</li>
+
+
+
+								<li class="profile">
+									<a href='http://www.forbes.com/sites/dandiamond/'>
+										<span>Dan Diamond&#8217;s Profile</span>
+									</a>
+								</li>
+
+
+							<!-- ADD IF DATA CHECK -->
+
+
+								<li class="email">
+									<a class="ajaxify launch_email_contrib" href="#"  data-enable-contact="true" data-contrib-name="Dan Diamond" data-contrib-email= "ddiamond@gmail.com"  data-user-name= ""  data-user-email= "">
+										<span>Contact Dan Diamond</span>
+									</a>
+								</li>
+						</ul><!-- .entity_links -->
+					</div>
+
+
+				</div><!-- .entity_preview -->
+
+				<div class="entity_dive">
+
+					<div class="masked_content">
+
+						<nav class="toggles">
+							<ul>
+								<li data-mode="recent_posts">Recent Posts<span class="arrow"></span></li>
+								<li data-mode="popular_posts">Popular Posts<span class="arrow"></span></li>
+								<li data-mode="bio">Full Bio<span class="arrow"></span></li>
+							</ul>
+						</nav>
+
+						<div class="full_bio">
+							<p>I'm the executive editor of the Advisory Board's Daily Briefing, a popular health care newsletter that goes out to more than 150,000 subscribers. I'm also a blogger for ESPN's TrueHoop Network, a columnist at California Healthline, and a social media junkie. Posts are eclectic; views are personal. Let me know what I've missed – find me on Twitter at @ddiamond.</p>
+
+							<!-- ADD IF DATA CHECK -->
+								<a class="ajaxify launch_email_contrib" href="#"  data-enable-contact="true" data-contrib-name="Dan Diamond" data-contrib-email= ""  data-user-name= ""  data-user-email= "" >Contact Dan Diamond</a>
+
+								<p class="disclaimer">The author is a Forbes contributor. The opinions expressed are those of the writer.</p>
+						</div>
+
+						<div class="entity_recent_posts">
+							Loading...
+						</div>
+
+						<div class="entity_popular_posts">
+							Loading...
+						</div>
+
+					</div><!-- .masked_content -->
+
+				</div><!-- .entity_dive -->
+
+				<div class="drawer_arrow_down"></div>
+
+			</div><!-- .type_article_block -->
+
+		</div><!-- .entity_block -->
+
+
+			<aside class="vp-wrapper">
+	<div class="vp-box vp-comment comment_bug comment_bug_2" style="display:none;">
+		<div class="wrapper">
+			<div class="info">
+				<a href="#comments_header" class="scroll_to">
+					<span class="comment_count">8</span>
+					Comments
+				</a>
+			</div>
+			<div class="called_out_sampling"></div>
+			<a href="#comments_header" class="scroll_to comment_calledout">2 called-out</a>
+		</div>
+		<div class="comment_teaser"></div>
+		<div class="no_comment_bugs_exist_yet" style="display:none;"></div>
+		<div class="comment_links">
+            <a href="#comment_reply" class="scroll_to post_your_comment">Comment Now</a>
+			<div class="comments_follow followable_block">
+
+
+
+
+    <div class="followable_block initializing" data-target-type="article" data-target-id="blogAndPostId/blog/post/2238-3640" data-object-json="{&quot;title&quot;:&quot;Ebola In America: Where The Ebola Patients Are&quot;,&quot;avatar_src&quot;:&quot;&quot;,&quot;follow_count&quot;:&quot;&quot;}" data-type-advoice="false" data-target-name="" data-tracking-link-name="articleLink_ArticleCommentsFollow">
+
+    <div class="follow_unireg">
+	<a href="javascript://follow" class="follow_unireg_link">
+		<span class="option_follow">
+			<span class="icon"></span><span class="text">Follow Comments</span>
+		</span>
+
+		<span class="option_following">
+			<span class="icon"></span><span class="text">Following Comments</span>
+		</span>
+
+		<span class="option_unfollow">
+			<span class="icon"></span><span class="text">Unfollow Comments</span>
+		</span>
+	</a>
+	<span class="follow_count"></span>
+	<span class="loadingstate"><img class="loadingstateimg" src="http://i.forbesimg.com/assets/img/loading_spinners/16px_on_transparent.gif" alt="" width="16" height="16" /></span>
+    </div>
+    </div>
+			</div>
+		</div>
+	</div>
+				<div class="vp-box vp-polar-native" style="display: none;"> </div>
+			</aside>
+		</div>
+
+
+		<div class="article_content col-md-10 col-sm-12">
+
+
+<hgroup class="prevent_widows">
+
+			<!--   Reveal this link if the logged-in user has editing rights-->
+
+	<h5>
+
+		<a href="/healthcare" class="slug" itemprop="articleSection">Pharma & Healthcare</a>
+
+	<time itemprop="datePublished" content="2014-10-17T13:33:00-04:00">10/17/2014 @ 1:33PM</time>
+
+		<span class="views">32,291 views</span>
+	</h5>
+
+		<h1 itemprop="headline">Ebola In America: Where The Ebola Patients Are</h1>
+
+
+
+
+			<!-- Make individual group author appear -->
+
+			<div class="mninst"></div>
+	<div class="comment_links">
+		<a href="#comment_reply" class="scroll_to post_your_comment">Comment Now</a>
+		<div class="comments_follow followable_block">
+
+
+
+
+    <div class="followable_block initializing" data-target-type="article" data-target-id="blogAndPostId/blog/post/2238-3640" data-object-json="{&quot;title&quot;:&quot;Ebola In America: Where The Ebola Patients Are&quot;,&quot;avatar_src&quot;:&quot;&quot;,&quot;follow_count&quot;:&quot;&quot;}" data-type-advoice="false" data-target-name="" data-tracking-link-name="articleLink_ArticleCommentsFollow">
+
+    <div class="follow_unireg">
+	<a href="javascript://follow" class="follow_unireg_link">
+		<span class="option_follow">
+			<span class="icon"></span><span class="text">Follow Comments</span>
+		</span>
+
+		<span class="option_following">
+			<span class="icon"></span><span class="text">Following Comments</span>
+		</span>
+
+		<span class="option_unfollow">
+			<span class="icon"></span><span class="text">Unfollow Comments</span>
+		</span>
+	</a>
+	<span class="follow_count"></span>
+	<span class="loadingstate"><img class="loadingstateimg" src="http://i.forbesimg.com/assets/img/loading_spinners/16px_on_transparent.gif" alt="" width="16" height="16" /></span>
+    </div>
+    </div>
+		</div>
+	</div>
+</hgroup>
+
+
+			<div class="article_body article" itemprop="articleBody">
+
+				<div class="body">
+
+					<div class="body_inner">
+
+
+						
+<p>Ebola is in America’s hospitals, although not very many of them: Just three hospitals are currently treating four Ebola patients.</p> 
+<p>Writing at the Advisory Board Daily Briefing, we’ve been tracking the <a href="http://www.advisory.com/daily-briefing/blog/2014/10/are-all-hospitals-really-equipped-to-handle-ebola">implications of Ebola </a>for U.S. hospitals, with ongoing news alerts and a regularly updated map.</p> 
+<p>Here’s a quick look at where the U.S. Ebola patients are and, as of 1 p.m. on Friday October 17, the latest details about their conditions.</p> 
+<p><strong></strong><b>One Ebola patient: National Institutes of Health, Bethesda (Md.)</b></p> 
+<p><i>Nina Pham, admitted on October 16</i></p> 
+<p>Pham, the <a href="http://www.forbes.com/sites/dandiamond/2014/10/12/ebola-in-america-texas-nurse-tests-positive-for-ebola-would-be-first-transmission-in-u-s/">first person</a> to ever contract Ebola from another person in the United States, was infected while treating Ebola patient Thomas E. Duncan at Texas Health&nbsp;Presbyterian Hospital in Dallas. Pham began showing symptoms of Ebola last week and was confirmed to have the deadly disease on Saturday October 11.</p> 
+<p>After several days of treatment at Texas Health Presbyterian Hospital,&nbsp;Pham was transferred to NIH’s special containment unit on Thursday October 16. (<em>Texas Health released a <a href="http://www.forbes.com/sites/dandiamond/2014/10/16/ebola-infected-nurse-speaks-on-video-dont-cry-she-tells-colleagues/">video</a> of Pham saying goodbye to her doctor.</em>)</p> 
+<p>According to an NIH media briefing on Friday October 17, Pham’s condition is “fair.”</p> 
+<p><b>Two Ebola patients: Emory University Hospital, Atlanta</b></p> 
+<p><i>Unknown male doctor, admitted on September 9</i></p> 
+<p>The patient is a World Health Organization doctor, who was treating Ebola in Sierra Leone and was brought to Emory after the hospital <a href="http://www.forbes.com/sites/dandiamond/2014/10/01/ebola-in-america-one-hospital-has-already-treated-three-ebola-patients-and-cured-two-of-them/">successfully treated</a> Dr. Kent Brantly and Nancy Writebol in August.</p> 
+<p><strong><a href="http://www.forbes.com/sites/dandiamond/2014/10/01/ebola-in-america-one-hospital-has-already-treated-three-ebola-patients-and-cured-two-of-them/">Also See: Ebola In America: One Hospital Just Treated Three Ebola Patients — And Already Cured Two Of Them</a></strong></p> 
+<p>For weeks, we knew little about Emory’s third Ebola patient, but as Lauren Friedman <a href="http://www.businessinsider.com/third-ebola-patient-at-emory-hospital-2014-10">reports</a> for <em>Business Insider</em>, Emory released a statement from the doctor on Wednesday, just before nurse Amber Vinson was slated to arrive for her own course of care.</p> 
+<p>According to Emory’s statement, the unknown patient had taken a turn for the worse shortly after arriving at Emory, but is reportedly now doing well. The doctor added: </p> 
+<blockquote>
+ <p>“I want to share the news that I am recovering from this disease, and that I anticipate being discharged very soon, free from the Ebola virus and able to return safely to my family and to my community.”</p>
+</blockquote> 
+<p><i>Amber Vinson, admitted on October 15</i></p> 
+<p>Vinson, also a nurse who contracted Ebola while caring for Duncan at Texas&nbsp;Health&nbsp;Presbyterian Hospital Dallas, began showing symptoms of Ebola perhaps as early as Friday October 10. She was confirmed to have the disease on Wednesday October 15 and taken to Emory later that day.</p> 
+<p>Vinson was shown walking into Emory, but there have been no updates on her condition.</p> 
+<p><b>One Ebola patient: Nebraska Medical Center, Omaha</b></p>
+
+<!-- BEGIN PAGINATION -->
+
+<!--here: uri ''-->
+	<div class="pagination_container">
+		<ul class="pagination">
+			<li class="page_count">Page <span><b>1</b> / <b>2</b></span></li>
+
+				<li class="next_page"><a href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/2/">Continue <span class="icon icon-next"></span></a></li>
+		</ul>
+	</div>
+<!-- END PAGINATION -->
+
+
+					</div>
+
+				</div>
+
+
+				<div class="sponsored_ad"></div>
+					<div class="media_net_related_links"></div>
+
+
+				<div class="event_tracking_scroll_latch" data-event="Article,ScrolledToEnd,end"></div>
+
+			</div><!-- .article_body.article -->
+
+    <div class="comment_bug" style="display:none;">
+        <div class="arrow_icon"></div>
+        <div class="bottom_border"></div>
+        <div class="wrapper">
+            <div class="called_out_sampling"></div>
+
+            <div class="info">
+                <a href="#comments_header" class="scroll_to">
+                    8 comments, 2 called-out
+                </a>
+            </div>
+                <a href="#comment_reply" class="scroll_to post_your_comment">Comment Now</a>
+				<div class="comments_follow followable_block">
+
+
+
+
+    <div class="followable_block initializing" data-target-type="article" data-target-id="blogAndPostId/blog/post/2238-3640" data-object-json="{&quot;title&quot;:&quot;Ebola In America: Where The Ebola Patients Are&quot;,&quot;avatar_src&quot;:&quot;&quot;,&quot;follow_count&quot;:&quot;&quot;}" data-type-advoice="false" data-target-name="" data-tracking-link-name="articleLink_ArticleCommentsFollow">
+
+    <div class="follow_unireg">
+	<a href="javascript://follow" class="follow_unireg_link">
+		<span class="option_follow">
+			<span class="icon"></span><span class="text">Follow Comments</span>
+		</span>
+
+		<span class="option_following">
+			<span class="icon"></span><span class="text">Following Comments</span>
+		</span>
+
+		<span class="option_unfollow">
+			<span class="icon"></span><span class="text">Unfollow Comments</span>
+		</span>
+	</a>
+	<span class="follow_count"></span>
+	<span class="loadingstate"><img class="loadingstateimg" src="http://i.forbesimg.com/assets/img/loading_spinners/16px_on_transparent.gif" alt="" width="16" height="16" /></span>
+    </div>
+    </div>
+				</div>
+        </div>
+        <div class="comment_teaser"></div>
+        <div class="no_comment_bugs_exist_yet" style="display:none;">
+            <a href="#comment_reply" class="scroll_to post_first_comment">Comment Now</a>
+			<div class="comments_follow followable_block">
+
+
+
+
+    <div class="followable_block initializing" data-target-type="article" data-target-id="blogAndPostId/blog/post/2238-3640" data-object-json="{&quot;title&quot;:&quot;Ebola In America: Where The Ebola Patients Are&quot;,&quot;avatar_src&quot;:&quot;&quot;,&quot;follow_count&quot;:&quot;&quot;}" data-type-advoice="false" data-target-name="" data-tracking-link-name="articleLink_ArticleCommentsFollow">
+
+    <div class="follow_unireg">
+	<a href="javascript://follow" class="follow_unireg_link">
+		<span class="option_follow">
+			<span class="icon"></span><span class="text">Follow Comments</span>
+		</span>
+
+		<span class="option_following">
+			<span class="icon"></span><span class="text">Following Comments</span>
+		</span>
+
+		<span class="option_unfollow">
+			<span class="icon"></span><span class="text">Unfollow Comments</span>
+		</span>
+	</a>
+	<span class="follow_count"></span>
+	<span class="loadingstate"><img class="loadingstateimg" src="http://i.forbesimg.com/assets/img/loading_spinners/16px_on_transparent.gif" alt="" width="16" height="16" /></span>
+    </div>
+    </div>
+			</div>
+    </div>
+    </div>
+
+
+<script type="text/javascript">
+
+function printArticle(url) {
+params = 'width='+screen.width;
+params += ', height='+screen.height;
+params += ', top=0, left=0'
+params += ', fullscreen=yes, scrollbars = yes, resizable=yes';
+
+slideWin = window.open(url, 'popup', params);
+if(window.focus) {
+slideWin.focus();
+}
+return false;
+}
+
+</script>
+
+<div class="article_actions">
+
+<div class="sub_links clearfix">
+
+
+
+<div class="widget print">
+<a href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/print/" target="_blank"><span class="icon"></span>Print</a>
+</div>
+
+<div class="widget corrections">
+<a href="#corrections"><span class="icon"></span>Report Corrections</a>
+</div>
+
+<div class="widget reprint">
+<a href="http://forbesreprints.magreprints.com/" target="_blank"><span class="icon"></span>Reprints &amp; Permissions</a>
+</div>
+
+</div>
+</div>
+
+			<div class="vestpocket_holder" style="display:none;">
+
+
+
+	<aside class="vestpocket" data-position="4" >
+
+
+
+
+
+        <div class="vp-box vp-article">
+            <a href="http://www.forbes.com/sites/dandiamond/2014/10/16/ebolas-very-contagious-ebolas-also-hard-to-catch-confused-heres-how-to-understand/" class="thumb">
+                <span class="icon">
+                </span>
+                        <img src='http://blogs-images.forbes.com/dandiamond/files/2014/10/26317_DB_ebola_HC_101514.jpg' alt="" />
+            </a>
+			<h4>
+				<a href="http://www.forbes.com/sites/dandiamond/2014/10/16/ebolas-very-contagious-ebolas-also-hard-to-catch-confused-heres-how-to-understand/" class="vp_text">
+                    Ebola's Incredibly Infectious. Ebola's Also Hard To Catch. Confused? Here's How To Understand.
+				</a>
+			</h4>
+
+
+	            <cite class="box_byline clearfix">
+					<a href="http://www.forbes.com/sites/dandiamond/">
+	                	<img src='http://1.gravatar.com/avatar/bf7ca6fa4f314cfaccc04259e5f9410f?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' alt="Dan Diamond" class="avatar" />
+
+	                    <strong>Dan Diamond</strong>
+	                    <span class="desc">Contributor</span>
+	                </a>
+	            </cite>
+        </div>
+
+
+
+        <div class="vp-box vp-article">
+            <a href="http://www.forbes.com/sites/dandiamond/2014/10/03/yes-ebola-is-scary-but-its-also-beatable-heres-why/" class="thumb">
+                <span class="icon">
+                </span>
+                        <img src='http://blogs-images.forbes.com/dandiamond/files/2014/10/26317_DB_ebola_globe_100114.jpg' alt="" />
+            </a>
+			<h4>
+				<a href="http://www.forbes.com/sites/dandiamond/2014/10/03/yes-ebola-is-scary-but-its-also-beatable-heres-why/" class="vp_text">
+                    Yes, Ebola Is Scary. But It's Also Beatable. Here's Why.
+				</a>
+			</h4>
+
+
+	            <cite class="box_byline clearfix">
+					<a href="http://www.forbes.com/sites/dandiamond/">
+	                	<img src='http://1.gravatar.com/avatar/bf7ca6fa4f314cfaccc04259e5f9410f?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' alt="Dan Diamond" class="avatar" />
+
+	                    <strong>Dan Diamond</strong>
+	                    <span class="desc">Contributor</span>
+	                </a>
+	            </cite>
+        </div>
+
+
+
+        <div class="vp-box vp-article">
+            <a href="http://www.forbes.com/sites/dandiamond/2014/10/01/ebola-in-america-one-hospital-has-already-treated-three-ebola-patients-and-cured-two-of-them/" class="thumb">
+                <span class="icon">
+                </span>
+                        <img src='http://blogs-images.forbes.com/dandiamond/files/2014/10/la-na-nn-ebola-missionary-emory-atlanta-arrive-20140805-1940x10331.jpeg' alt="" />
+            </a>
+			<h4>
+				<a href="http://www.forbes.com/sites/dandiamond/2014/10/01/ebola-in-america-one-hospital-has-already-treated-three-ebola-patients-and-cured-two-of-them/" class="vp_text">
+                    Ebola In America: One Hospital Just Treated Three Ebola Patients -- And Already Cured Two Of Them
+				</a>
+			</h4>
+
+
+	            <cite class="box_byline clearfix">
+					<a href="http://www.forbes.com/sites/dandiamond/">
+	                	<img src='http://1.gravatar.com/avatar/bf7ca6fa4f314cfaccc04259e5f9410f?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' alt="Dan Diamond" class="avatar" />
+
+	                    <strong>Dan Diamond</strong>
+	                    <span class="desc">Contributor</span>
+	                </a>
+	            </cite>
+        </div>
+
+
+    </aside>
+
+			</div><!-- .vestpocket_items -->
+
+		</div>
+
+	</section>
+
+
+	<section class="row">
+		<div class="col-md-10 col-md-offset-2 col-sm-12 col-sm-offset-0">
+
+
+
+	<div id="comments" class="comments_collection" data-selected-comment-id="" data-manage-comment-following-link="http://blogs.forbes.com/account/#accounttab-5" >
+
+		<div class="comment_form_orig_position">
+    <div class="comment_reply">
+            <div class="arrow"></div>
+            <form class="forbes_forms v1 comment_reply_form" name="commentForm" action="/wp-admin/admin-ajax.php" method="post" data-comment-nonce="" data-validation-rules-json="[{&quot;field_id&quot;:&quot;user_comment_textarea&quot;,&quot;rules&quot;:{&quot;required&quot;:true,&quot;notEqualTo&quot;:{&quot;attr&quot;:&quot;data-initial-text&quot;,&quot;caseSensitive&quot;:false,&quot;errorMsg&quot;:&quot;Please enter a comment to post.&quot;},&quot;between&quot;:{&quot;min&quot;:2,&quot;max&quot;:10000}}}]" data-reload-url="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/">
+                    <!-- the form action will be expecting all of the following hidden fields -->
+                    <input type='hidden' name='action' value='unireg_comments' autocomplete="off" />
+                    <input type='hidden' name='natural_id' value='blogAndPostId/blog/post/2238-3640' autocomplete="off" />
+                    <input type='hidden' name='comment_parent' value='0' autocomplete="off" />
+
+                    <h3 class="main">Post Your Comment</h3>
+                    <div class="reply_header" style="display:none;">
+                            <a href="#cancel" class="cancel_reply">Cancel reply</a>
+                            <h3>Post Your Reply</h3>
+                    </div>
+
+			
+            <div class="status_bar">
+                                    Please
+                                    <a class="ajaxify unireg_login" href="http://blogs.forbes.com/account/login/?redirect_to=http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/" title="Click to log in">log in</a>
+                                    or
+                                    <a class="ajaxify unireg_register" href="http://blogs.forbes.com/account/register/?redirect_to=http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/" title="Click to sign up">sign up</a>
+                                    to comment.
+                            </div>
+
+<div class="entity_block">
+                                    <a class="ajaxify avatar" href="http://blogs.forbes.com/account/login/?redirect_to=http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/" class="avatar" title="Click to log in or register">
+                                            <img src="http://i.forbesimg.com/assets/img/comments/no_profile_image.jpg" alt="">
+                                    </a>
+                            </div>
+
+                    <div class="input_holder_outer input_block">
+
+                            <div class="main_error_msg" style="display:none;">
+                                    <span class="icon"></span>
+                                    <span class="text"></span>
+                            </div>
+
+                            <div class="input_holder">
+
+                                    <textarea id="user_comment_textarea" class="initial_text user_comment" data-initial-text="Enter Your Comment" name="comment" cols="80" rows="10" autocomplete="off">Enter Your Comment</textarea>
+
+                                    <span class="error_msg"></span>
+
+										<div class="control_bar" style="display:none;">
+                                            <a class="fancy_button submit small" data-submit-button="true"><span class="outer"><span class="inner"><span class="icon"></span><span class="label">Submit Comment</span></span></span><span class="loading_spinner left" style="display:none;"><img src="http://i.forbesimg.com/assets/img/loading_spinners/16px_on_transparent.gif" height="16" width="16" alt=""></span></a>
+                                            <input class="hidden_submit" type="submit" name="submit_hidden" value="Submit" id="idCommentForm_submit">
+                                    </div>
+                            </div>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="moderation_info">
+                            <p>
+                                    Forbes writers have the ability to call out member comments they find particularly interesting. Called-out comments are highlighted across the Forbes network. You'll be notified if your comment is called out.
+                            </p>
+               		</div>
+            </form>
+    </div>
+		</div>
+
+
+			<div class="comments_header">
+				<h3>Comments</h3>
+				<ul class="tabs horznav cf">
+					<li class='active'>
+						<a href="/ajax/comment/calledout/1/?contentUri=http%3A%2F%2Fwww.forbes.com%2Fsites%2Fdandiamond%2F2014%2F10%2F17%2Febola-in-america-where-the-ebola-patients-are%2F" rel="calledOut">Called-Out</a>
+						<div class="arrow"></div>
+					</li>
+					<li class=''>
+						<a href="/ajax/comment/general/1/?contentUri=http%3A%2F%2Fwww.forbes.com%2Fsites%2Fdandiamond%2F2014%2F10%2F17%2Febola-in-america-where-the-ebola-patients-are%2F"  rel="allComments">Expand All Comments</a>
+						<div class="arrow"></div>
+					</li>
+				</ul>
+
+					<div class="comments_follow followable_block">
+
+
+
+
+    <div class="followable_block initializing" data-target-type="article" data-target-id="blogAndPostId/blog/post/2238-3640" data-object-json="{&quot;title&quot;:&quot;Ebola In America: Where The Ebola Patients Are&quot;,&quot;avatar_src&quot;:&quot;&quot;,&quot;follow_count&quot;:&quot;&quot;}" data-type-advoice="false" data-target-name="" data-tracking-link-name="articleLink_ArticleCommentsFollow">
+
+    <div class="follow_unireg">
+	<a href="javascript://follow" class="follow_unireg_link">
+		<span class="option_follow">
+			<span class="icon"></span><span class="text">Follow Comments</span>
+		</span>
+
+		<span class="option_following">
+			<span class="icon"></span><span class="text">Following Comments</span>
+		</span>
+
+		<span class="option_unfollow">
+			<span class="icon"></span><span class="text">Unfollow Comments</span>
+		</span>
+	</a>
+	<span class="follow_count"></span>
+	<span class="loadingstate"><img class="loadingstateimg" src="http://i.forbesimg.com/assets/img/loading_spinners/16px_on_transparent.gif" alt="" width="16" height="16" /></span>
+    </div>
+    </div>
+					</div>
+			</div>
+
+			<div class="pagination_header" style="display:none;"></div>
+			<div class="comments_well" data-edit-post-link="" >
+	<ul class="comments_stream">
+
+
+
+
+
+        <li data-comment-id="comment_blogAndPostId/blog/comment/2238-3640-703" data-comment-wp-id="703"  parent-id="" class="comment level0 collapsable" data-badges-advoice="">
+            <div class="entity_block">
+                <a class="avatar" href="http://blogs.forbes.com/people/larrymorris5/">
+                    <img src="https://graph.facebook.com/100006148666786/picture?type=square" alt="Larry Morris" />
+                </a>
+
+
+
+                <a class="user_name" href="http://blogs.forbes.com/people/larrymorris5/">
+                    Larry Morris
+                </a>
+
+
+   		<span class="timestamp">3 months ago</span>
+    	</div>
+
+    	<div class="comment_content">
+    		
+<p>Is your city on the list of top US Cities with the most people born from Ebola infected countries. travel Most likely between these places:</p> 
+<p>http://www.towncharts.com/Ebola-Top-500-Cities-in-the-US-for-Total-Born-People-From-West-Africa.htmlTravel most likely between these US places</p>
+
+    	</div>
+
+
+
+    	<div class="comment_controls" data-called-out-state="off">
+			<div class="right_col">
+				<a href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/?commentId=comment_blogAndPostId/blog/comment/2238-3640-703" class="permalink">Permalink</a>
+    			<a href="#" class="flag_link">Flag</a>
+    		</div>
+				<a href="#" class="reply">Reply</a>
+        </div>
+    </li>
+
+
+
+
+        <li data-comment-id="comment_blogAndPostId/blog/comment/2238-3640-706" data-comment-wp-id="706"  parent-id="" class="comment level0 collapsable" data-badges-advoice="">
+            <div class="entity_block">
+                <a class="avatar" href="http://blogs.forbes.com/people/drmartinjdudziak/">
+                    <img src="https://graph.facebook.com/739331340/picture?type=square" alt="Dr. Martin J. Dudziak" />
+                </a>
+
+
+
+                <a class="user_name" href="http://blogs.forbes.com/people/drmartinjdudziak/">
+                    Dr. Martin J. Dudziak
+                </a>
+
+
+   		<span class="timestamp">3 months ago</span>
+    	</div>
+
+    	<div class="comment_content">
+    		
+<p>Thank you for your article and the map.</p> 
+<p>More people need to know about the limitations of our healthcare system in accommodating, in a clinical and “caring with intention to heal” way, for extremely contagious and infectious and lethal diseases such as Ebola.</p> 
+<p>There are quite a few others. There are migrations between climate zones and continents due to climate fluctuations and nonlinear changes, and the pace and scale of mass-movement and mass migrations, dislocations, and refugee situations.</p> 
+<p>There is a facility in Montana, St. Patrick Hospital, identified as being among that small (TINY) group of four, plus the NIH special containment unit (not part of a regular full-serrvice public-access hospital institution), that can handle human patients. Perhaps with St. Patrick’s that brings us up to a 15-patient capacity.</p> 
+<p>Fifteen at a time.</p> 
+<p>Average Resident Population of the USA – over 300,000,000.</p> 
+<p>This is simply abysmal. Granted, one would not expect that the number of such facilities would be in the thousands, because of the generally projected and accepted rarity of the need. nonetheless, with Ebola as a known commodity, with SARS having been around North America, with MERS, with four (4, count ‘em) potentially high-lethality strains of influenza only a few gene-sequence mutations away from being very virulent among humans, a la 1918 – with all this, it is disgracefully amazingly appalling.</p> 
+<p>I believe this connects with our priorities as a mainstream body of people and the values we uphold and keep.</p> 
+<p>Shnort-term, quick turn around, buy and push up the valuation then quick-dump it and “get outta town” and onto the Next Big Hot Deal…</p> 
+<p>Combine serious ADHD with so much greed and narcissism and arrogance, and You See what we have, our position, our predicament, and the Handwriting on the Wall.</p> 
+<p>Anecdote from personal experience, me being the research scientist, inventor, tech guy, company founder, and all that.</p> 
+<p>In 2010, I and a group of team mates were told something by a 40-something know-it-all “VC guy” from Boston. This was in reference to our ready-for-commercialization, all-research-done, FDA approvals set or not applicable, CUBIT diagnostics, a modular system that could be rapidly converted from an indoors operational tech lab to a mobile configuration in a trailer, using PCR plus immunoassay (primarily) and also other techniques, for a wide range of bacterial and viral gene-sequence-matching diagnostic tests and information collection relavant to contact tracing and tracking.</p> 
+<p>“Fastest RT-PCR gun in the Wild West.”</p> 
+<p>the comment from this VC fellow (or perhaps, more accurately, investment-banker-wanna-be), was this:</p> 
+<p>— There is not enough profit in [all this, all ours, and the whole space of advanced consumer-friendly diagnostics of our sort, which emphasized, by the way Mutation and Anomaly Detection, Identification and Tracking (MADIT) ].</p> 
+<p>— It would take too long to get FDA approvals. [Not so, because ewe already had them - he was too busy to read the documents.]</p> 
+<p>— (and this was the “best” of all) — We (Americans) have the best healthcare system in the world! All that fuss about H1N1 – that was just a “bust.” Nobody made any money from that. the US healthcare system can take care of any pandemic – this isn’t like Africa.</p> 
+<p>Friends, the last part was an exact quote, word for word.</p> 
+<p>Now, we need Change that we can not only live with but survive on and through. We need tp radically reset some fundamental Priorities.</p> 
+<p>Rule of economics #1, above all others – in order to have a successfully functioning economy, and in particular anything that approaches a successful free enterprise system – you need to have Supply, Production and Demand.</p> 
+<p>Take away the people in massive numbers, either completely and forever by killing them off with a high-lethality pandemic, or simply out of the workforce for staggering amounts of unpredictable times, in other kinds of pandemics, and you won’t have any Supply, you won’t have any Production, and you won’t have any Demand.</p> 
+<p>As a rough-estimate, we need to have at least as many special patient treatment facilities as there are states, with few exceptions (alright, maybe RI, CT and DE patients can go next door), and we need to be able to handle more than four at a given facility.</p> 
+<p>we can employ modularity and mobility, big-time, to be efficient and not have a lot of empty, idle facilities.</p> 
+<p>We have been into all of this, and not only us, from research to design to proof-of-concept to prototyping to field units. PodAtrium, MedAtrium, CUBIT-Delta, and a variety of projects built around everything from air-inflated strutures to collapsible modular nPods (like shipping containers). That’s just us. But like many others, cut off from funding for commercialization.</p> 
+<p>Then, turn to the basic research, needed for medications and vaccines.</p> 
+<p>Had there been more funding from both governmental and venture/equity sources during the past decade and especially during the last several years of massive cuts and the “any cool social network and mobile app” craze, many researchers, outrselves included, would be much, much farther along toward better understandings of Ebola and other infectious bioagents.</p> 
+<p>We and many scientists and bioengineers around the world are now running a “catch up in a hurry” race, and still, in some cases, with zero funding because of budget cuts and inattentive investment bankers and fund managers.</p> 
+<p>Food 4 Thot.</p> 
+<p>Sincerely,</p> 
+<p>Dr. Martin J. Dudziak<br /> Institute for Innovative Study<br /> (see the volunteer pro-bono effort underway: EbolAbate, and CARPE – http://carpe.instinnovstudy.org)</p>
+
+    	</div>
+
+
+
+    	<div class="comment_controls" data-called-out-state="off">
+			<div class="right_col">
+				<a href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/?commentId=comment_blogAndPostId/blog/comment/2238-3640-706" class="permalink">Permalink</a>
+    			<a href="#" class="flag_link">Flag</a>
+    		</div>
+				<a href="#" class="reply">Reply</a>
+        </div>
+    </li>
+
+
+
+
+        <li data-comment-id="comment_blogAndPostId/blog/comment/2238-3640-709" data-comment-wp-id="709"  parent-id="" class="comment level0 collapsable" data-badges-advoice="">
+            <div class="entity_block">
+                <a class="avatar" href="http://blogs.forbes.com/people/mulp/">
+                    <img src="http://1.gravatar.com/avatar/31ca80b0d580b21771ac32155e92f534?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G" alt="mulp" />
+                </a>
+
+
+
+                <a class="user_name" href="http://blogs.forbes.com/people/mulp/">
+                    mulp
+                </a>
+
+
+   		<span class="timestamp">3 months ago</span>
+    	</div>
+
+    	<div class="comment_content">
+    		
+<p>Texas record on ebola under Gov Perry and other Republicans small government, oppose government health and safety regulations and government payment for health care:<br /> one ebola patient without money sent home, the same patient admitted two days later, one patient dead, two nurses infected with ebola because hospital did not spend on health and safety equipment.</p> 
+<p>Obama’s big government approach of expensive health and safety equipment:<br /> six ebola patients, two survived ebola, four under treatment for ebola and not critical, and zero nurses infected with ebola.</p>
+
+    	</div>
+
+
+
+    	<div class="comment_controls" data-called-out-state="off">
+			<div class="right_col">
+				<a href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/?commentId=comment_blogAndPostId/blog/comment/2238-3640-709" class="permalink">Permalink</a>
+    			<a href="#" class="flag_link">Flag</a>
+    		</div>
+				<a href="#" class="reply">Reply</a>
+        </div>
+    </li>
+
+
+
+
+        <li data-comment-id="comment_blogAndPostId/blog/comment/2238-3640-710" data-comment-wp-id="710"  parent-id="" class="comment level0 collapsable" data-badges-advoice="">
+            <div class="entity_block">
+                <a class="avatar" href="http://blogs.forbes.com/people/posterelli/">
+                    <img src="http://0.gravatar.com/avatar/619e42db0ec6a6276baf7fe3598b6207?s=40&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G" alt="Posterelli" />
+                </a>
+
+
+
+                <a class="user_name" href="http://blogs.forbes.com/people/posterelli/">
+                    Posterelli
+                </a>
+
+
+   		<span class="timestamp">3 months ago</span>
+    	</div>
+
+    	<div class="comment_content">
+    		
+<p>I have to say a couple of things. First FOX in not a source of anything that is factual. I find it to be the most opinionated entity in the world. Second. Why don’t you just add porn to your site? You have every other makings to an obnoxious website. Tabloid like advertisements? Have some professionality as we view this a joke.</p>
+
+    	</div>
+
+
+
+    	<div class="comment_controls" data-called-out-state="off">
+			<div class="right_col">
+				<a href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/?commentId=comment_blogAndPostId/blog/comment/2238-3640-710" class="permalink">Permalink</a>
+    			<a href="#" class="flag_link">Flag</a>
+    		</div>
+				<a href="#" class="reply">Reply</a>
+        </div>
+    </li>
+
+
+
+
+        <li data-comment-id="comment_blogAndPostId/blog/comment/2238-3640-715" data-comment-wp-id="715"  parent-id="" class="comment level0 collapsable" data-badges-advoice="">
+            <div class="entity_block">
+                <a class="avatar" href="http://blogs.forbes.com/people/rongeraci/">
+                    <img src="http://0.gravatar.com/avatar/a50775afc4203e443be580734366d7a2?s=40&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G" alt="Ron Geraci" />
+                </a>
+
+
+
+                <a class="user_name" href="http://blogs.forbes.com/people/rongeraci/">
+                    Ron Geraci
+                </a>
+
+
+   		<span class="timestamp">3 months ago</span>
+    	</div>
+
+    	<div class="comment_content">
+    		
+<p>Cecil the Cursing Cat on Ebola — http://themintyplum.com/?p=2601</p>
+
+    	</div>
+
+
+
+    	<div class="comment_controls" data-called-out-state="off">
+			<div class="right_col">
+				<a href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/?commentId=comment_blogAndPostId/blog/comment/2238-3640-715" class="permalink">Permalink</a>
+    			<a href="#" class="flag_link">Flag</a>
+    		</div>
+				<a href="#" class="reply">Reply</a>
+        </div>
+    </li>
+
+
+
+
+        <li data-comment-id="comment_blogAndPostId/blog/comment/2238-3640-718" data-comment-wp-id="718"  parent-id="" class="comment level0 collapsable" data-badges-advoice="">
+            <div class="entity_block">
+                <a class="avatar" href="http://blogs.forbes.com/people/maureenrullodamendoza/">
+                    <img src="https://graph.facebook.com/1045221322/picture?type=square" alt="Maureen Rulloda Mendoza" />
+                </a>
+
+
+
+                <a class="user_name" href="http://blogs.forbes.com/people/maureenrullodamendoza/">
+                    Maureen Rulloda Mendoza
+                </a>
+
+
+   		<span class="timestamp">3 months ago</span>
+    	</div>
+
+    	<div class="comment_content">
+    		
+<p>I have been an RN for 20 years and presently taking my doctorate in Nursing. It seems like there is no standard protocol to handle EBOLA. Should we implement a CDC vs WHO(World Health Organization) Ebola Protocol. New York bypassed the CDC protocol and instead opted for WHO protocol. Whose jurisdiction should this pandemic fall into: DOH, CDC, and, NIH. With the billions of dollars in research money, we have no answer for it. We have 2 nurses who are EBOLA victims. Would the political landscape change if high profile politicians or CEO’s contracted such virus? Are we being misled by media or politicians or nobody really know what’s going on. How about the EBOLA CZAR? Does this show incompetence in our administration to have a CZAR at the middle of a crisis. Does not OBAMACARE advocate for PREVENTIVE MEDICINE? Does the new CZAR a real CZAR? Does he have the credentials? Not everybody is STUPID but this is becoming STUPID and it is dangerous. Who will lead the CRUSADE to help HUMANKIND? Isn’t it the USA who is the LEADER of the FREE WORLD. As Former Secretary of State Condoleeza Rice said, “LEAD FROM THE FRONT, NOT FROM BEHIND”! So, save us GOD!</p>
+
+    	</div>
+
+
+
+    	<div class="comment_controls" data-called-out-state="off">
+			<div class="right_col">
+				<a href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/?commentId=comment_blogAndPostId/blog/comment/2238-3640-718" class="permalink">Permalink</a>
+    			<a href="#" class="flag_link">Flag</a>
+    		</div>
+				<a href="#" class="reply">Reply</a>
+        </div>
+    </li>
+
+
+
+
+        <li data-comment-id="comment_blogAndPostId/blog/comment/2238-3640-763" data-comment-wp-id="763"  parent-id="" class="comment level0 calledOut" data-badges-advoice="">
+            <div class="entity_block">
+                <a class="avatar" href="http://blogs.forbes.com/people/douglas23/">
+                    <img src="http://0.gravatar.com/avatar/eee616e0c4c1473c59927f7207e1527c?s=40&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G" alt="Douglas" />
+                </a>
+
+
+
+                <a class="user_name" href="http://blogs.forbes.com/people/douglas23/">
+                    Douglas
+                </a>
+
+
+   		<span class="timestamp">3 months ago</span>
+    	</div>
+
+    	<div class="comment_content">
+    		
+<p>” .. remember: On any given day, there are almost 600,000 inpatients in American hospitals. And 599,996 or so of them don’t have Ebola.”</p> 
+<p>That will be easy to remember. What will be hard to Forget is the CDC dispatched its special hazardous transport team to pick up the first 3 Americans and brought all 3 to Level 4 containment centers.<br /> Why they would “ forget” to transfer Mr. Duncan to a Level 4 containment is what they have yet to explain and what will not be forgotten.</p>
+
+    	</div>
+
+
+
+    	<div class="comment_controls" data-called-out-state="on">
+			<div class="right_col">
+				<a href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/?commentId=comment_blogAndPostId/blog/comment/2238-3640-763" class="permalink">Permalink</a>
+    			<a href="#" class="flag_link">Flag</a>
+    		</div>
+				<a href="#" class="reply">Reply</a>
+        </div>
+    </li>
+
+
+
+
+        <li data-comment-id="comment_blogAndPostId/blog/comment/2238-3640-769" data-comment-wp-id="769"  parent-id="" class="comment level0 calledOut" data-badges-advoice="">
+            <div class="entity_block">
+                <a class="avatar" href="http://blogs.forbes.com/people/douglas23/">
+                    <img src="http://0.gravatar.com/avatar/eee616e0c4c1473c59927f7207e1527c?s=40&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G" alt="Douglas" />
+                </a>
+
+
+
+                <a class="user_name" href="http://blogs.forbes.com/people/douglas23/">
+                    Douglas
+                </a>
+
+
+   		<span class="timestamp">3 months ago</span>
+    	</div>
+
+    	<div class="comment_content">
+    		
+<p>Mr. Duncan could not receive a survivor’s blood transfusion before his death because of type mismatch.</p> 
+<p>Doctors Without Borders (MSF) is now claiming over a 1000 survivors.<br /> http://www.straitstimes.com/news/world/more-world-stories/story/1000th-ebola-survivor-feted-medecins-sans-frontieres-west-Africa</p>
+
+    	</div>
+
+
+
+    	<div class="comment_controls" data-called-out-state="on">
+			<div class="right_col">
+				<a href="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/?commentId=comment_blogAndPostId/blog/comment/2238-3640-769" class="permalink">Permalink</a>
+    			<a href="#" class="flag_link">Flag</a>
+    		</div>
+				<a href="#" class="reply">Reply</a>
+        </div>
+    </li>
+	</ul>
+
+			</div>
+
+
+
+
+
+    <div class="followable_block initializing" data-target-type="article" data-target-id="blogAndPostId/blog/post/2238-3640" data-object-json="{&quot;title&quot;:&quot;Ebola In America: Where The Ebola Patients Are&quot;,&quot;avatar_src&quot;:&quot;&quot;,&quot;follow_count&quot;:&quot;&quot;}" data-type-advoice="false" data-target-name="" data-tracking-link-name="articleLink_ArticleCommentsFollow">
+
+    <div class="follow_unireg">
+	<a href="javascript://follow" class="follow_unireg_link">
+		<span class="option_follow">
+			<span class="icon"></span><span class="text">Follow Comments</span>
+		</span>
+
+		<span class="option_following">
+			<span class="icon"></span><span class="text">Following Comments</span>
+		</span>
+
+		<span class="option_unfollow">
+			<span class="icon"></span><span class="text">Unfollow Comments</span>
+		</span>
+	</a>
+	<span class="follow_count"></span>
+	<span class="loadingstate"><img class="loadingstateimg" src="http://i.forbesimg.com/assets/img/loading_spinners/16px_on_transparent.gif" alt="" width="16" height="16" /></span>
+    </div>
+    </div>
+
+	</div><!-- .comments_collection -->
+		</div>
+	</section>
+
+
+	<div class="speed_bump">
+
+		<section class="row">
+		<div id="grv-personalization-13-1422662121504"></div>
+			<script type='text/javascript'>
+			  //<![CDATA[
+			    (function(){
+			    var containerId = "grv-personalization-13-1422662121504";
+			    window.gravityInsightsParams = {
+			      'type': 'content',
+			      'action': '',
+			      'site_guid': 'df51572e4a248537619f3b6b11928388'
+			    };
+			    var adServerReq,bUrl,cburl,doUseGravityUserGuid,includeJs,jq,pfurl,type,ug,wlPrefix,wlUrl,_ref,_ref1,_ref2;includeJs=function(a){var b;b=document.createElement("script");b.async=!0;b.src=a;a=document.getElementsByTagName("script")[0];return a.parentNode.insertBefore(b,a)};bUrl="";ug=(doUseGravityUserGuid=!0===gravityInsightsParams.useGravityUserGuid?1:0)?"":gravityInsightsParams.user_guid||(null!=(_ref=/grvinsights=([^;]+)/.exec(document.cookie))?_ref[1]:void 0)||"";
+			    wlUrl=(wlPrefix="https:"===location.protocol?"https://secure-api.gravity.com/v1/api/intelligence":"http://rma-api.gravity.com/v1/api/intelligence",jq=(null!=(_ref1=window.jQuery)?null!=(_ref2=_ref1.fn)?_ref2.jquery:void 0:void 0)||"",type="iframe",adServerReq=gravityInsightsParams.ad||"",cburl=gravityInsightsParams.cburl||"",pfurl=gravityInsightsParams.pfurl||"",""+wlPrefix+"/wl?jq="+jq+"&sg="+gravityInsightsParams.site_guid+"&ug="+ug+"&ugug="+doUseGravityUserGuid+"&id="+containerId+"&pl=13"+
+			    ("&type="+type+"&ad="+adServerReq+"&cburl=")+encodeURIComponent(cburl)+"&pfurl="+encodeURIComponent(pfurl)+("&x="+(new Date).getTime())+("undefined"!==typeof forceArticleIds&&null!==forceArticleIds&&forceArticleIds.join?"&ai="+forceArticleIds.join(","):"")+("undefined"!==typeof apids&&null!==apids&&""!==apids?"&apids="+encodeURIComponent(apids):""));bUrl&&includeJs(bUrl);wlUrl&&(window.gravityInsightsParams.sidebar&&(window.gravityInsightsParams.wlStartTime=(new Date).getTime()),includeJs(wlUrl));})();
+			  //]]>
+			</script>
+	</section>
+
+	</div> <!-- .speed_bump -->
+
+
+	<!--start:gigya_settings-->
+	<div class="gigya_settings" style="display:none;">
+		<div class="gigya_shortLink" data-value="http://onforb.es/1zficd4"></div>
+		<div class="gigya_canonicalLink" data-value="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/"></div>
+		<div class="gigya_title" data-value='{&quot;generic&quot;:&quot;Ebola In America: Where The Ebola Patients Are - Forbes&quot;,&quot;twitter&quot;:&quot;Ebola In America: Where The Ebola Patients Are&quot;}'></div>
+		<div class="gigya_cid" data-value="blogAndPostId/blog/post/2238-3640"></div>
+		<div class="gigya_buttonContainerPrefixArray" data-value="gigya_share_button,gigya_inline_share_button"></div>
+		<div class="gigya_counterContainerPrefixArray" data-value="gigya_share_counter,gigya_inline_share_counter"></div>
+		<div class="gigya_counterDisplayArray" data-value="tall,medium"></div>
+		<div class="gigya_grecobarEnabled" data-value="false"></div>
+		<div class="gigya_twitterVia" data-value="forbes"></div>
+		<div class="gigya_twitterHashtags" data-value=""></div>
+		<div class="gigya_twitterRelated" data-value="forbes,ddiamond"></div>
+	</div>
+	<!--end:gigya_settings-->
+
+		<!--end:ajax_content_inner-->
+
+		<!-- must appear once on the page -->
+		<div id="contentad9177"></div>
+
+	</div><!-- .article_container.container -->
+
+	<!--sticky_sharing-->
+    <div class="sticky_sharing_bg"></div>
+    <div data-sharing-url="http://www.forbes.com/sites/dandiamond/2014/10/17/ebola-in-america-where-the-ebola-patients-are/" data-sharing-native="true" class="sticky_sharing sticky_sharing_v2" style="display:none;">
+        <div class="share_tab">
+            <div class="share_icon" data-icon="s"></div>
+            <div class="share_count">Share</div>
+        </div>
+        <div class="control_wrapper">
+            <div class="position_reference">
+                <div class="label">
+                    Share this page
+                </div>
+                <div class="controls">
+
+	<!-- Gigya Share divs for gigya_share_button and gigya_share_counter -->
+
+	<div class="share_option">
+		<div class="gy gigyacounter facebook gigya_share_counter" id="gigya_share_counter_facebook"></div><div class="box-bottom"></div>
+		<div class="gigya_share_button-facebook" id="gigya_share_button_facebook"></div>
+	</div>
+
+	<div class="share_option">
+		<div class="gy gigyacounter twitter gigya_share_counter" id="gigya_share_counter_twitter"></div><div class="box-bottom"></div>
+		<div class="gy gigyabutton twitter gigya_share_button-twitter" id="gigya_share_button_twitter"></div>
+	</div>
+
+	<div class="share_option">
+		<div class="gy gigyacounter linkedin gigya_share_counter" id="gigya_share_counter_linkedin"></div><div class="box-bottom"></div>
+		<div class="gy gigyabutton linkedin gigya_share_button-linkedin" id="gigya_share_button_linkedin"></div>
+	</div>
+
+	<div class="share_option">
+		<div class="gy gigyacounter reddit gigya_share_counter" id="gigya_share_counter_reddit" ></div><div class="box-bottom"></div>
+		<div class="gy gigyabutton reddit gigya_share_button-reddit" id="gigya_share_button_reddit" ></div>
+	</div>
+
+	<div class="share_option">
+		<div class="gy gigyacounter google gigya_share_button-google" id="gigya_share_button_google" ><div id="gigya_share_button_inner_google" ></div></div>
+	</div>
+
+	<div class="share_option">
+		<div class="gy gigyacounter stumbleupon gigya_share_counter" id="gigya_share_counter_stumbleupon"></div><div class="box-bottom"></div>
+		<div class="gy gigyabutton stumbleupon gigya_share_button-stumbleupon" id="gigya_share_button_stumbleupon"></div>
+	</div>
+
+	<div class="share_option gigya_inline_share_button-email_gig_containerParent">
+		<div class="gigya_inline_share_button-email_icon" id="gigya_inline_share_button_email_icon"></div>
+		<div class="gigya_inline_share_button-email" id="gigya_inline_share_button_email"></div>
+	</div>
+                </div>
+            </div>
+        </div>
+    </div><!-- .sticky_sharing_v2 -->
+
+	 <!-- async call to openx library -->
+	  <script type="text/javascript">
+	      // async call to our library
+	      (function() {
+	        var gads = document.createElement('script');
+	        gads.async = true;
+	        gads.type = 'text/javascript';
+	        var useSSL = 'https:' == document.location.protocol;
+	        gads.src = (useSSL ? 'https:' : 'http:') + '//rt.liftdna.com/forbes_welcome.js';
+	        var node = document.getElementsByTagName('script')[0];
+	        node.parentNode.insertBefore(gads, node);
+	      })();
+	    </script>
+	 <!-- end of openx-->
+
+	<div class="loading_spinner_holder" id="page_loading_spinner">
+		<div id="pagespinner"></div>
+	</div>
+
+        
+<footer class="universal-footer">
+	<div class="footer-center">
+
+		<!-- END EDITORIAL PROMOTIONS -->
+
+		<section class="lower-footer-links clearfix">
+
+
+			<div class="channels">
+				<ul data-et-context="footer" data-et-location="footernav" class="edittools-list">
+					<li class="home">
+						<a href="http://www.forbes.com/" data-ga-event="Footer,LinkFollowed,channel" data-ga-event-trigger="click">Forbes</a>
+					</li>
+					<li class="editable edittools-item" data-et-item_id="14" data-et-location="footernav" data-et-item-type="topic">
+						<a href="http://www.forbes.com/business/" data-ga-event="Footer,LinkFollowed,channel" data-ga-event-trigger="click">Business</a>
+					</li>
+					<li class="editable edittools-item" data-et-item_id="7" data-et-location="footernav" data-et-item-type="link">
+						<a href="http://www.forbes.com/investing/" data-ga-event="Footer,LinkFollowed,channel" data-ga-event-trigger="click">Investing</a>
+					</li>
+					<li class="editable edittools-item" data-et-item_id="8" data-et-location="footernav" data-et-item-type="link">
+						<a href="http://www.forbes.com/technology/" data-ga-event="Footer,LinkFollowed,channel" data-ga-event-trigger="click">Technology</a>
+					</li>
+					<li class="editable edittools-item" data-et-item_id="13" data-et-location="footernav" data-et-item-type="topic">
+						<a href="http://www.forbes.com/entrepreneurs/" data-ga-event="Footer,LinkFollowed,channel" data-ga-event-trigger="click">Entrepreneurs</a>
+					</li>
+					<li class="editable edittools-item" data-et-item_id="9" data-et-location="footernav" data-et-item-type="link">
+						<a href="http://www.forbes.com/opinion/" data-ga-event="Footer,LinkFollowed,channel" data-ga-event-trigger="click">Op/Ed</a>
+					</li>
+					<li class="editable edittools-item" data-et-item_id="10" data-et-location="footernav" data-et-item-type="link">
+						<a href="http://www.forbes.com/leadership/" data-ga-event="Footer,LinkFollowed,channel" data-ga-event-trigger="click">Leadership</a>
+					</li>
+					<li class="editable edittools-item" data-et-item_id="11" data-et-location="footernav" data-et-item-type="link">
+						<a href="http://www.forbes.com/lifestyle/" data-ga-event="Footer,LinkFollowed,channel" data-ga-event-trigger="click">Lifestyle</a>
+					</li>
+					<li class="editable edittools-item" data-et-item_id="12" data-et-location="footernav" data-et-item-type="link">
+						<a href="http://www.forbes.com/lists/" data-ga-event="Footer,LinkFollowed,channel" data-ga-event-trigger="click">Lists</a>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="conferences footer-list fleft">
+				<h5><a href="http://www.forbes.com/conferences/">Conferences</a></h5>
+
+				<ul data-et-context="footer" data-et-location="footerconferences" class="edittools-list">
+
+						<li class="editable edittools-item" data-et-item_id="5" data-et-location="footerconferences" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/conferences/2015/ReinventingAmerica-Chicago.html" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Reinventing America Summit</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="17" data-et-location="footerconferences" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/conferences/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Reinventing America: The Talent Summit</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="18" data-et-location="footerconferences" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/conferences/2015/WomensSummit.html" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Women’s Summit</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="19" data-et-location="footerconferences" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/conferences/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes 400 Summit on Philanthropy</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="8" data-et-location="footerconferences" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/sites/forbespr/2014/07/09/forbes-and-svg-partners-will-host-forbes-reinventing-america-the-agtech-summit-july-2015-in-salinas-valley/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Reinventing America: AgTech Summit</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="14" data-et-location="footerconferences" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/conferences" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes CIO Summit</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="15" data-et-location="footerconferences" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/conferences/2015/Under30Summit.html" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Under 30 Summit</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="1" data-et-location="footerconferences" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/conferences" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes CMO Summit</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="3" data-et-location="footerconferences" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/conferences/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Healthcare Summit</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="20" data-et-location="footerconferences" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/conferences/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Asia “Best Under a Billion”</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="21" data-et-location="footerconferences" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/conferences/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Advisor Playbook iConference</a>
+	        			</li>
+				</ul>
+			</div>
+			<div class="products_newsletter footer-list fleft">
+				<h5>Education</h5>
+				<ul>
+					<li><a href="http://www.ashford.edu/degrees/online/business.htm/" target="_blank" data-ga-event="Footer,LinkFollowed,companyinfo" data-ga-event-trigger="click">Forbes School of Business at Ashford University</a></li>
+				</ul>
+
+				
+
+			<!-- <div class="products_newsletter footer-list fleft">  -->
+				<h5><a href="http://www.newsletters.forbes.com/">Newsletters</a></h5>
+
+				<ul data-et-context="footer" data-et-location="footernewsletters" class="edittools-list">
+
+						<li class="editable edittools-item" data-et-item_id="1" data-et-location="footernewsletters" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/newsletters/forbes-investor/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Investor</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="2" data-et-location="footernewsletters" data-et-item-type="link">
+	            			<a href="https://www.specialsituationsurvey.com/newsletters/sss/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Special Situation Survey</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="3" data-et-location="footernewsletters" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/newsletters/forbes-dividend-investor/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Dividend Investor</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="5" data-et-location="footernewsletters" data-et-item-type="link">
+	            			<a href="http://www.forbes.com/newsletters/forbes-premium-income-report/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Premium Income Report</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="6" data-et-location="footernewsletters" data-et-item-type="link">
+	            			<a href="http://onforb.es/1dK9tEh" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Investing Newsletters</a>
+	        			</li>
+				</ul>
+			<!-- </div> -->
+				
+			</div>		
+
+			<div class="company-info footer-list fleft">
+				<h5>Products</h5>
+
+				<ul data-et-context="footer" data-et-location="footerproducts" class="edittools-list">
+
+						<li class="editable edittools-item" data-et-item_id="3" data-et-location="footerproducts" data-et-item-type="link">
+	            			<a href="https://store.vook.com/storefronts/book/?q=forbes+media" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes eBooks</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="4" data-et-location="footerproducts" data-et-item-type="link">
+	            			<a href="http://www.forbesmagazine.com/newsfeeds/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Forbes Newsfeeds</a>
+	        			</li>
+						<li class="editable edittools-item" data-et-item_id="5" data-et-location="footerproducts" data-et-item-type="link">
+	            			<a href="http://forbesreprints.magreprints.com/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Reprints & Permissions</a>
+	        			</li>
+				</ul>
+				
+				<h5>Company Info</h5>
+				<ul>
+					<li><a href="http://www.forbesmedia.com/" data-ga-event="Footer,LinkFollowed,companyinfo" data-ga-event-trigger="click">Advertise</a></li>
+					<li><a href="http://www.forbes.com/sites/forbespr/" data-ga-event="Footer,LinkFollowed,companyinfo" data-ga-event-trigger="click" class="exit_trigger_set ga_tracked">Forbes Press Room</a></li>
+					<li><a href="http://www.forbes.com/sites/careers-at-forbes/" data-ga-event="Footer,LinkFollowed,companyinfo" data-ga-event-trigger="click">Forbes Careers</a></li>
+					<li><a href="http://www.forbes.com/fdc/contact.html" data-ga-event="Footer,LinkFollowed,companyinfo" data-ga-event-trigger="click">Contact Us</a></li>
+					<li><a href="http://www.forbes.com/fdc/sitemap.html" data-ga-event="Footer,LinkFollowed,companyinfo" data-ga-event-trigger="click">Sitemap</a></li>
+					<li><a href="http://blogs.forbes.com/help/" data-ga-event="Footer,LinkFollowed,companyinfo" data-ga-event-trigger="click">Help</a></li>
+				</ul>
+			</div>
+				<div class="publications fleft">
+			<div class="clearfix">
+           		<a href="http://www.forbes.com/forbes" data-ga-event="Footer,LinkFollowed,magazine" data-ga-event-trigger="click" class="exit_trigger_set ga_tracked"><img src="http://images.forbes.com/media/current_covers/forbes_120x160.jpg" alt="Forbes Magazine"></a>
+            	<a href="http://www.forbes.com/forbes-life-magazine" data-ga-event="Footer,LinkFollowed,magazine" data-ga-event-trigger="click" class="exit_trigger_set ga_tracked"><img src="http://images.forbes.com/media/current_covers/forbeslife_120x160.jpg" alt="ForbesLife"></a>
+            	<a href="http://www.forbes.com/forbesasia/" data-ga-event="Footer,LinkFollowed,magazine" data-ga-event-trigger="click" class="exit_trigger_set ga_tracked"><img src="http://images.forbes.com/media/current_covers/forbesasia_120x160.jpg" alt="ForbesAsia"></a>
+            </div>
+				
+				<ul class="subscriptions">
+					<ul data-et-context="footer" data-et-location="footermagazine" class="edittools-list">
+							<li class="editable edittools-item" data-et-item_id="6" data-et-location="footermagazine" data-et-item-type="link">
+	            				<a href="https://subs.forbesmagazine.com/servlet/OrdersGateway?cds_mag_code=FRB&cds_page_id=150007" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">2 Free Issues</a>
+	        				</li>
+							<li class="editable edittools-item" data-et-item_id="4" data-et-location="footermagazine" data-et-item-type="link">
+	            				<a href="http://www.forbesmagazine.com/" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Subscriber Services</a>
+	        				</li>
+							<li class="editable edittools-item" data-et-item_id="5" data-et-location="footermagazine" data-et-item-type="link">
+	            				<a href="https://subs.forbesmagazine.com/loc/FRB/IZEG101" data-ga-event="Footer,LinkFollowed,conferences" data-ga-event-trigger="click">Gift Subscription</a>
+	        				</li>
+					</ul>
+				</ul>
+
+				<div class="affiliate-sites">
+					<ul>
+						<li><a href="http://www.forbeschina.com/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">Forbes China</a></li>
+						<li><a href="http://www.forbesindia.com/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">Forbes India</a></li>
+						<li><a href="http://www.forbes.co.il/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">Forbes Israel</a></li>
+						<li><a href="http://www.forbes.com.mx/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">Forbes Mexico</a></li>
+						<li><a href="http://www.forbesmiddleeast.com/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">Forbes Middle East</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://www.forbes.pl/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">Forbes Poland</a></li>
+						<li><a href="http://www.forbes.ro/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">Forbes Romania</a></li>
+						<li><a href="http://www.forbesrussia.ru/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">Forbes Russia</a></li>
+						<li><a href="http://forbesmagazine.es/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">Forbes Spain</a></li>
+					</ul>
+					<ul>
+						<li><a href="http://www.realclear.com/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">RealClear</a></li>
+						<li><a href="http://www.realclearpolitics.com/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">RealClear Politics</a></li>
+						<li><a href="http://www.realclearmarkets.com/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">RealClear Markets</a></li>
+						<li><a href="http://www.realclearworld.com/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">RealClear World</a></li>
+						<li><a href="http://www.realclearsports.com/" target="_blank" data-ga-event="Footer,LinkFollowed,site" data-ga-event-trigger="click">RealClear Sports</a></li>
+					</ul>
+				</div>
+			</div>
+
+        </section>
+
+		
+		<section class="legalese clearfix">
+			<small>2015 Forbes.com LLC&#153; &nbsp; All Rights Reserved</small>
+			<ul>
+				<li><a href="/terms" data-ga-event="Footer,LinkFollowed,companyinfo" data-ga-event-trigger="click">Terms and Conditions</a></li>
+				<li><a href="http://www.forbes.com/fdc/privacy.html" data-ga-event="Footer,LinkFollowed,companyinfo" data-ga-event-trigger="click">Privacy Statement</a></li>
+				<li><a href="http://corporate.morningstar.com/us/asp/subject.aspx?xmlfile=5501.xml" target="_blank" data-ga-event="Footer,LinkFollowed,partner" data-ga-event-trigger="click">Market Data by Morningstar</a></li>
+				<li><a onclick="(function(){forbes.event_tracking.track_ga_event(['Footer','LinkFollowed','partner']);var s=document.createElement('script');s.src='http://preferences.truste.com/js/buildJsFilev2.jsp?domain=forbes.com&amp;type=epref';s.onreadystatechange=function(){if(script.readyState=='loaded'||script.readyState=='complete'){view(trusteId);}};s.onload=function(){view(trusteId);};document.getElementsByTagName('head')[0].appendChild(s);})()" style="cursor:pointer;" target="_blank">AdChoices</a></li>
+			</ul>
+		</section>
+	</div>
+</footer>
+
+<!-- Start: footer assets -->
+
+<!--@foot.populate footer_data=pageData.footerData! /-->
+        <script type="text/javascript">
+            //<![CDATA[
+                var ppi_AjaxURI = '/wp-admin/admin-ajax.php'
+                	,imagesBaseCdn = 'http://i.forbesimg.com'
+					,followBarLocation = 'channel_1'; 
+            //]]>
+        </script>
+    <!--Start: Gigya Configs-->
+        <script type="text/javascript">
+            var gigya_conf = {
+                siteName: 'forbes.com',
+                APIkey: '3_8Fcn29ZQ5lcRRr8BsC6Y2q8eRKPl567JTM6IWXsqW4eqW57_fNx29GDl9YdzZLvH',
+                connectWithoutLoginBehavior: 'alwaysLogin',
+                enabledProviders: 'facebook,twitter,linkedin,googleplus,yahoo,messenger,wordpress,aol,blogger,openid,foursquare,typepad'
+            };
+
+            (function() {
+				var po = document.createElement('script');
+				po.type = 'text/javascript';
+				//po.async = true;
+				po.src = 'http://cdn.gigya.com/js/gigya.js?apiKey=3_8Fcn29ZQ5lcRRr8BsC6Y2q8eRKPl567JTM6IWXsqW4eqW57_fNx29GDl9YdzZLvH';
+
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(po, s);
+			})();
+
+			(function() {
+				var po = document.createElement('script');
+				po.type = 'text/javascript';
+				//po.async = true;
+				po.src = 'http://cdn.gigya.com/js/gigyaGAIntegration.js';
+
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(po, s);
+			})();
+        </script>
+    <!--End: Giya Configs -->
+	<script type="text/javascript">
+		var google_tag_channel = "";
+		var google_tag_section = "";
+		var google_tag_swimlane = "";
+		var google_tag_specialslot = "healthcare-2025-14";
+		var google_tag_article_special_slot = "healthcare-2025";
+		var google_tag_display_channel = "";
+		var google_tag_display_section = "";
+		var google_tag_zone = "article-new";
+		var google_tag_article_id = "blogAndPostId/blog/post/2238-3640";
+	</script>
+		<script type="text/javascript" src="http://i.forbesimg.com/scripts/combined/js/global.1539659185d6cbc0cda84d848b18f28643bdccb0.js"></script>
+		<script type="text/javascript" src="http://i.forbesimg.com/scripts/combined/js/article-responsive.7c6989a2494e3914eec609a8579eaaf141f703c.js"></script>
+<span class="lazy_load_js" data-files="http://i.forbesimg.com/scripts/combined/js/globallazy.89cef9de01f31db949dc2a1dcf7fd174853f3ec6.js"></span>
+    <script type="text/javascript">
+        forbes.bootstrap.init();
+    </script>
+
+
+    <script type="text/javascript">
+        if ( typeof window.JSON === 'undefined' ) {
+            document.write('<script src="http://i.forbesimg.com/assets/js/core/jquery.json-2.2.js"><\/script>');
+        }
+    </script>
+<!-- End: footer assets -->
+
+<div class="current_page_threshold"></div>
+
+</body>
+</html>

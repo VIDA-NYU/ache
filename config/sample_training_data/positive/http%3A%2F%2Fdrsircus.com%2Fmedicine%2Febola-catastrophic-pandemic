@@ -1,0 +1,668 @@
+<!DOCTYPE html><!--[if IE 6]><html
+id="ie6" lang="en-US" prefix="og: http://ogp.me/ns#"><![endif]--><!--[if IE 7]><html
+id="ie7" lang="en-US" prefix="og: http://ogp.me/ns#"><![endif]--><!--[if IE 8]><html
+id="ie8" lang="en-US" prefix="og: http://ogp.me/ns#"><![endif]--><!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!--><html
+lang="en-US" prefix="og: http://ogp.me/ns#"><!--<![endif]--><head><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwUDWFFSGwcDVlNXDwI="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script><link
+rel="stylesheet" type="text/css" href="http://cdn2.drsircus.com/wp-content/cache/minify/000000/7dd5e/default.include.b9e182.css" media="all" /><script type="text/javascript" src="http://cdn1.drsircus.com/wp-content/cache/minify/000000/7dd5e/default.include.f1c544.js"></script><meta
+charset="UTF-8" /><meta
+name="viewport" content="width=device-width" /><meta
+name="google-site-verification" content="shLYS84RUsSFmnKl73cAkSOiG8lpRYHblfiF8xg1Q8I" /><title> Ebola – Catastrophic Pandemic</title><link
+rel="profile" href="http://gmpg.org/xfn/11" /><link
+rel="stylesheet" type="text/css" media="all" href="http://cdn2.drsircus.com/wp-content/themes/imva/style.css" /><link
+href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><link
+rel="shortcut icon" href="http://cdn.drsircus.com/favicon.ico" /><link
+rel="pingback" href="http://drsircus.com/xmlrpc.php" /><!--[if lt IE 9]><![endif] --><link
+rel="canonical" href="http://drsircus.com/medicine/ebola-catastrophic-pandemic" /><meta
+property="og:locale" content="en_US" /><meta
+property="og:type" content="article" /><meta
+property="og:title" content="Ebola – Catastrophic Pandemic" /><meta
+property="og:description" content="If you are not taking the threat of Ebola seriously, you are making a big mistake. President Barack Obama takes it very seriously and has just signed an amendment to an executive order allowing him to mandate the apprehension and detention of Americans who merely show signs of &ldquo;respiratory illness.&rdquo; The executive order, titled Revised &hellip;" /><meta
+property="og:url" content="http://drsircus.com/medicine/ebola-catastrophic-pandemic" /><meta
+property="og:site_name" content="Dr. Sircus" /><meta
+property="article:section" content="Medicine" /><meta
+property="article:published_time" content="2014-08-03T17:01:43+00:00" /><meta
+property="article:modified_time" content="2014-08-04T21:39:33+00:00" /><meta
+property="og:updated_time" content="2014-08-04T21:39:33+00:00" /><meta
+property="og:image" content="http://cdn.drsircus.com/wp-content/uploads/2014/08/ebola2-snippet.jpg" /><meta
+name="twitter:card" content="summary"/><meta
+name="twitter:description" content="If you are not taking the threat of Ebola seriously, you are making a big mistake. President Barack Obama takes it very seriously and has just signed an amendment to an executive order allowing him to mandate the apprehension and detention of Americans who merely show signs of &ldquo;respiratory illness.&rdquo; The executive order, titled Revised [&hellip;]"/><meta
+name="twitter:title" content="Ebola – Catastrophic Pandemic"/><meta
+name="twitter:site" content="@drsircus"/><meta
+name="twitter:domain" content="Dr. Sircus"/><meta
+name="twitter:creator" content="@drsircus"/><script type='text/javascript' data-cfasync='false'>/*<![CDATA[*/(function(){var shr=document.createElement('script');shr.setAttribute('data-cfasync','false');shr.src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';shr.type='text/javascript';shr.async='true';shr.onload=shr.onreadystatechange=function(){var rs=this.readyState;if(rs&&rs!='complete'&&rs!='loaded')return;var site_id='2d020ed67f2b7feb686ad79904d15467';var page_config={"apps":{"share_buttons":{"get_share_counts":function(url,services,cb){Shareaholic.Utils.ajax({cache:true,cache_ttl:'1 minute',url:'http://drsircus.com/wp-admin/admin-ajax.php',data:{action:'shareaholic_share_counts_api',url:url,services:services},success:function(res){if(res&&res.data){cb(res.data,true);}}})}}}};try{Shareaholic.init(site_id,page_config);}catch(e){}};var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(shr,s);})();/*]]>*/</script><meta
+name='shareaholic:site_name' content='Dr. Sircus' /><meta
+name='shareaholic:language' content='en-US' /><meta
+name='shareaholic:url' content='http://drsircus.com/medicine/ebola-catastrophic-pandemic' /><meta
+name='shareaholic:keywords' content='ebola, medicine' /><meta
+name='shareaholic:article_published_time' content='2014-08-03T20:01:43+00:00' /><meta
+name='shareaholic:article_modified_time' content='2015-01-29T14:00:33+00:00' /><meta
+name='shareaholic:shareable_page' content='true' /><meta
+name='shareaholic:article_author_name' content='Dr Sircus' /><meta
+name='shareaholic:site_id' content='2d020ed67f2b7feb686ad79904d15467' /><meta
+name='shareaholic:wp_version' content='7.6.0.4' /><meta
+name='shareaholic:image' content='http://cdn.drsircus.com/wp-content/uploads/2014/08/ebola2-snippet.jpg' /><meta
+property='og:image' content='http://cdn.drsircus.com/wp-content/uploads/2014/08/ebola2-snippet.jpg' /> <script type='text/javascript' src='http://cdn1.drsircus.com/wp-includes/js/jquery/jquery-migrate.min.js'></script><script type='text/javascript' src='http://cdn1.drsircus.com/wp-content/themes/imva/js/event-tracker.js'></script><link
+rel="EditURI" type="application/rsd+xml" title="RSD" href="http://drsircus.com/xmlrpc.php?rsd" /><link
+rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cdn1.drsircus.com/wp-includes/wlwmanifest.xml" /><meta
+name="generator" content="WordPress 4.0.1" /><script type="text/javascript">JS_WP_ESTORE_CURRENCY_SYMBOL="$";JS_WP_ESTORE_VARIATION_ADD_STRING="+";JS_WP_ESTORE_VARIATION_THOUSAND_SEPERATOR=",";JS_WP_ESTORE_MINIMUM_PRICE_YOU_CAN_ENTER="The minimum amount you can specify is ";</script><script type="text/javascript">/*<![CDATA[*/var xhr=(window.XMLHttpRequest)?new XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP"),url='http://drsircus.com/wp-admin/admin-ajax.php',params='action=update_views_ajax&token=540e727ad6&id=14503';xhr.open("POST",url,true);xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");xhr.onreadystatechange=function(){if(4==xhr.readyState&&200==xhr.status){if(window.console&&window.console.log){window.console.log(xhr.responseText);}}}
+xhr.send(params);/*]]>*/</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-44817619-2',{'allowAnchor':true});ga('set','forceSSL',true);ga('send','pageview');</script></head><body
+class="single single-post postid-14503 single-format-standard two-column right-sidebar"><div
+id="fb-root"></div><nav
+id="access" role="navigation"><h3 class="assistive-text">Main menu</h3><div
+class="skip-link"><a
+class="assistive-text" href="#content" title="Skip to primary content">Skip to primary content</a></div><div
+class="skip-link"><a
+class="assistive-text" href="#secondary" title="Skip to secondary content">Skip to secondary content</a></div><div
+class="menu-top-menu-container"><ul
+id="menu-top-menu" class="menu"><li
+id="menu-item-13616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13616"><a
+href="http://drsircus.com/about-dr-sircus-treatment-method/">About Dr Sircus</a></li><li
+id="menu-item-13618" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13618"><a
+href="http://drsircus.com/the-team/">The Team</a></li><li
+id="menu-item-13619" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13619"><a
+href="http://drsircus.com/international-medical-veritas-associatio/">The IMVA</a></li><li
+id="menu-item-13620" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13620"><a
+href="http://drsircus.com/consultations/">Consultations</a></li><li
+id="menu-item-13621" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13621"><a
+href="http://drsircus.com/support-faq/">Support / FAQ</a></li></ul></div> </nav><div
+id="page" class="hfeed"><header
+id="branding" role="banner"><div
+id="header_container"><div
+id="logo_container"><a
+id="logo_container_link" href="http://drsircus.com/">&nbsp;</a></div><div
+id="social_container"><div
+class="header_social_icon"><a
+href="/rss"><div
+class="sprite-imva_header_social_icon_rss"></div></a></div><div
+class="header_social_icon"><a
+href="https://www.facebook.com/drsircus"><div
+class="sprite-imva_header_social_icon_facebook"></div></a></div><div
+class="header_social_icon"><a
+href="https://twitter.com/drsircus"><div
+class="sprite-imva_header_social_icon_twitter"></div></a></div><div
+class="header_social_icon"><a
+href="http://www.youtube.com/user/imvapublications"><div
+class="sprite-imva_header_social_icon_youtube"></div></a></div></div><div
+id="search_container"><form
+method="get" id="searchform" action="http://drsircus.com/"> <label
+for="s" class="assistive-text">Search</label> <input
+type="text" class="field" name="s" id="s" placeholder="Enter your search here..." /> <input
+type="submit" class="submit" name="submit" id="searchsubmit" value="" /></form></div><div
+id="main_menu_container" class='access2'><div
+class='mobile-button'></div><div
+class="menu-booksvids-and-categories-menu-container"><ul
+id="menu-booksvids-and-categories-menu" class="menu"><li
+id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a
+href="http://drsircus.com/books/">Books</a></li><li
+id="menu-item-12529" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12529"><a
+href="http://drsircus.com/medicine/">Medical Articles</a></li><li
+id="menu-item-15446" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15446"><a
+href="http://drsircus.com/medicine/treatments-and-products">Treatments and Products</a></li><li
+id="menu-item-14237" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14237"><a
+href="http://drsircus.com/dr-sircus-world-reports/">World Reports</a></li><li
+id="menu-item-14169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14169"><a
+href="http://drsircus.com/the-compendium-surviving-cancer/">Cancer Compendium</a></li></ul></div></div></div></header><div
+id="main"><div
+id="primary"><div
+id="content" role="main"> <article
+id="post-14503" class="post-14503 post type-post status-publish format-standard has-post-thumbnail hentry category-medicine"> <header
+class="entry-header"><h1 class="page-title entry-title">Ebola – Catastrophic Pandemic</h1><div
+class="post-meta"><span
+class='sep'>Posted by <span
+class='author-name'>Dr Sircus</span> on August 3, 2014 | Filed under <a
+href='http://drsircus.com/medicine' title='Medicine' rel='bookmark'>Medicine</a></span></div><div
+class="entry-meta"></div> </header><div
+class="entry-content entry-content-single updated"><div
+class='shareaholic-canvas' data-app-id='7215607' data-app='share_buttons' data-title='Ebola – Catastrophic Pandemic' data-link='http://drsircus.com/medicine/ebola-catastrophic-pandemic' data-summary=''></div><div
+class="caixaTexto"><p
+class='alignCenter'><img
+width="625" height="399" src="http://cdn3.drsircus.com/wp-content/uploads/2014/08/ebola.jpg" alt="http://l.yimg.com/bt/api/res/1.2/jMSpwS5jYFgzcrj71qVtMQ--/YXBwaWQ9eW5ld3M7Zmk9ZmlsbDtoPTYxMztweW9mZj0wO3E9NzU7dz05NjA-/http:/media.zenfs.com/en_us/News/afp.com/Part-PAR-Par7940286-1-1-0.jpg" /><strong> </strong></p><p> If you are not  taking the threat of Ebola seriously, you are making a big mistake. <a
+href="http://www.prisonplanet.com/obama-signs-executive-order-to-detain-americans-with-respiratory-illnesses.html" class="external external_icon" target="_blank">President Barack Obama</a> takes it very seriously and has just signed an amendment to an executive order  allowing him to mandate the apprehension and detention of Americans who merely  show signs of &ldquo;respiratory illness.&rdquo; The executive order, titled <a
+href="http://www.whitehouse.gov/the-press-office/2014/07/31/executive-order-revised-list-quarantinable-communicable-diseases" class="external external_icon" target="_blank"><em>Revised List  of Quarantinable Communicable Diseases</em></a>, amends <a
+href="http://www.cdc.gov/sars/quarantine/exec-2004-04-03.html" class="external external_icon" target="_blank">executive order 13295</a>,  passed by George W. Bush in April 2003, which allows for the, &ldquo;apprehension,  detention, or conditional  release of individuals to prevent the introduction, transmission, or spread of  suspected communicable diseases.&rdquo;</p><p><iframe
+width="584" height="329" src="http://www.youtube.com/embed/oczt9WnbxzY?feature=oembed" frameborder="0" allowfullscreen></iframe></p><p>This video says that merely the suspicion of a  limited Ebola outbreak in the United States would give the green light for  federal authorities to seize draconian powers and detain Americans not even  infected with the Ebola virus.</p><p>The director-general of the World Health Organization warned Friday  that the Ebola outbreak in West Africa is spreading quickly and the  consequences could be &ldquo;catastrophic&rdquo; if greater efforts to control the outbreak  aren&rsquo;t put into place now. &ldquo;This <strong>outbreak is moving faster than our efforts to control it</strong>,&rdquo; Director-General  Margaret Chan told the presidents of Guinea, Liberia, Sierra Leone, and Ivory  Coast at a gathering in Conakry, the capital of Guinea. &ldquo;If the situation  continues to deteriorate<strong><u>, the consequences can be catastrophic in terms of lost  lives but also severe socioeconomic disruption and a high risk of spread to  other countries</u></strong>,&rdquo; she said.</p><p> On this <a
+href="http://www.usatoday.com/story/money/business/2014/08/01/ebola-airlines-screening-world-health-organization/13434517/" class="external external_icon" target="_blank">USA  video report</a> they say that most people are going  to die and in the same breath say, it is not that contagious. The media is  giving confusing signals. Other headlines read, &ldquo;<a
+href="http://news.yahoo.com/ebola-spread-forest-fire-us-warns-213607589.html" class="external external_icon" target="_blank">Ebola  can spread like &#8216;forest fire,&#8217; US warns</a>.&rdquo; That  sounds contagious! Alarmingly, as the <a
+href="http://www.phac-aspc.gc.ca/lab-bio/res/psds-ftss/ebola-eng.php" class="external external_icon" target="_blank">Public  Health Agency of Canada</a> explains, &quot;1 &#8211; 10 aerosolized organisms are sufficient  to cause infection in humans.&quot; That sounds extremely contagious meaning if  a badly infected patient gets on a plane or bus and sneezes or vomits it&rsquo;s all  over for many people.</p><p>Global medical charity Doctors Without Borders has given warning  that the Ebola crisis in West Africa is &quot;<a
+href="http://www.mirror.co.uk/news/world-news/ebola-spiders-web-infection-growing-3939374" class="external external_icon" target="_blank">unprecedented, absolutely out of control</a> and can only get worse.&quot; Bart Janssens, the charity&#8217;s  director of operations, warned there was no overarching vision of how to tackle  the outbreak.</p><p
+class='alignCenter'><strong>Has air travel doomed  humanity to a pandemic outbreak?</strong></p><p><a
+href="http://www.usatoday.com/story/money/business/2014/08/01/ebola-airlines-screening-world-health-organization/13434517/" class="external external_icon" target="_blank">Airline travelers are not being screened for Ebola</a>. The World Health Organization isn&#8217;t recommending screening  airline passengers leaving the region of Guinea, Liberia or Sierra Leone.  Screening is costly and detected few cases after an outbreak in 2003 of Severe  Acute Respiratory Syndrome, or SARS, that began in China. Sick people are urged  not to travel. Because Ebola&#8217;s incubation period is two to 21 days and early  symptoms aren&#8217;t specific, using thermal scanners to detect fevers is costly,  unlikely to detect anyone infected with Ebola &quot;and is not  encouraged,&quot; according to the WHO.</p><p>The problem with Ebola hemorrhagic  fever (EHF) is that symptoms typically start <a
+href="http://www.who.int/mediacentre/factsheets/fs103/en/" class="external external_icon" target="_blank">two days to three weeks</a> after  contracting the virus meaning that people can be boarding planes already  infected without them or medical officials&rsquo; knowledge.</p><p> <a
+href="http://www.naturalnews.com/046259_Ebola_outbreak_drug_treatments_Monsanto.html#ixzz39EloGIbn" class="external external_icon" target="_blank">Natural  News</a> gives us a look at what the Director-General is talking about and what we might  see happen these next days and weeks. &ldquo;Air travel creates the &quot;perfect  storm&quot; for Ebola to devastate humanity. It all starts with these irrefutable  facts about air travel:</p><p
+class="leftCitation"> 1)  All passengers are confined to the same enclosed space.</p><p
+class="leftCitation"> 2)  All passengers are breathing THE SAME AIR.</p><p
+class="leftCitation"> 3)  Ebola can become airborne via very small particles in the air, and just a  single Ebola virus riding on a dust particle is sufficient to infect a human  being.</p><p
+class="leftCitation"> 4)  Following the flight, infected passengers then intermingle with thousands of  other people at the airport, each going to a different unique destination  somewhere else across the country or around the world.</p><p
+class="leftCitation"> 5)  The <strong>speed of air travel vastly out-paces the speed of  governments being able to deploy infectious disease prevention teams</strong>.&rdquo;</p><p> Though  only a small condolence, one cannot be contaminated just by sitting next to an  affected person in the early stages of infection. People only become contagious  once they begin to show symptoms. If one does not have the proper nutritional  status to fight this off, which most people these days don&#8217;t, especially not the  people from these regions of Africa it would be exceedingly difficult to  survive this disease because strong immune response is very dependent on  nutritional status as well as stress and other factors like toxicity loads.</p><p
+class='alignCenter'><img
+border="0" width="512" height="384" src="http://cdn1.drsircus.com/wp-content/uploads/2014/08/ebola2.jpg" alt="http://l2.yimg.com/bt/api/res/1.2/oMamNbENoGdNexEoc3YsUg--/YXBwaWQ9eW5ld3M7Zmk9ZmlsbDtoPTgwMDtweW9mZj0wO3E9NzU7dz0xMDY2/http:/media.zenfs.com/en_us/News/ap_webfeeds/280e6b27ddf5781d5b0f6a706700647e.jpg" /></p><p><a
+href="http://www.usatoday.com/story/news/nation/2014/08/02/us-ebola-africa-atlanta-hospital/13504503/" class="external external_icon" target="_blank">A patient with the deadly Ebola virus arrived at Emory University  Hospital</a> in Atlanta for treatment. The &ldquo;hospital has a specially-built  isolation unit to treat patients exposed to certain serious infectious  diseases,&rdquo; Misty Williams wrote in the Atlanta Journal-Constitution. &ldquo;Set up in  collaboration with the Atlanta-based U.S. Centers for Disease Control and  Prevention, the unit is physically separate from other patient areas and is one  of only four such facilities in the country.&rdquo;</p><p>Doctors,  nurses, and other hospital staff who work on such dangerous cases are  &ldquo;specially trained,&rdquo; and a statement from Emory indicated that the hospital and  its staff &ldquo;are fully prepared for this type of situation.&rdquo; One-misstep though  and America risks creating a beachhead for Ebola on American soil. Doctors at  Emory are confident in their ability to isolate and not let one virus escape.</p><p
+class='alignCenter'><strong>It Has Already Happened – Justified Fear</strong></p><p>Fears of a global Ebola pandemic are  &#8216;justified&#8217; as Nigerian health officials try to trace 30,000 people at risk of  contracting the deadly disease following the death of <a
+href="http://www.dailymail.co.uk/news/article-2710285/Ebola-test-feverish-man-flew-Britain-West-Africa-doctors-red-alert-deadly-virus.html#ixzz39GWNu8rv" class="external external_icon" target="_blank">Patrick Sawyer</a>. Panic sparked by Mr. Sawyer&#8217;s death is  &#8216;justified&#8217; says Dr. Derek Gatherer of the University of Lancaster, claiming  the virus is as infectious as flu. Professor Peter Piot, the director of the  London School of Hygiene and Tropical Medicine, disagrees with Gatherer saying  the virus, although deadly, is &#8216;in theory easy to contain.&#8217;</p><p>Dr. Gatherer said, &ldquo;Anyone on the same plane  could have become infected because Ebola is easy to catch. It can be passed on  through vomiting, diarrhea or even from simply saliva or sweat &#8211; as well as  being sexually transmitted. That is why there is such alarm over Mr. Sawyer  because he became ill on the flight so anyone else sharing the plane could have  been infected by his vomit or other bodily fluids.&#8217;</p><p>Initially health officials wanted to trace only  a few hundred passengers on two planes, which had carried victim Patrick Sawyer.  But – as Cabinet ministers held an emergency Cobra meeting in London – the  search was widened to find up to 30,000 people who could be hosting the  organism. The list includes anyone at one of <a
+href="http://www.mirror.co.uk/news/world-news/ebola-spiders-web-infection-growing-3939374#ixzz39Fu7RsmN" class="external external_icon" target="_blank">four airports visited by Sawyer</a>, and those in contact with  him in Nigeria&rsquo;s capital Lagos, home to 17 million, where he died five days  ago.</p><p>Although the death rate in previous outbreaks in Africa has reached 90%,  the current outbreak has <a
+href="http://www.latimes.com/world/africa/la-fg-africa-ebola-20140703-story.html" class="external external_icon" target="_blank">killed about 60%</a> of known infected patients so far. Western contemporary medicine admits it does  not have the correct treatments for this horrendous disease. The virus, which  emerged in March of this year, is devastating the population of Guinea, is  tearing the nation apart, <a
+href="http://allafrica.com/stories/201407290434.html?page=2" class="external external_icon" target="_blank">destroying almost every life in its reach and  path</a>.</p><p>Ebola, transmitted by  contact with an infected person&rsquo;s blood or other fluids, is an excruciating disease  of high fever, diarrhea and often profuse bleeding from body orifices and even  the skin&rsquo;s pores. Unfortunately, early symptoms of Ebola hemorrhagic fever are  nonspecific and include the following: fever, headache, weakness, vomiting,  diarrhea, stomach discomfort, decreased appetite, and joint and muscle  discomfort. As the disease progresses, patients may develop other symptoms such  as a rash, eye redness, hiccups, sore throat, cough, chest pain.</p><p>Typically&nbsp;patients  experience decreased functioning of the liver and kidneys.  At this point, most patients exhibit severe bleeding and coagulation  abnormalities, including gastrointestinal bleeding, rash, and a range of  hematological irregularities, such as lymphopenia and neutrophilia. Patients  also often have difficulty breathing and swallowing. Symptoms may appear  from about two to 21 days after exposure (average is eight to 10 days).</p><p>Ebola virus infection  runs its course within 14 to 21 days. As the infection progresses cytokines are  released contributing to <strong>exaggerated  inflammatory responses</strong> that are not protective. Damage to the liver,  combined with massive viremia, leads to disseminated intravascular  coagulopathy. The virus eventually <strong>compromises  vascular integrity</strong>. The terminal stages of Ebola virus infection usually  include diffuse bleeding and hypotensive shock that accounts for Ebola  fatalities.[<a
+href="#_edn1" name="_ednref1" title="" id="_ednref1">1</a>]</p><p>&quot;Haemorrhaging symptoms begin 4-5 days  after onset, which includes hemorrhagic conjunctivitis, pharyngitis, bleeding  gums, oral/lip ulceration, hematemesis, melena, hematuria, epistaxis, and  vaginal bleeding,&quot; reports the Pathogen Safety Data Sheet from the Public  Health Agency of Canada. That same publication also explains, &quot;There are  no known antiviral treatments available for human infections.&quot; [<a
+href="#_edn2" name="_ednref2" title="" id="_ednref2">2</a>]</p><p
+class='alignCenter'><strong>Death through Nutritional Depletion</strong></p><p> A comparison of immune parameters in survivors and non-survivors  of infection has provided clues into the constituents of an effective immune  response. <strong>Survival is dependent  on the initial or innate immune response to infection</strong>. Survivors exhibited more significant IgM responses, clearance  of viral antigen, and sustained T-cell cytokine responses, as indicated by high  levels of T-cell-related mRNA in the peripheral blood. In contrast, antibodies  specific for the virus were nearly undetectable in fatal cases.</p><p> Increases in the levels of inflammatory cytokines IFN-γ, IFN-α,  interleukin-2 (IL-2), IL-10, and tumor necrosis factor alpha were associated  with fatality from Ebola hemorrhagic fever (<a
+href="http://jvi.asm.org/content/77/18/9733#ref-41" class="external external_icon" target="_blank">40</a>). Whether the effects of cytokines are protective or damaging  may depend not only on the cytokine profile but also may represent a delicate  balance influenced by the route and titer of incoming virus as well as factors  specific to the individual host immune response.[<a
+href="#_edn3" name="_ednref3" title="" id="_ednref3">3</a>] Bottom line is patients who die usually have not developed a significant immune  response to the virus.</p><p>Ebola could impose an unprecedented selenium  demand upon the host, potentially leading to severe lipid peroxidation and cell  membrane destruction. This could also contribute to the characteristic  hemorrhaging caused by intravascular blood clotting, due to the thrombotic  effect of Se deficiency. Selenium, as we shall see in the Natural Allopathic  Treatment section is one primary answer for cytokine storms.</p><p>Ebola is probably the best known of a class of  viruses known as hemorrhagic fever viruses. The Cecil Textbook of Medicine  notes that these diseases are characterized by capillary fragility, which  translates to easy bleeding, that can frequently lead to severe shock and  death. These diseases also tend to consume and/or destroy the platelets, which  play an integral role in blood clotting. The clinical presentation of these  viral diseases is similar to scurvy, which is also characterized by capillary  fragility and a tendency to bleed easily. Characteristic skin lesions develop,  which are actually multiple tiny areas of bleeding into the skin that surround  the hair follicles. some cases even include bleeding into already healed scars.</p><p>In the classic form of scurvy, which evolves  very slowly from the gradual depletion of vitamin C body stores, the immune  system will be sufficiently compromised for infection to claim the patient&rsquo;s  life before the extensive hemorrhage that occurs after all vitamin C stores  have been completely exhausted.</p><p>Ebola virus and the other viral hemorrhagic  fevers are much more likely to cause hemorrhaging before any other fatal  infection has a chance to become established. This is because the virus so rapidly and totally  metabolizes and consumes all available vitamin C in the bodies of the victims  that an advanced stage of scurvy is literally produced after only a few days of  the disease.</p><p>The scurvy is so complete that the blood  vessels generally cannot keep from hemorrhaging long enough to allow an  infective complication to develop. In addition, the viral hemorrhagic fevers  typically only take hold and reach epidemic proportions in those populations  that would already be expected to have low body stores of vitamin C, such as  are found in many of the severely malnourished Africans.</p><p>In such individuals, an infecting hemorrhagic  virus will often wipe out any remaining vitamin C stores before the immune  systems can get the upper hand and initiate recovery. When the vitamin C stores  are rapidly depleted by large infecting doses of an aggressive virus, the  immune system gets similarly depleted and compromised.</p><p
+class='alignCenter'><strong>Conclusion</strong></p><p>At this point we need to pray that worst case  scenarios are not in our collective future. On the brighter side we are used to  annual influenza scares, which seem little more than vaccine promotion  campaigns. In the case of <a
+href="http://abcnews.go.com/Health/wireStory/treatment-vaccine-ebola-24811340" class="external external_icon" target="_blank">Ebola there is no vaccine</a> and no treatment to  promote but that does not mean we will not be surprised after a period of time  that they do come out with a vaccine that they say will work but does not, just  like a regular flu vaccine with toxic mercury included inside.</p><p>Some have speculated through the years that  both the AIDS and Ebola are actually man made viruses, but at this point that  is academic. Ebola exists and it kills like the bubonic plague.</p><p>In Part Two we will examine solid sane  treatments that should be a no-brainer for doctors and patients based in large  part on certain natural substances that are used in the best emergency rooms  and intensive care wards. Why the medical establishment is not using these  powerful safe drugs to prevent death is beyond the pale. As the above  information about selenium and vitamin C indicate there are treatments that  will save many lives if the medical establishment and the alternative medicine  community can get their act together and really look at what is practical to  apply to this problem. Bottom line is that western medicine does not have a  cure or even reasonable treatment for Ebola and that is why so many people are  dying. People with Ebola are treated with only general therapies meant to  support the ill patient. Natural Allopathic Medicine has a core protocol that  can be put together based on solid science, not speculation.</p><p>Ebola Part Two is out! <a
+href='http://drsircus.com/medicine/ebola-saving-lives-natural-allopathic-medicine'>Ebola – Saving Lives with Natural Allopathic Medicine</a></p><div><div
+id="edn1"><p>[<a
+href="#_ednref1" name="_edn1" title="" id="_edn1">1</a>] http://jvi.asm.org/content/77/18/9733</p></p></div><div
+id="edn2"><p>[<a
+href="#_ednref2" name="_edn2" title="" id="_edn2">2</a>] Pathogen Safety Data Sheet of Canada; http://wwCw.phac-aspc.gc.ca/lab-bio/res/psds-ftss/ebola-eng.php</p></p></div><div
+id="edn3"><p>[<a
+href="#_ednref3" name="_edn3" title="" id="_edn3">3</a>] <a
+href="http://jvi.asm.org/content/77/18/9733" class="external external_icon" target="_blank">http://jvi.asm.org/content/77/18/9733</a></p></p></div></p></div></div><div
+class='shareaholic-canvas' data-app-id='7215603' data-app='share_buttons' data-title='Ebola – Catastrophic Pandemic' data-link='http://drsircus.com/medicine/ebola-catastrophic-pandemic' data-summary=''></div><div
+id="wpcr_respond_1"></div><div
+id="author_credit_single_footer" class='author vcard'> <img
+class='photo' src="http://cdn1.drsircus.com/images/imva_dr_sircus_photo.jpg" style="float:left;border:4px solid #333;margin: 3px 2px 0px 2px  !important;"/> <span
+class='fn' style='display:none;'>Mark Sircus</span><div
+style='float:right;width:520px;'><h2><span
+class='n'><span
+class='honorific-prefix'>Dr.</span> <span
+class='given-name'>Mark</span> <span
+class='family-name'>Sircus</span>, <span
+class='honorific-suffix'>Ac., OMD, DM (P)</span></h2><p>Director International Medical Veritas Association</p><p>Doctor of Oriental and Pastoral Medicine</p> <a
+href="https://plus.google.com/101483942936391378661?rel=author" class="external external_icon" target="_blank">Google</a><div
+id="single_social_container"><div
+class="header_social_icon"><a
+href="https://www.facebook.com/drsircus" class="external" target="_blank"><img
+src="http://cdn3.drsircus.com/images/imva_header_social_icon_facebook.png" width="34" height="34" border="0" alt="Like our Facebook Page"></a></div><div
+class="header_social_icon"><a
+href="https://twitter.com/drsircus" class="external" target="_blank"><img
+src="http://cdn3.drsircus.com/images/imva_header_social_icon_twitter.png" width="34" height="34" border="0" alt="Follow Us on Twitter"></a></div><div
+class="header_social_icon"><a
+href="http://www.youtube.com/user/imvapublications" class="external" target="_blank"><img
+src="http://cdn1.drsircus.com/images/imva_header_social_icon_youtube.png" width="34" height="34" border="0" alt="YouTube Videos"></a></div></div></div> <br
+class='clearBoth'/><script type='text/javascript'>/*<![CDATA[*/jQuery(document).ready(function($){function IsEmail(email){var regex=/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;return regex.test(email);}
+$("form#biomat-form-input-c").submit(function(event){event.preventDefault();if(IsEmail($("#email-input-c").val())==false){alert("Please Enter a Valid Email!");return false;}
+$.ajax({type:"POST",data:$("#biomat-form-input-c").serialize(),success:function(data){$("#biomat-form-c-down").html("<p>Check your Email!</p>");}});return false;});});/*]]>*/</script><div
+id='biomat-form-c'> <img
+src='http://cdn3.drsircus.com/wp-content/uploads/2014/06/book-cover-medium-w-ac.png' width='221' height='288' alt='BioMat Book Cover'/><div
+id='biomat-form-c-sub'><div
+id='biomat-form-c-up'><h2>Free E-Book!</h2></div><div
+id='biomat-form-c-mid'><p>This book (220 pages) is about light and heat medicine and about Far Infrared BioMats that offer comfort and healing. Humans need light and This book delivers up to the reader amazing secrets of light.</p> <span
+class='biomat-italic'>Get it for free by subscribing to my newsletter.</span></div><div
+id='biomat-form-c-down'><form
+method='post' id='biomat-form-input-c'> <input
+type='hidden' id='form-start' name='email-reg-start' value='start' /><div
+class='biomat-form-float-c'> <input
+type='text' name='email' id='email-input-c' placeholder='Your Email' required/></div> <input
+type='submit' value='Go' name='Submit' id='submit-btn'/></form></div></div></div></div></div></article><div
+class="secondary_divider clearBoth"></div><div
+class="descBox1" style="margin-top: 10px;"><p
+style="margin: 7px 0; font-size: 17px; line-height: 25px; font-family: Arial; text-align: left!important; font-weight: 300">For questions pertaining to your own personal health issues or for specific dosing of Dr. Sircus's protocol items please seek a consultation. Please visit our <a
+style="font-size:16px;" href="http://support.drsircus.com/hc/en-us">knowledge base</a> to see if your question may have been answered previously.</p></div><h2  style="margin-top:10px;margin-bottom: 5px;">Comments:</h2><a
+name="comments"></a><div
+id="disqus_thread"><div
+id="dsq-content"><ul
+id="dsq-comments"><li
+class="comment even thread-even depth-1" id="dsq-comment-37926"><div
+id="dsq-comment-header-37926" class="dsq-comment-header"> <cite
+id="dsq-cite-37926"> <span
+id="dsq-author-user-37926">Kevin Worldsavior</span> </cite></div><div
+id="dsq-comment-body-37926" class="dsq-comment-body"><div
+id="dsq-comment-message-37926" class="dsq-comment-message"><p>The Salvation will not come from the government and the medical establishment &#8211; No Ebola &#8211; No Negative Impacts and Death &#8211; I got the power (like a God) to wipe out Ebola, AIDS, Malaria, TB, Colds, Flues, etc. in just a few days &#8211; I got my WVD &#8211; The Weapon of Virus Destruction &#8211; Just an exercise for a minute a day &#8211; The cure and prevention of any diseases, known on Earth for more than 2 million years &#8211; Even Tibetans don&#8217;t know how to stay absolutely healthy all the time &#8211; The price of the WVD for the whole world is 5 billion EURO/BUCKS/BP.</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-16563"><div
+id="dsq-comment-header-16563" class="dsq-comment-header"> <cite
+id="dsq-cite-16563"> <span
+id="dsq-author-user-16563">Spencer</span> </cite></div><div
+id="dsq-comment-body-16563" class="dsq-comment-body"><div
+id="dsq-comment-message-16563" class="dsq-comment-message"><p>I wish someone would create a home treatment protocol for this covering dosage for different age groups (magnesium, Vit C, Vit D, Selenium, etc.). How would an average family treat something like this at home to maximize survival chances if the system gets overwhelmed (or even if it doesn&#8217;t since the system has no clue what to do anyway).</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-16430"><div
+id="dsq-comment-header-16430" class="dsq-comment-header"> <cite
+id="dsq-cite-16430"> <span
+id="dsq-author-user-16430">Kieron</span> </cite></div><div
+id="dsq-comment-body-16430" class="dsq-comment-body"><div
+id="dsq-comment-message-16430" class="dsq-comment-message"><p>&#8220;Dr Gatherer.&#8221;  Such an ironic name.  It&#8217;s a euphemism for the spectre of Death.  This is indeed a psy-op.  Breathe, people. Be alert but don&#8217;t give in to fear because this is exactly what is desired: mass panic, pleas for salvation from the government and medical establishment, and freedom to detain anyone for any reason.</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-16348"><div
+id="dsq-comment-header-16348" class="dsq-comment-header"> <cite
+id="dsq-cite-16348"> <span
+id="dsq-author-user-16348">Eric</span> </cite></div><div
+id="dsq-comment-body-16348" class="dsq-comment-body"><div
+id="dsq-comment-message-16348" class="dsq-comment-message"><p>If Mark is going to plagiarize the work of others, at least he  could give credit. The many paragraphs lifted from the Jim Stone website is only one example of many.  Why does he often pass off the work of others as his own?</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-16326"><div
+id="dsq-comment-header-16326" class="dsq-comment-header"> <cite
+id="dsq-cite-16326"> <span
+id="dsq-author-user-16326">Roger Parness</span> </cite></div><div
+id="dsq-comment-body-16326" class="dsq-comment-body"><div
+id="dsq-comment-message-16326" class="dsq-comment-message"><p>Fear mongering. Very surprised to see Dr Sircus play into this. The headline is emotional and uneccessary sensationalism. I would expect a calm more reasoned approach.<br
+/> There is no catastrophy.<br
+/> Calm down.<br
+/> Medical propaganda is the worse kind because people so desperately want to depend upon their doctors.<br
+/> Don&#8217;t believe the news</p></div></div><ul
+class="children"><li
+class="comment odd alt depth-2" id="dsq-comment-16435"><div
+id="dsq-comment-header-16435" class="dsq-comment-header"> <cite
+id="dsq-cite-16435"> <span
+id="dsq-author-user-16435">freedomdove</span> </cite></div><div
+id="dsq-comment-body-16435" class="dsq-comment-body"><div
+id="dsq-comment-message-16435" class="dsq-comment-message"><p>Fear mongering is what you get from main-stream media.  Dr. Sircus is just making people aware, and he&#8217;s providing information about prevention.  Nothing wrong with that.</p></div></div></li></ul></li><li
+class="comment even thread-odd thread-alt depth-1" id="dsq-comment-16287"><div
+id="dsq-comment-header-16287" class="dsq-comment-header"> <cite
+id="dsq-cite-16287"> <span
+id="dsq-author-user-16287">sathya</span> </cite></div><div
+id="dsq-comment-body-16287" class="dsq-comment-body"><div
+id="dsq-comment-message-16287" class="dsq-comment-message"><p>IV ozone will deactivate any virus.</p></div></div><ul
+class="children"><li
+class="comment odd alt depth-2" id="dsq-comment-16341"><div
+id="dsq-comment-header-16341" class="dsq-comment-header"> <cite
+id="dsq-cite-16341"> <span
+id="dsq-author-user-16341">LizzyB</span> </cite></div><div
+id="dsq-comment-body-16341" class="dsq-comment-body"><div
+id="dsq-comment-message-16341" class="dsq-comment-message"><p>Hence why I take oxygen capsules and ozonated water, can only try.</p></div></div></li></ul></li><li
+class="comment even thread-even depth-1" id="dsq-comment-16281"><div
+id="dsq-comment-header-16281" class="dsq-comment-header"> <cite
+id="dsq-cite-16281"> <span
+id="dsq-author-user-16281">md</span> </cite></div><div
+id="dsq-comment-body-16281" class="dsq-comment-body"><div
+id="dsq-comment-message-16281" class="dsq-comment-message"><p>What is not known about the so called death rate is what the denominator of the fraction is.  How many cases of &#8220;flu&#8221; are really ebola that didn&#8217;t progress to full blown disease enough to be included in the incidence count.  We see that in many diseases here in the US.  The published rates all<br
+/> assume that everyone who gets sick sees a doctor and gets counted-  NOT</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-16267"><div
+id="dsq-comment-header-16267" class="dsq-comment-header"> <cite
+id="dsq-cite-16267"> <span
+id="dsq-author-user-16267">james</span> </cite></div><div
+id="dsq-comment-body-16267" class="dsq-comment-body"><div
+id="dsq-comment-message-16267" class="dsq-comment-message"><p>The treatment for ebola, along with accompanying MOA has been sent to this web site.<br
+/> Jim Stone, August 1, 2014</p><p>Permalink</p><p> This is a lengthy article, DO NOT SURFACE READ.  The actual treatment<br
+/> for ebola which will virtually eliminate fatalities, as revealed by a<br
+/> doctor who has worked with ebola, is below.</p><p>Consider this:  The elite would never release a plague<br
+/> without an easy cure, and along with this ebola outbreak an American<br
+/> biowarfare firm has been working in Sierra Leon for the last five years.<br
+/> Google that.  Sierra Leon has actually identified them as the<br
+/> perpetrators of this outbreak and kicked them out of the country. There<br
+/> is absolutely no doubt this outbreak was intentionally caused by the<br
+/> U.S. war department.</p><p>And if it is intentional, a cure is known.  There would simply be no other way to do business.</p><p>Here is the treatment, complete with MOA. This is a treatment<br
+/> and not a cure, your immune system wipes out the virus, and the<br
+/> treatment gives your immune system time to do it. Here is what<br
+/> Ebola does that is fatal:  It causes the complete removal of all vitamin<br
+/> C from the body. No one actually knows what mechanism is involved in<br
+/> doing this, other than a malfunction that is not permanently destructive<br
+/> to whatever is triggered to remove all vitamin C.  All the researchers<br
+/> know is that vitamin C drops to zero and all the symptoms of ebola are<br
+/> consistent with a complete loss of vitamin C.</p><p>How do I know this?  A doctor who has remained anonymous and has<br
+/> worked with ebola victims has discovered this and sent it to this web<br
+/> site, at last check this cannot be googled which confirms this doctor<br
+/> did not just copy paste, SO POST IT EVERYWHERE; GET THIS OUT THERE, THE<br
+/> TREATMENT FOR EBOLA WHICH WILL PREVENT DEATH IS KNOWN AND THIS IS AN<br
+/> EMERGENCY REQUEST FOR MY READERS TO SPREAD THIS INFO AND STOP THIS EBOLA<br
+/> ATTACK IN ITS TRACKS.</p><p>From an anonymous doctor:</p><p>Summary:&#8221;The very first symptoms of ebola are exactly the<br
+/> same as scurvy, which is caused by inadequate vitamin C.  Though scurvy<br
+/> is seldom fatal as a primary condition, scurvy also represents only a<br
+/> partial deficiency of vitamin C, the body still has a LOT of vitamin C<br
+/> compared to zero, which ebola causes.  Absent ANY vitamin C, blood<br
+/> vessels become very weak and start to lose blood, and platelets become<br
+/> ineffective and unable to trigger clots.  So death by ebola is caused by<br
+/> massive internal bleeding and loss of blood, which can be stopped<br
+/> simply by taking enormous doses of vitamin C until the immune system<br
+/> succeeds in killing off the virus.&#8221;</p><p>Begin text:<br
+/> Ebola is probably the best known of a class of viruses known as<br
+/> hemorrhagic fever viruses. In fact, Ebola virus was initially recognized<br
+/> in 1976. Other less known but related viral syndromes include yellow<br
+/> fever, dengue hemorrhagic fever, Rift Valley fever, Crimean-Congo<br
+/> hemorrhagic fever, Kyasanur Forest disease, Omsk hemorrhagic fever,<br
+/> hemorrhagic fever with renal syndrome, Hantavirus pulmonary syndrome,<br
+/> Venezuelan hemorrhagic fever, Brazilian hemorrhagic fever, Argentine<br
+/> hemorrhagic fever, Bolivian hemorrhagic fever, and Lassa fever. The<br
+/> Ebola virus infection, also known as African hemorrhagic fever, has the<br
+/> distinction of having the highest case-fatality rate of the viral<br
+/> infections noted above, ranging from 53% to 88%.</p><p>These viral hemorrhagic fever syndromes share certain clinical features.<br
+/> The Cecil Textbook of Medicine notes that these diseases are<br
+/> characterized by capillary fragility, which translates to easy bleeding,<br
+/> that can frequently lead to severe shock and death. These diseases also<br
+/> tend to consume and/or destroy the platelets, which play an integral<br
+/> role in blood clotting. The clinical presentation of these viral<br
+/> diseases is similar to scurvy, which is also characterized by capillary<br
+/> fragility and a tendency to bleed easily. Characteristic skin lesions<br
+/> develop, which are actually multiple tiny areas of bleeding into the<br
+/> skin that surround the hair follicles. some cases even include bleeding<br
+/> into already healed scars.</p><p>In the classic form of scurvy that evolves very slowly from the gradual<br
+/> depletion of vitamin C body stores, the immune system will be<br
+/> sufficiently compromised for infection to claim the patient’s life<br
+/> before the extensive hemorrhage that occurs after all vitamin C stores<br
+/> have been completely exhausted.  Ebola virus and the other viral<br
+/> hemorrhagic fevers are much more likely to cause hemorrhaging before<br
+/> any other fatal infection has a chance to become established. This is<br
+/> because the virus so rapidly and totally metabolizes and consumes all<br
+/> available vitamin C in the bodies of the victims that an advanced stage<br
+/> of scurvy is literally produced after only a few days of the disease.</p><p>The scurvy is so complete that the blood vessels generally cannot keep<br
+/> from hemorrhaging long enough to allow an infective complication to<br
+/> develop. Also, the viral hemorrhagic fevers typically only take<br
+/> hold and reach epidemic proportions in those populations that would<br
+/> already be expected to have low body stores of vitamin C, such as is<br
+/> found in many of the severely malnourished Africans. In such<br
+/> individuals, an infecting hemorrhagic virus will often wipe out any<br
+/> remaining vitamin C stores before the immune systems can get the upper<br
+/> hand and initiate recovery. When the vitamin C stores are<br
+/> rapidly depleted by large infecting doses of an aggressive virus, the<br
+/> immune system gets similarly depleted and compromised. However, this<br
+/> point is largely academic after hemorrhaging throughout the body has<br
+/> begun.</p><p>To date, no viral infection has been demonstrated to be resistant to the<br
+/> proper dosing of vitamin C as classically demonstrated by Klenner.<br
+/> However, not all viruses have been treated with Klenner-sized vitamin C<br
+/> doses, or at least the results have not been published. Ebola viral<br
+/> infection and the other acute viral hemorrhagic fevers appear to be<br
+/> diseases that fall into this category. Because of the seemingly<br
+/> exceptional ability of these viruses to rapidly deplete vitamin C<br
+/> stores, even larger doses of vitamin C would likely be required in order<br
+/> to effectively reverse and eventually cure infections caused by these<br
+/> viruses.</p><p>Cathcart (1981), who introduced the concept of bowel tolerance to<br
+/> vitamin C discussed earlier, hypothesized that Ebola and the other acute<br
+/> viral hemorrhagic fevers may well require 500,000 mg of vitamin C daily<br
+/> to reach bowel tolerance! Whether this estimate is accurate, it seems<br
+/> clear as evidenced by the scurvy-like clinical manifestations of these<br
+/> infections that vitamin C dosing must be vigorous and given in extremely<br
+/> high doses. If the disease seems to be winning, then even more vitamin C<br
+/> should be given until symptoms begin to lessen. Obviously, these are<br
+/> viral diseases that would absolutely require high doses of vitamin C<br
+/> intravenously as the initial therapy. The oral administration should<br
+/> begin simultaneously, but the intravenous route should not be abandoned<br
+/> until the clinical response is complete. Death occurs too quickly with<br
+/> the hemorrhagic fevers to be conservative when dosing the vitamin C.<br
+/> (from Vitamin C, Infectious Diseases, and Toxins:Curing the Incurable<br
+/> by Thomas E. Levy MD JD)</p><p>MY COMMENT: I may not be a doctor, but I am awful good with<br
+/> medical topics, and this rings 100 percent true, IT IS THE MOA which if<br
+/> combined with some of my medical knowledge, such as the fact that<br
+/> Broccoli is absolutely excellent for assisting the clotting of blood,<br
+/> that the active component of Noni (which is in pineapple juice) is<br
+/> strongly anti viral, and that cures such as colloidal silver, while good<br
+/> for bacterial infections does nothing for viruses, combine some real<br
+/> knowledge with what this doctor says and it is highly probable that<br
+/> Ebola can be shrugged off as a mild case of scurvy.</p><p>Beware the current Colloidal Silver psy op, the actual cure for Ebola has been given to this web site.</p><p>Colloidal silver is great stuff, and I have made gallons from a 1 ounce<br
+/> silver bar myself.  It works great for curing BACTERIAL infections and<br
+/> making water safe to drink without the nasty taste of iodine.<br
+/> HOWEVER, COLLOIDAL SILVER WILL DO NOTHING AGAINST VIRUSES, AND HUGE LIES<br
+/> ARE BEING HATCHED RIGHT NOW TO MISGUIDE PEOPLE TO A FALSE EBOLA CURE<br
+/> AND THE ALTERNATIVE MEDIA IS LAPPING IT UP</p><p>All curative agents have a mode of action, or MOA.   And if  anyone<br
+/> posting medical cures does not know the MOA, they have no idea what they<br
+/> are talking about. Colloidal silver has an MOA that has been known for<br
+/> many decades, yet recently Google has been rigged to bury it with only<br
+/> articles stating &#8220;the MOA is being explored and we think it is ___(then<br
+/> disinfo)&#8221; and there has to be a reason why this is being done right now,<br
+/> at this point in time with Ebola running amok.</p><p>Here is how colloidal silver actually works (its MOA), with first an<br
+/> example:  Colloidal silver is to bacteria what cyanide is for all red<br
+/> blooded organisms.  In red blooded organisms, cyanide binds with<br
+/> hemoglobin in place of oxygen, and makes it impossible for blood to<br
+/> carry oxygen.  With enough cyanide, oxygen starvation via cyanide bonded<br
+/> hemoglobin causes death.</p><p>Colloidal silver does the same for bacteria, it binds with the oxygen<br
+/> carriers in bacteria permanently, causing bacteria to quickly die from<br
+/> oxygen starvation.  This is the MOA for colloidal silver, which has been<br
+/> clearly known practically forever.</p><p>VIRUSES<br
+/> HAVE NO METABOLIC PROCESSES WHICH REQUIRE AN OXYGEN CARRIER, AND<br
+/> THEREFORE COLLOIDAL SILVER WILL BE COMPLETELY INEFFECTIVE AGAINST EBOLA,<br
+/> do not let the misinformed in the alternative media fool you by saying<br
+/> colloidal silver is effective against viruses in any way, colloidal<br
+/> silver is only useful for treating secondary bacterial infections that<br
+/> move in after a preceeding viral infection and in the case of ebola,<br
+/> there is not enough time for that to make a difference.</p><p>It is extremely important to note that a HUGE psy op is underway to<br
+/> fake colloidal silver as a cure for viruses and there HAS TO BE A<br
+/> REASON, DO NOT FALL FOR IT.</p></div></div><ul
+class="children"><li
+class="comment even depth-2" id="dsq-comment-16356"><div
+id="dsq-comment-header-16356" class="dsq-comment-header"> <cite
+id="dsq-cite-16356"> http://drsircus.com/ <span
+id="dsq-author-user-16356">Claudia French</span> </cite></div><div
+id="dsq-comment-body-16356" class="dsq-comment-body"><div
+id="dsq-comment-message-16356" class="dsq-comment-message"><p>Thanks James,</p><p>We had already found most of this information also and its included in the second part of Dr. Sircus&#8217; series on Ebola.</p></div></div></li></ul></li><li
+class="comment odd alt thread-even depth-1" id="dsq-comment-16197"><div
+id="dsq-comment-header-16197" class="dsq-comment-header"> <cite
+id="dsq-cite-16197"> <span
+id="dsq-author-user-16197">lah</span> </cite></div><div
+id="dsq-comment-body-16197" class="dsq-comment-body"><div
+id="dsq-comment-message-16197" class="dsq-comment-message"><p>7LibertyForAll &#8211; I could not agree more.   Definitely a psy-op.  Theater for the sheep.  If you or I found ourselves half way around the world with a deadly disease, do you think the US govt. would put us on a plane and fly us home with armed guards and then put us in a hospital to care for us?   If you lost your husband to this disease, would you immediately go and appear on CNN?  Hardly. There is an agenda here.  This is a propaganda event.</p></div></div></li><li
+class="comment even thread-odd thread-alt depth-1" id="dsq-comment-16191"><div
+id="dsq-comment-header-16191" class="dsq-comment-header"> <cite
+id="dsq-cite-16191"> <span
+id="dsq-author-user-16191">Kfort1</span> </cite></div><div
+id="dsq-comment-body-16191" class="dsq-comment-body"><div
+id="dsq-comment-message-16191" class="dsq-comment-message"><p>Mega dosing vitamin C seems like a reasonable treatment, along with several other things that I&#8217;m sure Dr. Sircus will outline in his next article. My husband was afflicted with West Nile Virus last October and while in ICU was intubated because his lungs were failing.  He&#8217;d also picked up hospital acquired pneumonia and had a pulmonary embolism because clots had formed while he was laying there for several days. Once they ultimately decided to put in a trach and feeding tube at the 4 week mark we were able to start him on of liposomal Vit C through the feeding tube.  At that time they told me he&#8217;d be on the trach/vent for months (as many WNV) patients are, but it was only 18 days before his lungs were strong enough to be able to breath on his own and for him to be able to clear his own secretions.  Each of those 18 days he was receiving 24 grams of Vitamin C&#8230;.I don&#8217;t believe it was coincidental.  Vit C is a very effective tool when fighting viruses of all kinds and if Ebola depletes the body of Vit C it only makes sense that mega dosing it could save lives.</p></div></div><ul
+class="children"><li
+class="comment odd alt depth-2" id="dsq-comment-16312"><div
+id="dsq-comment-header-16312" class="dsq-comment-header"> <cite
+id="dsq-cite-16312"> <span
+id="dsq-author-user-16312">Mincing Rascal</span> </cite></div><div
+id="dsq-comment-body-16312" class="dsq-comment-body"><div
+id="dsq-comment-message-16312" class="dsq-comment-message"><p>Can regular people get this liposomal vitamin C?  Where can you buy it??</p></div></div><ul
+class="children"><li
+class="comment even depth-3" id="dsq-comment-16315"><div
+id="dsq-comment-header-16315" class="dsq-comment-header"> <cite
+id="dsq-cite-16315"> http://drsircus.com/ <span
+id="dsq-author-user-16315">Claudia French</span> </cite></div><div
+id="dsq-comment-body-16315" class="dsq-comment-body"><div
+id="dsq-comment-message-16315" class="dsq-comment-message"><p>This is the vitamin C that Dr. Sircus recommends for oral use.</p><p><a
+href="http://www.integratedhealth.com/hpdspec/ultimate-protector.html/" rel="nofollow" class="external external_icon" target="_blank">http://www.integratedhealth.com/hpdspec/ultimate-protector.html/</a></p><p>Claudia French<br
+/> IMVA</p></div></div><ul
+class="children"><li
+class="comment odd alt depth-4" id="dsq-comment-16318"><div
+id="dsq-comment-header-16318" class="dsq-comment-header"> <cite
+id="dsq-cite-16318"> <span
+id="dsq-author-user-16318">Mincing Rascal</span> </cite></div><div
+id="dsq-comment-body-16318" class="dsq-comment-body"><div
+id="dsq-comment-message-16318" class="dsq-comment-message"><p>Thank you!</p></div></div></li></ul></li><li
+class="comment even depth-3" id="dsq-comment-16559"><div
+id="dsq-comment-header-16559" class="dsq-comment-header"> <cite
+id="dsq-cite-16559"> <span
+id="dsq-author-user-16559">Shawn</span> </cite></div><div
+id="dsq-comment-body-16559" class="dsq-comment-body"><div
+id="dsq-comment-message-16559" class="dsq-comment-message"><p>Just google liposomal vitamin C ,you can also make it yourself</p></div></div></li></ul></li></ul></li><li
+class="comment odd alt thread-even depth-1" id="dsq-comment-16176"><div
+id="dsq-comment-header-16176" class="dsq-comment-header"> <cite
+id="dsq-cite-16176"> <span
+id="dsq-author-user-16176">7LibertyForAll</span> </cite></div><div
+id="dsq-comment-body-16176" class="dsq-comment-body"><div
+id="dsq-comment-message-16176" class="dsq-comment-message"><p>This outbreak is moving faster than our efforts to control it,” &#8220;Airline passengers are not being screened for ebola.&#8221;  &#8230;And yet, they&#8217;re bringing supposedly infected people to the USSA and France.  Hmmm, what&#8217;s wrong with this picture?</p><p>&#8220;Doctors at Emory are confident in their ability to isolate and not let one virus escape.&#8221;&#8211;Seriously?  Go into any hospital and one is almost guaranteed to come out with one infection or another.  S.E.R.I.O.U.S.L.Y????  Why are these criminals allowed to lie like this?  This is either a way for the psychopaths to infect the masses and REALLY cull the herd or this is just another false flag/psyop to terrify the sheeple.  Time will tell.</p></div></div></li></ul></div></div><script type="text/javascript">/*<![CDATA[*/var disqus_url='http://drsircus.com/medicine/ebola-catastrophic-pandemic';var disqus_identifier='14503 http://drsircus.com/?p=14503';var disqus_container_id='disqus_thread';var disqus_shortname='drsircus';var disqus_title="Ebola – Catastrophic Pandemic";var disqus_config_custom=window.disqus_config;var disqus_config=function(){this.language='';this.callbacks.onReady.push(function(){var script=document.createElement('script');script.async=true;script.src='?cf_action=sync_comments&post_id=14503';var firstScript=document.getElementsByTagName('script')[0];firstScript.parentNode.insertBefore(script,firstScript);});if(disqus_config_custom){disqus_config_custom.call(this);}};(function(){var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);})();/*]]>*/</script></div></div><div
+id="secondary" class="widget-area" role="complementary"><div
+class='sidebar_item sidebar_item-single-related-subcats'><h2 class="category-topic-header" style="font-size: 19px;">Popular Medical Categories</h2><div
+id="cat-topics"><div> <a
+class="cat-topic cat-topic-first" href="http://drsircus.com/medicine/magnesium/" title="View all posts filed under Magnesium"><span>#1 Magnesium</span></a></div><div> <a
+class="cat-topic cat-topic-middle" href="http://drsircus.com/medicine/sodium-bicarbonate-baking-soda/" title="View all posts filed under Sodium Bicarbonate"><span>#2 Sodium Bicarbonate (Baking Soda)</span></a></div><div> <a
+class="cat-topic cat-topic-middle" href="http://drsircus.com/medicine/cancer/" title="View all posts filed under Cancer"><span>#3 Cancer</span></a></div><div> <a
+class="cat-topic cat-topic-middle" href="http://drsircus.com/medicine/iodine/" title="View all posts filed under Iodine"><span>#4 Iodine</span></a></div><div> <a
+class="cat-topic cat-topic-last" href="http://drsircus.com/medicine/diabetes/" title="View all posts filed under Diabetes"><span>#5 Diabetes</span></a></div><div> <a
+class="more-topics" href="http://drsircus.com/medicine/" title="View all posts at DrSircus.com"><span>Click here to view all topics</span></a></div></div> <br
+class='clearBoth'/></div><div
+class='sidebar_item sidebar_item-newsletter-mailchimp-subscribe'><link
+href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css"><style type="text/css">#mc_embed_signup{background:#ededed;clear:left;font:14px Helvetica,Arial,sans-serif;padding-right:4px;padding-left:4px}#mc_embed_signup
+input.button{background-color:#fdbd4c}</style><div
+id="mc_embed_signup"><form
+action="//drsircus.us1.list-manage.com/subscribe/post?u=25b08cc8b5ebaf472984d04d0&amp;id=ea98c09673" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><h2>Join 20,000 others in my mailing list!</h2><div
+class="mc-field-group"> <label
+for="mce-EMAIL">Email Address </label> <input
+type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"></div><div
+class="mc-field-group input-group"> <strong>What do you prefer? (You can choose both) </strong><ul><li><input
+type="checkbox" value="2" name="group[5][2]" id="mce-group[5]-5-0"><label
+for="mce-group[5]-5-0">A Weekly Compilation</label></li><li><input
+type="checkbox" value="4" name="group[5][4]" id="mce-group[5]-5-1"><label
+for="mce-group[5]-5-1">As Soon as Posted on The Website</label></li></ul></div><div
+id="mce-responses" class="clear"><div
+class="response" id="mce-error-response" style="display:none"></div><div
+class="response" id="mce-success-response" style="display:none"></div></div><div
+style="position: absolute; left: -5000px;"><input
+type="text" name="b_25b08cc8b5ebaf472984d04d0_ea98c09673" tabindex="-1" value=""></div><div
+class="clear"><input
+type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></form></div></div><div
+class='sidebar_item sidebar_item-newsletter-rss-subscribe'><h2>Or Subscribe to Our RSS</h2><a
+href="http://feeds.feedburner.com/DrSircus"><img
+src="http://feeds.feedburner.com/~fc/DrSircus?bg=99CCFF&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a></div><div
+class='sidebar_item sidebar_item-facebook'></div><div
+class='sidebar_item sidebar_item-my-books'> <a
+href="/books"><img
+src="http://cdn1.drsircus.com/images/banners/dr-sircus-ebooks.jpg" alt="All of Dr. Sircus Ebooks" width="302" height="191"></a> <br
+class='clearBoth'/></div><div
+class='sidebar_item sidebar_item-product-endorsements'> <a
+href="/medicine/treatments-and-products/"><img
+class="styled-image" src="http://cdn1.drsircus.com/images/imva_product_endorsements.jpg" width="302" height="137"/></a> <br
+class='clearBoth'/></div><div
+class='sidebar_item sidebar_item-consultations'> <a
+href="/consultations"><img
+src='http://cdn3.drsircus.com/wp-content/uploads/2014/07/consultations-vid.png' width='300' height='170' /> For more Info about Consultations</a> <br
+class='clearBoth'/></div><div
+class='sidebar_item sidebar_item-divider'><div
+class='secondary_divider clearBoth'></div></div><div
+class='sidebar_item sidebar_item-top-category-articles'><h2 class='category-topic-header' style='color:#444'>Popular Medicine Articles</h2><ul
+class="wpp-list"><li><a
+href=http://drsircus.com/medicine/sodium-bicarbonate-baking-soda/healing-the-kidneys-with-sodium-bicarbonate class=wpp-post-title>Healing the Kidneys with Sodium Bicarbonate (Baking Soda) <span
+class=wpp-excerpt></span></a></li><li><a
+href=http://drsircus.com/medicine/magnesium/warnings-contraindications class=wpp-post-title>Magnesium Warnings and Contraindications <span
+class=wpp-excerpt></span></a></li><li><a
+href=http://drsircus.com/medicine/magnesium/magnesium-deficiency-symptoms-diagnosis class=wpp-post-title>Magnesium Deficiency Symptoms and Diagnosis <span
+class=wpp-excerpt></span></a></li><li><a
+href=http://drsircus.com/medicine/sodium-bicarbonate-baking-soda/side-effects-contraindications class=wpp-post-title>Sodium Bicarbonate Side Effects and Contraindications <span
+class=wpp-excerpt></span></a></li><li><a
+href=http://drsircus.com/medicine/magnesium/uses-of-magnesium-oil class=wpp-post-title>Uses of Magnesium Oil <span
+class=wpp-excerpt></span></a></li><li><a
+href=http://drsircus.com/medicine/treatments-and-products class=wpp-post-title>Treatments and Products <span
+class=wpp-excerpt></span></a></li><li><a
+href=http://drsircus.com/medicine/sodium-bicarbonate-baking-soda/uses-in-daily-health class=wpp-post-title>Baking Soda Uses in Daily Health <span
+class=wpp-excerpt></span></a></li><li><a
+href=http://drsircus.com/medicine/magnesium/magnesium-chloride-benefits class=wpp-post-title>Magnesium Chloride Benefits <span
+class=wpp-excerpt></span></a></li></ul></div></div><div
+class="clearBoth" style="height:0px"></div></div><footer
+id="colophon" role="contentinfo"><div
+id="footer_main_menu" class="footer_menu_container"><h2 class="light">About</h2><div
+class="footer_menu"><div
+class="menu-footer-menu-container"><ul
+id="menu-footer-menu" class="menu"><li
+id="menu-item-14475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14475"><a
+href="http://drsircus.com/books/">Books</a></li><li
+id="menu-item-14370" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14370"><a
+href="http://drsircus.com/about-dr-sircus-treatment-method/">About Dr Sircus</a></li><li
+id="menu-item-14371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14371"><a
+href="http://drsircus.com/the-team/">The Team</a></li><li
+id="menu-item-14372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14372"><a
+href="http://drsircus.com/international-medical-veritas-associatio/">The IMVA</a></li><li
+id="menu-item-14373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14373"><a
+href="http://drsircus.com/consultations/">Consultations</a></li><li
+id="menu-item-14374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14374"><a
+href="http://drsircus.com/support-faq/">Support / FAQ</a></li></ul></div></div></div><div
+id="footer_categories_menu" class="footer_menu_container"><h2 class="light">Categories</h2><div
+class="footer_menu"><div
+class="menu-categories-for-footer-container"><ul
+id="menu-categories-for-footer" class="menu"><li
+id="menu-item-12153" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-12153"><a
+href="http://drsircus.com/medicine/">Medicine</a><ul
+class="sub-menu"><li
+id="menu-item-14471" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-14471"><a
+href="http://drsircus.com/medicine/magnesium/">Magnesium</a></li><li
+id="menu-item-14472" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-14472"><a
+href="http://drsircus.com/medicine/sodium-bicarbonate-baking-soda/">Sodium Bicarbonate (Baking Soda)</a></li><li
+id="menu-item-14470" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-14470"><a
+href="http://drsircus.com/medicine/cancer/">Cancer</a></li></ul></li><li
+id="menu-item-14473" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-14473"><a
+href="http://drsircus.com/world-news/">World News</a></li><li
+id="menu-item-14474" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-14474"><a
+href="http://drsircus.com/medical-news-comentaries/">Medical News Comentaries</a></li></ul></div></div></div><div
+id="footer_social_links" class="footer_menu_container"><h2 class="light">Find Me In</h2><div
+class="footer_menu"><div
+class='footer_social_link'><div
+class='footer_social_link_icon_text'><a
+href="https://www.facebook.com/drsircus"><span
+class="fa fa-facebook-square" style="font-size:18px;"></span> Facebook</a></div></div><div
+class='footer_social_link'><div
+class='footer_social_link_icon_text'><a
+href="https://twitter.com/drsircus"><span
+class="fa fa-twitter" style="font-size:18px;"></span> Twitter</a></div></div><div
+class='footer_social_link'><div
+class='footer_social_link_icon_text'><a
+href="http://www.youtube.com/user/imvapublications"><span
+class="fa fa-youtube-play" style="font-size:18px;"></span> YouTube</a></div></div><div
+class='footer_social_link'><div
+class='footer_social_link_icon_text'><a
+href="https://plus.google.com/101483942936391378661?rel=author"><span
+class="fa fa fa-google-plus" style="font-size:18px;"></span> Google +</a></div></div><div
+class='footer_menu'></div></div></div><div
+id="footer_login_button" class="footer_menu_container"><a
+href='/login?redirect_to=/books' id='log-in-button' class='styled-button blue' style='margin-bottom: 20px  !important;'>Log In</a><a
+href='/affiliates' id='log-in-button' class='styled-button blue' style='margin-bottom: 20px  !important;'>Affiliates Area</a><div
+align="center"></div></div><div
+id="footer_social_stats"></div><div
+id="footer_disclaimer" style='clear:both;' align="justify">LEGAL NOTICE: The Author specifically invokes the First Amendment rights of freedom of speech and of the press without prejudice. The information you will receive with our consultations is for informational purposes only under the rights guaranteed by the First Amendment of the Constitution for the United States of America, and should not in any way be used as a substitute for the advice of a physician or other licensed health care practitioner. The statements contained on my sites and in my books have not been evaluated by the FDA. The products discussed are not intended to diagnose, cure, prevent or treat any disease but are proven useful for health and life extension. We always recommend when and wherever possible that licensed local healthcare professionals be consulted.</div></footer></div><div
+id="loader">Processing.<br/><br/><br/><br/><br/>Please wait.</div><div
+id="loadercover"></div><div
+id="popup"><div
+id="popupmsg"></div><center><div
+class='styled-button blue' id="popupconfirm">OK</div></center></div><div
+id="popupcover"></div><script type="text/javascript">/*<![CDATA[*/var disqus_shortname='drsircus';(function(){var nodes=document.getElementsByTagName('span');for(var i=0,url;i<nodes.length;i++){if(nodes[i].className.indexOf('dsq-postid')!=-1){nodes[i].parentNode.setAttribute('data-disqus-identifier',nodes[i].getAttribute('data-dsqidentifier'));url=nodes[i].parentNode.href.split('#',1);if(url.length==1){url=url[0];}
+else{url=url[1];}
+nodes[i].parentNode.href=url+'#disqus_thread';}}
+var s=document.createElement('script');s.async=true;s.type='text/javascript';s.src='//'+disqus_shortname+'.disqus.com/count.js';(document.getElementsByTagName('HEAD')[0]||document.getElementsByTagName('BODY')[0]).appendChild(s);}());/*]]>*/</script><script async type="text/javascript">setTimeout(function(){var a=document.createElement("script");var b=document.getElementsByTagName('script')[0];a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/7757.js";a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)},1);</script><script type="text/javascript">jQuery.noConflict();jQuery(document).ready(function($){$(function(){if($('.t-and-c').length){}else{return;}
+$('.t_and_c_error').hide();$(".t-and-c").click(function(){if($(".t-and-c").is(':checked')){$.cookie("eStore_submit_payment","true",{path:'/'});$('.t_and_c_error').hide();}
+else{$.cookie("eStore_submit_payment","false",{path:'/'});}});$(".eStore_paypal_checkout_button").click(function(e){if(!$(".t-and-c").is(':checked')){$('.t_and_c_error').show();e.preventDefault();}});$(".eStore_buy_now_button").click(function(e){if(!$(".t-and-c").is(':checked')){$('.t_and_c_error').show();e.preventDefault();}});$(".eStore_subscribe_button").click(function(e){if(!$(".t-and-c").is(':checked')){$('.t_and_c_error').show();e.preventDefault();}});$(".free_download_submit").click(function(e){if(!$(".t-and-c").is(':checked')){$('.t_and_c_error').show();e.preventDefault();}});});});</script><script type="text/javascript">jQuery.noConflict();jQuery(document).ready(function($){$(function(){$('.shipping_var_changed').hide();$('.shipping_variation').change(function(){$('.shipping_var_changed_default').hide();$('.shipping_var_changed').show();});});});</script><script type="text/javascript">jQuery.noConflict();jQuery(document).ready(function($){$(function(){var eStore_cart_item_qty=$('.eStore_cart_item_qty');eStore_cart_item_qty.keypress(function(){$('.eStore_qty_change_pinfo').show();});});});</script><script type='text/javascript' src='http://cdn1.drsircus.com/wp-includes/js/comment-reply.min.js'></script><script type="text/javascript">function w3tc_load_js(u){var d=document,p=d.getElementsByTagName('HEAD')[0],c=d.createElement('script');c.type='text/javascript';c.src=u;p.appendChild(c);}</script><script type="text/javascript">w3tc_load_js('http://cdn3.drsircus.com/wp-content/cache/minify/000000/7dd5e/default.include-footer.0fb7b5.js');</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-3.newrelic.com","licenseKey":"bf3c88b8dd","applicationID":"4322583","transactionName":"ZFRRYUdZXUEAWkYNDF0eclZBUVxcTkpbCgRfVA==","queueTime":0,"applicationTime":718,"atts":"SBNSFw9DTk8=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script></body></html>
+
+<!-- W3 Total Cache: Minify debug info:
+Engine:             apc
+Theme:              7dd5e
+Template:           single
+
+Replaced CSS files:
+1. wp-content/plugins/yet-another-related-posts-plugin/style/widget.css
+2. wp-content/plugins/wp-customer-reviews/wp-customer-reviews.css
+3. wp-content/plugins/sem-external-links/sem-external-links.css
+4. wp-content/plugins/eStore-extra-shortcodes/eStore_extra_shortcode_css.css
+5. wp-content/plugins/wp-affiliate-platform/affiliate_platform_style.css
+6. wp-content/plugins/wp-cart-for-digital-products/wp_eStore_style.css
+7. wp-content/plugins/wp-cart-for-digital-products/wp_eStore_custom_style.css
+8. wp-content/themes/imva/wpp.css
+
+Replaced JavaScript files:
+1. wp-includes/js/jquery/jquery.js
+2. wp-content/plugins/wp-cart-for-digital-products/lib/jquery.external.lib.js
+3. wp-content/plugins/wp-cart-for-digital-products/lib/jquery.lightbox-0.5.pack.js
+4. wp-content/themes/imva/js/jquery.cookie.js
+5. wp-includes/js/jquery/jquery.form.min.js
+6. wp-includes/js/jquery/ui/jquery.ui.core.min.js
+7. wp-content/themes/imva/js/html5.js
+8. wp-content/plugins/wp-customer-reviews/wp-customer-reviews.js
+9. wp-content/themes/imva/js/mobile.js
+10. wp-content/plugins/wp-cart-for-digital-products/lib/eStore_read_form.js
+-->
+
+<!-- W3 Total Cache: CDN debug info:
+Engine:             maxcdn
+
+Replaced URLs:
+http://drsircus.com/wp-content/uploads/2014/08/ebola2-snippet.jpg => http://cdn.drsircus.com/wp-content/uploads/2014/08/ebola2-snippet.jpg
+http://drsircus.com/wp-content/uploads/2014/08/ebola.jpg => http://cdn3.drsircus.com/wp-content/uploads/2014/08/ebola.jpg
+http://drsircus.com/wp-content/uploads/2014/08/ebola2.jpg => http://cdn1.drsircus.com/wp-content/uploads/2014/08/ebola2.jpg
+http://drsircus.com/wp-content/uploads/2014/06/book-cover-medium-w-ac.png => http://cdn3.drsircus.com/wp-content/uploads/2014/06/book-cover-medium-w-ac.png
+http://drsircus.com/wp-content/uploads/2014/07/consultations-vid.png => http://cdn3.drsircus.com/wp-content/uploads/2014/07/consultations-vid.png
+http://drsircus.com/wp-includes/js/jquery/jquery-migrate.min.js => http://cdn1.drsircus.com/wp-includes/js/jquery/jquery-migrate.min.js
+http://drsircus.com/wp-includes/wlwmanifest.xml => http://cdn1.drsircus.com/wp-includes/wlwmanifest.xml
+http://drsircus.com/wp-includes/js/comment-reply.min.js => http://cdn1.drsircus.com/wp-includes/js/comment-reply.min.js
+http://drsircus.com/wp-content/themes/imva/style.css => http://cdn2.drsircus.com/wp-content/themes/imva/style.css
+http://drsircus.com/wp-content/themes/imva/js/event-tracker.js => http://cdn1.drsircus.com/wp-content/themes/imva/js/event-tracker.js
+http://drsircus.com/favicon.ico => http://cdn.drsircus.com/favicon.ico
+http://drsircus.com/images/imva_dr_sircus_photo.jpg => http://cdn1.drsircus.com/images/imva_dr_sircus_photo.jpg
+http://drsircus.com/images/imva_header_social_icon_facebook.png => http://cdn3.drsircus.com/images/imva_header_social_icon_facebook.png
+http://drsircus.com/images/imva_header_social_icon_twitter.png => http://cdn3.drsircus.com/images/imva_header_social_icon_twitter.png
+http://drsircus.com/images/imva_header_social_icon_youtube.png => http://cdn1.drsircus.com/images/imva_header_social_icon_youtube.png
+http://drsircus.com/images/banners/dr-sircus-ebooks.jpg => http://cdn1.drsircus.com/images/banners/dr-sircus-ebooks.jpg
+http://drsircus.com/images/imva_product_endorsements.jpg => http://cdn1.drsircus.com/images/imva_product_endorsements.jpg
+http://drsircus.com/wp-content/cache/minify/000000/7dd5e/default.include.b9e182.css => http://cdn2.drsircus.com/wp-content/cache/minify/000000/7dd5e/default.include.b9e182.css
+http://drsircus.com/wp-content/cache/minify/000000/7dd5e/default.include.f1c544.js => http://cdn1.drsircus.com/wp-content/cache/minify/000000/7dd5e/default.include.f1c544.js
+http://drsircus.com/wp-content/cache/minify/000000/7dd5e/default.include-footer.0fb7b5.js => http://cdn3.drsircus.com/wp-content/cache/minify/000000/7dd5e/default.include-footer.0fb7b5.js
+-->
+
+<!-- W3 Total Cache: Page cache debug info:
+Engine:             apc
+Cache key:          7daac3213a58a5b49247dfbeec3eefa6
+Caching:            enabled
+Status:             not cached
+Creation Time:      0.782s
+Header info:
+Set-Cookie:          PHPSESSID=5b8ee8115a4385274b3b32393a770944; path=/
+X-UA-Compatible:     IE=edge,chrome=1
+Last-Modified:       Fri, 30 Jan 2015 23:53:26 GMT
+Expires:             Sat, 31 Jan 2015 00:53:26 GMT
+Pragma:              public
+Cache-Control:       max-age=3600, public, must-revalidate, proxy-revalidate
+Etag:                06c294eaeed33cf7ecdb03d8faf35aaa
+X-Powered-By:        W3 Total Cache/0.9.4.1
+X-Pingback:           http://drsircus.com/xmlrpc.php
+Content-Type:         text/html; charset=UTF-8
+-->

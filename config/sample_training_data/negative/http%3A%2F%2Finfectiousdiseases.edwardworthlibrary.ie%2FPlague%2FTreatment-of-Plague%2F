@@ -1,0 +1,460 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>Treatment of Plague | </title>
+<meta name="viewport" content="width=device-width">
+
+<link rel='stylesheet' id='pc-color-scheme-stylesheet-css'  href='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/includes/css/color_schemes/default.css?ver=4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='pc-theme-stylesheet-css'  href='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux-child/style.css?ver=4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-stylesheet-css'  href='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/api/js/lightboxes/fancybox-1.3.4/jquery.fancybox-1.3.4.css?ver=4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/jetpack/css/jetpack.css?ver=3.3' type='text/css' media='all' />
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/dropdown-menu-widget/scripts/include.js?ver=4.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/api/js/html5/modernizr/modernizr.custom.97935.js?ver=4.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/api/js/html5/modernizr/pc_modernizr_custom.js?ver=4.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/api/js/misc/superfish-1.4.8/js/superfish.js?ver=4.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/includes/js/pc_superfish_init.js?ver=4.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/api/js/lightboxes/fancybox-1.3.4/jquery.fancybox-1.3.4.pack.js?ver=4.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/api/js/presscoders/custom-fancybox.js?ver=4.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/api/js/lightboxes/fancybox-1.3.4/jquery.easing-1.3.pack.js?ver=4.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/api/js/lightboxes/fancybox-1.3.4/jquery.mousewheel-3.0.4.pack.js?ver=4.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/api/js/misc/jquery.fitvids.js?ver=4.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/api/js/presscoders/custom-fitvids.js?ver=4.1'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/api/js/sliders/flexslider/jquery.flexslider2.1beta.js?ver=4.1'></script>
+<link rel='canonical' href='http://infectiousdiseases.edwardworthlibrary.ie/plague/treatment-of-plague/' />
+<link rel='shortlink' href='http://infectiousdiseases.edwardworthlibrary.ie/?p=52' />
+<div style="-moz-border-radius: 10px; border-radius: 10px; border:1px solid #999999; position: fixed; z-index:99999; width: 70px; background-color:#FFFFFF; display:block; margin: 50%; right: 500px; margin-top: 50px;">
+<div style="width:68px;margin: auto; padding:0 0 5px 0; text-align:center;">
+<span style="padding-top:5px; display:block;"><script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script><g:plusone size='tall'></g:plusone></span><span style="padding-top:5px; display:block;"><a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical"></a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span><span style="padding-top:5px; display:block;"><div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-send="false" data-layout="box_count" data-width="55" data-show-faces="false"></div></span><span style="padding-top:5px; display:block;"><script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-counter="top"></script></span><span style="padding-top:5px; display:block;"><br /><a href="http://pinterest.com/pin/create/button/?url=http://infectiousdiseases.edwardworthlibrary.ie/plague/treatment-of-plague/&media=&description=Treatment of Plague" class="pin-it-button" count-layout="vertical">Pin It</a><script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script></span></div>
+</div>
+<link rel="shortcut icon" href="http://192.185.175.93/~edwardwo/infectiousdiseases/wp-content/uploads/2014/12/favicon-3.ico" />
+<!-- Lux theme customizer color styles -->
+<style type="text/css">
+
+</style>
+
+
+<!-- Dropdown Menu Widget Styles by shailan (http://shailan.com) v1.9.4 on wp4.1 -->
+<link rel="stylesheet" href="http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/dropdown-menu-widget/css/shailan-dropdown.min.css" type="text/css" />
+<link rel="stylesheet" href="http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/dropdown-menu-widget/themes/color-scheme.css" type="text/css" />
+<style type="text/css" media="all">
+	ul.dropdown li a { font-size:13px; }
+	ul.dropdown { white-space: nowrap; }
+	/* Selected overlay: none */	/* Clear background images */
+	.shailan-dropdown-menu .dropdown-horizontal-container, ul.dropdown li, ul.dropdown li.hover, ul.dropdown li:hover, ul.dropdown li.hover a, ul.dropdown li:hover a { background-image:none; }		
+		
+	.shailan-dropdown-menu .dropdown-horizontal-container, ul.dropdown li{ background-color:#; }
+	ul.dropdown a,
+	ul.dropdown a:link,
+	ul.dropdown a:visited,
+	ul.dropdown li { color: #DBD5BB; }
+	ul.dropdown a:hover,
+	ul.dropdown li:hover { color: #666602; }
+	ul.dropdown a:active	{ color: #666602; }
+			
+	ul.dropdown li.hover a, ul.dropdown li:hover a{ background-color: #DBD5BB; }
+	ul.dropdown li.hover ul li, ul.dropdown li:hover ul li{ background-color: #;
+		color: #DBD5BB; }
+			
+	ul.dropdown li.hover ul li.hover, ul.dropdown li:hover ul li:hover { background-image: none; }
+	ul.dropdown li.hover a:hover, ul.dropdown li:hover a:hover { background-color: #DBD5BB; }
+	
+	ul.dropdown ul{ background-image:none; background-color:#; border:1px solid #; }
+	ul.dropdown-vertical li { border-bottom:1px solid #DBD5BB; }
+	
+ul.dropdown li.parent>a{
+	padding-right:25px;
+}
+ul.dropdown li.parent>a:after{ 
+	content:""; position:absolute; top: 45%; right:6px;width:0;height:0; 
+	border-top:4px solid #DBD5BB ;border-right:4px solid transparent;border-left:4px solid transparent }
+ul.dropdown li.parent:hover>a:after{
+	content:"";position:absolute; top: 45%; right:6px; width:0; height:0;
+	border-top:4px solid #DBD5BB ;border-right:4px solid transparent;border-left:4px solid transparent }
+ul.dropdown li li.parent>a:after{
+	content:"";position:absolute;top: 40%; right:5px;width:0;height:0;
+	border-left:4px solid #DBD5BB ;border-top:4px solid transparent;border-bottom:4px solid transparent }
+ul.dropdown li li.parent:hover>a:after{
+	content:"";position:absolute;top: 40%; right:5px;width:0;height:0;
+	border-left:4px solid #DBD5BB ;border-top:4px solid transparent;border-bottom:4px solid transparent }
+
+ul.dropdown ul li {background:#666602;color:#DBD5BB !Important }
+ul.dropdown ul li  a:hover{color:#666602 !Important;background:#DBD5BB !Important;}
+ul.dropdown a {
+    margin: 2px;
+    height: auto;
+    border-radius: 3px;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);text-align: left;
+}
+ul.sub-menu li a{background:#666602;color:#DBD5BB !Important }
+
+ul.dropdown-vertical.dropdown-align-left ul {background:#666602;}
+</style>
+<!-- /Dropdown Menu Widget Styles -->
+
+ 
+<style type="text/css"></style>
+
+<style type="text/css">
+.synved-social-resolution-single {
+display: inline-block;
+}
+.synved-social-resolution-normal {
+display: inline-block;
+}
+.synved-social-resolution-hidef {
+display: none;
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx),
+only screen and (min-resolution: 192dpi) {
+	.synved-social-resolution-normal {
+	display: none;
+	}
+	.synved-social-resolution-hidef {
+	display: inline-block;
+	}
+}
+</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url('http://192.185.175.93/~edwardwo/infectiousdiseases/wp-content/uploads/2014/12/bg1.jpg'); background-repeat: repeat; background-position: top center; background-attachment: scroll; }
+</style>
+<!--[if IE 8]>
+<style type="text/css">
+.comment-body, li.pingback, .quote, .avatar, .defaultbtn, .button, .btn, #searchsubmit, #submit, .submit, .post-edit-link, .more-link, input[type="submit"], input[type="text"], textarea, ol.flex-control-nav li a, ol.flex-control-nav li a.active, .flex-direction-nav li a, .post-date, nav.secondary-menu, nav ul ul {
+behavior: url(http://infectiousdiseases.edwardworthlibrary.ie/wp-content/themes/lux/includes/js/PIE.htc);
+}
+</style>
+<![endif]-->
+
+</head>
+
+<body class="page page-id-52 page-child parent-pageid-39 page-template-default custom-background lux">
+
+<div id="body-container">
+
+	
+	<div id="header-container">
+		<header class="cf">
+		
+					
+			<div id="logo-wrap">
+							<div id="site-logo"><a href="http://infectiousdiseases.edwardworthlibrary.ie" /><img src="http://192.185.175.93/~edwardwo/infectiousdiseases/wp-content/uploads/2014/12/edward-worth.png" /></a></div>
+									<div id="site-description">Just another WordPress site</div>
+					
+			</div><!-- #logo-wrap -->
+			
+					<div id="header-widget-area" class="widget-area" role="complementary">
+			<div id="text-2" class="widget widget_text">			<div class="textwidget"><img src="http://192.185.175.93/~edwardwo/infectiousdiseases/wp-content/uploads/2014/12/banner2.png"  /></div>
+		</div>		</div><!-- #header-widget-area -->
+
+		 	  <nav class="primary-menu cf">
+		 	     <div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-12"><a href="http://infectiousdiseases.edwardworthlibrary.ie">Home</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-41"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/">Plague</a>
+<ul class="sub-menu">
+	<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/history/">History</a></li>
+	<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/marseilles-case-study/">Marseilles Case Study</a></li>
+	<li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/causes/">Causes</a></li>
+	<li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/symptoms/">Symptoms</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-52 current_page_item menu-item-111"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/treatment-of-plague/">Treatment of Plague</a></li>
+</ul>
+</li>
+<li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-55"><a href="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/">Smallpox</a>
+<ul class="sub-menu">
+	<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href=age menu-item-has-children menu-item-55"><a href="http"http://infectiousdiseases.edwardworthlibrary.ie/smallpox/history/">History</a></li>
+	<li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a href="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/boston-case-study/">Boston Case Study</a></li>
+	<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/causes/">Causes</a></li>
+	<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a href="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/symptoms/">Symptoms</a></li>
+	<li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118"><a href="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/treatments/">Treatments</a></li>
+</ul>
+</li>
+<li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-69"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/">Syphilis</a>
+<ul class="sub-menu">
+	<li id="menu-item-120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/history/">History</a></li>
+	<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/syphilis-case-study/">Syphilis Case Study</a></li>
+	<li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/causes/">Causes</a></li>
+	<li id="menu-item-121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/symptoms/">Symptoms</a></li>
+	<li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/treatment/">Treatment</a></li>
+</ul>
+</li>
+<li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-82"><a href="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/">Tuberculosis</a>
+<ul class="sub-menu">
+	<li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/causes/">Causes</a></li>
+	<li id="menu-item-126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126"><a href="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/symptoms/">Symptoms</a></li>
+	<li id="menu-item-125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-125"><a href="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/historical-case-study/">Historical Case Study</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/treatments/">Treatments</a></li>
+</ul>
+</li>
+<li id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-93"><a href="http://infectiousdiseases.edwardworthlibrary.ie/fevers/">Fevers</a>
+<ul class="sub-menu">
+	<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="http://infectiousdiseases.edwardworthlibrary.ie/fevers/history/">History</a></li>
+	<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="http://infectiousdiseases.edwardworthlibrary.ie/fevers/causes/">Causes</a></li>
+	<li id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114"><a href="http://infectiousdiseases.edwardworthlibrary.ie/fevers/treatments/">Treatments</a></li>
+</ul>
+</li>
+<li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="http://infectiousdiseases.edwardworthlibrary.ie/theory-of-contagion/">Theory of Contagion</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="http://infectiousdiseases.edwardworthlibrary.ie/contact-us/">Contact Us</a></li>
+<li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105"><a href="http://infectiousdiseases.edwardworthlibrary.ie/edward-worth-library/">Edward Worth Library</a></li>
+</ul></div>		 	  </nav>
+
+			  <nav class="primary-menu-dropdown">
+				 <select onchange="if (this.value) window.location.href=this.value"><option selected="selected">-- Main Menu --</option><option value="http://infectiousdiseases.edwardworthlibrary.ie">Home</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/plague/">Plague</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/plague/history/">History</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/plague/marseilles-case-study/">Marseilles Case Study</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/plague/causes/">Causes</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/plague/symptoms/">Symptoms</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/plague/treatment-of-planfectiousdiseases.edwardworthlibrary.ie/plague/causes/">Causes</option><option value="httpgue/">Treatment of Plague</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/">Smallpox</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/history/">History</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/boston-case-study/">Boston Case Study</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/causes/">Causes</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/symptoms/">Symptoms</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/treatments/">Treatments</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/">Syphilis</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/history/">History</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/syphilis-case-study/">Syphilis Case Study</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/causes/">Causes</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/symptoms/">Symptoms</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/treatment/">Treatment</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/">Tuberculosis</option><option value="http://infectiouoms/">Symptoms</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/treatment/">Treatment</option><option value="http://infsdiseases.edwardworthlibrary.ie/tuberculosis/causes/">Causes</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/symptoms/">Symptoms</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/historical-case-study/">Historical Case Study</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/treatments/">Treatments</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/fevers/">Fevers</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/fevers/history/">History</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/fevers/causes/">Causes</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/fevers/treatments/">Treatments</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/theory-of-contagion/">Theory of Contagion</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/contact-us/">Contact Us</option><option value="http://infectiousdiseases.edwardworthlibrary.ie/edward-worth-library/">Edward Worth Library</option></select>		 	  </nav>
+
+		 </header>
+
+	</div><!-- #header-container -->
+
+	<div id="container" class="singular-page">
+
+		
+		<div id="contentwrap" class="two-col-l">
+
+			
+			<div class="content right">
+
+				
+				
+
+		
+		<div id="post-52" class="post-52 page type-page status-publish hentry singular-page">
+		
+									<h1 style="display:none;" class="page-title entry-title">Treatment of Plague</h1>								
+				<a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook nofancybox" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Finfectiousdiseases.edwardworthlibrary.ie%2Fplague%2Ftreatment-of-plague%2F&#038;t=Treatment%20of%20Plague&#038;s=100&#038;p&#091;url&#093;=http%3A%2F%2Finfectiousdiseases.edwardworthlibrary.ie%2Fplague%2Ftreatment-of-plague%2F&#038;p&#091;images&#093;&#091;0&#093;=http%3A%2F%2F192.185.175.93%2F%7Eedwardwo%2Finfectiousdiseases%2Fwp-content%2Fuploads%2F2014%2F12%2FGastaldi-tp.jpg&#038;p&#091;title&#093;=Treatment%20of%20Plague" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter nofancybox" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Finfectiousdiseases.edwardworthlibrary.ie%2Fplague%2Ftreatment-of-plague%2F&#038;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png" /></a><a class="synved-social-credit" target="_blank" rel="nofollow" title="WordPress Social Media Feather" href="http://synved.com/wordpress-social-media-feather/" style="color:#444; text-decoration:none; font-size:8px; margin-left:5px;vertical-align:10px;white-space:nowrap;"><span>by </span><img style="display: inline;margin:0;padding:0;width:16px;height:16px;" width="16" height="16" alt="feather" src="http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/social-media-feather/synved-social/image/icon.png" /></a><h1>Treatment of Plague*</h1>
+<p>Early modern treatment of the plague focussed on a dual approach: prevention and cure. The former method was undoubtedly the most effective, a fact readily acknowledged by contemporary physicians. Worth’s collection contains a number of works specifically focussing on prevention methods, an issue of contemporary relevance given the outbreak of the plague epidemic at Marseilles during his lifetime.</p>
+<address style="padding: 0 30px;">‘When the Disease had spread itself among both Rich and Poor, and raged in the most violent manner, the Pope appointed Cardinal Gastaldi Commissary General of Health, giving him for a time the Power of the whole Sacred College, with full Commission to do whatever he should judge necessary. Hereupon he gave strict Order, that no sick or suspected Persons should stay in their own Houses. The Sick he removed, upon the first Notice, to a Lazaretto in the Island of the Tyber; and all who were in the same Houses with them to other Hospitals just without the City, in order to be sent to the Island, if they should fall sick. At the same time he took diligent care to send away their Goods to an airy Place to be cleansed. He executed these Regulations with so much Strictness, that no Persons of the highest Quality were exempted from this Treatment, which occasioned at first great Complaints against the Cardinal for his Severity; but soon after he had general Thanks: For in two Months time, by this means, he entirely cleared the City of the Pestilence, which had continued in it almost two Years. And it was particularly observed, that whereas before, when once the Disease had got into a House, it seldom ended without seizing the whole Family; in this Management scarce five out of an hundred of the sound Persons removed were infected.’</address>
+<p>This quotation, from Worth’s copy of Richard Mead’s,<em> A short discourse concerning pestilential contagion</em> (London, 1722), who in turn is quoting from <em>Cardinal Geronimo Gastaldi’s Tractatus de auertenda et profliganda peste</em> (Bologna, 1684) (a work also collected by Worth), emphases the vital importance of quarantine in the fight against plague. Gastaldi’s policy of strict segregation during the 1656 plague in Rome was the model which Mead later advocated to the British Government when faced with the threat of plague in 1720. This illustration, from Worth’s 1684 edition of Gastaldi’s seminal work on methods of avoiding of the plague, illustrates the principal method of plague prevention in early modern Europe: separation of the sick and quarantine.</p>
+<p style="text-align: center;"><img class="alignnone size-full wp-image-144" src="http://192.185.175.93/~edwardwo/infectiousdiseases/wp-content/uploads/2014/12/Gastaldi-tp.jpg" alt="Gastaldi-tp" width="500" height="760" /></p>
+<p style="text-align: center;">Geronimo Gastaldi, <em>Tractatus de auertenda et profliganda peste</em> (Bologna, 1684), title page.</p>
+<p>Mead’s work, which by 1722 had run to eight editions, concentrated on prevention: both preventing the Marseilles epidemic from arriving in England and putting forth policies to ensure that if it did manage to infect port towns it would be prevented in spreading inland. As he makes clear, it was a position paper and it acted as the basis for the ensuing Georgian Quarantine Acts, legislation which was politically very contentious but ultimately effective in ensuring that Britain escaped the last great European plague. Worth’s copy of the eighth edition includes a bookmark scrap at the section dealing with what to do should the plague enter the country – surely a sign that plague, for Worth, was no academic topic but one of immediate relevance.</p>
+<h2 style="text-align: center;">Curing the Plague: Seventeenth and<br />
+Eighteenth-Century Remedies</h2>
+<p>If Mead emphasised the role of the state in prevention of plague, other physicians focussed on what individuals might do when faced with a possible epidemic. They were keen to point out that there were other methods by which the healthy might avoid falling sick with the plague. Older accounts focused on the health regime of the individual in the hope that a strong constitution might withstand the dreaded disease: in particular, sixteenth-century authors condemned excess in all aspects of life, and were keen to emphasis the idea of moderation in all things which had marked medical writing since Hippocrates. Others pointed to specific precautions which might be undertaken to minimise infection, but undoubtedly the principal focus of much of the medical literature dealing with plague lay in the realm of specific treatments for plague once the disease had been caught. Worth’s collection makes it readily apparent that in this genre, old remedies and new cures might stand side-by-side: The unknown physician from Bordeaux, author of Worth’s copy of<em> Lettres sur la peste, ecrites a un medicin de Bordeaux (Bordeaux, 1721),</em> who wrote in response to the outbreak of plague in Marseilles in 1720, was certainly as anxious to recount older remedies as the newest cures.</p>
+<p>The detailed listings in such works are encapsulated in Paul Barbette’s ‘Medicaments against the Plague’, which may be found in Worth’s copy of<em> Thesaurus chirurgiæ: the chirurgical &amp; anatomical vvorks of Paul Barbette, M.D., practitioner at Amsterdam (London, 1676):</em></p>
+<ol>
+<li style="margin-left: 40px;">Roots of Zeodary, Butter-Bur, Angelica, Ditamny, Galangal, Vipers-grass, Gentian, Masterwort, Lovage, Burnet, Orrise Florentine, and ours, China Sarsaparilla.</li>
+<li style="margin-left: 40px;">Leaves of Rue, Scordium, Sage, Holy-Thistle, Swallow-wort, Wormwood, Southernwood, Centaury the lesser, Rosemary, Thyme, Mint.</li>
+<li style="margin-left: 40px;">Flowers of Borage, Bugloss, Violets, Roses, Marigolds; St Johns wort, Rosemary, Indian-Spikenard, Jesamy.</li>
+<li style="margin-left: 40px;">Seeds of Citrons, Oranges, Rue, St. Johns wort, Anise, Coriander, Lovage.</li>
+<li style="margin-left: 40px;">Fruits, Citrons, Oranges, Walnuts, Figs, sharp Cherries, Pippins, Ribes, sowre Pomegranates, Barberries.</li>
+<li style="margin-left: 40px;">Spices, Must, Ambergreece, Civet, Benjamin, Storax Calamita, Cinamon, Mace, Nutmegs, Cardamums, Camphire.</li>
+<li style="margin-left: 40px;">Animals, or their parts, Flesh of Vipers, Mummy, Serpents, Quails, Thrushes, Harts-horn, Unicorns-horn, Bezoar, Stone of an Indian Hog, Ivory, Castor.</li>
+<li style="margin-left: 40px;">Precious Stones and Earths, the Jacinth, Granate, Emerald, Ruby, Carbuncle, Pearls, Coral, Boearmenick, Earth of Lemnos, and Seal’d Gold, Silver.</li>
+<li style="margin-left: 40px;">Salts, Common, brought lately from the River Nile, which moveth Sweat most powerfully; of Scordium, of Wormwood, Rue, Self-heal; Holy-Thistle, Vitriolated Tartar, Bezoarticum Minerale.</li>
+<li style="margin-left: 40px;">Threacle of Andromacus’s, Diatesseron, Mithridate of Damocratis, Diascordium of Fracastorius, Confection of Alkermes, of Hyacinth.</li>
+<li style="margin-left: 40px;">Species Liberantis.</li>
+<li style="margin-left: 40px;">Electuaries, of the Egg, Rob. of Currans, or Barberries.</li>
+<li style="margin-left: 40px;">Conserves of Balm, Mint, Rosemary-Flowers, Borage, Bugloss, Marigold-Flowers.</li>
+<li style="margin-left: 40px;">Torches, of the Juice of Barberries, of Citrons.*<span id="cke_bm_93E" style="display: none;"> </span></li>
+</ol>
+<p>Barbette also offered suggestions for medicinal compounds but perhaps none was so famous as the 1665 London Plague drink which was still hailed in the English plague literature of 1721 as a useful remedy:</p>
+<address>‘The following Drink was the Great Medicine by which such Numbers were Cured of, and Preserved from the Infection in London, in the Year 1665. Take 2 <em>Quarts of Canary</em> (if you cannot get Sack, take Claret, or any other Wine: Poor People may make it of Good Beer) put into it of Rue and Sage of each, one good Handful. Boil these together in a Pipkin close covered, ‘till about a Pint is boiled away, then strain it off, and set it over the Fire again, and put into it one Dram of Saffron, One Dram of Long Pepper, Half and Ounc ofof Rue and Sage of each, one good Handful. Boil these together in a Pipkin close covered, ‘till about a Pint is boiled aw Ginger, and two good large Nutmegs, all well beaten together. Then let it boil a quarter of an Hour, take it off the Fire, and dissolve in it Mitridate and Venice Treacle of each a full Ounce: and keep it close stopt for Use. This Thing is that Great Secret which the College of Physicians (in their Directions for the Plague, that they published by express Order of the King and Council in the Great Sickness Year 1665,) ordered Persons to make use of, and by which such vast Numbers were Preserved and Recovered.’</address>
+<p style="text-align: right;">Quotation from <em>The Great Bill of Mortality</em>: or, the late dreadful Plague at Marseilles&#8230;<br />
+Compared with that in London in 1665&#8230; (Bristol, 1721).</p>
+<p>The market for this type of remedy was a lucrative one. Seventeenth-century authors writing on the plague in France also drew attention to the role played by similar ingredients, not least because the ‘Venice Treacle’ in the above concoction was actually the famous ‘theriac’, a medical term simply referring to a compound which acted against poisons. As Holland (2000) points out, numerous recipes for it existed and the long list of ingredients made it unlikely that laymen and women could concoct it without the help of a physician.</p>
+<h2 style="text-align: center;">Specific Treatments:</h2>
+<p>In the view of François Chicoyneau, the pre-eminent French commentator on the <a href="/Plague/Marseilles-Case-Study">plague at Marseilles</a> in 1720, such specific remedies were of doubtful efficacy: ‘the Medicines we have made use of are such, whose Efficacy and manner of Operation, are generally acknowledged by a long Experience, to be adapted to satisfy all the Indications reported above; having moreover not neglected certain pretended Specificks, such as the solar Powder, the mineral Kernes, Elixirs, and other alexiterial Preparations, as have been communicated to us by charitable and well-dispoased Persons; but Experience itself has convinced us, that all these particular Remedies are at the most useful only to remove some certain Accidents, when at the same time they are often noxious in a great many others, and by consequence incapable to cure a Disease characterised by a Number of different essential Symptoms.’ †</p>
+<p>Just as he had divided plague patients into five classes exhibiting certain <a href="/Plague/Symptoms">symptoms of plague</a>, so too did he match his suggestions as to treatment to these five groups.<br />
+<strong>The First Class,</strong> by far the most lethal grouping, who had died so quickly that they hadn’t even had time to exhibit the characteristic bubo of bubonic plague, did not respond to any specific treatment: they were ‘not in a Condition to bear Bleeding’ and, as Chicoyneau ruefully admits, ‘Emeticks and Catharticks were equally here useless’. ‘Cordials and Sudorificks were the only Remedies to which we had recourse, which nevertheless could be of no Service, or at the most prolong the last Moments but for few Hours.’<br />
+<strong>The Second Class </strong>were little better off, exhibiting many of the symptoms of the First Class and being likewise difficult to treat because of this: ‘they bore Bleeding no better than those of the First Class’&#8230; All Emeticks, if we except Ipecacuanha, were very often more hurtful than useful&#8230; The Catharticks that were a little strong and active, were attended with the same Incoveniences&#8230; All Cordials and Sudorificks, if they were not soft, gentle and benign, did nothing but promote the Progress of the inward Inflammations.’ In short, no remedies were efficacious but the physicians did notice one crucial development: those patients whose buboes burst had a better chance of surviving. The cure, then, was not in any of the emetic, catharticks or cordials beloved by the physicians, but primarily in their surgical skills.<br />
+<strong>The Third Class</strong> had similar symptoms to those of the first two but had them at different times. Chicoyneau’s practice, therefore, was to vary his methods ‘according to the diversity of Indications, or of the most urgent Symptoms’.<br />
+The<strong> Fourth Class</strong>, so similar in symptomatic outline if not in symptomatic intensity to the Second Class, could, therefore be treated by hastening the eruption of the buboes, while the<strong> Fifth Class</strong> needed little more than plaisters for painless buboes, the only definite sign of their affliction.</p>
+<p>Other writers were not so adverse to bleeding plague patients (though admittedly it depended on the stage of the disease). John Peachey, another physician whose works were collected by Worth, argued that bleeding was appropriate ‘if the Tumor has not yet appear’d’ but it had to be done ‘moderately with respect to the strength and temperament of the sick.’ Paul Barbette disagreed: in his view ‘Blood letting [was] very prejudicial to those that already have the Plague, and dangerous to such that would prevent it’. Far better in his view was the use of ‘<em>Diaphoreticks and Cordials</em>’.</p>
+<p>If Chicoyneau concentrated on the various types of plague victim Barbette drew attention to the importance of understanding the fluctuating time-line of the disease: some medicines might be used beneficially at different stages of the infection. Even his beloved cordials might not always produce benefits: ‘Nevertheless, the several disguises of this Disease, and the vanity of the Symptoms which attend it, do require that they should be often changed, since when the Disease is more gentle, those things are not to be used, which would do good service in an acute one.’</p>
+<h2 style="text-align: center;">Treatment of Buboes</h2>
+<p>The only area where Chicoyneau envisaged making some headway was in the treatment of buboes for he and his team had observed that by lancing the buboes the patient’s chances of survival were enhanced. Here he describes how they did this:</p>
+<address>‘If the Tumour was small, deep, painful, and one had Time to endeavour to mollify it, we began with the Application of emollient and anodyne Cataplasms, and as the Misery and Desertion would not suffer us to have Recourse to choice Drogues, we prepared on the Spot, and applied warm, a Sort of Pultice composed of Crums of Bread, common Water, Oil of Olives, Yolk of an Egg, or a large Onion roasted in the Ashes, which we first hollowed, and filled with Treacle, Soap, Oil of Scorpions or of Olives; using moreover, for Persons of Condition, Cataplasms made with Milk, the Crummy Part of Bread, Yolks of Eggs; or with the Mucilage of emollient Herbs and Roots.’ †</address>
+<address> </address>
+<h2 style="text-align: center;">Treatment of Carbuncles</h2>
+<address><strong>Chicoyneau on carbuncles:</strong><br />
+‘We immediately attack all these sorts of Carbuncles by Scarification, making the Incision to the Right and to the Left, in the Middle, and on the Edges, to the Quick; and if the Escarr is Thick and Callous, we take away all the Thickness, and what is Callous, as much as the Situation of the Parts will permit&#8230;. After having scarified these Tumours, we applied Pledgets with good Digestives, as in the Case of Buboes, only with this Difference, that we have left out the suppurating Ingredients, using only the Treacle, Balsam of<em> Archaeus</em>, and Oil of Turpentine; and if there is much Corruption, we add the Tinctures of Aloes, of Myrrh and Camphire, &amp;c.’†</address>
+<p>†All quotations from Chicoyneau are taken from the London 1721 edition: <em>A Succinct Account of the Plague at Marseilles, Its Symptoms, and the Methods and Medicines used for Curing it. Drawn up and presented to the Governor and Magistrates of Marseilles, by M. Chicoyneau, Verney and Soullier&#8230; </em>(London, 1721) <em>which is an English translation of Chicoyneau’s Relation touchant les accidens de la peste de Marseille, son prognostic, et sa curation : du 10. decembre 1720 / par messieurs Chicoyneau, Verny &amp; Soulier</em> (Lyon, 1721). Worth had both the 1721 and 1722 Lyon edition of this pamphlet.</p>
+<p><em>*Disclaimer: The Worth Library does not recommend these treatments.</em></p>
+<div><strong>Selected Sources</strong></div>
+<div><strong>Anon</strong>, <em>The Great Bill of Mortality: or, the late dreadful Plague at Marseilles&#8230; Compared with that in London in 1665&#8230; </em>(Bristol, 1721). <em>(</em>This text is not in the Worth Library).<br />
+<strong>Anon (1721), </strong><em>Lettres sur la peste, ecrites a un medicin de Bordeaux</em> (Bordeaux).<br />
+<strong>Barbette, Paul </strong>(1676), <em>Thesaurus chirurgiæ: the chirurgical &amp; anatomical vvorks of Paul Barbette, M.D., practitioner at Amsterdam </em>(London).<br />
+<strong>Cipolla, C. M. </strong>(1981),<em> Fighting the Plague in Seventeenth-Century Italy</em> (Wisconsin: University of Wisconsin Press).<br />
+<strong>Gastaldi, Cardinal Geronimo </strong>(1684), <em>Tractatus de auertenda et profliganda peste</em> (Bologna).<br />
+<strong>Holland, B.K.</strong> (2000), ‘Treatments for bubonic plague: reports from seventeenth century British epidemics’, <em>Journal of the Royal Society of Medicine</em> 93, pp 322-324.<br />
+<strong>Mead, Richard </strong>(1722),<em> A short discourse concerning pestilential contagion</em> (London).<br />
+<strong>Mullett, C.F.</strong> (1936), ‘The English Plague Scare of 1720-23’, <em>Osiris </em>2, pp 484-516.<br />
+<strong>Watson, G.</strong> (1966), <em>Theriac and Mithridatum: a study in therapeutics</em> (London: The Wellcome Historical Medical Library).</div>
+<a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-facebook nofancybox" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Finfectiousdiseases.edwardworthlibrary.ie%2Fplague%2Ftreatment-of-plague%2F&#038;t=Treatment%20of%20Plague&#038;s=100&#038;p&#091;url&#093;=http%3A%2F%2Finfectiousdiseases.edwardworthlibrary.ie%2Fplague%2Ftreatment-of-plague%2F&#038;p&#091;images&#093;&#091;0&#093;=http%3A%2F%2F192.185.175.93%2F%7Eedwardwo%2Finfectiousdiseases%2Fwp-content%2Fuploads%2F2014%2F12%2FGastaldi-tp.jpg&#038;p&#091;title&#093;=Treatment%20of%20Plague" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;margin-right:5px;"><img alt="facebook" title="Share on Facebook" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/facebook.png" /></a><a class="synved-social-button synved-social-button-share synved-social-size-24 synved-social-resolution-single synved-social-provider-twitter nofancybox" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Finfectiousdiseases.edwardworthlibrary.ie%2Fplague%2Ftreatment-of-plague%2F&#038;text=Hey%20check%20this%20out" style="font-size: 0px; width:24px;height:24px;margin:0;margin-bottom:5px;"><img alt="twitter" title="Share on Twitter" class="synved-share-image synved-social-image synved-social-image-share" width="24" height="24" style="display: inline; width:24px;height:24px; margin: 0; padding: 0; border: none; box-shadow: none;" src="http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/social-media-feather/synved-social/image/social/regular/48x48/twitter.png" /></a><a class="synved-social-credit" target="_blank" rel="nofollow" title="WordPress Social Media Feather" href="http://synved.com/wordpress-social-media-feather/" style="color:#444; text-decoration:none; font-size:8px; margin-left:5px;vertical-align:10px;white-space:nowrap;"><span>by </span><img style="display: inline;margin:0;padding:0;width:16px;height:16px;" width="16" height="16" alt="feather" src="http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/social-media-feather/synved-social/image/icon.png" /></a>				
+		</div> <!-- post-item -->
+
+		
+<div id="comments">
+	
+
+		
+</div><!-- #comments -->
+
+			
+	
+			</div><!-- .content -->
+
+			
+	<div id="primary-sidebar" class="sidebar-container left" role="complementary">
+
+		<div id="global-widget-area" class="widget-area"><div id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://infectiousdiseases.edwardworthlibrary.ie/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></div><div id="dropdown-menu-2" class="widget shailan-dropdown-menu-widget">
+<!-- Dropdown Menu Widget by Shailan.com (http://shailan.com)  v1.9.4 on wp4.1 -->
+<!-- Menu Type : navmenu_2 -->
+<div class="shailan-dropdown-menu" >
+<div id="shailan-dropdown-wrapper-2" >
+	<div align="left" class="dropdown-vertical-container dm-align-left clearfix"><table cellpadding="0" cellspacing="0"><tr><td><ul id="menu-main-menu-1" class="dropdown dropdown-vertical dropdown-align-left"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-12"><a href="http://infectiousdiseases.edwardworthlibrary.ie">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-41"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/">Plague</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/history/">History</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/marseilles-case-study/">Marseilles Case Study</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/causes/">Causes</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/symptoms/">Symptoms</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-52 current_page_item menu-item-111"><a href="http://infectiousdiseases.edwardworthlibrary.ie/plague/treatment-of-plague/">Treatment of Plague</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-55"><a href="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/">Smallpox</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/history/">History</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a href="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/boston-case-study/">Boston Case Study</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/causes/">Causes</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a href="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/symptoms/">Symptoms</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118"><a href="http://infectiousdiseases.edwardworthlibrary.ie/smallpox/treatments/">Treatments</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-69"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/">Syphilis</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/history/">History</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/syphilis-case-study/">Syphilis Case Study</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/causes/">Causes</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/symptoms/">Symptoms</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123"><a href="http://infectiousdiseases.edwardworthlibrary.ie/syphilis/treatment/">Treatment</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-82"><a href="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/">Tuberculosis</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/causes/">Causes</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126"><a href="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/symptoms/">Symptoms</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-125"><a href="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/historical-case-study/">Historical Case Study</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="http://infectiousdiseases.edwardworthlibrary.ie/tuberculosis/treatments/">Treatments</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-93"><a href="http://infectiousdiseases.edwardworthlibrary.ie/fevers/">Fevers</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-113"><a href="http://infectiousdiseases.edwardworthlibrary.ie/fevers/history/">History</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="http://infectiousdiseases.edwardworthlibrary.ie/fevers/causes/">Causes</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114"><a href="http://infectiousdiseases.edwardworthlibrary.ie/fevers/treatments/">Treatments</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="http://infectiousdiseases.edwardworthlibrary.ie/theory-of-contagion/">Theory of Contagion</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16"><a href="http://infectiousdiseases.edwardworthlibrary.ie/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105"><a href="http://infectiousdiseases.edwardworthlibrary.ie/edward-worth-library/">Edward Worth Library</a></li>
+</ul></td>
+				  </tr></table> 
+				</div></div> 
+</div>
+
+<!--/ Dropdown Menu Widget -->			
+              </div>
+
+<!-- Dropdown Menu Widget Effects by shailan (http://shailan.com) v1.9.4 on wp4.1 -->
+<script type="text/javascript">/* <![CDATA[ */
+jQuery(document).ready(function($) { 
+ 
+  var config = {
+	over : function(){ $(this).find("ul:first").fadeIn('fast'); },  
+	out : function(){ $(this).find("ul:first").fadeOut('fast'); },
+	timeout : 100  }
+ 
+  $(".dropdown li").hoverIntent( config );
+		
+});
+/* ]]> */</script>
+<!-- /Dropdown Menu Widget Effects -->
+
+         <div id="text-7" class="widget widget_text">			<div class="textwidget"><p style="text-align: center;"><a href="http://www.facebook.com/edwardworthlibrary" target="_blank"><img class="alignnone size-full wp-image-755" src="http://192.185.175.93/~edwardwo/wp-content/uploads/2014/11/facebook2.png" alt="facebook2" width="50" height="50" /></a></p>
+</div>
+		</div></div>
+	</div><!-- .sidebar-container -->		
+		</div><!-- #contentwrap -->
+	
+	</div><!-- #container -->
+
+        		<footer>
+				<section class="footer-widget-container">
+			<div id="footer-widget-area" class="inside widget-area">
+					<div id="text-3" class="widget widget_text"><h3 class="widget-title">Related Websites</h3>			<div class="textwidget"><p style="text-align: left;">
+Follow these links to find out more about</p>
+<p><a href="http://www.dr-steevens-hospital-a-history.edwardworthlibrary.ie/Home" target="_blank">Dr Steevens&#39; Hospital : A History</a><br />
+<a href="http://botany.edwardworthlibrary.ie/Home" target="_blank">Botany</a><br />
+<a href="http://newton.edwardworthlibrary.ie/Home" target="_blank">Newton</a>,<br />
+<a href="http://infectiousdiseases.edwardworthlibrary.ie/home" target="_blank">Infectious Diseases</a>,<br />
+<a href="http://www.alchemyandchemistry.edwardworthlibrary.ie/Home" target="_blank">Alchemy and Chemistry</a><br />
+<a href="http://astronomy.edwardworthlibrary.ie/home" target="_blank">Astronomy</a> </p>
+<p>at the  <a href="http://www.edwardworthlibrary.ie/contact-us/" target="_blank">Edward Worth Library</p>
+</div>
+		</div><div id="text-4" class="widget widget_text"><h3 class="widget-title">Librarian</h3>			<div class="textwidget"><p>Dr Elizabethanne Boran<br />
+Librarian,</p>
+</div>
+		</div><div id="text-5" class="widget widget_text"><h3 class="widget-title">Address</h3>			<div class="textwidget"><p>The Edward Worth Library (1733),<br />
+Dr. Steevens’ Hospital,<br />
+Dublin 8.</p>
+</div>
+		</div><div id="text-6" class="widget widget_text"><h3 class="widget-title">Contact Details</h3>			<div class="get-title">Address</h3>			<div class="textwidget"><p>The Edward Worth Library (1733),<br />
+Dr. Steevens’ Hospital,<br />
+Dublin 8.</p>
+</div>
+		</div><div id="text-6" class="widget widget_text"><h3 cltextwidget">Tel: 00 353 (0) 1 635 2215</div>
+		</div>			</div><!-- .inside -->
+		</section><!-- .footer-widget-container -->
+		    <div id="site-info"><p class="copyright">© 2015 <a href="http://infectiousdiseases.edwardworthlibrary.ie/" title="" rel="home"></a></p><p class="pc-link">Site Design <a href="http://webworks.ie/" target="_blank" >Webworks.ie</a>.</p></div><!-- #site-info -->
+	</footer>
+</div><!-- #body-container -->
+
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-includes/js/hoverIntent.min.js?ver=r7'></script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/infectiousdiseases.edwardworthlibrary.ie\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://infectiousdiseases.edwardworthlibrary.ie/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.3'></script>
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.624 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2015-01-07 09:06:43 -->
+
+<!-- super cache -->orthlibrary.ie/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.3'></script>
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.624 seconds. -->
+<!-- Cached page generated by WP-Super-Cac

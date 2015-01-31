@@ -1,0 +1,4862 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"  xmlns:fb="http://www.facebook.com/2008/fbml">
+
+
+
+    
+    <head>
+    
+    
+
+    
+        
+        <!-- Required for Membership/SSO -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Uw4AWVVADAoDUFlW"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:20,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:20,2:21,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:21,2:20,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:21,2:20,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:21,2:20,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:21,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],20:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],21:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:20,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-1.newrelic.com","queueTime":0,"licenseKey":"114b3a1f69","agent":"js-agent.newrelic.com/nr-476.min.js","transactionName":"NFVSbRBSCxFYAUBeWA0fdkwMUBELVgwbR1YEVR5PC1YSERcSVVBSEApGUAdEOhJYBVE=","applicationID":"493484","errorBeacon":"bam.nr-data.net","applicationTime":5964}</script>
+        <meta http-equiv="Content-Language" content="en-us" />
+
+        <!-- Robots metadata -->
+        <meta name="robots" content="all" />
+        <meta name="google-site-verification" content="2ixYEN-8M4fZTstcEhbqVJHmtIpX5dj2v5yOMypYkJ4" />
+
+        <!-- Pinterest Blocker -->
+        <meta name="pinterest" content="nopin" />
+
+        <!-- Smart Banners for iOS -->
+        
+        
+        <!-- Copyright metadata -->
+        <meta name="copyright" content="National Geographic" />
+        <!-- (c) Copyright  by National Geographic All Rights Reserved. -->
+
+        <!-- Page metadata -->
+        <meta name="description" content="Read a <i>National Geographic</i> magazine article about the search for an AIDS cure and get information, facts, and more about HIV and AIDS." />
+        <meta name="keywords" content="aids cure, aids vaccine, aids research, hiv, information, facts, article" />
+
+        
+        
+            <meta name="author" content="Written by Michael Klesius" />
+        
+        
+
+
+        
+        <link rel="canonical" href="http://science.nationalgeographic.com/science/health-and-human-body/human-diseases/aids-twenty/" />
+
+        
+            <meta property="twitter:title" content="AIDS Cure Article, HIV Vaccine Information, AIDS Research Facts -- National Geographic" />
+            <meta property="twitter:description" content="Read a National Geographic magazine article about the search for an AIDS cure and get information, facts, and more about HIV and AIDS." />
+            
+                <meta name="twitter:card" content="summary"/>
+                <meta name="twitter:site" content="@NatGeo"/>
+                <meta name="twitter:site:id" content="17471979"/>
+            
+        
+
+        
+            
+            
+            <meta property="fb:admins" content="1442858697"/> <meta property="fb:admins" content="506432430" /> <meta property="fb:admins" content="104276" /> <meta property="fb:admins" content="7800037" />
+            <meta name="site_name" property="og:site_name" content="National Geographic" />
+            <meta property="og:title" content="AIDS Cure Article, HIV Vaccine Information, AIDS Research Facts -- National Geographic" />
+            <meta name="description" property="og:description" content="Read a National Geographic magazine article about the search for an AIDS cure and get information, facts, and more about HIV and AIDS."/>
+            <meta name="content_type" property="og:type" content="article" />
+            <meta property="og:url" content="http://science.nationalgeographic.com/science/health-and-human-body/human-diseases/aids-twenty/" />
+            
+                
+                  
+                    <meta name="image" property="og:image" content="http://science.nationalgeographic.com/u/TvyamNb-BivtNwpvn7Sct0VFDulyAfA9wBcU0gVHVnqC5ghmdt0zeTmDnS5g6gntxBopMO8amt0-FF5H/" />
+                  
+                  
+                  
+                        
+                            <meta name="image" property="og:image" content="http://images.nationalgeographic.com/wpf/sites/common/i/presentation/NGLogo560x430.png"/>
+                            <meta name="image" property="og:image:secure_url" content="https://images.nationalgeographic.com/wpf/sites/common/i/presentation/NGLogo560x430.png"/>
+                        
+                  
+                
+            
+        
+
+        
+        <link rel="icon" type="image/x-icon" href="//images.nationalgeographic.com/wpf/sites/common/i/icons/favicon-cb1274471343.ico" />
+        
+
+        
+        <title>AIDS Cure Article, HIV Vaccine Information, AIDS Research Facts -- National Geographic</title>
+        
+
+        
+            <!-- Google Corporate Contact Info -->
+            <script type="application/ld+json">
+                {
+                    "@context" : "http://schema.org",
+                    "@type" : "Organization",
+                    "url" : "http://www.nationalgeographic.com/",
+                    "contactPoint" : 
+                        [
+                            {
+                                "@type" : "ContactPoint",
+                                "telephone" : "+1-800-647-5463",
+                                "contactType" : "customer service",
+                                "areaServed" : ["US","CA"]
+                            },
+                            {
+                                "@type" : "ContactPoint",
+                                "telephone" : "+1-813-979-6845",
+                                "contactType" : "customer service"
+                            }
+                        ]      
+                }
+            </script>
+            <!-- End Google Corporate Contact Info -->
+        
+    
+
+    
+        <!-- CSS -->
+        
+	
+        <link rel="stylesheet" href="//images.nationalgeographic.com/wpf/CACHE/css/480f5b911119-cb1416402487.css" type="text/css" media="screen" charset="utf-8" />
+
+
+        <!-- JS-enabled styles -->
+        <link href="//images.nationalgeographic.com/wpf/sites/common/c/js_enabled-cb1409744283.css" media="screen" rel="stylesheet" type="text/css" />
+
+        <!-- start css js manager -->
+<!-- site_files -->
+
+<!-- taxi_files -->
+
+<!-- greedy_url_files -->
+
+<!-- url_files -->
+
+<!-- end css js manager -->
+
+        
+	<style type="text/css">@import url("//images.nationalgeographic.com/wpf/sites/science/c/screen-cb1331812755.css");</style> <!-- Controls Science Site Elements -->
+	
+
+
+        
+	
+        <link rel="stylesheet" href="//images.nationalgeographic.com/wpf/CACHE/css/b92759a2c6ca-cb1403695716.css" type="text/css" media="print" charset="utf-8" />
+
+        
+	<link href="//images.nationalgeographic.com/wpf/sites/common/c/print-cb1377172118.css" media="print" rel="stylesheet" type="text/css" /><!-- Controls Print Style -->
+
+
+        
+    <!--[if IE 7]>
+        <link href="//images.nationalgeographic.com/wpf/sites/themes/global/c/ie7-cb1291920458.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="//images.nationalgeographic.com/wpf/sites/themes/unified/c/ie7-cb1274462936.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="//images.nationalgeographic.com/wpf/sites/common/c/ie7-cb1315395344.css" media="screen" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!--[if lt IE 7]>
+        <link href="//images.nationalgeographic.com/wpf/sites/themes/global/c/ie6-cb1274462930.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="//images.nationalgeographic.com/wpf/sites/themes/unified/c/ie6-cb1274462936.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="//images.nationalgeographic.com/wpf/sites/common/c/ie6-cb1312282972.css" media="screen" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!--[if IE]>
+        <link href="//images.nationalgeographic.com/wpf/sites/themes/global/c/ie-cb1357792894.css" media="screen" rel="stylesheet" type="text/css" />
+    <![endif]-->
+        
+    
+
+    
+        <script src="//images.nationalgeographic.com/wpf/sites/common/j/modernizr-cb1312282973.js" type="text/javascript"></script>
+
+        
+        <script src="//images.nationalgeographic.com/wpf/sites/common/j/jquery/jquery.min-cb1322821703.js" type="text/javascript" ></script>
+        
+
+        <script type="text/javascript" src="//assets.nationalgeographic.com/modules-livefyre/js/livefyre_auth.js"></script><script type="text/javascript" src="//assets.nationalgeographic.com/modules-livefyre/js/livefyre_manager.js"></script><script type="text/javascript">
+
+if ('undefined' == typeof livefyreConfig) {
+    var livefyreConfig = {
+        "global" : {
+            "network": "natgeo.fyre.co"
+        },
+        "streams": []
+    }
+}
+
+if (window.getScript){
+    window.getScript("http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js").then(function() {
+        _M.ready(function(core) {
+            var lf_debug =  false; 
+            window.livefyreManager = new LivefyreManager(core, lf_debug);
+        });
+    });
+}
+</script>
+
+    
+
+    
+	
+	
+            <script type="text/javascript" src="//images.nationalgeographic.com/wpf/CACHE/js/85f9734275a6-cb1396614252.js" charset="utf-8"></script>
+        
+
+    
+	<script src="//images.nationalgeographic.com/wpf/sites/common/j/jquery.rating.pack-cb1274471350.js" type="text/javascript" ></script>
+
+	<script src="//images.nationalgeographic.com/wpf/sites/common/j/jquery.pagination-cb1274471350.js" type="text/javascript"></script>
+	<script src="//images.nationalgeographic.com/wpf/sites/common/j/jss.pagination-cb1274471350.js" type="text/javascript"></script>
+
+
+    
+        <script type="text/javascript" src="//images.nationalgeographic.com/wpf/CACHE/js/9a5b343d5797-cb1414755311.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            $(document).ready(function(){
+                if(getURLParam('from_bing') != 'null'){
+                    $('#headerboard').prepend("<div style='width:997px;height:40px;margin-bottom:10px;background-color:#000;'><a href='http://www.bing.com' title='Bing'><img src='http://s.ngm.com/img/bing-promo.jpg' alt='Bing' /></a></div>");
+                }
+
+                function getURLParam(name) {
+                    return unescape((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
+                }
+            });
+            //]]>
+        </script>
+        <!-- start css js manager -->
+<!-- site_files -->
+
+<!-- taxi_files -->
+
+<!-- greedy_url_files -->
+
+<!-- url_files -->
+
+<!-- end css js manager -->
+
+        <script type="text/javascript">
+        function OnSubmitGlobalSearchForm()
+        {
+            var collection=document.header_search_video.collection;
+            var rad=document.header_search_video.search_dest;
+            for(var i=0;i<rad.length;i++){
+                if(rad[i].checked){
+                    switch(rad[i].value){
+                    case 'video':
+                        // do video-only search
+                        if (collection.value === "cms_ngkids"){
+                            document.header_search_video.action ="/video/kids/search/";
+                        }else{
+                            document.header_search_video.action ="http://video.nationalgeographic.com/video/search/";
+                        }
+                        break;
+                    case 'content':
+                    default:
+                        // do site-wide google content search
+                        if (collection.value === "cms_ngkids"){
+                            document.header_search_video.action ="http://kids.nationalgeographic.com/kids/search/";
+                        }else{
+                            document.header_search_video.action ="http://www.nationalgeographic.com/search/";
+                        }
+                        document.header_search_video.site="default_collection"
+                        document.header_search_video.client="default_frontend"
+                        document.header_search_video.proxystylesheet="default_frontend"
+                        break;
+                    }
+                }
+            }
+
+          return true;
+        }
+        </script>
+        
+            
+
+<script type="text/javascript" src="//images.nationalgeographic.com/wpf/CACHE/js/ee4266c4edb1-cb1402403745.js" charset="utf-8"></script>
+
+
+        
+    
+
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    </head>
+    
+
+
+
+
+    <body class="science boxgrid level_3 article">
+        <div id="flyout_container"><!-- advertising -->
+
+
+    
+    <img src="//images.nationalgeographic.com/wpf/sites/common/i/presentation/clear-cb1297875254.gif">
+
+</div>
+        
+
+
+    <!-- Analytics -->
+    <!-- webanalytics -->
+<script>
+var ngs_furl="/health-and-human-body/human-diseases/aids-twenty/",
+    ngs_contentgroup="Science|health-and-human-body|human-diseases|aids-twenty",
+    ngs_reportsuite="natgeoscience",
+    ngs_channel="Science",
+    ngs_pagenumber="",
+    ngs_sections="",
+    ngs_authors="Written by Michael Klesius",
+    // regex: ^/health-and-human-body/(food-how-safe|human-body|human-diseases)/([\w\-]+)(|/)$,
+    ngs_event="",
+    isAuthenticated = ('False' === 'True') ? true : false;
+</script>
+<!-- Begin Analytics tag -->
+
+  
+    
+      
+    
+  
+
+<!-- End Analytics tag -->
+<!-- Google Tag Manager -->
+<script>
+  dataLayer = [{
+    'pageCategory': 'Science|health-and-human-body|human-diseases|aids-twenty'
+     }];
+</script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-S6J5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-S6J5');</script>
+<!-- End Google Tag Manager -->
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=3005368&cv=2.0&cj=1" />
+</noscript>
+<!-- /webanalytics -->
+
+
+
+
+	
+    
+        
+    
+
+    
+    
+        <div id="ad_1x1_top">
+        
+        <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule1x1">
+            
+
+            <!--
+                // unit: interstitial-1x1
+                // uri: /health-and-human-body/human-diseases/aids-twenty/
+                // site_name: science
+                // zone: healthandhumanbody_disease
+                // width: 1
+                // height: 1
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 27496076
+                // tile: 185
+                // refreshable: False
+                // regex: /health-and-human-body/human-diseases/[.]*
+                // page_taxonomy: None
+                // ad_taxonomy: None
+                // taxonomy_match: False
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"science/healthandhumanbody_disease",
+                            'dimensions':"1x1",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "1", "variability": 100, "height": "1"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.science/healthandhumanbody_disease');
+                    inc.push('sz=1x1');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+        </div>
+    
+	<!-- Google Code for Science.NationalGeographic.com (Store) Remarketing List -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 1071678606;
+	var google_conversion_language = "en";
+	var google_conversion_format = "3";
+	var google_conversion_color = "666666";
+	var google_conversion_label = "goA0CL2BgQIQjomC_wM";
+	var google_conversion_value = 0;
+	/* ]]> */
+	</script>
+	<div id="googleAd">
+	    <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js"></script>
+	</div>
+	<noscript>
+	<div style="display:inline;">
+	<img height="1" width="1" style="border-style:none; position: absolute;" alt="" src="http://www.googleadservices.com/pagead/conversion/1071678606/?label=goA0CL2BgQIQjomC_wM&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+
+
+
+    
+        
+
+
+
+
+    
+
+
+
+
+    
+        
+
+        <script type="text/javascript">
+            isHTTPS = !!document.location.protocol.match('https:');
+
+            // Set variable to the window as we need to reference it in a few other locations on this page
+            // Need to see if we need to load assets for HTTPS sites
+            window.globalnavURL = (isHTTPS ? "https://www-s.nationalgeographic.com/wpf/" : "//images.nationalgeographic.com/wpf/");
+
+            if (!$("link[href='" + window.globalnavURL + "sites/themes/global/c/global_nav.css']").length) {
+                if (document.createStyleSheet) {
+                    // Covers all IE, but needed to load the CSS in IE8
+                    document.createStyleSheet(window.globalnavURL + 'sites/themes/global/c/global_nav.css');
+                } else {
+                    console.log("Loading the global nav css");
+                    $('<link href="' + window.globalnavURL + 'sites/themes/global/c/global_nav.css" media="screen" rel="stylesheet">').appendTo("head");
+                };
+            };
+        </script>
+
+    
+
+    
+        <!--[if IE 8]>
+            <script type="text/javascript">
+                var ie8CSS = window.globalnavURL + 'sites/themes/global/c/ie8.css';
+                if (document.createStyleSheet) {
+                    document.createStyleSheet(ie8CSS);
+                };
+            </script>
+        <![endif]-->
+    
+
+    
+        
+        <!-- JAVASCRIPT -->
+        <script type="text/javascript">
+            var articleKey,
+                staticURL = '//images.nationalgeographic.com/wpf/',
+                geoipCountryEndpoint = 'http://www.nationalgeographic.com/geoip/country.js',
+                django_page_id = '3586',
+                baseURL = window.location.hostname, 
+                pathURL = window.location.pathname, 
+                _sf_startpt=(new Date()).getTime(); 
+        </script>
+
+        
+
+    
+
+
+
+
+
+<div id="navigation_global_container">
+    <p id="skip_navigation" class="hidden"><a href="#content">Skip to this page's content</a></p>
+    <div id="navigation_advertising"><!-- Top Advertising -->
+        
+        
+        <!-- HEADER ADVERTISEMENT -->
+        <div id="headerboard">
+            
+                    
+                        
+                            
+                                
+                                <!-- advertising -->
+
+
+    
+        
+        
+            
+<div class="pushdown advertisement hidden">
+	<h3 class="hidden">Advertisement</h3>
+	
+	<!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule970x66">
+            
+
+            <!--
+                // unit: pushdown-970x66
+                // uri: /health-and-human-body/human-diseases/aids-twenty/
+                // site_name: science
+                // zone: healthandhumanbody_disease
+                // width: 970
+                // height: 66
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 445172402
+                // tile: 135
+                // refreshable: False
+                // regex: /health-and-human-body/human-diseases/[.]*
+                // page_taxonomy: None
+                // ad_taxonomy: None
+                // taxonomy_match: False
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"science/healthandhumanbody_disease",
+                            'dimensions':"970x66",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "970", "variability": 100, "height": "66"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.science/healthandhumanbody_disease');
+                    inc.push('sz=970x66');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+</div><!-- .pushdown .advertisement -->
+<div class="leaderboard advertisement hidden">
+	<h3 class="hidden">Advertisement</h3>
+	
+        
+            
+                
+                    
+                    <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule728x90">
+            
+
+            <!--
+                // unit: leaderboard-728x90
+                // uri: /health-and-human-body/human-diseases/aids-twenty/
+                // site_name: science
+                // zone: healthandhumanbody_disease
+                // width: 728
+                // height: 90
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 7763829
+                // tile: 176
+                // refreshable: False
+                // regex: /health-and-human-body/human-diseases/[.]*
+                // page_taxonomy: None
+                // ad_taxonomy: None
+                // taxonomy_match: False
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"science/healthandhumanbody_disease",
+                            'dimensions':"728x90",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "728", "variability": 100, "height": "90"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.science/healthandhumanbody_disease');
+                    inc.push('sz=728x90');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+            	
+        	
+        
+	
+</div><!-- .leaderboard .advertisement -->
+        
+    
+
+
+                            
+                        
+                    
+            
+            <div class="secondary_ad hidden">
+                <h3 class="hidden">Advertisement</h3>
+                
+                        
+                            
+                                
+                                    
+                                    <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule257x90">
+            
+
+            <!--
+                // unit: leaderboard-257x90
+                // uri: /health-and-human-body/human-diseases/aids-twenty/
+                // site_name: science
+                // zone: healthandhumanbody_disease
+                // width: 257
+                // height: 90
+                // css_class: ad-after
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 581571993
+                // tile: 132
+                // refreshable: False
+                // regex: /health-and-human-body/human-diseases/[.]*
+                // page_taxonomy: None
+                // ad_taxonomy: None
+                // taxonomy_match: False
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"science/healthandhumanbody_disease",
+                            'dimensions':"257x90",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "257", "variability": 100, "height": "90"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.science/healthandhumanbody_disease');
+                    inc.push('sz=257x90');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+                                
+                            
+                        
+                
+            </div><!-- .secondary_ad -->
+        </div><!-- #headerboard -->
+        
+        
+    </div>
+    <div id="navigation_tophat_container"><!-- Logo + social + search + Sign In / Join -->
+        <div id="navigation_mainA">
+        <div id="group_header_logo">
+            <div id="header_logo" class="vcard">
+                <a class="url fn org hiddenText" href="http://www.nationalgeographic.com/">National Geographic Society</a>
+                <div class="adr hiddenText">
+                    <span class="post-office-box">P.O. Box 98199</span>
+                    <span class="locality">Washington</span>,
+                    <abbr title="District of Columbia" class="region">DC</abbr>
+                    <span class="postal-code">20090-8199</span>
+                    <span class="country-name">USA</span>
+                </div>
+                <div class="geo hiddenText">
+                    <span class="latitude">38.90531943278526</span>,
+                    <span class="longitude">-77.0376992225647</span>
+                </div>
+                <div class="tel hiddenText">80v>
+                <div class="geo hiddenText">
+                    <span class="latitude">38.90531943278526</span>,
+                    <span class="longitude">-77.0376992225647</span>
+ 0-647-5463</div>
+            </div><!-- #header_logo -->
+        </div><!-- #group_header_logo -->
+
+        <div id="shared-header"></div>
+
+        <!-- google search parameters -->
+        <form name="global_search" method="GET" id="global_search" action="http://www.nationalgeographic.com/search/">
+        <div class="hidden">
+            
+            <input type="hidden" name="frontend" value="default_frontend">
+            
+
+            <input type="hidden" name="output_format" value="xml_no_dtd">
+            <input type="hidden" name="num_results" value="25">
+            <input type="hidden" name="filter" value="p">
+
+            
+            <input type="hidden" name="collection" value="default_collection">
+            
+
+            
+            <input type="hidden" name="meta_field_to_return" value="ngs-gsa-feed-title">
+            <input type="hidden" name="meta_field_to_return" value="ngs-gsa-feed-slug">
+            <input type="hidden" name="meta_field_to_return" value="ngs-gsa-feed-description">
+            <input type="hidden" name="meta_field_to_return" value="ngs-gsa-feed-keywords">
+            <input type="hidden" name="meta_field_to_return" value="ngs-gsa-feed-thumbnail">
+            
+
+            
+            <input type="hidden" name="required_meta_field_1" value="ngs-gsa-feed-mediaType:video">
+
+            <input type="hidden" name="required_meta_field" value="ngs-gsa-feed-video-source:animals|ngs-gsa-feed-video-source:environment|ngs-gsa-feed-video-source:movies|ngs-gsa-feed-video-source:music|ngs-gsa-feed-video-source:news|ngs-gsa-feed-video-source:places|ngs-gsa-feed-video-source:specials|ngs-gsa-feed-video-source:science|ngs-gsa-feed-video-source:nat-geo-wild|ngs-gsa-feed-video-source:national-geographic-channel|ngs-gsa-feed-video-source:kids|ngs-gsa-feed-video-source:the-magazine">
+            
+
+            
+            <input type="hidden" name="meta_field_filter" value="ngs-gsa-feed-title">
+            <input type="hidden" name="meta_field_filter" value="ngs-gsa-feed-description">
+            <input type="hidden" name="meta_field_filter" value="ngs-gsa-feed-keywords">
+            
+
+            <input type="hidden" name="oe" value="utf-8" />
+        </div>
+    
+    <span class="hidden">Search National Geographic</span>
+
+     <div class="field">
+         <label for="header_search_input" class="hidden">Search<span class="hidden">nationalgeographic.com</span></label>
+
+        
+        <input id="header_search_input" type="search" name="search" placeholder="Search" maxlength="256" autocomplete="off" value="">
+        
+        <ul id="search_type">
+            <li class="selected" data-url="http://www.nationalgeographic.com/search/">Search NationalGeographic.com</li>
+            <li data-url="http://video.nationalgeographic.com/video/search/">Search Video</li>
+        </ul>
+
+        
+        <button type="submit" name="btnG" id="header_search_submit" value="Go" class="hidden">Submit</button>
+        
+
+        
+        <input type="hidden" name="start" value="0">
+        
+
+        
+        <input type="hidden" name="sort" value="">
+        
+
+      </div>
+    
+
+ </form><!-- #header_search -->
+
+        <ul id="social" class="inline_list">
+            <li>Connect:</li>
+            <li><a href="http://www.facebook.com/natgeo" class="facebook"></a></li>
+            <li><a href="http://www.twitter.com/NatGeo" class="twitter"></a></li>
+        </ul>
+    </div><!-- #navigation_mainA -->
+
+    <nav id="navigation_mainB" class="cf">
+        <div class="navigation_mainB_container">
+            <ul class="primary_nav inline-list">
+                <li class="home active"><a href="http://www.nationalgeographic.com">Home</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li><a href="http://science.nationalgeographic.com/news/">News</a></li>
+                            <li><a href="http://ngm.nationalgeographic.com">The Magazine</a></li>
+                            <li><a href="http://maps.nationalgeographic.com">Maps</a></li>
+                            <li><a href="http://science.nationalgeographic.com/science/">Science</a></li>
+                            <li><a href="http://science.nationalgeographic.com/education/">Education</a></li>
+                            <li><a href="http://games.nationalgeographic.com">Games</a></li>
+                            <li><a href="http://events.nationalgeographic.com/">Events</a></li>
+                            <li><a href="http://blogs.nationalgeographic.com">Blogs</a></li>
+                            <li><a href="http://science.nationalgeographic.com/movies/">Movies</a></li>
+                            <li><a href="http://science.nationalgeographic.com/explorers/">Explorers</a></li>
+                            <li><a href="http://www.nationalgeographic.com/apps/">Apps</a></li>
+                            <li><a href="http://www.nationalgeographicexpeditions.com/?utm_source=NGdotcom-Home&utm_medium=Link&utm_content=TopNav_Trips&utm_campaign=NGdotcom">Trips</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li class="video"><a href="http://science.nationalgeographic.com/video/">Video</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+    <li><a href="http://science.nationalgeographic.com/video/">Video Home</a></li>
+    <li><a href="http://science.nationalgeographic.com/video/national-geographic-channel/">Nat Geo TV</a></li>
+    <li><a href="http://science.nationalgeographic.com/video/nat-geo-wild/">Nat Geo Wild</a></li>
+    <li><a href="http://science.nationalgeographic.com/video/kids/">Kids</a></li>
+</ul>
+<div class="spotlight">
+</div>
+                    </nav>
+                </li>
+                <li class="photography"><a href="http://science.nationalgeographic.com/photography/">Photography</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://science.nationalgeographic.com/photography/">Photography Home</a></li>
+                            <li ><a href="http://proof.nationalgeographic.com">Blog</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/photography/photo-of-the-day/">Photo of the Day</a></li>
+                            <li ><a href="http://ngm.nationalgeographic.com/your-shot/">Your Shot</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/photography/wallpapers/">Wallpapers</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/photography/photogalleries/">Galleries</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/photography/photo-tips/">Photo Tips</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/photography/photographers/">Photographers</a></li>
+                            <li ><a href="http://national-geographic.cafepress.com/art?utm_source=nationalgeographic.com&utm_medium=link&utm_campaign=photographybuyprints">Buy Prints</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="animals"><a href="http://science.nationalgeographic.com/animals/">Animals</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://science.nationalgeographic.com/animals/">Animals Home</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/animals/facts/">Facts</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/animals/photos/">Photos</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/video/player/animals/">Video</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/animals/conservation/">Animal Conservation</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/animals/big-cats/">Big Cats Initiative</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="environment"><a href="http://science.nationalgeographic.com/environment/">Environment</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://science.nationalgeographic.com/environment/">Environment Home</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/environment/energy/">Energy</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/environment/freshwater/">Freshwater</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/environment/global-warming/">Global Warming</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/environment/habitats/">Habitats</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/environment/natural-disasters/">Natural Disasters</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/ocean/">The Ocean</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="travel"><a href="http://science.nationalgeographic.com/travel/">Travel</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://science.nationalgeographic.com/travel/">Travel Home</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/travel/top-10/">Top 10</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/travel/destinations-a-z/">Destinations A-Z</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/travel/trip-ideas/">Trip Ideas</a></li>
+                            <li ><a href="http://intelligenttravel.nationalgeographic.com/">Travel Blogs</a></li>
+                            <li ><a class="geoip" href="http://science.nationalgeographic.com/travel/traveler-magazine/" data-rename="true" >Traveler Magazine</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/travel/travel-photos/">Photos</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/video/player/places/">Video</a></li>
+                            <li ><a href="http://www.nationalgeographicexpeditions.com/?utm_source=travel.nationalgeographic.com&utm_medium=Link&utm_content=TopNav_Our_Trips&utm_campaign=NGdotcom">Our Trips</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="adventure"><a href="http://science.nationalgeographic.com/adventure/">Adventure</a>
+                    <nav class="sub_nav">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://science.nationalgeographic.com/adventure/">Adventure Home</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/adventure/gear/?source=NavAdvHome ">Gear</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/adventure/ultimate-adventurers/">Ultimate Adventurers</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/adventure/trip-ideas/">Trip Ideas</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/travel/national-parks/">Parks</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/adventure/adventure-photos/">Photos</a></li>
+                            <li ><a href="http://science.nationalgeographic.com/video/player/adventure/">Video</a></li>
+                            <li ><a href="http://adventureblog.nationalgeographic.com/">Blog</a></li>
+                            <li ><a href="http://www.nationalgeographicexpeditions.com/?utm_source=NGdotcom-Adventure&utm_medium=Link&utm_content=TopNav_Nat_Geo_Trips&utm_campaign=NGdotcom">Nat Geo Trips</a></li>
+                            <li ><a href="http://alltrails.com/a/100077/">AllTrails</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="television"><a href="http://channel.nationalgeographic.com/channel/">Television</a>
+                    <nav class="sub_nav left">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://channel.nationalgeographic.com/channel/">National Geographic Channel</a></li>
+                            <li ><a href="http://channel.nationalgeographic.com/wild/">Nat Geo Wild</a></li>
+                            <li ><a href="http://channel.nationalgeographic.com/channel/schedule/daily/">TV Schedule</a></li>
+                            <li ><a href="http://channel.nationalgeographic.com/channel/shows/">Shows</a></li>
+                            <li ><a href="http://video.nationalgeographic.com/video/national-geographic-channel/">Video</a></li>
+                            <li ><a href="http://tvblogs.nationalgeographic.com">Blogs</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="kids"><a class="geoip" data-killflyoff="true" href="http://science.nationalgeographic.com/kids/">Kids</a>
+                    <nav class="sub_nav left">
+                        <ul class="secondary_nav">
+                            <li ><a href="http://science.nationalgeographic.com/kids/">Kids Home</a></li>
+                            <li ><a href="http://kids.nationalgeographic.com/kids/games/">Games</a></li>
+                            <li ><a href="http://video.nationalgeographic.com/video/player/kids/">Videos</a></li>
+                            <li ><a href="http://kids.nationalgeographic.com/kids/animals/">Animals</a></li>
+                            <li ><a href="http://kids-myshot.nationalgeographic.com/">My Shot</a></li>
+                            <li ><a href="http://www.animaljam.com/">Animal Jam</a></li>
+                        </ul>
+                        <div class="spotlight">
+                        </div>
+                    </nav>
+                </li>
+                <li class="subscribe geoip" data-killspotlight="true">
+                    <a class="geoip" href="http://www.nationalgeographic.com/magazines/lp/nav/">Subscribe</a>
+                    <nav class="sub_nav left">
+
+                        <ul class="secondary_nav">
+                            <li >
+                                <a class="geoip" href="http://www.nationalgeographic.com/magazines/lp/navsubs/">National Geographic Magazine</a>
+                            </li>
+                            <li>
+                                <a class="geoip" href="https://ngkidsubs.nationalgeographic.com/servlet/Show?WESPAGE=OrderPages/ngk/1310/landing_01A3.jsp&MSRSMAG=WO&EFK1=WOAL2S8&EFK2=WOAL2U4&EFK3=&MSCCMPLX=FLYOUT7">National Geographic Kids</a>
+                            </li>
+                            <li >
+                                <a href="https://secure.customersvc.com/servlet/Show?WESPAGE=OrderPages/ng/NLK/1311/landing_01A3.jsp&MSRSMAG=LS&EFK1=LSADQQ9&EFK2=&EFK3=&MSCCMPLX=FLYOUT7">National Geographic Little Kids</a>
+                            </li>
+                            <li >
+                                <a class="geoip" data-rename="true" href="https://secure.customersvc.com/servlet/Show?WESPAGE=OrderPages/tr/1311/landing_15A1.jsp&MSRSMAG=TR&EFK1=TRAJ5G5&EFK2=TRAJ5H3&EFK3=TRAJ5J8&MSCCMPLX=FLYOUT7">National Geographic Traveler</a>
+                            </li>
+                        </ul>
+                            <div class="spotlight">
+                            </div>
+                    </nav>
+                </li>
+
+                <li class="shop">
+                        <a class="geoip" data-killflyoff="true" href="http://shop.nationalgeographic.com/ngs/index.jsp?code=NG94000&amp;source=NavShopHome">Shop</a>
+                        <nav class="sub_nav left">
+                            <ul class="secondary_nav">
+                                <li><a href="http://shop.nationalgeographic.com/ngs/index.jsp?code=NG94001&amp;source=NavShopHome" title="National Geographic Shop - Home">Store Home</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/browse/categorySeries.jsp?categoryId=S061&amp;addFacet=9004:S061&amp;code=NG94007&amp;source=NavShopServ" title="National Geographic Shop - Genographic Kits">Genographic Kits</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/category/shop-by/best-sellers?code=NG94232" title="National Geographic Shop - Best Sellers">Best Sellers</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/category/shop-by/new?code=NG94233" title="National Geographic Shop - New">New</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A091&amp;addFacet=9004:A091&amp;code=NG94004&amp;source=NavShopKids" title="National Geographic Shop - Kids">Kids Shop</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A245&amp;addFacet=9004:A245&amp;code=NG94002&amp;source=NavShopGift" title="National Geographic Shop - Gift Finder">Gift Finder</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/category/dvds/national-geographic-channel-dvds?code=NG94003" title="National Geographic Shop - Channel">Channel Shop</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/category/shop-by/sale?code=NG94008" title="National Geographic Shop - Sale">Sale</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/category/shop-by/shop-by-catalog?code=NG94005" title="National Geographic Shop - Shop By Catalog">Shop by Catalog</a></li>
+                                <li><a href="http://shop.nationalgeographic.com/ngs/browse/emailRegistration.jsp?code=NG94056" title="National Geographic Shop - Email Signup">Email Signup</a></li>
+                            </ul>
+                            <div class="spotlight">
+                            </div>
+                        </nav>
+
+                </li>
+            </ul><!-- .primary_nav -->
+        </div><!-- .navigation_mainB_container -->
+    </nav><!-- #navigation_mainB -->
+</div><!-- #navigation_tophat_container -->
+    <div id="navigation_secondary">
+        <!-- Secondary navigation bar (depends of the Main) -->
+    </div>
+</div><!-- #navigation_global_container -->
+
+
+
+
+    
+        <!-- Maintain order -->
+<script>
+    (function(window, undefined) {
+        window.memFragConfig = {
+            mmdbHost: 'https://mmdb.nationalgeographic.com',
+            force_desktop: true,
+            show_app_switcher: false,
+            memcenHost: 'https://members.nationalgeographic.com',
+            notificationsHost: 'https://notifications.nationalgeographic.com',
+            notificationsKey: 'e6c4b4af844c454fc2110a4d09828559489837313bd2e519cf',
+            noSSL: false,
+            staticMedia: '//assets.nationalgeographic.com/ngs-header/',
+            crossDomain: false,
+            serverSideLogin: false,
+            refreshOnLogin: false,
+            refreshOnLogout: true,
+            headerContainer: '#shared-header',
+            alertContainerSelector: '#dialog-alert',
+            debug:  false,
+            debug_lvl: 0,
+            whitelist: {
+                origins: [
+                    
+                        '*.nationalgeographic.com', 
+                    
+                        '*.natgeo.vm'
+                    
+                ],
+                targets: [
+                    
+                        'mmdb', 
+                    
+                        'mc', 
+                    
+                        'geodata'
+                    
+                ]
+            }
+        };
+
+        var head = document.head || document.getElementsByTagName("head")[0],
+        isHTTPS = !!document.location.protocol.match('https:'),
+        gigyaCDN = (isHTTPS ? "https://cdns.gigya.com" : "http://cdn.gigya.com"),
+        gigyaConfig = new Object(),
+        gs;
+
+        // Create Gigya Global Configuration Object and add to window
+        gigyaConfig.siteName = 'nationalgeographic.com';
+        gigyaConfig.enabledProviders = 'facebook';
+        gigyaConfig.autoLogin = true;
+        window.__gigyaConf = gigyaConfig;
+
+        // Append Gigya Socialize.js script to DOM
+        gs = document.createElement('script');
+        gs.type = 'text/javascript';
+        gs.setAttribute('src', gigyaCDN + '/JS/socialize.js?apikey=3_LOaUF9fHrs7lFHW7YFFA22qD6MhVsbO_bpqkn6nnKj9-AbGRsec864eKWqmR2Jdu');
+        head.appendChild(gs);
+    })(window);
+</script>
+
+
+    <script>
+	(function(window, undefined) {
+	    var DeferredPromise, promise, scriptElement, head, done;
+
+	    DeferredPromise = function(resolve, reject) {
+		this._resolve = resolve;
+		this._reject = reject;
+                this._linkedPromises = [];
+	    };
+	    DeferredPromise.prototype.then = function(resolve, reject) {
+		var linkedDeferredPromise = new DeferredPromise(resolve, reject);
+		if (this._resolved) {
+		    linkedDeferredPromise.resolve(this._resolved_value);
+		}
+                this._linkedPromises.push(linkedDeferredPromise);
+		return linkedDeferredPromise;
+	    };
+	    DeferredPromise.prototype.resolve = function(value) {
+		this._resolved = true;
+		this._resolved_value = value;
+		if (this._resolve!== undefined) {
+		    value = this._resolve(value);
+		}
+                this._linkedPromises.forEach(function(linkedPromise) {
+                    linkedPromise.resolve(value);
+                });
+	    };
+	    DeferredPromise.prototype.reject = function(reason) {
+		if (this._reject !== undefined) {
+		    reason = this._reject(reason);
+		}
+                this._linkedPromises.forEach(function(linkedPromise) {
+                    linkedPromise.reject(reason);
+                });
+	    };
+
+	    promise = new DeferredPromise();
+	    scriptElement = document.createElement('script');
+	    scriptElement.type = 'text/javascript';
+	    scriptElement.setAttribute('src', '//assets.nationalgeographic.com/ngs-header/bootstrap.js');
+	    scriptElement.async = true;
+	    scriptElement.onload = scriptElement.onreadystatechange = function(){
+		if (!done) {
+		    done = true;
+		    promise.resolve(_M);
+		}
+	    };
+	    head = document.head || document.getElementsByTagName("head")[0];
+	    head.appendChild(scriptElement);
+	    window.ngsHeaderScriptLoad = promise;
+	})(window);
+    </script>
+
+
+        <script>
+            window.getScript = function(resource) {
+                var $def = new $.Deferred();
+                window.ngsHeaderScriptLoad.then(function(_M) {
+                    _M.ready(function(){
+                        window.yepnope({
+                            load: resource,
+                            complete: function() { $def.resolve(); }
+                        });
+                    });
+                });
+                return $def.promise();
+            };
+        </script>
+    
+
+    <script type="text/javascript">
+        window.getScript(window.globalnavURL + 'sites/common/j/html5shiv.js');
+    </script>
+
+    <!--GEOIP-->
+    
+    <!-- END GEOIP -->
+
+    
+    
+    <script type="text/javascript">
+        window.getScript(window.globalnavURL +
+                         'sites/themes/global/j/global-nav.js');
+        
+            
+        
+
+        $(window).on('hashchange', function () {
+            var currentHash = window.location.hash;
+
+            if (currentHash === '#logout') {
+                $.get('/accounts/sign-out/');
+            }
+        });
+    </script>
+    
+
+
+        
+    
+
+    
+        <div id="body_wrap">
+            <div id="container">
+    
+    
+
+        
+            
+        
+
+        
+                <!-- ### PAGE TITLE WITH SPONSORSHIP ### -->
+                <div id="page_head">
+            
+                    <div class="advertisement">
+                        <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule210x50">
+            
+
+            <!--
+                // unit: leaderboard-210x50
+                // uri: /health-and-human-body/human-diseases/aids-twenty/
+                // site_name: science
+                // zone: healthandhumanbody_disease
+                // width: 210
+                // height: 50
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 867969146
+                // tile: 170
+                // refreshable: False
+                // regex: /health-and-human-body/human-diseases/[.]*
+                // page_taxonomy: None
+                // ad_taxonomy: None
+                // taxonomy_match: False
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"science/healthandhumanbody_disease",
+                            'dimensions':"210x50",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "210", "variability": 100, "height": "50"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.science/healthandhumanbody_disease');
+                    inc.push('sz=210x50');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+                    </div>
+            
+
+            
+
+    
+
+            
+
+            
+
+	<h1>Search for a Cure—AIDS Turns 20</h1>
+	
+	
+
+
+                </div>
+        
+
+                <div id="content">
+        
+                    
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+    
+    
+
+		
+		
+			
+            
+			
+			
+	 		
+
+
+
+<!-- start nav module content -->
+	
+		<!-- start object content -->
+		<div class="general">		
+			
+
+
+
+
+
+
+
+	
+	
+		
+		 
+		
+		
+		<ul class="nav ">
+			
+			
+			
+			 	
+					
+						
+							<li class="nav1 "><a href="/science/" title="Science and Space Home">Science and Space Home</a></li>
+						
+					
+				
+					
+						
+							
+								<li class="nav2 "><a href="/science/innovation/" title="Innovation and Tech">Innovation and Tech</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav3 "><a href="/science/archaeology/" title="Archaeology">Archaeology</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav4 selected"><a href="/science/earth/" title="Earth">Earth</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav5 "><a href="/science/health-and-human-body/" title="Health and Human Body">Health and Human Body</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav6 "><a href="/science/prehistoric-world/" title="Prehistoric World">Prehistoric World</a></li>
+							
+						
+					
+				
+					
+						
+							
+								<li class="nav7 "><a href="/science/space/" title="Space">Space</a></li>
+							
+						
+					
+					
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+		</div>
+		<!-- end object content -->
+		<script type="text/javascript">if(taxonomy != undefined)hiLiteSubNavByTaxonomy();</script>
+		
+	
+<!-- end nav module content -->
+
+			
+	             		
+		
+		
+
+    
+
+
+		
+		
+
+    
+
+        
+
+        
+
+        
+
+		
+
+		<div id="content_page_specific">
+			
+			<!-- ### LEFT COLUMN ### -->
+			<div id="content_mainA" class="">
+				
+	
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+    
+    
+
+		
+		
+			
+            
+			
+			
+	 		
+
+
+
+  
+    
+    
+
+
+
+<script type="text/javascript" src="//assets.nationalgeographic.com/modules-livefyre/js/livefyre_auth.js"></script>
+<script type="text/javascript" src="//assets.nationalgeographic.com/modules-livefyre/js/livefyre_manager.js"></script>
+<script type="text/javascript">
+
+if ('undefined' == typeof livefyreConfig) {
+    var livefyreConfig = {
+        "global" : {
+            "network": "natgeo.fyre.co"
+        },
+        "streams": []
+    }
+}
+
+if (window.getScript){
+    window.getScript("http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js").then(function() {
+        _M.ready(function(core) {
+            var lf_debug =  false; 
+            window.livefyreManager = new LivefyreManager(core, lf_debug);
+        });
+    });
+}
+</script>
+
+
+
+
+
+        
+        
+            
+            
+
+            <div class="subsection">
+                <div class="primary_photo">
+                    
+
+                            
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/008/cache/aids-injection_800_600x450.jpg"  width="600" height="450" alt="Photo: An AIDS patient&amp;#x27;s weekly dose of testosterone" />	
+
+
+                        
+
+                        
+                            <div class="caption"><p>Washington, D.C., artist and AIDS patient W. Maxwell Lawton gives himself a weekly testosterone injection and takes a plethora of prescription pills. Though fighting the disease was "a full time job," Lawton lived more than a decade longer than doctors predicted. He died in 2006.</p></div>
+                        
+
+                        
+                            <p class="credit">Photograph by Karen Kasmauski</p>
+                        
+                </div><!-- .primary_photo -->
+                <script type="text/javascript">timerCount('primary_photo');</script>
+            </div>
+            
+        
+
+
+<div class="subsection">
+
+    <div class="article_body">
+
+
+        
+        
+
+            
+            
+
+                
+            
+
+        
+
+            
+        
+            
+
+        
+
+        
+            <p class="author">Written by Michael Klesius</p>
+        
+
+        
+            <p class="publication">Republished from the pages of <em>National Geographic</em> magazine</p>
+        
+
+        
+
+        <div class="article_text">
+            <p>On a sweltering morning last February, a stray dog lay panting in the doorway of Clinic 17 of the Bangkok Vaccine Evaluation Group. Inside, the drone of an air conditioner filled an upstairs room where a handful of Thai nurses bustled around a 37-year-old heroin addict on an examination table. Injections had so scarred the veins in his arms that the nurses had turned him onto his stomach to draw blood from a vessel in the back of his knee. As the dark liquid trickled into the syringe the man smiled, baring gray teeth.</p><p>"This is going to be very beneficial for society," he said.</p><p>Or so he hopes. His blood, drawn and tested twice a year, is contributing to the worldwide search for a possible preventive vaccine for HIV, the virus that causes the disease AIDS.</p><p>Some 2,500 injecting drug users in Thailand, like the man at Clinic 17, have enrolled in a trial of the first potential HIV vaccine to reach the third and final stage of clinical testing. By the beginning of last year the Thai participants were part of a group of almost 8,000 people in Thailand, Europe, and North America—a7, have enrolled in a trial of the first potential HIV vaccine to reach the third and final stage of clinical testing. By the beginning of last year the Thai participants werell at high risk for HIV but all HIV-negative at the start of three-year trials—who volunteered to receive either injections of the vaccine, called AIDSVAX, or a placebo, without knowing which they would be given.</p><p>In high-risk groups a predictable percentage of participants—from 1.5 to 6 a year, depending on sexual or drug habits—would be expected to become infected with HIV over the course of a trial, even with thorough counseling in risk reduction. To determine if AIDSVAX might lower the percentage, follow-up blood testing takes place at six-month intervals. If the vaccine group shows a lower infection rate than the placebo group, there is evidence that the vaccine is working. But we won't know for certain until the end of the year, when we have results from the first trials, begun in 1998-99, in Europe and North America.</p><p>What we do know is that more than 36 million people worldwide carry HIV, although 95 percent of them are never officially diagnosed HIV-positive. Every 24 hours 15,000 more become infected with the virus, while 8,000 others die of the resultant AIDS. And we know that AIDS victims suffer merciless deaths when their disabled immune systems allow otherwise treatable ailments to become fatal.</p><p>As I traveled from orphanages in Africa to hospices in Russia to clinics in Thailand, I saw the tortured face of AIDS. It grimaced with the pain of fever and nausea. It gasped with fluid-filled lungs. It wore huge, open sores that emerged from deep in the throat and spread over the lips, neck, and torso. In advanced stages of the disease, the central nervous system can begin to deteriorate, leaving some victims powerless even to close their eyes and mouths. Nerve endings in the extremities go numb or tingle as if pricked by thousands of needles. AIDS robs the brain of its cognitive functions, leaving patients raving with dementia. It saps the body's protein, wasting muscles to the bone. Draped in nothing but skin, 20-year-olds look 70. Even then the release of death can lie weeks or months away.</p><p><!-- pagebreak -->Three million people died of AIDS in 2000. As the pandemic grows, it forces the world to see what it may not want to see: That diseases arising among specific populations—prostitutes (known to HIV/AIDS specialists as "sex workers") and their customers, drug users, and gay men—can flare into greater pandemics. That women in the developing world have little leverage to negotiate safe sex with their partners and are often abused for trying. That poverty, more than any single factor, drives the spread of AIDS by forcing young people into sex work or, as in Eastern Europe, leading them to the trap of injecting drugs. And that rich nations are often insensitive to the health problems of impoverished ones. Ninety-four out of every hundred HIV-infected people live in developing nations, where currently available drug therapies are largely unaffordable. While such medicines do not prevent infection, they do lower the level of virus in the body and may, according to some experts, thus reduce transmission rates. Many public health officials say that the drugs coupled with prevention programs in developing nations could slow the pace of the pandemic.</p><p>Debate over social and economic issues surrounding AIDS lay years away when the U.S. Centers for Disease Control and Prevention (CDC) sounded the first alarm in June 1981. That month the agency issued a warning about an unusual cellular-immune dysfunction found in "five previously healthy individuals without a clinically apparent underlying immunodeficiency," and a year later the term AIDS was coined. As the disease took on the dimensions of a plague, it swept away notions that great pandemics belong to history. It added to the understanding that an exotic family of viruses called retroviruses, more commonly seen in animals, could infect humans and cause disease. And it confirmed growing data that viruses could cause cancer in humans.</p><p>Some 20 years later "we know more about HIV than we know about any microbe ever studied," says Robert Gallo, who headed the National Institutes of Health (NIH) team that contributed to the discovery of HIV in 1984. But we still don't understand exactly how the virus causes disease.</p><p>HIV seems full of contradictions. It can overwhelm the human immune system, yet the virus itself is fragile. Cold viruses linger on hands, and sometimes for days on doorknobs, but fresh air dries and destabilizes HIV in hours or even minutes. Contact with rubbing alcohol or chlorinated water quickly renders it inactive. Simple bar soap neutralizes HIV by breaking the chemical bonds of its lipids, or fats. And because so few cases of oral transmission have been documented, doctors conclude that the same antiviral compounds in saliva and stomach acids that protect us from a host of germs prove very effective against HIV in low concentrations.</p><p>Once a person is infected with HIV, however, the virus attacks the very immune cells, called T cells, meant to fight it. "Think about trying to invade a fortress," said Gary Nabel, director of NIH's Vaccine Research Center. "Would you start by setting off a grenade in front? No. You would sneak in quietly, penetrate the nucleus, and sit there. You'd clone yourself. You'd make lots of copies. Then, when an opportune occasion came along, when there was a lot of commotion and people were distracted, you'd say, 'Boom! Here I go.'</p><p>"That's what HIV does. That's what has allowed it to become so successful from its perspective and so tragic from ours," said Nabel. During a period of typically eight to ten years HIV lurks in the body, mutating rapidly and thus avoiding recognition. It reproduces massively, and waits. Finally, at the introduction of a disease that an unimpaired immune system would normally control—tuberculosis or pneumonia, for example—the immune system is overcome by HIV so that it cannot fight, and the disease kills.</p><p><!-- pagebreak -->"Nineteen ninety-six was the year the thunder came," Igor Ivanov said, and "the Russians heard it, and they crossed themselves."</p><p>Ivanov, a doctor at the Kaliningrad Regional Infectional Hospital, was referring to the year HIV cut loose in Russia amid the chaos of a collapsing economy. Unemployment shot up, and with it alcoholism and crime. Drug dealers began to create a heroin market in Russia. Through shared needles, HIV reached far beyond its African origins into a country that during Soviet times had tightly controlled what crossed its borders.</p><p>"I got HIV by using a friend's syringe," said Dennis, 22, a patient at the Anti-AIDS Center in the Kaliningrad hospital. "I was 14 when I started shooting. I had no idea of the risks. It was cool. It was in fashion." Dennis stood tall with broad shoulders and red hair. He wasn't sick yet but claimed he had been suffering chest pains. "Now my friends are gone," he continued. "They don't want to shake my hand. My only friends now are HIV-positives."</p><p>"We knew we were on the edge in 1995," said Tatiana Nikitina, chief doctor at the Anti-AIDS Center. The region already suffered Russia's highest rates of syphilis and hepatitis. Prostitution, common to many port cities, complicated the picture. "AIDS started to spread not only among men but among women too, as drugs and prostitution are linked," said Nikitina. "It's all connected to the period when the free market made many things available for the first time, including drugs."</p><p>If 1996 brought AIDS to Russia, the same year saw the advent in the West of protease inhibitors, drugs that suppress the ability of HIV to replicate.</p><p>But protease inhibitors, often combined with other HIV drugs such as AZT, are far from prevention or cure. Their effects lift the death sentence of an HIV infection only for a time. Furthermore, they cost as much as $15,000 a year, with huge drug-company profit margins, making them affordable in the U.S. and Europe but generally out of reach in developing nations.</p><p>In 1998 the Brazilian government began to produce and distribute copies of brand-name AIDS drugs using loopholes in international trade patents held by American and European pharmaceutical companies. Brazil's model has cut the death rate from AIDS in that country by half and stabilized the growth rate for new infections. Recent World Trade Organization negotiations pointed toward increased low-cost availability of AIDS drugs in other developing nations.</p><p>While drug therapy results are promising, the use of protease inhibitors and other antivirals, such as AZT, can produce grave side effects that include nausea, bone loss, diabetes, liver damage, raised cholesterol levels, and depression. And doctors do not yet understand why HIV drugs rearrange fat in the body. The face becomes sunken and the limbs wizened while fat piles up elsewhere. To see the bulging belly and the humped back of a patient who has taken antivirals for several years only underscores the need to find another way to inhibit HIV.</p><p>"Historically vaccines are the only way to stop an epidemic," said Dr. Peggy Johnston, assistant director for AIDS vaccines at NIH. "But while a vaccine used as a public health tool might slow an epidemic or prevent one from starting, so far vaccines have not helped sick people."</p><p>Lusaka, Zambia, is a city where the worst-case AIDS scenario is coming true—HIV has infected one in three adults. There I met Evans Ganzini Banda, a clean-cut Zambian in his late 20s. Not long ago Banda became one of 650,000 people to have lost both parents to AIDS in this country where, like many countries in sub-Saharan Africa, widespread prostitution and multiple sexual partners are common.</p><p><!-- pagebreak -->Faced with the expense of supporting five sisters, Banda founded a newspaper called <em>Trend Setters</em>, which prints frank articles about the risks of HIV and other sexually transmitted diseases. As further illustration of Lusaka's plight, he ushered me into a taxi one Saturday night for a very uncomfortable exercise.</p><p>"The nightclubs are where AIDS is happening," he said as we toured the city.</p><p>We pulled up in front of one such club, a cinder-block structure with a corrugated steel roof. A group of teenage girls clustered at the car window. One of them, a gangly adolescent in beat-up high heels and a miniskirt, introduced herself as Adrina and slid into the car.</p><p>"How much?" asked Banda.</p><p>"It depends on what you want."</p><p>He told her.</p><p>"Thirty thousand kwacha [about ten U.S. dollars]," she said. "With condom."</p><p>"How much without?" asked Banda.</p><p>She shook her head.</p><p>"Why not?" he asked.</p><p>"AIDS," she said.</p><p>Banda pressed: "OK, 60,000 kwacha, without condom. "</p><p>She hesitated, then answered: "A hundred thousand, without."</p><p>Banda looked at me. We had found the value of a life here—about $33.</p><p>We told Adrina we were actually taking a survey and asked her why she would risk her life. She said she had no other way to make money for the coming week. She was trying to save $125 to start a business selling secondhand clothes imported from the U.K. In the meantime she had one commodity to sell.</p><p>We gave her some money, about twice what she could have expected from a typical customer. Banda implored her to go home. She climbed out of the car counting the cash, leaving us pessimistic about her chances.</p><p>On a rainy winter day on the NIH campus back in the U.S., the Vaccine Research Center's Gary Nabel summed it up thus: "The problems of the developing world are our problems too. We're already dealing with more than 36 million incubators walking around with this virus, spreading it to other people. And it's got enormous abilities for adapting to new niches."</p><p>Clearly, what causes AIDS and what causes an AIDS pandemic are two very different, intractable problems. But the words I'd heard about vaccines from Peggy Johnston at NIH rang true. A future vaccine will not cure Dennis, already infected with HIV, and offers little hope for Adrina or the Thai man at Clinic 17, in danger of becoming infected soon. But a vaccine might someday make a difference for people like them, for their countries, for the world. Until that day arrives, the AIDS crisis will continue to rampage through developing nations with unpredictable consequences for the future of all humankind.</p><p><a href="http://ngm.nationalgeographic.com/"><strong>What's in <em>National Geographic</em> magazine this month? Find new articles, maps, photos, and more online.</strong></a></p>
+        </div><!-- .article_text-->
+
+        
+
+        
+        
+        <div class="social_buttons">
+            <!--<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+            <fb:like width="437" show_faces="false" href="http://science.nationalgeographic.com/science/health-and-human-body/human-diseases/aids-twenty/"></fb:like>-->
+            <div class="addthis_toolbox" >
+    	        <a class="addthis_button_facebook_like"></a>
+    			<a class="addthis_button_tweet" tw:via="NatGeo" tw:text="AIDS Cure Article, HIV Vaccine Information, AIDS Research Facts -- National Geographic" tw:url="http://science.nationalgeographic.com/science/health-and-human-body/human-diseases/aids-twenty/" tw:counturl="http://science.nationalgeographic.com/science/health-and-human-body/human-diseases/aids-twenty/"></a>
+    			<a class="addthis_button_google_plusone"></a>
+    			<a class="addthis_button_email"></a>
+    	        <a class="addthis_button_expanded">More &raquo;</a>
+    		</div>
+        </div>
+        
+
+        
+
+          
+            
+        
+        <script type="text/javascript">timerCount('article_body');</script>
+    </div><!-- .article_body-->
+
+    
+
+<div class="aside">
+	
+
+	
+	
+	<div id="share_buttons">
+		<h3 class="title">Share</h3>
+		<div class="addthis_toolbox" >
+	        <p><a class="addthis_button_facebook_like"></a></p>
+			<p><a class="addthis_button_tweet" tw:via="NatGeo" tw:text="AIDS Cure Article, HIV Vaccine Information, AIDS Research Facts -- National Geographic"	tw:url="http://science.nationalgeographic.com/science/health-and-human-body/human-diseases/aids-twenty/" tw:counturl="http://science.nationalgeographic.com/science/health-and-human-body/human-diseases/aids-twenty/"></a></p>
+			<p class="google_addthis"><a class="addthis_button_google_plusone"></a></p>
+			<p><a class="addthis_button_email">Email</a></p>
+	        <p><a class="addthis_button_expanded">More &raquo;</a></p>
+		</div>
+	</div><!-- #share -->
+	
+	
+	
+	
+
+    
+		
+
+</div><!-- .aside-->
+
+
+</div><!-- .subsection -->
+
+
+
+
+
+			
+	             		
+		
+		
+
+    
+
+
+
+		
+		
+
+    
+
+	
+
+    
+
+		
+			
+
+
+
+
+
+<div class="subsection" >
+    
+	
+    
+		
+	
+	       
+			
+			<div  class="primary full_width">
+				
+	            
+			
+				
+		 		
+
+
+
+
+
+ 
+
+
+
+<div class="promo_collection thumbnail_grid">
+	
+	
+	
+		
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h3 class="title">Related Features</h3>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="wide ">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+
+
+	
+	<li class="first ">
+		
+		    <a href="/science/health-and-human-body/human-body/brain-article/" title="Brain" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/065/cache/brain-interactive_6568_160x120.jpg"  width="160" height="120" alt="Photo: Chess player" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="/science/health-and-human-body/human-body/brain-article/" title="Brain" >Brain</a></p>
+</li>
+
+
+
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class=" ">
+		
+		    <a href="/science/photos/lungs/" title="Lungs Photos" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/012/cache/volconic-fumes_1284_160x120.jpg"  width="160" height="120" alt="Photo: Man in mask surrounded by volcanic ash and smoke" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="/science/photos/lungs/" title="Lungs Photos" >Lungs Photos</a></p>
+</li>
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="last ">
+		
+		    <a href="/science/photos/smallpox/" title="Smallpox" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/012/cache/smallpox-infections_				
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="last ">
+		
+		    <a href="/science/photos/smallpox/" title="Smallpox" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-1213_160x120.jpg"  width="160" height="120" alt="Photo: Two men examining a Native American boy" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="/science/photos/smallpox/" title="Smallpox" >Smallpox</a></p>
+</li>
+
+
+
+							
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+	
+	
+	
+
+
+	
+
+
+	
+</div><!-- .promo_collection -->
+
+
+
+
+				
+		             		
+			</div>	
+			
+		
+	
+	
+    
+    
+
+</div>
+
+
+		
+		
+
+    
+
+		
+					
+		
+
+    
+
+		
+					
+		
+
+    
+
+		
+					
+		
+
+    
+
+		
+					
+		
+
+    
+
+
+			</div><!-- #content_mainA -->
+
+			<hr class="hidden" />
+
+			<!-- ### RIGHT COLUMN ### -->
+           	<div id="content_mainB" class="aside">
+				
+
+					
+					  
+					    
+  					    
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+
+ 
+
+	
+	
+	<div class="promo_collection features_module custom" id="none">
+	
+	
+	
+	
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h2>The Innovators Project</h2>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="first ">
+			
+				
+				  
+				    <a href="http://news.nationalgeographic.com/news/innovators/2014/05/140501-archaeology-innovation-science/" title="Great Innovators in Archaeology " class="">
+						
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/785/cache/petrie-horizontal-new_78521_270x172.jpg"  width="270" height="172" alt="Picture of Sir Flinders Petrie   " />	
+
+
+					</a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://news.nationalgeographic.com/news/innovators/2014/05/140501-archaeology-innovation-science/" title="Great Innovators in Archaeology ">Great Innovators in Archaeology </a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>Meet some of science's most important movers and shakers—from past and present.</p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+		
+
+	
+
+
+	
+	<p class="action"><a href="http://news.nationalgeographic.com/news/innovators/">See more innovators &raquo;</a></p>
+	
+
+
+	
+	
+	</div><!-- .promo_collection -->
+	
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+
+ 
+
+	
+	
+	<div class="promo_collection features_module" id="kids-featured-blog">
+	
+	
+	
+	
+
+
+
+
+
+
+
+	
+	
+		
+		 
+		
+		
+		<ul class="">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="first ">
+			
+				
+				  
+				    <a href="http://outofedenwalk.nationalgeographic.com/" title="Out of Eden Walk" class="">
+						
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/635/cache/paul-salopek-ethiopia-walk3-990x659_63576_160x120.jpg"  width="160" height="120" alt="Paul-Salopek-Ethiopia-Walk3-990x659.jpg" />	
+
+
+					</a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://outofedenwalk.nationalgeographic.com/" title="Out of Eden Walk">Out of Eden Walk</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>Where will Paul Salopek walk on his seven-year adventure? Find out as he updates us from the field.</p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="last ">
+			
+				
+				  
+				    <a href="http://food.nationalgeographic.com/" title="Feed the World" class="">
+						
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/786/cache/hub-tease2_78686_160x120.jpg"  width="160" height="120" alt="hub_tease2.jpg" />	
+
+
+					</a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://food.nationalgeographic.com/" title="Feed the World">Feed the World</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>National Geographic explores how we can feed the growing population without overwhelming the planet in our food series.</p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+							
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+		
+
+	
+
+
+	
+
+
+	
+	
+	</div><!-- .promo_collection -->
+	
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+  					  
+					  
+					
+
+                    
+					
+    					<div class="advertisement box">
+    						<h3>Advertisement</h3>
+    						
+    							
+    								
+    									
+    
+    										<!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule300x250">
+            
+
+            <!--
+                // unit: box1-300x250
+                // uri: /health-and-human-body/human-diseases/aids-twenty/
+                // site_name: science
+                // zone: healthandhumanbody_disease
+                // width: 300
+                // height: 250
+                // css_class: 
+                // gpt_dimensions: 300x250,300x600
+                // keywords: 
+                // bust: 741659597
+                // tile: 175
+                // refreshable: False
+                // regex: /health-and-human-body/human-diseases/[.]*
+                // page_taxonomy: None
+                // ad_taxonomy: None
+                // taxonomy_match: False
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"science/healthandhumanbody_disease",
+                            'dimensions':"300x250",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "300", "variability": 90.0, "height": "250"}, {"width": 300, "variability": 10.0, "height": 600}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.science/healthandhumanbody_disease');
+                    inc.push('sz=300x250');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+    										
+    								
+    							
+    						
+    					</div>
+					
+    				
+                    
+                    
+					    
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+
+ 
+
+	
+	
+	<div class="promo_collection features_module custom" id="none">
+	
+	
+		
+			
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h2>How to Feed Our Growing Planet</h2>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="first ">
+			
+				
+				  
+				    <a href="http://food.nationalgeographic.com/" title="Feed the World" class="">
+						
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/786/cache/hub-tease2_78686_270x172.jpg"  width="270" height="172" alt="hub_tease2.jpg" />	
+
+
+					</a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://food.nationalgeographic.com/" title="Feed the World">Feed the World</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>National Geographic explores how we can feed the growing population without overwhelming the planet in our food series.</p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+		
+		
+
+	
+
+
+	
+	<p class="action"><a href="http://food.nationalgeographic.com/">See blogs, stories, photos, and news » &raquo;</a></p>
+	
+
+
+	
+	
+	</div><!-- .promo_collection -->
+	
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+
+ 
+
+	
+	
+	<div class="promo_collection features_module custom" id="none">
+	
+	
+		
+			
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h2>Phenomena</h2>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="first ">
+			
+				
+				  
+				    <a href="http://phenomena.nationalgeographic.com/2014/05/29/from-womb-to-womb/" title="Explaining Stillbirth" class="">
+						
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/802/cache/marmoset-990x450-phenomena_80230_270x172.jpg"  width="270" height="172" alt="" />	
+
+
+					</a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://phenomena.nationalgeographic.com/2014/05/29/from-womb-to-womb/" title="Explaining Stillbirth">Explaining Stillbirth</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>A new study on marmoset monkeys offers some hints about the causes of stillbirth.</p>
+<p><em>Thursday</em></p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+		
+		
+
+	
+
+
+	
+	<p class="action"><a href="http://phenomena.nationalgeographic.com/">See more posts &raquo;</a></p>
+	
+
+
+	
+	
+	</div><!-- .promo_collection -->
+	
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+
+ 
+
+	
+	
+	<div class="promo_collection features_module custom" id="none">
+	
+	
+		
+			
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h2>Latest Video</h2>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="first video">
+			
+				
+				  
+				    <a href="http://video.nationalgeographic.com/video/news/150106-korea-dog-meat-farm-rescue-vin" title="Pups Rescued From Dog Meat Farm Need Adoption" class="video-image">
+						
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/875/cache/150106-korea-dog-meat-farm-rescue-vin_87593_270x172.jpg"  width="270" height="172" alt="One of the dogs rescued from a dog meat farm in South Korea." />	
+
+
+					</a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://video.nationalgeographic.com/video/news/150106-korea-dog-meat-farm-rescue-vin" title="Pups Rescued From Dog Meat Farm Need Adoption">Pups Rescued From Dog Meat Farm Need Adoption</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>Humane Society International brokered a deal with a farmer near Seoul, South Korea, in which he will stop raising dogs for meat and switch to growing crops instead. <em>Video.</em></p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+		
+		
+
+	
+
+
+	
+	<p class="action"><a href="http://video.nationalgeographic.com/">See more videos &raquo;</a></p>
+	
+
+
+	
+	
+	</div><!-- .promo_collection -->
+	
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+	
+		
+			<div class="promo_collection links_list science-and-space-news ">
+		
+		
+		
+			
+				
+				    
+					    
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h3 class="title">Science and Space News</h3>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="bullets ">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+	
+
+
+	
+		
+
+
+
+
+
+
+<li class="first">
+
+    <a href="http://news.nationalgeographic.com/news/2015/01/150106-south-korea-dog-meat-farm-rescue-video-culture/" title="Watch Dogs Rescued From a Dog Meat Farm Get New Shot at Life " >Watch Dogs Rescued From a Dog Meat Farm Get New Shot at Life </a>
+
+	
+
+</li>
+
+	
+	
+	
+
+
+
+
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+	
+
+
+	
+		
+
+
+
+
+
+
+<li >
+
+    <a href="http://news.nationalgeographic.com/news/2015/01/pictures/150106-climbing-yosemite-caldwell-jorgeson-capitan/" title="Photographing Attempt at History-Making Climb" >Photographing Attempt at History-Making Climb</a>
+
+	
+
+</li>
+
+	
+	
+	
+
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+	
+
+
+	
+		
+
+
+
+
+
+
+<li >
+
+    <a href="http://news.nationalgeographic.com/news/2015/01/150106-kepler-goldilocks-exoplanets-universe-space-science/" title="New Earthlike Planets Found" >New Earthlike Planets Found</a>
+
+	
+
+</li>
+
+	
+	
+	
+
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+	
+
+
+	
+		
+
+
+
+
+
+
+<li >
+
+    <a href="/news/2015/01/150106-disco-clams-animals-science-oceans-light-predators/" title="Why Do &#39;Disco Clams&#39; Put on a Show?" >Why Do 'Disco Clams' Put on a Show?</a>
+
+	
+
+</li>
+
+	
+	
+	
+
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+	
+
+
+	
+		
+
+
+
+
+
+
+<li >
+
+    <a href="http://news.nationalgeographic.com/news/2015/01/150106-rhino-poaching-south-africa-animals-conservation/" title="Can Legalizing Trade in Rhino Horn Save Species?" >Can Legalizing Trade in Rhino Horn Save Species?</a>
+
+	
+
+</li>
+
+	
+	
+	
+
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+	
+
+
+	
+		
+
+
+
+
+
+
+<li >
+
+    <a href="http://news.nationalgeographic.com/news/2015/01/150106-utahraptor-death-trap-fossil/" title="Dinosaur &#39;Death Trap&#39; Discovered" >Dinosaur 'Death Trap' Discovered</a>
+
+	
+
+</li>
+
+	
+	
+	
+
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+	
+
+
+	
+		
+
+
+
+
+
+
+<li >
+
+    <a href="http://news.nationalgeographic.com/news/2015/01/150105-iraq-syria-refugees-isis-winter/" title="Winter Brings New Misery for Middle East Refugees" >Winter Brings New Misery for Middle East Refugees</a>
+
+	
+
+</li>
+
+	
+	
+	
+
+
+
+
+							
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+	
+
+
+	
+		
+
+
+
+
+
+
+<li class="last">
+
+    <a href="http://news.nationalgeographic.com/news/2015/01/150105-starstruck-sky-events-comet-planets-science/" title="5 Sky Events This Week" >5 Sky Events This Week</a>
+
+	
+
+</li>
+
+	
+	
+	
+
+
+
+
+							
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+					
+				
+			
+				
+
+
+	
+	<p class="action"><a href="http://news.nationalgeographic.com/news/science">More news &raquo;</a></p>
+	
+
+
+		
+		
+		
+			</div><!-- .promo_collection -->
+		
+	
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+
+ 
+
+	
+	
+	<div class="promo_collection features_module custom" id="none">
+	
+	
+		
+			
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h2>Shop Our Space Collection</h2>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="first ">
+			
+				
+				  
+				    <a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=P130&addFacet=9004:P130&code=NGHPMN94404" title="Be the First to Own &lt;i&gt;Cosmos: A Spacetime Odyssey&lt;/i&gt;" class="">
+						
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/775/cache/300x225-030414-spacebooks3_77572_270x172.jpg"  width="270" height="172" alt="300x225_030414_spaceBooks3.jpg" />	
+
+
+					</a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=P130&addFacet=9004:P130&code=NGHPMN94404" title="Be the First to Own &lt;i&gt;Cosmos: A Spacetime Odyssey&lt;/i&gt;">Be the First to Own <i>Cosmos: A Spacetime Odyssey</i></a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>The updated companion book to Carl Sagan's <em>Cosmos</em>, featuring a new forward by Neil deGrasse Tyson is now available. Proceeds support our mission programs, which protect species, habitats, and cultures.</p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+		
+		
+
+	
+
+
+	
+	<p class="action"><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=P130&amp;addFacet=9004:P130&amp;code=NGHPMN94404">Shop now &raquo;</a></p>
+	
+
+
+	
+	
+	</div><!-- .promo_collection -->
+	
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+
+	<div class="openHTML">
+		
+	    
+	    
+	    	
+    	    	<!-- DONT REMOVE -->
+<script type="text/javascript">
+ $('#kids-featured-blog').prepend('<div><img src="http://images.nationalgeographic.com/wpf/media-live/graphic/125-right-rail-2-cb1361573725.jpg" alt="v class="openHTML">
+		
+	    
+	    
+	    	
+    	    	<!-- DONT REMOVE -->
+<script type="text/javascript">
+ $('#kids-featured-blog').prepend('<div><img src="http://images.nationalgeographic.com/wpCelebrating 125 Years National Geographic" style="border:hidden" /></div><div class="clear"></div>');
+</script>
+    	    
+	    
+	</div>
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+
+ 
+
+	
+	
+	<div class="promo_collection features_module custom" id="none">
+	
+	
+		
+			
+
+
+
+
+
+
+
+	
+	
+		
+		    
+    		    
+    			    
+    			        <h2>The Genographic Project</h2>
+    			    
+    			
+			
+		
+	
+		
+		 
+		
+		
+		<ul class="">
+			
+			
+			
+			    
+					
+						
+							
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="first ">
+			
+				
+				  
+				    <a href="https://genographic.nationalgeographic.com/genographic/lan/en/overview.html" title="Genetics" class="">
+						
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/111/cache/genographic-dna-strand_11156_100x75.jpg"  width="100" height="75" alt="Photo: DNA replica" />	
+
+
+					</a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="https://genographic.nationalgeographic.com/genographic/lan/en/overview.html" title="Genetics">Genetics</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>Learn about what's passed on from generation to generation with an interactive look at DNA.</p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+						
+					
+					
+			    
+					
+						
+							
+								
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+			<li class="last ">
+			
+				
+				  
+				    <a href="https://genographic.nationalgeographic.com/genographic/lan/en/participate.html" title="Get Involved" class="">
+						
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/111/overrides/genographic-chad_11171_100x75.jpg"  width="100" height="75" alt="9299.jpg" />	
+
+
+					</a>
+					
+				
+			
+				
+		
+		
+		    
+		    
+	    	<h4><a href="https://genographic.nationalgeographic.com/genographic/lan/en/participate.html" title="Get Involved">Get Involved</a></h4>
+	    	
+		
+		
+		
+			
+			    <p><p>Support the Research of the Genographic Project</p></p>
+			
+		
+		
+	</li>
+	
+
+
+
+							
+						
+					
+					
+			    
+			
+			
+
+		
+		</ul>
+
+
+
+
+
+		
+		
+
+	
+
+
+	
+
+
+	
+	
+	</div><!-- .promo_collection -->
+	
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+<div class="promo_collection advertisement small">
+	<div class="special_ad_section">
+		<h3>Special Ad Section</h3>
+		
+		<ul>
+		    <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div style="padding:0; margin: 0">
+            
+
+            <!--
+                // unit: box1-300x125
+                // uri: /health-and-human-body/human-diseases/aids-twenty/
+                // site_name: science
+                // zone: healthandhumanbody_disease
+                // width: 300
+                // height: 125
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 334734251
+                // tile: 104
+                // refreshable: False
+                // regex: /health-and-human-body/human-diseases/[.]*
+                // page_taxonomy: None
+                // ad_taxonomy: None
+                // taxonomy_match: False
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"science/healthandhumanbody_disease",
+                            'dimensions':"300x125",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "300", "variability": 100, "height": "125"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.science/healthandhumanbody_disease');
+                    inc.push('sz=300x125');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+            <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div style="padding:0; margin: 0">
+            
+
+            <!--
+                // unit: box2-300x125
+                // uri: /health-and-human-body/human-diseases/aids-twenty/
+                // site_name: science
+                // zone: healthandhumanbody_disease_2
+                // width: 300
+                // height: 125
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 208168457
+                // tile: 153
+                // refreshable: False
+                // regex: /health-and-human-body/human-diseases/[.]*
+                // page_taxonomy: None
+                // ad_taxonomy: None
+                // taxonomy_match: False
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"science/healthandhumanbody_disease_2",
+                            'dimensions':"300x125",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "300", "variability": 100, "height": "125"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.science/healthandhumanbody_disease_2');
+                    inc.push('sz=300x125');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+        </ul>
+	</div><!-- .special_ad_section -->
+</div><!-- .promo_collection -->
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+					
+					
+                   
+                       <div class="advertisement sponsored_links">
+                           <!-- advertising -->
+
+
+    
+        
+        
+            
+            
+                <div id="advertisingModule300x250">
+            
+
+            <!--
+                // unit: box2-300x250
+                // uri: /health-and-human-body/human-diseases/aids-twenty/
+                // site_name: science
+                // zone: ng2_healthandhumanbody_disease
+                // width: 300
+                // height: 250
+                // css_class: 
+                // gpt_dimensions: None
+                // keywords: 
+                // bust: 582199895
+                // tile: 138
+                // refreshable: False
+                // regex: /health-and-human-body/human-diseases/[.]*
+                // page_taxonomy: None
+                // ad_taxonomy: None
+                // taxonomy_match: False
+            -->
+
+            <script type="text/javascript">
+                // Falling back because someone put this include on foreign sites that we care about.
+                try{
+                    (function(ctx){
+                        var slot = this.WPF_admanager.defineAd({
+                            'placement':"science/ng2_healthandhumanbody_disease",
+                            'dimensions':"300x250",
+                            'refreshable':"False",
+                            'variable_dimensions': '[{"width": "300", "variability": 100, "height": "250"}]'
+                        });
+                        this.WPF_admanager.displayAd(slot.id, ctx)
+                    })(window);
+                }catch(e){
+                    if(console)
+                        if(console.log){
+                            console.log("Warning, advertising_init is not included.");
+                            console.log("Some features like tiling will be ignored.");
+                            console.log("images.nationalgeographic.com/wpf/sites/common/j/advertising_init.js");
+                        }
+                    var inc=new Array('//ad.doubleclick.net/adj/ng.science/ng2_healthandhumanbody_disease');
+                    inc.push('sz=300x250');
+                    inc.push('ptile=1');
+                    inc.push('ord='+Math.floor(Math.random() * 1e6) + 1);
+                    document.write( '<script type="text/javascript" src="${script}"><\/script>'.split('${script}').join(inc.join(';')));
+                }
+            </script>
+
+            </div>
+        
+    
+
+
+                       </div><!-- .advertisement -->
+                   				
+				
+
+           	</div><!-- content_mainB -->
+
+		</div><!-- #content_page_specific -->
+
+		<hr class="hidden" />
+
+		
+		    
+
+    
+
+		
+			
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+    
+
+    
+		
+		
+				
+		
+
+
+			
+            
+
+			
+	 		
+
+
+
+
+
+  
+	
+	<div class="promo_collection carousel js_enabled seven">
+	
+		
+			
+				
+
+
+
+
+
+
+
+	
+	
+		
+		    
+		        <h2>More From National Geographic</h2>
+		    
+		
+	
+		
+		 
+		
+		
+		<ul class="jcarousel-skin-geocore restrain  seven">
+			
+			
+			
+			 	
+					
+						
+							
+
+
+
+
+
+
+	
+	<li class="first ">
+		
+		    <a href="http://outofedenwalk.nationalgeographic.com/2013/01/22/lets-walk/" title="Let&#39;s Walk" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/635/cache/paul-salopek-ethiopia-walk3-990x659_63576_100x75.jpg"  width="100" height="75" alt="Paul-Salopek-Ethiopia-Walk3-990x659.jpg" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://outofedenwalk.nationalgeographic.com/2013/01/22/lets-walk/" title="Let&#39;s Walk" >Let's Walk</a></p>
+</li>
+
+
+
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="/adventure/adventurers-of-the-year/2015/aleksander-doba/" title="Meet the Adventurers " class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/853/overrides/portrait-porthole-kayak_85318_100x75.jpg"  width="100" height="75" alt="Picture of Aleksander Olek Doba in porthole" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="/adventure/adventurers-of-the-year/2015/aleksander-doba/" title="Meet the Adventurers " >Meet the Adventurers </a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="/animals/photos/your-puppy-pictures/" title="Your Puppy Pictures" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/347/overrides/puppy-fun_34713_100x75.jpg"  width="100" height="75" alt="Photo: Close-up of a puppy" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="/animals/photos/your-puppy-pictures/" title="Your Puppy Pictures" >Your Puppy Pictures</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="http://www.nationalgeographic.com/explorers/explorer-moment-of-week/" title="Explorer Moment of the Week" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/769/cache/emow-george-kourounis-gateway-to-hell-990_76996_100x75.jpg"  width="100" height="75" alt="Picture of George Kourounis rappelling across a fiery pit  " />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://www.nationalgeographic.com/explorers/explorer-moment-of-week/" title="Explorer Moment of the Week" >Explorer Moment of the Week</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="http://adventure.nationalgeographic.com/adventure/extreme-photo-of-the-week/#/ice-climb-will-gadd-eidfjord-norway_35092_600x450.jpg" title="Extreme Photos" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/350/overrides/ice-climb-will-gadd-eidfjord-norway_35092_100x75.jpg"  width="100" height="75" alt="Photo: Will Gadd ice climbs in Eidfjord, Norway  " />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://adventure.nationalgeographic.com/adventure/extreme-photo-of-the-week/#/ice-climb-will-gadd-eidfjord-norway_35092_600x450.jpg" title="Extreme Photos" >Extreme Photos</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="http://www.nationalgeographic.com/foodfeatures/evolution-of-diet/" title="Are We Eating Correctly?" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/833/cache/tanzania3-1536_83357_100x75.jpg"  width="100" height="75" alt="Picture of two people" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://www.nationalgeographic.com/foodfeatures/evolution-of-diet/" title="Are We Eating Correctly?" >Are We Eating Correctly?</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="/travel/best-winter-trips-2015/" title="Best Winter Trips 2015" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/862/cache/lapland-reindeer-sledding_86213_100x75.jpg"  width="100" height="75" alt="Picture of a reindeer sleigh ride in Lapland, Finland" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="/travel/best-winter-trips-2015/" title="Best Winter Trips 2015" >Best Winter Trips 2015</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="/explorers/grants-programs/emerging-explorers/" title="Emerging Explorers" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/204/cache/albert-calit-erik-jepsen_20453_100x75.jpg"  width="100" height="75" alt="Photo: Albert Yu-Min Lin" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="/explorers/grants-programs/emerging-explorers/" title="Emerging Explorers" >Emerging Explorers</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="http://ngm.nationalgeographic.com/2014/06/puffins/oneill-text" title="Puffin Therapy" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/863/cache/puffin-promo_86341_100x75.jpg"  width="100" height="75" alt="puffin.jpg" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://ngm.nationalgeographic.com/2014/06/puffins/oneill-text" title="Puffin Therapy" >Puffin Therapy</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="  ">
+		
+		    <a href="http://yourshot.nationalgeographic.com/assignments/family-portrait/" title="How Do You Define Family?" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/746/overrides/underwater-family-portrait-yourshot_74689_100x75.jpg"  width="100" height="75" alt="Picture of a family portrait taken underwater" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="http://yourshot.nationalgeographic.com/assignments/family-portrait/" title="How Do You Define Family?" >How Do You Define Family?</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="last ">
+		
+		    <a href="https://genographic.nationalgeographic.cocom/assignments/family-portrait/" title="How Do You Define Family?" >How Do You Define Family?</a></p>
+</li>
+
+
+
+							
+						
+					
+				
+					
+						
+							
+								
+
+
+
+
+
+
+	
+	<li class="lasm/genographic/lan/en/genealogy.html" title="Discover Your Heritage" class="">
+				
+
+
+	<img src="//images.nationalgeographic.com/wpf/media-live/photos/000/281/cache/5-sisters-ancestry-990_28182_100x75.jpg"  width="100" height="75" alt="Photo: Five sister holding hands" />	
+
+
+			</a>
+			
+	
+    <p class="headline"><a href="https://genographic.nationalgeographic.com/genographic/lan/en/genealogy.html" title="Discover Your Heritage" >Discover Your Heritage</a></p>
+</li>
+
+
+
+							
+						
+					
+					
+			
+			
+
+		
+		</ul>
+
+
+
+
+	
+			
+		
+		
+	
+	
+
+
+	
+
+
+	
+	</div><!-- .promo_collection -->
+
+
+
+
+
+			
+	             		
+		
+		
+			
+		
+
+    
+
+
+
+	
+
+
+
+
+		
+		
+
+    
+
+		
+
+                </div><!-- #content -->
+
+    
+
+    
+                <hr class="hidden"/>
+    
+
+    
+                <!-- ### SITE FOOTER ### -->
+                <div class="footer" id="footer_site">
+                    
+                    <div id="footer_breadcrumb">
+                        <ul>
+                            <li class="nav1"><a href="http://www.nationalgeographic.com" id="intl_link_breadcrumb_home">National Geographic Home &raquo;</a></li>
+                            
+                                
+                            <li class="nav2 "><a href="/science">Science &raquo;</a></li>
+                                
+
+                                
+                            <li class="nav3 selected">Search for a Cure—AIDS Turns 20</li>
+                                
+                            
+                        </ul>
+                        
+                    </div><!-- #footer_breadcrumb -->
+                    
+                </div><!-- #footer_site -->
+    
+
+    
+            </div><!-- #container -->
+        </div><!-- #body_wrap -->
+    
+
+    
+        <hr class="hidden"/>
+    
+
+    
+        
+<!-- ### GLOBAL FOOTER (UNIFIED THEME) ### --> 
+<div class="footer section" id="footer_global">
+    <ul class="nav nav_global_tierA"> 
+        <li class="nav1"><a href="http://www.nationalgeographic.com/" id="intl_link_footer_home">Home</a></li> 
+        <li class="nav2"><a href="http://video.nationalgeographic.com/video/player/">Video</a></li>
+        <li class="nav3"><a href="/photography/">Photography</a></li> 
+        <li class="nav4"><a href="/animals/">Animals</a></li> 
+        <li class="nav5"><a href="/environment/">Environment</a></li>
+        <li class="nav6"><a href="/travel/">Travel</a></li>
+
+
+
+
+
+
+        <li class="nav7"><a href="/adventure/">Adventure</a></li>
+        <li class="nav8"><a href="//channel.nationalgeographic.com/channel/" id="intl_link_footer_natgeotv">Television</a></li>
+        <li class="nav9"><a href="//kids.nationalgeographic.com/kids/" id="intl_link_footer_kids">Kids</a></li>
+
+
+
+
+
+
+        <li class="nav10"><a href="//shop.nationalgeographic.com/ngs/index.jsp?code=NG94010" id="intl_link_footer_shop">Shop</a></li>
+
+
+
+
+
+
+    </ul>
+    <ul class="nav nav_global_tierB">
+        <li class="nav13"><a href="/news/">News</a></li>
+        <li class="nav01"><a href="http://ngm.nationalgeographic.com/">The Magazine</a></li>
+        <li class="nav02"><a href="/maps/">Maps</a></li>
+        <li class="nav04"><a href="/science/">Science &amp; Space</a></li>
+        <li class="nav05"><a href="/education/">Education</a></li>
+        <li class="nav06"><a href="http://games.nationalgeographic.com/">Games</a></li>
+        <li class="nav08"><a href="http://events.nationalgeographic.com/">Events</a></li>
+        <li class="nav09"><a href="http://blogs.nationalgeographic.com/">Blogs</a></li>
+        <li class="nav10"><a href="/movies/">Movies</a></li>
+        <li class="nav11"><a href="/explorers/">Explorers</a></li>
+        <li class="nav12"><a href="/mobile">Mobile</a></li>
+        <li class="nav13"><a href="/siteindex/">Site Index</a></li>
+    </ul> 
+    <ul class="nav nav_global_tierC"> 
+        
+             
+                <li class="nav01"><a href="/magazines/" id="intl_link_footer_subscriptions">Magazine Subscriptions</a></li>
+            
+        
+        <li class="nav02"><a href="http://national-geographic.cafepress.com/art?utm_source=nationalgeographic.com&utm_medium=link&utm_campaign=photographybuyprints">Buy Prints</a></li> 
+        <li class="nav03"><a href="http://www.ngdigitalmotion.com/">Stock Footage</a></li> 
+        <li class="nav03"><a href="http://www.nationalgeographicSTOCK.com">Stock Photos</a></li> 
+        <li class="nav04"><a href="http://www.nationalgeographicexpeditions.com/home?utm_source=travel.nationalgeographic.com&amp;utm_medium=Link&amp;utm_content=Footer_link_Our_Trips&amp;utm_campaign=NGdotcom">Our Trips</a></li> 
+        <li class="nav06"><a href="/jobs/">Jobs</a></li> 
+        <li class="nav07"><a href="/siteindex/international/">Global Sites</a></li> 
+        <li class="nav07"><a href="/environment/national-geographic-sustainability/">Sustainability</a></li> 
+        <li class="nav08"><a href="/about/">About</a></li> 
+        <li class="nav09"><a href="/community/email/">Contact</a></li> 
+    </ul> 
+    <ul class="nav nav_global_tierC"> 
+        <li class="nav01">
+             
+                <a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A245&code=NG90414">Gifts</a>
+            
+        </li> 
+        <li class="nav02">
+             
+                <a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A054&addFacet=9004:A054&code=NG90415">DVD's</a>
+            
+        </li> 
+        <li class="nav03">
+            
+                <a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A001&addFacet=9004:A001&code=NG90416">Books</a>
+            
+        </li> 
+        <li class="nav04">
+            
+                <a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A106&addFacet=9004:A106&code=NG90417">Maps &amp; Globes</a>
+            
+        </li> 
+        <li class="nav05">
+            
+                <a href="http://shop.nationalgeographic.com/ngs/browse/category_sale.jsp?categoryId=A223&addFacet=9004:A223&code=NG90413">Sale</a>
+            
+        </li> 
+        <li class="nav06"><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A169&addFacet=9004:A169&code=NG90419">Travel Gear</a></li>
+        <li class="nav07"><a href="http://shop.nationalgeographic.com/ngs/browse/category.jsp?categoryId=A161&addFacet=9004:A161&code=NG90420">Photography Gear</a></li>
+    </ul>
+    <ul class="nav nav_global_tierD">		
+        <li class="nav03"><a href="https://donate.nationalgeographic.org/Page.aspx?pid=184">Donate</a></li> 
+        <li class="nav04"><a href="http://press.nationalgeographic.com/">Press Room</a></li> 
+        <li class="nav05"><a href="/siteindex/customer/">Customer Service</a></li> 
+        <li class="nav06"><a href="http://www.nationalgeographic.com/mediakit/">Advertise With Us</a></li> 
+        <li class="nav07"><a href="/community/terms/">Terms of Service</a></li> 
+        <li class="nav08"><a href="/community/privacy/">Privacy Policy</a></li> 
+    </ul> 
+    <p id="copyright">&copy; 1996-2015 National Geographic Society. All rights reserved.</p> 
+</div><!-- #footer_global -->
+
+
+    
+    <script type="text/javascript" src="http://loadus.exelator.com/load/?p=390&g=001&ctg=&subctg=&kw=&refkw=&gd=" ></script>
+    
+
+
+    
+
+    
+
+
+    <script type="text/javascript">
+
+        
+        var addthis_ng_custom_titleElement = document.getElementsByTagName('title')[0].text;
+        var addthis_ng_custom_pagehref = 'http://on.natgeo.com/eU2I7Q';
+        var addthis_share = {
+            templates: { twitter: addthis_ng_custom_titleElement + ': {{url}} via @NatGeo' },
+
+            url_transforms: {
+                shorten: {
+                    twitter: 'bitly',
+                    facebook: 'bitly'
+                }
+            },
+            shorteners: {
+                bitly: {}
+            }
+
+        };
+
+
+        var addthis_config = {
+            services_expanded: 'blogger, tumblr, wordpress, stumbleupon, digg, reddit, googlereader, linkedin, orkut, sinaweibo, vk',
+            data_track_clickback: false,
+            data_ga_property: 'UA-28236326-1',
+            data_ga_social : true
+        };
+    </script>
+
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ng-dmg"></script>
+        
+
+
+
+
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+window.fbAsyncInit = function() {
+    FB.init({
+        appId        :     '130939060280023',
+        status       :     true, // check login status
+        cookie       :     true, // enable cookies to allow the server to access the session
+        xfbml        :     true,  // parse XFBML
+        channelUrl   :     'http://images.nationalgeographic.com/wpf/sites/common/inc/channel.html'
+    });
+};
+
+(function() {
+    var e = document.createElement('script');
+    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+    e.async = true;
+    document.getElementById('fb-root').appendChild(e);
+}());
+</script>
+
+
+    <div id="gigya_login_div"></div>
+
+
+
+
+
+        
+
+
+</body>
+
+
+
+</html>
+
+cript');
+    e.src = document.location.protocol + '//connect

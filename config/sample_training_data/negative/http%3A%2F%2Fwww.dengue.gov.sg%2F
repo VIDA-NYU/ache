@@ -1,0 +1,760 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>National Environment Agency</title>
+
+<!-- Global Style Start -->
+<link href="include/css/style.css" rel="stylesheet" type="text/css" />
+<link href="include/css/css3.css" rel="stylesheet" type="text/css" />
+<link href="include/css/jquery.selectbox.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="include/css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="include/css/jquery.jscrollpane.css" />
+<!-- Global Style End -->
+
+<style type="text/css"> 
+.addthis_toolbox.addthis_pill_combo a {
+	float: left;
+}
+.addthis_button_compact .at15t_compact {
+	float: left;
+}
+</style>
+
+<!-- jQuery Scripts Start -->
+<script src="include/js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="include/js/jquery-ui-1.8.16.custom.min.js"></script>
+<script src="include/js/searchbar-dropdown.js" type="text/javascript"></script>
+<script src="include/js/navigation.js" type="text/javascript"></script>
+<script type="text/javascript" src="include/js/jquery.selectbox-0.6.1.js"></script>
+<script type="text/javascript" src="include/js/jquery.jfontsize-1.0.js"></script>
+<script src="include/js/jquery.nivo.slider.2.1.modif.js" type="text/javascript"></script>
+<script src="include/js/slider.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="include/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="include/js/jquery.jscrollpane.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('.scroll-pane, .scroll-pane2').jScrollPane();
+	})
+</script>
+<script src="include/js/jquery.tabify.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#menu').tabify();
+	});
+</script>
+<script src="include/js/jquery.printElement.min.js" type="text/javascript"></script>
+<script src="include/js/print.js" type="text/javascript"></script>
+<script src="include/js/tabs.js" type="text/javascript"></script>
+<!-- jQuery Scripts End -->
+
+<script type="text/javascript">
+function openModal()
+{
+    window.open("/advisory/AdvisoryHomePage.asp","",
+    "height=660,width=800");
+}
+
+function openModalOnemap()
+{
+    window.open("http://www.dengue.gov.sg/cms/ehd/loc.asp","",
+    "height=400,width=575");
+}
+
+function openModalHL1()
+{
+   // window.open("/highlight/NewsOn28042013.asp","",
+   window.open("/highlight/MozzieWipeoutCampaignUpdates.asp","",
+    "height=1660,width=1120", scrollbars="yes");
+}
+
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22603176-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div class="wrapper_wrap">
+	<div id="wrapper">
+	<div id="header">
+             <div class="logo">
+                    	<div id="sublogo"><img src="images/wipeout_logo.jpg"  height="95" width="95" alt="Wipe out Logo" /></div>
+                        <div id="corporatelogo"><img src="images/corporate-logo.jpg" alt="NEA Logo" /></div>
+                  </div>
+            <div class="right_sec">
+                <span class="sg_logo"><img src="images/sg_logo.gif" width="220" height="31" alt="Singapore Government Logo"/></span>
+                <form action="">
+                            <fieldset>
+								<!--input name="" type="text" id="search-field"/>
+                                <input type="button" value="Search" class="button"/-->  
+                                
+                          </fieldset>
+                        </form>
+               
+                <ul class="top_nav">               
+                	<!-- <li><a href="/subject.asp?id=60">Feedback</a></li>    -->
+					<li><a href="https://e-services.nea.gov.sg/icare/feedback.aspx" target="_blank">Feedback</a></li> 
+                    <!--li><a href="#">Sitemap</a></li-->
+                    <li><a href="http://www.pqms.moh.gov.sg/apps/fcd_faqmain.aspx?qst=2fN7e274RAp%2bbUzLdEL%2fmJu3ZDKARR3p5Nl92FNtJidBD5aoxNkn9rR%2fqal0IQplImz2J6bJxLTsOxaRS3Xl53fcQushF2hTzrn1PirzKnZhujU%2f343A5TwKDLTU0ml2TfH7cKB%2fJRT7PPvlAlopeq%2f%2be2n%2bmrW%2bZ%2fJts8OXGBjRP3hd0qhSL4A%2bSPXD1IfSFokODp5uFhQl251w7kUnN7D2nmXYwoBTshLnrWNUC0VlzN03X6V00A%3d%3d" class="faq"><strong>FAQS</strong></a></li>
+                    <li><a href="/subject.asp?id=61">Contact Us</a></li>
+                </ul>
+            </div>
+            <div id="navigation">
+                <ul id="nav">
+                    <li class="none"><a href="http://www.dengue.gov.sg" class="ph">Home</a></li>
+                    <li class="anti_p"><a href="#" class="ph">About Dengue</a></li>
+                    <li class="anti_p1"><a href="#" class="ph">Dengue Campaign</a></li>
+                    <li class="anti_p2"><a href="#" class="ph">Dengue Updates</a></li>
+					<li class="anti_p6"><a href="#" class="ph">Newsroom</a></li>
+                    <li class="anti_p3"><a href="#" class="ph">Resources</a></li>
+                    <li class="anti_p4"><a href="#" class="ph">Contact</a></li>
+					<!--li class="anti_p5"><a href="#" class="ph">Take Part</a></li-->                 
+                </ul>
+				
+				<div class="sub_navigation" style="display:none">
+                            <div class="content">
+                                <ul class="sublink">
+                                    <li><a href="/subject.asp?id=10">Dengue Fever</a></li>
+                                    <li><a href="/subject.asp?id=12">The Aedes Mosquito</a></li>
+                                    <li><a href="/subject.asp?id=100">Know the Potential Breeding Sites</a></li>
+                                    <li><a href="/subject.asp?id=101">Prevent Aedes Mosquito breeding</a></li>
+<li><a href="/subject.asp?id=103">Insect Repellent</a></li>
+									<li><a href="http://www.pqms.moh.gov.sg/apps/fcd_faqmain.aspx?qst=2fN7e274RAp%2bbUzLdEL%2fmJu3ZDKARR3p5Nl92FNtJidBD5aoxNkn9rR%2fqal0IQplImz2J6bJxLTsOxaRS3Xl53fcQushF2hTzrn1PirzKnZhujU%2f343A5TwKDLTU0ml2TfH7cKB%2fJRT7PPvlAlopeq%2f%2be2n%2bmrW%2bZ%2fJts8OXGBjRP3hd0qhSL4A%2bSPXD1IfSFokODp5uFhQl251w7kUnN7D2nmXYwoBTshLnrWNUC0VlzN03X6V00A%3d%3d" target="_blank">iFAQ</a></li>
+                                </ul>
+
+                          <!--      <ul class="contact">
+                                    
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon3.gif" width="56" height="56" alt="Report Online"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="/subject.asp?id=60">Report Online</a></div>
+                                            <p>To report infractions</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon4.gif" width="56" height="56" alt="Email"/>
+                                        </div>
+                                          <div class="text_sec">
+                                            <div class="head"><a href="#">Email Us</a></div>
+                                            <p><a href="mailto:contact@nea.gov.sg">contact_nea@nea.gov.sg</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon5.gif" width="56" height="52" alt="Call SEI"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">1800- CALL NEA</a></div>
+                                            <p>Call Center Hotline</p>
+                                        </div>
+                                    </li>
+                                </ul> -->
+                            </div>
+                        </div>
+						
+  						<div class="sub_navigation1" style="display:none">
+                            <div class="content">
+                                <ul class="sublink">
+                                    <li><a href="/subject.asp?id=75">Objective of Campaign</a></li>
+                                    <li><a href="/subject.asp?id=76">Colour Coded Alert System</a></li>
+                                    <li><a href="/subject.asp?id=34">Operations Strategy</a></li>
+                                    <li><a href="/subject.asp?id=31">Community Outreach</a></li>
+                                </ul>
+
+                          <!--      <ul class="contact">
+                                    
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon3.gif" width="56" height="56" alt="Report Online"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="/subject.asp?id=60">Report Online</a></div>
+                                            <p>To report infractions</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon4.gif" width="56" height="56" alt="Email"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">Email Us</a></div>
+                                            <p><a href="mailto:contact@nea.gov.sg">contact_nea@nea.gov.sg</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon5.gif" width="56" height="52" alt="Call SEI"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">1800- CAL"images/icon5.gif" width="56" height="52" alt="Call SEI"/>
+                                        </div>
+                                        <div class="text_sec">
+ L NEA</a></div>
+                                            <p>Call Center Hotline</p>
+                                        </div>
+                                    </li>
+                                </ul> -->
+                            </div>
+                        </div>
+
+                        
+                        <div class="sub_navigation2" style="display:none">
+                            <div class="content">
+                                <ul class="sublink">
+                                    <li><a href="/subject.asp?id=73">Dengue Cases</a></li>
+                                    <li><a href="/subject.asp?id=74">Dengue Clusters</a></li>
+                                </ul>
+                            <!--    <div class="faq">
+                                    <div class="head">Frequently Asked Questions  </div>
+                                    <ul>
+                                        <li><a href="#">Frequently asked question 1? </a></li>
+                                        <li><a href="#">Frequently asked question 2? </a> </li>
+                                        <li><a href="#">Frequently asked question 3? </a></li>
+                                        <li><a href="#">Frequently asked question 4? </a></li>
+                                        <li><a href="#">Frequently asked question 5? </a></li>
+                                        <li><a href="/a></li>
+                                        <li><a href="#">Frequently asked #">Frequently asked question 6?  </a> </li>
+                                        
+                                    </ul>
+                                    <a href="#" class="veiwall">View All &gt;</a>
+                                </div> -->
+                           <!--     <ul class="contact">
+                                    
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon3.gif" width="56" height="56" alt="Report Online"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="/subject.asp?id=60">Report Online</a></div>
+                                            <p>To report infractions</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon4.gif" width="56" height="56" alt="Email"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">Email Us</a></div>
+                                            <p><a href="mailto:contact@nea.gov.sg">contact_nea@nea.gov.sg</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon5.gif" width="56" height="52" alt="Call SEI"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">1800- CALL NEA</a></div>
+                                            <p>Call Center Hotline</p>
+                                        </div>
+                                    </li>
+                                </ul> -->
+                            </div>
+                        </div>
+						
+						 <div class="sub_navigation6" style="display:none">
+                            <div class="content">
+                                <ul class="sublink">
+                                   <!-- <li><a href="/subject.asp?id=77">Mozzie Ambassador</a></li> -->
+								   <li><a href="/subject.asp?id=40">Newsroom</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="sub_navigation3" style="display:none">
+                            <div class="content">
+                                <ul class="sublink">
+                                    <li><a href="/subject.asp?id=51">Educational Materials</a></li>
+                                   <!-- <li><a href="/subject.asp?id=40">Newsroom</a></li> -->
+									<li><a href="http://www.who.int/topics/dengue/en/" target="_blank">Dengue Worldwide</a></li>
+                                </ul>
+                           <!--     <ul class="contact">
+                                   
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon3.gif" width="56" height="56" alt="Report Online"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="/subject.asp?id=40">Report Online</a></div>
+                                            <p>To report infractions</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon4.gif" width="56" height="56" alt="Email"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">Email Us</a></div>
+                                            <p><a href="mailto:contact@nea.gov.sg">contact_nea@nea.gov.sg</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon5.gif" width="56" height="52" alt="Call SEI"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">1800- CALL NEA</a></div>
+                                            <p>Call Center Hotline</p>
+                                        </div>
+                                    </li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        
+                        <div class="sub_navigation4" style="display:none">
+                            <div class="content">
+                                <ul class="sublink">
+                                    <li><a href="/subject.asp?id=61">Contact Us</a></li>
+                                    <!--  <li><a href="/subject.asp?id=60">Feedback</a></li> -->
+									<li><a href="https://e-services.nea.gov.sg/icare/feedback.aspx" target="_blank">Feedback</a></li>
+                                    <li><a href="/subject.asp?id=105">Verifying NEA Officer's Identity</a></li>
+                                </ul>
+                           <!--     <ul class="contact">
+                                   
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon3.gif" width="56" height="56" alt="Report Online"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">Report Online</a></div>
+                                            <p>To report infractions</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon4.gif" width="56" height="56" alt="Email"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">Email Us</a></div>
+                                            <p><a href="mailto:contact@nea.gov.sg">Contact_NEA@nea.gov.sg</a></p>
+                      <div class="text_sec">
+                                            <div class="head"><a href="#">Email Us</a></div>
+                                                         </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon5.gif" width="56" height="52" alt="Call SEI"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">1800- CALL NEA</a></div>
+                                            <p>Call Center Hotline</p>
+                                        </div>
+                                    </li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        
+                        <div class="sub_navigation5" style="display:none">
+                            <div class="content">
+                                <ul class="sublink">
+                                    <li><a href="#">Mozzie Wipe Activities</a></li>
+                                    <li><a href="#">Events</a></li>
+                                    <li><a href="#">NEA Outreach Events (Newsflash)</a></li>
+                                </ul>
+                          <!--      <ul class="contact">
+                                    
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon3.gif" width="56" height="56" alt="Report Online"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">Report Online</a></div>
+                                            <p>To report infractions</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img src="images/icon4.gif" width="56" height="56" alt="Email"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">Email Us</a></div>
+                                            <p><a href="mailto:contact@nea.gov.sg">contact_nea@nea.gov.sg</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_sec">
+                                            <img s/a></p>
+                                        </div>
+rc="images/icon5.gif" width="56" height="52" alt="Call SEI"/>
+                                        </div>
+                                        <div class="text_sec">
+                                            <div class="head"><a href="#">1800- CALL NEA</a></div>
+                                            <p>Call Center Hotline</p>
+                                        </div>
+                                    </li>
+                                </ul> -->
+                            </div>
+                        </div>
+                       
+            </div>
+        </div>
+		   <div class="clear"></div>
+				<div id="innerpage">
+					<div id="inner-two-coloumn">
+						<div id="inner-coloumn-left">
+							<div id="slider">
+								 <a href="subject.asp?id=101" target="_self"><img src="images/banner-1.jpg" width="634" height="312" alt="Banner" /></a>
+								 <a href="http://www.youtube.com/MEWRsingapore" target="_blank"><img src="images/banner-2.jpg" width="634" height="312" alt="Banner" /></a>
+								 <a href="https://www.facebook.com/Stop.Dengue.Now" target="_blank"><img src="images/banner-3.jpg" width="634" height="312" alt="Banner" /></a>
+								 <!--img onclick="openModalOnemap();" src="images/banner-3.jpg" width="634" height="284" alt="Banner" /-->
+								 <!--img src="images/banner-3.jpg" width="634" height="284" alt="Banner" />
+								 <img src="images/banner-4.jpg" width="634" height="284" alt="Banner" /-->
+							</div>
+							<div class="latest_highlight">
+						<div class="heading">
+						<!-- <table border="1" bordercolor="#FF0000"><tr><td><h3 align="center"><font color="red">System Maintenance Downtime<br><br>
+Please be informed that this on-line service will NOT be available on 01/12/2013 (Sunday) 02:00 to 07:00 (Singapore Standard TIME). 
+We apologize for any inconvenience caused.</font></h3></td></tr></table><br>  -->
+							<h1 class="head">Latest Highlights</h1>
+							<!--ul class="share">
+								<li class="first">
+				</li>
+								<li class="fontresize" ><a><img src="images/large.gif" alt="Increase" width="16" height="11" id="jfontsize-p"/></a></li>
+								<li class="fontresize" ><a><img src="images/small.gif" alt="Decrease" width="14" height="11" id="jfontsize-m"/></a></li>
+							</ul-->
+						</div>
+						<ul class="lh_article">
+						
+						<li>
+                            <div class="article-img"><img src="images/DengueWipeOutOn28thApr_icon.jpg" width="103" height="53" alt="Article Image" /></div>
+                            <div class="text_sec">
+                                <div class="subhead">Do the Mozzie Wipeout Campaign Updates</div>
+                                <p>Following the campaign launch on 28 April 2013, more than 2000 Dengue Prevention Volunteer Group members have been recruited. Some new introductions include a Dengue Prevention Skit and the Dengue Information Push Carts ...<a href="/highlight/MozzieWipeoutCampaignUpdates.asp" target="_blank"  class="more">More &gt;</a></p>
+                    </div>
+
+                            </li>
+							
+						<li>
+                            <div class="article-img"><img src="images/onemap.png" width="103" height="53" alt="Article Image" /></div>
+                            <div class="text_sec">
+                                <div class="subhead">Get the Latest Dengue Cluster Locations</div>
+                                <p>A dengue cluster is formed when 2 or more dengue cases occur within 14 days and the homes of the dengue victims ... <a href="subject.asp?id=74" class="more">More &gt;</a></p>
+                                
+                    </div>
+
+                            </li>
+                            <li>
+                            <div class="article-img"><img src="images/article-img-1.jpg" width="103" height="53" alt="Article Image" /></div>
+                            <div class="text_sec">
+                                <div class="subhead">Dengue Advisory</div>
+                                <p>NEA has observed an increase in the number of dengue cases53" alt="Article Image" /></div>
+                            <div class="text_sec">
+                                <div class="subhead">Dengue Advisory</div>
+                                <p>NEA has obser, especially the less common dengue serotype1 (DEN-1) virus ... <a href="#" onclick="openModal();" class="more">More &gt;</a></p>
+                                
+                    </div>
+
+                            </li>
+                            <li class="sec">
+                            <div class="article-img"><img src="images/CCAlert.jpg" width="103" height="53" alt="Article Image" /></div>
+                            <div class="text_sec">
+                                <div class="subhead">Get to Know the Colour Coded Dengue Alert System</div>
+                                <p>The campaign will also help raise residents’ awareness on active cluster areas, through the Dengue Community Alert System ...<a href="subject.asp?ID=76" class="more">More &gt;</a></p>
+                            </div>
+                            </li>
+                           <!-- <li class="sec">
+                            <div class="article-img"><img src="images/fb_dengue_1.jpg" width="103" height="53" alt="Article Image" /></div>
+                            <div class="text_sec">
+                                <div class="subhead">Come Join the Discussion on Dengue</div>
+                                <p><b>Stop Dengue Now</b> is on Facebook. To connect with Stop Dengue Now, sign up for Facebook today<a href="https://www.facebook.com/Stop.Den                 <div class="subhead">Come Join the Discussion on Dengue</div>
+                                <p><b>Stop Dengue Now</b> is on Facebookgue.Now?ref=ts&fref=ts" class="more">More &gt;</a></p>
+                            </div>
+                            </li> -->
+                            <li class="last">
+                            <div class="article-img"><img src="images/sites/top5breedingsports.jpg" width="103" height="53" alt="Article Image" /></div>
+                            <div class="text_sec">
+                                <div class="subhead">Learn How to Protect Yourself Against Dengue</div>
+                                <p>In mosquito-borne diseases such as dengue, transmission is sustained by infected mosquitoes and infected humans. An infected mosquito bites an uninfected person, infecting him ...<a href="subject.asp?ID=103" class="more">More &gt;</a></p>
+                            </div>
+                            </li> 
+                            
+                        </ul>
+						<script type="text/javascript">
+							$('.text_sec').jfontsize({
+								btnMinusClasseId: '#jfontsize-m',
+								btnPlusClasseId: '#jfontsize-p'
+							});
+						</script>
+						<!--a href="#" class="more">More &gt;</a-->
+					</div>
+						</div>
+						<div id="inner-coloumn-right">
+						<div id="calendar-panel">
+                          	<div id="calendar-panel-top">
+                            	<div id="date-left-multi">
+                                	<div id="month-space-multi">&nbsp;&nbsp;&nbsp;&nbsp;Cases notified on<br> 6/1/2015 as at 3.30pm</div>
+                                </div>
+                            </div>
+                            <div id="calendar-panel-body">
+                                <div align="center"><font size="60px" color="#3e97c4"><b>18</b></font></div>
+                            </div>
+                            
+                            <div id="calendar-panel-top">
+                                <div id="date-left-multi">
+                                    <div id="month-space-multi">Cumulative Cases <br/> Since 01/01/2014</div>
+                                </div>
+                            </div>
+                            <div id="calendar-panel-body">
+							<div align="Center">
+                                <div align="center"><font size="60px" color="#3e97c4"><b>18,444</b></font></div>
+								</div>
+                            </div>
+                            <div id="calendar-panel-bottom"></div>
+                          </div>
+						  <!--div id="calendar-panel">
+                          	<div id="calendar-panel-top">
+                            	<div id="date-left">
+                                	<div id="month-space">Cases Today</div>
+                                </div>
+                            </div>
+                            <div id="calendar-panel-body">
+                                <div id="date-big">27</div>
+                            </div>
+                            
+                            <div id="calendar-panel-top">
+                                <div id="date-left-multi">
+                                    <div id="month-space-multi">Cumulative Cases <br/> Since 01/01/2013</div>
+                                    <!--div id="year-space"></div>
+                                </div>
+                            </div>
+                            <div id="calendar-panel-body">
+                                <div id="date-big">27</div>
+                            </div>
+                            <div id="calendar-panel-bottom"></div>
+                          </div-->
+						  <!--div id="youtube-panel">                    	
+								<div id="youtube-header"><strong>Dengue Cases Update</strong></div>
+								<div>
+								<a href="cms/ehd/MOHTABLE.jpg" target="_blank"><img src="cms/ehd/MOHTABLE.jpg" width="266" height="167"  /></a>
+								</div>
+							</div-->	
+							<!-- <div id="Div4">
+								<div id="Div5"><strong>Dengue Cluster Locations</strong></div>
+								<div id="Div6">                           	  
+                              		<!-- <p><strong>Industry Training eBrochure </strong></p>
+                                	<p style="margin-top:36px;">PDF (4.5MB)</p> 
+                               		<img src="images/onemap.png" onclick="openModalOnemap();" width="266" height="167"  alt="Click here to get latest Dengue Cluster Locations."/>
+                                	<!-- <div id="brochure-img"><img src="images/brochure.jpg" width="101" height="143" alt="Brochure" /></div>
+
+                                </div> 
+							</div>	-->
+							<div id="youtube-panel">
+                           	    <div id="Div9"><strong>NEA Dengue Video</strong></div>
+                                <div id="video-panel"><a href="http://www.youtube.com/watch?v=0qF3-_IN7MY&list=PL81A62A02A2AB4C03&index=17" target="_blank"><img src="images/materials/PreventingDengueAtHome.jpg" onclick="" width="280" height="157" alt="Video" /></a></div>
+                            </div>
+							
+							<div id="youtube-panel">
+                           	    <div id="Div7"><strong><b>Stop Dengue Now</b> is on Facebook. Join the Discussion on Dengue</strong></div>
+                                <div id="Div8"><a href="https://www.facebook.com/Stop.Dengue.Now?ref=ts&fref=ts" target="_blank"><img src="images/fb_dengue_1.jpg" onclick="" width="260" height="143" /></a></div>
+                            </div>
+							
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div id="bottom-area">
+                    	<div class="bottom-panel panel-spacing">
+                        	<div class="bottom-panel-header">Dengue  Updates</div>
+                            <div class="bottom-panel-body">
+                       	    <div id="upcoming-content">
+                                	<p><strong><a href="/subject.asp?id=73">Dengue Cases</a></strong><br />		
+									</p>
+                                    <p><strong><a href="/subject.asp?id=74">Dengue Cluster Locations</a></strong><br />		
+									</p>
+                                    <p><strong><a href="/subject.asp?id=101">Prevention Tips</a></strong><br />		
+									</p>
+                          <strong><a href="/subject.asp?id=74">Dengue Cluster Locations</a></strong><br />		
+									</p>
+                                    <p><strong><a          <p><strong><a href="http://www.x-dengue.com" target="_blank">Subscribe to X-Dengue Alerts</a></strong><br />		
+									</p>
+                                </div>
+                            </div>
+                            <div class="bottom-panel-footer"></div>
+                        </div>
+                        <div class="bottom-panel panel-spacing">
+                        	<div class="bottom-panel-header">Newsroom</div>
+                            <div class="bottom-panel-body">
+							<div id="upcoming-content">
+							<div id="tab001" class="tab">
+                            	
+
+<table border="0" cellpadding="0" cellspacing="0">
+ <td class="ctnthd" ><h5><b>13 Sep 2014</b></h5></td>
+    </tr>
+     <tr>
+       <td class="ctnthd" ><p><a href="http://app2.nea.gov.sg/corporate-functions/newsroom/news-releases/unitedengue-cross-border-data-sharing-provides-countries-with-timely-risks-alerts" target="_blank">UNITEDengue Cross-Border Data Sharing Provides Countries With Timely Risks Alerts</p></a></td>
+    </tr>
+       <td class="ctnthd" ><h5><b>13 Sep 2014</b></h5></td>
+    </tr>
+     <tr>
+       <td class="ctnthd" ><p><a href="http://app2.nea.gov.sg/corporate-functions/newsroom/news-releases/eighty-one-year-old-woman-passes-away-from-dengue" target="_blank">Eighty-One-Year-Old Woman Passes Away From Dengue</p></a></td>
+    </tr>
+  <tr>
+      <td class="ctnthd" ><h5><b>26 Aug 2014</b></h5></td>
+    </tr>
+     <tr>
+       <td class="ctnthd" ><p><a href="http://app2.nea.gov.sg/corporate-functions/newsroom/news-releases/world-health-organization-and-singapore-hold-fourth-asia-pacific-dengue-workshop" target="_blank">World Health Organization And Singapore Hold Fourth Asia-Pacific Dengue Workshop</p></a></td>
+    </tr>
+
+	<tr>
+   <!--      <td class="ctnthd" ><h5><b>13 Aug 2013</b></h5></td>
+    </tr>
+     <tr>
+       <td class="ctnthd" ><a href="http://app2.nea.gov.sg/corporate-functions/newsroom/parliament/parliament-questions/PQ-written-reply-by-dr-vivian-balakrishnan-minister-for-the-environment-and-water-resources-to-parliamentary-question-on-advance-preparations-to-counter-future-dengue-outbreaks" target="_blank">Parliament Q&A - Written Reply by Dr Vivian Balakrishnan, Minister for the Environment and Water Resources to Parliamentary Question on Advance Preparations to Counter Future Dengue Outbreaks</a></td>
+    </tr>
+
+<tr>
+           <td ><br/><h5><b>16 April 2013</b></h5></td>
+    </tr>
+         <tr>
+           <td ><a href="http://app2.nea.gov.sg/news_detail_2013.aspx?news_sid=20130416914511717015" target="_blank">Do The Mozzie Wipeout - A National Anti-Dengue Campaign To Help Break Transmission Cycle </a></td>
+    </tr>
+       <tr>
+           <td ><br/><h5><b>30 Jan 2013</b></h5></td>
+    </tr>
+         <tr>
+           <td ><a href="http://app2.nea.gov.sg/news_detail_2013.aspx?news_sid=20130130879690997969" target="_blank">Usher In The Lunar New Year With A Cleaner & Healthier Singapore</a></td>
+    </tr> -->
+</table>
+						</div>
+					</div>
+                            </div>
+                            <div class="bottom-panel-footer"></div>
+                        </div>
+                        <div class="bottom-panel">
+                        	<div class="bottom-panel-header">Feedback and other Information</div>
+                            <div class="bottom-panel-body">
+                            	<div id="sign-up-content">
+                                	
+                                    <form action="">
+                                    <div class="form-row" style="margin-bottom:4px;"><a href="https://e-services.nea.gov.sg/icare/feedback.aspx" target="_blank"> Online Feedback Form</a> </div>
+                                    <div class="form-row" style="margin-bottom:4px;">Email: dengue@nea.gov.sg</div>
+                                    <div class="form-row" style="margin-bottom:4px;">Contact: 1800-X-DENGUE (1800-933-6483)</div>
+									<br/>
+									<div class="form-row" style="margin-bottom:4px;"><a href="/subject.asp?id=105">Verifying NEA Officer's Identity</a></div>
+                                    <!-- <div class="form-row"><input name="" type="text" id="email-field" value="Email" /></div>
+                                    <div class="form-row"><input name="" type="text" id="mobile-field" value="Mobile" /></div>
+                                    <div class="form-row"><input type="submit" class="submitBtn" name="" value="Subscribe Now" style="width:132px;height:27px;float:right;margin-right:5px;"/></div> -->
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="bottom-panel-footer"></div>
+                        </div>
+                    </div>
+				</div>
+		
+		<div id="footer">
+            <div class="box01">
+                <div class="contact">
+                <!--CSC Info-->
+                    <div class="contact-title">Contact Us</div>
+                   <ul>
+                        <li><span class="col_lt">Hotline </span><span class="col_rt">:&nbsp; 1800-2255 632</span></li>
+                        <li><span class="col_lt">Email </span><span class="col_rt">:&nbsp; contact_NEA@nea.gov.sg</span></li>
+                        <li><span class="col_lt">FAX </span><span class="col_rt">: &nbsp;(65) 62352611 </span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box01" style="padding-left:10px;">
+                <div class="location">
+                    <div class="contact-title">Our Location</div>
+                 
+                   <!--</h1> <ul id="menu" class="menu">
+                        <li class="active"><a href="#main_office" id="main-office-tab">Main office</a></li>
+                    </ul> -->
+                   
+                    <div id="main_office" class="content">
+                        <p>
+                        National Environment Agency, <br />
+                        Environment Building <br />
+                        40 Scotts Road, #13-00,  <br />
+                        Singapore 228231
+                        </p>
+                    </div>
+                    <!-- <div id="customer_service" class="content">
+                        <p>
+                        SEI Customer Service,  <br />
+                        Environment Building <br />
+                        40 Scotts Road, #06-00,  <br />
+                        Singapore 228231
+                        </p>
+                    </div> -->
+                </div>
+     e,  <br />
+                        Environment Building <br />
+                        40 Scotts Road, #06-00,  <br />
+                        Singapore 228231
+                        <       </div>
+                <div class="box01">
+                <div class="connect">
+                    <div class="contact-title">Connect With Us</div>
+                    <ul>
+                        <li><a href="https://www.facebook.com/Stop.Dengue.Now?ref=ts&fref=ts"><img src="images/fb_icon.gif" alt="Facebook" width="28" height="28" /></a></li>
+                        <!--<li><a href="#"><img src="images/tw_icon.gif" alt="Twitter" width="28" height="28" /></a></li>
+                        -->
+                        <!--li><a href="#"><img src="images/youtube_icon.gif" alt="Youtube" width="28" height="28" /></a></li-->
+                        <!--li><a href="#"><img src="images/rss_icon.gif" alt="RSS" width="28" height="28" /></a></li-->
+                        <li><a href="https://itunes.apple.com/sg/app/myenv/id444435182?mt=8"><img src="images/myenv logo itune.gif" alt="NEA" width="29" height="28" /></a></li>
+                        <!-- link to nea store-->
+                        <!--li><a href="#"><img src="images/app_icon.gif" alt="iPhone App" width="83" height="28" /></a></li-->
+                        
+                    </ul>
+                </div>
+                </div>
+             <div class="box01 last">
+                <div class="Goto">
+                    <div class="contact-title">GO TO</div>
+                    <!--select class="select01">
+                            <option selected="selected">NEA Website</option>
+                            <option>NEA Websites</option>
+                        </select-->
+                        
+                        <a style="font: bold 14px/26px 'HelveticaNeueLTPro Bd',Arial, Helvetica, sans-serif; color: #3e97c4; padding-bottom: 4px" href="http://www.nea.gov.sg">NEA Website</a>
+                </div>
+            </div>
+            <div class="footer_btm">
+                <div class="left_sec">
+                    <ul>
+                        <li><a href="#">Privacy Statement</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                                             
+
+                </div>
+                <div class="right_sec">
+                    <p>Copyright © 2013 National Environment Agency. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+</div>
+<!--script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f598f5375e576bd"></script-->
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&ns=1';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script></body>
+</html>
+c = '/_Incapsula_Resource?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&ns=1'

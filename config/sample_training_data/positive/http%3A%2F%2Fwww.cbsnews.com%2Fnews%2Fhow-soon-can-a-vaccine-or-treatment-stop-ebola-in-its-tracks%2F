@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html><head data-ad='{"gpt":{"targeting":{"collection":"ebola","device":"desktop","ptype":"news_item","cid":"how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","env":"prod"},"adConfig":{"network":{"dev":8264,"qa":8264,"prod":8264},"method":"async-inline","regions":[{"region":"uk","countries":["gb","ie","za","bh","kw","om","qa","sa","ae","iq","eg","ye"]},{"region":"fr","countries":["fr"]},{"region":"au","countries":["au","nz"]},{"region":"asia","countries":["sg","my","ph","th","id","vn","hk","in"]}],"adUnits":{"marqueeVideoTop":{"sizes":[[300,60]],"isVideo":true,"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"leaderVideoTop":{"sizes":[[728,90]],"isVideo":true,"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"intromercial":{"outOfPage":true},"mpuMiddle":{"sizes":[[300,250]],"position":"middle"},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"marqueeBottom":{"sizes":[[234,60]],"position":"bottom"},"leaderBottom":{"sizes":[[728,90],[970,66]],"position":"bottom"}},"mobile":{"adUnits":{"intromercial":{"outOfPage":true},"mobileBannerTop":{"sizes":[[320,50],[6,1]]},"mobileBannerMpuHptoOverlay":{"outOfPage":true},"mobileMpuBottom":{"sizes":[[300,250]]},"mobileBanner1":{"sizes":[[320,50]],"position":1},"mobileBanner2":{"sizes":[[320,50]],"position":2},"mobileBanner3":{"sizes":[[320,50]],"position":3},"mobileMarquee320Top":{"sizes":[[320,60]],"position":"top"},"mobileSponsorContentTextTop":{"sizes":[[306,77]],"position":"top"}}},"tablet":{"adUnits":{"resourceCenterTop":{"sizes":[[300,300]],"position":"top"},"resourceCenterBottom":{"sizes":[[632,160]],"position":"bottom"},"mpuPlusTop":{"sizes":[[300,600],[300,250]]},"marqueeTop":{"sizes":[[234,60]],"position":"top"},"mpuTop":{"sizes":[[300,250],[300,600]],"position":"top"},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"leaderTop":{"sizes":[[728,90],[970,66]],"position":"bottom"},"leaderPlusTop":{"sizes":[[728,90],[970,66],[970,250]],"position":"top"}}},"siteName":"cbsnews","collapseEmptyDiv":true,"setRefreshUnfilledSlots":false,"setClearUnfilledSlots":true,"disableInitialLoad":false,"disableInitialLoadCompanions":true,"enableSingleRequest":true,"enableAsyncRendering":true,"defaultRegion":"aw","adOrder":["intromercial","leader_top","leader_plus_top","skin","mpu_top","mpu_plus_top","resource_center_top","marquee_top","marquee300_top","button_top","sponsor_content_top","sponsor_content_small_top","sponsor_content_text_top","sponsor_bar980_top","sponsor_bar620_top","mpu_middle","marquee300_middle","button_middle","leader_bottom","button_bottom"]},"containerId":"54cc19ce3cf8f","slotVars":{"network":"8264","siteName":"cbsnews","collapseEmptyDiv":"1","topics":"health","platform":"desktop"},"adType":"gpt","adDivIds":["marquee-video-top-54cc19ce3cf8f","mpu-bottom-54cc19ce3cf8f","intromercial-54cc19ce3cf8f","leader-video-top-54cc19ce3cf8f","leader-bottom-54cc19ce3cf8f"]},"cookieName":"cbsnews_ad","cookieServicePath":"\/ad\/ad-cookie\/","session":4,"useFirstPageTargeting":true}'><title>The race to find a vaccine or treatment to stop Ebola - CBS News</title><meta itemprop="thumbnailUrl" content="http://cbsnews1.cbsistatic.com/hub/i/r/2014/08/01/d3a01aa8-0009-4431-8b86-2daf184fa34b/thumbnail/620x350/b0098d96bfc28158a9cca37cdd9261fb/ebola-virus.jpg"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQIHWFZbGwAFVFZRAAM="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script><meta name="robots" content="index, follow"><meta name="description" content="Some Ebola drug research has shown promise but much more work needs to be done -- and fast"><meta name="keywords" content="- cbs news"><meta name="viewport" content="width=device-width"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="twitter:creator" content="Guest Author"><meta name="twitter:title" content="The race to find a vaccine or treatment to stop Ebola"><meta name="twitter:description" content="Some Ebola drug research has shown promise but much more work needs to be done -- and fast"><meta name="twitter:image" content="http://cbsnews1.cbsistatic.com/hub/i/r/2014/08/01/d3a01aa8-0009-4431-8b86-2daf184fa34b/thumbnail/620x350/b0098d96bfc28158a9cca37cdd9261fb/ebola-virus.jpg"><meta property="og:image" content="http://cbsnews1.cbsistatic.com/hub/i/r/2014/08/01/d3a01aa8-0009-4431-8b86-2daf184fa34b/thumbnail/620x350/b0098d96bfc28158a9cca37cdd9261fb/ebola-virus.jpg"><meta property="og:title" content="The race to find a vaccine or treatment to stop Ebola"><meta property="og:description" content="Some Ebola drug research has shown promise but much more work needs to be done -- and fast"><link rel="canonical" href="http://www.cbsnews.com/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/"><link rel="shortcut icon" type="image/x-icon" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/favicon.ico"><link rel="apple-touch-icon" sizes="144x144" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/apple-touch-icon-precomposed.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/apple-touch-icon-precomposed.png"><link rel="apple-touch-icon-precomposed" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/apple-touch-icon-precomposed.png"><link rel="stylesheet" href="http://cbsnews1.cbsistatic.com/fly/bundles/cbsnewscore/css/main.desktop.css"><!--[if IE 8]>
+    <link rel="stylesheet" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/css/desktop/ie8.css" />
+    <![endif]--><!--[if IE]>
+    <link rel="stylesheet" href="http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/css/desktop/ie.css" />    
+    <![endif]--><script src="http://cbsnews2.cbsistatic.com/fly/bundles/flyjs/js/libs/guid-1.0.js"></script><script type="text/javascript">
+    var __tealium_data_guid = null;
+    if (typeof window.uuid.v1 === 'function'){
+        __tealium_data_guid=window.uuid.v1();
+    }
+
+    var _utag_obj={"isEnabled":true,"articleAuthorId":["746e6a56-6a86-11e2-9d12-0018fe8a00b0"],"articleAuthorName":["guest author"],"articleId":"3bfc06ff-d189-425d-973d-fa719530d67e","articlePubDate":"2014-08-04 21:37:46","articleTitle":"the race to find a vaccine or treatment to stop ebola","articleType":"content_article","collectionId":["92b906aa-94ec-4c48-b8bc-b70245915a22"],"collectionName":["ebola virus outbreak"],"deviceType":"desktop","isDev":"0","pageType":"news_item","siteHier":["health"],"siteSection":"health","siteType":"responsive web","topicId":"8846860a-758d-11e2-9d12-0018fe8a00b0","topicName":"health","bkSiteId":3330,"limit":4,"articleSource":"cbs news","siteName":"cbsnews","tealium":{"profile":"cbsnewssite","env":"prod"}};    
+    _utag_obj.pageViewGuid=__tealium_data_guid;
+    var utag_data=_utag_obj;
+</script><!--[if lt IE 9]>
+    <script src="http://cbsnews1.cbsistatic.com/fly/bundles/cbsnewscore/js/libs/html5shiv-printshiv.js"></script>
+    <![endif]--><script type="text/javascript" src="http://cbsnews1.cbsistatic.com/fly/bundles/flyjs/js/libs/require-2.1.2.js"></script><script type="text/javascript">
+    require.config({"baseUrl":"http:\/\/cbsnews2.cbsistatic.com\/fly\/bundles\/cbsnewscore\/js-build","config":{"version":{"fly\/libs\/easy-xdm":"2.4.17.1","fly\/libs\/jquery.widget":"1.9.2","fly\/libs\/jquery.cookie":"1.2","fly\/libs\/jquery.throttle-debounce":"1.1","fly\/libs\/omniture.s-code":"1.0","fly\/libs\/urs":"1.0","fly\/utils\/data-prefix":"1.0","fly\/utils\/data-selector":"1.0","fly\/utils\/function-natives":"1.0","fly\/utils\/guid":"1.0","fly\/utils\/log":"1.0","fly\/utils\/object-helper":"1.0","fly\/utils\/string-helper":"1.0","fly\/utils\/string-vars":"1.0","fly\/utils\/url-helper":"1.0","fly\/managers\/components":"1.0","fly\/managers\/cookie":"1.0","fly\/managers\/debug":"1.0","fly\/managers\/ad":"2.0","fly\/managers\/gpt":"4.0","fly\/managers\/geo":"1.0","fly\/managers\/image-resolution":"1.0","fly\/managers\/social-authentication":"1.0","fly\/managers\/tracking":"1.0","fly\/managers\/user":"1.0","fly\/components\/accordion":"1.0","fly\/components\/alert":"1.0","fly\/components\/base":"1.0","fly\/components\/carousel":"1.0","fly\/components\/dependent-field":"1.0","fly\/components\/dropdown":"1.0","fly\/components\/form-validate":"1.0","fly\/components\/iframe-messenger":"1.0","fly\/components\/image-gallery":"1.0","fly\/components\/livefyre-conversation":"1.0","fly\/components\/livefyre-commentcount":"1.0","fly\/components\/loading":"1.0","fly\/components\/load-more":"1.0","fly\/components\/nrelate":"1.0","fly\/components\/modal":"1.0","fly\/components\/modal-async":"1.0","fly\/components\/modal-iframe":"1.0","fly\/components\/social-button":"1.0","fly\/components\/social-counts":"1.0","fly\/components\/social-links":"1.0","fly\/components\/tabs":"1.0","fly\/managers\/clicktale":"1.0","fly\/components\/poll":"1.0","fly\/managers\/history":"1.0","fly\/components\/scrollbar":"1.0","fly\/components\/fixate":"1.0","fly\/components\/image-gallery-thumb":"1.0"}},"shim":{"tealium":["jquery"]},"map":{"*":{"gpt":"\/\/www.googletagservices.com\/tag\/js\/gpt.js","typekit":"\/\/fonts.cbsnews.com\/hzk1prl.js","livefyre":"\/\/zor.livefyre.com\/wjs\/v3.0\/javascripts\/livefyre.js","livefyre-commentcount":"\/\/zor.livefyre.com\/wjs\/v1.0\/javascripts\/CommentCount.js","nrelate":"\/\/c7.static.nrcdn.com\/common_js\/0.52.1\/nr_loader.min.js","urs":"\/\/urs.cbsnews.com\/sdk\/urs.js","outbrain":"\/\/widgets.outbrain.com\/outbrain.js","recirc":"\/\/ddlmj2furo6f2.cloudfront.net\/addontrain\/recommendations\/53f6c74c1344a01ee2000139.js","tealium":"\/\/tags.tiqcdn.com\/utag\/cbsi\/cbsnewssite\/prod\/utag.js"}}});
+    require(['main.desktop']);
+</script><script type="text/javascript" src="//fonts.cbsnews.com/hzk1prl.js"></script><script type="text/javascript">try{Typekit.load();}catch(e){}</script><script type="text/javascript">
+var _vrq = _vrq || [];
+_vrq.push(['id', 516]);
+_vrq.push(['automate', 'false' ]);
+_vrq.push(['track', function(){}]);
+(function(d, a){
+var s = d.createElement(a),
+x = d.getElementsByTagName(a)[0];
+s.async = true;
+s.src = 'http://a.visualrevenue.com/vrs.js';
+x.parentNode.insertBefore(s, x);
+})(document, 'script');
+</script></head><body data-tracking='{"isEnabled":true,"articleAuthorId":["746e6a56-6a86-11e2-9d12-0018fe8a00b0"],"articleAuthorName":["guest author"],"articleId":"3bfc06ff-d189-425d-973d-fa719530d67e","articlePubDate":"2014-08-04 21:37:46","articleTitle":"the race to find a vaccine or treatment to stop ebola","articleType":"content_article","collectionId":["92b906aa-94ec-4c48-b8bc-b70245915a22"],"collectionName":["ebola virus outbreak"],"deviceType":"desktop","isDev":"0","pageType":"news_item","siteHier":["health"],"siteSection":"health","siteType":"responsive web","topicId":"8846860a-758d-11e2-9d12-0018fe8a00b0","topicName":"health","bkSiteId":3330,"limit":4,"articleSource":"cbs news","siteName":"cbsnews","tealium":{"profile":"cbsnewssite","env":"prod"}}' data-ad='{"gpt":{"targeting":{"collection":"ebola","device":"desktop","ptype":"news_item","cid":"how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","env":"prod"},"adConfig":{"network":{"dev":8264,"qa":8264,"prod":8264},"method":"async-inline","regions":[{"region":"uk","countries":["gb","ie","za","bh","kw","om","qa","sa","ae","iq","eg","ye"]},{"region":"fr","countries":["fr"]},{"region":"au","countries":["au","nz"]},{"region":"asia","countries":["sg","my","ph","th","id","vn","hk","in"]}],"adUnits":{"marqueeVideoTop":{"sizes":[[300,60]],"isVideo":true,"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"leaderVideoTop":{"sizes":[[728,90]],"isVideo":true,"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"intromercial":{"outOfPage":true},"mpuMiddle":{"sizes":[[300,250]],"position":"middle"},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"marqueeBottom":{"sizes":[[234,60]],"position":"bottom"},"leaderBottom":{"sizes":[[728,90],[970,66]],"position":"bottom"}},"mobile":{"adUnits":{"intromercial":{"outOfPage":true},"mobileBannerTop":{"sizes":[[320,50],[6,1]]},"mobileBannerMpuHptoOverlay":{"outOfPage":true},"mobileMpuBottom":{"sizes":[[300,250]]},"mobileBanner1":{"sizes":[[320,50]],"position":1},"mobileBanner2":{"sizes":[[320,50]],"position":2},"mobileBanner3":{"sizes":[[320,50]],"position":3},"mobileMarquee320Top":{"sizes":[[320,60]],"position":"top"},"mobileSponsorContentTextTop":{"sizes":[[306,77]],"position":"top"}}},"tablet":{"adUnits":{"resourceCenterTop":{"sizes":[[300,300]],"position":"top"},"resourceCenterBottom":{"sizes":[[632,160]],"position":"bottom"},"mpuPlusTop":{"sizes":[[300,600],[300,250]]},"marqueeTop":{"sizes":[[234,60]],"position":"top"},"mpuTop":{"sizes":[[300,250],[300,600]],"position":"top"},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"leaderTop":{"sizes":[[728,90],[970,66]],"position":"bottom"},"leaderPlusTop":{"sizes":[[728,90],[970,66],[970,250]],"position":"top"}}},"siteName":"cbsnews","collapseEmptyDiv":true,"setRefreshUnfilledSlots":false,"setClearUnfilledSlots":true,"disableInitialLoad":false,"disableInitialLoadCompanions":true,"enableSingleRequest":true,"enableAsyncRendering":true,"defaultRegion":"aw","adOrder":["intromercial","leader_top","leader_plus_top","skin","mpu_top","mpu_plus_top","resource_center_top","marquee_top","marquee300_top","button_top","sponsor_content_top","sponsor_content_small_top","sponsor_content_text_top","sponsor_bar980_top","sponsor_bar620_top","mpu_middle","marquee300_middle","button_middle","leader_bottom","button_bottom"]},"containerId":"54cc19ce3cf8f","slotVars":{"network":"8264","siteName":"cbsnews","collapseEmptyDiv":"1","topics":"health","platform":"desktop"},"adType":"gpt","adDivIds":["marquee-video-top-54cc19ce3cf8f","mpu-bottom-54cc19ce3cf8f","intromercial-54cc19ce3cf8f","leader-video-top-54cc19ce3cf8f","leader-bottom-54cc19ce3cf8f"]},"cookieName":"cbsnews_ad","cookieServicePath":"\/ad\/ad-cookie\/","session":4,"useFirstPageTargeting":true}' data-img-res='{"breakpoint":620,"cookieName":"fly_img","breakpointOptions":null,"pixelRatio":1,"pixelRatioOptions":[1]}' data-apex='{"SITE":"162","PTYPE":"news_item","NODE":"","CID":"8846860a-758d-11e2-9d12-0018fe8a00b0"}' data-component="livefyreCommentcount" data-user='{"environment":"LIVE","secureHost":"secure-fly.cbsnews.com","appId":1501}' data-cms-edit='{"url":"http:\/\/cms.cbsnews.com\/content\/article\/3bfc06ff-d189-425d-973d-fa719530d67e"}' class="">
+            
+    <!-- src/CbsNews/CoreBundle/Resources/views/Layout/default.desktop.html.twig -->
+
+                <!-- comscorekw=health -->
+        
+
+    
+    <div id="fb-root"></div>
+                    <div id="intromercial-54cc19ce3cf8f" class="ad-intromercial" data-ad="intromercial" style="display:none">
+    <script>
+        window.console && console.log && console.log("ADS: queuing intromercial-54cc19ce3cf8f for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("intromercial-54cc19ce3cf8f");
+    </script></div>
+
+    	<div class="body-container">
+    
+                    <img src="http://dw.cbsi.com/levt/ria/e.gif?event=log&amp;siteid=162&amp;mapp=hi-pagetracker&amp;comptyp=pagetype&amp;comp=article_single&amp;riaevent=view&amp;s6=top&amp;s7=desktop" border="0" height="1" width="1" alt="" class="tracking-gif"><!-- src/CbsNews/CoreBundle/Resources/views/Core/header.html.twig --><header class="site-header "><div id="breakingNewsBanner" data-component="ticker">
+        <include src="http://oaktree.cbsnews.com/feedfiles/breakingnews.desktop.html" onerror="continue"></include></div>
+    
+
+        
+    <div class="supplemental">
+    <div class="container">
+        <div class="col-9">
+            
+        <nav class="site-shows"><ul class="items"><li><a class="selected module-click-tracking" href="/" data-tracking="site header-show-nav|CBS News" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Show-nav|CBS News"}'>CBS News</a></li>
+                                <li><a class="module-click-tracking" href="/evening-news/" data-tracking="site header-show-nav|CBS Evening News" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Show-nav|CBS Evening News"}'>CBS Evening News</a></li>
+                                <li><a class="module-click-tracking" href="/cbs-this-morning/" data-tracking="site header-show-nav|CBS This Morning" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Show-nav|CBS This Morning"}'>CBS This Morning</a></li>
+                                <li><a class="module-click-tracking" href="/48-hours/" data-tracking="site header-show-nav|48 Hours" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Show-nav|48 Hours"}'>48 Hours</a></li>
+                                <li><a class="module-click-tracking" href="/60-minutes/" data-tracking="site header-show-nav|60 Minutes" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Show-nav|60 Minutes"}'>60 Minutes</a></li>
+                                <li><a class="module-click-tracking" href="/sunday-morning/" data-tracking="site header-show-nav|Sunday Morning" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Show-nav|Sunday Morning"}'>Sunday Morning</a></li>
+                                <li><a class="module-click-tracking" href="/face-the-nation/" data-tracking="site header-show-nav|Face The Nation" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Show-nav|Face The Nation"}'>Face The Nation</a></li>
+                                <li><a class="module-click-tracking" href="http://cbsn.cbsnews.com/?ftag=CNMdaef904" data-tracking="site header-show-nav|CBSN" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header-cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Show-nav|CBSN"}'>CBSN</a></li>
+            </ul></nav></div>
+        
+        <div class="col-3">
+            <form class="site-search" method="get" action="/search/" data-component="search" data-search-options='{"path":"\/search\/","param":"q"}'>
+    <div class="search-wrapper" data-component="placeholder">
+        <input class="query" type="search" name="q" maxlength="255" placeholder="Search"></div>
+    <button class="submit core-search-header" type="submit">GO</button>
+</form>
+<ul class="login-wrapper logged-in"><li>
+        <!--<li class="site-section-tab"><a href="https://secure-fly.cbsnews.com/user/registration/" data-user-show="register"><span>Join</span></a></li>-->
+                     <a class="site-login" href="#" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Channel Button"}'><span class="text">Log In</span></a>
+                <div class="menu-wrapper sign-in">
+            <span class="hover-padding"></span>
+            <span class="arrow"></span>
+            <ul class="login"><li><a data-user-show="login" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Login"}'>Log In</a></li>
+                    <li><a data-user-show="register" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Join CBSNews"}'>Join CBSNews.com</a></li>
+                    <li class="social-icons">
+                        <span class="sign-in-with">Sign in with</span>
+                                                    <span class="social-site facebook" data-user-social="facebook" data-user-flow="modal" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Sign In with:  facebook"}'>&nbsp;</span>
+                                                    <span class="social-site google" data-user-social="google" data-user-flow="modal" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Sign In with:  google"}'>&nbsp;</span>
+                                                    <span class="social-site yahoo" data-user-social="yahoo" data-user-flow="modal" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Sign In with:  yahoo"}'>&nbsp;</span>
+                                                    <span class="social-site twitter" data-user-social="twitter" data-user-flow="modal" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site Header-Search-Flyout-nav|Log In-Sign In with:  twitter"}'>&nbsp;</span>
+                                            </li>
+                            </ul></div>
+    </li>
+</ul></div>
+    </div>
+</div>
+    <div class="primary content-inverse">
+        <div class="container">
+                         <div class="logo core-logo"><a href="/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|Branding"}'>CBSNews.com - Breaking News</a></div>
+                        <nav class="site-sections"><ul class="items"><li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/video\/section"}'><a href="/videos/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|Video"}'><span>Video</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/us\/section"}'><a href="/us/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|US"}'><span>US</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/world\/section"}'><a href="/world/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|World"}'><span>World</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/politics\/section"}'><a href="/politics/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|Politics"}'><span>Politics</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/entertainment\/section"}'><a href="/entertainment/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|Entertainment"}'><span>Entertainment</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/health\/section"}'><a href="/health/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|Health"}'><span>Health</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/moneywatch\/section"}'><a href="/moneywatch/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|MoneyWatch"}'><span>MoneyWatch</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/tech\/section"}'><a href="/tech/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|SciTech"}'><span>SciTech</span></a>
+                                                    </li>
+                                                                                                                                                                                                <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/crime\/section"}'><a href="/crimesider/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|Crime"}' data-vanity-rewritten="true"><span>Crime</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab  "><a href="http://www.cbssports.com/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|Sports"}'><span>Sports</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab flyout " data-component="flyout" data-flyout-options='{"requestUrl":"\/flyout\/xhr\/pictures\/section"}'><a href="/pictures/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|Photos"}'><span>Photos</span></a>
+                                                    </li>
+                                                                                                                                            <li class="site-section-tab  dropdown" data-component="moreDropdown" data-more-dropdown-options='{"event":"hover"}'><a href="#" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|More"}'><span>More</span></a>
+                                                            <div class="dropdown-content dropdown-menu">
+                                    <div class="listing-basic">
+                                        <ul class="items col-3"><li class="label"><h4 class="label">Blogs</h4></li>
+                                                                                                                                                <li><a href="/politics/battleground/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|More-Blogs-Battleground" }' class="title"><span>Battleground</span></a></li>
+                                                                                                                                                                                                <li><a href="/politics/white-house/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|More-Blogs-The WH" }' class="title"><span>The WH</span></a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul><ul class="items col-3"><li class="label"><h4 class="label">Web Shows</h4></li>
+                                                                                                                                                                                                                                                                                                                                        <li><a href="/60-minutes/overtime/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|More-Web Shows-60 Overtime" }' class="title"><span>60 Overtime</span></a></li>
+                                                                                                                                                                                                <li><a href="/face-the-nation/face-to-face/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|More-Web Shows-Face to Face" }' class="title"><span>Face to Face</span></a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul><ul class="items col-3"><li class="label"><h4 class="label">Resources</h4></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li><a href="/mobile/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|More-Resources-Mobile" }' class="title"><span>Mobile</span></a></li>
+                                                                                                                                                                                                <li><a href="/radio/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|More-Resources-Radio" }' class="title"><span>Radio</span></a></li>
+                                                                                                                                                                                                <li><a href="/local/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|More-Resources-Local" }' class="title"><span>Local</span></a></li>
+                                                                                                                                                                                                <li><a href="/in-depth/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Header|cbsnews:/news/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks/ Flyout-nav|More-Resources-In Depth" }' class="title"><span>In Depth</span></a></li>
+                                                                                                                                    </ul></div>
+                                </div>
+                                                    </li>
+                                    </ul></nav></div>
+    </div>
+    
+        </header><div id="mantle_skin" class="content-primary article-page default">
+                                                <div id="leader-video-top-54cc19ce3cf8f" class="ad-leader-video-top" data-ad="leader-video-top" style="display:none">
+    <script>
+        window.console && console.log && console.log("ADS: queuing leader-video-top-54cc19ce3cf8f for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("leader-video-top-54cc19ce3cf8f");
+    </script></div>
+
+        
+     
+            <div itemscope itemtype="http://schema.org/Article">
+	  <meta itemprop="genre" content="News"><meta itemprop="sourceOrganization" content="CBS News"><meta itemprop="articleSection" content="Health"><meta itemprop="alternativeHeadline" content="The race to find a vaccine or treatment to stop Ebola"><meta itemprop="author" content="Jessica Firger"><meta itemprop="description" content="Some Ebola drug research has shown promise but much more work needs to be done -- and fast"><meta itemprop="datePublished" content="August 4, 2014, 5:37 PM"></div>
+    <div class="container">
+    <div class="row">
+                    <div class="row">
+        <div class="col-12">
+                                                    
+                                                        
+                                            
+    
+
+
+        
+
+<div id="videoContainer" class="article-video-container">
+	<div class="article-video-bg"></div>
+	<div class="row col-12 article-video-player">
+		
+	
+		<div class="col-8">
+
+                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                                                              
+        									
+						
+			    <figure class="media-block"><div id="cbsNewsVideoPlayerMag" data-generic-playlist-options='{"selector":"#media-related-items li","url":"http:\/\/www.cbsnews.com\/videos\/nih-doctor-ebola-vaccine-to-prevent-infection-in-the-works","pageType":"Article","device":"desktop","mpxRefId":"iwYujlTgcOQ2i7xBEhw6CH6xIcAkeedG","playerWidth":"620","playerHeight":"387","targetElement":"cbsNewsVideoPlayerMag"}' data-component='["genericPlaylist"]'></div>
+			            
+			            
+			        			        			    </figure></div>
+		
+		<div class="col-4 article-video-list">
+			
+			<div class="module module-listing">
+			    <ul data-component="tabs" class="tabs"><li class="first"><a data-item="trigger" href="#tab-content-1" class="selected">Trending Videos</a> <a href="http://cbsn.cbsnews.com" class="cbsn-link">CBSN Live &raquo;</a></li>
+                    				</ul><div data-component="scrollbar" id="tab-content-1" class="tab-content selected">
+					<div class="content">
+					   <ul class="media-list items" id="media-related-items"><li data-video-info='{"item":{"mediaRtmpDesktop":"vxpMRDK4dFDq","mediaRtmpMobileHigh":"ipbQtDPWGS1q","mediaRtmpMobileLow":"FIourBTT3sZd","mediaHls":"SF8GDxg4l_O6","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2014\/08\/04\/e2361aac-b3d3-4f34-bf9b-19c42bf3767a\/ctm0804nih260504640x360.jpg","duration":148,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"iwYujlTgcOQ2i7xBEhw6CH6xIcAkeedG","topicname":"CBS This Morning","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2014\/08\/04\/314795075664\/CTM_0804_nih_replacement_260747_phone.m3u8","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2014\/08\/04\/314795075664\/&lt;break&gt;media\/2014\/08\/04\/314795075664\/CTM_0804_nih_replacement_260748_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2014\/08\/04\/314795075664\/CTM_0804_nih_replacement_260748_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2014\/08\/04\/314795075664\/CTM_0804_nih_replacement_260748_240.mp4"}}' data-pid="vxpMRDK4dFDq">
+							    <a href="/videos/nih-doctor-ebola-vaccine-to-prevent-infection-in-the-works" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/08/04/e2361aac-b3d3-4f34-bf9b-19c42bf3767a/thumbnail/140x88/8bdb08b8ffa46ce814ee87bfb8eaa97a/ctm0804nih260504640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+									<h4 class="topic">CBS This Morning</h4>
+										<h3 class="title"><a href="/videos/nih-doctor-ebola-vaccine-to-prevent-infection-in-the-works" class="video_slug item-click" title="NIH doctor: Ebola vaccine to prevent infection in the works">
+                                                                                NIH doctor: Ebola vaccine to prevent infection in ...</a>
+							    </h3></div>	
+							</li>
+
+					        				        	
+				        					        	
+				        					        	
+                                                                                                                				        	
+                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                		
+				        	<li data-video-info='{"item":{"mediaRtmpDesktop":"_fcGCAFrG6gJ","mediaRtmpMobileHigh":"x9LkNssaWa4O","mediaRtmpMobileLow":"dEmNAptKFpjl","mediaHls":"vGZM5FDUs0ub","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2015\/01\/30\/ac444e3b-64d6-4c36-bc79-48fe4c962fde\/feedwrapup01302015764002338181640x360.jpg","duration":175,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"_SL6Q1xpyK8DG0uYUcc_JBK1WwAcyUKe","topicname":"The Feed","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2015\/01\/29\/391019587884\/&lt;break&gt;media\/2015\/01\/29\/391019587884\/FeedWrapUp_01312015_338139_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/29\/391019587884\/FeedWrapUp_01312015_338139_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/29\/391019587884\/FeedWrapUp_01312015_338139_240.mp4","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2015\/01\/29\/391019587884\/FeedWrapUp_01312015_338197_500\/FeedWrapUp_01312015_338197_500.m3u8"}}' data-pid="_fcGCAFrG6gJ">
+							    <a href="/videos/teslas-insane-mode-makes-passengers-freak-out" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/30/ac444e3b-64d6-4c36-bc79-48fe4c962fde/thumbnail/140x88/94a390d0be6425456e56c9706e2e9eff/feedwrapup01302015764002338181640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+                                    									<h4 class="topic">The Feed</h4>
+                                        										<h3 class="title"><a href="/videos/teslas-insane-mode-makes-passengers-freak-out" class="video_slug item-click" title="Tesla's &quot;insane&quot; mode makes passengers freak out">Tesla's "insane" mode makes passengers freak out</a>
+							    </h3></div>	
+							</li>
+																									        	
+				        					        	
+				        					        	
+                                                                                                                				        	
+                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                
+                                                                                                                                                                                                		
+				        	<li data-video-info='{"item":{"mediaRtmpDesktop":"qSY6_JcwbMNC","mediaRtmpMobileHigh":"cxkb_RHewdV4","mediaRtmpMobileLow":"Z86D0UXhezYf","mediaHls":"Oq7UouehjXFw","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2015\/01\/30\/13951367-0285-4779-a4e6-423c393bb338\/ctmstubhub013015338428640x360.jpg","duration":293,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"r4Art59YajSwX95_c3xSA043H1gcWC_X","topicname":"CBS This Morning","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2015\/01\/30\/391388739928\/&lt;break&gt;media\/2015\/01\/30\/391388739928\/CTM_StubHub_013015_REPLACEMENT_338655_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391388739928\/CTM_StubHub_013015_REPLACEMENT_338655_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391388739928\/CTM_StubHub_013015_REPLACEMENT_338655_240.mp4","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2015\/01\/30\/391388739928\/CTM_StubHub_013015_REPLACEMENT_338654_500\/CTM_StubHub_013015_REPLACEMENT_338654_500.m3u8"}}' data-pid="qSY6_JcwbMNC">
+							    <a href="/videos/security-stubhub-super-bowl-2015-ticket-operations" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/30/13951367-0285-4779-a4e6-423c393bb338/thumbnail/140x88/3ed18d05ccecbd310e7795954d06746c/ctmstubhub013015338428640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+                                    									<h4 class="topic">CBS This Morning</h4>
+                                        										<h3 class="title"><a href="/videos/security-stubhub-super-bowl-2015-ticket-operations" class="video_slug item-click" title="Security behind StubHub's Super Bowl ticket operations">Security behind StubHub's Super Bowl ticket operat...</a>
+							    </h3></div>	
+							</li>
+																									        	
+				        					        	
+				        					        	
+                                                                                                                				        	
+                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                		
+				        	<li data-video-info='{"item":{"mediaRtmpDesktop":"hNK6fVhQNG5_","mediaRtmpMobileHigh":"JKy2CMOCOx3G","mediaRtmpMobileLow":"Z_oHJJDbOxtn","mediaHls":"QVyaM5aQ8RQx","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2015\/01\/30\/0f22472b-d66d-4edc-aa82-2a0801c9ecc2\/psych338368640x360.jpg","duration":50,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"Vc9TFIfAEqaC2Hw_y2pK_rIjz_OyQjO1","topicname":"CBSN","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2015\/01\/30\/391261251650\/&lt;break&gt;media\/2015\/01\/30\/391261251650\/psych_338361_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391261251650\/psych_338361_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391261251650\/psych_338361_240.mp4","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2015\/01\/30\/391261251650\/psych_338370_tablet.m3u8"}}' data-pid="hNK6fVhQNG5_">
+							    <a href="/videos/are-men-who-take-lots-of-selfies-psychopaths" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/30/0f22472b-d66d-4edc-aa82-2a0801c9ecc2/thumbnail/140x88/b7f80722a51f4a327e87eba92dcdebcd/psych338368640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+                                    									<h4 class="topic">CBSN</h4>
+                                        										<h3 class="title"><a href="/videos/are-men-who-take-lots-of-selfies-psychopaths" class="video_slug item-click" title="Are men who take lots of selfies psychopaths?">Are men who take lots of selfies psychopaths?</a>
+							    </h3></div>	
+							</li>
+																									        	
+				        					        	
+				        					        	
+                                                                                                                				        	
+                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                		
+				        	<li data-video-info='{"item":{"mediaRtmpDesktop":"Ccn6Vd_93U2T","mediaRtmpMobileHigh":"YNYw76q2vyYo","mediaRtmpMobileLow":"KtnjY3mAjvlU","mediaHls":"dPl1czg5PWPN","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2015\/01\/30\/0fa12721-ef88-430f-99d1-da726fe74cf8\/ctmpilotlocked013015338405640x360.jpg","duration":80,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"Mpes_nphCHYU3AFOzpLigaLJ_z7C1nYy","topicname":"CBS This Morning","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2015\/01\/30\/391372355853\/&lt;break&gt;media\/2015\/01\/30\/391372355853\/CTM_PilotLocked_013015_338404_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391372355853\/CTM_PilotLocked_013015_338404_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391372355853\/CTM_PilotLocked_013015_338404_240.mp4","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2015\/01\/30\/391372355853\/CTM_PilotLocked_013015_338408_500\/CTM_PilotLocked_013015_338408_500.m3u8"}}' data-pid="Ccn6Vd_93U2T">
+							    <a href="/videos/delta-jet-forced-to-make-emergency-landing-after-captain-gets-locked-out-of-cockpit" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/30/0fa12721-ef88-430f-99d1-da726fe74cf8/thumbnail/140x88/3b6a5bb2be3d8fc86d4735b55c11c634/ctmpilotlocked013015338405640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+                                    									<h4 class="topic">CBS This Morning</h4>
+                                        										<h3 class="title"><a href="/videos/delta-jet-forced-to-make-emergency-landing-after-captain-gets-locked-out-of-cockpit" class="video_slug item-click" title="Delta jet forced to make emergency landing after captain gets locked out of cockpit">Delta jet forced to make emergency landing after c...</a>
+							    </h3></div>	
+							</li>
+																									        	
+				        					        	
+				        					        	
+                                                                                                                				        	
+                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                		
+				        	<li data-video-info='{"item":{"mediaRtmpDesktop":"8olyfALLhbTv","mediaRtmpMobileHigh":"78qKA27ShVeN","mediaRtmpMobileLow":"tJirWvk9uiCG","mediaHls":"cLJt72M__8dp","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2015\/01\/29\/03f5dc69-cc09-4ca9-96fb-362897d2f705\/np0129niagarafalls337765640x360.jpg","duration":110,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"XJqTz3zvL94xJminDoIcksunQkcCKVr7","topicname":"U.S.","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2015\/01\/29\/390806595663\/&lt;break&gt;media\/2015\/01\/29\/390806595663\/np_0129_niagarafalls_v2_337764_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/29\/390806595663\/np_0129_niagarafalls_v2_337764_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/29\/390806595663\/np_0129_niagarafalls_v2_337764_240.mp4","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2015\/01\/29\/390806595663\/np_0129_niagarafalls_v2_337775_phone.m3u8"}}' data-pid="8olyfALLhbTv">
+							    <a href="/videos/climber-scales-frozen-niagara-falls" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/29/03f5dc69-cc09-4ca9-96fb-362897d2f705/thumbnail/140x88/465445907bfec38dcd4bf5bb864d727d/np0129niagarafalls337765640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+                                    									<h4 class="topic">U.S.</h4>
+                                        										<h3 class="title"><a href="/videos/climber-scales-frozen-niagara-falls" class="video_slug item-click" title="Climber scales frozen Niagara Falls">Climber scales frozen Niagara Falls</a>
+							    </h3></div>	
+							</li>
+																									        	
+				        					        	
+				        					        	
+                                                                                                                				        	
+                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                		
+				        	<li data-video-info='{"item":{"mediaRtmpDesktop":"1Ew_hvQpGCDe","mediaRtmpMobileHigh":"","mediaRtmpMobileLow":"","mediaHls":"1jN1ZAjKp3ri","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2015\/01\/30\/ffe85598-3832-403a-aeff-4a47dd7d1c98\/cbsnkatyperry338356640x360.jpg","duration":37,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"T5x_Vkqsz6LkV9hmvK35uZUR8SlB4ILc","topicname":"CBSN","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2015\/01\/30\/391249987906\/&lt;break&gt;media\/2015\/01\/30\/391249987906\/CBSN_KATYPERRY_338352_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/29\/390806595663\/np_0129_niagarafalls_v2_337764_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/29\/390806595663\/np_0129_niagarafalls_v2_337764_240.mp4","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2015\/01\/30\/391249987906\/CBSN_KATYPERRY_338364_500\/CBSN_KATYPERRY_338364_500.m3u8"}}' data-pid="1Ew_hvQpGCDe">
+							    <a href="/videos/katy-perry-previews-super-bowl-halftime-show" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/ffe85598-3832-403a-aeff-4a47dd7d1c98/thumbnail/140x88/1822ec6d7e5f22209523c635df47d9bb/cbsnkatyperry338356640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+                                    									<h4 class="topic">CBSN</h4>
+                                        										<h3 class="title"><a href="/videos/katy-perry-previews-super-bowl-halftime-show" class="video_slug item-click" title="Katy Perry previews Super Bowl halftime show">Katy Perry previews Super Bowl halftime show</a>
+							    </h3></div>	
+							</li>
+																									        	
+				        					        	
+				        					        	
+                                                                                                                				        	
+                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                        		
+				        	<li data-video-info='{"item":{"mediaRtmpDesktop":"2GEVy_4pGsKO","mediaRtmpMobileHigh":"BtCV_U_1X2W4","mediaRtmpMobileLow":"W50TEnCfUgIA","mediaHls":"qjQBfHCfjKVT","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2015\/01\/30\/1d9848f1-bb71-4045-b5a1-c4e5b5d882f4\/ctmwomansaved013015338411640x360.jpg","duration":88,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"RtKMS4kt6zOYIfo4_5BIvkU58KzQ17zU","topicname":"CBS This Morning","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2015\/01\/30\/391379011964\/&lt;break&gt;media\/2015\/01\/30\/391379011964\/CTM_WomanSaved_013015_338409_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391379011964\/CTM_WomanSaved_013015_338409_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391379011964\/CTM_WomanSaved_013015_338409_240.mp4","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2015\/01\/30\/391379011964\/CTM_WomanSaved_013015_338416_500\/CTM_WomanSaved_013015_338416_500.m3u8"}}' data-pid="2GEVy_4pGsKO">
+							    <a href="/videos/saved-by-a-sales-call-telemarketers-help-after-overhearing-attack" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/30/1d9848f1-bb71-4045-b5a1-c4e5b5d882f4/thumbnail/140x88/34f5af243d8f4be6a095c30278f68740/ctmwomansaved013015338411640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+                                    									<h4 class="topic">CBS This Morning</h4>
+                                        										<h3 class="title"><a href="/videos/saved-by-a-sales-call-telemarketers-help-after-overhearing-attack" class="video_slug item-click" title="Saved by a sales call: Telemarketers help after overhearing attack">Saved by a sales call: Telemarketers help after ov...</a>
+							    </h3></div>	
+							</li>
+																									        	
+				        					        	
+				        					        	
+                                                                                                                				        	
+                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                		
+				        	<li data-video-info='{"item":{"mediaRtmpDesktop":"s6b9EOvRRLRW","mediaRtmpMobileHigh":"5qgo4d4hakzw","mediaRtmpMobileLow":"HLRx7K1Sej61","mediaHls":"Hfm4cT3NNQIx","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2015\/01\/30\/e8c17ed2-f150-40a1-94c4-b3f3da95d591\/ctm0130drinking338432640x360.jpg","duration":133,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"QSYAuA_ffR0EiP8MegDLxyYwAvkqpPxV","topicname":"CBS This Morning Healthwatch","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2015\/01\/30\/391394371553\/&lt;break&gt;media\/2015\/01\/30\/391394371553\/ctm_0130_drinking_338430_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391394371553\/ctm_0130_drinking_338430_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391394371553\/ctm_0130_drinking_338430_240.mp4","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2015\/01\/30\/391394371553\/ctm_0130_drinking_338434_tablet.m3u8"}}' data-pid="s6b9EOvRRLRW">
+							    <a href="/videos/stroke-risk-for-middle-aged-heavy-drinkers" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/e8c17ed2-f150-40a1-94c4-b3f3da95d591/thumbnail/140x88/c2bd8252f9e5e20dd8a17981e1990c5d/ctm0130drinking338432640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+                                    									<h4 class="topic">CBS This Morning Healthwatch</h4>
+                                        										<h3 class="title"><a href="/videos/stroke-risk-for-middle-aged-heavy-drinkers" class="video_slug item-click" title="Stroke risk for middle-aged heavy drinkers">Stroke risk for middle-aged heavy drinkers</a>
+							    </h3></div>	
+							</li>
+																									        	
+				        					        	
+				        					        	
+                                                                                                                				        	
+                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                        		
+				        	<li data-video-info='{"item":{"mediaRtmpDesktop":"fLrA_lP8EPvO","mediaRtmpMobileHigh":"nuVLLibXECKR","mediaRtmpMobileLow":"SmCdXVq4Cq3T","mediaHls":"_v3IEJ58Ym47","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2015\/01\/30\/6a9996d9-c301-49cc-9fe7-59efcb8deb7c\/cbsnsilicon338350640x360.jpg","duration":154,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"CXcTPphGI2npesUqCNma8R90Y9jQ1fyn","topicname":"CBSN","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2015\/01\/30\/391244867589\/&lt;break&gt;media\/2015\/01\/30\/391244867589\/CBSN_SILICON_338348_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391244867589\/CBSN_SILICON_338348_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391244867589\/CBSN_SILICON_338348_240.mp4","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2015\/01\/30\/391244867589\/CBSN_SILICON_338365_500\/CBSN_SILICON_338365_500.m3u8"}}' data-pid="fLrA_lP8EPvO">
+							    <a href="/videos/does-silicon-valley-promote-subtle-sexism" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/30/6a9996d9-c301-49cc-9fe7-59efcb8deb7c/thumbnail/140x88/e01b528c568042abb6ec753293c6337a/cbsnsilicon338350640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+                                    									<h4 class="topic">CBSN</h4>
+                                        										<h3 class="title"><a href="/videos/does-silicon-valley-promote-subtle-sexism" class="video_slug item-click" title="Does Silicon Valley promote subtle sexism?">Does Silicon Valley promote subtle sexism?</a>
+							    </h3></div>	
+							</li>
+																									        	
+				        					        	
+				        					        	
+                                                                                                                				        	
+                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                		
+				        	<li data-video-info='{"item":{"mediaRtmpDesktop":"vmuTW52ZQeJk","mediaRtmpMobileHigh":"wgXwnhM0IF90","mediaRtmpMobileLow":"BAM9kPguAeto","mediaHls":"_HIO05DO3lRe","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2015\/01\/29\/66e40422-c2d0-49d6-9ed9-327b67ec55f8\/ctm0129drewbrees337754640x360.jpg","duration":592,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"OxS9rVp9dFrScFBmIzRpHTBk5uOn3FtX","topicname":"CBS This Morning","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2015\/01\/29\/390733379810\/&lt;break&gt;media\/2015\/01\/29\/390733379810\/ctm_0129_drewbrees_replacement2_338345_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/29\/390733379810\/ctm_0129_drewbrees_replacement2_338345_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/29\/390733379810\/ctm_0129_drewbrees_replacement2_338345_240.mp4","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2015\/01\/29\/390733379810\/ctm_0129_drewbrees_replacement2_338346_500\/ctm_0129_drewbrees_replacement2_338346_500.m3u8"}}' data-pid="vmuTW52ZQeJk">
+							    <a href="/videos/saints-quarterback-drew-brees-on-football-deflation-scandal-super-bowl-and-family" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/29/66e40422-c2d0-49d6-9ed9-327b67ec55f8/thumbnail/140x88/4152d8f4624ccbd9dc0d9af32d5e92ee/ctm0129drewbrees337754640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+                                    									<h4 class="topic">CBS This Morning</h4>
+                                        										<h3 class="title"><a href="/videos/saints-quarterback-drew-brees-on-football-deflation-scandal-super-bowl-and-family" class="video_slug item-click" title="Saints quarterback Drew Brees on football deflation scandal, Super Bowl and family">Saints quarterback Drew Brees on football deflatio...</a>
+							    </h3></div>	
+							</li>
+																									        	
+				        					        	
+				        					        	
+                                                                                                                				        	
+                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                		
+				        	<li data-video-info='{"item":{"mediaRtmpDesktop":"j_1ofEu32P4s","mediaRtmpMobileHigh":"9NQuTyfZ3neQ","mediaRtmpMobileLow":"SkeCVAoL9dlW","mediaHls":"zq0PZfnbXht_","mediaImage":"http:\/\/beta.img.cbsnews.com\/i\/2015\/01\/30\/f8df9802-9fd7-40c9-a17b-70edbe62ac9a\/91159269338373640x360.jpg","duration":210,"articleTitle":"The race to find a vaccine or treatment to stop Ebola","mpxRefId":"Gro13wsaO9pbrspIy70nI_5QOvP8YBML","topicname":"U.S.","mediaRtmpDesktopURI":"rtmp:\/\/cp98363.edgefcs.net\/ondemand\/?auth=cbs&amp;aifp=v001&amp;slist=media\/2015\/01\/30\/391239747943\/&lt;break&gt;media\/2015\/01\/30\/391239747943\/PITTSBURGH_CONDON_12915_338347_796.mp4","mediaRtmpMobileHighURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391239747943\/PITTSBURGH_CONDON_12915_338347_740.mp4","mediaRtmpMobileLowURI":"http:\/\/download.cbsnews.com\/media\/mpx\/2015\/01\/30\/391239747943\/PITTSBURGH_CONDON_12915_338347_240.mp4","mediaHlsURI":"http:\/\/ipad-streaming.cbsnews.com\/media\/mpx\/2015\/01\/30\/391239747943\/PITTSBURGH_CONDON_12915_338376_500\/PITTSBURGH_CONDON_12915_338376_500.m3u8"}}' data-pid="j_1ofEu32P4s">
+							    <a href="/videos/healing-distrust-of-police-pittsburgh-shows-how-hard-it-is" class="video_slug">
+							        <figure class="media-figure img-inset-thumb item-click"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/30/f8df9802-9fd7-40c9-a17b-70edbe62ac9a/thumbnail/140x88/76c85611aaa82a87753482bbd2176bfb/91159269338373640x360.jpg" alt=""></span>
+							        </figure></a>
+								<div class="media-body">
+                                    									<h4 class="topic">U.S.</h4>
+                                        										<h3 class="title"><a href="/videos/healing-distrust-of-police-pittsburgh-shows-how-hard-it-is" class="video_slug item-click" title="Healing distrust of police: Pittsburgh shows how hard it is">Healing distrust of police: Pittsburgh shows how h...</a>
+							    </h3></div>	
+							</li>
+																											</ul></div>
+				</div>
+				
+				<div data-component="scrollbar" id="tab-content-2" class="tab-content">
+					<!-- display recent videos here -->
+					<div class="content">
+				        <ul class="media-list items "><li>
+							    <a href="/news/93-year-old-michigan-woman-a-fitness-inspiration/">
+							        <figure class="media-figure img-inset-thumb"></figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/93-year-old-michigan-woman-a-fitness-inspiration/">93-year-old Michigan woman a fitness inspiration</a>
+							    </h3></div>						         
+							</li>	
+														<li>
+							    <a href="/news/how-much-alcohol-can-raise-your-risk-for-stroke/">
+							        <figure class="media-figure img-inset-thumb"></figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/how-much-alcohol-can-raise-your-risk-for-stroke/">How much alcohol raises your risk for stroke?</a>
+							    </h3></div>						         
+							</li>	
+														<li>
+							    <a href="/news/seniors-hit-hardest-this-flu-season/">
+							        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/12/31/9ec7c6a5-bb33-4fe8-9ada-13543c8e9e09/thumbnail/140x88/1ac4a555f9bdc629990837e66d1fe70c/lapook-flu326396640x360.jpg" alt=""></span>
+									</figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/seniors-hit-hardest-this-flu-season/">Seniors hit hardest this flu season</a>
+							    </h3></div>						         
+							</li>	
+														<li>
+							    <a href="/news/will-the-super-bowl-be-decided-by-night-owls/">
+							        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/29/85ba5de1-a6cb-4a8a-9f32-e5837516cca6/thumbnail/140x88/22fe4a17d4ace4a39d7f07c1dee98c71/ap1696675782991.jpg" alt=""></span>
+									</figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/will-the-super-bowl-be-decided-by-night-owls/">Will the Super Bowl be decided by night owls?</a>
+							    </h3></div>						         
+							</li>	
+														<li>
+							    <a href="/news/dogs-and-cats-need-dental-care-braces-invisalign/">
+							        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/03/06/8633c51f-d933-454f-abbe-d56bc2d1b1f0/thumbnail/140x88/725def7eab5dddacf71c7f9d5a251784/dogbraces.jpg" alt=""></span>
+									</figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/dogs-and-cats-need-dental-care-braces-invisalign/">Why dogs and cats need dental care, sometimes even braces</a>
+							    </h3></div>						         
+							</li>	
+														<li>
+							    <a href="/news/men-who-post-a-lot-of-selfies-more-likely-to-be-psychopaths-study-shows/">
+							        <figure class="media-figure img-inset-thumb"></figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/men-who-post-a-lot-of-selfies-more-likely-to-be-psychopaths-study-shows/">Men who post lots of selfies reveal more than they know</a>
+							    </h3></div>						         
+							</li>	
+														<li>
+							    <a href="/news/arizona-monitoring-1000-people-for-measles-linked-to-disneyland/">
+							        <figure class="media-figure img-inset-thumb"></figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/arizona-monitoring-1000-people-for-measles-linked-to-disneyland/">&#8203;Arizona monitoring 1,000 people for measles</a>
+							    </h3></div>						         
+							</li>	
+														<li>
+							    <a href="/news/depression-loneliness-linked-to-binge-watching-television/">
+							        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/29/f8c33f33-b253-4ab3-bb9a-148ce060b36e/thumbnail/140x88/a3212760db2d465535408582aed561e2/televisiondepression.jpg" alt=""></span>
+									</figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/depression-loneliness-linked-to-binge-watching-television/">Depression, loneliness linked to binge-watching TV</a>
+							    </h3></div>						         
+							</li>	
+														<li>
+							    <a href="/news/flu-raises-risk-for-more-severe-infection-sepsis/">
+							        <figure class="media-figure img-inset-thumb"></figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/flu-raises-risk-for-more-severe-infection-sepsis/">Flu raises risk for more severe infection - sepsis</a>
+							    </h3></div>						         
+							</li>	
+														<li>
+							    <a href="/news/new-evidence-links-common-chemicals-and-early-onset-menopause/">
+							        <figure class="media-figure img-inset-thumb"></figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/new-evidence-links-common-chemicals-and-early-onset-menopause/">&#8203;New evidence links common chemicals to early onset menopause</a>
+							    </h3></div>						         
+							</li>	
+														<li>
+							    <a href="/news/playing-football-as-a-kid-increases-brain-damage-risk/">
+							        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/29/dcc883cc-4fa5-4743-8b0f-e9df4f96c333/thumbnail/140x88/fb0f02af8aac4e497999f6caeb00b115/football-boys.jpg" alt=""></span>
+									</figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/playing-football-as-a-kid-increases-brain-damage-risk/">Playing football as a kid increases brain damage risk</a>
+							    </h3></div>						         
+							</li>	
+														<li>
+							    <a href="/news/girl-helps-paramedics-through-sign-language-skills/">
+							        <figure class="media-figure img-inset-thumb"></figure></a>
+								<div class="media-body">
+									<h4 class="topic">Health</h4>
+										<h3 class="title"><a href="/news/girl-helps-paramedics-through-sign-language-skills/">Girl helps paramedics through sign language skills</a>
+							    </h3></div>						         
+							</li>	
+											        </ul></div>
+				</div>
+							 	   
+		     </div>
+		</div>
+		
+	</div>
+</div>
+
+                                                                    </div>
+            </div>
+                <div class="row">
+        <div class="col-12">
+                                            <div class="row">
+                                    <div class="col-8">
+                                                    
+                                                        
+                                            
+    <!-- src/CbsNews/ArticleBundle/Resources/views/Single/article.desktop.html.twig -->
+<article class="article " data-target="#dashboard" data-component="dashboardLoader" data-dashboard-loader-options='{"url":"\/feature\/ebola\/dashboard\/xhr","eventName":"load","responseKey":"dashboard"}'><header><div class="byline"><span class="by">By</span><span class="author">  Jessica Firger</span><span class="source">CBS News</span><span class="time">August 4, 2014, 5:37 PM</span></div>
+        
+        <h1 class="title" itemprop="headline">The race to find a vaccine or treatment to stop Ebola</h1>
+
+		
+    </header><div class="social sharebar_expanded inline-sharebar theme-light " data-component="sharebar">
+
+
+    <ul data-component="socialCounts" data-social-counts-options='{"title":"The race to find a vaccine or treatment to stop Ebola","description":"Some Ebola drug research has shown promise but much more work needs to be done -- and fast","url":"http:\/\/www.cbsnews.com\/news\/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","showZeros":false}'><li class="std-social">
+            <a href="#postComments" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social|Comments"}' id="std-comments"><span class="livefyre-commentcount comment-count" data-lf-site-id="323201" data-lf-article-id="3bfc06ff-d189-425d-973d-fa719530d67e" data-lf-format="fullTextWithoutZero"></span></a>
+        </li>
+        
+        <li class="std-social std-facebook" data-dropdown-toggle>
+           <a class="sharebar-facebook" data-item="trigger" data-counts data-popup="facebook" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social|Facebook"}'>
+                <span class="social-count social-icon"></span>
+           </a>
+           <div class="share-dropdown" data-dropdown-el="content">
+                <span class="triangle triangle-outer"></span>
+                <div class="dropdown-container" data-component="socialButton" data-social-button-options='{"mode":"horizontal","title":"The race to find a vaccine or treatment to stop Ebola","description":"Some Ebola drug research has shown promise but much more work needs to be done -- and fast","url":"http:\/\/www.cbsnews.com\/news\/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","facebookAppId":"79439656165","location":"top"}'>
+                    <div class="social-button" data-button="facebook"></div>
+                </div>
+           </div>   Shares
+        </li>
+
+        <li class="std-social std-twitter" data-dropdown-toggle>
+           <a class="sharebar-twitter" data-item="trigger" data-counts data-popup="twitter" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social|Twitter"}'>
+                <span class="social-icon"></span>
+
+           </a>
+           <div class="share-dropdown" data-dropdown-el="content">
+                <span class="triangle triangle-outer"></span>
+                <span class="triangle triangle-inner"></span>
+                <div class="dropdown-container" data-component="socialButton" data-social-button-options='{"mode":"horizontal","via":"cbsnews","title":"The race to find a vaccine or treatment to stop Ebola","description":"Some Ebola drug research has shown promise but much more work needs to be done -- and fast","url":"http:\/\/www.cbsnews.com\/news\/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","location":"top"}'>
+                    <div class="social-button" data-button="twitter"></div>
+                </div>
+           </div>  Tweets
+        </li>
+
+        <li class="std-social std-stumble" data-dropdown-toggle>
+            <a class="sharebar-stumble" data-item="trigger" data-counts data-popup="stumbleupon" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social|StumbleUpon"}'>
+                <span class="social-icon count"></span>
+                Stumble
+            </a>
+           <div class="share-dropdown" data-dropdown-el="content">
+                <span class="triangle triangle-outer"></span>
+                <span class="triangle triangle-inner"></span>
+                <div class="dropdown-container" data-component="socialButton" data-social-button-options='{"mode":"horizontal","title":"The race to find a vaccine or treatment to stop Ebola","description":"Some Ebola drug research has shown promise but much more work needs to be done -- and fast","url":"http:\/\/www.cbsnews.com\/news\/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","location":"top"}'>
+                    <div class="social-button" data-button="stumbleupon"></div>
+                </div>
+           </div>
+        </li>
+
+        <li class="std-social last std-email">
+            <span class="emailImage btnImage"></span>
+            <a href="mailto:?subject=Your%20friend%20has%20shared%20a%20CBSNews%20link%20with%20you&amp;body=The%20race%20to%20find%20a%20vaccine%20or%20treatment%20to%20stop%20Ebola%0Dhttp%3A%2F%2Fwww.cbsnews.com%2Fnews%2Fhow-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks" title="Email" class="sharebar-email">
+                <span class="social-icon"></span>
+                Email
+            </a>
+        </li>
+
+        <!-- MORE DROPDOWN -->
+        <li class="extra-social" data-dropdown-toggle>
+           <a class="sharebar-more" data-item="trigger">More +</a>
+           <div class="share-dropdown" data-dropdown-el="content">
+                <span class="triangle triangle-outer"></span>
+                <span class="triangle triangle-inner"></span>
+                <div class="dropdown-container" data-component="socialButton" data-social-button-options='{"mode":"horizontal","title":"The race to find a vaccine or treatment to stop Ebola","description":"Some Ebola drug research has shown promise but much more work needs to be done -- and fast","url":"http:\/\/www.cbsnews.com\/news\/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","location":"top"}'>
+                    <ul><li class="googlePlusOneShareBtn">
+                            <div class="social-button" data-button="googleplus" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social Flyout|More-Google"}'></div>
+                        </li>
+                        <li class="linkedInShareBtn">
+                            <div class="social-button" data-button="linkedin" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social Flyout|More-LinkedIn"}'></div>
+                        </li>
+                        <li class="redditShare">
+                            <div class="social-button" data-button="reddit" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social Flyout|More-Reddit"}'></div>
+                        </li>
+                    </ul></div>
+           </div>
+        </li>
+
+    </ul></div>
+    
+
+
+    <div class="entry" itemprop="articleBody" id="article-entry">
+
+        
+        <p>As the Ebola virus outbreak continues to rage in West Africa, the pressure is on to fast-track <a href="http://www.cbsnews.com/news/cdc-director-we-can-stop-ebola-from-spreading/">drug research that could potentially stop or slow its spread</a>.</p><p>Last week, the National Institute of Allergy and Infectious Disease (NIAID), a division of the National Institutes of Health, announced plans to expedite research on a vaccine against Ebola that's been shown to be effective in primates. A clinical trial on humans may begin as early as next month. </p><p></p><div class="shortcode-gallery shortcode small left" id="shortcode-video">
+    <a data-open="modalAsync" data-modal-async-url="/videos/6dfa5676-ca55-4e7d-919a-dfcbad4df76f/xhr" data-modal-options='{"position": "absolute", "checkIE": "true"}' data-omniture-track="trackVideoOverlayView" data-omniture-track-data='{"siteSection":"Evening News Health","siteHier":["Evening News Health","CBS Evening News"],"pageType":"video","mediaTitle":"U.S. Ebola patients treated with experimental serum","mediaId":"6dfa5676-ca55-4e7d-919a-dfcbad4df76f","mediaType":"content_video","topicId":["7f36ed29-352e-11e3-8ce8-047d7b15b92e"],"topicName":["Evening News Health"]}' href="/videos/us-ebola-patients-treated-with-experimental-serum">
+        <figure class="gallery overlay-video"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/08/04/0e35ab9f-01e4-4768-840d-c7af914d2909/thumbnail/220x140/f3568615ce58fcfdd565db7b11d7f0a4/en080414lapook260729640x360.jpg" alt=""></span>
+
+            <figcaption><div class="meta">
+                    <span class="count">Play</span>
+                    <span class="label">Video</span>
+                </div>
+                <span class="topic">Evening News Health</span>
+                <h3 class="title">U.S. Ebola patients treated with experimental serum</h3>
+                <p class="dek">
+                                            The National Institutes of Health has revealed that two Americans infected with Ebola received an experimental serum called ZMapp, which previous...
+                                    </p>
+            </figcaption></figure></a>
+</div><p>"We tested it in monkeys, it looks very good, it protects monkeys completely from challenge with Ebola. They don't get sick and they don't die, whereas unvaccinated monkeys all do," Dr. Anthony Fauci, director of NIAID, told "CBS This Morning" on Monday. "We're going to start human trials in September in normal volunteers. And if that looks good, by January we should be able to scale up in its production."</p><p>He said the vaccine could eventually be offered to health care providers who put themselves at high risk taking care of others in an outbreak.</p><p>Scientists at the Vaccine Research Center said that, unlike vaccines for many other communicable diseases, this particular one does not contain any of the pathogens that cause the <a href="http://www.cbsnews.com/news/mount-sinai-hospital-in-new-york-city-isolates-patient-with-possible-ebola-symptoms/">Ebola virus</a>.</p><p>"This is a non-replicating viral vector, which means the vaccine enters a cell, delivers the gene inserts and does not replicate further. The gene inserts express a protein to which the body makes an immune response," according to a statement from the NIAID.</p><p></p><div class="shortcode-gallery shortcode small left" id="shortcode-video">
+    <a data-open="modalAsync" data-modal-async-url="/videos/b1eb0bd5-099d-4caf-a927-81d0c82b2d52/xhr" data-modal-options='{"position": "absolute", "checkIE": "true"}' data-omniture-track="trackVideoOverlayView" data-omniture-track-data='{"siteSection":"CBS This Morning","siteHier":["CBS This Morning"],"pageType":"video","mediaTitle":"Dr. LaPook on American doctor being treated for Ebola, potential vaccine to fight virus","mediaId":"b1eb0bd5-099d-4caf-a927-81d0c82b2d52","mediaType":"content_video","topicId":["46046528-758d-11e2-9d12-0018fe8a00b0"],"topicName":["CBS This Morning"]}' href="/videos/dr-lapook-on-american-doctor-being-treated-for-ebola-potential-vaccine-to-fight-virus">
+        <figure class="gallery overlay-video"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2014/08/04/973bed5a-999d-41ef-b518-6570fb847f8b/thumbnail/220x140/59f8074b60e7fca9e6002fe2cddf4b55/ctm0804lapook260469640x360.jpg" alt=""></span>
+
+            <figcaption><div class="meta">
+                    <span class="count">Play</span>
+                    <span class="label">Video</span>
+                </div>
+                <span class="topic">CBS This Morning</span>
+                <h3 class="title">Dr. LaPook on American doctor being treated for Ebola, potential vaccine to fight virus</h3>
+                <p class="dek">
+                                            Emory University hospital has taken extreme measures to ensure the deadly Ebola virus is contained within the quarantine unit. Chief medical corr...
+                                    </p>
+            </figcaption></figure></a>
+</div><p>In next month's trial, the vaccine will be tested on healthy human volunteers, which will provide researchers with information on any contraindication and side effects the drug may pose, as well as help to determine what dosage would be needed to make it effective for preventing illness. It would be unethical to conduct a randomized trial of any Ebola treatment or vaccine in people who were infected since only a fraction of study subjects would receive the potentially life-saving therapy.</p><p>But it isn't the only vaccine that's in testing or has shown promise. Thomas Geisbert, a professor in the department of microbiology and immunology at the University of Texas Medical Branch at Galveston, has been working on research for a number of potential vaccines that may hold promise for preventing the spread of the Ebola virus. </p><p>He told CBS News there are at least four other vaccines in development -- and all show some potential to be effective in humans. Geisbert said one such vaccine might be effective in a single dose, much like a rabies shot, rather than requiring two or three doses. This would be a boon for public health efforts in poor countries because it would eliminate the need for follow-up visits with patients. </p><p>But progress for this vaccine and others has been slow.</p><p>Geisbert, who received a $26 million grant from the NIH for Ebola vaccination research, said lack of <a href="http://www.cbsnews.com/news/how-an-on-hold-ebola-treatment-is-boosting-tekmira/">funding is a large factor in why little progress has been made</a>. </p><p>"Because there's really not been that many cases globally, there's a small global market," Geisbert told CBS News. "There's not a lot interest from pharmaceutical companies. There's no incentive for the private sector, so you have to rely on the government." </p><p>The current outbreak in West Africa, which has taken the lives of <a href="http://www.cbsnews.com/news/ebola-death-toll-jumps-to-887-in-west-africa/">887 people to date</a>, has prompted increased funding for vaccine research. But a vaccine, even if it works, won't be enough to stop an epidemic. To do so would also require having treatments available for those people who contract Ebola.</p><p>"People need to understand the difference between a treatment and a vaccine," Fauci told CBS News. "What I was talking about, which we have really some very favorable results on, is a vaccine to prevent infection."</p><p>One potential treatment for people after they become infected has already made its way to West Africa. Last week, several vials of an <a href="http://www.cbsnews.com/news/ebola-crisis-us-racing-to-bring-two-infected-americans-home/">experimental drug serum</a> called ZMAPP were transported to Liberia from the NIH in an effort to treat two American aid workers with Ebola. The serum contains antibodies to prevent the virus from entering cells in the body, CBS News chief medical correspondent <a href="http://www.cbsnews.com/lapook" target="_blank">Dr. Jon LaPook</a> explains.</p><p>The health of both patients improved shortly after taking the drug. However just two case studies aren't enough to determine if it would be an effective treatment for people in the long run.</p><p>Dr. Kartik Chandran, associate professor of microbiology &amp; immunology at Albert Einstein College of Medicine, is studying the way the Ebola virus behaves in humans. "Our work is really focused on basic understanding of how the virus infects the cell. We are using that information to develop drugs against Ebola," he told CBS News.</p><p></p><div class="shortcode-gallery shortcode small left" id="shortcode-video">
+    <a data-open="modalAsync" data-modal-async-url="/videos/f8f55506-bbd4-4205-8d95-390634e194ae/xhr" data-modal-options='{"position": "absolute", "checkIE": "true"}' data-omniture-track="trackVideoOverlayView" data-omniture-track-data='{"siteSection":"CBS Evening News","siteHier":["CBS Evening News"],"pageType":"video","mediaTitle":"American doctor with Ebola recovering in Atlanta","mediaId":"f8f55506-bbd4-4205-8d95-390634e194ae","mediaType":"content_video","topicId":["3058ab58-758d-11e2-9d12-0018fe8a00b0"],"topicName":["CBS Evening News"]}' href="/videos/american-doctor-with-ebola-recovering-in-atlanta">
+        <figure class="gallery overlay-video"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/08/03/da528c48-3b52-4aba-94f0-cd0386658e6d/thumbnail/220x140/7c257f8f039606ce58d2c59fb615ba90/englor080314260381640x360.jpg" alt=""></span>
+
+            <figcaption><div class="meta">
+                    <span class="count">Play</span>
+                    <span class="label">Video</span>
+                </div>
+                <span class="topic">CBS Evening News</span>
+                <h3 class="title">American doctor with Ebola recovering in Atlanta</h3>
+                <p class="dek">
+                                            According to the World Health Organization, at least 826 people have died in the latest outbreak of the Ebola virus in West Africa. Dr. Kent Bran...
+                                    </p>
+            </figcaption></figure></a>
+</div><p>Chandran has discovered Ebola is a sneaky and aggressive pathogen. "The virus is like a burglar trying to get into a house, a mansion," he said. "This mansion has lots and lots rooms and cul-de-sacs and dead ends. Every door has a lock, there are surveillance cameras and the virus needs to break in. By identifying the key doors  it could get through, we can come up with targets." </p><p>The virus essentially enters human cells by hitching a ride with certain proteins. The Ebola virus binds to the host cell's outer membrane, then part of the host cell membrane envelops the virus. This creates a bubble of sorts, which enables the virus to enter into the cell. The virus escapes destruction by exploiting the cell's regeneration process. One protein the virus exploits in known as the Niemann-Picks CI (NPC1), which helps transport cholesterol within a cell. In a mouse study, Chandran and his team discovered that if cells do not make this protein  -- due to a mutation -- they are immune to Ebola. </p><p>This research was supported by grants from the NIAID and the National Human Genome Research Institute, both part of the National Institutes of Health, the U.S. Army, and the Burroughs Wellcome Fund.</p><p>Chandran said a drug that blocks the virus from binding to the protein may be a potential treatment for people who contract Ebola, though development is some time away. </p><p> "Every time you identify another one of the cells this virus is exploiting, you can target them to block the virus," he said. "There are other approaches. There's the therapeutic antibody approach -- you make antibodies against the outer shell of the virus. You inject them and infuse them into a person."</p>
+    </div>
+
+	
+    
+
+            <div class="copyright">
+                                        &copy; 2014 CBS Interactive Inc. All Rights Reserved. 
+                    </div>
+        
+    
+
+             	
+<div class="social sharebar_expanded inline-sharebar theme-light " data-component="sharebar">
+
+
+    <ul data-component="socialCounts" data-social-counts-options='{"title":"The race to find a vaccine or treatment to stop Ebola","description":"Some Ebola drug research has shown promise but much more work needs to be done -- and fast","url":"http:\/\/www.cbsnews.com\/news\/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","showZeros":false}'><li class="std-social">
+            <a href="#postComments" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social|Comments"}' id="std-comments"><span class="livefyre-commentcount comment-count" data-lf-site-id="323201" data-lf-article-id="3bfc06ff-d189-425d-973d-fa719530d67e" data-lf-format="fullTextWithoutZero"></span></a>
+        </li>
+        
+        <li class="std-social std-facebook" data-dropdown-toggle>
+           <a class="sharebar-facebook" data-item="trigger" data-counts data-popup="facebook" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social|Facebook"}'>
+                <span class="social-count social-icon"></span>
+           </a>
+           <div class="share-dropdown" data-dropdown-el="content">
+                <span class="triangle triangle-outer"></span>
+                <div class="dropdown-container" data-component="socialButton" data-social-button-options='{"mode":"horizontal","title":"The race to find a vaccine or treatment to stop Ebola","description":"Some Ebola drug research has shown promise but much more work needs to be done -- and fast","url":"http:\/\/www.cbsnews.com\/news\/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","facebookAppId":"79439656165","location":"bottom"}'>
+                    <div class="social-button" data-button="facebook"></div>
+                </div>
+           </div>   Shares
+        </li>
+
+        <li class="std-social std-twitter" data-dropdown-toggle>
+           <a class="sharebar-twitter" data-item="trigger" data-counts data-popup="twitter" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social|Twitter"}'>
+                <span class="social-icon"></span>
+
+           </a>
+           <div class="share-dropdown" data-dropdown-el="content">
+                <span class="triangle triangle-outer"></span>
+                <span class="triangle triangle-inner"></span>
+                <div class="dropdown-container" data-component="socialButton" data-social-button-options='{"mode":"horizontal","via":"cbsnews","title":"The race to find a vaccine or treatment to stop Ebola","description":"Some Ebola drug research has shown promise but much more work needs to be done -- and fast","url":"http:\/\/www.cbsnews.com\/news\/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","location":"bottom"}'>
+                    <div class="social-button" data-button="twitter"></div>
+                </div>
+           </div>  Tweets
+        </li>
+
+        <li class="std-social std-stumble" data-dropdown-toggle>
+            <a class="sharebar-stumble" data-item="trigger" data-counts data-popup="stumbleupon" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social|StumbleUpon"}'>
+                <span class="social-icon count"></span>
+                Stumble
+            </a>
+           <div class="share-dropdown" data-dropdown-el="content">
+                <span class="triangle triangle-outer"></span>
+                <span class="triangle triangle-inner"></span>
+                <div class="dropdown-container" data-component="socialButton" data-social-button-options='{"mode":"horizontal","title":"The race to find a vaccine or treatment to stop Ebola","description":"Some Ebola drug research has shown promise but much more work needs to be done -- and fast","url":"http:\/\/www.cbsnews.com\/news\/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","location":"bottom"}'>
+                    <div class="social-button" data-button="stumbleupon"></div>
+                </div>
+           </div>
+        </li>
+
+        <li class="std-social last std-email">
+            <span class="emailImage btnImage"></span>
+            <a href="mailto:?subject=Your%20friend%20has%20shared%20a%20CBSNews%20link%20with%20you&amp;body=The%20race%20to%20find%20a%20vaccine%20or%20treatment%20to%20stop%20Ebola%0Dhttp%3A%2F%2Fwww.cbsnews.com%2Fnews%2Fhow-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks" title="Email" class="sharebar-email">
+                <span class="social-icon"></span>
+                Email
+            </a>
+        </li>
+
+        <!-- MORE DROPDOWN -->
+        <li class="extra-social" data-dropdown-toggle>
+           <a class="sharebar-more" data-item="trigger">More +</a>
+           <div class="share-dropdown" data-dropdown-el="content">
+                <span class="triangle triangle-outer"></span>
+                <span class="triangle triangle-inner"></span>
+                <div class="dropdown-container" data-component="socialButton" data-social-button-options='{"mode":"horizontal","title":"The race to find a vaccine or treatment to stop Ebola","description":"Some Ebola drug research has shown promise but much more work needs to be done -- and fast","url":"http:\/\/www.cbsnews.com\/news\/how-soon-can-a-vaccine-or-treatment-stop-ebola-in-its-tracks","location":"bottom"}'>
+                    <ul><li class="googlePlusOneShareBtn">
+                            <div class="social-button" data-button="googleplus" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social Flyout|More-Google"}'></div>
+                        </li>
+                        <li class="linkedInShareBtn">
+                            <div class="social-button" data-button="linkedin" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social Flyout|More-LinkedIn"}'></div>
+                        </li>
+                        <li class="redditShare">
+                            <div class="social-button" data-button="reddit" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Post Page|Social Flyout|More-Reddit"}'></div>
+                        </li>
+                    </ul></div>
+           </div>
+        </li>
+
+    </ul></div>
+            
+
+</article><div id="dashboard" class="dashboard"></div>
+
+
+                                                                                
+                                                        
+                                            
+
+
+
+    
+    
+
+<div class="module module-listing module-bulk ">
+                                                                                                   
+    <div class="listing-full-focus-with-label ">
+    <ul class="items"><li>
+
+   <div class="YAD1"></div>
+<script>
+ (function(a,b,c,d,e,f){a[d]||(a[d]=
+ function(){(a[d].q=a[d].q||[]).push([arguments,+new Date])});
+ e=b.createElement(c);f=b.getElementsByTagName(c)[0];
+ e.src='https://s.yimg.com/uq/syndication/yad.js';e.async=true;
+ f.parentNode.insertBefore(e,f)}(window,document,'script','yad'));
+ yad('f062d64e-6893-3d93-a0a7-11f6dfbf0c2b', {element: document.querySelector('.YAD1')});
+</script></li>
+                </ul></div>                                                        </div>
+                                                                                
+                                                        
+                                                                        <section class="section module-rem"><div class="row">
+        <div class="col-4">
+                <h2 class="title">Featured in Health</h2>
+                                                                                            
+
+<div class="listing-full ">
+    <ul class="media-list items"><li class="">
+    <a href="/news/top-5-diets-for-weight-loss/">
+        <figure class="media-block img-inset" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|Article-1-Large Image"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2014/11/11/0517a785-daec-4d49-aa7f-c52ef98c9c52/thumbnail/300x190/5bd3e5cb5718ac3dc6c79406f8ceb141/istock000021415229large.jpg" alt=""></span>
+        </figure><h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|Article-1-Headline"}'>Top 5 diets for weight loss in 2015</h3>
+
+        <p class="dek" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|Article-1-Body"}'>
+U.S. News rankings can help you lose weight and keep it off with expert-ranked diets that fit your lifestyle</p>
+            </a>
+</li>
+
+                            
+                                                
+
+
+
+    
+
+<li class="">
+    <a href="/news/smart-strategies-stop-procrastinating/">
+        <figure class="media-block img-inset" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|Article-2-Large Image"}'><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/03/14aba0bc-d9dc-4b2e-bd9d-8db914dc3144/thumbnail/300x190/1520b85bf6c22dc5d6bea97436cdfe8d/istock000019263593large.jpg" alt=""></span>
+        </figure><h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|Article-2-Headline"}'>Smart strategies to help you stop procrastinating</h3>
+
+        <p class="dek" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|Article-2-Body"}'>
+Avoid the pitfalls of procrastination with expert advice from the authors of "Mind Gym: Achieve More by Thinking Differently"</p>
+            </a>
+</li>
+
+                </ul></div>        </div>
+
+        <div class="col-4">
+                <h2 class="title">Popular on CBS News</h2>
+            
+<div class="listing-mini-sub ">
+    <ul class="media-list items"><li>
+    <a href="/news/girl-helps-paramedics-through-sign-language-skills/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-1-Image"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/28/d92135ad-951d-4ef8-847c-2f81276ef11c/thumbnail/60x60/648cabca1ae426a1638ccb17905e03a2/yesenia.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-1-Headline"}'>Girl helps paramedics through sign language skills
+            </h4>
+                            <div class="meta-label comment-count" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-1-Comment"}'>
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="ae771d04-ea4a-41fc-90cc-549630a6d566" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/arizona-monitoring-1000-people-for-measles-linked-to-disneyland/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-2-Image"}'><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/21/fe6047ba-25b7-4c6b-a6ab-050082269c34/thumbnail/60x60/b8c04371a08adc958d1033f31f3263b5/np0121measles334227640x360.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-2-Headline"}'>&#8203;Arizona monitoring 1,000 people for measles
+            </h4>
+                            <div class="meta-label comment-count" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-2-Comment"}'>
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="4fac678b-f5d6-46a1-902c-b1e930d9d0f5" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/depression-loneliness-linked-to-binge-watching-television/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-3-Image"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/29/f8c33f33-b253-4ab3-bb9a-148ce060b36e/thumbnail/60x60/da92d1c912a46871f06c0a82224501ed/televisiondepression.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-3-Headline"}'>Depression, loneliness linked to binge-watching TV
+            </h4>
+                            <div class="meta-label comment-count" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-3-Comment"}'>
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="86241e81-6934-4c46-9dd5-85e4437b4984" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/men-who-post-a-lot-of-selfies-more-likely-to-be-psychopaths-study-shows/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-4-Image"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/15249207-5226-4b95-916c-7b1f067d5578/thumbnail/60x60/1ea282acad45a5513c7ad9ae2f404d25/istock000037524318large.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-4-Headline"}'>Men who post lots of selfies reveal more than they know
+            </h4>
+                            <div class="meta-label comment-count" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-4-Comment"}'>
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="e7f1e27d-2138-4372-a2e2-d32c41937983" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/doctor-explains-why-he-lets-kids-avoid-the-measles-vaccine/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-5-Image"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/27/f46065b3-95a7-4b14-84a9-aaeabd3254e6/thumbnail/60x60/dbbb92906ed92b4c2c6b3a948025959a/tracy-measles-transferframe1491.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-5-Headline"}'>Doctor explains why he lets kids avoid the measles vaccine
+            </h4>
+                            <div class="meta-label comment-count" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-5-Comment"}'>
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="f83d8ba4-b660-46f7-bc97-2096c6541369" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/fda-debates-releasing-genetically-modified-mosquitoes-into-florida-keys/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-6-Image"}'><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/25/8745d6a9-6e58-4f1e-a49a-ec4f90e7e306/thumbnail/60x60/65cf20b26e31b00879321d9997b1572f/mosquitoap46424393482.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-6-Headline"}'>FDA debates releasing GMO mosquitoes into Florida Keys
+            </h4>
+                            <div class="meta-label comment-count" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-6-Comment"}'>
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="4fe1b5ed-f193-4196-bf46-28f90d96113c" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/should-parents-be-allowed-to-choose-whether-to-vaccinate-their-kids/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-7-Image"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/24/11903586-1f95-455b-a732-ca6346fc3cbe/thumbnail/60x60/1ba8cad4e2c0accb8300c6c43cef294d/measles-vaccination.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-7-Headline"}'>Should parents be allowed to choose whether to vaccinate their kids?
+            </h4>
+                            <div class="meta-label comment-count" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-7-Comment"}'>
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="3c73d5f0-7b57-4580-b1e1-9ce016e43566" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/siblings-with-autism-dont-always-share-same-genetic-mutations/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-8-Image"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/27/11ce3294-f209-46a8-8c87-b15d28636781/thumbnail/60x60/bfa29a7ebf7927eaec11d9f40ad65cc9/np0127autismstudy336725640x360.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-8-Headline"}'>Genetics of autism more complicated than thought, study finds
+            </h4>
+                            <div class="meta-label comment-count" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Post-REM Block|River-8-Comment"}'>
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="caf3ef27-76f7-474a-be1f-da4cbcceea8a" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                        </ul></div>        </div>
+    </div>
+</section><div id="comments" class="comments ">
+    <a name="postComments"></a>
+			<h2 class="title"><span class="livefyre-commentcount comment-count" data-lf-site-id="323201" data-lf-article-id="3bfc06ff-d189-425d-973d-fa719530d67e" data-lf-format="NumberOnlyNotZero"></span> Comments</h2>
+	
+	        	
+    <div id="livefyreConversation" data-component="livefyreConversation" data-livefyre-conversation-options='{"globalConfig":{"network":"cbsnews.fyre.co"},"commentStreamConfigs":{"siteId":323201,"articleId":"3bfc06ff-d189-425d-973d-fa719530d67e","el":"livefyreConversation","checksum":"dc1753642e1e83e9e567a2e32bda28e0","disableAvatars":"true","collectionMeta":"eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6IlRoZSByYWNlIHRvIGZpbmQgYSB2YWNjaW5lIG9yIHRyZWF0bWVudCB0byBzdG9wIEVib2xhIiwidXJsIjoiaHR0cDpcL1wvd3d3LmNic25ld3MuY29tXC9uZXdzXC9ob3ctc29vbi1jYW4tYS12YWNjaW5lLW9yLXRyZWF0bWVudC1zdG9wLWVib2xhLWluLWl0cy10cmFja3NcLyIsImNoZWNrc3VtIjoiZGMxNzUzNjQyZTFlODNlOWU1NjdhMmUzMmJkYTI4ZTAiLCJhcnRpY2xlSWQiOiIzYmZjMDZmZi1kMTg5LTQyNWQtOTczZC1mYTcxOTUzMGQ2N2UifQ.7x9nIFsQzRnd-29C7H7nlnHhhTfKuml9z0f-eMkeag8","anonymousFlaggingEnabled":false}}'></div></div>
+
+
+                                                                    </div>
+            <div class="col-4">
+                                                    
+                                                        
+                                            
+
+
+
+    
+    <div class="module module-listing module-livestream-player">
+            <h2 class="module-heading title">CBSN Live</h2>
+            <a href="" class="popout-icon">pop-out</a>
+            <div class="livestream-player-wrapper">
+            <div class="livestream-video-player">
+                <div class="live-text"><span class="live-text-icon"></span></div>
+                <div class="watch-live"><span class="watch-live-icon"></span></div>
+                <div class="fd-video-player" id="cndcVideoPlayer" data-component="cndcDesktopPromo"></div>
+            </div>
+            <div id="cndcLiveHed" class="headline">Live Video</div>
+            <div class="cbsnews-live-logo"><span class="cbsn-logo"></span></div>
+        </div>
+        
+    </div>
+    
+ 
+                                                                                
+                                                        
+                                                
+
+                                            <div id="marquee-video-top-54cc19ce3cf8f" class="ad-marquee-video-top" data-ad="marquee-video-top" style="display:none">
+    <script>
+        window.console && console.log && console.log("ADS: queuing marquee-video-top-54cc19ce3cf8f for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("marquee-video-top-54cc19ce3cf8f");
+    </script></div>
+                                                                                    
+                                                        
+                                            
+
+
+<div class="module module-listing">
+    <h2 class="module-heading title">Most Popular</h2>
+
+    
+<div class="listing-mini-number ">
+    <ul class="media-list items"><li>
+    <a href="/news/comcast-apologizes-for-changing-customers-billing-name-to-profanity/"> 
+        <div class="media-figure">
+            <span class="number" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Rank Indicator-1"}'>01</span>
+        </div>
+    
+        <div class="media-body">
+                            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Headline-1"}'>Comcast apologizes for changing customer's billing name to profanity</h4>
+            
+                                    <div class="meta-label view-count">
+                <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-1"}'>434787</span>
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-1"}'>views</span>
+            </div>
+                                </div>
+    </a>
+</li>
+                            
+                                                
+<li>
+    <a href="/news/blizzard-2015-may-be-falling-short-of-predictions/"> 
+        <div class="media-figure">
+            <span class="number" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Rank Indicator-2"}'>02</span>
+        </div>
+    
+        <div class="media-body">
+                            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Headline-2"}'>Blizzard 2015 may be falling short of predictions</h4>
+            
+                                    <div class="meta-label view-count">
+                <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-2"}'>111566</span>
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-2"}'>views</span>
+            </div>
+                                </div>
+    </a>
+</li>
+                            
+                                                
+<li>
+    <a href="/news/girl-helps-paramedics-through-sign-language-skills/"> 
+        <div class="media-figure">
+            <span class="number" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Rank Indicator-3"}'>03</span>
+        </div>
+    
+        <div class="media-body">
+                            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Headline-3"}'>Girl helps paramedics through sign language skills</h4>
+            
+                                    <div class="meta-label view-count">
+                <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-3"}'>104997</span>
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-3"}'>views</span>
+            </div>
+                                </div>
+    </a>
+</li>
+                            
+                                                
+<li>
+    <a href="/news/telemarketers-phone-call-helps-save-beaten-oregon-woman/"> 
+        <div class="media-figure">
+            <span class="number" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Rank Indicator-4"}'>04</span>
+        </div>
+    
+        <div class="media-body">
+                            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Headline-4"}'>Telemarketer's call helps save beaten Oregon woman</h4>
+            
+                                    <div class="meta-label view-count">
+                <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-4"}'>82434</span>
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-4"}'>views</span>
+            </div>
+                                </div>
+    </a>
+</li>
+                            
+                                                
+<li>
+    <a href="/news/blizzard-2015-cities-states-begin-shutting-down/"> 
+        <div class="media-figure">
+            <span class="number" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Rank Indicator-5"}'>05</span>
+        </div>
+    
+        <div class="media-body">
+                            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Headline-5"}'>Blizzard 2015: Cities, states begin shutting down</h4>
+            
+                                    <div class="meta-label view-count">
+                <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-5"}'>60931</span>
+                <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Popular|Pageviews-5"}'>views</span>
+            </div>
+                                </div>
+    </a>
+</li>
+                </ul></div></div>                                                                                
+                                                        
+                                            
+
+
+
+    
+    
+<div class="module module-mobile-apps download-app">
+        <h2 class="module-heading title"><span class="span-title">Watch CBSN Live</span></h2>
+        <a href="http://cbsn.cbsnews.com/?ftag=CNM647193a">
+        <figure><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/2014/11/26/5a1f6610-05b3-4f46-8b07-8f284c7c741a/47592a5b9b31fc569cb8aff80d726cd1/rightrailwithtextv2.jpg" alt=""></span>
+                    </figure></a>
+    <div class="promo-feature">
+        <p class="dek">Watch CBS News anytime, anywhere with the new 24/7 digital news network.  Stream CBSN live or on demand for FREE on your TV, computer, tablet, or smartphone.</p>
+        <button class="btn"><a href="http://cbsn.cbsnews.com/?ftag=CNM647193a">Watch Now</a></button>
+    </div>
+</div>
+                                                                                
+                                                        
+                                            
+            
+<div class="listing-media-feature" data-component="carousel" data-carousel-options='{"autoplayDelay":0,"transitionDuration":0}'>
+    <div class="viewport" data-item="viewport">
+        <ul class="canvas" data-item="canvas"><li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/teslas-insane-mode-makes-passengers-freak-out/" title="Tesla's &quot;insane&quot; mode makes passengers freak out">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-1"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/ac444e3b-64d6-4c36-bc79-48fe4c962fde/thumbnail/300x190/623f5a9d345b8178fdfc8ae5102a8528/feedwrapup01302015764002338181640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-1"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-1"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-1"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-1"}'>Tesla's "insane" mode makes passengers freak out</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/security-stubhub-super-bowl-2015-ticket-operations/" title="Security behind StubHub's Super Bowl ticket operations">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-2"}'><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/30/13951367-0285-4779-a4e6-423c393bb338/thumbnail/300x190/09ff10032c6f31e2305e4ff7a0d77b21/ctmstubhub013015338428640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-2"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-2"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-2"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-2"}'>Security behind StubHub's Super Bowl ticket operations</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/are-men-who-take-lots-of-selfies-psychopaths/" title="Are men who take lots of selfies psychopaths?">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-3"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/0f22472b-d66d-4edc-aa82-2a0801c9ecc2/thumbnail/300x190/6dc96909d44262d5cf6825f4723bfa2a/psych338368640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-3"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-3"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-3"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-3"}'>Are men who take lots of selfies psychopaths?</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/saved-by-a-sales-call-telemarketers-help-after-overhearing-attack/" title="Saved by a sales call: Telemarketers help after overhearing attack">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-4"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/1d9848f1-bb71-4045-b5a1-c4e5b5d882f4/thumbnail/300x190/c1091385a2c10e5e2cbb5d5ff8fc6186/ctmwomansaved013015338411640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-4"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-4"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-4"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-4"}'>Saved by a sales call: Telemarketers help after overhearing attack</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/delta-jet-forced-to-make-emergency-landing-after-captain-gets-locked-out-of-cockpit/" title="Delta jet forced to make emergency landing after captain gets locked out of cockpit">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-5"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/0fa12721-ef88-430f-99d1-da726fe74cf8/thumbnail/300x190/37c43fdf72e606bfbf4dcda355b7da1a/ctmpilotlocked013015338405640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-5"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-5"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-5"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-5"}'>Delta jet forced to make emergency landing after captain gets locked out of cockpit</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/videos/stroke-risk-for-middle-aged-heavy-drinkers/" title="Stroke risk for middle-aged heavy drinkers">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Image-6"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/e8c17ed2-f150-40a1-94c4-b3f3da95d591/thumbnail/300x190/d87792b5ba3dbb37b866ed93ce2ac181/ctm0130drinking338432640x360.jpg" alt=""></span>
+        </figure><div class="meta-overlay overlay-video-feature">
+            <span class="asset-icon video" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Button-6"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-6"}'>Play</span> 
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Play-6"}'>Video</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Video Promo|Asset|Headline-6"}'>Stroke risk for middle-aged heavy drinkers</h3>
+        </div>
+    </a>
+</div>
+</li>                    </ul><div class="paging">
+            <a class="prev" data-to="prev" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Right Rail|Media Promo|Carousel|Left-5"}'>Previous</a>
+            
+            <a class="next" data-to="next" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Right Rail|Media Promo|Carousel|Right-5"}'>Next</a>
+        </div>
+    </div>
+</div>    
+                                                                                
+                                                        
+                                            
+
+
+<div class="module module-listing">
+    <h2 class="module-heading title">Most Shared</h2>
+
+    
+<div class="listing-mini-sub ">
+    <ul class="media-list items"><li>
+    <a href="/news/comcast-apologizes-for-changing-customers-billing-name-to-profanity/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Image-1"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/29/558b7011-0f80-47af-8152-7319f990c651/thumbnail/60x60/1a4f56c3ddefa93617a63aceca2403fa/screen-shot.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Headline-1"}'>Comcast apologizes for changing customer's billing name to profanity
+            </h4>
+                                                </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/on-29th-anniversary-of-challenger-disaster-nasas-day-of-remembrance/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Image-2"}'><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/28/2de435be-71e7-4079-94c1-1a9d459b3e00/thumbnail/60x60/22b79a51a1ceeac7d22d15007412799d/challenger.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Headline-2"}'>On Challenger anniversary, NASA's day of remembrance
+            </h4>
+                                                </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/girl-helps-paramedics-through-sign-language-skills/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Image-3"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/28/d92135ad-951d-4ef8-847c-2f81276ef11c/thumbnail/60x60/648cabca1ae426a1638ccb17905e03a2/yesenia.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Headline-3"}'>Girl helps paramedics through sign language skills
+            </h4>
+                                                </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/ernie-banks-former-chicago-cubs-player-dies-at-83/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Image-4"}'><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/24/a157a1ab-26ee-43fe-acce-4c5f78534f7b/thumbnail/60x60/087fb5917846993133ff8096f1c0fd6c/ernie-banks-0129.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Headline-4"}'>Ernie Banks, Hall of Famer known as "Mr. Cub," dies at 83
+            </h4>
+                                                </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/telemarketers-phone-call-helps-save-beaten-oregon-woman/">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Image-5"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/766b07f8-e621-4692-a161-05c9f39ec1fb/thumbnail/60x60/6abb2dd1eea7464ea56d6745e77d992d/americare-call-center.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Most Shared|Headline-5"}'>Telemarketer's call helps save beaten Oregon woman
+            </h4>
+                                                </div>
+    </a>
+</li>
+
+                        </ul></div></div>
+
+
+                                                                                
+                                                        
+                                            
+            
+<div class="listing-media-feature" data-component="carousel" data-carousel-options='{"autoplayDelay":0,"transitionDuration":0}'>
+    <div class="viewport" data-item="viewport">
+        <ul class="canvas" data-item="canvas"><li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/pictures/photos-of-the-week-jan-24-30-2015/" title="Photos of the Week: Jan. 24-30, 2015">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Thumbnail-1"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/30/154011f5-6cb5-4128-8baf-13907eaa5fc0/thumbnail/300x190/e9d6ab38da9362dfb5182384a5aab71e/462356904.jpg" alt=""></span>
+        </figure><div class="meta-overlay ">
+            <span class="asset-icon gallery" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Button-1"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-1"}'>23</span>
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-1"}'>Photos</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Headline-1"}'>Photos of the Week: Jan. 24-30, 2015</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/pictures/a-look-back-at-super-bowl-halftime-shows/" title="A look back at Super Bowl halftime shows">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Thumbnail-2"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/28/d22ceb67-8c0a-4fc2-a70d-855b1d080c88/thumbnail/300x190/5f1669821d0f99e1331456cd81dbb76a/160973397.jpg" alt=""></span>
+        </figure><div class="meta-overlay ">
+            <span class="asset-icon gallery" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Button-2"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-2"}'>31</span>
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-2"}'>Photos</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Headline-2"}'>A look back at Super Bowl halftime shows</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/pictures/sundance-2015-portraits/" title="Sundance 2015 portraits">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Thumbnail-3"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/28/cd63a1d5-796d-46d4-bcfe-2a6dcffe1e1a/thumbnail/300x190g2/e9b10203835024a79fc7a404cb436b1b/462372460.jpg" alt=""></span>
+        </figure><div class="meta-overlay ">
+            <span class="asset-icon gallery" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Button-3"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-3"}'>66</span>
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-3"}'>Photos</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Headline-3"}'>Sundance 2015 portraits</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/pictures/hospital-explodes-in-mexico-city/" title="Explosion at hospital in Mexico City">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Thumbnail-4"}'><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/29/c2785b02-bfbc-4cad-90e2-a3f2de79c43b/thumbnail/300x190/9ef964ae4911dde0e2571a308721375a/462468926.jpg" alt=""></span>
+        </figure><div class="meta-overlay ">
+            <span class="asset-icon gallery" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Button-4"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-4"}'>23</span>
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-4"}'>Photos</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Headline-4"}'>Explosion at hospital in Mexico City</h3>
+        </div>
+    </a>
+</div>
+</li>                            
+                                                
+
+<li data-item="slide">
+    
+
+
+
+
+
+    
+<div class="media-feature">
+		<a href="/pictures/deadliest-cars-on-the-road/" title="Deadliest (and safest) cars on the road">
+        <figure class="media-figure img-inset-thumb" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Thumbnail-5"}'><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/29/2e93803f-6801-4821-bf17-c513dcabf7de/thumbnail/300x190/3c8e07dc495497fb7023b4a893cf4e1b/kiario.jpg" alt=""></span>
+        </figure><div class="meta-overlay ">
+            <span class="asset-icon gallery" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Button-5"}'></span>
+            <div class="meta-label">
+                                    <span class="sub" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-5"}'>25</span>
+                    <span class="feature" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Count-5"}'>Photos</span>
+                            </div>
+    
+            <h3 class="title" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Right Rail|Gallery Promo|Asset|Headline-5"}'>Deadliest (and safest) cars on the road</h3>
+        </div>
+    </a>
+</div>
+</li>                    </ul><div class="paging">
+            <a class="prev" data-to="prev" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Right Rail|Media Promo|Carousel|Left-7"}'>Previous</a>
+            
+            <a class="next" data-to="next" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Right Rail|Media Promo|Carousel|Right-7"}'>Next</a>
+        </div>
+    </div>
+</div>    
+                                                                                
+                                                        
+                                            
+
+                                                                                                        
+                                                        
+                                            
+
+
+<div class="module module-listing">
+    <h2 class="module-heading title">Most Discussed</h2>
+
+    
+<div class="listing-mini-sub ">
+    <ul class="media-list items"><li>
+    <a href="/news/no-snub-from-netanyahu-with-speech-to-congress-white-house-says/">
+        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/21/a61bdf3c-9edd-401a-b36f-4d4f942f2389/thumbnail/60x60/b5b1875c0588dee994f441189794e0fd/114948964.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title">White House tries to downplay Netanyahu controversy
+            </h4>
+                            <div class="meta-label comment-count">
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="d6b49c19-daa6-4ab6-b539-b1b1fcdb99b0" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/the-dismal-state-of-americas-child-poverty/">
+        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/28/b7115644-1fc1-4d74-a189-e96e339f6e57/thumbnail/60x60/801f1868e39731b03f0de764d9e54691/child.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title">1 in 5 American kids rely on food stamps
+            </h4>
+                            <div class="meta-label comment-count">
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="49d017a9-e425-4a6c-9f21-dadfdb061443" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/israeli-pm-benjamin-netanyahu-weighs-in-on-dispute-with-obama/">
+        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/25/c498dbd6-d191-4997-9be0-0439f551752c/thumbnail/60x60/e5335a818f62a81791ec72844ea4b882/netanyahu461479844.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title">Netanyahu weighs in on dispute with Obama
+            </h4>
+                            <div class="meta-label comment-count">
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="28c17f2f-2f92-4251-9b3d-efecf9c571c9" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/should-parents-be-allowed-to-choose-whether-to-vaccinate-their-kids/">
+        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews2.cbsistatic.com/hub/i/r/2015/01/24/11903586-1f95-455b-a732-ca6346fc3cbe/thumbnail/60x60/1ba8cad4e2c0accb8300c6c43cef294d/measles-vaccination.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title">Should parents be allowed to choose whether to vaccinate their kids?
+            </h4>
+                            <div class="meta-label comment-count">
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="3c73d5f0-7b57-4580-b1e1-9ce016e43566" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                            
+                                                
+
+
+                     
+<li>
+    <a href="/news/16-us-states-where-the-middle-class-is-shrinking/">
+        <figure class="media-figure img-inset-thumb"><span class="img "><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2015/01/20/a5f9ffaf-0172-4e68-94ec-d7617401ce46/thumbnail/60x60/fc03a81796255d35d6998aa57639a3b6/inequality.jpg" alt=""></span>
+        </figure><div class="media-body">
+            <h4 class="title">16 U.S. states where the middle-class is hurting
+            </h4>
+                            <div class="meta-label comment-count">
+                    <span class="livefyre-commentcount " data-lf-site-id="323201" data-lf-article-id="0b24405f-6313-4179-b17f-77d641999e06" data-lf-format="numberCommentsNotZero" data-lf-minimum="10"></span>
+                </div>
+                    </div>
+    </a>
+</li>
+
+                        </ul></div></div>
+
+
+                                                                                
+                                                        
+                                            
+
+                    <div id="mpu-bottom-54cc19ce3cf8f" class="ad-mpu-bottom" data-ad="mpu-bottom" style="display:none">
+    <script>
+        window.console && console.log && console.log("ADS: queuing mpu-bottom-54cc19ce3cf8f for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("mpu-bottom-54cc19ce3cf8f");
+    </script></div>
+                                                                        </div>
+                                </div>
+                        </div>
+            </div>
+        </div>
+</div>
+
+
+            <div id="leader-bottom-54cc19ce3cf8f" class="ad-leader-bottom" data-ad="leader-bottom" style="display:none">
+    <script>
+        window.console && console.log && console.log("ADS: queuing leader-bottom-54cc19ce3cf8f for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("leader-bottom-54cc19ce3cf8f");
+    </script></div>
+
+        </div>
+    
+        
+            <img src="http://dw.cbsi.com/levt/ria/e.gif?event=log&amp;siteid=162&amp;mapp=hi-pagetracker&amp;comptyp=pagetype&amp;comp=article_single&amp;riaevent=view&amp;s6=bottom&amp;s7=desktop" border="0" height="1" width="1" alt="" class="tracking-gif"><footer class="site-footer content-inverse"><div class="container">
+                        <div class="row">
+            <div class="col-2 link-block">
+                <h5 class="title">CBSNews.com</h5>
+                
+                <ul class="items"><li><a href="/sitemap/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site footer|Site Map"}'>Site Map</a></li>
+                    <li><a href="https://cbsi.secure.force.com/CBSi/knowledgehome" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Help"}'>Help</a></li>
+                                        <li><a href="http://audienceservices.cbs.com/feedback/feedback.htm" rel="nofollow" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Contact Us"}'>Contact Us</a></li>
+
+                    <li><a href="/team/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Footer|CBS Bios"}' data-vanity-rewritten="true">CBS Bios</a></li> 
+                    <li><a href="https://cbs.avature.net/cbsfilmscareers" data-omniture-track-data='{"clickProperty": "Site Footer|Careers"}'>Careers</a></li>
+                    <li><a href="/news/cbs-news-internship-program/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Footer|Internships"}'>Internships</a></li> 
+                    <li><a href="/news/cbs-news-associates-program/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Footer|Development Programs"}'>Development Programs</a></li>
+                </ul></div>
+            
+            <div class="col-2 link-block">
+                <h5 class="title">CBS Interactive</h5>
+                
+                <ul class="items"><li><a href="http://legalterms.cbsinteractive.com/privacy" rel="nofollow" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Privacy Policy"}'>Privacy Policy</a></li>
+                    <li><a href="http://legalterms.cbsinteractive.com/terms-of-use" rel="nofollow" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Terms of Use"}'>Terms of Use</a></li>
+                    <li><a href="http://legalterms.cbsinteractive.com/eula" rel="nofollow" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Mobile User Agreement"}'>Mobile User Agreement</a></li>
+                    <li><a href="http://www.cbscorporation.com/" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|About CBS"}'>About CBS</a></li>
+                    <li><a href="http://www.cbsinteractive.com/advertise/" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Advertise"}'>Advertise</a></li>
+                    <li><a href="http://cbsimedia.cbs.com/captioning/info.html" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Closed Captioning"}'>Closed Captioning</a></li>
+                </ul></div>
+            
+            <div class="col-2 link-block">
+                <h5 class="title">Follow Us</h5>
+                
+                <ul class="items"><li><a href="https://www.facebook.com/CBSNews" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Facebook"}'>Facebook</a></li>
+                    <li><a href="http://twitter.com/CBSNews" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|Twitter"}'>Twitter</a></li>
+                    <li><a href="http://www.cbsnews.com/rss/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site footer|RSS"}'>RSS</a></li>
+                    <li><a href="/newsletters/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site footer|Email Newsletters"}'>Email Newsletters</a></li>
+                    <li><a href="http://www.youtube.com/user/CBSNewsOnline" data-omniture-track="moduleClickCbsNews" data-omniture-track-data='{"moduleInfo": "Site footer|YouTube"}'>YouTube</a></li>
+                    <li><a href="/radio/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site footer|CBS Radio News"}'>CBS Radio News</a></li>
+                    <li><a href="/local/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site footer|CBS Local"}'>CBS Local</a></li>
+                </ul></div>
+            
+            <div class="col-4 push-2">
+                <div class="site-brand">
+                    <div class="logo core-logo"><a href="/" data-click-tracking="genericClickCbsNews" data-omniture-track-data='{"clickProperty": "Site Footer-Branding"}'>CBS News</a></div>
+                    
+                    <p class="copyright">Copyright &copy; 2015 CBS Interactive Inc.<br>All rights reserved.</p>
+                </div>
+                
+                <form class="site-search" action="/search/" method="get" data-component="search" data-search-options='{"path":"\/search\/","param":"q"}'>
+                    <input type="search" class="query" maxlength="255" name="q" placeholder="Search..."><button type="submit" class="submit core-search-footer">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer></div> 	<script type="text/javascript">var a=document.createElement("script");a.type="text/javascript";a.async=!0;var b=["http://ceb03ce30efbc4c7bc5a-2b3ed55b02fdd3c5792fe5b7e08e479e.r42.cf2.rackcdn.com","https://c22b3592290c7d8da67e-2b3ed55b02fdd3c5792fe5b7e08e479e.ssl.cf2.rackcdn.com"];a.src=("https:"==document.location.protocol?b[1]:b[0])+"/562pr8c1zkhl.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(a,c);</script><script type="text/javascript">
+    !function(a){function b(a,b){a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var c="track identify alias initialize".split(" ");for(window._bt=a,i=0;i<c.length;i++)b(a,c[i]);var d=document.createElement("script");d.type="text/javascript",d.async=!0,d.src="//cdn.boomtrain.com/analyticstrain-1.min.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(d,e)}(window._bt||[]);
+    _bt.initialize("962b085e15dbfa2cbd2aed476c570213");
+    _bt.track("viewed", {model: "content_article", id: "3bfc06ff-d189-425d-973d-fa719530d67e" });
+    </script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-4.newrelic.com","licenseKey":"8178a7f262","applicationID":"3507372","transactionName":"ZAZXNkNRCkEHBxAMX11MdAFFWQtcSSIIHHxaFVAESEIBcBMKAAlVCS9cFFRWHUADXgcKXkUGRxFQRA1dCA==","queueTime":0,"applicationTime":1209,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script></body></html>

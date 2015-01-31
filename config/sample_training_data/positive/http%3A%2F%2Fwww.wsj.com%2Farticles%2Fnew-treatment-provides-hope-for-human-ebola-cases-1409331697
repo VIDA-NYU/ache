@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<!-- TESLA DESKTOP16 V1 -->
+<!-- RESPONSIVE_SNIPPET -->
+<html
+  itemscope=""
+  itemtype="//schema.org/WebPage"
+  xmlns="//www.w3.org/1999/xhtml"
+  lang="en-US"
+  data-env="prod"
+  data-site="wsj"
+  data-region="na,us"
+  data-layouttype="article">
+
+  <head>
+
+    <title>
+      Ebola Virus Treatment Provides Hope for Human Cases - WSJ
+    </title>
+    <script type='text/javascript'>window.NREUM||(NREUM={});NREUM.info = {"agent":"js-agent.newrelic.com/nr-476.min.js","beacon":"beacon-2.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"a29706356f","applicationID":"3444062","applicationTime":103.375182,"transactionName":"dUARQwkPF1QRQlpXWVNGTR0=","queueTime":0,"ttGuid":637413,"agentToken":null}; (window.NREUM||(NREUM={})).loader_config={xpid:"UAEHUVBWGwAEUFVSAQM="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:20,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:20,2:21,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:21,2:20,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:21,2:20,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:21,2:20,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:21,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],20:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],21:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:20,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="dj.asn" content="192-14" />
+<meta name="user.type" content="nonsubscriber" />
+<meta name="user.exp" content="default" />
+<meta name="page.site" content="wsj" />
+<meta name="page.region" content="na,us" />
+<meta name="page.section" content="Article" />
+<meta name="page.content.type" content="article" />
+<meta name="page.content.format" content="responsive" />
+<meta name="og:type" content="article" />
+<meta name="page.content.source" content="WSJ Online Article" />
+<meta name="article.template" content="snippet" />
+<meta name="article.id" content="SB10001424052970203622804580121740572506482" />
+<meta name="article.type" content="General News" />
+<meta name="article.access" content="paid" />
+<meta name="article.origheadline" content="New Treatment Provides Hope for Human Ebola Cases" />
+<meta name="article.headline" content="New Treatment Provides Hope for Human Ebola Cases" />
+<meta name="article.summary" content="An experimental drug cocktail called ZMapp has cured monkeys inoculated with a lethal dose of the Ebola virus, setting the stage for scientists to test the treatment in people." />
+<meta name="article.page" content="US" />
+<meta name="article.section" content="US" />
+<meta name="article.published" content="2014-08-30T21:53:00.000Z" />
+<meta itemprop="datePublished" content="2014-08-30T21:53:00.000Z" />
+<meta name="article.updated" content="2014-08-30T21:53:00.000Z" />
+<meta itemprop="dateModified" content="2014-08-30T21:53:00.000Z" />
+<meta name="article.created" content="2014-08-29T17:01:00.000Z" />
+<meta itemprop="dateCreated" content="2014-08-29T17:01:00.000Z" />
+<meta name="author" content="Gautam Naik" />
+<meta name="keywords" content="africa ebola,ebola,infectious disease,virus,zmapp,Reynolds American,RAI,research,development,corporate,industrial news,political,general news,health,outbreaks,epidemics,medical treatments,procedures" />
+<meta name="news_keywords" content="africa ebola,ebola,infectious disease,virus,zmapp,Reynolds American,RAI,research,development,corporate" />
+<meta name="description" content="An experimental drug cocktail called ZMapp has cured monkeys inoculated with a lethal dose of the Ebola virus, setting the stage for scientists to test the treatment in people." />
+<meta itemprop="description" content="An experimental drug cocktail called ZMapp has cured monkeys inoculated with a lethal dose of the Ebola virus, setting the stage for scientists to test the treatment in people." />
+<meta name="robots" content="noarchive,noodp" />
+<meta name="language" content="en-US" />
+<meta itemprop="inLanguage" content="en-US" />
+<meta name="twitter:title" content="Ebola Virus Treatment Provides Hope for Human Cases" />
+<meta name="twitter:description" content="An experimental drug cocktail called ZMapp has cured monkeys inoculated with a lethal dose of the Ebola virus, setting the stage for scientists to test the treatment in people." />
+<meta name="twitter:image" content="http://si.wsj.net/public/resources/images/BN-EH993_0829eb_D_20140829101644.jpg" />
+<meta name="twitter:image:src" content="http://si.wsj.net/public/resources/images/BN-EH993_0829eb_G_20140829101644.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@WSJ" />
+<meta name="twitter:domain" content="wsj.com" />
+<meta name="fb:app_id" content="368513495882" />
+<meta property="og:title" content="Ebola Virus Treatment Provides Hope for Human Cases" />
+<meta property="og:description" content="An experimental drug cocktail called ZMapp has cured monkeys inoculated with a lethal dose of the Ebola virus, setting the stage for scientists to test the treatment in people." />
+<meta property="og:url" content="http://www.wsj.com/articles/new-treatment-provides-hope-for-human-ebola-cases-1409331697" />
+<meta itemprop="image" content="http://si.wsj.net/public/resources/images/BN-EH993_0829eb_G_20140829101644.jpg" />
+<meta property="og:image" content="http://si.wsj.net/public/resources/images/BN-EH993_0829eb_G_20140829101644.jpg" />
+<meta property="og:image:width" content="553" />
+<meta property="og:image:height" content="369" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="WSJ" />
+<meta property="article:publisher" content="https://www.facebook.com/wsj" />
+
+      <link rel="canonical" href="http://www.wsj.com/articles/new-treatment-provides-hope-for-human-ebola-cases-1409331697" />
+
+    <!-- H&Co Gziped Fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.wsj.net/HCo_Chronicle/font_HCo_Chronicle.css"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.wsj.net/HCo_Whitney/font_HCo_Whitney.css"/>
+
+    <!-- Styles -->
+
+  <link href='//asset.wsj.net/public/snippet.production-96d3c5ed.css' media='all' rel='stylesheet' type='text/css'/>
+
+  <!--[if IE 9]>
+    <link rel="stylesheet" type="text/css" href="//fonts.wsj.net/HCo_Chronicle/font_HCo_Chronicle-ie.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.wsj.net/HCo_Whitney/font_HCo_Whitney-ie.css" />
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+    
+    
+  <![endif]-->
+
+  <!--[if lte IE 8]>
+    <link href='//asset.wsj.net/public/globalIE.production-7bfba39a.css' media='all' rel='stylesheet' type='text/css'/>
+    <link href='//asset.wsj.net/public/lteIe8.production-8d566570.css' media='all' rel='stylesheet' type='text/css'/>
+  <![endif]-->
+
+
+
+    <!-- Media queries for ie8 -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+      <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- Google ad inline JS so non-blocking. -->
+    <script src="//stags.peer39.net/712/trg_712.js" type="text/javascript" id="peer39ScriptLoader"></script>
+
+    <script type='text/javascript'>
+      var googletag = googletag ? googletag : {};
+          googletag.cmd = googletag.cmd ? googletag.cmd : [];
+          (function() {
+          var gads = document.createElement('script');
+          gads.async = true;
+          gads.type = 'text/javascript';
+          var useSSL = 'https:' == document.location.protocol;
+          gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+          var node = document.getElementsByTagName('script')[0];
+          node.parentNode.insertBefore(gads, node);
+          })();
+    </script>
+
+    <script type='text/javascript'>
+      var googleAdSlots = {};
+    </script>
+
+    <script type='text/javascript'>
+      googletag.cmd.push(function() {
+        googletag.pubads().setTargeting("page","article");
+        googletag.companionAds().setRefreshUnfilledSlots(true);
+        googletag.enableServices();
+      });
+    </script>
+
+    <!-- Require.js from CDN -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js " type="text/javascript"></script>
+
+  <script type="text/javascript" src="/ga.27288139115854.js?PID=6D4E4D1D-7094-375D-A439-0568A6A70836" defer></script><style type="text/css">#d__fFH{position:absolute;top:-5000px;left:-5000px}#d__fF{font-family:serif;font-size:200px;visibility:hidden}#Germans40112e21,#buying80792616,#Telegraphb952ef41,#buying80792616{display:none!important}</style></head>
+
+  <body id="article_body" class="pageFrame subType-unsubscribed logged-out" intent in-width="*" in-interaction="*" itemscope itemtype="//schema.org/NewsArticle">
+    <meta itemprop="publisher" content="wsj.com">
+    <!-- Nav drawer and section links for 4u -->
+    <div class="nameplate drawerNav">
+        <nav class="touchNav" data-drag-x="false" data-drag-y="true" data-strict="true" data-bounding-box=".drawerNav" data-keepposition="false" data-subunits="ul">
+
+<div data-module-id="11" data-module-name="dj.module.nav.Module" data-module-zone="drawer_nav" class="zonedModule">
+    <ul class="level-0 loginsubscribe">
+      <li class="login"><a href="https://id.wsj.com/access/509b1a086458232f6e000002/latest/login_standalone.html?url=http%3A%2F%2Fwww.wsj.com%2Farticles%2Fnew-treatment-provides-hope-for-human-ebola-cases-1409331697">Log In</a></li>
+      <li class="subscribe">
+        <a href="https://subscribe.wsj.com/hpheaderlink"><small>Subscribe Now</small></a>
+      </li>
+    </ul>
+
+
+  <h5>Sections</h5>
+  <ul class="level-2">
+          <li><a href="http://www.wsj.com/m/home-page">Home</a></li>
+          <li><a href="http://www.wsj.com/m/news-global-world">World</a></li>
+          <li class="selected"><a href="http://www.wsj.com/m/news-world-business">U.S.</a></li>
+          <li><a href="http://www.wsj.com/m/news-business-us">Business</a></li>
+          <li><a href="http://www.wsj.com/news/technology">Tech</a></li>
+          <li><a href="http://www.wsj.com/m/news-financial-markets-stock">Markets</a></li>
+          <li><a href="http://markets.wsj.com/usoverview">Market Data</a></li>
+          <li><a href="http://www.wsj.com/m/news-personal-finance">Your Money</a></li>
+          <li><a href="http://www.wsj.com/m/news-opinion-commentary">Opinion</a></li>
+          <li><a href="http://www.wsj.com/m/news-lifestyle-arts-entertainment">Life & Culture</a></li>
+          <li><a href="http://www.wsj.com/m/new-york-main">New York</a></li>
+          <li><a href="http://www.wsj.com/m/news-real-estate-homes">Real Estate</a></li>
+          <li><a href="http://www.wsj.com/m/management">Management</a></li>
+    </ul>
+</div> <!-- data-module-name="dj.module.nav.Module" -->
+
+
+<div data-module-id="12" data-module-name="dj.module.quicklinks.Module" data-module-zone="drawer_quicklinks" class="zonedModule">
+<h5>Quick Links</h5>
+	<ul class="level-2">
+	    <li><a href="http://blogs.wsj.com">Blogs</a></li>
+	    <li><a href="http://live.wsj.com/?mod=WSJ_formfactor">Videos</a></li>
+	    <li><a href="http://wsj.com/itp">Today's Paper</a></li>
+	    <li><a href="http://online.wsj.com/public/page/latest-opinion-analysis-columns.html">Columns</a></li>
+	    <li><a href="http://www.wsj.com/news/politics">Politics & Policy</a></li>
+	</ul>
+	<h5>MORE FROM WSJ</h5>
+	<ul class="level-2">
+	    <li><a href="http://online.wsj.com/user/profile/m-myjnav?mod=WSJ_mobile_nav">My Journal</a></li>
+	    <li><a href="http://m.wsj.com/cio-journal">CIO Journal</a></li>
+	    <li><a href="http://m.wsj.com/cfo-journal">CFO Journal</a></li>
+	    <li><a href="http://m.wsj.com/risk-compliance-journal">Risk & Compliance</a></li>
+	    <li><a href="http://online.wsj.com/public/page/news-wall-street-heard.html">Heard on the Street</a></li>
+	    <li><a href="http://m.wsj.com/real-estate-luxury">Mansion</a></li>
+	</ul>
+
+</div> <!-- data-module-name="dj.module.quicklinks.Module" -->
+
+        </nav>
+    </div>
+
+    <div class="sliderBox">
+      <div class="full_width cookie_policy">
+        <div class="sector">
+          <div class="column">
+            <div class="module">
+
+<div data-module-id="15" data-module-name="resp.module.cookie_policy.Module" data-module-zone="cookie_policy" class="zonedModule">
+<!-- empty cookie notice view -->
+
+</div> <!-- data-module-name="resp.module.cookie_policy.Module" -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="full_width hat hide4">
+          <div class="sector">
+            <div class="column">
+              <div class="module">
+
+<div data-module-id="16" data-module-name="resp.module.hat.DesktopHat" data-module-zone="hat" class="zonedModule">
+<div class="module hat" data-fxgridwrap="hatWrapBG" data-fxgridtarget=".colgroup-lv1.hat">
+<nav class="rw-hat"><ul>
+<li class="hat-tab current wsj nonregistered">
+  <a class="hat-link " href="http://www.wsj.com">
+    <h4 class="product-name">WSJ</h4>
+    <ul class="social-links">
+      <li class="social-icon facebook" title="Follow WSJ on Facebook">
+        <div id="hatFacebook" style="border: none;">&lt;h4&gt;WSJ on Facebook&lt;/h4&gt;&lt;div style=&quot;border: none; padding: 2px 3px;&quot; class=&quot;fb-like&quot; data-href=&quot;http://www.facebook.com/wsj&quot; data-send=&quot;false&quot; data-layout=&quot;button_count&quot; data-width=&quot;250&quot; data-show-faces=&quot;false&quot; data-action=&quot;recommend&quot;&gt;&lt;/div&gt;</div>
+      </li>
+      <li class="social-icon twitter" title="Follow WSJ on Twitter">
+        <div id="hatTwitter">&lt;h4&gt;WSJ on Twitter&lt;/h4&gt;&lt;a href=&quot;https://twitter.com/wsj&quot; class=&quot;twitter-follow-button&quot; data-show-count=&quot;true&quot;&gt;Follow @wsj&lt;/a&gt;</div>
+      </li>
+    </ul>
+  </a>
+</li>
+<li class="hat-tab wsjlive">
+  <a class="hat-link" href="http://live.wsj.com">
+    <h4 class="product-name">WSJ LIVE</h4>
+    <ul class="social-links">
+      <li class="social-icon facebook ">
+        <div><h4>WSJ Live on Facebook</h4></div>
+      </li>
+      <li class="social-icon twitter">
+        <div><h4>WSJ Live on Twitter</h4></div>
+      </li>
+    </ul>
+  </a>
+</li>
+<!-- <li class="hat-tab market">
+  <a class="hat-link" href="http://www.marketwatch.com">
+    <h4 class="product-name">MARKETWATCH</h4>
+    <ul class="social-links">
+      <li class="social-icon facebook">
+        <div><h4>MarketWatch on Facebook</h4></div>
+      </li>
+      <li class="social-icon twitter">
+        <div><h4>MarketWatch on Twitter</h4></div>
+      </li>
+    </ul>
+  </a>
+</li> -->
+<li class="hat-tab realtor">
+  <a class="hat-link " href="http://www.realtor.com">
+    <h4 class="product-name">REALTOR.COM</h4>
+    <ul class="social-links">
+      <li class="social-icon realtor">
+        <div><h4>Realtor on Facebook</h4></div>
+      </li>
+      <li class="social-icon twitter">
+        <div><h4>Realtor on Twitter</h4></div>
+      </li>
+    </ul>
+  </a>
+</li>
+<li class="hat-tab barrons">
+  <a class="hat-link " href="http://online.barrons.com/home">
+    <h4 class="product-name">BARRON'S</h4>
+    <ul class="social-links">
+      <li class="social-icon facebook ">
+        <div><h4>Barron's on Facebook</h4></div>
+      </li>
+      <li class="social-icon twitter">
+        <div><h4>Barron's on Twitter</h4></div>
+      </li>
+    </ul>
+  </a>
+</li>
+<!-- moving into more -->
+<li class="hat-tab wsjplus" intent in-at4units-class="" in-at8units-class="" in-at12units-class="hat-tab wsjplus" in-at16units-class="hat-tab wsjplus" in-base-after=".hat-tab.barrons" in-at8units-append="#morehatlinks ul.more-list">
+  <a class="hat-link " href="http://www.wsjplus.com">
+    <h4 class="product-name">Membership</h4>
+    <ul class="social-links">
+      <li class="social-icon facebook ">
+        <div><h4>Member on Facebook</h4></div>
+      </li>
+      <li class="social-icon twitter">
+        <div><h4>Member on Twitter</h4></div>
+      </li>
+    </ul>
+  </a>
+</li>
+<!-- <li class="hat-tab portfolio" intent in-at4units-class="" in-at8units-class="" in-at12units-class="hat-tab portfolio" in-at16units-class="hat-tab portfolio" in-base-after=".hat-tab.barrons" in-at8units-append="#morehatlinks ul.more-list">
+  <a class="hat-link " href="http://portfolio.wsj.com?mod=wsj_port_hat">
+    <h4 class="product-name">Portfolio</h4>
+    <ul class="social-links">
+      <li class="social-icon facebook ">
+        <div><h4>Portfolio on Facebook</h4></div>
+      </li>
+      <li class="social-icon twitter">
+        <div><h4>Portfolio on Twitter</h4></div>
+      </li>
+    </ul>
+  </a>
+</li> -->
+<!-- moving into more -->
+<li class="hat-tab productx" intent in-at4units-class="" in-at8units-class="" in-at12units-class="hat-tab productx" in-at16units-class="hat-tab productx" in-base-before="#morehatlinks" in-at8units-append="#morehatlinks ul.more-list">
+  <a class="hat-link" href="http://dj.wsj.com/hub?mod=WSJ_Hat">
+    <h4 class="product-name">DJX</h4>
+    <ul class="social-links">
+      <li class="social-icon facebook ">
+        <div><h4>Product X on Facebook</h4></div>
+      </li>
+      <li class="social-icon twitter">
+        <div><h4>Product X on Twitter</h4></div>
+      </li>
+    </ul>
+  </a>
+  <ul class="productx-dropdown">
+      <li class="productx-products"><a class="rt" href="https://id.wsj.com/access/pages/wsj/us/login_standalone.html?mg=reno64-wsj&amp;url=http%3A%2F%2Fonline.wsj.com%2Fpage%2FDJX.html%3Fmod%3DProdX_MktgHub">RT</a></li>
+      <li class="productx-products"><a class="f" href="http://global.factiva.com?mod=ProdX_MktgHub">F</a></li>
+      <li class="productx-products"><a class="rc" href="https://djrc.dowjones.com/?mod=ProdX_MktgHub">R&amp;C</a></li>
+    	<li class="productx-products"><a class="pevc" href="http://pevc.dowjones.com/?mod=ProdX_MktgHub">PE&amp;VC</a></li>
+      <li class="productx-products disabled"><a class="wsj" href="#">WSJ</a></li>
+    	<li class="productx-products"><a class="b" href="https://id.barrons.com/access/pages/barrons/us/login_standalone.html?url=http%3A%2F%2Fonline.barrons.com%2Fhome-page%3Fmod%3DProdX_MktgHub">B</a></li>
+			<li class="tri"></li>
+  </ul>
+</li>
+<li class="hat-tab more" id="morehatlinks">
+  <div class="hat-link ">
+    <h4 class="product-name menu">MORE</h4>
+    <ul class="more-list">
+      <li>
+        <a href="https:/portfolio.wsj.com/" class="more-item" rel="nofollow">Portfolio</a>
+      </li>
+      <li>
+        <a href="https://secure.wsj.com/" class="more-item" rel="nofollow">WSJ Secure</a>
+      </li>
+      <li>
+        <a href="http://bigcharts.marketwatch.com/" class="more-item" rel="nofollow">BigCharts</a>
+      </li>
+      <li>
+        <a href="http://www.efinancialnews.com/" class="more-item" rel="nofollow">Financial News</a>
+      </li>
+      <li>
+        <a href="http://professor.wsj.com/" class="more-item" rel="nofollow">Professor Journal</a>
+      </li>
+      <li>
+        <a href="http://wsjstudent.com/" class="more-item" rel="nofollow">Student Journal</a>
+      </li>
+      <li>
+        <a href="http://www.marketwatch.com/Game/" class="more-item" rel="nofollow">Virtual Stock Exchange</a>
+      </li>
+      <li>
+        <a href="http://classifieds.wsj.com/" class="more-item" rel="nofollow">WSJ Classifieds</a>
+      </li>
+      <li>
+        <a href="http://classroom.wsj.com/" class="more-item" rel="nofollow">WSJ Classrooms</a>
+      </li>
+      <li>
+        <a href="http://www.wsjwine.com/" class="more-item" rel="nofollow">WSJ Wine</a>
+      </li>
+    </ul>
+  </div>
+</li>
+</ul>
+<div class="rw-header-search wsj-search">
+  <div class="container ">
+    <form><span id="buying80792616"><a rel="file" style="display: none;" href="prospects21331television.html">Ultimately</a></span><input type="text" value="News, Quotes, Companies, Videos" class="hdrSearchInput unUsed" id="globalHatSearchInput" size="28">
+      <button class="button-search" type="button">Search</button>
+    </form>
+  </div>
+  <div id="epGlobalHeaderAutoComplete" class="search-list" 
+       data-symbol="Companies &amp; Quotes"
+       data-private="Private Companies" 
+	     data-recent="Recent Searches"
+	     data-all="View All Search Results »"></div>
+</div>
+</nav>
+</div>
+
+</div> <!-- data-module-name="resp.module.hat.DesktopHat" -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="full_width header">
+          <div class="sector">
+            <header class="column hide4">
+              <div class="module">
+
+<div data-module-id="14" data-module-name="dj.module.header.DesktopHeader" data-module-zone="desktop_header" class="zonedModule">
+<!-- module slimheader -->
+<div class="slimheader_c headerType-dark" data-fxgridwrap="headerWrapBG" data-fxgridtarget=".colgroup-lv1.header">
+	<div class="module slimheader">
+      <div class="leftCol"><a class="headerLogo" href="http://www.wsj.com/">The Wall Street Journal</a></div>
+      <div class="centerCol">
+        <div class="popC lnMenuC">
+          <span id="popButton" class="popTrigger lnMenu">Menu</span>
+          <div class="popBox pop-secs">
+            <div class="colA">
+              <ul>
+                <li class="lnLi"><a href="http://online.wsj.com/home-page">Home</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/news-global-world.html">World</a></li>
+                <li class="lnLi current"><a href="http://online.wsj.com/public/page/news-world-business.html">U.S.</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/news-business-us.html">Business</a></li>
+                <li class="lnLi"><a href="http://www.wsj.com/news/technology">Tech</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/news-financial-markets-stock.html">Markets</a></li>
+                <li class="lnLi"><a href="http://markets.wsj.com/usoverview">Market Data</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/news-personal-finance.html">Your Money</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/news-opinion-commentary.html">Opinion</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/news-lifestyle-arts-entertainment.html">Life &amp; Culture</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/new-york-main.html">New York</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/news-real-estate-homes.html">Real Estate</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/management.html">Management</a></li>
+              </ul>
+            </div>
+            <div class="colB">
+              <ul>
+
+
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/news-world-business.html">U.S. Home</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/news/politics">Politics/Capital Journal</a></li>
+                <li class="lnLi"><a href="http://blogs.wsj.com/washwire/">Washington Wire</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/news-economy.html">Economy</a></li>
+                <li class="lnLi"><a href="http://graphics.wsj.com/wsjnbcpoll/">WSJ/NBC News Poll</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/journal-report.html">Journal Reports</a></li>
+                <li class="lnLi"><a href="http://online.wsj.com/public/page/new-york-main.html">New York</a></li>
+                <li class="lnLi"><a href="http://blogs.wsj.com/metropolis/">Metropolis</a></li>
+                <li class="lnLi"><a href="http://blogs.wsj.com/economics/">Real Time Economics</a></li>
+                <li class="lnLi"><a href="http://blogs.wsj.com/numbers/">The Numbers</a></li>
+                <li class="lnLi"><a href="http://live.wsj.com/?category=news">U.S. Video</a></li>
+              </ul>
+            </div>
+          </div> <!--[if lte IE 9]><![endif]-->
+        </div>
+      <div class="siteDesc"><a class="lnSection" href="http://online.wsj.com/public/page/news-world-business.html">U.S.</a></div>
+      </div>
+      <div class="rightCol">
+           <menu class="unsubNav">
+            <li><a class="ln" href="https://id.wsj.com/access/509b1a086458232f6e000002/latest/login_standalone.html?url=http%3A%2F%2Fwww.wsj.com%2Farticles%2Fnew-treatment-provides-hope-for-human-ebola-cases-1409331697" ref="nofollow" data-widget="LIFP.login">Log In</a></li>
+            <li><a class="ln" href="https://subscribe.wsj.com/hpheaderlink" ref="nofollow">Subscribe</a></li>
+            <li class="subPromo"><div class="subPromo" id="AD_J" data-dj-adwidgettype="googleCircAd" data-dj-adwidgetdivid="AD_J" data-dj-adactivate="true" data-dj-adsize="[[377,50]]" data-dj-admetazone="" data-dj-adsite="interactive.wsj.com" data-dj-adpage="news_usgeneralstory" data-dj-admsrcvalue="" data-dj-showcircad="true" data-dj-adcircvalue="snippet" data-cb-ad-id="HeaderPromo">
+</div>
+</li>
+          </menu>
+            <div class="subPromo" id="AD_J" data-dj-adwidgettype="googleCircAd" data-dj-adwidgetdivid="AD_J" data-dj-adactivate="true" data-dj-adsize="[[377,50]]" data-dj-admetazone="" data-dj-adsite="interactive.wsj.com" data-dj-adpage="news_usgeneralstory" data-dj-admsrcvalue="" data-dj-showcircad="true" data-dj-adcircvalue="snippet" data-cb-ad-id="HeaderPromo">
+            </div>
+      </div>
+</div>
+</div>
+<!-- end module slimheader -->
+</div> <!-- data-module-name="dj.module.header.DesktopHeader" -->
+
+              </div>
+            </header>
+
+            <header class="column hide8 hide12 hide16">
+              <div class="module">
+
+<div data-module-id="18" data-module-name="dj.module.header.Module" data-module-zone="mobile_header" class="zonedModule">
+<header>
+  <div class="nameplate module mastheadOps fxCard">
+    <div class="mastHead cardFace-front">
+      <button class="navButton" data-role="none">Reveal Navigation Options</button>
+
+
+
+      <a href="/home-page">The Wall Street Journal</a>
+
+
+        <button class="searchButton" data-role="none">show search</button>
+    </div>
+      <div class="searchBar cardFace-back">
+        <div class="searchContents">
+          <button class="closeButton" type="button" name="closeQ">Close Search</button>
+          <form action="http://online.wsj.com/search/term" id="searchHeader">
+            <input name="KEYWORDS" placeholder="Search" type="search" autosave="rw-headerSearchSave" id="searchTxtHeader">
+            <button class="searchButton" type="submit">Submit Search</button>
+          </form>
+        </div>
+      </div>
+  </div>
+</header>
+
+</div> <!-- data-module-name="dj.module.header.Module" -->
+
+              </div>
+            </header>
+          </div>
+        </div>
+
+
+      <div class="middleBlock">
+        <!--[if lte IE 8]>
+
+<div data-module-id="10" data-module-name="article.app/lib/module/ieWarning" data-module-zone="ie_warning" class="zonedModule">
+<div class="ie-flag">
+  <button class="ie-button"></button>
+
+  <div class="ie-warning-wrapper">
+    <p><span id="warning-label">BROWSER UPDATE</span> To gain access to the full experience, please upgrade your browser: </p>
+    <ul>
+      <li><a href="https://www.google.com/intl/en_us/chrome/browser/">Chrome</a> | </li>
+      <li><a href="http://support.apple.com/downloads/#safari">Safari</a> | </li>
+      <li><a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> | </li>
+      <li><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a></li>
+    </ul><br>
+    <p><span id="warning-note">Note: If you are running Internet Explorer 9 and above, make sure it is not in compatibility mode</span></p>
+  </div>
+</div>
+
+</div> <!-- data-module-name="article.app/lib/module/ieWarning" -->
+
+        <![endif]-->
+
+        <div id="article_sector" class="sector">
+          <div id="article_tools" class="column empty disableScroll col7 at12-col1 at16-col1">
+            <div class="module toggle-parent">
+
+<div data-module-id="9" data-module-name="article.app/lib/module/shareTools" data-module-zone="article_tools" class="zonedModule">
+<ul class="article_tools clearFix">
+  <li
+    data-url="http://online.wsj.com/articles/new-treatment-provides-hope-for-human-ebola-cases-1409331697"
+    data-text="New Treatment Provides Hope for Human Ebola Cases"
+    data-total=""
+    class="icon facebook">
+   </li>
+  <li
+    data-url="http://online.wsj.com/articles/new-treatment-provides-hope-for-human-ebola-cases-1409331697"
+    data-text="New Treatment Provides Hope for Human Ebola Cases"
+    data-total=""
+    class="icon twitter">
+  </li>
+
+  <li class="icon email mobile-scrim"
+    data-scrim='{&quot;type&quot;:&quot;email&quot;,&quot;header&quot;:&quot;Email this Article&quot;,&quot;list&quot;:[{&quot;type&quot;:&quot;mailto&quot;,&quot;icon&quot;:&quot;email&quot;,&quot;url&quot;:&quot;http%3A%2F%2Fwww.wsj.com%2Farticle_email%2Fnew-treatment-provides-hope-for-human-ebola-cases-1409331697-lMyQjAxMTA1MDMwMDEzNDAyWj&quot;,&quot;text&quot;:&quot;Click to Email&quot;}],&quot;info&quot;:{&quot;image&quot;:&quot;http://si.wsj.net/public/resources/images/BN-EH993_0829eb_D_20140829101644.jpg&quot;,&quot;headline&quot;:&quot;New Treatment Provides Hope for Human Ebola Cases&quot;,&quot;timestamp&quot;:&quot;Updated Aug. 30, 2014 5:53 p.m. ET&quot;}}'
+    data-headline="New Treatment Provides Hope for Human Ebola Cases"
+    data-url="http%3A%2F%2Fwww.wsj.com%2Farticle_email%2Fnew-treatment-provides-hope-for-human-ebola-cases-1409331697-lMyQjAxMTA1MDMwMDEzNDAyWj"
+    data-timestamp="Updated Aug. 30, 2014 5:53 p.m. ET"
+    
+    data-emailimgsrc="http://si.wsj.net/public/resources/images/BN-EH993_0829eb_D_20140829101644.jpg">
+  </li>
+  <li class="icon evernote evernote-clip-button"
+    data-id="SB10001424052970203622804580121740572506482"
+    data-headline="Ebola Virus Treatment Provides Hope for Human Cases"
+    data-url="http://online.wsj.com/articles/new-treatment-provides-hope-for-human-ebola-cases-1409331697"
+    data-authors="Gautam Naik"
+    data-date="Updated Aug. 30, 2014 5:53 p.m. ET"
+    data-summary="ZMapp Cocktail Saved Monkeys When Administered Up to Five Days After Infection"
+    ></li>
+  <li class="icon text-size mobile-scrim hasMenu" id="text-size" data-scrim='{"id":"text-size","header":"Text Size","list":[{"type":"option","class":"selected regular","text":"Regular"},{"type":"option","class":"medium","text":"Medium"},{"type":"option","class":"large","text":"Large"}]}'>
+    <menu>
+      <li class="tri"></li>
+      <li class="menu-header">Text Size</li>
+      <li class="option regular selected">Regular</li>
+      <li class="option medium">Medium</li>
+      <li class="option large">Large</li>
+    </menu>
+  </li>
+  <li class="icon more mobile-scrim hasMenu" data-scrim='{"header":"More Tools","list":[{"type":"share","icon":"google","url":"example_url","text":"Google+"},{"type":"share","icon":"linked","url":"example_url","text":"LinkedIn"}
+  
+  
+  ,{"type":"link","icon":"print","url":"javascript:window.print();","text":"Print"}]}'>
+    <menu>
+      <li class="tri"></li>
+      <li
+        data-url="http://online.wsj.com/articles/new-treatment-provides-hope-for-human-ebola-cases-1409331697"
+        data-text="New Treatment Provides Hope for Human Ebola Cases"
+        data-total=""
+        class="icon google">Google+
+      </li>
+      <li
+        data-url="http://online.wsj.com/articles/new-treatment-provides-hope-for-human-ebola-cases-1409331697"
+        data-text="New Treatment Provides Hope for Human Ebola Cases"
+        data-total=""
+        class="icon linked">LinkedIn
+      </li>
+      <li class="border"></li>
+      <li class="icon print">Print</li>
+      <!-- <li class="icon save"></li> -->
+    </menu>
+  </li>
+</ul>
+
+</div> <!-- data-module-name="article.app/lib/module/shareTools" -->
+
+            </div>
+          </div>
+
+          <article
+            class="column col7 at12-col11 at16-col15"
+            mainContentOfPage>
+
+            <header class="article_header module">
+
+<div data-module-id="8" data-module-name="article.app/lib/module/articleHeadline" data-module-zone="article_header" class="zonedModule">
+<div class="wsj-article-headline-wrap ">
+
+  <div class="category">
+    <a href="/public/search?article-doc-type=%7BGeneral+News%7D&amp;HEADER_TEXT=general+news&amp;mod=flashline" class="flashline-category" itemprop="articleSection">General News</a>
+
+
+  </div>
+
+  <h1 class="wsj-article-headline" itemprop="headline">Ebola Virus Treatment Provides Hope for Human Cases</h1>
+
+    <h2 class="sub-head" itemprop="description">ZMapp Cocktail Saved Monkeys When Administered Up to Five Days After Infection</h2>
+
+
+
+</div>
+
+</div> <!-- data-module-name="article.app/lib/module/articleHeadline" -->
+
+            </header>
+
+            <div class="column col7 at16-col9 at16-offset1">
+              <div class="module">
+
+<div data-module-id="7" data-module-name="article.app/lib/module/articleSnippet" data-module-zone="article_snippet" class="zonedModule">
+
+
+<div class="snippet">
+
+
+<div class="byline">
+
+
+    <span>By</span>
+          <div class="author mobile-scrim hasMenu" data-scrim='{"type":"author","header":"Gautam Naik","subhead":"The Wall Street Journal","list":[{"type":"link","icon":"bio","url":"http://topics.wsj.com/person/A/biography/1458","text":"Biography"},{"type":"link","icon":"email","url":"mailto:Gautam.Naik@wsj.com","text":"Gautam.Naik@wsj.com"}]}' itemscope itemprop="author" itemtype="http://schema.org/Person">
+              <span class="name" itemprop="name">Gautam Naik</span>
+              <ul class="author-info">
+                <li class="tri"></li>
+                <div class="info-name">Gautam Naik</div>
+                <div class="info-title">The Wall Street Journal</div>
+                <div class="close-button-container">
+                  <a href="#" class="close-button">CANCEL</a>
+                </div>
+                <li><a href="http://topics.wsj.com/person/A/biography/1458" class="author icon bio">Biography</a><a href="http://topics.wsj.com/person/A/biography/1458" style="display:none;" itemprop="url" rel="author">Gautam Naik</a></li>
+                <li><a href="mailto:Gautam.Naik@wsj.com" class="author icon email" itemprop="email">Gautam.Naik@wsj.com</a></li>
+                
+                
+                
+              </ul>
+          </div>
+
+</div>
+
+
+  <div class="wsj-snippet-body">
+    
+
+ <p>An experimental drug cocktail has cured monkeys inoculated with a lethal dose of the Ebola virus, setting the stage for scientists to test the treatment in people. </p> <p>While other drugs have shown some success in protecting monkeys against Ebola, they had to be dispensed within two days of exposure to the virus. By contrast, the latest treatment,...
+  </div>
+
+<div class="wsj-snippet-login">
+  <span class="wsj-snippet-login-text">
+    To Read the Full Story,
+  </span>
+  <span>
+    <a class="logInLink" href="https://subscribe.wsj.com/wsjsnippet">
+      Subscribe
+    </a>
+    or
+    <a class="logInLink" href="https://id.wsj.com/access/509b1a086458232f6e000002/latest/login_standalone.html?url=http%3A%2F%2Fwww.wsj.com%2Farticles%2Fnew-treatment-provides-hope-for-human-ebola-cases-1409331697">
+      Log In
+    </a>
+  </span>
+</div>
+
+</div>
+
+
+</div> <!-- data-module-name="article.app/lib/module/articleSnippet" -->
+
+              </div>
+
+              <div class="module wsj-snippet-ad main-circ-ad">
+
+<div data-module-id="6" data-module-name="article.app/lib/module/responsiveAd" data-module-zone="circ_ad" class="zonedModule">
+  <div
+    class="wsj-responsive-ad-wrap"
+    id='AD_C'
+    data-ad-options='{&quot;adId&quot;:&quot;AD_C&quot;,&quot;adUnitPath&quot;:&quot;/2/interactive.wsj.com/news_usgeneralstory&quot;,&quot;adSize&quot;:[[700,500],[540,450]],&quot;adSizeMap&quot;:{&quot;at4units&quot;:[[540,450]],&quot;at8units&quot;:[[700,500]]},&quot;autoRefresh&quot;:false,&quot;adTargeting&quot;:{&quot;metazone&quot;:null,&quot;msrc&quot;:null,&quot;circ&quot;:&quot;snippet&quot;}}'
+    data-tracking="interactive.wsj.com/news_usgeneralstory"
+    data-cb-ad-id="CircAd">
+  </div>
+
+</div> <!-- data-module-name="article.app/lib/module/responsiveAd" -->
+
+              </div>
+            </div>
+
+            <div id="right-rail" class="column hide4 hide8 col4 at16-offset1">
+              <div class="module snippet-right-ad">
+
+<div data-module-id="4" data-module-name="article.app/lib/module/responsiveAd" data-module-zone="rightRailAd1" class="zonedModule">
+  <div
+    class="wsj-responsive-ad-wrap"
+    id='AD_G'
+    data-ad-options='{&quot;adId&quot;:&quot;AD_G&quot;,&quot;adUnitPath&quot;:&quot;/2/interactive.wsj.com/news_usgeneralstory&quot;,&quot;adSize&quot;:[[336,280],[300,250],[336,850],[300,600],[300,1050]],&quot;adSizeMap&quot;:null,&quot;autoRefresh&quot;:false,&quot;adTargeting&quot;:{&quot;metazone&quot;:null,&quot;msrc&quot;:null,&quot;circ&quot;:&quot;snippet&quot;,&quot;p39&quot;:null}}'
+    data-tracking="interactive.wsj.com/news_usgeneralstory"
+    data-cb-ad-id="TopRectangle">
+  </div>
+
+</div> <!-- data-module-name="article.app/lib/module/responsiveAd" -->
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="sector">
+          <div
+            id="in_ad_col_b"
+            class="column"
+            intent
+            in-at4units-class=""
+            in-at8units-class=""
+            in-at12units-class="col4"
+            in-at16units-class="col4">
+            <div class="column col4 hide4 hide12 hide16 ad_stack_container">
+              <div class="module snippet-bottom-ad">
+
+<div data-module-id="5" data-module-name="article.app/lib/module/responsiveAd" data-module-zone="rightRailAd2" class="zonedModule">
+  <div
+    class="wsj-responsive-ad-wrap"
+    id='AD_Z'
+    data-ad-options='{&quot;adId&quot;:&quot;AD_Z&quot;,&quot;adUnitPath&quot;:&quot;/2/bottom.interactive.wsj.com/news_usgeneralstory&quot;,&quot;adSize&quot;:[[300,250]],&quot;adSizeMap&quot;:null,&quot;autoRefresh&quot;:false,&quot;adTargeting&quot;:{&quot;metazone&quot;:null,&quot;msrc&quot;:null,&quot;circ&quot;:&quot;snippet&quot;}}'
+    data-tracking="bottom.interactive.wsj.com/news_usgeneralstory"
+    data-cb-ad-id="BottomRectangle">
+  </div>
+
+</div> <!-- data-module-name="article.app/lib/module/responsiveAd" -->
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="full_width strap top-stories-strap hide12 hide16">
+          <div class="sector">
+            <h4 class="subhead module">
+              Popular on WSJ
+            </h4>
+          </div>
+        </div>
+
+        <div
+          class="sector"
+          id="trending_now_sector">
+          <div
+            class="column col4 at8-col8"
+            id="trending_now"
+            intent
+            in-at4units-append="#trending_now_sector"
+            in-at8units-append="#trending_now_sector"
+            in-base-append="#right-rail">
+
+<div data-module-id="23" data-module-name="resp.module.trendingNow.DesktopModule" data-module-zone="trending" class="zonedModule">
+<div class="module trending_now  ">
+
+  <div class="strap main">
+    <h2 class="subhead">Popular on WSJ</h2>
+  </div>
+
+  <div class="trending_articles">
+    <div class="strap secondary">
+      <h2 class="subhead">Articles</h2>
+    </div>
+    <ul class="clear">
+        <li class="clear " itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="contentUrl" content="http://s.wsj.net/public/resources/images/BN-GK490_1mitt_C_20150113132328.jpg" />
+            <a href="http://www.wsj.com/articles/mitt-romney-to-update-supporters-on-his-presidential-campaign-plans-1422623723?mod=trending_now_1" class="image">
+              <img alt="Romney Won’t Run for President in ’16" src="http://s.wsj.net/public/resources/images/BN-GK490_1mitt_C_20150113132328.jpg" width="111"/>
+            </a>
+
+          <h4 class="headline  no-key truncate-head">
+            <a href="http://www.wsj.com/articles/mitt-romney-to-update-supporters-on-his-presidential-campaign-plans-1422623723?mod=trending_now_1">Romney Won’t Run for President in ’16</a>
+          </h4>
+        </li>
+        <li class="clear subPrev" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="contentUrl" content="http://s.wsj.net/public/resources/images/BN-GS112_myweek_C_20150129165019.jpg" />
+            <a href="http://www.wsj.com/articles/a-week-in-the-life-of-the-tiger-mother-amy-chua-1422632082?mod=trending_now_2" class="image">
+              <img alt="A Week in the Life of the ‘Tiger Mother’ Amy Chua" src="http://s.wsj.net/public/resources/images/BN-GS112_myweek_C_20150129165019.jpg" width="111"/>
+            </a>
+
+          <h4 class="headline  no-key truncate-head">
+            <a href="http://www.wsj.com/articles/a-week-in-the-life-of-the-tiger-mother-amy-chua-1422632082?mod=trending_now_2">A Week in the Life of the ‘Tiger Mother’ Amy Chua</a>
+          </h4>
+        </li>
+        <li class="clear subPrev" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="contentUrl" content="http://s.wsj.net/public/resources/images/BN-GS178_Rules_C_20150129183623.jpg" />
+            <a href="http://www.wsj.com/articles/25-more-super-bowl-party-rules-1422575242?mod=trending_now_3" class="image">
+              <img alt="25 More Super Bowl Party Rules" src="http://s.wsj.net/public/resources/images/BN-GS178_Rules_C_20150129183623.jpg" width="111"/>
+            </a>
+
+          <h4 class="headline  no-key truncate-head">
+            <a href="http://www.wsj.com/articles/25-more-super-bowl-party-rules-1422575242?mod=trending_now_3">25 More Super Bowl Party Rules</a>
+          </h4>
+        </li>
+        <li class="clear " itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="contentUrl" content="http://s.wsj.net/public/resources/images/BN-GR833_KEYSTO_C_20150129123825.jpg" />
+            <a href="http://www.wsj.com/articles/senate-moves-closer-to-keystone-passage-1422553578?mod=trending_now_4" class="image">
+              <img alt="Senate Passes Keystone XL Bill" src="http://s.wsj.net/public/resources/images/BN-GR833_KEYSTO_C_20150129123825.jpg" width="111"/>
+            </a>
+
+          <h4 class="headline  no-key truncate-head">
+            <a href="http://www.wsj.com/articles/senate-moves-closer-to-keystone-passage-1422553578?mod=trending_now_4">Senate Passes Keystone XL Bill</a>
+          </h4>
+        </li>
+        <li class="clear subPrev" itemscope itemtype="http://schema.org/ImageObject">
+            <meta itemprop="contentUrl" content="http://s.wsj.net/public/resources/images/MN-AI233_WILD_C_20150127154214.jpg" />
+            <a href="http://www.wsj.com/articles/luxury-homes-with-windows-on-the-wild-1422550796?mod=trending_now_5" class="image">
+              <img alt="Windows on the Wild" src="http://s.wsj.net/public/resources/images/MN-AI233_WILD_C_20150127154214.jpg" width="111"/>
+            </a>
+
+          <h4 class="headline  no-key truncate-head">
+            <a href="http://www.wsj.com/articles/luxury-homes-with-windows-on-the-wild-1422550796?mod=trending_now_5">Windows on the Wild</a>
+          </h4>
+        </li>
+    </ul>
+  </div>
+
+  <div class="trending_videos">
+    <div class="strap secondary">
+      <h2 class="subhead">Videos</h2>
+    </div>
+    <ul class="video">
+        <li class="clear" itemscope itemtype="http://schema.org/ImageObject">
+          <meta itemprop="contentUrl" content="http://m.wsj.net/video/20150130/013015snickers/013015snickers_167x94.jpg" />
+          <div class="video-hover-container">
+            <a href="http://www.wsj.com/video/super-bowl-2015-snickers-ad/B861C991-DFFF-4F80-A5D3-F7C36FB2D3B1.html?mod=trending_now_video_1" class="image">
+              <div class="video_play"></div>
+              <img alt="[http://m.wsj.net/video/20150130/013015snickers/013015snickers_167x94.jpg]" src="http://m.wsj.net/video/20150130/013015snickers/013015snickers_167x94.jpg"/>
+            </a>
+            <h4 class="headline no-key truncate-head"><a href="http://www.wsj.com/video/super-bowl-2015-snickers-ad/B861C991-DFFF-4F80-A5D3-F7C36FB2D3B1.html?mod=trending_now_video_1">Super Bowl 2015: Snickers Ad</a></h4>
+          </div>
+        </li>
+        <li class="clear" itemscope itemtype="http://schema.org/ImageObject">
+          <meta itemprop="contentUrl" content="http://m.wsj.net/video/20150128/012815budpuppy/012815budpuppy_167x94.jpg" />
+          <div class="video-hover-container">
+            <a href="http://www.wsj.com/video/super-bowl-2015-budweiser-puppy-ad/1E64C549-BD15-4411-A9E4-A3CFDC491358.html?mod=trending_now_video_2" class="image">
+              <div class="video_play"></div>
+              <img alt="[http://m.wsj.net/video/20150128/012815budpuppy/012815budpuppy_167x94.jpg]" src="http://m.wsj.net/video/20150128/012815budpuppy/012815budpuppy_167x94.jpg"/>
+            </a>
+            <h4 class="headline no-key truncate-head"><a href="http://www.wsj.com/video/super-bowl-2015-budweiser-puppy-ad/1E64C549-BD15-4411-A9E4-A3CFDC491358.html?mod=trending_now_video_2">Super Bowl 2015: Budweiser Puppy Ad</a></h4>
+          </div>
+        </li>
+        <li class="clear" itemscope itemtype="http://schema.org/ImageObject">
+          <meta itemprop="contentUrl" content="http://m.wsj.net/video/20150129/012915always/012915always_167x94.jpg" />
+          <div class="video-hover-container">
+            <a href="http://www.wsj.com/video/super-bowl-2015-always-ad/B9C9A5D0-3E91-4076-835B-5FD9AA4A16B0.html?mod=trending_now_video_3" class="image">
+              <div class="video_play"></div>
+              <img alt="[http://m.wsj.net/video/20150129/012915always/012915always_167x94.jpg]" src="http://m.wsj.net/video/20150129/012915always/012915always_167x94.jpg"/>
+            </a>
+            <h4 class="headline no-key truncate-head"><a href="http://www.wsj.com/video/super-bowl-2015-always-ad/B9C9A5D0-3E91-4076-835B-5FD9AA4A16B0.html?mod=trending_now_video_3">Super Bowl 2015: Always Ad</a></h4>
+          </div>
+        </li>
+        <li class="clear" itemscope itemtype="http://schema.org/ImageObject">
+          <meta itemprop="contentUrl" content="http://m.wsj.net/video/20150129/012915mccain-2/012915mccain-2_167x94.jpg" />
+          <div class="video-hover-container">
+            <a href="http://www.wsj.com/video/mccain-calls-protesters-low-life-scum/CDDC9DB5-DE10-4455-B556-08D9BE50893C.html?mod=trending_now_video_4" class="image">
+              <div class="video_play"></div>
+              <img alt="[http://m.wsj.net/video/20150129/012915mccain-2/012915mccain-2_167x94.jpg]" src="http://m.wsj.net/video/20150129/012915mccain-2/012915mccain-2_167x94.jpg"/>
+            </a>
+            <h4 class="headline no-key truncate-head"><a href="http://www.wsj.com/video/mccain-calls-protesters-low-life-scum/CDDC9DB5-DE10-4455-B556-08D9BE50893C.html?mod=trending_now_video_4">McCain Calls Protesters 'Low-Life Scum'</a></h4>
+          </div>
+        </li>
+        <li class="clear" itemscope itemtype="http://schema.org/ImageObject">
+          <meta itemprop="contentUrl" content="http://m.wsj.net/video/20150128/012715godaddyhome2/012715godaddyhome2_167x94.jpg" />
+          <div class="video-hover-container">
+            <a href="http://www.wsj.com/video/super-bowl-2015-godaddy-ad/3BDC9718-B167-4CBA-9D58-6F86D4A2E4B1.html?mod=trending_now_video_5" class="image">
+              <div class="video_play"></div>
+              <img alt="[http://m.wsj.net/video/20150128/012715godaddyhome2/012715godaddyhome2_167x94.jpg]" src="http://m.wsj.net/video/20150128/012715godaddyhome2/012715godaddyhome2_167x94.jpg"/>
+            </a>
+            <h4 class="headline no-key truncate-head"><a href="http://www.wsj.com/video/super-bowl-2015-godaddy-ad/3BDC9718-B167-4CBA-9D58-6F86D4A2E4B1.html?mod=trending_now_video_5">Super Bowl 2015: GoDaddy Ad</a></h4>
+          </div>
+        </li>
+    </ul>
+  </div>
+
+</div>
+
+</div> <!-- data-module-name="resp.module.trendingNow.DesktopModule" -->
+
+          </div>
+        </div>
+
+        <div class="full_width strap top-stories-strap">
+          <div class="sector">
+            <h2 class="subhead module">
+              Editors&rsquo; Picks
+            </h2>
+          </div>
+        </div>
+
+        <div class="sector">
+          <div class="column">
+            <div class="module">
+
+<div data-module-id="22" data-module-name="article.app/lib/module/topStories" data-module-zone="top_stories" class="zonedModule">
+<ul class="top_stories clear">
+
+
+    <li class="subPrev">
+      <h4 class="category section-life">Rumble Seat</h4>
+      <a href="http://www.wsj.com/articles/land-rover-discovery-sport-takes-on-iceland-1422652037?mod=WSJ_article_EditorsPicks_0"><img src="http://s.wsj.net/public/resources/images/OD-BF223_RUMBLE_D_20150129145400.jpg"></a>
+      <h3><a href="http://www.wsj.com/articles/land-rover-discovery-sport-takes-on-iceland-1422652037?mod=WSJ_article_EditorsPicks_0" class="headline"><p>
+
+Land Rover Discovery Sport Takes On Iceland</p></a></h3>
+    </li>
+
+    <li class="subPrev">
+      <h4 class="category section-life">Exhibit</h4>
+      <a href="http://www.wsj.com/articles/star-studded-images-from-the-hubble-space-telescope-1422658561?mod=WSJ_article_EditorsPicks_1"><img src="http://s.wsj.net/public/resources/images/BN-GR075_0128ex_D_20150128112721.jpg"></a>
+      <h3><a href="http://www.wsj.com/articles/star-studded-images-from-the-hubble-space-telescope-1422658561?mod=WSJ_article_EditorsPicks_1" class="headline"><p>
+
+Star-Studded Images From the Hubble Space Telescope</p></a></h3>
+    </li>
+
+    <li class="">
+      <h4 class="category section-life">Essay</h4>
+      <a href="http://www.wsj.com/articles/the-car-of-the-future-may-run-on-gas-1422646049?mod=WSJ_article_EditorsPicks_2"><img src="http://s.wsj.net/public/resources/images/BN-GS566_engine_D_20150130134050.jpg"></a>
+      <h3><a href="http://www.wsj.com/articles/the-car-of-the-future-may-run-on-gas-1422646049?mod=WSJ_article_EditorsPicks_2" class="headline"><p>
+
+The Car of the Future May Run on Gasoline</p></a></h3>
+    </li>
+
+    <li class="subPrev">
+      <h4 class="category section-">At Work</h4>
+      <a href="http://blogs.wsj.com/atwork/2015/01/30/are-working-dads-having-it-all/?mod=WSJ_article_EditorsPicks_3"><img src="http://s.wsj.net/public/resources/images/BN-GP837_dad012_D_20150126104712.jpg"></a>
+      <h3><a href="http://blogs.wsj.com/atwork/2015/01/30/are-working-dads-having-it-all/?mod=WSJ_article_EditorsPicks_3" class="headline"><p>Are Working Dads Having it All?</p></a></h3>
+    </li>
+
+    <li class="">
+      <h4 class="category section-world">World News</h4>
+      <a href="http://www.wsj.com/articles/underground-terror-network-said-to-benefit-would-be-jihadists-in-europe-1422577767?mod=WSJ_article_EditorsPicks_4"><img src="http://s.wsj.net/public/resources/images/BN-GS177_FRTERR_D_20150129183421.jpg"></a>
+      <h3><a href="http://www.wsj.com/articles/underground-terror-network-said-to-benefit-would-be-jihadists-in-europe-1422577767?mod=WSJ_article_EditorsPicks_4" class="headline"><p>
+
+Jihadi Network Aided Terror Escape</p></a></h3>
+    </li>
+
+    <li class="">
+      <h4 class="category section-us">U.S. News</h4>
+      <a href="http://www.wsj.com/articles/obama-to-lay-out-215-million-precision-medicine-plan-1422615602?mod=WSJ_article_EditorsPicks_5"><img src="http://s.wsj.net/public/resources/images/BN-GS522_genmed_D_20150130130312.jpg"></a>
+      <h3><a href="http://www.wsj.com/articles/obama-to-lay-out-215-million-precision-medicine-plan-1422615602?mod=WSJ_article_EditorsPicks_5" class="headline"><p>
+
+Obama Announces Genetic-Mapping Plan</p></a></h3>
+    </li>
+
+    <li class="subPrev">
+      <h4 class="category section-">Speakeasy</h4>
+      <a href="http://blogs.wsj.com/speakeasy/2015/01/30/game-of-thrones-season-5-trailer-appears-to-have-leaked/?mod=WSJ_article_EditorsPicks_6"><img src="http://s.wsj.net/public/resources/images/BN-GS725_GotNEW_D_20150130174833.jpg"></a>
+      <h3><a href="http://blogs.wsj.com/speakeasy/2015/01/30/game-of-thrones-season-5-trailer-appears-to-have-leaked/?mod=WSJ_article_EditorsPicks_6" class="headline"><p>‘Game of Thrones’ Season 5 Trailer Is Leaked</p></a></h3>
+    </li>
+
+  <li class="video subPrev">
+  <h4 class="category">Sports </h4>
+    <a class="image" href="http://www.wsj.com/video/nfls-goodell-it-has-been-a-tough-year/785BF440-12F7-4771-885D-C3DA11C7194D.html"
+        intent
+        in-touch-href="http://m.wsj.net/video/20150130/013015goodell/013015goodell_v2_ec464k.mp4"
+        in-mouse-href="http://www.wsj.com/video/nfls-goodell-it-has-been-a-tough-year/785BF440-12F7-4771-885D-C3DA11C7194D.html">
+      <div class="center-image">
+       <img src="http://m.wsj.net/video/20150130/013015goodell/013015goodell_512x288.jpg">
+      </div>
+      <span class="video-play">PLAY</span>
+    </a>
+    <h3><a href="http://www.wsj.com/video/nfls-goodell-it-has-been-a-tough-year/785BF440-12F7-4771-885D-C3DA11C7194D.html" class="headline"
+        intent
+        in-touch-href="http://m.wsj.net/video/20150130/013015goodell/013015goodell_v2_ec464k.mp4"
+        in-mouse-href="http://www.wsj.com/video/nfls-goodell-it-has-been-a-tough-year/785BF440-12F7-4771-885D-C3DA11C7194D.html">
+        <p>NFL’s Goodell: ‘It Has Been a Tough Year’</p>
+    </a></h3>
+  </li>
+
+</ul>
+
+</div> <!-- data-module-name="article.app/lib/module/topStories" -->
+
+            </div>
+          </div>
+        </div>
+
+        <div class="sponsored-links">
+          <div class="sector">
+            <div class="module">
+
+<div data-module-id="21" data-module-name="resp.module.msn_links.module" data-module-zone="sponsored_links" class="zonedModule">
+<div>
+  <script id="mNCC" language="javascript">
+    medianet_width = "571";
+    medianet_height = "250";
+    medianet_crid = "623653805";
+    medianet_versionId = "111299";
+    (function() {
+        var isSSL = 'https:' == document.location.protocol;
+        var mnSrc = (isSSL ? 'https:' : 'http:') + '//contextual.media.net/nmedianet.js?cid=8CU6CD37D' + (isSSL ? '&https=1' : '');
+        document.write('<scr' + 'ipt type="text/javascript" id="mNSC" src="' + mnSrc + '"></scr' + 'ipt>');
+    })();
+  </script>
+</div>
+
+</div> <!-- data-module-name="resp.module.msn_links.module" -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="full_width footer">
+        <div class="sector">
+          <footer
+            class="column"
+            intent
+            in-at4units-class="col4"
+            in-at8units-class="col8"
+            in-at12units-class="col12"
+            in-at16units-class="col16">
+            <div class="module hide4">
+
+<div data-module-id="13" data-module-name="dj.module.footer.DesktopFooter" data-module-zone="desktop_footer" class="zonedModule">
+<div class="module deskfoot" data-fxgridwrap="footWrapBG" data-fxgridtarget=".colgroup-lv1.footer">
+  <div class="newFooterWrap r-dsk">
+    <div class="newFooter units12wide" intent="" in-at4units-class="nix" in-at8units-class="units8wide" in-at12units-class="units12wide" in-at16units-class="units16wide">
+      <!--TOP BAR LINKS-->
+      <menu class="topLinks clearFix">
+        <li class="wsjLogo"><a href="http://www.wsj.com/?mod=WSJDE_footer">Wall Street Journal</a></li>
+        <li class="socialLogo"><a title="Facebook" href="http://www.facebook.com/wsj" class="facebook">Facebook</a></li>
+        <li class="socialLogo"><a title="Twitter" href="http://twitter.com/WSJ" class="twitter">Twitter</a></li>
+        <li class="socialLogo"><a title="LinkedIn" href="http://www.linkedin.com/today/online.wsj.com" class="linkedin">LinkedIn</a></li>
+        <li class="socialLogo"><a title="FourSquare" href="https://foursquare.com/wsj" class="foursquare">FourSquare</a></li>
+        <li class="socialLogo"><a title="Google+" href="https://plus.google.com/117720626238470886461/posts" class="gplus" rel="publisher">Google+</a></li>
+        <li class="socialLogo"><a title="YouTube" href="http://www.youtube.com/user/WSJDigitalNetwork" class="youtube">YouTube</a></li>
+        <li class="socialLogo"><a title="Podcasts" href="http://www.wsj.com/public/page/podcast.html?mod=WSJ_footer" class="podcast">Podcasts</a></li>
+        <li class="socialLogo"><a title="RSS" href="http://www.wsj.com/public/page/rss_news_and_feeds.html?mod=WSJ_footer" class="rssfeed">RSS Feed</a></li>
+        <li class="socialLogo"><a title="AppStore" href="https://itunes.apple.com/us/app/the-wall-street-journal./id364387007?mt=8" class="appstore">AppStore</a></li>
+        <li class="login_sub">
+          <menu class="clearFix">
+            <li class="subscribe"><a href="https://subscribe.wsj.com/hpheaderlink">Subscribe</a></li>
+            <li class="login"><span>/</span><a href="https://id.wsj.com/access/509b1a086458232f6e000002/latest/login_standalone.html?url=http%3A%2F%2Fwww.wsj.com%2Farticles%2Fnew-treatment-provides-hope-for-human-ebola-cases-1409331697" ref="nofollow" data-widget="LIFP.login">Login</a></li>
+          </menu>
+        </li>
+        <li class="backToTop"><a href="#top">Back to Top<span class="rotate">«</span></a></li>
+      </menu>
+      <!--MIDDLE COLUMN LINKS-->
+      <menu class="contentLinks clearFix">
+        <li class="linksCol"><h4>Customer Service</h4>
+          <menu>
+            <li><a href="http://help.wsj.com/customer-service/?mod=WSJ_footer">Customer Center</a></li>
+            <li><a href="#" class="liveChat"><span class="lcHighlight">New!</span> Live Help</a></li>
+            <li><a href="https://customercenter.wsj.com/view/contactus.html?mod=WSJ_footer">Contact Us</a></li>
+            <li><a href="http://www.subscribe.wsj.com/getweekendnow?mod=WSJ_footer">WSJ Weekend</a></li>
+            <li><a href="https://customercenter.wsj.com/view/ctdir/contactdirectory.html?mod=WSJ_footer">Contact Directory</a></li>
+            <li><a href="http://www.wsj.com/news/column/Corrections?mod=WSJ_footer">Corrections</a></li>
+          </menu>
+        </li>
+        <li class="linksCol"><h4>Policy</h4>
+          <menu>
+            <li><a href="http://www.wsj.com/public/page/privacy-policy.html?mod=WSJ_footer">Privacy Policy</a></li>
+            <li><a href="http://www.wsj.com/public/page/cookie-policy.html?mod=WSJ_footer">Cookie Policy</a></li>
+            <li><a href="http://www.wsj.com/public/page/data-policy.html?mod=WSJ_footer">Data Policy</a></li>
+            <li><a href="http://www.wsj.com/public/page/copyright_policy.html?mod=WSJ_footer">Copyright Policy</a></li>
+            <li><a href="http://www.wsj.com/public/page/subscriber_agreement.html?mod=WSJ_footer">
+            Subscriber Agreement<br>&amp; Terms of Use
+            </a></li>
+            <li><a href="http://www.wsj.com/public/page/cookie-policy.html?mod=WSJ_footer#cookies_advertising">Your Ad Choices</a></li>
+          </menu>
+        </li>
+        <li class="linksCol"><h4>Ads</h4>
+          <menu>
+            <li><a href="http://www.wsjdigital.com/?mod=WSJ_footer">Advertise</a></li>
+            <li><a href="http://classifieds.wsj.com/?mod=WSJ_footer">Place a Classified Ad</a></li>
+            <li><a href="https://classifieds.wsj.com/ad/Residential-Real-Estate-Ads?mod=WSJ_footer">Sell Your Home</a></li>
+            <li><a href="https://classifieds.wsj.com/ad/Business-For-Sale-Ads?mod=WSJ_footer">Sell Your Business</a></li>
+            <li><a href="https://classifieds.wsj.com/ad/Commercial-Real-Estate-Ads?mod=WSJ_footer">Commercial Real Estate Ads</a></li>
+            <li><a href="https://classifieds.wsj.com/ad/Job-Ads?mod=WSJ_footer">Recruitment &amp; Career Ads</a></li>
+            <li><a href="https://classifieds.wsj.com/ad/Franchise-For-Sale-Ads?mod=WSJ_footer">Franchising</a></li>
+            <li><a href="http://www.wsjlocal.com/?mod=WSJ_footer">Advertise Locally</a></li>
+          </menu>
+        </li>
+        <li class="linksCol"><h4>Tools &amp; Features</h4>
+          <menu>
+            <li><a href="http://www.wsj.com/public/page/designtech-wsjModuleHome.html?mod=WSJ_footer">Apps</a></li>
+            <li><a href="http://www.wsj.com/public/page/email-setup.html?mod=WSJ_footer">Emails &amp; Alerts</a></li>
+            <li><a href="http://www.wsj.com/public/page/news-interactive-features-trends.html?mod=WSJ_footer">Graphics &amp; Photos</a></li>
+            <li><a href="http://www.wsj.com/page/columnists.html?mod=WSJ_footer">Columns</a></li>
+            <li><a href="http://topics.wsj.com/?mod=WSJ_footer">Topics</a></li>
+            <li><a href="http://www.wsj.com/public/page/guides.html?mod=WSJ_footer">Guides</a></li>
+            <li><a href="http://portfolio.wsj.com/?mod=wsj_port_foot">Portfolio</a></li>
+            <li><a href="http://ds.wsj.com/wsjportfolio/portfolio?cmd=mainwindow&mod=wsj_portold_foot">Old Portfolio</a></li>
+          </menu>
+        </li>
+        <li class="linksCol"><h4>More</h4>
+          <menu>
+            <li><a class="registerUserClass" rel="nofollow" href="https://id.wsj.com/access/509b1a086458232f6e000002/latest/register_standalone.html" ref="nofollow" data-widget="LIFP.freeregistration">Register for Free</a></li>
+            <li><a href="http://www.djreprints.com/?mod=WSJ_footer">Reprints</a></li>
+            <li><a href="http://wsj.com/partner/?mod=WSJ_footer">Content Partnerships</a></li>
+            <li><a href="http://www.wsj.com/conferences?mod=WSJ_footer">Conferences</a></li>
+            <li><a href="https://www.wsjsafehouse.com/">SafeHouse</a></li>
+            <li><a href="http://m.wsj.com" id="mobilesite">Mobile Site</a></li>
+            <li><a href="http://www.wsj.com/public/page/archive.html">News Archive</a></li>
+          </menu>
+        </li>
+      </menu>
+      <!--FOOTNOTE LINKS-->
+      <menu class="footnoteLinks clearFix">
+        <li class="http://www.dowjones.com/careers.asp?mod=WSJ_footer"><a href="http://www.dowjones.com/careers.asp?mod=WSJ_footer">Jobs at WSJ</a></li>
+        <li class="copyright">Copyright &copy;2015 <a href="#">Dow Jones &amp; Company</a>, Inc. All Rights Reserved.</li>
+      </menu>
+    </div>
+  </div>
+</div>
+
+<div id="cX-root" class="test" style="display:none"><!--PLEASE DO NOT REMOVE--></div>
+
+
+<div id='SI_73f3k49S18cgGAR'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+
+</div> <!-- data-module-name="dj.module.footer.DesktopFooter" -->
+
+            </div>
+            <div class="module hide8 hide12 hide16">
+
+<div data-module-id="20" data-module-name="dj.module.sections.Module" data-module-zone="footer_sections" class="zonedModule">
+<h3 class="section subsections">Sections</h3>
+<div class="content module sectionsBox">
+<nav class="subsectional"> 
+  <ul>
+  </ul>
+</nav>
+<nav class="sectional"> 
+  <ul>
+    <li><a href="http://www.wsj.com/m/home-page">Home</a></li>
+    <li><a href="http://www.wsj.com/m/news-global-world">World</a></li>
+    <li><a href="http://www.wsj.com/m/news-world-business">U.S.</a></li>
+    <li><a href="http://www.wsj.com/m/news-business-us">Business</a></li>
+    <li><a href="http://www.wsj.com/news/technology">Tech</a></li>
+    <li><a href="http://www.wsj.com/m/news-financial-markets-stock">Markets</a></li>
+    <li><a href="http://markets.wsj.com/usoverview">Market Data</a></li>
+    <li><a href="http://www.wsj.com/m/news-personal-finance">Your Money</a></li>
+    <li><a href="http://www.wsj.com/m/news-opinion-commentary">Opinion</a></li>
+    <li><a href="http://www.wsj.com/m/news-lifestyle-arts-entertainment">Life &amp; Culture</a></li>
+    <li><a href="http://www.wsj.com/m/new-york-main">New York</a></li>
+    <li><a href="http://www.wsj.com/m/news-real-estate-homes">Real Estate</a></li>
+    <li><a href="http://www.wsj.com/m/management">Management</a></li>
+  </ul>
+</nav>
+</div>
+
+
+
+</div> <!-- data-module-name="dj.module.sections.Module" -->
+
+
+<div data-module-id="19" data-module-name="dj.module.footer.Module" data-module-zone="mobile_footer" class="zonedModule">
+  <div class="footplate module footerBox">
+    <div class="footerOps">
+      <div class="editionSwitch">
+        <label for="edition">Edition:</label> 
+        <select id="edition" style="width: 90px;">
+            <option value="na,us" id="us" data-domain="http://m.us.wsj.com/" selected>U.S.</option>
+            <option value="asia" id="asia" data-domain="http://m.asia.wsj.com/" >Asia</option>
+            <option value="europe" id="europe" data-domain="http://m.europe.wsj.com/" >Europe</option>
+            <option value="na,lat" id="latinamerica" data-domain="http://lat.wsj.com/" >Am&#233;rica Latina</option>
+            <option value="na,br" id="brazil" data-domain="http://br.wsj.com/" >Brasil</option>
+            <option value="asia,cn" id="china" data-domain="http://m.cn.wsj.com/" >&#20013;&#22269; (China)</option>
+            <option value="asia,india" id="india" data-domain="http://m.india.wsj.com/" >India</option>
+            <option value="asia,indo" id="indonesia" data-domain="http://m.indo.wsj.com/" >Indonesia</option>
+            <option value="asia,jp" id="japan" data-domain="http://jp.wsj.com/" >&#26085;&#26412; (Japan)</option>
+            <option value="asia,kr" id="korea" data-domain="http://m.kr.wsj.com/" >&#54620;&#44397; (Korea)</option>
+        </select>
+      </div>
+      <div class="fontSwitch" title="click to change font size ">
+        <label for="fontController">Text Size:</label>
+        <select id="fontController">
+            <option value="small" id="small" >Small</option>
+            <option value="medium" id="medium" >Medium</option>
+            <option value="large" id="large" >Large</option>
+        </select>
+      </div>
+    </div>
+    <div class="folio">
+          <p>
+            <span class="loginOps"><a href="https://id.wsj.com/access/509b1a086458232f6e000002/latest/login_standalone.html?url=http%3A%2F%2Fwww.wsj.com%2Farticles%2Fnew-treatment-provides-hope-for-human-ebola-cases-1409331697">Log In</a></span> <span class="loginOps"><a href="https://subscribe.wsj.com/hpheaderlink">Subscribe</a></span>
+          </p>
+      <small class="copyright">&copy;2015 Dow Jones & Company, Inc. All Rights Reserved.</small> <nav> 
+      <ul>
+        <li class="nav-Home"><a href="http://online.wsj.com/public/page/privacy-policy.html">Legal Policies</a></li>
+        <li class="nav-About"><a href="https://customercenter.wsj.com/view/contactus.html">Contact</a></li>
+        
+      </ul>
+      </nav> 
+    </div>
+    <div class="searchBar cardFace-back">
+    <div class="searchContents">
+      <form action="http://online.wsj.com/search/term" id="searchFooter">
+        <div class="clearfix"></div>
+        <input type="search" autosave="rw-headerSearchSave" placeholder=" Search" name="KEYWORDS" id="searchTxtFooter">
+                    <button type="submit" class="searchButton">Submit Search</button>
+      </form>
+    </div>
+    </div>
+  </div>
+
+</div> <!-- data-module-name="dj.module.footer.Module" -->
+
+            </div>
+          </footer>
+        </div>
+      </div>
+
+
+    <!-- COMMON -->
+    <script type="text/javascript" src="http://stv.wsj.net/dpm/scripts?key=af6ca753b94d96287eb4ebf330d37fc3e97b57dc"></script>
+    <script type="text/javascript" src="http://stv.wsj.net/dpm/scripts?key=796d980a574b4c282c36ea02868810612b73a762"></script>
+    <!-- END COMMON -->
+    <!-- MODULES -->
+      <script type="text/javascript" src="http://stv.wsj.net/dpm/scripts?key=7a07f7cee60dd09e881e7876ac041bb97e160220"></script>
+    <!-- END MODULES -->
+
+      <script type="text/javascript" src="http://stv.wsj.net/dpm/scripts?key=d8c3109383ca74078bf2e506902e639557b091f2"></script>
+
+
+    <!-- WILL MOVE TO A REQUIRE CONFIG -->
+    <script type="text/javascript">
+      require.config({
+
+          map: {
+            '*' : {
+              'vendor.asset.jquery/jquery' : 'jquery',
+              /* 'vendor.asset.underscore/underscore' : 'underscore', */
+              'vendor.asset.bootstrap/backbone' : 'backbone',
+              'vendor.asset.hogan/hogan' : 'hogan',
+              'vendor.asset.moment/moment' : 'moment'
+            }
+          },
+          paths: {
+            "jquery": "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min",
+            // "underscore": "//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min",
+            "backbone": "//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min",
+            "hogan": "//cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.0/hogan.min.amd",
+            "moment": "//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min"
+          }
+        });
+
+        define('article.app.require-module-init', ['jquery'], function ($) {
+          function init() {
+            var requirejs = window.require
+              , registry = requirejs.s.contexts._.registry
+              , hasOwn = Object.prototype.hasOwnProperty
+              , isArticleRe = /article\.app/
+              , isModuleRe = /\.module\./
+              , isTealiumRe = /tealium/
+              , isModule
+              , name;
+
+            for (name in registry) {
+              if (!hasOwn.call(registry, name)) { continue; }
+              isModule = (isModuleRe.test(name) || isArticleRe.test(name) || isTealiumRe.test(name));
+              if (!isModule) {
+                continue;
+                }
+                /* console.log('requiring...  ' + name + '<---------'); */
+              requirejs([name], onRequire);
+            }
+            function onRequire(module) {
+
+              if (module === undefined) {
+                return;
+              }
+              if (module && typeof(module.init) !== 'function') {
+                return;
+              }
+              try {
+                // TODO: We are wrapping this call in the jQuery promised dom.ready wrapper to guarantee
+                // our frontend code that needs to run over DOMREADY actually does so. This is a big
+                // bandaid though. So please. Be aware.
+                $(function() {
+                  module.init.call(module);
+                });
+              } catch (e) {
+                console.error('module init error' + e);
+                return;
+              }
+            }
+
+          }
+          return {init: init};
+        });
+
+        require(['article.app.require-module-init'], function (moduleInit) {
+          moduleInit.init();
+        });
+    </script>
+
+  <div id="d__fFH"><OBJECT id="d_dlg" CLASSID="clsid:3050f819-98b5-11cf-bb82-00aa00bdce0b" width="0px" height="0px"></OBJECT><span id="d__fF"></span></div></body>
+</html>

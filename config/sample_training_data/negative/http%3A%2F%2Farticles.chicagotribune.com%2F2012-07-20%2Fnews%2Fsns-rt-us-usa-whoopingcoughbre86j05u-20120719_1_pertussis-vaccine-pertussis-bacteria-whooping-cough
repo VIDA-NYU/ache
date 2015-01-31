@@ -1,0 +1,293 @@
+
+
+
+
+
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"><link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet"><script src="/bootstrap/jquery/jquery-1.7.2.min.js"></script><script>jQuery.noConflict();</script><!--[if lt IE 9]><script src="/bootstrap/polyfill/html5.js"></script><![endif]--><script src="http://www.chicagotribune.com/thirdpartyservice?disablenav=true" async></script><script>
+       ((((window.trb || (window.trb = {})).data || (trb.data = {})).metrics || (trb.data.metrics = {})).thirdparty = {pageName: 'ct:articles:archives:digital:archivestory.',
+channel: 'archives:digital',
+server: 'articles.chicagotribune.com',
+hier1: 'chicagotribune:archives:digital',
+hier2: 'archives:digital',
+prop1: 'ct:articles:archives:digital:archivestory.',
+prop2: 'archives',
+prop36: '1',
+prop38: 'archivestory',
+prop39: 'news/nationworld',
+prop40: 'sns-rt-us-usa-whoopingcoughbre86j05u-20120719',
+prop57: 'archivestory',
+prop62: 'signed-out',
+prop64: '07-20-2012 00:50',
+eVar20: 'chicagotribune',
+eVar21: 'archivestory',
+eVar34: 'archives:digital',
+eVar35: 'ct:articles:archives:digital:archivestory.'
+});</script>
+<meta name="description" content="SEATTLE (Reuters) - The number of U.S. whooping cough cases has risen to around 18,000 in an outbreak that is on track to become the most severe in over a half century and could in part stem from" /><meta name="keywords" content="USAWA, USAWI, GEN, CHILD, HEA, SCI, AU, US" /><meta property="fb:admins" content="100001837105818" /><meta property="og:title" content="U.S. whooping cough outbreak could be worst in half century" /><meta property="og:type" content="article" /><meta property="og:url" content="http://articles.chicagotribune.com/2012-07-20/news/sns-rt-us-usa-whoopingcoughbre86j05u-20120719_1_pertussis-vaccine-pertussis-bacteria-whooping-cough" /><meta property="og:image" content="http://www.trbimg.com/img-5008f10f/turbine/sns-rt-us-usa-whoopingcoughbre86j05u-20120719-001/600" /><meta property="og:description" content="SEATTLE (Reuters) - The number of U.S. whooping cough cases has risen to around 18,000 in an outbreak that is on track to become the most severe in over a half century and could in part stem from..." />
+        <script type="text/javascript">
+        function pm_fixIEImg(img) {
+            if (navigator.userAgent.indexOf('MSIE 8') == -1 && navigator.userAgent.indexOf('MSIE 7') == -1 && navigator.userAgent.indexOf('MSIE 6') == -1) return img;
+            var parent = img.parentNode;
+            img.onerror = function() { this.parentNode.removeChild(this); }
+            img.src = 'broken';
+            return parent;
+        }
+
+        function pm_imageFailed(div) {
+            pm_fixIEImg(div);
+            while (div.parentNode != null && div.className.indexOf('mod-articleimage') == -1) div = div.parentNode;
+            if (div != null) { div.parentNode.removeChild(div); pm_removeTextMargin(); }
+        }
+
+        function pm_imageFailedGallery(div) {
+            pm_fixIEImg(div);
+            while (div.parentNode != null && div.nodeName != 'LI') div = div.parentNode;
+            if (div != null) { div.parentNode.removeChild(div); pm_updateGallery(); }
+        }
+
+        function pm_updateGallery() {
+            if (typeof updateGallery == 'function') updateGallery();
+            else setTimeout('pm_updateGallery();', 100);
+        }
+
+        function pm_imageFailedFeatured(div) {
+            var logo = '/images/footer.96.png'
+            if (logo != '') {
+                div.parentNode.parentNode.className = 'photowrapper photowrapper-logo';
+                div.className = 'featured-logo';
+                div.src = logo;
+                return;
+            }
+            div = pm_fixIEImg(div);
+            while (div.parentNode != null && div.className.indexOf('mod-homepageimage') == -1) div = div.parentNode;
+            if (div != null) div.parentNode.removeChild(div);
+        }
+
+        function pm_imageFailedRelatedLink(div) {
+            div = pm_fixIEImg(div);
+            while (div.parentNode != null && div.className.indexOf('image') == -1) div = div.parentNode;
+            if (div != null) {
+                var pN = div.parentNode;
+                pN.removeChild(div);
+                while (pN.parentNode != null && pN.className.indexOf('image-body') == -1) pN = pN.parentNode;
+                if (pN != null) pN.className = 'text-body';
+            }
+        }
+
+        function pm_imageFailedRelatedPhoto(div) {
+            div = pm_fixIEImg(div);
+            while (div.parentNode != null && div.className.indexOf('photos') == -1) div = div.parentNode;
+            if (div != null) div.parentNode.removeChild(div);
+        }
+
+        function pm_removeTextMargin() {
+            var by = document.getElementById('mod-article-byline');
+            var tx = document.getElementById('mod-a-body-first-para');
+            if (by != null) by.style.marginRight = '0px';
+            if (tx != null) tx.style.marginRight = '0px';
+        }
+        </script>
+        <title>U.S. whooping cough outbreak could be worst in half century - Chicago Tribune</title><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><link rel="canonical" href="http://articles.chicagotribune.com/2012-07-20/news/sns-rt-us-usa-whoopingcoughbre86j05u-20120719_1_pertussis-vaccine-pertussis-bacteria-whooping-cough" />
+                       <script src='http://widget.perfectmarket.com/chitrib/load.js'></script>
+                       <script src="/tracker.js.php?8095c983af7a8d105ddc6575199b1fa5292c3b1f" type="text/javascript"></script>
+        <script type="text/javascript">
+                    setCookie("pmk_tn", "ap-CT11-G02", 3600);
+                    var sessId = getCookie("sessid");
+                    if (!sessId) {
+                        sessId = guid();
+                        setCookie("sessid", sessId, (30*60));
+                    }
+                    var uuId = getCookie("uuid");
+                    if (!uuId) {
+                        uuId = sessId;
+                        setCookie("uuid", uuId, (60*60*24*30*12*24));
+                    }
+                    var traffic_provider = getParamFromPMCookie("s");
+                    if(!traffic_provider) {
+                        traffic_provider = derive_traffic_provider();
+                        putParamIntoPMCookie("s", traffic_provider);
+                    }
+                    var traffic_type = getParamFromPMCookie("n");
+                    if(!traffic_type) {
+                        traffic_type = derive_traffic_type();
+                        putParamIntoPMCookie("n", traffic_type);
+                    }
+                    referring_domain = get_referring_domain();
+
+                    var tracSessParams = "sessid="+sessId+"&uuid="+uuId+"&s="+traffic_provider+"&n="+traffic_type+"&rd="+referring_domain;
+
+                    var query = get_query();
+                    if(query) {
+                        tracSessParams = tracSessParams + "&q=" + query;
+                    }
+                    var referring_url = get_referring_url();
+                    if(referring_url) {
+                        tracSessParams = tracSessParams + "&ru=" + encode(referring_url);
+                    }
+                    var user_agent = navigator.userAgent;
+                    if(user_agent) {
+                        tracSessParams = tracSessParams + "&ua=" + encode(user_agent);
+                    }
+                </script>
+                <link rel="stylesheet" type="text/css" href="/css/ap-CT11-G02.css?8095c983af7a8d105ddc6575199b1fa5292c3b1f" media="all" /><meta property="og:site_name" content="Chicago Tribune" /><script>if (typeof jQuery == "undefined") {var head = document.getElementsByTagName("head")[0]; script = document.createElement("script"); script.id = "jQuery"; script.type = "text/javascript";script.src = "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"; head.appendChild(script);}jQuery.noConflict();</script><script type="text/javascript">var switchTo5x=false;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({onhover:false, publisher:"b4d91b28-33ea-48d4-a388-dca4a729b7a1"});</script><script type="text/javascript">function downloadJSAtOnload(){var element, js;element=document.createElement("script");element.setAttribute("type", "text/javascript");element.setAttribute("src", "/sn.php?out=js&t=U.S.+whooping+cough+outbreak+could+be+worst+in+half+century&u=http%3A%2F%2Farticles.chicagotribune.com%2F2012-07-20%2Fnews%2Fsns-rt-us-usa-whoopingcoughbre86j05u-20120719_1_pertussis-vaccine-pertussis-bacteria-whooping-cough&l=ShareThis_EmailIcon-ShareThis_PrintIcon&i=mod-sm-badge-1-defer&p=ChiTrib&y=ap-CT11-G02&f=&c=false&z=false&v=8095c983af7a8d105ddc6575199b1fa5292c3b1f");document.body.appendChild(element);element=document.createElement("script");element.setAttribute("type", "text/javascript");element.setAttribute("src", "/sn.php?out=js&t=U.S.+whooping+cough+outbreak+could+be+worst+in+half+century&u=http%3A%2F%2Farticles.chicagotribune.com%2F2012-07-20%2Fnews%2Fsns-rt-us-usa-whoopingcoughbre86j05u-20120719_1_pertussis-vaccine-pertussis-bacteria-whooping-cough&l=Facebook_Connect-Facebook_RecommendCompact-Twitter_Compact&i=mod-sm-badge-2-defer&p=ChiTrib&y=ap-CT11-G02&f=&c=false&z=false&v=8095c983af7a8d105ddc6575199b1fa5292c3b1f");document.body.appendChild(element);element=document.createElement("script");element.setAttribute("type", "text/javascript");element.setAttribute("src", "/sn.php?out=js&t=U.S.+whooping+cough+outbreak+could+be+worst+in+half+century&u=http%3A%2F%2Farticles.chicagotribune.com%2F2012-07-20%2Fnews%2Fsns-rt-us-usa-whoopingcoughbre86j05u-20120719_1_pertussis-vaccine-pertussis-bacteria-whooping-cough&l=ShareThis_ShareThisCompact-Google_PlusOneMediumCount&i=mod-sm-badge-3-defer&p=ChiTrib&y=ap-CT11-G02&f=&c=false&z=false&v=8095c983af7a8d105ddc6575199b1fa5292c3b1f");document.body.appendChild(element);element=document.createElement("script");element.setAttribute("type", "text/javascript");element.setAttribute("src", "/modal/modal.js.php?i=mod-article-image&g=false&c=32752945&j=10&p=ChiTrib&8095c983af7a8d105ddc6575199b1fa5292c3b1f");document.body.appendChild(element);element=document.createElement("script");element.setAttribute("type", "text/javascript");element.setAttribute("src", "/article-image-resize-compressed.js.php?i=mod-article-image");document.body.appendChild(element);}if (window.addEventListener){window.addEventListener("load", downloadJSAtOnload, false);}else if (window.attachEvent){window.attachEvent("onload", downloadJSAtOnload);}else window.onload = downloadJSAtOnload;</script><script type="text/javascript">window.google_analytics_uacct = "UA-10467274-7";</script></head><body><div class=container><!-- Layout starts --><div id="layout"><div id="row-top" class="row-fluid"><div class="span12"><nav id="mod-logo" class="mod-chitribnav"><link rel="stylesheet" type="text/css" href="http://media.apps.chicagotribune.com/bootstrap/v2.3.2-ctredesign.3/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="http://media.apps.chicagotribune.com/bootstrap/v2.3.2-ctredesign.3/css/bootstrap-responsive.min.css">
+	  <link rel="stylesheet" type="text/css" href="http://media.apps.chicagotribune.com/ngux/static/external-branding-new.css" />
+	  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	  <script src="http://media.apps.chicagotribune.com/bootstrap/v2.3.2-ctredesign.3/js/bootstrap.min.js"></script>
+  
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+ 	  <style>
+  
+	    @media (max-width: 960px) and (min-width: 940px) {
+    	     .navbar .nav-compact {
+	       display: none;
+	     }
+
+	     .navbar .brand {
+	       float: left;
+	     }
+
+	     .navbar .nav-full {
+	       display: block;
+	     }
+    
+	     .navbar .nav>li>a {
+	       font-size: 11px;
+	       padding: 10px;
+	     }
+    
+ 	    } 
+  
+	  </style><div class="navbar navbar-inverse navbar-fixed-top"><div class="navbar-inner"><div class="container-fluid"><ul class="nav nav-compact"><li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="cticon-menu"></i><span class="hidden-phone">&nbsp;Sections</span></a>
+            <ul class="mobile-menu dropdown-menu" role="menu"><li><a href="http://www.chicagotribune.com">Home</a></li><li ><a href="http://www.chicagotribune.com/news/">News</a></li><li><a href="http://www.chicagotribune.com/business/">Business</a></li><li><a href="http://www.chicagotribune.com/sports/">Sports</a></li><li><a href="http://www.chicagotribune.com/entertainment/">A&E</a></li><li><a href="http://www.chicagotribune.com/features/">Lifestyles</a></li><li><a href="http://www.chicagotribune.com/news/opinion/">Opinion</a></li><li><a href="http://www.chicagotribune.com/classified/realestate/">Real Estate</a></li><li><a href="http://www.chicagotribune.com/classified/automotive/">Cars</a></li><li><a href="http://www.chicagotribune.com/classified/jobs/">Jobs</a></li></ul></li> </ul><a target="top" class="brand" href="http://www.chicagotribune.com"><img class="ct-logo" src="http://media.apps.chicagotribune.com/images/logo_inverse.png" title="Chicago Tribune" alt="Chicago Tribune"/></a><ul class="nav nav-full"><li><a href="http://www.chicagotribune.com">Home</a></li><li ><a href="http://www.chicagotribune.com/news/">News</a></li><li><a href="http://www.chicagotribune.com/business/">Business</a></li><li><a href="http://www.chicagotribune.com/sports/">Sports</a></li><li><a href="http://www.chicagotribune.com/entertainment/">A&E</a></li><l/www.chicagotribune.com/news/">News</a></li><li><a href="http://www.chicagotribune.com/business/">Business</a></li><li><a href="http://www.chicagotribune.com/sports/">Sports</a></li><li><a href="http://www.chicagotribune.com/i><a href="http://www.chicagotribune.com/features/">Lifestyles</a></li><li><a href="http://www.chicagotribune.com/news/opinion/">Opinion</a></li><li><a href="http://www.chicagotribune.com/classified/realestate/">Real Estate</a></li><li><a href="http://www.chicagotribune.com/classified/automotive/">Cars</a></li><li><a href="http://www.chicagotribune.com/classified/jobs/">Jobs</a></li></ul></div></div></div></nav><div id="mod-top-hdr" class="mod-adopenx mod-adblock hidden-phone hidden-tablet mod-tribuneadwithdatecheckimpl"><center><div><div class="ad_header"> </div><div id="mod-top-hdr-defer">
+
+		    <iframe name="openxi-339762" src="about:blank" frameborder="0" scrolling="no" width="728" height="90"></iframe>
+			<script type="text/javascript">
+			    if(navigator.userAgent.indexOf("MSIE") >= 0){
+				setTimeout(function() { //Fixed IE issue- Ref Bug 17996
+				    	var openxframe= frames["openxi-339762"].document;
+                        openxframe.open();
+                        openxframe.write('<script type="text/javascript">if (!window.OX_ads) { OX_ads = []; } OX_ads.push({ "auid" : "339762" });<\/script><script src="http://us-ads.openx.net/w/1.0/jstag"><\/script><noscript><iframe id="511bf904614ba" name="511bf904614ba" src="http://us-ads.openx.net/w/1.0/afr?auid=339762&cb=INSERT_RANDOM_NUMBER_HERE" frameborder="0" scrolling="no" width="728" height="90"><a cript src="http://us-ads.openx.net/w/1.0/jstag"><\/script><noscript><iframe id="511bf904614ba" name="511bf904614ba" src="http://us-ads.openx.net/w/1.0href="http://us-ads.openx.net/w/1.0/rc?cs=511bf904614ba&cb=INSERT_RANDOM_NUMBER_HERE" ><img src="http://us-ads.openx.net/w/1.0/ai?auid=339762&cs=511bf904614ba&cb=INSERT_RANDOM_NUMBER_HERE" border="0" alt=""></a></iframe></noscript>');
+                        window.openxframe.close();;
+			      },200);
+		            }else{
+				    	var openxframe= frames["openxi-339762"].document;
+                        openxframe.open();
+                        openxframe.write('<script type="text/javascript">if (!window.OX_ads) { OX_ads = []; } OX_ads.push({ "auid" : "339762" });<\/script><script src="http://us-ads.openx.net/w/1.0/jstag"><\/script><noscript><iframe id="511bf904614ba" name="511bf904614ba" src="http://us-ads.openx.net/w/1.0/afr?auid=339762&cb=INSERT_RANDOM_NUMBER_HERE" frameborder="0" scrolling="no" width="728" height="90"><a href="http://us-ads.openx.net/w/1.0/rc?cs=511bf904614ba&cb=INSERT_RANDOM_NUMBER_HERE" ><img src="http://us-ads.openx.net/w/1.0/ai?auid=339762&cs=511bf904614ba&cb=INSERT_RANDOM_NUMBER_HERE" border="0" alt=""></a></iframe></noscript>');
+                        window.openxframe.close();;	
+			    }
+			</script>
+                 </div></div></center></div><div id="mod-top-hdr-half" class="mod-chitribtrbad mod-trbad hidden-tablet hidden-desktop"><center><script type="text/javascript">
+
+(function () {
+
+    var widths = {
+        phone:   320,
+        tablet:  768,
+        desktop: 980
+    };
+    
+        
+     
+        if ((jQuery(window).width() >= widths.tablet) && (jQuery(window).width() < widths.desktop)) {
+            return;
+        }
+    
+     
+        if (jQuery(window).width() >= widths.desktop) {
+            return;
+        }
+    
+        
+                    document.write('<scri'+'pt src="http://pubads.g.doubleclick.net/gampad/adx?iu=7184%2Ftrb.touch.chicagotribune.com%2Fnews/nationworld/archives&sz=320x50&mob=js&t=ptype%3Dsf&t=ss%3Ds&t=tile%3D1&t=pos%3D1&c=19487504"></scri' + 'pt>');
+        
+    
+})();
+
+</script>
+
+</center></div></div></div><div id="row-middle" class="row-fluid"><div id="span-main-column" class="span8"><div id="mod-article-header" class="mod-chitribarticleheader mod-articleheader"><h1>U.S. whooping cough outbreak could be worst in half century</h1></div><div id="area-article-first-block" class="area"><div id="mod-article-byline" class="mod-chitribarticlebyline mod-articlebyline"><span class="pubdate">July 20, 2012</span><span class="separator">|</span><span>By Laura L. Myers</span> | <span>Reuters</span></div><div id="row-socials" class="row-fluid"><div id="span-sm-span-left" class="span2"><div id="mod-sm-badge-1" class="mod-chitribsocialmedia mod-socialmedia"><div id="mod-sm-badge-1-defer"><script type="text/javascript">/* Javascript deferred */</script></div></div></div><div id="span-sm-span-right" class="span10"><div id="row-socials-list" class="row-fluid"><div id="span-sm-span-right-1" class="span6"><div id="mod-sm-badge-2" class="mod-chitribsocialmedia mod-socialmedia"><div id="mod-sm-badge-2-defer"><script type="text/javascript">/* Javascript deferred */</script></div><div id="fb-root"></div></div></div><div id="span-sm-span-right-2" class="span6"><div id="mod-sm-badge-3" class="mod-chitribsocialmedia mod-socialmedia"><div id="mod-sm-badge-3-defer"><script type="text/javascript">/* Javascript deferred */</script></div></div></div></div></div></div><div id="area-article-image" class="area pull-right"><div id="mod-article-image" class="mod-chitribarticlepageimage mod-articlepageimage mod-articleimage"><div id="mod-article-image-box"><ul class="main-image thumbnails"><li ><a id="mod-article-image-link" class="thickbox thumbnail" onclick="return false;" target="_blank" href="http://www.trbimg.com/img-5008f10f/turbine/sns-rt-us-usa-whoopingcoughbre86j05u-20120719-001/600" title="= (Robyn Beck, AFP/Getty Images)"><img src="http://www.trbimg.com/img-5008f10f/turbine/sns-rt-us-usa-whoopingcoughbre86j05u-20120719-001/600" title="=" alt="=" style="" onerror="pm_imageFailed(this);"/></a></li></ul></div><div class="main-image-info">= (Robyn Beck, AFP/Getty Images)</div><script src="/modal/js/lazyload-min.js" type="text/javascript"></script></div></div><div id="mod-a-body-first-para" class="mod-chitribarticletext mod-articletext"><p>SEATTLE (Reuters) - The number of U.S. whooping cough cases has risen to around 18,000 in an outbreak that is on track to become the most severe in over a half century and could in part stem from possible waning vaccine protection, health officials said on Thursday.</p><p> Washington state, which declared an epidemic in April, and Wisconsin were particularly hard hit, with each reporting more than 3,000 cases, according to the U.S. Centers for Disease Control and Prevention.</p></div></div><div class="float" style="clear:both;height:1px;line-height:1px;"><img src="/images/pixel.gif" height="1" width="1" alt="" /></div><div id="mod-ctr-lt-in-top" class="mod-adcpc"><script type="text/javascript"> var adSkipCounter = 0; </script><iframe id="mod-ctr-lt-in-top-frame" src='javascript:(function() {document.open();document.write("<style>body{margin:0px;}</style><script>google_ad_client=\"ca-pub-8415620659137418\";google_ad_slot=\"5872009880\";google_ad_width=\"300\";google_ad_height=\"160\";google_ad_channel=\"9405729081,1000001860,1000000040\";google_adtest=\"off\";google_safe=\"high\";google_hints=\"whooping cough dtp vaccine dtap pertussis vaccine\";google_max_num_ads=\"2\";google_override_format=true;google_page_url=\"http://articles.chicagotribune.com/2012-07-20/news/sns-rt-us-usa-whoopingcoughbre86j05u-20120719_1_pertussis-vaccine-pertussis-bacteria-whooping-cough\";</script><script type=\"text/javascript\" src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\"></script>");document.close();})();' frameborder="0" scrolling="no" width="300" height="160"></iframe></div><div class="float" style="clear:both;height:1px;line-height:1px;"><img src="/images/pixel.gif" height="1" width="1" alt="" /></div><div id="mod-a-body-after-first-para" class="mod-chitribarticletextwithadcpc mod-chitribarticletext mod-articletext"><p> Nine people have died overall and the number of cases was already more than double than at the same time last year.</p><p> Whooping cough, also known as pertussis, causes severe, almost uncontrollable coughing. In the United States, most children are immunized with a DTaP five-dose series vaccine that is given as a series of shots, starting at two months.</p><p> All adults, including pregnant women, should get a booster shot because the contagious illness is especially dangerous for children under a year old who have yet to complete a cycle of vaccinations, Dr. Anne Schuchat, director of the CDC's National Center for Immunization and Respiratory Diseases, told a media briefing.</p><p> "It's most dangerous for babies," Schuchat said, adding that the current outbreak at its existing pace could become the most severe since 1959, when 40,000 cases were reported. "Preventing infant deaths from the disease is our primary national goal," she said.</p><p> A spike in whooping cough cases among 10-year-olds and adolescents who are 13 and 14 was a concern, perhaps an indicator that the pertussis vaccine may be wearing off earlier than anticipated, Washington Health Secretary Mary Selecky said.</p><p> The U.S. groups of 10-, 13- and 14-year-olds who are experiencing a high illness rate had DTaP vaccinations, which were introduced in 1997 at the same time that the prior DTP vaccine was discontinued.</p><p> The earlier vaccine used whole cell parts made of killed pertussis bacteria, while DTaP uses only small acellular bacteria pieces, not the whole bacteria cell, said Donn Moyer, Washington state Health Department spokesman</p><p> CDC officials will begin an investigation in Washington state later this month "to analyze our data for cases among 13- to 14-year-olds to see what can be learned about disease rates and vaccination status," Moyer told Reuters.</p><p> The number of cases in Washington, with no deaths, has tripled since April, with 1,132 cases reported by the end of that month.</p><p> Moyer said the CDC also plans a similar study in California, where a 2010 epidemic counted more than 9,000 cases, including 10 infant deaths.</p></div><div id="mod-a-body-after-first-para-ad-cpc" class="mod-adcpc"><iframe id="mod-a-body-after-first-para-ad-cpc-frame" src='javascript:(function() {document.open();document.write("<style>body{margin:0px;}</style><script>google_ad_client=\"ca-pub-8415620659137418\";google_ad_slot=\"5872009880\";google_ad_width=\"300\";google_ad_height=\"110\";google_ad_channel=\"9405729081,1000001860,1000000040\";google_adtest=\"off\";google_safe=\"high\";google_hints=\"whooping cough dtp vaccine dtap pertussis vaccine\";google_max_num_ads=\"2\";google_override_format=true;google_page_url=\"http://articles.chicagotribune.com/2012-07-20/news/sns-rt-us-usa-whoopingcoughbre86j05u-20120719_1_pertussis-vaccine-pertussis-bacteria-whooping-cough\";</script><script type=\"text/javascript\" src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\"></script>");document.close();})();' frameborder="0" scrolling="no" width="300" height="110"></iframe></div><div class="float" style="clear:both;height:1px;line-height:1px;"><img src="/images/pixel.gif" height="1" width="1" alt="" /></div><div id="mod-a-body-after-second-para" class="mod-chitribarticletextwithadcpc mod-chitribarticletext mod-articletext"><p> Whooping cough typically begins with cold-like symptoms such as a fever, runny nose and sneezing and is accompanied by a mild cough that grows more severe by the first or second week. A high-pitched whoop, giving the illness its name, can follow violent coughing fits.</p><p> This year, Australia is experiencing a high rate of whooping cough, Schuchat said.</p><p> (Editing by Cynthia Johnston and Philip Barbara)</p></div><div id="mod-a-body-after-second-para-ad-cpc" class="mod-adcpc"><iframe id="mod-a-body-after-second-para-ad-cpc-frame" src='javascript:(function() {document.open();document.write("<style>body{margin:0px;}</style><script>google_ad_client=\"ca-pub-8415620659137418\";google_ad_slot=\"5872009880\";google_ad_width=\"300\";google_ad_height=\"110\";google_ad_channel=\"9405729081,1000001860,1000000040\";google_adtest=\"off\";google_safe=\"high\";google_hints=\"whooping cough dtp vaccine dtap pertussis vaccine\";google_max_num_ads=\"2\";google_override_format=true;google_page_url=\"http://articles.chicagotribune.com/2012-07-20/news/sns-rt-us-usa-whoopingcoughbre86j05u-20120719_1_pertussis-vaccine-pertussis-bacteria-whooping-cough\";</script><script type=\"text/javascript\" src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\"></script>");document.close();})();' frameborder="0" scrolling="no" width="300" height="110"></iframe></div><script>jQuery(document).ready(function() {if(jQuery('#area-featured-bound').size() == 0) { jQuery('#mod-featured-title').remove(); }});</script><div id="mod-featured-title" class="mod-collapsebutton"><script>jQuery(document).ready(function() {
+jQuery("#mod-featured-title a").click(function () {
+  jQuery("#mod-featured-title a i").toggleClass("icon-chevron-down");
+  jQuery("#mod-featured-title a i").toggleClass("icon-chevron-up");
+});});</script><a data-toggle="collapse" data-target="#area-featured-bound"><i class="icon-chevron-up pull-right"></i>Featured Articles</a></div><div id="area-featured-bound" class="area collapse in"><div id="row-featured" class="row-fluid"><div class="span4"><div id="mod-article-image-lt" class="mod-featuredimage tplmodulefeaturedimage mod-homepageimage mod-articleimage"><div class="photowrapper"><a  href="/2011-08-22/news/ct-met-northwestern-als-breakthrough-20110822_1_als-patients-proteins-northwestern-research"><img src="http://www.trbimg.com/img-502cf03f/turbine/ct-met-nwu-als-3c-.jpg-20110822" onerror="pm_imageFailedFeatured(this);" ></a></div><div class="text-area"><div class="title"><a  href="/2011-08-22/news/ct-met-northwestern-als-breakthrough-20110822_1_als-patients-proteins-northwestern-research">Cause of ALS is found, Northwestern team says</a></div></div></div></div><div class="span4"><div id="mod-article-image-ct" class="mod-featuredimage tplmodulefeaturedimage mod-homepageimage mod-articleimage"><div class="photowrapper"><a  href="/2013-04-27/sports/sns-rt-bkn-bobcats-bulls-newssx5b6d3a1-20130427_1_juanita-vanoy-girlfriend-yvette-marriage-license"><img src="http://www.trbimg.com/img-517d5ac0/turbine/sns-rt-bkn-bobcats-bulls-newssx5b6d3a1-2013042-001/600/600x478" onerror="pm_imageFailedFeatured(this);" ></a></div><div class="text-area"><div class="title"><a  href="/2013-04-27/sports/sns-rt-bkn-bobcats-bulls-newssx5b6d3a1-20130427_1_juanita-vanoy-girlfriend-yvette-marriage-license">Michael Jordan marries longtime girlfriend</a></div></div></div></div><div class="span4"><div id="mod-article-image-rt" class="mod-featuredimage tplmodulefeaturedimage mod-homepageimage mod-articleimage"><div class="photowrapper"><a  href="/2014-03-17/business/ct-confidential-cards-against-humanity-0316-biz-20140317_1_cards-against-humanity-max-temkin-retailers"><img src="http://www.trbimg.com/img-5323de4b/turbine/ct-ct-confidential-cards-again-jpg-20140314/2048/2048x1316" onerror="pm_imageFailedFeatured(this);" ></a></div><div class="text-area"><div class="title"><a  href="/2014-03-17/business/ct-confidential-cards-against-humanity-0316-biz-20140317_1_cards-against-humanity-max-temkin-retailers">Cards Against Humanity to be sold by smaller retailers</a></div></div></div></div></div><div id="mod-featured-more" class="mod-text">MORE:</div><div id="row-featured-more" class="row-fluid"><div class="span6"><div id="mod-hp-article-list-2" class="mod-chitribarticles mod-articles"><div class="article"><div class="title"><a title="Waitress: 'I Got A Good Tip'" href="/2000-06-05/news/0007080257_1_tip-leg-room-credit-card">Waitress: 'I Got A Good Tip'</a></div></div><div class="article"><div class="title"><a title="Attorney convicted in slaying of Eddy Curry's ex-girlfriend, baby daughter" href="/2013-02-13/news/chi-chicago-attorney-convicted-in-slaying-of-eddy-currys-exgirlfriend-infant-daughter-20130212_1_nova-henry-south-loop-town-frederick-goings">Attorney convicted in slaying of Eddy Curry's ex-girlfriend, baby daughter</a></div></div><div class="article"><div class="title"><a title="Pain relievers: What are the differences?" href="/2011-01-13/news/sc-health-0112-pain-reliever-differen20110113_1_alcohol-warning-chronic-pain-tylenol">Pain relievers: What are the differences?</a></div></div></div>
+             <script type="text/javascript">
+             if(jQuery('.mod-chitribhomepageimage').size() == 0) jQuery('#row-middle-images').remove();
+             </script>
+         </div><div class="span6"><div id="mod-hp-article-list-1" class="mod-chitribarticles mod-articles"><div class="article"><div class="title"><a title="Masturbation Column Brings Fire And Brimstone--and Praise" href="/1998-02-15/news/9802150423_1_dear-ann-landers-column-sin">Masturbation Column Brings Fire And Brimstone--and Praise</a></div></div><div class="article"><div class="title"><a title="The crash of Flight 191" href="/2004-05-25/news/0405250061_1_flight-runway-plane">The crash of Flight 191</a></div></div><div class="article"><div class="title"><a title="CPS, most suburban school districts closed for the day" href="/2014-01-06/news/chi-chicago-weather-school-closings-20140105_1_temperatures-suburban-school-districts-school-officials">CPS, most suburban school districts closed for the day</a></div></div></div>
+             <script type="text/javascript">
+             if(jQuery('.mod-chitribhomepageimage').size() == 0) jQuery('#row-middle-images').remove();
+             </script>
+         </div></div></div></div><div id="span-side-column" class="span4"><div id="mod-left-sky" class="mod-adcpc"><iframe id="mod-left-sky-frame" src='javascript:(function() {document.open();document.write("<style>body{margin:0px;}</style><script>google_ad_client=\"ca-pub-8415620659137418\";google_ad_slot=\"7348743086\";google_ad_width=\"300\";google_ad_height=\"250\";google_ad_channel=\"9405729081,1000001860,1000000040\";google_adtest=\"off\";google_safe=\"high\";google_hints=\"whooping cough dtp vaccine dtap pertussis vaccine\";google_max_num_ads=\"1\";google_override_format=true;google_page_url=\"http://articles.chicagotribune.com/2012-07-20/news/sns-rt-us-usa-whoopingcoughbre86j05u-20120719_1_pertussis-vaccine-pertussis-bacteria-whooping-cough\";</script><script type=\"text/javascript\" src=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\"></script>");document.close();})();' frameborder="0" scrolling="no" width="300" height="250"></iframe></div><div id="mod-ctr-lt" class="mod-adopenx mod-adblock mod-tribuneadwithdatecheckimpl"><center><div><div class="ad_header"> </div><div id="mod-ctr-lt-defer">
+
+		    <iframe name="openxi-339767" src="about:blank" frameborder="0" scrolling="no" width="300" height="250"></iframe>
+			<script type="text/javascript">
+			    if(navigator.userAgent.indexOf("MSIE") >= 0){
+				setTimeout(function() { //Fixed IE issue- Ref Bug 17996
+				    	var openxframe= frames["openxi-339767"].document;
+                        openxframe.open();
+                        openxframe.write('<script type="text/javascript">if (!window.OX_ads) { OX_ads = []; } OX_ads.push({ "auid" : "339767" });<\/script><script src="http://us-ads.openx.net/w/1.0/jstag"><\/script><noscript><iframe id="511bf90462582" name="511bf90462582" src="http://us-ads.openx.net/w/1.0/afr?auid=339767&cb=INSERT_RANDOM_NUMBER_HERE" frameborder="0" scrolling="no" width="300" height="250"><a href="http://us-ads.openx.net/w/1.0/rc?cs=511bf90462582&cb=INSERT_RANDOM_NUMBER_HERE" ><img src="http://us-ads.openx.net/w/1.0/ai?auid=339767&cs=511bf90462582&cb=INSERT_RANDOM_NUMBER_HERE" border="0" alt=""></a></iframe></noscript>');
+                        window.openxframe.close();;
+			      },200);
+		            }else{
+				    	var openxframe= frames["openxi-339767"].document;
+                        openxframe.open();
+                        openxframe.write('<script type="text/javascript">if (!window.OX_ads) { OX_ads = []; } OX_ads.push({ "auid" : "339767" });<\/script><script src="http://us-ads.openx.net/w/1.0/jstag"><\/script><noscript><iframe id="511bf90462582" name="511bf90462582" src="http://us-ads.openx.net/w/1.0/afr?auid=339767&cb=INSERT_RANDOM_NUMBER_HERE" frameborder="0" scrolling="no" width="300" height="250"><a href="http://us-ads.openx.net/w/1.0/rc?cs=511bf90462582&cb=INSERT_RANDOM_NUMBER_HERE" ><img src="http://us-ads.openx.net/w/1.0/ai?auid=339767&cs=511bf90462582&cb=INSERT_RANDOM_NUMBER_HERE" border="0" alt=""></a></iframe></noscript>');
+                        window.openxframe.close();;	
+			    }
+			</script>
+                 </div></div></center></div><script>jQuery(document).ready(function() {if(jQuery('#mod-related-links').size() == 0) { jQuery('#mod-related-links-header').remove(); }});</script><div id="mod-related-links-header" class="mod-collapsebutton"><script>jQuery(document).ready(function() {
+jQuery("#mod-related-links-header a").click(function () {
+  jQuery("#mod-).size() == 0) { jQuery('#mod-related-links-header').remove(); }});</script><div id="mod-related-links-header" class="mod-collapsebutton"><script>jQueryrelated-links-header a i").toggleClass("icon-chevron-down");
+  jQuery("#mod-related-links-header a i").toggleClass("icon-chevron-up");
+});});</script><a data-toggle="collapse" data-target="#mod-related-links"><i class="icon-chevron-up pull-right"></i>Related Links</a></div><script>jQuery(document).ready(function() {if(jQuery('#mod-related-articles').size() == 0) { jQuery('#mod-related-articles-header').remove(); }});</script><div id="mod-related-articles-header" class="mod-collapsebutton"><script>jQuery(document).ready(function() {
+jQuery("#mod-related-articles-header a").click(function () {
+  jQuery("#mod-related-articles-header a i").toggleClass("icon-chevron-down");
+  jQuery("#mod-related-articles-header a i").toggleClass("icon-chevron-up");
+});});</script><a data-toggle="collapse" data-target="#mod-related-articles"><i class="icon-chevron-up pull-right"></i>Related Articles</a></div><div id="mod-related-articles" class="mod-relatedarticlessimplelist mod-relatedarticles collapse in"><div class="header"></div><ul><li><a  title="Newer whooping cough vaccine not as protective" href="/2013-0on-up pull-right"></i>Related Articles</a></div><div id="mod-related-articles" class="mod-relatedarticlessimplelist mod-relatedarticles collapse in"><div class="header"5-19/lifestyle/sns-rt-us-newer-whooping-cough-vaccinebre94j02i-20130519_1_whooping-cough-pertussis-vaccine-cough-vaccine"><span class="title">Newer whooping cough vaccine not as protective</span></a><br /><span class="date">May 19, 2013</span></li><div class="delimiter"></div><li><a  title="Whooping cough cases on rise, New York urges vaccinations" href="/2012-07-18/business/sns-rt-usa-healthwhoopingcoughl2e8iicdc-20120718_1_pertussis-high-pitched-whoop-whooping-cough"><span class="title">Whooping cough cases on rise, New York urges vaccinations</span></a><br /><span class="date">July 18, 2012</span></li><div class="delimiter"></div><li><a  title="Whooping cough vaccine protection wanes" href="/2013-03-11/lifestyle/sns-rt-us-whooping-cough-vaccinebre92a02o-20130310_1_acellular-vaccine-dtap-pertussis-vaccine"><span class="title">Whooping cough vaccine protection wanes</span></a><br /><span class="date">March 11, 2013</span></li><div class="delimiter"></div><li><a  title="Whooping cough reaches epidemic level in Texas: official" href="/2013-09-05/lifestyle/sns-rt-us-usa-health-texas-20130905_1_mild-cough-pertussis-severe-coughing"><span class="title">Whooping cough reaches epidemic level in Texas: official</span></a><br /><span class="date">September 5, 2013</span></li></ul></div><script>jQuery(document).ready(function() {if(jQuery('#mod-related-keywords').sizssis-severe-coughing"><span class="title">Whooping cough reaches epidemic level in Texas: official</span></a><br /><span class="date">September 5, 201e() == 0) { jQuery('#mod-related-keywords-header').remove(); }});</script><div id="mod-related-keywords-header" class="mod-collapsebutton"><script>jQuery(document).ready(function() {
+jQuery("#mod-related-keywords-header a").click(function () {
+  jQuery("#mod-related-keywords-header a i").toggleClass("icon-chevron-down");
+  jQuery("#mod-related-keywords-header a i").toggleClass("icon-chevron-up");
+});});</script><a data-toggle="collapse" data-target="#mod-related-keywords"><i class="icon-chevron-up pull-right"></i>Find More Stories About</a></div><div id="mod-related-keywords" class="mod-relatedkeywordssimplelist mod-relatedkeywords collapse in"><div class="header"></div><ul><li><a  href="/keyword/whooping-cough">Whooping Cough</a></li><li><a  href="/keyword/pertussis-vaccine">Pertussis Vaccine</a></li></ul></div></div></div><div id="row-bottom" class="row-fluid"><div class="span12"><div id="mod-ln-bt" class="mod-line"><div style="border-top:1px solid black; height:1px; width:100%;"></div></center></div><div id="row-bottom-in" class="row-fluid"><div id="span-bottom-links" class="span4"><div id="row-bottom-links-in" class="row-fluid"><div class="span12"><div id="mod-tos" class="mod-text"><a  href="http://www.chicagotribune.com/tos/" target="_new"  rel="nofollow" >Terms of Service</a></div><div id="mod-privacy" class="mod-text"><a  href="http://www.chicagotribune.com/privacy/" target="_new"  rel="nofollow" >Privacy Policy</a></div><div id="mod-date-index" class="mod-indexbydate mod-text"><a  href="/2012/jul/20" target="_new" >Index by Date</a></div><div id="mod-kw-index" class="mod-text"><a  href="/keywords" target="_new" >Index by Keyword</a></div><div id="mod-brand-homepage" class="mod-text"><a  href="http://www.chicagotribune.com" target="_new"  rel="nofollow" >www.chicagotribune.com</a></div></div></div></div><div id="span-bottom-connect" class="span4"><div id="mod-connect-bt" class="mod-chitribconnect"><header>Connect</header><ul class="unstyled"><li class="facebook"><a href="https://www.facebook.com/chicagotribune" target="_new" rel="nofollow">Like us on Facebook</a></li><li class="twitter"><a href="http://twitter.com/#!/chicagotribune" target="_new" rel="nofollow">Follow us on Twitter</a></li></ul></div></div><div id="span-bottom-logo" class="span4"><div id="mod-logo-bt-1" class="mod-image"><img src="/images/footer.96.png" alt=""/></div></div></div></div></div>
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-10467274-7");
+    pageTracker._setVar('Template-ap-CT11-G02');
+    pageTracker._setCustomVar(1, 'Template', 'Template-ap-CT11-G02', 3);
+    pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+        
+<!-- START Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2010 Nielsen Online -->
+<script type="text/javascript">
+(function () {
+    var d = new Image(1, 1);
+    d.onerror = d.onload = function () {
+    d.onerror = d.onload = null;
+    };
+    d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-400338h&cg=0&cc=1&si=", escape(window.location.href), "&rp=",
+    escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join(""); 
+    })();
+</script>
+<noscript>
+    <div>
+    <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-400338h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" />
+    </div>
+</noscript>
+<!-- END Nielsen Online SiteCensus V6.0 -->
+
+
+                <!-- start Vibrant Media IntelliTXT script section -->
+            <script type="text/javascript" src="http://chicagotribune.us.intellitxt.com/intellitxt/front.asp?ipid=34015"></script>
+            <!-- end Vibrant Media IntelliTXT script section --></div><!-- Layout ends --><script type="text/javascript">
+                      //<![CDATA[
+                      document.write("<iframe onload=\"params='"+window.tracSessParams+"&pgtp=article&kwInURL=true&pi=45&ci=32752945&cat=health&pe_id=32752945&is_automotive=false&is_feature_tribu=false&is_news_sports=true&tv=ap-CT11-G02&rna=ca-pub-8415620659137418&rn=g&rnrci=9405729081&rnrcn=%28Pre-Rules%29+CTArticle_Property&rncci=1000001860&rnccn=%28Pre-Rules%29+category-health&rnpci=&rnpcn=&rntci=&rntcn=&rnlci=1000000040&rnlcn=1000000040&rnp=c&rt=cpc&pageLoad=1';tracker();params='';\" frameborder=\"0\" width=\"0\" height=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" style=\"position:absolute;display:none;overflow-x:hidden;overflow-y:scroll;\"></iframe>");
+                      //]]>
+                    </script></div><script src="/bootstrap/js/bootstrap.min.js"></script></body></html>ginheight=\"0\" s

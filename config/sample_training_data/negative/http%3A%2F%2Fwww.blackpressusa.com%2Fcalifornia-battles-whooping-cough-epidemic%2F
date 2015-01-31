@@ -1,0 +1,474 @@
+<!doctype html>
+
+<!--[if lt IE 7]><html lang="en-US"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:og="http://ogp.me/ns#" 
+	xmlns:fb="http://www.facebook.com/2008/fbml"  class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html lang="en-US"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:og="http://ogp.me/ns#" 
+	xmlns:fb="http://www.facebook.com/2008/fbml"  class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html lang="en-US"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:og="http://ogp.me/ns#" 
+	xmlns:fb="http://www.facebook.com/2008/fbml"  class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US"
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:og="http://ogp.me/ns#" 
+	xmlns:fb="http://www.facebook.com/2008/fbml"  class="no-js"><!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Google Chrome Frame for IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>California Battles Whooping Cough Epidemic | BlackPressUSA</title>
+
+		<!-- mobile meta (hooray!) -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
+		<link rel="apple-touch-icon" href="http://www.blackpressusa.com/wp-content/themes/blackpress/library/images/apple-icon-touch.png">
+		<link rel="icon" href="http://www.blackpressusa.com/wp-content/themes/blackpress/favicon.png">
+		<!--[if IE]>
+			<link rel="shortcut icon" href="http://www.blackpressusa.com/wp-content/themes/blackpress/favicon.ico">
+		<![endif]-->
+		<!-- or, set /favicon.ico for IE10 win -->
+		<meta name="msapplication-TileColor" content="#f01d4f">
+		<meta name="msapplication-TileImage" content="http://www.blackpressusa.com/wp-content/themes/blackpress/library/images/win8-tile-icon.png">
+
+		<link rel="pingback" href="http://www.blackpressusa.com/xmlrpc.php">
+		<link href="http://fonts.googleapis.com/css?family=Patua+One|Patua+One|" rel="stylesheet" type="text/css" />
+		<!-- wordpress head functions -->
+		<style type='text/css'>
+					#sthoverbuttons #sthoverbuttonsMain, .stMainServices {
+						-webkit-box-sizing: content-box !important;
+						-moz-box-sizing:    content-box !important;
+						box-sizing:         content-box !important;
+					}
+				</style><style type='text/css'>
+					.no-break br {
+						display: none !important;
+					}
+			</style><link rel="alternate" type="application/rss+xml" title="BlackPressUSA &raquo; Feed" href="http://www.blackpressusa.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="BlackPressUSA &raquo; Comments Feed" href="http://www.blackpressusa.com/comments/feed/" />
+<link rel='stylesheet' id='fvp_frontend-css'  href='http://www.blackpressusa.com/wp-content/plugins/featured-video-plus/css/frontend.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wpt-twitter-feed-css'  href='http://www.blackpressusa.com/wp-content/plugins/wp-to-twitter/css/twitter-feed.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mailchimp-for-wp-checkbox-css'  href='http://www.blackpressusa.com/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mailchimp-for-wp-form-css'  href='http://www.blackpressusa.com/wp-content/plugins/mailchimp-for-wp/assets/css/form.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wptt_front-css'  href='http://www.blackpressusa.com/wp-content/plugins/wp-twitter-feeds/css/admin_style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bpress-flexslider-css-css'  href='http://www.blackpressusa.com/wp-content/themes/blackpress/library/css/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bpress-fancybox-css-css'  href='http://www.blackpressusa.com/wp-content/themes/blackpress/library/fancybox/jquery.fancybox.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bpress-stylesheet-css'  href='http://www.blackpressusa.com/wp-content/themes/blackpress/library/css/style.css' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='bpress-ie-only-css'  href='http://www.blackpressusa.com/wp-content/themes/blackpress/library/css/ie.css' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://www.blackpressusa.com/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='http://www.blackpressusa.com/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='http://www.blackpressusa.com/wp-content/plugins/featured-video-plus/js/jquery.fitvids.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var fvpdata = {"ajaxurl":"http:\/\/www.blackpressusa.com\/wp-admin\/admin-ajax.php","nonce":"5aeb6102ee","fitvids":"1","dynamic":"","overlay":"","opacity":"75","loadingw":"http:\/\/www.blackpressusa.com\/wp-content\/plugins\/featured-video-plus\/css\/loading_w.gif","loadingb":"http:\/\/www.blackpressusa.com\/wp-content\/plugins\/featured-video-plus\/css\/loading_b.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.blackpressusa.com/wp-content/plugins/featured-video-plus/js/frontend.min.js'></script>
+<script type='text/javascript' src='http://www.blackpressusa.com/wp-content/themes/blackpress/library/js/libs/modernizr.custom.min.js'></script>
+<script type='text/javascript' src='http://www.blackpressusa.com/wp-content/themes/blackpress/library/js/jquery.flexslider.js'></script>
+<script type='text/javascript' src='http://www.blackpressusa.com/wp-content/themes/blackpress/library/fancybox/jquery.fancybox.pack.js'></script>
+<link rel='shortlink' href='http://www.blackpressusa.com/?p=27878' />
+<script charset="utf-8" type="text/javascript">var switchTo5x=true;</script><script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script charset="utf-8" type="text/javascript">stLight.options({publisher:"9aa9c9d3-1ef0-4dda-9817-d91cd85359c0" , doNotCopy: false, hashAddressBar: true, doNotHash: false});var st_type='wordpress3.8.1';</script><script charset="utf-8" type="text/javascript" src="http://s.sharethis.com/loader.js"></script><script charset="utf-8" type="text/javascript">var options={ "publisher":"9aa9c9d3-1ef0-4dda-9817-d91cd85359c0", "position": "left", "chicklets_params": {"twitter":{"st_via":"NNPABlackPress" }, "instagram" :{"st_username":"" } }, "chicklets": { "items": ["facebook","twitter","linkedin","email","sharethis","pinterest"] } }; var st_hover_widget = new sharethis.widgets.hoverbuttons(options);</script>
+<!-- All in One SEO Pack 2.1.6 by Michael Torbert of Semper Fi Web Design[953,1018] -->
+<meta name="description" content="California officials are battling the worst whooping cough epidemic to hit the state in seven decades as a recent rebound in cases raises questions about the" />
+
+<meta name="keywords" content="whooping cough, whooping cough epidemic, california, california whooping cough, whooping cough symptoms,california,california whooping cough,whooping cough epidemic,whooping cough symptoms,health" />
+
+<link rel="canonical" href="http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/" />
+<meta property="og:title" content="California Battles Whooping Cough Epidemic | BlackPressUSA" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/" />
+<meta property="og:image" content="http://www.blackpressusa.com/wp-content/uploads/2014/12/788ea93f98d0f230670f6a706700f476.jpg" />
+<meta property="og:site_name" content="BlackPressUSA" />
+<meta property="fb:admins" content="23600895" />
+<meta property="og:description" content="California officials are battling the worst whooping cough epidemic to hit the state in seven decades as a recent rebound in cases raises questions about the effectiveness of the pertussis vaccine." />
+3600895" />
+<meta property="og:description" content="California officials are ba<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="California officials are battling the worst whooping cough epidemic to hit the state in seven decades as a recent rebound in cases raises questions about the effectiveness of the pertussis vaccine." />
+			<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-45662830-1', { 'cookieDomain': 'www.blackpressusa.com' } );
+			
+			ga('send', 'pageview');
+			</script>
+		<script type="text/javascript">
+		function recordOutboundLink(link, category, action) {
+					ga('send', 'event', category, action);
+					if ( link.target == '_blank' ) return true;
+			setTimeout('document.location = "' + link.href + '"', 100);
+			return false;
+		}
+			/* use regular Javascript for this */
+			function getAttr(ele, attr) {
+				var result = (ele.getAttribute && ele.getAttribute(attr)) || null;
+				if( !result ) {
+					var attrs = ele.attributes;
+					var length = attrs.length;
+					for(var i = 0; i < length; i++)
+					if(attr[i].nodeName === attr) result = attr[i].nodeValue;
+				}
+				return result;
+			}
+			function aiosp_addLoadEvent(func) {
+			  var oldonload = wi			var attrs = ele.attributes;
+					var length = attrs.length;
+					for(var i = 0; i < lndow.onload;
+			  if (typeof window.onload != 'function') {
+			    window.onload = func;
+			  } else {
+			    window.onload = function() {
+			      if (oldonload) {
+			        oldonload();
+			      }
+			      func();
+			    }
+			  }
+			}
+			
+			function aiosp_addEvent(element, evnt, funct){
+			  if (element.attachEvent)
+			   return element.attachEvent('on'+evnt, funct);
+			  else
+			   return element.addEventListener(evnt, funct, false);
+			}
+
+			aiosp_addLoadEvent(function () {
+				var links = document.getElementsByTagName('a');
+				for (var x=0; x < links.length; x++) {
+					if (typeof links[x] == 'undefined') continue;
+					aiosp_addEvent( links[x], 'onclick', function () {
+						var mydomain = new RegExp(document.domain, 'i');
+						href = getAttr(this, 'href');
+						if (href && href.toLowerCase().indexOf('http') === 0 && !mydomain.test(href)) {
+							recordOutboundLink(this, 'Outbound Links', href);
+						}
+					});
+				}
+			});
+		</script>
+<!-- /all in one seo pack -->
+		<!-- end of wordpress head -->
+
+		<!-- drop Google Analytics Here -->
+		<!-- end analytics -->
+
+		<script> 
+		jQuery(document).ready(function(){
+		 jQuery('img').removeAttr('width').removeAttr('height');
+
+                   jQuery(".flip1").click(function(){
+		      jQuery("#menu-the-main-menu").slideToggle("slow");
+		  });
+
+		   jQuery(".flip2").click(function(){
+		    jQuery("#menu-the-right-menu").slideToggle("slow");
+		  });
+                 
+		});
+		</script> 
+
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45662830-1', 'blackpressusa.com');
+  ga('send', 'pageview');
+
+</script>
+
+
+	</head>
+
+	<body class="single single-post postid-27878 single-format-standard">
+
+		<div class="main" align="center">
+	
+	<div class="header" align="center">
+	<div class="red_stripe">&nbsp;</div>
+		<div class="container">
+			<div class="flip1"> <!--<img src="http://www.blackpressusa.com/wp-content/themes/blackpress/library/images/arr-dn.png" />-->Categories</div>
+			<div class="nav">
+			<ul id="menu-the-main-menu" class="nav top-nav clearfix"><li id="menu-item-6742" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6742"><a href="http://www.blackpressusa.com/category/news/">News</a></li>
+<li id="menu-item-6743" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6743"><a href="http://www.blackpressusa.com/category/politics/">Politics</a></li>
+<li id="menu-item-27499" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27499"><a href="http://www.blackpressusa.com/category/entertainment/">Entertainment</a></li>
+<li id="menu-item-6745" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6745"><a href="http://www.blackpressusa.com/category/sports/">Sports</a></li>
+<li id="menu-item-6746" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6746"><a href="http://www.blackpressusa.com/category/op-ed/">Op-Ed</a></li>
+<li id="menu-item-6747" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6747"><a href="http://www.blackpressusa.com/category/business/">Business</a></li>
+<li id="menu-item-6748" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-6748"><a href="http://www.blackpressusa.com/category/health/">Health</a></li>
+<li id="menu-item-6749" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6749"><a href="http://www.blackpressusa.com/category/world/">World</a></li>
+<li id="menu-item-6750" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6750"><a href="http://www.blackpressusa.com/category/technology/">Technology</a></li>
+<li id="menu-item-27497" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27497"><a href="http://www.blackpressusa.com/category/religion/">Religion</a></li>
+</ul>			</div>
+		</div>
+	</div>
+	
+	
+	<div class="container head">
+		
+		<div class="date_time">Wednesday January 7 2015, 09:12:36 AM </div>
+		
+		<div class="search_blk">
+			<form role="search" method="get" id="searchform" action="http://www.blackpressusa.com/" >
+					<div class="search_lable"><label for="s">Search:</label></div>
+	<input type="text" value="" class="search_txt" name="s" id="s" placeholder="Search the Site..." />
+	</form>		</div>
+		
+		<div class="social_blk">
+			<a href="http://www.twitter.com/NNPABlackPress" target="_blank"><img src="http://www.blackpressusa.com/wp-content/themes/blackpress/library/images/icon_t.png" alt="t" border="0" /></a>			<a href="http://www.facebook.com/NNPABlackPress" target="_blank"><img src="http://www.blackpressusa.com/wp-content/themes/blackpress/library/images/icon_f.png" alt="f" border="0" /></a>			<a href="http://www.plus.google.com/NNPABlackPress" target="_blank"><img src="http://www.blackpressusa.com/wp-content/themes/blackpress/library/images/icon_g+.png" alt="g+" border="0" /></a>			<a href="http://www.youtube.com/channel/UCY8G6Oi9Jv11h8iUpwIJ1DA" target="_blank"><img src="http://www.blackpressusa.com/wp-content/themes/blackpress/library/images/icon_y.png" alt="y" border="0" /></a>			<a href="http://www.linkedin.com/groups/National-Newspaper-Publishers-Association-4251073?home=&amp;gid=4251073&amp;trk=anet_ug_hm" target="_blank"><img src="http://www.blackpressusa.com/wp-content/themes/blackpress/library/images/icon_in.png" alt="in" border="0" /></a>		</div>
+		
+		<div class="logo_blk">
+			<div class="logo">
+				<a href="http://www.blackpressusa.com" rel="nofollow"><img src="http://blackpressusa.com//wp-content/uploads/2013/06/logo.jpg" border="0" alt="logo" /></a>
+			</div>
+			<div class="flip2">Menu <!--<img src="http://www.blackpressusa.com/wp-content/themes/blackpress/library/images/arr-dn.png" />--></div>
+			<div class="right_nav">
+				<ul id="menu-the-right-menu" class="right-nav clearfix"><li id="menu-item-6782" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6782"><a href="http://www.blackpressusa.com/">Home</a></li>
+<li id="menu-item-6783" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6783"><a href="http://www.blackpressusa.com/about-us/">About Us</a></li>
+<li id="menu-item-6784" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6784"><a href="http://www.blackpressusa.com/black-history/">Black History</a></li>
+<li id="menu-item-6807" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6807"><a href="http://www.blackpressusa.com/category/pressrelease/">Press Release</a></li>
+<li id="menu-item-6785" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6785"><a href="http://www.blackpressusa.com/contact-us/">Contact Us</a></li>
+</ul>ttp://www.blackpressusa.com/category/pressrel			</div>
+	
+		</div>	
+		
+	</div>
+	
+	<div class="longline"></div>
+	
+	<div class="container body-container">
+
+			<div class="page_container clearfix">
+
+				<div class="left_col">
+
+						
+							<article id="post-27878" class="post-27878 post type-post status-publish format-standard has-post-thumbnail hentry category-health tag-california tag-california-whooping-cough tag-whooping-cough tag-whooping-cough-epidemic tag-whooping-cough-symptoms clearfix" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+	
+								<header class="article-header">
+									<h1 class="entry-title page-title" itemprop="headline">Health</h1>
+								</header> <!-- end article header -->
+
+								<div class="content">
+									<header class="article-header">
+									<div class="post-icon" title="California Battles Whooping Cough Epidemic"></div><h2 class="single-post-title">California Battles Whooping Cough Epidemic</h2>
+									</header>
+								
+								<div class="single-info">
+									<span class="single-date">December 12, 2014</span>
+									<span class="single-author"><a href="http://www.blackpressusa.com/author/kyle/" title="Posts by Kyle" rel="author">Kyle</a></span> 
+									<span class="single-category"><a href="http://www.blackpressusa.com/category/health/" rel="category tag">Health</a></span>
+									<span class="single-comment"><span>Comments Off</span></span>
+								</div>
+									<div class="featured-image">
+																	</div> 
+								<section class="entry-content clearfix" itemprop="articleBody">
+									<div id="attachment_27879" style="width: 410px" class="wp-caption alignnone"><a href="http://www.blackpressusa.com/wp-content/uploads/2014/12/788ea93f98d0f230670f6a706700f476.jpg"><img class="wp-image-27879" src="http://www.blackpressusa.com/wp-content/uploads/2014/12/788ea93f98d0f230670f6a706700f476.jpg" alt="Julietta Losoyo, right, a Registered Nurse at the San Diego Public Health Center gives Derek Lucero a whooping cough injection while in his fathers Leonel's arms as his brother Iker, 2, looks on, Wednesday, Dec. 10, 2014 in San Diego. California is battling the worst whooping cough epidemic recorded in the state in seven decades.  State officials place much of the blame on a vaccine introduced in the 1990s that researchers say doesn't seem to be working as well as expected. (AP Photo/Chris Carlson)" width="400" height="290" /></a><p class="wp-caption-text"><em>Julietta Losoyo, right, a Registered Nurse at the San Diego Public Health Center gives Derek Lucero a whooping cough injection while in his fathers Leonel&#8217;s arms as his brother Iker, 2, looks on, Wednesday, Dec. 10, 2014 in San Diego. California is battling the worst whooping cough epidemic recorded in the state in seven decades. State officials place much of the blame on a vaccine introduced in the 1990s that researchers say doesn&#8217;t seem to be working as well as expected. (AP Photo/Chris Carlson)</em></p></div>
+<p>JULIE WATSON, Associated Press</p>
+<div>
+<p>SAN DIEGO (AP) — California officials are battling the worst whooping cough epidemic to hit the state in seven decades as a recent rebound in cases raises questions about the effectiveness of the pertussis vaccine.</p>
+<p>Doctors emphasize that the inoculation has led to fewer deaths than in the past and in instances where people do get sick, their illnesses aren&#8217;t as severe. But California officials say the limited protection of the vaccine introduced in the 1990s has led to the rise in cases. Research has shown it doesn&#8217;t last as long as the one it replaced, and a new study suggests the vaccine may not prevent the spread of the disease.</p>
+<p>Whooping cough peaks every three to five years, and California&#8217;s last epidemic was in 2010. But despite an aggressive public health campaign in response, the current outbreak is worse.</p>
+<p>A total of 9,935 cases were reported to the California Department of Public Health from Jan. 1 to Nov. 26 — the highest number in 70 years. The cases included one infant who died. Elementary, middle and high school outbreaks have occurred across the state.</p>
+<p>The bacterial infection causes uncontrollable, violent coughing, which often makes it hard to breathe. People often take deep breaths which result in a &#8220;whooping&#8221; sound.</p>
+<p>San Diego County is among the hardest hit areas with 1,819 cases reported so far this year.</p>
+<p>&#8220;We&#8217;d have to go way back to the 1940s to find more cases,&#8221; said Dr. Eric McDonald, medical director of the epidemiology and immunization branch for public health services in San Diego County.</p>
+<p>That&#8217;s when whooping cough was common, causing hundreds of thousands of illnesses annually and thousands of deaths. But after a vaccine was introduced in the 1940s, cases dropped to fewer than 5,000 a year.</p>
+<p>That vaccine was replaced in the 1990s because of side effects, which included pain and swelling from the shot and fever. The newer vaccine is part of routine childhood vaccinations as well as adult booster shots.</p>
+<p>Last year was the nation&#8217;s worst year for whooping cough in six decades— U.S. health officials received reports of more than 48,000 cases, including 18 deaths. This year the number of reported cases nationwide dropped to about 20,000.</p>
+<p>After the 2010 epidemic, California launched a campaign about the importance of rapid diagnosis and treatment, especially in young infants. The state also luding 18 deaths. This year the number of reported cases nationwide dropped to about 20,000.</p>
+<p>Afstarted providing free vaccines for children, pregnant and postpartum women.</p>
+<p>Dr. Gil Chavez, epidemiologist with the California Department of Public Health, said while more people, especially pregnant women, need to get vaccinated, he does not believe low inoculation rates are the primary cause of the current epidemic: Of this year&#8217;s pediatric cases that had information on the child&#8217;s vaccination history, only 10 percent of those infected in 2014 had not been vaccinated against pertussis.</p>
+<p>Chavez says the new vaccine&#8217;s limitations and better tests have led to the increase in cases.</p>
+<p>Cases are likely to continue going up as doctors do a better job at detecting the illness, officials say.</p>
+<p>More than two years ago, Kathryn Riffenburg, who lives outside Boston, said doctors told her that her newborn son, Brady, likely had a cold. A week and a half later, she took him to the emergency room as he struggled to breathe.</p>
+<p>By the time, he was diagnosed with pertussis it was too late to save the 2-month-old boy.</p>
+<p>&#8220;It made us angry, because we felt more should have been done,&#8221; said Riffenburg, who know advocates for pregnant women and anyone else in contact with infants to get vaccinated.</p>
+</div>
+<p align="center"><em>Copyright 2014 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.</em></p>
+<p class="no-break"><span class='st_facebook_hcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/'></span><span st_username='NNPABlackPress' class='st_fbsub_hcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/'></span><span st_via='NNPABlackPress' st_username='NNPABlackPress' class='st_twitter_hcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/'></span><span st_username='NNPABlackPress' class='st_twitterfollow_hcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/'></span><span class='st_linkedin_hcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/'></span><span class='st_email_hcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/'></span><span class='st_sharethis_hcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/'></span><span class='st_plusone_hcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/'></span><span class='st_pinterest_hcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/'></span></p>www.blackpressusa.com/california-battles-whooping-cough-epidemic/'></span><span class='st_pinterest_hcount' st_title='California Battles Whooping Cough Epidemi								</section> <!-- end article section -->
+
+								<footer class="article-footer clearfix">
+								
+								<div class="tagcloud clearfix"><a href="http://www.blackpressusa.com/tag/california/" rel="tag">california</a><a href="http://www.blackpressusa.com/tag/california-whooping-cough/" rel="tag">California whooping cough</a><a href="http://www.blackpressusa.com/tag/whooping-cough/" rel="tag">whooping cough</a><a href="http://www.blackpressusa.com/tag/whooping-cough-epidemic/" rel="tag">whooping cough epidemic</a><a href="http://www.blackpressusa.com/tag/whooping-cough-symptoms/" rel="tag">whooping cough symptoms</a></div>
+									
+								<div class="share-this-post clearfix">
+								<h2 class="single-post-title post-meta-title">Like this Article? Share it!</h2>
+								<span class='st_fblike_vcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/' displayText='fblike'></span>
+								<span class='st_twitter_vcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/' displayText='twitter'></span>
+								<span class='st_plusone_vcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/' displayText='plusone'></span>
+								<span class='st_linkedin_vcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/' displayText='linkedin'></span>
+								<span class='st_email_vcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/' displayText='email'></span>
+								<span class='st_pinterest_vcount' st_title='California Battles Whooping Cough Epidemic' st_url='http://www.blackpressusa.com/california-battles-whooping-cough-epidemic/' displayText='pinterest'></span>
+								</div>
+
+								<div class="author-info clearfix">
+										<h2 class="single-post-title post-meta-title">About The Author</h2>
+									<div class="author-avatar">
+										<img alt='' src='http://1.gravatar.com/avatar/f3f4830fe86b0887298054debd9ce92c?s=68&amp;d=&amp;r=G' class='avatar avatar-68 photo' height='68' width='68' />									</div>
+									<div class="author-description">
+										<h4>Kyle</h4>
+																				<div id="author-link">
+											<a href="http://www.blackpressusa.com/author/kyle/" rel="author">
+												View all posts by Kyle <span class="meta-nav">&rarr;</span>											</a>
+										</div>
+									</div>
+								</div>
+
+														<div class="related-posts clearfix">
+								<h2 class="single-post-title post-meta-title">Related Posts</h2>
+								<ul class="clearfix">
+															<li>
+																				<h6><a href="http://www.blackpressusa.com/meditation-may-decrease-heart-disease-among-black-teens/">Meditation May Decrease Heart Disease Among Black Teens</a></h6>
+									</li>
+														<li>
+																				<h6><a href="http://www.blackpressusa.com/d-c-churches-get-more-involved-fighting-hivaids/">D.C. Churches Get More Involved Fighting HIV/AIDS</a></h6>
+									</li>
+														<li>
+																				<h6><a href="http://www.blackpressusa.com/african-american-couples-face-unique-challenges-dealing-with-prostate-cancer/">African-American Couples Face Unique Challenges Dealing With Prostate Cancer</a></h6>
+									</li>
+														<li>
+																				<a href="http://www.blackpressusa.com/too-little-vitamin-d-may-explain-black-americans-cancer-deaths/" class="thumb-hover view-more"><img width="90" height="90" src="http://www.blackpressusa.com/wp-content/uploads/2012/06/African_american_woman_cancer-90x90.jpg" class="attachment-bpress-140x90 wp-post-image" alt="African_american_woman_cancer" /></a>
+																				<h6><a href="http://www.blackpressusa.com/too-little-vitamin-d-may-explain-black-americans-cancer-deaths/">Too Little Vitamin D May Explain Black Americans&#8217; Cancer Deaths</a></h6>
+									</li>
+													</ul>
+								</div>
+				
+
+								</footer> <!-- end article footer -->
+
+								
+<!-- You can start editing here. -->
+
+
+	
+	<!-- If comments are closed. -->
+	<!--p class="nocomments">Comments are closed.</p-->
+
+	
+
+
+								</div>
+
+							</article> <!-- end article -->
+
+											
+						
+					</div> <!-- end #main -->
+
+					<div class="rt_col">
+			
+			
+						<div id="text-9" class="widget widget_text"><h4 class="widgettitle">Video</h4>			<div class="textwidget"><iframe width="300" height="225" src="//www.youtube.com/embed/m8LtlsFheN0" frameborder="0" allowfullscreen></iframe></div>
+		</div><div id="text-8" class="widget widget_text"><h4 class="widgettitle">BlackPressUSA Highlights</h4>			<div class="textwidget"><h4>Editor’s Note</h4>
+
+
+<p>  We are in the process of updating our design, adding new features, expanding content and a proving a better navigation system for the site. Please follow us over the next few weeks as we continue to roll out additional improvements.<p>
+
+George E. Curry<br />
+Editor-In-Chief<br />
+NNPA News Service and<br />
+BlackPressUSA<br />
+</div>
+		</div><div id="text-10" class="widget widget_text"><h4 class="widgettitle">RSS Feed</h4>			<div class="textwidget"><style type="text/css">
+.gsmnews-rss-container {width:260px;}
+.rss-box-gsmnews-rss .rss-title {display:none;}
+.rss-box-gsmnews-rss .rss-items {list-style-type:none;margin:0;padding:0;}
+.rss-item {margin:10px 0;}
+.gsmnews-rss-banner {display:block;padding-bottom:5px;}
+</style>
+
+<div class="gsmnews-rss-container">
+<a href="http://www.globalsocialmedianews.com/category/african-american-news/"target="_blank"><img class="gsmnews-rss-banner" src="http://www.globalsocialmedianews.com/wp-content/uploads/2014/09/xgsmn-aa.png.pagespeed.ic.U19TOm3Iom.png" /></a>
+
+<script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.globalsocialmedianews.com%2Fcategory%2Fafrican-american-news%2Ffeed%2F&chan=title&num=5&targ=y&utf=y&css=gsmnews-rss"  charset="UTF-8" type="text/javascript"></script>
+
+<noscript>
+<a href="http://feed2js.org//feed2js.php?src=http%3A%2F%2Fwww.globalsocialmedianews.com%2Fcategory%2Fafrican-american-news%2Ffeed%2F&chan=title&num=5&targ=y&utf=y&css=gsmnews-rss&html=y">View RSS feed</a>
+</noscript>
+
+</div></div>
+		</div><div id="meta-2" class="widget widget_meta"><h4 class="widgettitle">Meta</h4>			<ul>
+						<li><a href="http://www.blackpressusa.com/wp-login.php">Log in</a></li>
+			<li><a href="http://www.blackpressusa.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.blackpressusa.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</div><div id="widget_sp_image-2" class="widget widget_sp_image"><a href="http://toyota.com" target="_blank" class="widget_sp_image-image-link" title=""><img width="300" height="250" alt="" class="attachment-full" style="max-width: 100%;" src="http://www.blackpressusa.com/wp-content/uploads/2013/10/toyota-300by250.jpg" /></a></div><div id="widget_sp_image-3" class="widget widget_sp_image"><a href="http://wellsfargo.com" target="_blank" class="widget_sp_image-image-link" title=""><img width="300" height="250" alt="" class="attachment-full" style="max-width: 100%;" src="http://www.blackpressusa.com/wp-content/uploads/2013/10/wells-fargo-300by250.jpg" /></a></div><div id="widget_sp_image-4" class="widget widget_sp_image"><a href="http://gm.com" target="_blank" class="widget_sp_image-image-link" title=""><img width="300" height="250" alt="" class="attachment-full" style="max-width: 100%;" src="http://www.blackpressusa.com/wp-content/uploads/2013/10/GM-250by300.jpg" /></a>><a href="http://gm.com" target="_blank" class="widget_sp_image-image-link" title=""><img w</div><div id="widget_sp_image-5" class="widget widget_sp_image"><a href="http://ford.com" target="_blank" class="widget_sp_image-image-link" title=""><img width="252" height="213" alt="" class="attachment-full" style="max-width: 100%;" src="http://www.blackpressusa.com/wp-content/uploads/2013/08/Ford.jpg" /></a></div><div id="widget_sp_image-6" class="widget widget_sp_image"><a href="http://www.nielsen.com" target="_blank" class="widget_sp_image-image-link" title=""><img width="300" height="250" alt="" class="attachment-full" style="max-width: 100%;" src="http://www.blackpressusa.com/wp-content/uploads/2013/10/Neilsen-300x250.jpg" /></a></div><div id="widget_sp_image-7" class="widget widget_sp_image"><img width="300" height="250" alt="" class="attachment-full" style="max-width: 100%;" src="http://www.blackpressusa.com/wp-content/uploads/2013/11/Crysler-300x250.jpg" /></div>
+								
+		</div>
+
+
+				</div> <!-- end #inner-content -->
+
+	
+</div>
+	
+	<div class="footer">
+		<div class="container">
+			<div class="newforum"></div>
+			<div class="footer-links">
+				<ul id="menu-footer-links" class="footer-nav clearfix"><li id="menu-item-6787" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6787"><a href="http://www.blackpressusa.com/category/news/">News</a></li>
+<li id="menu-item-6788" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6788"><a href="http://www.blackpressusa.com/category/politics/">Politics</a></li>
+<li id="menu-item-6789" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6789"><a href="http://www.blackpressusa.com/category/entertainment/">Entertainment</a></li>
+<li id="menu-item-6790" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6790"><a href="http://www.blackpressusa.com/category/sports/">Sports</a></li>
+<li id="menu-item-6791" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6791"><a href="http://www.blackpressusa.com/category/op-ed/">Op-Ed</a></li>
+<li id="menu-item-6792" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6792"><a href="http://www.blackpressusa.com/category/business/">Business</a></li>
+<li id="menu-item-6793" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-6793"><a href="http://www.blackpressusa.com/category/health/">Health</a></li>
+<li id="menu-item-6794" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6794"><a href="http://www.blackpressusa.com/category/world/">World</a></li>
+<li id="menu-item-6796" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6796"><a href="http://www.blackpressusa.com/category/technology/">Technology</a></li>
+<li id="menu-item-6795" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6795"><a href="http://www.blackpressusa.com/category/religion/">Religion</a></li>
+<li id="menu-item-6797" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6797"><a href="http://www.blackpressusa.com/">Home</a></li>
+<li id="menu-item-6798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6798"><a href="http://www.blackpressusa.com/about-us/">About Us</a></li>
+<li id="menu-item-6799" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6799"><a href="http://www.blackpressusa.com/black-history/">Black History</a></li>
+<li id="menu-item-6808" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6808"><a href="http://www.blackpressusa.com/category/pressrelease/">Press Release</a></li>
+<li id="menu-item-6800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6800"><a href="http://www.blackpressusa.com/contact-us/">Contact Us</a></li>
+</ul>		
+				
+				<div class="address">
+					BlackPressUsa is brought to you by The National Newspaper Publishers Association
+1816 12th Street, NW Washington, DC 20009
+Tel: 202.588.8764				</div>
+			</div>
+			
+			<div class="twitter_blk">
+				<div class="twitter-head">Twitter</div>
+				<div class="tweets">
+				
+			<ul class="twitter_widget"><li>RT @C_Perb: 🚧Синай: ВВС Египта уничтожили пять джихадистов - #ВМире 🈚<span class="rstw_comma">,</span> <span class="twitter-timestamp" title="2015/01/07 04:41">5 hours ago</span></li></ul>				</div>
+
+	</div>
+			
+		</div>
+		
+	</div>
+	
+	<div class="copyright">Copyright (c) 2013 by National Newspaper Publishers Association. All rights reserved.</div>
+	
+</div>
+
+
+		<!-- all js scripts are loaded in library/theme.php -->
+		<script type='text/javascript' src='http://www.blackpressusa.com/wp-content/themes/blackpress/library/js/scripts.js'></script>
+<div style="position:absolute;filter:alpha(opacity=0);opacity:0.001;z-index:10;">
+<a href="http://www.pasitos.co.uk/">christian louboutin outlet</a>,<a href="http://www.therasophia.fr/">christian louboutin soldes</a>,<a href="http://www.cheapdressukonline.co.uk/evening-dresses.html">evening dresses online</a>,<a href="http://www.pharmacogenetique.fr/">ralph lauren soldes</a>,<a href="http://www.adtranet.com/">christian louboutin sale</a>,<a href="http://www.emor.co.uk/">ralph lauren outlet</a>,
+<a href="http://www.papalote.com.au/">ralph lauren outlet online</a></div>
+	</body>
+
+</html> <!-- end page. what a ride! --></a>,<a href="http://www.adtranet.com/">christian louboutin sale</a>,<a href="http://www.emor.co.uk/">ralph lauren outlet</a>,
+<a href="http://www.papal

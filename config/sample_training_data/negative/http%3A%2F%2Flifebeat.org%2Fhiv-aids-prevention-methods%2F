@@ -1,0 +1,535 @@
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>How to Prevent HIV/AIDS and other STDs - Lifebeat | Music Fights HIV/AIDS</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/style.css" />
+<link rel="pingback" href="http://lifebeat.org/lifebeatwp/xmlrpc.php" />
+<link rel="icon" type="image/png" href="http://lifebeat.org/lifebeatwp/wp-content/uploads/2012/03/custom-bullet.png">
+
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'>
+
+<script src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/js/swfobject.js"></script>
+
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/style-ie.css" />
+<![endif]-->
+
+<!--[if lt IE 8]>
+<script src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/js/DOMAssistantCompressed-2.8.1.js"></script>
+<script src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/js/selectivizr-min.js"></script>
+<![endif]-->
+
+<script src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/js/jquery-1.11.0.min.js"></script>
+<!-- script src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/js/jquery.tools.min.js"></script -->
+
+<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+
+<script src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/js/jquery.lazyload.min.js"></script>
+<script src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/js/jquery.isotope.min.js"></script>
+<script src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/js/jquery.cycle.all.js"></script>
+
+<!-- JW PLAYER -->
+<script type="text/javascript" src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/mediaplayer-5.9/jwplayer.js"></script>
+
+<script src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/js/lifebeat.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28263157-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("ul.sub-menu li a ").click(function(){
+          
+		   
+        });
+		InitMenu();
+    });
+	function InitMenu() {
+            //$(".fright a").removeClass("navactive");
+            var currentLocation = window.location.pathname.substring(1).toLowerCase();
+           //alert(currentLocation);
+			 var pathArray = window.location.pathname.split( '/' );
+			 var secondLevelLocation = pathArray[0];
+		//	 alert(secondLevelLocation);
+			   
+           
+        }
+</script>
+
+	<style type="text/css">
+		#fancybox-close{left:-15px;top:-15px}
+		div#fancybox-content{border-color:#FFFFFF}
+				div#fancybox-outer{background-color:#FFFFFF}
+			</style>
+
+	
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.2.6 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="http://lifebeat.org/hiv-aids-prevention-methods/" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Lifebeat | Music Fights HIV/AIDS &raquo; How to Prevent HIV/AIDS and other STDs Comments Feed" href="http://lifebeat.org/hiv-aids-prevention-methods/feed/" />
+<link rel='stylesheet' id='slider-ui-css'  href='http://lifebeat.org/lifebeatwp/wp-content/plugins/thethe-image-slider/style/css/thethe-image-slider.css?ver=3.9' type='text/css' media='screen' />
+<link rel='stylesheet' id='slideshow-css'  href='http://lifebeat.org/lifebeatwp/wp-content/plugins/slideshow/slideshow.css?ver=0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css'  href='http://lifebeat.org/lifebeatwp/wp-content/plugins/fancybox-for-wordpress/fancybox/fancybox.css?ver=3.9' type='text/css' media='all' />
+<link rel='stylesheet' id='fvp_frontend-css'  href='http://lifebeat.org/lifebeatwp/wp-content/plugins/featured-video-plus/css/frontend.css?ver=1.9' type='text/css' media='all' />
+<link rel='stylesheet' id='async_css-css'  href='http://lifebeat.org/lifebeatwp/wp-content/plugins/async-social-sharing/assets/css/async-share.css?ver=1396980849' type='text/css' media='all' />
+<link rel='stylesheet' id='easy_table_style-css'  href='http://lifebeat.org/lifebeatwp/wp-content/plugins/easy-table/themes/default/style.css?ver=1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wpsimplegallery-style-css'  href='http://lifebeat.org/lifebeatwp/wp-content/plugins/wp-simple-galleries/wp-simple-gallery.css?ver=3.9' type='text/css' media='all' />
+<link rel='stylesheet' id='colorbox-css'  href='http://lifebeat.org/lifebeatwp/wp-content/plugins/wp-simple-galleries/colorbox/themes/theme3/colorbox.css?ver=3.9' type='text/css' media='all' />
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-content/plugins/dropdown-menu-widget/scripts/include.js?ver=3.9'></script>
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-content/plugins/fancybox-for-wordpress/fancybox/jquery.fancybox.js?ver=1.3.4'></script>
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-content/plugins/featured-video-plus/js/jquery.domwindow.min.js?ver=1.9'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var fvpdata = {"ajaxurl":"http:\/\/lifebeat.org\/lifebeatwp\/wp-admin\/admin-ajax.php","nonce":"00dea3d624","fitvids":"","dynamic":"","overlay":"1","opacity":"75","loadingw":"http:\/\/lifebeat.org\/lifebeatwp\/wp-content\/plugins\/featured-video-plus\/css\/loading_w.gif","loadingb":"http:\/\/lifebeat.org\/lifebeatwp\/wp-content\/plugins\/featured-video-plus\/css\/loading_b.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-content/plugins/featured-video-plus/js/frontend.min.js?ver=1.9'></script>
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-content/plugins/wp-simple-galleries/colorbox/jquery.colorbox-min.js?ver=3.9'></script>
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-content/plugins/wp-simple-galleries/wp-simple-gallery.js?ver=3.9'></script>
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-content/plugins/thethe-image-slider/style/js/thethe-image-slider.js?ver=3.9'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://lifebeat.org/lifebeatwp/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://lifebeat.org/lifebeatwp/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.9" />
+<link rel='shortlink' href='http://lifebeat.org/?p=1312' />
+
+<!-- Fancybox for WordPress v3.0.2 -->
+<script type="text/javascript">
+jQuery(function(){
+
+jQuery.fn.getTitle = function() { // Copy the title of every IMG tag and add it to its parent A so that fancybox can show titles
+	var arr = jQuery("a.fancybox");
+	jQuery.each(arr, function() {
+		var title = jQuery(this).children("img").attr("title");
+		jQuery(this).attr('title',title);
+	})
+}
+
+// Supported file extensions
+var thumbnails = jQuery("a:has(img)").not(".nolightbox").filter( function() { return /\.(jpe?g|png|gif|bmp)$/i.test(jQuery(this).attr('href')) });
+
+thumbnails.addClass("fancybox").attr("rel","fancybox").getTitle();
+jQuery("a.fancybox").fancybox({
+	'cyclic': false,
+	'autoScale': true,
+	'padding': 0,
+	'opacity': true,
+	'speedIn': 500,
+	'speedOut': 500,
+	'changeSpeed': 300,
+	'overlayShow': true,
+	'overlayOpacity': "0.6",
+	'overlayColor': "#000000",
+	'titleShow': true,
+	'titlePosition': 'float',
+	'enableEscapeButton': true,
+	'showCloseButton': true,
+	'showNavArrows': true,
+	'hideOnOverlayClick': true,
+	'hideOnContentClick': false,
+	'width': 560,
+	'height': 340,
+	'transitionIn': "fade",
+	'transitionOut': "fade",
+	'centerOnScroll': true
+});
+
+
+})
+</script>
+<!-- END Fancybox for WordPress -->
+<link type="text/css" rel="stylesheet" href="http://lifebeat.org/lifebeatwp/wp-content/plugins/posts-for-page/pfp.css" />
+<link rel="stylesheet" href="http://lifebeat.org/lifebeatwp/wp-content/plugins/wp-page-numbers/default/wp-page-numbers.css" type="text/css" media="screen" />
+
+<!-- Dropdown Menu Widget Styles by shailan (http://shailan.com) v1.9.2 on wp3.9 -->
+<link rel="stylesheet" href="http://lifebeat.org/lifebeatwp/wp-content/plugins/dropdown-menu-widget/css/shailan-dropdown.min.css" type="text/css" />
+<style type="text/css" media="all">
+	ul.dropdown li a { font-family:Signika; } 
+	ul.dropdown li a { font-size:1.2em; }	
+	/** Show submenus */
+	ul.dropdown li:hover > ul, ul.dropdown li.hover ul{ display: block; }
+	
+	/** Show current submenu */
+	ul.dropdown li.hover ul, ul.dropdown ul li.hover ul, ul.dropdown ul ul li.hover ul, ul.dropdown ul ul ul li.hover ul, ul.dropdown ul ul ul ul li.hover ul , ul.dropdown li:hover ul, ul.dropdown ul li:hover ul, ul.dropdown ul ul li:hover ul, ul.dropdown ul ul ul li:hover ul, ul.dropdown ul ul ul ul li:hover ul { display: block; } 
+				
+			
+ul.dropdown li.parent>a{
+	padding-right:25px;
+}
+ul.dropdown li.parent>a:after{ 
+	content:""; position:absolute; top: 45%; right:6px;width:0;height:0; 
+	border-top:4px solid ;border-right:4px solid transparent;border-left:4px solid transparent }
+ul.dropdown li.parent:hover>a:after{
+	content:"";position:absolute; top: 45%; right:6px; width:0; height:0;
+	border-top:4px solid ;border-right:4px solid transparent;border-left:4px solid transparent }
+ul.dropdown li li.parent>a:after{
+	content:"";position:absolute;top: 40%; right:5px;width:0;height:0;
+	border-left:4px solid ;border-top:4px solid transparent;border-bottom:4px solid transparent }
+ul.dropdown li li.parent:hover>a:after{
+	content:"";position:absolute;top: 40%; right:5px;width:0;height:0;
+	border-left:4px solid ;border-top:4px solid transparent;border-bottom:4px solid transparent }
+
+	ul.dropdown { white-space: nowrap;	}	
+	/** Show submenus */
+	ul.dropdown li:hover > ul, ul.dropdown li.hover ul{ display: block; }
+	
+	/** Show current submenu */
+	ul.dropdown li.hover ul, ul.dropdown ul li.hover ul, ul.dropdown ul ul li.hover ul, ul.dropdown ul ul ul li.hover ul, ul.dropdown ul ul ul ul li.hover ul , ul.dropdown li:hover ul, ul.dropdown ul li:hover ul, ul.dropdown ul ul li:hover ul, ul.dropdown ul ul ul li:hover ul, ul.dropdown ul ul ul ul li:hover ul { display: block; } 
+				
+			ul.dropdown li.parent>a{
+	padding-right:25px;
+}
+ul.dropdown li.parent>a:after{ 
+	content:""; position:absolute; top: 45%; right:6px;width:0;height:0; 
+	border-top:4px solid rgba(0,0,0,0.5);border-right:4px solid transparent;border-left:4px solid transparent }
+ul.dropdown li.parent:hover>a:after{
+	content:"";position:absolute; top: 45%; right:6px; width:0; height:0;
+	border-top:4px solid rgba(0,0,0,0.5);border-right:4px solid transparent;border-left:4px solid transparent }
+ul.dropdown li li.parent>a:after{
+	content:"";position:absolute;top: 40%; right:5px;width:0;height:0;
+	border-left:4px solid rgba(0,0,0,0.5);border-top:4px solid transparent;border-bottom:4px solid transparent }
+ul.dropdown li li.parent:hover>a:after{
+	content:"";position:absolute;top: 40%; right:5px;width:0;height:0;
+	border-left:4px solid rgba(0,0,0,0.5);border-top:4px solid transparent;border-bottom:4px solid transparent }
+
+</style>
+<!-- /Dropdown Menu Widget Styles -->
+
+ 
+
+</head>
+
+
+<body class="page page-id-1312 page-parent page-template page-template-template-page-3columnlayout-php">
+
+	<div id="page_wrap">
+		<div id="page">
+
+		<header>
+			<div id="logo">
+				<a href="http://lifebeat.org" title=""><img src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/images/lifebeat-music-fights-hiv-aids.gif" width="88" height="100" alt="Lifebeat - Music Fights HIV" border="0" /></a>
+			</div>
+
+			<div id="social">
+
+				<ul>
+					<li><h3>FOLLOW US </h3></li>
+					<li>
+						<a href="https://www.facebook.com/LIFEbeat" target="_blank">
+							<img src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/images/facebook.png" width="23" height="23" /></a>
+					</li>
+					<li>
+						<a href="http://twitter.com/Lifebeat" target="https://www.facebook.com/LIFEbeat" target="_blank">
+							<img src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/images/facebook.png" width="23" height="23" /></a>
+					</li>
+					<li>
+						<a href="http://twitter.com/L_blank">
+							<img src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/images/Twitter.png" width="23" height="23" /></a>
+					</li>
+					<li>
+						<a href="http://www.youtube.com/lifebeatusa" target="_blank">
+							<img src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/images/YouTube.png" width="23" height="23" /></a>
+					</li>
+					<li>
+						<a href="http://instagram.com/lifebeat" target="_blank">
+							<img src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/images/Instagram.png" width="23" height="23" /></a>
+					</li>
+					<li>
+						<a href="http://lifebeat.tumblr.com/" target="_blank">
+							<img src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/images/Tumblr.png" width="23" height="23" /></a>
+					</li>
+					<li>
+						<a href="http://lifebeat.org/feed/" target="_blank">
+							<img src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/images/RSS.png" width="23" height="23" /></a>
+					</li>
+				</ul>
+			</div>
+
+			<div id="search">
+				
+<form method="get" id="searchform" action="http://lifebeat.org/">
+	<input type="text" value="Search ..." name="s" id="s" />
+	<input  id="asubmit" type="submit" value="" />
+</form>
+
+<script>
+	$(document).ready(function () {
+
+		//input s focus
+		var defaultS = $("input#s").attr('value');
+		$("input#s").focus(function () { if ($(this).attr('value')==defaultS) { $(this).attr('value',''); } });
+		$("input#s").blur(function () { if ($(this).attr('value')=='') { $(this).attr('value',defaultS); } });
+
+		//submit form
+		$("a#asubmit").click(function () {
+			$("form#searchform").submit();
+			return false;
+		});
+
+	});
+</script>			</div>
+
+			<div id="tagline">
+				Fighting the War Against HIV/AIDS with Music
+			</div>
+		
+			<nav><div class="widget shailan-dropdown-menu-widget">
+<!-- Dropdown Menu Widget by Shailan.com (http://shailan.com)  v1.9.2 on wp3.9 -->
+<!-- Menu Type : navmenu_327 -->
+<div class="shailan-dropdown-menu" >
+<div id="shailan-dropdown-wrapper--1" >
+	<div align="center" class="dropdown-horizontal-container dm-align-center clearfix"><table cellpadding="0" cellspacing="0"><tr><td><ul id="menu-main-nav" class="dropdown dropdown-horizontal dropdown-align-center"><li id="menu-item-1321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1321"><a href="http://lifebeat.org/about/">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-4069" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4069"><a href="http://lifebeat.org/about/">Our Mission</a></li>
+	<li id="menu-item-3379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3379"><a href="http://lifebeat.org/about/lifebeat-history/">History &#038; Timeline</a></li>
+	<li id="menu-item-3376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3376"><a href="http://lifebeat.org/about/board-and-staff/">Board &#038; Staff</a></li>
+	<li id="menu-item-3565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3565"><a href="http://lifebeat.org/about/partners/corporate-partners/">Corporate Partners</a></li>
+	<li id="menu-item-3380" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3380"><a href="http://lifebeat.org/about/media/">Media</a></li>
+	<li id="menu-item-3377" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3377"><a href="http://lifebeat.org/about/contact/">Contact Us</a></li>
+	<li id="menu-item-3384" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3384"><a href="http://lifebeat.org/about/privacy-policy/">Privacy Policy</a></li>
+	<li id="menu-item-3378" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3378"><a href="http://lifebeat.org/about/lifebeat-en-espanol/">En Español</a></li>
+</ul>
+</li>
+<li id="menu-item-3414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3414"><a href="http://lifebeat.org/safe-sex-info/">Safe Sex Info</a>
+<ul class="sub-menu">
+	<li id="menu-item-3429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3429"><a href="http://lifebeat.org/safe-sex-info/hivaids-info/">HIV/AIDS Info</a>
+	<ul class="sub-menu">
+		<li id="menu-item-3458" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3458"><a href="/safe-sex-info/hivaids-info/#whatarehivaids">What are HIV and AIDS?</a></li>
+		<li id="menu-item-3459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3459"><a href="/safe-sex-info/hivaids-info/#contract">How would I contract HIV/AIDS?</a></li>
+		<li id="menu-item-3460" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3460"><a href="/safe-sex-info/hivaids-info/#actionsrisk">What actions put me at risk for contracting HIV/AIDS and STDs?</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3421"><a href="http://lifebeat.org/safe-sex-info/get-tested/">Get Tested</a>
+	<ul class="sub-menu">
+		<li id="menu-item-3482" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3482"><a href="http://lifebeat.org/safe-sex-info/get-tested/#righttime">When is the right time for me to get an HIV or STD test?</a></li>
+		<li id="menu-item-3483" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3483"><a href="http://lifebeat.org/safe-sex-info/get-tested/#howlong">How long should I wait to get tested?</a></li>
+		<li id="menu-item-3484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3484"><a href="http://lifebeat.org/safe-sex-info/get-tested/#kindoftests">What kind of HIV tests are available?</a></li>
+		<li id="menu-item-3485" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3485"><a href="http://lifebeat.org/safe-sex-info/get-tested/#where">Where can I get tested?</a></li>
+		<li id="menu-item-3486" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3486"><a href="http://lifebeat.org/safe-sex-info/get-tested/#anonymous">Is HIV testing anonymous?</a></li>
+		<li id="menu-item-3487" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3487"><a href="http://lifebeat.org/safe-sex-info/get-tested/#testresults">How long will it take to get HIV test results?</a></li>
+		<li id="menu-item-3488" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3488"><a href="http://lifebeat.org/safe-sex-info/get-tested/#whattodo">What to do if you are HIV positive?</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3416"><a href="http://lifebeat.org/safe-sex-info/condoms/">Condoms</a>
+	<ul class= do if you are HIV positive?</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3416"><a href="http://lifebeat.org/safe-sex-info/condoms/">Condoms</"sub-menu">
+		<li id="menu-item-3489" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3489"><a href="http://lifebeat.org/safe-sex-info/condoms/#malecondoms">Male Condoms</a></li>
+		<li id="menu-item-3490" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3490"><a href="http://lifebeat.org/safe-sex-info/condoms/#femalecondoms">Female Condoms</a></li>
+		<li id="menu-item-3491" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3491"><a href="http://lifebeat.org/safe-sex-info/condoms/#dentaldams">Dental Dams</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3415"><a href="http://lifebeat.org/safe-sex-info/stds/">STDs</a></li>
+	<li id="menu-item-3425" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3425"><a href="http://lifebeat.org/safe-sex-info/sex-drugs/">Sex &#038; Drugs</a></li>
+</ul>
+</li>
+<li id="menu-item-3431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3431"><a href="http://lifebeat.org/programs/">Programs</a>
+<ul class="sub-menu">
+	<li id="menu-item-3432" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3432"><a href="http://lifebeat.org/programs/outreach/">Outreach Programs</a></li>
+	<li id="menu-item-3433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3433"><a href="http://lifebeat.org/programs/hearts-voices/">Hearts &#038; Voices</a></li>
+	<li id="menu-item-3434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3434"><a href="http://lifebeat.org/programs/volunteer/">Volunteer</a></li>
+</ul>
+</li>
+<li id="menu-item-3744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3744"><a href="http://lifebeat.org/artists/">Artists</a>
+<ul class="sub-menu">
+	<li id="menu-item-3861" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3861"><a href="http://lifebeat.org/artists/psa/">Celebrity PSAs</a></li>
+	<li id="menu-item-3712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3712"><a href="http://lifebeat.org/artists/heroes-champions/">Heroes &#038; Champions</a></li>
+</ul>
+</li>
+<li id="menu-item-3972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3972"><a href="http://lifebeat.org/events/">Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-3974" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3974"><a href="http://lifebeat.org/events/upcoming/">Upcoming Events</a></li>
+	<li id="menu-item-3603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3603"><a href="http://lifebeat.org/events/events-archive/">Past Events</a></li>
+</ul>
+</li>
+<li id="menu-item-3357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3357"><a href="http://lifebeat.org/donate/">Donate</a></li>
+</ul></td>
+				  </tr></table> 
+				</div></div> 
+</div>
+
+<!--/ Dropdown Menu Widget -->			
+              </div>        </nav>
+
+			<div id="section-strapline">		
+				 <ul class="sidebar-menu whatever"><li class="page_item page-item-1368"><a href="http://lifebeat.org/hiv-aids-prevention-methods/dental-dams/">How to Use a Dental Dam</a></li>
+<li class="page_item page-item-1367"><a href="http://lifebeat.org/hiv-aids-prevention-methods/female-condoms/">How to Use a Female Condom</a></li>
+</ul>			</div>		
+		</header>
+		
+		<div id="main">
+	<div id="content-column-center" class="content">
+		<div id="sidebar-left" class="sidebar">
+			<ul class="sidebar-menu whatever"><li class="page_item page-item-1368"><a href="http://lifebeat.org/hiv-aids-prevention-methods/dental-dams/">How to Use a Dental Dam</a></li>
+<li class="page_item page-item-1367"><a href="http://lifebeat.org/hiv-aids-prevention-methods/female-condoms/">How to Use a Female Condom</a></li>
+</ul>		</div>
+		<div id="content-center">
+			
+			<h1 class="content-page-title">How to Prevent HIV/AIDS and other STDs</h1>
+			<p>There are several steps you can take to protect yourself against HIV/AIDS and other STDs:</p>
+<ul>
+<li><strong>Abstinence</strong>: Simply choose not to have sex. <a title="Abstinence Facts" href="http://www.plannedparenthood.org/health-topics/birth-control/abstinence-4215.htm">Get more information about abstinence</a>.</li>
+<li><strong>Sober Sex</strong>: If you&#8217;re drinking or taking drugs, you are more apt to get into a situation where safer sex practices falter or fail altogether. If you have sex when you&#8217;re sober, you&#8217;re more likely to be safe.</li>
+<li><strong>Latex and Polyurethane Barrier Methods</strong>: Use safe sex materials such as male and female <strong>condoms</strong>, <strong>dental dams</strong>, and<strong> finger cots</strong> when engaging in sexual activity. Do not use male and female condoms at the same time! <a title="Buy ONE Condoms and Support Lifebeat" href="http://lifebeat.org/lifebeatwp/2011/08/24/one12pack/">Click here to purchase condoms</a>.</li>
+<li><strong>Fewer Partners/Monogamy:</strong> The fewer sex partners you have, the more you reduce your risk of HIV infection.</li>
+<li><strong>Needle Exchange/Clean Your Works:</strong> Always use new, unused needles or clean your works by flushing the needle and plunger with water and bleach each time you use an intravenous drug syringe. Do not share other IV drug paraphanalia such as cookers cottons/filters, or water glasses. There are needle exchange programs available in your area where you can exchange used needles for new ones. For more information, visit <a title="Harm Reduction" href="www.harmreduction.org">www.harmreduction.org</a></li>
+<li><strong>Pregnancy</strong>: If you are HIV positive and think you may be pregnant, you should contact your doctor immediately to discuss your options. There are medications that you can take during your pregnancy to reduce your baby&#8217;s risk of being HIV positive.</li>
+<li><strong>Breastfeeding</strong>: HIV positive mothers should not nurse a child. HIV can be transmitted from mother to child via breast milk. Instead your physician will provide alternatives to nursing your baby.</li>
+<li><strong>Getting Tested</strong>: The only way to be sure of your HIV status is to get tested. With a rapid oral test, you can even get a cheek swab and get your results in as little as 20 minutes. If you test negative, your healthcare provider will provide tools that can help you remain that way. If you test positive, your healthcare provider can counsel you on methods used to prevent the spread of HIV.</li>
+</ul>
+<p>For more information on the topics discussed in this section, visit <a title="Planned Parenthood" href="www.plannedparenthood.org">www.plannedparenthood.org</a> or any of our other partner organizations.</p>
+					</div>
+		<div id="sidebar-right" class="sidebar">
+			<div class="sidebar-inner">
+
+				<ul id="sidebar">
+
+					<li class="widget widget_lifebeat_heros_widget" id="lifebeat_heros_widget-2">
+						<h2 class="widgettitle">
+							Real Talk: Celeb PSA’s
+						</h2>
+						<div style="float: left; clear: both; margin-bottom: 0px;">
+						<iframe width="200" height="120" src="http://www.youtube.com/embed/vGWjjB8hhrM" frameborder="0" allowfullscreen></iframe></div>
+						<p style="text-align: center;"><a href="http://youtu.be/vGWjjB8hhrM"><strong>Jamar Rogers PSA for Lifebeat</strong></a></p>
+					</li>
+
+					<li class="widget" id="lifebeat_heros_widget-3" style="padding-right: 20px; width: 190px; background: url(/lifebeatwp/wp-content/uploads/2012/01/profile-dorian.png) no-repeat right bottom;">
+						<h2 class="widgettitle">
+							What is it like to be living with HIV/AIDS?
+						</h2>
+						<p>Dorian acquired HIV at birth from his mother, who didn't <br />know she was infected.</p> 
+						<p><a href="http://www.youtube.com/watch?v=oBEPr3ZweRE"><strong>Hear his story</strong></a></p>
+					</li>
+
+					<li class="widget" id="lifebeat_heros_widget-4" style="padding-right: 70px; padding-bottom: 20px; width: 140px; background: url(/lifebeatwp/wp-content/uploads/2012/01/condoms-sidebar.png) no-repeat right bottom;">
+						<h2 class="widgettitle">
+							Need Condoms?
+						</h2>
+						<p>
+							Save a trip to the store. Get the Lifebeat 12-pack from ONE condoms and get a FREE carrying tin.
+						</p>
+						<p>
+							<a href="http://www.onedesigncontest.com/mm5/merchant.mvc?Screen=PROD&Store_Code=OCS&Product_Code=LifebeatMktPromo&Category_Code=12PK"><strong>Buy Online Now</strong></a>
+						</p>
+					</li>
+
+					<li class="widget" id="lifebeat_heros_widget-5" style="width: 200px;">
+						<h2 class="widgettitle">
+							Get Tested
+						</h2>
+						<p>
+							Enter your ZIP code to find a FREE and confidential testing site near you.
+						</p>
+						<p>
+						<noscript><div style="height:352px;position:relative;width:147px;background:url(http://locator.aids.gov/images/cdc/bg_widget_narrow-8bit.png) no-repeat;"><strong style="text-align:center;padding-top:8px;color:#fff;display:block;font-family:Trebuchet MS;font-size:12px;line-height:1.18;margin-bottom:5px;">Find HIV/AIDS<br/>Prevention &amp; Service<br/>Providers</strong><form action="http://locator.aids.gov/index.php" style="margin:0;"><label style="margin-left:32px;"><input type="text" name="location" style="border:0 none;font-size:11px;width:65px;"/></label><button type="submit" style="background:none;border:none;cursor:pointer;height:34px;margin-top:5px;padding:0;text-indent:-999em;overflow:hidden;vertical-align:middle;width:34px;">GO</button><input type="hidden" name="text_only" value="true" /></form><div style="background:url(http://locator.aids.gov/images/cdc/bg_tab_narrow-8bit.png) no-repeat scroll 0 0;height:200px;left:5px;overflow:hidden;padding:10px 12px;position:absolute;top:100px;width:113px;z-index:1;font-family:arial,sans-serif;font-size:11px;line-height:15px;"><p>Enter your location, such as: "Washington, DC", or "20002".</p><p>For more information on this widget, please visit <a href="http://aids.gov/locator" style="color:#1111CC;">AIDS.gov</a>.</p><p>Please contact <a href="mailto:contact@aids.gov" style="color:#1111CC;">contact@aids.gov</a> with any comments or concerns.</p></div></div></noscript><script type="text/javascript" src="http://locator.aids.gov/cdcwidget.js"></script>
+						</p>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+		</div> <!-- END MAIN -->
+	</div></div> <!-- END PAGE/WRAP -->
+	
+	<div id="footer-wrap">
+		<footer>
+
+			<div id="footer-logo">
+				<img src="http://lifebeat.org/lifebeatwp/wp-content/themes/lifebeat_org/images/new-logo-transparent.png" width="106" height="120" alt="Lifebeat - Music Fights HIV" />
+			</div>
+
+			<ul>
+				<li>
+					<h1>About Lifebeat</h1>
+										<ul>
+						<li><a href="http://lifebeat.org/about/">About Us</a></li>
+						<li><a href="http://lifebeat.org/about/Annual Reports">Annual Reports</a></li>
+						<li><a href="http://lifebeat.org/artists/">The Artists</a></li>
+						<li><a href="http://lifebeat.org/donate/">Donate</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<ul>
+				<li>
+					<h1>About HIV/AIDS</h1>
+					<ul>
+						<li><a href="http://lifebeat.org/safe-sex-info/hivaids-info/">Get The Facts</a></li>
+						<li><a href="http://lifebeat.org/safe-sex-info/get-tested/">Get Tested</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<ul>
+				<li>
+					<h1>Social Links</h1>
+					<ul>
+						<li><a href="http://www.youtube.com/lifebeatusa">YouTube</a></li>
+						<li><a href="http://www.facebook.com/lifebeat">Facebook</a></li>
+						<li><a href="http://www.twitter.com/lifebeat">Twitter</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<div id="copyright">
+				&copy; 2015 Lifebeat | Music Fights HIV/AIDS
+				<div style="border-top: solid 1px #ccc; margin-top: 5px; padding-top:5px;">
+					Lifebeat is a 501(c)3 organization 
+					<br />
+					Tax ID #13-3667778.
+				</div>
+				<div style="color: #747474; margin-top: 5px; padding-top:5px;">
+					Site design by <a href="http://www.sarahpeterswebdesign.com" style="
+    color: #747474;">Sarah Peters</a>
+				</div>
+
+			</div>
+
+		</footer>
+	</div>	
+	
+	<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-includes/js/hoverIntent.min.js?ver=r7'></script>
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-content/plugins/slideshow/slideshow.js?ver=0.1'></script>
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-includes/js/comment-reply.min.js?ver=3.9'></script>
+<script type='text/javascript' src='http://lifebeat.org/lifebeatwp/wp-content/plugins/async-social-sharing/assets/js/async-share.js?ver=1396980849'></script>
+
+
+
+</body>
+</html>beat.org/lifebeatwp/wp-includes/js/comment-reply.min.js?ver=3.9'></script>
+<script type='text/javascript' src='http://lifebeat.org/life

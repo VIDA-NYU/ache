@@ -1,0 +1,3241 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!--hephaestus-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+
+
+<head>
+<script type='text/javascript'>var _sf_startpt=(new Date()).getTime()</script>
+<script type="text/javascript" src="//use.typekit.net/uzw4arf.js"></script>
+<script type="text/javascript">
+ try {
+   Typekit.load({ 
+     active: function() {
+        var ht = 0;
+    jQuery('.nhCol').each(function() {
+	    ht = Math.max(ht, jQuery(this).height());
+	});
+
+	mc_ht = jQuery('.hpBillboard').height() - 35;
+
+	jQuery('.nhCol').height(ht);
+	jQuery('#nhSpeedReads').height(mc_ht);
+     }
+   })
+ } catch(e) {}</script>
+
+
+
+	<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script>
+	<title>What Ebola can teach us about a new bubonic plague outbreak in Africa - The Week</title>
+		<meta content="Both outbreaks are unusual, just not for the reasons people may think" name="description">
+			    <link rel="canonical" href="http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa" >
+			    <meta name="keywords" content="World, World, , the week magazine" >
+					<meta property='og:site_name' content='The Week'/>
+			<meta property='og:title' content='What Ebola can teach us about a new bubonic plague outbreak in Africa'/>
+			<meta property='og:type' content='article'/>
+			<meta property='og:image' content='https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/img/dir_0129/64685_article_full/west-africas-ebola-outbreak-could-inform-responders-to-madagascars-plague-cases.jpg?209'/>
+			<meta property='og:description' content='Both outbreaks are unusual, just not for the reasons people may think'/>
+			<meta property='og:url' content='http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa'/>
+			<meta property='article:published_time' content='2014-12-05'/>
+			<meta property='article:section' content='World'/>
+	
+	<link rel="P3Pv1" href="/w3c/p3p.xml"/>
+	<meta name="google-site-verification" content="S3legSMoRs_qoqg414aGjiOhZwIirp-v4H7GaG3Yn_E">
+	<meta name="google-site-verification" content="w3BAwhZGrK2Vhk-P-poCWUz2lTt6JAb-6SQWbhU2ZtI">
+			<meta name="twitter:card" content="summary_large_image">
+			<meta name="twitter:site" content="@theweek">
+			<meta name="twitter:creator" content="@sesmithwrites">
+			<meta name="twitter:title" content="What Ebola can teach us about a new bubonic plague outbreak in Africa">
+			<meta name="twitter:description" content="Both outbreaks are unusual, just not for the reasons people may think">
+			<meta name="twitter:image:src" content="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/img/dir_0129/64685_article_full/west-africas-ebola-outbreak-could-inform-responders-to-madagascars-plague-cases.jpg?209">
+	
+	<meta name="twitter:widgets:csp" content="on">
+	<script type="text/javascript" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/js/jquery.min.js?209"></script>
+	<script type="text/javascript" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/js/jquery.cookies.2.2.0.js?209"></script>
+	     <script type="text/javascript" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/js/jquery.sharrre.js?209"></script>
+      <script type="text/javascript" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/js/jquery.dfp.js?209"></script>
+	 
+	<script type="text/javascript" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/js/prototype.js?209"></script>
+	<script type="text/javascript" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/js/thickbox.js?209"></script>
+	<script type="text/javascript" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/js/jcarousellite.js?209"></script>
+    <script language="javascript">
+		if ( navigator.userAgent.toLowerCase().indexOf( "msie" ) != -1 ) {
+			//ie
+		} else {
+			document.write('<script src="https://connect.facebook.net/en_US/all.js#xfbml=1">\<\/script\>');
+		}
+	</script>
+	<script type="text/javascript" src="//native.sharethrough.com/assets/tag.js" async></script> 
+	<link rel="stylesheet" type="text/css" href="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/css/styling.css?209">
+	<link rel="stylesheet" type="text/css" href="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/css/thickbox.css?209">
+	<link rel="stylesheet" type="text/css" href="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/css/modules.css?209">
+	<link href="http://theweek.com/section/index/world.rss" type="application/rss+xml" rel="alternate" title="World" /><!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" href="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/css/ie6.css?209" />
+<![endif]-->
+
+    <link rel="shortcut icon" href="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/favicon.ico?209">
+
+	
+<script>
+__reach_config = {
+  pid: "5417363a97b0c9fcbd0000a5",
+  title: "What Ebola can teach us about a new bubonic plague outbreak in Africa",
+  url: "http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa",
+  date: "2014-12-05 06:14:00",
+  authors: ["s.e. smith"],
+  channels: [],
+  tags: ['world', 'World'],
+  landing_url: "http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa",
+  iframe: true,
+  ignore_errors: false,
+};
+(function(){
+  var s = document.createElement('script');
+  s.async = true;
+  s.type = 'text/javascript';
+  s.src = document.location.protocol + '//d8rk54i4mohrb.cloudfront.net/js/reach.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+})();
+</script>  
+
+<script>
+var _prum = [['id', '533349dcabe53d8e23312715'],
+['mark', 'firstbyte', (new Date()).getTime()]];
+(function() { var s = document.getElementsByTagName('script')[0] , p = document.createElement('script'); p.async = 'async'; p.src = '//rum-static.pingdom.net/prum.min.js'; s.parentNode.insertBefore(p, s); })();
+</script>
+<script>
+var galleryReady = false;
+var galleryLaunched = false;
+var launchUrl;
+
+function local_tb_show(a, b, c) {
+    scroll(0,0);
+	tb_show(a, b, c);
+}
+
+function launchGallery(url) {
+	if (galleryReady || document.readyState == 'complete') {
+		local_tb_show(null, url, false);
+	} else {
+		galleryLaunched = true;
+		launchUrl = url;
+	}
+}
+
+
+// recordOutboundLink
+function rol(link, category, action, newtab) {
+	_gaq.push(['_trackEvent', category, action, null, null, true]);
+	//alert(link+' '+category+' '+action);
+	if (link.href !== undefined) {
+	    if (newtab) {
+	        setTimeout('window.open("' + link.href + '", "_blank")', 100);
+		}
+		else {
+	        setTimeout('document.location = "' + link.href + '"', 100);
+		}
+	}
+}
+
+
+
+
+
+// recordOutboundLinkWithAttribute
+function rolwa(link, category, action, attribute, newtab) {
+	_gaq.push(['_trackEvent', category, action, attribute, null, true]);
+	//alert(link+' '+category+' '+action+' '+attribute);
+	if (link.href !== undefined) {
+	    if (newtab) {
+	        setTimeout('window.open("' + link.href + '", "_blank")', 100);
+		}
+		else {
+	        setTimeout('document.location = "' + link.href + '"', 100);
+		}
+	}
+}
+
+// recordOutboundLinkWithAttributeAndValue
+function rolwav(link, category, action, attribute, value, newtab) {
+	_gaq.push(['_trackEvent', category, action, attribute, parseInt(value), true]);
+	//alert(link+' '+category+' '+action+' '+attribute+' '+value);
+	if (link.href !== undefined) {
+	    if (newtab) {
+	        setTimeout('window.open("' + link.href + '", "_blank")', 100);
+		}
+		else {
+	        setTimeout('document.location = "' + link.href + '"', 100);
+		}
+	}
+}
+
+
+function printArticleBody(reply) {
+	//var popup = window.open();  IMPORTANT!! Use TWpopup as window.open returns null here
+	popup = TWpopup;
+
+	json = jQuery.parseJSON(reply);
+	//alert(json);
+	// extract headline and url
+	popup.document.write('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd"><html><head>' +
+		'<sc'+'ript type="text/javascript" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/js/jquery.min.js?209"></sc'+'ript>' +
+		'<title>'+json.title+'</title>' +
+		'</head><body>'+json.content+'</body></html>');
+	popup.document.close();
+	return false;
+}
+
+function printArticle(articleId) {
+	TWpopup = window.open();  // have to use a global as window.open returns null in an ajax callback
+    //console.log("printArticle " + articleId);
+	new Ajax.Updater('post','/article/formatForPrinting/'+articleId, {asynchronous:true, evalScripts:true, onSuccess:function(transport) {printArticleBody(transport.responseText)}, requestHeaders:['X-Update', 'post']});
+	return false;
+}
+
+
+function getQueryString(key, default_)
+{
+  if (default_==null) default_="";
+  key = key.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regex = new RegExp("[\\?&]"+key+"=([^&#]*)");
+  var qs = regex.exec(window.location.href);
+  if(qs == null)
+    return default_;
+  else
+    return qs[1];
+}
+
+jQuery(document).ready(function() {
+	// write the Array.each & Object.each function if it doesn't exist...some weird dfp prototype conflict
+	if(Array.each == undefined) Array.each=function() { return jQuery.each(this); };
+	if(Object.each == undefined) Object.each=function() { return jQuery.each(this); };
+
+	// handle missing console
+	if(console === undefined){
+		function _console(){
+			return {
+				log : function(v){
+				}
+			}
+		}
+		var console = new _console();
+	}
+
+	jQuery("img.logo").dblclick(function(){
+		    jQuery("#serverName").show();
+			setTimeout(function() {
+			    jQuery("#serverName").hide();
+			}, 2500);
+	});
+});
+</script>
+
+<script type="text/javascript">
+	var __st_loadLate=true; //if __st_loadLate is defined then the widget will not load on domcontent ready
+</script>
+<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+
+<script type="text/javascript">
+	stLight.options({
+		publisher:'8d21e461-f37c-4206-ba00-4a982fe74449',
+		publisherGA:"UA-2473360-1",
+		embeds:'true',
+		onhover:false,
+		doNotHash:false,
+		doNotCopy:true,
+		hashAddressBar:false
+	});
+</script>
+
+
+
+
+<!--style>
+/* make the like button smaller */
+.fb_edge_widget_with_comment iframe {
+    width:50px !important;
+}
+
+div.fb-like.fb_edge_widget_with_comment.fb_iframe_widget {
+	width:50px !important;
+}
+
+.fblike {
+	width:55px !important;
+}
+
+span.stArrow {
+	display:none !important;
+	visibility:hidden !important;
+}
+
+/* but make the span that holds the comment box larger */
+span.fb_edge_comment_widget.fb_iframe_widget iframe
+{
+    width:401px !important;
+}
+
+.fblike {
+	width:55px !important;
+}
+
+span.stArrow {
+	display:nomportant;
+}
+</style-->
+
+	
+	<script type="text/javascript">
+		/* AB - uncomment to re-enable a/b test
+		var buttonVersion = 'social_button_old';
+		*/
+		var buttonVersion = 'social_button_old';
+	</script>
+	
+
+	<script type="text/javascript">
+
+		jQuery(function() {
+		/* AB - uncomment to re-enable a/b test
+			// record an event for which version of the buttons was displayed
+			_gaq.push(['_trackEvent', buttonVersion, 'displayed', null, null, true]);
+		*/
+			// and display the proper button version
+			jQuery("."+buttonVersion).show();
+		});
+
+		//console.log("showing button version: "+buttonVersion);
+		function recordShareClick(e, svc) {
+			/* AB - comment out to re-enable a/b test
+			*/
+			return;
+
+			if(svc != "unlike") {
+				console.log("Got a click for "+buttonVersion+" button: "+svc);
+				_gaq.push(['_trackEvent', buttonVersion, 'click', svc, null, true]);
+			}
+		}
+
+		// A/B test callbacks for social buttons
+		function gplusClickCallback(json) {
+			if(json.state=='on') recordShareClick('click', 'plusone');
+		}
+		stLight.subscribe("click",recordShareClick); //register the callback function with sharethis
+
+	  (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	 function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/p })();
+	</script>
+
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u) {
+    e.async = 1;
+    e.src = u;
+    f.parentNode.insertBefore(e, f);
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  'http://cdn.taboola.com/libtrc/dennisus-theweek/loader.js');
+</script>
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<div id="google_analytics">
+<script>
+ _udn = ".theweek.com";
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-2473360-1']);
+	_gaq.push(['_setDomainName', '.theweek.com']);
+	_gaq.push
+	   (['_setCustomVar',
+	      1,
+	      'Section',
+	     'World',
+	      3
+	   ]);
+	_gaq.push
+	   (['_setCustomVar',
+	     5,
+	     'Slug',
+	     'World',
+	     3
+	    ]);
+    _gaq.push(['_trackPageview']);
+
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+	ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</div>
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "ht0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</div>
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+tps:" ? "https://secure" :
+"http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-c99KiP7-l3Cng"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-c99KiP7-l3Cng.gif" border="0"
+height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag --><!-- Begin comScore Tag -->
+<script>
+
+var _comscore = _comscore || []; ;
+_comscore.push({ c1: "2", c2: "7420740", c3: "", c4: "" }); 
+
+(function() {
+ var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; 
+ s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; 
+ el.parentNode.insertBefore(s, el); 
+ })(); 
+
+ </script> 
+ 
+ <noscript> 
+ <img src="http://b.scorecardresearch.com/p?c1=2&c2=7420740&c3=&c4=&c5=&c6=&c15=&cv=2.0&cj=1" /> 
+ </noscript>
+
+
+
+<!-- End comScore Tag -->
+
+<!--  BuzzFeed code begins -->
+<div id="BF_WIDGET_1"> </div>
+<script type="text/javascript">
+(function( ){
+	BF_WIDGET_JS=document.createElement('script'); BF_WIDGET_JS.type="text/javascript";
+	BF_WIDGET_SRC="http://ct.buzzfeed.com/wd/UserWidget?u=theweek.com&amp;to=1&amp;or=vb&amp;wid=1&a="BF_WIDGET_1"> </div>
+<script type="text/javascript">
+(function( ){
+	BF_WIDGET_JS=document.createElement('script'); BF_WIDGET_JS.type="text/javascmp;cb=" + (new Date()).getTime();
+	setTimeout(function() {document.getElementById('BF_WIDGET_1').appendChild(BF_WIDGET_JS);BF_WIDGET_JS.src=BF_WIDGET_SRC},1);
+})();
+</script>
+<!-- / BuzzFeed code ends -->
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=462337980564780&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript">
+var cookieName = 'briefingpop';
+var cookieValue = jQuery.cookies.get(cookieName);
+var isEligible = (Math.floor((Math.random()*10)+1) <= 2); 
+var cookieExpires = new Date();
+cookieExpires.setDate(cookieExpires.getDate()+30);
+var cookieOptions = {
+	domain: '.theweek.com',
+	expiresAt: cookieExpires
+};
+var formSubmitted = false;
+var newsletterTicked = false;
+jQuery(function() {
+	if(cookieValue == 0) {
+		if(isEligible) {
+			//tb_show('', '/circdocs/site-pop/?width=856&height=490&TB_iframe=true', null);
+			jQuery.cookies.set(cookieName, 1, cookieOptions);
+		}
+	}
+	else if(cookieValue == null) {
+		jQuery.cookies.set(cookieName, 0, cookieOptions);
+	}
+});
+
+var old_tb_remove = window.tb_remove;
+var tb_remove = function() {
+    old_tb_remove(); // calls the tb_remQuery.cookies.set(cookieName, 1, cookieOptions);
+		}
+	}
+	else if(cookieValue == null) {
+		jQuery.cookies.set(cookieName, 0, cookieOptions);
+	}
+});
+
+vaove() of the Thickbox plugin
+    var eventAction = (formSubmitted) ? "Submitted" : "Ignored";
+	if(eventAction=="Submitted" && newsletterTicked) eventAction = "SubmittedNewsletter";
+	console.log("Logging event: "+eventAction);
+	_gaq.push(['_trackEvent', 'Miscellaneous', 'BriefingLightbox', eventAction, null, true]);
+};
+</script>
+
+<style>
+#TB_closeWindowButton {
+	color:#FFF;
+	text-decoration:underline;
+}
+</style>
+
+
+
+
+
+
+<meta name="keywords" content="" />
+<style>
+div#nfArticle {
+	float:left;
+	/*padding-right: 10px;*/
+	margin:-10px 10px 0 0;
+}
+div#homepage {
+	padding-right: 7px;
+}
+div#nfHeadline {
+	font-family: "ff-meta-serif-web-pro";
+	font-size: 38px;
+	line-height: 40px;
+	font-weight: 700;
+	width: 690px;
+	float: left;
+	color: #000000;
+	font-style: normal;
+	margin-top: 8px;
+}
+div#nfSubheadline {
+    width: 690px;
+	float: left;
+	color: #666666;
+	margin-top: 7px;
+	font-family: ""ff-meta-serif-web-pro"";
+	font-style: normal;
+	font-size: 18px;
+	
+}
+div#nfInfo {
+    width:690px;
+	float:left;
+	margin-top:9px;
+	margin-bottom:9px;
+}
+div#nfInfo div#nfBylineAndDate {
+	font-family: "ff-meta-serif-web-pro";
+    font-size: 14px;
+    font-weight: 500;
+    color:#333333;
+	font-style:normal;
+	margin-top:-1px;
+
+}
+div#nfInfo div#nfBylineAndDate a{
+	color:#f62c16;;
+}
+div#nfInfo div#nfBylineAndDate a:hover{
+	text-decoration:uny: "ff-meta-serif-web-pro";
+    font-size: 14px;
+    font-weight: 500;
+    color:#333333;
+	font-style:normal;
+	margin-top:-1px;
+
+}
+div#nfInfo derline;
+}
+div#nfLargeImageBlock {
+    width:690px;
+	float:left;
+	margin-top:4px;
+}
+div#nfArticleBody {
+    width:690px;
+	float:left;
+	margin-top:10px;
+}
+div#nfBodyText {
+	font-family: "ff-meta-serif-web-pro";
+	font-size: 16px;
+	line-height: 24px; 
+	font-weight: 500;
+    width:690px;
+	float:left;
+	color:#222;
+	font-style:normal;
+	
+}
+div#nfLargeCaptionAndCredit {
+    width:690px;
+	float:left;
+	margin-top:3px;
+	line-height:14px;
+	color:#666;
+}
+div#nfLargeCaption {
+	font-family: "nimbus-sans-condensed";
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 16px;
+	font-style: normal;
+	margin-top: 0px;
+	color: #777;
+	display: block;
+}
+#nfLargeCredit {
+   font-family: "nimbus-sans-condensed";
+	font-size: 12px;
+	font-weight: 400;
+	font-style: normal;
+	color: #a7a6a6;
+}
+div#articleInfo{
+	float:right;
+}
+div#nfArticleSmallImageAndRelated {
+
+	line-height:18px;
+	margin:5px 0 20px 20px;
+	width:240px;
+}
+div#nfRelated {
+	margin-left:10px;
+	padding:10px;
+}
+div#nfSmallCredit {
+    width:240px;
+	float:left;
+	font-family:"jaf-facitweb";
+	font-weight:300;
+	font-style:normal;
+	font-size:11px;
+	color:#a7a6a6;
+	line-height:14px;
+	margin-bottom:15px;
+}
+div#nfSmallCaption {
+    width:240px;
+	float:left;
+	font-family:"jaf-facitweb";
+	font-style:normal;
+	font-size:12px;
+	line-height:14px;
+	margin-top:3px;
+	col:normal;
+	font-size:11px;
+	color:#a7a6a6;
+	line-height:14px;
+	margin-bottom:15px;
+}
+div#nfSmallCaption {
+    width:240px;
+	float:left;
+	font-or:#666666;
+	font-weight:400;
+}
+.nfInitial {
+	font-family: "ff-meta-serif-web-pro";
+	font-size: 54px;
+	font-weight: 700;
+    width:30px;
+    height:32px;
+    margin:16px 12px 0 0;
+    float:left;
+    font-style:italic;
+}
+
+
+
+/* Bio section at the end of articles */
+#nfBio {
+	float: left;
+	width: 688px;
+	background-color: #f8f8f8;
+	border:solid 1px #eeeeee;
+	margin-top: 12px;
+}
+
+#nfBioPhoto {
+	width: 80px;
+	height: 90px;
+	display: inline-block;
+	border:solid 1px #d0d0d0;
+	background:url('https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/img/generic/sesmith.jpg?209');
+	background-size:80px 90px;
+	background-repeat:no-repeat;
+	margin: 10px;
+	margin-bottom: 6px;
+}
+
+#nfBioContent {
+	width: 580px;
+	display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+#nfBioAuthor {
+	
+	display: inline-block;
+    vertical-align: top;
+    padding-top: 2px;
+}
+
+#nfBioAuthor, #nfBioAuthor a {
+	font-family: "ff-meta-serif-web-pro";
+  	font-size: 16px;
+  	font-weight: 700;
+	color:#666666;
+}
+
+#nfBioAuthor a:hover {color:#ED1C24;}
+
+#nfBioTwitter {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+#nfBioText {
+	font-family: "ff-meta-serif-web-pro";
+  	font-size: 14px;
+  	font-weight: 500; 
+    color:#666666;
+    margin-top: 3px;
+}
+
+#nfBioText a {
+	color: #0b6ddc;
+}
+
+
+
+#printButton {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+#nfBioText {
+	font-family: "ff-meta-serif-web-pro";
+  	font-size: 14px;
+  	font-weight: 500; 
+  float:right;
+	width:70px;
+}
+
+#printButton a {
+	font-size:11px;
+	font-weight:bold;
+	color:#000000;
+}
+
+
+.bluelink a {
+	color:#0b6ddc;
+}
+.bluelink a:hover {
+	text-decoration:underline;
+}
+.nfRedlink a {
+	color:#f62c16;
+}
+.nfRedlink a:hover {
+	text-decoration:underline;
+}
+div#nfArticleSubscribe{
+	
+	float:left;
+   
+}
+div.nfSeperator{
+    width:690px;
+	float:left;
+    margin:0px 0 10px 0px;
+	border-bottom:solid 1px #d0d0d0;
+	height:1px;
+}
+div#nfBodyText div.nfpullquote {
+	text-align:center;
+    width:500px;
+	padding:20px 80px 20px 80px;
+	float:left;
+	font-family:"jaf-facitweb";
+	font-style:italic;
+	font-size:33px;
+	font-weight:600;
+	line-height:41px;
+}
+span.nfpullquotequote {
+	/*font-family:"adelle";
+	font-style:normal;
+	font-size:60px;
+	font-weight:700;*/
+}
+div#nfBodyText a {
+	color:#0b6ddc;
+}
+div#nfBodyText a:hover {
+	text-decoration:underline;
+}
+div#nfBodyText p {
+    margin-bottom: 1em;
+    margin-top: 2px;
+}
+div#nfBodyText div#nfSmallCaption p {
+    margin-bottom: 0px;
+}
+div#nfBodyText strong {
+    font-weight:bold;
+}
+div#nfBodyText em {
+    font-style:italic;
+}
+
+div#nfBylineAndDate {
+	float:left;
+}
+div.nfSocial {
+	float:right;
+	height:30px;
+	margin-top:-6px;
+	margin-bottom:6px;
+}
+div.nfSocial_low{
+	float:right;
+	height:30px;
+	margin-top:-6px;
+	margin-bottom:6px;
+}
+div#nfArtfont-style:italic;
+}
+
+div#nfBylineAndDate {
+	float:left;
+}
+div.nfSocial {
+	float:right;
+	height:30px;
+	margin-top:-6px;
+	margin-bottom:6px;icle div.nfLaunchLine a {
+    background: url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/arrow_slideshow.gif?209) no-repeat scroll 0 1px transparent;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    padding: 2px 0 0 26px;
+    width: 460px;
+}
+#example2 .cB {
+	width: 32px;
+	display: inline-block;
+	padding-left: 24px;
+	padding-right: 6px;
+	padding-bottom: 13px;
+	background: none !important;
+	background-image: none !important;
+	background-repeat: no-repeat;
+	background-size: 30px;
+}
+#example2 .cb2 {
+    width:32px;
+    display:inline-block;
+    height:32px;
+	margin-left:8px;
+	padding-left: 0px;
+	padding-right: 6px;
+	padding-bottom: 13px;
+    background-image: url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/speedreads/speedreads_comments2.png?209);
+    background-repeat:no-repeat;
+    background-size:30px;
+}
+
+#example2 .sharrre .count {color:#333333!important; }
+#example2 .cN{color: #ed1b24!important;}
+#pr_content span{display:none;}
+#pr_content h4 {padding-bottom:10px;}
+.sponsored-top{ margin-top: 20px;}
+.sticky_social {
+	float: left;
+	margin-top: 0px;
+	margin-left:-100px;
+	position: fixed;
+	width: 72px;
+	padding-top: 10px;
+	padding-left: 10px;
+	top: 16px;
+}
+#slideshow_social .email{ background-image: url(https://7e8c.https{ margin-top: 20px;}
+.sticky_social {
+	float: left;
+	margin-top: 0px;
+	margin-left:-100px;
+	position: fixed;
+	width: 72px;
+	padding-top: 10px;.cdn.softlayer.net/807E8C/origin.theweek.com/images/email_16.png?209)!important;width: 6px; background-size:16px!important; padding-right: 10px!important;}
+#slideshow_social #slideshow_social_email .email{ background-image: none!important;}
+</style>
+
+<div id="documentRoot">
+	<div id="wrapper">
+		<style>
+#HPHeader {
+    width:1010px;
+	height:70px;
+	float:left;
+}
+#HPLogoBox {
+    width:300px; 
+	float:left;
+	height:45px;
+	margin:22px 0 0 5px;
+}
+#HPSocialBox {
+    width:220px; 
+	height:25px;
+	float:left;
+	margin:38px 0 0 10px;
+}
+.HPSocialItem { 
+	height:25px;
+	float:left;
+	margin-left:10px;
+}
+#HPSearchBox {
+    width:180px;
+	height:45px; 
+	float:left;
+	margin:32px 0 0 5px;
+}
+#HPPromoBox {
+    width:280px; 
+	height:70px;
+	padding-left:10px;
+	float:right;
+}
+#HPPromoBoxMagazine {
+    height:70px;
+	width:100px;
+	padding-top:4px;
+	float:left;
+}
+#HPPromoBoxText {
+    height:70px;
+	width:150px;
+	float:left;
+}
+#HPPromoBoxListHeader {
+	height: 18px;
+	width: 155px;
+	float: left;
+	margin: 5px 0 2px 0;
+	font-family: "nimbus-sans-condensed";
+	color: red;
+	font-weight: 900;
+	font-size:17px;
+	background-color: #ffec48;
+}
+#HPPromoBoxListHeader a{
+	color:#ed1b24;
+}
+#HPPromoBoxListBullets {
+    width:10px;
+    height:50px;
+	float:left;
+	margin:2px 3px 0 0;
+}
+#HPPromoBoxListMenu {
+    height:50px;
+    width:: 900;
+	font-size:17px;
+	background-color: #ffec48;
+}
+#HPPromoBoxListHeader a{
+	color:#ed1b24;
+}
+#HPPromoBoxListBullets {
+    width:10px;
+   90px;
+	float:left;
+	font-family: "nimbus-sans-condensed";
+}
+.HPPBMenuItem a {
+	font-family:"nimbus-sans-condensed";
+	font-weight:400;
+	font-style:normal;
+    height:14px;
+	width:110px;
+	float:left;
+	font-size:13px;
+	color:#666666;
+}
+.HPPBMenuItem a:hover {
+    text-decoration:underline;
+	color:#ed1b24;
+}
+#HPMenuBar
+{
+    width:1010px;
+    margin:0 0 10px 0;
+	float:left;
+}
+
+#HPMenuBar ul
+{
+	padding:0px 0 0 0px;
+	margin:0px;
+	list-style:none;
+	font-family: "nimbus-sans-condensed";
+	font-weight:400;
+	font-style:normal;
+	font-size:16px;
+	height:30px;
+	line-height:30px;
+	background:#ed1b24;
+	text-transform: uppercase;
+	
+}
+#HPMenuBar ul li
+{
+	padding-left: 6px;
+	padding-right: 7px;
+	float:left;
+	border-right-color: #f14950;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-left-color: #dd1921;
+	border-left-style: solid;
+	border-left-width: 1px;
+
+}    
+
+#HPMenuBar ul li:last-child {  
+	border-right:none;
+	padding-right: 2px;
+	padding-left: 2px
+	
+}  
+#HPMenuBar ul li a
+{
+	color:#FFF;
+	text-decoration:none;	
+	padding: 2px 7px 2px 7px;
+}
+#HPMenuBar ul li a:hover
+{
+	color:#ff;
+}
+#HPMenuBar ul li.active a
+{
+	color:#ffffff;
+}
+#HPVoicesBar
+{
+    width:1010px;
+    margin:0 0 10px 0;
+	float:left;
+	margin-top:-10px;
+}
+
+#HPVoicesBar ul
+{
+	padding-left: 29px!important;
+	padding:0pxMenuBar ul li a:hover
+{
+	color:#ff;
+}
+#HPMenuBar ul li.active a
+{
+	color:#ffffff;
+}
+#HPVoicesBar
+{
+    width:1010px;
+    margin:0 0 10px 0; 0 0 0px;
+	margin:0px;
+	list-style:none;
+	font-family: "nimbus-sans-condensed";
+  	font-size: 13px;
+  	font-weight: 400;
+	font-style:normal;
+	height:20px;
+	line-height:20px;
+	background:#f8f8f8;
+	text-transform: uppercase;
+	border-bottom-color: #f6ccce;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+#HPVoicesBar ul li
+{
+	float:left;
+	margin-left:-1px;
+	
+
+}    
+#HPVoicesBar ul li:last-child {  
+	border-right:none;
+}  
+#HPVoicesBar ul li a
+{
+	color:#333333; 
+	text-decoration:none;	
+	padding: 2px 8px 2px 7px;
+}
+#HPVoicesBar ul li a:hover
+{
+	color:#f14950;
+}
+#HPVoicesBar ul li.active a
+{
+	color:#ffed49;
+}
+
+
+#HPLeaderbox {
+    width:1010px;
+	height:90px;
+	float:left;
+	/*margin-left:15px;*/
+	padding-bottom: 25px;
+}
+.yellowPromo {
+    background-color: #ffec48;
+}
+
+</style>
+
+<!--[if IE]>
+<style>
+	/* css for IE */
+	#HPMenuBar ul li a
+	{
+		padding: 2px 5px 2px 5px !important;
+	}
+	
+	/* temporary fix for site-642 */
+	
+</style>
+<![endif]-->
+
+
+
+ 
+ 
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tagmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == d/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+
+
+
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+    rotatableAdList = []; 
+	adslotLeaderboard = googletag.defineSlot('/4697366/theweek.com/world', [[728,90], [970,90], [970,250]], 'Leaderboard').addService(googletag.pubads());adslotLeaderboard.setTargeting('keywords', ["world"]);adslotLeaderboard.setTargeting('aid', 272990);adslotLeaderboard.setTargeting('slug', 'World');adslotLeaderboard.setTargeting('url', 'world');adslotLeaderboard.setTargeting('position', '1');adslotLeaderboard.setTargeting('inventory', 'atf'); 
+
+	
+	adslotSquare1 = googletag.defineSlot('/4697366/theweek.com/world', [[300,250],[300,600],[300,1050]], 'Square1').addService(googletag.pubads());adslotSquare1.setTargeting('keywords', ["world"]);adslotSquare1.setTargeting('aid', 272990); adslotSquare1.setTargeting('section', 'world'); adslotSquare1.setTargeting('slug', 'World'); adslotSquare1.setTargeting('url', 'world'); adslotSquare1.setTargeting('position', '2');adslotLeaderboard.setTargeting('inventory', 'atf');
+	adslotSquare2 = googletag.defineSlot('/4697366/theweek.com/world', [[300,250]], 'Square2').addService(googletag.pubads());adslotSquare2.setTargeting('keywords', ["world"]);adslotSquare2.setTargeting('aid', 272990); adslotSTargeting('inventory', 'atf');
+	adslotSquare2 = googletag.defineSlot('/4697366/theweek.com/world', [[300,250]], 'Square2').addService(googletag.pubadquare2.setTargeting('section', 'world'); adslotSquare2.setTargeting('slug', 'World'); adslotSquare2.setTargeting('url', 'world'); adslotSquare2.setTargeting('position', '4');	adslotSquare3= googletag.defineSlot('/4697366/theweek.com/world', [[300,250]], 'Square3').addService(googletag.pubads());adslotSquare3.setTargeting('keywords', ["world"]);adslotSquare3.setTargeting('aid', 272990); adslotSquare3.setTargeting('section', 'world'); adslotSquare3.setTargeting('slug', 'World'); adslotSquare3.setTargeting('url', 'world'); adslotSquare3.setTargeting('type', 'sticky'); adslotSquare3.setTargeting('position', '5');	
+		adslotSquare6 = googletag.defineSlot('/4697366/theweek.com/TheWeek_InternalDriver_690x135', [690, 120], 'div-gpt-ad-1383691392084-0').addService(googletag.pubads());adslotSquare6.setTargeting('keywords', ["world"]);adslotSquare6.setTargeting('section', 'world'); adslotSquare6.setTargeting('slug', 'World'); adslotSquare6.setTargeting('url', 'world'); 	adslotSquare7 = googletag.defineSlot('/4697366/theweek.com/TheWeek_InternalDriver_300x250', [300, 250], 'div-gpt-ad-1385152635178-0').addService(googletag.pubads());adslotSquare7.setTargeting('keywords', ["world"]);adslotSquare7.setTargeting('section', 'world'); adslotSquare7.setTargeting('slug', 'World'); adslotSquare7.setTargeting('url', 'world'); 	adslotSquare8 = googletag.defineSlot('/4697366/theweetag.pubads());adslotSquare7.setTargeting('keywords', ["world"]);adslotSquare7.setTargeting('section', 'world'); adslotSquare7.setTargeting('slug', 'Wok.com/TheWeek_InternalDriver_Ticker_1010x50', [1010, 50], 'div-gpt-ad-1385152635178-2').addService(googletag.pubads());adslotSquare8.setTargeting('keywords', ["world"]);adslotSquare8.setTargeting('section', 'world'); adslotSquare8.setTargeting('slug', 'World'); adslotSquare8.setTargeting('url', 'world'); 	adslotSquare9 = googletag.defineSlot('/4697366/theweek.com/TheWeek_InternalDriver_690x120_Top', [690, 120], 'div-gpt-ad-1385152635178-1').addService(googletag.pubads());adslotSquare9.setTargeting('keywords', ["world"]);adslotSquare9.setTargeting('section', 'world'); adslotSquare9.setTargeting('slug', 'World'); adslotSquare9.setTargeting('url', 'world'); 	adslotSquare10 =googletag.defineSlot('/4697366/theweek.com/TheWeek_ROS_300x250_MagSubDriver', [300, 250], 'div-gpt-ad-1386363566944-0').addService(googletag.pubads());adslotSquare10.setTargeting('slug', 'World'); adslotSquare10.setTargeting('url', 'world'); 	adslotSquare11 = googletag.defineSlot('/4697366/theweek.com/TheWeek_Sharethrough_ArticleEnd_V2_690x200', [690, 200], 'div-gpt-ad-1411048401652-0').addService(googletag.pubads());adslotSquare11.setTargeting('slug', 'World'); adslotSquare11.setTargeting('url', 'world'); adslotSquare11.setTargeting('strnativekey','7b87e58b');	adslotSquare12 = googletag.defineSlot('/4697366/theweek.com/speed_reads/690x200_SpeedReads', [690, 200], 'div-gpt-ad-1410805979943-0ing('slug', 'World'); adslotSquare11.setTargeting('url', 'world'); adslotSquare11.setTargeting('strnativekey','7b87e58b');	adslotSquare12 = googletag.').addService(googletag.pubads());adslotSquare12.setTargeting('slug', 'World'); adslotSquare12.setTargeting('url', 'world'); 	adslotSquare13 = googletag.defineSlot('/4697366/theweek.com/theideafactory', [728, 90], 'div-gpt-ad-1409936183332-0').addService(googletag.pubads());adslotSquare13.setTargeting('slug', 'World'); adslotSquare13.setTargeting('url', 'world');  	 
+			
+	//Floating Xerox ad
+	//googletag.cmd.push(function() { googletag.defineSlot('/4697366/theweek.com/TheWeek_ROS_728x90_Sticky', [728, 90], 'div-gpt-ad-1383944557849-0').addService(googletag.pubads()); googletag.defineOutOfPageSlot('/4697366/theweek.com/TheWeek_ROS_728x90_Sticky', 'div-gpt-ad-1383944557849-0-oop').addService(googletag.pubads()); googletag.enableServices(); });
+	
+	lightBoxAdsList = [];adSlotLightboxLeaderboard = googletag.defineSlot('/4697366/theweek.com/world', [[728,90], [970,250]], 'LightBoxLeaderboard').addService(googletag.pubads());adSlotLightboxLeaderboard.setTargeting('keywords', ["world"]);adSlotLightboxLeaderboard.setTargeting('aid', 272990);adSlotLightboxLeaderboard.setTargeting('position', '101');adSlotLightboxLeaderboard.setTargeting('slug', 'World'); adSlotLightboxSquare = googletag.defineSlot('/4697366/theweek.com/world', [300,250], 'LightBoxSquare').addService(googletag.pubads());adSlotLightboxSquare.setTargeting('keywords', ["world"]); adSlotLightboxSquareLeaderboard.setTargeting('slug', 'World'); adSlotLightboxSquare = googletag.defineSlot('/4697366/theweek.com/world', [300,250], 'LightBoxSquare').addS.setTargeting('aid', 272990); adSlotLightboxSquare.setTargeting('position', '102');	try {
+	    //googletag.pubads().enableSingleRequest();
+	}
+	catch (e) {
+	}
+	googletag.enableServices();
+});
+
+</script>
+
+<script type="text/javascript">
+
+// set up entire page refresh
+
+var refresh_time = 10000000;
+var refresh_timer = setTimeout("", refresh_time);
+				
+var sectionurl = "world";
+
+// now look to do page hit and ad rotation on this page.  Only need to do if rotationPeriod Set
+
+
+var rotationCount = 0;
+
+function rotateAds() {
+	// drop a click
+		
+	// rotate ads as needed
+	try {
+	    googletag.pubads().refresh(rotatableAdList);
+	}
+	catch (e) {
+	}
+
+	if ('0' != 'manual' && 
+				'0' != 0) {
+		if (rotationCount >= 0) return;
+		rotationCount++;
+
+		window.setTimeout(rotateAds, 0000); 
+	}
+}
+
+</script>
+<script>
+//setInitialMenu('');
+
+</script>
+
+
+ <div id="HPHeader">
+	<div id="HPLogoBox">
+		<a href="/" onClick="rol(this,'Home','Home-logo',''); return false;" ><div class="logoContent"></div>
+		<img src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/hp/logo.png?209" alt="The Week Logo"></a>
+	</div>
+	<div id="HPSocialBox">		
+		<div class="fb-like HPSocialItem" style="float:left;" data-href="http://facebook.com/theweek" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"ogo.png?209" alt="The Week Logo"></a>
+	</div>
+	<div id="HPSocialBox">		
+		<div class="fb-like HPSocialItem" style="float:left;" data-href="http://f></div>	
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+		<div class='HPSocialItem'>
+			<a href="https://twitter.com/theweek" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false" data-dnt="true"></a>
+		</div>
+		<div class='HPSocialItem'>
+			<a href="/section/index/world.rss" ><img src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/hp/rss.png?209" alt="RSS" /></a>
+		</div>
+	</div>
+	<div id="HPSearchBox">
+		
+<style>
+#HPSearch {
+}
+
+#HPSearch input[type="text"] {
+    background: url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/hp/search.png?209) no-repeat 9px 7px #ffffff;
+    border: 1px solid #d1d1d1;
+    font: normal 12px Arial,Helvetica,Sans-serif;
+    color: #101010;
+    width: 100px;
+    padding: 6px 15px 6px 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 0 1px 3px rgba
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+}
+
+/*
+#HPSearch input[type="text"]:focus {
+    //width: 140px; 
+} 
+*/
+
+#HPSearchBox input:focus {
+	outline: none;
+}
+</style>
+<form method="get" action="/article/search" id="HPSearch">
+  <input name="keywords" type="text" size="40" placeholder="" />
+</form>
+	</div>
+	<div id="HPPromoBox" class="">
+		<div id="HPPromoBoxMagazine" style="padding-top: 11px;">
+			<a href="https://secure.palmcoastd.com/pcd/!e.S?m=061DG&k=ISDD">
+			    <img src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/hp/magazines.png?209" />
+			</a>
+		</div>
+		<div id="HPPromoBoxText">
+			
+			
+			<style>#HPPromoBoxListHeader {background-color: #fff!important;}#HPPromoBoxListMenu{padding-top: 12px;}.HPPBMenuItem a {height: 20px;font-size: 17px;}</style>
+			<div id="HPPromoBoxListMenu">
+			   <div class="HPPBMenuItem">
+						<a href="https://secure.palmcoastd.com/pcd/!dynredirect.main?iID=4011391" onClick="_gaq.push([\'_trackEvent\', \'CTA\', \'variation1\', \'Subscribe\']);">Subscribe</a>
+					</div>
+					<div class="HPPBMenuItem">
+						<a href="https://secure.palmcoastd.com/pcd/eSv?iMagId=061DG&i4Ky=IGQC" onClick="_gaq.push([\'_trackEvent\', \'CTA\', \'variation1\', \'Give a gift\']);">Give a gift</a>
+					</div>
+					<div class="HPPBMenuItem">
+						<a href="htHPPBMenuItem">
+						<a href="https://secure.palmcoastd.com/pcd/eSv?iMagId=061DG&i4Ky=IGQC" onClick="_gaq.push([\'_trackEvent\', \'CTA\', \'variationtps://secure.palmcoastd.com/pcd/!e.S?m=061DG&k=IDEH" onClick=" _gaq.push([\'_trackEvent\', \'CTA\', \'variation1\', \'Digital subscription\']);">Digital subscription</a>
+					</div
+			</div>
+		</div>
+	</div>
+</div>
+<div id="HPMenu">
+	<div id='HPMenuBar'>
+		<ul>
+		<!-- ?php
+					// for xerox sponsorship:
+					foreach($menuBarItems as &$i) {
+						if($i['Section']['url'] == "lifestyle") {
+							$i['Section']['name'] = 'Life';
+						}
+					}
+			 
+			
+		? -->
+
+					<li id="" >
+					<a href="/section/index/world" onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'world']);">
+					World					</a>
+			</li>
+			
+			
+					<li id="" >
+					<a href="/section/index/us" onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'us']);">
+					U.S.					</a>
+			</li>
+			
+			
+					<li id="" >
+					<a href="/section/index/politics" onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'politics']);">
+					Politics					</a>
+			</li>
+			
+			
+					<li id="" >
+					<a href="/section/index/business" onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'business']);">
+					Business					</a>
+			</li>
+			
+			
+					<li id="" >
+					<a href="/section/index/tech" onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'tech']);">
+					Tech					</a>
+			</li>
+			
+			
+					<li id="" >
+					<a href="/section/index/science" onClick="		</a>
+			</li>
+			
+			
+					<li id="" >
+					<a href="/section/index/tech" onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'tech']);">
+_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'science']);">
+					Science					</a>
+			</li>
+			
+			
+					<li id="" >
+					<a href="/section/index/entertainment" onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'entertainment']);">
+					Entertainment					</a>
+			</li>
+			
+			
+					<li id="" >
+					<a href="/section/index/lifestyle" onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'lifestyle']);">
+					Lifestyle					</a>
+			</li>
+			
+			
+					<li id="" >
+					<a href="/section/index/speed_reads" onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'speed_reads']);">
+					Speed Reads					</a>
+			</li>
+			
+			
+					<li id="" >
+					<a href="/section/index/cartoon_wit" onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'cartoon_wit']);">
+					Cartoons					</a>
+			</li>
+			
+			
+					<li id="" >
+					<a href="/section/index/puzzles" onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'puzzles']);">
+					Puzzles					</a>
+			</li>
+			
+			
+					<li><a style="padding: 0px;" href="http://store.theweek.com?utm_source=theweek&utm_medium=site&utm_campaign=nav" target="_blank" onclick="_gaq.push(['_trackEvent','Home', 'Main-menu', 'Shoping_cart_icon']);"><img style="display: inline;height: 23px;vertical-align: top;" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/shopping_cart1.png?209"arget="_blank" onclick="_gaq.push(['_trackEvent','Home', 'Main-menu', 'Shoping_cart_icon']);"><img style="display: inline;height: 23px;vertical-align:/></a>
+			<a href="http://store.theweek.com?utm_source=theweek&utm_medium=site&utm_campaign=nav" target="_blank" onclick="_gaq.push(['_trackEvent','Home', 'Main-menu', 'Shoping_cart_icon']);">STORE</a></li>
+			<!-- <li style="background-color:#B3191C; color:#FFF"><a href="http://xerox.theweek.com">BIZ SIMPLE</a></li> -->
+			<!-- li><a href="/section/captured">PHOTOS</a></li -->
+		</ul>
+	</div>
+	<!-- <div id='HPVoicesBar'>
+		<ul>
+		<li style="padding-top:3px;padding-left:7px"><img height="14" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/new_voice.png?209" /></li>
+
+					<li>
+					<a href="/the_compass" 
+						onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', '/the_compass']);" >Marc Ambinder					</a>
+			</li>
+					<li>
+					<a href="/the_cloakroom" 
+						onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', '/the_cloakroom']);" >Taegan Goddard					</a>
+			</li>
+					<li>
+					<a href="/author/edward-morrissey" 
+						onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', '/author/edward-morrissey']);" >Ed Morrissey					</a>
+			</li>
+					<li>
+					<a href="http://theweek.com/author/john-aziz" 
+						onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'http://theweek.com/author/john-aziz']);" >John Aziz					</a>
+			</li>
+					<li>
+					<a href="/author/paul-brandus" 
+						onClick="_gaq.pus<a href="http://theweek.com/author/john-aziz" 
+						onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'http://theweek.com/author/john-aziz']);h(['_trackEvent', 'Home', 'Main-menu', '/author/paul-brandus']);" >Paul Brandus					</a>
+			</li>
+					<li>
+					<a href="/author/matt-k-lewis" 
+						onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', '/author/matt-k-lewis']);" >Matt Lewis					</a>
+			</li>
+					<li>
+					<a href="/author/arika-okrent" 
+						onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', '/author/arika-okrent']);" >Arika Okrent					</a>
+			</li>
+					<li>
+					<a href="http://theweek.com/author/bill-scher" 
+						onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'http://theweek.com/author/bill-scher']);" >Bill Scher					</a>
+			</li>
+					<li>
+					<a href="http://theweek.com/author/james-harbeck" 
+						onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', 'http://theweek.com/author/james-harbeck']);" >James Harbeck					</a>
+			</li>
+					<li>
+					<a href="/author/monika-bartyzel" 
+						onClick="_gaq.push(['_trackEvent', 'Home', 'Main-menu', '/author/monika-bartyzel']);" >Girls on Film					</a>
+			</li>
+		 
+		</ul>
+	</div> -->
+</div>
+
+		
+		<div id="leaderboard_main_div_anchor" class="leaderboard" style="">
+<div id='HPLeaderbox'>
+<!-- <div id='div-gpt-ad-1385152635178-2' style='width:1010px; height:50px;padding-bottom: 8px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1385152635178-2'derboard" style="">
+<div id='HPLeaderbox'>
+<!-- <div id='div-gpt-ad-1385152635178-2' style='width:1010px; height:50px;padding-bottom: 8px;'>
+<scrip); });
+</script>
+</div> -->
+	<table style="margin-left:auto;margin-right:auto"><tr><td>
+		<!-- mf_test_article_728x90 -->
+		<div id='Leaderboard' >
+			<script type='text/javascript'>
+			googletag.cmd.push(function() { googletag.display('Leaderboard'); });
+			</script>
+		</div>
+
+	</td></tr></table>
+</div>
+</div>
+
+
+	    <!-- ?php echo $this->element('hot_topics_ribbon'); ? --> 
+
+		<div id="content" class="">
+						
+		
+		
+		<div class="sticky_social" style="display:none;">
+		
+
+<div id="example2">
+  				<div id="twitter-social-sticky" class="twitter" data-url="http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa" data-text="What Ebola can teach us about a new bubonic plague outbreak in Africa" data-title="&nbsp;"></div>
+  				<div id="facebook-social-sticky" class="facebook" data-url="http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa" data-text="What Ebola can teach us about a new bubonic plague outbreak in Africa" data-title="&nbsp"></div>
+				<div id="email-social-sticky" style="float:left;"><a href="mailto:?subject=What Ebola can teach us about a new bubonic plague outbreak in Africa&amp;body= What Ebola can teach us about a new bubonic plague outbreak in Africa : http://theweek.com/article/index/272990/what-ebola-can-teastyle="float:left;"><a href="mailto:?subject=What Ebola can teach us about a new bubonic plague outbreak in Africa&amp;body= What Ebola can teach us ach-us-about-a-new-bubonic-plague-outbreak-in-africa" target="_blank" title="Share by Email"><div class="email">&nbsp;</div></a></div>
+ 				
+				</div>
+				
+ 
+
+<script>
+jQuery('.twitter').sharrre({
+  share: {
+    twitter: true
+  },
+  enableHover: false,
+  enableTracking: true,
+  buttons: { twitter: {via: 'TheWeek'}},
+  click: function(api, options){
+    api.simulateClick();
+    api.openPopup('twitter');
+  }
+});
+jQuery('.facebook').sharrre({
+  share: {
+    facebook: true
+  },
+  enableHover: false,
+  enableTracking: true,
+  click: function(api, options){
+    api.simulateClick();
+    api.openPopup('facebook'); 
+  }
+});
+
+</script> 
+
+<style type="text/css">
+#example1{
+	clear: both;
+    float:left;
+    padding-bottom: 32px;
+    padding-top: 10px;
+}
+.sharrre{
+    float:left;
+}
+.sharrre .box a:hover{
+    text-decoration:none;
+}
+.sharrre .count {
+  	text-decoration: none;
+	margin-left: -2px;
+	float: right;
+	color: #333333;
+	display: block;
+	font-size: 12px;
+	line-height: 30px;
+	height: 28px;
+	position: relative;
+	text-align: center;
+	width: 32px;
+	border: 1px solid #cccccc;
+	border-left: none;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.sharrre .share {
+  	float:left;
+    color:#FFFFFF;
+    fot-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-rant-size:12px;
+    font-weight:bold;
+    height:30px;
+    line-height:30px;
+    padding:0;
+    text-align:center;
+    text-decoration:none;
+    width:30px;
+   border: none;
+}
+.twitter{ 
+	padding-right:10px;
+}
+.facebook{ 
+	padding-right:10px;
+}
+.twitter .share {
+    text-shadow: 1px 0px 0px #0077be;
+  	background-image:url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/speedreads/speedreads_tweet.jpg?209);
+	background-repeat: no-repeat;
+}
+
+.facebook .share {
+     text-shadow: 1px 0px 0px #0077be;
+ 	background-image: url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/speedreads/speedreads_fb.jpg?209);
+	background-repeat: no-repeat;
+}
+.email {
+	display: inline;
+	padding-bottom: 10px;
+	padding-right: 30px;
+ 	background-image: url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/speedreads/speedreads_mail2.jpg?209);
+	background-repeat: no-repeat;
+	background-size: 30px;
+}
+.cN{padding-top: 4px;}
+#twitter-social-sticky{ 
+	margin-bottom: 5px;
+	display: block;
+	}
+#facebook-social-sticky {
+	margin-bottom: 5px;
+	display: block;
+	}
+#email-social-sticky{
+	float: none!important;
+	clear: both;
+	height: 28px;
+	margin-bottom: 5px;
+	display:block;
+}
+.sticky_social .clickme{
+	float: left!important;
+}
+.sticky_social #example2 .cb2 {
+	margin-left:0px!important;
+	}
+</style></div>
+		
+			<div id="homepage">
+			   float: none!important;
+	clear: both;
+	height: 28px;
+	margin-bottom: 5px;
+	display:block;
+}
+.sticky_social .clickme{
+	float: left!important;
+}
+.sticky_ <div id='nfArticle'>
+			   
+			    
+				    <div id='nfHeadline'>
+				    					    What Ebola can teach us about a new bubonic plague outbreak in Africa					</div>
+				    <div id='nfSubheadline'>
+					    Both outbreaks are unusual, just not for the reasons people may think					</div>
+				    <div id='nfInfo'>
+						<div id='nfBylineAndDate' class='nfRedlink'>
+							By s.e. smith&nbsp<span style="color:#ccc;font-weight:300;">|</span>&nbsp;<span style="white-space:nowrap">December 5, 2014</span>						</div>
+						<div class='nfSocial' style="margin-top:6px!important;">
+							
+
+<div id="example2">
+  				<div id="twitter-social-top" class="twitter" data-url="http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa" data-text="What Ebola can teach us about a new bubonic plague outbreak in Africa" data-title="&nbsp;"></div>
+  				<div id="facebook-social-top" class="facebook" data-url="http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa" data-text="What Ebola can teach us about a new bubonic plague outbreak in Africa" data-title="&nbsp"></div>
+				<div id="email-social-top" style="float:left;"><a href="mailto:?subject=What Ebola can teach us about a new bubonic plague outbreak in Africa&amp;body= What Ebola can teach us about a new bubonicic plague outbreak in Africa" data-title="&nbsp"></div>
+				<div id="email-social-top" style="float:left;"><a href="mailto:?subject=What Ebola can tea plague outbreak in Africa : http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa" target="_blank" title="Share by Email"><div class="email">&nbsp;</div></a></div>
+ 				
+				</div>
+				
+ 
+
+<script>
+jQuery('.twitter').sharrre({
+  share: {
+    twitter: true
+  },
+  enableHover: false,
+  enableTracking: true,
+  buttons: { twitter: {via: 'TheWeek'}},
+  click: function(api, options){
+    api.simulateClick();
+    api.openPopup('twitter');
+  }
+});
+jQuery('.facebook').sharrre({
+  share: {
+    facebook: true
+  },
+  enableHover: false,
+  enableTracking: true,
+  click: function(api, options){
+    api.simulateClick();
+    api.openPopup('facebook'); 
+  }
+});
+
+</script> 
+
+<style type="text/css">
+#example1{
+	clear: both;
+    float:left;
+    padding-bottom: 32px;
+    padding-top: 10px;
+}
+.sharrre{
+    float:left;
+}
+.sharrre .box a:hover{
+    text-decoration:none;
+}
+.sharrre .count {
+  	text-decoration: none;
+	margin-left: -2px;
+	float: right;
+	color: #333333;
+	display: block;
+	font-size: 12px;
+	line-height: 30px;
+	height: 28px;
+	position: relative;
+	text-align: center;
+	width: 32px;
+	border: 1px solid #cccccc;
+	border-left: none;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border
+	width: 32px;
+	border: 1px solid #cccccc;
+	border-left: none;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz--bottom-right-radius: 5px;
+}
+.sharrre .share {
+  	float:left;
+    color:#FFFFFF;
+    font-size:12px;
+    font-weight:bold;
+    height:30px;
+    line-height:30px;
+    padding:0;
+    text-align:center;
+    text-decoration:none;
+    width:30px;
+   border: none;
+}
+.twitter{ 
+	padding-right:10px;
+}
+.facebook{ 
+	padding-right:10px;
+}
+.twitter .share {
+    text-shadow: 1px 0px 0px #0077be;
+  	background-image:url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/speedreads/speedreads_tweet.jpg?209);
+	background-repeat: no-repeat;
+}
+
+.facebook .share {
+     text-shadow: 1px 0px 0px #0077be;
+ 	background-image: url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/speedreads/speedreads_fb.jpg?209);
+	background-repeat: no-repeat;
+}
+.email {
+	display: inline;
+	padding-bottom: 10px;
+	padding-right: 30px;
+ 	background-image: url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/speedreads/speedreads_mail2.jpg?209);
+	background-repeat: no-repeat;
+	background-size: 30px;
+}
+.cN{padding-top: 4px;}
+#twitter-social-sticky{ 
+	margin-bottom: 5px;
+	display: block;
+	}
+#facebook-social-sticky {
+	margin-bottom: 5px;
+	display: block;
+	}
+#email-social-sticky{
+	float: none!important;
+	clear: both;
+	height: 28px;
+	margin-bottom: 5px;
+	display:block;
+}
+.sticky_social .clickme{
+	float: left!important;
+}
+.sticky_social #example2 .cebook-social-sticky {
+	margin-bottom: 5px;
+	display: block;
+	}
+#email-social-sticky{
+	float: none!important;
+	clear: both;
+	height: 28px;
+	margin-botcb2 {
+	margin-left:0px!important;
+	}
+</style>						</div>
+					</div>
+
+															
+					
+
+
+									    <div id='nfLargeImageBlock'>
+					    <div id='nfLargeImage'>
+						     						     								<img width=690 height=425 src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/img/dir_0129/64685_article_full/west-africas-ebola-outbreak-could-inform-responders-to-madagascars-plague-cases.jpg?209"
+												alt="West Africa&#039;s Ebola outbreak could inform responders to Madagascar&#039;s plague cases." />
+						     						</div>
+					    <div id='nfLargeCaptionAndCredit'>
+							<div id='nfLargeCaption'>
+							    West Africa&#39;s Ebola outbreak could inform responders to Madagascar&#39;s plague cases.							    <span id='nfLargeCredit'>
+							    (John Moore/Getty Images)							</span>
+							</div>
+						</div>
+					</div>
+									    <div id='nfArticleBody'>
+						<div id='nfBodyText'>
+							<div id='articleInfo'>
+																										
+																
+							</div>
+							
+						<p><span class="nfInitial" style="width:44;">W</span>hile West Africa battles Ebola, <a href="http://online.wsj.com/articles/madagascar-plague-outbreak-kills-40-1416659371">another outbreak</a> is striking just across the continent. In Madagascar, cases of plague are erupting in the small village of <a href="http://healthmap.otles Ebola, <a href="http://online.wsj.com/articles/madagascar-plague-outbreak-kills-40-1416659371">another outbreak</a> is striking just across the crg/site/diseasedaily/article/madagascars-plague-outbreak-1314">Mandritsara</a> and the disease is spreading to neighboring communities. The two outbreaks are related by more than simple surface similarities, though. In fact, fighting the first has provided an invaluable blueprint for containing the second.</p>
+<p>First off, it's important to note that both outbreaks are unusual, just not for the reasons people may think. What makes them stand out isn't that they're occurring in the first place, but the number of cases involved.</p>
+<p>Many Westerners mistakenly assume Ebola and the plague as rare. They're not. The CDC has recorded <a href="http://www.cdc.gov/vhf/ebola/outbreaks/history/chronology.html">35 separate outbreaks</a> (including the current one) of Ebola in West Africa since the discovery of the virus, indicating that the virus is actually endemic to the region. While it remains dormant much of the time, occasionally it resurges, though usually in much smaller and less fatal outbreaks.</p>
+<p>Likewise, the <a href="http://pivotworks.org/investigating-the-ecology-of-endemic-plague-in-madagascar-through-genomic-analysis-of-the-main-host-reservoir-the-black-rat/">plague is endemic in Madagascar</a>, with periodic flare-ups of the disease, usually the result of poor hygiene and inadequate control of food supplies like grain (which draws rodents infehrough-genomic-analysis-of-the-main-host-reservoir-the-black-rat/">plague is endemic in Madagascar</a>, with periodic flare-ups of the disease, usuallcted with <em>Yersinia pestis, </em>the bacterium responsible for plague). It's also an issue in some parts of <a href="http://www.bbc.com/news/world-asia-china-28437338">China</a>, <a href="http://www.who.int/csr/disease/plague/impact/en/">Indonesia</a>, and even <a href="http://www.livescience.com/40003-plague-still-afflicts-world.html">the American West</a>. The bacterium, in other words, has <a href="http://www.cdc.gov/plague/maps/">no plans of dying off any time soon</a>, but there's a silver lining. The <a href="http://www.genome.gov/27556491">aggressive bacterial strain</a> that caused the infamous "Black Death," responsible for killing millions across Europe, <em>is</em> <a href="http://www.livescience.com/15826-black-death-bacteria-extinct.html">extinct</a>. No matter how serious the Madagascar outbreak becomes, it won't rise to the level of the world's most notorious plague epidemic.</p>
+<p>You might not necessarily know that, if you believe the media. The BBC warned of "<a href="http://www.bbc.com/news/world-africa-25324011">declining living standards</a>" in the island nation, suggesting that the plague could spread further than it ever had before. <em>The Guardian </em><a href="http://www.theguardian.com/world/2013/dec/20/bubonic-plague-outbreak-deaths-madagascar">implied</a> that this outbreak of bubonic plague was identical to the Black Deathe plague could spread further than it ever had before. <em>The Guardian </em><a href="http://www.theguardian.com/world/2013/dec/20/bubonic-plague-outb, despite readily available scientific evidence to the contrary. <em>The Washington Post, </em>via an Associated Press wire, <a href="http://www.washingtonpost.com/world/africa/plague-outbreak-kills-40-people-in-madagascar/2014/11/22/51b80ae6-722f-11e4-a2c2-478179fd0489_story.html">made the same erroneous suggestion</a>.</p>
+<p>As with Ebola, false claims about the plague spread quickly and infect body politics around the world. While the World Health Organization <a href="http://www.independent.co.uk/news/world/africa/plague-outbreak-in-madagascar-kills-40-people-out-of-119-confirmed-cases-9876809.html">doesn't recommend</a> travel bans or trade restrictions, the island has already been tarred for being literally plague ridden. The notoriously gun-shy U.S. State Department hasn't even issued a <a href="http://travel.state.gov/content/passports/english/alertswarnings.html">travel advisory</a> for Madagascar, instead freely admitting that <a href="http://travel.state.gov/content/passports/english/country/madagascar.html">plague is endemic</a> to the region. But that hasn't halted the outbreak of fear.</p>
+<p>So one vital lesson learned from Ebola is that scientific literacy is key for the media, to ensure that reporting is accurate and designed to inform, rather than frighten. Making sure scientists are heard is key, which is why many have turned to <a hrefp>So one vital lesson learned from Ebola is that scientific literacy is key for the media, to ensure that reporting is accurate and designed to inform="http://blogs.msf.org/en/staff/blogs/msf-ebola-blog">blogs</a>, <a href="https://twitter.com/ebolaalert">Twitter</a>, and other online venues for communicating information about Ebola directly to the public. Before the plague story snowballs, first responders in Madagascar must do the same.</p>
+<p>But there are more important lessons that responders are learning on the ground in West Africa, too. These tools aren't just useful for handling the current situation, but also for controlling outbreaks in the future &mdash; including, possibly, the ongoing outbreak in Madagascar.</p>
+<p>In Madagascar, the plague started in rural villages, and appears to be <a href="http://www.iflscience.com/health-and-medicine/bubonic-plague-outbreak-spreads-madagascar">spreading to the nation's capital</a>, Antananarivo. As with Ebola in West Africa, rapid identification of the infection has been critical to containment, jump-starting data collection and surveillance &mdash; i.e., tracking the spread of the disease, including its movement through various connected social circles. Along the way, researchers <a href="http://www.iflscience.com/health-and-medicine/bubonic-plague-outbreak-spreads-madagascar" target="_blank">already determined</a> the identity of patient zero.</p>
+<p>Collecting information like this might seem secondary to treating cases, but it's not. As in West Aiflscience.com/health-and-medicine/bubonic-plague-outbreak-spreads-madagascar" target="_blank">already determined</a> the identity of patient zero.</pfrica, data collection is actually critical to getting in front of a disease, rather than scrambling to clean up after it. While individual patient care is, of course, important, it needs to be paired with aggressive steps to cordon the disease.</p>
+<p>That involves <a href="http://www.who.int/csr/don/21-november-2014-plague/en/">rapidly deploying </a>people like doctors, nurses, epidemiologists and, if necessary, law enforcement and soldiers to the affected areas. Creating quarantines around infected communities stamps out flare-ups of disease quickly. Allowing people to pass between villages can facilitate the spread of disease; in the case of Madagascar, for example, a shipment of grain from one village to another could carry infected rats and/or fleas, which would spread the plague even further.</p>
+<p>Ideally, quarantines should <a href="http://www.huffingtonpost.com/2014/08/21/liberia-ebola-quarantine-photos_n_5696120.html">not be militarized</a>, as this can intimidate and frighten members of a community, some of whom may be <a href="http://www.foxnews.com/health/2014/08/22/who-warns-shadow-zones-hidden-cases-in-ebola-outbreak/">reluctant to come forward</a> to ask for treatment and assistance. This has become a <a href="http://www.usatoday.com/story/news/world/2014/08/23/ebola-spreads-in-nigeria-liberia-has-1000-cases/14489251/">persistent problem<dden-cases-in-ebola-outbreak/">reluctant to come forward</a> to ask for treatment and assistance. This has become a <a href="http://www.usatoday.com/s/a> in West Africa, where the handling of local communities has created fear and resentment &mdash; including the belief that <a href="http://www.cbsnews.com/news/health-workers-battle-trust-issues-attacks-in-ebola-outbreak/">aid workers themselves</a> are responsible for the outbreak.</p>
+<p>This is an important lesson from West Africa that aid workers need to take into account as they enter Madagascar. It's critical to link up quickly with community leaders and authority figures, especially religious authorities, to reach out to communities and establish positive, friendly relationships that include <a href="http://www.wusa9.com/story/news/nation/2014/11/29/radio-educates-sierra-leone-amid-ebola-lockdown/19668501/">educating residents</a>. Moreover, aid workers need to understand local habits, traditions, and conventions so they can work with members of the community to increase their safety.</p>
+<p>In West Africa, for instance, that included the development of <a href="http://www.who.int/mediacentre/news/notes/2014/ebola-burial-protocol/en/">burial techniques</a> that honor traditional practices while still limiting exposure to infected body fluids. In Madagascar, that might include reaching out to local communities to address hygiene concerns, especially for <a href="http://news.discovery.com/human/health/bubonic-plague-spreads-in-madagascar-141125.htmtill limiting exposure to infected body fluids. In Madagascar, that might include reaching out to local communities to address hygiene concerns, espec">households with fleas</a> and their bacterial payload.</p>
+<p>Rapid delivery of medications is also important. Though no antivirals are currently available to treat Ebola, researchers worked quickly to explore alternate treatments, including those derived from the blood of survivors as well as a vaccine and an experimental drug called <a href="http://www.newsmax.com/LowellPonte/Ebola-Drug-Shortage-ZMapp/2014/10/07/id/599091/">ZMapp</a>. Meanwhile, they understood the critical importance of supportive medical care, such as replacing lost body fluids and managing infections (an issue in patients with immune systems compromised by fighting Ebola). When supplies weren't delivered, medical teams <a href="http://www.cidrap.umn.edu/news-perspective/2014/08/who-medical-worker-infections-and-shortages-hamper-ebola-response">weren't able to keep up with patients</a>. Madagascar shouldn't be failed in the same way.</p>
+<p>Enlisting the global community is a keystone. One of the most stark lessons learned from the Ebola outbreak is that once the virus gains a foothold and begins spreading, it can be extremely difficult to control. The outbreak might have been more manageable if global support for aid workers and regional governments had arrived more quickly to contain it. Nations with expertise in infectious disease, like Germany and the United States, can send in-kult to control. The outbreak might have been more manageable if global support for aid workers and regional governments had arrived more quickly to coind aid such as trained medical personnel, equipment, and supplies. All nations can help with funding.</p>
+<p>While money won't solve every problem, it could help teams in Madagascar pay for protective equipment for themselves and the communities in which they work. Funds would also be useful for paying medical personnel and helping aid workers meet staffing gaps. It could also fund supplies like insecticides to kill plague-carrying fleas and aggressive antibiotics to kill infections &mdash; rodent traps and better containers for grain could also go a long way toward containing the spread of disease. In addition, funding for patient education and training is necessary to remind people to seek help immediately. The bubonic plague can kill within days if antibiotics aren't administered.</p>
+<p>As scientists continue to work in West Africa and new teams of aid workers make their way to Madagascar, one of the biggest lessons learned may be that direct, fast action is critical. Furthermore, outreach and education should follow close behind, ensuring that the global community is informed about and takes an active role in disease control and prevention.</p>
+<p>Events in Madagascar aren't going to mirror those in West Africa; there are too many differences between the diseases and regions. But hard-won lessons learned from Ebola will still play an important role.e role in disease control and prevention.</p>
+<p>Events in Madagascar aren't going to mirror those in West Africa; there are too many differences bet</p>						<!--display auto promo code in "10 things you need to know today" after November 1, 2013-->
+												</div>
+								
+					</div>
+					
+				</div>
+
+
+				<div id='nfLowerSocialHolder'>
+				
+				    <div class='nfSocial_low' style="margin-right:6px;margin-bottom: 20px;margin-top:20px;">
+				    						
+
+<div id="example2">
+  				<div id="twitter-social-low" class="twitter" data-url="http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa" data-text="What Ebola can teach us about a new bubonic plague outbreak in Africa" data-title="&nbsp;"></div>
+  				<div id="facebook-social-low" class="facebook" data-url="http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa" data-text="What Ebola can teach us about a new bubonic plague outbreak in Africa" data-title="&nbsp"></div>
+				<div id="email-social-low" style="float:left;"><a href="mailto:?subject=What Ebola can teach us about a new bubonic plague outbreak in Africa&amp;body= What Ebola can teach us about a new bubonic plague outbreak in Africa : http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa" target="_blank" title="Share by Email"><div class="email">&nbsp;</div></a></div>
+ 				
+				</div>
+				
+ 
+
+<script>
+jQuery('.twitter')n Africa : http://theweek.com/article/index/272990/what-ebola-can-teach-us-about-a-new-bubonic-plague-outbreak-in-africa" target="_blank" title="Share.sharrre({
+  share: {
+    twitter: true
+  },
+  enableHover: false,
+  enableTracking: true,
+  buttons: { twitter: {via: 'TheWeek'}},
+  click: function(api, options){
+    api.simulateClick();
+    api.openPopup('twitter');
+  }
+});
+jQuery('.facebook').sharrre({
+  share: {
+    facebook: true
+  },
+  enableHover: false,
+  enableTracking: true,
+  click: function(api, options){
+    api.simulateClick();
+    api.openPopup('facebook'); 
+  }
+});
+
+</script> 
+
+<style type="text/css">
+#example1{
+	clear: both;
+    float:left;
+    padding-bottom: 32px;
+    padding-top: 10px;
+}
+.sharrre{
+    float:left;
+}
+.sharrre .box a:hover{
+    text-decoration:none;
+}
+.sharrre .count {
+  	text-decoration: none;
+	margin-left: -2px;
+	float: right;
+	color: #333333;
+	display: block;
+	font-size: 12px;
+	line-height: 30px;
+	height: 28px;
+	position: relative;
+	text-align: center;
+	width: 32px;
+	border: 1px solid #cccccc;
+	border-left: none;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.sharrre .share {
+  	float:left;
+    color:#FFFFFF;
+    font-size:12px;
+    font-weight:bold;
+    height:30px;
+    line-height:30px;
+    padding:0;
+    text-align:center;
+    text-decoration:none;
+    width:30px;
+   border: none;
+}
+.twitter{ 
+	us: 5px;
+}
+.sharrre .share {
+  	float:left;
+    color:#FFFFFF;
+    font-size:12px;
+    font-weight:bold;
+    height:30px;
+    line-height:30px;
+    papadding-right:10px;
+}
+.facebook{ 
+	padding-right:10px;
+}
+.twitter .share {
+    text-shadow: 1px 0px 0px #0077be;
+  	background-image:url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/speedreads/speedreads_tweet.jpg?209);
+	background-repeat: no-repeat;
+}
+
+.facebook .share {
+     text-shadow: 1px 0px 0px #0077be;
+ 	background-image: url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/speedreads/speedreads_fb.jpg?209);
+	background-repeat: no-repeat;
+}
+.email {
+	display: inline;
+	padding-bottom: 10px;
+	padding-right: 30px;
+ 	background-image: url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/speedreads/speedreads_mail2.jpg?209);
+	background-repeat: no-repeat;
+	background-size: 30px;
+}
+.cN{padding-top: 4px;}
+#twitter-social-sticky{ 
+	margin-bottom: 5px;
+	display: block;
+	}
+#facebook-social-sticky {
+	margin-bottom: 5px;
+	display: block;
+	}
+#email-social-sticky{
+	float: none!important;
+	clear: both;
+	height: 28px;
+	margin-bottom: 5px;
+	display:block;
+}
+.sticky_social .clickme{
+	float: left!important;
+}
+.sticky_social #example2 .cb2 {
+	margin-left:0px!important;
+	}
+</style>					   
+					</div>
+				</div>
+
+
+								<div id='nfBio'>
+					<div id='nfBioPhoto'>
+					</div>
+					<div id='nfBioContent'>
+						<div id='nfBioAuthor'>
+							s.e. smith						</div>
+						<div id='nfBioTwitter'>
+:0px!important;
+	}
+</style>					   
+					</div>
+				</div>
+
+
+								<div id='nfBio'>
+					<div id='nfBioPhoto'>
+					</div>
+					<div id='nfB							<a href="http://twitter.com/sesmithwrites" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @sesmithwrites</a>
+						</div>
+						<div id='nfBioText'>
+							s.e. smith is a writer, editor, and agitator from Northern California. smith works as the deputy opinion editor at <em>The Daily Dot</em> and the social justice editor at <em>xoJane</em>, with writing credits in publications like <em>The Guardian</em>, <em>Bitch Magazine</em>, <em>AlterNet</em>, <em>Nerve</em>, and <em>Time</em>.						</div>
+					</div>
+				</div>
+								
+
+				<!-- if the article is exxon ad the bottom three -->
+								<style>
+#test_A_B{
+	clear: both;
+	text-align: center;
+	padding-top: 20px;
+	font-family: "ff-meta-serif-web-pro";
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+	width: 690px;
+}
+#test_A_B a{
+	color: #0b6ddc;
+	text-decoration: underline;
+}
+</style>
+
+<script type="text/javascript">
+function testAB() {
+	var rand = Math.floor(Math.random()*2);
+	if(rand) {
+		jQuery("<div id='test_A_B'><div><a id='ab' href='https://secure.palmcoastd.com/pcd/!e.S?m=061DG&k=IR4L'>Try 4 Risk-Free Issues</a> of The Week Magazine</div></div>").insertAfter("#nfBio");
+		_gaq.push(['_trackEvent', 'Miscellaneous', 'A/B test impressions', 'IR4L', null, true]);
+	}
+	else {
+		jQuery("<div id='test_A_B'><div><a id='ab' href='https://secure.palmcoastd.com/ee Issues</a> of The Week Magazine</div></div>").insertAfter("#nfBio");
+		_gaq.push(['_trackEvent', 'Miscellaneous', 'A/B test impressions', 'IR4L', npcd/!e.S?m=061DG&k=IR4M'>Try 4 Risk-Free Issues</a> of The Week Magazine</div></div>").insertAfter("#nfArticle");
+		_gaq.push(['_trackEvent', 'Miscellaneous', 'A/B test impressions', 'IR4M', null, true]);
+	}
+}
+testAB();
+</script>
+				
+				<!-- yellow ribbon around the share trought add --> 
+<style>
+.sponsored-top {
+clear: both;
+}
+.related .nr_title {display:none!important;}
+</style>
+<div style="float:left;width: 690px;margin-bottom: 7px;" class="sponsored-top">
+	<li style='height: 7px;line-height: normal;border-bottom: 2px solid #ffdd00;list-style: none;margin-bottom: 14px;margin-left: 13px;'>
+	<div style='margin-left: -13px;display: block;position: absolute;'>
+	<div style='float:left;background-image: url("https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/flag-left.png?209");background-repeat: no-repeat;width:6px;'>&nbsp;</div>
+	<div class='definition' id='sponsor' style='background-color:#ffdd00;height: 16px;float:left;padding-top: 0px;padding-left: 5px;padding-right:5px;font-family:"nimbus-sans-condensed";font-weight: 700;color: #666666;text-transform: uppercase;font-size: 14px;text-align:left;'><div style='float:left'>Sponsor content </div>
+	</div><span>&nbsp;</span><div style='float:left;background-image: url("https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/flag-right.png?209");background-repeat: no-repeat;widtlign:left;'><div style='float:left'>Sponsor content </div>
+	</div><span>&nbsp;</span><div style='float:left;background-image: url("https://7e8c.https.h:20px;'>&nbsp;</div>
+	</div>
+	</li>  
+</div>
+<!-- ends yellow ribbon around the share trought add --> 
+				
+				
+<!-- theweek.com/TheWeek_Sharethrough_ArticleEnd_690x200 -->
+<div id='div-gpt-ad-1411048401652-0' style='clear: both;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1411048401652-0'); });
+</script>
+</div>
+
+<!-- div class="sponsored-top" style="border-bottom: 2px solid #ffdd00;height:1px;width:690px;"></div-->				
+				<!-- taboola code -->
+				<div id="taboola-below-article-thumbnails"></div>
+				<script type="text/javascript">
+				window._taboola = window._taboola || [];
+				_taboola.push({ mode: 'thumbnails-a', container: 'taboola-below-article-thumbnails', placement: 'Below Article Thumbnails', target_type: 'mix' });
+				</script>
+
+				<div class="sponsored-top" style="border-bottom: 2px solid #ffdd00;height:1px;width:690px;margin-bottom: 20px;margin-top: 20px;"></div>
+				<div id="taboola-below-article-text-links"></div>
+				<script type="text/javascript">
+				window._taboola = window._taboola || [];
+				_taboola.push({ mode: 'organic-text-links-a', container: 'taboola-below-article-text-links', placement: 'Below Article Text Links', target_type: 'mix' });
+				</script>
+				
+				<div id="editors_picks" style="float:left;width: 690px;padding-top: 20px;">
+                <div stylec-text-links-a', container: 'taboola-below-article-text-links', placement: 'Below Article Text Links', target_type: 'mix' });
+				</script>
+				
+		="float:left;width: 690px;"> <h3 class="nr_title">EDITORS' PICKS</h3></div>
+				<script>
+var mclicksscroll_offset = 0;
+var old_html;
+var html;
+var mclicks_limit = 6;
+var article_id = 272990;
+var loadingAnimation = new Image();
+loadingAnimation.src = "https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/loadingAnimation.gif?209";
+
+jQuery(function(){
+    
+    // inital population of cells
+    fillmclicksCells(6, 1);
+
+});
+
+function fillmclicksCells(limit, offset) {
+	var mclicks_displayed = 0;
+	old_html = jQuery("#mclicksscroll").html();
+ 	jQuery("#mclicksscroll").html('<img id="mclicks_loader" border="0" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/loadingAnimation.gif?209" />');
+	
+    console.log("Filling scroll cells, limit: "+(limit+1)+" offset: "+offset);
+    jQuery.getJSON('/section/mclicks/'+(limit+1)+'/'+offset+'/'+article_id, function(data) { 
+        html = [];
+        jQuery.each(data, function(idx, article) {
+        //for(i=data.length; i>=0; i--) {
+            	mclicks_displayed++;
+        		html.push('<div class="mclicksscrollcell"><a href ="'+article.url+'" onclick="_gaq.push([\'_trackEvent\', \'Miscellaneous\', \'Mclick_bottom_article\', \'Mclick_bottom_article\']);"><img border=0 style="max-width: 223px;padding-bottom: 12px;height:149px;" src="'+article.thumb+'"/>'+
+            	        '<span stye.url+'" onclick="_gaq.push([\'_trackEvent\', \'Miscellaneous\', \'Mclick_bottom_article\', \'Mclick_bottom_article\']);"><img border=0 style="max-widle="padding-left: 0.5px;padding-right: 0.5px;">'+article.short_hed_captured+'</span></a></div>');
+    	        if(mclicks_displayed == limit) return false; // break 
+        //} 
+        });
+        
+        var htmlstr = '';
+        jQuery.each(html, function(idx, str) {
+        	htmlstr += str;
+        });
+        
+        jQuery("#mclicksscroll").html(htmlstr);
+            if(data.length < limit) { 
+            	jQuery("#mclicksscroll").append(jQuery(old_html).slice(0, limit-data.length)); // make sure to fill all cells
+            }
+            console.log(old_html);
+    });
+}
+</script>
+
+<style>
+#mclicksscroll {
+    display:block;
+    margin: 40px auto 0 auto;
+    width:920px;
+    height: 180px;
+}
+.mclicksscrollcell {
+    display: inline-block;
+	text-align: left;
+	font-family: "ff-meta-serif-web-pro", "Times New Roman", Times, serif;
+	font-size: 18px;
+	color: rgb(134, 132, 132);
+	font-weight: 200;
+	height: 150px;
+	float: left;
+	max-width: 224px;
+	margin-right: 10px;
+	padding-bottom: 90px;
+}
+.mclicksscrollcell a{
+  color:#333333!important;
+}
+
+#mclicks_loader { 
+	margin:auto;
+	text-align:center;
+	float:left; 
+	margin-left:190px;
+	padding:68.5px;
+
+}
+#mydib { height: 50px;}
+</style>
+
+<div id="mclicksscrollouter" >
+    <div id="mclicksscroll"></div>
+</div>				</div>
+				
+				
+				<!-- 
+				//get 4 free isues
+				<div id="nfArticleSubscribe">
+					<div it; 
+	margin-left:190px;
+	padding:68.5px;
+
+}
+#mydib { height: 50px;}
+</style>
+
+<div id="mclicksscrollouter" >
+    <div id="mclicksscroll"></div>
+</div>d='div-gpt-ad-1383691392084-0'>
+					<script type='text/javascript'>
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1383691392084-0'); });
+					</script>
+					
+					</div>
+				</div -->
+				<div style="float:left;width: 690px;padding-top: 20px;margin-bottom: 20px;">
+                <div style="float:left;width: 690px;"> <h3 class="nr_title">THE WEEK'S AUDIOPHILE PODCASTS: LISTEN SMARTER</h3></div>
+				<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/37514747&color=ed1b24&auto_play=false&hide_related=false&show_artwork=true&show_user=false"></iframe>
+				</div>
+			
+
+			</div>   <!--homepage-->
+
+			<div id="rightColumn">
+			
+						
+				<style>
+.free{
+font-family: "nimbus-sans-condensed";
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.hpModule_4free{
+	margin: 12px 9px 0px 16px;
+	width: 300px;
+	background: #ffffff url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/topic_border_top1.gif?209) repeat-x scroll 0 0;
+	float: left;
+	border-left: 1px solid #c2c2c2;
+	border-right: 1px solid #c2c2c2;
+	border-bottom: 1px solid #c2c2c2;
+	border-top: 1px solid #c2c2c2;
+	}
+.col300_4free{
+	float: left;
+	margin: 0px 0px 12px 0px;
+	width: 300px;
+	border-top: 1px solid #c2c2c2;
+	bor
+	border-left: 1px solid #c2c2c2;
+	border-right: 1px solid #c2c2c2;
+	border-bottom: 1px solid #c2c2c2;
+	border-top: 1px solid #c2c2c2;
+	}
+.col300der-left: 1px solid #c2c2c2;
+	border-bottom: 1px solid #c2c2c2;
+	border-right: 1px solid #c2c2c2;
+	}
+</style>
+<div class="col300_4free">
+	<a class="free" href="https://secure.palmcoastd.com/pcd/!e.S?m=061DG&k=IR4A" 
+		style="cursor:pointer;">
+		<div style="vertical-align:top; margin-top:6px; margin-left:4px;">
+		<div style="width:187px;float:left;text-align: center;">GET 4 <span style="color:#ed1b24;">FREE</span> ISSUES of <span style="color:#ed1b24;">THE WEEK</span></div>
+		<div style="float:right;background-color:#ed1b24;height:32px;color:white;margin-top:4px;margin-right: 3px;width: 102px;padding: 2px;font-size: 18px;padding-top: 10px;text-align: center;">CLICK HERE</div>
+		</div>
+	</a>
+</div>
+ 
+<style>
+#square_main_div_anchor {
+    border: 0;
+    background: #eeeeee;
+}
+</style>
+<div id="square_main_div_anchor"  class=" col300">
+
+<!-- mf_test_article_300x250 -->
+<div id='Square1'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('Square1'); });
+</script>
+</div>
+
+</div>
+<style>
+.most_read{
+background-color: #ed1b24;
+font-family: 'nimbus-sans-condensed';
+color: white;
+text-transform: uppercase;
+padding: 5px;
+padding-left: 10px;
+margin-bottom: 10px;}
+.col300{padding-top:0px!important;}
+</style>
+
+
+<!--div class="col300">
+	<div id="topStories">
+		<script type="text/javascript">
+					</script>
+	</olor: white;
+text-transform: uppercase;
+padding: 5px;
+padding-left: 10px;
+margin-bottom: 10px;}
+.col300{padding-top:0px!important;}
+</style>
+
+div>
+</div-->
+
+<div class="col300">
+	<div id="topStories">
+		<div class="most_read">MOST POPULAR ON THE WEEK</div> 
+		
+		<div id="mostRead" class="topStoriesSection selectedTab">
+			<ol>
+						    <li><a href="/article/index/266737/how-to-be-the-most-productive-person-in-your-office-mdash-and-still-get-home-by-530-pm" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read', 'world', 1]);">How to be the most productive person in your office &mdash; and still get home by 5:30 p.m.</a></li>
+						    <li><a href="/article/index/268168/the-origins-of-all-30-nhl-team-names" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read', 'world', 2]);">The origins of all 30 NHL team names</a></li>
+						    <li><a href="/article/index/271407/9-daily-money-traps-mdash-and-how-to-subvert-them" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read', 'world', 3]);">9 daily money traps &mdash; and how to subvert them</a></li>
+						    <li><a href="/article/index/274048/confessions-of-a-former-tsa-officer" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read', 'world', 4]);">Confessions of a former TSA officer</a></li>
+						    <li><a href="/article/index/266696/6-things-the-happiest-families-all-have-in-common" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read', 'world', 5]);">6 things the happiest families all have in commof a former TSA officer</a></li>
+						    <li><a href="/article/index/266696/6-things-the-happiest-families-all-have-in-common" onClick="_gaq.push([on</a></li>
+						    <li><a href="/article/index/274046/what-wealth-does-to-your-soul" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read', 'world', 6]);">What wealth does to your soul</a></li>
+						    <li><a href="/article/index/254763/22-tv-shows-to-watch-in-2014" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read', 'world', 7]);">43 TV shows to watch in 2014</a></li>
+						    <li><a href="/article/index/274375/18-tv-shows-to-watch-in-2015" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read', 'world', 8]);">18 TV shows to watch in 2015</a></li>
+						    <li><a href="/article/index/274432/how-to-avoid-another-year-of-outrage" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read', 'world', 9]);">How to avoid another year of outrage</a></li>
+						    <li><a href="/article/index/261517/sexist-postcards-from-100-years-ago" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read', 'world', 10]);">Sexist postcards (from 100 years ago)</a></li>
+						</ol>
+		</div>
+	</div> 
+</div>
+
+<!-- yellow ribbon around the share trought add --> 
+<style>
+.sponsored-top {
+clear: both;
+}
+
+</style>
+<div style="float: left;width: 300px;margin-bottom: -10px;" class="sponsored-top">
+	<li style='height: 7px;line-height: normal;border-bottom: 2px solid #ffdd00;list-style: none;margin-bottom: 14px;margin-left: 13px;'>
+	<div stp {
+clear: both;
+}
+
+</style>
+<div style="float: left;width: 300px;margin-bottom: -10px;" class="sponsored-top">
+	<li style='height: 7px;line-height: nyle='margin-left: -13px;display: block;position: absolute;'>
+	<div style='float:left;background-image: url("https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/flag-left.png?209");background-repeat: no-repeat;width:6px;'>&nbsp;</div>
+	<div class='definition' id='sponsor' style='background-color:#ffdd00;height: 16px;float:left;padding-top: 0px;padding-left: 5px;padding-right:5px;font-family:"nimbus-sans-condensed";font-weight: 700;color: #666666;text-transform: uppercase;font-size: 14px;text-align:left;'><div style='float:left'>Sponsor content </div>
+	</div><span>&nbsp;</span><div style='float:left;background-image: url("https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/flag-right.png?209");background-repeat: no-repeat;width:20px;'>&nbsp;</div>
+	</div>
+	</li> 
+</div>
+<!-- ends yellow ribbon around the share trought add --> 
+
+
+<div id="taboola-right-rail-thumbnails"></div>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'thumbnails-d',
+    container: 'taboola-right-rail-thumbnails',
+    placement: 'Right Rail Thumbnails',    target_type: 'mix'
+  });
+</script>
+
+<div class="sponsored-top" style="border-bottom: 2px solid #ffdd00;height: 1px;width: 300px;margin-bottom: 20px;;margin-top: 20px;"></div>
+<style>
+.capturedtabTitle {
+	font: bold 20px Georgia;
+	text-align: left;
+s',    target_type: 'mix'
+  });
+</script>
+
+<div class="sponsored-top" style="border-bottom: 2px solid #ffdd00;height: 1px;width: 300px;margin-bottom: 	margin: 8px 0 2px 0;
+	padding-left:8px;
+	padding-top:4px;
+	
+}
+.caps{
+    background-color: #ed1b24;
+	font-family: 'nimbus-sans-condensed';
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 5px;
+	padding-left: 10px;
+
+  }
+.nfRedlink a:hover {
+	color:#f62c16;
+}
+.dailyPhotoHeader a:hover{
+	color:#f62c16;
+}
+.photoclipContainer div ul a:hover{
+	color:#f62c16;
+}
+a:link, a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover
+{
+	color: #f62c16;
+}
+.capturedCarouselCaption:hover{
+color: #f62c16;
+}
+</style> 
+<div class="col300" style="border-top:none;">
+	 <div id="mediaTabs">
+		 <a href="/section/latest_cartoon" onclick="_gaq.push(['_trackEvent', 'Ccol-module', 'Cartoon_module', '/cartoons/index/274543/political-cartoon-global-interests-2015']);"><div class="caps">
+                                        
+                <span style="color: #ffffff;">CARTOONS</span></div>
+		<div id="photoTab" class="mediatabsSection selectedTab">
+			<div class="featuredPhoto">
+				<a href="/cartoons/index/274543/political-cartoon-global-interests-2015"  onClick="rol(this,'Ccol-module','Cartoon_module',''); return false;"  >
+				<img style="width:300px;height=176px;" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/img/dir_0130/65326_cartoon_full.jpg?209" alt="" /></a>
+			</div>
+
+
+				<div id="mediaTabs">
+                
+        </div>
+
+		</div>
+	</div>
+>
+				<img style="width:300px;height=176px;" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/img/dir_0130/65326_cartoon_full.jpg?2</div>
+
+
+<div id="square_main_div_anchor"  class=" col300">
+
+<!-- mf_test_article_300x250 -->
+<div id='Square2'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('Square2'); });
+</script>
+</div>
+</div>
+<style>
+.input-email{
+	width:145px;
+	height:26px;
+	background: url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/icon_isubscribe.png?209) no-repeat left center;
+	background-color:#ffffff;
+	padding-left:40px;
+	font-size: 12px;
+	}
+.signup_btn{
+	background-color: #ed1b24;
+	font-family: "nimbus-sans-condensed"!important;
+	color: #ffffff;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+	cursor:hand;
+	width: 84px;
+	border: none;
+	height: 30px;
+	vertical-align: middle;
+	margin-left: 3px;
+	padding: 2px 8px;
+}
+.small_form{
+	 background-color:#f4f4f4;
+	 height:74px;
+	 padding-top: 10px;
+	 border-top:1px solid #c2c2c2;
+	 padding-left: 10px;
+	 font-family:"nimbus-sans-condensed"!important;
+	 font-weight: 900;
+	 font-size: 19px;
+	 text-align: left;
+}
+label.error {
+	color:#FF0000;
+	display:block;
+	font-family:sans-serif;
+	font-size:12px;
+	margin-left: 4px;
+	margin-top:2px;
+}
+p.sm_icon_subscribe {
+float: left;
+margin: 0 auto;
+padding-left: 19px;
+}
+.hpModule_signup{
+background: #ffffff url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/topic_border_top.gif?2091) repeat-x gin-left: 4px;
+	margin-top:2px;
+}
+p.sm_icon_subscribe {
+float: left;
+margin: 0 auto;
+padding-left: 19px;
+}
+.hpModule_signup{
+background: #ffffff url(hscroll 0 0;
+float: left;
+margin: 12px 9px 0px 16px;
+width: 300px;
+border-left: 1px solid #c2c2c2;
+border-right: 1px solid #c2c2c2;
+border-bottom: 1px solid #c2c2c2;
+float: left;
+}
+
+.col300_signup{
+	background: #ffffff url(https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/topic_border_top1.gif?209) repeat-x scroll 0 0;
+	border-left:1px solid #c2c2c2;
+	border-bottom:1px solid #c2c2c2;
+	border-right:1px solid #c2c2c2;
+	float:left;
+	margin:0px 0px 12px 0px;
+	width:300px;
+	}
+
+</style>
+<script type="text/javascript" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/js/jquery.validate.min.js?209"></script>
+<script>
+var newsletterTicked1
+var newsletterTicked2
+jQuery(document).ready(function() {
+	jQuery("#subsrcibe").validate({
+		rules: {
+			email: {
+				required: true
+				,email: true
+			}
+		},
+		errorPlacement: function(error, element) {
+			error.appendTo( element.parent("div").next("div") );
+		},
+		submitHandler: function(form) {
+			jQuery("#signup_btn").attr('disabled', 'disabled').css('opacity','.4');
+			jQuery.ajax({
+				url: '/api/newsletter/subscribe',
+				data: {email: jQuery("#email-test").val(), dailybriefing: 1, coffeebreak: 1},
+				dataType: 'json',
+				jsonp: false,
+				success: function(data) {
+					if(data.success==true) {
+						parent.newsletterTicked1 = 1;
+						parent.newsletterTicked2 = 1;
+						parent.formSubQuery("#email-test").val(), dailybriefing: 1, coffeebreak: 1},
+				dataType: 'json',
+				jsonp: false,
+				success: function(data) {
+					if(data.succmitted = true;
+						goUrl = '/home/newsletter/' + jQuery('#email-test').val().toLowerCase();
+						window.location.href = goUrl;
+
+					}
+					else {
+						jQuery("#signup_btn").attr('disabled', false).css('opacity', '1');
+						alert(data.message);
+					}
+				}
+			});
+
+		}
+	});
+
+});
+
+
+</script>
+
+<div class="col300_signup" style="border-top:none;">
+        <div>
+        <form id="subsrcibe" method="post" action="">
+        	<div class="small_form">
+        		<div>Sign up for our free email newsletters</div>
+
+        			<div style="padding-top:8px;padding-left:4px;">
+        			<input id="email-test" name="email" class="input-email" type="text"  placeholder="your email address here" value=""/>
+        			<input id="signup_btn" class="signup_btn" type="submit" name="submit" value="Sign Up" />
+        			</div>
+        			<div></div>
+        	</div>
+        	</form>
+        	<div style="background-color: #ffffff;height: 45px;padding-top: 15px;">
+				<div style="font-family:'nimbus-sans-condensed';margin-left: 10px;font-weight: 900;font-size: 18px;">AND FOLLOW US ON</div>
+			<div style="margin-left: 129px;margin-top: -25px;">
+			<p class="sm_icon_subscribe">
+				<a href="http://www.facebook.com/theweek" target="_blank"><img src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/fb_subscribe.png?209"/></a>
+			</p>
+			<p class="sm_icon_subscrib-top: -25px;">
+			<p class="sm_icon_subscribe">
+				<a href="http://www.facebook.com/theweek" target="_blank"><img src="https://7e8c.https.cdn.softlaye">
+				<a href="https://twitter.com/#!/TheWeek" target="_blank"><img src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/twitter_subscribe.png?209"/></a>
+			</p>
+			<p class="sm_icon_subscribe">
+			<a href="feed://theweek.com/home.rss" target="_blank"><img src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/subscribe_rss.png?209"/></a>
+			</p>
+			</div>
+        	</div>
+        </div>
+</div>
+
+<div class="world"  style="border-top:none;">
+		<img src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/blank_between.png?209" bgcolor="#eeeeee" border="0" style="margin:0px 0px -10px 0px;">
+         <div id='sticky-anchor'></div></div><style>
+
+#sticker.stick {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+
+
+}
+.hpModule_sticky {
+float: left;
+margin: 0px 9px 0px 16px;
+width: 300px;
+float: left;
+}
+
+</style>
+
+
+<script>
+function sticky_relocate() {
+  var window_top = jQuery(window).scrollTop()+1;
+  var div_top = (jQuery('#sticky-anchor').offset().top);
+  var isFirefox = typeof InstallTrigger !== 'undefined'; 
+  
+   if ((navigator.userAgent.match('iPad')) || (location.search.match('ipad=true'))) {
+	  		jQuery('#sticker').css( "display", "block" )
+			jQuery('#sticker').css( "position", "absolute" );
+			}
+   else if(isFirefox) {
+		    jQuery('#sticker').css( "display", "block" );
+		    jQuery('#sticker').cs || (location.search.match('ipad=true'))) {
+	  		jQuery('#sticker').css( "display", "block" )
+			jQuery('#sticker').css( "position", "absolute" );
+			s( "position", "relative" );
+		    }
+    else
+	        {
+			  		if (window_top > div_top)  {
+		    		jQuery('#sticker').addClass('stick');
+		    		jQuery('#sticker').css( "display", "block" );
+					jQuery('#sticker').css( "padding-top", "13px" );
+		    		
+		  		     } 
+		  		    else{ 
+		  			jQuery('#sticker').removeClass('stick');
+				   }
+			}
+	}
+
+jQuery(window).load(function() {
+  jQuery(window).scroll(sticky_relocate);
+  sticky_relocate();
+});
+</script>
+
+
+
+<div>
+<div id="sticker" style="display:none;width:300px;">
+<div id="square_main_div_anchor"  class=" col300">
+
+<!-- mf_test_article_300x250 -->
+<div id='Square3'>
+<!-- <img src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/youropinioncounts.jpg?209" width="300" height ="250">-->
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('Square3'); });
+</script>
+</div>
+</div>
+
+<style>
+.most_read{
+background-color: #ed1b24;
+font-family: 'nimbus-sans-condensed';
+color: white;
+text-transform: uppercase;
+padding: 5px;
+padding-left: 10px;
+margin-bottom: 10px;}
+.col300{padding-top:0px!important;}
+</style>
+<!--script>
+function switchTopStoriesTab2(tabObj) {
+    if (tabObj.id == "mostEmailedTabTitle2") {
+            jQuery("#mostEmailed2").addClass("selectedTab");
+            jQuery("#mostRead2").removeClass("selectedTab");
+            jQuery("#mostEmailedTabTitscript>
+function switchTopStoriesTab2(tabObj) {
+    if (tabObj.id == "mostEmailedTabTitle2") {
+            jQuery("#mostEmailed2").addClass("selectedTle2").addClass("active");
+            jQuery("#mostEmailedTabTitle2").removeClass("non-active");
+            jQuery("#mostReadTabTitle2").addClass("non-active");
+            jQuery("#mostReadTabTitle2").addClass("active");
+    } else if (tabObj.id == "mostReadTabTitle2") { 
+            jQuery("#mostEmailed2").removeClass("selectedTab");
+            jQuery("#mostRead2").addClass("selectedTab");
+            jQuery("#mostEmailedTabTitle2").addClass("non-active");
+            jQuery("#mostEmailedTabTitle2").removeClass("active");
+            jQuery("#mostReadTabTitle2").addClass("active");
+            jQuery("#mostReadTabTitle2").removeClass("non-active");
+    }        
+}
+</script-->
+
+
+<!--div class="col300">
+	<div id="topStories2">
+		<script type="text/javascript">
+					</script>
+	</div>
+</div-->
+
+<div class="col300">
+	<div id="topStories2">
+		<div class="most_read">MOST POPULAR ON THE WEEK</div> 
+		
+		<div id="mostRead2" class="topStoriesSection selectedTab">
+			<ol>
+						    <li><a href="/article/index/266737/how-to-be-the-most-productive-person-in-your-office-mdash-and-still-get-home-by-530-pm" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read2', 'world', 1]);">How to be the most productive person in your office &mdash; and still get home by 5:30 p.m.</a></li>
+						    <li><a href="/article/index/268168/the-origins-of-all-30-nhl-team-names" onClq.push(['_trackEvent', 'Ccol-module', 'Most-read2', 'world', 1]);">How to be the most productive person in your office &mdash; and still get home by 5ick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read2', 'world', 2]);">The origins of all 30 NHL team names</a></li>
+						    <li><a href="/article/index/271407/9-daily-money-traps-mdash-and-how-to-subvert-them" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read2', 'world', 3]);">9 daily money traps &mdash; and how to subvert them</a></li>
+						    <li><a href="/article/index/274048/confessions-of-a-former-tsa-officer" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read2', 'world', 4]);">Confessions of a former TSA officer</a></li>
+						    <li><a href="/article/index/266696/6-things-the-happiest-families-all-have-in-common" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read2', 'world', 5]);">6 things the happiest families all have in common</a></li>
+						    <li><a href="/article/index/274046/what-wealth-does-to-your-soul" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read2', 'world', 6]);">What wealth does to your soul</a></li>
+						    <li><a href="/article/index/254763/22-tv-shows-to-watch-in-2014" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read2', 'world', 7]);">43 TV shows to watch in 2014</a></li>
+						    <li><a href="/article/index/274375/18-tv-shows-to-watch-in-2015" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read2', 'world', 8]);">18 TV shows to watch in 2015</a></li>
+					d2', 'world', 7]);">43 TV shows to watch in 2014</a></li>
+						    <li><a href="/article/index/274375/18-tv-shows-to-watch-in-2015" onClick="_gaq.pus	    <li><a href="/article/index/274432/how-to-avoid-another-year-of-outrage" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read2', 'world', 9]);">How to avoid another year of outrage</a></li>
+						    <li><a href="/article/index/261517/sexist-postcards-from-100-years-ago" onClick="_gaq.push(['_trackEvent', 'Ccol-module', 'Most-read2', 'world', 10]);">Sexist postcards (from 100 years ago)</a></li>
+						</ol>
+		</div>
+	</div>
+</div>
+</div>
+
+ 
+			</div>
+		</div> 
+		<!--Partners-->		
+
+		<table id="promofooter" border="0" width="690" style="padding-bottom:6px;margin-left: -4px;clear: both;">
+   	 	  <tr height="28">
+   	 	  <td colspan="3" style="background-color: #ed1b24;"><div  style="background-color: #ed1b24;font-family: 'nimbus-sans-condensed';color: white;text-transform: uppercase;padding: 5px;padding-left: 10px;">
+   	 	  Subscribe to the Week</div></td>
+   	 	  </tr>
+   	 	  <tr align="center">
+   	 	  <td width="230" style="padding-top:7px;"><a href="https://secure.palmcoastd.com/pcd/!e.S?m=061DG&k=I3B1"><img style ="margin-left: -3px;" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/subscribe_footer_updated_arrows_order1.jpg?209"/></a></td>
+   	 	  <td width="230" style="padding-top:7px;"><a href="https://secure.palmcoastd.com/pcd/!e.S?m=061DG&k=I3P1"><img src="https://7e8c.https.cdn.softlayer.net/807E8E8C/origin.theweek.com/images/subscribe_footer_updated_arrows_order1.jpg?209"/></a></td>
+   	 	  <td width="230" style="padding-top:7px;"><a href="htC/origin.theweek.com/images/subscribe_footer_updated_arrows_order2.jpg?209"/></a></td>
+   	 	  <td width="230" style="padding-top:7px;"><a href="https://secure.palmcoastd.com/pcd/!e.S?m=061DG&k=I3D1"><img style ="margin-right: -3px;" src="https://7e8c.https.cdn.softlayer.net/807E8C/origin.theweek.com/images/subscribe_footer_updated_arrows_order3.jpg?209"/></a></td>
+   	 	  </tr>
+   	 	  </table>
+   	 	  <div id="footer" style="margin-left: -2px;margin-bottom:8px;">
+
+
+        <div class="footerLogo clearfix">
+			<div id="serverName" style="font-size:11px;color: #666666;display:none;float:left; margin-left:-120px;margin-top:3px">unknown</div>
+            <div class="footerText">
+        	<p>
+        	<script>
+			jQuery(function(){
+				if(jQuery.cookies.get("LoggedIn")=="True") {
+					jQuery("#subscriberloggedin").html('<a href="#">WELCOME, '+jQuery.cookies.get("UserFname")+'</a>');
+					jQuery("#subscriberloggedin").append(' / <a href="/home/logout">LOGOUT</a>');
+				}
+				else {
+					jQuery("#subscriberloggedin").html('<a href="https://secure.palmcoastd.com/pcd'+
+						'/FormRedirect?iID=8311301">SUBSCRIBE</a> / <a href="/home/login">SUBSCRIBER LOGIN</a>');
+				}
+			});
+        	</script>
+			<span id="subscriberloggedin"></span>
+			<span></span>  / &nbsp;
+			<a href="/home/mtoc" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'cu11301">SUBSCRIBE</a> / <a href="/home/login">SUBSCRIBER LOGIN</a>');
+				}
+			});
+        	</script>
+			<span id="subscriberloggedin"></span>
+			rrent issue']);"> CURRENT ISSUE</a> /
+			<a href="https://secure.palmcoastd.com/pcd/eSv?iMagId=061DG&i4Ky=IGQ3" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'give-a-gift']);" >GIVE A GIFT</a> /
+
+			<a href="https://secure.palmcoastd.com/pcd/einit?iKey=061DGA" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'back issues']);">BACK ISSUES</a> /
+			<a href="/classroom" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'classroom subscribtions']);">CLASSROOM SUBSCRIPTIONS</a> /
+			<a href="/home/info/rss" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'rss']);" >RSS</a> <br >
+			<a href="http://newads.theweek.com" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'ad info']);">AD INFO</a> /
+			<a href="/home/info/privacy" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'privacy policy']);">PRIVACY POLICY</a> /
+			<a href="/home/info/terms" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'terms & conditions']);">TERMS & CONDITIONS</a> /
+			<a href="http://www.theweek.co.uk/" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'the week uk']);">THE WEEK UK</a> /
+          	<!--a href="#" rel="nofollow">masthead</a-->
+			<a href="/home/info/sitemap" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'site map']);">follow" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'the week uk']);">THE WEEK UK</a> /
+          	<!--a href="#" rel="nofollow">masthead</aSITE MAP</a> /
+						<a href="http://theweek.com/service" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'subscriber-services']);" >CUSTOMER SERVICE</a> /
+			<a href="/home/info/contact" rel="nofollow" onclick="_gaq.push(['_trackEvent', 'Home', 'Footer', 'contact us']);">CONTACT US</a></p>
+
+
+        	<p class="trademark" style="margin-right: 21px;">&copy; 2015 THE WEEK Publications, Inc. All rights reserved. THE WEEK&reg; is a registered trademark owned by Felix Dennis.
+        	THEWEEK.COM is a trademark owned by Felix Dennis.</p>
+
+			</div>
+      </div>
+</div>
+
+		
+	</div>
+</div>
+
+<script>
+function sticky_relocate_btns() {
+  		var window_top = jQuery(window).scrollTop()+1;
+ 		var window_bottom = window_top + jQuery(window).height();
+  		var div_top = (jQuery('#twitter-social-top').offset().top + 30);
+  		var div_bottom = jQuery('#twitter-social-low').offset().top;
+  		var social_box_height = jQuery('.sticky_social').height();
+  		if((window_top > div_top) && ((window_top + social_box_height) < div_bottom)){
+  			jQuery('.sticky_social').fadeIn(200);
+  		}
+  		else if((window_top + social_box_height) >= div_bottom ){
+  			jQuery('.sticky_social').fadeOut(200); }
+  		else{
+  			jQuery('.sticky_social').fadeOut(200);
+  			}
+ 		}
+		
+  		jQuery(window).scroll(function() {
+  		sticky_relocate_btns();
+		});
+lse if((window_top + social_box_height) >= div_bottom ){
+  			jQuery('.sticky_social').fadeOut(200); }
+  		else{
+  			jQuery('.sticky_social').fade		jQuery( document ).ready(function() {
+        sticky_relocate_btns();
+		});
+
+
+
+
+jQuery('.nfInitial').ready(function() {
+    jQuery('.nfInitial').each(function(index) {
+	    map = {
+		'A' : 25, 'B' : 27, 'C' : 27, 'D' : 28, 'E' : 27, 'F' : 27, 'G' : 29, 'H' : 31,
+		'I' : 11, 'J' : 12, 'K' : 30, 'L' : 20, 'M' : 40, 'N' : 31, 'O' : 30, 'P' : 29,
+		'Q' : 30, 'R' : 29, 'S' : 27, 'T' : 25, 'U' : 30, 'V' : 30, 'W' : 44, 'X' : 29,
+		'Y' : 30, 'Z' : 28
+		}
+		ch = jQuery(this).text();
+		width = map[ch];
+
+		oldWidth = jQuery(this).width();
+		if (oldWidth != width) {
+		    jQuery(this).width(width);
+		}
+		console.log(index+' '+ch+' '+oldWidth+' => '+width);
+	})
+});
+
+</script>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+<!-- START Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2010 Nielsen Online -->
+<script type="text/javascript">
+  (function () {
+    var d = new Image(1, 1);
+    d.onerror = d.onload = function () {
+      d.onerror = d.onload = null;
+    };
+    d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-304563h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+  })();
+</script>
+<noscript>
+  <div>
+    <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-304563h&amp;cg=0&amp;cc=1&amp;ts=noscript"
+    width="1" height="1" alt="" />
+  </div>
+</norer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+  })();
+</script>
+<noscript>
+  <div>
+    <img src="//secure-us.imrworldwide.com/cgi-bscript>
+<!-- END Nielsen Online SiteCensus V6.0 -->                                             
+<script type="text/javascript">
+__compete_code = '86a835e8bafd5624193669c93fcdc250';
+(function () {
+    var s = document.createElement('script'),
+        e = document.getElementsByTagName('script')[0];
+    s.src = (document.location.protocol.toLowerCase() === 'https:' ? 'https:' : 'http:') +
+        '//c.compete.com/bootstrap/86a835e8bafd5624193669c93fcdc250/bootstrap.js';
+    s.type = 'text/javascript';
+    s.async = true;
+    if (e) { e.parentNode.insertBefore(s, e); }
+}());
+</script><script type='text/javascript'>
+    var _sf_async_config={};
+    /** CONFIGURATION START **/
+    _sf_async_config.uid = 8273;
+    _sf_async_config.domain = 'theweek.com';
+	_sf_async_config.useCanonical = true;
+    _sf_async_config.section = 'Other';
+		_sf_async_config.title = "What Ebola can teach us about a new bubonic plague outbreak in Africa";
+	   // _sf_async_config.author = 'Non-topic';    
+    /** CONFIGURATION END **/
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src',
+           (('https:' == document.location.protocol)te()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', ? 'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' : 'http://static.chartbeat.com/') +
+           'js/chartbeat.js');
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+</script>
+
+	<!--Crazy Egg Heat Mapping-->
+	<script type="text/javascript">
+	setTimeout(function(){var a=document.createElement("script");
+	var b=document.getElementsByTagName('script')[0];
+	a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/8334.js";
+	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+
+	// AdRadar Pixel
+	var adradar = new Image();
+	adradar.src="https://amch.questionmarket.com/adsc/d921388/184/1033707/adscout.php?ord="+new Date().getTime();
+	</script>
+<style>
+#TB_overlay {
+position: fixed;
+z-index:1100;
+top: 0px;
+left: 0px;
+height:100%;
+width: 100%;
+opacity: 0.8;
+background:#000000;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+filter: alpha(opacity=80);
+}
+.TB_overlayBG {
+	background-color:#000;
+	filter:alpha(opacity=75);
+	-moz-opacity: 0.95;
+	opacity: 0.95;
+}
+
+* html #TB_overlay { /* ie6 hack */
+     position: absolute;
+     height: expression(document.body.scrollHeighlter: alpha(opacity=80);
+}
+.TB_overlayBG {
+	background-color:#000;
+	filter:alpha(opacity=75);
+	-moz-opacity: 0.95;
+	opacity: 0.95;
+}
+
+* html t > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+
+
+
+#TB_window_imagemap{
+width:660px;
+position: fixed;
+z-index: 1102;
+color: #000000;
+display:none;
+text-align: left;
+top: 17%;
+left: 28%;
+background:none;}
+</style>
+
+<script>
+var is_homepage = location.pathname == "/";
+var xecookieName = 'xepop';
+var xecookieValue = jQuery.cookies.get(xecookieName);
+var xecookieExpires = new Date();
+xecookieExpires.setDate(xecookieExpires.getDate()+3650);//10yrs
+var xecookieOptions = {
+	domain: '.theweek.com',
+	expiresAt: xecookieExpires
+};
+</script>
+<style>
+.TB_overlayMacFFBGHack {background: url(../images/macFFBgHack.png) repeat;}</style>
+<script>
+
+function tb_remove_rm() {
+ 	jQuery("#TB_imageOff").unbind("click");
+	jQuery("#TB_closeWindowButton").unbind("click");
+	jQuery("#TB_window_imagemap").fadeOut("fast",function(){jQuery('#TB_window_imagemap,#TB_overlay,#TB_HideSelect').trigger("unload").unbind().remove();});
+	jQuery("#TB_load").remove();
+	if (typeof document.body.style.maxHeight == "undefined") {//if IE 6
+		jQuery("body","html").css({height: "auto", width: "auto"});
+		jQuery("html").css("overflow","");
+	}
+	document.onkeydown = "";
+	document.onkeyup = "";
+	return false;
+}
+
+function tb_show_imagemap(caption, url, imageGroup) {//function called when the user clicks on a thickss({height: "auto", width: "auto"});
+		jQuery("html").css("overflow","");
+	}
+	document.onkeydown = "";
+	document.onkeyup = "";
+	return false;
+}box link
+_gaq.push(['_trackEvent', 'open_xerox_lightbox', 'open_xerox_lightbox', null, null, true]);
+//console.log("tb " + caption + " " + url + " " + imageGroup);
+	try {
+		if (typeof document.body.style.maxHeight === "undefined") {//if IE 6
+			jQuery("body","html").css({height: "100%", width: "100%"});
+			jQuery("html").css("overflow","hidden");
+			if (document.getElementById("TB_HideSelect") === null) {//iframe to hide select elements in ie6
+				jQuery("body").append("<iframe id='TB_HideSelect'></iframe><div id='TB_overlay'></div><div id='TB_window_imagemap'></div>");
+				jQuery("#TB_overlay").click(tb_remove_rm);
+			}
+		}else{//all others
+			if(document.getElementById("TB_overlay") === null){
+				jQuery("body").append("<div id='TB_overlay'></div><div id='TB_window_imagemap'></div>");
+				jQuery("#TB_overlay").click(tb_remove_rm);
+			}
+		}
+
+		if(tb_detectMacXFF()){
+			jQuery("#TB_overlay").addClass("TB_overlayMacFFBGHack");//use png overlay so hide flash
+		}else{
+			jQuery("#TB_overlay").addClass("TB_overlayBG");//use background and opacity
+		}
+
+		if(caption===null){caption="";}
+		jQuery("body").append("<div id='TB_load'><img src='"+imgLoader.src+"' /></div>");//add loader to the page
+		jQuery('#TB_load').show();//show loader
+
+		var baseURL;
+	   if(url.indexOf("?")!==-1){ //ff there is a query string involved
+			baseURL = url.jQuery("body").append("<div id='TB_load'><img src='"+imgLoader.src+"' /></div>");//add loader to the page
+		jQuery('#TB_load').show();//show loader
+substr(0, url.indexOf("?"));
+	   }else{
+	   		baseURL = url;
+	   }
+
+
+	   //alert("bar");
+
+
+		var queryString = url.replace(/^[^\?]+\??/,'');
+		var params = tb_parseQuery( queryString );
+
+		TB_WIDTH = (params['width']*1) + 30 || 630; //defaults to 630 if no paramaters were added to URL
+		TB_HEIGHT = (params['height']*1) + 40 || 440; //defaults to 440 if no paramaters were added to URL
+		ajaxContentW = TB_WIDTH - 30;
+		ajaxContentH = TB_HEIGHT - 45;
+
+		if(url.indexOf('TB_iframe') != -1){// either iframe or ajax window
+				urlNoQuery = url.split('TB_');
+				jQuery("#TB_iframeContent").remove();
+				if(params['modal'] != "true"){//iframe no modal
+					jQuery("#TB_window_imagemap").append("<iframe frameborder='0' scrolling='no' hspace='0' src='"+urlNoQuery[0]+"' id='TB_iframeContent' name='TB_iframeContent"+Math.round(Math.random()*1000)+"' onload='tb_showIframe()' style='width:"+(ajaxContentW + 29)+"px;height:"+(ajaxContentH + 17)+"px;' > </iframe>");
+				}else{//iframe modal
+				jQuery("#TB_overlay").unbind();
+					jQuery("#TB_window_imagemap").append("<iframe frameborder='0' scrolling='no' hspace='0' src='"+urlNoQuery[0]+"' id='TB_iframeContent' name='TB_iframeContent"+Math.round(Math.random()*1000)+"' onload='tb_showIframe()' style='width:"+(ajaxContentW + 29)+"px;height:"+(ajaxContentH + 17)+"px;'> </iframe>");
+				}
+		}else{// not no' hspace='0' src='"+urlNoQuery[0]+"' id='TB_iframeContent' name='TB_iframeContent"+Math.round(Math.random()*1000)+"' onload='tb_showIframe()' style=an iframe, ajax
+						//alert(params['title']);
+				if(jQuery("#TB_window_imagemap").css("display") != "block"){
+					if(params['modal'] != "true"){//ajax no  modal
+					   jQuery("#TB_window_imagemap").append("<div id='TB_ajaxContent' class='TB_modal' style='width:"+ajaxContentW+"px;height:"+ajaxContentH+"px'></div>");
+
+					}else{//ajax modal
+					jQuery("#TB_overlay").unbind();
+					jQuery("#TB_window_imagemap").append("<div id='TB_ajaxContent' class='TB_modal' style='width:"+ajaxContentW+"px;height:"+ajaxContentH+"px;'></div>");
+					}
+				}else{//this means the window is already up, we are just loading new content via ajax
+					jQuery("#TB_ajaxContent")[0].style.width = ajaxContentW +"px";
+					jQuery("#TB_ajaxContent")[0].style.height = ajaxContentH +"px";
+					jQuery("#TB_ajaxContent")[0].scrollTop = 0;
+					jQuery("#TB_ajaxWindowTitle").html(caption);
+				}
+		}
+
+		jQuery("#TB_closeWindowButton").click(tb_remove_rm);
+
+			if(url.indexOf('TB_inline') != -1){
+				jQuery("#TB_ajaxContent").append(jQuery('#' + params['inlineId']).children());
+				jQuery("#TB_window_imagemap").unload(function () {
+					jQuery('#' + params['inlineId']).append( jQuery("#TB_ajaxContent").children() ); // move elements back when you're finished
+				});
+				tb_position();
+				jQuery("#TB_load").remove();
+				jQuery("#TB_window_imagemap").css({display:"unction () {
+					jQuery('#' + params['inlineId']).append( jQuery("#TB_ajaxContent").children() ); // move elements back when you're finished
+				})block"});
+			}else if(url.indexOf('TB_iframe') != -1){
+				tb_position();
+				if(jQuery.browser.safari){//safari needs help because it will not fire iframe onload
+					jQuery("#TB_load").remove();
+					jQuery("#TB_window_imagemap").css({display:"block"});
+				}
+			}else{
+				jQuery("#TB_ajaxContent").load(url += "&random=" + (new Date().getTime()),function(){//to do a post change this load method
+					tb_position();
+					jQuery("#TB_load").remove();
+					tb_init("#TB_ajaxContent a.thickbox");
+					jQuery("#TB_window_imagemap").css({display:"block"});
+				});
+			}
+
+
+		if(!params['modal']){
+			document.onkeyup = function(e){
+				if (e == null) { // ie
+					keycode = event.keyCode;
+				} else { // mozilla
+					keycode = e.which;
+				}
+				if(keycode == 27){ // close
+					tb_remove_rm();
+				}
+			};
+		}
+
+		jQuery('object').each(function(){ this.regDisplay=this.style.display; this.style.display='none'; });     //jas
+		jQuery('#TB_window_imagemap object').each(function(){ this.style.display=this.regDisplay; });                     //jas
+	} catch(e) {
+		//nothing here
+	}
+}
+
+jQuery(function() {
+	if(xecookieValue == 0) {
+	  if((window.location.pathname != "/" ) && (window.location.href.indexOf("flipbook") == -1))
+		//{tb_show_imagemap('', '/xerox/test.html?width=664&height=534&TB_iframe=true', null);}
+		jQuery.cookies.set(xecory(function() {
+	if(xecookieValue == 0) {
+	  if((window.location.pathname != "/" ) && (window.location.href.indexOf("flipbook") == -1))
+		//{tb_shookieName, 1, xecookieOptions);
+	}
+	else if(xecookieValue == null) {
+		jQuery.cookies.set(xecookieName, 0, xecookieOptions);
+	}
+});
+</script>
+
+<!-- Put the following JS Code at the end of the page inside the body tag -->
+
+	<script type="text/javascript">var nr_domain = "theweek.com"; </script>
+	<script type="text/javascript" async id="nrelate_loader_script"  data-nrelate-options="{ manual_ph_only: true, plugins: { related : { }, texchange : { } } }" src="http://static.nrelate.com/common_js/0.52.1/loader.min.js"></script>
+
+<script type="text/javascript">
+adroll_adv_id = "2CG4RYUZIJBFXDXAGRPHO4";
+adroll_pix_id = "EW3JH7NAQNDEZBUOTPOJZU";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+__adroll_loaded=true;
+var scr = document.createElement("script");
+var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+scr.setAttribute('async', 'true');
+scr.type = "text/javascript";
+scr.src = host + "/j/roundtrip.js";
+((document.getElementsByTagName('head') || [null])[0] ||
+document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+if(oldonload){oldonload()}};
+}());
+</script>
+
+<script type='text/javascript'>
+var _sf_async_config={};
+/** CONFIGURATION START **/
+_sf_async_config.uid = 8273;
+_sf_async_config.domain = 'theweek.com';
+_sf_async_config.useCanon.appendChild(scr);
+if(oldonload){oldonload()}};
+}());
+</script>
+
+<script type='text/javascript'>
+var _sf_async_config={};
+/** CONFIGURATION STAical = true;
+/** CONFIGURATION END **/
+(function(){
+function loadChartbeat() { window._sf_endpt=(new Date()).getTime(); var e = document.createElement('script'); e.setAttribute('language', 'javascript'); e.setAttribute('type', 'text/javascript'); e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js'); document.body.appendChild(e); }
+var oldonload = window.onload;
+window.onload = (typeof window.onload != 'function') ?
+loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+</script>
+
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-4.newrelic.com","licenseKey":"9cb21629a3","applicationID":"3186278","transactionName":"b1YGNUZYWEdUVBdYVlYcMRNdFl9aUVIbH0lQQw==","queueTime":0,"applicationTime":563,"ttGuid":"","agentToken":"","atts":"QxEFQw5CS0k=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script></body>
+</html>
+","transactionName":"b1YGNUZYWEdUVBdYVlYcMRNdFl9aUVIbH0lQQw==","queueTime":0,"applicationTime":563,"ttGuid":"","agentToken":"","atts":"QxEFQw5CS0k=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"

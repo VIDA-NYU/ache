@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <link rel="shortcut icon" href="favicon.ico" >
+   <link rel="apple-touch-icon" href="apple-touch-icon.png" >
+
+
+<title>AIDS Research Alliance: Home</title>
+
+
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <meta name="robots" content="index,follow" />
+  
+  <meta name="keywords" content="HIV/AIDS, HIV/AIDS treatment, AIDS research, AIDS cure, HIV science, HIV vaccine, HIV Vaccine Trials Network, clinical research" />
+  <meta name="description" content="AIDS Research Alliance exists to develop a cure for HIV/AIDS, medical strategies to prevent new infections, and better treatments for people living with HIV." />
+ 
+   <link rel="stylesheet" href="/styles/styles.css" type="text/css" />
+  <link rel="image_src" href="http://aidsresearch.org/images/logo.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+	
+  <script src="/javascript/menu.js" type="text/javascript"></script>
+  <script src="/javascript/jquery.hoverIntent.js" type="text/javascript"></script>
+  <script src="/javascript/jquery.cycle.all.js" type="text/javascript"></script>
+  <script src="/javascript/jquery.tools.min.js" type="text/javascript"></script>
+  <script language="JavaScript" type="text/javascript">
+<!--
+$(document).ready(function() {
+    $('#slideshow').cycle({
+    fx: 'fade',
+    speed: 1500,
+    timeout: 5000,
+    pause: 1,
+    pager: '.slide-nav',
+    pauseOnPagerHover: true
+	});
+});
+
+
+
+
+function mainmenu(){
+$(" #nav ul ").css({display: "none"}); // Opera Fix
+$(" #nav li").hoverIntent(function(){
+		$(this).find('ul:first').css({visibility: "visible",display: "none"}).show(300);
+		},function(){
+		$(this).find('ul:first').css({visibility: "hidden"});
+		});
+}
+
+ $(document).ready(function(){mainmenu();});
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3212571-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function()ow(300);
+		},function(){
+		$(this).find('ul:first').css({visibility: "hidden"});
+		});
+}
+
+ $(d {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+//-->
+</script>
+
+<!-- colorbox start-->
+
+ <link rel="stylesheet" href="http://aidsresearch.org/colorbox/colorbox.css" />
+
+        <script src="/colorbox/jquery.colorbox.js"></script>
+
+
+
+        <script>
+            jQuery(document).ready(function () {
+                jQuery('a.gallery').colorbox({ opacity:0.5 , rel:'group1' });
+            });
+        </script>
+<script>
+			$(document).ready(function(){
+				//Examples of how to assign the ColorBox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".form1").colorbox({iframe:true, width:"450", height:"500"});
+				$(".inline").colorbox({inline:true, width:"50%"});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script>
+
+
+<!-- colorbox end-->
+</head>
+
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div id="page-wrapper">
+<!-- Pre header enabled start -->
+<div id="pre-header">
+<center>
+<strong>We rely on donations from people like you to fund our research programs. <br />
+AIDS Research Alliance is a 501(c)(3) non-profit organization, every gift, large or small, is tax-deductible and moves our research forward. <br />
+<a href="http://aidsresearch.org/donate/online-donation"><strong>Please join us as we strive to realize an HIV-free generation. Please support our work. <em>Thank you.</em></strong></a><br/>
+</center>
+</div>
+ <div id="header-wrapper">
+
+  <div id="header">
+	
+   <div id="logo">
+    <a href="http://aidsresearch.org/"><img src="http://aidsresearch.org/images/logo.png" height="118" width="200" alt="AIDS Research Alliance" /></a>	
+   </div><!-- end logo -->
+
+	<div id="facebook-header">
+
+<div class="fb-like" data-href="https://facebook.com/aidsresearch" data-send="false" data-width="180" data-show-faces="true" data-font="trebuchet ms"></div>	 
+</div>
+<!-- header-space1 disabled start
+
+<div id="header-space1">
+<a href="http://aidsresearch.org/news-events/news/ara-is-decembers-cause-of-the-month"><img src="http://aidsresearch.org/images/uploads/Cause-of-the-month.jpg" height="118" width="239" alt="News" /></a>
+</div>
+header-space1 disabled end-->
+
+	<div id="right-header">
+	 
+	 <div id="interact-box" style="width: 180px; ">
+<a href="http://aidsresearch.org/donate/online-donation"><img src="http://aidsresearch.org/images/bt_donate.png" height="91" width="133" alt="Donate" /></a>
+
+<div style="position:relative; top: -20px; "><h1><a href="http://aidsresearch.org/get-involved/mailing-list">Join the Alliance</a></h1></div>
+
+	
+	 </div><!-- end interact box -->
+	 <div class="clear"></div>
+
+	 
+
+	 <div class="clear"></div>
+
+  </div><!-- end right header wrapper -->
+
+<div id="search-box" style="position:relative;">
+
+<form id="search-form" method="post" action="http://aidsresearch.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="8" />
+<input type="hidden" name="XID" value="920776e1cbd001a3c15f473c3cedb3462c96450a" />
+<input type="hidden" name="RES" value="10" />
+<input type="hidden" name="meta" value="hxh3rylcG6AtbsjjC7GCYyIi5vci5VeLEi5Z7j1H7r6OfY+pJckSdGGdEv92n7uwf2XBPanahN+DGEc7iPXC2jc83w8kQMDFCbRQjq6IP+DH3kn5FljH6dZ8NoXQkssHekINeWnG3z2DiXKC3qTeH1W8SclvcjVMgbbUiBkZXLvgYKDGwVOK2lwZI+jNSCK5xwCQFg7LkGul/HKoajMjol41ET3qfpidwYudzlYq3Zgd3ffVY7mGtRL2TJ8abfKqHVlxqyhmLoYe8XAJGzcX/3oid545OnCL9tBEPIT9Pjqwxb0ZGmNK8MNsGmA43J5ZgdYCIRthRyXJ2Ar1QQCqFTbAnR/HZk3cOfY32u1E1ULkHkz/lT9ycpUwm2Uz9LMgUy0uVgIm8hEfeGDbgM/0vCFx3nFDqyz74yhbMqcemM0=" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+
+
+    		<input type="text" name="keywords" id="search-input" maxlength="255" value="" />
+      <input type="image" value="submit" id="search-submit" src="http://aidsresearch.org/images/bt_search.gif" />
+</form>
+
+	 </div><!-- end search box -->
+
+	</div><!-- end header -->
+  <!-- NAV BAR -->
+   <div id="nav-bar" >
+<ul id='nav'>
+<li class=" parent-node"><a href="http://aidsresearch.org/about/">Aboubmit" src="http://aidsresearch.org/images/bt_search.gif" />
+</form>
+
+	 </div><!-- end seart</a><ul>
+<li class=""><a href="http://aidsresearch.org/about/">About</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/mission-vision/">Mission & Vision</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/guiding-principles/">Guiding Principles</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/partners/">Scientific Partners</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/history">History</a></li>
+
+<li class=" parent-node"><a href="http://aidsresearch.org/about/leadership/staff/">Leadership</a><ul>
+<li class=""><a href="http://aidsresearch.org/about/leadership/staff/">Staff</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/leadership/our-scientists/">Scientific Staff</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/leadership/board/">Board of Directors</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/leadership/institutional-review-board/">Institutional Review Board</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/leadership/community-advisory-board/">Community Advisory Board</a></li>
+</ul></li>
+
+<li class=""><a href="http://aidsresearch.org/about/annual-reports">Annual Reports & 990s</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/sponsors/">Sponsors</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/contact">Contact Us</a></li>
+</ul><a href="http://aidsresearch.org/about/annual-reports">Annual Reports & 990s</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/sponsors/">S/li>
+
+<li class=" parent-node"><a href="http://aidsresearch.org/news-events/news/">News & Events</a><ul>
+<li class=""><a href="http://aidsresearch.org/news-events/news/">News</a></li>
+
+<li class=""><a href="http://aidsresearch.org/news-events/press-media">Press & Media</a></li>
+
+<li class=""><a href="http://aidsresearch.org/news-events/calendar/">Calendar</a></li>
+
+<li class=""><a href="http://aidsresearch.org/events-photo-gallery">Events Photo Gallery on Flickr</a></li>
+</ul></li>
+
+<li class=" parent-node"><a href="http://aidsresearch.org/cure-research/">Cure Research</a><ul>
+<li class=""><a href="http://aidsresearch.org/cure-research/">Cure Research</a></li>
+
+<li class=""><a href="http://aidsresearch.org/cure-research/eradicating-hiv-reservoirs">Eradicating HIV Reservoirs </a></li>
+
+<li class=""><a href="http://aidsresearch.org/cure-research/prostratin/">About Prostratin</a></li>
+
+<li class=""><a href="http://aidsresearch.org/cure-research/our-progress">Our Progress</a></li>
+
+<li class=""><a href="http://aidsresearch.org/cure-research/research-underway">Research Underway Now</a></li>
+
+<li class=""><a href="http://aidsresearch.org/cure-research/tour-the-research-lab">Tour the Research Lab </a></li>
+
+<li class=""><a href="http://aidsresearch.org/cure-research/links/">Cure Research Links</a></li>
+</ul></li>
+
+<li class=" parent-node"><a href="http://aidsresear"http://aidsresearch.org/cure-research/tour-the-research-lab">Tour the Research Lab </a></li>
+
+<li class=""><a href="http://aidsresearch.org/cure-resech.org/treatment-vaccine-research/">Treatment & Vaccine</a><ul>
+<li class=""><a href="http://aidsresearch.org/treatment-vaccine-research/">Treatment & Vaccine Research</a></li>
+
+<li class=""><a href="http://aidsresearch.org/cure-research/tour-the-research-lab">Tour the Research Lab</a></li>
+
+<li class=""><a href="http://aidsresearch.org/treatment-vaccine-research/drug-development-process/">The Drug Development Process</a></li>
+
+<li class=""><a href="http://aidsresearch.org/treatment-vaccine-research/links/">Treatment & Vaccine Research Links</a></li>
+</ul></li>
+
+<li class=" parent-node"><a href="http://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/studies-now-enrolling">Clinical Trials</a><ul>
+<li class=""><a href="http://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/studies-now-enrolling">Studies Now Enrolling</a></li>
+
+<li class=""><a href="http://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/">Who Can Join a Study?</a></li>
+
+<li class=""><a href="http://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/research-volunteers">Study Volunteers: The Heart of HIV Science </a></li>
+
+<li class=" parent-node"><a href="http://aidsresearch.org/treatment-vaccine-research/clinical-research-expertise/">Clinical Research Expertise</a><ul>
+<li class=""><a href="http://aidsresearch.org/treatment-volunteers: The Heart of HIV Science </a></li>
+
+<li class=" parent-node"><a href="http://aidsresearch.org/treatment-vaccine-research/clinical-research-accine-research/capabilities-at-a-glance">Capabilities at a Glance</a></li>
+
+<li class=""><a href="http://aidsresearch.org/treatment-vaccine-research/clinical-research-expertise/clinical-trials">Current & Recent Clinical Trials</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/partners/">Partners</a></li>
+
+<li class=""><a href="http://aidsresearch.org/about/leadership/our-scientists/">Our Medical Experts</a></li>
+</ul></li>
+
+<li class=""><a href="http://aidsresearch.org/clinical-trials/leukapheresis">Leukapheresis</a></li>
+</ul></li>
+
+<li class=" parent-node"><a href="http://aidsresearch.org/get-involved/">Get Involved</a><ul>
+<li class=""><a href="http://aidsresearch.org/get-involved/">Get Involved</a></li>
+
+<li class=" parent-node"><a href="http://aidsresearch.org/our-stories/">Our Stories</a><ul>
+<li class=""><a href="http://aidsresearch.org/our-stories/read-stories">Volunteer Stories</a></li>
+
+<li class=""><a href="http://aidsresearch.org/our-stories/donor-stories">Donor Stories</a></li>
+
+<li class=""><a href="http://aidsresearch.org/our-stories/">Your Stories</a></li>
+
+<li class=""><a href="http://aidsresearch.org/our-stories/watch-videos">Watch Videos</a></li>
+</ul></li>
+
+<li class=""><a href="http://aidsresearch.org/donate/shop-support">Shop & Support</a></li>
+
+<li class="external"><a href="/get-involved/mailing-list">Sign Up for our Newslhttp://aidsresearch.org/our-stories/watch-videos">Watch Videos</a></li>
+</ul></li>
+
+<li class=""><a href="http://aidsresearch.org/donate/shop-support"etter</a></li>
+
+<li class=""><a href="http://aidsresearch.org/get-involved/volunteer-sign-up">Sign Up as a Volunteer</a></li>
+
+<li class=""><a href="http://aidsresearch.org/donate/host-an-event">Host an Event </a></li>
+</ul></li>
+
+<li class=" parent-node"><a href="http://aidsresearch.org/donate/">Donate</a><ul>
+<li class=""><a href="http://aidsresearch.org/donate/">Donate</a></li>
+
+<li class=""><a href="http://aidsresearch.org/donate/online-donation">Online Donations</a></li>
+
+<li class=""><a href="http://aidsresearch.org/donate/host-an-event">Host a Fundraising Event</a></li>
+
+<li class=""><a href="http://aidsresearch.org/donate/legacy-giving">Legacy Giving</a></li>
+
+<li class=""><a href="http://aidsresearch.org/donate/stock-donations">Stock Donations</a></li>
+
+<li class=""><a href="http://aidsresearch.org/donate/wire-transfers">Wire Transfers</a></li>
+
+<li class=""><a href="http://aidsresearch.org/donate/vehicle-donation1">Vehicle Donations</a></li>
+
+<li class=""><a href="http://aidsresearch.org/donate/cure-bracelet">ARA Bracelets</a></li>
+</ul></li>
+</ul>
+<script>
+  var ua = $.browser;
+  if ( ua.mozilla && $.browser.version.slice(0,5) <= "1.9.0" ) {
+     jQuery('#nav a').css('font-size', '1.1em');
+     jQuery('#nav a').css('letter-spacing', '-.3px');
+  }
+</script>
+  <!-- END NAV BAR -->
+
+	 </div>
+ </div><!-- end header wrapper -->
+
+ <div id="content-wrapp& $.browser.version.slice(0,5) <= "1.9.0" ) {
+     jQuery('#nav a').css('font-size', '1.1em');
+     jQuery('#nav a').css('letter-spacing', '-.3px');
+ er" class="home">
+
+  <div id="content">
+
+  <div id="engagement-wrapper">
+
+  <!-- START BANNER -->
+   <div id="slideshow">
+   
+   
+		<div class="banner-slide">
+      <a href="http://aidsresearch.org/news-events/news/getting-ready-to-test-prostratin-on-the-reservoir-cells"><img alt="Preparing to Test Prostratin on Human Reservoir Cells" src="http://aidsresearch.org/images/uploads/Stefanie_magnet_photo_3_slider.jpg" height="454" width="763" /></a>
+        <div class="overlay">
+         <a href="http://aidsresearch.org/news-events/news/getting-ready-to-test-prostratin-on-the-reservoir-cells" class="box">
+         <h1>Preparing to Test Prostratin on Human Reservoir Cells</h1>
+         <p>Find out how Dr. Homann is preparing the lab.</p>
+         <div class="slide-nav"></div></a>
+      </div>
+		</div>
+   
+		<div class="banner-slide">
+      <a href="http://aidsresearch.org/news-events/news/how-ebola-reminds-us-of-aids"><img alt="How Ebola Reminds Us of AIDS" src="http://aidsresearch.org/images/uploads/Ebola_panic_slider.jpg" height="454" width="763" /></a>
+        <div class="overlay">
+         <a href="http://aidsresearch.org/news-events/news/how-ebola-reminds-us-of-aids" class="box">
+         <h1>How Ebola Reminds Us of AIDS</h1>
+         <p>Fear of Ebola reminds us of the early days of the AIDS epidemic, from which we have come so far - and yet still have so far to go.</p>
+         <div class="slide-nav"></div></a>
+      </div>
+		</div>
+   
+		<div class="banner-slide">
+      <a href="http://aidsresearch.org/docs/ARA-Searchlight_2014-web.pdf"><img alt="Searchlight 2014: How Close Are We to a Cure?" src="http://aidsresearch.org/images/uploads/Searchlight_slider_blur.jpg" height="454" width="763" /></a>
+        <div class="overlay">
+         <a href="http://aidsresearch.org/docs/ARA-Searchlight_2014-web.pdf" class="box">
+         <h1>Searchlight 2014: How Close Are We to a Cure?</h1>
+         <p>Read our latest publication to learn about HIV cure and vaccine research, and to see updates on our community >></p>
+         <div class="slide-nav"></div></a>
+      </div>
+		</div>
+   
+		<div class="banner-slide">
+      <a href="http://aidsresearch.org/clinical-trials/leukapheresis"><img alt="ARA Expands Clinical Expertise" src="http://aidsresearch.org/images/uploads/Stef_Leuka_4_slider.jpg" height="454" width="763" /></a>
+        <div class="overlay">
+         <a href="http://aidsresearch.org/clinical-trials/leukapheresis" class="box">
+         <h1>ARA Expands Clinical Expertise</h1>
+         <p>AIDS Research Alliance is now providing leukopaks to research and pharmaceutical institutions. </p>
+
+<p>Learn more >></p>
+         <div class="slide-nav"></div></a>
+      </div>
+		</div>
+   
+		<div class="banner-slide">
+      <a hreftise</h1>
+         <p>AIDS Research Alliance ="https://smile.amazon.com/ch/95-4264845"><img alt="Find out Why Amazon Makes Us Smile" src="http://aidsresearch.org/images/uploads/amazonsmile-slider.png" height="454" width="763" /></a>
+        <div class="overlay">
+         <a href="https://smile.amazon.com/ch/95-4264845" class="box">
+         <h1>Find out Why Amazon Makes Us Smile</h1>
+         <p>Discover Amazon Smile &amp; support AIDS Research Alliance. Visit smile.amazon.com, log in to your Amazon account, and start shopping!</p>
+         <div class="slide-nav"></div></a>
+      </div>
+		</div>
+   
+
+
+
+   </div><!-- END BANNER -->
+
+
+  
+   <div id="alert-signup">
+    <h1>Sign Up for Alerts</h1>
+    <div class="engagement-text">
+     <p>Be the first to know the latest news about our cure and vaccine research by signing up for our bi-monthly e-News.</p>
+
+<form method="post" action="http://oi.vresp.com?fid=88e4f30c4c" target="vr_optin_popup" onsubmit="window.open( 'http://www.verticalresponse.com', 'vr_optin_popup', 'scrollbars=yes,width=600,height=450' ); return true;" >
+
+  <div ><br/>
+        <label for="email_address">Your E-mail Address</label>
+
+    <input name="email_address" size="25" style="margin-top: 5px; border: 1px solid #999; padding: 3px;"/><br/>
+    <input type="submit" class="engagement-button"/><br/>
+    <br/>
+  </div>
+</form>
+        <div class="clear"></div>
+    </div>
+   </div>
+
+   <div nput name="email_address" size="25" style="margin-top: 5px; border: 1px solid #999; padding: 3px;"/><br/>
+    <input type="submit" class="engagement-bid="join-trial">
+    <h1>Join a Clinical Trial</h1>
+    <div class="engagement-text">
+     <p>Help advance HIV research. Find out which trials ARA is currently recruiting for.</p>
+     <div class="engagement-button"><a href="http://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/studies-now-enrolling">Learn More</a></div><div class="clear"></div>
+    </div>
+   </div>
+  
+  </div><!-- END ENGAGEMENT WRAPPER -->
+  
+   <div class="clear"></div>
+
+  </div><!-- END TOP CONTENT -->
+
+  <div id="content-bottom"><!-- START BOTTOM CONTENT -->
+
+   <div id="social-wrapper">
+    <script>
+    $(function() {
+    	$("ul.tabs").tabs("div.panes > div");
+    });
+    </script>
+    <ul id="social-tab-nav" class="tabs">
+     <li><a href="#">CLINICAL TRIALS</a></li>
+     <li><a href="#">FACEBOOK</a></li>
+    </ul>
+    <div class="clear"></div><!-- END TAB LINKS -->
+    
+    <div class="panes">
+
+      <div id="twitter-feed">
+      <img alt="Clinical Trials" src="/images/uploads/guyonscope.jpg" height="180" width="270" style="margin-bottom: 2em;" />
+
+      <h1>Clinical Trials Enrolling Now: </h1>
+
+      <p><a href="http://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/studies-now-enrolling#leuka">AIDS Research Alliance Leukapheresis Study</a></p>
+
+      <p><a href="http://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/studies-nowttp://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/studies-now-enrolling#leuka">AIDS Research Alliance Leukapheresis Study</a></p-enrolling#hep b">Hepatitis B Study</a></p>
+
+      <p><a href="http://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/studies-now-enrolling#egrifta">Egrifta® Diabetic Retinopathy Study</a></p>
+
+      <p><a href="http://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/studies-now-enrolling#tamiflu">TAMIFLU® Study</a></p>
+
+      <p><a href="http://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/studies-now-enrolling#collection">HIV, HTLV, and Hepatitis Blood Collection Study</a></p>
+      
+      <p><a href="http://aidsresearch.org/treatment-vaccine-research/join-a-clinical-study/studies-now-enrolling#egrifta">Egrifta® Long-Term Observational Study</a></p>
+      
+      </div>
+
+      <div id="facebook-feed">
+      <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Faidsresearch&amp;width=270&amp;height=550&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=true&amp;header=false&amp;appId=127722150659411" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:270px; height:550px;" allowTransparency="true"></iframe>
+      </div>
+    </div>
+
+   </div><!-- END SOCIAL WRAPPER -->
+
+   <div id="story-wrapper">
+    <h1><a href="http://aidsresearch.org/our-stories">Tell your Story</a></h1>
+    <h2>An Overview of Our Mission</h2>
+<object;" allowTransparency="true"></iframe>
+      </div>
+    </div>
+
+   </div><!-- END SOCIAL WRAPPER -->
+
+   <div id="story-wrapper">
+    <h1><a href="http:// id="flashObj" width="300" height="200" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,47,0"><param name="movie" value="http://c.brightcove.com/services/viewer/federated_f9?isVid=1" /><param name="bgcolor" value="#FFFFFF" /><param name="flashVars" value="videoId=2612530216001&playerID=2278634870001&playerKey=AQ~~,AAACEm3D0yk~,6s-6rLmG6L9SfTc81hFTEBoG_Pmjqgdo&domain=embed&dynamicStreaming=true" /><param name="base" value="http://admin.brightcove.com" /><param name="seamlesstabbing" value="false" /><param name="allowFullScreen" value="true" /><param name="swLiveConnect" value="true" /><param name="allowScriptAccess" value="always" /><embed src="http://c.brightcove.com/services/viewer/federated_f9?isVid=1" bgcolor="#FFFFFF" flashVars="videoId=2612530216001&playerID=2278634870001&playerKey=AQ~~,AAACEm3D0yk~,6s-6rLmG6L9SfTc81hFTEBoG_Pmjqgdo&domain=embed&dynamicStreaming=true" base="http://admin.brightcove.com" name="flashObj" width="300" height="200" seamlesstabbing="false" type="application/x-shockwave-flash" allowFullScreen="true" swLiveConnect="true" allowScriptAccess="always" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></embed></object>        
+<h2>Our Cure Research</h2>
+    <object width="300" height="182"><plScreen="true" swLiveConnect="true" allowScriptAccess="always" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=Shoaram name="movie" value="http://www.youtube.com/v/jAnrKoDc79c?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/jAnrKoDc79c?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="300" height="182" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+   </div>
+   <div id="promo-column">
+   <!--a href="http://aidsresearch.org/treatment-vaccine-research/hiv-vaccines-trial-network/join-a-study"><img alt="Belive in the V" src="/images/uploads/yellow505-homepage.jpg" height="290" width="293" /></a> -->
+    <a href="http://aidsresearch.org/news-events/news"><img alt="news2_text" src="/images/uploads/news2_text.jpg" height="200" width="293" /></a>
+    <a href="http://aidsresearch.org/news-events/news/getting-ready-to-test-prostratin-on-the-reservoir-cells"><img alt="levar" src="/images/uploads/S_Homann_HP_module_copy.jpg" height="290" width="293" /></a>
+  </div>
+  <div class="clear"></div>
+  </div><!-- END BOTTOM CONTENT -->
+  <div class="clear"></div>
+
+ </div><!-- end content wrapper -->
+
+
+   <div id="footer-wrapper">
+
+    <div id="footer">
+
+     <a href="http://aidsresearch.org/"><img id="footer-logo" alt="AIDS Research Alliance" src="http://aidsresearch.org/images/logo_footer.png" height="79" width="168" /></a>
+
+     <div id="footer-links">
+      <p>AIDS Research Alliance helped to make HIV/AIDS treatable, but 8,000 people die every day of AIDS, while millions more may lose a third of their expected life span.  We're dedicated to finding a cure.</p>
+
+      <ul id="footer-nav"><li><a href="/about/contact">Contact Us</a></li><li class="last"><a href="/about/privacy/">Privacy Policy</a></li></ul>
+
+     </div>
+
+     <div id="footer-interact">
+      <h1>Connect</h1>
+      <a href="http://www.facebook.com/aidsresearch" target="_blank"><img alt="Follow us on Facebook" src="http://aidsresearch.org/images/uploads/FB-f-Logo__blue_50.png" height="42" width="42" /></a>
+      <a href="http://twitter.com/aids_research" target="_blank"><img alt="Follow us on Twitter" src="http://aidsresearch.org/images/uploads/Twitter_logo_white.png" height="42" width="52" /></a>
+      <a href="http://instagram.com/aids_research" target="_blank"><img alt="Follow us on Instagram" src="http://aidsresearch.org/images/uploads/Instagram_logo.png" height="42" width="42" /></a>
+
+      <div id="footer-contribute">
+       <p><a href="http://aidsresearch.org/donate">Your contribution supports vital nonprofit research for a cure for HIV/AIDS.</a></p>
+      </div>
+
+     </div>
+     
+     <div id="footer-bottom">
+      <p>&copy; AIDS Research Alliance</p>
+     </div>
+
+    </div><!-- end foooter -->
+  </div><!-- end footer wrapper -->
+
+</div><!-- end page wrapper -->
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=7357531;
+var sc_invisible=1;
+var sc_security="6443c233";
+</script>
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="vBulletin analytics" href="http://statcounter.com/vbulletin/" target="_blank"><img class="statcounter" src="http://c.statcounter.com/7357531/0/6443c233/1/" alt="vBulletin analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>ics" href="http://statcounter.com/vbulletin/" target="_blank"><img class="statcounter" src="http://c.statcounter.com/7357531/0/6443c233/1/" alt="vBulletin analytics"></a></div

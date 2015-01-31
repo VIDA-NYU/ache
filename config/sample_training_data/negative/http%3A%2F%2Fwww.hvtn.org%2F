@@ -1,0 +1,983 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="hiv aids, HVTN, hiv vaccine trials network, fred hutchinson cancer research center, Fred Hutch, hiv vaccine">
+    <meta name="description" content="The HIV Vaccine Trials Network is the world&rsquo;s largest publicly-funded international collaboration focused on the development of vaccines to prevent HIV/AIDS. ">
+    
+    <!-- set initial viewport size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">    
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="width" />
+    
+    <!-- Facebook image/title/description -->
+    <link rel="image_src" href="https://www.hvtn.org/etc/designs/hvtn/img/facebook_share.png"/>
+    <meta property="og:image" content="https://www.hvtn.org/etc/designs/hvtn/img/facebook_share.png" />
+    <meta property="og:title" content="HIV Vaccine Trials Network" />
+    <meta property="og:description" content="The HIV Vaccine Trials Network is the world&rsquo;s largest publicly-funded international collaboration focused on the development of vaccines to prevent HIV/AIDS. " /> 
+
+    
+    
+    
+    
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/etc/designs/hvtn/img/favicon.ico">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/etc/designs/hvtn/img/favicon.ico">
+    
+
+    <title>HIV Vaccine Trials Network</title>
+
+    <link rel="stylesheet" href="/etc/clientlibs/foundation/form.min.css" type="text/css"/>
+<link rel="stylesheet" href="/etc/designs/hvtn/clientlibs.min.css" type="text/css"/>
+
+    <script type="text/javascript" src="/etc/designs/shared/clientlibs/js/jQuery_1_10.min.js"></script>
+
+    <script type="text/javascript" src="/etc/clientlibs/granite/jquery.min.js"></script>
+<script type="text/javascript" src="/etc/designs/hvtn/clientlibs/headEmbeds.min.js"></script>
+
+
+    
+    <link rel="stylesheet" href="/etc/designs/shared/clientlibs/components/royalslider.min.css" type="text/css"/>
+<link rel="stylesheet" href="/etc/designs/shared/clientlibs/components/royalslider/skins/minimal-white.min.css" type="text/css"/>
+<link rel="stylesheet" href="/etc/et" href="/etc/designs/shared/clientlibs/components/royalslider.min.css" type="text/css"/>
+<link rel="stylesheet" href="/etc/designs/shared/clientlibs/components/royalslider/skinsdesigns/hvtn/clientlibs/libs/royalslider.min.css" type="text/css"/>
+
+    
+    
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-528883-28']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+        
+    <link rel="stylesheet" href="/etc/designs/hvtn/clientlibs/css/print.css" media="print">
+
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        /* http://www.colorzilla.com/gradient-editor/ */
+        .gradient {
+           filter: none;
+        }
+      </style>
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" type="text/css" href="/etc/designs/hvtn/clientlibs/css/ie8.css" />
+    <![endif]-->    
+    
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="/etc/designs/hvtn/clientlibs/css/ie7.css" />
+    <![endif]-->     
+
+</head>
+
+
+<body class="page foundation homepage with_related_content with_section_navigation ">
+	
+	<section>
+		
+
+<header>
+
+	<div id="wrapper-header-fixed">
+	
+		<div id="wrapper-header">
+	        
+			<div id="header">
+	      
+				<div id="logo-hvtn">
+					<h1>
+					  <a href="/en.html"><img src="/etc/designs/hvtn/img/logos/hvtn-logo-430-highres.png" alt="HIV Vaccine Trials Network" border="0"></a>
+                    </h1>
+				</div>
+	          
+				<div id="header-right">
+	          
+					<div id="logo-fred-hutch">
+						<a href="http://www.fredhutch.org" target="_blank"><img src="/etc/designs/hvtn/img/logos/logo-fred-hutch-cures-start-here.png" alt="Fred Hutchinson Cancer Research Center" border="0"></a>
+					</div>
+	
+				<div class="clear"></div>
+	
+	<!-- Utility Navigation -->
+	            <nav>  
+					<div id="navigation-utility">
+						<p>
+							<span class="homenav"><a href="/en.html">Home</a>&nbsp; |&nbsp;</span> 
+							<a href="/en/news.html">News</a>&nbsp; |&nbsp; 
+							<a href="/en/resources.html">Resources</a>&nbsp; |&nbsp; 
+							<a href="https://members.hvtn.org/SitePages/Home.aspx" target="_blank">Members</a>&nbsp; |&nbsp; 
+							<a href="/en/contact-us.html">Contact Us</a>&nbsp; |&nbsp; 
+							<a class="header-search" href="/en/search.html"><span class="navigation-utility-highlight">Search</span></a>
+						</p>
+					</div>
+					<div class="clear"></div>
+				</nav>
+	          
+	<!-- End Utility Navigation -->              
+	<!-- Search -->
+	
+	          <div id="header-search">
+	            <form action="/en/search.html" method="get" autocomplete="on">
+	                <input name="q" type="text" class="input-text-standard" />
+	                <input type="image" alt="Search" src="/etc/designs/hvtn/img/icons/icon-search.png" />
+	            </form>
+	          </div>
+	
+	<!-- End Search -->
+	              
+	        </div>
+	        <div class="clear"></div>
+	          
+	      </div>
+	
+	  	</div>
+	
+	<!-- Mobile Menus -->
+	       
+	    <div id="header-mobile-menu">  
+	    
+	      <img id="fhcrc_banner" src="/etc/designs/hvtn/img/logos/fhcrc-banner-responsive-highres.png" alt="Fred Hutchinson Cancer Research Center"><br/>
+	    
+	      <span id="mobile-search-icon">SEARCH</span>
+	      
+	      <a href="/en.html"><img id="mobile-logo-header" src="/etc/designs/hvtn/img/logos/logo-hvtn-no-globe.png" alt="HIV Vaccine Trials Network"></a>
+	      
+	      <div id="header-mobile-menu-toggle">
+	      
+	      	Menu
+	        <img id="mobile-menu-icon" src="/etc/designs/hvtn/img/icons/icon-menu-isClosed.png" alt="open menu">
+	        
+	      </div>
+	    
+	    </div>
+	    
+	    <div id="header-mobile-search">
+	      <form action="/en/search.html" method="get">
+	          <input name="q" type="text" class="input-text-standard" />
+	          <input type="image" alt="Submit" src="/etc/designs/hvtn/img/icons/icon-search.png" />
+	      </form>
+	    </div>
+	
+	<!-- End Mobile Menus -->
+	<!-- Main Navigation -->        
+		
+		
+
+
+
+
+<nav>
+
+    <div id="navigation-main-wrapper" class="black-alpha60 noprint">
+        <ul id="navigation-main">
+        
+
+          <li class="navigation-main-item">
+          	<a class="navigation-main-link" href="/en/about.html">About</a>
+
+            <ul class="navigation-sub">
+
+                <li class="navigation-sub-item"><a href="/en/about/hvtn-mission.html">HVTN Mission</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/about/hvtn-leadership.html">HVTN Leadership</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/about/hvtn-governance.html">HVTN Governance</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/about/scientific-achievements.html">Scientific Achievements</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/about/i-do-this-work-because.html">"I do this work because..."</a></li>
+
+
+            </ul><!-- end dropdown_menu -->
+
+
+            </li>
+
+          <li class="navigation-main-item">
+          	<a class="navigation-main-link" href="/en/science.html">Science</a>
+
+            <ul class="navigation-sub">
+
+                <li class="navigation-sub-item"><a href="/en/science/HVTN-studies.html">HVTN Studies</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/science/scholar-awards.html">Scholar Awards</a></li>
+
+        igation-sub">
+
+                <li class="navigation-sub-item"><a href="/en/science/HVTN        <li class="navigation-sub-item"><a href="/en/science/hvtn-publications.html">HVTN Publications</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/science/hiv-vaccine-basics.html">HIV Vaccine Basics</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/science/submit-idea-proposal.html">Submit an Idea or Proposal</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/science/hiv-mucosal-immunology-group.html">HIV Mucosal Immunology Group</a></li>
+
+
+            </ul><!-- end dropdown_menu -->
+
+
+            </li>
+
+          <li class="navigation-main-item">
+          	<a class="navigation-main-link" href="/en/participants.html">Participants</a>
+
+            <ul class="navigation-sub">
+
+                <li class="navigation-sub-item"><a href="/en/participants/visp-hiv-testing.html">The Right Test for HIV</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/participants/HIV-myths-facts.html">HIV Vaccine Myths and Facts</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/participants/volunteer-faq.html">Volunteer FAQ</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/participants/volunteer-profiles.html">Volunteer Profiles</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/participants/participants-rights.html">Participants' Rights</a></li>
+
+
+            </ul><!-- end dropdown_menu -->
+
+
+            </li>
+
+          <li class="navigation-main-item">
+          	<a class="navigation-main-link" href="/en/team.html">Team</a>
+
+            <ul class="navigation-sub">
+
+                <li class="navigation-sub-item"><a href="/en/team/us-clinical-trial-sites.html">U.S. Clinical Sites</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/team/international-clinical-trial-sites.html">International Clinical Sites</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/team/clinical-sites-specific-studies.html">Clinical Sites for Specific Studies</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/team/laboratories.html">Laboratories</a></li>
+
+
+            </ul><!-- end dropdown_menu -->
+
+
+            </li>
+
+          <li class="navigation-main-item">
+          	<a class="navigation-main-link" href="/en/community.html">Community</a>
+
+            <ul class="navigation-sub">
+
+                <li class="navigation-sub-item"><a href="/en/community/community-advisory-board.html">Community Advisory Board</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/community/good-participatory-practice.html">Good Participatory Practice</a></li>
+
+                <li class="navigation-sub-item"><a href="/en/community/community-compass.html">Community Compass</a></li>
+
+
+            </ul><!-- end dropdown_menu -->
+
+
+            </li>
+
+        </ul><!-- end global_nav ul -->
+    </div>
+</nav>
+	
+	<!-- End Main Navigation -->
+	
+	  </div>
+</header>
+		
+<section>
+
+	<header>
+	
+		
+
+<!-- slideshow (homepage) or landingpage image (landing page).  -->
+  <div id="slideshow">
+
+      <!-- this div is nuked for general pages: -->
+      <div class="slideshow-contents">
+      
+        <!-- this image represents either the slideshow or the landingpage image: -->
+        
+        <!-- here is a sample slideshow image for homepage: -->
+        <!--<img src="http://is.fhcrc.org/users/ischempp/projects/HVTN/releases/8/images/placeholder-slideshow-01.jpg">-->
+        
+        <div class="royalslider">
+
+
+
+
+<div class="royalSlider rsMinW fullWidth">
+
+
+
+    <div class="rsContent  hero">
+        <div class="imageslide">
+          <a href='/en/about.html'>
+            <img title="slider-About-highres-2014" alt="scientists working at laboratory bench" class="rsImg" src="/content/hvtn/en/_jcr_content/royalslider/image1.img.jpg/1417537293123.jpg"/>
+          </a>
+        </div>
+        
+    </div>
+
+
+
+    <div class="rsContent ">
+        <div class="imageslide">
+          <a href='/en/science.html'>
+            <img title="antibody-composition-new-v2" alt="antibody" class="rsImg" src="/content/hvtn/en/_jcr_content/royalslider/image5.img.jpg/1417537293123.jpg"/>
+          </a>
+        </div>
+        
+    </div>
+
+
+
+    <div class="rsContent ">
+        <div class="imageslide">
+          <a href='/en/participants.html'>
+            <img title="slider-Participants-highres-2014" alt="HVTN participants" class="rsImg" src="/content/hvtn/en/_jcr_content/royalslider/image3.img.jpg/1417537293123.jpg"/>
+          </a>
+        </div>
+        
+    </div>
+
+
+
+    <div class="rsContent ">
+        <div class="imageslide">
+          <a href='/en/community.html'>
+            <img title="" alt="Comunity involment in HVTN" class="rsImg" src="/content/hvtn/en/_jcr_content/royalslider/image2.img.jpg/1417537293123.jpg"/>
+          </a>
+        </div>
+        
+    </div>
+
+
+
+    <div class="rsContent ">
+        <div class="imageslide">
+          <a href='/en/team.html'>
+            <img title="slider-Team-2014" alt="Map of HVTN sites" class="rsImg" src="/content/hvtn/en/_jcr_content/royalslider/image4.img.png/1417537293123.png"/>
+          </a>
+        </div>
+        
+    </div>
+
+  
+
+</div>  
+<div class='clear'></div>      
+
+<script type="text/javascript" src="/etc/designs/shared/clientlibs/components/royalslider.min.js"></script>
+  
+  
+<script type="text/javascript">
+    jQuery(document).ready(function($) {//return;
+        $(".royalSlider").royalSlider({
+            keyboardNavEnabled: true,
+            autoScaleSlider: true,
+            loop: true,
+            transitionType: 'fade',
+            globalCaption: true,
+            imageScaleMode: 'fill',
+            autoScaleSliderWidth: 1502,     
+            autoScaleSliderHeight: 545,
+            autoPlay: {
+                enabled: true,
+                pauseOnHover: true,
+                delay: 3000
+            },
+            arrowsNav: true,
+            arrowsNavAutoHide: false,
+            navigateByClick: false,
+            deeplinking: {
+              enabled: true
+            },
+            controlNavigation: 'bullets',
+            video: {
+               autoHideControlNav: true,
+               autoHideArrows: true,
+               vimeoCode: '<iframe src="//player.vimeo.com/video/%id%?byline=0&amp;portrait=0&amp;autoplay=1" frameborder="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
+               youTubeCode: '<iframe src="//www.youtube.com/embed/%id%?rel=1&autoplay=1&showinfo=0&wmode=transparent" frameborder="no"></iframe>'                 
+            }
+        });                
+    });
+</script></div>
+ 
+        
+      </div>
+        
+  </div>
+	
+	</header>
+	
+	<section>
+	
+		<div id="wrapper-content-outer">
+		            
+			<div id="wrapper-content">
+		    
+		    <header>
+				<!-- homepage has this large banner graphic: -->          
+				<div id="hp-content-banner">
+					<img src="/etc/designs/hvtn/img/homepage/hp-banner-1.png" alt="An HIV Vaccine: The World's best long-term hope for ending AIDS.">
+					<img src="/etc/designs/hvtn/img/homepage/hp-banner-2.png" alt="">
+					<img src="/etc/designs/hvtn/img/homepage/hp-banner-3.png" alt="">
+				</div> 
+			</header>
+			
+			<section>	
+			
+				<div id="content-primary" class="content-primary">
+		            
+		            <section>
+		            
+						<div class="par parsys"><div class="parsys_column cq-colctrl-lt1"><div class="parsys_column cq-colctrl-lt1-c0"><div class="bucket section">
+
+
+
+
+
+
+
+
+
+
+
+<div class="bucketImageContainer">
+
+	
+		
+			
+				
+				
+					<a href="/en/about.html">
+				
+			
+			<img title="" alt="HVTN scientists at work" class="cq-dd-image" src="/content/hvtn/en/_jcr_content/par/bucket/image.img.jpg/1401389234185.jpg"/></a>
+		
+		
+	
+
+</div>
+
+<h2 class="bucketHeader">Who We Are</h2>
+	
+<div class="bucketText"><p>We are the world’s largest publicly-funded international collaboration focused on the development of vaccines to prevent HIV/AIDS. <a href="/en/about.html">Learn more</a> &gt;</p>
+</div></div>
+</div><div class="parsys_column cq-colctrl-lt1-c1"><div class="bucket section">
+
+
+
+
+
+
+
+
+
+
+
+<div class="bucketImageContainer">
+
+	
+		
+			
+				
+				he development of vaccines to prevent HIV/AIDS. <a href="/en/about.html">Learn more</a> &gt;</p>
+</div></div>
+</div><div class="parsys_co
+					<a href="/en/science.html">
+				
+			
+			<img title="" alt="vials of vaccine" class="cq-dd-image" src="/content/hvtn/en/_jcr_content/par/bucket_0/image.img.jpg/1401389251400.jpg"/></a>
+		
+		
+	
+
+</div>
+
+<h2 class="bucketHeader">What We Do</h2>
+	
+<div class="bucketText"><p>Our sites conduct all phases of clinical trials - from evaluating experimental vaccines for safety and immunogenicity to testing vaccine efficacy. <a href="/en/science.html">Learn more</a>&nbsp;&gt;</p>
+</div></div>
+</div><div class="parsys_column cq-colctrl-lt1-c2"><div class="bucket section">
+
+
+
+
+
+
+
+
+
+
+
+<div class="bucketImageContainer">
+
+	
+		
+			
+				
+				
+					<a href="/en/participants.html">
+				
+			
+			<img title="" alt="group of study participants" class="cq-dd-image" src="/content/hvtn/en/_jcr_content/par/bucket_1/image.img.jpg/1401389275536.jpg"/></a>
+		
+		
+	
+
+</div>
+
+<h2 class="bucketHeader">Get Involved</h2>
+	
+<div class="bucketText"><p>Worldwide, thousands of people have participated in HIV vaccine trials. &nbsp;Volunteers are the heroes of vaccine development. <a href="/en/participants.html">Learn more</a> &gt;</p>
+</div></div>
+</div></div><div style="clear:both"></div><div class="textimage section">
+
+
+
+
+
+
+
+
+
+
+<div class="textimageContainer colorTheme2 designTheme0 rightAlign">
+
+	<div class="imageAndCaption">
+
+		<div class="imageContainer">
+		
+			
+				
+					
+						
+							<a href="http://www.fredhutch.org/en/news/center-news/2014/10/thai-hiv-vaccine-south-africa.html" target="_blank">
+						
+						
+					
+					<img title="Impacta, Lima, Peru Clinical Research Site" alt="Dr. Glenda Gray, co-principal investigator of the HVTN and president of the South African Medical Research Council" class="cq-dd-image frame" src="/content/hvtn/en/_jcr_content/par/textimage_3/image.img.jpg/1414592770024.jpg"/></a>
+				
+				
+			
+			
+		</div>
+		
+		
+			
+		
+				<div class="captionAndCredit">
+				
+					<span class="caption">Dr. Glenda Gray, lead investigator on the just-released South Africa study, co-principal investigator of the HIV Vaccine Trials Network and president of the South African Medical Research Council, gave network members a preview of study results at a meeting last week in Seattle.</span>
+		       		<span class="credit">Robert Hood / Fred Hutch News Service</span>
+					
+					
+					
+				</div>	
+		
+			
+		
+	
+	</div>
+	
+	<div class="textContainer"><h3>NEWS FEATURE</h3>
+<h4>HIV vaccine trial passes first hurdle in South Africa</h4>
+<p>The first in a series of clinical trials designed to build on the promise of an HIV vaccine that showed modest protection when tested in Thailand has passed a key hurdle, according to a new study. It paves the way for larger HIV vaccine trials to move forward in South Africa.</p>
+<p>The trial found that the so-called Thai vaccine induced comparable immune responses when tested in South Africa as it had in the original trial. This early phase of testing was designed to see how a different population’s immune system would respond, not—yet—whether the vaccine would protect against HIV.</p>
+</div>
+	
+	<div class="clear"></div>
+
+</div>
+
+<script type="text/javascript" src="/etc/designs/hvtn/clientlibs/js/components/textimage.min.js"></script>
+</div>
+<div class="horizontalLine section">
+
+
+
+<div class="colorTheme0 designTheme0">
+
+	<hr>
+
+</div></div>
+<div class="textimage section">
+
+
+
+
+
+
+
+
+
+
+<div class="textimageContainer colorTheme2 designTheme1 leftAlign noBorder">
+
+	<div class="imageAndCaption">
+
+		<div class="imageContainer">
+		
+			
+				
+					
+						
+						
+							<a href="/en/science/science-feature-story.html">
+						
+					
+					<img title="graphics of HIV" alt="graphic of HIV" class="cq-dd-image" src="/content/hvtn/en/_jcr_content/par/textimage_0/image.img.png/1404933162863.png"/></a>
+				
+				
+			
+			
+		</div>
+		
+		
+			
+		
+	
+	</div>
+	
+	<div class="textContainer"><h3>SCIENCE FEATURE STORY</h3>
+<h4>HIV is one of the most changeable viruses discovered to date</h4>
+<p>Antibodies that are able to adhere to the outer shell of HIV can inactivate the virus, and potentially stop infection before it starts. However, HIV is one of the most changeable viruses discovered to date, and the strains in circulation vary widely. An ideal vaccine against HIV would produce antibodies that could inactivate all HIV strains, but the reality is that antibodies against one strain usually don’t work against others. <a href="/en/science/science-feature-story.html">Read more</a> &gt;</p>
+</div>
+	
+	<div class="clear"></div>
+
+</div>
+
+</div>
+<div class="parsys_column cq-colctrl-lt0"><div class="parsys_column cq-colctrl-lt0-c0"><div class="headerWidget section">
+
+
+
+
+
+
+<h2 class=" colorTheme0 designTheme0">Scholar Awards</h2>
+
+	</div>
+<div class="textComponent section">
+
+
+
+
+<div class="colorTheme0 designTheme0"><p>We support the next generation of HIV researchers with structured mentoring, projects, training, and networking opportunities. <a href="/en/science/scholar-awards.html">Learn more</a>&nbsp;&gt;</p>
+</div></div>
+<div class="horizontalLine section">
+
+
+
+<div class="colorTheme2 designTheme0">
+
+	<hr>
+
+</div></div>
+<div class="headerWidget section">
+
+
+
+
+
+
+<h3 class=" colorTheme0 designTheme0">Get the Right HIV Test</h3>
+
+	</div>
+<div class="textComponent section">
+
+
+
+
+<div class="colorTheme0 designTheme0"><p>Getting the right test will prevent an incorrect diagnosis of HIV.&nbsp; Your study site or VISP Testing Service can provide the right test.&nbsp; Visit our <a href="/en/participants/visp-hiv-testing.html">frequently asked questions<eme0 designTheme0"><p>Getting the right test will prevent an incorrect diagnosis of HIV.&nbsp; You/a> for more information.</p>
+</div></div>
+<div class="textimage section">
+
+
+
+
+
+
+
+
+
+
+<div class="textimageContainer colorTheme0 designTheme0 leftAlign noBorder">
+
+	<div class="imageAndCaption">
+
+		<div class="imageContainer">
+		
+			
+				
+					
+						
+						
+							<a href="/en/participants/visp-hiv-testing.html">
+						
+					
+					<img title="VISP button" data-hover="/content/dam/hvtn/graphics/button-desktop-QuestionsTesting-VISP-hover.png" alt="VISP button" class="cq-dd-image rolloverImage" src="/content/hvtn/en/_jcr_content/par/textimage_1/image.img.png/1399334699828.png"/></a>
+				
+				
+			
+			
+		</div>
+		
+		
+			
+		
+	
+	</div>
+	
+	
+	
+	<div class="clear"></div>
+
+</div>
+
+</div>
+</div><div class="parsys_column cq-colctrl-lt0-c1"><div class="headerWidget section">
+
+
+
+
+
+
+<h2 class=" colorTheme0 designTheme0">TWITTER FEED</h2>
+
+	</div>
+<div class="textimage section">
+
+
+
+
+
+
+
+
+
+
+<div class="textimageContainer colorTheme0 designTheme0 rightAlign noBorder">
+
+	<div class="imageAndCaption">
+
+		<div class="imageContainer">
+		
+			
+				
+					
+						
+							<a href="https://twitter.com/HelpEndHIV" target="_blank">
+						
+						
+					
+					<img title="social-desktop-twitter-followus-button-static-v2" data-hover="/content/hvtn/en/jcr:content/par/textimage/mouseover.img.png/1399051622244.png" alt="social-desktop-twitter-followus-button-static-v2" class="cq-dd-image rolloverImage" src="/content/hvtn/en/_jcr_content/par/textimage/image.img.png/1399051622244.png"/></a>
+				
+				
+			
+			
+		</div>
+		
+		
+			
+		
+	
+	</div>
+	
+	
+	
+	<div class="clear"></div>
+
+</div>
+
+</div>
+<div class="text parbase twitterFeed section">
+
+
+
+
+
+
+
+	
+	
+	
+	
+		<div>
+		
+			<a class="twitter-timeline" href="http://twitter.com/HelpEndHIV" data-tweet-limit="3" data-widget-id="349977686392832001" data-chrome="noheader nofooter transparent">Our Tweets</a>
+		
+		</div>
+
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+	
+	
+</div>
+<div class="textComponent section">
+
+
+
+
+</div>
+</div></div><div style="clear:both"></div><div class="horizontalLine section">
+
+
+
+<div class="colorTheme2 designTheme0">
+
+	<hr>
+
+</div></div>
+<div class="headerWidget section">
+
+
+
+
+
+
+<h2 class=" colorTheme0 designTheme0">LATEST NEWS</h2>
+
+	</div>
+<div class="textComponent section">
+
+
+
+
+<div class="colorTheme0 designTheme0"><h3><span class="alertText">DECEMBER 1, 2014</span></h3>
+<p><a href="http://www.cnn.com/2014/12/01/health/are-we-on-the-road-to-an-hiv-vaccine/index.html?hpt=hp_t2" target="_blank">Are we on the road to an HIV vaccine?</a></p>
+</div></div>
+<div class="textComponent section">
+
+
+
+
+<div class="colorTheme0 designTheme0"><h3><span class="alertText">DECEMBER 1, 2014</span></h3>
+<p><a href="http://www.fredhutch.org/en/news/center-news/2014/12/hiv-stigma-remains.html" target="_blank">After more than 30 years, HIV stigma remains, from South Africa to Seattle</a></p>
+</div></div>
+<div class="textComponent section">
+
+
+
+
+<div class="colorTheme0 designTheme0"><h3><span class="alertText">DECEMBER 1, 2014</span></h3>
+<p><a href="http://www.hvtn.org/en/resources/hiv-awareness/WorldAIDSDay2014.html" target="_blank">World AIDS Day Message 2014</a></p>
+</div></div>
+<div class="textComponent section">
+
+
+
+
+<div class="colorTheme0 designTheme0"><p style="text-align: right;"><a href="/en/news.html">More news</a> &gt;</p>
+</div></div>
+
+</div>
+
+						<div class="clear"></div>
+	
+					</section>
+					
+					<!-- remote-wrap-api-marker -->
+		
+					<!-- homepage in mobile has extra logos at the page bottom, only one is linked: -->
+					<footer>
+						<div id="hp-content-mobile-logos">
+							<p><img src="/etc/designs/hvtn/img/logos/hvtn-logo-430-highres.png" alt="HIV Vaccine Trials Network" class="hvtn"></p>
+							<p><a href="http://www.fredhutch.org" target="_blank"><img src="/etc/designs/hvtn/img/logos/logo-fred-hutch-cures-start-here.png" alt="Fred Hutchinson Cancer Research Center" border="0" class="fredhutch"></a></p>
+						</div>
+					</footer>
+		              
+				</div>
+				
+			</section>
+		            
+			</div>
+		    
+		</div>
+		
+	</section>
+
+</section>
+		
+<footer>
+
+	<div id="wrapper-footer-outer">
+	
+		<div id="footer">
+	    	<nav>
+				<div id="footer-mobile-util-nav">
+		      
+					<p><a href="/en/news.html">News</a> | <a href="/en/resources.html">Resources</a> | <a href="https://members.hvtn.org/SitePages/Home.aspx" target="_blank">Members</a> | <a href="/en/contact-us.html">Contact&nbsp;Us</a></p>
+		      
+				</div>
+			</nav>
+	  
+	    	<div id="footer-social">
+				<div class="footer-social-item"><a href="https://www.facebook.com/helpendhiv" target="_blank"><img src="/etc/designs/hvtn/img/icons/icon-facebook.png" alt="facebook icon"></a></div>
+				<div class="footer-social-item"><a href="https://twitter.com/HelpEndHIV" target="_blank"><img src="/etc/designs/hvtn/img/icons/icon-twitter.png" alt="twitter icon"></a></div>
+				<div class="footer-social-item"><a href="http://www.linkedin.com/company/fred-hutchinson-cancer-research-center" target="_blank"><img src="/etc/designs/hvtn/img/icons/icon-linkedin.png" alt="linkedin icon"></a></div>
+				<div class="footer-social-item"><a href="http://www.youtube.com/user/HutchinsonCenter1/featured" target="_blank"><img src="/etc/designs/hvtn/img/icons/icon-youtube.png" alt="youtube icon"></a></div>
+				<!--<div class="footer-social-item"><a href="#" target="_blank"><img src="/etc/designs/hvtn/img/icons/icon-vimeo.png" alt="vimeo icon"></a></div>-->
+				<div class="clear"></div>    
+			</div>
+	      
+			<div id="footer-text">
+				
+				<p class="affiliation">
+					<span class="title">Fred Hutchinson Cancer Research Center</span><br />
+					<span class="address">1100 Fairview Ave. N., P.O. Box 19024, Seattle, WA 98109<br /></span>
+					<span class="copyright">&copy; 2015 <a href="http://www.fredhutch.org/">Fred Hutchinson Cancer Research Center</a><br /></span>
+					<span class="nonprofit">A 501(c)3 Nonprofit Organization</span>
+				</p>
+	        
+				<p class="privacy-links">
+					<a href="http://www.fredhutch.org/en/util/terms-privacy.html" target="_blank">Terms of Use &amp; Privacy Policy</a> | 
+					<a href="http://www.fredhutch.org/en/util/conflict-of-interest.html" target="_blank">Conflict of Interest</a>
+				</p>    
+	
+				<dl class="itemlist">
+					<dd>
+						<ul>
+							<li><a href="http://www.fredhutch.org/en.html" target="_blank">Fred Hutchinson Cancer Research Center</a></li> 
+							<li><a href="http://lab.hvtn.org/SitePages/Home.aspx" target="_blank">HVTN Lab Portal</a></li>
+						</ul>
+					</dd>
+				</dl>
+				
+				<p class="more-information">For more information contact <a href="mailto:info@hvtn.org">info@hvtn.org</a></p>
+	            
+			</div>
+	      
+		</div>
+	      
+	</div>
+	
+</footer>
+	</section>
+	<script type="text/javascript" src="/etc/clientlibs/foundation/form.min.js"></script>
+<script type="text/javascript" src="/etc/designs/hvtn/clientlibs.min.js"></script>
+
+</body>
+</html>
+div>
+	      
+		</div>
+	      
+	</div>
+	
+</footer>
+	</section>
+	<script type="text/javascript" src="/etc/clientlibs/foundation/form.min.js"></script>
+<script type=

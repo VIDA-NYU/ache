@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en-US"    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:og="http://opengraphprotocol.org/schema/"
+    xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime();</script>
+<meta charset="UTF-8">
+<title>Dengue Surges In Latin America | ThinkProgress</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="http://thinkprogress.org/wp-content/themes/tp4/images/apple-touch-icon.png"/>
+
+<!-- Print CSS -->
+<link type="text/css" rel="stylesheet" media="print" href="http://thinkprogress.org/wp-content/themes/tp4/css/Think2013-print.css?cb=20141203">
+
+<!-- Old IE Browser support -->
+<!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+	<link href="http://thinkprogress.org/wp-content/themes/tp4/css/Think2013-IE8.css?cb=20141203" rel="stylesheet" type="text/css" media="screen">
+<![endif]-->
+
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta name="bitly-verification" content="131cfbb2e3a1">
+<meta name="google-site-verification" content="HDCaom2KPSt1X92eD5CiYHCkWvb5nP09lhEAOPZ5rts" />
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+<!-- This fixes the orientation switch bug in iOS... forces a better resize when someone rotates an iPhone or iPad -->
+<script type="text/javascript">
+    if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+    var viewportmeta = document.querySelector('meta[name="viewport"]');
+    if (viewportmeta) {
+        viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
+        document.body.addEventListener('gesturestart', function () {
+            viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+        }, false);
+    }
+}
+</script>
+
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.7 - http://yoast.com/wordpress/seo/ -->
+<link rel="original-source" href="" />
+<meta name="description" content="As officials in Brazil frantically mount a last-minute campaign to combat the recent outbreak of dengue fever in the country before the beginning of the World Cup, new data has been released documenting the shocking resurgence of the disease."/>
+<link rel="canonical" href="http://thinkprogress.org/climate/2014/05/31/3443533/dengue-latin-america/" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel='stylesheet' id='tp-style-css'  href='http://thinkprogress.org/wp-content/themes/tp4/style.css?ver=4.0.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://thinkprogress.org/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://thinkprogress.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thinkprogress.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thinkprogress.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.0.1" />
+<link rel='shortlink' href='http://thkpr.gs/1ovccur' />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@ThinkProgress" />
+<meta name="twitter:title" content="Dengue Surges In Latin America" />
+<meta name="twitter:creator" content="@FosterJoanna " />
+<meta name="twitter:description" content="As officials in Brazil frantically mount a last-minute campaign to combat the recent outbreak of dengue fever in the country before the beginning of the World Cup, new data has been released documenting the shocking resurgence of the disease. 
+" />
+<meta name="twitter:image" content="//d35brb9zkkbdsd.cloudfront.net/wp-content/uploads/2013/08/shutterstock_62284501-1-e1377096884845-320x213.jpg" />
+<meta property="fb:admins" content="100001364918392"/>
+<meta property="fb:app_id" content="144881328916524" />
+<meta property="og:url" content="http://thinkprogress.org/climate/2014/05/31/3443533/dengue-latin-america/" />
+<meta property="og:image" content="//d35brb9zkkbdsd.cloudfront.net/wp-content/uploads/2013/08/shutterstock_62284501-1-e1377096884845.jpg" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="As officials in Brazil frantically mount a last-minute campaign to combat the recent outbreak of dengue fever in the country before the beginning of the World Cup, new data has been released documenting the shocking resurgence of the disease. 
+"/>
+<meta property="og:title" content="Dengue Surges In Latin America" />
+<div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+	// init the FB JS SDK
+	FB.init({
+		appId      : '144881328916524', // App ID from the App Dashboard
+		status     : true, // check the login status upon init?
+		cookie     : true, // set sessions cookies to allow your server to access the session?
+		xfbml      : true  // parse XFBML tags on this page?
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+    FB.Event.subscribe('edge.create',
+	    function(response) {
+		    console.log('You liked the URL: ' + response);
+			if(response == "http://facebook.com/thinkprogress"){
+				window.optimizely = window.optimizely || [];
+	    		window.optimizely.push(['trackEvent', 'facebook_site_like']);
+				set_cookie('fbpromo', 1, 365, '/');
+			}
+	});
+
+  };
+
+
+  (function(d, debug){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document, /*debug*/ false));
+</script>
+	<script type="text/javascript">
+	  gaTrackingUrl = "/climate/2014/05/31/3443533/dengue-latin-america/";
+	  isSingle = true;
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-246439-1', 'thinkprogress.org');
+      ga('require', 'displayfeatures');
+	  ga('send', 'pageview');
+	</script><meta name="elq-topic" content="tp-climate" />
+	<script src="//cdn.optimizely.com/js/173711848.js"></script><link rel="alternate" type="application/rss+xml" title="ThinkProgress RSS Feed" href="http://thinkprogress.org/homepagefeed/" />
+<link rel="alternate" type="application/rss+xml" title="ThinkProgress Climate RSS Feed" href="http://thinkprogress.org/climate/issue/feed/" />
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MDDZPF"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MDDZPF');</script>
+        <!-- End Google Tag Manager -->
+    
+</head>
+<body class="single single-post postid-3443533 single-format-standard issue_climate">
+<!--Begin Site-->
+<div id="sb-site">
+
+<div id="wrapper">
+<div id="next-previous-list">
+    <div class="viewport-height">
+        <div class="vertical-align">
+            <div class="middle-fixed">
+        <div class="previous-post">
+            <a href="http://thinkprogress.org/climate/2014/05/31/3443520/us-residential-solar-beat-commercial/" class="button"><span class="arrow"><span class="previous-arrow">&lsaquo;&nbsp;</span> Previous</span><span class="title">U.S. Residential Solar Just Beat Commercial Installations For The First Time</span></a>
+        </div><hr class="dotted">
+        <div class="next-post">
+            <a href="http://thinkprogress.org/climate/2014/06/01/3443576/wsj-epa-rules-will-cut-power-plant-emissions-by-30-percent-by-2030/" class="button clearfix"><span class="title">WSJ: EPA Rule Will Cut Power Plant Emissions By 30 Percent By 2030</span><span class="arrow">Next <span class="next-arrow">&nbsp;&rsaquo;</span></span></a>
+        </div></div>        </div>
+    </div>
+</div>
+
+<div id="container">
+<header>
+
+    <nav class="mobile-nav">
+    	<a id="mobile-nav-toggle" class="sb-toggle-left"><span class="icon-menu mobile-menu-button"></span></a>
+    	<a id="mobile-trending-toggle" class="sb-toggle-right right"><span class="icon-chart-line mobile-menu-button"></span> <span>TRENDING</span></a>
+    </nav>
+
+    <div id="top-of-nav">
+        <div id="logo">
+            <a href="/climate/issue/"><img src="http://thinkprogress.org/wp-content/themes/tp4/images/NewLogos/TP-logo-climate.png" alt="ThinkProgress Logo" class="logo"></a>        </div>
+        <div id="social-follows">
+            	<div class="header-social">
+	<div class="fb-like" data-href="http://facebook.com/climateprogress" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+  <a href="https://twitter.com/climateprogress" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false" data-lang="en">Follow</a>
+	<a href="http://think-progress.tumblr.com/"><img src="http://thinkprogress.org/wp-content/themes/tp4/images/tumblr-20px.png" alt="Tumblr Icon" class="tumblr"></a>
+	<a href="/rss-feeds/"><img src="http://thinkprogress.org/wp-content/themes/tp4/images/rss20.png" width="20" height="20" alt="RSS Icon" class="rss"></a>
+
+</div>        </div>
+    </div>
+    <nav id="primary-navigation" class="main"><ul id="main-nav" class="issues"><li class="home"><a href="/">FRONT</a></li><li id="menu-item-2568301" class="climate menu-item menu-item-type-taxonomy menu-item-object-issue current-post-ancestor current-menu-parent current-post-parent menu-item-2568301"><a href="/climate/issue/">Climate</a></li>
+<li id="menu-item-2310491" class="economy menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-2310491"><a href="/economy/issue/">Economy</a></li>
+<li id="menu-item-2310501" class="health menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-2310501"><a href="/health/issue/">Health</a></li>
+<li id="menu-item-2310521" class="justice menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-2310521"><a href="/justice/issue/">Justice</a></li>
+<li id="menu-item-2310531" class="lgbt menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-2310531"><a href="/lgbt/issue/">LGBT</a></li>
+<li id="menu-item-3217101" class="world menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-3217101"><a href="/world/issue/">World</a></li>
+<li id="menu-item-3342181" class="culture menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-3342181"><a href="/culture/issue/">Culture</a></li>
+<li id="menu-item-2310551" class="sports menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-2310551"><a href="/sports/issue/">Sports</a></li>
+<li id="menu-item-3471260" class="election menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-3471260"><a href="/election/issue/">Election</a></li>
+</ul></nav>
+    <nav id="secondary-navigation">
+        <div id="trendingDiv" class="trending"><div id="trending-navigation"><ul><li class="trendingnow">TRENDING:</li><li><a href="http://thinkprogress.org/tag/climate-change/">CLIMATE CHANGE</a></li><li><a href="http://thinkprogress.org/tag/climate-change/">CLIMATE CHANGE</a></li><li><a href="http://thinkprogress.org/tag/california/">CALIFORNIA</a></li><li><a href="http://thinkprogress.org/tag/fracking/">FRACKING</a></li><li><a href="http://thinkprogress.org/tag/tesla/">TESLA</a></li></ul></div></div>        <div class="search">
+    <form role="search" method="get" class="search-form" action="http://thinkprogress.org/">
+        <label>
+            <input type="search" class="inputbox" placeholder="Search:" value="" name="s" title="Search for:" />
+        </label>
+        <input src="http://thinkprogress.org/wp-content/themes/tp4/images/magnifying_glass.png" class="searchicon" type="image" alt="Maginifying Glass Icon">
+    </form>
+</div>
+    </nav>
+    <!--added for parse.ly-->
+        <script type="application/ld+json">
+       {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Dengue Surges In Latin America",
+        "url": "http://thinkprogress.org/climate/2014/05/31/3443533/dengue-latin-america/",
+        "thumbnailUrl": "",
+        "dateCreated":  = "May 31, 2014",
+        "articleSection": "",
+        "creator": "Joanna M. Foster",
+        "keywords": ["","","",""]
+       }
+    </script>
+    </header>
+<!-- Post type is post -->
+<div id="triple-feature"></div>
+
+<article class="climate">
+
+<div class="post">
+
+<h1 class="post-title"><a href="http://thinkprogress.org/climate/2014/05/31/3443533/dengue-latin-america/">Dengue Surges In Latin America</a></h1>
+
+<p class="timestamp">
+	<span class="byline"> by <a href="/?person=jfoster">Joanna M. Foster</a><a href="https://twitter.com/intent/user?screen_name=FosterJoanna "><img src="http://thinkprogress.org/wp-content/plugins/cap-byline/bird_blue_16.png" class="twitter-bird"></a></span> <span class="posted-on">Posted on <time class="published" datetime="May 31, 2014 at 2:19 pm">May 31, 2014 at 2:19 pm</time></span></p>
+
+
+			<div class="clean-share-box">
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fthinkprogress.org%2Fclimate%2F2014%2F05%2F31%2F3443533%2Fdengue-latin-america%2F" class="social_button_facebook" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=400'); return false;">
+					<i class="icon-facebook"></i>
+					<span>731<small>Share This</small></span>
+				</a>
+
+				<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fthkpr.gs%2F1ovccur&via=climateprogress&related=climateprogress&text=Dengue Surges In Latin America" class="social_button_twitter">
+					<i class="icon-twitter"></i>
+					<span>164<small>Tweet This</small></span>
+				</a>
+			</div>
+
+			<div class="small-share">
+				<strong>Share this:</strong>
+				<div class="social_toolbox social_default_style social_32x32_style">
+					<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fthinkprogress.org%2Fclimate%2F2014%2F05%2F31%2F3443533%2Fdengue-latin-america%2F" class="social_button_facebook" target="_blank"><img src="http://thinkprogress.org/wp-content/themes/tp4/images/facebook32.gif" alt="facebook icon"></a>
+					<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fthkpr.gs%2F1ovccur&via=climateprogress&related=climateprogress&text=Dengue Surges In Latin America" class="social_button_twitter"><img src="http://thinkprogress.org/wp-content/themes/tp4/images/twitter32.gif" alt="twitter icon"></a>
+				</div>
+			</div>
+
+			<div id="slidedown">
+			<p>"<em>Dengue Surges In Latin America</em>"</p>
+				<div class="social_toolbox social_default_style social_32x32_style ">
+			    <p>Share:</p>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fthinkprogress.org%2Fclimate%2F2014%2F05%2F31%2F3443533%2Fdengue-latin-america%2F" class="social_button_facebook" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=400'); return false;"><img src="http://thinkprogress.org/wp-content/themes/tp4/images/facebook32.gif" alt="facebook icon"></a>
+				<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fthkpr.gs%2F1ovccur&via=climateprogress&related=climateprogress&text=Dengue Surges In Latin America" class="social_button_twitter"><img src="http://thinkprogress.org/wp-content/themes/tp4/images/twitter32.gif" alt="twitter icon"></a>
+				</div>
+			</div>
+
+			<script>
+			// Script for SlideDown Social Bar
+			jQuery(document).ready(function($) {
+
+				var n = $(".post p").length;
+
+				if (n < 0) {
+					$(".post p:nth-of-type(1)").after("<span id='trigger-slidedown'></span>");
+				}
+				else {
+					$(".post p:nth-of-type(3)").after("<span id='trigger-slidedown'></span>");
+				}
+
+			    $(window).scroll(function(){
+			        var distanceTop = $("#trigger-slidedown").offset().top - $(window).height();
+
+			        console.log("scrollTop: " + $(window).scrollTop() + ", distanceTop: " + distanceTop);
+
+			        if ($(window).scrollTop() > distanceTop) {
+			            $("#slidedown").animate({"top":"0"},200);
+			        } else {
+			            $("#slidedown").stop(true).animate({"top":"-100%"},200);
+			        }
+
+			        if ($(window).scrollTop() == 0) {
+			        	$("#slidedown").stop(true).animate({"top":"-100%"},200);
+			        }
+			    });
+
+			    $("#slidedown .close").bind("click",function(){
+			        $(this).parent().remove();
+			    });
+
+				// Scripts for tracking clicking on Social Tools
+				// Slidedown
+				$( "#slidedown .social_button_facebook" ).click(function() {
+				  ga('send', 'event', 'Slidedown Social Tools', 'Click', 'Facebook', 1);
+				});
+				$( "#slidedown .social_button_twitter" ).click(function() {
+				  ga('send', 'event', 'Slidedown Social Tools', 'Click', 'Twitter', 1);
+				});
+				//Mobile Tools
+				$( ".small-share .social_button_facebook" ).click(function() {
+				  ga('send', 'event', 'Mobile Social Tools', 'Click', 'Facebook', 1);
+				});
+				$( ".small-share .social_button_twitter" ).click(function() {
+				  ga('send', 'event', 'Mobile Social Tools', 'Click', 'Twitter', 1);
+				});
+				//Desktop Tools
+				$( ".clean-share-box .social_button_facebook" ).click(function() {
+				  ga('send', 'event', 'Standard Social Tools', 'Click', 'Facebook', 1);
+				});
+				$( ".clean-share-box .social_button_twitter" ).click(function() {
+				  ga('send', 'event', 'Standard Social Tools', 'Click', 'Twitter', 1);
+				});
+			});
+			</script><div class="wide-photo-box"  ><img src="http://d35brb9zkkbdsd.cloudfront.net/wp-content/uploads/2013/08/shutterstock_62284501-1-e1377096884845-555x370.jpg" alt="mosquito 3x2" />
+<p class="photo-credit">CREDIT: SHUTTERSTOCK</p>
+</div>
+<p>As officials in Brazil <a href="http://rt.com/news/162784-brazil-world-cup-dengue/">frantically mount</a> a last-minute campaign to combat the recent outbreak of dengue fever in the country before the beginning of the World Cup, <a href="http://www.ticotimes.net/2014/05/30/dengue-cases-quintupled-in-one-decade-in-latin-america">new data</a> has been released documenting the shocking resurgence of the disease. </p>
+<p>Officials with the Pan American Health Organization (PAHO) reported this week  that cases of dengue fever have nearly quintupled in  Latin America, in just the last<br />
+10 years. </p>
+<p>According to PAHO, in 2013 there were more than 2.3 million cases and 1,289 deaths. A decade ago, only 517,617 cases were documented in Latin America. Uncontrolled urbanization, absence of basic services, failure to control the environment and climate change, were blamed for the spread of the disease. The report said that nearly 500 million people in the Americas now live at risk of contracting dengue.</p>
+<p>Dengue fever is a mosquito-borne disease with symptoms very similar to the flu. While there are four closely related viruses that can cause dengue fever, they are all carried by female Aedes aegypti mosquitoes and in more northern regions, the Aedes albopictus. Dengue fever is most prevalent in South and Central America, as well as Southeast Asia, Africa and the Western Pacific. Globally the prevalence of the disease has seen a dramatic uptick since the 1980s. Its spread has been linked to the changing climate as temperatures increase, rainfall patterns change and summers become longer, the range and active seasons for the mosquitoes that carry dengue have expanded. </p>
+<p>In 2009-2010, Florida experienced the first dengue outbreak in the continental U.S. since the end of World War II. Last summer, there were <a href="http://www.floridahealth.gov/%5C/diseases-and-conditions/dengue/index.html">21 cases</a> of dengue in the state and the mosquito that carries dengue was discovered for the first time in California. Texas now also routinely documents cases of locally-acquired dengue. </p>
+<p>The disease is known colloquially as &#8220;breakbone fever,&#8221; as extreme joint and muscle pain are the telltale symptoms, usually accompanied by headache and fever. While half of people who contract dengue fever experience no symptoms at all, about one percent die. Dengue hemorrhagic fever is the most dangerous form of the disease which can lead to organ failure and death. There is no treatment or vaccine for dengue. The World Health Organization estimates anywhere from 50 million to 100 million people contract the<br />
+disease globally every year. </p>
+<p>Along with dengue fever, lyme disease, west nile, and chikungunya <a href="http://thinkprogress.org/climate/2014/03/05/3332271/state-health-climate-change/">are all also spreading</a> thanks to climate change. </p>
+
+
+<div class="tags">
+<h4>Tags:</h4>
+<ul>
+<li><a href='http://thinkprogress.org/tag/dengue/'>Dengue</a></li><li><a href='http://thinkprogress.org/tag/latin-america/'>Latin America</a></li><li><a href='http://thinkprogress.org/tag/world-cup/'>World Cup</a></li><li><a href='http://thinkprogress.org/tag/world-health-organization/'>World Health Organization</a></li>
+</ul>
+</div> <!-- close tags -->
+</div><!-- Close Post -->
+<div class="post-navigation">
+    &laquo; <a href="http://thinkprogress.org/immigration/2014/05/31/3443530/pentagon-will-allow-some-undocumented-immigrants-to-join-the-armed-forces/" rel="prev">Pentagon Will Allow Some Undocumented Immigrants To Join The Armed Forces</a>    <a href="http://thinkprogress.org/health/2014/06/01/3443544/teenage-girl-humiliated-for-wearing-shorts-slams-school-for-shaming-girls-for-their-bodies/" rel="next">Teen Girl Accuses School Of &#8216;Shaming Girls For Their Bodies&#8217; After Being Sent Home For Wearing Shorts</a> &raquo;</div>
+
+<a name="scroll-link" id="scroll-link"></a>
+<div class="facebook-like-bottom">
+<a class="smallbtn right">Close</a>
+<h4>Like Climate Progress on Facebook</h4>
+<p></p>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="http://facebook.com/climateprogress" data-send="false" data-width="300" data-show-faces="true"></div>
+<a href="#" class="fbpromo">Don't show this to me again</a>
+</div>
+<div id='ad_zone1'></div>
+<div id='ad_zone1_mobile'></div>
+
+<!-- Comments go here -->
+		<a name="comment_link"></a>
+		<p class="comment-disclaimer">By clicking and submitting a comment I acknowledge the <a href="http://www.americanprogressaction.org/about/c4-privacy-policy/">ThinkProgress Privacy Policy</a> and agree to the <a href="http://thinkprogress.org/terms/">ThinkProgress Terms of Use</a>. I understand that my comments are also being governed by Facebook, Yahoo, AOL, or Hotmail’s Terms of Use and Privacy Policies as applicable, which can be found <a href="http://thinkprogress.org/terms/">here</a>.</p>
+		<div class="fb-comments" data-href="http://thinkprogress.org/climate/2014/05/31/3443533/dengue-latin-america/" data-num-posts="1" data-width="100%" style="width: 100% !important;"></div>
+</article>
+<div class='side-wrapper'><!-- container for the sidebars -->
+<div class="side"> <!-- open first sidebar -->
+
+<div id="subscribe" class="sidebox">
+	<h4>Get Climate Progress email alerts</h4>
+	<div class="signup">
+		<form method="post" name="com_sub_c4e_ThinkProgress_ClimateProgress" action="http://now.eloqua.com/e/f2.aspx" id="signupForm" onsubmit="return emailValidate(this)">
+			<input type="hidden" value="com_sub_c4e_ThinkProgress_ClimateProgress" name="elqFormName" />
+            <input type="hidden" value="785" name="elqSiteID" />
+			<input name="Email" type="text" maxlength="39" class="required email" placeholder="Your email here" value="" />
+			<input type="submit" name="Subscribe" class="btn" value="Subscribe" />
+		</form>
+	</div>
+</div> <!-- Close Subscribe --><div id='ad_zone2' class='sidebar-ad'></div><div id="gravity-widget" class="side-box"></div>
+
+</div> <!-- close first sidebar -->
+<div class="side"> <!-- open second sidebar  -->
+
+<div id='ad_zone3' class='sidebar-ad'></div>
+
+<div id="twitter-widget"></div>
+<div id='ad_zone8' class='sidebar-ad'></div>
+</div> <!-- close second sidebar -->
+<div class="side"> <!-- open third sidebar  -->
+
+<div id="sidebar-donate-ad" class="side-box"></div>
+
+<div id="sidebar-capaf-logo" class="side-box"></div>
+
+<footer>
+<p><a href="/about/">About ThinkProgress</a> | <a href="/contact/">Contact Us</a> | <a href="/terms/">Terms of Use</a> | <a href="http://www.americanprogressaction.org/about/c4-privacy-policy/">Privacy Policy (off-site)</a> | <a href="/state-notices/">State Notices</a> | <a href="http://thinkprogress.org/reuse-policy/">Reuse Policy</a> | <a href="/rss-feeds/">RSS</a> | <a href="/advertise/">Advertise</a> | <a href="http://thinkprogress.org/donate">Donate</a></p>
+<p>&copy; 2005-2015 Center for American Progress Action Fund</p>
+</footer>
+
+</div> <!-- close third sidebar  -->
+</div><!-- close container for the sidebars -->
+</div> <!-- Close Container -->
+
+<div id="next-previous-filler">
+    &nbsp;
+</div>
+</div> <!--/#wrapper-->
+
+</div> <!--/#sb-site-->
+<!--End Site-->
+ <div id="mobile-navigation" class="main"><ul id="main-mobile-nav" class="sb-slidebar sb-left"><li class="home"><a href="/"><img src="http://thinkprogress.org/wp-content/themes/tp4/images/TP-white.png"> FRONT</a></li><li class="climate menu-item menu-item-type-taxonomy menu-item-object-issue current-post-ancestor current-menu-parent current-post-parent menu-item-2568301"><a href="/climate/issue/">Climate</a></li>
+<li class="economy menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-2310491"><a href="/economy/issue/">Economy</a></li>
+<li class="health menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-2310501"><a href="/health/issue/">Health</a></li>
+<li class="justice menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-2310521"><a href="/justice/issue/">Justice</a></li>
+<li class="lgbt menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-2310531"><a href="/lgbt/issue/">LGBT</a></li>
+<li class="world menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-3217101"><a href="/world/issue/">World</a></li>
+<li class="culture menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-3342181"><a href="/culture/issue/">Culture</a></li>
+<li class="sports menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-2310551"><a href="/sports/issue/">Sports</a></li>
+<li class="election menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-3471260"><a href="/election/issue/">Election</a></li>
+</ul></div>
+<div class="sb-slidebar sb-right">
+  <div id="trendingDiv" class="trending"><div id="trending-navigation"><ul><li class="trendingnow">TRENDING:</li><li><a href="http://thinkprogress.org/tag/climate-change/">CLIMATE CHANGE</a></li><li><a href="http://thinkprogress.org/tag/climate-change/">CLIMATE CHANGE</a></li><li><a href="http://thinkprogress.org/tag/california/">CALIFORNIA</a></li><li><a href="http://thinkprogress.org/tag/fracking/">FRACKING</a></li><li><a href="http://thinkprogress.org/tag/tesla/">TESLA</a></li></ul></div></div></div>
+
+<script type='text/javascript' src='/elqNow/elqCfg.js'></script>
+<script type='text/javascript' src='/elqNow/elqImg.js'></script>
+
+	 <script>
+	  (function($) {
+	    jQuery(document).ready(function() {
+		    enquire.register('screen and (max-width: 768px)', {
+			      setup : function() {
+			      },
+			      match : function() {
+
+		            jQuery.slidebars({
+				        siteClose: true, // true or false
+				        disableOver: false, // integer or false
+				        hideControlClasses: true, // true or false
+				        scrollLock: true // true or false
+				    });
+
+			      },
+			      unmatch : function () {
+			      }
+			  });
+		    });
+	    // Weird hackery fix for iOS scrolling.
+	    // jQuery('body').css("min-height","1000px");
+	  }) (jQuery);
+
+    </script>	<script type='text/javascript'>
+	    var _sf_async_config={};
+	    /** CONFIGURATION START **/
+	    _sf_async_config.uid = 8871;
+	    _sf_async_config.domain = "thinkprogress.org";
+	    _sf_async_config.sections = "Climate";
+	    _sf_async_config.authors = "Joanna M. Foster";
+	    _sf_async_config.useCanonical = true;
+
+	    /** CONFIGURATION END **/
+	    (function(){
+	      function loadChartbeat() {
+	        window._sf_endpt=(new Date()).getTime();
+	        var e = document.createElement('script');
+	        e.setAttribute('language', 'javascript');
+	        e.setAttribute('type', 'text/javascript');
+	        e.setAttribute('src',
+	           (('https:' == document.location.protocol) ? 'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' : 'http://static.chartbeat.com/') +
+	           'js/chartbeat.js');
+	        document.body.appendChild(e);
+	      }
+	      var oldonload = window.onload;
+	      window.onload = (typeof window.onload != 'function') ?
+	         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+	    })();
+	</script>	<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script'); elem.src = (document.location.protocol == "https:" ? "https://secure" :
+"http://edge") + ".quantserve.com/quant.js"; elem.async = true; elem.type = "text/javascript"; var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt); })();
+
+_qevents.push({
+qacct:"p-50sAsQjbtTMWQ"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-50sAsQjbtTMWQ.gif" border="0"
+height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag --><!-- New IP-->
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script type='text/javascript' src='http://thinkprogress.org/wp-content/themes/tp4/js/tp.js?ver=20141203'></script>
+<script type='text/javascript' src='http://thinkprogress.org/wp-content/themes/tp4/js/jquery.unveil.min.js?ver=20141203'></script>
+<script type='text/javascript' src='http://thinkprogress.org/wp-content/themes/tp4/js/jquery.validate.min.js?ver=20141203'></script>
+<script type='text/javascript' src='http://thinkprogress.org/wp-content/themes/tp4/js/jquery.slidebars.min.js?ver=20141203'></script>
+<script type='text/javascript' src='http://thinkprogress.org/wp-content/themes/tp4/js/jquery.enquire.min.js?ver=20141203'></script>
+<script type='text/javascript' src='http://cdn.taboolasyndication.com/libtrc/thinkprogress/loader.js'></script>
+    <script>
+    jQuery(document).ready(function(){
+        // Display the overlay
+        var overlayCode = "\n    <script>\n    \/**\n     * tracking code\n     *\/\n    overlayTrackingCode = \"overlay_leftbehindnews_1114\";\n\n    \/**\n     * Temp new overlay work in progress\n     *\/\n    jQuery(document).ready(function(){\n        \/\/ see if cookies are enabled\n        try {\n            var cookies_enabled = false;\n            set_cookie(\"lorem_ipsum\", 1, 1, \"\/\");\n            var val = get_cookie(\"lorem_ipsum\");\n            if(val){\n                cookies_enabled = true;\n                delete_cookie(\"lorem_ipsum\", \"\/\");\n            }\n        } catch (e){\n            \/\/ do nothing\n        }\n\n        \/\/ if cookies are not enabled, dont display the overlay\n        if (false === cookies_enabled) {\n            return;\n        }\n\n        \/\/ see if theres an existing cookie of the name\n        var cookie = get_cookie(\"overlay_leftbehindnews_1114\");\n\n        \/\/ if there is, then just exit -- dont show the overlay\n        if (cookie) {\n            return;\n        }\n\n        \/\/ This shows the overlay\n        jQuery(\"#overlay\").addClass(\"visible\");\n\n        \/\/ otherwise, set a value for the cookie so we wont show\n        \/\/ the overlay again too soon\n        set_cookie(\"overlay_leftbehindnews_1114\", 1, 30, \"\/\");\n\n        ga(\"send\", \"event\", {\n          \"eventCategory\": \"Overlay\",\n          \"eventAction\": \"Loaded\",\n          \"eventLabel\": \"overlay_leftbehindnews_1114\",\n          \"nonInteraction\" : 1\n        });\n\n        \/\/ we need the experiment to activate only after the popup is loaded\n        window.optimizely = window.optimizely || [];\n        window.optimizely.push([\"activate\"]);\n\n    });\n    <\/script>\n    <!-- Start Overlay -->\n    <style>\n    #overlay #overlay-content {\n        background-image: url('\/\/d35brb9zkkbdsd.cloudfront.net\/wp-content\/uploads\/2014\/11\/overlay-leftbehindnews-large.jpg');\n    }\n    \n        @media only screen and (max-width: 425px) {\n            #overlay.visible #overlay-content {\n                background-image: url('\/\/d35brb9zkkbdsd.cloudfront.net\/wp-content\/uploads\/2014\/11\/overlay-leftbehindnews-small.jpg');\n            }\n        }\n        \n        @media only screen and (max-width: 720px) {\n            #overlay #overlay-content {\n                background-image: url('\/\/d35brb9zkkbdsd.cloudfront.net\/wp-content\/uploads\/2014\/11\/overlay-leftbehindnews-medium.jpg');\n            }\n        }\n        \n    <\/style>\n    <div id=\"overlay\">\n        <div id=\"overlay-container\">\n            <div class=\"overlay-close-area\">\n                <span id=\"close-overlay-button\" href=\"javascript:void(0)\">&times;<\/span>\n            <\/div>\n            <div id=\"overlay-content\">\n                <div class=\"opacity-background\">\n                    <div class=\"overlay-form\">\n                        <script>\r\njQuery(document).ready(function(){\r\n    jQuery(\"#overlay-form\").validate({\r\n        messages: {\r\n            email: \"Valid Email is required\",\r\n        },\r\n        submitHandler: function(form) {\r\n       ga('send', 'event', {\r\n          'eventCategory': 'Overlay',\r\n          'eventAction': 'Submitted',\r\n          'eventLabel': \"{overlayTrackingCode}\",\r\n          'nonInteraction': 1\r\n        });\r\n            form.submit();\r\n        }\r\n    });\r\n    jQuery(\"#overlay-submit\").click(function(event){\r\n        event.preventDefault();\r\n        jQuery(\"#overlay-form\").submit();\r\n    });\r\n});\r\n<\/script>\r\n\r\n<form action=\"http:\/\/now.eloqua.com\/e\/f2.aspx\" method=\"post\" class=\"act o-form\" id=\"overlay-form\">\r\n<input type=\"hidden\" name=\"elqFormName\" value=\"com_sub_c4e_TPAA_overlay6\"> \r\n<input type=\"hidden\" name=\"elqSiteID\" value=\"785\">\r\n<table class=\"o-table\">\r\n<tr>\r\n<td><input name=\"email\" type=\"text\" placeholder=\"Email\" class=\"o-text required email\"><\/td>\r\n<td><a href=\"#\" class=\"o-button\" id=\"overlay-submit\">Sign Up<\/a><\/td><\/tr>\r\n<\/table>\r\n<input type=\"submit\" style=\"display:none;\">\r\n<style>\r\n@media only screen and (max-width: 1050px) {\r\n      #overlay .o-text { padding: 12px; }\r\n}\r\n@media only screen and (max-width: 425px) {\r\n      #overlay #overlay-content .opacity-background {\r\nheight: 360px!important;\r\nmin-height: 360px!important;\r\n}\r\n#overlay #overlay-content {\r\nbackground-size: cover!important;\r\nbackground-position: center!important;\r\n}\r\n<\/style>\r\n<\/form>\n                    <\/div>\n                <\/div>\n            <\/div>\n        <\/div>\n    <\/div>\n    <script>\n    jQuery(document).ready(function(){\n\n        jQuery(function() {\n            jQuery(document).keydown(function(event) {\n                var ch = event.which\n                if(ch == 27) {\n                    jQuery(\"#overlay\").hide();\n                    console.log(\"Key press close registered\");\n                    ga(\"send\", \"event\", {\n                      \"eventCategory\": \"Overlay\",\n                      \"eventAction\": \"Exit\",\n                      \"eventLabel\": \"overlay_leftbehindnews_1114\"\n                    });\n                }\n            });\n        });\n\n        jQuery(\"html, #close-overlay-button, #close-overlay-link\").click(function() {\n            console.log(\"Close click registered\");\n            jQuery(\"#overlay\").hide();\n            ga(\"send\", \"event\", {\n              \"eventCategory\": \"Overlay\",\n              \"eventAction\": \"Exit\",\n              \"eventLabel\": \"overlay_leftbehindnews_1114\"\n            });\n        });\n\n        jQuery(\"#overlay-content\").click(function(event){\n            event.stopPropagation();\n        });\n\n    });\n    <\/script>\n    <!-- End Overlay -->\n    ";
+        jQuery("body").append(overlayCode);
+    });
+    </script>
+    <script>window._taboola = window._taboola || [];window._taboola.push({ article: 'auto' });jQuery(document).ready(function(){var tpTaboolaDesktop = "<!-- TP_Ad_Zone1 -->\n    <div class='tp-advertisement'>\n        <div id='taboola-desktop' style='width:100%'><\/div>\n    <\/div>\n    <script type='text\/javascript'>_taboola.push({ mode: 'autosized-generated-2r-bmc', container: 'taboola-desktop', placement: 'bmc' });<\/script>";var tpTaboolaMobile = "<!-- TP_Ad_Zone1 Mobile -->\n    <div class='tp-advertisement'>\n        <div class='tp-ad-label'><a href='\/advertise\/'>Advertisement<\/a><\/div>\n        <div id='taboola-mobile' style='width:100%'><\/div>\n    <\/div>\n    <script type='text\/javascript'>\n        window._taboola = window._taboola || [];\n        _taboola.push({mode:'thumbs-mobile-3r', container:'taboola-mobile', placement:'below-main-column'});\n    <\/script>";
+            enquire.register('screen and (max-width: 450px)', {
+                setup : function() {
+                    jQuery('#ad_zone1').append(tpTaboolaDesktop);
+                },
+                match : function() {
+                    jQuery('#ad_zone1').empty();
+                    jQuery('#ad_zone1_mobile').append(tpTaboolaMobile);
+                },
+                unmatch : function () {
+                    jQuery('#ad_zone1_mobile').empty();
+                    jQuery('#ad_zone1').append(tpTaboolaDesktop);
+                }
+            });});</script>            <!-- NEWSROOM SCRIPT -->
+            <script>
+            window._newsroom = window._newsroom || [];
+            !function (e, f, u) {
+            e.async = 1;
+            e.src = u;
+            f.parentNode.insertBefore(e, f);
+            }(document.createElement('script'),
+            document.getElementsByTagName('script')[0], '//c2.taboola.com/nr/thinkprogress/newsroom.js');
+            </script>
+            <!-- END NEWSROOM SCRIPT -->
+            <script>
+    //Initialize DFP Ads
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+    googletag.cmd.push(function() {
+
+    /**
+     * Load ad slots only on home and issue pages
+     */
+    
+    // These ads appear only on posts and pages
+    googletag.defineSlot('/17107625/TP_Ad_Zone2', [300, 250], 'div-gpt-ad-1380123695885-0').addService(googletag.pubads());    
+    /**
+     * These are special ad slots only shown in posts
+     */
+            // The "in-content" ad
+        googletag.defineSlot('/17107625/tp_all_article_z2_1x1_1', [[1, 1], [300, 250], [320, 50], [320, 115]], 'div-gpt-ad-1406054322033-0').addService(googletag.pubads()).setCollapseEmptyDiv(true,true);
+    
+    googletag.defineSlot('/17107625/TP_Ad_Zone3', [300, 250], 'div-gpt-ad-1380123696490-0').addService(googletag.pubads());googletag.defineSlot('/17107625/TP_Ad_Zone8', [300, 250], 'div-gpt-ad-1380124247238-0').addService(googletag.pubads());        googletag.pubads()
+        .setTargeting("domain","thinkprogress.org").setTargeting("pagetype","single").setTargeting("issue","climate").setTargeting("tag",["dengue","latin-america","world-cup","world-health-organization"])
+        .set('page_url', 'http://thinkprogress.org/climate/2014/05/31/3443533/dengue-latin-america/')
+        .enableSingleRequest();
+
+        googletag.enableServices();
+    });
+    </script>
+        <script>
+    //Enquire.js Ad Display Logic
+    jQuery(document).ready(function(){
+
+        //Non Wide Display Ad Setup
+                    //Setup leaderboard Ad Zones for all pages that are not of wide-display type
+            var tp_ad_zone4 = "<!-- TP_Ad_Zone4 -->\n     <div class='banner-ad tp-advertisement'>\n         <div class='tp-ad-label'>\n             <a href='\/advertise\/'>Advertisement<\/a>\n         <\/div>\n         <div id='div-gpt-ad-1380123696982-0' style='width:100%; height:90px;'><\/div>\n         <script type='text\/javascript'>\n             googletag.cmd.push(function() { googletag.display('div-gpt-ad-1380123696982-0'); });\n         <\/script>\n     <\/div>";            var tp_ad_zone5 = "<!-- TP_Ad_Zone5 -->\n     <div class='banner-ad tp-advertisement'>\n         <div class='tp-ad-label'>\n             <a href='\/advertise\/'>Advertisement<\/a>\n         <\/div>\n         <div id='div-gpt-ad-1380123697713-0' style='width:100%; height:90px;'><\/div>\n         <script type='text\/javascript'>\n             googletag.cmd.push(function() { googletag.display('div-gpt-ad-1380123697713-0'); });\n         <\/script>\n     <\/div>";
+            if( jQuery(window).width() > 768){
+                //When we are in GREATER than small tablet size enable leaderboards
+                jQuery('#ad_zone4').append(tp_ad_zone4);
+                jQuery('#ad_zone5').append(tp_ad_zone5);
+                //Check for if switch to smaller than 768, kill ad zones 4 and 5.
+                enquire.register('screen and (max-width: 767px)', {
+                    match : function() {
+                        jQuery('#ad_zone4').empty();
+                        jQuery('#ad_zone5').empty();
+                    }
+                });
+            }
+        
+        //Wide Display Ad Setup
+        
+        // Display single post and sidebar ads on both desktop and mobile
+        var tp_ad_zone2 = "<!-- TP_Ad_Zone2 -->\n    <div class='tp-advertisement'>\n        <div class='tp-ad-label'>\n            <a href='\/advertise\/'>Advertisement<\/a>\n        <\/div>\n        <div id='div-gpt-ad-1380123695885-0' style='width:100%; height:250px;'><\/div>\n        <script type='text\/javascript'>\n            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1380123695885-0'); });\n        <\/script>\n    <\/div>";jQuery('#ad_zone2').append(tp_ad_zone2);        var tp_ad_zone3 = "<!-- TP_Ad_Zone3 -->\n     <div class='tp-advertisement'>\n         <div class='tp-ad-label'>\n             <a href='\/advertise\/'>Advertisement<\/a>\n         <\/div>\n         <div id='div-gpt-ad-1380123696490-0' style='width:300px; height:250px;' class='tp-advertisement'><\/div>\n         <script type='text\/javascript'>\n             googletag.cmd.push(function() { googletag.display('div-gpt-ad-1380123696490-0'); });\n         <\/script>\n     <\/div>";jQuery('#ad_zone3').append(tp_ad_zone3);        var tp_ad_zone8 = "<!-- TP_Ad_Zone8 -->\n     <div class='tp-advertisement'>\n         <div class='tp-ad-label'>\n             <a href='\/advertise\/'>Advertisement<\/a>\n         <\/div>\n         <div id='div-gpt-ad-1380124247238-0' style='width:300px; height:250px;' class='tp-advertisement'><\/div>\n         <script type='text\/javascript'>\n             googletag.cmd.push(function() { googletag.display('div-gpt-ad-1380124247238-0'); });\n         <\/script>\n     <\/div>";jQuery('#ad_zone8').append(tp_ad_zone8);
+        // Display In-Content ads (device detection handled by DFP)
+                    var inContentAd = "\n    <!-- In-Content Ads -->\n    <div id='div-gpt-ad-1406054322033-0' class='tp-advertisement' style='width:320px'>\n        <script type='text\/javascript'>\n            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1406054322033-0'); });\n        <\/script>\n    <\/div>";
+            jQuery('<div id="in-content-ad"></div>').insertAfter(".post > p:nth-of-type(4)");
+            jQuery('#in-content-ad').append(inContentAd);
+            });
+    </script>
+        <script>
+        // Gravity Widget
+        jQuery(document).ready(function(){
+            // Check for if this post is wide display or not. If so then make gravityWidget the wide variant.
+            var gravityWidget = "  <div id=\"grv-personalization-13\"><\/div>\n<script type='text\/javascript'>\n  \/\/<![CDATA[\n    (function(){\n    window.gravityInsightsParams = {\n      'type': 'content',\n      'action': '',\n      'site_guid': '8e9372b5e0f099519daea57d17d06dc8'\n    };\n    var adServerReq,bUrl,cburl,doUseGravityUserGuid,includeJs,jq,pfurl,type,ug,wlPrefix,wlUrl,_ref,_ref1,_ref2;includeJs=function(a){var b;b=document.createElement(\"script\");b.async=!0;b.src=a;a=document.getElementsByTagName(\"script\")[0];return a.parentNode.insertBefore(b,a)};bUrl=\"\";ug=(doUseGravityUserGuid=!0===gravityInsightsParams.useGravityUserGuid?1:0)?\"\":gravityInsightsParams.user_guid||(null!=(_ref=\/grvinsights=([^;]+)\/.exec(document.cookie))?_ref[1]:void 0)||\"\";\n    wlUrl=(wlPrefix=\"http:\/\/rma-api.gravity.com\/v1\/api\/intelligence\",jq=(null!=(_ref1=window.jQuery)?null!=(_ref2=_ref1.fn)?_ref2.jquery:void 0:void 0)||\"\",type=\"iframe\",adServerReq=gravityInsightsParams.ad||\"\",cburl=gravityInsightsParams.cburl||\"\",pfurl=gravityInsightsParams.pfurl||\"\",\"\"+wlPrefix+\"\/wl?jq=\"+jq+\"&sg=\"+gravityInsightsParams.site_guid+\"&ug=\"+ug+\"&ugug=\"+doUseGravityUserGuid+\"&id=grv-personalization-13&pl=13\"+(\"&type=\"+type+\"&ad=\"+adServerReq+\"&cburl=\")+encodeURIComponent(cburl)+\"&pfurl=\"+\n    encodeURIComponent(pfurl)+(\"&x=\"+(new Date).getTime())+(\"undefined\"!==typeof forceArticleIds&&null!==forceArticleIds&&forceArticleIds.join?\"&ai=\"+forceArticleIds.join(\",\"):\"\")+(\"undefined\"!==typeof apids&&null!==apids&&\"\"!==apids?\"&apids=\"+encodeURIComponent(apids):\"\"));bUrl&&includeJs(bUrl);wlUrl&&(window.gravityInsightsParams.sidebar&&(window.gravityInsightsParams.wlStartTime=(new Date).getTime()),includeJs(wlUrl));})();\n  \/\/]]>\n<\/script>";            var gravityMobileWidget = "    <div id=\"grv-personalization-14\"><\/div>\n<script type='text\/javascript'>\n  \/\/<![CDATA[\n    (function(){\n    window.gravityInsightsParams = {\n      'type': 'content',\n      'action': '',\n      'site_guid': '8e9372b5e0f099519daea57d17d06dc8'\n    };\n    var adServerReq,bUrl,cburl,doUseGravityUserGuid,includeJs,jq,pfurl,type,ug,wlPrefix,wlUrl,_ref,_ref1,_ref2;includeJs=function(a){var b;b=document.createElement(\"script\");b.async=!0;b.src=a;a=document.getElementsByTagName(\"script\")[0];return a.parentNode.insertBefore(b,a)};bUrl=\"\";ug=(doUseGravityUserGuid=!0===gravityInsightsParams.useGravityUserGuid?1:0)?\"\":gravityInsightsParams.user_guid||(null!=(_ref=\/grvinsights=([^;]+)\/.exec(document.cookie))?_ref[1]:void 0)||\"\";\n    wlUrl=(wlPrefix=\"https:\"===location.protocol?\"https:\/\/secure-api.gravity.com\/v1\/api\/intelligence\":\"http:\/\/rma-api.gravity.com\/v1\/api\/intelligence\",jq=(null!=(_ref1=window.jQuery)?null!=(_ref2=_ref1.fn)?_ref2.jquery:void 0:void 0)||\"\",type=\"iframe\",adServerReq=gravityInsightsParams.ad||\"\",cburl=gravityInsightsParams.cburl||\"\",pfurl=gravityInsightsParams.pfurl||\"\",\"\"+wlPrefix+\"\/wl?jq=\"+jq+\"&sg=\"+gravityInsightsParams.site_guid+\"&ug=\"+ug+\"&ugug=\"+doUseGravityUserGuid+\"&id=grv-personalization-14&pl=14\"+\n    (\"&type=\"+type+\"&ad=\"+adServerReq+\"&cburl=\")+encodeURIComponent(cburl)+\"&pfurl=\"+encodeURIComponent(pfurl)+(\"&x=\"+(new Date).getTime())+(\"undefined\"!==typeof forceArticleIds&&null!==forceArticleIds&&forceArticleIds.join?\"&ai=\"+forceArticleIds.join(\",\"):\"\")+(\"undefined\"!==typeof apids&&null!==apids&&\"\"!==apids?\"&apids=\"+encodeURIComponent(apids):\"\"));bUrl&&includeJs(bUrl);wlUrl&&(window.gravityInsightsParams.sidebar&&(window.gravityInsightsParams.wlStartTime=(new Date).getTime()),includeJs(wlUrl));})();\n  \/\/]]>\n<\/script>";
+            enquire.register('screen and (max-width: 767px)', {
+                setup : function() {
+                    jQuery("#gravity-widget").append(gravityWidget);
+                },
+                match : function() {
+                    jQuery('#gravity-widget').empty();
+                    jQuery("#gravity-widget").append(gravityMobileWidget);
+                    jQuery("#gravity-widget").insertBefore(".comment-disclaimer");                },
+                unmatch : function() {
+                    jQuery('#gravity-widget').empty();
+                    jQuery("#gravity-widget").append(gravityWidget);
+                    jQuery("#gravity-widget").insertBefore("#twitter-widget");                }
+            });
+        });
+    </script>
+        <script>
+        jQuery(document).ready(function(){
+            // display the sidebar donate ad on both desktop and mobile
+            var sidebarDonateAd = "    <a href=\"\/donate\/\"><img src=\"http:\/\/thinkprogress.org\/wp-content\/themes\/tp4\/images\/donate.jpg\" class=\"side-ad\" alt=\"Donation Ad\"><\/a>";
+            jQuery("#sidebar-donate-ad").append(sidebarDonateAd);
+        });
+    </script>
+    
+<script>
+jQuery(document).ready(function(){
+    jQuery("img.unveil").unveil(200);
+    //Setup Triple Feature
+    var tripleFeatureCode = "<div class=\"triple-feature\">\n<div class=\"third optimizely-eligible\">\n<a  href=\"http:\/\/thinkprogress.org\/climate\/2015\/01\/05\/3607735\/2014-hottest-year-by-far\/\"><img src=\"\/\/d35brb9zkkbdsd.cloudfront.net\/wp-content\/uploads\/2015\/01\/JMA2014-321x214.jpg\" alt=\"2014 Was The Hottest Year On Record Globally By Far\">\n<h4 class=\"story-title\">2014 Was The Hottest Year On Record Globally By Far<\/h4><\/a>\n<\/div>\n<div class=\"third optimizely-eligible\">\n<a  href=\"http:\/\/thinkprogress.org\/climate\/2015\/01\/05\/3607904\/wind-power-surges-in-2014\/\"><img src=\"\/\/d35brb9zkkbdsd.cloudfront.net\/wp-content\/uploads\/2015\/01\/15934223991_0e1b069e45_z-321x214.jpg\" alt=\"U.K. And Germany Smash Wind Power Records\">\n<h4 class=\"story-title\">U.K. And Germany Smash Wind Power Records<\/h4><\/a>\n<\/div>\n<div class=\"third optimizely-eligible\">\n<a  href=\"http:\/\/thinkprogress.org\/climate\/2015\/01\/05\/3608112\/california-governor-50-percent-renewables\/\"><img src=\"\/\/d35brb9zkkbdsd.cloudfront.net\/wp-content\/uploads\/2015\/01\/AP340984438152-321x214.jpg\" alt=\"California Governor Calls For 50 Percent Renewable Power\">\n<h4 class=\"story-title\">California Governor Calls For 50 Percent Renewable Power<\/h4><\/a>\n<\/div>\n";
+    processOptimizely(jQuery("#triple-feature"));
+
+    // display the sidebar capaf logo
+    var sidebarCAPAFLogo = "<a href=\"http:\/\/www.americanprogressaction.org\"><img src=\"http:\/\/thinkprogress.org\/wp-content\/themes\/tp4\/images\/capaf-logo.gif\" alt=\"CAP Action Logo\" class=\"fit side-box\"><\/a>";
+    jQuery("#sidebar-capaf-logo").append(sidebarCAPAFLogo);
+
+    //Display Triple Feature on All Pages Not Single
+    
+    enquire.register("screen and (min-width: 767px)", {
+        setup : function() {
+            // display the twitter widget on desktop
+            var twitterWidget = "<div class=\"side-box\">\r\n<h3>Recent Tweets<\/h3>\r\n<a class=\"twitter-timeline\" href=\"https:\/\/twitter.com\/climateprogress\" data-widget-id=\"291955830381748224\">Tweets by @climateprogress<\/a>\r\n<\/div>";
+            jQuery("#twitter-widget").append(twitterWidget);
+        },
+        match : function() {
+            //Display Triple Feature on Single Posts
+                            jQuery("#triple-feature").append(tripleFeatureCode);
+                    },
+        unmatch : function() {
+            //Hide Triple Feature on Single Posts When Mobile
+                            jQuery("#triple-feature").empty();
+                    }
+    });
+
+});
+</script>
+</body>
+</html>
+eFeatureCode);
+                    },
+        unmatch : function() {
+            //

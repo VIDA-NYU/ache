@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+
+
+
+    <!--[if IE 8]>         <html class="ie lt-ie9 nojs" lang="en" > <![endif]-->
+<!--[if IE 9]>         <html class="ie ie9 nojs" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="nojs" lang="en" > <!--<![endif]-->
+
+
+
+<head>
+
+<!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-config" content="none"/>
+    
+
+    
+
+
+
+            <meta name="ROBOTS" content="INDEX, FOLLOW" />
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <meta name="description" content="Symptoms of Ebola infection may be mild at first, but as the virus replicates, Ebola symptoms rapidly become more severe." />
+	    <meta itemprop="dateModified" content="2014-10-16T00:00:00.0000000" />
+<meta property="og:site_name" content="EverydayHealth.com" />
+<meta property="fb:app_id" content="135346036490186" />
+<meta property="og:title" content="Ebola Symptoms" />
+<meta property="og:description" content="Symptoms of Ebola infection may be mild at first, but as the virus replicates, Ebola symptoms rapidly become more severe." />
+<meta property="og:url" content="http://www.everydayhealth.com/ebola/symptoms/" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="http://images.agoramedia.com/EverydayHealth/video/video-default-image-722x406.jpg" />
+<meta name="twitter:card" content="photo" />
+<meta name="twitter:url" content="http://www.everydayhealth.com/ebola/symptoms/" />
+<meta name="twitter:title" content="Ebola Symptoms" />
+<meta name="twitter:description" content="Symptoms of Ebola infection may be mild at first, but as the virus replicates, Ebola symptoms rapidly become more severe." />
+<meta name="twitter:site" content="@everydayhealth" />
+<meta name="twitter:image" content="http://images.agoramedia.com/EverydayHealth/video/video-default-image-722x406.jpg" />
+    <link rel="canonical" href="http://www.everydayhealth.com/ebola/symptoms/" />
+    <title>
+	    Ebola Symptoms | Everyday Health
+    </title>
+<link rel="stylesheet" href="//content.everydayhealth.com/Assets/everydayhealth/content/GuideTop.css?ver=2.0.0.0" />
+
+
+	<!-- IE8 CSS -->
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="//content.everydayhealth.com/Assets/everydayhealth/content/shame.css?ver=2.0.0.0" />
+	<![endif]-->
+
+
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="//images.agoramedia.com/EverydayHealth/responsive/img/ico/apple-touch-icon-152x152-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="//images.agoramedia.com/EverydayHealth/responsive/img/ico/apple-touch-icon-144-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="//images.agoramedia.com/EverydayHealth/responsive/img/ico/apple-touch-icon-120x120-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="//images.agoramedia.com/EverydayHealth/responsive/img/ico/apple-touch-icon-114-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="//images.agoramedia.com/EverydayHealth/responsive/img/ico/apple-touch-icon-76x76-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//images.agoramedia.com/EverydayHealth/responsive/img/ico/apple-touch-icon-72-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" href="//images.agoramedia.com/EverydayHealth/responsive/img/ico/apple-touch-icon-precomposed.png" />
+	<link rel="shortcut icon" href="//images.agoramedia.com/EverydayHealth/responsive/img/ico/favicon.png" />
+
+
+
+	<script>
+		window.jserr = [];
+		window.onerror = function (msg) {
+			window.jserr.push(msg);
+		};
+	</script>
+
+
+
+<script src="//content.everydayhealth.com/Assets/everydayhealth/scripts/GuideTop.js?ver=2.0.0.0"></script>
+
+
+		 <script>
+ 			var WRInitTime = (new Date()).getTime();
+ 		</script>
+
+
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="//content.everydayhealth.com/Assets/everydayhealth/js/eh/html5.js?ver=2.0.0.0"></script>
+	<![endif]-->
+
+
+
+	<script src="//tracking.waterfrontmedia.com/GCScript.ashx?p=37"></script>
+
+
+
+	<script>
+		// comscore init
+		EH.Settings.comscore = {
+			c1: '2',
+			c2: '6035818',
+			c3: '',
+			c4: EH.Settings.location.host + EH.Settings.location.pathname,
+			c5: '',
+			c6: '',
+			c15: ''
+		};
+
+		var _comscore = _comscore || [];
+		_comscore.push({ c1: EH.Settings.comscore.c1, c2: EH.Settings.comscore.c2 });
+
+		(function () {
+
+			var s = document.createElement('script'),
+				el = document.getElementsByTagName('script')[0],
+				fromAol = EH.Settings.cobranders.aol.from;
+
+			s.async = true;
+			s.src = (document.location.protocol == 'https:' ? 'https://sb' : 'http://b') + '.scorecardresearch.com/beacon.js';
+			el.parentNode.insertBefore(s, el);
+
+			// if coming from aol, add extra options
+			if (fromAol) {
+				EH.Settings.comscore.options = {
+					url_append: 'comscorekw=EH_AOL'
+				};
+			}
+
+			function beacon() {
+				var t;
+				if (typeof COMSCORE === 'undefined') {
+					t = setTimeout(function () {
+						beacon();
+					}, 700);
+				} else {
+					clearTimeout(t);
+					COMSCORE.beacon(EH.Settings.comscore);
+				}
+			}
+
+			// fire beacon call
+			beacon();
+
+		})();
+	</script>
+
+
+
+	<script>
+
+
+		// page type object
+		EH.Settings.pageType = {
+			infographic: 'inf',
+			article: 'cc',
+			video: 'cc',
+			slideshow: 'pht',
+			nofrills: 'nof',
+			homepage: 'home',
+			single: 'sp',
+			lobbylist: 'lob',
+			guide: 'gui',
+			fullwidth: 'tl',
+			'guide - article': 'gui',
+			'guide - news': 'gui',
+			'tools-api': 'tool',
+			program: 'pgr',
+			login: 'reg',
+			register: 'reg',
+            cusoarticle: 'cc',
+            html: 'reg',
+            infoselfie: 'ugcinf'
+		};
+
+		// omniture init
+		EH.Settings.omniture = {
+			zone: '~ebola~'.replace(/~/g, '/'),
+			ct: EH.Settings.pageType['guide - article'],
+			type: '',
+			status: 'false',
+			name: 'EverydayHealth',
+			id: '282530',
+			event: 'event5,event77'
+		};
+
+		// update zone, if applicable
+		(function () {
+
+			// vars
+			var zone = EH.Settings.util.cookie.jsonValue(EH.Settings.cookie, 'zone');
+
+			// if zone exists AND not coming from /info/v1xxx
+			if (zone && !EH.Settings.cobranders.downstream.params.legacy) {
+				EH.Settings.omniture.zone += '/' + zone;
+			}
+
+		} ());
+
+		Omniture.Init(EH.Settings.omniture.zone, EH.Settings.omniture.ct, EH.Settings.ugc, EH.Settings.omniture.type, EH.Settings.omniture.status, EH.Settings.omniture.name, EH.Settings.omniture.id, EH.Settings.omniture.event);
+
+		window['optimizely'] = window['optimizely'] || [];
+		window['optimizely'].push(['customTag', 'articleType', 'guide - article']);
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="//cdn.optimizely.com/js/275071578.js"></script> <script> window.optimizely = window.optimizely || []; window.optimizely.push("activateSiteCatalyst");</script>
+
+
+
+    <link rel="publisher" href="https://plus.google.com/+EverydayHealth/" />
+</head>
+
+<body 
+    
+
+    data-page-guid="6ff183e9-fa17-48be-9a89-4aecc3a41c0b"
+    data-page-id="282530"
+    data-product-id="277"
+    data-core-exists="true"
+    data-in-view="true"
+    data-bn=""
+    data-is-mobile="false"
+    data-is-tablet="false"
+    data-page-source=""
+    data-page-title="Ebola+Symptoms"
+    data-page-description="Symptoms+of+Ebola+infection+may+be+mild+at+first%2c+but+as+the+virus+replicates%2c+Ebola+symptoms+rapidly+become+more+severe."
+    data-page-deck="Early+symptoms+of+Ebola+infection+may+be+mild%2c+but+as+the+virus+replicates%2c+symptoms+become+much+more+severe."
+    data-page-url="http://www.everydayhealth.com/ebola/symptoms/"
+    data-author=" Ingrid  Strauch"
+    data-author-url="http://www.everydayhealth.com/authors/ingrid-strauch/"
+    data-reviewer=" Robert  Jasmer, MD"
+    data-utp-service="//tracking.waterfrontmedia.com/GCScript.ashx?p=37"
+    data-newsletter-service="//secure.agoramedia.com/newsletter"
+    data-newsletter-src="2212"
+    data-newsletter-id="51"
+    data-newsletter-text="Everyday Health: Healthy Living"
+    data-assets="//content.everydayhealth.com/Assets/everydayhealth"
+    data-assets-version="2.0.0.0"
+    data-css-path="/content"
+    data-js-path="/scripts"
+    data-app-name="Everyday Health"
+    data-source-id=""
+    data-zone="/ebola/"
+    data-categories="cat="
+    data-ct="gui"
+    data-search-form=".form-search"
+    data-search-form-query=".form-search-query"
+    data-search-form-submit=".form-search-submit"
+    data-social-share="true"
+    data-social-share-list=""
+    data-social-share-count-threshold="0"
+    data-social-share-img-default="http://images.agoramedia.com/everydayhealth/gcms/EH_social_300.png"
+    data-social-share-email-path="/conditions/sendemail"
+    data-social-share-modal-html="/conditions/GetShareBar"
+    data-more-recent-stories-path="/conditions/getmorerecentstories"
+    data-ad-rotation-video="1"
+    data-ad-rotation-slideshow="1"
+    data-ad-interstitial-slideshow="true"
+    data-migratedbyline=""
+    data-twitter-handle="@EverydayHealth"
+    data-lazy-loading="false"
+    data-login-support="false"
+    data-hex-colors = "false"
+    data-is-cuso-edit-package = "false"        
+ class="eh homepage">
+	<span id="top"></span>
+
+	<!-- begin outer container -->
+	<div id="eh-responsive" class="container container-outer">
+
+		
+		
+<div data-esiurl="http://www.everydayhealth.com/conditions/navigation/getglobalheader?app=eh2.2">
+             <header class="masthead" id="head-content"><section class="navbar"><div class="navbar-inner nav-eh"><div class="container"><a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="btn brand nav-title sprite hidden-desktop" data-toggle="collapse" data-target=".navbar-responsive-collapse"></a><a href="http://www.aol.com/" class="logo-branding aol sprite nav-title-aol" target="_blank"></a><nav class="nav-collapse collapse navbar-responsive-collapse"><ul class="nav nav-pills"><li class="nav-eh-search-login nav-additions new hidden-desktop"><form action="/info/v1ss/" method="get" class="form-search pull-left"><input type="text" name="search" value="Search" title="Search" autocomplete="off" class="input-small form-search-query"><a href="#" class="form-search-submit sprite">Search</a></form></li><li class="home"><a href="/"><span class="sprite">Home</span></a><a href="http://www.aol.com/" class="logo-branding aol sprite" target="_blank"></a></li><li class=""><a href="/health-center/common-topics.aspx">
+Health A-Z</a><div class="span12 mm-container three-column visible-desktop"><div class="row-fluid"><div class="span8 col-md-8 mm-related"><p class="section-header">Common Conditions</p><ul class="pull-left"><li><a href="/conditions/adhd" class="">ADD/ADHD</a></li><li><a href="/conditions/ankylosing-spondylitis" class="">Ankylosing Spondylitis</a></li><li><a href="http://www.everydayhealth.com/atrial-fibrillation/" class="">Atrial Fibrillation</a></li><li><a href="/cancer/index.aspx" class="">Cancer</a></li><li><a href="/conditions/cold-and-flu" class="">Cold and Flu</a></li><li><a href="/conditions/copd" class="">COPD</a></li><li><a href="/conditions/crohns-disease" class="">Crohn&#39;s Disease</a></li><li><a href="/conditions/depression" class="">Depression</a></li><li><a href="/conditions/digestive-health" class="">Digestive Health</a></li><li><a href="/pain-management/headache/index.aspx" class="">Headache and Migraine</a></li><li><a href="/conditions/heart-health" class="">Heart Health</a></li><li><a href="/conditions/hepatitis/hepatitis-c" class="">Hepatitis C</a></li></ul><ul class="pull-left"> <li><a href="/conditions/low-testosterone" class="">Low Testosterone</a></li><li><a href="http://www.everydayhealth.com/multiple-sclerosis/" class="">Multiple Sclerosis</a></li><li><a href="/conditions/pain-management" class="">Pain</a></li><li><a href="/conditions/psoriasis" class="">Psoriasis</a></li><li><a href="/conditions/psoriatic-arthritis" class="">Psoriatic Arthritis</a></li><li><a href="/conditions/rheumatoid-arthritis" class="">Rheumatoid Arthritis</a></li><li><a href="/conditions/senior-health" class="">Senior Health</a></li><li><a href="/conditions/sexual-health" class="">Sexual Health</a></li><li><a href="/conditions/sleep" class="">Sleep</a></li><li><a href="http://www.everydayhealth.com/type-2-diabetes/" class="">Type 2 Diabetes</a></li><li><a href="/conditions/ulcerative-colitis" class="">Ulcerative Colitis</a></li><li><a href="/health-center/common-topics.aspx" class="eh-icon-arrow mm-more">All Conditions</a></li></ul><ul class="pull-left"></ul></div><div class="span4 mm-featured"><a href="/quit-smoking/" class="mm-featured-story"><img src="http://images.agoramedia.com/everydayhealth/cms/How-to-Quit-Smoking_article.jpg?width=200" alt="How to Quit Smoking In 2015" class="img-responsive" />How to Quit Smoking In 2015</a></div></div></div></li><li class=""><a href="/drugs/">
+Drugs</a><div class="span12 mm-container two-column visible-desktop"><div class="row-fluid"><div class="span8 col-md-8 mm-related"><p class="section-header">Find &amp; Review Drugs</p><ul class="pull-left"><li><a href="/drugs/all-drugs/" class="">Drugs A-Z</a></li><li><a href="/diet-nutrition/vitamins-meds.aspx" class="">Vitamins &amp; Supplements</a></li><li><a href="/drugs/" class="eh-icon-arrow mm-more">All Drugs</a></li></ul></div><div class="span4 mm-featured"><a href="/columns/health-answers/essential-facts-about-aspirin-therapy-your-heart/" class="mm-featured-story"><img src="http://images.agoramedia.com/everydayhealth/gcms/6-Essential-Facts-About-Aspirin-Therapy-for-Your-Heart-article.jpg?width=200" alt="6 Essential Facts About Aspirin Therapy for Your Heart" class="img-responsive" />6 Essential Facts About Aspirin Therapy for Your Heart</a></div></div></div></li><li class=""><a href="/healthy-living/index.aspx">
+Healthy Living</a><div class="span12 mm-container two-column visible-desktop"><div class="row-fluid"><div class="span8 col-md-8 mm-related"><p class="section-header">Popular Topics</p><ul class="pull-left"><li><a href="/alternative-health/the-basics.aspx" class="">Alternative Health</a></li><li><a href="/lifestyle/beauty/" class="">Beauty</a></li><li><a href="/conditions/sexual-health" class="">Better Sex</a></li><li><a href="/columns/" class="">Columns</a></li><li><a href="/dental-health/101.aspx" class="">Dental Health</a></li><li><a href="/fitness/" class="">Fitness</a></li><li><a href="/lifestyle/kidshealth/" class="">Kids&#39; Health</a></li><li><a href="/conditions/mens-health" class="">Mens&#39; Health</a></li><li><a href="/conditions/senior-health" class="">Senior Health</a></li><li><a href="/vision-center/allarticles.aspx" class="">Vision</a></li><li><a href="/conditions/womens-health" class="">Women&#39;s Health</a></li><li><a href="/lifestyle/healthy-living/" class="eh-icon-arrow mm-more">All Healthy Living</a></li></ul><ul class="pull-left"></ul></div><div class="span4 mm-featured"><a href="/news/which-costs-more-gaining-weight-losing-it/" class="mm-featured-story"><img src="http://images.agoramedia.com/everydayhealth/gcms/Which-Costs-More-Gaining-Weight-or-Losing-It-article.jpg?width=200" alt="Which Costs More: Gaining Weight or Losing It?" class="img-responsive" />Which Costs More: Gaining Weight or Losing It?</a></div></div></div></li><li class=""><a href="/food/index.aspx">
+Food</a><div class="span12 mm-container two-column mm-four visible-desktop"><div class="row-fluid"><div class="span8 col-md-8 mm-related"><p class="section-header">Popular Topics</p><ul class="pull-left"><li><a href="/lifestyle/food/" class="">What to Eat</a></li><li><a href="/diet-nutrition/allarticles.aspx" class="">Diet and Nutrition</a></li><li><a href="/columns/recipe-of-the-day/" class="">Recipe of the Day</a></li><li><a href="/lifestyle/healthy-recipes/" class="">Healthy Recipes</a></li><li><a href="/diet-nutrition/vitamins-meds.aspx" class="">Vitamins and Supplements</a></li><li><a href="/lifestyle/food/" class="eh-icon-arrow mm-more">All Food &amp; Recipes</a></li></ul></div><div class="span4 mm-featured"><a href="/news/pizza-takes-slice-out-kids-health/" class="mm-featured-story"><img src="http://images.agoramedia.com/everydayhealth/gcms/Pizza-Takes-a-Slice-Out-of-Kids-Health-article.jpg?width=200" alt="Pizza Takes a Slice Out of Kids&#39; Health" class="img-responsive" />Pizza Takes a Slice Out of Kids&#39; Health</a></div></div></div></li><li class="hidden-desktop user-menu"><a href="/login/"><span class="sprite user-icon"></span><span class="js-username">LOG IN</span></a><ul class="user-sub-menu"><li><a href="//tools.everydayhealth.com/dashboard/">Dashboard</a></li><li><a href="/logout/">Log Out</a></li></ul></li><li class="nav-eh-search-login"><form action="/info/v1ss/" method="get" class="form-search pull-left"><input type="text" name="search" value="Search" title="Search" autocomplete="off" class="input-small form-search-query"><a href="#" class="form-search-submit sprite"></a></form><a href="/login/" data-toggle="modal" class="login">Log in</a><div class="dropdown dropdown-toggle new"><span class="sprite"></span><ul class="loggedin-dropdown dmp"><li class="username"><span class="sprite user-icon"></span><span class="js-username"></span></li><li><a href="//tools.everydayhealth.com/dashboard/">Dashboard</a></li><li><a href="//tools.everydayhealth.com/calorie-counter/">Calorie Counter</a></li><li><a href="//tools.everydayhealth.com/7-day-meal-plan/">7-Day Meal Plan</a></li><li><a href="//tools.everydayhealth.com/meal-planner/">Meal Planner</a></li><li><a href="//tools.everydayhealth.com/weight-tracker/">Weight Tracker</a></li><li><a href="//tools.everydayhealth.com/recipes/">Recipes</a></li><li><a href="/newsletter-subscriptions/manage/">Newsletters</a></li><li><a href="//tools.everydayhealth.com/settings/">Settings</a></li><li><a href="/members/account/profile2.aspx">Change Password</a></li><li class="logout js-logout"><a href="/logout/">Log Out</a></li></ul></div></li></ul></nav></div></div></section></header>
+
+            
+        </div>
+
+
+		
+		  
+   
+   
+    <div id="guide-top-ad">
+        
+
+    <div class="ad-container ad-banner">
+        <div id="adDiv" class="ad-placeholder"
+            title="ADVERTISEMENT" 
+            data-AdSize="728x90,970x90"
+            data-pos="top"
+            data-tile="1">
+        </div>
+        <noscript>
+            <a target="_blank" href="http://ad.doubleclick.net/N4213/jump/everydayhealth/ebola/;p=37;ugc=0;ct=;cat=Infectious Diseases;page=6ff183e9fa1748be9a894aecc3a41c0b;bn=;content=;pos=top;sz=728x90,970x90;tile=1;ord=20150129192802?">
+                <img border="0" alt="" src="http://ad.doubleclick.net/N4213/ad/everydayhealth/ebola/;p=37;ugc=0;ct=;cat=Infectious Diseases;page=6ff183e9fa1748be9a894aecc3a41c0b;bn=;content=;pos=top;sz=728x90,970x90;tile=1;ord=20150129192802?" />
+            </a>
+        </noscript>
+    </div>
+    </div>
+
+    
+
+<div id="menu-fix">
+    <div class="row-fluid" id="top-menu">
+        <span class="ehshare share-inline"
+    data-title="Ebola%2bSymptoms"
+    data-url="http%3a%2f%2fwww.everydayhealth.com%2febola%2fsymptoms%2f"
+    data-description="Symptoms%2bof%2bEbola%2binfection%2bmay%2bbe%2bmild%2bat%2bfirst%252c%2bbut%2bas%2bthe%2bvirus%2breplicates%252c%2bEbola%2bsymptoms%2brapidly%2bbecome%2bmore%2bsevere."
+    data-migratedbyline=""
+    
+
+            data-networks="[&quot;facebook&quot;, &quot;twitter&quot;, &quot;pinterest&quot;, &quot;email&quot;, &quot;print&quot;]"
+    data-count="true"
+    data-track-self="false">
+</span>
+        <div class="pull-left" id="guide-title" style="bottom: auto; top: -50%;">
+    <div itemscope itemtype="http://schema.org/MedicalCondition">
+        <h2 class="pull-left" itemprop="name"><div class="seed pull-left sprite"></div>Ebola</h2>
+    </div>
+</div>
+
+ 
+    </div>
+</div>
+<div class="tap-background hidden"></div>
+<div class="row-fluid guide">
+    <aside class="oc">
+                   
+<div class="pull-left">
+    <nav id="guide-nav">
+        <ul class="nav nav-list">
+                        <li><a href="/ebola/" title="What Is Ebola?">What Is Ebola?</a></li>
+                        <li class="active"><a href="/ebola/symptoms/" title="Ebola Symptoms">Ebola Symptoms</a></li>
+                        <li><a href="/ebola/virus/" title="Ebola Virus Transmission">Ebola Virus Transmission</a></li>
+                        <li><a href="/ebola/treatment/" title="Ebola Treatment">Ebola Treatment</a></li>
+                        <li><a href="/ebola/outbreaks/" title="Ebola Outbreaks">Ebola Outbreaks</a></li>
+                        <li><a href="http://www.everydayhealth.com/ebola/map/" title="Ebola  Map">Ebola  Map</a></li>
+                        <li><a href="http://www.everydayhealth.com/news/ebola-10-essential-facts-about/" title="10 Essential Facts About Ebola">10 Essential Facts About Ebola</a></li>
+                        <li><a href="http://www.everydayhealth.com/news/six-facts-about-ebola-enterovirus/" title="Ebola vs. Enterovirus">Ebola vs. Enterovirus</a></li>
+        </ul>		
+    </nav>	    
+</div>
+
+        <a href="#" class="target">Tap</a>
+    </aside>
+    <div class="border-fix"></div>
+    <section class="span9 offset3 pull-right" id="guide">
+
+        <div class="article-sponsor clearfix">
+
+        </div>
+
+        <nav>
+
+            <div class="breadcrumbs">
+    <p>
+        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title">Everyday Health</span></a></span> 
+        <span>/</span> 
+        <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/health-center/common-topics.aspx" itemprop="url"><span itemprop="title">Conditions</span></a></span> 
+        <span>/</span>
+
+            <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/ebola/" itemprop="url"><span itemprop="title">Ebola</span></a></span>
+            <span>/</span>
+Ebola Symptoms    </p>
+</div>
+
+
+        </nav>
+
+        <div class="row-fluid">
+
+            <header class="article-header">        
+    
+    <h1>Ebola Symptoms</h1>
+        
+</header>
+
+                <h2 class="eh-deck">
+        Early symptoms of Ebola infection may be mild, but as the virus replicates, symptoms become much more severe.
+    </h2>
+
+        
+<span class="js-adsense-insertion"></span>        
+        </div>
+
+        <div class="row-fluid">
+            <article id="copy">
+                 
+                
+                    <div class="faux-rail">
+
+    <div class="eh-module-unit">
+        <div class="ad-container ad-standard">
+            <div id="adDiv" class="ad-placeholder"
+                title="ADVERTISEMENT" 
+                data-AdSize="300x250,300x600,300x1050"
+                data-pos="top"
+                data-tile="5">
+            </div>
+            <noscript>
+                <a target="_blank" href="http://ad.doubleclick.net/N4213/jump/everydayhealth/ebola/;p=37;ugc=0;ct=;cat=Infectious Diseases;page=6ff183e9fa1748be9a894aecc3a41c0b;bn=;content=;;pos=top;sz=300x250,300x600,300x1050;tile=5;ord=20150129192802?">
+                    <img border="0" alt="" src="http://ad.doubleclick.net/N4213/ad/everydayhealth/ebola/;37;ugc=0;ct=;cat=Infectious Diseases;page=6ff183e9fa1748be9a894aecc3a41c0b;bn=;content=;;pos=top;sz=300x250,300x600,300x1050;tile=5;ord=20150129192802?" />
+                </a>
+            </noscript>
+        </div>
+
+        
+    </div>
+
+                        
+                        <div class="eh-module-unit">
+<span class="js-adsense-insertion"></span>                        </div>
+                    </div>
+               
+
+                
+
+    
+    <div class="article-body" itemscope itemtype="http://schema.org/Article">
+       
+        <p>The Ebola virus is one of several viruses in the world that cause hemorrhagic fever, or fever and other symptoms accompanied by bleeding.</p>
+<p>In its early stages, however, symptoms of Ebola are often mild and easily confused with other illnesses that cause fever, according to the <a href="http://www.cdc.gov/vhf/ebola/diagnosis/#modalIdString_CDCTable_0">Centers for Disease Control and Prevention</a> (CDC). </p>
+<p>That makes it extremely important to know whether a person with symptoms has been in contact with someone known to be infected with Ebola, or in a geographic area where there is currently an <a href="http://www.everydayhealth.com/ebola/map/">Ebola outbreak</a>. </p>
+<p>Even having visited an area where Ebola is endemic may raise suspicions that a person with fever and general malaise may have Ebola.</p>
+<h2>Early Symptoms</h2>
+<p>Symptoms of Ebola usually begin anywhere between 2 and 21 days after exposure to the Ebola virus, according to the <a href="http://www.who.int/mediacentre/factsheets/fs103/en/">World Health Organization</a> (WHO). </p>
+<p>The early signs and symptoms of Ebola may be mild and nonspecific:</p>
+<ul>
+<li>Low fever</li>
+<li>Fatigue</li>
+<li>Mild queasiness or feeling of being ill</li>
+</ul>
+<p>Diagnosis on the basis of early symptoms is not possible, but if a doctor suspects that a person may have Ebola, the person should be isolated to prevent transmission to others, and blood samples can be taken to determine if <a href="/ebola/">Ebola virus</a> infection is the cause of their symptoms.</p>
+<h2>Advanced Symptoms</h2>
+<p>
+    <div class="eh-module-unit">
+        <div class="ad-container ad-standard">
+            <div id="adDiv" class="ad-placeholder"
+                title="ADVERTISEMENT" 
+                data-AdSize="300x250,300x600"
+                data-pos="bottom"
+                data-tile="7">
+            </div>
+            <noscript>
+                <a target="_blank" href="http://ad.doubleclick.net/N4213/jump/everydayhealth/ebola/;p=37;ugc=0;ct=;cat=Infectious Diseases;page=6ff183e9fa1748be9a894aecc3a41c0b;bn=;content=;;pos=bottom;sz=300x250,300x600;tile=7;ord=20150129192802?">
+                    <img border="0" alt="" src="http://ad.doubleclick.net/N4213/ad/everydayhealth/ebola/;37;ugc=0;ct=;cat=Infectious Diseases;page=6ff183e9fa1748be9a894aecc3a41c0b;bn=;content=;;pos=bottom;sz=300x250,300x600;tile=7;ord=20150129192802?" />
+                </a>
+            </noscript>
+        </div>
+
+        
+    </div>
+</p><p>As the Ebola virus replicates in the person’s body, its effects become much more severe and possibly fatal.</p>
+<p>The advanced signs and symptoms of Ebola infection include:</p>
+<ul>
+<li>High fever</li>
+<li>Muscle aches</li>
+<li>Headache</li>
+<li>Abdominal pain</li>
+<li>Vomiting</li>
+<li>Diarrhea</li>
+<li>Bleeding from the eyes, ears, gums, nose, rectum, and internal organs</li>
+<li>Bruising of the skin, indicating internal bleeding</li>
+<li>Organ failure (e.g., kidney, respiratory, or liver failure)</li>
+<li>Low blood pressure</li>
+<li>Delirium</li>
+<li>Coma</li>
+</ul>
+<p>At the worst stage of the illness, patients can lose 5 to 10 quarts of fluid a day through vomiting and diarrhea. Mainstays of <a href="/ebola/treatment/">Ebola treatment</a> therefore include the administration of intravenous fluids and electrolyte replacement to prevent dehydration.</p>
+<p>A person who has advanced symptoms of <a href="/ebola/virus/">Ebola is highly infectious</a>, and healthcare workers must take extreme precautions to avoid coming into contact with the person’s blood or bodily fluids.</p>
+<h2>Outcomes</h2>
+<p>The recorded death rates from <a href="/ebola/outbreaks/">Ebola outbreaks</a> occurring before the 2014 outbreak have been high, ranging from 50 to 90 percent, depending on which strain of the virus was involved in the outbreak.</p>
+<p>Those who die from Ebola generally do so within one to two weeks of developing symptoms. Among those who survive, recovery can take about two to four weeks.</p>
+<p><strong>Sources:</strong></p>
+<p></p><ul>
+<li>Ebola (Ebola Virus Disease): Diagosis; <a href="http://www.cdc.gov/vhf/ebola/diagnosis/#modalIdString_CDCTable_0">CDC</a>.</li>
+<li>Ebola virus disease; <a href="http://www.who.int/mediacentre/factsheets/fs103/en/">WHO</a>.</li>
+<li>Infection Mechanism of Genus Ebolavirus; <a href="https://microbewiki.kenyon.edu/index.php/Infection_Mechanism_of_Genus_Ebolavirus">MicrobeWiki</a>.</li>
+<li>Ebola hemorrhagic fever: <a href="http://www.nlm.nih.gov/medlineplus/ency/article/001339.htm">National Institutes of Health</a> (NIH).</li>
+</ul>  
+
+    </div>
+    
+
+
+
+                
+
+
+<!-- article - reference --> 
+
+<!-- article - source -->
+
+
+
+    <ul class="inline">
+            <li class="byline" itemscope itemtype="http://schema.org/Person">
+                By <a href="http://www.everydayhealth.com/authors/ingrid-strauch/" rel="author" itemprop="url"><span itemprop="name"> Ingrid  Strauch</span></a>
+            </li> 
+               
+            <li class="reviewed-by " itemscope itemtype="http://schema.org/Person">
+                Reviewed by <span itemprop="name"> Robert  Jasmer, MD</span>
+            </li>
+    </ul>
+<!-- article - last updated -->
+    <div class="article-last-updated">
+        <p><meta itemprop="dateModified" content="2014-10-16">Last Updated: 10/16/2014
+        </p>
+    </div>
+
+
+
+            </article>
+                
+<span class="js-adsense-insertion"></span>    <div class="span8 pull-left google-adsense-container googlead module-generic">
+        <script>
+
+            (function () {
+
+                // vars
+                var channel = document.getElementById('eh-slideshow') ? '1117261945' : '2967820343';
+
+                // render adsense, if applicable
+                if (typeof EH.Adsense.google === 'function') {
+                    EH.Adsense.google('pub-4691987682018836', channel, 'js', '3', 'text', '600x250', 'on', '', '', '600x250');
+                }
+
+            } ());
+
+        </script>
+    </div>
+        </div>
+
+
+
+    </section>
+
+    
+
+    
+</div>
+<div class="content-foot row-fluid" id="guide-footer">
+
+    
+
+    <div class="span12 row-fluid">
+            <div class="pull-left span6">
+                <a href="/ebola/" class="clearfix previous "><span class="sprite-guides guide-control"></span><span class="nav-label">READ PREVIOUS</span>
+                <span class="article">What Is Ebola?</span></a>
+            </div>
+            <!-- /.left -->
+                    <div class="pull-right span6">
+                <a href="/ebola/virus/" class="clearfix next"><span class="sprite-guides guide-control"></span><span class="nav-label">READ NEXT</span>
+                <span class="article">Ebola Virus Transmission</span></a>
+            </div>
+            <!-- /.right -->
+    </div>
+
+
+
+</div>
+
+<div class="row-fluid">
+
+
+    
+		    
+		    
+</div>
+<!-- begin banner ad (bottom) -->
+<div class="clear-both">
+
+</div>
+<!-- end banner ad (bottom) -->
+<div id="tablet" class="hidden-desktop"></div>
+
+
+
+
+
+
+
+	</div>
+	<!-- end outer container -->
+
+	
+	
+	
+	<footer class="container footer-base container-fluid"><section class="row-fluid footer-custom"><div class="span3 footer-element-1"><p class="headline">From our Sponsors</p><div><a href="/health-report/sponsors.aspx" target="_blank"><img src="http://images.agoramedia.com/everydayhealth/gcms/happy-couple-cuso.jpg?width=300" alt="From our Sponsors"></a><p>Everyday Solutions are created by Everyday Health on behalf of our sponsors. <a href="/health-report/sponsors.aspx" target="_blank">View all</a>.</p></div></div><div class="span3 footer-element-2"><p class="headline">Connect</p><ul><li class="facebook"><a href="https://www.facebook.com/everydayhealth" target="_blank"><span class="sprite"></span></a></li><li class="twitter"><a href="https://twitter.com/everydayhealth" target="_blank"><span class="sprite"></span></a></li><li class="pinterest"><a href="http://pinterest.com/everydayhealth/" target="_blank"><span class="sprite"></span></a></li><li class="google-plus"><a href="https://plus.google.com/+EverydayHealth/posts" target="_blank"><span class="sprite"></span></a></li><li class="stumble-upon"><a href="http://www.stumbleupon.com/channel/EverydayHealth" target="_blank"><span class="sprite"></span></a></li></ul><p>Don't miss out on breaking news, live chats, lively debates, and inspiring stories. Join the conversation!</p></div><div class="span3 footer-element-3"><p class="headline">Free Newsletters</p><div><img src="http://images.agoramedia.com/everydayhealth/gcms/everyday-health-newsletters.jpg?width=300" alt="Free Newsletters"><p>Personalized tips and information to get and stay healthier every day. <a href="/newsletter-subscriptions/signup/" target="_blank">Sign Up Now!</a></p><p><a href="/newsletter-subscriptions/" target="_blank">Manage your subscriptions</a></p></div></div><div class="span3 footer-element-4 last"><p class="headline">Inside Everyday Health</p><ul><li><a href="http://corporate.everydayhealth.com/" target="_blank">About Everyday Health, Inc.</a></li><li><a href="http://corporate.everydayhealth.com/life-at-evdy/default.aspx?section=careers" target="_blank">Careers</a></li><li><a href="/ad-policy.aspx" target="_blank">Ad Policy</a></li><li><a href="http://corporate.everydayhealth.com/advertise-with-us/default.aspx" target="_blank">Advertise with us</a></li><li><a href="http://www.cvent.com/Surveys/Welcome.aspx?s=3bf4d45a-b8ce-49e4-b24c-49d5e101ad05&refid=everydayhealth" target="_blank">Feedback</a></li><li class="last"><a href="#iabnotice" class="btn sprite adchoices" data-toggle="modal" type="button"></a></li></ul></div></section><div class="row-fluid footer-standard"><div class="span6 text-mini"><p class="text-light"><b>Copyright &copy; 2015 Everyday Health Media, LLC</b></p><p class="text-light">The material on this web site is provided for educational purposes only and is not to be used for medical advice, diagnosis or treatment. <a href="/privacyterms/#additional_information" class="medium">See additional information</a>. Use of this site is subject to our <a href="/privacyterms/#everyday_health_terms_of_use" class="medium">terms of use</a>and <a href="/privacyterms/#everyday_health_privacy_policy" class="medium">privacy policy</a>.</p></div><div class="span6 text-mini health-disclaimers"><a href="https://www.healthonnet.org/HONcode/Conduct.html?HONConduct736517" class="honcode-icon pull-left" target="_blank"></a><div class="media-body honcode text-light"><p>This site complies with the HONcode standard for trustworthy health information:&nbsp;<a href="http://www.healthonnet.org/HONcode/Conduct.html" target="_blank">verify here</a>.</p></div></div></div></footer>    
+
+
+	
+	
+
+    
+    <script>
+    EH.Adsense.defaultDownstreamChannel = EH.Settings.util.device.isMobile() ? '6865349354' : '8914350567';
+</script>
+<div class="google-adsense-container googlead downstream-insertion-temp">
+    <script>
+        if (typeof EH.Adsense.google === 'function') {
+            EH.Adsense.google('pub-4691987682018836', EH.Adsense.defaultDownstreamChannel, 'js', '3', 'text', '600x250', 'on', 'DLP', '1', '600x250');
+        }
+    </script>
+</div>
+
+<div class="google-adsense-container googlead downstream-insertion-temp">
+    <script>
+        if (typeof EH.Adsense.google === 'function') {
+            EH.Adsense.google('pub-4691987682018836', EH.Adsense.defaultDownstreamChannel, 'js', '3', 'text', '600x250', 'on', 'DLP', '2', '600x250');
+        }
+    </script>
+</div>
+
+<div class="google-adsense-container googlead downstream-insertion-temp">
+    <script>
+        if (typeof EH.Adsense.google === 'function') {
+            EH.Adsense.google('pub-4691987682018836', EH.Adsense.defaultDownstreamChannel, 'js', '3', 'text', '300x250', 'on', 'DLP', '3', '300x250');
+        }
+    </script>
+</div>
+
+    
+	<!-- Asynchronous Scripts -->
+	<script>
+		// Google analytics
+		var _gaq = [['_setAccount', 'UA-30535-1'], ['_trackPageview']];
+		(function (d, t) {
+			var g = d.createElement(t),
+				s = d.getElementsByTagName(t)[0];
+			g.src = '//www.google-analytics.com/ga.js';
+			g.async = true;
+			s.parentNode.insertBefore(g, s);
+		} (document, 'script'));
+	</script>
+
+
+<!-- footer js -->
+<script src="//content.everydayhealth.com/Assets/everydayhealth/scripts/GuideBottom.js?ver=2.0.0.0"></script>
+
+<!-- video -->
+<!-- comscore (no js) -->
+	<noscript>
+		<img src="http://b.scorecardresearch.com/p?c1=2&c2=6035818&cv=2.0&cj=1">
+	</noscript>
+
+<!-- ClickTale Bottom part -->
+	<input type="hidden" id="ClickTaleRecord" name="ClickTaleRecord" value="true" />
+	<script>
+		(function (d, t) {
+			var g = d.createElement(t),
+				s = d.getElementsByTagName(t)[0];
+			g.src = '//cdn.clicktale.net/www12/ptc/4c721896-8cf9-4e13-b220-fec60517e2aa.js';
+			g.async = true;
+			s.parentNode.insertBefore(g, s);
+		} (document, 'script'));
+	</script>
+
+
+<!--BEGIN QUALTRICS SITE INTERCEPT--><script type="text/javascript">(function(){var g=function(e,h,f,g){this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(":"));else return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case "v":return!1;case "r":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(":")),!c}return!0};this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g+ "&t=" + (new Date()).getTime();document.body&&document.body.appendChild(a)}};this.start=function(){var a=this;window.addEventListener?window.addEventListener("load",function(){a.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){a.go()})}};try{(new g(100,"r","QSI_S_ZN_brP7urzDaJ4Xmxn","//zn_brp7urzdaj4xmxn-edhealth.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_brP7urzDaJ4Xmxn&Q_LOC="+encodeURIComponent(window.location.href))).start()}catch(i){}})();</script><div id="ZN_brP7urzDaJ4Xmxn"><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div><!--END SITE INTERCEPT--><script async defer src="http://ardrone.swoop.com/js/spxw.js" data-domain="SW-17524639-1" data-serverbase="http://ardrone.swoop.com/"></script><script src="http://content.everydayhealth.com/carescore/CSAdobeTracking.min.js" type="text/javascript"></script>
+
+
+
+
+
+
+	
+	
+
+    
+    <div id="iabnotice" class="modal hide fade eh-modal-override iabnotice">
+	<div class="modal-branding">
+        <span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c5"></span>
+    </div>
+    <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3>
+			Advertising Notice
+		</h3>
+	</div>
+	<div class="modal-body">
+		<p>
+			This Site and third parties who place advertisements on this Site may collect and use information about 
+			your visits to this	Site and other websites in order to provide advertisements about goods and services of 
+			interest to you. If you would like to obtain more information about these advertising practices and to make
+			choices about online behavioral advertising, please <a target="_blank" href="http://www.aboutads.info/consumers"> click here</a>.
+		</p>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-primary eh-btn-primary eh-btn-override" data-dismiss="modal">Close</button>
+	</div>
+</div>
+
+
+</body>
+</html>

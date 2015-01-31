@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://opengraphprotocol.org/schema/ fb: http://www.facebook.com/2010/fbml d: http://dictionary.com/2011/dml">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+<base href="http://dictionary.reference.com/">
+<title>Aids | Define Aids at Dictionary.com</title>
+<script type="text/javascript">var UrlHelper=function(){var COOKIE_DOMAIN_THESAURUS='.thesaurus.com';var COOKIE_DOMAIN_DICTIONARY='.dictionary.com';var COOKIE_DOMAIN_REFERENCE='.reference.com';var domain=null;var currentURL=null;var spanidsUrl=null;function getSpanidsUrl(bid,sid,currentDomain){var url='http://';var source='';if(currentDomain==COOKIE_DOMAIN_DICTIONARY){url+='spanids.reference.com/?';source='d';}else if(currentDomain==COOKIE_DOMAIN_REFERENCE){url+='spanids.dictionary.com/?';source='r';}else{url+='spanids.dictionary.com/?';source='t';}
+url+='bid='+bid+'&asid='+sid+'&bidnew=1&asidnew=1&source='+source+'&site=app';return url;}
+function getCurrentDomain(){var host=window.location.host;var value="";if(host.indexOf(COOKIE_DOMAIN_THESAURUS)>-1){value=COOKIE_DOMAIN_THESAURUS;}else if(host.indexOf(COOKIE_DOMAIN_DICTIONARY)>-1){value=COOKIE_DOMAIN_DICTIONARY;}else if(host.indexOf(COOKIE_DOMAIN_REFERENCE)>-1){value=COOKIE_DOMAIN_REFERENCE;}
+return value;}
+return{getCurrentDomain:function(){if(domain===null){domain=getCurrentDomain();}
+return domain;},getCurrentUrl:function(){if(currentURL===null){currentURL=window.location.protocol+"//"+window.location.host+""+window.location.pathname;}
+return currentURL;},getSpanidsUrl:function(bid,sid,domain){if(spanidsUrl===null){spanidsUrl=getSpanidsUrl(bid,sid,domain);}
+return spanidsUrl;}}}();</script><script type="text/javascript">var cookiesManager=function(){return{getCookieValue:function(name){var value=null;var cookies=document.cookie;var searchedCookie=cookies.indexOf(" "+name+"=");if(searchedCookie==-1){var checkFirstCookie=cookies.indexOf(name+"=");searchedCookie=checkFirstCookie==0?0:-1;}
+if(searchedCookie>-1){var startPositionOfValue=cookies.indexOf("=",searchedCookie)+1;var endPositionOfValue=cookies.indexOf(";",searchedCookie);if(endPositionOfValue==-1){endPositionOfValue=searchedCookie.length;}
+value=cookies.substring(startPositionOfValue,endPositionOfValue);}
+return value;},setCookie:function(name,value,hours){var expires='';if(hours!==undefined){var now=new Date();var time=now.getTime();time+=(3600*hours)*1000;now.setTime(time);expires=';expires='+now.toGMTString();}
+document.cookie=name+'='+value+expires+';path=/'+';domain='+UrlHelper.getCurrentDomain();}}}();</script><script type="text/javascript">var BidSidGenerator=function(){var COOKIE_NAME_BID='bid';var COOKIE_NAME_SID='sid';var newBidCookie=false;var newSidCookie=false;var bidCookieValue=null;var sidCookieValue=null;function countCookieValue(){var max=999999;var min=100000;var rand=Math.floor(Math.random()*(max-min))+min;var time=new Date().getTime();return rand+"-"+time;}
+return{init:function(){bidCookieValue=cookiesManager.getCookieValue(COOKIE_NAME_BID);sidCookieValue=cookiesManager.getCookieValue(COOKIE_NAME_SID);if(bidCookieValue==null||bidCookieValue.length==0){var hour=24*(365*2);bidCookieValue=countCookieValue();cookiesManager.setCookie(COOKIE_NAME_BID,bidCookieValue,hour);newBidCookie=true;}
+if(sidCookieValue==null||sidCookieValue.length==0){sidCookieValue=countCookieValue();newSidCookie=true}
+var hour=0.5;cookiesManager.setCookie(COOKIE_NAME_SID,sidCookieValue,hour);},propagateCookies:function(){if(newBidCookie||newSidCookie){var url=UrlHelper.getSpanidsUrl(bidCookieValue,sidCookieValue,UrlHelper.getCurrentDomain());var iframe='<iframe id="spanids" style="width:1px;height:1px;margin-left:-1;position:absolute;border:none;" src="'+url+'"></iframe>';document.write(iframe);}}}}();BidSidGenerator.init();BidSidGenerator.propagateCookies();</script><script>var u="http://track.reference.com/webtrack.gif?ev=ps&qr=aids&pn=dic&st=dict&ab=310%3A2&dc=desktop",s=location.search.match(new RegExp('[\?\&]s=([^\&]*)(\&?)','i')),ms=cookiesManager.getCookieValue('mseg')||'';if(s!=null&&s[1]){if(s[1]=='t'||s[1]=='ts'||s[1]=='tn'){var ev=u.indexOf('ev=');if(ev!==-1){ev=ev+3;u=u.slice(0,ev)+'c'+u.slice(ev)+'&cl=59wn52';}}}
+new Image().src=u+"&ms="+ms+"&rf="+encodeURIComponent(document.referrer)+"&cb="+Math.floor((Math.random()*899999999)+100000000);</script>
+<link rel="dns-prefetch" href="//static.sfdict.com"/><link rel="dns-prefetch" href="//pixel.quantserve.com"/><link rel="dns-prefetch" href="//partner.googleadservices.com"/><link rel="dns-prefetch" href="//pubads.g.doubleclick.net"/><link rel="dns-prefetch" href="//pagead2.googlesyndication.com"/><link rel="dns-prefetch" href="//cdn.beanstock.com"/><link rel="dns-prefetch" href="//pr.ybp.yahoo.com"/><link rel="dns-prefetch" href="//ads.yahoo.com"/><link rel="dns-prefetch" href="//u.openx.net"/><link rel="dns-prefetch" href="//ib.adnxs.com"/><link rel="dns-prefetch" href="//ox-d.bstk.servedbyopenx.com"/><link rel="dns-prefetch" href="//helix.beanstock.co"/><link rel="dns-prefetch" href="https://ad.doubleclick.net"/><script type="text/javascript">var src=null;var retina=window.devicePixelRatio>1;if(retina){new Image().src='http://dictionary.reference.com/drc/r201412171017/img/responsive/serp-highdpi.png';}else{new Image().src='http://dictionary.reference.com/drc/r201412171017/img/responsive/serp-lowdpi.png';}</script><meta property="fb:admins" content="100000304287730;109125464873"/><meta property="og:site_name" content="Dictionary.com"/><meta property="og:image" content="http://static.sfdict.com/dictcloud/r201412171017/img/social_logo.png"/><meta property="fb:app_id" content="127444090629600"/><meta name="msvalidate.01" content="DF5542D7723770377E9ABFF59AC1DC97"/><meta http-equiv="imagetoolbar" content="no"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><meta name="keywords" content="aids, online dictionary, English dictionary, aids definition, define aids, definition of aids,
+        aids pronunciation, aids meaning, aids origin, aids examples"/><meta property="og:title" content="the definition of aids"/><meta name="description" content="Aids definition, a disease of the immune system characterized by increased susceptibility to opportunistic infections, as pneumocystis carinii pneumonia and candidiasis, to certain cancers, as Kaposi's sarcoma, and to neurological disorders: caused by a retrovirus and transmitted chiefly through blood or blood products that enter the body's bloodstream, especially by sexual contact or contaminated hypodermic needles. See more."/><meta property="og:url" content="http://dictionary.reference.com/browse/aids"/><link rel="shortcut icon" href="http://static.sfdict.com/dictcloud/favicon.ico"/><!--[if lt IE 9]><link rel="respond-proxy" id="respond-proxy" href="http://static.sfdict.com/app/r201412171017/respondProxy.html" /><![endif]--><!--[if lt IE 9]><link rel="respond-redirect" id="respond-redirect" href="http://dictionary.reference.com/img/respond.proxy.gif" /><![endif]--><link rel="search" type="application/opensearchdescription+xml" href="http://dictionary.reference.com/opensearch_desc.xml" title="Dictionary.com"/><link rel="publisher" href="https://plus.google.com/117428481782081853923"/><link rel="canonical" href="http://dictionary.reference.com/browse/aids"/><link rel="stylesheet" href="http://dictionary.reference.com/drc/css/bootstrap.min.css" type="text/css" media="all"/><link rel="stylesheet" href="http://dictionary.reference.com/drc/r201412171017/css/combinedSerp.css" type="text/css" media="all"/><script type="text/javascript">var searchURL="http://dictionary.reference.com/browse/%40%40queryText%40%40?s=t";var CTSParams={"infix":"","clkpage":"dic","clksite":"dict","clkld":"310:2"};</script>
+<script type="text/javascript">var UserController=function(){var USER_STATUS_LOGGED_IN='L';var USER_STATUS_NOT_LOGGED='N';var USER_UNDER_13='Y';var USER_OVER_13='N';var COOKIE_NAME_SESS='sess';var COOKIE_NAME_FAV='fav';var COOKIE_NAME_SUPERSESS='ss';var PREMIUM_STATUS_VALUE=9;var FAV_COOKIE_PREMIUM_STATUS_KEY=0;var FAV_COOKIE_FAV_COUNT_KEY=1;var FAV_COOKIE_USER_UNDER_13_KEY=2;var isLoggedIn=null;var isPremium=null;var isSuperSess=null;var favNumber=null;var isUnder13=null;var displayAds=null;function checkIsUserUnder13(){if(isLoggedIn!==true){return false;}
+var isUnder13=USER_OVER_13;var favCookieValue=cookiesManager.getCookieValue(COOKIE_NAME_FAV);if(favCookieValue!=null){favCookieValue=decodeURIComponent(favCookieValue);isUnder13=favCookieValue.split('|')[FAV_COOKIE_USER_UNDER_13_KEY];}
+return isUnder13===USER_UNDER_13;}
+function checkIsUserLoggedIn(){var userStatus=USER_STATUS_NOT_LOGGED;var sessCookieValue=cookiesManager.getCookieValue(COOKIE_NAME_SESS);if(sessCookieValue!=null){userStatus=sessCookieValue.charAt(0);}
+return userStatus===USER_STATUS_LOGGED_IN;}
+function checkIfUserIsPremium(){var premiumStatus=null;var favCookieValue=cookiesManager.getCookieValue(COOKIE_NAME_FAV);if(favCookieValue!=null){favCookieValue=decodeURIComponent(favCookieValue);premiumStatus=favCookieValue.split('|')[FAV_COOKIE_PREMIUM_STATUS_KEY];}
+return premiumStatus==PREMIUM_STATUS_VALUE;}
+function getFavNum(){var count=0;var favCookieValue=cookiesManager.getCookieValue(COOKIE_NAME_FAV);if(favCookieValue!=null){favCookieValue=decodeURIComponent(favCookieValue);count=favCookieValue.split('|')[FAV_COOKIE_FAV_COUNT_KEY];}
+return count;}
+function checkIfUserHasSuperSession(){var superSessionCookieValue=cookiesManager.getCookieValue(COOKIE_NAME_SUPERSESS);if(superSessionCookieValue!==null){var xhr=createCORSRequest('GET','http://app.dictionary.com/supersession/check/'+superSessionCookieValue);if(xhr){xhr.onload=function(){var responseData=xhr.responseText;var data=JSON.parse(responseData);if(data==null){}else{cookiesManager.setCookie("sess",data['sessionCookie']);changeBodyClassNameForUser();}};xhr.send();}
+return true;}else{return false;}}
+function createCORSRequest(method,url){var xhr=new XMLHttpRequest();if("withCredentials"in xhr){xhr.open(method,url,true);}else if(typeof XDomainRequest!="undefined"){xhr=new XDomainRequest();xhr.open(method,url);}else{xhr=null;}
+return xhr;}
+function changeBodyClassNameForUser(){if(isPremium)
+document.body.className+=' premium';if(isLoggedIn)
+document.body.className+=' loggedin';if(isUnder13)
+document.body.className+=' isUnder13';}
+return{initHead:function(){isLoggedIn=checkIsUserLoggedIn();isPremium=checkIfUserIsPremium();isUnder13=checkIsUserUnder13();},initBody:function(){changeBodyClassNameForUser();if(isLoggedIn!==true){isSuperSess=checkIfUserHasSuperSession();}},isLoggedIn:function(){return isLoggedIn;},isPremium:function(){return isPremium},getFavNumber:function(){if(favNumber===null){favNumber=getFavNum();}
+return favNumber;},isUnder13:function(){return isUnder13;},shouldDisplayAds:function(){if(displayAds===null){displayAds=!isPremium&&!checkIsUserUnder13();}
+return displayAds;}}}();UserController.initHead();</script>
+<script class="kxct" data-id="JIF4ixEp" data-timing="async" data-version="1.9" type="text/javascript">window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);(function(){if((typeof UserController!=="undefined")&&UserController.isUnder13()){return;}
+var k=document.createElement('script');k.type='text/javascript';k.async=true;var m,src=(m=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(m[1]);k.src=/^https?:\/\/([a-z0-9_\-\.]+\.)?krxd\.net(:\d{1,5})?\//i.test(src)?src:src==="disable"?"":(location.protocol==="https:"?"https:":"http:")+"//cdn.krxd.net/controltag?confid=JIF4ixEp";var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);}());</script>
+<script type='text/javascript' src='http://c.amazon-adsystem.com/aax2/amzn_ads.js'></script>
+<script type='text/javascript'>try{amznads.getAds('3067');}catch(e){}</script>
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[];(function(){var gads=document.createElement("script");gads.async=true;gads.type="text/javascript";gads.src="//www.googletagservices.com/tag/js/gpt.js";var node=document.getElementsByTagName("script")[0];node.parentNode.insertBefore(gads,node);})();</script>
+<script type='text/javascript'>try{amznads.setTargetingForGPTAsync('yip4');}catch(e){}</script>
+<script type="text/javascript">window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);(function(){if((typeof UserController!=="undefined")&&UserController.isUnder13()){return;}
+function retrieve(n){var m,k='kx'+n;if(window.localStorage){return window.localStorage[k]||"";}else if(navigator.cookieEnabled){m=document.cookie.match(k+'=([^;]*)');return(m&&unescape(m[1]))||"";}else{return'';}}
+Krux.user=retrieve('user');Krux.segments=retrieve('segs')&&retrieve('segs').split(',')||[];})();</script>
+<script>function getRefValue(){if(document.referrer.indexOf('dictionary.com')==-1&&document.referrer.indexOf('thesaurus.com')==-1&&document.referrer.indexOf('reference.com')==-1){return'organic';}
+return'direct';}
+googletag.slots={};googletag.slotsCount=4;googletag.renderedAdsCount=0;googletag.cmd.push(function(){googletag.slots["dcomSERPLeaderBoard-728x90"]=googletag.defineSlot("/23219321/iac.dict.dictry.dw/results/serp/content",[[728,90],[970,90]],"dcomSERPLeaderBoard-728x90").addService(googletag.pubads()).setTargeting("pos","top").setTargeting("pos2","728x90_1").setTargeting("tx1","results").setTargeting("tx2","serp").setTargeting("ptype","content");googletag.slots["dcomSERPTop-300x250"]=googletag.defineSlot("/23219321/iac.dict.dictry.dw/results/serp/content",[[300,250],[300,600]],"dcomSERPTop-300x250").addService(googletag.pubads()).setTargeting("pos","top").setTargeting("pos2","300x250_1").setTargeting("tx1","results").setTargeting("tx2","serp").setTargeting("ptype","content");googletag.slots["dcomSERPMid-300x250"]=googletag.defineSlot("/23219321/iac.dict.dictry.dw/results/serp/content",[300,250],"dcomSERPMid-300x250").addService(googletag.pubads()).setTargeting("pos","mid").setTargeting("pos2","300x250_2").setTargeting("tx1","results").setTargeting("tx2","serp").setTargeting("ptype","content");googletag.slots["dcomSERPBottomLeaderBoard-728x90"]=googletag.defineSlot("/23219321/iac.dict.dictry.dw/results/serp/content",[728,90],"dcomSERPBottomLeaderBoard-728x90").addService(googletag.pubads()).setTargeting("pos","bot").setTargeting("pos2","728x90_2").setTargeting("tx1","results").setTargeting("tx2","serp").setTargeting("ptype","content");googletag.slots["dcomSERPBot-300x250"]=googletag.defineSlot("/23219321/iac.dict.dictry.dw/results/serp/content",[300,250],"dcomSERPBot-300x250").addService(googletag.pubads()).setTargeting("pos","bot").setTargeting("pos2","300x250_3").setTargeting("tx1","results").setTargeting("tx2","serp").setTargeting("ptype","content");var rpv=Math.floor((Math.random()*100)+1);googletag.pubads().setTargeting("ref",getRefValue()).setTargeting("lang","en").setTargeting("rpv",rpv.toString()).setTargeting("dc_ref","http%3A%2F%2Fdictionary.reference.com%2Fbrowse%2FAIDS").setTargeting("loc","US").setTargeting("ld","3102");googletag.pubads().setTargeting("kw","aids");var adtest=location.search.match(new RegExp("[\?\&]adtest=([^\&]*)(\&?)","i"));if(adtest!=null&&adtest[1]!=""){googletag.pubads().setTargeting("adtest",adtest[1]);}
+if((typeof UserController==="undefined")||!UserController.isUnder13()){googletag.pubads().setTargeting("ksg",Krux.segments);googletag.pubads().setTargeting("kuid",Krux.user);googletag.pubads().setTargeting("khost",encodeURIComponent(location.hostname));}googletag.pubads().enableSingleRequest();googletag.pubads().enableAsyncRendering();googletag.enableServices();googletag.adsLoaded=function(){return googletag.renderedAdsCount>=googletag.slotsCount;};googletag.pubads().addEventListener('slotRenderEnded',function(){googletag.renderedAdsCount+=1;});});</script>
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-4036279-9'],['_setDomainName','.reference.com'],['_setAllowHash',false],['_setAllowLinker',true],['_setSiteSpeedSampleRate',5]);if(typeof(abtestId)!='undefined'){if(abtestId!=null&&(abtestId.indexOf("_2")!=-1||abtestId.indexOf("_1")!=-1||abtestId.indexOf("_3")!=-1||abtestId.indexOf("_4")!=-1)){_gaq.push(['_setCustomVar',1,'LD',abtestId,2]);}}else if(typeof(sratestId)!='undefined'){_gaq.push(['_setCustomVar',1,'LD',sratestId,2]);}else{_gaq.push(['_setCustomVar',1,'LD','0',2]);}
+if(typeof(abtestId)!='undefined'){if(abtestId!=null&&(abtestId.indexOf("_2")!=-1||abtestId.indexOf("_1")!=-1||abtestId.indexOf("_3")!=-1||abtestId.indexOf("_4")!=-1)){_gaq.push(['_trackEvent','page loaded','loaded'],true);}}
+if(window['pageviewURL']!=undefined&&window['pageviewURL']!=''){_gaq.push(['_trackPageview',pageviewURL.toString()]);}else{_gaq.push(['_trackPageview']);}
+(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com'+'/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();</script>
+<!--[if lt IE 9]><script type="text/javascript" src="http://static.sfdict.com/app/r201412171017/js/html5.js" ></script><![endif]--><!--[if lt IE 9]><script type="text/javascript" src="http://static.sfdict.com/app/r201412171017/js/respond.min.js" ></script><![endif]--><!--[if lt IE 9]><script type="text/javascript" src="http://static.sfdict.com/app/r201412171017/js/respond.proxy.js" ></script><![endif]-->
+<script type="text/javascript">var _qevents=_qevents||[];(function(){var elem=document.createElement('script');elem.src=(document.location.protocol=="https:"?"https://secure":"http://edge")+".quantserve.com/quant.js";elem.async=true;elem.type="text/javascript";var scpt=document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem,scpt);})();</script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script type="text/javascript">UserController.initBody();</script>
+<nav id="nav" class="visible-xs">
+<ul>
+<li><a href="http://www.thesaurus.com/browse/AIDS" data-linkid="c1drjk">Thesaurus</a></li>
+<li><a href="http://translate.reference.com/translate?query=AIDS" data-linkid="au3zd1">Translator</a></li>
+<li><a href="http://www.reference.com/browse/AIDS" data-linkid="r9r0jo">Reference</a></li>
+<li><a href="http://dictionary.reference.com/wordoftheday" data-linkid="1498ik">Word of the Day</a></li>
+<li><a href="http://blog.dictionary.com/" data-linkid="t6ehki">Blog</a></li>
+<li>
+<a href="http://dictionary.reference.com/slideshows/beginnings" data-linkid="98o4k9">Slideshows</a>
+</li>
+<li><a href="http://app.dictionary.com/appswall" data-linkid="jmrau8">Apps by Dictionary</a></li>
+</ul>
+</nav>
+<script type="text/javascript">function submitForm(){var queryText=document.getElementById('q').value||'search',searchUrl;if(queryText==='/'){queryText=''}else if(queryText.indexOf("#")!==-1||queryText.indexOf("&")!==-1){queryText=encodeURIComponent(queryText);}
+queryText=encodeURIComponent(queryText);searchUrl=searchURL.replace('%40%40queryText%40%40',queryText);location.href=searchUrl;return false;}
+function prepareSearchBox(el){var dataTerm=el.getAttribute('data-term');var value=el.value;if(!(/(iPad|iPhone|iPod)/g.test(navigator.userAgent))){el.focus();if(dataTerm==value){el.select();}}}</script>
+<header id="responsive-header" class="js-header dictionary-header">
+<div class="header-container">
+<div class="right-menu">
+<ul class="loginSpace">
+<li class="user-logged-in"><a href="http://app.dictionary.com/users/settings">My Account</a></li>
+<li class="user-logged-in"><a href="http://app.dictionary.com/logout?logindest=http://dictionary.reference.com/browse/AIDS?s=t">Log Out</a></li>
+<li class="user-logged-out"><a href="http://app.dictionary.com/login/core?source=header_core&logindest=http://dictionary.reference.com/browse/AIDS?s=t">Log In</a></li>
+</ul>
+<ul class="social">
+<li><a href="http://www.facebook.com/dictionarycom" class="facebook-icon" data-linkid="79499m"></a></li>
+<li><a href="https://twitter.com/dictionarycom" class="twitter-icon" data-linkid="ataz0h"></a></li>
+<li><a href="https://plus.google.com/+Dictionary" class="google-icon" data-linkid="6fpttk"></a></li>
+</ul>
+<p>follow Dictionary.com</p>
+</div>
+<div class="header-row">
+<div class="app-name-space">
+<div class="app-name-space">
+<a href="http://dictionary.reference.com" data-linkid="yg487x"> <img src="http://dictionary.reference.com/drc/r201412171017/img/responsive/dcom-logo.png" alt="Dictionary.com" class="logo"/>
+</a>
+</div>
+</div>
+<div class="app-content">
+<nav class="nav-space">
+<ul>
+<li class="nav-active">
+<a href="http://dictionary.reference.com/browse/AIDS" data-linkid="tqks0v">Dictionary</a>
+<div class="small-arrow"></div>
+</li>
+<li>
+<a href="http://www.thesaurus.com/browse/AIDS" data-linkid="qxnxzj">Thesaurus</a>
+</li>
+<li class="nopad ">
+<a href="http://translate.reference.com/translate?query=AIDS" data-linkid="s6ljc3">Translator</a>
+</li>
+<li class="nav-more-button" onclick="">
+<span class="nav-links">More...</span>
+<ul class="drop-down-list-header custom-font-muli">
+<li><a href="http://spanish.dictionary.com/definition/AIDS" data-linkid="kun0fl">Spanish Dictionary</a></li>
+<li><a href="http://quotes.dictionary.com/search/AIDS" data-linkid="wtcrk4">Quotes</a></li>
+<li><a href="http://dynamo.dictionary.com/" data-linkid="ihzyvr">Word Dynamo</a></li>
+<li><a href="http://dynamo.dictionary.com/writing-dynamo" data-linkid="vcx614">Writing Dynamo</a></li>
+<li><a href="http://www.reference.com/browse/AIDS" data-linkid="rn6y6h">Reference</a></li>
+<li><a href="http://blog.dictionary.com" data-cts='{"linkId":"prrhwm","infix":"","domain":"reference.com","clkpage":"dic","clkmod":"","clksite":"dict","clkld":"310:2"}'>Our Blog</a></li>
+<li><a href="http://dictionary.reference.com/fun/crossword" data-cts='{"linkId":"dp2158","infix":"","domain":"reference.com","clkpage":"dic","clkmod":"dstmp","clksite":"dict","clkld":"310:2"}'>Daily Crossword</a></li>
+<li><a href="http://dictionary.reference.com/crossword/index.html" data-cts='{"linkId":"6g2ifa","infix":"","domain":"reference.com","clkpage":"dic","clkmod":"crslv","clksite":"dict","clkld":"310:2"}'>Crossword Solver</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+<div class="hamburger-space  visible-xs">
+<div id="hamburgerButton" class="js-hamburgerButton button-hamburger"></div>
+</div>
+<div class="search-box-space">
+<div class="u-row">
+<form id="main_search" class="search-form" action="http://dictionary.reference.com/dic">
+<fieldset>
+<div class="search-input">
+<input type="text" value="AIDS" autoComplete="off" autocapitalize="off" autocorrect="off" name="q" class="form-control input-lg" id="q" data-term="AIDS">
+<input type="hidden" name="s" value="t"/>
+<input type="button" id="search-clear" class="search-clear"/>
+<input type="submit" id="search-submit" class="search-submit" value=""/>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<script type="text/javascript">document.getElementById('main_search').onsubmit=submitForm;prepareSearchBox(document.getElementById('q'));</script>
+<div id="header-leaderboard">
+<div class="leaderboard-ad">
+<div id="dcomSERPLeaderBoard-728x90"><script type="text/javascript">if(UserController!==undefined&&!UserController.shouldDisplayAds()){document.getElementById("dcomSERPLeaderBoard-728x90").parentNode.removeChild(document.getElementById("dcomSERPLeaderBoard-728x90"));}else{googletag.cmd.push(function(){googletag.display("dcomSERPLeaderBoard-728x90");});};</script></div> </div>
+</div>
+<script type="text/javascript">if(typeof UserController!=='undefined'){var ResponsiveHeaderUtils=(function(UserController){function disableStickyForIDevices(){var iOS=/(iPad|iPhone|iPod)/g.test(navigator.userAgent);if(iOS){var body=document.querySelectorAll('body');body[0].className+=' '+'js-is-iDevice';}}
+function disableStickyForAndroid(){var android=/(Android)/g.test(navigator.userAgent);if(android){var body=document.querySelectorAll('body');body[0].className+=' '+'js-is-Android';}}
+return{init:function(){disableStickyForIDevices();disableStickyForAndroid();}}}(UserController));ResponsiveHeaderUtils.init();}</script>
+<a href="http://dictionary.reference.com/slideshows/beginnings#incunabula" style="display:block;" data-linkid="7ym8ju"> <div id="fly-out" class="fly-out fly-out-desktop" style="">
+<p class="text" style="">
+9 Words About Beginnings </p>
+<span class="icon" style="background-image:url('http://static.sfdict.com/assets/5211-8066837-0.png');"></span>
+</div>
+</a>
+<div class="content-container main-area">
+<div class="row">
+<div class="left-rail-container">
+<div class="left-nav-sticky">
+<div class="left-nav-wrapper">
+<ul>
+<li class="left-nav-fav">
+<button class="favorite-button">Favorite Button</button>
+</li>
+<li class="left-nav-cite">
+<a href="http://dictionary.reference.com/#" id="cite-source-link" rel="nofollow" data-linkid="dr8lp1">CITE</a>
+</li>
+<li class="left-nav-trans">
+<a href="http://translate.reference.com/translate?query=aids" data-linkid="qnmgro">Translate</a>
+</li>
+<li class="social-share-facebook">
+<a id="left-nav-button-fb">Facebook</a>
+<div class="share">Share</div>
+</li>
+<li class="social-share-twitter">
+<a id="left-nav-button-twitter" href="https://twitter.com/share?url=http%3A%2F%2Fdictionary.reference.com%2Fbrowse%2Faids&text=Aids definition, a disease of the immune system characterized by increased susceptibility ...&via=dictionarycom" target="_blank">Twitter</a>
+<div class="share">Tweet</div>
+</li>
+<li class="social-share-google">
+<a id="left-nav-button-gp" href="https://plus.google.com/share?url=http%3A%2F%2Fdictionary.reference.com%2Fbrowse%2Faids" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=no,scrollbars=no,height=400,width=600');return false">Google+</a>
+<div class="share">Share</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="center-well-container" data-linkid='nn1ov4' data-cts='{"linkId":"nn1ov4","infix":"","domain":"dictionary.com","clkpage":"dic","clkmod":"1clk","clksite":"dict","clkld":"310:2"}' data-href='http://dictionary.reference.com/browse/'>
+<section id="source-luna" class="source-wrapper source-luna js-is-collapse-expand-open">
+<div class="source-box oneClick-area">
+<section class="luna-box">
+<header class="main-header oneClick-disabled head-big">
+<div class="waypoint-wrapper header-row header-first-row" data-href="source-luna">
+<h1 class="head-entry"><span class="me" data-syllable="AIDS">AIDS</span></h1>
+<div class="audio-wrapper"> <audio> <source src="http://static.sfdict.com/staticrep/dictaudio/lunawav/A02/A0237100.ogg" type="audio/ogg"> <source src="http://static.sfdict.com/staticrep/dictaudio/A02/A0237100.mp3" type="audio/mpeg"> </audio> <a class="speaker" href="http://static.sfdict.com/staticrep/dictaudio/A02/A0237100.mp3"></a></div> </div>
+<div class="header-row header-middle-row">
+<div class="pronounce">
+<span class="pronset">
+<span class="pron spellpron">[eydz] </span>
+<span class="pron ipapron">/eɪdz/ </span>
+<button class="prontoggle pronounce-button pronounce-IPA-button">IPA</button>
+<button class="syllable-button syllable-button-off" data-header="1">Syllables</button>
+</span>
+</div>
+</div>
+<div class="header-row">
+<ul class="headword-bar-list">
+<li>
+<a data-href="source-synonyms">
+Synonyms </a>
+</li>
+<li>
+<a data-href="source-example-sentences">
+Examples </a>
+</li>
+<li>
+<a data-href="source-word-origin">
+Word Origin </a>
+</li>
+</ul>
+</div>
+</header>
+<div class="source-data">
+<div class="def-list">
+<section class="def-pbk">
+<header class="luna-data-header">
+<span class="dbox-pg">noun</span>, <span class="dbox-italic">Pathology</span> </header>
+<div class="def-set">
+<span class="def-number">1.</span>
+<div class="def-content">
+a disease of the immune system characterized by increased susceptibility to opportunistic infections, as pneumocystis carinii pneumonia and candidiasis, to certain cancers, as Kaposi's sarcoma, and to neurological disorders: caused by a retrovirus and transmitted chiefly through blood or blood products that enter the body's bloodstream, especially by sexual contact or contaminated hypodermic needles. </div>
+</div>
+</section>
+</div>
+<div class="tail-wrapper">
+<div class="tail-box tail-type-ref">
+<div class="js-collapse-expand-zone tail-header ">
+<button class="button-source" type="button">Expand</button>
+</div>
+<div class="tail-content">
+<div class="tail-elements">
+Compare <a class="dbox-xref dbox-roman" href="http://dictionary.reference.com/browse/AIDS virus">AIDS virus</a>. </div>
+<div class="u-clear js-toggle-tail-elem"></div>
+</div>
+</div>
+<div class="tail-box tail-type-origin">
+<div class="js-collapse-expand-zone tail-header waypoint-wrapper" id="source-word-origin" data-href="source-word-origin">
+Origin <button class="button-source" type="button">Expand</button>
+</div>
+<div class="tail-content">
+<div class="tail-elements js-toggle-tail-blobs">
+<div class="timeline oneClick-disabled js-unwrappable-tail-element">
+<div class="span" style="left:97.736916548798% ; width:1% ;">
+<span class="date start-date" style="left:-27px;">1982</span>
+</div>
+</div>
+<span class="dbox-roman">1982;</span> <span class="dbox-italic">a(cquired)</span> <span class="dbox-italic">i(mmune)</span> <span class="dbox-italic">d(eficiency)</span> <span class="dbox-italic">s(yndrome)</span> </div>
+</div>
+</div>
+<div class="tail-box tail-type-conf">
+<div class="js-collapse-expand-zone tail-header ">
+Can be confused <button class="button-source" type="button">Expand</button>
+</div>
+<div class="tail-content">
+<div class="tail-elements">
+<a class="dbox-xref dbox-roman" href="http://dictionary.reference.com/browse/aide">aides</a>, <a class="dbox-xref dbox-roman" href="http://dictionary.reference.com/browse/aid">aids</a>, <span class="dbox-bold">AIDS</span>. </div>
+<div class="u-clear js-toggle-tail-elem"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="source-box oneClick-area">
+<section class="luna-box">
+<header class="main-header oneClick-disabled head-big">
+<div class="header-row header-first-row">
+<h2 class="head-entry"><span class="me" data-syllable="aid">aid</span></h2>
+<div class="audio-wrapper"> <audio> <source src="http://static.sfdict.com/staticrep/dictaudio/lunawav/A02/A0235900.ogg" type="audio/ogg"> <source src="http://static.sfdict.com/staticrep/dictaudio/A02/A0235900.mp3" type="audio/mpeg"> </audio> <a class="speaker" href="http://static.sfdict.com/staticrep/dictaudio/A02/A0235900.mp3"></a></div> </div>
+<div class="header-row header-middle-row">
+<div class="pronounce">
+<span class="pronset">
+<span class="pron spellpron">[eyd] </span>
+<span class="pron ipapron">/eɪd/ </span>
+<button class="prontoggle pronounce-button pronounce-IPA-button">IPA</button>
+<button class="syllable-button syllable-button-off" data-header="1">Syllables</button>
+</span>
+</div>
+</div>
+</header>
+<div class="source-data">
+<div class="def-list">
+<section class="def-pbk">
+<header class="luna-data-header">
+<span class="dbox-pg">verb (used with object)</span> </header>
+<div class="def-set">
+<span class="def-number">1.</span>
+<div class="def-content">
+to provide support for or relief to; help: <div class="def-block def-inline-example"><span class="dbox-example">to aid the homeless victims of the fire.</span></div>
+</div>
+</div>
+<div class="def-set">
+<span class="def-number">2.</span>
+<div class="def-content">
+to promote the progress or accomplishment of; facilitate. </div>
+</div>
+</section>
+<section class="def-pbk">
+<header class="luna-data-header">
+<span class="dbox-pg">verb (used without object)</span> </header>
+<div class="def-set">
+<span class="def-number">3.</span>
+<div class="def-content">
+to give help or assistance. </div>
+</div>
+</section>
+<section class="def-pbk">
+<header class="luna-data-header">
+<span class="dbox-pg">noun</span> </header>
+<div class="def-set">
+<span class="def-number">4.</span>
+<div class="def-content">
+help or support; assistance. </div>
+</div>
+<div class="def-set">
+<span class="def-number">5.</span>
+<div class="def-content">
+a person or thing that aids or furnishes assistance; helper; auxiliary. </div>
+</div>
+<div class="def-set">
+<span class="def-number">6.</span>
+<div class="def-content">
+<span class="dbox-bold">aids, </span><span class="dbox-italic">Manège.</span> <ol class="def-sub-list">
+<li>
+Also called <span class="dbox-bold">natural aids</span>. the means by which a rider communicates with and controls a horse, as the hands, legs, voice, and shifts in weight. </li>
+<li>
+Also called <a class="dbox-xref dbox-bold" href="http://dictionary.reference.com/browse/artificial aids">artificial aids</a>. the devices by means of which a rider increases control of a horse, as spurs, whip, and martingale. </li>
+</ol>
+</div>
+</div>
+<div class="def-set">
+<span class="def-number">7.</span>
+<div class="def-content">
+<a class="dbox-xref dbox-roman" href="http://dictionary.reference.com/browse/aide-de-camp">aide-de-camp</a>. </div>
+</div>
+<div class="def-set">
+<span class="def-number">8.</span>
+<div class="def-content">
+<a class="dbox-xref dbox-roman" href="http://dictionary.reference.com/browse/foreign aid">foreign aid</a>. </div>
+</div>
+<div class="def-set">
+<span class="def-number">9.</span>
+<div class="def-content">
+a payment made by feudal vassals to their lord on special occasions. </div>
+</div>
+<div class="def-set">
+<span class="def-number">10.</span>
+<div class="def-content">
+<span class="dbox-italic">English History. </span>(after 1066) any of several revenues received by a king in the Middle Ages from his vassals and other subjects, limited by the Magna Charta to specified occasions. </div>
+</div>
+</section>
+</div>
+<div class="tail-wrapper">
+<div class="tail-box tail-type-origin">
+<div class="js-collapse-expand-zone tail-header ">
+Origin <button class="button-source" type="button">Expand</button>
+</div>
+<div class="tail-content">
+<div class="tail-elements js-toggle-tail-blobs">
+<span class="dbox-roman">1375-1425;</span> (noun) <span class="dbox-roman">late Middle English</span> <span class="dbox-italic">ayde</span> < <span class="dbox-roman">Anglo-French,</span> <span class="dbox-roman">Old French</span> <span class="dbox-italic">aide,</span> noun derivative of <span class="dbox-italic">aid</span>(<span class="dbox-italic">i</span>)<span class="dbox-italic">er</span> < <span class="dbox-roman">Latin</span> <span class="dbox-italic">adjūtāre</span> to help (frequentative of <span class="dbox-italic">adjuvāre</span>), equivalent to <span class="dbox-italic">ad-</span> <a class="dbox-xref dbox-roman" href="http://dictionary.reference.com/browse/ad-">ad-</a> + <span class="dbox-italic">-jū-</span> help + <span class="dbox-italic">-t-</span> frequentative suffix + <span class="dbox-italic">-āre</span> infinitive suffix; (v.) < <span class="dbox-roman">Anglo-French,</span> <span class="dbox-roman">Old French</span> <span class="dbox-italic">aid</span>(<span class="dbox-italic">i</span>)<span class="dbox-italic">er</span> < <span class="dbox-roman">Latin,</span> as above </div>
+</div>
+</div>
+<div class="tail-box tail-type-relf">
+<div class="js-collapse-expand-zone tail-header ">
+Related forms <button class="button-source" type="button">Expand</button>
+</div>
+<div class="tail-content">
+<div class="tail-elements">
+<span class="dbox-bold" data-syllable="aid·er, ">aider, </span><span class="dbox-pg">noun</span> </div>
+<div class="tail-elements">
+<span class="dbox-bold" data-syllable="aid·ful, ">aidful, </span><span class="dbox-pg">adjective</span> </div>
+<div class="tail-elements">
+<span class="dbox-bold" data-syllable="aid·less, ">aidless, </span><span class="dbox-pg">adjective</span> </div>
+<div class="tail-elements">
+<span class="dbox-bold" data-syllable="un·aid·ed, ">unaided, </span><span class="dbox-pg">adjective</span> </div>
+<div class="tail-elements">
+<span class="dbox-bold" data-syllable="un·aid·ed·ly, ">unaidedly, </span><span class="dbox-pg">adverb</span> </div>
+<div class="tail-elements">
+<span class="dbox-bold" data-syllable="un·aid·ing, ">unaiding, </span><span class="dbox-pg">adjective</span> </div>
+<div class="u-clear js-toggle-tail-elem"></div>
+</div>
+</div>
+<div class="tail-box tail-type-conf">
+<div class="js-collapse-expand-zone tail-header ">
+Can be confused <button class="button-source" type="button">Expand</button>
+</div>
+<div class="tail-content">
+<div class="tail-elements">
+<span class="dbox-bold">aid, </span><a class="dbox-xref dbox-roman" href="http://dictionary.reference.com/browse/aide">aide</a> (see usage note at the current entry) </div>
+<div class="tail-elements">
+<a class="dbox-xref dbox-roman" href="http://dictionary.reference.com/browse/aide">aides</a>, <span class="dbox-bold">aids, </span><a class="dbox-xref dbox-roman" href="http://dictionary.reference.com/browse/AIDS">AIDS</a>. </div>
+<div class="u-clear js-toggle-tail-elem"></div>
+</div>
+</div>
+<div class="tail-box tail-type-synonyms">
+<div class="js-collapse-expand-zone tail-header waypoint-wrapper" id="source-synonyms" data-href="source-synonyms">
+Synonyms <button class="button-source" type="button">Expand</button>
+</div>
+<div class="tail-content">
+<div class="tail-elements js-toggle-tail-blobs">
+<span class="dbox-bold">1. </span>See <a class="dbox-xref dbox-roman" href="http://dictionary.reference.com/browse/help">help</a>. <span class="dbox-bold">2. </span>abet, back, foster, advance. <span class="dbox-bold">4. </span>succor; relief; subsidy, grant. </div>
+</div>
+</div>
+<div class="tail-box tail-type-antonyms">
+<div class="js-collapse-expand-zone tail-header ">
+Antonyms <button class="button-source" type="button">Expand</button>
+</div>
+<div class="tail-content">
+<div class="tail-elements js-toggle-tail-blobs">
+<span class="dbox-bold">2. </span>hinder, frustrate. </div>
+</div>
+</div>
+<div class="tail-box tail-type-usage_note">
+<div class="js-collapse-expand-zone tail-header ">
+Usage note <button class="button-source" type="button">Expand</button>
+</div>
+<div class="tail-content">
+<div class="tail-elements js-toggle-tail-blobs">
+Although the nouns <span class="dbox-sc">aid</span> and <span class="dbox-sc">aide</span> both have among their meanings “an assisting person,” the spelling <span class="dbox-sc">aide</span> is increasingly used for the sense “helper, assistant”: <span class="dbox-example">One of the senator's aides is calling.</span> <span class="dbox-sc">Aide</span> in military use is short for <span class="dbox-italic">aide-de-camp.</span> It is also the spelling in <span class="dbox-italic">nurse's aide.</span> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="source-box oneClick-area">
+<section class="luna-box">
+<header class="main-header oneClick-disabled head-big">
+<div class="header-row header-first-row">
+<h2 class="head-entry"><span class="me" data-syllable="AID">AID</span></h2>
+<div class="audio-wrapper"> <audio> <source src="http://static.sfdict.com/staticrep/dictaudio/lunawav/A02/A0236000.ogg" type="audio/ogg"> <source src="http://static.sfdict.com/staticrep/dictaudio/A02/A0236000.mp3" type="audio/mpeg"> </audio> <a class="speaker" href="http://static.sfdict.com/staticrep/dictaudio/A02/A0236000.mp3"></a></div> </div>
+<div class="header-row header-middle-row">
+<div class="pronounce">
+<span class="pronset">
+<span class="pron spellpron">[eyd] </span>
+<span class="pron ipapron">/eɪd/ </span>
+<button class="prontoggle pronounce-button pronounce-IPA-button">IPA</button>
+<button class="syllable-button syllable-button-off" data-header="1">Syllables</button>
+</span>
+</div>
+</div>
+</header>
+<div class="source-data">
+<div class="def-list">
+<section class="def-pbk">
+<header class="luna-data-header">
+<span class="dbox-pg">noun</span>, <span class="dbox-italic">U.S. Government</span> </header>
+<div class="def-set">
+<span class="def-number">1.</span>
+<div class="def-content">
+the division of the United States International Development Cooperation Agency that coordinates the various foreign aid programs with U.S. foreign policy: established in 1961. </div>
+</div>
+</section>
+</div>
+<div class="tail-wrapper">
+<div class="tail-box tail-type-origin">
+<div class="js-collapse-expand-zone tail-header ">
+Origin <button class="button-source" type="button">Expand</button>
+</div>
+<div class="tail-content">
+<div class="tail-elements js-toggle-tail-blobs">
+<span class="dbox-italic">A(gency for)</span> <span class="dbox-italic">I(nternational)</span> <span class="dbox-italic">D(evelopment)</span> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="source-meta">
+Dictionary.com Unabridged<br/>Based on the Random House Dictionary, © Random House, Inc. 2015.<br/>
+<a href="http://dictionary.reference.com/cite.html?qh=aids&ia=luna" class="source-cite" rel="nofollow">Cite This Source</a>
+</div>
+</section>
+<section id="source-example-sentences" class="source-wrapper source-example-sentences js-is-collapse-expand-open">
+<div class="js-collapse-expand-zone source-title" data-href="source-example-sentences">
+Examples from the web for <span class="u-headword">AIDS</span>
+<button class="js-button-source button-source" type="button">Expand</button>
+</div>
+<div class="source-box oneClick-area">
+<ul id="example-sentences" class="list-unstyled">
+<li class="example-sentence">Soon after, she and the world learned that he was dying of <em>AIDS</em>. </li>
+<li class="example-sentence">Trying to keep infested areas covered by clothing or band <em>AIDS</em>. </li>
+<li class="example-sentence">Cryptococcosis is a defining opportunistic infection for <em>AIDS</em>. </li>
+<li class="example-sentence">A subset of the immunocompromised population is people with <em>AIDS</em>. </li>
+</ul>
+</div>
+</section>
+<section id="source-ced2" class="source-wrapper source-ced2 js-is-collapse-expand-open">
+<div class="source-title js-collapse-expand-zone">
+British Dictionary definitions for <span class="u-headword">AIDS</span> <button class="button-source" type="button">Expand</button>
+</div>
+<div class="source-box oneClick-area">
+<header class="main-header oneClick-disabled head-big">
+<div class="header-row header-first-row">
+<h2 class="head-entry"><span class="me">AIDS</span></h2>
+</div>
+<div class="header-row header-middle-row">
+<div class="pronounce">
+<span class="pronset">
+<span class="pron ipapron">/<span class="dbox-pron">eɪdz</span>/ </span>
+</span>
+</div>
+</div>
+</header>
+<div class="source-data">
+<div class="def-list">
+<div class="def-pbk">
+<span class="dbox-pg">noun acronym</span><br/>
+<div class="def-set">
+<span class="def-number">1.</span>
+<div class="def-content">
+acquired immune (or immuno-)deficiency syndrome: a condition, caused by a virus, in which certain white blood cells (lymphocytes) are destroyed, resulting in loss of the body's ability to protect itself against disease. AIDS is transmitted by sexual intercourse, through infected blood and blood products, and through the placenta </div>
+</div>
+</div>
+</div>
+<div class="tail-wrapper">
+</div></div> </div>
+<div class="source-box oneClick-area">
+<header class="main-header oneClick-disabled head-big">
+<div class="header-row header-first-row">
+<h2 class="head-entry"><span class="me">aid</span></h2>
+</div>
+<div class="header-row header-middle-row">
+<div class="pronounce">
+<span class="pronset">
+<span class="pron ipapron">/<span class="dbox-pron">eɪd</span>/ </span>
+</span>
+</div>
+</div>
+</header>
+<div class="source-data">
+<div class="def-list">
+<div class="def-pbk">
+<span class="dbox-pg">verb</span><br/>
+<div class="def-set">
+<span class="def-number">1.</span>
+<div class="def-content">
+to give support to (someone to do something); help or assist </div>
+</div>
+<div class="def-set">
+<span class="def-number">2.</span>
+<div class="def-content">
+(<span class="dbox-bold">transitive</span>) to assist financially </div>
+</div>
+</div>
+<div class="def-pbk">
+<span class="dbox-pg">noun</span><br/>
+<div class="def-set">
+<span class="def-number">3.</span>
+<div class="def-content">
+assistance; help; support </div>
+</div>
+<div class="def-set">
+<span class="def-number">4.</span>
+<div class="def-content">
+a person, device, etc, that helps or assists: <span class="dbox-ex">a teaching aid</span> </div>
+</div>
+<div class="def-set">
+<span class="def-number">5.</span>
+<div class="def-content">
+(<span class="dbox-bold">mountaineering</span>) <span class="dbox-italic">Also </span><span class="dbox-bold">artificial aid. </span>any of various devices such as piton or nut when used as a direct help in the ascent </div>
+</div>
+<div class="def-set">
+<span class="def-number">6.</span>
+<div class="def-content">
+(in medieval Europe; in England after 1066) a feudal payment made to the king or any lord by his vassals, usually on certain occasions such as the marriage of a daughter or the knighting of an eldest son </div>
+</div>
+<div class="def-set">
+<span class="def-number">7.</span>
+<div class="def-content">
+(<span class="dbox-bold">Brit</span>, <span class="dbox-bold">informal</span>) <span class="dbox-bold">in aid of, </span>in support of; for the purpose of </div>
+</div>
+</div>
+</div>
+<div class="tail-wrapper">
+<div class="tail-box tail-type-relf">
+<div class="tail-header">
+Derived Forms </div>
+<div class="tail-content">
+<div class="tail-elements">
+<span class="dbox-bold" data-syllable="ˈaider, ">aider, </span><span class="dbox-pg">noun</span> </div>
+</div>
+</div>
+<div class="tail-box tail-type-origin">
+<div class="tail-header">
+Word Origin </div>
+<div class="tail-content">
+<div class="tail-elements">
+C15: via Old French <span class="dbox-italic">aidier</span> from Latin <span class="dbox-italic">adjūtāre</span> to help, from <span class="dbox-italic">juvāre</span> to help </div>
+</div>
+</div>
+</div></div> </div>
+<div class="source-box oneClick-area">
+<header class="main-header oneClick-disabled head-big">
+<div class="header-row header-first-row">
+<h2 class="head-entry"><span class="me">Aid</span></h2>
+</div>
+</header>
+<div class="source-data">
+<div class="def-list">
+<div class="def-pbk">
+<span class="dbox-pg">combining form</span><br/>
+<div class="def-set">
+<span class="def-number">1.</span>
+<div class="def-content">
+denoting a charitable organization or function that raises money for a cause: <span class="dbox-ex">Band Aid, </span><span class="dbox-ex">Ferryaid</span> </div>
+</div>
+</div>
+</div>
+<div class="tail-wrapper">
+</div></div> </div>
+<div class="source-box oneClick-area">
+<header class="main-header oneClick-disabled head-big">
+<div class="header-row header-first-row">
+<h2 class="head-entry"><span class="me">AID</span></h2>
+</div>
+</header>
+<div class="source-data">
+<div class="def-list">
+<div class="def-pbk">
+<span class="dbox-pg">abbreviation</span><br/>
+<div class="def-set">
+<span class="def-number">1.</span>
+<div class="def-content">
+acute infectious disease </div>
+</div>
+<div class="def-set">
+<span class="def-number">2.</span>
+<div class="def-content">
+artificial insemination (by) donor: former name for Donor Insemination (DI) </div>
+</div>
+</div>
+</div>
+<div class="tail-wrapper">
+</div></div> </div>
+<div class="source-meta">
+Collins English Dictionary - Complete & Unabridged 2012 Digital Edition<br/> © William Collins Sons & Co. Ltd. 1979, 1986 © HarperCollins<br/>Publishers 1998, 2000, 2003, 2005, 2006, 2007, 2009, 2012<br/>
+<a href="http://dictionary.reference.com/cite.html?qh=aids&ia=ced2" class="source-cite" rel="nofollow">Cite This Source</a>
+</div>
+</section>
+<section id="source-etymon2" class="source-wrapper source-etymon2 js-is-collapse-expand-open">
+<div class="source-title js-collapse-expand-zone">
+Word Origin and History for <span class="u-headword">AIDS</span> <button class="button-source" type="button">Expand</button>
+</div>
+<div class="source-box oneClick-area">
+<div class="source-data">
+<div class="def-list">
+<span class="dbox-italic">n.</span> <section class="def-pbk">
+<div class="def-set">
+<p>1982, acronym formed from <span class="dbox-italic">a</span>cquired <span class="dbox-italic">i</span>mmune <span class="dbox-italic">d</span>eficiency <span class="dbox-italic">s</span>yndrome. <span class="dbox-italic">AIDS cocktail</span> attested by 1997, the thing itself said to have been in use from 1995.</p>
+</div>
+</section>
+</div>
+</div> </div>
+<div class="source-box oneClick-area">
+<header class="main-header oneClick-disabled head-big">
+<div class="header-row header-first-row">
+<h2 class="head-entry"><span class="me">aid</span></h2>
+</div>
+</header>
+<div class="source-data">
+<div class="def-list">
+<span class="dbox-italic">n.</span> <section class="def-pbk">
+<div class="def-set">
+<p>early 15c., "wartime tax," also "help, support, assistance," from Old French <span class="dbox-italic">aide</span>, earlier <span class="dbox-italic">aiudha</span> "aid, help, assistance" (9c.), from Late Latin <span class="dbox-italic">adjuta</span>, from fem. past participle of Latin <span class="dbox-italic">adiuvare</span> (past participle <span class="dbox-italic">adiutus</span>) "to give help to," from <span class="dbox-italic">ad-</span> "to" (see <a class="dbox-xref" href="/browse/ad-">ad-</a>) + <span class="dbox-italic">iuvare</span> "to help" (see <a class="dbox-xref" href="/browse/adjutant">adjutant</a>). Meaning "thing by which assistance is given" is recorded from c.1600. Meaning "material help given by one country to another" is from 1940.</p>
+</div>
+</section>
+<span class="dbox-italic">v.</span> <section class="def-pbk">
+<div class="def-set">
+<p>c.1400, "to assist, help," from Old French <span class="dbox-italic">aidier</span> "help, assistance," from Latin <span class="dbox-italic">adiutare</span>, frequentative of <span class="dbox-italic">adiuvare</span> (past participle <span class="dbox-italic">adiutus</span>) "give help to" (see <a class="dbox-xref" href="/browse/adjutant">adjutant</a>). Related: <span class="dbox-italic">Aided</span>; <span class="dbox-italic">aiding</span>.</p>
+</div>
+</section>
+</div>
+</div> </div>
+<div class="source-meta">
+Online Etymology Dictionary, © 2010 Douglas Harper<br/>
+<a href="http://dictionary.reference.com/cite.html?qh=aids&ia=etymon2" class="source-cite" rel="nofollow">Cite This Source</a>
+</div>
+</section>
+<section id="source-ahsmd" class="source-wrapper source-ahsmd js-is-collapse-expand-open">
+<div class="source-title js-collapse-expand-zone">
+<span class="u-headword">AIDS</span> in Medicine <button class="button-source" type="button">Expand</button>
+</div>
+<div class="source-box oneClick-area">
+<p><b>AIDS</b> (ādz)<br><i>n.</i> <br> A severe immunological disorder caused by HIV, transmitted primarily through venereal routes or by exposure to contaminated blood or blood products, resulting in a defect in cell-mediated immune response manifested by increased susceptibility to opportunistic infections and to certain rare cancers, especially Kaposi's sarcoma. </p> </div>
+<div class="source-box oneClick-area">
+<p><b>AID</b> <i>abbr.</i> <br><tt>artificial insemination donor</tt></p> </div>
+<div class="source-meta">
+The American Heritage® Stedman's Medical Dictionary<br/>Copyright © 2002, 2001, 1995 by Houghton Mifflin Company. Published by Houghton Mifflin Company.<br/>
+<a href="http://dictionary.reference.com/cite.html?qh=aids&ia=ahsmd" class="source-cite" rel="nofollow">Cite This Source</a>
+</div>
+</section>
+<section id="source-ahsd" class="source-wrapper source-ahsd js-is-collapse-expand-open">
+<div class="source-title js-collapse-expand-zone">
+<span class="u-headword">AIDS</span> in Science <button class="button-source" type="button">Expand</button>
+</div>
+<div class="source-box oneClick-area">
+<table><tbody><tr><td><b>AIDS</b><div class="audio-wrapper">
+<audio>
+<source src="http://static.sfdict.com/dictstatic/dictionary/audio/ahsd/A/A0019500.mp3" type="audio/mp3">
+</audio>
+<a class="speaker" href="http://static.sfdict.com/dictstatic/dictionary/audio/ahsd/A/A0019500.mp3"></a>
+</div> &nbsp;&nbsp;(ādz) &nbsp;<a class="questionmark" href="http://content.dictionary.com/help/dictionary/ahsd/pronkey.html" target="_blank"></a>&nbsp; <br/>Short for <i>acquired immune deficiency syndrome.</i> An infectious disease of the immune system caused by an human immunodeficiency virus (HIV). AIDS is characterized by a decrease in the number of helper T cells, which causes a severe immunodeficiency that leaves the body susceptible to a variety of potentially fatal infections. The virus is transmitted in infected bodily fluids such as semen and blood, as through sexual intercourse, the use of contaminated hypodermic syringes, and placental transfer between mother and fetus. Although a cure or vaccine is not yet available, a number of antiviral drugs can decrease the viral load and subsequent infections in patients with AIDS.<br/></td></tr></tbody></table> </div>
+<div class="source-meta">
+The American Heritage® Science Dictionary<br/>Copyright © 2002. Published by Houghton Mifflin. All rights reserved.<br/>
+<a href="http://dictionary.reference.com/cite.html?qh=aids&ia=ahsd" class="source-cite" rel="nofollow">Cite This Source</a>
+</div>
+</section>
+<section id="source-ahcl" class="source-wrapper source-ahcl js-is-collapse-expand-open">
+<div class="source-title js-collapse-expand-zone">
+<span class="u-headword">AIDS</span> in Culture <button class="button-source" type="button">Expand</button>
+</div>
+<div class="source-box oneClick-area">
+<b>AIDS</b> [(<font style="text-transform: small-caps;">aydz</font>)]<br><br><p><a href="/browse/Acronym">Acronym</a> for <i>a</i>cquired <i>i</i>mmune <i>d</i>eficiency <i>s</i>yndrome, a fatal disease caused by the human immunodeficiency <a href="/browse/virus">virus</a>, or HIV. Believed to have originated in <a href="/browse/Africa">Africa</a>, AIDS has become an <a href="/browse/epidemic">epidemic</a>, infecting tens of millions of people worldwide. The virus, which is transmitted from one individual to another through the exchange of body fluids (such as <a href="/browse/blood">blood</a> or <a href="/browse/semen">semen</a>), attacks <a href="/browse/white%20blood%20cells">white blood cells</a>, thereby causing the body to lose its capacity to ward off <a href="/browse/infection">infection</a>. As a result, many AIDS patients die of opportunistic infections that strike their debilitated bodies. AIDS first appeared in the United States in 1981, primarily among homosexuals and <a href="/browse/intravenous">intravenous</a> drug users who shared needles, but throughout the world, it is also transmitted by heterosexual contact. Today, scientists are hopeful that AIDS can be managed by new drugs, such as <a href="/browse/protease%20inhibitors">protease inhibitors</a>, and need not be fatal. (<i>See</i> <a href="/browse/AZT">AZT</a>.)</p> </div>
+<div class="source-meta">
+The American Heritage® New Dictionary of Cultural Literacy, Third Edition<br/>Copyright © 2005 by Houghton Mifflin Company.<br/>Published by Houghton Mifflin Company. All rights reserved.<br/>
+<a href="http://dictionary.reference.com/cite.html?qh=aids&ia=ahcl" class="source-cite" rel="nofollow">Cite This Source</a>
+</div>
+</section>
+<section id="source-foldoc" class="source-wrapper source-foldoc js-is-collapse-expand-open">
+<div class="source-title js-collapse-expand-zone">
+<span class="u-headword">AIDS</span> in Technology <button class="button-source" type="button">Expand</button>
+</div>
+<div class="source-box oneClick-area">
+<span class="pg">jargon</span><br> /aydz/ A* Infected Disk Syndrome ("A*" is a <a href="http://dictionary.reference.com/browse/glob">glob</a> pattern that matches, but is not limited to, Apple Computer), this condition is quite often the result of practicing unsafe <a href="http://dictionary.reference.com/browse/SEX">SEX</a>. <br>See <a href="http://dictionary.reference.com/browse/virus">virus</a>, <a href="http://dictionary.reference.com/browse/worm">worm</a>, <a href="http://dictionary.reference.com/browse/Trojan%20horse">Trojan horse</a>, <a href="http://dictionary.reference.com/browse/virgin">virgin</a>. <br>[<a href="http://dictionary.reference.com/browse/Jargon%20File">Jargon File</a>] <br>(1995-04-13) <br> </div>
+<div class="source-meta">
+The Free On-line Dictionary of Computing, © Denis Howe 2010 <a href="http://foldoc.org" rel="nofollow">http://foldoc.org</a><br/>
+<a href="http://dictionary.reference.com/cite.html?qh=aids&ia=foldoc" class="source-cite" rel="nofollow">Cite This Source</a>
+</div>
+</section>
+<section id="source-ahabb2" class="source-wrapper source-ahabb2 js-is-collapse-expand-open">
+<div class="source-title js-collapse-expand-zone">
+Related Abbreviations for <span class="u-headword">AIDS</span> <button class="button-source" type="button">Expand</button>
+</div>
+<div class="source-box oneClick-area">
+<h3>AIDS</h3>
+acquired immune deficiency syndrome <br/>
+</div>
+<div class="source-box oneClick-area">
+<h3>AID</h3>
+Agency for International Development <br/>
+</div>
+<div class="source-meta">
+The American Heritage® Abbreviations Dictionary, Third Edition<br/>Copyright © 2005 by Houghton Mifflin Company.<br/>Published by Houghton Mifflin Company. All rights reserved.<br/>
+<a href="http://dictionary.reference.com/cite.html?qh=aids&ia=ahabb2" class="source-cite" rel="nofollow">Cite This Source</a>
+</div>
+</section>
+</div>
+<div class="right-rail-container">
+<div class="constant-content">
+<section id="wotd-text">
+<header>
+<h3 class="title icon-wotd">Word of the Day</h3>
+</header>
+<div class="content">
+</div>
+</section><div id="dcomSERPTop-300x250"><script type="text/javascript">if(UserController!==undefined&&!UserController.shouldDisplayAds()){document.getElementById("dcomSERPTop-300x250").parentNode.removeChild(document.getElementById("dcomSERPTop-300x250"));}else{googletag.cmd.push(function(){googletag.display("dcomSERPTop-300x250");});};</script></div>
+<section id="difficulty-box" data-difficulty="12" data-imp="6ta766">
+<header>
+<h3 class="title icon-glasses">Difficulty index for <span class="u-headword">AIDS</span></h3>
+</header>
+<div class="content">
+<div class="difficulty-bar">
+<div class="difficulty-indicator"></div>
+</div>
+</div>
+<span class="subtext">Most English speakers likely know this word</span>
+</section><section id="tile-value-box">
+<header>
+<h3 class="title icon-cup">Word Value for <span class="u-headword">AIDS</span></h3>
+</header>
+<div class="content">
+<div class="row">
+<div class="game-scrabble"><span>5</span></div>
+<div class="game-wwf"><span>5</span></div>
+</div>
+<div class="row">
+<span class="descr_scrabble">Scrabble</span>
+<span class="descr_wwf">Words With Friends</span>
+</div>
+</div>
+</section>
+<section id="quotes-box" data-imp="k3p087|3">
+<header>
+<h3 class="title icon-quotes">Quotes with <span class="u-headword">AIDS</span></h3>
+</header>
+<div class="content">
+<div data-linkid='k3p087' data-ordinal='1'>
+<div class="quotes_wrapper">
+<a href="http://quotes.dictionary.com/Alzheimers_usually_comes_later_than_AIDS_but_I" class="quotes_text">Alzheimer's usually comes later than AIDS, but I decline to call that progress.</a>
+<div class="author-box">
+<a href="http://quotes.dictionary.com/author/Mason Cooley" class="quotes_author">Mason Cooley</a>
+</div>
+</div>
+<div class="quotes_wrapper">
+<a href="http://quotes.dictionary.com/It_could_be_said_that_the_AIDS_pandemic" class="quotes_text">It could be said that the AIDS pandemic is a classic own-goal scored by the human race against...</a>
+<div class="author-box">
+<a href="http://quotes.dictionary.com/author/unknown author" class="quotes_author">unknown author</a>
+</div>
+</div>
+<div class="quotes_wrapper">
+<a href="http://quotes.dictionary.com/Electronic_aids_particularly_domestic_computers_will_help_the" class="quotes_text">Electronic aids, particularly domestic computers, will help the inner migration, the opting out of...</a>
+<div class="author-box">
+<a href="http://quotes.dictionary.com/author/J.G. Ballard" class="quotes_author">J.G. Ballard</a>
+</div>
+</div>
+</div>
+<a href="http://quotes.dictionary.com/search/AIDS" class="more" data-linkid="k3p087">More Quotes</a>
+</div>
+</section>
+<section class="related-words-box" data-imp="2ksc1p|6">
+<header>
+<h3 class="title">Related Words</h3>
+</header>
+<div class="content" data-linkid='2ksc1p' data-ordinal='1' data-item='1'>
+<ul class="list-vertical">
+<li class="size-3">
+<a href="http://dictionary.reference.com/browse/AIDS%20dementia%20complex">AIDS dementia complex</a>
+</li>
+<li class="size-2">
+<a href="http://dictionary.reference.com/browse/adjuvant">adjuvant</a>
+</li>
+<li class="size-3">
+<a href="http://dictionary.reference.com/browse/aide">aide</a>
+</li>
+<li class="size-3">
+<a href="http://dictionary.reference.com/browse/AIDS%20encephalopathy">AIDS encephalopathy</a>
+</li>
+<li class="size-4">
+<a href="http://dictionary.reference.com/browse/AIDS%20virus">AIDS virus</a>
+</li>
+<li class="size-4">
+<a href="http://dictionary.reference.com/browse/AIDS-related%20complex">AIDS-related complex</a>
+</li>
+</ul>
+</div>
+</section>
+</div>
+<div class="rightRailMiddleAd"><div id="dcomSERPMid-300x250"><script type="text/javascript">if(UserController!==undefined&&!UserController.shouldDisplayAds()){document.getElementById("dcomSERPMid-300x250").parentNode.removeChild(document.getElementById("dcomSERPMid-300x250"));}else{googletag.cmd.push(function(){googletag.display("dcomSERPMid-300x250");});};</script></div></div>
+<section class="right-rail-nearby-words">
+<h3 class="title">Nearby words for aids</h3>
+<div class="nearby-words-outer-box">
+<button type="button" class="nearby-move-button nearby-prev"></button>
+<div class="nearby-words-inner-box" data-linkid='lno2pu' data-ordinal='1' data-item='1'>
+<ul class="list-vertical">
+<li class="">
+<a href="http://dictionary.reference.com/browse/aibd">aibd</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aibs">aibs</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aic">aic</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aicc">aicc</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aiche">aiche</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aichi">aichi</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aichmophobia">aichmophobia</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aichurophobia">aichurophobia</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aicpa">aicpa</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aicr">aicr</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aid">aid</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aid%20climbing">aid climbing</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aid%20station">aid station</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aid-de-camp">aid-de-campictionary.reference.com/browse/aid%20climbing">aid climbing</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aid%</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aida">aida</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aidan">aidan</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aide">aide</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aide-de-camp">aide-de-camp</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aide-memoire">aide-memoire</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aide-m%C3%A9moire">aide-mémoire</a>
+</li>
+<li class="visible">
+<a href="http://dictionary.reference.com/browse/aidin">aidin</a>
+</li>
+<li class="visible">
+<a href="http://dictionary.reference.com/browse/aidman">aidman</a>
+</li>
+<li class="visible">
+<a href="http://dictionary.reference.com/browse/aidoneus">aidoneus</a>
+</li>
+<li class="visible">
+<a href="http://dictionary.reference.com/browse/aidoo%2C%20ama%20ata">aidoo, ama ata</a>
+</li>
+<li class="visible">
+<a href="http://dictionary.reference.com/browse/aidos">aidos</a>
+</li>
+<li class="visible query-word">
+<a href="http://dictionary.reference.com/browse/aids">aids</a>
+</li>
+<li class="visible">
+<a href="http://dictionary.reference.com/browse/aids%20dementia%20complex">aids dementia complex</a>
+</li>
+<li class="visible">
+<a href="http://dictionary.reference.com/browse/aids%20encephalopathy">aids encephalopathy</a>
+</li>
+<li class="visible">
+<a href="http://dictionary.reference.com/browse/aids%20virus">aids virus</a>
+</li>
+<li class="visible">
+<a href="http://dictionary.reference.com/browse/aids-related%20complex">aids-related complex</a>
+</li>
+<li class="visible">
+<a href="http://dictionary.reference.com/browse/aids-related%20virus">aids-related virus</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aidsline">aidsline</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aidstrials">aidstrials</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aidx">aidx</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aiea">aiea</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aif">aif</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aiff">aiff</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aig">aig</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aiga">aiga</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aight">aight</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aiglet">aiglet</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aigrette">aigrette</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aiguille">aiguille</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aiguillette">aiguillette</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aih">aih</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aiha">aiha</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aihc">aihc</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aihce">aihce</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aihs">aihs</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aijeleth%20shahar">aijeleth shahar</a>
+</li>
+<li class="">
+<a href="http://dictionary.reference.com/browse/aiken">aiken</a>
+</li>
+</ul>
+</div>
+<button type="button" class="nearby-move-button nearby-next"></button>
+</div>
+</section>
+<div class="right-rail-sticky-box">
+<div class="rightRailBottomAd"></div>
+</div>
+</div>
+<div class="feedback hidden-xs">
+<a href="https://www.surveymonkey.com/s/8VMQ6NC" target="_blank"></a>
+</div> </div>
+<div class="row">
+<div id="dcomSERPBottomLeaderBoard-728x90"><script type="text/javascript">if(UserController!==undefined&&!UserController.shouldDisplayAds()){document.getElementById("dcomSERPBottomLeaderBoard-728x90").parentNode.removeChild(document.getElementById("dcomSERPBottomLeaderBoard-728x90"));}else{googletag.cmd.push(function(){googletag.display("dcomSERPBottomLeaderBoard-728x90");});};</script></div> </div>
+</div>
+<footer id="footer" class="footer-zone">
+<div data-linkid='gy27eg'>
+<div class="footer-container-xs">
+<ul class="feedback-row list-vertical-links">
+<li><a href="mailto:feedback@dictionary.com?subject=Feedback%20for%20Dictionary.com%20Mobile%20Web%20Site">Feedback</a></li>
+<li><a href="http://dictionary.reference.com/privacy">Privacy</a></li>
+<li><a href="http://dictionary.reference.com/terms">Terms of Use</a></li>
+<li><a href="http://app.dictionary.com/appswall">Our Apps</a></li>
+</ul>
+<div class="copyright-row">
+<p>Copyright 2015 Dictionary.com LLC</p>
+</div>
+</div>
+<div class="footer-more-row hidden-xs">
+More from Dictionary.com
+</div>
+<div class="footer-container hidden-xs">
+<div class="footer-row">
+<div class="ourSites footer-block">
+<div class="ttl">
+our sites
+</div>
+<ul class="list">
+<li><a href="http://dictionary.reference.com">Dictionary.com</a></li>
+<li><a href="http://www.thesaurus.com">Thesaurus.com</a></li>
+<li><a href="http://www.reference.com">Reference.com</a></li>
+<li><a href="http://translate.reference.com">Translator.com</a></li>
+<li><a href="http://dynamo.dictionary.com">Word Dynamo</a></li>
+<li><a href="http://dynamo.dictionary.com/writing-dynamo/">Writing Dynamo</a></li>
+<li><a href="http://quotes.dictionary.com">Quotes</a></li>
+<li><a href="http://spanish.dictionary.com">Spanish</a></li>
+</ul>
+</div>
+<div class="ourApps footer-block">
+<div class="ttl">
+our apps &amp; extensions
+</div>
+<div class="footer-block-row">
+<div class="inner-block" style="width: 35%">
+<div class="ttl">
+<a class="store-link" href="https://itunes.apple.com/us/artist/dictionary.com-llc/id308750439">Available on the App Store</a>
+</div>
+<ul class="list">
+<li><a href="https://itunes.apple.com/us/app/dictionary.com-dictionary/id308750436?mt=8">Dictionary.com iPhone</a></li>
+<li><a href="https://itunes.apple.com/us/app/dictionary.com-dictionary/id364740856?mt=8">Dictionary.com iPad</a></li>
+<li><a href="https://itunes.apple.com/us/app/thesaurus-rex-by-dictionary.com/id596491781?mt=8">Thesaurus Rex iOS</a></li>
+<li><a href="https://itunes.apple.com/us/app/word-dynamo-by-dictionary.com/id515526373?mt=8">Word Dynamo iOS</a></li>
+<li><a href="https://itunes.apple.com/us/app/dictionary.com-flashcards/id446342262?mt=8">Flashcards for iPhone</a></li>
+<li><a href="https://itunes.apple.com/us/app/miss-spells-class/id308754739?mt=8">Miss Spell’s Class iPhone</a></li>
+</ul>
+</div>
+<div class="inner-block" style="width: 35%">
+<div class="ttl">
+<a class="g-play-link" href="https://play.google.com/store/apps/developer?id=Dictionary.com,+LLC#?t=W251bGwsbnVsbCxudWxsLDEsImNvbS5kaWN0aW9uYXJ5Il0">GET IT ON Google play</a>
+</div>
+<ul class="list">
+<li><a href="https://play.google.com/store/apps/details?id=com.dictionary&amp;feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5kaWN0aW9uYXJ5Il0">Dictionary.com Android</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.dictionary.flashcards&amp;feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5kaWN0aW9uYXJ5LmZsYXNoY2FyZHMiXQ">Flashcards Android</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.msc&amp;feature=search_result#?t=W251bGwsMSwyLDEsImNvbS5tc2MiXQ">Miss Spell’s Class Android</a></li>
+</ul>
+<ul class="list others-app">
+<li class="first"><span>Other Platforms</span></li>
+<li><a href="http://apps.microsoft.com/windows/en-us/app/dictionary-com-dictionary/e9b74b67-8b61-421e-98c2-02d7181f24cf/m/ROW">Windows 8</a></li>
+<li><a href="http://dictionary.reference.com/apps/windows">Windows Phone</a></li>
+<li><a href="http://dictionary.reference.com/apps/blackberry">BlackBerry</a></li>
+<li><a href="http://dictionary.reference.com/apps/nook">Nook</a></li>
+</ul>
+</div>
+<div class="inner-block" style="width: 30%">
+<ul class="browser-list">
+<li><a class="chrome" href="https://chrome.google.com/webstore/detail/dictionarycom-extension/epkhgmlgiomobdlofllfmoejgjdojknn">Chrome</a></li>
+<li><a class="firefox" href="https://addons.mozilla.org/en-US/firefox/addon/dictionary-extension">Firefox</a></li>
+</ul>
+<div style="clear: both"></div>
+<ul class="list">
+<li><a href="https://chrome.google.com/webstore/detail/dictionarycom-extension/epkhgmlgiomobdlofllfmoejgjdojknn">Chrome Extension</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/dictionary-extension">Firefox Plug-in</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="followSection footer-block">
+<div class="ttl">
+follow Dictionary.com
+</div>
+<ul class="social-links">
+<li class="facebook"><a href="http://www.facebook.com/dictionarycom">Facebook</a></li>
+<li class="pinterest"><a href="http://pinterest</div>
+<div class="followSection footer-block">
+<div class="ttl">
+follow Dictionary.com
+</div>
+<ul class="s.com/dictionarycom/">Pinterest</a></li>
+<li class="twitter"><a href="https://twitter.com/dictionarycom">Twitter</a></li>
+<li class="youtube"><a href="http://www.youtube.com/user/DictionarycomVideo">YouTube</a></li>
+<li class="google"><a href="https://plus.google.com/+Dictionary">Google+</a></li>
+<li class="rss"><a href="http://dictionary.reference.com/help/linking/wordoftheday-expert.html">RSS Feed</a></li>
+<li class="instagram"><a href="http://instagram.com/dictionarycom">Instagram</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="corporate-links-container hidden-xs">
+<div class="footer-container">
+<div class="footer-row corporate-links">
+<div class="cl-right">
+<a target="_top" rel="nofollow" href="http://content.dictionary.com">About</a>
+<a target="_top" rel="nofollow" href="http://dictionary.reference.com/privacy">Privacy Policy</a>
+<a target="_top" rel="nofollow" href="http://dictionary.reference.com/help/terms.html">Terms</a>
+<a target="_top" rel="nofollow" href="https://dictionary-careers.silkroad.com/dictionext/EmploymentListings.html">Careers</a>
+<a target="_top" rel="nofollow" href="http://content.dictionary.com/about/contact">Contact Us</a>
+<a target="_top" rel="nofollow" href="http://dictionary.reference.com/help">Help</a>
+</div>
+<div class="cl-left">Copyright &copy;&nbsp;<span>2014</span> Dictionary.com, LLC. All rights reserved.</div>
+</div>
+</div>
+</div>
+</div>
+</footer><script type="text/javascript" src="http://static.sfdict.com/app/r201412171017/js/jquery-1.8.3.min.js"></script><script>var SEOAnchor=(function(){function urlencode(str){str=(str+'').toString();return encodeURIComponent(str).replace(/!/g,'%21').replace(/'/g,'%27').replace(/\(/g,'%28').replace(/\)/g,'%29').replace(/\*/g,'%2A').replace(/%20/g,'+');}
+function getClickDomain(){var currentUrl=document.URL;var replay='dictionary';if(currentUrl.indexOf('thesaurus.com')!==-1){replay='thesaurus';}else if(currentUrl.indexOf('reference.com')!==-1){replay='reference';}
+return replay;}
+function rewriteHref(href){if(!(/^https?:\/\//.test(href))){href=window.location.protocol+'//'+window.location.hostname+href;}
+return href;}
+function attachEvents(element){element=element||$('body');if(!(element instanceof jQuery)){element=$(element);}
+element.find("a").filter(function(){var self=$(this);return(self.data('cts')!=undefined&&self.data('cts')!=''||self.data('linkid')!=undefined&&self.data('linkid')!=""||self.parents('*[data-linkid]').length>0&&self.parents('*[data-linkid]').data('linkid')!==''&&self.parents('*[data-type]').length==0)}).off("mousedown.cts").one("mousedown.cts",function(){var self=$(this);if(self.data('cts')!=undefined&&self.data('cts')!=""){var jsonParams=self.data('cts'),href=rewriteHref(self.attr('href'));self.data('cts','');self.removeAttr('data-cts');var env=jsonParams['infix']!=''?'.'+jsonParams['infix']:'',ctsLink='http://click'+env+'.'+getClickDomain()+'.com/click/'+jsonParams['linkId']+'?',paramString='';for(var key in jsonParams){if(key!='infix'&&key!='linkId'&&key!='domain'){paramString+=key+'='+jsonParams[key]+'&';}}
+var regex=new RegExp("[\\?&]ordinal=([^&#]*)");var qs=regex.exec(paramString)
+if(qs!==null){paramString=paramString.replace(qs[0],'&clkord='+qs[1])}
+ctsLink+=paramString+'clkdest='+urlencode(href);self.attr('href',ctsLink);}else{if(self.data('linkid')!=undefined&&self.data('linkid')!=""){var linkId=self.data('linkid'),href=rewriteHref(self.attr('href')),env=CTSParams['infix']!=''?'.'+CTSParams['infix']:'';self.data('linkid','');self.removeAttr('data-linkid');var ctsLink='http://click'+env+'.'+getClickDomain()+'.com/click/'+linkId+'?',paramString='';if(typeof self.data('item')!=='undefined'){paramString+='clkitem='+self.text().trim()+'&';}
+for(var key in CTSParams){if(key!='infix'){paramString+=key+'='+CTSParams[key]+'&';}}
+ctsLink+=paramString+'clkdest='+urlencode(href);self.attr('href',ctsLink);}else{var linkIdParent=self.parents('*[data-linkid]');if(linkIdParent.length>0){var linkid=linkIdParent.data('linkid'),href=rewriteHref(self.attr('href')),env=CTSParams['infix']!=''?'.'+CTSParams['infix']:'',ctsLink='http://click'+env+'.'+getClickDomain()+'.com/click/'+linkid+'?',paramString='',ordinalParent=self.parents('*[data-ordinal]'),itemParent=self.parents('*[data-item]');if(ordinalParent.length>0){ordinal=1;var text=self.text();ordinalParent.find('a').each(function(index){if(text==$(this).text()){return false;}else{ordinal+=1;}});paramString+='clkord='+ordinal+'&';}
+if(itemParent.length>0){paramString+='clkitem='+self.text().trim()+'&';}
+for(var key in CTSParams){if(key!='infix'){paramString+=key+'='+CTSParams[key]+'&';}}
+ctsLink+=paramString+'clkdest='+urlencode(href);self.attr('href',ctsLink);}}}});}
+return{attachEvents:function(element){attachEvents(element)},generateCTSURLWithoutOrdinal:function(ctsData,destinationHref,item){var env=ctsData['infix']!==""?'.'+ctsData['infix']:"",destinationHref=rewriteHref(destinationHref),ctsLink='http://click'+env+'.'+getClickDomain()+'.com/click/'+ctsData['linkId']+'?',paramString='';for(var i in ctsData){if(i!=='infix'&&i!=='linkId'&&i!=='domain'){paramString+=i+'='+ctsData[i]+'&';}}
+if(typeof item!=='undefined'){paramString+='clkitem='+item+'&';}
+ctsLink+=paramString+'clkdest='+urlencode(destinationHref);return ctsLink;}}})();SEOAnchor.attachEvents();$(document).trigger('ctsready');</script>
+<script type="text/javascript">if((typeof UserController!=="undefined")&&(!UserController.isUnder13())){_qevents.push({qacct:"p-51zXP5Cc9sxvQ"});}</script>
+<noscript>
+<div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-51zXP5Cc9sxvQ.gif" height="1" width="1" alt="Quantcast"/></div>
+</noscript>
+<script type="text/javascript" src=" http://static.sfdict.com/app/r201412171017/js/require.js"></script>
+<script type="text/javascript">requirejs.config({baseUrl:"http://static.sfdict.com/dictcloud/r201412171017/js",paths:{"appcore":"http:\/\/static.sfdict.com\/app\/r201412171017\/js","options":"http:\/\/static.sfdict.com\/app\/r201412171017\/js\/options","facebook":"http:\/\/connect.facebook.net\/en_US\/all","page\/serp\/main":"page\/serp\/main-d75bd"},shim:{"facebook":{"exports":"FB"}}});define('jquery',[],function(){return window.jQuery;});define("runtime-options",function(){return{"flashAudioPlayerPath":"http:\/\/static.sfdict.com\/app\/flash\/player.swf","isFavoriteURL":"http:\/\/app.dictionary.com\/favorites\/api\/getfavorites","addFavoriteURL":"http:\/\/app.dictionary.com\/favorites\/api\/addword","searchTerm":"AIDS","loginPageURL":"http:\/\/app.dictionary.com\/login\/core","clientPlatform":"Desktop","interstitialDashRenderApi":"http:\/\/app.reference.com\/api\/dash\/render\/ipadInterstitial\/dict_serp_ipadInterstitial","pageDimensionSampleSize":10,"canonicalURL":"http:\/\/dictionary.reference.com\/browse\/aids","pageName":"dic","difficultyIndexVariant":0,"wotdApiUrl":"http:\/\/restapi.dictionary.com\/api\/wordoftheday","wotdLink":"<a href=\"http:\/\/dictionary.reference.com\/wordoftheday\"  class=\"word\"  id=\"wotd\" data-linkid=\"rpilnc\" >$$word$$<\/a>","definitionsLimit":5,"definitionsDisplayed":3,"webTrack":{"clickInner":"http:\/\/track.reference.com\/webtrack.gif?ev=n&tg=%40%40TARGET%40%40&ar=%40%40ADREFRESH%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=310%3A2&dc=desktop","pageDimension":"http:\/\/track.reference.com\/webtrack.gif?ev=d&qr=aids&wi=%40%40WIDTH%40%40&ph=%40%40POTENTIALHEIGHT%40%40&ah=%40%40ACTUALHEIGHT%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=310%3A2&dc=desktop","impressions":"http:\/\/track.reference.com\/webtrack.gif?ev=i&lk=%40%40IMPRESSIONLINKIDS%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=310%3A2&dc=desktop","pageview":"http:\/\/track.reference.com\/webtrack.gif?ev=p&ct=%40%40CONTENTTITLE%40%40&ms=%40%40MSEG%40%40&rf=%40%40REFERRER%40%40&cb=%40%40CACHEBUSTER%40%40&pn=%40%40PAGENAME%40%40&st=dict&ab=310%3A2&dc=desktop"},"socialEvent":"{\"basePath\":\"http:\\\/\\\/track.reference.com\\\/track\\\/social\",\"attributes\":{\"site\":\"dict\",\"pageName\":\"dic\",\"ldid\":\"310:2\"}}"};});require(["page\/serp\/main"])</script>
+<script>(function(factory){if(typeof require==='function'){require(['jquery'],factory);}else{factory($);}}(function($){var impressionLinkIds={};$('[data-imp]').each(function(){if($(this).is(':visible')){var imp=$(this).data('imp').split('|',2);if(impressionLinkIds[imp[0]]===undefined){impressionLinkIds[imp[0]]=0;}
+if(imp[1]!==undefined){impressionLinkIds[imp[0]]+=parseInt(imp[1]);}else{impressionLinkIds[imp[0]]+=1;}}});var lkValue='';for(var linkId in impressionLinkIds){lkValue+=linkId+(impressionLinkIds[linkId]>1?'|'+impressionLinkIds[linkId]:'')+','}
+if(lkValue.slice(-1)===','){lkValue=lkValue.slice(0,-1);}
+if(lkValue!=''){new Image().src="http://track.reference.com/webtrack.gif?ev=i&pn=dic&st=dict&ab=310%3A2&dc=desktop&lk="+lkValue+"&rf="+encodeURIComponent(document.referrer)+"&cb="+Math.floor((Math.random()*899999999)+100000000);}}));</script>
+</body>
+</html>
+kValue!=''){new Image().src="http://track.reference.com/webtrack.gif?ev=i&pn=dic&st=dict&ab=310%3A2&dc=desktop&lk="+lkVa

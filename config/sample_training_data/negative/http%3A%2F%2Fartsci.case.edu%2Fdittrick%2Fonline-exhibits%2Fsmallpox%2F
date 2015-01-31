@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+<link rel="shortcut icon" href="http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/favicon.ico" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<!-- <link rel="stylesheet" type="text/css" media="all" href="http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/style.css" /> -->
+<link rel="pingback" href="http://artsci.case.edu/dittrick/xmlrpc.php" />
+
+<link rel="alternate" type="application/rss+xml" title="Dittrick Medical History Center &raquo; Smallpox Outbreak Comments Feed" href="http://artsci.case.edu/dittrick/online-exhibits/smallpox/feed/" />
+<link rel='stylesheet' id='columns-css'  href='http://artsci.case.edu/dittrick/wp-content/plugins/columns/columns.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='titillium-font-css'  href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700,900' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/css/bootstrap.css?ver=2.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-responsive-css'  href='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/css/bootstrap-responsive.css?ver=2.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='cas-bootstrap-override-css'  href='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/css/cas-bootstrap-override.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='cas-layout-css'  href='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/css/cas-layout.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='megamenu-css'  href='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/css/cas-megamenu.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='cas-blog-css'  href='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/css/cas-blog.css?ver=3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='slb_core-css'  href='http://artsci.case.edu/dittrick/wp-content/plugins/simple-lightbox/client/css/app.css?ver=2.3.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/js/bootstrap.js?ver=2.0.4'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/js/jquery.finger.min.js?ver=0.0.11'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/js/jquery.jpanelmenu.js?ver=4.0.1'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/js/megamenu.js?ver=4.0.1'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/js/retina.js?ver=0.0.2'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/inc/google-api-php-client/src?ver=4.0.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://artsci.case.edu/dittrick/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://artsci.case.edu/dittrick/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.0.1" />
+<link rel='canonical' href='http://artsci.case.edu/dittrick/online-exhibits/smallpox/' />
+<link rel='shortlink' href='http://artsci.case.edu/dittrick/?p=217' />
+<style type='text/css'>img#wpstats{display:none}</style>
+<script type="text/javascript">
+
+adjustSiteTitle = function() {
+	var topBarContainerWidth = jQuery("#cas-top-bar .container .row").width();	
+	var siteTitleObject = jQuery("h1.topBarDepartmentName");
+	var siteTitleLength = siteTitleObject.html().length;
+
+
+	if (topBarContainerWidth == 1200) {
+		if (siteTitleLength > 50) {
+			jQuery("h1.topBarDepartmentName").css("font-size", "28px");
+		}
+	}
+	if (topBarContainerWidth == 960) {
+		if (siteTitleLength > 50) {
+			jQuery("h1.topBarDepartmentName").css("font-size", "22px");
+		}
+	}
+	if (topBarContainerWidth == 744) {
+			jQuery("h1.topBarDepartmentName").css("font-size", "16px");
+	}
+}
+
+
+
+jQuery(document).ready(function($){
+
+	adjustSiteTitle();
+		
+	$("#cas-top-slider-container").click(function(){
+		$("#cas-top-slider-panel").slideToggle("slow");
+		$(this).toggleClass("active");
+		caretClassName = $("#cas-slider-icon").attr("class");
+		if (caretClassName == "icon-caret-down") {
+			$("#cas-slider-icon").addClass("icon-caret-up");
+			$("#cas-slider-icon").removeClass("icon-caret-down");
+		}
+		else {
+			$("#cas-slider-icon").addClass("icon-caret-down");
+			$("#cas-slider-icon").removeClass("icon-caret-up");;
+		}
+	});
+	
+	$("#cas-mobile-menu-slider-toggle").click(function(){
+		$("#cas-mobile-department-menu-accordian").slideToggle(10);
+	});
+	
+	$("#search-tab").click(function(){
+		$("#top-bar-search-slider").slideToggle(1);
+		$(this).toggleClass("active");
+		$("#top-bar-search-slider-input").val("");
+		$("#top-bar-search-slider-input").focus();
+	});
+	
+	$('#cwru-tabs-dropdown-toggle').mouseenter(function(){ 
+		$('#cwru-tabs-dropdown-toggle').dropdown('toggle'); 
+		var dropdownPoller = setInterval(function() {
+			if ($('#cwru-tabs-dropdown-toggle').is(':hover') || $('#cwru-tabs-dropdown').is(':hover')) {
+				
+			}
+			else {
+				$('#cwru-tabs-dropdown-toggle').parent().removeClass('open'); 
+				clearInterval(dropdownPoller);
+			}
+		}, 500);
+	});
+	
+});
+
+// Handle window resizes
+jQuery(window).resize(function() {
+	// Adjust Menu
+		
+	// Adjust site name
+	adjustSiteTitle();
+});
+
+
+
+</script>
+
+<title>Smallpox Outbreak | Dittrick Medical History Center</title>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49145005-1', 'case.edu');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+		<div id="cas-top-slider-panel" class="hidden-phone">
+			<div class="container">
+				<div class="row">
+					<div class="span6">
+						<h2 href="http://artsci.cas.edu"><College of Arts and Sciences</a></h2>
+						<div class="row">
+							<div class="span3">
+								<a href="http://artsci.case.edu">College Home</a><br />
+								<a href="http://www.case.edu/artsci/about.html">About the College</a><br />
+								<a href="http://www.case.edu/artsci/history.html">History</a><br />
+								<a href="http://www.case.edu/artsci/dean.html">About the Dean</a><br />
+								<a href="http://www.case.edu/artsci/staff.html">Dean's Office</a><br />
+								<a href="http://www.case.edu/artsci/dept_chairs.html">Department Chairs</a><br />
+								<a href="http://www.case.edu/artsci/dept_admin.html">Department Administrators</a><br />
+							</div>
+							<div class="span3">
+								<a href="http://artsci.case.edu/news/">College News and Events</a><br />
+								<a href="http://www.case.edu/artsci/development/giving.html">Supporting the College</a><br />
+								<a href="http://www.case.edu/artsci/alumni/index.html">Alumni and Friends</a><br />
+								<a href="http://www.case.edu/artsci/contact.html">Contact the College</a><br />
+							</div>
+						</div>
+					</div>
+
+					<div class="span6">
+						<h2>Academic Departments</h2>
+						<div class="row">
+							<div class="span3">
+								<a href="http://www.case.edu/artsci/anth">Anthropology</a><br />
+								<a href="http://www.case.edu/artsci/arth/arth.html">Art History and Art</a><br />
+								<a href="http://astronomy.case.edu/">Astronomy</a><br />
+								<a href="http://www.case.edu/artsci/biol/">Biology</a><br />
+								<a href="http://www.case.edu/artsci/chem/">Chemistry</a><br />
+								<a href="http://classics.case.edu/">Classics</a><br />
+								<a href="http://www.case.edu/artsci/cogs/">Cognitive Science</a><br />
+								<a href="http://dance.case.edu/">Dance</a><br />
+								<a href="http://geology.case.edu/">Earth, Environmental and Planetary Sciences</a><br />
+								<a href="http://www.case.edu/artsci/engl/">English</a><br />
+								<a href="http://history.case.edu/">History</a>
+							</div>
+							<div class="span3">
+								<a href="http://www.case.edu/artsci/math/">Mathematics, Applied Mathematics and Statistics</a><br />
+								<a href="http://www.case.edu/artsci/dmll/">Modern Languages and Literatures</a><br />
+								<a href="http://music.case.edu/">Music</a><br />
+								<a href="http://www.case.edu/artsci/phil/">Philosophy</a><br />
+								<a href="http://physics.case.edu/">Physics</a><br />
+								<a href="http://politicalscience.case.edu/">Political Science</a><br />
+								<a href="http://www.case.edu/artsci/psychological-sciences/">Psychological Sciences</a><br />
+								<a href="http://www.case.edu/artsci/rlgn/">Religious Studies</a><br />
+								<a href="http://www.case.edu/artsci/soci/">Sociology</a><br />
+								<a href="http://theater.case.edu/">Theater</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+   
+    <!-- header -->
+    <!-- content -->
+    <!-- footer -->
+
+</div><!-- page -->
+	
+	<div id="cas-top-bar" class="hidden-phone">
+			<div class="container headerFeatures">
+				<div class="row">
+					<div class="span12">
+						<div id="cas-top-bar-tabs">
+							<div id="cwru-tabs" class="dropdown">
+								<a id='cwru-tabs-dropdown-toggle' href="#">
+									<i class="icon-reorder"></i> CWRU Links
+								</a>
+								<ul id="cwru-tabs-dropdown" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+  								<li><a href="http://www.case.edu">CWRU Home</a></li>
+  								<li><a href="http://case.edu/stage/admissions/">Apply</a></li>
+  								<li><a href="http://www.case.edu/visit/">Visit</a></li>
+  								<li><a href="http://giving.case.edu/s/1526/index.aspx">Give</a></li>
+ 							 </ul>
+							</div>
+							<div id="cas-top-slider-container" class="college-tab">
+								College of Arts and Sciences <i style="margin-left: 5px;" id="cas-slider-icon" class="icon-caret-down"></i>
+							</div>
+							<div id="search-tab">
+								<i class="icon-search"></i>
+							</div>
+						</div>
+                        ge-tab">
+								College of Arts and Sciences <i style="margin-left: 5px;" id="cas-slider-icon" class="icon-caret-down"></i>
+							<						<img id="cwruCASLogo" src="http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/images/cas-logo-header.png" />
+							<h1 class="topBarDepartmentName">							Dittrick Medical History Center							</h1>
+					</div>
+					<div id="top-bar-search-slider">
+						<form id="cse-search-box" action="http://google.com/cse">
+							<input type="hidden" name="cx" value="015686301297374177681:uy8_du3q1dq" />
+							<input type="hidden" name="ie" value="UTF-8" />
+							<input type="text" name="q" id="top-bar-search-slider-input">
+							<button type="submit" name="sa" value="Search">Search</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>		<div id="cas-department-menu" class="hidden-phone">
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						
+<ul class="department-mega-menu">
+													<li class="menu-item menu-item-type-custom menu-item-object-custom">
+														<a title="Home" href="http://artsci.case.edu/dittrick" class="drop">
+															<i class="icon-home"></i>
+														</a>
+													</li>
+													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-701"><a href="http://artsci.case.edu/dittrick/museum/" class="drop" >Museum</a>
+<div class="dropdown_2columns"><div class="col_2" style="width: 95%;"><ul>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-703"><a href="http://artsci.case.edu/dittrick/museum/visit-the-museum/">Visit the Museum</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-709"><a href="http://artsci.case.edu/dittrick/museum/museum-history/">Museum History</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-705"><a href="http://artsci.case.edu/dittrick/museum/museum-map/">Museum Map</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707"><a href="http://artsci.case.edu/dittrick/museum/membership/">Membership</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-711"><a href="http://artsci.case.edu/dittrick/museum/contact-us/">Contact Us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2125"><a href="http://artsci.case.edu/dittrick/museum/newsletter-archive/">Newsletters</a></li>
+</ul></div></div>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-863"><a href="http://artsci.case.edu/dittrick/upcoming-events/" class="drop" >Upcoming Events</a></li>
+<li>
+	<a class="drop">Collections</a>	<div class='dropdown_8columns mega-dropdown'><div class="col_2" style="width: 23%;"><h2>Archives</h2><ul><li id="menu-item-835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-835"><a href="http://artsci.case.edu/dittrick/collections/archives/">Archives home</a></li>
+<li id="menu-item-795" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-795"><a href="http://artsci.case.edu/dittrick/collections/archives/cleveland-hospitals/">Cleveland Hospitals</a></li>
+<li id="menu-item-797" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-797"><a href="http://artsci.case.edu/dittrick/collections/archives/darwin-letters/">Darwin Letters</a></li>
+<li id="menu-item-799" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-799"><a href="http://artsci.case.edu/dittrick/collections/archives/professional-societies/">Professional Societies</a></li>
+<li id="menu-item-801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-801"><a href="http://artsci.case.edu/dittrick/collections/archives/personal-papers/">Personal Papers</a></li>
+<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://artsci.case.edu/dittrick/collections/archives/homeopathy/">Homeopathy</a></li>
+</ul></div><div class="col_2" style="width: 23%;"><h2>Artifacts</h2><ul><li id="menu-item-837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/">Artifacts home</a></li>
+<li id="menu-item-805" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-805"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/general-information/">General Information</a></li>
+<li id="menu-item-1575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1575"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/contraception-collection/">Contraception Collection</a></li>
+<li id="menu-item-807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-807"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/blaufox-hall-of-diagnostic-instruments/">Blaufox Hall of Diagnostic Instruments</a></li>
+<li id="menu-item-809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-809"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/milikin-room-of-microscopes/">Re-conceiving Birth</a></li>
+<li id="menu-item-1459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1459"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/millikin-room-of-microscopes/">Millikin Room of Microscopes</a></li>
+</ul></div><div class="col_2" style="width: 23%;"><h2>Images</h2><ul><li id="menu-item-811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-811"><a href="http://artsci.case.edu/dittrick/collections/images/">Images home</a></li>
+<li id="menu-item-813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-813"><a href="http://artsci.case.edu/dittrick/collections/images/photography/">Photography</a></li>
+<li id="menu-item-815" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-815"><a href="http://artsci.case.edu/dittrick/collections/images/prints/">Prints</a></li>
+<li id="menu-item-817" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-817"><a href="http://artsci.case.edu/dittrick/collections/images/painting/">Painting</a></li>
+</ul></div><div class="col_2" style="width: 23%;"><h2>Rare Books</h2><ul><li id="menu-item-839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-839"><a href="http://artsci.case.edu/dittrick/collections/rare-books/">Rare Books home</a></li>
+<li id="menu-item-841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-841"><a href="http://artsci.case.edu/dittrick/collections/rare-books/classics-in-anatomy/">Classics in Anatomy</a></li>
+<li id="menu-item-843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-843"><a href="http://artsci.case.edu/dittrick/collections/rare-books/the-sigmund-freud-collection/">The Sigmund Freud Collection</a></li>
+<li id="menu-item-845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-845"><a href="http://artsci.case.edu/dittrick/collections/rare-books/the-g-g-marshall-collection-of-herbals/">The G.G. Marshall Collection of Herbals</a></li>
+<li id="menu-item-847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-847"><a href="http://artsci.case.edu/dittrick/collections/rare-books/the-cole-collection-of-venereals/">The Cole Collection of Venereals</a></li>
+<li id="menu-item-849" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-849"><a href="http://artsci.case.edu/dittrick/collections/rare-books/the-nicolaus-pol-collection/">The Nicolaus Pol Collection</a></li>
+<li id="menu-item-851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-851"><a href="http://artsci.case.edu/dittrick/collections/rare-books/charles-darwin-books-and-manuscripts/">Charles Darwin Books and Manuscripts</a></li>
+</ul></div></div></li>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-761"><a href="http://artsci.case.edu/dittrick/online-exhibits/" class="drop" >Online Exhibits</a>
+<div class="dropdown_2columns"><div class="col_2" style="width: 95%;"><ul>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="http://artsci.case.edu/dittrick/online-exhibits/audio-archives/">Audio Archives</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-217 current_page_item menu-item-765"><a href="http://artsci.case.edu/dittrick/online-exhibits/smallpox/">Smallpox Outbreak</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-767"><a href="http://artsci.case.edu/dittrick/online-exhibits/haunting-images-2/">Haunting Images</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-769"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/">Explore the Artifacts</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-771"><a href="http://artsci.case.edu/dittrick/online-exhibits/photographing-dermatology/">Photographing Dermatology</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-773"><a href="http://artsci.case.edu/dittrick/online-exhibits/history-of-birth-control/">History of Birth Control</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-783"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/">Lake View Cemetery</a>
+<div class="dropdown_2columns"><div class="col_2" style="width: 95%;"><ul>		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-779"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/dudley-p-allen-and-the-cushing-family/">No 1. Dudley P. Allen and the Cushing Family</a></li>
+	</ul></div></div>
+</li>
+</ul></div></div>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-687"><a href="http://artsci.case.edu/dittrick/research/" class="drop" >Research</a>
+<div class="dropdown_2columns"><div class="col_2" style="width: 95%;"><ul>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-689"><a href="http://artsci.case.edu/dittrick/research/biographical-resources/">Biographical Resources</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-691"><a href="http://artsci.case.edu/dittrick/research/history-of-medicine-guides/">History of Medicine Guides</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-693"><a href="http://artsci.case.edu/dittrick/research/dittrick-archives-finding-aids/">Bibliographies</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-695"><a href="http://artsci.case.edu/dittrick/research/medical-and-surgical-instrumentation/">Medical and Surgical Instrumentation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697"><a href="http://artsci.case.edu/dittrick/research/ohio-medical-history-bibliography/">Ohio Medical History Bibliography</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-699"><a href="http://artsci.case.edu/dittrick/research/links-of-interest/">Links of Interest</a></li>
+</ul></div></div>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-781"><a href="http://dittrickmuseumblog.com/" class="drop" >Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-775"><a href="http://artsci.case.edu/dittrick/books-and-posters/" class="drop" >Books and Posters</a></li>
+</ul>ref="http://dittrickmuseumblog.com/" class="drop" >
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cas-mobile-top-bar" class="visible-phone">
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						 						<img id="cwruCASLogo" src="http://artsci.case.edu/dittrick/wp-content/themes/CASTheme/images/cas-logo-header.png" />
+						<h1>Dittrick Medical History Center</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="cas-mobile-menu-slider-toggle" class="visible-phone college-tab">
+			<i class="icon-reorder"></i> Navigation + <i class="icon-search"></i> Search
+		</div>
+		
+		<div id="cas-mobile-department-menu" class="visible-phone">
+ 						<div class="accordion" id="cas-mobile-department-menu-accordian">
+				<div id="mobile-nav-search">
+					<form action="http://google.com/cse">
+						<div class="input-append">
+							<input type="hidden" id="footer-search-id" name="cx" value="015686301297374177681:uy8_du3q1dq" />
+							<input type="hidden" name="ie" value="UTF-8" />
+							<div class="input-append">
+								<input class="span4" name="q" id="appendedInputButton" type="text">
+								<button class="btn" type="submit">Search</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="accordion" id="accordion2">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" doubletap-url="http://artsci.case.edu/dittrick/museum/" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+										Museum
+									</a>
+								</div>
+								<div id="collapseOne" class="accordion-body mobile-menu-dropdown collapse">
+									<div class="accordion-inner">
+										<a href="http://artsci.case.edu/dittrick/museum/visit-the-museum/">Visit the Museum</a><br /><a href="http://artsci.case.edu/dittrick/museum/museum-history/">Museum History</a><br /><a href="http://artsci.case.edu/dittrick/museum/museum-map/">Museum Map</a><br /><a href="http://artsci.case.edu/dittrick/museum/membership/">Membership</a><br /><a href="http://artsci.case.edu/dittrick/museum/contact-us/">Contact Us</a><br /><a href="http://artsci.case.edu/dittrick/museum/newsletter-archive/">Newsletters</a><br />
+									</div>
+								</div>
+							</div>
+						
+
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a href="http://artsci.case.edu/dittrick/upcoming-events/" class="accordion-toggle" >
+										Upcoming Events
+									</a>
+								</div>
+							</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+							Collections
+						</a>
+					</div>
+					<div id="collapseThree" class="accordion-body collapse mobile-menu-dropdown">
+						<div class="accordion-inner mobile-mega-dropdown-contents">
+							<div><h2>Archives</h2><ul id="menu-archives-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-835"><a href="http://artsci.case.edu/dittrick/collections/archives/">Archives home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-795"><a href="http://artsci.case.edu/dittrick/collections/archives/cleveland-hospitals/">Cleveland Hospitals</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-797"><a href="http://artsci.case.edu/dittrick/collections/archives/darwin-letters/">Darwin Letters</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-799"><a href="http://artsci.case.edu/dittrick/collections/archives/professional-societies/">Professional Societies</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-801"><a href="http://artsci.case.edu/dittrick/collections/archives/personal-papers/">Personal Papers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://artsci.case.edu/dittrick/collections/archives/homeopathy/">Homeopathy</a></li>
+</ul></div><div><h2>Artifacts</h2><ul id="menu-artifacts-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/">Artifacts home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-805"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/general-information/">General Information</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1575"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/contraception-collection/">Contraception Collection</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-807"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/blaufox-hall-of-diagnostic-instruments/">Blaufox Hall of Diagnostic Instruments</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-809"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/milikin-room-of-microscopes/">Re-conceiving Birth</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1459"><a href="http://artsci.case.edu/dittrick/collections/aritfacts/millikin-room-of-microscopes/">Millikin Room of Microscopes</a></li>
+</ul></div><div><h2>Images</h2><ul id="menu-images-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-811"><a href="http://artsci.case.edu/dittrick/collections/images/">Images home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-813"><a href="http://artsci.case.edu/dittrick/collections/images/photography/">Photography</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-815"><a href="http://artsci.case.edu/dittrick/collections/images/prints/">Prints</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-817"><a href="http://artsci.case.edu/dittrick/collections/images/painting/">Painting</a></li>
+</ul></div><div><h2>Rare Books</h2><ul id="menu-rare-books-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-839"><a href="http://artsci.case.edu/dittrick/collections/rare-books/">Rare Books home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-841"><a href="http://artsci.case.edu/dittrick/collections/rare-books/classics-in-anatomy/">Classics in Anatomy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-843"><a href="http://artsci.case.edu/dittrick/collections/rare-books/the-sigmund-freud-collection/">The Sigmund Freud Collection</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-845"><a href="http://artsci.case.edu/dittrick/collections/rare-books/the-g-g-marshall-collection-of-herbals/">The G.G. Marshall Collection of Herbals</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-847"><a href="http://artsci.case.edu/dittrick/collections/rare-books/the-cole-collection-of-venereals/">The Cole Collection of Venereals</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-849"><a href="http://artsci.case.edu/dittrick/collections/rare-books/the-nicolaus-pol-collection/">The Nicolaus Pol Collection</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-851"><a href="http://artsci.case.edu/dittrick/collections/rare-books/charles-darwin-books-and-manuscripts/">Charles Darwin Books and Manuscripts</a></li>
+</ul></div>
+						</div>
+					</div>
+				</div>
+			
+
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" doubletap-url="http://artsci.case.edu/dittrick/online-exhibits/" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+										Online Exhibits
+									</a>
+								</div>
+								<div id="collapseFour" class="accordion-body mobile-menu-dropdown collapse">
+									<div class="accordion-inner">
+										<a href="http://artsci.case.edu/dittrick/online-exhibits/audio-archives/">Audio Archives</a><br /><a href="http://artsci.case.edu/dittrick/online-exhibits/smallpox/">Smallpox Outbreak</a><br /><a href="http://artsci.case.edu/dittrick/online-exhibits/haunting-images-2/">Haunting Images</a><br /><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/">Explore the Artifacts</a><br /><a href="http://artsci.case.edu/dittrick/online-exhibits/photographing-dermatology/">Photographing Dermatology</a><br /><a href="http://artsci.case.edu/dittrick/online-exhibits/history-of-birth-control/">History of Birth Control</a><br /><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/">Lake View Cemetery</a><br />
+									</div>
+								</div>
+							</div>
+						
+
+
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" doubletap-url="http://artsci.case.edu/dittrick/research/" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+										Research
+									</a>
+								</div>
+								<div id="collapseFive" class="accordion-body mobile-menu-dropdown collapse">
+									<div class="accordion-inner">
+										<a href="http://artsci.case.edu/dittrick/research/biographical-resources/">Biographical Resources</a><br /><a href="http://artsci.case.edu/dittrick/research/history-of-medicine-guides/">History of Medicine Guides</a><br /><a href="http://artsci.case.edu/dittrick/research/dittrick-archives-finding-aids/">Bibliographies</a><br /><a href="http://artsci.case.edu/dittrick/research/medical-and-surgical-instrumentation/">Medical and Surgical Instrumentation</a><br /><a href="http://artsci.case.edu/dittrick/research/ohio-medical-history-bibliography/">Ohio Medical History Bibliography</a><br /><a href="http://artsci.case.edu/dittrick/research/links-of-interest/">Links of Interest</a><br />
+									</div>
+								</div>
+							</div>
+						
+
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a href="http://dittrickmuseumblog.com/" class="accordion-toggle" >
+										Blog
+									</a>
+								</div>
+							</div>
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a href="http://artsci.case.edu/dittrick/books-and-posters/" class="accordion-toggle" >
+										Books and Posters
+									</a>
+								</div>
+							</div></div>div>
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a href="http://artsci.case.edu/dittrick/books-and-po			</div>
+		</div>
+
+
+			<!-- Breadcrumbs -->
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+						<div id="cas-breadcrumbs"><a href="http://artsci.case.edu/dittrick">Home</a> / <a href="http://artsci.case.edu/dittrick/online-exhibits/">Online Exhibits</a> / Smallpox Outbreak</div>				</div>
+			</div>
+		</div>
+
+
+		<!-- Body -->
+		<div class="container">
+			<div class="row">
+				<div class="span3">
+																		<ul id="cas-left-navigation" class="nav nav-pills nav-stacked has-parent-has-children">
+						<li><a href="http://artsci.case.edu/dittrick/online-exhibits/"><strong>Online Exhibits</strong></a></li>
+						<li class="page_item page-item-211"><a href="http://artsci.case.edu/dittrick/online-exhibits/audio-archives/">Audio Archives</a></li>
+<li class="page_item page-item-217 page_item_has_children current_page_item"><a href="http://artsci.case.edu/dittrick/online-exhibits/smallpox/">Smallpox Outbreak</a>
+<ul class='children'>
+	<li class="page_item page-item-951"><a href="http://artsci.case.edu/dittrick/online-exhibits/smallpox/a-city-on-the-edge-of-disaster/">A City on the Edge of Disaster</a></li>
+	<li class="page_item page-item-959"><a href="http://artsci.case.edu/dittrick/online-exhibits/smallpox/vaccination/">Vaccination</a></li>
+	<li class="page_item page-item-965"><a href="http://artsci.case.edu/dittrick/online-exhibits/smallpox/homer-j-hartzell-photography-collection/">Homer J. Hartzell Photography Collection</a></li>
+	<li class="page_item page-item-985"><a href="http://artsci.case.edu/dittrick/online-exhibits/smallpox/the-corlett-collection/">The Corlett Collection</a></li>
+</ul>
+</li>
+<li class="page_item page-item-233 page_item_has_children"><a href="http://artsci.case.edu/dittrick/online-exhibits/haunting-images-2/">Haunting Images</a>
+<ul class='children'>
+	<li class="page_item page-item-1383"><a href="http://artsci.case.edu/dittrick/online-exhibits/haunting-images-2/haunting-images-group-pictures/">Group Pictures</a></li>
+	<li class="page_item page-item-1389"><a href="http://artsci.case.edu/dittrick/online-exhibits/haunting-images-2/post-cards/">Post Cards</a></li>
+	<li class="page_item page-item-1403"><a href="http://artsci.case.edu/dittrick/online-exhibits/haunting-images-2/class-portrait/">Class Portrait</a></li>
+	<li class="page_item page-item-1411"><a href="http://artsci.case.edu/dittrick/online-exhibits/haunting-images-2/tomfoolery-and-humor/">Tomfoolery and Humor</a></li>
+</ul>
+</li>
+<li class="page_item page-item-221 page_item_has_children"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/">Explore the Artifacts</a>
+<ul class='children'>
+	<li class="page_item page-item-2173"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/kay-cross-oxygenator-1951/">Kay-Cross oxygenator, 1951</a></li>
+	<li class="page_item page-item-2181"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/george-crile-military-medicine/">George Crile and the lessons of military medicine in World War I</a></li>
+	<li class="page_item page-item-2189"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/dosimeter-victoreen-condenser-r-meter-1928/">Dosimeter: Victoreen condenser R-Meter, 1928</a></li>
+	<li class="page_item page-item-2205"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/ruben-a-vance-and-lithotripsy/">Ruben A. Vance and lithotripsy: minimally invasive surgery more than a century ago</a></li>
+	<li class="page_item page-item-2219"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/homeopathic-medicine-case/">Homeopathic Medicine Case</a></li>
+	<li class="page_item page-item-2225"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/artificial-kidney-1963/">Travenol artificial kidney, ca.1963</a></li>
+	<li class="page_item page-item-2233"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/engeln-x-ray-table-1927/">Engeln x-ray table 1927</a></li>
+	<li class="page_item page-item-2241"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/abner-webb-1846/">Office Sign of Abner Webb c.1846</a></li>
+	<li class="page_item page-item-2249"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/phrenology-bust-1850/">Phrenology Bust c.1850</a></li>
+	<li class="page_item page-item-2257"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/compression-chamber-1904/">Compression chamber, 1904</a></li>
+	<li class="page_item page-item-2265"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/cupping-1810/">Cupping Set c. 1810</a></li>
+	<li class="page_item page-item-2279"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/transfusion-cannula-1915/">Crile transfusion cannula c. 1915</a></li>
+	<li class="page_item page-item-2285"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/cambridge-electrocardiograph-1920/">Cambridge Electrocardiograph, 1920</a></li>
+	<li class="page_item page-item-2291"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/gustav-weber-amputating-1861/">Gustav Weber and the medical impact of the Civil War Amputating Set c.1861</a></li>
+	<li class="page_item page-item-2303"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/physicians-surgical-chair-1890/">Physician&#8217;s surgical chair, 1890</a></li>
+	<li class="page_item page-item-2309"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/percutaneous-endoscopic-gastrostomy-1979/">Percutaneous Endoscopic Gastrostomy, 1979</a></li>
+	<li class="page_item page-item-2315"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/goldblatt-clamps-1934/">Goldblatt clamps for hypertension experiments, 1934</a></li>
+	<li class="page_item page-item-2327"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/hirschowitz-fiberoptic-endoscope-1960/">Hirschowitz fiberoptic Endoscope, 1960</a></li>
+	<li class="page_item page-item-2335"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/carbolic/">Beginnings of antiseptic surgery in Cleveland</a></li>
+	<li class="page_item page-item-2385"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/todds-head-spanner-1930/">Todd&#8217;s Head Spanner 1930</a></li>
+	<li class="page_item page-item-2397"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/claude-beck-defibrillation-and-cpr/">Claude Beck, defibrillation and CPR</a></li>
+	<li class="page_item page-item-2425"><a href="http://artsci.case.edu/dittrick/online-exhibits/explore-the-artifacts/saddlebags-1820/">Saddlebags and Instruments of Peter Allen, c.1820</a></li>
+</ul>
+</li>
+<li class="page_item page-item-229 page_item_has_children"><a href="http://artsci.case.edu/dittrick/online-exhibits/photographing-dermatology/">Photographing Dermatology</a>
+<ul class='children'>
+	<li class="page_item page-item-1475"><a href="http://artsci.case.edu/dittrick/online-exhibits/photographing-dermatology/corletts-colleciton/">Corlett&#8217;s Colleciton</a></li>
+	<li class="page_item page-item-1485"><a href="http://artsci.case.edu/dittrick/online-exhibits/photographing-dermatology/felix-meheux-hand-colorist/">Félix Méheux, hand colorist</a></li>
+	<li class="page_item page-item-1495"><a href="http://artsci.case.edu/dittrick/online-exhibits/photographing-dermatology/leman-hand-colorist/">Leman, hand colorist</a></li>
+	<li class="page_item page-item-1515"><a href="http://artsci.case.edu/dittrick/online-exhibits/photographing-dermatology/conclusions/">Conclusions</a></li>
+	<li class="page_item page-item-1531"><a href="http://artsci.case.edu/dittrick/online-exhibits/photographing-dermatology/gallery-of-photographs/">Gallery of Photographs</a></li>
+	<li class="page_item page-item-1553"><a href="http://artsci.case.edu/dittrick/online-exhibits/photographing-dermatology/acknowledgments-and-references/">Acknowledgments and References</a></li>
+</ul>
+</li>
+<li class="page_item page-item-237 page_item_has_children"><a href="http://artsci.case.edu/dittrick/online-exhibits/history-of-birth-control/">History of Birth Control</a>
+<ul class='children'>
+	<li class="page_item page-item-1767 page_item_has_children"><a href="http://artsci.case.edu/dittrick/online-exhibits/history-of-birth-control/contraception-in-america-1800-1900/">Contraception in America 1800-1900</a></li>
+	<li class="page_item page-item-1785 page_item_has_children"><a href="http://artsci.case.edu/dittrick/online-exhibits/history-of-birth-control/contraception-in-america-1900-1950/">Contraception in America 1900 -1950</a></li>
+	<li class="page_item page-item-1889 page_item_has_children"><a href="http://artsci.case.edu/dittrick/online-exhibits/history-of-birth-control/contraception-in-america-1950-present-day/">Contraception in America 1950 &#8211; Present day</a></li>
+</ul>
+</li>
+<li class="page_item page-item-241 page_item_has_children"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/">Lake View Cemetery</a>
+<ul class='children'>
+	<li class="page_item page-item-307"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/dudley-p-allen-and-the-cushing-family/">No 1. Dudley P. Allen and the Cushing Family</a></li>
+	<li class="page_item page-item-1931"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-2-xenophon-christmas-scott-1842-1909/">No 2. Xenophon Christmas Scott</a></li>
+	<li class="page_item page-item-1941"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-3-william-perry-horton/">No 3. William Perry Horton</a></li>
+	<li class="page_item page-item-1959"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-4-howard-dittrick/">No 4. Howard Dittrick</a></li>
+	<li class="page_item page-item-1981"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-5-benjamin-strickland/">No 5. Benjamin Strickland</a></li>
+	<li class="page_item page-item-1987"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-6-john-lang-cassels/">No 6. John Lang Cassels</a></li>
+	<li class="page_item page-item-1993"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-7-john-pascal-sawyer/">No 7. John Pascal Sawyer</a></li>
+	<li class="page_item page-item-2001"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-8-horace-a-ackley/">No 8. Horace A. Ackley</a></li>
+	<li class="page_item page-item-2009"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-8-a-george-coates-ashmun/">No 8-A. George Coates Ashmun</a></li>
+	<li class="page_item page-item-2015"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-9-james-henry-salisbury/">No 9. James Henry Salisbury</a></li>
+	<li class="page_item page-item-2021"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-10-gustav-weber/">No 10. Gustav Weber</a></li>
+	<li class="page_item page-item-2029"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-11-dudley-baldwin-wick-jr/">No 11. Dudley Baldwin Wick, Jr.</a></li>
+	<li class="page_item page-item-2035"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-12-samuel-kelley/">No 12. Samuel Kelley</a></li>
+	<li class="page_item page-item-2041"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-13-george-crile-sr-charles-hoover-and-john-phillips/">No 13. George Crile Sr., Charles Hoover, and John Phillips</a></li>
+	<li class="page_item page-item-2055"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-14-homer-hartzell/">No 14. Homer Hartzell</a></li>
+	<li class="page_item page-item-2061"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-15-henry-lovejoy-ambler/">No 15. Henry Lovejoy Ambler</a></li>
+	<li class="page_item page-item-2067"><a href="http://artsci.case.edu/dittrick/online-exhibits/lakeview-cemetery/no-16-jared-potter-kirtland/">No 16. Jared Potter Kirtland</a></li>
+</ul>
+</li>
+5-henry-lovejoy-ambler/">No 15. Henry Lovejoy Ambler</a></li>
+	<li class="page_item page-item					</ul>
+				
+
+
+				</div>
+				
+				
+
+				<div class="span9">
+					<h1 class="headline">Smallpox Outbreak</h1>
+					<p><a href="/dittrick/files/2013/12/smallpox_exhibit-oversmall2.jpg" data-slb-group="217" data-slb-active="1" data-slb-internal="0"><img class="alignleft size-full wp-image-945" style="margin: 10px;" src="/dittrick/files/2013/12/smallpox_exhibit-oversmall2.jpg" alt="smallpox_exhibit-oversmall2" width="180" height="164" /></a>In the early years of the 20th century, the city of Cleveland experienced a major <a title="A City on the Edge of Disaster" href="dittrick/online-exhibits/smallpox/a-city-on-the-edge-of-disaster/"><strong>outbreak of smallpox</strong></a>. This epidemic brought the city to the edge of disaster in 1902. Only a program of community-wide <a title="Vaccination" href="/dittrick/online-exhibits/smallpox/vaccination/"><strong>vaccination</strong></a> halted the spread of this dreaded infectious disease. This was not easy to achieve, and came about only through the effective cooperation of Cleveland&#8217;s elected officials, public health officers, the medical community, civic-minded businessmen, religious leaders, and educators. Thanks to their efforts, this would be the last smallpox epidemic in the city of Cleveland.</p>
+<p>We can trace the course of the epidemic and the city&#8217;s response through newspapers, city council archives, medical journals, and public health reports. These sources chronicle the sequence of events and identify the major &#8220;players,&#8221; but do not adequately relate the horror that smallpox evoked in the minds of Clevelanders. A unique documentation of the epidemic does survive, however, in a <a title="Homer J. Hartzell Photography Collection" href="/dittrick/online-exhibits/smallpox/homer-j-hartzell-photography-collection/"><strong>remarkable collection of photographs. Homer J. Hartzell</strong></a>, a young physician caring for smallpox patients at the city&#8217;s &#8220;pest house,&#8221; captured the epidemic on film. While he may have done so out of scientific interest, these photos speak to us across time, conveying the suffering and disfigurement brought by this terrible disease. This exhibit tells the tale of the epidemic, and shares these images publicly for the first time. Further photographic documentation survives in the <a title="The Corlett Collection" href="/dittrick/online-exhibits/smallpox/the-corlett-collection/"><strong>Corlett Collection</strong></a>. Dr. William T. Corlett was professor of dermatology and syphilology at Cleveland&#8217;s Western Reserve University School of Medicine, he documented his work with photography throughout his career.</p>
+<p>Smallpox was unique amongst dreaded infectious diseases: it could be prevented by either inoculation or vaccination. Inoculation, dating from the 18th century, consisted of introducing an infected smallpox scab under the skin. The recipient, if fortunate, developed a mild case of smallpox and would thereafter be immune to the disease. If unfortunate, the recipient soon fell ill with smallpox in full force. This could mean disfigurement and even death, and there was no way to know which to expect. Inoculation therefore entailed serious risk. Vaccination replaced inoculation around 1800, following its discovery by Edward Jenner, an English doctor. Jenner observed that milkmaids, often contracted cowpox and, having had this mild disease, seemed resistant to smallpox. He therefore deliberately &#8220;vaccinated&#8221; people by injecting them with cowpox virus, in order to impart immunity to smallpox. By 1853 vaccination became compulsory in Great Britain, but for a variety of reasons the United States lagged behind.</p>
+<p>Smallpox was a frequent visitor to the cities of the world, and Cleveland was no exception. Minor outbreaks threatened the city in 1833, 1845, 1863, 1873, and 1895, but did not become full scale epidemics. Outspoken Cleveland physicians and health public officials insisted upon the importance of vaccination whenever smallpox appeared in the city, recommending that it be made mandatory. They also advocated quarantining victims of the disease and disinfecting their belongings and homes. Toward the end of the 19th century, however, Cleveland&#8217;s public health officials abandoned vaccination in favor of the isolation of smallpox patients and disinfection of their belongings and homes. Health officials were not without reasons for pushing vaccination aside.</p>
+<table style="width: 75px;" border="1" cellspacing="0" cellpadding="3" align="right" bgcolor="#ffcc99">
+<tbody>
+<tr>
+<td width="35">Year</td>
+<td width="36">Cases</td>
+<td width="42">Deaths</td>
+</tr>
+<tr>
+<td width="35">1898</td>
+<td width="36">70</td>
+<td width="42">0</td>
+</tr>
+<tr>
+<td width="35">1899</td>
+<td width="36">475</td>
+<td width="42">3</td>
+</tr>
+<tr>
+<td width="35" height="22">1900</td>
+<td width="36" height="22">993</td>
+<td width="42" height="22">16</td>
+</tr>
+<tr>
+<td width="35">1901</td>
+<td width="36">1232</td>
+<td width="42">20</td>
+</tr>
+<tr>
+<td width="35">1902</td>
+<td width="36">1248</td>
+<td width="42">224</td>
+</tr>
+<tr>
+<td width="35">1903</td>
+<td width="36">106</td>
+<td width="42">22</td>
+</tr>
+<tr>
+<td width="35">1904</td>
+<td width="36">40</td>
+<td width="42">6</td>
+</tr>
+<tr>
+<td width="35">1905</td>
+<td width="36">0</td>
+<td width="42">0</td>
+</tr>
+</tbody>
+</table>
+<p>Available vaccine often proved hazardous owing to impurity. It caused illness and in some cases, even death. Additionally, the site of vaccination could become infected with bacteria. Citizens therefore feared the vaccine, and resisted the vaccination programs. Consequently, when an outbreak of smallpox occurred in 1898, Cleveland&#8217;s City Health Officer Dr. John L. Hess emphasized disinfection and fumigation, in conjunction with detention and quarantine &#8212; not vaccination. However, this approach to arresting smallpox proved increasingly ineffectual over the next four years. The number of smallpox cases increased steadily and by Spring 1901 the disease reached epidemic proportions. City officials had a looming health catastrophe on their hands.</p>
+<p>Mayors of cities along Lake Erie, particularly Detroit and Buffalo, expressed concern about the Cleveland outbreak. They wrote Mayor Tom L. Johnson, suggesting that some limitation on trade might be necessary if Cleveland did not bring the epidemic under control. Johnson therefore ordered<br />
+Martin Friedrich, Cleveland&#8217;s newly appointed chief health officer, to activate a large scale vaccination program. Soon after this commenced, however, four persons died and several more became ill, all apparently victims of bad vaccine. Resistance to vaccination increased, compelling Friedrich to once again abandon it in favor of isolation and disinfection. He expanded isolation and enforced it more strictly, and he initiated the widest disinfection program the city had yet seen. Disinfecting crews, including many students from the <a title="Early Medical Schools" href="http://artsciwp.case.edu/dittrick/early-medical-schools/"><strong>city&#8217;s three medical schools</strong></a> (Western Reserve University, the College of Physicians and Surgeons &#8211; later incorporated into Western Reserve, and a Homeopathic Medical College) went from house to house with heavy sprayers, dousing everything in the victim&#8217;s home and neighborhood with formaldehyde. Meanwhile, the city hastily erected a new smallpox hospital on the grounds of the City Hospital (now MetroHealth Medical Center). By the end of 1901, the number of cases of smallpox declined significantly. Public health officials believed that disinfecting residences and isolating smallpox patients had been effective in halting the spread of the disease.</p>
+<p><a href="http://artsci.case.edu/dittrick/files/2013/12/smallpox_hospital1902.jpg" data-slb-group="217" data-slb-active="1" data-slb-internal="0"><img class="alignleft wp-image-943 size-full" style="margin: 10px;" src="http://artsci.case.edu/dittrick/files/2013/12/smallpox_hospital1902.jpg" alt="" width="270" height="214" /></a> In early 1902 the people of Cleveland enjoyed the return of normalcy, but their sense of security was unfounded. In fact, the city had been extremely fortunate: the preceding epidemic consisted of a relatively mild, less contagious variety of smallpox (variola minor). While isolating patients and disinfecting their homes had undoubtedly helped in its containment, these measures alone could not halt a more virulent strain of smallpox (variola major). Luck had been on the side of Clevelanders.<br />
+Smallpox reappeared in May 1902, brought by an infected homeless person newly-arrived from Hoboken, New Jersey. To make matters still worse, the city now faced a lethal hemorrhagic variant of smallpox. With a largely unvaccinated population, Cleveland was particularly vulnerable to this more virulent strain. Thirty people died in a short time, prompting a vigorous municipal response. The city immediately ordered the erection of a barbed wire fence around the 1901 smallpox hospital to prevent patients from leaving.The photograph left depicts a sample tent installed near the entrance of the smallpox hospital, 1902, from Hartzell photo album.</p>
+<p>With full understanding of what was happening, the city&#8217;s health officer, Martin Friedrich, desperately attempted to implement a vaccination program. He had a new weapon at his disposal: a new bacteriological laboratory, opened at the end of 1901. Laboratory staff tested smallpox vaccine from various suppliers, until they found one that was both effective and SAFE. With this in hand, Friedrich sent dozens of physicians and their assistants to vaccinate people throughout the community. However, they met widespread resistance, particularly because of the difficulties encountered in 1901, and Friedrich feared that the vaccination campaign would fail. At this juncture, several groups came to the rescue.</p>
+<p>Physicians from the newly-formed Academy of Medicine of Cleveland (including Friedrich) led a renewed, reinvigorated campaign for vaccination<a href="http://artsci.case.edu/dittrick/files/2013/12/Smallpox_lab.jpg" data-slb-group="217" data-slb-active="1" data-slb-internal="0"><img class="alignleft wp-image-941 size-full" style="margin: 10px;" src="http://artsci.case.edu/dittrick/files/2013/12/Smallpox_lab.jpg" alt="" width="270" height="210" /></a> in 1902. By the Fall, their campaign had vaccinated over 100,000 people, more than half the city&#8217;s population. Additionally, the campaign culminated in the compulsory vaccination of school children. After 1902, the Cleveland Board of Education would not admit any child who had not been vaccinated beforehand. The Cleveland Chamber of Commerce also rallied around the vaccination campaign, uniting businessmen, religious leader, and various civic groups. Contributing to the campaign&#8217;s ultimate success was the Mayor&#8217;s support, mounting public anxiety in the face of a looming epidemic, and Friedrich&#8217;s assurances that the vaccine employed was now safe and effective. As more and more Clevelanders received the vaccine, the specter of the epidemic receded; by early 1903, it was all but over. Cleveland had come dangerously close to catastrophe, but physicians, public health officials, civic leaders, and educators worked together in a spirit of civic unity and averted the calamity. Photograph right the bacteriological laboratory, at the Smallpox hospital 1901-2, from the Hartzell photo album.</p>
+<p>This exhibit was written by Patsy Gerstner, PhD.</p>
+<p>&nbsp;</p>
+<p align="left">
+ a spirit of civic unity and averte				</div>
+			</div>
+		</div>
+
+
+		<div class="navigation">
+		</div>
+<div id="cas-footer">
+	<div class="container">
+		<div class="row">
+			<div class="span3" style="border-right: 1px solid #aaa; margin-right: -1px;">
+				<h1>Dittrick Medical History Center</h1>
+				<small>&copy; 2015 <a href="http://www.cwru.edu">case western reserve university</a></small>
+			</div>
+
+			<div class="span3">
+				<h2>Search</h2>
+				<form id="footer-search-form" action="http://google.com/cse">
+					<div class="search-area">
+						<div class="input-append">
+							
+							<input type="hidden" id="footer-search-id" name="cx" value="015686301297374177681:uy8_du3q1dq" />
+							<input type="hidden" name="ie" value="UTF-8" />
+							<div class="input-append">
+ 								<input class="span2" name="q" id="appendedInputButton" type="text">
+  							<button class="btn" type="submit">Search</button>
+							</div>
+							<div class="btn-group">
+															</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="span4 connect">
+								<h2>Connect</h2><a href="https://twitter.com/DittrickMuseum" class="social-badge"><i class="icon-twitter"></i></a><a href="https://www.facebook.com/DittrickMuseum" class="social-badge"><i class="icon-facebook"></i></a><a href="http://www.youtube.com/DittrickMuseum" class="social-badge"><i class="icon-youtube"></i></a></div>			<div class="span2">
+				<h2>Contact</h2>
+				<p class="contact-info">
+					Allen Memorial Medical Library
+11000 Euclid Ave.
+Cleveland, OH 44106					<br />
+										<br />
+					<a href="mailto:"></a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201502'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/plugins/simple-lightbox/client/js/prod/lib.core.js?ver=2.3.1'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/plugins/simple-lightbox/client/js/prod/lib.view.js?ver=2.3.1'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/plugins/simple-lightbox/themes/baseline/js/prod/client.js?ver=2.3.1'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/plugins/simple-lightbox/themes/default/js/prod/client.js?ver=2.3.1'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/plugins/simple-lightbox/template-tags/item/js/prod/tag.item.js?ver=2.3.1'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/plugins/simple-lightbox/template-tags/ui/js/prod/tag.ui.js?ver=2.3.1'></script>
+<script type='text/javascript' src='http://artsci.case.edu/dittrick/wp-content/plugins/simple-lightbox/content-handlers/image/js/prod/handler.image.js?ver=2.3.1'></script>
+<script type="text/javascript" id="slb_footer">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB && SLB.has_child('View.init') ) { SLB.View.init({"ui_autofit":true,"ui_animate":true,"slideshow_autostart":true,"slideshow_duration":"6","group_loop":true,"ui_overlay_opacity":"0.8","ui_title_default":false,"theme_default":"slb_default","ui_labels":{"loading":"Loading","close":"Close","nav_next":"Next","nav_prev":"Previous","slideshow_start":"Start slideshow","slideshow_stop":"Stop slideshow","group_status":"Item %current% of %total%"}}); }
+if ( !!window.SLB && SLB.has_child('View.assets') ) { {$.extend(SLB.View.assets, {"http:\/\/artsci.case.edu\/dittrick\/dittrick\/files\/2013\/12\/smallpox_exhibit-oversmall2.jpg":{"id":null,"_entries":["\/dittrick\/files\/2013\/12\/smallpox_exhibit-oversmall2.jpg"],"type":"image","source":"http:\/\/artsci.case.edu\/dittrick\/dittrick\/files\/2013\/12\/smallpox_exhibit-oversmall2.jpg","internal":true},"http:\/\/artsci.case.edu\/dittrick\/files\/2013\/12\/smallpox_hospital1902.jpg":{"id":943,"_entries":[],"type":"image","source":"http:\/\/artsci.case.edu\/dittrick\/files\/2013\/12\/smallpox_hospital1902.jpg","internal":true,"sizes":{"thumbnail":{"file":"smallpox_hospital1902-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"news-thumb":{"file":"smallpox_hospital1902-100x79.jpg","width":100,"height":79,"mime-type":"image\/jpeg"},"original":{"file":"2013\/12\/smallpox_hospital1902.jpg","width":270,"height":214}},"image_meta":{"aperture":0,"credit":"","camera":"","caption":"","created_timestamp":0,"copyright":"","focal_length":0,"iso":0,"shutter_speed":0,"title":""},"description":"","title":"smallpox_hospital1902","caption":""},"http:\/\/artsci.case.edu\/dittrick\/files\/2013\/12\/Smallpox_lab.jpg":{"id":941,"_entries":[],"type":"image","source":"http:\/\/artsci.case.edu\/dittrick\/files\/2013\/12\/Smallpox_lab.jpg","internal":true,"sizes":{"thumbnail":{"file":"Smallpox_lab-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"news-thumb":{"file":"Smallpox_lab-100x77.jpg","width":100,"height":77,"mime-type":"image\/jpeg"},"original":{"file":"2013\/12\/Smallpox_lab.jpg","width":270,"height":210}},"image_meta":{"aperture":0,"credit":"","camera":"","caption":"","created_timestamp":0,"copyright":"","focal_length":0,"iso":0,"shutter_speed":0,"title":""},"description":"","title":"Smallpox_lab","caption":""},"\/dittrick\/files\/2013\/12\/smallpox_exhibit-oversmall2.jpg":{"_parent":"http:\/\/artsci.case.edu\/dittrick\/dittrick\/files\/2013\/12\/smallpox_exhibit-oversmall2.jpg"}});} }
+/* THM */
+if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_theme('slb_baseline',{"name":"Baseline","parent":"","styles":[{"handle":"base","uri":"http:\/\/artsci.case.edu\/dittrick\/wp-content\/plugins\/simple-lightbox\/themes\/baseline\/css\/style.css","deps":[]}],"layout_raw":"<div class=\"slb_container\"><div class=\"slb_content\">{{item.content}}<div class=\"slb_nav\"><span class=\"slb_prev\">{{ui.nav_prev}}<\/span><span class=\"slb_next\">{{ui.nav_next}}<\/span><\/div><div class=\"slb_controls\"><span class=\"slb_close\">{{ui.close}}<\/span><span class=\"slb_slideshow\">{{ui.slideshow_control}}<\/span><\/div><div class=\"slb_loading\">{{ui.loading}}<\/div><\/div><div class=\"slb_details\"><div class=\"inner\"><div class=\"slb_data\"><div class=\"slb_data_content\"><span class=\"slb_data_title\">{{item.title}}<\/span><span class=\"slb_group_status\">{{ui.group_status}}<\/span><div class=\"slb_data_desc\">{{item.description}}<\/div><\/div><\/div><div class=\"slb_nav\"><span class=\"slb_prev\">{{ui.nav_prev}}<\/span><span class=\"slb_next\">{{ui.nav_next}}<\/span><\/div><\/div><\/div><\/div>"}); }if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_theme('slb_default',{"name":"Default (Light)","parent":"slb_baseline","styles":[{"handle":"font","uri":"http:\/\/fonts.googleapis.com\/css?family=Yanone+Kaffeesatz","deps":[]},{"handle":"base","uri":"http:\/\/artsci.case.edu\/dittrick\/wp-content\/plugins\/simple-lightbox\/themes\/default\/css\/style.css","deps":[]}]}); }})})(jQuery);}/* ]]> */</script>
+<script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>
+
+	<script src="http://stats.wp.com/e-201502.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:3.1.1',blog:'75608020',post:'217',tz:'0'});
+	var load_cmc = function(){linktracker_init(75608020,217,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script></body>
+</html>ext/javascript">
+	st_go({v:'ext',j

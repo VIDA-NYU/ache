@@ -1,0 +1,163 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- TemplateVersion="1211" -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="/inc/concat/prevars.js"></script>
+
+<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<link type="text/css" href="/inc/js/jquery/jquery-ui-1.8.9.custom/css/ui-lightness/jquery-ui-1.8.9.custom.css" rel="stylesheet" />
+
+<link rel="icon" href="http://ochealthinfo.com/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://ochealthinfo.com/favicon.ico" type="image/x-icon" />
+<script LANGUAGE="JavaScript" TYPE="text/javascript">var javascript_version = 1.0;</script>
+<script LANGUAGE="JavaScript1.1" TYPE="text/javascript">javascript_version = 1.1;</script>
+<script LANGUAGE="javascript1.2" TYPE="text/javascript" SRC="/civica/inc/popupwin.js"></script>
+<link rel="stylesheet" type="text/css" href="/custom/0000/style/filebank/filebank.css">
+
+<script Language="JavaScript" type="text/javascript">
+<!--
+function cvfb_DisplayWarning( blobID )
+{
+	if( confirm('FYI: This file is from an External Source. Are you sure you want to view it?') )
+	{
+		civicapopupwin('/civicax/filebank/blobdload.aspx?BlobID='+blobID,'fbdisplay','');
+	}
+}
+// -->
+</script>
+<link href="/custom/0000/style/azindex/services.css" rel="stylesheet" type="text/css">
+
+
+<link href="/custom/0000/style/azindex/azindex.css" rel="stylesheet" type="text/css">
+<script type='text/javascript' src='/inc/js/jquery/1.4.2/jquery.cviconliscroll.js'></script>
+
+<link href="/inc/00/newsslider/theme.css" rel="stylesheet" type="text/css" />
+<script src="/inc/js/jquery/plugins/jquery.accessible-news-slider.js" type="text/javascript"></script>
+
+
+<!--link href="style.css" media="screen" rel="stylesheet" type="text/css" /-->
+<link rel="stylesheet" type="text/css" href="/custom/widgets/clock/css/analog.css"> 
+<link rel="stylesheet" type="text/css" href="/custom/widgets/clock/css/digital.css">
+<script src="/custom/widgets/clock/js/jquery.clock.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/custom/0000/style/widgets/widgets.css">
+<script TYPE="text/javascript" LANGUAGE="javascript1.2" SRC="http://media.ocgov.com/civica/widgets/output/display.js"></SCRIPT>
+
+<style>
+</style>
+
+<!-- # include virtual="/civica/media/output/aspincludes.asp" -->
+<link rel="stylesheet" type="text/css" media="all" href="/civica/media/output/media.css"-->
+<style>
+
+
+
+
+</style>
+<script type="text/javascript" src="/inc/concat/dynamic.js"></script>
+<link type="text/css" href="/inc/concat/26/hi.css" rel="stylesheet" >
+
+<title>Orange County, California - Ebola Virus Disease</title>
+</head>
+<body id="devbody">
+
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="/navdata/15649.js" TYPE="text/javascript"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript1.2" TYPE="text/javascript">
+var iCurrFolderID = 15649;
+var iNavFolderID = 15649;
+</SCRIPT>
+<script type="text/javascript" src="/inc/concat/navmenu-pre.js"></script>
+
+
+<script TYPE="text/javascript" LANGUAGE="JavaScript1.2" SRC="/navdata/rootmenu26xml.js"></script>
+<script TYPE="text/javascript" LANGUAGE="JavaScript1.2" SRC="/navdata/15649xml.js"></script>
+<script TYPE="text/javascript" LANGUAGE="JavaScript1.2" SRC="/custom/0000/style/dynacon/cvmenu01.js"></script>
+
+
+<script LANGUAGE="javascript" TYPE="text/javascript">
+<!--
+var sDefaultSearchString = 'Search...';
+var cvPageID = 20381;
+var iNavLevel = '4';
+var ciLastButton = 9;
+var sLayoutPath = '/img/26';
+var iHM_f_SideTop = 0;
+var iLayoutStyle = '26';
+var grpxver = 'hi';
+var cvMediaFQD = 'http://media.ocgov.com';
+var xmlDoc = cm_f_XmlParseString(sXMLrootmenu);
+var xmlSideDoc = cm_f_XmlParseString(sXMLsidemenu);
+
+var sTitleID = '';
+var showPopPanel = true;
+var showResPanel = false;
+var sTopLinkLabel = 'popular';        
+var sBottomLinkLabel = 'resources'; 
+var iSocialMediaID = '139'; 
+
+var xmlDoc=loadXMLDoc("/navdata/rootmenu26.xml");
+var xmlSideDoc=loadXMLDoc("/navdata/15649.xml");
+var xslDoc=loadXMLDoc("/custom/0000/style/dynacon/cvmenu01.xsl");
+var javascript_version = 1.1;
+
+//-->
+</script>
+
+
+
+
+<script type="text/javascript" src="/inc/concat/navmenu-post.js"></script>
+<script type="text/javascript" src="/civica/js/cvloader.js"></script>
+<center><div id="oc-qa"><div id="contents"><table width="100%" height="100%" cellpadding="0" cellspacing="0"><tr><td><img src="/img/blank.gif" alt="" width="1" height="1" border="0" ></td><td width="960"><a class="linkbackhome" href="/default.asp" title="Return to OCgov Home"></a><div id="subnav-cont"><ul id="top-nav"><li><a class="abs-link link-1" href="http://ocgov.com/" target="_self" style="width:90px; height:39px;">OC Home</a></li><li><a class="abs-link link-2" href="/about/default.asp" target="_self" style="width:170px; height:39px;">About the County</a></li><li><a class="abs-link link-3" href="/gov/default.asp" target="_self" style="width:210px; height:39px;">Agencies & Departments</a></li><li><a class="abs-link link-4" href="/business/default.asp" target="_self" style="width:100px; height:39px;">Business</a></li><li><a class="abs-link link-5" href="/howdoi/default.asp" target="_self" style="width:90px; height:39px;">How Do I</a></li><li><a class="abs-link link-6" href="/residents/default.asp" target="_self" style="width:110px; height:39px;">Residents</a></li><li><a class="abs-link link-7" href="/services/default.asp" target="_self" style="width:90px; height:39px;">Services</a></li><li><a class="abs-link link-8" href="/visitors/default.asp" target="_self" style="width:100px; height:39px;">Visitors</a></li></ul></div></td><td><img src="/img/blank.gif" alt="" width="1" height="1" border="0" ></td></tr></table></div></div><div id="qa-tab"></div><table class="table-wrapper" border="0" style="width:100%; height:100%;" cellspacing="0" cellpadding="0"><tr><td class="LeftSideFade  crumb-rep"><img src="/img/blank.gif" alt="" width="1" height="1" border="0"></td><td style="width:960px; vertical-align:top; "><div id="oAllScreen" align="left"><table border="0" style="width:960px;" cellspacing="0" cellpadding="0"><tr><td class="headercrumb">
+
+<!-- Top Navigation Table -->
+<a name="top"></a><div id="header" class="headercrumb"><div id="top"><a class="lowgraphics" href="JavaScript:subGrphVer('lo')">Low Graphics Version</a><a class="linkbackhome" href="/gov/health/phs/default.asp" title="Return to Public Health Services Home"></a><div id="fontsize"><span id="fontsize0"><a id="size0" href="#" title="Click for the smallest text size.">A</a> </span><span id="fontsize1"><a id="size1" class="selected" href="#" title="Click for the default text size.">A</a> </span><span id="fontsize2"><a id="size2" href="#" title="Click for the largest text size.">A</a> </span></div><span class="sep">|</span><div id="search-radio-btns"><div class="radio-cont"><label><input id="search-agency" name="search-group" type="radio" checked="checked" /><span class="lbl-txt">Current Agency</span></label></div><div class="radio-cont"><label><input id="search-county" name="search-group" type="radio" /><span class="lbl-txt">Entire County</span></label></div></div><input id="agencyPath" type="hidden" value="ocgov.com/gov/health/phs/" /><div id="SiteSearch"><form style="display: inline; margin: 0;" autocomplete="off" name="frmSearch" id="frmSearch" action="/search/default.asp" method="get" target="_self" ><input type="text" id="q" name="q" size="15" autocomplete="off" value="Search..." maxlength="50" onfocus="clearSearch(this); SearchFocus();" ><input id="btn-search-submit" type="submit" value=""/></form></div><div id="head-seal"></div><div id="ajaxEvents"></div></div><div id="nbuts" ><div id="but" ><ul id="top-nav"><li><a id="imgPopMenu2" class="abs-link link-1" href="/gov/health/default.asp" target="_self" style="width:140px; height:39px;">HCA Home</a></li><li><a id="imgPopMenu3" class="abs-link link-2" href="/gov/health/phs/services/default.asp" target="_self" style="width:220px; height:39px;">Public Health Services</a></li><li><a id="imgPopMenu4" class="abs-link link-3" href="/gov/health/phs/healthinfo/default.asp" target="_self" style="width:226px; height:39px;">Health Information</a></li><li><a id="imgPopMenu5" class="abs-link link-4" href="/gov/health/phs/provrsc/default.asp" target="_self" style="width:211px; height:39px;">Provider Resources</a></li><li><a id="imgPopMenu6" class="abs-link link-5" href="/gov/health/about/admin/contacts.asp" target="_self" style="width:163px; height:39px;">Contact Us</a></li></ul></div></div><div id="bcrumbs"><div id="crumbs"><a class="crum" href="/gov/health/phs/default.asp" target="_self" style="display: inline-block; padding-left: 28px; height: 16px; line-height: 16px; background: url(/img/icons/home-icon.png) no-repeat;">Public Health Services</a><font class="crum-sep"></font><a class="crum" href="/gov/health/phs/about/dcepi/epi/default.asp" target="_self">...</a><font class="crum-sep"></font><a class="crum" href="/gov/health/phs/about/dcepi/epi/disease/default.asp" target="_self">Disease Information</a><font class="crum"><div class="curr-sep-crum"></div><font class="crumcurent">Ebola Virus Disease</font></font></div><div id="buttons" align="right"><a id="divPrintIcon" href="javascript:document.frmPrintable.submit();"><img src="/img/icons/print-icon.png" alt="Print friendly format" width="87" height="33" border="0"></a><span id="divEmailButton"><a onmouseover="clkEditButton(cvEmailMenu, document.all.item('divEmailButton'),document.all.item('divEmailMenu'));" onmouseout="exitButton(cvEmailMenu);" ><img src="/img/icons/email-icon.png" alt="E-mail story" width="87" height="33" border="0"></a></span><div id="divEmailMenu" onmouseover="EnterMenu(cvEmailMenu);" onmouseout="ExitMenu(cvEmailMenu);" ><div id="divEmailMenuOptions"><ul><li><a class="ContactUs" href="https://clients.comcate.com/newrequest.php?id=36">Contact Us</a></li></ul></div></div></div></div></div></td></tr><tr><td style="width:960; vertical-align:top; border: solid 0px #ffffff; height:auto;"><table id="content" class="content" border="0" cellspacing="0" cellpadding="0"><tr><td width="960"><div class="clearfix"><div class="widget single-width" ><div class="widget-alert-wrap"></div><div class="widget-alert-wrap"></div></div></div></td></tr></table><table id="content" class="content" border="0" cellspacing="0" cellpadding="0"><tr><td id="menul"></td><td id="menu" style="vertical-align:top; height:100%;"><table border="0" cellspacing="0" cellpadding="0"><tr><td align="center" valign="top" style="width:222px; height:auto;">
+<table border="0" style="width:222" cellspacing="0" cellpadding="0"><tr><td colspan="3" style="vertical-align:top"><div id="left-nav-top" style="background: url(/img/00/navmenu/navmenu.png) no-repeat bottom; margin-top: 0px;"><span class="left-nav-txt long">Disease Information</span></div></td></tr></table>
+<div style="z-index: 4999; position:relative; width:222px;margin:0px;"><div id="divPopMenu1" style="position:relative; width:222px; margin:0px 0px ;"><div id="f1" style="display:block;"><div class="cv_menu1_O"><div id="cv_menu1"><ul style="display:block;" id="ulx"><li style="display:block;position:relative;" id="l1_1" class="first"><a href="/gov/health/phs/about/dcepi/epi/disease/default.asp" target="_self">Disease Information Home</a></li><li style="display:block;position:relative;" id="l1_2"><a href="/gov/health/phs/about/dcepi/epi/disease/ebola.asp" target="_self">Ebola Virus Disease</a></li><li style="display:block;position:relative;" id="l1_3"><a href="/gov/health/phs/about/dcepi/epi/disease/goscan.asp" target="_self">GoScan</a></li><li style="display:block;position:relative;" id="l1_4"><a href="/gov/health/phs/about/dcepi/epi/disease/handwash.asp" target="_self">Handwashing</a></li><li style="display:block;position:relative;" id="l1_5"><a href="/gov/health/phs/about/dcepi/epi/disease/measles.asp" target="_self">Measles</a></li><li style="display:block;position:relative;" id="l1_6"><a href="/gov/health/phs/about/dcepi/epi/physprov/report.asp" target="_self">Physicians - Disease Information &amp; Reporting</a></li><li style="display:block;position:relative;" id="l1_7"><a href="/gov/health/phs/about/dcepi/epi/disease/post.asp" target="_self">Postexposure Prophylaxis</a></li><li style="display:block;position:relative;" id="l1_8"><a href="/gov/health/phs/about/dcepi/epi/disease/insects_rodents.asp" target="_self">Preventing Diseases from Insects/Rodents</a></li><li style="display:block;position:relative;" id="l1_9"><a href="/gov/health/phs/about/dcepi/epi/physprov/other.asp" target="_self">Reporting Other Than Communicable Diseases</a></li><li style="display:block;position:relative;" id="l1_10"><a href="/gov/health/phs/about/dcepi/epi/disease/bd.asp" target="_self">Statistics (Birth &amp; Death)</a></li><li style="display:block;position:relative;" id="l1_11"><a href="/gov/health/phs/about/dcepi/epi/disease/travel.asp" target="_self">Traveler's Health</a></li><li style="display:block;position:relative;" id="l1_12"><a href="/gov/health/phs/about/dcepi/epi/disease/vaccines.asp" target="_self">Vaccines</a></li></ul></div></div></div></div></div><table border="0" style="width:222" cellspacing="0" cellpadding="0"><tr><td style="width:222; height:10px; vertical-align:top"><img src="/img/blank.gif" alt="" width="222" height="10" border="0"></td></tr></table></div><div id="popular-container-secondary"><div id="left-nav-top" style="background: url(/img/00/navmenu/navmenu.png) no-repeat left bottom; margin-top: 0px;"><span class="left-nav-txt">popular</span><div id="popular" class="toggler"><a id="popular" class="openit"></a></div></div><div id="popular-panel" class="panel "><div class="list-left"><div class="list-cont"><ul class="pop-list"><li class="left"><a href="http://ocbeachinfo.com" target="_self">Beaches</a></li><li class="right"><a href="/gov/health/phs/about/dcepi/clinics.asp" target="_self">Clinics and Medical Services</a></li><li class="left"><a href="/gov/health/phs/about/dcepi/default.asp" target="_self">Disease Control and Epidemiology</a></li><li class="right"><a href="/gov/health/eh/default.asp" target="_self">Environmental Health Home</a></li><li class="left"><a href="/gov/health/phs/about/family/default.asp" target="_self">Family Health</a></li><li class="right"><a href="/gov/health/eh/food/general/faq/food.asp" target="_self">Food Protection FAQ</a></li><li class="left"><a href="/gov/health/phs/about/promo/default.asp" target="_self">Health Promotion</a></li><li class="right"><a href="/gov/health/phs/about/dcepi/hiv/default.asp" target="_self">HIV Planning and Coordination</a></li><li class="left"><a href="http://ochealthinfo.com/phs/about/dcepi/epi/disease/measles" target="_self">Measles</a></li><li class="right"><a href="/gov/health/phs/about/phn/default.asp" target="_self">Nursing</a></li><li class="left"><a href="/gov/health/eh/water/pool.asp" target="_self">Pool Safety</a></li></ul></div></div></div></div></div></div><div id="left-nav-top" class="span-310"><span class="left-nav-txt">Translate</span></div><div id="g-trans-cont"><div id="google-translatebox"></div></div></td></tr><tr><td align="bottom" style="width:220px;"><div id="mmButtons"></div> </td></tr><tr><td align="bottom" style="width:220px;"><div id="left-nav-top" class="span-310"><div class="span-head"><h2>My OC</h2><a href="https://media.ocgov.com/myoc/" target="_blank" class="view-more">Register &raquo;</a><span class="pipe">|</span><a href="https://media.ocgov.com/myoc/" target="_blank" class="view-more">Login</a></div></div></td></tr></table></td><td id="menur"></td><td id="col2l"> </td><td id="col2"> <div id="general" class="pgtitle 125"><table width="100%" height="100%" cellspacing="0" cellpadding="0"><tr><td valign="middle"><h1 class="title ">Ebola Virus Disease</h1></td></tr></table></div><div class="edtdiv html-width-default"><p style="background: white; line-height: normal">The first case of Ebola Virus Disease (EVD) diagnosed in the United States was confirmed on September 30, 2014 in Dallas, Texas. The risk of an Ebola outbreak in the United States remains low. Orange County Health Care Agency is working with community partners, including healthcare facilities, to assure that our community is prepared to safely care for and respond to a suspect case. <strong>Health care providers should remember to obtain a travel history for any patients with febrile illness, and be familiar with Ebola's clinical presentation and infection control requirements. <a href="http://ochealthinfo.com/civicax/filebank/blobdload.aspx?BlobID=39374" target="_blank">See Provider Notice for more information. <br /></a></strong></p><h2 style="background: white; line-height: normal">Person Under Investigation (PUI)<a href="/civicax/filebank/blobdload.aspx?BlobID=39276" target="_blank"><img alt="" style="height: 206px; border-top-color: #000000; border-bottom-color: #000000; border-right-color: #000000; width: 150px; border-left-color: #000000" border="1" align="right" src="/images/health/phs/ad_ebola_infographicNEW.png" /></a></h2><p style="background: white; line-height: normal">A person who has both consistent signs or symptoms and risk factors as follows: </p><ul>    <li>Elevated body temperature or subjective fever or symptoms, including severe headache, fatigue, muscle pain, vomiting, diarrhea, abdominal pain, or unexplained hemorrhage;<strong> AND</strong> </li>    <li>Travel to or residence in a country with widespread Ebola transmission or contact with a person with Ebola within the 21 days before the onset of symptoms. </li></ul><h2 style="background: white; line-height: normal">How does Ebola spread?</h2><p style="background: white; line-height: normal">Ebola spreads from person-to-person by direct contact with a patient’s body fluids, like saliva, blood, vomit, urine, feces, and sweat. The virus gets into the body through broken skin or mucous membranes (spongy skin like the kind you find in your nose or mouth). Ebola can also be spread by infected objects, like needles, that have been tainted with body fluids. Ebola can also spread after death, when preparing the patient’s body for burial. Ebola can’t spread through the air, in food, or water. It takes 8–10 days for most people to get symptoms, but it can range from 2–21 days. Patients can spread the virus while they have a fever or other symptoms. People who don’t have symptoms can’t spread Ebola.</p><h2 style="background: white; line-height: normal">What are the symptoms of Ebola?<a href="http://www.cdc.gov/vhf/ebola/pdf/west-africa-outbreak-infographic.pdf" target="_blank"><img alt="" style="height: 652px; border-top-color: #000000; border-bottom-color: #000000; border-right-color: #000000; width: 150px; border-left-color: #000000" border="1" align="right" src="/images/health/phs/epi/ad_west_africa_outbreak_infographic2.png" /></a></h2><p style="background: white; line-height: normal">Ebola can cause these signs of disease:</p><ul>    <li>Headache </li>    <li>Vomiting </li>    <li>Fever </li>    <li>Stomach pain </li>    <li>Weakness </li>    <li>Lack of appetite </li>    <li>Diarrhea </li>    <li>Abnormal bleeding </li></ul><p style="background: white; line-height: normal"></p><h2>Local Ebola Information</h2><ul>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=39319" target="_blank">Frequently Asked Questions about Ebola</a>       </li>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=39282" target="_blank">How to discuss Ebola with your children</a> </li>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=39677" target="_blank">HCA Ebola Preparedness Activities</a> </li>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=39646" target="_blank"><strong>Press Release:</strong> Public Update on Ebola Preparedness October 22, 2014</a> </li>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=39896" target="_blank">Board Information Letter: Ebola Preparedness October 30, 2014</a> <br />    - <a href="/civicax/filebank/blobdload.aspx?BlobID=39897" target="_blank">Attachment 1 Quarantine Order</a><br />    - <a href="/civicax/filebank/blobdload.aspx?BlobID=39898" target="_blank">Attachment 2 CDPH Order </a></li>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=39805" target="_blank">Board Information Letter: Ebola Preparedness October 28, 2014</a> </li>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=39699" target="_blank">Board Information Letter: Ebola Preparedness October 24, 2014</a> </li>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=39693" target="_blank">Board Information Letter: Ebola Preparedness October 23, 2014</a> </li>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=39619" target="_blank">Board Information Letter: Ebola Preparedness October 20, 2014</a> </li>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=39618" target="_blank">Board Information Letter: Ebola Preparedness October 8, 2014</a></li></ul><h2>U.S. &amp; World Ebola Updates</h2><ul>    <li><a href="http://www.cdc.gov/vhf/ebola/outbreaks/2014-west-africa/whats-new.html" target="_blank">Centers for Disease Control and Prevention</a>  </li>    <li><a href="http://www.afro.who.int/en/clusters-a-programmes/dpc/epidemic-a-pandemic-alert-and-response/outbreak-news.html" target="_blank">World Health Organization</a></li></ul><h2 class="default">Health Providers </h2><ul>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=40457" target="_blank">CDPH PPE Guidance for Management of Ebola Patients in an Inpatient Setting – November 25, 2014</a> </li>    <li><a href="/civicax/filebank/blobdload.aspx?BlobID=40137" target="_blank">Orange County Ebola Provider Notice - November 7, 2014</a> </li>    <li><a href="http://ochealthinfo.com/civicax/filebank/blobdload.aspx?BlobID=39374" target="_blank">Orange County Ebola Provider Notice - October 9, 2014 </a></li>    <li><a href="http://ochealthinfo.com/civicax/filebank/blobdload.aspx?BlobID=39176" target="_blank">Orange County Ebola Provider Notice - August 15, 2014</a> </li>    <li><a href="http://healthdisasteroc.org/ems" target="_blank">Emergency Medical Services Guidance</a> </li>    <li><a href="http://www.cdc.gov/vhf/ebola/hcp/environmental-infection-control-in-hospitals.html" target="_blank">Interim Guidance for Environmental Infection Control in Hospitals for Ebola Virus</a>  (UPDATED) </li>    <li><a href="http://ochealthinfo.com/civicax/filebank/blobdload.aspx?BlobID=40008" target="_blank">Identify, Isolate, Inform: Ambulatory Care Evaluation of Patients with Possible Ebola Virus Disease (Ebola)</a></li></ul></div><link href="/custom/0000/style/azindex/services.css" rel="stylesheet" type="text/css">
+
+
+<link href="/custom/0000/style/azindex/azindex.css" rel="stylesheet" type="text/css">
+</td><td id="col2r"> </td></tr></table></td></tr></td></tr></table></div></td><td class="RightSideFade  crumb-rep"><img src="/img/blank.gif" alt="" width="1" height="1" border="0"><form style="display: inline; margin: 0;" name="frmPrintable" id="frmPrintable" action="/gov/health/phs/about/dcepi/epi/disease/ebola.asp" method="post" target="_blank"><input type="hidden" name="prnt" value="y"></form><form style="display: inline; margin: 0;" name="frmGrpxVer" id="frmGrpxVer" action="/gov/health/phs/about/dcepi/epi/disease/ebola.asp" method="post" ><input type="hidden" name="grpxver" value="lo"></form><form style="display: inline; margin: 0;" name="wfpost" method=post target="_new" action=""></form><script>
+jQuery(document).ready(function()
+{
+	$('.jumpmenu').change( function() { if ($(this).val() != '') { window.open($(this).val(),'_newtab'); } } );
+	TextSizeToggle();
+	$.get('/civica/DynaCon/sb/inc/refreshmenus.asp?t=-3155790539', function(data){if(data!=''){alert(data);}});
+	$('#google-translatebox').translatebox({translateID: 300, langs: 'es,ko,vi'});
+	mmGenericButtonsTarget( 125, 0 , "", "" , "#mmButtons");
+});
+</script>
+<script type="text/javascript" src="/inc/js/jquery/plugins/populartoggle.js"></script></td></tr></table><table id="foot-span" width="100%" cellpadding="0" cellspacing="0"><tr><td><img src="/img/blank.gif" alt="" width="1" height="1" border="0" ></td><td id="footer" class="footer" ><div id="footer-content"><div id="foot-wrap"><div class="foot-col"><a href="/default.asp" id="foot-seal"></a><div id="PageContacts"><table border="0" cellspacing="0" cellpadding="0"><tr><td><font class="title">County Directory Assistance</font><br>855.886.5400<br></td></tr></table></div></div><div class="foot-col no-margin"><h2>Navigation</h2><ul><li><a class="footer" href="http://ocgov.com/" target="_self">OC Home</a></li><li><a class="footer" href="/about/default.asp" target="_self">About the County</a></li><li><a class="footer" href="/gov/default.asp" target="_self">Agencies & Departments</a></li><li><a class="footer" href="/business/default.asp" target="_self">Business</a></li><li><a class="footer" href="/howdoi/default.asp" target="_self">How Do I</a></li></ul></div><div class="foot-col no-margin"><h2>Quick Links</h2><ul><li><a class="azList10" href="/contact/use.asp" target="_self">Acceptable Use</a></li><li><a class="azList10" href="/contact/accessibility.asp" target="_self">Accessibility</a></li><li><a class="azList10" href="/contact/default.asp" target="_self">Contact the County</a></li><li><a class="azList10" href="/contact/disclaimer.asp" target="_self">Disclaimer</a></li><li><a class="azList10" href="/contact/sitemap.asp" target="_self">Sitemap</a></li></ul></div><div class="foot-col foot-col-10 no-margin"><h2>Resources</h2><ul><li><a class="azList10" href="/about/infooc/links/oc/coc.asp" target="_self">Chambers of Commerce</a></li><li><a class="azList10" href="http://www.usa.gov/" target="_blank">Federal Government</a></li><li><a class="azList10" href="/about/infooc/links/oc/general.asp" target="_self">General Information</a></li><li><a class="azList10" href="/about/infooc/links/oc/occities.asp" target="_self">Orange County Cities</a></li><li><a class="azList10" href="/about/infooc/links/oc/agencies.asp" target="_self">Related Government Agencies</a></li><li><a class="azList10" href="http://www.ocde.us/SchoolDistricts/Pages/default.aspx" target="_blank">School Districts</a></li><li><a class="azList10" href="http://www.ca.gov" target="_blank">State Government</a></li><li><a class="azList10" href="/visitors/bureau.asp" target="_self">Visitor Bureaus</a></li></ul></div><div class="foot-col no-margin"><h2>Connect With OC</h2><div id="social"><ul></ul></div></div><div id="mission-statement"><p>Making Orange County a safe, healthy, and fulfilling place to live, work, and play, today and for generations to come, by providing outstanding, cost-effective regional public services.</p></div></div></div></td><td><img src="/img/blank.gif" alt="" width="1" height="1" border="0" ></td></tr></table></center>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5034724-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1434027-1']);
+    _gaq.push(['_trackPageview']);
+  (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<div id="cvOvrlyShim" style="display:none;position:absolute;"></div><div id="cvOvrlyWrapper" style="display:none;position:absolute;"><div id="cvOvrlyContainer"><table id="cvOvrlyTable" cellpadding="0" cellspacing ="0" border="0"><tr><td class="tl"></td><td class="t"></td><td class="tr"><a href="JavaScript:hideoverlay();" ><img src="/img/blank.gif" alt="" width="65" height="61" border="0"/></a></td></tr><tr><td class="l"></td><td class="c"><iframe id="cvOvrlyIFrame" width="500" height="400" frameborder="0" src="" scrolling="no" ></iframe></td><td class="r"></td></tr><tr><td class="bl"></td><td class="b"></td><td class="br"></td></tr></table></div></div>
+<div id="external-link-dialog" title="Disclaimer" style="display: none;">
+    <h2>You Are Now Leaving the County of Orange Official Portal</h2>
+    <div class="dialog-p-wrap"><p>The policies that apply to the County of Orange Official Web Portal may not be the same as the terms of use for other web sites. The County of Orange cannot attest to the accuracy of the information provided by the linked websites. Any link to an external website is not intended as an endorsement of that external website, any product or service offered or referenced to or any views that might be expressed or referenced therein.</p></div>
+</div>
+
+<!--ocweb4-->
+</body>
+</html>
