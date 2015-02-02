@@ -1,12 +1,13 @@
 #!/bin/sh
+mkdir -p log
 if [ $# -eq 2 ]
 then
     CONFIG_PATH=$1
     CRAWLER_NAME=$2
 else
-    #default parameters
-    CONFIG_PATH='conf/conf-default'
-    CRAWLER_NAME="default-achecrawler"
+    #sample parameters
+    CONFIG_PATH='config/sample_config'
+    CRAWLER_NAME="sample-achecrawler"
 fi
 
-java -Xmx1g -cp class focusedCrawler.crawler.CrawlerManager $CONFIG_PATH $CRAWLER_NAME > log/crawler.log 2>&1 &
+./build/install/ache/bin/ache startCrawlManager $CONFIG_PATH > log/crawler.log 2>&1 &

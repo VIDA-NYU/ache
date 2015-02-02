@@ -1,16 +1,17 @@
 #!/bin/sh
+mkdir -p log
 if [ $# -eq 4 ]
 then
     CONFIG_PATH=$1
-    SEED_PATH=$2
+    SEED_FILE=$2
     DATA_PATH=$3
     CRAWLER_NAME=$4
 else
-    #default parameters
-    CONFIG_PATH='conf/conf_default'
-    SEED_PATH='conf/seeds/ht.seeds'
+    #sample parameters
+    CONFIG_PATH='config/sample_config'
+    SEED_FILE='config/sample.seeds'
     DATA_PATH='./data'
-    CRAWLER_NAME='defaut-achecrawler'
+    CRAWLER_NAME='sample-achecrawler'
 fi
-#java  -Xmx32g -cp "libs/guava-18.0.jar:libs/je-3.3.75.jar:libs/lucene2.4.0.jar:libs/xercesImpl-2.5.0.jar:libs/nekohtml-0.9.5.jar:libs/weka-3.6.2.jar:class" focusedCrawler.link.LinkStorage $CONFIG_PATH $SEED_PATH $DATA_PATH $CRAWLER_NAME > log/link_storage.log 2>&1 &
-java  -Xmx32g -cp "libs/guava-18.0.jar:libs/je-3.3.75.jar:libs/lucene2.4.0.jar:libs/xercesImpl-2.5.0.jar:libs/nekohtml-0.9.5.jar:libs/weka-stable-3.6.10.jar:class" focusedCrawler.link.LinkStorage $CONFIG_PATH $SEED_PATH $DATA_PATH $CRAWLER_NAME > log/link_storage.log 2>&1 &
+
+./build/install/ache/bin/ache startLinkStorage $DATA_PATH $CONFIG_PATH $SEED_FILE > log/link_storage.log 2>&1 &

@@ -22,14 +22,16 @@ public class Main {
         if (args.length > 0) {
             if ("startCrawl".equals(args[0]) && args.length == 6) {
                 startCrawl(args[1], args[2], args[3], args[4], args[5]);
+            } else if ("addSeeds".equals(args[0]) && args.length == 4) {
+                addSeeds(args[1], args[2], args[3]);
             } else if ("buildModel".equals(args[0]) && args.length == 4) {
                 buildModel(args[1], args[2], args[3]);
             } else if ("startLinkStorage".equals(args[0]) && args.length == 4) {
-                buildModel(args[1], args[2], args[3]);
-            } else if ("startTargetStorage".equals(args[0]) && args.length == 4) {
-                buildModel(args[1], args[2], args[3]);
-            } else if ("startCrawlManager".equals(args[0]) && args.length == 4) {
-                buildModel(args[1], args[2], args[3]);
+                startLinkStorage(args[1], args[2], args[3]);
+            } else if ("startTargetStorage".equals(args[0]) && args.length == 5) {
+                startTargetStorage(args[1], args[2], args[3], args[4]);
+            } else if ("startCrawlManager".equals(args[0]) && args.length == 2) {
+                startCrawlManager(args[1]);
             } else {
                 printUsage();
                 System.exit(1);
@@ -53,6 +55,7 @@ public class Main {
     private static void addSeeds(final String dataOutputPath,
                                  final String configPath,
                                  final String seedPath){
+        createOutputPathStructure(dataOutputPath);
         AddSeeds.main(new String[]{configPath, seedPath, dataOutputPath});
     }
 
@@ -167,6 +170,7 @@ public class Main {
         System.out.println("ache addSeeds <data output path> <config path> <seed path>");
         System.out.println("ache startLinkStorage <data output path> <config path> <seed path>");
         System.out.println("ache startTargetStorage <data output path> <config path> <model path> <lang detect profile path>");
+        System.out.println("ache startCrawlManager <config path>");
         System.out.println();
         System.out.println();
         System.out.println("Examples:");
