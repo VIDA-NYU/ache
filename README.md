@@ -34,11 +34,15 @@ After you generated a model, you need to prepare the seed file, that each line i
 
         $./script/start_crawler.sh <crawler name> <configuration path> <seed file> <model path> <data output path>
 
-    `<crawler name>` is a string to name the crawler.
-    `<configuration path>` is path to the config directory.
-    `<seed path>` is the path to the seed list file.
-    `<model path>` is the path to the model directory (containing pageclassifier.model and pageclassifier.features).
-    `<data output path>` is path to data output directory.
+`<crawler name>` is a string to name the crawler.
+
+`<configuration path>` is path to the config directory.
+
+`<seed path>` is the path to the seed list file.
+
+`<model path>` is the path to the model directory (containing pageclassifier.model and pageclassifier.features).
+
+`<data output path>` is path to data output directory.
 
 Stop ACHE
 --------------------------------------------
