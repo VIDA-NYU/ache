@@ -17,15 +17,15 @@ If you want to compile ACHE from source code, use compile_crawler.sh:
         $./script/compile_crawler.sh
   
   
-Build a model for AChttps://github.com/ViDA-NYU/ache/edit/master/README.md#HE's page classifier
+Build a model for ACHE's page classifier
 --------------------------------------------
 To focus on a certain topic ACHE needs to have accddess to a model of its content. This model is then 
 used by a classifier to decide, given a new crawled page, whether it is on-topic or not. Assume that you store positive and negative examples in two directories postive and negative respectively. Also, these directories are placed in training_data directory. Here is how you build a model from these examples:
     
         $./script/build_model.sh <training data path> <output path>
 
-- `<training data path>` is path to the directory containing positive and negative examples.
-- `<output path>` is the new directory that you want to save the generated model that consists of two files: `pageclassifier.model` and `pageclassifier.features`. 
+    `<training data path>` is path to the directory containing positive and negative examples.
+    `<output path>` is the new directory that you want to save the generated model that consists of two files: `pageclassifier.model` and `pageclassifier.features`. 
   
 
 Start ACHE
@@ -34,11 +34,11 @@ After you generated a model, you need to prepare the seed file, that each line i
 
         $./script/start_crawler.sh <crawler name> <configuration path> <seed file> <model path> <data output path>
 
-- `<crawler name>` is a string to name the crawler.
-- `<configuration path>` is path to the config directory.
-- `<seed path>` is the path to the seed list file.
-- `<model path>` is the path to the model directory (containing pageclassifier.model and pageclassifier.features).
-- `<data output path>` is path to data output directory.
+    `<crawler name>` is a string to name the crawler.
+    `<configuration path>` is path to the config directory.
+    `<seed path>` is the path to the seed list file.
+    `<model path>` is the path to the model directory (containing pageclassifier.model and pageclassifier.features).
+    `<data output path>` is path to data output directory.
 
 Stop ACHE
 --------------------------------------------
