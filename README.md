@@ -24,8 +24,9 @@ used by a classifier to decide, given a new crawled page, whether it is on-topic
     
         $./script/build_model.sh <training data path> <output path>
 
-    `<training data path>` is path to the directory containing positive and negative examples.
-    `<output path>` is the new directory that you want to save the generated model that consists of two files: `pageclassifier.model` and `pageclassifier.features`. 
+`<training data path>` is path to the directory containing positive and negative examples.
+
+`<output path>` is the new directory that you want to save the generated model that consists of two files: `pageclassifier.model` and `pageclassifier.features`. 
   
 
 Start ACHE
@@ -54,6 +55,6 @@ If you want to stop ACHE's execution, run:
 Monitor ACHE's execution
 ---------------------------
 To analyse ACHE's execution, you can either check its logs or the data that is being crawled. 
-The log files are **log/crawler.log**, **log/link_storage.log**, and **log/target_storage.log**. 
-Additionally, crawler's status is also updated in runtime at **data/data_monitor**. This information
+The log files are `log/crawler.log`, `log/link_storage.log`, and `log/target_storage.log`. 
+Additionally, crawler's status is also updated in runtime at `data/data_monitor`. This information
 could be used to visualize the crawler's status while it is running.
