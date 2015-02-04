@@ -255,8 +255,15 @@ public class TargetStorage  extends StorageDefault{
                 targetClassifier = new TargetClassifierImpl(classifier, insts, attributes, stoplist);
             }
             String targetDirectory = dataPath + "/" + config.getParam("TARGET_STORAGE_DIRECTORY");
-            //TargetRepository targetRepository = new TargetFileRepository(targetDirectory);
-            TargetRepository targetRepository = new TargetCBORRepository(targetDirectory);
+			String data_format = config.getParam("DATA_FORMAT");
+			TargetRepository targetRepository; 
+			if (data_format.equals("CBOR")) {
+            	targetRepository = new TargetCBORRepository(targetDirectory);
+			}
+			else {
+			//Default data format is file
+            	targetRepository = new TargetFileRepository(targetDirectory);
+			}
             ParameterFile linkStorageConfig = new ParameterFile(linkConfFile);
             Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
             int crawledFreq = config.getParamInt("CRAWLED_REFRESH_FREQUENCY");
