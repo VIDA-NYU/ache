@@ -49,7 +49,7 @@ Stop ACHE
 --------------------------------------------
 If you want to stop ACHE's execution, run:
 
-        $./script/stop_crawler.sh crawler_name
+        $./script/stop_crawler.sh
         
 
 Monitor ACHE's execution
