@@ -4,7 +4,7 @@ import com.cybozu.labs.langdetect.Detector;
 import com.cybozu.labs.langdetect.DetectorFactory;
 import com.cybozu.labs.langdetect.Language;
 import focusedCrawler.util.Page;
-//import de.l3s.boilerpipe.extractors.ArticleExtractor;
+import de.l3s.boilerpipe.extractors.ArticleExtractor;
 import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
