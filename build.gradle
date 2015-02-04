@@ -4,8 +4,8 @@ apply plugin: 'application'
 
 sourceCompatibility = 1.6
 targetCompatibility = 1.6
-
-group = 'io.continuum.ache'
+compileJava.options.encoding = "ISO-8859-1"
+//group = 'io.continuum.ache'
 version = '0.1.0'
 
 mainClassName = 'focusedCrawler.Main'
@@ -23,7 +23,8 @@ dependencies {
     compile 'org.apache.lucene:lucene-core:3.5.0'
     compile 'commons-codec:commons-codec:1.9'
     compile 'com.googlecode.juniversalchardet:juniversalchardet:1.0.3'
-
+    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.4.0'
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.5.0' 
     // TODO fill these in from Maven Central instead of that local libs dir
     // TODO recommend replacing these with:
     // compile 'com.cybozu.labs:langdetect:1.1-20120112'
