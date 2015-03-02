@@ -4,7 +4,7 @@ do
                                                   #also, we should change the client so that there is no need to rerun it
   if [ $x != 7 ]
   then
-    sh script/run_client.sh
+    sh script/run_client.sh config/sample_config
     echo "rerun"
   fi
   sleep 5m
