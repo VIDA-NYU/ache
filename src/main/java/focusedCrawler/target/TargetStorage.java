@@ -39,6 +39,9 @@ public class TargetStorage  extends StorageDefault{
     private String fileLocation;
     
     private TargetRepository targetRepository;
+    
+    //negativeRepository is resposible for saving negative pages
+    private TargetRepository negativeRepository;
 
     private int totalOfPages;
     
@@ -51,6 +54,8 @@ public class TargetStorage  extends StorageDefault{
     private Storage linkStorage;
       
     private StringBuffer urls = new StringBuffer();
+
+    private boolean isSaveNegPages;
 
 //Data structure for dashboard ////////////
     private int crawledPageRefreshFreq;
@@ -74,10 +79,11 @@ public class TargetStorage  extends StorageDefault{
     public TargetStorage(TargetClassifier targetClassifier, String fileLocation, TargetRepository targetRepository, 
                            Storage linkStorage, int limitOfPages, boolean hardFocus, boolean getBacklinks, 
                            int crawledFreq, int relevantFreq,  int harvestinfoFreq, int syncFreq, boolean isRefreshSync,
-                       	   float relevanceThreshold, TargetMonitor mnt) {
+                       	   float relevanceThreshold, TargetMonitor mnt, boolean isSaveNegPages, TargetRepository negativeRepository) {
         this.targetClassifier = targetClassifier;
         this.fileLocation = fileLocation;
         this.targetRepository = targetRepository;
+        this.negativeRepository = negativeRepository;
         this.linkStorage = linkStorage;
         this.relevanceThreshold = relevanceThreshold;
         this.limitOfPages = limitOfPages;
@@ -97,12 +103,13 @@ public class TargetStorage  extends StorageDefault{
         this.langDetect = new LangDetection();
         this.langDetect.init("libs/profiles/");//This is hard coded, should be fixed
         this.monitor = mnt;
+        this.isSaveNegPages = isSaveNegPages;
     }
 
     public TargetStorage(String fileLocation, TargetRepository targetRepository, Storage linkStorage, 
-            int limitOfPages, boolean hardFocus, boolean getBacklinks, TargetMonitor mnt) {
+            int limitOfPages, boolean hardFocus, boolean getBacklinks, TargetMonitor mnt, boolean isSaveNegPages, TargetRepository negativeRepository) {
         this(null, fileLocation, targetRepository, linkStorage, limitOfPages, hardFocus, getBacklinks, 
-          100, 100, 100, 100, true, 0.9f, mnt);
+          100, 100, 100, 100, true, 0.9f, mnt, isSaveNegPages, negativeRepository);
     }
 
     /**
@@ -136,6 +143,10 @@ public class TargetStorage  extends StorageDefault{
                   relevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
                   totalOnTopicPages++;
               } else{
+                  if (isSaveNegPages){
+                      page.setRelevance(prob);
+                      negativeRepository.insert(page);
+                  }
                   if(!hardFocus){
                       if(getBacklinks){
                           if(page.isHub()){
@@ -255,14 +266,18 @@ public class TargetStorage  extends StorageDefault{
                 targetClassifier = new TargetClassifierImpl(classifier, insts, attributes, stoplist);
             }
             String targetDirectory = dataPath + "/" + config.getParam("TARGET_STORAGE_DIRECTORY");
+            String negativeDirectory = dataPath + "/" + config.getParam("NEGATIVE_STORAGE_DIRECTORY");
 			String data_format = config.getParam("DATA_FORMAT");
 			TargetRepository targetRepository; 
+            TargetRepository negativeRepository;
 			if (data_format.equals("CBOR")) {
             	targetRepository = new TargetCBORRepository(targetDirectory);
+            	negativeRepository = new TargetCBORRepository(negativeDirectory);
 			}
 			else {
-			//Default data format is file
+    			//Default data format is file
             	targetRepository = new TargetFileRepository(targetDirectory);
+            	negativeRepository = new TargetFileRepository(negativeDirectory);
 			}
             ParameterFile linkStorageConfig = new ParameterFile(linkConfFile);
             Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
@@ -278,7 +293,7 @@ public class TargetStorage  extends StorageDefault{
                                                   dataPath + "/data_monitor/nonrelevantpages.csv");
             Storage targetStorage = new TargetStorage(targetClassifier,targetDirectory,targetRepository,
                     linkStorage,config.getParamInt("VISITED_PAGE_LIMIT"),config.getParamBoolean("HARD_FOCUS"),
-                    config.getParamBoolean("BIPARTITE"), crawledFreq, relevantFreq, harvestinfoFreq, refreshFreq, isRefreshSync, relevanceThreshold, mnt);
+                    config.getParamBoolean("BIPARTITE"), crawledFreq, relevantFreq, harvestinfoFreq, refreshFreq, isRefreshSync, relevanceThreshold, mnt, config.getParamBoolean("SAVE_NEGATIVE_PAGES"), negativeRepository);
 
             StorageBinder binder = new StorageBinder(config);
             binder.bind(targetStorage);

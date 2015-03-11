@@ -20,9 +20,7 @@ public class Main {
     public static void main(String... args) {
 
         if (args.length > 0) {
-            if ("startCrawl".equals(args[0]) && args.length == 6) {
-                startCrawl(args[1], args[2], args[3], args[4], args[5]);
-            } else if ("addSeeds".equals(args[0]) && args.length == 4) {
+            if ("addSeeds".equals(args[0]) && args.length == 4) {
                 addSeeds(args[1], args[2], args[3]);
             } else if ("buildModel".equals(args[0]) && args.length == 4) {
                 buildModel(args[1], args[2], args[3]);
@@ -96,6 +94,7 @@ public class Main {
         //Not used yet
     }
 
+    //THIS FUNCTION IS NOT USED NOW
     private static void startCrawl(final String dataOutputPath,
                                    final String configPath,
                                    final String seedPath,
@@ -145,6 +144,7 @@ public class Main {
         dataOutput.mkdirs();
         new File(dataOutput, "data_monitor").mkdirs();
         new File(dataOutput, "data_target").mkdirs();
+        new File(dataOutput, "data_negative").mkdirs();
         new File(dataOutput, "data_url").mkdirs();
         new File(dataOutput, "data_url/dir").mkdirs();
         new File(dataOutput, "data_host/").mkdirs();
@@ -164,9 +164,7 @@ public class Main {
         System.out.println();
         // TODO package the profiles with gradle build or mash them into the resources
         // lang detect profile can be downloaded from https://code.google.com/p/language-detection/wiki/Downloads
-        System.out.println("ache startCrawl <data output path> <config path> <seed path> <model path> <lang detect profile path>");
         System.out.println("ache buildModel <target storage config path> <training data path> <output path>");
-        System.out.println();
         System.out.println("ache addSeeds <data output path> <config path> <seed path>");
         System.out.println("ache startLinkStorage <data output path> <config path> <seed path>");
         System.out.println("ache startTargetStorage <data output path> <config path> <model path> <lang detect profile path>");
@@ -174,8 +172,12 @@ public class Main {
         System.out.println();
         System.out.println();
         System.out.println("Examples:");
-        System.out.println("ache    startCrawl sample_crawl config/sample_config config/sample.seeds config/sample_model/ libs/profiles/");
-        System.out.println("ache    buildModel config/sample_config/target_storage.cfg training_data config/output_model/");
+        System.out.println("ache buildModel config/sample_config/target_storage.cfg training_data output_model");
+        System.out.println("ache addSeeds data config/sample_config config/sample.seeds");
+        System.out.println("ache startLinkStorage data config/sample_config config/sample.seeds");
+        System.out.println("ache startTargetStorage data config/sample_config config/sample_config libs/profiles");
+        System.out.println("ache startCrawlManager config/sample_config");
+
     }
 
 }
