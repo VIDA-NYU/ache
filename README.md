@@ -9,6 +9,8 @@ You can download `ache` from Binstar [2] with Conda [3] by running:
 ```bash
   conda install -c memex ache
 ```
+NOTE: we haven't released the current developing version of the crawler, so 'ache' from Binstart is outdated.
+If you want to try the developing version, please compile the code using below instruction then start crawler using 'ache' in build/install/ache/bin
 
 Build ACHE
 --------------------------------------------
@@ -33,9 +35,8 @@ Start ACHE
 --------------------------------------------
 After you generated a model, you need to prepare the seed file, that each line is an url. To start the crawler, run:
 
-        $./script/start_crawler.sh <crawler name> <configuration path> <seed file> <model path> <data output path>
+        $./script/start_crawler.sh <configuration path> <seed file> <model path> <data output path>
 
-`<crawler name>` is a string to name the crawler.
 
 `<configuration path>` is path to the config directory.
 
