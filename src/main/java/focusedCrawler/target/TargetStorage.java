@@ -5,27 +5,26 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.URLEncoder;
-import java.util.List; 
-import java.util.ArrayList; 
-import java.lang.String;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
-
+import focusedCrawler.util.LangDetection;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.ParameterFile;
+import focusedCrawler.util.dashboard.TargetMonitor;
 import focusedCrawler.util.distribution.CommunicationException;
 import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageBinderException;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.storage.StorageFactoryException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
 import focusedCrawler.util.storage.distribution.StorageCreator;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
-import focusedCrawler.util.LangDetection;
-import focusedCrawler.util.dashboard.TargetMonitor;
 
 /**
  * This class runs a socket server responsible to store pages coming from the crawler client.
@@ -33,6 +32,8 @@ import focusedCrawler.util.dashboard.TargetMonitor;
  *
  */
 public class TargetStorage  extends StorageDefault{
+	
+	public static final Logger logger = LoggerFactory.getLogger(TargetStorage.class);
 
     private TargetClassifier targetClassifier;
 
@@ -117,9 +118,10 @@ public class TargetStorage  extends StorageDefault{
      */
     public synchronized Object insert(Object obj) throws StorageException {
         Page page = (Page)obj;
+        
 		//Only accept English
     	if (this.langDetect.detect_page(page) == false){
-        	System.out.println(">>>> non-English page: " + page.getIdentifier());
+    		logger.info("Ignoring non-English page: " + page.getIdentifier());
       		return null;
     	}
 
@@ -132,7 +134,10 @@ public class TargetStorage  extends StorageDefault{
           if(targetClassifier != null){
               double prob = targetClassifier.distributionForInstance(page)[0];
               page.setRelevance(prob);
-              System.out.println(">>>PROCESSING: " + page.getIdentifier() + " PROB:" + prob);
+              
+              logger.info("\n> PROCESSING: " + page.getIdentifier() +
+                          "\n> PROB:" + prob);
+              
               if(prob > this.relevanceThreshold){
                   targetRepository.insert(page);
                   if(getBacklinks){
@@ -162,7 +167,7 @@ public class TargetStorage  extends StorageDefault{
           } else{
                   page.setRelevance(1);
                   page.setAuth(true);
-                  System.out.println(">>>PROCESSING: " + page.getIdentifier());
+                  logger.info("\n> PROCESSING: " + page.getIdentifier());
                   linkStorage.insert(page);
                   targetRepository.insert(page,totalOfPages);
                   totalOnTopicPages++;
@@ -208,10 +213,10 @@ public class TargetStorage  extends StorageDefault{
           }
         }
         catch (CommunicationException ex) {
-            ex.printStackTrace();
+            logger.error("Communication error while inserting.", ex);
             throw new StorageException(ex.getMessage());
-        } catch (TargetClassifierException e) {
-            e.printStackTrace();
+        } catch (TargetClassifierException tce) {
+        	logger.error("Classification error while inserting.", tce);
         }
         return null;
     }
@@ -221,14 +226,14 @@ public class TargetStorage  extends StorageDefault{
     }
 
 
-    private int initialIndex(List<String> urls, int number) {
-        if(number > urls.size()) {
-            return 0;
-        } else {
-            return urls.size() - number;
-        }        
-    
-    }
+//    private int initialIndex(List<String> urls, int number) {
+//        if(number > urls.size()) {
+//            return 0;
+//        } else {
+//            return urls.size() - number;
+//        }        
+//    
+//    }
 
     public static void main(String[] args) {
         try{
@@ -250,6 +255,7 @@ public class TargetStorage  extends StorageDefault{
                 InputStream is = new FileInputStream(modelFile);
                 ObjectInputStream objectInputStream = new ObjectInputStream(is);
                 Classifier classifier = (Classifier) objectInputStream.readObject();
+                is.close();
                 String[] attributes = featureConfig.getParam("ATTRIBUTES", " ");
                 weka.core.FastVector vectorAtt = new weka.core.FastVector();
                 for (int i = 0; i < attributes.length; i++) {
@@ -297,14 +303,8 @@ public class TargetStorage  extends StorageDefault{
 
             StorageBinder binder = new StorageBinder(config);
             binder.bind(targetStorage);
-        }catch (java.io.IOException ex) {
-            ex.printStackTrace();
-        }catch (StorageBinderException ex) {
-            ex.printStackTrace();
-        }catch (StorageFactoryException ex) {
-            ex.printStackTrace();
-        }catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        }catch (Exception e) {
+        	logger.error("Error while starting TargetStorage", e);
         }
     }
 }

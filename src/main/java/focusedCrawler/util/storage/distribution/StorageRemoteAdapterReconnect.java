@@ -20,15 +20,13 @@
 ## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 ##
 ############################################################################
-*/
+ */
 package focusedCrawler.util.storage.distribution;
 
-
-
-
-import java.rmi.RemoteException;
-
 import java.util.Enumeration;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.distribution.CommunicationException;
@@ -40,353 +38,204 @@ import focusedCrawler.util.storage.StorageFactoryException;
 
 public class StorageRemoteAdapterReconnect extends StorageDefault {
 
-
+    private static final Logger logger = LoggerFactory.getLogger(StorageRemoteAdapterReconnect.class);
 
     private int tryNumber = 1;
-
     private long delayAfterException = 2000;
-
     private StorageFactory factory;
-
     private Storage storage;
 
-
-
     public StorageRemoteAdapterReconnect() {
-
-    } //StorageRemoteAdapterReconnect
-
-
+    }
 
     /**
-
      * Retorna o numero de tentativas de reconexao
-
      */
-
     public int getTryNumber() {
-
         return this.tryNumber;
-
-    } //getTryNumber
-
-
+    }
 
     /**
-
+     * 
      * Altera o numero de tentativas de reconexao
-
      */
-
     public void setTryNumber(int _tryNumber) {
-
         this.tryNumber = _tryNumber;
-
-    } //setTryNumber
-
-
+    }
 
     /**
-
+     * 
      * Retorna o tempo de sleep do processo apos um erro de comunicacao
-
      */
-
     public long getDelayAfterException() {
-
         return this.delayAfterException;
-
-    } //getDelayAfterException
-
-
+    }
 
     /**
-
+     * 
      * Altera o tempo de sleep do processo apos um erro de comunicacao
-
      */
-
     public void setDelayAfterException(long _delayAfterException) {
-
         this.delayAfterException = _delayAfterException;
-
-    } //setDelayAfterException
-
-
+    }
 
     /**
-
      * Retorna a fabrica de storage
-
      */
-
     public StorageFactory getStorageFactory() {
-
         return this.factory;
-
-    } //getStorageFactory
-
-
+    }
 
     /**
-
      * Altera a fabrica de storage
-
      */
-
     public void setStorageFactory(StorageFactory _factory) {
-
         this.factory = _factory;
-
-    } //setStorageFactory
-
-
+    }
 
     /**
-
      * Metodo auxiliar para dormir a thread
-
      */
-
     private void sleep() {
-
         try {
-
-            System.out.println("Dormindo "+ getDelayAfterException() + " mls");
-
+            logger.info("Sleeping" + getDelayAfterException() + " mls...");
             Thread.sleep(getDelayAfterException());
-
-        } //try
-
+        }
         catch (InterruptedException error) {
-
-            error.printStackTrace();
-
-        } //catch
-
-    } //sleep
-
-
+            logger.info("Sleeping has been interrupted.", error);
+        }
+    }
 
     /**
-
      * Cria o storage
-
      */
-
     private synchronized void testStorage() throws CommunicationException {
-
         if (storage == null) {
-
             createStorage();
-
-        } //synchronized
-
-    } //testStorage
-
-
+        }
+    }
 
     private synchronized void createStorage() throws CommunicationException {
-
         try {
-
             this.storage = factory.produce();
+        }
+        catch (StorageFactoryException error) {
+            throw new CommunicationException("Could not create storage.", error);
+        }
+    }
 
-        } //try
-
-        catch(StorageFactoryException error) {
-
-            throw new CommunicationException("Nao conseguiu criar objeto: " + error.getMessage());
-
-        } //catch
-
-    } //createStorage
-
-
-
-    public Object insert(Object obj) throws StorageException,CommunicationException {
+    public Object insert(Object obj) throws StorageException, CommunicationException {
 
         try {
-
             testStorage();
-
             return storage.insert(obj);
-
-        } //try
-
+        }
         catch (CommunicationException error) {
-
-            writeLog("Erro de comunicacao: " + error.getMessage());
-
-            for (int counter=0; counter < getTryNumber(); counter++) {
-
+            logger.warn("Communication problem while inserting object.",  error);
+            for (int counter = 0; counter < getTryNumber(); counter++) {
                 try {
-
                     sleep();
-
                     createStorage();
-
                     return storage.insert(obj);
-
-                } //try
-
-                catch(CommunicationException error1) {
-
-                    writeLog("Erro de comunicacao: " + error.getMessage());
-
-                } //catch
-
-            } //for
-
+                }
+                catch (CommunicationException e) {
+                    logger.warn("Communication problem while inserting object.",  e);
+                }
+            }
+            logger.error("Failed to insert object after retrying "+getTryNumber()+" times.", error);
             throw error;
-
-        } //catch
+        }
 
     }
 
-
-
-    public Object[] insertArray(Object[] objs) throws StorageException,CommunicationException {
+    public Object[] insertArray(Object[] objs) throws StorageException, CommunicationException {
 
         try {
-
             testStorage();
-
             return storage.insertArray(objs);
-
-        } //try
-
+        }
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while inserting array.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
-
+            for (int counter = 0; counter < getTryNumber(); counter++) {
                 try {
-
                     sleep();
-
                     createStorage();
-
                     return storage.insertArray(objs);
-
-                } //try
-
-                catch(CommunicationException error1) {
-
-                    writeLog("Erro de comunicacao: " + error.getMessage());
-
-                } //catch
-
-            } //for
-
+                }
+                catch (CommunicationException error1) {
+                    logger.warn("Communication problem while inserting array.",  error1);
+                }
+            }
+            logger.error("Failed to insert array after retrying "+getTryNumber()+" times.", error);
             throw error;
-
-        } //catch
+        }
 
     }
 
-
-
-    public Object select(Object obj) throws StorageException,DataNotFoundException,CommunicationException {
+    public Object select(Object obj) throws StorageException, DataNotFoundException, CommunicationException {
 
         try {
-
             testStorage();
-
             return storage.select(obj);
-
-        } //try
-
+        }
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while selecting object.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
-
+            for (int counter = 0; counter < getTryNumber(); counter++) {
                 try {
-
                     sleep();
-
                     createStorage();
-
                     return storage.select(obj);
-
-                } //try
-
-                catch(CommunicationException error1) {
-
-                    writeLog("Erro de comunicacao: " + error.getMessage());
-
-                } //catch
-
-            } //for
-
+                }
+                catch (CommunicationException e) {
+                    logger.warn("Communication problem while selecting object.",  e);
+                }
+            }
+            logger.error("Failed to select object after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        }
 
     }
 
-
-
-    public Object[] selectArray(Object[] objs) throws StorageException,DataNotFoundException,CommunicationException {
-
+    public Object[] selectArray(Object[] objs) throws StorageException, DataNotFoundException, CommunicationException {
         try {
-
             testStorage();
-
             return storage.selectArray(objs);
-
-        } //try
-
+        }
         catch (CommunicationException error) {
-
-            writeLog("Erro de comunicacao: " + error.getMessage());
-
-            for (int counter=0; counter < getTryNumber(); counter++) {
-
+            logger.warn("Communication problem while selecting array.",  error);
+            for (int counter = 0; counter < getTryNumber(); counter++) {
                 try {
-
                     sleep();
-
                     createStorage();
-
                     return storage.selectArray(objs);
-
-                } //try
-
-                catch(CommunicationException error1) {
-
-                    writeLog("Erro de comunicacao: " + error.getMessage());
-
-                } //catch
-
-            } //for
-
+                }
+                catch (CommunicationException error1) {
+                    logger.warn("Communication problem while selecting object.",  error1);
+                }
+            }
+            logger.error("Failed to select array after retrying "+getTryNumber()+" times.", error);
             throw error;
-
-        } //catch
-
+        }
     }
 
-
-
-    public Enumeration selectEnumeration(Object obj) throws StorageException,DataNotFoundException,CommunicationException {
+    public Enumeration selectEnumeration(Object obj) throws StorageException,
+                                                            DataNotFoundException,
+                                                            CommunicationException {
 
         try {
-
             testStorage();
-
             return storage.selectEnumeration(obj);
-
-        } //try
-
+        }
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while selecting enumeration.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -396,25 +245,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.selectEnumeration(obj);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while selecting enumeration.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to select enumeration after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object update(Object obj) throws StorageException,CommunicationException {
+    public Object update(Object obj) throws StorageException, CommunicationException {
 
         try {
 
@@ -422,13 +269,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.update(obj);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while updating object.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -438,25 +285,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.update(obj);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while updating object.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to update object after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object[] updateArray(Object[] objs) throws StorageException,CommunicationException {
+    public Object[] updateArray(Object[] objs) throws StorageException, CommunicationException {
 
         try {
 
@@ -464,13 +309,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.updateArray(objs);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while updating array.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -480,25 +325,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.updateArray(objs);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while updating array.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to update array after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object remove(Object obj) throws StorageException,CommunicationException {
+    public Object remove(Object obj) throws StorageException, CommunicationException {
 
         try {
 
@@ -506,13 +349,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.remove(obj);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while removing object.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -522,25 +365,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.remove(obj);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while removing object.",  error);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to remove object after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object[] removeArray(Object[] objs) throws StorageException,CommunicationException {
+    public Object[] removeArray(Object[] objs) throws StorageException, CommunicationException {
 
         try {
 
@@ -548,13 +389,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.removeArray(objs);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while removing array.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -564,25 +405,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.removeArray(objs);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while removing array.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to remove array after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object addResource(Object obj) throws StorageException,CommunicationException {
+    public Object addResource(Object obj) throws StorageException, CommunicationException {
 
         try {
 
@@ -590,13 +429,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.addResource(obj);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while adding resource.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -606,25 +445,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.addResource(obj);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while adding resource.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to add resource after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object[] addResourceArray(Object[] objs) throws StorageException,CommunicationException {
+    public Object[] addResourceArray(Object[] objs) throws StorageException, CommunicationException {
 
         try {
 
@@ -632,13 +469,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.addResourceArray(objs);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while adding resource array.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -648,25 +485,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.addResourceArray(objs);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while adding resource array.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to add resource array after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object removeResource(Object obj) throws StorageException,CommunicationException {
+    public Object removeResource(Object obj) throws StorageException, CommunicationException {
 
         try {
 
@@ -674,13 +509,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.removeResource(obj);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while removing resource.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -690,25 +525,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.removeResource(obj);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while removing resource.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to remove resource after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object[] removeResourceArray(Object[] objs) throws StorageException,CommunicationException {
+    public Object[] removeResourceArray(Object[] objs) throws StorageException, CommunicationException {
 
         try {
 
@@ -716,13 +549,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.removeResourceArray(objs);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while removing resource array.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -732,25 +565,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.removeResourceArray(objs);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while removing resource array.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to remove resource array after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object commit(Object obj) throws StorageException,CommunicationException {
+    public Object commit(Object obj) throws StorageException, CommunicationException {
 
         try {
 
@@ -758,13 +589,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.commit(obj);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while commiting.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -774,25 +605,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.commit(obj);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while commiting.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to commit after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object rollback(Object obj) throws StorageException,CommunicationException {
+    public Object rollback(Object obj) throws StorageException, CommunicationException {
 
         try {
 
@@ -800,13 +629,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.rollback(obj);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while executing rollback.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -816,25 +645,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.rollback(obj);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while executing rollback.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to rollback after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object finalize(Object obj) throws StorageException,CommunicationException {
+    public Object finalize(Object obj) throws StorageException, CommunicationException {
 
         try {
 
@@ -842,13 +669,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.finalize(obj);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while finalizing.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -858,25 +685,23 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.finalize(obj);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while finalizing.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to finalize after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 
-
-
-    public Object ping(Object obj) throws StorageException,CommunicationException {
+    public Object ping(Object obj) throws StorageException, CommunicationException {
 
         try {
 
@@ -884,13 +709,13 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
             return storage.ping(obj);
 
-        } //try
+        } // try
 
         catch (CommunicationException error) {
 
-            writeLog("Erro de comunicacao: " + error.getMessage());
+            logger.warn("Communication problem while pinging.",  error);
 
-            for (int counter=0; counter < getTryNumber(); counter++) {
+            for (int counter = 0; counter < getTryNumber(); counter++) {
 
                 try {
 
@@ -900,19 +725,19 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
 
                     return storage.ping(obj);
 
-                } //try
+                } // try
 
-                catch(CommunicationException error1) {
+                catch (CommunicationException error1) {
 
-                    writeLog("Erro de comunicacao: " + error.getMessage());
+                    logger.warn("Communication problem while pinging.",  error1);
 
-                } //catch
+                } // catch
 
-            } //for
-
+            } // for
+            logger.error("Failed to ping after retrying "+getTryNumber()+" times.", error);
             throw error;
 
-        } //catch
+        } // catch
 
     }
 

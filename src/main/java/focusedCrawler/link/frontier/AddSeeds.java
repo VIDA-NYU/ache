@@ -1,25 +1,25 @@
 package focusedCrawler.link.frontier;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.util.cache.CacheException;
 import focusedCrawler.util.persistence.PersistentHashtable;
 
 public class AddSeeds {
+	
+	private static final Logger logger = LoggerFactory.getLogger(AddSeeds.class);
 
 	public static void main(String[] args) {
 		try {
             String linkConfigFile = args[0] + "/link_storage/link_storage.cfg";
             String seedFile = args[1];
             String dataPath = args[2];
+            
 			focusedCrawler.util.ParameterFile config = new focusedCrawler.util.ParameterFile(linkConfigFile);
-			focusedCrawler.util.ParameterFile seedConfig = new focusedCrawler.util.ParameterFile(seedFile);
+//			focusedCrawler.util.ParameterFile seedConfig = new focusedCrawler.util.ParameterFile(seedFile);
+			
 			String dir = dataPath + "/" + config.getParam("LINK_DIRECTORY");
+			
 			PersistentHashtable urls = new PersistentHashtable(dir,1000);
 			FrontierTargetRepositoryBaseline frontier = new FrontierTargetRepositoryBaseline(urls,10000);
 			int count = 0;
@@ -47,23 +47,11 @@ public class AddSeeds {
               urls.put(seeds[i], "299");
               count++;
             }
-			System.out.println("Number of seeds:" + count);
+			logger.info("Number of seeds:" + count);
 			frontier.close();
-		}
-		catch (MalformedURLException ex) {
-			ex.printStackTrace();
-		}
-		catch (IOException ex) {
-			ex.printStackTrace();
-		}
-		catch (FrontierPersistentException ex) {
-			ex.printStackTrace();
-		} catch (CacheException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("Problem while adding seeds. ", e);
 		}
 	}
 	

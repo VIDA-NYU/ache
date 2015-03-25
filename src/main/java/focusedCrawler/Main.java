@@ -1,24 +1,28 @@
 package focusedCrawler;
 
-import focusedCrawler.link.frontier.AddSeeds;
-import focusedCrawler.link.LinkStorage;
-import focusedCrawler.target.CreateWekaInput;
-import focusedCrawler.target.TargetStorage;
-import focusedCrawler.crawler.CrawlerManager;
-import weka.classifiers.functions.SMO;
-
 import java.io.File;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import weka.classifiers.functions.SMO;
+import focusedCrawler.crawler.CrawlerManager;
+import focusedCrawler.link.LinkStorage;
+import focusedCrawler.link.frontier.AddSeeds;
+import focusedCrawler.target.CreateWekaInput;
+import focusedCrawler.target.TargetStorage;
 
 /**
  * <p>Description: This is the main entry point for working with the components of the focusedCrawler </p>
  */
 
 public class Main {
+	
+	public static final Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String... args) {
-
         if (args.length > 0) {
             if ("addSeeds".equals(args[0]) && args.length == 4) {
                 addSeeds(args[1], args[2], args[3]);
@@ -63,8 +67,7 @@ public class Main {
         try {
             LinkStorage.main(new String[]{configPath, seedPath, dataOutputPath});
         } catch (Throwable t) {
-            System.err.println("Something bad happened to LinkStorage :(");
-            t.printStackTrace();
+            logger.error("Something bad happened to LinkStorage :(", t);
         }
     }
 
@@ -75,8 +78,7 @@ public class Main {
          try {
              TargetStorage.main(new String[]{configPath, modelPath, dataOutputPath, langDetectProfilePath});
          } catch (Throwable t) {
-             System.err.println("Something bad happened to TargetStorage :(");
-             t.printStackTrace();
+             logger.error("Something bad happened to TargetStorage :(", t);
          }
     }
 
@@ -84,8 +86,7 @@ public class Main {
         try {
             CrawlerManager.main(new String[]{configPath});
         } catch (Throwable t) {
-            System.err.println("Something bad happened to CrawlManager :(");
-            t.printStackTrace();
+            logger.error("Something bad happened to CrawlManager :(", t);
         }
 
     }
@@ -137,7 +138,7 @@ public class Main {
     private static void createOutputPathStructure(String dataOutputPath) {
         File dataOutput = new File(dataOutputPath);
         if (dataOutput.exists()) {
-            System.out.println("Data output path already exists, deleting everything");
+            logger.warn("Data output path already exists, deleting everything");
             dataOutput.delete();
         }
 

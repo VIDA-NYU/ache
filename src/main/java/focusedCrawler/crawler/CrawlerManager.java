@@ -23,20 +23,21 @@
 */
 package focusedCrawler.crawler;
 
+import java.io.IOException;
 import java.net.URL;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.download.Downloader;
 import focusedCrawler.util.download.DownloaderBuffered;
+import focusedCrawler.util.download.DownloaderException;
 import focusedCrawler.util.download.DownloaderURL;
 import focusedCrawler.util.download.ExtractorProxyDownloader;
-import focusedCrawler.util.download.DownloaderException;
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.Storage;
+import focusedCrawler.util.storage.StorageFactoryException;
 import focusedCrawler.util.storage.distribution.StorageCreator;
-import focusedCrawler.util.storage.*;
-
-
-import java.io.*;
 
 
 /**
@@ -48,7 +49,9 @@ import java.io.*;
  * @version 1.0
  */
 
-public class CrawlerManager extends Thread{
+public class CrawlerManager extends Thread {
+	
+	public static final Logger logger = LoggerFactory.getLogger(CrawlerManager.class);
 
     private ParameterFile configManager;
 
@@ -275,13 +278,8 @@ public class CrawlerManager extends Thread{
 
 
     /**
-
      * This method monitors the crawlers' behavior
-
      */
-
-
-
     public void run() {
 
         setPriority( getPriority() + 1 );
@@ -312,11 +310,11 @@ public class CrawlerManager extends Thread{
 
                         isShutdown = true;
 
-                        System.out.println("RM>"+crawlerThreadGroup.getName()+">"+crawler.getName()+">In shutdown mode.");
+                        logger.info("RM>"+crawlerThreadGroup.getName()+">"+crawler.getName()+">In shutdown mode.");
 
                     }
 
-                    System.out.println("RM>"+crawlerThreadGroup.getName()+">"+crawler.getName()+">Time("+crawler.getCicleTime()+"):"+statusCrawlerString(crawler)+(crawler.getMessage()==null?"":":"+crawler.getMessage()));
+                    logger.info("RM>"+crawlerThreadGroup.getName()+">"+crawler.getName()+">Time("+crawler.getCicleTime()+"):"+statusCrawlerString(crawler)+(crawler.getMessage()==null?"":":"+crawler.getMessage()));
 
                     if(crawler.getCicleTime() > maxCrawlerLifeTime ) {
 
@@ -335,21 +333,11 @@ public class CrawlerManager extends Thread{
                     }
 
                 }
-
                 catch(CrawlerManagerException rme) {
-
-                    System.out.println("Problem:"+rme.getMessage());
-
-                    rme.printStackTrace();
-
+                    logger.error("Problem:"+rme.getMessage(), rme);
                 }
-
                 catch(Exception e) {
-
-                    System.out.println("Problem:"+e.getMessage());
-
-                    e.printStackTrace();
-
+                    logger.error("Problem:"+e.getMessage(), e);
                 }
 
                 int numThreadsEst = crawlerThreadGroup.activeCount();
@@ -360,7 +348,7 @@ public class CrawlerManager extends Thread{
 
                 if( numThreads > (permitedThreadsFactor * crawlersNumber()) ) {
 
-                  System.out.println("Threads limit "+(permitedThreadsFactor * crawlersNumber())+" exceeded '"+numThreads+"'");
+                  logger.warn("Threads limit "+(permitedThreadsFactor * crawlersNumber())+" exceeded '"+numThreads+"'");
 
                   stopManager();
 
@@ -370,7 +358,7 @@ public class CrawlerManager extends Thread{
 
                 else if ( isShutdown ) {
 
-                  System.out.println("Shutdown fired.");
+                  logger.info("Shutdown fired.");
 
                   stopManager();
 
@@ -380,23 +368,16 @@ public class CrawlerManager extends Thread{
 
             }
 
-
-
             try {
-
                 sleep(sleepCheckTime);
-
             }
-
             catch(InterruptedException ie) {
-
-                ie.printStackTrace();
-
+                logger.error("Sleeping for "+sleepCheckTime+" interrupted.", ie);
             }
 
         }
 
-        System.out.println("RM>"+getName()+">Stop requested. Giving a max of 60s to stop all robots before halt.");
+        logger.info("RM>"+getName()+">Stop requested. Giving a max of 60s to stop all robots before halt.");
 
         stopManagerExit(1 * 60 * 1000);
 
@@ -406,13 +387,12 @@ public class CrawlerManager extends Thread{
 
     private void sleepExit(long time) {
         try {
-          System.out.println("Waiting "+time+" mls to die.");
+          logger.info("Waiting "+time+" mls to die.");
           sleep(time);
-          System.out.println("System.exit()");
+          logger.info("System.exit()");
           System.exit(1);
-        }
-        catch( InterruptedException exc ) {
-            exc.printStackTrace();
+        } catch( InterruptedException exc ) {
+            logger.error("Interruped while waiting mls to exit.", exc);
         }
     }
 
@@ -474,7 +454,7 @@ public class CrawlerManager extends Thread{
 
         Crawler r = getCrawler(n);
 
-        System.out.println("Killing crawler"+r+" : "+statusCrawlerString(r));
+        logger.info("Killing crawler"+r+" : "+statusCrawlerString(r));
 
         r.setStop(true);
 
@@ -528,11 +508,11 @@ public class CrawlerManager extends Thread{
 
                 Crawler crawler = getCrawler(i);
 
-                System.out.println("RM> Waiting "+crawler.getName()+". Max join time is "+MAX_JOIN);
+                logger.info("RM> Waiting "+crawler.getName()+". Max join time is "+MAX_JOIN);
 
                 crawler.join(MAX_JOIN);
 
-                System.out.println("RM>"+crawler.getName()+" joined.");
+                logger.info("RM>"+crawler.getName()+" joined.");
 
             }
 
@@ -540,16 +520,13 @@ public class CrawlerManager extends Thread{
 
                 Crawler crawler = getCrawler(i);
 
-                System.out.println("RM>"+crawler.getName()+">Time("+crawler.getCicleTime()+"):"+statusCrawlerString(crawler));
+                logger.info("RM>"+crawler.getName()+">Time("+crawler.getCicleTime()+"):"+statusCrawlerString(crawler));
 
             }
 
         }
-
         catch (InterruptedException ex) {
-
-            ex.printStackTrace();
-
+            logger.error("Error while stoping manager. ", ex);
         }
 
         System.exit(0);
@@ -648,45 +625,48 @@ public class CrawlerManager extends Thread{
 
 
 
-    protected DownloaderBuffered createDownloader(String id) throws
-        DownloaderException {
+    protected DownloaderBuffered createDownloader(String id) throws DownloaderException {
+        logger.info("Creating Downloader...");
+        Downloader inter_downloader = new DownloaderURL(getConfigManager());
+        DownloaderBuffered downloader = new ExtractorProxyDownloader(inter_downloader);
+        downloader.setId(id);
+        logger.info("Downloader Type: " + downloader.getClass().getName());
+        return downloader;
+    }
 
-      DownloaderBuffered downloader;
-      System.out.print("Create Downloader Start,  ");
-      Downloader inter_downloader = new DownloaderURL(getConfigManager());
-      downloader = new ExtractorProxyDownloader(inter_downloader);
-      System.out.println("Tipo do Downloader : "+ downloader.getClass().getName());
-      downloader.setId(id);
-      return downloader;
-     }
-
-     public static void main(String[] args) throws IOException,
-         NumberFormatException {
+    public static void main(String[] args) throws IOException, NumberFormatException {
+         
+       logger.info("Starting CrawlerManager...");
 
        String crawlerConfigFile = args[0] + "/crawler/crawler.cfg";
        String linkConfigFile = args[0] + "/link_storage/link_storage.cfg";
        String formConfigFile = args[0] + "/target_storage/target_storage.cfg";
+       
        ParameterFile config = new ParameterFile(crawlerConfigFile);
+       
        ThreadGroup tg = new ThreadGroup(config.getParam("ROBOT_THREAD_GROUP"));
+       
        int numberRobots = Integer.valueOf(config.getParam("ROBOT_QUANTITY")).intValue();
+       
        long restingTime = 0;
        try {
            restingTime = Long.valueOf(config.getParam("ROBOT_MANAGER_RESTINGTIME")).longValue();
        }
        catch(NumberFormatException nfe) {
-           System.out.println("Resting time not found. RestingTime bound to '0'");
+           logger.warn("Resting time not found. RestingTime bound to '0'");
        }
 
        try{
-         long sleepCheckTime = Long.valueOf(config.getParam(
-             "ROBOT_MANAGER_CHECKTIME")).longValue();
-         long maxRobotLifeTime = Long.valueOf(config.getParam(
-             "ROBOT_MANAGER_MAXTIME")).longValue();
+         
+         long sleepCheckTime = Long.valueOf(config.getParam("ROBOT_MANAGER_CHECKTIME")).longValue();
+         long maxRobotLifeTime = Long.valueOf(config.getParam("ROBOT_MANAGER_MAXTIME")).longValue();
+         
          ParameterFile configLinkStorage = new ParameterFile(linkConfigFile);
-         Storage linkStorage = null;
-         linkStorage = new StorageCreator(configLinkStorage).produce();
+         Storage linkStorage = new StorageCreator(configLinkStorage).produce();
+         
          ParameterFile configFormStorage = new ParameterFile(formConfigFile);
          Storage formStorage = new StorageCreator(configFormStorage).produce();
+         
          CrawlerManager manager = new CrawlerManager(config, linkStorage,
                                                      configLinkStorage,
                                                      formStorage,
@@ -696,17 +676,22 @@ public class CrawlerManager extends Thread{
                                                      maxRobotLifeTime);
          manager.setRestingTime(restingTime);
          manager.createCrawlers();
+         
          long sleepErrorTimeCheck = Long.valueOf(config.getParam("ROBOT_MANAGER_ROBOT_ERROR_SLEEP_TIME")).longValue();
          manager.setSleepErrorTime(sleepErrorTimeCheck);
+         
          int fatorPermitedThreads = Long.valueOf(config.getParam("ROBOT_MANAGER_ROBOT_THREAD_FACTOR")).intValue();
          manager.setFatorPermitedThreads(fatorPermitedThreads);
+         
          manager.start();
-     }catch (CrawlerManagerException ex) {
-        ex.printStackTrace();
-      }
-      catch (StorageFactoryException ex) {
-    	  ex.printStackTrace();  
-      } 
+         
      }
+     catch (CrawlerManagerException ex) {
+        logger.error("An error occurred while starting CrawlerManager. ", ex);
+     }
+     catch (StorageFactoryException ex) {
+         logger.error("An error occurred while starting CrawlerManager. ", ex);
+     } 
    }
+}
 

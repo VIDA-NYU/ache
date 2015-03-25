@@ -33,6 +33,9 @@ import java.net.SocketException;
 import java.net.URL;
 import java.net.URLConnection;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.Html2Txt;
 import focusedCrawler.util.LinkRelevance;
@@ -50,7 +53,9 @@ import focusedCrawler.util.Page;
  *
  */
 
-public class CrawlerImpl extends Crawler{
+public class CrawlerImpl extends Crawler {
+    
+    private static final Logger logger = LoggerFactory.getLogger(CrawlerImpl.class);
 
     private Storage linkStorage;
 
@@ -122,8 +127,8 @@ public class CrawlerImpl extends Crawler{
 		  downloader.setMaxBufferSize((int)newMaxFileSize);
 	  }
 	  catch (DownloaderException de) {
-		  de.printStackTrace();
-		  throw new CrawlerException("Max file size reached", de );
+		  logger.error("Max file size reached", de);
+		  throw new CrawlerException("Max file size reached", de);
 	  }
   }
 
@@ -161,7 +166,7 @@ public class CrawlerImpl extends Crawler{
 	  try {
 		  return downloader.isShutdown();
 	  }catch (DownloaderException exc) {
-		  exc.printStackTrace();
+		  logger.warn("Problem while verifying if crawler is shutdown.", exc);
 		  return false;
 	  }
   }
@@ -202,32 +207,39 @@ public class CrawlerImpl extends Crawler{
      /**
       * This method selects the next URL to be downloaded by the crawler 
       */
-     
      protected void selectUrl() throws CrawlerException {
 
-          long t1 = 0;
           try {
-              //getLog().writeLog("LOG>"+getName()+"selectUrl() linkServer start(0)");
-              t1 = System.currentTimeMillis();
+              long t1 = System.currentTimeMillis();
               setMessage("selectUrl() linkStorage.");
+              
               LinkRelevance lr = ((LinkRelevance)linkStorage.select(null));
+              
               initialUrl = lr.getURL();
               String host = lr.getURL().getHost();
+              
               host = host.substring(0,host.indexOf("."));
               boolean number = false;
-              System.out.println(host);
-              try{Integer.parseInt(host); number = true;}catch(Exception ex){ }
+              
+              try{
+                  Integer.parseInt(host);
+                  number = true;
+              } catch(Exception ex) { }
+              
               relevance = lr.getRelevance();
+              
               t1 = System.currentTimeMillis()-t1;
-              System.out.println("LOG>"+getName()+">selectUrl() linkServer end("+t1+"):"+initialUrl);
+              
+              logger.info("Selected next URL to download (time: "+t1+"): "+initialUrl);
+              
               if( initialUrl == null || number || lr.getURL().getHost().contains("fc2.com")) {
                   throw new CrawlerException(getName()+": LinkStorage sent null!");
               }
+              
               setSelectedLinks(getSelectedLinks() +1);
               currentUrl = initialUrl;
               setUrl(currentUrl);
-              t1 = System.currentTimeMillis();
-              System.out.println("LOG>"+getName()+">update() linkStorage end("+t1+")");
+              
               setMessage("");
           }
           catch(DataNotFoundException dnfe) {
@@ -340,12 +352,11 @@ public class CrawlerImpl extends Crawler{
 
 
         protected void handleNotFound() throws Exception {
-          setJump(true,"R>" + getName() + "> Url(insert) '" + getUrl() + "' not found.");
+          setJump(true,"Url(insert) '" + getUrl() + "' not found.");
         }
 
         protected void handleRedirect() throws Exception {
-          System.out.println("R>" + getName() + ">" + getUrl() + " redirected to " +
-                             urlFinal + ".");
+          logger.info(getUrl() + " redirected to " + urlFinal + ".");
         }
 
         protected void processData() throws CrawlerException {
@@ -358,8 +369,8 @@ public class CrawlerImpl extends Crawler{
 					page.setHub(true);
 				}
 //				page.setRelevance(relevance);
-			}catch (Exception e) {
-				e.printStackTrace();
+			} catch (Exception e) {
+				logger.error("Problem while processing data.", e);
 			}
 
             setMessage(null);
@@ -377,26 +388,20 @@ public class CrawlerImpl extends Crawler{
 
             try {
 
-                System.out.println("R>"+getName()+" send page with "+page.getURL()+" to TargetStorage .");
+                logger.info("Sending page [ "+page.getURL()+" ] to TargetStorage.");
 
                 targetStorage.insert(page);
 
 //                linkStorage.insert(page);
 
             }
-
             catch( StorageException se ) {
-
-                se.printStackTrace();
-
+                logger.error("Problem while sending page to storage.", se);
                 throw new CrawlerException(getName()+":"+se.getMessage(),se);
-
             }
-
             catch(CommunicationException ce) {
-                ce.printStackTrace();
+                logger.error("Communication problem while sending page to storage.", ce);
                 throw new CrawlerException(getName()+":"+ce.getMessage(),ce);
-
             }
 
         }
@@ -416,7 +421,7 @@ public class CrawlerImpl extends Crawler{
                 }
             }
             catch( Exception exc ) {
-                exc.printStackTrace();
+                logger.error("Problem while closing downloader.", exc);
             }
             length = 0;
             //file.setLength(0);

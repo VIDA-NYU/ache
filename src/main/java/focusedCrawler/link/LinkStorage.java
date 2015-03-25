@@ -23,13 +23,19 @@
 */
 package focusedCrawler.link;
 
-import focusedCrawler.util.parser.SimpleWrapper;
-import focusedCrawler.link.classifier.LinkClassifierHub;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierException;
 import focusedCrawler.link.classifier.LinkClassifierFactory;
 import focusedCrawler.link.classifier.LinkClassifierFactoryImpl;
-import focusedCrawler.link.classifier.LinkClassifierFactoryException;
+import focusedCrawler.link.classifier.LinkClassifierHub;
 import focusedCrawler.link.classifier.builder.BacklinkSurfer;
 import focusedCrawler.link.classifier.builder.ClassifierBuilder;
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
@@ -37,25 +43,18 @@ import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.link.frontier.FrontierTargetRepository;
 import focusedCrawler.link.frontier.FrontierTargetRepositoryBaseline;
-import focusedCrawler.util.PriorityQueueLink;
-import focusedCrawler.util.cache.CacheException;
-import focusedCrawler.util.persistence.Tuple;
-import focusedCrawler.util.persistence.PersistentHashtable;
+import focusedCrawler.util.Page;
 import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.string.StopListArquivo;
-import focusedCrawler.util.string.StopList;
+import focusedCrawler.util.PriorityQueueLink;
+import focusedCrawler.util.dashboard.LinkMonitor;
+import focusedCrawler.util.parser.SimpleWrapper;
+import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageBinderException;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
-import focusedCrawler.util.Page;
-import focusedCrawler.util.dashboard.LinkMonitor;
-
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.List;
+import focusedCrawler.util.string.StopList;
+import focusedCrawler.util.string.StopListArquivo;
 
 /**
  *
@@ -70,6 +69,8 @@ import java.util.List;
 
 public class LinkStorage extends StorageDefault{
 
+  public static final Logger logger = LoggerFactory.getLogger(LinkStorage.class);
+	
 
   private FrontierManager frontierManager;
 
@@ -142,19 +143,18 @@ public class LinkStorage extends StorageDefault{
 				outLinks.clear();
 			}
 		}
-		catch(Exception ex)
-		{
-			ex.printStackTrace();
+		catch(Exception ex) {
+			logger.error(ex.getMessage(), ex);
 		}
     try {
     	if(getBacklinks && page.isAuth()){
-    		System.out.println(">>>>>GETTING BACKLINKS:" + page.getURL().toString());
+    		logger.info(">>>>>GETTING BACKLINKS:" + page.getURL().toString());
     		graphManager.insertBacklinks(page);
     		numberOfBacklink++;
-    	    System.out.println("TOTAL BACKLINKS:" + numberOfBacklink);
+    		logger.info("TOTAL BACKLINKS:" + numberOfBacklink);
     	}
     	if(onlineLearning != null && numberOfPages % learnLimit == 0){
-    		System.out.println("RUNNING ONLINE LEARNING...");
+    		logger.info("RUNNING ONLINE LEARNING...");
     		onlineLearning.execute();
     		frontierManager.clearFrontier();
     	}
@@ -168,26 +168,31 @@ public class LinkStorage extends StorageDefault{
 					outLinks.add(sOutLinks);
     		}
     	}
-    }catch (LinkClassifierException ex) {
-    	ex.printStackTrace();
+    }
+    catch (LinkClassifierException ex) {
+    	logger.info("A LinkClassifierException occurred.", ex);
     	throw new StorageException(ex.getMessage());
-    }catch (FrontierPersistentException ex1) {
-    	ex1.printStackTrace();
+    }
+    catch (FrontierPersistentException ex1) {
+    	logger.info("A FrontierPersistentException occurred.", ex1);
     	throw new StorageException(ex1.getMessage());
-    }catch (IOException ex) {
-    	ex.printStackTrace();
+    }
+    catch (IOException ex) {
+        logger.info("An IOException occurred.", ex);
     	throw new StorageException(ex.getMessage());
-    }catch (Exception ex) {
-    	ex.printStackTrace();
+    }
+    catch (Exception ex) {
+    	logger.info("An Exception occurred.", ex);
     	throw new StorageException(ex.getMessage());
     }
     
     long finalTime = System.currentTimeMillis();
     totalTime = totalTime + (finalTime - initialTime);
     double average = totalTime/numberOfPages;
-    System.out.println("TOTAL PAGES:" + numberOfPages);
-    System.out.println("TOTAL TIME:" + (finalTime - initialTime));
-    System.out.println("AVERAGE:" + average);
+    
+    logger.info("\n> TOTAL PAGES:" + numberOfPages +
+                "\n> TOTAL TIME:" + (finalTime - initialTime) +
+                "\n> AVERAGE:" + average);
     return null;
   }
 
@@ -224,7 +229,7 @@ public class LinkStorage extends StorageDefault{
        FrontierTargetRepositoryBaseline frontier = null;
        boolean getOutlinks = config.getParamBoolean("GRAB_LINKS"); 
        boolean useScope = config.getParamBoolean("USE_SCOPE");
-       System.out.println("USE_SCOPE:" + useScope);
+       logger.info("USE_SCOPE:" + useScope);
        if(useScope){
            HashMap<String,Integer> scope = new HashMap<String,Integer>();
                     //ParameterFile seedConfig = new ParameterFile(seedFile);
@@ -241,7 +246,7 @@ public class LinkStorage extends StorageDefault{
 //       					host = host.substring(index+1);
 //       				}
 //        	   }
-        	   System.out.println(url);
+        	   logger.info(url.toString());
         	   scope.put(host, new Integer(1));
            }   
            if(config.getParam("TYPE_OF_CLASSIFIER").contains("Baseline")){
@@ -257,21 +262,21 @@ public class LinkStorage extends StorageDefault{
            }
        }
        
-       System.out.println("FRONTIER: " + frontier.getClass());
+       logger.info("FRONTIER: " + frontier.getClass());
        
        FrontierManager frontierManager = new FrontierManager(
     		   queue,frontier,config.getParamInt("MAX_SIZE_LINK_QUEUE"));
 
        Storage linkStorage = null;
        
-       System.out.println(">> LOADING GRAPH...");
+       logger.info(">> LOADING GRAPH...");
        PersistentHashtable url2id = new PersistentHashtable(dataPath + "/" + config.getParam("URL_ID_DIRECTORY"),100000);
        PersistentHashtable authID = new PersistentHashtable(dataPath + "/" + config.getParam("AUTH_ID_DIRECTORY"),100000);
        PersistentHashtable authGraph = new PersistentHashtable(dataPath + "/" + config.getParam("AUTH_GRAPH_DIRECTORY"),100000);
        PersistentHashtable hubID = new PersistentHashtable(dataPath + "/" + config.getParam("HUB_ID_DIRECTORY"),100000);
        PersistentHashtable hubGraph = new PersistentHashtable(dataPath + "/" + config.getParam("HUB_GRAPH_DIRECTORY"),100000);
        BipartiteGraphRep graphRep = new BipartiteGraphRep(authGraph,url2id,authID,hubID,hubGraph);
-       System.out.println(">> DONE GRAPH.");
+       logger.info(">> DONE GRAPH.");
 //       //to avoid hitting backlink site
 //       PersistentHashtable url2id_initial = new PersistentHashtable(config.getParam("URL_ID_DIRECTORY")+"_initial",100000);
 //       PersistentHashtable authID_initial = new PersistentHashtable(config.getParam("AUTH_ID_DIRECTORY")+"_initial",100000);
@@ -307,27 +312,14 @@ public class LinkStorage extends StorageDefault{
     	   StopList stoplist = new StopListArquivo(stoplistFile);
     	   WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
     	   ClassifierBuilder cb = new ClassifierBuilder(graphRep,stoplist,wrapper,frontier);
-    	   System.out.println("ONLINE LEARNING:" + config.getParam("ONLINE_METHOD"));
+    	   logger.info("ONLINE LEARNING:" + config.getParam("ONLINE_METHOD"));
     	   OnlineLearning onlineLearning = new OnlineLearning(frontier, manager, cb, config.getParam("ONLINE_METHOD"), dataPath + "/" + config.getParam("TARGET_STORAGE_DIRECTORY"));
     	   ((LinkStorage)linkStorage).setOnlineLearning(onlineLearning,config.getParamInt("LEARNING_LIMIT"));
        }
        StorageBinder binder = new StorageBinder(config);
        binder.bind(linkStorage);
-     }
-     catch (java.io.IOException ex) {
-       ex.printStackTrace();
-     }
-     catch(LinkClassifierFactoryException ex){
-       ex.printStackTrace();
-     }
-     catch (StorageBinderException ex1) {
-       ex1.printStackTrace();
-     } catch (CacheException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (Exception e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+     } catch (Exception e) {
+    	 logger.error("Problem while starting LinkStorage.", e);
 	}
   }
 }

@@ -24,28 +24,34 @@
 package focusedCrawler.util.storage.socket;
 
 
-import java.net.ServerSocket;
-
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.PrintStream;
 import java.net.Socket;
 
-import java.io.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import focusedCrawler.util.DataNotFoundException;
-import focusedCrawler.util.Log;
 import focusedCrawler.util.distribution.CommunicationException;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageException;
 
 
 /**
-
  *
-
  */
-
 class ServerConnectionHandler  extends Thread {
 
-
+    
+    private static final Logger logger = LoggerFactory.getLogger(ServerConnectionHandler.class);
 
     private Storage storage;
 
@@ -277,12 +283,6 @@ class ServerConnectionHandler  extends Thread {
 
     private void serializeException(Exception obj) throws IOException {
 
-        System.out.println("serializando excecao...");
-
-        obj.printStackTrace();
-
-        // serialize the exception
-
         bout = new ByteArrayOutputStream();
 
         PrintStream pstream = new PrintStream(bout);
@@ -388,21 +388,17 @@ class ServerConnectionHandler  extends Thread {
                 t6=System.currentTimeMillis();
 
             } catch(IOException e) {
-
                 // ignore socket errors(closing and free client)
-
-                Log.log(this.toString(), storage.toString(), "IO error:"+e);
-
+                logger.error("["+storage.toString()+"] IO error:", e);
             }
 
         } finally {
 
-            try { socket.close(); }
-
-            catch(IOException ioe) {
-
-                Log.log(this.toString(), storage.toString(), "socket close error:"+ioe);
-
+            try {
+                socket.close();
+            }
+            catch (IOException ioe) {
+                logger.info("["+storage.toString()+"] Socket close error:", ioe);
             }
 
             socket = null;
@@ -424,17 +420,14 @@ class ServerConnectionHandler  extends Thread {
             long tt = System.currentTimeMillis() - startTime;
 
             listener.outgoingConnection();
-
-            if( Log.log ) {
-
-                Log.log(toString(), getReturnType(returnType),
-
-                        "time= "+tt+" dataIn= "+inLength+" dataOut= "+outLength+
-
-                        " init= "+t1+" ,rr= "+t2+" ,bro= "+t3+" ,cs= "+t4+" ,so= "+t5+" ,sr= "+t6);
-
+            
+            if(logger.isTraceEnabled()) {
+                logger.trace("[" + getReturnType(returnType) + "] " + "time= " + tt +
+                        " dataIn= " + inLength + " dataOut= " + outLength +
+                        " init= " + t1 + " ,rr= " + t2 + " ,bro= " + t3 + " ,cs= " 
+                        + t4 + " ,so= " + t5 + " ,sr= " + t6);
             }
-
+        
         }
 
     }

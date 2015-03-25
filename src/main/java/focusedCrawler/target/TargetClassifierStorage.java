@@ -5,9 +5,11 @@ import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.URLEncoder;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import weka.classifiers.Classifier;
 import weka.core.Instances;
-
 import focusedCrawler.util.Page;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.distribution.CommunicationException;
@@ -21,7 +23,10 @@ import focusedCrawler.util.storage.distribution.StorageCreator;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
 
-public class TargetClassifierStorage  extends StorageDefault{
+public class TargetClassifierStorage  extends StorageDefault {
+    
+    
+    private static final Logger logger = LoggerFactory.getLogger(TargetClassifierStorage.class);
 
 	private TargetClassifier targetClassifier;
 
@@ -54,29 +59,32 @@ public class TargetClassifierStorage  extends StorageDefault{
 	      totalOfPages++;
 	      try {
 	    	  double prob = targetClassifier.distributionForInstance(page)[0];
-		      System.out.println(">>>PROCESSING: " + page.getIdentifier() + " PROB:" + prob);
+		      logger.info("\n> PROCESSING: " + page.getIdentifier() +
+		                  "\n> PROB:" + prob);
 	    	  if(prob > 0.5){
 		    	  linkStorage.insert(page);
 		    	  page.setContent(page.getCleanContent());
 		    	  targetRepository.insert(page);
 		          totalOnTopicPages++;
 	    	  }
-	          System.out.println(getClass() + "TOTAL_PAGES=" + totalOfPages
-	                           + ": PAGE:" + page.getURL() + " RELEVANT:" +
-	                           totalOnTopicPages );
-	          System.out.println("---------------------------");
+	          logger.info(getClass() +
+	                  "\n> TOTAL_PAGES=" + totalOfPages +
+	                  "\n> PAGE:" + page.getURL() +
+	                  "\n> RELEVANT:" + totalOnTopicPages );
+	          
+	          logger.info("---------------------------");
 	          if(totalOfPages > limitOfPages){
 	        	  System.exit(0);
 	          }
 
 	      }
 	      catch (CommunicationException ex) {
-	        ex.printStackTrace();
+	        logger.error("An CommunicationException occurred.", ex);
 	        throw new StorageException(ex.getMessage());
 	      } catch (TargetClassifierException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	        logger.error("An TargetClassifierException occurred.", e);
+	      }
+	      
 	      return null;
 	    }
 
@@ -111,29 +119,28 @@ public class TargetClassifierStorage  extends StorageDefault{
   	        TargetClassifier targetClassifier = new TargetClassifierImpl(classifier, insts, attributes, stoplist);
 
 	        String targetDirectory = config.getParam("TARGET_STORAGE_DIRECTORY");
+	        
 	        TargetRepository targetRepository = new TargetFileRepository(targetDirectory);
-	        ParameterFile linkStorageConfig = new ParameterFile(config.getParam(
-	            "LINK_STORAGE_FILE"));
+	        ParameterFile linkStorageConfig = new ParameterFile(config.getParam("LINK_STORAGE_FILE"));
+	        
 	        Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
 	        Storage targetStorage = new TargetClassifierStorage(targetClassifier,targetDirectory,targetRepository,linkStorage);
+	        
 	        ((TargetClassifierStorage) targetStorage).setLimitPages(config.getParamInt("VISITED_PAGE_LIMIT"));
 	        StorageBinder binder = new StorageBinder(config);
 	        binder.bind(targetStorage);
-	      }catch (java.io.IOException ex) {
-	        ex.printStackTrace();
 	      }
-//	      catch (ClassNotFoundException ex) {
-//	        ex.printStackTrace();
-//	      }
+	      catch (java.io.IOException ex) {
+	        logger.info("An IO error occurred.", ex);
+	      }
 	      catch (StorageBinderException ex) {
-	        ex.printStackTrace();
+	        logger.error("Problem while binding storage.", ex);
 	      }
 	      catch (StorageFactoryException ex) {
-	        ex.printStackTrace();
+	        logger.error("Problem while creating link storage.", ex);
 	      } catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	        logger.error("Problem while loading classifier.", e);
+		  }
 	    }
 
 }

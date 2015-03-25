@@ -23,10 +23,13 @@
 */
 package focusedCrawler.link.frontier;
 
+import java.net.URL;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.PriorityQueueLink;
-
-import java.net.URL;
 
 /**
  * This class manages the crawler frontier
@@ -35,6 +38,8 @@ import java.net.URL;
  */
 
 public class FrontierManager {
+    
+    private static final Logger logger = LoggerFactory.getLogger(FrontierManager.class);
 
 	private PriorityQueueLink priorityQueue;
 
@@ -64,8 +69,9 @@ public class FrontierManager {
 	}
 
 	public void clearFrontier(){
+	    logger.info("Cleaning frontier... current queue size: " + priorityQueue.size());
 		priorityQueue.clear();
-		System.out.println("###QUEUE:" + priorityQueue.size());
+		logger.info("# Queue size:" + priorityQueue.size());
 	}
 
 	private void loadQueue(int numberOfLinks) throws FrontierPersistentException {
@@ -125,11 +131,13 @@ public class FrontierManager {
 				}
 			}while(limit && priorityQueue.size() > 0);
 			int value = (int)linkRelev.getRelevance()/100;
-			System.out.println(">>>>>URL:" + linkRelev.getURL() + " REL:" + value);
-			System.out.println(">>>RELEV:" + linkRelev.getRelevance());
+			
+			logger.info("\n> URL:" + linkRelev.getURL() +
+    			        "\n> REL:" + value +
+    			        "\n> RELEV:" + linkRelev.getRelevance());
 		}
 		else{
-			System.out.println("LOADED: " + linksToLoad);
+	        logger.info("LOADED: " + linksToLoad);
 			loadQueue(linksToLoad);
 		}
 		return linkRelev;

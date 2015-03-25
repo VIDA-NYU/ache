@@ -23,13 +23,32 @@
 */
 package focusedCrawler.util;
 
-import java.io.*;
-import java.util.*;
-import java.net.URL;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.SimpleTimeZone;
+import java.util.StringTokenizer;
+import java.util.TimeZone;
+import java.util.Vector;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import focusedCrawler.link.frontier.AddSeeds;
 
 public class ParameterFile {
+	
+  private static final Logger logger = LoggerFactory.getLogger(AddSeeds.class);
 
   protected static final String PRELOAD_PREFIX = "${";
   protected static final String PRELOAD_SUFIX  = "}";
@@ -58,8 +77,6 @@ public class ParameterFile {
     private BufferedReader in;
 
     private Hashtable hash;
-
-    private PrintStream log;
 
     // global data(public use)
     public final Hashtable data = new Hashtable();
@@ -105,7 +122,7 @@ public class ParameterFile {
     protected ParameterFile (File cfg_file, Hashtable hash) {
         this.cfg_file = cfg_file;
         this.hash = hash;
-        System.out.println ("CONFIGURATION FILE = " + cfg_file);
+        logger.info("CONFIGURATION FILE = " + cfg_file);
         loadHash();
     }
 
@@ -125,15 +142,9 @@ public class ParameterFile {
             return res;
         }
         catch(Exception e){
-            e.printStackTrace();
-            System.out.println("Error while reading seed list");
+        	logger.error("Error while reading seed list", e);
             return null;
         }
-    }
-
-    public PrintStream log() {
-        if (log == null) return System.out;
-        else return log;
     }
 
     public File getCfgFile () {
@@ -143,7 +154,7 @@ public class ParameterFile {
     public void setCfgFile (File cfg_file) {
         this.cfg_file = cfg_file;
         loadHash();
-        System.out.println ("CONFIGURATION FILE = " + cfg_file);
+        logger.info("CONFIGURATION FILE = " + cfg_file);
     }
 
     public URL getCfgUrl () {
@@ -153,7 +164,7 @@ public class ParameterFile {
     public void setCfgUrl (URL cfg_url) {
         this.cfg_url = cfg_url;
         loadHash();
-        System.out.println ("CONFIGURATION FILE = " + cfg_url);
+        logger.info("CONFIGURATION FILE = " + cfg_url);
     } //getParams
 
 
@@ -180,7 +191,7 @@ public class ParameterFile {
         if (hash == null) {
             loadHash();
         }
-        Vector data = (Vector)hash.get(param);
+        Vector data = (Vector) hash.get(param);
         if ( data != null ) {
             if (posicao == -1) {
                 for(int i = 0 ; i < data.size() ; i++ ) {
@@ -198,7 +209,7 @@ public class ParameterFile {
             }
         }
         if (valor == null) {
-            System.out.println("Warning: ParameterFile.getParam(\""+param+"\","+posicao+")=null");
+        	logger.warn("ParameterFile.getParam(\""+param+"\","+posicao+")=null");
         }
         return ( valor != null ? valor.trim() : null );
     }
@@ -211,7 +222,7 @@ public class ParameterFile {
     public int getParamInt(String param) {
         String value = getParam(param);
         if (value == null) {
-            System.out.println("ParameterFile: getParamInt WARNING " + param + " == null" );
+            logger.warn("ParameterFile: getParamInt WARNING " + param + " == null" );
             return 0;
         }
         return Integer.parseInt(value);
@@ -220,7 +231,7 @@ public class ParameterFile {
     public long getParamLong(String param) {
         String value = getParam(param);
         if (value == null) {
-            System.out.println("ParameterFile: getParamLong WARNING " + param + " == null" );
+            logger.warn("ParameterFile: getParamLong WARNING " + param + " == null" );
             return 0;
         }
         return Long.parseLong(value);
@@ -229,7 +240,7 @@ public class ParameterFile {
     public boolean getParamBoolean(String param) {
         String value = getParam(param);
         if (value == null) {
-            System.out.println("ParameterFile: getParamBoolean WARNING " + param + " == null" );
+            logger.warn("ParameterFile: getParamBoolean WARNING " + param + " == null" );
             return false;
         }
         return Boolean.valueOf(value).booleanValue();
@@ -238,7 +249,7 @@ public class ParameterFile {
     public float getParamFloat(String param) {
         String value = getParam(param);
         if (value == null) {
-            System.out.println("ParameterFile: getParamFloat WARNING " + param + " == null" );
+            logger.warn("ParameterFile: getParamFloat WARNING " + param + " == null" );
             return 0;
         }
         return Float.parseFloat(value);
@@ -247,7 +258,7 @@ public class ParameterFile {
     public double getParamDouble(String param) {
         String value = getParam(param);
         if (value == null) {
-            System.out.println("ParameterFile: getParamDouble WARNING " + param + " == null" );
+            logger.warn("ParameterFile: getParamDouble WARNING " + param + " == null" );
             return 0;
         }
         return Double.parseDouble(value);
@@ -256,7 +267,7 @@ public class ParameterFile {
     public short getParamShort(String param) {
         String value = getParam(param);
         if (value == null) {
-            System.out.println("ParameterFile: getParamShort WARNING " + param + " == null" );
+            logger.warn("ParameterFile: getParamShort WARNING " + param + " == null" );
             return 0;
         }
         return Short.parseShort(value);
@@ -265,7 +276,7 @@ public class ParameterFile {
     public byte getParamByte(String param) {
         String value = getParam(param);
         if (value == null) {
-            System.out.println("ParameterFile: getParamByte WARNING " + param + " == null" );
+            logger.warn("ParameterFile: getParamByte WARNING " + param + " == null" );
             return 0;
         }
         return Byte.parseByte(value);
@@ -303,7 +314,7 @@ public class ParameterFile {
             String param = value.substring(start+PRELOAD_PREFIX.length(),end);
             String param_value = getParam (param);
             if( param_value == null ) {
-                System.out.println("The parameter '"+param+"' is missing in your configuration file.");
+                logger.warn("The parameter '"+param+"' is missing in your configuration file.");
                 return null;
             }
             if( param_value != null ) {
@@ -335,7 +346,7 @@ public class ParameterFile {
                 filename = filename.substring(3,filename.length());
             }
             else {
-                  System.out.println("Could not find parent file of "+load);
+                  logger.error("Could not find parent file of "+load);
                   System.exit(1);
             }
         }
@@ -344,7 +355,7 @@ public class ParameterFile {
             return load.getAbsolutePath();
         }
         else {
-              System.out.println("File '"+load+"' not found!");
+              logger.error("File '"+load+"' not found!");
               System.exit(1);
               return null;
         }
@@ -355,7 +366,7 @@ public class ParameterFile {
         String param = "";
         while (chaves.hasMoreElements()){
             param = (String) chaves.nextElement();
-            System.out.println("Parametro: "+ param + " : "+ this.getParam(param));
+            logger.debug("Parameter: "+ param + " : "+ this.getParam(param));
         }
     }
 
@@ -378,10 +389,11 @@ public class ParameterFile {
                     in = new BufferedReader(new InputStreamReader (url_con.getInputStream()));
                 } //else
             } //try
-            catch (IOException erro) {
-                erro.printStackTrace ();
+            catch (IOException e) {
+            	logger.error(e.getMessage(), e);
                 return;
             } //catch
+            
             String line;
             while( (line = in.readLine()) != null) {
                 StringTokenizer st = new StringTokenizer(line);
@@ -424,35 +436,24 @@ public class ParameterFile {
                 }
                 if (param != null && param.length() > 0)  hash.put(param,values);
             }
-        }catch(IOException ioe) {
-            ioe.printStackTrace ();
-            System.out.println("Nao conseguiu ler o arquivo de configuracoes : "+ioe.getMessage());
-        } //catch
+        }
+        catch(IOException ioe) {
+        	logger.error("Problem while reading configuration file.", ioe);
+        }
         finally {
             try {
                 if (in != null) {
                     in.close();
                 } //if
-            }catch (IOException erro) {
-                erro.printStackTrace ();
+            }
+            catch (IOException erro) {
+                logger.error("Problem while closing input.", erro);
             } //catch
             if (tipo == URL) {
                 url_con.disconnect ();
             } //if
         }
-        // carrega o stream de log
-        String log_file = (String) hash.get("LOG_FILENAME");
-        if (log != null) {
-            log.close();
-            log = null;
-        }
-        if (log_file != null) {
-            try {
-                log = new PrintStream(new FileOutputStream(log_file, true));
-            } catch(IOException ioe) {
-                ioe.printStackTrace();
-            }
-        }
+        
     }
 
     public static void main(String args[]) throws MalformedURLException{

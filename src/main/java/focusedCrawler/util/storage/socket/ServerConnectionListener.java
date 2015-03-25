@@ -23,24 +23,20 @@
 */
 package focusedCrawler.util.storage.socket;
 
+import java.io.IOException;
 import java.net.ServerSocket;
-
 import java.net.Socket;
 
-import java.io.IOException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import focusedCrawler.util.Log;
 import focusedCrawler.util.storage.Storage;
-
-
-
-
 
 
 
 class ServerConnectionListener  extends Thread {
 
-
+    public static final Logger logger = LoggerFactory.getLogger(ServerConnectionListener.class);
 
     private Storage storage;
 
@@ -58,7 +54,7 @@ class ServerConnectionListener  extends Thread {
 
     private int concurrentAccess=0;
 
-    private int maxConcurrentAccess=128;
+//    private int maxConcurrentAccess=128;
 
 
 
@@ -122,7 +118,7 @@ class ServerConnectionListener  extends Thread {
 
         setName(this.toString());
 
-        Log.log(this.toString(), storage.toString(), "listening on port " + port);
+        logger.info("Listening on port " + port);
 
     }
 
@@ -157,37 +153,27 @@ class ServerConnectionListener  extends Thread {
     public void run() {
 
         while(running) {
-
             try {
-
                 Socket clientSocket = serverSocket.accept();
 
                 if (!running) {
-
                     clientSocket.close();
-
                     break;
-
                 }
 
                 int number = incomeConnection();
 
-                ServerConnectionHandler handler;
-
-                handler = new ServerConnectionHandler(number, storageName, storage, clientSocket, this);
+                ServerConnectionHandler handler = new ServerConnectionHandler(
+                        number, storageName, storage, clientSocket, this);
 
                 handler.start();
 
             } catch(Exception  e) {
-
-                Log.log(this.toString(), storage.toString(), "server error : " + e.getMessage());
-
+                logger.error("Server error : " + e.getMessage(), e);
             }
 
         }
-
-        Log.log(this.toString(), storage.toString(), "server died");
-
+        logger.info("Server connection listener for storage ["+storage.toString()+"] stopped.");
     }
 
 

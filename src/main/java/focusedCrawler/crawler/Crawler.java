@@ -26,6 +26,9 @@ package focusedCrawler.crawler;
 //crawler
 import java.net.URL;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * <p>Description: This abstract class implements the partial behavior
  * of a webcrawler</p>
@@ -54,6 +57,9 @@ public abstract class Crawler extends Thread {
                                          PROCESS_DATA,CHECK_DATA,SEND_DATA,
                                          END,SLEEPING};
   public static final int DEAD         = SLEEPING + 1;
+  
+  
+  private static final Logger logger = LoggerFactory.getLogger(Crawler.class);
 
   private int status;
 
@@ -136,7 +142,7 @@ public abstract class Crawler extends Thread {
          return jump;
      }
      public void setJump(boolean newJump,String message) {
-         System.out.println(message);
+         logger.info(message);
          setJump(newJump);
      }
 
@@ -232,7 +238,7 @@ public abstract class Crawler extends Thread {
                      cleanup();
                      continue;
                  }
-                  System.out.println(getName()+">after request url");
+                 logger.trace(getName()+">after request url");
 
                  setStatus(CHECK_URL);
                  time = System.currentTimeMillis();
@@ -243,7 +249,7 @@ public abstract class Crawler extends Thread {
                      cleanup();
                      continue;
                  }
-                 System.out.println(getName()+">after check url");
+                 logger.trace(getName()+">after check url");
 
                  setStatus(DOWNLOAD_URL);
                  time = System.currentTimeMillis();
@@ -254,7 +260,7 @@ public abstract class Crawler extends Thread {
                      cleanup();
                      continue;
                  }
-                 System.out.println(getName()+">after download data");
+                 logger.trace(getName()+">after download data");
 
                  setStatus(PROCESS_DATA);
                  time = System.currentTimeMillis();
@@ -265,7 +271,7 @@ public abstract class Crawler extends Thread {
                      cleanup();
                      continue;
                  }
-                 System.out.println(getName()+">after process data");
+                 logger.trace(getName()+">after process data");
 
                  setStatus(CHECK_DATA);
                  time = System.currentTimeMillis();
@@ -276,13 +282,13 @@ public abstract class Crawler extends Thread {
                      cleanup();
                      continue;
                  }
-                 System.out.println(getName()+">after check data");
+                 logger.trace(getName()+">after check data");
 
                  setStatus(SEND_DATA);
                  time = System.currentTimeMillis();
                  sendData();
                  setPartitionTime(SEND_DATA,System.currentTimeMillis()-time);
-                 System.out.println(getName()+">after send data");
+                 logger.trace(getName()+">after send data");
 
                  setLastException(null);
                  setStatus(END);
@@ -290,8 +296,7 @@ public abstract class Crawler extends Thread {
                  restingSleep();
              }
              catch(CrawlerException re) {
-                 System.out.println(re.getMessage());
-                 re.printStackTrace();
+                 logger.error(re.getMessage(), re);
                  if( re.detail != null ) {
                      re.detail.printStackTrace();
                  }
@@ -300,13 +305,13 @@ public abstract class Crawler extends Thread {
                      setStatus(SLEEPING);
                      time = System.currentTimeMillis();
                      if( !stop ) {
-                         System.out.println("R>"+getName()+">Sleeping "+sleepTime+" mls.");
+                         logger.info("Sleeping "+sleepTime+" mls due to last error.");
                          sleep(sleepTime);
                      }
                      setPartitionTime(SLEEPING,System.currentTimeMillis()-time);
                  }
                  catch( InterruptedException ie ) {
-                     ie.printStackTrace();
+                     logger.error("Sleeping interrupted.", ie);
                  }
              }
              finally {
@@ -314,7 +319,7 @@ public abstract class Crawler extends Thread {
                      cleanup();
                  }
                  catch(Exception exc) {
-                     exc.printStackTrace();
+                     logger.info("Problem while executing cleanup.", exc);
                  }
                  setPartitionTime(END,System.currentTimeMillis()-time);
                  setTotalCicleTime(System.currentTimeMillis() - getStartCicleTime());
@@ -323,16 +328,16 @@ public abstract class Crawler extends Thread {
              for(int i = 0; i < STATES.length; i++) {
                  parts += (i==0?""+getPartitionTime(i):","+getPartitionTime(i));
              }
-             System.out.println("R>"+getName()+">Total time is "+getTotalCicleTime()+" mls ["+parts+"]");
+             logger.info("Total time is "+getTotalCicleTime()+" mls ["+parts+"]");
          }
          try {
-             System.out.println("R>"+getName()+">Thread dead, calling cleanup().");
+             logger.info("Thread dead, calling cleanup().");
              setStatus(DEAD);
              cleanup();
-             System.out.println("R>"+getName()+">Thread dead cleanup() done.");
+             logger.info("Thread dead cleanup() done.");
          }
          catch(Exception exc) {
-             exc.printStackTrace();
+             logger.info("Problem while finishing crawler thread.", exc);
          }
      }
      public void restingSleep() {

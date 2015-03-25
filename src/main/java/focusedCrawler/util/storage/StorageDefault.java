@@ -43,7 +43,7 @@ import focusedCrawler.util.distribution.CommunicationException;
 
  */
 
-public class StorageDefault extends SelfLoggable implements Storage {
+public class StorageDefault implements Storage {
 
 
 
