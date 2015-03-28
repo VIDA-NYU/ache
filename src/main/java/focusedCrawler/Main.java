@@ -1,18 +1,20 @@
 package focusedCrawler;
 
 import java.io.File;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import weka.classifiers.functions.SMO;
 import focusedCrawler.crawler.CrawlerManager;
+import focusedCrawler.crawler.CrawlerManagerException;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.AddSeeds;
 import focusedCrawler.target.CreateWekaInput;
 import focusedCrawler.target.TargetStorage;
+import focusedCrawler.util.ParameterFile;
+import focusedCrawler.util.storage.Storage;
+import focusedCrawler.util.storage.StorageFactoryException;
 
 /**
  * <p>Description: This is the main entry point for working with the components of the focusedCrawler </p>
@@ -24,7 +26,9 @@ public class Main {
 
     public static void main(String... args) {
         if (args.length > 0) {
-            if ("addSeeds".equals(args[0]) && args.length == 4) {
+            if ("startCrawl".equals(args[0]) && args.length == 6) {
+                startCrawl(args[1], args[2], args[3], args[4], args[5]);
+            } else if ("addSeeds".equals(args[0]) && args.length == 4) {
                 addSeeds(args[1], args[2], args[3]);
             } else if ("buildModel".equals(args[0]) && args.length == 4) {
                 buildModel(args[1], args[2], args[3]);
@@ -107,34 +111,39 @@ public class Main {
 
         // add seeds
         AddSeeds.main(new String[]{configPath, seedPath, dataOutputPath});
+        
 
-        // start link storage
-        ExecutorService crawlServices = Executors.newFixedThreadPool(3);
-        crawlServices.submit(new Runnable() {
-            @Override
-            public void run() {
-                startLinkStorage(dataOutputPath, configPath, seedPath);
-            }
-        });
+        ParameterFile linkStorageConfig = new ParameterFile(configPath + "/link_storage/link_storage.cfg");
 
-        // start target storage
-        crawlServices.submit(new Runnable() {
-            @Override
-            public void run() {
-               startTargetStorage(dataOutputPath, configPath, modelPath, langDetectProfilePath);
-            }
-        });
-
-        // start crawl manager
-        crawlServices.submit(new Runnable() {
-            @Override
-            public void run() {
-                startCrawlManager(configPath);
-            }
-        });
+        try {
+            Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
+                                                                dataOutputPath, linkStorageConfig);
+            
+            // start target storage
+            String targetConfFile = configPath + "/target_storage/target_storage.cfg";
+            ParameterFile targetStorageConfig = new ParameterFile(targetConfFile);
+            
+            Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath,
+                                                                      dataOutputPath,
+                                                                      targetStorageConfig,
+                                                                      linkStorage);
+            
+            String crawlerConfigFile = configPath + "/crawler/crawler.cfg";
+            
+            // start crawl manager
+            CrawlerManager manager = CrawlerManager.createCrawlerManager(crawlerConfigFile, linkStorage, targetStorage);
+            manager.start();
+            
+        } catch (StorageFactoryException e) {
+            logger.error("Problem while creating Storage", e);
+        } catch (CrawlerManagerException e) {
+            logger.error("Problem while creating CrawlerManager", e);
+        } catch (Exception e) {
+            logger.error("Problem while starting crawler.", e);
+        }
+        
     }
 
-    @SuppressWarnings("ResultOfMethodCallIgnored")
     private static void createOutputPathStructure(String dataOutputPath) {
         File dataOutput = new File(dataOutputPath);
         if (dataOutput.exists()) {

@@ -70,19 +70,19 @@ public class BipartiteGraphManager {
 	
 	private final int pagesToCommit = 100;
 	
-	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRep rep, LinkClassifier outlinkClassifier) throws IOException, ClassNotFoundException{
+	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRep rep, LinkClassifier outlinkClassifier) {
 		this.frontierManager = frontierManager;
 		this.outlinkClassifier = outlinkClassifier;
 		this.rep = rep;
-    this.domainCounter = new HashMap<String, Integer>();
+		this.domainCounter = new HashMap<String, Integer>();
 	}
 	
-	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRep rep, LinkClassifier outlinkClassifier, LinkClassifier backlinkClassifier) throws IOException, ClassNotFoundException{
+	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRep rep, LinkClassifier outlinkClassifier, LinkClassifier backlinkClassifier) {
 		this.frontierManager = frontierManager;
 		this.outlinkClassifier = outlinkClassifier;
 		this.backlinkClassifier = backlinkClassifier;
 		this.rep = rep;
-    this.domainCounter = new HashMap<String, Integer>();
+		this.domainCounter = new HashMap<String, Integer>();
 	}
 
   public void setMaxPages(int max){

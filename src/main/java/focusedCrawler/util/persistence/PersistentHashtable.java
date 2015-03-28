@@ -59,7 +59,7 @@ public class PersistentHashtable {
 	private Tuple[] tempList = new Tuple[tempCacheSize]; 
 	
 	
-	public PersistentHashtable(String path, int cacheSize) throws Exception{
+	public PersistentHashtable(String path, int cacheSize) {
 
 		try {
 //			this.indexer = new FileIndexer(path);
@@ -92,7 +92,7 @@ public class PersistentHashtable {
 //		return this.persistentTable;
 //	}
 	
-	private void loadCache(int cacheSize) throws Exception {
+	private void loadCache(int cacheSize) {
 		try {
 			Tuple[] tuples = persistentTable.listElements();
 			int count = 0;
@@ -106,7 +106,7 @@ public class PersistentHashtable {
 		} catch (DatabaseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			throw new Exception(e.getMessage());
+			throw new RuntimeException(e.getMessage());
 		}
 /*
 		TermEnum terms = searcher.listElements(path);

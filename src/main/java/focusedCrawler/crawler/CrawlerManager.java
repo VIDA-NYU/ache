@@ -55,11 +55,7 @@ public class CrawlerManager extends Thread {
 
     private ParameterFile configManager;
 
-    private ParameterFile configLinkStorage;
-
     private Storage linkStorage;
-
-    private ParameterFile configFormStorage;
 
     private Storage formStorage;
 
@@ -82,16 +78,13 @@ public class CrawlerManager extends Thread {
     private int permitedThreadsFactor;
     
     public CrawlerManager(ParameterFile configManager,
-                                Storage linkStorage, ParameterFile configLinkStorage,
-                                Storage formStorage, ParameterFile configFormStorage,
+                                Storage linkStorage, Storage formStorage,
                                 ThreadGroup crawlerThreadGroup, int crawlersNumber,
                                 long sleepCheckTime,long maxCrawlerLifeTime) throws CrawlerManagerException {
 
         setConfigManager(configManager);
         setLinkStorage(linkStorage);
-        setConfigLinkStorage(configLinkStorage);
         setFormStorage(formStorage);
-        setConfigFormStorage(configFormStorage);
         setCrawlerThreadGroup(crawlerThreadGroup);
         setCrawlers(new Crawler[crawlersNumber]);
         setSleepCheckTime(sleepCheckTime);
@@ -126,21 +119,10 @@ public class CrawlerManager extends Thread {
 
 
     public Storage getFormStorage() {
+        
         return formStorage;
+        
     }
-
-    public void setConfigLinkStorage(ParameterFile newConfigLinkStorage) {
-
-        configLinkStorage = newConfigLinkStorage;
-
-    }
-
-    public ParameterFile getConfigLinkStorage() {
-
-        return configLinkStorage;
-
-    }
-
 
 
     public void setLinkStorage(Storage newLinkStorage) {
@@ -154,19 +136,6 @@ public class CrawlerManager extends Thread {
         return linkStorage;
 
     }
-
-    public void setConfigFormStorage(ParameterFile newConfigFormStorage) {
-
-        configFormStorage = newConfigFormStorage;
-
-    }
-
-    public ParameterFile getConfigFormStorage() {
-
-        return configFormStorage;
-
-    }
-
 
 
     public void setCrawlerThreadGroup(ThreadGroup newCrawlerThreadGroup) {
@@ -635,63 +604,69 @@ public class CrawlerManager extends Thread {
     }
 
     public static void main(String[] args) throws IOException, NumberFormatException {
-         
-       logger.info("Starting CrawlerManager...");
 
-       String crawlerConfigFile = args[0] + "/crawler/crawler.cfg";
-       String linkConfigFile = args[0] + "/link_storage/link_storage.cfg";
-       String formConfigFile = args[0] + "/target_storage/target_storage.cfg";
-       
-       ParameterFile config = new ParameterFile(crawlerConfigFile);
-       
-       ThreadGroup tg = new ThreadGroup(config.getParam("ROBOT_THREAD_GROUP"));
-       
-       int numberRobots = Integer.valueOf(config.getParam("ROBOT_QUANTITY")).intValue();
-       
-       long restingTime = 0;
-       try {
-           restingTime = Long.valueOf(config.getParam("ROBOT_MANAGER_RESTINGTIME")).longValue();
-       }
-       catch(NumberFormatException nfe) {
-           logger.warn("Resting time not found. RestingTime bound to '0'");
-       }
+        logger.info("Starting CrawlerManager...");
 
-       try{
-         
-         long sleepCheckTime = Long.valueOf(config.getParam("ROBOT_MANAGER_CHECKTIME")).longValue();
-         long maxRobotLifeTime = Long.valueOf(config.getParam("ROBOT_MANAGER_MAXTIME")).longValue();
-         
-         ParameterFile configLinkStorage = new ParameterFile(linkConfigFile);
-         Storage linkStorage = new StorageCreator(configLinkStorage).produce();
-         
-         ParameterFile configFormStorage = new ParameterFile(formConfigFile);
-         Storage formStorage = new StorageCreator(configFormStorage).produce();
-         
-         CrawlerManager manager = new CrawlerManager(config, linkStorage,
-                                                     configLinkStorage,
-                                                     formStorage,
-                                                     configFormStorage,
-                                                     tg, numberRobots,
-                                                     sleepCheckTime,
-                                                     maxRobotLifeTime);
-         manager.setRestingTime(restingTime);
-         manager.createCrawlers();
-         
-         long sleepErrorTimeCheck = Long.valueOf(config.getParam("ROBOT_MANAGER_ROBOT_ERROR_SLEEP_TIME")).longValue();
-         manager.setSleepErrorTime(sleepErrorTimeCheck);
-         
-         int fatorPermitedThreads = Long.valueOf(config.getParam("ROBOT_MANAGER_ROBOT_THREAD_FACTOR")).intValue();
-         manager.setFatorPermitedThreads(fatorPermitedThreads);
-         
-         manager.start();
-         
-     }
-     catch (CrawlerManagerException ex) {
-        logger.error("An error occurred while starting CrawlerManager. ", ex);
-     }
-     catch (StorageFactoryException ex) {
-         logger.error("An error occurred while starting CrawlerManager. ", ex);
-     } 
-   }
+        String crawlerConfigFile = args[0] + "/crawler/crawler.cfg";
+        String linkConfigFile = args[0] + "/link_storage/link_storage.cfg";
+        String formConfigFile = args[0] + "/target_storage/target_storage.cfg";
+
+        try {
+
+            ParameterFile configLinkStorage = new ParameterFile(linkConfigFile);
+            Storage linkStorage = new StorageCreator(configLinkStorage).produce();
+
+            ParameterFile configFormStorage = new ParameterFile(formConfigFile);
+            Storage formStorage = new StorageCreator(configFormStorage).produce();
+
+            CrawlerManager manager = createCrawlerManager(crawlerConfigFile, linkStorage, formStorage);
+
+            manager.start();
+
+        } catch (CrawlerManagerException ex) {
+            logger.error("An error occurred while starting CrawlerManager. ", ex);
+        } catch (StorageFactoryException ex) {
+            logger.error("An error occurred while starting CrawlerManager. ", ex);
+        }
+    }
+
+    public static CrawlerManager createCrawlerManager(String crawlerConfigFile,
+                                                      Storage linkStorage,
+                                                      Storage formStorage)
+                                                      throws CrawlerManagerException {
+        
+        ParameterFile config = new ParameterFile(crawlerConfigFile);
+
+        ThreadGroup tg = new ThreadGroup(config.getParam("ROBOT_THREAD_GROUP"));
+
+        int numberRobots = Integer.valueOf(config.getParam("ROBOT_QUANTITY")).intValue();
+
+        long restingTime = 0;
+        try {
+            restingTime = Long.valueOf(config.getParam("ROBOT_MANAGER_RESTINGTIME")).longValue();
+        } catch (NumberFormatException nfe) {
+            logger.warn("Resting time not found. RestingTime bound to '0'");
+        }
+
+        long sleepCheckTime = Long.valueOf(config.getParam("ROBOT_MANAGER_CHECKTIME")).longValue();
+        long maxRobotLifeTime = Long.valueOf(config.getParam("ROBOT_MANAGER_MAXTIME")).longValue();
+       
+       
+       
+        CrawlerManager manager = new CrawlerManager(config, linkStorage, formStorage, tg,
+                                                    numberRobots, sleepCheckTime,
+                                                    maxRobotLifeTime);
+
+        manager.setRestingTime(restingTime);
+        manager.createCrawlers();
+
+        long sleepErrorTimeCheck = Long.valueOf(config.getParam("ROBOT_MANAGER_ROBOT_ERROR_SLEEP_TIME")).longValue();
+        manager.setSleepErrorTime(sleepErrorTimeCheck);
+
+        int fatorPermitedThreads = Long.valueOf(config.getParam("ROBOT_MANAGER_ROBOT_THREAD_FACTOR")).intValue();
+        manager.setFatorPermitedThreads(fatorPermitedThreads);
+        return manager;
+    }
+    
 }
 

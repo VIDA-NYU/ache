@@ -458,10 +458,8 @@ public class FrontierTargetRepositoryBaseline {
 		}
 		catch (FrontierPersistentException ex) {
 			ex.printStackTrace();
-		} catch (CacheException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

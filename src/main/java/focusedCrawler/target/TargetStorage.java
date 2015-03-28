@@ -2,6 +2,8 @@ package focusedCrawler.target;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.URLEncoder;
@@ -21,6 +23,7 @@ import focusedCrawler.util.distribution.CommunicationException;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
+import focusedCrawler.util.storage.StorageFactoryException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
 import focusedCrawler.util.storage.distribution.StorageCreator;
 import focusedCrawler.util.string.StopList;
@@ -214,7 +217,7 @@ public class TargetStorage  extends StorageDefault{
         }
         catch (CommunicationException ex) {
             logger.error("Communication error while inserting.", ex);
-            throw new StorageException(ex.getMessage());
+            throw new StorageException(ex.getMessage(), ex);
         } catch (TargetClassifierException tce) {
         	logger.error("Classification error while inserting.", tce);
         }
@@ -240,66 +243,15 @@ public class TargetStorage  extends StorageDefault{
             String configPath = args[0];
             String modelPath = args[1];
             String dataPath = args[2];
+            
             String targetConfFile = configPath + "/target_storage/target_storage.cfg";
-            String linkConfFile = configPath + "/link_storage/link_storage.cfg";
             ParameterFile config = new ParameterFile(targetConfFile);
-            String stoplistFile = configPath  + "/stoplist.txt"; //default
-            StopList stoplist = new StopListArquivo(stoplistFile);
-            boolean useClassifier = config.getParamBoolean("USE_CLASSIFIER");
-            TargetClassifier targetClassifier = null;
-            //if one wants to use a classifier
-            if(useClassifier){
-                String modelFile = modelPath + "/pageclassifier.model";
-                String featureFile = modelPath + "/pageclassifier.features";
-                ParameterFile featureConfig = new ParameterFile(featureFile);
-                InputStream is = new FileInputStream(modelFile);
-                ObjectInputStream objectInputStream = new ObjectInputStream(is);
-                Classifier classifier = (Classifier) objectInputStream.readObject();
-                is.close();
-                String[] attributes = featureConfig.getParam("ATTRIBUTES", " ");
-                weka.core.FastVector vectorAtt = new weka.core.FastVector();
-                for (int i = 0; i < attributes.length; i++) {
-                    vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
-                }
-                String[] classValues = featureConfig.getParam("CLASS_VALUES", " ");
-                weka.core.FastVector classAtt = new weka.core.FastVector();
-                for (int i = 0; i < classValues.length; i++) {
-                    classAtt.addElement(classValues[i]);
-                }
-                vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
-                Instances insts = new Instances("target_classification", vectorAtt, 1);
-                insts.setClassIndex(attributes.length);
-                targetClassifier = new TargetClassifierImpl(classifier, insts, attributes, stoplist);
-            }
-            String targetDirectory = dataPath + "/" + config.getParam("TARGET_STORAGE_DIRECTORY");
-            String negativeDirectory = dataPath + "/" + config.getParam("NEGATIVE_STORAGE_DIRECTORY");
-			String data_format = config.getParam("DATA_FORMAT");
-			TargetRepository targetRepository; 
-            TargetRepository negativeRepository;
-			if (data_format.equals("CBOR")) {
-            	targetRepository = new TargetCBORRepository(targetDirectory);
-            	negativeRepository = new TargetCBORRepository(negativeDirectory);
-			}
-			else {
-    			//Default data format is file
-            	targetRepository = new TargetFileRepository(targetDirectory);
-            	negativeRepository = new TargetFileRepository(negativeDirectory);
-			}
+            
+            String linkConfFile = configPath + "/link_storage/link_storage.cfg";
             ParameterFile linkStorageConfig = new ParameterFile(linkConfFile);
             Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
-            int crawledFreq = config.getParamInt("CRAWLED_REFRESH_FREQUENCY");
-            int relevantFreq = config.getParamInt("RELEVANT_REFRESH_FREQUENCY");
-            int harvestinfoFreq = config.getParamInt("HARVESTINFO_REFRESH_FREQUENCY");
-            int refreshFreq = config.getParamInt("SYNC_REFRESH_FREQUENCY");
-            boolean isRefreshSync = config.getParamBoolean("REFRESH_SYNC");
-            float relevanceThreshold = config.getParamFloat("RELEVANCE_THRESHOLD");
-            TargetMonitor mnt = new TargetMonitor(dataPath + "/data_monitor/crawledpages.csv", 
-                                                  dataPath + "/data_monitor/relevantpages.csv", 
-                                                  dataPath + "/data_monitor/harvestinfo.csv",
-                                                  dataPath + "/data_monitor/nonrelevantpages.csv");
-            Storage targetStorage = new TargetStorage(targetClassifier,targetDirectory,targetRepository,
-                    linkStorage,config.getParamInt("VISITED_PAGE_LIMIT"),config.getParamBoolean("HARD_FOCUS"),
-                    config.getParamBoolean("BIPARTITE"), crawledFreq, relevantFreq, harvestinfoFreq, refreshFreq, isRefreshSync, relevanceThreshold, mnt, config.getParamBoolean("SAVE_NEGATIVE_PAGES"), negativeRepository);
+            
+            Storage targetStorage = createTargetStorage(configPath, modelPath, dataPath, config, linkStorage);
 
             StorageBinder binder = new StorageBinder(config);
             binder.bind(targetStorage);
@@ -307,4 +259,101 @@ public class TargetStorage  extends StorageDefault{
         	logger.error("Error while starting TargetStorage", e);
         }
     }
+
+    public static Storage createTargetStorage(String configPath, String modelPath,
+                                              String dataPath, ParameterFile config,
+                                              Storage linkStorage)
+                                              throws IOException, StorageFactoryException {
+        
+        String stoplistFile = configPath  + "/stoplist.txt"; //default
+        
+        StopList stoplist = new StopListArquivo(stoplistFile);
+        
+        
+        //if one wants to use a classifier
+        boolean useClassifier = config.getParamBoolean("USE_CLASSIFIER");
+        TargetClassifier targetClassifier = null;
+        if(useClassifier){
+            targetClassifier = createClassifier(modelPath, stoplist);
+        }
+        
+        String targetDirectory = dataPath + "/" + config.getParam("TARGET_STORAGE_DIRECTORY");
+        String negativeDirectory = dataPath + "/" + config.getParam("NEGATIVE_STORAGE_DIRECTORY");
+        String data_format = config.getParam("DATA_FORMAT");
+        
+        TargetRepository targetRepository; 
+        TargetRepository negativeRepository;
+        
+        if (data_format.equals("CBOR")) {
+        	targetRepository = new TargetCBORRepository(targetDirectory);
+        	negativeRepository = new TargetCBORRepository(negativeDirectory);
+        }
+        else {
+        	//Default data format is file
+        	targetRepository = new TargetFileRepository(targetDirectory);
+        	negativeRepository = new TargetFileRepository(negativeDirectory);
+        }
+        
+        int crawledFreq = config.getParamInt("CRAWLED_REFRESH_FREQUENCY");
+        int relevantFreq = config.getParamInt("RELEVANT_REFRESH_FREQUENCY");
+        int harvestinfoFreq = config.getParamInt("HARVESTINFO_REFRESH_FREQUENCY");
+        int refreshFreq = config.getParamInt("SYNC_REFRESH_FREQUENCY");
+        boolean isRefreshSync = config.getParamBoolean("REFRESH_SYNC");
+        float relevanceThreshold = config.getParamFloat("RELEVANCE_THRESHOLD");
+        TargetMonitor mnt = new TargetMonitor(dataPath + "/data_monitor/crawledpages.csv", 
+                                              dataPath + "/data_monitor/relevantpages.csv", 
+                                              dataPath + "/data_monitor/harvestinfo.csv",
+                                              dataPath + "/data_monitor/nonrelevantpages.csv");
+        
+        Storage targetStorage = new TargetStorage(targetClassifier, targetDirectory,
+                targetRepository, linkStorage,
+                config.getParamInt("VISITED_PAGE_LIMIT"), config.getParamBoolean("HARD_FOCUS"),
+                config.getParamBoolean("BIPARTITE"), crawledFreq, relevantFreq,
+                harvestinfoFreq, refreshFreq, isRefreshSync, relevanceThreshold, mnt,
+                config.getParamBoolean("SAVE_NEGATIVE_PAGES"), negativeRepository);
+        
+        return targetStorage;
+    }
+
+    private static TargetClassifier createClassifier(String modelPath, StopList stoplist) {
+        
+        String modelFile = modelPath + "/pageclassifier.model";
+        String featureFile = modelPath + "/pageclassifier.features";
+        
+        try {
+            ParameterFile featureConfig = new ParameterFile(featureFile);
+            
+            InputStream is = new FileInputStream(modelFile);
+            ObjectInputStream objectInputStream = new ObjectInputStream(is);
+            Classifier classifier = (Classifier) objectInputStream.readObject();
+            is.close();
+            
+            String[] attributes = featureConfig.getParam("ATTRIBUTES", " ");
+            weka.core.FastVector vectorAtt = new weka.core.FastVector();
+            for (int i = 0; i < attributes.length; i++) {
+                vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
+            }
+            String[] classValues = featureConfig.getParam("CLASS_VALUES", " ");
+            weka.core.FastVector classAtt = new weka.core.FastVector();
+            for (int i = 0; i < classValues.length; i++) {
+                classAtt.addElement(classValues[i]);
+            }
+            vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
+            Instances insts = new Instances("target_classification", vectorAtt, 1);
+            insts.setClassIndex(attributes.length);
+            
+            return new TargetClassifierImpl(classifier, insts, attributes, stoplist);
+            
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException("Could not find file: "+modelFile, e);
+        }
+        catch (IOException e) {
+            throw new RuntimeException("Could not deserialize classifier.", e);
+        }
+        catch(ClassNotFoundException e) {
+            throw new RuntimeException("Could not deserialize classifier.", e);
+        }
+        
+    }
+    
 }

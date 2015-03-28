@@ -24,6 +24,7 @@
 package focusedCrawler.link;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,6 +35,7 @@ import org.slf4j.LoggerFactory;
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierException;
 import focusedCrawler.link.classifier.LinkClassifierFactory;
+import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.classifier.LinkClassifierFactoryImpl;
 import focusedCrawler.link.classifier.LinkClassifierHub;
 import focusedCrawler.link.classifier.builder.BacklinkSurfer;
@@ -213,114 +215,189 @@ public class LinkStorage extends StorageDefault{
     return next;
   }
 
-  public static void main(String[] args) throws FrontierPersistentException {
+    public static void main(String[] args) throws FrontierPersistentException {
 
-     try{
-       String configPath = args[0];
-       String seedFile = args[1];
-       String dataPath = args[2];
-       String linkConfigFile = configPath + "/link_storage/link_storage.cfg";
-       String stoplistFile = configPath + "/stoplist.txt";
-       ParameterFile config = new ParameterFile(linkConfigFile);
-       LinkClassifierFactory factory = new LinkClassifierFactoryImpl(stoplistFile);
-       LinkClassifier linkClassifier = factory.createLinkClassifier(config.getParam("TYPE_OF_CLASSIFIER"));
-       PriorityQueueLink queue = new PriorityQueueLink(config.getParamInt("MAX_SIZE_LINK_QUEUE"));
-       PersistentHashtable persistentHash = new PersistentHashtable(dataPath + "/" + config.getParam("LINK_DIRECTORY"),config.getParamInt("MAX_CACHE_URLS_SIZE"));
-       FrontierTargetRepositoryBaseline frontier = null;
-       boolean getOutlinks = config.getParamBoolean("GRAB_LINKS"); 
-       boolean useScope = config.getParamBoolean("USE_SCOPE");
-       logger.info("USE_SCOPE:" + useScope);
-       if(useScope){
-           HashMap<String,Integer> scope = new HashMap<String,Integer>();
-                    //ParameterFile seedConfig = new ParameterFile(seedFile);
-           //String[] urls = seedConfig.getParam("SEEDS", " ");
-           String[] urls = ParameterFile.getSeeds(seedFile);
-           for (int i = 0; i < urls.length; i++) {
-        	   java.net.URL url = new java.net.URL(urls[i]);
-        	   String host = url.getHost();
-//        	   host = host + url.getPath();
-//        	   if(host.lastIndexOf(".") != -1){
-//        		   String serverTemp = host.substring(0,host.lastIndexOf("."));
-//       				int index = serverTemp.lastIndexOf(".");
-//       				if(index != -1){
-//       					host = host.substring(index+1);
-//       				}
-//        	   }
-        	   logger.info(url.toString());
-        	   scope.put(host, new Integer(1));
-           }   
-           if(config.getParam("TYPE_OF_CLASSIFIER").contains("Baseline")){
-        	   frontier = new FrontierTargetRepositoryBaseline(persistentHash,scope);
+        try {
+            String configPath = args[0];
+            String seedFile = args[1];
+            String dataPath = args[2];
+
+            String linkConfigFile = configPath + "/link_storage/link_storage.cfg";
+            ParameterFile config = new ParameterFile(linkConfigFile);
+
+            Storage linkStorage = createLinkStorage(configPath, seedFile, dataPath, config);
+
+            StorageBinder binder = new StorageBinder(config);
+            binder.bind(linkStorage);
+        } catch (Exception e) {
+            logger.error("Problem while starting LinkStorage.", e);
+        }
+    }
+
+    public static Storage createLinkStorage(String configPath, String seedFile,
+                                            String dataPath, ParameterFile config)
+                                            throws LinkClassifierFactoryException,
+                                                   MalformedURLException,
+                                                   FrontierPersistentException,
+                                                   IOException {
+
+        String stoplistFile = configPath + "/stoplist.txt";
+
+        LinkClassifierFactory factory = new LinkClassifierFactoryImpl(stoplistFile);
+        LinkClassifier linkClassifier = factory.createLinkClassifier(config.getParam("TYPE_OF_CLASSIFIER"));
+
+        boolean getOutlinks = config.getParamBoolean("GRAB_LINKS");
+        boolean useScope = config.getParamBoolean("USE_SCOPE");
+
+        logger.info("USE_SCOPE:" + useScope);
+
+        PersistentHashtable persistentHash = new PersistentHashtable(
+                dataPath + "/" + config.getParam("LINK_DIRECTORY"), config.getParamInt("MAX_CACHE_URLS_SIZE"));
+        FrontierTargetRepositoryBaseline frontier = createFrontier(seedFile, config, persistentHash, useScope);
+
+        logger.info("FRONTIER: " + frontier.getClass());
+
+        PriorityQueueLink queue = new PriorityQueueLink(config.getParamInt("MAX_SIZE_LINK_QUEUE"));
+        FrontierManager frontierManager = new FrontierManager(queue, frontier, config.getParamInt("MAX_SIZE_LINK_QUEUE"));
+
+        BipartiteGraphRep graphRep = createBipartiteGraphRep(dataPath, config);
+
+        boolean getBacklinks = config.getParamBoolean("SAVE_BACKLINKS");
+        int freq = config.getParamInt("FRONTIER_REFRESH_FREQUENCY");
+
+        BipartiteGraphManager manager = createBipartiteGraphManager(config, linkClassifier,
+                frontierManager, graphRep, getBacklinks);
+
+        LinkMonitor mnt = new LinkMonitor(dataPath + "/" + "data_monitor/frontierpages.csv",
+                dataPath + "/" + "data_monitor/outlinks.csv");
+
+        Storage linkStorage = new LinkStorage(manager, frontierManager, getBacklinks, getOutlinks, mnt, freq);
+
+        // hard coding interval
+        boolean useOnlineLearning = config.getParamBoolean("ONLINE_LEARNING");
+        if (useOnlineLearning) {
+            // StopList stoplist = new
+            // StopListArquivo(config.getParam("STOPLIST_FILES"));
+            StopList stoplist = new StopListArquivo(stoplistFile);
+            WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
+            ClassifierBuilder cb = new ClassifierBuilder(graphRep, stoplist, wrapper, frontier);
+            logger.info("ONLINE LEARNING:" + config.getParam("ONLINE_METHOD"));
+            OnlineLearning onlineLearning = new OnlineLearning(frontier, manager, cb,
+                    config.getParam("ONLINE_METHOD"), dataPath + "/" + config.getParam("TARGET_STORAGE_DIRECTORY"));
+            ((LinkStorage) linkStorage).setOnlineLearning(onlineLearning, config.getParamInt("LEARNING_LIMIT"));
+        }
+
+        return linkStorage;
+    }
+
+    private static FrontierTargetRepositoryBaseline createFrontier(String seedFile,
+            ParameterFile config, PersistentHashtable persistentHash, boolean useScope)
+                    throws MalformedURLException {
+        
+        FrontierTargetRepositoryBaseline frontier = null;
+           if(useScope){
+               HashMap<String,Integer> scope = new HashMap<String,Integer>();
+                        //ParameterFile seedConfig = new ParameterFile(seedFile);
+               //String[] urls = seedConfig.getParam("SEEDS", " ");
+               String[] urls = ParameterFile.getSeeds(seedFile);
+               for (int i = 0; i < urls.length; i++) {
+            	   java.net.URL url = new java.net.URL(urls[i]);
+            	   String host = url.getHost();
+//            	   host = host + url.getPath();
+//            	   if(host.lastIndexOf(".") != -1){
+//            		   String serverTemp = host.substring(0,host.lastIndexOf("."));
+//           				int index = serverTemp.lastIndexOf(".");
+//           				if(index != -1){
+//           					host = host.substring(index+1);
+//           				}
+//            	   }
+            	   logger.info(url.toString());
+            	   scope.put(host, new Integer(1));
+               }   
+               if(config.getParam("TYPE_OF_CLASSIFIER").contains("Baseline")){
+            	   frontier = new FrontierTargetRepositoryBaseline(persistentHash,scope);
+               }else{
+            	   frontier = new FrontierTargetRepository(persistentHash,scope);   
+               }
            }else{
-        	   frontier = new FrontierTargetRepository(persistentHash,scope);   
+               if(config.getParam("TYPE_OF_CLASSIFIER").contains("Baseline")){
+            	   frontier = new FrontierTargetRepositoryBaseline(persistentHash,10000);
+               }else{
+            	   frontier = new FrontierTargetRepository(persistentHash,10000);   
+               }
            }
-       }else{
-           if(config.getParam("TYPE_OF_CLASSIFIER").contains("Baseline")){
-        	   frontier = new FrontierTargetRepositoryBaseline(persistentHash,10000);
-           }else{
-        	   frontier = new FrontierTargetRepository(persistentHash,10000);   
-           }
-       }
-       
-       logger.info("FRONTIER: " + frontier.getClass());
-       
-       FrontierManager frontierManager = new FrontierManager(
-    		   queue,frontier,config.getParamInt("MAX_SIZE_LINK_QUEUE"));
+        return frontier;
+    }
 
-       Storage linkStorage = null;
-       
-       logger.info(">> LOADING GRAPH...");
-       PersistentHashtable url2id = new PersistentHashtable(dataPath + "/" + config.getParam("URL_ID_DIRECTORY"),100000);
-       PersistentHashtable authID = new PersistentHashtable(dataPath + "/" + config.getParam("AUTH_ID_DIRECTORY"),100000);
-       PersistentHashtable authGraph = new PersistentHashtable(dataPath + "/" + config.getParam("AUTH_GRAPH_DIRECTORY"),100000);
-       PersistentHashtable hubID = new PersistentHashtable(dataPath + "/" + config.getParam("HUB_ID_DIRECTORY"),100000);
-       PersistentHashtable hubGraph = new PersistentHashtable(dataPath + "/" + config.getParam("HUB_GRAPH_DIRECTORY"),100000);
-       BipartiteGraphRep graphRep = new BipartiteGraphRep(authGraph,url2id,authID,hubID,hubGraph);
-       logger.info(">> DONE GRAPH.");
-//       //to avoid hitting backlink site
-//       PersistentHashtable url2id_initial = new PersistentHashtable(config.getParam("URL_ID_DIRECTORY")+"_initial",100000);
-//       PersistentHashtable authID_initial = new PersistentHashtable(config.getParam("AUTH_ID_DIRECTORY")+"_initial",100000);
-//       PersistentHashtable authGraph_initial = new PersistentHashtable(config.getParam("AUTH_GRAPH_DIRECTORY")+"_initial",100000);
-//       PersistentHashtable hubID_initial = new PersistentHashtable(config.getParam("HUB_ID_DIRECTORY")+"_initial",100000);
-//       PersistentHashtable hubGraph_initial = new PersistentHashtable(config.getParam("HUB_GRAPH_DIRECTORY")+"_initial",100000);
-//       BipartiteGraphRep graphRep_initial = new BipartiteGraphRep(authGraph_initial,url2id_initial,authID_initial,hubID_initial,hubGraph_initial);
+    private static BipartiteGraphManager createBipartiteGraphManager(ParameterFile config,
+            LinkClassifier linkClassifier, FrontierManager frontierManager,
+            BipartiteGraphRep graphRep, boolean getBacklinks) {
+        
+        BipartiteGraphManager manager = null;
+        if(getBacklinks) {
+            
+            ParameterFile backSurferCFG = new ParameterFile(config.getParam("BACKLINK_CONFIG"));
+            SimpleWrapper simpleWrapper = new SimpleWrapper(backSurferCFG.getParam("PATTERN_INI"), backSurferCFG.getParam("PATTERN_END"));
+            SimpleWrapper simpleWrapperTitle = new SimpleWrapper(backSurferCFG.getParam("PATTERN_INI_TITLE"), backSurferCFG.getParam("PATTERN_END_TITLE"));
+            BacklinkSurfer surfer = new BacklinkSurfer(simpleWrapper,simpleWrapperTitle);
+            LinkClassifier bClassifier = new LinkClassifierHub();
+            manager = new BipartiteGraphManager(frontierManager,graphRep,linkClassifier,bClassifier);
+            manager.setBacklinkSurfer(surfer);
+    //        manager.setSecondRep(graphRep_initial);
+            
+        } else{
+            manager = new BipartiteGraphManager(frontierManager,graphRep,linkClassifier,null);
+        }
+        int maxPages = config.getParamInt("MAX_PAGES_PER_DOMAIN");
+        manager.setMaxPages(maxPages);
+        
+        return manager;
+    }
 
-       BipartiteGraphManager manager = null;
-       boolean getBacklinks = config.getParamBoolean("SAVE_BACKLINKS");
-       if(getBacklinks){
-           ParameterFile backSurferCFG = new ParameterFile(config.getParam("BACKLINK_CONFIG"));
-           SimpleWrapper simpleWrapper = new SimpleWrapper(backSurferCFG.getParam("PATTERN_INI"),
-        		   backSurferCFG.getParam("PATTERN_END"));
-           SimpleWrapper simpleWrapperTitle = new SimpleWrapper(backSurferCFG.getParam("PATTERN_INI_TITLE"),
-        		   backSurferCFG.getParam("PATTERN_END_TITLE"));
-           BacklinkSurfer surfer = new BacklinkSurfer(simpleWrapper,simpleWrapperTitle);
-           LinkClassifier bClassifier = new LinkClassifierHub();
-           manager = new BipartiteGraphManager(frontierManager,graphRep,linkClassifier,bClassifier);
-           manager.setBacklinkSurfer(surfer);
-//         manager.setSecondRep(graphRep_initial);    	   
-       }else{
-           manager = new BipartiteGraphManager(frontierManager,graphRep,linkClassifier,null);
-       }
-	   LinkMonitor mnt = new LinkMonitor(dataPath + "/" + "data_monitor/frontierpages.csv", dataPath + "/" + "data_monitor/outlinks.csv");
-       int freq = config.getParamInt("FRONTIER_REFRESH_FREQUENCY");
-       int maxPages = config.getParamInt("MAX_PAGES_PER_DOMAIN");
-       manager.setMaxPages(maxPages);      
-       linkStorage = new LinkStorage(manager,frontierManager,getBacklinks,getOutlinks, mnt, freq);//hard coding interval
-       boolean useOnlineLearning = config.getParamBoolean("ONLINE_LEARNING");
-       if(useOnlineLearning){
-    	  // StopList stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));
-    	   StopList stoplist = new StopListArquivo(stoplistFile);
-    	   WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
-    	   ClassifierBuilder cb = new ClassifierBuilder(graphRep,stoplist,wrapper,frontier);
-    	   logger.info("ONLINE LEARNING:" + config.getParam("ONLINE_METHOD"));
-    	   OnlineLearning onlineLearning = new OnlineLearning(frontier, manager, cb, config.getParam("ONLINE_METHOD"), dataPath + "/" + config.getParam("TARGET_STORAGE_DIRECTORY"));
-    	   ((LinkStorage)linkStorage).setOnlineLearning(onlineLearning,config.getParamInt("LEARNING_LIMIT"));
-       }
-       StorageBinder binder = new StorageBinder(config);
-       binder.bind(linkStorage);
-     } catch (Exception e) {
-    	 logger.error("Problem while starting LinkStorage.", e);
-	}
-  }
+    private static BipartiteGraphRep createBipartiteGraphRep(String dataPath, ParameterFile config) {
+        
+        logger.info(">> LOADING GRAPH...");
+        PersistentHashtable authGraph = new PersistentHashtable(dataPath + "/" + config.getParam("AUTH_GRAPH_DIRECTORY"),100000);
+        PersistentHashtable url2id = new PersistentHashtable(dataPath + "/" + config.getParam("URL_ID_DIRECTORY"),100000);
+        PersistentHashtable authID = new PersistentHashtable(dataPath + "/" + config.getParam("AUTH_ID_DIRECTORY"),100000);
+        PersistentHashtable hubID = new PersistentHashtable(dataPath + "/" + config.getParam("HUB_ID_DIRECTORY"),100000);
+        PersistentHashtable hubGraph = new PersistentHashtable(dataPath + "/" + config.getParam("HUB_GRAPH_DIRECTORY"),100000);
+        BipartiteGraphRep graphRep = new BipartiteGraphRep(authGraph,url2id,authID,hubID,hubGraph);
+        logger.info(">> DONE GRAPH.");
+        
+//        //to avoid hitting backlink site
+//        PersistentHashtable url2id_initial = new PersistentHashtable(config.getParam("URL_ID_DIRECTORY")+"_initial",100000);
+//        PersistentHashtable authID_initial = new PersistentHashtable(config.getParam("AUTH_ID_DIRECTORY")+"_initial",100000);
+//        PersistentHashtable authGraph_initial = new PersistentHashtable(config.getParam("AUTH_GRAPH_DIRECTORY")+"_initial",100000);
+//        PersistentHashtable hubID_initial = new PersistentHashtable(config.getParam("HUB_ID_DIRECTORY")+"_initial",100000);
+//        PersistentHashtable hubGraph_initial = new PersistentHashtable(config.getParam("HUB_GRAPH_DIRECTORY")+"_initial",100000);
+//        BipartiteGraphRep graphRep_initial = new BipartiteGraphRep(authGraph_initial,url2id_initial,authID_initial,hubID_initial,hubGraph_initial);
+        
+        return graphRep;
+    }
+    
+    private static Storage createLinkStorage(String dataPath, String stoplistFile,
+            ParameterFile config, FrontierTargetRepositoryBaseline frontier, boolean getOutlinks,
+            FrontierManager frontierManager, BipartiteGraphRep graphRep, 
+            BipartiteGraphManager manager, boolean getBacklinks, LinkMonitor mnt, int freq)
+            throws IOException {
+        
+        Storage linkStorage = new LinkStorage(manager, frontierManager, getBacklinks,
+                                              getOutlinks, mnt, freq);
+        
+        //hard coding interval
+        boolean useOnlineLearning = config.getParamBoolean("ONLINE_LEARNING");
+        if(useOnlineLearning){
+            // StopList stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));
+            StopList stoplist = new StopListArquivo(stoplistFile);
+            WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
+            ClassifierBuilder cb = new ClassifierBuilder(graphRep,stoplist,wrapper,frontier);
+            logger.info("ONLINE LEARNING:" + config.getParam("ONLINE_METHOD"));
+            OnlineLearning onlineLearning = new OnlineLearning(frontier, manager, cb, config.getParam("ONLINE_METHOD"), dataPath + "/" + config.getParam("TARGET_STORAGE_DIRECTORY"));
+            ((LinkStorage)linkStorage).setOnlineLearning(onlineLearning,config.getParamInt("LEARNING_LIMIT"));
+        }
+        
+        return linkStorage;
+    }
 }
 
