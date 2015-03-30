@@ -173,19 +173,19 @@ public class LinkStorage extends StorageDefault{
     }
     catch (LinkClassifierException ex) {
     	logger.info("A LinkClassifierException occurred.", ex);
-    	throw new StorageException(ex.getMessage());
+    	throw new StorageException(ex.getMessage(), ex);
     }
-    catch (FrontierPersistentException ex1) {
-    	logger.info("A FrontierPersistentException occurred.", ex1);
-    	throw new StorageException(ex1.getMessage());
+    catch (FrontierPersistentException ex) {
+    	logger.info("A FrontierPersistentException occurred.", ex);
+    	throw new StorageException(ex.getMessage(), ex);
     }
     catch (IOException ex) {
         logger.info("An IOException occurred.", ex);
-    	throw new StorageException(ex.getMessage());
+    	throw new StorageException(ex.getMessage(), ex);
     }
     catch (Exception ex) {
     	logger.info("An Exception occurred.", ex);
-    	throw new StorageException(ex.getMessage());
+    	throw new StorageException(ex.getMessage(), ex);
     }
     
     long finalTime = System.currentTimeMillis();

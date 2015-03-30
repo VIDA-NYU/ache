@@ -37,10 +37,15 @@ package focusedCrawler.link.classifier;
  * @version 1.0
  */
 
-public class LinkClassifierException extends Exception{
+@SuppressWarnings("serial")
+public class LinkClassifierException extends Exception {
 
-  public LinkClassifierException(String message) {
-    super(message);
-  }
+    public LinkClassifierException(String message) {
+        super(message);
+    }
+
+    public LinkClassifierException(String message, Exception e) {
+        super(message, e);
+    }
 
 }

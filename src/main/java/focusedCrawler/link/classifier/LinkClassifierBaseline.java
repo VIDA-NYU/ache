@@ -24,13 +24,9 @@
 package focusedCrawler.link.classifier;
 
 import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.util.Page;
-import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Random;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.parser.LinkNeighborhood;
@@ -47,11 +43,10 @@ import focusedCrawler.util.parser.LinkNeighborhood;
  * @author Luciano Barbosa
  * @version 1.0
  */
-
 public class LinkClassifierBaseline implements LinkClassifier{
 
   private Random randomGenerator;
-  private int limit = 100;
+//  private int limit = 100;
 
   public LinkClassifierBaseline() {
      this.randomGenerator = new Random();
@@ -79,8 +74,7 @@ public class LinkClassifierBaseline implements LinkClassifier{
 			}
         }
         catch (MalformedURLException ex) {
-        	ex.printStackTrace();
-        	throw new LinkClassifierException(ex.getMessage());
+        	throw new LinkClassifierException(ex.getMessage(), ex);
         }
         return linkRelevance;
   }

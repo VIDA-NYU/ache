@@ -20,55 +20,59 @@
 ## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 ##
 ############################################################################
-*/
+ */
 package focusedCrawler.util;
 
 import java.io.Serializable;
 import java.net.URL;
+
 import com.google.common.net.InternetDomainName;
 
-public class LinkRelevance implements Serializable{
+public class LinkRelevance implements Serializable {
 
-  /**
+    /**
 	 * 
 	 */
-	private static final long serialVersionUID = 1349218562528024956L;
+    private static final long serialVersionUID = 1349218562528024956L;
 
-	private URL url;
+    private URL url;
 
-	private double relevance;
-	
-	public static double DEFAULT_HUB_RELEVANCE = 100;
-	
-	public static double DEFAULT_AUTH_RELEVANCE = 200;
+    private double relevance;
 
-	public LinkRelevance(URL url, double relevance) {
-		this.url = url;
-		this.relevance = relevance;
-	}
+    public static double DEFAULT_HUB_RELEVANCE = 100;
 
-	public URL getURL(){
-		return url;
-	}
+    public static double DEFAULT_AUTH_RELEVANCE = 200;
 
-  public String getDomainName(){
-    String domain = url.getHost();
-    return domain.startsWith("www.") ? domain.substring(4) : domain;
-  }
+    public LinkRelevance(URL url, double relevance) {
+        this.url = url;
+        this.relevance = relevance;
+    }
 
-  public String getTopLevelDomainName(){
-    String domain = this.getDomainName();
-    InternetDomainName topPrivateDomain = InternetDomainName.from(domain).topPrivateDomain();
-    return topPrivateDomain.toString();  
-  }
+    public URL getURL() {
+        return url;
+    }
 
+    public String getDomainName() {
+        String domain = url.getHost();
+        return domain.startsWith("www.") ? domain.substring(4) : domain;
+    }
 
-	public double getRelevance(){
-		return relevance;
-	}
-	
-	public void setRelevance(double rel){
-		this.relevance = rel;
-	}
+    public String getTopLevelDomainName() {
+        String domain = this.getDomainName();
+        try {
+            InternetDomainName topPrivateDomain = InternetDomainName.from(domain).topPrivateDomain();
+            return topPrivateDomain.toString();
+        } catch (Exception e) {
+            throw new IllegalStateException("Invalid top private domain name=["+domain+"] in URL=["+url+"]", e);
+        }
+    }
+
+    public double getRelevance() {
+        return relevance;
+    }
+
+    public void setRelevance(double rel) {
+        this.relevance = rel;
+    }
 
 }
