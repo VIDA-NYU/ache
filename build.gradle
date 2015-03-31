@@ -10,6 +10,8 @@ version = '0.1.0'
 
 mainClassName = 'focusedCrawler.Main'
 
+applicationDefaultJvmArgs = ["-Dname=ache"]
+
 repositories {
     // TODO all of the things in lib, should come from here
     mavenCentral()
@@ -24,6 +26,7 @@ dependencies {
     compile 'nz.ac.waikato.cms.weka:weka-stable:3.6.10'
     compile 'org.apache.lucene:lucene-core:3.5.0'
     compile 'commons-codec:commons-codec:1.9'
+    compile 'commons-validator:commons-validator:1.4.1'
     compile 'com.googlecode.juniversalchardet:juniversalchardet:1.0.3'
     compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.4.0'
 	compile 'com.fasterxml.jackson.core:jackson-databind:2.5.0' 

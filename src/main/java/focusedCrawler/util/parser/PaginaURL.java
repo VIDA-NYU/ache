@@ -30,6 +30,8 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+import org.apache.commons.validator.routines.UrlValidator;
+
 import focusedCrawler.util.page.Pagina;
 import focusedCrawler.util.string.Acentos;
 import focusedCrawler.util.string.StopList;
@@ -37,6 +39,9 @@ import focusedCrawler.util.string.StopListArquivo;
 
 
 public class PaginaURL implements Pagina {
+    
+    private static final String[] schemes = {"http","https"};
+    private static final UrlValidator urlValidator = new UrlValidator(schemes);
 
     public long timeToParse = 0;
     private int 			   maxPosValue = 0;
@@ -2196,27 +2201,28 @@ public class PaginaURL implements Pagina {
                 if (!mailList.contains(link)) {
                     mailList.addElement(link);
                 }
-            }
-
-            // System.out.println("link2='"+link+"'");
-            boolean existe = links.contains(link);
-
-            if (link != null &&!existe) {
-                if (base != null) {
-                    if (!link.equals(base.toString())) {
-                        link = processarRedirecionamentos(link);
-
-                        if (link != null) {
-                            links.addElement(link);
+            } else {
+                if(urlValidator.isValid(link)) {
+                    boolean existe = links.contains(link);
+                    if (!existe) {
+                        if (base != null) {
+                            if (!link.equals(base.toString())) {
+                                link = processarRedirecionamentos(link);
+                                
+                                if (link != null) {
+                                    links.addElement(link);
+                                }
+                            }
+                        } else {
+                            link = processarRedirecionamentos(link);
+                            
+                            if (link != null) {
+                                links.addElement(link);
+                            }
                         }
                     }
-                } else {
-                    link = processarRedirecionamentos(link);
-
-                    if (link != null) {
-                        links.addElement(link);
-                    }
                 }
+    
             }
         } catch (MalformedURLException mfue) {
         }    // ignora
