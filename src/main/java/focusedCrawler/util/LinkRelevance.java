@@ -52,16 +52,25 @@ public class LinkRelevance implements Serializable {
         return url;
     }
 
-    public String getDomainName() {
-        String domain = url.getHost();
-        return domain.startsWith("www.") ? domain.substring(4) : domain;
+    public InternetDomainName getDomainName() {
+        String host = url.getHost();
+        InternetDomainName domain = InternetDomainName.from(host);
+        if(host.startsWith("www.")) {
+            return InternetDomainName.from(host.substring(4));
+        } else {
+            return domain;
+        }
     }
 
     public String getTopLevelDomainName() {
-        String domain = this.getDomainName();
+        InternetDomainName domain = this.getDomainName();
         try {
-            InternetDomainName topPrivateDomain = InternetDomainName.from(domain).topPrivateDomain();
-            return topPrivateDomain.toString();
+            if(domain.isUnderPublicSuffix()) {
+                return domain.topPrivateDomain().toString();
+            } else {
+                // if the domain is a public suffix, just use it as top level domain
+                return domain.toString();
+            }
         } catch (Exception e) {
             throw new IllegalStateException("Invalid top private domain name=["+domain+"] in URL=["+url+"]", e);
         }
