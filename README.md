@@ -67,5 +67,9 @@ When to stop the crawler?
 ----------------------------------------------
 Unless you stop it, the crawler exists when the number of crawled pages exeeds the limit in the setting, which is 9M at default. You can look at this file `data_monitor/harvestinfo.csv` to know how many pages has been downloaded to decide whether you want to stop the crawler. The 1st, 2nd, 3rd columns are number of relevant pages, number of visited pages, timestamp.
 
+Where to report bug?
+---------------------------------------------
+We are welcome user to report any issue related to ACHE. Here is a guidline to use Github's tracker - Issues: https://guides.github.com/features/issues/
+
 
 
