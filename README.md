@@ -53,6 +53,10 @@ After you generated a model, you need to prepare the seed file, that each line i
        $./build/install/bin/ache startCrawl output config/sample_config config/sample.seeds config/sample_model libs/langdetect-03-03-2014.jar
         
 
+More information?
+-----------------------------------------------
+[ACHE Wiki](https://github.com/ViDA-NYU/ache/wiki)
+
 What is inside the data output directory?
 -----------------------------------------------
 `data_target` contains relevant pages.
