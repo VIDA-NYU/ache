@@ -19,7 +19,7 @@ If you want to compile ACHE from source code, use compile_crawler.sh:
         $./script/compile_crawler.sh
   
   
-Build a model for ACHE's page classifier
+Build a model for ACHE's page classifier. If you already have the model, skip this step.
 --------------------------------------------
 To focus on a certain topic ACHE needs to have accddess to a model of its content. This model is then 
 used by a classifier to decide, given a new crawled page, whether it is on-topic or not. Assume that you store positive and negative examples in two directories postive and negative respectively. Also, these directories are placed in training_data directory. Here is how you build a model from these examples:
@@ -35,27 +35,34 @@ Start ACHE
 --------------------------------------------
 After you generated a model, you need to prepare the seed file, that each line is an url. To start the crawler, run:
 
-        $./script/start_crawler.sh <configuration path> <seed file> <model path> <data output path>
+        $./build/install/bin/ache startCrawl <data output path> <config path> <seed path> <model path> <lang detect profile path>
 
 
 `<configuration path>` is path to the config directory.
 
-`<seed path>` is the path to the seed list file.
+`<seed path>` is the seed file.
 
 `<model path>` is the path to the model directory (containing pageclassifier.model and pageclassifier.features).
 
 `<data output path>` is path to data output directory.
 
-Stop ACHE
---------------------------------------------
-If you want to stop ACHE's execution, run:
-
-        $./script/stop_crawler.sh
+ `<lang detect profile path>` is the path to the language detection profile: "libs/langdetect-03-03-2014.jar"
+ 
+ Example of running ACHE:
+ 
+       $./build/install/bin/ache startCrawl output config/sample_config config/sample.seeds config/sample_model libs/langdetect-03-03-2014.jar
         
 
-Monitor ACHE's execution
----------------------------
-To analyse ACHE's execution, you can either check its logs or the data that is being crawled. 
-The log files are `log/crawler.log`, `log/link_storage.log`, and `log/target_storage.log`. 
-Additionally, crawler's status is also updated in runtime at `data/data_monitor`. This information
-could be used to visualize the crawler's status while it is running.
+What is inside the data output directory?
+-----------------------------------------------
+`data_target` contains relevant pages.
+`data_negative` contains irrelevant pages. In default setting, the crawler does not save the irrelevant pages.
+`data_monitor` contains current status of the crawler.
+`data_url` and `data_backlinks` are where persistent storages keep information of frontier and crawled graph.
+
+When to stop the crawler?
+----------------------------------------------
+Unless you stop it, the crawler exists when the number of crawled pages exeeds the limit in the setting, which is 9M at default. You can look at this file `data_monitor/harvestinfo.csv` to know how many pages has been downloaded to decide whether you want to stop the crawler. The 1st, 2nd, 3rd columns are number of relevant pages, number of visited pages, timestamp.
+
+
+
