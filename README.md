@@ -56,8 +56,11 @@ After you generated a model, you need to prepare the seed file, that each line i
 What is inside the data output directory?
 -----------------------------------------------
 `data_target` contains relevant pages.
+
 `data_negative` contains irrelevant pages. In default setting, the crawler does not save the irrelevant pages.
+
 `data_monitor` contains current status of the crawler.
+
 `data_url` and `data_backlinks` are where persistent storages keep information of frontier and crawled graph.
 
 When to stop the crawler?
