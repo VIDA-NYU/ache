@@ -315,7 +315,7 @@ public class CrawlerManager extends Thread {
 
                 int numThreads = crawlerThreadGroup.enumerate(threads, false);
 
-                if( numThreads > (permitedThreadsFactor * crawlersNumber()) ) {
+                if( numThreads > (2*permitedThreadsFactor * crawlersNumber()) ) {
 
                   logger.warn("Threads limit "+(permitedThreadsFactor * crawlersNumber())+" exceeded '"+numThreads+"'");
 
