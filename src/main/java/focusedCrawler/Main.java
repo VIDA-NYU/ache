@@ -48,7 +48,6 @@ public class Main {
         }
     }
 
-    @SuppressWarnings("ResultOfMethodCallIgnored")
     private static void buildModel(String targetStorageConfigPath, String trainingPath, String outputPath) {
         // generate the input for weka
         new File(outputPath).mkdirs();
@@ -95,9 +94,9 @@ public class Main {
 
     }
 
-    private static void startFormStorage(){
-        //Not used yet
-    }
+//    private static void startFormStorage(){
+//        //Not used yet
+//    }
 
     //THIS FUNCTION IS NOT USED NOW
     private static void startCrawl(final String dataOutputPath,

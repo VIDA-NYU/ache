@@ -24,29 +24,20 @@
 package focusedCrawler.util.download;
 
 import java.io.InputStream;
-
 import java.io.InterruptedIOException;
-
 import java.io.IOException;
-
 import java.io.OutputStream;
-
-import java.io.PrintWriter;
-
 import java.io.PushbackInputStream;
-
 import java.net.MalformedURLException;
-
 import java.net.URL;
 
-import focusedCrawler.util.ParameterFile;
-
+import focusedCrawler.crawler.CrawlerManagerConfig;
 
 public class DownloaderURL extends DownloaderAbstract {
 
-	private int maxBlockedCount;
+	private long maxBlockedCount;
 
-    private int blockedCount;
+    private long blockedCount;
 
     private OutputStream out;
 
@@ -55,18 +46,12 @@ public class DownloaderURL extends DownloaderAbstract {
     private ThreadDownload threadDown;
 
     public DownloaderURL() throws DownloaderException {
-        super();
         maxBlockedCount = Integer.MAX_VALUE;
         blockedCount = 0;
     }
 
-    public DownloaderURL(ParameterFile paramFile) throws DownloaderException {
-        super(paramFile);
-        String str = paramFile.getParam("DOWNLOADER_MAX_BLOCKED_THREADS");
-        if( str == null ) {
-            throw new DownloaderException(paramFile.getCfgFile()+"> Missing 'DOWNLOADER_MAX_BLOCKED_THREADS' parameter");
-        }
-        maxBlockedCount = Integer.valueOf(str.trim()).intValue();
+    public DownloaderURL(CrawlerManagerConfig config) {
+        maxBlockedCount = config.getDownloaderMaxBlockedThreads();
         blockedCount = 0;
     }
 
@@ -256,7 +241,7 @@ public class DownloaderURL extends DownloaderAbstract {
     public static void main(String[] args) {
 
         try {
-            Downloader down = new DownloaderURL(new ParameterFile(args[0]));
+            Downloader down = new DownloaderURL(new CrawlerManagerConfig(args[0]));
             for (int i = 1; i < args.length; i++) {
                 try {
                     //down.clearResponseProperties();

@@ -75,8 +75,6 @@ public abstract class Crawler extends Thread {
 
   private URL url;
 
-  private long cicleTime;
-
   private long totalCicleTime;
 
   private long[] partitionTime = new long[STATES.length];
@@ -157,9 +155,6 @@ public abstract class Crawler extends Thread {
      }
      public URL getUrl() {
          return url;
-     }
-     public void setCicleTime(long newCicleTime) {
-         cicleTime = newCicleTime;
      }
      public long getCicleTime() {
          return System.currentTimeMillis()-getStartCicleTime();
@@ -340,12 +335,13 @@ public abstract class Crawler extends Thread {
              logger.info("Problem while finishing crawler thread.", exc);
          }
      }
+     
      public void restingSleep() {
          try {
              sleep(restingTime);
          }
          catch(InterruptedException exc) {
-             exc.printStackTrace();
+             logger.info("Sleeping interrupted.", exc);
          }
      }
 
