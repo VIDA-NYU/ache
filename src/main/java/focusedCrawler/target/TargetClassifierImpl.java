@@ -30,19 +30,13 @@ import weka.classifiers.Classifier;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMVector;
-import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
 
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
-import java.net.URL;
 
 import org.xml.sax.SAXException;
 
@@ -143,6 +137,7 @@ public class TargetClassifierImpl implements TargetClassifier {
 		InputStream is = new FileInputStream(config.getParam("FILE_CLASSIFIER"));
 		ObjectInputStream objectInputStream = new ObjectInputStream(is);
 		Classifier classifier = (Classifier) objectInputStream.readObject();
+		objectInputStream.close();
 		String[] attributes = config.getParam("ATTRIBUTES", " ");
 		System.out.println(attributes.length);
 		weka.core.FastVector vectorAtt = new weka.core.FastVector();
