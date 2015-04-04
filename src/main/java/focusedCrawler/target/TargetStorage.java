@@ -285,8 +285,8 @@ public class TargetStorage  extends StorageDefault{
         TargetRepository negativeRepository;
         
         if (data_format.equals("CBOR")) {
-        	targetRepository = new TargetCBORRepository(targetDirectory);
-        	negativeRepository = new TargetCBORRepository(negativeDirectory);
+						targetRepository = new TargetCBORRepository(targetDirectory, config.getParam("TARGET_DOMAIN"));
+						negativeRepository = new TargetCBORRepository(negativeDirectory, config.getParam("TARGET_DOMAIN"));
         }
         else {
         	//Default data format is file
