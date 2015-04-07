@@ -43,13 +43,17 @@ public class TargetCBORRepository implements TargetRepository {
   public boolean insert(Target target, int counter) {
 	boolean contain = false;
     try {
-    	URL urlObj = new URL(target.getIdentifier());
-		String host = urlObj.getHost();
-		String url = target.getIdentifier();
-
-		this.targetModel.setTimestamp();
-		this.targetModel.setUrl(url);
-		this.targetModel.setContent(target.getSource());
+     URL urlObj = new URL(target.getIdentifier());
+		 String host = urlObj.getHost();
+		 String url = target.getIdentifier();
+		 this.targetModel.setTimestamp();
+		 this.targetModel.setUrl(url);
+		 this.targetModel.setContent(target.getSource());
+     this.targetModel.setKey(url, this.domain);
+     HashMap<String, Object> h = (HashMap<String, Object>)this.targetModel.request.get("client");
+     h.put("hostname", "gray17.poly.edu"); //TODO this should be in the config file
+     h.put("address", "128.238.182.77");
+     h.put("robots", "classic");
 		 
 		CBORFactory f = new CBORFactory();
     	ObjectMapper mapper = new ObjectMapper(f);
@@ -64,6 +68,10 @@ public class TargetCBORRepository implements TargetRepository {
     catch (IOException ex) {
       ex.printStackTrace();
     }
+    catch(NoSuchAlgorithmException e1) {
+				e1.printStackTrace();
+    }
+    
     return contain;
   }
   
