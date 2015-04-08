@@ -191,6 +191,17 @@ public class PaginaURL implements Pagina {
         return palavras;
     }
 
+    public String palavras_to_string(){
+        if (palavras.length == 0)
+            return "";
+        String text = palavras[0];
+        for (int i = 1; i < palavras.length; i++) {
+            text = text + "  " + palavras[i];
+        }
+        return text;
+    }
+
+
     /**
      * Declara\uFFFD\uFFFDo do M\uFFFDtodo
      *

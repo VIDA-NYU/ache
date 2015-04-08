@@ -94,6 +94,7 @@ public class Page implements Serializable, Target{
 
     public void setPageURL(PaginaURL page){
         this.pageURL = page;
+        this.setCleanContent(page.palavras_to_string());
     }
 
     public void setRelevance(double rel){
