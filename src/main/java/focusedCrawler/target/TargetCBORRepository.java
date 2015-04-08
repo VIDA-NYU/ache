@@ -11,6 +11,8 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.HashMap;
+import java.security.NoSuchAlgorithmException;
 
 import com.fasterxml.jackson.dataformat.cbor.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,6 +23,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class TargetCBORRepository implements TargetRepository {
 
   private String location;
+		private String domain;
   private TargetModel targetModel;
   
   public TargetCBORRepository(){
@@ -28,9 +31,10 @@ public class TargetCBORRepository implements TargetRepository {
 	  
   }
   
-  public TargetCBORRepository(String loc){
+		public TargetCBORRepository(String loc, String domain){
 	targetModel = new TargetModel("Kien Pham", "kien.pham@nyu.edu");//This contact information should be read from config file
 	  this.location = loc;
+    this.domain = domain;
   }
 
   /**
@@ -39,13 +43,17 @@ public class TargetCBORRepository implements TargetRepository {
   public boolean insert(Target target, int counter) {
 	boolean contain = false;
     try {
-    	URL urlObj = new URL(target.getIdentifier());
-		String host = urlObj.getHost();
-		String url = target.getIdentifier();
-
-		this.targetModel.setTimestamp();
-		this.targetModel.setUrl(url);
-		this.targetModel.setContent(target.getSource());
+     URL urlObj = new URL(target.getIdentifier());
+		 String host = urlObj.getHost();
+		 String url = target.getIdentifier();
+		 this.targetModel.setTimestamp();
+		 this.targetModel.setUrl(url);
+		 this.targetModel.setContent(target.getSource());
+     this.targetModel.setKey(url, this.domain);
+     HashMap<String, Object> h = (HashMap<String, Object>)this.targetModel.request.get("client");
+     h.put("hostname", "gray17.poly.edu"); //TODO this should be in the config file
+     h.put("address", "128.238.182.77");
+     h.put("robots", "classic");
 		 
 		CBORFactory f = new CBORFactory();
     	ObjectMapper mapper = new ObjectMapper(f);
@@ -60,6 +68,10 @@ public class TargetCBORRepository implements TargetRepository {
     catch (IOException ex) {
       ex.printStackTrace();
     }
+    catch(NoSuchAlgorithmException e1) {
+				e1.printStackTrace();
+    }
+    
     return contain;
   }
   
@@ -67,12 +79,17 @@ public class TargetCBORRepository implements TargetRepository {
   public boolean insert(Target target) {
     boolean contain = false;
     try {
-     	URL urlObj = new URL(target.getIdentifier());
-		String host = urlObj.getHost();
-		String url = target.getIdentifier();
-		this.targetModel.setTimestamp();
-		this.targetModel.setUrl(url);
-		this.targetModel.setContent(target.getSource());
+     URL urlObj = new URL(target.getIdentifier());
+		 String host = urlObj.getHost();
+		 String url = target.getIdentifier();
+		 this.targetModel.setTimestamp();
+		 this.targetModel.setUrl(url);
+		 this.targetModel.setContent(target.getSource());
+     this.targetModel.setKey(url, this.domain);
+     HashMap<String, Object> h = (HashMap<String, Object>)this.targetModel.request.get("client");
+     h.put("hostname", "gray17.poly.edu"); //TODO this should be in the config file
+     h.put("address", "128.238.182.77");
+     h.put("robots", "classic");
 
 		CBORFactory f = new CBORFactory();
     	ObjectMapper mapper = new ObjectMapper(f);
@@ -87,6 +104,10 @@ public class TargetCBORRepository implements TargetRepository {
     catch (IOException ex) {
       ex.printStackTrace();
     }
+    catch(NoSuchAlgorithmException e1) {
+				e1.printStackTrace();
+    }
+     
     return contain;
   }
 

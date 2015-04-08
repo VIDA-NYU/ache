@@ -28,7 +28,7 @@ import focusedCrawler.util.storage.distribution.StorageBinder;
 import focusedCrawler.util.storage.distribution.StorageCreator;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
-
+import focusedCrawler.target.detector.RegexBasedDetector;
 /**
  * This class runs a socket server responsible to store pages coming from the crawler client.
  * @author lbarbosa
@@ -39,6 +39,8 @@ public class TargetStorage  extends StorageDefault{
 	public static final Logger logger = LoggerFactory.getLogger(TargetStorage.class);
 
     private TargetClassifier targetClassifier;
+
+    private RegexBasedDetector regexDetector;
 
     private String fileLocation;
     
@@ -83,7 +85,7 @@ public class TargetStorage  extends StorageDefault{
     public TargetStorage(TargetClassifier targetClassifier, String fileLocation, TargetRepository targetRepository, 
                            Storage linkStorage, int limitOfPages, boolean hardFocus, boolean getBacklinks, 
                            int crawledFreq, int relevantFreq,  int harvestinfoFreq, int syncFreq, boolean isRefreshSync,
-                       	   float relevanceThreshold, TargetMonitor mnt, boolean isSaveNegPages, TargetRepository negativeRepository) {
+                       	   float relevanceThreshold, TargetMonitor mnt, boolean isSaveNegPages, TargetRepository negativeRepository, RegexBasedDetector regexDetector) {
         this.targetClassifier = targetClassifier;
         this.fileLocation = fileLocation;
         this.targetRepository = targetRepository;
@@ -108,12 +110,13 @@ public class TargetStorage  extends StorageDefault{
         this.langDetect.init("libs/profiles/");//This is hard coded, should be fixed
         this.monitor = mnt;
         this.isSaveNegPages = isSaveNegPages;
+        this.regexDetector = regexDetector;		
     }
 
     public TargetStorage(String fileLocation, TargetRepository targetRepository, Storage linkStorage, 
-            int limitOfPages, boolean hardFocus, boolean getBacklinks, TargetMonitor mnt, boolean isSaveNegPages, TargetRepository negativeRepository) {
+            int limitOfPages, boolean hardFocus, boolean getBacklinks, TargetMonitor mnt, boolean isSaveNegPages, TargetRepository negativeRepository, RegexBasedDetector regexDetector) {
         this(null, fileLocation, targetRepository, linkStorage, limitOfPages, hardFocus, getBacklinks, 
-          100, 100, 100, 100, true, 0.9f, mnt, isSaveNegPages, negativeRepository);
+          100, 100, 100, 100, true, 0.9f, mnt, isSaveNegPages, negativeRepository, regexDetector);
     }
 
     /**
@@ -134,6 +137,30 @@ public class TargetStorage  extends StorageDefault{
         totalOfPages++;
 
         try {
+        ///////////////////IF USING REGEX INSTEAD OF CLASSIFIER/////////////////////////////
+          if(regexDetector != null){
+              boolean isRelevant = regexDetector.detect(page);
+              if (isRelevant) {
+                  double prob = 1.0;
+                  page.setRelevance(prob);
+                  logger.info("\n> PROCESSING: " + page.getIdentifier() + "\n> PROB:" + prob);
+                  targetRepository.insert(page);
+                  linkStorage.insert(page);
+                  relevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
+                  totalOnTopicPages++;
+              }
+              else{
+                  double prob = 0.0;
+                  if (isSaveNegPages){
+                      page.setRelevance(prob);
+                      negativeRepository.insert(page);
+                  }
+                  nonRelevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(prob) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
+                  }
+          }
+	      ////////////////END USING REGEX////////////////////////////////////////////////
+          else {
+          ////////////////IF USING CLASSIFIER////////////////////////////////////////
           if(targetClassifier != null){
               double prob = targetClassifier.distributionForInstance(page)[0];
               page.setRelevance(prob);
@@ -167,6 +194,7 @@ public class TargetStorage  extends StorageDefault{
                       nonRelevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(prob) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
                   }
               }
+          //////////////////END USING CLASSIFIER//////////////////////////////////////////
           } else{
                   page.setRelevance(1);
                   page.setAuth(true);
@@ -175,8 +203,7 @@ public class TargetStorage  extends StorageDefault{
                   targetRepository.insert(page,totalOfPages);
                   totalOnTopicPages++;
           }
-
-
+		  }
           //////Export crawler's status////////////////////////////////
           harvestRates.add(Integer.toString(totalOnTopicPages) + "\t" + 
                        String.valueOf(totalOfPages) + "\t" + 
@@ -276,6 +303,14 @@ public class TargetStorage  extends StorageDefault{
         if(useClassifier){
             targetClassifier = createClassifier(modelPath, stoplist);
         }
+
+		//if one wants to use regex based classifier
+		boolean useRegex = config.getParamBoolean("USE_REGEX_BASED_DETECTOR");
+		RegexBasedDetector regexDetector = null;
+        if (useRegex) {
+			String regex = config.getParam("REGEX");
+			regexDetector = new RegexBasedDetector(regex);
+		}
         
         String targetDirectory = dataPath + "/" + config.getParam("TARGET_STORAGE_DIRECTORY");
         String negativeDirectory = dataPath + "/" + config.getParam("NEGATIVE_STORAGE_DIRECTORY");
@@ -285,8 +320,8 @@ public class TargetStorage  extends StorageDefault{
         TargetRepository negativeRepository;
         
         if (data_format.equals("CBOR")) {
-        	targetRepository = new TargetCBORRepository(targetDirectory);
-        	negativeRepository = new TargetCBORRepository(negativeDirectory);
+						targetRepository = new TargetCBORRepository(targetDirectory, config.getParam("TARGET_DOMAIN"));
+						negativeRepository = new TargetCBORRepository(negativeDirectory, config.getParam("TARGET_DOMAIN"));
         }
         else {
         	//Default data format is file
@@ -310,7 +345,8 @@ public class TargetStorage  extends StorageDefault{
                 config.getParamInt("VISITED_PAGE_LIMIT"), config.getParamBoolean("HARD_FOCUS"),
                 config.getParamBoolean("BIPARTITE"), crawledFreq, relevantFreq,
                 harvestinfoFreq, refreshFreq, isRefreshSync, relevanceThreshold, mnt,
-                config.getParamBoolean("SAVE_NEGATIVE_PAGES"), negativeRepository);
+                config.getParamBoolean("SAVE_NEGATIVE_PAGES"), negativeRepository,
+		        regexDetector);
         
         return targetStorage;
     }
