@@ -4,66 +4,57 @@ import focusedCrawler.util.ParameterFile;
 
 public class CrawlerManagerConfig {
     
-    private final ParameterFile config;
+    private final String robotThreadGroup;
+    private final int robotQuantity;
+    private final long robotManagerRestingTime;
+    private final long robotManagerCheckTime;
+    private final long robotManagerMaxTime;
+    private final long robotManagerRobotErrorSleepTime;
+    private final int robotManagerRobotThreadFactor;
+    private final long downloaderMaxBlockedThreads;
     
     public CrawlerManagerConfig(String filename) {
-        this.config = new ParameterFile(filename);
-    }
-    
-    private int configIntValue(String configKey, int defaultValue) {
-        int  configValue;
-        try {
-            configValue = config.getParamInt(configKey);
-        } catch (NumberFormatException e) {
-            CrawlerManager.logger.warn(String.format("Valid integer value not found for config key %s."
-                    + " Using default value: %l", configKey, defaultValue));
-            configValue = defaultValue;
-        }
-        return configValue;
-    }
-    
-    private long configLongValue(String configKey, long defaultValue) {
-        long configValue;
-        try {
-            configValue = config.getParamLong(configKey);
-        } catch (NumberFormatException e) {
-            CrawlerManager.logger.warn(String.format("Valid long value not found for config key %s."
-                    + " Using default value: %l", configKey, defaultValue));
-            configValue = defaultValue;
-        }
-        return configValue;
+        ParameterFile params = new ParameterFile(filename);
+        this.robotThreadGroup = params.getParam("ROBOT_THREAD_GROUP");
+        this.robotQuantity = params.getParamInt("ROBOT_QUANTITY", 5);
+        this.robotManagerRestingTime = params.getParamLong("ROBOT_MANAGER_RESTINGTIME", 10);
+        this.robotManagerCheckTime = params.getParamLong("ROBOT_MANAGER_CHECKTIME", 30000);
+        this.robotManagerMaxTime = params.getParamLong("ROBOT_MANAGER_MAXTIME", 30000);
+        this.robotManagerRobotErrorSleepTime = params.getParamLong("ROBOT_MANAGER_ROBOT_ERROR_SLEEP_TIME", 5000);
+        this.robotManagerRobotThreadFactor = params.getParamInt("ROBOT_MANAGER_ROBOT_THREAD_FACTOR", 10);
+        this.downloaderMaxBlockedThreads = params.getParamLong("DOWNLOADER_MAX_BLOCKED_THREADS", 20000000);
     }
     
     public String getRobotThreadGroup() {
-        return config.getParam("ROBOT_THREAD_GROUP");
+        return robotThreadGroup;
     }
     
     public int getRobotQuantity() {
-        return configIntValue("ROBOT_QUANTITY", 5);
+        return robotQuantity;
     }
 
     public long getRobotManagerRestingTime() {
-        return configLongValue("ROBOT_MANAGER_RESTINGTIME", 10);
+        return robotManagerRestingTime;
     }
 
     public long getRobotManagerSleepCheckTime() {
-        return configLongValue("ROBOT_MANAGER_CHECKTIME", 30000);
+        return robotManagerCheckTime;
     }
     
     public long getRobotManagerMaxTime() {
-        return  configLongValue("ROBOT_MANAGER_MAXTIME", 30000);
+        return robotManagerMaxTime;
     }
     
     public long getRobotManagerRobotErrorTime() {
-        return  configLongValue("ROBOT_MANAGER_ROBOT_ERROR_SLEEP_TIME", 5000);
+        return robotManagerRobotErrorSleepTime;
     }
     
     public int getRobotManagerRobotThreadFactor() {
-        return  configIntValue("ROBOT_MANAGER_ROBOT_THREAD_FACTOR", 10);
+        return robotManagerRobotThreadFactor;
     }
     
     public long getDownloaderMaxBlockedThreads() {
-        return configLongValue("DOWNLOADER_MAX_BLOCKED_THREADS", 20000000);
+        return downloaderMaxBlockedThreads;
     }
     
 }

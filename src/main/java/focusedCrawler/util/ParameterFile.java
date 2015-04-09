@@ -44,11 +44,9 @@ import java.util.Vector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.link.frontier.AddSeeds;
-
 public class ParameterFile {
 	
-  private static final Logger logger = LoggerFactory.getLogger(AddSeeds.class);
+  private static final Logger logger = LoggerFactory.getLogger(ParameterFile.class);
 
   protected static final String PRELOAD_PREFIX = "${";
   protected static final String PRELOAD_SUFIX  = "}";
@@ -220,30 +218,54 @@ public class ParameterFile {
     }
 
     public int getParamInt(String param) {
-        String value = getParam(param);
-        if (value == null) {
-            logger.warn("ParameterFile: getParamInt WARNING " + param + " == null" );
-            return 0;
+        return getParamInt(param, 0);
+    }
+    
+    public int getParamInt(String paramKey, int defaultValue) {
+        try {
+            String value = getParam(paramKey);
+            if (value != null) {
+                return Integer.parseInt(value);
+            }
+        } catch (NumberFormatException e) {
         }
-        return Integer.parseInt(value);
+        logger.warn(String.format("Valid integer value not found for config key %s." +
+                                  " Using default value: %l", paramKey, defaultValue));
+        return defaultValue;
     }
 
     public long getParamLong(String param) {
-        String value = getParam(param);
-        if (value == null) {
-            logger.warn("ParameterFile: getParamLong WARNING " + param + " == null" );
-            return 0;
+        return getParamLong(param, 0);
+    }
+    
+    public long getParamLong(String configKey, long defaultValue) {
+        try {
+            String value = getParam(configKey);
+            if (value != null) {
+                return Long.parseLong(value);
+            }
+        } catch (Exception e) {
         }
-        return Long.parseLong(value);
+        logger.warn(String.format("Valid long value not found for config key %s." +
+                                  " Using default value: %l", configKey, defaultValue));
+        return defaultValue;
     }
 
     public boolean getParamBoolean(String param) {
-        String value = getParam(param);
-        if (value == null) {
-            logger.warn("ParameterFile: getParamBoolean WARNING " + param + " == null" );
-            return false;
+       return getParamBoolean(param, false);
+    }
+    
+    public boolean getParamBoolean(String param, boolean defaultValue) {
+        try {
+            String value = getParam(param);
+            if (value != null) {
+                return Boolean.valueOf(value).booleanValue();
+            }
+        } catch (Exception e) {
         }
-        return Boolean.valueOf(value).booleanValue();
+        logger.warn(String.format("Valid boolean value not found for config key %s." +
+                                  " Using default value: %l", param, defaultValue));
+        return defaultValue;
     }
 
     public float getParamFloat(String param) {
