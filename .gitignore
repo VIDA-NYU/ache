@@ -7,4 +7,6 @@
 .project
 .classpath
 *.class
-
+config/ebola
+config/humantrafficking
+config/escort
