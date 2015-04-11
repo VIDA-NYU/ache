@@ -216,12 +216,18 @@ public class ParameterFile {
     public String getParam(String param) {
       return getParam(param,-1);
     }
+    
+
+    public String getParamOrDefault(String paramKey, String defaultValue) {
+        String paramValue = getParam(paramKey);
+        return paramValue == null ? defaultValue : paramValue;
+    }
 
     public int getParamInt(String param) {
-        return getParamInt(param, 0);
+        return getParamIntOrDefault(param, 0);
     }
     
-    public int getParamInt(String paramKey, int defaultValue) {
+    public int getParamIntOrDefault(String paramKey, int defaultValue) {
         try {
             String value = getParam(paramKey);
             if (value != null) {
@@ -230,15 +236,15 @@ public class ParameterFile {
         } catch (NumberFormatException e) {
         }
         logger.warn(String.format("Valid integer value not found for config key %s." +
-                                  " Using default value: %l", paramKey, defaultValue));
+                                  " Using default value: %d", paramKey, defaultValue));
         return defaultValue;
     }
 
     public long getParamLong(String param) {
-        return getParamLong(param, 0);
+        return getParamLongOrDefault(param, 0);
     }
     
-    public long getParamLong(String configKey, long defaultValue) {
+    public long getParamLongOrDefault(String configKey, long defaultValue) {
         try {
             String value = getParam(configKey);
             if (value != null) {
@@ -247,15 +253,15 @@ public class ParameterFile {
         } catch (Exception e) {
         }
         logger.warn(String.format("Valid long value not found for config key %s." +
-                                  " Using default value: %l", configKey, defaultValue));
+                                  " Using default value: %d", configKey, defaultValue));
         return defaultValue;
     }
 
     public boolean getParamBoolean(String param) {
-       return getParamBoolean(param, false);
+       return getParamBooleanOrDefault(param, false);
     }
     
-    public boolean getParamBoolean(String param, boolean defaultValue) {
+    public boolean getParamBooleanOrDefault(String param, boolean defaultValue) {
         try {
             String value = getParam(param);
             if (value != null) {
@@ -264,7 +270,7 @@ public class ParameterFile {
         } catch (Exception e) {
         }
         logger.warn(String.format("Valid boolean value not found for config key %s." +
-                                  " Using default value: %l", param, defaultValue));
+                                  " Using default value: %b", param, defaultValue));
         return defaultValue;
     }
 
@@ -494,6 +500,5 @@ public class ParameterFile {
         } //else
         p.listParams();
     }
-
 
 }

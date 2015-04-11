@@ -16,13 +16,13 @@ public class CrawlerManagerConfig {
     public CrawlerManagerConfig(String filename) {
         ParameterFile params = new ParameterFile(filename);
         this.robotThreadGroup = params.getParam("ROBOT_THREAD_GROUP");
-        this.robotQuantity = params.getParamInt("ROBOT_QUANTITY", 5);
-        this.robotManagerRestingTime = params.getParamLong("ROBOT_MANAGER_RESTINGTIME", 10);
-        this.robotManagerCheckTime = params.getParamLong("ROBOT_MANAGER_CHECKTIME", 30000);
-        this.robotManagerMaxTime = params.getParamLong("ROBOT_MANAGER_MAXTIME", 30000);
-        this.robotManagerRobotErrorSleepTime = params.getParamLong("ROBOT_MANAGER_ROBOT_ERROR_SLEEP_TIME", 5000);
-        this.robotManagerRobotThreadFactor = params.getParamInt("ROBOT_MANAGER_ROBOT_THREAD_FACTOR", 10);
-        this.downloaderMaxBlockedThreads = params.getParamLong("DOWNLOADER_MAX_BLOCKED_THREADS", 20000000);
+        this.robotQuantity = params.getParamIntOrDefault("ROBOT_QUANTITY", 5);
+        this.robotManagerRestingTime = params.getParamLongOrDefault("ROBOT_MANAGER_RESTINGTIME", 10);
+        this.robotManagerCheckTime = params.getParamLongOrDefault("ROBOT_MANAGER_CHECKTIME", 30000);
+        this.robotManagerMaxTime = params.getParamLongOrDefault("ROBOT_MANAGER_MAXTIME", 30000);
+        this.robotManagerRobotErrorSleepTime = params.getParamLongOrDefault("ROBOT_MANAGER_ROBOT_ERROR_SLEEP_TIME", 5000);
+        this.robotManagerRobotThreadFactor = params.getParamIntOrDefault("ROBOT_MANAGER_ROBOT_THREAD_FACTOR", 10);
+        this.downloaderMaxBlockedThreads = params.getParamLongOrDefault("DOWNLOADER_MAX_BLOCKED_THREADS", 20000000);
     }
     
     public String getRobotThreadGroup() {

@@ -261,12 +261,16 @@ public class TargetStorage  extends StorageDefault{
         TargetRepository targetRepository; 
         TargetRepository negativeRepository;
         
+
         String dataFormat = config.getDataFormat();
         if (dataFormat.equals("CBOR")) {
 			targetRepository = new TargetCBORRepository(targetDirectory, config.getTargetDomain());
 			negativeRepository = new TargetCBORRepository(negativeDirectory, config.getTargetDomain());
         }
-        else {
+        else if(dataFormat.equals("ELASTICSEARCH")) {
+            targetRepository = new TargetElasticSearchRepository(config, "target");
+            negativeRepository = new TargetElasticSearchRepository(config, "negative");
+        } else {
         	//Default data format is file
         	targetRepository = new TargetFileRepository(targetDirectory);
         	negativeRepository = new TargetFileRepository(negativeDirectory);
