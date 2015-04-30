@@ -114,7 +114,7 @@ public class Log
 
      *  Escreve o string dado em um arquivo.
 
-     *  @deprecated este metodo ser· substituido pelo metodo logMessage
+     *  @deprecated este metodo ser√° substituido pelo metodo logMessage
 
      */
 

@@ -640,19 +640,19 @@ public class PaginaURL implements Pagina {
     }
 
     private void loadHashCodes(){
-    	codes.put("&#1040;","Ð�");codes.put("&#1072;","Ð°");codes.put("&#1041;","Ð‘");codes.put("&#1073;","Ð±");codes.put("&#1042;","Ð’");
-    	codes.put("&#1074;","Ð²");codes.put("&#1043;","Ð“");codes.put("&#1075;","Ð³");codes.put("&#1044;","Ð”");codes.put("&#1076;","Ð´");
-    	codes.put("&#1045;","Ð•");codes.put("&#1077;","Ðµ");codes.put("&#1046;","Ð–");codes.put("&#1078;","Ð¶");codes.put("&#1047;","Ð—");
-    	codes.put("&#1079;","Ð·");codes.put("&#1048;","Ð˜");codes.put("&#1080;","Ð¸");codes.put("&#1049;","Ð™");codes.put("&#1081;","Ð¹");
-    	codes.put("&#1050;","Ðš");codes.put("&#1082;","Ðº");codes.put("&#1051;","Ð›");codes.put("&#1083;","Ð»");codes.put("&#1052;","Ðœ");
-    	codes.put("&#1084;","Ð¼");codes.put("&#1053;","Ð�");codes.put("&#1085;","Ð½");codes.put("&#1054;","Ðž");codes.put("&#1086;","Ð¾");
-    	codes.put("&#1055;","ÐŸ");codes.put("&#1087;","Ð¿");codes.put("&#1056;","Ð ");codes.put("&#1088;","Ñ€");codes.put("&#1057;","Ð¡");
-    	codes.put("&#1089;","Ñ�");codes.put("&#1058;","Ð¢");codes.put("&#1090;","Ñ‚");codes.put("&#1059;","Ð£");codes.put("&#1091;","Ñƒ");
-    	codes.put("&#1060;","Ð¤");codes.put("&#1092;","Ñ„");codes.put("&#1061;","Ð¥");codes.put("&#1093;","Ñ…");codes.put("&#1062;","Ð¦");
-    	codes.put("&#1094;","Ñ†");codes.put("&#1063;","Ð§");codes.put("&#1095;","Ñ‡");codes.put("&#1064;","Ð¨");codes.put("&#1096;","Ñˆ");
-    	codes.put("&#1065;","Ð©");codes.put("&#1097;","Ñ‰");codes.put("&#1066;","Ðª");codes.put("&#1098;","ÑŠ");codes.put("&#1067;","Ð«");
-    	codes.put("&#1099;","Ñ‹");codes.put("&#1068;","Ð¬");codes.put("&#1100;","ÑŒ");codes.put("&#1069;","Ð­");codes.put("&#1101;","Ñ�");
-    	codes.put("&#1070;","Ð®");codes.put("&#1102;","ÑŽ");codes.put("&#1071;","Ð¯");codes.put("&#1103;","Ñ�");
+    	codes.put("&#1040;","Ãï¿½");codes.put("&#1072;","ÃÂ°");codes.put("&#1041;","Ãâ");codes.put("&#1073;","ÃÂ±");codes.put("&#1042;","Ãâ");
+    	codes.put("&#1074;","ÃÂ²");codes.put("&#1043;","Ãâ");codes.put("&#1075;","ÃÂ³");codes.put("&#1044;","Ãâ");codes.put("&#1076;","ÃÂ´");
+    	codes.put("&#1045;","Ãâ¢");codes.put("&#1077;","ÃÂµ");codes.put("&#1046;","Ãâ");codes.put("&#1078;","ÃÂ¶");codes.put("&#1047;","Ãâ");
+    	codes.put("&#1079;","ÃÂ·");codes.put("&#1048;","ÃË");codes.put("&#1080;","ÃÂ¸");codes.put("&#1049;","Ãâ¢");codes.put("&#1081;","ÃÂ¹");
+    	codes.put("&#1050;","ÃÅ¡");codes.put("&#1082;","ÃÂº");codes.put("&#1051;","Ãâº");codes.put("&#1083;","ÃÂ»");codes.put("&#1052;","ÃÅ");
+    	codes.put("&#1084;","ÃÂ¼");codes.put("&#1053;","Ãï¿½");codes.put("&#1085;","ÃÂ½");codes.put("&#1054;","ÃÅ¾");codes.put("&#1086;","ÃÂ¾");
+    	codes.put("&#1055;","ÃÅ¸");codes.put("&#1087;","ÃÂ¿");codes.put("&#1056;","ÃÂ ");codes.put("&#1088;","Ãâ¬");codes.put("&#1057;","ÃÂ¡");
+    	codes.put("&#1089;","Ãï¿½");codes.put("&#1058;","ÃÂ¢");codes.put("&#1090;","Ãâ");codes.put("&#1059;","ÃÂ£");codes.put("&#1091;","ÃÆ");
+    	codes.put("&#1060;","ÃÂ¤");codes.put("&#1092;","Ãâ");codes.put("&#1061;","ÃÂ¥");codes.put("&#1093;","Ãâ¦");codes.put("&#1062;","ÃÂ¦");
+    	codes.put("&#1094;","Ãâ ");codes.put("&#1063;","ÃÂ§");codes.put("&#1095;","Ãâ¡");codes.put("&#1064;","ÃÂ¨");codes.put("&#1096;","ÃË");
+    	codes.put("&#1065;","ÃÂ©");codes.put("&#1097;","Ãâ°");codes.put("&#1066;","ÃÂª");codes.put("&#1098;","ÃÅ ");codes.put("&#1067;","ÃÂ«");
+    	codes.put("&#1099;","Ãâ¹");codes.put("&#1068;","ÃÂ¬");codes.put("&#1100;","ÃÅ");codes.put("&#1069;","ÃÂ­");codes.put("&#1101;","Ãï¿½");
+    	codes.put("&#1070;","ÃÂ®");codes.put("&#1102;","ÃÅ½");codes.put("&#1071;","ÃÂ¯");codes.put("&#1103;","Ãï¿½");
 
     }
     
@@ -976,8 +976,8 @@ public class PaginaURL implements Pagina {
                             	pos_caracter_especial = -1;
                             	continue;
                             }
-                            if(str.contains("Ã±")){
-                            	str = str.replace("Ã±", "n");
+                            if(str.contains("ÃÂ±")){
+                            	str = str.replace("ÃÂ±", "n");
                             	pos_caracter_especial = -1;
                             	continue;
                             }
@@ -1605,8 +1605,8 @@ public class PaginaURL implements Pagina {
                             	StringTokenizer st = new StringTokenizer(str);
                                 while(st.hasMoreTokens()) {
                                     String token = st.nextToken();
-                                	if(token.contains("ÃƒÂ±")){
-                                		token = token.replace("ÃƒÂ±", "n");
+                                	if(token.contains("ÃÆÃÂ±")){
+                                		token = token.replace("ÃÆÃÂ±", "n");
                                     }
                                 	token = token.toLowerCase();
                                     if(token.contains("&#241;")){
@@ -1615,8 +1615,8 @@ public class PaginaURL implements Pagina {
                                 	if(token.contains("&ntilde;")){
                                     	token = token.replace("&ntilde;", "n");
                                     }
-                                    if(token.contains("Ã±")){
-                                    	token = token.replace("Ã±", "n");
+                                    if(token.contains("ÃÂ±")){
+                                    	token = token.replace("ÃÂ±", "n");
                                     }
 
                                     altWords.add(token);

@@ -27,7 +27,7 @@
 
  *
 
- * Copyright (c) 1997-1999 Departamento de Inform�tica - UFPE
+ * Copyright (c) 1997-1999 Departamento de Informï¿½tica - UFPE
 
  *    Grupo:
 
@@ -549,13 +549,13 @@ public abstract class AbstractStopList implements StopList {
 
     *   !=45        para ignorar os hifens
 
-    *   <48         para caracteres n�o visualiz�veis e !"#$%&'()*+,./
+    *   <48         para caracteres nï¿½o visualizï¿½veis e !"#$%&'()*+,./
 
     *   >57  e <65  para :;<=>?@
 
     *   >90  e <97  para [\]^_`
 
-    *   >122 e <192 para {|}~�������������������������������� al�m de alguns caracteres n�o visualiz�veis
+    *   >122 e <192 para {|}~ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ alï¿½m de alguns caracteres nï¿½o visualizï¿½veis
 
     */
 
@@ -593,7 +593,7 @@ public abstract class AbstractStopList implements StopList {
 
 
 
-    /** Busca bin�ria em um array de Strings */
+    /** Busca binï¿½ria em um array de Strings */
 
     protected synchronized boolean pertenceAoArray( String palavra,String array[] ) {
 
@@ -683,7 +683,7 @@ public abstract class AbstractStopList implements StopList {
 
 
 
-    /** Imprime os dados dispon�veis para cada conjunto de palavras */
+    /** Imprime os dados disponï¿½veis para cada conjunto de palavras */
 
     public synchronized void printListas( ) {
 
@@ -731,7 +731,7 @@ public abstract class AbstractStopList implements StopList {
 
         else
 
-            System.out.println("Nada dispon�vel.");
+            System.out.println("Nada disponï¿½vel.");
 
     }
 

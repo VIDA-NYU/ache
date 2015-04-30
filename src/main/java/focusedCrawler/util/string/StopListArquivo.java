@@ -27,7 +27,7 @@
 
  *
 
- * Copyright (c) 1997-1999 Departamento de Informática - UFPE
+ * Copyright (c) 1997-1999 Departamento de InformÃ¡tica - UFPE
 
  *    Grupo:
 
@@ -92,7 +92,7 @@ public class StopListArquivo extends AbstractStopList {
 
             ioe.printStackTrace();
 
-            System.out.println("Não conseguiu inicializar o arquivo default : "+ DEFAULT );
+            System.out.println("NÃ£o conseguiu inicializar o arquivo default : "+ DEFAULT );
 
         }
 
@@ -322,7 +322,7 @@ public class StopListArquivo extends AbstractStopList {
 
         stopList.printListas();
 
-        String palavra = "منتدى";
+        String palavra = "ÙÙØªØ¯Ù";
 
         System.out.println();
 

@@ -104,7 +104,7 @@ public class RemoteObjectFactory implements ObjectFactory {
 
                 else {
 
-                    throw new FactoryException ("N„o conseguiu acessar o objeto: " + key.hashKey(),lookup.getError());
+                    throw new FactoryException ("N√£o conseguiu acessar o objeto: " + key.hashKey(),lookup.getError());
 
                 } //else
 
@@ -114,7 +114,7 @@ public class RemoteObjectFactory implements ObjectFactory {
 
                 erro.printStackTrace ();
 
-                throw new FactoryException ("N„o conseguiu acessar o objeto: " + erro.getMessage(),erro);
+                throw new FactoryException ("N√£o conseguiu acessar o objeto: " + erro.getMessage(),erro);
 
             } //catch
 
@@ -122,7 +122,7 @@ public class RemoteObjectFactory implements ObjectFactory {
 
         else {
 
-            throw new FactoryException ("Cache inv·lida: " + key.toString());
+            throw new FactoryException ("Cache inv√°lida: " + key.toString());
 
         } //else
 

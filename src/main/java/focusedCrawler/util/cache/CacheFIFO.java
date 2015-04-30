@@ -44,11 +44,11 @@ import focusedCrawler.util.Timer;
 
 /**
 
- * Essa classe implementa uma cache que È tratada com uma
- * fila de objetos, quando um objeto novo È inserido
- * ele È colocado no inicio da fila.
- * E os elementos que s„o removidos por falha na cache
- * s„o os do final da fila(cache FIFO).
+ * Essa classe implementa uma cache que √© tratada com uma
+ * fila de objetos, quando um objeto novo √© inserido
+ * ele √© colocado no inicio da fila.
+ * E os elementos que s√£o removidos por falha na cache
+ * s√£o os do final da fila(cache FIFO).
  *
  */
 
@@ -674,7 +674,7 @@ public class CacheFIFO implements Cache {
     }
 
     /**
-     * Este metodo È chamado quando a cache esta cheia.
+     * Este metodo √© chamado quando a cache esta cheia.
      * Remove um unico elemento da cache.
      * Nesta implementacao remove o ultimo da lista.
      *

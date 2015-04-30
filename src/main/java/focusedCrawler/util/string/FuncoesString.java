@@ -31,11 +31,11 @@ import java.util.*;
 
 /**
 
- * Conjunto de funcoes comuns usadas na manipulação de strings
+ * Conjunto de funcoes comuns usadas na manipulaÃ§Ã£o de strings
 
  *
 
- * @author Marcelo Rômulo
+ * @author Marcelo RÃ´mulo
 
  * @version 1.0, 29/07/99
 

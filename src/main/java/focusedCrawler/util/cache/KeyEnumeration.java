@@ -38,7 +38,7 @@ import focusedCrawler.util.DoubleLinkedListNode;
 
 /**
 
- * Classe que representa uma enumeração de chaves de cache, criada a partir de uma enumeração de Strings (valores das chaves)
+ * Classe que representa uma enumeraÃ§Ã£o de chaves de cache, criada a partir de uma enumeraÃ§Ã£o de Strings (valores das chaves)
 
  *
 
@@ -58,7 +58,7 @@ public class KeyEnumeration implements Enumeration {
 
 
 
-//    Enumeration enum; // Armazena a enumeração de Strings (valores das chaves)
+//    Enumeration enum; // Armazena a enumeraÃ§Ã£o de Strings (valores das chaves)
 
 
 

@@ -33,7 +33,7 @@ package focusedCrawler.util.cache;
 
  * a cache esta cheia, os objetos que serao removidos
 
- * sao aqueles usados ha mais tempo, onde apos n flush ser· salvo o estado
+ * sao aqueles usados ha mais tempo, onde apos n flush ser√° salvo o estado
 
  * atual da cahce
 

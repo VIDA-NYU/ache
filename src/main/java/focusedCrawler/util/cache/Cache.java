@@ -36,7 +36,7 @@ import focusedCrawler.util.loader.Loadable;
 
  * Representa uma cache com operacoes sobre os dados da cache.
 
- * Seu uso é da seguinte maneira:
+ * Seu uso Ã© da seguinte maneira:
 
  *    1) get dado da cache
 

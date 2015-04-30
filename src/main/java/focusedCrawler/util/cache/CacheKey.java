@@ -29,7 +29,7 @@ package focusedCrawler.util.cache;
 
  * Identifica a chave da cache.
 
- * Uma chave é basicamente um objeto que possui um objeto de hash.
+ * Uma chave Ã© basicamente um objeto que possui um objeto de hash.
 
  * Cada dado da cache deve ter uma chave CacheKey para representa-lo
 

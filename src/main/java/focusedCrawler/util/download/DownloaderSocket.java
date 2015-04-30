@@ -273,7 +273,7 @@ public class DownloaderSocket extends DownloaderAbstract {
 
             logNormal("Response>"+header);
             if( header.indexOf(Downloader.PROTOCOL) < 0 && header.indexOf(":") < 0 ) { // respondem corretamente tivemos que colocar este if.
-                if( first ) { // caso não haja cabeçário deve-se retornar o InputStream.
+                if( first ) { // caso nÃ£o haja cabeÃ§Ã¡rio deve-se retornar o InputStream.
                     logNormal("unread>"+input);
                     in.unread(input.append('\n').toString().getBytes());
                 }

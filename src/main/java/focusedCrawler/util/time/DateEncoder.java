@@ -43,7 +43,7 @@ import java.util.Calendar;
 
  * Company:      radix.com
 
- * @author Jo„o Batista da Rocha Junior(joao@radix.com)
+ * @author Jo√£o Batista da Rocha Junior(joao@radix.com)
 
  * @version 1.0
 

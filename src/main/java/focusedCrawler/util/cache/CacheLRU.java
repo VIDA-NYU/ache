@@ -32,11 +32,11 @@ import focusedCrawler.util.DoubleLinkedListNode;
  * a cache esta cheia, os objetos que serao removidos
  * sao aqueles usados ha mais tempo.
 
- * <BR> A implementaÁ„o baseia-se na cache FIFO so que
- * quando um dado È consultado ele vai para o inicio da fila
+ * <BR> A implementa√ß√£o baseia-se na cache FIFO so que
+ * quando um dado √© consultado ele vai para o inicio da fila
  * isso garante que quando a cache estiver cheia e
  * um dado novo for inserido, os dados removidos(os do final da lista)
- * ser„o os utilizados h· mais tempo(cache LRU).
+ * ser√£o os utilizados h√° mais tempo(cache LRU).
  *
  */
 

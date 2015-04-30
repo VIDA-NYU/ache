@@ -27,7 +27,7 @@ package focusedCrawler.util.storage;
 
 /**
 
- * Declaração da Classe
+ * DeclaraÃ§Ã£o da Classe
 
  *
 

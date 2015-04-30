@@ -27,7 +27,7 @@
 
  *
 
- * Copyright (c) 1997-1999 Departamento de Inform·tica - UFPE
+ * Copyright (c) 1997-1999 Departamento de Inform√°tica - UFPE
 
  *    Grupo:
 
