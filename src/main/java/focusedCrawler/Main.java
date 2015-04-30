@@ -26,16 +26,24 @@ public class Main {
 
     public static void main(String... args) {
         if (args.length > 0) {
-            if ("startCrawl".equals(args[0]) && args.length == 6) {
-                startCrawl(args[1], args[2], args[3], args[4], args[5]);
+            if ("startCrawl".equals(args[0]) && (args.length == 5 || args.length == 6)) {
+                if(args.length == 6) {
+                    System.err.println("Language profiles are not needed anymore. "
+                            + "Ignoring parameter: "+ args[5]);
+                }
+                startCrawl(args[1], args[2], args[3], args[4]);
             } else if ("addSeeds".equals(args[0]) && args.length == 4) {
                 addSeeds(args[1], args[2], args[3]);
             } else if ("buildModel".equals(args[0]) && args.length == 4) {
                 buildModel(args[1], args[2], args[3]);
             } else if ("startLinkStorage".equals(args[0]) && args.length == 4) {
                 startLinkStorage(args[1], args[2], args[3]);
-            } else if ("startTargetStorage".equals(args[0]) && args.length == 5) {
-                startTargetStorage(args[1], args[2], args[3], args[4]);
+            } else if ("startTargetStorage".equals(args[0]) && (args.length == 4 || args.length == 5)) {
+                if(args.length == 5) {
+                    System.err.println("Language profiles are not needed anymore. "
+                            + "Ignoring parameter: "+ args[4]);
+                }
+                startTargetStorage(args[1], args[2], args[3]);
             } else if ("startCrawlManager".equals(args[0]) && args.length == 2) {
                 startCrawlManager(args[1]);
             } else {
@@ -76,10 +84,9 @@ public class Main {
 
     private static void startTargetStorage(final String dataOutputPath,
                                            final String configPath,
-                                           final String modelPath,
-                                           final String langDetectProfilePath){
+                                           final String modelPath){
          try {
-             TargetStorage.main(new String[]{configPath, modelPath, dataOutputPath, langDetectProfilePath});
+             TargetStorage.main(new String[]{configPath, modelPath, dataOutputPath});
          } catch (Throwable t) {
              logger.error("Something bad happened to TargetStorage :(", t);
          }
@@ -94,15 +101,10 @@ public class Main {
 
     }
 
-//    private static void startFormStorage(){
-//        //Not used yet
-//    }
-
     private static void startCrawl(final String dataOutputPath,
                                    final String configPath,
                                    final String seedPath,
-                                   final String modelPath,
-                                   final String langDetectProfilePath) {
+                                   final String modelPath) {
 
         // set up the data directories
         createOutputPathStructure(dataOutputPath);
@@ -170,20 +172,20 @@ public class Main {
     private static void printUsage() {
         System.out.println("Focused Crawler");
         System.out.println();
-        // TODO package the profiles with gradle build or mash them into the resources
-        // lang detect profile can be downloaded from https://code.google.com/p/language-detection/wiki/Downloads
+        System.out.println("ache startCrawl <data output path> <config path> <seed path> <model path>");
         System.out.println("ache buildModel <target storage config path> <training data path> <output path>");
         System.out.println("ache addSeeds <data output path> <config path> <seed path>");
         System.out.println("ache startLinkStorage <data output path> <config path> <seed path>");
-        System.out.println("ache startTargetStorage <data output path> <config path> <model path> <lang detect profile path>");
+        System.out.println("ache startTargetStorage <data output path> <config path> <model path>");
         System.out.println("ache startCrawlManager <config path>");
         System.out.println();
         System.out.println();
         System.out.println("Examples:");
+        System.out.println("ache startCrawl sample_crawl config/sample_config config/sample.seeds config/sample_model/");
         System.out.println("ache buildModel config/sample_config/target_storage.cfg training_data output_model");
         System.out.println("ache addSeeds data config/sample_config config/sample.seeds");
         System.out.println("ache startLinkStorage data config/sample_config config/sample.seeds");
-        System.out.println("ache startTargetStorage data config/sample_config config/sample_config libs/profiles");
+        System.out.println("ache startTargetStorage data config/sample_config config/sample_config");
         System.out.println("ache startCrawlManager config/sample_config");
 
     }

@@ -75,7 +75,6 @@ public class TargetStorage  extends StorageDefault{
         this.totalOnTopicPages = 0;
         
         this.langDetect = new LangDetection();
-        this.langDetect.init("libs/profiles/");//This is hard coded, should be fixed
         
         this.monitor = monitor;
         
@@ -92,7 +91,7 @@ public class TargetStorage  extends StorageDefault{
         Page page = (Page)obj;
         
 		//Only accept English
-    	if (this.langDetect.detect_page(page) == false){
+    	if (this.langDetect.isEnglish(page) == false){
     		logger.info("Ignoring non-English page: " + page.getIdentifier());
       		return null;
     	}
