@@ -40,7 +40,7 @@ public class Map_Geral extends Map {
 
     /**
 
-     Mapeamento utilizado pela indexacao para a colocacao na url de informa��es como:
+     Mapeamento utilizado pela indexacao para a colocacao na url de informaï¿½ï¿½es como:
 
      codigo da url, tipo da url, data de modificacao, data de visitada, contador de atualizacaoes, nota do link para imagem,nota do link para Lingua Portuguesa
 

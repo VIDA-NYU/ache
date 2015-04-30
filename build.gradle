@@ -4,7 +4,7 @@ apply plugin: 'application'
 
 sourceCompatibility = 1.6
 targetCompatibility = 1.6
-compileJava.options.encoding = "ISO-8859-1"
+compileJava.options.encoding = "UTF-8"
 //group = 'io.continuum.ache'
 version = '0.1.0'
 

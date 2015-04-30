@@ -73,7 +73,7 @@ public abstract class ThreadDownload extends Thread {
 
     /**
 
-    *  Indica se houve finalizaÁ„o do download por timeout
+    *  Indica se houve finaliza√ß√£o do download por timeout
 
     */
     private boolean finalizadoPorTimeout = false;
@@ -97,7 +97,7 @@ public abstract class ThreadDownload extends Thread {
 
      *
 
-     * @param alvo Alvo que ser· utilizado pelo thread.
+     * @param alvo Alvo que ser√° utilizado pelo thread.
 
      */
 
@@ -115,7 +115,7 @@ public abstract class ThreadDownload extends Thread {
 
      *
 
-     * @param alvo Alvo que ser· utilizado pelo thread.
+     * @param alvo Alvo que ser√° utilizado pelo thread.
 
      * @param timeout Tempo de vida do thread.
 
@@ -137,7 +137,7 @@ public abstract class ThreadDownload extends Thread {
 
      *
 
-     * @param alvo Alvo que ser· utilizado pelo thread.
+     * @param alvo Alvo que ser√° utilizado pelo thread.
 
      * @param timeout Tempo de vida do thread.
 
@@ -239,7 +239,7 @@ public abstract class ThreadDownload extends Thread {
 
      *
 
-     * @param foiTimeout <code> True </code> caso o download tenha finalizado pelo timeout, <code> false </code> caso contr·rio
+     * @param foiTimeout <code> True </code> caso o download tenha finalizado pelo timeout, <code> false </code> caso contr√°rio
 
      */
 
@@ -257,7 +257,7 @@ public abstract class ThreadDownload extends Thread {
 
      *
 
-     * @return <code> True </code> caso o download tenha finalizado pelo timeout, <code> false </code> caso contr·rio
+     * @return <code> True </code> caso o download tenha finalizado pelo timeout, <code> false </code> caso contr√°rio
 
      */
 

@@ -29,7 +29,7 @@ import focusedCrawler.util.loader.LoaderException;
 public class CacheFileLoader extends CacheLoader {
     /**
 
-     * Indica com a cache ser·, se mapeando string em int, ou int em string
+     * Indica com a cache ser√°, se mapeando string em int, ou int em string
 
      */
 
@@ -137,7 +137,7 @@ public class CacheFileLoader extends CacheLoader {
 
                 catch (CacheException erro) {
 
-                    throw new LoaderException ("N„o conseguiu carregar a cache: " + erro.getMessage ());
+                    throw new LoaderException ("N√£o conseguiu carregar a cache: " + erro.getMessage ());
 
                 } //catch
 

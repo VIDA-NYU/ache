@@ -190,7 +190,7 @@ public abstract class TimeItemImpl implements TimeItem {
     } //transformValue
 
 
-    // Retorna o primeiro valor v·lido
+    // Retorna o primeiro valor v√°lido
 
     protected int getFirstValue () {
 
@@ -205,7 +205,7 @@ public abstract class TimeItemImpl implements TimeItem {
     } //getFirstValue
 
 
-    // Retorna o tempo existente entre o 1o. e o 2o. par‚metro
+    // Retorna o tempo existente entre o 1o. e o 2o. par√¢metro
 
     protected long timeBetween (long firstTime, long lastTime) {
 
@@ -228,11 +228,11 @@ public abstract class TimeItemImpl implements TimeItem {
     } //timeBetween
 
 
-    // retorna o tempo decorrido de value atÈ o prÛximo v·lido
+    // retorna o tempo decorrido de value at√© o pr√≥ximo v√°lido
 
 	public long nextTimeMillis (long value, boolean overflow) {
 
-        // Se aceita todos, esse campo n„o determina tempo
+        // Se aceita todos, esse campo n√£o determina tempo
 
 		if (isAcceptAll ()) {
 
@@ -243,7 +243,7 @@ public abstract class TimeItemImpl implements TimeItem {
 		} //if
 
 
-        // Realizando transformaÁ„o no valor original
+        // Realizando transforma√ß√£o no valor original
 
         value = transformValue (value);
 
@@ -277,7 +277,7 @@ public abstract class TimeItemImpl implements TimeItem {
 
 		} //for
 
-        // Se chegou aqui, ent„o ocorre overflow no caso de valores fixos
+        // Se chegou aqui, ent√£o ocorre overflow no caso de valores fixos
 
 	    return timeBetween (value, getFirstValue ());
 

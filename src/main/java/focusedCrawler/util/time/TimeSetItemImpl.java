@@ -230,7 +230,7 @@ public class TimeSetItemImpl implements TimeSetItem {
 
         System.out.println ("Codigo = " + codigo);
 
-        System.out.println ("Tempo atual = " + date + "(" + date.getTime() + ") Próximo Tempo = " + sleepTime + " " + set.formatTime (sleepTime));
+        System.out.println ("Tempo atual = " + date + "(" + date.getTime() + ") PrÃ³ximo Tempo = " + sleepTime + " " + set.formatTime (sleepTime));
 
     } //main
 

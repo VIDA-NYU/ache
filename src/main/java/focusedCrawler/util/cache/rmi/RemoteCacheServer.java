@@ -44,7 +44,7 @@ import focusedCrawler.util.cache.*;
 
  *
 
- * Basicamente é uma implementacao remota da interface Cache.
+ * Basicamente Ã© uma implementacao remota da interface Cache.
 
  *
 

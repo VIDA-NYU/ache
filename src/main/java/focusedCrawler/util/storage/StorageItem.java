@@ -117,7 +117,7 @@ public interface StorageItem {
 
     /**
 
-     * Retorna se gravará o status do item
+     * Retorna se gravarÃ¡ o status do item
 
      */
 
@@ -127,7 +127,7 @@ public interface StorageItem {
 
     /**
 
-     * Altera se gravará o status do item
+     * Altera se gravarÃ¡ o status do item
 
      */
 
@@ -137,7 +137,7 @@ public interface StorageItem {
 
     /**
 
-     * Retorna se gravará o código do item
+     * Retorna se gravarÃ¡ o cÃ³digo do item
 
      */
 
@@ -147,7 +147,7 @@ public interface StorageItem {
 
     /**
 
-     * Altera se gravará o código do item
+     * Altera se gravarÃ¡ o cÃ³digo do item
 
      */
 
@@ -157,7 +157,7 @@ public interface StorageItem {
 
     /**
 
-     * Escreve a representação binária do item
+     * Escreve a representaÃ§Ã£o binÃ¡ria do item
 
      */
 
@@ -167,7 +167,7 @@ public interface StorageItem {
 
     /**
 
-     * Lê a representação binária do item
+     * LÃª a representaÃ§Ã£o binÃ¡ria do item
 
      */
 
@@ -177,7 +177,7 @@ public interface StorageItem {
 
     /**
 
-     * Retorna o tamanho da representação em bytes
+     * Retorna o tamanho da representaÃ§Ã£o em bytes
 
      */
 

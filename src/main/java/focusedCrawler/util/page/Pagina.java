@@ -156,7 +156,7 @@ public interface Pagina extends java.io.Serializable {
 
 
 
-	/**  @return Um array com as URL´s contidas no documento.
+	/**  @return Um array com as URLÂ´s contidas no documento.
 
 	 */
 

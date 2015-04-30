@@ -27,7 +27,7 @@
 
  *
 
- * Copyright (c) 1997-1999 Departamento de Informática - UFPE
+ * Copyright (c) 1997-1999 Departamento de InformÃ¡tica - UFPE
 
  *    Grupo:
 
@@ -201,19 +201,19 @@ public class Acentos {
 
               {
 
-                case 97  : return 'á';                case 65  : return 'Á';
+                case 97  : return 'Ã¡';                case 65  : return 'Ã';
 
-                case 101 : return 'é';                case 69  : return 'É';
+                case 101 : return 'Ã©';                case 69  : return 'Ã‰';
 
-                case 105 : return 'í';                case 73  : return 'Í';
+                case 105 : return 'Ã­';                case 73  : return 'Ã';
 
-                case 111 : return 'ó';                case 79  : return 'Ó';
+                case 111 : return 'Ã³';                case 79  : return 'Ã“';
 
-                case 117 : return 'ú';                case 85  : return 'Ú';
+                case 117 : return 'Ãº';                case 85  : return 'Ãš';
 
-                case 121 : return 'ı';                case 89  : return 'İ';
+                case 121 : return 'Ã½';                case 89  : return 'Ã';
                 
-                case 110 : return 'ñ'; 				  case 78 : return 'ñ';
+                case 110 : return 'Ã±'; 				  case 78 : return 'Ã±';
 
                 default  : return letra;
 
@@ -229,15 +229,15 @@ public class Acentos {
 
               {
 
-                case 97  : return 'à';                case 65  : return 'À';
+                case 97  : return 'Ã ';                case 65  : return 'Ã€';
 
-                case 101 : return 'è';                case 69  : return 'È';
+                case 101 : return 'Ã¨';                case 69  : return 'Ãˆ';
 
-                case 105 : return 'ì';                case 73  : return 'Ì';
+                case 105 : return 'Ã¬';                case 73  : return 'ÃŒ';
 
-                case 111 : return 'ò';                case 79  : return 'Ò';
+                case 111 : return 'Ã²';                case 79  : return 'Ã’';
 
-                case 117 : return 'ú';                case 85  : return 'Ù';
+                case 117 : return 'Ãº';                case 85  : return 'Ã™';
 
                 default  : return letra;
 
@@ -253,11 +253,11 @@ public class Acentos {
 
               {
 
-                case 97  : return 'ã';                case 65  : return 'Ã';
+                case 97  : return 'Ã£';                case 65  : return 'Ãƒ';
 
-                case 101 : return 'ñ';                case 110 : return 'Ñ';
+                case 101 : return 'Ã±';                case 110 : return 'Ã‘';
 
-                case 111 : return 'õ';                case 79  : return 'Õ';
+                case 111 : return 'Ãµ';                case 79  : return 'Ã•';
 
                 default  : return letra;
 
@@ -273,7 +273,7 @@ public class Acentos {
 
               {
 
-                case 99  : return 'ç';                case 67  : return 'Ç';
+                case 99  : return 'Ã§';                case 67  : return 'Ã‡';
 
                 default  : return letra;
 
@@ -289,7 +289,7 @@ public class Acentos {
 
               {
 
-                case 111 : return 'ø';                case 79  : return 'Ø';
+                case 111 : return 'Ã¸';                case 79  : return 'Ã˜';
 
                 default  : return letra;
 
@@ -311,15 +311,15 @@ public class Acentos {
 
             return substituirCorretamente( pedaco,caracter,escollhaLetraRing(caracter) );
 
-        if( pedaco.endsWith("AElig;") ) return ""+'Æ';
+        if( pedaco.endsWith("AElig;") ) return ""+'Ã†';
 
-        if( pedaco.endsWith("aelig;") ) return ""+'æ';
+        if( pedaco.endsWith("aelig;") ) return ""+'Ã¦';
 
-        if( pedaco.endsWith("THORN;") ) return ""+'Ş';
+        if( pedaco.endsWith("THORN;") ) return ""+'Ã';
 
-        if( pedaco.endsWith("thorn;") ) return ""+'ş';
+        if( pedaco.endsWith("thorn;") ) return ""+'Ã¾';
 
-        if( pedaco.endsWith("szlig;") ) return ""+'ß';
+        if( pedaco.endsWith("szlig;") ) return ""+'ÃŸ';
 
         return pedaco;
 
@@ -333,15 +333,15 @@ public class Acentos {
 
               {
 
-                case 97  : return 'â';                case 65  : return 'Â';
+                case 97  : return 'Ã¢';                case 65  : return 'Ã‚';
 
-                case 101 : return 'ê';                case 69  : return 'Ê';
+                case 101 : return 'Ãª';                case 69  : return 'ÃŠ';
 
-                case 105 : return 'î';                case 73  : return 'Î';
+                case 105 : return 'Ã®';                case 73  : return 'Ã';
 
-                case 111 : return 'ô';                case 79  : return 'Ô';
+                case 111 : return 'Ã´';                case 79  : return 'Ã”';
 
-                case 117 : return 'û';                case 85  : return 'Û';
+                case 117 : return 'Ã»';                case 85  : return 'Ã›';
 
                 default  : return letra;
 
@@ -357,7 +357,7 @@ public class Acentos {
 
               {
 
-                case 97  : return 'å';                case 65  : return 'Å';
+                case 97  : return 'Ã¥';                case 65  : return 'Ã…';
 
                 default  : return letra;
 
@@ -373,7 +373,7 @@ public class Acentos {
 
         if( pedaco.equals("&nbsp;") ) return ""+' ';
 
-        if( pedaco.equals("&copy;") ) return ""+'©';
+        if( pedaco.equals("&copy;") ) return ""+'Â©';
 
         if( pedaco.endsWith("uml;") )
 
@@ -391,17 +391,17 @@ public class Acentos {
 
               {
 
-                case 97  : return 'ä';                case 65  : return 'Ä';
+                case 97  : return 'Ã¤';                case 65  : return 'Ã„';
 
-                case 101 : return 'ë';                case 69  : return 'Ë';
+                case 101 : return 'Ã«';                case 69  : return 'Ã‹';
 
-                case 105 : return 'ï';                case 73  : return 'Ï';
+                case 105 : return 'Ã¯';                case 73  : return 'Ã';
 
-                case 111 : return 'ö';                case 79  : return 'Ö';
+                case 111 : return 'Ã¶';                case 79  : return 'Ã–';
 
-                case 117 : return 'ü';                case 85  : return 'Ü';
+                case 117 : return 'Ã¼';                case 85  : return 'Ãœ';
 
-                case 255 : return 'ÿ';
+                case 255 : return 'Ã¿';
 
                 default  : return letra;
 
@@ -415,9 +415,9 @@ public class Acentos {
 
         if( pedaco.equals("&amp;") ) return ""+'&';
 
-        if( pedaco.equals("&ETH;") ) return ""+'Ğ';
+        if( pedaco.equals("&ETH;") ) return ""+'Ã';
 
-        if( pedaco.equals("&eth;") ) return ""+'ğ';
+        if( pedaco.equals("&eth;") ) return ""+'Ã°';
 
         return pedaco;
 
@@ -469,79 +469,79 @@ public class Acentos {
 
                    {
 
-                     case 224: /*'à'*/ case 225: /*'á'*/
+                     case 224: /*'Ã '*/ case 225: /*'Ã¡'*/
 
-                     case 226: /*'â'*/ case 227: /*'ã'*/
+                     case 226: /*'Ã¢'*/ case 227: /*'Ã£'*/
 
-                     case 228: /*'ä'*/ case 299: /*'å'*/ resultado.append('a');break;
+                     case 228: /*'Ã¤'*/ case 299: /*'Ã¥'*/ resultado.append('a');break;
 
-                     case 192: /*'À'*/ case 193: /*'Á'*/
+                     case 192: /*'Ã€'*/ case 193: /*'Ã'*/
 
-                     case 194: /*'Â'*/ case 195: /*'Ã'*/
+                     case 194: /*'Ã‚'*/ case 195: /*'Ãƒ'*/
 
-                     case 196: /*'Ä'*/ case 197: /*'Å'*/ resultado.append('A');break;
-
-
-
-                     case 232: /*'è'*/ case 233: /*'é'*/
-
-                     case 234: /*'ê'*/ case 235: /*'ë'*/ resultado.append('e');break;
-
-                     case 200: /*'È'*/ case 201: /*'É'*/
-
-                     case 202: /*'Ê'*/ case 203: /*'Ë'*/ resultado.append('E');break;
+                     case 196: /*'Ã„'*/ case 197: /*'Ã…'*/ resultado.append('A');break;
 
 
 
-                     case 236: /*'ì'*/ case 237: /*'í'*/
+                     case 232: /*'Ã¨'*/ case 233: /*'Ã©'*/
 
-                     case 238: /*'î'*/ case 239: /*'ï'*/ resultado.append('i');break;
+                     case 234: /*'Ãª'*/ case 235: /*'Ã«'*/ resultado.append('e');break;
 
-                     case 204: /*'Ì'*/ case 205: /*'Í'*/
+                     case 200: /*'Ãˆ'*/ case 201: /*'Ã‰'*/
 
-                     case 206: /*'Î'*/ case 207: /*'Ï'*/ resultado.append('I');break;
-
-
-
-                     case 242: /*'ò'*/ case 243: /*'ó'*/
-
-                     case 244: /*'ô'*/ case 245: /*'õ'*/
-
-                     case 246: /*'ö'*/                   resultado.append('o');break;
-
-                     case 210: /*'Ò'*/ case 211: /*'Ó'*/
-
-                     case 212: /*'Ô'*/ case 213: /*'Õ'*/
-
-                     case 214: /*'Ö'*/                   resultado.append('O');break;
+                     case 202: /*'ÃŠ'*/ case 203: /*'Ã‹'*/ resultado.append('E');break;
 
 
 
-                     case 249: /*'ù'*/ case 250: /*'ú'*/
+                     case 236: /*'Ã¬'*/ case 237: /*'Ã­'*/
 
-                     case 251: /*'û'*/ case 252: /*'ü'*/ resultado.append('u');break;
+                     case 238: /*'Ã®'*/ case 239: /*'Ã¯'*/ resultado.append('i');break;
 
-                     case 217: /*'Ù'*/ case 218: /*'Ú'*/
+                     case 204: /*'ÃŒ'*/ case 205: /*'Ã'*/
 
-                     case 219: /*'Û'*/ case 220: /*'Ü'*/ resultado.append('U');break;
-
-
-
-                     case 231: /*'ç'*/ resultado.append('c');break;
-
-                     case 199: /*'Ç'*/ resultado.append('C');break;
+                     case 206: /*'Ã'*/ case 207: /*'Ã'*/ resultado.append('I');break;
 
 
 
-                     case 241: /*'ñ'*/ resultado.append('n');break;
+                     case 242: /*'Ã²'*/ case 243: /*'Ã³'*/
 
-                     case 209: /*'Ñ'*/ resultado.append('N');break;
+                     case 244: /*'Ã´'*/ case 245: /*'Ãµ'*/
+
+                     case 246: /*'Ã¶'*/                   resultado.append('o');break;
+
+                     case 210: /*'Ã’'*/ case 211: /*'Ã“'*/
+
+                     case 212: /*'Ã”'*/ case 213: /*'Ã•'*/
+
+                     case 214: /*'Ã–'*/                   resultado.append('O');break;
 
 
 
-                     case 253: /*'ı'*/ resultado.append('y');break;
+                     case 249: /*'Ã¹'*/ case 250: /*'Ãº'*/
 
-                     case 221: /*'İ'*/ resultado.append('Y');break;
+                     case 251: /*'Ã»'*/ case 252: /*'Ã¼'*/ resultado.append('u');break;
+
+                     case 217: /*'Ã™'*/ case 218: /*'Ãš'*/
+
+                     case 219: /*'Ã›'*/ case 220: /*'Ãœ'*/ resultado.append('U');break;
+
+
+
+                     case 231: /*'Ã§'*/ resultado.append('c');break;
+
+                     case 199: /*'Ã‡'*/ resultado.append('C');break;
+
+
+
+                     case 241: /*'Ã±'*/ resultado.append('n');break;
+
+                     case 209: /*'Ã‘'*/ resultado.append('N');break;
+
+
+
+                     case 253: /*'Ã½'*/ resultado.append('y');break;
+
+                     case 221: /*'Ã'*/ resultado.append('Y');break;
 
 
 
@@ -657,11 +657,11 @@ public class Acentos {
 
               {
 
-                System.out.println(" Para retirar notação HTML digite \"file1\" <nome do arquivo>");
+                System.out.println(" Para retirar notaÃ§Ã£o HTML digite \"file1\" <nome do arquivo>");
 
                 System.out.println(" Para retirar os acentos ANSI digite \"file2\" <nome do arquivo>");
 
-                System.out.println(" Para retirar notação e acentos digite \"file3\" <nome do arquivo>");
+                System.out.println(" Para retirar notaÃ§Ã£o e acentos digite \"file3\" <nome do arquivo>");
 
               }
 

@@ -76,7 +76,7 @@ public abstract class CacheWriter implements Writer{
 
         catch (CacheException erro) {
 
-            throw new WriterException ("Não conseguiu escrever na cache: " + erro.getMessage ());
+            throw new WriterException ("NÃ£o conseguiu escrever na cache: " + erro.getMessage ());
 
         }
 

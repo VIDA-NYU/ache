@@ -35,9 +35,9 @@ import java.util.Vector;
 
 
 /**
- * ImplementaÁ„o de uma cache est·tica.
+ * Implementa√ß√£o de uma cache est√°tica.
  * Para guardar dados em uma hashtable.
- * Esta cache È basicamente uma interface para uma hashtable.
+ * Esta cache √© basicamente uma interface para uma hashtable.
  *
  */
 

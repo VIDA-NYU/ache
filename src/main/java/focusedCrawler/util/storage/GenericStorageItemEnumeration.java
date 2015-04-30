@@ -348,7 +348,7 @@ public class GenericStorageItemEnumeration implements StorageItemEnumeration {
 
           {
 
-             throw new IOException("tipo inv·lido: " + type);
+             throw new IOException("tipo inv√°lido: " + type);
 
           }
 

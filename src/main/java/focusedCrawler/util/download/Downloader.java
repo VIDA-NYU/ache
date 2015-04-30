@@ -54,7 +54,7 @@ public interface Downloader {
 
 
     /**
-     * Indica o estado desconhecido. Por exemplo, logo apÛs a criaÁ„o do downloader.
+     * Indica o estado desconhecido. Por exemplo, logo ap√≥s a cria√ß√£o do downloader.
      */
     public static int UNKNOWN       = 0;
 
@@ -64,7 +64,7 @@ public interface Downloader {
     public static int LOOP          = UNKNOWN + 1;
 
     /**
-     * Indica que o downloader conseguiu realizar a conex„o com sucesso.
+     * Indica que o downloader conseguiu realizar a conex√£o com sucesso.
      */
     public static int OK            = LOOP + 1;
 
@@ -174,7 +174,7 @@ public interface Downloader {
 
     /**
 
-     * Limpa as propriedades de requisiÁ„o.
+     * Limpa as propriedades de requisi√ß√£o.
 
      */
 
@@ -210,7 +210,7 @@ public interface Downloader {
 
     /**
 
-     * Ajusta o tipo de mÈtodo do downloader.
+     * Ajusta o tipo de m√©todo do downloader.
 
      */
 
@@ -218,7 +218,7 @@ public interface Downloader {
 
     /**
 
-     * Retorna o mÈtodo usado pelo downloader.
+     * Retorna o m√©todo usado pelo downloader.
 
      */
 
@@ -246,7 +246,7 @@ public interface Downloader {
 
     /**
 
-     * Ajusta a URL que ser· o alvo do download.
+     * Ajusta a URL que ser√° o alvo do download.
 
      */
 
@@ -282,7 +282,7 @@ public interface Downloader {
 
     /**
 
-     * Ajusta o n˙mero de redirecionamento que o downloader pode seguir.
+     * Ajusta o n√∫mero de redirecionamento que o downloader pode seguir.
 
      */
 
@@ -290,7 +290,7 @@ public interface Downloader {
 
     /**
 
-     * Indica o n˙mero de redirecionamento que o downloader pode seguir.
+     * Indica o n√∫mero de redirecionamento que o downloader pode seguir.
 
      */
 
@@ -302,7 +302,7 @@ public interface Downloader {
 
     /**
 
-     * Limpa as propriedades de requisiÁ„o.
+     * Limpa as propriedades de requisi√ß√£o.
 
      */
 
@@ -312,9 +312,9 @@ public interface Downloader {
 
     /**
 
-     *  Realiza a conexao com o alvo, retornando se a conex„o foi realizada
+     *  Realiza a conexao com o alvo, retornando se a conex√£o foi realizada
 
-     *  com sucesso, constante OK, houve timeout na conex„o (FAIL_TIMEOUT), ou
+     *  com sucesso, constante OK, houve timeout na conex√£o (FAIL_TIMEOUT), ou
 
      *  houve problemas com o redirecionamento da URL (FAIL_REDIRECT).
 
@@ -336,7 +336,7 @@ public interface Downloader {
 
     /**
 
-     * Retorna o protocolo da resposta da conex„o.
+     * Retorna o protocolo da resposta da conex√£o.
 
      */
 
@@ -346,7 +346,7 @@ public interface Downloader {
 
     /**
 
-     * Retorna o cÛdigo da resposta da conex„o.
+     * Retorna o c√≥digo da resposta da conex√£o.
 
      */
 
@@ -366,7 +366,7 @@ public interface Downloader {
 
     /**
 
-     * Retorna a String de resposta da conex„o.
+     * Retorna a String de resposta da conex√£o.
 
      */
 
@@ -376,7 +376,7 @@ public interface Downloader {
 
     /**
 
-     * Retorna o tipo de conte˙do do InputStream.
+     * Retorna o tipo de conte√∫do do InputStream.
 
      */
 
@@ -386,7 +386,7 @@ public interface Downloader {
 
     /**
 
-     * Retorna a data de modificaÁ„o da URL.
+     * Retorna a data de modifica√ß√£o da URL.
 
      */
 
@@ -396,7 +396,7 @@ public interface Downloader {
 
     /**
 
-     * Retorna uma propriedade presente no header, este mÈtodo leva em consideraÁ„o palavras
+     * Retorna uma propriedade presente no header, este m√©todo leva em considera√ß√£o palavras
 
      * com letras maiusculas e minusculas.
 
@@ -430,7 +430,7 @@ public interface Downloader {
 
     /**
 
-     * Retorna o  canal de comunicaÁ„o da conex„o.
+     * Retorna o  canal de comunica√ß√£o da conex√£o.
 
      */
 
@@ -440,7 +440,7 @@ public interface Downloader {
 
     /**
 
-     * Retorna o conte˙do.
+     * Retorna o conte√∫do.
 
      */
 
@@ -462,9 +462,9 @@ public interface Downloader {
 
      * Algumas vezes o downloader pode vir a apresentar estados inconsistentes, ou a utilizar recursos
 
-     * sem liber·-los, o que pode levar o sistema que usa um downloader a um estado de falha. O mÈtodo
+     * sem liber√°-los, o que pode levar o sistema que usa um downloader a um estado de falha. O m√©todo
 
-     * abaixo fornece a informaÁ„o se o sistema que usa o downloader deve ou n„o ser finalizado por causa
+     * abaixo fornece a informa√ß√£o se o sistema que usa o downloader deve ou n√£o ser finalizado por causa
 
      * de problemas decorrentes do downloader.
 

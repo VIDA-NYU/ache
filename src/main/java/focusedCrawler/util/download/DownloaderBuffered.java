@@ -29,12 +29,12 @@ public interface DownloaderBuffered extends Downloader {
     public void clearBuffer() throws DownloaderException;
 
     /**
-     * Ajusta o tamanho m�ximo do buffer deste downloader.
+     * Ajusta o tamanho mï¿½ximo do buffer deste downloader.
      */
     void setMaxBufferSize(int newMaxBufferSize) throws DownloaderException;
 
     /**
-     * Indica o tamamho m�ximo do buffer.
+     * Indica o tamamho mï¿½ximo do buffer.
      */
     int getMaxBufferSize() throws DownloaderException;
 
@@ -44,7 +44,7 @@ public interface DownloaderBuffered extends Downloader {
     byte[] getBuffer() throws DownloaderException;
 
     /**
-     * Retorna quantos bytes dos array retornado no getBuffer() s�o bytes com informa��o
+     * Retorna quantos bytes dos array retornado no getBuffer() sï¿½o bytes com informaï¿½ï¿½o
      * util.
      */
     int getBufferSize() throws DownloaderException;

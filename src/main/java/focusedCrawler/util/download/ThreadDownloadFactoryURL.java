@@ -133,7 +133,7 @@ public class ThreadDownloadFactoryURL implements ThreadDownloadFactory {
 
 
 
-/*--- formatting done in "Convenção de Codificação do Radix" style on 11-17-1999 ---*/
+/*--- formatting done in "ConvenÃ§Ã£o de CodificaÃ§Ã£o do Radix" style on 11-17-1999 ---*/
 
 
 

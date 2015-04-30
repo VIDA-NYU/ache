@@ -89,7 +89,7 @@ public class CacheLoader implements Loader {
 
         catch (CacheException erro) {
 
-            throw new LoaderException ("Não conseguiu carregar a cache: " + erro.getMessage ());
+            throw new LoaderException ("NÃ£o conseguiu carregar a cache: " + erro.getMessage ());
 
         }
 

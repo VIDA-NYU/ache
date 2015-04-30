@@ -45,7 +45,7 @@ public class SelfLoggable extends Thread {
 
      * Local onde as mensagens de LOG sao escritas.
 
-     * por default é System.out.
+     * por default Ã© System.out.
 
      */
 
@@ -61,7 +61,7 @@ public class SelfLoggable extends Thread {
 
      * Local onde as mensagens de ERRO sao escritas.
 
-     * por default é System.out.
+     * por default Ã© System.out.
 
      */
 

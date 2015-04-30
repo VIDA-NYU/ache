@@ -29,11 +29,11 @@ import focusedCrawler.util.Timer;
 import focusedCrawler.util.cache.rmi.RemoteCache;
 
 /**
- * É um ObjectFactory que permiti a implementacao de niveis de cache.
- * O que este tipo de factory faz é em vez de criar mesmo o objeto
+ * Ã‰ um ObjectFactory que permiti a implementacao de niveis de cache.
+ * O que este tipo de factory faz Ã© em vez de criar mesmo o objeto
  * ele pede para uma outra cache.
  *
- * Esta factory é util para fazer hieraquia de caches com
+ * Esta factory Ã© util para fazer hieraquia de caches com
  * velocidades diferentes, um exemplo, eh criar uma cache de
  * 2 niveis para uma cache estatica e uma cache remota.
  *

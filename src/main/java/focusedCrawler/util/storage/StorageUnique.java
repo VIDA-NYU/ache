@@ -320,7 +320,7 @@ public class StorageUnique extends StorageDefault {
 
     public Object select(Object obj) throws StorageException,DataNotFoundException, CommunicationException{
 
-        if(obj instanceof String){//quer o código
+        if(obj instanceof String){//quer o cÃ³digo
 
             return new Integer(getCode((String)obj));
 
