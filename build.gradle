@@ -15,6 +15,7 @@ applicationDefaultJvmArgs = ["-Dname=ache"]
 repositories {
     // TODO all of the things in lib, should come from here
     mavenCentral()
+    maven { url "http://download.oracle.com/maven/" } // for BerkeleyDB
 }
 
 dependencies {
@@ -31,13 +32,13 @@ dependencies {
     compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.4.0'
 	compile 'com.fasterxml.jackson.core:jackson-databind:2.5.0' 
 	compile 'com.syncthemall:boilerpipe:1.2.2'
+    compile 'com.sleepycat:je:3.3.75' // BerkeleyDB
+    compile 'net.sourceforge.htmlunit:htmlunit:2.8'
     // TODO fill these in from Maven Central instead of that local libs dir
     // TODO recommend replacing these with:
     // compile 'com.cybozu.labs:langdetect:1.1-20120112'
     compile files('libs/jsonic-1.2.0.jar') // recommend updating this, it's for langdetect.jar
     compile files('libs/langdetect-03-03-2014.jar') // TODO why isn't this in maven central
-    compile files('libs/je-3.3.75.jar')
-    compile files('libs/htmlunit-2.8.jar')
 
 }
 
