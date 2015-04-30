@@ -98,7 +98,6 @@ public class Main {
 //        //Not used yet
 //    }
 
-    //THIS FUNCTION IS NOT USED NOW
     private static void startCrawl(final String dataOutputPath,
                                    final String configPath,
                                    final String seedPath,
