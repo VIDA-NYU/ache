@@ -47,10 +47,10 @@ public class FrontierManager {
 
 	private int linksToLoad;
 
-	public FrontierManager(PriorityQueueLink priorityQueue, FrontierTargetRepositoryBaseline frontier, int linksToLoad) throws
-		FrontierPersistentException {
-
-		this.priorityQueue = priorityQueue;
+	public FrontierManager(FrontierTargetRepositoryBaseline frontier,
+	                       int maxSizeLinkQueue, int linksToLoad)
+                           throws FrontierPersistentException {
+		this.priorityQueue = new PriorityQueueLink(maxSizeLinkQueue);
 		this.frontier = frontier;
 		this.linksToLoad = linksToLoad;
 		this.loadQueue(linksToLoad);

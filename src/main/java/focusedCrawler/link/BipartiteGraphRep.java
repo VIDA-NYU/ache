@@ -3,21 +3,17 @@ package focusedCrawler.link;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLDecoder;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
-import com.sleepycat.je.DatabaseException;
-
+import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
 import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.cache.CacheException;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.Tuple;
-import focusedCrawler.util.persistence.bdb.BerkeleyDBHashTable;
 
 public class BipartiteGraphRep {
 
@@ -37,15 +33,16 @@ public class BipartiteGraphRep {
 
 	
 	private final String separator = "###";
+	
+	
 
-	public BipartiteGraphRep(PersistentHashtable authGraph,	PersistentHashtable url2id, 
-			PersistentHashtable authID,PersistentHashtable hubID, PersistentHashtable hubGraph){
-
-		this.authGraph = authGraph;
-		this.authID = authID;
-		this.url2id = url2id;
-		this.hubID = hubID;
-		this.hubGraph = hubGraph;
+	public BipartiteGraphRep(String dataPath, BiparitieGraphRepConfig config) {
+	    int cacheSize = 100000;
+	    this.authGraph = new PersistentHashtable(dataPath + "/" + config.getAuthGraphDirectory(), cacheSize);
+        this.url2id = new PersistentHashtable(dataPath + "/" + config.getUrlIdDirectory(), cacheSize);
+        this.authID = new PersistentHashtable(dataPath + "/" + config.getAuthIdDirectory(), cacheSize);
+        this.hubID = new PersistentHashtable(dataPath + "/" + config.getHubIdDirectory(), cacheSize);
+        this.hubGraph = new PersistentHashtable(dataPath + "/" + config.getHubGraphDirectory(), cacheSize);
 	}
 	
 	public Tuple[] getAuthGraph() throws Exception{
@@ -461,14 +458,11 @@ public class BipartiteGraphRep {
 	
 	
 	public static void main(String[] args) {
-		ParameterFile config = new ParameterFile(args[0]);
+		ParameterFile paramsFile = new ParameterFile(args[0]);
 		try {
-			PersistentHashtable url2id = new PersistentHashtable(config.getParam("URL_ID_DIRECTORY"),100000);
-			PersistentHashtable authID = new PersistentHashtable(config.getParam("AUTH_ID_DIRECTORY"),100000);
-			PersistentHashtable authGraph = new PersistentHashtable(config.getParam("AUTH_GRAPH_DIRECTORY"),100000);
-			PersistentHashtable hubID = new PersistentHashtable(config.getParam("HUB_ID_DIRECTORY"),100000);
-			PersistentHashtable hubGraph = new PersistentHashtable(config.getParam("HUB_GRAPH_DIRECTORY"),100000);
-			BipartiteGraphRep graphRep = new BipartiteGraphRep(authGraph,url2id,authID,hubID,hubGraph);
+		    BiparitieGraphRepConfig config = new BiparitieGraphRepConfig(paramsFile);
+			String dataPath = ".";
+            BipartiteGraphRep graphRep = new BipartiteGraphRep(dataPath, config);
 			LinkNeighborhood[] lns = graphRep.getBacklinksLN(new URL(args[1]));
 			for (int i = 0; i < lns.length; i++) {
 				System.out.println(lns[i].getLink().toString());
