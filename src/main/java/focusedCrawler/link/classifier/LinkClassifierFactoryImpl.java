@@ -29,19 +29,15 @@ import focusedCrawler.util.string.StopList;
 
 
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
-import focusedCrawler.link.classifier.util.WordField;
 
 import weka.core.Instances;
 import weka.classifiers.Classifier;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
-import java.util.Vector;
-
 
 
 /**
@@ -66,6 +62,7 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory{
    */
 
   public LinkClassifierFactoryImpl(String stoplistFile) {
+    // FIXME: Bug introduced in some commit merge? variable config will always be null!
     this.config = config;
     try {
 		stoplist = new StopListArquivo(stoplistFile);

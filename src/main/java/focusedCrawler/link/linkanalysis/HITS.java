@@ -1,7 +1,5 @@
 package focusedCrawler.link.linkanalysis;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLDecoder;
@@ -12,10 +10,10 @@ import java.util.Iterator;
 import java.util.Vector;
 
 import focusedCrawler.link.BipartiteGraphRep;
+import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
@@ -277,14 +275,10 @@ public class HITS {
 	}
 	
 	public static void main(String[] args) {
-		ParameterFile config = new ParameterFile(args[0]);
+	    BiparitieGraphRepConfig config = new BiparitieGraphRepConfig(new ParameterFile(args[0]));
 		try {
-			PersistentHashtable url2id = new PersistentHashtable(config.getParam("URL_ID_DIRECTORY"),100000);
-			PersistentHashtable authID = new PersistentHashtable(config.getParam("AUTH_ID_DIRECTORY"),100000);
-			PersistentHashtable authGraph = new PersistentHashtable(config.getParam("AUTH_GRAPH_DIRECTORY"),100000);
-			PersistentHashtable hubID = new PersistentHashtable(config.getParam("HUB_ID_DIRECTORY"),100000);
-			PersistentHashtable hubGraph = new PersistentHashtable(config.getParam("HUB_GRAPH_DIRECTORY"),100000);
-			BipartiteGraphRep rep = new BipartiteGraphRep(authGraph,url2id,authID,hubID,hubGraph);
+			String dataPath = ".";
+            BipartiteGraphRep rep = new BipartiteGraphRep(dataPath, config);
 			HITS hits = new HITS(rep);
 			hits.originalHITS();
 		}catch(Exception ex){

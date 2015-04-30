@@ -2,9 +2,7 @@ package focusedCrawler.link.classifier.builder;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -23,8 +21,8 @@ import java.util.Vector;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
-
 import focusedCrawler.link.BipartiteGraphRep;
+import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierFactoryImpl;
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
@@ -34,9 +32,9 @@ import focusedCrawler.link.classifier.util.WordField;
 import focusedCrawler.link.classifier.util.WordFrequency;
 import focusedCrawler.link.classifier.util.WordFrequencyComparator;
 import focusedCrawler.link.frontier.FrontierTargetRepositoryBaseline;
+import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
-import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
@@ -451,26 +449,19 @@ public class ClassifierBuilder {
 
 	public static void main(String[] args) {
 		try {
-//			StopList stoplist = new StopListArquivo("C:\\user\\lbarbosa\\crawler\\focused_crawler\\conf\\stoplist.txt");
 			StopList stoplist = new StopListArquivo(args[0]);
 			WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
-//			PersistentHashtable hubs = new PersistentHashtable("C:\\user\\lbarbosa\\parallel_corpus\\graph\\hubHash",100000);
-//			PersistentHashtable auths = new PersistentHashtable("C:\\user\\lbarbosa\\parallel_corpus\\graph\\authorityHash",100000);
-			PersistentHashtable url2id = new PersistentHashtable(args[1],100000);
-			PersistentHashtable authId = new PersistentHashtable(args[2],100000);
-			PersistentHashtable authGraph = new PersistentHashtable(args[3],100000);
-			PersistentHashtable hubId = new PersistentHashtable(args[4],100000);
-			PersistentHashtable hubGraph = new PersistentHashtable(args[5],100000);
-			BipartiteGraphRep rep = new BipartiteGraphRep(authGraph,url2id,authId,hubId,hubGraph);
-//			PersistentHashtable frontierHash = new PersistentHashtable(args[6],100000);
-//			FrontierTargetRepositoryBaseline frontier = new FrontierTargetRepositoryBaseline(frontierHash,10000);
+			
+			String dataPath = ".";
+			BiparitieGraphRepConfig config = new BiparitieGraphRepConfig(new ParameterFile(args[1]));
+			BipartiteGraphRep rep = new BipartiteGraphRep(dataPath, config);
+			
 			HashSet<String> visitedSites = new HashSet<String>();
 			BufferedReader input = new BufferedReader(new FileReader(new File(args[6])));
 			for (String line = input.readLine(); line != null; line = input.readLine()) {
 				visitedSites.add(line);	
 			}
 			ClassifierBuilder cb = new ClassifierBuilder(rep,stoplist,wrapper,null);
-//			BufferedReader input = new BufferedReader(new FileReader(new File("C:\\user\\lbarbosa\\parallel_corpus\\graph\\rel_sites_1")));
 			BufferedReader input1 = new BufferedReader(new FileReader(new File(args[7])));
 			HashSet<String> relSites = new HashSet<String>();
 			for (String line = input1.readLine(); line != null; line = input1.readLine()) {
