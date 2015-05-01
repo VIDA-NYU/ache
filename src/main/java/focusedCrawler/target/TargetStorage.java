@@ -5,14 +5,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
+import focusedCrawler.config.TargetStorageConfig;
+import focusedCrawler.target.detector.RegexBasedDetector;
 import focusedCrawler.util.LangDetection;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.ParameterFile;
@@ -26,14 +26,12 @@ import focusedCrawler.util.storage.distribution.StorageBinder;
 import focusedCrawler.util.storage.distribution.StorageCreator;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
-import focusedCrawler.config.TargetStorageConfig;
-import focusedCrawler.target.detector.RegexBasedDetector;
 
 /**
  * This class runs a socket server responsible to store pages coming from the crawler client.
  * @author lbarbosa
  */
-public class TargetStorage  extends StorageDefault{
+public class TargetStorage extends StorageDefault {
 	
 	public static final Logger logger = LoggerFactory.getLogger(TargetStorage.class);
 
@@ -45,18 +43,7 @@ public class TargetStorage  extends StorageDefault{
     private TargetStorageConfig config;
 
     private LangDetection langDetect;
-    
-    private int totalOfPages;
-    private int totalOnTopicPages;
-    
-    // Data structure for dashboard /////////
-    private List<String> crawledUrls = new ArrayList<String>(); 
-    private List<String> relevantUrls = new ArrayList<String>();
-    private List<String> nonRelevantUrls = new ArrayList<String>();
-    private List<String> harvestRates = new ArrayList<String>();
-    
     private TargetMonitor monitor;
-    //////////////////////////////////////////
     
     public TargetStorage(TargetClassifier targetClassifier,
                          TargetRepository targetRepository, 
@@ -70,12 +57,7 @@ public class TargetStorage  extends StorageDefault{
         this.negativeRepository = negativeRepository;
         this.linkStorage = linkStorage;
         this.config = config;
-        
-        this.totalOfPages = 0;
-        this.totalOnTopicPages = 0;
-        
         this.langDetect = new LangDetection();
-        
         this.monitor = monitor;
         
         //if one wants to use regex based classifier
@@ -88,7 +70,7 @@ public class TargetStorage  extends StorageDefault{
      * Inserts a page into the repository. 
      */
     public synchronized Object insert(Object obj) throws StorageException {
-        Page page = (Page)obj;
+        Page page = (Page) obj;
         
 		//Only accept English
     	if (this.langDetect.isEnglish(page) == false){
@@ -96,51 +78,48 @@ public class TargetStorage  extends StorageDefault{
       		return null;
     	}
         
-        crawledUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
-        totalOfPages++;
-
+    	boolean isRelevant;
+    	double prob;
         try {
         ///////////////////IF USING REGEX INSTEAD OF CLASSIFIER/////////////////////////////
           if(regexDetector != null){
-              boolean isRelevant = regexDetector.detect(page);
+              isRelevant = regexDetector.detect(page);
               if (isRelevant) {
-                  double prob = 1.0;
+                  prob = 1.0;
                   page.setRelevance(prob);
                   logger.info("\n> PROCESSING: " + page.getIdentifier() + "\n> PROB:" + prob);
                   targetRepository.insert(page);
                   linkStorage.insert(page);
-                  relevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
-                  totalOnTopicPages++;
               }
               else{
-                  double prob = 0.0;
+                  prob = 0.0;
+                  page.setRelevance(prob);
+                  
                   if (config.isSaveNegativePages()){
-                      page.setRelevance(prob);
                       negativeRepository.insert(page);
                   }
-                  nonRelevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(prob) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
-                  }
+              }
           }
 	      ////////////////END USING REGEX////////////////////////////////////////////////
           else {
           ////////////////IF USING CLASSIFIER////////////////////////////////////////
           if(targetClassifier != null){
-              double prob = targetClassifier.distributionForInstance(page)[0];
+              prob = targetClassifier.distributionForInstance(page)[0];
               page.setRelevance(prob);
               
               logger.info("\n> PROCESSING: " + page.getIdentifier() +
                           "\n> PROB:" + prob);
               
-              if(prob > config.getRelevanceThreshold()){
+              isRelevant = prob > config.getRelevanceThreshold();
+              
+              if(isRelevant){
                   targetRepository.insert(page);
                   if(config.isBipartite()){
 					  //set the page is as authority if using backlinks
                       page.setAuth(true);
                   }
                   linkStorage.insert(page);
-                  relevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
-                  totalOnTopicPages++;
-              } else{
+              } else {
                   if (config.isSaveNegativePages()){
                       page.setRelevance(prob);
                       negativeRepository.insert(page);
@@ -153,55 +132,24 @@ public class TargetStorage  extends StorageDefault{
                       } else{
                           linkStorage.insert(page);
                       }
-                  } else{
-                      nonRelevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(prob) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
                   }
               }
           //////////////////END USING CLASSIFIER//////////////////////////////////////////
           } else{
-                  page.setRelevance(1);
+                  isRelevant = true;
+                  prob = 1.0;
+                  page.setRelevance(prob);
                   page.setAuth(true);
                   logger.info("\n> PROCESSING: " + page.getIdentifier());
                   linkStorage.insert(page);
-                  targetRepository.insert(page,totalOfPages);
-                  totalOnTopicPages++;
+                  targetRepository.insert(page, monitor.getTotalOfPages());
           }
 		  }
-          //////Export crawler's status////////////////////////////////
-          harvestRates.add(Integer.toString(totalOnTopicPages) + "\t" + 
-                       String.valueOf(totalOfPages) + "\t" + 
-                       String.valueOf(System.currentTimeMillis() / 1000L));
-          if (config.isRefreshSync()){
-          	if(totalOnTopicPages % config.getRefreshFreq() == 0) {
-                 monitor.exportHarvestInfo(harvestRates);
-                 harvestRates.clear();
-                 monitor.exportCrawledPages(crawledUrls);
-                 crawledUrls.clear();    
-                 monitor.exportRelevantPages(relevantUrls);
-                 relevantUrls.clear();
-                 monitor.exportNonRelevantPages(nonRelevantUrls);
-                 nonRelevantUrls.clear();
-            }
-      	  } else{
-              if(totalOfPages % config.getHarvestInfoRefreshFrequency() == 0) {
-                  monitor.exportHarvestInfo(harvestRates);
-                  harvestRates.clear();
-              }
-              if(totalOfPages % config.getCrawledRefreshFrequency() == 0) {
-                  monitor.exportCrawledPages(crawledUrls);
-                  crawledUrls.clear();    
-        	  }
-              if(totalOnTopicPages % config.getRelevantRefreshFrequency() == 0) {
-                  monitor.exportRelevantPages(relevantUrls);
-                  relevantUrls.clear();
-
-                  monitor.exportNonRelevantPages(nonRelevantUrls);
-                  nonRelevantUrls.clear();
-              }
-          //////End exporting/////////////////////////////////////////////
-
-          }
-          if(totalOfPages > config.getVisitedPageLimit()){
+          
+          monitor.countPage(page, isRelevant, prob);
+          
+          if(monitor.getTotalOfPages() > config.getVisitedPageLimit()){
+              logger.info("Visited page limit exceeded. Exiting crawler. pagelimit="+config.getVisitedPageLimit());
               System.exit(0);
           }
         }
@@ -271,10 +219,7 @@ public class TargetStorage  extends StorageDefault{
         	negativeRepository = new TargetFileRepository(negativeDirectory);
         }
         
-        TargetMonitor monitor = new TargetMonitor(dataPath + "/data_monitor/crawledpages.csv", 
-                                              dataPath + "/data_monitor/relevantpages.csv", 
-                                              dataPath + "/data_monitor/harvestinfo.csv",
-                                              dataPath + "/data_monitor/nonrelevantpages.csv");
+        TargetMonitor monitor = new TargetMonitor(dataPath, config);
         
         Storage targetStorage = new TargetStorage(targetClassifier, targetRepository, linkStorage, 
                                                   monitor, negativeRepository, config);
