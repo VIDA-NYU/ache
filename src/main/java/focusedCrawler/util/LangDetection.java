@@ -37,6 +37,10 @@ public class LangDetection {
 
     public Boolean isEnglish(String content) {
         try {
+            if(content == null || content.isEmpty()) {
+                return false;
+            }
+            
             TextObject text = textObjectFactory.forText(content);
 
             List<DetectedLanguage> langs = languageDetector.getProbabilities(text);

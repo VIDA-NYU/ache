@@ -39,5 +39,30 @@ public class LangDetectionTest {
         // then
         assertThat(isEnglish, is(false));
     }
+    
+    @Test
+    public void shouldReturnFalseForNull() {
+        // given
+        String textNotInEnglish = null;
+        
+        // when
+        Boolean isEnglish = langDetect.isEnglish(textNotInEnglish);
+        
+        // then
+        assertThat(isEnglish, is(false));
+    }
+    
+    @Test
+    public void shouldReturnFalseForEmptyString() {
+        // given
+        String textNotInEnglish = "";
+        
+        // when
+        Boolean isEnglish = langDetect.isEnglish(textNotInEnglish);
+        
+        // then
+        assertThat(isEnglish, is(false));
+    }
+
 
 }
