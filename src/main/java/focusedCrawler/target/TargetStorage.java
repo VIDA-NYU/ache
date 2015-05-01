@@ -57,8 +57,10 @@ public class TargetStorage extends StorageDefault {
         this.negativeRepository = negativeRepository;
         this.linkStorage = linkStorage;
         this.config = config;
-        this.langDetect = new LangDetection();
         this.monitor = monitor;
+        
+        this.langDetect = new LangDetection();
+        this.langDetect.init("libs/profiles/");//This is hard coded, should be fixed
         
         //if one wants to use regex based classifier
         if (config.isUseRegex()) {
@@ -73,7 +75,7 @@ public class TargetStorage extends StorageDefault {
         Page page = (Page) obj;
         
 		//Only accept English
-    	if (this.langDetect.isEnglish(page) == false){
+    	if (this.langDetect.detect_page(page) == false){
     		logger.info("Ignoring non-English page: " + page.getIdentifier());
       		return null;
     	}

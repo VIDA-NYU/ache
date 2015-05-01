@@ -1,71 +1,67 @@
 package focusedCrawler.util;
-
-import java.io.IOException;
-import java.util.List;
-
-import com.optimaize.langdetect.DetectedLanguage;
-import com.optimaize.langdetect.LanguageDetector;
-import com.optimaize.langdetect.LanguageDetectorBuilder;
-import com.optimaize.langdetect.ngram.NgramExtractors;
-import com.optimaize.langdetect.profiles.LanguageProfile;
-import com.optimaize.langdetect.profiles.LanguageProfileReader;
-import com.optimaize.langdetect.text.CommonTextObjectFactories;
-import com.optimaize.langdetect.text.TextObject;
-import com.optimaize.langdetect.text.TextObjectFactory;
+import java.util.ArrayList;
+import com.cybozu.labs.langdetect.Detector;
+import com.cybozu.labs.langdetect.DetectorFactory;
+import com.cybozu.labs.langdetect.Language;
+import focusedCrawler.util.Page;
+import java.util.regex.Pattern;
 
 public class LangDetection {
-
-    private static LanguageDetector languageDetector;
-    private static TextObjectFactory textObjectFactory;
-
-    static {
-        try {
-            // load all languages
-            List<LanguageProfile> languageProfiles = new LanguageProfileReader().readAllBuiltIn();
-
-            // build language detector
-            languageDetector = LanguageDetectorBuilder.create(NgramExtractors.standard())
-                    .withProfiles(languageProfiles).build();
-
-            // create a text object factory
-            textObjectFactory = CommonTextObjectFactories.forDetectingOnLargeText();
-
-        } catch (IOException e) {
-            throw new RuntimeException("Problem while initializing language detector.");
-        }
+    private String[] extList = {".de", ".vn"};
+    private int maxHeaderSize;
+    private Pattern langPattern;
+    private Pattern titlePattern;
+    public LangDetection(){
+      maxHeaderSize = 20;
+      langPattern = Pattern.compile("lang=\"(.*?)\"");
+      titlePattern = Pattern.compile("\\<title>(.*)\\</title>", Pattern.CASE_INSENSITIVE|Pattern.DOTALL);      
     }
 
-    public Boolean isEnglish(String content) {
-        try {
-            if(content == null || content.isEmpty()) {
-                return false;
-            }
-            
-            TextObject text = textObjectFactory.forText(content);
+    public void init(String profileDirectory){
+      try{
+        DetectorFactory.loadProfile(profileDirectory);
+      }
+      catch(Exception e){
+        System.out.println("Error in detect language");
+      }
+    }
 
-            List<DetectedLanguage> langs = languageDetector.getProbabilities(text);
-            if (langs.size() == 0) {
+    public Boolean detect_text(String content){
+        try {
+
+            Detector detector = DetectorFactory.create();
+            detector.append(content);
+            ArrayList<Language> langs = detector.getProbabilities();
+            if (langs.size() == 0){
                 return false;
             }
-            for (DetectedLanguage lang : langs) {
-                if (lang.getLocale().getLanguage().equals("en")) {
+            for (Language l: langs){
+                if (l.lang.equals("en"))
                     return true;
-                }
             }
             return false;
-        } catch (Exception ex) {
-            throw new RuntimeException("Problem while detecting language in text: " + content);
+        } 
+        catch (Exception ex){
+            ex.printStackTrace();
+            System.out.println(">>>>Exception in language detection");
+            return false;
         }
     }
 
-    public Boolean isEnglish(Page page) {
-        // Return False if the page is not Enlgish
-        try {
-            String content = page.getCleanContent();
-            return isEnglish(content);
-        } catch (Exception e) {
-            throw new RuntimeException("Problem while detecting language in Page: " + page.getIdentifier());
-        }
+    public Boolean detect_page(Page page){
+      //Return False if the page is not Enlgish
+      try {
+        String content = page.getCleanContent();
+        return detect_text(content);
+      }
+      catch(Exception e){
+        System.out.println("Exception in detect_page");
+        return false;
+      }
     }
     
+    public static void main(String[] args)
+    {
+      LangDetection ld = new LangDetection();
+    }
 }
