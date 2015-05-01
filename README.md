@@ -46,7 +46,7 @@ After you generated a model, you need to prepare the seed file, that each line i
 
 `<data output path>` is path to data output directory.
 
- `<lang detect profile path>` is the path to the language detection profile: "libs/langdetect-03-03-2014.jar"
+ `<lang detect profile path>` is the path to the language detection profile: "libs/langdetect-03-03-2014.jar". Current version from MASTER branch doesn't need language profiles anymore. Now the languague profiles are built-in. You can just ignore this parameter.
  
  Example of running ACHE:
  
