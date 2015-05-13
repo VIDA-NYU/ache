@@ -73,7 +73,6 @@ Unless you stop it, the crawler exists when the number of crawled pages exeeds t
 
 Where to report bugs?
 ---------------------------------------------
-We are welcome user to report any issue related to ACHE. Here is a guidline to use Github's tracker - Issues: https://guides.github.com/features/issues/
 
 We welcome user feedback. Please submit any suggestions or bug reports using the Github tracker (https://github.com/ViDA-NYU/ache/issues)
 
