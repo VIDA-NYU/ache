@@ -132,12 +132,13 @@ public class ParameterFile {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                urls.add(line);
+                line = line.trim();
+                if(!line.isEmpty()) {
+                    urls.add(line);
+                }
             }
             fileReader.close();
-            String[] res = new String[urls.size()];
-            res = urls.toArray(res);
-            return res;
+            return urls.toArray(new String[urls.size()]);
         }
         catch(Exception e){
         	logger.error("Error while reading seed list", e);
