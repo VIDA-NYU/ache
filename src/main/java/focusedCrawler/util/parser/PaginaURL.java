@@ -30,6 +30,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.validator.routines.UrlValidator;
 
 import focusedCrawler.util.page.Pagina;
@@ -2213,6 +2214,7 @@ public class PaginaURL implements Pagina {
                     mailList.addElement(link);
                 }
             } else {
+                link = StringEscapeUtils.unescapeHtml(link);
                 if(urlValidator.isValid(link)) {
                     boolean existe = links.contains(link);
                     if (!existe) {
