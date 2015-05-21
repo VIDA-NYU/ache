@@ -2,10 +2,10 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'application'
 
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 compileJava.options.encoding = "UTF-8"
-//group = 'io.continuum.ache'
+
 version = '0.1.0'
 
 mainClassName = 'focusedCrawler.Main'
