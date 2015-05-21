@@ -145,11 +145,11 @@ public class Main {
     private static void createOutputPathStructure(String dataOutputPath) {
         File dataOutput = new File(dataOutputPath);
         if (dataOutput.exists()) {
-            logger.warn("Data output path already exists, deleting everything");
-            dataOutput.delete();
+            logger.warn("Data output path already exists, resuming crawl...");
+        } else {
+            dataOutput.mkdirs();
         }
 
-        dataOutput.mkdirs();
         new File(dataOutput, "data_monitor").mkdirs();
         new File(dataOutput, "data_target").mkdirs();
         new File(dataOutput, "data_negative").mkdirs();
