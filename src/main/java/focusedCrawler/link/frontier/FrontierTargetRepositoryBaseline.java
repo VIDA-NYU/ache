@@ -283,7 +283,7 @@ public class FrontierTargetRepositoryBaseline {
 				 VSMElement elem = keys.next(); 
 				 String key = elem.getWord();
 				 String url = URLDecoder.decode(key);
-				 if (url != null){
+				 if (url != null && !url.isEmpty()){
 					 String host = filterServer(new URL(url).getHost());
 					 Integer intCount = hostCount.get(host);
 					 if(intCount == null){
