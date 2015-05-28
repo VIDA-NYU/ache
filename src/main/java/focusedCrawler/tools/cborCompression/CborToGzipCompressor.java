@@ -3,10 +3,8 @@ package focusedCrawler.tools.cborCompression;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Date;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
@@ -16,12 +14,14 @@ import focusedCrawler.target.TargetModel;
 public class CborToGzipCompressor {
     
     static final ObjectMapper cborMapper = new ObjectMapper(new CBORFactory());
+    static final ObjectMapper jsonMapper = new ObjectMapper();
     
     public static void main(String[] args) throws IOException {
         
         String inputLocation = args[0];
         String outputLocation = args[1];
         long objectsPerFile = Long.parseLong(args[2]);
+        boolean useJson = false;
         
         File file = new File(inputLocation);
         File[] files = file.listFiles();
@@ -35,8 +35,13 @@ public class CborToGzipCompressor {
         String currentArchive = null;
         GzipCborFileWriter gzipCborFileWriter = null;
         
+        
         long objectsWritten = 0;
         for (File f : files) {
+            
+//            if(!f.getName().contains("showthread.php")) {
+//                continue;
+//            }
             
             TargetModel targetModel = cborMapper.readValue(f, focusedCrawler.target.TargetModel.class);
 
@@ -45,9 +50,20 @@ public class CborToGzipCompressor {
                 if (currentArchive != null) {
                     gzipCborFileWriter.close();
                 }
-                currentArchive = new SimpleDateFormat("yyyy-MM-dd_").format(new Date())+System.currentTimeMillis()+".tar.gz";
+                currentArchive = new File(inputLocation).getName()+"_"+System.currentTimeMillis();
+                
+                if(useJson)
+                    currentArchive = currentArchive+"_json.tar.gz";
+                else
+                    currentArchive = currentArchive+"_cbor.tar.gz";
+                
                 String fullArchivePath = outputLocation + File.separator + currentArchive;
-                gzipCborFileWriter = new GzipCborFileWriter(fullArchivePath);
+                
+                if(useJson) {
+                    gzipCborFileWriter = new GzipCborFileWriter(fullArchivePath, jsonMapper);
+                } else {
+                    gzipCborFileWriter = new GzipCborFileWriter(fullArchivePath, cborMapper);
+                }
             }
             
             // fix key
@@ -55,7 +71,7 @@ public class CborToGzipCompressor {
             String domain = new URL(url).getHost();
             targetModel.setReverseKey(url, domain);
             
-            System.out.println("Writing object: "+targetModel.key);
+            System.out.println("Writing object: "+f.getName());
             
             gzipCborFileWriter.writeTargetModel(targetModel);
             objectsWritten++;
