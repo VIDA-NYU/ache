@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import weka.classifiers.functions.SMO;
+import focusedCrawler.config.CLIParser;
 import focusedCrawler.crawler.CrawlerManager;
 import focusedCrawler.crawler.CrawlerManagerException;
 import focusedCrawler.link.LinkStorage;
@@ -25,19 +26,58 @@ public class Main {
 	public static final Logger logger = LoggerFactory.getLogger(Main.class);
 
     public static void main(String... args) {
-        if (args.length > 0) {
-            if ("startCrawl".equals(args[0]) && args.length == 6) {
-                startCrawl(args[1], args[2], args[3], args[4], args[5]);
-            } else if ("addSeeds".equals(args[0]) && args.length == 4) {
-                addSeeds(args[1], args[2], args[3]);
-            } else if ("buildModel".equals(args[0]) && args.length == 4) {
+       
+    	
+    	if (args.length > 0) {
+ 
+        	CLIParser myCLIParser = new CLIParser();
+        	
+            if ("startCrawl".equals(args[0]) && (args.length == 6 || args.length == 11) ) {
+
+            	if (myCLIParser.checkArgs("startCrawl", args)) {
+            		String[] commandLineArgs = myCLIParser.getArgs("startCrawl", args);
+            		startCrawl(commandLineArgs[0],commandLineArgs[1],commandLineArgs[2],commandLineArgs[3],commandLineArgs[4]);
+            	} else
+            	startCrawl(args[1], args[2], args[3], args[4], args[5]);
+            } else if ("addSeeds".equals(args[0]) && (args.length == 4 || args.length == 7)) {
+
+            	if(myCLIParser.checkArgs("addSeeds", args)) {
+            		String[] commandLineArgs = myCLIParser.getArgs("addSeeds", args);
+            		addSeeds(commandLineArgs[0], commandLineArgs[1], commandLineArgs[2]);	
+            	} else
+            		addSeeds(args[1], args[2], args[3]);
+            } else if ("buildModel".equals(args[0]) && (args.length == 4 ||  args.length == 7 )) {
+ 
+            	if (myCLIParser.checkArgs("buildModel", args)){
+            		String[] commandLineArgs = myCLIParser.getArgs("buildModel", args);
+            		buildModel(commandLineArgs[0], commandLineArgs[1], commandLineArgs[2]);
+            	} else {
                 buildModel(args[1], args[2], args[3]);
-            } else if ("startLinkStorage".equals(args[0]) && args.length == 4) {
+            	}
+          
+            } else if ("startLinkStorage".equals(args[0]) && (args.length == 4 ||  args.length == 7 )) {
+            	
+            	if (myCLIParser.checkArgs("startLinkStorage", args))
+            	{
+            		String[] commandLineArgs = myCLIParser.getArgs("startLinkStorage", args);
+            		startLinkStorage(commandLineArgs[0],commandLineArgs[1],commandLineArgs[2]);
+            	} else
                 startLinkStorage(args[1], args[2], args[3]);
-            } else if ("startTargetStorage".equals(args[0]) && args.length == 5) {
+            } else if ("startTargetStorage".equals(args[0]) && (args.length == 5 || args.length==9)) {
+            	
+            	if(myCLIParser.checkArgs("startTargetStorage", args)) {
+            		String[] commandLineArgs = myCLIParser.getArgs("startTargetStorage", args);
+            		startTargetStorage(commandLineArgs[0],commandLineArgs[1],commandLineArgs[2],commandLineArgs[3]);
+            	} else
                 startTargetStorage(args[1], args[2], args[3], args[4]);
-            } else if ("startCrawlManager".equals(args[0]) && args.length == 2) {
+            } else if ("startCrawlManager".equals(args[0]) && (args.length == 2 || args.length==3)) {
+            	
+            	if(myCLIParser.checkArgs("startCrawlManager", args)){
+            		String[] commandLineArgs = myCLIParser.getArgs("startCrawlManager", args);
+            		startCrawlManager(commandLineArgs[0]);
+            	} else
                 startCrawlManager(args[1]);
+            	
             } else {
                 printUsage();
                 System.exit(1);
@@ -47,7 +87,8 @@ public class Main {
             System.exit(1);
         }
     }
-
+    
+    // 
     private static void buildModel(String targetStorageConfigPath, String trainingPath, String outputPath) {
         // generate the input for weka
         new File(outputPath).mkdirs();
@@ -57,6 +98,13 @@ public class Main {
         SMO.main(new String[]{"-M", "-d", outputPath + "/pageclassifier.model", "-t", trainingPath + "/weka.arff"});
     }
 
+    /**
+     * 
+     * 
+     * @param dataOutputPath
+     * @param configPath
+     * @param seedPath
+     */
     private static void addSeeds(final String dataOutputPath,
                                  final String configPath,
                                  final String seedPath){
@@ -185,7 +233,6 @@ public class Main {
         System.out.println("ache startLinkStorage data config/sample_config config/sample.seeds");
         System.out.println("ache startTargetStorage data config/sample_config config/sample_config libs/profiles");
         System.out.println("ache startCrawlManager config/sample_config");
-
     }
-
+    
 }
