@@ -46,6 +46,7 @@ import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.link.frontier.FrontierTargetRepository;
 import focusedCrawler.link.frontier.FrontierTargetRepositoryBaseline;
+import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.dashboard.LinkMonitor;
@@ -250,8 +251,10 @@ public class LinkStorage extends StorageDefault{
         FrontierTargetRepositoryBaseline frontier = createFrontier(seedFile, config, dataPath);
 
         logger.info("FRONTIER: " + frontier.getClass());
+        
+        LinkFilter linkFilter = new LinkFilter(configPath);
 
-        FrontierManager frontierManager = new FrontierManager(frontier, config.getMaxSizeLinkQueue(), config.getMaxSizeLinkQueue());
+        FrontierManager frontierManager = new FrontierManager(frontier, config.getMaxSizeLinkQueue(), config.getMaxSizeLinkQueue(), linkFilter);
 
         BipartiteGraphRep graphRep = new BipartiteGraphRep(dataPath, config.getBiparitieGraphRepConfig());
 

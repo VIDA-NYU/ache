@@ -36,6 +36,8 @@ dependencies {
     compile 'net.sourceforge.htmlunit:htmlunit:2.8'
     compile 'org.apache.commons:commons-compress:1.9'
     
+    testCompile 'junit:junit:4.12'
+    
     // TODO fill these in from Maven Central instead of that local libs dir
     // TODO recommend replacing these with:
     // compile 'com.cybozu.labs:langdetect:1.1-20120112'
