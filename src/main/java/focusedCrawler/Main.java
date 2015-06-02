@@ -1,6 +1,7 @@
 package focusedCrawler;
 
 import java.io.File;
+import java.util.Arrays;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -73,23 +74,23 @@ public class Main {
 			commandName = new String[] { "startCrawl", "addSeeds", "startCrawlManager",
 					"buildModel", "startTargetStorage", "startLinkStorage" };
 
-			if ("startCrawl".equals(args[0]) && (args.length == 6 || args.length == 11)) {
+			if ("startCrawl".equals(args[0])) {
 				try {
 					cmd = parser.parse(startCrawlOptions, args);
-					if (cmd.hasOption("outputDir")) {
+					if (Arrays.equals(cmd.getOptions(),startCrawlOptions.getOptions().toArray())) {
 						startCrawl(cmd.getOptionValue("outputDir"),
 								cmd.getOptionValue("configDir"), cmd.getOptionValue("seed"),
 								cmd.getOptionValue("modelDir"), cmd.getOptionValue("langDetect"));
 					} else
 						startCrawl(args[1], args[2], args[3], args[4], args[5]);
-
-				} catch (Throwable e) {
+			} catch (Throwable e) {
 					printError(e);
 				}
-			} else if ("addSeeds".equals(args[0]) && (args.length == 4 || args.length == 7)) {
+				
+			} else if ("addSeeds".equals(args[0])) {
 				try {
 					cmd = parser.parse(addSeedsOptions, args);
-					if (cmd.hasOption("outputDir")) {
+					if (Arrays.equals(cmd.getOptions(),addSeedsOptions.getOptions().toArray())) {
 						addSeeds(cmd.getOptionValue("outputDir"), cmd.getOptionValue("configDir"),
 								cmd.getOptionValue("seed"));
 					} else
@@ -98,10 +99,10 @@ public class Main {
 					printError(e);
 				}
 
-			} else if ("buildModel".equals(args[0]) && (args.length == 4 || args.length == 7)) {
+			} else if ("buildModel".equals(args[0])) {
 				try {
 					cmd = parser.parse(buildModelOptions, args);
-					if (cmd.hasOption("outputDir")) {
+					if (Arrays.equals(cmd.getOptions(),buildModelOptions.getOptions().toArray())) {
 						buildModel(cmd.getOptionValue("targetStorageConfig"),
 								cmd.getOptionValue("trainingDataDir"),
 								cmd.getOptionValue("outputDir"));
@@ -111,10 +112,10 @@ public class Main {
 					printError(e);
 				}
 
-			} else if ("startLinkStorage".equals(args[0]) && (args.length == 4 || args.length == 7)) {
+			} else if ("startLinkStorage".equals(args[0])) {
 				try {
 					cmd = parser.parse(startLinkStorageOptions, args);
-					if (cmd.hasOption("outputDir"))
+					if (Arrays.equals(cmd.getOptions(), startLinkStorageOptions.getOptions().toArray()))
 						startLinkStorage(cmd.getOptionValue("outputDir"),
 								cmd.getOptionValue("configDir"), cmd.getOptionValue("seed"));
 					else
@@ -122,11 +123,10 @@ public class Main {
 				} catch (Throwable e) {
 					printError(e);
 				}
-			} else if ("startTargetStorage".equals(args[0])
-					&& (args.length == 5 || args.length == 9)) {
+			} else if ("startTargetStorage".equals(args[0])) {
 				try {
 					cmd = parser.parse(startTargetStorageOptions, args);
-					if (cmd.hasOption("outputDir")) {
+					if (Arrays.equals(cmd.getOptions(),startTargetStorageOptions.getOptions().toArray())){
 						startTargetStorage(cmd.getOptionValue("outputDir"),
 								cmd.getOptionValue("configDir"), cmd.getOptionValue("modelDir"),
 								cmd.getOptionValue("profileDir"));
@@ -136,15 +136,13 @@ public class Main {
 					printError(e);
 				}
 
-			} else if ("startCrawlManager".equals(args[0])
-					&& (args.length == 2 || args.length == 3)) {
+			} else if ("startCrawlManager".equals(args[0])) {
 				try {
 					cmd = parser.parse(startCrawlManagerOptions, args);
-					if (cmd.hasOption("configDir")) {
+					if (Arrays.equals(cmd.getOptions(),startCrawlManagerOptions.getOptions().toArray())) {
 						startCrawlManager(cmd.getOptionValue("configDir"));
 					} else
 						startCrawlManager(args[1]);
-
 				} catch (Throwable e) {
 					printError(e);
 				}
