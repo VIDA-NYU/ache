@@ -179,9 +179,17 @@ public class TargetElasticSearchRepository implements TargetRepository {
         
     }
     
-    private static final String INDEXNAME = "achecrawler";
+    private static String INDEXNAME ="achecrawler";
     
-    private static final ObjectMapper mapper = new ObjectMapper();
+    public static void setIndexname(String indexname) {
+		INDEXNAME = indexname;
+	}
+    
+    protected static String getIndexname() {
+		return INDEXNAME;
+	}
+
+	private static final ObjectMapper mapper = new ObjectMapper();
     static {
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     }
