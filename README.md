@@ -50,7 +50,7 @@ After you generate a model, you need to prepare the seed file, where each line i
  
  Example of running ACHE:
  
-       $./build/install/bin/ache startCrawl -o output -c config/sample_config -s config/sample.seeds  -m config/sample_model -l libs/langdetect-03-03-2014.jar
+       $./build/install/bin/ache startCrawl -o output -c config/sample_config -s config/sample.seeds -m config/sample_model -l libs/langdetect-03-03-2014.jar
         
 
 More information?
