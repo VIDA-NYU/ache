@@ -10,10 +10,6 @@ import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
-/**
- * Tests a link agains a list of regexes and return true if the link matches any of the patterns.
- */
 public class LinkFilter {
 
     private static final Logger logger = LoggerFactory.getLogger(LinkFilter.class);
@@ -32,9 +28,6 @@ public class LinkFilter {
     }
 
     public boolean accept(String link) {
-//        logger.debug("link: "+link);
-//        logger.debug("whitelist: "+whitelist.accept(link));
-//        logger.debug("blacklist: "+blacklist.accept(link));
         if(whitelist.accept(link) && blacklist.accept(link))
             return true;
         else

@@ -125,13 +125,5 @@ public class LinkFilterTest {
             assertThat(url, matched, is(true));
         }
     }
-    
-    @Test
-    public void testName() throws Exception {
-        LinkFilter linkfilter = new LinkFilter("/data/memex/atf/test_config/");
-        String url = "http://www.calguns.net/calgunforum/archive/index.php/t-134082.html?pda=1";
-        boolean accept = linkfilter.accept(url);
-        System.out.println(accept + " -> "+url);
-    }
 
 }
