@@ -237,7 +237,6 @@ public class LinkStorage extends StorageDefault{
     public static Storage createLinkStorage(String configPath, String seedFile,
                                             String dataPath, ParameterFile params)
                                             throws LinkClassifierFactoryException,
-                                                   MalformedURLException,
                                                    FrontierPersistentException,
                                                    IOException {
 
