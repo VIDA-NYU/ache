@@ -35,7 +35,7 @@ Start ACHE
 --------------------------------------------
 After you generate a model, you need to prepare the seed file, where each line is a URL. To start the crawler, run:
 
-        $./build/install/bin/ache startCrawl <data output path> <config path> <seed path> <model path> <lang detect profile path>
+        $./build/install/bin/ache startCrawl -o <data output path> -c <config path> -s <seed path> -m <model path> -l <lang detect profile path>
 
 
 `<configuration path>` is the path to the config directory.
@@ -50,7 +50,7 @@ After you generate a model, you need to prepare the seed file, where each line i
  
  Example of running ACHE:
  
-       $./build/install/bin/ache startCrawl output config/sample_config config/sample.seeds config/sample_model libs/langdetect-03-03-2014.jar
+       $./build/install/bin/ache startCrawl -o output -c config/sample_config -s config/sample.seeds -m config/sample_model -l libs/langdetect-03-03-2014.jar
         
 
 More information?
