@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 public class LinkFilter {
 
     private static final Logger logger = LoggerFactory.getLogger(LinkFilter.class);
@@ -75,7 +76,7 @@ public class LinkFilter {
                     }
                 }
             } catch (IOException e) {
-                logger.warn("Couldn't load link filter patterns from file: "+e);
+                logger.warn("Couldn't load link filter patterns from file: "+filename);
             }
             return urlPatterns;
         }
