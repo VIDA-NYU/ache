@@ -1,12 +1,12 @@
 package focusedCrawler;
 
 import java.io.File;
-import java.util.Arrays;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.HelpFormatter;
+import org.apache.commons.cli.MissingArgumentException;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 import org.slf4j.Logger;
@@ -31,279 +31,266 @@ import focusedCrawler.util.storage.StorageFactoryException;
  */
 
 public class Main {
-	private static Options[] allOptions;
-	private static String[] commandName;
-	public static final Logger logger = LoggerFactory.getLogger(Main.class);
+    
+    public static final Logger logger = LoggerFactory.getLogger(Main.class);
+    
+    private static Options[] allOptions;
+    private static String[] commandName;
 
-	public static void main(String... args) {
+    public static void main(String... args) {
+        try {
+            CommandLineParser parser = new DefaultParser();
+            
+            Options startCrawlOptions = new Options();
+            Options addSeedsOptions = new Options();
+            Options startCrawlManagerOptions = new Options();
+            Options buildModelOptions = new Options();
+            Options startTargetStorageOptions = new Options();
+            Options startLinkStorageOptions = new Options();
+            
+            startCrawlOptions.addOption("o", "outputDir", true, "data output path");
+            startCrawlOptions.addOption("c", "configDir", true, "config directory path");
+            startCrawlOptions.addOption("s", "seed", true, "path to the seed file");
+            startCrawlOptions.addOption("m", "modelDir", true, "model directory path");
+            startCrawlOptions.addOption("l", "langDetect", true, "path to language detection profile");
+            
+            addSeedsOptions.addOption("o", "outputDir", true, "data output path");
+            addSeedsOptions.addOption("c", "configDir", true, "config directory path");
+            addSeedsOptions.addOption("s", "seed", true, "path to the seed file");
+            
+            buildModelOptions.addOption("c", "targetStorageConfig", true, "config file path");
+            buildModelOptions.addOption("t", "trainingDataDir", true, "training data path");
+            buildModelOptions.addOption("o", "outputDir", true, "data output path");
+            
+            startTargetStorageOptions.addOption("o", "outputDir", true, "data output path");
+            startTargetStorageOptions.addOption("c", "configDir", true, "config directory path");
+            startTargetStorageOptions.addOption("m", "modelDir", true, "model directory path");
+            startTargetStorageOptions.addOption("l", "langDetect", true, "path to language detection profile");
+            
+            startLinkStorageOptions.addOption("o", "outputDir", true, "data output path");
+            startLinkStorageOptions.addOption("c", "configDir", true, "config directory path");
+            startLinkStorageOptions.addOption("s", "seed", true, "path to the seed file");
+            
+            startCrawlManagerOptions.addOption("c", "configDir", true, "config directory path");
+            
+            allOptions = new Options[] { 
+                    startCrawlOptions,
+                    addSeedsOptions,
+                    startCrawlManagerOptions,
+                    buildModelOptions,
+                    startTargetStorageOptions,
+                    startLinkStorageOptions};
+            
+            commandName = new String[] { 
+                    "startCrawl",
+                    "addSeeds",
+                    "startCrawlManager",
+                    "buildModel",
+                    "startTargetStorage",
+                    "startLinkStorage" };
 
-		if (args.length > 0) {
+            if (args.length == 0) {
+                printUsage();
+                System.exit(1);
+            }
 
-			// CLIParser myCLIParser = new CLIParser();
-			CommandLineParser parser = new DefaultParser();
-			CommandLine cmd;
-			Options startCrawlOptions = new Options();
-			Options addSeedsOptions = new Options();
-			Options startCrawlManagerOptions = new Options();
-			Options buildModelOptions = new Options();
-			Options startTargetStorageOptions = new Options();
-			Options startLinkStorageOptions = new Options();
-			startCrawlOptions.addOption("o", "outputDir", true, "data output path");
-			startCrawlOptions.addOption("c", "configDir", true, "config directory path");
-			startCrawlOptions.addOption("s", "seed", true, "path to the seed file");
-			startCrawlOptions.addOption("m", "modelDir", true, "model directory path");
-			startCrawlOptions.addOption("l", "langDetect", true,
-					"path to language detection profile");
-			addSeedsOptions.addOption("o", "outputDir", true, "data output path");
-			addSeedsOptions.addOption("c", "configDir", true, "config directory path");
-			addSeedsOptions.addOption("s", "seed", true, "path to the seed file");
-			buildModelOptions.addOption("c", "targetStorageConfig", true, "config file path");
-			buildModelOptions.addOption("t", "trainingDataDir", true, "training data path");
-			buildModelOptions.addOption("o", "outputDir", true, "data output path");
-			startTargetStorageOptions.addOption("o", "outputDir", true, "data output path");
-			startTargetStorageOptions.addOption("c", "configDir", true, "config directory path");
-			startTargetStorageOptions.addOption("m", "modelDir", true, "model directory path");
-			startTargetStorageOptions.addOption("p", "profileDir", true, "profile directory path");
-			startLinkStorageOptions.addOption("o", "outputDir", true, "data output path");
-			startLinkStorageOptions.addOption("c", "configDir", true, "config directory path");
-			startLinkStorageOptions.addOption("s", "seed", true, "path to the seed file");
-			startCrawlManagerOptions.addOption("c", "configDir", true, "config directory path");
-			allOptions = new Options[] { startCrawlOptions, addSeedsOptions,
-					startCrawlManagerOptions, buildModelOptions, startTargetStorageOptions,
-					startLinkStorageOptions };
-			commandName = new String[] { "startCrawl", "addSeeds", "startCrawlManager",
-					"buildModel", "startTargetStorage", "startLinkStorage" };
+            CommandLine cmd;
+            if ("startCrawl".equals(args[0])) {
+                cmd = parser.parse(startCrawlOptions, args);
+                startCrawl(cmd);
+            } 
+            else if ("addSeeds".equals(args[0])) {
+                cmd = parser.parse(addSeedsOptions, args);
+                addSeeds(cmd);
+            }
+            else if ("buildModel".equals(args[0])) {
+                cmd = parser.parse(buildModelOptions, args);
+                buildModel(cmd);
+            }
+            else if ("startLinkStorage".equals(args[0])) {
+                cmd = parser.parse(startLinkStorageOptions, args);
+                startLinkStorage(cmd);
+            }
+            else if ("startTargetStorage".equals(args[0])) {
+                cmd = parser.parse(startTargetStorageOptions, args);
+                startTargetStorage(cmd);
+            }
+            else if ("startCrawlManager".equals(args[0])) {
+                cmd = parser.parse(startCrawlManagerOptions, args);
+                startCrawlManager(getOptionValue(cmd, "configDir"));
+            } else {
+                printUsage();
+                System.exit(1);
+            }
+        }
+        catch(MissingArgumentException e) {
+            printMissingArgumentMessage(e);
+            System.exit(1);
+        }
+        catch(ParseException e) {
+            printError(e);
+            System.exit(1);
+        }
+    }
 
-			if ("startCrawl".equals(args[0])) {
-				try {
-					cmd = parser.parse(startCrawlOptions, args);
-					if (Arrays.equals(cmd.getOptions(),startCrawlOptions.getOptions().toArray())) {
-						startCrawl(cmd.getOptionValue("outputDir"),
-								cmd.getOptionValue("configDir"), cmd.getOptionValue("seed"),
-								cmd.getOptionValue("modelDir"), cmd.getOptionValue("langDetect"));
-					} else
-						startCrawl(args[1], args[2], args[3], args[4], args[5]);
-			} catch (Throwable e) {
-					printError(e);
-				}
-				
-			} else if ("addSeeds".equals(args[0])) {
-				try {
-					cmd = parser.parse(addSeedsOptions, args);
-					if (Arrays.equals(cmd.getOptions(),addSeedsOptions.getOptions().toArray())) {
-						addSeeds(cmd.getOptionValue("outputDir"), cmd.getOptionValue("configDir"),
-								cmd.getOptionValue("seed"));
-					} else
-						addSeeds(args[1], args[2], args[3]);
-				} catch (Throwable e) {
-					printError(e);
-				}
+    private static void printError(ParseException e) {
+        System.out.println(e);
+        System.out.println("Unable to parse the input. Did you enter the parameters correctly?\n");
+        printUsage();
+    }
+    
+    private static void printMissingArgumentMessage(MissingArgumentException e) {
+        System.out.println("Unable to parse the input. "+e.getMessage()+"\n");
+        printUsage();
+    }
 
-			} else if ("buildModel".equals(args[0])) {
-				try {
-					cmd = parser.parse(buildModelOptions, args);
-					if (Arrays.equals(cmd.getOptions(),buildModelOptions.getOptions().toArray())) {
-						buildModel(cmd.getOptionValue("targetStorageConfig"),
-								cmd.getOptionValue("trainingDataDir"),
-								cmd.getOptionValue("outputDir"));
-					} else
-						buildModel(args[1], args[2], args[3]);
-				} catch (Throwable e) {
-					printError(e);
-				}
+    private static void buildModel(CommandLine cmd) throws MissingArgumentException {
+        String targetStorageConfigPath = getOptionValue(cmd, "targetStorageConfig");
+        String trainingPath = getOptionValue(cmd, "trainingDataDir");
+        String outputPath = getOptionValue(cmd, "outputDir"); 
+        // generate the input for weka
+        new File(outputPath).mkdirs();
+        CreateWekaInput.main(new String[] { targetStorageConfigPath, trainingPath, trainingPath + "/weka.arff" });
+        // generate the model
+        SMO.main(new String[] { "-M", "-d", outputPath + "/pageclassifier.model", "-t", trainingPath + "/weka.arff" });
+    }
 
-			} else if ("startLinkStorage".equals(args[0])) {
-				try {
-					cmd = parser.parse(startLinkStorageOptions, args);
-					if (Arrays.equals(cmd.getOptions(), startLinkStorageOptions.getOptions().toArray()))
-						startLinkStorage(cmd.getOptionValue("outputDir"),
-								cmd.getOptionValue("configDir"), cmd.getOptionValue("seed"));
-					else
-						startLinkStorage(args[1], args[2], args[3]);
-				} catch (Throwable e) {
-					printError(e);
-				}
-			} else if ("startTargetStorage".equals(args[0])) {
-				try {
-					cmd = parser.parse(startTargetStorageOptions, args);
-					if (Arrays.equals(cmd.getOptions(),startTargetStorageOptions.getOptions().toArray())){
-						startTargetStorage(cmd.getOptionValue("outputDir"),
-								cmd.getOptionValue("configDir"), cmd.getOptionValue("modelDir"),
-								cmd.getOptionValue("profileDir"));
-					} else
-						startTargetStorage(args[1], args[2], args[3], args[4]);
-				} catch (Throwable e) {
-					printError(e);
-				}
+    private static void addSeeds(CommandLine cmd) throws MissingArgumentException {
+        String dataOutputPath = getOptionValue(cmd, "outputDir");
+        String configPath = getOptionValue(cmd, "configDir");
+        String seedPath = getOptionValue(cmd, "seed");
+        createOutputPathStructure(dataOutputPath);
+        AddSeeds.main(new String[] { configPath, seedPath, dataOutputPath });
+    }
 
-			} else if ("startCrawlManager".equals(args[0])) {
-				try {
-					cmd = parser.parse(startCrawlManagerOptions, args);
-					if (Arrays.equals(cmd.getOptions(),startCrawlManagerOptions.getOptions().toArray())) {
-						startCrawlManager(cmd.getOptionValue("configDir"));
-					} else
-						startCrawlManager(args[1]);
-				} catch (Throwable e) {
-					printError(e);
-				}
+    private static void startLinkStorage(CommandLine cmd) throws MissingArgumentException {
+        String dataOutputPath = getOptionValue(cmd, "outputDir");
+        String configPath = getOptionValue(cmd, "configDir");
+        String seedPath = getOptionValue(cmd, "seed");
+        try {
+            LinkStorage.main(new String[] { configPath, seedPath, dataOutputPath });
+        } catch (Throwable t) {
+            logger.error("Something bad happened to LinkStorage :(", t);
+        }
+    }
 
-			} else {
-				printUsage();
-				System.exit(1);
-			}
-		} else {
-			printUsage();
-			System.exit(1);
-		}
-	}
+    private static void startTargetStorage(CommandLine cmd) throws MissingArgumentException {
+        String dataOutputPath = getOptionValue(cmd, "outputDir");
+        String configPath = getOptionValue(cmd, "configDir");
+        String modelPath = getOptionValue(cmd, "modelDir");
+        String langDetectPath = getOptionValue(cmd, "langDetect");
+        try {
+            TargetStorage.main(new String[]{configPath, modelPath, dataOutputPath, langDetectPath});
+        } catch (Throwable t) {
+            logger.error("Something bad happened to TargetStorage :(", t);
+        }
+    }
 
-	private static void printError(Throwable e) {
-		// TODO Auto-generated method stub
-		System.out.println("Unable to parse the input. Did you enter the parameters correctly? ");
-		logger.error("Unable to parse the command line string. ", e);
-		System.out.println("The format is :");
-		printUsage();
-	}
+    private static void startCrawlManager(final String configPath) {
+        try {
+            CrawlerManager.main(new String[] { configPath });
+        } catch (Throwable t) {
+            logger.error("Something bad happened to CrawlManager :(", t);
+        }
+    }
 
-	//
-	private static void buildModel(String targetStorageConfigPath, String trainingPath,
-			String outputPath) {
-		// generate the input for weka
-		new File(outputPath).mkdirs();
-		CreateWekaInput.main(new String[] { targetStorageConfigPath, trainingPath,
-				trainingPath + "/weka.arff" });
+    private static void startCrawl(CommandLine cmd) throws MissingArgumentException {
+        String dataOutputPath = getOptionValue(cmd, "outputDir");
+        String configPath = getOptionValue(cmd, "configDir");
+        String seedPath = getOptionValue(cmd, "seed");
+        String modelPath = getOptionValue(cmd, "modelDir");
+        String langDetectProfilePath = getOptionValue(cmd, "langDetect");
+        
+        // set up the data directories
+        createOutputPathStructure(dataOutputPath);
 
-		// generate the model
-		SMO.main(new String[] { "-M", "-d", outputPath + "/pageclassifier.model", "-t",
-				trainingPath + "/weka.arff" });
-	}
+        // add seeds
+        AddSeeds.main(new String[] { configPath, seedPath, dataOutputPath });
 
-	private static void addSeeds(final String dataOutputPath, final String configPath,
-			final String seedPath) {
-		createOutputPathStructure(dataOutputPath);
-		AddSeeds.main(new String[] { configPath, seedPath, dataOutputPath });
-	}
+        ParameterFile linkStorageConfig = new ParameterFile(configPath
+                + "/link_storage/link_storage.cfg");
 
-	private static void startLinkStorage(final String dataOutputPath, final String configPath,
-			final String seedPath) {
-		try {
-			LinkStorage.main(new String[] { configPath, seedPath, dataOutputPath });
-		} catch (Throwable t) {
-			logger.error("Something bad happened to LinkStorage :(", t);
-		}
-	}
+        try {
+            Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
+                    dataOutputPath, linkStorageConfig);
 
-	private static void startTargetStorage(final String dataOutputPath, final String configPath,
-			final String modelPath, final String langDetectProfilePath) {
-		try {
-			TargetStorage.main(new String[] { configPath, modelPath, dataOutputPath,
-					langDetectProfilePath });
-		} catch (Throwable t) {
-			logger.error("Something bad happened to TargetStorage :(", t);
-		}
-	}
+            // start target storage
+            String targetConfFile = configPath + "/target_storage/target_storage.cfg";
+            ParameterFile targetStorageConfig = new ParameterFile(targetConfFile);
 
-	private static void startCrawlManager(final String configPath) {
-		try {
-			CrawlerManager.main(new String[] { configPath });
-		} catch (Throwable t) {
-			logger.error("Something bad happened to CrawlManager :(", t);
-		}
+            Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath,
+                    dataOutputPath, targetStorageConfig, linkStorage);
 
-	}
+            String crawlerConfigFile = configPath + "/crawler/crawler.cfg";
 
-	// private static void startFormStorage(){
-	// //Not used yet
-	// }
+            // start crawl manager
+            CrawlerManager manager = CrawlerManager.createCrawlerManager(crawlerConfigFile,
+                    linkStorage, targetStorage);
+            manager.start();
 
-	private static void startCrawl(final String dataOutputPath, final String configPath,
-			final String seedPath, final String modelPath, final String langDetectProfilePath) {
+        } catch (StorageFactoryException e) {
+            logger.error("Problem while creating Storage", e);
+        } catch (CrawlerManagerException e) {
+            logger.error("Problem while creating CrawlerManager", e);
+        } catch (Exception e) {
+            logger.error("Problem while starting crawler.", e);
+        }
 
-		// set up the data directories
-		createOutputPathStructure(dataOutputPath);
+    }
 
-		// add seeds
-		AddSeeds.main(new String[] { configPath, seedPath, dataOutputPath });
+    private static String getOptionValue(CommandLine cmd, final String optionName)
+            throws MissingArgumentException {
+        String optionValue = cmd.getOptionValue(optionName);
+        if (optionValue == null) {
+            throw new MissingArgumentException("Parameter "+optionName+" can not be empty.");
+        }
+        return optionValue;
+    }
 
-		ParameterFile linkStorageConfig = new ParameterFile(configPath
-				+ "/link_storage/link_storage.cfg");
+    private static void createOutputPathStructure(String dataOutputPath) {
+        File dataOutput = new File(dataOutputPath);
+        if (dataOutput.exists()) {
+            logger.warn("Data output path already exists, resuming crawl...");
+        } else {
+            dataOutput.mkdirs();
+        }
 
-		try {
-			Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
-					dataOutputPath, linkStorageConfig);
+        new File(dataOutput, "data_monitor").mkdirs();
+        new File(dataOutput, "data_target").mkdirs();
+        new File(dataOutput, "data_negative").mkdirs();
+        new File(dataOutput, "data_url").mkdirs();
+        new File(dataOutput, "data_url/dir").mkdirs();
+        new File(dataOutput, "data_host/").mkdirs();
+        new File(dataOutput, "data_backlinks/").mkdirs();
+        new File(dataOutput, "data_backlinks/dir").mkdirs();
+        new File(dataOutput, "data_backlinks/hubHash").mkdirs();
+        new File(dataOutput, "data_backlinks/authorityHash").mkdirs();
+        new File(dataOutput, "data_backlinks/url").mkdirs();
+        new File(dataOutput, "data_backlinks/auth_id").mkdirs();
+        new File(dataOutput, "data_backlinks/auth_graph").mkdirs();
+        new File(dataOutput, "data_backlinks/hub_id").mkdirs();
+        new File(dataOutput, "data_backlinks/hub_graph").mkdirs();
+    }
 
-			// start target storage
-			String targetConfFile = configPath + "/target_storage/target_storage.cfg";
-			ParameterFile targetStorageConfig = new ParameterFile(targetConfFile);
+    private static void printUsage() {
 
-			Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath,
-					dataOutputPath, targetStorageConfig, linkStorage);
+        HelpFormatter formatter = new HelpFormatter();
+        for (int i = 0; i < allOptions.length; i++) {
+            formatter.printHelp(commandName[i], allOptions[i], true);
+            System.out.println();
+        }
 
-			String crawlerConfigFile = configPath + "/crawler/crawler.cfg";
+        // TODO package the profiles with gradle build or mash them into the
+        // resources
+        // lang detect profile can be downloaded from
+        // https://code.google.com/p/language-detection/wiki/Downloads
+        // TODO: Model path in startTargetStorage?
 
-			// start crawl manager
-			CrawlerManager manager = CrawlerManager.createCrawlerManager(crawlerConfigFile,
-					linkStorage, targetStorage);
-			manager.start();
-
-		} catch (StorageFactoryException e) {
-			logger.error("Problem while creating Storage", e);
-		} catch (CrawlerManagerException e) {
-			logger.error("Problem while creating CrawlerManager", e);
-		} catch (Exception e) {
-			logger.error("Problem while starting crawler.", e);
-		}
-
-	}
-
-	private static void createOutputPathStructure(String dataOutputPath) {
-		File dataOutput = new File(dataOutputPath);
-		if (dataOutput.exists()) {
-			logger.warn("Data output path already exists, resuming crawl...");
-		} else {
-			dataOutput.mkdirs();
-		}
-
-		new File(dataOutput, "data_monitor").mkdirs();
-		new File(dataOutput, "data_target").mkdirs();
-		new File(dataOutput, "data_negative").mkdirs();
-		new File(dataOutput, "data_url").mkdirs();
-		new File(dataOutput, "data_url/dir").mkdirs();
-		new File(dataOutput, "data_host/").mkdirs();
-		new File(dataOutput, "data_backlinks/").mkdirs();
-		new File(dataOutput, "data_backlinks/dir").mkdirs();
-		new File(dataOutput, "data_backlinks/hubHash").mkdirs();
-		new File(dataOutput, "data_backlinks/authorityHash").mkdirs();
-		new File(dataOutput, "data_backlinks/url").mkdirs();
-		new File(dataOutput, "data_backlinks/auth_id").mkdirs();
-		new File(dataOutput, "data_backlinks/auth_graph").mkdirs();
-		new File(dataOutput, "data_backlinks/hub_id").mkdirs();
-		new File(dataOutput, "data_backlinks/hub_graph").mkdirs();
-	}
-
-	private static void printUsage() {
-
-		System.out.println("Focused Crawler");
-		HelpFormatter formatter = new HelpFormatter();
-		for (int i = 0; i < allOptions.length; i++)
-			formatter.printHelp(commandName[i], allOptions[i], true);
-
-		// TODO package the profiles with gradle build or mash them into the
-		// resources
-		// lang detect profile can be downloaded from
-		// https://code.google.com/p/language-detection/wiki/Downloads
-		// TODO: Model path in startTargetStorage?
-
-		System.out.println("Examples:");
-		System.out
-				.println("ache buildModel -c config/sample_config/target_storage.cfg -t training_data -o output_model");
-		System.out.println("ache addSeeds -o data -c config/sample_config -s config/sample.seeds");
-		System.out
-				.println("ache startLinkStorage -o data -c config/sample_config -s config/sample.seeds");
-		System.out
-				.println("ache startTargetStorage -o data -c config/sample_config -m config/sample_config -p libs/profiles");
-		System.out.println("ache startCrawlManager -c config/sample_config");
-
-	}
-
+        System.out.println("Examples:\n");
+        System.out.println("ache buildModel -c config/sample_config/target_storage.cfg -t training_data -o output_model");
+        System.out.println("ache addSeeds -o data -c config/sample_config -s config/sample.seeds");
+        System.out.println("ache startLinkStorage -o data -c config/sample_config -s config/sample.seeds");
+        System.out.println("ache startTargetStorage -o data -c config/sample_config -m config/sample_config -l libs/profiles");
+        System.out.println("ache startCrawlManager -c config/sample_config");
+    }
 }
