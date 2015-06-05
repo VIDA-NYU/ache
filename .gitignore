@@ -11,3 +11,4 @@ config/ebola
 config/humantrafficking
 config/escort
 /bin/
+.DS_Store*

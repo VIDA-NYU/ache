@@ -20,128 +20,147 @@
 ## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 ##
 ############################################################################
-*/
+ */
 package focusedCrawler.link.frontier;
-
-import java.net.URL;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.PriorityQueueLink;
 
 /**
  * This class manages the crawler frontier
+ * 
  * @author Luciano Barbosa
  * @version 1.0
  */
 
 public class FrontierManager {
-    
+
     private static final Logger logger = LoggerFactory.getLogger(FrontierManager.class);
 
-	private PriorityQueueLink priorityQueue;
+    private PriorityQueueLink priorityQueue;
 
-	private FrontierTargetRepositoryBaseline frontier;
+    private FrontierTargetRepositoryBaseline frontier;
 
-	private int linksToLoad;
+    private int linksToLoad;
 
-	public FrontierManager(FrontierTargetRepositoryBaseline frontier,
-	                       int maxSizeLinkQueue, int linksToLoad)
-                           throws FrontierPersistentException {
-		this.priorityQueue = new PriorityQueueLink(maxSizeLinkQueue);
-		this.frontier = frontier;
-		this.linksToLoad = linksToLoad;
-		this.loadQueue(linksToLoad);
-	}
+    private LinkFilter linkFilter;
 
-	public void setPolicy(boolean random){
-		this.frontier.setPolicy(random);
-	}
-  
-	public FrontierTargetRepositoryBaseline getFrontierPersistent(){
-		return this.frontier;
-	}
+    public FrontierManager(FrontierTargetRepositoryBaseline frontier, int maxSizeLinkQueue, int linksToLoad,
+            LinkFilter linkFilter) throws FrontierPersistentException {
+        this.priorityQueue = new PriorityQueueLink(maxSizeLinkQueue);
+        this.frontier = frontier;
+        this.linksToLoad = linksToLoad;
+        this.loadQueue(linksToLoad);
+        this.linkFilter = linkFilter;
+    }
 
-	public void loadQueue() throws FrontierPersistentException {
-		loadQueue(linksToLoad);
-	}
+    public void setPolicy(boolean random) {
+        this.frontier.setPolicy(random);
+    }
 
-	public void clearFrontier(){
-	    logger.info("Cleaning frontier... current queue size: " + priorityQueue.size());
-		priorityQueue.clear();
-		logger.info("# Queue size:" + priorityQueue.size());
-	}
+    public FrontierTargetRepositoryBaseline getFrontierPersistent() {
+        return this.frontier;
+    }
 
-	private void loadQueue(int numberOfLinks) throws FrontierPersistentException {
-		priorityQueue.clear();
-		LinkRelevance[] links = frontier.select(numberOfLinks);
-		for (int i = 0; i < links.length; i++) {
-			priorityQueue.insert(links[i]);
-		}
-	}
+    public void loadQueue() throws FrontierPersistentException {
+        loadQueue(linksToLoad);
+    }
 
-	public boolean isRelevant(LinkRelevance elem) throws FrontierPersistentException{
-		boolean result = false;
-		Integer value = frontier.exist(elem);
-		if(value == null  && elem.getRelevance() > 0 && !elem.getURL().toString().endsWith("pdf") &&
-				!elem.getURL().toString().endsWith("jpg") && !elem.getURL().toString().endsWith("gif") &&
-				!elem.getURL().toString().endsWith("ps") && !elem.getURL().toString().endsWith("css") ){
-			result = true;
-		}
-		return result;
-	}
-  
-	public void insert(LinkRelevance[] linkRelevance) throws
-		FrontierPersistentException {
-		for (int i = 0; i < linkRelevance.length; i++) {
-			LinkRelevance elem = linkRelevance[i];
-			boolean insert = isRelevant(elem);
-			if (insert) {
-				frontier.insert(elem);
-			}
-		}
-	}
+    public void clearFrontier() {
+        logger.info("Cleaning frontier... current queue size: " + priorityQueue.size());
+        priorityQueue.clear();
+        logger.info("# Queue size:" + priorityQueue.size());
+    }
 
-	public boolean insert(LinkRelevance linkRelevance) throws  FrontierPersistentException {
-		boolean insert = isRelevant(linkRelevance);
-		if (insert) {
-			insert = frontier.insert(linkRelevance);
-		}
-		return insert;
-	}
+    private void loadQueue(int numberOfLinks) throws FrontierPersistentException {
+        priorityQueue.clear();
+        LinkRelevance[] links = frontier.select(numberOfLinks);
+        for (int i = 0; i < links.length; i++) {
+            priorityQueue.insert(links[i]);
+        }
+    }
 
-  
-	public LinkRelevance nextURL() throws FrontierPersistentException {
+    public boolean isRelevant(LinkRelevance elem) throws FrontierPersistentException {
 
-		URL url = null;
-		LinkRelevance linkRelev = (LinkRelevance)priorityQueue.pop();
-    
-		if(linkRelev != null){
-			boolean limit =  false;
-			do{
-				limit = frontier.reachLimit(linkRelev.getURL());
-				if(!limit){
-					url = linkRelev.getURL();
-					frontier.delete(linkRelev);
-				}else{
-					frontier.delete(linkRelev);
-					linkRelev = (LinkRelevance)priorityQueue.pop();
-				}
-			}while(limit && priorityQueue.size() > 0);
-			int value = (int)linkRelev.getRelevance()/100;
-			
-			logger.info("\n> URL:" + linkRelev.getURL() +
-    			        "\n> REL:" + value +
-    			        "\n> RELEV:" + linkRelev.getRelevance());
-		}
-		else{
-	        logger.info("LOADED: " + linksToLoad);
-			loadQueue(linksToLoad);
-		}
-		return linkRelev;
-	}
+        if (elem.getRelevance() <= 0) {
+            return false;
+        }
+
+        Integer value = frontier.exist(elem);
+        if (value != null) {
+            return false;
+        }
+
+        String url = elem.getURL().toString();
+        if (url.endsWith("pdf") ||
+            url.endsWith("jpg") ||
+            url.endsWith("gif") ||
+            url.endsWith("ps")  ||
+            url.endsWith("css") ||
+            linkFilter.accept(url) == false) {
+            return false;
+        }
+        
+        return true;
+    }
+
+    public void insert(LinkRelevance[] linkRelevance) throws FrontierPersistentException {
+        for (int i = 0; i < linkRelevance.length; i++) {
+            LinkRelevance elem = linkRelevance[i];
+            boolean insert = isRelevant(elem);
+            if (insert) {
+                frontier.insert(elem);
+            }
+        }
+    }
+
+    public boolean insert(LinkRelevance linkRelevance) throws FrontierPersistentException {
+        boolean insert = isRelevant(linkRelevance);
+        if (insert) {
+            insert = frontier.insert(linkRelevance);
+        }
+        return insert;
+    }
+
+    public LinkRelevance nextURL() throws FrontierPersistentException {
+
+        LinkRelevance linkRelev = (LinkRelevance) priorityQueue.pop();
+
+        if (linkRelev == null) {
+            logger.info("LOADED: " + linksToLoad);
+            loadQueue(linksToLoad);
+            return null;
+        }
+
+        boolean limit = false;
+        do {
+            // FIXME Remove irrelevant links added to the frontier.
+            if (!linkFilter.accept(linkRelev.getURL().toString())) {
+                frontier.delete(linkRelev);
+                limit = true;
+                linkRelev = (LinkRelevance) priorityQueue.pop();
+                continue;
+            }
+
+            limit = frontier.reachLimit(linkRelev.getURL());
+            if (!limit) {
+                frontier.delete(linkRelev);
+            } else {
+                frontier.delete(linkRelev);
+                linkRelev = (LinkRelevance) priorityQueue.pop();
+            }
+        } while (limit && priorityQueue.size() > 0);
+        int value = (int) linkRelev.getRelevance() / 100;
+
+        logger.info("\n> URL:" + linkRelev.getURL() +
+                    "\n> REL:" + value +
+                    "\n> RELEV:" + linkRelev.getRelevance());
+
+        return linkRelev;
+    }
 
 }
-

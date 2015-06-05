@@ -21,24 +21,29 @@ public class GzipCborFileWriter implements Closeable {
     
     private static final Logger logger = LoggerFactory.getLogger(GzipCborFileWriter.class);
     
-    private final ObjectMapper cborMapper = new ObjectMapper(new CBORFactory());
+    private final ObjectMapper mapper;
     
     private FileOutputStream fileOutput = null;
     private BufferedOutputStream bufOutput = null;
     private GzipCompressorOutputStream gzipOutput = null;
     private TarArchiveOutputStream tarOutput = null;
-
-    public GzipCborFileWriter(String outputFilename) throws IOException {
+    
+    public GzipCborFileWriter(String outputFilename, ObjectMapper mapper) throws IOException {
         File file = new File(outputFilename);
         if(file.exists()) {
             logger.warn("File already exists: "+file.getCanonicalPath());
         }
         createNewGzipFileStream(file);
+        this.mapper = mapper;
+    }
+
+    public GzipCborFileWriter(String outputFilename) throws IOException {
+        this(outputFilename, new ObjectMapper(new CBORFactory()));
     }
     
     public synchronized void writeTargetModel(TargetModel target) throws IOException {
 
-        byte[] byteData = cborMapper.writeValueAsBytes(target);
+        byte[] byteData = mapper.writeValueAsBytes(target);
         
         TarArchiveEntry tarEntry = new TarArchiveEntry(target.key);
         tarEntry.setSize(byteData.length);
