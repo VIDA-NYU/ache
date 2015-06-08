@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
+import java.net.URISyntaxException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,7 +61,18 @@ public class TargetStorage extends StorageDefault {
         this.monitor = monitor;
         
         this.langDetect = new LangDetection();
-        this.langDetect.init("libs/profiles/");//This is hard coded, should be fixed
+        //this.langDetect.init("libs/profiles/");//This is hard coded, should be fixed
+        
+        ClassLoader cl = this.getClass().getClassLoader();
+        try {
+			this.langDetect.init(cl.getResource("profiles").toURI());
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			logger.error(" Unable to load profiles! ",e);;
+			e.printStackTrace();
+		}
+        
+        
         
         //if one wants to use regex based classifier
         if (config.isUseRegex()) {
