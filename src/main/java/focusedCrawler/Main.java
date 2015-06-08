@@ -18,6 +18,7 @@ import focusedCrawler.crawler.CrawlerManagerException;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.AddSeeds;
 import focusedCrawler.target.CreateWekaInput;
+import focusedCrawler.target.TargetElasticSearchRepository;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.Storage;
@@ -48,6 +49,7 @@ public class Main {
             Options startTargetStorageOptions = new Options();
             Options startLinkStorageOptions = new Options();
             
+            startCrawlOptions.addOption("e", "elasticIndex", true, "elastic search index name");
             startCrawlOptions.addOption("o", "outputDir", true, "data output path");
             startCrawlOptions.addOption("c", "configDir", true, "config directory path");
             startCrawlOptions.addOption("s", "seed", true, "path to the seed file");
@@ -193,10 +195,13 @@ public class Main {
     }
 
     private static void startCrawl(CommandLine cmd) throws MissingArgumentException {
+        String elasticIndexName = getOptionValue(cmd, "elasticIndex");
         String dataOutputPath = getOptionValue(cmd, "outputDir");
         String configPath = getOptionValue(cmd, "configDir");
         String seedPath = getOptionValue(cmd, "seed");
         String modelPath = getOptionValue(cmd, "modelDir");
+        
+        TargetElasticSearchRepository.setIndexName(elasticIndexName);
         
         // set up the data directories
         createOutputPathStructure(dataOutputPath);
