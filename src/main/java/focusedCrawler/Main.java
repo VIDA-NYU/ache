@@ -145,12 +145,12 @@ public class Main {
     }
 
     private static void buildModel(CommandLine cmd) throws MissingArgumentException {
-        String targetStorageConfigPath = getOptionValue(cmd, "targetStorageConfig");
+        String stopwordsFile = getOptionValue(cmd, "targetStorageConfig");
         String trainingPath = getOptionValue(cmd, "trainingDataDir");
         String outputPath = getOptionValue(cmd, "outputDir"); 
         // generate the input for weka
         new File(outputPath).mkdirs();
-        CreateWekaInput.main(new String[] { targetStorageConfigPath, trainingPath, trainingPath + "/weka.arff" });
+        CreateWekaInput.main(new String[] { stopwordsFile, trainingPath, trainingPath + "/weka.arff" });
         // generate the model
         SMO.main(new String[] { "-M", "-d", outputPath + "/pageclassifier.model", "-t", trainingPath + "/weka.arff" });
     }
