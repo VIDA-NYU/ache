@@ -958,7 +958,7 @@ public class PaginaURL implements Pagina {
                             n++;
                             int begin = str.indexOf("&#");
                             int end = str.indexOf(";");
-                            if(begin != -1 && end != -1){
+                            if(begin != -1 && end != -1 && (begin+2)<end){
                             	String specialchar = str.substring(begin+2,end);
     							try {
                                 	int hex = Integer.parseInt(specialchar);
@@ -1564,7 +1564,11 @@ public class PaginaURL implements Pagina {
                                 		  anchor = "";
                                 		  ln = null;
                                 	  }
+                                	  try {
                                 	  ln = new LinkNeighborhood(new URL(urlTemp));
+                                	  } catch (Exception e) {
+                                	      // Ignoring Exception on purpose since the URL in page is not proper
+                                	  }
                                   }
 //                                System.out.println("CREATE LINK:"  + urlTemp);
                             } else if (tagName.equals("link")
