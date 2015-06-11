@@ -52,7 +52,6 @@ public class Main {
             startCrawlOptions.addOption("c", "configDir", true, "config directory path");
             startCrawlOptions.addOption("s", "seed", true, "path to the seed file");
             startCrawlOptions.addOption("m", "modelDir", true, "model directory path");
-            startCrawlOptions.addOption("l", "langDetect", true, "path to language detection profile");
             
             addSeedsOptions.addOption("o", "outputDir", true, "data output path");
             addSeedsOptions.addOption("c", "configDir", true, "config directory path");
@@ -65,7 +64,7 @@ public class Main {
             startTargetStorageOptions.addOption("o", "outputDir", true, "data output path");
             startTargetStorageOptions.addOption("c", "configDir", true, "config directory path");
             startTargetStorageOptions.addOption("m", "modelDir", true, "model directory path");
-            startTargetStorageOptions.addOption("l", "langDetect", true, "path to language detection profile");
+            
             
             startLinkStorageOptions.addOption("o", "outputDir", true, "data output path");
             startLinkStorageOptions.addOption("c", "configDir", true, "config directory path");
@@ -178,9 +177,8 @@ public class Main {
         String dataOutputPath = getOptionValue(cmd, "outputDir");
         String configPath = getOptionValue(cmd, "configDir");
         String modelPath = getOptionValue(cmd, "modelDir");
-        String langDetectPath = getOptionValue(cmd, "langDetect");
         try {
-            TargetStorage.main(new String[]{configPath, modelPath, dataOutputPath, langDetectPath});
+            TargetStorage.main(new String[]{configPath, modelPath, dataOutputPath});
         } catch (Throwable t) {
             logger.error("Something bad happened to TargetStorage :(", t);
         }
@@ -199,7 +197,6 @@ public class Main {
         String configPath = getOptionValue(cmd, "configDir");
         String seedPath = getOptionValue(cmd, "seed");
         String modelPath = getOptionValue(cmd, "modelDir");
-        String langDetectProfilePath = getOptionValue(cmd, "langDetect");
         
         // set up the data directories
         createOutputPathStructure(dataOutputPath);

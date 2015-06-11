@@ -1,9 +1,15 @@
 package focusedCrawler.util;
+import java.io.File;
+import java.net.URI;
 import java.util.ArrayList;
+
 import com.cybozu.labs.langdetect.Detector;
 import com.cybozu.labs.langdetect.DetectorFactory;
+import com.cybozu.labs.langdetect.LangDetectException;
 import com.cybozu.labs.langdetect.Language;
+
 import focusedCrawler.util.Page;
+
 import java.util.regex.Pattern;
 
 public class LangDetection {
@@ -24,6 +30,16 @@ public class LangDetection {
       catch(Exception e){
         System.out.println("Error in detect language");
       }
+    }
+    
+    public void init(URI profileURI){
+    	try {
+			DetectorFactory.loadProfile(new File(profileURI));
+		} catch (LangDetectException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Error in detect language");
+			e.printStackTrace();
+		}
     }
 
     public Boolean detect_text(String content){
