@@ -52,20 +52,19 @@ public class Main {
             startCrawlOptions.addOption("c", "configDir", true, "config directory path");
             startCrawlOptions.addOption("s", "seed", true, "path to the seed file");
             startCrawlOptions.addOption("m", "modelDir", true, "model directory path");
-            startCrawlOptions.addOption("l", "langDetect", true, "path to language detection profile");
             
             addSeedsOptions.addOption("o", "outputDir", true, "data output path");
             addSeedsOptions.addOption("c", "configDir", true, "config directory path");
             addSeedsOptions.addOption("s", "seed", true, "path to the seed file");
             
-            buildModelOptions.addOption("c", "targetStorageConfig", true, "config file path");
+            buildModelOptions.addOption("c", "stopWordsFile", true, "stopwords file path");
             buildModelOptions.addOption("t", "trainingDataDir", true, "training data path");
             buildModelOptions.addOption("o", "outputDir", true, "data output path");
             
             startTargetStorageOptions.addOption("o", "outputDir", true, "data output path");
             startTargetStorageOptions.addOption("c", "configDir", true, "config directory path");
             startTargetStorageOptions.addOption("m", "modelDir", true, "model directory path");
-            startTargetStorageOptions.addOption("l", "langDetect", true, "path to language detection profile");
+            
             
             startLinkStorageOptions.addOption("o", "outputDir", true, "data output path");
             startLinkStorageOptions.addOption("c", "configDir", true, "config directory path");
@@ -145,12 +144,12 @@ public class Main {
     }
 
     private static void buildModel(CommandLine cmd) throws MissingArgumentException {
-        String targetStorageConfigPath = getOptionValue(cmd, "targetStorageConfig");
+        String stopWordsFile = getOptionValue(cmd, "stopWordsFile");
         String trainingPath = getOptionValue(cmd, "trainingDataDir");
         String outputPath = getOptionValue(cmd, "outputDir"); 
         // generate the input for weka
         new File(outputPath).mkdirs();
-        CreateWekaInput.main(new String[] { targetStorageConfigPath, trainingPath, trainingPath + "/weka.arff" });
+        CreateWekaInput.main(new String[] { stopWordsFile, trainingPath, trainingPath + "/weka.arff" });
         // generate the model
         SMO.main(new String[] { "-M", "-d", outputPath + "/pageclassifier.model", "-t", trainingPath + "/weka.arff" });
     }
@@ -178,9 +177,8 @@ public class Main {
         String dataOutputPath = getOptionValue(cmd, "outputDir");
         String configPath = getOptionValue(cmd, "configDir");
         String modelPath = getOptionValue(cmd, "modelDir");
-        String langDetectPath = getOptionValue(cmd, "langDetect");
         try {
-            TargetStorage.main(new String[]{configPath, modelPath, dataOutputPath, langDetectPath});
+            TargetStorage.main(new String[]{configPath, modelPath, dataOutputPath});
         } catch (Throwable t) {
             logger.error("Something bad happened to TargetStorage :(", t);
         }
@@ -199,7 +197,6 @@ public class Main {
         String configPath = getOptionValue(cmd, "configDir");
         String seedPath = getOptionValue(cmd, "seed");
         String modelPath = getOptionValue(cmd, "modelDir");
-        String langDetectProfilePath = getOptionValue(cmd, "langDetect");
         
         // set up the data directories
         createOutputPathStructure(dataOutputPath);
@@ -287,10 +284,10 @@ public class Main {
         // TODO: Model path in startTargetStorage?
 
         System.out.println("Examples:\n");
-        System.out.println("ache buildModel -c config/sample_config/target_storage.cfg -t training_data -o output_model");
+        System.out.println("ache buildModel -c config/sample_config/stoplist.txt -t training_data -o output_model");
         System.out.println("ache addSeeds -o data -c config/sample_config -s config/sample.seeds");
         System.out.println("ache startLinkStorage -o data -c config/sample_config -s config/sample.seeds");
-        System.out.println("ache startTargetStorage -o data -c config/sample_config -m config/sample_config -l libs/profiles");
+        System.out.println("ache startTargetStorage -o data -c config/sample_config -m config/sample_model");
         System.out.println("ache startCrawlManager -c config/sample_config");
     }
 }
