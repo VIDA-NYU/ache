@@ -39,7 +39,7 @@ public class TargetCBORRepository implements TargetRepository {
             URL urlObj = new URL(target.getIdentifier());
             String host = urlObj.getHost();
             String url = target.getIdentifier();
-            this.targetModel.setTimestamp();
+            this.targetModel.resetTimestamp();
             this.targetModel.setUrl(url);
             this.targetModel.setContent(target.getSource());
             this.targetModel.setKey(url, this.domain);
@@ -74,7 +74,7 @@ public class TargetCBORRepository implements TargetRepository {
             URL urlObj = new URL(target.getIdentifier());
             String host = urlObj.getHost();
             String url = target.getIdentifier();
-            this.targetModel.setTimestamp();
+            this.targetModel.resetTimestamp();
             this.targetModel.setUrl(url);
             this.targetModel.setContent(target.getSource());
             this.targetModel.setKey(url, this.domain);

@@ -60,11 +60,13 @@ public class TargetModel {
     public HashMap<String, Object> response;
 
     public TargetModel() {
+        response = new HashMap<String, Object>();
+        request = new HashMap<String, Object>();
+        timestamp = System.currentTimeMillis() / 1000L;
     }
 
     public TargetModel(String contactName, String contactEmail) {
-        request = new HashMap<String, Object>();
-        response = new HashMap<String, Object>();
+        this();
 
         HashMap<String, Object> contact = new HashMap<String, Object>();
         contact.put("name", contactName);
@@ -83,8 +85,12 @@ public class TargetModel {
         request.put("body", null);
     }
 
-    public void setTimestamp() {
-        this.timestamp = System.currentTimeMillis() / 1000L;
+    public void resetTimestamp() {
+        this.setTimestamp(System.currentTimeMillis() / 1000L);
+    }
+    
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
     }
 
     public void setUrl(String url) {
