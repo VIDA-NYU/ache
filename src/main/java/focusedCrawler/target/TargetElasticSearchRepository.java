@@ -209,7 +209,7 @@ public class TargetElasticSearchRepository implements TargetRepository {
         
         if(memexDataFormat) {
             TargetModel targetModel = new TargetModel("Kien Pham", "kien.pham@nyu.edu");
-            targetModel.setTimestamp();
+            targetModel.resetTimestamp();
             targetModel.setUrl(target.getIdentifier());
             targetModel.setContent(target.getSource());
             data = targetModel;
