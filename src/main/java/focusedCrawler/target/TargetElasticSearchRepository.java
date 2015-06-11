@@ -84,7 +84,7 @@ public class TargetElasticSearchRepository implements TargetRepository {
         private String url;
         private String title;
         private String text;
-        private Date fetched;
+        private Date retrieved;
         private String[] words;
         private String[] wordsMeta;
         private String topPrivateDomain;
@@ -93,7 +93,7 @@ public class TargetElasticSearchRepository implements TargetRepository {
             Page page = (Page) target;
             
             this.url = target.getIdentifier();
-            this.fetched = new Date();
+            this.retrieved = new Date();
             this.words = page.getPageURL().palavras();
             this.wordsMeta = page.getPageURL().palavrasMeta();
             this.title = page.getPageURL().titulo();
@@ -137,12 +137,12 @@ public class TargetElasticSearchRepository implements TargetRepository {
             this.text = text;
         }
 
-        public Date getFetched() {
-            return fetched;
+        public Date getRetrieved() {
+            return retrieved;
         }
 
-        public void setFetched(Date fetched) {
-            this.fetched = fetched;
+        public void setRetrieved(Date retrieved) {
+            this.retrieved = retrieved;
         }
 
         public String[] getWords() {
