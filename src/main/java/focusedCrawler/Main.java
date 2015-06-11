@@ -57,7 +57,7 @@ public class Main {
             addSeedsOptions.addOption("c", "configDir", true, "config directory path");
             addSeedsOptions.addOption("s", "seed", true, "path to the seed file");
             
-            buildModelOptions.addOption("c", "targetStorageConfig", true, "config file path");
+            buildModelOptions.addOption("c", "stopWordsFile", true, "stopwords file path");
             buildModelOptions.addOption("t", "trainingDataDir", true, "training data path");
             buildModelOptions.addOption("o", "outputDir", true, "data output path");
             
@@ -144,12 +144,12 @@ public class Main {
     }
 
     private static void buildModel(CommandLine cmd) throws MissingArgumentException {
-        String stopwordsFile = getOptionValue(cmd, "targetStorageConfig");
+        String stopWordsFile = getOptionValue(cmd, "stopWordsFile");
         String trainingPath = getOptionValue(cmd, "trainingDataDir");
         String outputPath = getOptionValue(cmd, "outputDir"); 
         // generate the input for weka
         new File(outputPath).mkdirs();
-        CreateWekaInput.main(new String[] { stopwordsFile, trainingPath, trainingPath + "/weka.arff" });
+        CreateWekaInput.main(new String[] { stopWordsFile, trainingPath, trainingPath + "/weka.arff" });
         // generate the model
         SMO.main(new String[] { "-M", "-d", outputPath + "/pageclassifier.model", "-t", trainingPath + "/weka.arff" });
     }
@@ -284,10 +284,10 @@ public class Main {
         // TODO: Model path in startTargetStorage?
 
         System.out.println("Examples:\n");
-        System.out.println("ache buildModel -c config/sample_config/target_storage.cfg -t training_data -o output_model");
+        System.out.println("ache buildModel -c config/sample_config/stoplist.txt -t training_data -o output_model");
         System.out.println("ache addSeeds -o data -c config/sample_config -s config/sample.seeds");
         System.out.println("ache startLinkStorage -o data -c config/sample_config -s config/sample.seeds");
-        System.out.println("ache startTargetStorage -o data -c config/sample_config -m config/sample_config -l libs/profiles");
+        System.out.println("ache startTargetStorage -o data -c config/sample_config -m config/sample_model");
         System.out.println("ache startCrawlManager -c config/sample_config");
     }
 }
