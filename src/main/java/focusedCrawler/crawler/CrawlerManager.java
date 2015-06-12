@@ -150,7 +150,7 @@ public class CrawlerManager extends Thread {
 
                     logger.warn("Threads limit " + maxThreads + " exceeded '" + numThreads + "'");
                     
-                    stopManager();
+//                    stopManager();
                     
                     sleepExit(1 * 60 * 1000);
                     
@@ -185,7 +185,7 @@ public class CrawlerManager extends Thread {
             logger.info("Waiting " + time + " mls to die.");
             sleep(time);
             logger.info("System.exit()");
-            System.exit(1);
+//            System.exit(1);
         } catch (InterruptedException exc) {
             logger.error("Interruped while waiting mls to exit.", exc);
         }
