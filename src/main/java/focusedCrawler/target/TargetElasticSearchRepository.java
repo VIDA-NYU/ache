@@ -1,5 +1,7 @@
 package focusedCrawler.target;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Date;
 
 import org.elasticsearch.action.index.IndexResponse;
@@ -24,6 +26,7 @@ import de.l3s.boilerpipe.extractors.DefaultExtractor;
 import focusedCrawler.config.TargetStorageConfig;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.Target;
+import focusedCrawler.util.parser.PaginaURL;
 
 public class TargetElasticSearchRepository implements TargetRepository {
 
@@ -102,6 +105,44 @@ public class TargetElasticSearchRepository implements TargetRepository {
             try {
                 this.text = DefaultExtractor.getInstance().getText(page.getContent());
             } catch (BoilerpipeProcessingException e) {
+                this.text = "";
+            }
+            
+            InternetDomainName domainName = InternetDomainName.from(page.getDomainName());
+            if(domainName.isUnderPublicSuffix()) {
+                this.topPrivateDomain = domainName.topPrivateDomain().toString();
+            } else {
+                this.topPrivateDomain = domainName.toString();
+            }
+        }
+        
+        public ElasticSearchPageModel(TargetModel model) {
+            this.url = model.url;
+            this.retrieved = new Date(model.timestamp*1000);
+            
+            URL url;
+            try {
+                url = new URL(model.url);
+            } catch (MalformedURLException e) {
+                throw new IllegalArgumentException("page has an invalid URL: "+model.url);
+            }
+            
+            String raw_content = (String) model.response.get("body");
+            Page page = new Page(url, raw_content);
+            PaginaURL pageURL = new PaginaURL(url, 0, 0, raw_content.length(), raw_content, null);
+            PaginaURL pageParser = new PaginaURL(page.getURL(), 0, 0,page.getContent().length(),page.getContent(), null);
+            page.setPageURL(pageParser);
+            
+            this.url = model.url;
+            this.retrieved = new Date();
+            this.words = pageURL.palavras();
+            this.wordsMeta = pageURL.palavrasMeta();
+            this.title = pageURL.titulo();
+            this.domain = url.getHost();
+            
+            try {
+                this.text = DefaultExtractor.getInstance().getText(page.getContent());
+            } catch (Exception e) {
                 this.text = "";
             }
             
