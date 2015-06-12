@@ -1,5 +1,7 @@
-# ACHE Focused Crawler
+[![Build Status](https://travis-ci.org/ViDA-NYU/ache.svg?branch=master)]
+(https://travis-ci.org/ViDA-NYU/ache)
 
+# ACHE Focused Crawler
 
 ## Introduction
 
@@ -22,9 +24,9 @@ If you want to try the most recent version, please clone the repository, compile
 To build `ache` from source, you can run the following commands in your terminal:
 
 ```bash
-  git clone https://github.com/ViDA-NYU/ache.git
-  cd ache
-  ./gradlew clean installApp
+git clone https://github.com/ViDA-NYU/ache.git
+cd ache
+./gradlew clean installApp
 ```
 
 which will generate an installation package under `/build/install/`.
