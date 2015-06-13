@@ -2190,6 +2190,8 @@ public class PaginaURL implements Pagina {
             link = link.trim();
 
             URL url = parseLink(base, link);
+            
+            url = removeFragmentsIfAny(url);
 
             link = url.toString();
 
@@ -2246,6 +2248,17 @@ public class PaginaURL implements Pagina {
         return link;
      }
 
+    protected URL removeFragmentsIfAny(URL inputURL){
+        if(inputURL.toString().contains("#")){
+            try {
+                return (new URL(inputURL.toString().substring(0, inputURL.toString().indexOf('#'))));
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
+        return inputURL;
+    }
+    
     /**
      * Declara\uFFFD\uFFFDo do M\uFFFDtodo
      *
