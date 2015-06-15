@@ -35,7 +35,6 @@ import org.apache.commons.validator.routines.UrlValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.Main;
 import focusedCrawler.util.page.Pagina;
 import focusedCrawler.util.string.Acentos;
 import focusedCrawler.util.string.StopList;
