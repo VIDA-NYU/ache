@@ -1,18 +1,15 @@
 package focusedCrawler.target;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
 import java.net.URISyntaxException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import weka.classifiers.Classifier;
-import weka.core.Instances;
 import focusedCrawler.config.TargetStorageConfig;
+import focusedCrawler.target.classifier.ClassifierFactory;
+import focusedCrawler.target.classifier.TargetClassifier;
+import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.detector.RegexBasedDetector;
 import focusedCrawler.util.LangDetection;
 import focusedCrawler.util.Page;
@@ -25,8 +22,6 @@ import focusedCrawler.util.storage.StorageException;
 import focusedCrawler.util.storage.StorageFactoryException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
 import focusedCrawler.util.storage.distribution.StorageCreator;
-import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.string.StopListArquivo;
 
 /**
  * This class runs a socket server responsible to store pages coming from the crawler client.
@@ -207,13 +202,12 @@ public class TargetStorage extends StorageDefault {
                                               Storage linkStorage)
                                               throws IOException, StorageFactoryException {
         
-        StopList stoplist = new StopListArquivo(configPath  + "/stoplist.txt");
         TargetStorageConfig config = new TargetStorageConfig(params);
         
         //if one wants to use a classifier
         TargetClassifier targetClassifier = null;
         if(config.isUseClassifier()){
-            targetClassifier = createClassifier(modelPath, stoplist);
+            targetClassifier = ClassifierFactory.create(modelPath, configPath+"/stoplist.txt");
         }
 
         String targetDirectory = dataPath + "/" + config.getTargetStorageDirectory();
@@ -241,45 +235,4 @@ public class TargetStorage extends StorageDefault {
         return targetStorage;
     }
 
-    private static TargetClassifier createClassifier(String modelPath, StopList stoplist) {
-        
-        String modelFile = modelPath + "/pageclassifier.model";
-        String featureFile = modelPath + "/pageclassifier.features";
-        
-        try {
-            ParameterFile featureConfig = new ParameterFile(featureFile);
-            
-            InputStream is = new FileInputStream(modelFile);
-            ObjectInputStream objectInputStream = new ObjectInputStream(is);
-            Classifier classifier = (Classifier) objectInputStream.readObject();
-            is.close();
-            
-            String[] attributes = featureConfig.getParam("ATTRIBUTES", " ");
-            weka.core.FastVector vectorAtt = new weka.core.FastVector();
-            for (int i = 0; i < attributes.length; i++) {
-                vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
-            }
-            String[] classValues = featureConfig.getParam("CLASS_VALUES", " ");
-            weka.core.FastVector classAtt = new weka.core.FastVector();
-            for (int i = 0; i < classValues.length; i++) {
-                classAtt.addElement(classValues[i]);
-            }
-            vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
-            Instances insts = new Instances("target_classification", vectorAtt, 1);
-            insts.setClassIndex(attributes.length);
-            
-            return new TargetClassifierImpl(classifier, insts, attributes, stoplist);
-            
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException("Could not find file: "+modelFile, e);
-        }
-        catch (IOException e) {
-            throw new RuntimeException("Could not deserialize classifier.", e);
-        }
-        catch(ClassNotFoundException e) {
-            throw new RuntimeException("Could not deserialize classifier.", e);
-        }
-        
-    }
-    
 }

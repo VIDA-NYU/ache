@@ -30,9 +30,10 @@ dependencies {
     compile 'commons-codec:commons-codec:1.9'
     compile 'commons-validator:commons-validator:1.4.1'
     compile 'com.googlecode.juniversalchardet:juniversalchardet:1.0.3'
-    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.4.0'
-	compile 'com.fasterxml.jackson.core:jackson-databind:2.5.0' 
-	compile 'com.syncthemall:boilerpipe:1.2.2'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.5.4' 
+    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.5.4'
+    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.5.4'
+    compile 'com.syncthemall:boilerpipe:1.2.2'
     compile 'com.sleepycat:je:3.3.75' // BerkeleyDB
     compile 'net.sourceforge.htmlunit:htmlunit:2.8'
     compile 'org.apache.commons:commons-compress:1.9'
@@ -46,7 +47,5 @@ dependencies {
     compile files('libs/langdetect-03-03-2014.jar') // TODO why isn't this in maven central
 
 }
-
-// TODO profiles is hardcoded in the libs directory
 
 // TODO create binary for running focusedCrawler.link.LinkStorage, focusedCrawler.crawler.CrawlerManager, focusedCrawler.link.frontier.AddSeeds
