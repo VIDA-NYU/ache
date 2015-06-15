@@ -22,11 +22,10 @@ public class PaginaURLTest {
     @Test
     public void linksShouldNotContainFragments() throws UnsupportedEncodingException {
 
-        File URLdirecory = new File(PaginaURLTest.class.getResource("PaginaURL/paginaURLTest")
-                .getPath());
+        String path = PaginaURLTest.class.getResource("PaginaURL/paginaURLTest").getPath();
+        File URLdirecory = new File(path);
 
         File[] allDirectories = URLdirecory.listFiles(new FileFilter() {
-
             @Override
             public boolean accept(File pathname) {
                 if (pathname.getName().equals(".DS_Store"))
@@ -47,8 +46,8 @@ public class PaginaURLTest {
                     PaginaURL pageParser = new PaginaURL(fileUrl, 0, 0, source.length(), source,
                             null);
                     Object[] extractedLinks = pageParser.links();
-                    assertEquals(" This file has some fragments: " + eachtmlFile.getName(), false,
-                            hasFragments(extractedLinks));
+                    assertEquals("This file has some fragments: " + eachtmlFile.getName(),
+                                 false, hasFragments(extractedLinks));
                 } catch (MalformedURLException e) {
                     logger.error("URL of input file not in proper format.", e);
                 }
@@ -69,13 +68,13 @@ public class PaginaURLTest {
         StringBuilder source = new StringBuilder();
         try {
             Scanner fileScanner = new Scanner(fileUrl);
-            while (fileScanner.hasNext())
+            while (fileScanner.hasNext()) {
                 source.append(fileScanner.nextLine() + "\n");
+            }
             fileScanner.close();
         } catch (FileNotFoundException e) {
             logger.error("Unable to find file!", e);
         }
-
         return source.toString();
     }
 
