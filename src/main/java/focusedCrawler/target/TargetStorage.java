@@ -1,7 +1,6 @@
 package focusedCrawler.target;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,8 +36,7 @@ public class TargetStorage extends StorageDefault {
     private TargetClassifier targetClassifier;
     private RegexBasedDetector regexDetector;
     private TargetStorageConfig config;
-
-    private LangDetection langDetect;
+    private LangDetection langDetect = new LangDetection();
     private TargetMonitor monitor;
     
     public TargetStorage(TargetClassifier targetClassifier,
@@ -55,20 +53,6 @@ public class TargetStorage extends StorageDefault {
         this.config = config;
         this.monitor = monitor;
         
-        this.langDetect = new LangDetection();
-        //this.langDetect.init("libs/profiles/");//This is hard coded, should be fixed
-        
-        ClassLoader cl = this.getClass().getClassLoader();
-        try {
-			this.langDetect.init(cl.getResource("profiles").toURI());
-		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			logger.error(" Unable to load profiles! ",e);;
-			e.printStackTrace();
-		}
-        
-        
-        
         //if one wants to use regex based classifier
         if (config.isUseRegex()) {
             this.regexDetector = new RegexBasedDetector(config.getRegex());
@@ -82,7 +66,7 @@ public class TargetStorage extends StorageDefault {
         Page page = (Page) obj;
         
 		//Only accept English
-    	if (this.langDetect.detect_page(page) == false){
+    	if (this.langDetect.isEnglish(page) == false){
     		logger.info("Ignoring non-English page: " + page.getIdentifier());
       		return null;
     	}
