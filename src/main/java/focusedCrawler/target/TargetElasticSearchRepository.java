@@ -31,15 +31,16 @@ import focusedCrawler.util.parser.PaginaURL;
 public class TargetElasticSearchRepository implements TargetRepository {
 
     public static class ElasticSearchClientFactory {
-        
-        private static final Logger logger = LoggerFactory.getLogger(TargetElasticSearchRepository.ElasticSearchClientFactory.class);
-        
+
+        private static final Logger logger = LoggerFactory
+                .getLogger(TargetElasticSearchRepository.ElasticSearchClientFactory.class);
+
         private static Node clientNode;
         private static Client client;
 
         @SuppressWarnings("resource")
         public static Client createClient(TargetStorageConfig config) {
-                
+
             if (client != null) {
                 return client;
             }
@@ -47,18 +48,19 @@ public class TargetElasticSearchRepository implements TargetRepository {
             String elasticSearchHost = config.getElasticSearchHost();
             int elasticSearchPort = config.getElasticSearchPort();
             String clusterName = config.getClusterName();
-            
+
             Builder settingsBuilder = ImmutableSettings.settingsBuilder();
-            if(clusterName != null) {
+            if (clusterName != null) {
                 settingsBuilder.put("cluster.name", clusterName);
             }
             Settings settings = settingsBuilder.build();
-            
-            if(elasticSearchHost != null) {
+
+            if (elasticSearchHost != null) {
                 logger.info("Creating a ElasticSearch TransportClient for address: {}:{}",
-                            elasticSearchHost, elasticSearchPort);
+                        elasticSearchHost, elasticSearchPort);
                 int port = elasticSearchPort != 0 ? elasticSearchPort : 9300;
-                InetSocketTransportAddress socketAddress = new InetSocketTransportAddress(elasticSearchHost, port);
+                InetSocketTransportAddress socketAddress = new InetSocketTransportAddress(
+                        elasticSearchHost, port);
                 client = new TransportClient(settings).addTransportAddress(socketAddress);
                 return client;
             } else {
@@ -71,18 +73,18 @@ public class TargetElasticSearchRepository implements TargetRepository {
         }
 
         public void closeClient() {
-            if(client != null) {
+            if (client != null) {
                 client.close();
             }
-            if(clientNode != null) {
+            if (clientNode != null) {
                 clientNode.close();
             }
         }
-        
+
     }
-    
+
     public static class ElasticSearchPageModel {
-        
+
         private String domain;
         private String url;
         private String title;
@@ -91,63 +93,64 @@ public class TargetElasticSearchRepository implements TargetRepository {
         private String[] words;
         private String[] wordsMeta;
         private String topPrivateDomain;
-        
+
         public ElasticSearchPageModel(Target target) {
             Page page = (Page) target;
-            
+
             this.url = target.getIdentifier();
             this.retrieved = new Date();
             this.words = page.getPageURL().palavras();
             this.wordsMeta = page.getPageURL().palavrasMeta();
             this.title = page.getPageURL().titulo();
             this.domain = page.getDomainName();
-            
+
             try {
                 this.text = DefaultExtractor.getInstance().getText(page.getContent());
             } catch (BoilerpipeProcessingException e) {
                 this.text = "";
             }
-            
+
             InternetDomainName domainName = InternetDomainName.from(page.getDomainName());
-            if(domainName.isUnderPublicSuffix()) {
+            if (domainName.isUnderPublicSuffix()) {
                 this.topPrivateDomain = domainName.topPrivateDomain().toString();
             } else {
                 this.topPrivateDomain = domainName.toString();
             }
         }
-        
+
         public ElasticSearchPageModel(TargetModel model) {
             this.url = model.url;
-            this.retrieved = new Date(model.timestamp*1000);
-            
+            this.retrieved = new Date(model.timestamp * 1000);
+
             URL url;
             try {
                 url = new URL(model.url);
             } catch (MalformedURLException e) {
-                throw new IllegalArgumentException("page has an invalid URL: "+model.url);
+                throw new IllegalArgumentException("page has an invalid URL: " + model.url);
             }
-            
+
             String raw_content = (String) model.response.get("body");
             Page page = new Page(url, raw_content);
             PaginaURL pageURL = new PaginaURL(url, 0, 0, raw_content.length(), raw_content, null);
-            PaginaURL pageParser = new PaginaURL(page.getURL(), 0, 0,page.getContent().length(),page.getContent(), null);
+            PaginaURL pageParser = new PaginaURL(page.getURL(), 0, 0, page.getContent().length(),
+                    page.getContent(), null);
             page.setPageURL(pageParser);
-            
+
             this.url = model.url;
             this.retrieved = new Date();
             this.words = pageURL.palavras();
             this.wordsMeta = pageURL.palavrasMeta();
             this.title = pageURL.titulo();
             this.domain = url.getHost();
-            
+
             try {
                 this.text = DefaultExtractor.getInstance().getText(page.getContent());
             } catch (Exception e) {
                 this.text = "";
             }
-            
+
             InternetDomainName domainName = InternetDomainName.from(page.getDomainName());
-            if(domainName.isUnderPublicSuffix()) {
+            if (domainName.isUnderPublicSuffix()) {
                 this.topPrivateDomain = domainName.topPrivateDomain().toString();
             } else {
                 this.topPrivateDomain = domainName.toString();
@@ -217,19 +220,27 @@ public class TargetElasticSearchRepository implements TargetRepository {
         public void setTopPrivateDomain(String topPrivateDomain) {
             this.topPrivateDomain = topPrivateDomain;
         }
-        
+
     }
-    
-    private static final String INDEXNAME = "achecrawler";
-    
+
+    private static String INDEXNAME;
+
+    public static String getIndexName() {
+        return INDEXNAME;
+    }
+
+    public static void setIndexName(String iNDEXNAME) {
+        INDEXNAME = iNDEXNAME;
+    }
+
     private static final ObjectMapper mapper = new ObjectMapper();
     static {
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     }
-    
+
     private Client client;
     private String typeName;
-    
+
     public TargetElasticSearchRepository(TargetStorageConfig config, String typeName) {
         this.client = ElasticSearchClientFactory.createClient(config);
         this.typeName = typeName;
@@ -238,7 +249,7 @@ public class TargetElasticSearchRepository implements TargetRepository {
     public boolean insert(Target target, int counter) {
         return index(target);
     }
-    
+
     public boolean insert(Target target) {
         return index(target);
     }
@@ -247,8 +258,8 @@ public class TargetElasticSearchRepository implements TargetRepository {
         // This contact information should be read from config file
         Object data;
         boolean memexDataFormat = false;
-        
-        if(memexDataFormat) {
+
+        if (memexDataFormat) {
             TargetModel targetModel = new TargetModel("Kien Pham", "kien.pham@nyu.edu");
             targetModel.resetTimestamp();
             targetModel.setUrl(target.getIdentifier());
@@ -257,12 +268,10 @@ public class TargetElasticSearchRepository implements TargetRepository {
         } else {
             data = new ElasticSearchPageModel(target);
         }
-        
+
         String docId = target.getIdentifier();
         IndexResponse response = client.prepareIndex(INDEXNAME, typeName, docId)
-                .setSource(serializeAsJson(data))
-                .execute()
-                .actionGet();
+                .setSource(serializeAsJson(data)).execute().actionGet();
 
         return response.isCreated();
     }
@@ -272,7 +281,7 @@ public class TargetElasticSearchRepository implements TargetRepository {
         try {
             targetAsJson = mapper.writeValueAsString(model);
         } catch (JsonProcessingException e) {
-            throw new RuntimeException("Failed to serialize TargetModel to JSON.", e); 
+            throw new RuntimeException("Failed to serialize TargetModel to JSON.", e);
         }
         return targetAsJson;
     }

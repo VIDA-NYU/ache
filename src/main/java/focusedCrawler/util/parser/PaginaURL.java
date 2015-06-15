@@ -32,6 +32,8 @@ import java.util.*;
 
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.validator.routines.UrlValidator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import focusedCrawler.util.page.Pagina;
 import focusedCrawler.util.string.Acentos;
@@ -43,6 +45,7 @@ public class PaginaURL implements Pagina {
     
     private static final String[] schemes = {"http","https"};
     private static final UrlValidator urlValidator = new UrlValidator(schemes);
+    public static final Logger logger = LoggerFactory.getLogger(PaginaURL.class);
 
     public long timeToParse = 0;
     private int 			   maxPosValue = 0;
@@ -2190,6 +2193,8 @@ public class PaginaURL implements Pagina {
             link = link.trim();
 
             URL url = parseLink(base, link);
+            
+            url = removeFragmentsIfAny(url);
 
             link = url.toString();
 
@@ -2245,6 +2250,17 @@ public class PaginaURL implements Pagina {
         }    // ignora
         return link;
      }
+    
+    protected URL removeFragmentsIfAny(URL inputURL){
+        if(inputURL.toString().contains("#")){
+            try {
+                return (new URL(inputURL.toString().substring(0, inputURL.toString().indexOf('#'))));
+            } catch (MalformedURLException e) {
+                logger.error("Links exracted from the page not in poper format.",e);
+            }
+        }
+        return inputURL;
+    }
 
     /**
      * Declara\uFFFD\uFFFDo do M\uFFFDtodo
