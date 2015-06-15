@@ -18,6 +18,7 @@ import focusedCrawler.crawler.CrawlerManagerException;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.AddSeeds;
 import focusedCrawler.target.CreateWekaInput;
+import focusedCrawler.target.TargetElasticSearchRepository;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.Storage;
@@ -48,6 +49,7 @@ public class Main {
             Options startTargetStorageOptions = new Options();
             Options startLinkStorageOptions = new Options();
             
+            startCrawlOptions.addOption("e", "elasticIndex", true, "elastic search index name");
             startCrawlOptions.addOption("o", "outputDir", true, "data output path");
             startCrawlOptions.addOption("c", "configDir", true, "config directory path");
             startCrawlOptions.addOption("s", "seed", true, "path to the seed file");
@@ -116,7 +118,7 @@ public class Main {
             }
             else if ("startCrawlManager".equals(args[0])) {
                 cmd = parser.parse(startCrawlManagerOptions, args);
-                startCrawlManager(getOptionValue(cmd, "configDir"));
+                startCrawlManager(getMandatoryOptionValue(cmd, "configDir"));
             } else {
                 printUsage();
                 System.exit(1);
@@ -144,9 +146,9 @@ public class Main {
     }
 
     private static void buildModel(CommandLine cmd) throws MissingArgumentException {
-        String stopWordsFile = getOptionValue(cmd, "stopWordsFile");
-        String trainingPath = getOptionValue(cmd, "trainingDataDir");
-        String outputPath = getOptionValue(cmd, "outputDir"); 
+        String stopWordsFile = getMandatoryOptionValue(cmd, "stopWordsFile");
+        String trainingPath = getMandatoryOptionValue(cmd, "trainingDataDir");
+        String outputPath = getMandatoryOptionValue(cmd, "outputDir"); 
         // generate the input for weka
         new File(outputPath).mkdirs();
         CreateWekaInput.main(new String[] { stopWordsFile, trainingPath, trainingPath + "/weka.arff" });
@@ -155,17 +157,17 @@ public class Main {
     }
 
     private static void addSeeds(CommandLine cmd) throws MissingArgumentException {
-        String dataOutputPath = getOptionValue(cmd, "outputDir");
-        String configPath = getOptionValue(cmd, "configDir");
-        String seedPath = getOptionValue(cmd, "seed");
+        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
+        String configPath = getMandatoryOptionValue(cmd, "configDir");
+        String seedPath = getMandatoryOptionValue(cmd, "seed");
         createOutputPathStructure(dataOutputPath);
         AddSeeds.main(new String[] { configPath, seedPath, dataOutputPath });
     }
 
     private static void startLinkStorage(CommandLine cmd) throws MissingArgumentException {
-        String dataOutputPath = getOptionValue(cmd, "outputDir");
-        String configPath = getOptionValue(cmd, "configDir");
-        String seedPath = getOptionValue(cmd, "seed");
+        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
+        String configPath = getMandatoryOptionValue(cmd, "configDir");
+        String seedPath = getMandatoryOptionValue(cmd, "seed");
         try {
             LinkStorage.main(new String[] { configPath, seedPath, dataOutputPath });
         } catch (Throwable t) {
@@ -174,9 +176,9 @@ public class Main {
     }
 
     private static void startTargetStorage(CommandLine cmd) throws MissingArgumentException {
-        String dataOutputPath = getOptionValue(cmd, "outputDir");
-        String configPath = getOptionValue(cmd, "configDir");
-        String modelPath = getOptionValue(cmd, "modelDir");
+        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
+        String configPath = getMandatoryOptionValue(cmd, "configDir");
+        String modelPath = getMandatoryOptionValue(cmd, "modelDir");
         try {
             TargetStorage.main(new String[]{configPath, modelPath, dataOutputPath});
         } catch (Throwable t) {
@@ -193,10 +195,13 @@ public class Main {
     }
 
     private static void startCrawl(CommandLine cmd) throws MissingArgumentException {
-        String dataOutputPath = getOptionValue(cmd, "outputDir");
-        String configPath = getOptionValue(cmd, "configDir");
-        String seedPath = getOptionValue(cmd, "seed");
-        String modelPath = getOptionValue(cmd, "modelDir");
+        String elasticIndexName = getOptionalOptionValue(cmd, "elasticIndex");
+        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
+        String configPath = getMandatoryOptionValue(cmd, "configDir");
+        String seedPath = getMandatoryOptionValue(cmd, "seed");
+        String modelPath = getMandatoryOptionValue(cmd, "modelDir");
+        
+        TargetElasticSearchRepository.setIndexName(elasticIndexName);
         
         // set up the data directories
         createOutputPathStructure(dataOutputPath);
@@ -235,12 +240,17 @@ public class Main {
 
     }
 
-    private static String getOptionValue(CommandLine cmd, final String optionName)
+    private static String getMandatoryOptionValue(CommandLine cmd, final String optionName)
             throws MissingArgumentException {
         String optionValue = cmd.getOptionValue(optionName);
         if (optionValue == null) {
             throw new MissingArgumentException("Parameter "+optionName+" can not be empty.");
         }
+        return optionValue;
+    }
+    
+    private static String getOptionalOptionValue(CommandLine cmd, final String optionName){
+        String optionValue = cmd.getOptionValue(optionName);
         return optionValue;
     }
 
