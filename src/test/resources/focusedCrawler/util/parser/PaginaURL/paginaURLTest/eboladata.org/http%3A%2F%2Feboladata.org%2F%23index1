@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html lang="en" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rss="http://purl.org/rss/1.0/"
+  xmlns:site="http://www.eboladata.org/ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="http://www.eboladata.org/profiles/dkan/themes/contrib/nuboot_radix/favicon.ico" type="image/vnd.microsoft.icon" />
+  <title>EbolaData.org</title>
+  <style type="text/css" media="all">
+@import url("http://www.eboladata.org/modules/system/system.base.css?nmwqeu");
+@import url("http://www.eboladata.org/modules/system/system.messages.css?nmwqeu");
+@import url("http://www.eboladata.org/modules/system/system.theme.css?nmwqeu");
+</style>
+<style type="text/css" media="all">
+@import url("http://www.eboladata.org/profiles/dkan/modules/contrib/date/date_api/date.css?nmwqeu");
+@import url("http://www.eboladata.org/profiles/dkan/modules/contrib/date/date_popup/themes/datepicker.1.7.css?nmwqeu");
+@import url("http://www.eboladata.org/modules/field/theme/field.css?nmwqeu");
+@import url("http://www.eboladata.org/modules/node/node.css?nmwqeu");
+@import url("http://www.eboladata.org/profiles/dkan/modules/contrib/radix_layouts/radix_layouts.css?nmwqeu");
+@import url("http://www.eboladata.org/modules/user/user.css?nmwqeu");
+@import url("http://www.eboladata.org/profiles/dkan/modules/contrib/views/css/views.css?nmwqeu");
+</style>
+<style type="text/css" media="all">
+@import url("http://www.eboladata.org/profiles/dkan/libraries/chosen/chosen/chosen.css?nmwqeu");
+@import url("http://www.eboladata.org/profiles/dkan/modules/contrib/chosen/css/chosen-drupal.css?nmwqeu");
+@import url("http://www.eboladata.org/sites/all/modules/contrib/ctools/css/ctools.css?nmwqeu");
+@import url("http://www.eboladata.org/profiles/dkan/modules/contrib/panels/css/panels.css?nmwqeu");
+@import url("http://www.eboladata.org/profiles/dkan/themes/contrib/nuboot_radix/panels/layouts/full_width/full_width.css?nmwqeu");
+</style>
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans:400,700|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" media="all" />
+<style type="text/css" media="all">
+@import url("http://www.eboladata.org/profiles/dkan/themes/contrib/nuboot_radix/assets/stylesheets/screen.css?nmwqeu");
+@import url("http://www.eboladata.org/profiles/dkan/themes/contrib/nuboot_radix/assets/stylesheets/font-awesome.min.css?nmwqeu");
+@import url("http://www.eboladata.org/profiles/dkan/themes/contrib/nuboot_radix/assets/stylesheets/dkan-flaticon.css?nmwqeu");
+</style>
+<style type="text/css" media="print">
+@import url("http://www.eboladata.org/profiles/dkan/themes/contrib/nuboot_radix/assets/stylesheets/print.css?nmwqeu");
+</style>
+<link type="text/css" rel="stylesheet" href="http://www.eboladata.org/sites/live.data.eboladata.nucivic.build/files/colorizer/nuboot_radix-0816eee7.css" media="all" />
+<style type="text/css" media="all">
+@import url("http://www.eboladata.org/sites/live.data.eboladata.nucivic.build/files/css_injector/css_injector_1.css?nmwqeu");
+</style>
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <link href="/css/ie.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <script type="text/javascript" src="http://www.eboladata.org/profiles/dkan/modules/contrib/jquery_update/replace/jquery/1.7/jquery.min.js?v=1.7.1"></script>
+<script type="text/javascript" src="http://www.eboladata.org/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://www.eboladata.org/misc/drupal.js?nmwqeu"></script>
+<script type="text/javascript" src="http://www.eboladata.org/profiles/dkan/libraries/chosen/chosen/chosen.jquery.min.js?nmwqeu"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.eboladata.org/profiles/dkan/themes/contrib/radix/assets/javascripts/modernizr.js?nmwqeu"></script>
+<script type="text/javascript" src="http://www.eboladata.org/profiles/dkan/themes/contrib/nuboot_radix/assets/javascripts/sitewide.js?nmwqeu"></script>
+<script type="text/javascript" src="http://www.eboladata.org/profiles/dkan/themes/contrib/nuboot_radix/assets/javascripts/svgeezy.min.js?nmwqeu"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"nuboot_radix","theme_token":"fmKIE9WDTVQpm1OWvA5XmqoLkQBQNAulXJCIizzl2V0","js":{"profiles\/dkan\/modules\/contrib\/chosen\/chosen.js":1,"profiles\/dkan\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/dkan\/libraries\/chosen\/chosen\/chosen.jquery.min.js":1,"http:\/\/netdna.bootstrapcdn.com\/bootstrap\/3.2.0\/js\/bootstrap.min.js":1,"profiles\/dkan\/themes\/contrib\/radix\/assets\/javascripts\/modernizr.js":1,"profiles\/dkan\/themes\/contrib\/nuboot_radix\/assets\/javascripts\/sitewide.js":1,"profiles\/dkan\/themes\/contrib\/nuboot_radix\/assets\/javascripts\/svgeezy.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"profiles\/dkan\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/dkan\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"profiles\/dkan\/modules\/contrib\/radix_layouts\/radix_layouts.css":1,"modules\/user\/user.css":1,"profiles\/dkan\/modules\/contrib\/views\/css\/views.css":1,"profiles\/dkan\/libraries\/chosen\/chosen\/chosen.css":1,"profiles\/dkan\/modules\/contrib\/chosen\/css\/chosen-drupal.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/dkan\/modules\/contrib\/panels\/css\/panels.css":1,"profiles\/dkan\/themes\/contrib\/nuboot_radix\/panels\/layouts\/full_width\/full_width.css":1,"\/\/fonts.googleapis.com\/css?family=Droid+Sans:400,700|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800":1,"profiles\/dkan\/themes\/contrib\/nuboot_radix\/assets\/stylesheets\/screen.css":1,"profiles\/dkan\/themes\/contrib\/nuboot_radix\/assets\/stylesheets\/font-awesome.min.css":1,"profiles\/dkan\/themes\/contrib\/nuboot_radix\/assets\/stylesheets\/dkan-flaticon.css":1,"profiles\/dkan\/themes\/contrib\/nuboot_radix\/assets\/stylesheets\/print.css":1,"http:\/\/www.eboladata.org\/sites\/live.data.eboladata.nucivic.build\/files\/colorizer\/nuboot_radix-0816eee7.css":1,"public:\/\/css_injector\/css_injector_1.css":1}},"chosen":{"selector":".node-form  select, .field-name-field-format select, .field-name-field-dataset-ref select","minimum":"0","minimum_width":200,"search_contains":false,"placeholder_text_multiple":"Choose some options","placeholder_text_single":"Choose an option","no_results_text":"No results match"}});
+//--><!]]>
+</script>
+</head>
+<body class="html front not-logged-in no-sidebars page-welcome panel-layout-full_width panel-region-middle panel-region-top-first panel-region-top-second" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <header id="header" class="header" role="header">
+  <div class="branding container">
+          <a class="logo navbar-btn pull-left" href="/" title="Home">
+        <img src="http://www.eboladata.org/sites/live.data.eboladata.nucivic.build/files/EBdata_6.png" alt="Home" />
+      </a>
+                <!-- views exposed search -->
+    <section id="block-dkan-sitewide-dkan-sitewide-search-bar" class="block block-dkan-sitewide clearfix">
+
+        <div class="content">
+  	<form action="/" method="post" id="dkan-sitewide-dataset-search-form--2" accept-charset="UTF-8" role="form"><div><div class="form-item form-type-textfield form-item-search form-group">
+ <input placeholder="search" class="form-control form-text" type="text" id="edit-search--2" name="search" value="" size="30" maxlength="128" />
+</div>
+<input type="submit" id="edit-submit--2" name="op" value="" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-Rs4B1z2h8BLVNgwyIYisPacNh9Xy9rQqtOXlCYsA564" />
+<input type="hidden" name="form_id" value="dkan_sitewide_dataset_search_form" />
+</div></form>  </div>
+
+</section>
+  </div>
+  <div class="navigation-wrapper">
+    <div class="container">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div> <!-- /.navbar-header -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+                      <ul id="main-menu" class="menu nav navbar-nav">
+              <li class="first leaf menu-link-datasets"><a href="/dataset" title="A list of datasets offered on the site.">Datasets</a></li>
+<li class="leaf menu-link-about"><a href="/about">About</a></li>
+<li class="leaf menu-link-events"><a href="/events">Events</a></li>
+<li class="leaf menu-link-how-to-publish-data"><a href="/how-publish-data" title="A helpful guide">How to Publish Data</a></li>
+<li class="last leaf menu-link-visualizations"><a href="/visualizations">Visualizations</a></li>
+            </ul>
+                    
+          <!-- user menu -->
+          <section id="block-dkan-sitewide-dkan-sitewide-user-menu" class="block block-dkan-sitewide clearfix">
+
+        <div class="content">
+  	<span class="links"><a href="/user/login">Log in</a><a href="/user/register" class="sub">Register</a></span>  </div>
+
+</section>
+        </div><!-- /.navbar-collapse -->
+      </nav><!-- /.navbar -->
+    </div><!-- /.container -->
+  </div> <!-- /.navigation -->
+</header>
+
+<div id="main-wrapper">
+  <div id="main" class="main">
+
+            
+
+    <div class="main-row">
+
+      <section> 
+        <a id="main-content"></a>
+                                                  <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+        <div class="content">
+  	<div class="panel-display panel-full-width clearfix" >
+
+  
+      <div class="panel-top panel-row" style="background-image:url(http://www.eboladata.org/sites/live.data.eboladata.nucivic.build/files/Kenema_Hospital_Sierra_Leone_Ebola.JPG);">
+      <div class="tint"></div>
+      <div class="container">
+        <div class="panel-col-first">
+          <div class="inside"><div class="panel-pane pane-block pane-dkan-sitewide-demo-front-dkan-demo-front" >
+  
+        <h4 class="pane-title">Welcome to the DKAN Demo</h4>
+    
+  
+  <div class="pane-content">
+    <p>Welcome to <a href="http://getdkan.com">DKAN</a> site for the <a href="http://www.meetup.com/Africa-Open-Data/events/219780626/">Ebola Open Data Jam</a>.
+This collaborative project will take place in person on Saturday, February 21st, 2015 around the world - from New York, N.Y. to Washington D.C. to Winchester U.K., to Kampala, Uganda. Check out the <a href="http://eboladata.org/events">events</a> page to find out more about how you can pitch in.</p>  </div>
+
+  
+  </div>
+</div>
+        </div>
+        <div class="panel-col-second">
+          <div class="inside"><div class="panel-pane pane-custom pane-1" >
+  
+      
+  
+  <div class="pane-content">
+    <p>You can search for and explore current datasets, and publish data of your own.</p>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-block pane-views-popular-tags-block" >
+  
+        <h4 class="pane-title">Popular</h4>
+    
+  
+  <div class="pane-content">
+    <div class="view view-popular-tags view-id-popular_tags view-display-id-block view-dom-id-b9537b1c01d720bfc56584b4b1b23d1f">
+        
+  
+  
+      <div class="view-content">
+          <ul class="tag-list">          <li class="views-row views-row-1">  
+  <div>        <span class="dtag"><a href="/tags/liberia">Liberia</a></span>  </div></li>
+          <li class="views-row views-row-2">  
+  <div>        <span class="dtag"><a href="/tags/sierra-leone">Sierra Leone</a></span>  </div></li>
+          <li class="views-row views-row-3">  
+  <div>        <span class="dtag"><a href="/tags/guinea">Guinea</a></span>  </div></li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+<div class="panel-pane pane-block pane-dkan-sitewide-dkan-sitewide-search-bar" >
+  
+      
+  
+  <div class="pane-content">
+    <form action="/" method="post" id="dkan-sitewide-dataset-search-form" accept-charset="UTF-8" role="form"><div><div class="form-item form-type-textfield form-item-search form-group">
+ <input placeholder="search" class="form-control form-text" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" />
+</div>
+<input type="submit" id="edit-submit" name="op" value="" class="form-submit btn btn-default btn-primary" /><input type="hidden" name="form_build_id" value="form-uKqxcjQMk2-rB3CJFTwXN08cgm596S-xlgg6TDZ34KA" />
+<input type="hidden" name="form_id" value="dkan_sitewide_dataset_search_form" />
+</div></form>  </div>
+
+  
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  
+      <div class="panel-middle panel-row">
+      <div class="container">
+        <div class="inside"><div class="panel-pane pane-views pane-datasets-for-frontpage" >
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-datasets-for-frontpage view-id-datasets_for_frontpage view-display-id-default view-dom-id-0c639954f6771ba73fe11b545c626a8e">
+            <div class="view-header">
+      <h2>Datasets</h2>
+
+<p>Below are a list of datasets that are available to make tools with. <a href="http://docs.getdkan.com/docs/dkan-documentation/dkan-api/datastore-api" class="label" title=" CrisisNet Ebola data" data-format="csv">CSV</a> files can be downloaded or accessed through the <a href="">DKAN Datastore API</a>.</p>43 datasets    </div>
+  
+      <div class="view-filters">
+      <form action="/dataset" method="get" id="views-exposed-form-datasets-for-frontpage-default" accept-charset="UTF-8" role="form"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-query-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext">
+                        <div class="views-widget">
+          <div class="form-item form-type-textfield form-item-query form-group">
+ <input class="form-control form-text" type="text" id="edit-query" name="query" value="" size="30" maxlength="128" />
+</div>
+        </div>
+                  <div class="description">
+            Search...          </div>
+              </div>
+              <div class="views-exposed-widget views-widget-sort-by">
+        <div class="form-item form-type-select form-item-sort-by form-group">
+  <label for="edit-sort-by">Sort by </label>
+ <select class="form-control form-select" id="edit-sort-by" name="sort_by"><option value="changed" selected="selected">Date changed</option><option value="title">Title</option></select>
+</div>
+      </div>
+      <div class="views-exposed-widget views-widget-sort-order">
+        <div class="form-item form-type-select form-item-sort-order form-group">
+  <label for="edit-sort-order">Order </label>
+ <select class="form-control form-select" id="edit-sort-order" name="sort_order"><option value="ASC">Asc</option><option value="DESC" selected="selected">Desc</option></select>
+</div>
+      </div>
+                <div class="views-exposed-widget views-submit-button">
+      <input type="submit" id="edit-submit-datasets-for-frontpage" name="" value="Apply" class="form-submit btn btn-default btn-primary" />    </div>
+      </div>
+</div>
+</div></form>    </div>
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <article class="node node-dataset node-teaser clearfix" about="/dataset/sierra-leone-hospitals" typeof="sioc:Item foaf:Document">
+
+  
+        <h2><a href="/dataset/sierra-leone-hospitals">Sierra Leone Hospitals</a></h2>
+    <span property="dc:title" content="Sierra Leone Hospitals" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Data has the following attributes:
+Name
+Address
+Phone</p></div></div></div><div class="data-and-resources"><div class="form-item form-type-item form-group">
+  <div class="item-list"><ul class="resource-list"><li class="first last"><span class="count-resource">1x</span><a href="/dataset/sierra-leone-hospitals" class="label" title="Resources: Sierra Leone Hospitals" data-format="data">data</a></li>
+</ul></div>
+</div>
+</div>  </div>
+
+  
+  
+</article>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <article class="node node-dataset node-teaser clearfix" about="/dataset/masanga-rehabilitation-project" typeof="sioc:Item foaf:Document">
+
+  
+        <h2><a href="/dataset/masanga-rehabilitation-project">The Masanga rehabilitation Project</a></h2>
+    <span property="dc:title" content="The Masanga rehabilitation Project" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="data-and-resources"><div class="form-item form-type-item form-group">
+  <div class="item-list"><ul class="resource-list"><li class="first last"><span class="count-resource">1x</span><a href="/dataset/masanga-rehabilitation-project" class="label" title="Resources: The Masanga rehabilitation Project" data-format="html">html</a></li>
+</ul></div>
+</div>
+</div>  </div>
+
+  
+  
+</article>
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <article class="node node-dataset node-teaser clearfix" about="/dataset/ebola-testing-laboratories" typeof="sioc:Item foaf:Document">
+
+  
+        <h2><a href="/dataset/ebola-testing-laboratories">Ebola Testing Laboratories</a></h2>
+    <span property="dc:title" content="Ebola Testing Laboratories" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded">This data depicts the location and status of laboratories that are actively testing samples of Ebola Virus Disease (EVD) for verification.</div></div></div><div class="data-and-resources"><div class="form-item form-type-item form-group">
+  <div class="item-list"><ul class="resource-list"><li class="first"><span class="count-resource">1x</span><a href="/dataset/ebola-testing-laboratories" class="label" title="Resources: Ebola Testing Laboratories" data-format="csv">csv</a></li>
+<li class="last"><span class="count-resource">1x</span><a href="/dataset/ebola-testing-laboratories" class="label" title="Resources: Ebola Testing Laboratories" data-format="html">html</a></li>
+</ul></div>
+</div>
+</div>  </div>
+
+  
+  
+</article>
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <article class="node node-dataset node-teaser clearfix" about="/dataset/liberia-health-care-facilities" typeof="sioc:Item foaf:Document">
+
+  
+        <h2><a href="/dataset/liberia-health-care-facilities">Liberia Health Care Facilities</a></h2>
+    <span property="dc:title" content="Liberia Health Care Facilities" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded">Locations and coordinates of health facilities in Liberia.</div></div></div><div class="data-and-resources"><div class="form-item form-type-item form-group">
+  <div class="item-list"><ul class="resource-list"><li class="first last"><span class="count-resource">1x</span><a href="/dataset/liberia-health-care-facilities" class="label" title="Resources: Liberia Health Care Facilities" data-format="csv">csv</a></li>
+</ul></div>
+</div>
+</div>  </div>
+
+  
+  
+</article>
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <article class="node node-dataset node-teaser clearfix" about="/dataset/healthcare-data-collection-template" typeof="sioc:Item foaf:Document">
+
+  
+        <h2><a href="/dataset/healthcare-data-collection-template">Healthcare Data Collection Template</a></h2>
+    <span property="dc:title" content="Healthcare Data Collection Template" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Metadata and information about required fields in datasets about medical facilities.</p>
+</div></div></div><div class="data-and-resources"><div class="form-item form-type-item form-group">
+  <div class="item-list"><ul class="resource-list"><li class="first last"><span class="count-resource">1x</span><a href="/dataset/healthcare-data-collection-template" class="label" title="Resources: Healthcare Data Collection Template" data-format="xlsx">xlsx</a></li>
+</ul></div>
+</div>
+</div>  </div>
+
+  
+  
+</article>
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <article class="node node-dataset node-teaser clearfix" about="/dataset/connaught-hospital-sierre-leone" typeof="sioc:Item foaf:Document">
+
+  
+        <h2><a href="/dataset/connaught-hospital-sierre-leone">Connaught Hospital, Sierre Leone</a></h2>
+    <span property="dc:title" content="Connaught Hospital, Sierre Leone" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Data on Connaught Hospital in Western Sierra Leone, with references.</p></div></div></div><div class="data-and-resources"><div class="form-item form-type-item form-group">
+  <div class="item-list"><ul class="resource-list"><li class="first last"><span class="count-resource">1x</span><a href="/dataset/connaught-hospital-sierre-leone" class="label" title="Resources: Connaught Hospital, Sierre Leone" data-format="pdf">pdf</a></li>
+</ul></div>
+</div>
+</div>  </div>
+
+  
+  
+</article>
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <article class="node node-dataset node-teaser clearfix" about="/dataset/logistics-cluster" typeof="sioc:Item foaf:Document">
+
+  
+        <h2><a href="/dataset/logistics-cluster">Logistics Cluster</a></h2>
+    <span property="dc:title" content="Logistics Cluster" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>The Logistics Cluster, although not active in all the three affected countries, operats in support of UNMEER and the humanitarian community offering coordination, information and common logistics s</p></div></div></div><div class="data-and-resources"><div class="form-item form-type-item form-group">
+  <div class="item-list"></div>
+</div>
+</div>  </div>
+
+  
+  
+</article>
+  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <article class="node node-dataset node-teaser clearfix" about="/dataset/ebola-financial-tracking-dashboard" typeof="sioc:Item foaf:Document">
+
+  
+        <h2><a href="/dataset/ebola-financial-tracking-dashboard">Ebola Financial Tracking Dashboard</a></h2>
+    <span property="dc:title" content="Ebola Financial Tracking Dashboard" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded">Click the graphs to filter the data to see who is funding who, where and by how much. Updated to February 18th, 2015.
+
+Created by Simon Johnson. Twitter: @simon_b_Johnson Source: UN OCHA, HDX</div></div></div><div class="data-and-resources"><div class="form-item form-type-item form-group">
+  <div class="item-list"><ul class="resource-list"><li class="first last"><span class="count-resource">1x</span><a href="/dataset/ebola-financial-tracking-dashboard" class="label" title="Resources: Ebola Financial Tracking Dashboard" data-format="html">html</a></li>
+</ul></div>
+</div>
+</div>  </div>
+
+  
+  
+</article>
+  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <article class="node node-dataset node-teaser clearfix" about="/dataset/world-health-organization" typeof="sioc:Item foaf:Document">
+
+  
+        <h2><a href="/dataset/world-health-organization">World Health Organization</a></h2>
+    <span property="dc:title" content="World Health Organization" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Ebola data and news maintained by the World Health Organization.</p></div></div></div><div class="data-and-resources"><div class="form-item form-type-item form-group">
+  <div class="item-list"><ul class="resource-list"><li class="first"><span class="count-resource">4x</span><a href="/dataset/world-health-organization" class="label" title="Resources: World Health Organization" data-format="html">html</a></li>
+<li class="last"><span class="count-resource">1x</span><a href="/dataset/world-health-organization" class="label" title="Resources: World Health Organization" data-format="csv">csv</a></li>
+</ul></div>
+</div>
+</div>  </div>
+
+  
+  
+</article>
+  </div>
+  <div class="views-row views-row-10 views-row-even views-row-last">
+    <article class="node node-dataset node-teaser clearfix" about="/dataset/ebola-treatment-centres-isolation-wards-hospitals-and-transit-centres" typeof="sioc:Item foaf:Document">
+
+  
+        <h2><a href="/dataset/ebola-treatment-centres-isolation-wards-hospitals-and-transit-centres">Ebola Treatment Centres, Isolation Wards, Hospitals and Transit Centres</a></h2>
+    <span property="dc:title" content="Ebola Treatment Centres, Isolation Wards, Hospitals and Transit Centres" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>**INACTIVE:** Latest version of data is in <a href="http://eboladata.org/dataset/ebola-treatment-centers-or-units">http://eboladata.org/dataset/ebola-treatment-centers-or-units</a></p></div></div></div><div class="data-and-resources"><div class="form-item form-type-item form-group">
+  <div class="item-list"><ul class="resource-list"><li class="first last"><span class="count-resource">3x</span><a href="/dataset/ebola-treatment-centres-isolation-wards-hospitals-and-transit-centres" class="label" title="Resources: Ebola Treatment Centres, Isolation Wards, Hospitals and Transit Centres" data-format="html">html</a></li>
+</ul></div>
+</div>
+</div>  </div>
+
+  
+  
+</article>
+  </div>
+    </div>
+  
+      <div class="text-center"><div class="item-list"><ul class="pagination pager"><li class="pager-current active first"><span>1</span></li>
+<li class="pager-item"><a title="Go to page 2" href="/welcome?query=&amp;sort_by=changed&amp;sort_order=DESC&amp;page=1">2</a></li>
+<li class="pager-item"><a title="Go to page 3" href="/welcome?query=&amp;sort_by=changed&amp;sort_order=DESC&amp;page=2">3</a></li>
+<li class="pager-item"><a title="Go to page 4" href="/welcome?query=&amp;sort_by=changed&amp;sort_order=DESC&amp;page=3">4</a></li>
+<li class="pager-item"><a title="Go to page 5" href="/welcome?query=&amp;sort_by=changed&amp;sort_order=DESC&amp;page=4">5</a></li>
+<li class="pager-next"><a title="Go to next page" href="/welcome?query=&amp;sort_by=changed&amp;sort_order=DESC&amp;page=1">next ›</a></li>
+<li class="pager-last last"><a title="Go to last page" href="/welcome?query=&amp;sort_by=changed&amp;sort_order=DESC&amp;page=4">last »</a></li>
+</ul></div></div>  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+</div>
+      </div>
+    </div>
+  
+  
+  
+</div>
+  </div>
+
+</section>
+  </div>
+      </section>
+
+    </div>
+
+  </div> <!-- /#main -->
+</div> <!-- /#main-wrapper -->
+
+<footer id="footer" class="footer" role="footer">
+  <div class="container">
+          <small class="copyright pull-left"><p>Powered by <a href="http://nucivic.com/dkan">DKAN</a>, a project of <a href="http://nucivic.com">NuCivic</a></p></small>
+        <small class="pull-right"></small>
+  </div>
+</footer>  <script type="text/javascript" src="http://www.eboladata.org/profiles/dkan/modules/contrib/chosen/chosen.js?nmwqeu"></script>
+</body>
+</html>
