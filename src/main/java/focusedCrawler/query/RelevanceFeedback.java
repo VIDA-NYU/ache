@@ -29,6 +29,8 @@ import org.xml.sax.SAXException;
 
 
 
+
+
 import weka.classifiers.Classifier;
 import weka.core.Instances;
 
@@ -39,9 +41,9 @@ import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
-import focusedCrawler.target.TargetClassifier;
-import focusedCrawler.target.TargetClassifierException;
-import focusedCrawler.target.TargetClassifierImpl;
+import focusedCrawler.target.classifier.TargetClassifier;
+import focusedCrawler.target.classifier.TargetClassifierException;
+import focusedCrawler.target.classifier.TargetClassifierImpl;
 import focusedCrawler.util.vsm.VSMVector;
 import focusedCrawler.util.vsm.VSMElement;
 

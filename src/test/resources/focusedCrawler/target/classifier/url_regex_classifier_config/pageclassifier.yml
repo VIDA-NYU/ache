@@ -1,0 +1,9 @@
+type: url_regex
+parameters:
+  regular_expressions: [
+    ".*/thread/.*",
+    ".*/archive/index.php/t.*",
+    "https?://www\\.mydomain\\.com.*",
+    "https?://www\\.somedomain\\.com/forum/.*"
+  ]
+  file: pageclassifier.features

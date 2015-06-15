@@ -63,6 +63,10 @@ public class LinkFilter {
             return false;
         }
         
+        public static LinkMatcher fromFile(String filename) {
+            return new LinkMatcher(filename);
+        }
+        
         public static List<String> loadRegexesFromFile(String filename) {
             logger.info("Loading regex patterns from file: "+filename);
             List<String> urlPatterns = new ArrayList<String>();

@@ -24,6 +24,7 @@
 package focusedCrawler.target;
 
 
+import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
 import focusedCrawler.util.distribution.CommunicationException;
