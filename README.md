@@ -62,7 +62,7 @@ used by a classifier to decide, given a new crawled page, whether it is on-topic
 
 After you generate a model, you need to prepare the seed file, where each line is a URL. To start the crawler, run:
 
-    ./build/install/ache/bin/ache startCrawl -o <data output path> -c <config path> -s <seed path> -m <model path>
+    ./build/install/ache/bin/ache startCrawl -o <data output path> -c <config path> -s <seed path> -m <model path> [-e <elastic search index name>]
 
 
 `<configuration path>` is the path to the config directory.
@@ -75,7 +75,7 @@ After you generate a model, you need to prepare the seed file, where each line i
  
  Example of running ACHE:
  
-    ./build/install/ache/bin/ache startCrawl -o output -c config/sample_config -s config/sample.seeds -m config/sample_model
+    ./build/install/ache/bin/ache startCrawl -o output -c config/sample_config -s config/sample.seeds -m config/sample_model -e achecrawler
 
 
 ## More information?
