@@ -49,8 +49,11 @@ public class FrontierManager {
 
     private LinkFilter linkFilter;
 
-    public FrontierManager(FrontierTargetRepositoryBaseline frontier, int maxSizeLinkQueue, int linksToLoad,
-            LinkFilter linkFilter) throws FrontierPersistentException {
+    public FrontierManager(FrontierTargetRepositoryBaseline frontier,
+                           int maxSizeLinkQueue,
+                           int linksToLoad,
+                           LinkFilter linkFilter)
+                           throws FrontierPersistentException {
         this.priorityQueue = new PriorityQueueLink(maxSizeLinkQueue);
         this.frontier = frontier;
         this.linksToLoad = linksToLoad;
@@ -85,7 +88,7 @@ public class FrontierManager {
     }
 
     public boolean isRelevant(LinkRelevance elem) throws FrontierPersistentException {
-
+        
         if (elem.getRelevance() <= 0) {
             return false;
         }
@@ -161,6 +164,11 @@ public class FrontierManager {
                     "\n> RELEV:" + linkRelev.getRelevance());
 
         return linkRelev;
+    }
+    
+    public void close() {
+        frontier.commit();
+        frontier.close();
     }
 
 }

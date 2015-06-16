@@ -108,6 +108,19 @@ public class LinkStorage extends StorageDefault{
         this.getBacklinks = config.getBacklinks();
         this.getOutlinks = config.getOutlinks();
         this.refreshFreq = config.getFrontierRefreshFrequency();
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            public void run() {
+                close();
+            }
+        });
+    }
+    
+    public void close(){
+        logger.info("Shutting down GraphManager...");
+        graphManager.getRepository().close();
+        logger.info("Shutting down FrontierManager...");
+        this.frontierManager.close();
+        logger.info("done.");
     }
 
     public void setOnlineLearning(OnlineLearning onlineLearning, int learnLimit) {

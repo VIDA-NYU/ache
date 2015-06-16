@@ -418,6 +418,15 @@ public class BipartiteGraphRep {
 		hubGraph.commit();
 	}
 	
+	public void close(){
+	    this.commit();
+        url2id.close();
+        authGraph.close();
+        authID.close();
+        hubID.close();
+        hubGraph.close();
+    }
+	
 	private HashSet<String> parseRecordBacklink(String strLinks){
 		HashSet<String> currentLinks = new HashSet<String>();
 		if(strLinks != null){
