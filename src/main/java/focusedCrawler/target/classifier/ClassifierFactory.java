@@ -6,11 +6,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 public class ClassifierFactory {
+    
+    private static final Logger logger = LoggerFactory.getLogger(ClassifierFactory.class);
 
     static class WekaClassifierConfig {
         public String features_file = "pageclassifier.features";
@@ -20,7 +25,8 @@ public class ClassifierFactory {
     
     static class UrlRegexClassifierConfig {
         public List<String> regular_expressions;
-        public String file;
+        public String whitelist_file;
+        public String blacklist_file;
     }
 
     public static TargetClassifier create(String modelPath) throws IOException {
@@ -28,6 +34,8 @@ public class ClassifierFactory {
     }
     
     public static TargetClassifier create(String modelPath, String stoplist) throws IOException {
+        
+        logger.info("Loading TargetClassifier...");
         
         Path basePath = Paths.get(modelPath);
         File configFile = Paths.get(modelPath, "pageclassifier.yml").toFile();
@@ -37,8 +45,9 @@ public class ClassifierFactory {
             ObjectMapper yaml = new ObjectMapper(new YAMLFactory());
             JsonNode tree = yaml.readTree(configFile);
             String classifierType = tree.get("type").asText();
-            
             JsonNode parameters = tree.get("parameters");
+            
+            logger.info("TargetClassifier: "+classifierType);
             
             if("url_regex".equals(classifierType)) {
                 
@@ -49,8 +58,24 @@ public class ClassifierFactory {
                     return UrlRegexTargetClassifier.fromRegularExpressions(params.regular_expressions);
                 }
                 
-                if(params.file != null && !params.file.isEmpty()) {
-                    return UrlRegexTargetClassifier.fromRegularExpressionsFile(params.file);
+                
+                if(params.whitelist_file != null && params.blacklist_file != null) {
+                    params.whitelist_file = basePath.resolve(params.whitelist_file).toString();
+                    params.blacklist_file = basePath.resolve(params.blacklist_file).toString();
+                    return UrlRegexTargetClassifier.fromWhitelistAndBlacklistFiles(
+                        params.whitelist_file,
+                        params.blacklist_file
+                    );
+                }
+                
+                if(params.whitelist_file != null && params.blacklist_file == null) {
+                    params.whitelist_file = basePath.resolve(params.whitelist_file).toString();
+                    return UrlRegexTargetClassifier.fromWhitelistFile(params.whitelist_file);
+                }
+                
+                if(params.whitelist_file == null && params.blacklist_file != null) {
+                    params.blacklist_file = basePath.resolve(params.blacklist_file).toString();
+                    return UrlRegexTargetClassifier.fromBlacklistFile(params.blacklist_file);
                 }
                 
                 throw new IllegalArgumentException("Config file has missing values: "

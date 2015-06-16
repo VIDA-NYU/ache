@@ -23,6 +23,20 @@ public class LinkFilter {
              new LinkBlackList(configPath+"/link_blacklist.txt"));
     }
     
+    public LinkFilter(List<String> regularExpressions) {
+        this(new LinkWhiteList(regularExpressions));
+    }
+    
+    public LinkFilter(LinkWhiteList linkWhiteList) {
+        this.whitelist = linkWhiteList;
+        this.blacklist = new LinkBlackList(new ArrayList<String>());
+    }
+    
+    public LinkFilter(LinkBlackList linkBlackList) {
+        this.whitelist = new LinkWhiteList(new ArrayList<String>());
+        this.blacklist = linkBlackList;
+    }
+    
     public LinkFilter(LinkWhiteList linkWhiteList, LinkBlackList linkBlackList) {
         this.whitelist = linkWhiteList;
         this.blacklist = linkBlackList;

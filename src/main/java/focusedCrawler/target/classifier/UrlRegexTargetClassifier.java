@@ -2,23 +2,30 @@ package focusedCrawler.target.classifier;
 
 import java.util.List;
 
-import focusedCrawler.util.LinkFilter.LinkMatcher;
+import focusedCrawler.util.LinkFilter;
+import focusedCrawler.util.LinkFilter.LinkBlackList;
+import focusedCrawler.util.LinkFilter.LinkWhiteList;
 import focusedCrawler.util.Target;
 
 public class UrlRegexTargetClassifier implements TargetClassifier {
 
-    private LinkMatcher matcher;
+    private LinkFilter linkFilter;
 
-    public UrlRegexTargetClassifier(LinkMatcher matcher) {
-        this.matcher = matcher;
+    public UrlRegexTargetClassifier(LinkFilter linkfilter) {
+        this.linkFilter = linkfilter;
     }
+    
     public UrlRegexTargetClassifier(String regexFilename) {
-        this.matcher = LinkMatcher.fromFile(regexFilename);
+        this.linkFilter = new LinkFilter(new LinkWhiteList(regexFilename));
+    }
+
+    public UrlRegexTargetClassifier(List<String> urlPatterns) {
+        this.linkFilter = new LinkFilter(urlPatterns);
     }
 
     @Override
 	public boolean classify(Target target) throws TargetClassifierException {
-		return matcher.matches(target.getIdentifier());
+		return linkFilter.accept(target.getIdentifier());
 	}
 
 	public double[] distributionForInstance(Target target) throws TargetClassifierException{
@@ -41,11 +48,24 @@ public class UrlRegexTargetClassifier implements TargetClassifier {
 	}
 	
     public static TargetClassifier fromRegularExpressions(List<String> regularExpressions) {
-        return new UrlRegexTargetClassifier(new LinkMatcher(regularExpressions));
+        return new UrlRegexTargetClassifier(regularExpressions);
     }
     
-    public static TargetClassifier fromRegularExpressionsFile(String filename) {
-        return new UrlRegexTargetClassifier(filename);
+    public static TargetClassifier fromWhitelistFile(String whitelistFilename) {
+        LinkFilter linkfilter = new LinkFilter(new LinkWhiteList(whitelistFilename));
+        return new UrlRegexTargetClassifier(linkfilter);
+    }
+    
+    public static TargetClassifier fromBlacklistFile(String blacklistFilename) {
+        LinkFilter linkfilter = new LinkFilter(new LinkBlackList(blacklistFilename));
+        return new UrlRegexTargetClassifier(linkfilter);
+    }
+    
+    public static TargetClassifier fromWhitelistAndBlacklistFiles(String whitelistFilename,
+                                                                  String blacklistFilename) {
+        LinkFilter linkfilter = new LinkFilter(new LinkWhiteList(whitelistFilename),
+                                               new LinkBlackList(blacklistFilename));
+        return new UrlRegexTargetClassifier(linkfilter);
     }
   
 }

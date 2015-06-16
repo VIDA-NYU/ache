@@ -11,21 +11,23 @@ import java.util.List;
 
 import org.junit.Test;
 
+import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.Page;
-import focusedCrawler.util.LinkFilter.LinkMatcher;
+import focusedCrawler.util.LinkFilter.LinkBlackList;
+import focusedCrawler.util.LinkFilter.LinkWhiteList;
 
 public class UrlRegexTargetClassifierTest {
 
     @Test
-    public void shouldClassifyPagesBasedOnTheUrlRegexes() throws Exception {
+    public void shouldClassifyPagesBasedOnListOfUrlRegexes() throws Exception {
         // given
-        LinkMatcher matcher = new LinkMatcher(Arrays.asList(
+        List<String> urlPatterns = Arrays.asList(
             ".*/thread/.*",
             ".*/archive/index.php/t.*",
             "https?://www\\.mydomain\\.com.*",
             "https?://www\\.somedomain\\.com/forum/.*"
-        ));
-        UrlRegexTargetClassifier classifier = new UrlRegexTargetClassifier(matcher);
+        );
+        UrlRegexTargetClassifier classifier = new UrlRegexTargetClassifier(urlPatterns);
         
         List<String> urlsThatMatch = Arrays.asList(
             "http://some.domain.com/thread/something",
@@ -36,10 +38,64 @@ public class UrlRegexTargetClassifierTest {
         
         List<String> urlsThatDoesntMatch = Arrays.asList(
             "http://some.domain.com/something",
-            "http://www.otherforum.net/calgunforum/t-285330.html",
+            "http://www.otherforum.net/someforum/t-285330.html",
             "http://www.testdomain.com/asdf",
             "http://www.somedomain.com/somthingelse/asdf.html"
         );
+        
+        List<Page> pagesThatMatch = asPages(urlsThatMatch);
+        List<Page> pagesThatDoesntMatch = asPages(urlsThatDoesntMatch);
+        
+        
+        for (Page page : pagesThatMatch) {
+            // when
+            boolean isRelevant = classifier.classify(page);;
+            // then
+            assertThat(page.toString(), isRelevant, is(true));
+            assertThat(page.toString(), classifier.distributionForInstance(page)[0], is(1d));
+        }
+        
+        for (Page page : pagesThatDoesntMatch) {
+            // when
+            boolean isRelevant = classifier.classify(page);;
+            // then
+            assertThat(page.toString(), isRelevant, is(false));
+            assertThat(page.toString(), classifier.distributionForInstance(page)[0], is(0d));
+        }
+    }
+    
+    @Test
+    public void shouldClassifyPagesBasedOnTheUrlWhiteListAndBlackLists() throws Exception {
+        // given
+        
+        List<String> whitelistRegexes = Arrays.asList(
+            "http[s]?://.*\\.?mydomain\\.com.*" // allow only links from mydomain.com
+        );
+        
+        List<String> blacklistRegexes = Arrays.asList(
+            ".*/new_reply\\.php.*", // disallow links with path "/new_reply.php"
+            ".*/new_user\\.php.*"   // disallow links with path "/new_user.php"
+        );
+        
+        LinkFilter linkfilter = new LinkFilter(new LinkWhiteList(whitelistRegexes),
+                                               new LinkBlackList(blacklistRegexes));
+        
+        UrlRegexTargetClassifier classifier = new UrlRegexTargetClassifier(linkfilter);
+        
+        List<String> urlsThatMatch = Arrays.asList(
+            "http://mydomain.com/show_thread.php?t=123",
+            "http://www.mydomain.com/1234_some-url#qwer",
+            "http://www.mydomain.com/yeah-yeah-yeah.1234.html",
+            "http://www.mydomain.com/qwer.1234.html"
+        );
+        
+        List<String> urlsThatDoesntMatch = Arrays.asList(
+            "http://www.mydomain.com/new_reply.php?t=123&u=456",
+            "http://www.mydomain.com/new_user.php?t=123&u=456",
+            "http://www.otherdomain.com/calgunforum/t-285330.html",
+            "http://www.someotherdomain.com/forum/t-285330.html"
+        );
+        
         
         List<Page> pagesThatMatch = asPages(urlsThatMatch);
         List<Page> pagesThatDoesntMatch = asPages(urlsThatDoesntMatch);
