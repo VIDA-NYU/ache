@@ -6,4 +6,4 @@ parameters:
     "https?://www\\.mydomain\\.com.*",
     "https?://www\\.somedomain\\.com/forum/.*"
   ]
-  file: pageclassifier.features
+  whitelist_file: pageclassifier.features
