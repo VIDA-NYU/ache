@@ -36,7 +36,7 @@ public class TargetStorageConfig {
         this.regex = params.getParam("REGEX");
         this.targetStorageDirectory = params.getParam("TARGET_STORAGE_DIRECTORY");
         this.negativeStorageDirectory = params.getParam("NEGATIVE_STORAGE_DIRECTORY");
-        this.dataFormat = params.getParam("DATA_FORMAT");
+        this.dataFormat = params.getParamOrDefault("DATA_FORMAT", "FILE");
         this.targetDomain = params.getParam("TARGET_DOMAIN");
         this.crawledRefreshFrequency = params.getParamInt("CRAWLED_REFRESH_FREQUENCY");
         this.relevantRefreshFrequency = params.getParamInt("RELEVANT_REFRESH_FREQUENCY");
