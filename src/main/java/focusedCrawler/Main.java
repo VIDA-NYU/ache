@@ -1,6 +1,9 @@
 package focusedCrawler;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -16,9 +19,10 @@ import weka.classifiers.functions.SMO;
 import focusedCrawler.crawler.CrawlerManager;
 import focusedCrawler.crawler.CrawlerManagerException;
 import focusedCrawler.link.LinkStorage;
+import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.frontier.AddSeeds;
+import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.target.CreateWekaInput;
-import focusedCrawler.target.TargetElasticSearchRepository;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.Storage;
@@ -176,11 +180,12 @@ public class Main {
     }
 
     private static void startTargetStorage(CommandLine cmd) throws MissingArgumentException {
-        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
         String configPath = getMandatoryOptionValue(cmd, "configDir");
         String modelPath = getMandatoryOptionValue(cmd, "modelDir");
+        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
+        String elasticIndexName = getOptionalOptionValue(cmd, "elasticIndex");
         try {
-            TargetStorage.main(new String[]{configPath, modelPath, dataOutputPath});
+            TargetStorage.run(configPath, modelPath, dataOutputPath, elasticIndexName);
         } catch (Throwable t) {
             logger.error("Something bad happened to TargetStorage :(", t);
         }
@@ -195,13 +200,11 @@ public class Main {
     }
 
     private static void startCrawl(CommandLine cmd) throws MissingArgumentException {
-        String elasticIndexName = getOptionalOptionValue(cmd, "elasticIndex");
-        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
-        String configPath = getMandatoryOptionValue(cmd, "configDir");
         String seedPath = getMandatoryOptionValue(cmd, "seed");
+        String configPath = getMandatoryOptionValue(cmd, "configDir");
         String modelPath = getMandatoryOptionValue(cmd, "modelDir");
-        
-        TargetElasticSearchRepository.setIndexName(elasticIndexName);
+        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
+        String elasticIndexName = getOptionalOptionValue(cmd, "elasticIndex");
         
         // set up the data directories
         createOutputPathStructure(dataOutputPath);
@@ -209,8 +212,8 @@ public class Main {
         // add seeds
         AddSeeds.main(new String[] { configPath, seedPath, dataOutputPath });
 
-        ParameterFile linkStorageConfig = new ParameterFile(configPath
-                + "/link_storage/link_storage.cfg");
+        Path linkStorageConf = Paths.get(configPath, "/link_storage/link_storage.cfg");
+        ParameterFile linkStorageConfig = new ParameterFile(linkStorageConf.toFile());
 
         try {
             Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
@@ -221,7 +224,7 @@ public class Main {
             ParameterFile targetStorageConfig = new ParameterFile(targetConfFile);
 
             Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath,
-                    dataOutputPath, targetStorageConfig, linkStorage);
+                    dataOutputPath, elasticIndexName, targetStorageConfig, linkStorage);
 
             String crawlerConfigFile = configPath + "/crawler/crawler.cfg";
 
@@ -230,11 +233,18 @@ public class Main {
                     linkStorage, targetStorage);
             manager.start();
 
-        } catch (StorageFactoryException e) {
-            logger.error("Problem while creating Storage", e);
-        } catch (CrawlerManagerException e) {
+        }
+        
+        catch (StorageFactoryException e) {
+            logger.error("Problem while creating TargetStorage", e);
+        }
+        catch (CrawlerManagerException e) {
             logger.error("Problem while creating CrawlerManager", e);
-        } catch (Exception e) {
+        }
+        catch (LinkClassifierFactoryException | FrontierPersistentException  e) {
+            logger.error("Problem while creating LinkStorage", e);
+        }
+        catch (IOException e) {
             logger.error("Problem while starting crawler.", e);
         }
 

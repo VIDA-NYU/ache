@@ -1,7 +1,10 @@
 package focusedCrawler.target;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
+import org.apache.commons.cli.MissingArgumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -155,21 +158,17 @@ public class TargetStorage extends StorageDefault {
         return null;
     }
 
-    public static void main(String[] args) {
+    public static void run(String configPath, String modelPath, String dataPath, String indexName) {
         try{
-            String configPath = args[0];
-            String modelPath = args[1];
-            String dataPath = args[2];
+            Path targetConf = Paths.get(configPath, "/target_storage/target_storage.cfg");
+            ParameterFile targetStorageConfig = new ParameterFile(targetConf.toFile());
             
-            String targetConfFile = configPath + "/target_storage/target_storage.cfg";
-            ParameterFile targetStorageConfig = new ParameterFile(targetConfFile);
-            
-            String linkConfFile = configPath + "/link_storage/link_storage.cfg";
-            ParameterFile linkStorageConfig = new ParameterFile(linkConfFile);
+            Path linkConf = Paths.get(configPath, "/link_storage/link_storage.cfg");
+            ParameterFile linkStorageConfig = new ParameterFile(linkConf.toFile());
             
             Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
             
-            Storage targetStorage = createTargetStorage(configPath, modelPath, dataPath, targetStorageConfig, linkStorage);
+            Storage targetStorage = createTargetStorage(configPath, modelPath, dataPath, indexName, targetStorageConfig, linkStorage);
 
             StorageBinder binder = new StorageBinder(targetStorageConfig);
             binder.bind(targetStorage);
@@ -182,9 +181,12 @@ public class TargetStorage extends StorageDefault {
     public static Storage createTargetStorage(String configPath,
                                               String modelPath,
                                               String dataPath,
+                                              String indexName,
                                               ParameterFile params,
                                               Storage linkStorage)
-                                              throws IOException, StorageFactoryException {
+                                              throws IOException,
+                                                     StorageFactoryException,
+                                                     MissingArgumentException {
         
         TargetStorageConfig config = new TargetStorageConfig(params);
         
@@ -194,8 +196,8 @@ public class TargetStorage extends StorageDefault {
             targetClassifier = ClassifierFactory.create(modelPath, configPath+"/stoplist.txt");
         }
 
-        String targetDirectory = dataPath + "/" + config.getTargetStorageDirectory();
-        String negativeDirectory = dataPath + "/" + config.getNegativeStorageDirectory();
+        Path targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory());
+        Path negativeDirectory = Paths.get(dataPath, config.getNegativeStorageDirectory());
         
         TargetRepository targetRepository; 
         TargetRepository negativeRepository;
@@ -203,16 +205,19 @@ public class TargetStorage extends StorageDefault {
 
         String dataFormat = config.getDataFormat();
         if (dataFormat.equals("CBOR")) {
-			targetRepository = new TargetCBORRepository(targetDirectory, config.getTargetDomain());
-			negativeRepository = new TargetCBORRepository(negativeDirectory, config.getTargetDomain());
+			targetRepository = new TargetCBORRepository(targetDirectory.toString(), config.getTargetDomain());
+			negativeRepository = new TargetCBORRepository(negativeDirectory.toString(), config.getTargetDomain());
         }
         else if(dataFormat.equals("ELASTICSEARCH")) {
-            targetRepository = new TargetElasticSearchRepository(config, "target");
-            negativeRepository = new TargetElasticSearchRepository(config, "negative");
+            if(indexName == null) {
+                throw new MissingArgumentException("ElasticSearch index name not provided!");
+            }
+            targetRepository = new TargetElasticSearchRepository(config, indexName, "target");
+            negativeRepository = new TargetElasticSearchRepository(config, indexName, "negative");
         } else {
         	//Default data format is file
-        	targetRepository = new TargetFileRepository(targetDirectory);
-        	negativeRepository = new TargetFileRepository(negativeDirectory);
+        	targetRepository = new TargetFileRepository(targetDirectory.toString());
+        	negativeRepository = new TargetFileRepository(negativeDirectory.toString());
         }
         
         TargetMonitor monitor = new TargetMonitor(dataPath, config);

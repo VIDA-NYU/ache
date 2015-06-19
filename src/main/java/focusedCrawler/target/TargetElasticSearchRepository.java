@@ -223,16 +223,6 @@ public class TargetElasticSearchRepository implements TargetRepository {
 
     }
 
-    private static String INDEXNAME;
-
-    public static String getIndexName() {
-        return INDEXNAME;
-    }
-
-    public static void setIndexName(String iNDEXNAME) {
-        INDEXNAME = iNDEXNAME;
-    }
-
     private static final ObjectMapper mapper = new ObjectMapper();
     static {
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
@@ -240,9 +230,13 @@ public class TargetElasticSearchRepository implements TargetRepository {
 
     private Client client;
     private String typeName;
-
-    public TargetElasticSearchRepository(TargetStorageConfig config, String typeName) {
+    private String indexName;
+    
+    public TargetElasticSearchRepository(TargetStorageConfig config,
+                                         String indexName,
+                                         String typeName) {
         this.client = ElasticSearchClientFactory.createClient(config);
+        this.indexName = indexName;
         this.typeName = typeName;
     }
 
@@ -270,8 +264,10 @@ public class TargetElasticSearchRepository implements TargetRepository {
         }
 
         String docId = target.getIdentifier();
-        IndexResponse response = client.prepareIndex(INDEXNAME, typeName, docId)
-                .setSource(serializeAsJson(data)).execute().actionGet();
+        IndexResponse response = client.prepareIndex(indexName, typeName, docId)
+                .setSource(serializeAsJson(data))
+                .execute()
+                .actionGet();
 
         return response.isCreated();
     }
