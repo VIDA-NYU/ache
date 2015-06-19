@@ -16,7 +16,6 @@ public class AddSeeds {
             String dataPath = args[2];
             
 			focusedCrawler.util.ParameterFile config = new focusedCrawler.util.ParameterFile(linkConfigFile);
-//			focusedCrawler.util.ParameterFile seedConfig = new focusedCrawler.util.ParameterFile(seedFile);
 			
 			String dir = dataPath + "/" + config.getParam("LINK_DIRECTORY");
 			
@@ -44,10 +43,12 @@ public class AddSeeds {
             //String[] seeds = seedConfig.getParam("SEEDS"," ");
             String[] seeds = focusedCrawler.util.ParameterFile.getSeeds(seedFile);
             for (int i = 0; i < seeds.length; i++) {
-              urls.put(seeds[i], "299");
-              count++;
+              if(urls.get(seeds[i]) == null) {
+                  urls.put(seeds[i], "299");
+                  count++;
+              }
             }
-			logger.info("Number of seeds:" + count);
+			logger.info("Number of seeds added:" + count);
 			frontier.close();
 			
 		} catch (Exception e) {
