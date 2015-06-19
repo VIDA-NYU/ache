@@ -3,6 +3,7 @@ package focusedCrawler.util;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -19,8 +20,8 @@ public class LinkFilter {
     private LinkBlackList blacklist;
 
     public LinkFilter(String configPath) {
-        this(new LinkWhiteList(configPath+"/link_whitelist.txt"),
-             new LinkBlackList(configPath+"/link_blacklist.txt"));
+        this(new LinkWhiteList(Paths.get(configPath, "/link_whitelist.txt").toString()),
+             new LinkBlackList(Paths.get(configPath,"/link_blacklist.txt").toString()));
     }
     
     public LinkFilter(List<String> regularExpressions) {
@@ -82,7 +83,6 @@ public class LinkFilter {
         }
         
         public static List<String> loadRegexesFromFile(String filename) {
-            logger.info("Loading regex patterns from file: "+filename);
             List<String> urlPatterns = new ArrayList<String>();
             try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
                 String line;
@@ -94,7 +94,8 @@ public class LinkFilter {
                     }
                 }
             } catch (IOException e) {
-                logger.warn("Couldn't load link filter patterns from file: "+filename);
+                logger.warn("Couldn't load link filter patterns from file: " + filename
+                            + " Using a empty list.");
             }
             return urlPatterns;
         }
