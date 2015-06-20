@@ -1,9 +1,11 @@
 package focusedCrawler;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Scanner;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -158,7 +160,33 @@ public class Main {
         CreateWekaInput.main(new String[] { stopWordsFile, trainingPath, trainingPath + "/weka.arff" });
         // generate the model
         SMO.main(new String[] { "-M", "-d", outputPath + "/pageclassifier.model", "-t", trainingPath + "/weka.arff" });
+        createFeaturesFile(outputPath,trainingPath);
     }
+    
+    private static void createFeaturesFile(String outputPath, String trainingPath) {
+        File features = new File(outputPath + File.separator + "pageclassifier.features");
+        try {
+            features.createNewFile();
+            FileWriter featuresWriter = new FileWriter(features);
+            //featuresWriter.write("");
+            featuresWriter.write("CLASS_VALUES  S NS" + "\n" + "ATTRIBUTES");
+            String wekkaFilePath = trainingPath + "/weka.arff";
+            Scanner wekkaFileScanner = new Scanner(new File(wekkaFilePath));
+            while(wekkaFileScanner.hasNext()){
+                String nextLine = wekkaFileScanner.nextLine();
+                String[] splittedLine = nextLine.split(" ");
+                if(splittedLine.length>=3 && splittedLine[0].equals("@ATTRIBUTE") && splittedLine[2].equals("REAL"))
+                    featuresWriter.write(" "+splittedLine[1]);
+            }
+            featuresWriter.write("\n");
+            wekkaFileScanner.close();
+            featuresWriter.flush();
+            featuresWriter.close();
+        } catch (IOException e) {
+            logger.error("IO Exception while creating wekka pageclassifier.features file. ",e);
+        }
+    }
+
 
     private static void addSeeds(CommandLine cmd) throws MissingArgumentException {
         String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
