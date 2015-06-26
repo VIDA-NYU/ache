@@ -238,6 +238,31 @@ public class TargetElasticSearchRepository implements TargetRepository {
         this.client = ElasticSearchClientFactory.createClient(config);
         this.indexName = indexName;
         this.typeName = typeName;
+        this.createIndexMapping(indexName);
+    }
+
+    private void createIndexMapping(String indexName) {
+        
+        boolean exists = client.admin().indices().prepareExists(indexName)
+                .execute().actionGet().isExists();
+        
+        if(!exists) {
+            String targetMapping = "{\"properties\": {"
+                + "\"domain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "\"words\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "\"wordsMeta\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "\"retrieved\": {\"format\": \"dateOptionalTime\",\"type\": \"date\"},"
+                + "\"text\": {\"type\": \"string\"},\"title\": {\"type\": \"string\"},"
+                + "\"url\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "\"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"}"
+                + "}}";
+            
+            client.admin().indices().prepareCreate(indexName)
+                .addMapping("target", targetMapping)
+                .addMapping("negative", targetMapping)
+                .execute()
+                .actionGet();
+        }
     }
 
     public boolean insert(Target target, int counter) {
