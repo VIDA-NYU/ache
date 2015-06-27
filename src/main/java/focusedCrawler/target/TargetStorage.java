@@ -13,6 +13,7 @@ import focusedCrawler.target.classifier.ClassifierFactory;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.detector.RegexBasedDetector;
+import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.LangDetection;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.ParameterFile;
@@ -212,8 +213,9 @@ public class TargetStorage extends StorageDefault {
             if(indexName == null) {
                 throw new MissingArgumentException("ElasticSearch index name not provided!");
             }
-            targetRepository = new TargetElasticSearchRepository(config, indexName, "target");
-            negativeRepository = new TargetElasticSearchRepository(config, indexName, "negative");
+            ElasticSearchConfig esconfig = config.getElasticSearchConfig();
+            targetRepository = new TargetElasticSearchRepository(esconfig, indexName, "target");
+            negativeRepository = new TargetElasticSearchRepository(esconfig, indexName, "negative");
         } else {
         	//Default data format is file
         	targetRepository = new TargetFileRepository(targetDirectory.toString());

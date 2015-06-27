@@ -1,5 +1,6 @@
 package focusedCrawler.config;
 
+import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.ParameterFile;
 
 public class TargetStorageConfig {
@@ -22,9 +23,7 @@ public class TargetStorageConfig {
     private final boolean bipartite;
     private final boolean saveNegativePages;
     
-    private final String elasticSearchHost;
-    private final int elasticSearchPort;
-    private final String clusterName;
+    private final ElasticSearchConfig elasticSearchConfig;
     
     public TargetStorageConfig(String filename) {
         this(new ParameterFile(filename));
@@ -49,9 +48,10 @@ public class TargetStorageConfig {
         this.bipartite = params.getParamBoolean("BIPARTITE");
         this.saveNegativePages = params.getParamBoolean("SAVE_NEGATIVE_PAGES");
         
-        this.elasticSearchHost = params.getParamOrDefault("ELASTICSEARCH_HOST", "localhost");
-        this.elasticSearchPort = params.getParamIntOrDefault("ELASTICSEARCH_PORT", 9300);
-        this.clusterName = params.getParamOrDefault("ELASTICSEARCH_CLUSTERNAME", "elasticsearch");
+        String elasticSearchHost = params.getParamOrDefault("ELASTICSEARCH_HOST", "localhost");
+        int elasticSearchPort = params.getParamIntOrDefault("ELASTICSEARCH_PORT", 9300);
+        String clusterName = params.getParamOrDefault("ELASTICSEARCH_CLUSTERNAME", "elasticsearch");
+        this.elasticSearchConfig = new ElasticSearchConfig(elasticSearchHost, elasticSearchPort, clusterName);
     }
 
     public boolean isUseClassifier() {
@@ -122,16 +122,8 @@ public class TargetStorageConfig {
         return saveNegativePages;
     }
 
-    public String getElasticSearchHost() {
-        return elasticSearchHost;
-    }
-
-    public int getElasticSearchPort() {
-        return elasticSearchPort;
-    }
-
-    public String getClusterName() {
-        return clusterName;
+    public ElasticSearchConfig getElasticSearchConfig() {
+        return elasticSearchConfig;
     }
     
 }
