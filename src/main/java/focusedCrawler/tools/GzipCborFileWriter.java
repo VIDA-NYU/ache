@@ -1,4 +1,4 @@
-package focusedCrawler.tools.cborCompression;
+package focusedCrawler.tools;
 
 import java.io.BufferedOutputStream;
 import java.io.Closeable;
@@ -70,7 +70,7 @@ public class GzipCborFileWriter implements Closeable {
             bufOutput.close();
             fileOutput.close();
         } catch (IOException e) {
-            logger.warn("Error in closing stream: " + e.getMessage());
+            logger.error("Error in closing stream: " + e);
         }
     }
     

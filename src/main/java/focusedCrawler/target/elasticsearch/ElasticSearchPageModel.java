@@ -23,6 +23,10 @@ public class ElasticSearchPageModel {
     private String[] words;
     private String[] wordsMeta;
     private String topPrivateDomain;
+    
+    public ElasticSearchPageModel() {
+        // mandatory for object unserialization
+    }
 
     public ElasticSearchPageModel(Target target) {
         Page page = (Page) target;

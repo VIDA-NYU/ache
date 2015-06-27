@@ -1,4 +1,4 @@
-package focusedCrawler.tools.cborCompression;
+package focusedCrawler.tools;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,7 +34,6 @@ public class CborToGzipCompressor {
         
         String currentArchive = null;
         GzipCborFileWriter gzipCborFileWriter = null;
-        
         
         long objectsWritten = 0;
         for (File f : files) {
