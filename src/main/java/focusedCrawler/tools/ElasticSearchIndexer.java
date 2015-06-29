@@ -32,6 +32,7 @@ import focusedCrawler.target.elasticsearch.ElasticSearchClientFactory;
 import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.target.elasticsearch.ElasticSearchPageModel;
 import focusedCrawler.util.Page;
+import focusedCrawler.util.parser.PaginaURL;
 
 public class ElasticSearchIndexer {
     
@@ -114,15 +115,22 @@ public class ElasticSearchIndexer {
                                       throws IOException {
         
         DirectoryStream<Path> fileStream = Files.newDirectoryStream(inputPath);
-        for (Path p : fileStream) {
-            File f = p.toFile();
+        for (Path filePath : fileStream) {
+            File f = filePath.toFile();
+            
+            if(f.isDirectory()) {
+                // recursivelly index files in the subfolder
+                indexFromFile(bulkIndexer, indexName, typeName, startDate, endDate,
+                              filePath, outputFormat, inputFormat);
+                continue;
+            }
+            
             try {
                 Date fileDate = new Date(f.lastModified());
                 
                 if(startDate != null && fileDate.before(startDate)) continue;
                 if(endDate != null && fileDate.after(endDate)) continue;
     
-                
                 String id;
                 Object doc;
                 
@@ -144,13 +152,15 @@ public class ElasticSearchIndexer {
                 }
                 else if(inputFormat.equals("FILE")){
                     
-                    final byte[] bytes = Files.readAllBytes(p);
+                    final byte[] bytes = Files.readAllBytes(filePath);
                     String fileAsString = new String(bytes);
                     String url = URLDecoder.decode(f.getName(), "UTF-8");
                     
                     if (outputFormat.equals("ACHE")) {
                         Page page = new Page(new URL(url), fileAsString);
-                        // TODO: parse page
+                        PaginaURL pageParser = new PaginaURL(page.getURL(), 0, 0,page.getContent().length(),page.getContent(), null);
+                        page.setPageURL(pageParser);
+                        
                         id = url;
                         doc = new ElasticSearchPageModel(page);
                     }
@@ -173,7 +183,6 @@ public class ElasticSearchIndexer {
                     }
                     
                 }
-                
                 else {
                     throw new IllegalArgumentException("Invalid input format = "+inputFormat);
                 }
