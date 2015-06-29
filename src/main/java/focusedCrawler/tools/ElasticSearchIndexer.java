@@ -101,9 +101,9 @@ public class ElasticSearchIndexer {
     }
 
     private static SimpleBulkIndexer createBulkIndexer(CommandLine cmd) {
-        String elasticSearchServer = cmd.getOptionValue("es-server", "http://localhost:9200");
-        int bulkSize = Integer.valueOf(cmd.getOptionValue("es-bulk-size", "5"));
-        String userPass = cmd.getOptionValue("es-auth-header", null);
+        String elasticSearchServer = cmd.getOptionValue("output-es-url", "http://localhost:9200");
+        int bulkSize = Integer.valueOf(cmd.getOptionValue("output-es-bulk-size", "25"));
+        String userPass = cmd.getOptionValue("output-es-auth", null);
         
         SimpleBulkIndexer bulkIndexer = new SimpleBulkIndexer(elasticSearchServer, userPass, bulkSize);
         return bulkIndexer;
