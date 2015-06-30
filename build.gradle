@@ -41,6 +41,7 @@ dependencies {
     
     compile 'org.apache.httpcomponents:httpclient:4.4.1'
     compile 'org.apache.tika:tika-core:1.8'
+    compile 'org.apache.tika:tika-parsers:1.8'
     
     testCompile 'junit:junit:4.12'
     
