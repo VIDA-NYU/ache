@@ -23,6 +23,7 @@ public class ElasticSearchPageModel {
     private String[] words;
     private String[] wordsMeta;
     private String topPrivateDomain;
+    private String html;
     
     public ElasticSearchPageModel() {
         // mandatory for object unserialization
@@ -37,7 +38,8 @@ public class ElasticSearchPageModel {
         this.wordsMeta = page.getPageURL().palavrasMeta();
         this.title = page.getPageURL().titulo();
         this.domain = page.getDomainName();
-
+        this.html = page.getContent();
+        
         try {
             this.text = DefaultExtractor.getInstance().getText(page.getContent());
         } catch (BoilerpipeProcessingException e) {
@@ -53,8 +55,6 @@ public class ElasticSearchPageModel {
     }
 
     public ElasticSearchPageModel(TargetModel model) {
-        this.url = model.url;
-        this.retrieved = new Date(model.timestamp * 1000);
 
         URL url;
         try {
@@ -62,16 +62,15 @@ public class ElasticSearchPageModel {
         } catch (MalformedURLException e) {
             throw new IllegalArgumentException("page has an invalid URL: " + model.url);
         }
-
         String raw_content = (String) model.response.get("body");
         Page page = new Page(url, raw_content);
         PaginaURL pageURL = new PaginaURL(url, 0, 0, raw_content.length(), raw_content, null);
-        PaginaURL pageParser = new PaginaURL(page.getURL(), 0, 0, page.getContent().length(),
-                page.getContent(), null);
+        PaginaURL pageParser = new PaginaURL(page.getURL(), 0, 0, page.getContent().length(), page.getContent(), null);
         page.setPageURL(pageParser);
 
+        this.html = raw_content;
         this.url = model.url;
-        this.retrieved = new Date();
+        this.retrieved = new Date(model.timestamp * 1000);
         this.words = pageURL.palavras();
         this.wordsMeta = pageURL.palavrasMeta();
         this.title = pageURL.titulo();
@@ -153,6 +152,14 @@ public class ElasticSearchPageModel {
 
     public void setTopPrivateDomain(String topPrivateDomain) {
         this.topPrivateDomain = topPrivateDomain;
+    }
+
+    public String getHtml() {
+        return html;
+    }
+
+    public void setHml(String html) {
+        this.html = html;
     }
 
 }

@@ -246,7 +246,7 @@ public class ElasticSearchIndexer {
                         pageModel.getRetrieved().getTime(),
                         "NYU",
                         "ACHE-script",
-                        pageModel.getText(), // FIXME this value should use raw HTML field
+                        pageModel.getHtml(),
                         "text/html",
                         null
                     );
