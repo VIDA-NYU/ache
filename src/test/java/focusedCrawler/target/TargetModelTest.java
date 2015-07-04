@@ -49,7 +49,7 @@ public class TargetModelTest {
         
         assertThat(readValue.response, is(notNullValue()));
         assertThat(readValue.response, is(writtenValue.response));
-        assertThat(readValue.response.get("body"), is(body));
+        assertThat(((String)readValue.response.get("body")), is(body));
     }
 
 }
