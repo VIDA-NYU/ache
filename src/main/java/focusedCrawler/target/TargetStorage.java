@@ -203,11 +203,10 @@ public class TargetStorage extends StorageDefault {
         TargetRepository targetRepository; 
         TargetRepository negativeRepository;
         
-
         String dataFormat = config.getDataFormat();
         if (dataFormat.equals("CBOR")) {
-			targetRepository = new TargetCBORRepository(targetDirectory.toString(), config.getTargetDomain());
-			negativeRepository = new TargetCBORRepository(negativeDirectory.toString(), config.getTargetDomain());
+			targetRepository = new TargetCBORRepository(targetDirectory);
+			negativeRepository = new TargetCBORRepository(negativeDirectory);
         }
         else if(dataFormat.equals("ELASTICSEARCH")) {
             if(indexName == null) {
@@ -218,8 +217,8 @@ public class TargetStorage extends StorageDefault {
             negativeRepository = new TargetElasticSearchRepository(esconfig, indexName, "negative");
         } else {
         	//Default data format is file
-        	targetRepository = new TargetFileRepository(targetDirectory.toString());
-        	negativeRepository = new TargetFileRepository(negativeDirectory.toString());
+        	targetRepository = new TargetFileRepository(targetDirectory);
+        	negativeRepository = new TargetFileRepository(negativeDirectory);
         }
         
         TargetMonitor monitor = new TargetMonitor(dataPath, config);

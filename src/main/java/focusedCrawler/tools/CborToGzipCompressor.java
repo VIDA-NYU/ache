@@ -2,7 +2,6 @@ package focusedCrawler.tools;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -65,10 +64,8 @@ public class CborToGzipCompressor {
                 }
             }
             
-            // fix key
-            String url = targetModel.url;
-            String domain = new URL(url).getHost();
-            targetModel.setReverseKey(url, domain);
+            // fix key for objects stored with wrong key 
+            targetModel.key = targetModel.computeReverseKey(targetModel.url);
             
             System.out.println("Writing object: "+f.getName());
             

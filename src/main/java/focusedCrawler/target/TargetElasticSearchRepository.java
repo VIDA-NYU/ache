@@ -65,19 +65,8 @@ public class TargetElasticSearchRepository implements TargetRepository {
     }
 
     private boolean index(Target target) {
-        // This contact information should be read from config file
-        Object data;
-        boolean memexDataFormat = false;
 
-        if (memexDataFormat) {
-            TargetModel targetModel = new TargetModel("Kien Pham", "kien.pham@nyu.edu");
-            targetModel.resetTimestamp();
-            targetModel.setUrl(target.getIdentifier());
-            targetModel.setContent(target.getSource());
-            data = targetModel;
-        } else {
-            data = new ElasticSearchPageModel(target);
-        }
+        ElasticSearchPageModel data = new ElasticSearchPageModel(target);
 
         String docId = target.getIdentifier();
         IndexResponse response = client.prepareIndex(indexName, typeName, docId)

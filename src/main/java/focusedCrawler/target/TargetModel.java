@@ -1,8 +1,10 @@
 package focusedCrawler.target;
 
+import java.net.InetAddress;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.UnknownHostException;
 import java.util.HashMap;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
@@ -52,6 +54,20 @@ import org.apache.commons.codec.digest.DigestUtils;
 
 public class TargetModel {
     
+    private static String HOST_NAME;
+    private static String HOST_ADDRESS;
+    
+    static {
+        try {
+            InetAddress localhost = InetAddress.getLocalHost();
+            HOST_NAME = localhost.getHostName();
+            HOST_ADDRESS = localhost.getHostAddress();
+        } catch (UnknownHostException e) {
+            HOST_NAME = "localhost";
+            HOST_ADDRESS = "127.0.0.1";
+        }
+    }
+    
     public String url;
     public String imported;
     public String key;
@@ -65,9 +81,8 @@ public class TargetModel {
         timestamp = System.currentTimeMillis() / 1000L;
     }
 
-    public TargetModel(String contactName, String contactEmail) {
+    public TargetModel(String contactName, String contactEmail, URL url, String body) {
         this();
-
         HashMap<String, Object> contact = new HashMap<String, Object>();
         contact.put("name", contactName);
         contact.put("email", contactEmail);
@@ -75,43 +90,39 @@ public class TargetModel {
         HashMap<String, Object> client = new HashMap<String, Object>();
         client.put("software", "ACHE");
         client.put("contact", contact);
-
+        client.put("hostname", HOST_NAME);
+        client.put("address", HOST_ADDRESS);
+        client.put("robots", "classic");
+        
         HashMap<String, Object> headers = new HashMap<String, Object>();
         headers.put("Accept-Language", "en-US,en");
 
-        request.put("method", "GET");
-        request.put("client", client);
-        request.put("headers", headers);
-        request.put("body", null);
-    }
-
-    public void resetTimestamp() {
-        this.setTimestamp(System.currentTimeMillis() / 1000L);
-    }
-    
-    public void setTimestamp(long timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public void setContent(String content) {
-        this.response.put("body", content.replaceAll("(\r?\n)", " "));
-    }
-
-    public void setKey(String url, String domain) throws NoSuchAlgorithmException {
-        String sb = computeSHA1(url);
-        this.key = domain + "-" + sb;
+        this.request.put("method", "GET");
+        this.request.put("client", client);
+        this.request.put("headers", headers);
+        this.request.put("body", null);
+        
+        this.response.put("body", body);
+        this.url = url.toString();
+        this.timestamp = System.currentTimeMillis() / 1000L;
+        
+        this.key = computeReverseKey(url);
     }
     
-    public void setReverseKey(String url, String domain) {
-        String urlSha1Hash = DigestUtils.sha1Hex(url);
-        String reverseDomain = reverseDomain(domain);
-        this.key = reverseDomain + "_" + urlSha1Hash + "_" + timestamp;
+    public String computeReverseKey(String url) {
+        try {
+            return this.computeReverseKey(new URL(url));
+        } catch (MalformedURLException e) {
+            throw new IllegalArgumentException("Invalid URL.", e);
+        }
     }
-
+    
+    public String computeReverseKey(URL url) {
+        String urlSha1Hash = DigestUtils.sha1Hex(url.toString());
+        String reverseDomain = reverseDomain(url.getHost());
+        return reverseDomain + "_" + urlSha1Hash + "_" + timestamp;
+    }
+    
     private String reverseDomain(String domain) {
         if(domain == null || domain.isEmpty()) {
             return null;
@@ -127,21 +138,6 @@ public class TargetModel {
             reverseDomain.append(hostParts[i]);
         }
         return reverseDomain.toString();
-    }
-
-    // FIXME Remove this algorithm, it seems to be wrong.
-    // Better to use Apache Commons's DigestUtils.sha1Hex()
-    @Deprecated
-    private String computeSHA1(String url) throws NoSuchAlgorithmException {
-        MessageDigest md = MessageDigest.getInstance("SHA-256");
-        md.update(url.getBytes());
-        byte byteData[] = md.digest();
-
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < byteData.length; i++) {
-            sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16).substring(1));
-        }
-        return sb.toString();
     }
     
 }
