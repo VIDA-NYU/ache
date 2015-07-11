@@ -308,9 +308,7 @@ public class RelevanceFeedback {
 	
 	private void addToSample(Page page, HashMap<String, WordFrequencyMap> sample){
         PaginaURL pageParser = null;
-        pageParser = new PaginaURL(page.getURL(), 0, 0,
-                                       page.getContent().length(),
-                                       page.getContent(), stoplist);
+        pageParser = new PaginaURL(page.getURL(),page.getContent(), stoplist);
 //        System.out.println("URL>>>"+page.getURL());
         String[] words = pageParser.palavras();
         int[] occurrencies = pageParser.ocorrencias();

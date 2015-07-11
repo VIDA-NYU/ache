@@ -367,7 +367,7 @@ public class ClassifierBuilder {
 		        //url
 			if(!usedURLTemp.contains(element.getLink().toString())){
 				usedURLTemp.add(element.getLink().toString());
-				PaginaURL pageParser = new PaginaURL(new URL("http://"), 0, 0, element.getLink().getFile().length(), element.getLink().getFile().toString(), stoplist);
+				PaginaURL pageParser = new PaginaURL(new URL("http://"),element.getLink().getFile().toString(), stoplist);
 				String[] urlTemp = pageParser.palavras();
 				for (int j = 0; j < urlTemp.length; j++) {
 //		            String word =  stemmer.stem(urlTemp[j]);

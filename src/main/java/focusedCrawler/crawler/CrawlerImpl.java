@@ -361,7 +361,7 @@ public class CrawlerImpl extends Crawler {
             setMessage("URL "+getUrl());
 			try {
 				page = new Page(getUrl(),source);
-				PaginaURL pageParser = new PaginaURL(page.getURL(), 0, 0,page.getContent().length(),page.getContent(), null);
+				PaginaURL pageParser = new PaginaURL(page.getURL(),page.getContent());
 				page.setPageURL(pageParser);
 				if(relevance > LinkRelevance.DEFAULT_HUB_RELEVANCE && relevance < LinkRelevance.DEFAULT_AUTH_RELEVANCE){
 					page.setHub(true);
