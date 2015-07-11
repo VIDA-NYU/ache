@@ -1,14 +1,12 @@
 package focusedCrawler.util.parser;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLDecoder;
 import java.util.Scanner;
 
 import org.junit.Test;
@@ -21,37 +19,17 @@ public class PaginaURLTest {
 
     @Test
     public void linksShouldNotContainFragments() throws UnsupportedEncodingException {
+        try {
+            String testString = createTestPage();
+            PaginaURL pageParser = new PaginaURL(new URL(
+                    "http://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document"), 0,
+                    0, testString.length(), testString, null);
 
-        String path = PaginaURLTest.class.getResource("PaginaURL/paginaURLTest").getPath();
-        File URLdirecory = new File(path);
+            Object[] extractedLinks = pageParser.links();
+            assertEquals("Fragment detector test failed. ", false, hasFragments(extractedLinks));
 
-        File[] allDirectories = URLdirecory.listFiles(new FileFilter() {
-            @Override
-            public boolean accept(File pathname) {
-                if (pathname.getName().equals(".DS_Store"))
-                    return false;
-                return true;
-            }
-        });
-
-        for (File eachDirectory : allDirectories) {
-
-            File[] htmlFiles = eachDirectory.listFiles();
-
-            for (File eachtmlFile : htmlFiles) {
-                URL fileUrl;
-                try {
-                    fileUrl = new URL(URLDecoder.decode(eachtmlFile.getName(), "UTF-8"));
-                    String source = readContentsOfFile(eachtmlFile);
-                    PaginaURL pageParser = new PaginaURL(fileUrl, 0, 0, source.length(), source,
-                            null);
-                    Object[] extractedLinks = pageParser.links();
-                    assertEquals("This file has some fragments: " + eachtmlFile.getName(),
-                                 false, hasFragments(extractedLinks));
-                } catch (MalformedURLException e) {
-                    logger.error("URL of input file not in proper format.", e);
-                }
-            }
+        } catch (MalformedURLException e) {
+            logger.error("URL of input file not in proper format.", e);
         }
     }
 
@@ -63,19 +41,17 @@ public class PaginaURLTest {
         return false;
     }
 
-    private String readContentsOfFile(File fileUrl) {
+    private String createTestPage() {
+        StringBuffer testPage = new StringBuffer();
 
-        StringBuilder source = new StringBuilder();
-        try {
-            Scanner fileScanner = new Scanner(fileUrl);
-            while (fileScanner.hasNext()) {
-                source.append(fileScanner.nextLine() + "\n");
-            }
-            fileScanner.close();
-        } catch (FileNotFoundException e) {
-            logger.error("Unable to find file!", e);
-        }
-        return source.toString();
+        testPage.append("<!DOCTYPE html>");
+        testPage.append("<html>");
+        testPage.append("<body>");
+        testPage.append("<h1>My First Heading</h1>");
+        testPage.append("<a href = \"https://en.wikipedia.org/wiki/Mouse_(computing)#Mechanical_mice\">My first paragraph.</a>");
+        testPage.append("</body>");
+        testPage.append("</html>");
+
+        return testPage.toString();
     }
-
 }
