@@ -23,8 +23,10 @@
 */
 package focusedCrawler.util;
 
-import java.net.URL;
 import java.io.Serializable;
+import java.net.URL;
+import java.util.List;
+import java.util.Map;
 
 import focusedCrawler.util.parser.PaginaURL;
 
@@ -57,9 +59,32 @@ public class Page implements Serializable, Target{
     
     private String encoding;
     
+    private URL redirectedURL;
+    
+    protected URL getRedirectedURL() {
+        return redirectedURL;
+    }
+
+    private Map<String, List<String>> responseHeaders;
+        
+        public Map<String, List<String>> getResponseHeaders() {
+            return responseHeaders;
+        }
+    
+    
     public Page() {
 
     }
+    
+    public Page(URL url, String cont, Map<String, List<String>> responseHeaders) {
+        this(url,cont, responseHeaders, null);
+    }
+    
+    public Page(URL url, String cont, Map<String, List<String>> responseHeaders, URL redirectedURL) {
+                this(url,cont);     
+                this.responseHeaders = responseHeaders;
+                this.redirectedURL = redirectedURL;
+             }
 
     public Page(URL url, String cont) {
         this.url = url;

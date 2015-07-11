@@ -81,6 +81,8 @@ public class CrawlerImpl extends Crawler {
 
     protected String source;
     
+    protected Downloader urlDownloader;
+    
     protected CrawlerImpl(ThreadGroup tg, String name) {
     	super(tg, name);
     }
@@ -261,91 +263,10 @@ public class CrawlerImpl extends Crawler {
        */
 
       protected void downloadUrl() throws CrawlerException {
-          try {            
             urlFinal = getUrl();
-            URLConnection conn = urlFinal.openConnection();
-            InputStream in = conn.getInputStream();
-            StringBuffer   buffer = new StringBuffer();
-            BufferedReader bin = new BufferedReader(new InputStreamReader(in));
-            String inputLine;
-
-            try {
-                while ((inputLine = bin.readLine()) != null) {
-                	buffer.append(inputLine).append("\n");
-                }
-            } catch (IOException ioe) {
-                bin.close();
-
-                throw ioe;
-            }
-
-            bin.close();
-            source = buffer.toString();
-
-//            downloader.clearResponseProperties();
-//            downloader.clearBuffer();
-//            downloader.setUrlTarget(getUrl());
-//            downloader.connect();
-//            int responseCode = HttpURLConnection.HTTP_OK;
-//            try {
-//              responseCode = downloader.getResponseCode();
-//            }
-//            catch (Exception exc) {
-//              System.out.println("R>" + getName() + ">" + exc.getMessage());
-//            }
-//            String mimeType = "text/html";
-//            try {
-//              mimeType = downloader.getContentType();
-//            }
-//            catch (Exception exc) {
-//              System.out.println("R>" + getName() + ">" + exc.getMessage());
-//            }
-//            urlFinal = downloader.getUrlTarget();
-//            System.out.println("R>" + getName() + ">" + initialUrl + " -> " +
-//                              responseCode + "," + mimeType + " -> " + urlFinal);
-//            if (responseCode != HttpURLConnection.HTTP_OK &&
-//                     responseCode != HttpURLConnection.HTTP_PARTIAL) {
-//              handleNotFound();
-//            }
-//            if (!isJump()) {
-//              setUrl(urlFinal);
-//              mimeType = mimeType.toLowerCase();
-//              if (! (mimeType.startsWith("text/html") ||
-//                     mimeType.startsWith("text/plain"))) {
-//                throw new CrawlerException(getName() + ":" + "MIME_TYPE " + mimeType);
-//              }
-//              else {
-//                downloader.getInputStream();
-//                buffer = downloader.getBuffer();
-//                bufferSize = downloader.getBufferSize();
-//                try {
-//                  length = downloader.getBufferSize();
-//                }
-//                catch (DownloaderException de) {
-//                  length = 0;
-//                }
-//              }
-//            }
-          }
-          catch (MalformedURLException exc) {
-            throw new CrawlerException(getName() + ":" + exc.getMessage(), exc);
-          }
-          catch (SocketException exc) {
-            throw new CrawlerException(getName() + ":" + exc.getMessage(), exc);
-          }
-          catch (IOException exc) {
-            throw new CrawlerException(getName() + ":" + exc.getMessage(), exc);
-          }
-//          catch (StorageException exc) {
-//            throw new CrawlerException(getName() + ":" + exc.getMessage(), exc);
-//          }
-//          catch (CommunicationException exc) {
-//            throw new CrawlerException(getName() + ":" + exc.getMessage(), exc);
-//          }
-          catch (Exception exc) {
-            throw new CrawlerException(getName() + ":" + exc.getMessage(), exc);
-          }
-        }
+            urlDownloader = new Downloader(urlFinal,getName());
+            source = urlDownloader.getContent();
+}
 
 
 
@@ -360,7 +281,11 @@ public class CrawlerImpl extends Crawler {
         protected void processData() throws CrawlerException {
             setMessage("URL "+getUrl());
 			try {
-				page = new Page(getUrl(),source);
+			    
+			    if(urlDownloader.isRedirection())
+			        page = new Page(getUrl(), source, urlDownloader.getResponseHeaders(),(new URL(urlDownloader.getRedirectionUrl())));
+			    else
+			        page = new Page(getUrl(), source, urlDownloader.getResponseHeaders());
 				PaginaURL pageParser = new PaginaURL(page.getURL(),page.getContent());
 				page.setPageURL(pageParser);
 				if(relevance > LinkRelevance.DEFAULT_HUB_RELEVANCE && relevance < LinkRelevance.DEFAULT_AUTH_RELEVANCE){
