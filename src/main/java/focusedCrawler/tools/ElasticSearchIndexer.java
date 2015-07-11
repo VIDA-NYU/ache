@@ -158,7 +158,7 @@ public class ElasticSearchIndexer {
                     
                     if (outputFormat.equals("ACHE")) {
                         Page page = new Page(new URL(url), fileAsString);
-                        PaginaURL pageParser = new PaginaURL(page.getURL(), 0, 0,page.getContent().length(),page.getContent(), null);
+                        PaginaURL pageParser = new PaginaURL(page.getURL(),page.getContent());
                         page.setPageURL(pageParser);
                         
                         id = url;

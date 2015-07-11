@@ -13,6 +13,8 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.util.Page;
+
 public class PaginaURLTest {
 
     public static final Logger logger = LoggerFactory.getLogger(PaginaURLTest.class);
@@ -22,8 +24,7 @@ public class PaginaURLTest {
         try {
             String testString = createTestPage();
             PaginaURL pageParser = new PaginaURL(new URL(
-                    "http://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document"), 0,
-                    0, testString.length(), testString, null);
+                    "http://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document"),testString);
 
             Object[] extractedLinks = pageParser.links();
             assertEquals("Fragment detector test failed. ", false, hasFragments(extractedLinks));
@@ -31,6 +32,14 @@ public class PaginaURLTest {
         } catch (MalformedURLException e) {
             logger.error("URL of input file not in proper format.", e);
         }
+    }
+    
+    @Test
+    public void constructorsShouldWork() throws MalformedURLException {
+        PaginaURL paginaURL = new PaginaURL(new URL(
+                                "http://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document"),
+                                createTestPage());
+                        assertEquals("Constructor not working properly !", false, paginaURL.getURL().equals(null));
     }
 
     private boolean hasFragments(Object[] urls) {

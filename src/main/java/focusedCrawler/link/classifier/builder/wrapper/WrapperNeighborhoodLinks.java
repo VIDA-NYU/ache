@@ -237,7 +237,7 @@ public class WrapperNeighborhoodLinks {
     	String urlStr = ln.getLink().toString();
     	getURLWords(urlStr, words);
     	if(ln.getImgSrc() != null){
-            PaginaURL pageParser = new PaginaURL(new URL("http://"), 0, 0, ln.getImgSrc().length(), ln.getImgSrc(), stoplist);
+            PaginaURL pageParser = new PaginaURL(new URL("http://"),ln.getImgSrc(), stoplist);
             String[] terms = pageParser.palavras();
             for (int i = 0; i < terms.length; i++) {
 //            	System.out.println(">>TERM:" + terms[i]);
@@ -334,7 +334,7 @@ public class WrapperNeighborhoodLinks {
   public WordField[] getNeighboorhood(Page page, String link) throws
       MalformedURLException {
     String pageStr = page.getContent();
-    PaginaURL pageParser = new PaginaURL(page.getURL(), 0, 0,pageStr.length(),pageStr, stoplist);
+    PaginaURL pageParser = new PaginaURL(page.getURL(),pageStr, stoplist);
     HashMap result = extractLinks(pageParser);
     WordField[] words = (WordField[])result.get(link);
     return  words;
@@ -343,7 +343,7 @@ public class WrapperNeighborhoodLinks {
   public LinkNeighborhood getNeighboorhoodLN(Page page, String link) throws MalformedURLException {
 	  LinkNeighborhood ln = null;
 	  String pageStr = page.getContent();
-	  PaginaURL pageParser = new PaginaURL(page.getURL(), 0, 0,pageStr.length(),pageStr, stoplist);
+	  PaginaURL pageParser = new PaginaURL(page.getURL(),pageStr, stoplist);
 	  LinkNeighborhood[] lns = pageParser.getLinkNeighboor();
 	  for (int i = 0; i < lns.length; i++) {
 		if(lns[i].getLink().toString().equals(link)){
@@ -371,7 +371,7 @@ public class WrapperNeighborhoodLinks {
 		  host = "host_" + host.substring(index+1);  
 		  wordsFields.add(new WordField(WordField.URLFIELD,host));
 	  }
-	  PaginaURL pageParser = new PaginaURL(url, 0, 0, url.getFile().length(), url.getFile(), stoplist);
+	  PaginaURL pageParser = new PaginaURL(url,url.getFile(), stoplist);
 	  String[] terms = pageParser.palavras();
 	  for (int i = 0; i < terms.length; i++) {
 //		  System.out.print(terms[i] + " ");

@@ -382,7 +382,7 @@ public class ClassifierRecreator {
         //url
         if(!usedURLTemp.contains(element.getLink().toString())){
           usedURLTemp.add(element.getLink().toString());
-          PaginaURL pageParser = new PaginaURL(element.getLink(), 0, 0, element.getLink().toString().length(), element.getLink().toString(), stoplist);
+          PaginaURL pageParser = new PaginaURL(element.getLink(), element.getLink().toString(), stoplist);
           String[] urlTemp = pageParser.palavras();
           for (int j = 0; j < urlTemp.length; j++) {
             String word =  stemmer.stem(urlTemp[j]);
