@@ -59,3 +59,18 @@ jar {
     )
   }
 }
+
+task copyConfig {
+    def f = file("$buildDir/config")
+    outputs.dir f
+    doLast {
+        copy {
+            from "config/sample_config"
+            into "$buildDir/config"
+        }
+    }
+}
+ 
+applicationDistribution.from(copyConfig) {
+    into "config"
+}
