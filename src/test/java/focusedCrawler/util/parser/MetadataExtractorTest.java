@@ -22,7 +22,7 @@ public class MetadataExtractorTest {
         String path = MetadataExtractorTest.class.getResource("MetadataExtractor").getPath();
         String source = readFile(path + File.separator + "test_file", StandardCharsets.UTF_8);
         
-        HashMap<String, String> expectedMetadata = new HashMap<String, String>();
+        Map<String, String> expectedMetadata = new HashMap<String, String>();
         expectedMetadata.put("X-Parsed-By", "org.apache.tika.parser.DefaultParser");
         expectedMetadata.put("og:image", "https://scontent.fash1-1.fna.fbcdn.net/hprofile-xfp1/v/t1.0-1/p200x200/560870_427913377245296_792779965_n.jpg?oh=f15cbea0fecf9d76a9fcc99ef0f03506&oe=561C831A");
         expectedMetadata.put("og:type", "university");
