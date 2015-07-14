@@ -34,12 +34,15 @@ which will generate an installation package under `/build/install/`.
 Alternatively, you can build a zip archive:
 
 ```bash
-git clone https://github.com/ViDA-NYU/ache.git
-cd ache
 ./gradlew clean distZip
 ```
+or a tar archive:
 
-which will generate a zip file of your project under `/build/distributions/`.
+```bash
+./gradlew clean distTar
+```
+
+which will generate a zip/tar file of your project under `/build/distributions/`.
 
 Learn more about Gradle: [http://www.gradle.org/documentation](http://www.gradle.org/documentation).
   
@@ -77,24 +80,17 @@ After you generate a model, you need to prepare the seed file, where each line i
  
     ./build/install/ache/bin/ache startCrawl -o output -c config/sample_config -s config/sample.seeds -m config/sample_model -e achecrawler
 
+## Data Formats
+
+ACHE can store data in different data formats. The data format can be configured by changing the key `DATA_FORMAT` in the [target storage configuration file] (https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/target_storage/target_storage.cfg). The data formats available now are:
+
+- FILE (default) -- only raw content is stored in plain text files.
+- CBOR -- raw content and some metadata is stored using [CBOR](http://cbor.io) format in files.
+- ELATICSEARCH -- raw content and metadata is indexed in an ElasticSearch index. See [ElasticSearch Integration](https://github.com/ViDA-NYU/ache/wiki/ElasticSearch-Integration) for details about configuration.
 
 ## More information?
 
-[ACHE Wiki](https://github.com/ViDA-NYU/ache/wiki)
-
-## What is inside the data output directory?
-
-`data_target` contains relevant pages.
-
-`data_negative` contains irrelevant pages. In default setting, the crawler does not save the irrelevant pages.
-
-`data_monitor` contains current status of the crawler.
-
-`data_url` and `data_backlinks` are where persistent storages keep information of frontier and crawled graph.
-
-## When to stop the crawler?
-
-Unless you stop it, the crawler exists when the number of crawled pages exeeds the limit in the setting, which is 9M at default. You can look at this file `data_monitor/harvestinfo.csv` to know how many pages has been downloaded to decide whether you want to stop the crawler. The 1st, 2nd, 3rd columns are number of relevant pages, number of visited pages, timestamp.
+More documentation is availabe in the project's [Wiki](https://github.com/ViDA-NYU/ache/wiki).
 
 ## Where to report bugs?
 
