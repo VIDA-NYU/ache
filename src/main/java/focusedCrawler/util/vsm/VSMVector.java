@@ -94,9 +94,7 @@ public class VSMVector {
           StringBuffer source = new StringBuffer();
           parse(list.item(0), source, new StringBuffer(), "html", stoplist);
           srcForm = source.toString().toLowerCase();
-          PaginaURL formPage = new PaginaURL(new URL("http://www"), 0, 0,
-                                             srcForm.length(),
-                                             srcForm, stoplist);
+          PaginaURL formPage = new PaginaURL(new URL("http://www"),srcForm, stoplist);
 
           stemPage(formPage, true);
       } else {
@@ -123,9 +121,7 @@ public class VSMVector {
   
   private void addTitle(PaginaURL page, StopList stoplist) throws MalformedURLException{
 	  this.stoplist = stoplist;
-	  PaginaURL title = new PaginaURL(new URL("http://www"), 0, 0,
-    		  page.titulo().length(),
-    		  page.titulo(), stoplist);
+	  PaginaURL title = new PaginaURL(new URL("http://www"),page.titulo(), stoplist);
 	  String[] titleWords = title.palavras();
 	  String[] metaTerms = page.palavrasMeta();
 	  int[] metaOccurrencies = page.ocorrenciasMeta();
@@ -173,9 +169,7 @@ public class VSMVector {
 	  }
 	  this.stoplist = stoplist;
 	  elems = new HashMap();
-	  PaginaURL page = new PaginaURL(new URL("http://www"), 0, 0,
-                                   document.length(),
-                                   document, stoplist);
+	  PaginaURL page = new PaginaURL(new URL("http://www"),document, stoplist);
 	  
     //addTitle(page,stoplist);
 	  if(stem){
@@ -218,9 +212,7 @@ public class VSMVector {
 	  }
 	  this.stoplist = stoplist;
 	  elems = new HashMap();
-	  PaginaURL page = new PaginaURL(new URL("http://www"), 0, 0,
-                                   document.length(),
-                                   document, stoplist);
+	  PaginaURL page = new PaginaURL(new URL("http://www"),document, stoplist);
     //addTitle(page,stoplist);
 	  stemPage(page, false);
 
@@ -745,9 +737,7 @@ public class VSMVector {
               PaginaURL pageTemp = null;
               String[] words = null;
               try {
-                pageTemp = new PaginaURL(new URL("http://www"), 0, 0,
-                                                   value.length(),
-                                                   value, stoplist);
+                pageTemp = new PaginaURL(new URL("http://www"),value, stoplist);
                 words = pageTemp.palavras();
               }
               catch (MalformedURLException ex) {

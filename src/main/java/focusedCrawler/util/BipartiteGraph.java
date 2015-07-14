@@ -99,7 +99,7 @@ public class BipartiteGraph {
 				System.out.println("Downloading:" + backlinks[i]);
 				try{
 					Page page = UniversalDownloader.downloadPage(backlinks[i]);
-					PaginaURL parsedPage = new PaginaURL(new URL(backlinks[i]), 0, 0,page.getContent().length(),	page.getContent(), null);
+					PaginaURL parsedPage = new PaginaURL(new URL(backlinks[i]),page.getContent());
 					URL[] links = parsedPage.links();
 					insertLinks(new URL("http://" +url),links,false);
 				}catch(Exception ex){

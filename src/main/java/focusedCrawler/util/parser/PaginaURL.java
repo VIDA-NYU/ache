@@ -35,6 +35,7 @@ import org.apache.commons.validator.routines.UrlValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.util.Page;
 import focusedCrawler.util.page.Pagina;
 import focusedCrawler.util.string.Acentos;
 import focusedCrawler.util.string.StopList;
@@ -421,6 +422,18 @@ public class PaginaURL implements Pagina {
         }
 
         return t1;
+    }
+    
+    public PaginaURL(URL url, String content) {
+        this(url,content,null);
+    }
+    
+    public PaginaURL(URL url, String content, StopList stoplist) {
+        this(url,0,0,content.length(),content,stoplist);
+    }
+    
+    public PaginaURL(Page page){
+        this(page.getURL(),page.getContent());
     }
 
     /**

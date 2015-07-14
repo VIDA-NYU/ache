@@ -1,4 +1,5 @@
 /build/
+/output
 /data/
 *.log
 /settings/

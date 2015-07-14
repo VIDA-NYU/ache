@@ -49,7 +49,7 @@ public class MemexCrawlSchema {
         } catch (MalformedURLException e) {
             throw new IllegalArgumentException("page has an invalid URL: "+model.url);
         }
-        PaginaURL pageParser = new PaginaURL(url, 0, 0, this.raw_content.length(), this.raw_content, null);
+        PaginaURL pageParser = new PaginaURL(url,this.raw_content);
         
         this.images = new ArrayList<String>(pageParser.getImages());
 //        this.crawl_data.html_title = pageParser.titulo();
