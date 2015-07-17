@@ -16,6 +16,7 @@ import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.tika.Tika;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;
@@ -167,6 +168,9 @@ public class ElasticSearchIndexer {
                     else if (outputFormat.equals("CDR")) {
                         Tika tika = new Tika();
                         String mediaType = tika.detect(bytes);
+                        if(mediaType != null && !mediaType.startsWith("text")) {
+                        	fileAsString =  Base64.encodeBase64String(bytes);
+                        }
                         id = url; 
                         doc = new MemexCrawlSchema(
                             url,
