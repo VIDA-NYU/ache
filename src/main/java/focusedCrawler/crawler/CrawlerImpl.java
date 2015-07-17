@@ -283,7 +283,7 @@ public class CrawlerImpl extends Crawler {
 			try {
 			    
 			    if(urlDownloader.isRedirection())
-			        page = new Page(getUrl(), source, urlDownloader.getResponseHeaders(),(new URL(urlDownloader.getRedirectionUrl())));
+			        page = new Page(getUrl(), source, urlDownloader.getResponseHeaders(),(urlDownloader.getRedirectionUrl()));
 			    else
 			        page = new Page(getUrl(), source, urlDownloader.getResponseHeaders());
 				PaginaURL pageParser = new PaginaURL(page.getURL(),page.getContent());

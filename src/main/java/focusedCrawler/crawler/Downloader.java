@@ -19,7 +19,7 @@ class Downloader {
     public static final Logger logger = LoggerFactory.getLogger(Downloader.class);
 
     private Map<String, List<String>> responseHeaders;
-    private String redirectionURL;
+    private URL redirectionURL;
     private boolean isURLRedirecting = false;
 
     private String content, mimeType;
@@ -46,7 +46,7 @@ class Downloader {
             conn = urlFinal.openConnection();
             responseHeaders = conn.getHeaderFields();
             extractMimeType();
-            redirectionURL = getRedirectedLocation(conn, responseHeaders);
+            redirectionURL = new URL(getRedirectedLocation(conn, responseHeaders));
 
             InputStream in = conn.getInputStream();
             StringBuffer buffer = new StringBuffer();
@@ -89,11 +89,11 @@ class Downloader {
         return isURLRedirecting;
     }
 
-    public String getOriginalUrl() {
-        return originalURL.toString();
+    public URL getOriginalUrl() {
+        return originalURL;
     }
 
-    public String getRedirectionUrl() {
+    public URL getRedirectionUrl() {
         return redirectionURL;
     }
 
@@ -135,8 +135,8 @@ class Downloader {
                                     for (String strings : wholeString) {
                                         redirectingLocation.append(strings);
                                     }
-                                    redirectionURL = redirectingLocation.toString();
-                                    return redirectionURL;
+                                    redirectionURL = new URL(redirectingLocation.toString());
+                                    return redirectingLocation.toString();
                                 }
                             }
                         }
