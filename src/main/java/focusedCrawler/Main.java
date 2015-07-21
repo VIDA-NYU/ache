@@ -39,12 +39,15 @@ import focusedCrawler.util.storage.StorageFactoryException;
 
 public class Main {
     
-    public static final Logger logger = LoggerFactory.getLogger(Main.class);
+	public static final String VERSION = Main.class.getPackage().getImplementationVersion();
+    
+	public static final Logger logger = LoggerFactory.getLogger(Main.class);
     
     private static Options[] allOptions;
     private static String[] commandName;
 
     public static void main(String... args) {
+    	printVersion();
         try {
             CommandLineParser parser = new DefaultParser();
             
@@ -139,6 +142,20 @@ public class Main {
             System.exit(1);
         }
     }
+
+	private static void printVersion() {
+		String header = "ACHE Crawler "+VERSION;
+		for (int i = 0; i < header.length(); i++) {
+			System.out.print("-");
+		}
+		System.out.println();
+		System.out.println(header);
+		for (int i = 0; i < header.length(); i++) {
+			System.out.print("-");
+		}
+		System.out.println();
+		System.out.println();
+	}
 
     private static void printError(ParseException e) {
         System.out.println(e);
