@@ -5,7 +5,7 @@ apply plugin: 'application'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 compileJava.options.encoding = "UTF-8"
-version = '0.3.0'
+version = '0.3.1'
 mainClassName = 'focusedCrawler.Main'
 applicationDefaultJvmArgs = ["-Dname=ache"]
 
