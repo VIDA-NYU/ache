@@ -46,7 +46,7 @@ class Downloader {
             conn = urlFinal.openConnection();
             responseHeaders = conn.getHeaderFields();
             extractMimeType();
-            redirectionURL = new URL(getRedirectedLocation(conn, responseHeaders));
+            getRedirectedLocation(conn, responseHeaders);
 
             InputStream in = conn.getInputStream();
             StringBuffer buffer = new StringBuffer();
