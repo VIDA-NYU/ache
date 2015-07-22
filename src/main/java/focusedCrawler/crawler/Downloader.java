@@ -135,8 +135,15 @@ class Downloader {
                                     for (String strings : wholeString) {
                                         redirectingLocation.append(strings);
                                     }
+                                    String redirectLocation;
+                                    try { 
                                     redirectionURL = new URL(redirectingLocation.toString());
-                                    return redirectingLocation.toString();
+                                    redirectLocation = redirectingLocation.toString();
+                                    } catch (MalformedURLException mex){
+                                        redirectLocation = originalURL.getProtocol() + "://" + originalURL.getHost() + redirectingLocation.toString();
+                                        redirectionURL = new URL(redirectLocation);
+                                    }
+                                    return redirectLocation;
                                 }
                             }
                         }
