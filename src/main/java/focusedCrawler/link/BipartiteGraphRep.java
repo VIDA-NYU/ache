@@ -193,11 +193,9 @@ public class BipartiteGraphRep {
 	
 	public LinkNeighborhood[] getOutlinks(URL url) throws IOException{
 		String urlId = url2id.get(url.toString());
-//		System.out.println("**OUTLINKS**");
-//		System.out.println("**" + strLinks + "**");
 		if(urlId == null){
 			return null;
-		}else{
+		} else {
 			String[] linkIds = hubGraph.get(urlId).split("###");
 			LinkNeighborhood[] lns = new LinkNeighborhood[linkIds.length];
 			for (int i = 0; i < lns.length; i++) {
@@ -227,19 +225,15 @@ public class BipartiteGraphRep {
 	 */
 
 	public BackLinkNeighborhood[] getBacklinks(URL url) throws IOException {
-//		System.out.println(url.getHost());
-//		String strLinks = auths.get(url.getHost());
 		URL normalizedURL = new URL(url.getProtocol(), url.getHost(), "/"); 
 		String urlId = url2id.get(normalizedURL.toString());
 		if(urlId == null){
 			return null;
 		}
-//		System.out.println("**BACKLINKS**"+urlId);
 		String strLinks = authGraph.get(urlId);
-//		System.out.println("**" + strLinks + "**");
 		if(strLinks == null){
 			return null;
-		}else{
+		} else {
 			Vector<BackLinkNeighborhood> tempBacklinks = new Vector<BackLinkNeighborhood> (); 
 			String[] backlinkIds = strLinks.split("###");
 			for (int i = 0; i < backlinkIds.length; i++) {
@@ -262,19 +256,14 @@ public class BipartiteGraphRep {
 
 
 	public LinkNeighborhood[] getBacklinksLN(URL url) throws IOException {
-//		System.out.println(url.getHost());
-//		String strLinks = auths.get(url.getHost());
-//		URL normalizedURL = new URL(url.getProtocol(), url.getHost(), "/"); 
 		String urlId = url2id.get(url.toString());
 		if(urlId == null){
 			return null;
 		}
-//		System.out.println("**BACKLINKS**"+urlId);
 		String strLinks = authGraph.get(urlId);
-//		System.out.println("**" + strLinks + "**");
 		if(strLinks == null){
 			return null;
-		}else{
+		} else {
 			Vector<LinkNeighborhood> tempLNs = new Vector<LinkNeighborhood> (); 
 			String[] linkIds = strLinks.split("###");
 			for (int i = 0; i < linkIds.length; i++) {
@@ -290,8 +279,6 @@ public class BipartiteGraphRep {
 		}
 	}
 
-	
-	
 	/**
 	 * Insert outlinks from hubs 
 	 * @param page
@@ -327,17 +314,15 @@ public class BipartiteGraphRep {
 					if(url_string == null){
 						hubID.put(id, lnURL + ":::");
 					}
-//					System.out.println(">>>>>>>AUTH INSERTING:" + id + "->" + strLinks);
 					authGraph.put(id, strLinks);
 				}
 			}
 		}
 		if(strCurrentLinks == null){
 			strCurrentLinks = buffer.toString();
-		}else{
+		} else {
 			strCurrentLinks =  strCurrentLinks + buffer.toString();
 		}
-//		System.out.println(">>>>>>>HUB INSERTING:" + urlId + "->" + strCurrentLinks);
 		if(!strCurrentLinks.equals("")){
 			hubGraph.put(urlId, strCurrentLinks);	
 		}
@@ -374,7 +359,6 @@ public class BipartiteGraphRep {
 				}else{
 					strLinks = strLinks + urlId + separator;
 				}
-//				System.out.println(">>>>>>>HUB INSERTING:" + id + "->" + strLinks);
 				hubGraph.put(id, strLinks);
 			}
 		}
@@ -383,15 +367,7 @@ public class BipartiteGraphRep {
 		}else{
 			strCurrentLinks =  strCurrentLinks + buffer.toString();
 		}
-//		System.out.println(">>>>>>>AUT INSERTING:" + urlId + "->" + strCurrentLinks);
 		authGraph.put(urlId, strCurrentLinks);	
-		
-		
-//		auths.put(url.getHost(), strCurrentLinks);
-//		auths.commit();
-//		authGraph.commit();
-//		authID.commit();
-//		hubGraph.commit();
 	}
 
 	private String getId(String url){
@@ -405,7 +381,6 @@ public class BipartiteGraphRep {
 			id = newId+"";
 			url2id.put(url, id);
 			url2id.put("MAX", id);
-//			url2id.commit();
 		}
 		return id;
 	}

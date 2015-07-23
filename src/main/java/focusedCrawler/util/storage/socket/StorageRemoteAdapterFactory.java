@@ -20,85 +20,41 @@
 ## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 ##
 ############################################################################
-*/
+ */
 package focusedCrawler.util.storage.socket;
 
-
-
 import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.cache.CacheException;
-import focusedCrawler.util.cache.FactoryException;
-import focusedCrawler.util.distribution.CommunicationException;
 import focusedCrawler.util.storage.AbstractStorageFactory;
 import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.storage.StorageFactory;
 import focusedCrawler.util.storage.StorageFactoryException;
 
-
-
-
-
-
-
-
-
-
-
-
-
 /**
-
+ * 
  * Fabrica de StorageRemoteAdapter
-
  */
-
 public class StorageRemoteAdapterFactory extends AbstractStorageFactory {
 
+	private String remoteHost;
 
+	private int remotePort;
 
-    private String remoteHost;
+	public StorageRemoteAdapterFactory() {
+		super();
+	}
 
-    private int remotePort;
+	public StorageRemoteAdapterFactory(ParameterFile config) throws StorageFactoryException {
+		super(config);
+	}
 
+	private void initParams() throws StorageFactoryException {
+		remoteHost = getConfig().getParam("RMI_STORAGE_SERVER_HOST").trim();
+		remotePort = new Integer(getConfig().getParam("RMI_STORAGE_SERVER_PORT")).intValue();
+	} // initParams
 
+	public synchronized Storage produce() throws StorageFactoryException {
+		initParams();
+		focusedCrawler.util.Log.log("SocketAdapterFactory", "produce", remoteHost + ":" + remotePort);
+		return new StorageRemoteAdapter(remoteHost, remotePort);
+	}
 
-    public StorageRemoteAdapterFactory() {
-
-        super();
-
-    }
-
-
-
-    public StorageRemoteAdapterFactory(ParameterFile config) throws StorageFactoryException {
-
-        super(config);
-
-    }
-
-
-
-    private void initParams() throws StorageFactoryException {
-
-        remoteHost = getConfig().getParam("RMI_STORAGE_SERVER_HOST").trim();
-
-        remotePort = new Integer(getConfig().getParam("RMI_STORAGE_SERVER_PORT")).intValue();
-
-    } //initParams
-
-
-
-    public synchronized Storage produce() throws StorageFactoryException {
-
-        initParams();
-
-        focusedCrawler.util.Log.log("SocketAdapterFactory","produce",remoteHost+":"+remotePort);
-
-        return new StorageRemoteAdapter(remoteHost, remotePort);
-
-    }
-
-
-
-} //class
+} // class

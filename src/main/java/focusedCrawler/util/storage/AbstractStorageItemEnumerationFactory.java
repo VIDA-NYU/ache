@@ -20,75 +20,35 @@
 ## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 ##
 ############################################################################
-*/
+ */
 package focusedCrawler.util.storage;
 
-
-
 import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.cache.CacheException;
-import focusedCrawler.util.cache.FactoryException;
-import focusedCrawler.util.distribution.CommunicationException;
-import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.storage.StorageFactory;
-import focusedCrawler.util.storage.StorageFactoryException;
-
-
-
-
-
-
-
-
-
-
-
 
 /**
-
+ * 
  * Fabrica de StorageRemoteAdapter
-
  */
 
-public abstract class AbstractStorageItemEnumerationFactory implements StorageItemEnumerationFactory {
+public abstract class AbstractStorageItemEnumerationFactory implements
+		StorageItemEnumerationFactory {
 
+	private ParameterFile config;
 
+	public AbstractStorageItemEnumerationFactory() {
+		super();
+	}
 
-    private ParameterFile config;
+	public AbstractStorageItemEnumerationFactory(ParameterFile config) {
+		setConfig(config);
+	}
 
+	public ParameterFile getConfig() {
+		return config;
+	} // getConfig
 
+	public void setConfig(ParameterFile newConfig) {
+		this.config = newConfig;
+	} // setConfig
 
-    public AbstractStorageItemEnumerationFactory() {
-
-        super();
-
-    }
-
-
-
-    public AbstractStorageItemEnumerationFactory(ParameterFile config) {
-
-        setConfig(config);
-
-    }
-
-
-
-    public ParameterFile getConfig() {
-
-        return config;
-
-    } //getConfig
-
-
-
-    public void setConfig(ParameterFile newConfig) {
-
-        this.config = newConfig;
-
-    } //setConfig
-
-
-
-} //class
+} // class

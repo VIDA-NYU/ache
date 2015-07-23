@@ -23,27 +23,20 @@
 */
 package focusedCrawler.link.frontier;
 
-import focusedCrawler.util.cache.CacheException;
-import focusedCrawler.util.cache.StringCacheKey;
-import focusedCrawler.util.persistence.PersistentHashtable;
-import focusedCrawler.link.NeighborhoodPersistent;
-import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.link.classifier.LinkClassifier;
-
-import focusedCrawler.util.parser.LinkNeighborhood;
-
+import java.io.IOException;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Hashtable;
-import java.io.IOException;
+
+import net.sf.ehcache.CacheException;
+import focusedCrawler.link.NeighborhoodPersistent;
+import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierException;
-import java.io.ObjectOutputStream;
-import java.io.FileOutputStream;
-import java.io.FileNotFoundException;
+import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.util.parser.LinkNeighborhood;
+import focusedCrawler.util.persistence.PersistentHashtable;
 
 /**
  * <p> </p>

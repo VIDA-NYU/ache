@@ -23,12 +23,16 @@
 */
 package focusedCrawler.util.storage.socket;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
-
-import java.io.*;
-
-
-
 import java.util.Enumeration;
 
 import focusedCrawler.util.DataNotFoundException;
@@ -37,34 +41,15 @@ import focusedCrawler.util.distribution.CommunicationException;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageException;
 
-
-
-
-
-
-
-
-
-
 public class StorageRemoteAdapter implements Storage {
 
-
-
     private String remoteHost;
-
     private int remotePort;
 
-
-
     public StorageRemoteAdapter(String remoteHost, int remotePort) {
-
         this.remoteHost = remoteHost;
-
         this.remotePort = remotePort;
-
     }
-
-
 
     class RemoteChannel {
 

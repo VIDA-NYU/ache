@@ -23,23 +23,16 @@
 */
 package focusedCrawler.link.frontier;
 
-import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.util.cache.CacheException;
-import focusedCrawler.util.cache.StringCacheKey;
-import focusedCrawler.util.persistence.PersistentHashtable;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.Vector;
-import java.util.HashMap;
-import java.net.InetAddress;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.net.MalformedURLException;
-import java.net.UnknownHostException;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Vector;
+
+import net.sf.ehcache.CacheException;
+import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.util.persistence.PersistentHashtable;
 
 
 public class FrontierFormRepository extends FrontierTargetRepositoryBaseline{

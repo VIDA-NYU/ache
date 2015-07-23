@@ -3,17 +3,12 @@ package focusedCrawler.link.frontier;
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Vector;
 
+import net.sf.ehcache.CacheException;
 import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.util.cache.CacheException;
 import focusedCrawler.util.persistence.PersistentHashtable;
-import focusedCrawler.util.vsm.VSMElement;
-import focusedCrawler.util.vsm.VSMElementComparator;
 
 public class FrontierTargetTopic extends FrontierTargetRepositoryBaseline{
 

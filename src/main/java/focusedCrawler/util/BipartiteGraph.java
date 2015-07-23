@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Iterator;
 
-import focusedCrawler.util.cache.CacheException;
 import focusedCrawler.util.download.UniversalDownloader;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.persistence.PersistentHashtable;
@@ -88,7 +87,7 @@ public class BipartiteGraph {
 
 	}
 
-	public void loadHubs() throws CacheException, IOException{
+	public void loadHubs() throws IOException{
 		Iterator<String> iter = auths.getKeys();
 		while(iter.hasNext()){
 			String url = iter.next();

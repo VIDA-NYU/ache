@@ -23,40 +23,32 @@
 */
 package focusedCrawler.util;
 
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Vector;
+
 import focusedCrawler.link.NeighborhoodPersistent;
-import focusedCrawler.util.cache.CacheException;
-import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
 import focusedCrawler.link.classifier.util.FilterData;
 import focusedCrawler.link.classifier.util.Instance;
 import focusedCrawler.link.classifier.util.WordField;
 import focusedCrawler.link.classifier.util.WordFrequency;
 import focusedCrawler.link.classifier.util.WordFrequencyComparator;
-
 import focusedCrawler.util.parser.LinkNeighborhood;
-
-import focusedCrawler.util.string.StopListArquivo;
-import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.ParameterFile;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.DataOutputStream;
-import java.io.FileOutputStream;
-import java.util.Iterator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Vector;
-import java.util.Collections;
-import java.net.URLEncoder;
-import java.net.URLDecoder;
-
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.PorterStemmer;
+import focusedCrawler.util.string.StopList;
+import focusedCrawler.util.string.StopListArquivo;
 
 public class PerpClassifierRecreator {
 
