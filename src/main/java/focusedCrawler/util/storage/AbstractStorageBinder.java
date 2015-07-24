@@ -20,49 +20,28 @@
 ## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 ##
 ############################################################################
-*/
+ */
 package focusedCrawler.util.storage;
-
-
 
 import focusedCrawler.util.ParameterFile;
 
 public abstract class AbstractStorageBinder implements StorageBinder {
 
+	private ParameterFile config;
 
+	public AbstractStorageBinder() {
+	}
 
-    private ParameterFile config;
+	public AbstractStorageBinder(ParameterFile config) {
+		setConfig(config);
+	}
 
+	public ParameterFile getConfig() {
+		return config;
+	} // getConfig
 
-
-    public AbstractStorageBinder() {
-
-    }
-
-
-
-    public AbstractStorageBinder(ParameterFile config) {
-
-        setConfig(config);
-
-    }
-
-
-
-    public ParameterFile getConfig() {
-
-        return config;
-
-    } //getConfig
-
-
-
-    public void setConfig(ParameterFile newConfig) {
-
-        this.config = newConfig;
-
-    } //setConfig
-
-
+	public void setConfig(ParameterFile newConfig) {
+		this.config = newConfig;
+	} // setConfig
 
 }

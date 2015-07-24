@@ -33,9 +33,7 @@ public abstract class AbstractStorageFactory implements StorageFactory {
 	private ParameterFile config;
 
 	public AbstractStorageFactory() {
-
 		super();
-
 	}
 
 	public AbstractStorageFactory(ParameterFile config) {
