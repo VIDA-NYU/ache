@@ -43,7 +43,7 @@ import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
-import focusedCrawler.target.classifier.TargetClassifierImpl;
+import focusedCrawler.target.classifier.WekaTargetClassifier;
 import focusedCrawler.util.vsm.VSMVector;
 import focusedCrawler.util.vsm.VSMElement;
 
@@ -466,7 +466,7 @@ public class RelevanceFeedback {
   	        Instances insts = new Instances("target_classification", vectorAtt, 1);
   	        insts.setClassIndex(attributes.length);
 
-  	        TargetClassifier targetClassifier = new TargetClassifierImpl(classifier, insts, attributes, stoplist);
+  	        TargetClassifier targetClassifier = new WekaTargetClassifier(classifier, insts, attributes, stoplist);
 
 			
 			RelevanceFeedback rf = new RelevanceFeedback(stoplist, targetClassifier);

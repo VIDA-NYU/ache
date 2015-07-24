@@ -89,7 +89,7 @@ public class ClassifierFactory {
                 params.features_file = basePath.resolve(params.features_file).toString();
                 params.stopwords_file = basePath.resolve(params.stopwords_file).toString();
                 
-                return TargetClassifierImpl.create(params.model_file,
+                return WekaTargetClassifier.create(params.model_file,
                                                    params.features_file,
                                                    params.stopwords_file);
             }
@@ -99,7 +99,7 @@ public class ClassifierFactory {
         }
         
         // create classic weka classifer to maintain compatibility with older versions
-        return TargetClassifierImpl.create(modelPath, stoplist);
+        return WekaTargetClassifier.create(modelPath, stoplist);
     }
 
 }

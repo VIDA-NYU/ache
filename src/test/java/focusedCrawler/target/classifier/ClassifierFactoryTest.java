@@ -27,7 +27,7 @@ public class ClassifierFactoryTest {
 
         TargetClassifier classifier = ClassifierFactory.create(path);
         assertThat(classifier, is(notNullValue()));
-        assertThat(classifier, is(instanceOf(TargetClassifierImpl.class)));
+        assertThat(classifier, is(instanceOf(WekaTargetClassifier.class)));
     }
     
     @Test
@@ -37,7 +37,7 @@ public class ClassifierFactoryTest {
 
         TargetClassifier classifier = ClassifierFactory.create(path, path+"/stoplist.txt");
         assertThat(classifier, is(notNullValue()));
-        assertThat(classifier, is(instanceOf(TargetClassifierImpl.class)));
+        assertThat(classifier, is(instanceOf(WekaTargetClassifier.class)));
     }
 
 }

@@ -53,14 +53,14 @@ import focusedCrawler.util.vsm.VSMVector;
  * @author Luciano Barbosa
  * @version 1.0
  */
-public class TargetClassifierImpl implements TargetClassifier {
+public class WekaTargetClassifier implements TargetClassifier {
 
 	private Classifier classifier;
 	private Instances instances;
 	private String[] attributes;
 	private StopList stoplist;
   
-	public TargetClassifierImpl(Classifier classifier, Instances instances, String[] attributes, StopList stoplist){
+	public WekaTargetClassifier(Classifier classifier, Instances instances, String[] attributes, StopList stoplist){
 		this.classifier = classifier;
 		this.instances = instances;
 		this.attributes = attributes;
@@ -168,7 +168,7 @@ public class TargetClassifierImpl implements TargetClassifier {
             
             StopList stoplist = new StopListArquivo(stopwordsFile);
 
-            return new TargetClassifierImpl(classifier, insts, attributes, stoplist);
+            return new WekaTargetClassifier(classifier, insts, attributes, stoplist);
 
         } catch (FileNotFoundException e) {
             throw new IllegalArgumentException("Could not find file: " + modelFile, e);
