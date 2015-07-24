@@ -26,6 +26,7 @@ package focusedCrawler.link;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -272,7 +273,7 @@ public class LinkStorage extends StorageDefault{
 
         BipartiteGraphManager manager = createBipartiteGraphManager(config, linkClassifier, frontierManager, graphRep);
 
-        LinkMonitor monitor = new LinkMonitor(dataPath + "/" + "data_monitor/frontierpages.csv", dataPath + "/" + "data_monitor/outlinks.csv");
+        LinkMonitor monitor = new LinkMonitor(Paths.get(dataPath,  "data_monitor"));
 
         LinkStorage linkStorage = new LinkStorage(config, manager, frontierManager, monitor);
 

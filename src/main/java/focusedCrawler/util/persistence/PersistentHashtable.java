@@ -52,7 +52,11 @@ public class PersistentHashtable {
 	public PersistentHashtable(String path, int cacheSize) {
 		this.cache = new HashMap<String, String>(cacheSize);
 		try {
-			this.persistentTable = new BerkeleyDBHashTable(new File(path));
+			File file = new File(path);
+			if(!file.exists()) {
+				file.mkdirs();
+			}
+			this.persistentTable = new BerkeleyDBHashTable(file);
 		} catch (EnvironmentLockedException e) {
 			throw new RuntimeException(e);
 		} catch (DatabaseException e) {

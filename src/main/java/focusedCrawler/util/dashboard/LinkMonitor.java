@@ -1,51 +1,47 @@
 package focusedCrawler.util.dashboard;
-import java.util.List;
-import java.lang.String;
-import java.io.*;
 
-public class LinkMonitor
-{
-	private String fPath;
-	private PrintWriter fOutLinks;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.util.List;
+
+public class LinkMonitor {
 	
-  public LinkMonitor(String fileFrontierPages, String fileOutLinks)
-	{
-		try
-		{
-			fPath = fileFrontierPages;
-			fOutLinks = new PrintWriter(fileOutLinks, "UTF-8");
+	private Path fPath;
+	private PrintWriter fOutLinks;
+
+	public LinkMonitor(Path dataMonitorDirectory) {
+		File dataMonitorDir = dataMonitorDirectory.toFile();
+		if (!dataMonitorDir.exists()) {
+			dataMonitorDir.mkdirs();
 		}
-		catch(Exception ex)
-		{
-			ex.printStackTrace();
+		this.fPath = dataMonitorDirectory.resolve("frontierpages.csv");
+		try {
+			Path outlinksPath = dataMonitorDirectory.resolve("outlinks.csv");
+			fOutLinks = new PrintWriter(outlinksPath.toFile(), "UTF-8");
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
 	}
 
-	public void exportOutLinks(List<String> list)
-	{
-		for(String item: list)
+	public void exportOutLinks(List<String> list) {
+		for (String item : list) {
 			fOutLinks.println(item);
+		}
 		fOutLinks.flush();
 	}
 
-  public void exportFrontierPages(List<String> list)
-  {
-		try
-		{
-  		FileWriter f = new FileWriter(fPath, false);
-			for(String item: list)
-			{
+	public void exportFrontierPages(List<String> list) {
+		try {
+			FileWriter f = new FileWriter(fPath.toFile(), false);
+			for (String item : list) {
 				f.write(item + "\n");
 			}
 			f.close();
-		}
-		catch(Exception ex)
-		{
+		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-  }
-  
-  static public void main(String[] args) {
-    //Test here
-  }
+	}
+	
 }

@@ -36,7 +36,6 @@ import focusedCrawler.util.storage.StorageFactoryException;
  * the focusedCrawler
  * </p>
  */
-
 public class Main {
     
 	public static final String VERSION = Main.class.getPackage().getImplementationVersion();
@@ -209,7 +208,6 @@ public class Main {
         String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
         String configPath = getMandatoryOptionValue(cmd, "configDir");
         String seedPath = getMandatoryOptionValue(cmd, "seed");
-        createOutputPathStructure(dataOutputPath);
         AddSeeds.main(new String[] { configPath, seedPath, dataOutputPath });
     }
 
@@ -251,9 +249,6 @@ public class Main {
         String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
         String elasticIndexName = getOptionalOptionValue(cmd, "elasticIndex");
         
-        // set up the data directories
-        createOutputPathStructure(dataOutputPath);
-
         // add seeds
         AddSeeds.main(new String[] { configPath, seedPath, dataOutputPath });
 
@@ -307,31 +302,6 @@ public class Main {
     private static String getOptionalOptionValue(CommandLine cmd, final String optionName){
         String optionValue = cmd.getOptionValue(optionName);
         return optionValue;
-    }
-
-    private static void createOutputPathStructure(String dataOutputPath) {
-        File dataOutput = new File(dataOutputPath);
-        if (dataOutput.exists()) {
-            logger.warn("Data output path already exists, resuming crawl...");
-        } else {
-            dataOutput.mkdirs();
-        }
-
-        new File(dataOutput, "data_monitor").mkdirs();
-        new File(dataOutput, "data_target").mkdirs();
-        new File(dataOutput, "data_negative").mkdirs();
-        new File(dataOutput, "data_url").mkdirs();
-        new File(dataOutput, "data_url/dir").mkdirs();
-        new File(dataOutput, "data_host/").mkdirs();
-        new File(dataOutput, "data_backlinks/").mkdirs();
-        new File(dataOutput, "data_backlinks/dir").mkdirs();
-        new File(dataOutput, "data_backlinks/hubHash").mkdirs();
-        new File(dataOutput, "data_backlinks/authorityHash").mkdirs();
-        new File(dataOutput, "data_backlinks/url").mkdirs();
-        new File(dataOutput, "data_backlinks/auth_id").mkdirs();
-        new File(dataOutput, "data_backlinks/auth_graph").mkdirs();
-        new File(dataOutput, "data_backlinks/hub_id").mkdirs();
-        new File(dataOutput, "data_backlinks/hub_graph").mkdirs();
     }
 
     private static void printUsage() {
