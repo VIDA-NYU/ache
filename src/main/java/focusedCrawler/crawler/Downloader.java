@@ -140,8 +140,8 @@ class Downloader {
                                     redirectionURL = new URL(redirectingLocation.toString());
                                     redirectLocation = redirectingLocation.toString();
                                     } catch (MalformedURLException mex){
-                                        redirectLocation = originalURL.getProtocol() + "://" + originalURL.getHost() + redirectingLocation.toString();
-                                        redirectionURL = new URL(redirectLocation);
+                                        redirectionURL = new URL(originalURL.getProtocol(),originalURL.getHost(),redirectingLocation.toString());
+                                        redirectLocation = redirectionURL.toString();
                                     }
                                     return redirectLocation;
                                 }
