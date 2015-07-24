@@ -23,33 +23,17 @@
 */
 package focusedCrawler.util.storage;
 
-
-
 import focusedCrawler.util.DataNotFoundException;
-import focusedCrawler.util.SelfLoggable;
 import focusedCrawler.util.distribution.CommunicationException;
 
-
-
-
-
 /**
-
  * Implementacao basica de um Storage. Para reduzir a codificacao na criacao de
-
  * um Storage pode-se estender esta classe de forma a re-implementar apenas os
-
  * metodos realmente necessarios.
-
  */
-
 public class StorageDefault implements Storage {
 
-
-
     public StorageDefault() {}
-
-
 
     public synchronized Object insert(Object obj) throws StorageException, CommunicationException {
 

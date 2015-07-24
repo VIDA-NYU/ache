@@ -35,13 +35,17 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.Enumeration;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import focusedCrawler.util.DataNotFoundException;
-import focusedCrawler.util.Log;
 import focusedCrawler.util.distribution.CommunicationException;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageException;
 
 public class StorageRemoteAdapter implements Storage {
+	
+	public static final Logger logger = LoggerFactory.getLogger(StorageRemoteAdapter.class);
 
     private String remoteHost;
     private int remotePort;
@@ -169,15 +173,10 @@ public class StorageRemoteAdapter implements Storage {
 
         try {
 
-            if(Log.log) {
-
-                Log.log("adapter"+remoteHost+"_"+remotePort,
-
+            logger.debug("adapter"+remoteHost+"_"+remotePort,
                         "method["+method_id+"] call_method",
-
                         Thread.currentThread().getName());
 
-            }
 
             Object response=null;
 
@@ -249,15 +248,9 @@ public class StorageRemoteAdapter implements Storage {
 
             t7-=t6; t6-=t5; t5-=t4; t4-=t3; t3-=t2; t2-=t1;
 
-            if(Log.log) {
-
-                Log.log("StorageRemoteAdapter_"+remoteHost+"_"+remotePort,
-
-                        "method["+method_id+"] tempo="+tt,
-
-                        "t2="+t2+", t3="+t3+", t4="+t4+", t5="+t5+", t6="+t6+", t7="+t7+" "+Thread.currentThread().getName());
-
-            }
+            logger.debug("StorageRemoteAdapter_"+remoteHost+"_"+remotePort,
+                         "method["+method_id+"] tempo="+tt,
+                         "t2="+t2+", t3="+t3+", t4="+t4+", t5="+t5+", t6="+t6+", t7="+t7+" "+Thread.currentThread().getName());
 
         }
 
