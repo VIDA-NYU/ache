@@ -54,12 +54,15 @@ public class TargetFileRepository implements TargetRepository {
     private static final Logger logger = LoggerFactory.getLogger(TargetFileRepository.class);
     private Path location;
 
-    
     public TargetFileRepository(String location) {
         this.location = Paths.get(location);
     }
     
     public TargetFileRepository(Path location) {
+    	File directory = location.toFile();
+    	if(!directory.exists()) {
+    		directory.mkdirs();
+    	}
         this.location = location;
     }
 
