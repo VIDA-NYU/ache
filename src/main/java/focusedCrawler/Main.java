@@ -312,12 +312,6 @@ public class Main {
             System.out.println();
         }
 
-        // TODO package the profiles with gradle build or mash them into the
-        // resources
-        // lang detect profile can be downloaded from
-        // https://code.google.com/p/language-detection/wiki/Downloads
-        // TODO: Model path in startTargetStorage?
-
         System.out.println("Examples:\n");
         System.out.println("ache buildModel -c config/sample_config/stoplist.txt -t training_data -o output_model");
         System.out.println("ache addSeeds -o data -c config/sample_config -s config/sample.seeds");
