@@ -119,28 +119,18 @@ class Downloader {
                         for (String s : responseHeaders.keySet()) {
 
                             if (s != null && (s.equals("Content-Type") || s.equals("content-type"))) {
-                                List<String> eachKeyStringSet = responseHeaders.get(s);
-                                StringBuffer mime_type = new StringBuffer();
-                                for (String eachField : eachKeyStringSet) {
-                                    mime_type.append(" " + eachField);
-                                }
-                                mimeType = mime_type.toString();
+                                mimeType = myHttpUrlConnection.getHeaderField(s);
                             }
                             if (s != null && (s.equals("Location") || s.equals("location"))) {
                                 // we have a redirecting URL
                                 isURLRedirecting = true;
-                                List<String> wholeString = responseHeaders.get(s);
-                                if (wholeString.size() > 0) {
-                                    StringBuffer redirectingLocation = new StringBuffer();
-                                    for (String strings : wholeString) {
-                                        redirectingLocation.append(strings);
-                                    }
+                                    String rLocation = myHttpUrlConnection.getHeaderField(s);
                                     String redirectLocation;
                                     try { 
-                                    redirectionURL = new URL(redirectingLocation.toString());
-                                    redirectLocation = redirectingLocation.toString();
+                                    redirectionURL = new URL(rLocation);
+                                    redirectLocation = rLocation;
                                     } catch (MalformedURLException mex){
-                                        redirectionURL = new URL(originalURL.getProtocol(),originalURL.getHost(),redirectingLocation.toString());
+                                        redirectionURL = new URL(originalURL.getProtocol(),originalURL.getHost(),rLocation);
                                         redirectLocation = redirectionURL.toString();
                                     }
                                     return redirectLocation;
@@ -149,12 +139,14 @@ class Downloader {
                         }
                     }
                 }
-            } catch (IOException e) {
+             catch (IOException e) {
                 logger.error("IOException while extracting mime-type and redirection URL",e);
             }
         }
 
         return null;
     }
+
+
 
 }
