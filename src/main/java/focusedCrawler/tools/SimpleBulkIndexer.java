@@ -141,7 +141,8 @@ public class SimpleBulkIndexer {
         try {
             System.out.println(response.getStatusLine());
             HttpEntity entity = response.getEntity();
-            EntityUtils.consume(entity);
+//            EntityUtils.consume(entity);
+            System.out.println(EntityUtils.toString(entity));
         } finally {
             response.close();
         }
