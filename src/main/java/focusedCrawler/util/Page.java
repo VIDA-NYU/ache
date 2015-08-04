@@ -20,127 +20,142 @@
 ## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 ##
 ############################################################################
-*/
+ */
 package focusedCrawler.util;
 
-import java.net.URL;
 import java.io.Serializable;
+import java.net.URL;
+import java.util.List;
+import java.util.Map;
 
 import focusedCrawler.util.parser.PaginaURL;
 
 /**
- * <p>Description: </p>
+ * <p>
+ * Description:
+ * </p>
+ * 
  * @author Luciano Barbosa
  * @version 1.0
  */
+@SuppressWarnings("serial")
+public class Page implements Serializable, Target {
 
-public class Page implements Serializable, Target{
+    private boolean auth = false;
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+    private boolean hub = false;
 
-	private boolean auth = false;
-	
-	private boolean hub = false;
-	
-	private URL url;
+    private URL url;
 
     private String content;
-    
+
     private String cleanContent;
 
     private double relevance;
 
     private PaginaURL pageURL;
-    
-    private String encoding;
-    
-    public Page() {
 
+    private String encoding;
+
+    private URL redirectedURL;
+
+    private Map<String, List<String>> responseHeaders;
+    
+    public Page(URL url, String cont) {
+        this(url, cont, null, null);
+    }
+    
+    public Page(URL url, String cont, Map<String, List<String>> responseHeaders) {
+        this(url, cont, responseHeaders, null);
     }
 
-    public Page(URL url, String cont) {
+    public Page(URL url, String cont, Map<String, List<String>> responseHeaders, URL redirectedURL) {
         this.url = url;
         this.content = cont;
+        this.responseHeaders = responseHeaders;
+        this.redirectedURL = redirectedURL;
     }
 
-
-    public URL getURL(){
+    public URL getURL() {
         return url;
     }
 
-    public String getDomainName(){
+    public String getDomainName() {
         String domain = url.getHost();
         return domain.startsWith("www.") ? domain.substring(4) : domain;
     }
 
-    public String getContent(){
+    public String getContent() {
         return content;
     }
 
-    public String getCleanContent(){
+    public String getCleanContent() {
         return cleanContent;
     }
-    
-    public void setContent(String cont){
+
+    public void setContent(String cont) {
         this.content = cont.toLowerCase();
     }
 
-    public void setCleanContent(String cont){
+    public void setCleanContent(String cont) {
         this.cleanContent = cont.toLowerCase();
     }
 
-    public void setPageURL(PaginaURL page){
+    public void setPageURL(PaginaURL page) {
         this.pageURL = page;
         this.setCleanContent(page.palavras_to_string());
     }
 
-    public void setRelevance(double rel){
+    public void setRelevance(double rel) {
         this.relevance = rel;
     }
 
-    public double getRelevance(){
+    public double getRelevance() {
         return this.relevance;
     }
 
     public String getIdentifier() {
-    	return this.url.toString();
+        return this.url.toString();
     }
 
     public String getSource() {
-    	return this.content;
+        return this.content;
     }
 
-    public PaginaURL getPageURL(){
+    public PaginaURL getPageURL() {
         return this.pageURL;
     }
 
-    public void setEncoding(String enc){
+    public void setEncoding(String enc) {
         this.encoding = enc;
     }
 
-    public String getEncoding(){
+    public String getEncoding() {
         return this.encoding;
     }
 
-	public boolean isAuth() {
-		return auth;
-	}
+    public boolean isAuth() {
+        return auth;
+    }
 
-	public void setAuth(boolean auth) {
-		this.auth = auth;
-	}
+    public void setAuth(boolean auth) {
+        this.auth = auth;
+    }
 
-	public boolean isHub() {
-		return hub;
-	}
+    public boolean isHub() {
+        return hub;
+    }
 
-	public void setHub(boolean hub) {
-		this.hub = hub;
-	}
-
+    public void setHub(boolean hub) {
+        this.hub = hub;
+    }
     
-}
+    protected URL getRedirectedURL() {
+        return redirectedURL;
+    }
+    
+    public Map<String, List<String>> getResponseHeaders() {
+        return responseHeaders;
+    }
 
+}
