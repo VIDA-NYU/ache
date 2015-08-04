@@ -59,32 +59,21 @@ public class Page implements Serializable, Target {
 
     private URL redirectedURL;
 
-    protected URL getRedirectedURL() {
-        return redirectedURL;
-    }
-
     private Map<String, List<String>> responseHeaders;
-
-    public Map<String, List<String>> getResponseHeaders() {
-        return responseHeaders;
+    
+    public Page(URL url, String cont) {
+        this(url, cont, null, null);
     }
-
-    public Page() {
-    }
-
+    
     public Page(URL url, String cont, Map<String, List<String>> responseHeaders) {
         this(url, cont, responseHeaders, null);
     }
 
     public Page(URL url, String cont, Map<String, List<String>> responseHeaders, URL redirectedURL) {
-        this(url, cont);
-        this.responseHeaders = responseHeaders;
-        this.redirectedURL = redirectedURL;
-    }
-
-    public Page(URL url, String cont) {
         this.url = url;
         this.content = cont;
+        this.responseHeaders = responseHeaders;
+        this.redirectedURL = redirectedURL;
     }
 
     public URL getURL() {
@@ -159,6 +148,14 @@ public class Page implements Serializable, Target {
 
     public void setHub(boolean hub) {
         this.hub = hub;
+    }
+    
+    protected URL getRedirectedURL() {
+        return redirectedURL;
+    }
+    
+    public Map<String, List<String>> getResponseHeaders() {
+        return responseHeaders;
     }
 
 }

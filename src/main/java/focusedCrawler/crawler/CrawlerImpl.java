@@ -257,18 +257,14 @@ public class CrawlerImpl extends Crawler {
     	 
      }
 
-
-      /**
-       * This method downloads the URL selected in the selectURL method.
-       */
-
-      protected void downloadUrl() throws CrawlerException {
-            urlFinal = getUrl();
-            urlDownloader = new Downloader(urlFinal,getName());
-            source = urlDownloader.getContent();
-}
-
-
+    /**
+     * This method downloads the URL selected in the selectURL method.
+     */
+    protected void downloadUrl() throws CrawlerException {
+        urlFinal = getUrl();
+        urlDownloader = new Downloader(urlFinal);
+        source = urlDownloader.getContent();
+    }
 
         protected void handleNotFound() throws Exception {
           setJump(true,"Url(insert) '" + getUrl() + "' not found.");
@@ -282,10 +278,14 @@ public class CrawlerImpl extends Crawler {
             setMessage("URL "+getUrl());
 			try {
 			    
-			    if(urlDownloader.isRedirection())
-			        page = new Page(getUrl(), source, urlDownloader.getResponseHeaders(),(urlDownloader.getRedirectionUrl()));
-			    else
+			    if(urlDownloader.isRedirection()) {
+			        page = new Page(getUrl(), source, 
+			                        urlDownloader.getResponseHeaders(),
+			                        urlDownloader.getRedirectionUrl());
+			    } else {
 			        page = new Page(getUrl(), source, urlDownloader.getResponseHeaders());
+			    }
+			    
 				PaginaURL pageParser = new PaginaURL(page.getURL(),page.getContent());
 				page.setPageURL(pageParser);
 				if(relevance > LinkRelevance.DEFAULT_HUB_RELEVANCE && relevance < LinkRelevance.DEFAULT_AUTH_RELEVANCE){

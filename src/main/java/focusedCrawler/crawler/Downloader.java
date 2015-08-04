@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.net.SocketException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
@@ -16,75 +15,84 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 class Downloader {
+    
     public static final Logger logger = LoggerFactory.getLogger(Downloader.class);
 
-    private Map<String, List<String>> responseHeaders;
+    private URL originalURL;
     private URL redirectionURL;
     private boolean isURLRedirecting = false;
+    private Map<String, List<String>> responseHeaders;
+    private String mimeType;
+    private String content;
 
-    private String content, mimeType;
+    public Downloader(String url) throws MalformedURLException, CrawlerException {
+        this(new URL(url));
+    }
 
-    private URL originalURL;
+    public Downloader(URL url) throws CrawlerException {
+        try {
+            URLConnection connection = url.openConnection();
+            connection.connect();
+            
+            this.originalURL = url;
+            this.responseHeaders = connection.getHeaderFields();
+            this.mimeType = connection.getContentType();
+            
+            if(connection instanceof HttpURLConnection){
+                processRedirection((HttpURLConnection) connection, responseHeaders);
+            }
 
-    private String threadName;
-    private URLConnection conn ;
+            this.content = readContent(connection);
+            
+        } catch (IOException e) {
+            throw new CrawlerException("Failed to donwload URL: "+url, e);
+        }
+
+    }
+
+    private String readContent(URLConnection connection) throws IOException {
+        InputStream in = connection.getInputStream();
+        BufferedReader bin = new BufferedReader(new InputStreamReader(in));
+        StringBuffer buffer = new StringBuffer();
+        try {
+            String inputLine;
+            while ((inputLine = bin.readLine()) != null) {
+                buffer.append(inputLine).append("\n");
+            }
+            return buffer.toString();
+        } finally {
+            bin.close();
+        }
+    }
+
+    private void processRedirection(HttpURLConnection httpConnection,
+                                     Map<String, List<String>> responseHeaders)
+                                     throws IOException {
+        
+        int responseCode = httpConnection.getResponseCode();
+        boolean isRedirectionCode = responseCode >= 301 && responseCode <= 307;
+        
+        if (isRedirectionCode && responseHeaders.keySet() != null) {
+            for (String headerKey : responseHeaders.keySet()) {
+                
+                if(headerKey == null) {
+                    continue;
+                }
+
+                if (headerKey.toLowerCase().equals("location")) {
+                    // we have a redirecting URL
+                    String location = httpConnection.getHeaderField(headerKey);
+                    this.redirectionURL = new URL(originalURL, location);
+                    this.isURLRedirecting = true;
+                }
+            }
+        }
+    }
 
     protected Map<String, List<String>> getResponseHeaders() {
         return responseHeaders;
     }
-
-    public Downloader(String url, String threadName) throws MalformedURLException, CrawlerException {
-        this(new URL(url), threadName);
-    }
-
-    public Downloader(URL urlFinal, String threadName) throws CrawlerException {
-        try {
-
-            this.threadName = threadName;
-            originalURL = urlFinal;
-
-            conn = urlFinal.openConnection();
-            responseHeaders = conn.getHeaderFields();
-            extractMimeType();
-            getRedirectedLocation(conn, responseHeaders);
-
-            InputStream in = conn.getInputStream();
-            StringBuffer buffer = new StringBuffer();
-            BufferedReader bin = new BufferedReader(new InputStreamReader(in));
-            String inputLine;
-
-            try {
-                while ((inputLine = bin.readLine()) != null) {
-                    buffer.append(inputLine).append("\n");
-                }
-            } catch (IOException ioe) {
-                bin.close();
-                logger.error("IOException while downloading the page: ", ioe);
-            }
-            bin.close();
-            content = buffer.toString();
-
-        } catch (MalformedURLException exc) {
-            throw new CrawlerException(threadName + ":" + exc.getMessage(), exc);
-        } catch (SocketException exc) {
-            throw new CrawlerException(threadName + ":" + exc.getMessage(), exc);
-        } catch (IOException exc) {
-            throw new CrawlerException(threadName + ":" + exc.getMessage(), exc);
-        } catch (Exception exc) {
-            throw new CrawlerException(threadName + ":" + exc.getMessage(), exc);
-        }
-
-    }
-
-    private void extractMimeType() {
-
-        
-        if(conn instanceof HttpURLConnection){
-            mimeType = conn.getContentType();
-        }
-
-    }
-
+    
     public boolean isRedirection() {
         return isURLRedirecting;
     }
@@ -104,49 +112,5 @@ class Downloader {
     public String getMimeType() {
         return mimeType;
     }
-
-    public String getRedirectedLocation(URLConnection conn,
-            Map<String, List<String>> responseHeaders) {
-        if (conn instanceof HttpURLConnection) {
-            HttpURLConnection myHttpUrlConnection = (HttpURLConnection) conn;
-            int responseCode;
-            try {
-                responseCode = myHttpUrlConnection.getResponseCode();
-                if (responseCode == 301 || responseCode == 302 || responseCode == 303
-                        || responseCode == 304 || responseCode == 305 || responseCode == 306
-                        || responseCode == 307) {
-                    if (responseHeaders.keySet() != null) {
-                        for (String s : responseHeaders.keySet()) {
-
-                            if (s != null && (s.equals("Content-Type") || s.equals("content-type"))) {
-                                mimeType = myHttpUrlConnection.getHeaderField(s);
-                            }
-                            if (s != null && (s.equals("Location") || s.equals("location"))) {
-                                // we have a redirecting URL
-                                isURLRedirecting = true;
-                                    String rLocation = myHttpUrlConnection.getHeaderField(s);
-                                    String redirectLocation;
-                                    try { 
-                                    redirectionURL = new URL(rLocation);
-                                    redirectLocation = rLocation;
-                                    } catch (MalformedURLException mex){
-                                        redirectionURL = new URL(originalURL.getProtocol(),originalURL.getHost(),rLocation);
-                                        redirectLocation = redirectionURL.toString();
-                                    }
-                                    return redirectLocation;
-                                }
-                            }
-                        }
-                    }
-                }
-             catch (IOException e) {
-                logger.error("IOException while extracting mime-type and redirection URL",e);
-            }
-        }
-
-        return null;
-    }
-
-
 
 }
