@@ -7,8 +7,6 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-import focusedCrawler.target.detector.TitleRegexTargetClassifier;
-
 public class ClassifierFactoryTest {
 
     @Test
@@ -16,7 +14,7 @@ public class ClassifierFactoryTest {
         // given
         String path = ClassifierFactoryTest.class.getResource("url_regex_classifier_config/").getPath();
 
-        TargetClassifier classifier = ClassifierFactory.create(path);
+        TargetClassifier classifier = TargetClassifierFactory.create(path);
         assertThat(classifier, is(notNullValue()));
         assertThat(classifier, is(instanceOf(UrlRegexTargetClassifier.class)));
     }
@@ -26,7 +24,7 @@ public class ClassifierFactoryTest {
         // given
         String path = ClassifierFactoryTest.class.getResource("title_regex_classifier_config/").getPath();
 
-        TargetClassifier classifier = ClassifierFactory.create(path);
+        TargetClassifier classifier = TargetClassifierFactory.create(path);
         assertThat(classifier, is(notNullValue()));
         assertThat(classifier, is(instanceOf(TitleRegexTargetClassifier.class)));
     }
@@ -37,7 +35,7 @@ public class ClassifierFactoryTest {
         // given
         String path = ClassifierFactoryTest.class.getResource("weka_classifier_config/").getPath();
 
-        TargetClassifier classifier = ClassifierFactory.create(path);
+        TargetClassifier classifier = TargetClassifierFactory.create(path);
         assertThat(classifier, is(notNullValue()));
         assertThat(classifier, is(instanceOf(WekaTargetClassifier.class)));
     }
@@ -47,7 +45,7 @@ public class ClassifierFactoryTest {
         // given
         String path = ClassifierFactoryTest.class.getResource("old_classifier_config/").getPath();
 
-        TargetClassifier classifier = ClassifierFactory.create(path, path+"/stoplist.txt");
+        TargetClassifier classifier = TargetClassifierFactory.create(path, path+"/stoplist.txt");
         assertThat(classifier, is(notNullValue()));
         assertThat(classifier, is(instanceOf(WekaTargetClassifier.class)));
     }

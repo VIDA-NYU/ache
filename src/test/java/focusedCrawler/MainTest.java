@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 
 import org.junit.Test;
 
-import focusedCrawler.target.classifier.ClassifierFactory;
+import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.util.Page;
@@ -48,7 +48,7 @@ public class MainTest {
             String modelPath = mainOutput;
             String stopWordsFile = "config/sample_config/stoplist.txt";
 
-            TargetClassifier tc = ClassifierFactory.create(modelPath, stopWordsFile);
+            TargetClassifier tc = TargetClassifierFactory.create(modelPath, stopWordsFile);
             assertEquals("Unable to classify a positive page using the model! ", true,
                     (tc.classify(samplePositivePage)));
             assertEquals("Unable to classify a positive page using the model! ", false,

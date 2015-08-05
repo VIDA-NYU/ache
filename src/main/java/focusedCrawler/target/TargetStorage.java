@@ -9,7 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.TargetStorageConfig;
-import focusedCrawler.target.classifier.ClassifierFactory;
+import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
@@ -163,7 +163,7 @@ public class TargetStorage extends StorageDefault {
         //if one wants to use a classifier
         TargetClassifier targetClassifier = null;
         if(config.isUseClassifier()){
-            targetClassifier = ClassifierFactory.create(modelPath, configPath+"/stoplist.txt");
+            targetClassifier = TargetClassifierFactory.create(modelPath, configPath+"/stoplist.txt");
         }
 
         Path targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory());

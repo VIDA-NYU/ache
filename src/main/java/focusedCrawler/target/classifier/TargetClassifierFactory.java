@@ -13,11 +13,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
-import focusedCrawler.target.detector.TitleRegexTargetClassifier;
-
-public class ClassifierFactory {
+public class TargetClassifierFactory {
     
-    private static final Logger logger = LoggerFactory.getLogger(ClassifierFactory.class);
+    private static final Logger logger = LoggerFactory.getLogger(TargetClassifierFactory.class);
 
     static class WekaClassifierConfig {
         public String features_file = "pageclassifier.features";
