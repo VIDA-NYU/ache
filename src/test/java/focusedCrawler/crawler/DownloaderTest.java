@@ -2,6 +2,7 @@ package focusedCrawler.crawler;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 import java.net.URL;
@@ -23,6 +24,21 @@ public class DownloaderTest {
         assertThat(downloader.isRedirection(), is(true));
         assertThat(downloader.getOriginalUrl(), is(originalUrl));
         assertThat(downloader.getRedirectionUrl(), is(expectedRedirectedUrl));
+        assertThat(downloader.getMimeType(), containsString("text/html"));
+    }
+    
+    @Test
+    public void shouldWorkWhenRedirectionsDoesntHappen() throws Exception {
+        // given
+        URL originalUrl = new URL("http://www.nyu.edu");
+
+        // when
+        Downloader downloader = new Downloader(originalUrl);
+
+        // then
+        assertThat(downloader.isRedirection(), is(false));
+        assertThat(downloader.getOriginalUrl(), is(originalUrl));
+        assertThat(downloader.getRedirectionUrl(), is(nullValue()));
         assertThat(downloader.getMimeType(), containsString("text/html"));
     }
 
