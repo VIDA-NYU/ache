@@ -6,8 +6,6 @@ import focusedCrawler.util.ParameterFile;
 public class TargetStorageConfig {
     
     private final boolean useClassifier;
-    private final boolean useRegex;
-    private final String regex;
     private final String targetStorageDirectory;
     private final String negativeStorageDirectory;
     private final String dataFormat;
@@ -31,8 +29,6 @@ public class TargetStorageConfig {
 
     public TargetStorageConfig(ParameterFile params) {
         this.useClassifier = params.getParamBoolean("USE_CLASSIFIER");
-        this.useRegex = params.getParamBoolean("USE_REGEX_BASED_DETECTOR");
-        this.regex = params.getParam("REGEX");
         this.targetStorageDirectory = params.getParam("TARGET_STORAGE_DIRECTORY");
         this.negativeStorageDirectory = params.getParam("NEGATIVE_STORAGE_DIRECTORY");
         this.dataFormat = params.getParamOrDefault("DATA_FORMAT", "FILE");
@@ -56,14 +52,6 @@ public class TargetStorageConfig {
 
     public boolean isUseClassifier() {
         return useClassifier;
-    }
-
-    public boolean isUseRegex() {
-        return useRegex;
-    }
-
-    public String getRegex() {
-        return regex;
     }
 
     public String getTargetStorageDirectory() {

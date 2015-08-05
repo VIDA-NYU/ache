@@ -12,7 +12,6 @@ import focusedCrawler.config.TargetStorageConfig;
 import focusedCrawler.target.classifier.ClassifierFactory;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
-import focusedCrawler.target.detector.RegexBasedDetector;
 import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.LangDetection;
 import focusedCrawler.util.Page;
@@ -38,7 +37,6 @@ public class TargetStorage extends StorageDefault {
     private TargetRepository negativeRepository;
     private Storage linkStorage;
     private TargetClassifier targetClassifier;
-    private RegexBasedDetector regexDetector;
     private TargetStorageConfig config;
     private LangDetection langDetect = new LangDetection();
     private TargetMonitor monitor;
@@ -56,11 +54,6 @@ public class TargetStorage extends StorageDefault {
         this.linkStorage = linkStorage;
         this.config = config;
         this.monitor = monitor;
-        
-        //if one wants to use regex based classifier
-        if (config.isUseRegex()) {
-            this.regexDetector = new RegexBasedDetector(config.getRegex());
-        }
     }
 
     /**
@@ -78,29 +71,7 @@ public class TargetStorage extends StorageDefault {
     	boolean isRelevant;
     	double prob;
         try {
-        ///////////////////IF USING REGEX INSTEAD OF CLASSIFIER/////////////////////////////
-          if(regexDetector != null){
-              isRelevant = regexDetector.detect(page);
-              if (isRelevant) {
-                  prob = 1.0;
-                  page.setRelevance(prob);
-                  logger.info("\n> PROCESSING: " + page.getIdentifier() + "\n> PROB:" + prob);
-                  targetRepository.insert(page);
-                  linkStorage.insert(page);
-              }
-              else{
-                  prob = 0.0;
-                  page.setRelevance(prob);
-                  
-                  if (config.isSaveNegativePages()){
-                      negativeRepository.insert(page);
-                  }
-              }
-          }
-	      ////////////////END USING REGEX////////////////////////////////////////////////
-          else {
-          ////////////////IF USING CLASSIFIER////////////////////////////////////////
-          if(targetClassifier != null){
+          if(targetClassifier != null) {
               prob = targetClassifier.distributionForInstance(page)[0];
               page.setRelevance(prob);
               
@@ -131,7 +102,6 @@ public class TargetStorage extends StorageDefault {
                       }
                   }
               }
-          //////////////////END USING CLASSIFIER//////////////////////////////////////////
           } else{
                   isRelevant = true;
                   prob = 1.0;
@@ -141,8 +111,7 @@ public class TargetStorage extends StorageDefault {
                   linkStorage.insert(page);
                   targetRepository.insert(page, monitor.getTotalOfPages());
           }
-		  }
-          
+		  
           monitor.countPage(page, isRelevant, prob);
           
           if(monitor.getTotalOfPages() > config.getVisitedPageLimit()){

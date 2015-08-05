@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
+import focusedCrawler.target.detector.TitleRegexTargetClassifier;
+
 public class ClassifierFactory {
     
     private static final Logger logger = LoggerFactory.getLogger(ClassifierFactory.class);
@@ -27,6 +29,10 @@ public class ClassifierFactory {
         public List<String> regular_expressions;
         public String whitelist_file;
         public String blacklist_file;
+    }
+    
+    static class TitleRegexClassifierConfig {
+        public String regular_expression;
     }
 
     public static TargetClassifier create(String modelPath) throws IOException {
@@ -78,8 +84,23 @@ public class ClassifierFactory {
                     return UrlRegexTargetClassifier.fromBlacklistFile(params.blacklist_file);
                 }
                 
-                throw new IllegalArgumentException("Config file has missing values: "
-                                                   + Paths.get(modelPath, "/pageclassifier.yml"));
+                throw new IllegalArgumentException("Config for url_regex classifier has "
+                        + "missing or wrong values in file: "
+                        + Paths.get(modelPath, "/pageclassifier.yml"));
+            }
+            
+            if("title_regex".equals(classifierType)) {
+                
+                TitleRegexClassifierConfig params = yaml.treeToValue(parameters,
+                        TitleRegexClassifierConfig.class);
+                
+                if(params.regular_expression != null && !params.regular_expression.trim().isEmpty()) {
+                    return new TitleRegexTargetClassifier(params.regular_expression.trim());
+                }
+                
+                throw new IllegalArgumentException("Config for title_regex classifier has "
+                        + "missing or wrong values in file: "
+                        + Paths.get(modelPath, "/pageclassifier.yml"));
             }
             
             if("weka".equals(classifierType)) {

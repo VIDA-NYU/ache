@@ -7,6 +7,8 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
+import focusedCrawler.target.detector.TitleRegexTargetClassifier;
+
 public class ClassifierFactoryTest {
 
     @Test
@@ -17,6 +19,16 @@ public class ClassifierFactoryTest {
         TargetClassifier classifier = ClassifierFactory.create(path);
         assertThat(classifier, is(notNullValue()));
         assertThat(classifier, is(instanceOf(UrlRegexTargetClassifier.class)));
+    }
+    
+    @Test
+    public void shouldCreateTitleRegexClassifier() throws Exception {
+        // given
+        String path = ClassifierFactoryTest.class.getResource("title_regex_classifier_config/").getPath();
+
+        TargetClassifier classifier = ClassifierFactory.create(path);
+        assertThat(classifier, is(notNullValue()));
+        assertThat(classifier, is(instanceOf(TitleRegexTargetClassifier.class)));
     }
     
     
