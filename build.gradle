@@ -2,6 +2,7 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'application'
 apply plugin: "jacoco"
+apply plugin: 'com.github.kt3k.coveralls'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -11,7 +12,6 @@ mainClassName = 'focusedCrawler.Main'
 applicationDefaultJvmArgs = ["-Dname=ache"]
 
 repositories {
-    // TODO all of the things in lib, should come from here
     mavenCentral()
     maven { url "http://download.oracle.com/maven/" } // for BerkeleyDB
 }
@@ -52,6 +52,10 @@ dependencies {
 
 // TODO create binary for running focusedCrawler.link.LinkStorage, focusedCrawler.crawler.CrawlerManager, focusedCrawler.link.frontier.AddSeeds
 
+
+//
+// Adds version to final JAR artifact
+//
 jar {
   manifest {
     attributes(
@@ -61,6 +65,10 @@ jar {
   }
 }
 
+
+//
+// Copies config folder into final distribution file
+//
 task copyConfig {
     def f = file("$buildDir/config")
     outputs.dir f
@@ -71,7 +79,25 @@ task copyConfig {
         }
     }
 }
- 
 applicationDistribution.from(copyConfig) {
     into "config"
+}
+
+
+//
+// Integration for test coverage service: coveralls
+//
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.4.0'
+    }
+}
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
 }
