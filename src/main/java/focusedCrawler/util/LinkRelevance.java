@@ -28,20 +28,14 @@ import java.net.URL;
 
 import com.google.common.net.InternetDomainName;
 
+@SuppressWarnings("serial")
 public class LinkRelevance implements Serializable {
 
-    /**
-	 * 
-	 */
-    private static final long serialVersionUID = 1349218562528024956L;
-
-    private URL url;
-
-    private double relevance;
-
     public static double DEFAULT_HUB_RELEVANCE = 100;
-
     public static double DEFAULT_AUTH_RELEVANCE = 200;
+
+    private final URL url;
+    private final double relevance;
 
     public LinkRelevance(URL url, double relevance) {
         this.url = url;
@@ -52,6 +46,10 @@ public class LinkRelevance implements Serializable {
         return url;
     }
 
+    public double getRelevance() {
+        return relevance;
+    }
+    
     public InternetDomainName getDomainName() {
         String host = url.getHost();
         InternetDomainName domain = InternetDomainName.from(host);
@@ -61,7 +59,7 @@ public class LinkRelevance implements Serializable {
             return domain;
         }
     }
-
+    
     public String getTopLevelDomainName() {
         InternetDomainName domain = this.getDomainName();
         try {
@@ -74,14 +72,6 @@ public class LinkRelevance implements Serializable {
         } catch (Exception e) {
             throw new IllegalStateException("Invalid top private domain name=["+domain+"] in URL=["+url+"]", e);
         }
-    }
-
-    public double getRelevance() {
-        return relevance;
-    }
-
-    public void setRelevance(double rel) {
-        this.relevance = rel;
     }
 
 }
