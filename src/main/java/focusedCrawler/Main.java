@@ -20,6 +20,7 @@ import org.slf4j.LoggerFactory;
 import weka.classifiers.functions.SMO;
 import focusedCrawler.crawler.CrawlerManager;
 import focusedCrawler.crawler.CrawlerManagerException;
+import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.frontier.AddSeeds;
@@ -269,18 +270,19 @@ public class Main {
             String crawlerConfigFile = configPath + "/crawler/crawler.cfg";
 
             // start crawl manager
-            CrawlerManager manager = CrawlerManager.createCrawlerManager(crawlerConfigFile,
-                    linkStorage, targetStorage);
-            manager.start();
+//            CrawlerManager manager = CrawlerManager.createCrawlerManager(crawlerConfigFile, linkStorage, targetStorage);
+//            manager.start();
 
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, (LinkStorage) linkStorage);
+            crawler.run();
         }
         
         catch (StorageFactoryException e) {
             logger.error("Problem while creating TargetStorage", e);
         }
-        catch (CrawlerManagerException e) {
-            logger.error("Problem while creating CrawlerManager", e);
-        }
+//        catch (CrawlerManagerException e) {
+//            logger.error("Problem while creating CrawlerManager", e);
+//        }
         catch (LinkClassifierFactoryException | FrontierPersistentException  e) {
             logger.error("Problem while creating LinkStorage", e);
         }
