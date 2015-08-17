@@ -23,27 +23,24 @@
 */
 package focusedCrawler.link.classifier.builder.wrapper;
 
-import focusedCrawler.link.classifier.util.Instance;
-import focusedCrawler.link.classifier.util.WordField;
-import focusedCrawler.util.Page;
-import focusedCrawler.util.parser.PaginaURL;
-import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.string.PorterStemmer;
-import focusedCrawler.util.parser.LinkNeighborhood;
-
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.Set;
 import java.util.Iterator;
+import java.util.Set;
 import java.util.Vector;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileNotFoundException;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.util.Vector;
+
+import focusedCrawler.link.classifier.util.Instance;
+import focusedCrawler.link.classifier.util.WordField;
+import focusedCrawler.util.Page;
+import focusedCrawler.util.parser.LinkNeighborhood;
+import focusedCrawler.util.parser.PaginaURL;
+import focusedCrawler.util.string.PorterStemmer;
+import focusedCrawler.util.string.StopList;
 
 /**
  * <p>Description: This class from a predefined set of words extracts for
@@ -133,32 +130,32 @@ public class WrapperNeighborhoodLinks {
    * @throws MalformedURLException
    */
 
-  public HashMap extractLinks(PaginaURL page, String[] features) throws MalformedURLException {
-    HashMap linkFields = extractLinks(page);
+  public HashMap<String, Instance> extractLinks(PaginaURL page, String[] features) throws MalformedURLException {
+    HashMap<String, WordField[]> linkFields = extractLinks(page);
     return mapFeatures(linkFields, features);
   }
 
 
-  public HashMap extractLinks(LinkNeighborhood[] linkNeighboors, String[] features) throws MalformedURLException {
-    HashMap linkFields = extractLinks(linkNeighboors);
+  public HashMap<String, Instance> extractLinks(LinkNeighborhood[] linkNeighboors, String[] features) throws MalformedURLException {
+    HashMap<String, WordField[]> linkFields = extractLinks(linkNeighboors);
     return mapFeatures(linkFields, features);
   }
 
-  public HashMap extractLinks(LinkNeighborhood linkNeighboor, String[] features) throws MalformedURLException {
-    HashMap linkFields = extractLinks(linkNeighboor);
+  public HashMap<String, Instance> extractLinks(LinkNeighborhood linkNeighboor, String[] features) throws MalformedURLException {
+    HashMap<String, WordField[]> linkFields = extractLinks(linkNeighboor);
 //    System.out.println(">>>MAPPING...");
     return mapFeatures(linkFields, features);
   }
 
-  public HashMap extractLinksFull(LinkNeighborhood linkNeighboor, String[] features) throws MalformedURLException {
+  public HashMap<String, Instance> extractLinksFull(LinkNeighborhood linkNeighboor, String[] features) throws MalformedURLException {
 //	  System.out.println(">>" + linkNeighboor.getLink().toString());
-	  HashMap linkFields = extractLinksFull(linkNeighboor);
+	  HashMap<String, WordField[]> linkFields = extractLinksFull(linkNeighboor);
 	  return mapFeatures(linkFields, features);
   }
 
-  private HashMap mapFeatures(HashMap linkFields, String[] features){
-    HashMap result = new HashMap();
-    Iterator wordsFields = linkFields.keySet().iterator();
+  private HashMap<String, Instance> mapFeatures(HashMap<String, WordField[]> linkFields, String[] features){
+    HashMap<String, Instance> result = new HashMap<String, Instance>();
+    Iterator<String> wordsFields = linkFields.keySet().iterator();
 
     while (wordsFields.hasNext()) {
       Instance instance = new Instance(features);
@@ -175,7 +172,7 @@ public class WrapperNeighborhoodLinks {
 //        		System.out.println("D1:" + wordField.getWord());
 //        	}
         	
-        	Vector wordsTemp = searchSubstring(wordField.getWord(),wordField.getField());
+        	Vector<String> wordsTemp = searchSubstring(wordField.getWord(),wordField.getField());
         	for (int i = 0; i < wordsTemp.size(); i++) {
         		word = (String)wordsTemp.elementAt(i);
         		word = field + "_"  + word;
@@ -212,9 +209,9 @@ public class WrapperNeighborhoodLinks {
 	    return new_word;
 	  }
 
-    private Vector searchSubstring(String word, int field){
+    private Vector<String> searchSubstring(String word, int field){
 
-     Vector result = new Vector();
+     Vector<String> result = new Vector<String>();
      String[] words = fieldWords[field];
      for (int i = 0; i < words.length; i++) {
     	 String tempWord = words[i]; 
@@ -231,9 +228,9 @@ public class WrapperNeighborhoodLinks {
    }
 
     
-    private  HashMap extractLinksFull(LinkNeighborhood ln) throws  MalformedURLException {
-    	HashMap result = new HashMap();
-    	Vector words = new Vector();
+    private  HashMap<String, WordField[]> extractLinksFull(LinkNeighborhood ln) throws  MalformedURLException {
+    	HashMap<String, WordField[]> result = new HashMap<String, WordField[]>();
+    	Vector<WordField> words = new Vector<WordField>();
     	String urlStr = ln.getLink().toString();
     	getURLWords(urlStr, words);
     	if(ln.getImgSrc() != null){
@@ -267,9 +264,9 @@ public class WrapperNeighborhoodLinks {
     }
 
     
-   private  HashMap extractLinks(LinkNeighborhood ln) throws MalformedURLException {
-	   HashMap result = new HashMap();
-	   Vector words = new Vector();
+   private  HashMap<String, WordField[]> extractLinks(LinkNeighborhood ln) throws MalformedURLException {
+	   HashMap<String, WordField[]> result = new HashMap<String, WordField[]>();
+	   Vector<WordField> words = new Vector<WordField>();
 	   String urlStr = ln.getLink().toString();
 	   getURLWords(urlStr, words);
 	   String[] anchor = ln.getAnchor();
@@ -289,11 +286,11 @@ public class WrapperNeighborhoodLinks {
 	   return result;
   }
 
-   private  HashMap extractLinks(LinkNeighborhood[] linkNeighboors) throws
+   private  HashMap<String, WordField[]> extractLinks(LinkNeighborhood[] linkNeighboors) throws
       MalformedURLException {
-	   HashMap result = new HashMap();
+	   HashMap<String, WordField[]> result = new HashMap<String, WordField[]>();
 	   for (int i = 0; i < linkNeighboors.length; i++) {
-		   Vector words = new Vector();
+		   Vector<WordField> words = new Vector<WordField>();
 		   LinkNeighborhood ln = linkNeighboors[i];
 		   String urlStr = ln.getLink().toString();
 		   getURLWords(urlStr,words);
@@ -315,7 +312,7 @@ public class WrapperNeighborhoodLinks {
 	   return result;
    }
 
-   private HashMap extractLinks(PaginaURL pageParser) throws
+   private HashMap<String, WordField[]> extractLinks(PaginaURL pageParser) throws
       MalformedURLException {
 
     LinkNeighborhood[] linkNeighboors = pageParser.getLinkNeighboor();
@@ -335,7 +332,7 @@ public class WrapperNeighborhoodLinks {
       MalformedURLException {
     String pageStr = page.getContent();
     PaginaURL pageParser = new PaginaURL(page.getURL(),pageStr, stoplist);
-    HashMap result = extractLinks(pageParser);
+    HashMap<String, WordField[]> result = extractLinks(pageParser);
     WordField[] words = (WordField[])result.get(link);
     return  words;
   }
@@ -362,7 +359,7 @@ public class WrapperNeighborhoodLinks {
    * @throws MalformedURLException
    */
 
-  private void getURLWords(String urlStr,Vector wordsFields) throws  MalformedURLException {
+  private void getURLWords(String urlStr, Vector<WordField> wordsFields) throws  MalformedURLException {
 
 	  URL url = new URL(urlStr);
 	  String host = url.getHost();
