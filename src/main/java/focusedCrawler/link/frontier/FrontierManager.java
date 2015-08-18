@@ -65,10 +65,6 @@ public class FrontierManager {
         return this.frontier;
     }
 
-    public void loadQueue() throws FrontierPersistentException {
-        loadQueue(linksToLoad);
-    }
-
     public void clearFrontier() {
         logger.info("Cleaning frontier... current queue size: " + priorityQueue.size());
         priorityQueue.clear();
@@ -110,10 +106,7 @@ public class FrontierManager {
     public void insert(LinkRelevance[] linkRelevance) throws FrontierPersistentException {
         for (int i = 0; i < linkRelevance.length; i++) {
             LinkRelevance elem = linkRelevance[i];
-            boolean insert = isRelevant(elem);
-            if (insert) {
-                frontier.insert(elem);
-            }
+            this.insert(elem);
         }
     }
 
