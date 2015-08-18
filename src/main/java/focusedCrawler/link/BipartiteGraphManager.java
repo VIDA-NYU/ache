@@ -107,20 +107,31 @@ public class BipartiteGraphManager {
 	}
 	
     public String insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException {
+        
         String outLinks = page.getIdentifier() + "\t1.0\t" + String.valueOf(System.currentTimeMillis() / 1000L);
+        
         PaginaURL parsedPage = page.getPageURL();
         parsedPage.setRelevance(page.getRelevance());
+        
         LinkRelevance[] linksRelevance = outlinkClassifier.classify(parsedPage);
+        
         ArrayList<LinkRelevance> temp = new ArrayList<LinkRelevance>();
         HashSet<String> relevantURLs = new HashSet<String>();
+        
         for (int i = 0; i < linksRelevance.length; i++) {
+            
             if (frontierManager.isRelevant(linksRelevance[i])) {
+                
                 String url = linksRelevance[i].getURL().toString();
+                
                 if (!relevantURLs.contains(url)) {
+                    
                     String domain = linksRelevance[i].getTopLevelDomainName();
                     Integer domainCount = domainCounter.get(domain);
+                    
                     if (domainCount == null)
                         domainCount = 0;
+                    
                     if (domainCount < maxPages) {// Stop Condition
                         domainCount++;
                         domainCounter.put(domain, domainCount);
@@ -128,19 +139,23 @@ public class BipartiteGraphManager {
                         temp.add(linksRelevance[i]);
                         outLinks += "\t" + url;
                     }
+                    
                 }
             }
         }
 
         LinkRelevance[] filteredLinksRelevance = temp.toArray(new LinkRelevance[relevantURLs.size()]);
+        
         LinkNeighborhood[] lns = parsedPage.getLinkNeighboor();
         for (int i = 0; i < lns.length; i++) {
             if (!relevantURLs.contains(lns[i].getLink().toString())) {
                 lns[i] = null;
             }
         }
+        
         rep.insertOutlinks(page.getURL(), lns);
         frontierManager.insert(filteredLinksRelevance);
+        
         if (count == pagesToCommit) {
             rep.commit();
             count = 0;
