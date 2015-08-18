@@ -3,7 +3,6 @@ package focusedCrawler.link.frontier;
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Vector;
 
@@ -11,31 +10,28 @@ import net.sf.ehcache.CacheException;
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
 
-public class FrontierTargetRepository extends FrontierTargetRepositoryBaseline{
+public class FrontierTargetRepository implements LinkSelectionStrategy {
 
-	public FrontierTargetRepository(PersistentHashtable urlRelevance,
-			HashMap<String,Integer> scope) {
-		super(urlRelevance, scope);
+	private final PersistentHashtable urlRelevance;
 
+    public FrontierTargetRepository(PersistentHashtable urlRelevance) {
+        this.urlRelevance = urlRelevance;
 	}
 
-	public FrontierTargetRepository(PersistentHashtable urlRelevance, int pagesPerSite) {
-		super(urlRelevance,pagesPerSite);
-	}
-
-	public LinkRelevance[] select(int numberOfLinks) throws	FrontierPersistentException {
+	@Override
+	public LinkRelevance[] select(int numberOfLinks) {
 //		HashMap<Integer, Integer> queue = new HashMap<Integer, Integer>();
 		LinkRelevance[] result = null;
 		int[] classLimits = new int[]{10000,20000,30000};
 		int[] countTopClass = new int[classLimits.length];
 		int[] classCount = new int[classLimits.length];
 		try {
-			Iterator keys = urlRelevance.getKeys();
+			Iterator<String> keys = urlRelevance.getKeys();
 			Vector<LinkRelevance> tempList = new Vector<LinkRelevance>();
 			int count = 0;
-			for (int i = 0; count < numberOfLinks && keys.hasNext(); i++) {
+			for (; count < numberOfLinks && keys.hasNext();) {
 				String key = ((String)keys.next()).toString();
-				String url = URLDecoder.decode(key);
+				String url = URLDecoder.decode(key, "UTF-8");
 //				System.out.println(url);
 				if (url != null){
 //					System.out.println("$$$"+(String)urlRelevance.get(url));
@@ -98,4 +94,5 @@ public class FrontierTargetRepository extends FrontierTargetRepositoryBaseline{
 		}
 		return result;
 	}
+	
 }

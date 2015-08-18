@@ -20,7 +20,7 @@ public class AddSeeds {
 			String dir = dataPath + "/" + config.getParam("LINK_DIRECTORY");
 			
 			PersistentHashtable urls = new PersistentHashtable(dir,1000);
-			FrontierTargetRepositoryBaseline frontier = new FrontierTargetRepositoryBaseline(urls,10000);
+			Frontier frontier = new Frontier(urls, new BaselineLinkSelector(urls));
 			int count = 0;
             /*
 			if(args.length > 1){

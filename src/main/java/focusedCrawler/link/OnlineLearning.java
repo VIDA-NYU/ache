@@ -12,7 +12,7 @@ import java.util.Iterator;
 
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.builder.ClassifierBuilder;
-import focusedCrawler.link.frontier.FrontierTargetRepositoryBaseline;
+import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.linkanalysis.HITS;
 import focusedCrawler.link.linkanalysis.SALSA;
 import focusedCrawler.util.LinkRelevance;
@@ -22,7 +22,7 @@ import focusedCrawler.util.vsm.VSMElement;
 
 public class OnlineLearning {
 
-	private FrontierTargetRepositoryBaseline frontier;
+	private Frontier frontier;
 	
 	private BipartiteGraphManager manager;
 	
@@ -34,7 +34,7 @@ public class OnlineLearning {
 	
 	private String targetPath;
 	
-	public OnlineLearning(FrontierTargetRepositoryBaseline frontier, BipartiteGraphManager manager, ClassifierBuilder classifierBuilder, String method, String path){
+	public OnlineLearning(Frontier frontier, BipartiteGraphManager manager, ClassifierBuilder classifierBuilder, String method, String path){
 		this.frontier = frontier;
 		this.manager = manager;
 		this.classifierBuilder = classifierBuilder;

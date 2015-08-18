@@ -31,7 +31,7 @@ import focusedCrawler.link.classifier.util.Instance;
 import focusedCrawler.link.classifier.util.WordField;
 import focusedCrawler.link.classifier.util.WordFrequency;
 import focusedCrawler.link.classifier.util.WordFrequencyComparator;
-import focusedCrawler.link.frontier.FrontierTargetRepositoryBaseline;
+import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
@@ -52,11 +52,11 @@ public class ClassifierBuilder {
 
 	private PorterStemmer stemmer;
 
-	private FrontierTargetRepositoryBaseline frontier;
+	private Frontier frontier;
 	
 	private String[] features;
 	
-	public ClassifierBuilder(BipartiteGraphRep graphRep, StopList stoplist, WrapperNeighborhoodLinks wrapper, FrontierTargetRepositoryBaseline frontier){
+	public ClassifierBuilder(BipartiteGraphRep graphRep, StopList stoplist, WrapperNeighborhoodLinks wrapper, Frontier frontier){
 //	public ClassifierBuilder(BipartiteGraphRep graphRep, StopList stoplist, WrapperNeighborhoodLinks wrapper){
 		this.graphRep = graphRep;
 		this.stemmer = new PorterStemmer();

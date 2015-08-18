@@ -43,10 +43,11 @@ import focusedCrawler.link.classifier.LinkClassifierHub;
 import focusedCrawler.link.classifier.builder.BacklinkSurfer;
 import focusedCrawler.link.classifier.builder.ClassifierBuilder;
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
+import focusedCrawler.link.frontier.BaselineLinkSelector;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.link.frontier.FrontierTargetRepository;
-import focusedCrawler.link.frontier.FrontierTargetRepositoryBaseline;
+import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.ParameterFile;
@@ -139,78 +140,78 @@ public class LinkStorage extends StorageDefault{
         return frontierManager.getFrontierPersistent().getFrontierPages();
     }
 
-  /**
-   * This method inserts links from a given page into the frontier
-   * @param obj Object - page containing links
-   * @return Object
-   */
-  public synchronized Object insert(Object obj) throws StorageException {
-    long initialTime = System.currentTimeMillis();
+    /**
+     * This method inserts links from a given page into the frontier
+     * 
+     * @param obj
+     *            Object - page containing links
+     * @return Object
+     */
+    public synchronized Object insert(Object obj) throws StorageException {
+        long initialTime = System.currentTimeMillis();
 
-    Page page = (Page)obj;
-    numberOfPages++;
-		try
-		{
-			if((numberOfPages % refreshFreq) == 0)
-			{
-				List<String> list = getFrontierPages();
-				monitor.exportFrontierPages(list);
-				monitor.exportOutLinks(outLinks);
-				outLinks.clear();
-			}
-		}
-		catch(Exception ex) {
-			logger.error(ex.getMessage(), ex);
-		}
-    try {
-    	if(getBacklinks && page.isAuth()){
-    		logger.info(">>>>>GETTING BACKLINKS:" + page.getURL().toString());
-    		graphManager.insertBacklinks(page);
-    		numberOfBacklink++;
-    		logger.info("TOTAL BACKLINKS:" + numberOfBacklink);
-    	}
-    	if(onlineLearning != null && numberOfPages % learnLimit == 0){
-    		logger.info("RUNNING ONLINE LEARNING...");
-    		onlineLearning.execute();
-    		frontierManager.clearFrontier();
-    	}
-    	if(getBacklinks){
-    		if(page.isHub()){
-    			graphManager.insertOutlinks(page);
-    		}
-    	}else{
-    		if(getOutlinks){
-    			String sOutLinks = graphManager.insertOutlinks(page);	
-					outLinks.add(sOutLinks);
-    		}
-    	}
+        Page page = (Page) obj;
+        numberOfPages++;
+        
+        try {
+            if ((numberOfPages % refreshFreq) == 0) {
+                List<String> list = getFrontierPages();
+                monitor.exportFrontierPages(list);
+                monitor.exportOutLinks(outLinks);
+                outLinks.clear();
+            }
+        } catch (Exception ex) {
+            logger.error(ex.getMessage(), ex);
+        }
+        
+        try {
+            
+            if (getBacklinks && page.isAuth()) {
+                logger.info(">>>>>GETTING BACKLINKS:" + page.getURL().toString());
+                graphManager.insertBacklinks(page);
+                numberOfBacklink++;
+                logger.info("TOTAL BACKLINKS:" + numberOfBacklink);
+            }
+            
+            if (onlineLearning != null && numberOfPages % learnLimit == 0) {
+                logger.info("RUNNING ONLINE LEARNING...");
+                onlineLearning.execute();
+                frontierManager.clearFrontier();
+            }
+            
+            if (getBacklinks) {
+                if (page.isHub()) {
+                    graphManager.insertOutlinks(page);
+                }
+            } else {
+                if (getOutlinks) {
+                    String sOutLinks = graphManager.insertOutlinks(page);
+                    outLinks.add(sOutLinks);
+                }
+            }
+            
+        } catch (LinkClassifierException ex) {
+            logger.info("A LinkClassifierException occurred.", ex);
+            throw new StorageException(ex.getMessage(), ex);
+        } catch (FrontierPersistentException ex) {
+            logger.info("A FrontierPersistentException occurred.", ex);
+            throw new StorageException(ex.getMessage(), ex);
+        } catch (IOException ex) {
+            logger.info("An IOException occurred.", ex);
+            throw new StorageException(ex.getMessage(), ex);
+        } catch (Exception ex) {
+            logger.info("An Exception occurred.", ex);
+            throw new StorageException(ex.getMessage(), ex);
+        }
+
+        long finalTime = System.currentTimeMillis();
+        totalTime = totalTime + (finalTime - initialTime);
+        double average = totalTime / numberOfPages;
+
+        logger.info("\n> TOTAL PAGES:" + numberOfPages + "\n> TOTAL TIME:" + (finalTime - initialTime) + "\n> AVERAGE:"
+                + average);
+        return null;
     }
-    catch (LinkClassifierException ex) {
-    	logger.info("A LinkClassifierException occurred.", ex);
-    	throw new StorageException(ex.getMessage(), ex);
-    }
-    catch (FrontierPersistentException ex) {
-    	logger.info("A FrontierPersistentException occurred.", ex);
-    	throw new StorageException(ex.getMessage(), ex);
-    }
-    catch (IOException ex) {
-        logger.info("An IOException occurred.", ex);
-    	throw new StorageException(ex.getMessage(), ex);
-    }
-    catch (Exception ex) {
-    	logger.info("An Exception occurred.", ex);
-    	throw new StorageException(ex.getMessage(), ex);
-    }
-    
-    long finalTime = System.currentTimeMillis();
-    totalTime = totalTime + (finalTime - initialTime);
-    double average = totalTime/numberOfPages;
-    
-    logger.info("\n> TOTAL PAGES:" + numberOfPages +
-                "\n> TOTAL TIME:" + (finalTime - initialTime) +
-                "\n> AVERAGE:" + average);
-    return null;
-  }
 
   /**
    * This method sends a link to crawler
@@ -261,7 +262,7 @@ public class LinkStorage extends StorageDefault{
         LinkClassifierFactory factory = new LinkClassifierFactoryImpl(stoplistFile);
         LinkClassifier linkClassifier = factory.createLinkClassifier(config.getTypeOfClassifier());
 
-        FrontierTargetRepositoryBaseline frontier = createFrontier(seedFile, config, dataPath);
+        Frontier frontier = createFrontier(seedFile, config, dataPath);
 
         logger.info("FRONTIER: " + frontier.getClass());
         
@@ -290,26 +291,26 @@ public class LinkStorage extends StorageDefault{
         return linkStorage;
     }
 
-    private static FrontierTargetRepositoryBaseline createFrontier(String seedFile,
-                                                                   LinkStorageConfig config,
-                                                                   String dataPath) {
+    private static Frontier createFrontier(String seedFile,
+                                           LinkStorageConfig config,
+                                           String dataPath) {
         
         PersistentHashtable persistentHash = new PersistentHashtable(dataPath + "/" + config.getLinkDirectory(), config.getMaxCacheUrlsSize());
         
-        FrontierTargetRepositoryBaseline frontier = null;
+        Frontier frontier = null;
         if (config.isUseScope()) {
             String[] urls = ParameterFile.getSeeds(seedFile);
             HashMap<String, Integer> scope = extractDomains(urls);
             if (config.getTypeOfClassifier().contains("Baseline")) {
-                frontier = new FrontierTargetRepositoryBaseline(persistentHash, scope);
+                frontier = new Frontier(persistentHash, new BaselineLinkSelector(persistentHash), scope);
             } else {
-                frontier = new FrontierTargetRepository(persistentHash, scope);
+                frontier = new Frontier(persistentHash, new FrontierTargetRepository(persistentHash), scope);
             }
         } else {
             if (config.getTypeOfClassifier().contains("Baseline")) {
-                frontier = new FrontierTargetRepositoryBaseline(persistentHash, 10000);
+                frontier = new Frontier(persistentHash, new BaselineLinkSelector(persistentHash));
             } else {
-                frontier = new FrontierTargetRepository(persistentHash, 10000);
+                frontier = new Frontier(persistentHash, new FrontierTargetRepository(persistentHash));
             }
         }
         return frontier;

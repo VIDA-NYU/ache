@@ -10,27 +10,29 @@ import net.sf.ehcache.CacheException;
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
 
-public class FrontierTargetTopic extends FrontierTargetRepositoryBaseline{
+public class FrontierTargetTopic implements LinkSelectionStrategy {
 
-	public FrontierTargetTopic(PersistentHashtable urlRelevance) {
-		super(urlRelevance,50);
+	private final PersistentHashtable urlRelevance;
+
+    public FrontierTargetTopic(PersistentHashtable urlRelevance) {
+        this.urlRelevance = urlRelevance;
 	}
 
 //	boolean higher = true;
 	int[] classLimits = new int[]{100,100,1500};
 	
-	public LinkRelevance[] select(int numberOfLinks) throws FrontierPersistentException {
+	public LinkRelevance[] select(int numberOfLinks) {
 			LinkRelevance[] result = null;
 			
 			int[] classCount = new int[classLimits.length];
 			try {
-				Iterator keys = urlRelevance.getKeys();
+				Iterator<String> keys = urlRelevance.getKeys();
 				Vector<LinkRelevance> tempList = new Vector<LinkRelevance>();
 				int count = 0;
 //				if(higher){
-					for (int i = 0; count < numberOfLinks && keys.hasNext(); i++) {
+					for (; count < numberOfLinks && keys.hasNext();) {
 						String key = ((String)keys.next()).toString();
-						String url = URLDecoder.decode(key);
+						String url = URLDecoder.decode(key, "UTF-8");
 //						System.out.println(url);
 						if (url != null){
 //							System.out.println("$$$"+(String)urlRelevance.get(url));

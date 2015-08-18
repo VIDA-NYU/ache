@@ -43,13 +43,13 @@ public class FrontierManager {
 
     private PriorityQueueLink priorityQueue;
 
-    private FrontierTargetRepositoryBaseline frontier;
+    private Frontier frontier;
 
     private int linksToLoad;
 
     private LinkFilter linkFilter;
 
-    public FrontierManager(FrontierTargetRepositoryBaseline frontier,
+    public FrontierManager(Frontier frontier,
                            int maxSizeLinkQueue,
                            int linksToLoad,
                            LinkFilter linkFilter)
@@ -61,11 +61,7 @@ public class FrontierManager {
         this.linkFilter = linkFilter;
     }
 
-    public void setPolicy(boolean random) {
-        this.frontier.setPolicy(random);
-    }
-
-    public FrontierTargetRepositoryBaseline getFrontierPersistent() {
+    public Frontier getFrontierPersistent() {
         return this.frontier;
     }
 
