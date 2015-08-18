@@ -118,12 +118,12 @@ public class HttpDownloader implements Closeable {
     private class RequestTask implements Callable<FetchedResult> {
         
         private final Callback callback;
-        private LinkRelevance url;
+        private LinkRelevance link;
         private long startTime;
         private long finishTime;
         
         public RequestTask(LinkRelevance url, Callback callback) {
-            this.url = url;
+            this.link = url;
             this.callback = callback;
         }
         
@@ -132,9 +132,9 @@ public class HttpDownloader implements Closeable {
             this.startTime = System.currentTimeMillis();
             try {
                 final Payload payload = new Payload();
-                payload.put(PAYLOAD_KEY, url);
+                payload.put(PAYLOAD_KEY, link);
                 
-                FetchedResult result = fetcher.fetch(new HttpGet(), url.getURL().toString(), payload);
+                FetchedResult result = fetcher.fetch(new HttpGet(), link.getURL().toString(), payload);
                 if (callback != null) {
                     distpatchThreadPool.submit(new SuccessHandler(result, callback));
                 }
