@@ -66,16 +66,6 @@ public class Frontier {
 		urlRelevance.commit();
 	}
 	
-	public double getRelevance(String url){
-		String strRel = urlRelevance.get(url);
-		if(strRel != null){
-			double rel = Double.parseDouble(strRel);
-			return rel;
-		}else{
-			return 0;
-		}
-	}
-	
 	/**
 	 * 
 	 * @return
