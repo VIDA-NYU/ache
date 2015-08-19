@@ -74,8 +74,7 @@ public class PersistentHashtable {
 				count++;
 			}
 		} catch (DatabaseException e) {
-			e.printStackTrace();
-			throw new RuntimeException(e.getMessage());
+			throw new RuntimeException(e);
 		}
 	}
 	
