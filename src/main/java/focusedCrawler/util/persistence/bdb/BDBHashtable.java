@@ -25,7 +25,6 @@ package focusedCrawler.util.persistence.bdb;
 
 import focusedCrawler.util.persistence.Tuple;
 import com.sleepycat.je.DatabaseException;
-import com.sleepycat.je.Environment;
 import com.sleepycat.persist.EntityCursor;
 import com.sleepycat.persist.EntityStore;
 import com.sleepycat.persist.PrimaryIndex;

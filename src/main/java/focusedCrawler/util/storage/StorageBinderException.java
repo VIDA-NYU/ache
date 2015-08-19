@@ -23,36 +23,22 @@
 */
 package focusedCrawler.util.storage;
 
-
-
 import focusedCrawler.util.DetailException;
 
+@SuppressWarnings("serial")
 public class StorageBinderException extends DetailException {
 
-
-
     public StorageBinderException(String newMessage) {
-
         super(newMessage);
-
     }
 
-
-
-    public StorageBinderException(String newMessage,Throwable newDetail) {
-
+    public StorageBinderException(String newMessage, Throwable newDetail) {
         super(newMessage, newDetail);
-
     }
-
-
 
     public StorageBinderException(Throwable newDetail) {
-
         super();
-
         this.detail = newDetail;
-
     }
 
-} //class
+}

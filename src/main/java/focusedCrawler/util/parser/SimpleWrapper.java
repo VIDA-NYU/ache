@@ -54,7 +54,7 @@ public class SimpleWrapper {
     }
 
     public String[] filterMultipleStrings(String content){
-    	Vector filteredStrings = new Vector();
+    	Vector<String> filteredStrings = new Vector<String>();
         int count = 0;
         int indexIni = content.indexOf(iniPattern);
         while(indexIni != -1){

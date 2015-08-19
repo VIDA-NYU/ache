@@ -23,6 +23,8 @@
 */
 package focusedCrawler.util.storage;
 
+import java.util.Enumeration;
+
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.distribution.CommunicationException;
 
@@ -67,7 +69,7 @@ public class StorageDefault implements Storage {
 
     }
 
-    public synchronized java.util.Enumeration selectEnumeration(Object obj) throws StorageException,DataNotFoundException,CommunicationException {
+    public synchronized Enumeration<?> selectEnumeration(Object obj) throws StorageException,DataNotFoundException,CommunicationException {
 
         /**@todo: Implement this util.storage.Storage method*/
 

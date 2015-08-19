@@ -23,8 +23,6 @@
 */
 package focusedCrawler.util.persistence.bdb;
 
-import java.io.File;
-
 import focusedCrawler.util.persistence.Tuple;
 import com.sleepycat.je.DatabaseException;
 import com.sleepycat.persist.EntityStore;

@@ -23,43 +23,25 @@
 */
 package focusedCrawler.util.storage;
 
-
 import focusedCrawler.util.DetailException;
 
-
-
+@SuppressWarnings("serial")
 public class StorageException extends DetailException {
 
-
-
     public StorageException() {
-
         super();
-
     }
-
-
 
     public StorageException(String message) {
-
         super(message);
-
     }
-
-
 
     public StorageException(Throwable detail) {
-
         super(detail);
-
     }
 
-
-
-    public StorageException(String message,Throwable detail) {
-
-        super(message,detail);
-
+    public StorageException(String message, Throwable detail) {
+        super(message, detail);
     }
 
 }

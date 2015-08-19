@@ -308,9 +308,9 @@ public class StorageRemoteAdapter implements Storage {
 
 
 
-    public Enumeration selectEnumeration(Object obj) throws StorageException,DataNotFoundException,CommunicationException {
+    public Enumeration<?> selectEnumeration(Object obj) throws StorageException,DataNotFoundException,CommunicationException {
 
-        return (Enumeration) defaultMethod(CommunicationConstants.METHOD_SELECT_ENUMERATION, obj);
+        return (Enumeration<?>) defaultMethod(CommunicationConstants.METHOD_SELECT_ENUMERATION, obj);
 
     }
 

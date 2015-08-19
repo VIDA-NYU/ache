@@ -28,126 +28,80 @@ import java.util.Enumeration;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.distribution.CommunicationException;
 
-
-
-
-
-
-
 public interface Storage {
 
-
-
     /**
-
      * Insercao de elementos.
-
      */
 
-    Object insert(Object obj) throws StorageException,CommunicationException;
+    Object insert(Object obj) throws StorageException, CommunicationException;
 
-    Object[] insertArray(Object[] objs) throws StorageException,CommunicationException;
-
-
+    Object[] insertArray(Object[] objs) throws StorageException, CommunicationException;
 
     /**
-
      * Selecao de elementos.
-
      */
 
-    Object select(Object obj) throws StorageException,DataNotFoundException,CommunicationException;
+    Object select(Object obj) throws StorageException, DataNotFoundException, CommunicationException;
 
-    Object[] selectArray(Object[] objs) throws StorageException,DataNotFoundException,CommunicationException;
+    Object[] selectArray(Object[] objs) throws StorageException, DataNotFoundException, CommunicationException;
 
-    Enumeration selectEnumeration(Object obj) throws StorageException,DataNotFoundException,CommunicationException;
-
-
+    Enumeration<?> selectEnumeration(Object obj) throws StorageException, DataNotFoundException, CommunicationException;
 
     /**
-
      * Atualizacao de elementos.
-
      */
 
-    Object update(Object obj) throws StorageException,CommunicationException;
+    Object update(Object obj) throws StorageException, CommunicationException;
 
-    Object[] updateArray(Object[] objs) throws StorageException,CommunicationException;
-
-
+    Object[] updateArray(Object[] objs) throws StorageException, CommunicationException;
 
     /**
-
      * Remocao de elementos.
-
      */
 
-    Object remove(Object obj) throws StorageException,CommunicationException;
+    Object remove(Object obj) throws StorageException, CommunicationException;
 
-    Object[] removeArray(Object[] objs) throws StorageException,CommunicationException;
-
-
+    Object[] removeArray(Object[] objs) throws StorageException, CommunicationException;
 
     /**
-
      * Adiciona recursos.
-
      */
 
-    Object addResource(Object obj) throws StorageException,CommunicationException;
+    Object addResource(Object obj) throws StorageException, CommunicationException;
 
-    Object[] addResourceArray(Object[] objs) throws StorageException,CommunicationException;
-
-
+    Object[] addResourceArray(Object[] objs) throws StorageException, CommunicationException;
 
     /**
-
      * Remove recursos.
-
      */
 
-    Object removeResource(Object obj) throws StorageException,CommunicationException;
+    Object removeResource(Object obj) throws StorageException, CommunicationException;
 
-    Object[] removeResourceArray(Object[] objs) throws StorageException,CommunicationException;
-
-
+    Object[] removeResourceArray(Object[] objs) throws StorageException, CommunicationException;
 
     /**
-
      * Realiza o commit de um estado.
-
      */
 
-    Object commit(Object obj) throws StorageException,CommunicationException;
-
-
+    Object commit(Object obj) throws StorageException, CommunicationException;
 
     /**
-
      * Realiza o rollback em caso de problemas.
-
      */
 
-    Object rollback(Object obj) throws StorageException,CommunicationException;
-
-
+    Object rollback(Object obj) throws StorageException, CommunicationException;
 
     /**
-
      * Finaliza um Storage.
-
      */
 
-    Object finalize(Object obj) throws StorageException,CommunicationException;
-
-
+    Object finalize(Object obj) throws StorageException, CommunicationException;
 
     /**
-
      * Utilizado para acessar o objeto
-
      */
 
-    Object ping(Object obj) throws StorageException,CommunicationException;
+    Object ping(Object obj) throws StorageException, CommunicationException;
 
 }

@@ -223,7 +223,7 @@ public class StorageRemoteAdapterReconnect extends StorageDefault {
         }
     }
 
-    public Enumeration selectEnumeration(Object obj) throws StorageException,
+    public Enumeration<?> selectEnumeration(Object obj) throws StorageException,
                                                             DataNotFoundException,
                                                             CommunicationException {
 
