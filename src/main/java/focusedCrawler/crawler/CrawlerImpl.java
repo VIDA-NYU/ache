@@ -23,27 +23,20 @@
 */
 package focusedCrawler.crawler;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.SocketException;
 import java.net.URL;
-import java.net.URLConnection;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.util.Page;
 import focusedCrawler.util.distribution.CommunicationException;
+import focusedCrawler.util.download.DownloaderBuffered;
+import focusedCrawler.util.download.DownloaderException;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.download.DownloaderBuffered;
-import focusedCrawler.util.download.DownloaderException;
-import focusedCrawler.util.Page;
 
 /**
  * This class implements a crawler

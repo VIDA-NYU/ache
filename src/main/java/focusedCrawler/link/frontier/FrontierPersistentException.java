@@ -37,7 +37,8 @@ package focusedCrawler.link.frontier;
  * @version 1.0
  */
 
-public class FrontierPersistentException extends Exception{
+@SuppressWarnings("serial")
+public class FrontierPersistentException extends Exception {
 
   public FrontierPersistentException(String message) {
     super(message);

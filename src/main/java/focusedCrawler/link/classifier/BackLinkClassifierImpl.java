@@ -1,19 +1,14 @@
 package focusedCrawler.link.classifier;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.StringTokenizer;
-import java.util.Vector;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
-
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
 import focusedCrawler.link.classifier.util.Instance;
 import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 

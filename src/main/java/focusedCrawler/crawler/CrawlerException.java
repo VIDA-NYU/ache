@@ -33,20 +33,22 @@ package focusedCrawler.crawler;
  * @author not attributable
  * @version 1.0
  */
+@SuppressWarnings("serial")
+public class CrawlerException extends Exception {
 
-public class CrawlerException extends Exception{
+    public Throwable detail;
 
-   public Throwable detail;
+    public CrawlerException() {
+        super();
+    }
 
-   public CrawlerException() {
-       super();
-   }
-   public CrawlerException(String message) {
-       super(message);
-   }
-   public CrawlerException(String message,Throwable detail) {
-       super(message);
-       this.detail = detail;
-   }
+    public CrawlerException(String message) {
+        super(message);
+    }
+
+    public CrawlerException(String message, Throwable detail) {
+        super(message);
+        this.detail = detail;
+    }
 
 }

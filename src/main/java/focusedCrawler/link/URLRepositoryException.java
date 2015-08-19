@@ -23,10 +23,11 @@
 */
 package focusedCrawler.link;
 
-public class URLRepositoryException  extends Exception{
+@SuppressWarnings("serial")
+public class URLRepositoryException extends Exception {
 
-  public URLRepositoryException(String message) {
-    super(message);
-  }
+    public URLRepositoryException(String message) {
+        super(message);
+    }
 
 }
