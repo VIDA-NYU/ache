@@ -24,11 +24,13 @@
 package focusedCrawler.util.persistence;
 
 import java.io.Serializable;
+
 import com.sleepycat.persist.model.Entity;
 import com.sleepycat.persist.model.PrimaryKey;
 
+@SuppressWarnings("serial")
 @Entity
-public class Tuple implements Serializable{
+public class Tuple implements Serializable {
 	
 	@PrimaryKey
 	private String key;
