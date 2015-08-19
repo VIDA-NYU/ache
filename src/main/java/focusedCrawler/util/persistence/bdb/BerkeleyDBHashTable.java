@@ -23,17 +23,7 @@
 */
 package focusedCrawler.util.persistence.bdb;
 
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.net.MalformedURLException;
-import java.util.HashSet;
 import java.util.Vector;
 
 import com.sleepycat.bind.tuple.StringBinding;
