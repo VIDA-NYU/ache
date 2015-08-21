@@ -31,7 +31,6 @@ import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
 import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
 
