@@ -147,49 +147,30 @@ public class BaselineLinkSelector implements LinkSelectionStrategy {
      * @throws FrontierPersistentException
      */
     public LinkRelevance[] randomSelection(int numberOfLinks) {
-        HashMap<Integer, Integer> queue = new HashMap<Integer, Integer>();
         LinkRelevance[] result = null;
-        // int[] classCount = new int[3];
-        // int[] classLimits = new int[]{3000,2000,1000};
         try {
             Iterator<String> keys = urlRelevance.getKeys();
-
             Vector<LinkRelevance> tempList = new Vector<LinkRelevance>();
             int count = 0;
-            for (; count < numberOfLinks && keys.hasNext();) {
-                String key = ((String) keys.next());
-                String url = URLDecoder.decode(key, "UTF-8");
-                // System.out.println(url);
+            
+            while(keys.hasNext() && count < numberOfLinks) {
+                
+                String url = URLDecoder.decode(keys.next(), "UTF-8");
                 if (url != null) {
-                    // System.out.println("$$$"+(String)urlRelevance.get(url));
-                    Integer relevInt = new Integer((String) urlRelevance.get(url));
-                    if (relevInt != null) {
-                        int relev = relevInt.intValue();
-                        if (relev > 0) {
-                            // int index = relev/100;
-                            // if(classCount[index] < classLimits[index]){
-                            Integer numOccur = ((Integer) queue.get(relevInt));
-                            int numOccurInt = 0;
-                            if (numOccur != null) {
-                                numOccurInt++;
-                            } else {
-                                numOccurInt = 1;
-                            }
-                            queue.put(relevInt, new Integer(numOccurInt));
-                            LinkRelevance linkRel = new LinkRelevance(new URL(url), relev);
-                            tempList.add(linkRel);
-                            count++;
-                            // classCount[index]++;
-                            // }
-                        }
+                    Integer relevInt = new Integer(urlRelevance.get(url));
+                    if (relevInt != null && relevInt > 0) {
+                        LinkRelevance linkRel = new LinkRelevance(new URL(url), relevInt.intValue());
+                        tempList.add(linkRel);
+                        count++;
                     }
                 }
             }
 
             result = new LinkRelevance[tempList.size()];
             tempList.toArray(result);
+            
             System.out.println(">> TOTAL LOADED: " + result.length);
-            queue.clear();
+
         } catch (IOException ex) {
             ex.printStackTrace();
         } catch (CacheException ex) {
