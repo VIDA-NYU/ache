@@ -1,16 +1,13 @@
 package focusedCrawler.link.classifier;
 
-import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
-
-import focusedCrawler.link.classifier.util.Instance;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Random;
 
+import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
+import focusedCrawler.link.classifier.util.Instance;
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
