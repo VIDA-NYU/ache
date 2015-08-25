@@ -59,10 +59,9 @@ public class LinkClassifierBaseline implements LinkClassifier{
    * @return LinkRelevance[]
    */
   public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
-        LinkRelevance[] linkRelevance = null;
         try {
         	URL[] links = page.links();
-        	linkRelevance = new LinkRelevance[links.length];
+        	LinkRelevance[] linkRelevance = new LinkRelevance[links.length];
         	for (int i = 0; i < links.length; i++) {
             	String url = links[i].toString();
         		double relevance = 100;
@@ -72,11 +71,11 @@ public class LinkClassifierBaseline implements LinkClassifier{
         		}
         		linkRelevance[i] = new LinkRelevance(new URL(url), relevance);
 			}
+        	return linkRelevance;
         }
         catch (MalformedURLException ex) {
         	throw new LinkClassifierException(ex.getMessage(), ex);
         }
-        return linkRelevance;
   }
 
   public LinkRelevance classify(LinkNeighborhood ln) throws LinkClassifierException{

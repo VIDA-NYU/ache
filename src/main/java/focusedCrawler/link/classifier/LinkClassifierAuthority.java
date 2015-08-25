@@ -1,14 +1,11 @@
 package focusedCrawler.link.classifier;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.Iterator;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
-
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
 import focusedCrawler.link.classifier.util.Instance;
 import focusedCrawler.util.LinkRelevance;
@@ -40,19 +37,20 @@ public class LinkClassifierAuthority implements LinkClassifier{
 
 	  
 	  public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
-		  LinkRelevance[] linkRelevance = null;
 		  try {
+		      LinkRelevance[] linkRelevance = null;
 			  if(classifier != null){
-				  HashMap urlWords = wrapper.extractLinks(page, attributes);
+				  HashMap<String, Instance> urlWords = wrapper.extractLinks(page, attributes);
 				  linkRelevance = new LinkRelevance[urlWords.size()];
-		          Iterator iter = urlWords.keySet().iterator();
+		          
 		          int count = 0;
-		          while (iter.hasNext()) {
-		        	  String urlStr = (String) iter.next();
+		          
+		          for (String urlStr : urlWords.keySet()) {
+		              
 		        	  URL url = new URL(urlStr);
 		        	  double relevance = -1;
 		        	  if(!page.getURL().getHost().equals(url.getHost())){
-		        		  Instance instance = (Instance)urlWords.get(urlStr);
+		        		  Instance instance = urlWords.get(urlStr);
 		        		  double[] values = instance.getValues();
 		        		  weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
 		        		  instanceWeka.setDataset(instances);
@@ -73,6 +71,7 @@ public class LinkClassifierAuthority implements LinkClassifier{
 					  linkRelevance[i] = new LinkRelevance(lns[i].getLink(), relevance);
 				  }
 			  }
+			  return linkRelevance;
 		  }catch (MalformedURLException ex) {
 			  ex.printStackTrace();
 			  throw new LinkClassifierException(ex.getMessage());
@@ -80,17 +79,15 @@ public class LinkClassifierAuthority implements LinkClassifier{
 			  e.printStackTrace();
 			  throw new LinkClassifierException(e.getMessage());
 		  }
-		  return linkRelevance;
 	  }
 
 	@Override
 	public LinkRelevance classify(LinkNeighborhood ln) throws LinkClassifierException {
 		  LinkRelevance linkRel = null;
 		  try{
-		      HashMap urlWords = wrapper.extractLinks(ln, attributes);
-		      Iterator iter = urlWords.keySet().iterator();
-		      while(iter.hasNext()){
-		    	  String url = (String)iter.next();
+		      HashMap<String, Instance> urlWords = wrapper.extractLinks(ln, attributes);
+		      
+	    	  for (String url : urlWords.keySet()) {
 		    	  double relevance = -1;
 		    	  if(isRootPage(url)){
 		    		  if(classifier != null){
@@ -117,12 +114,6 @@ public class LinkClassifierAuthority implements LinkClassifier{
 			  throw new LinkClassifierException(ex.getMessage());
 		  }
 		  return linkRel;
-	}
-	  
-		  
-	private boolean isInternalLink(String host, String urlStr) throws IOException{
-		URL url = new URL(urlStr);
-		return url.getHost().endsWith(host);
 	}
 		  
 	private boolean isRootPage(String urlStr) throws MalformedURLException {
