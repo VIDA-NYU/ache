@@ -39,6 +39,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.net.MalformedURLException;
 import java.net.URLEncoder;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -47,6 +48,8 @@ import java.io.FileWriter;
 import java.util.Vector;
 import java.net.URLConnection;
 import java.io.*;
+
+import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -66,6 +69,8 @@ public class BacklinkSurfer {
   private HashSet<String> newURLs;
   private HashMap<String, VSMElement>[] levels = new HashMap[3];
   private Vector<LinkNeighborhood>[] lns = new Vector[3];
+  private String access;
+  private String key;
   
   public BacklinkSurfer(StopList stoplist, SimpleWrapper wrapperURL, 
           String backlink, FileWriter out, int connectTimeout, int readTimeout, int numBack) {
@@ -135,10 +140,6 @@ public class BacklinkSurfer {
   
   private BackLinkNeighborhood[] downloadBacklinks(String host) throws IOException{
       
-      String access = "mozscape-4a1d0827fc";
-      String key = "d6ea0c3b253ab44425769e422624a0f";
-      
-      
       MozAuthenticator myAuthenticator = new MozAuthenticator(access,key,300);
       String authStr = myAuthenticator.getAuthenticationStr();
       
@@ -171,8 +172,7 @@ public class BacklinkSurfer {
 	      links[i] = next.get(mozLinksPattern).asText();
 	      titles[i] = next.get(mozTitlePattern).asText();
 	  }
-	  
-	  
+	 
 	  BackLinkNeighborhood[] backlinks = new BackLinkNeighborhood[links.length];
 	  for (int i = 0; i < links.length; i++) {
 		  backlinks[i] = new BackLinkNeighborhood();
@@ -448,6 +448,16 @@ public class BacklinkSurfer {
     }
     out.close();
   }
+  
+  public void setAccessID(String accessID) {
+      this.access = accessID;
+  }
+
+
+  public void setPassKey(String passKey) {
+      this.key = passKey;
+  }
+
 }
 
 

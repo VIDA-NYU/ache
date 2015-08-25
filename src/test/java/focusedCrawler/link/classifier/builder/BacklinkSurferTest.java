@@ -22,6 +22,8 @@ public class BacklinkSurferTest {
         SimpleWrapper wrapper = new SimpleWrapper(",\"uu\":\"", "\"}");
 
         BacklinkSurfer surfer = new BacklinkSurfer(wrapper);
+        surfer.setAccessID("mozscape-4a1d0827fc");
+        surfer.setPassKey("d6ea0c3b253ab44425769e422624a0f");
 
         String[] testURLs = { "http://www.bbc.co.uk/news/health-30577776" };
 
