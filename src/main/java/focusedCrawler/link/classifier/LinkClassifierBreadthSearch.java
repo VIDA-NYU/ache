@@ -3,7 +3,6 @@ package focusedCrawler.link.classifier;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Random;
 
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
@@ -26,15 +25,14 @@ public class LinkClassifierBreadthSearch implements LinkClassifier {
 
     public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
 
-        LinkRelevance[] linkRelevance = null;
         try {
             HashMap<String, Instance> urlWords = wrapper.extractLinks(page, attributes);
-            // urlWords = wrapper.extractLinks(page);
-            linkRelevance = new LinkRelevance[urlWords.size()];
-            Iterator<String> iter = urlWords.keySet().iterator();
+
+            LinkRelevance[] linkRelevance = new LinkRelevance[urlWords.size()];
+            
             int count = 0;
-            while (iter.hasNext()) {
-                String url = iter.next();
+            for(String url : urlWords.keySet()) {
+                
                 int level = (int) (page.getRelevance() / 100);
                 double relevance = (level - 1) * 100 + randomGenerator.nextInt(100);
                 if (relevance < -1) {
@@ -43,11 +41,11 @@ public class LinkClassifierBreadthSearch implements LinkClassifier {
                 linkRelevance[count] = new LinkRelevance(new URL(url), relevance);
                 count++;
             }
+            return linkRelevance;
         } catch (MalformedURLException ex) {
             ex.printStackTrace();
             throw new LinkClassifierException(ex.getMessage());
         }
-        return linkRelevance;
     }
 
     public LinkRelevance classify(LinkNeighborhood ln) throws LinkClassifierException {
