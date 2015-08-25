@@ -68,138 +68,32 @@ public class CrawlerImpl extends Crawler {
     
     protected Page page;
 
-    protected byte[] buffer;
-
     protected int bufferSize;
 
     protected String source;
     
     protected Downloader urlDownloader;
     
-    protected CrawlerImpl(ThreadGroup tg, String name) {
-    	super(tg, name);
-    }
-
-    public CrawlerImpl(){
-    }
-
-
-    public CrawlerImpl(ThreadGroup tg, String name, Storage linkStorage, Storage formStorage) {
+    public CrawlerImpl(ThreadGroup tg, String name, Storage linkStorage, Storage targetStorage, DownloaderBuffered downloader) {
     	super(tg,name);
-    	setLinkStorage(linkStorage);
-    	setFormStorage(formStorage);
-    }
-    
-    public void setLinkStorage(Storage newLinkStorage) {
-	  linkStorage = newLinkStorage;
+    	this.linkStorage = linkStorage;
+    	this.targetStorage = targetStorage;
+        this.downloader = downloader;
     }
 
-  public Storage getLinkStorage() {
-	  return linkStorage;
-  }
-
- 
-  public void setFormStorage(Storage newFormStorage) {
-	  targetStorage = newFormStorage;
-  }
-
-  public Storage getFormStorage() {
-	  return targetStorage;
-  }
-
-  public void setDownloader(DownloaderBuffered newDownloader) {
-	  downloader = newDownloader;
-  }
-
-  public DownloaderBuffered getDownloader() {
-	  return downloader;
-  }
-
-  public void setMaxFileSize(long newMaxFileSize) throws CrawlerException {
-	  try {
-		  downloader.setMaxBufferSize((int)newMaxFileSize);
-	  }
-	  catch (DownloaderException de) {
-		  logger.error("Max file size reached", de);
-		  throw new CrawlerException("Max file size reached", de);
-	  }
-  }
-
-  public long getMaxFileSize() throws CrawlerException {
-	  try {
-		  return downloader.getMaxBufferSize();
-	  }
-	  catch (DownloaderException de) {
-		  throw new CrawlerException("Could not return maxFileSize", de );
-	  }
-  }
-
-  public void setBuffer(byte[] buffer){
-	  this.buffer = buffer;
-  }
-
-  public byte[] getBuffer(){
-	  return buffer;
-  }
-
-  public Page getPage() {
-	  return page;
-  }
-
-  public void setPage(Page page) {
-	  this.page = page;
-  }
-
-
-  public URL getInitialURL() {
-	  return initialUrl;
-  }
-
-  public boolean isShutdown() {
-	  try {
-		  return downloader.isShutdown();
-	  }catch (DownloaderException exc) {
-		  logger.warn("Problem while verifying if crawler is shutdown.", exc);
-		  return false;
-	  }
-  }
-
-  public String getHost(String prehost) {
-
-	  if (prehost.startsWith("http://www")) {
-		  prehost = prehost.substring(11, prehost.length());
-	  }else if (prehost.startsWith("http://")) {
-		  prehost = prehost.substring(7, prehost.length());
-	  }
-//       System.out.println("prehost : " + prehost);
-	  String result = "";
-	  int last, begin;
-	  last = prehost.lastIndexOf(".");
-	  String tmp = prehost.substring(0, last);
-	  begin = tmp.lastIndexOf(".");
-
-	  if (begin != -1) {
-		  result = prehost.substring(begin + 1, prehost.length());
-	  }else {
-		  last = prehost.lastIndexOf("-");
-		  if (last != -1) {
-			  tmp = prehost.substring(0, last);
-			  begin = tmp.lastIndexOf("-");
-			  if (begin != -1) {
-				  result = prehost.substring(begin, prehost.length());
-			  }else {
-				  result = prehost;
-			  }
-		  }else {
-			  result = prehost;
-		  }
-       	}
-	  return result;
-  }
+    public boolean isShutdown() {
+        try {
+            return downloader.isShutdown();
+        } catch (DownloaderException exc) {
+            logger.warn("Problem while verifying if crawler is shutdown.", exc);
+            return false;
+        }
+    }
 
      /**
       * This method selects the next URL to be downloaded by the crawler 
       */
+     @Override
      protected void selectUrl() throws CrawlerException {
 
           try {
@@ -246,27 +140,30 @@ public class CrawlerImpl extends Crawler {
           }
      }
 
-     protected void checkUrl() throws CrawlerException {
-    	 
-     }
+    @Override
+    protected void checkUrl() throws CrawlerException {
+
+    }
 
     /**
      * This method downloads the URL selected in the selectURL method.
      */
+    @Override
     protected void downloadUrl() throws CrawlerException {
         urlFinal = getUrl();
         urlDownloader = new Downloader(urlFinal);
         source = urlDownloader.getContent();
     }
 
-        protected void handleNotFound() throws Exception {
-          setJump(true,"Url(insert) '" + getUrl() + "' not found.");
-        }
+    protected void handleNotFound() throws Exception {
+        setJump(true, "Url(insert) '" + getUrl() + "' not found.");
+    }
 
-        protected void handleRedirect() throws Exception {
-          logger.info(getUrl() + " redirected to " + urlFinal + ".");
-        }
-
+    protected void handleRedirect() throws Exception {
+        logger.info(getUrl() + " redirected to " + urlFinal + ".");
+    }
+    
+        @Override
         protected void processData() throws CrawlerException {
             setMessage("URL "+getUrl());
 			try {
@@ -284,7 +181,7 @@ public class CrawlerImpl extends Crawler {
 				if(relevance > LinkRelevance.DEFAULT_HUB_RELEVANCE && relevance < LinkRelevance.DEFAULT_AUTH_RELEVANCE){
 					page.setHub(true);
 				}
-//				page.setRelevance(relevance);
+				page.setRelevance(relevance);
 			} catch (Exception e) {
 				logger.error("Problem while processing data.", e);
 			}
@@ -292,7 +189,7 @@ public class CrawlerImpl extends Crawler {
             setMessage(null);
         }
         
-        
+        @Override
         protected void checkData() throws CrawlerException {
 
         }
@@ -300,6 +197,7 @@ public class CrawlerImpl extends Crawler {
         /**
          * In this method, the crawler sends a downloaded page to the Form Storage.
          */
+        @Override
         protected void sendData() throws CrawlerException {
 
             try {
@@ -325,7 +223,7 @@ public class CrawlerImpl extends Crawler {
         /**
          * This cleans all the temporary variables. 
          */
-        
+        @Override
         protected synchronized void cleanup() throws CrawlerException {
             setUrl(null);
             initialUrl = null;

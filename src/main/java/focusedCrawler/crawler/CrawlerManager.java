@@ -196,10 +196,9 @@ public class CrawlerManager extends Thread {
             String name = tg.getName() + "_" + index + "_" + life;
             DownloaderBuffered downloader = createDownloader(name);
             
-            CrawlerImpl crawler = new CrawlerImpl(tg, name, linkStorage, formStorage);
+            CrawlerImpl crawler = new CrawlerImpl(tg, name, linkStorage, formStorage, downloader);
             crawler.setRestingTime(config.getRobotManagerRestingTime());
             crawler.setSleepTime(config.getRobotManagerRobotErrorTime());
-            crawler.setDownloader(downloader);
             crawler.setPriority(Thread.NORM_PRIORITY);
             
             return crawler;
