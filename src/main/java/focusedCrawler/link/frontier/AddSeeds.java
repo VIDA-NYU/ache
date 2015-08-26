@@ -3,6 +3,7 @@ package focusedCrawler.link.frontier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
 
 public class AddSeeds {
@@ -44,8 +45,9 @@ public class AddSeeds {
             String[] seeds = focusedCrawler.util.ParameterFile.getSeeds(seedFile);
             for (int i = 0; i < seeds.length; i++) {
               if(urls.get(seeds[i]) == null) {
-                  urls.put(seeds[i], "299");
-                  count++;
+                String relevance = String.valueOf(LinkRelevance.DEFAULT_RELEVANCE);
+                urls.put(seeds[i], relevance);
+                count++;
               }
             }
 			logger.info("Number of seeds added:" + count);

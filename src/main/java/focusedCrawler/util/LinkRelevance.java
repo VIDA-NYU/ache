@@ -31,6 +31,7 @@ import com.google.common.net.InternetDomainName;
 @SuppressWarnings("serial")
 public class LinkRelevance implements Serializable {
 
+    public static double DEFAULT_RELEVANCE = 299;
     public static double DEFAULT_HUB_RELEVANCE = 100;
     public static double DEFAULT_AUTH_RELEVANCE = 200;
 
