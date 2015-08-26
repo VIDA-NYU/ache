@@ -61,7 +61,7 @@ public class HttpDownloader implements Closeable {
         
         this.fetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
         this.fetcher.setSocketTimeout(30*1000);
-        this.fetcher.setConnectionTimeout(30*1000);
+        this.fetcher.setConnectionTimeout(5*60*1000);
         this.fetcher.setMaxRetryCount(DEFAULT_MAX_RETRY_COUNT);
         for (String mimeTypes : DEFAULT_TEXT_MIME_TYPES) {
             this.fetcher.addValidMimeType(mimeTypes);
