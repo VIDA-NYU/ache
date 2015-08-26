@@ -213,22 +213,16 @@ public class LinkStorage extends StorageDefault{
         return null;
     }
 
-  /**
-   * This method sends a link to crawler
-   * @param obj Object
-   * @return Object
-   */
-  public synchronized Object select(Object obj) throws StorageException {
-    Object next = null;
-    try {
-      next = frontierManager.nextURL();
+    /**
+     * This method sends a link to crawler
+     */
+    public synchronized Object select(Object obj) throws StorageException {
+        try {
+            return frontierManager.nextURL();
+        } catch (FrontierPersistentException e) {
+            throw new StorageException(e.getMessage(), e);
+        }
     }
-    catch (FrontierPersistentException ex) {
-      ex.printStackTrace();
-      throw new StorageException(ex.getMessage());
-    }
-    return next;
-  }
 
     public static void main(String[] args) throws FrontierPersistentException {
 
