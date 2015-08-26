@@ -16,9 +16,6 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     
     private static final Logger logger = LoggerFactory.getLogger(FetchedResultHandler.class);
     
-    static int totalRequests = 0;
-    static long startTime = System.currentTimeMillis();
-
     private Storage targetStorage;
 
     public FetchedResultHandler(Storage targetStorage) {
@@ -27,23 +24,19 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     
     @Override
     public void completed(final FetchedResult response) {
-        long time = System.currentTimeMillis()-startTime;
-        totalRequests++;
-        long rate = time/totalRequests;
-        System.err.println(totalRequests + " -> " +rate+ "ms -> " + response.getBaseUrl() );
 
         int statusCode = response.getStatusCode();
         if(statusCode >= 200 && statusCode < 300) {
             logger.info("Successfully downloaded URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
             processData(response);
         } else {
+            // TODO: Update metadata about page visits in link storage
             logger.info("Server returned bad code for URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
         }
     }
     
     @Override
     public void failed(String url, final Exception e) {
-        totalRequests++;
         if(e instanceof AbortedFetchException) {
             AbortedFetchException afe = (AbortedFetchException) e;
             logger.info("Download aborted: \n>URL: {}\n>Reason: {}", url, afe.getAbortReason());
@@ -70,7 +63,7 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
             
             page.setRelevance(relevance);
             
-            System.err.println("Sending page to TargetStorage: "+ response.getFetchedUrl());
+            System.err.println(relevance + " Sending page to TargetStorage: "+ response.getFetchedUrl());
             targetStorage.insert(page);
             
         } catch (Exception e) {
