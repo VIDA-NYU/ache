@@ -254,6 +254,7 @@ public class Main {
 
         Path linkStorageConf = Paths.get(configPath, "/link_storage/link_storage.cfg");
         ParameterFile linkStorageConfig = new ParameterFile(linkStorageConf.toFile());
+        linkStorageConfig.putParam("CONFIG_DIR", configPath);
 
         try {
             Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
