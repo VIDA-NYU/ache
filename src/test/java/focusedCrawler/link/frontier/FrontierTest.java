@@ -83,11 +83,13 @@ public class FrontierTest {
         frontier.insert(link1);
         // then
         assertThat(frontier.exist(link1), is(1));
-
+        assertThat(frontier.select(1).length, is(1));
+        
         // when
         frontier.delete(link1);
         // then
         assertThat(frontier.exist(link1), is(-1));
+        assertThat(frontier.select(1).length, is(0));
     }
 
 }
