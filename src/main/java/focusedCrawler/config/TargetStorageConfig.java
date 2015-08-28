@@ -20,6 +20,7 @@ public class TargetStorageConfig {
     private final boolean hardFocus;
     private final boolean bipartite;
     private final boolean saveNegativePages;
+    private boolean englishLanguageDetectionEnabled;
     
     private final ElasticSearchConfig elasticSearchConfig;
     
@@ -43,6 +44,7 @@ public class TargetStorageConfig {
         this.hardFocus = params.getParamBoolean("HARD_FOCUS");
         this.bipartite = params.getParamBoolean("BIPARTITE");
         this.saveNegativePages = params.getParamBoolean("SAVE_NEGATIVE_PAGES");
+        this.englishLanguageDetectionEnabled = params.getParamBooleanOrDefault("ENGLISH_LANGUAGE_DETECTION_ENABLED", true);
         
         String elasticSearchHost = params.getParamOrDefault("ELASTICSEARCH_HOST", "localhost");
         int elasticSearchPort = params.getParamIntOrDefault("ELASTICSEARCH_PORT", 9300);
@@ -113,5 +115,9 @@ public class TargetStorageConfig {
     public ElasticSearchConfig getElasticSearchConfig() {
         return elasticSearchConfig;
     }
-    
+
+    public boolean isEnglishLanguageDetectionEnabled() {
+        return englishLanguageDetectionEnabled;
+    }
+
 }

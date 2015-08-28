@@ -38,7 +38,7 @@ public class TargetStorage extends StorageDefault {
     private Storage linkStorage;
     private TargetClassifier targetClassifier;
     private TargetStorageConfig config;
-    private LangDetection langDetect = new LangDetection();
+    private LangDetection langDetector = new LangDetection();
     private TargetMonitor monitor;
     
     public TargetStorage(TargetClassifier targetClassifier,
@@ -61,12 +61,16 @@ public class TargetStorage extends StorageDefault {
      */
     public synchronized Object insert(Object obj) throws StorageException {
         Page page = (Page) obj;
-        
-		//Only accept English
-    	if (this.langDetect.isEnglish(page) == false){
-    		logger.info("Ignoring non-English page: " + page.getIdentifier());
-      		return null;
-    	}
+        logger.info("\n\n\nLANGUAGE DETECTION: "+config.isEnglishLanguageDetectionEnabled());
+        if(config.isEnglishLanguageDetectionEnabled()) {
+            
+            logger.info("\n\n\nRUNNING LANGUAGE DETECTION... ");
+            // Only accept English language
+            if (this.langDetector.isEnglish(page) == false){
+                logger.info("Ignoring non-English page: " + page.getIdentifier());
+                return null;
+            }
+        }
         
     	boolean isRelevant;
     	double prob;
