@@ -38,7 +38,6 @@ package focusedCrawler.util;
 
 
 import java.io.PrintWriter;
-
 import java.io.PrintStream;
 
 
@@ -53,6 +52,7 @@ import java.io.PrintStream;
 
  */
 
+@SuppressWarnings("serial")
 public class DetailException extends Exception{
 
     public Throwable detail;

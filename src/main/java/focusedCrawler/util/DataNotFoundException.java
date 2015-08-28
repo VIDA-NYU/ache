@@ -23,6 +23,7 @@
 */
 package focusedCrawler.util;
 
+@SuppressWarnings("serial")
 public class DataNotFoundException extends DetailException {
 
     public DataNotFoundException() {
