@@ -61,10 +61,8 @@ public class TargetStorage extends StorageDefault {
      */
     public synchronized Object insert(Object obj) throws StorageException {
         Page page = (Page) obj;
-        logger.info("\n\n\nLANGUAGE DETECTION: "+config.isEnglishLanguageDetectionEnabled());
-        if(config.isEnglishLanguageDetectionEnabled()) {
             
-            logger.info("\n\n\nRUNNING LANGUAGE DETECTION... ");
+        if(config.isEnglishLanguageDetectionEnabled()) {
             // Only accept English language
             if (this.langDetector.isEnglish(page) == false){
                 logger.info("Ignoring non-English page: " + page.getIdentifier());
