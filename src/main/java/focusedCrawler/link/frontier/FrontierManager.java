@@ -120,36 +120,20 @@ public class FrontierManager {
 
     public LinkRelevance nextURL() throws FrontierPersistentException {
 
-        LinkRelevance linkRelev = (LinkRelevance) priorityQueue.pop();
-
-        if (linkRelev == null) {
-            logger.info("LOADED: " + linksToLoad);
+        if(priorityQueue.size() == 0) {
+            // Load more links from frontier into the priority queue
             loadQueue(linksToLoad);
+        }
+        
+        LinkRelevance linkRelev = (LinkRelevance) priorityQueue.pop();
+        if (linkRelev == null) {
             return null;
         }
 
-        boolean limit = false;
-        do {
-            // FIXME Remove irrelevant links added to the frontier.
-            if (!linkFilter.accept(linkRelev.getURL().toString())) {
-                frontier.delete(linkRelev);
-                limit = true;
-                linkRelev = (LinkRelevance) priorityQueue.pop();
-                continue;
-            }
-
-            limit = frontier.reachLimit(linkRelev.getURL());
-            if (!limit) {
-                frontier.delete(linkRelev);
-            } else {
-                frontier.delete(linkRelev);
-                linkRelev = (LinkRelevance) priorityQueue.pop();
-            }
-        } while (limit && priorityQueue.size() > 0);
-        int value = (int) linkRelev.getRelevance() / 100;
-
+        frontier.delete(linkRelev);
+            
         logger.info("\n> URL:" + linkRelev.getURL() +
-                    "\n> REL:" + value +
+                    "\n> REL:" + ((int) linkRelev.getRelevance() / 100) +
                     "\n> RELEV:" + linkRelev.getRelevance());
 
         return linkRelev;

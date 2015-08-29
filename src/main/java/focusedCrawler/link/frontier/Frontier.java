@@ -23,7 +23,6 @@
 */
 package focusedCrawler.link.frontier;
 
-import java.net.URL;
 import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -210,10 +209,6 @@ public class Frontier {
             int rel = (int) linkRelev.getRelevance();
             urlRelevance.put(url, -rel + "");
         }
-    }
-
-    public boolean reachLimit(URL url) {
-        return false;
     }
 
     public LinkRelevance[] select(int numberOfLinks) throws FrontierPersistentException {
