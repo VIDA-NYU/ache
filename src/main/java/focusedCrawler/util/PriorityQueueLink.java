@@ -52,41 +52,4 @@ public class PriorityQueueLink extends PriorityQueue{
     return less;
   }
 
-  public static void main(String[] args) {
-    PriorityQueue queue = new PriorityQueueLink(1);
-    System.out.println("SIZE_A:"+queue.size());
-    System.out.println("SIZE_A:"+queue.top());
-    try {
-    LinkRelevance linkRelev = new LinkRelevance(new java.net.URL("http://"),0);
-    queue.insert(linkRelev);
-    System.out.println("SIZE_B:"+queue.size());
-    linkRelev = (LinkRelevance)queue.top();
-    System.out.println("SIZE_A:"+linkRelev.getRelevance());
-    for (int i = 0; i < 5; i++) {
-        linkRelev = new LinkRelevance(new java.net.URL("http://"),1);
-        queue.insert(linkRelev);
-    }
-    System.out.println("SIZE_C:"+queue.size());
-    linkRelev = (LinkRelevance)queue.top();
-    System.out.println("SIZE_A:"+linkRelev.getRelevance());
-
-    linkRelev = new LinkRelevance(new java.net.URL("http://"),1000);
-    queue.insert(linkRelev);
-    System.out.println("SIZE_D:"+queue.size());
-    linkRelev = (LinkRelevance)queue.pop();
-    System.out.println("SIZE_A:"+linkRelev.getRelevance());
-
-    linkRelev = new LinkRelevance(new java.net.URL("http://"),2);
-    queue.insert(linkRelev);
-    System.out.println("SIZE_E:"+queue.size());
-    linkRelev = (LinkRelevance)queue.pop();
-    System.out.println("SIZE_A:"+linkRelev.getRelevance());
-    queue.adjustTop();
-  }
-  catch (java.net.MalformedURLException ex) {
-    ex.printStackTrace();
-  }
-
-  }
-
 }
