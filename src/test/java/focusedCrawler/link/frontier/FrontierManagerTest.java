@@ -23,13 +23,14 @@ import focusedCrawler.util.persistence.PersistentHashtable;
 
 public class FrontierManagerTest {
 
-    final Path testPath = Paths.get("frontiermanager_test/");
+    private Path testPath;
     private Frontier frontier;
     private FrontierManager frontierManager;
+    static int folderNumber = 0;
     
     @Before
     public void setUp() throws Exception {
-        
+        testPath = Paths.get("frontiermanager_test"+ (folderNumber++));
         File file = testPath.toFile();
         if(file.exists()) {
             FileUtils.deleteDirectory(file);
