@@ -43,6 +43,7 @@ public class FrontierManagerTest {
     
     @After
     public void tearDown() throws IOException {
+        frontierManager.close();
         FileUtils.deleteDirectory(testPath.toFile());
     }
 
