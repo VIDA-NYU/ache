@@ -38,13 +38,20 @@ import java.io.IOException;
 import java.net.URL;
 import java.net.MalformedURLException;
 import java.net.URLEncoder;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.io.FileWriter;
 import java.util.Vector;
 import java.net.URLConnection;
 import java.io.*;
+
+import org.slf4j.LoggerFactory;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class BacklinkSurfer {
 
@@ -61,6 +68,8 @@ public class BacklinkSurfer {
   private HashSet<String> newURLs;
   private HashMap<String, VSMElement>[] levels = new HashMap[3];
   private Vector<LinkNeighborhood>[] lns = new Vector[3];
+  private String access;
+  private String key;
   
   public BacklinkSurfer(StopList stoplist, SimpleWrapper wrapperURL, 
           String backlink, FileWriter out, int connectTimeout, int readTimeout, int numBack) {
@@ -129,18 +138,46 @@ public class BacklinkSurfer {
   }
   
   private BackLinkNeighborhood[] downloadBacklinks(String host) throws IOException{
-	  String backlink = "http://lsapi.seomoz.com/linkscape/links/" + host +"?AccessID=member-2e52b09aae&Expires=1365280453&Signature=WFcSAnhBG62xmt2f57bGrqCtiOM%3D&Filter=external&Scope=page_to_page&Limit=50&Sort=page_authority&SourceCols=4&TargetCols=4"; 
+      
+      MozAuthenticator myAuthenticator = new MozAuthenticator(access,key,300);
+      String authStr = myAuthenticator.getAuthenticationStr();
+      
+      String queryStr = "?Filter=external&Scope=page_to_page&Limit=50&Sort=page_authority&SourceCols=5&TargetCols=4&";
+
+      String backlink = "http://lsapi.seomoz.com/linkscape/links/" + host +    queryStr + authStr;
+      
+      
 	  Page page = downloadPage(newURL(backlink));
 	  if (page == null) {
 		  return null;
 	  }
-	  String[] links = wrapperURL.filterMultipleStrings(page.getContent());
+	  
+	  ObjectMapper jacksonMapper = new ObjectMapper();
+	  JsonNode root = jacksonMapper.readTree(page.getContent());
+	  
+	  
+	  Iterator<JsonNode> childIterator = root.elements();
+	  int resultSize = root.size();
+	  
+	  String[] links = new String[resultSize];
+	  String[] titles = new String[resultSize];
+	  
+	  String mozLinksPattern = "uu";
+	  String mozTitlePattern = "ut";
+	  
+	  for(int i=0;i<resultSize;i++){
+	     
+	      JsonNode next = childIterator.next();
+	      links[i] = next.get(mozLinksPattern).asText();
+	      titles[i] = next.get(mozTitlePattern).asText();
+	  }
+	 
 	  BackLinkNeighborhood[] backlinks = new BackLinkNeighborhood[links.length];
 	  for (int i = 0; i < links.length; i++) {
 		  backlinks[i] = new BackLinkNeighborhood();
 		  backlinks[i].setLink("http://" + links[i]);
 	  }
-	  String[] titles = wrapperTitle.filterMultipleStrings(page.getContent());
+
 	  for (int i = 0; i < titles.length; i++) {
 		  backlinks[i].setTitle(titles[i]);
 	  }
@@ -410,6 +447,16 @@ public class BacklinkSurfer {
     }
     out.close();
   }
+  
+  public void setAccessID(String accessID) {
+      this.access = accessID;
+  }
+
+
+  public void setPassKey(String passKey) {
+      this.key = passKey;
+  }
+
 }
 
 

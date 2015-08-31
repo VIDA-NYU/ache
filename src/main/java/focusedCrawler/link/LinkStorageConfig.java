@@ -10,12 +10,24 @@ public class LinkStorageConfig {
         private final String patternEnd;
         private final String patternIniTitle;
         private final String patternEndTitle;
+        private final String mozAccessId;
+        private final String mozKey;
 
         public BackSurferConfig(ParameterFile params) {
             patternIni = params.getParam("PATTERN_INI");
             patternEnd = params.getParam("PATTERN_END");
             patternIniTitle = params.getParam("PATTERN_INI_TITLE");
             patternEndTitle = params.getParam("PATTERN_END_TITLE");
+            mozAccessId = params.getParam("MOZ_ACCESS_ID");
+            mozKey = params.getParam("MOZ_KEY");
+        }
+        
+        public String getMozAccessId() {
+            return mozAccessId;
+        }
+        
+        public String getMozKey() {
+            return mozKey;
         }
 
         public String getPatternIni() {

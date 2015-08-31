@@ -501,5 +501,11 @@ public class ParameterFile {
         } //else
         p.listParams();
     }
+    
+    public void putParam(String key, String value) {
+        Vector valueVector = new Vector();
+        valueVector.addElement(value);
+        hash.put(key, valueVector);
+    }
 
 }

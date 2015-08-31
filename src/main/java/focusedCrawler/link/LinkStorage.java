@@ -338,9 +338,14 @@ public class LinkStorage extends StorageDefault{
             String patternIniTitle = config.getBackSurferConfig().getPatternIniTitle();
             String patternEndTitle = config.getBackSurferConfig().getPatternEndTitle();
             
+            String mozAccessID = config.getBackSurferConfig().getMozAccessId();
+            String mozKey = config.getBackSurferConfig().getMozKey();
+            
             SimpleWrapper simpleWrapper = new SimpleWrapper(patternIni, patternEnd);
             SimpleWrapper simpleWrapperTitle = new SimpleWrapper(patternIniTitle, patternEndTitle);
             BacklinkSurfer surfer = new BacklinkSurfer(simpleWrapper, simpleWrapperTitle);
+            surfer.setAccessID(mozAccessID);
+            surfer.setPassKey(mozKey);
             
             LinkClassifier bClassifier = new LinkClassifierHub();
             manager = new BipartiteGraphManager(frontierManager, graphRep, linkClassifier, bClassifier);
