@@ -45,7 +45,7 @@ public class ClassifierFactoryTest {
         // given
         String path = ClassifierFactoryTest.class.getResource("old_classifier_config/").getPath();
 
-        TargetClassifier classifier = TargetClassifierFactory.create(path, path+"/stoplist.txt");
+        TargetClassifier classifier = TargetClassifierFactory.create(path, 0.9, path+"/stoplist.txt");
         assertThat(classifier, is(notNullValue()));
         assertThat(classifier, is(instanceOf(WekaTargetClassifier.class)));
     }

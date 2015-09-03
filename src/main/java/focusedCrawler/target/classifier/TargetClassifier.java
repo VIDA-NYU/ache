@@ -45,8 +45,26 @@ import focusedCrawler.util.Target;
  */
 public interface TargetClassifier {
 
-    public boolean classify(Target target) throws TargetClassifierException;
+    public TargetRelevance classify(Target target) throws TargetClassifierException;
 
-    public double[] distributionForInstance(Target target) throws TargetClassifierException;
+    public static class TargetRelevance {
+        
+        private double relevance;
+        private boolean isRelevant;
+        
+        public TargetRelevance(boolean isRelevant, double relevance) {
+            this.isRelevant = isRelevant;
+            this.relevance = relevance;
+        }
+
+        public double getRelevance() {
+            return relevance;
+        }
+
+        public boolean isRelevant() {
+            return isRelevant;
+        }
+
+    }
 
 }

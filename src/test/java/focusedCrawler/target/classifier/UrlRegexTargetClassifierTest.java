@@ -11,6 +11,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.LinkFilter.LinkBlackList;
@@ -49,18 +50,18 @@ public class UrlRegexTargetClassifierTest {
         
         for (Page page : pagesThatMatch) {
             // when
-            boolean isRelevant = classifier.classify(page);;
+            TargetRelevance relevance = classifier.classify(page);
             // then
-            assertThat(page.toString(), isRelevant, is(true));
-            assertThat(page.toString(), classifier.distributionForInstance(page)[0], is(1d));
+            assertThat(page.toString(), relevance.isRelevant(), is(true));
+            assertThat(page.toString(), relevance.getRelevance(), is(1d));
         }
         
         for (Page page : pagesThatDoesntMatch) {
             // when
-            boolean isRelevant = classifier.classify(page);;
+            TargetRelevance relevance = classifier.classify(page);
             // then
-            assertThat(page.toString(), isRelevant, is(false));
-            assertThat(page.toString(), classifier.distributionForInstance(page)[0], is(0d));
+            assertThat(page.toString(), relevance.isRelevant(), is(false));
+            assertThat(page.toString(), relevance.getRelevance(), is(0d));
         }
     }
     
@@ -103,18 +104,18 @@ public class UrlRegexTargetClassifierTest {
         
         for (Page page : pagesThatMatch) {
             // when
-            boolean isRelevant = classifier.classify(page);;
+            TargetRelevance relevance = classifier.classify(page);
             // then
-            assertThat(page.toString(), isRelevant, is(true));
-            assertThat(page.toString(), classifier.distributionForInstance(page)[0], is(1d));
+            assertThat(page.toString(), relevance.isRelevant(), is(true));
+            assertThat(page.toString(), relevance.getRelevance(), is(1d));
         }
         
         for (Page page : pagesThatDoesntMatch) {
             // when
-            boolean isRelevant = classifier.classify(page);;
+            TargetRelevance relevance = classifier.classify(page);
             // then
-            assertThat(page.toString(), isRelevant, is(false));
-            assertThat(page.toString(), classifier.distributionForInstance(page)[0], is(0d));
+            assertThat(page.toString(), relevance.isRelevant(), is(false));
+            assertThat(page.toString(), relevance.getRelevance(), is(0d));
         }
     }
 

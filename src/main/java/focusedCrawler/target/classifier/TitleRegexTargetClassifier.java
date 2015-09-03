@@ -9,7 +9,7 @@ import focusedCrawler.util.Target;
 /**
  * Classify whether a page is relevant to a topic by matching a RegExp against the title.
  */
-public class TitleRegexTargetClassifier extends BaseTargetClassifier implements TargetClassifier {
+public class TitleRegexTargetClassifier implements TargetClassifier {
 
     private Pattern pattern;
 
@@ -19,9 +19,13 @@ public class TitleRegexTargetClassifier extends BaseTargetClassifier implements 
     }
 
     @Override
-    public boolean classify(Target target) throws TargetClassifierException {
+    public TargetRelevance classify(Target target) throws TargetClassifierException {
         Page page = (Page) target;
-        return regexMatchesTitle(page);
+        if(regexMatchesTitle(page)) {
+            return new TargetRelevance(true, 1.0);
+        } else {
+            return new TargetRelevance(false, 0.0);
+        }
     }
     
     public boolean regexMatchesTitle(Page page) {

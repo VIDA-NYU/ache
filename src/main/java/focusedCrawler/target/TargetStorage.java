@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.TargetStorageConfig;
+import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
@@ -57,75 +58,64 @@ public class TargetStorage extends StorageDefault {
     }
 
     /**
-     * Inserts a page into the repository. 
+     * Inserts a page into the repository.
      */
     public synchronized Object insert(Object obj) throws StorageException {
         Page page = (Page) obj;
-            
-        if(config.isEnglishLanguageDetectionEnabled()) {
+
+        if (config.isEnglishLanguageDetectionEnabled()) {
             // Only accept English language
-            if (this.langDetector.isEnglish(page) == false){
+            if (this.langDetector.isEnglish(page) == false) {
                 logger.info("Ignoring non-English page: " + page.getIdentifier());
                 return null;
             }
         }
-        
-    	boolean isRelevant;
-    	double prob;
+
         try {
-          if(targetClassifier != null) {
-              prob = targetClassifier.distributionForInstance(page)[0];
-              page.setRelevance(prob);
-              
-              logger.info("\n> PROCESSING: " + page.getIdentifier() +
-                          "\n> PROB:" + prob);
-              
-              isRelevant = prob > config.getRelevanceThreshold();
-              
-              if(isRelevant){
-                  targetRepository.insert(page);
-                  if(config.isBipartite()){
-					  //set the page is as authority if using backlinks
-                      page.setAuth(true);
-                  }
-                  linkStorage.insert(page);
-              } else {
-                  if (config.isSaveNegativePages()){
-                      page.setRelevance(prob);
-                      negativeRepository.insert(page);
-                  }
-                  if(!config.isHardFocus()){
-                      if(config.isBipartite()){
-                          if(page.isHub()){
-                              linkStorage.insert(page);
-                          }
-                      } else{
-                          linkStorage.insert(page);
-                      }
-                  }
-              }
-          } else{
-                  isRelevant = true;
-                  prob = 1.0;
-                  page.setRelevance(prob);
-                  page.setAuth(true);
-                  logger.info("\n> PROCESSING: " + page.getIdentifier());
-                  linkStorage.insert(page);
-                  targetRepository.insert(page, monitor.getTotalOfPages());
-          }
-		  
-          monitor.countPage(page, isRelevant, prob);
-          
-          if(monitor.getTotalOfPages() > config.getVisitedPageLimit()){
-              logger.info("Visited page limit exceeded. Exiting crawler. pagelimit="+config.getVisitedPageLimit());
-              System.exit(0);
-          }
-        }
-        catch (CommunicationException ex) {
+            TargetRelevance relevance;
+            if (targetClassifier != null) {
+                relevance = targetClassifier.classify(page);
+                logger.info("\n> PROCESSING: " + page.getIdentifier() +
+                            "\n> PROB:" + relevance.getRelevance());
+            } else {
+                relevance = new TargetRelevance(true, 1.0d);
+            }
+
+            page.setRelevance(relevance.getRelevance());
+
+            if (relevance.isRelevant()) {
+                if (config.isBipartite()) {
+                    // set the page is as authority if using backlinks
+                    page.setAuth(true);
+                }
+                targetRepository.insert(page);
+                linkStorage.insert(page);
+            } else {
+                if (config.isSaveNegativePages()) {
+                    negativeRepository.insert(page);
+                }
+                if (!config.isHardFocus()) {
+                    if (config.isBipartite()) {
+                        if (page.isHub()) {
+                            linkStorage.insert(page);
+                        }
+                    } else {
+                        linkStorage.insert(page);
+                    }
+                }
+            }
+
+            monitor.countPage(page, relevance.isRelevant(), relevance.getRelevance());
+
+            if (monitor.getTotalOfPages() > config.getVisitedPageLimit()) {
+                logger.info("Visited page limit exceeded. Exiting crawler. pagelimit=" + config.getVisitedPageLimit());
+                System.exit(0);
+            }
+        } catch (CommunicationException ex) {
             logger.error("Communication error while inserting.", ex);
             throw new StorageException(ex.getMessage(), ex);
         } catch (TargetClassifierException tce) {
-        	logger.error("Classification error while inserting.", tce);
+            logger.error("Classification error while inserting.", tce);
         }
         return null;
     }
@@ -165,7 +155,8 @@ public class TargetStorage extends StorageDefault {
         //if one wants to use a classifier
         TargetClassifier targetClassifier = null;
         if(config.isUseClassifier()){
-            targetClassifier = TargetClassifierFactory.create(modelPath, configPath+"/stoplist.txt");
+            targetClassifier = TargetClassifierFactory.create(
+                    modelPath, config.getRelevanceThreshold(), configPath+"/stoplist.txt");
         }
 
         Path targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory());

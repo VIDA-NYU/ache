@@ -11,41 +11,31 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.Vector;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Vector;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.xerces.parsers.DOMParser;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-
-
-
-
-
-
-
 import weka.classifiers.Classifier;
 import weka.core.Instances;
-
-
+import focusedCrawler.target.classifier.TargetClassifier;
+import focusedCrawler.target.classifier.TargetClassifierException;
+import focusedCrawler.target.classifier.WekaTargetClassifier;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
-import focusedCrawler.target.classifier.TargetClassifier;
-import focusedCrawler.target.classifier.TargetClassifierException;
-import focusedCrawler.target.classifier.WekaTargetClassifier;
-import focusedCrawler.util.vsm.VSMVector;
 import focusedCrawler.util.vsm.VSMElement;
+import focusedCrawler.util.vsm.VSMVector;
 
 public class RelevanceFeedback {
 
@@ -107,7 +97,7 @@ public class RelevanceFeedback {
 					page = downloadPage(new URL(urls[j]));
 					
 					if(page != null){
-						boolean relevant = classifier.classify(page);
+						boolean relevant = classifier.classify(page).isRelevant();
 						if(relevant){
 							System.out.println(getClass().getName());
 							tempPages.add(page);
@@ -466,7 +456,7 @@ public class RelevanceFeedback {
   	        Instances insts = new Instances("target_classification", vectorAtt, 1);
   	        insts.setClassIndex(attributes.length);
 
-  	        TargetClassifier targetClassifier = new WekaTargetClassifier(classifier, insts, attributes, stoplist);
+  	        TargetClassifier targetClassifier = new WekaTargetClassifier(classifier, config.getParamDouble("RELEVANCE_THRESHOLD"), insts, attributes, stoplist);
 
 			
 			RelevanceFeedback rf = new RelevanceFeedback(stoplist, targetClassifier);

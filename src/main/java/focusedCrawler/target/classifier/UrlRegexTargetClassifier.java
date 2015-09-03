@@ -7,7 +7,7 @@ import focusedCrawler.util.LinkFilter.LinkBlackList;
 import focusedCrawler.util.LinkFilter.LinkWhiteList;
 import focusedCrawler.util.Target;
 
-public class UrlRegexTargetClassifier extends BaseTargetClassifier implements TargetClassifier {
+public class UrlRegexTargetClassifier implements TargetClassifier {
 
     private LinkFilter linkFilter;
 
@@ -24,8 +24,12 @@ public class UrlRegexTargetClassifier extends BaseTargetClassifier implements Ta
     }
 
     @Override
-	public boolean classify(Target target) throws TargetClassifierException {
-		return linkFilter.accept(target.getIdentifier());
+	public TargetRelevance classify(Target target) throws TargetClassifierException {
+		if(linkFilter.accept(target.getIdentifier())) {
+		    return new TargetRelevance(true, 1.0);
+		} else {
+		    return new TargetRelevance(false, 0.0);
+		}
 	}
 	
     public static UrlRegexTargetClassifier fromRegularExpressions(List<String> regularExpressions) {

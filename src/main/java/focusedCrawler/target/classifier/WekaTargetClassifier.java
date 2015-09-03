@@ -55,36 +55,34 @@ import focusedCrawler.util.vsm.VSMVector;
  */
 public class WekaTargetClassifier implements TargetClassifier {
 
-	private Classifier classifier;
-	private Instances instances;
-	private String[] attributes;
-	private StopList stoplist;
+	private final Classifier classifier;
+	private final Instances instances;
+	private final String[] attributes;
+	private final StopList stoplist;
+    private final double relevanceThreshold;
   
-	public WekaTargetClassifier(Classifier classifier, Instances instances, String[] attributes, StopList stoplist){
+	public WekaTargetClassifier(Classifier classifier, double relevanceThreshold,
+	                            Instances instances, String[] attributes, StopList stoplist){
 		this.classifier = classifier;
+        this.relevanceThreshold = relevanceThreshold;
 		this.instances = instances;
 		this.attributes = attributes;
 		this.stoplist = stoplist;
 	}
 
-	public boolean classify(Target target) throws TargetClassifierException{
-		boolean relevant = false;
+	public TargetRelevance classify(Target target) throws TargetClassifierException{
 		try{
-			double[] values = getValues(target);
-			weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
-			instanceWeka.setDataset(instances);
-			double classificationResult = classifier.classifyInstance(instanceWeka);
-			if (classificationResult == 0) {
-				relevant = true;
-			}
-			else {
-				relevant = false;
+			double[] classificationResult = distributionForInstance(target);
+			final double relevanceProbability = classificationResult[0];
+            if (relevanceProbability > relevanceThreshold) {
+				return new TargetRelevance(true, relevanceProbability);
+			} else {
+			    return new TargetRelevance(false, relevanceProbability);
 			}
 		}catch(Exception ex){
 			ex.printStackTrace();
 			throw new TargetClassifierException(ex.getMessage());
 		}
-		return relevant;
 	}
 
 	public double[] distributionForInstance(String target) throws TargetClassifierException {
@@ -132,16 +130,20 @@ public class WekaTargetClassifier implements TargetClassifier {
 		return values;
 	}
 
-	public static TargetClassifier create(String modelPath, String stopwordsFile)
+	public static TargetClassifier create(String modelPath,
+	                                      double relevanceThreshold,
+	                                      String stopwordsFile)
                                           throws IOException {
 	    return create(modelPath + "/pageclassifier.model",
 	                  modelPath + "/pageclassifier.features",
+	                  relevanceThreshold,
 	                  stopwordsFile);
 	    
 	}
 	
     public static TargetClassifier create(String modelFile,
                                           String featureFile,
+                                          double relevanceThreshold,
                                           String stopwordsFile)
                                           throws IOException {
         try {
@@ -168,7 +170,7 @@ public class WekaTargetClassifier implements TargetClassifier {
             
             StopList stoplist = new StopListArquivo(stopwordsFile);
 
-            return new WekaTargetClassifier(classifier, insts, attributes, stoplist);
+            return new WekaTargetClassifier(classifier, relevanceThreshold, insts, attributes, stoplist);
 
         } catch (FileNotFoundException e) {
             throw new IllegalArgumentException("Could not find file: " + modelFile, e);

@@ -21,6 +21,7 @@ public class TargetClassifierFactory {
         public String features_file = "pageclassifier.features";
         public String model_file = "pageclassifier.features";
         public String stopwords_file = "stoplist.txt";
+        public double relevanceThreshold = 0.9;
     }
     
     static class UrlRegexClassifierConfig {
@@ -34,10 +35,12 @@ public class TargetClassifierFactory {
     }
 
     public static TargetClassifier create(String modelPath) throws IOException {
-        return create(modelPath, null);
+        return create(modelPath, 0.0, null);
     }
     
-    public static TargetClassifier create(String modelPath, String stoplist) throws IOException {
+    public static TargetClassifier create(String modelPath,
+                                          double relevanceThreshold,
+                                          String stoplist) throws IOException {
         
         logger.info("Loading TargetClassifier...");
         
@@ -110,6 +113,7 @@ public class TargetClassifierFactory {
                 
                 return WekaTargetClassifier.create(params.model_file,
                                                    params.features_file,
+                                                   params.relevanceThreshold,
                                                    params.stopwords_file);
             }
             
@@ -118,7 +122,7 @@ public class TargetClassifierFactory {
         }
         
         // create classic weka classifer to maintain compatibility with older versions
-        return WekaTargetClassifier.create(modelPath, stoplist);
+        return WekaTargetClassifier.create(modelPath, relevanceThreshold, stoplist);
     }
 
 }
