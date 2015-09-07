@@ -39,6 +39,7 @@ dependencies {
     compile 'org.apache.commons:commons-compress:1.9'
     compile 'org.apache.httpcomponents:httpclient:4.4.1'
     compile 'org.apache.tika:tika-parsers:1.9'
+    compile 'com.esotericsoftware.yamlbeans:yamlbeans:1.09'
     
     testCompile 'junit:junit:4.12'
     

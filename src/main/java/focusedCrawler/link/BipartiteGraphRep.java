@@ -1,5 +1,6 @@
 package focusedCrawler.link;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -7,6 +8,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.StringTokenizer;
 import java.util.Vector;
+
+import com.esotericsoftware.yamlbeans.YamlException;
 
 import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
 import focusedCrawler.util.ParameterFile;
@@ -441,7 +444,7 @@ public class BipartiteGraphRep {
 	}
 	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException, YamlException {
 		ParameterFile paramsFile = new ParameterFile(args[0]);
 		try {
 		    BiparitieGraphRepConfig config = new BiparitieGraphRepConfig(paramsFile);

@@ -1,5 +1,9 @@
 package focusedCrawler.crawler;
 
+import java.io.FileNotFoundException;
+
+import com.esotericsoftware.yamlbeans.YamlException;
+
 import focusedCrawler.util.ParameterFile;
 
 public class CrawlerManagerConfig {
@@ -13,7 +17,7 @@ public class CrawlerManagerConfig {
     private final int robotManagerRobotThreadFactor;
     private final long downloaderMaxBlockedThreads;
     
-    public CrawlerManagerConfig(String filename) {
+    public CrawlerManagerConfig(String filename) throws FileNotFoundException, YamlException {
         ParameterFile params = new ParameterFile(filename);
         this.robotThreadGroup = params.getParam("ROBOT_THREAD_GROUP");
         this.robotQuantity = params.getParamIntOrDefault("ROBOT_QUANTITY", 5);

@@ -1,5 +1,9 @@
 package focusedCrawler.config;
 
+import java.io.FileNotFoundException;
+
+import com.esotericsoftware.yamlbeans.YamlException;
+
 import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.ParameterFile;
 
@@ -23,7 +27,7 @@ public class TargetStorageConfig {
     
     private final ElasticSearchConfig elasticSearchConfig;
     
-    public TargetStorageConfig(String filename) {
+    public TargetStorageConfig(String filename) throws FileNotFoundException, YamlException {
         this(new ParameterFile(filename));
     }
 

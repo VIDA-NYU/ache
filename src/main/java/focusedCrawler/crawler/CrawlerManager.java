@@ -23,10 +23,13 @@
 */
 package focusedCrawler.crawler;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.esotericsoftware.yamlbeans.YamlException;
 
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.download.Downloader;
@@ -353,7 +356,7 @@ public class CrawlerManager extends Thread {
     public static CrawlerManager createCrawlerManager(String crawlerConfigFile,
                                                       Storage linkStorage,
                                                       Storage formStorage)
-                                                      throws CrawlerManagerException {
+                                                      throws CrawlerManagerException, FileNotFoundException, YamlException {
         
         return new CrawlerManager(new CrawlerManagerConfig(crawlerConfigFile),
                                   linkStorage,

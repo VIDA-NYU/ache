@@ -466,11 +466,12 @@ public class PerpClassifierRecreator {
 
 
   public static void main(String[] args) {
-    ParameterFile config = new ParameterFile(args[0]);
+      try {
+      ParameterFile config = new ParameterFile(args[0]);
 
     System.out.println("Initializing...");
     StopList stoplist = null;
-    try {
+    
       stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));
       WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
 //      PersistentHashtable backlinks = new PersistentHashtable(config.getParam("BACKLINK_DIRECTORY"),1000);

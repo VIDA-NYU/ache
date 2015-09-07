@@ -62,7 +62,8 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory{
    */
 
   public LinkClassifierFactoryImpl(String stoplistFile) {
-    // FIXME: Bug introduced in some commit merge? variable config will always be null!
+    // FIXME: Bug introduced in some commit merge? variable config will always be null! 
+      // either this param is related to link storage config or to form storage config. Need to add appropriate suffix as per new config. 
     this.config = config;
     try {
 		stoplist = new StopListArquivo(stoplistFile);

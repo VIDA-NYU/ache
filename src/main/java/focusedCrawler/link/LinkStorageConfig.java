@@ -1,5 +1,9 @@
 package focusedCrawler.link;
 
+import java.io.FileNotFoundException;
+
+import com.esotericsoftware.yamlbeans.YamlException;
+
 import focusedCrawler.util.ParameterFile;
 
 public class LinkStorageConfig {
@@ -105,7 +109,7 @@ public class LinkStorageConfig {
     private final BiparitieGraphRepConfig biparitieGraphRepConfig;
     
     
-    public LinkStorageConfig(ParameterFile params) {
+    public LinkStorageConfig(ParameterFile params) throws FileNotFoundException, YamlException {
         this.maxPagesPerDomain = params.getParamInt("MAX_PAGES_PER_DOMAIN");
         this.typeOfClassifier = params.getParam("TYPE_OF_CLASSIFIER");
         this.getOutlinks = params.getParamBoolean("GRAB_LINKS");

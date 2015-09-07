@@ -1,5 +1,6 @@
 package focusedCrawler.link.linkanalysis;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLDecoder;
@@ -8,6 +9,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Vector;
+
+import com.esotericsoftware.yamlbeans.YamlException;
 
 import focusedCrawler.link.BipartiteGraphRep;
 import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
@@ -274,7 +277,7 @@ public class HITS {
 		
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException, YamlException {
 	    BiparitieGraphRepConfig config = new BiparitieGraphRepConfig(new ParameterFile(args[0]));
 		try {
 			String dataPath = ".";
