@@ -19,7 +19,6 @@ import org.slf4j.LoggerFactory;
 
 import weka.classifiers.functions.SMO;
 import focusedCrawler.crawler.CrawlerManager;
-import focusedCrawler.crawler.CrawlerManagerException;
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.classifier.LinkClassifierFactoryException;
@@ -267,9 +266,9 @@ public class Main {
             Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath,
                     dataOutputPath, elasticIndexName, targetStorageConfig, linkStorage);
 
-            String crawlerConfigFile = configPath + "/crawler/crawler.cfg";
-
-            // start crawl manager
+//            String crawlerConfigFile = configPath + "/crawler/crawler.cfg";
+//
+//            // start crawl manager
 //            CrawlerManager manager = CrawlerManager.createCrawlerManager(crawlerConfigFile, linkStorage, targetStorage);
 //            manager.start();
 

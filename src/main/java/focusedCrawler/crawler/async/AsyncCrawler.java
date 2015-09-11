@@ -1,12 +1,6 @@
 package focusedCrawler.crawler.async;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import crawlercommons.fetcher.http.UserAgent;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.target.TargetStorage;
+import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.Storage;
@@ -37,25 +32,33 @@ public class AsyncCrawler {
     public void run() {
         UserAgent userAgent = new UserAgent("ACHE", "", "");
         HttpDownloader downloader = new HttpDownloader(userAgent);
-//        int i = 0;
         try {
             while (!stop) {
                 try {
-                    
-//                    LinkRelevance link = getNextLink();
-                    LinkRelevance link = getLinkFromFrontier();
-//                    System.out.println("Dispatching link "+i++);
+                    LinkRelevance link = ((LinkRelevance) linkStorage.select(null));
                     
                     FetchedResultHandler resultHandler = new FetchedResultHandler(targetStorage);
                     downloader.dipatchDownload(link, resultHandler);
                     
-                } catch (Exception e) {
+                } catch (DataNotFoundException e) {
+                    if(downloader.stillWorking()) {
+                        System.out.println("Waiting for links from pages being downloaded...");
+                        try {
+                            Thread.sleep(100);
+                        } catch (InterruptedException ie) {}
+                        continue;
+                    } else {
+                        stop = true;
+                        System.out.println("LinkStorage ran out of links...");
+                        break;
+                    }
+                } catch (StorageException e) {
                     logger.warn("Problem dispatching link.", e);
-                }
+                } 
             }
             downloader.await();
         } finally {
-            System.out.println("Shutting down crawler....");
+            System.out.println("Shutting down crawler...");
             downloader.close();
             System.out.println("Done.");
         }
@@ -63,19 +66,6 @@ public class AsyncCrawler {
     
     public void stop() {
         this.stop = true;
-    }
-
-    private LinkRelevance getLinkFromFrontier() throws StorageException, Exception {
-        LinkRelevance link = ((LinkRelevance) linkStorage.select(null));
-        if(link == null) {
-            Thread.sleep(1000);
-        }
-        n++;
-//        try {
-//            Thread.sleep(100);
-//        } catch (InterruptedException e) {
-//        }
-        return link;
     }
 
     public static void main(String[] args) throws IOException {
@@ -113,40 +103,5 @@ public class AsyncCrawler {
         }
     }
 
-
-    static int n = 0;
-    static String[] urls = readAlexaSeeds();
-
-    private static String[] readAlexaSeeds() {
-        String file = "/home/aeciosantos/workspace/alexa-seeds.shuf.txt";
-        List<String> list = new ArrayList<String>();
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                list.add(line);
-            }
-            return (String[]) list.toArray(new String[list.size()]);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    // FIXME Temporary code for tests, should get links from LinkStorage
-    private LinkRelevance getNextLink() {
-        int j = n % urls.length;
-        n++;
-//        try {
-//            Thread.sleep(10);
-//        } catch (InterruptedException e) {
-//        }
-        if (n > 10000) {
-            this.stop = true;
-        }
-        try {
-            return new LinkRelevance(new URL(urls[j]), 1.0d);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException("Failed to create link relevance.", e);
-        }
-    }
 
 }

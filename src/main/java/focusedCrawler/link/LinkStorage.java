@@ -43,6 +43,8 @@ import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.link.frontier.FrontierPersistentException;
+import focusedCrawler.util.DataNotFoundException;
+import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.dashboard.LinkMonitor;
@@ -208,10 +210,15 @@ public class LinkStorage extends StorageDefault{
 
     /**
      * This method sends a link to crawler
+     * @throws DataNotFoundException 
      */
-    public synchronized Object select(Object obj) throws StorageException {
+    public synchronized Object select(Object obj) throws StorageException, DataNotFoundException {
         try {
-            return frontierManager.nextURL();
+            LinkRelevance nextURL = frontierManager.nextURL();
+            if(nextURL == null) {
+                throw new DataNotFoundException("Frontier run out of links.");
+            }
+            return nextURL;
         } catch (FrontierPersistentException e) {
             throw new StorageException(e.getMessage(), e);
         }
