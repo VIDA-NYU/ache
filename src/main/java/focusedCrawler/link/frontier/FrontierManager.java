@@ -49,11 +49,14 @@ public class FrontierManager {
 
     private LinkFilter linkFilter;
 
+    private final LinkSelectionStrategy linkSelector;
+
     public FrontierManager(Frontier frontier,
                            int maxSizeLinkQueue,
                            int linksToLoad,
-                           LinkFilter linkFilter)
-                           throws FrontierPersistentException {
+                           LinkSelectionStrategy linkSelector,
+                           LinkFilter linkFilter) {
+        this.linkSelector = linkSelector;
         this.priorityQueue = new PriorityQueueLink(maxSizeLinkQueue);
         this.frontier = frontier;
         this.linksToLoad = linksToLoad;
@@ -71,9 +74,9 @@ public class FrontierManager {
         logger.info("# Queue size:" + priorityQueue.size());
     }
 
-    private void loadQueue(int numberOfLinks) throws FrontierPersistentException {
+    private void loadQueue(int numberOfLinks) {
         priorityQueue.clear();
-        LinkRelevance[] links = frontier.select(numberOfLinks);
+        LinkRelevance[] links = linkSelector.select(frontier, numberOfLinks);
         for (int i = 0; i < links.length; i++) {
             priorityQueue.insert(links[i]);
         }
@@ -142,6 +145,10 @@ public class FrontierManager {
     public void close() {
         frontier.commit();
         frontier.close();
+    }
+
+    public Frontier getFrontier() {
+        return frontier;
     }
 
 }

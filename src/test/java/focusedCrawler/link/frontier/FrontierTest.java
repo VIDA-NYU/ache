@@ -17,7 +17,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.util.persistence.PersistentHashtable;
 
 public class FrontierTest {
 
@@ -32,10 +31,7 @@ public class FrontierTest {
             FileUtils.deleteDirectory(file);
         }
         
-        PersistentHashtable urlRelevance = new PersistentHashtable(testPath.toString(), 1000);
-        LinkSelectionStrategy linkSelector = new BaselineLinkSelector(urlRelevance);
-        
-        frontier = new Frontier(urlRelevance, linkSelector);
+        frontier = new Frontier(testPath.toString(), 1000);
     }
     
     @After
@@ -68,9 +64,11 @@ public class FrontierTest {
         frontier.insert(link2);
         
         // then
-        LinkRelevance[] urls = frontier.select(1);
-        assertThat(urls, is(notNullValue()));
-        assertThat(urls.length, is(1));
+        assertThat(frontier.exist(link1), is(notNullValue()));
+        assertThat(frontier.exist(link1), is(1));
+        
+        assertThat(frontier.exist(link2), is(notNullValue()));
+        assertThat(frontier.exist(link2), is(2));
     }
     
     
@@ -83,13 +81,11 @@ public class FrontierTest {
         frontier.insert(link1);
         // then
         assertThat(frontier.exist(link1), is(1));
-        assertThat(frontier.select(1).length, is(1));
         
         // when
         frontier.delete(link1);
         // then
         assertThat(frontier.exist(link1), is(-1));
-        assertThat(frontier.select(1).length, is(0));
     }
 
 }
