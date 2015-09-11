@@ -4,12 +4,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
-import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
-
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
 import focusedCrawler.link.classifier.util.Instance;
 import focusedCrawler.util.ParameterFile;
@@ -30,9 +29,9 @@ public class LNClassifier {
 	}
 	
 	public double[] classify(LinkNeighborhood ln) throws Exception {
-		HashMap urlWords = wrapper.extractLinksFull(ln, attributes);
-		Iterator iter = urlWords.keySet().iterator();
-		String url = (String)iter.next();
+		Map<String, Instance> urlWords = wrapper.extractLinksFull(ln, attributes);
+		Iterator<String> iter = urlWords.keySet().iterator();
+		String url = iter.next();
 		Instance instance = (Instance)urlWords.get(url);
 //		String[] features = instance.getFeatures();
 		double[] values = instance.getValues();
@@ -51,9 +50,9 @@ public class LNClassifier {
 	}
 
 	public double[] classifyEP(LinkNeighborhood ln) throws Exception {
-		HashMap urlWords = wrapper.extractLinksFull(ln, attributes);
-		Iterator iter = urlWords.keySet().iterator();
-		String url = (String)iter.next();
+		Map<String, Instance> urlWords = wrapper.extractLinksFull(ln, attributes);
+		Iterator<String> iter = urlWords.keySet().iterator();
+		String url = iter.next();
 		Instance instance = (Instance)urlWords.get(url);
 		double[] values = instance.getValues();
 		int index = instance.getValues().length-2;
@@ -70,6 +69,7 @@ public class LNClassifier {
 		InputStream is = new FileInputStream(config.getParam("FILE_CLASSIFIER"));
 		ObjectInputStream objectInputStream = new ObjectInputStream(is);
 		Classifier classifier = (Classifier) objectInputStream.readObject();
+		objectInputStream.close();
 		String[] attributes = config.getParam("ATTRIBUTES", " ");
 		System.out.println(attributes.length);
 		weka.core.FastVector vectorAtt = new weka.core.FastVector();

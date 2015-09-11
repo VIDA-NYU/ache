@@ -24,11 +24,8 @@
 package focusedCrawler.link;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -43,17 +40,13 @@ import focusedCrawler.link.classifier.LinkClassifierHub;
 import focusedCrawler.link.classifier.builder.BacklinkSurfer;
 import focusedCrawler.link.classifier.builder.ClassifierBuilder;
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
-import focusedCrawler.link.frontier.BaselineLinkSelector;
 import focusedCrawler.link.frontier.FrontierManager;
+import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.link.frontier.FrontierPersistentException;
-import focusedCrawler.link.frontier.FrontierTargetRepository;
-import focusedCrawler.link.frontier.Frontier;
-import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.dashboard.LinkMonitor;
 import focusedCrawler.util.parser.SimpleWrapper;
-import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
@@ -253,16 +246,10 @@ public class LinkStorage extends StorageDefault{
         
         LinkStorageConfig config = new LinkStorageConfig(params);
         
-        LinkClassifierFactory factory = new LinkClassifierFactoryImpl(stoplistFile);
-        LinkClassifier linkClassifier = factory.createLinkClassifier(config.getTypeOfClassifier());
+        LinkClassifierFactory linkClassifierFactory = new LinkClassifierFactoryImpl(stoplistFile);
+        LinkClassifier linkClassifier = linkClassifierFactory.createLinkClassifier(config.getTypeOfClassifier());
 
-        Frontier frontier = createFrontier(seedFile, config, dataPath);
-
-        logger.info("FRONTIER: " + frontier.getClass());
-        
-        LinkFilter linkFilter = new LinkFilter(configPath);
-
-        FrontierManager frontierManager = new FrontierManager(frontier, config.getMaxSizeLinkQueue(), config.getMaxSizeLinkQueue(), linkFilter);
+        FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, seedFile, stoplistFile);
 
         BipartiteGraphRep graphRep = new BipartiteGraphRep(dataPath, config.getBiparitieGraphRepConfig());
 
@@ -275,54 +262,14 @@ public class LinkStorage extends StorageDefault{
         if (config.isUseOnlineLearning()) {
             StopList stoplist = new StopListArquivo(stoplistFile);
             WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
-            ClassifierBuilder cb = new ClassifierBuilder(graphRep, stoplist, wrapper, frontier);
+            ClassifierBuilder cb = new ClassifierBuilder(graphRep, stoplist, wrapper, frontierManager.getFrontier());
             
             logger.info("ONLINE LEARNING:" + config.getOnlineMethod());
-            OnlineLearning onlineLearning = new OnlineLearning(frontier, manager, cb, config.getOnlineMethod(), dataPath + "/" + config.getTargetStorageDirectory());
+            OnlineLearning onlineLearning = new OnlineLearning(frontierManager.getFrontier(), manager, cb, config.getOnlineMethod(), dataPath + "/" + config.getTargetStorageDirectory());
             linkStorage.setOnlineLearning(onlineLearning, config.getLearningLimit());
         }
 
         return linkStorage;
-    }
-
-    private static Frontier createFrontier(String seedFile,
-                                           LinkStorageConfig config,
-                                           String dataPath) {
-        
-        PersistentHashtable persistentHash = new PersistentHashtable(dataPath + "/" + config.getLinkDirectory(), config.getMaxCacheUrlsSize());
-        
-        Frontier frontier = null;
-        if (config.isUseScope()) {
-            String[] urls = ParameterFile.getSeeds(seedFile);
-            HashMap<String, Integer> scope = extractDomains(urls);
-            if (config.getTypeOfClassifier().contains("Baseline")) {
-                frontier = new Frontier(persistentHash, new BaselineLinkSelector(persistentHash), scope);
-            } else {
-                frontier = new Frontier(persistentHash, new FrontierTargetRepository(persistentHash), scope);
-            }
-        } else {
-            if (config.getTypeOfClassifier().contains("Baseline")) {
-                frontier = new Frontier(persistentHash, new BaselineLinkSelector(persistentHash));
-            } else {
-                frontier = new Frontier(persistentHash, new FrontierTargetRepository(persistentHash));
-            }
-        }
-        return frontier;
-    }
-
-    private static HashMap<String, Integer> extractDomains(String[] urls) {
-        HashMap<String, Integer> scope = new HashMap<String, Integer>();
-        for (int i = 0; i < urls.length; i++) {
-            try {
-                URL url = new URL(urls[i]);
-                String host = url.getHost();
-                logger.info(url.toString());
-                scope.put(host, new Integer(1));
-            } catch (MalformedURLException e) {
-                logger.warn("Invalid URL in seeds file. Ignoring URL: "+urls[i]);
-            }
-        }
-        return scope;
     }
 
     private static BipartiteGraphManager createBipartiteGraphManager(LinkStorageConfig config,

@@ -27,6 +27,7 @@ import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
@@ -36,24 +37,24 @@ import focusedCrawler.util.persistence.Tuple;
 public class Frontier {
 
     protected PersistentHashtable urlRelevance;
-    protected HashMap<String, Integer> hostPages = null;
+    protected Map<String, Integer> scope = null;
     private boolean useScope = false;
-    private final LinkSelectionStrategy linkSelector;
 
-    public Frontier(PersistentHashtable urlRelevance, LinkSelectionStrategy linkSelector, HashMap<String, Integer> scope) {
-        this.urlRelevance = urlRelevance;
-        this.linkSelector = linkSelector;
+    public Frontier(String directory, int maxCacheUrlsSize, Map<String, Integer> scope) {
+        
+        this.urlRelevance = new PersistentHashtable(directory, maxCacheUrlsSize);
+        
         if (scope == null) {
             this.useScope = false;
-            this.hostPages = new HashMap<String, Integer>();
+            this.scope = new HashMap<String, Integer>();
         } else {
-            this.hostPages = scope;
+            this.scope = scope;
             this.useScope = true;
         }
     }
 
-    public Frontier(PersistentHashtable urlRelevance, LinkSelectionStrategy linkSelector) {
-        this(urlRelevance, linkSelector, null);
+    public Frontier(String directory, int maxCacheUrlsSize) {
+        this(directory, maxCacheUrlsSize, null);
     }
 
     public void commit() {
@@ -177,7 +178,6 @@ public class Frontier {
      */
     public Integer exist(LinkRelevance linkRelev) throws FrontierPersistentException {
         String url = linkRelev.getURL().toString();
-        String host = linkRelev.getURL().getHost();
         Integer result = null;
         String resStr = urlRelevance.get(url);
         if (resStr != null) {
@@ -185,7 +185,8 @@ public class Frontier {
         } else {
             result = new Integer(-1);
             if (useScope == true) {
-                if (hostPages.get(host) != null) {
+                String host = linkRelev.getURL().getHost();
+                if (scope.get(host) != null) {
                     result = null;
                 }
             } else {
@@ -211,12 +212,16 @@ public class Frontier {
         }
     }
 
-    public LinkRelevance[] select(int numberOfLinks) throws FrontierPersistentException {
-        return linkSelector.select(numberOfLinks);
-    }
-
     public void close() {
         urlRelevance.close();
+    }
+
+    public PersistentHashtable getUrlRelevanceHashtable() {
+        return urlRelevance;
+    }
+
+    public Map<String, Integer> getScope() {
+        return scope;
     }
 
 }

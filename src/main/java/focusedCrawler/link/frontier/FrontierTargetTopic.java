@@ -12,17 +12,14 @@ import focusedCrawler.util.persistence.PersistentHashtable;
 
 public class FrontierTargetTopic implements LinkSelectionStrategy {
 
-	private final PersistentHashtable urlRelevance;
-
-    public FrontierTargetTopic(PersistentHashtable urlRelevance) {
-        this.urlRelevance = urlRelevance;
-	}
-
 //	boolean higher = true;
 	int[] classLimits = new int[]{100,100,1500};
 	
-	public LinkRelevance[] select(int numberOfLinks) {
-			LinkRelevance[] result = null;
+	@Override
+	public LinkRelevance[] select(Frontier frontier, int numberOfLinks) {
+	        PersistentHashtable urlRelevance = frontier.getUrlRelevanceHashtable();
+			
+	        LinkRelevance[] result = null;
 			
 			int[] classCount = new int[classLimits.length];
 			try {

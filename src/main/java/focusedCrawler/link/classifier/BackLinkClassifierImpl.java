@@ -1,8 +1,8 @@
 package focusedCrawler.link.classifier;
 
 import java.net.MalformedURLException;
-import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
@@ -37,12 +37,12 @@ public class BackLinkClassifierImpl implements LinkClassifier{
 			if(classifier == null){
 				result = new LinkRelevance(ln.getLink(),101);				
 			}else{
-				HashMap urlWords = wrapper.extractLinks(ln, attributes);
-				Iterator iter = urlWords.keySet().iterator();
+				Map<String, Instance> urlWords = wrapper.extractLinks(ln, attributes);
+				Iterator<String> iter = urlWords.keySet().iterator();
 				while(iter.hasNext()){
-					String url = (String)iter.next();
+					String url = iter.next();
 //			        System.out.println(">>>>CLASSIF URL:"+url);
-			        Instance instance = (Instance)urlWords.get(url);
+			        Instance instance = urlWords.get(url);
 //			        System.out.println(ln.getAroundString());
 			        double[] values = instance.getValues();
 //			        for (int i = 0; i < values.length; i++) {

@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.persistence.PersistentHashtable;
 
 public class AddSeeds {
 
@@ -22,8 +21,7 @@ public class AddSeeds {
             ParameterFile config = new ParameterFile(linkConfigFile);
             String dir = dataPath + "/" + config.getParam("LINK_DIRECTORY");
 
-            PersistentHashtable urls = new PersistentHashtable(dir, 1000);
-            Frontier frontier = new Frontier(urls, new BaselineLinkSelector(urls));
+            Frontier frontier = new Frontier(dir, 1000);
 
             int count = 0;
 
@@ -32,8 +30,10 @@ public class AddSeeds {
             String[] seeds = ParameterFile.getSeeds(seedFile);
             if (seeds != null && seeds.length > 0) {
                 for (String seed : seeds) {
-                    if (urls.get(seed) == null) {
-                        LinkRelevance linkRel = new LinkRelevance(new URL(seed), LinkRelevance.DEFAULT_RELEVANCE);
+                    LinkRelevance linkRel = new LinkRelevance(new URL(seed), LinkRelevance.DEFAULT_RELEVANCE);
+                    Integer exist = frontier.exist(linkRel);
+                    if (exist == null || exist == -1) {
+                        System.out.println("Adding seed URL: "+seed);
                         frontier.insert(linkRel);
                         count++;
                     }

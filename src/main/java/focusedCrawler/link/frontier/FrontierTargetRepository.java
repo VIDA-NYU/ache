@@ -6,21 +6,16 @@ import java.net.URLDecoder;
 import java.util.Iterator;
 import java.util.Vector;
 
-import net.sf.ehcache.CacheException;
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
 
 public class FrontierTargetRepository implements LinkSelectionStrategy {
 
-	private final PersistentHashtable urlRelevance;
-
-    public FrontierTargetRepository(PersistentHashtable urlRelevance) {
-        this.urlRelevance = urlRelevance;
-	}
-
 	@Override
-	public LinkRelevance[] select(int numberOfLinks) {
-//		HashMap<Integer, Integer> queue = new HashMap<Integer, Integer>();
+	public LinkRelevance[] select(Frontier frontier, int numberOfLinks) {
+	    
+	    PersistentHashtable urlRelevance = frontier.getUrlRelevanceHashtable();
+
 		LinkRelevance[] result = null;
 		int[] classLimits = new int[]{10000,20000,30000};
 		int[] countTopClass = new int[classLimits.length];
@@ -32,23 +27,16 @@ public class FrontierTargetRepository implements LinkSelectionStrategy {
 			for (; count < numberOfLinks && keys.hasNext();) {
 				String key = ((String)keys.next()).toString();
 				String url = URLDecoder.decode(key, "UTF-8");
-//				System.out.println(url);
+
 				if (url != null){
-//					System.out.println("$$$"+(String)urlRelevance.get(url));
+
 					Integer relevInt = new Integer((String)urlRelevance.get(url));
 					if(relevInt != null){
 						int relev = relevInt.intValue();
 						if(relev > 0){
 							int index = relev/100;
 							if(classCount[index] < classLimits[index]){
-//								Integer numOccur = ((Integer)queue.get(relevInt));
-//								int numOccurInt = 0;
-//								if(numOccur != null){
-//									numOccurInt++;
-//								}else{
-//									numOccurInt = 1;
-//								}
-//								queue.put(relevInt,new Integer(numOccurInt));
+
 								boolean insert = false;
 								if(index == 2){//top class
 									if(relev >= 280 && countTopClass[2] < 15000){
@@ -80,16 +68,17 @@ public class FrontierTargetRepository implements LinkSelectionStrategy {
 					}
 				}
 			}
+			
 			for (int i = 0; i < classCount.length; i++) {
 				System.out.println(">>>>LEVEL:" + i + ":" + classCount[i]);
 			}
+			
 			result = new LinkRelevance[tempList.size()];
 			tempList.toArray(result);
+			
 			System.out.println(">> TOTAL LOADED: " + result.length);
-//			queue.clear();
+
 		}catch (IOException ex) {
-			ex.printStackTrace();
-		}catch (CacheException ex) {
 			ex.printStackTrace();
 		}
 		return result;
