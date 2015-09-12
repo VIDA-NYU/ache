@@ -4,9 +4,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.file.Files;
@@ -14,8 +11,8 @@ import java.nio.file.Paths;
 
 import org.junit.Test;
 
-import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.classifier.TargetClassifier;
+import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.util.Page;
 
 public class MainTest {
