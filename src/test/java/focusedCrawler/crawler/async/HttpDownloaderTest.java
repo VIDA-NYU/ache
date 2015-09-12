@@ -1,18 +1,82 @@
 package focusedCrawler.crawler.async;
 
-import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.InetSocketAddress;
+
 import org.junit.Before;
 import org.junit.Test;
 
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
+
 import crawlercommons.fetcher.FetchedResult;
 import crawlercommons.fetcher.http.UserAgent;
-import focusedCrawler.crawler.async.HttpDownloader;
 
 public class HttpDownloaderTest {
+    
+    static class TestWebServerBuilder {
+        
+        private static final int port = 8345;
+        private static final String address = "http://localhost:"+port;
+        private HttpServer server;
+        
+        public TestWebServerBuilder() throws IOException {
+            server = HttpServer.create(new InetSocketAddress("localhost", port), 0);
+        }
+        
+        public TestWebServerBuilder withHandler(String path, HttpHandler handler) {
+            server.createContext(path, handler);
+            return this;
+        }
+    
+        private HttpServer start() {
+            server.setExecutor(null); // creates a default executor
+            server.start();
+            return server;
+        }
+    }
+    
+    static class OkHandler implements HttpHandler {
+        
+        private final String responseContent;
+
+        public OkHandler(String responseContent) {
+            this.responseContent = responseContent;
+        }
+
+        @Override
+        public void handle(HttpExchange t) throws IOException {
+            t.getResponseHeaders().add("Content-Type", "text/html; charset=utf-8");
+            t.sendResponseHeaders(HttpURLConnection.HTTP_OK, responseContent.getBytes().length);
+            OutputStream os = t.getResponseBody();
+            os.write(responseContent.getBytes());
+            os.close();
+            t.close();
+        }
+    }
+    
+    static class RedirectionHandler implements HttpHandler {
+        
+        private String newLocation;
+
+        public RedirectionHandler(String newLocation) {
+            this.newLocation = newLocation;
+        }
+
+        @Override
+        public void handle(HttpExchange t) throws IOException {
+            t.getResponseHeaders().add("Location", newLocation);
+            t.sendResponseHeaders(HttpURLConnection.HTTP_MOVED_PERM, 0);
+            t.close();
+        }
+    }
     
     final UserAgent userAgent = new UserAgent("test", "test@test.com", "test@test.com");
     
@@ -24,11 +88,16 @@ public class HttpDownloaderTest {
     }
 
     @Test
-    public void shouldReturnOriginalAndRedirectedUrl() throws Exception {
+    public void shouldFollowRedirections() throws Exception {
         // given
-        String originalUrl = "http://onesource.thomsonreuters.com/";
-        String expectedRedirectedUrl = "https://tax.thomsonreuters.com/products/brands/onesource";
-
+        HttpServer httpServer = new TestWebServerBuilder()
+            .withHandler("/index.html", new RedirectionHandler("/new/location.html"))
+            .withHandler("/new/location.html", new OkHandler("Hello world!"))
+            .start();
+        
+        String originalUrl = TestWebServerBuilder.address+"/index.html";
+        String expectedRedirectedUrl = TestWebServerBuilder.address+"/new/location.html";
+        
         // when
         FetchedResult result = downloader.dipatchDownload(originalUrl).get();
         
@@ -37,13 +106,22 @@ public class HttpDownloaderTest {
         assertThat(result.getBaseUrl(), is(originalUrl));
         assertThat(result.getFetchedUrl(), is(expectedRedirectedUrl));
         assertThat(result.getNewBaseUrl(), is(expectedRedirectedUrl));
-        assertThat(result.getContentType(), containsString("text/html"));
+        assertThat(result.getStatusCode(), is(200));
+        assertThat(result.getReasonPhrase(), is("OK"));
+        assertThat(result.getContentType(), is("text/html; charset=utf-8"));
+        assertThat(result.getContent(), is("Hello world!".getBytes()));
+        
+        httpServer.stop(0);
     }
     
     @Test
-    public void shouldWorkWhenRedirectionsDoesntHappen() throws Exception {
+    public void shouldDownloadPageContentAndMetadata() throws Exception {
         // given
-        String originalUrl = "http://nua.ac.uk/";
+        String responseContent = "Hello world!";
+        String originalUrl = TestWebServerBuilder.address+"/index.html";
+        HttpServer httpServer = new TestWebServerBuilder()
+            .withHandler("/index.html", new OkHandler("Hello world!"))
+            .start();
 
         // when
         FetchedResult result = downloader.dipatchDownload(originalUrl).get();
@@ -53,14 +131,12 @@ public class HttpDownloaderTest {
         assertThat(result.getBaseUrl(), is(originalUrl));
         assertThat(result.getFetchedUrl(), is(originalUrl));
         assertThat(result.getNewBaseUrl(), is(nullValue()));
-        assertThat(result.getContentType(), containsString("text/html"));
-    }
-
-    @Test
-    public void shouldExtractMimeTypeWhenAvailable() throws Exception {
-        final String originalUrl = "http://www.youtube.com/user/SamaritansPurseVideo";
-        FetchedResult result = downloader.dipatchDownload(originalUrl).get();
-        assertThat(result.getContentType(), containsString("text/html"));
+        assertThat(result.getStatusCode(), is(200));
+        assertThat(result.getReasonPhrase(), is("OK"));
+        assertThat(result.getContentType(), is("text/html; charset=utf-8"));
+        assertThat(result.getContent(), is(responseContent.getBytes()));
+        
+        httpServer.stop(0);
     }
 
 }
