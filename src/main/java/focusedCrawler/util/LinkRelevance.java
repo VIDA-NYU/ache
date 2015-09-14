@@ -24,6 +24,7 @@
 package focusedCrawler.util;
 
 import java.io.Serializable;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 import com.google.common.net.InternetDomainName;
@@ -41,6 +42,10 @@ public class LinkRelevance implements Serializable {
     public LinkRelevance(URL url, double relevance) {
         this.url = url;
         this.relevance = relevance;
+    }
+
+    public LinkRelevance(String string, int relevance) throws MalformedURLException {
+        this(new URL(string), relevance);
     }
 
     public URL getURL() {
