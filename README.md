@@ -8,17 +8,7 @@
 ACHE is an implementation of a focused crawler. A focused crawler is a web crawler that collects Web pages that satisfy some specific property, by carefully prioritizing the crawl frontier and managing the hyperlink exploration process [[1]].
 
 ## Installation
-
-### Download with Conda
-
-You can download `ache` from Binstar [[2]] with Conda [[3]] by running:
-
-```bash
-conda install -c memex ache
-```
-NOTE: Only tagged versions are published to Binstar, so `ache` from Binstart may be outdated.
-If you want to try the most recent version, please clone the repository, compile the code using instructions below and then start the crawler using `ache` located in `build/install/ache/bin`.
-
+You can either build `ache` from the source code or download the execution using `conda`
 ### Build from source with Gradle
 
 To build `ache` from source, you can run the following commands in your terminal:
@@ -31,27 +21,22 @@ cd ache
 
 which will generate an installation package under `/build/install/`.
 
-Alternatively, you can build a zip archive:
-
-```bash
-./gradlew clean distZip
-```
-or a tar archive:
-
-```bash
-./gradlew clean distTar
-```
-
-which will generate a zip/tar file of your project under `/build/distributions/`.
 
 Learn more about Gradle: [http://www.gradle.org/documentation](http://www.gradle.org/documentation).
-  
-  
-## Build a model for ACHE's page classifier
-(If you already have the model, skip this step.)
 
-To focus on a certain topic ACHE needs to have access to a model of its content. This model is then 
-used by a classifier to decide, given a new crawled page, whether it is on-topic or not. Assume that you store positive and negative examples in two directories, `positive` and `negative`. Also, assume these directories are placed in the `training_data` directory. Here is how you build a model from these examples:
+### Download with Conda
+
+You can download `ache` from Binstar [[2]] with Conda [[3]] by running:
+
+```bash
+conda install -c memex ache
+```
+NOTE: Only tagged versions are published to Binstar, so `ache` from Binstart may be outdated.
+If you want to try the most recent version, please clone the repository, compile the code using instructions below and then start the crawler using `ache` located in `build/install/ache/bin`.
+  
+## Build page classifier for ACHE
+
+To focus on a certain topic ACHE needs to have a page classifier to decide, given a new crawled page, whether it is on-topic or not. A page classifier can be created with `ache` given positive and negative examples. Each training example conrresponds to a web page whose html content needs to be stored in a plain text file. Assume that you store positive and negative examples in two directories, `positive` and `negative`, which reside in `training_data` directory. Here is how you build a model from these examples:
 
     ./build/install/ache/bin/ache buildModel -t <training data path> -o <output path for model> -c <stopwords file path>
 
@@ -61,9 +46,13 @@ used by a classifier to decide, given a new crawled page, whether it is on-topic
   
 `<stopwords file path>` is a file with list of words that the classifier should ignore. Example: https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/stoplist.txt
 
+Example of building a page classifier using test data:
+
+    ./build/install/ache/bin/ache  -c config/sample_config/stoplist.txt -o model_output -t config/sample_training_data
+
 ## Start ACHE
 
-After you generate a model, you need to prepare the seed file, where each line is a URL. To start the crawler, run:
+After you generate a model, you need to prepare the seed file, where each line is a URL. Then to start the crawler, run:
 
     ./build/install/ache/bin/ache startCrawl -o <data output path> -c <config path> -s <seed path> -m <model path> [-e <elastic search index name>]
 
@@ -99,3 +88,8 @@ We welcome user feedback. Please submit any suggestions or bug reports using the
 [1]: http://en.wikipedia.org/wiki/Focused_crawler
 [2]: https://binstar.org/
 [3]: http://conda.pydata.org/
+
+## Contact?
+Kien Pham [kien.pham@nyu.edu]
+
+Aecio Santos [aecio.santos@nyu.edu]
