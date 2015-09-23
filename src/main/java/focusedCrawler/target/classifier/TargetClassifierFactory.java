@@ -9,6 +9,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
@@ -45,84 +46,105 @@ public class TargetClassifierFactory {
         logger.info("Loading TargetClassifier...");
         
         Path basePath = Paths.get(modelPath);
+        Path configPath = Paths.get(modelPath, "/pageclassifier.yml");
         File configFile = Paths.get(modelPath, "pageclassifier.yml").toFile();
         
         if(configFile.exists() && configFile.canRead()) {
         
             ObjectMapper yaml = new ObjectMapper(new YAMLFactory());
+            
             JsonNode tree = yaml.readTree(configFile);
             String classifierType = tree.get("type").asText();
             JsonNode parameters = tree.get("parameters");
             
             logger.info("TargetClassifier: "+classifierType);
             
+            TargetClassifier classifier = null;
+            
             if("url_regex".equals(classifierType)) {
-                
-                UrlRegexClassifierConfig params = yaml.treeToValue(parameters,
-                                                                   UrlRegexClassifierConfig.class);
-                
-                if(params.regular_expressions != null && params.regular_expressions.size() > 0) {
-                    return UrlRegexTargetClassifier.fromRegularExpressions(params.regular_expressions);
-                }
-                
-                
-                if(params.whitelist_file != null && params.blacklist_file != null) {
-                    params.whitelist_file = basePath.resolve(params.whitelist_file).toString();
-                    params.blacklist_file = basePath.resolve(params.blacklist_file).toString();
-                    return UrlRegexTargetClassifier.fromWhitelistAndBlacklistFiles(
-                        params.whitelist_file,
-                        params.blacklist_file
-                    );
-                }
-                
-                if(params.whitelist_file != null && params.blacklist_file == null) {
-                    params.whitelist_file = basePath.resolve(params.whitelist_file).toString();
-                    return UrlRegexTargetClassifier.fromWhitelistFile(params.whitelist_file);
-                }
-                
-                if(params.whitelist_file == null && params.blacklist_file != null) {
-                    params.blacklist_file = basePath.resolve(params.blacklist_file).toString();
-                    return UrlRegexTargetClassifier.fromBlacklistFile(params.blacklist_file);
-                }
-                
-                throw new IllegalArgumentException("Config for url_regex classifier has "
-                        + "missing or wrong values in file: "
-                        + Paths.get(modelPath, "/pageclassifier.yml"));
+                classifier = createUrlRegexClassifier(basePath, yaml, parameters);
             }
             
             if("title_regex".equals(classifierType)) {
-                
-                TitleRegexClassifierConfig params = yaml.treeToValue(parameters,
-                        TitleRegexClassifierConfig.class);
-                
-                if(params.regular_expression != null && !params.regular_expression.trim().isEmpty()) {
-                    return new TitleRegexTargetClassifier(params.regular_expression.trim());
-                }
-                
-                throw new IllegalArgumentException("Config for title_regex classifier has "
-                        + "missing or wrong values in file: "
-                        + Paths.get(modelPath, "/pageclassifier.yml"));
+                classifier = createTitleRegexClassifier(yaml, parameters);
             }
             
             if("weka".equals(classifierType)) {
-                
-                WekaClassifierConfig params = yaml.treeToValue(parameters, WekaClassifierConfig.class);
-                params.model_file = basePath.resolve(params.model_file).toString();
-                params.features_file = basePath.resolve(params.features_file).toString();
-                params.stopwords_file = basePath.resolve(params.stopwords_file).toString();
-                
-                return WekaTargetClassifier.create(params.model_file,
-                                                   params.features_file,
-                                                   params.relevanceThreshold,
-                                                   params.stopwords_file);
+                classifier = createWekaClassifier(basePath, yaml, parameters);
             }
             
-            throw new IllegalArgumentException("Could not instantiate classifier using config: "
-                                               + Paths.get(modelPath, "/pageclassifier.yml"));
+            if(classifier != null) {
+                return classifier;
+            } else {
+                String errorMsg = "Could not instantiate classifier using config: " + configPath;
+                throw new IllegalArgumentException(errorMsg);
+            }
         }
         
         // create classic weka classifer to maintain compatibility with older versions
         return WekaTargetClassifier.create(modelPath, relevanceThreshold, stoplist);
+    }
+
+    private static TargetClassifier createUrlRegexClassifier(Path basePath, ObjectMapper yaml,
+            JsonNode parameters) throws JsonProcessingException {
+        
+        UrlRegexClassifierConfig params = yaml.treeToValue(parameters,
+                                                           UrlRegexClassifierConfig.class);
+        TargetClassifier classifier = null;
+        
+        if(params.regular_expressions != null && params.regular_expressions.size() > 0) {
+            classifier = UrlRegexTargetClassifier.fromRegularExpressions(params.regular_expressions);
+        }
+        
+        if(params.whitelist_file != null && params.blacklist_file != null) {
+            params.whitelist_file = basePath.resolve(params.whitelist_file).toString();
+            params.blacklist_file = basePath.resolve(params.blacklist_file).toString();
+            classifier = UrlRegexTargetClassifier.fromWhitelistAndBlacklistFiles(
+                params.whitelist_file,
+                params.blacklist_file
+            );
+        }
+        
+        if(params.whitelist_file != null && params.blacklist_file == null) {
+            params.whitelist_file = basePath.resolve(params.whitelist_file).toString();
+            classifier = UrlRegexTargetClassifier.fromWhitelistFile(params.whitelist_file);
+        }
+        
+        if(params.whitelist_file == null && params.blacklist_file != null) {
+            params.blacklist_file = basePath.resolve(params.blacklist_file).toString();
+            classifier = UrlRegexTargetClassifier.fromBlacklistFile(params.blacklist_file);
+        }
+        
+        return classifier;
+    }
+
+    private static TargetClassifier createTitleRegexClassifier(ObjectMapper yaml,
+                                                               JsonNode parameters)
+                                                               throws JsonProcessingException {
+        TitleRegexClassifierConfig params = yaml.treeToValue(parameters, TitleRegexClassifierConfig.class);
+        
+        if(params.regular_expression != null && !params.regular_expression.trim().isEmpty()) {
+            return new TitleRegexTargetClassifier(params.regular_expression.trim());
+        } else {
+            return null;
+        }
+    }
+
+    private static TargetClassifier createWekaClassifier(Path basePath,
+                                                         ObjectMapper yaml,
+                                                         JsonNode parameters)
+                                                         throws JsonProcessingException,
+                                                                IOException {
+        
+        WekaClassifierConfig params = yaml.treeToValue(parameters, WekaClassifierConfig.class);
+        params.model_file = basePath.resolve(params.model_file).toFile().getAbsolutePath();
+        params.features_file = basePath.resolve(params.features_file).toFile().getAbsolutePath();
+        params.stopwords_file = basePath.resolve(params.stopwords_file).toFile().getAbsolutePath();
+        
+        return WekaTargetClassifier.create(params.model_file,
+                                           params.features_file,
+                                           params.relevanceThreshold,
+                                           params.stopwords_file);
     }
 
 }
