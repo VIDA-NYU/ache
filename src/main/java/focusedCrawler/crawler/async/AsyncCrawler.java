@@ -23,44 +23,58 @@ public class AsyncCrawler {
 
     private Storage targetStorage;
     private LinkStorage linkStorage;
+    private HttpDownloader downloader;
+    private UserAgent userAgent;
 
     public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage) {
         this.targetStorage = targetStorage;
         this.linkStorage = linkStorage;
+        this.userAgent = new UserAgent("ACHE", "", "https://github.com/ViDA-NYU/ache");
+        this.downloader = new HttpDownloader(userAgent);
     }
 
     public void run() {
-        UserAgent userAgent = new UserAgent("ACHE", "", "");
-        HttpDownloader downloader = new HttpDownloader(userAgent);
         try {
-            while (!stop) {
+            while (!this.stop) {
+                
+                LinkRelevance link = null;
                 try {
-                    LinkRelevance link = ((LinkRelevance) linkStorage.select(null));
-                    
-                    FetchedResultHandler resultHandler = new FetchedResultHandler(targetStorage);
-                    downloader.dipatchDownload(link, resultHandler);
-                    
-                } catch (DataNotFoundException e) {
+                    link = (LinkRelevance) linkStorage.select(null);
+                }
+                catch (DataNotFoundException e) {
+                    //
+                    // There are no more links available in the frontier right now
+                    //
                     if(downloader.stillWorking()) {
-                        System.out.println("Waiting for links from pages being downloaded...");
+                        // If there are links still being downloaded, new links 
+                        // may be found in these pages, so try we should wait some
+                        // time until more links are available and again once more
                         try {
+                            logger.info("Waiting for links from pages being downloaded...");
                             Thread.sleep(100);
-                        } catch (InterruptedException ie) {}
+                        } catch (InterruptedException ie) { }
                         continue;
                     } else {
-                        stop = true;
-                        System.out.println("LinkStorage ran out of links...");
+                        // Already waited for link storage process eventual unprocessed links
+                        // and there are no more links being downloaded, so stop crawler
+                        logger.info("LinkStorage ran out of links, stopping crawler.");
+                        this.stop = true;
                         break;
                     }
                 } catch (StorageException e) {
                     logger.warn("Problem dispatching link.", e);
-                } 
+                }
+                
+                if(link != null) {
+                    FetchedResultHandler resultHandler = new FetchedResultHandler(targetStorage);
+                    downloader.dipatchDownload(link, resultHandler);
+                }
             }
             downloader.await();
         } finally {
-            System.out.println("Shutting down crawler...");
+            logger.info("Shutting down crawler...");
             downloader.close();
-            System.out.println("Done.");
+            logger.info("Done.");
         }
     }
     
