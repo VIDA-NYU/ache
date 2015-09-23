@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,12 +24,12 @@ public class FrontierManagerFactory {
                                   String stoplistFile) {
         
         String[] seedUrls = ParameterFile.getSeeds(seedFile);
-        HashMap<String, Integer> scope = extractDomains(seedUrls);
         
         String directory = Paths.get(dataPath, config.getLinkDirectory()).toString();
         
         Frontier frontier = null;
         if (config.isUseScope()) {
+            Map<String, Integer> scope = extractDomains(seedUrls);
             frontier = new Frontier(directory, config.getMaxCacheUrlsSize(), scope);
         } else {
             frontier = new Frontier(directory, config.getMaxCacheUrlsSize());
