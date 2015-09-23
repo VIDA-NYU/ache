@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Future;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -120,7 +123,7 @@ public class HttpDownloaderTest {
         String responseContent = "Hello world!";
         String originalUrl = TestWebServerBuilder.address+"/index.html";
         HttpServer httpServer = new TestWebServerBuilder()
-            .withHandler("/index.html", new OkHandler("Hello world!"))
+            .withHandler("/index.html", new OkHandler(responseContent))
             .start();
 
         // when
@@ -135,6 +138,30 @@ public class HttpDownloaderTest {
         assertThat(result.getReasonPhrase(), is("OK"));
         assertThat(result.getContentType(), is("text/html; charset=utf-8"));
         assertThat(result.getContent(), is(responseContent.getBytes()));
+        
+        httpServer.stop(0);
+    }
+    
+    
+    @Test
+    public void shouldDownloadMultipleUrlsInParallel() throws Exception {
+        // given
+        String originalUrl = TestWebServerBuilder.address+"/index.html";
+        HttpServer httpServer = new TestWebServerBuilder()
+            .withHandler("/index.html", new OkHandler("Hello world!"))
+            .start();
+
+        // when
+        List<Future<FetchedResult>> results = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            Future<FetchedResult> futureResult = downloader.dipatchDownload(originalUrl);
+            results.add(futureResult);
+        }
+        
+        // then
+        for (Future<FetchedResult> future : results) {
+            assertThat(future.get().getStatusCode(), is(200));
+        }
         
         httpServer.stop(0);
     }
