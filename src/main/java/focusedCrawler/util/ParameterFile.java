@@ -30,7 +30,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -44,22 +43,20 @@ import java.util.Vector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings({ "unchecked", "rawtypes" })
 public class ParameterFile {
-	
-  private static final Logger logger = LoggerFactory.getLogger(ParameterFile.class);
 
-  protected static final String PRELOAD_PREFIX = "${";
-  protected static final String PRELOAD_SUFIX  = "}";
-  protected static final String PARENT_FILE = "..";
-  public static final int FILE   = 0;
-  public static final int STRING = FILE + 1;
-  public static final int URL = STRING + 1;
+    private static final Logger logger = LoggerFactory.getLogger(ParameterFile.class);
+
+    protected static final String PRELOAD_PREFIX = "${";
+    protected static final String PRELOAD_SUFIX = "}";
+    protected static final String PARENT_FILE = "..";
+    public static final int FILE = 0;
+    public static final int STRING = FILE + 1;
+    public static final int URL = STRING + 1;
 
     static {
-        TimeZone.setDefault(new SimpleTimeZone(
-          (TimeZone.getDefault()).getRawOffset(),
-          (TimeZone.getDefault()).getID()
-        ));
+        TimeZone.setDefault(new SimpleTimeZone((TimeZone.getDefault()).getRawOffset(), (TimeZone.getDefault()).getID()));
     }
 
     private int tipo = FILE;
@@ -81,109 +78,70 @@ public class ParameterFile {
     // global static use
     public final static Hashtable staticData = new Hashtable();
 
-    public ParameterFile (String[] args) {
+    public ParameterFile(String[] args) {
         this(new File(args[0].trim()));
         for (int i = 0; i < args.length; i++) {
             Vector v = new Vector();
             v.addElement(args[i].trim());
-            hash.put(""+i,v);
+            hash.put("" + i, v);
         }
     }
 
-    public ParameterFile (String filename) {
-         this(new File(filename));
+    public ParameterFile(String filename) {
+        this(new File(filename));
     }
 
-    public ParameterFile (String id, int tipo) {
-        this.tipo = tipo;
-        if( tipo == STRING ) {
-            this.content = id;
-        }
-        else {
-            this.cfg_file = new File(id);
-        }
+    public ParameterFile(File file) {
+        this(file, new Hashtable());
+    }
+
+    public ParameterFile(java.net.URL url) {
+        this.tipo = ParameterFile.URL;
+        this.cfg_url = url;
         hash = new Hashtable();
         loadHash();
     }
 
-    public ParameterFile (File cfg_file) {
-        this(cfg_file, new Hashtable());
-    }
-
-    public ParameterFile (java.net.URL url) {
-        this.tipo = ParameterFile.URL;
-        this.cfg_url = url;
-        hash = new Hashtable();
-        loadHash ();
-    }
-
-    protected ParameterFile (File cfg_file, Hashtable hash) {
+    protected ParameterFile(File cfg_file, Hashtable hash) {
         this.cfg_file = cfg_file;
         this.hash = hash;
         logger.info("CONFIGURATION FILE = " + cfg_file);
         loadHash();
     }
 
-    static public String[] getSeeds(String seedFile){
+    static public String[] getSeeds(String seedFile) {
         ArrayList<String> urls = new ArrayList<String>();
-        try{
+        try {
             File file = new File(seedFile);
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 line = line.trim();
-                if(!line.isEmpty()) {
+                if (!line.isEmpty()) {
                     urls.add(line);
                 }
             }
             fileReader.close();
             return urls.toArray(new String[urls.size()]);
-        }
-        catch(Exception e){
-        	logger.error("Error while reading seed list", e);
+        } catch (Exception e) {
+            logger.error("Error while reading seed list", e);
             return null;
         }
     }
 
-    public File getCfgFile () {
+    public File getCfgFile() {
         return this.cfg_file;
     }
-
-    public void setCfgFile (File cfg_file) {
-        this.cfg_file = cfg_file;
-        loadHash();
-        logger.info("CONFIGURATION FILE = " + cfg_file);
-    }
-
-    public URL getCfgUrl () {
-        return this.cfg_url;
-    } //getUrl
-
-    public void setCfgUrl (URL cfg_url) {
-        this.cfg_url = cfg_url;
-        loadHash();
-        logger.info("CONFIGURATION FILE = " + cfg_url);
-    } //getParams
-
-
-    public Enumeration getParams() {
-        if (hash != null) {
-            return hash.keys();
-        } //if
-        else {
-            return null;
-        } //else
-    } //getParams
 
     public Iterator getParameters() {
         if (hash != null) {
             return hash.keySet().iterator();
-        } //if
+        } // if
         else {
             return null;
-        } //else
-    } //getParams
+        } // else
+    } // getParams
 
     public String getParam(String param, int posicao) {
         String valor = null;
@@ -191,33 +149,27 @@ public class ParameterFile {
             loadHash();
         }
         Vector data = (Vector) hash.get(param);
-        if ( data != null ) {
+        if (data != null) {
             if (posicao == -1) {
-                for(int i = 0 ; i < data.size() ; i++ ) {
-                    if ( i == 0 ) {
-                        valor = transformaToken( (String)data.elementAt(i),hash );
-                    }
-                    else {
-                        valor += transformaToken(" " + (String)data.elementAt(i),hash );
+                for (int i = 0; i < data.size(); i++) {
+                    if (i == 0) {
+                        valor = transformaToken((String) data.elementAt(i), hash);
+                    } else {
+                        valor += transformaToken(" " + (String) data.elementAt(i), hash);
                     }
                 }
             } else {
                 if (posicao >= 0 && posicao < data.size()) {
-                    valor = transformaToken( (String) data.elementAt(posicao),hash );
+                    valor = transformaToken((String) data.elementAt(posicao), hash);
                 }
             }
         }
-        if (valor == null) {
-        	logger.warn("ParameterFile.getParam(\""+param+"\","+posicao+")=null");
-        }
-        return ( valor != null ? valor.trim() : null );
+        return (valor != null ? valor.trim() : null);
     }
-
 
     public String getParam(String param) {
-      return getParam(param,-1);
+        return getParam(param, -1);
     }
-    
 
     public String getParamOrDefault(String paramKey, String defaultValue) {
         String paramValue = getParam(paramKey);
@@ -227,7 +179,7 @@ public class ParameterFile {
     public int getParamInt(String param) {
         return getParamIntOrDefault(param, 0);
     }
-    
+
     public int getParamIntOrDefault(String paramKey, int defaultValue) {
         try {
             String value = getParam(paramKey);
@@ -236,15 +188,15 @@ public class ParameterFile {
             }
         } catch (NumberFormatException e) {
         }
-        logger.warn(String.format("Valid integer value not found for config key %s." +
-                                  " Using default value: %d", paramKey, defaultValue));
+        logger.warn(String.format("Valid integer value not found for config key %s." + " Using default value: %d",
+                paramKey, defaultValue));
         return defaultValue;
     }
 
     public long getParamLong(String param) {
         return getParamLongOrDefault(param, 0);
     }
-    
+
     public long getParamLongOrDefault(String configKey, long defaultValue) {
         try {
             String value = getParam(configKey);
@@ -253,15 +205,15 @@ public class ParameterFile {
             }
         } catch (Exception e) {
         }
-        logger.warn(String.format("Valid long value not found for config key %s." +
-                                  " Using default value: %d", configKey, defaultValue));
+        logger.warn(String.format("Valid long value not found for config key %s." + " Using default value: %d",
+                configKey, defaultValue));
         return defaultValue;
     }
 
     public boolean getParamBoolean(String param) {
-       return getParamBooleanOrDefault(param, false);
+        return getParamBooleanOrDefault(param, false);
     }
-    
+
     public boolean getParamBooleanOrDefault(String param, boolean defaultValue) {
         try {
             String value = getParam(param);
@@ -270,15 +222,14 @@ public class ParameterFile {
             }
         } catch (Exception e) {
         }
-        logger.warn(String.format("Valid boolean value not found for config key %s." +
-                                  " Using default value: %b", param, defaultValue));
+        logger.warn(String.format("Valid boolean value not found for config key %s." + " Using default value: %b",
+                param, defaultValue));
         return defaultValue;
     }
 
     public float getParamFloat(String param) {
         String value = getParam(param);
         if (value == null) {
-            logger.warn("ParameterFile: getParamFloat WARNING " + param + " == null" );
             return 0;
         }
         return Float.parseFloat(value);
@@ -287,7 +238,6 @@ public class ParameterFile {
     public double getParamDouble(String param) {
         String value = getParam(param);
         if (value == null) {
-            logger.warn("ParameterFile: getParamDouble WARNING " + param + " == null" );
             return 0;
         }
         return Double.parseDouble(value);
@@ -296,7 +246,6 @@ public class ParameterFile {
     public short getParamShort(String param) {
         String value = getParam(param);
         if (value == null) {
-            logger.warn("ParameterFile: getParamShort WARNING " + param + " == null" );
             return 0;
         }
         return Short.parseShort(value);
@@ -305,27 +254,26 @@ public class ParameterFile {
     public byte getParamByte(String param) {
         String value = getParam(param);
         if (value == null) {
-            logger.warn("ParameterFile: getParamByte WARNING " + param + " == null" );
             return 0;
         }
         return Byte.parseByte(value);
     }
 
     public String[] getParam(String param, String tokens) {
-        StringTokenizer st = new StringTokenizer(getParam(param),tokens);
+        StringTokenizer st = new StringTokenizer(getParam(param), tokens);
         String[] r = new String[st.countTokens()];
-        int i =0;
-        while( st.hasMoreTokens() ) {
+        int i = 0;
+        while (st.hasMoreTokens()) {
             r[i] = st.nextToken();
             i++;
         }
         return r;
     }
 
-    private String transformaToken (String token, Hashtable hash) {
+    private String transformaToken(String token, Hashtable hash) {
         String resultado = token;
-        while( resultado != null && resultado.indexOf(PRELOAD_PREFIX) >= 0 ) {
-            resultado = toParameter(hash,resultado);
+        while (resultado != null && resultado.indexOf(PRELOAD_PREFIX) >= 0) {
+            resultado = toParameter(hash, resultado);
         }
         return resultado;
     }
@@ -333,35 +281,34 @@ public class ParameterFile {
     protected String toParameter(Hashtable result, String value) {
         String resultado = value;
         String str = "";
-        int last  = 0;
-        int start = value.indexOf(PRELOAD_PREFIX,last);
-        int end   = value.indexOf(PRELOAD_SUFIX,start);
-        if( start >= 0 ) {
-            str += value.substring(0,start);
+        int last = 0;
+        int start = value.indexOf(PRELOAD_PREFIX, last);
+        int end = value.indexOf(PRELOAD_SUFIX, start);
+        if (start >= 0) {
+            str += value.substring(0, start);
         }
-        while( start >= 0 && end >= 0 ) {
-            String param = value.substring(start+PRELOAD_PREFIX.length(),end);
-            String param_value = getParam (param);
-            if( param_value == null ) {
-                logger.warn("The parameter '"+param+"' is missing in your configuration file.");
+        while (start >= 0 && end >= 0) {
+            String param = value.substring(start + PRELOAD_PREFIX.length(), end);
+            String param_value = getParam(param);
+            if (param_value == null) {
+                logger.warn("The parameter '" + param + "' is missing in your configuration file.");
                 return null;
             }
-            if( param_value != null ) {
+            if (param_value != null) {
                 str += param_value;
             }
-            last  = end+1;
-            start = value.indexOf(PRELOAD_PREFIX,last);
-            end   = value.indexOf(PRELOAD_SUFIX,start);
-            if( last < value.length() ) {
-                if( start == -1 ) {
-                    str += value.substring(last,value.length());
-                }
-                else {
-                    str += value.substring(last,start);
+            last = end + 1;
+            start = value.indexOf(PRELOAD_PREFIX, last);
+            end = value.indexOf(PRELOAD_SUFIX, start);
+            if (last < value.length()) {
+                if (start == -1) {
+                    str += value.substring(last, value.length());
+                } else {
+                    str += value.substring(last, start);
                 }
             }
         }
-        if( last > 0 ) {
+        if (last > 0) {
             resultado = str;
         }
         return resultado;
@@ -369,137 +316,115 @@ public class ParameterFile {
 
     public String getRecursiveFile(String filename) {
         File load = new File(cfg_file.getParent());
-        while(filename.startsWith(PARENT_FILE)) {
-            if( load.getParent() != null && filename.length() >= 3 ) {
+        while (filename.startsWith(PARENT_FILE)) {
+            if (load.getParent() != null && filename.length() >= 3) {
                 load = new File(load.getParent());
-                filename = filename.substring(3,filename.length());
-            }
-            else {
-                  logger.error("Could not find parent file of "+load);
-                  System.exit(1);
+                filename = filename.substring(3, filename.length());
+            } else {
+                logger.error("Could not find parent file of " + load);
+                System.exit(1);
             }
         }
-        load = new File(load,filename);
-        if( load.exists() ) {
+        load = new File(load, filename);
+        if (load.exists()) {
             return load.getAbsolutePath();
-        }
-        else {
-              logger.error("File '"+load+"' not found!");
-              System.exit(1);
-              return null;
+        } else {
+            logger.error("File '" + load + "' not found!");
+            System.exit(1);
+            return null;
         }
     }
 
-    public void listParams(){
+    public void listParams() {
         Enumeration chaves = hash.keys();
         String param = "";
-        while (chaves.hasMoreElements()){
+        while (chaves.hasMoreElements()) {
             param = (String) chaves.nextElement();
-            logger.debug("Parameter: "+ param + " : "+ this.getParam(param));
+            logger.debug("Parameter: " + param + " : " + this.getParam(param));
         }
     }
 
     private synchronized void loadHash() {
         try {
             try {
-                if( tipo == STRING ) {
+                if (tipo == STRING) {
                     in = new BufferedReader(new StringReader(content));
-                } //if
-                else if( tipo == FILE ) {
-                     in = new BufferedReader(new FileReader(cfg_file));
-                } //else
-                else if ( tipo == URL ) {
+                } // if
+                else if (tipo == FILE) {
+                    in = new BufferedReader(new FileReader(cfg_file));
+                } // else
+                else if (tipo == URL) {
                     try {
                         url_con = (HttpURLConnection) cfg_url.openConnection();
-                    } //try
+                    } // try
                     catch (IOException erro) {
-                        return ;
-                    } //catch
-                    in = new BufferedReader(new InputStreamReader (url_con.getInputStream()));
-                } //else
-            } //try
+                        return;
+                    } // catch
+                    in = new BufferedReader(new InputStreamReader(url_con.getInputStream()));
+                } // else
+            } // try
             catch (IOException e) {
-            	logger.error(e.getMessage(), e);
+                logger.error(e.getMessage(), e);
                 return;
-            } //catch
-            
+            } // catch
+
             String line;
-            while( (line = in.readLine()) != null) {
+            while ((line = in.readLine()) != null) {
                 StringTokenizer st = new StringTokenizer(line);
                 int i = 0;
                 String param = null;
                 Vector values = new Vector();
                 int tokenCounter = 0;
-                while(st.hasMoreTokens()) {
+                while (st.hasMoreTokens()) {
                     tokenCounter++;
                     String token = st.nextToken();
-                    if (token.equals (".") && tokenCounter==1) {
-                        if (st.hasMoreTokens ()) {
-                            String arquivo_config = transformaToken(st.nextToken (), hash);
+                    if (token.equals(".") && tokenCounter == 1) {
+                        if (st.hasMoreTokens()) {
+                            String arquivo_config = transformaToken(st.nextToken(), hash);
                             if (arquivo_config.startsWith("..")) {
                                 arquivo_config = getRecursiveFile(arquivo_config);
-                            }
-                            else {
-                                if( !(arquivo_config.startsWith(File.separator) || arquivo_config.charAt(1)==':') ) {
-                                    arquivo_config = new File(cfg_file.getParent(),arquivo_config).toString();
+                            } else {
+                                if (!(arquivo_config.startsWith(File.separator) || arquivo_config.charAt(1) == ':')) {
+                                    arquivo_config = new File(cfg_file.getParent(), arquivo_config).toString();
                                 }
                             }
-                            ParameterFile config = new ParameterFile (new File (arquivo_config), hash);
+                            ParameterFile config = new ParameterFile(new File(arquivo_config), hash);
                             Hashtable hash2 = config.hash;
-                            Enumeration keys = hash2.keys ();
-                            while (keys.hasMoreElements ()) {
-                                Object key = keys.nextElement ();
-                                hash.put (key, hash2.get (key));
+                            Enumeration keys = hash2.keys();
+                            while (keys.hasMoreElements()) {
+                                Object key = keys.nextElement();
+                                hash.put(key, hash2.get(key));
                             }
                         }
                         continue;
                     }
                     if (token.startsWith("#")) {
                         break;
-                    } else if ( i == 0 ) {
+                    } else if (i == 0) {
                         param = token;
                     } else {
                         values.addElement(token);
                     }
                     i++;
                 }
-                if (param != null && param.length() > 0)  hash.put(param,values);
+                if (param != null && param.length() > 0)
+                    hash.put(param, values);
             }
-        }
-        catch(IOException ioe) {
-        	logger.error("Problem while reading configuration file.", ioe);
-        }
-        finally {
+        } catch (IOException ioe) {
+            logger.error("Problem while reading configuration file.", ioe);
+        } finally {
             try {
                 if (in != null) {
                     in.close();
-                } //if
-            }
-            catch (IOException erro) {
+                } // if
+            } catch (IOException erro) {
                 logger.error("Problem while closing input.", erro);
-            } //catch
+            } // catch
             if (tipo == URL) {
-                url_con.disconnect ();
-            } //if
+                url_con.disconnect();
+            } // if
         }
-        
-    }
 
-    public static void main(String args[]) throws MalformedURLException{
-        ParameterFile p = null;
-        if (args [0].equals ("file")) {
-            p = new ParameterFile(new File (args[1]));
-        } //if
-        else if (args [0].equals ("string")) {
-            p = new ParameterFile (args[1], ParameterFile.STRING);
-        } //else
-        else if (args [0].equals ("url")) {
-           p = new ParameterFile (new URL (args[1]));
-        } //else
-        else {
-            return;
-        } //else
-        p.listParams();
     }
 
 }
