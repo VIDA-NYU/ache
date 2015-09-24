@@ -23,23 +23,11 @@
 */
 package focusedCrawler.link.classifier;
 
-import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
-import focusedCrawler.link.classifier.util.Instance;
-
-import weka.classifiers.Classifier;
-import weka.core.Instances;
-
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Iterator;
-import focusedCrawler.util.parser.PaginaURL;
-import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.string.StopListArquivo;
-import focusedCrawler.util.string.StopList;
-import java.io.IOException;
+
+import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.parser.LinkNeighborhood;
+import focusedCrawler.util.parser.PaginaURL;
 
 /**
  *
@@ -61,18 +49,11 @@ public class LinkClassifierImpl implements LinkClassifier{
 	private int[] weights;
 	private int intervalRandom = 100;
 	private LNClassifier lnClassifier;
-  
 
 	public LinkClassifierImpl(LNClassifier lnClassifier, int level) {
-
 		this.weights = new int[]{2,1,0};
 		this.lnClassifier = lnClassifier;
 	}
-
-//  public String[] getFeatures(){
-//    return attributes;
-//  }
-
 
   /**
    * This method classifies links based on the priority set by the
@@ -81,7 +62,6 @@ public class LinkClassifierImpl implements LinkClassifier{
    * @return LinkRelevance[]
    * @throws LinkClassifierException
    */
-
   public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
 	  LinkRelevance[] linkRelevance = null;
 	  try {
