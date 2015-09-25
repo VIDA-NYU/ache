@@ -29,7 +29,6 @@ import focusedCrawler.util.string.StopList;
 
 
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
-
 import weka.core.Instances;
 import weka.classifiers.Classifier;
 
@@ -38,6 +37,9 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -50,25 +52,20 @@ import java.io.ObjectInputStream;
  * @version 1.0
  */
 
-public class LinkClassifierFactoryImpl implements LinkClassifierFactory{
+public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
+    
+    private static final Logger logger = LoggerFactory.getLogger(LinkClassifierFactoryImpl.class);
 
   private ParameterFile config;
   
   private static StopList stoplist;
 
-  /**
-   * Constructor that receives a configuration file
-   * @param config ParameterFile configuration file
-   */
-
-  public LinkClassifierFactoryImpl(String stoplistFile) {
-    // FIXME: Bug introduced in some commit merge? variable config will always be null!
-    this.config = config;
+  public LinkClassifierFactoryImpl(String stoplistFile, ParameterFile linkStorageConfig) {
+    this.config = linkStorageConfig;
     try {
 		stoplist = new StopListArquivo(stoplistFile);
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+		throw new IllegalArgumentException("Could not load stopwords from file: "+stoplistFile, e);
 	}
   }
 
@@ -83,15 +80,13 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory{
 	   LinkClassifier linkClassifier = null;
 	    try {
 	        linkClassifier = setClassifier(className);
-	        System.out.println("LINK_CLASSIFIER:" + linkClassifier.getClass());
+	        logger.info("LINK_CLASSIFIER: " + linkClassifier.getClass());
 	    }
 	    catch (IOException ex) {
-	    	ex.printStackTrace();
-	        throw new LinkClassifierFactoryException(ex.getMessage());
+	        throw new LinkClassifierFactoryException(ex.getMessage(), ex);
 	    }
 	    catch (ClassNotFoundException ex) {
-	    	ex.printStackTrace();
-	        throw new LinkClassifierFactoryException(ex.getMessage());
+	        throw new LinkClassifierFactoryException(ex.getMessage(), ex);
 	    }
 	    return linkClassifier;
   }
@@ -99,7 +94,6 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory{
 
   public LinkClassifier setClassifier(String className) throws IOException, ClassNotFoundException{
 	  LinkClassifier linkClassifier = null;
-      
       if(className.indexOf("LinkClassifierBreadthSearch") != -1){
     	  String[] attributes = config.getParam("ATTRIBUTES", " ");
     	  WrapperNeighborhoodLinks wrapper = loadWrapper(attributes);
@@ -134,6 +128,9 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory{
     	  LNClassifier lnClassifier = new LNClassifier(classifier, insts, wrapper, attributes);
     	  linkClassifier = new LinkClassifierImpl(lnClassifier,config.getParamInt("LEVEL"));  
       }
+	  if(className.indexOf("MaxDepthLinkClassifier") != -1){
+	      linkClassifier = new MaxDepthLinkClassifier(1);
+	  }
 	  return linkClassifier;  
   }
   
@@ -154,6 +151,7 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory{
 	  }
 	  ObjectInputStream objectInputStream = new ObjectInputStream(is);
 	  Classifier classifier = (Classifier) objectInputStream.readObject();
+	  objectInputStream.close();
 	  return classifier;
   }
   

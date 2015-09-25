@@ -253,7 +253,7 @@ public class LinkStorage extends StorageDefault{
         
         LinkStorageConfig config = new LinkStorageConfig(params);
         
-        LinkClassifierFactory linkClassifierFactory = new LinkClassifierFactoryImpl(stoplistFile);
+        LinkClassifierFactory linkClassifierFactory = new LinkClassifierFactoryImpl(stoplistFile, params);
         LinkClassifier linkClassifier = linkClassifierFactory.createLinkClassifier(config.getTypeOfClassifier());
 
         FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, seedFile, stoplistFile);
