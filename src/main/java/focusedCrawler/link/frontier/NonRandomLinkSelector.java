@@ -10,7 +10,7 @@ import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.vsm.VSMElement;
 
-public class NonRandomLinkSelection implements LinkSelectionStrategy {
+public class NonRandomLinkSelector implements LinkSelectionStrategy {
     
     @Override
     public LinkRelevance[] select(Frontier frontier, int numberOfLinks) {

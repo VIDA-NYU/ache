@@ -9,7 +9,7 @@ import java.util.Vector;
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
 
-public class FrontierTargetRepository implements LinkSelectionStrategy {
+public class MultiLevelLinkSelector implements LinkSelectionStrategy {
 
 	@Override
 	public LinkRelevance[] select(Frontier frontier, int numberOfLinks) {

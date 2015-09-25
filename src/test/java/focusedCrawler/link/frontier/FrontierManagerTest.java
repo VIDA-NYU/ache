@@ -30,7 +30,7 @@ public class FrontierManagerTest {
     
     @Before
     public void setUp() throws Exception {
-        LinkSelectionStrategy linkSelector = new NonRandomLinkSelection();
+        LinkSelectionStrategy linkSelector = new NonRandomLinkSelector();
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000);
         frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, new LinkFilter(new ArrayList<String>()));
     }
@@ -50,7 +50,7 @@ public class FrontierManagerTest {
         scope.put("www.example1.com", -1);
         
         
-        LinkSelectionStrategy linkSelector = new SiteLinkSelectionStrategy();
+        LinkSelectionStrategy linkSelector = new SiteLinkSelector();
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, scope);
         frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, new LinkFilter(new ArrayList<String>()));
         
