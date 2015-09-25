@@ -87,7 +87,8 @@ public class LinkStorageConfig {
     private final boolean useOnlineLearning;
     private final String onlineMethod;
     private final int learningLimit;
-    private String targetStorageDirectory;
+    private final String targetStorageDirectory;
+    private final String linkSelector;
     
     private final BackSurferConfig backSurferConfig;
     private final BiparitieGraphRepConfig biparitieGraphRepConfig;
@@ -114,6 +115,7 @@ public class LinkStorageConfig {
         this.onlineMethod = params.getParam("ONLINE_METHOD");
         this.learningLimit = params.getParamInt("LEARNING_LIMIT");
         this.targetStorageDirectory = params.getParam("TARGET_STORAGE_DIRECTORY");
+        this.linkSelector = params.getParam("LINK_SELECTOR");
         
         this.biparitieGraphRepConfig = new BiparitieGraphRepConfig(params); 
     }
@@ -176,6 +178,10 @@ public class LinkStorageConfig {
     
     public BackSurferConfig getBackSurferConfig() {
         return backSurferConfig;
+    }
+
+    public String getLinkSelector() {
+        return linkSelector;
     }
 
     

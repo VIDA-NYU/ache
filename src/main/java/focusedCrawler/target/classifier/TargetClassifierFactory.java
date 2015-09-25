@@ -57,7 +57,7 @@ public class TargetClassifierFactory {
             String classifierType = tree.get("type").asText();
             JsonNode parameters = tree.get("parameters");
             
-            logger.info("TargetClassifier: "+classifierType);
+            logger.info("TARGET_CLASSIFIER: "+classifierType);
             
             TargetClassifier classifier = null;
             
@@ -67,6 +67,10 @@ public class TargetClassifierFactory {
             
             if("title_regex".equals(classifierType)) {
                 classifier = createTitleRegexClassifier(yaml, parameters);
+            }
+            
+            if("keep_link_relevance".equals(classifierType)) {
+                classifier = createKeepLinkRelevanceClassifier(basePath, yaml, parameters);
             }
             
             if("weka".equals(classifierType)) {
@@ -83,6 +87,16 @@ public class TargetClassifierFactory {
         
         // create classic weka classifer to maintain compatibility with older versions
         return WekaTargetClassifier.create(modelPath, relevanceThreshold, stoplist);
+    }
+
+    private static TargetClassifier createKeepLinkRelevanceClassifier(Path basePath,
+            ObjectMapper yaml, JsonNode parameters) throws JsonProcessingException, IOException {
+        if(parameters != null) {
+            TargetClassifier wekaClassifier = createWekaClassifier(basePath, yaml, parameters);
+            return new KeepLinkRelevancePageClassifier(wekaClassifier);
+        } else {
+            return new KeepLinkRelevancePageClassifier(null);
+        }
     }
 
     private static TargetClassifier createUrlRegexClassifier(Path basePath, ObjectMapper yaml,

@@ -38,7 +38,7 @@ public class FrontierManagerFactory {
         LinkFilter linkFilter = new LinkFilter(configPath);
         
         LinkSelectionStrategy linkSelector = createLinkSelector(config);
-        
+        logger.info("LINK_SELECTOR: "+linkSelector.getClass().getName());
         return new FrontierManager(
                 frontier,
                 config.getMaxSizeLinkQueue(),
@@ -48,6 +48,29 @@ public class FrontierManagerFactory {
     }
 
     private static LinkSelectionStrategy createLinkSelector(LinkStorageConfig config) {
+        String linkSelectorConfig = config.getLinkSelector();
+        if(linkSelectorConfig != null) {
+            if(linkSelectorConfig.equals("TopkLinkSelector")) {
+                return new TopkLinkSelector();
+            }
+            else if(linkSelectorConfig.equals("SiteLinkSelectionStrategy")) {
+                return new SiteLinkSelectionStrategy();
+            }
+            else if(linkSelectorConfig.equals("RandomLinkSelection")) {
+                return new RandomLinkSelection();
+            }
+            else if(linkSelectorConfig.equals("NonRandomLinkSelection")) {
+                return new NonRandomLinkSelection();
+            }
+            else if(linkSelectorConfig.equals("FrontierTargetRepository")) {
+                return new FrontierTargetRepository();
+            }
+            else if(linkSelectorConfig.equals("FrontierTargetTopic")) {
+                return new FrontierTargetTopic();
+            }
+        }
+        
+        // Maintain old defaults to keep compatibility
         if (config.isUseScope()) {
             if (config.getTypeOfClassifier().contains("Baseline")) {
                 return new SiteLinkSelectionStrategy();
