@@ -10,7 +10,7 @@ import net.sf.ehcache.CacheException;
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
 
-public class FrontierTargetTopic implements LinkSelectionStrategy {
+public class TopicLinkSelector implements LinkSelectionStrategy {
 
 //	boolean higher = true;
 	int[] classLimits = new int[]{100,100,1500};

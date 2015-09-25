@@ -12,7 +12,7 @@ import focusedCrawler.util.persistence.PersistentHashtable;
 /**
  * Implements a link selection strategy that picks links from the storage at random.
  */
-public class RandomLinkSelection implements LinkSelectionStrategy {
+public class RandomLinkSelector implements LinkSelectionStrategy {
     
     @Override
     public LinkRelevance[] select(Frontier frontier, int numberOfLinks) {

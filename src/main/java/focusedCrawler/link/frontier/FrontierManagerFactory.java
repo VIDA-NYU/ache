@@ -53,35 +53,35 @@ public class FrontierManagerFactory {
             if(linkSelectorConfig.equals("TopkLinkSelector")) {
                 return new TopkLinkSelector();
             }
-            else if(linkSelectorConfig.equals("SiteLinkSelectionStrategy")) {
-                return new SiteLinkSelectionStrategy();
+            else if(linkSelectorConfig.equals("SiteLinkSelector")) {
+                return new SiteLinkSelector();
             }
-            else if(linkSelectorConfig.equals("RandomLinkSelection")) {
-                return new RandomLinkSelection();
+            else if(linkSelectorConfig.equals("RandomLinkSelector")) {
+                return new RandomLinkSelector();
             }
-            else if(linkSelectorConfig.equals("NonRandomLinkSelection")) {
-                return new NonRandomLinkSelection();
+            else if(linkSelectorConfig.equals("NonRandomLinkSelector")) {
+                return new NonRandomLinkSelector();
             }
-            else if(linkSelectorConfig.equals("FrontierTargetRepository")) {
-                return new FrontierTargetRepository();
+            else if(linkSelectorConfig.equals("MultiLevelLinkSelector")) {
+                return new MultiLevelLinkSelector();
             }
-            else if(linkSelectorConfig.equals("FrontierTargetTopic")) {
-                return new FrontierTargetTopic();
+            else if(linkSelectorConfig.equals("TopicLinkSelector")) {
+                return new TopicLinkSelector();
             }
         }
         
         // Maintain old defaults to keep compatibility
         if (config.isUseScope()) {
             if (config.getTypeOfClassifier().contains("Baseline")) {
-                return new SiteLinkSelectionStrategy();
+                return new SiteLinkSelector();
             } else {
-                return new FrontierTargetRepository();
+                return new MultiLevelLinkSelector();
             }
         } else {
             if (config.getTypeOfClassifier().contains("Baseline")) {
-                return new NonRandomLinkSelection();
+                return new NonRandomLinkSelector();
             } else {
-                return new FrontierTargetRepository();
+                return new MultiLevelLinkSelector();
             }
         }
     }

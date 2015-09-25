@@ -12,7 +12,7 @@ import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.vsm.VSMElement;
 
-public class SiteLinkSelectionStrategy implements LinkSelectionStrategy {
+public class SiteLinkSelector implements LinkSelectionStrategy {
     
     @Override
     public LinkRelevance[] select(Frontier frontier, int numberOfLinks) {
