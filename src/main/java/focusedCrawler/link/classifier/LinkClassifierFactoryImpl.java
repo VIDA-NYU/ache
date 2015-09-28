@@ -129,7 +129,7 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
     	  linkClassifier = new LinkClassifierImpl(lnClassifier,config.getParamInt("LEVEL"));  
       }
 	  if(className.indexOf("MaxDepthLinkClassifier") != -1){
-	      linkClassifier = new MaxDepthLinkClassifier(1);
+	      linkClassifier = new MaxDepthLinkClassifier(2);
 	  }
 	  return linkClassifier;  
   }
