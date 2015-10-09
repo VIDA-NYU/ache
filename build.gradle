@@ -41,6 +41,7 @@ dependencies {
     compile 'org.apache.tika:tika-parsers:1.9'
     
     testCompile 'junit:junit:4.12'
+    testCompile 'org.hamcrest:hamcrest-all:1.3'
     
     // TODO fill these in from Maven Central instead of that local libs dir
     // TODO recommend replacing these with:

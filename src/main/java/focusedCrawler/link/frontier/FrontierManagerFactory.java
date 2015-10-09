@@ -53,6 +53,9 @@ public class FrontierManagerFactory {
             if(linkSelectorConfig.equals("TopkLinkSelector")) {
                 return new TopkLinkSelector();
             }
+            if(linkSelectorConfig.equals("PoliteTopkLinkSelector")) {
+                return new PoliteTopkLinkSelector(4, 10000);
+            }
             else if(linkSelectorConfig.equals("SiteLinkSelector")) {
                 return new SiteLinkSelector();
             }
