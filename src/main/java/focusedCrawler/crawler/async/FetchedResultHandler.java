@@ -41,7 +41,7 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
             AbortedFetchException afe = (AbortedFetchException) e;
             logger.info("Download aborted: \n>URL: {}\n>Reason: {}", url, afe.getAbortReason());
         } else {
-            logger.info("Failed to download URL: "+url, e);
+            logger.info("Failed to download URL: "+url, e.getMessage());
         }
     }
     
