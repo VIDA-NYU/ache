@@ -23,35 +23,30 @@
 */
 package focusedCrawler.target;
 
-import focusedCrawler.util.vsm.VSMElement;
-import focusedCrawler.util.vsm.VSMVector;
-import focusedCrawler.util.vsm.VSMElementComparator;
-import focusedCrawler.util.parser.PaginaURL;
-import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.FileComparator;
-
-import java.io.File;
-import org.xml.sax.SAXException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.DataOutputStream;
-import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.net.MalformedURLException;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.StringTokenizer;
-import java.util.Vector;
-import java.util.Collections;
 import java.util.Random;
+import java.util.Vector;
+
+import org.xml.sax.SAXException;
+
+import focusedCrawler.util.string.StopList;
+import focusedCrawler.util.vsm.VSMElement;
+import focusedCrawler.util.vsm.VSMElementComparator;
+import focusedCrawler.util.vsm.VSMVector;
 
 /**
  * <p> </p>
@@ -77,7 +72,7 @@ public class CreateWekaInput {
 
 	protected int minDF = 5;
     
-	protected HashMap df = new HashMap();
+	protected HashMap<String, VSMElement> df = new HashMap<>();
 
 	protected boolean isForm = false;
   
@@ -135,7 +130,7 @@ public class CreateWekaInput {
     	int count = 0;
     	Random random = new Random(seed);
     	int next = random.nextInt(range);
-    	HashSet nums = new HashSet();
+    	HashSet<Integer> nums = new HashSet<>();
     	int[] result = new int[elems];
     	while(count < elems){
     		Integer num = new Integer(next);
@@ -158,7 +153,7 @@ public class CreateWekaInput {
     			}
     			VSMVector vsm = new VSMVector(pages[i],stoplist);
     			tempVSM.add(vsm);
-    			Iterator iterator1 = vsm.getElements();
+    			Iterator<VSMElement> iterator1 = vsm.getElements();
     			while (iterator1.hasNext()) {
     				VSMElement elem = (VSMElement)iterator1.next();
     				VSMElement value = (VSMElement)df.get(elem.getWord());  
@@ -185,7 +180,7 @@ public class CreateWekaInput {
     		for(String line = reader.readLine(); line != null; line = reader.readLine()){
     			VSMVector vsm = new VSMVector(line,stoplist);
     			tempVSM.add(vsm);
-    			Iterator iterator1 = vsm.getElements();
+    			Iterator<VSMElement> iterator1 = vsm.getElements();
     			while (iterator1.hasNext()) {
     				VSMElement elem = (VSMElement)iterator1.next();
     				VSMElement value = (VSMElement)df.get(elem.getWord());  
@@ -196,6 +191,7 @@ public class CreateWekaInput {
     				}	
     			}
     		}
+    		reader.close();
     	}catch(IOException ex){
     		ex.printStackTrace();  
     	}
@@ -212,7 +208,7 @@ public class CreateWekaInput {
     			VSMVector vsm = new VSMVector(files[indexes[i]].toString(),isForm,stoplist);
     			tempVSM.add(vsm);
     			if(addToFeatures){
-    				Iterator iterator1 = vsm.getElements();
+    				Iterator<VSMElement> iterator1 = vsm.getElements();
     				while (iterator1.hasNext()) {
     					VSMElement elem = (VSMElement)iterator1.next();
     					VSMElement value = (VSMElement)df.get(elem.getWord());  
@@ -252,7 +248,7 @@ public class CreateWekaInput {
     	header.append("\n");
     	StringBuffer tail = new StringBuffer();
   
-    	Vector bestWordsForm  = new Vector(df.values());
+    	Vector<VSMElement> bestWordsForm  = new Vector<>(df.values());
     	Collections.sort(bestWordsForm, new VSMElementComparator());
     	for(int i=0; i<=numOfFeatures && i < bestWordsForm.size(); i++){
     		VSMElement elem = (VSMElement)bestWordsForm.elementAt(i);
@@ -308,7 +304,7 @@ public class CreateWekaInput {
     	return atts;
     }
 
-    private void createTestFile(String output, Vector bestWordsForm, StringBuffer header) throws
+    private void createTestFile(String output, Vector<VSMElement> bestWordsForm, StringBuffer header) throws
             FileNotFoundException, IOException {
     	OutputStream fout= new FileOutputStream(output+"_test",false);
     	OutputStream bout= new BufferedOutputStream(fout);

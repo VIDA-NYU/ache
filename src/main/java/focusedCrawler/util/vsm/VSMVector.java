@@ -23,31 +23,29 @@
 */
 package focusedCrawler.util.vsm;
 
-import java.util.HashMap;
-import java.util.Iterator;
-
-import java.net.URL;
-import org.w3c.dom.Document;
-import org.cyberneko.html.parsers.DOMParser;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
-import java.net.MalformedURLException;
-import org.w3c.dom.NamedNodeMap;
-
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Vector;
+
+import org.cyberneko.html.parsers.DOMParser;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.util.Vector;
-import java.util.Collections;
 
 /**
  * <p>Title: </p>
@@ -60,7 +58,7 @@ import java.util.Collections;
 
 public class VSMVector {
 
-  private HashMap elems;
+  private HashMap<String, VSMElement> elems;
 
   private PorterStemmer stemmer = new PorterStemmer();
   
@@ -69,23 +67,22 @@ public class VSMVector {
   private String id;
   
   public VSMVector() {
-    elems = new HashMap();
+    this.elems = new HashMap<>();
   }
 
   public VSMVector(StopList stoplist) {
-	    elems = new HashMap();
+	    this.elems = new HashMap<>();
 	    this.stoplist = stoplist;
   }
   
   public VSMVector(String file, boolean isForm, StopList stoplist) throws MalformedURLException, IOException, SAXException {
 	  this.stoplist = stoplist;
-      elems = new HashMap();
+      this.elems = new HashMap<>();
       if(isForm){
           DOMParser parser = new DOMParser();
           if((file.toLowerCase()).indexOf("<form ") != -1){//verify if the string is the name of file or the content of form
               parser.parse(new InputSource(new BufferedReader(new StringReader(file))));
           }else{
-//              System.out.println("FILE:" + file);
               parser.parse(file);
           }
           String srcForm = "";
@@ -168,7 +165,7 @@ public class VSMVector {
 		  document = "<html> " + document  + " </html>"; 
 	  }
 	  this.stoplist = stoplist;
-	  elems = new HashMap();
+	  this.elems = new HashMap<>();
 	  PaginaURL page = new PaginaURL(new URL("http://www"),document, stoplist);
 	  
     //addTitle(page,stoplist);
@@ -211,7 +208,7 @@ public class VSMVector {
 		  document = "<html> " + document + " </html>"; 
 	  }
 	  this.stoplist = stoplist;
-	  elems = new HashMap();
+	  this.elems = new HashMap<>();
 	  PaginaURL page = new PaginaURL(new URL("http://www"),document, stoplist);
     //addTitle(page,stoplist);
 	  stemPage(page, false);
@@ -220,7 +217,7 @@ public class VSMVector {
 
   public VSMVector(PaginaURL page, StopList stoplist) throws  MalformedURLException {
 	  this.stoplist = stoplist;
-	  elems = new HashMap();
+	  this.elems = new HashMap<>();
 	  stemPage(page, false);
 }
 
@@ -266,19 +263,19 @@ public class VSMVector {
   }
 
   public VSMElement getElement(String word){
-    return (VSMElement)elems.get(word);
+    return elems.get(word);
   }
 
-  public Iterator getElements(){
+  public Iterator<VSMElement> getElements(){
       return elems.values().iterator();
   }
 
   public VSMElement[] getArrayElements(){
       VSMElement[] elementsTemp = new VSMElement[elems.size()];
-      Iterator iterator = elems.values().iterator();
+      Iterator<VSMElement> iterator = elems.values().iterator();
       int count = 0;
       while (iterator.hasNext()) {
-          elementsTemp[count] = (VSMElement)iterator.next();
+          elementsTemp[count] = iterator.next();
           count++;
       }
     return elementsTemp;
@@ -291,7 +288,7 @@ public class VSMVector {
   public void addDFs(HashMap<String, Integer> idfs){
       Iterator<String> iter = elems.keySet().iterator();
       while(iter.hasNext()){
-    	  VSMElement elem = (VSMElement)elems.get(iter.next());
+    	  VSMElement elem = elems.get(iter.next());
     	  if(elem != null){
         	  String term = elem.getWord();
         	  double freq = elem.getWeight();
@@ -307,26 +304,26 @@ public class VSMVector {
 	  
   }
   
-  public double vectorSpaceSimilarityIDF(VSMVector vectorB, HashMap idfs){
+  public double vectorSpaceSimilarityIDF(VSMVector vectorB, HashMap<String, Integer> idfs){
 
     VSMVector vectorA = this;
     double denominatorA = 0;
     double denominatorB = 0;
     VSMElement elem = null;
 
-    Iterator iterA = vectorA.getElements();
+    Iterator<VSMElement> iterA = vectorA.getElements();
     while(iterA.hasNext()){
-      elem = (VSMElement)iterA.next();
+      elem = iterA.next();
       if((Integer)idfs.get(elem.getWord()) != null){
-        int idf = ((Integer)idfs.get(elem.getWord())).intValue();
+        int idf = idfs.get(elem.getWord()).intValue();
         double weight = elem.getWeight()*Math.log((double)idfs.size()/(double)idf);
         denominatorA = denominatorA + (weight*weight);
       }
     }
 
-      Iterator iterB = vectorB.getElements();
+      Iterator<VSMElement> iterB = vectorB.getElements();
       while(iterB.hasNext()){
-        elem = (VSMElement)iterB.next();
+        elem = iterB.next();
         if((Integer)idfs.get(elem.getWord()) != null){
           int idf = ( (Integer) idfs.get(elem.getWord())).intValue();
           double weight = elem.getWeight() *
@@ -338,7 +335,7 @@ public class VSMVector {
       double numerator = 0;
       iterA = vectorA.getElements();
       while(iterA.hasNext()){
-        VSMElement elemA = (VSMElement)iterA.next();
+        VSMElement elemA = iterA.next();
         VSMElement elemB = vectorB.getElement(elemA.getWord());
         if( elemB != null){
 
@@ -361,9 +358,9 @@ public class VSMVector {
       
 
       double numerator = 0;
-      Iterator iterA = vectorA.getElements();
+      Iterator<VSMElement> iterA = vectorA.getElements();
       while(iterA.hasNext()){
-    	  VSMElement elemA = (VSMElement)iterA.next();
+    	  VSMElement elemA = iterA.next();
     	  VSMElement elemB = vectorB.getElement(elemA.getWord());
           if( elemB != null){ //overlap
 //            numerator = numerator + elemA.getWeight()*elemB.getWeight();
@@ -379,9 +376,9 @@ public class VSMVector {
   public double intersection(VSMVector vectorB){
 	  VSMVector vectorA = this;
       double numerator = 0;
-      Iterator iterA = vectorA.getElements();
+      Iterator<VSMElement> iterA = vectorA.getElements();
       while(iterA.hasNext()){
-    	  VSMElement elemA = (VSMElement)iterA.next();
+    	  VSMElement elemA = iterA.next();
     	  VSMElement elemB = vectorB.getElement(elemA.getWord());
           if( elemB != null){ //overlap
 //            numerator = numerator + elemA.getWeight()*elemB.getWeight();
@@ -394,9 +391,9 @@ public class VSMVector {
 
     public VSMVector clone(){
     	VSMVector res = new VSMVector(stoplist);
-        Iterator iter = this.getElements();
+        Iterator<VSMElement> iter = this.getElements();
         while(iter.hasNext()){
-          VSMElement tempElem = (VSMElement)iter.next();
+          VSMElement tempElem = iter.next();
           res.addElement(tempElem);
         }
     	return res;
@@ -409,18 +406,18 @@ public class VSMVector {
       double denominatorB = 0;
       VSMElement elem = null;
 
-      Iterator iterA = vectorA.getElements();
+      Iterator<VSMElement> iterA = vectorA.getElements();
       while(iterA.hasNext()){
-        elem = (VSMElement)iterA.next();
+          elem = iterA.next();
           double weight = elem.getWeight();
           denominatorA = denominatorA + (weight*weight);
       }
       if(denominatorA == 0){
           return 0;
       }
-        Iterator iterB = vectorB.getElements();
+        Iterator<VSMElement> iterB = vectorB.getElements();
         while(iterB.hasNext()){
-          elem = (VSMElement)iterB.next();
+          elem = iterB.next();
           double weight = elem.getWeight();
           denominatorB = denominatorB + (weight * weight);
         }
@@ -430,7 +427,7 @@ public class VSMVector {
         double numerator = 0;
         iterA = vectorA.getElements();
         while(iterA.hasNext()){
-          VSMElement elemA = (VSMElement)iterA.next();
+          VSMElement elemA = iterA.next();
           VSMElement elemB = vectorB.getElement(elemA.getWord());
           if( elemB != null){
               double weightA = elemA.getWeight();
@@ -458,46 +455,46 @@ public class VSMVector {
 
       VSMVector centroidVector = this;
 
-      Iterator iter = pageVector.getElements();
+      Iterator<VSMElement> iter = pageVector.getElements();
 
       while(iter.hasNext()){
-        VSMElement tempElem = (VSMElement)iter.next();
+        VSMElement tempElem = iter.next();
         centroidVector.addElement(tempElem);
       }
     }
 
     public void multiplyWeights(double factor){
-    	Iterator  iter = elems.keySet().iterator();
+    	Iterator<String>  iter = elems.keySet().iterator();
     	while(iter.hasNext()){
     		String word = (String)iter.next();
-    		VSMElement elem = (VSMElement)elems.get(word);
+    		VSMElement elem = elems.get(word);
     		elems.put(word,new VSMElement(word,elem.getWeight()*factor));
     	}
     }
 
     
     public void negativeVector(){
-    	Iterator  iter = elems.keySet().iterator();
+    	Iterator<String>  iter = elems.keySet().iterator();
     	while(iter.hasNext()){
     		String word = (String)iter.next();
-    		VSMElement elem = (VSMElement)elems.get(word);
+    		VSMElement elem = elems.get(word);
     		elems.put(word,new VSMElement(word,-elem.getWeight()));
     	}
     }
 
-    public static HashMap calculateIDFs(VSMVector[] vectors) throws IOException,
+    public static HashMap<String, Integer> calculateIDFs(VSMVector[] vectors) throws IOException,
         SAXException {
 
-      HashMap idfs = new HashMap();
+      HashMap<String, Integer> idfs = new HashMap<>();
 
       for (int i = 0; i < vectors.length; i++) {
 
         VSMVector pageVector = vectors[i];
-        Iterator iter = pageVector.getElements();
+        Iterator<VSMElement> iter = pageVector.getElements();
 
         while(iter.hasNext()){
 
-          String word = ((VSMElement)iter.next()).getWord();
+          String word = iter.next().getWord();
 
           Integer ocur = (Integer)idfs.get(word);
           if( ocur == null){
@@ -511,18 +508,18 @@ public class VSMVector {
       return idfs;
     }
 
-    public HashMap calculateWordOccurence(VSMVector[] vectors) throws IOException,
+    public HashMap<String, Integer> calculateWordOccurence(VSMVector[] vectors) throws IOException,
         SAXException {
 
-      HashMap idfs = new HashMap();
+        HashMap<String, Integer> idfs = new HashMap<>();
 
       for (int i = 0; i < vectors.length; i++) {
 
         VSMVector pageVector = vectors[i];
-        Iterator iter = pageVector.getElements();
+        Iterator<VSMElement> iter = pageVector.getElements();
 
         while(iter.hasNext()){
-            VSMElement elem = (VSMElement)iter.next();
+            VSMElement elem = iter.next();
             String word = elem.getWord();
             Integer ocur = (Integer)idfs.get(word);
             if( ocur == null){
@@ -620,36 +617,26 @@ public class VSMVector {
     public void normalizebyMax(){
     	VSMElement[] topElems = topElements(1);
     	double max = topElems[0].getWeight();
-    	Iterator iter = elems.values().iterator();
     	double total = 0;
-    	while(iter.hasNext()){
-    		VSMElement elem = (VSMElement)iter.next();
+    	for(VSMElement elem : elems.values()) {
     		total = total + elem.getWeight();
     	}
     	if(total != 0){
-    		iter = elems.keySet().iterator();
-    		while(iter.hasNext()){
-    			String word = (String)iter.next();
-    			VSMElement elem = (VSMElement)elems.get(word);
-    			elems.put(word,new VSMElement(word,elem.getWeight()/max));
-    		}
+    	    for(String word : elems.keySet()) {
+    	        VSMElement elem = elems.get(word);
+    	        elems.put(word,new VSMElement(word,elem.getWeight()/max));
+    	    }
     	}
     }
 
-    
-    
     public void normalize(){
-    	Iterator iter = elems.values().iterator();
     	double total = 0;
-    	while(iter.hasNext()){
-    		VSMElement elem = (VSMElement)iter.next();
+    	for(VSMElement elem : elems.values()) {
     		total = total + elem.getWeight();
     	}
     	if(total != 0){
-    		iter = elems.keySet().iterator();
-    		while(iter.hasNext()){
-    			String word = (String)iter.next();
-    			VSMElement elem = (VSMElement)elems.get(word);
+    	    for(String word : elems.keySet()) {
+    			VSMElement elem = elems.get(word);
     			elems.put(word,new VSMElement(word,elem.getWeight()/total));
     		}
     	}
@@ -657,17 +644,13 @@ public class VSMVector {
   
   
   public void squaredNormalization(){
-	  Iterator iter = elems.values().iterator();
 	  double total = 0;
-	  while(iter.hasNext()){
-		  VSMElement elem = (VSMElement)iter.next();
+	  for(VSMElement elem : elems.values()) {
 		  total = total +  Math.sqrt(elem.getWeight());
 	  }
 	  if(total != 0){
-		  iter = elems.keySet().iterator();
-		  while(iter.hasNext()){
-			  String word = (String)iter.next();
-			  VSMElement elem = (VSMElement)elems.get(word);
+	      for(String word : elems.keySet()) {
+			  VSMElement elem = elems.get(word);
 			  elems.put(word,new VSMElement(word,Math.sqrt(elem.getWeight())/total));
 		  }
 	  }
@@ -675,41 +658,37 @@ public class VSMVector {
 
   public void normalizeOverElements() {
       double total = elems.size();
-      Iterator iter = elems.keySet().iterator();
-      while (iter.hasNext()) {
-          String word = (String) iter.next();
-          VSMElement elem = (VSMElement) elems.get(word);
+      for(String word : elems.keySet()) {
+          VSMElement elem = elems.get(word);
           elems.put(word, new VSMElement(word, elem.getWeight() / total));
       }
   }
 
   public VSMElement[] topElements(int n){
-	  VSMElement[] res = new VSMElement[n];
-	  Vector temp = new Vector();
-      Iterator iter = elems.values().iterator();
-      while(iter.hasNext()){
-          VSMElement elem = (VSMElement)iter.next();
+	  Vector<VSMElement> temp = new Vector<>();
+	  for(VSMElement elem : elems.values()) {
           temp.add(elem);
       }
       Collections.sort(temp,new VSMElementComparator());
+      VSMElement[] res = new VSMElement[n];
       for (int i = 0; i < temp.size() && i < n; i++) {
-          res[i] = (VSMElement)temp.elementAt(i);
+          res[i] = temp.elementAt(i);
       }
 	  return res;
   }
   
   public String toString(){
       StringBuffer buf = new StringBuffer();
-      Vector temp = new Vector();
-      Iterator iter = elems.values().iterator();
+      Vector<VSMElement> temp = new Vector<>();
+      Iterator<VSMElement> iter = elems.values().iterator();
       while(iter.hasNext()){
-          VSMElement elem = (VSMElement)iter.next();
+          VSMElement elem = iter.next();
           temp.add(elem);
       }
       Collections.sort(temp,new VSMElementComparator());
       buf.append("[");
       for (int i = 0; i < temp.size(); i++) {
-          VSMElement elem = (VSMElement)temp.elementAt(i);
+          VSMElement elem = temp.elementAt(i);
           buf.append(elem.toString());
           buf.append(",");
       }
