@@ -110,11 +110,10 @@ public class VSMVector {
           PaginaURL page = new PaginaURL(new URL("http://www"), 0, 0,
                                          src.length(),
                                          src, stoplist);
-//          addTitle(page,stoplist);
+          addTitle(page, stoplist);
           stemPage(page, false);
       }
   }
-
   
   private void addTitle(PaginaURL page, StopList stoplist) throws MalformedURLException{
 	  this.stoplist = stoplist;
@@ -168,7 +167,7 @@ public class VSMVector {
 	  this.elems = new HashMap<>();
 	  PaginaURL page = new PaginaURL(new URL("http://www"),document, stoplist);
 	  
-    //addTitle(page,stoplist);
+      addTitle(page,stoplist);
 	  if(stem){
 		  stemPage(page,false);  
 	  }else{
@@ -201,16 +200,15 @@ public class VSMVector {
 	  this.id = id;
   }
   
-  public VSMVector(String document, StopList stoplist) throws
-      MalformedURLException {
+  public VSMVector(String document, StopList stoplist) throws MalformedURLException {
 	  
 	  if(!document.contains("<html>")){
 		  document = "<html> " + document + " </html>"; 
 	  }
 	  this.stoplist = stoplist;
 	  this.elems = new HashMap<>();
-	  PaginaURL page = new PaginaURL(new URL("http://www"),document, stoplist);
-    //addTitle(page,stoplist);
+      PaginaURL page = new PaginaURL(new URL("http://www"), document, stoplist);
+      addTitle(page, stoplist);
 	  stemPage(page, false);
 
   }
@@ -219,7 +217,7 @@ public class VSMVector {
 	  this.stoplist = stoplist;
 	  this.elems = new HashMap<>();
 	  stemPage(page, false);
-}
+  }
 
   
   public VSMVector(String []words, StopList stoplist) throws MalformedURLException, IOException, SAXException {
