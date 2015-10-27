@@ -57,30 +57,30 @@ public class Main {
             Options startTargetStorageOptions = new Options();
             Options startLinkStorageOptions = new Options();
             
-            startCrawlOptions.addOption("e", "elasticIndex", true, "elastic search index name");
-            startCrawlOptions.addOption("o", "outputDir", true, "data output path");
-            startCrawlOptions.addOption("c", "configDir", true, "config directory path");
-            startCrawlOptions.addOption("s", "seed", true, "path to the seed file");
-            startCrawlOptions.addOption("m", "modelDir", true, "model directory path");
+            startCrawlOptions.addOption("e", "elasticIndex", true, "ElasticSearch index name");
+            startCrawlOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
+            startCrawlOptions.addOption("c", "configDir", true, "Path to configuration files folder");
+            startCrawlOptions.addOption("s", "seed", true, "Path to the file of seed URLs");
+            startCrawlOptions.addOption("m", "modelDir", true, "Path to folder containing page classifier model");
             
-            addSeedsOptions.addOption("o", "outputDir", true, "data output path");
-            addSeedsOptions.addOption("c", "configDir", true, "config directory path");
-            addSeedsOptions.addOption("s", "seed", true, "path to the seed file");
+            addSeedsOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
+            addSeedsOptions.addOption("c", "configDir", true, "Path to configuration files folder");
+            addSeedsOptions.addOption("s", "seed", true, "Path to file of seed URLs");
             
-            buildModelOptions.addOption("c", "stopWordsFile", true, "stopwords file path");
-            buildModelOptions.addOption("t", "trainingDataDir", true, "training data path");
-            buildModelOptions.addOption("o", "outputDir", true, "data output path");
+            buildModelOptions.addOption("c", "stopWordsFile", true, "Path to stopwords file");
+            buildModelOptions.addOption("t", "trainingDataDir", true, "Path to training data folder");
+            buildModelOptions.addOption("o", "outputDir", true, "Path to folder which model built should be stored");
             
-            startTargetStorageOptions.addOption("o", "outputDir", true, "data output path");
-            startTargetStorageOptions.addOption("c", "configDir", true, "config directory path");
-            startTargetStorageOptions.addOption("m", "modelDir", true, "model directory path");
+            startTargetStorageOptions.addOption("o", "outputDir", true, "Path to folder which model built should be stored");
+            startTargetStorageOptions.addOption("c", "configDir", true, "Path to configuration files folder");
+            startTargetStorageOptions.addOption("m", "modelDir", true, "Path to folder containing page classifier model");
             
             
-            startLinkStorageOptions.addOption("o", "outputDir", true, "data output path");
-            startLinkStorageOptions.addOption("c", "configDir", true, "config directory path");
-            startLinkStorageOptions.addOption("s", "seed", true, "path to the seed file");
+            startLinkStorageOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
+            startLinkStorageOptions.addOption("c", "configDir", true, "Path to configuration files folder");
+            startLinkStorageOptions.addOption("s", "seed", true, "Path to the file of seed URLs");
             
-            startCrawlManagerOptions.addOption("c", "configDir", true, "config directory path");
+            startCrawlManagerOptions.addOption("c", "configDir", true, "Path to configuration files folder");
             
             allOptions = new Options[] { 
                     startCrawlOptions,
