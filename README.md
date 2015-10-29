@@ -6,7 +6,7 @@
 ## Introduction
 
 ACHE is an implementation of a focused crawler. A focused crawler is a web crawler that collects Web pages that satisfy some specific property.
-ACHE differs from other crawlers in the sense the it includes **page classifiers** that allows it to distingish between relevant and irrelevant pages in a given domain. The page classifier can be from a simple regular expression (that matches every page that contains a specific word, for example), to a sophisticated machine-learned classification model.
+ACHE differs from other crawlers in the sense the it includes **page classifiers** that allows it to distinguish between relevant and irrelevant pages in a given domain. The page classifier can be from a simple regular expression (that matches every page that contains a specific word, for example), to a sophisticated machine-learned classification model.
 ACHE also includes **link classifiers**, which allows it decide the best order in which the links should be downloaded in order to find the relevant content on the web as fast as possible, at the same time it doesn't waste resources downloading irrelevant content.
 
 ## Installation
@@ -38,7 +38,7 @@ If you want to try the most recent version, please clone the repository, compile
   
 ## Build page classifier for ACHE
 
-To focus on a certain topic ACHE needs to have a page classifier to decide, given a new crawled page, whether it is on-topic or not. A page classifier can be created with `ache` given positive and negative examples. Each training example conrresponds to a web page whose html content needs to be stored in a plain text file. Assume that you store positive and negative examples in two directories, `positive` and `negative`, which reside in `training_data` directory. Here is how you build a model from these examples:
+To focus on a certain topic ACHE needs to have a page classifier to decide, given a new crawled page, whether it is on-topic or not. A page classifier can be created with `ache` given positive and negative examples. Each training example corresponds to a web page whose HTML content needs to be stored in a plain text file. Assume that you store positive and negative examples in two directories, `positive` and `negative`, which reside in `training_data` directory. Here is how you build a model from these examples:
 
     ./build/install/ache/bin/ache buildModel -t <training data path> -o <output path for model> -c <stopwords file path>
 
@@ -81,7 +81,7 @@ ACHE can store data in different data formats. The data format can be configured
 
 ## More information?
 
-More documentation is availabe in the project's [Wiki](https://github.com/ViDA-NYU/ache/wiki).
+More documentation is available in the project's [Wiki](https://github.com/ViDA-NYU/ache/wiki).
 
 ## Where to report bugs?
 
