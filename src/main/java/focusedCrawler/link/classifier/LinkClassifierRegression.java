@@ -1,18 +1,14 @@
 package focusedCrawler.link.classifier;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Random;
+import java.util.Map;
 import java.util.Vector;
 
-import weka.classifiers.Classifier;
-import weka.core.Instances;
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
 import focusedCrawler.link.classifier.util.Instance;
 import focusedCrawler.link.classifier.util.WordField;
@@ -22,6 +18,8 @@ import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
+import weka.classifiers.Classifier;
+import weka.core.Instances;
 
 public class LinkClassifierRegression implements LinkClassifier{
 
@@ -29,7 +27,6 @@ public class LinkClassifierRegression implements LinkClassifier{
 	  private Instances instances;
 	  private WrapperNeighborhoodLinks wrapper;
 	  private String[] attributes;
-	  private Random random = new Random();
 	  
 	  public LinkClassifierRegression(Classifier classifier, Instances instances, WrapperNeighborhoodLinks wrapper, String[] attributes) {
 		  this.classifier = classifier;
@@ -42,9 +39,9 @@ public class LinkClassifierRegression implements LinkClassifier{
 			throws LinkClassifierException {
 	    LinkRelevance[] linkRelevance = null;
 	    try {
-	      HashMap urlWords = wrapper.extractLinks(page, attributes);
+	      Map<String, Instance> urlWords = wrapper.extractLinks(page, attributes);
 	      linkRelevance = new LinkRelevance[urlWords.size()];
-	      Iterator iter = urlWords.keySet().iterator();
+	      Iterator<String> iter = urlWords.keySet().iterator();
 	      int count = 0;
 	      while(iter.hasNext()){
 	        String url = (String)iter.next();
@@ -53,7 +50,7 @@ public class LinkClassifierRegression implements LinkClassifier{
 	        weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
 	        instanceWeka.setDataset(instances);
 	        double classificationResult = classifier.classifyInstance(instanceWeka);
-	        double[] prob = classifier.distributionForInstance(instanceWeka);
+//	        double[] prob = classifier.distributionForInstance(instanceWeka);
 	        double relevance = -1;
 	        if(isInitialPage(url)){
 	        	relevance = classificationResult*100 + 99;
@@ -90,9 +87,8 @@ public class LinkClassifierRegression implements LinkClassifier{
 			throws LinkClassifierException {
 	    LinkRelevance linkRel = null;
 	    try {
-	      HashMap urlWords = wrapper.extractLinks(ln, attributes);
-	      Iterator iter = urlWords.keySet().iterator();
-	      int count = 0;
+	      Map<String, Instance> urlWords = wrapper.extractLinks(ln, attributes);
+	      Iterator<String> iter = urlWords.keySet().iterator();
 	      while(iter.hasNext()){
 	        String url = (String)iter.next();
 	        Instance instance = (Instance)urlWords.get(url);
@@ -103,7 +99,6 @@ public class LinkClassifierRegression implements LinkClassifier{
 	        double[] prob = classifier.distributionForInstance(instanceWeka);
 	        double relevance = classificationResult*100 + prob[(int)classificationResult]*100;	
 	        linkRel = new LinkRelevance(new URL(url),relevance);
-	        count++;
 	      }
 	    }
 	    catch (MalformedURLException ex) {
@@ -149,9 +144,11 @@ public class LinkClassifierRegression implements LinkClassifier{
 	      tempAnchor.copyInto(fieldWords[WordField.ANCHOR]);
 	      tempAround.copyInto(fieldWords[WordField.AROUND]);
 	      wrapper.setFeatures(fieldWords);
+	      
 	      InputStream is =  new FileInputStream(config.getParam("FILE_CLASSIFIER"));
 	      ObjectInputStream objectInputStream = new ObjectInputStream(is);
 	      Classifier classifier = (Classifier) objectInputStream.readObject();
+	      objectInputStream.close();
 	      
 	      weka.core.FastVector vectorAtt = new weka.core.FastVector();
 	      for (int i = 0; i < attributes.length; i++) {

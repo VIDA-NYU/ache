@@ -35,6 +35,7 @@ package focusedCrawler.link.classifier;
  * @author not attributable
  * @version 1.0
  */
+@SuppressWarnings("serial")
 public class LinkClassifierFactoryException  extends Exception {
 
   public Throwable detail;

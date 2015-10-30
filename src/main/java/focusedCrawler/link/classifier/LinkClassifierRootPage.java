@@ -23,29 +23,18 @@
 */
 package focusedCrawler.link.classifier;
 
-import focusedCrawler.util.LinkRelevance;
-
-import focusedCrawler.util.Page;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Iterator;
+import java.util.Map;
 
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
 import focusedCrawler.link.classifier.util.Instance;
-
-
-
-import java.net.MalformedURLException;
-
-import java.net.URL;
-
-import java.util.HashMap;
-
-import java.util.Iterator;
-
-import java.util.Random;
-
+import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.util.parser.LinkNeighborhood;
+import focusedCrawler.util.parser.PaginaURL;
 import weka.classifiers.Classifier;
 import weka.core.Instances;
-import focusedCrawler.util.parser.PaginaURL;
-import focusedCrawler.util.parser.LinkNeighborhood;
 
 
 public class LinkClassifierRootPage implements LinkClassifier{
@@ -77,11 +66,11 @@ public class LinkClassifierRootPage implements LinkClassifier{
    */
   public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
         LinkRelevance[] linkRelevance = null;
-        HashMap urlWords = null;
+        Map<String, Instance> urlWords = null;
         try {
           urlWords = wrapper.extractLinks(page, attributes);
           linkRelevance = new LinkRelevance[urlWords.size()];
-          Iterator iter = urlWords.keySet().iterator();
+          Iterator<String> iter = urlWords.keySet().iterator();
           int count = 0;
           while (iter.hasNext()) {
             String urlStr = (String) iter.next();
@@ -120,9 +109,8 @@ public class LinkClassifierRootPage implements LinkClassifier{
   public LinkRelevance classify(LinkNeighborhood ln) throws LinkClassifierException{
 	  LinkRelevance linkRel = null;
 	  try{
-	      HashMap urlWords = wrapper.extractLinks(ln, attributes);
-	      Iterator iter = urlWords.keySet().iterator();
-	      int count = 0;
+	      Map<String, Instance> urlWords = wrapper.extractLinks(ln, attributes);
+	      Iterator<String> iter = urlWords.keySet().iterator();
 	      while(iter.hasNext()){
 	        String url = (String)iter.next();
 	        Instance instance = (Instance)urlWords.get(url);
@@ -133,7 +121,6 @@ public class LinkClassifierRootPage implements LinkClassifier{
 	        double relevance = -1;
 	        relevance = 200 + (prob[0]*100);	
 	        linkRel = new LinkRelevance(new URL(url),relevance);
-	        count++;
 	      }
 	  } catch (MalformedURLException ex) {
 		  ex.printStackTrace();
