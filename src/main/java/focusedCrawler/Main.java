@@ -28,7 +28,6 @@ import focusedCrawler.target.CreateWekaInput;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageFactoryException;
 
 /**
  * <p>
@@ -273,10 +272,6 @@ public class Main {
                     linkStorage, targetStorage);
             manager.start();
 
-        }
-        
-        catch (StorageFactoryException e) {
-            logger.error("Problem while creating TargetStorage", e);
         }
         catch (CrawlerManagerException e) {
             logger.error("Problem while creating CrawlerManager", e);

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
 import focusedCrawler.util.Target;
 
+@Deprecated
 public class TargetCBORRepository implements TargetRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(TargetCBORRepository.class);

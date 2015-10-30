@@ -9,10 +9,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.TargetStorageConfig;
-import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
-import focusedCrawler.target.classifier.TargetClassifierFactory;
+import focusedCrawler.target.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.classifier.TargetClassifier;
+import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierException;
+import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.LangDetection;
 import focusedCrawler.util.Page;
@@ -22,7 +23,6 @@ import focusedCrawler.util.distribution.CommunicationException;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.storage.StorageFactoryException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
 import focusedCrawler.util.storage.distribution.StorageCreator;
 
@@ -140,14 +140,14 @@ public class TargetStorage extends StorageDefault {
         }
     }
     
-    public static Storage createTargetStorage(String configPath,
+	@SuppressWarnings("deprecation")
+	public static Storage createTargetStorage(String configPath,
                                               String modelPath,
                                               String dataPath,
                                               String indexName,
                                               ParameterFile params,
                                               Storage linkStorage)
                                               throws IOException,
-                                                     StorageFactoryException,
                                                      MissingArgumentException {
         
         TargetStorageConfig config = new TargetStorageConfig(params);
@@ -166,18 +166,32 @@ public class TargetStorage extends StorageDefault {
         TargetRepository negativeRepository;
         
         String dataFormat = config.getDataFormat();
-        if (dataFormat.equals("CBOR")) {
+        logger.info("Using DATA_FORMAT: "+dataFormat);
+        if(dataFormat.equals("FILESYSTEM_JSON")) {
+        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.JSON);
+			negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.JSON);
+        }
+        else if (dataFormat.equals("FILESYSTEM_CBOR")) {
+        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.CBOR);
+        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.CBOR);
+        }
+        else if(dataFormat.equals("FILESYSTEM_HTML")) {
+        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.FILE);
+        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.FILE);
+        }
+        else if(dataFormat.equals("ELASTICSEARCH")) {
+        	if(indexName == null) {
+        		throw new MissingArgumentException("ElasticSearch index name not provided!");
+        	}
+        	ElasticSearchConfig esconfig = config.getElasticSearchConfig();
+        	targetRepository = new TargetElasticSearchRepository(esconfig, indexName, "target");
+        	negativeRepository = new TargetElasticSearchRepository(esconfig, indexName, "negative");
+        }
+        else if (dataFormat.equals("CBOR")) {
 			targetRepository = new TargetCBORRepository(targetDirectory);
 			negativeRepository = new TargetCBORRepository(negativeDirectory);
         }
-        else if(dataFormat.equals("ELASTICSEARCH")) {
-            if(indexName == null) {
-                throw new MissingArgumentException("ElasticSearch index name not provided!");
-            }
-            ElasticSearchConfig esconfig = config.getElasticSearchConfig();
-            targetRepository = new TargetElasticSearchRepository(esconfig, indexName, "target");
-            negativeRepository = new TargetElasticSearchRepository(esconfig, indexName, "negative");
-        } else {
+        else {
         	//Default data format is file
         	targetRepository = new TargetFileRepository(targetDirectory);
         	negativeRepository = new TargetFileRepository(negativeDirectory);
