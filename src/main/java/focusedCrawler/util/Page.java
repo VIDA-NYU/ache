@@ -150,7 +150,7 @@ public class Page implements Serializable, Target {
         this.hub = hub;
     }
     
-    protected URL getRedirectedURL() {
+    public URL getRedirectedURL() {
         return redirectedURL;
     }
     
