@@ -29,8 +29,8 @@ import focusedCrawler.link.classifier.util.Instance;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Random;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.parser.LinkNeighborhood;
@@ -56,7 +56,7 @@ public class LinkClassifierHeuristic implements LinkClassifier{
   private String[] attributes;
   private Random randomGenerator;
   private int maxRandom = 10000;
-  private  int[]  weights = new int[]{8,4,2,1};
+//  private  int[]  weights = new int[]{8,4,2,1};
 
   public LinkClassifierHeuristic(WrapperNeighborhoodLinks wrapper,String[] attributes) {
     this.wrapper = wrapper;
@@ -75,9 +75,9 @@ public class LinkClassifierHeuristic implements LinkClassifier{
 
     LinkRelevance[] linkRelevance = null;
     try{
-      HashMap urlWords = wrapper.extractLinks(page, attributes);
+      Map<String, Instance> urlWords = wrapper.extractLinks(page, attributes);
       linkRelevance = new LinkRelevance[urlWords.size()];
-      Iterator iter = urlWords.keySet().iterator();
+      Iterator<String> iter = urlWords.keySet().iterator();
       int count = 0;
       while(iter.hasNext()){
         String urlStr = (String)iter.next();
