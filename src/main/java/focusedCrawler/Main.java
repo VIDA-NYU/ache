@@ -28,7 +28,6 @@ import focusedCrawler.target.CreateWekaInput;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageFactoryException;
 
 /**
  * <p>
@@ -275,13 +274,6 @@ public class Main {
             AsyncCrawler crawler = new AsyncCrawler(targetStorage, (LinkStorage) linkStorage);
             crawler.run();
         }
-        
-        catch (StorageFactoryException e) {
-            logger.error("Problem while creating TargetStorage", e);
-        }
-//        catch (CrawlerManagerException e) {
-//            logger.error("Problem while creating CrawlerManager", e);
-//        }
         catch (LinkClassifierFactoryException | FrontierPersistentException  e) {
             logger.error("Problem while creating LinkStorage", e);
         }

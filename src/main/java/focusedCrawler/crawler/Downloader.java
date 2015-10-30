@@ -8,6 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -35,8 +36,18 @@ class Downloader {
             connection.connect();
             
             this.originalURL = url;
-            this.responseHeaders = connection.getHeaderFields();
             this.mimeType = connection.getContentType();
+            this.responseHeaders = connection.getHeaderFields();
+            if(this.responseHeaders != null) {
+            	// URLConnection.getHeaderFields() doesn't parse headers correctly.
+            	// HTTP protocol line is parsed as field and stored in the map with
+            	// a null key, e.g: null=[HTTP/1.1 301 Moved Permanently]
+            	// So, here we remove null keys from the map.
+            	if(this.responseHeaders.containsKey(null)) {
+            		this.responseHeaders = new HashMap<>(this.responseHeaders);
+            		this.responseHeaders.remove(null);
+            	}
+            }
             
             if(connection instanceof HttpURLConnection){
                 processRedirection((HttpURLConnection) connection, responseHeaders);

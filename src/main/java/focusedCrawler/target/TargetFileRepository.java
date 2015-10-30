@@ -49,6 +49,7 @@ import focusedCrawler.util.Target;
  * @author Luciano Barbosa
  * @version 1.0
  */
+@Deprecated
 public class TargetFileRepository implements TargetRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(TargetFileRepository.class);

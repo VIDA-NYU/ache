@@ -13,7 +13,6 @@ import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.storage.StorageFactoryException;
 
 public class AsyncCrawler {
     
@@ -110,8 +109,6 @@ public class AsyncCrawler {
             AsyncCrawler crawler = new AsyncCrawler(targetStorage, (LinkStorage) linkStorage);
             crawler.run();
             
-        } catch (StorageFactoryException e) {
-            logger.error("Problem while creating Storage", e);
         } catch (Exception e) {
             logger.error("Problem while starting crawler.", e);
         }
