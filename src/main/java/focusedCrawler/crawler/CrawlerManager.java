@@ -35,6 +35,7 @@ import focusedCrawler.util.download.DownloaderException;
 import focusedCrawler.util.download.DownloaderURL;
 import focusedCrawler.util.download.ExtractorProxyDownloader;
 import focusedCrawler.util.storage.Storage;
+import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageFactoryException;
 import focusedCrawler.util.storage.distribution.StorageCreator;
 
@@ -370,10 +371,10 @@ public class CrawlerManager extends Thread {
         try {
 
             ParameterFile configLinkStorage = new ParameterFile(linkConfigFile);
-            Storage linkStorage = new StorageCreator(configLinkStorage).produce();
+            Storage linkStorage = new StorageCreator(new StorageConfig(configLinkStorage)).produce();
 
             ParameterFile configFormStorage = new ParameterFile(formConfigFile);
-            Storage formStorage = new StorageCreator(configFormStorage).produce();
+            Storage formStorage = new StorageCreator(new StorageConfig(configFormStorage)).produce();
 
             CrawlerManager manager = createCrawlerManager(crawlerConfigFile, linkStorage, formStorage);
 

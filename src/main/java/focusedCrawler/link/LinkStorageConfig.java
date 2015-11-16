@@ -1,6 +1,12 @@
 package focusedCrawler.link;
 
+import java.io.IOException;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import focusedCrawler.util.ParameterFile;
+import focusedCrawler.util.storage.StorageConfig;
 
 public class LinkStorageConfig {
 
@@ -92,6 +98,7 @@ public class LinkStorageConfig {
     
     private final BackSurferConfig backSurferConfig;
     private final BiparitieGraphRepConfig biparitieGraphRepConfig;
+    private final StorageConfig serverConfig;
     
     
     public LinkStorageConfig(ParameterFile params) {
@@ -117,7 +124,98 @@ public class LinkStorageConfig {
         this.targetStorageDirectory = params.getParam("TARGET_STORAGE_DIRECTORY");
         this.linkSelector = params.getParam("LINK_SELECTOR");
         
-        this.biparitieGraphRepConfig = new BiparitieGraphRepConfig(params); 
+        this.biparitieGraphRepConfig = new BiparitieGraphRepConfig(params);
+        this.serverConfig = new StorageConfig(params);
+    }
+    
+    public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
+        JsonNode linkStorageNode = config.get("link_storage");
+        
+        JsonNode serverNode = linkStorageNode.get("server");
+        if(serverNode != null) {
+            this.serverConfig = objectMapper.treeToValue(serverNode, StorageConfig.class);
+        } else {
+            this.serverConfig = new StorageConfig();
+        }
+        
+        if (linkStorageNode.get("max_pages_per_domain") != null)
+            this.maxPagesPerDomain = linkStorageNode.get("max_pages_per_domain").asInt();
+        else
+            this.maxPagesPerDomain = 100;
+        
+        
+        if (linkStorageNode.get("max_size_link_queue") != null)
+            this.maxSizeLinkQueue = linkStorageNode.get("max_size_link_queue").asInt();
+        else
+            this.maxSizeLinkQueue = 100000;
+        
+        if (linkStorageNode.get("max_size_cache_urls") != null)
+            this.maxCacheUrlsSize = linkStorageNode.get("max_size_cache_urls").asInt();
+        else
+            this.maxCacheUrlsSize = 100;
+        
+        if (linkStorageNode.get("monitor") != null &&
+            linkStorageNode.get("monitor").get("frequency_frontier") != null)
+            this.frontierRefreshFrequency = linkStorageNode.get("monitor").get("frequency_frontier").asInt();
+        else
+            this.frontierRefreshFrequency = 500;
+
+        if (linkStorageNode.get("link_classifier") != null &&
+            linkStorageNode.get("link_classifier").get("type") != null) {
+            this.typeOfClassifier = linkStorageNode.get("link_classifier").get("type").asText();
+        } else {
+            this.typeOfClassifier = "LinkClassifierBaseline";
+        }
+        
+        if (linkStorageNode.get("link_strategy") != null &&
+            linkStorageNode.get("link_strategy").get("outlinks") != null)
+            this.getOutlinks = linkStorageNode.get("link_strategy").get("outlinks").asBoolean();
+        else
+            this.getOutlinks = true;
+        
+        if (linkStorageNode.get("link_strategy") != null &&
+            linkStorageNode.get("link_strategy").get("backlinks") != null)
+            this.getBacklinks = linkStorageNode.get("link_strategy").get("backlinks").asBoolean();
+        else
+            this.getBacklinks = false;
+        
+        if (linkStorageNode.get("link_strategy") != null &&
+            linkStorageNode.get("link_strategy").get("use_scope") != null)
+            this.useScope = linkStorageNode.get("link_strategy").get("use_scope").asBoolean();
+        else
+            this.useScope = false;
+        
+        if (linkStorageNode.get("online_learning") != null &&
+            linkStorageNode.get("online_learning").get("enabled") != null)
+            this.useOnlineLearning = linkStorageNode.get("online_learning").get("enabled").asBoolean();
+        else
+            this.useOnlineLearning = false;
+        
+        if (linkStorageNode.get("online_learning") != null &&
+            linkStorageNode.get("online_learning").get("type") != null)
+            this.onlineMethod = linkStorageNode.get("online_learning").get("type").asText();
+        else
+            this.onlineMethod = "FORWARD_CLASSIFIER_BINARY";
+        
+        if (linkStorageNode.get("online_learning") != null &&
+            linkStorageNode.get("online_learning").get("type") != null)
+            this.learningLimit = linkStorageNode.get("online_learning").get("learning_limit").asInt();
+        else
+            this.learningLimit = 500;
+        
+        
+        if (linkStorageNode.get("link_selector") != null)
+            this.linkSelector = linkStorageNode.get("link_selector").asText();
+        else
+            this.linkSelector = "TopkLinkSelector";
+        
+        
+        // FIXME
+        this.targetStorageDirectory = "data_target/";
+        this.linkDirectory = "data_url/dir";
+        this.backSurferConfig = null;
+        this.biparitieGraphRepConfig = null;
+
     }
     
     public int getMaxPagesPerDomain() {
@@ -184,5 +282,8 @@ public class LinkStorageConfig {
         return linkSelector;
     }
 
-    
+    public StorageConfig getStorageServerConfig() {
+        return serverConfig;
+    }
+
 }

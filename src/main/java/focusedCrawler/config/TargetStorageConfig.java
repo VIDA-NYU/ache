@@ -1,44 +1,63 @@
 package focusedCrawler.config;
 
+import java.io.IOException;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.ParameterFile;
+import focusedCrawler.util.storage.StorageConfig;
 
 public class TargetStorageConfig {
     
-    private final boolean useClassifier;
-    private final String targetStorageDirectory;
-    private final String negativeStorageDirectory;
-    private final String dataFormat;
-    private final String targetDomain;
-    private final int crawledRefreshFrequency;
-    private final int relevantRefreshFrequency;
-    private final int harvestInfoRefreshFrequency;
-    private final int refreshFreq;
-    private final boolean isRefreshSync;
-    private final float relevanceThreshold;
-    private final int visitedPageLimit;
-    private final boolean hardFocus;
-    private final boolean bipartite;
-    private final boolean saveNegativePages;
-    private boolean englishLanguageDetectionEnabled;
+    public static class MonitorConfig {
+        public boolean sync = true;
+        public int frequency = 100;
+        @JsonProperty("frequency_crawled")
+        public int frequencyCrawled = 500;
+        @JsonProperty("frequency_relevant")
+        public int frequencyRelevant = 500;
+        @JsonProperty("frequency_harvest_info")
+        public int frequencyHarvestInfo = 100;
+    }
     
-    private final ElasticSearchConfig elasticSearchConfig;
+    private boolean useClassifier = true;
+    private String targetStorageDirectory = "data_target";
+    private String negativeStorageDirectory = "data_negative";
+    private String dataFormat = "FILE";
+    
+    private MonitorConfig monitor = new MonitorConfig();
+    
+    private float relevanceThreshold = 0.9f;
+    private int visitedPageLimit = 90000000;
+    private boolean hardFocus = true;
+    private boolean bipartite = false;
+    private boolean saveNegativePages = true;
+    private boolean englishLanguageDetectionEnabled = true;
+    
+    private ElasticSearchConfig elasticSearchConfig = new ElasticSearchConfig();
+    private StorageConfig serverConfig = new StorageConfig();
     
     public TargetStorageConfig(String filename) {
         this(new ParameterFile(filename));
     }
 
+    @Deprecated
     public TargetStorageConfig(ParameterFile params) {
         this.useClassifier = params.getParamBoolean("USE_CLASSIFIER");
         this.targetStorageDirectory = params.getParam("TARGET_STORAGE_DIRECTORY");
         this.negativeStorageDirectory = params.getParam("NEGATIVE_STORAGE_DIRECTORY");
         this.dataFormat = params.getParamOrDefault("DATA_FORMAT", "FILE");
-        this.targetDomain = params.getParam("TARGET_DOMAIN");
-        this.crawledRefreshFrequency = params.getParamInt("CRAWLED_REFRESH_FREQUENCY");
-        this.relevantRefreshFrequency = params.getParamInt("RELEVANT_REFRESH_FREQUENCY");
-        this.harvestInfoRefreshFrequency = params.getParamInt("HARVESTINFO_REFRESH_FREQUENCY");
-        this.refreshFreq = params.getParamInt("SYNC_REFRESH_FREQUENCY");
-        this.isRefreshSync = params.getParamBoolean("REFRESH_SYNC");
+        
+        this.monitor = new MonitorConfig();
+        this.monitor.sync = params.getParamBoolean("REFRESH_SYNC");
+        this.monitor.frequency = params.getParamInt("SYNC_REFRESH_FREQUENCY");
+        this.monitor.frequencyCrawled = params.getParamInt("CRAWLED_REFRESH_FREQUENCY");
+        this.monitor.frequencyRelevant = params.getParamInt("RELEVANT_REFRESH_FREQUENCY");
+        this.monitor.frequencyHarvestInfo = params.getParamInt("HARVESTINFO_REFRESH_FREQUENCY");
+        
         this.relevanceThreshold = params.getParamFloat("RELEVANCE_THRESHOLD");
         this.visitedPageLimit = params.getParamInt("VISITED_PAGE_LIMIT");
         this.hardFocus = params.getParamBoolean("HARD_FOCUS");
@@ -50,6 +69,60 @@ public class TargetStorageConfig {
         int elasticSearchPort = params.getParamIntOrDefault("ELASTICSEARCH_PORT", 9300);
         String clusterName = params.getParamOrDefault("ELASTICSEARCH_CLUSTERNAME", "elasticsearch");
         this.elasticSearchConfig = new ElasticSearchConfig(elasticSearchHost, elasticSearchPort, clusterName);
+        this.serverConfig = new StorageConfig(params);
+    }
+
+    public TargetStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
+        JsonNode targetStorageNode = config.get("target_storage");
+        
+        if(targetStorageNode.get("use_classifier") != null)
+            this.useClassifier = targetStorageNode.get("use_classifier").asBoolean(true);
+        
+        if(targetStorageNode.get("target_directory") != null)
+            this.targetStorageDirectory = targetStorageNode.get("target_directory").asText("data_target");
+        
+        if(targetStorageNode.get("negative_directory") != null)
+            this.negativeStorageDirectory = targetStorageNode.get("negative_directory").asText("data_negative");
+        
+        JsonNode dataFormatNode = targetStorageNode.get("data_format");
+        if(dataFormatNode != null) {
+            this.dataFormat = dataFormatNode.get("type").asText("FILE");
+            if(this.dataFormat.equalsIgnoreCase("elasticsearch")) {
+                JsonNode elasticsearchNode = dataFormatNode.get("parameters");
+                if(elasticsearchNode != null) {
+                    this.elasticSearchConfig = objectMapper.treeToValue(elasticsearchNode, ElasticSearchConfig.class);
+                }
+            }
+        }
+        
+        JsonNode monitorNode = targetStorageNode.get("monitor");
+        if(monitorNode != null) {
+            this.monitor = objectMapper.treeToValue(monitorNode, MonitorConfig.class);
+        }
+        
+        if(targetStorageNode.get("relevance_threshold") != null)
+            this.relevanceThreshold = (float) targetStorageNode.get("relevance_threshold").asDouble(0.5d);
+        
+        if(targetStorageNode.get("visited_page_limit") != null)
+            this.visitedPageLimit = targetStorageNode.get("visited_page_limit").asInt(90000000);
+        
+        if(targetStorageNode.get("hard_focus") != null)
+            this.hardFocus = targetStorageNode.get("hard_focus").asBoolean(true);
+        
+        if(targetStorageNode.get("bipartite") != null)
+            this.bipartite = targetStorageNode.get("bipartite").asBoolean();
+        
+        if(targetStorageNode.get("store_negative_pages") != null)
+            this.saveNegativePages = targetStorageNode.get("store_negative_pages").asBoolean(true);
+        
+        if(targetStorageNode.get("english_language_detection_enabled") != null)
+            this.englishLanguageDetectionEnabled = targetStorageNode.get("english_language_detection_enabled").asBoolean(true);
+
+        JsonNode serverNode = targetStorageNode.get("server");
+        if(serverNode != null) {
+            this.serverConfig = objectMapper.treeToValue(serverNode, StorageConfig.class);
+        }
+        
     }
 
     public boolean isUseClassifier() {
@@ -68,28 +141,24 @@ public class TargetStorageConfig {
         return dataFormat;
     }
 
-    public String getTargetDomain() {
-        return targetDomain;
-    }
-
     public int getCrawledRefreshFrequency() {
-        return crawledRefreshFrequency;
+        return monitor.frequencyCrawled;
     }
 
     public int getRelevantRefreshFrequency() {
-        return relevantRefreshFrequency;
+        return monitor.frequencyRelevant;
     }
 
     public int getHarvestInfoRefreshFrequency() {
-        return harvestInfoRefreshFrequency;
+        return monitor.frequencyHarvestInfo;
     }
 
     public int getRefreshFreq() {
-        return refreshFreq;
+        return monitor.frequency;
     }
 
     public boolean isRefreshSync() {
-        return isRefreshSync;
+        return monitor.sync;
     }
 
     public float getRelevanceThreshold() {
@@ -118,6 +187,10 @@ public class TargetStorageConfig {
 
     public boolean isEnglishLanguageDetectionEnabled() {
         return englishLanguageDetectionEnabled;
+    }
+
+    public StorageConfig getStorageServerConfig() {
+        return serverConfig;
     }
 
 }

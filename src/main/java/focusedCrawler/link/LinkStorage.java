@@ -48,6 +48,7 @@ import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.dashboard.LinkMonitor;
 import focusedCrawler.util.parser.SimpleWrapper;
 import focusedCrawler.util.storage.Storage;
+import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
@@ -229,7 +230,7 @@ public class LinkStorage extends StorageDefault{
 
             Storage linkStorage = createLinkStorage(configPath, seedFile, dataPath, config);
 
-            StorageBinder binder = new StorageBinder(config);
+            StorageBinder binder = new StorageBinder(new StorageConfig(config));
             binder.bind(linkStorage);
         } catch (Exception e) {
             logger.error("Problem while starting LinkStorage.", e);

@@ -21,6 +21,7 @@ import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.dashboard.TargetMonitor;
 import focusedCrawler.util.distribution.CommunicationException;
 import focusedCrawler.util.storage.Storage;
+import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
@@ -128,11 +129,11 @@ public class TargetStorage extends StorageDefault {
             Path linkConf = Paths.get(configPath, "/link_storage/link_storage.cfg");
             ParameterFile linkStorageConfig = new ParameterFile(linkConf.toFile());
             
-            Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
+            Storage linkStorage = new StorageCreator(new StorageConfig(linkStorageConfig)).produce();
             
             Storage targetStorage = createTargetStorage(configPath, modelPath, dataPath, indexName, targetStorageConfig, linkStorage);
 
-            StorageBinder binder = new StorageBinder(targetStorageConfig);
+            StorageBinder binder = new StorageBinder(new StorageConfig(targetStorageConfig));
             binder.bind(targetStorage);
             
         } catch (Exception e) {
