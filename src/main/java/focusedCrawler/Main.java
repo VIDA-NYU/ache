@@ -18,6 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import weka.classifiers.functions.SMO;
+import weka.classifiers.trees.RandomForest;
 import focusedCrawler.crawler.CrawlerManager;
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.link.LinkStorage;
@@ -69,6 +70,7 @@ public class Main {
             buildModelOptions.addOption("c", "stopWordsFile", true, "Path to stopwords file");
             buildModelOptions.addOption("t", "trainingDataDir", true, "Path to training data folder");
             buildModelOptions.addOption("o", "outputDir", true, "Path to folder which model built should be stored");
+            buildModelOptions.addOption("l", "learner", true, "Machine-learning algorithm to be used to train the model (SMO, RandomForest)");
             
             startTargetStorageOptions.addOption("o", "outputDir", true, "Path to folder which model built should be stored");
             startTargetStorageOptions.addOption("c", "configDir", true, "Path to configuration files folder");
@@ -172,9 +174,33 @@ public class Main {
         String outputPath = getMandatoryOptionValue(cmd, "outputDir"); 
         // generate the input for weka
         new File(outputPath).mkdirs();
+        System.out.println("Preparing training data...");
         CreateWekaInput.main(new String[] { stopWordsFile, trainingPath, trainingPath + "/weka.arff" });
         // generate the model
-        SMO.main(new String[] { "-M", "-d", outputPath + "/pageclassifier.model", "-t", trainingPath + "/weka.arff" });
+        String learner = getOptionalOptionValue(cmd, "learner");
+        if(learner==null) {
+        	learner = "SMO";
+        }
+        
+        System.out.println("Training "+ learner+" model...");
+        if(learner.equals("SMO")) {
+        	SMO.main(new String[] {
+    	        "-M",
+    	        "-d", outputPath + "/pageclassifier.model",
+    	        "-t", trainingPath + "/weka.arff",
+    	        "-C", "0.01"
+			});
+        } else if(learner.equals("RandomForest")) {
+        	RandomForest.main(new String[] {
+//    	        "-K", "5", // k-fold cross validation
+                "-I", "100", // Number of trees to build
+                "-d", outputPath + "/pageclassifier.model",
+                "-t", trainingPath + "/weka.arff"
+			});
+        } else {
+            System.out.println("Unknow learner: "+learner);
+            return;
+        }
         createFeaturesFile(outputPath,trainingPath);
     }
     
