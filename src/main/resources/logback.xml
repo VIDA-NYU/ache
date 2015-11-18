@@ -30,6 +30,9 @@
     -->
 
     <logger name="org.apache.http" level="WARN"/>
+    
+    <logger name="org.apache.http.client.protocol.ResponseProcessCookies" level="ERROR"/>
+    <logger name="crawlercommons.fetcher.http.SimpleHttpFetcher$MyRedirectStrategy" level="ERROR"/>
 
 	<appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
