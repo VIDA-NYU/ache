@@ -50,7 +50,7 @@ public class AsyncCrawler {
                         // time until more links are available and again once more
                         try {
                             logger.info("Waiting for links from pages being downloaded...");
-                            Thread.sleep(100);
+                            Thread.sleep(1000);
                         } catch (InterruptedException ie) { }
                         continue;
                     } else {
