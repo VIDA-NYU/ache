@@ -78,6 +78,7 @@ public class HttpDownloader implements Closeable {
         for (String mimeTypes : DEFAULT_TEXT_MIME_TYPES) {
             this.fetcher.addValidMimeType(mimeTypes);
         }
+        this.fetcher.setDefaultMaxContentSize(10*1024*1024);
     }
     
     public Future<FetchedResult> dipatchDownload(String url) {
