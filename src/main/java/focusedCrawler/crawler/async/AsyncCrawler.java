@@ -1,9 +1,13 @@
 package focusedCrawler.crawler.async;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
 
 import crawlercommons.fetcher.http.UserAgent;
 import focusedCrawler.link.LinkStorage;
@@ -20,25 +24,43 @@ public class AsyncCrawler {
 
     private boolean stop = false;
 
-    private Storage targetStorage;
-    private LinkStorage linkStorage;
-    private HttpDownloader downloader;
-    private UserAgent userAgent;
-
+    private final LinkStorage linkStorage;
+    private final UserAgent userAgent;
+    private final HttpDownloader downloader;
+    private final FetchedResultHandler resultHandler;
+    private final int minimumAccessInterval;
+    private final Cache<String, Long> domainAccessCache;
+    
     public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage) {
-        this.targetStorage = targetStorage;
+        this(targetStorage, linkStorage, 5000);
+    }
+    
+    public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage, int minimumAccessInterval) {
         this.linkStorage = linkStorage;
         this.userAgent = new UserAgent("ACHE", "", "https://github.com/ViDA-NYU/ache");
         this.downloader = new HttpDownloader(userAgent);
+        this.resultHandler = new FetchedResultHandler(targetStorage);
+        this.minimumAccessInterval = minimumAccessInterval;
+        if(this.minimumAccessInterval > 0) {
+            // this cache maintain the access times of the domains and remove
+            // them automatically after the specified minimumAccessInterval
+            this.domainAccessCache = CacheBuilder.newBuilder()
+                    .maximumSize(100000)
+                    .expireAfterWrite(this.minimumAccessInterval, TimeUnit.MILLISECONDS)
+                    .build();
+        } else {
+            this.domainAccessCache = null;
+        }        
     }
 
     public void run() {
         try {
             while (!this.stop) {
-                
-                LinkRelevance link = null;
                 try {
-                    link = (LinkRelevance) linkStorage.select(null);
+                    LinkRelevance link = getNextLink();
+                    if(link != null) {
+                        downloader.dipatchDownload(link, resultHandler);
+                    }
                 }
                 catch (DataNotFoundException e) {
                     //
@@ -62,11 +84,8 @@ public class AsyncCrawler {
                     }
                 } catch (StorageException e) {
                     logger.warn("Problem dispatching link.", e);
-                }
-                
-                if(link != null) {
-                    FetchedResultHandler resultHandler = new FetchedResultHandler(targetStorage);
-                    downloader.dipatchDownload(link, resultHandler);
+                } catch (InterruptedException e) {
+                    logger.warn("Interrupted during resttime.", e);
                 }
             }
             downloader.await();
@@ -75,6 +94,29 @@ public class AsyncCrawler {
             downloader.close();
             logger.info("Done.");
         }
+    }
+
+    private LinkRelevance getNextLink() throws InterruptedException, StorageException, DataNotFoundException {
+        
+        LinkRelevance link = (LinkRelevance) linkStorage.select(null);
+
+        if(domainAccessCache != null) {
+            
+            String domainName = link.getTopLevelDomainName();
+            Long lastAccessTime = domainAccessCache.getIfPresent(domainName);
+           
+            if(lastAccessTime != null && lastAccessTime + minimumAccessInterval > System.currentTimeMillis()) {
+                logger.info("Link can't be downloaded right now. " +
+                            "Sleeping {}ms before dispatching download.",
+                             minimumAccessInterval);
+                Thread.sleep(minimumAccessInterval);
+            }
+            
+            // record time this domain was last accessed 
+            domainAccessCache.put(domainName, System.currentTimeMillis());
+        }
+        
+        return link;
     }
     
     public void stop() {
