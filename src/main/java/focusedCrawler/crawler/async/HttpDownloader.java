@@ -3,10 +3,10 @@ package focusedCrawler.crawler.async;
 import java.io.Closeable;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -33,8 +33,8 @@ public class HttpDownloader implements Closeable {
 
     private static final int CPU_CORES = Runtime.getRuntime().availableProcessors();
     private static final int DEFAULT_MAX_RETRY_COUNT = 3;
-    private static final int DEFAULT_DOWNLOAD_THREADS = 300;
-    private static final int DEFAULT_DOWNLOAD_QUEUE_MAX_SIZE = DEFAULT_DOWNLOAD_THREADS*2;
+    private static final int DEFAULT_MAX_DOWNLOAD_THREADS = 200;
+    private static final int DEFAULT_DOWNLOAD_QUEUE_MAX_SIZE = DEFAULT_MAX_DOWNLOAD_THREADS/4;
     private static final String[] DEFAULT_TEXT_MIME_TYPES = {
         "text/html",
         "application/x-asp",
@@ -43,10 +43,10 @@ public class HttpDownloader implements Closeable {
     };
 
     private final SimpleHttpFetcher fetcher;
-    private final ExecutorService downloadThreadPool;
-    private final ExecutorService distpatchThreadPool;
-    private final LinkedBlockingQueue<Runnable> downloadQueue;
-    private final LinkedBlockingQueue<Runnable> dispatchQueue;
+    private final ThreadPoolExecutor downloadThreadPool;
+    private final ThreadPoolExecutor distpatchThreadPool;
+    private final BlockingQueue<Runnable> downloadQueue;
+    private final BlockingQueue<Runnable> dispatchQueue;
     
     private final AtomicInteger numberOfDownloads = new AtomicInteger(0);
     
@@ -55,30 +55,32 @@ public class HttpDownloader implements Closeable {
         ThreadFactory downloadThreadFactory = new ThreadFactoryBuilder().setNameFormat("downloader-%d").build();
         ThreadFactory dispatcherThreadFactory = new ThreadFactoryBuilder().setNameFormat("dispatcher-%d").build();
         
-        this.downloadQueue = new LinkedBlockingQueue<Runnable>();
-        this.dispatchQueue = new LinkedBlockingQueue<Runnable>();
+        this.downloadQueue = new ArrayBlockingQueue<Runnable>(DEFAULT_DOWNLOAD_QUEUE_MAX_SIZE);
+        this.dispatchQueue = new ArrayBlockingQueue<Runnable>(CPU_CORES);
         
-        this.downloadThreadPool  = new ThreadPoolExecutor(DEFAULT_DOWNLOAD_THREADS, DEFAULT_DOWNLOAD_THREADS,
-                0L, TimeUnit.MILLISECONDS, this.downloadQueue, downloadThreadFactory);
+        this.downloadThreadPool  = new ThreadPoolExecutor(
+                2, DEFAULT_MAX_DOWNLOAD_THREADS,
+                60L, TimeUnit.SECONDS,
+                this.downloadQueue,
+                downloadThreadFactory);
         
-        this.distpatchThreadPool  = new ThreadPoolExecutor(CPU_CORES, CPU_CORES,
-                0L, TimeUnit.MILLISECONDS, this.dispatchQueue, dispatcherThreadFactory);
-        
-//        this.downloadThreadPool  = Executors.newFixedThreadPool(DEFAULT_MAX_THREADS, downloadThreadFactory);
-//        this.distpatchThreadPool = Executors.newFixedThreadPool(CPU_CORES, dispatcherThreadFactory);
+        this.distpatchThreadPool  = new ThreadPoolExecutor(
+                2, CPU_CORES,
+                60L, TimeUnit.SECONDS,
+                this.dispatchQueue, dispatcherThreadFactory);
         
         // Adding some extra connections for URLs that have redirects
         // and thus creates more connections   
-        int connectionPoolSize = (int) (DEFAULT_DOWNLOAD_THREADS * 1.5);
+        int connectionPoolSize = (int) (DEFAULT_MAX_DOWNLOAD_THREADS * 1.5);
         
         this.fetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
         this.fetcher.setSocketTimeout(30*1000);
         this.fetcher.setConnectionTimeout(5*60*1000);
         this.fetcher.setMaxRetryCount(DEFAULT_MAX_RETRY_COUNT);
+        this.fetcher.setDefaultMaxContentSize(10*1024*1024);
         for (String mimeTypes : DEFAULT_TEXT_MIME_TYPES) {
             this.fetcher.addValidMimeType(mimeTypes);
         }
-        this.fetcher.setDefaultMaxContentSize(10*1024*1024);
     }
     
     public Future<FetchedResult> dipatchDownload(String url) {
@@ -97,13 +99,6 @@ public class HttpDownloader implements Closeable {
     }
     
     public Future<FetchedResult> dipatchDownload(LinkRelevance link, Callback callback) {
-        try {
-            while(downloadQueue.size() > DEFAULT_DOWNLOAD_QUEUE_MAX_SIZE) {
-                Thread.sleep(100);
-            }
-        } catch (InterruptedException e) {
-            // ok, just finish execution
-        }
         Future<FetchedResult> future = downloadThreadPool.submit(new RequestTask(link, callback));
         numberOfDownloads.incrementAndGet();
         return future;
@@ -172,14 +167,10 @@ public class HttpDownloader implements Closeable {
             
             try {
                 FetchedResult result = fetcher.fetch(new HttpGet(), link.getURL().toString(), payload);
-                if (callback != null) {
-                    distpatchThreadPool.submit(new SuccessHandler(result, callback));
-                }
+                distpatchThreadPool.submit(new FetchFinishedHandler(result, callback, null));
                 return result;
             } catch (BaseFetchException e) {
-                if (callback != null) {
-                    distpatchThreadPool.submit(new FailureHandler(e, callback));
-                }
+                distpatchThreadPool.submit(new FetchFinishedHandler(null, callback, e));
                 return null;
             }
 //            finally {
@@ -190,37 +181,27 @@ public class HttpDownloader implements Closeable {
         
     }
     
-    private final class SuccessHandler implements Runnable {
+    private final class FetchFinishedHandler implements Runnable {
 
         private FetchedResult response;
         private Callback callback;
-
-        public SuccessHandler(FetchedResult response, Callback callback) {
-            this.response = response;
-            this.callback = callback;
-        }
-
-        @Override
-        public void run() {
-            callback.completed(response);
-            numberOfDownloads.decrementAndGet();
-        }
-        
-    }
-    
-    private final class FailureHandler implements Runnable {
-
-        private Callback callback;
         private BaseFetchException exception;
 
-        public FailureHandler(BaseFetchException exception, Callback callback) {
-            this.exception = exception;
+        public FetchFinishedHandler(FetchedResult response, Callback callback, BaseFetchException exception) {
+            this.response = response;
             this.callback = callback;
+            this.exception = exception;
         }
 
         @Override
         public void run() {
-            callback.failed(exception.getUrl(), exception);
+            if(callback != null) {
+                if(exception != null) {
+                    callback.failed(exception.getUrl(), exception);
+                } else {
+                    callback.completed(response);
+                }
+            }
             numberOfDownloads.decrementAndGet();
         }
         

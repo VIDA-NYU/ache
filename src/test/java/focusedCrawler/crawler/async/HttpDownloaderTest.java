@@ -8,9 +8,11 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Future;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -162,6 +164,40 @@ public class HttpDownloaderTest {
         for (Future<FetchedResult> future : results) {
             assertThat(future.get().getStatusCode(), is(200));
         }
+        
+        httpServer.stop(0);
+    }
+    
+    @Test
+    public void shouldCallCompletedCallbackAfterDownloadFinishes() throws Exception {
+        // given
+        String originalUrl = TestWebServerBuilder.address+"/index.html";
+        HttpServer httpServer = new TestWebServerBuilder()
+            .withHandler("/index.html", new OkHandler("Hello world!"))
+            .start();
+        int numberOfRequests = 5;
+        AtomicInteger requestsFinished = new AtomicInteger(0);
+        
+        // when
+        for (int i = 0; i < numberOfRequests; i++) {
+            downloader.dipatchDownload(new URL(originalUrl), new HttpDownloader.Callback() {
+                @Override
+                public void failed(String url, Exception e) {
+                }
+                @Override
+                public void completed(FetchedResult result) {
+                    // increment counter when download finishes
+                    requestsFinished.incrementAndGet();
+                }
+            });
+        }
+        while(downloader.stillWorking()) {
+            // wait until all downloads are finished
+            Thread.sleep(5);
+        }
+        
+        // then
+        assertThat(requestsFinished.get(), is(numberOfRequests));
         
         httpServer.stop(0);
     }
