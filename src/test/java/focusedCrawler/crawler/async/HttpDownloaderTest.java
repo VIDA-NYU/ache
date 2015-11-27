@@ -175,8 +175,8 @@ public class HttpDownloaderTest {
         HttpServer httpServer = new TestWebServerBuilder()
             .withHandler("/index.html", new OkHandler("Hello world!"))
             .start();
-        int numberOfRequests = 5;
-        AtomicInteger requestsFinished = new AtomicInteger(0);
+        final int numberOfRequests = 5;
+        final AtomicInteger requestsFinished = new AtomicInteger(0);
         
         // when
         for (int i = 0; i < numberOfRequests; i++) {
