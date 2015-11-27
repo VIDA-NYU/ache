@@ -47,7 +47,7 @@ public class FileSystemTargetRepositoryTest {
 		// given
 		String folder = tempFolder.newFolder().toString(); 
 		Page target = new Page(new URL(url), html);
-		FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.FILE);
+		FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.HTML, false);
 		
 		// when
 		repository.insert(target);
@@ -65,7 +65,7 @@ public class FileSystemTargetRepositoryTest {
 		// given
 		String folder = tempFolder.newFolder().toString();
 		Page target = new Page(new URL(url), html, responseHeaders);
-		FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON);
+		FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, false);
 		
 		// when
 		repository.insert(target);
@@ -87,7 +87,7 @@ public class FileSystemTargetRepositoryTest {
 		// given
 		String folder = tempFolder.newFolder().toString();
 		Page target = new Page(new URL(url), html, responseHeaders);
-		FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.CBOR);
+		FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.CBOR, false);
 		
 		// when
 		repository.insert(target);
@@ -103,5 +103,24 @@ public class FileSystemTargetRepositoryTest {
 		assertThat(value.url, is(url));
 		assertThat(value.response.get("body").toString(), is(html));
 	}
+	
+	@Test
+    public void shouldHashFilenameUsingSHA256Hash() throws IOException {
+        // given
+	    boolean hashFilename = true;
+        String folder = tempFolder.newFolder().toString(); 
+        Page target = new Page(new URL(url), html);
+        FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.HTML, hashFilename);
+        
+        // when
+        repository.insert(target);
+        
+        // then
+        Path path = Paths.get(folder, "example.com", "f0e6a6a97042a4f1f1c87f5f7d44315b2d852c2df5c7991cc66241bf7072d1c4");
+        assertThat(path.toFile().exists(), is(hashFilename));
+        
+        String content = new String(Files.readAllBytes(path));
+        assertThat(content, is(html));
+    }
 
 }

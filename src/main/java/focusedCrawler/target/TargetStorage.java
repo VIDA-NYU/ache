@@ -168,16 +168,19 @@ public class TargetStorage extends StorageDefault {
         String dataFormat = config.getDataFormat();
         logger.info("Using DATA_FORMAT: "+dataFormat);
         if(dataFormat.equals("FILESYSTEM_JSON")) {
-        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.JSON);
-			negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.JSON);
+        	boolean hashFilename = config.getHashFileName();
+            targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.JSON, hashFilename);
+			negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.JSON, hashFilename);
         }
         else if (dataFormat.equals("FILESYSTEM_CBOR")) {
-        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.CBOR);
-        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.CBOR);
+            boolean hashFilename = config.getHashFileName();
+        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.CBOR, hashFilename);
+        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.CBOR, hashFilename);
         }
         else if(dataFormat.equals("FILESYSTEM_HTML")) {
-        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.FILE);
-        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.FILE);
+            boolean hashFilename = config.getHashFileName();
+        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.HTML, hashFilename);
+        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.HTML, hashFilename);
         }
         else if(dataFormat.equals("ELASTICSEARCH")) {
         	if(indexName == null) {
