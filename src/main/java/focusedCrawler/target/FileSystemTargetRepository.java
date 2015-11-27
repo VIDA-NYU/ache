@@ -8,6 +8,7 @@ import java.net.URLEncoder;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +31,7 @@ import focusedCrawler.util.Target;
 public class FileSystemTargetRepository implements TargetRepository {
 
 	enum DataFormat {
-		FILE, JSON, CBOR
+		HTML, JSON, CBOR
 	}
 	
     private static final Logger logger = LoggerFactory.getLogger(FileSystemTargetRepository.class);
@@ -39,18 +40,24 @@ public class FileSystemTargetRepository implements TargetRepository {
     
     private Path directory;
 	private DataFormat dataFormat;
+    private boolean hashFilename;
 
-    public FileSystemTargetRepository(String directory, DataFormat dataFormat) {
-		this(Paths.get(directory), dataFormat);
+    public FileSystemTargetRepository(String directory,
+                                      DataFormat dataFormat,
+                                      boolean hashFilename) {
+		this(Paths.get(directory), dataFormat, hashFilename);
     }
     
-    public FileSystemTargetRepository(Path directory, DataFormat dataFormat) {
+    public FileSystemTargetRepository(Path directory,
+                                      DataFormat dataFormat,
+                                      boolean hashFilename) {
     	File fileDir = directory.toFile();
     	if(!fileDir.exists()) {
     		fileDir.mkdirs();
     	}
         this.directory = directory;
         this.dataFormat = dataFormat;
+        this.hashFilename = hashFilename;
     }
 
     public boolean insert(Target target, int counter) {
@@ -70,10 +77,19 @@ public class FileSystemTargetRepository implements TargetRepository {
                 hostDirectory.mkdirs();
             }
 
-            Path filePath = hostPath.resolve(URLEncoder.encode(id, "UTF-8"));
+            
+            Path filePath;
+            if(hashFilename) {
+                String filenameEncoded =  DigestUtils.sha256Hex(id);
+                filePath = hostPath.resolve(filenameEncoded);
+            } else {
+                filePath = hostPath.resolve(URLEncoder.encode(id, "UTF-8"));
+            }
+            
+            System.err.println(filePath.toString());
             
             switch(dataFormat) {
-            	case FILE:
+            	case HTML:
             	{
 	            	try (PrintStream fileStream = new PrintStream(filePath.toFile())) {
 	            	    fileStream.print(target.getSource());

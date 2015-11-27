@@ -20,7 +20,8 @@ public class TargetStorageConfig {
     private final boolean hardFocus;
     private final boolean bipartite;
     private final boolean saveNegativePages;
-    private boolean englishLanguageDetectionEnabled;
+    private final boolean englishLanguageDetectionEnabled;
+    private final boolean hashFileName;
     
     private final ElasticSearchConfig elasticSearchConfig;
     
@@ -33,6 +34,7 @@ public class TargetStorageConfig {
         this.targetStorageDirectory = params.getParam("TARGET_STORAGE_DIRECTORY");
         this.negativeStorageDirectory = params.getParam("NEGATIVE_STORAGE_DIRECTORY");
         this.dataFormat = params.getParamOrDefault("DATA_FORMAT", "FILE");
+        this.hashFileName = params.getParamBooleanOrDefault("HASH_FILE_NAME", false);
         this.targetDomain = params.getParam("TARGET_DOMAIN");
         this.crawledRefreshFrequency = params.getParamInt("CRAWLED_REFRESH_FREQUENCY");
         this.relevantRefreshFrequency = params.getParamInt("RELEVANT_REFRESH_FREQUENCY");
@@ -118,6 +120,10 @@ public class TargetStorageConfig {
 
     public boolean isEnglishLanguageDetectionEnabled() {
         return englishLanguageDetectionEnabled;
+    }
+
+    public boolean getHashFileName() {
+        return hashFileName;
     }
 
 }
