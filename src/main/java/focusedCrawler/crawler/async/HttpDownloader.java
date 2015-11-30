@@ -116,7 +116,7 @@ public class HttpDownloader implements Closeable {
         logger.info("Done.");
     }
     
-    public boolean stillWorking() {
+    public boolean hasPendingDownloads() {
         if(numberOfDownloads.get() > 0) {
             return true;
         } else {

@@ -191,7 +191,7 @@ public class HttpDownloaderTest {
                 }
             });
         }
-        while(downloader.stillWorking()) {
+        while(downloader.hasPendingDownloads()) {
             // wait until all downloads are finished
             Thread.sleep(5);
         }

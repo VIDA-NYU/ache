@@ -1,15 +1,12 @@
 package focusedCrawler.crawler.async;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.cache.Cache;
-import com.google.common.cache.CacheBuilder;
-
 import crawlercommons.fetcher.http.UserAgent;
+import focusedCrawler.link.DownloadScheduler;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.DataNotFoundException;
@@ -22,17 +19,17 @@ public class AsyncCrawler {
     
     private static final Logger logger = LoggerFactory.getLogger(AsyncCrawler.class);
 
-    private boolean stop = false;
+    private int maxLinksInScheduler = 10000;
+    private boolean shouldStop = false;
 
     private final LinkStorage linkStorage;
     private final UserAgent userAgent;
     private final HttpDownloader downloader;
     private final FetchedResultHandler resultHandler;
-    private final int minimumAccessInterval;
-    private final Cache<String, Long> domainAccessCache;
+    private final DownloadScheduler downloadScheduler;
     
     public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage) {
-        this(targetStorage, linkStorage, 5000);
+        this(targetStorage, linkStorage, 10000);
     }
     
     public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage, int minimumAccessInterval) {
@@ -40,52 +37,68 @@ public class AsyncCrawler {
         this.userAgent = new UserAgent("ACHE", "", "https://github.com/ViDA-NYU/ache");
         this.downloader = new HttpDownloader(userAgent);
         this.resultHandler = new FetchedResultHandler(targetStorage);
-        this.minimumAccessInterval = minimumAccessInterval;
-        if(this.minimumAccessInterval > 0) {
-            // this cache maintain the access times of the domains and remove
-            // them automatically after the specified minimumAccessInterval
-            this.domainAccessCache = CacheBuilder.newBuilder()
-                    .maximumSize(100000)
-                    .expireAfterWrite(this.minimumAccessInterval, TimeUnit.MILLISECONDS)
-                    .build();
-        } else {
-            this.domainAccessCache = null;
-        }        
+        this.downloadScheduler = new DownloadScheduler(minimumAccessInterval);
+    }
+    
+    class DownloadDispatcher extends Thread {
+        public DownloadDispatcher() {
+            setName("download-dispatcher");
+        }
+        @Override
+        public void run() {
+            while(!shouldStop) {
+                LinkRelevance linkRelevance = downloadScheduler.nextLink();
+                if(linkRelevance != null) {
+                    downloader.dipatchDownload(linkRelevance, resultHandler);
+                } else {
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        logger.error("LinkDispatcher was interrupted.", e);
+                    }
+                }
+            }
+        }
     }
 
     public void run() {
         try {
-            while (!this.stop) {
+            DownloadDispatcher linkDispatcher = new DownloadDispatcher();
+            linkDispatcher.start();
+            while (!this.shouldStop) {
                 try {
-                    LinkRelevance link = getNextLink();
+                    if(downloadScheduler.numberOfLinks() > maxLinksInScheduler) {
+                        Thread.sleep(100);
+                        continue;
+                    }
+                    LinkRelevance link = (LinkRelevance) linkStorage.select(null);
                     if(link != null) {
-                        downloader.dipatchDownload(link, resultHandler);
+                        downloadScheduler.addLink(link);
                     }
                 }
                 catch (DataNotFoundException e) {
-                    //
                     // There are no more links available in the frontier right now
-                    //
-                    if(downloader.stillWorking()) {
-                        // If there are links still being downloaded, new links 
-                        // may be found in these pages, so try we should wait some
-                        // time until more links are available and again once more
+                    if(downloader.hasPendingDownloads() || downloadScheduler.hasPendingLinks()) {
+                        // If there are still pending downloads, new links 
+                        // may be found in these pages, so we should wait some
+                        // time until more links are available and try again
                         try {
                             logger.info("Waiting for links from pages being downloaded...");
-                            Thread.sleep(1000);
+                            Thread.sleep(maxLinksInScheduler);
                         } catch (InterruptedException ie) { }
                         continue;
-                    } else {
-                        // Already waited for link storage process eventual unprocessed links
-                        // and there are no more links being downloaded, so stop crawler
-                        logger.info("LinkStorage ran out of links, stopping crawler.");
-                        this.stop = true;
-                        break;
                     }
+                    // There are no more pending downloads and there are no
+                    // more links available in the frontier, so stop crawler
+                    logger.info("LinkStorage ran out of links, stopping crawler.");
+                    this.shouldStop = true;
+                    break;
                 } catch (StorageException e) {
-                    logger.warn("Problem dispatching link.", e);
+                    logger.error("Problem dispatching link.", e);
                 } catch (InterruptedException e) {
-                    logger.warn("Interrupted during resttime.", e);
+                    logger.error("Interrupted during rest time.", e);
+                } catch (Exception e) {
+                    logger.error("An unexpected error happened.", e);
                 }
             }
             downloader.await();
@@ -96,31 +109,9 @@ public class AsyncCrawler {
         }
     }
 
-    private LinkRelevance getNextLink() throws InterruptedException, StorageException, DataNotFoundException {
-        
-        LinkRelevance link = (LinkRelevance) linkStorage.select(null);
-
-        if(domainAccessCache != null) {
-            
-            String domainName = link.getTopLevelDomainName();
-            Long lastAccessTime = domainAccessCache.getIfPresent(domainName);
-           
-            if(lastAccessTime != null && lastAccessTime + minimumAccessInterval > System.currentTimeMillis()) {
-                logger.info("Link can't be downloaded right now. " +
-                            "Sleeping {}ms before dispatching download.",
-                             minimumAccessInterval);
-                Thread.sleep(minimumAccessInterval);
-            }
-            
-            // record time this domain was last accessed 
-            domainAccessCache.put(domainName, System.currentTimeMillis());
-        }
-        
-        return link;
-    }
     
     public void stop() {
-        this.stop = true;
+        this.shouldStop = true;
     }
 
     public static void main(String[] args) throws IOException {
