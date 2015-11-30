@@ -3,12 +3,11 @@ package focusedCrawler.crawler.async;
 import java.io.Closeable;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -31,10 +30,10 @@ public class HttpDownloader implements Closeable {
     
     public static final String PAYLOAD_KEY = "link-relevance";
 
-    private static final int CPU_CORES = Runtime.getRuntime().availableProcessors();
     private static final int DEFAULT_MAX_RETRY_COUNT = 3;
-    private static final int DEFAULT_MAX_DOWNLOAD_THREADS = 200;
-    private static final int DEFAULT_DOWNLOAD_QUEUE_MAX_SIZE = DEFAULT_MAX_DOWNLOAD_THREADS/4;
+    private static final int DEFAULT_MAX_DOWNLOAD_THREADS = 50;
+    private static final int CPU_CORES = Runtime.getRuntime().availableProcessors();
+
     private static final String[] DEFAULT_TEXT_MIME_TYPES = {
         "text/html",
         "application/x-asp",
@@ -43,10 +42,8 @@ public class HttpDownloader implements Closeable {
     };
 
     private final SimpleHttpFetcher fetcher;
-    private final ThreadPoolExecutor downloadThreadPool;
-    private final ThreadPoolExecutor distpatchThreadPool;
-    private final BlockingQueue<Runnable> downloadQueue;
-    private final BlockingQueue<Runnable> dispatchQueue;
+    private final ExecutorService downloadThreadPool;
+    private final ExecutorService distpatchThreadPool;
     
     private final AtomicInteger numberOfDownloads = new AtomicInteger(0);
     
@@ -55,19 +52,8 @@ public class HttpDownloader implements Closeable {
         ThreadFactory downloadThreadFactory = new ThreadFactoryBuilder().setNameFormat("downloader-%d").build();
         ThreadFactory dispatcherThreadFactory = new ThreadFactoryBuilder().setNameFormat("dispatcher-%d").build();
         
-        this.downloadQueue = new ArrayBlockingQueue<Runnable>(DEFAULT_DOWNLOAD_QUEUE_MAX_SIZE);
-        this.dispatchQueue = new ArrayBlockingQueue<Runnable>(CPU_CORES);
-        
-        this.downloadThreadPool  = new ThreadPoolExecutor(
-                2, DEFAULT_MAX_DOWNLOAD_THREADS,
-                60L, TimeUnit.SECONDS,
-                this.downloadQueue,
-                downloadThreadFactory);
-        
-        this.distpatchThreadPool  = new ThreadPoolExecutor(
-                2, CPU_CORES,
-                60L, TimeUnit.SECONDS,
-                this.dispatchQueue, dispatcherThreadFactory);
+        this.downloadThreadPool = Executors.newFixedThreadPool(DEFAULT_MAX_DOWNLOAD_THREADS, downloadThreadFactory);
+        this.distpatchThreadPool = Executors.newFixedThreadPool(CPU_CORES, dispatcherThreadFactory);
         
         // Adding some extra connections for URLs that have redirects
         // and thus creates more connections   
