@@ -26,7 +26,6 @@ package focusedCrawler.link.frontier;
 import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 
 import focusedCrawler.util.LinkRelevance;
@@ -136,15 +135,6 @@ public class Frontier {
                 urlRelevance.put(url, relevInt + "");
             }
         }
-    }
-
-    public List<String> getFrontierPages() throws Exception
-    // public Tuple[] getFrontierPages() throws Exception
-    {
-        // This function is used to getting all existing links in frontier.
-        // Should we get frontier links via cache member of urlRelevant?
-        // return urlRelevance.getTable();
-        return urlRelevance.getCache();
     }
 
     /**

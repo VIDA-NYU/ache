@@ -106,9 +106,7 @@ public class BipartiteGraphManager {
 		return this.rep;
 	}
 	
-    public String insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException {
-        
-        String outLinks = page.getIdentifier() + "\t1.0\t" + String.valueOf(System.currentTimeMillis() / 1000L);
+    public void insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException {
         
         PaginaURL parsedPage = page.getPageURL();
         parsedPage.setRelevance(page.getRelevance());
@@ -137,7 +135,6 @@ public class BipartiteGraphManager {
                         domainCounter.put(domain, domainCount);
                         relevantURLs.add(url);
                         temp.add(linksRelevance[i]);
-                        outLinks += "\t" + url;
                     }
                     
                 }
@@ -161,7 +158,6 @@ public class BipartiteGraphManager {
             count = 0;
         }
         count++;
-        return outLinks;
     }
 	
 	public void insertBacklinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException{
