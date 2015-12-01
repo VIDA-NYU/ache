@@ -40,7 +40,8 @@ public class DownloadScheduler {
     }
 
     private PriorityQueue<DomainNode> createDomainPriorityQueue() {
-        return new PriorityQueue<DomainNode>(new Comparator<DomainNode>() {
+        int initialCapacity = 10;
+        return new PriorityQueue<DomainNode>(initialCapacity, new Comparator<DomainNode>() {
             @Override
             public int compare(DomainNode o1, DomainNode o2) {
                 return Long.compare(o1.lastAccessTime, o2.lastAccessTime);
