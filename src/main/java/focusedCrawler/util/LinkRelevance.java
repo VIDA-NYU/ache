@@ -79,5 +79,10 @@ public class LinkRelevance implements Serializable {
             throw new IllegalStateException("Invalid top private domain name=["+domain+"] in URL=["+url+"]", e);
         }
     }
+    
+    @Override
+    public String toString() {
+        return "LinkRelevance[url=" + url + ", relevance=" + relevance + "]";
+    }
 
 }
