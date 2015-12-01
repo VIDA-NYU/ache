@@ -81,7 +81,6 @@ public class LinkStorageConfig {
     private final String linkDirectory;
     private final int maxCacheUrlsSize;
     private final int maxSizeLinkQueue;
-    private final int frontierRefreshFrequency;
     private final boolean getBacklinks;
     
     private final boolean useOnlineLearning;
@@ -102,7 +101,6 @@ public class LinkStorageConfig {
         this.linkDirectory = params.getParam("LINK_DIRECTORY");
         this.maxCacheUrlsSize = params.getParamInt("MAX_CACHE_URLS_SIZE");
         this.maxSizeLinkQueue = params.getParamInt("MAX_SIZE_LINK_QUEUE");
-        this.frontierRefreshFrequency = params.getParamInt("FRONTIER_REFRESH_FREQUENCY");
         this.getBacklinks = params.getParamBoolean("SAVE_BACKLINKS");
         if(getBacklinks) {
             String backlinkConfig = params.getParam("BACKLINK_CONFIG");
@@ -152,10 +150,6 @@ public class LinkStorageConfig {
         return getBacklinks;
     }
     
-    public int getFrontierRefreshFrequency() {
-        return frontierRefreshFrequency;
-    }
-    
     public boolean isUseOnlineLearning() {
         return useOnlineLearning;
     }
@@ -183,6 +177,5 @@ public class LinkStorageConfig {
     public String getLinkSelector() {
         return linkSelector;
     }
-
     
 }
