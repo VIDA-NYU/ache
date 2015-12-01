@@ -86,8 +86,6 @@ public class FileSystemTargetRepository implements TargetRepository {
                 filePath = hostPath.resolve(URLEncoder.encode(id, "UTF-8"));
             }
             
-            System.err.println(filePath.toString());
-            
             switch(dataFormat) {
             	case HTML:
             	{

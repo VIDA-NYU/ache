@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
@@ -57,18 +56,6 @@ public class BipartiteGraphRep {
 		return url2id.get(url);
 	}
 	
-	public HashSet<String> getAuthURLs() throws Exception{
-		HashSet<String> result = new HashSet<String>();
-		for (Iterator<String> iter = authID.getKeys(); iter.hasNext();) {
-			String id = (String) iter.next();
-			String url = getAuthURL(id);
-			if(url != null){
-				result.add(url);
-			}
-		}
-		return result;
-	}
-
 	public String getHubURL(String id) throws IOException{
 		String url = hubID.get(id);
 		if(url != null){
