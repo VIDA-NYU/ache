@@ -90,13 +90,6 @@ public class PersistentHashtable {
 		return pages;
 	}
 
-	public synchronized void updateCache(Map<String, String> newCache){
-		this.cache.clear();
-		this.cache = null;
-		this.cache = newCache;
-		this.tempList = new Tuple[tempCacheSize];
-	}
-
 	@SuppressWarnings("deprecation")
 	public synchronized String get(String key){
 		String obj = null;
@@ -179,28 +172,6 @@ public class PersistentHashtable {
 	
 	public int size(){
 		return this.size;
-	}
-	
-	public static void main(String[] args) {
-		try {
-			PersistentHashtable ph = new PersistentHashtable(args[0], 100000);
-			String key = ph.get(args[1]);
-			System.out.println("RES:" + key);
-			key = ph.get(key);
-			System.out.println("RES:" + key);
-			key = ph.get(key);
-			System.out.println("RES:" + key);
-			key = ph.get(key);
-			System.out.println("RES:" + key);
-			key = ph.get(key);
-			System.out.println("RES:" + key);
-			
-			
-//			ph.loadCache(1000);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 }
