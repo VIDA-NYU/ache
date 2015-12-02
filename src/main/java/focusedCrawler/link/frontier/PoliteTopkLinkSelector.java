@@ -6,7 +6,7 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
@@ -20,6 +20,7 @@ import com.google.common.collect.MinMaxPriorityQueue;
 
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
+import focusedCrawler.util.persistence.Tuple;
 
 
 /**
@@ -91,21 +92,21 @@ public class PoliteTopkLinkSelector implements LinkSelectionStrategy {
     private LinkRelevance[] selectTopk(Frontier frontier, int numberOfLinks) {
         
         PersistentHashtable urlRelevance = frontier.getUrlRelevanceHashtable();
-        Iterator<String> urls = urlRelevance.getKeys();
+        List<Tuple> tuples = urlRelevance.getTable();
         
         Map<String, MinMaxPriorityQueue<LinkRelevance>> topkLinksPerDomain = new HashMap<>();
         this.remainsLinksInFrontier = false;
         
-        while(urls.hasNext()) {
+        for(Tuple tuple : tuples) {
             
             String urlStr;
             try {
-                urlStr = URLDecoder.decode(urls.next(), "UTF-8");
+                urlStr = URLDecoder.decode(tuple.getKey(), "UTF-8");
             } catch (UnsupportedEncodingException e) {
                 throw new IllegalStateException("Encoding not supported!", e);
             }
             
-            Double relevance = new Double(urlRelevance.get(urlStr));
+            Double relevance = new Double(tuple.getValue());
             if(relevance > 0) {
                 
                 URL url = null;

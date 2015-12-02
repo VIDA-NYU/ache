@@ -76,6 +76,7 @@ public class FrontierManager {
 
     private void loadQueue(int numberOfLinks) {
         priorityQueue.clear();
+        frontier.commit();
         LinkRelevance[] links = linkSelector.select(frontier, numberOfLinks);
         for (int i = 0; i < links.length; i++) {
             priorityQueue.insert(links[i]);

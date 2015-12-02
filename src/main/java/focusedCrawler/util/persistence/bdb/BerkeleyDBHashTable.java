@@ -24,7 +24,8 @@
 package focusedCrawler.util.persistence.bdb;
 
 import java.io.File;
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.sleepycat.bind.tuple.StringBinding;
 import com.sleepycat.je.Cursor;
@@ -76,7 +77,9 @@ public class BerkeleyDBHashTable {
 		 txn.commit();
 	}
 
-	public synchronized void put(Tuple[] tuples) throws DatabaseException{
+	public synchronized void put(List<Tuple> tuples) throws DatabaseException {
+	    if(tuples.isEmpty())
+	        return;
 		DatabaseEntry keyEntry = new DatabaseEntry();
 		DatabaseEntry dataEntry = new DatabaseEntry();
 		Transaction txn;
@@ -86,9 +89,12 @@ public class BerkeleyDBHashTable {
 		txn = exampleEnv.beginTransaction(null, txnConfig);
 		txn.setLockTimeout(0);
 
-		for (int i = 0; i < tuples.length && tuples[i] != null; i++) {
-		     StringBinding.stringToEntry(tuples[i].getKey(), keyEntry);
-		     StringBinding.stringToEntry(tuples[i].getValue(), dataEntry);
+		for (int i = 0; i < tuples.size(); i++) {
+		     Tuple tuple = tuples.get(i);
+		     if(tuple == null)
+		         continue;
+		     StringBinding.stringToEntry(tuple.getKey(), keyEntry);
+		     StringBinding.stringToEntry(tuple.getValue(), dataEntry);
 	         OperationStatus status = exampleDb.put(txn, keyEntry, dataEntry);
 	         if (status != OperationStatus.SUCCESS) {
 	             throw new DatabaseException("Data insertion got status " + status);
@@ -112,19 +118,17 @@ public class BerkeleyDBHashTable {
          txn.commit();
 	}
 	
-	public synchronized Tuple[] listElements() throws DatabaseException{
+	public synchronized List<Tuple> listElements() throws DatabaseException {
 		Cursor cursor = exampleDb.openCursor(null, null);
 		DatabaseEntry keyEntry = new DatabaseEntry();
 		DatabaseEntry dataEntry = new DatabaseEntry();
-		Vector<Tuple> tempList = new Vector<Tuple>();
+		List<Tuple> tempList = new ArrayList<Tuple>();
 		while (cursor.getNext(keyEntry, dataEntry, LockMode.READ_UNCOMMITTED) == OperationStatus.SUCCESS) {
         	Tuple tuple = new Tuple(StringBinding.entryToString(keyEntry),StringBinding.entryToString(dataEntry));
         	tempList.add(tuple);
 		}
         cursor.close();
-        Tuple[] result = new Tuple[tempList.size()];
-        tempList.toArray(result);
-        return result;
+        return tempList;
 	}
 	
 
@@ -145,93 +149,5 @@ public class BerkeleyDBHashTable {
 	    	 return StringBinding.entryToString(dataEntry);
 	     }
 	}
-	
-	public static void main(String[] args) {
-		try {
-			System.out.println("LOADING...");
-			BerkeleyDBHashTable hash = new BerkeleyDBHashTable(new File(args[0]));
-			Tuple[] tuples = hash.listElements();
-			for (int i = 0; i < tuples.length; i++) {
-//				String[] links = tuples[i].getValue().split("###");
-//				System.out.println("##" + links.length + "##");
-				System.out.println(tuples[i].getKey() + ":" + tuples[i].getValue());
-			}
-//			String value = hash.get(args[1]);
-//			System.out.println(value);
-//			BerkeleyDBHashTable hash = new BerkeleyDBHashTable(new File(args[0]));
-//			BerkeleyDBHashTable hashGraph = new BerkeleyDBHashTable(new File(args[1]));
-////			Tuple[] tuples = hashGraph.listElements();
-//////			for (int i = 0; i < tuples.length; i++) {
-//////				System.out.println(tuples[i].getKey() + ":" + tuples[i].getValue());
-//////			}
-//			BerkeleyDBHashTable hashId = new BerkeleyDBHashTable(new File(args[2]));
-////			Tuple[] tuples1 = hashId.listElements();
-////			for (int i = 0; i < tuples1.length; i++) {
-////				System.out.println(tuples1[i].getKey() + ":" + tuples1[i].getValue());
-////			}
-//			BerkeleyDBHashTable hashURL = new BerkeleyDBHashTable(new File(args[3]));
-////			Tuple[] tuples2 = hashURL.listElements();
-//			int id = 0;
-//			Tuple[] tuples = hash.listElements();
-//			for (int i = 0; i < tuples.length; i++) {
-//				String keyIdStr = hashURL.get(tuples[i].getKey());
-//				if(keyIdStr == null){
-//					keyIdStr = id+"";
-//					hashURL.put(tuples[i].getKey(),keyIdStr);	
-//					id++;
-//					String url_title = hashId.get(keyIdStr);
-//					if(url_title == null){
-//						hashId.put(keyIdStr, tuples[i].getKey());	
-//					}
-//				}
-//				String[] values = tuples[i].getValue().split("###");
-//				HashSet<String> usedURLs = new HashSet<String>();
-//				StringBuffer buffer = new StringBuffer();
-//				for (int j = 0; j < values.length; j++) {
-//					String[] link = values[j].split(":::");
-//					if(usedURLs.contains(link[0])){
-//						continue;
-//					}
-//					usedURLs.add(link[0]);
-//					String strId = hashURL.get(link[0]);
-//					if(strId == null){
-//						strId = id+"";
-//						hashURL.put(link[0],strId);	
-//						id++;
-//						String url_title = hashId.get(strId);
-//						if(url_title == null){
-//							hashId.put(strId, values[j]);	
-//						}
-//					}
-//					buffer.append(strId);
-//					buffer.append("###");
-//				}
-////				if(tuples[i].getKey().equals("www.qualityinn.com")){
-////					System.out.println(id + ":" + buffer.toString() + ":" + values.length);
-////				}
-//				hashGraph.put(keyIdStr,buffer.toString());
-//			}
-//			hashURL.put("MAX",id+"");
-//			System.out.println("FINISHED");
 
-		} catch (EnvironmentLockedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (DatabaseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-//		catch (FileNotFoundException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (MalformedURLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} 
-		
-		
-	}
 }

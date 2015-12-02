@@ -1,15 +1,20 @@
 package focusedCrawler.link.frontier;
 
-import java.io.IOException;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Vector;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
+import focusedCrawler.util.persistence.Tuple;
 
 public class MultiLevelLinkSelector implements LinkSelectionStrategy {
+    
+    private static final Logger logger = LoggerFactory.getLogger(MultiLevelLinkSelector.class);
 
 	@Override
 	public LinkRelevance[] select(Frontier frontier, int numberOfLinks) {
@@ -21,16 +26,20 @@ public class MultiLevelLinkSelector implements LinkSelectionStrategy {
 		int[] countTopClass = new int[classLimits.length];
 		int[] classCount = new int[classLimits.length];
 		try {
-			Iterator<String> keys = urlRelevance.getKeys();
+            List<Tuple> tuples = urlRelevance.getTable();
+
 			Vector<LinkRelevance> tempList = new Vector<LinkRelevance>();
 			int count = 0;
-			for (; count < numberOfLinks && keys.hasNext();) {
-				String key = ((String)keys.next()).toString();
+			for (int i = 0; count < numberOfLinks && i < tuples.size(); i++) {
+			    
+				Tuple tuple = tuples.get(i);
+				
+                String key = tuple.getKey();
 				String url = URLDecoder.decode(key, "UTF-8");
 
 				if (url != null){
 
-					Integer relevInt = new Integer((String)urlRelevance.get(url));
+					Integer relevInt = new Integer(tuple.getValue());
 					if(relevInt != null){
 						int relev = relevInt.intValue();
 						if(relev > 0){
@@ -70,17 +79,17 @@ public class MultiLevelLinkSelector implements LinkSelectionStrategy {
 			}
 			
 			for (int i = 0; i < classCount.length; i++) {
-				System.out.println(">>>>LEVEL:" + i + ":" + classCount[i]);
+				logger.info("LEVEL:" + i + ":" + classCount[i]);
 			}
 			
 			result = new LinkRelevance[tempList.size()];
 			tempList.toArray(result);
 			
-			System.out.println(">> TOTAL LOADED: " + result.length);
+			logger.info("Links loaded: " + result.length);
 
-		}catch (IOException ex) {
-			ex.printStackTrace();
-		}
+		} catch (Exception e) {
+            logger.error("Failed to select links from frontier.", e);
+        }
 		return result;
 	}
 	

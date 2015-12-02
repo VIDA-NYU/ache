@@ -9,6 +9,7 @@ import java.util.Vector;
 import net.sf.ehcache.CacheException;
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
+import focusedCrawler.util.persistence.Tuple;
 
 public class TopicLinkSelector implements LinkSelectionStrategy {
 
@@ -23,17 +24,17 @@ public class TopicLinkSelector implements LinkSelectionStrategy {
 			
 			int[] classCount = new int[classLimits.length];
 			try {
-				Iterator<String> keys = urlRelevance.getKeys();
+				Iterator<Tuple> keys = urlRelevance.getTable().iterator();
 				Vector<LinkRelevance> tempList = new Vector<LinkRelevance>();
 				int count = 0;
 //				if(higher){
 					for (; count < numberOfLinks && keys.hasNext();) {
-						String key = ((String)keys.next()).toString();
-						String url = URLDecoder.decode(key, "UTF-8");
+						Tuple tuple = keys.next();
+                        String url = URLDecoder.decode(tuple.getKey(), "UTF-8");
 //						System.out.println(url);
 						if (url != null){
 //							System.out.println("$$$"+(String)urlRelevance.get(url));
-							Integer relevInt = new Integer((String)urlRelevance.get(url));
+							Integer relevInt = new Integer(tuple.getValue());
 							if(relevInt != null){
 								int relev = relevInt.intValue();
 //								Integer numOccur = ((Integer)queue.get(relevInt));
