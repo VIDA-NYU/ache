@@ -38,6 +38,7 @@ public class PoliteTopkLinkSelectorTest {
         frontier.insert(new LinkRelevance("http://zxcv/2", 2));
         frontier.insert(new LinkRelevance("http://zxcv/3", 3));
         frontier.insert(new LinkRelevance("http://zxcv/4", 4));
+        frontier.commit();
         
         // when
         LinkRelevance[] links = selector.select(frontier, 5);
@@ -70,6 +71,7 @@ public class PoliteTopkLinkSelectorTest {
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 100);
         frontier.insert(new LinkRelevance("http://asdf/1", 201));
         frontier.insert(new LinkRelevance("http://qwer/1", 101));
+        frontier.commit();
         
         LinkRelevance[] links = null;
         

@@ -24,6 +24,7 @@ public class TopkLinkSelectorTest {
         frontier.insert(new LinkRelevance("http://localhost/099", 99));
         frontier.insert(new LinkRelevance("http://localhost/199", 199));
         frontier.insert(new LinkRelevance("http://localhost/299", 299));
+        frontier.commit();
         
         // when
         LinkRelevance[] links = selector.select(frontier, 2);
@@ -44,6 +45,7 @@ public class TopkLinkSelectorTest {
         frontier.insert(new LinkRelevance("http://localhost/099", 99));
         frontier.insert(new LinkRelevance("http://localhost/199", -199));
         frontier.insert(new LinkRelevance("http://localhost/299", -299));
+        frontier.commit();
         
         // when
         LinkRelevance[] links = selector.select(frontier, 2);

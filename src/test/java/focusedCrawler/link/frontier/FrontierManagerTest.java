@@ -26,23 +26,23 @@ public class FrontierManagerTest {
     // a new temp folder is created for each test case
     public TemporaryFolder tempFolder = new TemporaryFolder();
     
-    private FrontierManager frontierManager;
+    private LinkFilter emptyLinkFilter = new LinkFilter(new ArrayList<String>());
+
+    private Frontier frontier;
     
     @Before
     public void setUp() throws Exception {
-        LinkSelectionStrategy linkSelector = new NonRandomLinkSelector();
-        Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000);
-        frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, new LinkFilter(new ArrayList<String>()));
+        frontier = new Frontier(tempFolder.newFolder().toString(), 1000);
     }
     
     @After
     public void tearDown() throws IOException {
-        frontierManager.close();
     }
     
     @Test
     public void shouldNotInsertLinkOutOfScope() throws Exception {
         // given
+        
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
         
@@ -52,7 +52,7 @@ public class FrontierManagerTest {
         
         LinkSelectionStrategy linkSelector = new SiteLinkSelector();
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, scope);
-        frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, new LinkFilter(new ArrayList<String>()));
+        FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, new LinkFilter(new ArrayList<String>()));
         
         // when
         frontierManager.insert(link1);
@@ -67,12 +67,17 @@ public class FrontierManagerTest {
         assertThat(selectedLink1.getURL(), is(link1.getURL()));
         
         assertThat(selectedLink2, is(nullValue()));
+        
+        frontierManager.close();
     }
     
 
     @Test
     public void shouldInsertUrl() throws Exception {
         // given
+        LinkSelectionStrategy linkSelector = new NonRandomLinkSelector();
+        FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, emptyLinkFilter);
+        
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         
         // when
@@ -85,11 +90,16 @@ public class FrontierManagerTest {
         assertThat(nextURL.getURL(), is(notNullValue()));
         assertThat(nextURL.getURL(), is(link1.getURL()));
         assertThat(nextURL.getRelevance(), is(link1.getRelevance()));
+        
+        frontierManager.close();
     }
     
     @Test
     public void shouldInsertUrlsAndSelectUrlsInSortedByRelevance() throws Exception {
         // given
+        LinkSelectionStrategy linkSelector = new NonRandomLinkSelector();
+        FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, emptyLinkFilter);
+        
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
         LinkRelevance link3 = new LinkRelevance(new URL("http://www.example3.com/index.html"), 3);
@@ -116,12 +126,17 @@ public class FrontierManagerTest {
         assertThat(selectedLink1.getURL(), is(link3.getURL()));
         assertThat(selectedLink2.getURL(), is(link2.getURL()));
         assertThat(selectedLink3.getURL(), is(link1.getURL()));
+        
+        frontierManager.close();
     }
     
     
     @Test
     public void shouldNotReturnAgainALinkThatWasAlreadyReturned() throws Exception {
         // given
+        LinkSelectionStrategy linkSelector = new NonRandomLinkSelector();
+        FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, emptyLinkFilter);
+        
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
         
@@ -143,6 +158,8 @@ public class FrontierManagerTest {
         assertThat(selectedLink3, is(nullValue()));
         
         assertThat(selectedLink4, is(nullValue()));
+        
+        frontierManager.close();
         
     }
 

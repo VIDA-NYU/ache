@@ -36,7 +36,7 @@ public class BipartiteGraphRep {
 	
 
 	public BipartiteGraphRep(String dataPath, BiparitieGraphRepConfig config) {
-	    int cacheSize = 100000;
+	    int cacheSize = 10000;
 	    this.authGraph = new PersistentHashtable(dataPath + "/" + config.getAuthGraphDirectory(), cacheSize);
         this.url2id = new PersistentHashtable(dataPath + "/" + config.getUrlIdDirectory(), cacheSize);
         this.authID = new PersistentHashtable(dataPath + "/" + config.getAuthIdDirectory(), cacheSize);
@@ -45,11 +45,11 @@ public class BipartiteGraphRep {
 	}
 	
 	public Tuple[] getAuthGraph() throws Exception{
-		return authGraph.getTable();
+		return authGraph.getTableAsArray();
 	}
 
 	public Tuple[] getHubGraph() throws Exception{
-		return hubGraph.getTable();
+		return hubGraph.getTableAsArray();
 	}
 	
 	public String getID(String url){
@@ -94,7 +94,7 @@ public class BipartiteGraphRep {
 	}
 	
 	public LinkNeighborhood[] getLNs() throws Exception{
-		Tuple[] tuples = authID.getTable();
+		Tuple[] tuples = authID.getTableAsArray();
 		LinkNeighborhood[] lns = new LinkNeighborhood[tuples.length];
 		for (int i = 0; i < lns.length; i++) {
 			String strln = tuples[i].getValue();
@@ -113,7 +113,7 @@ public class BipartiteGraphRep {
 	}
 
 	public LinkNeighborhood[] getBacklinkLN() throws Exception{
-		Tuple[] tuples = hubID.getTable();
+		Tuple[] tuples = hubID.getTableAsArray();
 		LinkNeighborhood[] lns = new LinkNeighborhood[tuples.length];
 		for (int i = 0; i < lns.length; i++) {
 			String strln = tuples[i].getValue();

@@ -11,6 +11,7 @@ import com.google.common.collect.MinMaxPriorityQueue;
 
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
+import focusedCrawler.util.persistence.Tuple;
 
 public class TopkLinkSelector implements LinkSelectionStrategy {
     
@@ -19,7 +20,7 @@ public class TopkLinkSelector implements LinkSelectionStrategy {
         
         PersistentHashtable urlRelevance = frontier.getUrlRelevanceHashtable();
         
-        Iterator<String> urls = urlRelevance.getKeys();
+        Iterator<Tuple> urls = urlRelevance.getTable().iterator();
         
         MinMaxPriorityQueue<LinkRelevance> topkLinks = MinMaxPriorityQueue
                 .orderedBy(new Comparator<LinkRelevance>() {
@@ -32,14 +33,16 @@ public class TopkLinkSelector implements LinkSelectionStrategy {
                 .create();
         
         while(urls.hasNext()) {
+            Tuple tuple = urls.next();
+            
             String url;
             try {
-                url = URLDecoder.decode(urls.next(), "UTF-8");
+                url = URLDecoder.decode(tuple.getKey(), "UTF-8");
             } catch (UnsupportedEncodingException e) {
                 throw new IllegalStateException("Encoding not supported!", e);
             }
             
-            Double relevance = new Double(urlRelevance.get(url));
+            Double relevance = new Double(tuple.getValue());
             try {
                 if(relevance > 0) {
                     topkLinks.add(new LinkRelevance(new URL(url), relevance.doubleValue()));
