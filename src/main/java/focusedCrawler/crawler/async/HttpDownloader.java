@@ -5,9 +5,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -32,6 +33,7 @@ public class HttpDownloader implements Closeable {
 
     private static final int DEFAULT_MAX_RETRY_COUNT = 3;
     private static final int DEFAULT_MAX_DOWNLOAD_THREADS = 50;
+    private static final int DEFAULT_DOWNLOAD_QUEUE_MAX_SIZE = DEFAULT_MAX_DOWNLOAD_THREADS*2;
     private static final int CPU_CORES = Runtime.getRuntime().availableProcessors();
 
     private static final String[] DEFAULT_TEXT_MIME_TYPES = {
@@ -44,7 +46,8 @@ public class HttpDownloader implements Closeable {
     private final SimpleHttpFetcher fetcher;
     private final ExecutorService downloadThreadPool;
     private final ExecutorService distpatchThreadPool;
-    
+    private LinkedBlockingQueue<Runnable> downloadQueue;
+    private LinkedBlockingQueue<Runnable> dispatchQueue;
     private final AtomicInteger numberOfDownloads = new AtomicInteger(0);
     
     public HttpDownloader(UserAgent userAgent) {
@@ -52,8 +55,14 @@ public class HttpDownloader implements Closeable {
         ThreadFactory downloadThreadFactory = new ThreadFactoryBuilder().setNameFormat("downloader-%d").build();
         ThreadFactory dispatcherThreadFactory = new ThreadFactoryBuilder().setNameFormat("dispatcher-%d").build();
         
-        this.downloadThreadPool = Executors.newFixedThreadPool(DEFAULT_MAX_DOWNLOAD_THREADS, downloadThreadFactory);
-        this.distpatchThreadPool = Executors.newFixedThreadPool(CPU_CORES, dispatcherThreadFactory);
+        this.downloadQueue = new LinkedBlockingQueue<Runnable>();
+        this.dispatchQueue = new LinkedBlockingQueue<Runnable>();
+        
+        this.downloadThreadPool  = new ThreadPoolExecutor(DEFAULT_MAX_DOWNLOAD_THREADS, DEFAULT_MAX_DOWNLOAD_THREADS,
+                0L, TimeUnit.MILLISECONDS, this.downloadQueue, downloadThreadFactory);
+        
+        this.distpatchThreadPool  = new ThreadPoolExecutor(CPU_CORES, CPU_CORES,
+                0L, TimeUnit.MILLISECONDS, this.dispatchQueue, dispatcherThreadFactory);
         
         // Adding some extra connections for URLs that have redirects
         // and thus creates more connections   
@@ -85,6 +94,13 @@ public class HttpDownloader implements Closeable {
     }
     
     public Future<FetchedResult> dipatchDownload(LinkRelevance link, Callback callback) {
+        try {
+            while(downloadQueue.size() > DEFAULT_DOWNLOAD_QUEUE_MAX_SIZE) {
+                Thread.sleep(100);
+            }
+        } catch (InterruptedException e) {
+            // ok, just finish execution
+        }
         Future<FetchedResult> future = downloadThreadPool.submit(new RequestTask(link, callback));
         numberOfDownloads.incrementAndGet();
         return future;
