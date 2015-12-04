@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import focusedCrawler.util.LinkRelevance;
 
@@ -29,11 +30,13 @@ public class DownloadScheduler {
     private final PriorityQueue<DomainNode> emptyDomainsQueue;
     private final Map<String, DomainNode> domains;
     private final long minimumAccessTime;
+    private final int maxLinksInScheduler;
     
-    private int numberOfLinks = 0;
+    private AtomicInteger numberOfLinks = new AtomicInteger(0);
 
-    public DownloadScheduler(int minimumAccessTimeInterval) {
+    public DownloadScheduler(int minimumAccessTimeInterval, int maxLinksInScheduler) {
         this.minimumAccessTime = minimumAccessTimeInterval;
+        this.maxLinksInScheduler = maxLinksInScheduler;
         this.domains = new HashMap<>();
         this.emptyDomainsQueue = createDomainPriorityQueue();
         this.domainsQueue = createDomainPriorityQueue();
@@ -49,23 +52,37 @@ public class DownloadScheduler {
         });
     }
     
-    public synchronized void addLink(LinkRelevance link) {
+    public void addLink(LinkRelevance link) {
+        numberOfLinks.incrementAndGet();
+
         removeExpiredNodes();
         
+        while(numberOfLinks() > maxLinksInScheduler) {
+            // block until number of links is lower than max number of links
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                throw new RuntimeException("Interrupted while adding link.", e);
+            }
+        }
+        
         String domainName = link.getTopLevelDomainName();
-        DomainNode domainNode = domains.get(domainName);
-        if(domainNode == null) {
-            domainNode = new DomainNode(domainName, 0l);
-            domains.put(domainName, domainNode);
+        
+        synchronized(this) {
+            DomainNode domainNode = domains.get(domainName);
+            if(domainNode == null) {
+                domainNode = new DomainNode(domainName, 0l);
+                domains.put(domainName, domainNode);
+            }
+            
+            if(domainNode.links.isEmpty()) {
+                emptyDomainsQueue.remove(domainNode);
+                domainsQueue.add(domainNode);
+            }
+            
+            domainNode.links.addLast(link);
         }
         
-        if(domainNode.links.isEmpty()) {
-            emptyDomainsQueue.remove(domainNode);
-            domainsQueue.add(domainNode);
-        }
-        
-        domainNode.links.addLast(link);
-        numberOfLinks++;
     }
 
     private synchronized void removeExpiredNodes() {
@@ -89,6 +106,7 @@ public class DownloadScheduler {
         
         long expirationTime;
         LinkRelevance linkRelevance;
+        long waitTime = 0;
         
         synchronized(this) {
             DomainNode domainNode = domainsQueue.poll();
@@ -97,9 +115,6 @@ public class DownloadScheduler {
             }
             
             linkRelevance = domainNode.links.removeFirst();
-        
-            expirationTime = domainNode.lastAccessTime + minimumAccessTime;
-            domainNode.lastAccessTime = System.currentTimeMillis();
             
             if(domainNode.links.isEmpty()) {
                 emptyDomainsQueue.add(domainNode);
@@ -107,10 +122,17 @@ public class DownloadScheduler {
                 domainsQueue.add(domainNode);
             }
             
-            numberOfLinks--;
+            expirationTime = domainNode.lastAccessTime + minimumAccessTime;
+            long now = System.currentTimeMillis();
+            waitTime = expirationTime - now;
+            
+            if(waitTime > 0) {
+                domainNode.lastAccessTime = now + waitTime;
+            } else {
+                domainNode.lastAccessTime = now;
+            }
         }
         
-        long waitTime = expirationTime - System.currentTimeMillis();
         if(waitTime > 0) {
             try {
                 Thread.sleep(waitTime);
@@ -118,6 +140,8 @@ public class DownloadScheduler {
                 throw new RuntimeException(getClass()+" interrupted.", e);
             }
         }
+        
+        numberOfLinks.decrementAndGet();
         
         return linkRelevance;
     }
@@ -132,7 +156,7 @@ public class DownloadScheduler {
     }
 
     public int numberOfLinks() {
-        return numberOfLinks;
+        return numberOfLinks.get();
     }
 
     public boolean hasPendingLinks() {
