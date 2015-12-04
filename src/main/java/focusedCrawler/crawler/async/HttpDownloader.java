@@ -70,6 +70,7 @@ public class HttpDownloader implements Closeable {
         
         this.fetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
         this.fetcher.setSocketTimeout(30*1000);
+        this.fetcher.setMaxConnectionsPerHost(1);
         this.fetcher.setConnectionTimeout(5*60*1000);
         this.fetcher.setMaxRetryCount(DEFAULT_MAX_RETRY_COUNT);
         this.fetcher.setDefaultMaxContentSize(10*1024*1024);
