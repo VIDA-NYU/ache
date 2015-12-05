@@ -52,12 +52,21 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     
     private void processData(FetchedResult response) {
         try {
-            Page page = new Page(
-                new URL(response.getBaseUrl()),
-                new String(response.getContent()),
-                parseResponseHeaders(response.getHeaders()),
-                new URL(response.getFetchedUrl())
-            );
+            Page page;
+            if(response.getNumRedirects() == 0) {
+                page = new Page(
+                    new URL(response.getBaseUrl()),
+                    new String(response.getContent()),
+                    parseResponseHeaders(response.getHeaders())
+                );
+            } else {
+                page = new Page(
+                    new URL(response.getBaseUrl()),
+                    new String(response.getContent()),
+                    parseResponseHeaders(response.getHeaders()),
+                    new URL(response.getFetchedUrl())
+                );
+            }
             PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
             page.setPageURL(pageParser);
             
