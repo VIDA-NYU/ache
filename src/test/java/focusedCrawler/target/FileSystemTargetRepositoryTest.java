@@ -2,6 +2,8 @@ package focusedCrawler.target;
 
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
@@ -121,6 +123,55 @@ public class FileSystemTargetRepositoryTest {
         
         String content = new String(Files.readAllBytes(path));
         assertThat(content, is(html));
+    }
+	
+	@Test
+    public void sholdGetPageWasInserted() throws IOException {
+        // given
+        boolean hashFilename = true;
+        String folder = tempFolder.newFolder().toString(); 
+        
+        String url1 = "http://example1.com";
+        String url2 = "http://example2.com";
+        
+        Page target1 = new Page(new URL(url1), html);
+        
+        FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, hashFilename);
+        
+        // when
+        repository.insert(target1);
+        TargetModelJson page1 = repository.get(url1);
+        TargetModelJson page2 = repository.get(url2);
+        
+        // then
+        assertThat(page1, is(notNullValue()));
+        assertThat(page1.getUrl(), is(url1));
+        assertThat(page1.getResponseBody(), is(html));
+        
+        assertThat(page2, is(nullValue()));
+    }
+	
+	@Test
+    public void existsSholdReturnTrueOnlyWhenPageWasInserted() throws IOException {
+        // given
+        boolean hashFilename = true;
+        String folder = tempFolder.newFolder().toString(); 
+        
+        String url1 = "http://example1.com";
+        String url2 = "http://example2.com";
+        
+        Page target1 = new Page(new URL(url1), html);
+        
+        FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.HTML, hashFilename);
+        
+        // when
+        repository.insert(target1);
+        boolean url1exists = repository.exists(url1);
+        boolean url2exists = repository.exists(url2);
+        
+        // then
+        assertThat(url1exists, is(true));
+        assertThat(url2exists, is(false));
     }
 
 }
