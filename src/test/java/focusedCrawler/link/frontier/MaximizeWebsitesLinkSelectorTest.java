@@ -19,7 +19,7 @@ public class MaximizeWebsitesLinkSelectorTest {
     public TemporaryFolder tempFolder = new TemporaryFolder();
     
     @Test
-    public void shouldSelectTopkLinksOfHigherRelevance() throws Exception {
+    public void shouldSelectLinksOfEachDomain() throws Exception {
         // given
         MaximizeWebsitesLinkSelector selector = new MaximizeWebsitesLinkSelector();
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 100);
@@ -59,9 +59,51 @@ public class MaximizeWebsitesLinkSelectorTest {
         assertThat(links.length, is(0));
 
     }
+    
+    @Test
+    public void shouldSelectTopkLinksOfHigherRelevance() throws Exception {
+        // given
+        MaximizeWebsitesLinkSelector selector = new MaximizeWebsitesLinkSelector();
+        Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 100);
+        
+        frontier.insert(new LinkRelevance("http://example1.com/1", 1));
+        frontier.insert(new LinkRelevance("http://example1.com/2", 2));
+        frontier.insert(new LinkRelevance("http://example1.com/3", 3));
+        
+        frontier.insert(new LinkRelevance("http://example2.com/1", 1));
+        frontier.insert(new LinkRelevance("http://example2.com/2", 2));
+        frontier.insert(new LinkRelevance("http://example2.com/3", 3));
+        
+        frontier.insert(new LinkRelevance("http://example3.com/1", 1));
+        frontier.insert(new LinkRelevance("http://example3.com/2", 2));
+        frontier.insert(new LinkRelevance("http://example3.com/3", 3));
+        
+        frontier.commit();
+        
+        // when
+        LinkRelevance[] links = selector.select(frontier, 15);
+        
+        // then
+        assertThat(links.length, is(9));
+        assertThat(links[0].getRelevance(), is(3d));
+        assertThat(links[1].getRelevance(), is(3d));
+        assertThat(links[2].getRelevance(), is(3d));
+        
+        assertThat(links[3].getRelevance(), is(2d));
+        assertThat(links[4].getRelevance(), is(2d));
+        assertThat(links[5].getRelevance(), is(2d));
+        
+        assertThat(links[6].getRelevance(), is(1d));
+        assertThat(links[7].getRelevance(), is(1d));
+        assertThat(links[8].getRelevance(), is(1d));
+
+    }
+
 
     private void removeAll(Frontier frontier, LinkRelevance[] links) throws FrontierPersistentException {
-        for (LinkRelevance l : links) frontier.delete(l);
+        for (LinkRelevance l : links) {
+            frontier.delete(l);
+        }
         frontier.commit();
     }
 
