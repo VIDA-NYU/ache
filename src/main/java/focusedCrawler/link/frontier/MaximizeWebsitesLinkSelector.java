@@ -1,13 +1,17 @@
 package focusedCrawler.link.frontier;
 
-import java.net.URL;
-import java.net.URLDecoder;
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import com.google.common.collect.MinMaxPriorityQueue;
 
 import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.Tuple;
 
 /**
@@ -16,40 +20,62 @@ import focusedCrawler.util.persistence.Tuple;
  */
 public class MaximizeWebsitesLinkSelector implements LinkSelectionStrategy {
     
+    int maxLinksPerDomain = 5;
+    
     @Override
     public LinkRelevance[] select(Frontier frontier, int numberOfLinks) {
         
-        try {
-            List<LinkRelevance> links = new ArrayList<LinkRelevance>();
-            
-            List<Tuple> tuples = frontier.getUrlRelevanceHashtable().getTable();
-            
-            Set<String> selectedDomains = new HashSet<>();
-            
-            for (int i = 0; links.size() < numberOfLinks && i < tuples.size(); i++) {
-                Tuple tuple = tuples.get(i);
-            
-                String url = URLDecoder.decode(tuple.getKey(), "UTF-8");
-                Integer relevance = new Integer(tuple.getValue());
+        PersistentHashtable urlRelevance = frontier.getUrlRelevanceHashtable();
+        List<Tuple> tuples = urlRelevance.getTable();
+        
+        Map<String, MinMaxPriorityQueue<LinkRelevance>> topkLinksPerDomain = new HashMap<>();
+        
+        for(Tuple tuple : tuples) {
+            Double relevance = new Double(tuple.getValue());
+            if(relevance > 0) {
+                LinkRelevance linkRelevance = LinkRelevance.fromTuple(tuple);
                 
-                LinkRelevance linkRel = new LinkRelevance(new URL(url), relevance);
+                String domainName = linkRelevance.getTopLevelDomainName();
                 
-                String domainName = linkRel.getTopLevelDomainName();
-                if(!selectedDomains.contains(domainName) && relevance > 0) {
-                    links.add(linkRel);
-                    selectedDomains.add(domainName);
-                }
-                
+                MinMaxPriorityQueue<LinkRelevance> domainQueue = topkLinksPerDomain.get(domainName);
+                if(domainQueue == null) {
+                    domainQueue = newMinMaxPriorityQueue(maxLinksPerDomain);
+                    topkLinksPerDomain.put(domainName, domainQueue);
+                } 
+                domainQueue.add(linkRelevance);
             }
-
-            System.out.println(">> TOTAL LOADED: " + links.size());
-
-            return (LinkRelevance[]) links.toArray(new LinkRelevance[links.size()]);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            return null;
         }
+        
+        List<LinkRelevance> links = new ArrayList<>();
+        while(links.size() < numberOfLinks && !topkLinksPerDomain.isEmpty()) {
+            // add the URL with max score of each domain
+            Iterator<Entry<String, MinMaxPriorityQueue<LinkRelevance>>> it = topkLinksPerDomain.entrySet().iterator();
+            while(it.hasNext()) {
+                MinMaxPriorityQueue<LinkRelevance> domain = it.next().getValue();
+                links.add(domain.poll());
+                if(domain.isEmpty()) {
+                    it.remove();
+                }
+            }
+        }
+        
+        if(links.size() == 0) {
+            return new LinkRelevance[0];
+        }
+        
+        return links.toArray(new LinkRelevance[links.size()]);
+    }
 
+    private MinMaxPriorityQueue<LinkRelevance> newMinMaxPriorityQueue(int maxSize) {
+        return MinMaxPriorityQueue
+                .orderedBy(new Comparator<LinkRelevance>() {
+                    @Override
+                    public int compare(LinkRelevance o1, LinkRelevance o2) {
+                        return Double.compare(o2.getRelevance(), o1.getRelevance());
+                    }
+                })
+                .maximumSize(maxSize)
+                .create();
     }
 
 }
