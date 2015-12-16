@@ -60,6 +60,8 @@ public class Page implements Serializable, Target {
     private URL redirectedURL;
 
     private Map<String, List<String>> responseHeaders;
+
+    private long fetchTime;
     
     public Page(URL url, String cont) {
         this(url, cont, null, null);
@@ -156,6 +158,14 @@ public class Page implements Serializable, Target {
     
     public Map<String, List<String>> getResponseHeaders() {
         return responseHeaders;
+    }
+
+    public long getFetchTime() {
+        return fetchTime;
+    }
+    
+    public void setFetchTime(long fetchTime) {
+        this.fetchTime = fetchTime;
     }
 
 }
