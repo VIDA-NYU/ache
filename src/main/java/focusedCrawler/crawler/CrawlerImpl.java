@@ -175,6 +175,7 @@ public class CrawlerImpl extends Crawler {
 			    } else {
 			        page = new Page(getUrl(), source, urlDownloader.getResponseHeaders());
 			    }
+			    page.setFetchTime(System.currentTimeMillis());
 			    
 				PaginaURL pageParser = new PaginaURL(page.getURL(),page.getContent());
 				page.setPageURL(pageParser);

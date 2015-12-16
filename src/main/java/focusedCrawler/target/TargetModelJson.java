@@ -1,5 +1,6 @@
 package focusedCrawler.target;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -21,6 +22,9 @@ public class TargetModelJson {
 	@JsonProperty("response_headers")
 	private Map<String, List<String>> responseHeaders;
 	
+	@JsonProperty("fetch_time")
+	private long fetchTime;
+	
 	public TargetModelJson() {
 		// required for JSON serialization
 	}
@@ -32,6 +36,7 @@ public class TargetModelJson {
 			this.redirectedUrl = page.getRedirectedURL().toString();
 		this.responseBody = page.getSource();
 		this.responseHeaders = page.getResponseHeaders();
+		this.fetchTime = page.getFetchTime();
 	}
 
 	public String getUrl() {
