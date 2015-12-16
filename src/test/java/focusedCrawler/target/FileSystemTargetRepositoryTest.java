@@ -6,7 +6,9 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,6 +17,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.compress.utils.IOUtils;
+import org.apache.http.client.entity.DeflateInputStream;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
@@ -39,7 +43,7 @@ public class FileSystemTargetRepositoryTest {
 	@BeforeClass
 	static public void setUp() {
 		url = "http://example.com";
-		html = "<html><bodyHello World!></body></html>";
+		html = "<html><body>Hello World! Hello World! Hello World!</body></html>";
 		responseHeaders = new HashMap<>();
 		responseHeaders.put("content-type", asList("text/html"));
 	}
@@ -47,7 +51,7 @@ public class FileSystemTargetRepositoryTest {
 	@Test
 	public void shouldStoreContentAsRawFile() throws IOException {
 		// given
-		String folder = tempFolder.newFolder().toString(); 
+	    String folder = tempFolder.newFolder().toString(); 
 		Page target = new Page(new URL(url), html);
 		FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.HTML, false);
 		
@@ -61,6 +65,31 @@ public class FileSystemTargetRepositoryTest {
 		String content = new String(Files.readAllBytes(path));
 		assertThat(content, is(html));
 	}
+	
+	@Test
+    public void shouldStoreContentCompressed() throws IOException {
+        // given
+	    boolean compressData = true;
+	    String folder = tempFolder.newFolder().toString();
+        Page target = new Page(new URL(url), html);
+        FileSystemTargetRepository repository = new FileSystemTargetRepository(Paths.get(folder), DataFormat.HTML, false, compressData);
+        
+        // when
+        repository.insert(target);
+        
+        // then
+        Path path = Paths.get(folder, "example.com", "http%3A%2F%2Fexample.com");
+        assertThat(path.toFile().exists(), is(true));
+        
+        byte[] fileBytes = Files.readAllBytes(path);
+        assertThat(fileBytes, is(notNullValue()));
+        assertThat(fileBytes.length < html.getBytes().length, is(true));
+        
+        InputStream gzip = new DeflateInputStream(new ByteArrayInputStream(fileBytes));
+        byte[] uncompressedBytes = IOUtils.toByteArray(gzip);
+        String content = new String(uncompressedBytes);
+        assertThat(content, is(html));
+    }
 	
 	@Test
 	public void shouldStoreContentAsJSON() throws IOException {
