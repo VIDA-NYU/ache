@@ -67,6 +67,8 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
                     new URL(response.getFetchedUrl())
                 );
             }
+            page.setFetchTime(response.getFetchTime());
+            
             PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
             page.setPageURL(pageParser);
             
