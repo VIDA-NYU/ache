@@ -166,21 +166,23 @@ public class TargetStorage extends StorageDefault {
         TargetRepository negativeRepository;
         
         String dataFormat = config.getDataFormat();
+        boolean compressData = config.getCompressData();
+        
         logger.info("Using DATA_FORMAT: "+dataFormat);
         if(dataFormat.equals("FILESYSTEM_JSON")) {
         	boolean hashFilename = config.getHashFileName();
-            targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.JSON, hashFilename);
-			negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.JSON, hashFilename);
+            targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.JSON, hashFilename, compressData);
+			negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.JSON, hashFilename, compressData);
         }
         else if (dataFormat.equals("FILESYSTEM_CBOR")) {
             boolean hashFilename = config.getHashFileName();
-        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.CBOR, hashFilename);
-        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.CBOR, hashFilename);
+        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.CBOR, hashFilename, compressData);
+        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.CBOR, hashFilename, compressData);
         }
         else if(dataFormat.equals("FILESYSTEM_HTML")) {
             boolean hashFilename = config.getHashFileName();
-        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.HTML, hashFilename);
-        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.HTML, hashFilename);
+        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.HTML, hashFilename, compressData);
+        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.HTML, hashFilename, compressData);
         }
         else if(dataFormat.equals("ELASTICSEARCH")) {
         	if(indexName == null) {

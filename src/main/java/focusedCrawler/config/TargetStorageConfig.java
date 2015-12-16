@@ -22,6 +22,7 @@ public class TargetStorageConfig {
     private final boolean saveNegativePages;
     private final boolean englishLanguageDetectionEnabled;
     private final boolean hashFileName;
+    private final boolean compressData;
     
     private final ElasticSearchConfig elasticSearchConfig;
     
@@ -35,6 +36,7 @@ public class TargetStorageConfig {
         this.negativeStorageDirectory = params.getParam("NEGATIVE_STORAGE_DIRECTORY");
         this.dataFormat = params.getParamOrDefault("DATA_FORMAT", "FILE");
         this.hashFileName = params.getParamBooleanOrDefault("HASH_FILE_NAME", false);
+        this.compressData = params.getParamBooleanOrDefault("COMPRESS_DATA", false);
         this.targetDomain = params.getParam("TARGET_DOMAIN");
         this.crawledRefreshFrequency = params.getParamInt("CRAWLED_REFRESH_FREQUENCY");
         this.relevantRefreshFrequency = params.getParamInt("RELEVANT_REFRESH_FREQUENCY");
@@ -124,6 +126,10 @@ public class TargetStorageConfig {
 
     public boolean getHashFileName() {
         return hashFileName;
+    }
+
+    public boolean getCompressData() {
+        return compressData;
     }
 
 }

@@ -1,7 +1,10 @@
 package focusedCrawler.target;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
@@ -10,11 +13,16 @@ import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.zip.DeflaterInputStream;
+import java.util.zip.DeflaterOutputStream;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.compress.utils.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.core.JsonGenerationException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
@@ -41,19 +49,21 @@ public class FileSystemTargetRepository implements TargetRepository {
     private static final ObjectMapper jsonMapper = new ObjectMapper();
     private static final ObjectMapper cborMapper = new ObjectMapper(new CBORFactory());
     
-    private Path directory;
-	private DataFormat dataFormat;
-    private boolean hashFilename;
+    private final Path directory;
+    private final DataFormat dataFormat;
+    private final boolean hashFilename;
+    private final boolean compressData;
 
     public FileSystemTargetRepository(String directory,
                                       DataFormat dataFormat,
                                       boolean hashFilename) {
-		this(Paths.get(directory), dataFormat, hashFilename);
+		this(Paths.get(directory), dataFormat, hashFilename, false);
     }
     
     public FileSystemTargetRepository(Path directory,
                                       DataFormat dataFormat,
-                                      boolean hashFilename) {
+                                      boolean hashFilename,
+                                      boolean compressData) {
     	File fileDir = directory.toFile();
     	if(!fileDir.exists()) {
     		fileDir.mkdirs();
@@ -61,6 +71,7 @@ public class FileSystemTargetRepository implements TargetRepository {
         this.directory = directory;
         this.dataFormat = dataFormat;
         this.hashFilename = hashFilename;
+        this.compressData = compressData;
     }
 
     public boolean insert(Target target, int counter) {
@@ -72,7 +83,6 @@ public class FileSystemTargetRepository implements TargetRepository {
             String id = target.getIdentifier();
             URL url = new URL(id);
             Path hostPath = getHostPath(url);
-
             File hostDirectory = hostPath.toFile();
             if (!hostDirectory.exists()) {
                 hostDirectory.mkdirs();
@@ -80,27 +90,16 @@ public class FileSystemTargetRepository implements TargetRepository {
 
             Path filePath = getFilePath(id, hostPath);
             
-            try(PrintStream fileStream = new PrintStream(filePath.toFile())) {
-                switch(dataFormat) {
-                	case HTML:
-                	{
-	            	    fileStream.print(target.getSource());
-    	            	break;
-                	}
-                	case JSON:
-                	{
-                		TargetModelJson targetModel = new TargetModelJson((Page) target);
-                		jsonMapper.writeValue(fileStream, targetModel);
-                		break;
-                	}
-                	case CBOR:
-                	{
-                		TargetModel targetModel = new TargetModel("", "", url, target.getSource());
-                		cborMapper.writeValue(fileStream, targetModel);
-                		break;
-                	}
+            try(OutputStream fileStream = new PrintStream(filePath.toFile())) {
+                if(compressData) {
+                    try(OutputStream gzipStream = new DeflaterOutputStream(fileStream)) {
+                        serializeData(target, url, gzipStream);
+                    }
+                } else {
+                    serializeData(target, url, fileStream);
                 }
             }
+            
         } catch (IOException e) {
             logger.error("Failed to store object in repository.", e);
         }
@@ -108,21 +107,44 @@ public class FileSystemTargetRepository implements TargetRepository {
         return false;
     }
 
+    private void serializeData(Target target, URL url, OutputStream fileStream)
+            throws IOException, JsonGenerationException, JsonMappingException {
+        switch(dataFormat) {
+        case HTML:
+        {
+            fileStream.write(target.getSource().getBytes());
+            break;
+        }
+        case JSON:
+        {
+            TargetModelJson targetModel = new TargetModelJson((Page) target);
+            jsonMapper.writeValue(fileStream, targetModel);
+            break;
+        }
+        case CBOR:
+        {
+            TargetModel targetModel = new TargetModel("", "", url, target.getSource());
+            cborMapper.writeValue(fileStream, targetModel);
+            break;
+        }
+        }
+    }
+
     public boolean exists(String urlString) {
         try {
             Path hostPath = getHostPath(urlString);
-    
+
             File hostDirectory = hostPath.toFile();
             if (!hostDirectory.exists()) {
                 return false;
             }
-            
+
             Path filePath = getFilePath(urlString, hostPath);
-            
+
             if (filePath.toFile().exists()) {
                 return true;
             }
-            
+
         } catch (UnsupportedEncodingException | MalformedURLException e) {
             return false;
         }
@@ -154,31 +176,41 @@ public class FileSystemTargetRepository implements TargetRepository {
         try {
             Path hostPath = getHostPath(url);
             Path filePath = getFilePath(url, hostPath);
+            
             if (!Files.exists(filePath)) {
                 return null;
             }
-            return unserializeData(filePath);
-        } catch (UnsupportedEncodingException | MalformedURLException e) {
+            
+            try (InputStream fileStream = new FileInputStream(filePath.toFile())) {
+                if(compressData) {
+                    try(InputStream gzipStream = new DeflaterInputStream(fileStream)) {
+                        return unserializeData(gzipStream);
+                    }
+                } else {
+                    return unserializeData(fileStream);
+                }
+            }
+        } catch (IOException e) {
             return null;
         }
     }
     
-    private <T> T unserializeData(Path path) {
-        T nextObject = null;
+    @SuppressWarnings("unchecked")
+    private <T> T unserializeData(InputStream inputStream) {
+        T object = null;
         try {
-            byte[] fileData = Files.readAllBytes(path);
             if (dataFormat.equals(DataFormat.CBOR)) {
-                nextObject = (T) cborMapper.readValue(fileData, TargetModel.class);
+                    object = (T) cborMapper.readValue(inputStream, TargetModel.class);
             } else if (dataFormat.equals(DataFormat.JSON)) {
-                nextObject = (T) jsonMapper.readValue(fileData, TargetModelJson.class);
+                object = (T) jsonMapper.readValue(inputStream, TargetModelJson.class);
             } else if (dataFormat.equals(DataFormat.HTML)) {
-                nextObject = (T) new String(fileData);
+                byte[] fileData = IOUtils.toByteArray(inputStream);
+                object = (T) new String(fileData);
             }
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to unserialize object.", e);
         }
-        catch (IOException e) {
-            throw new RuntimeException("Failed to read object from repository.", e);
-        }
-        return nextObject;
+        return object;
     }
 
 }
