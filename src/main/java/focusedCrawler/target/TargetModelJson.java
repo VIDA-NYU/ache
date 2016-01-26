@@ -1,6 +1,5 @@
 package focusedCrawler.target;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -70,5 +69,13 @@ public class TargetModelJson {
 	public void setResponseHeaders(Map<String, List<String>> responseHeaders) {
 		this.responseHeaders = responseHeaders;
 	}
+
+    public long getFetchTime() {
+        return fetchTime;
+    }
+
+    public void setFetchTime(long fetchTime) {
+        this.fetchTime = fetchTime;
+    }
 	
 }
