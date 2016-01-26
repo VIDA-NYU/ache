@@ -16,7 +16,7 @@ public class AsyncCrawler {
     private static final Logger logger = LoggerFactory.getLogger(AsyncCrawler.class);
 
     private static final int DEFAULT_MAX_LINKS_SCHEDULER = 10000;
-    private static final int MINIMUM_ACCESS_INTERVAL = 10000;
+    private static final int MINIMUM_ACCESS_INTERVAL = 5000;
     
     private final LinkStorage linkStorage;
     private final UserAgent userAgent;
