@@ -29,10 +29,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
-import java.util.Vector;
 
 import focusedCrawler.link.classifier.util.Instance;
 import focusedCrawler.link.classifier.util.WordField;
@@ -75,11 +76,11 @@ public class WrapperNeighborhoodLinks {
 
   public void setFeatures(String[] features){
 	  String[][] fieldWords = new String[WordField.FIELD_NAMES.length][];
-	  Vector<String> aroundTemp = new Vector<String>();
-	  Vector<String> altTemp = new Vector<String>();
-	  Vector<String> srcTemp = new Vector<String>();
-	  Vector<String> urlTemp = new Vector<String>();
-	  Vector<String> anchorTemp = new Vector<String>();
+	  List<String> aroundTemp = new ArrayList<String>();
+	  List<String> altTemp = new ArrayList<String>();
+	  List<String> srcTemp = new ArrayList<String>();
+	  List<String> urlTemp = new ArrayList<String>();
+	  List<String> anchorTemp = new ArrayList<String>();
 	  for (int i = 0; i < features.length; i++) {
 		if(features[i].startsWith("around_")){
 			String[] parts = features[i].split("_");
@@ -172,9 +173,9 @@ public class WrapperNeighborhoodLinks {
 //        		System.out.println("D1:" + wordField.getWord());
 //        	}
         	
-        	Vector<String> wordsTemp = searchSubstring(wordField.getWord(),wordField.getField());
+        	List<String> wordsTemp = searchSubstring(wordField.getWord(),wordField.getField());
         	for (int i = 0; i < wordsTemp.size(); i++) {
-        		word = (String)wordsTemp.elementAt(i);
+        		word = wordsTemp.get(i);
         		word = field + "_"  + word;
         		instance.setValue(word, new Double(1));
         	}
@@ -209,9 +210,9 @@ public class WrapperNeighborhoodLinks {
 	    return new_word;
 	  }
 
-    private Vector<String> searchSubstring(String word, int field){
+    private List<String> searchSubstring(String word, int field){
 
-     Vector<String> result = new Vector<String>();
+     List<String> result = new ArrayList<String>();
      String[] words = fieldWords[field];
      for (int i = 0; i < words.length; i++) {
     	 String tempWord = words[i]; 
@@ -230,7 +231,7 @@ public class WrapperNeighborhoodLinks {
     
     private  HashMap<String, WordField[]> extractLinksFull(LinkNeighborhood ln) throws  MalformedURLException {
     	HashMap<String, WordField[]> result = new HashMap<String, WordField[]>();
-    	Vector<WordField> words = new Vector<WordField>();
+    	List<WordField> words = new ArrayList<WordField>();
     	String urlStr = ln.getLink().toString();
     	getURLWords(urlStr, words);
     	if(ln.getImgSrc() != null){
@@ -266,7 +267,7 @@ public class WrapperNeighborhoodLinks {
     
    private  HashMap<String, WordField[]> extractLinks(LinkNeighborhood ln) throws MalformedURLException {
 	   HashMap<String, WordField[]> result = new HashMap<String, WordField[]>();
-	   Vector<WordField> words = new Vector<WordField>();
+	   List<WordField> words = new ArrayList<WordField>();
 	   String urlStr = ln.getLink().toString();
 	   getURLWords(urlStr, words);
 	   String[] anchor = ln.getAnchor();
@@ -290,7 +291,7 @@ public class WrapperNeighborhoodLinks {
       MalformedURLException {
 	   HashMap<String, WordField[]> result = new HashMap<String, WordField[]>();
 	   for (int i = 0; i < linkNeighboors.length; i++) {
-		   Vector<WordField> words = new Vector<WordField>();
+		   List<WordField> words = new ArrayList<WordField>();
 		   LinkNeighborhood ln = linkNeighboors[i];
 		   String urlStr = ln.getLink().toString();
 		   getURLWords(urlStr,words);
@@ -359,7 +360,7 @@ public class WrapperNeighborhoodLinks {
    * @throws MalformedURLException
    */
 
-  private void getURLWords(String urlStr, Vector<WordField> wordsFields) throws  MalformedURLException {
+  private void getURLWords(String urlStr, List<WordField> wordsFields) throws  MalformedURLException {
 
 	  URL url = new URL(urlStr);
 	  String host = url.getHost();
@@ -389,6 +390,7 @@ public class WrapperNeighborhoodLinks {
         buf.append(line);
         buf.append("\n");
       }
+      in.close();
 //      util.ParameterFile config = new util.ParameterFile (args[1]);
 
       String pageStr = buf.toString();
@@ -405,7 +407,7 @@ public class WrapperNeighborhoodLinks {
 
 
 //       HashMap map = wrapper.extractLinks(page,feat);
-      HashMap map = null;
+       HashMap<String, Instance> map = null;
        String link = "http://www.amazon.co.uk/exec/obidos/tg/stores/static/-/books/search/ref=sr_sp_psbooks_1_1/202-7151130-0719022";
        WordField[] wordField = wrapper.getNeighboorhood(page,link);
        for (int i = 0; i < wordField.length; i++) {
@@ -413,13 +415,13 @@ public class WrapperNeighborhoodLinks {
        }
 
 
-       Set keyset = map.keySet();
-       Iterator itr = keyset.iterator();
+       Set<String> keyset = map.keySet();
+       Iterator<String> itr = keyset.iterator();
        System.out.println("Key size : " + keyset.size());
        while (itr.hasNext()) {
-         String key = (String)itr.next();
+         String key = itr.next();
          System.out.println(key);
-         Instance temp = (Instance) map.get(key);
+         Instance temp = map.get(key);
          System.out.println("URL:"+key);
          System.out.println(temp.toString() + " ");
 
@@ -433,117 +435,6 @@ public class WrapperNeighborhoodLinks {
     catch (IOException ex) {
       // @todo Handle this exception
     }
-
-
-    /*util.download.DownloaderBuffered downloader;
-
-
-
-    StopList st = null;
-
-    util.ParameterFile config = new util.ParameterFile (args[1]);
-
-    try {
-
-      st = new util.string.StopListArquivo(config.getParam("STOPLIST_FILES"));
-
-    }
-
-    catch (IOException ex) {
-
-    }
-
-    try {
-
-        downloader = new util.download.ExtractorProxyDownloader(
-
-            new util.download.DownloaderSocket(new util.ParameterFile(args[2])));
-
-
-
-       System.out.println("Tipo do Downloader : " +
-
-                          downloader.getClass().getName());
-
-       downloader.setId(config.getParam("DOWNLOADER_ID"));
-
-       hwc.submission.Submitter submitter = new hwc.submission.Submitter(downloader);
-
-
-
-      WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(st);
-
-      String[][] fieldWords = new String[WordField.FIELD_NAMES.length][];
-
-       fieldWords[WordField.URLFIELD] = config.getParam("FIELD_URL", " ");
-
-       fieldWords[WordField.ANCHOR] = config.getParam("FIELD_ANCHOR", " ");
-
-       if(config.getParam("FIELD_AROUND") != null){
-
-         fieldWords[WordField.AROUND] = config.getParam("FIELD_AROUND", " ");
-
-       }else{
-
-         fieldWords[WordField.AROUND] = new String[0];
-
-       }
-
-       if(config.getParam("FIELD_TITLE") != null){
-
-         fieldWords[WordField.TITLE] = config.getParam("FIELD_TITLE", " ");
-
-       }else{
-
-         fieldWords[WordField.TITLE] = new String[0];
-
-       }
-
-       if(config.getParam("FIELD_TEXT") != null){
-
-         fieldWords[WordField.TEXT] = config.getParam("FIELD_TEXT", " ");
-
-       }else{
-
-         fieldWords[WordField.TEXT] = new String[0];
-
-       }
-
-       String[] attributes = config.getParam("ATTRIBUTES", " ");
-
-       wrapper.setFeatures(fieldWords);
-
-       Page p1 = submitter.downloadURL(new URL(args[0]));
-
-       wrapper.extractLinks(p1,attributes);
-
-      System.out.println("END");
-
-    }
-
-    catch (IOException ex1) {
-
-      ex1.printStackTrace();
-
-    }
-
-    catch (DownloaderException ex2) {
-
-      ex2.printStackTrace();
-
-    }
-
-    catch (SubmissionException ex3) {
-
-     ex3.printStackTrace();
-
-    }
-
-
-
-*/
-
-
 
   }
 
