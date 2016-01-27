@@ -28,14 +28,17 @@ public class TargetStorageConfig {
     private String negativeStorageDirectory = "data_negative";
     private String dataFormat = "FILE";
     
-    private MonitorConfig monitor = new MonitorConfig();
-    
     private float relevanceThreshold = 0.9f;
     private int visitedPageLimit = 90000000;
     private boolean hardFocus = true;
     private boolean bipartite = false;
     private boolean saveNegativePages = true;
     private boolean englishLanguageDetectionEnabled = true;
+    private boolean hashFileName = false;
+    private boolean compressData = false;
+    
+    
+    private MonitorConfig monitor = new MonitorConfig();
     
     private ElasticSearchConfig elasticSearchConfig = new ElasticSearchConfig();
     private StorageConfig serverConfig = new StorageConfig();
@@ -58,6 +61,8 @@ public class TargetStorageConfig {
         this.monitor.frequencyRelevant = params.getParamInt("RELEVANT_REFRESH_FREQUENCY");
         this.monitor.frequencyHarvestInfo = params.getParamInt("HARVESTINFO_REFRESH_FREQUENCY");
         
+        this.hashFileName = params.getParamBooleanOrDefault("HASH_FILE_NAME", false);
+        this.compressData = params.getParamBooleanOrDefault("COMPRESS_DATA", false);
         this.relevanceThreshold = params.getParamFloat("RELEVANCE_THRESHOLD");
         this.visitedPageLimit = params.getParamInt("VISITED_PAGE_LIMIT");
         this.hardFocus = params.getParamBoolean("HARD_FOCUS");
@@ -77,23 +82,31 @@ public class TargetStorageConfig {
         
         if(targetStorageNode.get("use_classifier") != null)
             this.useClassifier = targetStorageNode.get("use_classifier").asBoolean(true);
-        
+            
         if(targetStorageNode.get("target_directory") != null)
             this.targetStorageDirectory = targetStorageNode.get("target_directory").asText("data_target");
-        
+            
         if(targetStorageNode.get("negative_directory") != null)
             this.negativeStorageDirectory = targetStorageNode.get("negative_directory").asText("data_negative");
         
         JsonNode dataFormatNode = targetStorageNode.get("data_format");
         if(dataFormatNode != null) {
-            this.dataFormat = dataFormatNode.get("type").asText("FILE");
+            this.dataFormat = dataFormatNode.get("type").asText();
             if(this.dataFormat.equalsIgnoreCase("elasticsearch")) {
                 JsonNode elasticsearchNode = dataFormatNode.get("parameters");
                 if(elasticsearchNode != null) {
                     this.elasticSearchConfig = objectMapper.treeToValue(elasticsearchNode, ElasticSearchConfig.class);
                 }
             }
+            if(this.dataFormat.equalsIgnoreCase("filesystem")) {
+                if(targetStorageNode.get("hash_filename") != null)
+                    this.hashFileName = targetStorageNode.get("hash_filename").asBoolean(false);
+                
+                if(targetStorageNode.get("compress_data") != null)
+                    this.compressData = targetStorageNode.get("compress_data").asBoolean(false);
+            }
         }
+        
         
         JsonNode monitorNode = targetStorageNode.get("monitor");
         if(monitorNode != null) {
@@ -191,6 +204,14 @@ public class TargetStorageConfig {
 
     public StorageConfig getStorageServerConfig() {
         return serverConfig;
+    }
+
+    public boolean getHashFileName() {
+        return hashFileName;
+    }
+
+    public boolean getCompressData() {
+        return compressData;
     }
 
 }

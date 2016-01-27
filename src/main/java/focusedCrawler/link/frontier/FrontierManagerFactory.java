@@ -71,6 +71,9 @@ public class FrontierManagerFactory {
             else if(linkSelectorConfig.equals("TopicLinkSelector")) {
                 return new TopicLinkSelector();
             }
+            else if(linkSelectorConfig.equals("MaximizeWebsitesLinkSelector")) {
+                return new MaximizeWebsitesLinkSelector();
+            }
         }
         
         // Maintain old defaults to keep compatibility

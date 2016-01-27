@@ -87,7 +87,6 @@ public class LinkStorageConfig {
     private final String linkDirectory;
     private final int maxCacheUrlsSize;
     private final int maxSizeLinkQueue;
-    private final int frontierRefreshFrequency;
     private final boolean getBacklinks;
     
     private final boolean useOnlineLearning;
@@ -109,7 +108,6 @@ public class LinkStorageConfig {
         this.linkDirectory = params.getParam("LINK_DIRECTORY");
         this.maxCacheUrlsSize = params.getParamInt("MAX_CACHE_URLS_SIZE");
         this.maxSizeLinkQueue = params.getParamInt("MAX_SIZE_LINK_QUEUE");
-        this.frontierRefreshFrequency = params.getParamInt("FRONTIER_REFRESH_FREQUENCY");
         this.getBacklinks = params.getParamBoolean("SAVE_BACKLINKS");
         if(getBacklinks) {
             String backlinkConfig = params.getParam("BACKLINK_CONFIG");
@@ -154,12 +152,6 @@ public class LinkStorageConfig {
         else
             this.maxCacheUrlsSize = 100;
         
-        if (linkStorageNode.get("monitor") != null &&
-            linkStorageNode.get("monitor").get("frequency_frontier") != null)
-            this.frontierRefreshFrequency = linkStorageNode.get("monitor").get("frequency_frontier").asInt();
-        else
-            this.frontierRefreshFrequency = 500;
-
         if (linkStorageNode.get("link_classifier") != null &&
             linkStorageNode.get("link_classifier").get("type") != null) {
             this.typeOfClassifier = linkStorageNode.get("link_classifier").get("type").asText();
@@ -248,10 +240,6 @@ public class LinkStorageConfig {
     
     public boolean getBacklinks() {
         return getBacklinks;
-    }
-    
-    public int getFrontierRefreshFrequency() {
-        return frontierRefreshFrequency;
     }
     
     public boolean isUseOnlineLearning() {

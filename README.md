@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/ViDA-NYU/ache.svg?branch=master)]
 (https://travis-ci.org/ViDA-NYU/ache)
+[![Coverage Status](https://coveralls.io/repos/ViDA-NYU/ache/badge.svg?branch=master&service=github)](https://coveralls.io/github/ViDA-NYU/ache?branch=master)
 
 # ACHE Focused Crawler
 

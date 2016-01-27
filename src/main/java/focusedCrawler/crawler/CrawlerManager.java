@@ -29,11 +29,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.download.Downloader;
-import focusedCrawler.util.download.DownloaderBuffered;
-import focusedCrawler.util.download.DownloaderException;
-import focusedCrawler.util.download.DownloaderURL;
-import focusedCrawler.util.download.ExtractorProxyDownloader;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageFactoryException;
@@ -114,11 +109,6 @@ public class CrawlerManager extends Thread {
 
                     Crawler crawler = crawlers[i];
                     
-                    if( crawler.isShutdown() ) {
-                        isShutdown = true;
-                        logger.info("RM>"+crawlerThreadGroup.getName()+">"+crawler.getName()+">In shutdown mode.");
-                    }
-
                     logger.info("RM>"+crawlerThreadGroup.getName()+">"+crawler.getName()+">Time("+crawler.getCicleTime()+"):"+statusCrawlerString(crawler)+(crawler.getMessage()==null?"":":"+crawler.getMessage()));
 
                     if(crawler.getCicleTime() > config.getRobotManagerMaxTime() ) {
@@ -195,9 +185,8 @@ public class CrawlerManager extends Thread {
     public Crawler createCrawler(ThreadGroup tg, int index, int life) throws CrawlerManagerException {
         try {
             String name = tg.getName() + "_" + index + "_" + life;
-            DownloaderBuffered downloader = createDownloader(name);
             
-            CrawlerImpl crawler = new CrawlerImpl(tg, name, linkStorage, formStorage, downloader);
+            CrawlerImpl crawler = new CrawlerImpl(tg, name, linkStorage, formStorage);
             crawler.setRestingTime(config.getRobotManagerRestingTime());
             crawler.setSleepTime(config.getRobotManagerRobotErrorTime());
             crawler.setPriority(Thread.NORM_PRIORITY);
@@ -341,15 +330,6 @@ public class CrawlerManager extends Thread {
 
     }
 
-    protected DownloaderBuffered createDownloader(String id) throws DownloaderException {
-        logger.info("Creating Downloader...");
-        Downloader inter_downloader = new DownloaderURL(config);
-        DownloaderBuffered downloader = new ExtractorProxyDownloader(inter_downloader);
-        downloader.setId(id);
-        logger.info("Downloader Type: " + downloader.getClass().getName());
-        return downloader;
-    }
-    
     public static CrawlerManager createCrawlerManager(String crawlerConfigFile,
                                                       Storage linkStorage,
                                                       Storage formStorage)

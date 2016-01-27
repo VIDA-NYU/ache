@@ -68,11 +68,11 @@ public class Frontier {
      */
     public HashSet<String> visitedAuths() throws Exception {
         HashSet<String> result = new HashSet<String>();
-        Tuple[] tuples = urlRelevance.getTable();
-        for (int i = 0; i < tuples.length; i++) {
-            int value = Integer.parseInt(tuples[i].getValue());
+        List<Tuple> tuples = urlRelevance.getTable();
+        for (int i = 0; i < tuples.size(); i++) {
+            int value = Integer.parseInt(tuples.get(i).getValue());
             if (value < -200) {
-                result.add(URLDecoder.decode(tuples[i].getKey(), "UTF-8"));
+                result.add(URLDecoder.decode(tuples.get(i).getKey(), "UTF-8"));
             }
         }
         return result;
@@ -80,11 +80,11 @@ public class Frontier {
 
     public HashSet<String> visitedLinks() throws Exception {
         HashSet<String> result = new HashSet<String>();
-        Tuple[] tuples = urlRelevance.getTable();
-        for (int i = 0; i < tuples.length; i++) {
-            int value = Integer.parseInt(tuples[i].getValue());
+        List<Tuple> tuples = urlRelevance.getTable();
+        for (int i = 0; i < tuples.size(); i++) {
+            int value = Integer.parseInt(tuples.get(i).getValue());
             if (value < 0) {
-                result.add(URLDecoder.decode(tuples[i].getKey(), "UTF-8"));
+                result.add(URLDecoder.decode(tuples.get(i).getKey(), "UTF-8"));
             }
         }
         return result;
@@ -92,11 +92,11 @@ public class Frontier {
 
     public HashSet<String> unvisitedAuths() throws Exception {
         HashSet<String> result = new HashSet<String>();
-        Tuple[] tuples = urlRelevance.getTable();
-        for (int i = 0; i < tuples.length; i++) {
-            int value = Integer.parseInt(tuples[i].getValue());
+        List<Tuple> tuples = urlRelevance.getTable();
+        for (int i = 0; i < tuples.size(); i++) {
+            int value = Integer.parseInt(tuples.get(i).getValue());
             if (value > 200) {
-                result.add(URLDecoder.decode(tuples[i].getKey(), "UTF-8"));
+                result.add(URLDecoder.decode(tuples.get(i).getKey(), "UTF-8"));
             }
         }
         return result;
@@ -104,11 +104,11 @@ public class Frontier {
 
     public HashSet<String> visitedHubs() throws Exception {
         HashSet<String> result = new HashSet<String>();
-        Tuple[] tuples = urlRelevance.getTable();
-        for (int i = 0; i < tuples.length; i++) {
-            int value = Integer.parseInt(tuples[i].getValue());
+        List<Tuple> tuples = urlRelevance.getTable();
+        for (int i = 0; i < tuples.size(); i++) {
+            int value = Integer.parseInt(tuples.get(i).getValue());
             if (value > -200 && value < -100) {
-                result.add(URLDecoder.decode(tuples[i].getKey(), "UTF-8"));
+                result.add(URLDecoder.decode(tuples.get(i).getKey(), "UTF-8"));
             }
         }
         return result;
@@ -116,11 +116,11 @@ public class Frontier {
 
     public HashSet<String> unvisitedHubs() throws Exception {
         HashSet<String> result = new HashSet<String>();
-        Tuple[] tuples = urlRelevance.getTable();
-        for (int i = 0; i < tuples.length; i++) {
-            int value = Integer.parseInt(tuples[i].getValue());
+        List<Tuple> tuples = urlRelevance.getTable();
+        for (int i = 0; i < tuples.size(); i++) {
+            int value = Integer.parseInt(tuples.get(i).getValue());
             if (value > 100 && value < 200) {
-                result.add(URLDecoder.decode(tuples[i].getKey(), "UTF-8"));
+                result.add(URLDecoder.decode(tuples.get(i).getKey(), "UTF-8"));
             }
         }
         return result;
@@ -136,15 +136,6 @@ public class Frontier {
                 urlRelevance.put(url, relevInt + "");
             }
         }
-    }
-
-    public List<String> getFrontierPages() throws Exception
-    // public Tuple[] getFrontierPages() throws Exception
-    {
-        // This function is used to getting all existing links in frontier.
-        // Should we get frontier links via cache member of urlRelevant?
-        // return urlRelevance.getTable();
-        return urlRelevance.getCache();
     }
 
     /**

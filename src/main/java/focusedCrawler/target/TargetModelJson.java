@@ -21,6 +21,9 @@ public class TargetModelJson {
 	@JsonProperty("response_headers")
 	private Map<String, List<String>> responseHeaders;
 	
+	@JsonProperty("fetch_time")
+	private long fetchTime;
+	
 	public TargetModelJson() {
 		// required for JSON serialization
 	}
@@ -32,6 +35,7 @@ public class TargetModelJson {
 			this.redirectedUrl = page.getRedirectedURL().toString();
 		this.responseBody = page.getSource();
 		this.responseHeaders = page.getResponseHeaders();
+		this.fetchTime = page.getFetchTime();
 	}
 
 	public String getUrl() {
@@ -65,5 +69,13 @@ public class TargetModelJson {
 	public void setResponseHeaders(Map<String, List<String>> responseHeaders) {
 		this.responseHeaders = responseHeaders;
 	}
+
+    public long getFetchTime() {
+        return fetchTime;
+    }
+
+    public void setFetchTime(long fetchTime) {
+        this.fetchTime = fetchTime;
+    }
 	
 }

@@ -32,8 +32,6 @@ import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.distribution.CommunicationException;
-import focusedCrawler.util.download.DownloaderBuffered;
-import focusedCrawler.util.download.DownloaderException;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageException;
@@ -51,8 +49,6 @@ public class CrawlerImpl extends Crawler {
     private Storage linkStorage;
 
     private Storage targetStorage;
-
-    protected DownloaderBuffered downloader;
 
     protected URL initialUrl;
 
@@ -74,20 +70,11 @@ public class CrawlerImpl extends Crawler {
     
     protected Downloader urlDownloader;
     
-    public CrawlerImpl(ThreadGroup tg, String name, Storage linkStorage, Storage targetStorage, DownloaderBuffered downloader) {
+    public CrawlerImpl(ThreadGroup tg, String name, Storage linkStorage, Storage targetStorage) {
     	super(tg,name);
     	this.linkStorage = linkStorage;
     	this.targetStorage = targetStorage;
-        this.downloader = downloader;
-    }
-
-    public boolean isShutdown() {
-        try {
-            return downloader.isShutdown();
-        } catch (DownloaderException exc) {
-            logger.warn("Problem while verifying if crawler is shutdown.", exc);
-            return false;
-        }
+        
     }
 
      /**
@@ -175,6 +162,7 @@ public class CrawlerImpl extends Crawler {
 			    } else {
 			        page = new Page(getUrl(), source, urlDownloader.getResponseHeaders());
 			    }
+			    page.setFetchTime(System.currentTimeMillis());
 			    
 				PaginaURL pageParser = new PaginaURL(page.getURL(),page.getContent());
 				page.setPageURL(pageParser);
@@ -229,14 +217,6 @@ public class CrawlerImpl extends Crawler {
             initialUrl = null;
             currentUrl = null;
             urlFinal = null;
-            try {
-                if( downloader != null ) {
-                    downloader.close();
-                }
-            }
-            catch( Exception exc ) {
-                logger.error("Problem while closing downloader.", exc);
-            }
             length = 0;
             //file.setLength(0);
             page = null;

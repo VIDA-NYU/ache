@@ -1,13 +1,13 @@
 package focusedCrawler.link.frontier;
 
-import java.io.IOException;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Vector;
 
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.persistence.PersistentHashtable;
+import focusedCrawler.util.persistence.Tuple;
 
 /**
  * Implements a link selection strategy that picks links from the storage at random.
@@ -21,15 +21,16 @@ public class RandomLinkSelector implements LinkSelectionStrategy {
         
         LinkRelevance[] result = null;
         try {
-            Iterator<String> keys = urlRelevance.getKeys();
             Vector<LinkRelevance> tempList = new Vector<LinkRelevance>();
             int count = 0;
             
-            while(keys.hasNext() && count < numberOfLinks) {
-                
-                String url = URLDecoder.decode(keys.next(), "UTF-8");
+            List<Tuple> tuples = urlRelevance.getTable();
+            
+            for (int i = 0; count < numberOfLinks && i < tuples.size(); i++) {
+                Tuple tuple = tuples.get(i);
+                String url = URLDecoder.decode(tuple.getKey(), "UTF-8");
                 if (url != null) {
-                    Integer relevInt = new Integer(urlRelevance.get(url));
+                    Integer relevInt = new Integer(tuple.getValue());
                     if (relevInt != null && relevInt > 0) {
                         LinkRelevance linkRel = new LinkRelevance(new URL(url), relevInt.intValue());
                         tempList.add(linkRel);
@@ -43,7 +44,7 @@ public class RandomLinkSelector implements LinkSelectionStrategy {
             
             System.out.println(">> TOTAL LOADED: " + result.length);
 
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
 

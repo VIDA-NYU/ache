@@ -23,17 +23,17 @@
 */
 package focusedCrawler.util.persistence;
 import java.io.File;
-import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 import java.util.Vector;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
 import com.sleepycat.je.DatabaseException;
 import com.sleepycat.je.EnvironmentLockedException;
 
@@ -42,165 +42,108 @@ import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
 
 public class PersistentHashtable {
+    
+    private static Logger logger = LoggerFactory.getLogger(PersistentHashtable.class);
 	
 	private BerkeleyDBHashTable persistentTable;
-	private Map<String, String> cache;
-	private int size = 0;
-	private int tempCacheSize = 1000;
-	private Tuple[] tempList = new Tuple[tempCacheSize]; 
+	
+	private int tempMaxSize = 1000;
+	private List<Tuple> tempList = new ArrayList<>(tempMaxSize);
+
+    private Cache<String, String> cache; 
 	
 	public PersistentHashtable(String path, int cacheSize) {
-		this.cache = new HashMap<String, String>(cacheSize);
+	    File file = new File(path);
+	    if(!file.exists()) {
+	        file.mkdirs();
+	    }
+		this.cache = CacheBuilder.newBuilder().maximumSize(cacheSize).build();
 		try {
-			File file = new File(path);
-			if(!file.exists()) {
-				file.mkdirs();
-			}
 			this.persistentTable = new BerkeleyDBHashTable(file);
 		} catch (EnvironmentLockedException e) {
 			throw new RuntimeException(e);
 		} catch (DatabaseException e) {
 			throw new RuntimeException(e);
 		}
-		loadCache(cacheSize);
 	}
 	
-	private void loadCache(int cacheSize) {
+	public List<Tuple> getTable() {
 		try {
-			Tuple[] tuples = persistentTable.listElements();
-			int count = 0;
-			while(count < tuples.length && count < cacheSize){
-				cache.put(tuples[count].getKey(), tuples[count].getValue());
-				count++;
-			}
-		} catch (DatabaseException e) {
-			throw new RuntimeException(e);
-		}
-	}
-	
-	public Tuple[] getTable() throws Exception{
-		return persistentTable.listElements();
-	}
-	
-	public List<String> getCache() throws Exception {
-		List<String> pages = new ArrayList<String>();
-		for (String key : (Set<String>) cache.keySet()) {
-			pages.add(URLDecoder.decode(key, "UTF-8"));
-		}
-		return pages;
+            return persistentTable.listElements();
+        } catch (DatabaseException e) {
+            throw new RuntimeException("Failed to get hashtable values.", e);
+        }
 	}
 
-	public synchronized void updateCache(Map<String, String> newCache){
-		this.cache.clear();
-		this.cache = null;
-		this.cache = newCache;
-		this.tempList = new Tuple[tempCacheSize];
-	}
-
-	@SuppressWarnings("deprecation")
+    public Tuple[] getTableAsArray() {
+        List<Tuple> table = getTable();
+        return (Tuple[]) table.toArray(new Tuple[table.size()]);
+    }
+    
 	public synchronized String get(String key){
-		String obj = null;
 		try {
-			key = URLEncoder.encode(key);
-			String tempObj = (String) cache.get(key);
-			if(tempObj == null){
+			key = URLEncoder.encode(key, "UTF-8");
+			
+			String obj = cache.getIfPresent(key);
+			if(obj == null){
 				obj = persistentTable.get(key);
-			}else{
-				obj = tempObj.toString();
 			}
+			return obj;
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("Failed to get key from hashtable.", e);
+			return null;
 		}
-		return obj;
 	}
 	
-	@SuppressWarnings("deprecation")
 	public synchronized boolean put(String key, String value){
 		try {
-			key = URLEncoder.encode(key);
+			key = URLEncoder.encode(key, "UTF-8");
 			cache.put(key, value);	
 			
-			tempList[size] = new Tuple(key,value);
-			size++;
-			if(size%10000 == 0){
-				System.out.println("#####CACHE_SIZE:" + cache.size());
-			}
-			if(size == tempCacheSize){
-				size = 0;
-				persistentTable.put(tempList);
-				tempList = null; 
-				tempList = new Tuple[tempCacheSize];
-				
-			}
+			tempList.add(new Tuple(key, value));
+			
+			if(tempList.size() == tempMaxSize){
+                commit();
+            }
+			
 			return true;
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("Failed to store item in persitent hashtable.", e);
 			return false;
 		}
 	}
-	
-	public void commit() {
+
+    public void commit() {
 		try {
-			persistentTable.put(tempList);
+		    persistentTable.put(tempList);
+		    tempList = new ArrayList<>();
+		    
 		} catch (DatabaseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException("Failed to commit persistent hashtable.", e);
 		}
 	}
 	
 	public void close() {
-		try {
-			persistentTable.put(tempList);
-		} catch (DatabaseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		this.commit();
 	}
 	
 	public synchronized Vector<VSMElement> orderedSet() {
-		Vector<VSMElement> result = new Vector<VSMElement>();
-		Iterator<String> iterator = cache.keySet().iterator();
-		while (iterator.hasNext()) {
-			String key = (String) iterator.next();
-			String value = (String)cache.get(key);
-			VSMElement elem = new VSMElement(key,Double.parseDouble(value));
-			result.add(elem);
-		}
-		Collections.sort(result,new VSMElementComparator());
-		return result;
+        try {
+            List<Tuple> elements = persistentTable.listElements();
+            Vector<VSMElement> result = new Vector<VSMElement>();
+            for (Tuple tuple : elements) {
+                result.add(new VSMElement(
+                    tuple.getKey(),
+                    Double.parseDouble(tuple.getValue())
+                ));
+            }
+            Collections.sort(result, new VSMElementComparator());
+            return result;
+        } catch (DatabaseException e) {
+            throw new RuntimeException("Failed to list elements from hashtable.", e);
+        }
+	    
 	}
-	
-	public synchronized Iterator<String> getKeys() {
-		return cache.keySet().iterator();
-	}
-	
-	public int size(){
-		return this.size;
-	}
-	
-	public static void main(String[] args) {
-		try {
-			PersistentHashtable ph = new PersistentHashtable(args[0], 100000);
-			String key = ph.get(args[1]);
-			System.out.println("RES:" + key);
-			key = ph.get(key);
-			System.out.println("RES:" + key);
-			key = ph.get(key);
-			System.out.println("RES:" + key);
-			key = ph.get(key);
-			System.out.println("RES:" + key);
-			key = ph.get(key);
-			System.out.println("RES:" + key);
-			
-			
-//			ph.loadCache(1000);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
+
 }

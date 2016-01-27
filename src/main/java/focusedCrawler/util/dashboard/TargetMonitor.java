@@ -27,6 +27,9 @@ public class TargetMonitor {
     
     public TargetMonitor(String dataPath, TargetStorageConfig config) {
         
+        File file = new File(dataPath+"/data_monitor/");
+        if(!file.exists()) file.mkdirs();
+        
         this.config = config;
         String fileCrawledPages = dataPath + "/data_monitor/crawledpages.csv";
         String fileRelevantPages = dataPath + "/data_monitor/relevantpages.csv";

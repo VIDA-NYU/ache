@@ -24,10 +24,14 @@
 package focusedCrawler.util;
 
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLDecoder;
 
 import com.google.common.net.InternetDomainName;
+
+import focusedCrawler.util.persistence.Tuple;
 
 @SuppressWarnings("serial")
 public class LinkRelevance implements Serializable {
@@ -44,7 +48,7 @@ public class LinkRelevance implements Serializable {
         this.relevance = relevance;
     }
 
-    public LinkRelevance(String string, int relevance) throws MalformedURLException {
+    public LinkRelevance(String string, double relevance) throws MalformedURLException {
         this(new URL(string), relevance);
     }
 
@@ -77,6 +81,24 @@ public class LinkRelevance implements Serializable {
             }
         } catch (Exception e) {
             throw new IllegalStateException("Invalid top private domain name=["+domain+"] in URL=["+url+"]", e);
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return "LinkRelevance[url=" + url + ", relevance=" + relevance + "]";
+    }
+
+    public static LinkRelevance fromTuple(Tuple tuple) {
+        try {
+            String urlStr = tuple.getKey();
+            double relevance = new Double(tuple.getValue());
+            URL url = new URL(URLDecoder.decode(urlStr, "UTF-8"));
+            return new LinkRelevance(url, relevance);
+        } catch (MalformedURLException e) {
+            throw new IllegalArgumentException("Invalid URL provided.", e);
+        } catch (UnsupportedEncodingException e) {
+            throw new IllegalStateException("UTF-8 encoding not supported!", e);
         }
     }
 

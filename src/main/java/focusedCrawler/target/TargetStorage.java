@@ -167,18 +167,23 @@ public class TargetStorage extends StorageDefault {
         TargetRepository negativeRepository;
         
         String dataFormat = config.getDataFormat();
+        boolean compressData = config.getCompressData();
+        
         logger.info("Using DATA_FORMAT: "+dataFormat);
         if(dataFormat.equals("FILESYSTEM_JSON")) {
-        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.JSON);
-			negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.JSON);
+        	boolean hashFilename = config.getHashFileName();
+            targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.JSON, hashFilename, compressData);
+			negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.JSON, hashFilename, compressData);
         }
         else if (dataFormat.equals("FILESYSTEM_CBOR")) {
-        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.CBOR);
-        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.CBOR);
+            boolean hashFilename = config.getHashFileName();
+        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.CBOR, hashFilename, compressData);
+        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.CBOR, hashFilename, compressData);
         }
         else if(dataFormat.equals("FILESYSTEM_HTML")) {
-        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.FILE);
-        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.FILE);
+            boolean hashFilename = config.getHashFileName();
+        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.HTML, hashFilename, compressData);
+        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.HTML, hashFilename, compressData);
         }
         else if(dataFormat.equals("ELASTICSEARCH")) {
         	if(indexName == null) {

@@ -57,9 +57,6 @@ target_storage:
 # Configurations for Link Storage
 #
 link_storage:
-  monitor:
-    # Export all urls in the frontier every time this number of new urls are inserted
-    frequency_frontier: 555
 
   # Max number of pages to be crawled from each web domain
   max_pages_per_domain: 222 # MAX_PAGES_PER_DOMAIN 100

@@ -9,7 +9,7 @@ targetCompatibility = 1.7
 compileJava.options.encoding = "UTF-8"
 version = '0.3.1'
 mainClassName = 'focusedCrawler.Main'
-applicationDefaultJvmArgs = ["-Dname=ache"]
+applicationDefaultJvmArgs = ["-Dname=ache -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError"]
 
 repositories {
     mavenCentral()

@@ -71,8 +71,6 @@ public class ConfigServiceTest {
         // then
         assertThat(config, is(notNullValue()));
         
-        assertThat(config.getFrontierRefreshFrequency(), is(555));
-        
         assertThat(config.getMaxPagesPerDomain(), is(222));
         
         assertThat(config.getOutlinks(), is(false));

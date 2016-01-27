@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
@@ -37,7 +36,7 @@ public class BipartiteGraphRep {
 	
 
 	public BipartiteGraphRep(String dataPath, BiparitieGraphRepConfig config) {
-	    int cacheSize = 100000;
+	    int cacheSize = 10000;
 	    this.authGraph = new PersistentHashtable(dataPath + "/" + config.getAuthGraphDirectory(), cacheSize);
         this.url2id = new PersistentHashtable(dataPath + "/" + config.getUrlIdDirectory(), cacheSize);
         this.authID = new PersistentHashtable(dataPath + "/" + config.getAuthIdDirectory(), cacheSize);
@@ -46,29 +45,17 @@ public class BipartiteGraphRep {
 	}
 	
 	public Tuple[] getAuthGraph() throws Exception{
-		return authGraph.getTable();
+		return authGraph.getTableAsArray();
 	}
 
 	public Tuple[] getHubGraph() throws Exception{
-		return hubGraph.getTable();
+		return hubGraph.getTableAsArray();
 	}
 	
 	public String getID(String url){
 		return url2id.get(url);
 	}
 	
-	public HashSet<String> getAuthURLs() throws Exception{
-		HashSet<String> result = new HashSet<String>();
-		for (Iterator<String> iter = authID.getKeys(); iter.hasNext();) {
-			String id = (String) iter.next();
-			String url = getAuthURL(id);
-			if(url != null){
-				result.add(url);
-			}
-		}
-		return result;
-	}
-
 	public String getHubURL(String id) throws IOException{
 		String url = hubID.get(id);
 		if(url != null){
@@ -107,7 +94,7 @@ public class BipartiteGraphRep {
 	}
 	
 	public LinkNeighborhood[] getLNs() throws Exception{
-		Tuple[] tuples = authID.getTable();
+		Tuple[] tuples = authID.getTableAsArray();
 		LinkNeighborhood[] lns = new LinkNeighborhood[tuples.length];
 		for (int i = 0; i < lns.length; i++) {
 			String strln = tuples[i].getValue();
@@ -126,7 +113,7 @@ public class BipartiteGraphRep {
 	}
 
 	public LinkNeighborhood[] getBacklinkLN() throws Exception{
-		Tuple[] tuples = hubID.getTable();
+		Tuple[] tuples = hubID.getTableAsArray();
 		LinkNeighborhood[] lns = new LinkNeighborhood[tuples.length];
 		for (int i = 0; i < lns.length; i++) {
 			String strln = tuples[i].getValue();

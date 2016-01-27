@@ -24,9 +24,6 @@
 package focusedCrawler.link;
 
 import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,7 +42,6 @@ import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.dashboard.LinkMonitor;
 import focusedCrawler.util.parser.SimpleWrapper;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageConfig;
@@ -89,21 +85,14 @@ public class LinkStorage extends StorageDefault{
   
   private int learnLimit = 10;
 
-//Data structure for dashboard//
-	private LinkMonitor monitor;
-	private int refreshFreq;//export the urls in the frontier after inserting refreshFreq of pages.
-	private List<String> outLinks = new ArrayList<String>();
-///////////////////////////////
-
-    public LinkStorage(LinkStorageConfig config, BipartiteGraphManager manager,
-                       FrontierManager frontierManager, LinkMonitor linkMonitor)
+    public LinkStorage(LinkStorageConfig config,
+                       BipartiteGraphManager manager,
+                       FrontierManager frontierManager)
                        throws IOException {
         this.frontierManager = frontierManager;
         this.graphManager = manager;
-        this.monitor = linkMonitor;
         this.getBacklinks = config.getBacklinks();
         this.getOutlinks = config.getOutlinks();
-        this.refreshFreq = config.getFrontierRefreshFrequency();
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
                 close();
@@ -124,16 +113,6 @@ public class LinkStorage extends StorageDefault{
         this.learnLimit = learnLimit;
     }
 
-    public List<String> getFrontierPages() throws Exception {
-        // List<String> pages = new ArrayList<String>();
-        // Tuple[] tuples =
-        // frontierManager.getFrontierPersistent().getFrontierPages();
-        // for (Tuple tuple: tuples)
-        // pages.add(tuple.getKey());
-        // return pages;
-        return frontierManager.getFrontierPersistent().getFrontierPages();
-    }
-
     /**
      * This method inserts links from a given page into the frontier
      * 
@@ -146,17 +125,6 @@ public class LinkStorage extends StorageDefault{
 
         Page page = (Page) obj;
         numberOfPages++;
-        
-        try {
-            if ((numberOfPages % refreshFreq) == 0) {
-                List<String> list = getFrontierPages();
-                monitor.exportFrontierPages(list);
-                monitor.exportOutLinks(outLinks);
-                outLinks.clear();
-            }
-        } catch (Exception ex) {
-            logger.error(ex.getMessage(), ex);
-        }
         
         try {
             
@@ -179,8 +147,7 @@ public class LinkStorage extends StorageDefault{
                 }
             } else {
                 if (getOutlinks) {
-                    String sOutLinks = graphManager.insertOutlinks(page);
-                    outLinks.add(sOutLinks);
+                    graphManager.insertOutlinks(page);
                 }
             }
             
@@ -256,9 +223,7 @@ public class LinkStorage extends StorageDefault{
 
         BipartiteGraphManager manager = createBipartiteGraphManager(config, linkClassifier, frontierManager, graphRep);
 
-        LinkMonitor monitor = new LinkMonitor(Paths.get(dataPath,  "data_monitor"));
-
-        LinkStorage linkStorage = new LinkStorage(config, manager, frontierManager, monitor);
+        LinkStorage linkStorage = new LinkStorage(config, manager, frontierManager);
 
         if (config.isUseOnlineLearning()) {
             StopList stoplist = new StopListArquivo(stoplistFile);
