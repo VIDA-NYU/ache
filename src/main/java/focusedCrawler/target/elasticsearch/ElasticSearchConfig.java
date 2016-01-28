@@ -4,16 +4,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ElasticSearchConfig {
 
-    @JsonProperty("host")
-    private final String host;
-    @JsonProperty("port")
-    private final int port;
-    @JsonProperty("cluster_name")
-    private final String clusterName;
+    @JsonProperty("target_storage.data_format.elasticsearch.host")
+    private String host = "localhost";
     
-    public ElasticSearchConfig() {
-        this("localhost", 9300, "elasticsearch");
-    }
+    @JsonProperty("target_storage.data_format.elasticsearch.port")
+    private int port = 9300;
+    
+    @JsonProperty("target_storage.data_format.elasticsearch.cluster_name")
+    private String clusterName = "elasticsearch";
+    
+    public ElasticSearchConfig() { }
 
     public ElasticSearchConfig(String hostname, int port, String clusterName) {
         this.host = hostname;

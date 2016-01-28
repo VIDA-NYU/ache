@@ -1,6 +1,7 @@
 package focusedCrawler.util.storage;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.JsonNode;
 
 import focusedCrawler.util.ParameterFile;
 
@@ -81,6 +82,23 @@ public class StorageConfig {
     
     public void setFactoryClassname(String factoryClassname) {
         this.factoryClassname = factoryClassname;
+    }
+    
+    public static StorageConfig create(JsonNode config, String prefix) {
+        StorageConfig serverConfig = new StorageConfig();
+        if(config.get(prefix + "host") != null)
+            serverConfig.setHost(config.get(prefix + "host").asText());
+        if(config.get(prefix + "port") != null)
+            serverConfig.setPort(config.get(prefix + "port").asInt());
+        if(config.get(prefix + "try_number") != null)
+            serverConfig.setTryNumber(config.get(prefix + "try_number").asInt());
+        if(config.get(prefix + "delay_after_exception") != null)
+            serverConfig.setDelayAfterException(config.get(prefix + "delay_after_exception").asInt());
+        if(config.get(prefix + "binder_class_name") != null)
+            serverConfig.setBinderClassName(config.get(prefix + "binder_class_name").asText());
+        if(config.get(prefix + "factory_class_name") != null)
+            serverConfig.setFactoryClassname(config.get(prefix + "factory_class_name").asText());
+        return serverConfig;
     }
     
 }

@@ -3,6 +3,7 @@ package focusedCrawler.config;
 import java.io.IOException;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -13,36 +14,56 @@ import focusedCrawler.util.storage.StorageConfig;
 public class TargetStorageConfig {
     
     public static class MonitorConfig {
+        @JsonProperty("target_storage.monitor.sync")
         public boolean sync = true;
+        @JsonProperty("target_storage.monitor.frequency")
         public int frequency = 100;
-        @JsonProperty("frequency_crawled")
+        @JsonProperty("target_storage.monitor.frequency_crawled")
         public int frequencyCrawled = 500;
-        @JsonProperty("frequency_relevant")
+        @JsonProperty("target_storage.monitor.frequency_relevant")
         public int frequencyRelevant = 500;
-        @JsonProperty("frequency_harvest_info")
+        @JsonProperty("target_storage.monitor.frequency_harvest_info")
         public int frequencyHarvestInfo = 100;
     }
     
-    private boolean useClassifier = true;
+    @JsonProperty("target_storage.target_directory")
     private String targetStorageDirectory = "data_target";
+    @JsonProperty("target_storage.negative_directory")
     private String negativeStorageDirectory = "data_negative";
-    private String dataFormat = "FILE";
     
-    private float relevanceThreshold = 0.9f;
-    private int visitedPageLimit = 90000000;
-    private boolean hardFocus = true;
-    private boolean bipartite = false;
-    private boolean saveNegativePages = true;
-    private boolean englishLanguageDetectionEnabled = true;
+    @JsonProperty("target_storage.data_format.type")
+    private String dataFormat = "FILE";
+    @JsonProperty("target_storage.data_format.filesystem.hash_file_name")
     private boolean hashFileName = false;
+    @JsonProperty("target_storage.data_format.filesystem.compress_data")
     private boolean compressData = false;
     
+    @JsonProperty("target_storage.use_classifier")
+    private boolean useClassifier = true;
+    @JsonProperty("target_storage.relevance_threshold")
+    private float relevanceThreshold = 0.9f;
+    @JsonProperty("target_storage.visited_page_limit")
+    private int visitedPageLimit = 90000000;
+    @JsonProperty("target_storage.hard_focus")
+    private boolean hardFocus = true;
+    @JsonProperty("target_storage.bipartite")
+    private boolean bipartite = false;
     
+    @JsonProperty("target_storage.store_negative_pages")
+    private boolean saveNegativePages = true;
+    
+    @JsonProperty("target_storage.english_language_detection_enabled")
+    private boolean englishLanguageDetectionEnabled = true;
+    
+    @JsonUnwrapped
     private MonitorConfig monitor = new MonitorConfig();
     
+    @JsonUnwrapped
     private ElasticSearchConfig elasticSearchConfig = new ElasticSearchConfig();
-    private StorageConfig serverConfig = new StorageConfig();
     
+    private final StorageConfig serverConfig;
+    
+    @Deprecated
     public TargetStorageConfig(String filename) {
         this(new ParameterFile(filename));
     }
@@ -78,64 +99,8 @@ public class TargetStorageConfig {
     }
 
     public TargetStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
-        JsonNode targetStorageNode = config.get("target_storage");
-        
-        if(targetStorageNode.get("use_classifier") != null)
-            this.useClassifier = targetStorageNode.get("use_classifier").asBoolean(true);
-            
-        if(targetStorageNode.get("target_directory") != null)
-            this.targetStorageDirectory = targetStorageNode.get("target_directory").asText("data_target");
-            
-        if(targetStorageNode.get("negative_directory") != null)
-            this.negativeStorageDirectory = targetStorageNode.get("negative_directory").asText("data_negative");
-        
-        JsonNode dataFormatNode = targetStorageNode.get("data_format");
-        if(dataFormatNode != null) {
-            this.dataFormat = dataFormatNode.get("type").asText();
-            if(this.dataFormat.equalsIgnoreCase("elasticsearch")) {
-                JsonNode elasticsearchNode = dataFormatNode.get("parameters");
-                if(elasticsearchNode != null) {
-                    this.elasticSearchConfig = objectMapper.treeToValue(elasticsearchNode, ElasticSearchConfig.class);
-                }
-            }
-            if(this.dataFormat.equalsIgnoreCase("filesystem")) {
-                if(targetStorageNode.get("hash_filename") != null)
-                    this.hashFileName = targetStorageNode.get("hash_filename").asBoolean(false);
-                
-                if(targetStorageNode.get("compress_data") != null)
-                    this.compressData = targetStorageNode.get("compress_data").asBoolean(false);
-            }
-        }
-        
-        
-        JsonNode monitorNode = targetStorageNode.get("monitor");
-        if(monitorNode != null) {
-            this.monitor = objectMapper.treeToValue(monitorNode, MonitorConfig.class);
-        }
-        
-        if(targetStorageNode.get("relevance_threshold") != null)
-            this.relevanceThreshold = (float) targetStorageNode.get("relevance_threshold").asDouble(0.5d);
-        
-        if(targetStorageNode.get("visited_page_limit") != null)
-            this.visitedPageLimit = targetStorageNode.get("visited_page_limit").asInt(90000000);
-        
-        if(targetStorageNode.get("hard_focus") != null)
-            this.hardFocus = targetStorageNode.get("hard_focus").asBoolean(true);
-        
-        if(targetStorageNode.get("bipartite") != null)
-            this.bipartite = targetStorageNode.get("bipartite").asBoolean();
-        
-        if(targetStorageNode.get("store_negative_pages") != null)
-            this.saveNegativePages = targetStorageNode.get("store_negative_pages").asBoolean(true);
-        
-        if(targetStorageNode.get("english_language_detection_enabled") != null)
-            this.englishLanguageDetectionEnabled = targetStorageNode.get("english_language_detection_enabled").asBoolean(true);
-
-        JsonNode serverNode = targetStorageNode.get("server");
-        if(serverNode != null) {
-            this.serverConfig = objectMapper.treeToValue(serverNode, StorageConfig.class);
-        }
-        
+        objectMapper.readerForUpdating(this).readValue(config);
+        this.serverConfig = StorageConfig.create(config, "target_storage.server.");
     }
 
     public boolean isUseClassifier() {

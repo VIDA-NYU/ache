@@ -2,6 +2,7 @@ package focusedCrawler.link;
 
 import java.io.IOException;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -11,12 +12,21 @@ import focusedCrawler.util.storage.StorageConfig;
 public class LinkStorageConfig {
 
     public static class BackSurferConfig {
+        
+        @JsonProperty("link_storage.backsurfer.pattern_ini")
+        private String patternIni = ",\"uu\":";
+        
+        @JsonProperty("link_storage.backsurfer.pattern_end")
+        private String patternEnd = "\"}";
+        
+        @JsonProperty("link_storage.backsurfer.pattern_ini_title")
+        private String patternIniTitle = ",\"ut\":\"";
+        
+        @JsonProperty("link_storage.backsurfer.pattern_end_title")
+        private String patternEndTitle = "\",\"uu\":";
 
-        private final String patternIni;
-        private final String patternEnd;
-        private final String patternIniTitle;
-        private final String patternEndTitle;
-
+        public BackSurferConfig() { }
+        
         public BackSurferConfig(ParameterFile params) {
             patternIni = params.getParam("PATTERN_INI");
             patternEnd = params.getParam("PATTERN_END");
@@ -44,11 +54,13 @@ public class LinkStorageConfig {
     
     public static class BiparitieGraphRepConfig {
         
-        private final String authGraphDirectory;
-        private final String urlIdDirectory;
-        private final String authIdDirectory;
-        private final String hubIdDirectory;
-        private final String hubGraphDirectory;
+        private String authGraphDirectory = "data_backlinks/auth_graph";
+        private String urlIdDirectory = "data_backlinks/url";
+        private String authIdDirectory = "data_backlinks/auth_id";
+        private String hubIdDirectory = "data_backlinks/hub_id";
+        private String hubGraphDirectory = "data_backlinks/hub_graph";
+        
+        public BiparitieGraphRepConfig() { }
         
         public BiparitieGraphRepConfig(ParameterFile params) {
             this.authGraphDirectory = params.getParam("AUTH_GRAPH_DIRECTORY");
@@ -80,23 +92,52 @@ public class LinkStorageConfig {
         
     }
     
-    private final int maxPagesPerDomain;
-    private final String typeOfClassifier;
-    private final boolean getOutlinks;
-    private final boolean useScope;
-    private final String linkDirectory;
-    private final int maxCacheUrlsSize;
-    private final int maxSizeLinkQueue;
-    private final boolean getBacklinks;
+    @JsonProperty("link_storage.max_pages_per_domain")
+    private int maxPagesPerDomain = 100;
     
-    private final boolean useOnlineLearning;
-    private final String onlineMethod;
-    private final int learningLimit;
-    private final String targetStorageDirectory;
-    private final String linkSelector;
+    @JsonProperty("link_storage.link_classifier.type")
+    private String typeOfClassifier = "LinkClassifierBaseline";
     
-    private final BackSurferConfig backSurferConfig;
-    private final BiparitieGraphRepConfig biparitieGraphRepConfig;
+    
+    @JsonProperty("link_storage.link_strategy.outlinks")
+    private boolean getOutlinks = true;
+    
+    @JsonProperty("link_storage.link_strategy.use_scope")
+    private boolean useScope = false;
+    
+    
+    @JsonProperty("link_storage.directory")
+    private String linkDirectory = "data_url/dir";
+    
+    @JsonProperty("link_storage.max_size_cache_urls")
+    private int maxCacheUrlsSize = 200000;
+    
+    @JsonProperty("link_storage.max_size_link_queue")
+    private int maxSizeLinkQueue = 100000;
+    
+    @JsonProperty("link_storage.link_strategy.backlinks")
+    private boolean getBacklinks = false;
+    
+    
+    @JsonProperty("link_storage.online_learning.enabled")
+    private boolean useOnlineLearning = false;
+    
+    @JsonProperty("link_storage.online_learning.type")
+    private String onlineMethod = "FORWARD_CLASSIFIER_BINARY";
+    
+    @JsonProperty("link_storage.online_learning.learning_limit")
+    private int learningLimit = 500;
+    
+    
+    @JsonProperty("link_storage.link_selector")
+    private String linkSelector = "TopkLinkSelector";
+    
+    // TODO Remove target storage folder dependency from link storage
+    private String targetStorageDirectory = "data_target/";
+    
+    private BackSurferConfig backSurferConfig = new BackSurferConfig();
+    private BiparitieGraphRepConfig biparitieGraphRepConfig = new BiparitieGraphRepConfig();
+    
     private final StorageConfig serverConfig;
     
     
@@ -127,89 +168,10 @@ public class LinkStorageConfig {
     }
     
     public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
-        JsonNode linkStorageNode = config.get("link_storage");
-        
-        JsonNode serverNode = linkStorageNode.get("server");
-        if(serverNode != null) {
-            this.serverConfig = objectMapper.treeToValue(serverNode, StorageConfig.class);
-        } else {
-            this.serverConfig = new StorageConfig();
-        }
-        
-        if (linkStorageNode.get("max_pages_per_domain") != null)
-            this.maxPagesPerDomain = linkStorageNode.get("max_pages_per_domain").asInt();
-        else
-            this.maxPagesPerDomain = 100;
-        
-        
-        if (linkStorageNode.get("max_size_link_queue") != null)
-            this.maxSizeLinkQueue = linkStorageNode.get("max_size_link_queue").asInt();
-        else
-            this.maxSizeLinkQueue = 100000;
-        
-        if (linkStorageNode.get("max_size_cache_urls") != null)
-            this.maxCacheUrlsSize = linkStorageNode.get("max_size_cache_urls").asInt();
-        else
-            this.maxCacheUrlsSize = 100;
-        
-        if (linkStorageNode.get("link_classifier") != null &&
-            linkStorageNode.get("link_classifier").get("type") != null) {
-            this.typeOfClassifier = linkStorageNode.get("link_classifier").get("type").asText();
-        } else {
-            this.typeOfClassifier = "LinkClassifierBaseline";
-        }
-        
-        if (linkStorageNode.get("link_strategy") != null &&
-            linkStorageNode.get("link_strategy").get("outlinks") != null)
-            this.getOutlinks = linkStorageNode.get("link_strategy").get("outlinks").asBoolean();
-        else
-            this.getOutlinks = true;
-        
-        if (linkStorageNode.get("link_strategy") != null &&
-            linkStorageNode.get("link_strategy").get("backlinks") != null)
-            this.getBacklinks = linkStorageNode.get("link_strategy").get("backlinks").asBoolean();
-        else
-            this.getBacklinks = false;
-        
-        if (linkStorageNode.get("link_strategy") != null &&
-            linkStorageNode.get("link_strategy").get("use_scope") != null)
-            this.useScope = linkStorageNode.get("link_strategy").get("use_scope").asBoolean();
-        else
-            this.useScope = false;
-        
-        if (linkStorageNode.get("online_learning") != null &&
-            linkStorageNode.get("online_learning").get("enabled") != null)
-            this.useOnlineLearning = linkStorageNode.get("online_learning").get("enabled").asBoolean();
-        else
-            this.useOnlineLearning = false;
-        
-        if (linkStorageNode.get("online_learning") != null &&
-            linkStorageNode.get("online_learning").get("type") != null)
-            this.onlineMethod = linkStorageNode.get("online_learning").get("type").asText();
-        else
-            this.onlineMethod = "FORWARD_CLASSIFIER_BINARY";
-        
-        if (linkStorageNode.get("online_learning") != null &&
-            linkStorageNode.get("online_learning").get("type") != null)
-            this.learningLimit = linkStorageNode.get("online_learning").get("learning_limit").asInt();
-        else
-            this.learningLimit = 500;
-        
-        
-        if (linkStorageNode.get("link_selector") != null)
-            this.linkSelector = linkStorageNode.get("link_selector").asText();
-        else
-            this.linkSelector = "TopkLinkSelector";
-        
-        
-        // FIXME
-        this.targetStorageDirectory = "data_target/";
-        this.linkDirectory = "data_url/dir";
-        this.backSurferConfig = null;
-        this.biparitieGraphRepConfig = null;
-
+        objectMapper.readerForUpdating(this).readValue(config);
+        this.serverConfig = StorageConfig.create(config, "link_storage.server.");
     }
-    
+
     public int getMaxPagesPerDomain() {
         return maxPagesPerDomain;
     }

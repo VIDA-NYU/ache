@@ -3,6 +3,7 @@ package focusedCrawler.config;
 import java.io.File;
 import java.io.IOException;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
@@ -12,6 +13,10 @@ import focusedCrawler.link.LinkStorageConfig;
 public class ConfigService {
 
     private static final ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
+    static {
+        yamlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    }
+    
     private JsonNode config;
     
     public ConfigService(String configFile) throws IOException {

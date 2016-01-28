@@ -1,107 +1,122 @@
+##################### ACHE Configuration Example #####################
+
 #
 # Configurations for Target Storage
 #
-target_storage:
-  # Uses a classifier to collect pages in topics, domains etc.
-  use_classifier: false
-  # Change to false if don't want to store pages classified as irrelevant
-  store_negative_pages: false
-  # Configuration for data format used to store crawled data
-  data_format:
-    # Enable this config to use plain files as data format 
-    #type: FILE
-    # Enable this config to use CBOR as data format
-    #type: CBOR
-    # Enable this config to use ElasticSearch for target storage
-    type: elasticsearch
-    parameters: 
-      host: elasticsearch.localhost
-      port: 9999
-      cluster_name: elasticsearch-test
 
-  # Configuration for metrics of target storage
-  monitor:
-    # Enable this to configure frequency for all metrics
-    #sync: true
-    #frequency: 100
+# Uses a classifier to collect pages in topics, domains etc.
+target_storage.use_classifier: false
+# Change to false if don't want to store pages classified as irrelevant
+target_storage.store_negative_pages: false
 
-    # Enable this to configure different frequencies for each type of info
-    sync: false
-    frequency_crawled: 123
-    frequency_relevant: 234
-    frequency_harvest_info: 345
+# Configuration for data format used to store crawled data
 
-  # Performs hard focus or soft focus. When hard focus is enabled,
-  # the crawler only follows links from pages classified as relevant
-  hard_focus: false
+#target_storage.data_format:
 
-  # Run bipartite crawler 
-  bipartite: true
+# Enable this change target storage's data format 
+#target_storage.data_format.type: FILESYSTEM_HTML
+#target_storage.data_format.type: FILESYSTEM_CBOR
+#target_storage.data_format.type: FILESYSTEM_JSON
 
-  # Relevance threshold for classified pages. Pages with probability of being 
-  # relevant above this threshold are considered relevant
-  relevance_threshold: 0.6
+# Enable this to name files using a hash instead of encoded URL
+#target_storage.data_format.filesystem.hash_file_name: true
 
-  # Maximum number of pages to visit
-  visited_page_limit:  12345
+# Enable this to compress the file content
+#target_storage.data_format.filesystem.compress_data: true
 
-  # Store only pages that contain english text using language detector
-  english_language_detection_enabled: false
+# Enable this config to use ElasticSearch for target storage
+target_storage.data_format.type: ELASTICSEARCH
+target_storage.data_format.elasticsearch.host: elasticsearch.localhost
+target_storage.data_format.elasticsearch.port: 9999
+target_storage.data_format.elasticsearch.cluster_name: elasticsearch-test
 
-  # Configurations for target storage's server
-  server:
-    host: targetstorage.localhost
-    port: 19876
+# Configuration for target storage's metrics monitor 
+
+# Enable this to configure frequency for all metrics
+#target_storage.monitor.sync: true
+#target_storage.monitor.frequency: 100
+
+# Enable this to configure different frequencies for each type of info
+target_storage.monitor.sync: false
+target_storage.monitor.frequency_crawled: 123
+target_storage.monitor.frequency_relevant: 234
+target_storage.monitor.frequency_harvest_info: 345
+
+# Performs hard focus or soft focus. When hard focus is enabled,
+# the crawler only follows links from pages classified as relevant
+target_storage.hard_focus: false
+
+# Run bipartite crawler 
+target_storage.bipartite: true
+
+# Relevance threshold for classified pages. Pages with probability of being 
+# relevant above this threshold are considered relevant
+target_storage.relevance_threshold: 0.6
+
+# Maximum number of pages to visit
+target_storage.visited_page_limit: 12345
+
+# Store only pages that contain english text using language detector
+target_storage.english_language_detection_enabled: false
+
+# Configurations for target storage's server
+target_storage.server.host: targetstorage.localhost
+target_storage.server.port : 19876
 
 #
 # Configurations for Link Storage
 #
-link_storage:
 
-  # Max number of pages to be crawled from each web domain
-  max_pages_per_domain: 222 # MAX_PAGES_PER_DOMAIN 100
+# Max number of pages to be crawled from each web domain
+link_storage.max_pages_per_domain: 222 # MAX_PAGES_PER_DOMAIN 100
 
-  link_strategy:
-    # Restricts the crawler to crawl the websites provided as seeds
-    use_scope: true # USE_SCOPE FALSE
-    # Allows the crawler to follow forward links
-    outlinks: false # GRAB_LINKS TRUE
-    # Gets backlinks of the pages from a search engine used by the bipartite crawling
-    backlinks: true # SAVE_BACKLINKS FALSE
+# Restricts the crawler to crawl the websites provided as seeds
+link_storage.link_strategy.use_scope: true # USE_SCOPE FALSE
+# Allows the crawler to follow forward links
+link_storage.link_strategy.outlinks: false # GRAB_LINKS TRUE
+# Gets backlinks of the pages from a search engine used by the bipartite crawling
+link_storage.link_strategy.backlinks: true # SAVE_BACKLINKS FALSE
 
-  # Type of classifier used by link storage
-  # - LinkClassifierBaseline: random link strategy when no page classifier is provided, or Soumen's baseline strategy when a page classifier is provided
-  # - LinkClassifierImpl: link strategy using a link classifier
-  # - LinkClassifierAuthority: link strategy for the bipartite crawling
-  link_classifier:
-    type: LinkClassifierImpl
-    parameters:
-      # Class values used by link classifer
-      class_values: ["0", "1", "2"] #CLASS_VALUES 0 1 2
+# Type of link classifier used by link storage
+# - LinkClassifierBaseline: random link strategy when no page classifier is provided, or Soumen's baseline strategy when a page classifier is provided
+# - LinkClassifierImpl: link strategy using a link classifier
+# - LinkClassifierAuthority: link strategy for the bipartite crawling
 
-  online_learning:
-    # Retrain link classifiers on-the-fly
-    enabled: false
-    # Type of online learning (FORWARD_CLASSIFIER_BINARY,FORWARD_CLASSIFIER_BINARY)
-    # - FORWARD_CLASSIFIER_BINARY: pos/neg link classifier
-    # - FORWARD_CLASSIFIER_LEVELS: contextual graph with 3 levels
-    type: FORWARD_CLASSIFIER_BINARY
-    # Learn iteration criterion (every n pages runs online learning)
-    learning_limit: 555
+link_storage.link_classifier.type: LinkClassifierImpl
+link_storage.link_classifier.parameters.class_values: ["0", "1", "2"] #CLASS_VALUES 0 1 2
 
-  # Types of LinkSelectors available:
-  # - TopkLinkSelector
-  # - SiteLinkSelector
-  # - RandomLinkSelector
-  # - NonRandomLinkSelector
-  # - MultiLevelLinkSelector
-  # - TopicLinkSelector
-  link_selector: TopkLinkSelector
+# Retrain link classifiers on-the-fly
+link_storage.online_learning.enabled: false
 
-  max_size_link_queue: 111111 # MAX_SIZE_LINK_QUEUE 100000
-  max_size_cache_urls: 222222 # MAX_CACHE_URLS_SIZE 200000
+# Type of online learning (FORWARD_CLASSIFIER_BINARY,FORWARD_CLASSIFIER_BINARY)
+# - FORWARD_CLASSIFIER_BINARY: pos/neg link classifier
+# - FORWARD_CLASSIFIER_LEVELS: contextual graph with 3 levels
+link_storage.online_learning.type: FORWARD_CLASSIFIER_BINARY
 
-  # Configurations for link storage's server
-  server:
-    host: linkstorage.localhost # RMI_STORAGE_SERVER_HOST localhost
-    port: 19888 # RMI_STORAGE_SERVER_PORT 1988
+# Learn iteration criterion (every n pages runs online learning)
+link_storage.online_learning.learning_limit: 555
+
+# Types of LinkSelectors available:
+# - TopkLinkSelector
+# - SiteLinkSelector
+# - RandomLinkSelector
+# - NonRandomLinkSelector
+# - MultiLevelLinkSelector
+# - TopicLinkSelector
+link_storage.link_selector: TopkLinkSelector
+
+link_storage.max_size_link_queue: 111111 # MAX_SIZE_LINK_QUEUE 100000
+link_storage.max_size_cache_urls: 222222 # MAX_CACHE_URLS_SIZE 200000
+
+# Configurations for link storage's server
+link_storage.server.host: linkstorage.localhost # RMI_STORAGE_SERVER_HOST localhost
+link_storage.server.port: 19888 # RMI_STORAGE_SERVER_PORT 1988
+
+# Directory to store link storage's frontier database
+link_storage.directory: "data_url/dir"
+
+# Backlink surfer parameters
+link_storage.backsurfer.pattern_ini: ",\"uu\":"
+link_storage.backsurfer.pattern_end: "\"}"
+link_storage.backsurfer.pattern_ini_title: ",\"ut\":\""
+link_storage.backsurfer.pattern_end_title: "\",\"uu\":"
