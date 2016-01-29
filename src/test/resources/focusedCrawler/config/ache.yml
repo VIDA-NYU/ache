@@ -11,8 +11,6 @@ target_storage.store_negative_pages: false
 
 # Configuration for data format used to store crawled data
 
-#target_storage.data_format:
-
 # Enable this change target storage's data format 
 #target_storage.data_format.type: FILESYSTEM_HTML
 #target_storage.data_format.type: FILESYSTEM_CBOR
