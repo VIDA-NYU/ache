@@ -3,5 +3,8 @@ language: java
 env:
   - TERM=dumb
 
+script:
+ - ./gradlew check --info
+
 after_success:
 - ./gradlew jacocoTestReport coveralls
