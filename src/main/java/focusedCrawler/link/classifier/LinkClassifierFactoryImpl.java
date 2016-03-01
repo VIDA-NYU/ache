@@ -33,10 +33,7 @@ import weka.core.Instances;
 import weka.classifiers.Classifier;
 
 import java.io.IOException;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
+import java.nio.file.Paths;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,12 +53,13 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
     
     private static final Logger logger = LoggerFactory.getLogger(LinkClassifierFactoryImpl.class);
 
-  private ParameterFile config;
   
   private static StopList stoplist;
 
-  public LinkClassifierFactoryImpl(String stoplistFile, ParameterFile linkStorageConfig) {
-    this.config = linkStorageConfig;
+  private String modelPath;
+
+  public LinkClassifierFactoryImpl(String stoplistFile, String modelPath) {
+    this.modelPath = modelPath;
     try {
 		stoplist = new StopListArquivo(stoplistFile);
 	} catch (IOException e) {
@@ -94,10 +92,17 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
 
   public LinkClassifier setClassifier(String className) throws IOException, ClassNotFoundException{
 	  LinkClassifier linkClassifier = null;
+	  
+	  String featureFilePath = Paths.get(modelPath, "linkclassifier.features").toString();
+	  String modelFilePath   = Paths.get(modelPath, "linkclassifier.model").toString();
+	  
       if(className.indexOf("LinkClassifierBreadthSearch") != -1){
-    	  String[] attributes = config.getParam("ATTRIBUTES", " ");
-    	  WrapperNeighborhoodLinks wrapper = loadWrapper(attributes);
-    	  linkClassifier= new LinkClassifierBreadthSearch(wrapper,attributes);
+          ParameterFile config = new ParameterFile(featureFilePath); 
+          String[] attributes = config.getParam("ATTRIBUTES", " ");
+          
+          WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
+          wrapper.setFeatures(attributes);
+          linkClassifier= new LinkClassifierBreadthSearch(wrapper,attributes);
       }
       if(className.indexOf("LinkClassifierBaseline") != -1){
     	  linkClassifier= new LinkClassifierBaseline();
@@ -109,24 +114,8 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
 		  linkClassifier = new LinkClassifierAuthority();
 	  }
 	  if(className.indexOf("LinkClassifierImpl") != -1){
-    	  String[] attributes = config.getParam("ATTRIBUTES", " ");
-    	  WrapperNeighborhoodLinks wrapper = loadWrapper(attributes);
-		  String[] classValues = config.getParam("CLASS_VALUES", " ");
-    	  weka.core.FastVector vectorAtt = new weka.core.FastVector();
-    	  for (int i = 0; i < attributes.length; i++) {
-    		  vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
-    	  }
-    	  weka.core.FastVector classAtt = new weka.core.FastVector();
-    	  for (int i = 0; i < classValues.length; i++) {
-    		  classAtt.addElement(classValues[i]);
-    	  }
-    	  vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
-    	  Instances insts = new Instances("link_classification", vectorAtt, 1);
-    	  System.out.println("SIZE" + attributes.length);
-    	  insts.setClassIndex(attributes.length);
-    	  Classifier classifier = loadClassifier();
-    	  LNClassifier lnClassifier = new LNClassifier(classifier, insts, wrapper, attributes);
-    	  linkClassifier = new LinkClassifierImpl(lnClassifier,config.getParamInt("LEVEL"));  
+    	  LNClassifier lnClassifier = LNClassifier.create(featureFilePath, modelFilePath, stoplist);
+    	  linkClassifier = new LinkClassifierImpl(lnClassifier);  
       }
 	  if(className.indexOf("MaxDepthLinkClassifier") != -1){
 	      linkClassifier = new MaxDepthLinkClassifier(1);
@@ -134,30 +123,16 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
 	  return linkClassifier;  
   }
   
-  public static WrapperNeighborhoodLinks loadWrapper(String[] attributes) throws IOException{
-	  
+  public static WrapperNeighborhoodLinks loadWrapper(String[] attributes, StopList stoplist) {
       WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
       wrapper.setFeatures(attributes);
       return wrapper;
   }
   
-  private Classifier loadClassifier() throws IOException, ClassNotFoundException{
-	  InputStream is = null;
-	  try {
-		  is = new FileInputStream(config.getParam("FILE_CLASSIFIER"));
-	  }
-	  catch (FileNotFoundException ex1) {
-		  ex1.printStackTrace();
-	  }
-	  ObjectInputStream objectInputStream = new ObjectInputStream(is);
-	  Classifier classifier = (Classifier) objectInputStream.readObject();
-	  objectInputStream.close();
-	  return classifier;
-  }
   
   public static LinkClassifier createLinkClassifierImpl(String[] attributes, String[] classValues, Classifier classifier, String className, int levels) throws IOException {
 	  LinkClassifier linkClassifier = null;
-	  WrapperNeighborhoodLinks wrapper = loadWrapper(attributes);
+	  WrapperNeighborhoodLinks wrapper = loadWrapper(attributes, stoplist);
 	  weka.core.FastVector vectorAtt = new weka.core.FastVector();
 	  for (int i = 0; i < attributes.length; i++) {
 		  vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
@@ -168,11 +143,10 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
 	  }
 	  vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
 	  Instances insts = new Instances("link_classification", vectorAtt, 1);
-	  System.out.println("SIZE" + attributes.length);
 	  insts.setClassIndex(attributes.length);
 	  if(className.indexOf("LinkClassifierImpl") != -1){
 		  LNClassifier lnClassifier = new LNClassifier(classifier, insts, wrapper, attributes);
-		  linkClassifier = new LinkClassifierImpl(lnClassifier,3);
+		  linkClassifier = new LinkClassifierImpl(lnClassifier);
 	  }
 	  if(className.indexOf("LinkClassifierAuthority") != -1){
 		  linkClassifier = new LinkClassifierAuthority(classifier, insts, wrapper,attributes);

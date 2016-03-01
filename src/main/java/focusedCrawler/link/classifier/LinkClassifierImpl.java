@@ -50,7 +50,7 @@ public class LinkClassifierImpl implements LinkClassifier{
 	private int intervalRandom = 100;
 	private LNClassifier lnClassifier;
 
-	public LinkClassifierImpl(LNClassifier lnClassifier, int level) {
+	public LinkClassifierImpl(LNClassifier lnClassifier) {
 		this.weights = new int[]{2,1,0};
 		this.lnClassifier = lnClassifier;
 	}

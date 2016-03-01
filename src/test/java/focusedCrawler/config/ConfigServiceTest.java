@@ -10,6 +10,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import focusedCrawler.crawler.CrawlerManagerConfig;
 import focusedCrawler.link.LinkStorageConfig;
 
 public class ConfigServiceTest {
@@ -92,6 +93,29 @@ public class ConfigServiceTest {
         assertThat(config.getStorageServerConfig(), is(notNullValue()));
         assertThat(config.getStorageServerConfig().getHost(), is("linkstorage.localhost"));
         assertThat(config.getStorageServerConfig().getPort(), is(19888));
+    }
+    
+    @Test
+    public void shouldReadCrawlerManagerConfig() throws IOException {
+        // given
+        ConfigService configService = new ConfigService(configFilePath);
+        
+        // when
+        CrawlerManagerConfig config = configService.getCrawlerManagerConfig();
+        
+        // then
+        assertThat(config, is(notNullValue()));
+        
+        assertThat(config.getRobotThreadGroup(), is("crawler_group_test"));
+        assertThat(config.getRobotManagerRestingTime(), is(11111L));
+        assertThat(config.getRobotManagerSleepCheckTime(), is(11111L));
+        assertThat(config.getRobotManagerMaxTime(), is(11111L));
+        
+        assertThat(config.getRobotManagerRobotErrorTime(), is(222222L));
+        assertThat(config.getRobotManagerRobotThreadFactor(), is(222222));
+        assertThat(config.getRobotQuantity(), is(222222));
+        assertThat(config.getDownloaderMaxBlockedThreads(), is(222222L));
+        
     }
 
 }

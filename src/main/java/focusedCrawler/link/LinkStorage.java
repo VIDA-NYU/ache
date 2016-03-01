@@ -41,10 +41,8 @@ import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.util.Page;
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.SimpleWrapper;
 import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
@@ -185,36 +183,32 @@ public class LinkStorage extends StorageDefault{
         }
     }
 
-    public static void main(String[] args) throws FrontierPersistentException {
-
+    public static void runServer(String configPath, String seedFilePath,
+                                 String dataOutputPath, String modelPath,
+                                 LinkStorageConfig config)
+                                 throws FrontierPersistentException {
         try {
-            String configPath = args[0];
-            String seedFile = args[1];
-            String dataPath = args[2];
+            Storage linkStorage = createLinkStorage(configPath, seedFilePath,
+                                                    dataOutputPath, modelPath,
+                                                    config);
 
-            String linkConfigFile = configPath + "/link_storage/link_storage.cfg";
-            ParameterFile config = new ParameterFile(linkConfigFile);
-
-            Storage linkStorage = createLinkStorage(configPath, seedFile, dataPath, config);
-
-            StorageBinder binder = new StorageBinder(new StorageConfig(config));
+            StorageBinder binder = new StorageBinder(config.getStorageServerConfig());
             binder.bind(linkStorage);
         } catch (Exception e) {
             logger.error("Problem while starting LinkStorage.", e);
         }
     }
     
-    public static Storage createLinkStorage(String configPath, String seedFile,
-                                            String dataPath, ParameterFile params)
+    public static Storage createLinkStorage(String configPath, String seedFile, 
+                                            String dataPath, String modelPath,
+                                            LinkStorageConfig config)
                                             throws LinkClassifierFactoryException,
                                                    FrontierPersistentException,
                                                    IOException {
 
         String stoplistFile = configPath + "/stoplist.txt";
         
-        LinkStorageConfig config = new LinkStorageConfig(params);
-        
-        LinkClassifierFactory linkClassifierFactory = new LinkClassifierFactoryImpl(stoplistFile, params);
+        LinkClassifierFactory linkClassifierFactory = new LinkClassifierFactoryImpl(stoplistFile, modelPath);
         LinkClassifier linkClassifier = linkClassifierFactory.createLinkClassifier(config.getTypeOfClassifier());
 
         FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, seedFile, stoplistFile);
