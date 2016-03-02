@@ -76,9 +76,14 @@ After you generate a model, you need to prepare the seed file, where each line i
 
 ACHE can store data in different data formats. The data format can be configured by changing the key `DATA_FORMAT` in the [target storage configuration file] (https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/target_storage/target_storage.cfg). The data formats available now are:
 
-- FILE (default) -- only raw content is stored in plain text files.
-- CBOR -- raw content and some metadata is stored using [CBOR](http://cbor.io) format in files.
-- ELATICSEARCH -- raw content and metadata is indexed in an ElasticSearch index. See [ElasticSearch Integration](https://github.com/ViDA-NYU/ache/wiki/ElasticSearch-Integration) for details about configuration.
+- FILESYSTEM_HTML (default) - only raw content is stored in plain text files.
+- FILESYSTEM_JSON - raw content and some metadata is stored using JSON format in files.
+- FILESYSTEM_CBOR - raw content and some metadata is stored using [CBOR](http://cbor.io) format in files.
+- ELATICSEARCH - raw content and metadata is indexed in an ElasticSearch index. See [ElasticSearch Integration](https://github.com/ViDA-NYU/ache/wiki/ElasticSearch-Integration) for details about configuration.
+ 
+When using any FILESYSTEM_* data format, you can enable compression of the data stored in the files adding the following line to the target storage's config file:
+
+    COMPRESS_DATA true
 
 ## More information?
 
