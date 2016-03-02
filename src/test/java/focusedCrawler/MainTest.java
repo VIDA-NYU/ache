@@ -9,59 +9,47 @@ import java.net.URLDecoder;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TemporaryFolder;
 
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.util.Page;
 
 public class MainTest {
+    
+    @Rule
+    public TemporaryFolder tempFolder = new TemporaryFolder();
 
     @Test
     public void wekaFeaturesFileShouldBeGeneratedInTheProperFormat() throws Exception {
-
-        String stopList = "config/sample_config/stoplist.txt";
-        String trainingPath = "config/sample_training_data";
-        String mainOutput = "config/test_model_output_main";
         
-        new File(mainOutput).mkdir();
-
-        String[] args = { "buildModel", "-c", stopList, "-t", trainingPath, "-o", mainOutput };
+        String stopList     = "config/sample_config/stoplist.txt";
+        String trainingPath = MainTest.class.getResource("sample_training_data").getFile();
+        String modelPath    = tempFolder.newFolder().toString();
+        
+        // Train a page classifier model
+        String[] args = { "buildModel", "-c", stopList, "-t", trainingPath, "-o", modelPath };
         Main.main(args);
 
-        File[] allPositivePages = (new File("config/sample_training_data/positive")).listFiles();
-        File[] allNegativePages = (new File("config/sample_training_data/negative")).listFiles();
-
-        if (allPositivePages.length > 0 && allNegativePages.length > 0) {
-            
-            String positiveFileName = allPositivePages[0].getName();
-            String negativeFileName = allNegativePages[0].getName();
-            
-            Page sampleNegativePage = readPageFromFile(allNegativePages[0], negativeFileName);
-            Page samplePositivePage = readPageFromFile(allPositivePages[0], positiveFileName);
-
-            String modelPath = mainOutput;
-            String stopWordsFile = "config/sample_config/stoplist.txt";
-
-            TargetClassifier tc = TargetClassifierFactory.create(modelPath, 0.9, stopWordsFile);
-            
-            assertThat(tc.classify(samplePositivePage).isRelevant(), is(true));
-            assertThat(tc.classify(sampleNegativePage).isRelevant(), is(false));
-            
-            deleteTestFiles(mainOutput);
-        }
+        // Load model trained
+        TargetClassifier tc = TargetClassifierFactory.create(modelPath, 0.9, stopList);
+        
+        // Classify one example from training data just for sanity check
+        Page samplePositivePage = readOnePageFromFolder(trainingPath+"/positive");
+        Page sampleNegativePage = readOnePageFromFolder(trainingPath+"/negative");
+        assertThat(tc.classify(samplePositivePage).isRelevant(), is(true));
+        assertThat(tc.classify(sampleNegativePage).isRelevant(), is(false));
     }
 
-    private Page readPageFromFile(File file, String encodedUrl) throws Exception {
-        String fileContent = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())));
-        return new Page(new URL(URLDecoder.decode(encodedUrl, "UTF-8")), fileContent);
-    }
-
-    private void deleteTestFiles(String mainOutput) {
-        (new File(mainOutput + File.separator + "pageclassifier.features")).delete();
-        (new File(mainOutput + File.separator + "pageclassifier.model")).delete();
-        (new File(mainOutput)).delete();
-
+    private Page readOnePageFromFolder(String positiveFolder) throws Exception {
+        File[] allPositivePages = (new File(positiveFolder)).listFiles();
+        assertThat(allPositivePages.length, is(6));
+        String positiveFileName = allPositivePages[0].getName();
+        String fileContent = new String(Files.readAllBytes(Paths.get(allPositivePages[0].getAbsolutePath())));
+        Page samplePositivePage = new Page(new URL(URLDecoder.decode(positiveFileName, "UTF-8")), fileContent);
+        return samplePositivePage;
     }
 
 }
