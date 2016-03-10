@@ -51,7 +51,7 @@ To focus on a certain topic ACHE needs to have a page classifier to decide, give
 
 Example of building a page classifier using test data:
 
-    ./build/install/ache/bin/ache  -c config/sample_config/stoplist.txt -o model_output -t config/sample_training_data
+    ./build/install/ache/bin/ache buildModel -c config/sample_config/stoplist.txt -o model_output -t config/sample_training_data
 
 ## Start ACHE
 
@@ -74,16 +74,16 @@ After you generate a model, you need to prepare the seed file, where each line i
 
 ## Data Formats
 
-ACHE can store data in different data formats. The data format can be configured by changing the key `DATA_FORMAT` in the [target storage configuration file] (https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/target_storage/target_storage.cfg). The data formats available now are:
+ACHE can store data in different data formats. The data format can be configured by changing the key `target_storage.data_format.type` in the [configuration file] (https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/ache.yml). The data formats available now are:
 
 - FILESYSTEM_HTML (default) - only raw content is stored in plain text files.
 - FILESYSTEM_JSON - raw content and some metadata is stored using JSON format in files.
 - FILESYSTEM_CBOR - raw content and some metadata is stored using [CBOR](http://cbor.io) format in files.
 - ELATICSEARCH - raw content and metadata is indexed in an ElasticSearch index. See [ElasticSearch Integration](https://github.com/ViDA-NYU/ache/wiki/ElasticSearch-Integration) for details about configuration.
  
-When using any FILESYSTEM_* data format, you can enable compression of the data stored in the files adding the following line to the target storage's config file:
+When using any FILESYSTEM_* data format, you can enable compression of the data stored in the files enabling the following line in the config file:
 
-    COMPRESS_DATA true
+    target_storage.data_format.filesystem.compress_data: true
 
 ## More information?
 
