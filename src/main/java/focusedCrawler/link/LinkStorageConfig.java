@@ -25,13 +25,30 @@ public class LinkStorageConfig {
         @JsonProperty("link_storage.backsurfer.pattern_end_title")
         private String patternEndTitle = "\",\"uu\":";
 
+        @JsonProperty("link_storage.backsurfer.moz.access_id")
+        private String mozAccessId = "";
+        
+        @JsonProperty("link_storage.backsurfer.moz.secret_key")
+        private String mozKey = "";
+        
         public BackSurferConfig() { }
         
+
         public BackSurferConfig(ParameterFile params) {
             patternIni = params.getParam("PATTERN_INI");
             patternEnd = params.getParam("PATTERN_END");
             patternIniTitle = params.getParam("PATTERN_INI_TITLE");
             patternEndTitle = params.getParam("PATTERN_END_TITLE");
+            mozAccessId = params.getParam("MOZ_ACCESS_ID");
+            mozKey = params.getParam("MOZ_KEY");
+        }
+        
+        public String getMozAccessId() {
+            return mozAccessId;
+        }
+        
+        public String getMozKey() {
+            return mozKey;
         }
 
         public String getPatternIni() {

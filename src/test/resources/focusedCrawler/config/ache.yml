@@ -119,6 +119,9 @@ link_storage.backsurfer.pattern_end: "\"}"
 link_storage.backsurfer.pattern_ini_title: ",\"ut\":\""
 link_storage.backsurfer.pattern_end_title: "\",\"uu\":"
 
+#link_storage.backsurfer.moz.access_id: mozscape-xxxxxxxxxx
+#link_storage.backsurfer.moz.secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 #
 # Configurations for Crawler Manager
 #
