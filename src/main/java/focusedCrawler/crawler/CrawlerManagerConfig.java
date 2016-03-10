@@ -1,17 +1,31 @@
 package focusedCrawler.crawler;
 
+import java.io.IOException;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import focusedCrawler.util.ParameterFile;
 
 public class CrawlerManagerConfig {
     
-    private final String robotThreadGroup;
-    private final int robotQuantity;
-    private final long robotManagerRestingTime;
-    private final long robotManagerCheckTime;
-    private final long robotManagerMaxTime;
-    private final long robotManagerRobotErrorSleepTime;
-    private final int robotManagerRobotThreadFactor;
-    private final long downloaderMaxBlockedThreads;
+    @JsonProperty("crawler_manager.robot_mananger.thread_group")
+    private String robotThreadGroup = "crawler_group";
+    @JsonProperty("crawler_manager.robot_mananger.resting_time")
+    private long robotManagerRestingTime = 10;
+    @JsonProperty("crawler_manager.robot_mananger.quantity")
+    private int robotQuantity = 5;
+    @JsonProperty("crawler_manager.robot_mananger.check_time")
+    private long robotManagerCheckTime = 30000;
+    @JsonProperty("crawler_manager.robot_mananger.max_time")
+    private long robotManagerMaxTime = 30000;
+    @JsonProperty("crawler_manager.robot_mananger.robot_error_sleep_time")
+    private long robotManagerRobotErrorSleepTime = 5000;
+    @JsonProperty("crawler_manager.robot_mananger.thread_factor")
+    private int robotManagerRobotThreadFactor = 10;
+    @JsonProperty("crawler_manager.downloader.max_blocked_threads")
+    private long downloaderMaxBlockedThreads = 20000000;
     
     public CrawlerManagerConfig(String filename) {
         ParameterFile params = new ParameterFile(filename);
@@ -25,6 +39,10 @@ public class CrawlerManagerConfig {
         this.downloaderMaxBlockedThreads = params.getParamLongOrDefault("DOWNLOADER_MAX_BLOCKED_THREADS", 20000000);
     }
     
+    public CrawlerManagerConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
+        objectMapper.readerForUpdating(this).readValue(config);
+    }
+
     public String getRobotThreadGroup() {
         return robotThreadGroup;
     }

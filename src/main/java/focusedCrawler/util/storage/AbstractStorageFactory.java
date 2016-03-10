@@ -23,28 +23,26 @@
  */
 package focusedCrawler.util.storage;
 
-import focusedCrawler.util.ParameterFile;
-
 /**
  * Fabrica de StorageRemoteAdapter
  */
 public abstract class AbstractStorageFactory implements StorageFactory {
 
-	private ParameterFile config;
+	private StorageConfig config;
 
 	public AbstractStorageFactory() {
 		super();
 	}
 
-	public AbstractStorageFactory(ParameterFile config) {
+	public AbstractStorageFactory(StorageConfig config) {
 		setConfig(config);
 	}
 
-	public ParameterFile getConfig() {
+	public StorageConfig getConfig() {
 		return config;
 	} // getConfig
 
-	public void setConfig(ParameterFile newConfig) {
+	public void setConfig(StorageConfig newConfig) {
 		this.config = newConfig;
 	} // setConfig
 

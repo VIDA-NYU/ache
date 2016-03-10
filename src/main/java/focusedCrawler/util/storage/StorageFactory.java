@@ -23,34 +23,17 @@
 */
 package focusedCrawler.util.storage;
 
-
-
-import focusedCrawler.util.ParameterFile;
-
-
 public interface StorageFactory {
 
-
-
     /**
-
      * Produce a storage
-
      * @return a storage
-
      */
-
     Storage produce() throws StorageFactoryException;
 
+    StorageConfig getConfig();
 
-
-    ParameterFile getConfig();
-
-
-
-    void setConfig(ParameterFile newConfig);
-
-
+    void setConfig(StorageConfig newConfig);
 
 } //StorageFactory
 

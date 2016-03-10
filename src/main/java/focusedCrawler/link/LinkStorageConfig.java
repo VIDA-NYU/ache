@@ -1,21 +1,54 @@
 package focusedCrawler.link;
 
+import java.io.IOException;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import focusedCrawler.util.ParameterFile;
+import focusedCrawler.util.storage.StorageConfig;
 
 public class LinkStorageConfig {
 
     public static class BackSurferConfig {
+        
+        @JsonProperty("link_storage.backsurfer.pattern_ini")
+        private String patternIni = ",\"uu\":";
+        
+        @JsonProperty("link_storage.backsurfer.pattern_end")
+        private String patternEnd = "\"}";
+        
+        @JsonProperty("link_storage.backsurfer.pattern_ini_title")
+        private String patternIniTitle = ",\"ut\":\"";
+        
+        @JsonProperty("link_storage.backsurfer.pattern_end_title")
+        private String patternEndTitle = "\",\"uu\":";
 
-        private final String patternIni;
-        private final String patternEnd;
-        private final String patternIniTitle;
-        private final String patternEndTitle;
+        @JsonProperty("link_storage.backsurfer.moz.access_id")
+        private String mozAccessId = "";
+        
+        @JsonProperty("link_storage.backsurfer.moz.secret_key")
+        private String mozKey = "";
+        
+        public BackSurferConfig() { }
+        
 
         public BackSurferConfig(ParameterFile params) {
             patternIni = params.getParam("PATTERN_INI");
             patternEnd = params.getParam("PATTERN_END");
             patternIniTitle = params.getParam("PATTERN_INI_TITLE");
             patternEndTitle = params.getParam("PATTERN_END_TITLE");
+            mozAccessId = params.getParam("MOZ_ACCESS_ID");
+            mozKey = params.getParam("MOZ_KEY");
+        }
+        
+        public String getMozAccessId() {
+            return mozAccessId;
+        }
+        
+        public String getMozKey() {
+            return mozKey;
         }
 
         public String getPatternIni() {
@@ -38,11 +71,13 @@ public class LinkStorageConfig {
     
     public static class BiparitieGraphRepConfig {
         
-        private final String authGraphDirectory;
-        private final String urlIdDirectory;
-        private final String authIdDirectory;
-        private final String hubIdDirectory;
-        private final String hubGraphDirectory;
+        private String authGraphDirectory = "data_backlinks/auth_graph";
+        private String urlIdDirectory = "data_backlinks/url";
+        private String authIdDirectory = "data_backlinks/auth_id";
+        private String hubIdDirectory = "data_backlinks/hub_id";
+        private String hubGraphDirectory = "data_backlinks/hub_graph";
+        
+        public BiparitieGraphRepConfig() { }
         
         public BiparitieGraphRepConfig(ParameterFile params) {
             this.authGraphDirectory = params.getParam("AUTH_GRAPH_DIRECTORY");
@@ -74,23 +109,53 @@ public class LinkStorageConfig {
         
     }
     
-    private final int maxPagesPerDomain;
-    private final String typeOfClassifier;
-    private final boolean getOutlinks;
-    private final boolean useScope;
-    private final String linkDirectory;
-    private final int maxCacheUrlsSize;
-    private final int maxSizeLinkQueue;
-    private final boolean getBacklinks;
+    @JsonProperty("link_storage.max_pages_per_domain")
+    private int maxPagesPerDomain = 100;
     
-    private final boolean useOnlineLearning;
-    private final String onlineMethod;
-    private final int learningLimit;
-    private final String targetStorageDirectory;
-    private final String linkSelector;
+    @JsonProperty("link_storage.link_classifier.type")
+    private String typeOfClassifier = "LinkClassifierBaseline";
     
-    private final BackSurferConfig backSurferConfig;
-    private final BiparitieGraphRepConfig biparitieGraphRepConfig;
+    
+    @JsonProperty("link_storage.link_strategy.outlinks")
+    private boolean getOutlinks = true;
+    
+    @JsonProperty("link_storage.link_strategy.use_scope")
+    private boolean useScope = false;
+    
+    
+    @JsonProperty("link_storage.directory")
+    private String linkDirectory = "data_url/dir";
+    
+    @JsonProperty("link_storage.max_size_cache_urls")
+    private int maxCacheUrlsSize = 200000;
+    
+    @JsonProperty("link_storage.max_size_link_queue")
+    private int maxSizeLinkQueue = 100000;
+    
+    @JsonProperty("link_storage.link_strategy.backlinks")
+    private boolean getBacklinks = false;
+    
+    
+    @JsonProperty("link_storage.online_learning.enabled")
+    private boolean useOnlineLearning = false;
+    
+    @JsonProperty("link_storage.online_learning.type")
+    private String onlineMethod = "FORWARD_CLASSIFIER_BINARY";
+    
+    @JsonProperty("link_storage.online_learning.learning_limit")
+    private int learningLimit = 500;
+    
+    
+    @JsonProperty("link_storage.link_selector")
+    private String linkSelector = "TopkLinkSelector";
+    
+    // TODO Remove target storage folder dependency from link storage
+    private String targetStorageDirectory = "data_target/";
+    
+    private BackSurferConfig backSurferConfig = new BackSurferConfig();
+    private BiparitieGraphRepConfig biparitieGraphRepConfig = new BiparitieGraphRepConfig();
+    
+    private final StorageConfig serverConfig;
     
     
     public LinkStorageConfig(ParameterFile params) {
@@ -115,9 +180,15 @@ public class LinkStorageConfig {
         this.targetStorageDirectory = params.getParam("TARGET_STORAGE_DIRECTORY");
         this.linkSelector = params.getParam("LINK_SELECTOR");
         
-        this.biparitieGraphRepConfig = new BiparitieGraphRepConfig(params); 
+        this.biparitieGraphRepConfig = new BiparitieGraphRepConfig(params);
+        this.serverConfig = new StorageConfig(params);
     }
     
+    public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
+        objectMapper.readerForUpdating(this).readValue(config);
+        this.serverConfig = StorageConfig.create(config, "link_storage.server.");
+    }
+
     public int getMaxPagesPerDomain() {
         return maxPagesPerDomain;
     }
@@ -177,5 +248,9 @@ public class LinkStorageConfig {
     public String getLinkSelector() {
         return linkSelector;
     }
-    
+
+    public StorageConfig getStorageServerConfig() {
+        return serverConfig;
+    }
+
 }

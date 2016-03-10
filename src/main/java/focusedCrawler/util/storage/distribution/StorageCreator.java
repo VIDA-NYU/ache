@@ -26,6 +26,7 @@ package focusedCrawler.util.storage.distribution;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.DefaultStorageFactory;
 import focusedCrawler.util.storage.Storage;
+import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageFactory;
 import focusedCrawler.util.storage.StorageFactoryException;
 import focusedCrawler.util.storage.distribution.StorageRemoteAdapterReconnect;
@@ -36,13 +37,9 @@ public class StorageCreator extends DefaultStorageFactory {
         super();
     } //StorageCreator
 
-    public StorageCreator(ParameterFile config) {
+    public StorageCreator(StorageConfig config) {
         super(config);
     } //StorageCreator
-
-    public StorageCreator(ParameterFile config, String newFactoryClassName) {
-        super(config, newFactoryClassName);
-    } //
 
     public Storage produce() throws StorageFactoryException {
         checkFactory();
@@ -54,11 +51,11 @@ public class StorageCreator extends DefaultStorageFactory {
 
         // Setando a quantidade de tentativas para acessar a funcao
 
-        result.setTryNumber(new Integer(getConfig().getParam("STORAGE_TRY_NUMBER")).intValue());
+        result.setTryNumber(getConfig().getTryNumber());
 
         // Setando a espera apos uma falha de comunicacao
 
-        result.setDelayAfterException(new Long(getConfig().getParam("STORAGE_DELAY_AFTER_EXCEPTION")).longValue());
+        result.setDelayAfterException(getConfig().getDelayAfterException());
 
         return result;
     }
@@ -69,7 +66,7 @@ public class StorageCreator extends DefaultStorageFactory {
 
             ParameterFile config = new ParameterFile (args);
 
-            StorageFactory run = new StorageCreator(config);
+            StorageFactory run = new StorageCreator(new StorageConfig(config));
 
             Storage storage = run.produce();
 

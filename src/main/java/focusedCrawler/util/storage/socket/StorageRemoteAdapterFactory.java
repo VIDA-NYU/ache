@@ -23,9 +23,9 @@
  */
 package focusedCrawler.util.storage.socket;
 
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.AbstractStorageFactory;
 import focusedCrawler.util.storage.Storage;
+import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageFactoryException;
 
 /**
@@ -42,13 +42,13 @@ public class StorageRemoteAdapterFactory extends AbstractStorageFactory {
 		super();
 	}
 
-	public StorageRemoteAdapterFactory(ParameterFile config) throws StorageFactoryException {
+	public StorageRemoteAdapterFactory(StorageConfig config) throws StorageFactoryException {
 		super(config);
 	}
 
 	private void initParams() throws StorageFactoryException {
-		remoteHost = getConfig().getParam("RMI_STORAGE_SERVER_HOST").trim();
-		remotePort = new Integer(getConfig().getParam("RMI_STORAGE_SERVER_PORT")).intValue();
+		remoteHost = getConfig().getHost().trim();
+		remotePort = getConfig().getPort();
 	} // initParams
 
 	public synchronized Storage produce() throws StorageFactoryException {

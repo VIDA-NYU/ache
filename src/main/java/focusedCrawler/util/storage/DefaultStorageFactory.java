@@ -28,44 +28,24 @@
  *
 
  */
-
-
-
 package focusedCrawler.util.storage;
 
-
-
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.AbstractStorageFactory;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageFactory;
 import focusedCrawler.util.storage.StorageFactoryException;
 
 
-
-
-
-
-
 /**
-
  *
-
  * @author  Marcelo Fernandes
-
  * @version
-
  */
-
 public class DefaultStorageFactory extends AbstractStorageFactory {
-
-
 
     private StorageFactory factory;
 
     private String factoryClassName;
-
-
 
     public DefaultStorageFactory() {
 
@@ -74,32 +54,13 @@ public class DefaultStorageFactory extends AbstractStorageFactory {
     } //StorageFactory
 
 
-
-    public DefaultStorageFactory(ParameterFile config) {
-
+    public DefaultStorageFactory(StorageConfig config) {
         super(config);
-
     } //StorageFactory
-
-
-
-    public DefaultStorageFactory(ParameterFile config, String newFactoryClassName) {
-
-        super(config);
-
-        factoryClassName = newFactoryClassName;
-
-    } //StorageFactory
-
-
 
     public StorageFactory getFactory() {
-
         return factory;
-
     } //main
-
-
 
     public void checkFactory() throws StorageFactoryException {
 
@@ -113,7 +74,7 @@ public class DefaultStorageFactory extends AbstractStorageFactory {
 
             if ((getConfig() != null) && (factoryClassName == null)) {
 
-                factoryClassName = getConfig().getParam("STORAGE_FACTORY_CLASSNAME");
+                factoryClassName = getConfig().getFactoryClassname();
 
             } //if
 
@@ -147,74 +108,9 @@ public class DefaultStorageFactory extends AbstractStorageFactory {
 
     }
 
-
-
     public Storage produce() throws StorageFactoryException {
-
         checkFactory();
-
         return factory.produce();
-
-    }
-
-
-
-    /**
-
-     * metodo main executavel
-
-     * @param args os argumentos
-
-     */
-
-    public static void main(String args[]) throws focusedCrawler.util.distribution.CommunicationException,
-
-                                                focusedCrawler.util.DetailException, StorageException, StorageFactoryException {
-
-        ParameterFile config = new ParameterFile (args);
-
-        StorageFactory run = new DefaultStorageFactory(config);
-
-        Storage storage = run.produce();
-
-        System.out.println ("storage: " + storage);
-
-        if (args.length > 1) {
-
-            String command = args[1];
-
-            if (command.endsWith("commit")) {
-
-                storage.commit(null);
-
-            } //if
-
-            else if (command.equals("rollback")) {
-
-                storage.rollback(null);
-
-            } //else
-
-            else if (command.equals("finalize")) {
-
-                storage.finalize(null);
-
-            } //else
-
-            else if (command.equals("ping")) {
-
-                storage.ping(null);
-
-            } //else
-
-            else if (command.equals("select")) {
-
-                System.out.println("Select " + args[2] + "=" + storage.select(args[2]));
-
-            } //else
-
-        } //if
-
     }
 
 }

@@ -28,8 +28,9 @@ import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.util.ParameterFile;
+import focusedCrawler.config.ConfigService;
 import focusedCrawler.util.storage.Storage;
+import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageFactoryException;
 import focusedCrawler.util.storage.distribution.StorageCreator;
 
@@ -329,34 +330,25 @@ public class CrawlerManager extends Thread {
 
     }
 
-    public static CrawlerManager createCrawlerManager(String crawlerConfigFile,
+    public static CrawlerManager createCrawlerManager(CrawlerManagerConfig crawlerManagerConfig,
                                                       Storage linkStorage,
                                                       Storage formStorage)
                                                       throws CrawlerManagerException {
         
-        return new CrawlerManager(new CrawlerManagerConfig(crawlerConfigFile),
-                                  linkStorage,
-                                  formStorage);
+        return new CrawlerManager(crawlerManagerConfig, linkStorage, formStorage);
     }
 
-    public static void main(String[] args) throws IOException, NumberFormatException {
-
+    public static void run(ConfigService config) throws IOException, NumberFormatException {
         logger.info("Starting CrawlerManager...");
-
-        String crawlerConfigFile = args[0] + "/crawler/crawler.cfg";
-        String linkConfigFile = args[0] + "/link_storage/link_storage.cfg";
-        String formConfigFile = args[0] + "/target_storage/target_storage.cfg";
-
         try {
+            StorageConfig linkStorageServerConfig = config.getLinkStorageConfig().getStorageServerConfig();
+            Storage linkStorage = new StorageCreator(linkStorageServerConfig).produce();
+            
+            StorageConfig targetServerConfig = config.getTargetStorageConfig().getStorageServerConfig();
+            Storage formStorage = new StorageCreator(targetServerConfig).produce();
 
-            ParameterFile configLinkStorage = new ParameterFile(linkConfigFile);
-            Storage linkStorage = new StorageCreator(configLinkStorage).produce();
-
-            ParameterFile configFormStorage = new ParameterFile(formConfigFile);
-            Storage formStorage = new StorageCreator(configFormStorage).produce();
-
-            CrawlerManager manager = createCrawlerManager(crawlerConfigFile, linkStorage, formStorage);
-
+            CrawlerManager manager = createCrawlerManager(config.getCrawlerManagerConfig(),
+                                                          linkStorage, formStorage);
             manager.start();
 
         } catch (CrawlerManagerException ex) {
