@@ -19,9 +19,7 @@ public class AddSeeds {
         try {
             String linkDirectory = config.getLinkStorageConfig().getLinkDirectory();
             String dir = Paths.get(dataOutputPath, linkDirectory).toString();
-            System.out.println(dir);
             Frontier frontier = new Frontier(dir, 1000);
-
             int count = 0;
 
             logger.info("Adding seeds from file: " + seedFile);
