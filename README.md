@@ -11,7 +11,7 @@ ACHE differs from other crawlers in the sense the it includes **page classifiers
 ACHE also includes **link classifiers**, which allows it decide the best order in which the links should be downloaded in order to find the relevant content on the web as fast as possible, at the same time it doesn't waste resources downloading irrelevant content.
 
 ## Installation
-You can either build `ache` from the source code or download the execution using `conda`
+You can either build ACHE from the source code or download the executable binary using `conda`.
 ### Build from source with Gradle
 
 To build `ache` from source, you can run the following commands in your terminal:
@@ -23,23 +23,21 @@ cd ache
 ```
 
 which will generate an installation package under `/build/install/`.
-
-
 Learn more about Gradle: [http://www.gradle.org/documentation](http://www.gradle.org/documentation).
 
 ### Download with Conda
 
-You can download `ache` from Binstar [[2]] with Conda [[3]] by running:
+If you use the Conda package manager[[2]], you can install `ache` from Anaconda Cloud [[3]] by running:
 
 ```bash
 conda install -c memex ache
 ```
-NOTE: Only tagged versions are published to Binstar, so `ache` from Binstart may be outdated.
+NOTE: Only tagged versions are published to Anaconda Cloud, so the version available through Conda may not be up-to-date.
 If you want to try the most recent version, please clone the repository, compile the code using instructions below and then start the crawler using `ache` located in `build/install/ache/bin`.
   
 ## Build page classifier for ACHE
 
-To focus on a certain topic ACHE needs to have a page classifier to decide, given a new crawled page, whether it is on-topic or not. A page classifier can be created with `ache` given positive and negative examples. Each training example corresponds to a web page whose HTML content needs to be stored in a plain text file. Assume that you store positive and negative examples in two directories, `positive` and `negative`, which reside in `training_data` directory. Here is how you build a model from these examples:
+To focus on a specific topic, ACHE uses a page classifier to decide, given a new crawled page, whether it is on-topic or not. A page classifier can be created with `ache` given positive and negative examples. Each training example corresponds to a web page whose HTML content needs to be stored in a plain text file. Assume that you store positive and negative examples in two directories, `positive` and `negative`, which reside in `training_data` directory. Here is how you build a model from these examples:
 
     ./build/install/ache/bin/ache buildModel -t <training data path> -o <output path for model> -c <stopwords file path>
 
@@ -95,8 +93,8 @@ More documentation is available in the project's [Wiki](https://github.com/ViDA-
 We welcome user feedback. Please submit any suggestions or bug reports using the Github tracker (https://github.com/ViDA-NYU/ache/issues)
 
 [1]: http://en.wikipedia.org/wiki/Focused_crawler
-[2]: https://binstar.org/
-[3]: http://conda.pydata.org/
+[2]: http://conda.pydata.org/
+[3]: https://anaconda.org/
 
 ## Contact?
 
