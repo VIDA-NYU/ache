@@ -1,6 +1,7 @@
 package focusedCrawler.link.classifier;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -13,6 +14,7 @@ import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
 import focusedCrawler.link.classifier.util.Instance;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.LinkNeighborhood;
+import focusedCrawler.util.string.StopList;
 
 public class LNClassifier {
 
@@ -21,7 +23,8 @@ public class LNClassifier {
 	private WrapperNeighborhoodLinks wrapper;
 	private String[] attributes;
 
-	public LNClassifier(Classifier classifier, Instances instances, WrapperNeighborhoodLinks wrapper, String[] attributes) {
+	public LNClassifier(Classifier classifier, Instances instances,
+	                    WrapperNeighborhoodLinks wrapper, String[] attributes) {
 		this.classifier = classifier;
 		this.instances = instances;
 		this.wrapper = wrapper;
@@ -33,63 +36,69 @@ public class LNClassifier {
 		Iterator<String> iter = urlWords.keySet().iterator();
 		String url = iter.next();
 		Instance instance = (Instance)urlWords.get(url);
-//		String[] features = instance.getFeatures();
 		double[] values = instance.getValues();
-//		System.out.println("LN:" + ln.getAnchorString());
-//		for (int i = 0; i < values.length; i++) {
-//			if(values[i] > 0) { 
-//				System.out.print(features[i] + "=" + values[i] + ",");
-//			}
-//		}
-//		System.out.println("");
 		weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
 		instanceWeka.setDataset(instances);
 		double[] probs = classifier.distributionForInstance(instanceWeka);
-//		System.out.println(probs[0]);
 		return probs;
 	}
-
-	public double[] classifyEP(LinkNeighborhood ln) throws Exception {
-		Map<String, Instance> urlWords = wrapper.extractLinksFull(ln, attributes);
-		Iterator<String> iter = urlWords.keySet().iterator();
-		String url = iter.next();
-		Instance instance = (Instance)urlWords.get(url);
-		double[] values = instance.getValues();
-		int index = instance.getValues().length-2;
-		values[index] = ln.getLink().getFile().split("/").length;
-		index++;
-		values[index] = ln.getLink().getFile().length();
-		weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
-		instanceWeka.setDataset(instances);
-		return classifier.distributionForInstance(instanceWeka);
-	}
-
-	public static LNClassifier loadClassifier(String fileName) throws IOException, ClassNotFoundException{
-		ParameterFile config = new ParameterFile(fileName);
-		InputStream is = new FileInputStream(config.getParam("FILE_CLASSIFIER"));
-		ObjectInputStream objectInputStream = new ObjectInputStream(is);
-		Classifier classifier = (Classifier) objectInputStream.readObject();
-		objectInputStream.close();
-		String[] attributes = config.getParam("ATTRIBUTES", " ");
-		System.out.println(attributes.length);
-		weka.core.FastVector vectorAtt = new weka.core.FastVector();
-		for (int i = 0; i < attributes.length; i++) {
-			vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
-		}
-		String[] classValues = config.getParam("CLASS_VALUES", " ");
-		weka.core.FastVector classAtt = new weka.core.FastVector();
-		for (int i = 0; i < classValues.length; i++) {
-			classAtt.addElement(classValues[i]);
-		}
-		vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
-		Instances insts = new Instances("target_classification", vectorAtt, 1);
-		insts.setClassIndex(attributes.length);
-		WrapperNeighborhoodLinks wrapper = LinkClassifierFactoryImpl.loadWrapper(attributes);
-		LNClassifier lnClassifier = new LNClassifier(classifier, insts, wrapper, attributes);
-		return lnClassifier;
-	}
-
-
 	
+	public static LNClassifier create(String featureFilePath,
+	                                  String modelFilePath,
+	                                  StopList stoplist)
+                                      throws ClassNotFoundException,
+                                             IOException {
+	    ParameterFile config = new ParameterFile(featureFilePath); 
+	    String[] attributes = config.getParam("ATTRIBUTES", " ");
+	    String[] classValues = config.getParam("CLASS_VALUES", " ");
+	    return create(attributes, classValues, modelFilePath, stoplist);
+	}
+	
+	public static LNClassifier create(String[] attributes, String[] classValues,
+	                                  String modelFilePath, StopList stoplist)
+                                      throws ClassNotFoundException,
+                                             IOException {
+	    weka.core.FastVector vectorAtt = new weka.core.FastVector();
+	    for (int i = 0; i < attributes.length; i++) {
+	        vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
+	    }
+	    weka.core.FastVector classAtt = new weka.core.FastVector();
+	    for (int i = 0; i < classValues.length; i++) {
+	        classAtt.addElement(classValues[i]);
+	    }
+	    vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
+	    Instances insts = new Instances("link_classification", vectorAtt, 1);
+	    insts.setClassIndex(attributes.length);
+	    
+	    
+	    WrapperNeighborhoodLinks wrapper = loadWrapper(attributes, stoplist);
+	    
+	    Classifier classifier = loadClassifier(modelFilePath);
+	    
+	    return new LNClassifier(classifier, insts, wrapper, attributes);
+	    
+	}
+    
+    public static WrapperNeighborhoodLinks loadWrapper(String[] attributes, StopList stoplist) {
+        WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
+        wrapper.setFeatures(attributes);
+        return wrapper;
+    }
+    
+    private static Classifier loadClassifier(String modelFilePath) 
+            throws IOException, ClassNotFoundException {
+        InputStream is = null;
+        try {
+            is = new FileInputStream(modelFilePath);
+        }
+        catch (FileNotFoundException ex1) {
+            // FIXME
+            ex1.printStackTrace();
+        }
+        ObjectInputStream objectInputStream = new ObjectInputStream(is);
+        Classifier classifier = (Classifier) objectInputStream.readObject();
+        objectInputStream.close();
+        return classifier;
+    }
 	
 }

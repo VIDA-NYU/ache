@@ -8,6 +8,7 @@ import org.apache.commons.cli.MissingArgumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.config.ConfigService;
 import focusedCrawler.config.TargetStorageConfig;
 import focusedCrawler.target.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.classifier.TargetClassifier;
@@ -17,10 +18,10 @@ import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.LangDetection;
 import focusedCrawler.util.Page;
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.dashboard.TargetMonitor;
 import focusedCrawler.util.distribution.CommunicationException;
 import focusedCrawler.util.storage.Storage;
+import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
@@ -120,19 +121,17 @@ public class TargetStorage extends StorageDefault {
         return null;
     }
 
-    public static void run(String configPath, String modelPath, String dataPath, String indexName) {
+    public static void runServer(String configPath, String modelPath, String dataPath, String indexName, ConfigService config) {
         try{
-            Path targetConf = Paths.get(configPath, "/target_storage/target_storage.cfg");
-            ParameterFile targetStorageConfig = new ParameterFile(targetConf.toFile());
             
-            Path linkConf = Paths.get(configPath, "/link_storage/link_storage.cfg");
-            ParameterFile linkStorageConfig = new ParameterFile(linkConf.toFile());
+            TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
             
+            StorageConfig linkStorageConfig = config.getLinkStorageConfig().getStorageServerConfig();
             Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
             
             Storage targetStorage = createTargetStorage(configPath, modelPath, dataPath, indexName, targetStorageConfig, linkStorage);
 
-            StorageBinder binder = new StorageBinder(targetStorageConfig);
+            StorageBinder binder = new StorageBinder(targetStorageConfig.getStorageServerConfig());
             binder.bind(targetStorage);
             
         } catch (Exception e) {
@@ -145,12 +144,10 @@ public class TargetStorage extends StorageDefault {
                                               String modelPath,
                                               String dataPath,
                                               String indexName,
-                                              ParameterFile params,
+                                              TargetStorageConfig config,
                                               Storage linkStorage)
                                               throws IOException,
                                                      MissingArgumentException {
-        
-        TargetStorageConfig config = new TargetStorageConfig(params);
         
         //if one wants to use a classifier
         TargetClassifier targetClassifier = null;

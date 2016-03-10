@@ -3,7 +3,6 @@ package focusedCrawler;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
@@ -17,8 +16,7 @@ import org.apache.commons.cli.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import weka.classifiers.functions.SMO;
-import weka.classifiers.trees.RandomForest;
+import focusedCrawler.config.ConfigService;
 import focusedCrawler.crawler.CrawlerManager;
 import focusedCrawler.crawler.CrawlerManagerException;
 import focusedCrawler.link.LinkStorage;
@@ -27,8 +25,9 @@ import focusedCrawler.link.frontier.AddSeeds;
 import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.target.CreateWekaInput;
 import focusedCrawler.target.TargetStorage;
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.Storage;
+import weka.classifiers.functions.SMO;
+import weka.classifiers.trees.RandomForest;
 
 /**
  * <p>
@@ -233,15 +232,18 @@ public class Main {
         String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
         String configPath = getMandatoryOptionValue(cmd, "configDir");
         String seedPath = getMandatoryOptionValue(cmd, "seed");
-        AddSeeds.main(new String[] { configPath, seedPath, dataOutputPath });
+        ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+        AddSeeds.main(config, seedPath, dataOutputPath);
     }
 
     private static void startLinkStorage(CommandLine cmd) throws MissingArgumentException {
         String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
         String configPath = getMandatoryOptionValue(cmd, "configDir");
         String seedPath = getMandatoryOptionValue(cmd, "seed");
+        String modelPath = getMandatoryOptionValue(cmd, "modelDir");
         try {
-            LinkStorage.main(new String[] { configPath, seedPath, dataOutputPath });
+            ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+            LinkStorage.runServer(configPath, seedPath, dataOutputPath, modelPath, config.getLinkStorageConfig());
         } catch (Throwable t) {
             logger.error("Something bad happened to LinkStorage :(", t);
         }
@@ -253,7 +255,8 @@ public class Main {
         String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
         String elasticIndexName = getOptionalOptionValue(cmd, "elasticIndex");
         try {
-            TargetStorage.run(configPath, modelPath, dataOutputPath, elasticIndexName);
+            ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+            TargetStorage.runServer(configPath, modelPath, dataOutputPath, elasticIndexName, config);
         } catch (Throwable t) {
             logger.error("Something bad happened to TargetStorage :(", t);
         }
@@ -261,7 +264,8 @@ public class Main {
 
     private static void startCrawlManager(final String configPath) {
         try {
-            CrawlerManager.main(new String[] { configPath });
+            ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+            CrawlerManager.run(config);
         } catch (Throwable t) {
             logger.error("Something bad happened to CrawlManager :(", t);
         }
@@ -274,29 +278,23 @@ public class Main {
         String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
         String elasticIndexName = getOptionalOptionValue(cmd, "elasticIndex");
         
+        ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+        
         // add seeds
-        AddSeeds.main(new String[] { configPath, seedPath, dataOutputPath });
-
-        Path linkStorageConf = Paths.get(configPath, "/link_storage/link_storage.cfg");
-        ParameterFile linkStorageConfig = new ParameterFile(linkStorageConf.toFile());
-        linkStorageConfig.putParam("CONFIG_DIR", configPath);
+        AddSeeds.main(config, seedPath, dataOutputPath);
 
         try {
             Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
-                    dataOutputPath, linkStorageConfig);
+                    dataOutputPath, modelPath, config.getLinkStorageConfig());
 
             // start target storage
-            String targetConfFile = configPath + "/target_storage/target_storage.cfg";
-            ParameterFile targetStorageConfig = new ParameterFile(targetConfFile);
-
-            Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath,
-                    dataOutputPath, elasticIndexName, targetStorageConfig, linkStorage);
-
-            String crawlerConfigFile = configPath + "/crawler/crawler.cfg";
+            Storage targetStorage = TargetStorage.createTargetStorage(configPath,
+                    modelPath, dataOutputPath, elasticIndexName,
+                    config.getTargetStorageConfig(), linkStorage);
 
             // start crawl manager
-            CrawlerManager manager = CrawlerManager.createCrawlerManager(crawlerConfigFile,
-                    linkStorage, targetStorage);
+            CrawlerManager manager = CrawlerManager.createCrawlerManager(
+                    config.getCrawlerManagerConfig(), linkStorage, targetStorage);
             manager.start();
 
         }

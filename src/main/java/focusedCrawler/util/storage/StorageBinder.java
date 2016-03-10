@@ -24,24 +24,12 @@
 package focusedCrawler.util.storage;
 
 
-
-import focusedCrawler.util.ParameterFile;
-
-
 public interface StorageBinder {
-
-
 
     void bind(Storage storage) throws StorageBinderException;
 
+    StorageConfig getConfig();
 
-
-    ParameterFile getConfig();
-
-
-
-    void setConfig(ParameterFile newConfig);
-
-
+    void setConfig(StorageConfig newConfig);
 
 }

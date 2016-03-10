@@ -1,10 +1,19 @@
 package focusedCrawler.target.elasticsearch;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class ElasticSearchConfig {
 
-    private final String host;
-    private final int port;
-    private final String clusterName;
+    @JsonProperty("target_storage.data_format.elasticsearch.host")
+    private String host = "localhost";
+    
+    @JsonProperty("target_storage.data_format.elasticsearch.port")
+    private int port = 9300;
+    
+    @JsonProperty("target_storage.data_format.elasticsearch.cluster_name")
+    private String clusterName = "elasticsearch";
+    
+    public ElasticSearchConfig() { }
 
     public ElasticSearchConfig(String hostname, int port, String clusterName) {
         this.host = hostname;

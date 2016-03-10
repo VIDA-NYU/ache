@@ -1,0 +1,138 @@
+##################### ACHE Configuration Example #####################
+
+#
+# Configurations for Target Storage
+#
+
+# Uses a classifier to collect pages in topics, domains etc.
+target_storage.use_classifier: true
+# Change to false if don't want to store pages classified as irrelevant
+target_storage.store_negative_pages: false
+
+# Configuration for data format used to store crawled data
+
+# Enable this change target storage's data format
+#target_storage.data_format.type: FILESYSTEM_HTML
+#target_storage.data_format.type: FILESYSTEM_CBOR
+target_storage.data_format.type: FILESYSTEM_JSON
+
+# Enable this to name files using a hash instead of encoded URL
+target_storage.data_format.filesystem.hash_file_name: true
+
+# Enable this to compress the file content
+#target_storage.data_format.filesystem.compress_data: true
+
+# Enable this config to use ElasticSearch for target storage
+#target_storage.data_format.type: ELASTICSEARCH
+#target_storage.data_format.elasticsearch.host: localhost
+#target_storage.data_format.elasticsearch.port: 9300
+#target_storage.data_format.elasticsearch.cluster_name: elasticsearch
+
+# Configuration for target storage's metrics monitor
+
+# Enable this to configure frequency for all metrics
+target_storage.monitor.sync: true
+target_storage.monitor.frequency: 100
+
+# Enable this to configure different frequencies for each type of info
+#target_storage.monitor.sync: false
+#target_storage.monitor.frequency_crawled: 500
+#target_storage.monitor.frequency_relevant: 500
+#target_storage.monitor.frequency_harvest_info: 500
+
+# Performs hard focus or soft focus. When hard focus is enabled,
+# the crawler only follows links from pages classified as relevant
+target_storage.hard_focus: true
+
+# Run bipartite crawler
+target_storage.bipartite: false
+
+# Relevance threshold for classified pages. Pages with probability of being
+# relevant above this threshold are considered relevant
+target_storage.relevance_threshold: 0.5
+
+# Maximum number of pages to visit
+target_storage.visited_page_limit: 10000000
+
+# Store only pages that contain english text using language detector
+target_storage.english_language_detection_enabled: true
+
+# Configurations for target storage's server
+target_storage.server.host: localhost
+target_storage.server.port : 1987
+
+#
+# Configurations for Link Storage
+#
+
+# Max number of pages to be crawled from each web domain
+link_storage.max_pages_per_domain: 100
+# Restricts the crawler to crawl the websites provided as seeds
+link_storage.link_strategy.use_scope: false
+# Allows the crawler to follow forward links
+link_storage.link_strategy.outlinks: true
+# Gets backlinks of the pages from a search engine used by the bipartite crawling
+link_storage.link_strategy.backlinks: false
+
+# Type of link classifier used by link storage
+# - LinkClassifierBaseline: random link strategy when no page classifier is provided, or Soumen's baseline strategy when a page classifier is provided
+# - LinkClassifierImpl: link strategy using a link classifier
+# - LinkClassifierAuthority: link strategy for the bipartite crawling
+link_storage.link_classifier.type: LinkClassifierBaseline
+#link_storage.link_classifier.type: LinkClassifierImpl
+#link_storage.link_classifier.parameters.class_values: ["0", "1", "2"] #CLASS_VALUES 0 1 2
+
+# Retrain link classifiers on-the-fly
+link_storage.online_learning.enabled: false
+
+# Type of online learning (FORWARD_CLASSIFIER_BINARY,FORWARD_CLASSIFIER_BINARY)
+# - FORWARD_CLASSIFIER_BINARY: pos/neg link classifier
+# - FORWARD_CLASSIFIER_LEVELS: contextual graph with 3 levels
+#link_storage.online_learning.type: FORWARD_CLASSIFIER_BINARY
+
+# Learn iteration criterion (every n pages runs online learning)
+#link_storage.online_learning.learning_limit: 500
+
+# Types of LinkSelectors available:
+# - TopkLinkSelector
+# - SiteLinkSelector
+# - RandomLinkSelector
+# - NonRandomLinkSelector
+# - MultiLevelLinkSelector
+# - TopicLinkSelector
+link_storage.link_selector: TopkLinkSelector
+
+link_storage.max_size_link_queue: 10000
+link_storage.max_size_cache_urls: 10000
+
+# Configurations for link storage's server
+link_storage.server.host: localhost
+link_storage.server.port: 1988
+
+# Directory to store link storage's frontier database
+link_storage.directory: "data_url/dir"
+
+# Backlink surfer parameters
+link_storage.backsurfer.pattern_ini: ",\"uu\":"
+link_storage.backsurfer.pattern_end: "\"}"
+link_storage.backsurfer.pattern_ini_title: ",\"ut\":\""
+link_storage.backsurfer.pattern_end_title: "\",\"uu\":"
+
+#link_storage.backsurfer.moz.access_id: mozscape-xxxxxxxxxx
+#link_storage.backsurfer.moz.secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+#
+# Configurations for Crawler Manager
+#
+crawler_manager.robot_mananger.thread_group: crawler_group
+crawler_manager.robot_mananger.resting_time: 10
+crawler_manager.robot_mananger.check_time: 10000
+crawler_manager.robot_mananger.max_time: 10000
+crawler_manager.robot_mananger.robot_error_sleep_time: 5000
+crawler_manager.robot_mananger.thread_factor: 10
+crawler_manager.robot_mananger.quantity: 5
+
+crawler_manager.downloader.max_blocked_threads: 200000
+
+#crawler_manager.downloader.user_agent: "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 4.0)"
+#crawler_manager.downloader.request_accept: "Accept | */*"

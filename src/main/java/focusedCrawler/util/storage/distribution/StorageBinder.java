@@ -23,10 +23,10 @@
 */
 package focusedCrawler.util.storage.distribution;
 
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.AbstractStorageBinder;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageBinderException;
+import focusedCrawler.util.storage.StorageConfig;
 
 
 public class StorageBinder extends AbstractStorageBinder {
@@ -35,14 +35,14 @@ public class StorageBinder extends AbstractStorageBinder {
         super();
     }
 
-    public StorageBinder(ParameterFile config) {
+    public StorageBinder(StorageConfig config) {
         super(config);
     }
 
     public void bind(Storage storage) throws StorageBinderException {
         if (getConfig() != null) {
             try {
-                focusedCrawler.util.storage.StorageBinder binder = (focusedCrawler.util.storage.StorageBinder) Class.forName(getConfig().getParam("STORAGE_BINDER_CLASSNAME")).newInstance();
+                focusedCrawler.util.storage.StorageBinder binder = (focusedCrawler.util.storage.StorageBinder) Class.forName(getConfig().getBinderClassName()).newInstance();
                  //System.out.println("Storage Binder class : " + getConfig().getParam("STORAGE_BINDER_CLASSNAME"));
                 binder.setConfig(getConfig());
                 binder.bind(storage);
