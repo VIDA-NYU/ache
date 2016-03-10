@@ -82,8 +82,9 @@ ACHE can store data in different data formats. The data format can be configured
 - ELATICSEARCH - raw content and metadata is indexed in an ElasticSearch index. See [ElasticSearch Integration](https://github.com/ViDA-NYU/ache/wiki/ElasticSearch-Integration) for details about configuration.
  
 When using any FILESYSTEM_* data format, you can enable compression of the data stored in the files enabling the following line in the config file:
-
-    target_storage.data_format.filesystem.compress_data: true
+```yaml
+target_storage.data_format.filesystem.compress_data: true
+```
 
 ## More information?
 
@@ -98,6 +99,6 @@ We welcome user feedback. Please submit any suggestions or bug reports using the
 [3]: http://conda.pydata.org/
 
 ## Contact?
-Kien Pham [kien.pham@nyu.edu]
 
-Aecio Santos [aecio.santos@nyu.edu]
+- Aécio Santos [aecio.santos@nyu.edu]
+- Kien Pham [kien.pham@nyu.edu]
