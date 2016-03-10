@@ -426,5 +426,11 @@ public class ParameterFile {
         }
 
     }
+    
+    public void putParam(String key, String value) {
+        Vector valueVector = new Vector();
+        valueVector.addElement(value);
+        hash.put(key, valueVector);
+    }
 
 }
