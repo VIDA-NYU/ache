@@ -8,7 +8,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.StorageConfig;
 
 public class TargetStorageConfig {
@@ -63,41 +62,6 @@ public class TargetStorageConfig {
     
     private final StorageConfig serverConfig;
     
-    @Deprecated
-    public TargetStorageConfig(String filename) {
-        this(new ParameterFile(filename));
-    }
-
-    @Deprecated
-    public TargetStorageConfig(ParameterFile params) {
-        this.useClassifier = params.getParamBoolean("USE_CLASSIFIER");
-        this.targetStorageDirectory = params.getParam("TARGET_STORAGE_DIRECTORY");
-        this.negativeStorageDirectory = params.getParam("NEGATIVE_STORAGE_DIRECTORY");
-        this.dataFormat = params.getParamOrDefault("DATA_FORMAT", "FILE");
-        
-        this.monitor = new MonitorConfig();
-        this.monitor.sync = params.getParamBoolean("REFRESH_SYNC");
-        this.monitor.frequency = params.getParamInt("SYNC_REFRESH_FREQUENCY");
-        this.monitor.frequencyCrawled = params.getParamInt("CRAWLED_REFRESH_FREQUENCY");
-        this.monitor.frequencyRelevant = params.getParamInt("RELEVANT_REFRESH_FREQUENCY");
-        this.monitor.frequencyHarvestInfo = params.getParamInt("HARVESTINFO_REFRESH_FREQUENCY");
-        
-        this.hashFileName = params.getParamBooleanOrDefault("HASH_FILE_NAME", false);
-        this.compressData = params.getParamBooleanOrDefault("COMPRESS_DATA", false);
-        this.relevanceThreshold = params.getParamFloat("RELEVANCE_THRESHOLD");
-        this.visitedPageLimit = params.getParamInt("VISITED_PAGE_LIMIT");
-        this.hardFocus = params.getParamBoolean("HARD_FOCUS");
-        this.bipartite = params.getParamBoolean("BIPARTITE");
-        this.saveNegativePages = params.getParamBoolean("SAVE_NEGATIVE_PAGES");
-        this.englishLanguageDetectionEnabled = params.getParamBooleanOrDefault("ENGLISH_LANGUAGE_DETECTION_ENABLED", true);
-        
-        String elasticSearchHost = params.getParamOrDefault("ELASTICSEARCH_HOST", "localhost");
-        int elasticSearchPort = params.getParamIntOrDefault("ELASTICSEARCH_PORT", 9300);
-        String clusterName = params.getParamOrDefault("ELASTICSEARCH_CLUSTERNAME", "elasticsearch");
-        this.elasticSearchConfig = new ElasticSearchConfig(elasticSearchHost, elasticSearchPort, clusterName);
-        this.serverConfig = new StorageConfig(params);
-    }
-
     public TargetStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
         this.serverConfig = StorageConfig.create(config, "target_storage.server.");

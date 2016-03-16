@@ -1,45 +1,74 @@
 package focusedCrawler.crawler.async;
 
+import java.io.IOException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import crawlercommons.fetcher.http.UserAgent;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import focusedCrawler.config.ConfigService;
 import focusedCrawler.link.DownloadScheduler;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.storage.Storage;
+import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageException;
+import focusedCrawler.util.storage.StorageFactoryException;
+import focusedCrawler.util.storage.distribution.StorageCreator;
 
 public class AsyncCrawler {
-    
+	
     private static final Logger logger = LoggerFactory.getLogger(AsyncCrawler.class);
 
-    private static final int DEFAULT_MAX_LINKS_SCHEDULER = 10000;
-    private static final int MINIMUM_ACCESS_INTERVAL = 5000;
+    public static class Config {
+        
+        @JsonProperty("crawler_manager.scheduler.host_min_access_interval")
+        private int hostMinAccessInterval = 5000;
+        
+        @JsonProperty("crawler_manager.scheduler.max_links")
+        private int maxLinksInScheduler = 10000;
+        
+        @JsonUnwrapped
+        private HttpDownloader.Config downloaderConfig = new HttpDownloader.Config();
+
+        public Config(JsonNode config, ObjectMapper objectMapper) throws JsonProcessingException, IOException {
+            objectMapper.readerForUpdating(this).readValue(config);
+        }
+
+        public int getHostMinAccessInterval() {
+            return hostMinAccessInterval;
+        }
+
+        public int getMaxLinksInScheduler() {
+            return maxLinksInScheduler;
+        }
+
+        public HttpDownloader.Config getDownloaderConfig() {
+            return downloaderConfig;
+        }
+
+    }
     
     private final LinkStorage linkStorage;
-    private final UserAgent userAgent;
     private final HttpDownloader downloader;
     private final FetchedResultHandler resultHandler;
     private final DownloadScheduler downloadScheduler;
     
     private boolean shouldStop = false;
     
-    public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage) {
-        this(targetStorage,
-             linkStorage,
-             MINIMUM_ACCESS_INTERVAL,
-             DEFAULT_MAX_LINKS_SCHEDULER);
-    }
-    
-    public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage,
-                        int minimumAccessInterval, int maxLinksInScheduler) {
+    public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage, Config crawlerConfig) {
         this.linkStorage = linkStorage;
-        this.userAgent = new UserAgent("ACHE", "", "https://github.com/ViDA-NYU/ache");
-        this.downloader = new HttpDownloader(userAgent);
+		this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig());
         this.resultHandler = new FetchedResultHandler(targetStorage);
-        this.downloadScheduler = new DownloadScheduler(minimumAccessInterval, maxLinksInScheduler);
+        this.downloadScheduler = new DownloadScheduler(
+                crawlerConfig.getHostMinAccessInterval(),
+                crawlerConfig.getMaxLinksInScheduler());
     }
     
     private class DownloadDispatcher extends Thread {
@@ -107,6 +136,25 @@ public class AsyncCrawler {
 
     public void stop() {
         this.shouldStop = true;
+    }
+
+    public static void run(ConfigService config) throws IOException, NumberFormatException {
+        logger.info("Starting CrawlerManager...");
+        try {
+            StorageConfig linkStorageServerConfig = config.getLinkStorageConfig().getStorageServerConfig();
+            Storage linkStorage = new StorageCreator(linkStorageServerConfig).produce();
+            
+            StorageConfig targetServerConfig = config.getTargetStorageConfig().getStorageServerConfig();
+            Storage targetStorage = new StorageCreator(targetServerConfig).produce();
+            
+            AsyncCrawler.Config crawlerConfig = config.getCrawlerConfig();
+
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, (LinkStorage) linkStorage, crawlerConfig);
+            crawler.run();
+
+        } catch (StorageFactoryException ex) {
+            logger.error("An error occurred while starting CrawlerManager. ", ex);
+        }
     }
 
 }

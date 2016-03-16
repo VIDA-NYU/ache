@@ -22,7 +22,6 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
 import crawlercommons.fetcher.FetchedResult;
-import crawlercommons.fetcher.http.UserAgent;
 
 public class HttpDownloaderTest {
     
@@ -83,13 +82,11 @@ public class HttpDownloaderTest {
         }
     }
     
-    final UserAgent userAgent = new UserAgent("test", "test@test.com", "test@test.com");
-    
     private HttpDownloader downloader;
     
     @Before
     public void setUp() {
-        this.downloader = new HttpDownloader(userAgent);
+        this.downloader = new HttpDownloader();
     }
 
     @Test

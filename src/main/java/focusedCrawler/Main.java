@@ -17,8 +17,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.ConfigService;
-import focusedCrawler.crawler.CrawlerManager;
-import focusedCrawler.crawler.CrawlerManagerException;
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.classifier.LinkClassifierFactoryException;
@@ -266,7 +264,8 @@ public class Main {
     private static void startCrawlManager(final String configPath) {
         try {
             ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-            CrawlerManager.run(config);
+            AsyncCrawler.run(config);
+            
         } catch (Throwable t) {
             logger.error("Something bad happened to CrawlManager :(", t);
         }
@@ -292,20 +291,13 @@ public class Main {
             Storage targetStorage = TargetStorage.createTargetStorage(
             		configPath, modelPath, dataOutputPath, elasticIndexName,
                     config.getTargetStorageConfig(), linkStorage);
-
+            
+            AsyncCrawler.Config crawlerConfig = config.getCrawlerConfig();
+            
             // start crawl manager
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, (LinkStorage) linkStorage);
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, (LinkStorage) linkStorage, crawlerConfig);
             crawler.run();
 
-            // start crawl manager
-            CrawlerManager manager = CrawlerManager.createCrawlerManager(
-                config.getCrawlerManagerConfig(), linkStorage, targetStorage);
-            
-            manager.start();
-
-        }
-        catch (CrawlerManagerException e) {
-            logger.error("Problem while creating CrawlerManager", e);
         }
         catch (LinkClassifierFactoryException | FrontierPersistentException  e) {
             logger.error("Problem while creating LinkStorage", e);

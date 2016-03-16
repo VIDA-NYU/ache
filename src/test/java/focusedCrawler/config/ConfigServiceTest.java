@@ -10,7 +10,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import focusedCrawler.crawler.CrawlerManagerConfig;
+import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.link.LinkStorageConfig;
 
 public class ConfigServiceTest {
@@ -96,26 +96,23 @@ public class ConfigServiceTest {
     }
     
     @Test
-    public void shouldReadCrawlerManagerConfig() throws IOException {
+    public void shouldReadCrawlerConfig() throws IOException {
         // given
         ConfigService configService = new ConfigService(configFilePath);
         
         // when
-        CrawlerManagerConfig config = configService.getCrawlerManagerConfig();
+        AsyncCrawler.Config config = configService.getCrawlerConfig();
         
         // then
         assertThat(config, is(notNullValue()));
         
-        assertThat(config.getRobotThreadGroup(), is("crawler_group_test"));
-        assertThat(config.getRobotManagerRestingTime(), is(11111L));
-        assertThat(config.getRobotManagerSleepCheckTime(), is(11111L));
-        assertThat(config.getRobotManagerMaxTime(), is(11111L));
-        
-        assertThat(config.getRobotManagerRobotErrorTime(), is(222222L));
-        assertThat(config.getRobotManagerRobotThreadFactor(), is(222222));
-        assertThat(config.getRobotQuantity(), is(222222));
-        assertThat(config.getDownloaderMaxBlockedThreads(), is(222222L));
-        
+        assertThat(config.getHostMinAccessInterval(), is(123));
+        assertThat(config.getMaxLinksInScheduler(), is(234));
+        assertThat(config.getDownloaderConfig().getDownloadThreadPoolSize(), is(333));
+        assertThat(config.getDownloaderConfig().getMaxRetryCount(), is(444));
+        assertThat(config.getDownloaderConfig().getUserAgentName(), is("TestAgent"));
+        assertThat(config.getDownloaderConfig().getUserAgentUrl(), is("http://www.test-agent-crawler-example.com/robot"));
+        assertThat(config.getDownloaderConfig().getValidMimeTypes()[0], is("test/mimetype"));
     }
 
 }

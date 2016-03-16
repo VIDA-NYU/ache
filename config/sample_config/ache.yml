@@ -59,7 +59,7 @@ target_storage.english_language_detection_enabled: true
 
 # Configurations for target storage's server
 target_storage.server.host: localhost
-target_storage.server.port : 1987
+target_storage.server.port: 1987
 
 #
 # Configurations for Link Storage
@@ -80,7 +80,7 @@ link_storage.link_strategy.backlinks: false
 # - LinkClassifierAuthority: link strategy for the bipartite crawling
 link_storage.link_classifier.type: LinkClassifierBaseline
 #link_storage.link_classifier.type: LinkClassifierImpl
-#link_storage.link_classifier.parameters.class_values: ["0", "1", "2"] #CLASS_VALUES 0 1 2
+#link_storage.link_classifier.parameters.class_values: ["0", "1", "2"]
 
 # Retrain link classifiers on-the-fly
 link_storage.online_learning.enabled: false
@@ -124,15 +124,12 @@ link_storage.backsurfer.pattern_end_title: "\",\"uu\":"
 #
 # Configurations for Crawler Manager
 #
-crawler_manager.robot_mananger.thread_group: crawler_group
-crawler_manager.robot_mananger.resting_time: 10
-crawler_manager.robot_mananger.check_time: 10000
-crawler_manager.robot_mananger.max_time: 10000
-crawler_manager.robot_mananger.robot_error_sleep_time: 5000
-crawler_manager.robot_mananger.thread_factor: 10
-crawler_manager.robot_mananger.quantity: 5
-
-crawler_manager.downloader.max_blocked_threads: 200000
-
-#crawler_manager.downloader.user_agent: "Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 4.0)"
-#crawler_manager.downloader.request_accept: "Accept | */*"
+crawler_manager.scheduler.host_min_access_interval: 5000
+crawler_manager.scheduler.max_links: 10000
+crawler_manager.downloader.download_thread_pool_size: 100
+crawler_manager.downloader.max_retry_count: 2
+crawler_manager.downloader.user_agent.name: ACHE
+crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
+crawler_manager.downloader.valid_mime_types:
+ - text/html
+ - text/plain
