@@ -1,7 +1,9 @@
 package focusedCrawler.tools;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.file.DirectoryStream;
@@ -10,6 +12,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.zip.InflaterInputStream;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -28,13 +33,18 @@ import org.elasticsearch.search.SearchHit;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
+import focusedCrawler.memex.cdr.CDRDocumentBuilder;
 import focusedCrawler.target.TargetModel;
+import focusedCrawler.target.TargetModelJson;
 import focusedCrawler.target.elasticsearch.ElasticSearchClientFactory;
 import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.target.elasticsearch.ElasticSearchPageModel;
 import focusedCrawler.util.Page;
 import focusedCrawler.util.parser.PaginaURL;
 
+//
+// TODO: Refactor this class to something simpler and easily maintainable
+//
 public class ElasticSearchIndexer {
     
     static final ObjectMapper cborMapper = new ObjectMapper(new CBORFactory());
@@ -187,11 +197,56 @@ public class ElasticSearchIndexer {
                     }
                     
                 }
+                else if(inputFormat.equals("FILESYSTEM_JSON_ZIP")){
+                    if (outputFormat.equals("CDR2")) {
+                        
+                        final byte[] bytes = Files.readAllBytes(filePath);
+                        
+                        TargetModelJson pageModel = null;
+                        try(InputStream gzip = new InflaterInputStream(new ByteArrayInputStream(bytes))) {
+                            pageModel = jsonMapper.readValue(gzip, TargetModelJson.class);
+                        }
+                        if(pageModel == null) {
+                            continue;
+                        }
+                        
+                        List<String> contentTypeHeader = pageModel.getResponseHeaders().get("Content-Type");
+                        if(contentTypeHeader == null) {
+                            contentTypeHeader = pageModel.getResponseHeaders().get("content-type");
+                        }
+                        
+                        if(contentTypeHeader == null || contentTypeHeader.size() == 0) {
+                            continue;
+                        }
+                        
+                        if(!contentTypeHeader.iterator().next().contains("text/html")) {
+                            continue;
+                        }
+                        
+                        id = pageModel.getUrl();
+                        
+                        HashMap<String, Object> crawlData = new HashMap<>();
+                        crawlData.put("response_headers", pageModel.getResponseHeaders());
+                        
+                        doc = new CDRDocumentBuilder()
+                                .withUrl(pageModel.getUrl())
+                                .withTimestamp(pageModel.getFetchTime())
+                                .withContentType("text/html")
+                                .withTeam("NYU")
+                                .withCrawler("ACHE")
+                                .withRawContent(pageModel.getResponseBody())
+                                .withCrawlData(crawlData)
+                                .build();
+                        
+                    } else {
+                        throw new IllegalArgumentException("Invalid output schema");
+                    }
+                }
                 else {
                     throw new IllegalArgumentException("Invalid input format = "+inputFormat);
                 }
                 
-                bulkIndexer.addDocument(indexName, typeName, doc, id);
+            	bulkIndexer.addDocument(indexName, typeName, doc, id);
                     
             }
             catch(Exception e) {
