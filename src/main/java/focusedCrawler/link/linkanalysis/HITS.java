@@ -10,8 +10,6 @@ import java.util.Iterator;
 import java.util.Vector;
 
 import focusedCrawler.link.BipartiteGraphRep;
-import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.persistence.Tuple;
@@ -272,19 +270,6 @@ public class HITS {
 			System.out.println(elem.getWord() + ":" + elem.getWeight());
 		}
 		
-	}
-	
-	public static void main(String[] args) {
-	    BiparitieGraphRepConfig config = new BiparitieGraphRepConfig(new ParameterFile(args[0]));
-		try {
-			String dataPath = ".";
-            BipartiteGraphRep rep = new BipartiteGraphRep(dataPath, config);
-			HITS hits = new HITS(rep);
-			hits.originalHITS();
-		}catch(Exception ex){
-			ex.printStackTrace();
-		}
-
 	}
 	
 }

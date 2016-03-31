@@ -36,13 +36,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.util.Page;
-import focusedCrawler.util.page.Pagina;
 import focusedCrawler.util.string.Acentos;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
 
 
-public class PaginaURL implements Pagina {
+public class PaginaURL {
     
     private static final String[] schemes = {"http","https"};
     private static final UrlValidator urlValidator = new UrlValidator(schemes);

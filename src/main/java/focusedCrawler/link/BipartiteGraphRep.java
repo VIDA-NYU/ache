@@ -428,21 +428,4 @@ public class BipartiteGraphRep {
 	}
 	
 	
-	public static void main(String[] args) {
-		ParameterFile paramsFile = new ParameterFile(args[0]);
-		try {
-		    BiparitieGraphRepConfig config = new BiparitieGraphRepConfig(paramsFile);
-			String dataPath = ".";
-            BipartiteGraphRep graphRep = new BipartiteGraphRep(dataPath, config);
-			LinkNeighborhood[] lns = graphRep.getBacklinksLN(new URL(args[1]));
-			for (int i = 0; i < lns.length; i++) {
-				System.out.println(lns[i].getLink().toString());
-			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
-	
 }

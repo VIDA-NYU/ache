@@ -1,10 +1,7 @@
 package focusedCrawler.link.classifier.builder;
 
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
@@ -19,10 +16,7 @@ import java.util.Iterator;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
-import weka.classifiers.Classifier;
-import weka.core.Instances;
 import focusedCrawler.link.BipartiteGraphRep;
-import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierFactoryImpl;
 import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
@@ -32,15 +26,15 @@ import focusedCrawler.link.classifier.util.WordField;
 import focusedCrawler.link.classifier.util.WordFrequency;
 import focusedCrawler.link.classifier.util.WordFrequencyComparator;
 import focusedCrawler.link.frontier.Frontier;
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.string.StopListArquivo;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
+import weka.classifiers.Classifier;
+import weka.core.Instances;
 
 public class ClassifierBuilder {
 
@@ -447,35 +441,4 @@ public class ClassifierBuilder {
 		return features;
 	}
 
-	public static void main(String[] args) {
-		try {
-			StopList stoplist = new StopListArquivo(args[0]);
-			WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
-			
-			String dataPath = ".";
-			BiparitieGraphRepConfig config = new BiparitieGraphRepConfig(new ParameterFile(args[1]));
-			BipartiteGraphRep rep = new BipartiteGraphRep(dataPath, config);
-			
-			HashSet<String> visitedSites = new HashSet<String>();
-			BufferedReader input = new BufferedReader(new FileReader(new File(args[6])));
-			for (String line = input.readLine(); line != null; line = input.readLine()) {
-				visitedSites.add(line);	
-			}
-			ClassifierBuilder cb = new ClassifierBuilder(rep,stoplist,wrapper,null);
-			BufferedReader input1 = new BufferedReader(new FileReader(new File(args[7])));
-			HashSet<String> relSites = new HashSet<String>();
-			for (String line = input1.readLine(); line != null; line = input1.readLine()) {
-				String[] links = line.split(" ");
-//				URL url = new URL(links[1]);
-				if(!relSites.contains(links[1])){
-					relSites.add(links[1]);	
-				}
-			}
-//			cb.forawrdlinkTraining(relSites,visitedSites);
-//			cb.backlinkTraining(relSites);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 }

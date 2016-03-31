@@ -23,6 +23,9 @@
  */
 package focusedCrawler.util.storage.socket;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import focusedCrawler.util.storage.AbstractStorageFactory;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageConfig;
@@ -33,6 +36,8 @@ import focusedCrawler.util.storage.StorageFactoryException;
  * Fabrica de StorageRemoteAdapter
  */
 public class StorageRemoteAdapterFactory extends AbstractStorageFactory {
+    
+    private static Logger logger = LoggerFactory.getLogger(StorageRemoteAdapterFactory.class);
 
 	private String remoteHost;
 
@@ -53,7 +58,7 @@ public class StorageRemoteAdapterFactory extends AbstractStorageFactory {
 
 	public synchronized Storage produce() throws StorageFactoryException {
 		initParams();
-		focusedCrawler.util.Log.log("SocketAdapterFactory", "produce", remoteHost + ":" + remotePort);
+		logger.info("Produced remote storage adapter for " + remoteHost + ":" + remotePort);
 		return new StorageRemoteAdapter(remoteHost, remotePort);
 	}
 
