@@ -28,9 +28,9 @@ import java.net.URL;
 import java.util.Iterator;
 import java.util.Map;
 
-import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
-import focusedCrawler.link.classifier.util.Instance;
-import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.link.classifier.builder.Instance;
+import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
+import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 import weka.classifiers.Classifier;
@@ -39,19 +39,19 @@ import weka.core.Instances;
 
 public class LinkClassifierRootPage implements LinkClassifier{
 
-  private WrapperNeighborhoodLinks wrapper;
+  private LinkNeighborhoodWrapper wrapper;
   private String[] attributes;
   private Classifier classifier;
   private Instances instances;
 
   
-  public LinkClassifierRootPage(WrapperNeighborhoodLinks wrapper,String[] attribute) {
+  public LinkClassifierRootPage(LinkNeighborhoodWrapper wrapper,String[] attribute) {
      this.wrapper = wrapper;
      this.attributes = attribute;
    }
 
   
-  public LinkClassifierRootPage(Classifier classifier, Instances instances, WrapperNeighborhoodLinks wrapper,String[] attribute) {
+  public LinkClassifierRootPage(Classifier classifier, Instances instances, LinkNeighborhoodWrapper wrapper,String[] attribute) {
 	  this(wrapper,attribute);
 	  this.classifier = classifier;
 	  this.instances = instances;

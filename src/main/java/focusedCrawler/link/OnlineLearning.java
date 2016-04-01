@@ -11,11 +11,11 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 import focusedCrawler.link.classifier.LinkClassifier;
-import focusedCrawler.link.classifier.builder.ClassifierBuilder;
+import focusedCrawler.link.classifier.builder.LinkClassifierBuilder;
 import focusedCrawler.link.frontier.Frontier;
+import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.link.linkanalysis.HITS;
 import focusedCrawler.link.linkanalysis.SALSA;
-import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.vsm.VSMElement;
 
@@ -26,15 +26,15 @@ public class OnlineLearning {
 	
 	private BipartiteGraphManager manager;
 	
-	private BipartiteGraphRep rep;
+	private BipartiteGraphRepository rep;
 	
-	private ClassifierBuilder classifierBuilder;
+	private LinkClassifierBuilder classifierBuilder;
 	
 	private String method;
 	
 	private String targetPath;
 	
-	public OnlineLearning(Frontier frontier, BipartiteGraphManager manager, ClassifierBuilder classifierBuilder, String method, String path){
+	public OnlineLearning(Frontier frontier, BipartiteGraphManager manager, LinkClassifierBuilder classifierBuilder, String method, String path){
 		this.frontier = frontier;
 		this.manager = manager;
 		this.classifierBuilder = classifierBuilder;

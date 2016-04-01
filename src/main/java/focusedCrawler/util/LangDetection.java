@@ -12,6 +12,8 @@ import com.cybozu.labs.langdetect.Detector;
 import com.cybozu.labs.langdetect.DetectorFactory;
 import com.cybozu.labs.langdetect.Language;
 
+import focusedCrawler.target.model.Page;
+
 public class LangDetection {
     
     private static final Logger logger = LoggerFactory.getLogger(LangDetection.class);

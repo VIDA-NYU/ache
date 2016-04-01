@@ -16,8 +16,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import focusedCrawler.util.LinkRelevance;
-
 public class FrontierTest {
 
     final Path testPath = Paths.get("frontier_temp/");

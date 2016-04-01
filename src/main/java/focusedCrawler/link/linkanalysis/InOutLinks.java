@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Vector;
 
-import focusedCrawler.link.BipartiteGraphRep;
+import focusedCrawler.link.BipartiteGraphRepository;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.vsm.VSMElement;
@@ -15,9 +15,9 @@ import focusedCrawler.util.vsm.VSMElementComparator;
 
 public class InOutLinks {
 
-	private BipartiteGraphRep graphRep;
+	private BipartiteGraphRepository graphRep;
 	
-	public InOutLinks(BipartiteGraphRep graphRep){
+	public InOutLinks(BipartiteGraphRepository graphRep){
 		this.graphRep = graphRep;
 	}
 	

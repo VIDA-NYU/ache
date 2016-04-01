@@ -5,18 +5,18 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
-import focusedCrawler.link.classifier.util.Instance;
-import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.link.classifier.builder.Instance;
+import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
+import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 
 public class LinkClassifierBacklink implements LinkClassifier {
 
-    private WrapperNeighborhoodLinks wrapper;
+    private LinkNeighborhoodWrapper wrapper;
     private String[] attributes;
 
-    public LinkClassifierBacklink(WrapperNeighborhoodLinks wrapper, String[] attribute) {
+    public LinkClassifierBacklink(LinkNeighborhoodWrapper wrapper, String[] attribute) {
         this.wrapper = wrapper;
         this.attributes = attribute;
     }

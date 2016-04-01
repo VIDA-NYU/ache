@@ -8,7 +8,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 
 public class TopkLinkSelectorTest {
 

@@ -28,19 +28,19 @@ import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.link.backlink.BacklinkSurfer;
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierException;
 import focusedCrawler.link.classifier.LinkClassifierFactory;
 import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.classifier.LinkClassifierFactoryImpl;
 import focusedCrawler.link.classifier.LinkClassifierHub;
-import focusedCrawler.link.classifier.builder.BacklinkSurfer;
-import focusedCrawler.link.classifier.builder.ClassifierBuilder;
-import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
+import focusedCrawler.link.classifier.builder.LinkClassifierBuilder;
+import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.link.frontier.FrontierPersistentException;
-import focusedCrawler.util.Page;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.SimpleWrapper;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageDefault;
@@ -213,7 +213,7 @@ public class LinkStorage extends StorageDefault{
 
         FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, seedFile, stoplistFile);
 
-        BipartiteGraphRep graphRep = new BipartiteGraphRep(dataPath, config.getBiparitieGraphRepConfig());
+        BipartiteGraphRepository graphRep = new BipartiteGraphRepository(dataPath, config.getBiparitieGraphRepConfig());
 
         BipartiteGraphManager manager = createBipartiteGraphManager(config, linkClassifier, frontierManager, graphRep);
 
@@ -221,8 +221,9 @@ public class LinkStorage extends StorageDefault{
 
         if (config.isUseOnlineLearning()) {
             StopList stoplist = new StopListArquivo(stoplistFile);
-            WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
-            ClassifierBuilder cb = new ClassifierBuilder(graphRep, stoplist, wrapper, frontierManager.getFrontier());
+            LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
+            
+            LinkClassifierBuilder cb = new LinkClassifierBuilder(graphRep, stoplist, wrapper, frontierManager.getFrontier());
             
             logger.info("ONLINE LEARNING:" + config.getOnlineMethod());
             OnlineLearning onlineLearning = new OnlineLearning(frontierManager.getFrontier(), manager, cb, config.getOnlineMethod(), dataPath + "/" + config.getTargetStorageDirectory());
@@ -234,7 +235,7 @@ public class LinkStorage extends StorageDefault{
 
     private static BipartiteGraphManager createBipartiteGraphManager(LinkStorageConfig config,
                 LinkClassifier linkClassifier, FrontierManager frontierManager,
-                BipartiteGraphRep graphRep) {
+                BipartiteGraphRepository graphRep) {
         
         BipartiteGraphManager manager = null;
         if(config.getBacklinks()) {

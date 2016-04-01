@@ -25,7 +25,7 @@ package focusedCrawler.link.classifier;
 
 import java.net.MalformedURLException;
 
-import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 

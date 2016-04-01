@@ -18,8 +18,8 @@ import org.elasticsearch.search.SearchHit;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
-import focusedCrawler.target.elasticsearch.ElasticSearchClientFactory;
-import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
+import focusedCrawler.target.repository.elasticsearch.ElasticSearchClientFactory;
+import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 
 public class DumpDataFromElasticSearch {
     

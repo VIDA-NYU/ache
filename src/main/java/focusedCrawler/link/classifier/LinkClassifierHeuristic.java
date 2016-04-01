@@ -23,9 +23,9 @@
 */
 package focusedCrawler.link.classifier;
 
-import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
-import focusedCrawler.link.classifier.util.Instance;
+import focusedCrawler.link.classifier.builder.Instance;
+import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
+import focusedCrawler.link.frontier.LinkRelevance;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -52,13 +52,13 @@ import focusedCrawler.util.parser.LinkNeighborhood;
 
 public class LinkClassifierHeuristic implements LinkClassifier{
 
-  private WrapperNeighborhoodLinks wrapper;
+  private LinkNeighborhoodWrapper wrapper;
   private String[] attributes;
   private Random randomGenerator;
   private int maxRandom = 10000;
 //  private  int[]  weights = new int[]{8,4,2,1};
 
-  public LinkClassifierHeuristic(WrapperNeighborhoodLinks wrapper,String[] attributes) {
+  public LinkClassifierHeuristic(LinkNeighborhoodWrapper wrapper,String[] attributes) {
     this.wrapper = wrapper;
     this.attributes = attributes;
     this.randomGenerator = new Random();

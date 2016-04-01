@@ -4,9 +4,9 @@ import java.net.MalformedURLException;
 import java.util.Iterator;
 import java.util.Map;
 
-import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
-import focusedCrawler.link.classifier.util.Instance;
-import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.link.classifier.builder.Instance;
+import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
+import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 import weka.classifiers.Classifier;
@@ -21,14 +21,14 @@ public class LinkClassifierHub implements LinkClassifier{
 
 	private Classifier classifier;
 	private Instances instances;
-	private WrapperNeighborhoodLinks wrapper;
+	private LinkNeighborhoodWrapper wrapper;
 	private String[] attributes;
 	
 	public LinkClassifierHub(){
 		
 	}
 	
-	public LinkClassifierHub(Classifier classifier, Instances instances, WrapperNeighborhoodLinks wrapper,String[] attributes) {
+	public LinkClassifierHub(Classifier classifier, Instances instances, LinkNeighborhoodWrapper wrapper,String[] attributes) {
 		this.classifier = classifier;
 		this.instances = instances;
 		this.wrapper = wrapper;

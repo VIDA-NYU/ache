@@ -33,9 +33,9 @@ import org.xml.sax.SAXException;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
-import focusedCrawler.util.Page;
+import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.Target;
 import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.Target;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
 import focusedCrawler.util.vsm.VSMElement;

@@ -23,7 +23,7 @@
  */
 package focusedCrawler.target.classifier;
 
-import focusedCrawler.util.Target;
+import focusedCrawler.target.model.Target;
 
 /**
  * <p>

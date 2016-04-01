@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Vector;
 
-import focusedCrawler.link.BipartiteGraphRep;
+import focusedCrawler.link.BipartiteGraphRepository;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
@@ -17,7 +17,7 @@ public class SALSA {
 	
 	private HashMap<String,Vector<VSMElement>> incidenceAuthMatrix;
 	
-	private BipartiteGraphRep graphRep;
+	private BipartiteGraphRepository graphRep;
 	
 	private HashMap<String,VSMElement> initialValues;
 	
@@ -29,7 +29,7 @@ public class SALSA {
 	
 	private HashMap<String,VSMElement> authValues = new HashMap<String, VSMElement>();
 
-	public SALSA(BipartiteGraphRep graphRep){
+	public SALSA(BipartiteGraphRepository graphRep){
 		this.graphRep = graphRep;
 		this.incidenceHubMatrix = new HashMap<String, Vector<VSMElement>>();
 		this.incidenceAuthMatrix = new HashMap<String, Vector<VSMElement>>();

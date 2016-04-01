@@ -23,12 +23,10 @@
 */
 package focusedCrawler.link.classifier;
 
+import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.string.StopListArquivo;
 import focusedCrawler.util.string.StopList;
-
-
-import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
 import weka.core.Instances;
 import weka.classifiers.Classifier;
 
@@ -100,7 +98,7 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
           ParameterFile config = new ParameterFile(featureFilePath); 
           String[] attributes = config.getParam("ATTRIBUTES", " ");
           
-          WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
+          LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
           wrapper.setFeatures(attributes);
           linkClassifier= new LinkClassifierBreadthSearch(wrapper,attributes);
       }
@@ -123,8 +121,8 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
 	  return linkClassifier;  
   }
   
-  public static WrapperNeighborhoodLinks loadWrapper(String[] attributes, StopList stoplist) {
-      WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
+  public static LinkNeighborhoodWrapper loadWrapper(String[] attributes, StopList stoplist) {
+      LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
       wrapper.setFeatures(attributes);
       return wrapper;
   }
@@ -132,7 +130,7 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
   
   public static LinkClassifier createLinkClassifierImpl(String[] attributes, String[] classValues, Classifier classifier, String className, int levels) throws IOException {
 	  LinkClassifier linkClassifier = null;
-	  WrapperNeighborhoodLinks wrapper = loadWrapper(attributes, stoplist);
+	  LinkNeighborhoodWrapper wrapper = loadWrapper(attributes, stoplist);
 	  weka.core.FastVector vectorAtt = new weka.core.FastVector();
 	  for (int i = 0; i < attributes.length; i++) {
 		  vectorAtt.addElement(new weka.core.Attribute(attributes[i]));

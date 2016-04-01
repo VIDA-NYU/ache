@@ -1,10 +1,8 @@
 package focusedCrawler;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.Scanner;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -23,11 +21,9 @@ import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.frontier.AddSeeds;
 import focusedCrawler.link.frontier.FrontierPersistentException;
-import focusedCrawler.target.CreateWekaInput;
 import focusedCrawler.target.TargetStorage;
+import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
 import focusedCrawler.util.storage.Storage;
-import weka.classifiers.functions.SMO;
-import weka.classifiers.trees.RandomForest;
 
 /**
  * <p>
@@ -171,62 +167,24 @@ public class Main {
         String stopWordsFile = getMandatoryOptionValue(cmd, "stopWordsFile");
         String trainingPath = getMandatoryOptionValue(cmd, "trainingDataDir");
         String outputPath = getMandatoryOptionValue(cmd, "outputDir"); 
-        // generate the input for weka
-        new File(outputPath).mkdirs();
-        System.out.println("Preparing training data...");
-        CreateWekaInput.main(new String[] { stopWordsFile, trainingPath, trainingPath + "/weka.arff" });
-        // generate the model
         String learner = getOptionalOptionValue(cmd, "learner");
-        if(learner==null) {
-        	learner = "SMO";
-        }
         
-        System.out.println("Training "+ learner+" model...");
-        if(learner.equals("SMO")) {
-        	SMO.main(new String[] {
-    	        "-M",
-    	        "-d", outputPath + "/pageclassifier.model",
-    	        "-t", trainingPath + "/weka.arff",
-    	        "-C", "0.01"
-			});
-        } else if(learner.equals("RandomForest")) {
-        	RandomForest.main(new String[] {
-//    	        "-K", "5", // k-fold cross validation
-                "-I", "100", // Number of trees to build
-                "-d", outputPath + "/pageclassifier.model",
-                "-t", trainingPath + "/weka.arff"
-			});
-        } else {
-            System.out.println("Unknow learner: "+learner);
-            return;
-        }
-        createFeaturesFile(outputPath,trainingPath);
+        new File(outputPath).mkdirs();
+        
+        // generate the input for weka
+        System.out.println("Preparing training data...");
+        WekaTargetClassifierBuilder.createInputFile(stopWordsFile, trainingPath, trainingPath + "/weka.arff" );
+        
+        // generate the model
+        System.out.println("Training model...");
+        WekaTargetClassifierBuilder.trainModel(trainingPath, outputPath, learner);
+        
+        // generate features file
+        System.out.println("Creating feature file...");
+        WekaTargetClassifierBuilder.createFeaturesFile(outputPath,trainingPath);
+        
+        System.out.println("done.");
     }
-    
-    private static void createFeaturesFile(String outputPath, String trainingPath) {
-        File features = new File(outputPath + File.separator + "pageclassifier.features");
-        try {
-            features.createNewFile();
-            FileWriter featuresWriter = new FileWriter(features);
-            //featuresWriter.write("");
-            featuresWriter.write("CLASS_VALUES  S NS" + "\n" + "ATTRIBUTES");
-            String wekkaFilePath = trainingPath + "/weka.arff";
-            Scanner wekkaFileScanner = new Scanner(new File(wekkaFilePath));
-            while(wekkaFileScanner.hasNext()){
-                String nextLine = wekkaFileScanner.nextLine();
-                String[] splittedLine = nextLine.split(" ");
-                if(splittedLine.length>=3 && splittedLine[0].equals("@ATTRIBUTE") && splittedLine[2].equals("REAL"))
-                    featuresWriter.write(" "+splittedLine[1]);
-            }
-            featuresWriter.write("\n");
-            wekkaFileScanner.close();
-            featuresWriter.flush();
-            featuresWriter.close();
-        } catch (IOException e) {
-            logger.error("IO Exception while creating wekka pageclassifier.features file. ",e);
-        }
-    }
-
 
     private static void addSeeds(CommandLine cmd) throws MissingArgumentException {
         String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");

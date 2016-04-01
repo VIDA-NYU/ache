@@ -27,8 +27,11 @@ import org.junit.rules.TemporaryFolder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
-import focusedCrawler.target.FileSystemTargetRepository.DataFormat;
-import focusedCrawler.util.Page;
+import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.TargetModelCbor;
+import focusedCrawler.target.model.TargetModelJson;
+import focusedCrawler.target.repository.FileSystemTargetRepository;
+import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 
 
 public class FileSystemTargetRepositoryTest {
@@ -129,7 +132,7 @@ public class FileSystemTargetRepositoryTest {
 		assertThat(path.toFile().exists(), is(true));
 		
 		ObjectMapper mapper = new ObjectMapper(new CBORFactory());
-		TargetModel value = mapper.readValue(path.toFile(), TargetModel.class);
+		TargetModelCbor value = mapper.readValue(path.toFile(), TargetModelCbor.class);
 		
 		assertThat(value.url, is(url));
 		assertThat(value.response.get("body").toString(), is(html));
