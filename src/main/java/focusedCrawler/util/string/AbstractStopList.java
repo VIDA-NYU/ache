@@ -47,6 +47,7 @@ package focusedCrawler.util.string;
 
 
 
+@SuppressWarnings("serial")
 public abstract class AbstractStopList implements StopList {
 
 
@@ -343,7 +344,7 @@ public abstract class AbstractStopList implements StopList {
         if( size < MIN_LENGTH || size > MAX_LENGTH )
             return true;
 
-        char first = palavra.charAt(0);
+//        char first = palavra.charAt(0);
 
 //        if( !(eNumero(first) || eLetra(first)) )
 //

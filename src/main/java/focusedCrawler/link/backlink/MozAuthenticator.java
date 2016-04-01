@@ -82,6 +82,7 @@ public class MozAuthenticator {
         byte[] rawHmac = mac.doFinal(stringToSign.getBytes());
 
         // base64-encode the hmac
+        @SuppressWarnings("deprecation")
         String urlSafeSignature = URLEncoder.encode(EncodeBase64(rawHmac));
 
         String authenticationStr = "AccessID=" + accessID + "&Expires=" + expires + "&Signature="

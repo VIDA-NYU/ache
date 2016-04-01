@@ -81,7 +81,7 @@ public class OnlineLearning {
 			for (int i = 0; i < dirs.length; i++) {
 				File[] files = dirs[i].listFiles();
 				for (int j = 0; j < files.length; j++) {
-					String url = URLDecoder.decode(files[j].getName());
+					String url = URLDecoder.decode(files[j].getName(), "UTF-8");
 					if(!relSites.contains(url)){
 						relSites.add(url);
 						System.out.println(">>" + url);
@@ -90,16 +90,17 @@ public class OnlineLearning {
 			}
 		}else{
 			File file = new File(targetPath + File.separator + "entry_points");
-			BufferedReader input = new BufferedReader(new FileReader(file));
-			for (String line = input.readLine(); line != null; line = input.readLine()) {
-				if(line.startsWith("------")){
-					String host = line.replace("-", "");
-					String url = "http://" + host + "/";
-					if(!relSites.contains(url)){
-						relSites.add(url);
-						System.out.println(">>" + url);
-					}
-				}
+			try(BufferedReader input = new BufferedReader(new FileReader(file))) {
+    			for (String line = input.readLine(); line != null; line = input.readLine()) {
+    				if(line.startsWith("------")){
+    					String host = line.replace("-", "");
+    					String url = "http://" + host + "/";
+    					if(!relSites.contains(url)){
+    						relSites.add(url);
+    						System.out.println(">>" + url);
+    					}
+    				}
+    			}
 			}
 		}
 		return relSites;

@@ -8,7 +8,6 @@ import java.util.StringTokenizer;
 import java.util.Vector;
 
 import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.persistence.PersistentHashtable;
