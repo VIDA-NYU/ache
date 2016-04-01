@@ -23,7 +23,7 @@
 */
 package focusedCrawler.target.repository;
 
-import focusedCrawler.target.model.Target;
+import focusedCrawler.target.model.Page;
 /**
  * <p> </p>
  *
@@ -38,8 +38,8 @@ import focusedCrawler.target.model.Target;
  */
 public interface TargetRepository {
 
-  public boolean insert(Target target);
+  public boolean insert(Page target);
   
-  public boolean insert(Target target, int num);
+  public boolean insert(Page target, int num);
   
 }

@@ -27,7 +27,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
 import focusedCrawler.target.model.Page;
-import focusedCrawler.target.model.Target;
 import focusedCrawler.target.model.TargetModelCbor;
 import focusedCrawler.target.model.TargetModelJson;
 
@@ -76,11 +75,11 @@ public class FileSystemTargetRepository implements TargetRepository {
         this.compressData = compressData;
     }
 
-    public boolean insert(Target target, int counter) {
+    public boolean insert(Page target, int counter) {
         return insert(target);
     }
 
-    public boolean insert(Target target) {
+    public boolean insert(Page target) {
         try {
             String id = target.getIdentifier();
             URL url = new URL(id);
@@ -109,7 +108,7 @@ public class FileSystemTargetRepository implements TargetRepository {
         return false;
     }
 
-    private void serializeData(Target target, URL url, OutputStream fileStream)
+    private void serializeData(Page target, URL url, OutputStream fileStream)
             throws IOException, JsonGenerationException, JsonMappingException {
         switch(dataFormat) {
         case HTML:
@@ -119,7 +118,7 @@ public class FileSystemTargetRepository implements TargetRepository {
         }
         case JSON:
         {
-            TargetModelJson targetModel = new TargetModelJson((Page) target);
+            TargetModelJson targetModel = new TargetModelJson(target);
             jsonMapper.writeValue(fileStream, targetModel);
             break;
         }

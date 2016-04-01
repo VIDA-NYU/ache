@@ -1,7 +1,6 @@
 package focusedCrawler.target.classifier;
 
 import focusedCrawler.target.model.Page;
-import focusedCrawler.target.model.Target;
 
 public class KeepLinkRelevanceTargetClassifier implements TargetClassifier {
 
@@ -12,13 +11,12 @@ public class KeepLinkRelevanceTargetClassifier implements TargetClassifier {
     }
 
     @Override
-    public TargetRelevance classify(Target target) throws TargetClassifierException {
-        Page page = (Page) target;
+    public TargetRelevance classify(Page page) throws TargetClassifierException {
         if(targetClassifier == null) {
             return new TargetRelevance(true, page.getRelevance());
         }
         else{
-            boolean relevant = targetClassifier.classify(target).isRelevant();
+            boolean relevant = targetClassifier.classify(page).isRelevant();
             return new TargetRelevance(relevant, page.getRelevance()); 
         }
     }

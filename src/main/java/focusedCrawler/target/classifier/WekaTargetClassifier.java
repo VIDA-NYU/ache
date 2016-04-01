@@ -34,7 +34,6 @@ import org.xml.sax.SAXException;
 import weka.classifiers.Classifier;
 import weka.core.Instances;
 import focusedCrawler.target.model.Page;
-import focusedCrawler.target.model.Target;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListArquivo;
@@ -70,9 +69,9 @@ public class WekaTargetClassifier implements TargetClassifier {
 		this.stoplist = stoplist;
 	}
 
-	public TargetRelevance classify(Target target) throws TargetClassifierException{
+	public TargetRelevance classify(Page page) throws TargetClassifierException{
 		try{
-			double[] classificationResult = distributionForInstance(target);
+			double[] classificationResult = distributionForInstance(page);
 			final double relevanceProbability = classificationResult[0];
             if (relevanceProbability > relevanceThreshold) {
 				return new TargetRelevance(true, relevanceProbability);
@@ -100,10 +99,10 @@ public class WekaTargetClassifier implements TargetClassifier {
 	}
 
   
-	public double[] distributionForInstance(Target target) throws TargetClassifierException{
+	public double[] distributionForInstance(Page page) throws TargetClassifierException{
 		double[] result = null;
 	    try{
-	    	double[] values = getValues(target);
+	    	double[] values = getValues(page);
 	    	weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
 	    	instanceWeka.setDataset(instances);
 	    	result = classifier.distributionForInstance(instanceWeka);
@@ -114,9 +113,9 @@ public class WekaTargetClassifier implements TargetClassifier {
 	    return result;
 	}
   
-	private double[] getValues(Target target) throws IOException, SAXException {
+	private double[] getValues(Page page) throws IOException, SAXException {
 		VSMVector vsm = null;
-		vsm = new VSMVector(target.getSource(),stoplist,true);
+		vsm = new VSMVector(page.getSource(),stoplist,true);
 
 		double[] values = new double[attributes.length];
 		for (int i = 0; i < attributes.length; i++) {

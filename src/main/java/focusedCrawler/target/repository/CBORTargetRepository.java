@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
-import focusedCrawler.target.model.Target;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelCbor;
 
 @Deprecated
@@ -36,11 +36,11 @@ public class CBORTargetRepository implements TargetRepository {
         this.repositoryPath = repositoryPath;
     }
 
-    public boolean insert(Target target, int counter) {
+    public boolean insert(Page target, int counter) {
         return insert(target);
     }
 
-    public boolean insert(Target target) {
+    public boolean insert(Page target) {
         boolean contain = false;
         try {
             String url = target.getIdentifier();

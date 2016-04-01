@@ -7,8 +7,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
+import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelElasticSearch;
-import focusedCrawler.target.model.Target;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchClientFactory;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 
@@ -56,19 +56,19 @@ public class ElasticSearchTargetRepository implements TargetRepository {
         }
     }
 
-    public boolean insert(Target target, int counter) {
+    public boolean insert(Page target, int counter) {
         return index(target);
     }
 
-    public boolean insert(Target target) {
+    public boolean insert(Page target) {
         return index(target);
     }
 
-    private boolean index(Target target) {
+    private boolean index(Page page) {
 
-        TargetModelElasticSearch data = new TargetModelElasticSearch(target);
+        TargetModelElasticSearch data = new TargetModelElasticSearch(page);
 
-        String docId = target.getIdentifier();
+        String docId = page.getIdentifier();
         IndexResponse response = client.prepareIndex(indexName, typeName, docId)
                 .setSource(serializeAsJson(data))
                 .execute()

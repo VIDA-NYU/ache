@@ -26,10 +26,9 @@ public class TargetModelElasticSearch {
         // mandatory for object unserialization
     }
 
-    public TargetModelElasticSearch(Target target) {
-        Page page = (Page) target;
+    public TargetModelElasticSearch(Page page) {
 
-        this.url = target.getIdentifier();
+        this.url = page.getURL().toString();
         this.retrieved = new Date();
         this.words = page.getPageURL().palavras();
         this.wordsMeta = page.getPageURL().palavrasMeta();

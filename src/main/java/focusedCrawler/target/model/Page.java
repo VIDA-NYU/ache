@@ -39,7 +39,7 @@ import focusedCrawler.util.parser.PaginaURL;
  * @version 1.0
  */
 @SuppressWarnings("serial")
-public class Page implements Serializable, Target {
+public class Page implements Serializable {
 
     private boolean auth = false;
 

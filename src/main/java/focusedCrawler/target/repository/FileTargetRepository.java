@@ -35,7 +35,7 @@ import java.nio.file.Paths;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.target.model.Target;
+import focusedCrawler.target.model.Page;
 
 /**
  * <p> </p>
@@ -67,11 +67,11 @@ public class FileTargetRepository implements TargetRepository {
         this.location = location;
     }
 
-    public boolean insert(Target target, int counter) {
+    public boolean insert(Page target, int counter) {
         return insert(target);
     }
 
-    public boolean insert(Target target) {
+    public boolean insert(Page target) {
         boolean contain = false;
         try {
             String id = target.getIdentifier();
