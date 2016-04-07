@@ -6,20 +6,20 @@ import java.util.HashMap;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
-import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
-import focusedCrawler.link.classifier.util.Instance;
-import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.link.classifier.builder.Instance;
+import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
+import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 
 public class LinkClassifierAuthority implements LinkClassifier{
 
-	  private WrapperNeighborhoodLinks wrapper;
+	  private LinkNeighborhoodWrapper wrapper;
 	  private String[] attributes;
 	  private Classifier classifier;
 	  private Instances instances;
 	  
-	  public LinkClassifierAuthority(Classifier classifier, Instances instances, WrapperNeighborhoodLinks wrapper,String[] attributes) {
+	  public LinkClassifierAuthority(Classifier classifier, Instances instances, LinkNeighborhoodWrapper wrapper,String[] attributes) {
 		  this.wrapper = wrapper;
 		  this.attributes = attributes;
 		  this.classifier = classifier;
@@ -30,7 +30,7 @@ public class LinkClassifierAuthority implements LinkClassifier{
 	  }
 
 	  
-	  public LinkClassifierAuthority(WrapperNeighborhoodLinks wrapper,String[] attributes) {
+	  public LinkClassifierAuthority(LinkNeighborhoodWrapper wrapper,String[] attributes) {
 		  this.wrapper = wrapper;
 		  this.attributes = attributes;
 	  }

@@ -12,6 +12,7 @@ import org.junit.Test;
 
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.link.LinkStorageConfig;
+import focusedCrawler.target.TargetStorageConfig;
 
 public class ConfigServiceTest {
 

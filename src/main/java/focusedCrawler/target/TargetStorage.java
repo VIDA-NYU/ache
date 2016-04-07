@@ -9,17 +9,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.ConfigService;
-import focusedCrawler.config.TargetStorageConfig;
-import focusedCrawler.target.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
-import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
+import focusedCrawler.target.model.Page;
+import focusedCrawler.target.repository.CBORTargetRepository;
+import focusedCrawler.target.repository.ElasticSearchTargetRepository;
+import focusedCrawler.target.repository.FileSystemTargetRepository;
+import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
+import focusedCrawler.target.repository.FileTargetRepository;
+import focusedCrawler.target.repository.TargetRepository;
+import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
+import focusedCrawler.util.CommunicationException;
 import focusedCrawler.util.LangDetection;
-import focusedCrawler.util.Page;
-import focusedCrawler.util.dashboard.TargetMonitor;
-import focusedCrawler.util.distribution.CommunicationException;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageDefault;
@@ -41,12 +44,12 @@ public class TargetStorage extends StorageDefault {
     private TargetClassifier targetClassifier;
     private TargetStorageConfig config;
     private LangDetection langDetector = new LangDetection();
-    private TargetMonitor monitor;
+    private TargetStorageMonitor monitor;
     
     public TargetStorage(TargetClassifier targetClassifier,
                          TargetRepository targetRepository, 
                          Storage linkStorage,
-                       	 TargetMonitor monitor,
+                       	 TargetStorageMonitor monitor,
                        	 TargetRepository negativeRepository,
                        	 TargetStorageConfig config) {
         
@@ -186,20 +189,20 @@ public class TargetStorage extends StorageDefault {
         		throw new MissingArgumentException("ElasticSearch index name not provided!");
         	}
         	ElasticSearchConfig esconfig = config.getElasticSearchConfig();
-        	targetRepository = new TargetElasticSearchRepository(esconfig, indexName, "target");
-        	negativeRepository = new TargetElasticSearchRepository(esconfig, indexName, "negative");
+        	targetRepository = new ElasticSearchTargetRepository(esconfig, indexName, "target");
+        	negativeRepository = new ElasticSearchTargetRepository(esconfig, indexName, "negative");
         }
         else if (dataFormat.equals("CBOR")) {
-			targetRepository = new TargetCBORRepository(targetDirectory);
-			negativeRepository = new TargetCBORRepository(negativeDirectory);
+			targetRepository = new CBORTargetRepository(targetDirectory);
+			negativeRepository = new CBORTargetRepository(negativeDirectory);
         }
         else {
         	//Default data format is file
-        	targetRepository = new TargetFileRepository(targetDirectory);
-        	negativeRepository = new TargetFileRepository(negativeDirectory);
+        	targetRepository = new FileTargetRepository(targetDirectory);
+        	negativeRepository = new FileTargetRepository(negativeDirectory);
         }
         
-        TargetMonitor monitor = new TargetMonitor(dataPath, config);
+        TargetStorageMonitor monitor = new TargetStorageMonitor(dataPath, config);
         
         Storage targetStorage = new TargetStorage(targetClassifier, targetRepository, linkStorage, 
                                                   monitor, negativeRepository, config);

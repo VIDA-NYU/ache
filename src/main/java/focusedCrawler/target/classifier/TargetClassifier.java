@@ -23,7 +23,7 @@
  */
 package focusedCrawler.target.classifier;
 
-import focusedCrawler.util.Target;
+import focusedCrawler.target.model.Page;
 
 /**
  * <p>
@@ -45,7 +45,7 @@ import focusedCrawler.util.Target;
  */
 public interface TargetClassifier {
 
-    public TargetRelevance classify(Target target) throws TargetClassifierException;
+    public TargetRelevance classify(Page page) throws TargetClassifierException;
 
     public static class TargetRelevance {
         

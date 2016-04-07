@@ -10,6 +10,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.LinkStorageConfig;
+import focusedCrawler.link.frontier.selector.LinkSelector;
+import focusedCrawler.link.frontier.selector.MaximizeWebsitesLinkSelector;
+import focusedCrawler.link.frontier.selector.MultiLevelLinkSelector;
+import focusedCrawler.link.frontier.selector.NonRandomLinkSelector;
+import focusedCrawler.link.frontier.selector.PoliteTopkLinkSelector;
+import focusedCrawler.link.frontier.selector.RandomLinkSelector;
+import focusedCrawler.link.frontier.selector.SiteLinkSelector;
+import focusedCrawler.link.frontier.selector.TopicLinkSelector;
+import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.ParameterFile;
 
@@ -37,7 +46,7 @@ public class FrontierManagerFactory {
         
         LinkFilter linkFilter = new LinkFilter(configPath);
         
-        LinkSelectionStrategy linkSelector = createLinkSelector(config);
+        LinkSelector linkSelector = createLinkSelector(config);
         logger.info("LINK_SELECTOR: "+linkSelector.getClass().getName());
         return new FrontierManager(
                 frontier,
@@ -47,7 +56,7 @@ public class FrontierManagerFactory {
                 linkFilter);
     }
 
-    private static LinkSelectionStrategy createLinkSelector(LinkStorageConfig config) {
+    private static LinkSelector createLinkSelector(LinkStorageConfig config) {
         String linkSelectorConfig = config.getLinkSelector();
         if(linkSelectorConfig != null) {
             if(linkSelectorConfig.equals("TopkLinkSelector")) {

@@ -8,7 +8,7 @@ import java.util.Comparator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
-import focusedCrawler.target.TargetModel;
+import focusedCrawler.target.model.TargetModelCbor;
 
 public class CborToGzipCompressor {
     
@@ -41,7 +41,7 @@ public class CborToGzipCompressor {
 //                continue;
 //            }
             
-            TargetModel targetModel = cborMapper.readValue(f, focusedCrawler.target.TargetModel.class);
+            TargetModelCbor targetModel = cborMapper.readValue(f, focusedCrawler.target.model.TargetModelCbor.class);
 
             // open gzip output file
             if (currentArchive == null || objectsWritten % objectsPerFile == 0) {

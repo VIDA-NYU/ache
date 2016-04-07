@@ -34,12 +34,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
 import focusedCrawler.memex.cdr.CDRDocumentBuilder;
-import focusedCrawler.target.TargetModel;
-import focusedCrawler.target.TargetModelJson;
-import focusedCrawler.target.elasticsearch.ElasticSearchClientFactory;
-import focusedCrawler.target.elasticsearch.ElasticSearchConfig;
-import focusedCrawler.target.elasticsearch.ElasticSearchPageModel;
-import focusedCrawler.util.Page;
+import focusedCrawler.target.model.TargetModelElasticSearch;
+import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.TargetModelCbor;
+import focusedCrawler.target.model.TargetModelJson;
+import focusedCrawler.target.repository.elasticsearch.ElasticSearchClientFactory;
+import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.parser.PaginaURL;
 
 //
@@ -147,10 +147,10 @@ public class ElasticSearchIndexer {
                 
                 if (inputFormat.equals("CBOR")) {
                     
-                    TargetModel input = cborMapper.readValue(f, focusedCrawler.target.TargetModel.class);
+                    TargetModelCbor input = cborMapper.readValue(f, focusedCrawler.target.model.TargetModelCbor.class);
                     if (outputFormat.equals("ACHE")) {
                         id = input.url;
-                        doc = new ElasticSearchPageModel(input);
+                        doc = new TargetModelElasticSearch(input);
                     }
                     else if (outputFormat.equals("CDR")) {
                         id = null;
@@ -173,7 +173,7 @@ public class ElasticSearchIndexer {
                         page.setPageURL(pageParser);
                         
                         id = url;
-                        doc = new ElasticSearchPageModel(page);
+                        doc = new TargetModelElasticSearch(page);
                     }
                     else if (outputFormat.equals("CDR")) {
                         Tika tika = new Tika();
@@ -286,10 +286,10 @@ public class ElasticSearchIndexer {
                 String id;
                 Object doc;
                 
-                ElasticSearchPageModel pageModel;
+                TargetModelElasticSearch pageModel;
                 final String json = hit.getSourceAsString();
                 try {
-                    pageModel = jsonMapper.readValue(json, ElasticSearchPageModel.class);
+                    pageModel = jsonMapper.readValue(json, TargetModelElasticSearch.class);
                 } catch (IOException e) {
                     throw new RuntimeException("Failed to unserialize json object="+json);
                 }

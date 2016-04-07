@@ -27,7 +27,7 @@ import crawlercommons.fetcher.FetchedResult;
 import crawlercommons.fetcher.Payload;
 import crawlercommons.fetcher.http.SimpleHttpFetcher;
 import crawlercommons.fetcher.http.UserAgent;
-import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.link.frontier.LinkRelevance;
 
 public class HttpDownloader implements Closeable {
     

@@ -1,17 +1,12 @@
 package focusedCrawler.link.linkanalysis;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Vector;
 
-import focusedCrawler.link.BipartiteGraphRep;
-import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
-import focusedCrawler.util.ParameterFile;
+import focusedCrawler.link.BipartiteGraphRepository;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
@@ -22,7 +17,7 @@ public class SALSA {
 	
 	private HashMap<String,Vector<VSMElement>> incidenceAuthMatrix;
 	
-	private BipartiteGraphRep graphRep;
+	private BipartiteGraphRepository graphRep;
 	
 	private HashMap<String,VSMElement> initialValues;
 	
@@ -34,7 +29,7 @@ public class SALSA {
 	
 	private HashMap<String,VSMElement> authValues = new HashMap<String, VSMElement>();
 
-	public SALSA(BipartiteGraphRep graphRep){
+	public SALSA(BipartiteGraphRepository graphRep){
 		this.graphRep = graphRep;
 		this.incidenceHubMatrix = new HashMap<String, Vector<VSMElement>>();
 		this.incidenceAuthMatrix = new HashMap<String, Vector<VSMElement>>();
@@ -404,84 +399,6 @@ public class SALSA {
 			System.out.println("\n");
 			weights = newWeights;
 		}
-	}
-	
-	
-	public static void main(String[] args) {
-	    BiparitieGraphRepConfig config = new BiparitieGraphRepConfig(new ParameterFile(args[0]));
-        try {
-            String dataPath = ".";
-            BipartiteGraphRep rep = new BipartiteGraphRep(dataPath, config);
-			SALSA salsa = new SALSA(rep);
-			salsa.setPageRank(true);
-			File file = new File(args[1]);
-			HashMap<String,Double> authRelevance = new HashMap<String, Double>();
-			HashMap<String,Double> hubRelevance = new HashMap<String, Double>();
-			BufferedReader input = new BufferedReader(new FileReader(file));
-			for (String line = input.readLine(); line != null; line = input.readLine()) {
-				if(line.startsWith("------")){
-					String host = line.replace("-", "");
-					String url = "http://" + host + "/";
-					String id = rep.getID(url);
-					if(id == null){
-						continue;
-					}
-					authRelevance.put(id,new Double(1));
-					String[] backlinks = rep.getBacklinks(id);
-					if(backlinks == null){
-						continue;
-					}
-					for (int i = 0; i < backlinks.length; i++) {
-						id = rep.getID(backlinks[i]);
-						Double counter = hubRelevance.get(backlinks[i]);
-						if(counter == null){
-							counter = new Double(0);
-						}
-						hubRelevance.put(id, new Double(counter.doubleValue()+1));
-					}
-				}
-			}
-			
-			HashMap<String,VSMElement> nodeRelevance = new HashMap<String, VSMElement>();
-			Iterator<String> iter = authRelevance.keySet().iterator();
-			while(iter.hasNext()){
-				String key = iter.next();
-				nodeRelevance.put(key + "_auth", new VSMElement(key + "_auth", 1/(double)authRelevance.size()));
-			}
-
-			Iterator<Double> iter1 = hubRelevance.values().iterator();
-			double total = 0;
-			while(iter1.hasNext()){
-				Double value = iter1.next();
-				total = total + value.doubleValue();
-			}
-			 iter = hubRelevance.keySet().iterator();
-			while(iter.hasNext()){
-				String key = iter.next();
-				Double value = hubRelevance.get(key);
-				nodeRelevance.put(key + "_hub", new VSMElement(key + "_hub", value.doubleValue()/total));
-			}
-			salsa.setNodeRelevance(nodeRelevance);
-			salsa.execute();
-//			HashSet<String> relSites = new HashSet<String>();
-//			BufferedReader input = new BufferedReader(new FileReader(new File(args[0])));
-//			for (String line = input.readLine(); line != null; line = input.readLine()) {
-//				relSites.add(line.trim());
-//			}
-//			salsa.simplifiedSALSA();
-//			salsa.seedSALSA(relSites);
-//			salsa.originalSALSA();
-//			salsa.pageRank();
-//			SALSA salsa = new SALSA(null);
-//			salsa.setPageRank(true);
-//			salsa.execute();
-
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-			// TODO: handle exception
-		}
-
 	}
 	
 }

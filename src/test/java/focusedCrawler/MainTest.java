@@ -15,7 +15,7 @@ import org.junit.rules.TemporaryFolder;
 
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
-import focusedCrawler.util.Page;
+import focusedCrawler.target.model.Page;
 
 public class MainTest {
     

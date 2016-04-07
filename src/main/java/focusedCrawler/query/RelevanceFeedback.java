@@ -28,7 +28,7 @@ import weka.core.Instances;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.classifier.WekaTargetClassifier;
-import focusedCrawler.util.Page;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.PorterStemmer;

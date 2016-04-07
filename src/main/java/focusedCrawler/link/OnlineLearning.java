@@ -11,11 +11,11 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 import focusedCrawler.link.classifier.LinkClassifier;
-import focusedCrawler.link.classifier.builder.ClassifierBuilder;
+import focusedCrawler.link.classifier.builder.LinkClassifierBuilder;
 import focusedCrawler.link.frontier.Frontier;
+import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.link.linkanalysis.HITS;
 import focusedCrawler.link.linkanalysis.SALSA;
-import focusedCrawler.util.LinkRelevance;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.vsm.VSMElement;
 
@@ -26,15 +26,15 @@ public class OnlineLearning {
 	
 	private BipartiteGraphManager manager;
 	
-	private BipartiteGraphRep rep;
+	private BipartiteGraphRepository rep;
 	
-	private ClassifierBuilder classifierBuilder;
+	private LinkClassifierBuilder classifierBuilder;
 	
 	private String method;
 	
 	private String targetPath;
 	
-	public OnlineLearning(Frontier frontier, BipartiteGraphManager manager, ClassifierBuilder classifierBuilder, String method, String path){
+	public OnlineLearning(Frontier frontier, BipartiteGraphManager manager, LinkClassifierBuilder classifierBuilder, String method, String path){
 		this.frontier = frontier;
 		this.manager = manager;
 		this.classifierBuilder = classifierBuilder;
@@ -81,7 +81,7 @@ public class OnlineLearning {
 			for (int i = 0; i < dirs.length; i++) {
 				File[] files = dirs[i].listFiles();
 				for (int j = 0; j < files.length; j++) {
-					String url = URLDecoder.decode(files[j].getName());
+					String url = URLDecoder.decode(files[j].getName(), "UTF-8");
 					if(!relSites.contains(url)){
 						relSites.add(url);
 						System.out.println(">>" + url);
@@ -90,16 +90,17 @@ public class OnlineLearning {
 			}
 		}else{
 			File file = new File(targetPath + File.separator + "entry_points");
-			BufferedReader input = new BufferedReader(new FileReader(file));
-			for (String line = input.readLine(); line != null; line = input.readLine()) {
-				if(line.startsWith("------")){
-					String host = line.replace("-", "");
-					String url = "http://" + host + "/";
-					if(!relSites.contains(url)){
-						relSites.add(url);
-						System.out.println(">>" + url);
-					}
-				}
+			try(BufferedReader input = new BufferedReader(new FileReader(file))) {
+    			for (String line = input.readLine(); line != null; line = input.readLine()) {
+    				if(line.startsWith("------")){
+    					String host = line.replace("-", "");
+    					String url = "http://" + host + "/";
+    					if(!relSites.contains(url)){
+    						relSites.add(url);
+    						System.out.println(">>" + url);
+    					}
+    				}
+    			}
 			}
 		}
 		return relSites;

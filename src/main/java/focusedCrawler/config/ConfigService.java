@@ -11,6 +11,7 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.link.LinkStorageConfig;
+import focusedCrawler.target.TargetStorageConfig;
 
 public class ConfigService {
 

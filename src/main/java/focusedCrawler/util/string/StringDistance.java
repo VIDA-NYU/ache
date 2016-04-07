@@ -28,9 +28,11 @@ public class StringDistance {
 		try {
 			java.io.BufferedReader input = new java.io.BufferedReader(new java.io.FileReader(new java.io.File(args[0])));
 			String a1 = input.readLine();
-
+			input.close();
+			
 			java.io.BufferedReader input1 = new java.io.BufferedReader(new java.io.FileReader(new java.io.File(args[1])));
 			String b1 = input1.readLine();
+			input1.close();
 			
 //			String a1 = args[0];
 //			String b1 = args[1];

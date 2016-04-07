@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html  lang="en-US">
+<head id="Head"><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>
+	Memex (Domain-Specific Search)
+</title><meta id="MetaCopyright" name="COPYRIGHT" content="Copyright 2015 by DARPA" /><meta id="MetaRobots" name="ROBOTS" content="INDEX, FOLLOW" />
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <meta content="text/javascript" http-equiv="Content-Script-Type" />
+        <meta content="text/css" http-equiv="Content-Style-Type" />
+        <meta name="RESOURCE-TYPE" content="DOCUMENT" />
+        <meta name="REVISIT-AFTER" content="1 DAYS" />
+        <meta name="RATING" content="GENERAL" />
+    <link href="/Portals/_default/default.css?cdv=49" media="all" type="text/css" rel="stylesheet"/><link href="/Portals/_default/Skins/DDM/skin.css?cdv=49" media="all" type="text/css" rel="stylesheet"/><link href="/Portals/0/portal.css?cdv=49" media="all" type="text/css" rel="stylesheet"/><script src="/Resources/libraries/jQuery/01_09_01/jquery.js?cdv=49" type="text/javascript"></script><script src="/Resources/libraries/jQuery-Migrate/01_02_01/jquery-migrate.js?cdv=49" type="text/javascript"></script><script src="/Resources/libraries/jQuery-UI/01_10_03/jquery-ui.js?cdv=49" type="text/javascript"></script><link href="http://dtdnnp-01.darpa.mil/program/memex" rel="canonical" /><link rel="alternate" type="application/rss+xml" title="DARPA RSS Feed" href="/rss" /><meta name="Topic" content="Cyber" /><meta name="Topic" content="Data" /><meta name="Topic" content="Visualization" /><meta name="image" content="/DDM_Gallery/(2ab4) i2o feature 3 - memex - 287x228_thumb.jpg" />
+                  <script type="text/javascript">
+                    var AKSB=AKSB||{};AKSB.q=[];AKSB.mark=function(c,a){AKSB.q.push(["mark",c,a||(new Date).getTime()])};AKSB.measure=function(c,a,b){AKSB.q.push(["measure",c,a,b||(new Date).getTime()])};AKSB.done=function(c){AKSB.q.push(["done",c])};AKSB.mark("firstbyte",(new Date).getTime());
+                    AKSB.prof={custid:"109434",ustr:"",originlat:0,clientrtt:19,ghostip:"23.3.96.70",ipv6:false,pct:10,xhrtest:false,clientip:"204.148.24.98",requestid:"3b936004",protocol:"",akM:"dscg",akN:""};
+                    (function(c){var a=document.createElement("iframe");a.src="javascript:false";(a.frameElement||a).style.cssText="width: 0; height: 0; border: 0; display: none";var b=document.getElementsByTagName("script"),b=b[b.length-1];b.parentNode.insertBefore(a,b);a=a.contentWindow.document;b=String.fromCharCode;c=b(60)+"body onload=\"var js = document.createElement('script');js.id = 'aksb-ifr';js.src = '"+c+"';document.body.appendChild(js);\""+b(62);a.open().write(c);a.close()})(("https:"===document.location.protocol?
+                    "https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js");
+                  </script>
+                  </head>
+<body id="Body">
+    
+    <form method="post" action="/program/memex" id="Form" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="StylesheetManager_TSSM" id="StylesheetManager_TSSM" value="" />
+<input type="hidden" name="ScriptManager_TSM" id="ScriptManager_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form'];
+if (!theForm) {
+    theForm = document.Form;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=yqLcdkPwM5GG71ViGmmpEdguxHSiy4BIjzecm69pC0gP6bAo8yfVo5vTKl2CwKmUxFYcpMNakL4B_GiN0&amp;t=635589255571259667" type="text/javascript"></script>
+
+<script> $( document ).ready(function() {   $("#content__wrapper").removeClass("sidebar-second") ;  });  </script>
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a1453655a-6b8d-49b1-94c2-f77a352f5241%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="NzkGzd26M81smXJvHCOvRv5m9u6VbuXy6Mxykx72SPU7oqjt2MNXD3dMfQkj9AsT+mND3LyBkF/AQW/sAjfJTJzhOUK5AlV8rSu9+EP2bTNyXiUwyCsyNomQ1GhjTA6RnqZaaeXnPsoZMaE8" />
+</div><script src="/js/Debug/dnn.modalpopup.js?cdv=49" type="text/javascript"></script><script src="/Portals/_default/Skins/DDM/js/skiplinks.js?cdv=49" type="text/javascript"></script><script src="/Portals/_default/Skins/DDM/js/html5-respond.js?cdv=49" type="text/javascript"></script><script src="/Portals/_default/Skins/DDM/js/scripts.js?cdv=49" type="text/javascript"></script><script src="/Portals/_default/Skins/DDM/js/jquery.mobile.custom.min.js?cdv=49" type="text/javascript"></script><script src="/js/Debug/dnncore.js?cdv=49" type="text/javascript"></script><script src="/Portals/_default/Skins/DDM/js/html5.js?cdv=49" type="text/javascript"></script><script src="/Portals/_default/Skins/DDM/js/jquery.sidr.min.js?cdv=49" type="text/javascript"></script><script src="/Portals/_default/Skins/DDM/js/sjquery.formalize.min.js?cdv=49" type="text/javascript"></script><script src="/Portals/_default/Skins/DDM/js/jquery.flexslider-min.js?cdv=49" type="text/javascript"></script><script src="/Portals/_default/Skins/DDM/js/picturefill.min.js?cdv=49" type="text/javascript"></script><script src="/Portals/_default/Skins/DDM/js/sticky-nav.js?cdv=49" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'Form', [], [], [], 90, '');
+//]]>
+</script>
+
+        
+        
+        
+
+<!--Innerpage type two  -->
+<!-- Mislocated meta tags  -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--googleoff: index--> 
+<div style="clear:both;"></div>
+<!-- HeaderPane  -->
+<div id="dnn_HeaderPane">
+<div class="DnnModule DnnModule-DDMFrontEndPageHeader DnnModule-458"><a name="458"></a>
+<div class="DNNContainer_Title_h2 SpacingBottom">
+    <h2><span id="dnn_ctr458_dnnTITLE_titleLabel" class="TitleH2"> </span>
+
+
+</h2>
+    <div id="dnn_ctr458_ContentPane"><!-- Start_Module_458 --><div id="dnn_ctr458_ModuleContent" class="DNNModuleContent ModDDMFrontEndPageHeaderC">
+	
+
+<!-- my javascripts -->
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<div class="header__wrapper" role="navigation">
+  <p id="skip-link">
+    <a href="#content" class="element-invisible element-focusable">Jump to
+      content</a>
+  </p>
+
+<header id="header">
+<div class="block--explore-topics">
+<div>
+    <div id="sidr__trigger">
+        <span class="sidr__trigger__burger"></span>
+        Explore Topics
+    </div>
+</div>
+<div id="sidr">
+<div class="sidr__header">
+<div class="sidr__title">Explore Topics</div>
+<div id="sidr__close"><a href="/#">X</a></div>
+</div>
+
+<ul><li><a href="/tag-list?tt=1">Access</a></li><li><a href="/tag-list?tt=85">Adaptability</a></li><li><a href="/tag-list?tt=2">Administration</a></li><li><a href="/tag-list?tt=86">Agency</a></li><li><a href="/tag-list?tt=73">AI</a></li><li><a href="/tag-list?tt=3">Air</a></li><li><a href="/tag-list?tt=4">Algorithms</a></li><li><a href="/tag-list?tt=74">Analytics</a></li><li><a href="/tag-list?tt=75">Automation</a></li><li><a href="/tag-list?tt=5">Autonomy</a></li><li><a href="/tag-list?tt=6">Bio-complexity</a></li><li><a href="/tag-list?tt=7">Bio-systems</a></li><li><a href="/tag-list?tt=8">BMC2</a></li><li><a href="/tag-list?tt=9">CBRN</a></li><li><a href="/tag-list?tt=10">Chemistry</a></li><li><a href="/tag-list?tt=11">Communications</a></li><li><a href="/tag-list?tt=12">Complexity</a></li><li><a href="/tag-list?tt=76">Contracts</a></li><li><a href="/tag-list?tt=14">Countermeasures</a></li><li><a href="/tag-list?tt=15">Cyber</a></li><li><a href="/tag-list?tt=16">Data</a></li><li><a href="/tag-list?tt=17">Decentralization</a></li><li><a href="/tag-list?tt=18">Disease</a></li><li><a href="/tag-list?tt=19">Electronics</a></li><li><a href="/tag-list?tt=20">Energy</a></li><li><a href="/tag-list?tt=91">Events</a></li><li><a href="/tag-list?tt=21">EW</a></li><li><a href="/tag-list?tt=77">Finance</a></li><li><a href="/tag-list?tt=22">Forecasting</a></li><li><a href="/tag-list?tt=78">Formal</a></li><li><a href="/tag-list?tt=58">Fundamentals</a></li><li><a href="/tag-list?tt=92">Games</a></li><li><a href="/tag-list?tt=24">Globalization</a></li><li><a href="/tag-list?tt=25">Ground</a></li><li><a href="/tag-list?tt=26">Health</a></li><li><a href="/tag-list?tt=27">History</a></li><li><a href="/tag-list?tt=28">Imagery</a></li><li><a href="/tag-list?tt=29">Injury</a></li><li><a href="/tag-list?tt=30">Integration</a></li><li><a href="/tag-list?tt=89">Interface</a></li><li><a href="/tag-list?tt=31">ISR</a></li><li><a href="/tag-list?tt=32">Language</a></li><li><a href="/tag-list?tt=33">Launch</a></li><li><a href="/tag-list?tt=34">Leadership</a></li><li><a href="/tag-list?tt=35">Logistics</a></li><li><a href="/tag-list?tt=36">Manufacturing</a></li><li><a href="/tag-list?tt=37">Maritime</a></li><li><a href="/tag-list?tt=38">Materials</a></li><li><a href="/tag-list?tt=39">Math</a></li><li><a href="/tag-list?tt=40">Med-Devices</a></li><li><a href="/tag-list?tt=41">Microchips</a></li><li><a href="/tag-list?tt=42">Microstructures</a></li><li><a href="/tag-list?tt=43">Microsystems</a></li><li><a href="/tag-list?tt=44">Mobile</a></li><li><a href="/tag-list?tt=45">Munitions</a></li><li><a href="/tag-list?tt=46">Networking</a></li><li><a href="/tag-list?tt=47">Neuroscience</a></li><li><a href="/tag-list?tt=87">Opportunities</a></li><li><a href="/tag-list?tt=49">Photonics</a></li><li><a href="/tag-list?tt=50">PNT</a></li><li><a href="/tag-list?tt=90">Policy</a></li><li><a href="/tag-list?tt=79">Privacy</a></li><li><a href="/tag-list?tt=51">Processing</a></li><li><a href="/tag-list?tt=52">Programming</a></li><li><a href="/tag-list?tt=53">Quantum</a></li><li><a href="/tag-list?tt=54">Resilience</a></li><li><a href="/tag-list?tt=55">Restoration</a></li><li><a href="/tag-list?tt=56">Robotics</a></li><li><a href="/tag-list?tt=57">Satellites</a></li><li><a href="/tag-list?tt=80">SBIR</a></li><li><a href="/tag-list?tt=81">Security</a></li><li><a href="/tag-list?tt=59">Sensors</a></li><li><a href="/tag-list?tt=60">Space</a></li><li><a href="/tag-list?tt=82">Spectroscopy</a></li><li><a href="/tag-list?tt=61">Spectrum</a></li><li><a href="/tag-list?tt=62">SWAP</a></li><li><a href="/tag-list?tt=63">Syn-Bio</a></li><li><a href="/tag-list?tt=64">Systems</a></li><li><a href="/tag-list?tt=65">Targeting</a></li><li><a href="/tag-list?tt=67">Tech-Foundations</a></li><li><a href="/tag-list?tt=88">Testimony</a></li><li><a href="/tag-list?tt=66">Therapy</a></li><li><a href="/tag-list?tt=68">Thermal </a></li><li><a href="/tag-list?tt=69">Training</a></li><li><a href="/tag-list?tt=70">Transition</a></li><li><a href="/tag-list?tt=83">Trust</a></li><li><a href="/tag-list?tt=71">Unmanned</a></li><li><a href="/tag-list?tt=84">Visualization</a></li></ul>
+
+
+</div>
+</div>
+<div class="logo"><a href="/" title="Defense Advanced Research Projects Agency" id="logo" rel="home"><span class="logo__image"></span><span class="logo__text element-invisible">Defense Advanced<br />
+Research Projects Agency</span></a></div>
+<div class="menu--main-menu" id="menu--main-menu">
+<div class="sidr__header">
+<div class="sidr__title">Main Menu</div>
+<div id="sidr--main-menu__close"><a href="/#">X</a></div>
+</div>
+
+<div class="search__box" id="search__box" > 
+    <input name="search" id="menusearchinput" type="text" />
+    <input type="submit" id="menusearchbtn" value="search" />
+</div>
+
+<script>
+
+    $('#menusearchbtn, #sidr-id-menusearchbtn').click(function () {
+        var search_text = $('#menusearchinput').val();
+        var search_text2 = $('#sidr-id-menusearchinput').val();
+        if (search_text2.length > 0) search_text = search_text2;
+        window.location = "http://search.darpa.mil/search?q=" + search_text + "&client=default_frontend&output=xml_no_dtd&proxystylesheet=default_frontend&sort=date:D:L:d1&wc=200&wc_mc=1&oe=UTF-8&ie=UTF-8&ud=1&exclude_apps=1&site=default_collection";
+    
+    return false;
+}
+)
+</script>
+
+
+
+
+<ul>
+    <li class="first"><a>About Us</a>
+    <ul>
+        <li class="first"><a href="/about-us/about-darpa">About DARPA</a></li>
+        <li><a href="/about-us/people">People</a></li>
+        <li><a href="/about-us/offices">Offices</a></li>
+        <li><a href="/about-us/testimony">Testimony</a></li>
+        <li><a href="/about-us/budget">Budget</a></li>
+        <li><a href="/about-us/darpa-history-and-timeline">DARPA History</a></li>
+        <li class="last"><a href="/about-us/image-gallery">Image Gallery</a></li>
+    </ul>
+    </li>
+    <li class="menu--main-menu-seperator">/</li>
+    <li><a href="/our-research">Our Research</a></li>
+    <li class="menu--main-menu-seperator">/</li>
+    <li><a href="/news">News</a></li>
+    <li class="menu--main-menu-seperator">/</li>
+    <li><a href="/events">Events</a></li>
+    <li class="menu--main-menu-seperator">/</li>
+    <li><a>Work With Us</a>
+    <ul>
+        <li class="first"><a href="/work-with-us/opportunities">Opportunities</a></li>
+        <li><a href="/work-with-us/contract-management">Contract Management</a></li>
+        <li><a href="/work-with-us/for-industry">For Industry</a></li>
+        <li><a href="/work-with-us/for-small-businesses">For Small Businesses</a></li>
+        <li><a href="/work-with-us/for-universities">For Universities</a></li>
+        <li><a href="/work-with-us/for-government-and-Military">For Government and Military</a></li>
+        <li class="last"><a href="/work-with-us/support-offices">Support Offices</a></li>
+    </ul>
+    </li>
+    <li class="menu--main-menu-seperator">/</li>
+    <li class="last menu--main-menu__search"><a  id="search-toggle">Search</a></li>
+</ul>
+</div>
+</header>
+</div>
+
+<!-- ------------------ Mobile Toggles ------------------------------------  -->  	
+<DIV class="mobile-toggles nav" role="complementary" aria-label="toggles" >
+	<A id="mobile-toggles__main-menu-trigger" href="/#">
+		<SPAN class="mobile-toggles__icon"></SPAN>Main Menu</A>       
+	<A id="mobile-toggles__explore-topics-trigger" href="/#">
+		<SPAN class="mobile-toggles__icon"></SPAN>Explore Topics</A>
+</DIV>
+</div><!-- End_Module_458 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+
+<!-- MobileTogglesPane  -->
+<div id="dnn_MobileTogglesPane" class="DNNEmptyPane">
+</div>
+
+<div style="clear:both;"></div>
+<div id="content__wrapper" class="not-front sidebar-second" role="main">
+
+    <span id="dnn_dnnBREADCRUMB_lblBreadCrumb"><a href="http://www.darpa.mil/" class="breadcrumb__item breadcrumb__link">Defense Advanced Research Projects Agency</a><span class='breadcrumb__item breadcrumb__seperator' ></span><span class="breadcrumb__item breadcrumb__link">Program Information</span><span class='breadcrumb__item breadcrumb__seperator' ></span><a href="/program/memex" class="breadcrumb__item breadcrumb__link">Memex (Domain-Specific Search)</a></span>
+
+
+    <div style="clear:both;"></div>
+    <!-- ContentPane  -->
+    <!--googleon: index--> 
+    <div id="dnn_ContentPane"> <div class="DnnModule DnnModule-DDMFrontEndDispItemDetail DnnModule-456"><a name="456"></a>
+<div class="DNNContainer_Title_h2 SpacingBottom">
+    <h2><span id="dnn_ctr456_dnnTITLE_titleLabel" class="TitleH2"> </span>
+
+
+</h2>
+    <div id="dnn_ctr456_ContentPane"><!-- Start_Module_456 --><div id="dnn_ctr456_ModuleContent" class="DNNModuleContent ModDDMFrontEndDispItemDetailC">
+	
+
+
+
+<section id="prefix">
+    
+  </section>
+
+  <section id="content">
+
+    <div class="region--content">
+      <div class="region--content__inner">
+
+        <div id="dnn_ctr456_DispItemDetail_divDetail" class="detail">
+
+          <div class="detail__header has-thumbnail" >
+
+            <div class="detail__header__left" >
+                <div id="dnn_ctr456_DispItemDetail_div_detail_header__thumbnail" class="detail__header__thumbnail">  <!--  -->
+                    
+                </div>
+            </div>
+
+            <div class="detail__header__right" >
+
+                <h1 id="dnn_ctr456_DispItemDetail_h1_detail__header" class="detail__title">Memex (Domain-Specific Search)</h1>               <!--  -->
+
+                <span id="dnn_ctr456_DispItemDetail_myOfficeRoles_myRolesGoHere"></span>
+
+                                
+
+
+
+
+
+                <h2 id="dnn_ctr456_DispItemDetail_h2_detail__subtitle" class="detail__subtitle">Mr. Wade Shen</h2>          <!--   -->
+                <div id="dnn_ctr456_DispItemDetail_div_detail__positionOffice" class="detail__position-office"> <!--  -->
+                </div>
+
+                <div id="dnn_ctr456_DispItemDetail_div_detail__date" class="detail__date"></div>               <!--  -->
+                <div id="dnn_ctr456_DispItemDetail_div_detail_time" class="detail_time"></div>                 <!--  -->
+                <div id="dnn_ctr456_DispItemDetail_div_detail__location" class="detail__location"></div>       <!--  -->
+                <div id="dnn_ctr456_DispItemDetail_div_detail__address" class="detail__address"></div>         <!--  -->
+                                  <!--  -->
+           </div>
+           
+
+            
+
+
+
+          </div>
+
+          <div class="detail__content">
+            <div class="detail__image-caption-container">
+              <div id="dnn_ctr456_DispItemDetail_div_detail__image" class="detail__image">
+                  
+              </div>         <!--  -->
+              <div id="dnn_ctr456_DispItemDetail_div_detail__caption" class="detail__caption"></div>                                <!--  -->
+            </div>
+
+            <div id="dnn_ctr456_DispItemDetail_div_detail__body" class="detail__body"><p>Today's web searches use a centralized, one-size-fits-all approach that searches the Internet with the same set of tools for all queries. While that model has been wildly successful commercially, it does not work well for many government use cases. For example, it still remains a largely manual process that does not save sessions, requires nearly exact input with one-at-a-time entry, and doesn't organize or aggregate results beyond a list of links. Moreover, common search practices miss information in the deep web&mdash;the parts of the web not indexed by standard commercial search engines&mdash;and ignore shared content across pages.</p>
+<p>To help overcome these challenges, DARPA has launched the Memex program. Memex seeks to develop software that advances online search capabilities far beyond the current state of the art. The goal is to invent better methods for interacting with and sharing information, so users can quickly and thoroughly organize and search subsets of information relevant to their individual interests. The technologies developed in the program would provide the mechanisms for improved content discovery, information extraction, information retrieval, user collaboration and other key search functions. </p>
+<p>Envisioned benefits of the program include: </p>
+<ul>
+    <li>Development of next-generation of search technologies to revolutionize the discovery, organization and presentation of domain-specific content </li>
+    <li>Creation of a new domain-specific search paradigm to discover relevant content and organize it in ways that are more immediately useful to specific tasks</li>
+    <li>Extension of current search capabilities to the deep web and nontraditional content</li>
+    <li>Improved interfaces for military, government and commercial enterprises to find and organize publically available information on the Internet </li>
+</ul>
+<p>Memex would ultimately apply to any public domain content; initially, DARPA plans to develop Memex to address a key Defense Department mission: fighting human trafficking. Human trafficking is a factor in many types of military, law enforcement and intelligence investigations and has a significant web presence to attract customers. The use of forums, chats, advertisements, job postings, hidden services, etc., continues to enable a growing industry of modern slavery. An index curated for the counter-trafficking domain, along with configurable interfaces for search and analysis, would enable new opportunities to uncover and defeat trafficking enterprises. </p>
+<p>Memex plans to explore three technical areas of interest: domain-specific indexing, domain-specific search, and DoD-specified applications. The program is specifically not interested in proposals for the following: attributing anonymous services, deanonymizing or attributing identity to servers or IP addresses, or accessing information not intended to be publicly available. The program plans to use commodity hardware and emphasize creating and leveraging open source technology and architecture.</p>
+<p>The Memex program gets its name and inspiration from a hypothetical device described in &ldquo;<a href="http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/?single_page=true" title="As We May Think" class="external" target="_blank">As We May Think</a>,&rdquo; a 1945 article for <a href="http://www.theatlantic.com/" title="The Atlantic Monthly" class="external" target="_blank"><em>The Atlantic Monthly</em></a> written by Vannevar Bush, director of the <a href="http://www.loc.gov/rr/scitech/trs/trsosrd.html" title="U.S. Office of Scientific Research and Development (OSRD)" target="_blank">U.S. Office of Scientific Research and Development (OSRD)</a> during World War II. Envisioned as an analog computer to supplement human memory, the memex (a combination of &ldquo;memory&rdquo; and &ldquo;index&rdquo;) would store and automatically cross-reference all of the user&rsquo;s books, records and other information. </p>
+<p>This cross-referencing, which Bush called associative indexing, would enable users to quickly and flexibly search huge amounts of information and more efficiently gain insights from it. The memex presaged and encouraged scientists and engineers to create hypertext, the Internet, personal computers, online encyclopedias and other major IT advances of the last seven decades. </p>
+<p>The Broad Agency Announcement (BAA) for Memex is available at <a href="http://go.usa.gov/BBc5" title="http://go.usa.gov/BBc5" target="_blank">http://go.usa.gov/BBc5</a>. To familiarize potential participants with the technical objectives of Memex, DARPA has scheduled a Proposers' Day on Tuesday, February 18, 2014, in Arlington, Va. For details, visit <a href="http://www.sa-meetings.com/memex" title="http://www.sa-meetings.com/memex" class="external" target="_blank">http://www.sa-meetings.com/memex</a>. Registration closes on February 13, 2014, at 5 p.m. ET. There will be no on-site registration. For more information, please email <a href="mailto:memex@darpa.mil">memex@darpa.mil</a>. </p></div>
+
+          </div>
+
+        </div>
+         
+        <div class="listing__header listing__header--bluebox ">
+        <h2 class="listing__title--bluebox">Topics</h2>  
+        </div>
+        
+
+
+<!-- need a horizontal datalist control so that tag values can be bound to the anchor tag with the id of the tag -->
+
+<div class="listing__tags detail__tags"><span class="listing__tag-item listing__tag-seperator">|</span>
+    <a href="/tag-list?tt=15" class="listing__tag-item listing__tag-link">Cyber</a>        
+    <span class="listing__tag-item listing__tag-seperator">|</span>
+    
+    <a href="/tag-list?tt=16" class="listing__tag-item listing__tag-link">Data</a>        
+    <span class="listing__tag-item listing__tag-seperator">|</span>
+    
+    <a href="/tag-list?tt=84" class="listing__tag-item listing__tag-link">Visualization</a>        
+    <span class="listing__tag-item listing__tag-seperator">|</span>
+    </div>                                  
+
+            
+        <p>&nbsp;</p>
+  
+        
+          
+          
+        
+                  
+
+
+        
+  
+        
+
+
+        <div>
+            <div id="dnn_ctr456_DispItemDetail_myRelatedContent_dRelated" class="related-content  listing__header--bluebox">
+          <h2 class="listing__title--bluebox">Associated Content</h2>
+          <table id="dnn_ctr456_DispItemDetail_myRelatedContent_dlItems" cellspacing="0" style="border-collapse:collapse;">
+		<tr>
+			<td>
+                  <a href="/about-us/i2o-highlight-brandeis" id="dnn_ctr456_DispItemDetail_myRelatedContent_dlItems_itemLink_0">Brandeis</a>
+              </td>
+		</tr><tr>
+			<td>
+                  <a href="/about-us/offices/i2o/more" id="dnn_ctr456_DispItemDetail_myRelatedContent_dlItems_itemLink_1">Information Innovative Office</a>
+              </td>
+		</tr><tr>
+			<td>
+                  <a href="/about-us/i2o-privacy-and-utility" id="dnn_ctr456_DispItemDetail_myRelatedContent_dlItems_itemLink_2">Privacy and Utility </a>
+              </td>
+		</tr><tr>
+			<td>
+                  <a href="/about-us/offices/i2o" id="dnn_ctr456_DispItemDetail_myRelatedContent_dlItems_itemLink_3">Information Innovation Office</a>
+              </td>
+		</tr><tr>
+			<td>
+                  <a href="/program/plan-x" id="dnn_ctr456_DispItemDetail_myRelatedContent_dlItems_itemLink_4">Plan X</a>
+              </td>
+		</tr>
+	</table>
+        </div>
+          
+        </div>
+
+       <div id="dnn_ctr456_DispItemDetail_divMedia" class="grid--images grid">
+           <div class="listing__header listing__header--bluebox">
+               <h2 class="listing__title--bluebox">Images</h2>
+           </div>
+             
+       <ul class="grid__list">
+   
+
+           <li class="grid__item" style="height:325px">
+              <div class="grid__link">
+                <a href="/ddm_gallery/(2ab4) i2o feature 3 - memex - 287x228.jpg" target="_blank">
+                  <div class="grid__thumbnail">
+                    <img alt="Memex" src="/ddm_gallery/(2ab4) i2o feature 3 - memex - 287x228_thumb.jpg"/>
+                  </div>
+                </a>
+                <a href="/program/memex">
+                  <div class="grid__headline">Memex</div>
+                </a>
+              </div>
+              <div class="grid__credit"></div>
+              <div class="grid__tags">
+                
+              </div>
+            </li>
+
+        
+        </ul>
+    
+
+
+
+
+
+
+          
+       </div>
+
+        
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <aside class="region-sidebar-second">
+
+    <div>
+        
+    </div>
+
+    
+      
+      
+
+    <div>
+        
+    </div>
+
+    <div>
+        
+    </div>
+
+    <div>
+        
+    </div>
+
+
+  </aside>
+
+
+
+
+
+
+</div><!-- End_Module_456 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+    <!--googleoff: index--> 
+</div>
+
+
+<!--  Back to top for narrow screens    -->
+<div class="region--back-to-top" role="complementary" aria-label="backtotop">
+    <div class="region--back-to-top__inner">
+        <a href="/Portals/_default/Skins/DDM/#"><span>Back To Top</span></a>
+    </div>
+</div>
+
+<div style="clear:both;"> </div>
+<!-- FooterPane  -->
+<div id="dnn_FooterPane">
+<div class="DnnModule DnnModule-DDMFrontEndPageFooter DnnModule-457"><a name="457"></a>
+<div class="DNNContainer_Title_h2 SpacingBottom">
+    <h2><span id="dnn_ctr457_dnnTITLE_titleLabel" class="TitleH2"> </span>
+
+
+</h2>
+    <div id="dnn_ctr457_ContentPane"><!-- Start_Module_457 --><div id="dnn_ctr457_ModuleContent" class="DNNModuleContent ModDDMFrontEndPageFooterC">
+	<div id="dnn_ctr457_PageFoot_divPrintMe" class="footer__inner">
+<div id="divPrintBtn">
+    <ul>
+    <li class="sharing__item first"><a href="javascript:window.print()">
+        <span class="sharing__print-icon"></span>Print</a></li>
+    </ul>
+    <p>&nbsp;</p>
+</div></div>
+
+
+
+<!-- ------------------ Achievements  ------------------------------------  -->	
+<div style="clear: both;" ></div>
+
+<div id="dnn_ctr457_PageFoot_ucAccomplishments_divAchevements" class="region--below-bottom" role="complementary" aria-label="history">
+  <div class="region--below-bottom__inner">
+
+    <div class="achievements" id="divAchievments">
+      <h2 class="block__title">Selected DARPA Achievements</h2>
+
+
+
+
+        <div class="achievements__item">
+        <div class="achievements__link">
+        <a href="/about-us/timeline/darpas-stealth-revolution">
+        <div id="dnn_ctr457_PageFoot_ucAccomplishments_rptAchevements_divAchThumb_0" class="achievements__thumbnail"><img alt="DARPA collaborated with industry on stealth technology."
+                                                src="/DDM_Gallery/Rise of Stealth Technology.png"/>
+        </div>
+        DARPA’s Stealth Revolution
+        </a>
+        </div>
+        <div class="achievements__copy">
+        Under a code-word program, &ldquo;HAVE BLUE,&rdquo; two aircraft of unprecedented design were built and then, in April 1977, flown successfully.
+        </div>
+        </div>
+
+        
+        <div class="achievements__item">
+        <div class="achievements__link">
+        <a href="/about-us/timeline/navigation">
+        <div id="dnn_ctr457_PageFoot_ucAccomplishments_rptAchevements_divAchThumb_1" class="achievements__thumbnail"><img alt="DARPA microelectronics gave rise to today's GPS devices. "
+                                                src="/DDM_Gallery/GPS in Your Hand.png"/>
+        </div>
+        Navigation in the Palm of Your Hand
+        </a>
+        </div>
+        <div class="achievements__copy">
+        Early GPS receivers were bulky, heavy devices. In 1983, DARPA set out to miniaturize them, leading to a much broader adoption of GPS capability.
+        </div>
+        </div>
+
+        
+        <div class="achievements__item">
+        <div class="achievements__link">
+        <a href="/about-us/timeline/modern-internet">
+        <div id="dnn_ctr457_PageFoot_ucAccomplishments_rptAchevements_divAchThumb_2" class="achievements__thumbnail"><img alt="First rough conceptual design of the ARPANET."
+                                                src="/DDM_Gallery/(8G) Origins of the ARPANETa.png"/>
+        </div>
+        Paving the Way to the Modern Internet
+        </a>
+        </div>
+        <div class="achievements__copy">
+        ARPA research played a central role in launching the Information Revolution. The agency developed and furthered much of the conceptual basis for the ARPANET&mdash;prototypical communications network launched nearly half a century ago&mdash;and invented the digital protocols that gave birth to the Internet.
+        </div>
+        </div>
+
+        
+
+
+    </div>
+  </div>
+</div>
+
+<!-- ------------------ footer  ------------------------------------  -->	
+
+
+<div style="clear: both;" ></div>
+
+<FOOTER id="footer">
+
+<div class="footer__inner">
+
+<div class="menu--sitemap--about menu--sitemap">
+<UL>
+    <li class="first"> About Us </li>
+    <li ><a href="/about-us/about-darpa">About DARPA</a></li>
+    <li><a href="/about-us/people">People</a></li>
+    <li><a href="/about-us/offices">Offices</a></li>
+    <li><a href="/about-us/testimony">Testimony</a></li>
+    <li><a href="/about-us/budget">Budget</a></li>
+    <li><a href="/about-us/darpa-history-and-timeline">DARPA History</a></li>
+    <li class="last"><a href="/about-us/image-gallery">Image Gallery</a></li>
+</UL>
+</div>
+
+<div class="menu--sitemap--news-events menu--sitemap">
+    <UL>
+      <LI class="first last"><a href="/our-research">Our Research</a></LI></UL>    
+    <UL>
+      <LI class="first last"><a href="http://opencatalog.darpa.mil">Open Catalog</a></LI></UL>
+    <UL>
+      <LI class="first last"><a href="/news">News</a></LI>
+    </UL>
+    <UL>
+      <LI class="first last"><a href="/events">Events</a></LI>
+    </UL>
+</div>
+
+<div class="menu--sitemap--work menu--sitemap">
+    <UL>
+      <LI class="first">Work With Us</LI>
+      <LI><a href="/work-with-us/opportunities">Opportunities</a></LI>
+      <LI><a href="/work-with-us/contract-management">Contract Management</a></LI>
+      <LI><a href="/work-with-us/for-industry">For Industry</a></LI>
+      <LI><a href="/work-with-us/for-small-businesses">For Small Businesses</a></LI>
+      <LI><a href="/work-with-us/for-universities">For Universities</a></LI>
+      <LI><a href="/work-with-us/for-government-and-military">For Government and Military</a></LI>
+      <LI class="last"><a href="/work-with-us/support-offices">Support Offices</a></LI>
+    </UL>
+</div>
+
+<div class="menu--sitemap--info menu--sitemap">
+    <UL>
+      <LI class="first">Site Info</LI>
+      <LI><A href="/sitemap">Sitemap</A></LI>
+      <LI class="last"><A href="/policy/cookie-disclaimer">Cookie Disclaimer</A></LI>
+    </UL>
+</div>
+
+<div class="menu--sitemap--policy menu--sitemap">
+    <UL>
+      <LI class="first">Web Policy</LI>
+      <LI><a href="/policy/privacy-policy">Privacy Policy</a></LI>
+      <LI><a  href="http://dodcio.defense.gov/DoDSection508/Std_Stmt.aspx" target="_blank">Accessibility/Section   508</a></LI>
+      <LI><a href="/policy/no-fear-act">No Fear Act</a></LI>
+      <LI class="last"><a href="/policy/usage-policy">Usage Policy</a></LI>
+    </UL>
+</div>
+
+<div class="menu--footer-utility">
+    <UL>
+      <LI class="first"><a href="http://usa.gov">USA.gov</a></LI>
+      <LI>/</LI>
+      <LI><a href="/policy/foia">Freedom of Information Act</a></LI>
+      <LI>/</LI>
+      <LI><a href="/policy/visitor-information">Visitor Information</a></LI>
+      <LI>/</LI>
+      <LI ><a href="https://contact.darpa.mil/contact">Contact Us</a></LI>
+              <LI>/</LI>
+      <LI class="last"><a href="https://contact.darpa.mil/alert">Alert Registration</a></LI>
+    </UL>
+</div>
+
+<div class="block--social-media">
+    <UL>
+      <LI class="twitter"><A href="http://twitter.com/darpa" class="external"><span class="element-invisible">Twitter</span></A></LI>
+      <LI class="facebook"><A href="http://www.facebook.com/darpa" class="external"><span class="element-invisible">Facebook</span></A></LI>
+      <LI class="googleplus"><A  href="http://www.google.com/+DARPA" class="external"><span class="element-invisible">Goolge+</span></A></LI>
+      <LI class="youtube"><A   href="http://www.youtube.com/DARPAtv" class="external"><span class="element-invisible">YouTube</span></A></LI>
+      <LI class="rss"><A   href="/rss"><span class="element-invisible">RSS</span></A></LI>
+    </UL>
+</div>
+
+<div class="block--address">
+    <ADDRESS><STRONG>Defense Advanced Research Projects Agency</STRONG> 675 North Randolph Street<BR> Arlington, VA 22203-2114<BR>
+        <A href="tel:+17035266630">703.526.6630</A> 
+    </ADDRESS>
+</div>
+    
+        <!--
+<div class="block--email-signup">
+
+<H2 class="block__title">Sign Up For Email Alerts</H2>
+    <!-- FORM action="#" -->   <!-- Multipule form tags in a page are an issue - ->
+        <LABEL for="email-signup-email">Email Address</LABEL><INPUT id="email-signup-email" type="text"> 
+            <INPUT type="submit" value="SUBMIT">
+
+    <!-- /FORM - ->
+</div> -->
+<div class="block--byline">
+    <P>This is an official U.S. Department of Defense website sponsored by the 
+    Defense Advanced Research Projects 
+    Agency.</P>
+</div>
+
+</div>
+</FOOTER>
+
+
+<style>
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  color: #000;
+  /*filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  -khtml-opacity: 0.80;
+  opacity: .80;*/
+
+  background: rgba(0, 0, 0, .4);
+
+  padding:15px;
+  z-index: 1000;
+  display: none;
+}
+
+
+.leavingbox {
+
+    padding: 20px;
+    margin-top:20px; 
+    margin-right:auto; 
+    margin-bottom:0; 
+    margin-left:auto;
+
+    width: 95%;
+    max-width: 700px;
+
+    max-height: 400px;
+
+    overflow: auto;
+
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    color: #000;
+ 
+    z-index: 1001;
+}
+
+.leavingbox p {
+    font-size: 1.2em;
+  /*line-height: 24px;    */
+
+}
+
+</style>
+
+
+<div id="overlay">
+
+<div class="leavingbox">
+
+<p>You are now leaving the DARPA.mil website that is under the control and 
+	management of DARPA. The appearance of hyperlinks does not constitute 
+	endorsement by DARPA of non-U.S. Government sites or the information, 
+	products, or services contained therein. Although DARPA may or may not 
+	use these sites as additional distribution channels for Department of 
+	Defense information, it does not exercise editorial control over all of 
+	the information that you may find at these locations. Such links are 
+	provided consistent with the stated purpose of this website.
+</p>
+<br/>
+
+<p>After reading this message, click <span id=goto_link></span> &nbsp;to continue 
+immediately.
+</p>
+
+<p>
+    <a id="back" href="#">Go Back</a>
+</p>
+</div>
+</div>
+
+<script  type="text/javascript" >
+    var leaving_timeout;
+
+    //set the click action for the back button on the leaving window.
+    $('#back').click(function () {
+        cancelLeaving(); //cancel leaving, user clicks 'back'
+    });
+
+    //for any links with the 'external' class, set the click event
+    $('a.external').click(function (ev) {
+        //prevent the default action of the event, this will stop the href in the anchor being followed
+        //before the animation has started, u can also use return false;
+        ev.preventDefault();
+        //stop any actions if a new link is clicked.
+        cancelLeaving();
+        //store a reference to the anchor tag
+        var $self = $(this);
+        showLeavingMessage($self);
+
+        leaving_timeout = setTimeout(function () { leave($self); }, 15000); //leave in 15 seconds
+    });
+
+
+    function leave(leavingLink) {
+        //open an external link
+        window.open(leavingLink.attr('href'));
+        cancelLeaving(); //cancel leaving, user has left.
+    }
+
+    function showLeavingMessage(leavingLink) {
+        //show the leaving message
+        $('#goto_link').html("<a href='" + leavingLink.attr('href') + "' target='_bl' onclick='cancelLeaving();'>" + leavingLink.attr('href') + "</a>");
+        //$("body").css("background-color", "grey");
+        $('#overlay').show();
+
+    }
+
+    function cancelLeaving() {
+        //cancel leaving.  hide the leaving box
+        clearTimeout(leaving_timeout); //if the timer is set to leave in 15 seconds, this will cancel it.
+        $('#overlay').hide();
+      }
+
+</script>
+</div><!-- End_Module_457 --></div>
+	<div class="clear"></div>
+</div>
+</div></div>
+
+ <script>
+        $(document).ready(function() {
+            $('body').addClass('not-front');
+        });
+</script>
+<!--googleon: index--> 
+
+        <input name="ScrollTop" type="hidden" id="ScrollTop" />
+        <input name="__dnnVariable" type="hidden" id="__dnnVariable" autocomplete="off" />
+        
+    
+<script type="text/javascript" src="/Resources/Shared/scripts/initWidgets.js" ></script></form>
+    
+    
+</body>
+</html>

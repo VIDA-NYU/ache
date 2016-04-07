@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.link.frontier.LinkRelevance;
 
 public class DownloadScheduler {
     

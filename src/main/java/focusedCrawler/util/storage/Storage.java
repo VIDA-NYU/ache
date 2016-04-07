@@ -25,8 +25,8 @@ package focusedCrawler.util.storage;
 
 import java.util.Enumeration;
 
+import focusedCrawler.util.CommunicationException;
 import focusedCrawler.util.DataNotFoundException;
-import focusedCrawler.util.distribution.CommunicationException;
 
 public interface Storage {
 

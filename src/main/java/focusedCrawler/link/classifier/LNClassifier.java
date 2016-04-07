@@ -10,8 +10,8 @@ import java.util.Map;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
-import focusedCrawler.link.classifier.builder.wrapper.WrapperNeighborhoodLinks;
-import focusedCrawler.link.classifier.util.Instance;
+import focusedCrawler.link.classifier.builder.Instance;
+import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.string.StopList;
@@ -20,11 +20,11 @@ public class LNClassifier {
 
 	private Classifier classifier;
 	private Instances instances;
-	private WrapperNeighborhoodLinks wrapper;
+	private LinkNeighborhoodWrapper wrapper;
 	private String[] attributes;
 
 	public LNClassifier(Classifier classifier, Instances instances,
-	                    WrapperNeighborhoodLinks wrapper, String[] attributes) {
+	                    LinkNeighborhoodWrapper wrapper, String[] attributes) {
 		this.classifier = classifier;
 		this.instances = instances;
 		this.wrapper = wrapper;
@@ -71,7 +71,7 @@ public class LNClassifier {
 	    insts.setClassIndex(attributes.length);
 	    
 	    
-	    WrapperNeighborhoodLinks wrapper = loadWrapper(attributes, stoplist);
+	    LinkNeighborhoodWrapper wrapper = loadWrapper(attributes, stoplist);
 	    
 	    Classifier classifier = loadClassifier(modelFilePath);
 	    
@@ -79,8 +79,8 @@ public class LNClassifier {
 	    
 	}
     
-    public static WrapperNeighborhoodLinks loadWrapper(String[] attributes, StopList stoplist) {
-        WrapperNeighborhoodLinks wrapper = new WrapperNeighborhoodLinks(stoplist);
+    public static LinkNeighborhoodWrapper loadWrapper(String[] attributes, StopList stoplist) {
+        LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
         wrapper.setFeatures(attributes);
         return wrapper;
     }

@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
 
 import crawlercommons.fetcher.AbortedFetchException;
 import crawlercommons.fetcher.FetchedResult;
-import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.util.Page;
+import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.storage.Storage;
 
