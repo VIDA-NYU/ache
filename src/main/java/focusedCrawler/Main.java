@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.ConfigService;
 import focusedCrawler.crawler.async.AsyncCrawler;
+import focusedCrawler.crawler.async.AsyncCrawlerConfig;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.frontier.AddSeeds;
@@ -250,7 +251,7 @@ public class Main {
             		configPath, modelPath, dataOutputPath, elasticIndexName,
                     config.getTargetStorageConfig(), linkStorage);
             
-            AsyncCrawler.Config crawlerConfig = config.getCrawlerConfig();
+            AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
             
             // start crawl manager
             AsyncCrawler crawler = new AsyncCrawler(targetStorage, (LinkStorage) linkStorage, crawlerConfig);

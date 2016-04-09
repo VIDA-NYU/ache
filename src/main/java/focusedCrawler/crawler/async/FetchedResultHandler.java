@@ -28,12 +28,12 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     }
     
     @Override
-    public void completed(final FetchedResult response) {
+    public void completed(LinkRelevance link, FetchedResult response) {
 
         int statusCode = response.getStatusCode();
         if(statusCode >= 200 && statusCode < 300) {
             logger.info("Successfully downloaded URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
-            processData(response);
+            processData(link, response);
         } else {
             // TODO: Update metadata about page visits in link storage
             logger.info("Server returned bad code for URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
@@ -41,16 +41,16 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     }
     
     @Override
-    public void failed(String url, final Exception e) {
+    public void failed(LinkRelevance link, Exception e) {
         if(e instanceof AbortedFetchException) {
             AbortedFetchException afe = (AbortedFetchException) e;
-            logger.info("Download aborted: \n>URL: {}\n>Reason: {}", url, afe.getAbortReason());
+            logger.info("Download aborted: \n>URL: {}\n>Reason: {}", link.getURL().toString(), afe.getAbortReason());
         } else {
-            logger.info("Failed to download URL: "+url, e.getMessage());
+            logger.info("Failed to download URL: "+link.getURL().toString(), e.getMessage());
         }
     }
     
-    private void processData(FetchedResult response) {
+    private void processData(LinkRelevance link, FetchedResult response) {
         try {
             Page page;
             if(response.getNumRedirects() == 0) {
@@ -71,8 +71,6 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
             
             PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
             page.setPageURL(pageParser);
-            
-            LinkRelevance link = (LinkRelevance) response.getPayload().get(HttpDownloader.PAYLOAD_KEY);
             
             final double relevance = link.getRelevance();
             if(relevance > LinkRelevance.DEFAULT_HUB_RELEVANCE &&

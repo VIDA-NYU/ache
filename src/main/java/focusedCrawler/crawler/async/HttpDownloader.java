@@ -1,7 +1,6 @@
 package focusedCrawler.crawler.async;
 
 import java.io.Closeable;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.Callable;
@@ -13,18 +12,14 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.http.client.methods.HttpGet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 import crawlercommons.fetcher.BaseFetchException;
+import crawlercommons.fetcher.BaseFetcher;
 import crawlercommons.fetcher.FetchedResult;
-import crawlercommons.fetcher.Payload;
 import crawlercommons.fetcher.http.SimpleHttpFetcher;
 import crawlercommons.fetcher.http.UserAgent;
 import focusedCrawler.link.frontier.LinkRelevance;
@@ -33,60 +28,9 @@ public class HttpDownloader implements Closeable {
     
     private static Logger logger = LoggerFactory.getLogger(HttpDownloader.class);
     
-    public static final String PAYLOAD_KEY = "link-relevance";
     private static final int CPU_CORES = Runtime.getRuntime().availableProcessors();
     
-    static public class Config {
-
-        @JsonProperty("crawler_manager.downloader.download_thread_pool_size")
-        private int downloadThreadPoolSize = 100;
-
-        @JsonProperty("crawler_manager.downloader.max_retry_count")
-        private int maxRetryCount = 2;
-
-        @JsonProperty("crawler_manager.downloader.valid_mime_types")
-        private String[] validMimeTypes = {
-            "text/html",
-            "application/x-asp",
-            "application/xhtml+xml",
-            "application/vnd.wap.xhtml+xml"
-        };
-
-        @JsonProperty("crawler_manager.downloader.user_agent.name")
-        private String userAgentName = "ACHE";
-
-        @JsonProperty("crawler_manager.downloader.user_agent.url")
-        private String userAgentUrl = "https://github.com/ViDA-NYU/ache";
-
-        public Config() {
-        }
-
-        public Config(JsonNode config, ObjectMapper objectMapper) throws IOException {
-            objectMapper.readerForUpdating(this).readValue(config);
-        }
-
-        public int getDownloadThreadPoolSize() {
-            return this.downloadThreadPoolSize;
-        }
-
-        public int getMaxRetryCount() {
-            return this.maxRetryCount;
-        }
-
-        public String getUserAgentName() {
-            return this.userAgentName;
-        }
-
-        public String getUserAgentUrl() {
-            return this.userAgentUrl;
-        }
-
-        public String[] getValidMimeTypes() {
-            return this.validMimeTypes;
-        }
-	}
-
-    private final SimpleHttpFetcher fetcher;
+    private final BaseFetcher fetcher;
     private final ExecutorService downloadThreadPool;
     private final ExecutorService distpatchThreadPool;
     private final LinkedBlockingQueue<Runnable> downloadQueue;
@@ -95,10 +39,10 @@ public class HttpDownloader implements Closeable {
 	private final int downloadQueueMaxSize;
     
 	public HttpDownloader() {
-		this(new Config());
+		this(new HttpDownloaderConfig());
 	}
 	
-    public HttpDownloader(Config config) {
+    public HttpDownloader(HttpDownloaderConfig config) {
     	
         ThreadFactory downloadThreadFactory = new ThreadFactoryBuilder().setNameFormat("downloader-%d").build();
         ThreadFactory dispatcherThreadFactory = new ThreadFactoryBuilder().setNameFormat("dispatcher-%d").build();
@@ -120,12 +64,15 @@ public class HttpDownloader implements Closeable {
         int connectionPoolSize = (int) (threadPoolSize * 2);
         UserAgent userAgent = new UserAgent(config.getUserAgentName(), "", config.getUserAgentUrl());
         
-        this.fetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
-        this.fetcher.setSocketTimeout(30*1000);
-        this.fetcher.setMaxConnectionsPerHost(1);
-        this.fetcher.setConnectionTimeout(5*60*1000);
-        this.fetcher.setMaxRetryCount(config.getMaxRetryCount());
-        this.fetcher.setDefaultMaxContentSize(10*1024*1024);
+        SimpleHttpFetcher httpFetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
+        httpFetcher.setSocketTimeout(30*1000);
+        httpFetcher.setMaxConnectionsPerHost(1);
+        httpFetcher.setConnectionTimeout(5*60*1000);
+        httpFetcher.setMaxRetryCount(config.getMaxRetryCount());
+        httpFetcher.setDefaultMaxContentSize(10*1024*1024);
+        
+        this.fetcher = httpFetcher;
+        
         if(config.getValidMimeTypes() != null) {
             for (String mimeTypes : config.getValidMimeTypes()) {
                 this.fetcher.addValidMimeType(mimeTypes);
@@ -135,17 +82,14 @@ public class HttpDownloader implements Closeable {
     
     public Future<FetchedResult> dipatchDownload(String url) {
         try {
-            URL urlObj = new URL(url);
-            Future<FetchedResult> future = dipatchDownload(urlObj, null);
-            return future;
+            return dipatchDownload(new URL(url), null);
         } catch (MalformedURLException e) {
             throw new IllegalArgumentException("Invalid URL provided: "+url, e);
         }
     }
     
     public Future<FetchedResult> dipatchDownload(URL url, Callback callback) {
-        LinkRelevance link = new LinkRelevance(url, 0d);
-        return dipatchDownload(link, callback);
+        return dipatchDownload(new LinkRelevance(url, 0d), callback);
     }
     
     public Future<FetchedResult> dipatchDownload(LinkRelevance link, Callback callback) {
@@ -197,18 +141,16 @@ public class HttpDownloader implements Closeable {
     
     public interface Callback {
         
-        public void completed(FetchedResult result);
+        public void completed(LinkRelevance link, FetchedResult result);
         
-        public void failed(String url, Exception e);
+        public void failed(LinkRelevance link, Exception e);
         
     }
     
-    private class RequestTask implements Callable<FetchedResult> {
+    private final class RequestTask implements Callable<FetchedResult> {
         
         private final Callback callback;
         private LinkRelevance link;
-//        private long startTime;
-//        private long finishTime;
         
         public RequestTask(LinkRelevance url, Callback callback) {
             this.link = url;
@@ -217,16 +159,12 @@ public class HttpDownloader implements Closeable {
         
         @Override
         public FetchedResult call() {
-
-            final Payload payload = new Payload(); // Payload is used as a temporary storage
-            payload.put(PAYLOAD_KEY, link);
-            
             try {
-                FetchedResult result = fetcher.fetch(new HttpGet(), link.getURL().toString(), payload);
-                distpatchThreadPool.submit(new FetchFinishedHandler(result, callback, null));
+                FetchedResult result = fetcher.get(link.getURL().toString());
+                distpatchThreadPool.submit(new FetchFinishedHandler(link, result, callback, null));
                 return result;
             } catch (BaseFetchException e) {
-                distpatchThreadPool.submit(new FetchFinishedHandler(null, callback, e));
+                distpatchThreadPool.submit(new FetchFinishedHandler(link, null, callback, e));
                 return null;
             }
         }
@@ -235,11 +173,14 @@ public class HttpDownloader implements Closeable {
     
     private final class FetchFinishedHandler implements Runnable {
 
-        private FetchedResult response;
-        private Callback callback;
-        private BaseFetchException exception;
+        final private FetchedResult response;
+        final private Callback callback;
+        final private BaseFetchException exception;
+        final private LinkRelevance link;
 
-        public FetchFinishedHandler(FetchedResult response, Callback callback, BaseFetchException exception) {
+        public FetchFinishedHandler(LinkRelevance link, FetchedResult response,
+                                    Callback callback, BaseFetchException exception) {
+            this.link = link;
             this.response = response;
             this.callback = callback;
             this.exception = exception;
@@ -249,9 +190,9 @@ public class HttpDownloader implements Closeable {
         public void run() {
             if(callback != null) {
                 if(exception != null) {
-                    callback.failed(exception.getUrl(), exception);
+                    callback.failed(link, exception);
                 } else {
-                    callback.completed(response);
+                    callback.completed(link, response);
                 }
             }
             numberOfDownloads.decrementAndGet();
