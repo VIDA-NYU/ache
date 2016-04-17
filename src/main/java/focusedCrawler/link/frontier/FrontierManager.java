@@ -94,12 +94,7 @@ public class FrontierManager {
         }
 
         String url = elem.getURL().toString();
-        if (url.endsWith("pdf") ||
-            url.endsWith("jpg") ||
-            url.endsWith("gif") ||
-            url.endsWith("ps")  ||
-            url.endsWith("css") ||
-            linkFilter.accept(url) == false) {
+        if (linkFilter.accept(url) == false) {
             return false;
         }
         
