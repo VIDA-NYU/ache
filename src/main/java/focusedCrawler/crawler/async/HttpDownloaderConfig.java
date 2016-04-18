@@ -15,12 +15,7 @@ public class HttpDownloaderConfig {
     private int maxRetryCount = 2;
 
     @JsonProperty("crawler_manager.downloader.valid_mime_types")
-    private String[] validMimeTypes = {
-        "text/html",
-        "application/x-asp",
-        "application/xhtml+xml",
-        "application/vnd.wap.xhtml+xml"
-    };
+    private String[] validMimeTypes = null;
 
     @JsonProperty("crawler_manager.downloader.user_agent.name")
     private String userAgentName = "ACHE";
