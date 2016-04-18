@@ -20,6 +20,7 @@ public class TikaExtractor {
     private static final Charset UTF8 = Charset.forName("UTF-8");
     private static final Logger logger = LoggerFactory.getLogger(CDRDocumentBuilder.class);
 
+    private int maxCharacterLimit = 10 * 1000 * 1000;
     private String plainText;
     private Map<String, String> metadata;
 
@@ -28,7 +29,7 @@ public class TikaExtractor {
     }
 
     public TikaExtractor(InputStream stream) {
-        BodyContentHandler handler = new BodyContentHandler();
+        BodyContentHandler handler = new BodyContentHandler(maxCharacterLimit);
         AutoDetectParser parser = new AutoDetectParser();
         try {
             Metadata metadata = new Metadata();
