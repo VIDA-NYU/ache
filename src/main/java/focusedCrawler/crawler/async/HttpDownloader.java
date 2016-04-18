@@ -24,6 +24,16 @@ import crawlercommons.fetcher.http.SimpleHttpFetcher;
 import crawlercommons.fetcher.http.UserAgent;
 import focusedCrawler.link.frontier.LinkRelevance;
 
+/**
+ * This class manages thread pools for downloading links. Since downloading is a
+ * IO-bound process (network IO), we use a large number of threads for
+ * downloads, whereas for processing the downloaded data, we use a smaller
+ * number of threads, since this is usually a CPU-bound task (and thus, the
+ * parallelization performance is limited by the number of CPU cores available).
+ * 
+ * @author aeciosantos
+ *
+ */
 public class HttpDownloader implements Closeable {
     
     private static Logger logger = LoggerFactory.getLogger(HttpDownloader.class);
