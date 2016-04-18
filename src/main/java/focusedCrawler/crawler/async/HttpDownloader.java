@@ -13,7 +13,10 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.apache.http.HttpHost;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,11 +25,11 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
-import crawlercommons.fetcher.BaseFetchException;
-import crawlercommons.fetcher.FetchedResult;
-import crawlercommons.fetcher.Payload;
-import crawlercommons.fetcher.http.SimpleHttpFetcher;
-import crawlercommons.fetcher.http.UserAgent;
+import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.crawler.crawlercommons.fetcher.Payload;
+import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
+import focusedCrawler.crawler.crawlercommons.fetcher.http.UserAgent;
 import focusedCrawler.util.LinkRelevance;
 
 public class HttpDownloader implements Closeable {
@@ -87,6 +90,7 @@ public class HttpDownloader implements Closeable {
 	}
 
     private final SimpleHttpFetcher fetcher;
+    private final SimpleHttpFetcher torFetcher;
     private final ExecutorService downloadThreadPool;
     private final ExecutorService distpatchThreadPool;
     private final LinkedBlockingQueue<Runnable> downloadQueue;
@@ -120,7 +124,7 @@ public class HttpDownloader implements Closeable {
         int connectionPoolSize = (int) (threadPoolSize * 2);
         UserAgent userAgent = new UserAgent(config.getUserAgentName(), "", config.getUserAgentUrl());
         
-        this.fetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
+        this.fetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent, false);
         this.fetcher.setSocketTimeout(30*1000);
         this.fetcher.setMaxConnectionsPerHost(1);
         this.fetcher.setConnectionTimeout(5*60*1000);
@@ -129,6 +133,19 @@ public class HttpDownloader implements Closeable {
         if(config.getValidMimeTypes() != null) {
             for (String mimeTypes : config.getValidMimeTypes()) {
                 this.fetcher.addValidMimeType(mimeTypes);
+            }
+        }
+        
+        // TOR fetcher can have different parameters
+        this.torFetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent, true);
+        this.torFetcher.setSocketTimeout(1000*1000);
+        this.torFetcher.setMaxConnectionsPerHost(1);
+        this.torFetcher.setConnectionTimeout(5*60*1000);
+        this.torFetcher.setMaxRetryCount(config.getMaxRetryCount());
+        this.torFetcher.setDefaultMaxContentSize(10*1024*1024);
+        if(config.getValidMimeTypes() != null) {
+            for (String mimeTypes : config.getValidMimeTypes()) {
+                this.torFetcher.addValidMimeType(mimeTypes);
             }
         }
     }
@@ -164,6 +181,7 @@ public class HttpDownloader implements Closeable {
     @Override
     public void close() {
         fetcher.abort();
+        torFetcher.abort();
         downloadThreadPool.shutdownNow();
         distpatchThreadPool.shutdownNow();
         try {
@@ -222,10 +240,24 @@ public class HttpDownloader implements Closeable {
             payload.put(PAYLOAD_KEY, link);
             
             try {
-                FetchedResult result = fetcher.fetch(new HttpGet(), link.getURL().toString(), payload);
-                distpatchThreadPool.submit(new FetchFinishedHandler(result, callback, null));
-                return result;
+            	// http://www.google.com/blah/blah.html
+            	//   or
+            	// http://duskgytldkxiuqc6.onion/blah/blah.html
+            	String host = link.getURL().getHost();
+            	String domain = host.substring(host.lastIndexOf('.')+1);
+            	HttpGet myHttpGet = new HttpGet();
+            	if(domain.equals("onion")){
+                    FetchedResult result = torFetcher.fetch(new HttpGet(), link.getURL().toString(), payload);
+                    distpatchThreadPool.submit(new FetchFinishedHandler(result, callback, null));
+                    return result;
+            	}
+            	else{
+            		FetchedResult result = fetcher.fetch(new HttpGet(), link.getURL().toString(), payload);
+            		distpatchThreadPool.submit(new FetchFinishedHandler(result, callback, null));
+            		return result;
+            	}
             } catch (BaseFetchException e) {
+            	System.out.println(e.getMessage());
                 distpatchThreadPool.submit(new FetchFinishedHandler(null, callback, e));
                 return null;
             }

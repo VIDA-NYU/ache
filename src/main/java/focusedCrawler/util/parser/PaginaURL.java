@@ -822,7 +822,8 @@ public class PaginaURL implements Pagina {
                     &&!parte_host.equals("org")
                     &&!parte_host.equals("gov")
                     &&!parte_host.equals("com")
-                    &&!parte_host.equals("br")) {
+                    &&!parte_host.equals("br")
+                    &&!parte_host.equals("onion")) {
 
                     boolean adicionou = adicionaAoVetorDeTexto(parte_host);
 
@@ -1258,8 +1259,8 @@ public class PaginaURL implements Pagina {
                           insideATag = false;
                           if(ln!=null){
                             Vector anchorTemp = new Vector();
-  //                          System.out.println("URL---"+ln.getLink());
-  //                          System.out.println("ANC---"+anchor);
+                            //System.out.println("URL---"+ln.getLink());
+                            //System.out.println("ANC---"+anchor);
                             StringTokenizer tokenizer = new StringTokenizer(anchor," ");
                             while(tokenizer.hasMoreTokens()){
                               anchorTemp.add(tokenizer.nextToken());
@@ -1563,7 +1564,7 @@ public class PaginaURL implements Pagina {
                                     && atributo.equals("href")) {
                                   insideATag = true;
                                   String urlTemp = adicionaLink(str, base);
-//                                  System.out.println("----URL:"+urlTemp);
+                                  //System.out.println("----URL:"+urlTemp);
                                   if(urlTemp!= null && urlTemp.startsWith("http")){
                                 	  if(ln!=null){
                                 		  Vector anchorTemp = new Vector();
@@ -2236,8 +2237,14 @@ public class PaginaURL implements Pagina {
                     mailList.addElement(link);
                 }
             } else {
-                link = StringEscapeUtils.unescapeHtml(link);
-                if(urlValidator.isValid(link)) {
+                //link = StringEscapeUtils.unescapeHtml(link);
+            	
+            	// ONION links aren't accepted by the validator
+            	// Regex ".[^.]+" --> any string of at least 1 char without dot
+            	String onionRegex = "https?://.[^.]+\\.onion.*";
+
+                // System.out.println(urlValidator.isValid(link));
+                if(urlValidator.isValid(link) || link.matches(onionRegex)) {
                     boolean existe = links.contains(link);
                     if (!existe) {
                         if (base != null) {

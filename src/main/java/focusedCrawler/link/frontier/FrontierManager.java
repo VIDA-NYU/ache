@@ -84,13 +84,15 @@ public class FrontierManager {
     }
 
     public boolean isRelevant(LinkRelevance elem) throws FrontierPersistentException {
-        
+        //System.out.println(elem.toString());
         if (elem.getRelevance() <= 0) {
+            //System.out.println("negative"+elem.getRelevance());
             return false;
         }
 
         Integer value = frontier.exist(elem);
         if (value != null) {
+            //System.out.println("exists");
             return false;
         }
 
@@ -101,9 +103,15 @@ public class FrontierManager {
             url.endsWith("ps")  ||
             url.endsWith("css") ||
             linkFilter.accept(url) == false) {
+        	/*System.out.println(url.endsWith("pdf") +" "+
+        	            url.endsWith("jpg") +" "+
+        	            url.endsWith("gif") +" "+
+        	            url.endsWith("ps")  +" "+
+        	            url.endsWith("css") +" "+
+        	            linkFilter.accept(url));*/
             return false;
         }
-        
+
         return true;
     }
 
@@ -139,6 +147,11 @@ public class FrontierManager {
         logger.info("\n> URL:" + linkRelev.getURL() +
                     "\n> REL:" + ((int) linkRelev.getRelevance() / 100) +
                     "\n> RELEV:" + linkRelev.getRelevance());
+        try{
+        	frontier.visitedLinks();
+        } catch (Exception e) {
+            logger.error("Problem while processing data.", e);
+        }
 
         return linkRelev;
     }

@@ -141,7 +141,7 @@ public class DownloadScheduler {
             }
         }
         
-        numberOfLinks.decrementAndGet();
+        System.out.println("\t"+numberOfLinks.decrementAndGet()+" links in DownloadScheduler");
         
         return linkRelevance;
     }

@@ -67,6 +67,47 @@ public class LinkStorageConfig {
             return patternEndTitle;
         }
         
+        public void setMozAccessId(String mozAccessId) {
+            this.mozAccessId=mozAccessId;
+        }
+        
+        public void setMozKey(String mozKey) {
+        	this.mozKey=mozKey;
+        }
+
+        public void setPatternIni(String patternIni) {
+        	this.patternIni=patternIni;
+        }
+
+        public void setPatternEnd(String patternEnd) {
+        	this.patternEnd=patternEnd;
+        }
+        
+        public void setPatternIniTitle(String patternIniTitle) {
+        	this.patternIniTitle=patternIniTitle;
+        }
+
+        public void setPatternEndTitle(String patternEndTitle) {
+        	this.patternEndTitle=patternEndTitle;
+        }
+        
+        public static BackSurferConfig create(JsonNode config, String prefix) {
+        	BackSurferConfig backSurferConfig = new BackSurferConfig();
+            if(config.get(prefix + "pattern_ini") != null)
+            	backSurferConfig.setPatternIni(config.get(prefix + "pattern_ini").asText());
+            if(config.get(prefix + "pattern_end") != null)
+            	backSurferConfig.setPatternEnd(config.get(prefix + "pattern_end").asText());
+            if(config.get(prefix + "pattern_ini_title") != null)
+            	backSurferConfig.setPatternIniTitle(config.get(prefix + "pattern_ini_title").asText());
+            if(config.get(prefix + "pattern_end_title") != null)
+            	backSurferConfig.setPatternEndTitle(config.get(prefix + "pattern_end_title").asText());
+            if(config.get(prefix + "moz.access_id") != null)
+            	backSurferConfig.setMozAccessId(config.get(prefix + "moz.access_id").asText());
+            if(config.get(prefix + "moz.secret_key") != null)
+            	backSurferConfig.setMozKey(config.get(prefix + "moz.secret_key").asText());
+            return backSurferConfig;
+        }
+        
     }
     
     public static class BiparitieGraphRepConfig {
@@ -187,6 +228,8 @@ public class LinkStorageConfig {
     public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
         this.serverConfig = StorageConfig.create(config, "link_storage.server.");
+        //
+        this.backSurferConfig = BackSurferConfig.create(config, "link_storage.backsurfer.");
     }
 
     public int getMaxPagesPerDomain() {
