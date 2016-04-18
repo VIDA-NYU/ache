@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.storage.StorageConfig;
 
 public class LinkStorageConfig {
@@ -32,16 +31,6 @@ public class LinkStorageConfig {
         private String mozKey = "";
         
         public BackSurferConfig() { }
-        
-
-        public BackSurferConfig(ParameterFile params) {
-            patternIni = params.getParam("PATTERN_INI");
-            patternEnd = params.getParam("PATTERN_END");
-            patternIniTitle = params.getParam("PATTERN_INI_TITLE");
-            patternEndTitle = params.getParam("PATTERN_END_TITLE");
-            mozAccessId = params.getParam("MOZ_ACCESS_ID");
-            mozKey = params.getParam("MOZ_KEY");
-        }
         
         public String getMozAccessId() {
             return mozAccessId;
@@ -120,14 +109,6 @@ public class LinkStorageConfig {
         
         public BiparitieGraphRepConfig() { }
         
-        public BiparitieGraphRepConfig(ParameterFile params) {
-            this.authGraphDirectory = params.getParam("AUTH_GRAPH_DIRECTORY");
-            this.urlIdDirectory = params.getParam("URL_ID_DIRECTORY");
-            this.authIdDirectory = params.getParam("AUTH_ID_DIRECTORY");
-            this.hubIdDirectory = params.getParam("HUB_ID_DIRECTORY");
-            this.hubGraphDirectory = params.getParam("HUB_GRAPH_DIRECTORY");
-        }
-        
         public String getAuthGraphDirectory() {
             return authGraphDirectory;
         }
@@ -197,33 +178,6 @@ public class LinkStorageConfig {
     private BiparitieGraphRepConfig biparitieGraphRepConfig = new BiparitieGraphRepConfig();
     
     private final StorageConfig serverConfig;
-    
-    
-    public LinkStorageConfig(ParameterFile params) {
-        this.maxPagesPerDomain = params.getParamInt("MAX_PAGES_PER_DOMAIN");
-        this.typeOfClassifier = params.getParam("TYPE_OF_CLASSIFIER");
-        this.getOutlinks = params.getParamBoolean("GRAB_LINKS");
-        this.useScope = params.getParamBoolean("USE_SCOPE");
-        this.linkDirectory = params.getParam("LINK_DIRECTORY");
-        this.maxCacheUrlsSize = params.getParamInt("MAX_CACHE_URLS_SIZE");
-        this.maxSizeLinkQueue = params.getParamInt("MAX_SIZE_LINK_QUEUE");
-        this.getBacklinks = params.getParamBoolean("SAVE_BACKLINKS");
-        if(getBacklinks) {
-            String backlinkConfig = params.getParam("BACKLINK_CONFIG");
-            backSurferConfig = new BackSurferConfig(new ParameterFile(backlinkConfig));
-        } else {
-            backSurferConfig = null;
-        }
-        
-        this.useOnlineLearning = params.getParamBoolean("ONLINE_LEARNING");
-        this.onlineMethod = params.getParam("ONLINE_METHOD");
-        this.learningLimit = params.getParamInt("LEARNING_LIMIT");
-        this.targetStorageDirectory = params.getParam("TARGET_STORAGE_DIRECTORY");
-        this.linkSelector = params.getParam("LINK_SELECTOR");
-        
-        this.biparitieGraphRepConfig = new BiparitieGraphRepConfig(params);
-        this.serverConfig = new StorageConfig(params);
-    }
     
     public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);

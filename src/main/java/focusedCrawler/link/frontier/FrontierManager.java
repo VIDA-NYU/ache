@@ -26,9 +26,8 @@ package focusedCrawler.link.frontier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.util.LinkFilter;
-import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.util.PriorityQueueLink;
 
 /**
  * This class manages the crawler frontier
@@ -49,12 +48,12 @@ public class FrontierManager {
 
     private LinkFilter linkFilter;
 
-    private final LinkSelectionStrategy linkSelector;
+    private final LinkSelector linkSelector;
 
     public FrontierManager(Frontier frontier,
                            int maxSizeLinkQueue,
                            int linksToLoad,
-                           LinkSelectionStrategy linkSelector,
+                           LinkSelector linkSelector,
                            LinkFilter linkFilter) {
         this.linkSelector = linkSelector;
         this.priorityQueue = new PriorityQueueLink(maxSizeLinkQueue);
@@ -97,18 +96,7 @@ public class FrontierManager {
         }
 
         String url = elem.getURL().toString();
-        if (url.endsWith("pdf") ||
-            url.endsWith("jpg") ||
-            url.endsWith("gif") ||
-            url.endsWith("ps")  ||
-            url.endsWith("css") ||
-            linkFilter.accept(url) == false) {
-        	/*System.out.println(url.endsWith("pdf") +" "+
-        	            url.endsWith("jpg") +" "+
-        	            url.endsWith("gif") +" "+
-        	            url.endsWith("ps")  +" "+
-        	            url.endsWith("css") +" "+
-        	            linkFilter.accept(url));*/
+        if (linkFilter.accept(url) == false) {
             return false;
         }
 

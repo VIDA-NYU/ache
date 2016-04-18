@@ -6,7 +6,7 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
-import focusedCrawler.util.LinkRelevance;
+import focusedCrawler.link.frontier.LinkRelevance;
 
 public class DownloadSchedulerTest {
 

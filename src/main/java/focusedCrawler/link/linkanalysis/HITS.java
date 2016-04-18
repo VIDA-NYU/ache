@@ -9,9 +9,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Vector;
 
-import focusedCrawler.link.BipartiteGraphRep;
-import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
-import focusedCrawler.util.ParameterFile;
+import focusedCrawler.link.BipartiteGraphRepository;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.persistence.Tuple;
@@ -27,7 +25,7 @@ import focusedCrawler.util.vsm.VSMElementComparator;
 
 public class HITS {
 
-	private BipartiteGraphRep graphRep;
+	private BipartiteGraphRepository graphRep;
 	
 	private HashMap<String,VSMElement> authValues;
 	
@@ -49,7 +47,7 @@ public class HITS {
 		this.hubValues = new HashMap<String, VSMElement>();
 	}
 
-	public HITS(BipartiteGraphRep graphRep){
+	public HITS(BipartiteGraphRepository graphRep){
 		this.graphRep = graphRep;
 		this.authValues = new HashMap<String, VSMElement>();
 		this.hubValues = new HashMap<String, VSMElement>();
@@ -272,19 +270,6 @@ public class HITS {
 			System.out.println(elem.getWord() + ":" + elem.getWeight());
 		}
 		
-	}
-	
-	public static void main(String[] args) {
-	    BiparitieGraphRepConfig config = new BiparitieGraphRepConfig(new ParameterFile(args[0]));
-		try {
-			String dataPath = ".";
-            BipartiteGraphRep rep = new BipartiteGraphRep(dataPath, config);
-			HITS hits = new HITS(rep);
-			hits.originalHITS();
-		}catch(Exception ex){
-			ex.printStackTrace();
-		}
-
 	}
 	
 }

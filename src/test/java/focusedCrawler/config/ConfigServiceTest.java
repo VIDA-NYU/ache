@@ -10,8 +10,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import focusedCrawler.crawler.async.AsyncCrawler;
+import focusedCrawler.crawler.async.AsyncCrawlerConfig;
 import focusedCrawler.link.LinkStorageConfig;
+import focusedCrawler.target.TargetStorageConfig;
 
 public class ConfigServiceTest {
 
@@ -101,7 +102,7 @@ public class ConfigServiceTest {
         ConfigService configService = new ConfigService(configFilePath);
         
         // when
-        AsyncCrawler.Config config = configService.getCrawlerConfig();
+        AsyncCrawlerConfig config = configService.getCrawlerConfig();
         
         // then
         assertThat(config, is(notNullValue()));

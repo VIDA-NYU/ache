@@ -23,12 +23,11 @@
 */
 package focusedCrawler.link.classifier;
 
-import focusedCrawler.util.LinkRelevance;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Random;
 import focusedCrawler.util.parser.PaginaURL;
+import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.parser.LinkNeighborhood;
 
 /**

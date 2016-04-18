@@ -8,7 +8,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-import focusedCrawler.target.TargetModel;
+import focusedCrawler.target.model.TargetModelCbor;
 import focusedCrawler.util.parser.PaginaURL;
 
 @JsonInclude(Include.NON_NULL)
@@ -36,7 +36,7 @@ public class MemexCrawlSchema {
         this.images = images;
     }
     
-    public MemexCrawlSchema(TargetModel model) {
+    public MemexCrawlSchema(TargetModelCbor model) {
         this.url = model.url;
         this.timestamp = model.timestamp*1000;
         this.team = "NYU";

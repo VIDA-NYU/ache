@@ -1,7 +1,5 @@
 package focusedCrawler.link.linkanalysis;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.net.URL;
 import java.util.Collections;
 import java.util.HashMap;
@@ -9,9 +7,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Vector;
 
-import focusedCrawler.link.BipartiteGraphRep;
-import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
-import focusedCrawler.util.ParameterFile;
+import focusedCrawler.link.BipartiteGraphRepository;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.vsm.VSMElement;
@@ -19,9 +15,9 @@ import focusedCrawler.util.vsm.VSMElementComparator;
 
 public class InOutLinks {
 
-	private BipartiteGraphRep graphRep;
+	private BipartiteGraphRepository graphRep;
 	
-	public InOutLinks(BipartiteGraphRep graphRep){
+	public InOutLinks(BipartiteGraphRepository graphRep){
 		this.graphRep = graphRep;
 	}
 	
@@ -74,25 +70,6 @@ public class InOutLinks {
 			VSMElement elem = finalAuth.elementAt(i);
 			System.out.println(elem.getWord() + ":" + elem.getWeight());
 		}
-	}
-	
-	
-	public static void main(String[] args) {
-	    BiparitieGraphRepConfig config = new BiparitieGraphRepConfig(new ParameterFile(args[0]));
-        try {
-            String dataPath = ".";
-            BipartiteGraphRep rep = new BipartiteGraphRep(dataPath, config);
-			InOutLinks iolinks = new InOutLinks(rep);
-			HashSet<String> relSites = new HashSet<String>();
-			BufferedReader input = new BufferedReader(new FileReader(args[1]));
-			for (String line = input.readLine(); line != null; line = input.readLine()) {
-				relSites.add(line);
-			}
-			iolinks.execute(relSites);
-		}catch(Exception ex){
-			ex.printStackTrace();
-		}
-		
 	}
 	
 }

@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
-import focusedCrawler.target.TargetModel;
+import focusedCrawler.target.model.TargetModelCbor;
 
 public class GzipCborFileWriter implements Closeable {
     
@@ -41,7 +41,7 @@ public class GzipCborFileWriter implements Closeable {
         this(outputFilename, new ObjectMapper(new CBORFactory()));
     }
     
-    public synchronized void writeTargetModel(TargetModel target) throws IOException {
+    public synchronized void writeTargetModel(TargetModelCbor target) throws IOException {
 
         byte[] byteData = mapper.writeValueAsBytes(target);
         

@@ -21,7 +21,8 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
-import crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.link.frontier.LinkRelevance;
 
 public class HttpDownloaderTest {
     
@@ -179,10 +180,10 @@ public class HttpDownloaderTest {
         for (int i = 0; i < numberOfRequests; i++) {
             downloader.dipatchDownload(new URL(originalUrl), new HttpDownloader.Callback() {
                 @Override
-                public void failed(String url, Exception e) {
+                public void failed(LinkRelevance link, Exception e) {
                 }
                 @Override
-                public void completed(FetchedResult result) {
+                public void completed(LinkRelevance link, FetchedResult result) {
                     // increment counter when download finishes
                     requestsFinished.incrementAndGet();
                 }

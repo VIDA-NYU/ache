@@ -2,10 +2,10 @@ package focusedCrawler.target.classifier;
 
 import java.util.List;
 
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.LinkFilter.LinkBlackList;
 import focusedCrawler.util.LinkFilter.LinkWhiteList;
-import focusedCrawler.util.Target;
 
 public class UrlRegexTargetClassifier implements TargetClassifier {
 
@@ -24,8 +24,8 @@ public class UrlRegexTargetClassifier implements TargetClassifier {
     }
 
     @Override
-	public TargetRelevance classify(Target target) throws TargetClassifierException {
-		if(linkFilter.accept(target.getIdentifier())) {
+	public TargetRelevance classify(Page page) throws TargetClassifierException {
+		if(linkFilter.accept(page.getIdentifier())) {
 		    return new TargetRelevance(true, 1.0);
 		} else {
 		    return new TargetRelevance(false, 0.0);

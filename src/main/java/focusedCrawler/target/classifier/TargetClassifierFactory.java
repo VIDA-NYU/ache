@@ -93,9 +93,9 @@ public class TargetClassifierFactory {
             ObjectMapper yaml, JsonNode parameters) throws JsonProcessingException, IOException {
         if(parameters != null) {
             TargetClassifier wekaClassifier = createWekaClassifier(basePath, yaml, parameters);
-            return new KeepLinkRelevancePageClassifier(wekaClassifier);
+            return new KeepLinkRelevanceTargetClassifier(wekaClassifier);
         } else {
-            return new KeepLinkRelevancePageClassifier(null);
+            return new KeepLinkRelevanceTargetClassifier(null);
         }
     }
 

@@ -9,8 +9,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
-import focusedCrawler.crawler.async.AsyncCrawler;
+import focusedCrawler.crawler.async.AsyncCrawlerConfig;
 import focusedCrawler.link.LinkStorageConfig;
+import focusedCrawler.target.TargetStorageConfig;
 
 public class ConfigService {
 
@@ -21,7 +22,7 @@ public class ConfigService {
     
     private TargetStorageConfig targetStorageConfig;
     private LinkStorageConfig linkStorageConfig;
-    private AsyncCrawler.Config crawlerConfig;
+    private AsyncCrawlerConfig crawlerConfig;
     
     public ConfigService(String configFilePath) {
         this(Paths.get(configFilePath));
@@ -32,7 +33,7 @@ public class ConfigService {
             JsonNode config = yamlMapper.readTree(configFilePath.toFile());
             this.targetStorageConfig = new TargetStorageConfig(config, yamlMapper);
             this.linkStorageConfig = new LinkStorageConfig(config, yamlMapper);
-            this.crawlerConfig = new AsyncCrawler.Config(config, yamlMapper);
+            this.crawlerConfig = new AsyncCrawlerConfig(config, yamlMapper);
         } catch (IOException e) {
             throw new IllegalArgumentException("Could not read settings from file: "+configFilePath, e);
         }
@@ -46,7 +47,7 @@ public class ConfigService {
         return linkStorageConfig;
     }
     
-    public AsyncCrawler.Config getCrawlerConfig() {
+    public AsyncCrawlerConfig getCrawlerConfig() {
         return crawlerConfig;
     }
     

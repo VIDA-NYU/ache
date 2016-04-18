@@ -3,8 +3,7 @@ package focusedCrawler.target.classifier;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import focusedCrawler.util.Page;
-import focusedCrawler.util.Target;
+import focusedCrawler.target.model.Page;
 
 /**
  * Classify whether a page is relevant to a topic by matching a RegExp against the title.
@@ -19,8 +18,7 @@ public class TitleRegexTargetClassifier implements TargetClassifier {
     }
 
     @Override
-    public TargetRelevance classify(Target target) throws TargetClassifierException {
-        Page page = (Page) target;
+    public TargetRelevance classify(Page page) throws TargetClassifierException {
         if(regexMatchesTitle(page)) {
             return new TargetRelevance(true, 1.0);
         } else {

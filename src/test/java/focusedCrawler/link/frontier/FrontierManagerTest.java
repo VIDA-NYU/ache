@@ -17,8 +17,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
+import focusedCrawler.link.frontier.selector.LinkSelector;
+import focusedCrawler.link.frontier.selector.NonRandomLinkSelector;
+import focusedCrawler.link.frontier.selector.SiteLinkSelector;
 import focusedCrawler.util.LinkFilter;
-import focusedCrawler.util.LinkRelevance;
 
 public class FrontierManagerTest {
 
@@ -50,7 +52,7 @@ public class FrontierManagerTest {
         scope.put("www.example1.com", -1);
         
         
-        LinkSelectionStrategy linkSelector = new SiteLinkSelector();
+        LinkSelector linkSelector = new SiteLinkSelector();
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, scope);
         FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, new LinkFilter(new ArrayList<String>()));
         
@@ -75,7 +77,7 @@ public class FrontierManagerTest {
     @Test
     public void shouldInsertUrl() throws Exception {
         // given
-        LinkSelectionStrategy linkSelector = new NonRandomLinkSelector();
+        LinkSelector linkSelector = new NonRandomLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
@@ -97,7 +99,7 @@ public class FrontierManagerTest {
     @Test
     public void shouldInsertUrlsAndSelectUrlsInSortedByRelevance() throws Exception {
         // given
-        LinkSelectionStrategy linkSelector = new NonRandomLinkSelector();
+        LinkSelector linkSelector = new NonRandomLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
@@ -134,7 +136,7 @@ public class FrontierManagerTest {
     @Test
     public void shouldNotReturnAgainALinkThatWasAlreadyReturned() throws Exception {
         // given
-        LinkSelectionStrategy linkSelector = new NonRandomLinkSelector();
+        LinkSelector linkSelector = new NonRandomLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);

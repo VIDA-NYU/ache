@@ -15,24 +15,28 @@ You can either build ACHE from the source code or download the executable binary
 
 To build `ache` from source, you can run the following commands in your terminal:
 
-```bash
+```
 git clone https://github.com/ViDA-NYU/ache.git
 cd ache
 ./gradlew clean installApp
 ```
 
-which will generate an installation package under `/build/install/`.
-Learn more about Gradle: [http://www.gradle.org/documentation](http://www.gradle.org/documentation).
+which will generate an installation package under `ache/build/install/`. You can then make ACHE command line available in the terminal by adding ACHE to the PATH:
+
+```bash
+export ACHE_HOME="{path-to-cloned-ache-repository}/build/install/ache"
+export PATH="$ACHE_HOME/bin:$PATH"
+```
 
 ### Download with Conda
 
-If you use the Conda package manager[[2]], you can install `ache` from Anaconda Cloud [[3]] by running:
+If you use the Conda package manager [[2]], you can install `ache` from Anaconda Cloud [[3]] by running:
 
-```bash
+```
 conda install -c memex ache
 ```
 NOTE: Only tagged versions are published to Anaconda Cloud, so the version available through Conda may not be up-to-date.
-If you want to try the most recent version, please clone the repository, compile the code using instructions below and then start the crawler using `ache` located in `build/install/ache/bin`.
+If you want to try the most recent version, please clone the repository and build from source.
 
 ## Page Classifiers
 

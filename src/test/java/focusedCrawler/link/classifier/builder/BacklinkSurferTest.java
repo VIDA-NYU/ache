@@ -9,6 +9,7 @@ import java.net.URL;
 import org.apache.commons.validator.routines.UrlValidator;
 import org.junit.Test;
 
+import focusedCrawler.link.backlink.BacklinkSurfer;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.SimpleWrapper;
 

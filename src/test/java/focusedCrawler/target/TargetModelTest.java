@@ -12,6 +12,8 @@ import org.junit.Test;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
+import focusedCrawler.target.model.TargetModelCbor;
+
 public class TargetModelTest {
 
     @Test
@@ -24,11 +26,11 @@ public class TargetModelTest {
         final String body = "Lorem ipsum dolor sit amet";
         final URL url = new URL("http://example.org/index.html");
         
-        TargetModel writtenValue = new TargetModel(name, email, url, body);
+        TargetModelCbor writtenValue = new TargetModelCbor(name, email, url, body);
         
         // when
         byte[] data = mapper.writeValueAsBytes(writtenValue);
-        TargetModel readValue = mapper.readValue(data, TargetModel.class);
+        TargetModelCbor readValue = mapper.readValue(data, TargetModelCbor.class);
 
         // then
         assertThat(readValue, is(notNullValue()));

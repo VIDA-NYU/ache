@@ -31,14 +31,13 @@ import java.util.Vector;
 import java.util.HashMap;
 import java.util.ArrayList;
 
-
+import focusedCrawler.link.backlink.BacklinkSurfer;
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierException;
-import focusedCrawler.link.classifier.builder.BacklinkSurfer;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierPersistentException;
-import focusedCrawler.util.LinkRelevance;
-import focusedCrawler.util.Page;
+import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
@@ -59,7 +58,7 @@ public class BipartiteGraphManager {
 	
 	private LinkClassifier outlinkClassifier;
 
-	private BipartiteGraphRep rep;
+	private BipartiteGraphRepository rep;
 	
 	private int count = 0;
 
@@ -70,14 +69,14 @@ public class BipartiteGraphManager {
 	
 	private final int pagesToCommit = 100;
 	
-	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRep rep, LinkClassifier outlinkClassifier) {
+	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRepository rep, LinkClassifier outlinkClassifier) {
 		this.frontierManager = frontierManager;
 		this.outlinkClassifier = outlinkClassifier;
 		this.rep = rep;
 		this.domainCounter = new HashMap<String, Integer>();
 	}
 	
-	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRep rep, LinkClassifier outlinkClassifier, LinkClassifier backlinkClassifier) {
+	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRepository rep, LinkClassifier outlinkClassifier, LinkClassifier backlinkClassifier) {
 		this.frontierManager = frontierManager;
 		this.outlinkClassifier = outlinkClassifier;
 		this.backlinkClassifier = backlinkClassifier;
@@ -102,7 +101,7 @@ public class BipartiteGraphManager {
 	}
 
 	
-	public BipartiteGraphRep getRepository(){
+	public BipartiteGraphRepository getRepository(){
 		return this.rep;
 	}
 	

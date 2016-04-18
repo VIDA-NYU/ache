@@ -133,3 +133,6 @@ crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
 crawler_manager.downloader.valid_mime_types:
  - text/html
  - text/plain
+ - application/x-asp
+ - application/xhtml+xml
+ - application/vnd.wap.xhtml+xml
