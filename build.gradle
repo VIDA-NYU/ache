@@ -36,6 +36,7 @@ dependencies {
     compile 'com.syncthemall:boilerpipe:1.2.2'
     compile 'com.sleepycat:je:3.3.75' // BerkeleyDB
     compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'net.sourceforge.htmlunit:htmlunit:2.21'
     compile 'org.apache.commons:commons-compress:1.9'
     compile 'org.apache.httpcomponents:httpclient:4.4.1'
     compile 'org.apache.tika:tika-parsers:1.9'
