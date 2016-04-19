@@ -37,7 +37,7 @@ dependencies {
     compile 'com.sleepycat:je:3.3.75' // BerkeleyDB
     compile 'org.apache.commons:commons-lang3:3.4'
     compile 'org.apache.commons:commons-compress:1.9'
-    compile 'org.apache.httpcomponents:httpclient:4.4.1'
+    compile 'org.apache.httpcomponents:httpclient:4.5.1'
     compile 'org.apache.tika:tika-parsers:1.9'
     
     testCompile 'junit:junit:4.12'
