@@ -28,12 +28,6 @@ import java.util.zip.InflaterInputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @deprecated As of release 0.6. We recommend directly using Apache HttpClient, 
- * async-http-client, or any other robust, industrial-strength HTTP clients.
- *
- */
-@Deprecated
 public class EncodingUtils {
     private static final Logger LOGGER = LoggerFactory.getLogger(EncodingUtils.class);
 

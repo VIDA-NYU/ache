@@ -27,12 +27,6 @@ import java.io.ObjectOutputStream;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 
-/**
- * @deprecated As of release 0.6. We recommend directly using Apache HttpClient, 
- * async-http-client, or any other robust, industrial-strength HTTP clients.
- *
- */
-@Deprecated
 @SuppressWarnings({ "serial" })
 public abstract class BaseFetchException extends Exception {
     private String _url = "";

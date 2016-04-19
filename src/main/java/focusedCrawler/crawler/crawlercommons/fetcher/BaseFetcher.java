@@ -25,12 +25,6 @@ import java.util.Set;
 
 import org.apache.tika.mime.MediaType;
 
-/**
- * @deprecated As of release 0.6. We recommend directly using Apache HttpClient, 
- * async-http-client, or any other robust, industrial-strength HTTP clients.
- *
- */
-@Deprecated
 @SuppressWarnings("serial")
 public abstract class BaseFetcher implements Serializable {
 

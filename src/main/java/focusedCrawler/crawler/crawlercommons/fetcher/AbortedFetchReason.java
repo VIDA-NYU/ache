@@ -17,12 +17,6 @@
 
 package focusedCrawler.crawler.crawlercommons.fetcher;
 
-/**
- * @deprecated As of release 0.6. We recommend directly using Apache HttpClient, 
- * async-http-client, or any other robust, industrial-strength HTTP clients.
- *
- */
-@Deprecated
 public enum AbortedFetchReason {
     // WARNING - adding new reasons requires changes to
     // AbortedFetchException.mapToUrlStatus

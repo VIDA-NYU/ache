@@ -34,11 +34,7 @@ import focusedCrawler.crawler.crawlercommons.CrawlerCommons;
  * this is not set, it defaults to the crawler commons maven artifact version.</li>
  * </ol>
  * 
- * @deprecated As of release 0.6. We recommend directly using Apache HttpClient, 
- * async-http-client, or any other robust, industrial-strength HTTP clients.
- * 
  */
-@Deprecated
 @SuppressWarnings("serial")
 public class UserAgent implements Serializable {
 

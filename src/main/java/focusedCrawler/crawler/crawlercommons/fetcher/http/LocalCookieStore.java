@@ -32,10 +32,7 @@ import org.apache.http.cookie.CookieIdentityComparator;
  * Default implementation of {@link CookieStore} Initially copied from
  * HttpComponents Changes: removed synchronization
  * 
- * @deprecated As of release 0.6. We recommend directly using Apache HttpClient, 
- * async-http-client, or any other robust, industrial-strength HTTP clients.
  */
-@Deprecated
 @NotThreadSafe
 public class LocalCookieStore implements CookieStore, Serializable {
 

@@ -104,12 +104,6 @@ import focusedCrawler.crawler.crawlercommons.fetcher.RedirectFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.RedirectFetchException.RedirectExceptionReason;
 import focusedCrawler.crawler.crawlercommons.fetcher.UrlFetchException;
 
-/**
- * @deprecated As of release 0.6. We recommend directly using Apache HttpClient, 
- * async-http-client, or any other robust, industrial-strength HTTP clients.
- *
- */
-@Deprecated
 @SuppressWarnings("serial")
 public class SimpleHttpFetcher extends BaseHttpFetcher {
     private static Logger LOGGER = LoggerFactory.getLogger(SimpleHttpFetcher.class);
