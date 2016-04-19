@@ -86,6 +86,7 @@ public class Frontier {
                 result.add(URLDecoder.decode(tuples.get(i).getKey(), "UTF-8"));
             }
         }
+        System.out.println(result.size()+" out of "+urlRelevance.getTable().size());
         return result;
     }
 

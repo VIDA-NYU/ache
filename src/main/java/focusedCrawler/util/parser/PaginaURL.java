@@ -26,9 +26,22 @@
 package focusedCrawler.util.parser;
 
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.validator.routines.UrlValidator;
@@ -821,7 +834,8 @@ public class PaginaURL {
                     &&!parte_host.equals("org")
                     &&!parte_host.equals("gov")
                     &&!parte_host.equals("com")
-                    &&!parte_host.equals("br")) {
+                    &&!parte_host.equals("br")
+                    &&!parte_host.equals("onion")) {
 
                     boolean adicionou = adicionaAoVetorDeTexto(parte_host);
 
@@ -1257,8 +1271,8 @@ public class PaginaURL {
                           insideATag = false;
                           if(ln!=null){
                             Vector anchorTemp = new Vector();
-  //                          System.out.println("URL---"+ln.getLink());
-  //                          System.out.println("ANC---"+anchor);
+                            //System.out.println("URL---"+ln.getLink());
+                            //System.out.println("ANC---"+anchor);
                             StringTokenizer tokenizer = new StringTokenizer(anchor," ");
                             while(tokenizer.hasMoreTokens()){
                               anchorTemp.add(tokenizer.nextToken());
@@ -1562,7 +1576,7 @@ public class PaginaURL {
                                     && atributo.equals("href")) {
                                   insideATag = true;
                                   String urlTemp = adicionaLink(str, base);
-//                                  System.out.println("----URL:"+urlTemp);
+                                  //System.out.println("----URL:"+urlTemp);
                                   if(urlTemp!= null && urlTemp.startsWith("http")){
                                 	  if(ln!=null){
                                 		  Vector anchorTemp = new Vector();
@@ -2235,8 +2249,15 @@ public class PaginaURL {
                     mailList.addElement(link);
                 }
             } else {
-                link = StringEscapeUtils.unescapeHtml4(link);
-                if(urlValidator.isValid(link)) {
+            	link = StringEscapeUtils.unescapeHtml4(link);
+            	
+            	// ONION links aren't accepted by the validator
+            	// Regex ".[^.]+" --> any string of at least 1 char without dot
+            	String onionRegex = "https?://.[^.]+\\.onion.*";
+
+                // System.out.println(urlValidator.isValid(link));
+                if(urlValidator.isValid(link) || link.matches(onionRegex)) {
+                	
                     boolean existe = links.contains(link);
                     if (!existe) {
                         if (base != null) {
