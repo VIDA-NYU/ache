@@ -9,7 +9,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
-class TestWebServerBuilder {
+public class TestWebServerBuilder {
 
     public static final int port = 8345;
     public static final String address = "http://localhost:" + port;
@@ -18,6 +18,10 @@ class TestWebServerBuilder {
 
     public TestWebServerBuilder() throws IOException {
         server = HttpServer.create(new InetSocketAddress("localhost", port), 0);
+    }
+    
+    public TestWebServerBuilder(String host, int port) throws IOException {
+        server = HttpServer.create(new InetSocketAddress(host, port), 0);
     }
 
     public TestWebServerBuilder withHandler(String path, HttpHandler handler) {

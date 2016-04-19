@@ -10,8 +10,8 @@ import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import crawlercommons.fetcher.AbortedFetchException;
-import crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.PaginaURL;
@@ -70,6 +70,7 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
             page.setFetchTime(response.getFetchTime());
             
             PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
+            
             page.setPageURL(pageParser);
             
             final double relevance = link.getRelevance();
@@ -79,6 +80,9 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
             }
             
             page.setRelevance(relevance);
+            
+            //System.out.println(page.getPageURL().links().length+" links in the page \n first link: "+page.getPageURL().links()[0].toString());
+            //System.out.println(page.getRelevance()+" "+page.isHub());
             
             logger.info(relevance + " Sending page to TargetStorage: "+ response.getFetchedUrl());
             targetStorage.insert(page);

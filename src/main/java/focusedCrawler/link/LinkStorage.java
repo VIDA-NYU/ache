@@ -126,6 +126,8 @@ public class LinkStorage extends StorageDefault{
         Page page = (Page) obj;
         numberOfPages++;
         
+        //System.out.println("getBacklinks && page.isAuth() "+getBacklinks+" "+page.isAuth());
+        //System.out.println("getOutlinks "+getOutlinks);
         try {
             
             if (getBacklinks && page.isAuth()) {
@@ -261,6 +263,7 @@ public class LinkStorage extends StorageDefault{
             BacklinkSurfer surfer = new BacklinkSurfer(simpleWrapper, simpleWrapperTitle);
             surfer.setAccessID(mozAccessID);
             surfer.setPassKey(mozKey);
+            System.out.println("SETTING MOZKEY "+mozKey);
             
             LinkClassifier bClassifier = new LinkClassifierHub();
             manager = new BipartiteGraphManager(frontierManager, graphRep, linkClassifier, bClassifier);

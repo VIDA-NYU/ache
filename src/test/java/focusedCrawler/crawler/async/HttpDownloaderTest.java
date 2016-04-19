@@ -15,7 +15,7 @@ import org.junit.Test;
 
 import com.sun.net.httpserver.HttpServer;
 
-import crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
 
 public class HttpDownloaderTest {

@@ -37,6 +37,11 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Vector;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -135,6 +140,50 @@ public class BacklinkSurfer {
 	  return links;
   }
   
+  private BackLinkNeighborhood[] downloadGoogleBacklinks(String host) throws IOException{
+      
+      MozAuthenticator myAuthenticator = new MozAuthenticator(access,key,300);
+      String authStr = myAuthenticator.getAuthenticationStr();
+      
+      System.out.println("HOST IS : " +host);
+      
+  	  // 21 -> max number allowed by google... decreases after
+      String backlink = "https://www.google.com/search?q=link:" + host + "&num=21";
+      
+
+	  BackLinkNeighborhood[] backlinks = null;
+      Document doc;
+      int resultSize;
+	    try{
+	    	URLConnection connection = new URL(backlink).openConnection();
+			connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
+			connection.connect();
+			
+	    	doc = Jsoup.parse(connection.getInputStream(), "UTF-8", host);
+	    	
+	       	Elements searchItems = doc.select("div#search");
+	      	Elements linkHeaders = searchItems.select(".r");
+	      	Elements linksUrl = linkHeaders.select("a[href]");
+	      	
+	      	resultSize = linksUrl.size();
+	        System.out.println(resultSize+" links");
+	        
+	        backlinks = new BackLinkNeighborhood[resultSize];
+	  	    int i=0;
+	        for (Element link : linksUrl) {
+	        	backlinks[i] = new BackLinkNeighborhood();
+	  		    backlinks[i].setLink(link.attr("href"));
+	  		    backlinks[i].setTitle(link.text());        	
+	        	i++;
+	        }
+	    }
+	    catch (IOException e) {
+	        e.printStackTrace();
+	    }
+
+	  return backlinks;
+  }
+  
   private BackLinkNeighborhood[] downloadBacklinks(String host) throws IOException{
       
       MozAuthenticator myAuthenticator = new MozAuthenticator(access, key, 300);
@@ -182,6 +231,7 @@ public class BacklinkSurfer {
 	  return backlinks;
   }
   
+  
   private long lastVisit = 0;
   
   public BackLinkNeighborhood[] getLNBacklinks(URL url) throws MalformedURLException, IOException {
@@ -201,7 +251,14 @@ public class BacklinkSurfer {
 	  }
 	  lastVisit = System.currentTimeMillis();
 	  BackLinkNeighborhood[] links = downloadBacklinks(URLEncoder.encode(url.toString().substring(7)));
-	  System.out.println("LINKS SIZE:" + links.length);
+//	  BackLinkNeighborhood[] links = downloadGoogleBacklinks(URLEncoder.encode(url.toString().substring(7)));
+
+	  //
+	  if(links != null){
+		  System.out.println("LINKS SIZE:" + links.length);
+		  for(int i = 0; i < links.length; i++)
+			  System.out.println("\n"+links[i].getLink());
+	  }
 	  return links;
   }
 
@@ -307,7 +364,8 @@ public class BacklinkSurfer {
     System.out.println("FINISHED TO DOWNLOAD THE PAGE : " + urlCon.toString() + "\n");
     return pageRes;
   }
-
+  
+  
   /**
    * This method makes a deep search in backlinks from url
    * @param url URL - url that one wants to get links

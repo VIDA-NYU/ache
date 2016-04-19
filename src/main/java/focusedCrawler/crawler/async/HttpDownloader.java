@@ -17,11 +17,10 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
-import crawlercommons.fetcher.BaseFetchException;
-import crawlercommons.fetcher.BaseFetcher;
-import crawlercommons.fetcher.FetchedResult;
-import crawlercommons.fetcher.http.SimpleHttpFetcher;
-import crawlercommons.fetcher.http.UserAgent;
+import focusedCrawler.crawler.async.fetcher.FetcherFactory;
+import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
 
 /**
@@ -69,25 +68,14 @@ public class HttpDownloader implements Closeable {
         
         this.downloadQueueMaxSize = threadPoolSize * 2;
         
-        // Adding some extra connections for URLs that have redirects
-        // and thus creates more connections   
-        int connectionPoolSize = (int) (threadPoolSize * 2);
-        UserAgent userAgent = new UserAgent(config.getUserAgentName(), "", config.getUserAgentUrl());
-        
-        SimpleHttpFetcher httpFetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
-        httpFetcher.setSocketTimeout(30*1000);
-        httpFetcher.setMaxConnectionsPerHost(1);
-        httpFetcher.setConnectionTimeout(5*60*1000);
-        httpFetcher.setMaxRetryCount(config.getMaxRetryCount());
-        httpFetcher.setDefaultMaxContentSize(10*1024*1024);
-        
-        this.fetcher = httpFetcher;
+        this.fetcher = FetcherFactory.createFetcher(config);
         
         if(config.getValidMimeTypes() != null) {
             for (String mimeTypes : config.getValidMimeTypes()) {
                 this.fetcher.addValidMimeType(mimeTypes);
             }
         }
+        
     }
     
     public Future<FetchedResult> dipatchDownload(String url) {

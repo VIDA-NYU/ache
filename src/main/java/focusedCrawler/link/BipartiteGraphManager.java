@@ -106,7 +106,7 @@ public class BipartiteGraphManager {
 	}
 	
     public void insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException {
-        
+    	
         PaginaURL parsedPage = page.getPageURL();
         parsedPage.setRelevance(page.getRelevance());
         
@@ -114,13 +114,13 @@ public class BipartiteGraphManager {
         
         ArrayList<LinkRelevance> temp = new ArrayList<LinkRelevance>();
         HashSet<String> relevantURLs = new HashSet<String>();
-        
+                
         for (int i = 0; i < linksRelevance.length; i++) {
-            
+        	//System.out.println("linksRelevance.length "+linksRelevance.length);
             if (frontierManager.isRelevant(linksRelevance[i])) {
-                
+                            	
                 String url = linksRelevance[i].getURL().toString();
-                
+                //System.out.println(url);
                 if (!relevantURLs.contains(url)) {
                     
                     String domain = linksRelevance[i].getTopLevelDomainName();

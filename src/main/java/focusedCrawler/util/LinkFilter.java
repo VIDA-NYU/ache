@@ -44,6 +44,7 @@ public class LinkFilter {
     }
 
     public boolean accept(String link) {
+    	//System.out.println(link+" "+whitelist.accept(link)+" "+blacklist.accept(link));
         if(whitelist.accept(link) && blacklist.accept(link))
             return true;
         else

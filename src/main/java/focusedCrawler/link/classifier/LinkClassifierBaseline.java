@@ -61,6 +61,7 @@ public class LinkClassifierBaseline implements LinkClassifier{
         try {
         	URL[] links = page.links();
         	LinkRelevance[] linkRelevance = new LinkRelevance[links.length];
+
         	for (int i = 0; i < links.length; i++) {
             	String url = links[i].toString();
         		double relevance = 100;
