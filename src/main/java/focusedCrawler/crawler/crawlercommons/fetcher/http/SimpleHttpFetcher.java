@@ -166,7 +166,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     private int _connectionTimeout;
     private int _maxRetryCount;
     
-    private boolean useProxy;
+    private HttpHost proxy;
 
     transient private CloseableHttpClient _httpClient;
     transient private PoolingHttpClientConnectionManager _connectionManager;
@@ -438,11 +438,11 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         }
     }
 
-    public SimpleHttpFetcher(UserAgent userAgent, boolean proxy) {
-        this(DEFAULT_MAX_THREADS, userAgent, proxy);
+    public SimpleHttpFetcher(UserAgent userAgent) {
+        this(DEFAULT_MAX_THREADS, userAgent);
     }
 
-    public SimpleHttpFetcher(int maxThreads, UserAgent userAgent, boolean proxy) {
+    public SimpleHttpFetcher(int maxThreads, UserAgent userAgent) {
         super(maxThreads, userAgent);
 
         _httpVersion = HttpVersion.HTTP_1_1;
@@ -453,8 +453,6 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         // Just to be explicit, we rely on lazy initialization of this so that
         // we don't have to worry about serializing it.
         _httpClient = null;
-        
-        useProxy=proxy;
     }
 
     public HttpVersion getHttpVersion() {
@@ -900,13 +898,11 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                 requestConfigBuilder.setSocketTimeout(_socketTimeout);
                 requestConfigBuilder.setConnectTimeout(_connectionTimeout);
                 
-                if(useProxy){
-                	LOGGER.info("Using proxy http://127.0.0.1:8118 for onion links");
-                    HttpHost proxy = new HttpHost("127.0.0.1", 8118, "http");
+                if(proxy != null){
+                    LOGGER.info("Configuring fetcher to use proxy: "+proxy.toURI());
                     httpClientBuilder.setProxy(proxy);
                 }
 
-            
 
                 /*
                  * CoreConnectionPNames.TCP_NODELAY='http.tcp.nodelay':
@@ -1058,6 +1054,10 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
             }
         }
         return sf;
+    }
+    
+    public void setProxy(String scheme, String host, int port) {
+        this.proxy = new HttpHost(host, port, scheme);
     }
 
     @Override

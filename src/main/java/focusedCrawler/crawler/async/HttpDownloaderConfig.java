@@ -23,6 +23,9 @@ public class HttpDownloaderConfig {
     @JsonProperty("crawler_manager.downloader.user_agent.url")
     private String userAgentUrl = "https://github.com/ViDA-NYU/ache";
 
+    @JsonProperty("crawler_manager.downloader.torproxy")
+    private String torProxy = null;
+    
     public HttpDownloaderConfig() {
     }
 
@@ -49,4 +52,9 @@ public class HttpDownloaderConfig {
     public String[] getValidMimeTypes() {
         return this.validMimeTypes;
     }
+    
+    public String getTorProxy() {
+        return this.torProxy;
+    }
+
 }
