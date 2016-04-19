@@ -4,10 +4,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.InetSocketAddress;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +13,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
@@ -26,62 +20,7 @@ import focusedCrawler.link.frontier.LinkRelevance;
 
 public class HttpDownloaderTest {
     
-    static class TestWebServerBuilder {
-        
-        private static final int port = 8345;
-        private static final String address = "http://localhost:"+port;
-        private HttpServer server;
-        
-        public TestWebServerBuilder() throws IOException {
-            server = HttpServer.create(new InetSocketAddress("localhost", port), 0);
-        }
-        
-        public TestWebServerBuilder withHandler(String path, HttpHandler handler) {
-            server.createContext(path, handler);
-            return this;
-        }
     
-        private HttpServer start() {
-            server.setExecutor(null); // creates a default executor
-            server.start();
-            return server;
-        }
-    }
-    
-    static class OkHandler implements HttpHandler {
-        
-        private final String responseContent;
-
-        public OkHandler(String responseContent) {
-            this.responseContent = responseContent;
-        }
-
-        @Override
-        public void handle(HttpExchange t) throws IOException {
-            t.getResponseHeaders().add("Content-Type", "text/html; charset=utf-8");
-            t.sendResponseHeaders(HttpURLConnection.HTTP_OK, responseContent.getBytes().length);
-            OutputStream os = t.getResponseBody();
-            os.write(responseContent.getBytes());
-            os.close();
-            t.close();
-        }
-    }
-    
-    static class RedirectionHandler implements HttpHandler {
-        
-        private String newLocation;
-
-        public RedirectionHandler(String newLocation) {
-            this.newLocation = newLocation;
-        }
-
-        @Override
-        public void handle(HttpExchange t) throws IOException {
-            t.getResponseHeaders().add("Location", newLocation);
-            t.sendResponseHeaders(HttpURLConnection.HTTP_MOVED_PERM, 0);
-            t.close();
-        }
-    }
     
     private HttpDownloader downloader;
     
@@ -94,8 +33,8 @@ public class HttpDownloaderTest {
     public void shouldFollowRedirections() throws Exception {
         // given
         HttpServer httpServer = new TestWebServerBuilder()
-            .withHandler("/index.html", new RedirectionHandler("/new/location.html"))
-            .withHandler("/new/location.html", new OkHandler("Hello world!"))
+            .withRedirect("/index.html", "/new/location.html")
+            .with200OK("/new/location.html", "Hello world!")
             .start();
         
         String originalUrl = TestWebServerBuilder.address+"/index.html";
@@ -123,7 +62,7 @@ public class HttpDownloaderTest {
         String responseContent = "Hello world!";
         String originalUrl = TestWebServerBuilder.address+"/index.html";
         HttpServer httpServer = new TestWebServerBuilder()
-            .withHandler("/index.html", new OkHandler(responseContent))
+            .with200OK("/index.html", responseContent)
             .start();
 
         // when
@@ -148,7 +87,7 @@ public class HttpDownloaderTest {
         // given
         String originalUrl = TestWebServerBuilder.address+"/index.html";
         HttpServer httpServer = new TestWebServerBuilder()
-            .withHandler("/index.html", new OkHandler("Hello world!"))
+            .with200OK("/index.html", "Hello world!")
             .start();
 
         // when
@@ -171,7 +110,7 @@ public class HttpDownloaderTest {
         // given
         String originalUrl = TestWebServerBuilder.address+"/index.html";
         HttpServer httpServer = new TestWebServerBuilder()
-            .withHandler("/index.html", new OkHandler("Hello world!"))
+            .with200OK("/index.html", "Hello world!")
             .start();
         final int numberOfRequests = 5;
         final AtomicInteger requestsFinished = new AtomicInteger(0);
