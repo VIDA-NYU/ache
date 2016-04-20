@@ -7,7 +7,7 @@ apply plugin: 'com.github.kt3k.coveralls'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 compileJava.options.encoding = "UTF-8"
-version = '0.5.0'
+version = '0.6.0-SNAPSHOT'
 mainClassName = 'focusedCrawler.Main'
 applicationDefaultJvmArgs = ["-Dname=ache -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError"]
 
