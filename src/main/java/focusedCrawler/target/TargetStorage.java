@@ -14,11 +14,9 @@ import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.model.Page;
-import focusedCrawler.target.repository.CBORTargetRepository;
 import focusedCrawler.target.repository.ElasticSearchTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
-import focusedCrawler.target.repository.FileTargetRepository;
 import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.CommunicationException;
@@ -142,7 +140,6 @@ public class TargetStorage extends StorageDefault {
         }
     }
     
-	@SuppressWarnings("deprecation")
 	public static Storage createTargetStorage(String configPath,
                                               String modelPath,
                                               String dataPath,
@@ -192,14 +189,8 @@ public class TargetStorage extends StorageDefault {
         	targetRepository = new ElasticSearchTargetRepository(esconfig, indexName, "target");
         	negativeRepository = new ElasticSearchTargetRepository(esconfig, indexName, "negative");
         }
-        else if (dataFormat.equals("CBOR")) {
-			targetRepository = new CBORTargetRepository(targetDirectory);
-			negativeRepository = new CBORTargetRepository(negativeDirectory);
-        }
         else {
-        	//Default data format is file
-        	targetRepository = new FileTargetRepository(targetDirectory);
-        	negativeRepository = new FileTargetRepository(negativeDirectory);
+        	throw new IllegalArgumentException("Invalid data format provided: "+dataFormat);
         }
         
         TargetStorageMonitor monitor = new TargetStorageMonitor(dataPath, config);

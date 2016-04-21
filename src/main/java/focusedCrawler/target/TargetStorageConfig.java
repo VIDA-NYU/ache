@@ -31,7 +31,7 @@ public class TargetStorageConfig {
     private String negativeStorageDirectory = "data_negative";
     
     @JsonProperty("target_storage.data_format.type")
-    private String dataFormat = "FILE";
+    private String dataFormat = "FILESYSTEM_JSON";
     @JsonProperty("target_storage.data_format.filesystem.hash_file_name")
     private boolean hashFileName = false;
     @JsonProperty("target_storage.data_format.filesystem.compress_data")
