@@ -1,8 +1,8 @@
 package focusedCrawler.config;
 
 import java.io.IOException;
-import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Map;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -25,18 +25,25 @@ public class ConfigService {
     private AsyncCrawlerConfig crawlerConfig;
     
     public ConfigService(String configFilePath) {
-        this(Paths.get(configFilePath));
-    }
-    
-    public ConfigService(Path configFilePath) {
         try {
-            JsonNode config = yamlMapper.readTree(configFilePath.toFile());
-            this.targetStorageConfig = new TargetStorageConfig(config, yamlMapper);
-            this.linkStorageConfig = new LinkStorageConfig(config, yamlMapper);
-            this.crawlerConfig = new AsyncCrawlerConfig(config, yamlMapper);
+            init(yamlMapper.readTree(Paths.get(configFilePath).toFile()));
         } catch (IOException e) {
             throw new IllegalArgumentException("Could not read settings from file: "+configFilePath, e);
         }
+    }
+    
+    public ConfigService(Map<String, String> configMap) {
+        try {
+            init(yamlMapper.valueToTree(configMap));
+        } catch (IllegalArgumentException | IOException e) {
+            throw new IllegalArgumentException("Could not read settings from map: "+configMap, e);
+        }
+    }
+    
+    private void init(JsonNode config) throws IOException {
+        this.targetStorageConfig = new TargetStorageConfig(config, yamlMapper);
+        this.linkStorageConfig = new LinkStorageConfig(config, yamlMapper);
+        this.crawlerConfig = new AsyncCrawlerConfig(config, yamlMapper);
     }
 
     public TargetStorageConfig getTargetStorageConfig() {

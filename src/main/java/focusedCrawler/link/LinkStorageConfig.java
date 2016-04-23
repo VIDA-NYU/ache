@@ -25,10 +25,10 @@ public class LinkStorageConfig {
         private String patternEndTitle = "\",\"uu\":";
 
         @JsonProperty("link_storage.backsurfer.moz.access_id")
-        private String mozAccessId = "";
+        private String mozAccessId = null;
         
         @JsonProperty("link_storage.backsurfer.moz.secret_key")
-        private String mozKey = "";
+        private String mozKey = null;
         
         public BackSurferConfig() { }
         

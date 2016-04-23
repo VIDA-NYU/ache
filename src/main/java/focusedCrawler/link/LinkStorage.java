@@ -43,7 +43,6 @@ import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.DataNotFoundException;
-import focusedCrawler.util.parser.SimpleWrapper;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
@@ -249,21 +248,7 @@ public class LinkStorage extends StorageDefault{
         BipartiteGraphManager manager = null;
         if(config.getBacklinks()) {
             
-            String patternIni = config.getBackSurferConfig().getPatternIni();
-            String patternEnd = config.getBackSurferConfig().getPatternEnd();
-            
-            String patternIniTitle = config.getBackSurferConfig().getPatternIniTitle();
-            String patternEndTitle = config.getBackSurferConfig().getPatternEndTitle();
-            
-            String mozAccessID = config.getBackSurferConfig().getMozAccessId();
-            String mozKey = config.getBackSurferConfig().getMozKey();
-            
-            SimpleWrapper simpleWrapper = new SimpleWrapper(patternIni, patternEnd);
-            SimpleWrapper simpleWrapperTitle = new SimpleWrapper(patternIniTitle, patternEndTitle);
-            BacklinkSurfer surfer = new BacklinkSurfer(simpleWrapper, simpleWrapperTitle);
-            surfer.setAccessID(mozAccessID);
-            surfer.setPassKey(mozKey);
-            System.out.println("SETTING MOZKEY "+mozKey);
+            BacklinkSurfer surfer = new BacklinkSurfer(config.getBackSurferConfig());
             
             LinkClassifier bClassifier = new LinkClassifierHub();
             manager = new BipartiteGraphManager(frontierManager, graphRep, linkClassifier, bClassifier);
