@@ -113,11 +113,6 @@ link_storage.server.port: 1988
 link_storage.directory: "data_url/dir"
 
 # Backlink surfer parameters
-link_storage.backsurfer.pattern_ini: ",\"uu\":"
-link_storage.backsurfer.pattern_end: "\"}"
-link_storage.backsurfer.pattern_ini_title: ",\"ut\":\""
-link_storage.backsurfer.pattern_end_title: "\",\"uu\":"
-
 #link_storage.backsurfer.moz.access_id: mozscape-xxxxxxxxxx
 #link_storage.backsurfer.moz.secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 

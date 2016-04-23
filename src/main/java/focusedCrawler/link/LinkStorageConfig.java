@@ -3,6 +3,7 @@ package focusedCrawler.link;
 import java.io.IOException;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -12,18 +13,6 @@ public class LinkStorageConfig {
 
     public static class BackSurferConfig {
         
-        @JsonProperty("link_storage.backsurfer.pattern_ini")
-        private String patternIni = ",\"uu\":";
-        
-        @JsonProperty("link_storage.backsurfer.pattern_end")
-        private String patternEnd = "\"}";
-        
-        @JsonProperty("link_storage.backsurfer.pattern_ini_title")
-        private String patternIniTitle = ",\"ut\":\"";
-        
-        @JsonProperty("link_storage.backsurfer.pattern_end_title")
-        private String patternEndTitle = "\",\"uu\":";
-
         @JsonProperty("link_storage.backsurfer.moz.access_id")
         private String mozAccessId = null;
         
@@ -38,63 +27,6 @@ public class LinkStorageConfig {
         
         public String getMozKey() {
             return mozKey;
-        }
-
-        public String getPatternIni() {
-            return patternIni;
-        }
-
-        public String getPatternEnd() {
-            return patternEnd;
-        }
-        
-        public String getPatternIniTitle() {
-            return patternIniTitle;
-        }
-
-        public String getPatternEndTitle() {
-            return patternEndTitle;
-        }
-        
-        public void setMozAccessId(String mozAccessId) {
-            this.mozAccessId=mozAccessId;
-        }
-        
-        public void setMozKey(String mozKey) {
-        	this.mozKey=mozKey;
-        }
-
-        public void setPatternIni(String patternIni) {
-        	this.patternIni=patternIni;
-        }
-
-        public void setPatternEnd(String patternEnd) {
-        	this.patternEnd=patternEnd;
-        }
-        
-        public void setPatternIniTitle(String patternIniTitle) {
-        	this.patternIniTitle=patternIniTitle;
-        }
-
-        public void setPatternEndTitle(String patternEndTitle) {
-        	this.patternEndTitle=patternEndTitle;
-        }
-        
-        public static BackSurferConfig create(JsonNode config, String prefix) {
-        	BackSurferConfig backSurferConfig = new BackSurferConfig();
-            if(config.get(prefix + "pattern_ini") != null)
-            	backSurferConfig.setPatternIni(config.get(prefix + "pattern_ini").asText());
-            if(config.get(prefix + "pattern_end") != null)
-            	backSurferConfig.setPatternEnd(config.get(prefix + "pattern_end").asText());
-            if(config.get(prefix + "pattern_ini_title") != null)
-            	backSurferConfig.setPatternIniTitle(config.get(prefix + "pattern_ini_title").asText());
-            if(config.get(prefix + "pattern_end_title") != null)
-            	backSurferConfig.setPatternEndTitle(config.get(prefix + "pattern_end_title").asText());
-            if(config.get(prefix + "moz.access_id") != null)
-            	backSurferConfig.setMozAccessId(config.get(prefix + "moz.access_id").asText());
-            if(config.get(prefix + "moz.secret_key") != null)
-            	backSurferConfig.setMozKey(config.get(prefix + "moz.secret_key").asText());
-            return backSurferConfig;
         }
         
     }
@@ -174,7 +106,9 @@ public class LinkStorageConfig {
     // TODO Remove target storage folder dependency from link storage
     private String targetStorageDirectory = "data_target/";
     
+    @JsonUnwrapped
     private BackSurferConfig backSurferConfig = new BackSurferConfig();
+    
     private BiparitieGraphRepConfig biparitieGraphRepConfig = new BiparitieGraphRepConfig();
     
     private final StorageConfig serverConfig;
@@ -182,8 +116,6 @@ public class LinkStorageConfig {
     public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
         this.serverConfig = StorageConfig.create(config, "link_storage.server.");
-        //
-        this.backSurferConfig = BackSurferConfig.create(config, "link_storage.backsurfer.");
     }
 
     public int getMaxPagesPerDomain() {
