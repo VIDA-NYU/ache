@@ -164,12 +164,14 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     private HttpVersion _httpVersion;
     private int _socketTimeout;
     private int _connectionTimeout;
+    private int _connectionRequestTimeout;
     private int _maxRetryCount;
     
     private HttpHost proxy;
 
     transient private CloseableHttpClient _httpClient;
     transient private PoolingHttpClientConnectionManager _connectionManager;
+
 
 
     private static class MyRequestRetryHandler implements HttpRequestRetryHandler {
@@ -488,6 +490,18 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
             _connectionTimeout = connectionTimeoutInMs;
         } else {
             throw new IllegalStateException("Can't change connection timeout after HttpClient has been initialized");
+        }
+    }
+
+    public int getConnectionRequestTimeout() {
+        return _connectionRequestTimeout;
+    }
+
+    public void setConnectionRequestTimeout(int _connectionRequestTimeoutInMs) {
+        if (_httpClient == null) {
+            _connectionRequestTimeout = _connectionRequestTimeoutInMs;
+        } else {
+            throw new IllegalStateException("Can't change connection request timeout after HttpClient has been initialized");
         }
     }
 
@@ -897,6 +911,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                 // reasonable.
                 requestConfigBuilder.setSocketTimeout(_socketTimeout);
                 requestConfigBuilder.setConnectTimeout(_connectionTimeout);
+                requestConfigBuilder.setConnectionRequestTimeout(_connectionRequestTimeout);
                 
                 if(proxy != null){
                     LOGGER.info("Configuring fetcher to use proxy: "+proxy.toURI());
