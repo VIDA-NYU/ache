@@ -63,17 +63,17 @@ public class Page implements Serializable {
 
     private long fetchTime;
     
-    public Page(URL url, String cont) {
-        this(url, cont, null, null);
+    public Page(URL url, String content) {
+        this(url, content, null, null);
     }
     
-    public Page(URL url, String cont, Map<String, List<String>> responseHeaders) {
-        this(url, cont, responseHeaders, null);
+    public Page(URL url, String content, Map<String, List<String>> responseHeaders) {
+        this(url, content, responseHeaders, null);
     }
 
-    public Page(URL url, String cont, Map<String, List<String>> responseHeaders, URL redirectedURL) {
+    public Page(URL url, String content, Map<String, List<String>> responseHeaders, URL redirectedURL) {
         this.url = url;
-        this.content = cont;
+        this.content = content;
         this.responseHeaders = responseHeaders;
         this.redirectedURL = redirectedURL;
     }
@@ -95,12 +95,12 @@ public class Page implements Serializable {
         return cleanContent;
     }
 
-    public void setContent(String cont) {
-        this.content = cont.toLowerCase();
+    public void setContent(String content) {
+        this.content = content.toLowerCase();
     }
 
-    public void setCleanContent(String cont) {
-        this.cleanContent = cont.toLowerCase();
+    public void setCleanContent(String content) {
+        this.cleanContent = content.toLowerCase();
     }
 
     public void setPageURL(PaginaURL page) {
@@ -108,8 +108,8 @@ public class Page implements Serializable {
         this.setCleanContent(page.palavras_to_string());
     }
 
-    public void setRelevance(double rel) {
-        this.relevance = rel;
+    public void setRelevance(double relevance) {
+        this.relevance = relevance;
     }
 
     public double getRelevance() {
@@ -128,8 +128,8 @@ public class Page implements Serializable {
         return this.pageURL;
     }
 
-    public void setEncoding(String enc) {
-        this.encoding = enc;
+    public void setEncoding(String encoding) {
+        this.encoding = encoding;
     }
 
     public String getEncoding() {
