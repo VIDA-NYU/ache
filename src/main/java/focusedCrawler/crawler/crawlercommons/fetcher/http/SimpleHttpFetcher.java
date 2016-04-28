@@ -1032,6 +1032,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                 monitor = new IdleConnectionMonitorThread(_connectionManager);
                 monitor.start();
                 
+                httpClientBuilder.setDefaultRequestConfig(requestConfigBuilder.build());
                 _httpClient = httpClientBuilder.build();
             }
         }
