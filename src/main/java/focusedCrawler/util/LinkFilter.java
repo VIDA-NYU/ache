@@ -1,21 +1,11 @@
 package focusedCrawler.util;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 
 public class LinkFilter {
 
-    private static final Logger logger = LoggerFactory.getLogger(LinkFilter.class);
-    
     private LinkWhiteList whitelist;
     private LinkBlackList blacklist;
 
@@ -44,66 +34,13 @@ public class LinkFilter {
     }
 
     public boolean accept(String link) {
-    	//System.out.println(link+" "+whitelist.accept(link)+" "+blacklist.accept(link));
         if(whitelist.accept(link) && blacklist.accept(link))
             return true;
         else
             return false;
     }
     
-    
-    /**
-     * Tests a link agains a list of patterns and return true if link matches any of the patterns.
-     */
-    public static class LinkMatcher {
-    
-        List<Pattern> patterns = new ArrayList<Pattern>(); 
-    
-        public LinkMatcher(String filename) {
-            this(loadRegexesFromFile(filename));
-        }
-        
-        public LinkMatcher(List<String> urlPatterns) {
-            for (String urlPattern : urlPatterns) {
-                Pattern p = Pattern.compile(urlPattern);
-                patterns.add(p);
-            }
-        }
-    
-        public boolean matches(String url) {
-            for (Pattern pattern : patterns) {
-                if(pattern.matcher(url).matches()) {
-                    return true;
-                }
-            }
-            return false;
-        }
-        
-        public static LinkMatcher fromFile(String filename) {
-            return new LinkMatcher(filename);
-        }
-        
-        public static List<String> loadRegexesFromFile(String filename) {
-            List<String> urlPatterns = new ArrayList<String>();
-            try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
-                String line;
-                while ((line = br.readLine()) != null) {
-                    String trimedLine = line.trim();
-                    if(!trimedLine.equals("")) {
-                        urlPatterns.add(trimedLine);
-                        logger.info(trimedLine);
-                    }
-                }
-            } catch (IOException e) {
-                logger.warn("Couldn't load link filter patterns from file: " + filename
-                            + " Using a empty list.");
-            }
-            return urlPatterns;
-        }
-        
-    }
-    
-    public static class LinkWhiteList extends LinkMatcher {
+    public static class LinkWhiteList extends RegexMatcher {
         
         public LinkWhiteList(List<String> urlPatterns) {
             super(urlPatterns);
@@ -125,7 +62,7 @@ public class LinkFilter {
         
     }
     
-    public static class LinkBlackList extends LinkMatcher {
+    public static class LinkBlackList extends RegexMatcher {
         
         public LinkBlackList(String filename) {
             super(filename);

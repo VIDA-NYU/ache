@@ -9,7 +9,6 @@ import java.util.List;
 import org.junit.Test;
 
 import focusedCrawler.util.LinkFilter.LinkBlackList;
-import focusedCrawler.util.LinkFilter.LinkMatcher;
 import focusedCrawler.util.LinkFilter.LinkWhiteList;
 
 public class LinkFilterTest {
@@ -23,7 +22,7 @@ public class LinkFilterTest {
             "www\\.mydomain\\.com.*",
             "www\\.somedomain\\.com/forum/.*"
         );
-        LinkMatcher matcher = new LinkMatcher(urlRegexPatterns);
+        RegexMatcher matcher = new RegexMatcher(urlRegexPatterns);
         
         List<String> urlsThatMatch = Arrays.asList(
             "http://some.domain.com/thread/something",
