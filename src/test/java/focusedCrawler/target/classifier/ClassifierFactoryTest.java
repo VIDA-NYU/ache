@@ -29,6 +29,15 @@ public class ClassifierFactoryTest {
         assertThat(classifier, is(instanceOf(TitleRegexTargetClassifier.class)));
     }
     
+    @Test
+    public void shouldCreateBodyRegexClassifier() throws Exception {
+        // given
+        String path = ClassifierFactoryTest.class.getResource("body_regex_classifier_config/").getPath();
+
+        TargetClassifier classifier = TargetClassifierFactory.create(path);
+        assertThat(classifier, is(notNullValue()));
+        assertThat(classifier, is(instanceOf(BodyRegexTargetClassifier.class)));
+    }
     
     @Test
     public void shouldCreateWekaClassifier() throws Exception {

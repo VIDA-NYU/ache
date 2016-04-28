@@ -34,6 +34,10 @@ public class TargetClassifierFactory {
     static class TitleRegexClassifierConfig {
         public String regular_expression;
     }
+    
+    static class BodyRegexClassifierConfig {
+        public List<String> regular_expressions;
+    }
 
     public static TargetClassifier create(String modelPath) throws IOException {
         return create(modelPath, 0.0, null);
@@ -67,6 +71,10 @@ public class TargetClassifierFactory {
             
             if("title_regex".equals(classifierType)) {
                 classifier = createTitleRegexClassifier(yaml, parameters);
+            }
+            
+            if("body_regex".equals(classifierType)) {
+                classifier = createBodyRegexClassifier(yaml, parameters);
             }
             
             if("keep_link_relevance".equals(classifierType)) {
@@ -139,6 +147,17 @@ public class TargetClassifierFactory {
         
         if(params.regular_expression != null && !params.regular_expression.trim().isEmpty()) {
             return new TitleRegexTargetClassifier(params.regular_expression.trim());
+        } else {
+            return null;
+        }
+    }
+    
+    private static TargetClassifier createBodyRegexClassifier(ObjectMapper yaml,
+            JsonNode parameters) throws JsonProcessingException {
+        BodyRegexClassifierConfig params =
+                yaml.treeToValue(parameters, BodyRegexClassifierConfig.class);
+        if (params.regular_expressions != null) {
+            return new BodyRegexTargetClassifier(params.regular_expressions);
         } else {
             return null;
         }

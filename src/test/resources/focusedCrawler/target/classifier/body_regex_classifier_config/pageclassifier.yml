@@ -1,0 +1,5 @@
+type: body_regex
+parameters:
+  regular_expressions:
+  - pattern1
+  - pattern2
