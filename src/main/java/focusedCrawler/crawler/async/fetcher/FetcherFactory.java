@@ -26,9 +26,10 @@ public class FetcherFactory {
         UserAgent userAgent = new UserAgent(config.getUserAgentName(), "", config.getUserAgentUrl());
         
         SimpleHttpFetcher httpFetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
-        httpFetcher.setSocketTimeout(30*1000);
         httpFetcher.setMaxConnectionsPerHost(1);
+        httpFetcher.setSocketTimeout(30*1000);
         httpFetcher.setConnectionTimeout(5*60*1000);
+        httpFetcher.setConnectionRequestTimeout(30*1000);
         httpFetcher.setMaxRetryCount(config.getMaxRetryCount());
         httpFetcher.setDefaultMaxContentSize(10*1024*1024);
         
