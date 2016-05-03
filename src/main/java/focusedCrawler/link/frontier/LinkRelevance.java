@@ -84,6 +84,10 @@ public class LinkRelevance implements Serializable {
         }
     }
     
+    public static LinkRelevance create(String url) throws MalformedURLException {
+        return new LinkRelevance(new URL(url), LinkRelevance.DEFAULT_RELEVANCE);
+    }
+    
     @Override
     public String toString() {
         return "LinkRelevance[url=" + url + ", relevance=" + relevance + "]";
