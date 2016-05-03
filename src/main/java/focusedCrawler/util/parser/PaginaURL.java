@@ -57,7 +57,7 @@ import focusedCrawler.util.string.StopListArquivo;
 public class PaginaURL {
     
     private static final String[] schemes = {"http","https"};
-    private static final UrlValidator urlValidator = new UrlValidator(schemes);
+    private static final UrlValidator urlValidator = new UrlValidator(schemes, UrlValidator.ALLOW_LOCAL_URLS);
     public static final Logger logger = LoggerFactory.getLogger(PaginaURL.class);
 
     public long timeToParse = 0;
