@@ -19,28 +19,35 @@ public class QueryBuilder {
     }
 
     public Query buildNextQuery(Query query, QueryResult queryResult) {
+        System.out.println("Building next query...");
+        System.out.println("Initial query: "+query.asString());
+
         // keep track of all terms used
         queryTermsUsed.addAll(query.termsSet());
         
+        //
         // 1. compute term scores for terms contained in all positive and negative documents
-        System.out.println("Precision:"+queryResult.precision());
+        //
+        // (this 'if' exists in the original implementation, but is not described in the paper)
         if(queryResult.precision() > minimumPrecision) {
-            System.out.println("QueryBuilder.buildNextQuery() positive:"+queryResult.positivePages.size());
             for (Page page : queryResult.positivePages) {
                 relevanceModel.addPage(true, page);
             }
-            System.out.println("QueryBuilder.buildNextQuery() negative:"+queryResult.negativePages.size());
             for (Page page : queryResult.negativePages) {
                 relevanceModel.addPage(false, page);
             }
         }
         
-        // 2. re-weight query scores of all terms of the query
+        //
+        // 2. re-weight term scores of all terms of the query
+        //
         for (QueryTerm t : query.getTerms()) {
-            relevanceModel.updateScore(t.term, queryResult.precision());
+            relevanceModel.reweightScore(t.term, queryResult.precision());
         }
         
+        //
         // 3. create new query
+        //
         int querySize = query.getTerms().size();
         if(queryResult.precision() < minimumPrecision) {
             querySize++;   
@@ -60,7 +67,7 @@ public class QueryBuilder {
         QueryTerm unusedTerm = relevanceModel.getTermWithBestScoreExcept(queryTermsUsed);
         System.out.println("unusedTerm: "+unusedTerm.toString());
         newQuery.addTerm(unusedTerm);
-        
+        System.out.println("New query: "+newQuery.asString());
         return newQuery;
     }
 

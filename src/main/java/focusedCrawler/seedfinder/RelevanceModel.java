@@ -96,7 +96,7 @@ public class RelevanceModel {
         return termScores.get(term);
     }
     
-    public double updateScore(String term, double queryPrecision) {
+    public double reweightScore(String term, double queryPrecision) {
         if(!termScores.containsKey(term)) {
             termScores.put(term, 1d/100);
         }
@@ -137,9 +137,10 @@ public class RelevanceModel {
         for(Entry<String, Double> ts : termScores.entrySet()) {
             if(!exceptions.contains(ts.getKey())) {
                 return new QueryTerm(ts.getKey(), ts.getValue());
-            } else {
-                System.out.println(ts.getKey() + "is an exception.");
             }
+//            else {
+//                System.out.println(ts.getKey() + " is an exception.");
+//            }
         }
         return null;
     }
