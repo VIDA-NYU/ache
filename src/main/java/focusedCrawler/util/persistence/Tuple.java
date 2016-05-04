@@ -30,18 +30,18 @@ import com.sleepycat.persist.model.PrimaryKey;
 
 @SuppressWarnings("serial")
 @Entity
-public class Tuple implements Serializable {
+public class Tuple<T> implements Serializable {
 	
 	@PrimaryKey
 	private String key;
 	
-	private String value;
+	private T value;
 	
 	public Tuple(){
 		
 	}
 	
-	public Tuple(String key, String value){
+	public Tuple(String key, T value){
 		this.key = key;
 		this.value = value;
 	}
@@ -50,7 +50,7 @@ public class Tuple implements Serializable {
 		return key;
 	}
 	
-	public String getValue(){
+	public T getValue(){
 		return value;
 	}
 	

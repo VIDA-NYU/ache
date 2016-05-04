@@ -23,15 +23,20 @@
  */
 package focusedCrawler.link.frontier;
 
+import java.io.IOException;
 import java.io.Serializable;
-import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLDecoder;
+import java.util.Comparator;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.google.common.net.InternetDomainName;
-
-import focusedCrawler.util.persistence.Tuple;
 
 @SuppressWarnings("serial")
 public class LinkRelevance implements Serializable {
@@ -39,9 +44,21 @@ public class LinkRelevance implements Serializable {
     public static double DEFAULT_RELEVANCE = 299;
     public static double DEFAULT_HUB_RELEVANCE = 100;
     public static double DEFAULT_AUTH_RELEVANCE = 200;
+    
+    public static Comparator<LinkRelevance> DESC_ORDER_COMPARATOR = new Comparator<LinkRelevance>() {
+        @Override
+        public int compare(LinkRelevance o1, LinkRelevance o2) {
+            return Double.compare(o2.getRelevance(), o1.getRelevance());
+        }
+    };
 
-    private final URL url;
-    private final double relevance;
+    @JsonDeserialize(using = UrlDeseralizer.class)
+    private URL url;
+    private double relevance;
+    
+    public LinkRelevance() {
+        // required for JSON serialization
+    }
 
     public LinkRelevance(URL url, double relevance) {
         this.url = url;
@@ -60,6 +77,7 @@ public class LinkRelevance implements Serializable {
         return relevance;
     }
     
+    @JsonIgnore
     public InternetDomainName getDomainName() {
         String host = url.getHost();
         InternetDomainName domain = InternetDomainName.from(host);
@@ -70,6 +88,7 @@ public class LinkRelevance implements Serializable {
         }
     }
     
+    @JsonIgnore
     public String getTopLevelDomainName() {
         InternetDomainName domain = this.getDomainName();
         try {
@@ -93,16 +112,11 @@ public class LinkRelevance implements Serializable {
         return "LinkRelevance[url=" + url + ", relevance=" + relevance + "]";
     }
 
-    public static LinkRelevance fromTuple(Tuple tuple) {
-        try {
-            String urlStr = tuple.getKey();
-            double relevance = new Double(tuple.getValue());
-            URL url = new URL(URLDecoder.decode(urlStr, "UTF-8"));
-            return new LinkRelevance(url, relevance);
-        } catch (MalformedURLException e) {
-            throw new IllegalArgumentException("Invalid URL provided.", e);
-        } catch (UnsupportedEncodingException e) {
-            throw new IllegalStateException("UTF-8 encoding not supported!", e);
+    public static class UrlDeseralizer extends JsonDeserializer<URL> {
+        @Override
+        public URL deserialize(JsonParser parser, DeserializationContext ctxt) throws IOException, JsonProcessingException {
+            JsonNode node = parser.getCodec().readTree(parser);
+            return new URL(node.asText());
         }
     }
 

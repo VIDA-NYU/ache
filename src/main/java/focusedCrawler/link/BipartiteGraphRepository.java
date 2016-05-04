@@ -19,35 +19,35 @@ public class BipartiteGraphRepository {
 	
 //	private PersistentHashtable auths;
 	
-	private PersistentHashtable authGraph; 
+	private PersistentHashtable<String> authGraph; 
 	
-	private PersistentHashtable authID;
+	private PersistentHashtable<String> authID;
 
-	private PersistentHashtable hubGraph; 
+	private PersistentHashtable<String> hubGraph; 
 	
-	private PersistentHashtable hubID;
+	private PersistentHashtable<String> hubID;
 	
-	private PersistentHashtable url2id;
+	private PersistentHashtable<String> url2id;
 
 	
 	private final String separator = "###";
 	
 	
 
-	public BipartiteGraphRepository(String dataPath, BiparitieGraphRepConfig config) {
-	    int cacheSize = 10000;
-	    this.authGraph = new PersistentHashtable(dataPath + "/" + config.getAuthGraphDirectory(), cacheSize);
-        this.url2id = new PersistentHashtable(dataPath + "/" + config.getUrlIdDirectory(), cacheSize);
-        this.authID = new PersistentHashtable(dataPath + "/" + config.getAuthIdDirectory(), cacheSize);
-        this.hubID = new PersistentHashtable(dataPath + "/" + config.getHubIdDirectory(), cacheSize);
-        this.hubGraph = new PersistentHashtable(dataPath + "/" + config.getHubGraphDirectory(), cacheSize);
-	}
+    public BipartiteGraphRepository(String dataPath, BiparitieGraphRepConfig config) {
+        int cacheSize = 10000;
+        this.authGraph = new PersistentHashtable<>(dataPath + "/" + config.getAuthGraphDirectory(), cacheSize, String.class);
+        this.url2id = new PersistentHashtable<>(dataPath + "/" + config.getUrlIdDirectory(), cacheSize, String.class);
+        this.authID = new PersistentHashtable<>(dataPath + "/" + config.getAuthIdDirectory(), cacheSize, String.class);
+        this.hubID = new PersistentHashtable<>(dataPath + "/" + config.getHubIdDirectory(), cacheSize, String.class);
+        this.hubGraph = new PersistentHashtable<>(dataPath + "/" + config.getHubGraphDirectory(), cacheSize, String.class);
+    }
 	
-	public Tuple[] getAuthGraph() throws Exception{
+	public Tuple<String>[] getAuthGraph() throws Exception{
 		return authGraph.getTableAsArray();
 	}
 
-	public Tuple[] getHubGraph() throws Exception{
+	public Tuple<String>[] getHubGraph() throws Exception{
 		return hubGraph.getTableAsArray();
 	}
 	
@@ -93,7 +93,7 @@ public class BipartiteGraphRepository {
 	}
 	
 	public LinkNeighborhood[] getLNs() throws Exception{
-		Tuple[] tuples = authID.getTableAsArray();
+		Tuple<String>[] tuples = authID.getTableAsArray();
 		LinkNeighborhood[] lns = new LinkNeighborhood[tuples.length];
 		for (int i = 0; i < lns.length; i++) {
 			String strln = tuples[i].getValue();
@@ -112,7 +112,7 @@ public class BipartiteGraphRepository {
 	}
 
 	public LinkNeighborhood[] getBacklinkLN() throws Exception{
-		Tuple[] tuples = hubID.getTableAsArray();
+		Tuple<String>[] tuples = hubID.getTableAsArray();
 		LinkNeighborhood[] lns = new LinkNeighborhood[tuples.length];
 		for (int i = 0; i < lns.length; i++) {
 			String strln = tuples[i].getValue();

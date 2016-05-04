@@ -63,8 +63,8 @@ public class HITS {
 	}
 
 	public void originalHITS() throws Exception{
-		Tuple[] authTuples = graphRep.getAuthGraph();
-		Tuple[] hubTuples = graphRep.getHubGraph();
+		Tuple<String>[] authTuples = graphRep.getAuthGraph();
+		Tuple<String>[] hubTuples = graphRep.getHubGraph();
 //		Tuple[] authTuples = new Tuple[7];
 //		Tuple t1 = new Tuple("D", "A###");
 //		Tuple t2 = new Tuple("E", "A###");
@@ -104,7 +104,7 @@ public class HITS {
 		setValues();
 	}
 
-	private void inicialization(Tuple[] authTuples, Tuple[] hubTuples){
+	private void inicialization(Tuple<String>[] authTuples, Tuple<String>[] hubTuples){
 		for (int i = 0; i < authTuples.length; i++) {
 			authValues.put(authTuples[i].getKey(), new VSMElement(authTuples[i].getKey(), 1));
 		}
@@ -127,7 +127,7 @@ public class HITS {
 		System.out.println("-----TOP HUBS-----");
 		for (int i = 0; i < topHubs.size() && i < 50; i++) {
 			String url = graphRep.getHubURL(topHubs.elementAt(i).getWord()).toString();
-			System.out.println(i + ":" + URLDecoder.decode(url) + "=" + topHubs.elementAt(i).getWeight());
+			System.out.println(i + ":" + URLDecoder.decode(url, "UTF-8") + "=" + topHubs.elementAt(i).getWeight());
 		}
 	}
 	
@@ -152,7 +152,7 @@ public class HITS {
 	}
 
 	
-	private void updateAuth(Tuple[] authTuples){
+	private void updateAuth(Tuple<String>[] authTuples){
 		for (int i = 0; i < authTuples.length; i++) {
 			String key = authTuples[i].getKey();
 			String[] backlinks = parseRecord(authTuples[i].getValue());
@@ -171,7 +171,7 @@ public class HITS {
 		
 	}
 	
-	private void updateHub(Tuple[] hubTuples){
+	private void updateHub(Tuple<String>[] hubTuples){
 		for (int i = 0; i < hubTuples.length; i++) {
 			String key = hubTuples[i].getKey();
 			String[] outlinks = parseRecord(hubTuples[i].getValue());

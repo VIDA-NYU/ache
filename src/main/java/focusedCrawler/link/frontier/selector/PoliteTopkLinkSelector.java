@@ -1,9 +1,5 @@
 package focusedCrawler.link.frontier.selector;
 
-import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLDecoder;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -92,34 +88,21 @@ public class PoliteTopkLinkSelector implements LinkSelector {
 
     private LinkRelevance[] selectTopk(Frontier frontier, int numberOfLinks) {
         
-        PersistentHashtable urlRelevance = frontier.getUrlRelevanceHashtable();
-        List<Tuple> tuples = urlRelevance.getTable();
+        PersistentHashtable<LinkRelevance> urlRelevance = frontier.getUrlRelevanceHashtable();
+        List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
         
         Map<String, MinMaxPriorityQueue<LinkRelevance>> topkLinksPerDomain = new HashMap<>();
         this.remainsLinksInFrontier = false;
         
-        for(Tuple tuple : tuples) {
+        for(Tuple<LinkRelevance> tuple : tuples) {
             
-            String urlStr;
-            try {
-                urlStr = URLDecoder.decode(tuple.getKey(), "UTF-8");
-            } catch (UnsupportedEncodingException e) {
-                throw new IllegalStateException("Encoding not supported!", e);
-            }
+            LinkRelevance linkRelevance = tuple.getValue();
             
-            Double relevance = new Double(tuple.getValue());
+            double relevance = linkRelevance.getRelevance();
             if(relevance > 0) {
                 
-                URL url = null;
-                try {
-                    url = new URL(urlStr);
-                } catch (MalformedURLException e) {
-                    throw new IllegalStateException("Invalid URL found in frontier.", e);
-                }
                 this.remainsLinksInFrontier = true;
-
                 
-                LinkRelevance linkRelevance = new LinkRelevance(url, relevance.doubleValue());
                 String domainName = linkRelevance.getTopLevelDomainName();
                 
                 if(domainAccessCache != null) {

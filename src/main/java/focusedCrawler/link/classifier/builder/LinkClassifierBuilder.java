@@ -159,7 +159,7 @@ public class LinkClassifierBuilder {
 	public LinkClassifier backlinkTraining(HashMap<String,VSMElement> outlinkWeights) throws Exception{
 //		HashMap<String,VSMElement> sitesCount = new HashMap<String, VSMElement>();
 		Vector<VSMElement> trainingSet = new Vector<VSMElement>();
-		Tuple[] tuples = graphRep.getHubGraph();
+		Tuple<String>[] tuples = graphRep.getHubGraph();
 		for (int i = 0; i < tuples.length; i++) {
 			String hubId = tuples[i].getKey();
 			String[] outlinks = tuples[i].getValue().split("###");
