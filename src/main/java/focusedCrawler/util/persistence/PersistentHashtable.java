@@ -50,10 +50,8 @@ public class PersistentHashtable<T> {
 	private List<Tuple<T>> tempList = new ArrayList<>(tempMaxSize);
 
     private Cache<String, T> cache;
-    private Class<T> contentClass; 
 	
 	public PersistentHashtable(String path, int cacheSize, Class<T> contentClass) {
-	    this.contentClass = contentClass;
         File file = new File(path);
 	    if(!file.exists()) {
 	        file.mkdirs();
@@ -66,23 +64,28 @@ public class PersistentHashtable<T> {
 		} catch (DatabaseException e) {
 			throw new RuntimeException(e);
 		}
+		
 	}
 	
 	public List<Tuple<T>> getTable() {
-		try {
+        try {
             return persistentTable.listElements();
         } catch (DatabaseException e) {
             throw new RuntimeException("Failed to get hashtable values.", e);
         }
 	}
 
-    public Tuple<T>[] getTableAsArray() {
-        List<Tuple<T>> table = getTable();
-        @SuppressWarnings("unchecked")
-        Tuple<T>[] a = (Tuple<T>[]) Array.newInstance(contentClass, table.size());
-        return (Tuple<T>[]) table.toArray(a);
-    }
-    
+	/**
+	 * Use method {@link #getTable()} instead.
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	@Deprecated
+	public Tuple<T>[] getTableAsArray() {
+		List<Tuple<T>> table = getTable();
+		return table.toArray((Tuple<T>[]) Array.newInstance(Tuple.class, table.size()));
+	}
+	
 	public synchronized T get(String key){
 		try {
 			key = URLEncoder.encode(key, "UTF-8");
