@@ -221,7 +221,7 @@ public class LinkStorage extends StorageDefault{
 
         FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, seedFile, stoplistFile);
 
-        BipartiteGraphRepository graphRep = new BipartiteGraphRepository(dataPath, config.getBiparitieGraphRepConfig());
+        BipartiteGraphRepository graphRep = new BipartiteGraphRepository(dataPath);
 
         BipartiteGraphManager manager = createBipartiteGraphManager(config, linkClassifier, frontierManager, graphRep);
 

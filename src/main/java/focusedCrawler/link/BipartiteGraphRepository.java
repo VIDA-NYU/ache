@@ -7,7 +7,6 @@ import java.util.HashSet;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
-import focusedCrawler.link.LinkStorageConfig.BiparitieGraphRepConfig;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.persistence.PersistentHashtable;
@@ -32,15 +31,18 @@ public class BipartiteGraphRepository {
 	
 	private final String separator = "###";
 	
-	
+    private String urlIdDirectory = "data_backlinks/url";
+    private String authIdDirectory = "data_backlinks/auth_id";
+    private String hubIdDirectory = "data_backlinks/hub_id";
+    private String hubGraphDirectory = "data_backlinks/hub_graph";
 
-    public BipartiteGraphRepository(String dataPath, BiparitieGraphRepConfig config) {
+    public BipartiteGraphRepository(String dataPath) {
         int cacheSize = 10000;
-        this.authGraph = new PersistentHashtable<>(dataPath + "/" + config.getAuthGraphDirectory(), cacheSize, String.class);
-        this.url2id = new PersistentHashtable<>(dataPath + "/" + config.getUrlIdDirectory(), cacheSize, String.class);
-        this.authID = new PersistentHashtable<>(dataPath + "/" + config.getAuthIdDirectory(), cacheSize, String.class);
-        this.hubID = new PersistentHashtable<>(dataPath + "/" + config.getHubIdDirectory(), cacheSize, String.class);
-        this.hubGraph = new PersistentHashtable<>(dataPath + "/" + config.getHubGraphDirectory(), cacheSize, String.class);
+        this.authGraph = new PersistentHashtable<>(dataPath + "/" + "", cacheSize, String.class);
+        this.url2id = new PersistentHashtable<>(dataPath + "/" + urlIdDirectory, cacheSize, String.class);
+        this.authID = new PersistentHashtable<>(dataPath + "/" + authIdDirectory, cacheSize, String.class);
+        this.hubID = new PersistentHashtable<>(dataPath + "/" + hubIdDirectory, cacheSize, String.class);
+        this.hubGraph = new PersistentHashtable<>(dataPath + "/" + hubGraphDirectory, cacheSize, String.class);
     }
 	
 	public Tuple<String>[] getAuthGraph() throws Exception{

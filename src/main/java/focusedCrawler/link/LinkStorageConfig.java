@@ -31,38 +31,6 @@ public class LinkStorageConfig {
         
     }
     
-    public static class BiparitieGraphRepConfig {
-        
-        private String authGraphDirectory = "data_backlinks/auth_graph";
-        private String urlIdDirectory = "data_backlinks/url";
-        private String authIdDirectory = "data_backlinks/auth_id";
-        private String hubIdDirectory = "data_backlinks/hub_id";
-        private String hubGraphDirectory = "data_backlinks/hub_graph";
-        
-        public BiparitieGraphRepConfig() { }
-        
-        public String getAuthGraphDirectory() {
-            return authGraphDirectory;
-        }
-        
-        public String getUrlIdDirectory() {
-            return urlIdDirectory;
-        }
-        
-        public String getAuthIdDirectory() {
-            return authIdDirectory;
-        }
-        
-        public String getHubIdDirectory() {
-            return hubIdDirectory;
-        }
-        
-        public String getHubGraphDirectory() {
-            return hubGraphDirectory;
-        }
-        
-    }
-    
     @JsonProperty("link_storage.max_pages_per_domain")
     private int maxPagesPerDomain = 100;
     
@@ -108,8 +76,6 @@ public class LinkStorageConfig {
     
     @JsonUnwrapped
     private BackSurferConfig backSurferConfig = new BackSurferConfig();
-    
-    private BiparitieGraphRepConfig biparitieGraphRepConfig = new BiparitieGraphRepConfig();
     
     private final StorageConfig serverConfig;
     
@@ -164,10 +130,6 @@ public class LinkStorageConfig {
     
     public String getTargetStorageDirectory() {
         return targetStorageDirectory;
-    }
-    
-    public BiparitieGraphRepConfig getBiparitieGraphRepConfig() {
-        return biparitieGraphRepConfig;
     }
     
     public BackSurferConfig getBackSurferConfig() {
