@@ -179,7 +179,7 @@ public class BerkeleyDBHashTable<T> {
 	    try {
 	        return jsonMapper.readValue(valueAsString, contentClass);
 	    } catch (IOException e) {
-	        throw new IllegalArgumentException("Failed to serialize the value as string.", e);
+	        throw new IllegalArgumentException("Failed to unserialize the value as string.", e);
 	    }
 	}
 
