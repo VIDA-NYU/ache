@@ -125,8 +125,6 @@ public class LinkStorage extends StorageDefault{
         Page page = (Page) obj;
         numberOfPages++;
         
-        //System.out.println("getBacklinks && page.isAuth() "+getBacklinks+" "+page.isAuth());
-        //System.out.println("getOutlinks "+getOutlinks);
         try {
             
             if (getBacklinks && page.isAuth()) {

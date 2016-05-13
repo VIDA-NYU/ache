@@ -81,9 +81,6 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
             
             page.setRelevance(relevance);
             
-            //System.out.println(page.getPageURL().links().length+" links in the page \n first link: "+page.getPageURL().links()[0].toString());
-            //System.out.println(page.getRelevance()+" "+page.isHub());
-            
             logger.info(relevance + " Sending page to TargetStorage: "+ response.getFetchedUrl());
             targetStorage.insert(page);
             
