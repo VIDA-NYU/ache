@@ -135,11 +135,6 @@ public class FrontierManager {
         logger.info("\n> URL:" + linkRelev.getURL() +
                     "\n> REL:" + ((int) linkRelev.getRelevance() / 100) +
                     "\n> RELEV:" + linkRelev.getRelevance());
-        try{
-        	frontier.visitedLinks();
-        } catch (Exception e) {
-            logger.error("Problem while processing data.", e);
-        }
 
         return linkRelev;
     }
