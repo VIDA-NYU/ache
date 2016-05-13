@@ -120,9 +120,17 @@ public class LinkStorage extends StorageDefault{
      * @return Object
      */
     public synchronized Object insert(Object obj) throws StorageException {
+        if(obj instanceof Page) {
+            return insert((Page) obj);
+        } else {
+            // Other actions
+        }
+        return null;
+    }
+    
+    public Object insert(Page page) throws StorageException {
+        
         long initialTime = System.currentTimeMillis();
-
-        Page page = (Page) obj;
         numberOfPages++;
         
         try {
@@ -167,9 +175,8 @@ public class LinkStorage extends StorageDefault{
         long finalTime = System.currentTimeMillis();
         totalTime = totalTime + (finalTime - initialTime);
         double average = totalTime / numberOfPages;
-
-        logger.info("\n> TOTAL PAGES:" + numberOfPages + "\n> TOTAL TIME:" + (finalTime - initialTime) + "\n> AVERAGE:"
-                + average);
+        logger.info("\n> TOTAL PAGES:" + numberOfPages + "\n> TOTAL TIME:" + (finalTime - initialTime) + "\n> AVERAGE:" + average);
+        
         return null;
     }
 

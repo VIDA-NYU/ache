@@ -45,6 +45,10 @@ public class LinkRelevance implements Serializable {
     public static double DEFAULT_HUB_RELEVANCE = 100;
     public static double DEFAULT_AUTH_RELEVANCE = 200;
     
+    public enum Type {
+        FORWARD_LINK
+    }
+    
     public static Comparator<LinkRelevance> DESC_ORDER_COMPARATOR = new Comparator<LinkRelevance>() {
         @Override
         public int compare(LinkRelevance o1, LinkRelevance o2) {
@@ -55,6 +59,7 @@ public class LinkRelevance implements Serializable {
     @JsonDeserialize(using = UrlDeseralizer.class)
     private URL url;
     private double relevance;
+    private Type type = Type.FORWARD_LINK;
     
     public LinkRelevance() {
         // required for JSON serialization
@@ -63,6 +68,13 @@ public class LinkRelevance implements Serializable {
     public LinkRelevance(URL url, double relevance) {
         this.url = url;
         this.relevance = relevance;
+        this.type = Type.FORWARD_LINK;
+    }
+    
+    public LinkRelevance(URL url, double relevance, Type type) {
+        this.url = url;
+        this.relevance = relevance;
+        this.type = type;
     }
 
     public LinkRelevance(String string, double relevance) throws MalformedURLException {
@@ -75,6 +87,10 @@ public class LinkRelevance implements Serializable {
 
     public double getRelevance() {
         return relevance;
+    }
+    
+    public Type getType() {
+        return type;
     }
     
     @JsonIgnore
