@@ -79,6 +79,9 @@ public class LinkStorageConfig {
     
     private final StorageConfig serverConfig;
     
+    @JsonProperty("link_storage.download_sitemap_xml")
+    private boolean downloadSitemapXml = false;
+    
     public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
         this.serverConfig = StorageConfig.create(config, "link_storage.server.");
@@ -142,6 +145,10 @@ public class LinkStorageConfig {
 
     public StorageConfig getStorageServerConfig() {
         return serverConfig;
+    }
+
+    public boolean getDownloadSitemapXml() {
+        return downloadSitemapXml;
     }
 
 }

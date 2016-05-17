@@ -40,7 +40,8 @@ public class MultiLevelLinkSelector implements LinkSelector {
 
 				if (url != null){
 
-					Integer relevInt = (int) tuple.getValue().getRelevance();
+				    LinkRelevance linkRelevance = tuple.getValue();
+				    Integer relevInt = (int) linkRelevance.getRelevance();
 					if(relevInt != null){
 						int relev = relevInt.intValue();
 						if(relev > 0){
@@ -62,14 +63,12 @@ public class MultiLevelLinkSelector implements LinkSelector {
 										countTopClass[0]++;
 									}
 									if(insert){
-										LinkRelevance linkRel = new LinkRelevance(new URL(url),relev);
-										tempList.add(linkRel);
+										tempList.add(linkRelevance);
 										count++;
 										classCount[index]++;
 									}
 								}else{
-									LinkRelevance linkRel = new LinkRelevance(new URL(url),relev);
-									tempList.add(linkRel);
+									tempList.add(linkRelevance);
 									count++;
 									classCount[index]++;
 								}

@@ -46,7 +46,7 @@ public class LinkRelevance implements Serializable {
     public static double DEFAULT_AUTH_RELEVANCE = 200;
     
     public enum Type {
-        FORWARD_LINK
+        FORWARD, ROBOTS, SITEMAP
     }
     
     public static Comparator<LinkRelevance> DESC_ORDER_COMPARATOR = new Comparator<LinkRelevance>() {
@@ -59,26 +59,28 @@ public class LinkRelevance implements Serializable {
     @JsonDeserialize(using = UrlDeseralizer.class)
     private URL url;
     private double relevance;
-    private Type type = Type.FORWARD_LINK;
+    private Type type;
     
     public LinkRelevance() {
         // required for JSON serialization
     }
 
-    public LinkRelevance(URL url, double relevance) {
-        this.url = url;
-        this.relevance = relevance;
-        this.type = Type.FORWARD_LINK;
+    public LinkRelevance(String string, double relevance) throws MalformedURLException {
+        this(new URL(string), relevance);
     }
-    
+
+    public LinkRelevance(URL url, double relevance) {
+        this(url, relevance, Type.FORWARD);
+    }
+
+    public LinkRelevance(String url, double relevance, Type type) throws MalformedURLException {
+        this(new URL(url), relevance, type);
+    }
+
     public LinkRelevance(URL url, double relevance, Type type) {
         this.url = url;
         this.relevance = relevance;
         this.type = type;
-    }
-
-    public LinkRelevance(String string, double relevance) throws MalformedURLException {
-        this(new URL(string), relevance);
     }
 
     public URL getURL() {

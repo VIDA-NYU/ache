@@ -7,6 +7,7 @@ import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -31,10 +32,13 @@ public class FrontierManagerTest {
     private LinkFilter emptyLinkFilter = new LinkFilter(new ArrayList<String>());
 
     private Frontier frontier;
+    private HostManager hostManager;
+    private boolean downloadRobots = false;
     
     @Before
     public void setUp() throws Exception {
         frontier = new Frontier(tempFolder.newFolder().toString(), 1000);
+        hostManager = new HostManager(Paths.get(tempFolder.newFolder().toString()));
     }
     
     @After
@@ -54,7 +58,8 @@ public class FrontierManagerTest {
         
         LinkSelector linkSelector = new SiteLinkSelector();
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, scope);
-        FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, new LinkFilter(new ArrayList<String>()));
+        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+                2, 2, linkSelector, new LinkFilter(new ArrayList<String>()));
         
         // when
         frontierManager.insert(link1);
@@ -78,9 +83,10 @@ public class FrontierManagerTest {
     public void shouldInsertUrl() throws Exception {
         // given
         LinkSelector linkSelector = new NonRandomLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, emptyLinkFilter);
+        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+                2, 2, linkSelector, emptyLinkFilter);
         
-        LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
+        LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1, LinkRelevance.Type.FORWARD);
         
         // when
         frontierManager.insert(link1);
@@ -92,6 +98,40 @@ public class FrontierManagerTest {
         assertThat(nextURL.getURL(), is(notNullValue()));
         assertThat(nextURL.getURL(), is(link1.getURL()));
         assertThat(nextURL.getRelevance(), is(link1.getRelevance()));
+        assertThat(nextURL.getType(), is(link1.getType()));
+        
+        frontierManager.close();
+    }
+    
+    @Test
+    public void shouldInsertRobotsLinkWhenAddDomainForTheFirstTime() throws Exception {
+        // given
+        LinkSelector linkSelector = new NonRandomLinkSelector();
+        boolean downloadRobots = true;
+        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+                2, 2, linkSelector, emptyLinkFilter);
+        
+        LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/sitemap.xml"), 1, LinkRelevance.Type.FORWARD);
+        
+        // when
+        frontierManager.insert(link1);
+        
+        
+        // then
+        LinkRelevance nextURL;
+        
+        nextURL = frontierManager.nextURL();
+        assertThat(nextURL, is(notNullValue()));
+        assertThat(nextURL.getURL(), is(notNullValue()));
+        assertThat(nextURL.getURL().toString(), is("http://www.example1.com/robots.txt"));
+        assertThat(nextURL.getType(), is(LinkRelevance.Type.ROBOTS));
+        
+        nextURL = frontierManager.nextURL();
+        assertThat(nextURL, is(notNullValue()));
+        assertThat(nextURL.getURL(), is(notNullValue()));
+        assertThat(nextURL.getURL(), is(link1.getURL()));
+        assertThat(nextURL.getRelevance(), is(link1.getRelevance()));
+        assertThat(nextURL.getType(), is(link1.getType()));
         
         frontierManager.close();
     }
@@ -100,7 +140,8 @@ public class FrontierManagerTest {
     public void shouldInsertUrlsAndSelectUrlsInSortedByRelevance() throws Exception {
         // given
         LinkSelector linkSelector = new NonRandomLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, emptyLinkFilter);
+        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+                2, 2, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
@@ -137,7 +178,8 @@ public class FrontierManagerTest {
     public void shouldNotReturnAgainALinkThatWasAlreadyReturned() throws Exception {
         // given
         LinkSelector linkSelector = new NonRandomLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, 2, 2, linkSelector, emptyLinkFilter);
+        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+                2, 2, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);

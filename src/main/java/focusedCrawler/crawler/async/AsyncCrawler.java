@@ -33,7 +33,11 @@ public class AsyncCrawler {
     public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage, AsyncCrawlerConfig crawlerConfig) {
         this.linkStorage = linkStorage;
         this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig());
-        this.handlers.put(LinkRelevance.Type.FORWARD_LINK, new FetchedResultHandler(targetStorage));
+        
+        this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
+        this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
+        this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage, crawlerConfig.getDownloaderConfig().getUserAgentName()));
+        
         this.downloadScheduler = new DownloadScheduler(
                 crawlerConfig.getHostMinAccessInterval(),
                 crawlerConfig.getMaxLinksInScheduler());

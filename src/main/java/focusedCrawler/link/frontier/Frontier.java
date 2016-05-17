@@ -194,7 +194,7 @@ public class Frontier {
         if (exist(linkRelevance) != null) {
             // we don't want to delete the URL file, it is useful to avoid visiting an old url
             double relevance = linkRelevance.getRelevance();
-            urlRelevance.put(url, new LinkRelevance(linkRelevance.getURL(), -relevance));
+            urlRelevance.put(url, new LinkRelevance(linkRelevance.getURL(), -relevance, linkRelevance.getType()));
         }
     }
 

@@ -24,20 +24,19 @@ import focusedCrawler.crawler.async.TestWebServerBuilder;
 import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
 
-public class HardFocusCrawlingTest {
+public class RobotsAndSitemapTest {
     
     @Rule
     public TemporaryFolder tempFolder = new TemporaryFolder();
     
-    static String basePath = HardFocusCrawlingTest.class.getResource("hard_focus_test").getFile();
+    static String basePath = RobotsAndSitemapTest.class.getResource("robots_and_sitemap_test").getFile();
 
     private static HttpServer httpServer;
     
     @BeforeClass
     public static void setupServer() throws IOException, InterruptedException {
-        System.out.println("HardFocusCrawlingTest");
         httpServer = new TestWebServerBuilder("localhost", 1234)
-            .withStaticFolder(Paths.get(basePath, "html"))
+            .withStaticFolder(Paths.get(basePath, "static"))
             .start();
     }
     
@@ -67,15 +66,12 @@ public class HardFocusCrawlingTest {
 
         List<String> shouldBeDownloaded = asList(
                 "index.html",
-                "index_irrelevant.html",
-                "index_relevant.html",
-                "relevant_page1.html",
-                "irrelevant_page1.html"
+                "page-listed-on-sitemap-1.html",
+                "page-listed-on-sitemap-2.html"
         );
 
         List<String> shouldNOTBeDownloaded = asList(
-                "relevant_page2.html",
-                "irrelevant_page2.html"
+                "not-listed-on-sitemaps.html"
         );
 
         for (String url : shouldBeDownloaded) {
