@@ -7,8 +7,6 @@ import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
@@ -38,26 +36,9 @@ public class HardFocusCrawlingTest {
     @BeforeClass
     public static void setupServer() throws IOException, InterruptedException {
         System.out.println("HardFocusCrawlingTest");
-        List<String> files = asList(
-            "index.html",
-            
-            "index_relevant.html",
-            "relevant_page1.html",
-            "irrelevant_page1.html",
-            
-            "index_irrelevant.html",
-            "relevant_page2.html",
-            "irrelevant_page2.html"
-        );
-        
-        TestWebServerBuilder serverBuilder = new TestWebServerBuilder("localhost", 1234);
-        for(String file : files) {
-            Path filePath = Paths.get(basePath, "html/"+file);
-            System.out.println("Loading file into server: " + filePath.toString());
-            String fileContent = new String(Files.readAllBytes(filePath));            
-            serverBuilder.with200OK("/"+file, fileContent);
-        }
-        httpServer = serverBuilder.start();
+        httpServer = new TestWebServerBuilder("localhost", 1234)
+            .withStaticFolder(Paths.get(basePath, "html"))
+            .start();
     }
     
     @AfterClass

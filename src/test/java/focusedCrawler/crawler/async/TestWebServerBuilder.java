@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -76,6 +79,20 @@ public class TestWebServerBuilder {
 
     public TestWebServerBuilder with200OK(String path, String response) {
         return withHandler(path, new OkHandler(response));
+    }
+
+    public TestWebServerBuilder withStaticFolder(Path path) {
+        try (DirectoryStream<Path> directory = Files.newDirectoryStream(path)) {
+            for (Path filePath : directory) {
+                System.out.println("Loading file into server: " + filePath.toString());
+                System.out.println("                    Path: " + filePath.getFileName());
+                String fileContent = new String(Files.readAllBytes(filePath));            
+                with200OK("/"+filePath.getFileName(), fileContent);
+            }
+        } catch (IOException e) {
+            throw new IllegalArgumentException("Failed to read files from: "+path.toString(), e);
+        }
+        return this;
     }
 
 }
