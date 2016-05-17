@@ -23,6 +23,9 @@
  */
 package focusedCrawler.link.frontier;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -146,6 +149,31 @@ public class FrontierManager {
 
     public Frontier getFrontier() {
         return frontier;
+    }
+
+    public void addSeeds(String[] seeds) {
+        if (seeds != null && seeds.length > 0) {
+            int count = 0;
+            for (String seed : seeds) {
+                System.out.println("Adding seed URL: " + seed);
+
+                URL seedUrl;
+                try {
+                    seedUrl = new URL(seed);
+                } catch (MalformedURLException e) {
+                    throw new IllegalArgumentException("Invalid seed URL provided: " + seed, e);
+                }
+                LinkRelevance link = new LinkRelevance(seedUrl, LinkRelevance.DEFAULT_RELEVANCE);
+                try {
+                    boolean inserted = insert(link);
+                    if (inserted)
+                        count++;
+                } catch (FrontierPersistentException e) {
+                    throw new RuntimeException("Failed to insert seed URL: " + seed, e);
+                }
+            }
+            logger.info("Number of seeds added: " + count);
+        }
     }
 
 }

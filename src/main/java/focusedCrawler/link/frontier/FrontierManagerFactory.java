@@ -48,12 +48,14 @@ public class FrontierManagerFactory {
         
         LinkSelector linkSelector = createLinkSelector(config);
         logger.info("LINK_SELECTOR: "+linkSelector.getClass().getName());
-        return new FrontierManager(
+        FrontierManager frontierManager = new FrontierManager(
                 frontier,
                 config.getMaxSizeLinkQueue(),
                 config.getMaxSizeLinkQueue(),
                 linkSelector,
                 linkFilter);
+        frontierManager.addSeeds(seedUrls);
+        return frontierManager;
     }
 
     private static LinkSelector createLinkSelector(LinkStorageConfig config) {
