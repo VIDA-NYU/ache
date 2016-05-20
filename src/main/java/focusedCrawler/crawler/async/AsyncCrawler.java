@@ -1,11 +1,14 @@
 package focusedCrawler.crawler.async;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.ConfigService;
+import focusedCrawler.crawler.async.HttpDownloader.Callback;
 import focusedCrawler.link.DownloadScheduler;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
@@ -22,15 +25,19 @@ public class AsyncCrawler {
 
     private final LinkStorage linkStorage;
     private final HttpDownloader downloader;
-    private final FetchedResultHandler resultHandler;
     private final DownloadScheduler downloadScheduler;
+    private final Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
     
     private boolean shouldStop = false;
     
     public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage, AsyncCrawlerConfig crawlerConfig) {
         this.linkStorage = linkStorage;
-		this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig());
-        this.resultHandler = new FetchedResultHandler(targetStorage);
+        this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig());
+        
+        this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
+        this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
+        this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage, crawlerConfig.getDownloaderConfig().getUserAgentName()));
+        
         this.downloadScheduler = new DownloadScheduler(
                 crawlerConfig.getHostMinAccessInterval(),
                 crawlerConfig.getMaxLinksInScheduler());
@@ -45,7 +52,15 @@ public class AsyncCrawler {
             while(!shouldStop) {
                 LinkRelevance linkRelevance = downloadScheduler.nextLink();
                 if(linkRelevance != null) {
-                    downloader.dipatchDownload(linkRelevance, resultHandler);
+                    
+                    Callback handler = handlers.get(linkRelevance.getType());
+                    if(handler == null) {
+                        logger.error("No registered handler for link type: "+linkRelevance.getType());
+                        continue;
+                    }
+                    
+                    downloader.dipatchDownload(linkRelevance, handler);
+                    
                 } else {
                     try {
                         Thread.sleep(100);

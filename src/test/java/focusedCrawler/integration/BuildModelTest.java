@@ -1,4 +1,4 @@
-package focusedCrawler;
+package focusedCrawler.integration;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -13,11 +13,12 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
+import focusedCrawler.Main;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.model.Page;
 
-public class MainTest {
+public class BuildModelTest {
     
     @Rule
     public TemporaryFolder tempFolder = new TemporaryFolder();
@@ -26,7 +27,7 @@ public class MainTest {
     public void wekaFeaturesFileShouldBeGeneratedInTheProperFormat() throws Exception {
         
         String stopList     = "config/sample_config/stoplist.txt";
-        String trainingPath = MainTest.class.getResource("sample_training_data").getFile();
+        String trainingPath = BuildModelTest.class.getResource("build_model_test").getFile();
         String modelPath    = tempFolder.newFolder().toString();
         
         // Train a page classifier model

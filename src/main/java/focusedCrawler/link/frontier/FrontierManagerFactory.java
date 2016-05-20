@@ -44,16 +44,23 @@ public class FrontierManagerFactory {
             frontier = new Frontier(directory, config.getMaxCacheUrlsSize());
         }
         
+        HostManager hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"));
+        
         LinkFilter linkFilter = new LinkFilter(configPath);
         
         LinkSelector linkSelector = createLinkSelector(config);
         logger.info("LINK_SELECTOR: "+linkSelector.getClass().getName());
-        return new FrontierManager(
+        
+        FrontierManager frontierManager = new FrontierManager(
                 frontier,
+                hostsManager,
+                config.getDownloadSitemapXml(),
                 config.getMaxSizeLinkQueue(),
                 config.getMaxSizeLinkQueue(),
                 linkSelector,
                 linkFilter);
+        frontierManager.addSeeds(seedUrls);
+        return frontierManager;
     }
 
     private static LinkSelector createLinkSelector(LinkStorageConfig config) {

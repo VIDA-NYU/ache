@@ -1,15 +1,16 @@
 package focusedCrawler.util.persistence;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
-import java.util.Vector;
+import java.util.Comparator;
+import java.util.List;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-import focusedCrawler.util.vsm.VSMElement;
+import focusedCrawler.link.frontier.LinkRelevance;
 
 public class PersistentHashtableTest {
     
@@ -20,7 +21,7 @@ public class PersistentHashtableTest {
     @Test
     public void shoudAddAndGetKey() throws Exception {
         // given
-        PersistentHashtable ht = new PersistentHashtable(tempFolder.newFolder().toString(), 1000);
+        PersistentHashtable<String> ht = new PersistentHashtable<>(tempFolder.newFolder().toString(), 1000, String.class);
         
         // when
         ht.put("my_key", "123");
@@ -34,49 +35,49 @@ public class PersistentHashtableTest {
     public void shoudPersistDataIntoHastable() throws Exception {
         // given
         int cacheSize = 1;
-        
         String folder = tempFolder.newFolder().toString();
-        PersistentHashtable ht = new PersistentHashtable(folder, cacheSize);
+        PersistentHashtable<String> ht = new PersistentHashtable<>(folder, cacheSize, String.class);
         
         // when
         ht.put("my_key1", "111");
         ht.put("my_key2", "222");
+        ht.put("http://foo.com/index.php&a=1", "333");
         ht.close();
         
-        ht = new PersistentHashtable(folder, cacheSize);
-        Vector<VSMElement> keys = ht.orderedSet();
+        ht = new PersistentHashtable<>(folder, cacheSize, String.class);
         
         // then
-        assertThat(keys.size(), is(2));
-        assertThat(keys.get(0).getWord(), is("my_key2"));
-        assertThat(keys.get(1).getWord(), is("my_key1"));
-        
         assertThat(ht.get("my_key1"), is("111"));
         assertThat(ht.get("my_key2"), is("222"));
+        assertThat(ht.get("http://foo.com/index.php&a=1"), is("333"));
     }
 
     @Test
-    public void shoudReturnOrderedKeySet() throws Exception {
+    public void shoudReturnOrderedTupleSet() throws Exception {
         // given
         int cacheSize = 1;
-        
         String folder = tempFolder.newFolder().toString();
-        PersistentHashtable ht = new PersistentHashtable(folder, cacheSize);
+        PersistentHashtable<LinkRelevance> ht = new PersistentHashtable<>(folder, cacheSize, LinkRelevance.class);
+
+        Comparator<LinkRelevance > linkRelevanceComparator = new Comparator<LinkRelevance >() {
+            public int compare(LinkRelevance o1, LinkRelevance o2) {
+                return Double.compare(o2.getRelevance(), o1.getRelevance());
+            }
+        };
         
         // when
-        ht.put("my_key1", "111");
-        ht.put("my_key2", "222");
+        ht.put("http://bar.com", new LinkRelevance("http://bar.com", 2d));
+        ht.put("http://foo.com", new LinkRelevance("http://foo.com", 1d));
+        ht.put("http://zoo.com", new LinkRelevance("http://bar.com", 3d));
         ht.commit();
         
-        Vector<VSMElement> keys = ht.orderedSet();
+        List<Tuple<LinkRelevance>> keys = ht.orderedSet(linkRelevanceComparator);
         
         // then
-        assertThat(keys.size(), is(2));
-        assertThat(keys.get(0).getWord(), is("my_key2"));
-        assertThat(keys.get(1).getWord(), is("my_key1"));
-        
-        assertThat(ht.get("my_key1"), is("111"));
-        assertThat(ht.get("my_key2"), is("222"));
+        assertThat(keys.size(), is(3));
+        assertThat(keys.get(0).getValue().getRelevance(), is(3d));
+        assertThat(keys.get(1).getValue().getRelevance(), is(2d));
+        assertThat(keys.get(2).getValue().getRelevance(), is(1d));
     }
 
 }

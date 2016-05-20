@@ -20,27 +20,28 @@ public class MultiLevelLinkSelector implements LinkSelector {
 	@Override
 	public LinkRelevance[] select(Frontier frontier, int numberOfLinks) {
 	    
-	    PersistentHashtable urlRelevance = frontier.getUrlRelevanceHashtable();
+	    PersistentHashtable<LinkRelevance> urlRelevance = frontier.getUrlRelevanceHashtable();
 
 		LinkRelevance[] result = null;
 		int[] classLimits = new int[]{10000,20000,30000};
 		int[] countTopClass = new int[classLimits.length];
 		int[] classCount = new int[classLimits.length];
 		try {
-            List<Tuple> tuples = urlRelevance.getTable();
+            List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
 
 			Vector<LinkRelevance> tempList = new Vector<LinkRelevance>();
 			int count = 0;
 			for (int i = 0; count < numberOfLinks && i < tuples.size(); i++) {
 			    
-				Tuple tuple = tuples.get(i);
+				Tuple<LinkRelevance> tuple = tuples.get(i);
 				
                 String key = tuple.getKey();
 				String url = URLDecoder.decode(key, "UTF-8");
 
 				if (url != null){
 
-					Integer relevInt = new Integer(tuple.getValue());
+				    LinkRelevance linkRelevance = tuple.getValue();
+				    Integer relevInt = (int) linkRelevance.getRelevance();
 					if(relevInt != null){
 						int relev = relevInt.intValue();
 						if(relev > 0){
@@ -62,14 +63,12 @@ public class MultiLevelLinkSelector implements LinkSelector {
 										countTopClass[0]++;
 									}
 									if(insert){
-										LinkRelevance linkRel = new LinkRelevance(new URL(url),relev);
-										tempList.add(linkRel);
+										tempList.add(linkRelevance);
 										count++;
 										classCount[index]++;
 									}
 								}else{
-									LinkRelevance linkRel = new LinkRelevance(new URL(url),relev);
-									tempList.add(linkRel);
+									tempList.add(linkRelevance);
 									count++;
 									classCount[index]++;
 								}

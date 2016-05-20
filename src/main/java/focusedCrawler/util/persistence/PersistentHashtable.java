@@ -23,11 +23,12 @@
 */
 package focusedCrawler.util.persistence;
 import java.io.File;
+import java.lang.reflect.Array;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Vector;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,81 +39,82 @@ import com.sleepycat.je.DatabaseException;
 import com.sleepycat.je.EnvironmentLockedException;
 
 import focusedCrawler.util.persistence.bdb.BerkeleyDBHashTable;
-import focusedCrawler.util.vsm.VSMElement;
-import focusedCrawler.util.vsm.VSMElementComparator;
 
-public class PersistentHashtable {
+public class PersistentHashtable<T> {
     
     private static Logger logger = LoggerFactory.getLogger(PersistentHashtable.class);
 	
-	private BerkeleyDBHashTable persistentTable;
+	private BerkeleyDBHashTable<T> persistentTable;
 	
 	private int tempMaxSize = 1000;
-	private List<Tuple> tempList = new ArrayList<>(tempMaxSize);
+	private List<Tuple<T>> tempList = new ArrayList<>(tempMaxSize);
 
-    private Cache<String, String> cache; 
+    private Cache<String, T> cache;
 	
-	public PersistentHashtable(String path, int cacheSize) {
-	    File file = new File(path);
+	public PersistentHashtable(String path, int cacheSize, Class<T> contentClass) {
+        File file = new File(path);
 	    if(!file.exists()) {
 	        file.mkdirs();
 	    }
 		this.cache = CacheBuilder.newBuilder().maximumSize(cacheSize).build();
 		try {
-			this.persistentTable = new BerkeleyDBHashTable(file);
+			this.persistentTable = new BerkeleyDBHashTable<T>(file, contentClass);
 		} catch (EnvironmentLockedException e) {
 			throw new RuntimeException(e);
 		} catch (DatabaseException e) {
 			throw new RuntimeException(e);
 		}
+		
 	}
 	
-	public List<Tuple> getTable() {
-		try {
+	public List<Tuple<T>> getTable() {
+        try {
             return persistentTable.listElements();
         } catch (DatabaseException e) {
             throw new RuntimeException("Failed to get hashtable values.", e);
         }
 	}
 
-    public Tuple[] getTableAsArray() {
-        List<Tuple> table = getTable();
-        return (Tuple[]) table.toArray(new Tuple[table.size()]);
-    }
-    
-	public synchronized String get(String key){
+	/**
+	 * Use method {@link #getTable()} instead.
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	@Deprecated
+	public Tuple<T>[] getTableAsArray() {
+		List<Tuple<T>> table = getTable();
+		return table.toArray((Tuple<T>[]) Array.newInstance(Tuple.class, table.size()));
+	}
+	
+	public synchronized T get(String key){
 		try {
 			key = URLEncoder.encode(key, "UTF-8");
 			
-			String obj = cache.getIfPresent(key);
+			T obj = cache.getIfPresent(key);
 			if(obj == null){
 				obj = persistentTable.get(key);
 			}
 			return obj;
-
 		} catch (Exception e) {
 			logger.error("Failed to get key from hashtable.", e);
 			return null;
 		}
 	}
 	
-	public synchronized boolean put(String key, String value){
-		try {
-			key = URLEncoder.encode(key, "UTF-8");
-			cache.put(key, value);	
-			
-			tempList.add(new Tuple(key, value));
-			
-			if(tempList.size() == tempMaxSize){
+    public synchronized boolean put(String key, T value) {
+        try {
+            key = URLEncoder.encode(key, "UTF-8");
+            cache.put(key, value);
+            tempList.add(new Tuple<T>(key, value));
+            if (tempList.size() == tempMaxSize) {
                 commit();
             }
-			
-			return true;
-		} catch (Exception e) {
-			logger.error("Failed to store item in persitent hashtable.", e);
-			return false;
-		}
-	}
+            return true;
+        } catch (Exception e) {
+            logger.error("Failed to store item in persitent hashtable.", e);
+            return false;
+        }
+    }
 
     public void commit() {
 		try {
@@ -128,22 +130,18 @@ public class PersistentHashtable {
 		this.commit();
 	}
 	
-	public synchronized Vector<VSMElement> orderedSet() {
+	public synchronized List<Tuple<T>> orderedSet(final Comparator<T> valueComparator) {
         try {
-            List<Tuple> elements = persistentTable.listElements();
-            Vector<VSMElement> result = new Vector<VSMElement>();
-            for (Tuple tuple : elements) {
-                result.add(new VSMElement(
-                    tuple.getKey(),
-                    Double.parseDouble(tuple.getValue())
-                ));
-            }
-            Collections.sort(result, new VSMElementComparator());
-            return result;
+            List<Tuple<T>> elements = persistentTable.listElements();
+            Collections.sort(elements, new Comparator<Tuple<T>>() {
+                @Override
+                public int compare(Tuple<T> o1, Tuple<T> o2) {
+                    return valueComparator.compare(o1.getValue(), o2.getValue());
+                }
+            });
+            return elements;
         } catch (DatabaseException e) {
             throw new RuntimeException("Failed to list elements from hashtable.", e);
         }
-	    
-	}
-
+    }
 }

@@ -23,6 +23,9 @@
  */
 package focusedCrawler.link.frontier;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,27 +43,25 @@ public class FrontierManager {
 
     private static final Logger logger = LoggerFactory.getLogger(FrontierManager.class);
 
-    private PriorityQueueLink priorityQueue;
-
-    private Frontier frontier;
-
-    private int linksToLoad;
-
-    private LinkFilter linkFilter;
-
+    private final PriorityQueueLink priorityQueue;
+    private final Frontier frontier;
+    private final int linksToLoad;
+    private final LinkFilter linkFilter;
     private final LinkSelector linkSelector;
+    private final HostManager hostsManager;
+    private final boolean downloadRobots;
 
-    public FrontierManager(Frontier frontier,
-                           int maxSizeLinkQueue,
-                           int linksToLoad,
-                           LinkSelector linkSelector,
-                           LinkFilter linkFilter) {
-        this.linkSelector = linkSelector;
-        this.priorityQueue = new PriorityQueueLink(maxSizeLinkQueue);
+    public FrontierManager(Frontier frontier, HostManager hostsManager, boolean downloadRobots,
+                           int maxSizeLinkQueue, int linksToLoad,
+                           LinkSelector linkSelector, LinkFilter linkFilter) {
         this.frontier = frontier;
+        this.hostsManager = hostsManager;
+        this.downloadRobots = downloadRobots;
         this.linksToLoad = linksToLoad;
-        this.loadQueue(linksToLoad);
+        this.linkSelector = linkSelector;
         this.linkFilter = linkFilter;
+        this.priorityQueue = new PriorityQueueLink(maxSizeLinkQueue);
+        this.loadQueue(linksToLoad);
     }
 
     public Frontier getFrontierPersistent() {
@@ -83,15 +84,12 @@ public class FrontierManager {
     }
 
     public boolean isRelevant(LinkRelevance elem) throws FrontierPersistentException {
-        //System.out.println(elem.toString());
         if (elem.getRelevance() <= 0) {
-            //System.out.println("negative"+elem.getRelevance());
             return false;
         }
 
         Integer value = frontier.exist(elem);
         if (value != null) {
-            //System.out.println("exists");
             return false;
         }
 
@@ -113,6 +111,21 @@ public class FrontierManager {
     public boolean insert(LinkRelevance linkRelevance) throws FrontierPersistentException {
         boolean insert = isRelevant(linkRelevance);
         if (insert) {
+            if(downloadRobots) {
+                URL url = linkRelevance.getURL();
+                String hostName = url.getHost();
+                if(!hostsManager.isKnown(hostName)) {
+                    hostsManager.insert(hostName);
+                    try {
+                        URL robotUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
+                        LinkRelevance sitemap = new LinkRelevance(robotUrl, 299, LinkRelevance.Type.ROBOTS);
+                        frontier.insert(sitemap);
+                        System.out.println("Added ROBOTS.TXT: "+sitemap.getURL().toString());
+                    } catch (Exception e) {
+                        logger.warn("Failed to insert robots.txt for host: "+hostName, e);
+                    } 
+                }
+            }
             insert = frontier.insert(linkRelevance);
         }
         return insert;
@@ -135,11 +148,6 @@ public class FrontierManager {
         logger.info("\n> URL:" + linkRelev.getURL() +
                     "\n> REL:" + ((int) linkRelev.getRelevance() / 100) +
                     "\n> RELEV:" + linkRelev.getRelevance());
-        try{
-        	frontier.visitedLinks();
-        } catch (Exception e) {
-            logger.error("Problem while processing data.", e);
-        }
 
         return linkRelev;
     }
@@ -151,6 +159,31 @@ public class FrontierManager {
 
     public Frontier getFrontier() {
         return frontier;
+    }
+
+    public void addSeeds(String[] seeds) {
+        if (seeds != null && seeds.length > 0) {
+            int count = 0;
+            for (String seed : seeds) {
+                System.out.println("Adding seed URL: " + seed);
+
+                URL seedUrl;
+                try {
+                    seedUrl = new URL(seed);
+                } catch (MalformedURLException e) {
+                    throw new IllegalArgumentException("Invalid seed URL provided: " + seed, e);
+                }
+                LinkRelevance link = new LinkRelevance(seedUrl, LinkRelevance.DEFAULT_RELEVANCE);
+                try {
+                    boolean inserted = insert(link);
+                    if (inserted)
+                        count++;
+                } catch (FrontierPersistentException e) {
+                    throw new RuntimeException("Failed to insert seed URL: " + seed, e);
+                }
+            }
+            logger.info("Number of seeds added: " + count);
+        }
     }
 
 }

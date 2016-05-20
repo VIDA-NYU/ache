@@ -24,9 +24,14 @@
 package focusedCrawler.util.persistence.bdb;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.sleepycat.bind.tuple.StringBinding;
 import com.sleepycat.je.Cursor;
 import com.sleepycat.je.Database;
@@ -43,14 +48,23 @@ import com.sleepycat.je.TransactionConfig;
 
 import focusedCrawler.util.persistence.Tuple;
 
-public class BerkeleyDBHashTable {
+public class BerkeleyDBHashTable<T> {
+    
+    private static final ObjectMapper jsonMapper = new ObjectMapper();
+    static {
+        jsonMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        jsonMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+    }
 
 	private Environment exampleEnv;
 	
 	private Database exampleDb;
+
+    private Class<T> contentClass;
 	
-	public BerkeleyDBHashTable(File path) throws EnvironmentLockedException, DatabaseException{
-		 EnvironmentConfig envConfig = new EnvironmentConfig();
+	public BerkeleyDBHashTable(File path, Class<T> contentClass) throws EnvironmentLockedException, DatabaseException{
+		 this.contentClass = contentClass;
+         EnvironmentConfig envConfig = new EnvironmentConfig();
 		 envConfig.setTransactional(true);
 		 envConfig.setAllowCreate(true);
 		 exampleEnv = new Environment(path, envConfig);
@@ -77,7 +91,7 @@ public class BerkeleyDBHashTable {
 		 txn.commit();
 	}
 
-	public synchronized void put(List<Tuple> tuples) throws DatabaseException {
+    public synchronized void put(List<Tuple<T>> tuples) throws DatabaseException {
 	    if(tuples.isEmpty())
 	        return;
 		DatabaseEntry keyEntry = new DatabaseEntry();
@@ -90,11 +104,11 @@ public class BerkeleyDBHashTable {
 		txn.setLockTimeout(0);
 
 		for (int i = 0; i < tuples.size(); i++) {
-		     Tuple tuple = tuples.get(i);
+		     Tuple<T> tuple = tuples.get(i);
 		     if(tuple == null)
 		         continue;
 		     StringBinding.stringToEntry(tuple.getKey(), keyEntry);
-		     StringBinding.stringToEntry(tuple.getValue(), dataEntry);
+		     StringBinding.stringToEntry(serializeValue(tuple.getValue()), dataEntry);
 	         OperationStatus status = exampleDb.put(txn, keyEntry, dataEntry);
 	         if (status != OperationStatus.SUCCESS) {
 	             throw new DatabaseException("Data insertion got status " + status);
@@ -102,15 +116,14 @@ public class BerkeleyDBHashTable {
 		}
 		txn.commit();
 	}
-
-	
-	public synchronized void put(String key, String value) throws DatabaseException{
+    
+	public synchronized void put(String key, T value) throws DatabaseException{
 	     DatabaseEntry keyEntry = new DatabaseEntry();
 	     DatabaseEntry dataEntry = new DatabaseEntry();
 	     Transaction txn;
 	     txn = exampleEnv.beginTransaction(null, null);
 	     StringBinding.stringToEntry(key, keyEntry);
-	     StringBinding.stringToEntry(value, dataEntry);
+	     StringBinding.stringToEntry(serializeValue(value), dataEntry);
          OperationStatus status = exampleDb.put(txn, keyEntry, dataEntry);
          if (status != OperationStatus.SUCCESS) {
              throw new DatabaseException("Data insertion got status " + status);
@@ -118,13 +131,14 @@ public class BerkeleyDBHashTable {
          txn.commit();
 	}
 	
-	public synchronized List<Tuple> listElements() throws DatabaseException {
+	public synchronized List<Tuple<T>> listElements() throws DatabaseException {
 		Cursor cursor = exampleDb.openCursor(null, null);
 		DatabaseEntry keyEntry = new DatabaseEntry();
 		DatabaseEntry dataEntry = new DatabaseEntry();
-		List<Tuple> tempList = new ArrayList<Tuple>();
+		List<Tuple<T>> tempList = new ArrayList<Tuple<T>>();
 		while (cursor.getNext(keyEntry, dataEntry, LockMode.READ_UNCOMMITTED) == OperationStatus.SUCCESS) {
-        	Tuple tuple = new Tuple(StringBinding.entryToString(keyEntry),StringBinding.entryToString(dataEntry));
+        	T value = unserializeValue(StringBinding.entryToString(dataEntry));
+            Tuple<T> tuple = new Tuple<T>(StringBinding.entryToString(keyEntry), value);
         	tempList.add(tuple);
 		}
         cursor.close();
@@ -132,7 +146,7 @@ public class BerkeleyDBHashTable {
 	}
 	
 
-	public synchronized String get(String key) throws DatabaseException{
+	public synchronized T get(String key) throws DatabaseException{
 	     DatabaseEntry keyEntry = new DatabaseEntry();
 	     DatabaseEntry dataEntry = new DatabaseEntry();
 	     StringBinding.stringToEntry(key, keyEntry);
@@ -146,8 +160,27 @@ public class BerkeleyDBHashTable {
 	     if(dataEntry.getData() == null){
 	    	 return null;
 	     }else{
-	    	 return StringBinding.entryToString(dataEntry);
+	    	 String entry = StringBinding.entryToString(dataEntry);
+            return unserializeValue(entry);
 	     }
+	}
+	
+	private String serializeValue(T value) {
+	    String valueAsString;
+	    try {
+	        valueAsString = jsonMapper.writeValueAsString(value);
+	    } catch (JsonProcessingException e) {
+	        throw new IllegalArgumentException("Failed to serialize the value as string.", e);
+	    }
+	    return valueAsString;
+	}
+	
+	private T unserializeValue(String valueAsString) {
+	    try {
+	        return jsonMapper.readValue(valueAsString, contentClass);
+	    } catch (IOException e) {
+	        throw new IllegalArgumentException("Failed to unserialize the value as string.", e);
+	    }
 	}
 
 }

@@ -1,9 +1,7 @@
 package focusedCrawler.link.frontier.selector;
 
-import java.net.URL;
-import java.net.URLDecoder;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
@@ -18,37 +16,20 @@ public class RandomLinkSelector implements LinkSelector {
     @Override
     public LinkRelevance[] select(Frontier frontier, int numberOfLinks) {
         
-        PersistentHashtable urlRelevance = frontier.getUrlRelevanceHashtable();
+        PersistentHashtable<LinkRelevance> urlRelevance = frontier.getUrlRelevanceHashtable();
+        List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
         
-        LinkRelevance[] result = null;
-        try {
-            Vector<LinkRelevance> tempList = new Vector<LinkRelevance>();
-            int count = 0;
-            
-            List<Tuple> tuples = urlRelevance.getTable();
-            
-            for (int i = 0; count < numberOfLinks && i < tuples.size(); i++) {
-                Tuple tuple = tuples.get(i);
-                String url = URLDecoder.decode(tuple.getKey(), "UTF-8");
-                if (url != null) {
-                    Integer relevInt = new Integer(tuple.getValue());
-                    if (relevInt != null && relevInt > 0) {
-                        LinkRelevance linkRel = new LinkRelevance(new URL(url), relevInt.intValue());
-                        tempList.add(linkRel);
-                        count++;
-                    }
-                }
+        List<LinkRelevance> tempList = new ArrayList<LinkRelevance>();
+        for (int i = 0; tempList.size() < numberOfLinks && i < tuples.size(); i++) {
+            LinkRelevance linkRelevance = tuples.get(i).getValue();
+            if (linkRelevance.getRelevance() > 0) {
+                tempList.add(linkRelevance);
             }
-
-            result = new LinkRelevance[tempList.size()];
-            tempList.toArray(result);
-            
-            System.out.println(">> TOTAL LOADED: " + result.length);
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
         }
 
+        LinkRelevance[] result = new LinkRelevance[tempList.size()];
+        tempList.toArray(result);
+        System.out.println(">> TOTAL LOADED: " + result.length);
         return result;
     }
 

@@ -19,7 +19,8 @@ import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.crawler.async.AsyncCrawlerConfig;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.classifier.LinkClassifierFactoryException;
-import focusedCrawler.link.frontier.AddSeeds;
+import focusedCrawler.link.frontier.FrontierManager;
+import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
@@ -191,7 +192,9 @@ public class Main {
         String configPath = getMandatoryOptionValue(cmd, "configDir");
         String seedPath = getMandatoryOptionValue(cmd, "seed");
         ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-        AddSeeds.main(config, seedPath, dataOutputPath);
+        FrontierManager frontierManager = FrontierManagerFactory
+                .create(config.getLinkStorageConfig(), configPath, dataOutputPath, seedPath, null);
+        frontierManager.close();
     }
 
     private static void startLinkStorage(CommandLine cmd) throws MissingArgumentException {
@@ -239,9 +242,6 @@ public class Main {
         
         ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
         
-        // add seeds
-        AddSeeds.main(config, seedPath, dataOutputPath);
-
         try {
             Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
                     dataOutputPath, modelPath, config.getLinkStorageConfig());

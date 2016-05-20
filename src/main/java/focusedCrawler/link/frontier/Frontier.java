@@ -35,13 +35,13 @@ import focusedCrawler.util.persistence.Tuple;
 
 public class Frontier {
 
-    protected PersistentHashtable urlRelevance;
+    protected PersistentHashtable<LinkRelevance> urlRelevance;
     protected Map<String, Integer> scope = null;
     private boolean useScope = false;
 
     public Frontier(String directory, int maxCacheUrlsSize, Map<String, Integer> scope) {
         
-        this.urlRelevance = new PersistentHashtable(directory, maxCacheUrlsSize);
+        this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize, LinkRelevance.class);
         
         if (scope == null) {
             this.useScope = false;
@@ -67,11 +67,11 @@ public class Frontier {
      */
     public HashSet<String> visitedAuths() throws Exception {
         HashSet<String> result = new HashSet<String>();
-        List<Tuple> tuples = urlRelevance.getTable();
-        for (int i = 0; i < tuples.size(); i++) {
-            int value = Integer.parseInt(tuples.get(i).getValue());
+        List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
+        for (Tuple<LinkRelevance> tuple : tuples) {
+            double value = tuple.getValue().getRelevance();
             if (value < -200) {
-                result.add(URLDecoder.decode(tuples.get(i).getKey(), "UTF-8"));
+                result.add(URLDecoder.decode(tuple.getKey(), "UTF-8"));
             }
         }
         return result;
@@ -79,11 +79,11 @@ public class Frontier {
 
     public HashSet<String> visitedLinks() throws Exception {
         HashSet<String> result = new HashSet<String>();
-        List<Tuple> tuples = urlRelevance.getTable();
-        for (int i = 0; i < tuples.size(); i++) {
-            int value = Integer.parseInt(tuples.get(i).getValue());
+        List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
+        for (Tuple<LinkRelevance> tuple : tuples) {
+            double value = tuple.getValue().getRelevance();
             if (value < 0) {
-                result.add(URLDecoder.decode(tuples.get(i).getKey(), "UTF-8"));
+                result.add(URLDecoder.decode(tuple.getKey(), "UTF-8"));
             }
         }
         System.out.println(result.size()+" out of "+urlRelevance.getTable().size());
@@ -92,11 +92,11 @@ public class Frontier {
 
     public HashSet<String> unvisitedAuths() throws Exception {
         HashSet<String> result = new HashSet<String>();
-        List<Tuple> tuples = urlRelevance.getTable();
-        for (int i = 0; i < tuples.size(); i++) {
-            int value = Integer.parseInt(tuples.get(i).getValue());
+        List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
+        for (Tuple<LinkRelevance> tuple : tuples) {
+            double value = tuple.getValue().getRelevance();
             if (value > 200) {
-                result.add(URLDecoder.decode(tuples.get(i).getKey(), "UTF-8"));
+                result.add(URLDecoder.decode(tuple.getKey(), "UTF-8"));
             }
         }
         return result;
@@ -104,11 +104,11 @@ public class Frontier {
 
     public HashSet<String> visitedHubs() throws Exception {
         HashSet<String> result = new HashSet<String>();
-        List<Tuple> tuples = urlRelevance.getTable();
-        for (int i = 0; i < tuples.size(); i++) {
-            int value = Integer.parseInt(tuples.get(i).getValue());
+        List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
+        for (Tuple<LinkRelevance> tuple : tuples) {
+            double value = tuple.getValue().getRelevance();
             if (value > -200 && value < -100) {
-                result.add(URLDecoder.decode(tuples.get(i).getKey(), "UTF-8"));
+                result.add(URLDecoder.decode(tuple.getKey(), "UTF-8"));
             }
         }
         return result;
@@ -116,24 +116,22 @@ public class Frontier {
 
     public HashSet<String> unvisitedHubs() throws Exception {
         HashSet<String> result = new HashSet<String>();
-        List<Tuple> tuples = urlRelevance.getTable();
-        for (int i = 0; i < tuples.size(); i++) {
-            int value = Integer.parseInt(tuples.get(i).getValue());
+        List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
+        for (Tuple<LinkRelevance> tuple : tuples) {
+            double value = tuple.getValue().getRelevance();
             if (value > 100 && value < 200) {
-                result.add(URLDecoder.decode(tuples.get(i).getKey(), "UTF-8"));
+                result.add(URLDecoder.decode(tuple.getKey(), "UTF-8"));
             }
         }
         return result;
     }
 
-    public void update(LinkRelevance linkRelev) {
-        String url = linkRelev.getURL().toString();
-        String strRel = urlRelevance.get(url);
-        if (strRel != null) {
-            if (Integer.parseInt(strRel) > 0) { // not visited url
-                double relevance = linkRelev.getRelevance();
-                int relevInt = (int) (relevance);
-                urlRelevance.put(url, relevInt + "");
+    public void update(LinkRelevance linkRelevance) {
+        String url = linkRelevance.getURL().toString();
+        LinkRelevance link = urlRelevance.get(url);
+        if (link != null) {
+            if (link.getRelevance() > 0) { // not visited url
+                urlRelevance.put(url, linkRelevance);
             }
         }
     }
@@ -149,10 +147,8 @@ public class Frontier {
         boolean inserted = false;
         String url = linkRelev.getURL().toString();
         Integer rel = exist(linkRelev);
-        double relevance = linkRelev.getRelevance();
         if (rel == null && url.toString().length() < 210) {
-            int relevInt = (int) (relevance);
-            urlRelevance.put(url, relevInt + "");
+            urlRelevance.put(url, linkRelev);
             inserted = true;
         }
 
@@ -169,12 +165,11 @@ public class Frontier {
      */
     public Integer exist(LinkRelevance linkRelev) throws FrontierPersistentException {
         String url = linkRelev.getURL().toString();
-        Integer result = null;
-        String resStr = urlRelevance.get(url);
+        LinkRelevance resStr = urlRelevance.get(url);
         if (resStr != null) {
-            result = Integer.parseInt(resStr);
+            return (int) resStr.getRelevance();
         } else {
-            result = new Integer(-1);
+            Integer result = new Integer(-1);
             if (useScope == true) {
                 String host = linkRelev.getURL().getHost();
                 if (scope.get(host) != null) {
@@ -183,23 +178,23 @@ public class Frontier {
             } else {
                 result = null;
             }
+            return result;
         }
-        return result;
     }
 
     /**
      * It deletes a URL from frontier (marks as visited).
      * 
-     * @param linkRelev
+     * @param linkRelevance
      * @throws FrontierPersistentException
      */
-    public void delete(LinkRelevance linkRelev) throws FrontierPersistentException {
+    public void delete(LinkRelevance linkRelevance) throws FrontierPersistentException {
 
-        String url = linkRelev.getURL().toString();
-        if (exist(linkRelev) != null) {
+        String url = linkRelevance.getURL().toString();
+        if (exist(linkRelevance) != null) {
             // we don't want to delete the URL file, it is useful to avoid visiting an old url
-            int rel = (int) linkRelev.getRelevance();
-            urlRelevance.put(url, -rel + "");
+            double relevance = linkRelevance.getRelevance();
+            urlRelevance.put(url, new LinkRelevance(linkRelevance.getURL(), -relevance, linkRelevance.getType()));
         }
     }
 
@@ -207,7 +202,7 @@ public class Frontier {
         urlRelevance.close();
     }
 
-    public PersistentHashtable getUrlRelevanceHashtable() {
+    public PersistentHashtable<LinkRelevance> getUrlRelevanceHashtable() {
         return urlRelevance;
     }
 

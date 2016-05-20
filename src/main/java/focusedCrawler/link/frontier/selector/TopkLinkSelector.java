@@ -1,10 +1,5 @@
 package focusedCrawler.link.frontier.selector;
 
-import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLDecoder;
-import java.util.Comparator;
 import java.util.Iterator;
 
 import com.google.common.collect.MinMaxPriorityQueue;
@@ -19,37 +14,18 @@ public class TopkLinkSelector implements LinkSelector {
     @Override
     public LinkRelevance[] select(Frontier frontier, int numberOfLinks)  {
         
-        PersistentHashtable urlRelevance = frontier.getUrlRelevanceHashtable();
-        
-        Iterator<Tuple> urls = urlRelevance.getTable().iterator();
+        PersistentHashtable<LinkRelevance> urlRelevance = frontier.getUrlRelevanceHashtable();
+        Iterator<Tuple<LinkRelevance>> urls = urlRelevance.getTable().iterator();
         
         MinMaxPriorityQueue<LinkRelevance> topkLinks = MinMaxPriorityQueue
-                .orderedBy(new Comparator<LinkRelevance>() {
-                    @Override
-                    public int compare(LinkRelevance o1, LinkRelevance o2) {
-                        return Double.compare(o2.getRelevance(), o1.getRelevance());
-                    }
-                })
+                .orderedBy(LinkRelevance.DESC_ORDER_COMPARATOR)
                 .maximumSize(numberOfLinks)
                 .create();
         
         while(urls.hasNext()) {
-            Tuple tuple = urls.next();
-            
-            String url;
-            try {
-                url = URLDecoder.decode(tuple.getKey(), "UTF-8");
-            } catch (UnsupportedEncodingException e) {
-                throw new IllegalStateException("Encoding not supported!", e);
-            }
-            
-            Double relevance = new Double(tuple.getValue());
-            try {
-                if(relevance > 0) {
-                    topkLinks.add(new LinkRelevance(new URL(url), relevance.doubleValue()));
-                }
-            } catch (MalformedURLException e) {
-                throw new IllegalStateException("Invalid URL in frontier.", e);
+            LinkRelevance linkRelevance = urls.next().getValue();
+            if(linkRelevance.getRelevance() > 0) {
+                topkLinks.add(linkRelevance);
             }
         }
         

@@ -119,7 +119,7 @@ public class SALSA {
 //		hubTuples[0] = new Tuple("2","0###1###3###");
 //		hubTuples[1] = new Tuple("5","3###4###6###");
 //		hubTuples[2] = new Tuple("7","6###8###9###10###");
-		Tuple[] hubTuples = graphRep.getHubGraph();
+		Tuple<String>[] hubTuples = graphRep.getHubGraph();
 		for (int i = 0; i < hubTuples.length; i++) {//prob for hubs
 			String key = hubTuples[i].getKey();
 			if(initialValues.get(key) == null){
@@ -140,7 +140,7 @@ public class SALSA {
 			lr.put(key,row);
 		}
 		System.out.println("LR:" + lr.size());
-		Tuple[] authTuples = graphRep.getAuthGraph();
+		Tuple<String>[] authTuples = graphRep.getAuthGraph();
 		for (int i = 0; i < authTuples.length; i++) {
 			String key = authTuples[i].getKey();
 			if(initialValues.get(key) == null){

@@ -24,10 +24,14 @@
 package focusedCrawler.link;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.crawler.async.RobotsTxtHandler;
+import focusedCrawler.crawler.async.SitemapXmlHandler;
 import focusedCrawler.link.backlink.BacklinkSurfer;
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierException;
@@ -120,13 +124,54 @@ public class LinkStorage extends StorageDefault{
      * @return Object
      */
     public synchronized Object insert(Object obj) throws StorageException {
+        if(obj instanceof Page) {
+            return insert((Page) obj);
+        } 
+        else if(obj instanceof RobotsTxtHandler.RobotsData) {
+            insert((RobotsTxtHandler.RobotsData) obj);
+        }
+        else if(obj instanceof SitemapXmlHandler.SitemapData) {
+            insert((SitemapXmlHandler.SitemapData) obj);
+        }
+        return null;
+    }
+    
+    public void insert(RobotsTxtHandler.RobotsData robotsData) {
+        for (String sitemap : robotsData.sitemapUrls) {
+            try {
+                frontierManager.insert(new LinkRelevance(sitemap, 299, LinkRelevance.Type.SITEMAP));
+            } catch (MalformedURLException | FrontierPersistentException e) {
+                logger.error("Failed to insert sitemap from robot: "+sitemap);
+            }
+        }
+    }
+    
+    public void insert(SitemapXmlHandler.SitemapData sitemapData) {
+        for (String link : sitemapData.links) {
+            try {
+                frontierManager.insert(new LinkRelevance(link, 1.0d, LinkRelevance.Type.SITEMAP));
+            } catch (MalformedURLException | FrontierPersistentException e) {
+                logger.error("Failed to insert link into the frontier: "+link);
+            }
+        }
+        logger.info("Added {} URLs from sitemap.", sitemapData.links.size());
+        
+        for (String sitemap : sitemapData.sitemaps) {
+            try {
+                frontierManager.insert(new LinkRelevance(new URL(sitemap), 299, LinkRelevance.Type.SITEMAP));
+            } catch (MalformedURLException | FrontierPersistentException e) {
+                logger.error("Failed to insert sitemap into the frontier: "+sitemap);
+            }
+        }
+        logger.info("Added {} child sitemaps.", sitemapData.sitemaps.size());
+    }
+    
+    
+    public Object insert(Page page) throws StorageException {
+        
         long initialTime = System.currentTimeMillis();
-
-        Page page = (Page) obj;
         numberOfPages++;
         
-        //System.out.println("getBacklinks && page.isAuth() "+getBacklinks+" "+page.isAuth());
-        //System.out.println("getOutlinks "+getOutlinks);
         try {
             
             if (getBacklinks && page.isAuth()) {
@@ -169,9 +214,8 @@ public class LinkStorage extends StorageDefault{
         long finalTime = System.currentTimeMillis();
         totalTime = totalTime + (finalTime - initialTime);
         double average = totalTime / numberOfPages;
-
-        logger.info("\n> TOTAL PAGES:" + numberOfPages + "\n> TOTAL TIME:" + (finalTime - initialTime) + "\n> AVERAGE:"
-                + average);
+        logger.info("\n> TOTAL PAGES:" + numberOfPages + "\n> TOTAL TIME:" + (finalTime - initialTime) + "\n> AVERAGE:" + average);
+        
         return null;
     }
 
@@ -221,7 +265,7 @@ public class LinkStorage extends StorageDefault{
 
         FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, seedFile, stoplistFile);
 
-        BipartiteGraphRepository graphRep = new BipartiteGraphRepository(dataPath, config.getBiparitieGraphRepConfig());
+        BipartiteGraphRepository graphRep = new BipartiteGraphRepository(dataPath);
 
         BipartiteGraphManager manager = createBipartiteGraphManager(config, linkClassifier, frontierManager, graphRep);
 
