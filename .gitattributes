@@ -1,4 +1,1 @@
-config/sample_training_data/* linguist-vendored
-config/sample_training_data/positive/*.html linguist-vendored
-config/sample_training_data/negative/*.html linguist-vendored
-
+config/sample_training_data/* linguist-vendored=false
