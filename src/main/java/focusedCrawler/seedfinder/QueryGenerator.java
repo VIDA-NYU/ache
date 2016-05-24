@@ -7,14 +7,14 @@ import java.util.Set;
 import focusedCrawler.seedfinder.QueryProcessor.QueryResult;
 import focusedCrawler.target.model.Page;
 
-public class QueryBuilder {
+public class QueryGenerator {
     
     private double minimumPrecision = 0.5d;
     Set<String> queryTermsUsed = new HashSet<>();
     
     RelevanceModel relevanceModel = new RelevanceModel();
     
-    public QueryBuilder(double minimumPrecision) {
+    public QueryGenerator(double minimumPrecision) {
         this.minimumPrecision = minimumPrecision;
     }
 

@@ -14,31 +14,30 @@ public class SeedFinder {
     
     public static void main(String[] args) throws Exception {
 
-        int iterations = 10;
-        double minimumPrecision = 0.5;
-        int numberOfQuerys = 0;
+        int iterations = 1;
+        double minPrecision = 0.5;
+        int numberOfQueries = 0;
 
         Query query = new Query("deep", "web", "onion", "links");
         List<String> patterns = asList(".*[a-zA-Z0-9]{8,32}.onion.*");
         
         TargetClassifier classifier = new BodyRegexTargetClassifier(patterns);
 
-        QueryBuilder queryBuilder = new QueryBuilder(minimumPrecision);
-        QueryProcessor queryProcessor =
-                new QueryProcessor(iterations, minimumPrecision, classifier);
+        QueryGenerator queryGenerator = new QueryGenerator(minPrecision);
+        QueryProcessor queryProcessor = new QueryProcessor(iterations, minPrecision, classifier);
 
         PrintStream seedsFile = new PrintStream("seeds_" + query.asString() + ".txt");
 
-        while (numberOfQuerys < 15) {
+        while (numberOfQueries < 15) {
             QueryResult result = queryProcessor.processQuery(query);
 
             for (Page page : result.positivePages) {
                 seedsFile.println(page.getURL().toExternalForm());
             }
 
-            query = queryBuilder.buildNextQuery(query, result);
+            query = queryGenerator.buildNextQuery(query, result);
             System.out.println("NextQuery: " + query.asString());
-            numberOfQuerys++;
+            numberOfQueries++;
         }
         queryProcessor.close();
         seedsFile.close();

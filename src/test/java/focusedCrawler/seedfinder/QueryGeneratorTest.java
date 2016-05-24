@@ -10,17 +10,17 @@ import java.net.URL;
 import org.junit.Test;
 
 import focusedCrawler.seedfinder.Query;
-import focusedCrawler.seedfinder.QueryBuilder;
+import focusedCrawler.seedfinder.QueryGenerator;
 import focusedCrawler.seedfinder.QueryProcessor.QueryResult;
 import focusedCrawler.target.model.Page;
 
-public class QueryBuilderTest {
+public class QueryGeneratorTest {
     
     @Test
     public void shouldBuildNextQuery() throws Exception {
         // given
         double minimumPrecision = 0.25;
-        QueryBuilder qb = new QueryBuilder(minimumPrecision);
+        QueryGenerator generator = new QueryGenerator(minimumPrecision);
         
         Query initialQuery = new Query("ebola");
         
@@ -32,7 +32,7 @@ public class QueryBuilderTest {
         queryResult.negativePages.add(new Page(new URL("http://foo.com/n2"), "another page about something else"));
         
         // when
-        Query nextQuery = qb.buildNextQuery(initialQuery, queryResult);
+        Query nextQuery = generator.buildNextQuery(initialQuery, queryResult);
         
         // then
         assertThat(nextQuery, is(notNullValue()));
