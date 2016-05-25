@@ -14,7 +14,6 @@ import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.link.frontier.selector.MaximizeWebsitesLinkSelector;
 import focusedCrawler.link.frontier.selector.MultiLevelLinkSelector;
 import focusedCrawler.link.frontier.selector.NonRandomLinkSelector;
-import focusedCrawler.link.frontier.selector.PoliteTopkLinkSelector;
 import focusedCrawler.link.frontier.selector.RandomLinkSelector;
 import focusedCrawler.link.frontier.selector.TopicLinkSelector;
 import focusedCrawler.link.frontier.selector.TopkLinkSelector;
@@ -70,8 +69,6 @@ public class FrontierManagerFactory {
         
         if (linkSelector.equals("TopkLinkSelector")) {
             return new TopkLinkSelector();
-        } else if (linkSelector.equals("PoliteTopkLinkSelector")) {
-            return new PoliteTopkLinkSelector(4, 10000);
         } else if (linkSelector.equals("RandomLinkSelector")) {
             return new RandomLinkSelector();
         } else if (linkSelector.equals("NonRandomLinkSelector")) {
