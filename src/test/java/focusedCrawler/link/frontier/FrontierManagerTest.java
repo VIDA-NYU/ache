@@ -20,7 +20,7 @@ import org.junit.rules.TemporaryFolder;
 
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.link.frontier.selector.NonRandomLinkSelector;
-import focusedCrawler.link.frontier.selector.SiteLinkSelector;
+import focusedCrawler.link.frontier.selector.RandomLinkSelector;
 import focusedCrawler.util.LinkFilter;
 
 public class FrontierManagerTest {
@@ -56,7 +56,7 @@ public class FrontierManagerTest {
         scope.put("www.example1.com", -1);
         
         
-        LinkSelector linkSelector = new SiteLinkSelector();
+        LinkSelector linkSelector = new RandomLinkSelector();
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, scope);
         FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
                 2, 2, linkSelector, new LinkFilter(new ArrayList<String>()));
