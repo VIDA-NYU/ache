@@ -95,11 +95,10 @@ link_storage.online_learning.enabled: false
 
 # Types of LinkSelectors available:
 # - TopkLinkSelector
-# - SiteLinkSelector
 # - RandomLinkSelector
 # - NonRandomLinkSelector
 # - MultiLevelLinkSelector
-# - TopicLinkSelector
+# - MaximizeWebsitesLinkSelector
 link_storage.link_selector: TopkLinkSelector
 
 link_storage.max_size_link_queue: 10000
