@@ -15,7 +15,6 @@ import focusedCrawler.link.frontier.selector.MaximizeWebsitesLinkSelector;
 import focusedCrawler.link.frontier.selector.MultiLevelLinkSelector;
 import focusedCrawler.link.frontier.selector.NonRandomLinkSelector;
 import focusedCrawler.link.frontier.selector.RandomLinkSelector;
-import focusedCrawler.link.frontier.selector.TopicLinkSelector;
 import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.ParameterFile;
@@ -75,8 +74,6 @@ public class FrontierManagerFactory {
             return new NonRandomLinkSelector();
         } else if (linkSelector.equals("MultiLevelLinkSelector")) {
             return new MultiLevelLinkSelector();
-        } else if (linkSelector.equals("TopicLinkSelector")) {
-            return new TopicLinkSelector();
         } else if (linkSelector.equals("MaximizeWebsitesLinkSelector")) {
             return new MaximizeWebsitesLinkSelector();
         } else {
