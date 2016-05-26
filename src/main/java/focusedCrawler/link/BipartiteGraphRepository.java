@@ -367,7 +367,7 @@ public class BipartiteGraphRepository {
 				maxId = "0";
 			}
 			int newId = Integer.parseInt(maxId) + 1;
-			id = newId+"";
+			id = Integer.toString(newId);
 			url2id.put(url, id);
 			url2id.put("MAX", id);
 		}

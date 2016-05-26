@@ -484,7 +484,7 @@ public abstract class AbstractStopList implements StopList {
 
     public synchronized boolean eLetra( char c ) {
 
-        int value = (int)(Acentos.retirarAcentosANSI(""+c).charAt(0));
+        int value = (int)(Acentos.retirarAcentosANSI(Character.toString(c)).charAt(0));
 
         return ( 65 <= value && value <= 90 ) || ( 97 <= value && value <= 122 );
 
