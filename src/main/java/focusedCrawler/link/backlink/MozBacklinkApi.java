@@ -82,7 +82,7 @@ public class MozBacklinkApi implements BacklinkApi {
         conn.setReadTimeout(readTimeout);
 
         BufferedReader inCon = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-        StringBuffer buffer = new StringBuffer();
+        StringBuilder buffer = new StringBuilder();
         String inputLine;
         while ((inputLine = inCon.readLine()) != null) {
             buffer.append(inputLine + " ");
