@@ -62,7 +62,7 @@ public class LangDetection {
             detector.append(content);
             ArrayList<Language> langs = detector.getProbabilities();
 
-            if (langs.size() == 0) {
+            if (langs.isEmpty()) {
                 return false;
             }
 

@@ -252,7 +252,7 @@ public class StopListArquivo extends AbstractStopList {
 
 
 
-        if( excecoes.size() > 0 )
+        if(!excecoes.isEmpty())
 
           {
 
@@ -264,7 +264,7 @@ public class StopListArquivo extends AbstractStopList {
 
           }
 
-        if( irrelevantes.size() > 0 )
+        if(!irrelevantes.isEmpty())
 
           {
 
@@ -276,7 +276,7 @@ public class StopListArquivo extends AbstractStopList {
 
           }
 
-        if( complementares.size() > 0 )
+        if(!complementares.isEmpty())
 
           {
 
@@ -288,7 +288,7 @@ public class StopListArquivo extends AbstractStopList {
 
           }
 
-        if( prefixos.size() > 0 )
+        if(!prefixos.isEmpty())
 
           {
 
@@ -300,7 +300,7 @@ public class StopListArquivo extends AbstractStopList {
 
           }
 
-        if( sufixos.size() > 0 )
+        if(!sufixos.isEmpty())
 
           {
 

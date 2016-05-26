@@ -664,7 +664,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
             // FetcherPolicy.
             mimeType = getMimeTypeFromContentType(contentType);
             Set<String> mimeTypes = getValidMimeTypes();
-            if ((mimeTypes != null) && (mimeTypes.size() > 0)) {
+            if ((mimeTypes != null) && (!mimeTypes.isEmpty())) {
                 if (!mimeTypes.contains(mimeType)) {
                     throw new AbortedFetchException(url, "Invalid mime-type: " + mimeType, AbortedFetchReason.INVALID_MIMETYPE);
                 }
