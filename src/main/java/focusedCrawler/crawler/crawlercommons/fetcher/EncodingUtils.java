@@ -35,6 +35,9 @@ public class EncodingUtils {
     private static final int EXPECTED_DEFLATE_COMPRESSION_RATIO = 5;
     private static final int BUF_SIZE = 4096;
 
+    private EncodingUtils() {
+    }
+
     public static class ExpandedResult {
         private byte[] _expanded;
         private boolean _isTruncated;

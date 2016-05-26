@@ -17,7 +17,10 @@ import focusedCrawler.target.model.TargetModelJson;
 public class CrawlerEvalFile {
     
     static final ObjectMapper jsonMapper = new ObjectMapper();
-    
+
+    private CrawlerEvalFile() {
+    }
+
     public static void main(String[] args) throws IOException {
         
         Path path = Paths.get("/data/memex/crawleval/onion");

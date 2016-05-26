@@ -18,6 +18,9 @@ public class CborDataReclassifier {
     static final ObjectMapper cborMapper = new ObjectMapper(new CBORFactory());
     static final ObjectMapper jsonMapper = new ObjectMapper();
 
+    private CborDataReclassifier() {
+    }
+
     public static void main(String[] args) throws IOException {
 
         Path inputLocation = Paths.get(args[0]);

@@ -51,7 +51,10 @@ public class ElasticSearchIndexer {
     static final ObjectMapper jsonMapper = new ObjectMapper();
     
     static final String format = "yyyy-MM-dd'T'HH:mm:ss";
-    
+
+    private ElasticSearchIndexer() {
+    }
+
     public static void main(String[] args) throws Exception {
         
         CommandLineParser parser = new DefaultParser();
