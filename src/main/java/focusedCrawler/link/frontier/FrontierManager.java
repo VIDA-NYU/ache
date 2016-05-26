@@ -33,6 +33,7 @@ import org.slf4j.LoggerFactory;
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.persistence.Tuple;
+import focusedCrawler.util.persistence.TupleIterator;
 
 /**
  * This class manages the crawler frontier
@@ -80,19 +81,25 @@ public class FrontierManager {
         priorityQueue.clear();
         frontier.commit();
 
-        linkSelector.startSelection(numberOfLinks);
-        for (Tuple<LinkRelevance> tuple : frontier.getUrlRelevanceHashtable().getTable()) {
-            LinkRelevance link = tuple.getValue();
-            if (link.getRelevance() > 0) {
-                linkSelector.evaluateLink(link);
+        try(TupleIterator<LinkRelevance> it = frontier.iterator()) {
+            
+            linkSelector.startSelection(numberOfLinks);
+            while(it.hasNext()) {
+                Tuple<LinkRelevance> tuple = it.next();
+                LinkRelevance link = tuple.getValue();
+                if (link.getRelevance() > 0) {
+                    linkSelector.evaluateLink(link);
+                }
             }
-        }
 
-        List<LinkRelevance> selectedLinks = linkSelector.getSelectedLinks();
-        for (LinkRelevance link : selectedLinks) {
-            priorityQueue.insert(link);
+            List<LinkRelevance> selectedLinks = linkSelector.getSelectedLinks();
+            for (LinkRelevance link : selectedLinks) {
+                priorityQueue.insert(link);
+            }
+            
+        } catch (Exception e) {
+            logger.error("Failed to read items from the frontier.", e);
         }
-
     }
 
     public boolean isRelevant(LinkRelevance elem) throws FrontierPersistentException {

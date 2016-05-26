@@ -1,6 +1,7 @@
 package focusedCrawler.util.persistence;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 import java.util.Comparator;
@@ -19,7 +20,7 @@ public class PersistentHashtableTest {
     public TemporaryFolder tempFolder = new TemporaryFolder();
 
     @Test
-    public void shoudAddAndGetKey() throws Exception {
+    public void shouldAddAndGetKey() throws Exception {
         // given
         PersistentHashtable<String> ht = new PersistentHashtable<>(tempFolder.newFolder().toString(), 1000, String.class);
         
@@ -32,7 +33,7 @@ public class PersistentHashtableTest {
     
     
     @Test
-    public void shoudPersistDataIntoHastable() throws Exception {
+    public void shouldPersistDataIntoHastable() throws Exception {
         // given
         int cacheSize = 1;
         String folder = tempFolder.newFolder().toString();
@@ -53,7 +54,7 @@ public class PersistentHashtableTest {
     }
 
     @Test
-    public void shoudReturnOrderedTupleSet() throws Exception {
+    public void shouldReturnOrderedTupleSet() throws Exception {
         // given
         int cacheSize = 1;
         String folder = tempFolder.newFolder().toString();
@@ -78,6 +79,54 @@ public class PersistentHashtableTest {
         assertThat(keys.get(0).getValue().getRelevance(), is(3d));
         assertThat(keys.get(1).getValue().getRelevance(), is(2d));
         assertThat(keys.get(2).getValue().getRelevance(), is(1d));
+    }
+    
+    @Test
+    public void shouldIterateOverTuples() throws Exception {
+        // given
+        PersistentHashtable<Integer> ht = new PersistentHashtable<>(tempFolder.newFolder().toString(), 1000, Integer.class);
+        ht.put("1", 1);
+        ht.put("2", 2);
+        ht.put("3", 3);
+        ht.commit();
+        
+        // when
+        try(TupleIterator<Integer> it = ht.iterator()) {
+            // then
+            Tuple<Integer> tuple;
+            assertThat(it.hasNext(), is(true));
+            tuple = it.next();
+            assertThat(tuple.getKey(), is("1"));
+            assertThat(tuple.getValue(), is(1));
+
+            assertThat(it.hasNext(), is(true));
+            tuple = it.next();
+            
+            assertThat(tuple.getKey(), is("2"));
+            assertThat(tuple.getValue(), is(2));
+            
+            assertThat(it.hasNext(), is(true));
+            tuple = it.next();
+            
+            assertThat(tuple.getKey(), is("3"));
+            assertThat(tuple.getValue(), is(3));
+            
+            assertThat(it.hasNext(), is(false));
+            assertThat(it.next(), is(nullValue()));
+        }
+    }
+    
+    @Test
+    public void shoudNotCrashWhenIterateOverEmptyHashtable() throws Exception {
+        // given
+        PersistentHashtable<Integer> ht = new PersistentHashtable<>(tempFolder.newFolder().toString(), 1000, Integer.class);
+
+        // when
+        try(TupleIterator<Integer> it = ht.iterator()) {
+            // then
+            assertThat(it.hasNext(), is(false));
+            assertThat(it.next(), is(nullValue()));
+        }
     }
 
 }

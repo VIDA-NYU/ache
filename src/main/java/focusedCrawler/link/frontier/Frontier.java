@@ -31,6 +31,7 @@ import java.util.Map;
 
 import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.Tuple;
+import focusedCrawler.util.persistence.TupleIterator;
 
 
 public class Frontier {
@@ -208,6 +209,10 @@ public class Frontier {
 
     public Map<String, Integer> getScope() {
         return scope;
+    }
+
+    public TupleIterator<LinkRelevance> iterator() {
+        return urlRelevance.iterator();
     }
 
 }

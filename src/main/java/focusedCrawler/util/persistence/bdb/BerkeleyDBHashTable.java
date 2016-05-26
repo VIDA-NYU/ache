@@ -47,6 +47,7 @@ import com.sleepycat.je.Transaction;
 import com.sleepycat.je.TransactionConfig;
 
 import focusedCrawler.util.persistence.Tuple;
+import focusedCrawler.util.persistence.TupleIterator;
 
 public class BerkeleyDBHashTable<T> {
     
@@ -182,5 +183,66 @@ public class BerkeleyDBHashTable<T> {
 	        throw new IllegalArgumentException("Failed to unserialize the value as string.", e);
 	    }
 	}
+	
+    public class BDBIterator implements TupleIterator<T> {
+
+        final private Cursor cursor;
+        final private DatabaseEntry keyEntry;
+        final private DatabaseEntry dataEntry;
+        private boolean hasNext;
+        private boolean isOpen;
+
+        public BDBIterator() throws DatabaseException {
+            this.cursor = exampleDb.openCursor(null, null);
+            this.keyEntry = new DatabaseEntry();
+            this.dataEntry = new DatabaseEntry();
+            this.isOpen = true;
+            readNextTuple();
+        }
+
+        private void readNextTuple() {
+            try {
+                if (cursor.getNext(keyEntry, dataEntry, LockMode.READ_UNCOMMITTED) == OperationStatus.SUCCESS) {
+                    this.hasNext = true;
+                } else {
+                    this.hasNext = false;
+                    this.cursor.close();
+                    this.isOpen = false;
+                }
+            } catch (DatabaseException e) {
+                this.hasNext = false;
+                throw new RuntimeException("Failed to read tuple from BerkeleyDB database.", e);
+            }
+        }
+
+        @Override
+        public void close() throws DatabaseException {
+            if(this.isOpen) {
+                cursor.close();
+                this.isOpen = false;
+            }
+        }
+
+        @Override
+        public boolean hasNext() {
+            return hasNext;
+        }
+
+        @Override
+        public Tuple<T> next() {
+            if (!hasNext) {
+                return null;
+            }
+            T value = unserializeValue(StringBinding.entryToString(dataEntry));
+            Tuple<T> tuple = new Tuple<T>(StringBinding.entryToString(keyEntry), value);
+            readNextTuple();
+            return tuple;
+        }
+
+    }
+
+    public TupleIterator<T> iterator() throws DatabaseException {
+        return new BDBIterator();
+    }
 
 }
