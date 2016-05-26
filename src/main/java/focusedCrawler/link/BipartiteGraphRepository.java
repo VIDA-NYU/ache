@@ -31,6 +31,7 @@ public class BipartiteGraphRepository {
 	
 	private final String separator = "###";
 	
+	private String authGraphDirectory = "data_backlinks/auth_graph";      
     private String urlIdDirectory = "data_backlinks/url";
     private String authIdDirectory = "data_backlinks/auth_id";
     private String hubIdDirectory = "data_backlinks/hub_id";
@@ -38,7 +39,7 @@ public class BipartiteGraphRepository {
 
     public BipartiteGraphRepository(String dataPath) {
         int cacheSize = 10000;
-        this.authGraph = new PersistentHashtable<>(dataPath + "/" + "", cacheSize, String.class);
+        this.authGraph = new PersistentHashtable<>(dataPath + "/" + authGraphDirectory, cacheSize, String.class);
         this.url2id = new PersistentHashtable<>(dataPath + "/" + urlIdDirectory, cacheSize, String.class);
         this.authID = new PersistentHashtable<>(dataPath + "/" + authIdDirectory, cacheSize, String.class);
         this.hubID = new PersistentHashtable<>(dataPath + "/" + hubIdDirectory, cacheSize, String.class);
