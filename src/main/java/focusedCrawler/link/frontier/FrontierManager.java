@@ -166,6 +166,7 @@ public class FrontierManager {
     public void close() {
         frontier.commit();
         frontier.close();
+        hostsManager.close();
     }
 
     public Frontier getFrontier() {
