@@ -80,6 +80,8 @@ public class WordField implements Serializable {
   }
 
   public boolean equals(WordField wordField){
+    if (wordField == null)
+      return false;
     boolean ret = false;
     if(wordField.getWord().equals(word)){
       ret = true;

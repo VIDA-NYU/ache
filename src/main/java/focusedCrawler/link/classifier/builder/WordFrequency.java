@@ -55,6 +55,8 @@ public class WordFrequency {
     }
 
     public boolean equals(WordFrequency wordFrequency) {
+        if (wordFrequency == null)
+            return false;
         return this.getWord().equals(wordFrequency.getWord());
     }
 
