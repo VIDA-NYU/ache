@@ -337,7 +337,7 @@ public class ParameterFile {
 
     public void listParams() {
         Enumeration chaves = hash.keys();
-        String param = "";
+        String param;
         while (chaves.hasMoreElements()) {
             param = (String) chaves.nextElement();
             logger.debug("Parameter: " + param + " : " + this.getParam(param));

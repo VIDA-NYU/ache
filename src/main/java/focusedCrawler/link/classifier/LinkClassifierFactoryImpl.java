@@ -73,7 +73,7 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
    * @throws LinkClassifierFactoryException
    */
    public LinkClassifier createLinkClassifier(String className) throws LinkClassifierFactoryException {
-	   LinkClassifier linkClassifier = null;
+	   LinkClassifier linkClassifier;
 	    try {
 	        linkClassifier = setClassifier(className);
 	        logger.info("LINK_CLASSIFIER: " + linkClassifier.getClass());

@@ -345,7 +345,7 @@ public class WekaTargetClassifierBuilder {
 
   
     public static void createInputFile(String stopWordsFile, String trainingPath, String wekaInputFile) {
-    	StopList st = null;
+    	StopList st;
     	try {
     		st = new focusedCrawler.util.string.StopListArquivo(stopWordsFile);
     		File dir = new File(trainingPath);

@@ -748,7 +748,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
             try {
                 in = entity.getContent();
                 byte[] buffer = new byte[BUFFER_SIZE];
-                int bytesRead = 0;
+                int bytesRead;
                 int totalRead = 0;
                 ByteArrayOutputStream out = new ByteArrayOutputStream(DEFAULT_BYTEARRAY_SIZE);
 

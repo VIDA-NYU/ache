@@ -2366,7 +2366,7 @@ public class PaginaURL {
         int     start = 0;
         String  newProtocol = null;
         boolean aRef = false;
-        String  protocol = null;
+        String  protocol;
         String  host = null;
         int     port = -1;
         String  file = null;

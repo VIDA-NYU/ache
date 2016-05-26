@@ -62,7 +62,7 @@ public class SimpleWrapper {
             content = content.substring(indexIni+iniPattern.length(),content.length());
             int indexEnd = content.indexOf(endPattern);
             if(indexEnd < 0) break;
-            String field = null;
+            String field;
             if(middlePattern != null){
             	int indexMid = content.indexOf(middlePattern);
             	field = content.substring(indexMid+middlePattern.length(),indexEnd);

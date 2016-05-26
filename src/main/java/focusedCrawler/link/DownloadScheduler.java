@@ -106,7 +106,7 @@ public class DownloadScheduler {
         
         long expirationTime;
         LinkRelevance linkRelevance;
-        long waitTime = 0;
+        long waitTime;
         
         synchronized(this) {
             DomainNode domainNode = domainsQueue.poll();

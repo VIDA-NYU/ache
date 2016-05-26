@@ -37,7 +37,7 @@ public class LinkClassifierRegression implements LinkClassifier{
 	  
 	public LinkRelevance[] classify(PaginaURL page)
 			throws LinkClassifierException {
-	    LinkRelevance[] linkRelevance = null;
+	    LinkRelevance[] linkRelevance;
 	    try {
 	      Map<String, Instance> urlWords = wrapper.extractLinks(page, attributes);
 	      linkRelevance = new LinkRelevance[urlWords.size()];
@@ -115,7 +115,7 @@ public class LinkClassifierRegression implements LinkClassifier{
 	public static void main(String[] args) {
 		try{
 		ParameterFile config = new ParameterFile(args[0]);
-		LinkClassifier linkClassifier = null;
+		LinkClassifier linkClassifier;
 	    StopList stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));
 	      LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
 	      String[] attributes = config.getParam("ATTRIBUTES", " ");

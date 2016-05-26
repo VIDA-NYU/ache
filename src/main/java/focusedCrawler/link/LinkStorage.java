@@ -289,7 +289,7 @@ public class LinkStorage extends StorageDefault{
                 LinkClassifier linkClassifier, FrontierManager frontierManager,
                 BipartiteGraphRepository graphRep) {
         
-        BipartiteGraphManager manager = null;
+        BipartiteGraphManager manager;
         if(config.getBacklinks()) {
             
             BacklinkSurfer surfer = new BacklinkSurfer(config.getBackSurferConfig());

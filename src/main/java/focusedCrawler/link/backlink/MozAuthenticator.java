@@ -66,7 +66,7 @@ public class MozAuthenticator {
         SecretKeySpec signingKey = new SecretKeySpec(secretKey.getBytes(), HMAC_SHA1_ALGORITHM);
 
         // get an hmac_sha1 Mac instance and initialize with the signing key
-        Mac mac = null;
+        Mac mac;
         try {
             mac = Mac.getInstance(HMAC_SHA1_ALGORITHM);
             mac.init(signingKey);

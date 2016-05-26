@@ -63,7 +63,7 @@ public class LinkClassifierImpl implements LinkClassifier{
    * @throws LinkClassifierException
    */
   public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
-	  LinkRelevance[] linkRelevance = null;
+	  LinkRelevance[] linkRelevance;
 	  try {
 		  LinkNeighborhood[] lns = page.getLinkNeighboor();
 		  linkRelevance = new LinkRelevance[lns.length];
@@ -79,7 +79,7 @@ public class LinkClassifierImpl implements LinkClassifier{
 
   public LinkRelevance classify(LinkNeighborhood ln) throws LinkClassifierException {
 
-	  LinkRelevance linkRel = null;
+	  LinkRelevance linkRel;
 	  try {
 		  double[] prob = lnClassifier.classify(ln);
 		  int classificationResult = -1;

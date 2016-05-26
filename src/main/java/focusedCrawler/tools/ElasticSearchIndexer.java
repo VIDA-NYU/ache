@@ -202,7 +202,7 @@ public class ElasticSearchIndexer {
                         
                         final byte[] bytes = Files.readAllBytes(filePath);
                         
-                        TargetModelJson pageModel = null;
+                        TargetModelJson pageModel;
                         try(InputStream gzip = new InflaterInputStream(new ByteArrayInputStream(bytes))) {
                             pageModel = jsonMapper.readValue(gzip, TargetModelJson.class);
                         }

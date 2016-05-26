@@ -168,7 +168,7 @@ public class RelevanceFeedback {
 		}
 		offsetCounter = 1;
 		int index = currentQuery.indexOf(offset);
-		String tempQuery = "";
+		String tempQuery;
 		if(index != -1){
 			tempQuery = currentQuery.substring(0,currentQuery.indexOf(offset));	
 		}else{
@@ -249,7 +249,6 @@ public class RelevanceFeedback {
 		String query = "";
 		boolean newQuery = false;
 		while(!newQuery){
-			boolean newQueryTemp = false;
 			String tempWord = stem.stem(elems[lastElement].getWord());
 			if(usedTermsSize < usedTerms.size() || !qWords.contains(tempWord) && !usedTerms.contains(tempWord)){
 				newQuery = true;
@@ -297,7 +296,7 @@ public class RelevanceFeedback {
 	}
 	
 	private void addToSample(Page page, HashMap<String, WordFrequencyMap> sample){
-        PaginaURL pageParser = null;
+        PaginaURL pageParser;
         pageParser = new PaginaURL(page.getURL(),page.getContent(), stoplist);
 //        System.out.println("URL>>>"+page.getURL());
         String[] words = pageParser.palavras();

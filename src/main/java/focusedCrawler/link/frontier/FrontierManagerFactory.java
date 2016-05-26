@@ -33,7 +33,7 @@ public class FrontierManagerFactory {
         
         String directory = Paths.get(dataPath, config.getLinkDirectory()).toString();
         
-        Frontier frontier = null;
+        Frontier frontier;
         if (config.isUseScope()) {
             Map<String, Integer> scope = extractDomains(seedUrls);
             frontier = new Frontier(directory, config.getMaxCacheUrlsSize(), scope);

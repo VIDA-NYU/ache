@@ -178,7 +178,7 @@ public class StorageRemoteAdapter implements Storage {
                         Thread.currentThread().getName());
 
 
-            Object response=null;
+            Object response;
 
             RemoteChannel socket = getSocket();
 

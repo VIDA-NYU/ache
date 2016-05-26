@@ -83,7 +83,7 @@ public class LinkClassifierBuilder {
 	}
 	
 	public LinkClassifier forwardlinkTraining(HashSet<String> relSites, int levels, String className) throws Exception{
-		Vector<Vector<LinkNeighborhood>> instances = null;
+		Vector<Vector<LinkNeighborhood>> instances;
 		if(levels == 0){//pos and neg case
 			instances = new Vector<Vector<LinkNeighborhood>>(2);
 			instances.add(new Vector<LinkNeighborhood>());
@@ -132,7 +132,7 @@ public class LinkClassifierBuilder {
 		}
     	outputFile.close();
 
-		String[] classValues = null;
+		String[] classValues;
 		if(levels == 0){
 			classValues = new String[]{"POS","NEG"};
 		}else{

@@ -85,7 +85,7 @@ public class VSMVector {
           }else{
               parser.parse(file);
           }
-          String srcForm = "";
+          String srcForm;
           Document doc = parser.getDocument();
           NodeList list = doc.getElementsByTagName("form");
           StringBuffer source = new StringBuffer();
@@ -307,7 +307,7 @@ public class VSMVector {
     VSMVector vectorA = this;
     double denominatorA = 0;
     double denominatorB = 0;
-    VSMElement elem = null;
+    VSMElement elem;
 
     Iterator<VSMElement> iterA = vectorA.getElements();
     while(iterA.hasNext()){
@@ -402,7 +402,7 @@ public class VSMVector {
       VSMVector vectorA = this;
       double denominatorA = 0;
       double denominatorB = 0;
-      VSMElement elem = null;
+      VSMElement elem;
 
       Iterator<VSMElement> iterA = vectorA.getElements();
       while(iterA.hasNext()){
@@ -536,7 +536,7 @@ public class VSMVector {
        String[] words = page.palavras();
        int[] frequencies = page.ocorrencias();
        for (int i = 0; i < words.length; i++) {
-         String word = null;
+         String word;
 
          try{
 
@@ -678,7 +678,7 @@ public class VSMVector {
 
            if(value.trim().indexOf("<") == -1){
 
-              PaginaURL pageTemp = null;
+              PaginaURL pageTemp;
               String[] words = null;
               try {
                 pageTemp = new PaginaURL(new URL("http://www"),value, stoplist);

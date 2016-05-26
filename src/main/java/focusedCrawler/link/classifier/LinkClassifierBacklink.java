@@ -22,7 +22,7 @@ public class LinkClassifierBacklink implements LinkClassifier {
     }
 
     public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
-        LinkRelevance[] linkRelevance = null;
+        LinkRelevance[] linkRelevance;
         try {
             HashMap<String, Instance> urlWords = wrapper.extractLinks(page, attributes);
             linkRelevance = new LinkRelevance[urlWords.size()];

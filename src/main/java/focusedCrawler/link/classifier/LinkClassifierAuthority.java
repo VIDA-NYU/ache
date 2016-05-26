@@ -38,7 +38,7 @@ public class LinkClassifierAuthority implements LinkClassifier{
 	  
 	  public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
 		  try {
-		      LinkRelevance[] linkRelevance = null;
+		      LinkRelevance[] linkRelevance;
 			  if(classifier != null){
 				  HashMap<String, Instance> urlWords = wrapper.extractLinks(page, attributes);
 				  linkRelevance = new LinkRelevance[urlWords.size()];

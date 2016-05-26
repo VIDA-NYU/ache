@@ -373,10 +373,8 @@ public class SALSA {
 				lc[j][i] = transMatrix[j][i]/total;
 			} 
 		}
-		double[][] hubMatrix = new double[12][12];
-		hubMatrix = multiply(lr,transpose(lc));
-		double[][] authMatrix = new double[12][12];
-		authMatrix = multiply(transpose(lc),lr);
+		double[][] hubMatrix = multiply(lr,transpose(lc));
+		double[][] authMatrix = multiply(transpose(lc),lr);
 		for (int l = 0; l < 100; l++) {
 			double total = 0;
 			for (int i = 0; i < weights.length; i++) {

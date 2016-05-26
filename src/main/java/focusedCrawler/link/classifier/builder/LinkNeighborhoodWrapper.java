@@ -190,7 +190,7 @@ public class LinkNeighborhoodWrapper {
 
 
   private String stemming(String word) {
-	    String new_word = "";
+	    String new_word;
 	    try {
 	      new_word = stemmer.stem(word);
 	      if (new_word.indexOf("No term") != -1 || new_word.indexOf("Invalid term") != -1) {
@@ -248,7 +248,7 @@ public class LinkNeighborhoodWrapper {
     	for (int j = 0; alt != null && j < alt.length; j++) {
     		words.add(new WordField(WordField.ALT, stemming(alt[j])));
     	}
-    	WordField[] wordsReturn = null;
+    	WordField[] wordsReturn;
     	if (words.size() > 0) {
     		wordsReturn = new WordField[words.size()];
     		words.toArray(wordsReturn);
@@ -271,7 +271,7 @@ public class LinkNeighborhoodWrapper {
 	   for (int j = 0; j < around.length; j++) {
 		   words.add(new WordField(WordField.AROUND, stemming(around[j])));
 	   }
-	   WordField[] wordsReturn = null;
+	   WordField[] wordsReturn;
 	   if (words.size() > 0) {
 		   wordsReturn = new WordField[words.size()];
 		   words.toArray(wordsReturn);
@@ -296,7 +296,7 @@ public class LinkNeighborhoodWrapper {
 		   for (int j = 0; j < around.length; j++) {
 			   words.add(new WordField(WordField.AROUND,around[j]));
 		   }
-		   WordField[] wordsReturn = null;
+		   WordField[] wordsReturn;
 		   if (words.size() > 0) {
 			   wordsReturn = new WordField[words.size()];
 			   words.toArray(wordsReturn);

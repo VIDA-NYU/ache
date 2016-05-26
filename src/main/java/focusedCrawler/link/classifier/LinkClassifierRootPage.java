@@ -65,8 +65,8 @@ public class LinkClassifierRootPage implements LinkClassifier{
    * @return LinkRelevance[]
    */
   public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
-        LinkRelevance[] linkRelevance = null;
-        Map<String, Instance> urlWords = null;
+        LinkRelevance[] linkRelevance;
+        Map<String, Instance> urlWords;
         try {
           urlWords = wrapper.extractLinks(page, attributes);
           linkRelevance = new LinkRelevance[urlWords.size()];
@@ -118,7 +118,7 @@ public class LinkClassifierRootPage implements LinkClassifier{
 	        weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
 	        instanceWeka.setDataset(instances);
 	        double[] prob = classifier.distributionForInstance(instanceWeka);
-	        double relevance = -1;
+	        double relevance;
 	        relevance = 200 + (prob[0]*100);	
 	        linkRel = new LinkRelevance(new URL(url),relevance);
 	      }

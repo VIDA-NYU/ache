@@ -435,7 +435,7 @@ public class PorterStemmer {
 
     // does stem end with CVC?
     protected boolean endsWithCVC (String str) {
-        char c, v, c2 = ' ';
+        char c, v, c2;
         if (str.length() >= 3) {
             c = str.charAt(str.length() - 1);
             v = str.charAt(str.length() - 2);
