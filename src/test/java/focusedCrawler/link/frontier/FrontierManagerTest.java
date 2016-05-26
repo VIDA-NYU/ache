@@ -19,8 +19,8 @@ import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
 import focusedCrawler.link.frontier.selector.LinkSelector;
-import focusedCrawler.link.frontier.selector.NonRandomLinkSelector;
 import focusedCrawler.link.frontier.selector.RandomLinkSelector;
+import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 import focusedCrawler.util.LinkFilter;
 
 public class FrontierManagerTest {
@@ -48,7 +48,6 @@ public class FrontierManagerTest {
     @Test
     public void shouldNotInsertLinkOutOfScope() throws Exception {
         // given
-        
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
         
@@ -82,7 +81,7 @@ public class FrontierManagerTest {
     @Test
     public void shouldInsertUrl() throws Exception {
         // given
-        LinkSelector linkSelector = new NonRandomLinkSelector();
+        LinkSelector linkSelector = new TopkLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
                 2, 2, linkSelector, emptyLinkFilter);
         
@@ -106,7 +105,7 @@ public class FrontierManagerTest {
     @Test
     public void shouldInsertRobotsLinkWhenAddDomainForTheFirstTime() throws Exception {
         // given
-        LinkSelector linkSelector = new NonRandomLinkSelector();
+        LinkSelector linkSelector = new TopkLinkSelector();
         boolean downloadRobots = true;
         FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
                 2, 2, linkSelector, emptyLinkFilter);
@@ -139,7 +138,7 @@ public class FrontierManagerTest {
     @Test
     public void shouldInsertUrlsAndSelectUrlsInSortedByRelevance() throws Exception {
         // given
-        LinkSelector linkSelector = new NonRandomLinkSelector();
+        LinkSelector linkSelector = new TopkLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
                 2, 2, linkSelector, emptyLinkFilter);
         
@@ -177,7 +176,7 @@ public class FrontierManagerTest {
     @Test
     public void shouldNotReturnAgainALinkThatWasAlreadyReturned() throws Exception {
         // given
-        LinkSelector linkSelector = new NonRandomLinkSelector();
+        LinkSelector linkSelector = new TopkLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
                 2, 2, linkSelector, emptyLinkFilter);
         
@@ -189,7 +188,6 @@ public class FrontierManagerTest {
         frontierManager.insert(link2);
         LinkRelevance selectedLink1 = frontierManager.nextURL();
         LinkRelevance selectedLink2 = frontierManager.nextURL();
-        
         LinkRelevance selectedLink3 = frontierManager.nextURL();
         
         frontierManager.insert(link1); // insert link 1 again, should not be returned
