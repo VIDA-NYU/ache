@@ -3,6 +3,7 @@ package focusedCrawler.link.classifier;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Map;
 
 import weka.classifiers.Classifier;
 import weka.core.Instances;
@@ -45,12 +46,12 @@ public class LinkClassifierAuthority implements LinkClassifier{
 		          
 		          int count = 0;
 		          
-		          for (String urlStr : urlWords.keySet()) {
+		          for (Map.Entry<String, Instance> entry : urlWords.entrySet()) {
 		              
-		        	  URL url = new URL(urlStr);
+		        	  URL url = new URL(entry.getKey());
 		        	  double relevance = -1;
 		        	  if(!page.getURL().getHost().equals(url.getHost())){
-		        		  Instance instance = urlWords.get(urlStr);
+		        		  Instance instance = entry.getValue();
 		        		  double[] values = instance.getValues();
 		        		  weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
 		        		  instanceWeka.setDataset(instances);
@@ -87,11 +88,11 @@ public class LinkClassifierAuthority implements LinkClassifier{
 		  try{
 		      HashMap<String, Instance> urlWords = wrapper.extractLinks(ln, attributes);
 		      
-	    	  for (String url : urlWords.keySet()) {
+	    	  for (Map.Entry<String, Instance> entry : urlWords.entrySet()) {
 		    	  double relevance = -1;
-		    	  if(isRootPage(url)){
+		    	  if(isRootPage(entry.getKey())){
 		    		  if(classifier != null){
-		    			  Instance instance = (Instance)urlWords.get(url);
+		    			  Instance instance = (Instance) entry.getValue();
 		    			  double[] values = instance.getValues();
 		    			  weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
 		    			  instanceWeka.setDataset(instances);
@@ -104,7 +105,7 @@ public class LinkClassifierAuthority implements LinkClassifier{
 		    			  relevance = LinkRelevance.DEFAULT_AUTH_RELEVANCE+1;		            	
 		    		  }
 		    	  }
-	    		  linkRel = new LinkRelevance(new URL(url),relevance);
+	    		  linkRel = new LinkRelevance(new URL(entry.getKey()),relevance);
 		      }
 		  } catch (MalformedURLException ex) {
 			  ex.printStackTrace();
