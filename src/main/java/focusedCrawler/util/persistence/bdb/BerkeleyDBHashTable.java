@@ -238,6 +238,10 @@ public class BerkeleyDBHashTable<T> {
             readNextTuple();
             return tuple;
         }
+        
+        public void remove() {
+            throw new UnsupportedOperationException("remove() not yet supported by "+getClass().getName());
+        }
 
     }
 
