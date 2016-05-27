@@ -51,7 +51,7 @@ public class LinkFilter {
         }
         
         public boolean accept(String link) {
-            if(patterns == null || patterns.size()==0) {
+            if(patterns == null || patterns.isEmpty()) {
                 return true;
             }
             if(matches(link)) {
@@ -73,7 +73,7 @@ public class LinkFilter {
         }
         
         public boolean accept(String link) {
-            if(patterns == null || patterns.size()==0) {
+            if(patterns == null || patterns.isEmpty()) {
                 return true;
             }
             if(super.matches(link)) {

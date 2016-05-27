@@ -249,7 +249,7 @@ public class LinkNeighborhoodWrapper {
     		words.add(new WordField(WordField.ALT, stemming(alt[j])));
     	}
     	WordField[] wordsReturn = null;
-    	if (words.size() > 0) {
+    	if (!words.isEmpty()) {
     		wordsReturn = new WordField[words.size()];
     		words.toArray(wordsReturn);
     		result.put(urlStr, wordsReturn);
@@ -272,7 +272,7 @@ public class LinkNeighborhoodWrapper {
 		   words.add(new WordField(WordField.AROUND, stemming(around[j])));
 	   }
 	   WordField[] wordsReturn = null;
-	   if (words.size() > 0) {
+	   if (!words.isEmpty()) {
 		   wordsReturn = new WordField[words.size()];
 		   words.toArray(wordsReturn);
 		   result.put(urlStr, wordsReturn);
@@ -297,7 +297,7 @@ public class LinkNeighborhoodWrapper {
 			   words.add(new WordField(WordField.AROUND,around[j]));
 		   }
 		   WordField[] wordsReturn = null;
-		   if (words.size() > 0) {
+		   if (!words.isEmpty()) {
 			   wordsReturn = new WordField[words.size()];
 			   words.toArray(wordsReturn);
 			   result.put(urlStr,wordsReturn);

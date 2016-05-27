@@ -114,7 +114,7 @@ public class TargetClassifierFactory {
                                                            UrlRegexClassifierConfig.class);
         TargetClassifier classifier = null;
         
-        if(params.regular_expressions != null && params.regular_expressions.size() > 0) {
+        if(params.regular_expressions != null && !params.regular_expressions.isEmpty()) {
             classifier = UrlRegexTargetClassifier.fromRegularExpressions(params.regular_expressions);
         }
         

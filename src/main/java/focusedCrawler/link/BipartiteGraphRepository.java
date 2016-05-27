@@ -294,7 +294,7 @@ public class BipartiteGraphRepository {
 				String strLinks = authGraph.get(id);
 				HashSet<String> tempCurrentLinks = parseRecordBacklink(strLinks);
 				if(!tempCurrentLinks.contains(urlId)){
-					if(tempCurrentLinks.size() == 0){
+					if(tempCurrentLinks.isEmpty()){
 						strLinks = urlId + separator;
 					}else{
 						strLinks = strLinks + urlId + separator;
@@ -343,7 +343,7 @@ public class BipartiteGraphRepository {
 			String strLinks = hubGraph.get(id);
 			HashSet<String> tempCurrentLinks = parseRecordForwardLink(strLinks);
 			if(!tempCurrentLinks.contains(urlId)){
-				if(tempCurrentLinks.size() == 0){
+				if(tempCurrentLinks.isEmpty()){
 					strLinks = urlId + separator;
 				}else{
 					strLinks = strLinks + urlId + separator;

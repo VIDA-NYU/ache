@@ -796,7 +796,7 @@ public class PaginaURL {
     private Vector  imagens = new Vector();
     
     protected void separadorTextoCodigo(String arquivo) {    // arquivo equivale ao codigo HTML da pagina
-        if(codes.size() == 0){
+        if(codes.isEmpty()){
         	loadHashCodes();	
         }
     	

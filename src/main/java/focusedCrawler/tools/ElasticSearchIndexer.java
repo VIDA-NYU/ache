@@ -215,7 +215,7 @@ public class ElasticSearchIndexer {
                             contentTypeHeader = pageModel.getResponseHeaders().get("content-type");
                         }
                         
-                        if(contentTypeHeader == null || contentTypeHeader.size() == 0) {
+                        if(contentTypeHeader == null || contentTypeHeader.isEmpty()) {
                             continue;
                         }
                         
