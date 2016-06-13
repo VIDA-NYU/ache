@@ -23,8 +23,9 @@ public class QueryProcessor {
     TargetClassifier classifier;
     HttpDownloader downloader = new HttpDownloader();
     
-    private BingSearch searchEngine = new BingSearch();
+//    private BingSearch searchEngine = new BingSearch();
 //    private GoogleSearch searchEngine = new GoogleSearch();
+    private BingSearchAzureAPI searchEngine = new BingSearchAzureAPI();
     
     Set<String> usedUrls = new HashSet<>();
     
