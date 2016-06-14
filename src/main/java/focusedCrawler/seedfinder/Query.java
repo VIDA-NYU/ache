@@ -24,6 +24,10 @@ public class Query {
     public Query(List<QueryTerm> terms) {
         this.terms = terms;
     }
+    
+    public Query(String query) {
+        this(query.split("\\s"));
+    }
 
     public Query(String... terms) {
         for (int i = 0; i < terms.length; i++) {

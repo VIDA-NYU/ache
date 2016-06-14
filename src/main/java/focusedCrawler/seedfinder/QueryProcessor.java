@@ -22,18 +22,18 @@ public class QueryProcessor {
     double minimumPrecision = 0.25;
     TargetClassifier classifier;
     HttpDownloader downloader = new HttpDownloader();
+    SearchEngineApi searchEngine;
     
-//    private BingSearch searchEngine = new BingSearch();
-//    private GoogleSearch searchEngine = new GoogleSearch();
-    private BingSearchAzureAPI searchEngine = new BingSearchAzureAPI();
     
     Set<String> usedUrls = new HashSet<>();
     
     public QueryProcessor(int maxNumberOfIterations,
                           double minimumPrecision,
-                          TargetClassifier classifier) {
+                          TargetClassifier classifier,
+                          SearchEngineApi searchEngine) {
         this.maxNumberOfIterations = maxNumberOfIterations;
         this.classifier = classifier;
+        this.searchEngine = searchEngine;
     }
     
     public QueryResult processQuery(Query query) throws Exception {
