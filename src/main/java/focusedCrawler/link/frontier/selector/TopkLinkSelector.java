@@ -1,35 +1,36 @@
 package focusedCrawler.link.frontier.selector;
 
-import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.common.collect.MinMaxPriorityQueue;
 
-import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.util.persistence.PersistentHashtable;
-import focusedCrawler.util.persistence.Tuple;
 
 public class TopkLinkSelector implements LinkSelector {
     
+    private MinMaxPriorityQueue<LinkRelevance> topkLinks;
+
     @Override
-    public LinkRelevance[] select(Frontier frontier, int numberOfLinks)  {
-        
-        PersistentHashtable<LinkRelevance> urlRelevance = frontier.getUrlRelevanceHashtable();
-        Iterator<Tuple<LinkRelevance>> urls = urlRelevance.getTable().iterator();
-        
-        MinMaxPriorityQueue<LinkRelevance> topkLinks = MinMaxPriorityQueue
+    public void startSelection(int numberOfLinks) {
+        this.topkLinks = MinMaxPriorityQueue
                 .orderedBy(LinkRelevance.DESC_ORDER_COMPARATOR)
-                .maximumSize(numberOfLinks)
+                .maximumSize(numberOfLinks) // keep only top-k items
                 .create();
-        
-        while(urls.hasNext()) {
-            LinkRelevance linkRelevance = urls.next().getValue();
-            if(linkRelevance.getRelevance() > 0) {
-                topkLinks.add(linkRelevance);
-            }
+    }
+
+    @Override
+    public void evaluateLink(LinkRelevance link) {
+        if(link.getRelevance() > 0) {
+            topkLinks.add(link);
         }
-        
-        return topkLinks.toArray(new LinkRelevance[topkLinks.size()]);
+    }
+
+    @Override
+    public List<LinkRelevance> getSelectedLinks() {
+        List<LinkRelevance> selectedLinks = new ArrayList<>(topkLinks);
+        this.topkLinks = null; // clean-up reference
+        return selectedLinks;
     }
 
 }

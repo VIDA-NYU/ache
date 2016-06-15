@@ -25,12 +25,15 @@ package focusedCrawler.link.frontier;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.util.LinkFilter;
+import focusedCrawler.util.persistence.Tuple;
+import focusedCrawler.util.persistence.TupleIterator;
 
 /**
  * This class manages the crawler frontier
@@ -77,9 +80,25 @@ public class FrontierManager {
     private void loadQueue(int numberOfLinks) {
         priorityQueue.clear();
         frontier.commit();
-        LinkRelevance[] links = linkSelector.select(frontier, numberOfLinks);
-        for (int i = 0; i < links.length; i++) {
-            priorityQueue.insert(links[i]);
+
+        try(TupleIterator<LinkRelevance> it = frontier.iterator()) {
+            
+            linkSelector.startSelection(numberOfLinks);
+            while(it.hasNext()) {
+                Tuple<LinkRelevance> tuple = it.next();
+                LinkRelevance link = tuple.getValue();
+                if (link.getRelevance() > 0) {
+                    linkSelector.evaluateLink(link);
+                }
+            }
+
+            List<LinkRelevance> selectedLinks = linkSelector.getSelectedLinks();
+            for (LinkRelevance link : selectedLinks) {
+                priorityQueue.insert(link);
+            }
+            
+        } catch (Exception e) {
+            logger.error("Failed to read items from the frontier.", e);
         }
     }
 
@@ -120,7 +139,6 @@ public class FrontierManager {
                         URL robotUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
                         LinkRelevance sitemap = new LinkRelevance(robotUrl, 299, LinkRelevance.Type.ROBOTS);
                         frontier.insert(sitemap);
-                        System.out.println("Added ROBOTS.TXT: "+sitemap.getURL().toString());
                     } catch (Exception e) {
                         logger.warn("Failed to insert robots.txt for host: "+hostName, e);
                     } 
@@ -155,6 +173,7 @@ public class FrontierManager {
     public void close() {
         frontier.commit();
         frontier.close();
+        hostsManager.close();
     }
 
     public Frontier getFrontier() {
@@ -165,7 +184,7 @@ public class FrontierManager {
         if (seeds != null && seeds.length > 0) {
             int count = 0;
             for (String seed : seeds) {
-                System.out.println("Adding seed URL: " + seed);
+                logger.info("Adding seed URL: " + seed);
 
                 URL seedUrl;
                 try {

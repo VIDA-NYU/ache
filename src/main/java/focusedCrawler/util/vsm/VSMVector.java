@@ -33,6 +33,7 @@ import java.net.URL;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Vector;
 
 import org.cyberneko.html.parsers.DOMParser;
@@ -587,9 +588,9 @@ public class VSMVector {
     		total = total + elem.getWeight();
     	}
     	if(total != 0){
-    	    for(String word : elems.keySet()) {
-    	        VSMElement elem = elems.get(word);
-    	        elems.put(word,new VSMElement(word,elem.getWeight()/max));
+    	    for(Map.Entry<String, VSMElement> entry : elems.entrySet()) {
+    	        VSMElement elem = entry.getValue();
+    	        elems.put(entry.getKey(),new VSMElement(entry.getKey(),elem.getWeight()/max));
     	    }
     	}
     }
@@ -600,9 +601,9 @@ public class VSMVector {
     		total = total + elem.getWeight();
     	}
     	if(total != 0){
-    	    for(String word : elems.keySet()) {
-    			VSMElement elem = elems.get(word);
-    			elems.put(word,new VSMElement(word,elem.getWeight()/total));
+    	    for(Map.Entry<String, VSMElement> entry : elems.entrySet()) {
+    			VSMElement elem = entry.getValue();
+    			elems.put(entry.getKey(),new VSMElement(entry.getKey(),elem.getWeight()/total));
     		}
     	}
     }
@@ -614,18 +615,18 @@ public class VSMVector {
 		  total = total +  Math.sqrt(elem.getWeight());
 	  }
 	  if(total != 0){
-	      for(String word : elems.keySet()) {
-			  VSMElement elem = elems.get(word);
-			  elems.put(word,new VSMElement(word,Math.sqrt(elem.getWeight())/total));
+	      for(Map.Entry<String, VSMElement> entry : elems.entrySet()) {
+			  VSMElement elem = entry.getValue();
+			  elems.put(entry.getKey(),new VSMElement(entry.getKey(),Math.sqrt(elem.getWeight())/total));
 		  }
 	  }
   }
 
   public void normalizeOverElements() {
       double total = elems.size();
-      for(String word : elems.keySet()) {
-          VSMElement elem = elems.get(word);
-          elems.put(word, new VSMElement(word, elem.getWeight() / total));
+      for(Map.Entry<String, VSMElement> entry : elems.entrySet()) {
+          VSMElement elem = entry.getValue();
+          elems.put(entry.getKey(), new VSMElement(entry.getKey(), elem.getWeight() / total));
       }
   }
 

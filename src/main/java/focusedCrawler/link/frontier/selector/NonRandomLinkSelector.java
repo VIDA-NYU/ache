@@ -1,41 +1,49 @@
 package focusedCrawler.link.frontier.selector;
 
-import java.util.Iterator;
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
-import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.util.persistence.PersistentHashtable;
-import focusedCrawler.util.persistence.Tuple;
 
 public class NonRandomLinkSelector implements LinkSelector {
     
-    int[] classLimits = new int[] { 500, 1000, 5000 };
-    int[] classCount = new int[classLimits.length];
+    private int[] classLimits = new int[] { 500, 1000, 5000 };
+    private int[] classCount = new int[classLimits.length];
+    
+    private int numberOfLinks;
+    private List<LinkRelevance> links;
+    private int count;
     
     @Override
-    public LinkRelevance[] select(Frontier frontier, int numberOfLinks) {
-        
-        PersistentHashtable<LinkRelevance> urlRelevance = frontier.getUrlRelevanceHashtable();
-        
-        Iterator<Tuple<LinkRelevance>> keys = urlRelevance.orderedSet(LinkRelevance.DESC_ORDER_COMPARATOR).iterator();
-        
-        Vector<LinkRelevance> tempList = new Vector<LinkRelevance>();
-        for (int i = 0; tempList.size() < numberOfLinks && keys.hasNext(); i++) {
-            Tuple<LinkRelevance> tuple = keys.next();
-                LinkRelevance linkRelevance = tuple.getValue();
-                int relevance = (int) linkRelevance.getRelevance();
-                if (relevance > 0) {
-                    int index = relevance / 100;
-                    if (classCount[index] < classLimits[index]) {
-                        if (relevance == 299 || i % 5 == 0) {
-                            tempList.add(linkRelevance);
-                            classCount[index]++;
-                        }
-                    }
-                }
+    public void startSelection(int numberOfLinks) {
+        this.links = new ArrayList<LinkRelevance>();
+        this.numberOfLinks = numberOfLinks;
+        this.count = 0;
+    }
+
+    @Override
+    public void evaluateLink(LinkRelevance linkRelevance) {
+        if(links.size() >= numberOfLinks) {
+            return;
         }
-        return (LinkRelevance[]) tempList.toArray(new LinkRelevance[tempList.size()]);
+        int relevance = (int) linkRelevance.getRelevance();
+        if (relevance > 0) {
+            int index = relevance / 100;
+            if (classCount[index] < classLimits[index]) {
+                if (relevance == 299 || count % 5 == 0) {
+                    links.add(linkRelevance);
+                    classCount[index]++;
+                }
+            }
+        }
+        count++;
+    }
+
+    @Override
+    public List<LinkRelevance> getSelectedLinks() {
+        List<LinkRelevance> selectedLinks = links;
+        this.links = null; // clean-up reference
+        return selectedLinks;
     }
 
 }

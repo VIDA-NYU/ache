@@ -14,10 +14,7 @@ import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.link.frontier.selector.MaximizeWebsitesLinkSelector;
 import focusedCrawler.link.frontier.selector.MultiLevelLinkSelector;
 import focusedCrawler.link.frontier.selector.NonRandomLinkSelector;
-import focusedCrawler.link.frontier.selector.PoliteTopkLinkSelector;
 import focusedCrawler.link.frontier.selector.RandomLinkSelector;
-import focusedCrawler.link.frontier.selector.SiteLinkSelector;
-import focusedCrawler.link.frontier.selector.TopicLinkSelector;
 import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.ParameterFile;
@@ -64,47 +61,23 @@ public class FrontierManagerFactory {
     }
 
     private static LinkSelector createLinkSelector(LinkStorageConfig config) {
-        String linkSelectorConfig = config.getLinkSelector();
-        if(linkSelectorConfig != null) {
-            if(linkSelectorConfig.equals("TopkLinkSelector")) {
-                return new TopkLinkSelector();
-            }
-            if(linkSelectorConfig.equals("PoliteTopkLinkSelector")) {
-                return new PoliteTopkLinkSelector(4, 10000);
-            }
-            else if(linkSelectorConfig.equals("SiteLinkSelector")) {
-                return new SiteLinkSelector();
-            }
-            else if(linkSelectorConfig.equals("RandomLinkSelector")) {
-                return new RandomLinkSelector();
-            }
-            else if(linkSelectorConfig.equals("NonRandomLinkSelector")) {
-                return new NonRandomLinkSelector();
-            }
-            else if(linkSelectorConfig.equals("MultiLevelLinkSelector")) {
-                return new MultiLevelLinkSelector();
-            }
-            else if(linkSelectorConfig.equals("TopicLinkSelector")) {
-                return new TopicLinkSelector();
-            }
-            else if(linkSelectorConfig.equals("MaximizeWebsitesLinkSelector")) {
-                return new MaximizeWebsitesLinkSelector();
-            }
+        String linkSelector = config.getLinkSelector();
+        if (linkSelector == null || linkSelector.isEmpty()) {
+            throw new IllegalArgumentException("Link selector not configured: " + linkSelector);
         }
         
-        // Maintain old defaults to keep compatibility
-        if (config.isUseScope()) {
-            if (config.getTypeOfClassifier().contains("Baseline")) {
-                return new SiteLinkSelector();
-            } else {
-                return new MultiLevelLinkSelector();
-            }
+        if (linkSelector.equals("TopkLinkSelector")) {
+            return new TopkLinkSelector();
+        } else if (linkSelector.equals("RandomLinkSelector")) {
+            return new RandomLinkSelector();
+        } else if (linkSelector.equals("NonRandomLinkSelector")) {
+            return new NonRandomLinkSelector();
+        } else if (linkSelector.equals("MultiLevelLinkSelector")) {
+            return new MultiLevelLinkSelector();
+        } else if (linkSelector.equals("MaximizeWebsitesLinkSelector")) {
+            return new MaximizeWebsitesLinkSelector();
         } else {
-            if (config.getTypeOfClassifier().contains("Baseline")) {
-                return new NonRandomLinkSelector();
-            } else {
-                return new MultiLevelLinkSelector();
-            }
+            throw new IllegalArgumentException("Unknown link selector configured: " + linkSelector);
         }
     }
 

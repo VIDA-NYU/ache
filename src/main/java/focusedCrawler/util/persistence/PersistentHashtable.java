@@ -117,10 +117,11 @@ public class PersistentHashtable<T> {
     }
 
     public void commit() {
+        if(tempList.size() == 0)
+            return;
 		try {
 		    persistentTable.put(tempList);
 		    tempList = new ArrayList<>();
-		    
 		} catch (DatabaseException e) {
 			throw new RuntimeException("Failed to commit persistent hashtable.", e);
 		}
@@ -144,4 +145,15 @@ public class PersistentHashtable<T> {
             throw new RuntimeException("Failed to list elements from hashtable.", e);
         }
     }
+
+    public TupleIterator<T> iterator() {
+        try {
+            this.commit();
+            return persistentTable.iterator();
+        } catch (DatabaseException e) {
+            throw new RuntimeException("Failed to open hashtable iterator.", e);
+        }
+    }
+    
+   
 }
