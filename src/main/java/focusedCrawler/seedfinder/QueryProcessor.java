@@ -101,7 +101,7 @@ public class QueryProcessor {
     private List<FetchedResult> fetchPages(List<BackLinkNeighborhood> newSearchResults)
                                            throws InterruptedException,
                                                   ExecutionException {
-        if(newSearchResults.size() == 0) {
+        if(newSearchResults == null || newSearchResults.size() == 0) {
             return new ArrayList<FetchedResult>();
         }
         
@@ -119,6 +119,8 @@ public class QueryProcessor {
     }
     
     private List<BackLinkNeighborhood> filterUsedUrls(BackLinkNeighborhood[] searchResults) {
+        if(searchResults == null || searchResults.length == 0)
+            return null;
         List<BackLinkNeighborhood> filteredResult = new ArrayList<BackLinkNeighborhood>();
         for (BackLinkNeighborhood link : searchResults) {
             if(!usedUrls.contains(link.getLink())) {

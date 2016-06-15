@@ -1,38 +1,77 @@
 package focusedCrawler.seedfinder;
 
 import static java.util.Arrays.asList;
-import static org.hamcrest.Matchers.greaterThan;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.junit.Test;
 
-import focusedCrawler.seedfinder.Query;
-import focusedCrawler.seedfinder.QueryProcessor;
+import com.sun.net.httpserver.HttpServer;
+
+import focusedCrawler.crawler.async.TestWebServerBuilder;
 import focusedCrawler.seedfinder.QueryProcessor.QueryResult;
 import focusedCrawler.target.classifier.BodyRegexTargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifier;
+import focusedCrawler.util.parser.BackLinkNeighborhood;
 
 public class QueryProcessorTest {
+    
+    private SearchEngineApi searchEngineMock = new SearchEngineApi() {
+        @Override
+        public BackLinkNeighborhood[] submitQuery(String query, int page) throws IOException {
+            if (page == 0) {
+                return new BackLinkNeighborhood[] {
+                    new BackLinkNeighborhood("http://localhost:1234/1-pos.html", "ex1"),
+                    new BackLinkNeighborhood("http://localhost:1234/1-neg.html", "ex1")
+                };
+            } else if (page == 1) {
+                return new BackLinkNeighborhood[] {
+                    new BackLinkNeighborhood("http://localhost:1234/2-pos.html", "ex2")
+                };
+            } else if (page == 2) {
+                return new BackLinkNeighborhood[] {
+                    new BackLinkNeighborhood("http://localhost:1234/3-neg.html", "ex3") 
+                };
+            }else {
+                return null;
+            }
+        }
+    };
     
     @Test
     public void shouldExecuteQuery() throws Exception {
         // given
-        List<String> patterns = asList(".*ebola.*");
+        HttpServer httpServer = new TestWebServerBuilder("localhost", 1234)
+                .with200OK("/1-pos.html", "Example page 1!")
+                .with200OK("/1-neg.html", "Negative page 1!")
+                .with200OK("/2-pos.html", "Example page 2!")
+                .with200OK("/3-neg.html", "Page number 3!")
+                .start();
+        
+        List<String> patterns = asList(".*example.*");
         TargetClassifier classifier = new BodyRegexTargetClassifier(patterns);
         
-        QueryProcessor qp = new QueryProcessor(3, 0.25, classifier);
-        Query query = new Query("ebola");
+        QueryProcessor qp = new QueryProcessor(2, 0.25, classifier, searchEngineMock);
+        Query query = new Query("example");
         
         // when
         QueryResult result = qp.processQuery(query);
         
         // then
         assertThat(result, is(notNullValue()));
-        assertThat(result.positivePages.size(), is(greaterThan(0)));
+        assertThat(result.positivePages.size(), is(2));
+        assertThat(result.positivePages.get(0).getURL().toString(), is("http://localhost:1234/1-pos.html"));
+        assertThat(result.positivePages.get(1).getURL().toString(), is("http://localhost:1234/2-pos.html"));
+        
+        assertThat(result.negativePages.size(), is(1));
+        assertThat(result.negativePages.get(0).getURL().toString(), is("http://localhost:1234/1-neg.html"));
+        
+        // finally
+        httpServer.stop(0);
     }
     
 }
