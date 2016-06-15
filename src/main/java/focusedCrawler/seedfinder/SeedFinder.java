@@ -31,7 +31,7 @@ public class SeedFinder {
     private String modelPath;
     
     @Option(name="--searchEngine", usage="The search engine to be used (Google, Bing, BingAzureAPI)")
-    private String searchEngine = "Google";
+    private String searchEngine = "All";
     
     public static void main(String[] args) {
         try {
@@ -60,20 +60,29 @@ public class SeedFinder {
         }
         
         SearchEngineApi api = null;
-        if ("google".equals(searchEngine.toLowerCase())) {
+        switch (searchEngine.toLowerCase()) {
+        case "google":
             api = new GoogleSearch();
-        } else if ("bing".equals(searchEngine.toLowerCase())) {
+            break;
+        case "bing":
             api = new BingSearch();
-        } else if ("bingazureapi".equals(searchEngine.toLowerCase())) {
+            break;
+        case "bingazureapi":
             api = new BingSearchAzureAPI();
+            break;
+        case  "all":
+            api = new SearchEnginePool(new BingSearch(), new GoogleSearch());
+            break;
         }
-
+        
         if (api == null) {
             System.err.println("Invalid search engine: " + searchEngine);
             System.exit(1);
+        } else {
+            
+            System.out.println("Search Engine: "+api.getClass().getName());
         }
         
-        System.out.println("Search Engine: "+searchEngine);
         
         TargetClassifier classifier = TargetClassifierFactory.create(modelPath);
         Query query = new Query(initialQuery);
@@ -81,22 +90,30 @@ public class SeedFinder {
         QueryGenerator queryGenerator = new QueryGenerator(minPrecision);
         QueryProcessor queryProcessor = new QueryProcessor(maxPagesPerQuery, minPrecision, classifier, api);
 
-        PrintStream seedsFile = new PrintStream("seeds_" + query.asString() + ".txt");
+        String seedFileName = "seeds_" + query.asString() + ".txt";
+        PrintStream seedsFile = new PrintStream(seedFileName);
 
         int numberOfQueries = 0;
         while (numberOfQueries < maxNumberOfQueries) {
+            
+            System.out.println("\n---------------");
+            System.out.println("Executing QUERY: "+query.asString());
+            System.out.println("---------------\n");
+            
             QueryResult result = queryProcessor.processQuery(query);
 
             for (Page page : result.positivePages) {
                 seedsFile.println(page.getURL().toExternalForm());
             }
-
+            
+            System.out.println("\nBuilding next query...");
             query = queryGenerator.buildNextQuery(query, result);
-            System.out.println("NextQuery: " + query.asString());
             numberOfQueries++;
         }
         queryProcessor.close();
         seedsFile.close();
+        
+        System.out.println("\nSeeds file created at: "+seedFileName);
     }
 
 }

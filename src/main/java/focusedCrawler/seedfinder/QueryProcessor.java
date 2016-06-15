@@ -38,8 +38,6 @@ public class QueryProcessor {
     
     public QueryResult processQuery(Query query) throws Exception {
         
-        
-        
         QueryResult searchResult = new QueryResult(0d);
         for (int i = 0; i < maxNumberOfIterations; i++) {
             System.out.println("Search page "+i);
@@ -59,18 +57,24 @@ public class QueryProcessor {
     
     public QueryResult processSingleQuery(Query query, int searchPage) throws Exception {
         
-        BackLinkNeighborhood[] searchResults = searchEngine.submitQuery(query.asString(), searchPage);
-        List<BackLinkNeighborhood> newSearchResults = filterUsedUrls(searchResults);
-        List<FetchedResult> fetchedPages = fetchPages(newSearchResults);
+        List<BackLinkNeighborhood> searchResults = searchEngine.submitQuery(query.asString(), searchPage);
+
+        List<BackLinkNeighborhood> unseenSearchResults = filterUsedUrls(searchResults);
+        System.out.println("Unseen hits: "+unseenSearchResults.size());
         
-        if(fetchedPages == null || fetchedPages.size() == 0) {
+        System.out.println("\nFetching "+unseenSearchResults.size()+" pages...");
+        List<FetchedResult> fetchedPages = fetchPages(unseenSearchResults);
+        
+        System.out.println("\nFetched "+fetchedPages.size()+" pages.");
+        if(fetchedPages == null || fetchedPages.isEmpty()) {
             return new QueryResult(0d);
         }
         
         
+        System.out.println("\nProcessing page content...");
         QueryResult result = new QueryResult();
-        if(searchResults.length != 0)
-            result.percentNewResults = newSearchResults.size() / searchResults.length;
+        if(!searchResults.isEmpty())
+            result.percentNewResults = unseenSearchResults.size() / searchResults.size();
         else
             result.percentNewResults = 0;
         
@@ -112,14 +116,16 @@ public class QueryProcessor {
         
         List<FetchedResult> fetchedPages = new ArrayList<FetchedResult>();
         for (Future<FetchedResult> future : futures) {
-            fetchedPages.add(future.get());
+            FetchedResult fetchedResult = future.get();
+            if(fetchedResult != null)
+                fetchedPages.add(fetchedResult);
         }
         
         return fetchedPages;
     }
     
-    private List<BackLinkNeighborhood> filterUsedUrls(BackLinkNeighborhood[] searchResults) {
-        if(searchResults == null || searchResults.length == 0)
+    private List<BackLinkNeighborhood> filterUsedUrls(List<BackLinkNeighborhood> searchResults) {
+        if(searchResults == null || searchResults.size() == 0)
             return null;
         List<BackLinkNeighborhood> filteredResult = new ArrayList<BackLinkNeighborhood>();
         for (BackLinkNeighborhood link : searchResults) {

@@ -4,29 +4,30 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import focusedCrawler.util.TimeDelay;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 
 public class GoogleSearch implements SearchEngineApi {
     
     private final String userAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
+    private int docsPerPage = 10;
     
-    private long lastQueryTimestamp = 0;
-    private int minimumTimeInterval = 5000;
-    private int docsPerPage = 21;
+    private TimeDelay timer = new TimeDelay(5000);
     
-    public BackLinkNeighborhood[] submitQuery(String query, int page) throws IOException {
+    public List<BackLinkNeighborhood> submitQuery(String query, int page) throws IOException {
         
-        waitMinimumDelayIfNecesary();
+        timer.waitMinimumDelayIfNecesary();
         
         // 21 -> max number allowed by google... decreases after
         String queryUrl = "https://www.google.com/search?q=" + query + "&num="+docsPerPage + "&start="+page*docsPerPage;
-        System.out.println("QUERY:"+query);
         System.out.println("URL:"+queryUrl);
         try {
             URLConnection connection = new URL(queryUrl).openConnection();
@@ -41,43 +42,19 @@ public class GoogleSearch implements SearchEngineApi {
             Elements linkHeaders = searchItems.select(".r");
             Elements linksUrl = linkHeaders.select("a[href]");
             
-            int resultSize = linksUrl.size();
-            System.out.println("Hits: "+resultSize);
-    
-            BackLinkNeighborhood[] backlinks = new BackLinkNeighborhood[resultSize];
-            int i = 0;
+            List<BackLinkNeighborhood> links = new ArrayList<>();
             for (Element link : linksUrl) {
-                backlinks[i] = new BackLinkNeighborhood();
-                backlinks[i].setLink(link.attr("href"));
-                backlinks[i].setTitle(link.text());
-                i++;
+                String title = link.text();
+                String url = link.attr("href");
+                links.add(new BackLinkNeighborhood(url, title));
             }
-            return backlinks;
+            
+            System.out.println(getClass().getSimpleName()+" hits: "+links.size());
+            return links;
         } catch (IOException e) {
             throw new IOException("Failed to download backlinks from Google.", e);
         }
     
     }
 
-    private void waitMinimumDelayIfNecesary() {
-        if (lastQueryTimestamp == 0) {
-            lastQueryTimestamp = System.currentTimeMillis();
-            return;
-        }
-        
-        long elapsedTime = System.currentTimeMillis() - lastQueryTimestamp;
-        if (elapsedTime < minimumTimeInterval) {
-            System.out.println("Waiting minimum delay: "+elapsedTime);
-            long waitTime = minimumTimeInterval - elapsedTime;
-            if(waitTime < 0) {
-                try {
-                    Thread.sleep(waitTime);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException("Tread interrupted while waiting.");
-                }
-            }
-        }
-        
-        lastQueryTimestamp = System.currentTimeMillis();
-    }
 }

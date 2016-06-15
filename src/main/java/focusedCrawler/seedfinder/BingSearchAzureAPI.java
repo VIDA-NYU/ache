@@ -28,7 +28,7 @@ public class BingSearchAzureAPI implements SearchEngineApi {
 
     private String accountKey = "d9zIG4ICwyPiUzBz0pDB9fvGr/UKDqk82fYBlJlXmhc";
     private String accountKeyEnc = buildKey(accountKey);
-    private int top = 5;
+    private int docsPerPage = 10;
     
     public BingSearchAzureAPI() {
     }
@@ -42,15 +42,12 @@ public class BingSearchAzureAPI implements SearchEngineApi {
         return new String(accountKeyBytes);
     }
     
-
     @Override
-    public BackLinkNeighborhood[] submitQuery(String query, int page) throws IOException {
+    public List<BackLinkNeighborhood> submitQuery(String query, int page) throws IOException {
         List<String> urls = downloadResults(query, page);
-        BackLinkNeighborhood[] links = new BackLinkNeighborhood[urls.size()];
-        int i = 0;
+        List<BackLinkNeighborhood> links = new ArrayList<>();
         for (String link : urls) {
-            links[i] = new BackLinkNeighborhood(link, null);
-            i++;
+            links.add(new BackLinkNeighborhood(link, null));
         }
         return links;
     }
@@ -59,11 +56,13 @@ public class BingSearchAzureAPI implements SearchEngineApi {
         keyword = URLEncoder.encode(keyword, "UTF-8");
         URL url = null;
         try {
-            int skip = page * top;
-            url = new URL(BING_ADRESS+"?Query=%27" + keyword + "%27"+"&$skip="+skip+"&$top="+top);
+            int skip = page * docsPerPage;
+            url = new URL(BING_ADRESS+"?Query=%27" + keyword + "%27"+"&$skip="+skip+"&$top="+docsPerPage);
         } catch (MalformedURLException e) {
             throw new IllegalArgumentException("Invalid URL", e);
         }
+        
+        System.out.println("URL:"+url);
             
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
@@ -77,9 +76,10 @@ public class BingSearchAzureAPI implements SearchEngineApi {
         }
         conn.disconnect();
         
-        List<String> urls = parseXMLPage(new Page(url, output.toString()));
+        List<String> links = parseXMLPage(new Page(url, output.toString()));
+        System.out.println(getClass().getSimpleName()+" hits: "+links.size());
         
-        return urls;
+        return links;
     }
     
     private List<String> parseXMLPage(Page page) {

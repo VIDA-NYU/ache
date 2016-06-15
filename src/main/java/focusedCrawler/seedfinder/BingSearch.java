@@ -13,25 +13,25 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import focusedCrawler.util.TimeDelay;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 
 public class BingSearch implements SearchEngineApi {
     
     private final String userAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
     
-    UrlValidator urlValidator = new UrlValidator();
-    private long lastQueryTimestamp = 0;
-    int minimumTimeInterval = 5000;
-    int docsPerPage = 15;
+    private UrlValidator urlValidator = new UrlValidator();
+    private int docsPerPage = 10;
+    
+    private TimeDelay timer = new TimeDelay(5000);
 
-    public BackLinkNeighborhood[] submitQuery(String query, int page) throws IOException {
+    public List<BackLinkNeighborhood> submitQuery(String query, int page) throws IOException {
         
-        waitMinimumDelayIfNecesary();
+        timer.waitMinimumDelayIfNecesary();
         
         // 21 -> max number allowed by google... decreases after
         String queryUrl = "https://www.bing.com/search?q=" + query + "&count="+docsPerPage + "&first="+(page*docsPerPage+1)+"&FORM=PORE";
-        System.out.println("QUERY:"+query);
-        System.out.println("URL:"+queryUrl);
+        
         try {
             URLConnection connection = new URL(queryUrl).openConnection();
             connection.setRequestProperty("User-Agent", userAgent);
@@ -55,33 +55,15 @@ public class BingSearch implements SearchEngineApi {
                     links.add(bl);
                 }
             }
-            System.out.println("Hits: "+links.size());
-            return (BackLinkNeighborhood[]) links.toArray(new BackLinkNeighborhood[links.size()]);
+            
+            System.out.println(getClass().getSimpleName()+" hits: "+links.size());
+            return links;
+            
         } catch (IOException e) {
             throw new IOException("Failed to download backlinks from Google.", e);
         }
     
     }
-
-    private void waitMinimumDelayIfNecesary() {
-        if (lastQueryTimestamp == 0) {
-            lastQueryTimestamp = System.currentTimeMillis();
-            return;
-        }
-        
-        long elapsedTime = System.currentTimeMillis() - lastQueryTimestamp;
-        if (elapsedTime < minimumTimeInterval) {
-            System.out.println("Waiting minimum delay: "+elapsedTime);
-            long waitTime = minimumTimeInterval - elapsedTime;
-            if(waitTime < 0) {
-                try {
-                    Thread.sleep(waitTime);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException("Tread interrupted while waiting.");
-                }
-            }
-        }
-        
-        lastQueryTimestamp = System.currentTimeMillis();
-    }
+    
+    
 }

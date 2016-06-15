@@ -22,20 +22,20 @@ public class QueryProcessorTest {
     
     private SearchEngineApi searchEngineMock = new SearchEngineApi() {
         @Override
-        public BackLinkNeighborhood[] submitQuery(String query, int page) throws IOException {
+        public List<BackLinkNeighborhood> submitQuery(String query, int page) throws IOException {
             if (page == 0) {
-                return new BackLinkNeighborhood[] {
+                return asList(
                     new BackLinkNeighborhood("http://localhost:1234/1-pos.html", "ex1"),
                     new BackLinkNeighborhood("http://localhost:1234/1-neg.html", "ex1")
-                };
+                );
             } else if (page == 1) {
-                return new BackLinkNeighborhood[] {
+                return asList(
                     new BackLinkNeighborhood("http://localhost:1234/2-pos.html", "ex2")
-                };
+                );
             } else if (page == 2) {
-                return new BackLinkNeighborhood[] {
+                return asList(
                     new BackLinkNeighborhood("http://localhost:1234/3-neg.html", "ex3") 
-                };
+                );
             }else {
                 return null;
             }

@@ -21,6 +21,6 @@ public class QueryTerm {
     
     @Override
     public String toString() {
-        return "{"+term+","+score+"}";
+        return String.format("{%s,%.5f}", term, score);
     }
 }

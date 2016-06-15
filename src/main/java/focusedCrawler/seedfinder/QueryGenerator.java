@@ -19,8 +19,6 @@ public class QueryGenerator {
     }
 
     public Query buildNextQuery(Query query, QueryResult queryResult) {
-        System.out.println("Building next query...");
-        System.out.println("Initial query: "+query.asString());
 
         // keep track of all terms used
         queryTermsUsed.addAll(query.termsSet());
