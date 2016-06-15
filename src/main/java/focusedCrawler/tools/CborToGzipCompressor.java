@@ -14,7 +14,10 @@ public class CborToGzipCompressor {
     
     static final ObjectMapper cborMapper = new ObjectMapper(new CBORFactory());
     static final ObjectMapper jsonMapper = new ObjectMapper();
-    
+
+    private CborToGzipCompressor() {
+    }
+
     public static void main(String[] args) throws IOException {
         
         String inputLocation = args[0];

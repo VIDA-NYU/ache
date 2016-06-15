@@ -6,6 +6,9 @@ import java.util.Properties;
 
 public class CrawlerCommons {
 
+    private CrawlerCommons() {
+    }
+
     public static String getVersion() {
         String path = "/version.prop";
         InputStream stream = CrawlerCommons.class.getResourceAsStream(path);

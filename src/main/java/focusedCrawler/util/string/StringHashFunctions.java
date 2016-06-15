@@ -26,6 +26,9 @@ package focusedCrawler.util.string;
 
 public class StringHashFunctions {
 
+    private StringHashFunctions() {
+    }
+
     /**
 
      * usa a funcao lookup para o hashcode

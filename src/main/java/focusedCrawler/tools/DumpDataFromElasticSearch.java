@@ -25,7 +25,10 @@ public class DumpDataFromElasticSearch {
     
     static final ObjectMapper cborMapper = new ObjectMapper(new CBORFactory());
     static final ObjectMapper jsonMapper = new ObjectMapper();
-    
+
+    private DumpDataFromElasticSearch() {
+    }
+
     static class DDTDocument {
         public String url;
         public String html;
