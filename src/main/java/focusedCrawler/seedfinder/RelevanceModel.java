@@ -1,6 +1,5 @@
 package focusedCrawler.seedfinder;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -14,24 +13,15 @@ import java.util.Set;
 
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.PaginaURL;
-import focusedCrawler.util.string.StopListArquivo;
+import focusedCrawler.util.string.StopListFile;
 
 public class RelevanceModel {
     
-    private Map<String, Double> termScores = new HashMap<>();
-    private StopListArquivo stopList;
     
-    public RelevanceModel() {
-        try {
-            this.stopList = new StopListArquivo("./config/sample_config/stoplist.txt");
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
+    private Map<String, Double> termScores = new HashMap<>();
     
     public void addPage(boolean isRelevant, Page page) {
-        PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent(), stopList);
+        PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent(), StopListFile.DEFAULT);
         page.setPageURL(pageParser);
         String[] terms = pageParser.palavras();
         List<String> words = new ArrayList<String>();
