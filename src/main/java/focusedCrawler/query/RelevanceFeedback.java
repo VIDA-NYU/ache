@@ -23,8 +23,6 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import weka.classifiers.Classifier;
-import weka.core.Instances;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.classifier.WekaTargetClassifier;
@@ -33,9 +31,11 @@ import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.PorterStemmer;
 import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.string.StopListArquivo;
+import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMVector;
+import weka.classifiers.Classifier;
+import weka.core.Instances;
 
 public class RelevanceFeedback {
 
@@ -438,7 +438,7 @@ public class RelevanceFeedback {
 //		}
 		try {
   	  		ParameterFile config = new ParameterFile(args[0]);
-  	        StopList stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));
+  	        StopList stoplist = new StopListFile(config.getParam("STOPLIST_FILES"));
   	  		InputStream is = new FileInputStream(config.getParam("FILE_CLASSIFIER"));
   	        ObjectInputStream objectInputStream = new ObjectInputStream(is);
   	        Classifier classifier = (Classifier) objectInputStream.readObject();
