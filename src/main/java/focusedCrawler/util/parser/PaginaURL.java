@@ -983,7 +983,7 @@ public class PaginaURL {
                         /* faz o token da string */
                         if ((caracterFazParteDePalavra(c)) || (c == ';')
                                 || (c == '&')) {
-                            str += converteChar(c);
+                            str += Character.toString(converteChar(c));
                             n++;
                             int begin = str.indexOf("&#");
                             int end = str.indexOf(";");
@@ -992,7 +992,7 @@ public class PaginaURL {
     							try {
                                 	int hex = Integer.parseInt(specialchar);
         							char uni = (char)hex;
-        							String unicode =  uni + "";
+        							String unicode =  Character.toString(uni);
         							str = str.substring(0,begin) + unicode;
 //        							System.out.println(unicode);
                                 	pos_caracter_especial = -1;
@@ -1050,7 +1050,7 @@ public class PaginaURL {
 //                                	if(!Character.isLetterOrDigit(c)){
 //                                		c = ' ';
 //                                	}
-                                    titulo += c;
+                                    titulo += Character.toString(c);
                                 }
 
                                 n++;
@@ -1138,7 +1138,7 @@ public class PaginaURL {
                         if (em_script) {
                             if ( c != '>'){
                                 if ( "/script".startsWith(str + c) || "/SCRIPT".startsWith(str + c) || "/style".startsWith(str + c) || "/STYLE".startsWith(str + c)) {
-                                    str +=c;
+                                    str +=Character.toString(c);
                                 }
                                 else {
                                     str = "";
@@ -1207,7 +1207,7 @@ public class PaginaURL {
                                 } else if ((c != '\r') && (c != '\n')) {
 
                                     // System.out.println("Estou NO CAMINHO CERTO!!!!");
-                                    str += c;
+                                    str += Character.toString(c);
                                     n++;
                                 } else {
                                     fimDeString = true;
@@ -1369,11 +1369,11 @@ public class PaginaURL {
 //System.out.println("[ATRIBUTO c='"+c+"', estado=IGUAL], atributo="+atributo);
                                 /* if non-null attribute name */
                             } else {
-                                str += c;
+                                str += Character.toString(c);
                                 n++;
                             }
                         } else {
-                            str += c;
+                            str += Character.toString(c);
                             n++;
                         }
 
@@ -1468,7 +1468,7 @@ public class PaginaURL {
                                 } else {
                                     if ((c != '\0') && (c != '\r')
                                             && (c != '\n') && (c != '"')) {
-                                        str += c;
+                                        str += Character.toString(c);
                                     } else {
                                         if (c == '"') {
                                             estado = ATRIBUTO;
@@ -1505,7 +1505,7 @@ public class PaginaURL {
                                 } else {
                                     if ((c != '\0') && (c != '\r')
                                             && (c != '\n') && (c != '"')) {
-                                        str += c;
+                                        str += Character.toString(c);
                                     }
                                 }
                             }
@@ -1552,13 +1552,13 @@ public class PaginaURL {
                                 estado = ATRIBUTO;    /* if non-null value name */
                                 n++;
                             } else if (include) {
-                                str += c;
+                                str += Character.toString(c);
                                 n++;
                             } else {
                                 n++;
                             }
                         } else if (include) {
-                            str += c;
+                            str += Character.toString(c);
                             n++;
                         } else {
                             n++;
@@ -2468,7 +2468,7 @@ public class PaginaURL {
             int index_ponto = file.lastIndexOf('.');
 
             if (index_barra > index_ponto &&!file.endsWith("/")) {
-                file += '/';
+                file += Character.toString('/');
 
                 // System.out.println("pu file2='"+file+"'");
                 // System.out.println("--------------------------");

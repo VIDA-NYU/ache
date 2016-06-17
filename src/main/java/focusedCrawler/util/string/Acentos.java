@@ -311,15 +311,15 @@ public class Acentos {
 
             return substituirCorretamente( pedaco,caracter,escollhaLetraRing(caracter) );
 
-        if( pedaco.endsWith("AElig;") ) return ""+'Æ';
+        if( pedaco.endsWith("AElig;") ) return Character.toString('Æ');
 
-        if( pedaco.endsWith("aelig;") ) return ""+'æ';
+        if( pedaco.endsWith("aelig;") ) return Character.toString('æ');
 
-        if( pedaco.endsWith("THORN;") ) return ""+'Þ';
+        if( pedaco.endsWith("THORN;") ) return Character.toString('Þ');
 
-        if( pedaco.endsWith("thorn;") ) return ""+'þ';
+        if( pedaco.endsWith("thorn;") ) return Character.toString('þ');
 
-        if( pedaco.endsWith("szlig;") ) return ""+'ß';
+        if( pedaco.endsWith("szlig;") ) return Character.toString('ß');
 
         return pedaco;
 

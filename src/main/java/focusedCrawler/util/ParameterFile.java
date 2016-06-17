@@ -83,7 +83,7 @@ public class ParameterFile {
         for (int i = 0; i < args.length; i++) {
             Vector v = new Vector();
             v.addElement(args[i].trim());
-            hash.put("" + i, v);
+            hash.put(Integer.toString(i), v);
         }
     }
 
