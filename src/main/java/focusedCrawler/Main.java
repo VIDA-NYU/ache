@@ -3,6 +3,7 @@ package focusedCrawler;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -22,6 +23,7 @@ import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.link.frontier.FrontierPersistentException;
+import focusedCrawler.seedfinder.SeedFinder;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
 import focusedCrawler.util.storage.Storage;
@@ -93,7 +95,8 @@ public class Main {
                     "startCrawlManager",
                     "buildModel",
                     "startTargetStorage",
-                    "startLinkStorage" };
+                    "startLinkStorage",
+                    "seedFinder"};
 
             if (args.length == 0) {
                 printUsage();
@@ -124,7 +127,11 @@ public class Main {
             else if ("startCrawlManager".equals(args[0])) {
                 cmd = parser.parse(startCrawlManagerOptions, args);
                 startCrawlManager(getMandatoryOptionValue(cmd, "configDir"));
-            } else {
+            }
+            else if ("seedFinder".equals(args[0])) {
+                SeedFinder.main(Arrays.copyOfRange(args, 1, args.length));
+            }
+            else {
                 printUsage();
                 System.exit(1);
             }
