@@ -30,7 +30,7 @@ public class SeedFinder {
     @Option(name="--modelPath", usage="The inital query to issue to the search engine", required=true)
     private String modelPath;
     
-    @Option(name="--searchEngine", usage="The search engine to be used (Google, Bing, BingAzureAPI)")
+    @Option(name="--searchEngine", usage="The search engine to be used (Google, Bing, BingAzureAPI, All)")
     private String searchEngine = "All";
     
     public static void main(String[] args) {
@@ -44,8 +44,17 @@ public class SeedFinder {
     public void run(String[] args) throws Exception {
         ParserProperties properties = ParserProperties.defaults().withUsageWidth(80);
         CmdLineParser parser = new CmdLineParser(this, properties);
+        SearchEngineApi api = null;
         try {
             parser.parseArgument(args);
+            api = createSearchEngineApi(this.searchEngine);
+            if (api == null) {
+                String msg = "Invalid search engine: " + this.searchEngine;
+                Exception cause = new IllegalArgumentException(msg);
+                this.searchEngine = "All";
+                throw new CmdLineException(parser, msg, cause);
+            }
+            
         } catch (CmdLineException e) {
             System.err.println(e.getMessage());
             System.err.println();
@@ -55,34 +64,10 @@ public class SeedFinder {
             System.err.println();
 
             System.err.println("Example: ache seedFinder" + parser.printExample(OptionHandlerFilter.ALL));
-
-            return;
-        }
-        
-        SearchEngineApi api = null;
-        switch (searchEngine.toLowerCase()) {
-        case "google":
-            api = new GoogleSearch();
-            break;
-        case "bing":
-            api = new BingSearch();
-            break;
-        case "bingazureapi":
-            api = new BingSearchAzureAPI();
-            break;
-        case  "all":
-            api = new SearchEnginePool(new BingSearch(), new GoogleSearch());
-            break;
-        }
-        
-        if (api == null) {
-            System.err.println("Invalid search engine: " + searchEngine);
             System.exit(1);
-        } else {
-            
-            System.out.println("Search Engine: "+api.getClass().getName());
         }
         
+        System.out.println("Search Engine: "+api.getClass().getSimpleName());
         
         TargetClassifier classifier = TargetClassifierFactory.create(modelPath);
         Query query = new Query(initialQuery);
@@ -114,6 +99,20 @@ public class SeedFinder {
         seedsFile.close();
         
         System.out.println("\nSeeds file created at: "+seedFileName);
+    }
+
+    private SearchEngineApi createSearchEngineApi(String searchEngine) {
+        switch (searchEngine.toLowerCase()) {
+        case "google":
+            return new GoogleSearch();
+        case "bing":
+            return new BingSearch();
+        case "bingazureapi":
+            return new BingSearchAzureAPI();
+        case "all":
+            return new SearchEnginePool(new BingSearch(), new GoogleSearch());
+        }
+        return null;
     }
 
 }
