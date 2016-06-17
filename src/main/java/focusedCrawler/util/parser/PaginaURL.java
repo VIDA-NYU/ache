@@ -51,7 +51,7 @@ import org.slf4j.LoggerFactory;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.string.Acentos;
 import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.string.StopListArquivo;
+import focusedCrawler.util.string.StopListFile;
 
 
 public class PaginaURL {
@@ -3200,7 +3200,7 @@ public class PaginaURL {
             PaginaURL.USAR_DESCRIPTION = true;
             StopList st = null;
             try {
-                st = new StopListArquivo(args[0]);
+                st = new StopListFile(args[0]);
             }
             catch(Exception ioe) {
             }
