@@ -96,7 +96,7 @@ public class QueryProcessor {
             } else {
                 result.negativePages.add(page);
             }
-            System.out.println(relevance.isRelevant() + " -> " + url);
+            System.out.println((relevance.isRelevant() ? "  relevant -> " : "irrelevant -> ") + url);
         }
         
         return result;
