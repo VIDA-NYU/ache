@@ -36,7 +36,7 @@ import weka.core.Instances;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.string.StopListArquivo;
+import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMVector;
 
@@ -167,7 +167,7 @@ public class WekaTargetClassifier implements TargetClassifier {
             Instances insts = new Instances("target_classification", vectorAtt, 1);
             insts.setClassIndex(attributes.length);
             
-            StopList stoplist = new StopListArquivo(stopwordsFile);
+            StopList stoplist = new StopListFile(stopwordsFile);
 
             return new WekaTargetClassifier(classifier, relevanceThreshold, insts, attributes, stoplist);
 

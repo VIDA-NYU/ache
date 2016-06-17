@@ -25,7 +25,7 @@ package focusedCrawler.link.classifier;
 
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.string.StopListArquivo;
+import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.string.StopList;
 import weka.core.Instances;
 import weka.classifiers.Classifier;
@@ -59,7 +59,7 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
   public LinkClassifierFactoryImpl(String stoplistFile, String modelPath) {
     this.modelPath = modelPath;
     try {
-		stoplist = new StopListArquivo(stoplistFile);
+		stoplist = new StopListFile(stoplistFile);
 	} catch (IOException e) {
 		throw new IllegalArgumentException("Could not load stopwords from file: "+stoplistFile, e);
 	}

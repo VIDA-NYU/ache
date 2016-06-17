@@ -52,7 +52,7 @@ import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
 import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.string.StopListArquivo;
+import focusedCrawler.util.string.StopListFile;
 
 /**
  *
@@ -272,7 +272,7 @@ public class LinkStorage extends StorageDefault{
         LinkStorage linkStorage = new LinkStorage(config, manager, frontierManager);
 
         if (config.isUseOnlineLearning()) {
-            StopList stoplist = new StopListArquivo(stoplistFile);
+            StopList stoplist = new StopListFile(stoplistFile);
             LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
             
             LinkClassifierBuilder cb = new LinkClassifierBuilder(graphRep, stoplist, wrapper, frontierManager.getFrontier());

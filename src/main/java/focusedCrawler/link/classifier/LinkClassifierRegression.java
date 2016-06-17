@@ -17,7 +17,7 @@ import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.string.StopListArquivo;
+import focusedCrawler.util.string.StopListFile;
 import weka.classifiers.Classifier;
 import weka.core.Instances;
 
@@ -116,7 +116,7 @@ public class LinkClassifierRegression implements LinkClassifier{
 		try{
 		ParameterFile config = new ParameterFile(args[0]);
 		LinkClassifier linkClassifier = null;
-	    StopList stoplist = new StopListArquivo(config.getParam("STOPLIST_FILES"));
+	    StopList stoplist = new StopListFile(config.getParam("STOPLIST_FILES"));
 	      LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
 	      String[] attributes = config.getParam("ATTRIBUTES", " ");
 	      
