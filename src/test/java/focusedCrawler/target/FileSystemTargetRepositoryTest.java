@@ -14,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -181,6 +182,64 @@ public class FileSystemTargetRepositoryTest {
         assertThat(page1.getResponseBody(), is(html));
         
         assertThat(page2, is(nullValue()));
+    }
+	
+	@Test
+    public void sholdIterateOVerInsertedPages() throws IOException {
+        // given
+        boolean hashFilename = true;
+        String folder = tempFolder.newFolder().toString(); 
+        
+        String url1 = "http://a.com";
+        String url2 = "http://b.com";
+        
+        Page target1 = new Page(new URL(url1), html);
+        Page target2 = new Page(new URL(url2), html);
+        
+        FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, hashFilename);
+        
+        // when
+        repository.insert(target1);
+        repository.insert(target2);
+        
+        Iterator<TargetModelJson> it = repository.iterator();
+        
+        // then
+        TargetModelJson page;
+        
+        assertThat(it.hasNext(), is(true));
+        page = it.next();
+        
+        assertThat(page, is(notNullValue()));
+        assertThat(page.getResponseBody(), is(html));
+        
+        assertThat(it.hasNext(), is(true));
+        page = it.next();
+        
+        assertThat(page, is(notNullValue()));
+        assertThat(page.getResponseBody(), is(html));
+        
+        assertThat(it.hasNext(), is(false));
+        assertThat(it.next(), is(nullValue()));
+        
+        assertThat(it.hasNext(), is(false));
+        assertThat(it.next(), is(nullValue()));
+    }
+	
+	@Test
+    public void sholdIterateOverEmptyFolder() throws IOException {
+        // given
+        boolean hashFilename = true;
+        String folder = tempFolder.newFolder().toString(); 
+        
+        FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, hashFilename);
+        
+        // when
+        Iterator<TargetModelJson> it = repository.iterator();
+        
+        // then
+        assertThat(it.hasNext(), is(false));
+        assertThat(it.next(), is(nullValue()));
     }
 	
 	@Test

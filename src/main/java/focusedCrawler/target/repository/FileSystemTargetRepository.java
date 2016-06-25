@@ -2,6 +2,7 @@ package focusedCrawler.target.repository;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -13,6 +14,7 @@ import java.net.URLEncoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Iterator;
 import java.util.zip.DeflaterInputStream;
 import java.util.zip.DeflaterOutputStream;
 
@@ -177,22 +179,24 @@ public class FileSystemTargetRepository implements TargetRepository {
         try {
             Path hostPath = getHostPath(url);
             Path filePath = getFilePath(url, hostPath);
-            
-            if (!Files.exists(filePath)) {
-                return null;
-            }
-            
-            try (InputStream fileStream = new FileInputStream(filePath.toFile())) {
-                if(compressData) {
-                    try(InputStream gzipStream = new DeflaterInputStream(fileStream)) {
-                        return unserializeData(gzipStream);
-                    }
-                } else {
-                    return unserializeData(fileStream);
-                }
-            }
+            return readFile(filePath);
         } catch (IOException e) {
             return null;
+        }
+    }
+
+    private <T> T readFile(Path filePath) throws IOException, FileNotFoundException {
+        if (!Files.exists(filePath)) {
+            return null;
+        }
+        try (InputStream fileStream = new FileInputStream(filePath.toFile())) {
+            if(compressData) {
+                try(InputStream gzipStream = new DeflaterInputStream(fileStream)) {
+                    return unserializeData(gzipStream);
+                }
+            } else {
+                return unserializeData(fileStream);
+            }
         }
     }
     
@@ -213,5 +217,81 @@ public class FileSystemTargetRepository implements TargetRepository {
         }
         return object;
     }
+    
+    
+    public <T> Iterator<T> iterator() {
+        return new FSRepositoryIterator<T>(directory);
+    }
 
+    
+    public class FSRepositoryIterator<T> implements Iterator<T> {
+        
+        private T next;
+        private Iterator<Path> fileIt;
+        private Iterator<Path> hostIt;
+
+        public FSRepositoryIterator(Path directory) {
+            try {
+                hostIt = Files.newDirectoryStream(directory).iterator();
+                if(hostIt.hasNext()) {
+                    fileIt = Files.newDirectoryStream(hostIt.next()).iterator();
+                }
+            } catch (IOException e) {
+                throw new IllegalArgumentException("Failed to open target repository folder: "+directory, e);
+            }
+            this.next = readNext();
+        }
+        
+        private T readNext() {
+            Path filePath = null;
+            if(fileIt != null && !fileIt.hasNext()) {
+                if(!hostIt.hasNext()) {
+                    return null; // no more file and folders available
+                }
+                // iterate over next folder available
+                Path hostPath = null;
+                try {
+                    hostPath = hostIt.next();
+                    fileIt = Files.newDirectoryStream(hostPath).iterator();
+                } catch (IOException e) {
+                    String f = hostPath == null ? null : hostPath.toString();
+                    throw new IllegalArgumentException("Failed to open host folder: "+f, e);
+                }
+            }
+            
+            if(fileIt != null && fileIt.hasNext()) {
+                filePath = fileIt.next();
+                try {
+                    return readFile(filePath);
+                } catch (IOException e) {
+                    String f = filePath == null ? null : filePath.toString();
+                    throw new IllegalStateException("Failed to read file: "+f);
+                }
+            }
+            
+            return null;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return this.next != null;
+        }
+
+        @Override
+        public T next() {
+            if(this.next == null) {
+                return null;
+            } else {
+                T returnValue = this.next;
+                this.next = readNext();
+                return returnValue;
+            }
+        }
+        
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException("remove");
+        }
+        
+    };
 }
