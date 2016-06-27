@@ -3,6 +3,7 @@ package focusedCrawler.dedup;
 import static java.util.Arrays.asList;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -45,7 +46,7 @@ public class RulesValidation {
             System.out.println(filename[i]);
             System.out.println();
             
-            List<String> lines = Files.readAllLines(Paths.get("data", filename[i]));
+            List<String> lines = Files.readAllLines(Paths.get("data", filename[i]), StandardCharsets.UTF_8);
 //            Collections.shuffle(lines, new Random(System.nanoTime()));
             
             int partitionSize = lines.size()/3;
