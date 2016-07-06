@@ -1,9 +1,11 @@
 package focusedCrawler.target;
 
 import static java.util.Arrays.asList;
+import static org.hamcrest.CoreMatchers.either;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.Matchers.endsWith;
 import static org.junit.Assert.assertThat;
 
 import java.io.ByteArrayInputStream;
@@ -238,6 +240,48 @@ public class FileSystemTargetRepositoryTest {
         Iterator<TargetModelJson> it = repository.iterator();
         
         // then
+        assertThat(it.hasNext(), is(false));
+        assertThat(it.next(), is(nullValue()));
+    }
+    
+    @Test
+    public void sholdIterateOverFilePaths() throws IOException {
+     // given
+        boolean hashFilename = false;
+        String folder = tempFolder.newFolder().toString(); 
+        
+        String url1 = "http://1.com";
+        String url2 = "http://2.com";
+        
+        Page target1 = new Page(new URL(url1), html);
+        Page target2 = new Page(new URL(url2), html);
+        
+        FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, hashFilename);
+        
+        // when
+        repository.insert(target1);
+        repository.insert(target2);
+        
+        Iterator<Path> it = repository.filesIterator();
+        
+        // then
+        Path pagePath;
+        
+        assertThat(it.hasNext(), is(true));
+        pagePath = it.next();
+        
+        assertThat(pagePath, is(notNullValue()));
+        assertThat(pagePath.toString(), either(endsWith("1.com")).or(endsWith("2.com")));
+        
+        assertThat(it.hasNext(), is(true));
+        pagePath = it.next();
+        
+        assertThat(pagePath, is(notNullValue()));
+        assertThat(pagePath.toString(), either(endsWith("1.com")).or(endsWith("2.com")));
+        
+        assertThat(it.hasNext(), is(false));
+        assertThat(it.next(), is(nullValue()));
+        
         assertThat(it.hasNext(), is(false));
         assertThat(it.next(), is(nullValue()));
     }

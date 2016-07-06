@@ -220,17 +220,54 @@ public class FileSystemTargetRepository implements TargetRepository {
     
     
     public <T> Iterator<T> iterator() {
-        return new FSRepositoryIterator<T>(directory);
+        return new FileContentIterator<T>(new FilesIterator(directory));
     }
 
+    public Iterator<Path> filesIterator() {
+        return new FilesIterator(directory);
+    };
     
-    public class FSRepositoryIterator<T> implements Iterator<T> {
+    public class FileContentIterator<T> implements Iterator<T> {
         
-        private T next;
+        private FilesIterator fileIterator;
+
+        public FileContentIterator(FilesIterator fileIterator) {
+            this.fileIterator = fileIterator;
+        }
+        
+        @Override
+        public boolean hasNext() {
+            return fileIterator.hasNext();
+        }
+
+        @Override
+        public T next() {
+            if(!fileIterator.hasNext()) {
+                return null;
+            }
+            Path filePath = fileIterator.next();
+            try {
+                return readFile(filePath);
+            } catch (IOException e) {
+                String f = filePath == null ? null : filePath.toString();
+                throw new IllegalStateException("Failed to read file: "+f);
+            }
+        }
+        
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException("remove");
+        }
+        
+    }
+    
+    public class FilesIterator implements Iterator<Path> {
+        
+        private Path next;
         private Iterator<Path> fileIt;
         private Iterator<Path> hostIt;
 
-        public FSRepositoryIterator(Path directory) {
+        public FilesIterator(Path directory) {
             try {
                 hostIt = Files.newDirectoryStream(directory).iterator();
                 if(hostIt.hasNext()) {
@@ -242,8 +279,7 @@ public class FileSystemTargetRepository implements TargetRepository {
             this.next = readNext();
         }
         
-        private T readNext() {
-            Path filePath = null;
+        private Path readNext() {
             if(fileIt != null && !fileIt.hasNext()) {
                 if(!hostIt.hasNext()) {
                     return null; // no more file and folders available
@@ -260,13 +296,7 @@ public class FileSystemTargetRepository implements TargetRepository {
             }
             
             if(fileIt != null && fileIt.hasNext()) {
-                filePath = fileIt.next();
-                try {
-                    return readFile(filePath);
-                } catch (IOException e) {
-                    String f = filePath == null ? null : filePath.toString();
-                    throw new IllegalStateException("Failed to read file: "+f);
-                }
+                return fileIt.next();
             }
             
             return null;
@@ -278,11 +308,11 @@ public class FileSystemTargetRepository implements TargetRepository {
         }
 
         @Override
-        public T next() {
+        public Path next() {
             if(this.next == null) {
                 return null;
             } else {
-                T returnValue = this.next;
+                Path returnValue = this.next;
                 this.next = readNext();
                 return returnValue;
             }
@@ -293,5 +323,6 @@ public class FileSystemTargetRepository implements TargetRepository {
             throw new UnsupportedOperationException("remove");
         }
         
-    };
+    }
+    
 }
