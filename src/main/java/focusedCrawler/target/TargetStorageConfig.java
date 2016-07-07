@@ -12,19 +12,6 @@ import focusedCrawler.util.storage.StorageConfig;
 
 public class TargetStorageConfig {
     
-    public static class MonitorConfig {
-        @JsonProperty("target_storage.monitor.sync")
-        public boolean sync = true;
-        @JsonProperty("target_storage.monitor.frequency")
-        public int frequency = 100;
-        @JsonProperty("target_storage.monitor.frequency_crawled")
-        public int frequencyCrawled = 500;
-        @JsonProperty("target_storage.monitor.frequency_relevant")
-        public int frequencyRelevant = 500;
-        @JsonProperty("target_storage.monitor.frequency_harvest_info")
-        public int frequencyHarvestInfo = 100;
-    }
-    
     @JsonProperty("target_storage.target_directory")
     private String targetStorageDirectory = "data_target";
     @JsonProperty("target_storage.negative_directory")
@@ -55,9 +42,6 @@ public class TargetStorageConfig {
     private boolean englishLanguageDetectionEnabled = true;
     
     @JsonUnwrapped
-    private MonitorConfig monitor = new MonitorConfig();
-    
-    @JsonUnwrapped
     private ElasticSearchConfig elasticSearchConfig = new ElasticSearchConfig();
     
     private final StorageConfig serverConfig;
@@ -81,26 +65,6 @@ public class TargetStorageConfig {
 
     public String getDataFormat() {
         return dataFormat;
-    }
-
-    public int getCrawledRefreshFrequency() {
-        return monitor.frequencyCrawled;
-    }
-
-    public int getRelevantRefreshFrequency() {
-        return monitor.frequencyRelevant;
-    }
-
-    public int getHarvestInfoRefreshFrequency() {
-        return monitor.frequencyHarvestInfo;
-    }
-
-    public int getRefreshFreq() {
-        return monitor.frequency;
-    }
-
-    public boolean isRefreshSync() {
-        return monitor.sync;
     }
 
     public float getRelevanceThreshold() {

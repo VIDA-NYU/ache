@@ -45,11 +45,6 @@ public class ConfigServiceTest {
         assertThat(config.isHardFocus(), is(false));
         assertThat(config.isBipartite(), is(true));
         
-        assertThat(config.isRefreshSync(), is(false));
-        assertThat(config.getCrawledRefreshFrequency(), is(123));
-        assertThat(config.getRelevantRefreshFrequency(), is(234));
-        assertThat(config.getHarvestInfoRefreshFrequency(), is(345));
-        
         assertThat(config.getDataFormat(), is("ELASTICSEARCH"));
         assertThat(config.getElasticSearchConfig(), is(notNullValue()));
         assertThat(config.getElasticSearchConfig().getHost(), is("elasticsearch.localhost"));

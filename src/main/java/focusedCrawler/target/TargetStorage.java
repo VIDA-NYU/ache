@@ -193,7 +193,7 @@ public class TargetStorage extends StorageDefault {
         	throw new IllegalArgumentException("Invalid data format provided: "+dataFormat);
         }
         
-        TargetStorageMonitor monitor = new TargetStorageMonitor(dataPath, config);
+        TargetStorageMonitor monitor = new TargetStorageMonitor(dataPath);
         
         Storage targetStorage = new TargetStorage(targetClassifier, targetRepository, linkStorage, 
                                                   monitor, negativeRepository, config);

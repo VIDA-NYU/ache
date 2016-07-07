@@ -1,12 +1,12 @@
 package focusedCrawler.target;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 
 import focusedCrawler.target.model.Page;
-
-import java.lang.String;
-import java.io.*;
 
 public class TargetStorageMonitor {
     
@@ -15,107 +15,48 @@ public class TargetStorageMonitor {
     private PrintWriter fNonRelevantPages;
     private PrintWriter fHarvestInfo;
     
-    private List<String> crawledUrls = new ArrayList<String>(); 
-    private List<String> relevantUrls = new ArrayList<String>();
-    private List<String> nonRelevantUrls = new ArrayList<String>();
-    private List<String> harvestRates = new ArrayList<String>();
-
-    private TargetStorageConfig config;
-
     int totalOnTopicPages = 0;
     private int totalOfPages = 0;
     
-    public TargetStorageMonitor(String dataPath, TargetStorageConfig config) {
+    public TargetStorageMonitor(String dataPath) {
         
         File file = new File(dataPath+"/data_monitor/");
-        if(!file.exists()) file.mkdirs();
+        if(!file.exists()) {
+            file.mkdirs();
+        }
         
-        this.config = config;
         String fileCrawledPages = dataPath + "/data_monitor/crawledpages.csv";
         String fileRelevantPages = dataPath + "/data_monitor/relevantpages.csv";
         String fileHarvestInfo = dataPath + "/data_monitor/harvestinfo.csv";
         String fileNonRelevantPages = dataPath + "/data_monitor/nonrelevantpages.csv";
         
         try {
-            fCrawledPages = new PrintWriter(fileCrawledPages, "UTF-8");
-            fRelevantPages = new PrintWriter(fileRelevantPages, "UTF-8");
-            fHarvestInfo = new PrintWriter(fileHarvestInfo, "UTF-8");
-            fNonRelevantPages = new PrintWriter(fileNonRelevantPages, "UTF-8");
+            fCrawledPages = createBufferedWriter(fileCrawledPages);
+            fRelevantPages = createBufferedWriter(fileRelevantPages);
+            fHarvestInfo = createBufferedWriter(fileHarvestInfo);
+            fNonRelevantPages = createBufferedWriter(fileNonRelevantPages);
         } catch (Exception e) {
             throw new IllegalStateException("Problem while opening files to export target metrics", e);
         }
     }
+
+    private PrintWriter createBufferedWriter(String file) throws FileNotFoundException {
+        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
+        boolean autoFlush = true;
+        return new PrintWriter(bos, autoFlush);
+    }
     
     public void countPage(Page page, boolean isRelevant, double prob) {
-        
+        long currentTime = System.currentTimeMillis();
         totalOfPages++;
-        
-        crawledUrls.add(page.getIdentifier() + "\t" +
-                        String.valueOf(System.currentTimeMillis() / 1000L));
-        
-        harvestRates.add(Integer.toString(totalOnTopicPages) + "\t" + 
-                         String.valueOf(totalOfPages) + "\t" +
-                         String.valueOf(System.currentTimeMillis() / 1000L));
-        
+        fCrawledPages.printf("%s\t%d\n", page.getIdentifier(), (currentTime));
+        fHarvestInfo.printf("%d\t%d\t%d\n", totalOnTopicPages, totalOfPages, (currentTime));
         if(isRelevant) {
             totalOnTopicPages++;
-            relevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
+            fRelevantPages.printf("%s\t%.10f\t%d\n", page.getIdentifier(), prob, (currentTime));
         } else {
-            nonRelevantUrls.add(page.getIdentifier() + "\t" + String.valueOf(prob) + "\t" + String.valueOf(System.currentTimeMillis() / 1000L));
+            fNonRelevantPages.printf("%s\t%.10f\t%d\n", page.getIdentifier(), prob, (currentTime));
         }
-        
-        if (config.isRefreshSync()){
-          if(totalOnTopicPages % config.getRefreshFreq() == 0) {
-               exportHarvestInfo(harvestRates);
-               harvestRates.clear();
-               exportCrawledPages(crawledUrls);
-               crawledUrls.clear();    
-               exportRelevantPages(relevantUrls);
-               relevantUrls.clear();
-               exportNonRelevantPages(nonRelevantUrls);
-               nonRelevantUrls.clear();
-          }
-        } else{
-            if(totalOfPages % config.getHarvestInfoRefreshFrequency() == 0) {
-                exportHarvestInfo(harvestRates);
-                harvestRates.clear();
-            }
-            if(totalOfPages % config.getCrawledRefreshFrequency() == 0) {
-                exportCrawledPages(crawledUrls);
-                crawledUrls.clear();    
-            }
-            if(totalOnTopicPages % config.getRelevantRefreshFrequency() == 0) {
-                exportRelevantPages(relevantUrls);
-                relevantUrls.clear();
-
-                exportNonRelevantPages(nonRelevantUrls);
-                nonRelevantUrls.clear();
-            }
-        }
-        
-    }
-
-    private void export(List<String> list, PrintWriter file) {
-        for (String item : list) {
-            file.println(item);
-        }
-        file.flush();
-    }
-
-    private void exportHarvestInfo(List<String> list) {
-        export(list, this.fHarvestInfo);
-    }
-
-    private void exportCrawledPages(List<String> list) {
-        export(list, fCrawledPages);
-    }
-
-    private void exportRelevantPages(List<String> list) {
-        export(list, this.fRelevantPages);
-    }
-
-    private void exportNonRelevantPages(List<String> list) {
-        export(list, this.fNonRelevantPages);
     }
 
     public int getTotalOfPages() {

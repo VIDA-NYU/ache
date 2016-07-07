@@ -28,18 +28,6 @@ target_storage.data_format.filesystem.hash_file_name: true
 #target_storage.data_format.elasticsearch.port: 9300
 #target_storage.data_format.elasticsearch.cluster_name: elasticsearch
 
-# Configuration for target storage's metrics monitor
-
-# Enable this to configure frequency for all metrics
-target_storage.monitor.sync: true
-target_storage.monitor.frequency: 100
-
-# Enable this to configure different frequencies for each type of info
-#target_storage.monitor.sync: false
-#target_storage.monitor.frequency_crawled: 500
-#target_storage.monitor.frequency_relevant: 500
-#target_storage.monitor.frequency_harvest_info: 500
-
 # Performs hard focus or soft focus. When hard focus is enabled,
 # the crawler only follows links from pages classified as relevant
 target_storage.hard_focus: true
