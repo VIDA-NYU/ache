@@ -63,6 +63,13 @@ public class FileSystemTargetRepository implements TargetRepository {
 		this(Paths.get(directory), dataFormat, hashFilename, false);
     }
     
+    public FileSystemTargetRepository(String directory,
+                                      DataFormat dataFormat,
+                                      boolean hashFilename,
+                                      boolean compressData) {
+        this(Paths.get(directory), dataFormat, hashFilename, compressData);
+    }
+    
     public FileSystemTargetRepository(Path directory,
                                       DataFormat dataFormat,
                                       boolean hashFilename,
