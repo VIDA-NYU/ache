@@ -12,6 +12,11 @@ public class CDRDocumentBuilder {
     private static final ObjectMapper jsonMapper = new ObjectMapper();
 
     private CDRDocument data = new CDRDocument();
+    
+    public CDRDocumentBuilder withId(String id) {
+        data.setId(id);
+        return this;
+    }
 
     public CDRDocumentBuilder withUrl(String url) {
         data.setUrl(url);
@@ -58,6 +63,11 @@ public class CDRDocumentBuilder {
         return this;
     }
 
+    public CDRDocumentBuilder withVersion(String version) {
+        data.setVersion(version);
+        return this;
+    }
+
     public CDRDocument build() {
 
         if (data.getUrl() == null) {
@@ -72,34 +82,43 @@ public class CDRDocumentBuilder {
         if (data.getTeam() == null) {
             throw new IllegalArgumentException("Field 'team' is mandatory");
         }
+        if (data.getVersion() == null) {
+            throw new IllegalArgumentException("Field 'version' is mandatory");
+        }
         if (data.getTimestamp() == 0) {
             throw new IllegalArgumentException("Field 'timestamp' is mandatory");
         }
-
-        TikaExtractor extractor = null;
+        
         if (data.getExtractedMetadata() == null || data.getExtractedText() == null) {
-            extractor = new TikaExtractor(data.getRawContent());
-        }
-        if (data.getExtractedMetadata() == null && extractor != null) {
-            data.setExtractedMetadata(extractor.getMetadata());
-        }
-        if (data.getExtractedText() == null && extractor != null) {
-            data.setExtractedText(extractor.getPlainText());
+            // auto-generate extracted_metadata field using Tika
+            TikaExtractor extractor = new TikaExtractor(data.getRawContent());
+            if (data.getExtractedMetadata() == null) {
+                data.setExtractedMetadata(extractor.getMetadata());
+            }
+            // auto-generate extracted_text field using Tika
+            if (data.getExtractedText() == null) {
+                data.setExtractedText(extractor.getPlainText());
+            }
         }
         
-        StringBuilder textForId = new StringBuilder();
-        textForId.append(data.getUrl());
-        textForId.append("-");
-        textForId.append(data.getTimestamp());
-        
-        String hashedId = DigestUtils.sha256Hex(textForId.toString()).toUpperCase();
-        data.setId(hashedId);
+        if (data.getId() == null) {
+            // auto-generate _id field
+            data.setId(computeId());
+        }
 
         return data;
     }
 
     public String buildAsJson() throws JsonProcessingException {
         return jsonMapper.writeValueAsString(this.build());
+    }
+    
+    private String computeId() {
+        StringBuilder textForId = new StringBuilder();
+        textForId.append(data.getUrl());
+        textForId.append("-");
+        textForId.append(data.getTimestamp());
+        return DigestUtils.sha256Hex(textForId.toString()).toUpperCase();
     }
 
 }

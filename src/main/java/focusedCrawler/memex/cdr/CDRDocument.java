@@ -2,7 +2,8 @@ package focusedCrawler.memex.cdr;
 
 import java.util.Map;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -22,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
      }
 }
 */
+@JsonInclude(Include.NON_NULL)
 public class CDRDocument {
 
     private String _id;
@@ -34,6 +36,7 @@ public class CDRDocument {
     private Object crawlData;
     private Map<String, String> extractedMetadata;
     private String extractedText;
+    private String version;
 
     public CDRDocument() {
     }
@@ -125,9 +128,18 @@ public class CDRDocument {
         this._id = _id;
     }
 
-    @JsonIgnore
     @JsonProperty("_id")
     public String getId() {
         return this._id;
+    }
+    
+    @JsonProperty("version")
+    public String getVersion() {
+        return version;
+    }
+
+    @JsonProperty("version")
+    public void setVersion(String version) {
+        this.version = version;
     }
 }

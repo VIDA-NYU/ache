@@ -3,6 +3,7 @@ package focusedCrawler.target.model;
 import java.util.List;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TargetModelJson {
@@ -74,6 +75,22 @@ public class TargetModelJson {
 
     public void setFetchTime(long fetchTime) {
         this.fetchTime = fetchTime;
+    }
+    
+    @JsonIgnore
+    public String getContentType() {
+        List<String> contentTypeHeader = this.getResponseHeaders().get("Content-Type");
+        if (contentTypeHeader == null) {
+            contentTypeHeader = this.getResponseHeaders().get("CONTENT-TYPE");
+        }
+        if (contentTypeHeader == null) {
+            contentTypeHeader = this.getResponseHeaders().get("content-type");
+        }
+        if(contentTypeHeader == null || contentTypeHeader.isEmpty()) {
+            return null;
+        } else {
+            return contentTypeHeader.iterator().next();
+        }
     }
 	
 }
