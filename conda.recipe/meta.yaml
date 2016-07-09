@@ -1,13 +1,13 @@
 package:
     name: ache
-    version: 0.6.0
+    version: 0.7.0-SNAPSHOT
 
 build:
     number: 0
 
 source:
     git_url: git@github.com:ViDA-NYU/ache.git
-    git_tag: 0.6.0
+    git_tag: 0.7.0-SNAPSHOT
 
 about:
     license: GPL 2.0
