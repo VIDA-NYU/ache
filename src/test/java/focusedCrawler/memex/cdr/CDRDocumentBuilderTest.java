@@ -32,6 +32,7 @@ public class CDRDocumentBuilderTest {
 			.withContentType("text/html")
 			.withCrawler("memex-crawler")
 			.withTeam("DARPA")
+			.withVersion("2.0")
 			.withTimestamp(new Date().getTime())
 			.buildAsJson();
 		
