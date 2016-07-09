@@ -145,6 +145,20 @@ public class WekaTargetClassifier implements TargetClassifier {
                                           double relevanceThreshold,
                                           String stopwordsFile)
                                           throws IOException {
+        StopListFile stoplist;
+        if(stopwordsFile != null && !stopwordsFile.isEmpty()) {
+            stoplist = new StopListFile(stopwordsFile);
+        } else {
+            stoplist = StopListFile.DEFAULT;
+        }
+        return create(modelFile, featureFile, relevanceThreshold, stoplist);
+    }
+	
+    public static TargetClassifier create(String modelFile,
+                                          String featureFile,
+                                          double relevanceThreshold,
+                                          StopList stoplist)
+                                          throws IOException {
         try {
             ParameterFile featureConfig = new ParameterFile(featureFile);
 
@@ -167,8 +181,6 @@ public class WekaTargetClassifier implements TargetClassifier {
             Instances insts = new Instances("target_classification", vectorAtt, 1);
             insts.setClassIndex(attributes.length);
             
-            StopList stoplist = new StopListFile(stopwordsFile);
-
             return new WekaTargetClassifier(classifier, relevanceThreshold, insts, attributes, stoplist);
 
         } catch (FileNotFoundException e) {
