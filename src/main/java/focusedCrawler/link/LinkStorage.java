@@ -275,7 +275,7 @@ public class LinkStorage extends StorageDefault{
             StopList stoplist = new StopListFile(stoplistFile);
             LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
             
-            LinkClassifierBuilder cb = new LinkClassifierBuilder(graphRep, stoplist, wrapper, frontierManager.getFrontier());
+            LinkClassifierBuilder cb = new LinkClassifierBuilder(dataPath, graphRep, stoplist, wrapper, frontierManager.getFrontier());
             
             logger.info("ONLINE LEARNING:" + config.getOnlineMethod());
             OnlineLearning onlineLearning = new OnlineLearning(frontierManager.getFrontier(), manager, cb, config.getOnlineMethod(), dataPath + "/" + config.getTargetStorageDirectory());

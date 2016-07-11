@@ -1,14 +1,17 @@
 package focusedCrawler.link.classifier.builder;
 
 import java.io.BufferedOutputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.Reader;
 import java.io.StringReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -17,6 +20,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.Vector;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.BipartiteGraphRepository;
 import focusedCrawler.link.classifier.LinkClassifier;
@@ -31,115 +37,134 @@ import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
 import weka.classifiers.Classifier;
 import weka.core.Instances;
+import weka.core.SerializationHelper;
 
 public class LinkClassifierBuilder {
+    
+    private static final Logger logger = LoggerFactory.getLogger(LinkClassifierBuilder.class);
 
 	private BipartiteGraphRepository graphRep;
-	
 	private LinkNeighborhoodWrapper wrapper;
-
 	private StopList stoplist;
-
 	private PorterStemmer stemmer;
-
 	private Frontier frontier;
-	
 	private String[] features;
 	
-	public LinkClassifierBuilder(BipartiteGraphRepository graphRep, StopList stoplist, LinkNeighborhoodWrapper wrapper, Frontier frontier){
-//	public ClassifierBuilder(BipartiteGraphRep graphRep, StopList stoplist, WrapperNeighborhoodLinks wrapper){
+	private Path linkClassifierFolder;
+	
+	public LinkClassifierBuilder(String dataPath, BipartiteGraphRepository graphRep, StopList stoplist, LinkNeighborhoodWrapper wrapper, Frontier frontier){
 		this.graphRep = graphRep;
 		this.stemmer = new PorterStemmer();
 		this.stoplist = stoplist;
 		this.wrapper = wrapper;
 		this.frontier = frontier;
-	}
-	
-	public LinkClassifierBuilder(LinkNeighborhoodWrapper wrapper, StopList stoplist) throws IOException{
-		this.stoplist = stoplist;
-		this.stemmer = new PorterStemmer();
-		this.wrapper = wrapper;
-	}
-
-	public void writeFile(Vector<Vector<LinkNeighborhood>> instances, String output) throws IOException{
-		String weka = createWekaInput(instances,false);
-		OutputStream fout= new FileOutputStream(output,false);
-    	OutputStream bout= new BufferedOutputStream(fout);
-    	OutputStreamWriter outputFile = new OutputStreamWriter(bout);
-    	outputFile.write(weka);
-    	outputFile.close();
-	}
-	
-	public Classifier loadClassifier(Reader reader) throws Exception{
-		Instances data = new Instances(reader);
-		reader.close();
-		data.setClassIndex(data.numAttributes() - 1);
-		 // create new instance of scheme
-		Classifier classifier = new weka.classifiers.functions.SMO();
-		 // set options
-		classifier.setOptions(weka.core.Utils.splitOptions("-C 1.0 -L 0.0010 -P 1.0E-12 -N 0 -M -V -1 -W 1 -K \"weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0\" -no-cv"));
-		classifier.buildClassifier(data);
-		return classifier;
+		this.linkClassifierFolder = Paths.get(dataPath, "/link_classifier/");
+        if (!Files.exists(linkClassifierFolder)) {
+            try {
+                Files.createDirectories(linkClassifierFolder);
+            } catch (IOException e) {
+                throw new RuntimeException("Failed to create link classifier folder: "
+                        + linkClassifierFolder.toString(), e);
+            }
+        }
 	}
 	
 	public LinkClassifier forwardlinkTraining(HashSet<String> relSites, int levels, String className) throws Exception{
-		Vector<Vector<LinkNeighborhood>> instances = null;
-		if(levels == 0){//pos and neg case
-			instances = new Vector<Vector<LinkNeighborhood>>(2);
-			instances.add(new Vector<LinkNeighborhood>());
-			instances.add(new Vector<LinkNeighborhood>());			
-		}else{//levels case
-			instances = new Vector<Vector<LinkNeighborhood>>(levels);
-			for (int i = 0; i < levels; i++) {
-				instances.add(new Vector<LinkNeighborhood>());	
-			}
-		}
-		HashSet<String> visitedLinks = frontier.visitedLinks();
-		for(Iterator<String> iterator = visitedLinks.iterator(); iterator.hasNext();) {
-			String strURL = (String) iterator.next();
-			URL url = new URL(strURL);
-			URL normalizedURL = url; //new URL(url.getProtocol(), url.getHost(), "/");
-			LinkNeighborhood ln = graphRep.getLN(normalizedURL);
-			if(ln == null){
-				continue;
-			}
+		
+	    Vector<Vector<LinkNeighborhood>> instances = loadTrainingInstances(relSites, levels);
+		
+		String wekaInputAsString = createWekaInput(instances, false);
+        
+		logger.info("Training new link classifier...");
+		Classifier classifier = trainWekaClassifier(wekaInputAsString);
 
-			if(levels == 0){
-				if(relSites.contains(normalizedURL.toString())){
-					instances.elementAt(0).add(ln);
-//					System.out.println("POS:" + normalizedURL.toString());
-				}else{
-					if(instances.elementAt(1).size() < instances.elementAt(0).size()){
-						instances.elementAt(1).add(ln);
-//						System.out.println("NEG:" + normalizedURL.toString());
-					}
-				}
-			}else{
-				if(relSites.contains(ln.getLink().toString())){
-					instances.elementAt(0).add(ln);
-					addBacklinks(instances,ln.getLink(),1, levels, relSites);
-				}
-			}
-		}
-		StringReader reader = new StringReader(createWekaInput(instances,false));
-		Classifier classifier = loadClassifier(reader);
-		weka.core.SerializationHelper.write("conf/link_storage/link_classifier.model",classifier);
-		OutputStream fout= new FileOutputStream("conf/link_storage/link_classifier.features",false);
-    	OutputStream bout= new BufferedOutputStream(fout);
-    	OutputStreamWriter outputFile = new OutputStreamWriter(bout);
-    	for (int i = 0; i < features.length; i++) {
-        	outputFile.write(features[i] + " ");			
-		}
-    	outputFile.close();
+        String modelFile = linkClassifierFolder.resolve("link_classifier.model").toString();
+        String featuresFile = linkClassifierFolder.resolve("link_classifier.features").toString();
+        
+        logger.info("Link Clasifier model file: "+modelFile);
+        logger.info("Link Clasifier features file: "+featuresFile);
+        
+        SerializationHelper.write(modelFile, classifier);
+        writeFeaturesFile(featuresFile, features);
 
-		String[] classValues = null;
-		if(levels == 0){
-			classValues = new String[]{"POS","NEG"};
-		}else{
-			classValues = new String[]{"0","1","2"};
-		}
-		return LinkClassifierFactoryImpl.createLinkClassifierImpl(features, classValues, classifier, className,levels);
+        String[] classValues = null;
+        if (levels == 0) {
+            classValues = new String[] {"POS", "NEG"};
+        } else {
+            classValues = new String[] {"0", "1", "2"};
+        }
+        
+        return LinkClassifierFactoryImpl.createLinkClassifierImpl(
+                features, classValues, classifier, className, levels);
 	}
+    
+    public Classifier trainWekaClassifier(String wekaInputAsString) throws Exception {
+        Instances data = null;
+        try(StringReader reader = new StringReader(wekaInputAsString)) {
+            data = new Instances(reader);
+        }
+        data.setClassIndex(data.numAttributes() - 1);
+        Classifier classifier = new weka.classifiers.functions.SMO();
+        classifier.setOptions(weka.core.Utils.splitOptions("-C 1.0 -L 0.0010 -P 1.0E-12 -N 0 -M -V -1 -W 1 -K \"weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0\" -no-cv"));
+        classifier.buildClassifier(data);
+        return classifier;
+    }
+
+    private void writeFeaturesFile(String featuresFile, String[] features)
+            throws FileNotFoundException, IOException {
+        OutputStream fout = new FileOutputStream(featuresFile, false);
+        OutputStream bout = new BufferedOutputStream(fout);
+        OutputStreamWriter outputFile = new OutputStreamWriter(bout);
+        for (int i = 0; i < features.length; i++) {
+            outputFile.write(features[i] + " ");
+        }
+        outputFile.close();
+    }
+
+    private Vector<Vector<LinkNeighborhood>> loadTrainingInstances(
+            HashSet<String> relSites, int levels)
+            throws Exception,
+                   MalformedURLException,
+                   IOException {
+
+        Vector<Vector<LinkNeighborhood>> instances = null;
+        if (levels == 0) {// pos and neg case
+            instances = new Vector<Vector<LinkNeighborhood>>(2);
+            instances.add(new Vector<LinkNeighborhood>());
+            instances.add(new Vector<LinkNeighborhood>());
+        } else { // levels case
+            instances = new Vector<Vector<LinkNeighborhood>>(levels);
+            for (int i = 0; i < levels; i++) {
+                instances.add(new Vector<LinkNeighborhood>());
+            }
+        }
+
+        HashSet<String> visitedLinks = frontier.visitedLinks();
+        for (Iterator<String> iterator = visitedLinks.iterator(); iterator.hasNext();) {
+            URL url = new URL(iterator.next());
+            
+            LinkNeighborhood ln = graphRep.getLN(url);
+            if (ln == null) {
+                continue;
+            }
+
+            if (levels == 0) {
+                if (relSites.contains(url.toString())) {
+                    instances.elementAt(0).add(ln);
+                } else {
+                    if (instances.elementAt(1).size() < instances.elementAt(0).size()) {
+                        instances.elementAt(1).add(ln);
+                    }
+                }
+            } else {
+                if (relSites.contains(ln.getLink().toString())) {
+                    instances.elementAt(0).add(ln);
+                    addBacklinks(instances, ln.getLink(), 1, levels, relSites);
+                }
+            }
+        }
+        return instances;
+    }
 	
 	
 	private void addBacklinks(Vector<Vector<LinkNeighborhood>> instances, URL url, int level, int limit, HashSet<String> relSites) throws IOException{
@@ -201,13 +226,11 @@ public class LinkClassifierBuilder {
 	   		  	aroundTemp.toArray(aroundArray);
 	   		  	ln.setAround(aroundArray);
 			}
-//			System.out.println(i + ":" + trainingSet.elementAt(i).getWord() + "=" + trainingSet.elementAt(i).getWeight());
 			allLNs.add(ln);
 		}
 		int sampleSize = Math.min(5000,allLNs.size()/2);
 		for (int i = 0; i < allLNs.size(); i++) {
 			if(posSites.size() < sampleSize){
-//				System.out.println(">>" +allLNs.elementAt(i).getLink().toString());
 				posSites.add(allLNs.elementAt(i));
 			}
 		}
@@ -216,97 +239,100 @@ public class LinkClassifierBuilder {
 				negSites.add(allLNs.elementAt(i));
 			}
 		}
+		
 		LinkNeighborhood[] pos = new LinkNeighborhood[posSites.size()];
 		posSites.toArray(pos);
+		
 		LinkNeighborhood[] neg = new LinkNeighborhood[negSites.size()];
 		negSites.toArray(neg);
-//		execute(pos,neg, new File("/home/lbarbosa/parallel_corpus/pc_crawler1/wekaInput.arff"));
-		StringReader reader = new StringReader(createWekaInput(instances,true));
-		Classifier classifier = loadClassifier(reader);
+		
+		String wekaInput = createWekaInput(instances, true);
+		
+		Classifier classifier = trainWekaClassifier(wekaInput);
+		
 		String[] classValues = new String[]{"POS","NEG"};
 		return LinkClassifierFactoryImpl.createLinkClassifierImpl(features, classValues, classifier, "LinkClassifierHub",0);
 	}
 
 
-	/**
-	 * Creates the weka input file
-	 * @param instances
-	 * @param backlink
-	 * @return
-	 * @throws IOException
-	 */
-	private String createWekaInput(Vector<Vector<LinkNeighborhood>> instances, boolean backlink) throws IOException {
-		
-//		FileOutputStream fout = new FileOutputStream(new File(outputFile),false);
-//		DataOutputStream dout = new DataOutputStream(fout);
-		
-		StringBuffer output = new StringBuffer();
-		output.append("@relation classifier\n");
-		Vector<LinkNeighborhood> allInstances = new Vector<LinkNeighborhood>();
-		for (int i = 0; i < instances.size(); i++) {
-			allInstances.addAll(instances.elementAt(i));
-		}
-		features = selectBestFeatures(allInstances,backlink);
-		for (int i = 0; i < features.length; i++) {
-			output.append ("@attribute " + features[i] + " REAL \n");
-		}
-		output.append("@attribute class {");
-		for (int i = 1; i < instances.size(); i++) {
-			output.append(i+",");	
-		}
-		output.append(instances.size()+"}\n");
-		output.append("\n");
-		output.append("@data\n");
-		output.append(generatLines(features,instances));
-//		dout.writeBytes(output.toString());
-//		dout.close();
-//		StringReader reader = new StringReader(output.toString());
-		return output.toString();
-	}
+    /**
+     * Creates the weka input file
+     * 
+     * @param instances
+     * @param backlink
+     * @return
+     * @throws IOException
+     */
+    private String createWekaInput(Vector<Vector<LinkNeighborhood>> instances, boolean backlink)
+            throws IOException {
 
-	/**
-	 * This method creates the a line in the weka file for each instance
-	 * @param features
-	 * @param instances
-	 * @return
-	 * @throws IOException
-	 */
-	private String generatLines(String[] features, Vector<Vector<LinkNeighborhood>> instances) throws IOException {
-		StringBuffer buffer = new StringBuffer();
-		for (int i = 0; i < instances.size(); i++) {
-			Vector<LinkNeighborhood> level = instances.elementAt(i);
-			System.out.println(level.size());
-			for (int j = 0; j < level.size(); j++) {
-				LinkNeighborhood ln = level.elementAt(j);
-				StringBuffer line = new StringBuffer();
-				HashMap<String, Instance> featureValue = wrapper.extractLinks(ln,features);
-				Iterator<String> iter = featureValue.keySet().iterator();
-				while(iter.hasNext()){
-					String url = (String) iter.next();
-					Instance instance = (Instance) featureValue.get(url);
-					double[] values = instance.getValues();
-					line.append("{");
-					boolean containsValue = false;
-					for (int l = 0; l < values.length; l++) {
-						if(values[l] > 0){
-							containsValue = true;
-							line.append(l + " " +(int)values[l]);
-							line.append(",");
-						}
-					}
-					line.append(values.length + " " + (i+1));
-					line.append("}");
-					line.append("\n");
-					if(containsValue){
-						buffer.append(line);
-					}else{
-						line = new StringBuffer();        	   
-					}
-				}
-			}
-		}
-		return buffer.toString();
-	}
+        StringBuffer output = new StringBuffer();
+        output.append("@relation classifier\n");
+        Vector<LinkNeighborhood> allInstances = new Vector<LinkNeighborhood>();
+        for (int i = 0; i < instances.size(); i++) {
+            allInstances.addAll(instances.elementAt(i));
+        }
+        features = selectBestFeatures(allInstances, backlink);
+        for (int i = 0; i < features.length; i++) {
+            output.append("@attribute " + features[i] + " REAL \n");
+        }
+        output.append("@attribute class {");
+        for (int i = 1; i < instances.size(); i++) {
+            output.append(i + ",");
+        }
+        output.append(instances.size() + "}\n");
+        output.append("\n");
+        output.append("@data\n");
+        output.append(generatLines(features, instances));
+
+        return output.toString();
+    }
+
+    /**
+     * This method creates the a line in the weka file for each instance
+     * 
+     * @param features
+     * @param instances
+     * @return
+     * @throws IOException
+     */
+    private String generatLines(String[] features, Vector<Vector<LinkNeighborhood>> instances)
+            throws IOException {
+        StringBuffer buffer = new StringBuffer();
+        for (int i = 0; i < instances.size(); i++) {
+            Vector<LinkNeighborhood> level = instances.elementAt(i);
+            System.out.println(level.size());
+            for (int j = 0; j < level.size(); j++) {
+                LinkNeighborhood ln = level.elementAt(j);
+                StringBuffer line = new StringBuffer();
+                HashMap<String, Instance> featureValue = wrapper.extractLinks(ln, features);
+                Iterator<String> iter = featureValue.keySet().iterator();
+                while (iter.hasNext()) {
+                    String url = (String) iter.next();
+                    Instance instance = (Instance) featureValue.get(url);
+                    double[] values = instance.getValues();
+                    line.append("{");
+                    boolean containsValue = false;
+                    for (int l = 0; l < values.length; l++) {
+                        if (values[l] > 0) {
+                            containsValue = true;
+                            line.append(l + " " + (int) values[l]);
+                            line.append(",");
+                        }
+                    }
+                    line.append(values.length + " " + (i + 1));
+                    line.append("}");
+                    line.append("\n");
+                    if (containsValue) {
+                        buffer.append(line);
+                    } else {
+                        line = new StringBuffer();
+                    }
+                }
+            }
+        }
+        return buffer.toString();
+    }
 
 	/**
 	 * This method selects the  features to be used by the classifier.
