@@ -40,7 +40,7 @@ public class TargetClassifierFactory {
     }
 
     public static TargetClassifier create(String modelPath) throws IOException {
-        return create(modelPath, 0.0, null);
+        return create(modelPath, 0.5, null);
     }
     
     public static TargetClassifier create(String modelPath,
