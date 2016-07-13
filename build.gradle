@@ -56,6 +56,12 @@ dependencies {
 
 // TODO create binary for running focusedCrawler.link.LinkStorage, focusedCrawler.crawler.CrawlerManager, focusedCrawler.link.frontier.AddSeeds
 
+// Task for running any class. To execute a class named focusedCrawler.Boo, run:
+// ./gradlew -PmainClass=focusedCrawler.Boo execute
+task execute(type:JavaExec) {
+   main = mainClass
+   classpath = sourceSets.main.runtimeClasspath
+}
 
 //
 // Adds version to final JAR artifact
