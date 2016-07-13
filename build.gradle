@@ -59,8 +59,8 @@ dependencies {
 // Task for running any class. To execute a class named focusedCrawler.Boo, run:
 // ./gradlew -PmainClass=focusedCrawler.Boo execute
 task execute(type:JavaExec) {
-   main = mainClass
-   classpath = sourceSets.main.runtimeClasspath
+    main = project.hasProperty('mainClass') ? mainClass : mainClassName
+    classpath = sourceSets.main.runtimeClasspath
 }
 
 //
