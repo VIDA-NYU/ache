@@ -19,9 +19,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.zip.InflaterInputStream;
 
 import org.apache.commons.compress.utils.IOUtils;
-import org.apache.http.client.entity.DeflateInputStream;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
@@ -91,10 +91,29 @@ public class FileSystemTargetRepositoryTest {
         assertThat(fileBytes, is(notNullValue()));
         assertThat(fileBytes.length < html.getBytes().length, is(true));
         
-        InputStream gzip = new DeflateInputStream(new ByteArrayInputStream(fileBytes));
+        InputStream gzip = new InflaterInputStream(new ByteArrayInputStream(fileBytes));
         byte[] uncompressedBytes = IOUtils.toByteArray(gzip);
         String content = new String(uncompressedBytes);
         assertThat(content, is(html));
+    }
+	
+	
+	@Test
+    public void shouldStoreAndReadCompressedContent() throws IOException {
+        // given
+        boolean compressData = true;
+        String folder = tempFolder.newFolder().toString();
+        Page target = new Page(new URL(url), html);
+        FileSystemTargetRepository repository = new FileSystemTargetRepository(Paths.get(folder), DataFormat.JSON, false, compressData);
+        
+        // when
+        repository.insert(target);
+        TargetModelJson jsonModel = repository.get(url);
+        
+        // then
+        assertThat(jsonModel, is(notNullValue()));
+        assertThat(jsonModel.getUrl(), is(url));
+        assertThat(jsonModel.getResponseBody(), is(html));
     }
 	
 	@Test
@@ -187,9 +206,11 @@ public class FileSystemTargetRepositoryTest {
     }
 	
 	@Test
-    public void sholdIterateOVerInsertedPages() throws IOException {
+    public void sholdIterateOverInsertedPages() throws IOException {
         // given
         boolean hashFilename = true;
+        boolean compressData = true;
+        
         String folder = tempFolder.newFolder().toString(); 
         
         String url1 = "http://a.com";
@@ -198,7 +219,7 @@ public class FileSystemTargetRepositoryTest {
         Page target1 = new Page(new URL(url1), html);
         Page target2 = new Page(new URL(url2), html);
         
-        FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, hashFilename);
+        FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, hashFilename, compressData);
         
         // when
         repository.insert(target1);

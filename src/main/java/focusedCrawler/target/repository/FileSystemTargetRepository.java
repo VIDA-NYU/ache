@@ -15,8 +15,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Iterator;
-import java.util.zip.DeflaterInputStream;
 import java.util.zip.DeflaterOutputStream;
+import java.util.zip.InflaterInputStream;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.compress.utils.IOUtils;
@@ -198,7 +198,7 @@ public class FileSystemTargetRepository implements TargetRepository {
         }
         try (InputStream fileStream = new FileInputStream(filePath.toFile())) {
             if(compressData) {
-                try(InputStream gzipStream = new DeflaterInputStream(fileStream)) {
+                try(InputStream gzipStream = new InflaterInputStream(fileStream)) {
                     return unserializeData(gzipStream);
                 }
             } else {
@@ -255,9 +255,9 @@ public class FileSystemTargetRepository implements TargetRepository {
             Path filePath = fileIterator.next();
             try {
                 return readFile(filePath);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 String f = filePath == null ? null : filePath.toString();
-                throw new IllegalStateException("Failed to read file: "+f);
+                throw new IllegalStateException("Failed to read file: "+f, e);
             }
         }
         
