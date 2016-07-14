@@ -60,6 +60,8 @@ public class AcheToCdrFileExporter {
         
         System.out.println("Reading ACHE data from: "+inputPath);
         System.out.println("Generating CDR file at: "+outputFile);
+        System.out.println(" Compressed repository: "+compressData);
+        System.out.println("      Hashed file name: "+hashFilename);
         
         FileSystemTargetRepository repository =
                 new FileSystemTargetRepository(inputPath, dataFormat, hashFilename, compressData);
@@ -67,11 +69,12 @@ public class AcheToCdrFileExporter {
         PrintWriter out = new PrintWriter(
                 new GZIPOutputStream(new BufferedOutputStream(new FileOutputStream(outputFile))), true);
 
+        int processedPages = 0;
         Iterator<TargetModelJson> it = repository.iterator();
         while (it.hasNext()) {
-
+            
             TargetModelJson pageModel = it.next();
-
+            
             String contentType = pageModel.getContentType();
 
             if (contentType == null || contentType.isEmpty()) {
@@ -98,6 +101,10 @@ public class AcheToCdrFileExporter {
                     .withCrawlData(crawlData);
 
             out.println(builder.buildAsJson());
+            processedPages++;
+            if(processedPages % 100 == 0) {
+                System.out.printf("Processed %d pages\n", processedPages);
+            }
         }
         out.close();
         System.out.println("done.");
