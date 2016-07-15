@@ -1,5 +1,6 @@
 package focusedCrawler.target.repository;
 
+import java.io.Closeable;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,6 +12,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -226,15 +228,15 @@ public class FileSystemTargetRepository implements TargetRepository {
     }
     
     
-    public <T> Iterator<T> iterator() {
+    public <T> FileContentIterator<T> iterator() {
         return new FileContentIterator<T>(new FilesIterator(directory));
     }
 
-    public Iterator<Path> filesIterator() {
+    public FilesIterator filesIterator() {
         return new FilesIterator(directory);
     };
     
-    public class FileContentIterator<T> implements Iterator<T> {
+    public class FileContentIterator<T> implements Iterator<T>, Closeable {
         
         private FilesIterator fileIterator;
 
@@ -265,20 +267,29 @@ public class FileSystemTargetRepository implements TargetRepository {
         public void remove() {
             throw new UnsupportedOperationException("remove");
         }
+
+        @Override
+        public void close() {
+            fileIterator.close();
+        }
         
     }
     
-    public class FilesIterator implements Iterator<Path> {
+    public class FilesIterator implements Iterator<Path>, Closeable {
         
         private Path next;
         private Iterator<Path> fileIt;
         private Iterator<Path> hostIt;
+        private DirectoryStream<Path> hostsStream;
+        private DirectoryStream<Path> filesStream;
 
         public FilesIterator(Path directory) {
             try {
-                hostIt = Files.newDirectoryStream(directory).iterator();
+                hostsStream = Files.newDirectoryStream(directory);
+                hostIt = hostsStream.iterator();
                 if(hostIt.hasNext()) {
-                    fileIt = Files.newDirectoryStream(hostIt.next()).iterator();
+                    filesStream = Files.newDirectoryStream(hostIt.next());
+                    fileIt = filesStream.iterator();
                 }
             } catch (IOException e) {
                 throw new IllegalArgumentException("Failed to open target repository folder: "+directory, e);
@@ -288,14 +299,17 @@ public class FileSystemTargetRepository implements TargetRepository {
         
         private Path readNext() {
             if(fileIt != null && !fileIt.hasNext()) {
+                IOUtils.closeQuietly(filesStream); // no more files on this folder, close it.
                 if(!hostIt.hasNext()) {
+                    IOUtils.closeQuietly(hostsStream);
                     return null; // no more file and folders available
                 }
                 // iterate over next folder available
                 Path hostPath = null;
                 try {
                     hostPath = hostIt.next();
-                    fileIt = Files.newDirectoryStream(hostPath).iterator();
+                    filesStream = Files.newDirectoryStream(hostPath);
+                    fileIt = filesStream.iterator();
                 } catch (IOException e) {
                     String f = hostPath == null ? null : hostPath.toString();
                     throw new IllegalArgumentException("Failed to open host folder: "+f, e);
@@ -328,6 +342,12 @@ public class FileSystemTargetRepository implements TargetRepository {
         @Override
         public void remove() {
             throw new UnsupportedOperationException("remove");
+        }
+
+        @Override
+        public void close() {
+            IOUtils.closeQuietly(filesStream);
+            IOUtils.closeQuietly(hostsStream);
         }
         
     }

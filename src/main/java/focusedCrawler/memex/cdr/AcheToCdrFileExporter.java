@@ -1,12 +1,10 @@
 package focusedCrawler.memex.cdr;
 
-import java.io.BufferedOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.zip.GZIPOutputStream;
 
 import org.kohsuke.args4j.CmdLineException;
@@ -19,6 +17,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
+import focusedCrawler.target.repository.FileSystemTargetRepository.FileContentIterator;
 
 public class AcheToCdrFileExporter {
     
@@ -66,11 +65,11 @@ public class AcheToCdrFileExporter {
         FileSystemTargetRepository repository =
                 new FileSystemTargetRepository(inputPath, dataFormat, hashFilename, compressData);
 
-        PrintWriter out = new PrintWriter(
-                new GZIPOutputStream(new BufferedOutputStream(new FileOutputStream(outputFile))), true);
+        PrintWriter out =
+                new PrintWriter(new GZIPOutputStream(new FileOutputStream(outputFile)), true);
 
         int processedPages = 0;
-        Iterator<TargetModelJson> it = repository.iterator();
+        FileContentIterator<TargetModelJson> it = repository.iterator();
         while (it.hasNext()) {
             
             TargetModelJson pageModel = it.next();
@@ -100,12 +99,16 @@ public class AcheToCdrFileExporter {
                     .withRawContent(pageModel.getResponseBody())
                     .withCrawlData(crawlData);
 
-            out.println(builder.buildAsJson());
+            String json = builder.buildAsJson();
+            if(json != null) {
+                out.println(json);
+            }
             processedPages++;
             if(processedPages % 100 == 0) {
                 System.out.printf("Processed %d pages\n", processedPages);
             }
         }
+        it.close();
         out.close();
         System.out.println("done.");
     }
