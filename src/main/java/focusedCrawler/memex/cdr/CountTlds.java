@@ -71,7 +71,7 @@ public class CountTlds {
         int processedPages = 0;
         Map<String,Integer> tldCounts = new HashMap<String, Integer>();
         for(File file : files) {
-            
+            System.out.printf("Processing file: %s\n", file.getCanonicalPath());
             try(BufferedReader in = openGzipFile(file)) {
                 String line;
                 while((line = in.readLine()) != null) {
