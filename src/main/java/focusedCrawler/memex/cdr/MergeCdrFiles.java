@@ -10,11 +10,13 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
@@ -36,8 +38,11 @@ public class MergeCdrFiles {
     @Option(name="--output-file", usage="Gziped output file containing data formmated as per CDR 2.0 schema", required=true)
     private String outputFile;
     
-    @Option(name="--modelPath", usage="Model path to filter pages out.")
+    @Option(name="--modelPath", usage="Model path to filter pages out")
     private String modelPath;
+    
+    @Option(name="--dedup", usage="Whether merge shoud filter duplications")
+    private boolean dedup;
 
     private static final ObjectMapper mapper = new ObjectMapper();
 
@@ -45,7 +50,7 @@ public class MergeCdrFiles {
     private PrintWriter out;
     private AtomicInteger processedPages = new AtomicInteger(0);
     private AtomicInteger discardedPages = new AtomicInteger(0);
-
+    private HashSet<String> uniqueSet = new HashSet<>();
     private BufferedReader in;
 
     private Iterator<File> files;
@@ -100,7 +105,8 @@ public class MergeCdrFiles {
         in.close();
         out.close();
         
-        System.out.printf("%d files processed.", processedPages.intValue());
+        System.out.printf("%d discarded out of %d files processed.\n",
+                          discardedPages.intValue(), processedPages.intValue());
     }
     
     class LineClassifier extends Thread {
@@ -109,18 +115,32 @@ public class MergeCdrFiles {
             String line = readLine();
             while(line != null) {
                 try {
-                    TargetRelevance relevance = classify(line);
-                    if (relevance.isRelevant()) {
-                        synchronized (out) {
-                            out.println(line);
+                    CDRDocument doc = mapper.readValue(line, CDRDocument.class);
+                    
+                    boolean discard = true;
+                    String hash = hashDocument(doc);
+                    
+                    if(!uniqueSet.contains(hash)) {
+                        uniqueSet.add(hash);
+                        TargetRelevance relevance = classify(doc);
+                        if (relevance.isRelevant()) {
+                            synchronized (out) {
+                                discard = false;
+                            }
                         }
-                    } else {
-                        discardedPages .incrementAndGet();
                     }
+                    
+                    if(discard) {
+                        discardedPages .incrementAndGet();
+                    } else {
+                        out.println(line);
+                    }
+                    
                     int count = processedPages.incrementAndGet();
                     if (count % 100 == 0) {
                         System.out.printf("%d discarded pages out of %d processed pages\n", discardedPages.intValue(), count);
                     }
+                    
                 } catch (Exception e) {
                     new Exception("Failed to classify page.", e).printStackTrace();
                 }
@@ -151,9 +171,7 @@ public class MergeCdrFiles {
         return new BufferedReader(new InputStreamReader(new GZIPInputStream(new FileInputStream(file), 512*4096)));
     }
 
-    private TargetRelevance classify(String line) throws Exception {
-        
-        CDRDocument doc = mapper.readValue(line, CDRDocument.class);
+    private TargetRelevance classify(CDRDocument doc) throws Exception {
         
         Page page = new Page(new URL(doc.getUrl()), new String(doc.getRawContent()));
         PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
@@ -165,6 +183,17 @@ public class MergeCdrFiles {
             System.out.printf("%d %.3f %s\n", count, relevance.getRelevance(), doc.getUrl());
         }
         return relevance;
+    }
+
+    private String hashDocument(CDRDocument doc) {
+        String url = doc.getUrl();
+        url = url.replaceFirst("https?://", "");
+        if (url.endsWith("/")) {
+            url = url.substring(0, url.length() - 1);
+        }
+        String contentHash = DigestUtils.sha1Hex(doc.getRawContent());
+        String urlHash= DigestUtils.sha1Hex(doc.getUrl());
+        return DigestUtils.md5Hex(urlHash+contentHash);
     }
 
 }
