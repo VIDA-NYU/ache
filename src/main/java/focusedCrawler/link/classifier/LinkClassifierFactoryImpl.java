@@ -23,18 +23,17 @@
 */
 package focusedCrawler.link.classifier;
 
-import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
-import focusedCrawler.util.ParameterFile;
-import focusedCrawler.util.string.StopListFile;
-import focusedCrawler.util.string.StopList;
-import weka.core.Instances;
-import weka.classifiers.Classifier;
-
 import java.io.IOException;
 import java.nio.file.Paths;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
+import focusedCrawler.util.ParameterFile;
+import focusedCrawler.util.string.StopList;
+import weka.classifiers.Classifier;
+import weka.core.Instances;
 
 
 /**
@@ -56,13 +55,9 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
 
   private String modelPath;
 
-  public LinkClassifierFactoryImpl(String stoplistFile, String modelPath) {
+  public LinkClassifierFactoryImpl(StopList stoplist, String modelPath) {
     this.modelPath = modelPath;
-    try {
-		stoplist = new StopListFile(stoplistFile);
-	} catch (IOException e) {
-		throw new IllegalArgumentException("Could not load stopwords from file: "+stoplistFile, e);
-	}
+	LinkClassifierFactoryImpl.stoplist = stoplist;
   }
 
 

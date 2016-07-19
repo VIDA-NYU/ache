@@ -26,6 +26,9 @@ package focusedCrawler.link;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -258,12 +261,19 @@ public class LinkStorage extends StorageDefault{
                                                    FrontierPersistentException,
                                                    IOException {
 
-        String stoplistFile = configPath + "/stoplist.txt";
         
-        LinkClassifierFactory linkClassifierFactory = new LinkClassifierFactoryImpl(stoplistFile, modelPath);
+        Path stoplistPath = Paths.get(configPath, "/stoplist.txt");
+        StopList stoplist;
+        if(Files.exists(stoplistPath)) {
+            stoplist = new StopListFile(stoplistPath.toFile().getCanonicalPath());
+        } else {
+            stoplist = StopListFile.DEFAULT;
+        }
+        
+        LinkClassifierFactory linkClassifierFactory = new LinkClassifierFactoryImpl(stoplist, modelPath);
         LinkClassifier linkClassifier = linkClassifierFactory.createLinkClassifier(config.getTypeOfClassifier());
 
-        FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, seedFile, stoplistFile);
+        FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, seedFile);
 
         BipartiteGraphRepository graphRep = new BipartiteGraphRepository(dataPath);
 
@@ -272,7 +282,6 @@ public class LinkStorage extends StorageDefault{
         LinkStorage linkStorage = new LinkStorage(config, manager, frontierManager);
 
         if (config.isUseOnlineLearning()) {
-            StopList stoplist = new StopListFile(stoplistFile);
             LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
             
             LinkClassifierBuilder cb = new LinkClassifierBuilder(dataPath, graphRep, stoplist, wrapper, frontierManager.getFrontier());

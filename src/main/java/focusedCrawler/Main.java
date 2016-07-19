@@ -172,10 +172,11 @@ public class Main {
     }
 
     private static void buildModel(CommandLine cmd) throws MissingArgumentException {
-        String stopWordsFile = getMandatoryOptionValue(cmd, "stopWordsFile");
-        String trainingPath = getMandatoryOptionValue(cmd, "trainingDataDir");
-        String outputPath = getMandatoryOptionValue(cmd, "outputDir"); 
-        String learner = getOptionalOptionValue(cmd, "learner");
+        
+        String trainingPath  = getMandatoryOptionValue(cmd, "trainingDataDir");
+        String outputPath    = getMandatoryOptionValue(cmd, "outputDir"); 
+        String stopWordsFile = getOptionalOptionValue(cmd, "stopWordsFile");
+        String learner       = getOptionalOptionValue(cmd, "learner");
         
         new File(outputPath).mkdirs();
         
@@ -199,8 +200,7 @@ public class Main {
         String configPath = getMandatoryOptionValue(cmd, "configDir");
         String seedPath = getMandatoryOptionValue(cmd, "seed");
         ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-        FrontierManager frontierManager = FrontierManagerFactory
-                .create(config.getLinkStorageConfig(), configPath, dataOutputPath, seedPath, null);
+        FrontierManager frontierManager = FrontierManagerFactory.create(config.getLinkStorageConfig(), configPath, dataOutputPath, seedPath);
         frontierManager.close();
     }
 

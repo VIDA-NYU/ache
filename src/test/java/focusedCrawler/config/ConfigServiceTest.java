@@ -41,7 +41,6 @@ public class ConfigServiceTest {
         assertThat(config.isSaveNegativePages(), is(false));
         assertThat(config.getVisitedPageLimit(), is(12345));
         assertThat(config.isEnglishLanguageDetectionEnabled(), is(false));
-        assertThat(config.getRelevanceThreshold(), is(0.6f));
         assertThat(config.isHardFocus(), is(false));
         assertThat(config.isBipartite(), is(true));
         

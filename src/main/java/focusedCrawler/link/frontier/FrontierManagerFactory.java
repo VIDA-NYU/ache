@@ -26,8 +26,7 @@ public class FrontierManagerFactory {
     public static FrontierManager create(LinkStorageConfig config,
                                   String configPath,
                                   String dataPath,
-                                  String seedFile,
-                                  String stoplistFile) {
+                                  String seedFile) {
         
         String[] seedUrls = ParameterFile.getSeeds(seedFile);
         

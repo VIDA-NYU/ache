@@ -152,8 +152,7 @@ public class TargetStorage extends StorageDefault {
         //if one wants to use a classifier
         TargetClassifier targetClassifier = null;
         if(config.isUseClassifier()){
-            targetClassifier = TargetClassifierFactory.create(
-                    modelPath, config.getRelevanceThreshold(), configPath+"/stoplist.txt");
+            targetClassifier = TargetClassifierFactory.create(modelPath);
         }
 
         Path targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory());

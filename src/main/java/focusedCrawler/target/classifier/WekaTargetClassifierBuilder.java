@@ -34,7 +34,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.net.MalformedURLException;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -48,6 +47,7 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 import focusedCrawler.util.string.StopList;
+import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMElementComparator;
 import focusedCrawler.util.vsm.VSMVector;
@@ -344,23 +344,26 @@ public class WekaTargetClassifierBuilder {
     }
 
   
-    public static void createInputFile(String stopWordsFile, String trainingPath, String wekaInputFile) {
-    	StopList st = null;
+    public static void createInputFile(String stopwordsFile,
+                                       String trainingPath,
+                                       String wekaInputFile) {
     	try {
-    		st = new focusedCrawler.util.string.StopListFile(stopWordsFile);
-    		File dir = new File(trainingPath);
-    		File dirTest = null;
-    		WekaTargetClassifierBuilder createwekainput = new WekaTargetClassifierBuilder(dir, dirTest, st);
-    		createwekainput.centroid2Weka(wekaInputFile);
+    	    StopList stopwords = null;
+    		File testDataPath = null;
+    		File trainingDataPath = new File(trainingPath);
+    		
+    		if(stopwordsFile != null && !stopwordsFile.isEmpty()) {
+    		    stopwords = new StopListFile(stopwordsFile);
+    		} else {
+    		    stopwords = StopListFile.DEFAULT;
+    		}
+    		
+            WekaTargetClassifierBuilder builder =
+                    new WekaTargetClassifierBuilder(trainingDataPath, testDataPath, stopwords);
+            builder.centroid2Weka(wekaInputFile);
     	}
-    	catch (MalformedURLException ex1) {
-    		ex1.printStackTrace();
-    	}
-    	catch (IOException ex1) {
-    		ex1.printStackTrace();
-    	}
-    	catch (SAXException ex1) {
-    		ex1.printStackTrace();
+    	catch (SAXException | IOException ex1) {
+    		throw new RuntimeException("Failed to generate weka input file.", ex1);
     	}
     }
     

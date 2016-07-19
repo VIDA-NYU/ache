@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
+import focusedCrawler.util.string.StopListFile;
+
 public class TargetClassifierFactory {
     
     private static final Logger logger = LoggerFactory.getLogger(TargetClassifierFactory.class);
@@ -21,8 +23,8 @@ public class TargetClassifierFactory {
     static class WekaClassifierConfig {
         public String features_file = "pageclassifier.features";
         public String model_file = "pageclassifier.features";
-        public String stopwords_file = "stoplist.txt";
-        public double relevanceThreshold = 0.9;
+        public String stopwords_file = null;
+        public double relevanceThreshold = 0.5;
     }
     
     static class UrlRegexClassifierConfig {
@@ -40,12 +42,6 @@ public class TargetClassifierFactory {
     }
 
     public static TargetClassifier create(String modelPath) throws IOException {
-        return create(modelPath, 0.5, null);
-    }
-    
-    public static TargetClassifier create(String modelPath,
-                                          double relevanceThreshold,
-                                          String stoplist) throws IOException {
         
         logger.info("Loading TargetClassifier...");
         
@@ -94,7 +90,7 @@ public class TargetClassifierFactory {
         }
         
         // create classic weka classifer to maintain compatibility with older versions
-        return WekaTargetClassifier.create(modelPath, relevanceThreshold, stoplist);
+        return WekaTargetClassifier.create(modelPath, 0.5, StopListFile.DEFAULT);
     }
 
     private static TargetClassifier createKeepLinkRelevanceClassifier(Path basePath,

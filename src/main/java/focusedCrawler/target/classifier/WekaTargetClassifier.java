@@ -31,14 +31,14 @@ import java.io.ObjectInputStream;
 
 import org.xml.sax.SAXException;
 
-import weka.classifiers.Classifier;
-import weka.core.Instances;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListFile;
 import focusedCrawler.util.vsm.VSMElement;
 import focusedCrawler.util.vsm.VSMVector;
+import weka.classifiers.Classifier;
+import weka.core.Instances;
 
 /**
  * <p> </p>
@@ -131,7 +131,7 @@ public class WekaTargetClassifier implements TargetClassifier {
 
 	public static TargetClassifier create(String modelPath,
 	                                      double relevanceThreshold,
-	                                      String stopwordsFile)
+	                                      StopListFile stopwordsFile)
                                           throws IOException {
 	    return create(modelPath + "/pageclassifier.model",
 	                  modelPath + "/pageclassifier.features",

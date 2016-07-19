@@ -26,16 +26,15 @@ public class BuildModelTest {
     @Test
     public void wekaFeaturesFileShouldBeGeneratedInTheProperFormat() throws Exception {
         
-        String stopList     = "config/sample_config/stoplist.txt";
         String trainingPath = BuildModelTest.class.getResource("build_model_test").getFile();
         String modelPath    = tempFolder.newFolder().toString();
         
         // Train a page classifier model
-        String[] args = { "buildModel", "-c", stopList, "-t", trainingPath, "-o", modelPath };
+        String[] args = {"buildModel", "-t", trainingPath, "-o", modelPath};
         Main.main(args);
 
         // Load model trained
-        TargetClassifier tc = TargetClassifierFactory.create(modelPath, 0.9, stopList);
+        TargetClassifier tc = TargetClassifierFactory.create(modelPath);
         
         // Classify one example from training data just for sanity check
         Page samplePositivePage = readOnePageFromFolder(trainingPath+"/positive");

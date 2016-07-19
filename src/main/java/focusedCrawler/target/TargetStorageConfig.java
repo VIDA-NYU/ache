@@ -26,8 +26,6 @@ public class TargetStorageConfig {
     
     @JsonProperty("target_storage.use_classifier")
     private boolean useClassifier = true;
-    @JsonProperty("target_storage.relevance_threshold")
-    private float relevanceThreshold = 0.9f;
     @JsonProperty("target_storage.visited_page_limit")
     private int visitedPageLimit = 90000000;
     @JsonProperty("target_storage.hard_focus")
@@ -65,10 +63,6 @@ public class TargetStorageConfig {
 
     public String getDataFormat() {
         return dataFormat;
-    }
-
-    public float getRelevanceThreshold() {
-        return relevanceThreshold;
     }
 
     public int getVisitedPageLimit() {
