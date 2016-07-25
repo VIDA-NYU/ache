@@ -11,9 +11,10 @@ import focusedCrawler.link.frontier.LinkRelevance;
 public class DownloadSchedulerTest {
 
     @Test
-    public void shouldSelectLinksBasedOnPolitenes() throws Exception {
-        LinkRelevance l1 = new LinkRelevance("http://ex1.com/", 1);
-        LinkRelevance l2 = new LinkRelevance("http://ex2.com/", 2);
+    public void shouldSelectLinksBasedOnPoliteness() throws Exception {
+        
+        LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
+        LinkRelevance l2 = new LinkRelevance("http://ex2.com/2", 2);
         
         LinkRelevance l3 = new LinkRelevance("http://ex1.com/3", 3);
         LinkRelevance l4 = new LinkRelevance("http://ex2.com/4", 4);
@@ -23,118 +24,143 @@ public class DownloadSchedulerTest {
         int maxLinksInScheduler = 100;
         DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
         
-        scheduler.addLink(l1);
         
+        // when add link l1
+        scheduler.addLink(l1);
+        // then should return it (+some other state checks)
+        assertThat(scheduler.hasLinksAvailable(), is(true));
         assertThat(scheduler.numberOfLinks(), is(1));
         assertThat(scheduler.nextLink(), is(l1));
-        
         assertThat(scheduler.numberOfLinks(), is(0));
         assertThat(scheduler.nextLink(), is(nullValue()));
-        
+        // and should remember domains from links recently chosen 
         assertThat(scheduler.numberOfNonExpiredDomains(), is(1));
         assertThat(scheduler.numberOfEmptyDomains(), is(1));
         
+        // wait 1ms just to make sure that domains will have
+        // different access times (in case that test run too
+        // fast they will have the same access times)
+        Thread.sleep(1);
+        
+        // same thing when add link l2...
         scheduler.addLink(l2);
-        
+        assertThat(scheduler.hasLinksAvailable(), is(true));
         assertThat(scheduler.numberOfLinks(), is(1));
-        
         assertThat(scheduler.nextLink(), is(l2));
-        
         assertThat(scheduler.numberOfLinks(), is(0));
         assertThat(scheduler.nextLink(), is(nullValue()));
-        
+        // should remember domains from links recently chosen 
         assertThat(scheduler.numberOfNonExpiredDomains(), is(2));
         assertThat(scheduler.numberOfEmptyDomains(), is(2));
         
+        Thread.sleep(1);
+        
+        // when add 3 links from 3 different domains...
         scheduler.addLink(l3);
         scheduler.addLink(l4);
         scheduler.addLink(l5);
         
-        assertThat(scheduler.numberOfEmptyDomains(), is(0));
         assertThat(scheduler.numberOfNonExpiredDomains(), is(3));
+        assertThat(scheduler.numberOfEmptyDomains(), is(0));
         
+        // We assume that this test take less than 500ms to run.
+        // Links l3 and l4 have higher priority, but they should be skipped
+        // since other links from their domain has been chosen recently
+        assertThat(scheduler.hasLinksAvailable(), is(true));
         assertThat(scheduler.nextLink(), is(l5));
+        
+        // at this moment, there should have no links available
+        assertThat(scheduler.hasLinksAvailable(), is(false));
+        assertThat(scheduler.nextLink(), is(nullValue()));
+        
+        // after waiting the minimumAccessTime interval, they links can be returned
+        Thread.sleep(minimumAccessTime+100);
+        
         assertThat(scheduler.nextLink(), is(l3));
         assertThat(scheduler.nextLink(), is(l4));
-        assertThat(scheduler.numberOfEmptyDomains(), is(3));
         
-        // should remove expired domains automatically
+        // scheduler should also forget domains that don't have links chosen 
+        // for longer then the minimumAccessTime
         Thread.sleep(minimumAccessTime+10);
         assertThat(scheduler.numberOfNonExpiredDomains(), is(0));
         
+        // adding link again just to test that after removing old domain 
+        // everything is still working fine
         scheduler.addLink(l1);
         
         assertThat(scheduler.nextLink(), is(l1));
         assertThat(scheduler.numberOfNonExpiredDomains(), is(1));
         assertThat(scheduler.numberOfEmptyDomains(), is(1));
-        
         assertThat(scheduler.nextLink(), is(nullValue()));
-        assertThat(scheduler.numberOfEmptyDomains(), is(1));
     }
     
     @Test
-    public void addLinksShouldBlockWhenMaxNumberOfLinksIsReached() throws Exception {
+    public void addLinksShouldIgnoreLinkWhenMaxNumberOfLinksIsReached() throws Exception {
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex2.com/", 2);
                 
         int minimumAccessTime = 100;
         int maxLinksInScheduler = 1;
         
-        final DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
-        final int removeAfterTime = 500;
+        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
         
-        Thread removeThread = new Thread() {
-            public void run() {
-                try {
-                    Thread.sleep(removeAfterTime);
-                    scheduler.nextLink();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException("Test interrupted.");
-                }
-            };
-        };
-        
-        long t0 = System.currentTimeMillis();
         scheduler.addLink(l1);
-        long t1 = System.currentTimeMillis();
-        removeThread.start();
+        assertThat(scheduler.numberOfLinks(), is(1));
+        
         scheduler.addLink(l2);
-        long t2 = System.currentTimeMillis();
-        
-        boolean addTime1 = t1 - t0 < removeAfterTime;
-        assertThat(addTime1, is(true));
-        
-        boolean addTime2 = t2 - t1 > removeAfterTime;
-        assertThat(addTime2, is(true));
+        assertThat(scheduler.numberOfLinks(), is(1));
     }
     
     @Test
-    public void nextLinksShouldWaitMinimumAccessTimeOfDomain() throws Exception {
-        // given
+    public void shouldReturnLinksFromSameTLDsUsingFIFOOrder() throws Exception {
+        
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex1.com/2", 2);
+        LinkRelevance l3 = new LinkRelevance("http://ex1.com/3", 3);
+        LinkRelevance l4 = new LinkRelevance("http://ex1.com/4", 4);
                 
-        int minimumAccessTime = 500;
-        int maxLinksInScheduler = 10;
+        int minimumAccessTime = 0;
+        int maxLinksInScheduler = 100;
         
-        final DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        
+        scheduler.addLink(l4);
+        scheduler.addLink(l3);
+        scheduler.addLink(l2);
+        scheduler.addLink(l1);
+        
+        assertThat(scheduler.nextLink().getRelevance(), is(4d));
+        assertThat(scheduler.nextLink().getRelevance(), is(3d));
+        assertThat(scheduler.nextLink().getRelevance(), is(2d));
+        assertThat(scheduler.nextLink().getRelevance(), is(1d));
+    }
+    
+    @Test
+    public void shouldBeAbleToClearListOfLinks() throws Exception {
+        LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
+        LinkRelevance l2 = new LinkRelevance("http://ex1.com/2", 2);
+        LinkRelevance l3 = new LinkRelevance("http://ex2.com/3", 3);
+        LinkRelevance l4 = new LinkRelevance("http://ex2.com/4", 4);
+        
+        int minimumAccessTime = 100;
+        int maxLinksInScheduler = 100;
+        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        
         scheduler.addLink(l1);
         scheduler.addLink(l2);
+        scheduler.addLink(l4);
+        scheduler.addLink(l3);
+        
+        assertThat(scheduler.numberOfLinks(), is(4));
+        assertThat(scheduler.hasLinksAvailable(), is(true));
         
         // when
-        long t0 = System.currentTimeMillis();
-        scheduler.nextLink();
-        long t1 = System.currentTimeMillis();
-        scheduler.nextLink();
-        long t2 = System.currentTimeMillis();
+        scheduler.clear();
         
         // then
-        boolean nextLinkTime1 = t1 - t0 < minimumAccessTime;
-        assertThat(nextLinkTime1, is(true));
-        
-        int recordTimeErrorMargin = 5; // sometimes the recorded times outside the scheduler
-                                       // can be slightly different from actual ones
-        boolean nextLinkTime2 = t2 - t1 > (minimumAccessTime - recordTimeErrorMargin);
-        assertThat(nextLinkTime2, is(true));
+        assertThat(scheduler.numberOfLinks(), is(0));
+        assertThat(scheduler.numberOfEmptyDomains(), is(2));
+        assertThat(scheduler.hasLinksAvailable(), is(false));
     }
+    
 }

@@ -30,7 +30,9 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.link.DownloadScheduler;
 import focusedCrawler.link.frontier.selector.LinkSelector;
+import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.persistence.TupleIterator;
@@ -46,16 +48,18 @@ public class FrontierManager {
 
     private static final Logger logger = LoggerFactory.getLogger(FrontierManager.class);
 
-    private final PriorityQueueLink priorityQueue;
     private final Frontier frontier;
     private final int linksToLoad;
     private final LinkFilter linkFilter;
     private final LinkSelector linkSelector;
     private final HostManager hostsManager;
     private final boolean downloadRobots;
+    private final DownloadScheduler scheduler;
+
+    private boolean linksRejectedDuringLastLoad;
 
     public FrontierManager(Frontier frontier, HostManager hostsManager, boolean downloadRobots,
-                           int maxSizeLinkQueue, int linksToLoad,
+                           int linksToLoad, int schedulerMaxLinks, int schdulerMinAccessInterval,
                            LinkSelector linkSelector, LinkFilter linkFilter) {
         this.frontier = frontier;
         this.hostsManager = hostsManager;
@@ -63,7 +67,7 @@ public class FrontierManager {
         this.linksToLoad = linksToLoad;
         this.linkSelector = linkSelector;
         this.linkFilter = linkFilter;
-        this.priorityQueue = new PriorityQueueLink(maxSizeLinkQueue);
+        this.scheduler = new DownloadScheduler(schdulerMinAccessInterval, schedulerMaxLinks);
         this.loadQueue(linksToLoad);
     }
 
@@ -72,15 +76,14 @@ public class FrontierManager {
     }
 
     public void clearFrontier() {
-        logger.info("Cleaning frontier... current queue size: " + priorityQueue.size());
-        priorityQueue.clear();
-        logger.info("# Queue size:" + priorityQueue.size());
+        logger.info("Cleaning frontier... current queue size: " + scheduler.numberOfLinks());
+        scheduler.clear();
+        logger.info("# Queue size:" + scheduler.numberOfLinks());
     }
 
     private void loadQueue(int numberOfLinks) {
-        priorityQueue.clear();
+        scheduler.clear();
         frontier.commit();
-
         try(TupleIterator<LinkRelevance> it = frontier.iterator()) {
             
             linkSelector.startSelection(numberOfLinks);
@@ -91,10 +94,14 @@ public class FrontierManager {
                     linkSelector.evaluateLink(link);
                 }
             }
-
+            
+            linksRejectedDuringLastLoad = false;
             List<LinkRelevance> selectedLinks = linkSelector.getSelectedLinks();
             for (LinkRelevance link : selectedLinks) {
-                priorityQueue.insert(link);
+                boolean addedLink = scheduler.addLink(link);
+                if(!addedLink) {
+                    linksRejectedDuringLastLoad = true;
+                }
             }
             
         } catch (Exception e) {
@@ -149,27 +156,31 @@ public class FrontierManager {
         return insert;
     }
 
-    public LinkRelevance nextURL() throws FrontierPersistentException {
+    public LinkRelevance nextURL() throws FrontierPersistentException, DataNotFoundException {
 
-        if(priorityQueue.size() == 0) {
-            // Load more links from frontier into the priority queue
+        if(!scheduler.hasLinksAvailable()) {
+            logger.info("Loading more links from frontier into the scheduler...");
             loadQueue(linksToLoad);
         }
         
-        LinkRelevance linkRelev = (LinkRelevance) priorityQueue.pop();
-        if (linkRelev == null) {
-            return null;
+        LinkRelevance link = scheduler.nextLink();
+        if (link == null) {
+            if(scheduler.hasPendingLinks() || linksRejectedDuringLastLoad) {
+                throw new DataNotFoundException(false, "No links available for selection right now.");
+            } else {
+                throw new DataNotFoundException(true, "Frontier run out of links.");
+            }
         }
-
-        frontier.delete(linkRelev);
+        
+        frontier.delete(link);
             
-        logger.info("\n> URL:" + linkRelev.getURL() +
-                    "\n> REL:" + ((int) linkRelev.getRelevance() / 100) +
-                    "\n> RELEV:" + linkRelev.getRelevance());
+        logger.info("\n> URL:" + link.getURL() +
+                    "\n> REL:" + ((int) link.getRelevance() / 100) +
+                    "\n> RELEV:" + link.getRelevance());
 
-        return linkRelev;
+        return link;
     }
-    
+
     public void close() {
         frontier.commit();
         frontier.close();

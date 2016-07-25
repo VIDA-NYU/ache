@@ -51,8 +51,9 @@ public class FrontierManagerFactory {
                 frontier,
                 hostsManager,
                 config.getDownloadSitemapXml(),
-                config.getMaxSizeLinkQueue(),
-                config.getMaxSizeLinkQueue(),
+                config.getSchedulerMaxLinks(),
+                config.getSchedulerMaxLinks(),
+                config.getSchedulerHostMinAccessInterval(),
                 linkSelector,
                 linkFilter);
         frontierManager.addSeeds(seedUrls);

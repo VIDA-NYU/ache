@@ -51,9 +51,6 @@ public class LinkStorageConfig {
     @JsonProperty("link_storage.max_size_cache_urls")
     private int maxCacheUrlsSize = 200000;
     
-    @JsonProperty("link_storage.max_size_link_queue")
-    private int maxSizeLinkQueue = 100000;
-    
     @JsonProperty("link_storage.link_strategy.backlinks")
     private boolean getBacklinks = false;
     
@@ -66,7 +63,6 @@ public class LinkStorageConfig {
     
     @JsonProperty("link_storage.online_learning.learning_limit")
     private int learningLimit = 500;
-    
     
     @JsonProperty("link_storage.link_selector")
     private String linkSelector = "TopkLinkSelector";
@@ -81,6 +77,12 @@ public class LinkStorageConfig {
     
     @JsonProperty("link_storage.download_sitemap_xml")
     private boolean downloadSitemapXml = false;
+    
+    @JsonProperty("link_storage.scheduler.host_min_access_interval")
+    private int schedulerHostMinAccessInterval = 5000;
+    
+    @JsonProperty("link_storage.scheduler.max_links")
+    private int schedulerMaxLinks = 10000;
     
     public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
@@ -109,10 +111,6 @@ public class LinkStorageConfig {
     
     public int getMaxCacheUrlsSize() {
         return maxCacheUrlsSize;
-    }
-    
-    public int getMaxSizeLinkQueue() {
-        return maxSizeLinkQueue;
     }
     
     public boolean getBacklinks() {
@@ -151,4 +149,11 @@ public class LinkStorageConfig {
         return downloadSitemapXml;
     }
 
+    public int getSchedulerHostMinAccessInterval() {
+        return schedulerHostMinAccessInterval;
+    }
+
+    public int getSchedulerMaxLinks() {
+        return schedulerMaxLinks;
+    }
 }

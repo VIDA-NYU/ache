@@ -2,7 +2,6 @@ package focusedCrawler.link.frontier;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
@@ -21,6 +20,7 @@ import org.junit.rules.TemporaryFolder;
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.link.frontier.selector.RandomLinkSelector;
 import focusedCrawler.link.frontier.selector.TopkLinkSelector;
+import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkFilter;
 
 public class FrontierManagerTest {
@@ -34,6 +34,8 @@ public class FrontierManagerTest {
     private Frontier frontier;
     private HostManager hostManager;
     private boolean downloadRobots = false;
+
+    private int minimumAccessTimeInterval = 0;
     
     @Before
     public void setUp() throws Exception {
@@ -58,22 +60,28 @@ public class FrontierManagerTest {
         LinkSelector linkSelector = new RandomLinkSelector();
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, scope);
         FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
-                2, 2, linkSelector, new LinkFilter(new ArrayList<String>()));
+                2, 2, minimumAccessTimeInterval, linkSelector, new LinkFilter(new ArrayList<String>()));
         
         // when
         frontierManager.insert(link1);
         frontierManager.insert(link2);
         
         LinkRelevance selectedLink1 = frontierManager.nextURL();
-        LinkRelevance selectedLink2 = frontierManager.nextURL();
+        DataNotFoundException notFoundException = null;
+        try {
+            frontierManager.nextURL();
+        } catch(DataNotFoundException e) {
+            notFoundException = e;
+        }
+        
         
         // then
         assertThat(selectedLink1, is(notNullValue()));
         assertThat(selectedLink1.getURL(), is(notNullValue()));
         assertThat(selectedLink1.getURL(), is(link1.getURL()));
         
-        assertThat(selectedLink2, is(nullValue()));
-        
+        assertThat(notFoundException, is(notNullValue()));
+        assertThat(notFoundException.ranOutOfLinks(), is(true));
         frontierManager.close();
     }
     
@@ -83,7 +91,7 @@ public class FrontierManagerTest {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
-                2, 2, linkSelector, emptyLinkFilter);
+                2, 2, minimumAccessTimeInterval, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1, LinkRelevance.Type.FORWARD);
         
@@ -103,12 +111,55 @@ public class FrontierManagerTest {
     }
     
     @Test
+    public void shouldSelectUrlsInsertedAfterFirstSelect() throws Exception {
+        // given
+        int minimumAccessTimeInterval = 500;
+        int linksToLoad = 2;
+        int schedulerMaxLinks = 10;
+        LinkSelector linkSelector = new TopkLinkSelector();
+        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+                linksToLoad, schedulerMaxLinks, minimumAccessTimeInterval, linkSelector, emptyLinkFilter);
+        
+        LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index1.html"), 1, LinkRelevance.Type.FORWARD);
+        LinkRelevance link2 = new LinkRelevance(new URL("http://www.example1.com/index2.html"), 1, LinkRelevance.Type.FORWARD);
+        
+        LinkRelevance link3 = new LinkRelevance(new URL("http://www.example2.com/index2.html"), 1, LinkRelevance.Type.FORWARD);
+        
+        // when
+        frontierManager.insert(link1);
+        frontierManager.insert(link2);
+        LinkRelevance nextUrl1 = frontierManager.nextURL();
+        
+        frontierManager.insert(link3);
+        
+        // at this point, should not return link2, but it should return link3
+        // because it is from another TLD
+        LinkRelevance nextUrl3 = frontierManager.nextURL();
+            
+        
+        // then
+        assertThat(nextUrl1, is(notNullValue()));
+        assertThat(nextUrl1.getURL(), is(notNullValue()));
+        assertThat(nextUrl1.getURL(), is(link1.getURL()));
+        assertThat(nextUrl1.getRelevance(), is(link1.getRelevance()));
+        assertThat(nextUrl1.getType(), is(link1.getType()));
+        
+        assertThat(nextUrl3, is(notNullValue()));
+        assertThat(nextUrl3.getURL(), is(notNullValue()));
+        assertThat(nextUrl3.getURL(), is(link3.getURL()));
+        assertThat(nextUrl3.getRelevance(), is(link3.getRelevance()));
+        assertThat(nextUrl3.getType(), is(link3.getType()));
+        
+        frontierManager.close();
+    }
+    
+    @Test
     public void shouldInsertRobotsLinkWhenAddDomainForTheFirstTime() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
         boolean downloadRobots = true;
         FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
-                2, 2, linkSelector, emptyLinkFilter);
+                2, 2, minimumAccessTimeInterval, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/sitemap.xml"), 1, LinkRelevance.Type.FORWARD);
         
@@ -140,7 +191,7 @@ public class FrontierManagerTest {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
-                2, 2, linkSelector, emptyLinkFilter);
+                2, 2, minimumAccessTimeInterval, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
@@ -154,7 +205,12 @@ public class FrontierManagerTest {
         LinkRelevance selectedLink1 = frontierManager.nextURL();
         LinkRelevance selectedLink2 = frontierManager.nextURL();
         LinkRelevance selectedLink3 = frontierManager.nextURL();
-        LinkRelevance selectedLink4 = frontierManager.nextURL();
+        DataNotFoundException notFoundException = null;
+        try {
+            frontierManager.nextURL();
+        } catch(DataNotFoundException e) {
+            notFoundException = e;
+        }
         
         // then
         
@@ -162,7 +218,8 @@ public class FrontierManagerTest {
         assertThat(selectedLink1, is(notNullValue()));
         assertThat(selectedLink2, is(notNullValue()));
         assertThat(selectedLink3, is(notNullValue()));
-        assertThat(selectedLink4, is(nullValue()));
+        assertThat(notFoundException, is(notNullValue()));
+        assertThat(notFoundException.ranOutOfLinks(), is(true));
         
         // should return bigger relevance values first
         assertThat(selectedLink1.getURL(), is(link3.getURL()));
@@ -178,7 +235,7 @@ public class FrontierManagerTest {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
-                2, 2, linkSelector, emptyLinkFilter);
+                2, 2, minimumAccessTimeInterval , linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
@@ -188,18 +245,73 @@ public class FrontierManagerTest {
         frontierManager.insert(link2);
         LinkRelevance selectedLink1 = frontierManager.nextURL();
         LinkRelevance selectedLink2 = frontierManager.nextURL();
-        LinkRelevance selectedLink3 = frontierManager.nextURL();
+        DataNotFoundException notFoundException1 = null;
+        try {
+            frontierManager.nextURL();
+        } catch(DataNotFoundException e) {
+            notFoundException1 = e;
+        }
         
         frontierManager.insert(link1); // insert link 1 again, should not be returned
-        LinkRelevance selectedLink4 = frontierManager.nextURL();
+        
+        DataNotFoundException notFoundException2 = null;
+        try {
+            frontierManager.nextURL();
+        } catch(DataNotFoundException e) {
+            notFoundException2 = e;
+        }
         
         // then
         assertThat(selectedLink1, is(notNullValue()));
         assertThat(selectedLink2, is(notNullValue()));
         
-        assertThat(selectedLink3, is(nullValue()));
+        assertThat(notFoundException1, is(notNullValue()));
+        assertThat(notFoundException1.ranOutOfLinks(), is(true));
         
-        assertThat(selectedLink4, is(nullValue()));
+        assertThat(notFoundException2, is(notNullValue()));
+        assertThat(notFoundException2.ranOutOfLinks(), is(true));
+        
+        frontierManager.close();
+        
+    }
+    
+    @Test
+    public void shouldNotReturnLinkReturnedWithinMinimumTimeInterval() throws Exception {
+        // given
+        int minimumAccessTimeInterval = 500;
+        LinkSelector linkSelector = new TopkLinkSelector();
+        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+                2, 2, minimumAccessTimeInterval , linkSelector, emptyLinkFilter);
+        
+        LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index1.html"), 1);
+        LinkRelevance link2 = new LinkRelevance(new URL("http://www.example1.com/index2.html"), 2);
+        
+        frontierManager.insert(link1);
+        frontierManager.insert(link2);
+        
+        // when
+        LinkRelevance selectedLink1 = frontierManager.nextURL();
+        
+        DataNotFoundException notFoundException1 = null;
+        try {
+            frontierManager.nextURL();
+        } catch(DataNotFoundException e) {
+            notFoundException1 = e;
+        }
+        
+        // should return after minimum time interval
+        Thread.sleep(minimumAccessTimeInterval+10);
+        LinkRelevance selectedLink2 = frontierManager.nextURL();        
+        
+        // then
+        assertThat(selectedLink1, is(notNullValue()));
+        assertThat(selectedLink1.getURL().toString(), is(link2.getURL().toString()));
+        
+        assertThat(notFoundException1, is(notNullValue()));
+        assertThat(notFoundException1.ranOutOfLinks(), is(false));
+        
+        assertThat(selectedLink2, is(notNullValue()));
+        assertThat(selectedLink2, is(notNullValue()));
         
         frontierManager.close();
         

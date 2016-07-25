@@ -9,7 +9,6 @@ import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.ConfigService;
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
-import focusedCrawler.link.DownloadScheduler;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.DataNotFoundException;
@@ -25,7 +24,6 @@ public class AsyncCrawler {
 
     private final LinkStorage linkStorage;
     private final HttpDownloader downloader;
-    private final DownloadScheduler downloadScheduler;
     private final Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
     
     private boolean shouldStop = false;
@@ -37,55 +35,25 @@ public class AsyncCrawler {
         this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
         this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage, crawlerConfig.getDownloaderConfig().getUserAgentName()));
-        
-        this.downloadScheduler = new DownloadScheduler(
-                crawlerConfig.getHostMinAccessInterval(),
-                crawlerConfig.getMaxLinksInScheduler());
     }
     
-    private class DownloadDispatcher extends Thread {
-        public DownloadDispatcher() {
-            setName("download-dispatcher");
-        }
-        @Override
-        public void run() {
-            while(!shouldStop) {
-                LinkRelevance linkRelevance = downloadScheduler.nextLink();
-                if(linkRelevance != null) {
-                    
-                    Callback handler = handlers.get(linkRelevance.getType());
-                    if(handler == null) {
-                        logger.error("No registered handler for link type: "+linkRelevance.getType());
-                        continue;
-                    }
-                    
-                    downloader.dipatchDownload(linkRelevance, handler);
-                    
-                } else {
-                    try {
-                        Thread.sleep(100);
-                    } catch (InterruptedException e) {
-                        logger.error("LinkDispatcher was interrupted.", e);
-                    }
-                }
-            }
-        }
-    }
-
     public void run() {
         try {
-            DownloadDispatcher linkDispatcher = new DownloadDispatcher();
-            linkDispatcher.start();
             while(!this.shouldStop) {
                 try {
                     LinkRelevance link = (LinkRelevance) linkStorage.select(null);
                     if(link != null) {
-                        downloadScheduler.addLink(link);
+                        Callback handler = handlers.get(link.getType());
+                        if(handler == null) {
+                            logger.error("No registered handler for link type: "+link.getType());
+                            continue;
+                        }
+                        downloader.dipatchDownload(link, handler);
                     }
                 }
                 catch (DataNotFoundException e) {
                     // There are no more links available in the frontier right now
-                    if(downloader.hasPendingDownloads() || downloadScheduler.hasPendingLinks()) {
+                    if(downloader.hasPendingDownloads() || !e.ranOutOfLinks()) {
                         // If there are still pending downloads, new links 
                         // may be found in these pages, so we should wait some
                         // time until more links are available and try again

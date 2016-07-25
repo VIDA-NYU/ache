@@ -26,16 +26,17 @@ package focusedCrawler.util;
 @SuppressWarnings("serial")
 public class DataNotFoundException extends DetailException {
 
-    public DataNotFoundException() {
-        super();
-    }
+    private boolean ranOutOfLinks;
 
-    public DataNotFoundException(String message) {
+    public DataNotFoundException() {}
+
+    public DataNotFoundException(boolean ranOutOfLinks, String message) {
         super(message);
+        this.ranOutOfLinks = ranOutOfLinks;
     }
 
-    public DataNotFoundException(String message,Throwable detail) {
-        super(message,detail);        
+    public boolean ranOutOfLinks() {
+        return ranOutOfLinks;
     }
 
 }

@@ -87,7 +87,6 @@ link_storage.online_learning.learning_limit: 555
 # - TopicLinkSelector
 link_storage.link_selector: TopkLinkSelector
 
-link_storage.max_size_link_queue: 111111 # MAX_SIZE_LINK_QUEUE 100000
 link_storage.max_size_cache_urls: 222222 # MAX_CACHE_URLS_SIZE 200000
 
 # Configurations for link storage's server
@@ -103,15 +102,15 @@ link_storage.backsurfer.pattern_end: "\"}"
 link_storage.backsurfer.pattern_ini_title: ",\"ut\":\""
 link_storage.backsurfer.pattern_end_title: "\",\"uu\":"
 
+link_storage.scheduler.host_min_access_interval: 123
+link_storage.scheduler.max_links: 234
+
 #link_storage.backsurfer.moz.access_id: mozscape-xxxxxxxxxx
 #link_storage.backsurfer.moz.secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 #
 # Configurations for Crawler Manager
 #
-
-crawler_manager.scheduler.host_min_access_interval: 123
-crawler_manager.scheduler.max_links: 234
 crawler_manager.downloader.download_thread_pool_size: 333
 crawler_manager.downloader.max_retry_count: 444
 crawler_manager.downloader.user_agent.name: TestAgent

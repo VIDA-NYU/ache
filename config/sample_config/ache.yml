@@ -89,7 +89,6 @@ link_storage.online_learning.enabled: false
 # - MaximizeWebsitesLinkSelector
 link_storage.link_selector: TopkLinkSelector
 
-link_storage.max_size_link_queue: 10000
 link_storage.max_size_cache_urls: 10000
 
 # Configurations for link storage's server
@@ -103,11 +102,12 @@ link_storage.directory: "data_url/dir"
 #link_storage.backsurfer.moz.access_id: mozscape-xxxxxxxxxx
 #link_storage.backsurfer.moz.secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
+link_storage.scheduler.host_min_access_interval: 5000
+link_storage.scheduler.max_links: 10000
+
 #
 # Configurations for Crawler Manager
 #
-crawler_manager.scheduler.host_min_access_interval: 5000
-crawler_manager.scheduler.max_links: 10000
 crawler_manager.downloader.download_thread_pool_size: 100
 crawler_manager.downloader.max_retry_count: 2
 crawler_manager.downloader.user_agent.name: ACHE

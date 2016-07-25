@@ -1,5 +1,5 @@
 target_storage.hard_focus: true
 link_storage.link_strategy.outlinks: true
-crawler_manager.scheduler.host_min_access_interval: 1
+link_storage.scheduler.host_min_access_interval: 1
 target_storage.use_classifier: false
 link_storage.download_sitemap_xml: true

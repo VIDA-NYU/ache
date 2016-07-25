@@ -218,7 +218,7 @@ public class StorageRemoteAdapter implements Storage {
 
                     case CommunicationConstants.RETURN_DATA_NOT_FOUND:
 
-                        throw new DataNotFoundException("remote error " + response);
+                        throw new DataNotFoundException(false, "remote error " + response);
 
                     default:
 

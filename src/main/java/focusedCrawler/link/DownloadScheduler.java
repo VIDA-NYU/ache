@@ -3,8 +3,10 @@ package focusedCrawler.link;
 import java.util.Comparator;
 import java.util.Deque;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.PriorityQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -43,8 +45,7 @@ public class DownloadScheduler {
     }
 
     private PriorityQueue<DomainNode> createDomainPriorityQueue() {
-        int initialCapacity = 10;
-        return new PriorityQueue<DomainNode>(initialCapacity, new Comparator<DomainNode>() {
+        return new PriorityQueue<DomainNode>(new Comparator<DomainNode>() {
             @Override
             public int compare(DomainNode o1, DomainNode o2) {
                 return Long.compare(o1.lastAccessTime, o2.lastAccessTime);
@@ -52,19 +53,14 @@ public class DownloadScheduler {
         });
     }
     
-    public void addLink(LinkRelevance link) {
-        numberOfLinks.incrementAndGet();
+    public boolean addLink(LinkRelevance link) {
 
         removeExpiredNodes();
         
-        while(numberOfLinks() > maxLinksInScheduler) {
-            // block until number of links is lower than max number of links
-            try {
-                Thread.sleep(50);
-            } catch (InterruptedException e) {
-                throw new RuntimeException("Interrupted while adding link.", e);
-            }
+        if(numberOfLinks() >= maxLinksInScheduler) {
+            return false; // ignore link
         }
+        numberOfLinks.incrementAndGet();
         
         String domainName = link.getTopLevelDomainName();
         
@@ -83,6 +79,7 @@ public class DownloadScheduler {
             domainNode.links.addLast(link);
         }
         
+        return true;
     }
 
     private synchronized void removeExpiredNodes() {
@@ -103,46 +100,36 @@ public class DownloadScheduler {
     }
 
     public LinkRelevance nextLink() {
-        
-        long expirationTime;
         LinkRelevance linkRelevance;
-        long waitTime = 0;
         
-        synchronized(this) {
-            DomainNode domainNode = domainsQueue.poll();
-            if(domainNode == null) {
+        synchronized (this) {
+
+            DomainNode domainNode = domainsQueue.peek();
+            if (domainNode == null) {
+                // no domains available to be crawled
+                return null;
+            }
+
+            long now = System.currentTimeMillis();
+            long timeSinceLastAccess = now - domainNode.lastAccessTime;
+            if (timeSinceLastAccess < minimumAccessTime) {
+                // the domain with longest access time cannot be crawled right now
                 return null;
             }
             
+            domainsQueue.poll(); 
             linkRelevance = domainNode.links.removeFirst();
-            
-            if(domainNode.links.isEmpty()) {
+            domainNode.lastAccessTime = System.currentTimeMillis();
+            if (domainNode.links.isEmpty()) {
                 emptyDomainsQueue.add(domainNode);
             } else {
                 domainsQueue.add(domainNode);
             }
-            
-            expirationTime = domainNode.lastAccessTime + minimumAccessTime;
-            long now = System.currentTimeMillis();
-            waitTime = expirationTime - now;
-            
-            if(waitTime > 0) {
-                domainNode.lastAccessTime = now + waitTime;
-            } else {
-                domainNode.lastAccessTime = now;
-            }
+
         }
-        
-        if(waitTime > 0) {
-            try {
-                Thread.sleep(waitTime);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(getClass()+" interrupted.", e);
-            }
-        }
-        
+
         numberOfLinks.decrementAndGet();
-        
+
         return linkRelevance;
     }
     
@@ -161,6 +148,36 @@ public class DownloadScheduler {
 
     public boolean hasPendingLinks() {
         return numberOfLinks() > 0;
+    }
+
+    public boolean hasLinksAvailable() {
+        DomainNode domainNode = domainsQueue.peek();
+        if(domainNode == null) {
+            return false;
+        }
+        long now = System.currentTimeMillis();
+        long timeSinceLastAccess = now - domainNode.lastAccessTime;
+        if(timeSinceLastAccess < minimumAccessTime) {
+            // the domain with longest access time is still not available
+            return false;
+        }
+        return true;
+    }
+
+    public synchronized void clear() {
+        Iterator<Entry<String, DomainNode>> it = domains.entrySet().iterator();
+        while(it.hasNext()) {
+            DomainNode node = it.next().getValue();
+            numberOfLinks.addAndGet(-node.links.size()); // adds negative value
+            node.links.clear();
+        }
+        while(true) {
+            DomainNode node = domainsQueue.poll();
+            if(node == null) {
+                break;
+            }
+            emptyDomainsQueue.add(node);
+        }
     }
     
 }

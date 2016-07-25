@@ -82,12 +82,14 @@ public class ConfigServiceTest {
         
         assertThat(config.getLinkSelector(), is("TopkLinkSelector"));
         
-        assertThat(config.getMaxSizeLinkQueue(), is(111111));
         assertThat(config.getMaxCacheUrlsSize(), is(222222));
         
         assertThat(config.getStorageServerConfig(), is(notNullValue()));
         assertThat(config.getStorageServerConfig().getHost(), is("linkstorage.localhost"));
         assertThat(config.getStorageServerConfig().getPort(), is(19888));
+
+        assertThat(config.getSchedulerHostMinAccessInterval(), is(123));
+        assertThat(config.getSchedulerMaxLinks(), is(234));
     }
     
     @Test
@@ -101,8 +103,6 @@ public class ConfigServiceTest {
         // then
         assertThat(config, is(notNullValue()));
         
-        assertThat(config.getHostMinAccessInterval(), is(123));
-        assertThat(config.getMaxLinksInScheduler(), is(234));
         assertThat(config.getDownloaderConfig().getDownloadThreadPoolSize(), is(333));
         assertThat(config.getDownloaderConfig().getMaxRetryCount(), is(444));
         assertThat(config.getDownloaderConfig().getUserAgentName(), is("TestAgent"));
