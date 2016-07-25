@@ -1,0 +1,24 @@
+#
+# Example of configuration for running a Focused Crawl
+#
+target_storage.use_classifier: true
+target_storage.store_negative_pages: false
+target_storage.data_format.type: FILESYSTEM_JSON
+target_storage.data_format.filesystem.hash_file_name: false # Online learning not working currently hashed file names or ElasticSearch data format
+target_storage.data_format.filesystem.compress_data: true
+target_storage.english_language_detection_enabled: false
+
+link_storage.max_pages_per_domain: 1000
+link_storage.link_strategy.use_scope: false
+link_storage.link_strategy.outlinks: true
+link_storage.link_strategy.backlinks: false
+link_storage.link_classifier.type: LinkClassifierBaseline
+link_storage.online_learning.enabled: true
+link_storage.online_learning.type: FORWARD_CLASSIFIER_BINARY
+link_storage.online_learning.learning_limit: 1000
+link_storage.link_selector: TopkLinkSelector
+link_storage.scheduler.host_min_access_interval: 5000
+link_storage.scheduler.max_links: 10000
+
+crawler_manager.downloader.user_agent.name: ACHE
+crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
