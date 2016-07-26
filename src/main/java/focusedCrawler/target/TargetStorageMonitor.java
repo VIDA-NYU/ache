@@ -41,7 +41,8 @@ public class TargetStorageMonitor {
     }
 
     private PrintWriter createBufferedWriter(String file) throws FileNotFoundException {
-        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
+        boolean append = true;
+        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file, append));
         boolean autoFlush = true;
         return new PrintWriter(bos, autoFlush);
     }
