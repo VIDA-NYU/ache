@@ -12,9 +12,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 import focusedCrawler.crawler.async.fetcher.FetcherFactory;
@@ -34,8 +31,6 @@ import focusedCrawler.link.frontier.LinkRelevance;
  *
  */
 public class HttpDownloader implements Closeable {
-    
-    private static Logger logger = LoggerFactory.getLogger(HttpDownloader.class);
     
     private static final int CPU_CORES = Runtime.getRuntime().availableProcessors();
     
@@ -117,7 +112,6 @@ public class HttpDownloader implements Closeable {
     }
     
     public void await() {
-        logger.info("Waiting downloader to finish...");
         try {        
             downloadThreadPool.shutdown();
             distpatchThreadPool.shutdown();
@@ -126,7 +120,6 @@ public class HttpDownloader implements Closeable {
         } catch (InterruptedException e) {
             throw new RuntimeException("Thread interrupted while waiting downloader threads finalize.", e);
         }
-        logger.info("Done.");
     }
     
     public boolean hasPendingDownloads() {

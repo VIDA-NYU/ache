@@ -26,7 +26,8 @@ public class AsyncCrawler {
     private final HttpDownloader downloader;
     private final Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
     
-    private boolean shouldStop = false;
+    private volatile boolean shouldStop = false;
+    private Object running = new Object();
     
     public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage, AsyncCrawlerConfig crawlerConfig) {
         this.linkStorage = linkStorage;
@@ -35,10 +36,16 @@ public class AsyncCrawler {
         this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
         this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage, crawlerConfig.getDownloaderConfig().getUserAgentName()));
+        
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            public void run() {
+                shutdown();
+            }
+        });
     }
     
     public void run() {
-        try {
+        synchronized (running) {
             while(!this.shouldStop) {
                 try {
                     LinkRelevance link = (LinkRelevance) linkStorage.select(null);
@@ -74,16 +81,19 @@ public class AsyncCrawler {
                     logger.error("An unexpected error happened.", e);
                 }
             }
-            downloader.await();
-        } finally {
-            logger.info("Shutting down crawler...");
-            downloader.close();
-            logger.info("Done.");
         }
     }
 
-    public void stop() {
-        this.shouldStop = true;
+    private void shutdown() {
+        logger.info("Starting crawler shuttdown...");
+        shouldStop = true;
+        synchronized(running) {
+            logger.info("Waiting downloader to finish...");
+            downloader.await();
+            downloader.close();
+            linkStorage.close();
+            logger.info("Done.");
+        }
     }
 
     public static void run(ConfigService config) throws IOException, NumberFormatException {
@@ -96,7 +106,6 @@ public class AsyncCrawler {
             Storage targetStorage = new StorageCreator(targetServerConfig).produce();
             
             AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
-
             AsyncCrawler crawler = new AsyncCrawler(targetStorage, (LinkStorage) linkStorage, crawlerConfig);
             crawler.run();
 

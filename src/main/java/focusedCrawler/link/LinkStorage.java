@@ -99,11 +99,6 @@ public class LinkStorage extends StorageDefault{
         this.graphManager = manager;
         this.getBacklinks = config.getBacklinks();
         this.getOutlinks = config.getOutlinks();
-        Runtime.getRuntime().addShutdownHook(new Thread() {
-            public void run() {
-                close();
-            }
-        });
     }
     
     public void close(){
