@@ -69,13 +69,6 @@ public class BipartiteGraphManager {
 	
 	private final int pagesToCommit = 100;
 	
-	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRepository rep, LinkClassifier outlinkClassifier) {
-		this.frontierManager = frontierManager;
-		this.outlinkClassifier = outlinkClassifier;
-		this.rep = rep;
-		this.domainCounter = new HashMap<String, Integer>();
-	}
-	
 	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRepository rep, LinkClassifier outlinkClassifier, LinkClassifier backlinkClassifier) {
 		this.frontierManager = frontierManager;
 		this.outlinkClassifier = outlinkClassifier;
