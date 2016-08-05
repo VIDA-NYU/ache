@@ -204,11 +204,12 @@ public class URLAlignment {
             return this.toString().equals(o.toString());
         }
 
-        public static Sequence parse(String url) {
+        public static List<String> parseTokens(String url) {
             if(url == null || url.isEmpty()) {
                 return null;
             }
-            Sequence sequence = new Sequence();
+            
+            List<String> sequence = new ArrayList<String>();
             StringBuilder token = new StringBuilder();
             
             int i = 0;
@@ -226,7 +227,7 @@ public class URLAlignment {
                 
                 if(type != previousType || previousType.equals(CharType.PUNCTUATION)) {
                     // build token
-                    sequence.add(new TokenSet(token.toString()));
+                    sequence.add(token.toString());
                     token = new StringBuilder();
                 }
                 token.append(ch);
@@ -238,9 +239,21 @@ public class URLAlignment {
             }
             
             if(token.length() > 0) {
-                sequence.add(new TokenSet(token.toString()));
+                sequence.add(token.toString());
             }
             
+            return sequence;
+        }
+        
+        public static Sequence parse(String url) {
+            if(url == null || url.isEmpty()) {
+                return null;
+            }
+            List<String> stringTokens = parseTokens(url);
+            Sequence sequence = new Sequence();
+            for(String token : stringTokens) {
+                sequence.add(new TokenSet(token));
+            }
             return sequence;
         }
         
