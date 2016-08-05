@@ -328,18 +328,23 @@ public class URLAlignment {
     
     static public class RewriteRule {
         
-        int SET_CARDINALITY = 5; // cardinality of token set
         
         public final String context;
         public final String transformation;
         private Pattern contextPattern;
         private Pattern transformationPattern;
         private int backreferences;
-
+        private int setCardinality; // cardinality of token set
+        
         public RewriteRule(Sequence sequence) {
+            this(sequence, 5);
+        }
+        
+        public RewriteRule(Sequence sequence, int setCardinality) {
+            this.setCardinality = setCardinality;
+            this.backreferences = 0;
             StringBuilder context = new StringBuilder();
             StringBuilder transformation = new StringBuilder();
-            this.backreferences = 0;
             
             context.append('^');
 
@@ -442,9 +447,9 @@ public class URLAlignment {
                 
                 
                 // generalize to tokens' type
-                if(tokenSet.size() > SET_CARDINALITY && tokenSet.onlyDigits()) {
+                if(tokenSet.size() > setCardinality && tokenSet.onlyDigits()) {
                     context.append("(?:[0-9]+)");
-                } else if (tokenSet.size() > SET_CARDINALITY && tokenSet.onlyLetters()) {
+                } else if (tokenSet.size() > setCardinality && tokenSet.onlyLetters()) {
                     context.append("(?:[a-zA-Z]+)");
                 }
                 // do not generalize
