@@ -102,28 +102,16 @@ public abstract class AbstractStopList implements StopList {
             quickSortString( irrelevantes );
     }
 
-    public synchronized String[] getComplementares() {
-        return complementares;
-    }
-
     public synchronized void setComplementares( String array[] ) {
         complementares = array;
         if( complementares != null )
             quickSortString( complementares );
     }
 
-    public synchronized String[] getPrefixos() {
-        return prefixos;
-    }
-
     public synchronized void setPrefixos( String array[] ) {
         prefixos = array;
         if( prefixos != null )
             quickSortString( prefixos );
-    }
-
-    public synchronized String[] getSufixos() {
-        return sufixos;
     }
 
     public synchronized void setSufixos( String array[] ) {
@@ -200,7 +188,7 @@ public abstract class AbstractStopList implements StopList {
    	   	return isStop;
     }
 
-    public synchronized boolean eIrrelevante( String palavra) {
+    public synchronized boolean isIrrelevant( String palavra) {
         if( palavra == null )
             return true;
         palavra = palavra.trim();

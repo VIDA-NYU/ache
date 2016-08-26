@@ -2861,7 +2861,7 @@ public class PaginaURL {
         boolean result = false;
 
         if (stoplist != null) {
-            result = stoplist.eIrrelevante(str);
+            result = stoplist.isIrrelevant(str);
         }
 
         return result;

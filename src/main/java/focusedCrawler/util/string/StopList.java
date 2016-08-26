@@ -40,17 +40,13 @@
  *      Flavio Couto                   (frco)
 
  */
-
-
-
 package focusedCrawler.util.string;
 
 import java.io.Serializable;
 
-
 public interface StopList extends Serializable {
 
-    public boolean eIrrelevante(String palavra);
+    public boolean isIrrelevant(String word);
     
     public boolean isStopWord(String word);
 
