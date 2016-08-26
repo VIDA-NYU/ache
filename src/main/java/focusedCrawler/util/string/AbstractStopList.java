@@ -681,59 +681,6 @@ public abstract class AbstractStopList implements StopList {
         return achou;
 
     }
-
-
-
-    /** Imprime os dados disponï¿½veis para cada conjunto de palavras */
-
-    public synchronized void printListas( ) {
-
-        debug( "Excecoes"      ,excecoes       );
-
-        debug( "Irrelevantes"  ,irrelevantes   );
-
-        debug( "Complementares",complementares );
-
-        debug( "Prefixos"      ,prefixos       );
-
-        debug( "Sufixos"       ,sufixos        );
-
-    }
-
-
-
-    protected synchronized void debug( String message,String array[] ) {
-
-        System.out.println("---> "+message+" <---");
-
-        if( array != null )
-
-          {
-
-            int size = array.length;
-
-
-
-            StringBuffer buffer = new StringBuffer(15 * size);
-
-            buffer.append("[");
-
-            for( int i = 0; i < array.length; i++ )
-
-                 buffer.append( i == 0 ? array[i] : ","+array[i] );
-
-            buffer.append("]");
-
-
-
-            System.out.println(buffer.toString());
-
-          }
-
-        else
-
-            System.out.println("Nada disponï¿½vel.");
-
-    }
+    
 
 }
