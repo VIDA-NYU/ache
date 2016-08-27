@@ -62,14 +62,17 @@ public class BipartiteGraphManager {
 	
 	private int count = 0;
 
-  //Data structure for stop conditions //////////////////////////
-  private int maxPages = 100; //Maximum number of pages per each domain
-  private HashMap<String, Integer> domainCounter;//Count number of pages for each domain
-  ///////////////////////////////////////////////////////////////
+    // Data structure for stop conditions //////////////////////////
+    private int maxPages = 100; // Maximum number of pages per each domain
+    private HashMap<String, Integer> domainCounter;// Count number of pages for each domain
+    ///////////////////////////////////////////////////////////////
 	
 	private final int pagesToCommit = 100;
 	
-	public BipartiteGraphManager(FrontierManager frontierManager, BipartiteGraphRepository rep, LinkClassifier outlinkClassifier, LinkClassifier backlinkClassifier) {
+	public BipartiteGraphManager(FrontierManager frontierManager,
+	                             BipartiteGraphRepository rep,
+	                             LinkClassifier outlinkClassifier,
+	                             LinkClassifier backlinkClassifier) {
 		this.frontierManager = frontierManager;
 		this.outlinkClassifier = outlinkClassifier;
 		this.backlinkClassifier = backlinkClassifier;
@@ -77,9 +80,9 @@ public class BipartiteGraphManager {
 		this.domainCounter = new HashMap<String, Integer>();
 	}
 
-  public void setMaxPages(int max){
-    this.maxPages = max;
-  }
+    public void setMaxPages(int max) {
+        this.maxPages = max;
+    }
 
 	public void setBacklinkSurfer(BacklinkSurfer surfer){
 		this.surfer = surfer;
@@ -93,12 +96,11 @@ public class BipartiteGraphManager {
 		this.outlinkClassifier = classifier;
 	}
 
-	
 	public BipartiteGraphRepository getRepository(){
 		return this.rep;
 	}
 	
-    public void insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException {
+    public synchronized void insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException {
     	
         PaginaURL parsedPage = page.getPageURL();
         parsedPage.setRelevance(page.getRelevance());
@@ -152,7 +154,7 @@ public class BipartiteGraphManager {
         count++;
     }
 	
-	public void insertBacklinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException{
+	public synchronized void insertBacklinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException{
 		URL url = page.getURL();
 		BackLinkNeighborhood[] links = rep.getBacklinks(url);
 		if(links == null || (links != null && links.length < 10)){

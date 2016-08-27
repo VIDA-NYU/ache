@@ -82,45 +82,45 @@ public abstract class AbstractStopList implements StopList {
         if( realizarQuickSort ) realizarQuickSort();
     }
 
-    public synchronized String[] getExcecoes() {
+    protected String[] getExcecoes() {
         return excecoes;
     }
 
-    public synchronized void setExcecoes( String array[] ) {
+    protected void setExcecoes( String array[] ) {
         excecoes = array;
         if( excecoes != null )
             quickSortString( excecoes );
     }
 
-    public synchronized String[] getIrrelevantes() {
+    protected String[] getIrrelevantes() {
         return irrelevantes;
     }
 
-    public synchronized void setIrrelevantes( String array[] ) {
+    protected void setIrrelevantes( String array[] ) {
         irrelevantes = array;
         if( irrelevantes != null )
             quickSortString( irrelevantes );
     }
 
-    public synchronized void setComplementares( String array[] ) {
+    protected void setComplementares( String array[] ) {
         complementares = array;
         if( complementares != null )
             quickSortString( complementares );
     }
 
-    public synchronized void setPrefixos( String array[] ) {
+    protected void setPrefixos( String array[] ) {
         prefixos = array;
         if( prefixos != null )
             quickSortString( prefixos );
     }
 
-    public synchronized void setSufixos( String array[] ) {
+    protected void setSufixos( String array[] ) {
         sufixos = array;
         if( sufixos != null )
             quickSortString( sufixos );
     }
 
-    protected synchronized void realizarQuickSort() {
+    protected void realizarQuickSort() {
         if( excecoes != null )
             quickSortString( excecoes );
         if( irrelevantes != null )
@@ -133,11 +133,11 @@ public abstract class AbstractStopList implements StopList {
             quickSortString( sufixos );
     }
 
-    protected synchronized void quickSortString( String str[] ) {
+    protected void quickSortString( String str[] ) {
         quicksort_str( str,0,str.length-1 );
     }
 
-    protected synchronized void quicksort_str( String str[],int left,int right ) {
+    protected void quicksort_str( String str[],int left,int right ) {
         String pivot;
         int l = left;
         int r = right;
@@ -164,7 +164,7 @@ public abstract class AbstractStopList implements StopList {
 
     // Funcao auxiliar do quicksort
 
-    protected synchronized void troque( String str[],int l,int r ) {
+    protected void troque( String str[],int l,int r ) {
         String temp;
         temp   = str[l];
         str[l] = str[r];
@@ -188,12 +188,12 @@ public abstract class AbstractStopList implements StopList {
    	   	return isStop;
     }
 
-    public synchronized boolean isIrrelevant( String palavra) {
+    public boolean isIrrelevant( String palavra) {
         if( palavra == null )
             return true;
         palavra = palavra.trim();
         int size = palavra.length();
-        if( pertenceAoArray( palavra,excecoes ))
+        if( pertenceAoArray( palavra, excecoes ))
             return false;
         if( size < MIN_LENGTH || size > MAX_LENGTH )
             return true;
@@ -238,7 +238,7 @@ public abstract class AbstractStopList implements StopList {
     /**
     *   Indica se uma string e formada apenas por numeros.
     */
-    public synchronized boolean apenasNumero( String palavra ) {
+    protected boolean apenasNumero( String palavra ) {
         boolean numero = true;
         int i = 0; char c;
         int size = palavra.length();
@@ -253,7 +253,7 @@ public abstract class AbstractStopList implements StopList {
     /**
     *   Indica se uma string e formada apenas por hifens.
     */
-    public synchronized boolean apenasHifen( String palavra ) {
+    protected boolean apenasHifen( String palavra ) {
 
         boolean hifen = true;
         int i = 0; char c;
@@ -270,7 +270,7 @@ public abstract class AbstractStopList implements StopList {
     *   Tenta identificar um conjunto de caracteres, no caso os numeros.
     *   >48 e <57   para 0..9
     */
-    public synchronized boolean eNumero( char c ) {
+    protected boolean eNumero( char c ) {
         int value = (int) c;
         return ( 48 <= value && value <= 57 );
     }
@@ -281,7 +281,7 @@ public abstract class AbstractStopList implements StopList {
     *   >97  e <122  para A..Z
     */
 
-    public synchronized boolean eLetra( char c ) {
+    protected boolean eLetra( char c ) {
         int value = (int)(Acentos.retirarAcentosANSI(""+c).charAt(0));
         return ( 65 <= value && value <= 90 ) || ( 97 <= value && value <= 122 );
     }
@@ -290,7 +290,7 @@ public abstract class AbstractStopList implements StopList {
     *   Indica se a palavra e formada apenas por numeros e hifens, sendo assim capaz
     *   de identificar os numero de telefone, CPF, CEP, etc.
     */
-    public synchronized boolean apenasNumeroEHifen( String palavra ) {
+    protected boolean apenasNumeroEHifen( String palavra ) {
 
         boolean numero = false,hifen  = false,outro  = false;
         int i = 0; char c;
@@ -329,7 +329,7 @@ public abstract class AbstractStopList implements StopList {
 
     */
 
-    public synchronized boolean possuiCaracteresIrrelevantes(String palavra) {
+    private boolean possuiCaracteresIrrelevantes(String palavra) {
 
         int codigoANSI;
         int size = palavra.length(); // este size evita que o metodo length() seja chamado a cada loop.
@@ -347,7 +347,7 @@ public abstract class AbstractStopList implements StopList {
     }
 
     /** Busca binária em um array de Strings */
-    protected synchronized boolean pertenceAoArray(String palavra, String array[]) {
+    protected boolean pertenceAoArray(String palavra, String array[]) {
         boolean achou = false;
         if (array != null) {
             int pos;
@@ -366,7 +366,7 @@ public abstract class AbstractStopList implements StopList {
     }
 
     /** Verifica os prefixos. */
-    protected synchronized boolean possuiPrefixos(String palavra, String term[]) {
+    protected boolean possuiPrefixos(String palavra, String term[]) {
         boolean achou = false;
         if (term != null) {
             for (int i = 0; i < term.length && !achou; i++)
@@ -378,7 +378,7 @@ public abstract class AbstractStopList implements StopList {
 
     /** Verifica os sufixos. */
 
-    protected synchronized boolean possuiSufixos( String palavra, String term[] ) {
+    protected boolean possuiSufixos( String palavra, String term[] ) {
 
         boolean achou = false;
         if (term != null) {

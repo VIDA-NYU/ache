@@ -62,7 +62,7 @@ public class TargetStorage extends StorageDefault {
     /**
      * Inserts a page into the repository.
      */
-    public synchronized Object insert(Object obj) throws StorageException {
+    public Object insert(Object obj) throws StorageException {
         Page page = (Page) obj;
 
         if (config.isEnglishLanguageDetectionEnabled()) {

@@ -29,6 +29,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -67,51 +68,46 @@ import focusedCrawler.util.string.StopListFile;
  * @author Luciano Barbosa
  * @version 1.0
  */
+public class LinkStorage extends StorageDefault {
 
-public class LinkStorage extends StorageDefault{
+    public static final Logger logger = LoggerFactory.getLogger(LinkStorage.class);
 
-  public static final Logger logger = LoggerFactory.getLogger(LinkStorage.class);
-	
+    private final boolean getBacklinks;
+    private final boolean getOutlinks;
+    private final int learnLimit;
 
-  private FrontierManager frontierManager;
+    private final FrontierManager frontierManager;
+    private final BipartiteGraphManager graphManager;
+    private final OnlineLearning onlineLearning;
 
-  private BipartiteGraphManager graphManager;
-
-  private OnlineLearning onlineLearning;
-
-  private int numberOfPages = 0;
-
-  private int numberOfBacklink = 0;
-
-  private long totalTime = 0;
-  
-  private boolean getBacklinks = false;
-  
-  private boolean getOutlinks = false;
-  
-  private int learnLimit = 10;
+    private AtomicInteger numberOfPages = new AtomicInteger(0);
+    private AtomicInteger numberOfBacklink = new AtomicInteger(0);
 
     public LinkStorage(LinkStorageConfig config,
                        BipartiteGraphManager manager,
                        FrontierManager frontierManager)
                        throws IOException {
+        this(config, manager, frontierManager, null);
+    }
+    
+    public LinkStorage(LinkStorageConfig config,
+                       BipartiteGraphManager manager,
+                       FrontierManager frontierManager,
+                       OnlineLearning onlineLearning) throws IOException {
         this.frontierManager = frontierManager;
         this.graphManager = manager;
         this.getBacklinks = config.getBacklinks();
         this.getOutlinks = config.getOutlinks();
+        this.onlineLearning = onlineLearning;
+        this.learnLimit = config.getLearningLimit();
     }
-    
+
     public void close(){
         logger.info("Shutting down GraphManager...");
         graphManager.getRepository().close();
         logger.info("Shutting down FrontierManager...");
         this.frontierManager.close();
         logger.info("done.");
-    }
-
-    public void setOnlineLearning(OnlineLearning onlineLearning, int learnLimit) {
-        this.onlineLearning = onlineLearning;
-        this.learnLimit = learnLimit;
     }
 
     /**
@@ -121,7 +117,7 @@ public class LinkStorage extends StorageDefault{
      *            Object - page containing links
      * @return Object
      */
-    public synchronized Object insert(Object obj) throws StorageException {
+    public Object insert(Object obj) throws StorageException {
         if(obj instanceof Page) {
             return insert((Page) obj);
         } 
@@ -167,16 +163,15 @@ public class LinkStorage extends StorageDefault{
     
     public Object insert(Page page) throws StorageException {
         
-        long initialTime = System.currentTimeMillis();
-        numberOfPages++;
+        int numberOfPages = this.numberOfPages.incrementAndGet();
         
         try {
             
             if (getBacklinks && page.isAuth()) {
                 logger.info(">>>>>GETTING BACKLINKS:" + page.getURL().toString());
                 graphManager.insertBacklinks(page);
-                numberOfBacklink++;
-                logger.info("TOTAL BACKLINKS:" + numberOfBacklink);
+                numberOfBacklink.incrementAndGet();
+                logger.info("TOTAL BACKLINKS:" + numberOfBacklink.get());
             }
             
             if (onlineLearning != null && numberOfPages % learnLimit == 0) {
@@ -209,11 +204,6 @@ public class LinkStorage extends StorageDefault{
             throw new StorageException(ex.getMessage(), ex);
         }
 
-        long finalTime = System.currentTimeMillis();
-        totalTime = totalTime + (finalTime - initialTime);
-        double average = totalTime / numberOfPages;
-        logger.info("\n> TOTAL PAGES:" + numberOfPages + "\n> TOTAL TIME:" + (finalTime - initialTime) + "\n> AVERAGE:" + average);
-        
         return null;
     }
 
@@ -270,16 +260,15 @@ public class LinkStorage extends StorageDefault{
 
         BipartiteGraphManager manager = createBipartiteGraphManager(config, linkClassifier, frontierManager, graphRep);
 
-        LinkStorage linkStorage = new LinkStorage(config, manager, frontierManager);
-
+        LinkStorage linkStorage;
         if (config.isUseOnlineLearning()) {
             LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
-            
             LinkClassifierBuilder cb = new LinkClassifierBuilder(dataPath, graphRep, stoplist, wrapper, frontierManager.getFrontier());
-            
-            logger.info("ONLINE LEARNING:" + config.getOnlineMethod());
             OnlineLearning onlineLearning = new OnlineLearning(frontierManager.getFrontier(), manager, cb, config.getOnlineMethod(), dataPath + "/" + config.getTargetStorageDirectory());
-            linkStorage.setOnlineLearning(onlineLearning, config.getLearningLimit());
+            logger.info("ONLINE LEARNING:" + config.getOnlineMethod());
+            linkStorage = new LinkStorage(config, manager, frontierManager, onlineLearning);
+        } else {
+            linkStorage = new LinkStorage(config, manager, frontierManager);
         }
 
         return linkStorage;

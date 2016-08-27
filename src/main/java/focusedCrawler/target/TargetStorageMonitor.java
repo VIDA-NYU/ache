@@ -47,7 +47,7 @@ public class TargetStorageMonitor {
         return new PrintWriter(bos, autoFlush);
     }
     
-    public void countPage(Page page, boolean isRelevant, double prob) {
+    public synchronized void countPage(Page page, boolean isRelevant, double prob) {
         long currentTime = System.currentTimeMillis();
         totalOfPages++;
         fCrawledPages.printf("%s\t%d\n", page.getIdentifier(), (currentTime));
