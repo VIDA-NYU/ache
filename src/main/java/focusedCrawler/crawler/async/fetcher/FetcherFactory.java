@@ -19,12 +19,8 @@ public class FetcherFactory {
     }
     
     public static SimpleHttpFetcher createSimpleHttpFetcher(HttpDownloaderConfig config){
-        // Adding some extra connections for URLs that have redirects
-        // and thus creates more connections   
-        int threadPoolSize = config.getDownloadThreadPoolSize();
-        int connectionPoolSize = (int) (threadPoolSize * 2);
         UserAgent userAgent = new UserAgent(config.getUserAgentName(), "", config.getUserAgentUrl());
-        
+        int connectionPoolSize = config.getConnectionPoolSize();
         SimpleHttpFetcher httpFetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
         // timeout for inactivity between two consecutive data packets
         httpFetcher.setSocketTimeout(30*1000);

@@ -10,6 +10,9 @@ public class HttpDownloaderConfig {
 
     @JsonProperty("crawler_manager.downloader.download_thread_pool_size")
     private int downloadThreadPoolSize = 100;
+    
+    @JsonProperty("crawler_manager.downloader.connection_pool_size")
+    private int connectionPoolSize = 1000;
 
     @JsonProperty("crawler_manager.downloader.max_retry_count")
     private int maxRetryCount = 2;
@@ -35,6 +38,10 @@ public class HttpDownloaderConfig {
 
     public int getDownloadThreadPoolSize() {
         return this.downloadThreadPoolSize;
+    }
+    
+    public int getConnectionPoolSize() {
+        return this.connectionPoolSize;
     }
 
     public int getMaxRetryCount() {
