@@ -115,8 +115,8 @@ public class HttpDownloader implements Closeable {
         try {        
             downloadThreadPool.shutdown();
             distpatchThreadPool.shutdown();
-            downloadThreadPool.awaitTermination(1, TimeUnit.MINUTES);
-            distpatchThreadPool.awaitTermination(1, TimeUnit.MINUTES);
+            downloadThreadPool.awaitTermination(5, TimeUnit.MINUTES);
+            distpatchThreadPool.awaitTermination(5, TimeUnit.MINUTES);
         } catch (InterruptedException e) {
             throw new RuntimeException("Thread interrupted while waiting downloader threads finalize.", e);
         }
