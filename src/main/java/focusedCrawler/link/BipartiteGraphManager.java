@@ -51,43 +51,35 @@ import focusedCrawler.util.parser.PaginaURL;
 public class BipartiteGraphManager {
 
 	private FrontierManager frontierManager;
-	
 	private BacklinkSurfer surfer;
-	
 	private LinkClassifier backlinkClassifier;
-	
 	private LinkClassifier outlinkClassifier;
-
-	private BipartiteGraphRepository rep;
+	private BipartiteGraphRepository graphRepository;
 	
 	private int count = 0;
 
     // Data structure for stop conditions //////////////////////////
-    private int maxPages = 100; // Maximum number of pages per each domain
+    private int maxPagesPerDomain = 100; // Maximum number of pages per each domain
     private HashMap<String, Integer> domainCounter;// Count number of pages for each domain
     ///////////////////////////////////////////////////////////////
 	
 	private final int pagesToCommit = 100;
 	
 	public BipartiteGraphManager(FrontierManager frontierManager,
-	                             BipartiteGraphRepository rep,
+	                             BipartiteGraphRepository graphRepository,
 	                             LinkClassifier outlinkClassifier,
+	                             int maxPagesPerDomain,
+	                             BacklinkSurfer surfer,
 	                             LinkClassifier backlinkClassifier) {
-		this.frontierManager = frontierManager;
-		this.outlinkClassifier = outlinkClassifier;
-		this.backlinkClassifier = backlinkClassifier;
-		this.rep = rep;
-		this.domainCounter = new HashMap<String, Integer>();
-	}
-
-    public void setMaxPages(int max) {
-        this.maxPages = max;
+        this.frontierManager = frontierManager;
+        this.graphRepository = graphRepository;
+        this.outlinkClassifier = outlinkClassifier;
+        this.backlinkClassifier = backlinkClassifier;
+        this.domainCounter = new HashMap<String, Integer>();
+        this.maxPagesPerDomain = maxPagesPerDomain;
+        this.surfer = surfer;
     }
 
-	public void setBacklinkSurfer(BacklinkSurfer surfer){
-		this.surfer = surfer;
-	}
-	
 	public void setBacklinkClassifier(LinkClassifier classifier){
 		this.backlinkClassifier = classifier;
 	}
@@ -97,7 +89,7 @@ public class BipartiteGraphManager {
 	}
 
 	public BipartiteGraphRepository getRepository(){
-		return this.rep;
+		return this.graphRepository;
 	}
 	
     public synchronized void insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException {
@@ -124,7 +116,7 @@ public class BipartiteGraphManager {
                     if (domainCount == null)
                         domainCount = 0;
                     
-                    if (domainCount < maxPages) {// Stop Condition
+                    if (domainCount < maxPagesPerDomain) {// Stop Condition
                         domainCount++;
                         domainCounter.put(domain, domainCount);
                         relevantURLs.add(url);
@@ -144,11 +136,11 @@ public class BipartiteGraphManager {
             }
         }
         
-        rep.insertOutlinks(page.getURL(), lns);
+        graphRepository.insertOutlinks(page.getURL(), lns);
         frontierManager.insert(filteredLinksRelevance);
         
         if (count == pagesToCommit) {
-            rep.commit();
+            graphRepository.commit();
             count = 0;
         }
         count++;
@@ -156,7 +148,7 @@ public class BipartiteGraphManager {
 	
 	public synchronized void insertBacklinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException{
 		URL url = page.getURL();
-		BackLinkNeighborhood[] links = rep.getBacklinks(url);
+		BackLinkNeighborhood[] links = graphRepository.getBacklinks(url);
 		if(links == null || (links != null && links.length < 10)){
 			links = surfer.getLNBacklinks(url);	
 		}
@@ -182,9 +174,9 @@ public class BipartiteGraphManager {
 			frontierManager.insert(linksRelevance);
 		}
 		URL normalizedURL = new URL(url.getProtocol(), url.getHost(), "/"); 
-		rep.insertBacklinks(normalizedURL, links);
+		graphRepository.insertBacklinks(normalizedURL, links);
 		if(count == pagesToCommit){
-			rep.commit();
+			graphRepository.commit();
 			count = 0;
 		}
 		count++;

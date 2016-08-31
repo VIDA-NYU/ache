@@ -275,25 +275,17 @@ public class LinkStorage extends StorageDefault {
     }
 
     private static BipartiteGraphManager createBipartiteGraphManager(LinkStorageConfig config,
-                LinkClassifier linkClassifier, FrontierManager frontierManager,
-                BipartiteGraphRepository graphRep) {
-        
-        BipartiteGraphManager manager = null;
-        if(config.getBacklinks()) {
-            
-            BacklinkSurfer surfer = new BacklinkSurfer(config.getBackSurferConfig());
-            
-            LinkClassifier bClassifier = new LinkClassifierHub();
-            manager = new BipartiteGraphManager(frontierManager, graphRep, linkClassifier, bClassifier);
-            manager.setBacklinkSurfer(surfer);
-            
-        } else{
-            manager = new BipartiteGraphManager(frontierManager,graphRep,linkClassifier,null);
+            LinkClassifier linkClassifier, FrontierManager frontierManager,
+            BipartiteGraphRepository graphRepository) {
+
+        if (config.getBacklinks()) {
+            return new BipartiteGraphManager(frontierManager, graphRepository, linkClassifier,
+                    config.getMaxPagesPerDomain(), new BacklinkSurfer(config.getBackSurferConfig()),
+                    new LinkClassifierHub());
+        } else {
+            return new BipartiteGraphManager(frontierManager, graphRepository, linkClassifier,
+                    config.getMaxPagesPerDomain(), null, null);
         }
-        
-        manager.setMaxPages(config.getMaxPagesPerDomain());
-        
-        return manager;
     }
     
 }
