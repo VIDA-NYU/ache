@@ -88,7 +88,7 @@ public class HttpDownloader implements Closeable {
     public Future<FetchedResult> dipatchDownload(LinkRelevance link, Callback callback) {
         try {
             while(downloadQueue.size() > downloadQueueMaxSize) {
-                Thread.sleep(100);
+                Thread.sleep(10);
             }
         } catch (InterruptedException e) {
             // ok, just finish execution
