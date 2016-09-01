@@ -12,7 +12,7 @@ public class HttpDownloaderConfig {
     private int downloadThreadPoolSize = 100;
     
     @JsonProperty("crawler_manager.downloader.connection_pool_size")
-    private int connectionPoolSize = 1000;
+    private int connectionPoolSize = 10000;
 
     @JsonProperty("crawler_manager.downloader.max_retry_count")
     private int maxRetryCount = 2;
