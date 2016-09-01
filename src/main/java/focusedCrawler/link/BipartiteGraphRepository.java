@@ -13,21 +13,15 @@ import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.Tuple;
 
 public class BipartiteGraphRepository {
+    
+    private final int pagesToCommit = 100;
+    private int uncommittedCount = 0;
 
-//	private PersistentHashtable hubs;
-	
-//	private PersistentHashtable auths;
-	
 	private PersistentHashtable<String> authGraph; 
-	
 	private PersistentHashtable<String> authID;
-
 	private PersistentHashtable<String> hubGraph; 
-	
 	private PersistentHashtable<String> hubID;
-	
 	private PersistentHashtable<String> url2id;
-
 	
 	private final String separator = "###";
 	
@@ -272,7 +266,7 @@ public class BipartiteGraphRepository {
 	 * Insert outlinks from hubs 
 	 * @param page
 	 */
-	public void insertOutlinks(URL url, LinkNeighborhood[] lns){
+	public synchronized void insertOutlinks(URL url, LinkNeighborhood[] lns){
 		
 		String urlId = getId(url.toString());
 		String strCurrentLinks = hubGraph.get(urlId);
@@ -315,6 +309,12 @@ public class BipartiteGraphRepository {
 		if(!strCurrentLinks.equals("")){
 			hubGraph.put(urlId, strCurrentLinks);	
 		}
+		
+		uncommittedCount++;
+		if (uncommittedCount == pagesToCommit) {
+            this.commit();
+            uncommittedCount = 0;
+        }
 	}
 	
 	
@@ -323,7 +323,7 @@ public class BipartiteGraphRepository {
 	 * @param page
 	 * @throws IOException 
 	 */
-	public void insertBacklinks(URL url, BackLinkNeighborhood[] links) throws IOException{
+	public synchronized void insertBacklinks(URL url, BackLinkNeighborhood[] links) throws IOException{
 		String urlId = getId(url.toString());
 		String strCurrentLinks = authGraph.get(urlId);
 		HashSet<String> currentLinks = parseRecordBacklink(strCurrentLinks);
@@ -356,7 +356,13 @@ public class BipartiteGraphRepository {
 		}else{
 			strCurrentLinks =  strCurrentLinks + buffer.toString();
 		}
-		authGraph.put(urlId, strCurrentLinks);	
+		authGraph.put(urlId, strCurrentLinks);
+		
+		uncommittedCount++;
+		if(uncommittedCount == pagesToCommit){
+            this.commit();
+            uncommittedCount = 0;
+        }
 	}
 
 	private String getId(String url){
@@ -374,7 +380,7 @@ public class BipartiteGraphRepository {
 		return id;
 	}
 
-	public void commit(){
+	public synchronized void commit(){
 		url2id.commit();
 		authGraph.commit();
 		authID.commit();

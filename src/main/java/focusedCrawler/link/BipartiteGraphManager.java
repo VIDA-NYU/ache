@@ -56,14 +56,10 @@ public class BipartiteGraphManager {
 	private LinkClassifier outlinkClassifier;
 	private BipartiteGraphRepository graphRepository;
 	
-	private int count = 0;
-
     // Data structure for stop conditions //////////////////////////
     private int maxPagesPerDomain = 100; // Maximum number of pages per each domain
     private HashMap<String, Integer> domainCounter;// Count number of pages for each domain
     ///////////////////////////////////////////////////////////////
-	
-	private final int pagesToCommit = 100;
 	
 	public BipartiteGraphManager(FrontierManager frontierManager,
 	                             BipartiteGraphRepository graphRepository,
@@ -92,7 +88,7 @@ public class BipartiteGraphManager {
 		return this.graphRepository;
 	}
 	
-    public synchronized void insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException {
+    public void insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException {
     	
         PaginaURL parsedPage = page.getPageURL();
         parsedPage.setRelevance(page.getRelevance());
@@ -111,14 +107,19 @@ public class BipartiteGraphManager {
                 if (!relevantURLs.contains(url)) {
                     
                     String domain = linksRelevance[i].getTopLevelDomainName();
-                    Integer domainCount = domainCounter.get(domain);
                     
-                    if (domainCount == null)
-                        domainCount = 0;
-                    
-                    if (domainCount < maxPagesPerDomain) {// Stop Condition
-                        domainCount++;
+                    Integer domainCount;
+                    synchronized (domainCounter) {
+                        domainCount = domainCounter.get(domain);
+                        if (domainCount == null) {
+                            domainCount = 0;
+                        } else {
+                            domainCount++;
+                        }
                         domainCounter.put(domain, domainCount);
+                    }
+                    
+                    if (domainCount < maxPagesPerDomain) { // Stop Condition
                         relevantURLs.add(url);
                         temp.add(linksRelevance[i]);
                     }
@@ -138,15 +139,9 @@ public class BipartiteGraphManager {
         
         graphRepository.insertOutlinks(page.getURL(), lns);
         frontierManager.insert(filteredLinksRelevance);
-        
-        if (count == pagesToCommit) {
-            graphRepository.commit();
-            count = 0;
-        }
-        count++;
     }
 	
-	public synchronized void insertBacklinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException{
+	public void insertBacklinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException{
 		URL url = page.getURL();
 		BackLinkNeighborhood[] links = graphRepository.getBacklinks(url);
 		if(links == null || (links != null && links.length < 10)){
@@ -175,11 +170,6 @@ public class BipartiteGraphManager {
 		}
 		URL normalizedURL = new URL(url.getProtocol(), url.getHost(), "/"); 
 		graphRepository.insertBacklinks(normalizedURL, links);
-		if(count == pagesToCommit){
-			graphRepository.commit();
-			count = 0;
-		}
-		count++;
 	}
 
 }

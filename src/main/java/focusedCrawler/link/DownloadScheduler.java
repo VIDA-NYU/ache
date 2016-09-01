@@ -18,7 +18,7 @@ public class DownloadScheduler {
         
         final String domainName;
         final Deque<LinkRelevance> links;
-        long lastAccessTime;
+        volatile long lastAccessTime;
         
         public DomainNode(String domainName, long lastAccessTime) {
             this.domainName = domainName;
