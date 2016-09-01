@@ -29,6 +29,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
@@ -80,6 +81,7 @@ public class LinkStorage extends StorageDefault {
     private final BipartiteGraphManager graphManager;
     private final OnlineLearning onlineLearning;
 
+    private AtomicBoolean onlineLearningIsRunning = new AtomicBoolean(false);
     private AtomicInteger numberOfPages = new AtomicInteger(0);
     private AtomicInteger numberOfBacklink = new AtomicInteger(0);
 
@@ -175,9 +177,13 @@ public class LinkStorage extends StorageDefault {
             }
             
             if (onlineLearning != null && numberOfPages % learnLimit == 0) {
-                logger.info("RUNNING ONLINE LEARNING...");
-                onlineLearning.execute();
-                frontierManager.clearFrontier();
+                if(onlineLearningIsRunning.compareAndSet(false, true)) {
+                    // onlineLearningIsRunning is true
+                    logger.info("RUNNING ONLINE LEARNING...");
+                    onlineLearning.execute();
+                    frontierManager.clearFrontier();
+                    onlineLearningIsRunning.set(false);
+                }
             }
             
             if (getBacklinks) {
