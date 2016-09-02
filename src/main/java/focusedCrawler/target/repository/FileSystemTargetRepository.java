@@ -86,10 +86,6 @@ public class FileSystemTargetRepository implements TargetRepository {
         this.compressData = compressData;
     }
 
-    public boolean insert(Page target, int counter) {
-        return insert(target);
-    }
-
     public boolean insert(Page target) {
         try {
             String id = target.getIdentifier();

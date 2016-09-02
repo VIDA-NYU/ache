@@ -56,10 +56,6 @@ public class ElasticSearchTargetRepository implements TargetRepository {
         }
     }
 
-    public boolean insert(Page target, int counter) {
-        return index(target);
-    }
-
     public boolean insert(Page target) {
         return index(target);
     }
