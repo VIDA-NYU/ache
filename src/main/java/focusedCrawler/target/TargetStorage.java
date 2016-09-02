@@ -77,8 +77,6 @@ public class TargetStorage extends StorageDefault {
             TargetRelevance relevance;
             if (targetClassifier != null) {
                 relevance = targetClassifier.classify(page);
-                logger.info("\n> PROCESSING: " + page.getIdentifier() +
-                            "\n> PROB:" + relevance.getRelevance());
             } else {
                 relevance = new TargetRelevance(true, 1.0d);
             }

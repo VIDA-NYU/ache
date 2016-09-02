@@ -81,7 +81,6 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
             
             page.setRelevance(relevance);
             
-            logger.info(relevance + " Sending page to TargetStorage: "+ response.getFetchedUrl());
             targetStorage.insert(page);
             
         } catch (Exception e) {
