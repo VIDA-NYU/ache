@@ -17,6 +17,7 @@ import focusedCrawler.target.model.Page;
 import focusedCrawler.target.repository.ElasticSearchTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
+import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.CommunicationException;
@@ -163,7 +164,10 @@ public class TargetStorage extends StorageDefault {
         boolean compressData = config.getCompressData();
         
         logger.info("Using DATA_FORMAT: "+dataFormat);
-        if(dataFormat.equals("FILESYSTEM_JSON")) {
+        if(dataFormat.equals("FILES")) {
+            targetRepository = new FilesTargetRepository(targetDirectory, config.getMaxFileSize());
+            negativeRepository = new FilesTargetRepository(negativeDirectory, config.getMaxFileSize());
+        } else if(dataFormat.equals("FILESYSTEM_JSON")) {
         	boolean hashFilename = config.getHashFileName();
             targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.JSON, hashFilename, compressData);
 			negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.JSON, hashFilename, compressData);
