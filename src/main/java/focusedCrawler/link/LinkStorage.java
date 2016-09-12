@@ -270,7 +270,7 @@ public class LinkStorage extends StorageDefault {
         if (config.isUseOnlineLearning()) {
             LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
             LinkClassifierBuilder cb = new LinkClassifierBuilder(dataPath, graphRep, stoplist, wrapper, frontierManager.getFrontier());
-            OnlineLearning onlineLearning = new OnlineLearning(frontierManager.getFrontier(), manager, cb, config.getOnlineMethod(), dataPath + "/" + config.getTargetStorageDirectory());
+            OnlineLearning onlineLearning = new OnlineLearning(frontierManager.getFrontier(), manager, cb, config.getOnlineMethod(), dataPath);
             logger.info("ONLINE LEARNING:" + config.getOnlineMethod());
             linkStorage = new LinkStorage(config, manager, frontierManager, onlineLearning);
         } else {

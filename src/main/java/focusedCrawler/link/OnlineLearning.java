@@ -7,7 +7,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
-import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -18,6 +17,7 @@ import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.link.linkanalysis.HITS;
 import focusedCrawler.link.linkanalysis.SALSA;
+import focusedCrawler.target.TargetStorageMonitor;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.vsm.VSMElement;
 
@@ -29,15 +29,15 @@ public class OnlineLearning {
     private BipartiteGraphRepository rep;
     private LinkClassifierBuilder classifierBuilder;
     private String method;
-    private String targetPath;
+    private String dataPath;
 
     public OnlineLearning(Frontier frontier, BipartiteGraphManager manager,
-            LinkClassifierBuilder classifierBuilder, String method, String path) {
+            LinkClassifierBuilder classifierBuilder, String method, String dataPath) {
         this.frontier = frontier;
         this.manager = manager;
         this.classifierBuilder = classifierBuilder;
         this.method = method;
-        this.targetPath = path;
+        this.dataPath = dataPath;
         this.rep = manager.getRepository();
     }
 
@@ -62,17 +62,17 @@ public class OnlineLearning {
             createClassifiers(readRelevantUrlsFromFile(), true);
         }
         if (method.equals("FORWARD_CLASSIFIER_BINARY")) {
-            forwardClassifier(readRelevantUrlsFromFileSystemStructure(), true, 0);
+            forwardClassifier(TargetStorageMonitor.readRelevantUrls(dataPath), true, 0);
         }
         if (method.equals("FORWARD_CLASSIFIER_LEVELS")) {
-            forwardClassifier(readRelevantUrlsFromFileSystemStructure(), true, 3);
+            forwardClassifier(TargetStorageMonitor.readRelevantUrls(dataPath), true, 3);
         }
         frontier.commit();
     }
 
     private HashSet<String> readRelevantUrlsFromFile() throws IOException, FileNotFoundException {
         HashSet<String> relSites = new HashSet<String>();
-        File file = new File(targetPath + File.separator + "entry_points");
+        File file = new File(dataPath + File.separator + "entry_points");
         try (BufferedReader input = new BufferedReader(new FileReader(file))) {
             for (String line = input.readLine(); line != null; line = input.readLine()) {
                 if (line.startsWith("------")) {
@@ -88,25 +88,7 @@ public class OnlineLearning {
         return relSites;
     }
 
-    private HashSet<String> readRelevantUrlsFromFileSystemStructure()
-            throws UnsupportedEncodingException {
-        HashSet<String> relSites = new HashSet<String>();
-        File[] dirs = new File(targetPath).listFiles();
-        System.out.println(">>REL SITESs");
-        for (int i = 0; i < dirs.length; i++) {
-            File[] files = dirs[i].listFiles();
-            for (int j = 0; j < files.length; j++) {
-                String url = URLDecoder.decode(files[j].getName(), "UTF-8");
-                if (!relSites.contains(url)) {
-                    relSites.add(url);
-                    System.out.println(">>" + url);
-                }
-            }
-        }
-        return relSites;
-    }
-	
-	public void runSALSA(HashSet<String> relSites, boolean useClassifier) throws Exception{
+    public void runSALSA(HashSet<String> relSites, boolean useClassifier) throws Exception{
 		SALSA salsa = new SALSA(rep);
 		if(relSites != null){
 			HashMap<String,VSMElement> probs = new HashMap<String, VSMElement>();

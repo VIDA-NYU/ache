@@ -4,7 +4,6 @@
 target_storage.use_classifier: true
 target_storage.store_negative_pages: false
 target_storage.data_format.type: FILESYSTEM_JSON
-target_storage.data_format.filesystem.hash_file_name: false # Online learning not working currently hashed file names or ElasticSearch data format
 target_storage.data_format.filesystem.compress_data: true
 target_storage.english_language_detection_enabled: false
 
