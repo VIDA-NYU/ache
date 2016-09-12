@@ -46,7 +46,7 @@ public class RobotsAndSitemapTest {
     }
 
     @Test
-    public void shouldDownloadLinksOnlyFromRelevantPages() throws Exception {
+    public void shouldDownloadLinksListedOnSitemapsXml() throws Exception {
 
         String outputPath = tempFolder.newFolder().toString();
 
