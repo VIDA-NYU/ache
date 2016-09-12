@@ -2,7 +2,7 @@
 # Example of configuration for running a Focused Crawl
 #
 target_storage.use_classifier: true
-target_storage.store_negative_pages: false
+target_storage.store_negative_pages: true
 target_storage.data_format.type: FILESYSTEM_JSON
 target_storage.data_format.filesystem.compress_data: true
 target_storage.english_language_detection_enabled: false
