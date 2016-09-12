@@ -11,6 +11,7 @@ import focusedCrawler.config.ConfigService;
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageConfig;
@@ -22,14 +23,17 @@ public class AsyncCrawler {
 	
     private static final Logger logger = LoggerFactory.getLogger(AsyncCrawler.class);
 
-    private final LinkStorage linkStorage;
+    private final Storage targetStorage;
+    private final Storage linkStorage;
     private final HttpDownloader downloader;
     private final Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
     
     private volatile boolean shouldStop = false;
     private Object running = new Object();
+
     
-    public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage, AsyncCrawlerConfig crawlerConfig) {
+    public AsyncCrawler(Storage targetStorage, Storage linkStorage, AsyncCrawlerConfig crawlerConfig) {
+        this.targetStorage = targetStorage;
         this.linkStorage = linkStorage;
         this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig());
         
@@ -91,7 +95,12 @@ public class AsyncCrawler {
             logger.info("Waiting downloader to finish...");
             downloader.await();
             downloader.close();
-            linkStorage.close();
+            if(linkStorage instanceof LinkStorage) {
+                ((LinkStorage)linkStorage).close();
+            }
+            if(targetStorage instanceof TargetStorage) {
+                ((TargetStorage)targetStorage).close();
+            }
             logger.info("Done.");
         }
     }
@@ -106,7 +115,7 @@ public class AsyncCrawler {
             Storage targetStorage = new StorageCreator(targetServerConfig).produce();
             
             AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, (LinkStorage) linkStorage, crawlerConfig);
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig);
             crawler.run();
 
         } catch (StorageFactoryException ex) {

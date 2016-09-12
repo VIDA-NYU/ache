@@ -83,4 +83,9 @@ public class ElasticSearchTargetRepository implements TargetRepository {
         return targetAsJson;
     }
 
+    @Override
+    public void close() {
+        client.close();
+    }
+
 }

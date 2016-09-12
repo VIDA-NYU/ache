@@ -202,4 +202,9 @@ public class TargetStorage extends StorageDefault {
         return targetStorage;
     }
 
+    public void close() {
+        targetRepository.close();
+        negativeRepository.close();
+    }
+
 }

@@ -40,4 +40,6 @@ public interface TargetRepository {
 
     public boolean insert(Page target);
 
+    public void close();
+
 }

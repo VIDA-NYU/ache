@@ -85,6 +85,9 @@ public class FileSystemTargetRepository implements TargetRepository {
         this.hashFilename = hashFilename;
         this.compressData = compressData;
     }
+    
+    @Override
+    public void close() {}
 
     public boolean insert(Page target) {
         try {
