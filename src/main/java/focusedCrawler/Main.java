@@ -26,6 +26,8 @@ import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.seedfinder.SeedFinder;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
+import focusedCrawler.tools.PrintFrontierLinksToFile;
+import focusedCrawler.util.CliTool;
 import focusedCrawler.util.storage.Storage;
 
 /**
@@ -96,7 +98,8 @@ public class Main {
                     "buildModel",
                     "startTargetStorage",
                     "startLinkStorage",
-                    "seedFinder"};
+                    "seedFinder",
+                    "printFrontier"};
 
             if (args.length == 0) {
                 printUsage();
@@ -130,6 +133,9 @@ public class Main {
             }
             else if ("seedFinder".equals(args[0])) {
                 SeedFinder.main(Arrays.copyOfRange(args, 1, args.length));
+            }
+            else if ("printFrontier".equals(args[0])) {
+                CliTool.run(Arrays.copyOfRange(args, 1, args.length), new PrintFrontierLinksToFile());
             }
             else {
                 printUsage();
