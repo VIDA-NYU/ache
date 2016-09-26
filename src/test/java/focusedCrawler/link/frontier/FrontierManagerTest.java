@@ -6,7 +6,6 @@ import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,7 +31,7 @@ public class FrontierManagerTest {
     private LinkFilter emptyLinkFilter = new LinkFilter(new ArrayList<String>());
 
     private Frontier frontier;
-    private HostManager hostManager;
+    private String dataPath;
     private boolean downloadRobots = false;
 
     private int minimumAccessTimeInterval = 0;
@@ -40,7 +39,7 @@ public class FrontierManagerTest {
     @Before
     public void setUp() throws Exception {
         frontier = new Frontier(tempFolder.newFolder().toString(), 1000);
-        hostManager = new HostManager(Paths.get(tempFolder.newFolder().toString()));
+        dataPath = tempFolder.newFolder().toString();
     }
     
     @After
@@ -59,7 +58,7 @@ public class FrontierManagerTest {
         
         LinkSelector linkSelector = new RandomLinkSelector();
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, scope);
-        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
                 2, 2, minimumAccessTimeInterval, linkSelector, new LinkFilter(new ArrayList<String>()));
         
         // when
@@ -90,7 +89,7 @@ public class FrontierManagerTest {
     public void shouldInsertUrl() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
                 2, 2, minimumAccessTimeInterval, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1, LinkRelevance.Type.FORWARD);
@@ -117,7 +116,7 @@ public class FrontierManagerTest {
         int linksToLoad = 2;
         int schedulerMaxLinks = 10;
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
                 linksToLoad, schedulerMaxLinks, minimumAccessTimeInterval, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index1.html"), 1, LinkRelevance.Type.FORWARD);
@@ -158,7 +157,7 @@ public class FrontierManagerTest {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
         boolean downloadRobots = true;
-        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
                 2, 2, minimumAccessTimeInterval, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/sitemap.xml"), 1, LinkRelevance.Type.FORWARD);
@@ -190,7 +189,7 @@ public class FrontierManagerTest {
     public void shouldInsertUrlsAndSelectUrlsInSortedByRelevance() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
                 2, 2, minimumAccessTimeInterval, linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
@@ -234,7 +233,7 @@ public class FrontierManagerTest {
     public void shouldNotReturnAgainALinkThatWasAlreadyReturned() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
                 2, 2, minimumAccessTimeInterval , linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
@@ -280,7 +279,7 @@ public class FrontierManagerTest {
         // given
         int minimumAccessTimeInterval = 500;
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, hostManager, downloadRobots,
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
                 2, 2, minimumAccessTimeInterval , linkSelector, emptyLinkFilter);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index1.html"), 1);

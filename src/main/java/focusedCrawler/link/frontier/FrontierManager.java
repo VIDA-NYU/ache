@@ -25,6 +25,7 @@ package focusedCrawler.link.frontier;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -58,11 +59,11 @@ public class FrontierManager {
 
     private boolean linksRejectedDuringLastLoad;
 
-    public FrontierManager(Frontier frontier, HostManager hostsManager, boolean downloadRobots,
+    public FrontierManager(Frontier frontier, String dataPath, boolean downloadRobots,
                            int linksToLoad, int schedulerMaxLinks, int schdulerMinAccessInterval,
                            LinkSelector linkSelector, LinkFilter linkFilter) {
         this.frontier = frontier;
-        this.hostsManager = hostsManager;
+        this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"));;
         this.downloadRobots = downloadRobots;
         this.linksToLoad = linksToLoad;
         this.linkSelector = linkSelector;
