@@ -32,12 +32,11 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
 
         int statusCode = response.getStatusCode();
         if(statusCode >= 200 && statusCode < 300) {
-            logger.info("Successfully downloaded URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
             processData(link, response);
-        } else {
-            // TODO: Update metadata about page visits in link storage
-            logger.info("Server returned bad code for URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
         }
+        //else {
+        //     TODO: Update metadata about page visits in link storage
+        //}
     }
     
     @Override

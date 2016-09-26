@@ -82,6 +82,7 @@ public class Main {
             startLinkStorageOptions.addOption("s", "seed", true, "Path to the file of seed URLs");
             
             startCrawlManagerOptions.addOption("c", "configDir", true, "Path to configuration files folder");
+            startCrawlManagerOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
             
             allOptions = new Options[] { 
                     startCrawlOptions,
@@ -129,7 +130,7 @@ public class Main {
             }
             else if ("startCrawlManager".equals(args[0])) {
                 cmd = parser.parse(startCrawlManagerOptions, args);
-                startCrawlManager(getMandatoryOptionValue(cmd, "configDir"));
+                startCrawlManager(cmd);
             }
             else if ("seedFinder".equals(args[0])) {
                 SeedFinder.main(Arrays.copyOfRange(args, 1, args.length));
@@ -236,10 +237,12 @@ public class Main {
         }
     }
 
-    private static void startCrawlManager(final String configPath) {
+    private static void startCrawlManager(CommandLine cmd) {
         try {
+            String configPath = getMandatoryOptionValue(cmd, "configDir");
+            String dataPath = getOptionalOptionValue(cmd, "outputDir");
             ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-            AsyncCrawler.run(config);
+            AsyncCrawler.run(config, dataPath);
             
         } catch (Throwable t) {
             logger.error("Something bad happened to CrawlManager :(", t);
@@ -267,7 +270,7 @@ public class Main {
             AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
             
             // start crawl manager
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig);
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig, dataOutputPath);
             crawler.run();
 
         }

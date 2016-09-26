@@ -32,10 +32,10 @@ public class AsyncCrawler {
     private Object running = new Object();
 
     
-    public AsyncCrawler(Storage targetStorage, Storage linkStorage, AsyncCrawlerConfig crawlerConfig) {
+    public AsyncCrawler(Storage targetStorage, Storage linkStorage, AsyncCrawlerConfig crawlerConfig, String dataPath) {
         this.targetStorage = targetStorage;
         this.linkStorage = linkStorage;
-        this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig());
+        this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig(), dataPath);
         
         this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
@@ -105,7 +105,7 @@ public class AsyncCrawler {
         }
     }
 
-    public static void run(ConfigService config) throws IOException, NumberFormatException {
+    public static void run(ConfigService config, String dataPath) throws IOException, NumberFormatException {
         logger.info("Starting CrawlerManager...");
         try {
             StorageConfig linkStorageServerConfig = config.getLinkStorageConfig().getStorageServerConfig();
@@ -115,7 +115,7 @@ public class AsyncCrawler {
             Storage targetStorage = new StorageCreator(targetServerConfig).produce();
             
             AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig);
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig, dataPath);
             crawler.run();
 
         } catch (StorageFactoryException ex) {

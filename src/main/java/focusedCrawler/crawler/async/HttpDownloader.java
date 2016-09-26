@@ -1,8 +1,16 @@
 package focusedCrawler.crawler.async;
 
+import java.io.BufferedOutputStream;
 import java.io.Closeable;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
@@ -41,12 +49,14 @@ public class HttpDownloader implements Closeable {
     private final LinkedBlockingQueue<Runnable> dispatchQueue;
     private final AtomicInteger numberOfDownloads = new AtomicInteger(0);
 	private final int downloadQueueMaxSize;
+
+    private final PrintWriter requestLog;
     
 	public HttpDownloader() {
-		this(new HttpDownloaderConfig());
+		this(new HttpDownloaderConfig(), null);
 	}
 	
-    public HttpDownloader(HttpDownloaderConfig config) {
+    public HttpDownloader(HttpDownloaderConfig config, String dataPath) {
     	
         ThreadFactory downloadThreadFactory = new ThreadFactoryBuilder().setNameFormat("downloader-%d").build();
         ThreadFactory dispatcherThreadFactory = new ThreadFactoryBuilder().setNameFormat("dispatcher-%d").build();
@@ -70,7 +80,24 @@ public class HttpDownloader implements Closeable {
                 this.fetcher.addValidMimeType(mimeTypes);
             }
         }
-        
+        if(dataPath == null) {
+            requestLog = null;
+        } else {
+            Path logPath = Paths.get(dataPath, "data_monitor", "downloadrequests.csv");
+            try {
+                Files.createDirectories(logPath.getParent());
+                this.requestLog = openLogFile(logPath);
+            } catch (IOException e) {
+                throw new RuntimeException("Failed to open downloader log at path: "+logPath.toString(), e);
+            }
+        }
+    }
+
+    private PrintWriter openLogFile(Path path) throws FileNotFoundException {
+        boolean append = true;
+        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(path.toFile(), append));
+        boolean autoFlush = true;
+        return new PrintWriter(bos, autoFlush);
     }
     
     public Future<FetchedResult> dipatchDownload(String url) {
@@ -108,6 +135,9 @@ public class HttpDownloader implements Closeable {
             distpatchThreadPool.awaitTermination(10, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             throw new RuntimeException("Failed to shutdown downloader threads.", e);
+        }
+        if(requestLog != null) {
+            requestLog.close();
         }
     }
     
@@ -150,14 +180,25 @@ public class HttpDownloader implements Closeable {
         
         @Override
         public FetchedResult call() {
+            BaseFetchException exception = null;
+            FetchedResult result = null;
+            String url = link.getURL().toString();
             try {
-                FetchedResult result = fetcher.get(link.getURL().toString());
-                distpatchThreadPool.submit(new FetchFinishedHandler(link, result, callback, null));
-                return result;
+                result = fetcher.get(url);
             } catch (BaseFetchException e) {
-                distpatchThreadPool.submit(new FetchFinishedHandler(link, null, callback, e));
-                return null;
+                exception = e;
             }
+            if(requestLog != null) {
+                if(result != null) {
+                    requestLog.printf("%d\t%s\t%s\t%s\n", result.getFetchTime(),
+                                      result.getStatusCode(), result.getHostAddress(), url);
+                } else {
+                    requestLog.printf("%d\t%s\t%s\t%s\n", System.currentTimeMillis(),
+                                      -1, "unknown", url);
+                }
+            }
+            distpatchThreadPool.submit(new FetchFinishedHandler(link, result, callback, exception));
+            return result;
         }
         
     }
