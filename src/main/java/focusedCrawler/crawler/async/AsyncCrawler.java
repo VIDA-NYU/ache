@@ -30,6 +30,7 @@ public class AsyncCrawler {
     
     private volatile boolean shouldStop = false;
     private Object running = new Object();
+    private boolean isShutdown = false;
 
     
     public AsyncCrawler(Storage targetStorage, Storage linkStorage, AsyncCrawlerConfig crawlerConfig, String dataPath) {
@@ -88,10 +89,13 @@ public class AsyncCrawler {
         }
     }
 
-    private void shutdown() {
+    public void shutdown() {
         logger.info("Starting crawler shuttdown...");
         shouldStop = true;
         synchronized(running) {
+            if(isShutdown) {
+               return; 
+            }
             logger.info("Waiting downloader to finish...");
             downloader.await();
             downloader.close();

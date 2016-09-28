@@ -272,6 +272,7 @@ public class Main {
             // start crawl manager
             AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig, dataOutputPath);
             crawler.run();
+            crawler.shutdown();
 
         }
         catch (LinkClassifierFactoryException | FrontierPersistentException  e) {
