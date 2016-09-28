@@ -56,9 +56,6 @@ public class PaginaURL {
     private int                MAXPALAVRAS = -1;
     public static final int    MAX_PARAGRAPH_SIZE = 255;
     private URL                pagina = null;
-    private long               visitado = 0;
-    private long               modificado = 0;
-    private int                tamanho = 0;
     private String             titulo = "";
     private String             paragrafo = "";
     private String[]           palavras = new String[0];
@@ -102,24 +99,8 @@ public class PaginaURL {
       return this.relevance;
     }
 
-    public URL endereco() {
-        return pagina;
-    }
-
     public URL getURL() {
         return pagina;
-    }
-
-    public Date dataQueFoiVisitado() {
-        return new Date(visitado);
-    }
-
-    public Date dataQueFoiModificado() {
-        return new Date(modificado);
-    }
-
-    public int tamanhoDoArquivo() {
-        return tamanho;
     }
 
     public String titulo() {
@@ -168,10 +149,6 @@ public class PaginaURL {
         return images;
     }
 
-    public Vector mails() {
-        return mailList;
-    }
-
     public URL[] links() {
         if (URLabsolutas == null) {
             URLabsolutas = new URL[links.size()];
@@ -186,74 +163,6 @@ public class PaginaURL {
         return URLabsolutas;
     }
 
-    public Enumeration posicoes(String palavra) {
-        Vector v = (Vector) palavra_posicoes.get(palavra);
-
-        if (v != null) {
-            return v.elements();
-        } else {
-            return null;
-        }
-    }
-
-    /**
-     * Fornece todos o atributos da pagina ja em formato HTML
-     */
-    public String toString() {
-        String str = "<p>" + "<a href=\"" + pagina.toExternalForm().trim()
-                     + "\">" + titulo + "</a>    " + paragrafo + "<p>"
-                     + " Lista de palavras:    " + this.listapalavras()
-                     + "<p>" + " Lista de links:    " + this.listalinks()
-                     + "<p>" + " Lista de e-mails :    " + this.listamails()
-                     + "<p>" + " N\uFFFD de frames  =  " + frames
-                     + ",    N\uFFFD de formularios  =  " + forms
-                     + ",    N\uFFFD de imagens  =  " + images + "<p>"
-                     + " Visitado  =  " + new Date(visitado)
-                     + ",    modificado  =  " + new Date(modificado)
-                     + ",    tamanho  =  " + tamanho;
-
-        return str;
-    }
-
-    private String listapalavras() {
-        if (palavras == null) {
-            return null;
-        }
-
-        String t1 = "";
-
-        for (int i = 0; i < palavras.length; i++) {
-            t1 = t1 + "  " + palavras[i] + "[" + ocorrencias[i] + "], ";
-        }
-
-        return t1;
-    }
-
-    private String listalinks() {
-        if (URLabsolutas == null) {
-            return null;
-        }
-
-        String t1 = "";
-
-        for (int i = 0; i < URLabsolutas.length; i++) {
-            t1 = t1 + ",  " + URLabsolutas[i].toString().trim();
-        }
-
-        return t1;
-    }
-
-    private String listamails() {
-        if (mailList == null) {
-            return null;
-        }
-        String t1 = "";
-        for (int i = 0; i < mailList.size(); i++) {
-            t1 = t1 + ",  " + mailList.elementAt(i);
-        }
-        return t1;
-    }
-    
     public PaginaURL(Page page){
         this(page.getURL(),page.getContent());
     }
@@ -280,9 +189,6 @@ public class PaginaURL {
         }
 
         pagina = url;
-        visitado = vist;
-        modificado = mod;
-        tamanho = tam;
         this.noindex = noindex;
         this.nofollow = nofollow;
         this.stoplist = stoplist;
@@ -506,7 +412,7 @@ public class PaginaURL {
                         /* faz o token da string */
                         if ((caracterFazParteDePalavra(c)) || (c == ';')
                                 || (c == '&')) {
-                            str += converteChar(c);
+                            str += c;
                             n++;
                             int begin = str.indexOf("&#");
                             int end = str.indexOf(";");
@@ -545,7 +451,7 @@ public class PaginaURL {
                                 if (ch != '\0') {
                                     if (caracterFazParteDePalavra(ch)) {
                                         str = str.substring(0, posicao)
-                                              + converteChar(ch);
+                                              + ch;
                                     } else {
                                         str = str.substring(0, posicao);
                                         estado = PALAVRA;
@@ -1438,148 +1344,7 @@ public class PaginaURL {
         return (Character.isLetterOrDigit(c) || c == '-' || c == '&' || c == '#' || (ascii > 2305 && ascii < 2651));
     }
 
-    /**
-     * Este metodo retorna o caracter dado com acentuacao correta
-     */
-    protected char converteChar(char c) {
-        /*switch ((int) c) {
-
-        case 224: // '\uFFFD'
-
-        case 225:        // '\uFFFD'
-
-        case 226: // '\uFFFD'
-
-        case 227:        // '\uFFFD'
-
-        case 228: // '\uFFFD'
-
-        case 299: // '\uFFFD'
-            return 'a';
-
-        case 192: //'\uFFFD'
-
-        case 193:        // '\uFFFD'
-
-        case 194: // '\uFFFD'
-
-        case 195:        // '\uFFFD'
-
-        case 196: // '\uFFFD'
-
-        case 197: // '\uFFFD'
-            return 'A';
-
-        case 232: // '\uFFFD'
-
-        case 233:        // '\uFFFD'
-
-        case 234: // '\uFFFD'
-
-        case 235: // '\uFFFD'
-            return 'e';
-
-        case 200: // '\uFFFD'
-
-        case 201:        // '\uFFFD'
-
-        case 202: // '\uFFFD'
-
-        case 203: // '\uFFFD'
-            return 'E';
-
-        case 236: // '\uFFFD'
-
-        case 237:        // '\uFFFD'
-
-        case 238: // '\uFFFD'
-
-        case 239: // '\uFFFD'
-            return 'i';
-
-        case 204: // '\uFFFD'
-
-        case 205:        // '\uFFFD'
-
-        case 206: // '\uFFFD'
-
-        case 207: // '\uFFFD'
-            return 'I';
-
-        case 242: // '\uFFFD'
-
-        case 243:        // '\uFFFD'
-
-        case 244: // '\uFFFD'
-
-        case 245:        // '\uFFFD'
-
-        case 246: // '\uFFFD'
-            return 'o';
-
-        case 210: // '\uFFFD'
-
-        case 211:        // '\uFFFD'
-
-        case 212: // '\uFFFD'
-
-        case 213:        // '\uFFFD'
-
-        case 214: // '\uFFFD'
-            return 'O';
-
-        case 249: // '\uFFFD'
-
-        case 250:        // '\uFFFD'
-
-        case 251: // '\uFFFD'
-
-        case 252: // '\uFFFD'
-            return 'u';
-
-        case 217: // '\uFFFD'
-
-        case 218:        // '\uFFFD'
-
-        case 219: // '\uFFFD'
-
-        case 220: // '\uFFFD'
-            return 'U';
-
-        case 231: // '\uFFFD'
-            return 'c';
-
-        case 199: // '\uFFFD'
-            return 'C';
-
-        case 241: // '\uFFFD'
-            return 'n';
-
-        case 209: // '\uFFFD'
-            return 'N';
-
-        case 253: // '\uFFFD'
-                return 'y';
-
-        case 221: // '\uFFFD'
-            return 'Y';
-
-        default:
-            return c;    // caracter comum
-        }*/
-
-         return c;
-    }
-
     private HashMap<String,String> codes = new HashMap<String, String>();
-    
-//    protected String codes2Words(String word){
-//
-//    }
-    
-//    protected String convertStr(String str) {
-//    	
-//    }
     
     /**
      * Este metodo verifica se a partir daposicao dada a substring representa um simbolo
@@ -1589,7 +1354,6 @@ public class PaginaURL {
      * @param pos a posicao inicial de testes
      */
     protected char caracterEspecial(String str, int pos) {
-//        System.out.println(str);
     	int size = str.length() - pos;
         String resStr = codes.get(str.substring(pos));
         if(resStr != null){
@@ -2277,8 +2041,6 @@ public class PaginaURL {
         }
     }
 
-
-
     /**
      * Identifica se uma palavra e considerada insignificante, isto e,
      * nao vale a pena ser armazenada.
@@ -2354,21 +2116,9 @@ public class PaginaURL {
         a[i] = a[j];
         a[j] = temp;
     }
-    //
     
     public Vector<String> getImages() {
         return this.imagens;
     }
 
-    public Hashtable palavra_posicoes() {
-        return palavra_posicoes;
-    }
-
-    public Hashtable palavra_posicoes_meta() {
-        return palavra_posicoes_meta;
-    }
-
-    public StopList stoplist() {
-        return stoplist;
-    }
 }
