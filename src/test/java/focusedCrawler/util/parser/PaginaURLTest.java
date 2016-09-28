@@ -56,6 +56,28 @@ public class PaginaURLTest {
         // then
         assertEquals("Constructor not working properly !", false, paginaURL.getURL().equals(null));
     }
+    
+    @Test
+    public void shouldExtractAnchoTextAndTextAroundLink() throws MalformedURLException {
+        // given
+        URL url = new URL("http://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document");
+        String testPage = createTestPage();
+        // when
+        PaginaURL paginaURL = new PaginaURL(url, testPage);
+        LinkNeighborhood[] neighborhoods = paginaURL.getLinkNeighboor();
+        // then
+        assertThat(neighborhoods.length, is(1));
+        
+        assertThat(neighborhoods[0].getAroundString().trim(), is("my first heading"));
+        assertThat(neighborhoods[0].getAround()[0], is("my"));
+        assertThat(neighborhoods[0].getAround()[1], is("first"));
+        assertThat(neighborhoods[0].getAround()[2], is("heading"));
+        
+        assertThat(neighborhoods[0].getAnchorString().trim(), is("my first paragraph"));
+        assertThat(neighborhoods[0].getAnchor()[0], is("my"));
+        assertThat(neighborhoods[0].getAnchor()[1], is("first"));
+        assertThat(neighborhoods[0].getAnchor()[2], is("paragraph"));
+    }
 
     private boolean hasFragments(URL[] urls) {
         for (URL url : urls) {

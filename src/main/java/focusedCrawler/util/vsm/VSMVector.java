@@ -108,9 +108,7 @@ public class VSMVector {
           }
           input.close();
           String src = content.toString();
-          PaginaURL page = new PaginaURL(new URL("http://www"), 0, 0,
-                                         src.length(),
-                                         src, stoplist);
+          PaginaURL page = new PaginaURL(new URL("http://www"), src, stoplist);
           addTitle(page, stoplist);
           stemPage(page, false);
       }

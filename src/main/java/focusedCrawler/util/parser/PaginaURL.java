@@ -29,6 +29,7 @@ package focusedCrawler.util.parser;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -90,24 +91,20 @@ public class PaginaURL {
     private transient StopList stoplist;
     private boolean            ordenarTermos = true;
     
-    public PaginaURL(Page page){
-        this(page.getURL(),page.getContent());
-    }
-    
-    public PaginaURL(URL url, String content) {
-        this(url,content,null);
-    }
-    
-    public PaginaURL(URL url, String content, StopList stoplist) {
-        this(url,0,0,content.length(),content,stoplist);
-    }
-    
-    public PaginaURL(URL url, long vist, long mod, int tam, String arquivo, StopList stoplist) {
-        this(url, vist, mod, tam, arquivo, false, false, -1, stoplist);
+    public PaginaURL(Page page) {
+        this(page.getURL(), page.getContent());
     }
 
-    public PaginaURL(URL url, long vist, long mod, int tam, String arquivo, boolean noindex,
-            boolean nofollow, int max, StopList stoplist) {
+    public PaginaURL(URL url, String content) {
+        this(url, content, null);
+    }
+
+    public PaginaURL(URL url, String content, StopList stoplist) {
+        this(url, content, false, false, -1, stoplist);
+    }
+
+    public PaginaURL(URL url, String arquivo, boolean noindex, boolean nofollow,
+                     int max, StopList stoplist) {
 
         if (max > 0) {
             MAXPALAVRAS = max;
@@ -143,41 +140,44 @@ public class PaginaURL {
     }
 
     private boolean filterURL = false;
-    private Vector<String> around = new Vector<String>();
-    private Vector<LinkNeighborhood> linkNeigh = new Vector<LinkNeighborhood>();
-    private Vector<String>  imagens = new Vector<String>();
+    private ArrayList<String> around = new ArrayList<String>();
+    private ArrayList<LinkNeighborhood> linkNeigh = new ArrayList<LinkNeighborhood>();
+    private ArrayList<String>  imagens = new ArrayList<String>();
     
-    public void setFilterWorsOfURLs(boolean filterURL){
-      this.filterURL = filterURL;
-    }
 
-    public synchronized LinkNeighborhood[] getLinkNeighboor(){
-      HashSet<String> unique = new HashSet<String>();
-      Vector<LinkNeighborhood> tempLN = new Vector<LinkNeighborhood>();
-      for (int i = 0; i < linkNeigh.size(); i++) {
-        LinkNeighborhood ln = linkNeigh.elementAt(i);
-        String id = ln.getAnchorString() + ln.getLink().toString()+ln.getAroundString();
-        if(!unique.contains(id)){
-        	unique.add(id);
-            int pointer = ln.getAroundPosition();
-            Vector<String> aroundTemp = new Vector<String>();
-            for (int j = pointer - (10 + ln.getNumWordsAnchor()); j < pointer + 10; j++) {
-              if(j >=0 && j <around.size() && (j < pointer - ln.getNumWordsAnchor() || j > pointer-1)){
-                aroundTemp.add(around.elementAt(j).toLowerCase());
-              }
+    public synchronized LinkNeighborhood[] getLinkNeighboor() {
+        HashSet<String> unique = new HashSet<String>();
+
+        Vector<LinkNeighborhood> tempLN = new Vector<LinkNeighborhood>();
+        for (int i = 0; i < linkNeigh.size(); i++) {
+            LinkNeighborhood ln = linkNeigh.get(i);
+
+            String id = ln.getAnchorString() + ln.getLink().toString() + ln.getAroundString();
+            if (!unique.contains(id)) {
+                unique.add(id);
+
+                int pointer = ln.getAroundPosition();
+                Vector<String> aroundTemp = new Vector<String>();
+                for (int j = pointer - (10 + ln.getNumWordsAnchor()); j < pointer + 10; j++) {
+                    if (j >= 0 && j < around.size() && (j < pointer - ln.getNumWordsAnchor() || j > pointer - 1)) {
+                        aroundTemp.add(around.get(j).toLowerCase());
+                    }
+                }
+                
+                String[] around = new String[aroundTemp.size()];
+                aroundTemp.toArray(around);
+                ln.setAround(around);
+                
+                if (getURL().getHost().equals(ln.getLink().getHost())) {
+                    ln.setSameSite(true);
+                }
+                
+                tempLN.add(ln);
             }
-            String[] around = new String[aroundTemp.size()];
-            aroundTemp.toArray(around);
-            ln.setAround(around);
-            if(getURL().getHost().equals(ln.getLink().getHost())){
-            	ln.setSameSite(true);
-            }
-            tempLN.add(ln);
         }
-      }
-      LinkNeighborhood[] lns = new LinkNeighborhood[tempLN.size()];
-      tempLN.toArray(lns);
-      return lns;
+        LinkNeighborhood[] lns = new LinkNeighborhood[tempLN.size()];
+        tempLN.toArray(lns);
+        return lns;
     }
     
     protected void separadorTextoCodigo(String arquivo) {    // arquivo equivale ao codigo HTML da pagina
@@ -935,7 +935,7 @@ public class PaginaURL {
                             		ln.setImgSource(str);
                             	}
                             	try {
-                            		imagens.addElement(parseLink(base,str).toString());	
+                            		imagens.add(parseLink(base,str).toString());	
 								} catch (Exception e) {
 									// TODO: handle exception
 								}
@@ -2002,7 +2002,7 @@ public class PaginaURL {
         a[j] = temp;
     }
 
-    public Vector<String> getImages() {
+    public ArrayList<String> getImages() {
         return this.imagens;
     }
 
