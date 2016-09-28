@@ -61,7 +61,7 @@ public class TargetModelElasticSearch {
         String raw_content = (String) model.response.get("body");
         Page page = new Page(url, raw_content);
         PaginaURL pageURL = new PaginaURL(url,raw_content);
-        PaginaURL pageParser = new PaginaURL(page.getURL(), 0, 0, page.getContent().length(), page.getContent(), null);
+        PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
         page.setPageURL(pageParser);
 
         this.html = raw_content;
