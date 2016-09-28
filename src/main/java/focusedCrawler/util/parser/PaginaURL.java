@@ -26,15 +26,9 @@
 package focusedCrawler.util.parser;
 
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -51,7 +45,6 @@ import org.slf4j.LoggerFactory;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.string.Acentos;
 import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.string.StopListFile;
 
 
 public class PaginaURL {
@@ -60,9 +53,6 @@ public class PaginaURL {
     private static final UrlValidator urlValidator = new UrlValidator(schemes, UrlValidator.ALLOW_LOCAL_URLS);
     public static final Logger logger = LoggerFactory.getLogger(PaginaURL.class);
 
-    public long timeToParse = 0;
-    private int 			   maxPosValue = 0;
-    private int                notaDaImagem;
     private int                MAXPALAVRAS = -1;
     public static final int    MAX_PARAGRAPH_SIZE = 255;
     private URL                pagina = null;
@@ -75,7 +65,6 @@ public class PaginaURL {
     private int[]              ocorrencias = new int[0];
     private String[]           palavrasMeta = new String[0];
     private int[]              ocorrenciasMeta = new int[0];
-    private int                fileHashCode;
     private double             relevance = 0;
 
     /**
@@ -96,17 +85,15 @@ public class PaginaURL {
     private transient Vector   textoMeta = new Vector();
     private URL[]              URLabsolutas = null;
     private Vector             links = new Vector();
-    private Vector             mailList =
-        new Vector();    // Vector de e-mails para o lights
+    private Vector             mailList = new Vector();    // Vector de e-mails para o lights
     private boolean            noindex = false;
     private boolean            nofollow = false;
     public static boolean      USAR_DESCRIPTION = false;
     public static int          MAX_SIZE_HOST = 255;
 
-    // protected    Escopo meuEscopo = new EscopoWEB();
     private transient StopList stoplist;
     private boolean            ordenarTermos = true;
-
+    
     public void setRelevance(double relev){
       this.relevance = relev;
     }
@@ -115,19 +102,6 @@ public class PaginaURL {
       return this.relevance;
     }
 
-    /**
-     * O arquivo completo da pagina
-     */
-    private transient String   arquivo = "";
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public URL endereco() {
         return pagina;
     }
@@ -136,74 +110,26 @@ public class PaginaURL {
         return pagina;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public Date dataQueFoiVisitado() {
         return new Date(visitado);
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public Date dataQueFoiModificado() {
         return new Date(modificado);
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public int tamanhoDoArquivo() {
         return tamanho;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public String titulo() {
         return titulo;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public String paragrafo() {
         return paragrafo;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public String[] palavras() {
         return palavras;
     }
@@ -218,104 +144,34 @@ public class PaginaURL {
         return text;
     }
 
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public int[] ocorrencias() {
         return ocorrencias;
     }
 
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public String[] palavrasMeta() {
         return palavrasMeta;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public int[] ocorrenciasMeta() {
         return ocorrenciasMeta;
     }
-
-
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
+    
     public int numeroDeFrames() {
         return frames;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public int numeroDeFormularios() {
         return forms;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public int numeroDeImagens() {
         return images;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public Vector mails() {
         return mailList;
     }
 
-    
-    
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     public URL[] links() {
         if (URLabsolutas == null) {
             URLabsolutas = new URL[links.size()];
@@ -327,20 +183,9 @@ public class PaginaURL {
                 }    // ignora
              }
         }
-
         return URLabsolutas;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @param palavra
-     *
-     * @return
-     *
-     * @see
-     */
     public Enumeration posicoes(String palavra) {
         Vector v = (Vector) palavra_posicoes.get(palavra);
 
@@ -370,14 +215,6 @@ public class PaginaURL {
         return str;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     private String listapalavras() {
         if (palavras == null) {
             return null;
@@ -392,14 +229,6 @@ public class PaginaURL {
         return t1;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     private String listalinks() {
         if (URLabsolutas == null) {
             return null;
@@ -414,26 +243,19 @@ public class PaginaURL {
         return t1;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
     private String listamails() {
         if (mailList == null) {
             return null;
         }
-
         String t1 = "";
-
         for (int i = 0; i < mailList.size(); i++) {
             t1 = t1 + ",  " + mailList.elementAt(i);
         }
-
         return t1;
+    }
+    
+    public PaginaURL(Page page){
+        this(page.getURL(),page.getContent());
     }
     
     public PaginaURL(URL url, String content) {
@@ -444,121 +266,13 @@ public class PaginaURL {
         this(url,0,0,content.length(),content,stoplist);
     }
     
-    public PaginaURL(Page page){
-        this(page.getURL(),page.getContent());
-    }
-
-    /**
-     * Construtor que recebe como parametro uma String
-     * @param     strurl    String que representa a URL a ser avaliada.
-     * @param     stoplist  o Stoplist
-     * @exception  IOException Caso haja problemas com a conexao ou de manipulacao de Streams.
-     * @exception  MalformedURLException  Caso a string srturl represente uma URL mal formada.
-     */
-    public PaginaURL(String strurl, StopList stoplist)
-            throws IOException, MalformedURLException {
-        this(new java.net.URL(strurl), stoplist);
-    }
-
-    public PaginaURL(URL url, StopList stoplist) throws IOException {
-        this(url, url.openConnection(), stoplist);
-    }
-
-    /**
-     * Construtor que nao esta sujeito a Exceptions, e possui parametros bem
-     * definidos.
-     * @param      url      URL a ser visitada
-     * @param      vist     Data em que o documento foi visitado
-     * @param      mod      Data em que foi modificado
-     * @param      tam      Tamanho do arquivo
-     * @param      arquivo  String que representa todo o arquivo
-     * @param      escopo   o escopo da pagina
-     */
-
-    /*
-     * public PaginaURL(URL url,long vist,long mod,int tam,String arquivo,Escopo escopo) {
-     * this(url,vist,mod,tam,arquivo,false,false,escopo);
-     * }
-     */
-
-    /**
-     * Construtor que nao esta sujeito a Exceptions, e possui parametros bem
-     * definidos.
-     * @param      url      URL a ser visitada
-     * @param      vist     Data em que o documento foi visitado
-     * @param      mod      Data em que foi modificado
-     * @param      tam      Tamanho do arquivo
-     * @param      arquivo  String que representa todo o arquivo
-     * @param      noindex  true para nao processar o texto da pagina
-     * @param      nofollow true para nao criar lista de links
-     * @param      escopo   o escopo da pagina
-     */
-
-    /*
-     * public PaginaURL(URL url,long vist,long mod,int tam,String arquivo,boolean noindex, boolean nofollow,Escopo escopo) {
-     * this(url,vist,mod,tam,arquivo,false,false,escopo,-1);
-     * }
-     */
-
-    /**
-     * Construtor que nao esta sujeito a Exceptions, e possui parametros bem
-     * definidos.
-     * @param      url      URL a ser visitada
-     * @param      vist     Data em que o documento foi visitado
-     * @param      mod      Data em que foi modificado
-     * @param      tam      Tamanho do arquivo
-     * @param      arquivo  String que representa todo o arquivo
-     * @param      noindex  true para nao processar o texto da pagina
-     * @param      nofollow true para nao criar lista de links
-     * @param      escopo   o escopo da pagina
-     * @param      max      o tamanho maximo do centroide
-     */
-
-    /*
-     * public PaginaURL(URL url,long vist,long mod,int tam,String arquivo,boolean noindex, boolean nofollow,Escopo escopo, int max) {
-     * this(url,vist,mod,tam,arquivo,noindex,nofollow,escopo,max,new StopListArquivo());
-     * }
-     */
-
-    /**
-     * Construtor que nao esta sujeito a Exceptions, e possui parametros bem
-     * definidos.
-     * @param      url      URL a ser visitada
-     * @param      vist     Data em que o documento foi visitado
-     * @param      mod      Data em que foi modificado
-     * @param      tam      Tamanho do arquivo
-     * @param      arquivo  String que representa todo o arquivo
-     * @param      escopo   o escopo da pagina
-     * @param      max      o tamanho maximo do centroide
-     * @param      stoplist o stoplist
-     */
-    public PaginaURL(URL url, long vist, long mod, int tam,
-                         String arquivo, StopList stoplist) {
-
-        // public PaginaURL(URL url,long vist,long mod,int tam,String arquivo,Escopo escopo,StopList stoplist) {
+    public PaginaURL(URL url, long vist, long mod, int tam, String arquivo, StopList stoplist) {
         this(url, vist, mod, tam, arquivo, false, false, -1, stoplist);
     }
 
-    /**
-     * Construtor que nao esta sujeito a Exceptions, e possui parametros bem
-     * definidos.
-     * @param      url      URL a ser visitada
-     * @param      vist     Data em que o documento foi visitado
-     * @param      mod      Data em que foi modificado
-     * @param      tam      Tamanho do arquivo
-     * @param      arquivo  String que representa todo o arquivo
-     * @param      noindex  true para nao processar o texto da pagina
-     * @param      nofollow true para nao criar lista de links
-     * @param      escopo   o escopo da pagina
-     * @param      max      o tamanho maximo do centroide
-     * @param      stoplist o stoplist da pagina
-     */
-    public PaginaURL(URL url, long vist, long mod, int tam,
-                         String arquivo, boolean noindex, boolean nofollow,
-                         int max, StopList stoplist) {
+    public PaginaURL(URL url, long vist, long mod, int tam, String arquivo, boolean noindex,
+            boolean nofollow, int max, StopList stoplist) {
 
-        // public PaginaURL(URL url,long vist,long mod,int tam,String arquivo,boolean noindex, boolean nofollow,Escopo escopo, int max, StopList stoplist) {
-        // meuEscopo = escopo;
         if (max > 0) {
             MAXPALAVRAS = max;
         } else {
@@ -572,99 +286,9 @@ public class PaginaURL {
         this.noindex = noindex;
         this.nofollow = nofollow;
         this.stoplist = stoplist;
-        this.arquivo = arquivo;
-
-        // if(!arquivo.equals("")) separadorTextoCodigo(new StringBuffer(arquivo));
-        if (!arquivo.equals("")) {
-            long t1 = System.currentTimeMillis();
-            separadorTextoCodigo(arquivo);
-            timeToParse = (System.currentTimeMillis() -t1);
-
-            // heuristicaImagem();
-            // System.runFinalizersOnExit(true);
-        }
-    }
-
-    public PaginaURL(URL url, URLConnection conexao, StopList sl) throws IOException {
-        this(url, conexao, -1, sl);
-    }
-
-    public PaginaURL(URL url, URLConnection conexao,
-                         int max, StopList sl) throws IOException {
-        this(url, conexao.getDate(), conexao.getLastModified(),
-             conexao.getContentLength(), conexao.getInputStream(), max,
-             sl);
-
-//        System.out.println("CONEXAO: RESPONSE CODE = " + ((HttpURLConnection) conexao).getResponseCode());
-
-        URL url_final = ((HttpURLConnection) conexao).getURL();
-
-//        System.out.println("CONEXAO: GET URL       = " + url_final);
-
-//        if (!url_final.equals(url)) {
-//            System.out.println("A URL '" + url + "' foi redirecionada para '" + url_final + "'");
-//        } else {
-//            System.out.println("URL OK");
-//        }
-
-        ((HttpURLConnection) conexao).disconnect();
-    }
-
-    /**
-     * Construtor que recebe uma URL, uma URLConnection e um InputStream
-     * @param      url       URL a ser avaliada
-     * @param      vist      Data em que o documento foi visitado
-     * @param      mod       Data em que foi modificado
-     * @param      tam       Tamanho do arquivo
-     * @param      file      o inputstream do arquivo
-     * @param      max       o tamanho maximo do centroide
-     * @param      stoplist o stoplist da pagina
-     * @exception  IOException caso haja problemas com a conexao ou de manipulacao de Streams.
-     */
-    public PaginaURL(URL url, long vis, long mod, int tam,
-                         InputStream file, int max) throws IOException {
-        this(url, vis, mod, tam, file, max, null);
-    }
-
-    /**
-     * Construtor que recebe uma URL, uma URLConnection e um InputStream
-     * @param      url       URL a ser avaliada
-     * @param      vist      Data em que o documento foi visitado
-     * @param      mod       Data em que foi modificado
-     * @param      tam       Tamanho do arquivo
-     * @param      file      o inputstream do arquivo
-     * @param      max       o tamanho maximo do centroide
-     * @param      stoplist o stoplist da pagina
-     * @exception  IOException caso haja problemas com a conexao ou de manipulacao de Streams.
-     */
-    public PaginaURL(URL url, long vis, long mod, int tam,
-                         InputStream file, int max,
-                         StopList stoplist) throws IOException {
-        // super(url,vis,mod,tam,file,max,stoplist);
-        if (max > 0) {
-            MAXPALAVRAS = max;
-        } else {
-            MAXPALAVRAS = -1;
-        }
-
-        pagina = url;
-        visitado = vis;
-        modificado = mod;
-        tamanho = tam;
-
-        // StringBuffer arquivo =  converteArquivo(file);
-        String arquivo = converteArquivo(file);
-
-        this.arquivo = arquivo;
-        this.stoplist = stoplist;
 
         if (!arquivo.equals("")) {
-            long t1 = System.currentTimeMillis();
             separadorTextoCodigo(arquivo);
-            timeToParse = (System.currentTimeMillis() -t1);
-
-            // heuristicaImagem();
-            // System.runFinalizersOnExit(true);
         }
     }
 
@@ -684,81 +308,12 @@ public class PaginaURL {
     	codes.put("&#1070;","ÃÂ®");codes.put("&#1102;","ÃÅ½");codes.put("&#1071;","ÃÂ¯");codes.put("&#1103;","Ãï¿½");
 
     }
-    
-    /**
-     * Converte um InputStream, para uma String.
-     * @param      in      ImputStream a ser convertido
-     * @return     a String correspondente a in
-     * @exception  IOException
-     */
-
-    // private StringBuffer converteArquivo(InputStream in) throws IOException {
-    private String converteArquivo(InputStream in) throws IOException {
-
-        /*
-         * StringBuffer arquivo = new StringBuffer();
-         * int i;
-         * try {
-         * while ((i = in.read()) != -1) {
-         * arquivo.append((char)i);
-         * }
-         * } catch(IOException ioe) {
-         * in.close();
-         * throw ioe;
-         * }
-         * in.close();
-         * return arquivo;
-         * }
-         */
-
-        // System.out.println("CONVERTENDO O ARQUIVO "+endereco());
-        StringBuffer   arquivo = new StringBuffer();
-        BufferedReader bin = new BufferedReader(new InputStreamReader(in));
-        String         inputLine;
-
-        try {
-            while ((inputLine = bin.readLine()) != null) {
-                arquivo.append(inputLine).append("\n");
-            }
-        } catch (IOException ioe) {
-            bin.close();
-
-            throw ioe;
-        }
-
-        bin.close();
-
-        // System.out.println("ARQUIVO "+endereco()+" CONVERTIDO");
-        // return arquivo;
-//        System.out.println(arquivo.toString());
-//        FileOutputStream fout = new FileOutputStream("/home/lbarbosa/parallel_corpus/pc_crawler/tst1");
-//        Writer out = new OutputStreamWriter(fout, "UTF8");
-//        out.write(arquivo.toString());
-//        out.close();
-        return arquivo.toString();
-    }
-
-    /*
-     * String result = null;
-     * try {
-     * int tamanho = in.available();
-     * byte[] file = new byte[tamanho];
-     * in.read(file);
-     * result = new String(file);
-     * } catch(IOException ioe) {
-     * in.close();
-     * throw ioe;
-     * }
-     * in.close();
-     * return new StringBuffer(result);
-     * }
-     */
 
     private boolean filterURL = false;
-
     private Vector around = new Vector();
     private Vector linkNeigh = new Vector();
-
+    private Vector  imagens = new Vector();
+    
     public void setFilterWorsOfURLs(boolean filterURL){
       this.filterURL = filterURL;
     }
@@ -791,16 +346,12 @@ public class PaginaURL {
       tempLN.toArray(lns);
       return lns;
     }
-
-    
-    private Vector  imagens = new Vector();
     
     protected void separadorTextoCodigo(String arquivo) {    // arquivo equivale ao codigo HTML da pagina
         if(codes.size() == 0){
         	loadHashCodes();	
         }
     	
-//    	System.out.println(arquivo);	
         boolean obj_isRDF = false;
         boolean ignorar_espacos = true;
         boolean tag_tipo_fim = false;
@@ -903,22 +454,6 @@ public class PaginaURL {
 
         try {
 
-//          FileOutputStream fout = null;
-//          DataOutputStream dout = null;
-            //System.out.println("FORM!!! : " + form.getURL());
-//            try {
-//              fout = new FileOutputStream("/home/lbarbosa/test");
-//               dout = new DataOutputStream( fout );
-//              dout.writeBytes("begin");
-//
-//            }
-//            catch (FileNotFoundException ex) {
-//              ex.printStackTrace();
-//                 }
-//            catch (IOException ex) {
-//              ex.printStackTrace();
-//         }
-
             while (n < arquivo.length()) {
                 if (n_anterior < n) {                       /* we advanced a character */
                     ant1 = ant2;
@@ -927,16 +462,7 @@ public class PaginaURL {
 
                 n_anterior = n;
                 c = arquivo.charAt(n);
-//                System.out.print(c+"");
-//                int ascii = (int) c;
-//                System.out.print(ascii);
-//                System.out.println("");
-//                dout.writeBytes(c+"");
-//                dout.flush();
-//                if(c=='\u0000'){
-//                	organizaDados();
-//                	return;
-//                }
+                
                 if (em_comentario && num_comentario > 0) {
                     if ((ant1 == '-') && (ant2 == '-') || (c == '>')) {
                         num_comentario--;
@@ -977,9 +503,6 @@ public class PaginaURL {
                         break;
 
                     case TOKEN_PALAVRA:
-//                    	if(str.contains("1044")){
-//                    		System.out.println("TEST");
-//                    	}
                         /* faz o token da string */
                         if ((caracterFazParteDePalavra(c)) || (c == ';')
                                 || (c == '&')) {
@@ -994,7 +517,6 @@ public class PaginaURL {
         							char uni = (char)hex;
         							String unicode =  uni + "";
         							str = str.substring(0,begin) + unicode;
-//        							System.out.println(unicode);
                                 	pos_caracter_especial = -1;
                                 	continue;
 								} catch (Exception e) {
@@ -1014,7 +536,6 @@ public class PaginaURL {
                             if (c == '&') {
                                 pos_caracter_especial = n;
                             } else   
-//                            	System.out.println(str + ":" + pos_caracter_especial);
                             	if (pos_caracter_especial != -1) {
                                 int  posicao = str.length()
                                                - (n - pos_caracter_especial)
@@ -1061,14 +582,12 @@ public class PaginaURL {
 
 
                     case PALAVRA:
-//                      System.out.println("PALAVRA:"+lastTag);
                       if(insideATag){
                         anchor = anchor + " " + str.toLowerCase();
 
                         numOfwordsAnchor++;
 //                                                  insideATag = false;
 
-//                          System.out.println("ANCHOR:"+anchor);
                       }
 //                      if(anchor.indexOf("school") != -1){
 //                        System.out.println("TEST");
@@ -2587,103 +2106,6 @@ public class PaginaURL {
         }
     }
 
-    /*
-     * protected URL parseLink(URL base, String link) throws MalformedURLException {
-     * // remove referencia
-     * int ref = link.indexOf('#');
-     * if ( ref != -1 ) {
-     * link = link.substring(0,ref);
-     * }
-     * if ( link.equals("") ) throw new MalformedURLException();
-     *
-     * // retorna link se ele for absoluto
-     * try {
-     * URL tmp  = new URL(link);
-     * return tmp;
-     * } catch(MalformedURLException e) { } //ignora
-     *
-     * String strbase = base.toString().trim();
-     * int a,b,c;
-     * a = strbase.length();
-     * while( a > 1 )
-     * {
-     * if( strbase.charAt( strbase.length()-1 )=='/' )
-     * strbase = strbase.substring( 0,strbase.length()-1 );
-     * a--;
-     * }
-     * // Se a base tiver um arquivo no final este pedaco do codigo o retira.
-     * a=0;
-     * for(int i = 0; i < strbase.length()-1 ; i++ )
-     * {
-     * if( strbase.charAt(i)=='/' )
-     * a++;
-     * }
-     * if( a > 2 )
-     * { b = strbase.lastIndexOf('/');
-     * c = strbase.lastIndexOf('.');
-     * if( c != -1 && b < c )
-     * strbase = strbase.substring( 0,b );
-     * }
-     * // Garante que a base sempre terminara com '/'.
-     * strbase = strbase + '/';
-     * // Retira o lixo que pode vir antes da URL "crua".
-     * String strnova = link;
-     * if( strnova.indexOf("http:")!=-1 )
-     * return new URL(strnova);
-     * // Se a URL classificada como relativa comecar com o caracter '~' a base deve
-     * // ser o apenas o servidor. Utilizamos esta novabase para garantir isto.
-     * else
-     * {
-     * // Retira os dois pontos e '/'
-     * strnova = limpaLink( link );
-     * String novabase = strbase;
-     * if( !strnova.equals("") )
-     * {
-     * if( strnova.charAt(0)=='~' )
-     * {
-     * a = strbase.indexOf("//");
-     * if( a != -1 )
-     * {
-     * b = strbase.indexOf("/",a+2);
-     * if( b!=-1 )
-     * novabase = strbase.substring(0,b+1);
-     * else
-     * novabase = strbase.substring(0,strbase.length());
-     * }
-     * }
-     * }
-     * // Se a URL relativa contiver um caminho(diretorio) que ja existe na base devemos "truncar"
-     * // a base para que tenhamos um caminho correto.
-     * String find = "";
-     * if( strnova.indexOf("/")!=-1 )
-     * find = strnova.substring( 0,strnova.indexOf("/")-1 );
-     * if( !find.equals("") && novabase.indexOf(find)!=-1 )
-     * {
-     * strnova = novabase.substring( 0,novabase.indexOf(find) ) + strnova;
-     * return new URL(strnova);
-     * }
-     * // Caso contrario e uma URL relativa sem nada especial.
-     * else
-     * {
-     * strnova = novabase + strnova;
-     * return new URL(strnova);
-     * }
-     * }
-     * }
-     * private String limpaLink(String link) {
-     * int pos;
-     * // Indexa e retira os ".." se existirem.
-     * pos = link.indexOf("..");
-     * if( pos != -1 )
-     * link = link.substring( pos+2,link.length() ).trim();
-     * // Se depois de tudo isso ainda existir alguma coisa e comecar por '/', o retiramos.
-     * if( link.length() > 0 && link.charAt(0)=='/' )
-     * link = link.substring( 1,link.length() ).trim();
-     * return link;
-     * }
-     * //
-     */
-
     /**
      * Este metodo incrementa a pontuacao de um termo na pagina.
      * E' usado quando a pagina e' construida
@@ -2872,25 +2294,6 @@ public class PaginaURL {
     }
 
     /**
-     * Verifica se uma String que possa vir a se tornar URL e de algum
-     * tipo de arquivo que nao nos interessa
-     */
-
-    /*
-     * private boolean linkIrrelevante(String strnova) {
-     * String str[] =  {"news:","gopher:", "telnet:", "cgi-bin","pl_cad",
-     * "?", ".gif", ".jpg", ".pdf", ".bmp", ".ps",  ".jpeg",
-     * ".pcx", ".exe", ".com", ".class", ".zip", ".arj",  ".gzip",
-     * ".gz",".z",".cgi",".mid",".mpeg",".ram",".mp1",".mp2",
-     * ".mp3",".wav",".snd",".au",".aif" };
-     * boolean achou = false;
-     * for(int i=0;i<str.length && !achou;i++)
-     * {if(strnova.indexOf(str[i])!=-1) achou=true;}
-     * return achou;
-     * }
-     */
-
-    /**
      * Recebe dois arrays, um com n palavras, e outro com as ocorrencias
      * associadas a cada palavra, e os ordena em ordem decrescente de
      * ocorrencia, para que tenhamos as palavras que ocorrem mais no comeco
@@ -2900,17 +2303,6 @@ public class PaginaURL {
         quicksort_num(a, 0, a.length - 1, b);
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @param a
-     * @param left
-     * @param right
-     * @param b
-     *
-     * @see
-     */
     private void quicksort_num(int a[], int left, int right, String b[]) {
         int pivot;
         int l = left;
@@ -2948,17 +2340,6 @@ public class PaginaURL {
     }
 
     // Funcoes auxiliares do quicksort
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @param a
-     * @param i
-     * @param j
-     *
-     * @see
-     */
     private void troque1(int a[], int i, int j) {
         int temp;
 
@@ -2967,420 +2348,27 @@ public class PaginaURL {
         a[j] = temp;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @param a
-     * @param i
-     * @param j
-     *
-     * @see
-     */
     private void troque2(String a[], int i, int j) {
         String temp;
-
         temp = a[i];
         a[i] = a[j];
         a[j] = temp;
     }
-
-    /**
-     * M\uFFFDtodo que retorna a nota da pagina
-     */
-    public int notaDaPagina() {
-        return notaDaImagem;
+    //
+    
+    public Vector<String> getImages() {
+        return this.imagens;
     }
 
-
-//+-------- IMPLEMENTANDO A INTERFACE PaginaAjustavel-------------+//
-        /**
-            Ajusta o endereco da pagina.
-         */
-        public void setEndereco(URL newEndereco) {
-        if( newEndereco != null ) {
-            this.pagina = newEndereco;
-          }
-        }
-
-        /**
-        Ajusta a data de visitacao.
-         */
-        public void setDataQueFoiVisitado(Date newData) {
-        if( newData != null )
-            this.visitado = newData.getTime();
-        }
-
-        /**
-            Ajusta a data de modificacao.
-         */
-        public void setDataQueFoiModificado(Date newData) {
-            if( newData != null )
-                setDataQueFoiModificado(newData.getTime());
-        }
-
-        /**
-            Ajusta a data de modificacao.
-         */
-        public void setDataQueFoiModificado(long newData) {
-            this.modificado = newData;
-        }
-
-        /**
-            Ajusta o tamanho do arquivo.
-         */
-        public void setTamanhoDoArquivo(int newTamanho) {
-        if( newTamanho >= 0 )
-            this.tamanho = newTamanho;
-        else
-            this.tamanho = 0;
-        }
-
-        public int getFileHashCode(){
-            return fileHashCode;
-        }
-
-        public void setFileHashCode(int hashCode){
-            fileHashCode = hashCode ;
-        }
-        /**
-            Ajusta o titulo.
-         */
-        public void setTitulo(String newTitulo) {
-        if( newTitulo != null )
-            this.titulo = newTitulo;
-        else
-            this.titulo = "";
-        }
-
-        /**
-            Ajusta o paragrafo.
-         */
-        public void setParagrafo(String newParagrafo) {
-        if( newParagrafo != null )
-            this.paragrafo = newParagrafo;
-        else
-            this.paragrafo = "";
-        }
-
-        /**
-        Ajusta o array de palavras.
-        IMPORTANTE: Este metodo so aceita a substituicao do array de palavras por outro do mesmo tamanho,
-        onde as entradas sao na verdade os codigos dos seus respectivos termos obedecendo a ordem semantica.
-         */
-        public void setPalavras(String[] newPalavras) {
-        if( newPalavras != null ) {
-            this.palavras = newPalavras;
-        }
-        else
-            this.palavras = new String[0];
-        }
-
-        /**
-        Ajusta o array de ocorrencias.
-         */
-        public void setOcorrencias(int[] newOcorrencias) {
-            if( newOcorrencias != null )
-            this.ocorrencias = newOcorrencias;
-        else
-            this.ocorrencias = new int[0];
-        }
-
-        /**
-            Ajusta o numero de frames.
-         */
-        public void setNumeroDeFrames(int newFrames) {
-            if( newFrames >= 0 )
-            this.frames = newFrames;
-        else
-            this.frames = 0;
-        }
-
-        /**
-            Ajusta o numero de formularios.
-         */
-        public void setNumeroDeFormularios(int newForms) {
-        if( newForms >= 0 )
-            this.forms = newForms;
-        else
-            this.forms = 0;
-        }
-
-        /**
-            Ajusta o numero de imagens.
-         */
-        public void setNumeroDeImagens(int newImages) {
-        if( newImages >= 0 )
-            this.images = newImages;
-        else
-            this.images = 0;
-        }
-
-        public Vector<String> getImages(){
-        	return this.imagens;
-        }
-        
-        /**
-            Ajusta o array de links.
-         */
-        public void setLinks(URL[] newLinks) {
-        if( newLinks != null )
-          {
-            this.links = new Vector(newLinks.length);
-            for( int i = 0; i < newLinks.length; i++ )
-                 links.addElement(newLinks[i]);
-            this.URLabsolutas = newLinks;
-          }
-        else
-          {
-            this.links = new Vector(0);
-            this.URLabsolutas = newLinks;
-          }
-        }
-
-        /**
-            Ajusta o vetor de e-mails.
-         */
-        public void setMails(Vector newMails) {
-        if( newMails != null )
-            this.mailList = newMails;
-        else
-            this.mailList = new Vector(0);
-        }
-
-        /**
-            Substitui a entrada do termo na hastable que possui o mapeamento de posicoes.
-        */
-        public void substituirTermoPorCodigo(String termo,String codigo) {
-        Vector v = (Vector)palavra_posicoes.get(termo);
-        if( v != null ) {
-            //System.out.println("<><><><>TROCANDO "+termo+" POR "+codigo);
-            palavra_posicoes.remove(termo);
-            palavra_posicoes.put(codigo,v);
-        }
-    }
-
-//+-----------------------------------------------------------+//
-
-        
-    /**
-    */
-    public Hashtable palavra_posicoes(){
+    public Hashtable palavra_posicoes() {
         return palavra_posicoes;
     }
 
-    public void setPalavra_posicoes(Hashtable newPalavra_posicoes) {
-        this.palavra_posicoes = newPalavra_posicoes;
-    }
-
-    /**
-    */
-    public Hashtable palavra_posicoes_meta(){
+    public Hashtable palavra_posicoes_meta() {
         return palavra_posicoes_meta;
     }
 
     public StopList stoplist() {
         return stoplist;
     }
-
-
-     /**
-     * metodo para testes
-     */
-    public static void main(String[] args) {
-        try {
-        	        	
-            long          start = System.currentTimeMillis();
-/*
-            ParameterFile config = new ParameterFile(args[0].trim());
-            StopList st = new StopListArquivo(config.getParam("STOPLIST_FILES"));
-            if( config.getParam("GERAR_SEM_ACENTO") != null ) {
-                PaginaURL.GERAR_SEM_ACENTO = Boolean.valueOf(config.getParam("GERAR_SEM_ACENTO")).booleanValue();
-            }
-            if( config.getParam("USAR_DESCRIPTION") != null ) {
-                PaginaURL.USAR_DESCRIPTION = Boolean.valueOf(config.getParam("USAR_DESCRIPTION")).booleanValue();
-            }
-*/
-            PaginaURL.USAR_DESCRIPTION = true;
-            StopList st = null;
-            try {
-                st = new StopListFile(args[0]);
-            }
-            catch(Exception ioe) {
-            }
-
-//            StringBuffer content = new StringBuffer();
-//            BufferedReader input = new BufferedReader(new FileReader(new File(
-//                    args[1])));
-//            for (String line = input.readLine(); line != null;
-//                    line = input.readLine()) {
-//
-//                content.append(line);
-//                content.append("\n");
-//
-//            }
-//
-//            String src = content.toString();
-//            PaginaURL p = new PaginaURL(new URL("http://www"), 0, 0,
-//                                           src.length(),
-//                                           src, st);
-            
-            PaginaURL p = new PaginaURL(args[1].trim(), st);
-            System.out.println(p.toString());
-//            Vector<String> images = p.getImages();
-//            for (int i = 0; i < images.size(); i++) {
-//				System.out.println(images.elementAt(i));
-//			}
-            
-//            System.out.println("USAR_DESCRIPTION = "+PaginaURL.USAR_DESCRIPTION);
-//            long          end = System.currentTimeMillis();
-//
-//            long          time = end - start;
-////            System.out.println("URL:");
-////            System.out.println("--");
-////            System.out.println(p.endereco());
-//            System.out.println("Title:");
-//            System.out.println("--");
-//            System.out.println(p.titulo());
-            
-//            System.out.println("Modified -> " + p.dataQueFoiModificado());
-//            System.out.println("Visited   -> " + p.dataQueFoiVisitado());
-//            System.out.println("Paragraph:");
-//            System.out.println("--");
-//            System.out.println(p.paragrafo());
-//            System.out.println("Links:");
-//            System.out.println("--");
-//
-            URL[] links = p.links();
-
-            for (int i = 0; i < links.length; i++) {
-//                String str = i + " = " + links[i];
-                System.out.println(links[i]);	
-            }
-//
-//            String[] termos = p.palavras();
-//            int[]    ocorrencias = p.ocorrencias();
-//
-//            System.out.println("Centroide:_SIZE("+termos.length+")");
-//            System.out.println("--");
-//
-//            String[] termosMeta = p.palavrasMeta();
-//            int[]    ocorrenciasMeta = p.ocorrenciasMeta();
-//
-//            for (int i = 0; i < termos.length; i++) {
-//                Enumeration posicoes_pos = p.posicoes(termos[i]);
-//                String posicoes = "Nula";
-//                if( posicoes_pos != null ) {
-//                    posicoes = "";
-//                    int c = 0;
-//                    while(posicoes_pos.hasMoreElements()) {
-//                        posicoes += (c == 0 ? "" : ",")+posicoes_pos.nextElement();
-//                        c++;
-//                    }
-//                }
-//                String str = termos[i] + " = " + ocorrencias[i] + ", PL = "+posicoes;
-//
-//                System.out.println(str);
-//            }
-//            System.out.println("\nMeta termos:");
-//
-//            for (int i = 0; i < termosMeta.length; i++) {
-//                String str = termosMeta[i] + " = " + ocorrenciasMeta[i];
-//
-//                System.out.println(str);
-//            }
-//
-//            System.out.println("Palavras[" + termos.length + "] em "
-//                               + p.endereco() + " tamanho do arquivo : "
-//                               + p.tamanhoDoArquivo());
-
-//
-//            Vector<HACCluster> vLinks = new Vector<HACCluster>();
-//            HashSet<String> uniqueURLs = new HashSet<String>();
-            LinkNeighborhood[] ln =  p.getLinkNeighboor();
-            System.out.println("SIZE:" + ln.length);
-            for (int i = 0; i < ln.length; i++) {
-            	System.out.println("URL:" + ln[i].getLink().toString());
-            	System.out.println("ANC:" + ln[i].getAnchorString());
-            	System.out.println("ARO:" + ln[i].getAroundString());
-            	System.out.println("SRC:" + ln[i].getImgSrc());
-            	System.out.println("ALT:" + ln[i].getAltString());
-            }
-//            System.out.println(">>>>>>>>>>"+ln.length);
-//            for (int i = 0; i < ln.length; i++) {
-//                System.out.println("Title:" + p.titulo());
-//                if(!uniqueURLs.contains(ln[i].getLink().toString()) && !ln[i].getLink().getFile().equals("/")){
-//                	uniqueURLs.add(ln[i].getLink().toString());
-//                }else{
-//                	continue;
-//                }
-//                String[] anchor = ln[i].getAnchor();
-//            	System.out.println(">>>URL:" + ln[i].getLink().toString());
-//                System.out.println(">>>ANC:" + ln[i].getAnchorString());
-//                System.out.println(">>>ARO:" + ln[i].getAroundString());
-//                if(anchor.length > 3){
-//	                System.out.println("URL:"+ln[i].getLink());
-//	                String url = ln[i].getLink().toString();
-//	                String normURL = url;
-//	        		int index = url.indexOf("?");
-//	        		if(index != -1){
-//	        			if(!url.contains("gen") && !url.substring(index).contains("&")){
-//	        				normURL = url.substring(0,index);				
-//	        			}
-//	        		}
-//	        		index = normURL.indexOf("index.jsp");
-//	        		if(index != -1){
-//	        			normURL = normURL.substring(0,index);
-//	//        			normURL = normURL.substring(0,normURL.length()-9);
-//	        		}
-//	        		index = normURL.indexOf("wtSlotClick");
-//	        		if(index != -1){
-//	        			normURL = normURL.substring(0,index) + normURL.substring(index+24);
-//	        		}
-//	                URL url1 = new URL(normURL);
-//	                VSMVector point = new VSMVector(url1.getFile(), st);
-//	//                VSMVector point1 = new VSMVector(ln[i].getAnchorString(), st);
-//	                vLinks.add(new HACCluster(url1.getFile(), point, null));
-//	                System.out.println("FILE:"+ln[i].getLink().getFile());
-//	                
-//	                System.out.print("ANC: ");
-//                
-//                    for (int j = 0; j < anchor.length; j++) {
-//                    	System.out.print(anchor[j] + " ");
-//                    }
-//                    System.out.println("");
-//                }
-//                System.out.println("");
-//                System.out.print("ARO: ");
-//                String[] around = ln[i].getAround();
-//                for (int j = 0; j < around.length; j++) {
-//                	System.out.print(around[j] + " ");
-//                }
-//                System.out.println("");
-//                System.out.println("SOURCE:" + ln[i].getImgSrc());
-//                System.out.print("ALT: ");
-//                if(ln[i].getImgAlt() != null){
-//                	String[] imgAlt = ln[i].getImgAlt();
-//                	for (int j = 0; j < imgAlt.length; j++) {
-//                		System.out.print(imgAlt[j] + " ");
-//                	}
-//                }
-//            }
-//			}
-
-            // System.exit(1);
-
-            /*
-             * URL url=new URL(args[0]);
-             * System.out.println("URL = "+url);
-             * URLConnection con = url.openConnection();
-             * System.out.println("getURL() = "+con.getURL());
-             * System.out.println("getContentType() = "+con.getContentType());
-             */
-        } catch (Throwable t) {
-            t.printStackTrace();
-        }
-    }
-
-    // fim da classe PaginaURL
 }
