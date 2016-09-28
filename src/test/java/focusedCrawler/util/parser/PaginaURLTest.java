@@ -58,6 +58,34 @@ public class PaginaURLTest {
     }
     
     @Test
+    public void shouldNotExtractInvalidLinks() throws MalformedURLException {
+        // given
+        URL url = new URL("http://example.com/test.html");
+        StringBuilder testPage = new StringBuilder();
+        testPage.append("<!DOCTYPE html>");
+        testPage.append("<html>");
+        testPage.append("<body>");
+        testPage.append("<h1>My First Heading</h1>");
+        testPage.append("<a href = \"http://None/\">link 0</a>");
+        testPage.append("<a href = \"http://12324/\">link 1</a>");
+        testPage.append("<a href = \"/asdf.html\">link 2</a>");
+        testPage.append("</body>");
+        testPage.append("</html>");
+        
+        // when
+        PaginaURL paginaURL = new PaginaURL(url, testPage.toString());
+        URL[] links = paginaURL.links();
+        LinkNeighborhood[] lns  = paginaURL.getLinkNeighboor();
+        
+        // then
+        assertThat(links.length, is(1));
+        assertThat(links[0].toString(), is("http://example.com/asdf.html"));
+
+        assertThat(lns.length, is(1));
+        assertThat(lns[0].getLink().toString(), is("http://example.com/asdf.html"));
+    }
+    
+    @Test
     public void shouldExtractAnchoTextAndTextAroundLink() throws MalformedURLException {
         // given
         URL url = new URL("http://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document");

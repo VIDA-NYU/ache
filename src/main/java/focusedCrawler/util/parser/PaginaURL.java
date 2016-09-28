@@ -50,7 +50,7 @@ import focusedCrawler.util.string.StopList;
 public class PaginaURL {
     
     private static final String[] schemes = {"http","https"};
-    private static final UrlValidator urlValidator = new UrlValidator(schemes, UrlValidator.ALLOW_LOCAL_URLS);
+    private static final UrlValidator urlValidator = new UrlValidator(schemes);
     public static final Logger logger = LoggerFactory.getLogger(PaginaURL.class);
 
     private int                MAXPALAVRAS = -1;
@@ -171,7 +171,6 @@ public class PaginaURL {
                 if (getURL().getHost().equals(ln.getLink().getHost())) {
                     ln.setSameSite(true);
                 }
-                
                 tempLN.add(ln);
             }
         }
@@ -607,20 +606,7 @@ public class PaginaURL {
 
                           insideATag = false;
                           if(ln!=null){
-                            Vector<String> anchorTemp = new Vector<String>();
-                            //System.out.println("URL---"+ln.getLink());
-                            //System.out.println("ANC---"+anchor);
-                            StringTokenizer tokenizer = new StringTokenizer(anchor," ");
-                            while(tokenizer.hasMoreTokens()){
-                              anchorTemp.add(tokenizer.nextToken());
-                            }
-                            String[] anchorArray = new String[anchorTemp.size()];
-                            anchorTemp.toArray(anchorArray);
-                            ln.setAnchor(anchorArray);
-                            ln.setAroundPosition(around.size());
-                            ln.setNumberOfWordsAnchor(numOfwordsAnchor);
-                            linkNeigh.add(ln.clone());
-//                            anchor = "";
+                            addLinkNeighborhood(ln, anchor, numOfwordsAnchor);
                             ln = null;
                           }
                           anchor = "";
@@ -890,22 +876,12 @@ public class PaginaURL {
                                   //System.out.println("----URL:"+urlTemp);
                                   if(urlTemp!= null && urlTemp.startsWith("http")){
                                 	  if(ln!=null){
-                                		  Vector<String> anchorTemp = new Vector<String>();
-                                		  StringTokenizer tokenizer = new StringTokenizer(anchor," ");
-                                		  while(tokenizer.hasMoreTokens()){
-                                			  anchorTemp.add(tokenizer.nextToken());
-                                		  }
-                                		  String[] anchorArray = new String[anchorTemp.size()];
-                                		  anchorTemp.toArray(anchorArray);
-                                		  ln.setAnchor(anchorArray);
-                                		  ln.setAroundPosition(around.size());
-                                		  ln.setNumberOfWordsAnchor(numOfwordsAnchor);
-                                		  linkNeigh.add(ln.clone());
+                                		  addLinkNeighborhood(ln, anchor, numOfwordsAnchor);
                                 		  anchor = "";
                                 		  ln = null;
                                 	  }
                                 	  try {
-                                	  ln = new LinkNeighborhood(new URL(urlTemp));
+                                	      ln = new LinkNeighborhood(new URL(urlTemp));
                                 	  } catch (Exception e) {
                                 	      // Ignoring Exception on purpose since the URL in page is not proper
                                 	  }
@@ -1119,6 +1095,25 @@ public class PaginaURL {
         this.images = imagens.size();
         organizaDados();
 
+    }
+
+    private void addLinkNeighborhood(LinkNeighborhood ln, String anchor, int numOfwordsAnchor) {
+        String[] anchorArray = tokenizeAnchorText(anchor);
+        
+        ln.setAnchor(anchorArray);
+        ln.setAroundPosition(around.size());
+        ln.setNumberOfWordsAnchor(numOfwordsAnchor);
+        
+        linkNeigh.add(ln.clone());
+    }
+
+    private String[] tokenizeAnchorText(String anchor) {
+        ArrayList<String> anchorTemp = new ArrayList<String>();
+        StringTokenizer tokenizer = new StringTokenizer(anchor," ");
+        while(tokenizer.hasMoreTokens()){
+          anchorTemp.add(tokenizer.nextToken());
+        }
+        return (String[]) anchorTemp.toArray(new String[anchorTemp.size()]);
     }
 
     /**
@@ -1448,6 +1443,9 @@ public class PaginaURL {
                             }
                         }
                     }
+                } else {
+                    // link is invalid
+                    link = null;
                 }
     
             }
