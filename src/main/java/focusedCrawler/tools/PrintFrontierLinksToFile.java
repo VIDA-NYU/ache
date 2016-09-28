@@ -37,7 +37,8 @@ public class PrintFrontierLinksToFile extends CliTool {
         Frontier frontier = new Frontier(inputPath, 1000);
         try (TupleIterator<LinkRelevance> it = frontier.iterator()) {
             while (it.hasNext()) {
-                out.println(it.next().getValue().getURL().toString());
+                LinkRelevance link = it.next().getValue();
+                out.printf("%.5f %s\n", link.getRelevance(), link.getURL().toString());
             }
         }
         frontier.close();
