@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -41,7 +40,7 @@ public class OnlineLearning {
         this.rep = manager.getRepository();
     }
 
-    public void execute() throws Exception {
+    public synchronized void execute() throws Exception {
         frontier.commit();
         if (method.equals("SALSA")) {
             runSALSA(null, false);

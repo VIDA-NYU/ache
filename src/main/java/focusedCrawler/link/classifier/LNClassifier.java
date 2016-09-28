@@ -18,10 +18,10 @@ import focusedCrawler.util.string.StopList;
 
 public class LNClassifier {
 
-	private Classifier classifier;
-	private Instances instances;
-	private LinkNeighborhoodWrapper wrapper;
-	private String[] attributes;
+	private final Classifier classifier;
+	private final Instances instances;
+	private final LinkNeighborhoodWrapper wrapper;
+	private final String[] attributes;
 
 	public LNClassifier(Classifier classifier, Instances instances,
 	                    LinkNeighborhoodWrapper wrapper, String[] attributes) {
@@ -31,16 +31,18 @@ public class LNClassifier {
 		this.attributes = attributes;
 	}
 	
-	public double[] classify(LinkNeighborhood ln) throws Exception {
+	public synchronized double[] classify(LinkNeighborhood ln) throws Exception {
 		Map<String, Instance> urlWords = wrapper.extractLinksFull(ln, attributes);
 		Iterator<String> iter = urlWords.keySet().iterator();
 		String url = iter.next();
 		Instance instance = (Instance)urlWords.get(url);
 		double[] values = instance.getValues();
-		weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
-		instanceWeka.setDataset(instances);
-		double[] probs = classifier.distributionForInstance(instanceWeka);
-		return probs;
+        synchronized (classifier) {
+            weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
+            instanceWeka.setDataset(instances);
+            double[] probs = classifier.distributionForInstance(instanceWeka);
+            return probs;
+        }
 	}
 	
 	public static LNClassifier create(String featureFilePath,

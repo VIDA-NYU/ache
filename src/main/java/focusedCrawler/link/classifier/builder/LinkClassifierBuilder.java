@@ -69,7 +69,7 @@ public class LinkClassifierBuilder {
         }
 	}
 	
-	public LinkClassifier forwardlinkTraining(HashSet<String> relSites, int levels, String className) throws Exception{
+	public synchronized LinkClassifier forwardlinkTraining(HashSet<String> relSites, int levels, String className) throws Exception{
 		
 	    Vector<Vector<LinkNeighborhood>> instances = loadTrainingInstances(relSites, levels);
 		
