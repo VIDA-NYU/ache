@@ -763,7 +763,7 @@ public class PaginaURL {
       this.filterURL = filterURL;
     }
 
-    public LinkNeighborhood[] getLinkNeighboor(){
+    public synchronized LinkNeighborhood[] getLinkNeighboor(){
       HashSet<String> unique = new HashSet<String>();
       Vector<LinkNeighborhood> tempLN = new Vector<LinkNeighborhood>();
       for (int i = 0; i < linkNeigh.size(); i++) {
