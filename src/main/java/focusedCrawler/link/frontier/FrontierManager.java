@@ -35,6 +35,7 @@ import focusedCrawler.link.DownloadScheduler;
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkFilter;
+import focusedCrawler.util.LogFile;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.persistence.TupleIterator;
 
@@ -56,8 +57,10 @@ public class FrontierManager {
     private final HostManager hostsManager;
     private final boolean downloadRobots;
     private final DownloadScheduler scheduler;
+    private final LogFile schedulerLog;
 
     private boolean linksRejectedDuringLastLoad;
+
 
     public FrontierManager(Frontier frontier, String dataPath, boolean downloadRobots,
                            int linksToLoad, int schedulerMaxLinks, int schdulerMinAccessInterval,
@@ -70,6 +73,7 @@ public class FrontierManager {
         this.linkFilter = linkFilter;
         this.scheduler = new DownloadScheduler(schdulerMinAccessInterval, schedulerMaxLinks);
         this.loadQueue(linksToLoad);
+        this.schedulerLog = new LogFile(Paths.get(dataPath, "data_monitor", "scheduledlinks.csv"));
     }
 
     public Frontier getFrontierPersistent() {
@@ -175,9 +179,8 @@ public class FrontierManager {
         
         frontier.delete(link);
             
-        logger.info("\n> URL:" + link.getURL() +
-                    "\n> REL:" + ((int) link.getRelevance() / 100) +
-                    "\n> RELEV:" + link.getRelevance());
+        schedulerLog.printf("%d\t%.5f\t%s\n", System.currentTimeMillis(),
+                            link.getRelevance(), link.getURL().toString());
 
         return link;
     }
@@ -186,6 +189,7 @@ public class FrontierManager {
         frontier.commit();
         frontier.close();
         hostsManager.close();
+        schedulerLog.close();
     }
 
     public Frontier getFrontier() {
