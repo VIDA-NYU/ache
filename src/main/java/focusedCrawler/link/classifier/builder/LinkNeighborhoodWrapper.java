@@ -56,7 +56,7 @@ public class LinkNeighborhoodWrapper {
 
   public LinkNeighborhoodWrapper(StopList stoplist) {
     this.stoplist = stoplist;
-    stemmer = new PorterStemmer();
+    this.stemmer = new PorterStemmer();
   }
 
   public LinkNeighborhoodWrapper() {
@@ -137,7 +137,6 @@ public class LinkNeighborhoodWrapper {
 
   public HashMap<String, Instance> extractLinks(LinkNeighborhood linkNeighboor, String[] features) throws MalformedURLException {
     HashMap<String, WordField[]> linkFields = extractLinks(linkNeighboor);
-//    System.out.println(">>>MAPPING...");
     return mapFeatures(linkFields, features);
   }
 
