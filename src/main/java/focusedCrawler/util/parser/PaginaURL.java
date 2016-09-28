@@ -1604,7 +1604,11 @@ public class PaginaURL {
                                        && atributo.equals("href")) {
                                 String urlTemp = adicionaLink(str, base);
                                 if(urlTemp!= null && urlTemp.startsWith("http")){
-                                  ln = new LinkNeighborhood(new URL(urlTemp));
+                                    try {
+                                        ln = new LinkNeighborhood(new URL(urlTemp));
+                                    } catch (Exception e) {
+                                        // Ignoring Exception on purpose since the URL in page is not proper
+                                    }
                                 }
 //                                System.out.println("CREATE LINK:"  + urlTemp);
                             } else if (tagName.equals("area")
