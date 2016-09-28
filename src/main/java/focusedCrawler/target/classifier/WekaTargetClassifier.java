@@ -85,49 +85,39 @@ public class WekaTargetClassifier implements TargetClassifier {
 	}
 
 	public double[] distributionForInstance(String target) throws TargetClassifierException {
-		double[] result = null;
-		try{
-			double[] values = getValues(new Page(null,target));
-			weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
-			instanceWeka.setDataset(instances);
-			result = classifier.distributionForInstance(instanceWeka);
-		}catch(Exception ex){
-			ex.printStackTrace();
-			throw new TargetClassifierException(ex.getMessage());
-	    }
-		return result;
+		return distributionForInstance(new Page(null, target));
 	}
 
   
-	public double[] distributionForInstance(Page page) throws TargetClassifierException{
-		double[] result = null;
-	    try{
-	    	double[] values = getValues(page);
-	    	weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
-	    	instanceWeka.setDataset(instances);
-	    	result = classifier.distributionForInstance(instanceWeka);
-	    }catch(Exception ex){
-	    	ex.printStackTrace();
-	    	throw new TargetClassifierException(ex.getMessage());
-	    }
-	    return result;
-	}
+    public double[] distributionForInstance(Page page) throws TargetClassifierException {
+        double[] result = null;
+        try {
+            double[] values = getValues(page);
+            synchronized (classifier) {
+                weka.core.Instance instanceWeka = new weka.core.Instance(1, values);
+                instanceWeka.setDataset(instances);
+                result = classifier.distributionForInstance(instanceWeka);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            throw new TargetClassifierException(ex.getMessage());
+        }
+        return result;
+    }
   
-	private double[] getValues(Page page) throws IOException, SAXException {
-		VSMVector vsm = null;
-		vsm = new VSMVector(page.getSource(),stoplist,true);
-
-		double[] values = new double[attributes.length];
-		for (int i = 0; i < attributes.length; i++) {
-			VSMElement elem = vsm.getElement(attributes[i]);
-			if (elem == null) {
-				values[i] = 0;
-			}else{
-				values[i] = elem.getWeight();
-			}
-		}
-		return values;
-	}
+    private double[] getValues(Page page) throws IOException, SAXException {
+        VSMVector vsm = new VSMVector(page.getSource(), stoplist, true);
+        double[] values = new double[attributes.length];
+        for (int i = 0; i < attributes.length; i++) {
+            VSMElement elem = vsm.getElement(attributes[i]);
+            if (elem == null) {
+                values[i] = 0;
+            } else {
+                values[i] = elem.getWeight();
+            }
+        }
+        return values;
+    }
 
 	public static TargetClassifier create(String modelPath,
 	                                      double relevanceThreshold,
