@@ -29,7 +29,6 @@ package focusedCrawler.util.parser;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -71,18 +70,18 @@ public class PaginaURL {
      * no texto acima a lista da palavra "um" seria <3,9>. <BR>
      * Os tipo do Hashtable sao String que mapeia um Vector de Integer.
      */
-    private Hashtable          palavra_posicoes = new Hashtable();
-    private Hashtable          palavra_pontos = new Hashtable();
-    private Hashtable          palavra_posicoes_meta = new Hashtable();
+    private Hashtable<String, Vector<Integer>> palavra_posicoes = new Hashtable<>();
+    private Hashtable<String, Integer> palavra_pontos = new Hashtable<>();
+    private Hashtable<String, Vector<Integer>> palavra_posicoes_meta = new Hashtable<>();
     private int                frames = 0;
     private int                forms = 0;
     private int                images = 0;
 
-    private transient Vector   texto = new Vector();
-    private transient Vector   textoMeta = new Vector();
+    private transient Vector<String> texto = new Vector<String>();
+    private transient Vector<String> textoMeta = new Vector<String>();
     private URL[]              URLabsolutas = null;
-    private Vector             links = new Vector();
-    private Vector             mailList = new Vector();    // Vector de e-mails para o lights
+    private Vector<String>     links = new Vector<String>();
+    private Vector<String>     mailList = new Vector<String>();    // Vector de e-mails para o lights
     private boolean            noindex = false;
     private boolean            nofollow = false;
     public static boolean      USAR_DESCRIPTION = false;
@@ -91,78 +90,6 @@ public class PaginaURL {
     private transient StopList stoplist;
     private boolean            ordenarTermos = true;
     
-    public void setRelevance(double relev){
-      this.relevance = relev;
-    }
-
-    public double getRelevance(){
-      return this.relevance;
-    }
-
-    public URL getURL() {
-        return pagina;
-    }
-
-    public String titulo() {
-        return titulo;
-    }
-
-    public String paragrafo() {
-        return paragrafo;
-    }
-
-    public String[] palavras() {
-        return palavras;
-    }
-
-    public String palavras_to_string(){
-        if (palavras.length == 0)
-            return "";
-        String text = palavras[0];
-        for (int i = 1; i < palavras.length; i++) {
-            text = text + "  " + palavras[i];
-        }
-        return text;
-    }
-
-    public int[] ocorrencias() {
-        return ocorrencias;
-    }
-
-    public String[] palavrasMeta() {
-        return palavrasMeta;
-    }
-
-    public int[] ocorrenciasMeta() {
-        return ocorrenciasMeta;
-    }
-    
-    public int numeroDeFrames() {
-        return frames;
-    }
-
-    public int numeroDeFormularios() {
-        return forms;
-    }
-
-    public int numeroDeImagens() {
-        return images;
-    }
-
-    public URL[] links() {
-        if (URLabsolutas == null) {
-            URLabsolutas = new URL[links.size()];
-
-            for (int i = 0; i < links.size(); i++) {
-                try {
-                    URLabsolutas[i] = new URL(links.elementAt(i).toString());
-                } catch (Throwable t) {
-                }    // ignora
-             }
-        }
-        return URLabsolutas;
-    }
-
     public PaginaURL(Page page){
         this(page.getURL(),page.getContent());
     }
@@ -216,9 +143,9 @@ public class PaginaURL {
     }
 
     private boolean filterURL = false;
-    private Vector around = new Vector();
-    private Vector linkNeigh = new Vector();
-    private Vector  imagens = new Vector();
+    private Vector<String> around = new Vector<String>();
+    private Vector<LinkNeighborhood> linkNeigh = new Vector<LinkNeighborhood>();
+    private Vector<String>  imagens = new Vector<String>();
     
     public void setFilterWorsOfURLs(boolean filterURL){
       this.filterURL = filterURL;
@@ -228,15 +155,15 @@ public class PaginaURL {
       HashSet<String> unique = new HashSet<String>();
       Vector<LinkNeighborhood> tempLN = new Vector<LinkNeighborhood>();
       for (int i = 0; i < linkNeigh.size(); i++) {
-        LinkNeighborhood ln = (LinkNeighborhood)linkNeigh.elementAt(i);
+        LinkNeighborhood ln = linkNeigh.elementAt(i);
         String id = ln.getAnchorString() + ln.getLink().toString()+ln.getAroundString();
         if(!unique.contains(id)){
         	unique.add(id);
             int pointer = ln.getAroundPosition();
-            Vector aroundTemp = new Vector();
+            Vector<String> aroundTemp = new Vector<String>();
             for (int j = pointer - (10 + ln.getNumWordsAnchor()); j < pointer + 10; j++) {
               if(j >=0 && j <around.size() && (j < pointer - ln.getNumWordsAnchor() || j > pointer-1)){
-                aroundTemp.add(((String)around.elementAt(j)).toLowerCase());
+                aroundTemp.add(around.elementAt(j).toLowerCase());
               }
             }
             String[] around = new String[aroundTemp.size()];
@@ -261,7 +188,6 @@ public class PaginaURL {
         boolean obj_isRDF = false;
         boolean ignorar_espacos = true;
         boolean tag_tipo_fim = false;
-        boolean tag_tipo_vazia = true;
         boolean em_script = false;
         boolean ehInicioALT = true;
         boolean em_titulo = false;
@@ -276,7 +202,6 @@ public class PaginaURL {
         int     PONTUACAO_PALAVRAS_DESCRIPTION = 5;
         int     PONTUACAO_PALAVRAS_ALT         = 1;
         int    posicao_da_palavra 			   = 1;
-        int numOfHtmlTags = 0;
 
         // UTILIZANDO AS PALAVRAS DA URL COMO INFORMACAO TEXTUAL
         if (pagina != null && !filterURL) {
@@ -324,7 +249,7 @@ public class PaginaURL {
         char    quote_char = '\0';
         URL     base = pagina;    // pagina = URL da pagina atual...
 
-        Vector  frames = new Vector();
+        Vector<String>  frames = new Vector<String>();
         char    c = '\0';
         char    ant1 = '\0';
         char    ant2 = '\0';
@@ -336,15 +261,12 @@ public class PaginaURL {
 
         LinkNeighborhood ln = null;
         String  tagName = "";
-        String lastTag = "";
         String  atributo = "";
 
         boolean insideATag = false;
 
         boolean em_meta_description = false; // thiago
         String  str_da_metatag_description = null; // thiago
-
-
 
         final int INICIO = 1;
         final int TAG_NAME = 2;
@@ -616,7 +538,6 @@ public class PaginaURL {
                                             true;    /* indicates end tag if no tag name read yet */
                                     } else if (obj_isRDF) {    /* otherwise its an empty tag (RDF only) */
                                         fimDeString = true;
-                                        tag_tipo_vazia = true;
                                         estado = FECHANDO;
                                     } 
 //                                    else {
@@ -643,7 +564,6 @@ public class PaginaURL {
                                 }
 
                                 if (fimDeString) {
-                                    //if (str.equals("!--")) {    /* html comment */
                                     if (str.startsWith("!--")) {    /* html comment */
                                         em_comentario = true;
                                         num_comentario++;
@@ -656,16 +576,10 @@ public class PaginaURL {
                                         tagOption = str.equals("option");
                                         if(tagName.equals("html")){
                                         	if(!tag_tipo_fim){
-                                            	numOfHtmlTags++;
                                         	}else{
-                                        		numOfHtmlTags--;
                                         	}
-//                                        	System.out.println(">>>>>>>>>>>>>" + numOfHtmlTags);
                                         }
                                         	
-                                        //if (tagTitulo) {
-                                        //    System.out.println("achot tag titulo " + str);
-                                        //}
                                         tagScript = str.equals("script") || str.equals("style");
 
                                         if (str.equals("form")) {
@@ -676,8 +590,6 @@ public class PaginaURL {
                                     str = "";
                                     fimDeString = false;
                                 }
-
-                                // System.out.println("A STRING DO ATRIBUTO EH: " + str + " estado novo "+ estado);
                             }
                         }
                         break;
@@ -695,7 +607,7 @@ public class PaginaURL {
 
                           insideATag = false;
                           if(ln!=null){
-                            Vector anchorTemp = new Vector();
+                            Vector<String> anchorTemp = new Vector<String>();
                             //System.out.println("URL---"+ln.getLink());
                             //System.out.println("ANC---"+anchor);
                             StringTokenizer tokenizer = new StringTokenizer(anchor," ");
@@ -716,27 +628,19 @@ public class PaginaURL {
                         // System.out.println("Entrei em fechando");
                         if (c == '>') {
                             if (tagScript) {
-
                                 /* we're inside a script tag (not RDF) */
                                 em_script = !tag_tipo_fim;
                             }
 
                             if (tagTitulo) {
                                 em_titulo = !tag_tipo_fim;
-                                //System.out.println("EM tag titulo " + str + ", em_titulo"+ em_titulo);
-                                //System.out.println("EM tag titulo " + str + ", tag_tipo_fim"+ tag_tipo_fim);
-                                //System.out.println("EM tag titulo " + str + ", tagTitulo"+ tagTitulo);
                             }
 
                             if (tagBody) {
                                 em_body = !tag_tipo_fim;
-
-                                // System.out.println("Entrei no estado inicial");
                             }
                             if (tagOption) {
                                 em_option = !tag_tipo_fim;
-
-                                // System.out.println("Entrei no estado inicial");
                             }
 //                            if(tag_tipo_fim && tagName.equals("html") && numOfHtmlTags == 0){
 //                                organizaDados();
@@ -791,7 +695,6 @@ public class PaginaURL {
                                 atributo = str;
                                 str = "";
                                 estado = IGUAL;
-//System.out.println("[ATRIBUTO c='"+c+"', estado=IGUAL], atributo="+atributo);
                                 /* if non-null attribute name */
                             } else {
                                 str += c;
@@ -807,17 +710,6 @@ public class PaginaURL {
                     case IGUAL:
                         atributo = atributo.toLowerCase();
                         tagName = tagName.toLowerCase();
-
-                        // System.out.println("------------------------------------");
-                        // System.out.println(" A TAG NAME EH: " + tagName);
-                        // if(atributo.equals("src") && tagName.equals("img") && (c == '='))
-                        // {
-                        // ignorar_espacos = true;
-                        // estado = IMAGEM;
-                        // n++;
-                        // }
-                        // else
-                        // {
 /****
                         if (atributo.equals("content")
                                 && tagName.equals("meta") && (c == '=')) {
@@ -845,21 +737,15 @@ public class PaginaURL {
 
                                 // estado = ATRIBUTO;
                                 if (c == '>') {
-                                    // System.out.println("Entrei aqui no MENOR QUE");
                                     tagScript = false;
                                     tagBody = false;
                                     tagTitulo = false;
                                     estado = FECHANDO;
                                 } else {
                                     ignorar_espacos = true;
-
-                                    // System.out.println("Entrei PARA ANDAR NA LINHA");
                                     n++;
                                 }
                             }
-//                        }
-
-                        // }
                         break;
 
                     case ALT_TAG: // nao usa mais, foi mudado, ver no estado VALOR 
@@ -1004,7 +890,7 @@ public class PaginaURL {
                                   //System.out.println("----URL:"+urlTemp);
                                   if(urlTemp!= null && urlTemp.startsWith("http")){
                                 	  if(ln!=null){
-                                		  Vector anchorTemp = new Vector();
+                                		  Vector<String> anchorTemp = new Vector<String>();
                                 		  StringTokenizer tokenizer = new StringTokenizer(anchor," ");
                                 		  while(tokenizer.hasMoreTokens()){
                                 			  anchorTemp.add(tokenizer.nextToken());
@@ -1137,7 +1023,6 @@ public class PaginaURL {
                                         StringTokenizer st = new StringTokenizer(str);
                                         while(st.hasMoreTokens()) {
                                             String token = st.nextToken();
-                                            int posicao = texto.size();
                                             boolean adicionou = adicionaAoVetorDeTexto(token);
                                             if( adicionou ) {
                                                 adicionaTermoPosicao(token,posicao_da_palavra);    // atualiza o centroide
@@ -1256,7 +1141,7 @@ public class PaginaURL {
         int[]    numbersMeta = new int[sizeMeta];
         int	i = 0;
 
-        for (Enumeration seriewords = palavra_pontos.keys();
+        for (Enumeration<String> seriewords = palavra_pontos.keys();
                 seriewords.hasMoreElements(); ) {
             words[i] = ((String) seriewords.nextElement());
             i++;
@@ -1264,26 +1149,26 @@ public class PaginaURL {
 
         i = 0;
 
-        for (Enumeration serienumbers = palavra_pontos.elements();
+        for (Enumeration<Integer> serienumbers = palavra_pontos.elements();
                 serienumbers.hasMoreElements(); ) {
             //numbers[i] = ((Vector) serienumbers.nextElement()).size();
-            numbers[i] = ((Integer) serienumbers.nextElement()).intValue();
+            numbers[i] = serienumbers.nextElement().intValue();
             i++;
         }
 
         i = 0;
 
-        for (Enumeration seriewordsMeta = palavra_posicoes_meta.keys();
+        for (Enumeration<String> seriewordsMeta = palavra_posicoes_meta.keys();
                 seriewordsMeta.hasMoreElements(); ) {
-            wordsMeta[i] = ((String) seriewordsMeta.nextElement());
+            wordsMeta[i] = seriewordsMeta.nextElement();
             i++;
         }
 
         i = 0;
 
-        for (Enumeration serienumbersMeta = palavra_posicoes_meta.elements();
+        for (Enumeration<Vector<Integer>> serienumbersMeta = palavra_posicoes_meta.elements();
                 serienumbersMeta.hasMoreElements(); ) {
-            numbersMeta[i] = ((Vector) serienumbersMeta.nextElement()).size();
+            numbersMeta[i] = serienumbersMeta.nextElement().size();
             i++;
         }
 
@@ -1657,7 +1542,7 @@ public class PaginaURL {
         String  host = null;
         int     port = -1;
         String  file = null;
-        String  ref = null;
+//        String  ref = null;
 
         try {
             limit = link.length();
@@ -1717,7 +1602,7 @@ public class PaginaURL {
             i = link.indexOf('#', start);
 
             if (i >= 0) {
-                ref = link.substring(i + 1, limit);
+//                ref = link.substring(i + 1, limit);
                 limit = i;
             }
 
@@ -1880,7 +1765,7 @@ public class PaginaURL {
         }
 
         if (palavra_pontos == null) {
-            palavra_pontos = new Hashtable();
+            palavra_pontos = new Hashtable<>();
         }
 
         termo = termo.toLowerCase();
@@ -1908,7 +1793,7 @@ public class PaginaURL {
         }
 
         if (palavra_pontos == null) {
-            palavra_pontos = new Hashtable();
+            palavra_pontos = new Hashtable<>();
         }
 
         termo = termo.toLowerCase();
@@ -1935,7 +1820,7 @@ public class PaginaURL {
         }
 
         if (texto == null) {
-            texto = new Vector();
+            texto = new Vector<>();
         }
         termo = termo.toLowerCase().trim();
         resultado = !irrelevante(termo);
@@ -1957,14 +1842,14 @@ public class PaginaURL {
         }
 
         if (palavra_posicoes == null) {
-            palavra_posicoes = new Hashtable();
+            palavra_posicoes = new Hashtable<>();
         }
 
         termo = termo.toLowerCase();
-         Vector posicoes = (Vector) palavra_posicoes.get(termo);
+         Vector<Integer> posicoes = palavra_posicoes.get(termo);
 
             if (posicoes == null) {
-                    posicoes = new Vector();
+                    posicoes = new Vector<>();
 
                     palavra_posicoes.put(termo, posicoes);
                     posicoes.addElement(new Integer(pos));
@@ -1988,17 +1873,17 @@ public class PaginaURL {
         
         
         if (palavra_posicoes == null) {
-            palavra_posicoes = new Hashtable();
+            palavra_posicoes = new Hashtable<>();
         }
 
         termo = termo.toLowerCase();
         boolean dominio = termo.startsWith("#") && termo.endsWith("#");
         if(!irrelevante(termo) || dominio) {
-            Vector posicoes = (Vector) palavra_posicoes.get(termo);
+            Vector<Integer> posicoes = palavra_posicoes.get(termo);
 
             if (posicoes == null) {
                 if (!irrelevante(termo)) {
-                    posicoes = new Vector();
+                    posicoes = new Vector<>();
 
                     palavra_posicoes.put(termo, posicoes);
                     posicoes.addElement(new Integer(pos));
@@ -2022,16 +1907,16 @@ public class PaginaURL {
         }
 
         if (palavra_posicoes_meta == null) {
-            palavra_posicoes_meta = new Hashtable();
+            palavra_posicoes_meta = new Hashtable<>();
         }
 
         termo = termo.toLowerCase();
 
-        Vector posicoesMeta = (Vector) palavra_posicoes_meta.get(termo);
+        Vector<Integer> posicoesMeta = palavra_posicoes_meta.get(termo);
 
         if (posicoesMeta == null) {
             if (!irrelevante(termo)) {
-                posicoesMeta = new Vector();
+                posicoesMeta = new Vector<>();
 
                 palavra_posicoes_meta.put(termo, posicoesMeta);
                 posicoesMeta.addElement(new Integer(pos));
@@ -2116,9 +2001,81 @@ public class PaginaURL {
         a[i] = a[j];
         a[j] = temp;
     }
-    
+
     public Vector<String> getImages() {
         return this.imagens;
+    }
+
+    public void setRelevance(double relev) {
+        this.relevance = relev;
+    }
+
+    public double getRelevance() {
+        return this.relevance;
+    }
+
+    public URL getURL() {
+        return pagina;
+    }
+
+    public String titulo() {
+        return titulo;
+    }
+
+    public String paragrafo() {
+        return paragrafo;
+    }
+
+    public String[] palavras() {
+        return palavras;
+    }
+
+    public String palavras_to_string() {
+        if (palavras.length == 0)
+            return "";
+        String text = palavras[0];
+        for (int i = 1; i < palavras.length; i++) {
+            text = text + "  " + palavras[i];
+        }
+        return text;
+    }
+
+    public int[] ocorrencias() {
+        return ocorrencias;
+    }
+
+    public String[] palavrasMeta() {
+        return palavrasMeta;
+    }
+
+    public int[] ocorrenciasMeta() {
+        return ocorrenciasMeta;
+    }
+
+    public int numeroDeFrames() {
+        return frames;
+    }
+
+    public int numeroDeFormularios() {
+        return forms;
+    }
+
+    public int numeroDeImagens() {
+        return images;
+    }
+
+    public URL[] links() {
+        if (URLabsolutas == null) {
+            URLabsolutas = new URL[links.size()];
+
+            for (int i = 0; i < links.size(); i++) {
+                try {
+                    URLabsolutas[i] = new URL(links.elementAt(i).toString());
+                } catch (Throwable t) {
+                } // ignora
+            }
+        }
+        return URLabsolutas;
     }
 
 }
