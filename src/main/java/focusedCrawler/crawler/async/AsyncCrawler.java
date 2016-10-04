@@ -90,13 +90,12 @@ public class AsyncCrawler {
     }
 
     public void shutdown() {
-        logger.info("Starting crawler shuttdown...");
         shouldStop = true;
         synchronized(running) {
             if(isShutdown) {
                return; 
             }
-            logger.info("Waiting downloader to finish...");
+            logger.info("Starting crawler shuttdown...");
             downloader.await();
             downloader.close();
             if(linkStorage instanceof LinkStorage) {
@@ -105,7 +104,8 @@ public class AsyncCrawler {
             if(targetStorage instanceof TargetStorage) {
                 ((TargetStorage)targetStorage).close();
             }
-            logger.info("Done.");
+            isShutdown = true;
+            logger.info("Shutdown finished.");
         }
     }
 
