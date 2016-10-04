@@ -83,5 +83,12 @@ public class TargetStorageMonitor {
             throw new RuntimeException("Failed to load relevant URL from target monitor file: "+fileRelevantPages);
         }
     }
+
+    public void close() {
+        fCrawledPages.close();
+        fHarvestInfo.close();
+        fNonRelevantPages.close();
+        fRelevantPages.close();
+    }
     
 }

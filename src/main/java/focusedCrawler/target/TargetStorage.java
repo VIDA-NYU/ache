@@ -205,6 +205,7 @@ public class TargetStorage extends StorageDefault {
     public void close() {
         targetRepository.close();
         negativeRepository.close();
+        monitor.close();
     }
 
 }
