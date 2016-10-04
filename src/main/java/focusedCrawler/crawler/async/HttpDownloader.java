@@ -1,5 +1,7 @@
 package focusedCrawler.crawler.async;
 
+import static com.codahale.metrics.MetricRegistry.name;
+
 import java.io.BufferedOutputStream;
 import java.io.Closeable;
 import java.io.FileNotFoundException;
@@ -11,6 +13,8 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
@@ -20,6 +24,14 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.codahale.metrics.ConsoleReporter;
+import com.codahale.metrics.Gauge;
+import com.codahale.metrics.MetricRegistry;
+import com.codahale.metrics.Timer;
+import com.codahale.metrics.Timer.Context;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 import focusedCrawler.crawler.async.fetcher.FetcherFactory;
@@ -39,8 +51,9 @@ import focusedCrawler.link.frontier.LinkRelevance;
  *
  */
 public class HttpDownloader implements Closeable {
-    
     private static final int CPU_CORES = Runtime.getRuntime().availableProcessors();
+
+    private static final Logger logger = LoggerFactory.getLogger(HttpDownloader.class);
     
     private final BaseFetcher fetcher;
     private final ExecutorService downloadThreadPool;
@@ -48,9 +61,16 @@ public class HttpDownloader implements Closeable {
     private final LinkedBlockingQueue<Runnable> downloadQueue;
     private final LinkedBlockingQueue<Runnable> dispatchQueue;
     private final AtomicInteger numberOfDownloads = new AtomicInteger(0);
-	private final int downloadQueueMaxSize;
-
+    private final AtomicInteger runningRequests = new AtomicInteger(0);
+    private final AtomicInteger runningHandlers = new AtomicInteger(0);
+    private final int downloadQueueMaxSize;
     private final PrintWriter requestLog;
+    
+    private final MetricRegistry metrics = new MetricRegistry();
+    private final Timer fetchTimer = metrics.timer(name("downloader", "fetch", "time"));
+    private final Timer handlerTimer = metrics.timer(name("downloader", "handler", "time"));
+
+    private ConsoleReporter reporter;
     
 	public HttpDownloader() {
 		this(new HttpDownloaderConfig(), null);
@@ -91,6 +111,31 @@ public class HttpDownloader implements Closeable {
                 throw new RuntimeException("Failed to open downloader log at path: "+logPath.toString(), e);
             }
         }
+        
+        setupMetrics();
+    }
+
+    private void setupMetrics() {
+        Gauge<Integer> downloadQueueGauge = () -> downloadQueue.size();
+        metrics.register(name("downloader", "downloadQueue", "size"), downloadQueueGauge);
+        
+        Gauge<Integer> dispatchQueueGauge = () -> dispatchQueue.size();
+        metrics.register(name("downloader", "dispatchQueue", "size"), dispatchQueueGauge);
+        
+        Gauge<Integer> numberOfDownloadsGauge = () -> numberOfDownloads.get();
+        metrics.register(name("downloader", "pendingDownloads"), numberOfDownloadsGauge);
+        
+        Gauge<Integer> runningRequestsGauge = () -> runningRequests.get();
+        metrics.register(name("downloader", "runningRequests"), runningRequestsGauge);
+        
+        Gauge<Integer> runningHandlersGauge = () -> runningHandlers.get();
+        metrics.register(name("downloader", "runningHandlers"), runningHandlersGauge);
+        
+        reporter = ConsoleReporter.forRegistry(metrics)
+                .convertRatesTo(TimeUnit.SECONDS)
+                .convertDurationsTo(TimeUnit.MILLISECONDS)
+                .build();
+        reporter.start(10, TimeUnit.SECONDS);
     }
 
     private PrintWriter openLogFile(Path path) throws FileNotFoundException {
@@ -114,7 +159,7 @@ public class HttpDownloader implements Closeable {
     
     public Future<FetchedResult> dipatchDownload(LinkRelevance link, Callback callback) {
         try {
-            while(downloadQueue.size() > downloadQueueMaxSize) {
+            while(downloadQueue.size() >= downloadQueueMaxSize) {
                 Thread.sleep(10);
             }
         } catch (InterruptedException e) {
@@ -127,7 +172,6 @@ public class HttpDownloader implements Closeable {
     
     @Override
     public void close() {
-        fetcher.abort();
         downloadThreadPool.shutdownNow();
         distpatchThreadPool.shutdownNow();
         try {
@@ -139,10 +183,28 @@ public class HttpDownloader implements Closeable {
         if(requestLog != null) {
             requestLog.close();
         }
+        reporter.report();
+        reporter.close();
     }
     
     public void await() {
-        try {        
+        try {
+            logger.info("Waiting downloads be finalized...");
+            long timeWaited = 0;
+            while(downloadQueue.size() > 0 || runningRequests.get() > 0) {
+                Thread.sleep(10);
+                timeWaited = 10;
+                if(timeWaited % 5000 == 0) {
+                    logger.info("Still waiting to finish downloads...");
+                }
+            }
+            while(dispatchQueue.size() > 0 || runningHandlers.get() > 0) {
+                Thread.sleep(10);
+                timeWaited = 10;
+                if(timeWaited % 5000 == 0) {
+                    logger.info("Still waiting to process downloaded pages...");
+                }
+            }
             downloadThreadPool.shutdown();
             distpatchThreadPool.shutdown();
             downloadThreadPool.awaitTermination(5, TimeUnit.MINUTES);
@@ -180,14 +242,31 @@ public class HttpDownloader implements Closeable {
         
         @Override
         public FetchedResult call() {
+            runningRequests.incrementAndGet();
+            try {
+                return doRequest();
+            } catch(Throwable e) {
+                logger.error("Failed to execute result handler", e);
+                return null;
+            } finally {
+                runningRequests.decrementAndGet();
+            }
+        }
+
+        private FetchedResult doRequest() {
             BaseFetchException exception = null;
             FetchedResult result = null;
             String url = link.getURL().toString();
+            
+            final Timer.Context context = fetchTimer.time();
             try {
                 result = fetcher.get(url);
             } catch (BaseFetchException e) {
                 exception = e;
+            } finally {
+                context.stop();
             }
+            
             if(requestLog != null) {
                 if(result != null) {
                     requestLog.printf("%d\t%s\t%s\t%s\n", result.getFetchTime(),
@@ -220,14 +299,31 @@ public class HttpDownloader implements Closeable {
 
         @Override
         public void run() {
+            runningHandlers.incrementAndGet();
+            try{
+                doHandle();
+            } catch(Throwable e) {
+                logger.error("Failed to execute result handler", e);
+            }
+            finally {
+                runningHandlers.decrementAndGet();
+                numberOfDownloads.decrementAndGet();
+            }
+        }
+
+        private void doHandle() {
             if(callback != null) {
-                if(exception != null) {
-                    callback.failed(link, exception);
-                } else {
-                    callback.completed(link, response);
+                Context context = handlerTimer.time();
+                try {
+                    if(exception != null) {
+                        callback.failed(link, exception);
+                    } else {
+                        callback.completed(link, response);
+                    }
+                } finally {
+                    context.stop();
                 }
             }
-            numberOfDownloads.decrementAndGet();
         }
         
     }
