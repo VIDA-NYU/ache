@@ -87,6 +87,7 @@ public class FrontierManager {
     }
 
     private void loadQueue(int numberOfLinks) {
+        logger.info("Loading more links from frontier into the scheduler...");
         scheduler.clear();
         frontier.commit();
         try(TupleIterator<LinkRelevance> it = frontier.iterator()) {
@@ -101,14 +102,17 @@ public class FrontierManager {
             }
             
             linksRejectedDuringLastLoad = false;
+            int linksAdded = 0;
             List<LinkRelevance> selectedLinks = linkSelector.getSelectedLinks();
             for (LinkRelevance link : selectedLinks) {
                 boolean addedLink = scheduler.addLink(link);
-                if(!addedLink) {
+                if(addedLink) {
+                    linksAdded++;
+                } else {
                     linksRejectedDuringLastLoad = true;
                 }
             }
-            
+            logger.info("Loaded {} links.", linksAdded);
         } catch (Exception e) {
             logger.error("Failed to read items from the frontier.", e);
         }
@@ -164,7 +168,6 @@ public class FrontierManager {
     public LinkRelevance nextURL() throws FrontierPersistentException, DataNotFoundException {
 
         if(!scheduler.hasLinksAvailable()) {
-            logger.info("Loading more links from frontier into the scheduler...");
             loadQueue(linksToLoad);
         }
         
