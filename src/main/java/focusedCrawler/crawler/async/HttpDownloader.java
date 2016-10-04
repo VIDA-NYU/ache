@@ -244,7 +244,7 @@ public class HttpDownloader implements Closeable {
             try {
                 return doRequest();
             } catch(Throwable e) {
-                logger.error("Failed to execute result handler", e);
+                logger.error("Failed to execute download request", e);
                 return null;
             } finally {
                 runningRequests.decrementAndGet();
