@@ -34,6 +34,7 @@ public class FrontierTest {
     
     @After
     public void tearDown() throws IOException {
+        frontier.close();
         FileUtils.deleteDirectory(testPath.toFile());
     }
 
