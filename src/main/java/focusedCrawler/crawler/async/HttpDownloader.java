@@ -61,7 +61,7 @@ public class HttpDownloader implements Closeable {
     private final AtomicInteger numberOfDownloads = new AtomicInteger(0);
     private final AtomicInteger runningRequests = new AtomicInteger(0);
     private final AtomicInteger runningHandlers = new AtomicInteger(0);
-    private final int downloadQueueMaxSize;
+    private final int maxQueueSize;
     private final PrintWriter requestLog;
     
     private final MetricRegistry metrics = new MetricRegistry();
@@ -69,6 +69,7 @@ public class HttpDownloader implements Closeable {
     private final Timer handlerTimer = metrics.timer(name("downloader", "handler", "time"));
 
     private ConsoleReporter reporter;
+
     
 	public HttpDownloader() {
 		this(new HttpDownloaderConfig(), null);
@@ -89,7 +90,7 @@ public class HttpDownloader implements Closeable {
         this.distpatchThreadPool  = new ThreadPoolExecutor(CPU_CORES, CPU_CORES,
                 0L, TimeUnit.MILLISECONDS, this.dispatchQueue, dispatcherThreadFactory);
         
-        this.downloadQueueMaxSize = threadPoolSize * 2;
+        this.maxQueueSize = threadPoolSize * 2;
         
         this.fetcher = FetcherFactory.createFetcher(config);
         
@@ -157,7 +158,8 @@ public class HttpDownloader implements Closeable {
     
     public Future<FetchedResult> dipatchDownload(LinkRelevance link, Callback callback) {
         try {
-            while(downloadQueue.size() >= downloadQueueMaxSize) {
+            while(downloadQueue.size() >= maxQueueSize ||
+                  dispatchQueue.size() >= maxQueueSize) {
                 Thread.sleep(10);
             }
         } catch (InterruptedException e) {
