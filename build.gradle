@@ -41,7 +41,9 @@ dependencies {
     compile 'org.apache.httpcomponents:httpclient:4.5.1'
     compile 'org.apache.tika:tika-parsers:1.9'
     compile 'com.github.crawler-commons:crawler-commons:0.6'
-    compile group: 'io.dropwizard.metrics', name: 'metrics-core', version: '3.1.2'
+    compile 'io.dropwizard.metrics:metrics-core:3.1.2'
+    compile 'com.esotericsoftware:kryo:4.0.0'
+    compile 'org.rocksdb:rocksdbjni:4.11.2'
     
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest-all:1.3'

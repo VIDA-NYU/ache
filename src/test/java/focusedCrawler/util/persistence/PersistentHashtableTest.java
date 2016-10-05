@@ -4,25 +4,43 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.junit.Assert.assertThat;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
 
 import focusedCrawler.link.frontier.LinkRelevance;
 
+@RunWith(Parameterized.class)
 public class PersistentHashtableTest {
     
     @Rule
     // a new temp folder is created for each test case
     public TemporaryFolder tempFolder = new TemporaryFolder();
+    
+    @Parameter
+    public PersistentHashtable.DB database;
+    
+    /* 
+     * This test runs multiple times for each of the following parameters,
+     * to make sure that it works with all underlying database implementations.
+     */
+    @Parameters
+    public static Iterable<? extends Object> data() {
+        return Arrays.asList(PersistentHashtable.DB.BERKELEYDB, PersistentHashtable.DB.ROCKSDB);
+    }
 
     @Test
     public void shouldAddAndGetKey() throws Exception {
         // given
-        PersistentHashtable<String> ht = new PersistentHashtable<>(tempFolder.newFolder().toString(), 1000, String.class);
+        PersistentHashtable<String> ht = new PersistentHashtable<>(tempFolder.newFolder().toString(), 1000, String.class, database);
         
         // when
         ht.put("my_key", "123");
@@ -31,13 +49,25 @@ public class PersistentHashtableTest {
         assertThat(ht.get("my_key"), is("123"));
     }
     
+    @Test
+    public void shouldCheckIfKeyExists() throws Exception {
+        // given
+        PersistentHashtable<String> ht = new PersistentHashtable<>(tempFolder.newFolder().toString(), 1000, String.class, database);
+        
+        // when
+        ht.put("my_existent_key", "123");
+        
+        // then
+        assertThat(ht.get("my_existent_key"), is("123"));
+        assertThat(ht.get("unexistent"), is(nullValue()));
+    }
     
     @Test
     public void shouldPersistDataIntoHastable() throws Exception {
         // given
         int cacheSize = 1;
         String folder = tempFolder.newFolder().toString();
-        PersistentHashtable<String> ht = new PersistentHashtable<>(folder, cacheSize, String.class);
+        PersistentHashtable<String> ht = new PersistentHashtable<>(folder, cacheSize, String.class, database);
         
         // when
         ht.put("my_key1", "111");
@@ -45,7 +75,7 @@ public class PersistentHashtableTest {
         ht.put("http://foo.com/index.php&a=1", "333");
         ht.close();
         
-        ht = new PersistentHashtable<>(folder, cacheSize, String.class);
+        ht = new PersistentHashtable<>(folder, cacheSize, String.class, database);
         
         // then
         assertThat(ht.get("my_key1"), is("111"));
@@ -58,7 +88,7 @@ public class PersistentHashtableTest {
         // given
         int cacheSize = 1;
         String folder = tempFolder.newFolder().toString();
-        PersistentHashtable<LinkRelevance> ht = new PersistentHashtable<>(folder, cacheSize, LinkRelevance.class);
+        PersistentHashtable<LinkRelevance> ht = new PersistentHashtable<>(folder, cacheSize, LinkRelevance.class, database);
 
         Comparator<LinkRelevance > linkRelevanceComparator = new Comparator<LinkRelevance >() {
             public int compare(LinkRelevance o1, LinkRelevance o2) {
@@ -84,7 +114,7 @@ public class PersistentHashtableTest {
     @Test
     public void shouldIterateOverTuples() throws Exception {
         // given
-        PersistentHashtable<Integer> ht = new PersistentHashtable<>(tempFolder.newFolder().toString(), 1000, Integer.class);
+        PersistentHashtable<Integer> ht = new PersistentHashtable<>(tempFolder.newFolder().toString(), 1000, Integer.class, database);
         ht.put("1", 1);
         ht.put("2", 2);
         ht.put("3", 3);
@@ -119,7 +149,7 @@ public class PersistentHashtableTest {
     @Test
     public void shoudNotCrashWhenIterateOverEmptyHashtable() throws Exception {
         // given
-        PersistentHashtable<Integer> ht = new PersistentHashtable<>(tempFolder.newFolder().toString(), 1000, Integer.class);
+        PersistentHashtable<Integer> ht = new PersistentHashtable<>(tempFolder.newFolder().toString(), 1000, Integer.class, database);
 
         // when
         try(TupleIterator<Integer> it = ht.iterator()) {

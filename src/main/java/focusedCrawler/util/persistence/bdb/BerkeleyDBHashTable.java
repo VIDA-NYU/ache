@@ -46,10 +46,11 @@ import com.sleepycat.je.OperationStatus;
 import com.sleepycat.je.Transaction;
 import com.sleepycat.je.TransactionConfig;
 
+import focusedCrawler.util.persistence.HashtableDb;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.persistence.TupleIterator;
 
-public class BerkeleyDBHashTable<T> {
+public class BerkeleyDBHashTable<T> implements HashtableDb<T> {
     
     private static final ObjectMapper jsonMapper = new ObjectMapper();
     static {
@@ -92,6 +93,7 @@ public class BerkeleyDBHashTable<T> {
 		 txn.commit();
 	}
 
+    @Override
     public synchronized void put(List<Tuple<T>> tuples) throws DatabaseException {
 	    if(tuples.isEmpty())
 	        return;
@@ -146,7 +148,7 @@ public class BerkeleyDBHashTable<T> {
         return tempList;
 	}
 	
-
+	@Override
 	public synchronized T get(String key) throws DatabaseException{
 	     DatabaseEntry keyEntry = new DatabaseEntry();
 	     DatabaseEntry dataEntry = new DatabaseEntry();
@@ -245,8 +247,19 @@ public class BerkeleyDBHashTable<T> {
 
     }
 
+    @Override
     public TupleIterator<T> iterator() throws DatabaseException {
         return new BDBIterator();
+    }
+
+    @Override
+    public void close() {
+        try {
+            exampleDb.close();
+            exampleEnv.close();
+        } catch (DatabaseException e) {
+            throw new RuntimeException("Failed to close BerkeleyDB database", e);
+        }
     }
 
 }
