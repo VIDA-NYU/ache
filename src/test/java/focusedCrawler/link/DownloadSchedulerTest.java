@@ -136,6 +136,28 @@ public class DownloadSchedulerTest {
     }
     
     @Test
+    public void shouldCheckIfLinkCanBeDownloadedAtCurrentTime() throws Exception {
+        
+        LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
+        LinkRelevance l2 = new LinkRelevance("http://ex1.com/2", 2);
+        LinkRelevance l3 = new LinkRelevance("http://ex2.com/3", 3);
+                
+        int minimumAccessTime = 100;
+        int maxLinksInScheduler = 100;
+        
+        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        scheduler.addLink(l1);
+        assertThat(scheduler.nextLink().getRelevance(), is(1d));
+        
+        assertThat(scheduler.canDownloadNow(l3), is(true));
+        assertThat(scheduler.canDownloadNow(l2), is(false));
+        Thread.sleep(minimumAccessTime+10);
+        
+        assertThat(scheduler.canDownloadNow(l2), is(true));
+        assertThat(scheduler.canDownloadNow(l3), is(true));
+    }
+    
+    @Test
     public void shouldBeAbleToClearListOfLinks() throws Exception {
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex1.com/2", 2);

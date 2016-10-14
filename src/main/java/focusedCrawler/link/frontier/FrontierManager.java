@@ -91,27 +91,40 @@ public class FrontierManager {
         scheduler.clear();
         frontier.commit();
         try(TupleIterator<LinkRelevance> it = frontier.iterator()) {
-            
+            boolean rejectedLinks = false;
             linkSelector.startSelection(numberOfLinks);
             while(it.hasNext()) {
                 Tuple<LinkRelevance> tuple = it.next();
                 LinkRelevance link = tuple.getValue();
-                if (link.getRelevance() > 0) {
+                
+                // Links already downloaded or not relevant
+                if (link.getRelevance() <= 0) {
+                    continue;
+                }
+                
+                // check whether link can be download now according to politeness constraints 
+                if(scheduler.canDownloadNow(link)) {
+                    // consider link to  be downloaded
                     linkSelector.evaluateLink(link);
+                } else {
+                    rejectedLinks = true;
                 }
             }
             
-            linksRejectedDuringLastLoad = false;
-            int linksAdded = 0;
             List<LinkRelevance> selectedLinks = linkSelector.getSelectedLinks();
+            
+            int linksAdded = 0;
             for (LinkRelevance link : selectedLinks) {
                 boolean addedLink = scheduler.addLink(link);
                 if(addedLink) {
                     linksAdded++;
                 } else {
-                    linksRejectedDuringLastLoad = true;
+                    rejectedLinks = true;
                 }
             }
+            
+            this.linksRejectedDuringLastLoad = rejectedLinks;
+            
             logger.info("Loaded {} links.", linksAdded);
         } catch (Exception e) {
             logger.error("Failed to read items from the frontier.", e);
