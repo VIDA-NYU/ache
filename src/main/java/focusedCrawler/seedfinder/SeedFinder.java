@@ -77,26 +77,28 @@ public class SeedFinder {
 
         String seedFileName = "seeds_" + query.asString() + ".txt";
         PrintStream seedsFile = new PrintStream(seedFileName);
-
-        int numberOfQueries = 0;
-        while (numberOfQueries < maxNumberOfQueries) {
-            
-            System.out.println("\n---------------");
-            System.out.println("Executing QUERY: "+query.asString());
-            System.out.println("---------------\n");
-            
-            QueryResult result = queryProcessor.processQuery(query);
-
-            for (Page page : result.positivePages) {
-                seedsFile.println(page.getURL().toExternalForm());
+        try {
+            int numberOfQueries = 0;
+            while (numberOfQueries < maxNumberOfQueries) {
+                
+                System.out.println("\n---------------");
+                System.out.println("Executing QUERY: "+query.asString());
+                System.out.println("---------------\n");
+                
+                QueryResult result = queryProcessor.processQuery(query);
+    
+                for (Page page : result.positivePages) {
+                    seedsFile.println(page.getURL().toExternalForm());
+                }
+                
+                System.out.println("\nBuilding next query...");
+                query = queryGenerator.buildNextQuery(query, result);
+                numberOfQueries++;
             }
-            
-            System.out.println("\nBuilding next query...");
-            query = queryGenerator.buildNextQuery(query, result);
-            numberOfQueries++;
+        } finally {
+            queryProcessor.close();
+            seedsFile.close();
         }
-        queryProcessor.close();
-        seedsFile.close();
         
         System.out.println("\nSeeds file created at: "+seedFileName);
     }

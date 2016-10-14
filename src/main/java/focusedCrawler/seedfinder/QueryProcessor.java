@@ -18,12 +18,11 @@ import focusedCrawler.util.parser.PaginaURL;
 
 public class QueryProcessor {
     
-    int maxNumberOfIterations = 10;
-    double minimumPrecision = 0.25;
-    TargetClassifier classifier;
-    HttpDownloader downloader = new HttpDownloader();
-    SearchEngineApi searchEngine;
-    
+    private int maxNumberOfIterations = 10;
+    private double minimumPrecision = 0.25;
+    private TargetClassifier classifier;
+    private HttpDownloader downloader = new HttpDownloader();
+    private SearchEngineApi searchEngine;
     
     Set<String> usedUrls = new HashSet<>();
     
@@ -60,6 +59,9 @@ public class QueryProcessor {
         List<BackLinkNeighborhood> searchResults = searchEngine.submitQuery(query.asString(), searchPage);
 
         List<BackLinkNeighborhood> unseenSearchResults = filterUsedUrls(searchResults);
+        if(unseenSearchResults == null | unseenSearchResults.size() == 0) {
+            return new QueryResult(0d);
+        }
         System.out.println("Unseen hits: "+unseenSearchResults.size());
         
         System.out.println("\nFetching "+unseenSearchResults.size()+" pages...");
@@ -69,7 +71,6 @@ public class QueryProcessor {
         if(fetchedPages == null || fetchedPages.isEmpty()) {
             return new QueryResult(0d);
         }
-        
         
         System.out.println("\nProcessing page content...");
         QueryResult result = new QueryResult();
@@ -111,7 +112,12 @@ public class QueryProcessor {
         
         List<Future<FetchedResult>> futures = new ArrayList<Future<FetchedResult>>();
         for(BackLinkNeighborhood result : newSearchResults) {
-            futures.add(downloader.dipatchDownload(result.getLink()));
+            try {
+                futures.add(downloader.dipatchDownload(result.getLink()));
+            } catch(IllegalArgumentException e) {
+                // invalid URL, just continue to remaining URLs...
+                System.out.println("Failed to dispatch download for: "+result.getLink());
+            }
         }
         
         List<FetchedResult> fetchedPages = new ArrayList<FetchedResult>();
