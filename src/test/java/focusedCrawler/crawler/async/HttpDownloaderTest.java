@@ -20,8 +20,6 @@ import focusedCrawler.link.frontier.LinkRelevance;
 
 public class HttpDownloaderTest {
     
-    
-    
     private HttpDownloader downloader;
     
     @Before
