@@ -138,6 +138,16 @@ public class DownloadScheduler {
         removeExpiredNodes();
         return domains.size();
     }
+    
+    public int numberOfAvailableDomains() {
+        int available = 0;
+        for(DomainNode node : domainsQueue) {
+            if(isAvailable(node)){
+                available++;
+            }
+        }
+        return available;
+    }
 
     public int numberOfEmptyDomains() {
         return emptyDomainsQueue.size();
