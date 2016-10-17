@@ -27,7 +27,7 @@ public class FetcherFactory {
         // timeout for establishing a new connection
         httpFetcher.setConnectionTimeout(30*1000);
         // timeout for requesting a connection from httpclient's connection manager
-        httpFetcher.setConnectionRequestTimeout(5*60*1000);
+        httpFetcher.setConnectionRequestTimeout(1*60*1000);
         httpFetcher.setMaxConnectionsPerHost(1);
         httpFetcher.setMaxRetryCount(config.getMaxRetryCount());
         httpFetcher.setDefaultMaxContentSize(10*1024*1024);
