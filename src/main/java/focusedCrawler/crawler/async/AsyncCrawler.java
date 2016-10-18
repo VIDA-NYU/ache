@@ -13,6 +13,7 @@ import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.DataNotFoundException;
+import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageException;
@@ -33,10 +34,13 @@ public class AsyncCrawler {
     private boolean isShutdown = false;
 
     
-    public AsyncCrawler(Storage targetStorage, Storage linkStorage, AsyncCrawlerConfig crawlerConfig, String dataPath) {
+    public AsyncCrawler(Storage targetStorage, Storage linkStorage,
+            AsyncCrawlerConfig crawlerConfig, String dataPath,
+            MetricsManager metricsManager) {
+        
         this.targetStorage = targetStorage;
         this.linkStorage = linkStorage;
-        this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig(), dataPath);
+        this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig(), dataPath, metricsManager);
         
         this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
@@ -119,7 +123,7 @@ public class AsyncCrawler {
             Storage targetStorage = new StorageCreator(targetServerConfig).produce();
             
             AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig, dataPath);
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig, dataPath, new MetricsManager());
             crawler.run();
 
         } catch (StorageFactoryException ex) {

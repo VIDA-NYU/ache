@@ -17,6 +17,7 @@ import focusedCrawler.link.frontier.selector.NonRandomLinkSelector;
 import focusedCrawler.link.frontier.selector.RandomLinkSelector;
 import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 import focusedCrawler.util.LinkFilter;
+import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.ParameterFile;
 
 public class FrontierManagerFactory {
@@ -26,7 +27,8 @@ public class FrontierManagerFactory {
     public static FrontierManager create(LinkStorageConfig config,
                                   String configPath,
                                   String dataPath,
-                                  String seedFile) {
+                                  String seedFile,
+                                  MetricsManager metricsManager) {
         
         String[] seedUrls = ParameterFile.getSeeds(seedFile);
         
@@ -53,7 +55,8 @@ public class FrontierManagerFactory {
                 config.getSchedulerMaxLinks(),
                 config.getSchedulerHostMinAccessInterval(),
                 linkSelector,
-                linkFilter);
+                linkFilter,
+                metricsManager);
         frontierManager.addSeeds(seedUrls);
         return frontierManager;
     }

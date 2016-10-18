@@ -72,10 +72,10 @@ public class HttpDownloader implements Closeable {
     private Counter counterErrors;
 
 	public HttpDownloader() {
-		this(new HttpDownloaderConfig(), null);
+		this(new HttpDownloaderConfig(), null, new MetricsManager());
 	}
 	
-    public HttpDownloader(HttpDownloaderConfig config, String dataPath) {
+    public HttpDownloader(HttpDownloaderConfig config, String dataPath, MetricsManager metricsManager) {
     	
         ThreadFactory downloadThreadFactory = new ThreadFactoryBuilder().setNameFormat("downloader-%d").build();
         ThreadFactory dispatcherThreadFactory = new ThreadFactoryBuilder().setNameFormat("dispatcher-%d").build();
@@ -111,7 +111,7 @@ public class HttpDownloader implements Closeable {
             }
         }
 
-        setupMetrics(new MetricsManager());
+        setupMetrics(metricsManager);
     }
 
     private void setupMetrics(MetricsManager metrics) {

@@ -28,6 +28,7 @@ import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
 import focusedCrawler.tools.PrintFrontierLinksToFile;
 import focusedCrawler.util.CliTool;
+import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.storage.Storage;
 
 /**
@@ -207,7 +208,7 @@ public class Main {
         String configPath = getMandatoryOptionValue(cmd, "configDir");
         String seedPath = getMandatoryOptionValue(cmd, "seed");
         ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-        FrontierManager frontierManager = FrontierManagerFactory.create(config.getLinkStorageConfig(), configPath, dataOutputPath, seedPath);
+        FrontierManager frontierManager = FrontierManagerFactory.create(config.getLinkStorageConfig(), configPath, dataOutputPath, seedPath, null);
         frontierManager.close();
     }
 
@@ -259,8 +260,10 @@ public class Main {
         ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
         
         try {
+            MetricsManager metricsManager = new MetricsManager();
+            
             Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
-                    dataOutputPath, modelPath, config.getLinkStorageConfig());
+                    dataOutputPath, modelPath, config.getLinkStorageConfig(), metricsManager);
 
             // start target storage
             Storage targetStorage = TargetStorage.createTargetStorage(
@@ -270,7 +273,8 @@ public class Main {
             AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
             
             // start crawl manager
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig, dataOutputPath);
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig,
+                                                    dataOutputPath, metricsManager);
             crawler.run();
             crawler.shutdown();
 

@@ -31,11 +31,14 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.codahale.metrics.Gauge;
+
 import focusedCrawler.link.DownloadScheduler;
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.LogFile;
+import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.persistence.TupleIterator;
 
@@ -58,13 +61,20 @@ public class FrontierManager {
     private final boolean downloadRobots;
     private final DownloadScheduler scheduler;
     private final LogFile schedulerLog;
+    private final MetricsManager metricsManager;
 
     private boolean linksRejectedDuringLastLoad;
+    private int availableLinksDuringLoad;
+    private int rejectedLinksDuringLoad;
+    private int uncrawledLinksDuringLoad;
+    private int unavailableLinksDuringLoad;
+
 
 
     public FrontierManager(Frontier frontier, String dataPath, boolean downloadRobots,
                            int linksToLoad, int schedulerMaxLinks, int schdulerMinAccessInterval,
-                           LinkSelector linkSelector, LinkFilter linkFilter) {
+                           LinkSelector linkSelector, LinkFilter linkFilter,
+                           MetricsManager metricsManager) {
         this.frontier = frontier;
         this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"));;
         this.downloadRobots = downloadRobots;
@@ -74,6 +84,32 @@ public class FrontierManager {
         this.scheduler = new DownloadScheduler(schdulerMinAccessInterval, schedulerMaxLinks);
         this.loadQueue(linksToLoad);
         this.schedulerLog = new LogFile(Paths.get(dataPath, "data_monitor", "scheduledlinks.csv"));
+        this.metricsManager = metricsManager;
+        
+        setupMetrics();
+    }
+
+    private void setupMetrics() {
+        Gauge<Integer> numberOfLinksGauge = () -> scheduler.numberOfLinks();
+        metricsManager.register("frontier_manager.scheduler.number_of_links", numberOfLinksGauge);
+        
+        Gauge<Integer> nonExpiredDomainsGauge = () -> scheduler.numberOfNonExpiredDomains();
+        metricsManager.register("frontier_manager.scheduler.non_expired_domains", nonExpiredDomainsGauge);
+        
+        Gauge<Integer> emptyDomainsGauge = () -> scheduler.numberOfEmptyDomains();
+        metricsManager.register("frontier_manager.scheduler.empty_domains", emptyDomainsGauge);
+        
+        Gauge<Integer> availableLinksGauge = () -> availableLinksDuringLoad;
+        metricsManager.register("frontier_manager.last_frontier_load.available", availableLinksGauge);
+
+        Gauge<Integer> unavailableLinksGauge = () -> unavailableLinksDuringLoad;
+        metricsManager.register("frontier_manager.last_frontier_load.unavailable", unavailableLinksGauge);
+        
+        Gauge<Integer> rejectedLinksGauge = () -> rejectedLinksDuringLoad;
+        metricsManager.register("frontier_manager.last_frontier_load.rejected", rejectedLinksGauge);
+        
+        Gauge<Integer> uncrawledLinksGauge = () -> uncrawledLinksDuringLoad;
+        metricsManager.register("frontier_manager.last_frontier_load.uncrawled", uncrawledLinksGauge);
     }
 
     public Frontier getFrontierPersistent() {
@@ -91,7 +127,12 @@ public class FrontierManager {
         scheduler.clear();
         frontier.commit();
         try(TupleIterator<LinkRelevance> it = frontier.iterator()) {
-            boolean rejectedLinks = false;
+            
+            int rejectedLinks = 0;
+            int uncrawledLinks = 0;
+            int availableLinks = 0;
+            int unavailableLinks = 0;
+
             linkSelector.startSelection(numberOfLinks);
             while(it.hasNext()) {
                 Tuple<LinkRelevance> tuple = it.next();
@@ -101,13 +142,15 @@ public class FrontierManager {
                 if (link.getRelevance() <= 0) {
                     continue;
                 }
-                
+                uncrawledLinks++;
                 // check whether link can be download now according to politeness constraints 
                 if(scheduler.canDownloadNow(link)) {
                     // consider link to  be downloaded
                     linkSelector.evaluateLink(link);
+                    availableLinks++;
                 } else {
-                    rejectedLinks = true;
+                    unavailableLinks++;
+                    rejectedLinks++;
                 }
             }
             
@@ -119,11 +162,15 @@ public class FrontierManager {
                 if(addedLink) {
                     linksAdded++;
                 } else {
-                    rejectedLinks = true;
+                    rejectedLinks++;
                 }
             }
             
-            this.linksRejectedDuringLastLoad = rejectedLinks;
+            this.availableLinksDuringLoad = availableLinks;
+            this.unavailableLinksDuringLoad = unavailableLinks;
+            this.uncrawledLinksDuringLoad = uncrawledLinks;
+            this.rejectedLinksDuringLoad = rejectedLinks;
+            this.linksRejectedDuringLastLoad = rejectedLinks > 0;
             
             logger.info("Loaded {} links.", linksAdded);
         } catch (Exception e) {

@@ -52,6 +52,7 @@ import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.DataNotFoundException;
+import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
@@ -230,9 +231,10 @@ public class LinkStorage extends StorageDefault {
                                  LinkStorageConfig config)
                                  throws FrontierPersistentException {
         try {
+            MetricsManager metricsManager = new MetricsManager();
             Storage linkStorage = createLinkStorage(configPath, seedFilePath,
                                                     dataOutputPath, modelPath,
-                                                    config);
+                                                    config, metricsManager);
 
             StorageBinder binder = new StorageBinder(config.getStorageServerConfig());
             binder.bind(linkStorage);
@@ -243,7 +245,8 @@ public class LinkStorage extends StorageDefault {
     
     public static Storage createLinkStorage(String configPath, String seedFile, 
                                             String dataPath, String modelPath,
-                                            LinkStorageConfig config)
+                                            LinkStorageConfig config,
+                                            MetricsManager metricsManager)
                                             throws LinkClassifierFactoryException,
                                                    FrontierPersistentException,
                                                    IOException {
@@ -260,7 +263,7 @@ public class LinkStorage extends StorageDefault {
         LinkClassifierFactory linkClassifierFactory = new LinkClassifierFactoryImpl(stoplist, modelPath);
         LinkClassifier linkClassifier = linkClassifierFactory.createLinkClassifier(config.getTypeOfClassifier());
 
-        FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, seedFile);
+        FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, seedFile, metricsManager);
 
         BipartiteGraphRepository graphRep = new BipartiteGraphRepository(dataPath);
 
