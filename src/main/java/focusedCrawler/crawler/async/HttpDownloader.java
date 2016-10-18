@@ -1,7 +1,5 @@
 package focusedCrawler.crawler.async;
 
-import static com.codahale.metrics.MetricRegistry.name;
-
 import java.io.BufferedOutputStream;
 import java.io.Closeable;
 import java.io.FileNotFoundException;
@@ -25,18 +23,19 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.codahale.metrics.ConsoleReporter;
+import com.codahale.metrics.Counter;
 import com.codahale.metrics.Gauge;
-import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;
 import com.codahale.metrics.Timer.Context;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 import focusedCrawler.crawler.async.fetcher.FetcherFactory;
+import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.util.MetricsManager;
 
 /**
  * This class manages thread pools for downloading links. Since downloading is a
@@ -49,6 +48,7 @@ import focusedCrawler.link.frontier.LinkRelevance;
  *
  */
 public class HttpDownloader implements Closeable {
+    
     private static final int CPU_CORES = Runtime.getRuntime().availableProcessors();
 
     private static final Logger logger = LoggerFactory.getLogger(HttpDownloader.class);
@@ -64,13 +64,13 @@ public class HttpDownloader implements Closeable {
     private final int maxQueueSize;
     private final PrintWriter requestLog;
     
-    private final MetricRegistry metrics = new MetricRegistry();
-    private final Timer fetchTimer = metrics.timer(name("downloader", "fetch", "time"));
-    private final Timer handlerTimer = metrics.timer(name("downloader", "handler", "time"));
+    private Timer fetchTimer;
+    private Timer handlerTimer;
+    private Counter counterAborted;
+    private Counter counterSuccess;
+    private Counter counterHttpStatus2xx;
+    private Counter counterErrors;
 
-    private ConsoleReporter reporter;
-
-    
 	public HttpDownloader() {
 		this(new HttpDownloaderConfig(), null);
 	}
@@ -110,31 +110,32 @@ public class HttpDownloader implements Closeable {
                 throw new RuntimeException("Failed to open downloader log at path: "+logPath.toString(), e);
             }
         }
-        
-        setupMetrics();
+
+        setupMetrics(new MetricsManager());
     }
 
-    private void setupMetrics() {
+    private void setupMetrics(MetricsManager metrics) {
+        fetchTimer   = metrics.getTimer("downloader.fetch.time");
+        handlerTimer = metrics.getTimer("downloader.handler.time");
+        counterAborted = metrics.getCounter("downloader.fetches.aborted");
+        counterSuccess = metrics.getCounter("downloader.fetches.successes");
+        counterErrors  = metrics.getCounter("downloader.fetches.errors");
+        counterHttpStatus2xx = metrics.getCounter("downloader.http_response.status.2xx");
+        
         Gauge<Integer> downloadQueueGauge = () -> downloadQueue.size();
-        metrics.register(name("downloader", "downloadQueue", "size"), downloadQueueGauge);
+        metrics.register("downloader.download_queue.size", downloadQueueGauge);
         
         Gauge<Integer> dispatchQueueGauge = () -> dispatchQueue.size();
-        metrics.register(name("downloader", "dispatchQueue", "size"), dispatchQueueGauge);
+        metrics.register("downloader.dispatch_queue.size", dispatchQueueGauge);
         
         Gauge<Integer> numberOfDownloadsGauge = () -> numberOfDownloads.get();
-        metrics.register(name("downloader", "pendingDownloads"), numberOfDownloadsGauge);
+        metrics.register("downloader.pending_downloads", numberOfDownloadsGauge);
         
         Gauge<Integer> runningRequestsGauge = () -> runningRequests.get();
-        metrics.register(name("downloader", "runningRequests"), runningRequestsGauge);
+        metrics.register("downloader.running_requests", runningRequestsGauge);
         
         Gauge<Integer> runningHandlersGauge = () -> runningHandlers.get();
-        metrics.register(name("downloader", "runningHandlers"), runningHandlersGauge);
-        
-        reporter = ConsoleReporter.forRegistry(metrics)
-                .convertRatesTo(TimeUnit.SECONDS)
-                .convertDurationsTo(TimeUnit.MILLISECONDS)
-                .build();
-        reporter.start(10, TimeUnit.SECONDS);
+        metrics.register("downloader.running_handlers", runningHandlersGauge);
     }
 
     private PrintWriter openLogFile(Path path) throws FileNotFoundException {
@@ -183,8 +184,6 @@ public class HttpDownloader implements Closeable {
         if(requestLog != null) {
             requestLog.close();
         }
-        reporter.report();
-        reporter.close();
     }
     
     public void await() {
@@ -261,10 +260,20 @@ public class HttpDownloader implements Closeable {
             final Timer.Context context = fetchTimer.time();
             try {
                 result = fetcher.get(url);
+                counterSuccess.inc();
             } catch (BaseFetchException e) {
                 exception = e;
+                if(e instanceof AbortedFetchException) {
+                    counterAborted.inc();
+                }
             } finally {
                 context.stop();
+            }
+            
+            if(result != null && result.getStatusCode() >= 200 && result.getStatusCode() < 300) {
+                counterHttpStatus2xx.inc();
+            } else {
+                counterErrors.inc();
             }
             
             if(requestLog != null) {
