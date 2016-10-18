@@ -47,7 +47,6 @@ import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchReason;
 import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
-import focusedCrawler.crawler.crawlercommons.fetcher.HttpFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.IOFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.Payload;
 import focusedCrawler.crawler.crawlercommons.fetcher.RedirectFetchException;
@@ -458,15 +457,12 @@ public class SimpleHttpFetcherTest {
         BaseFetcher fetcher = new SimpleHttpFetcher(1, TestUtils.CC_TEST_AGENT);
         String url = "http://localhost:8089/this-page-will-not-exist.html";
 
-        try {
-            fetcher.get(url);
-            fail("Should have thrown exception");
-        } catch (HttpFetchException e) {
-            assertEquals(HttpStatus.SC_NOT_FOUND, e.getHttpStatus());
-
-            // Make sure the reason gets into the exception message.
-            assertTrue(e.getMessage().contains("Not Found"));
-        }
+        FetchedResult result = fetcher.get(url);
+        
+        assertEquals(HttpStatus.SC_NOT_FOUND, result.getStatusCode());
+        assertEquals(url, result.getFetchedUrl());
+        assertEquals("127.0.0.1", result.getHostAddress());
+        assertEquals(0, result.getContent().length);
     }
 
 }
