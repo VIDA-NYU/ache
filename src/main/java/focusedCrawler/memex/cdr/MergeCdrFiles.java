@@ -17,10 +17,7 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.kohsuke.args4j.CmdLineException;
-import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
-import org.kohsuke.args4j.ParserProperties;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -28,9 +25,10 @@ import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.util.CliTool;
 import focusedCrawler.util.parser.PaginaURL;
 
-public class MergeCdrFiles {
+public class MergeCdrFiles extends CliTool {
     
     @Option(name="--input-path", usage="Path to folder with multiple CDR files", required=true)
     private String inputPath;
@@ -56,25 +54,10 @@ public class MergeCdrFiles {
     private Iterator<File> files;
     
     public static void main(String[] args) throws Exception {
-        new MergeCdrFiles().run(args);
+        CliTool.run(args, new MergeCdrFiles());
     }
     
-    public void run(String[] args) throws Exception {
-        ParserProperties properties = ParserProperties.defaults().withUsageWidth(80);
-        CmdLineParser parser = new CmdLineParser(this, properties);
-        try {
-            parser.parseArgument(args);
-        } catch (CmdLineException e) {
-            System.err.println(e.getMessage());
-            System.err.println();
-            parser.printUsage(System.err);
-            System.err.println();
-            System.exit(1);
-        }
-        generateCdrFile();
-    }
-
-    private void generateCdrFile() throws Exception {
+    public void execute() throws Exception {
         
         System.out.println("Reading CDR files from: "+inputPath);
         System.out.println("Generating CDR file at: "+outputFile);

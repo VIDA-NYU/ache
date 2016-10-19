@@ -1,25 +1,19 @@
 package focusedCrawler.memex.cdr;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.zip.GZIPOutputStream;
 
-import org.kohsuke.args4j.CmdLineException;
-import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
-import org.kohsuke.args4j.ParserProperties;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FileSystemTargetRepository.FileContentIterator;
+import focusedCrawler.util.CliTool;
 
-public class AcheToCdrFileExporter {
+public class AcheToCdrFileExporter extends CliTool {
     
     @Option(name="--input-path", usage="Path to ACHE data target folder", required=true)
     private String inputPath;
@@ -36,26 +30,11 @@ public class AcheToCdrFileExporter {
     private DataFormat dataFormat = DataFormat.JSON;
     
     public static void main(String[] args) throws Exception {
-        new AcheToCdrFileExporter().run(args);
+        CliTool.run(args, new AcheToCdrFileExporter());
     }
     
-    public void run(String[] args) throws Exception {
-        ParserProperties properties = ParserProperties.defaults().withUsageWidth(80);
-        CmdLineParser parser = new CmdLineParser(this, properties);
-        try {
-            parser.parseArgument(args);
-        } catch (CmdLineException e) {
-            System.err.println(e.getMessage());
-            System.err.println();
-            parser.printUsage(System.err);
-            System.err.println();
-            System.exit(1);
-        }
-        generateCdrFile();
-    }
-
-    private void generateCdrFile()
-            throws IOException, FileNotFoundException, JsonProcessingException {
+    @Override
+    public void execute() throws Exception {
         
         System.out.println("Reading ACHE data from: "+inputPath);
         System.out.println("Generating CDR file at: "+outputFile);

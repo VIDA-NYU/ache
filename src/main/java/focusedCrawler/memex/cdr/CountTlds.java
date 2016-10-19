@@ -15,16 +15,16 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.zip.GZIPInputStream;
 
-import org.kohsuke.args4j.CmdLineException;
-import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
-import org.kohsuke.args4j.ParserProperties;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.util.CliTool;
 
-public class CountTlds {
+public class CountTlds extends CliTool {
+    
+    private static final ObjectMapper mapper = new ObjectMapper();
     
     @Option(name="--input-path", required=true,
             usage="Path to folder with multiple CDR files")
@@ -34,28 +34,13 @@ public class CountTlds {
             usage="Text file with TLD counts")
     private String outputFile;
     
-    private static final ObjectMapper mapper = new ObjectMapper();
     
     public static void main(String[] args) throws Exception {
-        new CountTlds().run(args);
+        CliTool.run(args, new CountTlds());
     }
     
-    public void run(String[] args) throws Exception {
-        ParserProperties properties = ParserProperties.defaults().withUsageWidth(80);
-        CmdLineParser parser = new CmdLineParser(this, properties);
-        try {
-            parser.parseArgument(args);
-        } catch (CmdLineException e) {
-            System.err.println(e.getMessage());
-            System.err.println();
-            parser.printUsage(System.err);
-            System.err.println();
-            System.exit(1);
-        }
-        generateCdrFile();
-    }
-
-    private void generateCdrFile() throws Exception {
+    @Override
+    public void execute() throws Exception {
         
         System.out.println("Reading CDR files from: "+inputPath);
         System.out.println("Generating CDR file at: "+outputFile);
