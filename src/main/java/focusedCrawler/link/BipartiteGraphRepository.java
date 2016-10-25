@@ -26,10 +26,10 @@ public class BipartiteGraphRepository {
 	private final String separator = "###";
 	
 	private String authGraphDirectory = "data_backlinks/auth_graph";      
-    private String urlIdDirectory = "data_backlinks/url";
-    private String authIdDirectory = "data_backlinks/auth_id";
-    private String hubIdDirectory = "data_backlinks/hub_id";
-    private String hubGraphDirectory = "data_backlinks/hub_graph";
+    private String urlIdDirectory     = "data_backlinks/url";
+    private String authIdDirectory    = "data_backlinks/auth_id";
+    private String hubIdDirectory     = "data_backlinks/hub_id";
+    private String hubGraphDirectory  = "data_backlinks/hub_graph";
 
     public BipartiteGraphRepository(String dataPath) {
         int cacheSize = 10000;
