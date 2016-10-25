@@ -71,9 +71,13 @@ public class FilesTargetRepository implements TargetRepository {
     }
 
     public boolean insert(Page target) {
+        return insert(new TargetModelJson(target));
+    }
+    
+    public boolean insert(TargetModelJson target) {
         try {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            jsonMapper.writeValue(baos, new TargetModelJson(target));
+            jsonMapper.writeValue(baos, target);
             baos.write("\n".getBytes());
             synchronized (this) {
                 if(bytesCounter.getCount() + baos.size() > maxFileSize) {
