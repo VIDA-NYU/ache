@@ -2,6 +2,7 @@ package focusedCrawler;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.nio.file.Paths;
 import java.util.Arrays;
 
@@ -26,8 +27,6 @@ import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.seedfinder.SeedFinder;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
-import focusedCrawler.tools.PrintFrontierLinksToFile;
-import focusedCrawler.util.CliTool;
 import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.storage.Storage;
 
@@ -136,8 +135,8 @@ public class Main {
             else if ("seedFinder".equals(args[0])) {
                 SeedFinder.main(Arrays.copyOfRange(args, 1, args.length));
             }
-            else if ("printFrontier".equals(args[0])) {
-                CliTool.run(Arrays.copyOfRange(args, 1, args.length), new PrintFrontierLinksToFile());
+            else if ("run".equals(args[0])) {
+                runCliTool(args);
             }
             else {
                 printUsage();
@@ -150,6 +149,39 @@ public class Main {
         }
         catch(ParseException e) {
             printError(e);
+            System.exit(1);
+        }
+    }
+
+    private static void runCliTool(String... args) {
+        if(args.length <= 1) {
+            System.out.println("ERROR: Class name of CLI tool not specified.");
+            System.exit(1);
+        }
+        
+        String toolClass = args[1];
+        Class<?> loadedClass = null;
+        try {
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            try {
+                loadedClass = classLoader.loadClass("focusedCrawler.tools."+toolClass);
+            } catch(ClassNotFoundException e) {
+                // also try full class name
+                loadedClass = classLoader.loadClass(toolClass);
+            }
+        } catch (ClassNotFoundException e) {
+            System.out.println("Unable to find CLI tool named "+toolClass);
+            System.exit(1);
+        }
+        
+        // Execute main() method of loaded class
+        String[] params = Arrays.copyOfRange(args, 2, args.length);
+        try {
+            Method mainMethod = loadedClass.getMethod("main", String[].class);
+            mainMethod.invoke(null, (Object) params);
+        } catch (Exception e) {
+            System.out.printf("Failed to run tool %s.\n\n", loadedClass.getName());
+            e.printStackTrace(System.out);
             System.exit(1);
         }
     }
