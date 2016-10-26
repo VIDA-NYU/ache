@@ -2,18 +2,19 @@ package focusedCrawler.seedfinder;
 
 import java.io.PrintStream;
 
-import org.kohsuke.args4j.CmdLineException;
-import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
-import org.kohsuke.args4j.OptionHandlerFilter;
-import org.kohsuke.args4j.ParserProperties;
 
 import focusedCrawler.seedfinder.QueryProcessor.QueryResult;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.util.CliTool;
 
-public class SeedFinder {
+public class SeedFinder extends CliTool {
+    
+    enum SearchEngineType {
+        GOOGLE, BING, BING_API, ALL
+    }
     
     @Option(name="--maxPages", usage="Maximum number of pages per query")
     private int maxPagesPerQuery = 2;
@@ -30,42 +31,17 @@ public class SeedFinder {
     @Option(name="--modelPath", usage="The inital query to issue to the search engine", required=true)
     private String modelPath;
     
-    @Option(name="--searchEngine", usage="The search engine to be used (Google, Bing, BingAzureAPI, All)")
-    private String searchEngine = "All";
+    @Option(name="--searchEngine", usage="The search engine to be used")
+    private SearchEngineType searchEngine = SearchEngineType.ALL;
     
     public static void main(String[] args) {
-        try {
-            new SeedFinder().run(args);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        CliTool.run(args, new SeedFinder());
     }
     
-    public void run(String[] args) throws Exception {
-        ParserProperties properties = ParserProperties.defaults().withUsageWidth(80);
-        CmdLineParser parser = new CmdLineParser(this, properties);
-        SearchEngineApi api = null;
-        try {
-            parser.parseArgument(args);
-            api = createSearchEngineApi(this.searchEngine);
-            if (api == null) {
-                String msg = "Invalid search engine: " + this.searchEngine;
-                Exception cause = new IllegalArgumentException(msg);
-                this.searchEngine = "All";
-                throw new CmdLineException(parser, msg, cause);
-            }
-            
-        } catch (CmdLineException e) {
-            System.err.println(e.getMessage());
-            System.err.println();
-            System.err.println("ache seedFinder [options...]");
-            System.err.println();
-            parser.printUsage(System.err);
-            System.err.println();
-
-            System.err.println("Example: ache seedFinder" + parser.printExample(OptionHandlerFilter.ALL));
-            System.exit(1);
-        }
+    @Override
+    public void execute() throws Exception {
+        
+        SearchEngineApi api = createSearchEngineApi(this.searchEngine);
         
         System.out.println("Search Engine: "+api.getClass().getSimpleName());
         
@@ -103,15 +79,15 @@ public class SeedFinder {
         System.out.println("\nSeeds file created at: "+seedFileName);
     }
 
-    private SearchEngineApi createSearchEngineApi(String searchEngine) {
-        switch (searchEngine.toLowerCase()) {
-        case "google":
+    private SearchEngineApi createSearchEngineApi(SearchEngineType searchEngine) {
+        switch (searchEngine) {
+        case GOOGLE:
             return new GoogleSearch();
-        case "bing":
+        case BING:
             return new BingSearch();
-        case "bingazureapi":
+        case BING_API:
             return new BingSearchAzureAPI();
-        case "all":
+        case ALL:
             return new SearchEnginePool(new BingSearch(), new GoogleSearch());
         }
         return null;
