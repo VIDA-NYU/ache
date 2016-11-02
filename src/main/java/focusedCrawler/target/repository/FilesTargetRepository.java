@@ -104,7 +104,7 @@ public class FilesTargetRepository implements TargetRepository {
         long count = 0;
         Path filePath;
         do {
-            String file = String.format("crawl_data-%d-%d", timestamp, count++);
+            String file = String.format("crawl_data-%d-%d.deflate", timestamp, count++);
             filePath = directory.resolve(file);
         } while (Files.exists(filePath));
         OutputStream fileStream = new PrintStream(filePath.toFile());
