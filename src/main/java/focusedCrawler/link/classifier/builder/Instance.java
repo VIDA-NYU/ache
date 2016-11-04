@@ -87,7 +87,7 @@ public class Instance {
 
     public String toString() {
 
-        StringBuffer temp = new StringBuffer();
+        StringBuilder temp = new StringBuilder();
         for (int i = 0; i < features.length; i++) {
             // if(values[i] > 0 && features[i].indexOf("text") == -1 &&
             // features[i].indexOf("title") == -1){

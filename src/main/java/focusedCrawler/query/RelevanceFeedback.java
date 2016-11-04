@@ -321,7 +321,7 @@ public class RelevanceFeedback {
 		byte[] accountKeyBytes = Base64.encodeBase64((accountKey + ":" + accountKey).getBytes());
 		String accountKeyEnc = new String(accountKeyBytes);
 		URL url = null;
-		StringBuffer output = new StringBuffer();
+		StringBuilder output = new StringBuilder();
 		try {
 			url = new URL("https://api.datamarket.azure.com/Data.ashx/Bing/SearchWeb/v1/Web?Query=%27" + keyword + "%27&$top="+ top);
 			System.out.println(url);
@@ -363,7 +363,7 @@ public class RelevanceFeedback {
 	    	return null;
 	    }
 	    
-	    StringBuffer buffer = new StringBuffer();
+	    StringBuilder buffer = new StringBuilder();
 	    try{
 	      BufferedReader inCon = new BufferedReader(new InputStreamReader(yc.
 	          getInputStream()));
