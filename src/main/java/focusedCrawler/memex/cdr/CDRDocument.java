@@ -1,5 +1,6 @@
 package focusedCrawler.memex.cdr;
 
+import java.io.Serializable;
 import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -23,8 +24,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
      }
 }
 */
+@SuppressWarnings("serial")
 @JsonInclude(Include.NON_NULL)
-public class CDRDocument {
+public class CDRDocument implements Serializable {
 
     private String _id;
     private String url;

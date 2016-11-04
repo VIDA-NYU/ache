@@ -1,12 +1,14 @@
 package focusedCrawler.target.model;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class TargetModelJson {
+@SuppressWarnings("serial")
+public class TargetModelJson implements Serializable {
 	
 	@JsonProperty("url")
 	private String url;
