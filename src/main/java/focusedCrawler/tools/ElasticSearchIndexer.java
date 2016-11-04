@@ -33,10 +33,10 @@ import org.elasticsearch.search.SearchHit;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
-import focusedCrawler.memex.cdr.CDRDocumentBuilder;
-import focusedCrawler.target.model.TargetModelElasticSearch;
+import focusedCrawler.memex.cdr.CDRDocument;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelCbor;
+import focusedCrawler.target.model.TargetModelElasticSearch;
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchClientFactory;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
@@ -228,14 +228,14 @@ public class ElasticSearchIndexer {
                         HashMap<String, Object> crawlData = new HashMap<>();
                         crawlData.put("response_headers", pageModel.getResponseHeaders());
                         
-                        doc = new CDRDocumentBuilder()
-                                .withUrl(pageModel.getUrl())
-                                .withTimestamp(pageModel.getFetchTime())
-                                .withContentType("text/html")
-                                .withTeam("NYU")
-                                .withCrawler("ACHE")
-                                .withRawContent(pageModel.getResponseBody())
-                                .withCrawlData(crawlData)
+                        doc = new CDRDocument.Builder()
+                                .setUrl(pageModel.getUrl())
+                                .setTimestamp(pageModel.getFetchTime())
+                                .setContentType("text/html")
+                                .setTeam("NYU")
+                                .setCrawler("ACHE")
+                                .setRawContent(pageModel.getResponseBody())
+                                .setCrawlData(crawlData)
                                 .build();
                         
                     } else {

@@ -3,8 +3,16 @@ package focusedCrawler.memex.cdr;
 import java.io.Serializable;
 import java.util.Map;
 
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.tika.mime.MediaType;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import focusedCrawler.memex.cdr.TikaExtractor.ParsedData;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -28,120 +36,218 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonInclude(Include.NON_NULL)
 public class CDRDocument implements Serializable {
 
+    @JsonProperty("_id")
     private String _id;
+    
     private String url;
+    
     private long timestamp;
+    
     private String team;
+    
     private String crawler;
+    
+    @JsonProperty("raw_content")
     private String rawContent;
+    
+    @JsonProperty("content_type")
     private String contentType;
+    
+    @JsonProperty("crawl_data")
     private Object crawlData;
+    
+    @JsonProperty("extracted_metadata")
     private Map<String, String> extractedMetadata;
+    
+    @JsonProperty("extracted_text")
     private String extractedText;
+    
     private String version;
 
     public CDRDocument() {
+    }
+
+    public CDRDocument(Builder builder) {
+        this._id = builder._id;
+        this.url = builder.url;
+        this.timestamp = builder.timestamp;
+        this.team = builder.team;
+        this.crawler = builder.crawler;
+        this.rawContent = builder.rawContent;
+        this.contentType = builder.contentType;
+        this.crawlData = builder.crawlData;
+        this.extractedMetadata = builder.extractedMetadata;
+        this.extractedText = builder.extractedText;
+        this.version = builder.version;
     }
 
     public String getUrl() {
         return url;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     public long getTimestamp() {
         return timestamp;
-    }
-
-    public void setTimestamp(long timestamp) {
-        this.timestamp = timestamp;
     }
 
     public String getTeam() {
         return team;
     }
 
-    public void setTeam(String team) {
-        this.team = team;
-    }
-
     public String getCrawler() {
         return crawler;
     }
 
-    public void setCrawler(String crawler) {
-        this.crawler = crawler;
-    }
-
-    @JsonProperty("raw_content")
+    
     public String getRawContent() {
         return rawContent;
     }
 
-    @JsonProperty("raw_content")
-    public void setRawContent(String rawContent) {
-        this.rawContent = rawContent;
-    }
-
-    @JsonProperty("content_type")
     public String getContentType() {
         return contentType;
     }
 
-    @JsonProperty("content_type")
-    public void setContentType(String contentType) {
-        this.contentType = contentType;
-    }
-
-    @JsonProperty("crawl_data")
     public Object getCrawlData() {
         return crawlData;
     }
 
-    @JsonProperty("crawl_data")
-    public void setCrawlData(Object crawlData) {
-        this.crawlData = crawlData;
-    }
-
-    @JsonProperty("extracted_metadata")
     public Map<String, String> getExtractedMetadata() {
         return extractedMetadata;
     }
 
-    @JsonProperty("extracted_metadata")
-    public void setExtractedMetadata(Map<String, String> extractedMetadata) {
-        this.extractedMetadata = extractedMetadata;
-    }
-
-    @JsonProperty("extracted_text")
     public String getExtractedText() {
         return extractedText;
     }
 
-    @JsonProperty("extracted_text")
-    public void setExtractedText(String extractedText) {
-        this.extractedText = extractedText;
-    }
-
-    @JsonProperty("_id")
-    public void setId(String _id) {
-        this._id = _id;
-    }
-
-    @JsonProperty("_id")
     public String getId() {
         return this._id;
     }
     
-    @JsonProperty("version")
     public String getVersion() {
         return version;
     }
+    
+    public static class Builder {
 
-    @JsonProperty("version")
-    public void setVersion(String version) {
-        this.version = version;
+        private static final TikaExtractor extractor = new TikaExtractor();
+        private static final ObjectMapper jsonMapper = new ObjectMapper();
+
+        private String _id;
+        private String url;
+        private long timestamp;
+        private String team;
+        private String crawler;
+        private String rawContent;
+        private String contentType;
+        private Object crawlData;
+        private Map<String, String> extractedMetadata;
+        private String extractedText;
+        private String version;
+        
+
+        public CDRDocument build() {
+
+            if (this.url == null) throw new IllegalArgumentException("Field 'url' is mandatory");
+            if (this.rawContent == null) throw new IllegalArgumentException("Field 'raw_content' is mandatory");
+            if (this.crawler == null) throw new IllegalArgumentException("Field 'crawler' is mandatory");
+            if (this.team == null) throw new IllegalArgumentException("Field 'team' is mandatory");
+            if (this.version == null) throw new IllegalArgumentException("Field 'version' is mandatory");
+            if (this.timestamp == 0) throw new IllegalArgumentException("Field 'timestamp' is mandatory");
+            
+            if(this.contentType == null) {
+                MediaType mediaType = extractor.detect(this.rawContent, this.url, this.contentType);
+                this.contentType = mediaType.getBaseType().toString();
+            }
+            
+            if (this.extractedMetadata == null || this.extractedText == null) {
+                MediaType mediaType = MediaType.parse(this.contentType);
+                if(mediaType.getBaseType().equals(MediaType.TEXT_HTML)) {
+                    // auto-generate extracted_metadata field using Tika
+                    ParsedData parsedData = extractor.parse(this.rawContent, this.url, this.contentType);
+                    if (this.extractedMetadata == null && parsedData != null) {
+                        this.extractedMetadata = parsedData.getMetadata();
+                    }
+                    // auto-generate extracted_text field using Tika
+                    if (this.extractedText == null && parsedData != null) {
+                        this.extractedText = parsedData.getPlainText();
+                    }
+                }
+            }
+            
+            if (this._id == null) {
+                // auto-generate _id field
+                this._id = computeId();
+            }
+
+            return new CDRDocument(this);
+        }
+
+        public String buildAsJson() throws JsonProcessingException {
+            return jsonMapper.writeValueAsString(this.build());
+        }
+        
+        private String computeId() {
+            StringBuilder textForId = new StringBuilder();
+            textForId.append(this.url);
+            textForId.append("-");
+            textForId.append(this.timestamp);
+            return DigestUtils.sha256Hex(textForId.toString()).toUpperCase();
+        }
+
+        public Builder setId(String id) {
+            this._id = id;
+            return this;
+        }
+
+        public Builder setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+
+        public Builder setTimestamp(long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+
+        public Builder setTeam(String team) {
+            this.team = team;
+            return this;
+        }
+
+        public Builder setCrawler(String crawler) {
+            this.crawler = crawler;
+            return this;
+        }
+
+        public Builder setRawContent(String rawContent) {
+            this.rawContent = rawContent;
+            return this;
+        }
+
+        public Builder setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+
+        public Builder setCrawlData(Object crawlData) {
+            this.crawlData = crawlData;
+            return this;
+        }
+
+        public Builder setExtractedMetadata(Map<String, String> extractedMetadata) {
+            this.extractedMetadata = extractedMetadata;
+            return this;
+        }
+
+        public Builder setExtractedText(String extractedText) {
+            this.extractedText = extractedText;
+            return this;
+        }
+
+        public Builder setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+
     }
+
 }

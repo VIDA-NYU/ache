@@ -11,7 +11,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import focusedCrawler.memex.cdr.CDRDocumentBuilder;
+import focusedCrawler.memex.cdr.CDRDocument;
 import focusedCrawler.target.model.TargetModelJson;
 
 public class CrawlerEvalFile {
@@ -65,14 +65,14 @@ public class CrawlerEvalFile {
             HashMap<String, Object> crawlData = new HashMap<>();
             crawlData.put("response_headers", pageModel.getResponseHeaders());
             
-            String doc = new CDRDocumentBuilder()
-                    .withUrl(pageModel.getUrl())
-                    .withTimestamp(pageModel.getFetchTime())
-                    .withContentType(contentType)
-                    .withTeam("NYU")
-                    .withCrawler("ACHE")
-                    .withRawContent(pageModel.getResponseBody())
-                    .withCrawlData(crawlData)
+            String doc = new CDRDocument.Builder()
+                    .setUrl(pageModel.getUrl())
+                    .setTimestamp(pageModel.getFetchTime())
+                    .setContentType(contentType)
+                    .setTeam("NYU")
+                    .setCrawler("ACHE")
+                    .setRawContent(pageModel.getResponseBody())
+                    .setCrawlData(crawlData)
                     .buildAsJson();
             
             

@@ -7,6 +7,8 @@ import java.util.zip.GZIPOutputStream;
 
 import org.kohsuke.args4j.Option;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
@@ -65,20 +67,8 @@ public class AcheToCdrFileExporter extends CliTool {
                 continue;
             }
 
-            HashMap<String, Object> crawlData = new HashMap<>();
-            crawlData.put("response_headers", pageModel.getResponseHeaders());
-
-            CDRDocumentBuilder builder = new CDRDocumentBuilder()
-                    .withUrl(pageModel.getUrl())
-                    .withTimestamp(pageModel.getFetchTime())
-                    .withContentType(contentType)
-                    .withVersion("2.0")
-                    .withTeam("NYU")
-                    .withCrawler("ACHE")
-                    .withRawContent(pageModel.getResponseBody())
-                    .withCrawlData(crawlData);
-
-            String json = builder.buildAsJson();
+            String json = createCDRDocumentJson(pageModel);
+            
             if(json != null) {
                 out.println(json);
             }
@@ -90,6 +80,28 @@ public class AcheToCdrFileExporter extends CliTool {
         it.close();
         out.close();
         System.out.println("done.");
+    }
+
+    public static String createCDRDocumentJson(TargetModelJson pageModel) {
+        HashMap<String, Object> crawlData = new HashMap<>();
+        crawlData.put("response_headers", pageModel.getResponseHeaders());
+        
+        CDRDocument.Builder builder = new CDRDocument.Builder()
+                .setUrl(pageModel.getUrl())
+                .setTimestamp(pageModel.getFetchTime())
+                .setContentType(pageModel.getContentType())
+                .setVersion("2.0")
+                .setTeam("NYU")
+                .setCrawler("ACHE")
+                .setRawContent(pageModel.getResponseBody())
+                .setCrawlData(crawlData);
+
+        try {
+            return builder.buildAsJson();
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

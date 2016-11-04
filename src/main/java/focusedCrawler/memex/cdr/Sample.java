@@ -9,14 +9,15 @@ public class Sample {
     @SuppressWarnings("unused")
     public static void main(String[] args) throws JsonProcessingException {
         
-        CDRDocumentBuilder builder = new CDRDocumentBuilder();
+        CDRDocument.Builder builder = new CDRDocument.Builder();
         
-        builder.withUrl("http://www.darpa.mil/program/memex")
-               .withRawContent("<html><head><title>Sample title</title></head><body>Original text</body></html>")
-//               .withContentType("text/html")
-               .withCrawler("memex-crawler")
-               .withTeam("DARPA")
-               .withTimestamp(new Date().getTime());
+        builder.setUrl("http://www.darpa.mil/program/memex")
+               .setRawContent("<html><head><title>Sample title</title></head><body>Original text</body></html>")
+//               .setContentType("text/html")
+               .setCrawler("memex-crawler")
+               .setTeam("DARPA")
+               .setVersion("2.0")
+               .setTimestamp(new Date().getTime());
         
         // A object to acccess CDR document fields
         CDRDocument doc = builder.build();

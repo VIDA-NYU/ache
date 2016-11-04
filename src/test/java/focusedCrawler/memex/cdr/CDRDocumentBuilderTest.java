@@ -15,8 +15,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.ByteStreams;
 
-import focusedCrawler.memex.cdr.CDRDocumentBuilder;
-
 public class CDRDocumentBuilderTest {
 
 	@Test
@@ -26,15 +24,15 @@ public class CDRDocumentBuilderTest {
 		InputStream fileStream = CDRDocumentBuilderTest.class.getResourceAsStream(filename);
 		String content = new String(ByteStreams.toByteArray(fileStream));
 		
-		String json = new CDRDocumentBuilder()
-			.withUrl("http://www.darpa.mil/program/memex")
-			.withRawContent(content)
-			.withContentType("text/html")
-			.withCrawler("memex-crawler")
-			.withTeam("DARPA")
-			.withVersion("2.0")
-			.withTimestamp(new Date().getTime())
-			.buildAsJson();
+		String json = new CDRDocument.Builder()
+		        .setUrl("http://www.darpa.mil/program/memex")
+		        .setRawContent(content)
+		        .setContentType("text/html")
+		        .setCrawler("memex-crawler")
+		        .setTeam("DARPA")
+		        .setVersion("2.0")
+		        .setTimestamp(new Date().getTime())
+		        .buildAsJson();
 		
 		JsonNode node = new ObjectMapper().readTree(json);
 		
