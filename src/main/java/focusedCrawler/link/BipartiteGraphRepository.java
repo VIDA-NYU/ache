@@ -3,9 +3,10 @@ package focusedCrawler.link;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.StringTokenizer;
-import java.util.Vector;
 
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
@@ -120,7 +121,7 @@ public class BipartiteGraphRepository {
 					String title = fields[1];
 					if(title != null){
 						StringTokenizer tokenizer = new StringTokenizer(title," ");
-						Vector<String> anchorTemp = new Vector<String>();
+						List<String> anchorTemp = new ArrayList<String>();
 						while(tokenizer.hasMoreTokens()){
 							 anchorTemp.add(tokenizer.nextToken());
 			   		  	}
@@ -147,7 +148,7 @@ public class BipartiteGraphRepository {
 					String title = fields[1];
 					if(title != null){
 						StringTokenizer tokenizer = new StringTokenizer(title," ");
-						Vector<String> anchorTemp = new Vector<String>();
+						List<String> anchorTemp = new ArrayList<String>();
 						while(tokenizer.hasMoreTokens()){
 							 anchorTemp.add(tokenizer.nextToken());
 			   		  	}
@@ -217,7 +218,7 @@ public class BipartiteGraphRepository {
 		if(strLinks == null){
 			return null;
 		} else {
-			Vector<BackLinkNeighborhood> tempBacklinks = new Vector<BackLinkNeighborhood> (); 
+			List<BackLinkNeighborhood> tempBacklinks = new ArrayList<BackLinkNeighborhood> ();
 			String[] backlinkIds = strLinks.split("###");
 			for (int i = 0; i < backlinkIds.length; i++) {
 				String url_title = hubID.get(backlinkIds[i]);
@@ -247,7 +248,7 @@ public class BipartiteGraphRepository {
 		if(strLinks == null){
 			return null;
 		} else {
-			Vector<LinkNeighborhood> tempLNs = new Vector<LinkNeighborhood> (); 
+			List<LinkNeighborhood> tempLNs = new ArrayList<LinkNeighborhood> ();
 			String[] linkIds = strLinks.split("###");
 			for (int i = 0; i < linkIds.length; i++) {
 				String lnStr = authID.get(linkIds[i]);
