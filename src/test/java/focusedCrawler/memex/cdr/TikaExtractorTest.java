@@ -44,7 +44,6 @@ public class TikaExtractorTest {
         MediaType type = parser.detect(fileStream, filename, null);
         
         // then
-        System.out.println(type.toString());
         assertThat(type.getBaseType(), is(MediaType.TEXT_HTML));
         assertThat(type.getBaseType().toString(), is("text/html"));
     }

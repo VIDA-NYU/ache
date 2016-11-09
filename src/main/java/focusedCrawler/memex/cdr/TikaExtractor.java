@@ -12,6 +12,7 @@ import org.apache.tika.detect.Detector;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.mime.MediaType;
+import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.parser.html.BoilerpipeContentHandler;
@@ -49,9 +50,9 @@ public class TikaExtractor {
     private static final Charset UTF8 = Charset.forName("UTF-8");
     private static final int MAX_CHARACTERS = 25 * 1000 * 1000;
     private static final TikaConfig CONFIG = TikaConfig.getDefaultConfig();
-    
-    private Parser parser = CONFIG.getParser();
-    private Detector mimeTypeDetector = CONFIG.getDetector();
+
+    private final Parser parser = new AutoDetectParser(CONFIG);
+    private final Detector mimeTypeDetector = CONFIG.getDetector();
     
     public ParsedData parse(String content) {
         return parse(new ByteArrayInputStream(content.getBytes(UTF8)), null, null);
