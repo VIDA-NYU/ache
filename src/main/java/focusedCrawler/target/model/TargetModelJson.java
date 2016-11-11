@@ -34,7 +34,7 @@ public class TargetModelJson implements Serializable {
 			this.url = page.getURL().toString();
 		if(page.getRedirectedURL() != null)
 			this.redirectedUrl = page.getRedirectedURL().toString();
-		this.responseBody = page.getSource();
+		this.responseBody = page.getContent();
 		this.responseHeaders = page.getResponseHeaders();
 		this.fetchTime = page.getFetchTime();
 	}

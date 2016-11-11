@@ -12,6 +12,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.StopListFile;
 
@@ -22,8 +23,8 @@ public class RelevanceModel {
     
     public void addPage(boolean isRelevant, Page page) {
         PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent(), StopListFile.DEFAULT);
-        page.setPageURL(pageParser);
-        String[] terms = pageParser.palavras();
+        page.setParsedData(new ParsedData(pageParser));
+        String[] terms = page.getParsedData().getWords();
         List<String> words = new ArrayList<String>();
         for (int i = 0; i < terms.length; i++) {
             if(terms[i] == null || terms[i].trim().length() < 2) {

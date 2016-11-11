@@ -11,12 +11,12 @@ import java.util.List;
 import java.util.Map;
 
 import focusedCrawler.link.classifier.builder.Instance;
-import focusedCrawler.link.classifier.builder.WordField;
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
+import focusedCrawler.link.classifier.builder.WordField;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListFile;
 import weka.classifiers.Classifier;
@@ -36,7 +36,7 @@ public class LinkClassifierRegression implements LinkClassifier{
 		  this.attributes = attributes;
 	  }
 	  
-	public LinkRelevance[] classify(PaginaURL page)
+	public LinkRelevance[] classify(Page page)
 			throws LinkClassifierException {
 	    LinkRelevance[] linkRelevance = null;
 	    try {

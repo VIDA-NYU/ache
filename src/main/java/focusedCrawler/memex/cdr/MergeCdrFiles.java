@@ -25,6 +25,7 @@ import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.CliTool;
 import focusedCrawler.util.parser.PaginaURL;
 
@@ -158,7 +159,7 @@ public class MergeCdrFiles extends CliTool {
         
         Page page = new Page(new URL(doc.getUrl()), new String(doc.getRawContent()));
         PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
-        page.setPageURL(pageParser);
+        page.setParsedData(new ParsedData(pageParser));
 
         TargetRelevance relevance = classifier.classify(page);
         int count = processedPages.intValue();

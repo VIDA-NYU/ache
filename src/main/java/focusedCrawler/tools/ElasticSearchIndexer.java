@@ -35,6 +35,7 @@ import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
 import focusedCrawler.memex.cdr.CDRDocument;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.target.model.TargetModelCbor;
 import focusedCrawler.target.model.TargetModelElasticSearch;
 import focusedCrawler.target.model.TargetModelJson;
@@ -169,8 +170,7 @@ public class ElasticSearchIndexer {
                     
                     if (outputFormat.equals("ACHE")) {
                         Page page = new Page(new URL(url), fileAsString);
-                        PaginaURL pageParser = new PaginaURL(page.getURL(),page.getContent());
-                        page.setPageURL(pageParser);
+                        page.setParsedData(new ParsedData(new PaginaURL(page.getURL(), page.getContent())));
                         
                         id = url;
                         doc = new TargetModelElasticSearch(page);

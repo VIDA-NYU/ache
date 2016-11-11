@@ -30,11 +30,11 @@ public class TargetModelElasticSearch {
 
         this.url = page.getURL().toString();
         this.retrieved = new Date();
-        this.words = page.getPageURL().palavras();
-        this.wordsMeta = page.getPageURL().palavrasMeta();
-        this.title = page.getPageURL().titulo();
         this.domain = page.getDomainName();
         this.html = page.getContent();
+        this.words = page.getParsedData().getWords();
+        this.wordsMeta = page.getParsedData().getWordsMeta();
+        this.title = page.getParsedData().getTitle();
         
         try {
             this.text = DefaultExtractor.getInstance().getText(page.getContent());
@@ -58,18 +58,17 @@ public class TargetModelElasticSearch {
         } catch (MalformedURLException e) {
             throw new IllegalArgumentException("page has an invalid URL: " + model.url);
         }
-        String raw_content = (String) model.response.get("body");
-        Page page = new Page(url, raw_content);
-        PaginaURL pageURL = new PaginaURL(url,raw_content);
-        PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
-        page.setPageURL(pageParser);
+        String rawContent = (String) model.response.get("body");
+        
+        Page page = new Page(url, rawContent);
+        page.setParsedData(new ParsedData(new PaginaURL(url, rawContent)));
 
-        this.html = raw_content;
+        this.html = rawContent;
         this.url = model.url;
         this.retrieved = new Date(model.timestamp * 1000);
-        this.words = pageURL.palavras();
-        this.wordsMeta = pageURL.palavrasMeta();
-        this.title = pageURL.titulo();
+        this.words = page.getParsedData().getWords();
+        this.wordsMeta = page.getParsedData().getWordsMeta();
+        this.title = page.getParsedData().getTitle();
         this.domain = url.getHost();
 
         try {

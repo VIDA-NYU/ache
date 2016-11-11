@@ -28,7 +28,8 @@ import java.net.URL;
 import java.util.List;
 import java.util.Map;
 
-import focusedCrawler.util.parser.PaginaURL;
+import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 
 /**
  * <p>
@@ -41,32 +42,20 @@ import focusedCrawler.util.parser.PaginaURL;
 @SuppressWarnings("serial")
 public class Page implements Serializable {
 
-    private boolean auth = false;
-
-    private boolean hub = false;
-
     private URL url;
-
-    private String content;
-
-    private String cleanContent;
-
-    private double relevance;
-
-    private PaginaURL pageURL;
-
-    private String encoding;
-
     private URL redirectedURL;
-
+    private String content;
     private Map<String, List<String>> responseHeaders;
-
     private long fetchTime;
-    
+    private boolean auth = false;
+    private LinkRelevance linkRelevance;
+    private ParsedData parsedData;
+    private TargetRelevance targetRelevance;
+
     public Page(URL url, String content) {
         this(url, content, null, null);
     }
-    
+
     public Page(URL url, String content, Map<String, List<String>> responseHeaders) {
         this(url, content, responseHeaders, null);
     }
@@ -78,62 +67,18 @@ public class Page implements Serializable {
         this.redirectedURL = redirectedURL;
     }
 
-    public URL getURL() {
-        return url;
-    }
-
     public String getDomainName() {
         String domain = url.getHost();
         return domain.startsWith("www.") ? domain.substring(4) : domain;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public String getCleanContent() {
-        return cleanContent;
-    }
-
-    public void setContent(String content) {
-        this.content = content.toLowerCase();
-    }
-
-    public void setCleanContent(String content) {
-        this.cleanContent = content.toLowerCase();
-    }
-
-    public void setPageURL(PaginaURL page) {
-        this.pageURL = page;
-        this.setCleanContent(page.palavras_to_string());
-    }
-
-    public void setRelevance(double relevance) {
-        this.relevance = relevance;
-    }
-
-    public double getRelevance() {
-        return this.relevance;
-    }
-
-    public String getIdentifier() {
-        return this.url.toString();
-    }
-
-    public String getSource() {
-        return this.content;
-    }
-
-    public PaginaURL getPageURL() {
-        return this.pageURL;
-    }
-
-    public void setEncoding(String encoding) {
-        this.encoding = encoding;
-    }
-
-    public String getEncoding() {
-        return this.encoding;
+    public boolean isHub() {
+        if (linkRelevance != null) {
+            double relevance = linkRelevance.getRelevance();
+            return relevance > LinkRelevance.DEFAULT_HUB_RELEVANCE &&
+                   relevance < LinkRelevance.DEFAULT_AUTH_RELEVANCE;
+        }
+        return false;
     }
 
     public boolean isAuth() {
@@ -144,18 +89,26 @@ public class Page implements Serializable {
         this.auth = auth;
     }
 
-    public boolean isHub() {
-        return hub;
+    public String getIdentifier() {
+        return this.url.toString();
     }
 
-    public void setHub(boolean hub) {
-        this.hub = hub;
+    public URL getURL() {
+        return url;
     }
-    
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content.toLowerCase();
+    }
+
     public URL getRedirectedURL() {
         return redirectedURL;
     }
-    
+
     public Map<String, List<String>> getResponseHeaders() {
         return responseHeaders;
     }
@@ -163,9 +116,33 @@ public class Page implements Serializable {
     public long getFetchTime() {
         return fetchTime;
     }
-    
+
     public void setFetchTime(long fetchTime) {
         this.fetchTime = fetchTime;
+    }
+
+    public LinkRelevance getLinkRelevance() {
+        return linkRelevance;
+    }
+
+    public void setLinkRelevance(LinkRelevance linkRelevance) {
+        this.linkRelevance = linkRelevance;
+    }
+
+    public ParsedData getParsedData() {
+        return parsedData;
+    }
+
+    public void setParsedData(ParsedData parsedData) {
+        this.parsedData = parsedData;
+    }
+
+    public TargetRelevance getTargetRelevance() {
+        return targetRelevance;
+    }
+
+    public void setTargetRelevance(TargetRelevance targetRelevance) {
+        this.targetRelevance = targetRelevance;
     }
 
 }

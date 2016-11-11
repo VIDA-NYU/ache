@@ -106,7 +106,7 @@ public class WekaTargetClassifier implements TargetClassifier {
     }
   
     private double[] getValues(Page page) throws IOException, SAXException {
-        VSMVector vsm = new VSMVector(page.getSource(), stoplist, true);
+        VSMVector vsm = new VSMVector(page.getContent(), stoplist, true);
         double[] values = new double[attributes.length];
         for (int i = 0; i < attributes.length; i++) {
             VSMElement elem = vsm.getElement(attributes[i]);

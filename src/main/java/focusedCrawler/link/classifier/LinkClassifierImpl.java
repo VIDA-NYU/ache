@@ -24,8 +24,8 @@
 package focusedCrawler.link.classifier;
 
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import focusedCrawler.util.parser.PaginaURL;
 
 /**
  *
@@ -59,21 +59,20 @@ public class LinkClassifierImpl implements LinkClassifier{
    * @return LinkRelevance[]
    * @throws LinkClassifierException
    */
-  public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
-	  LinkRelevance[] linkRelevance = null;
-	  LinkNeighborhood ln = null;
+  public LinkRelevance[] classify(Page page) throws LinkClassifierException {
+      LinkNeighborhood[] lns = page.getParsedData().getLinkNeighborhood();
+      LinkNeighborhood ln = null;
 	  try {
-		  LinkNeighborhood[] lns = page.getLinkNeighboor();
-		  linkRelevance = new LinkRelevance[lns.length];
+	      LinkRelevance[] linkRelevance = new LinkRelevance[lns.length];
 		  for (int i = 0; i < lns.length; i++) {
             ln = lns[i];
             linkRelevance[i] = classify(ln);
 		  }
+		  return linkRelevance;
         } catch (Exception ex) {
             throw new LinkClassifierException("Failed to classify link [" + ln.getLink().toString()
                     + "] from page: " + page.getURL().toString(), ex);
         }
-	  return linkRelevance;
   }
 
   public LinkRelevance classify(LinkNeighborhood ln) throws LinkClassifierException {

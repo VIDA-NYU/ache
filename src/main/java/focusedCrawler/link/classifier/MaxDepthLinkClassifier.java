@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import focusedCrawler.util.parser.PaginaURL;
 
 public class MaxDepthLinkClassifier implements LinkClassifier {
 
@@ -17,13 +17,13 @@ public class MaxDepthLinkClassifier implements LinkClassifier {
     }
 
     @Override
-    public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
+    public LinkRelevance[] classify(Page page) throws LinkClassifierException {
         List<LinkRelevance> links = new ArrayList<LinkRelevance>();
-        URL[] urls = page.links();
+        URL[] urls = page.getParsedData().getLinks();
         for (int i = 0; i < urls.length; i++) {
             
             URL url = urls[i];
-            double linkRelevance = page.getRelevance() - 1;
+            double linkRelevance = page.getLinkRelevance().getRelevance() - 1;
             int currentDepth = (int) (LinkRelevance.DEFAULT_RELEVANCE - linkRelevance);
             if(currentDepth <= maxDepth) {
                 links.add(new LinkRelevance(url, linkRelevance));

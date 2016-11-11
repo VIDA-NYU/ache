@@ -82,7 +82,7 @@ public class TargetStorage extends StorageDefault {
                 relevance = new TargetRelevance(true, 1.0d);
             }
 
-            page.setRelevance(relevance.getRelevance());
+            page.setTargetRelevance(relevance);
 
             if (relevance.isRelevant()) {
                 if (config.isBipartite()) {

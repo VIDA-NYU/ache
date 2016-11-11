@@ -86,8 +86,7 @@ public class LangDetection {
      */
     public Boolean isEnglish(Page page) {
         try {
-            String content = page.getCleanContent();
-            return isEnglish(content);
+            return isEnglish(page.getParsedData().getCleanText());
         } catch (Exception e) {
             System.out.println("Exception in detect_page");
             return false;

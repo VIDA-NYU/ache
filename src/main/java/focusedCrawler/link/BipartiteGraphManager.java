@@ -25,11 +25,11 @@ package focusedCrawler.link;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 import java.util.Vector;
-import java.util.HashMap;
-import java.util.ArrayList;
 
 import focusedCrawler.link.backlink.BacklinkSurfer;
 import focusedCrawler.link.classifier.LinkClassifier;
@@ -38,9 +38,9 @@ import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import focusedCrawler.util.parser.PaginaURL;
 
 /**
  * This class is responsible to manage the info in the graph (backlinks and outlinks).
@@ -90,10 +90,7 @@ public class BipartiteGraphManager {
 	
     public void insertOutlinks(Page page) throws IOException, FrontierPersistentException, LinkClassifierException {
     	
-        PaginaURL parsedPage = page.getPageURL();
-        parsedPage.setRelevance(page.getRelevance());
-        
-        LinkRelevance[] linksRelevance = outlinkClassifier.classify(parsedPage);
+        LinkRelevance[] linksRelevance = outlinkClassifier.classify(page);
         
         ArrayList<LinkRelevance> temp = new ArrayList<LinkRelevance>();
         HashSet<String> relevantURLs = new HashSet<String>();
@@ -130,7 +127,7 @@ public class BipartiteGraphManager {
 
         LinkRelevance[] filteredLinksRelevance = temp.toArray(new LinkRelevance[relevantURLs.size()]);
         
-        LinkNeighborhood[] lns = parsedPage.getLinkNeighboor();
+        LinkNeighborhood[] lns = page.getParsedData().getLinkNeighborhood();
         for (int i = 0; i < lns.length; i++) {
             if (!relevantURLs.contains(lns[i].getLink().toString())) {
                 lns[i] = null;

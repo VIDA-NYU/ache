@@ -15,6 +15,7 @@ import org.junit.Test;
 
 import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.PaginaURL;
 
 public class BodyRegexTargetClassifierTest {
@@ -25,12 +26,12 @@ public class BodyRegexTargetClassifierTest {
         URL url = new URL("http://example.com");
         String cont = "<html><div><a href=\"http://j6im4v42ur6dpic3.onion/\">TorProject Archive</a></div></html>";
         Page page1 = new Page(url, cont);
-        page1.setPageURL(new PaginaURL(page1.getURL(), page1.getContent()));
+        page1.setParsedData(new ParsedData(new PaginaURL(page1.getURL(), page1.getContent())));
         
         URL url2 = new URL("http://example.com");
         String cont2 = "<html><div><a href=\"http://example.com/\">Garlic Project Archive</a></div></html>";
         Page page2 = new Page(url2, cont2);
-        page2.setPageURL(new PaginaURL(page2.getURL(), page2.getContent()));
+        page2.setParsedData(new ParsedData(new PaginaURL(page2.getURL(), page2.getContent())));
         
         List<String> patterns = asList(".*[a-zA-Z0-9]*.onion.*");
         BodyRegexTargetClassifier classifier = new BodyRegexTargetClassifier(patterns);
@@ -53,7 +54,7 @@ public class BodyRegexTargetClassifierTest {
         String content = new String(Files.readAllBytes(file));
 
         Page page1 = new Page(url, content);
-        page1.setPageURL(new PaginaURL(page1.getURL(), page1.getContent()));
+        page1.setParsedData(new ParsedData(new PaginaURL(page1.getURL(), page1.getContent())));
         
         List<String> patterns = asList(".*ebola.*");
         BodyRegexTargetClassifier classifier = new BodyRegexTargetClassifier(patterns);

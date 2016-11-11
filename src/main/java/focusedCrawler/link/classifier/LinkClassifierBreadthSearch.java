@@ -2,14 +2,16 @@ package focusedCrawler.link.classifier;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 
 import focusedCrawler.link.classifier.builder.Instance;
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import focusedCrawler.util.parser.PaginaURL;
 
 public class LinkClassifierBreadthSearch implements LinkClassifier {
 
@@ -23,28 +25,24 @@ public class LinkClassifierBreadthSearch implements LinkClassifier {
         this.randomGenerator = new Random();
     }
 
-    public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
-
+    public LinkRelevance[] classify(Page page) throws LinkClassifierException {
         try {
             HashMap<String, Instance> urlWords = wrapper.extractLinks(page, attributes);
 
-            LinkRelevance[] linkRelevance = new LinkRelevance[urlWords.size()];
-            
-            int count = 0;
+            List<LinkRelevance> links = new ArrayList<>();
             for(String url : urlWords.keySet()) {
                 
-                int level = (int) (page.getRelevance() / 100);
+                int level = (int) (page.getLinkRelevance().getRelevance() / 100);
                 double relevance = (level - 1) * 100 + randomGenerator.nextInt(100);
                 if (relevance < -1) {
                     relevance = -1;
                 }
-                linkRelevance[count] = new LinkRelevance(new URL(url), relevance);
-                count++;
+                
+                links.add(new LinkRelevance(new URL(url), relevance));
             }
-            return linkRelevance;
-        } catch (MalformedURLException ex) {
-            ex.printStackTrace();
-            throw new LinkClassifierException(ex.getMessage());
+            return (LinkRelevance[]) links.toArray(new LinkRelevance[links.size()]);
+        } catch (MalformedURLException e) {
+            throw new LinkClassifierException(e.getMessage(), e);
         }
     }
 

@@ -123,7 +123,7 @@ public class FileSystemTargetRepository implements TargetRepository {
         switch(dataFormat) {
         case HTML:
         {
-            fileStream.write(target.getSource().getBytes());
+            fileStream.write(target.getContent().getBytes());
             break;
         }
         case JSON:
@@ -134,7 +134,7 @@ public class FileSystemTargetRepository implements TargetRepository {
         }
         case CBOR:
         {
-            TargetModelCbor targetModel = new TargetModelCbor("", "", url, target.getSource());
+            TargetModelCbor targetModel = new TargetModelCbor("", "", url, target.getContent());
             cborMapper.writeValue(fileStream, targetModel);
             break;
         }

@@ -13,6 +13,7 @@ import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 
@@ -89,7 +90,7 @@ public class QueryProcessor {
             String contentAsString = new String(fetchedResult.getContent());
             
             Page page = new Page(url, contentAsString);
-            page.setPageURL(new PaginaURL(page.getURL(), page.getContent()));
+            page.setParsedData(new ParsedData(new PaginaURL(page.getURL(), page.getContent())));
             
             TargetRelevance relevance = classifier.classify(page);
             if(relevance.isRelevant()) {

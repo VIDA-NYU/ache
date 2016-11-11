@@ -10,6 +10,7 @@ import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
@@ -84,7 +85,7 @@ public class PrintClassifierProbabilitiesTargetRepository extends CliTool {
             Page page = new Page(new URL(target.getUrl()), new String(target.getResponseBody()), target.getResponseHeaders());
             
             PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
-            page.setPageURL(pageParser);
+            page.setParsedData(new ParsedData(pageParser));
             
             TargetRelevance relevance = classifier.classify(page);
             

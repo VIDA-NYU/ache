@@ -14,6 +14,7 @@ import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.storage.Storage;
 
@@ -69,16 +70,10 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
             page.setFetchTime(response.getFetchTime());
             
             PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
+            ParsedData parsedData = new ParsedData(pageParser);
             
-            page.setPageURL(pageParser);
-            
-            final double relevance = link.getRelevance();
-            if(relevance > LinkRelevance.DEFAULT_HUB_RELEVANCE &&
-               relevance < LinkRelevance.DEFAULT_AUTH_RELEVANCE){
-                page.setHub(true);
-            }
-            
-            page.setRelevance(relevance);
+            page.setParsedData(parsedData);
+            page.setLinkRelevance(link);
             
             targetStorage.insert(page);
             
