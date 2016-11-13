@@ -11,30 +11,22 @@ import java.nio.file.Paths;
 
 import org.apache.tika.metadata.Metadata;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mockito;
 
+import focusedCrawler.crawler.async.RobotsTxtHandler.RobotsData;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.util.CommunicationException;
-import focusedCrawler.util.storage.StorageDefault;
-import focusedCrawler.util.storage.StorageException;
 
 public class RobotsTxtHandlerTest {
-
-    static class LinkStorageMock extends StorageDefault {
-        public RobotsTxtHandler.RobotsData robotsData = null;
-        @Override
-        public synchronized Object insert(Object obj) throws StorageException, CommunicationException {
-            if(obj instanceof RobotsTxtHandler.RobotsData) {
-                this.robotsData = (RobotsTxtHandler.RobotsData) obj;
-            }
-            return null;
-        }
-    };
 
     @Test
     public void shouldParseLinksFromSitemapXml() throws Exception {
         // given
-        LinkStorageMock linkStorageMock = new LinkStorageMock(); 
+        LinkStorage linkStorageMock = Mockito.mock(LinkStorage.class);
+        
+        
         RobotsTxtHandler handler = new RobotsTxtHandler(linkStorageMock, "TestAgent");
         
         String url = "http://www.example.com/robots.txt";
@@ -49,10 +41,14 @@ public class RobotsTxtHandlerTest {
         handler.completed(link , response);
         
         // then
-        assertThat(linkStorageMock.robotsData, is(notNullValue()));
-        assertThat(linkStorageMock.robotsData.sitemapUrls.size(), is(2));
-        assertThat(linkStorageMock.robotsData.sitemapUrls.get(0), is("http://www.example.com/example-sitemap/sitemap.xml"));
-        assertThat(linkStorageMock.robotsData.sitemapUrls.get(1), is("http://www.example.com/example-sitemap/sitemap-news.xml"));
+        ArgumentCaptor<RobotsData> argument = ArgumentCaptor.forClass(RobotsData.class);
+        Mockito.verify(linkStorageMock).insert(argument.capture());
+        RobotsData robotsData = argument.getValue();
+        
+        assertThat(robotsData, is(notNullValue()));
+        assertThat(robotsData.sitemapUrls.size(), is(2));
+        assertThat(robotsData.sitemapUrls.get(0), is("http://www.example.com/example-sitemap/sitemap.xml"));
+        assertThat(robotsData.sitemapUrls.get(1), is("http://www.example.com/example-sitemap/sitemap-news.xml"));
     }
 
 }

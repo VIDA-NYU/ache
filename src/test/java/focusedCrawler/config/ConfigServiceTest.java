@@ -50,9 +50,6 @@ public class ConfigServiceTest {
         assertThat(config.getElasticSearchConfig().getPort(), is(9999));
         assertThat(config.getElasticSearchConfig().getClusterName(), is("elasticsearch-test"));
         
-        assertThat(config.getStorageServerConfig(), is(notNullValue()));
-        assertThat(config.getStorageServerConfig().getHost(), is("targetstorage.localhost"));
-        assertThat(config.getStorageServerConfig().getPort(), is(19876));
     }
     
     
@@ -84,10 +81,6 @@ public class ConfigServiceTest {
         
         assertThat(config.getMaxCacheUrlsSize(), is(222222));
         
-        assertThat(config.getStorageServerConfig(), is(notNullValue()));
-        assertThat(config.getStorageServerConfig().getHost(), is("linkstorage.localhost"));
-        assertThat(config.getStorageServerConfig().getPort(), is(19888));
-
         assertThat(config.getSchedulerHostMinAccessInterval(), is(123));
         assertThat(config.getSchedulerMaxLinks(), is(234));
     }

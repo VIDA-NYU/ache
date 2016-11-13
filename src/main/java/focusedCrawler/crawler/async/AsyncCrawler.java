@@ -1,31 +1,25 @@
 package focusedCrawler.crawler.async;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.config.ConfigService;
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.MetricsManager;
-import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageConfig;
-import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.storage.StorageFactoryException;
-import focusedCrawler.util.storage.distribution.StorageCreator;
+import focusedCrawler.util.StorageException;
 
 public class AsyncCrawler {
 	
     private static final Logger logger = LoggerFactory.getLogger(AsyncCrawler.class);
 
-    private final Storage targetStorage;
-    private final Storage linkStorage;
+    private final TargetStorage targetStorage;
+    private final LinkStorage linkStorage;
     private final HttpDownloader downloader;
     private final Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
     
@@ -34,7 +28,7 @@ public class AsyncCrawler {
     private boolean isShutdown = false;
 
     
-    public AsyncCrawler(Storage targetStorage, Storage linkStorage,
+    public AsyncCrawler(TargetStorage targetStorage, LinkStorage linkStorage,
             AsyncCrawlerConfig crawlerConfig, String dataPath,
             MetricsManager metricsManager) {
         
@@ -112,23 +106,4 @@ public class AsyncCrawler {
             logger.info("Shutdown finished.");
         }
     }
-
-    public static void run(ConfigService config, String dataPath) throws IOException, NumberFormatException {
-        logger.info("Starting CrawlerManager...");
-        try {
-            StorageConfig linkStorageServerConfig = config.getLinkStorageConfig().getStorageServerConfig();
-            Storage linkStorage = new StorageCreator(linkStorageServerConfig).produce();
-            
-            StorageConfig targetServerConfig = config.getTargetStorageConfig().getStorageServerConfig();
-            Storage targetStorage = new StorageCreator(targetServerConfig).produce();
-            
-            AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig, dataPath, new MetricsManager());
-            crawler.run();
-
-        } catch (StorageFactoryException ex) {
-            logger.error("An error occurred while starting CrawlerManager. ", ex);
-        }
-    }
-
 }

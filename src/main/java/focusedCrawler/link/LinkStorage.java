@@ -52,10 +52,7 @@ import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.MetricsManager;
-import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageDefault;
-import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.storage.distribution.StorageBinder;
+import focusedCrawler.util.StorageException;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListFile;
 
@@ -69,7 +66,7 @@ import focusedCrawler.util.string.StopListFile;
  * @author Luciano Barbosa
  * @version 1.0
  */
-public class LinkStorage extends StorageDefault {
+public class LinkStorage {
 
     public static final Logger logger = LoggerFactory.getLogger(LinkStorage.class);
 
@@ -197,8 +194,7 @@ public class LinkStorage extends StorageDefault {
             }
             
         } catch (Exception ex) {
-            logger.info("Failed to insert page into LinkStorage.", ex);
-            throw new StorageException(ex.getMessage(), ex);
+            throw new StorageException("Failed to insert Page into LinkStorage.", ex);
         }
 
         return null;
@@ -216,30 +212,13 @@ public class LinkStorage extends StorageDefault {
         }
     }
 
-    public static void runServer(String configPath, String seedFilePath,
-                                 String dataOutputPath, String modelPath,
-                                 LinkStorageConfig config)
-                                 throws FrontierPersistentException {
-        try {
-            MetricsManager metricsManager = new MetricsManager();
-            Storage linkStorage = createLinkStorage(configPath, seedFilePath,
-                                                    dataOutputPath, modelPath,
-                                                    config, metricsManager);
-
-            StorageBinder binder = new StorageBinder(config.getStorageServerConfig());
-            binder.bind(linkStorage);
-        } catch (Exception e) {
-            logger.error("Problem while starting LinkStorage.", e);
-        }
-    }
-    
-    public static Storage createLinkStorage(String configPath, String seedFile, 
-                                            String dataPath, String modelPath,
-                                            LinkStorageConfig config,
-                                            MetricsManager metricsManager)
-                                            throws LinkClassifierFactoryException,
-                                                   FrontierPersistentException,
-                                                   IOException {
+    public static LinkStorage createLinkStorage(String configPath, String seedFile, 
+                                            	String dataPath, String modelPath,
+                                            	LinkStorageConfig config,
+                                            	MetricsManager metricsManager)
+	                                            throws LinkClassifierFactoryException,
+	                                                   FrontierPersistentException,
+	                                                   IOException {
 
         
         Path stoplistPath = Paths.get(configPath, "/stoplist.txt");

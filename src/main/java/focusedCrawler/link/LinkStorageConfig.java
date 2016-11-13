@@ -7,8 +7,6 @@ import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import focusedCrawler.util.storage.StorageConfig;
-
 public class LinkStorageConfig {
 
     public static class BackSurferConfig {
@@ -73,7 +71,6 @@ public class LinkStorageConfig {
     @JsonUnwrapped
     private BackSurferConfig backSurferConfig = new BackSurferConfig();
     
-    private final StorageConfig serverConfig;
     
     @JsonProperty("link_storage.download_sitemap_xml")
     private boolean downloadSitemapXml = false;
@@ -86,7 +83,9 @@ public class LinkStorageConfig {
     
     public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
-        this.serverConfig = StorageConfig.create(config, "link_storage.server.");
+    }
+
+    public LinkStorageConfig() {
     }
 
     public int getMaxPagesPerDomain() {
@@ -141,10 +140,6 @@ public class LinkStorageConfig {
         return linkSelector;
     }
 
-    public StorageConfig getStorageServerConfig() {
-        return serverConfig;
-    }
-
     public boolean getDownloadSitemapXml() {
         return downloadSitemapXml;
     }
@@ -156,4 +151,5 @@ public class LinkStorageConfig {
     public int getSchedulerMaxLinks() {
         return schedulerMaxLinks;
     }
+    
 }

@@ -11,30 +11,20 @@ import java.nio.file.Paths;
 
 import org.apache.tika.metadata.Metadata;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mockito;
 
+import focusedCrawler.crawler.async.SitemapXmlHandler.SitemapData;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.util.CommunicationException;
-import focusedCrawler.util.storage.StorageDefault;
-import focusedCrawler.util.storage.StorageException;
 
 public class SitemapXmlHandlerTest {
     
-    static class LinkStorageMock extends StorageDefault {
-        public SitemapXmlHandler.SitemapData sitemapData = null;
-        @Override
-        public synchronized Object insert(Object obj) throws StorageException, CommunicationException {
-            if(obj instanceof SitemapXmlHandler.SitemapData) {
-                this.sitemapData = (SitemapXmlHandler.SitemapData) obj;
-            }
-            return null;
-        }
-    };
-
     @Test
     public void shouldParseLinksFromSitemapXml() throws Exception {
         // given
-        LinkStorageMock linkStorageMock = new LinkStorageMock(); 
+        LinkStorage linkStorageMock = Mockito.mock(LinkStorage.class);
         SitemapXmlHandler handler = new SitemapXmlHandler(linkStorageMock);
         
         String url = "http://www.example.com/sitemap.xml";
@@ -49,15 +39,19 @@ public class SitemapXmlHandlerTest {
         handler.completed(link , response);
         
         // then
-        assertThat(linkStorageMock.sitemapData, is(notNullValue()));
-        assertThat(linkStorageMock.sitemapData.sitemaps.size(), is(0));
-        assertThat(linkStorageMock.sitemapData.links.size(), is(4));
+        ArgumentCaptor<SitemapData> argument = ArgumentCaptor.forClass(SitemapData.class);
+        Mockito.verify(linkStorageMock).insert(argument.capture());
+        SitemapData sitemapData = argument.getValue();
+        
+        assertThat(sitemapData, is(notNullValue()));
+        assertThat(sitemapData.sitemaps.size(), is(0));
+        assertThat(sitemapData.links.size(), is(4));
     }
     
     @Test
     public void shouldParseChildSitemapsFromSitemapIndexes() throws Exception {
         // given
-        LinkStorageMock linkStorageMock = new LinkStorageMock(); 
+        LinkStorage linkStorageMock = Mockito.mock(LinkStorage.class);
         
         SitemapXmlHandler handler = new SitemapXmlHandler(linkStorageMock);
         
@@ -73,9 +67,13 @@ public class SitemapXmlHandlerTest {
         handler.completed(link , response);
         
         // then
-        assertThat(linkStorageMock.sitemapData, is(notNullValue()));
-        assertThat(linkStorageMock.sitemapData.sitemaps.size(), is(3));
-        assertThat(linkStorageMock.sitemapData.links.size(), is(0));
+        ArgumentCaptor<SitemapData> argument = ArgumentCaptor.forClass(SitemapData.class);
+        Mockito.verify(linkStorageMock).insert(argument.capture());
+        SitemapData sitemapData = argument.getValue();
+        
+        assertThat(sitemapData, is(notNullValue()));
+        assertThat(sitemapData.sitemaps.size(), is(3));
+        assertThat(sitemapData.links.size(), is(0));
     }
 
 }

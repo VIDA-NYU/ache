@@ -8,7 +8,7 @@ import org.apache.commons.cli.MissingArgumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierException;
@@ -20,26 +20,20 @@ import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
-import focusedCrawler.util.CommunicationException;
 import focusedCrawler.util.LangDetection;
-import focusedCrawler.util.storage.Storage;
-import focusedCrawler.util.storage.StorageConfig;
-import focusedCrawler.util.storage.StorageDefault;
-import focusedCrawler.util.storage.StorageException;
-import focusedCrawler.util.storage.distribution.StorageBinder;
-import focusedCrawler.util.storage.distribution.StorageCreator;
+import focusedCrawler.util.StorageException;
 
 /**
  * This class runs a socket server responsible to store pages coming from the crawler client.
  * @author lbarbosa
  */
-public class TargetStorage extends StorageDefault {
+public class TargetStorage {
 	
 	public static final Logger logger = LoggerFactory.getLogger(TargetStorage.class);
 
     private TargetRepository targetRepository;
     private TargetRepository negativeRepository;
-    private Storage linkStorage;
+    private LinkStorage linkStorage;
     private TargetClassifier targetClassifier;
     private TargetStorageConfig config;
     private LangDetection langDetector = new LangDetection();
@@ -47,7 +41,7 @@ public class TargetStorage extends StorageDefault {
     
     public TargetStorage(TargetClassifier targetClassifier,
                          TargetRepository targetRepository, 
-                         Storage linkStorage,
+                         LinkStorage linkStorage,
                        	 TargetStorageMonitor monitor,
                        	 TargetRepository negativeRepository,
                        	 TargetStorageConfig config) {
@@ -114,39 +108,18 @@ public class TargetStorage extends StorageDefault {
                 logger.info("Visited page limit exceeded. Exiting crawler. pagelimit=" + config.getVisitedPageLimit());
                 System.exit(0);
             }
-        } catch (CommunicationException ex) {
-            logger.error("Communication error while inserting.", ex);
-            throw new StorageException(ex.getMessage(), ex);
         } catch (TargetClassifierException tce) {
             logger.error("Classification error while inserting.", tce);
         }
         return null;
     }
 
-    public static void runServer(String configPath, String modelPath, String dataPath, String indexName, ConfigService config) {
-        try{
-            
-            TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
-            
-            StorageConfig linkStorageConfig = config.getLinkStorageConfig().getStorageServerConfig();
-            Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
-            
-            Storage targetStorage = createTargetStorage(configPath, modelPath, dataPath, indexName, targetStorageConfig, linkStorage);
-
-            StorageBinder binder = new StorageBinder(targetStorageConfig.getStorageServerConfig());
-            binder.bind(targetStorage);
-            
-        } catch (Exception e) {
-        	logger.error("Error while starting TargetStorage", e);
-        }
-    }
-    
-	public static Storage createTargetStorage(String configPath,
+	public static TargetStorage createTargetStorage(String configPath,
                                               String modelPath,
                                               String dataPath,
                                               String indexName,
                                               TargetStorageConfig config,
-                                              Storage linkStorage)
+                                              LinkStorage linkStorage)
                                               throws IOException,
                                                      MissingArgumentException {
         
@@ -198,8 +171,8 @@ public class TargetStorage extends StorageDefault {
         
         TargetStorageMonitor monitor = new TargetStorageMonitor(dataPath);
         
-        Storage targetStorage = new TargetStorage(targetClassifier, targetRepository, linkStorage, 
-                                                  monitor, negativeRepository, config);
+        TargetStorage targetStorage = new TargetStorage(targetClassifier, targetRepository, linkStorage,
+                                                        monitor, negativeRepository, config);
         
         return targetStorage;
     }

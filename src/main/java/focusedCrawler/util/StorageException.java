@@ -20,30 +20,26 @@
 ## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 ##
 ############################################################################
- */
-package focusedCrawler.util.storage;
+*/
+package focusedCrawler.util;
 
-/**
- * Fabrica de StorageRemoteAdapter
- */
-public abstract class AbstractStorageFactory implements StorageFactory {
+@SuppressWarnings("serial")
+public class StorageException extends DetailException {
 
-	private StorageConfig config;
+    public StorageException() {
+        super();
+    }
 
-	public AbstractStorageFactory() {
-		super();
-	}
+    public StorageException(String message) {
+        super(message);
+    }
 
-	public AbstractStorageFactory(StorageConfig config) {
-		setConfig(config);
-	}
+    public StorageException(Throwable detail) {
+        super(detail);
+    }
 
-	public StorageConfig getConfig() {
-		return config;
-	} // getConfig
+    public StorageException(String message, Throwable detail) {
+        super(message, detail);
+    }
 
-	public void setConfig(StorageConfig newConfig) {
-		this.config = newConfig;
-	} // setConfig
-
-} // class
+}

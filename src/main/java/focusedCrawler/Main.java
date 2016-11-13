@@ -28,7 +28,6 @@ import focusedCrawler.seedfinder.SeedFinder;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
 import focusedCrawler.util.MetricsManager;
-import focusedCrawler.util.storage.Storage;
 
 /**
  * <p>
@@ -52,10 +51,7 @@ public class Main {
             
             Options startCrawlOptions = new Options();
             Options addSeedsOptions = new Options();
-            Options startCrawlManagerOptions = new Options();
             Options buildModelOptions = new Options();
-            Options startTargetStorageOptions = new Options();
-            Options startLinkStorageOptions = new Options();
             
             startCrawlOptions.addOption("e", "elasticIndex", true, "ElasticSearch index name");
             startCrawlOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
@@ -72,33 +68,15 @@ public class Main {
             buildModelOptions.addOption("o", "outputDir", true, "Path to folder which model built should be stored");
             buildModelOptions.addOption("l", "learner", true, "Machine-learning algorithm to be used to train the model (SMO, RandomForest)");
             
-            startTargetStorageOptions.addOption("o", "outputDir", true, "Path to folder which model built should be stored");
-            startTargetStorageOptions.addOption("c", "configDir", true, "Path to configuration files folder");
-            startTargetStorageOptions.addOption("m", "modelDir", true, "Path to folder containing page classifier model");
-            
-            
-            startLinkStorageOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
-            startLinkStorageOptions.addOption("c", "configDir", true, "Path to configuration files folder");
-            startLinkStorageOptions.addOption("s", "seed", true, "Path to the file of seed URLs");
-            
-            startCrawlManagerOptions.addOption("c", "configDir", true, "Path to configuration files folder");
-            startCrawlManagerOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
-            
             allOptions = new Options[] { 
                     startCrawlOptions,
                     addSeedsOptions,
-                    startCrawlManagerOptions,
-                    buildModelOptions,
-                    startTargetStorageOptions,
-                    startLinkStorageOptions};
+                    buildModelOptions};
             
             commandName = new String[] { 
                     "startCrawl",
                     "addSeeds",
-                    "startCrawlManager",
                     "buildModel",
-                    "startTargetStorage",
-                    "startLinkStorage",
                     "seedFinder",
                     "printFrontier"};
 
@@ -119,18 +97,6 @@ public class Main {
             else if ("buildModel".equals(args[0])) {
                 cmd = parser.parse(buildModelOptions, args);
                 buildModel(cmd);
-            }
-            else if ("startLinkStorage".equals(args[0])) {
-                cmd = parser.parse(startLinkStorageOptions, args);
-                startLinkStorage(cmd);
-            }
-            else if ("startTargetStorage".equals(args[0])) {
-                cmd = parser.parse(startTargetStorageOptions, args);
-                startTargetStorage(cmd);
-            }
-            else if ("startCrawlManager".equals(args[0])) {
-                cmd = parser.parse(startCrawlManagerOptions, args);
-                startCrawlManager(cmd);
             }
             else if ("seedFinder".equals(args[0])) {
                 SeedFinder.main(Arrays.copyOfRange(args, 1, args.length));
@@ -244,44 +210,6 @@ public class Main {
         frontierManager.close();
     }
 
-    private static void startLinkStorage(CommandLine cmd) throws MissingArgumentException {
-        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
-        String configPath = getMandatoryOptionValue(cmd, "configDir");
-        String seedPath = getMandatoryOptionValue(cmd, "seed");
-        String modelPath = getMandatoryOptionValue(cmd, "modelDir");
-        try {
-            ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-            LinkStorage.runServer(configPath, seedPath, dataOutputPath, modelPath, config.getLinkStorageConfig());
-        } catch (Throwable t) {
-            logger.error("Something bad happened to LinkStorage :(", t);
-        }
-    }
-
-    private static void startTargetStorage(CommandLine cmd) throws MissingArgumentException {
-        String configPath = getMandatoryOptionValue(cmd, "configDir");
-        String modelPath = getMandatoryOptionValue(cmd, "modelDir");
-        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
-        String elasticIndexName = getOptionalOptionValue(cmd, "elasticIndex");
-        try {
-            ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-            TargetStorage.runServer(configPath, modelPath, dataOutputPath, elasticIndexName, config);
-        } catch (Throwable t) {
-            logger.error("Something bad happened to TargetStorage :(", t);
-        }
-    }
-
-    private static void startCrawlManager(CommandLine cmd) {
-        try {
-            String configPath = getMandatoryOptionValue(cmd, "configDir");
-            String dataPath = getOptionalOptionValue(cmd, "outputDir");
-            ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-            AsyncCrawler.run(config, dataPath);
-            
-        } catch (Throwable t) {
-            logger.error("Something bad happened to CrawlManager :(", t);
-        }
-    }
-
     private static void startCrawl(CommandLine cmd) throws MissingArgumentException {
         String seedPath = getMandatoryOptionValue(cmd, "seed");
         String configPath = getMandatoryOptionValue(cmd, "configDir");
@@ -294,11 +222,11 @@ public class Main {
         try {
             MetricsManager metricsManager = new MetricsManager();
             
-            Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
+            LinkStorage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
                     dataOutputPath, modelPath, config.getLinkStorageConfig(), metricsManager);
 
             // start target storage
-            Storage targetStorage = TargetStorage.createTargetStorage(
+            TargetStorage targetStorage = TargetStorage.createTargetStorage(
             		configPath, modelPath, dataOutputPath, elasticIndexName,
                     config.getTargetStorageConfig(), linkStorage);
             
@@ -345,8 +273,6 @@ public class Main {
         System.out.println("Examples:\n");
         System.out.println("ache buildModel -c config/sample_config/stoplist.txt -t training_data -o output_model");
         System.out.println("ache addSeeds -o data -c config/sample_config -s config/sample.seeds");
-        System.out.println("ache startLinkStorage -o data -c config/sample_config -s config/sample.seeds");
-        System.out.println("ache startTargetStorage -o data -c config/sample_config -m config/sample_model");
-        System.out.println("ache startCrawlManager -c config/sample_config");
+        System.out.println("ache startCrawl -o data -c config/sample_config -s config/sample.seeds -m config/sample_model");
     }
 }

@@ -8,7 +8,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
-import focusedCrawler.util.storage.StorageConfig;
 
 public class TargetStorageConfig {
     
@@ -45,11 +44,8 @@ public class TargetStorageConfig {
     @JsonUnwrapped
     private ElasticSearchConfig elasticSearchConfig = new ElasticSearchConfig();
     
-    private final StorageConfig serverConfig;
-    
     public TargetStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
-        this.serverConfig = StorageConfig.create(config, "target_storage.server.");
     }
 
     public boolean isUseClassifier() {
@@ -90,10 +86,6 @@ public class TargetStorageConfig {
 
     public boolean isEnglishLanguageDetectionEnabled() {
         return englishLanguageDetectionEnabled;
-    }
-
-    public StorageConfig getStorageServerConfig() {
-        return serverConfig;
     }
 
     public boolean getHashFileName() {
