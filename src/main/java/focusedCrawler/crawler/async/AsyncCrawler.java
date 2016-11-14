@@ -6,10 +6,16 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.eventbus.EventBus;
+import com.google.common.eventbus.Subscribe;
+
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
+import focusedCrawler.crawler.async.RobotsTxtHandler.RobotsData;
+import focusedCrawler.crawler.async.SitemapXmlHandler.SitemapData;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.TargetStorage;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.StorageException;
@@ -27,6 +33,8 @@ public class AsyncCrawler {
     private Object running = new Object();
     private boolean isShutdown = false;
 
+    private EventBus eventBus;
+
     
     public AsyncCrawler(TargetStorage targetStorage, LinkStorage linkStorage,
             AsyncCrawlerConfig crawlerConfig, String dataPath,
@@ -36,15 +44,33 @@ public class AsyncCrawler {
         this.linkStorage = linkStorage;
         this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig(), dataPath, metricsManager);
         
-        this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
-        this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
-        this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage, crawlerConfig.getDownloaderConfig().getUserAgentName()));
+        this.eventBus = new EventBus();
+        this.eventBus.register(this);
+        
+        this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(eventBus));
+        this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(eventBus));
+        this.handlers.put(LinkRelevance.Type.ROBOTS,  new RobotsTxtHandler(eventBus, crawlerConfig.getDownloaderConfig().getUserAgentName()));
         
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
                 shutdown();
             }
         });
+    }
+    
+    @Subscribe
+    public void sendToStorage(SitemapData sitemapData) {
+        linkStorage.insert(sitemapData);
+    }
+    
+    @Subscribe
+    public void sendToStorage(RobotsData robotsData) {
+        linkStorage.insert(robotsData);
+    }
+    
+    @Subscribe
+    public void sendToStorage(Page page) throws StorageException {
+        targetStorage.insert(page);
     }
     
     public void run() {

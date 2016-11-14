@@ -14,9 +14,10 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 
+import com.google.common.eventbus.EventBus;
+
 import focusedCrawler.crawler.async.SitemapXmlHandler.SitemapData;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
-import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 
 public class SitemapXmlHandlerTest {
@@ -24,8 +25,8 @@ public class SitemapXmlHandlerTest {
     @Test
     public void shouldParseLinksFromSitemapXml() throws Exception {
         // given
-        LinkStorage linkStorageMock = Mockito.mock(LinkStorage.class);
-        SitemapXmlHandler handler = new SitemapXmlHandler(linkStorageMock);
+        EventBus eventBusMock = Mockito.mock(EventBus.class);
+        SitemapXmlHandler handler = new SitemapXmlHandler(eventBusMock);
         
         String url = "http://www.example.com/sitemap.xml";
         Path sitemapFilePath = Paths.get(SitemapXmlHandler.class.getResource("sample-sitemap.xml").toURI());
@@ -40,7 +41,7 @@ public class SitemapXmlHandlerTest {
         
         // then
         ArgumentCaptor<SitemapData> argument = ArgumentCaptor.forClass(SitemapData.class);
-        Mockito.verify(linkStorageMock).insert(argument.capture());
+        Mockito.verify(eventBusMock).post(argument.capture());
         SitemapData sitemapData = argument.getValue();
         
         assertThat(sitemapData, is(notNullValue()));
@@ -51,9 +52,9 @@ public class SitemapXmlHandlerTest {
     @Test
     public void shouldParseChildSitemapsFromSitemapIndexes() throws Exception {
         // given
-        LinkStorage linkStorageMock = Mockito.mock(LinkStorage.class);
+        EventBus eventBusMock = Mockito.mock(EventBus.class);
         
-        SitemapXmlHandler handler = new SitemapXmlHandler(linkStorageMock);
+        SitemapXmlHandler handler = new SitemapXmlHandler(eventBusMock);
         
         String url = "http://www.example.com/sitemap.xml";
         Path sitemapFilePath = Paths.get(SitemapXmlHandler.class.getResource("sitemap-index.xml").toURI());
@@ -68,7 +69,7 @@ public class SitemapXmlHandlerTest {
         
         // then
         ArgumentCaptor<SitemapData> argument = ArgumentCaptor.forClass(SitemapData.class);
-        Mockito.verify(linkStorageMock).insert(argument.capture());
+        Mockito.verify(eventBusMock).post(argument.capture());
         SitemapData sitemapData = argument.getValue();
         
         assertThat(sitemapData, is(notNullValue()));

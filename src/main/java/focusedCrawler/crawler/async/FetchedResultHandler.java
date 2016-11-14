@@ -3,10 +3,11 @@ package focusedCrawler.crawler.async;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.eventbus.EventBus;
+
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.PaginaURL;
@@ -15,10 +16,10 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     
     private static final Logger logger = LoggerFactory.getLogger(FetchedResultHandler.class);
     
-    private TargetStorage targetStorage;
+    private EventBus eventBus;
 
-    public FetchedResultHandler(TargetStorage targetStorage) {
-        this.targetStorage = targetStorage;
+    public FetchedResultHandler(EventBus eventBus) {
+        this.eventBus = eventBus;
     }
     
     @Override
@@ -51,8 +52,8 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
             PaginaURL pageParser = new PaginaURL(page);
             page.setParsedData(new ParsedData(pageParser));
             page.setLinkRelevance(link);
-            System.out.println(page.getURL());
-            targetStorage.insert(page);
+            
+            eventBus.post(page);
             
         } catch (Exception e) {
             logger.error("Problem while processing data.", e);

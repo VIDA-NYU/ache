@@ -10,6 +10,8 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.eventbus.EventBus;
+
 import crawlercommons.sitemaps.AbstractSiteMap;
 import crawlercommons.sitemaps.SiteMap;
 import crawlercommons.sitemaps.SiteMapIndex;
@@ -18,7 +20,6 @@ import crawlercommons.sitemaps.SiteMapURL;
 import crawlercommons.sitemaps.UnknownFormatException;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
-import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 
 public class SitemapXmlHandler implements HttpDownloader.Callback {
@@ -31,12 +32,12 @@ public class SitemapXmlHandler implements HttpDownloader.Callback {
 
     private static final Logger logger = LoggerFactory.getLogger(SitemapXmlHandler.class);
     
-    private LinkStorage linkStorage;
     private SiteMapParser parser = new SiteMapParser(false);
-    
 
-    public SitemapXmlHandler(LinkStorage linkStorage) {
-        this.linkStorage = linkStorage;
+    private EventBus eventBus;
+    
+    public SitemapXmlHandler(EventBus eventBus) {
+        this.eventBus = eventBus;
     }
     
     @Override
@@ -84,7 +85,7 @@ public class SitemapXmlHandler implements HttpDownloader.Callback {
             }
         }
         
-        linkStorage.insert(sitemapData);
+        eventBus.post(sitemapData);
         
     }
     

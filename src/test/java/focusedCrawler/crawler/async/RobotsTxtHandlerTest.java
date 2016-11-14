@@ -14,9 +14,10 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 
+import com.google.common.eventbus.EventBus;
+
 import focusedCrawler.crawler.async.RobotsTxtHandler.RobotsData;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
-import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 
 public class RobotsTxtHandlerTest {
@@ -24,7 +25,7 @@ public class RobotsTxtHandlerTest {
     @Test
     public void shouldParseLinksFromSitemapXml() throws Exception {
         // given
-        LinkStorage linkStorageMock = Mockito.mock(LinkStorage.class);
+        EventBus linkStorageMock = Mockito.mock(EventBus.class);
         
         
         RobotsTxtHandler handler = new RobotsTxtHandler(linkStorageMock, "TestAgent");
@@ -42,7 +43,7 @@ public class RobotsTxtHandlerTest {
         
         // then
         ArgumentCaptor<RobotsData> argument = ArgumentCaptor.forClass(RobotsData.class);
-        Mockito.verify(linkStorageMock).insert(argument.capture());
+        Mockito.verify(linkStorageMock).post(argument.capture());
         RobotsData robotsData = argument.getValue();
         
         assertThat(robotsData, is(notNullValue()));

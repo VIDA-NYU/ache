@@ -8,12 +8,13 @@ import org.apache.http.HttpStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.eventbus.EventBus;
+
 import crawlercommons.robots.BaseRobotRules;
 import crawlercommons.robots.BaseRobotsParser;
 import crawlercommons.robots.SimpleRobotRulesParser;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
-import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 
 public class RobotsTxtHandler implements HttpDownloader.Callback {
@@ -30,11 +31,11 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
     private static final Logger logger = LoggerFactory.getLogger(RobotsTxtHandler.class);
     
     private BaseRobotsParser parser = new SimpleRobotRulesParser();
-    private LinkStorage linkStorage;
+    private EventBus eventBus;
     private String userAgentName;
     
-    public RobotsTxtHandler(LinkStorage linkStorage, String userAgentName) {
-        this.linkStorage = linkStorage;
+    public RobotsTxtHandler(EventBus eventBus, String userAgentName) {
+        this.eventBus = eventBus;
         this.userAgentName = userAgentName;
     }
     
@@ -84,7 +85,7 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
         }
         
         RobotsData robotsData = new RobotsData(robotRules.getSitemaps());
-        linkStorage.insert(robotsData);
+        eventBus.post(robotsData);
         
     }
     
