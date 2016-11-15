@@ -85,16 +85,18 @@ public class TargetStorage extends StorageDefault {
             page.setTargetRelevance(relevance);
 
             if (relevance.isRelevant()) {
+                targetRepository.insert(page);
+            } else if (config.isSaveNegativePages()) {
+                negativeRepository.insert(page);
+            }
+            
+            if (relevance.isRelevant()) {
                 if (config.isBipartite()) {
                     // set the page is as authority if using backlinks
                     page.setAuth(true);
                 }
-                targetRepository.insert(page);
                 linkStorage.insert(page);
             } else {
-                if (config.isSaveNegativePages()) {
-                    negativeRepository.insert(page);
-                }
                 if (!config.isHardFocus()) {
                     if (config.isBipartite()) {
                         if (page.isHub()) {
