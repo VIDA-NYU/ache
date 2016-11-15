@@ -39,7 +39,6 @@ import focusedCrawler.crawler.async.RobotsTxtHandler;
 import focusedCrawler.crawler.async.SitemapXmlHandler;
 import focusedCrawler.link.backlink.BacklinkSurfer;
 import focusedCrawler.link.classifier.LinkClassifier;
-import focusedCrawler.link.classifier.LinkClassifierException;
 import focusedCrawler.link.classifier.LinkClassifierFactory;
 import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.classifier.LinkClassifierFactoryImpl;
@@ -197,17 +196,8 @@ public class LinkStorage extends StorageDefault {
                 }
             }
             
-        } catch (LinkClassifierException ex) {
-            logger.info("A LinkClassifierException occurred.", ex);
-            throw new StorageException(ex.getMessage(), ex);
-        } catch (FrontierPersistentException ex) {
-            logger.info("A FrontierPersistentException occurred.", ex);
-            throw new StorageException(ex.getMessage(), ex);
-        } catch (IOException ex) {
-            logger.info("An IOException occurred.", ex);
-            throw new StorageException(ex.getMessage(), ex);
         } catch (Exception ex) {
-            logger.info("An Exception occurred.", ex);
+            logger.info("Failed to insert page into LinkStorage.", ex);
             throw new StorageException(ex.getMessage(), ex);
         }
 
