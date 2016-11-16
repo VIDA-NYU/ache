@@ -3,6 +3,8 @@ package focusedCrawler.tools;
 
 import org.kohsuke.args4j.Option;
 
+import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.TargetModelCbor;
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
@@ -20,10 +22,10 @@ public class MigrateToFilesTargetRepository extends CliTool {
     private String outputPath;
 
     @Option(name = "--hash-file-name", required = false, usage = "If the repository uses hashed file names")
-    private boolean hashFilename = true;
+    private boolean hashFilename = false;
     
     @Option(name = "--compressed-data", required = false, usage = "If the repository uses compressed files")
-    private boolean compressData = true;
+    private boolean compressData = false;
     
     @Option(name = "--data-format", required = false, usage = "The data format used by the old repository")
     private DataFormat dataFormat = DataFormat.JSON;
@@ -44,16 +46,27 @@ public class MigrateToFilesTargetRepository extends CliTool {
         FileSystemTargetRepository oldRep = new FileSystemTargetRepository(inputPath, dataFormat, hashFilename, compressData);
         FilesTargetRepository newRep = new FilesTargetRepository(outputPath);
         
-        try(FileContentIterator<TargetModelJson> oldIt = oldRep.iterator()) {
-            while(oldIt.hasNext()) {
-                TargetModelJson target = oldIt.next();
-                newRep.insert(target);
-                
+        try (FileContentIterator<?> oldIt = oldRep.iterator()) {
+            while (oldIt.hasNext()) {
+                try {
+                    TargetModelJson target = null;
+                    if (dataFormat == DataFormat.CBOR) {
+                        target = new TargetModelJson(new Page((TargetModelCbor) oldIt.next()));
+                    } else if (dataFormat == DataFormat.JSON) {
+                        target = (TargetModelJson) oldIt.next();
+                    }
+                    newRep.insert(target);
+                } catch(Exception e) {
+                    System.out.println("Ignoring file due to failure.");
+                    e.printStackTrace(System.out);
+                    continue;
+                }
+
                 processedPages++;
                 if (processedPages % 1000 == 0) {
                     System.out.printf("Migrated %s pages...\n", processedPages);
                 }
-                
+
             }
         }
         

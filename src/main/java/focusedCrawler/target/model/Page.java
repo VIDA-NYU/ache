@@ -24,6 +24,7 @@
 package focusedCrawler.target.model;
 
 import java.io.Serializable;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 import java.util.Map;
@@ -65,6 +66,12 @@ public class Page implements Serializable {
         this.content = content;
         this.responseHeaders = responseHeaders;
         this.redirectedURL = redirectedURL;
+    }
+    
+    public Page(TargetModelCbor target) throws MalformedURLException {
+        this.url = new URL(target.url);
+        this.content = (String) target.response.get("body");
+        this.fetchTime = target.timestamp * 1000;
     }
 
     public String getDomainName() {
