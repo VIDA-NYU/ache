@@ -1,12 +1,5 @@
 package focusedCrawler.crawler.async;
 
-import java.net.URL;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,27 +45,11 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     
     private void processData(LinkRelevance link, FetchedResult response) {
         try {
-            Page page;
-            if(response.getNumRedirects() == 0) {
-                page = new Page(
-                    new URL(response.getBaseUrl()),
-                    new String(response.getContent()),
-                    parseResponseHeaders(response.getHeaders())
-                );
-            } else {
-                page = new Page(
-                    new URL(response.getBaseUrl()),
-                    new String(response.getContent()),
-                    parseResponseHeaders(response.getHeaders()),
-                    new URL(response.getFetchedUrl())
-                );
-            }
-            page.setFetchTime(response.getFetchTime());
+            Page page = new Page(response);
             
-            PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
-            ParsedData parsedData = new ParsedData(pageParser);
-            
-            page.setParsedData(parsedData);
+            // TODO Check whether page is HTML before trying to parse HTML
+            PaginaURL pageParser = new PaginaURL(page);
+            page.setParsedData(new ParsedData(pageParser));
             page.setLinkRelevance(link);
             
             targetStorage.insert(page);
@@ -82,15 +59,4 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
         }
     }
 
-    private Map<String, List<String>> parseResponseHeaders(Metadata headerAsMetadata) {
-        Map<String, List<String>> responseHeaders = new HashMap<>();
-        String[] names = headerAsMetadata.names();
-        if(names != null && names.length > 0) {
-            for(String name : names) {
-                responseHeaders.put(name, Arrays.asList(headerAsMetadata.getValues(name)));
-            }
-        }
-        return responseHeaders;
-    }
-    
 }

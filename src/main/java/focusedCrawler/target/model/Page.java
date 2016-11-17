@@ -26,9 +26,14 @@ package focusedCrawler.target.model;
 import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.tika.metadata.Metadata;
+
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 
@@ -72,6 +77,27 @@ public class Page implements Serializable {
         this.url = new URL(target.url);
         this.content = (String) target.response.get("body");
         this.fetchTime = target.timestamp * 1000;
+    }
+    
+    public Page(FetchedResult fetchedResult) throws MalformedURLException {
+        this.url = new URL(fetchedResult.getBaseUrl());
+        this.content =  new String(fetchedResult.getContent());
+        this.fetchTime = fetchedResult.getFetchTime();
+        this.responseHeaders = parseResponseHeaders(fetchedResult.getHeaders());
+        if (fetchedResult.getNumRedirects() > 0) {
+            this.redirectedURL = new URL(fetchedResult.getFetchedUrl());
+        }
+    }
+    
+    private Map<String, List<String>> parseResponseHeaders(Metadata headerAsMetadata) {
+        Map<String, List<String>> responseHeaders = new HashMap<>();
+        String[] names = headerAsMetadata.names();
+        if(names != null && names.length > 0) {
+            for(String name : names) {
+                responseHeaders.put(name, Arrays.asList(headerAsMetadata.getValues(name)));
+            }
+        }
+        return responseHeaders;
     }
 
     public String getDomainName() {
