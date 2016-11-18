@@ -38,7 +38,6 @@ import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
-import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 

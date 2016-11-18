@@ -2,9 +2,6 @@ package focusedCrawler.util.persistence;
 
 import java.util.List;
 
-import com.sleepycat.je.DatabaseException;
-
-
 public interface HashtableDb<T> {
 
     public void put(List<Tuple<T>> tuples) throws Exception;
