@@ -69,7 +69,7 @@ public class TargetStorage extends StorageDefault {
         if (config.isEnglishLanguageDetectionEnabled()) {
             // Only accept English language
             if (this.langDetector.isEnglish(page) == false) {
-                logger.info("Ignoring non-English page: " + page.getIdentifier());
+                logger.info("Ignoring non-English page: " + page.getURL().toString());
                 return null;
             }
         }

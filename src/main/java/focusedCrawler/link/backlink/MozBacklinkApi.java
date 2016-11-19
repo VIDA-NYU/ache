@@ -41,7 +41,7 @@ public class MozBacklinkApi implements BacklinkApi {
             return null;
         }
 
-        BackLinkNeighborhood[] backlinks = parseResponse(page.getContent());
+        BackLinkNeighborhood[] backlinks = parseResponse(page.getContentAsString());
         
         return backlinks;
     }

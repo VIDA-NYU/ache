@@ -92,7 +92,7 @@ public class PaginaURL {
     private boolean            ordenarTermos = true;
     
     public PaginaURL(Page page) {
-        this(page.getURL(), page.getContent());
+        this(page.getURL(), page.getContentAsString());
     }
 
     public PaginaURL(URL url, String content) {

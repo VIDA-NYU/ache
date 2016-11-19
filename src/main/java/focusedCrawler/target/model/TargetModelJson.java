@@ -9,67 +9,71 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @SuppressWarnings("serial")
 public class TargetModelJson implements Serializable {
-	
-	@JsonProperty("url")
-	private String url;
-	
-	@JsonProperty("redirected_url")
-	private String redirectedUrl;
-	
-	@JsonProperty("response_body")
-	private String responseBody;
-	
-	@JsonProperty("response_headers")
-	private Map<String, List<String>> responseHeaders;
-	
-	@JsonProperty("fetch_time")
-	private long fetchTime;
-	
-	public TargetModelJson() {
-		// required for JSON serialization
-	}
-	
-	public TargetModelJson(Page page) {
-		if(page.getURL() != null)
-			this.url = page.getURL().toString();
-		if(page.getRedirectedURL() != null)
-			this.redirectedUrl = page.getRedirectedURL().toString();
-		this.responseBody = page.getContent();
-		this.responseHeaders = page.getResponseHeaders();
-		this.fetchTime = page.getFetchTime();
-	}
 
-	public String getUrl() {
-		return url;
-	}
+    @JsonProperty("url")
+    private String url;
 
-	public void setUrl(String url) {
-		this.url = url;
-	}
+    @JsonProperty("redirected_url")
+    private String redirectedUrl;
 
-	public String getRedirectedUrl() {
-		return redirectedUrl;
-	}
+    @JsonProperty("content")
+    private byte[] content;
 
-	public void setRedirectedUrl(String redirectedUrl) {
-		this.redirectedUrl = redirectedUrl;
-	}
+    @JsonProperty("content_type")
+    private String contentType;
 
-	public String getResponseBody() {
-		return responseBody;
-	}
+    @JsonProperty("response_headers")
+    private Map<String, List<String>> responseHeaders;
 
-	public void setResponseBody(String responseBody) {
-		this.responseBody = responseBody;
-	}
+    @JsonProperty("fetch_time")
+    private long fetchTime;
 
-	public Map<String, List<String>> getResponseHeaders() {
-		return responseHeaders;
-	}
+    public TargetModelJson() {
+        // required for JSON serialization
+    }
 
-	public void setResponseHeaders(Map<String, List<String>> responseHeaders) {
-		this.responseHeaders = responseHeaders;
-	}
+    public TargetModelJson(Page page) {
+        if (page.getURL() != null)
+            this.url = page.getURL().toString();
+        if (page.getRedirectedURL() != null)
+            this.redirectedUrl = page.getRedirectedURL().toString();
+        this.content = page.getContent();
+        this.responseHeaders = page.getResponseHeaders();
+        this.fetchTime = page.getFetchTime();
+        this.contentType = page.getContentType();
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getRedirectedUrl() {
+        return redirectedUrl;
+    }
+
+    public void setRedirectedUrl(String redirectedUrl) {
+        this.redirectedUrl = redirectedUrl;
+    }
+
+    public byte[] getContent() {
+        return content;
+    }
+
+    public void setContent(byte[] content) {
+        this.content = content;
+    }
+
+    public Map<String, List<String>> getResponseHeaders() {
+        return responseHeaders;
+    }
+
+    public void setResponseHeaders(Map<String, List<String>> responseHeaders) {
+        this.responseHeaders = responseHeaders;
+    }
 
     public long getFetchTime() {
         return fetchTime;
@@ -78,21 +82,28 @@ public class TargetModelJson implements Serializable {
     public void setFetchTime(long fetchTime) {
         this.fetchTime = fetchTime;
     }
-    
-    @JsonIgnore
+
     public String getContentType() {
-        List<String> contentTypeHeader = this.getResponseHeaders().get("Content-Type");
-        if (contentTypeHeader == null) {
-            contentTypeHeader = this.getResponseHeaders().get("CONTENT-TYPE");
-        }
-        if (contentTypeHeader == null) {
-            contentTypeHeader = this.getResponseHeaders().get("content-type");
-        }
-        if(contentTypeHeader == null || contentTypeHeader.isEmpty()) {
-            return null;
-        } else {
-            return contentTypeHeader.iterator().next();
+        return this.contentType;
+    }
+
+    @JsonIgnore
+    public String getContentAsString() {
+        return new String(content);
+    }
+
+    /*
+     * This method was maintained for backwards compatibility only. JSON objects that were
+     * serialized before this field was removed, are converted to the new model during
+     * deserialization. Use {@link #setContent()} instead.
+     */
+    @Deprecated
+    @JsonProperty("response_body")
+    public void setResponseBody(String responseBody) {
+        this.content = responseBody.getBytes();
+        if (this.contentType == null && responseHeaders != null) {
+            this.contentType = Page.extractContentType(responseHeaders);
         }
     }
-	
+
 }

@@ -19,7 +19,7 @@ public class BodyRegexTargetClassifier implements TargetClassifier {
 
     @Override
     public TargetRelevance classify(Page page) throws TargetClassifierException {
-        if (matcher.matches(page.getContent())) {
+        if (matcher.matches(page.getContentAsString())) {
             return new TargetRelevance(true, 1.0);
         }
         return new TargetRelevance(false, 0.0);

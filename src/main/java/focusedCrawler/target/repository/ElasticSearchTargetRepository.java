@@ -64,7 +64,7 @@ public class ElasticSearchTargetRepository implements TargetRepository {
 
         TargetModelElasticSearch data = new TargetModelElasticSearch(page);
 
-        String docId = page.getIdentifier();
+        String docId = page.getURL().toString();
         IndexResponse response = client.prepareIndex(indexName, typeName, docId)
                 .setSource(serializeAsJson(data))
                 .execute()

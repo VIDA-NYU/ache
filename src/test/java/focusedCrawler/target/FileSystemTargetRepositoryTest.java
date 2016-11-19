@@ -113,7 +113,7 @@ public class FileSystemTargetRepositoryTest {
         // then
         assertThat(jsonModel, is(notNullValue()));
         assertThat(jsonModel.getUrl(), is(url));
-        assertThat(jsonModel.getResponseBody(), is(html));
+        assertThat(jsonModel.getContentAsString(), is(html));
     }
 	
 	@Test
@@ -135,7 +135,7 @@ public class FileSystemTargetRepositoryTest {
 		TargetModelJson value = mapper.readValue(path.toFile(), TargetModelJson.class);
 		
 		assertThat(value.getUrl(), is(url));
-		assertThat(value.getResponseBody(), is(html));
+		assertThat(value.getContentAsString(), is(html));
 	}
 	
 	@Test
@@ -200,7 +200,7 @@ public class FileSystemTargetRepositoryTest {
         // then
         assertThat(page1, is(notNullValue()));
         assertThat(page1.getUrl(), is(url1));
-        assertThat(page1.getResponseBody(), is(html));
+        assertThat(page1.getContentAsString(), is(html));
         
         assertThat(page2, is(nullValue()));
     }
@@ -234,13 +234,13 @@ public class FileSystemTargetRepositoryTest {
         page = it.next();
         
         assertThat(page, is(notNullValue()));
-        assertThat(page.getResponseBody(), is(html));
+        assertThat(page.getContentAsString(), is(html));
         
         assertThat(it.hasNext(), is(true));
         page = it.next();
         
         assertThat(page, is(notNullValue()));
-        assertThat(page.getResponseBody(), is(html));
+        assertThat(page.getContentAsString(), is(html));
         
         assertThat(it.hasNext(), is(false));
         assertThat(it.next(), is(nullValue()));

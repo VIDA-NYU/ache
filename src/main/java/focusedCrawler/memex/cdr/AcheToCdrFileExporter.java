@@ -93,7 +93,7 @@ public class AcheToCdrFileExporter extends CliTool {
                 .setVersion("2.0")
                 .setTeam("NYU")
                 .setCrawler("ACHE")
-                .setRawContent(pageModel.getResponseBody())
+                .setRawContent(pageModel.getContentAsString())
                 .setCrawlData(crawlData);
 
         try {

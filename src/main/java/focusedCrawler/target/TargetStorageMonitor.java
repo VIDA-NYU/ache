@@ -52,13 +52,13 @@ public class TargetStorageMonitor {
     public synchronized void countPage(Page page, boolean isRelevant, double prob) {
         long currentTime = System.currentTimeMillis();
         totalOfPages++;
-        fCrawledPages.printf("%s\t%d\n", page.getIdentifier(), (currentTime));
-        fHarvestInfo.printf("%d\t%d\t%d\n", totalOnTopicPages, totalOfPages, (currentTime));
+        fCrawledPages.printf("%s\t%d\n", page.getURL().toString(), currentTime);
+        fHarvestInfo.printf("%d\t%d\t%d\n", totalOnTopicPages, totalOfPages, currentTime);
         if(isRelevant) {
             totalOnTopicPages++;
-            fRelevantPages.printf("%s\t%.10f\t%d\n", page.getIdentifier(), prob, (currentTime));
+            fRelevantPages.printf("%s\t%.10f\t%d\n", page.getURL().toString(), prob, currentTime);
         } else {
-            fNonRelevantPages.printf("%s\t%.10f\t%d\n", page.getIdentifier(), prob, (currentTime));
+            fNonRelevantPages.printf("%s\t%.10f\t%d\n", page.getURL().toString(), prob, currentTime);
         }
     }
 

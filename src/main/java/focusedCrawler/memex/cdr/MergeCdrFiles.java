@@ -158,7 +158,7 @@ public class MergeCdrFiles extends CliTool {
     private TargetRelevance classify(CDRDocument doc) throws Exception {
         
         Page page = new Page(new URL(doc.getUrl()), new String(doc.getRawContent()));
-        PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
+        PaginaURL pageParser = new PaginaURL(page);
         page.setParsedData(new ParsedData(pageParser));
 
         TargetRelevance relevance = classifier.classify(page);

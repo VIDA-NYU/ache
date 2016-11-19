@@ -22,7 +22,7 @@ public class RelevanceModel {
     private Map<String, Double> termScores = new HashMap<>();
     
     public void addPage(boolean isRelevant, Page page) {
-        PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent(), StopListFile.DEFAULT);
+        PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContentAsString(), StopListFile.DEFAULT);
         page.setParsedData(new ParsedData(pageParser));
         String[] terms = page.getParsedData().getWords();
         List<String> words = new ArrayList<String>();

@@ -91,7 +91,7 @@ public class FileSystemTargetRepository implements TargetRepository {
 
     public boolean insert(Page target) {
         try {
-            String id = target.getIdentifier();
+            String id = target.getURL().toString();
             URL url = new URL(id);
             Path hostPath = getHostPath(url);
             File hostDirectory = hostPath.toFile();
@@ -123,7 +123,7 @@ public class FileSystemTargetRepository implements TargetRepository {
         switch(dataFormat) {
         case HTML:
         {
-            fileStream.write(target.getContent().getBytes());
+            fileStream.write(target.getContent());
             break;
         }
         case JSON:
@@ -134,7 +134,7 @@ public class FileSystemTargetRepository implements TargetRepository {
         }
         case CBOR:
         {
-            TargetModelCbor targetModel = new TargetModelCbor("", "", url, target.getContent());
+            TargetModelCbor targetModel = new TargetModelCbor("", "", url, target.getContentAsString());
             cborMapper.writeValue(fileStream, targetModel);
             break;
         }

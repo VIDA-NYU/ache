@@ -170,7 +170,7 @@ public class ElasticSearchIndexer {
                     
                     if (outputFormat.equals("ACHE")) {
                         Page page = new Page(new URL(url), fileAsString);
-                        page.setParsedData(new ParsedData(new PaginaURL(page.getURL(), page.getContent())));
+                        page.setParsedData(new ParsedData(new PaginaURL(page)));
                         
                         id = url;
                         doc = new TargetModelElasticSearch(page);
@@ -234,7 +234,7 @@ public class ElasticSearchIndexer {
                                 .setContentType("text/html")
                                 .setTeam("NYU")
                                 .setCrawler("ACHE")
-                                .setRawContent(pageModel.getResponseBody())
+                                .setRawContent(pageModel.getContentAsString())
                                 .setCrawlData(crawlData)
                                 .build();
                         

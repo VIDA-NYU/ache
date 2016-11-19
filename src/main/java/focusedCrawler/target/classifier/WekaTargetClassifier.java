@@ -84,11 +84,6 @@ public class WekaTargetClassifier implements TargetClassifier {
 		}
 	}
 
-	public double[] distributionForInstance(String target) throws TargetClassifierException {
-		return distributionForInstance(new Page(null, target));
-	}
-
-  
     public double[] distributionForInstance(Page page) throws TargetClassifierException {
         double[] result = null;
         try {
@@ -106,7 +101,7 @@ public class WekaTargetClassifier implements TargetClassifier {
     }
   
     private double[] getValues(Page page) throws IOException, SAXException {
-        VSMVector vsm = new VSMVector(page.getContent(), stoplist, true);
+        VSMVector vsm = new VSMVector(page.getContentAsString(), stoplist, true);
         double[] values = new double[attributes.length];
         for (int i = 0; i < attributes.length; i++) {
             VSMElement elem = vsm.getElement(attributes[i]);

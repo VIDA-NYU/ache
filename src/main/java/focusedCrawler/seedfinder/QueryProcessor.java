@@ -90,7 +90,7 @@ public class QueryProcessor {
             String contentAsString = new String(fetchedResult.getContent());
             
             Page page = new Page(url, contentAsString);
-            page.setParsedData(new ParsedData(new PaginaURL(page.getURL(), page.getContent())));
+            page.setParsedData(new ParsedData(new PaginaURL(page)));
             
             TargetRelevance relevance = classifier.classify(page);
             if(relevance.isRelevant()) {

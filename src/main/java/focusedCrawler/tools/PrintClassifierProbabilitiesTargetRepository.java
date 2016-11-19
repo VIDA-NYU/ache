@@ -1,8 +1,6 @@
 package focusedCrawler.tools;
 
-
 import java.io.PrintStream;
-import java.net.URL;
 
 import org.kohsuke.args4j.Option;
 
@@ -82,9 +80,8 @@ public class PrintClassifierProbabilitiesTargetRepository extends CliTool {
 
     private void printClassifierOutput(TargetClassifier classifier, TargetModelJson target, PrintStream out) {
         try {
-            Page page = new Page(new URL(target.getUrl()), new String(target.getResponseBody()), target.getResponseHeaders());
-            
-            PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
+            Page page = new Page(target);
+            PaginaURL pageParser = new PaginaURL(page);
             page.setParsedData(new ParsedData(pageParser));
             
             TargetRelevance relevance = classifier.classify(page);

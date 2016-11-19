@@ -71,7 +71,7 @@ public class CrawlerEvalFile {
                     .setContentType(contentType)
                     .setTeam("NYU")
                     .setCrawler("ACHE")
-                    .setRawContent(pageModel.getResponseBody())
+                    .setRawContent(pageModel.getContentAsString())
                     .setCrawlData(crawlData)
                     .buildAsJson();
             

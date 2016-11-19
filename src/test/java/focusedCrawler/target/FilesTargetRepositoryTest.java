@@ -57,7 +57,7 @@ public class FilesTargetRepositoryTest {
 		RepositoryIterator it = repository.iterator();
 		assertThat(it.hasNext(), is(true));
 		TargetModelJson page = it.next();
-        assertThat(page.getResponseBody(), is(html));
+        assertThat(page.getContentAsString(), is(html));
         assertThat(page.getUrl(), is(url));
         assertThat(page.getResponseHeaders().get("content-type").get(0), is("text/html"));
 	}
@@ -73,7 +73,7 @@ public class FilesTargetRepositoryTest {
         Page target1 = new Page(new URL(url1), html);
         Page target2 = new Page(new URL(url2), html);
         
-        long maxFileSize = 200;
+        long maxFileSize = 250;
         FilesTargetRepository repository = new FilesTargetRepository(folder, maxFileSize);
         
         // when
@@ -90,13 +90,13 @@ public class FilesTargetRepositoryTest {
         page = it.next();
         
         assertThat(page, is(notNullValue()));
-        assertThat(page.getResponseBody(), is(html));
+        assertThat(page.getContentAsString(), is(html));
         
         assertThat(it.hasNext(), is(true));
         page = it.next();
         
         assertThat(page, is(notNullValue()));
-        assertThat(page.getResponseBody(), is(html));
+        assertThat(page.getContentAsString(), is(html));
         
         assertThat(it.hasNext(), is(false));
         assertThat(it.next(), is(nullValue()));
