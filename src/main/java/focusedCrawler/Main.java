@@ -19,6 +19,10 @@ import org.slf4j.LoggerFactory;
 import focusedCrawler.config.ConfigService;
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.crawler.async.AsyncCrawlerConfig;
+import focusedCrawler.crawler.async.LocalDownloader;
+import focusedCrawler.distributed.DistributedDownloader;
+import focusedCrawler.distributed.FetcherNode;
+import focusedCrawler.distributed.HazelcastService;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.frontier.FrontierManager;
@@ -50,6 +54,8 @@ public class Main {
             CommandLineParser parser = new DefaultParser();
             
             Options startCrawlOptions = new Options();
+            Options startCrawlerNodeOptions = new Options();
+            Options startDistributedCrawlOptions = new Options();
             Options addSeedsOptions = new Options();
             Options buildModelOptions = new Options();
             
@@ -58,6 +64,15 @@ public class Main {
             startCrawlOptions.addOption("c", "configDir", true, "Path to configuration files folder");
             startCrawlOptions.addOption("s", "seed", true, "Path to the file of seed URLs");
             startCrawlOptions.addOption("m", "modelDir", true, "Path to folder containing page classifier model");
+            
+            startCrawlerNodeOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
+            startCrawlerNodeOptions.addOption("c", "configDir", true, "Path to configuration files folder");
+            
+            startDistributedCrawlOptions.addOption("e", "elasticIndex", true, "ElasticSearch index name");
+            startDistributedCrawlOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
+            startDistributedCrawlOptions.addOption("c", "configDir", true, "Path to configuration files folder");
+            startDistributedCrawlOptions.addOption("s", "seed", true, "Path to the file of seed URLs");
+            startDistributedCrawlOptions.addOption("m", "modelDir", true, "Path to folder containing page classifier model");
             
             addSeedsOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
             addSeedsOptions.addOption("c", "configDir", true, "Path to configuration files folder");
@@ -70,15 +85,18 @@ public class Main {
             
             allOptions = new Options[] { 
                     startCrawlOptions,
+                    startCrawlerNodeOptions,
+                    startDistributedCrawlOptions,
                     addSeedsOptions,
                     buildModelOptions};
             
             commandName = new String[] { 
                     "startCrawl",
+                    "startCrawlerNode",
+                    "startDistributedCrawl",
                     "addSeeds",
                     "buildModel",
-                    "seedFinder",
-                    "printFrontier"};
+                    "seedFinder"};
 
             if (args.length == 0) {
                 printUsage();
@@ -89,7 +107,15 @@ public class Main {
             if ("startCrawl".equals(args[0])) {
                 cmd = parser.parse(startCrawlOptions, args);
                 startCrawl(cmd);
-            } 
+            }
+            else if("startCrawlerNode".equals(args[0])) {
+                cmd = parser.parse(startCrawlerNodeOptions, args);
+                startCrawlerNode(cmd);
+            }
+            else if("startDistributedCrawl".equals(args[0])) {
+                cmd = parser.parse(startDistributedCrawlOptions, args);
+                startDistributedCrawl(cmd);
+            }
             else if ("addSeeds".equals(args[0])) {
                 cmd = parser.parse(addSeedsOptions, args);
                 addSeeds(cmd);
@@ -232,12 +258,96 @@ public class Main {
             
             AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
             
+            LocalDownloader downloader = new LocalDownloader(crawlerConfig, dataOutputPath,
+                    targetStorage, linkStorage, metricsManager);
+            
             // start crawl manager
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig,
-                                                    dataOutputPath, metricsManager);
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, downloader);
+            
+            Runtime.getRuntime().addShutdownHook(new Thread() {
+                public void run() {
+                    crawler.shutdown();
+                }
+            });
+            
             crawler.run();
             crawler.shutdown();
+        }
+        catch (LinkClassifierFactoryException | FrontierPersistentException  e) {
+            logger.error("Problem while creating LinkStorage", e);
+        }
+        catch (IOException e) {
+            logger.error("Problem while starting crawler.", e);
+        }
 
+    }
+    
+    private static void startCrawlerNode(CommandLine cmd) throws MissingArgumentException {
+        String configPath = getMandatoryOptionValue(cmd, "configDir");
+        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
+        
+        ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+        try {
+            MetricsManager metricsManager = new MetricsManager();
+            AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
+            HazelcastService clusterService = new HazelcastService(config.getClusterConfig());
+            
+            FetcherNode fetcherNode = new FetcherNode(crawlerConfig, dataOutputPath,
+                                                      metricsManager, clusterService);
+            
+            Runtime.getRuntime().addShutdownHook(new Thread() {
+                public void run() {
+                    fetcherNode.stop();
+                    clusterService.stop();
+                }
+            });
+            
+            System.out.println("Starting fetcher node...");
+            fetcherNode.start();
+        }
+        catch (Exception e) {
+            logger.error("Problem while starting crawler node.", e);
+        }
+
+    }
+    
+    private static void startDistributedCrawl(CommandLine cmd) throws MissingArgumentException {
+        String seedPath = getMandatoryOptionValue(cmd, "seed");
+        String configPath = getMandatoryOptionValue(cmd, "configDir");
+        String modelPath = getMandatoryOptionValue(cmd, "modelDir");
+        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
+        String elasticIndexName = getOptionalOptionValue(cmd, "elasticIndex");
+        
+        ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+        
+        try {
+            MetricsManager metricsManager = new MetricsManager();
+            
+            LinkStorage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
+                    dataOutputPath, modelPath, config.getLinkStorageConfig(), metricsManager);
+
+            // start target storage
+            TargetStorage targetStorage = TargetStorage.createTargetStorage(
+                    configPath, modelPath, dataOutputPath, elasticIndexName,
+                    config.getTargetStorageConfig(), linkStorage);
+
+            HazelcastService clusterService = new HazelcastService(config.getClusterConfig());
+            
+            DistributedDownloader downloader = new DistributedDownloader(targetStorage, linkStorage,
+                    clusterService, metricsManager);
+
+            // start crawl manager
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, downloader);
+            
+            Runtime.getRuntime().addShutdownHook(new Thread() {
+                public void run() {
+                    crawler.shutdown();
+                    clusterService.stop();
+                }
+            });
+            
+            crawler.run();
+            crawler.shutdown();
         }
         catch (LinkClassifierFactoryException | FrontierPersistentException  e) {
             logger.error("Problem while creating LinkStorage", e);

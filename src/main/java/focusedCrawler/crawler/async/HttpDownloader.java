@@ -173,6 +173,7 @@ public class HttpDownloader implements Closeable {
     
     @Override
     public void close() {
+        await();
         downloadThreadPool.shutdownNow();
         distpatchThreadPool.shutdownNow();
         try {
@@ -186,7 +187,7 @@ public class HttpDownloader implements Closeable {
         }
     }
     
-    public void await() {
+    private void await() {
         try {
             logger.info("Waiting downloads be finalized...");
             long timeWaited = 0;
