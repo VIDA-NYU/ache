@@ -1,11 +1,14 @@
 package focusedCrawler.util.parser;
 
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
 
 import org.junit.Test;
 
@@ -42,9 +45,10 @@ public class PaginaURLTest {
         PaginaURL pageParser = new PaginaURL(url,testString);
         URL[] extractedLinks = pageParser.links();
         // then
-        assertThat("Extracted URL contains fragment.", hasFragments(extractedLinks), is(true));
+        for(URL extractedUrl : Arrays.asList(extractedLinks)) {
+        	assertThat(extractedUrl.getFile().toString(), not(containsString("#")));
+        }
     }
-
     
     @Test
     public void constructorsShouldWork() throws MalformedURLException {
@@ -106,13 +110,29 @@ public class PaginaURLTest {
         assertThat(neighborhoods[0].getAnchor()[1], is("first"));
         assertThat(neighborhoods[0].getAnchor()[2], is("paragraph"));
     }
+    
+    @Test
+    public void shouldNormalizeLinks() throws MalformedURLException {
+        // given
+        URL url = new URL("http://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic_document");
+        String testPage = createTestPageUnormalizedLinks();
+        // when
+        PaginaURL paginaURL = new PaginaURL(url, testPage);
+        LinkNeighborhood[] neighborhoods = paginaURL.getLinkNeighboor();
+        URL[] links = paginaURL.links();
 
-    private boolean hasFragments(URL[] urls) {
-        for (URL url : urls) {
-            if (url.getFile().toString().contains("#"))
-                return true;
-        }
-        return false;
+        // then
+        assertThat(neighborhoods.length, is(3));
+        assertThat(links.length, is(3));
+        
+        assertThat(neighborhoods[0].getLink().toString(), is("http://example.com/post.php?"));
+        assertThat(links[0].toString(), is("http://example.com/post.php?"));
+        
+        assertThat(neighborhoods[1].getLink().toString(), is("http://example.com/post.php?a=1&b=2"));
+        assertThat(links[1].toString(), is("http://example.com/post.php?a=1&b=2"));
+
+        assertThat(neighborhoods[2].getLink().toString(), is("http://example.com/"));
+        assertThat(links[2].toString(), is("http://example.com/"));
     }
 
     private String createTestPage() {
@@ -122,6 +142,20 @@ public class PaginaURLTest {
         testPage.append("<body>");
         testPage.append("<h1>My First Heading</h1>");
         testPage.append("<a href = \"https://en.wikipedia.org/wiki/Mouse_(computing)#Mechanical_mice\">My first paragraph.</a>");
+        testPage.append("</body>");
+        testPage.append("</html>");
+        return testPage.toString();
+    }
+    
+    private String createTestPageUnormalizedLinks() {
+        StringBuilder testPage = new StringBuilder();
+        testPage.append("<!DOCTYPE html>");
+        testPage.append("<html>");
+        testPage.append("<body>");
+        testPage.append("<h1>My First Heading</h1>");
+        testPage.append("<a href = \"http://Example.com:80/post.php?\">Link 1.</a>");
+        testPage.append("<a href = \"HTTP://EXAMPLE.com/post.php?b=2&a=1\">Link 2.</a>");
+        testPage.append("<a href = \"HTTP://EXAMPLE.com\">Link 3.</a>");
         testPage.append("</body>");
         testPage.append("</html>");
         return testPage.toString();

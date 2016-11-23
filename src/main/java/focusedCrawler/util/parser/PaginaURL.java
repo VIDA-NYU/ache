@@ -30,11 +30,14 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.StringTokenizer;
+import java.util.TreeSet;
 import java.util.Vector;
 
 import org.apache.commons.lang3.StringEscapeUtils;
@@ -42,6 +45,7 @@ import org.apache.commons.validator.routines.UrlValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.crawler.crawlercommons.filters.basic.BasicURLNormalizer;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.string.Acentos;
 import focusedCrawler.util.string.StopList;
@@ -52,7 +56,10 @@ public class PaginaURL {
     private static final String[] schemes = {"http","https"};
     private static final UrlValidator urlValidator = new UrlValidator(schemes);
     public static final Logger logger = LoggerFactory.getLogger(PaginaURL.class);
-
+    
+    private static final List<String> invalidParameters = Arrays.asList("sid","phpsessid","sessionid", "jsessionid");
+	private static final BasicURLNormalizer urlNormalizer = new BasicURLNormalizer(new TreeSet<>(invalidParameters), false);
+	
     private int                MAXPALAVRAS = -1;
     public static final int    MAX_PARAGRAPH_SIZE = 255;
     private URL                pagina = null;
@@ -1467,13 +1474,14 @@ public class PaginaURL {
                 }
             } else {
             	link = StringEscapeUtils.unescapeHtml4(link);
-            	
             	// ONION links aren't accepted by the validator
             	// Regex ".[^.]+" --> any string of at least 1 char without dot
             	String onionRegex = "https?://.[^.]+\\.onion.*";
 
                 // System.out.println(urlValidator.isValid(link));
                 if(urlValidator.isValid(link) || link.matches(onionRegex)) {
+                	
+                	link = urlNormalizer.filter(link);
                 	
                     boolean existe = links.contains(link);
                     if (!existe) {
