@@ -1,7 +1,7 @@
 package focusedCrawler.util.parser;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
 import java.net.MalformedURLException;
@@ -42,7 +42,7 @@ public class PaginaURLTest {
         PaginaURL pageParser = new PaginaURL(url,testString);
         URL[] extractedLinks = pageParser.links();
         // then
-        assertEquals("Extracted URL contains fragment.", false, hasFragments(extractedLinks));
+        assertThat("Extracted URL contains fragment.", hasFragments(extractedLinks), is(true));
     }
 
     
@@ -54,7 +54,7 @@ public class PaginaURLTest {
         // when
         PaginaURL paginaURL = new PaginaURL(url, testPage);
         // then
-        assertEquals("Constructor not working properly !", false, paginaURL.getURL().equals(null));
+        assertThat(paginaURL.getURL(), is(notNullValue()));
     }
     
     @Test
