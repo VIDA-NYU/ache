@@ -146,18 +146,12 @@ public class BipartiteGraphManager {
 		if(links != null && links.length > 0){
 			LinkRelevance[] linksRelevance = new LinkRelevance[links.length];
 			for (int i = 0; i < links.length; i++){
-				if(links[i] != null){
-					LinkNeighborhood ln = new LinkNeighborhood(new URL(links[i].getLink()));
-					String title = links[i].getTitle();
+				BackLinkNeighborhood backlink = links[i];
+				if(backlink != null){
+					LinkNeighborhood ln = new LinkNeighborhood(new URL(backlink.getLink()));
+					String title = backlink.getTitle();
 					if(title != null){
-						StringTokenizer tokenizer = new StringTokenizer(title," ");
-						Vector<String> anchorTemp = new Vector<String>();
-						while(tokenizer.hasMoreTokens()){
-							 anchorTemp.add(tokenizer.nextToken());
-			   		  	}
-			   		  	String[] aroundArray = new String[anchorTemp.size()];
-			   		  	anchorTemp.toArray(aroundArray);
-			   		  	ln.setAround(aroundArray);
+						ln.setAround(tokenizeText(title));
 					}
 					linksRelevance[i] = backlinkClassifier.classify(ln);
 				}
@@ -166,6 +160,17 @@ public class BipartiteGraphManager {
 		}
 		URL normalizedURL = new URL(url.getProtocol(), url.getHost(), "/"); 
 		graphRepository.insertBacklinks(normalizedURL, links);
+	}
+
+	private String[] tokenizeText(String text) {
+		StringTokenizer tokenizer = new StringTokenizer(text," ");
+		Vector<String> anchorTemp = new Vector<String>();
+		while(tokenizer.hasMoreTokens()){
+			 anchorTemp.add(tokenizer.nextToken());
+		}
+		String[] aroundArray = new String[anchorTemp.size()];
+		anchorTemp.toArray(aroundArray);
+		return aroundArray;
 	}
 
 }
