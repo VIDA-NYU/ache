@@ -50,21 +50,11 @@ dependencies {
     testCompile 'jetty:jetty:5.1.10' // for tests of crawler commons library fork
     
     // TODO fill these in from Maven Central instead of that local libs dir
-    // TODO recommend replacing these with:
-    // compile 'com.cybozu.labs:langdetect:1.1-20120112'
     compile files('libs/jsonic-1.2.0.jar') // recommend updating this, it's for langdetect.jar
     compile files('libs/langdetect-03-03-2014.jar') // TODO why isn't this in maven central
 
 }
 
-// TODO create binary for running focusedCrawler.link.LinkStorage, focusedCrawler.crawler.CrawlerManager, focusedCrawler.link.frontier.AddSeeds
-
-// Task for running any class. To execute a class named focusedCrawler.Boo, run:
-// ./gradlew -PmainClass=focusedCrawler.Boo execute
-task execute(type:JavaExec) {
-    main = project.hasProperty('mainClass') ? mainClass : mainClassName
-    classpath = sourceSets.main.runtimeClasspath
-}
 
 //
 // Adds version to final JAR artifact
