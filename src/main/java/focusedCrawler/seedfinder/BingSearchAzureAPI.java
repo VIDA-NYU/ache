@@ -67,7 +67,9 @@ public class BingSearchAzureAPI implements SearchEngineApi {
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.setRequestProperty("Authorization", "Basic " + accountKeyEnc);
-
+        conn.setConnectTimeout(60000);
+        conn.setReadTimeout(60000);
+        
         BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
         StringBuffer output = new StringBuffer();
         String line;
