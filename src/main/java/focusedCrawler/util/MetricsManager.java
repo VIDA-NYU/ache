@@ -10,15 +10,21 @@ import com.codahale.metrics.Timer;
 
 public class MetricsManager {
     
-    private final ConsoleReporter reporter;
     private final MetricRegistry metrics = new MetricRegistry();
+    private ConsoleReporter reporter = null;
     
     public MetricsManager() {
-        reporter = ConsoleReporter.forRegistry(metrics)
-                .convertRatesTo(TimeUnit.SECONDS)
-                .convertDurationsTo(TimeUnit.MILLISECONDS)
-                .build();
-        reporter.start(10, TimeUnit.SECONDS);
+        this(true);
+    }
+    
+    public MetricsManager(boolean startConsoleReporter) {
+        if(startConsoleReporter) {
+            reporter = ConsoleReporter.forRegistry(metrics)
+                    .convertRatesTo(TimeUnit.SECONDS)
+                    .convertDurationsTo(TimeUnit.MILLISECONDS)
+                    .build();
+            reporter.start(10, TimeUnit.SECONDS);
+        }
     }
     
     public Timer getTimer(String name) {
@@ -34,8 +40,10 @@ public class MetricsManager {
     }
     
     public void close() {
-        reporter.report();
-        reporter.close();
+        if(reporter != null) {
+            reporter.report();
+            reporter.close();
+        }
     }
 
 }

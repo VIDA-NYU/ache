@@ -72,7 +72,7 @@ public class HttpDownloader implements Closeable {
     private Counter counterErrors;
 
 	public HttpDownloader() {
-		this(new HttpDownloaderConfig(), null, new MetricsManager());
+		this(new HttpDownloaderConfig(), null, new MetricsManager(false));
 	}
 	
     public HttpDownloader(HttpDownloaderConfig config, String dataPath, MetricsManager metricsManager) {
