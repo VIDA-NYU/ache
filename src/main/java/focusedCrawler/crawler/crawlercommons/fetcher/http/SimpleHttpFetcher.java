@@ -934,7 +934,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 //                HttpConnectionParams.setTcpNoDelay(params, true);
 //                HttpProtocolParams.setVersion(params, _httpVersion);
                 
-                httpClientBuilder.setUserAgent(_userAgent.getUserAgentString());
+                httpClientBuilder.setUserAgent(_userAgentString);
                 
 //                HttpProtocolParams.setContentCharset(params, "UTF-8");
 //                HttpProtocolParams.setHttpElementCharset(params, "UTF-8");
@@ -1086,5 +1086,9 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         _connectionManager.shutdown();
         IOUtils.closeQuietly(_httpClient);
         _httpClient = null;
+    }
+
+    public void setUserAgentString(String userAgentString) {
+        this._userAgentString = userAgentString;
     }
 }
