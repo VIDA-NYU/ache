@@ -1,9 +1,8 @@
 package focusedCrawler.seedfinder;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,17 +12,24 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
 import focusedCrawler.util.TimeDelay;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 
 public class BingSearch implements SearchEngineApi {
     
-    private final String userAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
+    private final SimpleHttpFetcher fetcher;
     
-    private UrlValidator urlValidator = new UrlValidator();
     private int docsPerPage = 10;
-    
+    private UrlValidator urlValidator = new UrlValidator();
     private TimeDelay timer = new TimeDelay(5000);
+
+
+    public BingSearch(SimpleHttpFetcher fetcher) {
+        this.fetcher = fetcher;
+    }
 
     public List<BackLinkNeighborhood> submitQuery(String query, int page) throws IOException {
         
@@ -33,14 +39,12 @@ public class BingSearch implements SearchEngineApi {
         String queryUrl = "https://www.bing.com/search?q=" + query + "&count="+docsPerPage + "&first="+(page*docsPerPage+1)+"&FORM=PORE";
         
         try {
-            URLConnection connection = new URL(queryUrl).openConnection();
-            connection.setRequestProperty("User-Agent", userAgent);
-            connection.connect();
-    
-            InputStream is = connection.getInputStream();
+            FetchedResult result = fetcher.get(queryUrl);
+            
+            InputStream is = new ByteArrayInputStream(result.getContent());
             Document doc = Jsoup.parse(is, "UTF-8", query);
             is.close();
-//            #b_results > li > h2 > a
+            
             Elements searchItems = doc.select("ol#b_results");
             Elements linkHeaders = searchItems.select("h2");
             Elements linksUrl = linkHeaders.select("a");
@@ -59,11 +63,10 @@ public class BingSearch implements SearchEngineApi {
             System.out.println(getClass().getSimpleName()+" hits: "+links.size());
             return links;
             
-        } catch (IOException e) {
+        } catch (IOException | BaseFetchException e) {
             throw new IOException("Failed to download backlinks from Google.", e);
         }
     
     }
-    
     
 }

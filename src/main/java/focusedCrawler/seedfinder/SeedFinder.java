@@ -4,6 +4,9 @@ import java.io.PrintStream;
 
 import org.kohsuke.args4j.Option;
 
+import focusedCrawler.crawler.async.HttpDownloaderConfig;
+import focusedCrawler.crawler.async.fetcher.FetcherFactory;
+import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
 import focusedCrawler.seedfinder.QueryProcessor.QueryResult;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
@@ -11,6 +14,8 @@ import focusedCrawler.target.model.Page;
 import focusedCrawler.util.CliTool;
 
 public class SeedFinder extends CliTool {
+    
+    private final String userAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
     
     enum SearchEngineType {
         GOOGLE, BING, BING_API, ALL
@@ -80,15 +85,17 @@ public class SeedFinder extends CliTool {
     }
 
     private SearchEngineApi createSearchEngineApi(SearchEngineType searchEngine) {
+        SimpleHttpFetcher fetcher = FetcherFactory.createSimpleHttpFetcher(new HttpDownloaderConfig());
+        fetcher.setUserAgentString(userAgent);
         switch (searchEngine) {
         case GOOGLE:
-            return new GoogleSearch();
+            return new GoogleSearch(fetcher);
         case BING:
-            return new BingSearch();
+            return new BingSearch(fetcher);
         case BING_API:
             return new BingSearchAzureAPI();
         case ALL:
-            return new SearchEnginePool(new BingSearch(), new GoogleSearch());
+            return new SearchEnginePool(new BingSearch(fetcher), new GoogleSearch(fetcher));
         }
         return null;
     }
