@@ -465,8 +465,7 @@ public class SimpleHttpFetcherTest {
         assertEquals(HttpStatus.SC_NOT_FOUND, result.getStatusCode());
         assertEquals(url, result.getFetchedUrl());
         assertEquals("127.0.0.1", result.getHostAddress());
-        System.err.println(new String(result.getContent()));
-        assertTrue(new String(result.getContent()).contains("Error 404"));
+        assertTrue(new String(result.getContent(), "UTF-8").contains("Error 404"));
     }
 
 }
