@@ -19,18 +19,18 @@ package focusedCrawler.crawler.crawlercommons.test;
 
 import java.io.IOException;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.http.HttpStatus;
-import org.mortbay.http.HttpException;
-import org.mortbay.http.HttpRequest;
-import org.mortbay.http.HttpResponse;
-import org.mortbay.http.handler.AbstractHttpHandler;
+import org.eclipse.jetty.server.Request;
+import org.eclipse.jetty.server.handler.AbstractHandler;
 
 /**
  * Response handler that can be used to do redirects..
  * 
  */
-@SuppressWarnings("serial")
-public class RedirectResponseHandler extends AbstractHttpHandler {
+public class RedirectResponseHandler extends AbstractHandler {
 
     private String _originalPath;
     private String _redirectUrl;
@@ -47,7 +47,8 @@ public class RedirectResponseHandler extends AbstractHttpHandler {
     }
 
     @Override
-    public void handle(String pathInContext, String pathParams, HttpRequest request, HttpResponse response) throws HttpException, IOException {
+    public void handle(String pathInContext, Request baseRequest,
+                       HttpServletRequest request, HttpServletResponse response) throws IOException {
         if (_doRedirects && pathInContext.equalsIgnoreCase(_originalPath)) {
             response.sendRedirect(_redirectUrl);
         } else if (_doRedirects && _redirectUrl.contains(pathInContext)) {

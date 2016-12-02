@@ -17,30 +17,27 @@
 
 package focusedCrawler.crawler.crawlercommons.test;
 
-import org.mortbay.http.HttpContext;
-import org.mortbay.http.HttpHandler;
-import org.mortbay.http.HttpServer;
+import org.eclipse.jetty.server.Handler;
+import org.eclipse.jetty.server.Server;
 
 public class SimulationWebServer {
 
-    private HttpServer _server;
+    private Server _server;
 
-    public HttpServer startServer(HttpHandler handler, int port) throws Exception {
-        _server = new HttpServer();
-        _server.addListener(":" + port);
-        HttpContext context = _server.getContext("/");
-        context.addHandler(handler);
+    public Server startServer(Handler handler, int port) throws Exception {
+        _server = new Server(port);
+        _server.setHandler(handler);
         _server.start();
         return _server;
     }
 
-    public void stopServer() throws InterruptedException {
+    public void stopServer() throws Exception {
         if (_server != null) {
             _server.stop();
         }
     }
 
-    public HttpServer getServer() {
+    public Server getServer() {
         return _server;
     }
 
