@@ -16,11 +16,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.zip.InflaterInputStream;
 
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.DefaultParser;
-import org.apache.commons.cli.HelpFormatter;
-import org.apache.commons.cli.Options;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.tika.Tika;
 import org.elasticsearch.action.search.SearchResponse;
@@ -32,6 +27,7 @@ import org.elasticsearch.search.SearchHit;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
+import com.google.common.base.Preconditions;
 
 import focusedCrawler.memex.cdr.CDRDocument;
 import focusedCrawler.target.model.Page;
@@ -41,90 +37,103 @@ import focusedCrawler.target.model.TargetModelElasticSearch;
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchClientFactory;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
+import focusedCrawler.util.CliTool;
 import focusedCrawler.util.parser.PaginaURL;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
 //
 // TODO: Refactor this class to something simpler and easily maintainable
 //
-public class ElasticSearchIndexer {
+@Command(name="ElasticSearchIndexer", description="Index crawled data in ElasticSearch")
+public class ElasticSearchIndexer extends CliTool {
     
     static final ObjectMapper cborMapper = new ObjectMapper(new CBORFactory());
     static final ObjectMapper jsonMapper = new ObjectMapper();
     
     static final String format = "yyyy-MM-dd'T'HH:mm:ss";
     
-    public static void main(String[] args) throws Exception {
-        
-        CommandLineParser parser = new DefaultParser();
-        Options options = new Options();
-        
-        options.addOption("if", "input-format", true, "Format of input data: {CBOR,FILE,ELASTICSEARCH}");
-        options.addOption("id", "input-dir", true, "Input directory, if using CBOR or FILE");
-        options.addOption("ii", "input-es-index", true, "Input ES index, if using ELASTICSEARCH");
-        options.addOption("it", "input-es-type", true, "Input ES type, if using ELASTICSEARCH");
-        options.addOption("ih", "input-es-hostname", true, "Input ES hostname, if using ELASTICSEARCH");
-        options.addOption("ih", "input-es-cluster", true, "Input ES cluster name, if using ELASTICSEARCH");
-        
-        options.addOption("ou", "output-es-url", true, "ElasticSearch full HTTP URL address");
-        options.addOption("oa", "output-es-auth", true, "User and password for ElasticSearch in format: 'user:pass'");
-        options.addOption("oi", "output-es-index", true, "ElasticSearch index name");
-        options.addOption("ot", "output-es-type", true, "ElasticSearch type name");
-        options.addOption("obs", "output-es-bulk-size", true, "ElasticSearch bulk size");
-        options.addOption("of", "output-format", true, "Format used for output data: {ACHE,CDR}");
-        
-        options.addOption("st", "start-date", true, "Indexes only data fetcher after this date");
-        options.addOption("en", "end-date", true, "Indexes only data fetched before this date");
+    // Output format option
+    
+    @Option(name={"-of", "--output-format"}, description="Format used for output data: {ACHE,CDR}")
+    String outputFormat = "ACHE";
+    
+    // Elastic Search output options
+    
+    @Option(name={"-oi", "--output-es-index"}, required=true, description="ElasticSearch index name (output)")
+    String outputIndex;
+    
+    @Option(name={"-ot", "--output-es-type"}, required=true, description="ElasticSearch index type (output)")
+    String outputType;
 
-        CommandLine cmd = parser.parse(options, args);
-        
-        String outputIndex = getMandatoryOption(options, cmd, "output-es-index");
-        String outputType = getMandatoryOption(options, cmd, "output-es-type");
-        String outputFormat = cmd.getOptionValue("output-format", "ACHE");
-        
-        String inputFormat = getMandatoryOption(options, cmd, "input-format");
-        
-        SimpleBulkIndexer bulkIndexer = createBulkIndexer(cmd);
+    @Option(name={"-ou", "--output-es-url"}, description="ElasticSearch full HTTP URL address")
+    String elasticSearchServer = "http://localhost:9200";
+    
+    @Option(name={"-oa", "--output-es-auth"},  description="User and password for ElasticSearch in format: user:pass")
+    String userPass = null;
+    
+    @Option(name={"-obs", "--output-es-bulk-size"}, description="ElasticSearch bulk size")
+    int bulkSize = 25;
+    
+    // Input options
+    
+    @Option(name={"-if", "--input-format"}, description="Format of input data: {CBOR,FILE,ELASTICSEARCH}")
+    String inputFormat = "FILE";
+
+    @Option(name={"-id", "--input-dir"}, description="Input directory, if using CBOR or FILE")
+    String inputDirectory;
+    
+    // Elastic Search input options
+    
+    @Option(name={"-ii", "--input-es-index"}, description="Input ES index, if using ELASTICSEARCH")
+    String inputIndex;
+    
+    @Option(name={"-it", "--input-es-type"}, description="Input ES type, if using ELASTICSEARCH")
+    String inputType;
+    
+    @Option(name={"-ih", "--input-es-hostname"}, description="Input ES hostname, if using ELASTICSEARCH")
+    String inputHostname = "localhost";
+
+    @Option(name={"-ic", "--input-es-cluster"}, description="Input ES cluster name, if using ELASTICSEARCH")
+    String inputClusterName = "elasticsearch";
+    
+    @Option(name={"-ip", "--input-es-port"}, description="Input ES port number, if using ELASTICSEARCH")
+    int inputPort = 9300;
+    
+    // Filtering options
+    
+    @Option(name={"-sd", "--start-date"}, description="Only index data fetcher after this date")
+    String startStr = null;
+
+    @Option(name={"-en", "--end-date"}, description="Only index data fetched before this date")
+    String endStr = null;
+    
+    
+    public static void main(String[] args) throws Exception {
+        CliTool.run(args, new ElasticSearchIndexer());
+    }
+    
+    public void execute() throws Exception {
+        SimpleBulkIndexer bulkIndexer = new SimpleBulkIndexer(elasticSearchServer, userPass, bulkSize);
         if(inputFormat.equals("ELASTICSEARCH")) {
-            indexFromElasticSearch(options, cmd, bulkIndexer, outputFormat, outputIndex, outputType);
+            indexFromElasticSearch(bulkIndexer, outputFormat, outputIndex, outputType);
         }
         else {
-            String startStr = cmd.getOptionValue("start-date");
             Date startDate = startStr != null ? new SimpleDateFormat(format).parse(startStr) : null;
-            
-            String endStr = cmd.getOptionValue("end-date");
             Date endDate = endStr != null ? new SimpleDateFormat(format).parse(endStr) : null;    
             
-            Path inputPath = Paths.get(getMandatoryOption(options, cmd, "input-dir"));
+            Preconditions.checkNotNull(inputDirectory, "Input directory option can't be null");
+            Path inputPath = Paths.get(inputDirectory);
             indexFromFile(bulkIndexer, outputIndex, outputType, startDate, endDate,
                           inputPath, outputFormat, inputFormat);
         }
         bulkIndexer.close();
     }
     
-
-    private static String getMandatoryOption(Options options, CommandLine cmd, String optionName) {
-        String value = cmd.getOptionValue(optionName);
-        if(value == null) {
-            HelpFormatter formatter = new HelpFormatter();
-            formatter.printHelp(ElasticSearchIndexer.class.getName(), options, true);
-            System.exit(0);
-        }
-        return value;
-    }
-
-    private static SimpleBulkIndexer createBulkIndexer(CommandLine cmd) {
-        String elasticSearchServer = cmd.getOptionValue("output-es-url", "http://localhost:9200");
-        int bulkSize = Integer.valueOf(cmd.getOptionValue("output-es-bulk-size", "25"));
-        String userPass = cmd.getOptionValue("output-es-auth", null);
-        
-        SimpleBulkIndexer bulkIndexer = new SimpleBulkIndexer(elasticSearchServer, userPass, bulkSize);
-        return bulkIndexer;
-    }
-
-    private static void indexFromFile(SimpleBulkIndexer bulkIndexer, String indexName,
-                                      String typeName, Date startDate, Date endDate,
-                                      Path inputPath, String outputFormat, String inputFormat)
-                                      throws IOException {
+    private void indexFromFile(SimpleBulkIndexer bulkIndexer, String indexName,
+                               String typeName, Date startDate, Date endDate,
+                               Path inputPath, String outputFormat, String inputFormat)
+                               throws IOException {
         
         DirectoryStream<Path> fileStream = Files.newDirectoryStream(inputPath);
         for (Path filePath : fileStream) {
@@ -257,16 +266,12 @@ public class ElasticSearchIndexer {
         fileStream.close();
     }
 
-    private static void indexFromElasticSearch(Options options, CommandLine cmd,
-                                               SimpleBulkIndexer bulkIndexer, String outputFormat,
-                                               String outputIndex, String outputType)
-                                               throws IOException {
+    private void indexFromElasticSearch(SimpleBulkIndexer bulkIndexer, String outputFormat,
+                                        String outputIndex, String outputType)
+                                        throws IOException {
         
-        String inputIndex = cmd.getOptionValue("input-es-index");
-        String inputType = cmd.getOptionValue("input-es-type");
-        String inputHostname = cmd.getOptionValue("input-es-hostname");
-        String inputClusterName = cmd.getOptionValue("input-es-cluster", "elasticsearch");
-        int inputPort = Integer.valueOf(cmd.getOptionValue("input-es-port", "9300"));
+        Preconditions.checkNotNull(inputIndex, "Input index can't be null");
+        Preconditions.checkNotNull(inputType, "Input type can't be null");
         
         ElasticSearchConfig config = new ElasticSearchConfig(inputHostname, inputPort, inputClusterName);
         Client client = ElasticSearchClientFactory.createClient(config);
@@ -311,7 +316,7 @@ public class ElasticSearchIndexer {
                     );
                 }
                 else {
-                    throw new IllegalArgumentException("Invalid output format.");
+                    throw new IllegalArgumentException("Invalid output format ("+outputFormat+")");
                 }
                 
                 bulkIndexer.addDocument(outputIndex, outputType, doc, id);

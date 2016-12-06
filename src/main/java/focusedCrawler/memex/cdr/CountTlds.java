@@ -15,23 +15,24 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.zip.GZIPInputStream;
 
-import org.kohsuke.args4j.Option;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.CliTool;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
+@Command(name="CountCdrTlds", description="Counts the number of unique TLDs in a CDR file")
 public class CountTlds extends CliTool {
     
     private static final ObjectMapper mapper = new ObjectMapper();
     
     @Option(name="--input-path", required=true,
-            usage="Path to folder with multiple CDR files")
+            description="Path to folder with multiple CDR files")
     private String inputPath;
     
     @Option(name="--output-file", required=true,
-            usage="Text file with TLD counts")
+            description="Text file with TLD counts")
     private String outputFile;
     
     

@@ -2,8 +2,6 @@ package focusedCrawler.seedfinder;
 
 import java.io.PrintStream;
 
-import org.kohsuke.args4j.Option;
-
 import focusedCrawler.crawler.async.HttpDownloaderConfig;
 import focusedCrawler.crawler.async.fetcher.FetcherFactory;
 import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
@@ -12,7 +10,10 @@ import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.CliTool;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
+@Command(name="SeedFinder", description="Runs the SeedFinder tool")
 public class SeedFinder extends CliTool {
     
     private final String userAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
@@ -21,22 +22,22 @@ public class SeedFinder extends CliTool {
         GOOGLE, BING, BING_API, ALL
     }
     
-    @Option(name="--maxPages", usage="Maximum number of pages per query")
+    @Option(name="--maxPages", description="Maximum number of pages per query")
     private int maxPagesPerQuery = 2;
 
-    @Option(name="--minPrecision", usage="Stops query pagination after precision drops bellow this minimum precision threshold")
+    @Option(name="--minPrecision", description="Stops query pagination after precision drops bellow this minimum precision threshold")
     private double minPrecision = 0.5;
     
-    @Option(name="--maxQueries", usage="Max number of generated queries")
+    @Option(name="--maxQueries", description="Max number of generated queries")
     private int maxNumberOfQueries = 100;
 
-    @Option(name="--initialQuery", usage="The inital query to issue to the search engine", required=true)
+    @Option(name="--initialQuery", description="The inital query to issue to the search engine", required=true)
     private String initialQuery;
 
-    @Option(name="--modelPath", usage="The inital query to issue to the search engine", required=true)
+    @Option(name="--modelPath", description="The inital query to issue to the search engine", required=true)
     private String modelPath;
     
-    @Option(name="--searchEngine", usage="The search engine to be used")
+    @Option(name="--searchEngine", description="The search engine to be used")
     private SearchEngineType searchEngine = SearchEngineType.ALL;
     
     public static void main(String[] args) {

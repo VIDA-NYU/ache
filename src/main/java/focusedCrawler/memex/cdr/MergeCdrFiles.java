@@ -17,7 +17,6 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.kohsuke.args4j.Option;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -28,19 +27,22 @@ import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.CliTool;
 import focusedCrawler.util.parser.PaginaURL;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
+@Command(name="MergeCdrFiles", description="Merges multiple CDR files into one")
 public class MergeCdrFiles extends CliTool {
     
-    @Option(name="--input-path", usage="Path to folder with multiple CDR files", required=true)
+    @Option(name="--input-path", description="Path to folder with multiple CDR files", required=true)
     private String inputPath;
     
-    @Option(name="--output-file", usage="Gziped output file containing data formmated as per CDR 2.0 schema", required=true)
+    @Option(name="--output-file", description="Gziped output file containing data formmated as per CDR 2.0 schema", required=true)
     private String outputFile;
     
-    @Option(name="--modelPath", usage="Model path to filter pages out")
+    @Option(name="--modelPath", description="Model path to filter pages out")
     private String modelPath;
     
-    @Option(name="--dedup", usage="Whether merge shoud filter duplications")
+    @Option(name="--dedup", description="Whether merge shoud filter duplications")
     private boolean dedup;
 
     private static final ObjectMapper mapper = new ObjectMapper();

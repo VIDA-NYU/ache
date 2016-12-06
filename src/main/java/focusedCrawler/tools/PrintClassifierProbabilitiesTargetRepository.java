@@ -2,8 +2,6 @@ package focusedCrawler.tools;
 
 import java.io.PrintStream;
 
-import org.kohsuke.args4j.Option;
-
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
@@ -17,26 +15,28 @@ import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.target.repository.FilesTargetRepository.RepositoryIterator;
 import focusedCrawler.util.CliTool;
 import focusedCrawler.util.parser.PaginaURL;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
-
+@Command(name = "PrintClassifierProbabilitiesTargetRepository")
 public class PrintClassifierProbabilitiesTargetRepository extends CliTool {
     
-    @Option(name = "--input-path", required = true, usage = "Path to old input data_target folder")
+    @Option(name = "--input-path", required = true, description = "Path to old input data_target folder")
     private String inputPath;
 
-    @Option(name = "--output-file", required = false, usage = "Path to output file containing URL-probabilities")
+    @Option(name = "--output-file", required = false, description = "Path to output file containing URL-probabilities")
     private String outputFile;
     
-    @Option(name = "--model-path", required = true, usage = "The path to the target classifier to be used")
+    @Option(name = "--model-path", required = true, description = "The path to the target classifier to be used")
     private String modelPath;
 
-    @Option(name = "--hash-file-name", required = false, usage = "If the repository uses hashed file names")
+    @Option(name = "--hash-file-name", required = false, description = "If the repository uses hashed file names")
     private boolean hashFilename = true;
     
-    @Option(name = "--compressed-data", required = false, usage = "If the repository uses compressed files")
+    @Option(name = "--compressed-data", required = false, description = "If the repository uses compressed files")
     private boolean compressData = true;
     
-    @Option(name = "--files-repository", required = false, usage = "If the new FilesTargetRepository")
+    @Option(name = "--files-repository", required = false, description = "If the new FilesTargetRepository")
     private boolean filesRepository = false;
     
     private int count = 0;

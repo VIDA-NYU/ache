@@ -1,27 +1,44 @@
 package focusedCrawler.util;
 
-import org.kohsuke.args4j.CmdLineException;
-import org.kohsuke.args4j.CmdLineParser;
-import org.kohsuke.args4j.ParserProperties;
+import javax.inject.Inject;
 
-public abstract class CliTool {
+import io.airlift.airline.Help;
+import io.airlift.airline.HelpOption;
+import io.airlift.airline.ParseException;
+import io.airlift.airline.SingleCommand;
+import io.airlift.airline.model.MetadataLoader;
+
+public abstract class CliTool implements Runnable {
+    
+    @Inject
+    public HelpOption helpOption;
+    
+    public void run() {
+        try {
+            execute();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
     
     abstract public void execute() throws Exception;
 
     public static void run(String[] args, CliTool tool) {
-        ParserProperties properties = ParserProperties.defaults().withUsageWidth(80);
-        CmdLineParser parser = new CmdLineParser(tool, properties);
         try {
-            parser.parseArgument(args);
-            tool.execute();
-        } catch (CmdLineException e) {
-            System.err.println(e.getMessage());
-            System.err.println();
-            parser.printUsage(System.err);
-            System.err.println();
+            SingleCommand<? extends CliTool> cmd = SingleCommand.singleCommand(tool.getClass());
+            CliTool cli = cmd.parse(args);
+            if (cli.helpOption.showHelpIfRequested()) {
+                return;
+            }
+            cli.execute();
+        }
+        catch(ParseException e) {
+            System.out.println("Unable to parse the input. "+e.getMessage()+"\n\n");
+            Help.help(MetadataLoader.loadCommand(tool.getClass()));
             System.exit(1);
-        } catch (Exception e) {
-            System.err.println("Execution failed: "+e.getMessage());
+        }
+        catch (Exception e) {
+            System.err.println("Failed to execute command.");
             e.printStackTrace(System.err);
         }
     }

@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.apache.commons.cli.MissingArgumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -147,8 +146,7 @@ public class TargetStorage extends StorageDefault {
                                               String indexName,
                                               TargetStorageConfig config,
                                               Storage linkStorage)
-                                              throws IOException,
-                                                     MissingArgumentException {
+                                              throws IOException {
         
         //if one wants to use a classifier
         TargetClassifier targetClassifier = null;
@@ -186,7 +184,7 @@ public class TargetStorage extends StorageDefault {
         }
         else if(dataFormat.equals("ELASTICSEARCH")) {
         	if(indexName == null) {
-        		throw new MissingArgumentException("ElasticSearch index name not provided!");
+        		throw new IllegalArgumentException("ElasticSearch index name not provided!");
         	}
         	ElasticSearchConfig esconfig = config.getElasticSearchConfig();
         	targetRepository = new ElasticSearchTargetRepository(esconfig, indexName, "target");

@@ -5,8 +5,6 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.zip.GZIPOutputStream;
 
-import org.kohsuke.args4j.Option;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import focusedCrawler.target.model.TargetModelJson;
@@ -14,19 +12,22 @@ import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FileSystemTargetRepository.FileContentIterator;
 import focusedCrawler.util.CliTool;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
+@Command(name="AcheToCdrFileExporter", description="Exports crawled data to CDR format")
 public class AcheToCdrFileExporter extends CliTool {
     
-    @Option(name="--input-path", usage="Path to ACHE data target folder", required=true)
+    @Option(name = "--input-path", description="Path to ACHE data target folder", required=true)
     private String inputPath;
     
-    @Option(name="--output-file", usage="Gziped output file containing data formmated as per CDR 2.0 schema", required=true)
+    @Option(name="--output-file", description="Gziped output file containing data formmated as per CDR 2.0 schema", required=true)
     private String outputFile;
     
-    @Option(name="--hashed-filename", usage="Wheter ACHE repository files names are hashed")
+    @Option(name="--hashed-filename", description="Wheter ACHE repository files names are hashed")
     private boolean hashFilename = false;
     
-    @Option(name="--compressed-data", usage="Wheter ACHE repository files is compressed")
+    @Option(name="--compressed-data", description="Wheter ACHE repository files is compressed")
     private boolean compressData = false;
     
     private DataFormat dataFormat = DataFormat.JSON;

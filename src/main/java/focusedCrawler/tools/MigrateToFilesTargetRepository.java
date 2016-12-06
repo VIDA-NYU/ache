@@ -1,8 +1,6 @@
 package focusedCrawler.tools;
 
 
-import org.kohsuke.args4j.Option;
-
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelCbor;
 import focusedCrawler.target.model.TargetModelJson;
@@ -11,23 +9,24 @@ import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FileSystemTargetRepository.FileContentIterator;
 import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.util.CliTool;
+import io.airlift.airline.Option;
 
 
 public class MigrateToFilesTargetRepository extends CliTool {
     
-    @Option(name = "--input-path", required = true, usage = "Path to old input data_target folder")
+    @Option(name = "--input-path", required = true, description = "Path to old input data_target folder")
     private String inputPath;
 
-    @Option(name = "--output-path", required = true, usage = "Path to new output data_target folder")
+    @Option(name = "--output-path", required = true, description = "Path to new output data_target folder")
     private String outputPath;
 
-    @Option(name = "--hash-file-name", required = false, usage = "If the repository uses hashed file names")
+    @Option(name = "--hash-file-name", required = false, description = "If the repository uses hashed file names")
     private boolean hashFilename = false;
-    
-    @Option(name = "--compressed-data", required = false, usage = "If the repository uses compressed files")
+
+    @Option(name = "--compressed-data", required = false, description = "If the repository uses compressed files")
     private boolean compressData = false;
-    
-    @Option(name = "--data-format", required = false, usage = "The data format used by the old repository")
+
+    @Option(name = "--data-format", required = false, description = "The data format used by the old repository")
     private DataFormat dataFormat = DataFormat.JSON;
     
     public static void main(String[] args) throws Exception {

@@ -8,21 +8,22 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.kohsuke.args4j.Option;
-
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.CliTool;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
+@Command(name="CountTlds", description="Counts the number of unique TLDs in a text file containing one URL per line")
 public class CountTlds extends CliTool {
 
     @Option(name = "--input-file",
             required = true,
-            usage = "Path to file containing one URL per line")
+            description = "Path to file containing one URL per line")
     private String inputPath;
 
     @Option(name = "--output-file",
             required = true,
-            usage = "Text file with TLD counts")
+            description = "Text file with TLD counts")
     private String outputFile;
 
 

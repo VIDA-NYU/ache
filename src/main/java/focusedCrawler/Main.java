@@ -5,14 +5,8 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.List;
 
-import org.apache.commons.cli.CommandLine;
-import org.apache.commons.cli.CommandLineParser;
-import org.apache.commons.cli.DefaultParser;
-import org.apache.commons.cli.HelpFormatter;
-import org.apache.commons.cli.MissingArgumentException;
-import org.apache.commons.cli.Options;
-import org.apache.commons.cli.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,16 +18,21 @@ import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.link.frontier.FrontierPersistentException;
-import focusedCrawler.seedfinder.SeedFinder;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
 import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.storage.Storage;
+import io.airlift.airline.Arguments;
+import io.airlift.airline.Cli;
+import io.airlift.airline.Cli.CliBuilder;
+import io.airlift.airline.Command;
+import io.airlift.airline.Help;
+import io.airlift.airline.Option;
+import io.airlift.airline.ParseException;
 
 /**
  * <p>
- * Description: This is the main entry point for working with the components of
- * the focusedCrawler
+ * Description: This is the main entry point for working with the components of ACHE
  * </p>
  */
 public class Main {
@@ -42,311 +41,297 @@ public class Main {
     
 	public static final Logger logger = LoggerFactory.getLogger(Main.class);
     
-    private static Options[] allOptions;
-    private static String[] commandName;
-
     public static void main(String... args) {
     	printVersion();
+    	
+    	@SuppressWarnings("unchecked")
+        CliBuilder<Runnable> builder = Cli.<Runnable>builder("ache")
+            .withDescription("ACHE Focused Crawler")
+            .withDefaultCommand(AcheHelp.class)
+            .withCommands(
+                AcheHelp.class,
+                StartCrawl.class,
+                AddSeeds.class,
+                StartLinkStorage.class,
+                StartCrawlManager.class,
+                RunCliTool.class
+            );
+
+        Cli<Runnable> acheParser = builder.build();
         try {
-            CommandLineParser parser = new DefaultParser();
-            
-            Options startCrawlOptions = new Options();
-            Options addSeedsOptions = new Options();
-            Options startCrawlManagerOptions = new Options();
-            Options buildModelOptions = new Options();
-            Options startTargetStorageOptions = new Options();
-            Options startLinkStorageOptions = new Options();
-            
-            startCrawlOptions.addOption("e", "elasticIndex", true, "ElasticSearch index name");
-            startCrawlOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
-            startCrawlOptions.addOption("c", "configDir", true, "Path to configuration files folder");
-            startCrawlOptions.addOption("s", "seed", true, "Path to the file of seed URLs");
-            startCrawlOptions.addOption("m", "modelDir", true, "Path to folder containing page classifier model");
-            
-            addSeedsOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
-            addSeedsOptions.addOption("c", "configDir", true, "Path to configuration files folder");
-            addSeedsOptions.addOption("s", "seed", true, "Path to file of seed URLs");
-            
-            buildModelOptions.addOption("c", "stopWordsFile", true, "Path to stopwords file");
-            buildModelOptions.addOption("t", "trainingDataDir", true, "Path to training data folder");
-            buildModelOptions.addOption("o", "outputDir", true, "Path to folder which model built should be stored");
-            buildModelOptions.addOption("l", "learner", true, "Machine-learning algorithm to be used to train the model (SMO, RandomForest)");
-            
-            startTargetStorageOptions.addOption("o", "outputDir", true, "Path to folder which model built should be stored");
-            startTargetStorageOptions.addOption("c", "configDir", true, "Path to configuration files folder");
-            startTargetStorageOptions.addOption("m", "modelDir", true, "Path to folder containing page classifier model");
-            
-            
-            startLinkStorageOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
-            startLinkStorageOptions.addOption("c", "configDir", true, "Path to configuration files folder");
-            startLinkStorageOptions.addOption("s", "seed", true, "Path to the file of seed URLs");
-            
-            startCrawlManagerOptions.addOption("c", "configDir", true, "Path to configuration files folder");
-            startCrawlManagerOptions.addOption("o", "outputDir", true, "Path to a folder to store crawler data");
-            
-            allOptions = new Options[] { 
-                    startCrawlOptions,
-                    addSeedsOptions,
-                    startCrawlManagerOptions,
-                    buildModelOptions,
-                    startTargetStorageOptions,
-                    startLinkStorageOptions};
-            
-            commandName = new String[] { 
-                    "startCrawl",
-                    "addSeeds",
-                    "startCrawlManager",
-                    "buildModel",
-                    "startTargetStorage",
-                    "startLinkStorage",
-                    "seedFinder",
-                    "printFrontier"};
-
-            if (args.length == 0) {
-                printUsage();
-                System.exit(1);
-            }
-
-            CommandLine cmd;
-            if ("startCrawl".equals(args[0])) {
-                cmd = parser.parse(startCrawlOptions, args);
-                startCrawl(cmd);
-            } 
-            else if ("addSeeds".equals(args[0])) {
-                cmd = parser.parse(addSeedsOptions, args);
-                addSeeds(cmd);
-            }
-            else if ("buildModel".equals(args[0])) {
-                cmd = parser.parse(buildModelOptions, args);
-                buildModel(cmd);
-            }
-            else if ("startLinkStorage".equals(args[0])) {
-                cmd = parser.parse(startLinkStorageOptions, args);
-                startLinkStorage(cmd);
-            }
-            else if ("startTargetStorage".equals(args[0])) {
-                cmd = parser.parse(startTargetStorageOptions, args);
-                startTargetStorage(cmd);
-            }
-            else if ("startCrawlManager".equals(args[0])) {
-                cmd = parser.parse(startCrawlManagerOptions, args);
-                startCrawlManager(cmd);
-            }
-            else if ("seedFinder".equals(args[0])) {
-                SeedFinder.main(Arrays.copyOfRange(args, 1, args.length));
-            }
-            else if ("run".equals(args[0])) {
-                runCliTool(args);
-            }
-            else {
-                printUsage();
-                System.exit(1);
-            }
-        }
-        catch(MissingArgumentException e) {
-            printMissingArgumentMessage(e);
-            System.exit(1);
+            acheParser.parse(args).run();
         }
         catch(ParseException e) {
-            printError(e);
+            System.out.println("Unable to parse the input. "+e.getMessage()+"\n");
+            Help.help(acheParser.getMetadata(), Arrays.asList());
             System.exit(1);
+        } 
+        catch (Exception e) {
+            System.err.println("Failed to execute command.");
+            e.printStackTrace(System.err);
         }
     }
-
-    private static void runCliTool(String... args) {
-        if(args.length <= 1) {
-            System.out.println("ERROR: Class name of CLI tool not specified.");
-            System.exit(1);
+    
+    private static void printVersion() {
+        String header = "ACHE Crawler "+VERSION;
+        for (int i = 0; i < header.length(); i++) {
+            System.out.print("-");
         }
+        System.out.println();
+        System.out.println(header);
+        for (int i = 0; i < header.length(); i++) {
+            System.out.print("-");
+        }
+        System.out.println();
+        System.out.println();
+    }
+    
+    
+    public static class AcheHelp extends Help {
         
-        String toolClass = args[1];
-        Class<?> loadedClass = null;
-        try {
-            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-            try {
-                loadedClass = classLoader.loadClass("focusedCrawler.tools."+toolClass);
-            } catch(ClassNotFoundException e) {
-                // also try full class name
-                loadedClass = classLoader.loadClass(toolClass);
+        @Override
+        public void run() {
+            super.run();
+            if(command.isEmpty()) {
+                printExamples();
             }
-        } catch (ClassNotFoundException e) {
-            System.out.println("Unable to find CLI tool named "+toolClass);
-            System.exit(1);
         }
         
-        // Execute main() method of loaded class
-        String[] params = Arrays.copyOfRange(args, 2, args.length);
-        try {
-            Method mainMethod = loadedClass.getMethod("main", String[].class);
-            mainMethod.invoke(null, (Object) params);
-        } catch (Exception e) {
-            System.out.printf("Failed to run tool %s.\n\n", loadedClass.getName());
-            e.printStackTrace(System.out);
-            System.exit(1);
+        private static void printExamples() {
+            System.out.println("EXAMPLES\n");
+            System.out.println("    ache startCrawl -c config/sample_config -o data -s config/sample.seeds -m config/sample_model");
+            System.out.println("    ache buildModel -c config/sample_config/stoplist.txt -t training_data -o output_model");
+            System.out.println("    ache addSeeds -c config/sample_config -o data -s config/sample.seeds");
+            System.out.println("    ache startLinkStorage -c config/sample_config -o data -s config/sample.seeds");
+            System.out.println("    ache startTargetStorage -c config/sample_config -o data -m config/sample_model");
+            System.out.println("    ache startCrawlManager -c config/sample_config");
         }
     }
 
-	private static void printVersion() {
-		String header = "ACHE Crawler "+VERSION;
-		for (int i = 0; i < header.length(); i++) {
-			System.out.print("-");
-		}
-		System.out.println();
-		System.out.println(header);
-		for (int i = 0; i < header.length(); i++) {
-			System.out.print("-");
-		}
-		System.out.println();
-		System.out.println();
-	}
-
-    private static void printError(ParseException e) {
-        System.out.println(e);
-        System.out.println("Unable to parse the input. Did you enter the parameters correctly?\n");
-        printUsage();
-    }
-    
-    private static void printMissingArgumentMessage(MissingArgumentException e) {
-        System.out.println("Unable to parse the input. "+e.getMessage()+"\n");
-        printUsage();
-    }
-
-    private static void buildModel(CommandLine cmd) throws MissingArgumentException {
+    @Command(name = "run", description = "Run any available utilitary tool")
+    public static class RunCliTool implements Runnable {
         
-        String trainingPath  = getMandatoryOptionValue(cmd, "trainingDataDir");
-        String outputPath    = getMandatoryOptionValue(cmd, "outputDir"); 
-        String stopWordsFile = getOptionalOptionValue(cmd, "stopWordsFile");
-        String learner       = getOptionalOptionValue(cmd, "learner");
+        @Arguments(description = "Tool to be executed followed by its parameters")
+        public List<String> args;
         
-        new File(outputPath).mkdirs();
+        public void run() {
+            if(args == null || args.size() == 0) {
+                System.out.println("ERROR: Class name of command-line tool not specified.");
+                System.exit(1);
+            }
+            
+            String toolClass = args.get(0);
+            Class<?> loadedClass = null;
+            try {
+                ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+                try {
+                    loadedClass = classLoader.loadClass("focusedCrawler.tools."+toolClass);
+                } catch(ClassNotFoundException e) {
+                    // also try full class name
+                    loadedClass = classLoader.loadClass(toolClass);
+                }
+            } catch (ClassNotFoundException e) {
+                System.out.println("Unable to find CLI tool named "+toolClass);
+                System.exit(1);
+            }
+            // Execute main() method of loaded class
+            String[] params = args.subList(1, args.size()).toArray(new String[args.size()-1]);
+            try {
+                Method mainMethod = loadedClass.getMethod("main", String[].class);
+                mainMethod.invoke(null, (Object) params);
+            } catch (Exception e) {
+                System.out.printf("Failed to run tool %s.\n\n", loadedClass.getName());
+                e.printStackTrace(System.out);
+                System.exit(1);
+            }
+        }
         
-        // generate the input for weka
-        System.out.println("Preparing training data...");
-        WekaTargetClassifierBuilder.createInputFile(stopWordsFile, trainingPath, trainingPath + "/weka.arff" );
-        
-        // generate the model
-        System.out.println("Training model...");
-        WekaTargetClassifierBuilder.trainModel(trainingPath, outputPath, learner);
-        
-        // generate features file
-        System.out.println("Creating feature file...");
-        WekaTargetClassifierBuilder.createFeaturesFile(outputPath,trainingPath);
-        
-        System.out.println("done.");
     }
 
-    private static void addSeeds(CommandLine cmd) throws MissingArgumentException {
-        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
-        String configPath = getMandatoryOptionValue(cmd, "configDir");
-        String seedPath = getMandatoryOptionValue(cmd, "seed");
-        ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-        FrontierManager frontierManager = FrontierManagerFactory.create(config.getLinkStorageConfig(), configPath, dataOutputPath, seedPath, null);
-        frontierManager.close();
+    @Command(name = "buildModel", description = "Builds a model for a Weka target classifier")
+    public static class BuildModel implements Runnable {
+        
+        @Option(name = {"-t", "--trainingDataDir"}, required = true, description = "Path to folder containing training data")
+        String trainingPath;
+
+        @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
+        String outputPath;
+
+        @Option(name = {"-c", "--stopWordsFile"}, required = true, description = "Path to stopwords file")
+        String stopWordsFile;
+
+        @Option(name = {"-l", "--learner"}, required = true, description = "Machine-learning algorithm to be used to train the model (SMO, RandomForest)")
+        String learner;
+        
+        @Override
+        public void run() {
+            
+            new File(outputPath).mkdirs();
+            
+            // generate the input for weka
+            System.out.println("Preparing training data...");
+            WekaTargetClassifierBuilder.createInputFile(stopWordsFile, trainingPath, trainingPath + "/weka.arff" );
+            
+            // generate the model
+            System.out.println("Training model...");
+            WekaTargetClassifierBuilder.trainModel(trainingPath, outputPath, learner);
+            
+            // generate features file
+            System.out.println("Creating feature file...");
+            WekaTargetClassifierBuilder.createFeaturesFile(outputPath,trainingPath);
+            
+            System.out.println("done.");
+        }
+        
     }
 
-    private static void startLinkStorage(CommandLine cmd) throws MissingArgumentException {
-        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
-        String configPath = getMandatoryOptionValue(cmd, "configDir");
-        String seedPath = getMandatoryOptionValue(cmd, "seed");
-        String modelPath = getMandatoryOptionValue(cmd, "modelDir");
-        try {
+    @Command(name = "addSeeds", description = "Add seeds used to bootstrap the crawler")
+    public static class AddSeeds implements Runnable {
+        
+        @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to a folder to store crawler data")
+        String dataOutputPath;
+        
+        @Option(name = {"-c", "--configDir"}, required = true, description = "Path to configuration files folder")
+        String configPath;
+        
+        @Option(name = {"-s", "--seed"}, required = true, description = "Path to file of seed URLs")
+        String seedPath;
+        
+        public void run() {
             ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-            LinkStorage.runServer(configPath, seedPath, dataOutputPath, modelPath, config.getLinkStorageConfig());
-        } catch (Throwable t) {
-            logger.error("Something bad happened to LinkStorage :(", t);
+            FrontierManager frontierManager = FrontierManagerFactory.create(config.getLinkStorageConfig(), configPath, dataOutputPath, seedPath, null);
+            frontierManager.close();
         }
-    }
-
-    private static void startTargetStorage(CommandLine cmd) throws MissingArgumentException {
-        String configPath = getMandatoryOptionValue(cmd, "configDir");
-        String modelPath = getMandatoryOptionValue(cmd, "modelDir");
-        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
-        String elasticIndexName = getOptionalOptionValue(cmd, "elasticIndex");
-        try {
-            ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-            TargetStorage.runServer(configPath, modelPath, dataOutputPath, elasticIndexName, config);
-        } catch (Throwable t) {
-            logger.error("Something bad happened to TargetStorage :(", t);
-        }
-    }
-
-    private static void startCrawlManager(CommandLine cmd) {
-        try {
-            String configPath = getMandatoryOptionValue(cmd, "configDir");
-            String dataPath = getOptionalOptionValue(cmd, "outputDir");
-            ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-            AsyncCrawler.run(config, dataPath);
-            
-        } catch (Throwable t) {
-            logger.error("Something bad happened to CrawlManager :(", t);
-        }
-    }
-
-    private static void startCrawl(CommandLine cmd) throws MissingArgumentException {
-        String seedPath = getMandatoryOptionValue(cmd, "seed");
-        String configPath = getMandatoryOptionValue(cmd, "configDir");
-        String modelPath = getMandatoryOptionValue(cmd, "modelDir");
-        String dataOutputPath = getMandatoryOptionValue(cmd, "outputDir");
-        String elasticIndexName = getOptionalOptionValue(cmd, "elasticIndex");
         
-        ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+    }
+
+    @Command(name = "startLinkStorage", description = "Starts a LinkStorage server")
+    public static class StartLinkStorage implements Runnable {
+
+        @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to a folder to store link storage data")
+        String dataOutputPath;
         
-        try {
-            MetricsManager metricsManager = new MetricsManager();
+        @Option(name = {"-c", "--configDir"}, required = true, description = "Path to configuration files folder")
+        String configPath;
+        
+        @Option(name = {"-m", "--model"}, required = true, description = "")
+        String modelPath;
+
+        @Option(name = {"-s", "--seed"}, required = false, description = "Path to the file containing seed URLs")
+        String seedPath;
+        
+        public void run() {
+            try {
+                ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+                LinkStorage.runServer(configPath, seedPath, dataOutputPath, modelPath, config.getLinkStorageConfig());
+            } catch (Throwable t) {
+                logger.error("Something bad happened to LinkStorage :(", t);
+            }
+        }
+
+    }
+
+    @Command(name = "startTargetStorage", description = "Starts a TargetStorage server")
+    public static class StartTargetStorage implements Runnable {
+
+        @Option(name = {"-c", "--config"}, required = true, description = "Path to configuration files folder")
+        String configPath;
+        
+        @Option(name = {"-m", "--modelDir"}, required = true, description = "Path to folder containing page classifier model")
+        String modelPath;
+        
+        @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
+        String dataOutputPath;
+        
+        @Option(name = {"-e", "--elasticIndex"}, required = true, description = "Name of elastic search index to be used")
+        String elasticIndexName;
+
+        @Override
+        public void run() {
+            try {
+                ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+                TargetStorage.runServer(configPath, modelPath, dataOutputPath, elasticIndexName, config);
+            } catch (Throwable t) {
+                logger.error("Something bad happened to TargetStorage :(", t);
+            }
             
-            Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
-                    dataOutputPath, modelPath, config.getLinkStorageConfig(), metricsManager);
+        }
 
-            // start target storage
-            Storage targetStorage = TargetStorage.createTargetStorage(
-            		configPath, modelPath, dataOutputPath, elasticIndexName,
-                    config.getTargetStorageConfig(), linkStorage);
+    }
+
+    @Command(name = "startCrawlManager", description = "Starts a LinkStorage server")
+    public static class StartCrawlManager implements Runnable {
+
+        @Option(name = {"-c", "--config"}, required = true, description = "Path to configuration files folder")
+        String configPath;
+
+        @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to a folder to store crawl manager data")
+        String dataPath;
+
+        @Override
+        public void run() {
+            try {
+                ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+                AsyncCrawler.run(config, dataPath);
+                
+            } catch (Throwable t) {
+                logger.error("Something bad happened to CrawlManager :(", t);
+            }
+        }
+
+    }
+
+    @Command(name = "startCrawl", description = "Starts a crawler")
+    public static class StartCrawl implements Runnable {
+
+        @Option(name = {"-c", "--config"}, required = true, description = "Path to configuration files folder")
+        String configPath;
+        
+        @Option(name = {"-m", "--modelDir"}, required = true, description = "Path to folder containing page classifier model")
+        String modelPath;
+        
+        @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
+        String dataOutputPath;
+        
+        @Option(name = {"-s", "--seed"}, required = true, description = "Path to file of seed URLs")
+        String seedPath;
+        
+        @Option(name = {"-e", "--elasticIndex"}, required = false, description = "Name of elastic search index to be used")
+        String elasticIndexName;
+
+        @Override
+        public void run() {
             
-            AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
+            ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
             
-            // start crawl manager
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig,
-                                                    dataOutputPath, metricsManager);
-            crawler.run();
-            crawler.shutdown();
+            try {
+                MetricsManager metricsManager = new MetricsManager();
+                
+                Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
+                        dataOutputPath, modelPath, config.getLinkStorageConfig(), metricsManager);
 
-        }
-        catch (LinkClassifierFactoryException | FrontierPersistentException  e) {
-            logger.error("Problem while creating LinkStorage", e);
-        }
-        catch (IOException e) {
-            logger.error("Problem while starting crawler.", e);
-        }
+                // start target storage
+                Storage targetStorage = TargetStorage.createTargetStorage(
+                            configPath, modelPath, dataOutputPath, elasticIndexName,
+                            config.getTargetStorageConfig(), linkStorage);
+                
+                AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
+                
+                // start crawl manager
+                AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig,
+                                                        dataOutputPath, metricsManager);
+                crawler.run();
+                crawler.shutdown();
 
+            }
+            catch (LinkClassifierFactoryException | FrontierPersistentException  e) {
+                logger.error("Problem while creating LinkStorage", e);
+            }
+            catch (IOException e) {
+                logger.error("Problem while starting crawler.", e);
+            }
+        }
+        
     }
 
-    private static String getMandatoryOptionValue(CommandLine cmd, final String optionName)
-            throws MissingArgumentException {
-        String optionValue = cmd.getOptionValue(optionName);
-        if (optionValue == null) {
-            throw new MissingArgumentException("Parameter "+optionName+" can not be empty.");
-        }
-        return optionValue;
-    }
-    
-    private static String getOptionalOptionValue(CommandLine cmd, final String optionName){
-        String optionValue = cmd.getOptionValue(optionName);
-        return optionValue;
-    }
-
-    private static void printUsage() {
-
-        HelpFormatter formatter = new HelpFormatter();
-        for (int i = 0; i < allOptions.length; i++) {
-            formatter.printHelp(commandName[i], allOptions[i], true);
-            System.out.println();
-        }
-
-        System.out.println("Examples:\n");
-        System.out.println("ache buildModel -c config/sample_config/stoplist.txt -t training_data -o output_model");
-        System.out.println("ache addSeeds -o data -c config/sample_config -s config/sample.seeds");
-        System.out.println("ache startLinkStorage -o data -c config/sample_config -s config/sample.seeds");
-        System.out.println("ache startTargetStorage -o data -c config/sample_config -m config/sample_model");
-        System.out.println("ache startCrawlManager -c config/sample_config");
-    }
 }

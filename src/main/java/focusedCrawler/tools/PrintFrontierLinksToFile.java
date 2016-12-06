@@ -2,20 +2,20 @@ package focusedCrawler.tools;
 
 import java.io.PrintStream;
 
-import org.kohsuke.args4j.Option;
-
 import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.CliTool;
 import focusedCrawler.util.persistence.TupleIterator;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
-
+@Command(name="PrintFrontierLinksToFile")
 public class PrintFrontierLinksToFile extends CliTool {
     
-    @Option(name="--input-data-path", usage="Path to ACHE data target folder", required=true)
+    @Option(name="--input-data-path", description="Path to ACHE data target folder", required=true)
     private String inputPath;
     
-    @Option(name="--output-file", usage="The output file", required=false)
+    @Option(name="--output-file", description="The output file", required=false)
     private String outputFile;
     
     public static void main(String[] args) throws Exception {
