@@ -51,6 +51,7 @@ public class Main {
             .withCommands(
                 AcheHelp.class,
                 StartCrawl.class,
+                BuildModel.class,
                 AddSeeds.class,
                 StartLinkStorage.class,
                 StartCrawlManager.class,
@@ -157,10 +158,10 @@ public class Main {
         @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
         String outputPath;
 
-        @Option(name = {"-c", "--stopWordsFile"}, required = true, description = "Path to stopwords file")
+        @Option(name = {"-c", "--stopWordsFile"}, required = false, description = "Path to stopwords file")
         String stopWordsFile;
 
-        @Option(name = {"-l", "--learner"}, required = true, description = "Machine-learning algorithm to be used to train the model (SMO, RandomForest)")
+        @Option(name = {"-l", "--learner"}, required = false, description = "Machine-learning algorithm to be used to train the model (SMO, RandomForest)")
         String learner;
         
         @Override
