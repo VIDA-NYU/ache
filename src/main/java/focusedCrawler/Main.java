@@ -321,8 +321,12 @@ public class Main {
                 // start crawl manager
                 AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig,
                                                         dataOutputPath, metricsManager);
-                crawler.run();
-                crawler.shutdown();
+                try {
+                    crawler.run();
+                } finally {
+                    crawler.shutdown();
+                    metricsManager.close();
+                }
 
             }
             catch (LinkClassifierFactoryException | FrontierPersistentException  e) {
@@ -330,6 +334,9 @@ public class Main {
             }
             catch (IOException e) {
                 logger.error("Problem while starting crawler.", e);
+            }
+            catch (Throwable e) {
+                logger.error("Crawler execution failed.", e);
             }
         }
         
