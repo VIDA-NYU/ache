@@ -24,13 +24,13 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URL;
 
-import org.mortbay.http.HttpException;
-import org.mortbay.http.HttpRequest;
-import org.mortbay.http.HttpResponse;
-import org.mortbay.http.handler.AbstractHttpHandler;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-@SuppressWarnings("serial")
-public class ResourcesResponseHandler extends AbstractHttpHandler {
+import org.eclipse.jetty.server.Request;
+import org.eclipse.jetty.server.handler.AbstractHandler;
+
+public class ResourcesResponseHandler extends AbstractHandler {
     private String _testContext = "./";
 
     /**
@@ -47,11 +47,13 @@ public class ResourcesResponseHandler extends AbstractHttpHandler {
     }
 
     @Override
-    public void handle(String pathInContext, String pathParams, HttpRequest request, HttpResponse response) throws HttpException, IOException {
+    public void handle(String pathInContext, Request baseRequest,
+                       HttpServletRequest request, HttpServletResponse response) throws IOException {
         // Get the resource.
         URL path = ResourcesResponseHandler.class.getResource(_testContext + pathInContext);
         if (path == null) {
-            throw new HttpException(404, "Resource not found: " + pathInContext);
+            response.sendError(HttpServletResponse.SC_NOT_FOUND, "Resource not found: " + pathInContext);
+            return;
         }
 
         try {
@@ -72,7 +74,7 @@ public class ResourcesResponseHandler extends AbstractHttpHandler {
             OutputStream os = response.getOutputStream();
             os.write(bytes);
         } catch (Exception e) {
-            throw new HttpException(500, e.getMessage());
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, e.getMessage());
         }
     }
 }

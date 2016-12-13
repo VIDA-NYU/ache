@@ -7,9 +7,11 @@ import static org.junit.Assert.*;
 
 import java.io.InputStream;
 
+import org.apache.tika.mime.MediaType;
 import org.junit.Test;
 
 import focusedCrawler.memex.cdr.TikaExtractor;
+import focusedCrawler.memex.cdr.TikaExtractor.ParsedData;
 
 public class TikaExtractorTest {
 
@@ -19,15 +21,31 @@ public class TikaExtractorTest {
 		String filename = "http%3A%2F%2Fwww.darpa.mil%2Fprogram%2Fmemex";
 		InputStream fileStream = CDRDocumentBuilderTest.class.getResourceAsStream(filename);
 		
+		TikaExtractor parser = new TikaExtractor();
 		// when
-		TikaExtractor extractor = new TikaExtractor(fileStream);
-		
+		ParsedData parsedData = parser.parse(fileStream);
 		// then
-		assertThat(extractor.getMetadata().get("title"), is("Memex (Domain-Specific Search)"));
-		assertThat(extractor.getMetadata().get("Content-Type"), containsString(("text/html")));
+		assertThat(parsedData.getMetadata().get("title"), is("Memex (Domain-Specific Search)"));
+		assertThat(parsedData.getMetadata().get("Content-Type"), containsString(("text/html")));
 		
-		assertThat(extractor.getPlainText(), is(notNullValue()));
-		assertThat(extractor.getPlainText(), containsString(("Memex")));
+		assertThat(parsedData.getPlainText(), is(notNullValue()));
+		assertThat(parsedData.getPlainText(), containsString(("Memex")));
 	}
+	
+	@Test
+    public void testDetectMimeType() {
+        // given
+        String filename = "http%3A%2F%2Fwww.darpa.mil%2Fprogram%2Fmemex";
+        InputStream fileStream = CDRDocumentBuilderTest.class.getResourceAsStream(filename);
+        
+        TikaExtractor parser = new TikaExtractor();
+
+        // when
+        MediaType type = parser.detect(fileStream, filename, null);
+        
+        // then
+        assertThat(type.getBaseType(), is(MediaType.TEXT_HTML));
+        assertThat(type.getBaseType().toString(), is("text/html"));
+    }
 
 }

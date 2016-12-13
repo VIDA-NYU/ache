@@ -20,13 +20,13 @@ package focusedCrawler.crawler.crawlercommons.test;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import org.mortbay.http.HttpException;
-import org.mortbay.http.HttpRequest;
-import org.mortbay.http.HttpResponse;
-import org.mortbay.http.handler.AbstractHttpHandler;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-@SuppressWarnings("serial")
-public class StringResponseHandler extends AbstractHttpHandler {
+import org.eclipse.jetty.server.Request;
+import org.eclipse.jetty.server.handler.AbstractHandler;
+
+public class StringResponseHandler extends AbstractHandler {
 
     private String _contentType;
     private String _response;
@@ -41,7 +41,8 @@ public class StringResponseHandler extends AbstractHttpHandler {
     }
 
     @Override
-    public void handle(String pathInContext, String pathParams, HttpRequest request, HttpResponse response) throws HttpException, IOException {
+    public void handle(String pathInContext, Request baseRequest,
+                       HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
             byte[] bytes = _response.getBytes("UTF-8");
             response.setContentLength(bytes.length);
@@ -51,7 +52,7 @@ public class StringResponseHandler extends AbstractHttpHandler {
             OutputStream os = response.getOutputStream();
             os.write(bytes);
         } catch (Exception e) {
-            throw new HttpException(500, e.getMessage());
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, e.getMessage());
         }
     }
 }

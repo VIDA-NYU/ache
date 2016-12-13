@@ -15,47 +15,33 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.zip.GZIPInputStream;
 
-import org.kohsuke.args4j.CmdLineException;
-import org.kohsuke.args4j.CmdLineParser;
-import org.kohsuke.args4j.Option;
-import org.kohsuke.args4j.ParserProperties;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.util.CliTool;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
-public class CountTlds {
-    
-    @Option(name="--input-path", required=true,
-            usage="Path to folder with multiple CDR files")
-    private String inputPath;
-    
-    @Option(name="--output-file", required=true,
-            usage="Text file with TLD counts")
-    private String outputFile;
+@Command(name="CountCdrTlds", description="Counts the number of unique TLDs in a CDR file")
+public class CountTlds extends CliTool {
     
     private static final ObjectMapper mapper = new ObjectMapper();
     
+    @Option(name="--input-path", required=true,
+            description="Path to folder with multiple CDR files")
+    private String inputPath;
+    
+    @Option(name="--output-file", required=true,
+            description="Text file with TLD counts")
+    private String outputFile;
+    
+    
     public static void main(String[] args) throws Exception {
-        new CountTlds().run(args);
+        CliTool.run(args, new CountTlds());
     }
     
-    public void run(String[] args) throws Exception {
-        ParserProperties properties = ParserProperties.defaults().withUsageWidth(80);
-        CmdLineParser parser = new CmdLineParser(this, properties);
-        try {
-            parser.parseArgument(args);
-        } catch (CmdLineException e) {
-            System.err.println(e.getMessage());
-            System.err.println();
-            parser.printUsage(System.err);
-            System.err.println();
-            System.exit(1);
-        }
-        generateCdrFile();
-    }
-
-    private void generateCdrFile() throws Exception {
+    @Override
+    public void execute() throws Exception {
         
         System.out.println("Reading CDR files from: "+inputPath);
         System.out.println("Generating CDR file at: "+outputFile);

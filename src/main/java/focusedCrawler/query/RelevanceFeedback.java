@@ -1,6 +1,7 @@
 package focusedCrawler.query;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -101,13 +102,13 @@ public class RelevanceFeedback {
 						if(relevant){
 							System.out.println(getClass().getName());
 							tempPages.add(page);
-							VSMVector positiveTemp1 = new VSMVector(page.getContent(),stoplist,false);
+							VSMVector positiveTemp1 = new VSMVector(page.getContentAsString(),stoplist,false);
 							positiveTemp1.normalize();
 							positiveTemp.addVector(positiveTemp1);
 							count++;
 						}else{
 //							System.out.println("NonRelevant:" + urls[j]);
-							VSMVector negativeTemp1 = new VSMVector(page.getContent(),stoplist,false);
+							VSMVector negativeTemp1 = new VSMVector(page.getContentAsString(),stoplist,false);
 							negativeTemp1.normalize();
 							negativeTemp.addVector(negativeTemp1);
 						}
@@ -298,7 +299,7 @@ public class RelevanceFeedback {
 	
 	private void addToSample(Page page, HashMap<String, WordFrequencyMap> sample){
         PaginaURL pageParser = null;
-        pageParser = new PaginaURL(page.getURL(),page.getContent(), stoplist);
+        pageParser = new PaginaURL(page.getURL(),page.getContentAsString(), stoplist);
 //        System.out.println("URL>>>"+page.getURL());
         String[] words = pageParser.palavras();
         int[] occurrencies = pageParser.ocorrencias();
@@ -321,7 +322,7 @@ public class RelevanceFeedback {
 		byte[] accountKeyBytes = Base64.encodeBase64((accountKey + ":" + accountKey).getBytes());
 		String accountKeyEnc = new String(accountKeyBytes);
 		URL url = null;
-		StringBuffer output = new StringBuffer();
+		StringBuilder output = new StringBuilder();
 		try {
 			url = new URL("https://api.datamarket.azure.com/Data.ashx/Bing/SearchWeb/v1/Web?Query=%27" + keyword + "%27&$top="+ top);
 			System.out.println(url);
@@ -363,7 +364,7 @@ public class RelevanceFeedback {
 	    	return null;
 	    }
 	    
-	    StringBuffer buffer = new StringBuffer();
+	    StringBuilder buffer = new StringBuilder();
 	    try{
 	      BufferedReader inCon = new BufferedReader(new InputStreamReader(yc.
 	          getInputStream()));
@@ -401,7 +402,7 @@ public class RelevanceFeedback {
 	private String[] parseXMLPage(Page page) throws SAXException, IOException{
 	    DOMParser parser = new DOMParser();
 	    Vector<String> urls = new Vector<String>();
-	    parser.parse(new InputSource(new BufferedReader(new StringReader(page.getContent()))));
+	    parser.parse(new InputSource(new ByteArrayInputStream(page.getContent())));
 	    Document doc = parser.getDocument();
 	    NodeList list = doc.getElementsByTagName("d:Url");
 	    for (int j = 0; j < list.getLength(); j++) {

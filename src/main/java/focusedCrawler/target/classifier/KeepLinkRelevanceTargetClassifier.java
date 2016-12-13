@@ -12,13 +12,17 @@ public class KeepLinkRelevanceTargetClassifier implements TargetClassifier {
 
     @Override
     public TargetRelevance classify(Page page) throws TargetClassifierException {
+        
+        double pageRelevance = page.getLinkRelevance().getRelevance();
+        
+        boolean isRelevant;
         if(targetClassifier == null) {
-            return new TargetRelevance(true, page.getRelevance());
+            isRelevant = true;
+        } else {
+            isRelevant = targetClassifier.classify(page).isRelevant();
         }
-        else{
-            boolean relevant = targetClassifier.classify(page).isRelevant();
-            return new TargetRelevance(relevant, page.getRelevance()); 
-        }
+        
+        return new TargetRelevance(isRelevant, pageRelevance); 
     }
 
 }

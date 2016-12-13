@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 	<url>
-		<loc>http://localhost:1234/page-listed-on-sitemap-2.html</loc>
+		<loc>http://127.0.0.1:1234/page-listed-on-sitemap-2.html</loc>
 	</url>
 
 </urlset>

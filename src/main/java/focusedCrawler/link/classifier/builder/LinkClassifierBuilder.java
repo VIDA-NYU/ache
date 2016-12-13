@@ -69,7 +69,7 @@ public class LinkClassifierBuilder {
         }
 	}
 	
-	public LinkClassifier forwardlinkTraining(HashSet<String> relSites, int levels, String className) throws Exception{
+	public synchronized LinkClassifier forwardlinkTraining(HashSet<String> relSites, int levels, String className) throws Exception{
 		
 	    Vector<Vector<LinkNeighborhood>> instances = loadTrainingInstances(relSites, levels);
 		
@@ -353,7 +353,7 @@ public class LinkClassifierBuilder {
 			String[] anchorTemp = element.getAnchor();
 			for (int j = 0; j < anchorTemp.length; j++) {
 				String word = stemmer.stem(anchorTemp[j]);
-				if(word == null || stoplist.eIrrelevante(word)){
+				if(word == null || stoplist.isIrrelevant(word)){
 					continue;
 				}
 				WordFrequency wf = (WordFrequency) anchorWords.get(word);
@@ -368,7 +368,7 @@ public class LinkClassifierBuilder {
 			String[] aroundTemp = element.getAround();
 			for (int j = 0; j < aroundTemp.length; j++) {
 				String word = stemmer.stem(aroundTemp[j]);
-				if(word == null || stoplist.eIrrelevante(word)){
+				if(word == null || stoplist.isIrrelevant(word)){
 					continue;
 				}
 				WordFrequency wf = (WordFrequency) aroundWords.get(word);
@@ -388,7 +388,7 @@ public class LinkClassifierBuilder {
 				for (int j = 0; j < urlTemp.length; j++) {
 //		            String word =  stemmer.stem(urlTemp[j]);
 					String word =  urlTemp[j];
-					if(stoplist.eIrrelevante(word)){
+					if(stoplist.isIrrelevant(word)){
 						continue;
 					}
 					WordFrequency wf = (WordFrequency) urlWords.get(word);

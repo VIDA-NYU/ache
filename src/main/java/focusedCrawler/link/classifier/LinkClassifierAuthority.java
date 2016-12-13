@@ -5,13 +5,13 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import weka.classifiers.Classifier;
-import weka.core.Instances;
 import focusedCrawler.link.classifier.builder.Instance;
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import focusedCrawler.util.parser.PaginaURL;
+import weka.classifiers.Classifier;
+import weka.core.Instances;
 
 public class LinkClassifierAuthority implements LinkClassifier{
 
@@ -30,18 +30,18 @@ public class LinkClassifierAuthority implements LinkClassifier{
 	  public LinkClassifierAuthority() {
 	  }
 
-	  
 	  public LinkClassifierAuthority(LinkNeighborhoodWrapper wrapper,String[] attributes) {
 		  this.wrapper = wrapper;
 		  this.attributes = attributes;
 	  }
-
 	  
-	  public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
+	  public LinkRelevance[] classify(Page page) throws LinkClassifierException {
 		  try {
+		      LinkNeighborhood[] lns = page.getParsedData().getLinkNeighborhood();
+		      
 		      LinkRelevance[] linkRelevance = null;
 			  if(classifier != null){
-				  HashMap<String, Instance> urlWords = wrapper.extractLinks(page, attributes);
+				  HashMap<String, Instance> urlWords = wrapper.extractLinks(lns, attributes);
 				  linkRelevance = new LinkRelevance[urlWords.size()];
 		          
 		          int count = 0;
@@ -61,8 +61,7 @@ public class LinkClassifierAuthority implements LinkClassifier{
 			          linkRelevance[count] = new LinkRelevance(url, relevance);
 			          count++;
 		          }
-			  }else{
-				  LinkNeighborhood[] lns = page.getLinkNeighboor();
+			  } else {
 				  linkRelevance = new LinkRelevance[lns.length];
 				  for (int i = 0; i < lns.length; i++) {
 					  double relevance = -1;
@@ -73,12 +72,9 @@ public class LinkClassifierAuthority implements LinkClassifier{
 				  }
 			  }
 			  return linkRelevance;
-		  }catch (MalformedURLException ex) {
-			  ex.printStackTrace();
-			  throw new LinkClassifierException(ex.getMessage());
-		  }catch (Exception e) {
-			  e.printStackTrace();
-			  throw new LinkClassifierException(e.getMessage());
+			  
+		  } catch (Exception e) {
+			  throw new LinkClassifierException(e.getMessage(), e);
 		  }
 	  }
 

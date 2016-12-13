@@ -1,85 +1,112 @@
-/*
-############################################################################
-##
-## Copyright (C) 2006-2009 University of Utah. All rights reserved.
-##
-## This file is part of DeepPeep.
-##
-## This file may be used under the terms of the GNU General Public
-## License version 2.0 as published by the Free Software Foundation
-## and appearing in the file LICENSE.GPL included in the packaging of
-## this file.  Please review the following to ensure GNU General Public
-## Licensing requirements will be met:
-## http://www.opensource.org/licenses/gpl-license.php
-##
-## If you are unsure which license is appropriate for your use (for
-## instance, you are interested in developing a commercial derivative
-## of DeepPeep), please contact us at deeppeep@sci.utah.edu.
-##
-## This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-##
-############################################################################
- */
 package focusedCrawler.target.model;
 
 import java.io.Serializable;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
-import focusedCrawler.util.parser.PaginaURL;
+import org.apache.tika.metadata.Metadata;
 
-/**
- * <p>
- * Description:
- * </p>
- * 
- * @author Luciano Barbosa
- * @version 1.0
- */
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
+
 @SuppressWarnings("serial")
 public class Page implements Serializable {
 
-    private boolean auth = false;
-
-    private boolean hub = false;
-
     private URL url;
-
-    private String content;
-
-    private String cleanContent;
-
-    private double relevance;
-
-    private PaginaURL pageURL;
-
-    private String encoding;
-
     private URL redirectedURL;
-
+    private byte[] content;
+    private String contentType;
     private Map<String, List<String>> responseHeaders;
-
     private long fetchTime;
     
-    public Page(URL url, String content) {
-        this(url, content, null, null);
+    private LinkRelevance linkRelevance;
+    private ParsedData parsedData;
+    private TargetRelevance targetRelevance;
+
+    private boolean auth = false;
+    
+    public Page() {
+        // required for JSON serialization
     }
     
-    public Page(URL url, String content, Map<String, List<String>> responseHeaders) {
-        this(url, content, responseHeaders, null);
+    public Page(URL url, String content) {
+        this(url, content.getBytes(), null, null);
     }
 
-    public Page(URL url, String content, Map<String, List<String>> responseHeaders, URL redirectedURL) {
+    public Page(URL url, String content, Map<String, List<String>> responseHeaders) {
+        this(url, content.getBytes(), responseHeaders, null);
+    }
+    
+    public Page(URL url, byte[] content, Map<String, List<String>> responseHeaders, URL redirectedURL) {
         this.url = url;
         this.content = content;
-        this.responseHeaders = responseHeaders;
         this.redirectedURL = redirectedURL;
+        if (responseHeaders != null) {
+            this.responseHeaders = responseHeaders;
+            this.contentType = extractContentType(responseHeaders);
+        }
     }
 
-    public URL getURL() {
-        return url;
+    public Page(TargetModelCbor target) throws MalformedURLException {
+        this.url = new URL(target.url);
+        this.content = ((String) target.response.get("body")).getBytes();
+        this.fetchTime = target.timestamp * 1000;
+    }
+
+    public Page(TargetModelJson target) throws MalformedURLException {
+        this.url = new URL(target.getUrl());
+        this.redirectedURL = new URL(target.getRedirectedUrl());
+        this.content = target.getContent();
+        this.responseHeaders = target.getResponseHeaders();
+        this.fetchTime = target.getFetchTime();
+        this.contentType = target.getContentType();
+
+    }
+
+    public Page(FetchedResult fetchedResult) throws MalformedURLException {
+        this.url = new URL(fetchedResult.getBaseUrl());
+        this.content = fetchedResult.getContent();
+        this.fetchTime = fetchedResult.getFetchTime();
+        if (fetchedResult.getNumRedirects() > 0) {
+            this.redirectedURL = new URL(fetchedResult.getFetchedUrl());
+        }
+        parseResponseHeaders(fetchedResult.getHeaders());
+    }
+
+    public static String extractContentType(Map<String, List<String>> responseHeaders) {
+        for (Entry<String, List<String>> header : responseHeaders.entrySet()) {
+            if ("content-type".compareToIgnoreCase(header.getKey()) == 0) {
+                List<String> values = header.getValue();
+                if (!values.isEmpty()) {
+                    return values.get(0);
+                }
+            }
+        }
+        return null;
+    }
+
+    private void parseResponseHeaders(Metadata headerAsMetadata) {
+        Map<String, List<String>> responseHeaders = new HashMap<>();
+        String[] names = headerAsMetadata.names();
+        if(names != null && names.length > 0) {
+            for(String name : names) {
+                List<String> values = Arrays.asList(headerAsMetadata.getValues(name));
+                if(values.isEmpty()) {
+                    continue;
+                }
+                responseHeaders.put(name, values);
+                if("content-type".compareToIgnoreCase(name) == 0) {
+                    this.contentType = values.get(0);
+                }
+            }
+        }
+        this.responseHeaders = responseHeaders;
     }
 
     public String getDomainName() {
@@ -87,53 +114,13 @@ public class Page implements Serializable {
         return domain.startsWith("www.") ? domain.substring(4) : domain;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public String getCleanContent() {
-        return cleanContent;
-    }
-
-    public void setContent(String content) {
-        this.content = content.toLowerCase();
-    }
-
-    public void setCleanContent(String content) {
-        this.cleanContent = content.toLowerCase();
-    }
-
-    public void setPageURL(PaginaURL page) {
-        this.pageURL = page;
-        this.setCleanContent(page.palavras_to_string());
-    }
-
-    public void setRelevance(double relevance) {
-        this.relevance = relevance;
-    }
-
-    public double getRelevance() {
-        return this.relevance;
-    }
-
-    public String getIdentifier() {
-        return this.url.toString();
-    }
-
-    public String getSource() {
-        return this.content;
-    }
-
-    public PaginaURL getPageURL() {
-        return this.pageURL;
-    }
-
-    public void setEncoding(String encoding) {
-        this.encoding = encoding;
-    }
-
-    public String getEncoding() {
-        return this.encoding;
+    public boolean isHub() {
+        if (linkRelevance != null) {
+            double relevance = linkRelevance.getRelevance();
+            return relevance > LinkRelevance.DEFAULT_HUB_RELEVANCE &&
+                   relevance < LinkRelevance.DEFAULT_AUTH_RELEVANCE;
+        }
+        return false;
     }
 
     public boolean isAuth() {
@@ -144,18 +131,37 @@ public class Page implements Serializable {
         this.auth = auth;
     }
 
-    public boolean isHub() {
-        return hub;
-    }
-
-    public void setHub(boolean hub) {
-        this.hub = hub;
+    public URL getURL() {
+        return url;
     }
     
+    public byte[] getContent() {
+        return content;
+    }
+    
+    /*
+     * Warning: using this method for non-textual mime-types might cause data corruption.
+     */
+    public String getContentAsString() {
+        return new String(content);
+    }
+
+    public void setContent(byte[] content) {
+        this.content = content;
+    }
+    
+    public String getContentType() {
+        return contentType;
+    }
+    
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
+    }
+
     public URL getRedirectedURL() {
         return redirectedURL;
     }
-    
+
     public Map<String, List<String>> getResponseHeaders() {
         return responseHeaders;
     }
@@ -163,9 +169,33 @@ public class Page implements Serializable {
     public long getFetchTime() {
         return fetchTime;
     }
-    
+
     public void setFetchTime(long fetchTime) {
         this.fetchTime = fetchTime;
+    }
+
+    public LinkRelevance getLinkRelevance() {
+        return linkRelevance;
+    }
+
+    public void setLinkRelevance(LinkRelevance linkRelevance) {
+        this.linkRelevance = linkRelevance;
+    }
+
+    public ParsedData getParsedData() {
+        return parsedData;
+    }
+
+    public void setParsedData(ParsedData parsedData) {
+        this.parsedData = parsedData;
+    }
+
+    public TargetRelevance getTargetRelevance() {
+        return targetRelevance;
+    }
+
+    public void setTargetRelevance(TargetRelevance targetRelevance) {
+        this.targetRelevance = targetRelevance;
     }
 
 }

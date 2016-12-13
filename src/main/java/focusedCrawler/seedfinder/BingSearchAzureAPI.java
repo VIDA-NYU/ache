@@ -1,9 +1,9 @@
 package focusedCrawler.seedfinder;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -67,7 +67,9 @@ public class BingSearchAzureAPI implements SearchEngineApi {
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.setRequestProperty("Authorization", "Basic " + accountKeyEnc);
-
+        conn.setConnectTimeout(60000);
+        conn.setReadTimeout(60000);
+        
         BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
         StringBuffer output = new StringBuffer();
         String line;
@@ -85,7 +87,7 @@ public class BingSearchAzureAPI implements SearchEngineApi {
     private List<String> parseXMLPage(Page page) {
         DOMParser parser = new DOMParser();
         try {
-            parser.parse(new InputSource(new BufferedReader(new StringReader(page.getContent()))));
+            parser.parse(new InputSource(new ByteArrayInputStream(page.getContent())));
         } catch (SAXException | IOException e) {
             throw new RuntimeException("Failed to parse search results.", e);
         }

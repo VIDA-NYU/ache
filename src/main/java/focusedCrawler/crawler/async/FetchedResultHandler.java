@@ -1,12 +1,5 @@
 package focusedCrawler.crawler.async;
 
-import java.net.URL;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.tika.metadata.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +7,7 @@ import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.storage.Storage;
 
@@ -32,12 +26,11 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
 
         int statusCode = response.getStatusCode();
         if(statusCode >= 200 && statusCode < 300) {
-            logger.info("Successfully downloaded URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
             processData(link, response);
-        } else {
-            // TODO: Update metadata about page visits in link storage
-            logger.info("Server returned bad code for URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
         }
+        //else {
+        //     TODO: Update metadata about page visits in link storage
+        //}
     }
     
     @Override
@@ -52,36 +45,13 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     
     private void processData(LinkRelevance link, FetchedResult response) {
         try {
-            Page page;
-            if(response.getNumRedirects() == 0) {
-                page = new Page(
-                    new URL(response.getBaseUrl()),
-                    new String(response.getContent()),
-                    parseResponseHeaders(response.getHeaders())
-                );
-            } else {
-                page = new Page(
-                    new URL(response.getBaseUrl()),
-                    new String(response.getContent()),
-                    parseResponseHeaders(response.getHeaders()),
-                    new URL(response.getFetchedUrl())
-                );
-            }
-            page.setFetchTime(response.getFetchTime());
+            Page page = new Page(response);
             
-            PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
+            // TODO Check whether page is HTML before trying to parse HTML
+            PaginaURL pageParser = new PaginaURL(page);
+            page.setParsedData(new ParsedData(pageParser));
+            page.setLinkRelevance(link);
             
-            page.setPageURL(pageParser);
-            
-            final double relevance = link.getRelevance();
-            if(relevance > LinkRelevance.DEFAULT_HUB_RELEVANCE &&
-               relevance < LinkRelevance.DEFAULT_AUTH_RELEVANCE){
-                page.setHub(true);
-            }
-            
-            page.setRelevance(relevance);
-            
-            logger.info(relevance + " Sending page to TargetStorage: "+ response.getFetchedUrl());
             targetStorage.insert(page);
             
         } catch (Exception e) {
@@ -89,15 +59,4 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
         }
     }
 
-    private Map<String, List<String>> parseResponseHeaders(Metadata headerAsMetadata) {
-        Map<String, List<String>> responseHeaders = new HashMap<>();
-        String[] names = headerAsMetadata.names();
-        if(names != null && names.length > 0) {
-            for(String name : names) {
-                responseHeaders.put(name, Arrays.asList(headerAsMetadata.getValues(name)));
-            }
-        }
-        return responseHeaders;
-    }
-    
 }

@@ -18,7 +18,7 @@ public class DownloadScheduler {
         
         final String domainName;
         final Deque<LinkRelevance> links;
-        long lastAccessTime;
+        volatile long lastAccessTime;
         
         public DomainNode(String domainName, long lastAccessTime) {
             this.domainName = domainName;
@@ -138,6 +138,16 @@ public class DownloadScheduler {
         removeExpiredNodes();
         return domains.size();
     }
+    
+    public int numberOfAvailableDomains() {
+        int available = 0;
+        for(DomainNode node : domainsQueue) {
+            if(isAvailable(node)){
+                available++;
+            }
+        }
+        return available;
+    }
 
     public int numberOfEmptyDomains() {
         return emptyDomainsQueue.size();
@@ -152,14 +162,18 @@ public class DownloadScheduler {
     }
 
     public boolean hasLinksAvailable() {
+        // pick domain with longest access time 
         DomainNode domainNode = domainsQueue.peek();
         if(domainNode == null) {
             return false;
         }
+        return isAvailable(domainNode);
+    }
+
+    private boolean isAvailable(DomainNode domainNode) {
         long now = System.currentTimeMillis();
         long timeSinceLastAccess = now - domainNode.lastAccessTime;
         if(timeSinceLastAccess < minimumAccessTime) {
-            // the domain with longest access time is still not available
             return false;
         }
         return true;
@@ -178,6 +192,15 @@ public class DownloadScheduler {
                 break;
             }
             emptyDomainsQueue.add(node);
+        }
+    }
+
+    public boolean canDownloadNow(LinkRelevance link) {
+        DomainNode domain = domains.get(link.getTopLevelDomainName());
+        if(domain == null) {
+            return true;
+        } else {
+            return isAvailable(domain);
         }
     }
     

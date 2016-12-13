@@ -24,6 +24,9 @@ public class TargetStorageConfig {
     @JsonProperty("target_storage.data_format.filesystem.compress_data")
     private boolean compressData = false;
     
+    @JsonProperty("target_storage.data_format.files.max_file_size")
+    private long maxFileSize = 256*1024*1024;
+    
     @JsonProperty("target_storage.use_classifier")
     private boolean useClassifier = true;
     @JsonProperty("target_storage.visited_page_limit")
@@ -99,6 +102,10 @@ public class TargetStorageConfig {
 
     public boolean getCompressData() {
         return compressData;
+    }
+    
+    public long getMaxFileSize() {
+        return maxFileSize;
     }
 
 }

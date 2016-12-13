@@ -25,7 +25,7 @@ public class UrlRegexTargetClassifier implements TargetClassifier {
 
     @Override
 	public TargetRelevance classify(Page page) throws TargetClassifierException {
-		if(linkFilter.accept(page.getIdentifier())) {
+		if(linkFilter.accept(page.getURL().toString())) {
 		    return new TargetRelevance(true, 1.0);
 		} else {
 		    return new TargetRelevance(false, 0.0);

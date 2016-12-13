@@ -85,14 +85,13 @@ public class FileSystemTargetRepository implements TargetRepository {
         this.hashFilename = hashFilename;
         this.compressData = compressData;
     }
-
-    public boolean insert(Page target, int counter) {
-        return insert(target);
-    }
+    
+    @Override
+    public void close() {}
 
     public boolean insert(Page target) {
         try {
-            String id = target.getIdentifier();
+            String id = target.getURL().toString();
             URL url = new URL(id);
             Path hostPath = getHostPath(url);
             File hostDirectory = hostPath.toFile();
@@ -124,7 +123,7 @@ public class FileSystemTargetRepository implements TargetRepository {
         switch(dataFormat) {
         case HTML:
         {
-            fileStream.write(target.getSource().getBytes());
+            fileStream.write(target.getContent());
             break;
         }
         case JSON:
@@ -135,7 +134,7 @@ public class FileSystemTargetRepository implements TargetRepository {
         }
         case CBOR:
         {
-            TargetModelCbor targetModel = new TargetModelCbor("", "", url, target.getSource());
+            TargetModelCbor targetModel = new TargetModelCbor("", "", url, target.getContentAsString());
             cborMapper.writeValue(fileStream, targetModel);
             break;
         }

@@ -2,70 +2,52 @@ package focusedCrawler.seedfinder;
 
 import java.io.PrintStream;
 
-import org.kohsuke.args4j.CmdLineException;
-import org.kohsuke.args4j.CmdLineParser;
-import org.kohsuke.args4j.Option;
-import org.kohsuke.args4j.OptionHandlerFilter;
-import org.kohsuke.args4j.ParserProperties;
-
+import focusedCrawler.crawler.async.HttpDownloaderConfig;
+import focusedCrawler.crawler.async.fetcher.FetcherFactory;
+import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
 import focusedCrawler.seedfinder.QueryProcessor.QueryResult;
 import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.util.CliTool;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
-public class SeedFinder {
+@Command(name="SeedFinder", description="Runs the SeedFinder tool")
+public class SeedFinder extends CliTool {
     
-    @Option(name="--maxPages", usage="Maximum number of pages per query")
-    private int maxPagesPerQuery = 2;
-
-    @Option(name="--minPrecision", usage="Stops query pagination after precision drops bellow this minimum precision threshold")
-    private double minPrecision = 0.5;
+    private final String userAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
     
-    @Option(name="--maxQueries", usage="Max number of generated queries")
-    private int maxNumberOfQueries = 100;
-
-    @Option(name="--initialQuery", usage="The inital query to issue to the search engine", required=true)
-    private String initialQuery;
-
-    @Option(name="--modelPath", usage="The inital query to issue to the search engine", required=true)
-    private String modelPath;
-    
-    @Option(name="--searchEngine", usage="The search engine to be used (Google, Bing, BingAzureAPI, All)")
-    private String searchEngine = "All";
-    
-    public static void main(String[] args) {
-        try {
-            new SeedFinder().run(args);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    enum SearchEngineType {
+        GOOGLE, BING, BING_API, ALL
     }
     
-    public void run(String[] args) throws Exception {
-        ParserProperties properties = ParserProperties.defaults().withUsageWidth(80);
-        CmdLineParser parser = new CmdLineParser(this, properties);
-        SearchEngineApi api = null;
-        try {
-            parser.parseArgument(args);
-            api = createSearchEngineApi(this.searchEngine);
-            if (api == null) {
-                String msg = "Invalid search engine: " + this.searchEngine;
-                Exception cause = new IllegalArgumentException(msg);
-                this.searchEngine = "All";
-                throw new CmdLineException(parser, msg, cause);
-            }
-            
-        } catch (CmdLineException e) {
-            System.err.println(e.getMessage());
-            System.err.println();
-            System.err.println("ache seedFinder [options...]");
-            System.err.println();
-            parser.printUsage(System.err);
-            System.err.println();
+    @Option(name="--maxPages", description="Maximum number of pages per query")
+    private int maxPagesPerQuery = 2;
 
-            System.err.println("Example: ache seedFinder" + parser.printExample(OptionHandlerFilter.ALL));
-            System.exit(1);
-        }
+    @Option(name="--minPrecision", description="Stops query pagination after precision drops bellow this minimum precision threshold")
+    private double minPrecision = 0.5;
+    
+    @Option(name="--maxQueries", description="Max number of generated queries")
+    private int maxNumberOfQueries = 100;
+
+    @Option(name="--initialQuery", description="The inital query to issue to the search engine", required=true)
+    private String initialQuery;
+
+    @Option(name="--modelPath", description="The inital query to issue to the search engine", required=true)
+    private String modelPath;
+    
+    @Option(name="--searchEngine", description="The search engine to be used")
+    private SearchEngineType searchEngine = SearchEngineType.ALL;
+    
+    public static void main(String[] args) {
+        CliTool.run(args, new SeedFinder());
+    }
+    
+    @Override
+    public void execute() throws Exception {
+        
+        SearchEngineApi api = createSearchEngineApi(this.searchEngine);
         
         System.out.println("Search Engine: "+api.getClass().getSimpleName());
         
@@ -77,40 +59,44 @@ public class SeedFinder {
 
         String seedFileName = "seeds_" + query.asString() + ".txt";
         PrintStream seedsFile = new PrintStream(seedFileName);
-
-        int numberOfQueries = 0;
-        while (numberOfQueries < maxNumberOfQueries) {
-            
-            System.out.println("\n---------------");
-            System.out.println("Executing QUERY: "+query.asString());
-            System.out.println("---------------\n");
-            
-            QueryResult result = queryProcessor.processQuery(query);
-
-            for (Page page : result.positivePages) {
-                seedsFile.println(page.getURL().toExternalForm());
+        try {
+            int numberOfQueries = 0;
+            while (numberOfQueries < maxNumberOfQueries) {
+                
+                System.out.println("\n---------------");
+                System.out.println("Executing QUERY: "+query.asString());
+                System.out.println("---------------\n");
+                
+                QueryResult result = queryProcessor.processQuery(query);
+    
+                for (Page page : result.positivePages) {
+                    seedsFile.println(page.getURL().toExternalForm());
+                }
+                
+                System.out.println("\nBuilding next query...");
+                query = queryGenerator.buildNextQuery(query, result);
+                numberOfQueries++;
             }
-            
-            System.out.println("\nBuilding next query...");
-            query = queryGenerator.buildNextQuery(query, result);
-            numberOfQueries++;
+        } finally {
+            queryProcessor.close();
+            seedsFile.close();
         }
-        queryProcessor.close();
-        seedsFile.close();
         
         System.out.println("\nSeeds file created at: "+seedFileName);
     }
 
-    private SearchEngineApi createSearchEngineApi(String searchEngine) {
-        switch (searchEngine.toLowerCase()) {
-        case "google":
-            return new GoogleSearch();
-        case "bing":
-            return new BingSearch();
-        case "bingazureapi":
+    private SearchEngineApi createSearchEngineApi(SearchEngineType searchEngine) {
+        SimpleHttpFetcher fetcher = FetcherFactory.createSimpleHttpFetcher(new HttpDownloaderConfig());
+        fetcher.setUserAgentString(userAgent);
+        switch (searchEngine) {
+        case GOOGLE:
+            return new GoogleSearch(fetcher);
+        case BING:
+            return new BingSearch(fetcher);
+        case BING_API:
             return new BingSearchAzureAPI();
-        case "all":
-            return new SearchEnginePool(new BingSearch(), new GoogleSearch());
+        case ALL:
+            return new SearchEnginePool(new BingSearch(fetcher), new GoogleSearch(fetcher));
         }
         return null;
     }

@@ -136,11 +136,33 @@ public class DownloadSchedulerTest {
     }
     
     @Test
-    public void shouldBeAbleToClearListOfLinks() throws Exception {
+    public void shouldCheckIfLinkCanBeDownloadedAtCurrentTime() throws Exception {
+        
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex1.com/2", 2);
         LinkRelevance l3 = new LinkRelevance("http://ex2.com/3", 3);
-        LinkRelevance l4 = new LinkRelevance("http://ex2.com/4", 4);
+                
+        int minimumAccessTime = 100;
+        int maxLinksInScheduler = 100;
+        
+        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        scheduler.addLink(l1);
+        assertThat(scheduler.nextLink().getRelevance(), is(1d));
+        
+        assertThat(scheduler.canDownloadNow(l3), is(true));
+        assertThat(scheduler.canDownloadNow(l2), is(false));
+        Thread.sleep(minimumAccessTime+10);
+        
+        assertThat(scheduler.canDownloadNow(l2), is(true));
+        assertThat(scheduler.canDownloadNow(l3), is(true));
+    }
+    
+    @Test
+    public void shouldBeAbleToClearListOfLinks() throws Exception {
+        LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
+        LinkRelevance l2 = new LinkRelevance("http://ex2.com/2", 2);
+        LinkRelevance l3 = new LinkRelevance("http://ex3.com/3", 3);
+        LinkRelevance l4 = new LinkRelevance("http://ex4.com/4", 4);
         
         int minimumAccessTime = 100;
         int maxLinksInScheduler = 100;
@@ -155,12 +177,23 @@ public class DownloadSchedulerTest {
         assertThat(scheduler.hasLinksAvailable(), is(true));
         
         // when
+        scheduler.nextLink();
+        scheduler.nextLink();
         scheduler.clear();
         
         // then
-        assertThat(scheduler.numberOfLinks(), is(0));
-        assertThat(scheduler.numberOfEmptyDomains(), is(2));
         assertThat(scheduler.hasLinksAvailable(), is(false));
+        assertThat(scheduler.numberOfLinks(), is(0));
+        assertThat(scheduler.numberOfEmptyDomains(), is(4));
+        assertThat(scheduler.numberOfNonExpiredDomains(), is(2));
+        
+        
+        // make sure it remembers domains that were previously selected
+        scheduler.addLink(l1);
+        scheduler.addLink(l2);
+        scheduler.addLink(l4);
+        scheduler.addLink(l3);
+        assertThat(scheduler.numberOfAvailableDomains(), is(2));
     }
     
 }

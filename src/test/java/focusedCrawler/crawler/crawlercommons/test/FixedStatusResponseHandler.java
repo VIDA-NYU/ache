@@ -19,17 +19,18 @@ package focusedCrawler.crawler.crawlercommons.test;
 
 import java.io.IOException;
 
-import org.mortbay.http.HttpException;
-import org.mortbay.http.HttpRequest;
-import org.mortbay.http.HttpResponse;
-import org.mortbay.http.handler.AbstractHttpHandler;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.eclipse.jetty.server.Request;
+import org.eclipse.jetty.server.handler.AbstractHandler;
 
 /**
- * Reponse handler that always returns a 404.
+ * Reponse handler that always returns a fixed status code.
  * 
  */
-@SuppressWarnings("serial")
-public class FixedStatusResponseHandler extends AbstractHttpHandler {
+public class FixedStatusResponseHandler extends AbstractHandler {
+    
     private int _status;
 
     public FixedStatusResponseHandler(int status) {
@@ -37,7 +38,8 @@ public class FixedStatusResponseHandler extends AbstractHttpHandler {
     }
 
     @Override
-    public void handle(String pathInContext, String pathParams, HttpRequest request, HttpResponse response) throws HttpException, IOException {
-        throw new HttpException(_status, "Pre-defined error fetching: " + pathInContext);
+    public void handle(String pathInContext, Request baseRequest,
+                       HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.sendError(_status, "Pre-defined error fetching: " + pathInContext);
     }
 }

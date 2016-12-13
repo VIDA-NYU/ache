@@ -7,8 +7,8 @@ import java.util.Map;
 import focusedCrawler.link.classifier.builder.Instance;
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import focusedCrawler.util.parser.PaginaURL;
 import weka.classifiers.Classifier;
 import weka.core.Instances;
 
@@ -64,7 +64,7 @@ public class LinkClassifierHub implements LinkClassifier{
 	}
 
 	@Override
-	public LinkRelevance[] classify(PaginaURL page)
+	public LinkRelevance[] classify(Page page)
 			throws LinkClassifierException {
 		// TODO Auto-generated method stub
 		return null;

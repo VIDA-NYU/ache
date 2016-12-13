@@ -56,10 +56,6 @@ public class ElasticSearchTargetRepository implements TargetRepository {
         }
     }
 
-    public boolean insert(Page target, int counter) {
-        return index(target);
-    }
-
     public boolean insert(Page target) {
         return index(target);
     }
@@ -68,7 +64,7 @@ public class ElasticSearchTargetRepository implements TargetRepository {
 
         TargetModelElasticSearch data = new TargetModelElasticSearch(page);
 
-        String docId = page.getIdentifier();
+        String docId = page.getURL().toString();
         IndexResponse response = client.prepareIndex(indexName, typeName, docId)
                 .setSource(serializeAsJson(data))
                 .execute()
@@ -85,6 +81,11 @@ public class ElasticSearchTargetRepository implements TargetRepository {
             throw new RuntimeException("Failed to serialize TargetModel to JSON.", e);
         }
         return targetAsJson;
+    }
+
+    @Override
+    public void close() {
+        client.close();
     }
 
 }

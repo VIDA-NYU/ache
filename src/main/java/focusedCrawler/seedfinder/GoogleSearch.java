@@ -1,9 +1,8 @@
 package focusedCrawler.seedfinder;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,15 +11,22 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
 import focusedCrawler.util.TimeDelay;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 
 public class GoogleSearch implements SearchEngineApi {
     
-    private final String userAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
-    private int docsPerPage = 10;
+    private final SimpleHttpFetcher fetcher;
     
+    private int docsPerPage = 10;
     private TimeDelay timer = new TimeDelay(5000);
+    
+    public GoogleSearch(SimpleHttpFetcher fetcher) {
+        this.fetcher = fetcher;
+    }
     
     public List<BackLinkNeighborhood> submitQuery(String query, int page) throws IOException {
         
@@ -30,11 +36,9 @@ public class GoogleSearch implements SearchEngineApi {
         String queryUrl = "https://www.google.com/search?q=" + query + "&num="+docsPerPage + "&start="+page*docsPerPage;
         System.out.println("URL:"+queryUrl);
         try {
-            URLConnection connection = new URL(queryUrl).openConnection();
-            connection.setRequestProperty("User-Agent", userAgent);
-            connection.connect();
-    
-            InputStream is = connection.getInputStream();
+            FetchedResult result = fetcher.get(queryUrl);
+            
+            InputStream is = new ByteArrayInputStream(result.getContent());
             Document doc = Jsoup.parse(is, "UTF-8", query);
             is.close();
             
@@ -51,7 +55,7 @@ public class GoogleSearch implements SearchEngineApi {
             
             System.out.println(getClass().getSimpleName()+" hits: "+links.size());
             return links;
-        } catch (IOException e) {
+        } catch (IOException | BaseFetchException e) {
             throw new IOException("Failed to download backlinks from Google.", e);
         }
     

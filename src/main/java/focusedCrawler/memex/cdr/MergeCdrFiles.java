@@ -17,10 +17,6 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 import org.apache.commons.codec.digest.DigestUtils;
-import org.kohsuke.args4j.CmdLineException;
-import org.kohsuke.args4j.CmdLineParser;
-import org.kohsuke.args4j.Option;
-import org.kohsuke.args4j.ParserProperties;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -28,20 +24,25 @@ import focusedCrawler.target.classifier.TargetClassifier;
 import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
+import focusedCrawler.util.CliTool;
 import focusedCrawler.util.parser.PaginaURL;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
-public class MergeCdrFiles {
+@Command(name="MergeCdrFiles", description="Merges multiple CDR files into one")
+public class MergeCdrFiles extends CliTool {
     
-    @Option(name="--input-path", usage="Path to folder with multiple CDR files", required=true)
+    @Option(name="--input-path", description="Path to folder with multiple CDR files", required=true)
     private String inputPath;
     
-    @Option(name="--output-file", usage="Gziped output file containing data formmated as per CDR 2.0 schema", required=true)
+    @Option(name="--output-file", description="Gziped output file containing data formmated as per CDR 2.0 schema", required=true)
     private String outputFile;
     
-    @Option(name="--modelPath", usage="Model path to filter pages out")
+    @Option(name="--modelPath", description="Model path to filter pages out")
     private String modelPath;
     
-    @Option(name="--dedup", usage="Whether merge shoud filter duplications")
+    @Option(name="--dedup", description="Whether merge shoud filter duplications")
     private boolean dedup;
 
     private static final ObjectMapper mapper = new ObjectMapper();
@@ -56,25 +57,10 @@ public class MergeCdrFiles {
     private Iterator<File> files;
     
     public static void main(String[] args) throws Exception {
-        new MergeCdrFiles().run(args);
+        CliTool.run(args, new MergeCdrFiles());
     }
     
-    public void run(String[] args) throws Exception {
-        ParserProperties properties = ParserProperties.defaults().withUsageWidth(80);
-        CmdLineParser parser = new CmdLineParser(this, properties);
-        try {
-            parser.parseArgument(args);
-        } catch (CmdLineException e) {
-            System.err.println(e.getMessage());
-            System.err.println();
-            parser.printUsage(System.err);
-            System.err.println();
-            System.exit(1);
-        }
-        generateCdrFile();
-    }
-
-    private void generateCdrFile() throws Exception {
+    public void execute() throws Exception {
         
         System.out.println("Reading CDR files from: "+inputPath);
         System.out.println("Generating CDR file at: "+outputFile);
@@ -174,8 +160,8 @@ public class MergeCdrFiles {
     private TargetRelevance classify(CDRDocument doc) throws Exception {
         
         Page page = new Page(new URL(doc.getUrl()), new String(doc.getRawContent()));
-        PaginaURL pageParser = new PaginaURL(page.getURL(), page.getContent());
-        page.setPageURL(pageParser);
+        PaginaURL pageParser = new PaginaURL(page);
+        page.setParsedData(new ParsedData(pageParser));
 
         TargetRelevance relevance = classifier.classify(page);
         int count = processedPages.intValue();

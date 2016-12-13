@@ -25,15 +25,22 @@ package focusedCrawler.link.frontier;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.codahale.metrics.Gauge;
+import com.codahale.metrics.Timer;
+import com.codahale.metrics.Timer.Context;
+
 import focusedCrawler.link.DownloadScheduler;
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkFilter;
+import focusedCrawler.util.LogFile;
+import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.persistence.TupleIterator;
 
@@ -55,20 +62,61 @@ public class FrontierManager {
     private final HostManager hostsManager;
     private final boolean downloadRobots;
     private final DownloadScheduler scheduler;
+    private final LogFile schedulerLog;
+    private final MetricsManager metricsManager;
 
     private boolean linksRejectedDuringLastLoad;
+    private int availableLinksDuringLoad;
+    private int rejectedLinksDuringLoad;
+    private int uncrawledLinksDuringLoad;
+    private int unavailableLinksDuringLoad;
+	private Timer frontierLoadTimer;
+	private Timer insertTimer;
+	private Timer selectTimer;
 
-    public FrontierManager(Frontier frontier, HostManager hostsManager, boolean downloadRobots,
+    public FrontierManager(Frontier frontier, String dataPath, boolean downloadRobots,
                            int linksToLoad, int schedulerMaxLinks, int schdulerMinAccessInterval,
-                           LinkSelector linkSelector, LinkFilter linkFilter) {
+                           LinkSelector linkSelector, LinkFilter linkFilter,
+                           MetricsManager metricsManager) {
         this.frontier = frontier;
-        this.hostsManager = hostsManager;
+        this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"));;
         this.downloadRobots = downloadRobots;
         this.linksToLoad = linksToLoad;
         this.linkSelector = linkSelector;
         this.linkFilter = linkFilter;
         this.scheduler = new DownloadScheduler(schdulerMinAccessInterval, schedulerMaxLinks);
+        this.schedulerLog = new LogFile(Paths.get(dataPath, "data_monitor", "scheduledlinks.csv"));
+        this.metricsManager = metricsManager;
+        this.setupMetrics();
         this.loadQueue(linksToLoad);
+    }
+
+    private void setupMetrics() {
+        Gauge<Integer> numberOfLinksGauge = () -> scheduler.numberOfLinks();
+        metricsManager.register("frontier_manager.scheduler.number_of_links", numberOfLinksGauge);
+        
+        Gauge<Integer> nonExpiredDomainsGauge = () -> scheduler.numberOfNonExpiredDomains();
+        metricsManager.register("frontier_manager.scheduler.non_expired_domains", nonExpiredDomainsGauge);
+        
+        Gauge<Integer> emptyDomainsGauge = () -> scheduler.numberOfEmptyDomains();
+        metricsManager.register("frontier_manager.scheduler.empty_domains", emptyDomainsGauge);
+        
+        Gauge<Integer> availableLinksGauge = () -> availableLinksDuringLoad;
+        metricsManager.register("frontier_manager.last_load.available", availableLinksGauge);
+
+        Gauge<Integer> unavailableLinksGauge = () -> unavailableLinksDuringLoad;
+        metricsManager.register("frontier_manager.last_load.unavailable", unavailableLinksGauge);
+        
+        Gauge<Integer> rejectedLinksGauge = () -> rejectedLinksDuringLoad;
+        metricsManager.register("frontier_manager.last_load.rejected", rejectedLinksGauge);
+        
+        Gauge<Integer> uncrawledLinksGauge = () -> uncrawledLinksDuringLoad;
+        metricsManager.register("frontier_manager.last_frontier_load.uncrawled", uncrawledLinksGauge);
+        
+        frontierLoadTimer = metricsManager.getTimer("frontier_manager.load.time");
+        insertTimer = metricsManager.getTimer("frontier_manager.insert.time");
+        selectTimer = metricsManager.getTimer("frontier_manager.select.time");
+
     }
 
     public Frontier getFrontierPersistent() {
@@ -82,30 +130,61 @@ public class FrontierManager {
     }
 
     private void loadQueue(int numberOfLinks) {
+        logger.info("Loading more links from frontier into the scheduler...");
         scheduler.clear();
         frontier.commit();
+        Context timerContext = frontierLoadTimer.time();
         try(TupleIterator<LinkRelevance> it = frontier.iterator()) {
             
+            int rejectedLinks = 0;
+            int uncrawledLinks = 0;
+            int availableLinks = 0;
+            int unavailableLinks = 0;
+
             linkSelector.startSelection(numberOfLinks);
             while(it.hasNext()) {
                 Tuple<LinkRelevance> tuple = it.next();
                 LinkRelevance link = tuple.getValue();
-                if (link.getRelevance() > 0) {
+                
+                // Links already downloaded or not relevant
+                if (link.getRelevance() <= 0) {
+                    continue;
+                }
+                uncrawledLinks++;
+                // check whether link can be download now according to politeness constraints 
+                if(scheduler.canDownloadNow(link)) {
+                    // consider link to  be downloaded
                     linkSelector.evaluateLink(link);
+                    availableLinks++;
+                } else {
+                    unavailableLinks++;
+                    rejectedLinks++;
                 }
             }
             
-            linksRejectedDuringLastLoad = false;
             List<LinkRelevance> selectedLinks = linkSelector.getSelectedLinks();
+            
+            int linksAdded = 0;
             for (LinkRelevance link : selectedLinks) {
                 boolean addedLink = scheduler.addLink(link);
-                if(!addedLink) {
-                    linksRejectedDuringLastLoad = true;
+                if(addedLink) {
+                    linksAdded++;
+                } else {
+                    rejectedLinks++;
                 }
             }
             
+            this.availableLinksDuringLoad = availableLinks;
+            this.unavailableLinksDuringLoad = unavailableLinks;
+            this.uncrawledLinksDuringLoad = uncrawledLinks;
+            this.rejectedLinksDuringLoad = rejectedLinks;
+            this.linksRejectedDuringLastLoad = rejectedLinks > 0;
+            
+            logger.info("Loaded {} links.", linksAdded);
         } catch (Exception e) {
             logger.error("Failed to read items from the frontier.", e);
+        } finally {
+            timerContext.stop();
         }
     }
 
@@ -135,56 +214,64 @@ public class FrontierManager {
     }
 
     public boolean insert(LinkRelevance linkRelevance) throws FrontierPersistentException {
-        boolean insert = isRelevant(linkRelevance);
-        if (insert) {
-            if(downloadRobots) {
-                URL url = linkRelevance.getURL();
-                String hostName = url.getHost();
-                if(!hostsManager.isKnown(hostName)) {
-                    hostsManager.insert(hostName);
-                    try {
-                        URL robotUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
-                        LinkRelevance sitemap = new LinkRelevance(robotUrl, 299, LinkRelevance.Type.ROBOTS);
-                        frontier.insert(sitemap);
-                    } catch (Exception e) {
-                        logger.warn("Failed to insert robots.txt for host: "+hostName, e);
-                    } 
+        Context timerContext = insertTimer.time();
+        try {
+            boolean insert = isRelevant(linkRelevance);
+            if (insert) {
+                if (downloadRobots) {
+                    URL url = linkRelevance.getURL();
+                    String hostName = url.getHost();
+                    if (!hostsManager.isKnown(hostName)) {
+                        hostsManager.insert(hostName);
+                        try {
+                            URL robotUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
+                            LinkRelevance sitemap = new LinkRelevance(robotUrl, 299, LinkRelevance.Type.ROBOTS);
+                            frontier.insert(sitemap);
+                        } catch (Exception e) {
+                            logger.warn("Failed to insert robots.txt for host: " + hostName, e);
+                        }
+                    }
                 }
+                insert = frontier.insert(linkRelevance);
             }
-            insert = frontier.insert(linkRelevance);
+            return insert;
+        } finally {
+            timerContext.stop();
         }
-        return insert;
     }
 
     public LinkRelevance nextURL() throws FrontierPersistentException, DataNotFoundException {
-
-        if(!scheduler.hasLinksAvailable()) {
-            logger.info("Loading more links from frontier into the scheduler...");
-            loadQueue(linksToLoad);
-        }
-        
-        LinkRelevance link = scheduler.nextLink();
-        if (link == null) {
-            if(scheduler.hasPendingLinks() || linksRejectedDuringLastLoad) {
-                throw new DataNotFoundException(false, "No links available for selection right now.");
-            } else {
-                throw new DataNotFoundException(true, "Frontier run out of links.");
+        Context timerContext = selectTimer.time();
+        try {
+            if (!scheduler.hasLinksAvailable()) {
+                loadQueue(linksToLoad);
             }
-        }
-        
-        frontier.delete(link);
-            
-        logger.info("\n> URL:" + link.getURL() +
-                    "\n> REL:" + ((int) link.getRelevance() / 100) +
-                    "\n> RELEV:" + link.getRelevance());
 
-        return link;
+            LinkRelevance link = scheduler.nextLink();
+            if (link == null) {
+                if (scheduler.hasPendingLinks() || linksRejectedDuringLastLoad) {
+                    throw new DataNotFoundException(false, "No links available for selection right now.");
+                } else {
+                    throw new DataNotFoundException(true, "Frontier run out of links.");
+                }
+            }
+
+            frontier.delete(link);
+
+            schedulerLog.printf("%d\t%.5f\t%s\n", System.currentTimeMillis(),
+                                link.getRelevance(), link.getURL().toString());
+
+            return link;
+        } finally {
+            timerContext.stop();
+        }
     }
 
     public void close() {
         frontier.commit();
         frontier.close();
         hostsManager.close();
+        schedulerLog.close();
     }
 
     public Frontier getFrontier() {

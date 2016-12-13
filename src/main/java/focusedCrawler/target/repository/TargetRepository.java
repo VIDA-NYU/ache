@@ -38,8 +38,8 @@ import focusedCrawler.target.model.Page;
  */
 public interface TargetRepository {
 
-  public boolean insert(Page target);
-  
-  public boolean insert(Page target, int num);
-  
+    public boolean insert(Page target);
+
+    public void close();
+
 }

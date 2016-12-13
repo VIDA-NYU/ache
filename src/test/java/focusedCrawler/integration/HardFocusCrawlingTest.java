@@ -36,7 +36,7 @@ public class HardFocusCrawlingTest {
     @BeforeClass
     public static void setupServer() throws IOException, InterruptedException {
         System.out.println("HardFocusCrawlingTest");
-        httpServer = new TestWebServerBuilder("localhost", 1234)
+        httpServer = new TestWebServerBuilder("127.0.0.1", 1234)
             .withStaticFolder(Paths.get(basePath, "html"))
             .start();
     }
@@ -79,12 +79,12 @@ public class HardFocusCrawlingTest {
         );
 
         for (String url : shouldBeDownloaded) {
-            LinkRelevance link = LinkRelevance.create("http://localhost:1234/" + url);
+            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
             assertThat(frontier.exist(link), is(lessThan(0)));
         }
 
         for (String url : shouldNOTBeDownloaded) {
-            LinkRelevance link = LinkRelevance.create("http://localhost:1234/" + url);
+            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
             assertThat(frontier.exist(link), is(nullValue()));
         }
     }

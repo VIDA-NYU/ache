@@ -35,16 +35,19 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
-import com.sleepycat.je.DatabaseException;
-import com.sleepycat.je.EnvironmentLockedException;
 
 import focusedCrawler.util.persistence.bdb.BerkeleyDBHashTable;
+import focusedCrawler.util.persistence.rocksdb.RocksDBHashtable;
 
 public class PersistentHashtable<T> {
     
+    enum DB {
+        BERKELEYDB, ROCKSDB
+    }
+    
     private static Logger logger = LoggerFactory.getLogger(PersistentHashtable.class);
 	
-	private BerkeleyDBHashTable<T> persistentTable;
+	private HashtableDb<T> persistentTable;
 	
 	private int tempMaxSize = 1000;
 	private List<Tuple<T>> tempList = new ArrayList<>(tempMaxSize);
@@ -52,25 +55,30 @@ public class PersistentHashtable<T> {
     private Cache<String, T> cache;
 	
 	public PersistentHashtable(String path, int cacheSize, Class<T> contentClass) {
-        File file = new File(path);
+	    this(path, cacheSize, contentClass, DB.ROCKSDB);
+	}
+	
+	public PersistentHashtable(String path, int cacheSize, Class<T> contentClass, DB backend) {
+	    File file = new File(path);
 	    if(!file.exists()) {
 	        file.mkdirs();
 	    }
-		this.cache = CacheBuilder.newBuilder().maximumSize(cacheSize).build();
-		try {
-			this.persistentTable = new BerkeleyDBHashTable<T>(file, contentClass);
-		} catch (EnvironmentLockedException e) {
-			throw new RuntimeException(e);
-		} catch (DatabaseException e) {
-			throw new RuntimeException(e);
-		}
-		
+	    this.cache = CacheBuilder.newBuilder().maximumSize(cacheSize).build();
+	    if(backend == DB.BERKELEYDB) {
+            try {
+                this.persistentTable = new BerkeleyDBHashTable<T>(file, contentClass);
+            } catch (Exception e) {
+                throw new RuntimeException("Failed to open BerkeleyDB database at "+path, e);
+            }
+        } else {
+            this.persistentTable = new RocksDBHashtable<>(file.getPath(), contentClass);
+        }
 	}
 	
 	public List<Tuple<T>> getTable() {
         try {
             return persistentTable.listElements();
-        } catch (DatabaseException e) {
+        } catch (Exception e) {
             throw new RuntimeException("Failed to get hashtable values.", e);
         }
 	}
@@ -116,19 +124,20 @@ public class PersistentHashtable<T> {
         }
     }
 
-    public void commit() {
+    public synchronized void commit() {
         if(tempList.size() == 0)
             return;
 		try {
 		    persistentTable.put(tempList);
 		    tempList = new ArrayList<>();
-		} catch (DatabaseException e) {
+		} catch (Exception e) {
 			throw new RuntimeException("Failed to commit persistent hashtable.", e);
 		}
 	}
 	
-	public void close() {
+	public synchronized void close() {
 		this.commit();
+		persistentTable.close();
 	}
 	
 	public synchronized List<Tuple<T>> orderedSet(final Comparator<T> valueComparator) {
@@ -141,7 +150,7 @@ public class PersistentHashtable<T> {
                 }
             });
             return elements;
-        } catch (DatabaseException e) {
+        } catch (Exception e) {
             throw new RuntimeException("Failed to list elements from hashtable.", e);
         }
     }
@@ -150,7 +159,7 @@ public class PersistentHashtable<T> {
         try {
             this.commit();
             return persistentTable.iterator();
-        } catch (DatabaseException e) {
+        } catch (Exception e) {
             throw new RuntimeException("Failed to open hashtable iterator.", e);
         }
     }

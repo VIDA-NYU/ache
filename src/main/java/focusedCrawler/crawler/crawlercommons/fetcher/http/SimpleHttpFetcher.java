@@ -97,7 +97,6 @@ import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.EncodingUtils;
 import focusedCrawler.crawler.crawlercommons.fetcher.EncodingUtils.ExpandedResult;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
-import focusedCrawler.crawler.crawlercommons.fetcher.HttpFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.IOFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.Payload;
 import focusedCrawler.crawler.crawlercommons.fetcher.RedirectFetchException;
@@ -533,13 +532,13 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 
         try {
             return doRequest(request, url, payload);
-        } catch (HttpFetchException e) {
-            // Don't bother generating a trace for a 404 (not found)
-            if (LOGGER.isTraceEnabled() && (e.getHttpStatus() != HttpStatus.SC_NOT_FOUND)) {
-                LOGGER.trace("Exception fetching {} {}", url, e.getMessage());
-            }
-
-            throw e;
+//        } catch (HttpFetchException e) {
+//            // Don't bother generating a trace for a 404 (not found)
+//            if (LOGGER.isTraceEnabled() && (e.getHttpStatus() != HttpStatus.SC_NOT_FOUND)) {
+//                LOGGER.trace("Exception fetching {} {}", url, e.getMessage());
+//            }
+//
+//            throw e;
         } catch (AbortedFetchException e) {
             // Don't bother reporting that we bailed because the mime-type
             // wasn't one that we wanted.
@@ -623,11 +622,11 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                 }
             }
 
-            if ((statusCode < 200) || (statusCode >= 300)) {
-                // We can't just check against SC_OK, as some wackos return 201,
-                // 202, etc
-                throw new HttpFetchException(url, "Error fetching " + url + " due to \"" + reasonPhrase + "\"", statusCode, headerMap);
-            }
+//            if ((statusCode < 200) || (statusCode >= 300)) {
+//                // We can't just check against SC_OK, as some wackos return 201,
+//                // 202, etc
+//                throw new HttpFetchException(url, "Error fetching " + url + " due to \"" + reasonPhrase + "\"", statusCode, headerMap);
+//            }
 
             redirectedUrl = extractRedirectedUrl(url, localContext);
 
@@ -935,7 +934,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 //                HttpConnectionParams.setTcpNoDelay(params, true);
 //                HttpProtocolParams.setVersion(params, _httpVersion);
                 
-                httpClientBuilder.setUserAgent(_userAgent.getUserAgentString());
+                httpClientBuilder.setUserAgent(_userAgentString);
                 
 //                HttpProtocolParams.setContentCharset(params, "UTF-8");
 //                HttpProtocolParams.setHttpElementCharset(params, "UTF-8");
@@ -1087,5 +1086,9 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         _connectionManager.shutdown();
         IOUtils.closeQuietly(_httpClient);
         _httpClient = null;
+    }
+
+    public void setUserAgentString(String userAgentString) {
+        this._userAgentString = userAgentString;
     }
 }

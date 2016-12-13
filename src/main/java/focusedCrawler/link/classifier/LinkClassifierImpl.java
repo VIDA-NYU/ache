@@ -23,11 +23,9 @@
 */
 package focusedCrawler.link.classifier;
 
-import java.net.MalformedURLException;
-
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import focusedCrawler.util.parser.PaginaURL;
 
 /**
  *
@@ -46,12 +44,11 @@ import focusedCrawler.util.parser.PaginaURL;
 
 public class LinkClassifierImpl implements LinkClassifier{
 
-	private int[] weights;
-	private int intervalRandom = 100;
-	private LNClassifier lnClassifier;
+	private final int[] weights = new int[]{2,1,0};
+	private final int intervalRandom = 100;
+	private final LNClassifier lnClassifier;
 
 	public LinkClassifierImpl(LNClassifier lnClassifier) {
-		this.weights = new int[]{2,1,0};
 		this.lnClassifier = lnClassifier;
 	}
 
@@ -62,19 +59,20 @@ public class LinkClassifierImpl implements LinkClassifier{
    * @return LinkRelevance[]
    * @throws LinkClassifierException
    */
-  public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
-	  LinkRelevance[] linkRelevance = null;
+  public LinkRelevance[] classify(Page page) throws LinkClassifierException {
+      LinkNeighborhood[] lns = page.getParsedData().getLinkNeighborhood();
+      LinkNeighborhood ln = null;
 	  try {
-		  LinkNeighborhood[] lns = page.getLinkNeighboor();
-		  linkRelevance = new LinkRelevance[lns.length];
+	      LinkRelevance[] linkRelevance = new LinkRelevance[lns.length];
 		  for (int i = 0; i < lns.length; i++) {
-			  linkRelevance[i] = classify(lns[i]);
+            ln = lns[i];
+            linkRelevance[i] = classify(ln);
 		  }
-	  }catch(Exception ex){
-		  ex.printStackTrace();
-		  throw new LinkClassifierException(ex.getMessage());
-	  }
-	  return linkRelevance;
+		  return linkRelevance;
+        } catch (Exception ex) {
+            throw new LinkClassifierException("Failed to classify link [" + ln.getLink().toString()
+                    + "] from page: " + page.getURL().toString(), ex);
+        }
   }
 
   public LinkRelevance classify(LinkNeighborhood ln) throws LinkClassifierException {
@@ -97,12 +95,8 @@ public class LinkClassifierImpl implements LinkClassifier{
 		  classificationResult = weights[classificationResult];
 		  double result = (classificationResult * intervalRandom) + probability ;  	
 		  linkRel = new LinkRelevance(ln.getLink(),result);
-	  }catch (MalformedURLException ex) {
-		  ex.printStackTrace();
-		  throw new LinkClassifierException(ex.getMessage());
-	  }catch (Exception ex) {
-		  ex.printStackTrace();
-		  throw new LinkClassifierException(ex.getMessage());
+	  } catch (Exception ex) {
+	      throw new LinkClassifierException("Failed to classify link: "+ln.getLink().toString(), ex);
 	  }
 	  return linkRel;
   }

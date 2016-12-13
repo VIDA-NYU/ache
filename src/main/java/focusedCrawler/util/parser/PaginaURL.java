@@ -26,21 +26,18 @@
 package focusedCrawler.util.parser;
 
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.StringTokenizer;
+import java.util.TreeSet;
 import java.util.Vector;
 
 import org.apache.commons.lang3.StringEscapeUtils;
@@ -48,34 +45,30 @@ import org.apache.commons.validator.routines.UrlValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.crawler.crawlercommons.filters.basic.BasicURLNormalizer;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.string.Acentos;
 import focusedCrawler.util.string.StopList;
-import focusedCrawler.util.string.StopListFile;
 
 
 public class PaginaURL {
     
     private static final String[] schemes = {"http","https"};
-    private static final UrlValidator urlValidator = new UrlValidator(schemes, UrlValidator.ALLOW_LOCAL_URLS);
+    private static final UrlValidator urlValidator = new UrlValidator(schemes);
     public static final Logger logger = LoggerFactory.getLogger(PaginaURL.class);
-
-    public long timeToParse = 0;
-    private int 			   maxPosValue = 0;
-    private int                notaDaImagem;
+    
+    private static final List<String> invalidParameters = Arrays.asList("sid","phpsessid","sessionid", "jsessionid");
+	private static final BasicURLNormalizer urlNormalizer = new BasicURLNormalizer(new TreeSet<>(invalidParameters), false);
+	
     private int                MAXPALAVRAS = -1;
     public static final int    MAX_PARAGRAPH_SIZE = 255;
     private URL                pagina = null;
-    private long               visitado = 0;
-    private long               modificado = 0;
-    private int                tamanho = 0;
     private String             titulo = "";
     private String             paragrafo = "";
     private String[]           palavras = new String[0];
     private int[]              ocorrencias = new int[0];
     private String[]           palavrasMeta = new String[0];
     private int[]              ocorrenciasMeta = new int[0];
-    private int                fileHashCode;
     private double             relevance = 0;
 
     /**
@@ -85,480 +78,41 @@ public class PaginaURL {
      * no texto acima a lista da palavra "um" seria <3,9>. <BR>
      * Os tipo do Hashtable sao String que mapeia um Vector de Integer.
      */
-    private Hashtable          palavra_posicoes = new Hashtable();
-    private Hashtable          palavra_pontos = new Hashtable();
-    private Hashtable          palavra_posicoes_meta = new Hashtable();
+    private Hashtable<String, Vector<Integer>> palavra_posicoes = new Hashtable<>();
+    private Hashtable<String, Integer> palavra_pontos = new Hashtable<>();
+    private Hashtable<String, Vector<Integer>> palavra_posicoes_meta = new Hashtable<>();
     private int                frames = 0;
     private int                forms = 0;
     private int                images = 0;
 
-    private transient Vector   texto = new Vector();
-    private transient Vector   textoMeta = new Vector();
+    private transient Vector<String> texto = new Vector<String>();
+    private transient Vector<String> textoMeta = new Vector<String>();
     private URL[]              URLabsolutas = null;
-    private Vector             links = new Vector();
-    private Vector             mailList =
-        new Vector();    // Vector de e-mails para o lights
+    private Vector<String>     links = new Vector<String>();
+    private Vector<String>     mailList = new Vector<String>();    // Vector de e-mails para o lights
     private boolean            noindex = false;
     private boolean            nofollow = false;
     public static boolean      USAR_DESCRIPTION = false;
     public static int          MAX_SIZE_HOST = 255;
 
-    // protected    Escopo meuEscopo = new EscopoWEB();
     private transient StopList stoplist;
     private boolean            ordenarTermos = true;
-
-    public void setRelevance(double relev){
-      this.relevance = relev;
-    }
-
-    public double getRelevance(){
-      return this.relevance;
-    }
-
-    /**
-     * O arquivo completo da pagina
-     */
-    private transient String   arquivo = "";
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public URL endereco() {
-        return pagina;
-    }
-
-    public URL getURL() {
-        return pagina;
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public Date dataQueFoiVisitado() {
-        return new Date(visitado);
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public Date dataQueFoiModificado() {
-        return new Date(modificado);
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public int tamanhoDoArquivo() {
-        return tamanho;
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public String titulo() {
-        return titulo;
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public String paragrafo() {
-        return paragrafo;
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public String[] palavras() {
-        return palavras;
-    }
-
-    public String palavras_to_string(){
-        if (palavras.length == 0)
-            return "";
-        String text = palavras[0];
-        for (int i = 1; i < palavras.length; i++) {
-            text = text + "  " + palavras[i];
-        }
-        return text;
-    }
-
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public int[] ocorrencias() {
-        return ocorrencias;
-    }
-
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public String[] palavrasMeta() {
-        return palavrasMeta;
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public int[] ocorrenciasMeta() {
-        return ocorrenciasMeta;
-    }
-
-
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public int numeroDeFrames() {
-        return frames;
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public int numeroDeFormularios() {
-        return forms;
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public int numeroDeImagens() {
-        return images;
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public Vector mails() {
-        return mailList;
-    }
-
     
-    
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    public URL[] links() {
-        if (URLabsolutas == null) {
-            URLabsolutas = new URL[links.size()];
-
-            for (int i = 0; i < links.size(); i++) {
-                try {
-                    URLabsolutas[i] = new URL(links.elementAt(i).toString());
-                } catch (Throwable t) {
-                }    // ignora
-             }
-        }
-
-        return URLabsolutas;
+    public PaginaURL(Page page) {
+        this(page.getURL(), page.getContentAsString());
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @param palavra
-     *
-     * @return
-     *
-     * @see
-     */
-    public Enumeration posicoes(String palavra) {
-        Vector v = (Vector) palavra_posicoes.get(palavra);
-
-        if (v != null) {
-            return v.elements();
-        } else {
-            return null;
-        }
-    }
-
-    /**
-     * Fornece todos o atributos da pagina ja em formato HTML
-     */
-    public String toString() {
-        String str = "<p>" + "<a href=\"" + pagina.toExternalForm().trim()
-                     + "\">" + titulo + "</a>    " + paragrafo + "<p>"
-                     + " Lista de palavras:    " + this.listapalavras()
-                     + "<p>" + " Lista de links:    " + this.listalinks()
-                     + "<p>" + " Lista de e-mails :    " + this.listamails()
-                     + "<p>" + " N\uFFFD de frames  =  " + frames
-                     + ",    N\uFFFD de formularios  =  " + forms
-                     + ",    N\uFFFD de imagens  =  " + images + "<p>"
-                     + " Visitado  =  " + new Date(visitado)
-                     + ",    modificado  =  " + new Date(modificado)
-                     + ",    tamanho  =  " + tamanho;
-
-        return str;
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    private String listapalavras() {
-        if (palavras == null) {
-            return null;
-        }
-
-        String t1 = "";
-
-        for (int i = 0; i < palavras.length; i++) {
-            t1 = t1 + "  " + palavras[i] + "[" + ocorrencias[i] + "], ";
-        }
-
-        return t1;
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    private String listalinks() {
-        if (URLabsolutas == null) {
-            return null;
-        }
-
-        String t1 = "";
-
-        for (int i = 0; i < URLabsolutas.length; i++) {
-            t1 = t1 + ",  " + URLabsolutas[i].toString().trim();
-        }
-
-        return t1;
-    }
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @return
-     *
-     * @see
-     */
-    private String listamails() {
-        if (mailList == null) {
-            return null;
-        }
-
-        String t1 = "";
-
-        for (int i = 0; i < mailList.size(); i++) {
-            t1 = t1 + ",  " + mailList.elementAt(i);
-        }
-
-        return t1;
-    }
-    
     public PaginaURL(URL url, String content) {
-        this(url,content,null);
+        this(url, content, null);
     }
-    
+
     public PaginaURL(URL url, String content, StopList stoplist) {
-        this(url,0,0,content.length(),content,stoplist);
-    }
-    
-    public PaginaURL(Page page){
-        this(page.getURL(),page.getContent());
+        this(url, content, false, false, -1, stoplist);
     }
 
-    /**
-     * Construtor que recebe como parametro uma String
-     * @param     strurl    String que representa a URL a ser avaliada.
-     * @param     stoplist  o Stoplist
-     * @exception  IOException Caso haja problemas com a conexao ou de manipulacao de Streams.
-     * @exception  MalformedURLException  Caso a string srturl represente uma URL mal formada.
-     */
-    public PaginaURL(String strurl, StopList stoplist)
-            throws IOException, MalformedURLException {
-        this(new java.net.URL(strurl), stoplist);
-    }
+    public PaginaURL(URL url, String arquivo, boolean noindex, boolean nofollow,
+                     int max, StopList stoplist) {
 
-    public PaginaURL(URL url, StopList stoplist) throws IOException {
-        this(url, url.openConnection(), stoplist);
-    }
-
-    /**
-     * Construtor que nao esta sujeito a Exceptions, e possui parametros bem
-     * definidos.
-     * @param      url      URL a ser visitada
-     * @param      vist     Data em que o documento foi visitado
-     * @param      mod      Data em que foi modificado
-     * @param      tam      Tamanho do arquivo
-     * @param      arquivo  String que representa todo o arquivo
-     * @param      escopo   o escopo da pagina
-     */
-
-    /*
-     * public PaginaURL(URL url,long vist,long mod,int tam,String arquivo,Escopo escopo) {
-     * this(url,vist,mod,tam,arquivo,false,false,escopo);
-     * }
-     */
-
-    /**
-     * Construtor que nao esta sujeito a Exceptions, e possui parametros bem
-     * definidos.
-     * @param      url      URL a ser visitada
-     * @param      vist     Data em que o documento foi visitado
-     * @param      mod      Data em que foi modificado
-     * @param      tam      Tamanho do arquivo
-     * @param      arquivo  String que representa todo o arquivo
-     * @param      noindex  true para nao processar o texto da pagina
-     * @param      nofollow true para nao criar lista de links
-     * @param      escopo   o escopo da pagina
-     */
-
-    /*
-     * public PaginaURL(URL url,long vist,long mod,int tam,String arquivo,boolean noindex, boolean nofollow,Escopo escopo) {
-     * this(url,vist,mod,tam,arquivo,false,false,escopo,-1);
-     * }
-     */
-
-    /**
-     * Construtor que nao esta sujeito a Exceptions, e possui parametros bem
-     * definidos.
-     * @param      url      URL a ser visitada
-     * @param      vist     Data em que o documento foi visitado
-     * @param      mod      Data em que foi modificado
-     * @param      tam      Tamanho do arquivo
-     * @param      arquivo  String que representa todo o arquivo
-     * @param      noindex  true para nao processar o texto da pagina
-     * @param      nofollow true para nao criar lista de links
-     * @param      escopo   o escopo da pagina
-     * @param      max      o tamanho maximo do centroide
-     */
-
-    /*
-     * public PaginaURL(URL url,long vist,long mod,int tam,String arquivo,boolean noindex, boolean nofollow,Escopo escopo, int max) {
-     * this(url,vist,mod,tam,arquivo,noindex,nofollow,escopo,max,new StopListArquivo());
-     * }
-     */
-
-    /**
-     * Construtor que nao esta sujeito a Exceptions, e possui parametros bem
-     * definidos.
-     * @param      url      URL a ser visitada
-     * @param      vist     Data em que o documento foi visitado
-     * @param      mod      Data em que foi modificado
-     * @param      tam      Tamanho do arquivo
-     * @param      arquivo  String que representa todo o arquivo
-     * @param      escopo   o escopo da pagina
-     * @param      max      o tamanho maximo do centroide
-     * @param      stoplist o stoplist
-     */
-    public PaginaURL(URL url, long vist, long mod, int tam,
-                         String arquivo, StopList stoplist) {
-
-        // public PaginaURL(URL url,long vist,long mod,int tam,String arquivo,Escopo escopo,StopList stoplist) {
-        this(url, vist, mod, tam, arquivo, false, false, -1, stoplist);
-    }
-
-    /**
-     * Construtor que nao esta sujeito a Exceptions, e possui parametros bem
-     * definidos.
-     * @param      url      URL a ser visitada
-     * @param      vist     Data em que o documento foi visitado
-     * @param      mod      Data em que foi modificado
-     * @param      tam      Tamanho do arquivo
-     * @param      arquivo  String que representa todo o arquivo
-     * @param      noindex  true para nao processar o texto da pagina
-     * @param      nofollow true para nao criar lista de links
-     * @param      escopo   o escopo da pagina
-     * @param      max      o tamanho maximo do centroide
-     * @param      stoplist o stoplist da pagina
-     */
-    public PaginaURL(URL url, long vist, long mod, int tam,
-                         String arquivo, boolean noindex, boolean nofollow,
-                         int max, StopList stoplist) {
-
-        // public PaginaURL(URL url,long vist,long mod,int tam,String arquivo,boolean noindex, boolean nofollow,Escopo escopo, int max, StopList stoplist) {
-        // meuEscopo = escopo;
         if (max > 0) {
             MAXPALAVRAS = max;
         } else {
@@ -566,245 +120,130 @@ public class PaginaURL {
         }
 
         pagina = url;
-        visitado = vist;
-        modificado = mod;
-        tamanho = tam;
         this.noindex = noindex;
         this.nofollow = nofollow;
         this.stoplist = stoplist;
-        this.arquivo = arquivo;
-
-        // if(!arquivo.equals("")) separadorTextoCodigo(new StringBuffer(arquivo));
-        if (!arquivo.equals("")) {
-            long t1 = System.currentTimeMillis();
-            separadorTextoCodigo(arquivo);
-            timeToParse = (System.currentTimeMillis() -t1);
-
-            // heuristicaImagem();
-            // System.runFinalizersOnExit(true);
-        }
-    }
-
-    public PaginaURL(URL url, URLConnection conexao, StopList sl) throws IOException {
-        this(url, conexao, -1, sl);
-    }
-
-    public PaginaURL(URL url, URLConnection conexao,
-                         int max, StopList sl) throws IOException {
-        this(url, conexao.getDate(), conexao.getLastModified(),
-             conexao.getContentLength(), conexao.getInputStream(), max,
-             sl);
-
-//        System.out.println("CONEXAO: RESPONSE CODE = " + ((HttpURLConnection) conexao).getResponseCode());
-
-        URL url_final = ((HttpURLConnection) conexao).getURL();
-
-//        System.out.println("CONEXAO: GET URL       = " + url_final);
-
-//        if (!url_final.equals(url)) {
-//            System.out.println("A URL '" + url + "' foi redirecionada para '" + url_final + "'");
-//        } else {
-//            System.out.println("URL OK");
-//        }
-
-        ((HttpURLConnection) conexao).disconnect();
-    }
-
-    /**
-     * Construtor que recebe uma URL, uma URLConnection e um InputStream
-     * @param      url       URL a ser avaliada
-     * @param      vist      Data em que o documento foi visitado
-     * @param      mod       Data em que foi modificado
-     * @param      tam       Tamanho do arquivo
-     * @param      file      o inputstream do arquivo
-     * @param      max       o tamanho maximo do centroide
-     * @param      stoplist o stoplist da pagina
-     * @exception  IOException caso haja problemas com a conexao ou de manipulacao de Streams.
-     */
-    public PaginaURL(URL url, long vis, long mod, int tam,
-                         InputStream file, int max) throws IOException {
-        this(url, vis, mod, tam, file, max, null);
-    }
-
-    /**
-     * Construtor que recebe uma URL, uma URLConnection e um InputStream
-     * @param      url       URL a ser avaliada
-     * @param      vist      Data em que o documento foi visitado
-     * @param      mod       Data em que foi modificado
-     * @param      tam       Tamanho do arquivo
-     * @param      file      o inputstream do arquivo
-     * @param      max       o tamanho maximo do centroide
-     * @param      stoplist o stoplist da pagina
-     * @exception  IOException caso haja problemas com a conexao ou de manipulacao de Streams.
-     */
-    public PaginaURL(URL url, long vis, long mod, int tam,
-                         InputStream file, int max,
-                         StopList stoplist) throws IOException {
-        // super(url,vis,mod,tam,file,max,stoplist);
-        if (max > 0) {
-            MAXPALAVRAS = max;
-        } else {
-            MAXPALAVRAS = -1;
-        }
-
-        pagina = url;
-        visitado = vis;
-        modificado = mod;
-        tamanho = tam;
-
-        // StringBuffer arquivo =  converteArquivo(file);
-        String arquivo = converteArquivo(file);
-
-        this.arquivo = arquivo;
-        this.stoplist = stoplist;
 
         if (!arquivo.equals("")) {
-            long t1 = System.currentTimeMillis();
             separadorTextoCodigo(arquivo);
-            timeToParse = (System.currentTimeMillis() -t1);
-
-            // heuristicaImagem();
-            // System.runFinalizersOnExit(true);
         }
     }
 
-    private void loadHashCodes(){
-    	codes.put("&#1040;","Ãï¿½");codes.put("&#1072;","ÃÂ°");codes.put("&#1041;","Ãâ");codes.put("&#1073;","ÃÂ±");codes.put("&#1042;","Ãâ");
-    	codes.put("&#1074;","ÃÂ²");codes.put("&#1043;","Ãâ");codes.put("&#1075;","ÃÂ³");codes.put("&#1044;","Ãâ");codes.put("&#1076;","ÃÂ´");
-    	codes.put("&#1045;","Ãâ¢");codes.put("&#1077;","ÃÂµ");codes.put("&#1046;","Ãâ");codes.put("&#1078;","ÃÂ¶");codes.put("&#1047;","Ãâ");
-    	codes.put("&#1079;","ÃÂ·");codes.put("&#1048;","ÃË");codes.put("&#1080;","ÃÂ¸");codes.put("&#1049;","Ãâ¢");codes.put("&#1081;","ÃÂ¹");
-    	codes.put("&#1050;","ÃÅ¡");codes.put("&#1082;","ÃÂº");codes.put("&#1051;","Ãâº");codes.put("&#1083;","ÃÂ»");codes.put("&#1052;","ÃÅ");
-    	codes.put("&#1084;","ÃÂ¼");codes.put("&#1053;","Ãï¿½");codes.put("&#1085;","ÃÂ½");codes.put("&#1054;","ÃÅ¾");codes.put("&#1086;","ÃÂ¾");
-    	codes.put("&#1055;","ÃÅ¸");codes.put("&#1087;","ÃÂ¿");codes.put("&#1056;","ÃÂ ");codes.put("&#1088;","Ãâ¬");codes.put("&#1057;","ÃÂ¡");
-    	codes.put("&#1089;","Ãï¿½");codes.put("&#1058;","ÃÂ¢");codes.put("&#1090;","Ãâ");codes.put("&#1059;","ÃÂ£");codes.put("&#1091;","ÃÆ");
-    	codes.put("&#1060;","ÃÂ¤");codes.put("&#1092;","Ãâ");codes.put("&#1061;","ÃÂ¥");codes.put("&#1093;","Ãâ¦");codes.put("&#1062;","ÃÂ¦");
-    	codes.put("&#1094;","Ãâ ");codes.put("&#1063;","ÃÂ§");codes.put("&#1095;","Ãâ¡");codes.put("&#1064;","ÃÂ¨");codes.put("&#1096;","ÃË");
-    	codes.put("&#1065;","ÃÂ©");codes.put("&#1097;","Ãâ°");codes.put("&#1066;","ÃÂª");codes.put("&#1098;","ÃÅ ");codes.put("&#1067;","ÃÂ«");
-    	codes.put("&#1099;","Ãâ¹");codes.put("&#1068;","ÃÂ¬");codes.put("&#1100;","ÃÅ");codes.put("&#1069;","ÃÂ­");codes.put("&#1101;","Ãï¿½");
-    	codes.put("&#1070;","ÃÂ®");codes.put("&#1102;","ÃÅ½");codes.put("&#1071;","ÃÂ¯");codes.put("&#1103;","Ãï¿½");
-
-    }
-    
-    /**
-     * Converte um InputStream, para uma String.
-     * @param      in      ImputStream a ser convertido
-     * @return     a String correspondente a in
-     * @exception  IOException
-     */
-
-    // private StringBuffer converteArquivo(InputStream in) throws IOException {
-    private String converteArquivo(InputStream in) throws IOException {
-
-        /*
-         * StringBuffer arquivo = new StringBuffer();
-         * int i;
-         * try {
-         * while ((i = in.read()) != -1) {
-         * arquivo.append((char)i);
-         * }
-         * } catch(IOException ioe) {
-         * in.close();
-         * throw ioe;
-         * }
-         * in.close();
-         * return arquivo;
-         * }
-         */
-
-        // System.out.println("CONVERTENDO O ARQUIVO "+endereco());
-        StringBuffer   arquivo = new StringBuffer();
-        BufferedReader bin = new BufferedReader(new InputStreamReader(in));
-        String         inputLine;
-
-        try {
-            while ((inputLine = bin.readLine()) != null) {
-                arquivo.append(inputLine).append("\n");
-            }
-        } catch (IOException ioe) {
-            bin.close();
-
-            throw ioe;
-        }
-
-        bin.close();
-
-        // System.out.println("ARQUIVO "+endereco()+" CONVERTIDO");
-        // return arquivo;
-//        System.out.println(arquivo.toString());
-//        FileOutputStream fout = new FileOutputStream("/home/lbarbosa/parallel_corpus/pc_crawler/tst1");
-//        Writer out = new OutputStreamWriter(fout, "UTF8");
-//        out.write(arquivo.toString());
-//        out.close();
-        return arquivo.toString();
-    }
-
-    /*
-     * String result = null;
-     * try {
-     * int tamanho = in.available();
-     * byte[] file = new byte[tamanho];
-     * in.read(file);
-     * result = new String(file);
-     * } catch(IOException ioe) {
-     * in.close();
-     * throw ioe;
-     * }
-     * in.close();
-     * return new StringBuffer(result);
-     * }
-     */
+	private void loadHashCodes() {
+		codes.put("&#1040;", "Ãï¿½");
+		codes.put("&#1072;", "ÃÂ°");
+		codes.put("&#1041;", "Ãâ");
+		codes.put("&#1073;", "ÃÂ±");
+		codes.put("&#1042;", "Ãâ");
+		codes.put("&#1074;", "ÃÂ²");
+		codes.put("&#1043;", "Ãâ");
+		codes.put("&#1075;", "ÃÂ³");
+		codes.put("&#1044;", "Ãâ");
+		codes.put("&#1076;", "ÃÂ´");
+		codes.put("&#1045;", "Ãâ¢");
+		codes.put("&#1077;", "ÃÂµ");
+		codes.put("&#1046;", "Ãâ");
+		codes.put("&#1078;", "ÃÂ¶");
+		codes.put("&#1047;", "Ãâ");
+		codes.put("&#1079;", "ÃÂ·");
+		codes.put("&#1048;", "ÃË");
+		codes.put("&#1080;", "ÃÂ¸");
+		codes.put("&#1049;", "Ãâ¢");
+		codes.put("&#1081;", "ÃÂ¹");
+		codes.put("&#1050;", "ÃÅ¡");
+		codes.put("&#1082;", "ÃÂº");
+		codes.put("&#1051;", "Ãâº");
+		codes.put("&#1083;", "ÃÂ»");
+		codes.put("&#1052;", "ÃÅ");
+		codes.put("&#1084;", "ÃÂ¼");
+		codes.put("&#1053;", "Ãï¿½");
+		codes.put("&#1085;", "ÃÂ½");
+		codes.put("&#1054;", "ÃÅ¾");
+		codes.put("&#1086;", "ÃÂ¾");
+		codes.put("&#1055;", "ÃÅ¸");
+		codes.put("&#1087;", "ÃÂ¿");
+		codes.put("&#1056;", "ÃÂ ");
+		codes.put("&#1088;", "Ãâ¬");
+		codes.put("&#1057;", "ÃÂ¡");
+		codes.put("&#1089;", "Ãï¿½");
+		codes.put("&#1058;", "ÃÂ¢");
+		codes.put("&#1090;", "Ãâ");
+		codes.put("&#1059;", "ÃÂ£");
+		codes.put("&#1091;", "ÃÆ");
+		codes.put("&#1060;", "ÃÂ¤");
+		codes.put("&#1092;", "Ãâ");
+		codes.put("&#1061;", "ÃÂ¥");
+		codes.put("&#1093;", "Ãâ¦");
+		codes.put("&#1062;", "ÃÂ¦");
+		codes.put("&#1094;", "Ãâ ");
+		codes.put("&#1063;", "ÃÂ§");
+		codes.put("&#1095;", "Ãâ¡");
+		codes.put("&#1064;", "ÃÂ¨");
+		codes.put("&#1096;", "ÃË");
+		codes.put("&#1065;", "ÃÂ©");
+		codes.put("&#1097;", "Ãâ°");
+		codes.put("&#1066;", "ÃÂª");
+		codes.put("&#1098;", "ÃÅ ");
+		codes.put("&#1067;", "ÃÂ«");
+		codes.put("&#1099;", "Ãâ¹");
+		codes.put("&#1068;", "ÃÂ¬");
+		codes.put("&#1100;", "ÃÅ");
+		codes.put("&#1069;", "ÃÂ­");
+		codes.put("&#1101;", "Ãï¿½");
+		codes.put("&#1070;", "ÃÂ®");
+		codes.put("&#1102;", "ÃÅ½");
+		codes.put("&#1071;", "ÃÂ¯");
+		codes.put("&#1103;", "Ãï¿½");
+	}
 
     private boolean filterURL = false;
-
-    private Vector around = new Vector();
-    private Vector linkNeigh = new Vector();
-
-    public void setFilterWorsOfURLs(boolean filterURL){
-      this.filterURL = filterURL;
-    }
-
-    public LinkNeighborhood[] getLinkNeighboor(){
-      HashSet<String> unique = new HashSet<String>();
-      Vector<LinkNeighborhood> tempLN = new Vector<LinkNeighborhood>();
-      for (int i = 0; i < linkNeigh.size(); i++) {
-        LinkNeighborhood ln = (LinkNeighborhood)linkNeigh.elementAt(i);
-        String id = ln.getAnchorString() + ln.getLink().toString()+ln.getAroundString();
-        if(!unique.contains(id)){
-        	unique.add(id);
-            int pointer = ln.getAroundPosition();
-            Vector aroundTemp = new Vector();
-            for (int j = pointer - (10 + ln.getNumWordsAnchor()); j < pointer + 10; j++) {
-              if(j >=0 && j <around.size() && (j < pointer - ln.getNumWordsAnchor() || j > pointer-1)){
-                aroundTemp.add(((String)around.elementAt(j)).toLowerCase());
-              }
-            }
-            String[] around = new String[aroundTemp.size()];
-            aroundTemp.toArray(around);
-            ln.setAround(around);
-            if(getURL().getHost().equals(ln.getLink().getHost())){
-            	ln.setSameSite(true);
-            }
-            tempLN.add(ln);
-        }
-      }
-      LinkNeighborhood[] lns = new LinkNeighborhood[tempLN.size()];
-      tempLN.toArray(lns);
-      return lns;
-    }
-
+    private ArrayList<String> around = new ArrayList<String>();
+    private ArrayList<LinkNeighborhood> linkNeigh = new ArrayList<LinkNeighborhood>();
+    private ArrayList<String>  imagens = new ArrayList<String>();
     
-    private Vector  imagens = new Vector();
+
+    public synchronized LinkNeighborhood[] getLinkNeighboor() {
+        HashSet<String> unique = new HashSet<String>();
+
+        Vector<LinkNeighborhood> tempLN = new Vector<LinkNeighborhood>();
+        for (int i = 0; i < linkNeigh.size(); i++) {
+            LinkNeighborhood ln = linkNeigh.get(i);
+
+            String id = ln.getAnchorString() + ln.getLink().toString() + ln.getAroundString();
+            if (!unique.contains(id)) {
+                unique.add(id);
+
+                int pointer = ln.getAroundPosition();
+                Vector<String> aroundTemp = new Vector<String>();
+                for (int j = pointer - (10 + ln.getNumWordsAnchor()); j < pointer + 10; j++) {
+                    if (j >= 0 && j < around.size() && (j < pointer - ln.getNumWordsAnchor() || j > pointer - 1)) {
+                        aroundTemp.add(around.get(j).toLowerCase());
+                    }
+                }
+                
+                String[] around = new String[aroundTemp.size()];
+                aroundTemp.toArray(around);
+                ln.setAround(around);
+                
+                if (getURL().getHost().equals(ln.getLink().getHost())) {
+                    ln.setSameSite(true);
+                }
+                tempLN.add(ln);
+            }
+        }
+        LinkNeighborhood[] lns = new LinkNeighborhood[tempLN.size()];
+        tempLN.toArray(lns);
+        return lns;
+    }
     
     protected void separadorTextoCodigo(String arquivo) {    // arquivo equivale ao codigo HTML da pagina
         if(codes.size() == 0){
         	loadHashCodes();	
         }
     	
-//    	System.out.println(arquivo);	
         boolean obj_isRDF = false;
         boolean ignorar_espacos = true;
         boolean tag_tipo_fim = false;
-        boolean tag_tipo_vazia = true;
         boolean em_script = false;
         boolean ehInicioALT = true;
         boolean em_titulo = false;
@@ -819,7 +258,6 @@ public class PaginaURL {
         int     PONTUACAO_PALAVRAS_DESCRIPTION = 5;
         int     PONTUACAO_PALAVRAS_ALT         = 1;
         int    posicao_da_palavra 			   = 1;
-        int numOfHtmlTags = 0;
 
         // UTILIZANDO AS PALAVRAS DA URL COMO INFORMACAO TEXTUAL
         if (pagina != null && !filterURL) {
@@ -867,7 +305,7 @@ public class PaginaURL {
         char    quote_char = '\0';
         URL     base = pagina;    // pagina = URL da pagina atual...
 
-        Vector  frames = new Vector();
+        Vector<String>  frames = new Vector<String>();
         char    c = '\0';
         char    ant1 = '\0';
         char    ant2 = '\0';
@@ -879,15 +317,12 @@ public class PaginaURL {
 
         LinkNeighborhood ln = null;
         String  tagName = "";
-        String lastTag = "";
         String  atributo = "";
 
         boolean insideATag = false;
 
         boolean em_meta_description = false; // thiago
         String  str_da_metatag_description = null; // thiago
-
-
 
         final int INICIO = 1;
         final int TAG_NAME = 2;
@@ -903,22 +338,6 @@ public class PaginaURL {
 
         try {
 
-//          FileOutputStream fout = null;
-//          DataOutputStream dout = null;
-            //System.out.println("FORM!!! : " + form.getURL());
-//            try {
-//              fout = new FileOutputStream("/home/lbarbosa/test");
-//               dout = new DataOutputStream( fout );
-//              dout.writeBytes("begin");
-//
-//            }
-//            catch (FileNotFoundException ex) {
-//              ex.printStackTrace();
-//                 }
-//            catch (IOException ex) {
-//              ex.printStackTrace();
-//         }
-
             while (n < arquivo.length()) {
                 if (n_anterior < n) {                       /* we advanced a character */
                     ant1 = ant2;
@@ -927,16 +346,7 @@ public class PaginaURL {
 
                 n_anterior = n;
                 c = arquivo.charAt(n);
-//                System.out.print(c+"");
-//                int ascii = (int) c;
-//                System.out.print(ascii);
-//                System.out.println("");
-//                dout.writeBytes(c+"");
-//                dout.flush();
-//                if(c=='\u0000'){
-//                	organizaDados();
-//                	return;
-//                }
+                
                 if (em_comentario && num_comentario > 0) {
                     if ((ant1 == '-') && (ant2 == '-') || (c == '>')) {
                         num_comentario--;
@@ -977,13 +387,10 @@ public class PaginaURL {
                         break;
 
                     case TOKEN_PALAVRA:
-//                    	if(str.contains("1044")){
-//                    		System.out.println("TEST");
-//                    	}
                         /* faz o token da string */
                         if ((caracterFazParteDePalavra(c)) || (c == ';')
                                 || (c == '&')) {
-                            str += converteChar(c);
+                            str += c;
                             n++;
                             int begin = str.indexOf("&#");
                             int end = str.indexOf(";");
@@ -994,7 +401,6 @@ public class PaginaURL {
         							char uni = (char)hex;
         							String unicode =  uni + "";
         							str = str.substring(0,begin) + unicode;
-//        							System.out.println(unicode);
                                 	pos_caracter_especial = -1;
                                 	continue;
 								} catch (Exception e) {
@@ -1014,7 +420,6 @@ public class PaginaURL {
                             if (c == '&') {
                                 pos_caracter_especial = n;
                             } else   
-//                            	System.out.println(str + ":" + pos_caracter_especial);
                             	if (pos_caracter_especial != -1) {
                                 int  posicao = str.length()
                                                - (n - pos_caracter_especial)
@@ -1024,7 +429,7 @@ public class PaginaURL {
                                 if (ch != '\0') {
                                     if (caracterFazParteDePalavra(ch)) {
                                         str = str.substring(0, posicao)
-                                              + converteChar(ch);
+                                              + ch;
                                     } else {
                                         str = str.substring(0, posicao);
                                         estado = PALAVRA;
@@ -1061,14 +466,12 @@ public class PaginaURL {
 
 
                     case PALAVRA:
-//                      System.out.println("PALAVRA:"+lastTag);
                       if(insideATag){
                         anchor = anchor + " " + str.toLowerCase();
 
                         numOfwordsAnchor++;
 //                                                  insideATag = false;
 
-//                          System.out.println("ANCHOR:"+anchor);
                       }
 //                      if(anchor.indexOf("school") != -1){
 //                        System.out.println("TEST");
@@ -1191,7 +594,6 @@ public class PaginaURL {
                                             true;    /* indicates end tag if no tag name read yet */
                                     } else if (obj_isRDF) {    /* otherwise its an empty tag (RDF only) */
                                         fimDeString = true;
-                                        tag_tipo_vazia = true;
                                         estado = FECHANDO;
                                     } 
 //                                    else {
@@ -1218,7 +620,6 @@ public class PaginaURL {
                                 }
 
                                 if (fimDeString) {
-                                    //if (str.equals("!--")) {    /* html comment */
                                     if (str.startsWith("!--")) {    /* html comment */
                                         em_comentario = true;
                                         num_comentario++;
@@ -1231,16 +632,10 @@ public class PaginaURL {
                                         tagOption = str.equals("option");
                                         if(tagName.equals("html")){
                                         	if(!tag_tipo_fim){
-                                            	numOfHtmlTags++;
                                         	}else{
-                                        		numOfHtmlTags--;
                                         	}
-//                                        	System.out.println(">>>>>>>>>>>>>" + numOfHtmlTags);
                                         }
                                         	
-                                        //if (tagTitulo) {
-                                        //    System.out.println("achot tag titulo " + str);
-                                        //}
                                         tagScript = str.equals("script") || str.equals("style");
 
                                         if (str.equals("form")) {
@@ -1251,8 +646,6 @@ public class PaginaURL {
                                     str = "";
                                     fimDeString = false;
                                 }
-
-                                // System.out.println("A STRING DO ATRIBUTO EH: " + str + " estado novo "+ estado);
                             }
                         }
                         break;
@@ -1270,20 +663,7 @@ public class PaginaURL {
 
                           insideATag = false;
                           if(ln!=null){
-                            Vector anchorTemp = new Vector();
-                            //System.out.println("URL---"+ln.getLink());
-                            //System.out.println("ANC---"+anchor);
-                            StringTokenizer tokenizer = new StringTokenizer(anchor," ");
-                            while(tokenizer.hasMoreTokens()){
-                              anchorTemp.add(tokenizer.nextToken());
-                            }
-                            String[] anchorArray = new String[anchorTemp.size()];
-                            anchorTemp.toArray(anchorArray);
-                            ln.setAnchor(anchorArray);
-                            ln.setAroundPosition(around.size());
-                            ln.setNumberOfWordsAnchor(numOfwordsAnchor);
-                            linkNeigh.add(ln.clone());
-//                            anchor = "";
+                            addLinkNeighborhood(ln, anchor, numOfwordsAnchor);
                             ln = null;
                           }
                           anchor = "";
@@ -1291,27 +671,19 @@ public class PaginaURL {
                         // System.out.println("Entrei em fechando");
                         if (c == '>') {
                             if (tagScript) {
-
                                 /* we're inside a script tag (not RDF) */
                                 em_script = !tag_tipo_fim;
                             }
 
                             if (tagTitulo) {
                                 em_titulo = !tag_tipo_fim;
-                                //System.out.println("EM tag titulo " + str + ", em_titulo"+ em_titulo);
-                                //System.out.println("EM tag titulo " + str + ", tag_tipo_fim"+ tag_tipo_fim);
-                                //System.out.println("EM tag titulo " + str + ", tagTitulo"+ tagTitulo);
                             }
 
                             if (tagBody) {
                                 em_body = !tag_tipo_fim;
-
-                                // System.out.println("Entrei no estado inicial");
                             }
                             if (tagOption) {
                                 em_option = !tag_tipo_fim;
-
-                                // System.out.println("Entrei no estado inicial");
                             }
 //                            if(tag_tipo_fim && tagName.equals("html") && numOfHtmlTags == 0){
 //                                organizaDados();
@@ -1366,7 +738,6 @@ public class PaginaURL {
                                 atributo = str;
                                 str = "";
                                 estado = IGUAL;
-//System.out.println("[ATRIBUTO c='"+c+"', estado=IGUAL], atributo="+atributo);
                                 /* if non-null attribute name */
                             } else {
                                 str += c;
@@ -1382,17 +753,6 @@ public class PaginaURL {
                     case IGUAL:
                         atributo = atributo.toLowerCase();
                         tagName = tagName.toLowerCase();
-
-                        // System.out.println("------------------------------------");
-                        // System.out.println(" A TAG NAME EH: " + tagName);
-                        // if(atributo.equals("src") && tagName.equals("img") && (c == '='))
-                        // {
-                        // ignorar_espacos = true;
-                        // estado = IMAGEM;
-                        // n++;
-                        // }
-                        // else
-                        // {
 /****
                         if (atributo.equals("content")
                                 && tagName.equals("meta") && (c == '=')) {
@@ -1420,21 +780,15 @@ public class PaginaURL {
 
                                 // estado = ATRIBUTO;
                                 if (c == '>') {
-                                    // System.out.println("Entrei aqui no MENOR QUE");
                                     tagScript = false;
                                     tagBody = false;
                                     tagTitulo = false;
                                     estado = FECHANDO;
                                 } else {
                                     ignorar_espacos = true;
-
-                                    // System.out.println("Entrei PARA ANDAR NA LINHA");
                                     n++;
                                 }
                             }
-//                        }
-
-                        // }
                         break;
 
                     case ALT_TAG: // nao usa mais, foi mudado, ver no estado VALOR 
@@ -1579,22 +933,12 @@ public class PaginaURL {
                                   //System.out.println("----URL:"+urlTemp);
                                   if(urlTemp!= null && urlTemp.startsWith("http")){
                                 	  if(ln!=null){
-                                		  Vector anchorTemp = new Vector();
-                                		  StringTokenizer tokenizer = new StringTokenizer(anchor," ");
-                                		  while(tokenizer.hasMoreTokens()){
-                                			  anchorTemp.add(tokenizer.nextToken());
-                                		  }
-                                		  String[] anchorArray = new String[anchorTemp.size()];
-                                		  anchorTemp.toArray(anchorArray);
-                                		  ln.setAnchor(anchorArray);
-                                		  ln.setAroundPosition(around.size());
-                                		  ln.setNumberOfWordsAnchor(numOfwordsAnchor);
-                                		  linkNeigh.add(ln.clone());
+                                		  addLinkNeighborhood(ln, anchor, numOfwordsAnchor);
                                 		  anchor = "";
                                 		  ln = null;
                                 	  }
                                 	  try {
-                                	  ln = new LinkNeighborhood(new URL(urlTemp));
+                                	      ln = new LinkNeighborhood(new URL(urlTemp));
                                 	  } catch (Exception e) {
                                 	      // Ignoring Exception on purpose since the URL in page is not proper
                                 	  }
@@ -1604,7 +948,11 @@ public class PaginaURL {
                                        && atributo.equals("href")) {
                                 String urlTemp = adicionaLink(str, base);
                                 if(urlTemp!= null && urlTemp.startsWith("http")){
-                                  ln = new LinkNeighborhood(new URL(urlTemp));
+                                    try {
+                                        ln = new LinkNeighborhood(new URL(urlTemp));
+                                    } catch (Exception e) {
+                                        // Ignoring Exception on purpose since the URL in page is not proper
+                                    }
                                 }
 //                                System.out.println("CREATE LINK:"  + urlTemp);
                             } else if (tagName.equals("area")
@@ -1620,7 +968,7 @@ public class PaginaURL {
                             		ln.setImgSource(str);
                             	}
                             	try {
-                            		imagens.addElement(parseLink(base,str).toString());	
+                            		imagens.add(parseLink(base,str).toString());	
 								} catch (Exception e) {
 									// TODO: handle exception
 								}
@@ -1708,7 +1056,6 @@ public class PaginaURL {
                                         StringTokenizer st = new StringTokenizer(str);
                                         while(st.hasMoreTokens()) {
                                             String token = st.nextToken();
-                                            int posicao = texto.size();
                                             boolean adicionou = adicionaAoVetorDeTexto(token);
                                             if( adicionou ) {
                                                 adicionaTermoPosicao(token,posicao_da_palavra);    // atualiza o centroide
@@ -1807,6 +1154,25 @@ public class PaginaURL {
 
     }
 
+    private void addLinkNeighborhood(LinkNeighborhood ln, String anchor, int numOfwordsAnchor) {
+        String[] anchorArray = tokenizeAnchorText(anchor);
+        
+        ln.setAnchor(anchorArray);
+        ln.setAroundPosition(around.size());
+        ln.setNumberOfWordsAnchor(numOfwordsAnchor);
+        
+        linkNeigh.add(ln.clone());
+    }
+
+    private String[] tokenizeAnchorText(String anchor) {
+        ArrayList<String> anchorTemp = new ArrayList<String>();
+        StringTokenizer tokenizer = new StringTokenizer(anchor," ");
+        while(tokenizer.hasMoreTokens()){
+          anchorTemp.add(tokenizer.nextToken());
+        }
+        return (String[]) anchorTemp.toArray(new String[anchorTemp.size()]);
+    }
+
     /**
      * Declara\uFFFD\uFFFDo do M\uFFFDtodo
      *
@@ -1827,7 +1193,7 @@ public class PaginaURL {
         int[]    numbersMeta = new int[sizeMeta];
         int	i = 0;
 
-        for (Enumeration seriewords = palavra_pontos.keys();
+        for (Enumeration<String> seriewords = palavra_pontos.keys();
                 seriewords.hasMoreElements(); ) {
             words[i] = ((String) seriewords.nextElement());
             i++;
@@ -1835,26 +1201,26 @@ public class PaginaURL {
 
         i = 0;
 
-        for (Enumeration serienumbers = palavra_pontos.elements();
+        for (Enumeration<Integer> serienumbers = palavra_pontos.elements();
                 serienumbers.hasMoreElements(); ) {
             //numbers[i] = ((Vector) serienumbers.nextElement()).size();
-            numbers[i] = ((Integer) serienumbers.nextElement()).intValue();
+            numbers[i] = serienumbers.nextElement().intValue();
             i++;
         }
 
         i = 0;
 
-        for (Enumeration seriewordsMeta = palavra_posicoes_meta.keys();
+        for (Enumeration<String> seriewordsMeta = palavra_posicoes_meta.keys();
                 seriewordsMeta.hasMoreElements(); ) {
-            wordsMeta[i] = ((String) seriewordsMeta.nextElement());
+            wordsMeta[i] = seriewordsMeta.nextElement();
             i++;
         }
 
         i = 0;
 
-        for (Enumeration serienumbersMeta = palavra_posicoes_meta.elements();
+        for (Enumeration<Vector<Integer>> serienumbersMeta = palavra_posicoes_meta.elements();
                 serienumbersMeta.hasMoreElements(); ) {
-            numbersMeta[i] = ((Vector) serienumbersMeta.nextElement()).size();
+            numbersMeta[i] = serienumbersMeta.nextElement().size();
             i++;
         }
 
@@ -1915,148 +1281,7 @@ public class PaginaURL {
         return (Character.isLetterOrDigit(c) || c == '-' || c == '&' || c == '#' || (ascii > 2305 && ascii < 2651));
     }
 
-    /**
-     * Este metodo retorna o caracter dado com acentuacao correta
-     */
-    protected char converteChar(char c) {
-        /*switch ((int) c) {
-
-        case 224: // '\uFFFD'
-
-        case 225:        // '\uFFFD'
-
-        case 226: // '\uFFFD'
-
-        case 227:        // '\uFFFD'
-
-        case 228: // '\uFFFD'
-
-        case 299: // '\uFFFD'
-            return 'a';
-
-        case 192: //'\uFFFD'
-
-        case 193:        // '\uFFFD'
-
-        case 194: // '\uFFFD'
-
-        case 195:        // '\uFFFD'
-
-        case 196: // '\uFFFD'
-
-        case 197: // '\uFFFD'
-            return 'A';
-
-        case 232: // '\uFFFD'
-
-        case 233:        // '\uFFFD'
-
-        case 234: // '\uFFFD'
-
-        case 235: // '\uFFFD'
-            return 'e';
-
-        case 200: // '\uFFFD'
-
-        case 201:        // '\uFFFD'
-
-        case 202: // '\uFFFD'
-
-        case 203: // '\uFFFD'
-            return 'E';
-
-        case 236: // '\uFFFD'
-
-        case 237:        // '\uFFFD'
-
-        case 238: // '\uFFFD'
-
-        case 239: // '\uFFFD'
-            return 'i';
-
-        case 204: // '\uFFFD'
-
-        case 205:        // '\uFFFD'
-
-        case 206: // '\uFFFD'
-
-        case 207: // '\uFFFD'
-            return 'I';
-
-        case 242: // '\uFFFD'
-
-        case 243:        // '\uFFFD'
-
-        case 244: // '\uFFFD'
-
-        case 245:        // '\uFFFD'
-
-        case 246: // '\uFFFD'
-            return 'o';
-
-        case 210: // '\uFFFD'
-
-        case 211:        // '\uFFFD'
-
-        case 212: // '\uFFFD'
-
-        case 213:        // '\uFFFD'
-
-        case 214: // '\uFFFD'
-            return 'O';
-
-        case 249: // '\uFFFD'
-
-        case 250:        // '\uFFFD'
-
-        case 251: // '\uFFFD'
-
-        case 252: // '\uFFFD'
-            return 'u';
-
-        case 217: // '\uFFFD'
-
-        case 218:        // '\uFFFD'
-
-        case 219: // '\uFFFD'
-
-        case 220: // '\uFFFD'
-            return 'U';
-
-        case 231: // '\uFFFD'
-            return 'c';
-
-        case 199: // '\uFFFD'
-            return 'C';
-
-        case 241: // '\uFFFD'
-            return 'n';
-
-        case 209: // '\uFFFD'
-            return 'N';
-
-        case 253: // '\uFFFD'
-                return 'y';
-
-        case 221: // '\uFFFD'
-            return 'Y';
-
-        default:
-            return c;    // caracter comum
-        }*/
-
-         return c;
-    }
-
     private HashMap<String,String> codes = new HashMap<String, String>();
-    
-//    protected String codes2Words(String word){
-//
-//    }
-    
-//    protected String convertStr(String str) {
-//    	
-//    }
     
     /**
      * Este metodo verifica se a partir daposicao dada a substring representa um simbolo
@@ -2066,7 +1291,6 @@ public class PaginaURL {
      * @param pos a posicao inicial de testes
      */
     protected char caracterEspecial(String str, int pos) {
-//        System.out.println(str);
     	int size = str.length() - pos;
         String resStr = codes.get(str.substring(pos));
         if(resStr != null){
@@ -2250,13 +1474,14 @@ public class PaginaURL {
                 }
             } else {
             	link = StringEscapeUtils.unescapeHtml4(link);
-            	
             	// ONION links aren't accepted by the validator
             	// Regex ".[^.]+" --> any string of at least 1 char without dot
             	String onionRegex = "https?://.[^.]+\\.onion.*";
 
                 // System.out.println(urlValidator.isValid(link));
                 if(urlValidator.isValid(link) || link.matches(onionRegex)) {
+                	
+                	link = urlNormalizer.filter(link);
                 	
                     boolean existe = links.contains(link);
                     if (!existe) {
@@ -2276,6 +1501,9 @@ public class PaginaURL {
                             }
                         }
                     }
+                } else {
+                    // link is invalid
+                    link = null;
                 }
     
             }
@@ -2370,7 +1598,7 @@ public class PaginaURL {
         String  host = null;
         int     port = -1;
         String  file = null;
-        String  ref = null;
+//        String  ref = null;
 
         try {
             limit = link.length();
@@ -2430,7 +1658,7 @@ public class PaginaURL {
             i = link.indexOf('#', start);
 
             if (i >= 0) {
-                ref = link.substring(i + 1, limit);
+//                ref = link.substring(i + 1, limit);
                 limit = i;
             }
 
@@ -2583,103 +1811,6 @@ public class PaginaURL {
         }
     }
 
-    /*
-     * protected URL parseLink(URL base, String link) throws MalformedURLException {
-     * // remove referencia
-     * int ref = link.indexOf('#');
-     * if ( ref != -1 ) {
-     * link = link.substring(0,ref);
-     * }
-     * if ( link.equals("") ) throw new MalformedURLException();
-     *
-     * // retorna link se ele for absoluto
-     * try {
-     * URL tmp  = new URL(link);
-     * return tmp;
-     * } catch(MalformedURLException e) { } //ignora
-     *
-     * String strbase = base.toString().trim();
-     * int a,b,c;
-     * a = strbase.length();
-     * while( a > 1 )
-     * {
-     * if( strbase.charAt( strbase.length()-1 )=='/' )
-     * strbase = strbase.substring( 0,strbase.length()-1 );
-     * a--;
-     * }
-     * // Se a base tiver um arquivo no final este pedaco do codigo o retira.
-     * a=0;
-     * for(int i = 0; i < strbase.length()-1 ; i++ )
-     * {
-     * if( strbase.charAt(i)=='/' )
-     * a++;
-     * }
-     * if( a > 2 )
-     * { b = strbase.lastIndexOf('/');
-     * c = strbase.lastIndexOf('.');
-     * if( c != -1 && b < c )
-     * strbase = strbase.substring( 0,b );
-     * }
-     * // Garante que a base sempre terminara com '/'.
-     * strbase = strbase + '/';
-     * // Retira o lixo que pode vir antes da URL "crua".
-     * String strnova = link;
-     * if( strnova.indexOf("http:")!=-1 )
-     * return new URL(strnova);
-     * // Se a URL classificada como relativa comecar com o caracter '~' a base deve
-     * // ser o apenas o servidor. Utilizamos esta novabase para garantir isto.
-     * else
-     * {
-     * // Retira os dois pontos e '/'
-     * strnova = limpaLink( link );
-     * String novabase = strbase;
-     * if( !strnova.equals("") )
-     * {
-     * if( strnova.charAt(0)=='~' )
-     * {
-     * a = strbase.indexOf("//");
-     * if( a != -1 )
-     * {
-     * b = strbase.indexOf("/",a+2);
-     * if( b!=-1 )
-     * novabase = strbase.substring(0,b+1);
-     * else
-     * novabase = strbase.substring(0,strbase.length());
-     * }
-     * }
-     * }
-     * // Se a URL relativa contiver um caminho(diretorio) que ja existe na base devemos "truncar"
-     * // a base para que tenhamos um caminho correto.
-     * String find = "";
-     * if( strnova.indexOf("/")!=-1 )
-     * find = strnova.substring( 0,strnova.indexOf("/")-1 );
-     * if( !find.equals("") && novabase.indexOf(find)!=-1 )
-     * {
-     * strnova = novabase.substring( 0,novabase.indexOf(find) ) + strnova;
-     * return new URL(strnova);
-     * }
-     * // Caso contrario e uma URL relativa sem nada especial.
-     * else
-     * {
-     * strnova = novabase + strnova;
-     * return new URL(strnova);
-     * }
-     * }
-     * }
-     * private String limpaLink(String link) {
-     * int pos;
-     * // Indexa e retira os ".." se existirem.
-     * pos = link.indexOf("..");
-     * if( pos != -1 )
-     * link = link.substring( pos+2,link.length() ).trim();
-     * // Se depois de tudo isso ainda existir alguma coisa e comecar por '/', o retiramos.
-     * if( link.length() > 0 && link.charAt(0)=='/' )
-     * link = link.substring( 1,link.length() ).trim();
-     * return link;
-     * }
-     * //
-     */
-
     /**
      * Este metodo incrementa a pontuacao de um termo na pagina.
      * E' usado quando a pagina e' construida
@@ -2690,7 +1821,7 @@ public class PaginaURL {
         }
 
         if (palavra_pontos == null) {
-            palavra_pontos = new Hashtable();
+            palavra_pontos = new Hashtable<>();
         }
 
         termo = termo.toLowerCase();
@@ -2718,7 +1849,7 @@ public class PaginaURL {
         }
 
         if (palavra_pontos == null) {
-            palavra_pontos = new Hashtable();
+            palavra_pontos = new Hashtable<>();
         }
 
         termo = termo.toLowerCase();
@@ -2745,7 +1876,7 @@ public class PaginaURL {
         }
 
         if (texto == null) {
-            texto = new Vector();
+            texto = new Vector<>();
         }
         termo = termo.toLowerCase().trim();
         resultado = !irrelevante(termo);
@@ -2767,14 +1898,14 @@ public class PaginaURL {
         }
 
         if (palavra_posicoes == null) {
-            palavra_posicoes = new Hashtable();
+            palavra_posicoes = new Hashtable<>();
         }
 
         termo = termo.toLowerCase();
-         Vector posicoes = (Vector) palavra_posicoes.get(termo);
+         Vector<Integer> posicoes = palavra_posicoes.get(termo);
 
             if (posicoes == null) {
-                    posicoes = new Vector();
+                    posicoes = new Vector<>();
 
                     palavra_posicoes.put(termo, posicoes);
                     posicoes.addElement(new Integer(pos));
@@ -2798,17 +1929,17 @@ public class PaginaURL {
         
         
         if (palavra_posicoes == null) {
-            palavra_posicoes = new Hashtable();
+            palavra_posicoes = new Hashtable<>();
         }
 
         termo = termo.toLowerCase();
         boolean dominio = termo.startsWith("#") && termo.endsWith("#");
         if(!irrelevante(termo) || dominio) {
-            Vector posicoes = (Vector) palavra_posicoes.get(termo);
+            Vector<Integer> posicoes = palavra_posicoes.get(termo);
 
             if (posicoes == null) {
                 if (!irrelevante(termo)) {
-                    posicoes = new Vector();
+                    posicoes = new Vector<>();
 
                     palavra_posicoes.put(termo, posicoes);
                     posicoes.addElement(new Integer(pos));
@@ -2832,16 +1963,16 @@ public class PaginaURL {
         }
 
         if (palavra_posicoes_meta == null) {
-            palavra_posicoes_meta = new Hashtable();
+            palavra_posicoes_meta = new Hashtable<>();
         }
 
         termo = termo.toLowerCase();
 
-        Vector posicoesMeta = (Vector) palavra_posicoes_meta.get(termo);
+        Vector<Integer> posicoesMeta = palavra_posicoes_meta.get(termo);
 
         if (posicoesMeta == null) {
             if (!irrelevante(termo)) {
-                posicoesMeta = new Vector();
+                posicoesMeta = new Vector<>();
 
                 palavra_posicoes_meta.put(termo, posicoesMeta);
                 posicoesMeta.addElement(new Integer(pos));
@@ -2851,8 +1982,6 @@ public class PaginaURL {
         }
     }
 
-
-
     /**
      * Identifica se uma palavra e considerada insignificante, isto e,
      * nao vale a pena ser armazenada.
@@ -2861,30 +1990,11 @@ public class PaginaURL {
         boolean result = false;
 
         if (stoplist != null) {
-            result = stoplist.eIrrelevante(str);
+            result = stoplist.isIrrelevant(str);
         }
 
         return result;
     }
-
-    /**
-     * Verifica se uma String que possa vir a se tornar URL e de algum
-     * tipo de arquivo que nao nos interessa
-     */
-
-    /*
-     * private boolean linkIrrelevante(String strnova) {
-     * String str[] =  {"news:","gopher:", "telnet:", "cgi-bin","pl_cad",
-     * "?", ".gif", ".jpg", ".pdf", ".bmp", ".ps",  ".jpeg",
-     * ".pcx", ".exe", ".com", ".class", ".zip", ".arj",  ".gzip",
-     * ".gz",".z",".cgi",".mid",".mpeg",".ram",".mp1",".mp2",
-     * ".mp3",".wav",".snd",".au",".aif" };
-     * boolean achou = false;
-     * for(int i=0;i<str.length && !achou;i++)
-     * {if(strnova.indexOf(str[i])!=-1) achou=true;}
-     * return achou;
-     * }
-     */
 
     /**
      * Recebe dois arrays, um com n palavras, e outro com as ocorrencias
@@ -2896,17 +2006,6 @@ public class PaginaURL {
         quicksort_num(a, 0, a.length - 1, b);
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @param a
-     * @param left
-     * @param right
-     * @param b
-     *
-     * @see
-     */
     private void quicksort_num(int a[], int left, int right, String b[]) {
         int pivot;
         int l = left;
@@ -2944,17 +2043,6 @@ public class PaginaURL {
     }
 
     // Funcoes auxiliares do quicksort
-
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @param a
-     * @param i
-     * @param j
-     *
-     * @see
-     */
     private void troque1(int a[], int i, int j) {
         int temp;
 
@@ -2963,420 +2051,87 @@ public class PaginaURL {
         a[j] = temp;
     }
 
-    /**
-     * Declara\uFFFD\uFFFDo do M\uFFFDtodo
-     *
-     *
-     * @param a
-     * @param i
-     * @param j
-     *
-     * @see
-     */
     private void troque2(String a[], int i, int j) {
         String temp;
-
         temp = a[i];
         a[i] = a[j];
         a[j] = temp;
     }
 
-    /**
-     * M\uFFFDtodo que retorna a nota da pagina
-     */
-    public int notaDaPagina() {
-        return notaDaImagem;
+    public ArrayList<String> getImages() {
+        return this.imagens;
     }
 
-
-//+-------- IMPLEMENTANDO A INTERFACE PaginaAjustavel-------------+//
-        /**
-            Ajusta o endereco da pagina.
-         */
-        public void setEndereco(URL newEndereco) {
-        if( newEndereco != null ) {
-            this.pagina = newEndereco;
-          }
-        }
-
-        /**
-        Ajusta a data de visitacao.
-         */
-        public void setDataQueFoiVisitado(Date newData) {
-        if( newData != null )
-            this.visitado = newData.getTime();
-        }
-
-        /**
-            Ajusta a data de modificacao.
-         */
-        public void setDataQueFoiModificado(Date newData) {
-            if( newData != null )
-                setDataQueFoiModificado(newData.getTime());
-        }
-
-        /**
-            Ajusta a data de modificacao.
-         */
-        public void setDataQueFoiModificado(long newData) {
-            this.modificado = newData;
-        }
-
-        /**
-            Ajusta o tamanho do arquivo.
-         */
-        public void setTamanhoDoArquivo(int newTamanho) {
-        if( newTamanho >= 0 )
-            this.tamanho = newTamanho;
-        else
-            this.tamanho = 0;
-        }
-
-        public int getFileHashCode(){
-            return fileHashCode;
-        }
-
-        public void setFileHashCode(int hashCode){
-            fileHashCode = hashCode ;
-        }
-        /**
-            Ajusta o titulo.
-         */
-        public void setTitulo(String newTitulo) {
-        if( newTitulo != null )
-            this.titulo = newTitulo;
-        else
-            this.titulo = "";
-        }
-
-        /**
-            Ajusta o paragrafo.
-         */
-        public void setParagrafo(String newParagrafo) {
-        if( newParagrafo != null )
-            this.paragrafo = newParagrafo;
-        else
-            this.paragrafo = "";
-        }
-
-        /**
-        Ajusta o array de palavras.
-        IMPORTANTE: Este metodo so aceita a substituicao do array de palavras por outro do mesmo tamanho,
-        onde as entradas sao na verdade os codigos dos seus respectivos termos obedecendo a ordem semantica.
-         */
-        public void setPalavras(String[] newPalavras) {
-        if( newPalavras != null ) {
-            this.palavras = newPalavras;
-        }
-        else
-            this.palavras = new String[0];
-        }
-
-        /**
-        Ajusta o array de ocorrencias.
-         */
-        public void setOcorrencias(int[] newOcorrencias) {
-            if( newOcorrencias != null )
-            this.ocorrencias = newOcorrencias;
-        else
-            this.ocorrencias = new int[0];
-        }
-
-        /**
-            Ajusta o numero de frames.
-         */
-        public void setNumeroDeFrames(int newFrames) {
-            if( newFrames >= 0 )
-            this.frames = newFrames;
-        else
-            this.frames = 0;
-        }
-
-        /**
-            Ajusta o numero de formularios.
-         */
-        public void setNumeroDeFormularios(int newForms) {
-        if( newForms >= 0 )
-            this.forms = newForms;
-        else
-            this.forms = 0;
-        }
-
-        /**
-            Ajusta o numero de imagens.
-         */
-        public void setNumeroDeImagens(int newImages) {
-        if( newImages >= 0 )
-            this.images = newImages;
-        else
-            this.images = 0;
-        }
-
-        public Vector<String> getImages(){
-        	return this.imagens;
-        }
-        
-        /**
-            Ajusta o array de links.
-         */
-        public void setLinks(URL[] newLinks) {
-        if( newLinks != null )
-          {
-            this.links = new Vector(newLinks.length);
-            for( int i = 0; i < newLinks.length; i++ )
-                 links.addElement(newLinks[i]);
-            this.URLabsolutas = newLinks;
-          }
-        else
-          {
-            this.links = new Vector(0);
-            this.URLabsolutas = newLinks;
-          }
-        }
-
-        /**
-            Ajusta o vetor de e-mails.
-         */
-        public void setMails(Vector newMails) {
-        if( newMails != null )
-            this.mailList = newMails;
-        else
-            this.mailList = new Vector(0);
-        }
-
-        /**
-            Substitui a entrada do termo na hastable que possui o mapeamento de posicoes.
-        */
-        public void substituirTermoPorCodigo(String termo,String codigo) {
-        Vector v = (Vector)palavra_posicoes.get(termo);
-        if( v != null ) {
-            //System.out.println("<><><><>TROCANDO "+termo+" POR "+codigo);
-            palavra_posicoes.remove(termo);
-            palavra_posicoes.put(codigo,v);
-        }
+    public void setRelevance(double relev) {
+        this.relevance = relev;
     }
 
-//+-----------------------------------------------------------+//
-
-        
-    /**
-    */
-    public Hashtable palavra_posicoes(){
-        return palavra_posicoes;
+    public double getRelevance() {
+        return this.relevance;
     }
 
-    public void setPalavra_posicoes(Hashtable newPalavra_posicoes) {
-        this.palavra_posicoes = newPalavra_posicoes;
+    public URL getURL() {
+        return pagina;
     }
 
-    /**
-    */
-    public Hashtable palavra_posicoes_meta(){
-        return palavra_posicoes_meta;
+    public String titulo() {
+        return titulo;
     }
 
-    public StopList stoplist() {
-        return stoplist;
+    public String paragrafo() {
+        return paragrafo;
     }
 
+    public String[] palavras() {
+        return palavras;
+    }
 
-     /**
-     * metodo para testes
-     */
-    public static void main(String[] args) {
-        try {
-        	        	
-            long          start = System.currentTimeMillis();
-/*
-            ParameterFile config = new ParameterFile(args[0].trim());
-            StopList st = new StopListArquivo(config.getParam("STOPLIST_FILES"));
-            if( config.getParam("GERAR_SEM_ACENTO") != null ) {
-                PaginaURL.GERAR_SEM_ACENTO = Boolean.valueOf(config.getParam("GERAR_SEM_ACENTO")).booleanValue();
+    public String palavras_to_string() {
+        if (palavras.length == 0)
+            return "";
+        String text = palavras[0];
+        for (int i = 1; i < palavras.length; i++) {
+            text = text + "  " + palavras[i];
+        }
+        return text;
+    }
+
+    public int[] ocorrencias() {
+        return ocorrencias;
+    }
+
+    public String[] palavrasMeta() {
+        return palavrasMeta;
+    }
+
+    public int[] ocorrenciasMeta() {
+        return ocorrenciasMeta;
+    }
+
+    public int numeroDeFrames() {
+        return frames;
+    }
+
+    public int numeroDeFormularios() {
+        return forms;
+    }
+
+    public int numeroDeImagens() {
+        return images;
+    }
+
+    public URL[] links() {
+        if (URLabsolutas == null) {
+            URLabsolutas = new URL[links.size()];
+
+            for (int i = 0; i < links.size(); i++) {
+                try {
+                    URLabsolutas[i] = new URL(links.elementAt(i).toString());
+                } catch (Throwable t) {
+                } // ignora
             }
-            if( config.getParam("USAR_DESCRIPTION") != null ) {
-                PaginaURL.USAR_DESCRIPTION = Boolean.valueOf(config.getParam("USAR_DESCRIPTION")).booleanValue();
-            }
-*/
-            PaginaURL.USAR_DESCRIPTION = true;
-            StopList st = null;
-            try {
-                st = new StopListFile(args[0]);
-            }
-            catch(Exception ioe) {
-            }
-
-//            StringBuffer content = new StringBuffer();
-//            BufferedReader input = new BufferedReader(new FileReader(new File(
-//                    args[1])));
-//            for (String line = input.readLine(); line != null;
-//                    line = input.readLine()) {
-//
-//                content.append(line);
-//                content.append("\n");
-//
-//            }
-//
-//            String src = content.toString();
-//            PaginaURL p = new PaginaURL(new URL("http://www"), 0, 0,
-//                                           src.length(),
-//                                           src, st);
-            
-            PaginaURL p = new PaginaURL(args[1].trim(), st);
-            System.out.println(p.toString());
-//            Vector<String> images = p.getImages();
-//            for (int i = 0; i < images.size(); i++) {
-//				System.out.println(images.elementAt(i));
-//			}
-            
-//            System.out.println("USAR_DESCRIPTION = "+PaginaURL.USAR_DESCRIPTION);
-//            long          end = System.currentTimeMillis();
-//
-//            long          time = end - start;
-////            System.out.println("URL:");
-////            System.out.println("--");
-////            System.out.println(p.endereco());
-//            System.out.println("Title:");
-//            System.out.println("--");
-//            System.out.println(p.titulo());
-            
-//            System.out.println("Modified -> " + p.dataQueFoiModificado());
-//            System.out.println("Visited   -> " + p.dataQueFoiVisitado());
-//            System.out.println("Paragraph:");
-//            System.out.println("--");
-//            System.out.println(p.paragrafo());
-//            System.out.println("Links:");
-//            System.out.println("--");
-//
-            URL[] links = p.links();
-
-            for (int i = 0; i < links.length; i++) {
-//                String str = i + " = " + links[i];
-                System.out.println(links[i]);	
-            }
-//
-//            String[] termos = p.palavras();
-//            int[]    ocorrencias = p.ocorrencias();
-//
-//            System.out.println("Centroide:_SIZE("+termos.length+")");
-//            System.out.println("--");
-//
-//            String[] termosMeta = p.palavrasMeta();
-//            int[]    ocorrenciasMeta = p.ocorrenciasMeta();
-//
-//            for (int i = 0; i < termos.length; i++) {
-//                Enumeration posicoes_pos = p.posicoes(termos[i]);
-//                String posicoes = "Nula";
-//                if( posicoes_pos != null ) {
-//                    posicoes = "";
-//                    int c = 0;
-//                    while(posicoes_pos.hasMoreElements()) {
-//                        posicoes += (c == 0 ? "" : ",")+posicoes_pos.nextElement();
-//                        c++;
-//                    }
-//                }
-//                String str = termos[i] + " = " + ocorrencias[i] + ", PL = "+posicoes;
-//
-//                System.out.println(str);
-//            }
-//            System.out.println("\nMeta termos:");
-//
-//            for (int i = 0; i < termosMeta.length; i++) {
-//                String str = termosMeta[i] + " = " + ocorrenciasMeta[i];
-//
-//                System.out.println(str);
-//            }
-//
-//            System.out.println("Palavras[" + termos.length + "] em "
-//                               + p.endereco() + " tamanho do arquivo : "
-//                               + p.tamanhoDoArquivo());
-
-//
-//            Vector<HACCluster> vLinks = new Vector<HACCluster>();
-//            HashSet<String> uniqueURLs = new HashSet<String>();
-            LinkNeighborhood[] ln =  p.getLinkNeighboor();
-            System.out.println("SIZE:" + ln.length);
-            for (int i = 0; i < ln.length; i++) {
-            	System.out.println("URL:" + ln[i].getLink().toString());
-            	System.out.println("ANC:" + ln[i].getAnchorString());
-            	System.out.println("ARO:" + ln[i].getAroundString());
-            	System.out.println("SRC:" + ln[i].getImgSrc());
-            	System.out.println("ALT:" + ln[i].getAltString());
-            }
-//            System.out.println(">>>>>>>>>>"+ln.length);
-//            for (int i = 0; i < ln.length; i++) {
-//                System.out.println("Title:" + p.titulo());
-//                if(!uniqueURLs.contains(ln[i].getLink().toString()) && !ln[i].getLink().getFile().equals("/")){
-//                	uniqueURLs.add(ln[i].getLink().toString());
-//                }else{
-//                	continue;
-//                }
-//                String[] anchor = ln[i].getAnchor();
-//            	System.out.println(">>>URL:" + ln[i].getLink().toString());
-//                System.out.println(">>>ANC:" + ln[i].getAnchorString());
-//                System.out.println(">>>ARO:" + ln[i].getAroundString());
-//                if(anchor.length > 3){
-//	                System.out.println("URL:"+ln[i].getLink());
-//	                String url = ln[i].getLink().toString();
-//	                String normURL = url;
-//	        		int index = url.indexOf("?");
-//	        		if(index != -1){
-//	        			if(!url.contains("gen") && !url.substring(index).contains("&")){
-//	        				normURL = url.substring(0,index);				
-//	        			}
-//	        		}
-//	        		index = normURL.indexOf("index.jsp");
-//	        		if(index != -1){
-//	        			normURL = normURL.substring(0,index);
-//	//        			normURL = normURL.substring(0,normURL.length()-9);
-//	        		}
-//	        		index = normURL.indexOf("wtSlotClick");
-//	        		if(index != -1){
-//	        			normURL = normURL.substring(0,index) + normURL.substring(index+24);
-//	        		}
-//	                URL url1 = new URL(normURL);
-//	                VSMVector point = new VSMVector(url1.getFile(), st);
-//	//                VSMVector point1 = new VSMVector(ln[i].getAnchorString(), st);
-//	                vLinks.add(new HACCluster(url1.getFile(), point, null));
-//	                System.out.println("FILE:"+ln[i].getLink().getFile());
-//	                
-//	                System.out.print("ANC: ");
-//                
-//                    for (int j = 0; j < anchor.length; j++) {
-//                    	System.out.print(anchor[j] + " ");
-//                    }
-//                    System.out.println("");
-//                }
-//                System.out.println("");
-//                System.out.print("ARO: ");
-//                String[] around = ln[i].getAround();
-//                for (int j = 0; j < around.length; j++) {
-//                	System.out.print(around[j] + " ");
-//                }
-//                System.out.println("");
-//                System.out.println("SOURCE:" + ln[i].getImgSrc());
-//                System.out.print("ALT: ");
-//                if(ln[i].getImgAlt() != null){
-//                	String[] imgAlt = ln[i].getImgAlt();
-//                	for (int j = 0; j < imgAlt.length; j++) {
-//                		System.out.print(imgAlt[j] + " ");
-//                	}
-//                }
-//            }
-//			}
-
-            // System.exit(1);
-
-            /*
-             * URL url=new URL(args[0]);
-             * System.out.println("URL = "+url);
-             * URLConnection con = url.openConnection();
-             * System.out.println("getURL() = "+con.getURL());
-             * System.out.println("getContentType() = "+con.getContentType());
-             */
-        } catch (Throwable t) {
-            t.printStackTrace();
         }
+        return URLabsolutas;
     }
 
-    // fim da classe PaginaURL
 }

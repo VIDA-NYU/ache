@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.apache.commons.cli.MissingArgumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +16,7 @@ import focusedCrawler.target.model.Page;
 import focusedCrawler.target.repository.ElasticSearchTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
+import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.CommunicationException;
@@ -62,13 +62,13 @@ public class TargetStorage extends StorageDefault {
     /**
      * Inserts a page into the repository.
      */
-    public synchronized Object insert(Object obj) throws StorageException {
+    public Object insert(Object obj) throws StorageException {
         Page page = (Page) obj;
 
         if (config.isEnglishLanguageDetectionEnabled()) {
             // Only accept English language
             if (this.langDetector.isEnglish(page) == false) {
-                logger.info("Ignoring non-English page: " + page.getIdentifier());
+                logger.info("Ignoring non-English page: " + page.getURL().toString());
                 return null;
             }
         }
@@ -77,25 +77,25 @@ public class TargetStorage extends StorageDefault {
             TargetRelevance relevance;
             if (targetClassifier != null) {
                 relevance = targetClassifier.classify(page);
-                logger.info("\n> PROCESSING: " + page.getIdentifier() +
-                            "\n> PROB:" + relevance.getRelevance());
             } else {
                 relevance = new TargetRelevance(true, 1.0d);
             }
 
-            page.setRelevance(relevance.getRelevance());
+            page.setTargetRelevance(relevance);
 
+            if (relevance.isRelevant()) {
+                targetRepository.insert(page);
+            } else if (config.isSaveNegativePages()) {
+                negativeRepository.insert(page);
+            }
+            
             if (relevance.isRelevant()) {
                 if (config.isBipartite()) {
                     // set the page is as authority if using backlinks
                     page.setAuth(true);
                 }
-                targetRepository.insert(page);
                 linkStorage.insert(page);
             } else {
-                if (config.isSaveNegativePages()) {
-                    negativeRepository.insert(page);
-                }
                 if (!config.isHardFocus()) {
                     if (config.isBipartite()) {
                         if (page.isHub()) {
@@ -146,8 +146,7 @@ public class TargetStorage extends StorageDefault {
                                               String indexName,
                                               TargetStorageConfig config,
                                               Storage linkStorage)
-                                              throws IOException,
-                                                     MissingArgumentException {
+                                              throws IOException {
         
         //if one wants to use a classifier
         TargetClassifier targetClassifier = null;
@@ -165,7 +164,10 @@ public class TargetStorage extends StorageDefault {
         boolean compressData = config.getCompressData();
         
         logger.info("Using DATA_FORMAT: "+dataFormat);
-        if(dataFormat.equals("FILESYSTEM_JSON")) {
+        if(dataFormat.equals("FILES")) {
+            targetRepository = new FilesTargetRepository(targetDirectory, config.getMaxFileSize());
+            negativeRepository = new FilesTargetRepository(negativeDirectory, config.getMaxFileSize());
+        } else if(dataFormat.equals("FILESYSTEM_JSON")) {
         	boolean hashFilename = config.getHashFileName();
             targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.JSON, hashFilename, compressData);
 			negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.JSON, hashFilename, compressData);
@@ -182,7 +184,7 @@ public class TargetStorage extends StorageDefault {
         }
         else if(dataFormat.equals("ELASTICSEARCH")) {
         	if(indexName == null) {
-        		throw new MissingArgumentException("ElasticSearch index name not provided!");
+        		throw new IllegalArgumentException("ElasticSearch index name not provided!");
         	}
         	ElasticSearchConfig esconfig = config.getElasticSearchConfig();
         	targetRepository = new ElasticSearchTargetRepository(esconfig, indexName, "target");
@@ -198,6 +200,12 @@ public class TargetStorage extends StorageDefault {
                                                   monitor, negativeRepository, config);
         
         return targetStorage;
+    }
+
+    public void close() {
+        targetRepository.close();
+        negativeRepository.close();
+        monitor.close();
     }
 
 }

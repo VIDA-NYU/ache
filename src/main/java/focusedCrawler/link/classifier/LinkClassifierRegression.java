@@ -5,17 +5,18 @@ import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
-import java.util.Vector;
 
 import focusedCrawler.link.classifier.builder.Instance;
-import focusedCrawler.link.classifier.builder.WordField;
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
+import focusedCrawler.link.classifier.builder.WordField;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.StopList;
 import focusedCrawler.util.string.StopListFile;
 import weka.classifiers.Classifier;
@@ -35,7 +36,7 @@ public class LinkClassifierRegression implements LinkClassifier{
 		  this.attributes = attributes;
 	  }
 	  
-	public LinkRelevance[] classify(PaginaURL page)
+	public LinkRelevance[] classify(Page page)
 			throws LinkClassifierException {
 	    LinkRelevance[] linkRelevance = null;
 	    try {
@@ -121,9 +122,9 @@ public class LinkClassifierRegression implements LinkClassifier{
 	      String[] attributes = config.getParam("ATTRIBUTES", " ");
 	      
 	      String[][] fieldWords = new String[WordField.FIELD_NAMES.length][];
-	      Vector<String> tempURL = new Vector<String>();
-	      Vector<String> tempAnchor = new Vector<String>();
-	      Vector<String> tempAround = new Vector<String>();
+	      List<String> tempURL = new ArrayList<String>();
+	      List<String> tempAnchor = new ArrayList<String>();
+	      List<String> tempAround = new ArrayList<String>();
 	      
 	      for (int i = 0; i < attributes.length; i++) {
 	    	  if(attributes[i].contains("url_")){
@@ -140,9 +141,9 @@ public class LinkClassifierRegression implements LinkClassifier{
 	      fieldWords[WordField.URLFIELD] = new String[tempURL.size()];
 	      fieldWords[WordField.ANCHOR] = new String[tempAnchor.size()];
 	      fieldWords[WordField.AROUND] = new String[tempAround.size()];
-	      tempURL.copyInto(fieldWords[WordField.URLFIELD]);
-	      tempAnchor.copyInto(fieldWords[WordField.ANCHOR]);
-	      tempAround.copyInto(fieldWords[WordField.AROUND]);
+	      tempURL.toArray(fieldWords[WordField.URLFIELD]);
+	      tempAnchor.toArray(fieldWords[WordField.ANCHOR]);
+	      tempAround.toArray(fieldWords[WordField.AROUND]);
 	      wrapper.setFeatures(fieldWords);
 	      
 	      InputStream is =  new FileInputStream(config.getParam("FILE_CLASSIFIER"));

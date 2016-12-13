@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
+import java.util.HashSet;
+import java.util.Scanner;
 
 import focusedCrawler.target.model.Page;
 
@@ -47,16 +49,16 @@ public class TargetStorageMonitor {
         return new PrintWriter(bos, autoFlush);
     }
     
-    public void countPage(Page page, boolean isRelevant, double prob) {
+    public synchronized void countPage(Page page, boolean isRelevant, double prob) {
         long currentTime = System.currentTimeMillis();
         totalOfPages++;
-        fCrawledPages.printf("%s\t%d\n", page.getIdentifier(), (currentTime));
-        fHarvestInfo.printf("%d\t%d\t%d\n", totalOnTopicPages, totalOfPages, (currentTime));
+        fCrawledPages.printf("%s\t%d\n", page.getURL().toString(), currentTime);
+        fHarvestInfo.printf("%d\t%d\t%d\n", totalOnTopicPages, totalOfPages, currentTime);
         if(isRelevant) {
             totalOnTopicPages++;
-            fRelevantPages.printf("%s\t%.10f\t%d\n", page.getIdentifier(), prob, (currentTime));
+            fRelevantPages.printf("%s\t%.10f\t%d\n", page.getURL().toString(), prob, currentTime);
         } else {
-            fNonRelevantPages.printf("%s\t%.10f\t%d\n", page.getIdentifier(), prob, (currentTime));
+            fNonRelevantPages.printf("%s\t%.10f\t%d\n", page.getURL().toString(), prob, currentTime);
         }
     }
 
@@ -64,4 +66,29 @@ public class TargetStorageMonitor {
         return totalOfPages;
     }
 
+    public static HashSet<String> readRelevantUrls(String dataPath) {
+        String fileRelevantPages = dataPath + "/data_monitor/relevantpages.csv";
+        HashSet<String> relevantUrls = new HashSet<>();
+        try(Scanner scanner = new Scanner(new File(fileRelevantPages))) {
+            while(scanner.hasNext()){
+                String nextLine = scanner.nextLine();
+                String[] splittedLine = nextLine.split("\t");
+                if(splittedLine.length == 3) {
+                    String url = splittedLine[0];
+                    relevantUrls.add(url);
+                }
+            }
+            return relevantUrls;
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException("Failed to load relevant URL from target monitor file: "+fileRelevantPages);
+        }
+    }
+
+    public void close() {
+        fCrawledPages.close();
+        fHarvestInfo.close();
+        fNonRelevantPages.close();
+        fRelevantPages.close();
+    }
+    
 }

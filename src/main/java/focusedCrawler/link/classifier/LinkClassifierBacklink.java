@@ -2,14 +2,15 @@ package focusedCrawler.link.classifier;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.List;
 
 import focusedCrawler.link.classifier.builder.Instance;
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
-import focusedCrawler.util.parser.PaginaURL;
 
 public class LinkClassifierBacklink implements LinkClassifier {
 
@@ -21,33 +22,32 @@ public class LinkClassifierBacklink implements LinkClassifier {
         this.attributes = attribute;
     }
 
-    public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException {
-        LinkRelevance[] linkRelevance = null;
+    public LinkRelevance[] classify(Page page) throws LinkClassifierException {
         try {
-            HashMap<String, Instance> urlWords = wrapper.extractLinks(page, attributes);
-            linkRelevance = new LinkRelevance[urlWords.size()];
-            Iterator<String> iter = urlWords.keySet().iterator();
-            int count = 0;
-            while (iter.hasNext()) {
-                String urlStr = (String) iter.next();
+            LinkNeighborhood[] lns = page.getParsedData().getLinkNeighborhood();
+            HashMap<String, Instance> urlWords = wrapper.extractLinks(lns, attributes);
+            
+            List<LinkRelevance> linkRelevance = new ArrayList<>();
+            for(String urlStr : urlWords.keySet()) {
                 URL url = new URL(urlStr);
                 double relevance = -1;
-
-                if (page.getRelevance() > 100 && page.getRelevance() < 200) {
+                
+                double pageRelevance = page.getTargetRelevance().getRelevance();
+                if (pageRelevance > 100 && pageRelevance < 200) {
                     if (isInitialPage(urlStr) && !page.getURL().getHost().equals(url.getHost())) {
                         relevance = 201;
                         url = new URL(url.getProtocol(), url.getHost(), "/");
                     }
                 }
 
-                linkRelevance[count] = new LinkRelevance(url, relevance);
-                count++;
+                linkRelevance.add(new LinkRelevance(url, relevance));
             }
+            return (LinkRelevance[]) linkRelevance.toArray(new LinkRelevance[linkRelevance.size()]);
+            
         } catch (MalformedURLException ex) {
             ex.printStackTrace();
             throw new LinkClassifierException(ex.getMessage());
         }
-        return linkRelevance;
     }
 
     @Override

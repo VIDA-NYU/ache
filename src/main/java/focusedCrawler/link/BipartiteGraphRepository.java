@@ -3,9 +3,10 @@ package focusedCrawler.link;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.StringTokenizer;
-import java.util.Vector;
 
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
@@ -13,29 +14,23 @@ import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.Tuple;
 
 public class BipartiteGraphRepository {
+    
+    private final int pagesToCommit = 100;
+    private int uncommittedCount = 0;
 
-//	private PersistentHashtable hubs;
-	
-//	private PersistentHashtable auths;
-	
 	private PersistentHashtable<String> authGraph; 
-	
 	private PersistentHashtable<String> authID;
-
 	private PersistentHashtable<String> hubGraph; 
-	
 	private PersistentHashtable<String> hubID;
-	
 	private PersistentHashtable<String> url2id;
-
 	
 	private final String separator = "###";
 	
 	private String authGraphDirectory = "data_backlinks/auth_graph";      
-    private String urlIdDirectory = "data_backlinks/url";
-    private String authIdDirectory = "data_backlinks/auth_id";
-    private String hubIdDirectory = "data_backlinks/hub_id";
-    private String hubGraphDirectory = "data_backlinks/hub_graph";
+    private String urlIdDirectory     = "data_backlinks/url";
+    private String authIdDirectory    = "data_backlinks/auth_id";
+    private String hubIdDirectory     = "data_backlinks/hub_id";
+    private String hubGraphDirectory  = "data_backlinks/hub_graph";
 
     public BipartiteGraphRepository(String dataPath) {
         int cacheSize = 10000;
@@ -126,7 +121,7 @@ public class BipartiteGraphRepository {
 					String title = fields[1];
 					if(title != null){
 						StringTokenizer tokenizer = new StringTokenizer(title," ");
-						Vector<String> anchorTemp = new Vector<String>();
+						List<String> anchorTemp = new ArrayList<String>();
 						while(tokenizer.hasMoreTokens()){
 							 anchorTemp.add(tokenizer.nextToken());
 			   		  	}
@@ -153,7 +148,7 @@ public class BipartiteGraphRepository {
 					String title = fields[1];
 					if(title != null){
 						StringTokenizer tokenizer = new StringTokenizer(title," ");
-						Vector<String> anchorTemp = new Vector<String>();
+						List<String> anchorTemp = new ArrayList<String>();
 						while(tokenizer.hasMoreTokens()){
 							 anchorTemp.add(tokenizer.nextToken());
 			   		  	}
@@ -223,7 +218,7 @@ public class BipartiteGraphRepository {
 		if(strLinks == null){
 			return null;
 		} else {
-			Vector<BackLinkNeighborhood> tempBacklinks = new Vector<BackLinkNeighborhood> (); 
+			List<BackLinkNeighborhood> tempBacklinks = new ArrayList<BackLinkNeighborhood> ();
 			String[] backlinkIds = strLinks.split("###");
 			for (int i = 0; i < backlinkIds.length; i++) {
 				String url_title = hubID.get(backlinkIds[i]);
@@ -253,7 +248,7 @@ public class BipartiteGraphRepository {
 		if(strLinks == null){
 			return null;
 		} else {
-			Vector<LinkNeighborhood> tempLNs = new Vector<LinkNeighborhood> (); 
+			List<LinkNeighborhood> tempLNs = new ArrayList<LinkNeighborhood> ();
 			String[] linkIds = strLinks.split("###");
 			for (int i = 0; i < linkIds.length; i++) {
 				String lnStr = authID.get(linkIds[i]);
@@ -272,7 +267,7 @@ public class BipartiteGraphRepository {
 	 * Insert outlinks from hubs 
 	 * @param page
 	 */
-	public void insertOutlinks(URL url, LinkNeighborhood[] lns){
+	public synchronized void insertOutlinks(URL url, LinkNeighborhood[] lns){
 		
 		String urlId = getId(url.toString());
 		String strCurrentLinks = hubGraph.get(urlId);
@@ -315,6 +310,12 @@ public class BipartiteGraphRepository {
 		if(!strCurrentLinks.equals("")){
 			hubGraph.put(urlId, strCurrentLinks);	
 		}
+		
+		uncommittedCount++;
+		if (uncommittedCount == pagesToCommit) {
+            this.commit();
+            uncommittedCount = 0;
+        }
 	}
 	
 	
@@ -323,7 +324,7 @@ public class BipartiteGraphRepository {
 	 * @param page
 	 * @throws IOException 
 	 */
-	public void insertBacklinks(URL url, BackLinkNeighborhood[] links) throws IOException{
+	public synchronized void insertBacklinks(URL url, BackLinkNeighborhood[] links) throws IOException{
 		String urlId = getId(url.toString());
 		String strCurrentLinks = authGraph.get(urlId);
 		HashSet<String> currentLinks = parseRecordBacklink(strCurrentLinks);
@@ -356,7 +357,13 @@ public class BipartiteGraphRepository {
 		}else{
 			strCurrentLinks =  strCurrentLinks + buffer.toString();
 		}
-		authGraph.put(urlId, strCurrentLinks);	
+		authGraph.put(urlId, strCurrentLinks);
+		
+		uncommittedCount++;
+		if(uncommittedCount == pagesToCommit){
+            this.commit();
+            uncommittedCount = 0;
+        }
 	}
 
 	private String getId(String url){
@@ -374,7 +381,7 @@ public class BipartiteGraphRepository {
 		return id;
 	}
 
-	public void commit(){
+	public synchronized void commit(){
 		url2id.commit();
 		authGraph.commit();
 		authID.commit();

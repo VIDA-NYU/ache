@@ -4,10 +4,10 @@ apply plugin: 'application'
 apply plugin: "jacoco"
 apply plugin: 'com.github.kt3k.coveralls'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 compileJava.options.encoding = "UTF-8"
-version = '0.7.0-SNAPSHOT'
+version = '0.8.0-SNAPSHOT'
 mainClassName = 'focusedCrawler.Main'
 applicationDefaultJvmArgs = ["-Dname=ache -XX:+UseConcMarkSweepGC -XX:+HeapDumpOnOutOfMemoryError"]
 
@@ -17,51 +17,46 @@ repositories {
 }
 
 dependencies {
-    
+    // Logging
     compile 'org.slf4j:slf4j-api:1.7.+'
     compile 'ch.qos.logback:logback-classic:1.1.+'
-    compile 'commons-cli:commons-cli:1.3'
-    compile 'args4j:args4j:2.33'
-    compile 'com.google.guava:guava:18.0'
+    // Commons
+    compile 'com.google.guava:guava:20.0'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'org.apache.commons:commons-compress:1.12'
+    compile 'commons-codec:commons-codec:1.10'
+    compile 'commons-validator:commons-validator:1.5.1'
+    compile 'com.github.crawler-commons:crawler-commons:0.7'
+    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+    // CLI
+    compile 'io.airlift:airline:0.7'
+    // Data serialization
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.5'
+    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.8.5'
+    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.5'
+    compile 'com.esotericsoftware:kryo:4.0.0'
+    // Database engines
+    compile 'org.rocksdb:rocksdbjni:4.11.2'
+    compile 'com.sleepycat:je:3.3.75' // BerkeleyDB
+    // Others
+    compile 'org.apache.tika:tika-parsers:1.14'
+    compile 'com.syncthemall:boilerpipe:1.2.2'
     compile 'net.sourceforge.nekohtml:nekohtml:1.9.22'
-    compile 'org.eclipse.birt.runtime.3_7_1:org.w3c.css.sac:1.3.0'
+    compile 'io.dropwizard.metrics:metrics-core:3.1.2'
     compile 'nz.ac.waikato.cms.weka:weka-stable:3.6.13'
     compile 'org.apache.lucene:lucene-core:4.10.4'
     compile 'org.elasticsearch:elasticsearch:1.4.4'
-    compile 'commons-codec:commons-codec:1.9'
-    compile 'commons-validator:commons-validator:1.4.1'
-    compile 'com.googlecode.juniversalchardet:juniversalchardet:1.0.3'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.5.4' 
-    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.5.4'
-    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.5.4'
-    compile 'com.syncthemall:boilerpipe:1.2.2'
-    compile 'com.sleepycat:je:3.3.75' // BerkeleyDB
-    compile 'org.apache.commons:commons-lang3:3.4'
-    compile 'org.apache.commons:commons-compress:1.9'
-    compile 'org.apache.httpcomponents:httpclient:4.5.1'
-    compile 'org.apache.tika:tika-parsers:1.9'
-    compile 'com.github.crawler-commons:crawler-commons:0.6'
     
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest-all:1.3'
-    testCompile 'jetty:jetty:5.1.10' // for tests of crawler commons library fork
+    testCompile 'org.eclipse.jetty:jetty-server:9.3.6.v20151106' // for tests of crawler commons library fork
     
     // TODO fill these in from Maven Central instead of that local libs dir
-    // TODO recommend replacing these with:
-    // compile 'com.cybozu.labs:langdetect:1.1-20120112'
     compile files('libs/jsonic-1.2.0.jar') // recommend updating this, it's for langdetect.jar
     compile files('libs/langdetect-03-03-2014.jar') // TODO why isn't this in maven central
 
 }
 
-// TODO create binary for running focusedCrawler.link.LinkStorage, focusedCrawler.crawler.CrawlerManager, focusedCrawler.link.frontier.AddSeeds
-
-// Task for running any class. To execute a class named focusedCrawler.Boo, run:
-// ./gradlew -PmainClass=focusedCrawler.Boo execute
-task execute(type:JavaExec) {
-    main = project.hasProperty('mainClass') ? mainClass : mainClassName
-    classpath = sourceSets.main.runtimeClasspath
-}
 
 //
 // Adds version to final JAR artifact

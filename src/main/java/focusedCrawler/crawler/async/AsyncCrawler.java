@@ -11,7 +11,9 @@ import focusedCrawler.config.ConfigService;
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.DataNotFoundException;
+import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageConfig;
 import focusedCrawler.util.storage.StorageException;
@@ -22,16 +24,23 @@ public class AsyncCrawler {
 	
     private static final Logger logger = LoggerFactory.getLogger(AsyncCrawler.class);
 
-    private final LinkStorage linkStorage;
+    private final Storage targetStorage;
+    private final Storage linkStorage;
     private final HttpDownloader downloader;
     private final Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
     
     private volatile boolean shouldStop = false;
     private Object running = new Object();
+    private boolean isShutdown = false;
+
     
-    public AsyncCrawler(Storage targetStorage, LinkStorage linkStorage, AsyncCrawlerConfig crawlerConfig) {
+    public AsyncCrawler(Storage targetStorage, Storage linkStorage,
+            AsyncCrawlerConfig crawlerConfig, String dataPath,
+            MetricsManager metricsManager) {
+        
+        this.targetStorage = targetStorage;
         this.linkStorage = linkStorage;
-        this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig());
+        this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig(), dataPath, metricsManager);
         
         this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
@@ -84,19 +93,27 @@ public class AsyncCrawler {
         }
     }
 
-    private void shutdown() {
-        logger.info("Starting crawler shuttdown...");
+    public void shutdown() {
         shouldStop = true;
         synchronized(running) {
-            logger.info("Waiting downloader to finish...");
+            if(isShutdown) {
+               return; 
+            }
+            logger.info("Starting crawler shuttdown...");
             downloader.await();
             downloader.close();
-            linkStorage.close();
-            logger.info("Done.");
+            if(linkStorage instanceof LinkStorage) {
+                ((LinkStorage)linkStorage).close();
+            }
+            if(targetStorage instanceof TargetStorage) {
+                ((TargetStorage)targetStorage).close();
+            }
+            isShutdown = true;
+            logger.info("Shutdown finished.");
         }
     }
 
-    public static void run(ConfigService config) throws IOException, NumberFormatException {
+    public static void run(ConfigService config, String dataPath) throws IOException, NumberFormatException {
         logger.info("Starting CrawlerManager...");
         try {
             StorageConfig linkStorageServerConfig = config.getLinkStorageConfig().getStorageServerConfig();
@@ -106,7 +123,7 @@ public class AsyncCrawler {
             Storage targetStorage = new StorageCreator(targetServerConfig).produce();
             
             AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, (LinkStorage) linkStorage, crawlerConfig);
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig, dataPath, new MetricsManager());
             crawler.run();
 
         } catch (StorageFactoryException ex) {

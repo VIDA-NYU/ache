@@ -28,8 +28,7 @@ public class TitleRegexTargetClassifier implements TargetClassifier {
     
     public boolean regexMatchesTitle(Page page) {
         
-        String title = page.getPageURL().titulo();
-        
+        String title = page.getParsedData().getTitle();
         if (title != null) {
             Matcher matcher = this.pattern.matcher(title);
             if (matcher.matches()) {

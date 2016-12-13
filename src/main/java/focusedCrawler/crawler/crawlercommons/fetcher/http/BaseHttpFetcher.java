@@ -40,6 +40,7 @@ public abstract class BaseHttpFetcher extends BaseFetcher {
 
     protected int _maxThreads;
     protected UserAgent _userAgent;
+    protected String _userAgentString;
     protected int _maxRedirects = DEFAULT_MAX_REDIRECTS;
     protected int _maxConnectionsPerHost = DEFAULT_MAX_CONNECTIONS_PER_HOST;
     protected int _minResponseRate = DEFAULT_MIN_RESPONSE_RATE;
@@ -48,9 +49,9 @@ public abstract class BaseHttpFetcher extends BaseFetcher {
 
     public BaseHttpFetcher(int maxThreads, UserAgent userAgent) {
         super();
-
         _maxThreads = maxThreads;
         _userAgent = userAgent;
+        _userAgentString = userAgent.getUserAgentString();
     }
 
     public int getMaxThreads() {

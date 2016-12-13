@@ -1,16 +1,9 @@
 package focusedCrawler.memex.cdr;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.zip.GZIPOutputStream;
-
-import org.kohsuke.args4j.CmdLineException;
-import org.kohsuke.args4j.CmdLineParser;
-import org.kohsuke.args4j.Option;
-import org.kohsuke.args4j.ParserProperties;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
@@ -18,44 +11,33 @@ import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FileSystemTargetRepository.FileContentIterator;
+import focusedCrawler.util.CliTool;
+import io.airlift.airline.Command;
+import io.airlift.airline.Option;
 
-public class AcheToCdrFileExporter {
+@Command(name="AcheToCdrFileExporter", description="Exports crawled data to CDR format")
+public class AcheToCdrFileExporter extends CliTool {
     
-    @Option(name="--input-path", usage="Path to ACHE data target folder", required=true)
+    @Option(name = "--input-path", description="Path to ACHE data target folder", required=true)
     private String inputPath;
     
-    @Option(name="--output-file", usage="Gziped output file containing data formmated as per CDR 2.0 schema", required=true)
+    @Option(name="--output-file", description="Gziped output file containing data formmated as per CDR 2.0 schema", required=true)
     private String outputFile;
     
-    @Option(name="--hashed-filename", usage="Wheter ACHE repository files names are hashed")
+    @Option(name="--hashed-filename", description="Wheter ACHE repository files names are hashed")
     private boolean hashFilename = false;
     
-    @Option(name="--compressed-data", usage="Wheter ACHE repository files is compressed")
+    @Option(name="--compressed-data", description="Wheter ACHE repository files is compressed")
     private boolean compressData = false;
     
     private DataFormat dataFormat = DataFormat.JSON;
     
     public static void main(String[] args) throws Exception {
-        new AcheToCdrFileExporter().run(args);
+        CliTool.run(args, new AcheToCdrFileExporter());
     }
     
-    public void run(String[] args) throws Exception {
-        ParserProperties properties = ParserProperties.defaults().withUsageWidth(80);
-        CmdLineParser parser = new CmdLineParser(this, properties);
-        try {
-            parser.parseArgument(args);
-        } catch (CmdLineException e) {
-            System.err.println(e.getMessage());
-            System.err.println();
-            parser.printUsage(System.err);
-            System.err.println();
-            System.exit(1);
-        }
-        generateCdrFile();
-    }
-
-    private void generateCdrFile()
-            throws IOException, FileNotFoundException, JsonProcessingException {
+    @Override
+    public void execute() throws Exception {
         
         System.out.println("Reading ACHE data from: "+inputPath);
         System.out.println("Generating CDR file at: "+outputFile);
@@ -86,20 +68,8 @@ public class AcheToCdrFileExporter {
                 continue;
             }
 
-            HashMap<String, Object> crawlData = new HashMap<>();
-            crawlData.put("response_headers", pageModel.getResponseHeaders());
-
-            CDRDocumentBuilder builder = new CDRDocumentBuilder()
-                    .withUrl(pageModel.getUrl())
-                    .withTimestamp(pageModel.getFetchTime())
-                    .withContentType(contentType)
-                    .withVersion("2.0")
-                    .withTeam("NYU")
-                    .withCrawler("ACHE")
-                    .withRawContent(pageModel.getResponseBody())
-                    .withCrawlData(crawlData);
-
-            String json = builder.buildAsJson();
+            String json = createCDRDocumentJson(pageModel);
+            
             if(json != null) {
                 out.println(json);
             }
@@ -111,6 +81,28 @@ public class AcheToCdrFileExporter {
         it.close();
         out.close();
         System.out.println("done.");
+    }
+
+    public static String createCDRDocumentJson(TargetModelJson pageModel) {
+        HashMap<String, Object> crawlData = new HashMap<>();
+        crawlData.put("response_headers", pageModel.getResponseHeaders());
+        
+        CDRDocument.Builder builder = new CDRDocument.Builder()
+                .setUrl(pageModel.getUrl())
+                .setTimestamp(pageModel.getFetchTime())
+                .setContentType(pageModel.getContentType())
+                .setVersion("2.0")
+                .setTeam("NYU")
+                .setCrawler("ACHE")
+                .setRawContent(pageModel.getContentAsString())
+                .setCrawlData(crawlData);
+
+        try {
+            return builder.buildAsJson();
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

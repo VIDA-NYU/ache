@@ -561,10 +561,6 @@ public class Acentos {
 
         String tipo_teste = args[0].trim();
 
-        Acentos teste = new Acentos();
-
-
-
         if( tipo_teste.startsWith("file") )
 
           {
@@ -599,7 +595,7 @@ public class Acentos {
 
                  while( (inputLine = bin.readLine()) != null )
 
-                        out.writeBytes( teste.retirarNotacaoHTML( inputLine )+"\n" );
+                        out.writeBytes( Acentos.retirarNotacaoHTML( inputLine )+"\n" );
 
                  bin.close();
 
@@ -621,7 +617,7 @@ public class Acentos {
 
                  while( (inputLine = bin.readLine()) != null )
 
-                        out.writeBytes( teste.retirarAcentosANSI( inputLine )+"\n" );
+                        out.writeBytes( Acentos.retirarAcentosANSI( inputLine )+"\n" );
 
                  bin.close();
 
@@ -643,7 +639,7 @@ public class Acentos {
 
                  while( (inputLine = bin.readLine()) != null )
 
-                        out.writeBytes( teste.retirarNotacaoHTMLAcentosANSI( inputLine )+"\n" );
+                        out.writeBytes( Acentos.retirarNotacaoHTMLAcentosANSI( inputLine )+"\n" );
 
                  bin.close();
 
@@ -675,11 +671,11 @@ public class Acentos {
 
             System.out.println(" palavra.length() = "+palavra.length());
 
-            System.out.println(" retirarNotacaoHTML("+palavra+")            = '"+teste.retirarNotacaoHTML(palavra)+"'");
+            System.out.println(" retirarNotacaoHTML("+palavra+")            = '"+Acentos.retirarNotacaoHTML(palavra)+"'");
 
-            System.out.println(" retirarAcentosANSI("+palavra+")            = '"+teste.retirarAcentosANSI(palavra)+"'");
+            System.out.println(" retirarAcentosANSI("+palavra+")            = '"+Acentos.retirarAcentosANSI(palavra)+"'");
 
-            System.out.println(" retirarNotacaoHTMLAcentosANSI("+palavra+") = '"+teste.retirarNotacaoHTMLAcentosANSI(palavra)+"'");
+            System.out.println(" retirarNotacaoHTMLAcentosANSI("+palavra+") = '"+Acentos.retirarNotacaoHTMLAcentosANSI(palavra)+"'");
 
           }
 

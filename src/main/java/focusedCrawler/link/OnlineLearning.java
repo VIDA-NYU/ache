@@ -2,10 +2,10 @@ package focusedCrawler.link;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
-import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -16,97 +16,78 @@ import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.link.linkanalysis.HITS;
 import focusedCrawler.link.linkanalysis.SALSA;
+import focusedCrawler.target.TargetStorageMonitor;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.vsm.VSMElement;
 
 
 public class OnlineLearning {
 
-	private Frontier frontier;
-	
-	private BipartiteGraphManager manager;
-	
-	private BipartiteGraphRepository rep;
-	
-	private LinkClassifierBuilder classifierBuilder;
-	
-	private String method;
-	
-	private String targetPath;
-	
-	public OnlineLearning(Frontier frontier, BipartiteGraphManager manager, LinkClassifierBuilder classifierBuilder, String method, String path){
-		this.frontier = frontier;
-		this.manager = manager;
-		this.classifierBuilder = classifierBuilder;
-		this.method = method;
-		this.targetPath = path;
-		this.rep = manager.getRepository();
-	}
-	
-	public void execute() throws Exception{
-		frontier.commit();
-		if(method.equals("SALSA")){
-			runSALSA(null,false);
-		}
-		if(method.equals("SALSA_SEED")){
-			runSALSA(loadRelSites(false),false);	
-		}
-		if(method.equals("SALSA_CLASSIFIER")){
-			runSALSA(loadRelSites(false),true);	
-		}
-		if(method.equals("HITS")){
-			runHITS(null);
-		}
-		if(method.equals("HITS_1ST")){
-			runHITS(loadRelSites(false));
-		}
-		if(method.equals("LINK_CLASSIFIERS")){
-			createClassifiers(loadRelSites(false),true);
-		}
-		if(method.equals("FORWARD_CLASSIFIER_BINARY")){
-			forwardClassifier(loadRelSites(true),true,0);
-		}
-		if(method.equals("FORWARD_CLASSIFIER_LEVELS")){
-			forwardClassifier(loadRelSites(true),true,3);
-		}
+    private Frontier frontier;
+    private BipartiteGraphManager manager;
+    private BipartiteGraphRepository rep;
+    private LinkClassifierBuilder classifierBuilder;
+    private String method;
+    private String dataPath;
 
-		frontier.commit();		
-	}
-	
-	private HashSet<String> loadRelSites(boolean isDir) throws IOException{
-		HashSet<String> relSites = new HashSet<String>();
-		if(isDir){
-			File[] dirs = new File(targetPath).listFiles();
-			System.out.println(">>REL SITESs");
-			for (int i = 0; i < dirs.length; i++) {
-				File[] files = dirs[i].listFiles();
-				for (int j = 0; j < files.length; j++) {
-					String url = URLDecoder.decode(files[j].getName(), "UTF-8");
-					if(!relSites.contains(url)){
-						relSites.add(url);
-						System.out.println(">>" + url);
-					}
-				}
-			}
-		}else{
-			File file = new File(targetPath + File.separator + "entry_points");
-			try(BufferedReader input = new BufferedReader(new FileReader(file))) {
-    			for (String line = input.readLine(); line != null; line = input.readLine()) {
-    				if(line.startsWith("------")){
-    					String host = line.replace("-", "");
-    					String url = "http://" + host + "/";
-    					if(!relSites.contains(url)){
-    						relSites.add(url);
-    						System.out.println(">>" + url);
-    					}
-    				}
-    			}
-			}
-		}
-		return relSites;
-	}
-	
-	public void runSALSA(HashSet<String> relSites, boolean useClassifier) throws Exception{
+    public OnlineLearning(Frontier frontier, BipartiteGraphManager manager,
+            LinkClassifierBuilder classifierBuilder, String method, String dataPath) {
+        this.frontier = frontier;
+        this.manager = manager;
+        this.classifierBuilder = classifierBuilder;
+        this.method = method;
+        this.dataPath = dataPath;
+        this.rep = manager.getRepository();
+    }
+
+    public synchronized void execute() throws Exception {
+        frontier.commit();
+        if (method.equals("SALSA")) {
+            runSALSA(null, false);
+        }
+        if (method.equals("SALSA_SEED")) {
+            runSALSA(readRelevantUrlsFromFile(), false);
+        }
+        if (method.equals("SALSA_CLASSIFIER")) {
+            runSALSA(readRelevantUrlsFromFile(), true);
+        }
+        if (method.equals("HITS")) {
+            runHITS(null);
+        }
+        if (method.equals("HITS_1ST")) {
+            runHITS(readRelevantUrlsFromFile());
+        }
+        if (method.equals("LINK_CLASSIFIERS")) {
+            createClassifiers(readRelevantUrlsFromFile(), true);
+        }
+        if (method.equals("FORWARD_CLASSIFIER_BINARY")) {
+            forwardClassifier(TargetStorageMonitor.readRelevantUrls(dataPath), true, 0);
+        }
+        if (method.equals("FORWARD_CLASSIFIER_LEVELS")) {
+            forwardClassifier(TargetStorageMonitor.readRelevantUrls(dataPath), true, 3);
+        }
+        frontier.commit();
+    }
+
+    private HashSet<String> readRelevantUrlsFromFile() throws IOException, FileNotFoundException {
+        HashSet<String> relSites = new HashSet<String>();
+        File file = new File(dataPath + File.separator + "entry_points");
+        try (BufferedReader input = new BufferedReader(new FileReader(file))) {
+            for (String line = input.readLine(); line != null; line = input.readLine()) {
+                if (line.startsWith("------")) {
+                    String host = line.replace("-", "");
+                    String url = "http://" + host + "/";
+                    if (!relSites.contains(url)) {
+                        relSites.add(url);
+                        System.out.println(">>" + url);
+                    }
+                }
+            }
+        }
+        return relSites;
+    }
+
+    public void runSALSA(HashSet<String> relSites, boolean useClassifier) throws Exception{
 		SALSA salsa = new SALSA(rep);
 		if(relSites != null){
 			HashMap<String,VSMElement> probs = new HashMap<String, VSMElement>();

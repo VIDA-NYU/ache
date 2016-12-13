@@ -23,8 +23,8 @@
 */
 package focusedCrawler.link.classifier;
 
-import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.link.frontier.LinkRelevance;
+import focusedCrawler.target.model.Page;
 import focusedCrawler.util.parser.LinkNeighborhood;
 
 /**
@@ -41,7 +41,7 @@ import focusedCrawler.util.parser.LinkNeighborhood;
  */
 public interface LinkClassifier {
 
-  public LinkRelevance[] classify(PaginaURL page) throws LinkClassifierException;
+  public LinkRelevance[] classify(Page page) throws LinkClassifierException;
 
   public LinkRelevance classify(LinkNeighborhood ln) throws LinkClassifierException;
 

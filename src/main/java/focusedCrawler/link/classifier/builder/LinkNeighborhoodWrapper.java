@@ -31,6 +31,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.string.PorterStemmer;
@@ -56,7 +57,7 @@ public class LinkNeighborhoodWrapper {
 
   public LinkNeighborhoodWrapper(StopList stoplist) {
     this.stoplist = stoplist;
-    stemmer = new PorterStemmer();
+    this.stemmer = new PorterStemmer();
   }
 
   public LinkNeighborhoodWrapper() {
@@ -124,7 +125,7 @@ public class LinkNeighborhoodWrapper {
    * @throws MalformedURLException
    */
 
-  public HashMap<String, Instance> extractLinks(PaginaURL page, String[] features) throws MalformedURLException {
+  public HashMap<String, Instance> extractLinks(Page page, String[] features) throws MalformedURLException {
     HashMap<String, WordField[]> linkFields = extractLinks(page);
     return mapFeatures(linkFields, features);
   }
@@ -137,7 +138,6 @@ public class LinkNeighborhoodWrapper {
 
   public HashMap<String, Instance> extractLinks(LinkNeighborhood linkNeighboor, String[] features) throws MalformedURLException {
     HashMap<String, WordField[]> linkFields = extractLinks(linkNeighboor);
-//    System.out.println(">>>MAPPING...");
     return mapFeatures(linkFields, features);
   }
 
@@ -279,9 +279,14 @@ public class LinkNeighborhoodWrapper {
 	   }
 	   return result;
   }
+   
+   private HashMap<String, WordField[]> extractLinks(Page page) throws MalformedURLException {
+       ParsedData parsedData = page.getParsedData();
+       LinkNeighborhood[] linkNeighboors = parsedData.getLinkNeighborhood();
+       return extractLinks(linkNeighboors);
+   }
 
-   private  HashMap<String, WordField[]> extractLinks(LinkNeighborhood[] linkNeighboors) throws
-      MalformedURLException {
+   private HashMap<String, WordField[]> extractLinks(LinkNeighborhood[] linkNeighboors) throws MalformedURLException {
 	   HashMap<String, WordField[]> result = new HashMap<String, WordField[]>();
 	   for (int i = 0; i < linkNeighboors.length; i++) {
 		   List<WordField> words = new ArrayList<WordField>();
@@ -306,45 +311,6 @@ public class LinkNeighborhoodWrapper {
 	   return result;
    }
 
-   private HashMap<String, WordField[]> extractLinks(PaginaURL pageParser) throws
-      MalformedURLException {
-
-    LinkNeighborhood[] linkNeighboors = pageParser.getLinkNeighboor();
-    return extractLinks(linkNeighboors);
-  }
-
-
-  /**
-   * Extract the words close to a given hyperlink
-   *
-   * @param page Page - page to be scanned
-   * @param link String - link to be found
-   * @throws MalformedURLException
-   * @return String[] - bag of words close to given hyperlink
-   */
-  public WordField[] getNeighboorhood(Page page, String link) throws
-      MalformedURLException {
-    String pageStr = page.getContent();
-    PaginaURL pageParser = new PaginaURL(page.getURL(),pageStr, stoplist);
-    HashMap<String, WordField[]> result = extractLinks(pageParser);
-    WordField[] words = (WordField[])result.get(link);
-    return  words;
-  }
-
-  public LinkNeighborhood getNeighboorhoodLN(Page page, String link) throws MalformedURLException {
-	  LinkNeighborhood ln = null;
-	  String pageStr = page.getContent();
-	  PaginaURL pageParser = new PaginaURL(page.getURL(),pageStr, stoplist);
-	  LinkNeighborhood[] lns = pageParser.getLinkNeighboor();
-	  for (int i = 0; i < lns.length; i++) {
-		if(lns[i].getLink().toString().equals(link)){
-			ln = lns[i];
-		}
-	  }
-	  return  ln;
-  }
-
-  
   /**
    * Put the words in URL into bag of words
    *
@@ -352,7 +318,6 @@ public class LinkNeighborhoodWrapper {
    * @param wordsFields Vector list of word
    * @throws MalformedURLException
    */
-
   private void getURLWords(String urlStr, List<WordField> wordsFields) throws  MalformedURLException {
 
 	  URL url = new URL(urlStr);

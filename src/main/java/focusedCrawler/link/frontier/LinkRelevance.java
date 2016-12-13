@@ -36,6 +36,7 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.google.common.net.InetAddresses;
 import com.google.common.net.InternetDomainName;
 
 @SuppressWarnings("serial")
@@ -96,8 +97,7 @@ public class LinkRelevance implements Serializable {
     }
     
     @JsonIgnore
-    public InternetDomainName getDomainName() {
-        String host = url.getHost();
+    private InternetDomainName getDomainName(String host) {
         InternetDomainName domain = InternetDomainName.from(host);
         if(host.startsWith("www.")) {
             return InternetDomainName.from(host.substring(4));
@@ -108,15 +108,21 @@ public class LinkRelevance implements Serializable {
     
     @JsonIgnore
     public String getTopLevelDomainName() {
-        InternetDomainName domain = this.getDomainName();
+        String host = url.getHost();
+        InternetDomainName domain = null;
         try {
+            domain = this.getDomainName(host);
             if(domain.isUnderPublicSuffix()) {
                 return domain.topPrivateDomain().toString();
             } else {
                 // if the domain is a public suffix, just use it as top level domain
                 return domain.toString();
             }
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
+            // when host is an IP address, use it as TLD
+            if(InetAddresses.isInetAddress(host)) {
+                return host;
+            }
             throw new IllegalStateException("Invalid top private domain name=["+domain+"] in URL=["+url+"]", e);
         }
     }
