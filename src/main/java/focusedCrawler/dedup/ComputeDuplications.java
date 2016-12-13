@@ -88,7 +88,7 @@ public class ComputeDuplications {
             HashMap<String, Object> crawlData = new HashMap<>();
             crawlData.put("response_headers", page.getResponseHeaders());
             
-            String text = KeepEverythingExtractor.INSTANCE.getText(page.getResponseBody());
+            String text = KeepEverythingExtractor.INSTANCE.getText(page.getContentAsString());
             String contentHash = DigestUtils.md5Hex(text);
             
             Set<String> dups = contentHashMap.get(contentHash); 
