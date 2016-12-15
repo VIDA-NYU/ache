@@ -79,12 +79,11 @@ public class WekaTargetClassifier implements TargetClassifier {
 			    return new TargetRelevance(false, relevanceProbability);
 			}
 		}catch(Exception ex){
-			ex.printStackTrace();
-			throw new TargetClassifierException(ex.getMessage());
+			throw new TargetClassifierException(ex.getMessage(), ex);
 		}
 	}
 
-    public double[] distributionForInstance(Page page) throws TargetClassifierException {
+    private double[] distributionForInstance(Page page) throws TargetClassifierException {
         double[] result = null;
         try {
             double[] values = getValues(page);
@@ -94,8 +93,7 @@ public class WekaTargetClassifier implements TargetClassifier {
                 result = classifier.distributionForInstance(instanceWeka);
             }
         } catch (Exception ex) {
-            ex.printStackTrace();
-            throw new TargetClassifierException(ex.getMessage());
+            throw new TargetClassifierException(ex.getMessage(), ex);
         }
         return result;
     }
@@ -153,18 +151,9 @@ public class WekaTargetClassifier implements TargetClassifier {
             is.close();
 
             String[] attributes = featureConfig.getParam("ATTRIBUTES", " ");
-            weka.core.FastVector vectorAtt = new weka.core.FastVector();
-            for (int i = 0; i < attributes.length; i++) {
-                vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
-            }
             String[] classValues = featureConfig.getParam("CLASS_VALUES", " ");
-            weka.core.FastVector classAtt = new weka.core.FastVector();
-            for (int i = 0; i < classValues.length; i++) {
-                classAtt.addElement(classValues[i]);
-            }
-            vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
-            Instances insts = new Instances("target_classification", vectorAtt, 1);
-            insts.setClassIndex(attributes.length);
+            
+            Instances insts = createWekaIntances(attributes, classValues);
             
             return new WekaTargetClassifier(classifier, relevanceThreshold, insts, attributes, stoplist);
 
@@ -177,6 +166,21 @@ public class WekaTargetClassifier implements TargetClassifier {
         catch (IOException e) {
             throw new IllegalArgumentException("Could not load classifier.", e);
         }
+    }
+
+    private static Instances createWekaIntances(String[] attributes, String[] classValues) {
+        weka.core.FastVector vectorAtt = new weka.core.FastVector();
+        for (int i = 0; i < attributes.length; i++) {
+            vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
+        }
+        weka.core.FastVector classAtt = new weka.core.FastVector();
+        for (int i = 0; i < classValues.length; i++) {
+            classAtt.addElement(classValues[i]);
+        }
+        vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
+        Instances instances = new Instances("target_classification", vectorAtt, 1);
+        instances.setClassIndex(attributes.length);
+        return instances;
     }
   
 }
