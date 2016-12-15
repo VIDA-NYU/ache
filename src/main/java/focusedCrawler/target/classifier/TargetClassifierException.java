@@ -38,8 +38,8 @@ package focusedCrawler.target.classifier;
 @SuppressWarnings("serial")
 public class TargetClassifierException extends Exception {
 
-    public TargetClassifierException(String message) {
-        super(message);
+    public TargetClassifierException(String message, Throwable e) {
+        super(message, e);
     }
 
 }
