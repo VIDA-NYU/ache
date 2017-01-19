@@ -17,7 +17,7 @@ To build `ache` from source, you can run the following commands in your terminal
 ```
 git clone https://github.com/ViDA-NYU/ache.git
 cd ache
-./gradlew clean installApp
+./gradlew installDist
 ```
 
 which will generate an installation package under `ache/build/install/`. You can then make ACHE command line available in the terminal by adding ACHE to the PATH:
