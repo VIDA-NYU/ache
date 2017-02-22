@@ -18,6 +18,7 @@ import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.link.frontier.FrontierPersistentException;
+import focusedCrawler.seedfinder.SeedFinder;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
 import focusedCrawler.util.MetricsManager;
@@ -55,6 +56,7 @@ public class Main {
                 AddSeeds.class,
                 StartLinkStorage.class,
                 StartCrawlManager.class,
+                SeedFinder.class,
                 RunCliTool.class
             );
 
