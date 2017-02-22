@@ -13,7 +13,7 @@ import focusedCrawler.util.CliTool;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
 
-@Command(name="SeedFinder", description="Runs the SeedFinder tool")
+@Command(name="seedFinder", description="Runs the SeedFinder tool")
 public class SeedFinder extends CliTool {
     
     private final String userAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
