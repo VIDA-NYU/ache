@@ -17,7 +17,7 @@ To build `ache` from source, you can run the following commands in your terminal
 ```
 git clone https://github.com/ViDA-NYU/ache.git
 cd ache
-./gradlew clean installApp
+./gradlew installDist
 ```
 
 which will generate an installation package under `ache/build/install/`. You can then make ACHE command line available in the terminal by adding ACHE to the PATH:
@@ -37,27 +37,28 @@ conda install -c memex ache
 NOTE: Only tagged versions are published to Anaconda Cloud, so the version available through Conda may not be up-to-date.
 If you want to try the most recent version, please clone the repository and build from source.
 
-## Page Classifiers
+## Target Page Classifiers
 
-ACHE uses page classifiers to distinguish between relevant and irrelevant pages. Currently, the following page classifiers are available:
-- `url_regex` - classify a page as relevant if the **URL** of the page matches a given pattern defined by a provided regular expression.
-- `title_regex` - classify a page as relevant if the HTML's tag **title** matches a given pattern defined by a provided regular expression.
-- `weka` - uses a machine-learning classifier (SVM, Random Forest) trained using ACHE's `buildModel` command. Current classifier implementation relies on library Weka.
-
-To configure a page classifier, you will need to create a new folder containing a file named `pageclassifier.yml` specifying the type of classifier that should be used, as follows.
+ACHE uses target page classifiers to distinguish between relevant and irrelevant pages.
+To configure a page classifier, you will need to create a new folder containing a file named `pageclassifier.yml` specifying the type of classifier that should be used.
+ACHE contains several [page classifier implementations](https://github.com/ViDA-NYU/ache/tree/master/src/main/java/focusedCrawler/target/classifier) available.
+The following subsections describe how to configure them.
 
 #### title_regex
 
-You can provide a regular expression to match the title of the page. Pages that match this expression are considered relevant. Example:
+Classifies a page as relevant if the HTML tag `title` matches a given pattern defined by a provided regular expression.
+You can provide this regular expression using the `pageclassifier.yml` file. Pages that match this expression are considered relevant. For example:
 
 ```yml
 type: title_regex
 parameters:
-  regular_expression: "sometext"
+  regular_expression: ".*sometext.*"
 ```
 
 #### url_regex
-You can provide a list of regular expressions to match the URLs. Pages that match any of the regular expressions are considered relevant.
+
+Classifies a page as relevant if the **URL** of the page matches any of the regular expression patterns provided.
+You can provide a list of regular expressions using the `pageclassifier.yml` file as follows.
 
 ```yml
 type: url_regex
@@ -69,9 +70,24 @@ parameters:
   ]
 ```
 
+#### body_regex
+
+Classifies a page as relevant if the HTML content of the page matches any of the regular expression patterns provided.
+You can provide a list of regular expressions using the `pageclassifier.yml` file as follows.
+
+```yml
+type: body_regex
+parameters:
+  regular_expressions:
+  - pattern1
+  - pattern2
+```
+
 #### weka
 
-You need provide the path for a *features_file*, a *model_file*, and a *stopwords_file* file containing the stop-words used during the training process:
+Classifies pages using a machine-learning based text classifier (SVM, Random Forest) trained using ACHE's `buildModel` command. Current classifier implementation uses the library Weka.
+
+You need to provide the path for a *features_file*, a *model_file*, and a *stopwords_file* file containing the stop-words used during the training process:
 
 ```yml
 type: weka
@@ -82,7 +98,9 @@ parameters:
 ```
 
 You can build these files by training a model, as detailed in the next sub-section.
-Alternatively, you can use the [Domain Discovery Tool (DDT)](https://github.com/ViDA-NYU/domain_discovery_tool) to gather training data and build automatically these files. DDT is a interactive web-based app to help the user with the process of training a page classifier for ACHE.
+
+Alternatively, you can use the [Domain Discovery Tool (DDT)](https://github.com/ViDA-NYU/domain_discovery_tool) to gather training data and build automatically these files.
+DDT is a interactive web-based application that helps the user with the process of training a page classifier for ACHE.
 
 **Building a model for the weka page classifier**
 
@@ -110,7 +128,7 @@ ache buildModel -c config/sample_config/stoplist.txt -o model_output -t config/s
 
 After you generate a model, you need to prepare the seed file, where each line is a URL. Then to start the crawler, run:
 ```
-ache startCrawl -o <data output path> -c <config path> -s <seed path> -m <model path> [-e <elastic search index name>]
+ache startCrawl -o <data output path> -c <config path> -s <seed path> -m <model path>
 ```
 where,
 - `<configuration path>` is the path to the config directory.
@@ -120,7 +138,7 @@ where,
 
 Example of running ACHE using our sample data:
 ```
-ache startCrawl -o output -c config/sample_config -s config/sample.seeds -m config/sample_model -e achecrawler
+ache startCrawl -o output -c config/sample_config -s config/sample.seeds -m config/sample_model
 ```
 
 ## Data Formats
@@ -130,6 +148,7 @@ ACHE can store data in different data formats. The data format can be configured
 - FILESYSTEM_HTML (default) - only raw content is stored in plain text files.
 - FILESYSTEM_JSON - raw content and some metadata is stored using JSON format in files.
 - FILESYSTEM_CBOR - raw content and some metadata is stored using [CBOR](http://cbor.io) format in files.
+- FILES - raw content and metadata is stored in rolling compressed files of fixed size.
 - ELATICSEARCH - raw content and metadata is indexed in an ElasticSearch index. See [ElasticSearch Integration](https://github.com/ViDA-NYU/ache/wiki/ElasticSearch-Integration) for details about configuration.
 
 When using any FILESYSTEM_* data format, you can enable compression of the data stored in the files enabling the following line in the config file:

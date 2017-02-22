@@ -20,7 +20,7 @@ mkdir -vp ${PREFIX}/lib/ache/lib;
 
 # build focused_crawler
 export TERM=${TERM:-dumb} 
-./gradlew clean installApp --stacktrace
+./gradlew clean installDist --stacktrace
 
 
 pushd build/install/ache

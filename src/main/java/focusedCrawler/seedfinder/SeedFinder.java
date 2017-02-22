@@ -34,9 +34,12 @@ public class SeedFinder extends CliTool {
     @Option(name="--initialQuery", description="The inital query to issue to the search engine", required=true)
     private String initialQuery;
 
-    @Option(name="--modelPath", description="The inital query to issue to the search engine", required=true)
+    @Option(name="--modelPath", description="The path to the page classifier model", required=true)
     private String modelPath;
-    
+
+    @Option(name="--seedsPath", description="The path where the seeds generated should be saved")
+    private String seedsPath = "";
+
     @Option(name="--searchEngine", description="The search engine to be used")
     private SearchEngineType searchEngine = SearchEngineType.ALL;
     
@@ -57,7 +60,7 @@ public class SeedFinder extends CliTool {
         QueryGenerator queryGenerator = new QueryGenerator(minPrecision);
         QueryProcessor queryProcessor = new QueryProcessor(maxPagesPerQuery, minPrecision, classifier, api);
 
-        String seedFileName = "seeds_" + query.asString() + ".txt";
+        String seedFileName = (seedsPath.length() == 0) ? "seeds_" + query.asString() + ".txt" : seedsPath+"/seeds_" + query.asString() + ".txt";
         PrintStream seedsFile = new PrintStream(seedFileName);
         try {
             int numberOfQueries = 0;
