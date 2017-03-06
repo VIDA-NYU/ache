@@ -145,7 +145,7 @@ public class LinkStorage extends StorageDefault {
     public void insert(SitemapXmlHandler.SitemapData sitemapData) {
         for (String link : sitemapData.links) {
             try {
-                frontierManager.insert(new LinkRelevance(link, 1.0d, LinkRelevance.Type.SITEMAP));
+                frontierManager.insert(new LinkRelevance(link, 1.0d, LinkRelevance.Type.FORWARD));
             } catch (MalformedURLException | FrontierPersistentException e) {
                 logger.error("Failed to insert link into the frontier: "+link);
             }
