@@ -18,6 +18,7 @@ import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.link.frontier.FrontierPersistentException;
+import focusedCrawler.rest.RestServer;
 import focusedCrawler.seedfinder.SeedFinder;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
@@ -310,6 +311,10 @@ public class Main {
             try {
                 MetricsManager metricsManager = new MetricsManager();
                 
+                RestServer restServer = new RestServer(config.getRestConfig(),
+                                                       metricsManager.getMetricsRegistry());
+                restServer.start();
+
                 Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
                         dataOutputPath, modelPath, config.getLinkStorageConfig(), metricsManager);
 
@@ -328,6 +333,7 @@ public class Main {
                 } finally {
                     crawler.shutdown();
                     metricsManager.close();
+                    restServer.shutdown();
                 }
 
             }
