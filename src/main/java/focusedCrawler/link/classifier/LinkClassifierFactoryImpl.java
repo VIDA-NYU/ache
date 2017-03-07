@@ -30,7 +30,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
-import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.string.StopList;
 import weka.classifiers.Classifier;
 import weka.core.Instances;
@@ -90,12 +89,7 @@ public class LinkClassifierFactoryImpl implements LinkClassifierFactory {
 	  String modelFilePath   = Paths.get(modelPath, "linkclassifier.model").toString();
 	  
       if(className.indexOf("LinkClassifierBreadthSearch") != -1){
-          ParameterFile config = new ParameterFile(featureFilePath); 
-          String[] attributes = config.getParam("ATTRIBUTES", " ");
-          
-          LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
-          wrapper.setFeatures(attributes);
-          linkClassifier= new LinkClassifierBreadthSearch(wrapper,attributes);
+          linkClassifier= new LinkClassifierBreadthSearch();
       }
       if(className.indexOf("LinkClassifierBaseline") != -1){
     	  linkClassifier= new LinkClassifierBaseline();
