@@ -13,3 +13,4 @@ config/humantrafficking
 config/escort
 /bin/
 .DS_Store*
+docs/_build/
