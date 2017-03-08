@@ -75,7 +75,7 @@ Currently, ACHE indexes documents into two ElasticSearch types:
 * ``target``, for pages classified as on-topic by the page classifier
 * ``negative``, for pages classified as off-topic by the page classifier
 
-Currently, these two types use the same schema, which has the following fields:
+These two types use the same schema, which has the following fields:
 
 * ``domain`` - domain of the url
 * ``topPrivateDomain`` -  top private domain of the url

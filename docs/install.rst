@@ -32,4 +32,4 @@ If you use the `Conda <https://conda.io/docs/>`_ package manager, you can instal
 ..  warning::
 
   Only tagged versions are published to Anaconda Cloud, so the version available through Conda may not be up-to-date.
-If you want to try the most recent version, please clone the repository and build from source.
+  If you want to try the most recent version, please clone the repository and build from source.
