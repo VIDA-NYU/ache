@@ -1,0 +1,16 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/react-vis/dist/style.css";
+
+.ache-logo {
+  padding: 5px 30px;
+}
+
+.ache-logo img {
+  height: 35px;
+}
+
+.main-content {
+  margin-top: 50px;
+  padding: 40px 15px;
+  text-align: center;
+}
