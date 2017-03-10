@@ -29,7 +29,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 import com.google.common.base.Preconditions;
 
-import focusedCrawler.memex.cdr.CDRDocument;
+import focusedCrawler.memex.cdr.CDR2Document;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.target.model.TargetModelCbor;
@@ -237,7 +237,7 @@ public class ElasticSearchIndexer extends CliTool {
                         HashMap<String, Object> crawlData = new HashMap<>();
                         crawlData.put("response_headers", pageModel.getResponseHeaders());
                         
-                        doc = new CDRDocument.Builder()
+                        doc = new CDR2Document.Builder()
                                 .setUrl(pageModel.getUrl())
                                 .setTimestamp(pageModel.getFetchTime())
                                 .setContentType("text/html")

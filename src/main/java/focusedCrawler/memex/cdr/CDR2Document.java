@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 */
 @SuppressWarnings("serial")
 @JsonInclude(Include.NON_NULL)
-public class CDRDocument implements Serializable {
+public class CDR2Document implements Serializable {
 
     @JsonProperty("_id")
     private String _id;
@@ -64,10 +64,10 @@ public class CDRDocument implements Serializable {
     
     private String version;
 
-    public CDRDocument() {
+    public CDR2Document() {
     }
 
-    public CDRDocument(Builder builder) {
+    public CDR2Document(Builder builder) {
         this._id = builder._id;
         this.url = builder.url;
         this.timestamp = builder.timestamp;
@@ -118,6 +118,7 @@ public class CDRDocument implements Serializable {
         return extractedText;
     }
 
+    @JsonProperty("_id")
     public String getId() {
         return this._id;
     }
@@ -144,7 +145,7 @@ public class CDRDocument implements Serializable {
         private String version;
         
 
-        public CDRDocument build() {
+        public CDR2Document build() {
 
             if (this.url == null) throw new IllegalArgumentException("Field 'url' is mandatory");
             if (this.rawContent == null) throw new IllegalArgumentException("Field 'raw_content' is mandatory");
@@ -178,7 +179,7 @@ public class CDRDocument implements Serializable {
                 this._id = computeId();
             }
 
-            return new CDRDocument(this);
+            return new CDR2Document(this);
         }
 
         public String buildAsJson() throws JsonProcessingException {

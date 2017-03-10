@@ -62,7 +62,7 @@ public class CountTlds extends CliTool {
                 String line;
                 while((line = in.readLine()) != null) {
                     
-                    CDRDocument doc = mapper.readValue(line, CDRDocument.class);
+                    CDR2Document doc = mapper.readValue(line, CDR2Document.class);
                     
                     LinkRelevance link = new LinkRelevance(doc.getUrl(), 0);
                     String tld = link.getTopLevelDomainName();
