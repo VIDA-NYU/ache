@@ -62,12 +62,6 @@ public class FilesTargetRepository implements TargetRepository {
             directory.toFile().mkdirs();
         }
         this.directory = directory;
-        try {
-            openNewFile();
-        } catch (IOException e) {
-            throw new IllegalArgumentException(
-                    "Failed to initialize repository on directory: " + directory.toString());
-        }
     }
 
     public boolean insert(Page target) {
@@ -80,9 +74,7 @@ public class FilesTargetRepository implements TargetRepository {
             jsonMapper.writeValue(baos, target);
             baos.write("\n".getBytes());
             synchronized (this) {
-                if(bytesCounter.getCount() + baos.size() > maxFileSize) {
-                    openNewFile();
-                }
+                DeflaterOutputStream currentFile = getCurrentFile(baos);
                 baos.writeTo(currentFile);
                 currentFile.flush();
             }
@@ -91,6 +83,17 @@ public class FilesTargetRepository implements TargetRepository {
             logger.error("Failed to store object in repository.", e);
             return false;
         }
+    }
+
+    private DeflaterOutputStream getCurrentFile(ByteArrayOutputStream baos) throws IOException {
+        if(this.currentFile == null) {
+            openNewFile();
+        }  else {
+            if(bytesCounter.getCount() + baos.size() > maxFileSize) {
+                openNewFile();
+            }
+        }
+        return currentFile;
     }
 
     private synchronized void openNewFile() throws IOException {
