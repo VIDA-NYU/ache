@@ -99,7 +99,7 @@ public class CDRDocumentBuilderTest {
         assertThat(node.get("objects"), is(notNullValue()));
         assertThat(node.get("objects").isArray(), is(true));
         
-        assertThat(node.get("version").asDouble(), is(not(3.0d)));
+        assertThat(node.get("version").asDouble(), is(3.0d));
         
         
     }
