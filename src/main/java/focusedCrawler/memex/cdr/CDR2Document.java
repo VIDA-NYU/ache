@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.tika.mime.MediaType;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -36,7 +37,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonInclude(Include.NON_NULL)
 public class CDR2Document implements Serializable {
 
-    @JsonProperty("_id")
     private String _id;
     
     private String url;
@@ -118,7 +118,7 @@ public class CDR2Document implements Serializable {
         return extractedText;
     }
 
-    @JsonProperty("_id")
+    @JsonIgnore
     public String getId() {
         return this._id;
     }

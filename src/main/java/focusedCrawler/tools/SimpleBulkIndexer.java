@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.http.HttpEntity;
+import org.apache.http.StatusLine;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URLEncodedUtils;
@@ -65,7 +66,7 @@ public class SimpleBulkIndexer {
     }
 
 
-    void addDocument(String indexName, String typeName, Object obj, String id) throws IOException {
+    public void addDocument(String indexName, String typeName, Object obj, String id) throws IOException {
         
         String command;
         if(id == null) {
@@ -76,7 +77,11 @@ public class SimpleBulkIndexer {
         
         final String json;
         try {
-            json = jsonMapper.writeValueAsString(obj);
+            if(obj instanceof String) {
+                json = (String) obj;
+            } else {
+                json = jsonMapper.writeValueAsString(obj);
+            }
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Failed to serialize JSON object. ", e);
         }
@@ -85,7 +90,7 @@ public class SimpleBulkIndexer {
         bulkData.append(json+"\n");
         bulkSize++;
         
-        if(bulkSize > maxBulkSize) {
+        if(bulkSize >= maxBulkSize) {
             flushBulk();
         }
     }
@@ -139,10 +144,14 @@ public class SimpleBulkIndexer {
         
         CloseableHttpResponse response = httpclient.execute(httpPost);
         try {
-            System.out.println(response.getStatusLine());
             HttpEntity entity = response.getEntity();
-//            EntityUtils.consume(entity);
-            System.out.println(EntityUtils.toString(entity));
+            String entityAsText = EntityUtils.toString(entity);
+            StatusLine statusLine = response.getStatusLine();
+            
+            System.out.println(statusLine.toString());
+            if(statusLine.getStatusCode() != 200) {
+                System.out.println(entityAsText);
+            }
         } finally {
             response.close();
         }

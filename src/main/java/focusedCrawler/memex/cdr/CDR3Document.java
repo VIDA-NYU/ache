@@ -9,6 +9,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.tika.mime.MediaType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -39,7 +40,6 @@ public class CDR3Document implements Serializable {
         
     }
 
-    @JsonProperty("_id")
     private String _id;
     
     @JsonProperty("content_type")
@@ -69,7 +69,7 @@ public class CDR3Document implements Serializable {
     private String url;
     
     @JsonProperty("version")
-    private final float version = 3.1f;
+    private final float version = 3.0f;
 
     public CDR3Document() {
         // required from JSON deserialization
@@ -116,7 +116,7 @@ public class CDR3Document implements Serializable {
         return contentType;
     }
 
-    @JsonProperty("_id")
+    @JsonIgnore
     public String getId() {
         return this._id;
     }
