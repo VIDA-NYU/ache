@@ -9,9 +9,10 @@ import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FileSystemTargetRepository.FileContentIterator;
 import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.util.CliTool;
+import io.airlift.airline.Command;
 import io.airlift.airline.Option;
 
-
+@Command(name="MigrateToFilesTargetRepository", description="Migrate a FS repository to a FILES repository")
 public class MigrateToFilesTargetRepository extends CliTool {
     
     @Option(name = "--input-path", required = true, description = "Path to old input data_target folder")
