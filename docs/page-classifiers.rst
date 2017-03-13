@@ -6,7 +6,15 @@ Target Page Classifiers
 ACHE uses target page classifiers to distinguish between relevant and irrelevant pages.
 To configure a page classifier, you will need to create a new folder containing a file named  ``pageclassifier.yml`` specifying the type of classifier that should be used.
 ACHE contains several `page classifier implementations <https://github.com/ViDA-NYU/ache/tree/master/src/main/java/focusedCrawler/target/classifier>`_ available.
-The following subsections describe how to configure them.
+The following subsections describe how to configure them:
+
+* :ref:`title_regex <pageclassifier_title_regex>`
+* :ref:`url_regex <pageclassifier_url_regex>`
+* :ref:`body_regex <pageclassifier_body_regex>`
+* :ref:`regex <pageclassifier_regex>`
+* :ref:`weka <pageclassifier_weka>`
+
+.. _pageclassifier_title_regex:
 
 title_regex
 -----------
@@ -19,8 +27,10 @@ You can provide this regular expression using the  ``pageclassifier.yml`` file. 
     regular_expression: ".*sometext.*"
 
 
+.. _pageclassifier_url_regex:
+
 url_regex
------------
+----------
 
 Classifies a page as relevant if the **URL** of the page matches any of the regular expression patterns provided.
 You can provide a list of regular expressions using the  ``pageclassifier.yml`` file as follows::
@@ -34,6 +44,8 @@ You can provide a list of regular expressions using the  ``pageclassifier.yml`` 
     ]
 
 
+.. _pageclassifier_body_regex:
+
 body_regex
 -----------
 
@@ -45,6 +57,8 @@ You can provide a list of regular expressions using the  ``pageclassifier.yml`` 
     regular_expressions:
     - pattern1
     - pattern2
+
+.. _pageclassifier_regex:
 
 regex
 -----------
@@ -103,6 +117,8 @@ configuration, a page would have to:
         regexes:
           - .*bar.*
           - .*foo.*
+
+.. _pageclassifier_weka:
 
 weka
 -----------
