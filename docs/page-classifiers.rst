@@ -4,7 +4,7 @@ Target Page Classifiers
 .. highlight :: yaml
 
 ACHE uses target page classifiers to distinguish between relevant and irrelevant pages.
-To configure a page classifier, you will need to create a new folder containing a file named `pageclassifier.yml` specifying the type of classifier that should be used.
+To configure a page classifier, you will need to create a new folder containing a file named  ``pageclassifier.yml`` specifying the type of classifier that should be used.
 ACHE contains several `page classifier implementations <https://github.com/ViDA-NYU/ache/tree/master/src/main/java/focusedCrawler/target/classifier>`_ available.
 The following subsections describe how to configure them.
 
@@ -12,7 +12,7 @@ title_regex
 -----------
 
 Classifies a page as relevant if the HTML tag `title` matches a given pattern defined by a provided regular expression.
-You can provide this regular expression using the `pageclassifier.yml` file. Pages that match this expression are considered relevant. For example::
+You can provide this regular expression using the  ``pageclassifier.yml`` file. Pages that match this expression are considered relevant. For example::
 
   type: title_regex
   parameters:
@@ -23,7 +23,7 @@ url_regex
 -----------
 
 Classifies a page as relevant if the **URL** of the page matches any of the regular expression patterns provided.
-You can provide a list of regular expressions using the `pageclassifier.yml` file as follows::
+You can provide a list of regular expressions using the  ``pageclassifier.yml`` file as follows::
 
   type: url_regex
   parameters:
@@ -38,13 +38,71 @@ body_regex
 -----------
 
 Classifies a page as relevant if the HTML content of the page matches any of the regular expression patterns provided.
-You can provide a list of regular expressions using the `pageclassifier.yml` file as follows::
+You can provide a list of regular expressions using the  ``pageclassifier.yml`` file as follows::
 
   type: body_regex
   parameters:
     regular_expressions:
     - pattern1
     - pattern2
+
+regex
+-----------
+
+Classifies a page as relevant by matching the lists of regular expressions
+provided against multiple fields: `url`, `title`, and `content`.
+You can provide a list of regular expressions for each of these fields,
+and also the type of boolean operation to combine the results:
+
+* **AND** (default): All regular expressions must match
+* **OR**: At least one regular expression must match
+
+Besides the combination method for each regular expression within a list,
+you cab also specify how the final result for each field should be combined.
+The file  ``pageclassifier.yml`` should be organized as follows:
+
+.. code-block:: yaml
+
+  type: regex
+  parameters:
+      boolean_operator: AND|OR
+      url:
+        boolean_operator: AND|OR
+        regexes:
+          - pattern1-for-url
+          - pattern2-for-url
+      title:
+        boolean_operator: AND|OR
+        regexes:
+          - pattern1-for-title
+          - pattern2-for-title
+      content:
+        boolean_operator: AND|OR
+        regexes:
+          - pattern1-for-content
+
+For example, in order to be classified as relevant using the following
+configuration, a page would have to:
+
+* match regexes ``.*category=1.*`` OR ``.*post\.php.*`` in the URL
+* AND
+* it would have to match ``.*bar.*`` OR ``.*foo.*`` in the title.
+
+.. code-block:: yaml
+
+  type: regex
+  parameters:
+      boolean_operator: "AND"
+      url:
+        boolean_operator: "OR"
+        regexes:
+          - .*category=1.*
+          - .*post\.php.*
+      title:
+        boolean_operator: "OR"
+        regexes:
+          - .*bar.*
+          - .*foo.*
 
 weka
 -----------

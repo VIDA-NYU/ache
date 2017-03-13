@@ -73,6 +73,10 @@ public class TargetClassifierFactory {
                 classifier = createBodyRegexClassifier(yaml, parameters);
             }
             
+            if("regex".equals(classifierType)) {
+                classifier = new RegexTargetClassifier.Builder().build(basePath , yaml, parameters);
+            }
+            
             if("keep_link_relevance".equals(classifierType)) {
                 classifier = createKeepLinkRelevanceClassifier(basePath, yaml, parameters);
             }
