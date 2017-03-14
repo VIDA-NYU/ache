@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, DiscreteColorLegend} from 'react-vis';
 import logo from '../../ache-logo.png';
 import './App.css';
@@ -198,7 +202,8 @@ class Header extends React.Component {
           </div>
           <div id="navbar" className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
-              <li className="active"><a href="">Monitoring</a></li>
+              <Navigation to="/" label="Monitoring" activeOnlyWhenExact={true}/>
+              <Navigation to="/search" label="Search"/>
             </ul>
           </div>
         </div>
@@ -207,17 +212,34 @@ class Header extends React.Component {
   }
 }
 
+const Search = () => (
+  <div>
+    <h2>Search</h2>
+  </div>
+)
+
+const Navigation = ({ label, to, activeOnlyWhenExact }) => (
+  <Route path={to} exact={activeOnlyWhenExact} children={({ match }) => (
+    <li className={match ? 'active' : ''}>
+      <Link to={to}>{label}</Link>
+    </li>
+  )}/>
+)
+
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header/>
-        <div className="container">
-          <div className="main-content">
-            <MetricsMonitor />
+      <Router>
+        <div>
+          <Header/>
+          <div className="container">
+            <div className="main-content">
+              <Route exact path="/" component={MetricsMonitor}/>
+              <Route exact path="/search" component={Search}/>
+            </div>
           </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }
