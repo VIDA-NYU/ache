@@ -32,6 +32,7 @@ public class SimpleBulkIndexer {
     private StringBuilder bulkData = new StringBuilder();
     private int bulkSize = 0;
     private int maxBulkSize;
+    private int retries = 3;
     
     private String elasticSearchAddress;
     private BasicHeader authHeader;
@@ -97,7 +98,7 @@ public class SimpleBulkIndexer {
 
     public void flushBulk() throws IOException {
         if(bulkSize > 0) {
-            executeBulkRequest(bulkData.toString());
+            executeBulkRequestWithRetries(bulkData.toString(), retries);
             bulkSize = 0;
             bulkData = new StringBuilder();
         }
@@ -113,7 +114,8 @@ public class SimpleBulkIndexer {
             builder.append(command+"\n");
             builder.append(source+"\n");
         }
-        executeBulkRequest(builder.toString());
+        
+        executeBulkRequestWithRetries(builder.toString(), retries);
     }
     
     public void bulkIndexDocumentsWithId(String indexName,
@@ -126,9 +128,25 @@ public class SimpleBulkIndexer {
             builder.append(command+"\n");
             builder.append(source.getValue()+"\n");
         }
-        executeBulkRequest(builder.toString());
+        executeBulkRequestWithRetries(builder.toString(), retries);
     }
     
+    private void executeBulkRequestWithRetries(String requestBody, int retries) {
+        for(int i=0; i < retries; i++) {
+            try {
+                executeBulkRequest(requestBody.toString());
+                break;
+            } catch(Exception e) {
+                retries++;
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ie) {
+                    throw new RuntimeException("Bulk request retry interruped.", ie);
+                }
+            }
+        }
+    }
+
     private void executeBulkRequest(final String requestBody) throws IOException {
         
         HttpPost httpPost = new HttpPost(elasticSearchAddress +"/_bulk");

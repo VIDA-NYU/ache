@@ -114,10 +114,14 @@ public class AcheToCdrExporter extends CliTool {
         
         while (it.hasNext()) {
             TargetModelJson pageModel = it.next();
-            processRecord(pageModel);
-            processedPages++;
-            if(processedPages % 100 == 0) {
-                System.out.printf("Processed %d pages\n", processedPages);
+            try{
+                processRecord(pageModel);
+                processedPages++;
+                if(processedPages % 100 == 0) {
+                    System.out.printf("Processed %d pages\n", processedPages);
+                }
+            } catch(Exception e) {
+                System.err.println("Failed to process record.\n" + e.toString());
             }
         }
         System.out.printf("Processed %d pages\n", processedPages);
