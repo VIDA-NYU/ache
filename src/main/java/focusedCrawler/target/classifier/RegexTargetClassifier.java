@@ -36,7 +36,7 @@ public class RegexTargetClassifier implements TargetClassifier {
         if (regexes != null && !regexes.isEmpty()) {
             Pattern[] patterns = new Pattern[regexes.size()];
             for (int i = 0; i < patterns.length; i++) {
-                patterns[i] = Pattern.compile(regexes.get(i), Pattern.CASE_INSENSITIVE);
+                patterns[i] = Pattern.compile(regexes.get(i), Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
             }
             return patterns;
         }

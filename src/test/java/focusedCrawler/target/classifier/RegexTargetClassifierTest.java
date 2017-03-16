@@ -4,9 +4,12 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLDecoder;
 
+import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
 import focusedCrawler.target.model.Page;
@@ -44,7 +47,24 @@ public class RegexTargetClassifierTest {
         assertThat(classifier.classify(page3).isRelevant(), is(true));
         assertThat(classifier.classify(page4).isRelevant(), is(false));
     }
-
+    
+    @Test
+    public void testRegexClassifierMatcheConfig2() throws TargetClassifierException, IOException {
+        // given
+        String config = ClassifierFactoryTest.class.getResource("regex_classifier/config_jobs/").getPath();
+        String pageFile = "https%3A%2F%2Fmarkettrack.com%2Fcareers%2Fjob-openings";
+        InputStream fileInput = ClassifierFactoryTest.class.getResourceAsStream("regex_classifier/"+pageFile);
+        
+        String url = URLDecoder.decode(pageFile, "UTF-8");
+        String content = IOUtils.toString(fileInput, "UTF-8");
+        Page page = createPage(url, content);
+        
+        RegexTargetClassifier classifier = (RegexTargetClassifier) TargetClassifierFactory.create(config);
+        
+        // then
+        assertThat(classifier.classify(page).isRelevant(), is(true));
+    }
+    
     private Page createPage(String urlStr, String cont) throws MalformedURLException {
         URL url = new URL(urlStr);
         Page page1 = new Page(url, cont);
