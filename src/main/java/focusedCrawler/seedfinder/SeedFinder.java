@@ -33,6 +33,9 @@ public class SeedFinder extends CliTool {
 
     @Option(name="--initialQuery", description="The inital query to issue to the search engine", required=true)
     private String initialQuery;
+    
+    @Option(name="--csvPath", description="The path where to write a CSV file with stats")
+    private String csvPath;
 
     @Option(name="--modelPath", description="The path to the page classifier model", required=true)
     private String modelPath;
@@ -62,6 +65,12 @@ public class SeedFinder extends CliTool {
 
         String seedFileName = (seedsPath.length() == 0) ? "seeds_" + query.asString() + ".txt" : seedsPath+"/seeds_" + query.asString() + ".txt";
         PrintStream seedsFile = new PrintStream(seedFileName);
+        PrintStream csvFile = null;
+        
+        if(csvPath != null && !csvPath.isEmpty()) {
+            csvFile = new PrintStream(csvPath);
+        }
+        
         try {
             int numberOfQueries = 0;
             while (numberOfQueries < maxNumberOfQueries) {
@@ -71,7 +80,11 @@ public class SeedFinder extends CliTool {
                 System.out.println("---------------\n");
                 
                 QueryResult result = queryProcessor.processQuery(query);
-    
+                
+                if(csvFile != null) {
+                    writeResultsToLog(csvFile, query, result);
+                }
+                
                 for (Page page : result.positivePages) {
                     seedsFile.println(page.getURL().toExternalForm());
                 }
@@ -83,9 +96,19 @@ public class SeedFinder extends CliTool {
         } finally {
             queryProcessor.close();
             seedsFile.close();
+            csvFile.close();
         }
         
         System.out.println("\nSeeds file created at: "+seedFileName);
+    }
+
+    private void writeResultsToLog(PrintStream out, Query query, QueryResult result) {
+        for(Page p : result.positivePages) {
+            out.printf("%s, %s, %s\n", query.asString(), "relevant", p.getURL().toString());
+        }
+        for(Page p : result.negativePages) {
+            out.printf("%s, %s, %s\n", query.asString(), "irrelevant", p.getURL().toString());
+        }
     }
 
     private SearchEngineApi createSearchEngineApi(SearchEngineType searchEngine) {

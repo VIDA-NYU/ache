@@ -93,6 +93,7 @@ public class QueryProcessor {
             page.setParsedData(new ParsedData(new PaginaURL(page)));
             
             TargetRelevance relevance = classifier.classify(page);
+            page.setTargetRelevance(relevance);
             if(relevance.isRelevant()) {
                 result.positivePages.add(page);
             } else {
