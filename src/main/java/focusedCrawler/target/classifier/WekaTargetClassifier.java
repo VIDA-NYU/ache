@@ -28,8 +28,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
+import java.nio.file.Path;
 
 import org.xml.sax.SAXException;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.ParameterFile;
@@ -182,5 +186,30 @@ public class WekaTargetClassifier implements TargetClassifier {
         instances.setClassIndex(attributes.length);
         return instances;
     }
-  
+    
+    static class WekaClassifierConfig {
+        public String features_file = "pageclassifier.features";
+        public String model_file = "pageclassifier.features";
+        public String stopwords_file = null;
+        public double relevanceThreshold = 0.5;
+    }
+    
+    public static class Builder {
+
+        public TargetClassifier build(Path basePath, ObjectMapper yaml, JsonNode parameters) throws IOException {
+
+            WekaClassifierConfig params = yaml.treeToValue(parameters, WekaClassifierConfig.class);
+            params.model_file = basePath.resolve(params.model_file).toFile().getAbsolutePath();
+            params.features_file = basePath.resolve(params.features_file).toFile().getAbsolutePath();
+            params.stopwords_file = basePath.resolve(params.stopwords_file).toFile().getAbsolutePath();
+
+            return WekaTargetClassifier.create(
+                    params.model_file,
+                    params.features_file,
+                    params.relevanceThreshold,
+                    params.stopwords_file);
+        }
+
+    }
+
 }

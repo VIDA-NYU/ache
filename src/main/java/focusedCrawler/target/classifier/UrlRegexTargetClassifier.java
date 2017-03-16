@@ -1,6 +1,11 @@
 package focusedCrawler.target.classifier;
 
+import java.nio.file.Path;
 import java.util.List;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.LinkFilter;
@@ -9,6 +14,7 @@ import focusedCrawler.util.LinkFilter.LinkWhiteList;
 
 public class UrlRegexTargetClassifier implements TargetClassifier {
 
+    
     private LinkFilter linkFilter;
 
     public UrlRegexTargetClassifier(LinkFilter linkfilter) {
@@ -51,6 +57,49 @@ public class UrlRegexTargetClassifier implements TargetClassifier {
         LinkFilter linkfilter = new LinkFilter(new LinkWhiteList(whitelistFilename),
                                                new LinkBlackList(blacklistFilename));
         return new UrlRegexTargetClassifier(linkfilter);
+    }
+    
+
+    static class UrlRegexClassifierConfig {
+        public List<String> regular_expressions;
+        public String whitelist_file;
+        public String blacklist_file;
+    }
+    
+    public static class Builder {
+        
+        public TargetClassifier build(Path basePath, ObjectMapper yaml, JsonNode parameters) throws JsonProcessingException {
+            
+            UrlRegexClassifierConfig params = yaml.treeToValue(parameters,
+                                                               UrlRegexClassifierConfig.class);
+            TargetClassifier classifier = null;
+            
+            if(params.regular_expressions != null && params.regular_expressions.size() > 0) {
+                classifier = UrlRegexTargetClassifier.fromRegularExpressions(params.regular_expressions);
+            }
+            
+            if(params.whitelist_file != null && params.blacklist_file != null) {
+                params.whitelist_file = basePath.resolve(params.whitelist_file).toString();
+                params.blacklist_file = basePath.resolve(params.blacklist_file).toString();
+                classifier = UrlRegexTargetClassifier.fromWhitelistAndBlacklistFiles(
+                    params.whitelist_file,
+                    params.blacklist_file
+                );
+            }
+            
+            if(params.whitelist_file != null && params.blacklist_file == null) {
+                params.whitelist_file = basePath.resolve(params.whitelist_file).toString();
+                classifier = UrlRegexTargetClassifier.fromWhitelistFile(params.whitelist_file);
+            }
+            
+            if(params.whitelist_file == null && params.blacklist_file != null) {
+                params.blacklist_file = basePath.resolve(params.blacklist_file).toString();
+                classifier = UrlRegexTargetClassifier.fromBlacklistFile(params.blacklist_file);
+            }
+            
+            return classifier;
+        }
+        
     }
   
 }

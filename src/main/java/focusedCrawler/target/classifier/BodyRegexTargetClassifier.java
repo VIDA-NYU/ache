@@ -1,6 +1,11 @@
 package focusedCrawler.target.classifier;
 
+import java.nio.file.Path;
 import java.util.List;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.RegexMatcher;
@@ -20,9 +25,28 @@ public class BodyRegexTargetClassifier implements TargetClassifier {
     @Override
     public TargetRelevance classify(Page page) throws TargetClassifierException {
         if (matcher.matches(page.getContentAsString())) {
-            return new TargetRelevance(true, 1.0);
+            return TargetRelevance.RELEVANT;
         }
-        return new TargetRelevance(false, 0.0);
+        return TargetRelevance.IRRELEVANT;
     }
-	
+
+    public static class BodyRegexClassifierConfig {
+        public List<String> regular_expressions;
+    }
+
+    public static class Builder {
+
+        public TargetClassifier build(Path basePath, ObjectMapper yaml, JsonNode parameters)
+                throws JsonProcessingException {
+            BodyRegexClassifierConfig params =
+                    yaml.treeToValue(parameters, BodyRegexClassifierConfig.class);
+            if (params.regular_expressions != null) {
+                return new BodyRegexTargetClassifier(params.regular_expressions);
+            } else {
+                return null;
+            }
+        }
+
+    }
+    
 }

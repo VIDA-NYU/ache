@@ -1,7 +1,12 @@
 package focusedCrawler.target.classifier;
 
+import java.nio.file.Path;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import focusedCrawler.target.model.Page;
 
@@ -20,9 +25,9 @@ public class TitleRegexTargetClassifier implements TargetClassifier {
     @Override
     public TargetRelevance classify(Page page) throws TargetClassifierException {
         if(regexMatchesTitle(page)) {
-            return new TargetRelevance(true, 1.0);
+            return TargetRelevance.RELEVANT;
         } else {
-            return new TargetRelevance(false, 0.0);
+            return TargetRelevance.IRRELEVANT;
         }
     }
     
@@ -40,6 +45,23 @@ public class TitleRegexTargetClassifier implements TargetClassifier {
             return false;
         }
         
+    }
+    
+    static class TitleRegexClassifierConfig {
+        public String regular_expression;
+    }
+    
+    public static class Builder {
+
+        public TargetClassifier build(Path basePath, ObjectMapper yaml, JsonNode parameters) throws JsonProcessingException {
+            TitleRegexClassifierConfig params = yaml.treeToValue(parameters, TitleRegexClassifierConfig.class);
+            if (params.regular_expression != null && !params.regular_expression.trim().isEmpty()) {
+                return new TitleRegexTargetClassifier(params.regular_expression.trim());
+            } else {
+                return null;
+            }
+        }
+
     }
     
 }
