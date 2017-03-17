@@ -4,15 +4,25 @@ Target Page Classifiers
 .. highlight :: yaml
 
 ACHE uses target page classifiers to distinguish between relevant and irrelevant pages.
-To configure a page classifier, you will need to create a new folder containing a file named  ``pageclassifier.yml`` specifying the type of classifier that should be used.
-ACHE contains several `page classifier implementations <https://github.com/ViDA-NYU/ache/tree/master/src/main/java/focusedCrawler/target/classifier>`_ available.
-The following subsections describe how to configure them:
+Page classifiers are flexible and can be as simple as a simple regular expression,
+or a sophisticated machine-learning based classification model.
+
+Configuring Page Classifiers
+===========================
+
+To configure a page classifier, you will need to create a new directory
+containing a file named  ``pageclassifier.yml`` specifying the type of
+classifier that should be used and its parameters.
+ACHE contains several `page classifier implementations
+<https://github.com/ViDA-NYU/ache/tree/master/src/main/java/focusedCrawler/target/classifier>`_
+available. The following subsections describe how to configure them:
 
 * :ref:`title_regex <pageclassifier_title_regex>`
 * :ref:`url_regex <pageclassifier_url_regex>`
 * :ref:`body_regex <pageclassifier_body_regex>`
 * :ref:`regex <pageclassifier_regex>`
 * :ref:`weka <pageclassifier_weka>`
+
 
 .. _pageclassifier_title_regex:
 
@@ -161,3 +171,19 @@ where,
 Example of building a page classifier using our test data::
 
   ache buildModel -c config/sample_config/stoplist.txt -o model_output -t config/sample_training_data
+
+
+.. _testing_page_classifiers:
+
+Testing Page Classifiers
+========================
+
+Once you have configured your classifier, you can verify whether it is working
+properly to classify a specific web page by running the following command::
+
+    ache run TargetClassifierTester --input-file {html-file} --model {model-config-directory}
+
+where,
+
+* ``{html-file}`` is the path to a file containing the page's HTML content and
+* ``{model-config-directory}`` is a path to the configuration directory containing your page classifier configuration.
