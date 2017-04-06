@@ -1,4 +1,5 @@
 <img src="https://raw.githubusercontent.com/ViDA-NYU/ache/master/ache-logo.png" align="right" height="90px"/>
+
 [![Build Status](https://travis-ci.org/ViDA-NYU/ache.svg?branch=master)](https://travis-ci.org/ViDA-NYU/ache)
 [![Documentation Status](https://readthedocs.org/projects/ache/badge/?version=latest)](http://ache.readthedocs.io/en/latest/?badge=latest)
 [![Coverage Status](https://coveralls.io/repos/ViDA-NYU/ache/badge.svg?branch=master&service=github)](https://coveralls.io/github/ViDA-NYU/ache?branch=master)
@@ -33,97 +34,15 @@ export PATH="$ACHE_HOME/bin:$PATH"
 If you use the Conda package manager [[2]], you can install `ache` from Anaconda Cloud [[3]] by running:
 
 ```
-conda install -c memex ache
+conda install -c vida-nyu ache
 ```
 NOTE: Only tagged versions are published to Anaconda Cloud, so the version available through Conda may not be up-to-date.
 If you want to try the most recent version, please clone the repository and build from source.
 
 ## Target Page Classifiers
 
-ACHE uses target page classifiers to distinguish between relevant and irrelevant pages.
-To configure a page classifier, you will need to create a new folder containing a file named `pageclassifier.yml` specifying the type of classifier that should be used.
-ACHE contains several [page classifier implementations](https://github.com/ViDA-NYU/ache/tree/master/src/main/java/focusedCrawler/target/classifier) available.
-The following subsections describe how to configure them.
-
-#### title_regex
-
-Classifies a page as relevant if the HTML tag `title` matches a given pattern defined by a provided regular expression.
-You can provide this regular expression using the `pageclassifier.yml` file. Pages that match this expression are considered relevant. For example:
-
-```yml
-type: title_regex
-parameters:
-  regular_expression: ".*sometext.*"
-```
-
-#### url_regex
-
-Classifies a page as relevant if the **URL** of the page matches any of the regular expression patterns provided.
-You can provide a list of regular expressions using the `pageclassifier.yml` file as follows.
-
-```yml
-type: url_regex
-parameters:
-  regular_expressions: [
-    "https?://www\\.somedomain\\.com/forum/.*"
-    ".*/thread/.*",
-    ".*/archive/index.php/t.*",
-  ]
-```
-
-#### body_regex
-
-Classifies a page as relevant if the HTML content of the page matches any of the regular expression patterns provided.
-You can provide a list of regular expressions using the `pageclassifier.yml` file as follows.
-
-```yml
-type: body_regex
-parameters:
-  regular_expressions:
-  - pattern1
-  - pattern2
-```
-
-#### weka
-
-Classifies pages using a machine-learning based text classifier (SVM, Random Forest) trained using ACHE's `buildModel` command. Current classifier implementation uses the library Weka.
-
-You need to provide the path for a *features_file*, a *model_file*, and a *stopwords_file* file containing the stop-words used during the training process:
-
-```yml
-type: weka
-parameters:
-  features_file: pageclassifier.features
-  model_file: pageclassifier.model
-  stopwords_file: stoplist.txt
-```
-
-You can build these files by training a model, as detailed in the next sub-section.
-
-Alternatively, you can use the [Domain Discovery Tool (DDT)](https://github.com/ViDA-NYU/domain_discovery_tool) to gather training data and build automatically these files.
-DDT is a interactive web-based application that helps the user with the process of training a page classifier for ACHE.
-
-**Building a model for the weka page classifier**
-
-To create the files `pageclassifier.features` and `pageclassifier.model`, you
-can use ACHE's command line.
-You will need positive (relevant) and negative (irrelevant) examples of web pages to train the page classifier.
-You should store the HTML content of each web page in a plain text file. These files should be placed in two directories, named `positive` and `negative`, which reside in another empty directory. You can see an example at [config/sample_training_data](https://github.com/ViDA-NYU/ache/tree/master/config/sample_training_data).
-
-Here is how you build a model from these examples using ACHE's commmand line:
-
-```
-ache buildModel -t <training data path> -o <output path for model> -c <stopwords file path>
-```
-where,
-- `<training data path>` is the path to the directory containing positive and negative examples.
-- `<output path>` is the new directory that you want to save the generated model that consists of two files: `pageclassifier.model` and `pageclassifier.features`.
-- `<stopwords file path>` is a file with list of words that the classifier should ignore. You can see an example at [config/sample_config/stoplist.txt](https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/stoplist.txt).
-
-Example of building a page classifier using our test data:
-```
-ache buildModel -c config/sample_config/stoplist.txt -o model_output -t config/sample_training_data
-```
+ACHE uses target page classifiers to distinguish between relevant and irrelevant pages. Page classifiers are flexible and can be as simple as a simple regular expression, or a sophisticated machine-learning based classification model.
+ACHE contains several page classifier implementations available. See [http://ache.readthedocs.io/en/latest/page-classifiers.html](http://ache.readthedocs.io/en/latest/page-classifiers.html) for details on how to configure them.
 
 ## Running ACHE
 
@@ -144,18 +63,16 @@ ache startCrawl -o output -c config/sample_config -s config/sample.seeds -m conf
 
 ## Data Formats
 
-ACHE can store data in different data formats. The data format can be configured by changing the key `target_storage.data_format.type` in the [configuration file] (https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/ache.yml). The data formats available now are:
+ACHE can store data in different data formats. The data format can be configured by changing the key `target_storage.data_format.type` in the [configuration file](https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/ache.yml). The data formats available now are:
 
 - FILESYSTEM_HTML (default) - only raw content is stored in plain text files.
 - FILESYSTEM_JSON - raw content and some metadata is stored using JSON format in files.
 - FILESYSTEM_CBOR - raw content and some metadata is stored using [CBOR](http://cbor.io) format in files.
 - FILES - raw content and metadata is stored in rolling compressed files of fixed size.
-- ELATICSEARCH - raw content and metadata is indexed in an ElasticSearch index. See [ElasticSearch Integration](https://github.com/ViDA-NYU/ache/wiki/ElasticSearch-Integration) for details about configuration.
+- ELATICSEARCH - raw content and metadata is indexed in an ElasticSearch index.
 
-When using any FILESYSTEM_* data format, you can enable compression of the data stored in the files enabling the following line in the config file:
-```yaml
-target_storage.data_format.filesystem.compress_data: true
-```
+For more details on data format configurations, see [http://ache.readthedocs.io/en/latest/data-formats.html](http://ache.readthedocs.io/en/latest/data-formats.html).
+
 
 ## Link Filters
 
@@ -168,15 +85,11 @@ https?://www\.another-example.com/*
 
 ## More information?
 
-More documentation is available in the project's [Wiki](https://github.com/ViDA-NYU/ache/wiki).
+More documentation is available on the project's [Documentation](http://ache.readthedocs.io/en/latest/) and on the [Wiki](https://github.com/ViDA-NYU/ache/wiki).
 
 ## Where to report bugs?
 
 We welcome user feedback. Please submit any suggestions or bug reports using the Github tracker (https://github.com/ViDA-NYU/ache/issues)
-
-[1]: http://en.wikipedia.org/wiki/Focused_crawler
-[2]: http://conda.pydata.org/
-[3]: https://anaconda.org/
 
 ## Contact?
 
