@@ -91,6 +91,10 @@ More documentation is available on the project's [Documentation](http://ache.rea
 
 We welcome user feedback. Please submit any suggestions or bug reports using the Github tracker (https://github.com/ViDA-NYU/ache/issues)
 
+## Contributing
+
+Code contributions are welcome. We use a code style derived from the [Google Style Guide](https://google.github.io/styleguide/javaguide.html), but with 4 spaces for tabs. A Eclipse Formatter configuration file is available in the [repository](https://github.com/ViDA-NYU/ache/blob/master/eclipse-code-style.xml).
+
 ## Contact?
 
 - Aécio Santos [aecio.santos@nyu.edu]
