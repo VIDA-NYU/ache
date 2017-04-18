@@ -23,7 +23,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.TreeSet;
 
-import org.apache.http.annotation.NotThreadSafe;
+//import org.apache.http.annotation.NotThreadSafe;
 import org.apache.http.client.CookieStore;
 import org.apache.http.cookie.Cookie;
 import org.apache.http.cookie.CookieIdentityComparator;
@@ -33,7 +33,7 @@ import org.apache.http.cookie.CookieIdentityComparator;
  * HttpComponents Changes: removed synchronization
  * 
  */
-@NotThreadSafe
+//@NotThreadSafe
 public class LocalCookieStore implements CookieStore, Serializable {
 
     private static final long serialVersionUID = -7581093305228232025L;

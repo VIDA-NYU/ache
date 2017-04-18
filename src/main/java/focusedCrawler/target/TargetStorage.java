@@ -13,6 +13,7 @@ import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
 import focusedCrawler.target.model.Page;
+import focusedCrawler.target.repository.ElasticSearchRestTargetRepository;
 import focusedCrawler.target.repository.ElasticSearchTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
@@ -186,9 +187,14 @@ public class TargetStorage extends StorageDefault {
         	if(indexName == null) {
         		throw new IllegalArgumentException("ElasticSearch index name not provided!");
         	}
-        	ElasticSearchConfig esconfig = config.getElasticSearchConfig();
-        	targetRepository = new ElasticSearchTargetRepository(esconfig, indexName, "target");
-        	negativeRepository = new ElasticSearchTargetRepository(esconfig, indexName, "negative");
+            ElasticSearchConfig esconfig = config.getElasticSearchConfig();
+            if (esconfig.getRestApiHosts() == null) {
+                targetRepository = new ElasticSearchTargetRepository(esconfig, indexName, "target");
+                negativeRepository = new ElasticSearchTargetRepository(esconfig, indexName, "negative");
+            } else {
+                targetRepository = new ElasticSearchRestTargetRepository(esconfig, indexName, "target");
+                negativeRepository = new ElasticSearchRestTargetRepository(esconfig, indexName, "negative");
+            }
         }
         else {
         	throw new IllegalArgumentException("Invalid data format provided: "+dataFormat);
