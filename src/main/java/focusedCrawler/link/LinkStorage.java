@@ -40,8 +40,6 @@ import focusedCrawler.crawler.async.SitemapXmlHandler;
 import focusedCrawler.link.backlink.BacklinkSurfer;
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.LinkClassifierFactory;
-import focusedCrawler.link.classifier.LinkClassifierFactoryException;
-import focusedCrawler.link.classifier.LinkClassifierFactoryImpl;
 import focusedCrawler.link.classifier.LinkClassifierHub;
 import focusedCrawler.link.classifier.builder.LinkClassifierBuilder;
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
@@ -237,8 +235,7 @@ public class LinkStorage extends StorageDefault {
                                             String dataPath, String modelPath,
                                             LinkStorageConfig config,
                                             MetricsManager metricsManager)
-                                            throws LinkClassifierFactoryException,
-                                                   FrontierPersistentException,
+                                            throws FrontierPersistentException,
                                                    IOException {
 
         
@@ -250,8 +247,9 @@ public class LinkStorage extends StorageDefault {
             stoplist = StopListFile.DEFAULT;
         }
         
-        LinkClassifierFactory linkClassifierFactory = new LinkClassifierFactoryImpl(stoplist, modelPath);
-        LinkClassifier linkClassifier = linkClassifierFactory.createLinkClassifier(config.getTypeOfClassifier());
+        LinkClassifierFactory.setDefaultStoplist(stoplist);
+        
+        LinkClassifier linkClassifier = LinkClassifierFactory.create(modelPath, config.getTypeOfClassifier());
 
         FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, seedFile, metricsManager);
 

@@ -51,17 +51,20 @@ import focusedCrawler.util.string.StopList;
 
 public class LinkNeighborhoodWrapper {
 
-  private StopList stoplist;
+  private StopList stoplist = null;
   private String[][] fieldWords;
-  private PorterStemmer stemmer;
+  private PorterStemmer stemmer = new PorterStemmer();
 
   public LinkNeighborhoodWrapper(StopList stoplist) {
     this.stoplist = stoplist;
-    this.stemmer = new PorterStemmer();
+  }
+  
+  public LinkNeighborhoodWrapper(String[] features, StopList stoplist) {
+    this.stoplist = stoplist;
+    this.setFeatures(features);
   }
 
   public LinkNeighborhoodWrapper() {
-    this.stoplist = null;
   }
 
   public void setFeatures(String[][] fieldWords){
@@ -142,7 +145,6 @@ public class LinkNeighborhoodWrapper {
   }
 
   public HashMap<String, Instance> extractLinksFull(LinkNeighborhood linkNeighboor, String[] features) throws MalformedURLException {
-//	  System.out.println(">>" + linkNeighboor.getLink().toString());
 	  HashMap<String, WordField[]> linkFields = extractLinksFull(linkNeighboor);
 	  return mapFeatures(linkFields, features);
   }

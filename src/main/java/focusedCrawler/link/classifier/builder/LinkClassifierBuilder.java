@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.BipartiteGraphRepository;
 import focusedCrawler.link.classifier.LinkClassifier;
-import focusedCrawler.link.classifier.LinkClassifierFactoryImpl;
+import focusedCrawler.link.classifier.LinkClassifierFactory;
 import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
@@ -94,7 +94,7 @@ public class LinkClassifierBuilder {
             classValues = new String[] {"0", "1", "2"};
         }
         
-        return LinkClassifierFactoryImpl.createLinkClassifierImpl(
+        return LinkClassifierFactory.createLinkClassifierImpl(
                 features, classValues, classifier, className, levels);
 	}
     
@@ -251,7 +251,7 @@ public class LinkClassifierBuilder {
 		Classifier classifier = trainWekaClassifier(wekaInput);
 		
 		String[] classValues = new String[]{"POS","NEG"};
-		return LinkClassifierFactoryImpl.createLinkClassifierImpl(features, classValues, classifier, "LinkClassifierHub",0);
+		return LinkClassifierFactory.createLinkClassifierImpl(features, classValues, classifier, "LinkClassifierHub",0);
 	}
 
 
