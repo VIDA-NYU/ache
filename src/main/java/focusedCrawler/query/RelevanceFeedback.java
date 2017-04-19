@@ -38,9 +38,10 @@ import focusedCrawler.util.vsm.VSMVector;
 import weka.classifiers.Classifier;
 import weka.core.Instances;
 
+@SuppressWarnings("unused")
 public class RelevanceFeedback {
 
-	private String appID = "87E3D4B83FBB733A778CCB8CF950FF62BD6243FC";
+    private String appID = "87E3D4B83FBB733A778CCB8CF950FF62BD6243FC";
 	
 	private String urlQuery = "http://api.bing.net/xml.aspx?AppId=87E3D4B83FBB733A778CCB8CF950FF62BD6243FC&Version=2.2&Market=en-US&Sources=web+spell&web.count=50&xmltype=attributebased&Query=";
 	
@@ -443,6 +444,7 @@ public class RelevanceFeedback {
   	  		InputStream is = new FileInputStream(config.getParam("FILE_CLASSIFIER"));
   	        ObjectInputStream objectInputStream = new ObjectInputStream(is);
   	        Classifier classifier = (Classifier) objectInputStream.readObject();
+  	        objectInputStream.close();
   	        String[] attributes = config.getParam("ATTRIBUTES", " ");
   	        weka.core.FastVector vectorAtt = new weka.core.FastVector();
   	        for (int i = 0; i < attributes.length; i++) {

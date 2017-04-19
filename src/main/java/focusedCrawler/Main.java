@@ -14,7 +14,6 @@ import focusedCrawler.config.ConfigService;
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.crawler.async.AsyncCrawlerConfig;
 import focusedCrawler.link.LinkStorage;
-import focusedCrawler.link.classifier.LinkClassifierFactoryException;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
 import focusedCrawler.link.frontier.FrontierPersistentException;
@@ -337,7 +336,7 @@ public class Main {
                 }
 
             }
-            catch (LinkClassifierFactoryException | FrontierPersistentException  e) {
+            catch (FrontierPersistentException  e) {
                 logger.error("Problem while creating LinkStorage", e);
             }
             catch (IOException e) {
