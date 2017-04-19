@@ -2,6 +2,8 @@
 Data Formats
 ############
 
+.. highlight :: yaml
+
 ACHE can store data in different data formats. The data format can be configured by changing the key ``target_storage.data_format.type`` in the `configuration file <https://github.com/ViDA-NYU/ache/blob/master/config/sample_config/ache.yml>`_.
 
 The data formats currently available are:
@@ -70,7 +72,7 @@ The ELASTICSEARCH data format stores raw content and metadata as documents in an
 Types and fields
 ************************
 
-Currently, ACHE indexes documents into two ElasticSearch types:
+Currently, ACHE indexes documents into two Elasticsearch types:
 
 * ``target``, for pages classified as on-topic by the page classifier
 * ``negative``, for pages classified as off-topic by the page classifier
@@ -91,23 +93,51 @@ These two types use the same schema, which has the following fields:
 Configuration
 *************
 
-To use ElasticSearch, you need to enable the following lines in the configuration file ``ache.yml``::
+To use Elasticsearch data format, you need to add the following line to the
+configuration file ``ache.yml``::
 
   target_storage.data_format.type: ELASTICSEARCH
+
+You will also need to specify the host address and port where Elasticsearch is running.
+See the following subsections for more details.
+
+**REST Client (ACHE version >0.8)**
+
+Starting in version 0.8, ACHE uses the official
+`Java REST client <https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/index.html>`_
+to connect to Elasticsearch. You can specify one or more Elasticsearch node
+addresses which the REST client should connect to using the following lines:
+
+.. code:: yaml
+
+  target_storage.data_format.elasticsearch.rest.hosts:
+    - http://node1:9200
+    - http://node2:9200
+
+The following additional parameters can also be configured. Refer to
+the Elasticsearch `REST Client documentation <https://www.elastic.co/guide/en/elasticsearch/client/java-rest/current/_timeouts.html>`_
+for more information on these parameters.
+
+.. code:: yaml
+
+  target_storage.data_format.elasticsearch.rest.connect_timeout: 30000
+  target_storage.data_format.elasticsearch.rest.socket_timeout: 30000
+  target_storage.data_format.elasticsearch.rest.max_retry_timeout_millis: 90000
+
+**Transport Client (deprecated)**
+
+You can also configure ACHE to connect to Elasticsearch v1.x using the native
+transport client by adding the following lines::
+
   target_storage.data_format.elasticsearch.host: localhost
   target_storage.data_format.elasticsearch.port: 9300
   target_storage.data_format.elasticsearch.cluster_name: elasticsearch
 
 
-.. warning ::
-
-  ``target_storage.data_format.elasticsearch.port`` should point to the transport client port (which defaults to 9300), not the JSON API port.
-
-
 Command line parameters
 ****************************************
 
-When running ACHE using ElasticSearch, you should provide the name of the ElasticSearch index that should be used in the command line using the following arguments::
+When running ACHE using Elasticsearch, you should provide the name of the Elasticsearch index that should be used in the command line using the following arguments::
 
   -e <arg>
 
