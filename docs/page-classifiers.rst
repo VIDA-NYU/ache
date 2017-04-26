@@ -8,7 +8,7 @@ Page classifiers are flexible and can be as simple as a simple regular expressio
 or a sophisticated machine-learning based classification model.
 
 Configuring Page Classifiers
-===========================
+============================
 
 To configure a page classifier, you will need to create a new directory
 containing a file named  ``pageclassifier.yml`` specifying the type of
