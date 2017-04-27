@@ -310,8 +310,8 @@ public class Main {
             try {
                 MetricsManager metricsManager = new MetricsManager();
                 
-                RestServer restServer = new RestServer(config.getRestConfig(),
-                                                       metricsManager.getMetricsRegistry());
+                RestServer restServer = RestServer.create(metricsManager.getMetricsRegistry(),
+                        config, elasticIndexName);
                 restServer.start();
 
                 Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
