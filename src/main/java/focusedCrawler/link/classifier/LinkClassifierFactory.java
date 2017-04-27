@@ -1,42 +1,81 @@
-/*
-############################################################################
-##
-## Copyright (C) 2006-2009 University of Utah. All rights reserved.
-##
-## This file is part of DeepPeep.
-##
-## This file may be used under the terms of the GNU General Public
-## License version 2.0 as published by the Free Software Foundation
-## and appearing in the file LICENSE.GPL included in the packaging of
-## this file.  Please review the following to ensure GNU General Public
-## Licensing requirements will be met:
-## http://www.opensource.org/licenses/gpl-license.php
-##
-## If you are unsure which license is appropriate for your use (for
-## instance, you are interested in developing a commercial derivative
-## of DeepPeep), please contact us at deeppeep@sci.utah.edu.
-##
-## This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
-## WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-##
-############################################################################
-*/
 package focusedCrawler.link.classifier;
 
-/**
- * <p>Title: </p>
- *
- * <p>Description: </p>
- *
- * <p>Copyright: Copyright (c) 2004</p>
- *
- * <p>Company: </p>
- *
- * @author not attributable
- * @version 1.0
- */
-public interface LinkClassifierFactory {
+import java.nio.file.Paths;
 
-   public LinkClassifier createLinkClassifier(String className) throws LinkClassifierFactoryException;
+import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
+import focusedCrawler.util.string.StopList;
+import focusedCrawler.util.string.StopListFile;
+import weka.classifiers.Classifier;
+import weka.core.Instances;
+
+
+public class LinkClassifierFactory {
+
+    private static StopList stoplist = StopListFile.DEFAULT;
+
+    public static void setDefaultStoplist(StopList stoplist) {
+        LinkClassifierFactory.stoplist = stoplist;
+    }
+
+    public static LinkClassifier create(String modelPath, String type) {
+        
+        String featureFilePath = Paths.get(modelPath, "linkclassifier.features").toString();
+        String modelFilePath = Paths.get(modelPath, "linkclassifier.model").toString();
+
+        LinkClassifier linkClassifier = null;
+        if (type.indexOf("LinkClassifierBreadthSearch") != -1) {
+            linkClassifier = new LinkClassifierBreadthSearch();
+        }
+        if (type.indexOf("LinkClassifierBaseline") != -1) {
+            linkClassifier = new LinkClassifierBaseline();
+        }
+        if (type.indexOf("LinkClassifierHub") != -1) {
+            linkClassifier = new LinkClassifierHub();
+        }
+        if (type.indexOf("LinkClassifierAuthority") != -1) {
+            linkClassifier = new LinkClassifierAuthority();
+        }
+        if (type.indexOf("LinkClassifierImpl") != -1) {
+            LNClassifier lnClassifier = LNClassifier.create(featureFilePath, modelFilePath, stoplist);
+            linkClassifier = new LinkClassifierImpl(lnClassifier);
+        }
+        if (type.indexOf("MaxDepthLinkClassifier") != -1) {
+            linkClassifier = new MaxDepthLinkClassifier(1);
+        }
+        return linkClassifier;
+    }
+
+    public static LinkClassifier createLinkClassifierImpl(String[] attributes, String[] classValues,
+                                                          Classifier classifier, String className,
+                                                          int levels) {
+
+        LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(attributes, stoplist);
+
+        weka.core.FastVector vectorAtt = new weka.core.FastVector();
+        for (int i = 0; i < attributes.length; i++) {
+            vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
+        }
+        weka.core.FastVector classAtt = new weka.core.FastVector();
+        for (int i = 0; i < classValues.length; i++) {
+            classAtt.addElement(classValues[i]);
+        }
+        vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
+        Instances insts = new Instances("link_classification", vectorAtt, 1);
+        insts.setClassIndex(attributes.length);
+
+        LinkClassifier linkClassifier = null;
+        if (className.indexOf("LinkClassifierImpl") != -1) {
+            LNClassifier lnClassifier = new LNClassifier(classifier, insts, wrapper, attributes);
+            linkClassifier = new LinkClassifierImpl(lnClassifier);
+        }
+        if (className.indexOf("LinkClassifierAuthority") != -1) {
+            linkClassifier = new LinkClassifierAuthority(classifier, insts, wrapper, attributes);
+        }
+        if (className.indexOf("LinkClassifierHub") != -1) {
+            linkClassifier = new LinkClassifierHub(classifier, insts, wrapper, attributes);
+        }
+        return linkClassifier;
+    }
 
 }
+

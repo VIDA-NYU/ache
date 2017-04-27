@@ -101,7 +101,7 @@ public class MergeCdrFiles extends CliTool {
             String line = readLine();
             while(line != null) {
                 try {
-                    CDRDocument doc = mapper.readValue(line, CDRDocument.class);
+                    CDR2Document doc = mapper.readValue(line, CDR2Document.class);
                     
                     boolean discard = true;
                     String hash = hashDocument(doc);
@@ -157,7 +157,7 @@ public class MergeCdrFiles extends CliTool {
         return new BufferedReader(new InputStreamReader(new GZIPInputStream(new FileInputStream(file), 512*4096)));
     }
 
-    private TargetRelevance classify(CDRDocument doc) throws Exception {
+    private TargetRelevance classify(CDR2Document doc) throws Exception {
         
         Page page = new Page(new URL(doc.getUrl()), new String(doc.getRawContent()));
         PaginaURL pageParser = new PaginaURL(page);
@@ -171,7 +171,7 @@ public class MergeCdrFiles extends CliTool {
         return relevance;
     }
 
-    private String hashDocument(CDRDocument doc) {
+    private String hashDocument(CDR2Document doc) {
         String url = doc.getUrl();
         url = url.replaceFirst("https?://", "");
         if (url.endsWith("/")) {

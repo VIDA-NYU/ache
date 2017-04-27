@@ -1,20 +1,19 @@
 package focusedCrawler.link.classifier;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.util.Iterator;
 import java.util.Map;
 
-import weka.classifiers.Classifier;
-import weka.core.Instances;
 import focusedCrawler.link.classifier.builder.Instance;
 import focusedCrawler.link.classifier.builder.LinkNeighborhoodWrapper;
 import focusedCrawler.util.ParameterFile;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.string.StopList;
+import weka.classifiers.Classifier;
+import weka.core.Instances;
 
 public class LNClassifier {
 
@@ -47,9 +46,7 @@ public class LNClassifier {
 	
 	public static LNClassifier create(String featureFilePath,
 	                                  String modelFilePath,
-	                                  StopList stoplist)
-                                      throws ClassNotFoundException,
-                                             IOException {
+	                                  StopList stoplist) {
 	    ParameterFile config = new ParameterFile(featureFilePath); 
 	    String[] attributes = config.getParam("ATTRIBUTES", " ");
 	    String[] classValues = config.getParam("CLASS_VALUES", " ");
@@ -57,9 +54,7 @@ public class LNClassifier {
 	}
 	
 	public static LNClassifier create(String[] attributes, String[] classValues,
-	                                  String modelFilePath, StopList stoplist)
-                                      throws ClassNotFoundException,
-                                             IOException {
+	                                  String modelFilePath, StopList stoplist) {
 	    weka.core.FastVector vectorAtt = new weka.core.FastVector();
 	    for (int i = 0; i < attributes.length; i++) {
 	        vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
@@ -72,35 +67,25 @@ public class LNClassifier {
 	    Instances insts = new Instances("link_classification", vectorAtt, 1);
 	    insts.setClassIndex(attributes.length);
 	    
+	    LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(attributes, stoplist);
 	    
-	    LinkNeighborhoodWrapper wrapper = loadWrapper(attributes, stoplist);
-	    
-	    Classifier classifier = loadClassifier(modelFilePath);
+	    Classifier classifier = loadWekaClassifier(modelFilePath);
 	    
 	    return new LNClassifier(classifier, insts, wrapper, attributes);
 	    
 	}
     
-    public static LinkNeighborhoodWrapper loadWrapper(String[] attributes, StopList stoplist) {
-        LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(stoplist);
-        wrapper.setFeatures(attributes);
-        return wrapper;
-    }
-    
-    private static Classifier loadClassifier(String modelFilePath) 
-            throws IOException, ClassNotFoundException {
-        InputStream is = null;
+    private static Classifier loadWekaClassifier(String modelFilePath) {
         try {
-            is = new FileInputStream(modelFilePath);
+            InputStream is = new FileInputStream(modelFilePath);
+            ObjectInputStream objectInputStream = new ObjectInputStream(is);
+            Classifier classifier = (Classifier) objectInputStream.readObject();
+            objectInputStream.close();
+            return classifier;
+        } catch (IOException | ClassNotFoundException e) {
+            throw new IllegalArgumentException(
+                    "Failed to load weka classifier instance from file: " + modelFilePath, e);
         }
-        catch (FileNotFoundException ex1) {
-            // FIXME
-            ex1.printStackTrace();
-        }
-        ObjectInputStream objectInputStream = new ObjectInputStream(is);
-        Classifier classifier = (Classifier) objectInputStream.readObject();
-        objectInputStream.close();
-        return classifier;
     }
 	
 }

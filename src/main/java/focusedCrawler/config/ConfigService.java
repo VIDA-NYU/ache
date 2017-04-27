@@ -11,6 +11,7 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 import focusedCrawler.crawler.async.AsyncCrawlerConfig;
 import focusedCrawler.link.LinkStorageConfig;
+import focusedCrawler.rest.RestConfig;
 import focusedCrawler.target.TargetStorageConfig;
 
 public class ConfigService {
@@ -23,6 +24,7 @@ public class ConfigService {
     private TargetStorageConfig targetStorageConfig;
     private LinkStorageConfig linkStorageConfig;
     private AsyncCrawlerConfig crawlerConfig;
+    private RestConfig restConfig;
     
     public ConfigService(String configFilePath) {
         try {
@@ -44,6 +46,7 @@ public class ConfigService {
         this.targetStorageConfig = new TargetStorageConfig(config, yamlMapper);
         this.linkStorageConfig = new LinkStorageConfig(config, yamlMapper);
         this.crawlerConfig = new AsyncCrawlerConfig(config, yamlMapper);
+        this.restConfig = new RestConfig(config, yamlMapper);
     }
 
     public TargetStorageConfig getTargetStorageConfig() {
@@ -56,6 +59,10 @@ public class ConfigService {
     
     public AsyncCrawlerConfig getCrawlerConfig() {
         return crawlerConfig;
+    }
+    
+    public RestConfig getRestConfig() {
+        return restConfig;
     }
     
 }

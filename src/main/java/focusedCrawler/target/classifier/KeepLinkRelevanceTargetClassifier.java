@@ -1,5 +1,12 @@
 package focusedCrawler.target.classifier;
 
+import java.io.IOException;
+import java.nio.file.Path;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import focusedCrawler.target.model.Page;
 
 public class KeepLinkRelevanceTargetClassifier implements TargetClassifier {
@@ -23,6 +30,19 @@ public class KeepLinkRelevanceTargetClassifier implements TargetClassifier {
         }
         
         return new TargetRelevance(isRelevant, pageRelevance); 
+    }
+
+    public static class Builder {
+
+        public TargetClassifier build(Path basePath, ObjectMapper yaml, JsonNode parameters) throws JsonProcessingException, IOException {
+            if(parameters != null) {
+                TargetClassifier wekaClassifier = new WekaTargetClassifier.Builder().build(basePath, yaml, parameters);
+                return new KeepLinkRelevanceTargetClassifier(wekaClassifier);
+            } else {
+                return new KeepLinkRelevanceTargetClassifier(null);
+            }
+        }
+
     }
 
 }

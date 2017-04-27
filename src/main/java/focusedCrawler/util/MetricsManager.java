@@ -46,4 +46,8 @@ public class MetricsManager {
         }
     }
 
+    public MetricRegistry getMetricsRegistry() {
+        return metrics;
+    }
+
 }

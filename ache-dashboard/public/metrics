@@ -1,0 +1,154 @@
+{
+  "version": "3.1.3",
+  "gauges": {
+    "downloader.dispatch_queue.size": {
+      "value": 106
+    },
+    "downloader.download_queue.size": {
+      "value": 199
+    },
+    "downloader.pending_downloads": {
+      "value": 409
+    },
+    "downloader.running_handlers": {
+      "value": 4
+    },
+    "downloader.running_requests": {
+      "value": 100
+    },
+    "frontier_manager.last_frontier_load.uncrawled": {
+      "value": 246789
+    },
+    "frontier_manager.last_load.available": {
+      "value": 246789
+    },
+    "frontier_manager.last_load.rejected": {
+      "value": 0
+    },
+    "frontier_manager.last_load.unavailable": {
+      "value": 0
+    },
+    "frontier_manager.scheduler.empty_domains": {
+      "value": 27
+    },
+    "frontier_manager.scheduler.non_expired_domains": {
+      "value": 1271
+    },
+    "frontier_manager.scheduler.number_of_links": {
+      "value": 9337
+    }
+  },
+  "counters": {
+    "downloader.fetches.aborted": {
+      "count": 0
+    },
+    "downloader.fetches.errors": {
+      "count": 37
+    },
+    "downloader.fetches.successes": {
+      "count": 355
+    },
+    "downloader.http_response.status.2xx": {
+      "count": 326
+    }
+  },
+  "histograms": {},
+  "meters": {},
+  "timers": {
+    "downloader.fetch.time": {
+      "count": 363,
+      "max": 17735.109420999997,
+      "mean": 3518.2554884147353,
+      "min": 48.112215,
+      "p50": 2279.8823979999997,
+      "p75": 4467.404609,
+      "p95": 14002.482563,
+      "p98": 16359.717627999999,
+      "p99": 16606.227092,
+      "p999": 17735.109420999997,
+      "stddev": 3720.2389203037937,
+      "m15_rate": 12.84506845847257,
+      "m1_rate": 13.38432565224127,
+      "m5_rate": 12.932347310690016,
+      "mean_rate": 14.471579843746259,
+      "duration_units": "milliseconds",
+      "rate_units": "calls/second"
+    },
+    "downloader.handler.time": {
+      "count": 253,
+      "max": 7172.285105,
+      "mean": 362.94684297456007,
+      "min": 0.0007689999999999999,
+      "p50": 175.270681,
+      "p75": 389.098105,
+      "p95": 1179.4643529999998,
+      "p98": 2384.978837,
+      "p99": 3589.301273,
+      "p999": 7172.285105,
+      "stddev": 771.9441574933351,
+      "m15_rate": 4.946151376027271,
+      "m1_rate": 6.686959393681884,
+      "m5_rate": 5.228916754489015,
+      "mean_rate": 10.086117705196378,
+      "duration_units": "milliseconds",
+      "rate_units": "calls/second"
+    },
+    "frontier_manager.insert.time": {
+      "count": 10945,
+      "max": 19.245516,
+      "mean": 0.10098636364054425,
+      "min": 0.019298,
+      "p50": 0.031772,
+      "p75": 0.039688,
+      "p95": 0.08444,
+      "p98": 0.133203,
+      "p99": 0.267343,
+      "p999": 19.245516,
+      "stddev": 0.9747961479016479,
+      "m15_rate": 83.85984242584755,
+      "m1_rate": 193.45639726969688,
+      "m5_rate": 101.44365832641765,
+      "mean_rate": 368.70814397483855,
+      "duration_units": "milliseconds",
+      "rate_units": "calls/second"
+    },
+    "frontier_manager.load.time": {
+      "count": 1,
+      "max": 2444.785307,
+      "mean": 2444.785307,
+      "min": 2444.785307,
+      "p50": 2444.785307,
+      "p75": 2444.785307,
+      "p95": 2444.785307,
+      "p98": 2444.785307,
+      "p99": 2444.785307,
+      "p999": 2444.785307,
+      "stddev": 0,
+      "m15_rate": 0.19560457449692012,
+      "m1_rate": 0.1433062621147579,
+      "m5_rate": 0.18710139700632353,
+      "mean_rate": 0.03368694070208404,
+      "duration_units": "milliseconds",
+      "rate_units": "calls/second"
+    },
+    "frontier_manager.select.time": {
+      "count": 664,
+      "max": 178.766906,
+      "mean": 1.1200135885653482,
+      "min": 0.041950999999999995,
+      "p50": 0.20643599999999998,
+      "p75": 0.275601,
+      "p95": 1.5842749999999999,
+      "p98": 7.611409999999999,
+      "p99": 28.98557,
+      "p999": 178.766906,
+      "stddev": 8.461458122714184,
+      "m15_rate": 0.6488765930039434,
+      "m1_rate": 7.8879384856734776,
+      "m5_rate": 1.8881381094960543,
+      "mean_rate": 22.367674632017618,
+      "duration_units": "milliseconds",
+      "rate_units": "calls/second"
+    }
+  }
+}

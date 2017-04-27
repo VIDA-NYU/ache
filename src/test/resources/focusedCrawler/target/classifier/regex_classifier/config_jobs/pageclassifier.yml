@@ -1,0 +1,12 @@
+type: regex
+parameters:
+    boolean_operator: "AND"
+    url:
+      boolean_operator: "OR"
+      regexes:
+        - "(http(s?)://)?(www\\.)?(offer(s?)|vacanc(y|ies)|job(s?)|employment(s?)|career(s?)|opportunit(y|ies))\\..*"
+        - ".*/.*(offer(s)?|vacanc(y|ies)|job(s)?|employment(s)?|career(s)?|opportunit(y|ies)).*"
+    content:
+      boolean_operator: "OR"
+      regexes:
+      - ".*job.*"

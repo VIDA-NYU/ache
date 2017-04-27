@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @SuppressWarnings("serial")
 @JsonInclude(Include.NON_NULL)
-public class CDRMedia implements Serializable {
+public class CDR2Media implements Serializable {
 
     @JsonProperty("_id")
     final private String id;
@@ -36,9 +36,9 @@ public class CDRMedia implements Serializable {
     final private String objStoredUrl;
 
     /**
-     * Use {@link CDRMedia.Builder} to construct a CDRMedia object instead.
+     * Use {@link CDR2Media.Builder} to construct a CDRMedia object instead.
      */
-    protected CDRMedia(Builder builder) {
+    protected CDR2Media(Builder builder) {
         this.id = builder.id;
         this.contentType = builder.contentType;
         this.crawler = builder.crawler;
@@ -98,7 +98,7 @@ public class CDRMedia implements Serializable {
         public String objParent;
         public String objStoredUrl;
         
-        public CDRMedia build() {
+        public CDR2Media build() {
             if(this.contentType == null) throw new IllegalStateException("content_type can not be null");
             if(this.timestamp == -1) throw new IllegalStateException("timestamp needs to be set");
             if(this.crawler == null) throw new IllegalStateException("crawler can not be null");
@@ -108,7 +108,7 @@ public class CDRMedia implements Serializable {
             if(this.team == null) throw new IllegalStateException("team can not be null");
             if(this.version == null) throw new IllegalStateException("version can not be null");
             if(this.id == null) this.id = generateId();
-            return new CDRMedia(this);
+            return new CDR2Media(this);
         }
         
         public String generateId() {

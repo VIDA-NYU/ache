@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.http.HttpEntity;
+import org.apache.http.StatusLine;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URLEncodedUtils;
@@ -31,6 +32,7 @@ public class SimpleBulkIndexer {
     private StringBuilder bulkData = new StringBuilder();
     private int bulkSize = 0;
     private int maxBulkSize;
+    private int retries = 3;
     
     private String elasticSearchAddress;
     private BasicHeader authHeader;
@@ -65,7 +67,7 @@ public class SimpleBulkIndexer {
     }
 
 
-    void addDocument(String indexName, String typeName, Object obj, String id) throws IOException {
+    public void addDocument(String indexName, String typeName, Object obj, String id) throws IOException {
         
         String command;
         if(id == null) {
@@ -76,7 +78,11 @@ public class SimpleBulkIndexer {
         
         final String json;
         try {
-            json = jsonMapper.writeValueAsString(obj);
+            if(obj instanceof String) {
+                json = (String) obj;
+            } else {
+                json = jsonMapper.writeValueAsString(obj);
+            }
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Failed to serialize JSON object. ", e);
         }
@@ -85,14 +91,14 @@ public class SimpleBulkIndexer {
         bulkData.append(json+"\n");
         bulkSize++;
         
-        if(bulkSize > maxBulkSize) {
+        if(bulkSize >= maxBulkSize) {
             flushBulk();
         }
     }
 
     public void flushBulk() throws IOException {
         if(bulkSize > 0) {
-            executeBulkRequest(bulkData.toString());
+            executeBulkRequestWithRetries(bulkData.toString(), retries);
             bulkSize = 0;
             bulkData = new StringBuilder();
         }
@@ -108,7 +114,8 @@ public class SimpleBulkIndexer {
             builder.append(command+"\n");
             builder.append(source+"\n");
         }
-        executeBulkRequest(builder.toString());
+        
+        executeBulkRequestWithRetries(builder.toString(), retries);
     }
     
     public void bulkIndexDocumentsWithId(String indexName,
@@ -121,9 +128,25 @@ public class SimpleBulkIndexer {
             builder.append(command+"\n");
             builder.append(source.getValue()+"\n");
         }
-        executeBulkRequest(builder.toString());
+        executeBulkRequestWithRetries(builder.toString(), retries);
     }
     
+    private void executeBulkRequestWithRetries(String requestBody, int retries) {
+        for(int i=0; i < retries; i++) {
+            try {
+                executeBulkRequest(requestBody.toString());
+                break;
+            } catch(Exception e) {
+                retries++;
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ie) {
+                    throw new RuntimeException("Bulk request retry interruped.", ie);
+                }
+            }
+        }
+    }
+
     private void executeBulkRequest(final String requestBody) throws IOException {
         
         HttpPost httpPost = new HttpPost(elasticSearchAddress +"/_bulk");
@@ -139,10 +162,14 @@ public class SimpleBulkIndexer {
         
         CloseableHttpResponse response = httpclient.execute(httpPost);
         try {
-            System.out.println(response.getStatusLine());
             HttpEntity entity = response.getEntity();
-//            EntityUtils.consume(entity);
-            System.out.println(EntityUtils.toString(entity));
+            String entityAsText = EntityUtils.toString(entity);
+            StatusLine statusLine = response.getStatusLine();
+            
+            System.out.println(statusLine.toString());
+            if(statusLine.getStatusCode() != 200) {
+                System.out.println(entityAsText);
+            }
         } finally {
             response.close();
         }

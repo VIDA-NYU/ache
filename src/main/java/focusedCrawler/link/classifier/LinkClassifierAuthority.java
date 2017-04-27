@@ -103,12 +103,8 @@ public class LinkClassifierAuthority implements LinkClassifier{
 		    	  }
 	    		  linkRel = new LinkRelevance(new URL(entry.getKey()),relevance);
 		      }
-		  } catch (MalformedURLException ex) {
-			  ex.printStackTrace();
-			  throw new LinkClassifierException(ex.getMessage());
-		  } catch (Exception ex) {
-			  ex.printStackTrace();
-			  throw new LinkClassifierException(ex.getMessage());
+		  } catch (Exception e) {
+			  throw new LinkClassifierException("Failed to classify link", e);
 		  }
 		  return linkRel;
 	}

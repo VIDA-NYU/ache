@@ -1,0 +1,13 @@
+type: regex
+parameters:
+    boolean_operator: AND
+    url:
+      boolean_operator: OR
+      regexes:
+        - .*category.*
+        - .*post.*
+    content:
+      boolean_operator: OR
+      regexes:
+        - .*bar.*
+        - .*foo.*

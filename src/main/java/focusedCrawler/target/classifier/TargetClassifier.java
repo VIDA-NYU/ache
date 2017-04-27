@@ -49,6 +49,9 @@ public interface TargetClassifier {
 
     public static class TargetRelevance {
         
+        public static TargetRelevance RELEVANT = new TargetRelevance(true, 1.0);
+        public static TargetRelevance IRRELEVANT = new TargetRelevance(false, 0.0);
+        
         private double relevance;
         private boolean isRelevant;
         
