@@ -30,7 +30,7 @@ var formatDate = function(timestamp) {
 }
 
 class HitItem extends React.Component {
-  
+
   extractDescription(input) {
     // try to extraction description from metatag og:description
     var ogdesc = input.html.match(/<meta property=\"og:description\" content=\"(.*?)\"/i);
@@ -38,14 +38,14 @@ class HitItem extends React.Component {
     if(ogdesc !== null) {
       clean = ogdesc[1] + ' ' + input.text;;
     } else {
-      clean = input.text; 
+      clean = input.text;
     }
     clean = clean.replace(/\\n/g, " ");
     clean = clean.replace(/\s\s+/g, ' ' );
     let maxlimit = 350;
     return (clean.length > maxlimit) ? (clean.substring(0,maxlimit-3) + '...') : clean;
   }
-  
+
   render() {
     const props = this.props;
     const desc = this.extractDescription(props.result._source)
@@ -63,7 +63,7 @@ class HitItem extends React.Component {
 }
 
 class Search extends React.Component {
-  
+
   constructor(props) {
     super(props);
     var url = "http://localhost:8080/";
@@ -71,39 +71,42 @@ class Search extends React.Component {
       .then(function(response) {
         return response.json();
       }, function(error) {
-        this.serverError = true;
-        this.serverMessage = "Failed to get status from crawler server.";
+        return 'FETCH_ERROR';
       })
       .then(this.setupSearch.bind(this));
       this.state = {message:"Loading...", searchEnabled: false};
   }
-  
+
   setupSearch(status) {
-    //status.searchEnabled = !status.searchEnabled;
+    if(status === 'FETCH_ERROR') {
+      this.setState({
+        message: "Failed to connect to ACHE API to get crawler status.",
+        searchEnabled: false
+      });
+      return;
+    }
     if(!status.searchEnabled) {
       this.setState({
-        message:"Search is not available for this crawl (it's only available when using ELASTICSEARCH data format).",
+        message: "Search is not available for this crawl (it's only available when using ELASTICSEARCH data format).",
         searchEnabled: status.searchEnabled
       });
     } else {
       this.setState({
-        message:"Done.",
+        message: "Done.",
         searchEnabled: status.searchEnabled
       });
     }
   }
-  
-  render() {
-    
 
+  render() {
     
     const enabled = this.state.searchEnabled;
     const message = this.state.message;
-    
+
     return (
       <div>
-      
-      
+
+
         { !enabled ?
           <div className="row search-unavailable"><p>{message}</p></div>
           :
