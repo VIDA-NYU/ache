@@ -99,7 +99,7 @@ class Search extends React.Component {
   }
 
   render() {
-    
+
     const enabled = this.state.searchEnabled;
     const message = this.state.message;
 
@@ -108,7 +108,9 @@ class Search extends React.Component {
 
 
         { !enabled ?
-          <div className="row search-unavailable"><p>{message}</p></div>
+          <div className="alert alert-danger message">
+            <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {message}
+          </div>
           :
           <SearchkitProvider searchkit={searchkit} >
             <div className="row">

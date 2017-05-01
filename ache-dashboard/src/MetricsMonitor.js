@@ -2,11 +2,11 @@ import React from 'react';
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, DiscreteColorLegend} from 'react-vis';
 
 class SeriesPlot extends React.Component {
-  
+
   plotsPerLine = 2;
   plotWidth = 1050/this.plotsPerLine;
   plotHeight = 250;
-  
+
   render() {
     var lines = [];
     for(var i = 0; i < this.props.series.length; i++) {
@@ -36,6 +36,7 @@ class MetricsMonitor extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {};
     this.charts = [
       // Downloader Fetches
       [
@@ -124,13 +125,20 @@ class MetricsMonitor extends React.Component {
       .then(function(response) {
         return response.json();
       }, function(error) {
-        this.serverError = true;
-        this.serverMessage = "Failed to get metrics from crawler server.";
+        return 'FETCH_ERROR';
       })
       .then(this.updateSeries.bind(this));
   }
 
   updateSeries(metrics) {
+    if(metrics === 'FETCH_ERROR') {
+      this.serverError = true;
+      this.setState({
+        serverError: true,
+        serverMessage: "Failed to connect to ACHE API to get metrics."
+      });
+      return;
+    }
     for(var i = 0; i < this.charts.length; i++) {
       for(var m = 0; m < this.charts[i].length; m++) {
         let metric = this.charts[i][m];
@@ -156,6 +164,14 @@ class MetricsMonitor extends React.Component {
   }
 
   render(){
+    if(this.state.serverError == true) {
+      return (
+        <div className="alert alert-danger message">
+          <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.state.serverMessage}
+        </div>
+      );
+    }
+
     var plots = [];
     for(var i = 0; i < this.charts.length; i++) {
       var titles = [];
