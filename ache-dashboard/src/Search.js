@@ -7,8 +7,9 @@ import {
 
 
 //const host = "http://demo.searchkit.co/api/movies"
-const host = "http://localhost:8080/";
-const searchkit = new SearchkitManager(host);
+const apiHost = "http://localhost:8080/";
+const esHost = apiHost;
+const searchkit = new SearchkitManager(esHost);
 
 var formatDate = function(timestamp) {
   var dateObject = new Date(timestamp);
@@ -66,7 +67,7 @@ class Search extends React.Component {
 
   constructor(props) {
     super(props);
-    var url = "http://localhost:8080/";
+    var url = apiHost;
     fetch(url)
       .then(function(response) {
         return response.json();
@@ -116,7 +117,8 @@ class Search extends React.Component {
             <div className="row">
 
               <div className="col-md-3">
-                <RefinementListFilter id="filter_domain" title="Domain" field="domain" size={15}/>
+                <RefinementListFilter id="filter_relevance" title="Relevance" field="_type" size={2} operator="OR" />
+                <RefinementListFilter id="filter_domain" title="Domain" field="domain" size={10} operator="OR" />
                 {/*
                 <RefinementListFilter id="filter_words" title="Words" field="words" size={5}/>
                 <RangeFilter min={0} max={100} field="timestamp_crawl" id="timestamp_crawl" title="Crawl Time" showHistogram={true}/>
