@@ -2,15 +2,69 @@ import React from 'react';
 import {
   SearchkitManager, SearchkitProvider, SearchBox, Hits, RefinementListFilter,
   ActionBar, ActionBarRow, HitsStats, ViewSwitcherToggle, SelectedFilters,
-  ResetFilters, RangeFilter, DynamicRangeFilter
+  ResetFilters
 } from "searchkit";
 import URLUtils from './URLUtils';
 
-const apiHost = "http://localhost:8080/";
+const apiHost = "http://localhost:8080";
 const esHost = apiHost;
 const searchkit = new SearchkitManager(esHost);
 
+class LabelsManager {
+
+  constructor(apiHost) {
+    fetch(apiHost + "/labels")
+      .then(function(response) {
+        return response.json();
+      }, function(error) {
+        return 'FETCH_ERROR';
+      })
+      .then(this.updateLabelsCache.bind(this));
+  }
+
+  updateLabelsCache(response) {
+      if(response === "FETCH_ERROR") {
+        console.log("Failed to fetch labels from server.");
+        return;
+      }
+      this.labelsCache = response;
+  }
+
+  sendLabels(labels, callback) {
+    fetch(apiHost + "/labels", {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(labels)
+      })
+      .then(function(response) {
+        return response.json();
+      }, function(error) {
+        return 'FETCH_ERROR';
+      })
+      .then(this.updateLabelsCache.bind(this))
+      .then(callback);
+  }
+
+  isRelevant(url) {
+    return this.labelsCache[url] === true;
+  }
+
+  isIrrelevant(url) {
+    return this.labelsCache[url] === false;
+  }
+
+}
+
+const labelsManager = new LabelsManager(apiHost);
+
 class HitItem extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.labelsManager = labelsManager;
+  }
 
   formatDate(timestamp) {
     var dateObject = new Date(timestamp);
@@ -72,10 +126,26 @@ class HitItem extends React.Component {
       return new URLUtils(img_url, input.url).href;
     }
   }
+  
+  labelAs(url, feedback) {
+    var domainLabels = {};
+    domainLabels[url] = feedback;
+    this.labelsManager.sendLabels(domainLabels, ()=> this.setState({}) );
+  }
+  
+  labelAsRelevant(result) {
+    this.labelAs(result._source.url, true);
+  }
+
+  labelAsIrrelevant(result) {
+    this.labelAs(result._source.url, false);
+  }
 
   render() {
     const props = this.props;
-    const desc = this.extractDescription(props.result._source)
+    const desc = this.extractDescription(props.result._source);
+    const labeldAsRelevant = this.labelsManager.isRelevant(props.result._source.url);
+    const labeldAsIrrelevant = this.labelsManager.isIrrelevant(props.result._source.url);
     return (
       <div className="row hit-item">
         <div className="col-sm-12">
@@ -87,13 +157,22 @@ class HitItem extends React.Component {
           </div>
           <div className="row">
             <div className="col-sm-2 hit-image">
-              <img src={this.extractImageFromSource(props.result._source)} />
+              <img src={this.extractImageFromSource(props.result._source)} alt="" />
             </div>
             <div className="col-sm-10">
               <div className="hit-description" dangerouslySetInnerHTML={{__html:desc}}></div>
               <ul className="list-inline hit-properties">
                 <li><b>Crawl time:</b> <span className="label label-default">{this.formatDate(props.result._source.retrieved)}</span></li>
                 <li><b>Classified as:</b> <span className="label label-default">{this.props.result._type}</span></li>
+                <li>
+                  <b>Actual label:</b>
+                  <button onClick={()=>this.labelAsRelevant(props.result)}>
+                    <span className={"glyphicon glyphicon-thumbs-up"  + (labeldAsRelevant ? ' relevant' : '')}></span>
+                  </button>
+                  <button onClick={()=>this.labelAsIrrelevant(props.result)}>
+                    <span className={"glyphicon glyphicon-thumbs-down"  + (labeldAsIrrelevant ? ' irrelevant' : '')}></span>
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
@@ -107,15 +186,14 @@ class Search extends React.Component {
 
   constructor(props) {
     super(props);
-    var url = apiHost;
-    fetch(url)
+    fetch(apiHost + "/")
       .then(function(response) {
         return response.json();
       }, function(error) {
         return 'FETCH_ERROR';
       })
       .then(this.setupSearch.bind(this));
-      this.state = {message:"Loading...", searchEnabled: false};
+    this.state = {message:"Loading...", searchEnabled: false};
   }
 
   setupSearch(status) {
@@ -171,17 +249,14 @@ class Search extends React.Component {
                   <SearchBox searchOnChange={true} searchThrottleTime={1000} />
 
                   <ActionBar>
-
                     <ActionBarRow>
               				<HitsStats translations={{"hitstats.results_found":"{hitCount} results found."}}/>
                       <ViewSwitcherToggle/>
                     </ActionBarRow>
-
                     <ActionBarRow>
                       <SelectedFilters/>
                       <ResetFilters/>
                     </ActionBarRow>
-
                   </ActionBar>
 
                   <Hits hitsPerPage={10} highlightFields={["title"]} sourceFilter={["_id", "title", "url", "retrieved", "text", "html"]} itemComponent={HitItem} />

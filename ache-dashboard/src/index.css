@@ -99,6 +99,19 @@ body {
   padding-top: 5px;
 }
 
+ul.list-inline li button {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.relevant {
+  color: #5cb85c;
+}
+
+.irrelevant {
+  color: #d9534f
+}
+
 /* ****************** */
 
 .sk-layout__filters {

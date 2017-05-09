@@ -37,7 +37,7 @@ public class RestServer {
     public static final String VERSION = Main.class.getPackage().getImplementationVersion();
     
     private static final Logger logger = LoggerFactory.getLogger(RestServer.class);
-
+    
     private RestConfig restConfig;
     private MetricRegistry metricsRegistry;
     private String indexName;
@@ -45,12 +45,13 @@ public class RestServer {
     private boolean isSearchEnabled = false;
     private CloseableHttpClient httpclient = HttpClients.createDefault();
     private Service server;
-    
-    private RestServer(RestConfig restConfig, MetricRegistry metricsRegistry) {
-        this(restConfig, metricsRegistry, null, null);
+    private LabelsManager labelsManager;
+
+    private RestServer(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry) {
+        this(dataPath, restConfig, metricsRegistry, null, null);
     }
     
-    private RestServer(RestConfig restConfig, MetricRegistry metricsRegistry, String indexName, String hostAddress) {
+    private RestServer(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry, String indexName, String hostAddress) {
         this.restConfig = restConfig;
         this.metricsRegistry = metricsRegistry;
         this.indexName = indexName;
@@ -58,6 +59,7 @@ public class RestServer {
         if(indexName != null && hostAddress != null) {
             isSearchEnabled = true;
         }
+        this.labelsManager = new LabelsManager(dataPath);
     }
  
     public void start() {
@@ -86,6 +88,10 @@ public class RestServer {
             server.post("/_search", "*/*", searchApiProxy);
         }
         
+        server.get( "/labels", Transformers.json(labelsManager.getLabelsResource));
+        server.put( "/labels", Transformers.json(labelsManager.addLabelsResource));
+        server.post("/labels", Transformers.json(labelsManager.addLabelsResource));
+        
         server.awaitInitialization();
         
         logger.info("---------------------------------------------");
@@ -110,7 +116,6 @@ public class RestServer {
         );
         return crawlerInfo;
     };
-
     
     private Route searchApiProxy = (request, response) -> {
         try {
@@ -154,6 +159,7 @@ public class RestServer {
         threadDump.dump(baos);
         return baos.toString();
     };
+
 
     private boolean portIsAvailable(int port) {
         ServerSocket ss = null;
@@ -210,11 +216,11 @@ public class RestServer {
         
     }
 
-    public static RestServer create(RestConfig restConfig, MetricRegistry metricsRegistry) {
-        return new RestServer(restConfig, metricsRegistry);
+    public static RestServer create(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry) {
+        return new RestServer(dataPath, restConfig, metricsRegistry);
     }
     
-    public static RestServer create(MetricRegistry metricsRegistry, ConfigService config, String indexName) {
+    public static RestServer create(String dataPath, MetricRegistry metricsRegistry, ConfigService config, String indexName) {
         requireNonNull(metricsRegistry, "A metrics registry must be provided.");
         requireNonNull(config, "A configuration must be provided.");
         TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
@@ -226,9 +232,9 @@ public class RestServer {
             }
             requireNonNull(indexName, "Elasticsearch index name should be provided when using ELASTICSEARCH data format.");
             String esHostAddress = hosts.iterator().next();
-            return new RestServer(config.getRestConfig(), metricsRegistry, indexName, esHostAddress);
+            return new RestServer(dataPath, config.getRestConfig(), metricsRegistry, indexName, esHostAddress);
         } else {
-            return new RestServer(config.getRestConfig(), metricsRegistry);
+            return new RestServer(dataPath, config.getRestConfig(), metricsRegistry);
         }
     }
     

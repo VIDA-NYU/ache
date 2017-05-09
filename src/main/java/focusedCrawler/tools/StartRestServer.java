@@ -26,9 +26,9 @@ public class StartRestServer extends CliTool {
 
     private boolean enableCors = true;
 
-    @Option(name = {"-d", "--data"}, required = false,
+    @Option(name = {"-d", "--data-path"}, required = true,
             description = "Path to folder where server should store its data")
-    private String data = "server-data";
+    private String dataPath = "./data";
 
     @Option(name = {"-c", "--config"}, required = false,
             description = "Path to the configuration file")
@@ -54,12 +54,12 @@ public class StartRestServer extends CliTool {
             }
             
             ConfigService config = new ConfigService(configPath);
-            server = RestServer.create(metricsRegistry, config, indexName);
+            server = RestServer.create(dataPath, metricsRegistry, config, indexName);
         }
         
         if(server == null) {
             RestConfig restConfig = new RestConfig(host, port, enableCors);
-            server = RestServer.create(restConfig, metricsRegistry);
+            server = RestServer.create(dataPath, restConfig, metricsRegistry);
         }
         
         server.start();
