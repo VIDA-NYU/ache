@@ -433,6 +433,13 @@ ul.list-inline li button {
     margin: 10px auto;
 }
 
+.sk-pagination-navigation .sk-toggle-option:first-child,
+.sk-pagination-navigation .sk-toggle-option:last-child {
+    -webkit-box-flex: 4;
+    -ms-flex: 4;
+    flex: 4;
+}
+
 .sk-toggle {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -442,12 +449,6 @@ ul.list-inline li button {
     text-align: center;
     border-radius: 3px;
     max-height: 30px;
-}
-
-.sk-pagination-navigation .sk-toggle-option:first-child, .sk-pagination-navigation .sk-toggle-option:last-child {
-    -webkit-box-flex: 4;
-    -ms-flex: 4;
-    flex: 4;
 }
 
 .sk-toggle-option:first-child {
@@ -468,12 +469,6 @@ ul.list-inline li button {
     border-right: none;
     text-decoration: none;
     white-space: nowrap;
-}
-
-.sk-pagination-navigation .sk-toggle-option:first-child, .sk-pagination-navigation .sk-toggle-option:last-child {
-    -webkit-box-flex: 4;
-    -ms-flex: 4;
-    flex: 4;
 }
 
 .sk-toggle-option:last-child {
