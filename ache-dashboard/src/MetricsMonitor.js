@@ -164,7 +164,7 @@ class MetricsMonitor extends React.Component {
   }
 
   render(){
-    if(this.state.serverError == true) {
+    if(this.state.serverError === true) {
       return (
         <div className="alert alert-danger message">
           <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.state.serverMessage}

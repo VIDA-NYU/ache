@@ -1,5 +1,5 @@
 export default function URLUtils(url, baseURL) {
-  var m = String(url).replace(/^\s+|\s+$/g, "").match(/^([^:\/?#]+:)?(?:\/\/(?:([^:@\/?#]*)(?::([^:@\/?#]*))?@)?(([^:\/?#]*)(?::(\d*))?))?([^?#]*)(\?[^#]*)?(#[\s\S]*)?/);
+  var m = String(url).replace(/^\s+|\s+$/g, "").match(/^([^:/?#]+:)?(?:\/\/(?:([^:@/?#]*)(?::([^:@/?#]*))?@)?(([^:/?#]*)(?::(\d*))?))?([^?#]*)(\?[^#]*)?(#[\s\S]*)?/);
   if (!m) {
     throw new RangeError();
   }
@@ -26,7 +26,7 @@ export default function URLUtils(url, baseURL) {
     pathname.replace(/^(\.\.?(\/|$))+/, "")
       .replace(/\/(\.(\/|$))+/g, "/")
       .replace(/\/\.\.$/, "/../")
-      .replace(/\/?[^\/]*/g, function (p) {
+      .replace(/\/?[^/]*/g, function (p) {
         if (p === "/..") {
           output.pop();
         } else {

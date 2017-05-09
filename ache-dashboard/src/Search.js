@@ -33,7 +33,7 @@ class HitItem extends React.Component {
 
   extractDescription(input) {
     // try to extraction description from metatag og:description
-    var ogdesc = input.html.match(/<meta property=\"og:description\" content=\"(.*?)\"/i);
+    var ogdesc = input.html.match(/<meta property="og:description" content="(.*?)"/i);
     var clean = '';
     if(ogdesc !== null) {
       clean = ogdesc[1] + ' || ' + input.text;;
@@ -49,9 +49,9 @@ class HitItem extends React.Component {
   extractImageFromSource(input) {
     var html = input.html;
     // try to extract og:image or the first <img> tag available in the html
-    var result = html.match(/<meta property=\"og:image\" content=\"(.*?)\"/i);
+    var result = html.match(/<meta property="og:image" content="(.*?)"/i);
     if(result === null) {
-      result = html.match(/<img [ˆ><]*src=\"(.*?)\"/i);
+      result = html.match(/<img [ˆ><]*src="(.*?)"/i);
     }
 
     if(result === null) {
