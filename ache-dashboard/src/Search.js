@@ -2,7 +2,7 @@ import React from 'react';
 import {
   SearchkitManager, SearchkitProvider, SearchBox, Hits, RefinementListFilter,
   ActionBar, ActionBarRow, HitsStats, ViewSwitcherToggle, SelectedFilters,
-  ResetFilters
+  ResetFilters, Pagination
 } from "searchkit";
 import URLUtils from './URLUtils';
 
@@ -260,6 +260,7 @@ class Search extends React.Component {
                   </ActionBar>
 
                   <Hits hitsPerPage={10} highlightFields={["title"]} sourceFilter={["_id", "title", "url", "retrieved", "text", "html"]} itemComponent={HitItem} />
+                  <Pagination showNumbers={true}/>
 
               </div>
             </div>

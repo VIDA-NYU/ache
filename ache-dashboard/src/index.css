@@ -421,3 +421,68 @@ ul.list-inline li button {
     border-width: 4px 4px 0;
     border-top-color: #6c6c6c
 }
+
+/* Pagination */
+
+.sk-pagination-navigation.is-numbered {
+    width: 600px;
+}
+
+.sk-pagination-navigation {
+    width: 300px;
+    margin: 10px auto;
+}
+
+.sk-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    text-align: center;
+    border-radius: 3px;
+    max-height: 30px;
+}
+
+.sk-pagination-navigation .sk-toggle-option:first-child, .sk-pagination-navigation .sk-toggle-option:last-child {
+    -webkit-box-flex: 4;
+    -ms-flex: 4;
+    flex: 4;
+}
+
+.sk-toggle-option:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.sk-toggle-option {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+    padding: 5px 10px;
+    border-right: none;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sk-pagination-navigation .sk-toggle-option:first-child, .sk-pagination-navigation .sk-toggle-option:last-child {
+    -webkit-box-flex: 4;
+    -ms-flex: 4;
+    flex: 4;
+}
+
+.sk-toggle-option:last-child {
+    border-radius: 0 3px 3px 0;
+    border-right: 1px solid #ccc;
+}
+
+.sk-toggle-option.is-active {
+    background-color: #ddd;
+    color: #080808;
+    /* border-color: #08c; */
+}
