@@ -5,6 +5,7 @@ import {
   ResetFilters, Pagination
 } from "searchkit";
 import URLUtils from './URLUtils';
+import {without} from "lodash";
 
 const apiHost = "http://localhost:8080";
 const esHost = apiHost;
@@ -13,6 +14,7 @@ const searchkit = new SearchkitManager(esHost);
 class LabelsManager {
 
   constructor(apiHost) {
+    this.listeners = [];
     fetch(apiHost + "/labels")
       .then(function(response) {
         return response.json();
@@ -22,12 +24,26 @@ class LabelsManager {
       .then(this.updateLabelsCache.bind(this));
   }
 
+  addListener(fn) {
+    this.listeners.push(fn);
+    return ()=>{
+      this.listeners = without(this.listeners, fn);
+    }
+  }
+
+  notifyListeners(changedLabels){
+    this.listeners.forEach((fn) => {
+     fn.apply(changedLabels)
+    });
+  }
+
   updateLabelsCache(response) {
       if(response === "FETCH_ERROR") {
         console.log("Failed to fetch labels from server.");
         return;
       }
       this.labelsCache = response;
+      this.notifyListeners(this.labelsCache);
   }
 
   sendLabels(labels, callback) {
@@ -64,6 +80,11 @@ class HitItem extends React.Component {
   constructor(props) {
     super(props);
     this.labelsManager = labelsManager;
+    this.stopListening = this.labelsManager.addListener(()=> this.setState({}));
+  }
+  
+  componentWillUnmount() {
+    this.stopListening();
   }
 
   formatDate(timestamp) {
@@ -130,7 +151,7 @@ class HitItem extends React.Component {
   labelAs(url, feedback) {
     var domainLabels = {};
     domainLabels[url] = feedback;
-    this.labelsManager.sendLabels(domainLabels, ()=> this.setState({}) );
+    this.labelsManager.sendLabels(domainLabels);
   }
   
   labelAsRelevant(result) {
@@ -182,6 +203,49 @@ class HitItem extends React.Component {
   }
 }
 
+class LabelAllButtons extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.labelsManager = labelsManager;
+    this.stopListeningResults = searchkit.addResultsListener(this.updateResults.bind(this));
+  }
+
+  componentWillUnmount() {
+    this.stopListeningResults();
+  }
+
+  updateResults(results) {
+    if(results !== null && results.hits !== null) {
+      this.hits = results.hits.hits;
+    }
+  }
+
+  labelAllAsRelevant() {
+    this.labelAll(true);
+  }
+
+  labelAllAsIrrelevant() {
+    this.labelAll(false);
+  }
+
+  labelAll(feedback) {
+    let labels = {};
+    this.hits.forEach(hit => labels[hit._source.url] = feedback);
+    this.labelsManager.sendLabels(labels);
+  }
+
+  render() {
+    return (
+      <div className="label-all">
+        <button className="btn btn-default" onClick={()=>this.labelAllAsRelevant()}><span className="glyphicon glyphicon-thumbs-up"></span>&nbsp;Mark all as Relevant</button>
+        <button className="btn btn-default" onClick={()=>this.labelAllAsIrrelevant()}><span className="glyphicon glyphicon-thumbs-down"></span>&nbsp;Mark all as irrelevant</button>
+      </div>
+    )
+  }
+
+}
+
 class Search extends React.Component {
 
   constructor(props) {
@@ -224,8 +288,6 @@ class Search extends React.Component {
 
     return (
       <div>
-
-
         { !enabled ?
           <div className="alert alert-danger message">
             <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {message}
@@ -258,8 +320,8 @@ class Search extends React.Component {
                       <ResetFilters/>
                     </ActionBarRow>
                   </ActionBar>
-
                   <Hits hitsPerPage={10} highlightFields={["title"]} sourceFilter={["_id", "title", "url", "retrieved", "text", "html"]} itemComponent={HitItem} />
+                  <LabelAllButtons/>
                   <Pagination showNumbers={true}/>
 
               </div>

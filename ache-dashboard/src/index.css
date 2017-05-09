@@ -112,6 +112,16 @@ ul.list-inline li button {
   color: #d9534f
 }
 
+.label-all {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.label-all .btn {
+  margin:2px;
+  background-color: transparent;
+}
+
 /* ****************** */
 
 .sk-layout__filters {
