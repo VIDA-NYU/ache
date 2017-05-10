@@ -64,6 +64,14 @@ dependencies {
 
 }
 
+task build() {
+    dependsOn 'clean'
+    dependsOn ':ache-dashboard:build'
+    dependsOn 'installDist'
+    //tasks.findByName(':ache-dashboard:build').mustRunAfter 'clean'
+    tasks.findByName('installDist').mustRunAfter ':ache-dashboard:build'
+}
+
 
 //
 // Adds version to final JAR artifact

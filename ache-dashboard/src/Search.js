@@ -6,16 +6,16 @@ import {
 } from "searchkit";
 import URLUtils from './URLUtils';
 import {without} from "lodash";
+import {ACHE_API_ADDRESS} from './Config';
 
-const apiHost = "http://localhost:8080";
-const esHost = apiHost;
-const searchkit = new SearchkitManager(esHost);
+const searchkit = new SearchkitManager(ACHE_API_ADDRESS);
 
 class LabelsManager {
 
-  constructor(apiHost) {
+  constructor(apiAddress) {
+    this.apiAddress = apiAddress;
     this.listeners = [];
-    fetch(apiHost + "/labels")
+    fetch(apiAddress + "/labels")
       .then(function(response) {
         return response.json();
       }, function(error) {
@@ -47,7 +47,7 @@ class LabelsManager {
   }
 
   sendLabels(labels, callback) {
-    fetch(apiHost + "/labels", {
+    fetch(this.apiAddress + "/labels", {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -73,7 +73,7 @@ class LabelsManager {
 
 }
 
-const labelsManager = new LabelsManager(apiHost);
+const labelsManager = new LabelsManager(ACHE_API_ADDRESS);
 
 class HitItem extends React.Component {
 
@@ -250,7 +250,7 @@ class Search extends React.Component {
 
   constructor(props) {
     super(props);
-    fetch(apiHost + "/")
+    fetch(ACHE_API_ADDRESS + "/status")
       .then(function(response) {
         return response.json();
       }, function(error) {

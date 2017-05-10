@@ -1,0 +1,16 @@
+plugins {
+  id "com.moowork.node" version "1.1.1"
+}
+
+task npmRunBuild(type: NpmTask) {
+  args = ['run', 'build']
+}
+
+task copyBuild(type: Copy, dependsOn: npmRunBuild) {
+  from './build'
+  into '../src/main/resources/public/'
+}
+
+task build(dependsOn: copyBuild) {
+  
+}

@@ -31,7 +31,6 @@ import focusedCrawler.target.TargetStorageConfig;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import spark.Route;
 import spark.Service;
-
 public class RestServer {
     
     public static final String VERSION = Main.class.getPackage().getImplementationVersion();
@@ -75,22 +74,35 @@ public class RestServer {
         server.port(port);
         server.ipAddress(host);
         
+        server.staticFiles.location("/public");
+
         if(restConfig.isEnableCors()) {
             enableCORS("*", "GET");
         }
         
-        server.get("/",            Transformers.json(crawlerInfoResource));
+        /*
+         * API endpoints routes
+         */
+        server.get("/status",      Transformers.json(crawlerInfoResource));
         server.get("/metrics",     Transformers.json(metricsResource));
         server.get("/thread/dump", Transformers.text(threadDumpResource));
         
+        server.get( "/labels", Transformers.json(labelsManager.getLabelsResource));
+        server.put( "/labels", Transformers.json(labelsManager.addLabelsResource));
+        server.post("/labels", Transformers.json(labelsManager.addLabelsResource));
+        
+        /*
+         * Elasticsearch proxy routes
+         */
         if(isSearchEnabled) {
             server.get("/_search", "*/*", searchApiProxy);
             server.post("/_search", "*/*", searchApiProxy);
         }
         
-        server.get( "/labels", Transformers.json(labelsManager.getLabelsResource));
-        server.put( "/labels", Transformers.json(labelsManager.addLabelsResource));
-        server.post("/labels", Transformers.json(labelsManager.addLabelsResource));
+        /*
+         * Routes used by the static web application
+         */
+        server.get("/search", StaticFileEngine.noopRouter, StaticFileEngine.engine);
         
         server.awaitInitialization();
         
@@ -98,7 +110,7 @@ public class RestServer {
         logger.info("ACHE server available at http://{}:{}", host, port);
         logger.info("---------------------------------------------");
     }
-
+    
     public void stop() {
         try {
             httpclient.close();

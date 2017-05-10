@@ -14,3 +14,4 @@ config/escort
 /bin/
 .DS_Store*
 docs/_build/
+src/main/resources/public/
