@@ -5,7 +5,6 @@ import 'whatwg-fetch'
 import Search from './Search'
 import MetricsMonitor from './MetricsMonitor'
 
-import './App.css';
 import ache_logo_png from '../../ache-logo.png';
 
 class Header extends React.Component {
