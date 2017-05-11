@@ -5,10 +5,9 @@
 #
 FROM openjdk:8-jdk
 
-ADD . /ache
-WORKDIR /ache
-RUN /ache/gradlew installDist
+ADD . /ache-src
+WORKDIR /ache-src
+RUN /ache-src/gradlew installDist && mv /ache-src/build/install/ache /ache && rm -rf /ache-src/ /root/.gradle
 
-WORKDIR /data
-ENTRYPOINT ["/ache/build/install/ache/bin/ache"]
+ENTRYPOINT ["/ache/bin/ache"]
 VOLUME ["/data", "/config"]
