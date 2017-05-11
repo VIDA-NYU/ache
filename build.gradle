@@ -61,15 +61,15 @@ dependencies {
     // TODO fill these in from Maven Central instead of that local libs dir
     compile files('libs/jsonic-1.2.0.jar') // recommend updating this, it's for langdetect.jar
     compile files('libs/langdetect-03-03-2014.jar') // TODO why isn't this in maven central
-
 }
 
-task build() {
-    dependsOn 'clean'
-    dependsOn ':ache-dashboard:build'
-    dependsOn 'installDist'
-    //tasks.findByName(':ache-dashboard:build').mustRunAfter 'clean'
-    tasks.findByName('installDist').mustRunAfter ':ache-dashboard:build'
+
+//
+// Make sure that ache-dashboard is compiled and copied into resources folder
+// before the resources are processed and bundled into the JAR file
+//
+processResources {
+    dependsOn ':ache-dashboard:install'
 }
 
 
