@@ -11,4 +11,4 @@ RUN /ache/gradlew installDist
 
 WORKDIR /data
 ENTRYPOINT ["/ache/build/install/ache/bin/ache"]
-VOLUME ["/data", "/config/]
+VOLUME ["/data", "/config"]
