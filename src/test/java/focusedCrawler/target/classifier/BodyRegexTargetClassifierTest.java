@@ -13,7 +13,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.ParsedData;
 import focusedCrawler.util.parser.PaginaURL;

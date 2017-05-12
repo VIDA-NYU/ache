@@ -246,14 +246,17 @@ public class Main {
         @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
         String dataOutputPath;
         
-        @Option(name = {"-e", "--elasticIndex"}, required = true, description = "Name of elastic search index to be used")
-        String elasticIndexName;
+        @Option(name = {"-e", "--elasticIndex"}, required = false, description = "Elasticsearch index name to be used")
+        String esIndexName;
+
+        @Option(name = {"-t", "--elasticType"}, required = false, description = "Elasticsearch type name to be used")
+        String esTypeName;
 
         @Override
         public void run() {
             try {
                 ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-                TargetStorage.runServer(configPath, modelPath, dataOutputPath, elasticIndexName, config);
+                TargetStorage.runServer(configPath, modelPath, dataOutputPath, esIndexName, esTypeName, config);
             } catch (Throwable t) {
                 logger.error("Something bad happened to TargetStorage :(", t);
             }
@@ -299,9 +302,12 @@ public class Main {
         @Option(name = {"-s", "--seed"}, required = true, description = "Path to file of seed URLs")
         String seedPath;
         
-        @Option(name = {"-e", "--elasticIndex"}, required = false, description = "Name of elastic search index to be used")
-        String elasticIndexName;
+        @Option(name = {"-e", "--elasticIndex"}, required = false, description = "Name of Elasticsearch index to be used")
+        String esIndexName;
 
+        @Option(name = {"-t", "--elasticType"}, required = false, description = "Name of Elasticsearch document type to be used")
+        String esTypeName;
+        
         @Override
         public void run() {
             
@@ -310,17 +316,17 @@ public class Main {
             try {
                 MetricsManager metricsManager = new MetricsManager();
                 
-                RestServer restServer = RestServer.create(dataOutputPath, metricsManager.getMetricsRegistry(),
-                        config, elasticIndexName);
+                RestServer restServer = RestServer.create(dataOutputPath,
+                        metricsManager.getMetricsRegistry(), config, esIndexName, esTypeName);
                 restServer.start();
 
                 Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
                         dataOutputPath, modelPath, config.getLinkStorageConfig(), metricsManager);
 
                 // start target storage
-                Storage targetStorage = TargetStorage.createTargetStorage(
-                            configPath, modelPath, dataOutputPath, elasticIndexName,
-                            config.getTargetStorageConfig(), linkStorage);
+                Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath,
+                        dataOutputPath, esIndexName, esTypeName,
+                        config.getTargetStorageConfig(), linkStorage);
                 
                 AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
                 

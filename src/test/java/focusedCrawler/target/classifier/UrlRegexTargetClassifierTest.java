@@ -11,7 +11,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.LinkFilter.LinkBlackList;

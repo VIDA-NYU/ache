@@ -285,10 +285,10 @@ class Search extends React.Component {
 
     const enabled = this.state.searchEnabled;
     const message = this.state.message;
-    let labels = {
-        "target":"Relevant",
-        "negative": "Irrelevant"
-      }
+    let checkboxLabels = {
+      "relevant":"Relevant",
+      "irrelevant": "Irrelevant"
+    }
     return (
       <div>
         { !enabled ?
@@ -300,7 +300,7 @@ class Search extends React.Component {
             <div className="row">
 
               <div className="col-sm-3">
-                <RefinementListFilter id="filter_relevance" title="Relevance" field="_type" size={2} operator="OR" translations={labels} />
+                <RefinementListFilter id="filter_relevance" title="Relevance" field="isRelevant" size={2} operator="OR" translations={checkboxLabels} />
                 <RefinementListFilter id="filter_domain" title="Domain" field="domain" size={15} operator="OR" />
                 {/*
                 <RefinementListFilter id="filter_words" title="Words" field="words" size={5}/>
@@ -323,7 +323,7 @@ class Search extends React.Component {
                       <ResetFilters/>
                     </ActionBarRow>
                   </ActionBar>
-                  <Hits hitsPerPage={10} highlightFields={["title"]} sourceFilter={["_id", "title", "url", "retrieved", "text", "html"]} itemComponent={HitItem} />
+                  <Hits hitsPerPage={10} highlightFields={["title"]} sourceFilter={["_id", "isRelevant", "title", "url", "retrieved", "text", "html"]} itemComponent={HitItem} />
                   <LabelAllButtons/>
                   <Pagination showNumbers={true}/>
 

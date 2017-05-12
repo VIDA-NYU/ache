@@ -20,6 +20,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
+import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FilesTargetRepository;
@@ -48,6 +49,8 @@ public class FilesTargetRepositoryTest {
 		// given
 	    String folder = tempFolder.newFolder().toString(); 
 		Page target = new Page(new URL(url), html, responseHeaders);
+		target.setTargetRelevance(TargetRelevance.RELEVANT);
+		
 		FilesTargetRepository repository = new FilesTargetRepository(folder);
 		
 		// when
@@ -60,6 +63,8 @@ public class FilesTargetRepositoryTest {
         assertThat(page.getContentAsString(), is(html));
         assertThat(page.getUrl(), is(url));
         assertThat(page.getResponseHeaders().get("content-type").get(0), is("text/html"));
+        assertThat(page.getRelevance().isRelevant(), is(TargetRelevance.RELEVANT.isRelevant()));
+        assertThat(page.getRelevance().getRelevance(), is(TargetRelevance.RELEVANT.getRelevance()));
 	}
 	
 	@Test

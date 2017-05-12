@@ -6,27 +6,41 @@
 
 # Uses a classifier to collect pages in topics, domains etc.
 target_storage.use_classifier: true
-# Change to false if don't want to store pages classified as irrelevant
+# Change to false if you don't want to store pages classified as irrelevant
 target_storage.store_negative_pages: false
 
 # Configuration for data format used to store crawled data
 
-# Enable this change target storage's data format
+# Enable one of the following lines to use one of the FILESYSTEM_* data format
 #target_storage.data_format.type: FILESYSTEM_HTML
 #target_storage.data_format.type: FILESYSTEM_CBOR
-target_storage.data_format.type: FILESYSTEM_JSON
-
-# Enable this to name files using a hash instead of encoded URL
-target_storage.data_format.filesystem.hash_file_name: true
-
+#target_storage.data_format.type: FILESYSTEM_JSON
+#
+# Enable this to name files using a fixed-lenght hash instead of the percent-encoded URL
+#target_storage.data_format.filesystem.hash_file_name: true
+#
 # Enable this to compress the file content
 #target_storage.data_format.filesystem.compress_data: true
 
-# Enable this config to use ElasticSearch for target storage
+# Enable this to use the FILES data format
+target_storage.data_format.type: FILES
+target_storage.data_format.files.max_file_size: 134217728 # 128mb in bytes
+
+
+# Enable following line to index pages in Elasticsearch
 #target_storage.data_format.type: ELASTICSEARCH
+#
+# (Transport client ES 1.5)
 #target_storage.data_format.elasticsearch.host: localhost
 #target_storage.data_format.elasticsearch.port: 9300
 #target_storage.data_format.elasticsearch.cluster_name: elasticsearch
+#
+# (REST client ES 1.x and 5.x)
+#target_storage.data_format.elasticsearch.rest.hosts:
+#  - http://localhost:9200
+#target_storage.data_format.elasticsearch.rest.connect_timeout: 30000
+#target_storage.data_format.elasticsearch.rest.socket_timeout: 30000
+#target_storage.data_format.elasticsearch.rest.max_retry_timeout_millis: 90000
 
 # Performs hard focus or soft focus. When hard focus is enabled,
 # the crawler only follows links from pages classified as relevant

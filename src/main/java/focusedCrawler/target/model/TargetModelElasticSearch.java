@@ -21,6 +21,8 @@ public class TargetModelElasticSearch {
     private String[] wordsMeta;
     private String topPrivateDomain;
     private String html;
+    private String isRelevant;
+    private double relevance;
     
     public TargetModelElasticSearch() {
         // mandatory for object unserialization
@@ -35,7 +37,8 @@ public class TargetModelElasticSearch {
         this.words = page.getParsedData().getWords();
         this.wordsMeta = page.getParsedData().getWordsMeta();
         this.title = page.getParsedData().getTitle();
-        
+        this.isRelevant = page.getTargetRelevance().isRelevant() ? "relevant" : "irrelevant";
+        this.relevance = page.getTargetRelevance().getRelevance();
         try {
             this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
         } catch (BoilerpipeProcessingException e) {
@@ -153,8 +156,24 @@ public class TargetModelElasticSearch {
         return html;
     }
 
-    public void setHml(String html) {
+    public void setHtml(String html) {
         this.html = html;
+    }
+
+    public String getIsRelevant() {
+        return isRelevant;
+    }
+
+    public void setIsRelevant(String isRelevant) {
+        this.isRelevant = isRelevant;
+    }
+
+    public double getRelevance() {
+        return relevance;
+    }
+
+    public void setRelevance(double relevance) {
+        this.relevance = relevance;
     }
 
 }

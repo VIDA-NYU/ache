@@ -31,6 +31,7 @@ import focusedCrawler.target.TargetStorageConfig;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import spark.Route;
 import spark.Service;
+
 public class RestServer {
     
     public static final String VERSION = Main.class.getPackage().getImplementationVersion();
@@ -39,26 +40,35 @@ public class RestServer {
     
     private RestConfig restConfig;
     private MetricRegistry metricsRegistry;
-    private String indexName;
-    private String hostAddress;
-    private boolean isSearchEnabled = false;
-    private CloseableHttpClient httpclient = HttpClients.createDefault();
     private Service server;
+    
+    private boolean isSearchEnabled = false;
+    private String esHostAddress;
+    private String esIndexName;
+    private String esTypeName;
+    private CloseableHttpClient httpclient;
     private LabelsManager labelsManager;
 
     private RestServer(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry) {
-        this(dataPath, restConfig, metricsRegistry, null, null);
+        this(dataPath, restConfig, metricsRegistry, null, null, null);
     }
     
-    private RestServer(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry, String indexName, String hostAddress) {
+    private RestServer(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry,
+                       String esIndexName, String esTypeName, String esHostAddress) {
         this.restConfig = restConfig;
         this.metricsRegistry = metricsRegistry;
-        this.indexName = indexName;
-        this.hostAddress = hostAddress;
-        if(indexName != null && hostAddress != null) {
+        if (esIndexName != null && esHostAddress != null) {
+            this.esIndexName = esIndexName;
+            this.esHostAddress = esHostAddress;
             isSearchEnabled = true;
+            if (esTypeName != null && !esTypeName.isEmpty()) {
+                this.esTypeName = esTypeName;
+            } else {
+                this.esTypeName = "page"; // default type name
+            }
+            this.httpclient = HttpClients.createDefault();
+            this.labelsManager = new LabelsManager(dataPath);
         }
-        this.labelsManager = new LabelsManager(dataPath);
     }
  
     public void start() {
@@ -87,16 +97,19 @@ public class RestServer {
         server.get("/metrics",     Transformers.json(metricsResource));
         server.get("/thread/dump", Transformers.text(threadDumpResource));
         
-        server.get( "/labels", Transformers.json(labelsManager.getLabelsResource));
-        server.put( "/labels", Transformers.json(labelsManager.addLabelsResource));
-        server.post("/labels", Transformers.json(labelsManager.addLabelsResource));
-        
-        /*
-         * Elasticsearch proxy routes
-         */
         if(isSearchEnabled) {
-            server.get("/_search", "*/*", searchApiProxy);
-            server.post("/_search", "*/*", searchApiProxy);
+            /*
+             * Elasticsearch proxy routes
+             */
+            server.get("/_search", "*/*", elasticsearchApiProxy);
+            server.post("/_search", "*/*", elasticsearchApiProxy);
+            
+            /*
+             * Endpoints for labeling web pages
+             */
+            server.get( "/labels", Transformers.json(labelsManager.getLabelsResource));
+            server.put( "/labels", Transformers.json(labelsManager.addLabelsResource));
+            server.post("/labels", Transformers.json(labelsManager.addLabelsResource));
         }
         
         /*
@@ -129,13 +142,13 @@ public class RestServer {
         return crawlerInfo;
     };
     
-    private Route searchApiProxy = (request, response) -> {
+    private Route elasticsearchApiProxy = (request, response) -> {
         try {
             String query = "";
             for (String param : request.queryParams()) {
                 query += param + "=" + request.queryParams(param);
             }
-            String url = String.format("%s/%s/_search", hostAddress, indexName);
+            String url = String.format("%s/%s/%s/_search", esHostAddress, esIndexName, esTypeName);
             if (!query.isEmpty()) {
                 url += "?" + query;
             }
@@ -171,7 +184,6 @@ public class RestServer {
         threadDump.dump(baos);
         return baos.toString();
     };
-
 
     private boolean portIsAvailable(int port) {
         ServerSocket ss = null;
@@ -232,7 +244,8 @@ public class RestServer {
         return new RestServer(dataPath, restConfig, metricsRegistry);
     }
     
-    public static RestServer create(String dataPath, MetricRegistry metricsRegistry, ConfigService config, String indexName) {
+    public static RestServer create(String dataPath, MetricRegistry metricsRegistry,
+            ConfigService config, String esIndexName, String esTypeName) {
         requireNonNull(metricsRegistry, "A metrics registry must be provided.");
         requireNonNull(config, "A configuration must be provided.");
         TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
@@ -242,9 +255,12 @@ public class RestServer {
             if(hosts == null || hosts.isEmpty()) {
                 throw new IllegalArgumentException("Elasticsearch host addresses (REST API) can not be empty");
             }
-            requireNonNull(indexName, "Elasticsearch index name should be provided when using ELASTICSEARCH data format.");
+            requireNonNull(esIndexName, "Elasticsearch index name should be provided when using ELASTICSEARCH data format.");
+            if(esTypeName == null || esTypeName.isEmpty()) {
+                esTypeName = "page";
+            }
             String esHostAddress = hosts.iterator().next();
-            return new RestServer(dataPath, config.getRestConfig(), metricsRegistry, indexName, esHostAddress);
+            return new RestServer(dataPath, config.getRestConfig(), metricsRegistry, esIndexName, esTypeName, esHostAddress);
         } else {
             return new RestServer(dataPath, config.getRestConfig(), metricsRegistry);
         }

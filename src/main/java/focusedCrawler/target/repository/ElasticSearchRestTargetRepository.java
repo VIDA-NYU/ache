@@ -86,7 +86,9 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 + "    \"text\":             {\"type\": \"string\"},"
                 + "    \"title\":            {\"type\": \"string\"},"
                 + "    \"url\":              {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "    \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"}"
+                + "    \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "    \"isRelevant\":       {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "    \"relevance\":        {\"type\": \"double\"}"
                 + "  }"
                 + "}";
             
@@ -99,8 +101,10 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
                 + "    \"retrieved\":        {\"type\": \"date\",\"format\": \"dateOptionalTime\"},"
                 + "    \"text\":             {\"type\": \"text\"},"
                 + "    \"title\":            {\"type\": \"text\"},"
-                + "    \"url\":              {\"type\": \"keyword\",\"index\":true},"
-                + "    \"topPrivateDomain\": {\"type\": \"keyword\",\"index\": true}"
+                + "    \"url\":              {\"type\": \"keyword\",\"index\": true},"
+                + "    \"topPrivateDomain\": {\"type\": \"keyword\",\"index\": true},"
+                + "    \"isRelevant\":       {\"type\": \"keyword\",\"index\": true},"
+                + "    \"relevance\":        {\"type\": \"double\"}"
                 + "  }"
                 + "}";
             
@@ -109,8 +113,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
             String mapping =
                      "{"
                    + "  \"mappings\": {"
-                   + "    \"target\": "+ pageProperties + ","
-                   + "    \"negative\": "+ pageProperties
+                   + "    \"" + typeName + "\": " + pageProperties
                    + "  }"
                    + "}";
             
@@ -131,11 +134,8 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         return new NStringEntity(mapping, ContentType.APPLICATION_JSON);
     }
 
-    public boolean insert(Page target) {
-        return index(target);
-    }
-
-    private boolean index(Page page) {
+    @Override
+    public boolean insert(Page page) {
 
         TargetModelElasticSearch data = new TargetModelElasticSearch(page);
 

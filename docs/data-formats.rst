@@ -67,17 +67,17 @@ Each JSON object has the following fields:
 ELASTICSEARCH
 -------------
 
-The ELASTICSEARCH data format stores raw content and metadata as documents in an Elasticsearch index.
+The ELASTICSEARCH data format stores raw content and metadata as documents in
+an Elasticsearch index.
 
 Types and fields
 ************************
 
-Currently, ACHE indexes documents into two Elasticsearch types:
-
-* ``target``, for pages classified as on-topic by the page classifier
-* ``negative``, for pages classified as off-topic by the page classifier
-
-These two types use the same schema, which has the following fields:
+Currently, ACHE indexes documents into one Elasticsearch type named ``page``
+(or any name specified using the :ref:`command line <dataformat-elasticsearch-cliparams>`
+during the crawl initialization).
+The Elasticsearch mapping for this type is automatically created and contains
+the following fields:
 
 * ``domain`` - domain of the url
 * ``topPrivateDomain`` -  top private domain of the url
@@ -88,6 +88,11 @@ These two types use the same schema, which has the following fields:
 * ``words`` - array of strings with tokens extracted from the text content
 * ``wordsMeta`` - array of strings with tokens extracted from tags ``<meta>`` of the html content
 * ``html`` - raw html content
+* ``isRelevant`` - indicates whether the page was classified as relevant or
+  irrelevant by target page classifier. This is a keyword field
+  (not analyzed string) containing either ``relevant`` or ``irrelevant``.
+* ``relevance`` - indicates the confidence of the target page classifier output.
+  This is a decimal number with range from 0.0 to 1.0.
 
 
 Configuration
@@ -133,14 +138,27 @@ transport client by adding the following lines::
   target_storage.data_format.elasticsearch.port: 9300
   target_storage.data_format.elasticsearch.cluster_name: elasticsearch
 
+.. _dataformat-elasticsearch-cliparams:
 
 Command line parameters
 ****************************************
 
-When running ACHE using Elasticsearch, you should provide the name of the Elasticsearch index that should be used in the command line using the following arguments::
+When running ACHE using Elasticsearch, you must provide the name of the
+Elasticsearch index that will be used as an argument to the CLI using the
+following parameters::
 
   -e <arg>
 
 or::
 
   --elasticIndex <arg>
+
+You can also (optional) provide the Elasticsearch type name to be used::
+
+  -t <arg>
+
+or::
+
+  --elasticType <arg>
+
+Run ``ache help startCrawl`` for more details on available parameters.

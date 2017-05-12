@@ -35,8 +35,12 @@ public class StartRestServer extends CliTool {
     private String configPath = null;
 
     @Option(name = {"-e", "--elasticIndex"}, required = false,
-            description = "Name of Elasticsearch index to be used")
-    private String indexName;
+            description = "Elasticsearch index name to be used")
+    private String esIndexName;
+
+    @Option(name = {"-t", "--elasticType"}, required = false,
+            description = "Elasticsearch type name to be used")
+    private String esTypeName;
 
     public static void main(String[] args) throws Exception {
         CliTool.run(args, new StartRestServer());
@@ -54,7 +58,7 @@ public class StartRestServer extends CliTool {
             }
             
             ConfigService config = new ConfigService(configPath);
-            server = RestServer.create(dataPath, metricsRegistry, config, indexName);
+            server = RestServer.create(dataPath, metricsRegistry, config, esIndexName, esTypeName);
         }
         
         if(server == null) {

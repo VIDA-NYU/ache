@@ -13,7 +13,7 @@ import org.apache.tika.metadata.Metadata;
 
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
-import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
+import focusedCrawler.target.classifier.TargetRelevance;
 
 @SuppressWarnings("serial")
 public class Page implements Serializable {

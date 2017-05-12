@@ -30,6 +30,7 @@ import org.junit.rules.TemporaryFolder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 
+import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelCbor;
 import focusedCrawler.target.model.TargetModelJson;
@@ -121,6 +122,7 @@ public class FileSystemTargetRepositoryTest {
 		// given
 		String folder = tempFolder.newFolder().toString();
 		Page target = new Page(new URL(url), html, responseHeaders);
+		target.setTargetRelevance(TargetRelevance.IRRELEVANT);
 		FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, false);
 		
 		// when
@@ -136,6 +138,8 @@ public class FileSystemTargetRepositoryTest {
 		
 		assertThat(value.getUrl(), is(url));
 		assertThat(value.getContentAsString(), is(html));
+		assertThat(value.getRelevance().isRelevant(), is(TargetRelevance.IRRELEVANT.isRelevant()));
+		assertThat(value.getRelevance().getRelevance(), is(TargetRelevance.IRRELEVANT.getRelevance()));
 	}
 	
 	@Test
@@ -180,7 +184,7 @@ public class FileSystemTargetRepositoryTest {
     }
 	
 	@Test
-    public void sholdGetPageWasInserted() throws IOException {
+    public void sholdGetPageThatWasInserted() throws IOException {
         // given
         boolean hashFilename = true;
         String folder = tempFolder.newFolder().toString(); 
@@ -189,6 +193,7 @@ public class FileSystemTargetRepositoryTest {
         String url2 = "http://example2.com";
         
         Page target1 = new Page(new URL(url1), html);
+        target1.setTargetRelevance(TargetRelevance.IRRELEVANT);
         
         FileSystemTargetRepository repository = new FileSystemTargetRepository(folder, DataFormat.JSON, hashFilename);
         
@@ -201,6 +206,8 @@ public class FileSystemTargetRepositoryTest {
         assertThat(page1, is(notNullValue()));
         assertThat(page1.getUrl(), is(url1));
         assertThat(page1.getContentAsString(), is(html));
+        assertThat(page1.getRelevance().isRelevant(), is(TargetRelevance.IRRELEVANT.isRelevant()));
+        assertThat(page1.getRelevance().getRelevance(), is(TargetRelevance.IRRELEVANT.getRelevance()));
         
         assertThat(page2, is(nullValue()));
     }

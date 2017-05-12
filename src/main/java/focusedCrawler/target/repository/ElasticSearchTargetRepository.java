@@ -34,33 +34,35 @@ public class ElasticSearchTargetRepository implements TargetRepository {
 
     private void createIndexMapping(String indexName) {
         
-        boolean exists = client.admin().indices().prepareExists(indexName)
-                .execute().actionGet().isExists();
+        boolean exists =
+                client.admin().indices().prepareExists(indexName).execute().actionGet().isExists();
         
         if(!exists) {
-            String targetMapping = "{\"properties\": {"
-                + "\"domain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "\"words\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "\"wordsMeta\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "\"retrieved\": {\"format\": \"dateOptionalTime\",\"type\": \"date\"},"
-                + "\"text\": {\"type\": \"string\"},\"title\": {\"type\": \"string\"},"
-                + "\"url\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
-                + "\"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"}"
-                + "}}";
+            String targetMapping = ""
+                + "{"
+                + " \"properties\": {"
+                + "  \"domain\":           {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "  \"words\":            {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "  \"wordsMeta\":        {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "  \"retrieved\":        {\"type\": \"date\",\"format\": \"dateOptionalTime\"},"
+                + "  \"text\":             {\"type\": \"string\"},"
+                + "  \"title\":            {\"type\": \"string\"},"
+                + "  \"url\":              {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "  \"topPrivateDomain\": {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "  \"isRelevant\":       {\"type\": \"string\",\"index\": \"not_analyzed\"},"
+                + "  \"relevance\":        {\"type\": \"double\"}"
+                + " }"
+                + "}";
             
             client.admin().indices().prepareCreate(indexName)
-                .addMapping("target", targetMapping)
-                .addMapping("negative", targetMapping)
+                .addMapping(typeName, targetMapping)
                 .execute()
                 .actionGet();
         }
     }
 
-    public boolean insert(Page target) {
-        return index(target);
-    }
-
-    private boolean index(Page page) {
+    @Override
+    public boolean insert(Page page) {
 
         TargetModelElasticSearch data = new TargetModelElasticSearch(page);
 

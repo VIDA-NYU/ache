@@ -9,9 +9,9 @@ import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.ConfigService;
 import focusedCrawler.target.classifier.TargetClassifier;
-import focusedCrawler.target.classifier.TargetClassifier.TargetRelevance;
 import focusedCrawler.target.classifier.TargetClassifierException;
 import focusedCrawler.target.classifier.TargetClassifierFactory;
+import focusedCrawler.target.classifier.TargetRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.repository.ElasticSearchRestTargetRepository;
 import focusedCrawler.target.repository.ElasticSearchTargetRepository;
@@ -29,16 +29,11 @@ import focusedCrawler.util.storage.StorageException;
 import focusedCrawler.util.storage.distribution.StorageBinder;
 import focusedCrawler.util.storage.distribution.StorageCreator;
 
-/**
- * This class runs a socket server responsible to store pages coming from the crawler client.
- * @author lbarbosa
- */
 public class TargetStorage extends StorageDefault {
 	
 	public static final Logger logger = LoggerFactory.getLogger(TargetStorage.class);
 
     private TargetRepository targetRepository;
-    private TargetRepository negativeRepository;
     private Storage linkStorage;
     private TargetClassifier targetClassifier;
     private TargetStorageConfig config;
@@ -49,12 +44,10 @@ public class TargetStorage extends StorageDefault {
                          TargetRepository targetRepository, 
                          Storage linkStorage,
                        	 TargetStorageMonitor monitor,
-                       	 TargetRepository negativeRepository,
                        	 TargetStorageConfig config) {
         
         this.targetClassifier = targetClassifier;
         this.targetRepository = targetRepository;
-        this.negativeRepository = negativeRepository;
         this.linkStorage = linkStorage;
         this.config = config;
         this.monitor = monitor;
@@ -63,6 +56,7 @@ public class TargetStorage extends StorageDefault {
     /**
      * Inserts a page into the repository.
      */
+    @Override
     public Object insert(Object obj) throws StorageException {
         Page page = (Page) obj;
 
@@ -79,15 +73,13 @@ public class TargetStorage extends StorageDefault {
             if (targetClassifier != null) {
                 relevance = targetClassifier.classify(page);
             } else {
-                relevance = new TargetRelevance(true, 1.0d);
+                relevance = TargetRelevance.RELEVANT;
             }
 
             page.setTargetRelevance(relevance);
 
-            if (relevance.isRelevant()) {
+            if (relevance.isRelevant() || config.isSaveNegativePages()) {
                 targetRepository.insert(page);
-            } else if (config.isSaveNegativePages()) {
-                negativeRepository.insert(page);
             }
             
             if (relevance.isRelevant()) {
@@ -123,30 +115,28 @@ public class TargetStorage extends StorageDefault {
         return null;
     }
 
-    public static void runServer(String configPath, String modelPath, String dataPath, String indexName, ConfigService config) {
-        try{
-            
+    public static void runServer(String configPath, String modelPath, String dataPath,
+                                 String indexName, String typeName, ConfigService config) {
+        try {
             TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
-            
+
             StorageConfig linkStorageConfig = config.getLinkStorageConfig().getStorageServerConfig();
             Storage linkStorage = new StorageCreator(linkStorageConfig).produce();
-            
-            Storage targetStorage = createTargetStorage(configPath, modelPath, dataPath, indexName, targetStorageConfig, linkStorage);
+
+            Storage targetStorage = createTargetStorage(configPath, modelPath, dataPath, indexName,
+                    typeName, targetStorageConfig, linkStorage);
 
             StorageBinder binder = new StorageBinder(targetStorageConfig.getStorageServerConfig());
             binder.bind(targetStorage);
-            
+
         } catch (Exception e) {
-        	logger.error("Error while starting TargetStorage", e);
+            logger.error("Error while starting TargetStorage", e);
         }
     }
     
-	public static Storage createTargetStorage(String configPath,
-                                              String modelPath,
-                                              String dataPath,
-                                              String indexName,
-                                              TargetStorageConfig config,
-                                              Storage linkStorage)
+	public static Storage createTargetStorage(String configPath, String modelPath, String dataPath,
+                                              String esIndexName, String esTypeName, 
+                                              TargetStorageConfig config, Storage linkStorage)
                                               throws IOException {
         
         //if one wants to use a classifier
@@ -155,62 +145,61 @@ public class TargetStorage extends StorageDefault {
             targetClassifier = TargetClassifierFactory.create(modelPath);
         }
 
-        Path targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory());
-        Path negativeDirectory = Paths.get(dataPath, config.getNegativeStorageDirectory());
-        
-        TargetRepository targetRepository; 
-        TargetRepository negativeRepository;
-        
-        String dataFormat = config.getDataFormat();
-        boolean compressData = config.getCompressData();
-        
-        logger.info("Using DATA_FORMAT: "+dataFormat);
-        if(dataFormat.equals("FILES")) {
-            targetRepository = new FilesTargetRepository(targetDirectory, config.getMaxFileSize());
-            negativeRepository = new FilesTargetRepository(negativeDirectory, config.getMaxFileSize());
-        } else if(dataFormat.equals("FILESYSTEM_JSON")) {
-        	boolean hashFilename = config.getHashFileName();
-            targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.JSON, hashFilename, compressData);
-			negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.JSON, hashFilename, compressData);
-        }
-        else if (dataFormat.equals("FILESYSTEM_CBOR")) {
-            boolean hashFilename = config.getHashFileName();
-        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.CBOR, hashFilename, compressData);
-        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.CBOR, hashFilename, compressData);
-        }
-        else if(dataFormat.equals("FILESYSTEM_HTML")) {
-            boolean hashFilename = config.getHashFileName();
-        	targetRepository = new FileSystemTargetRepository(targetDirectory, DataFormat.HTML, hashFilename, compressData);
-        	negativeRepository = new FileSystemTargetRepository(negativeDirectory, DataFormat.HTML, hashFilename, compressData);
-        }
-        else if(dataFormat.equals("ELASTICSEARCH")) {
-        	if(indexName == null) {
-        		throw new IllegalArgumentException("ElasticSearch index name not provided!");
-        	}
-            ElasticSearchConfig esconfig = config.getElasticSearchConfig();
-            if (esconfig.getRestApiHosts() == null) {
-                targetRepository = new ElasticSearchTargetRepository(esconfig, indexName, "target");
-                negativeRepository = new ElasticSearchTargetRepository(esconfig, indexName, "negative");
-            } else {
-                targetRepository = new ElasticSearchRestTargetRepository(esconfig, indexName, "target");
-                negativeRepository = new ElasticSearchRestTargetRepository(esconfig, indexName, "negative");
-            }
-        }
-        else {
-        	throw new IllegalArgumentException("Invalid data format provided: "+dataFormat);
-        }
+        TargetRepository targetRepository = createTargetRepository(dataPath, esIndexName,
+                                                                   esTypeName, config);
         
         TargetStorageMonitor monitor = new TargetStorageMonitor(dataPath);
         
-        Storage targetStorage = new TargetStorage(targetClassifier, targetRepository, linkStorage, 
-                                                  monitor, negativeRepository, config);
+        Storage targetStorage = new TargetStorage(targetClassifier, targetRepository,
+                                                  linkStorage, monitor, config);
         
         return targetStorage;
     }
 
+    private static TargetRepository createTargetRepository(String dataPath,
+                                                           String esIndexName,
+                                                           String esTypeName,
+                                                           TargetStorageConfig config) {
+        
+        Path targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory());
+        
+        String dataFormat = config.getDataFormat();
+        boolean compressData = config.getCompressData();
+        boolean hashFilename = config.getHashFileName();
+
+        logger.info("Using DATA_FORMAT: " + dataFormat);
+        switch (dataFormat) {
+            case "FILES":
+                return new FilesTargetRepository(targetDirectory, config.getMaxFileSize());
+            case "FILESYSTEM_JSON":
+                return new FileSystemTargetRepository(targetDirectory, DataFormat.JSON,
+                                                      hashFilename, compressData);
+            case "FILESYSTEM_CBOR":
+                return new FileSystemTargetRepository(targetDirectory, DataFormat.CBOR,
+                                                      hashFilename, compressData);
+            case "FILESYSTEM_HTML":
+                return new FileSystemTargetRepository(targetDirectory, DataFormat.HTML,
+                                                      hashFilename, compressData);
+            case "ELASTICSEARCH":
+                if (esIndexName == null || esIndexName.isEmpty()) {
+                    throw new IllegalArgumentException("ElasticSearch index name not provided!");
+                }
+                if (esTypeName == null || esTypeName.isEmpty()) {
+                    esTypeName = "page";
+                }
+                ElasticSearchConfig esconfig = config.getElasticSearchConfig();
+                if (esconfig.getRestApiHosts() == null) {
+                    return new ElasticSearchTargetRepository(esconfig, esIndexName, esTypeName);
+                } else {
+                    return new ElasticSearchRestTargetRepository(esconfig, esIndexName, esTypeName);
+                }
+            default:
+                throw new IllegalArgumentException("Invalid data format provided: " + dataFormat);
+        }
+    }
+
     public void close() {
         targetRepository.close();
-        negativeRepository.close();
         monitor.close();
     }
 
