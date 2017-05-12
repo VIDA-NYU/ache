@@ -171,20 +171,20 @@ class HitItem extends React.Component {
       <div className="row hit-item">
         <div className="col-sm-12">
           <div className="hit-title">
-            <a href={props.result._source.url} target="_blank" dangerouslySetInnerHTML={{__html:props.result._source.title}}></a>
+            <a href={props.result._source.url} target="_blank">{props.result._source.title}</a>
           </div>
           <div className="hit-url">
-            <a href={props.result._source.url} target="_blank" dangerouslySetInnerHTML={{__html:props.result._source.url}}></a>
+            <a href={props.result._source.url} target="_blank">{props.result._source.url}</a>
           </div>
           <div className="row">
             <div className="col-sm-2 hit-image">
               <img src={this.extractImageFromSource(props.result._source)} alt="" />
             </div>
             <div className="col-sm-10">
-              <div className="hit-description" dangerouslySetInnerHTML={{__html:desc}}></div>
+              <div className="hit-description">{desc}</div>
               <ul className="list-inline hit-properties">
                 <li><b>Crawl time:</b> <span className="label label-default">{this.formatDate(props.result._source.retrieved)}</span></li>
-                <li><b>Classified as:</b> <span className="label label-default">{this.props.result._type}</span></li>
+                <li><b>Classified as:</b> <span className="label label-default">{this.props.result._source.isRelevant}</span></li>
                 <li>
                   <b>Actual label:</b>
                   <button onClick={()=>this.labelAsRelevant(props.result)}>
