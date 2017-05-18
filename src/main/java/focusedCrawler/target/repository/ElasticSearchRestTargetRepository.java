@@ -26,6 +26,7 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.google.common.collect.ImmutableMap;
 
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelElasticSearch;
@@ -136,12 +137,15 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
 
     @Override
     public boolean insert(Page page) {
-
-        TargetModelElasticSearch data = new TargetModelElasticSearch(page);
-
+        TargetModelElasticSearch document = new TargetModelElasticSearch(page);
         String docId = encodeUrl(page.getURL().toString());
-        String endpoint = "/" + indexName + "/" + typeName + "/" + docId;
-        AbstractHttpEntity entity = createJsonEntity(serializeAsJson(data));
+        // We use upsert to avoid overriding existing fields in previously indexed documents
+        String endpoint = String.format("/%s/%s/%s/_update", indexName, typeName, docId);
+        Map<String, ?> body = ImmutableMap.of(
+            "doc", document,
+            "doc_as_upsert", true
+        );
+        AbstractHttpEntity entity = createJsonEntity(serializeAsJson(body));
         try {
             Response response = client.performRequest("PUT", endpoint, EMPTY_MAP, entity);
             return response.getStatusLine().getStatusCode() == 201;

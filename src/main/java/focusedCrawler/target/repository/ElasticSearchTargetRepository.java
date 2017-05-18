@@ -1,6 +1,6 @@
 package focusedCrawler.target.repository;
 
-import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.action.update.UpdateResponse;
 import org.elasticsearch.client.Client;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -65,10 +65,12 @@ public class ElasticSearchTargetRepository implements TargetRepository {
     public boolean insert(Page page) {
 
         TargetModelElasticSearch data = new TargetModelElasticSearch(page);
-
         String docId = page.getURL().toString();
-        IndexResponse response = client.prepareIndex(indexName, typeName, docId)
-                .setSource(serializeAsJson(data))
+        
+        // We use upsert to avoid overriding existing fields in previously indexed documents
+        UpdateResponse response = client.prepareUpdate(indexName, typeName, docId)
+                .setDoc(serializeAsJson(data))
+                .setDocAsUpsert(true)
                 .execute()
                 .actionGet();
 

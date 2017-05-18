@@ -249,12 +249,9 @@ public class RestServer {
         requireNonNull(metricsRegistry, "A metrics registry must be provided.");
         requireNonNull(config, "A configuration must be provided.");
         TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
-        if("ELASTICSEARCH".equals(targetStorageConfig.getDataFormat())) {
-            ElasticSearchConfig esConfig = targetStorageConfig.getElasticSearchConfig();
-            List<String> hosts = esConfig.getRestApiHosts();
-            if(hosts == null || hosts.isEmpty()) {
-                throw new IllegalArgumentException("Elasticsearch host addresses (REST API) can not be empty");
-            }
+        ElasticSearchConfig esConfig = targetStorageConfig.getElasticSearchConfig();
+        List<String> hosts = esConfig.getRestApiHosts();
+        if(hosts != null && !hosts.isEmpty()) {
             requireNonNull(esIndexName, "Elasticsearch index name should be provided when using ELASTICSEARCH data format.");
             if(esTypeName == null || esTypeName.isEmpty()) {
                 esTypeName = "page";
