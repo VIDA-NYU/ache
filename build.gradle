@@ -94,8 +94,9 @@ task copyConfig {
     outputs.dir f
     doLast {
         copy {
-            from "config/sample_config"
+            from "config/"
             into "$buildDir/config"
+            exclude "sample_model", "sample_training_data", "sample.seeds"
         }
     }
 }
