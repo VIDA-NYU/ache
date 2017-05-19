@@ -147,7 +147,7 @@ public class ElasticSearchRestTargetRepository implements TargetRepository {
         );
         AbstractHttpEntity entity = createJsonEntity(serializeAsJson(body));
         try {
-            Response response = client.performRequest("PUT", endpoint, EMPTY_MAP, entity);
+            Response response = client.performRequest("POST", endpoint, EMPTY_MAP, entity);
             return response.getStatusLine().getStatusCode() == 201;
         } catch (IOException e) {
             throw new RuntimeException("Failed to index page.", e);
