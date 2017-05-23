@@ -41,7 +41,7 @@ public class TargetModelElasticSearch {
         this.relevance = page.getTargetRelevance().getRelevance();
         try {
             this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
-        } catch (BoilerpipeProcessingException e) {
+        } catch (BoilerpipeProcessingException | ArrayIndexOutOfBoundsException e) {
             this.text = "";
         }
 
