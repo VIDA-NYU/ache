@@ -18,31 +18,25 @@ public class LinkClassifierFactory {
     }
 
     public static LinkClassifier create(String modelPath, String type) {
-        
-        String featureFilePath = Paths.get(modelPath, "linkclassifier.features").toString();
-        String modelFilePath = Paths.get(modelPath, "linkclassifier.model").toString();
-
-        LinkClassifier linkClassifier = null;
-        if (type.indexOf("LinkClassifierBreadthSearch") != -1) {
-            linkClassifier = new LinkClassifierBreadthSearch();
+        switch (type) {
+            case "LinkClassifierBreadthSearch":
+                return new LinkClassifierBreadthSearch();
+            case "LinkClassifierBaseline":
+                return new LinkClassifierBaseline();
+            case "LinkClassifierHub":
+                return new LinkClassifierHub();
+            case "LinkClassifierAuthority":
+                return new LinkClassifierAuthority();
+            case "LinkClassifierImpl":
+                String featureFilePath = Paths.get(modelPath, "linkclassifier.features").toString();
+                String modelFilePath = Paths.get(modelPath, "linkclassifier.model").toString();
+                LNClassifier lnClassifier = LNClassifier.create(featureFilePath, modelFilePath, stoplist);
+                return new LinkClassifierImpl(lnClassifier);
+            case "MaxDepthLinkClassifier":
+                return new MaxDepthLinkClassifier(1);
+            default:
+                throw new IllegalArgumentException("Unknown link classifier type: "+type);
         }
-        if (type.indexOf("LinkClassifierBaseline") != -1) {
-            linkClassifier = new LinkClassifierBaseline();
-        }
-        if (type.indexOf("LinkClassifierHub") != -1) {
-            linkClassifier = new LinkClassifierHub();
-        }
-        if (type.indexOf("LinkClassifierAuthority") != -1) {
-            linkClassifier = new LinkClassifierAuthority();
-        }
-        if (type.indexOf("LinkClassifierImpl") != -1) {
-            LNClassifier lnClassifier = LNClassifier.create(featureFilePath, modelFilePath, stoplist);
-            linkClassifier = new LinkClassifierImpl(lnClassifier);
-        }
-        if (type.indexOf("MaxDepthLinkClassifier") != -1) {
-            linkClassifier = new MaxDepthLinkClassifier(1);
-        }
-        return linkClassifier;
     }
 
     public static LinkClassifier createLinkClassifierImpl(String[] attributes, String[] classValues,
