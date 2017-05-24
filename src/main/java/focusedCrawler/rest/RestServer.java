@@ -124,14 +124,6 @@ public class RestServer {
         logger.info("---------------------------------------------");
     }
     
-    public void stop() {
-        try {
-            httpclient.close();
-        } catch (IOException e) {
-            logger.error("Failed to close http client.", e);
-        }
-    }
-    
     private Route crawlerInfoResource = (request, response) -> {
         Map<?, ?> crawlerInfo = ImmutableMap.of(
             "status", 200,
@@ -210,7 +202,9 @@ public class RestServer {
     public void shutdown() {
         server.stop();
         try {
-            this.httpclient.close();
+            if(this.httpclient != null) {
+                this.httpclient.close();
+            }
         } catch (IOException e) {
             logger.error("Failed to close http client.", e);
         }
