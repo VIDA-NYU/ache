@@ -281,8 +281,8 @@ public class FrontierManager {
     public void addSeeds(String[] seeds) {
         if (seeds != null && seeds.length > 0) {
             int count = 0;
+            logger.info("Adding {} seed URL(s)...", seeds.length);
             for (String seed : seeds) {
-                logger.info("Adding seed URL: " + seed);
 
                 URL seedUrl;
                 try {
@@ -293,8 +293,10 @@ public class FrontierManager {
                 LinkRelevance link = new LinkRelevance(seedUrl, LinkRelevance.DEFAULT_RELEVANCE);
                 try {
                     boolean inserted = insert(link);
-                    if (inserted)
+                    if (inserted) {
+                        logger.info("Added seed URL: {}", seed);
                         count++;
+                    }
                 } catch (FrontierPersistentException e) {
                     throw new RuntimeException("Failed to insert seed URL: " + seed, e);
                 }
