@@ -97,7 +97,7 @@ public class LinkRelevance implements Serializable {
     }
     
     @JsonIgnore
-    private InternetDomainName getDomainName(String host) {
+    private static InternetDomainName getDomainName(String host) {
         InternetDomainName domain = InternetDomainName.from(host);
         if(host.startsWith("www.")) {
             return InternetDomainName.from(host.substring(4));
@@ -108,10 +108,13 @@ public class LinkRelevance implements Serializable {
     
     @JsonIgnore
     public String getTopLevelDomainName() {
-        String host = url.getHost();
+        return getTopLevelDomain(url.getHost());
+    }
+
+    public static String getTopLevelDomain(String host) {
         InternetDomainName domain = null;
         try {
-            domain = this.getDomainName(host);
+            domain = getDomainName(host);
             if(domain.isUnderPublicSuffix()) {
                 return domain.topPrivateDomain().toString();
             } else {
@@ -123,7 +126,7 @@ public class LinkRelevance implements Serializable {
             if(InetAddresses.isInetAddress(host)) {
                 return host;
             }
-            throw new IllegalStateException("Invalid top private domain name=["+domain+"] in URL=["+url+"]", e);
+            throw new IllegalStateException("Invalid top private domain name=["+domain+"] in URL=["+host+"]", e);
         }
     }
     

@@ -8,6 +8,7 @@ import com.google.common.net.InternetDomainName;
 
 import de.l3s.boilerpipe.BoilerpipeProcessingException;
 import de.l3s.boilerpipe.extractors.DefaultExtractor;
+import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.parser.PaginaURL;
 
 public class TargetModelElasticSearch {
@@ -44,13 +45,7 @@ public class TargetModelElasticSearch {
         } catch (BoilerpipeProcessingException | ArrayIndexOutOfBoundsException e) {
             this.text = "";
         }
-
-        InternetDomainName domainName = InternetDomainName.from(page.getDomainName());
-        if (domainName.isUnderPublicSuffix()) {
-            this.topPrivateDomain = domainName.topPrivateDomain().toString();
-        } else {
-            this.topPrivateDomain = domainName.toString();
-        }
+        this.topPrivateDomain = LinkRelevance.getTopLevelDomain(page.getDomainName());
     }
 
     public TargetModelElasticSearch(TargetModelCbor model) {
