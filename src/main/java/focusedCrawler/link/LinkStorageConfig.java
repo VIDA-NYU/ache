@@ -84,6 +84,10 @@ public class LinkStorageConfig {
     @JsonProperty("link_storage.scheduler.max_links")
     private int schedulerMaxLinks = 10000;
     
+    public LinkStorageConfig() {
+        this.serverConfig = new StorageConfig();
+    }
+
     public LinkStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
         this.serverConfig = StorageConfig.create(config, "link_storage.server.");

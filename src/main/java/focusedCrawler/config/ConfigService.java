@@ -34,7 +34,7 @@ public class ConfigService {
         }
     }
     
-    public ConfigService(Map<String, String> configMap) {
+    public ConfigService(Map<?, ?> configMap) {
         try {
             init(yamlMapper.valueToTree(configMap));
         } catch (IllegalArgumentException | IOException e) {

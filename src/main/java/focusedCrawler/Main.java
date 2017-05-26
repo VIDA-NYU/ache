@@ -197,12 +197,17 @@ public class Main {
         @Option(name = {"-c", "--configDir"}, required = true, description = "Path to configuration files folder")
         String configPath;
         
+        @Option(name = {"-m", "--model"}, required = true, description = "")
+        String modelPath;
+        
         @Option(name = {"-s", "--seed"}, required = true, description = "Path to file of seed URLs")
         String seedPath;
         
         public void run() {
             ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-            FrontierManager frontierManager = FrontierManagerFactory.create(config.getLinkStorageConfig(), configPath, dataOutputPath, seedPath, null);
+            FrontierManager frontierManager =
+                    FrontierManagerFactory.create(config.getLinkStorageConfig(), configPath,
+                            dataOutputPath, modelPath, seedPath, null);
             frontierManager.close();
         }
         

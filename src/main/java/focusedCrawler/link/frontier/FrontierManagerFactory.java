@@ -25,10 +25,11 @@ public class FrontierManagerFactory {
     private static final Logger logger = LoggerFactory.getLogger(FrontierManagerFactory.class);
 
     public static FrontierManager create(LinkStorageConfig config,
-                                  String configPath,
-                                  String dataPath,
-                                  String seedFile,
-                                  MetricsManager metricsManager) {
+                                         String configPath,
+                                         String dataPath,
+                                         String modelPath,
+                                         String seedFile,
+                                         MetricsManager metricsManager) {
         
         String[] seedUrls = ParameterFile.getSeeds(seedFile);
         
@@ -47,16 +48,9 @@ public class FrontierManagerFactory {
         LinkSelector linkSelector = createLinkSelector(config);
         logger.info("LINK_SELECTOR: "+linkSelector.getClass().getName());
         
-        FrontierManager frontierManager = new FrontierManager(
-                frontier,
-                dataPath,
-                config.getDownloadSitemapXml(),
-                config.getSchedulerMaxLinks(),
-                config.getSchedulerMaxLinks(),
-                config.getSchedulerHostMinAccessInterval(),
-                linkSelector,
-                linkFilter,
-                metricsManager);
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                                                              linkSelector, linkFilter,
+                                                              metricsManager);
         frontierManager.addSeeds(seedUrls);
         return frontierManager;
     }

@@ -3,6 +3,7 @@ package focusedCrawler.link.frontier;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.fail;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,6 +17,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
+import com.google.common.collect.ImmutableMap;
+
+import focusedCrawler.config.ConfigService;
+import focusedCrawler.link.LinkStorageConfig;
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.link.frontier.selector.RandomLinkSelector;
 import focusedCrawler.link.frontier.selector.TopkLinkSelector;
@@ -31,16 +36,26 @@ public class FrontierManagerTest {
     
     private LinkFilter emptyLinkFilter = new LinkFilter(new ArrayList<String>());
     private MetricsManager metricsManager = new MetricsManager();
+    private LinkStorageConfig config = new LinkStorageConfig();
     private Frontier frontier;
     private String dataPath;
-    private boolean downloadRobots = false;
+    private String modelPath;
 
     private int minimumAccessTimeInterval = 0;
+    private int schedulerMaxLinks = 2;
+    private boolean downloadSitemapXml = false;
     
     @Before
     public void setUp() throws Exception {
         frontier = new Frontier(tempFolder.newFolder().toString(), 1000);
         dataPath = tempFolder.newFolder().toString();
+        modelPath = tempFolder.newFolder().toString();
+        Map<?, ?> props = ImmutableMap.of(
+            "link_storage.scheduler.max_links", schedulerMaxLinks,
+            "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
+            "link_storage.download_sitemap_xml", downloadSitemapXml
+        );
+        config = new ConfigService(props).getLinkStorageConfig();
     }
     
     @After
@@ -59,8 +74,8 @@ public class FrontierManagerTest {
         
         LinkSelector linkSelector = new RandomLinkSelector();
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, scope);
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
-                2, 2, minimumAccessTimeInterval, linkSelector, emptyLinkFilter, metricsManager);
+        
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config , linkSelector, emptyLinkFilter, metricsManager);
         
         // when
         frontierManager.insert(link1);
@@ -90,8 +105,8 @@ public class FrontierManagerTest {
     public void shouldInsertUrl() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
-                2, 2, minimumAccessTimeInterval, linkSelector, emptyLinkFilter, metricsManager);
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                                                              linkSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1, LinkRelevance.Type.FORWARD);
         
@@ -114,11 +129,17 @@ public class FrontierManagerTest {
     public void shouldSelectUrlsInsertedAfterFirstSelect() throws Exception {
         // given
         int minimumAccessTimeInterval = 500;
-        int linksToLoad = 2;
         int schedulerMaxLinks = 10;
+        Map<?, ?> props = ImmutableMap.of(
+                "link_storage.scheduler.max_links", schedulerMaxLinks,
+                "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
+                "link_storage.download_sitemap_xml", downloadSitemapXml
+        );
+        config = new ConfigService(props).getLinkStorageConfig();
+            
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
-                linksToLoad, schedulerMaxLinks, minimumAccessTimeInterval, linkSelector, emptyLinkFilter, metricsManager);
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath,
+                                                              config, linkSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index1.html"), 1, LinkRelevance.Type.FORWARD);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example1.com/index2.html"), 1, LinkRelevance.Type.FORWARD);
@@ -157,9 +178,14 @@ public class FrontierManagerTest {
     public void shouldInsertRobotsLinkWhenAddDomainForTheFirstTime() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
-        boolean downloadRobots = true;
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
-                2, 2, minimumAccessTimeInterval, linkSelector, emptyLinkFilter, metricsManager);
+        Map<?, ?> props = ImmutableMap.of(
+            "link_storage.scheduler.max_links", schedulerMaxLinks,
+            "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
+            "link_storage.download_sitemap_xml", true
+        );
+        config = new ConfigService(props).getLinkStorageConfig();
+        assertThat(config.getDownloadSitemapXml(), is(true));
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config, linkSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/sitemap.xml"), 1, LinkRelevance.Type.FORWARD);
         
@@ -190,8 +216,7 @@ public class FrontierManagerTest {
     public void shouldInsertUrlsAndSelectUrlsInSortedByRelevance() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
-                2, 2, minimumAccessTimeInterval, linkSelector, emptyLinkFilter, metricsManager);
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config, linkSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
@@ -234,8 +259,7 @@ public class FrontierManagerTest {
     public void shouldNotReturnAgainALinkThatWasAlreadyReturned() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
-                2, 2, minimumAccessTimeInterval , linkSelector, emptyLinkFilter, metricsManager);
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config, linkSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
@@ -279,9 +303,16 @@ public class FrontierManagerTest {
     public void shouldNotReturnLinkReturnedWithinMinimumTimeInterval() throws Exception {
         // given
         int minimumAccessTimeInterval = 500;
+        ImmutableMap<String, ? extends Object> props = ImmutableMap.of(
+            "link_storage.scheduler.max_links", 2,
+            "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
+            "link_storage.download_sitemap_xml", false
+        );
+        LinkStorageConfig config = new ConfigService(props).getLinkStorageConfig();
+        assertThat(config.getSchedulerHostMinAccessInterval(), is(minimumAccessTimeInterval));
+        
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, downloadRobots,
-                2, 2, minimumAccessTimeInterval , linkSelector, emptyLinkFilter, metricsManager);
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config, linkSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index1.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example1.com/index2.html"), 2);
@@ -291,12 +322,13 @@ public class FrontierManagerTest {
         
         // when
         LinkRelevance selectedLink1 = frontierManager.nextURL();
-        
         DataNotFoundException notFoundException1 = null;
         try {
             frontierManager.nextURL();
+            fail("Should not return link right now.");
         } catch(DataNotFoundException e) {
             notFoundException1 = e;
+            assertThat(e.ranOutOfLinks(), is(false));
         }
         
         // should return after minimum time interval

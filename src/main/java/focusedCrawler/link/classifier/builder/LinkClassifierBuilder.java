@@ -25,9 +25,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import focusedCrawler.link.BipartiteGraphRepository;
+import focusedCrawler.link.classifier.LNClassifier;
 import focusedCrawler.link.classifier.LinkClassifier;
-import focusedCrawler.link.classifier.LinkClassifierFactory;
-import focusedCrawler.link.frontier.Frontier;
+import focusedCrawler.link.classifier.LinkClassifierAuthority;
+import focusedCrawler.link.classifier.LinkClassifierHub;
+import focusedCrawler.link.classifier.LinkClassifierImpl;
+import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.persistence.Tuple;
@@ -42,22 +45,23 @@ import weka.core.SerializationHelper;
 public class LinkClassifierBuilder {
     
     private static final Logger logger = LoggerFactory.getLogger(LinkClassifierBuilder.class);
-
+    
 	private BipartiteGraphRepository graphRep;
 	private LinkNeighborhoodWrapper wrapper;
 	private StopList stoplist;
 	private PorterStemmer stemmer;
-	private Frontier frontier;
 	private String[] features;
 	
 	private Path linkClassifierFolder;
+
+    private FrontierManager frontierManager;
 	
-	public LinkClassifierBuilder(String dataPath, BipartiteGraphRepository graphRep, StopList stoplist, LinkNeighborhoodWrapper wrapper, Frontier frontier){
-		this.graphRep = graphRep;
-		this.stemmer = new PorterStemmer();
+    public LinkClassifierBuilder(String dataPath, StopList stoplist, FrontierManager frontierManager) {
 		this.stoplist = stoplist;
-		this.wrapper = wrapper;
-		this.frontier = frontier;
+		this.frontierManager = frontierManager;
+		this.graphRep = frontierManager.getGraphRepository();
+		this.stemmer = new PorterStemmer();
+		this.wrapper = new LinkNeighborhoodWrapper(stoplist);
 		this.linkClassifierFolder = Paths.get(dataPath, "/link_classifier/");
         if (!Files.exists(linkClassifierFolder)) {
             try {
@@ -68,7 +72,7 @@ public class LinkClassifierBuilder {
             }
         }
 	}
-	
+
 	public synchronized LinkClassifier forwardlinkTraining(HashSet<String> relSites, int levels, String className) throws Exception{
 		
 	    Vector<Vector<LinkNeighborhood>> instances = loadTrainingInstances(relSites, levels);
@@ -94,9 +98,39 @@ public class LinkClassifierBuilder {
             classValues = new String[] {"0", "1", "2"};
         }
         
-        return LinkClassifierFactory.createLinkClassifierImpl(
-                features, classValues, classifier, className, levels);
+        return createLinkClassifierImpl(features, classValues, classifier, className, levels);
 	}
+
+    public LinkClassifier createLinkClassifierImpl(String[] attributes, String[] classValues,
+            Classifier classifier, String className, int levels) {
+
+        LinkNeighborhoodWrapper wrapper = new LinkNeighborhoodWrapper(attributes, stoplist);
+
+        weka.core.FastVector vectorAtt = new weka.core.FastVector();
+        for (int i = 0; i < attributes.length; i++) {
+            vectorAtt.addElement(new weka.core.Attribute(attributes[i]));
+        }
+        weka.core.FastVector classAtt = new weka.core.FastVector();
+        for (int i = 0; i < classValues.length; i++) {
+            classAtt.addElement(classValues[i]);
+        }
+        vectorAtt.addElement(new weka.core.Attribute("class", classAtt));
+        Instances insts = new Instances("link_classification", vectorAtt, 1);
+        insts.setClassIndex(attributes.length);
+
+        LinkClassifier linkClassifier = null;
+        if (className.indexOf("LinkClassifierImpl") != -1) {
+            LNClassifier lnClassifier = new LNClassifier(classifier, insts, wrapper, attributes);
+            linkClassifier = new LinkClassifierImpl(lnClassifier);
+        }
+        if (className.indexOf("LinkClassifierAuthority") != -1) {
+            linkClassifier = new LinkClassifierAuthority(classifier, insts, wrapper, attributes);
+        }
+        if (className.indexOf("LinkClassifierHub") != -1) {
+            linkClassifier = new LinkClassifierHub(classifier, insts, wrapper, attributes);
+        }
+        return linkClassifier;
+    }
     
     public Classifier trainWekaClassifier(String wekaInputAsString) throws Exception {
         Instances data = null;
@@ -139,7 +173,7 @@ public class LinkClassifierBuilder {
             }
         }
 
-        HashSet<String> visitedLinks = frontier.visitedLinks();
+        HashSet<String> visitedLinks = frontierManager.getFrontier().visitedLinks();
         for (Iterator<String> iterator = visitedLinks.iterator(); iterator.hasNext();) {
             URL url = new URL(iterator.next());
             
@@ -251,7 +285,7 @@ public class LinkClassifierBuilder {
 		Classifier classifier = trainWekaClassifier(wekaInput);
 		
 		String[] classValues = new String[]{"POS","NEG"};
-		return LinkClassifierFactory.createLinkClassifierImpl(features, classValues, classifier, "LinkClassifierHub",0);
+		return createLinkClassifierImpl(features, classValues, classifier, "LinkClassifierHub",0);
 	}
 
 
