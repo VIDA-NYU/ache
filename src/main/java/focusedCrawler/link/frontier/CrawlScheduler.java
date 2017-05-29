@@ -9,7 +9,7 @@ import com.codahale.metrics.Gauge;
 import com.codahale.metrics.Timer;
 import com.codahale.metrics.Timer.Context;
 
-import focusedCrawler.link.DownloadScheduler;
+import focusedCrawler.link.PolitenessScheduler;
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.persistence.Tuple;
@@ -21,7 +21,7 @@ public class CrawlScheduler {
 
     private final LinkSelector linkSelector;
     private final Frontier frontier;
-    private final DownloadScheduler scheduler;
+    private final PolitenessScheduler scheduler;
     private final MetricsManager metricsManager;
     private final int linksToLoad;
 
@@ -33,12 +33,12 @@ public class CrawlScheduler {
     private Timer frontierLoadTimer;
     
     public CrawlScheduler(LinkSelector linkSelector, Frontier frontier,
-                        MetricsManager metricsManager, DownloadScheduler scheduler, int linksToLoad) {
+                          MetricsManager metricsManager, int minAccessTime, int linksToLoad) {
         this.linkSelector = linkSelector;
         this.frontier = frontier;
         this.metricsManager = metricsManager;
-        this.scheduler = scheduler;
         this.linksToLoad = linksToLoad;
+        this.scheduler = new PolitenessScheduler(minAccessTime, linksToLoad);
         this.setupMetrics();
         this.loadQueue(this.linksToLoad);
     }

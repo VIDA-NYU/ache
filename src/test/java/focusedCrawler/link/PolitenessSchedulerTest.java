@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import focusedCrawler.link.frontier.LinkRelevance;
 
-public class DownloadSchedulerTest {
+public class PolitenessSchedulerTest {
 
     @Test
     public void shouldSelectLinksBasedOnPoliteness() throws Exception {
@@ -22,7 +22,7 @@ public class DownloadSchedulerTest {
                 
         int minimumAccessTime = 500;
         int maxLinksInScheduler = 100;
-        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         
         
         // when add link l1
@@ -102,7 +102,7 @@ public class DownloadSchedulerTest {
         int minimumAccessTime = 100;
         int maxLinksInScheduler = 1;
         
-        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         
         scheduler.addLink(l1);
         assertThat(scheduler.numberOfLinks(), is(1));
@@ -122,7 +122,7 @@ public class DownloadSchedulerTest {
         int minimumAccessTime = 0;
         int maxLinksInScheduler = 100;
         
-        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         
         scheduler.addLink(l4);
         scheduler.addLink(l3);
@@ -145,7 +145,7 @@ public class DownloadSchedulerTest {
         int minimumAccessTime = 100;
         int maxLinksInScheduler = 100;
         
-        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         scheduler.addLink(l1);
         assertThat(scheduler.nextLink().getRelevance(), is(1d));
         
@@ -166,7 +166,7 @@ public class DownloadSchedulerTest {
         
         int minimumAccessTime = 100;
         int maxLinksInScheduler = 100;
-        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         
         scheduler.addLink(l1);
         scheduler.addLink(l2);

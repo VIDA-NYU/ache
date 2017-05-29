@@ -12,7 +12,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import focusedCrawler.link.frontier.LinkRelevance;
 
-public class DownloadScheduler {
+/**
+ * Makes sure that links are selected respecting politeness constraints: a link from the same host
+ * is never selected twice within a given minimum access time interval. That means that the natural
+ * order (based on link relevance) is modified so that links are selected based on last time that
+ * the host was last accessed in order to respect the minimum access time limit.
+ * 
+ * @author aeciosantos
+ *
+ */
+public class PolitenessScheduler {
     
     private static class DomainNode {
         
@@ -36,7 +45,7 @@ public class DownloadScheduler {
     
     private AtomicInteger numberOfLinks = new AtomicInteger(0);
 
-    public DownloadScheduler(int minimumAccessTimeInterval, int maxLinksInScheduler) {
+    public PolitenessScheduler(int minimumAccessTimeInterval, int maxLinksInScheduler) {
         this.minimumAccessTime = minimumAccessTimeInterval;
         this.maxLinksInScheduler = maxLinksInScheduler;
         this.domains = new HashMap<>();

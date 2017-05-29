@@ -17,7 +17,6 @@ import com.codahale.metrics.Timer;
 import com.codahale.metrics.Timer.Context;
 
 import focusedCrawler.link.BipartiteGraphRepository;
-import focusedCrawler.link.DownloadScheduler;
 import focusedCrawler.link.LinkStorageConfig;
 import focusedCrawler.link.backlink.BacklinkSurfer;
 import focusedCrawler.link.classifier.LinkClassifier;
@@ -74,8 +73,8 @@ public class FrontierManager {
         this.linksToLoad = config.getSchedulerMaxLinks();
         this.maxPagesPerDomain = config.getMaxPagesPerDomain();
         this.domainCounter = new HashMap<String, Integer>();
-        DownloadScheduler downloadScheduler = new DownloadScheduler(config.getSchedulerHostMinAccessInterval(), linksToLoad);
-        this.scheduler = new CrawlScheduler(linkSelector, frontier, metricsManager, downloadScheduler, linksToLoad);
+        this.scheduler = new CrawlScheduler(linkSelector, frontier, metricsManager,
+                                            config.getSchedulerHostMinAccessInterval(), linksToLoad);
         this.graphRepository = new BipartiteGraphRepository(dataPath);
         this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"));;
         this.schedulerLog = new LogFile(Paths.get(dataPath, "data_monitor", "scheduledlinks.csv"));
