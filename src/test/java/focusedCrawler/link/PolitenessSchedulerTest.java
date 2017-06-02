@@ -112,7 +112,7 @@ public class PolitenessSchedulerTest {
     }
     
     @Test
-    public void shouldReturnLinksFromSameTLDsUsingFIFOOrder() throws Exception {
+    public void shouldReturnLinksFromSameTLDsUsingRelevanceOrder() throws Exception {
         
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex1.com/2", 2);
@@ -124,15 +124,37 @@ public class PolitenessSchedulerTest {
         
         PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         
-        scheduler.addLink(l4);
-        scheduler.addLink(l3);
-        scheduler.addLink(l2);
         scheduler.addLink(l1);
+        scheduler.addLink(l2);
+        scheduler.addLink(l3);
+        scheduler.addLink(l4);
         
         assertThat(scheduler.nextLink().getRelevance(), is(4d));
         assertThat(scheduler.nextLink().getRelevance(), is(3d));
         assertThat(scheduler.nextLink().getRelevance(), is(2d));
         assertThat(scheduler.nextLink().getRelevance(), is(1d));
+    }
+    
+    @Test
+    public void shouldNotAddLinkMultipleTimes() throws Exception {
+        
+        LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
+        LinkRelevance l2 = new LinkRelevance("http://ex1.com/1", 1);
+        LinkRelevance l3 = new LinkRelevance("http://ex1.com/1", 1);
+                
+        int minimumAccessTime = 0;
+        int maxLinksInScheduler = 100;
+        
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
+        
+        scheduler.addLink(l1);
+        scheduler.addLink(l1);
+        scheduler.addLink(l2);
+        scheduler.addLink(l3);
+        
+        assertThat(scheduler.numberOfLinks(), is(1));
+        assertThat(scheduler.nextLink().getRelevance(), is(1d));
+        assertThat(scheduler.nextLink(), is(nullValue()));
     }
     
     @Test

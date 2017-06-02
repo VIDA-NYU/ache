@@ -59,7 +59,6 @@ public class Frontier {
                 result.add(URLDecoder.decode(tuple.getKey(), "UTF-8"));
             }
         }
-        System.out.println(result.size()+" out of "+urlRelevance.getTable().size());
         return result;
     }
 
@@ -167,7 +166,8 @@ public class Frontier {
         if (exist(linkRelevance) != null) {
             // we don't want to delete the URL file, it is useful to avoid visiting an old url
             double relevance = linkRelevance.getRelevance();
-            urlRelevance.put(url, new LinkRelevance(linkRelevance.getURL(), -relevance, linkRelevance.getType()));
+            double negativeRelevance = relevance > 0 ? -1*relevance : relevance;
+            urlRelevance.put(url, new LinkRelevance(linkRelevance.getURL(), negativeRelevance, linkRelevance.getType()));
         }
     }
 

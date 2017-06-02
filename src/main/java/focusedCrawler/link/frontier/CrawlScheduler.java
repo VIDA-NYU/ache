@@ -31,10 +31,14 @@ public class CrawlScheduler {
     private int uncrawledLinksDuringLoad;
     private int unavailableLinksDuringLoad;
     private Timer frontierLoadTimer;
+
+    private LinkSelector recrawlSelector;
     
-    public CrawlScheduler(LinkSelector linkSelector, Frontier frontier,
-                          MetricsManager metricsManager, int minAccessTime, int linksToLoad) {
+    public CrawlScheduler(LinkSelector linkSelector, LinkSelector recrawlSelector,
+                          Frontier frontier, MetricsManager metricsManager, 
+                          int minAccessTime, int linksToLoad) {
         this.linkSelector = linkSelector;
+        this.recrawlSelector = recrawlSelector;
         this.frontier = frontier;
         this.metricsManager = metricsManager;
         this.linksToLoad = linksToLoad;
@@ -70,7 +74,7 @@ public class CrawlScheduler {
     
     private void loadQueue(int numberOfLinks) {
         logger.info("Loading more links from frontier into the scheduler...");
-        scheduler.clear();
+//        scheduler.clear();
         frontier.commit();
         Context timerContext = frontierLoadTimer.time();
         try(TupleIterator<LinkRelevance> it = frontier.iterator()) {
@@ -81,14 +85,21 @@ public class CrawlScheduler {
             int unavailableLinks = 0;
 
             linkSelector.startSelection(numberOfLinks);
+            if(recrawlSelector != null) {
+                recrawlSelector.startSelection(numberOfLinks);
+            }
             while(it.hasNext()) {
                 Tuple<LinkRelevance> tuple = it.next();
                 LinkRelevance link = tuple.getValue();
                 
                 // Links already downloaded or not relevant
                 if (link.getRelevance() <= 0) {
+                    if(recrawlSelector != null) {
+                        recrawlSelector.evaluateLink(link);
+                    }
                     continue;
                 }
+                
                 uncrawledLinks++;
                 // check whether link can be download now according to politeness constraints 
                 if(scheduler.canDownloadNow(link)) {
@@ -98,6 +109,12 @@ public class CrawlScheduler {
                 } else {
                     unavailableLinks++;
                     rejectedLinks++;
+                }
+            }
+            
+            if(recrawlSelector != null) {
+                for(LinkRelevance link : recrawlSelector.getSelectedLinks()) {
+                    scheduler.addLink(link);
                 }
             }
             
@@ -128,7 +145,7 @@ public class CrawlScheduler {
     }
     
     public boolean hasPendingLinks() {
-        return scheduler.hasPendingLinks() || linksRejectedDuringLastLoad;
+        return scheduler.hasPendingLinks() || linksRejectedDuringLastLoad || recrawlSelector != null;
     }
 
     public LinkRelevance nextLink() {

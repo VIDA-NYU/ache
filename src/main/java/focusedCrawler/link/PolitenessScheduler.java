@@ -1,16 +1,60 @@
 package focusedCrawler.link;
 
 import java.util.Comparator;
-import java.util.Deque;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.PriorityQueue;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import focusedCrawler.link.frontier.LinkRelevance;
+
+class DomainNode {
+    
+    public final String domainName;
+    volatile public long lastAccessTime;
+    private PriorityQueue<LinkRelevance> links;
+    private Set<String> urls = new HashSet<>();
+    
+    public DomainNode(String domainName, long lastAccessTime) {
+        this.domainName = domainName;
+        this.lastAccessTime = lastAccessTime;
+        int initialCapacity = 50;
+        this.links = new PriorityQueue<LinkRelevance>(initialCapacity, LinkRelevance.DESC_ORDER_COMPARATOR);
+    }
+    
+    public boolean isEmpty() {
+        return links.isEmpty();
+    }
+    
+    public boolean add(LinkRelevance link) {
+        if(!urls.contains(link.getURL().toString())) {
+            links.add(link);
+            urls.add(link.getURL().toString());
+            return true;
+        }
+        return false;
+    }
+    
+    public LinkRelevance removeFirst() {
+        LinkRelevance link = links.poll();
+        urls.remove(link.getURL().toString());
+        return link;
+    }
+
+    public int size() {
+        return links.size();
+    }
+
+    public void clear() {
+        links.clear();
+        urls.clear();
+    }
+    
+}
 
 /**
  * Makes sure that links are selected respecting politeness constraints: a link from the same host
@@ -22,20 +66,6 @@ import focusedCrawler.link.frontier.LinkRelevance;
  *
  */
 public class PolitenessScheduler {
-    
-    private static class DomainNode {
-        
-        final String domainName;
-        final Deque<LinkRelevance> links;
-        volatile long lastAccessTime;
-        
-        public DomainNode(String domainName, long lastAccessTime) {
-            this.domainName = domainName;
-            this.links = new LinkedList<>();
-            this.lastAccessTime = lastAccessTime;
-        }
-        
-    }
     
     private final PriorityQueue<DomainNode> domainsQueue;
     private final PriorityQueue<DomainNode> emptyDomainsQueue;
@@ -70,7 +100,6 @@ public class PolitenessScheduler {
         if(numberOfLinks() >= maxLinksInScheduler) {
             return false; // ignore link
         }
-        numberOfLinks.incrementAndGet();
         
         String domainName = link.getTopLevelDomainName();
         
@@ -81,12 +110,14 @@ public class PolitenessScheduler {
                 domains.put(domainName, domainNode);
             }
             
-            if(domainNode.links.isEmpty()) {
+            if(domainNode.isEmpty()) {
                 emptyDomainsQueue.remove(domainNode);
                 domainsQueue.add(domainNode);
             }
             
-            domainNode.links.addLast(link);
+            if(domainNode.add(link)) {
+                numberOfLinks.incrementAndGet();
+            }
         }
         
         return true;
@@ -128,9 +159,9 @@ public class PolitenessScheduler {
             }
             
             domainsQueue.poll(); 
-            linkRelevance = domainNode.links.removeFirst();
+            linkRelevance = domainNode.removeFirst();
             domainNode.lastAccessTime = System.currentTimeMillis();
-            if (domainNode.links.isEmpty()) {
+            if (domainNode.isEmpty()) {
                 emptyDomainsQueue.add(domainNode);
             } else {
                 domainsQueue.add(domainNode);
@@ -192,8 +223,8 @@ public class PolitenessScheduler {
         Iterator<Entry<String, DomainNode>> it = domains.entrySet().iterator();
         while(it.hasNext()) {
             DomainNode node = it.next().getValue();
-            numberOfLinks.addAndGet(-node.links.size()); // adds negative value
-            node.links.clear();
+            numberOfLinks.addAndGet(-node.size()); // adds negative value
+            node.clear();
         }
         while(true) {
             DomainNode node = domainsQueue.poll();

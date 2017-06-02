@@ -103,6 +103,10 @@ link_storage.online_learning.enabled: false
 # - MaximizeWebsitesLinkSelector
 link_storage.link_selector: TopkLinkSelector
 
+# Enable recrawling of sitemaps using at fixed time intervals (in minutes)
+#link_storage.recrawl_selector: SitemapsRecrawlSelector
+#link_storage.recrawl_selector.sitemaps.interval: 1
+
 link_storage.max_size_cache_urls: 10000
 
 # Configurations for link storage's server

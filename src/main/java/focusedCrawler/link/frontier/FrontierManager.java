@@ -64,7 +64,8 @@ public class FrontierManager {
 
     public FrontierManager(Frontier frontier, String dataPath, String modelPath,
                            LinkStorageConfig config, LinkSelector linkSelector,
-                           LinkFilter linkFilter, MetricsManager metricsManager) {
+                           LinkSelector recrawlSelector, LinkFilter linkFilter,
+                           MetricsManager metricsManager) {
 
         this.frontier = frontier;
         this.linkFilter = linkFilter;
@@ -73,7 +74,7 @@ public class FrontierManager {
         this.linksToLoad = config.getSchedulerMaxLinks();
         this.maxPagesPerDomain = config.getMaxPagesPerDomain();
         this.domainCounter = new HashMap<String, Integer>();
-        this.scheduler = new CrawlScheduler(linkSelector, frontier, metricsManager,
+        this.scheduler = new CrawlScheduler(linkSelector, recrawlSelector, frontier, metricsManager,
                                             config.getSchedulerHostMinAccessInterval(), linksToLoad);
         this.graphRepository = new BipartiteGraphRepository(dataPath);
         this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"));;
@@ -95,7 +96,7 @@ public class FrontierManager {
         scheduler.reload();
     }
 
-    private boolean isRelevant(LinkRelevance elem) throws FrontierPersistentException {
+    public boolean isRelevant(LinkRelevance elem) throws FrontierPersistentException {
         if (elem.getRelevance() <= 0) {
             return false;
         }
@@ -158,7 +159,6 @@ public class FrontierManager {
                     throw new DataNotFoundException(true, "Frontier run out of links.");
                 }
             }
-
             frontier.delete(link);
 
             schedulerLog.printf("%d\t%.5f\t%s\n", System.currentTimeMillis(),
