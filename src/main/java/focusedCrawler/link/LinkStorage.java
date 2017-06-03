@@ -6,6 +6,9 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Collections;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,6 +53,7 @@ public class LinkStorage extends StorageDefault {
 
     private final FrontierManager frontierManager;
     private final OnlineLearning onlineLearning;
+    private final Set<String> blackList = Collections.newSetFromMap(new ConcurrentHashMap<String,Boolean>());
 
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager) throws IOException {
@@ -155,9 +159,38 @@ public class LinkStorage extends StorageDefault {
      */
     public synchronized Object select(Object obj) throws StorageException, DataNotFoundException {
         try {
-            return frontierManager.nextURL();
+            LinkRelevance link = frontierManager.nextURL();
+            if(!blackList.contains(link.getTopLevelDomainName())){
+                return link;
+            }else {
+                logger.info("Dead Domain ignored: "+link.getTopLevelDomainName());
+                return select(null);
+            }
         } catch (FrontierPersistentException e) {
             throw new StorageException(e.getMessage(), e);
+        }
+    }
+
+    public synchronized void addToBlackList(String url){
+        addToBlackList(url,1d);
+    }
+
+    public synchronized void addToBlackList(String url, double relevance){
+        try {
+            addToBlackList(new LinkRelevance(url, relevance));
+        }catch (MalformedURLException mue){
+            logger.info("MalformedURLException - "+url);
+        }
+    }
+
+    public synchronized void addToBlackList(LinkRelevance link){
+        blackList.add(link.getTopLevelDomainName());
+    }
+    public synchronized void removeFromBlackList(String url){
+        try {
+            blackList.remove(new LinkRelevance(url, 1d).getTopLevelDomainName());
+        }catch (MalformedURLException mue){
+            logger.info("MalformedURLException - "+url);
         }
     }
 

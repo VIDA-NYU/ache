@@ -35,7 +35,7 @@ public class SitemapXmlHandler implements HttpDownloader.Callback {
     
     private Storage linkStorage;
     private SiteMapParser parser = new SiteMapParser(false);
-    
+
 
     public SitemapXmlHandler(Storage linkStorage) {
         this.linkStorage = linkStorage;
@@ -62,7 +62,7 @@ public class SitemapXmlHandler implements HttpDownloader.Callback {
             logger.info("Failed to download URL: "+link.getURL().toString(), e.getMessage());
         }
     }
-    
+
     private void processData(LinkRelevance link, FetchedResult response) {
         
         AbstractSiteMap sm;

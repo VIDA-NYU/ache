@@ -21,10 +21,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
+import java.net.*;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -697,8 +694,12 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                 throw new IOFetchException(url, e);
             }
         } catch (IOException e) {
-            // Oleg guarantees that no abort is needed in the case of an
             // IOException
+            Integer redirects = (Integer) localContext.getAttribute(REDIRECT_COUNT_CONTEXT_KEY);
+            if (redirects != null) {
+                url = extractRedirectedUrl(url, localContext); //save redirected URL incase of IOExceptions (required for catching redirected UnknownHosts)
+            }
+            // Oleg guarantees that no abort is needed in the case of an
             needAbort = false;
             throw new IOFetchException(url, e);
         } catch (URISyntaxException e) {

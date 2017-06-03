@@ -34,6 +34,8 @@ public class TargetStorage extends StorageDefault {
 	public static final Logger logger = LoggerFactory.getLogger(TargetStorage.class);
 
     private TargetRepository targetRepository;
+    private TargetRepository nonHTMLRepository;
+
     private Storage linkStorage;
     private TargetClassifier targetClassifier;
     private TargetStorageConfig config;
@@ -44,13 +46,15 @@ public class TargetStorage extends StorageDefault {
                          TargetRepository targetRepository, 
                          Storage linkStorage,
                        	 TargetStorageMonitor monitor,
-                       	 TargetStorageConfig config) {
+                       	 TargetStorageConfig config,
+                         TargetRepository nonHTMLRepository) {
         
         this.targetClassifier = targetClassifier;
         this.targetRepository = targetRepository;
         this.linkStorage = linkStorage;
         this.config = config;
         this.monitor = monitor;
+        this.nonHTMLRepository = nonHTMLRepository;
     }
 
     /**
@@ -59,6 +63,12 @@ public class TargetStorage extends StorageDefault {
     @Override
     public Object insert(Object obj) throws StorageException {
         Page page = (Page) obj;
+
+        // download all non-HTML content for further processing
+        if (!page.getContentType().toLowerCase().contains("text/html")){
+            nonHTMLRepository.insert(page);
+            return null;
+        }
 
         if (config.isEnglishLanguageDetectionEnabled()) {
             // Only accept English language
@@ -145,24 +155,34 @@ public class TargetStorage extends StorageDefault {
             targetClassifier = TargetClassifierFactory.create(modelPath);
         }
 
-        TargetRepository targetRepository = createTargetRepository(dataPath, esIndexName,
-                                                                   esTypeName, config);
-        
+        TargetRepository targetRepository = createRepository(dataPath, esIndexName,
+                                                                   esTypeName, config,"TARGET");
+
+        TargetRepository nonHTMLRepository = createRepository(dataPath,esIndexName,
+                                                                    esTypeName,config,"NonHTML");
+
+//      Didn't create a monitor for nonHTMLRepository because no relevance classification info associated with its content
         TargetStorageMonitor monitor = new TargetStorageMonitor(dataPath);
+
         
         Storage targetStorage = new TargetStorage(targetClassifier, targetRepository,
-                                                  linkStorage, monitor, config);
+                                                  linkStorage, monitor, config, nonHTMLRepository);
         
         return targetStorage;
     }
 
-    private static TargetRepository createTargetRepository(String dataPath,
+    private static TargetRepository createRepository(String dataPath,
                                                            String esIndexName,
                                                            String esTypeName,
-                                                           TargetStorageConfig config) {
-        
-        Path targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory());
-        
+                                                           TargetStorageConfig config,
+                                                     String repoType) {
+        Path targetDirectory;
+        switch (repoType){
+            case "TARGET": targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory()); break;
+            case "NonHTML": targetDirectory = Paths.get(dataPath, config.getNonHTMLStorageDirectory()); break;
+            default: throw new IllegalArgumentException("Illegal Arguments provided for Repository Type: "+repoType);
+        }
+
         String dataFormat = config.getDataFormat();
         boolean compressData = config.getCompressData();
         boolean hashFilename = config.getHashFileName();
@@ -200,6 +220,7 @@ public class TargetStorage extends StorageDefault {
 
     public void close() {
         targetRepository.close();
+        nonHTMLRepository.close();
         monitor.close();
     }
 

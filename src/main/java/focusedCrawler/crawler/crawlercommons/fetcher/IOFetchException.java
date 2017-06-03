@@ -29,5 +29,4 @@ public class IOFetchException extends BaseFetchException {
     public IOFetchException(String url, IOException e) {
         super(url, e);
     }
-
 }

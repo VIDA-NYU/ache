@@ -34,7 +34,7 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
     private BaseRobotsParser parser = new SimpleRobotRulesParser();
     private Storage linkStorage;
     private String userAgentName;
-    
+
     public RobotsTxtHandler(Storage linkStorage, String userAgentName) {
         this.linkStorage = linkStorage;
         this.userAgentName = userAgentName;
@@ -63,7 +63,7 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
         }
         processRobot(link, null, true);
     }
-    
+
     private void processRobot(LinkRelevance link, FetchedResult response, boolean fetchFailed) {
         
         BaseRobotRules robotRules;
