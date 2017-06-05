@@ -2,11 +2,18 @@ package focusedCrawler.crawler.async;
 
 import java.io.IOException;
 
+import java.util.HashMap;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class HttpDownloaderConfig {
+    public static class Cookie {
+        public String cookie;
+        public String domain;
+    }
 
     @JsonProperty("crawler_manager.downloader.download_thread_pool_size")
     private int downloadThreadPoolSize = 100;
@@ -28,8 +35,15 @@ public class HttpDownloaderConfig {
 
     @JsonProperty("crawler_manager.downloader.torproxy")
     private String torProxy = null;
+
+    @JsonProperty("crawler_manager.downloader.cookies")
+    private List<Cookie> cookies = null;
     
     public HttpDownloaderConfig() {
+    }
+
+    public List<Cookie> getCookies() {
+        return this.cookies;
     }
 
     public HttpDownloaderConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {

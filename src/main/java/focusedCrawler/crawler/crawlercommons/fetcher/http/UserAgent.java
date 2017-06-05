@@ -38,7 +38,7 @@ import focusedCrawler.crawler.crawlercommons.CrawlerCommons;
 @SuppressWarnings("serial")
 public class UserAgent implements Serializable {
 
-    public static final String DEFAULT_BROWSER_VERSION = "Mozilla/5.0";
+    public static final String DEFAULT_BROWSER_VERSION = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36";
     public static final String DEFAULT_CRAWLER_VERSION = CrawlerCommons.getVersion();
 
     private final String _agentName;

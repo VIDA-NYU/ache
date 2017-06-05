@@ -32,6 +32,7 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import javax.net.ssl.HostnameVerifier;
@@ -60,6 +61,9 @@ import org.apache.http.NoHttpResponseException;
 import org.apache.http.ProtocolException;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.CookieStore;
+import org.apache.http.impl.cookie.BasicClientCookie;
+import org.apache.http.impl.client.BasicCookieStore;
+import org.apache.http.cookie.Cookie;
 import org.apache.http.client.HttpRequestRetryHandler;
 import org.apache.http.client.RedirectException;
 import org.apache.http.client.config.CookieSpecs;
@@ -148,10 +152,18 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     private static final int DEFAULT_KEEP_ALIVE_DURATION = 5000;
 
     private IdleConnectionMonitorThread monitor;
+    
+    //Store cookies loaded from configuration file
+    private CookieStore globalCookieStore = null; 
 
     private ThreadLocal<CookieStore> localCookieStore = new ThreadLocal<CookieStore>() {
         protected CookieStore initialValue() {
-            CookieStore cookieStore = new LocalCookieStore();
+            BasicCookieStore cookieStore = new BasicCookieStore();
+            if (globalCookieStore != null) {
+                //Copy global cookie to local thread cookie
+                List<Cookie> cookies = globalCookieStore.getCookies();
+                cookieStore.addCookies((Cookie[])cookies.toArray(new Cookie[cookies.size()]));
+            }
             return cookieStore;
         }
     };
@@ -171,7 +183,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     transient private CloseableHttpClient _httpClient;
     transient private PoolingHttpClientConnectionManager _connectionManager;
 
-
+    
 
     private static class MyRequestRetryHandler implements HttpRequestRetryHandler {
         private int _maxRetryCount;
@@ -512,6 +524,10 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         _maxRetryCount = maxRetryCount;
     }
 
+    public void setCookie(CookieStore cookieStore) {
+        globalCookieStore = cookieStore;
+    }
+
     @Override
     public FetchedResult get(String url, Payload payload) throws BaseFetchException {
         try {
@@ -590,6 +606,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         // cookie store.
         HttpContext localContext = new BasicHttpContext();
         CookieStore cookieStore = localCookieStore.get();
+        System.out.println("Cookie store in httpfetcher: " + cookieStore.toString());
         localContext.setAttribute(HttpClientContext.COOKIE_STORE, cookieStore);
 
         StringBuilder fetchTrace = null;
@@ -935,6 +952,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 //                HttpProtocolParams.setVersion(params, _httpVersion);
                 
                 httpClientBuilder.setUserAgent(_userAgentString);
+                LOGGER.info("User agent string: " + _userAgentString);
                 
 //                HttpProtocolParams.setContentCharset(params, "UTF-8");
 //                HttpProtocolParams.setHttpElementCharset(params, "UTF-8");

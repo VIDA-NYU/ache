@@ -1,0 +1,148 @@
+##################### ACHE Configuration Example #####################
+
+#
+# Configurations for Target Storage
+#
+
+# Uses a classifier to collect pages in topics, domains etc.
+target_storage.use_classifier: false
+# Change to false if you don't want to store pages classified as irrelevant
+target_storage.store_negative_pages: false
+
+# Configuration for data format used to store crawled data
+
+# Enable one of the following lines to use one of the FILESYSTEM_* data format
+#target_storage.data_format.type: FILESYSTEM_HTML
+#target_storage.data_format.type: FILESYSTEM_CBOR
+#target_storage.data_format.type: FILESYSTEM_JSON
+#
+# Enable this to name files using a fixed-lenght hash instead of the percent-encoded URL
+#target_storage.data_format.filesystem.hash_file_name: true
+#
+# Enable this to compress the file content
+target_storage.data_format.filesystem.compress_data: false
+
+# Enable this to use the FILES data format
+target_storage.data_format.type: FILESYSTEM_HTML
+target_storage.data_format.files.max_file_size: 134217728 # 128mb in bytes
+
+
+# Enable following line to index pages in Elasticsearch
+#target_storage.data_format.type: ELASTICSEARCH
+#
+# (Transport client ES 1.5)
+#target_storage.data_format.elasticsearch.host: localhost
+#target_storage.data_format.elasticsearch.port: 9300
+#target_storage.data_format.elasticsearch.cluster_name: elasticsearch
+#
+# (REST client ES 1.x and 5.x)
+#target_storage.data_format.elasticsearch.rest.hosts:
+#  - http://localhost:9200
+#target_storage.data_format.elasticsearch.rest.connect_timeout: 30000
+#target_storage.data_format.elasticsearch.rest.socket_timeout: 30000
+#target_storage.data_format.elasticsearch.rest.max_retry_timeout_millis: 90000
+
+# Performs hard focus or soft focus. When hard focus is enabled,
+# the crawler only follows links from pages classified as relevant
+target_storage.hard_focus: true
+
+# Run bipartite crawler
+target_storage.bipartite: false
+
+# Relevance threshold for classified pages. Pages with probability of being
+# relevant above this threshold are considered relevant
+target_storage.relevance_threshold: 0.5
+
+# Maximum number of pages to visit
+target_storage.visited_page_limit: 10000000
+
+# Store only pages that contain english text using language detector
+target_storage.english_language_detection_enabled: true
+
+# Configurations for target storage's server
+target_storage.server.host: localhost
+target_storage.server.port: 1987
+
+#
+# Configurations for Link Storage
+#
+
+# Max number of pages to be crawled from each web domain
+link_storage.max_pages_per_domain: 50
+# Restricts the crawler to crawl the websites provided as seeds
+link_storage.link_strategy.use_scope: true
+# Allows the crawler to follow forward links
+link_storage.link_strategy.outlinks: true
+# Gets backlinks of the pages from a search engine used by the bipartite crawling
+link_storage.link_strategy.backlinks: false
+
+# Type of link classifier used by link storage
+# - LinkClassifierBaseline: random link strategy when no page classifier is provided, or Soumen's baseline strategy when a page classifier is provided
+# - LinkClassifierImpl: link strategy using a link classifier
+# - LinkClassifierAuthority: link strategy for the bipartite crawling
+link_storage.link_classifier.type: LinkClassifierBaseline
+#link_storage.link_classifier.type: LinkClassifierImpl
+#link_storage.link_classifier.parameters.class_values: ["0", "1", "2"]
+
+# Retrain link classifiers on-the-fly
+link_storage.online_learning.enabled: false
+
+# Type of online learning (FORWARD_CLASSIFIER_BINARY,FORWARD_CLASSIFIER_BINARY)
+# - FORWARD_CLASSIFIER_BINARY: pos/neg link classifier
+# - FORWARD_CLASSIFIER_LEVELS: contextual graph with 3 levels
+#link_storage.online_learning.type: FORWARD_CLASSIFIER_BINARY
+
+# Learn iteration criterion (every n pages runs online learning)
+#link_storage.online_learning.learning_limit: 500
+
+# Types of LinkSelectors available:
+# - TopkLinkSelector
+# - RandomLinkSelector
+# - NonRandomLinkSelector
+# - MultiLevelLinkSelector
+# - MaximizeWebsitesLinkSelector
+link_storage.link_selector: TopkLinkSelector
+
+link_storage.max_size_cache_urls: 10000
+
+# Configurations for link storage's server
+link_storage.server.host: localhost
+link_storage.server.port: 1988
+
+# Directory to store link storage's frontier database
+link_storage.directory: "data_url/dir"
+
+# Backlink surfer parameters
+#link_storage.backsurfer.moz.access_id: mozscape-xxxxxxxxxx
+#link_storage.backsurfer.moz.secret_key: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+link_storage.scheduler.host_min_access_interval: 5000
+link_storage.scheduler.max_links: 10000
+
+
+#
+# Configurations for Crawler Manager
+#
+crawler_manager.downloader.download_thread_pool_size: 100
+crawler_manager.downloader.max_retry_count: 2
+#crawler_manager.downloader.user_agent.name: ache 
+#crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
+crawler_manager.downloader.valid_mime_types:
+ - text/xml
+ - text/html
+ - text/plain
+ - application/x-asp
+ - application/xhtml+xml
+ - application/vnd.wap.xhtml+xml
+
+# Configurations for crawling with cookie
+crawler_manager.downloader.cookies: 
+ - domain: arguntrader.com
+   cookie: phpbb3_63hz5_u=13386; phpbb3_63hz5_k=af749948a4954e6f; phpbb3_63hz5_sid=47ee6ca4dc1f47585f577bdccc44db0c; style_cookie=null
+ - domain: stockpromoters.com
+   cookie: ASP.NET_SessionId=nngrfayvppgqjym5sopas555; PromoThanks=0; PromoCloseForever=1
+ - domain: www.nationalgunforum.com
+   cookie: sm_dapi_session=1; sm_dapi_session=1; vsachatbox_color=Black; bb_lastvisit=1496634409; bb_forum_view=c5119c5ceb184376fb51877e2a61c4e30378c2fca-1-%7Bi-18_i-1496634439_%7D; bb_lastactivity=0; bb_userid=42249; bb_password=904361d4520dba8174f1da62569c8e1e; bb_sessionhash=3e86555bfd7ded7b4583da7f50fa398f; vbseo_loggedin=yes
+
+# Discovery of new links using sitemap.xml protocol
+link_storage.download_sitemap_xml: false

@@ -3,6 +3,12 @@ package focusedCrawler.crawler.async.fetcher;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import java.util.List;
+import java.util.Date;
+import org.apache.http.client.CookieStore;
+import org.apache.http.impl.client.BasicCookieStore;
+import org.apache.http.impl.cookie.BasicClientCookie;
+
 import focusedCrawler.crawler.async.HttpDownloaderConfig;
 import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
@@ -17,7 +23,28 @@ public class FetcherFactory {
             return createSimpleHttpFetcher(config);
         }
     }
-    
+
+    public static CookieStore getCookieStore(HttpDownloaderConfig config) {
+        List<HttpDownloaderConfig.Cookie> cookies = config.getCookies();
+        if (cookies == null)
+            return null;
+        
+        CookieStore store = new BasicCookieStore();
+        for (HttpDownloaderConfig.Cookie cookie: cookies){
+            String[] values = cookie.cookie.split("; ");
+            for (int i=0; i<values.length; i++) {
+                String[] kv = values[i].split("=", 2);
+                BasicClientCookie cc = new BasicClientCookie(kv[0], kv[1]);
+                cc.setPath("/");
+                cc.setDomain(cookie.domain);
+                //Date date = new Date(118, 5, 5); //Read expiry date from config
+                //cc.setExpiryDate(date);
+                store.addCookie(cc);
+            }
+        }
+        return store;
+    }
+
     public static SimpleHttpFetcher createSimpleHttpFetcher(HttpDownloaderConfig config){
         UserAgent userAgent = new UserAgent(config.getUserAgentName(), "", config.getUserAgentUrl());
         int connectionPoolSize = config.getConnectionPoolSize();
@@ -37,7 +64,11 @@ public class FetcherFactory {
                 httpFetcher.addValidMimeType(mimeTypes);
             }
         }
-        
+
+        CookieStore store = FetcherFactory.getCookieStore(config);
+        if (store != null) {
+            httpFetcher.setCookie(store);
+        }
         return httpFetcher;
     }
     
