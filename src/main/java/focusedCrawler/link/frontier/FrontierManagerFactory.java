@@ -39,9 +39,9 @@ public class FrontierManagerFactory {
         Frontier frontier = null;
         if (config.isUseScope()) {
             Map<String, Integer> scope = extractDomains(seedUrls);
-            frontier = new Frontier(directory, config.getMaxCacheUrlsSize(), scope);
+            frontier = new Frontier(directory, config.getMaxCacheUrlsSize(), config.getPersistentHashtableBackend(),scope);
         } else {
-            frontier = new Frontier(directory, config.getMaxCacheUrlsSize());
+            frontier = new Frontier(directory, config.getMaxCacheUrlsSize(), config.getPersistentHashtableBackend());
         }
         
         LinkFilter linkFilter = new LinkFilter(configPath);

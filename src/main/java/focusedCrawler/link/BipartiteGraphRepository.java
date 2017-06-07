@@ -11,6 +11,7 @@ import java.util.StringTokenizer;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.persistence.PersistentHashtable;
+import focusedCrawler.util.persistence.PersistentHashtable.DB;
 import focusedCrawler.util.persistence.Tuple;
 
 public class BipartiteGraphRepository {
@@ -32,13 +33,13 @@ public class BipartiteGraphRepository {
     private String hubIdDirectory     = "data_backlinks/hub_id";
     private String hubGraphDirectory  = "data_backlinks/hub_graph";
 
-    public BipartiteGraphRepository(String dataPath) {
+    public BipartiteGraphRepository(String dataPath, DB persistentHashTableBackend) {
         int cacheSize = 10000;
-        this.authGraph = new PersistentHashtable<>(dataPath + "/" + authGraphDirectory, cacheSize, String.class);
-        this.url2id = new PersistentHashtable<>(dataPath + "/" + urlIdDirectory, cacheSize, String.class);
-        this.authID = new PersistentHashtable<>(dataPath + "/" + authIdDirectory, cacheSize, String.class);
-        this.hubID = new PersistentHashtable<>(dataPath + "/" + hubIdDirectory, cacheSize, String.class);
-        this.hubGraph = new PersistentHashtable<>(dataPath + "/" + hubGraphDirectory, cacheSize, String.class);
+        this.authGraph = new PersistentHashtable<>(dataPath + "/" + authGraphDirectory, cacheSize, String.class, persistentHashTableBackend);
+        this.url2id = new PersistentHashtable<>(dataPath + "/" + urlIdDirectory, cacheSize, String.class, persistentHashTableBackend);
+        this.authID = new PersistentHashtable<>(dataPath + "/" + authIdDirectory, cacheSize, String.class, persistentHashTableBackend);
+        this.hubID = new PersistentHashtable<>(dataPath + "/" + hubIdDirectory, cacheSize, String.class, persistentHashTableBackend);
+        this.hubGraph = new PersistentHashtable<>(dataPath + "/" + hubGraphDirectory, cacheSize, String.class, persistentHashTableBackend);
     }
 	
 	public Tuple<String>[] getAuthGraph() throws Exception{

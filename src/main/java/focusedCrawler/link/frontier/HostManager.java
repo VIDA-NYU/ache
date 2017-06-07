@@ -5,12 +5,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import focusedCrawler.util.persistence.PersistentHashtable;
+import focusedCrawler.util.persistence.PersistentHashtable.DB;
 
 public class HostManager {
     
     final private PersistentHashtable<Boolean> hostsData;
     
-    public HostManager(Path path) {
+    public HostManager(Path path, DB persistentHashTableBackend) {
         if(!Files.exists(path)) {
             try {
                 Files.createDirectory(path);
@@ -19,7 +20,7 @@ public class HostManager {
                         "Failed to create hosts manager directory: " + path.toString(), e);
             }
         }
-        this.hostsData = new PersistentHashtable<>(path.toString(), 10000, Boolean.class);
+        this.hostsData = new PersistentHashtable<>(path.toString(), 10000, Boolean.class, persistentHashTableBackend);
     }
     
     public boolean isKnown(String host) {
