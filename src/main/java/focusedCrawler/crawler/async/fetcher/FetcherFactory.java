@@ -19,7 +19,12 @@ public class FetcherFactory {
     }
     
     public static SimpleHttpFetcher createSimpleHttpFetcher(HttpDownloaderConfig config){
-        UserAgent userAgent = new UserAgent(config.getUserAgentName(), "", config.getUserAgentUrl());
+        UserAgent userAgent = new UserAgent.Builder()
+                .setAgentName(config.getUserAgentName())
+                .setEmailAddress(config.getUserAgentEmail())
+                .setWebAddress(config.getUserAgentUrl())
+                .setUserAgentString(config.getUserAgentString())
+                .build();
         int connectionPoolSize = config.getConnectionPoolSize();
         SimpleHttpFetcher httpFetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
         // timeout for inactivity between two consecutive data packets
