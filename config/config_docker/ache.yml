@@ -1,0 +1,19 @@
+#
+# Example of configuration for running a Focused Crawl
+#
+target_storage.store_negative_pages: true
+target_storage.data_format.type: ELASTICSEARCH
+target_storage.data_format.elasticsearch.rest.hosts:
+  - http://elasticsearch:9200
+target_storage.english_language_detection_enabled: false
+
+link_storage.max_pages_per_domain: 1000000000
+
+link_storage.link_strategy.outlinks: true
+link_storage.link_selector: MaximizeWebsitesLinkSelector
+link_storage.download_sitemap_xml: true
+link_storage.scheduler.host_min_access_interval: 1000
+link_storage.scheduler.max_links: 10000
+
+crawler_manager.downloader.user_agent.name: ACHE
+crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
