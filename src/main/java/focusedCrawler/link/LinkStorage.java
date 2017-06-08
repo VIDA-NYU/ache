@@ -172,20 +172,14 @@ public class LinkStorage extends StorageDefault {
     }
 
     public synchronized void addToBlackList(String url){
-        addToBlackList(url,1d);
-    }
-
-    public synchronized void addToBlackList(String url, double relevance){
         try {
-            addToBlackList(new LinkRelevance(url, relevance));
+            blackList.add(new LinkRelevance(url, 1d).getTopLevelDomainName());
         }catch (MalformedURLException mue){
             logger.info("MalformedURLException - "+url);
         }
+
     }
 
-    public synchronized void addToBlackList(LinkRelevance link){
-        blackList.add(link.getTopLevelDomainName());
-    }
     public synchronized void removeFromBlackList(String url){
         try {
             blackList.remove(new LinkRelevance(url, 1d).getTopLevelDomainName());

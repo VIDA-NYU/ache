@@ -1,7 +1,6 @@
 package focusedCrawler.crawler.async;
 
 import java.io.IOException;
-import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 

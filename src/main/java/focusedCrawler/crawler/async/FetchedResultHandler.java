@@ -56,14 +56,12 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     private void processData(LinkRelevance link, FetchedResult response) {
         try {
             Page page = new Page(response);
-            if (page.getContentType().toLowerCase().contains("text/html")) {
+            page.setLinkRelevance(link);
+            if (page.getContentType()!= null && page.getContentType().toLowerCase().contains("text/html")) {
                 PaginaURL pageParser = new PaginaURL(page);
                 page.setParsedData(new ParsedData(pageParser));
-                page.setLinkRelevance(link);
             }else {
                 logger.info("non-HTML content found at: "+link.getURL()+"\nsaving content type: "+page.getContentType());
-                // using an identical implementation of pages for nonHTML
-                // content too as this one already stores URL and Content
             }
             targetStorage.insert(page);
         } catch (Exception e) {

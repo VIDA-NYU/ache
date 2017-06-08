@@ -15,9 +15,6 @@ public class TargetStorageConfig {
     @JsonProperty("target_storage.target_directory")
     private String targetStorageDirectory = "data_pages";
 
-    @JsonProperty("target_storage.nonHTML_directory")
-    private String nonHTMLStorageDirectory = targetStorageDirectory+"/nonHTML";
-
     @JsonProperty("target_storage.data_format.type")
     private String dataFormat = "FILESYSTEM_JSON";
     @JsonProperty("target_storage.data_format.filesystem.hash_file_name")
@@ -61,9 +58,6 @@ public class TargetStorageConfig {
         return targetStorageDirectory;
     }
 
-    public String getNonHTMLStorageDirectory() {
-        return nonHTMLStorageDirectory;
-    }
 
     public String getDataFormat() {
         return dataFormat;
