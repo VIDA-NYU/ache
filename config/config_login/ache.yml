@@ -1,5 +1,7 @@
 #
-# Example of configuration for crawling all pages of the web sites in the seeds
+# Example of configuration for crawling all pages within a web sites that
+# require with cookies (commentted lines in the end of this file need to be
+# uncommentted and filled properly).
 #
 target_storage.use_classifier: false
 target_storage.data_format.type: ELASTICSEARCH
