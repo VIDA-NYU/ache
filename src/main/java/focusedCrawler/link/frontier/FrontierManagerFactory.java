@@ -15,6 +15,7 @@ import focusedCrawler.link.frontier.selector.MaximizeWebsitesLinkSelector;
 import focusedCrawler.link.frontier.selector.MultiLevelLinkSelector;
 import focusedCrawler.link.frontier.selector.NonRandomLinkSelector;
 import focusedCrawler.link.frontier.selector.RandomLinkSelector;
+import focusedCrawler.link.frontier.selector.SitemapsRecrawlSelector;
 import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.MetricsManager;
@@ -46,10 +47,12 @@ public class FrontierManagerFactory {
         LinkFilter linkFilter = new LinkFilter(configPath);
         
         LinkSelector linkSelector = createLinkSelector(config);
-        logger.info("LINK_SELECTOR: "+linkSelector.getClass().getName());
+        logger.info("LINK_SELECTOR: " + linkSelector.getClass().getName());
+        
+        LinkSelector recrawlSelector = createRecrawlSelector(config);
         
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
-                                                              linkSelector, linkFilter,
+                                                              linkSelector, recrawlSelector, linkFilter,
                                                               metricsManager);
         frontierManager.addSeeds(seedUrls);
         return frontierManager;
@@ -73,6 +76,19 @@ public class FrontierManagerFactory {
             return new MaximizeWebsitesLinkSelector();
         } else {
             throw new IllegalArgumentException("Unknown link selector configured: " + linkSelector);
+        }
+    }
+    
+    private static LinkSelector createRecrawlSelector(LinkStorageConfig config) {
+        String recrawlSelector = config.getRecrawlSelector();
+        if (recrawlSelector == null || recrawlSelector.isEmpty()) {
+            return null;
+        }
+        switch(recrawlSelector) {
+            case "SitemapsRecrawlSelector":
+                return new SitemapsRecrawlSelector(config.getSitemapsRecrawlInterval());
+            default:
+                throw new IllegalArgumentException("Unknown recrawl selector configured: " + recrawlSelector);
         }
     }
 

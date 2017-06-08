@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import focusedCrawler.link.frontier.LinkRelevance;
 
-public class DownloadSchedulerTest {
+public class PolitenessSchedulerTest {
 
     @Test
     public void shouldSelectLinksBasedOnPoliteness() throws Exception {
@@ -22,7 +22,7 @@ public class DownloadSchedulerTest {
                 
         int minimumAccessTime = 500;
         int maxLinksInScheduler = 100;
-        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         
         
         // when add link l1
@@ -102,7 +102,7 @@ public class DownloadSchedulerTest {
         int minimumAccessTime = 100;
         int maxLinksInScheduler = 1;
         
-        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         
         scheduler.addLink(l1);
         assertThat(scheduler.numberOfLinks(), is(1));
@@ -112,7 +112,7 @@ public class DownloadSchedulerTest {
     }
     
     @Test
-    public void shouldReturnLinksFromSameTLDsUsingFIFOOrder() throws Exception {
+    public void shouldReturnLinksFromSameTLDsUsingRelevanceOrder() throws Exception {
         
         LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
         LinkRelevance l2 = new LinkRelevance("http://ex1.com/2", 2);
@@ -122,17 +122,39 @@ public class DownloadSchedulerTest {
         int minimumAccessTime = 0;
         int maxLinksInScheduler = 100;
         
-        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         
-        scheduler.addLink(l4);
-        scheduler.addLink(l3);
-        scheduler.addLink(l2);
         scheduler.addLink(l1);
+        scheduler.addLink(l2);
+        scheduler.addLink(l3);
+        scheduler.addLink(l4);
         
         assertThat(scheduler.nextLink().getRelevance(), is(4d));
         assertThat(scheduler.nextLink().getRelevance(), is(3d));
         assertThat(scheduler.nextLink().getRelevance(), is(2d));
         assertThat(scheduler.nextLink().getRelevance(), is(1d));
+    }
+    
+    @Test
+    public void shouldNotAddLinkMultipleTimes() throws Exception {
+        
+        LinkRelevance l1 = new LinkRelevance("http://ex1.com/1", 1);
+        LinkRelevance l2 = new LinkRelevance("http://ex1.com/1", 1);
+        LinkRelevance l3 = new LinkRelevance("http://ex1.com/1", 1);
+                
+        int minimumAccessTime = 0;
+        int maxLinksInScheduler = 100;
+        
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
+        
+        scheduler.addLink(l1);
+        scheduler.addLink(l1);
+        scheduler.addLink(l2);
+        scheduler.addLink(l3);
+        
+        assertThat(scheduler.numberOfLinks(), is(1));
+        assertThat(scheduler.nextLink().getRelevance(), is(1d));
+        assertThat(scheduler.nextLink(), is(nullValue()));
     }
     
     @Test
@@ -145,7 +167,7 @@ public class DownloadSchedulerTest {
         int minimumAccessTime = 100;
         int maxLinksInScheduler = 100;
         
-        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         scheduler.addLink(l1);
         assertThat(scheduler.nextLink().getRelevance(), is(1d));
         
@@ -166,7 +188,7 @@ public class DownloadSchedulerTest {
         
         int minimumAccessTime = 100;
         int maxLinksInScheduler = 100;
-        DownloadScheduler scheduler = new DownloadScheduler(minimumAccessTime, maxLinksInScheduler);
+        PolitenessScheduler scheduler = new PolitenessScheduler(minimumAccessTime, maxLinksInScheduler);
         
         scheduler.addLink(l1);
         scheduler.addLink(l2);

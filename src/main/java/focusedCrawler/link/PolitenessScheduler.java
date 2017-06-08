@@ -1,32 +1,71 @@
 package focusedCrawler.link;
 
 import java.util.Comparator;
-import java.util.Deque;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.PriorityQueue;
+import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import focusedCrawler.link.frontier.LinkRelevance;
 
-public class DownloadScheduler {
+class DomainNode {
     
-    private static class DomainNode {
-        
-        final String domainName;
-        final Deque<LinkRelevance> links;
-        volatile long lastAccessTime;
-        
-        public DomainNode(String domainName, long lastAccessTime) {
-            this.domainName = domainName;
-            this.links = new LinkedList<>();
-            this.lastAccessTime = lastAccessTime;
-        }
-        
+    public final String domainName;
+    volatile public long lastAccessTime;
+    private PriorityQueue<LinkRelevance> links;
+    private Set<String> urls = new HashSet<>();
+    
+    public DomainNode(String domainName, long lastAccessTime) {
+        this.domainName = domainName;
+        this.lastAccessTime = lastAccessTime;
+        int initialCapacity = 50;
+        this.links = new PriorityQueue<LinkRelevance>(initialCapacity, LinkRelevance.DESC_ORDER_COMPARATOR);
     }
+    
+    public boolean isEmpty() {
+        return links.isEmpty();
+    }
+    
+    public boolean add(LinkRelevance link) {
+        if(!urls.contains(link.getURL().toString())) {
+            links.add(link);
+            urls.add(link.getURL().toString());
+            return true;
+        }
+        return false;
+    }
+    
+    public LinkRelevance removeFirst() {
+        LinkRelevance link = links.poll();
+        urls.remove(link.getURL().toString());
+        return link;
+    }
+
+    public int size() {
+        return links.size();
+    }
+
+    public void clear() {
+        links.clear();
+        urls.clear();
+    }
+    
+}
+
+/**
+ * Makes sure that links are selected respecting politeness constraints: a link from the same host
+ * is never selected twice within a given minimum access time interval. That means that the natural
+ * order (based on link relevance) is modified so that links are selected based on last time that
+ * the host was last accessed in order to respect the minimum access time limit.
+ * 
+ * @author aeciosantos
+ *
+ */
+public class PolitenessScheduler {
     
     private final PriorityQueue<DomainNode> domainsQueue;
     private final PriorityQueue<DomainNode> emptyDomainsQueue;
@@ -36,7 +75,7 @@ public class DownloadScheduler {
     
     private AtomicInteger numberOfLinks = new AtomicInteger(0);
 
-    public DownloadScheduler(int minimumAccessTimeInterval, int maxLinksInScheduler) {
+    public PolitenessScheduler(int minimumAccessTimeInterval, int maxLinksInScheduler) {
         this.minimumAccessTime = minimumAccessTimeInterval;
         this.maxLinksInScheduler = maxLinksInScheduler;
         this.domains = new HashMap<>();
@@ -61,7 +100,6 @@ public class DownloadScheduler {
         if(numberOfLinks() >= maxLinksInScheduler) {
             return false; // ignore link
         }
-        numberOfLinks.incrementAndGet();
         
         String domainName = link.getTopLevelDomainName();
         
@@ -72,12 +110,14 @@ public class DownloadScheduler {
                 domains.put(domainName, domainNode);
             }
             
-            if(domainNode.links.isEmpty()) {
+            if(domainNode.isEmpty()) {
                 emptyDomainsQueue.remove(domainNode);
                 domainsQueue.add(domainNode);
             }
             
-            domainNode.links.addLast(link);
+            if(domainNode.add(link)) {
+                numberOfLinks.incrementAndGet();
+            }
         }
         
         return true;
@@ -119,9 +159,9 @@ public class DownloadScheduler {
             }
             
             domainsQueue.poll(); 
-            linkRelevance = domainNode.links.removeFirst();
+            linkRelevance = domainNode.removeFirst();
             domainNode.lastAccessTime = System.currentTimeMillis();
-            if (domainNode.links.isEmpty()) {
+            if (domainNode.isEmpty()) {
                 emptyDomainsQueue.add(domainNode);
             } else {
                 domainsQueue.add(domainNode);
@@ -183,8 +223,8 @@ public class DownloadScheduler {
         Iterator<Entry<String, DomainNode>> it = domains.entrySet().iterator();
         while(it.hasNext()) {
             DomainNode node = it.next().getValue();
-            numberOfLinks.addAndGet(-node.links.size()); // adds negative value
-            node.links.clear();
+            numberOfLinks.addAndGet(-node.size()); // adds negative value
+            node.clear();
         }
         while(true) {
             DomainNode node = domainsQueue.poll();
