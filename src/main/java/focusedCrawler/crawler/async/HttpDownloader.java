@@ -19,7 +19,6 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.HashMap;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -93,7 +92,7 @@ public class HttpDownloader implements Closeable {
         
         this.maxQueueSize = threadPoolSize * 2;
         
-        this.fetcher = FetcherFactory.createFetcher(config); 
+        this.fetcher = FetcherFactory.createFetcher(config);
         
         if(config.getValidMimeTypes() != null) {
             for (String mimeTypes : config.getValidMimeTypes()) {

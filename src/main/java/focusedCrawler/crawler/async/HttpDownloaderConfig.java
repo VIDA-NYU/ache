@@ -10,9 +10,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class HttpDownloaderConfig {
 
     public static class Cookie {
-        public String cookie;
-        public String domain;
+        public String cookie = null;
+        public String domain = null;
+        public String path = "/";
     }
+
 
     @JsonProperty("crawler_manager.downloader.download_thread_pool_size")
     private int downloadThreadPoolSize = 100;

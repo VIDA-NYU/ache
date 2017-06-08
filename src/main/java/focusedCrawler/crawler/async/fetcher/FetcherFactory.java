@@ -4,7 +4,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import java.util.List;
-import java.util.Date;
 import org.apache.http.client.CookieStore;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.cookie.BasicClientCookie;
@@ -22,27 +21,6 @@ public class FetcherFactory {
         } else {
             return createSimpleHttpFetcher(config);
         }
-    }
-
-    public static CookieStore getCookieStore(HttpDownloaderConfig config) {
-        List<HttpDownloaderConfig.Cookie> cookies = config.getCookies();
-        if (cookies == null)
-            return null;
-        
-        CookieStore store = new BasicCookieStore();
-        for (HttpDownloaderConfig.Cookie cookie: cookies){
-            String[] values = cookie.cookie.split("; ");
-            for (int i=0; i<values.length; i++) {
-                String[] kv = values[i].split("=", 2);
-                BasicClientCookie cc = new BasicClientCookie(kv[0], kv[1]);
-                cc.setPath("/");
-                cc.setDomain(cookie.domain);
-                //Date date = new Date(118, 5, 5); //Read expiry date from config
-                //cc.setExpiryDate(date);
-                store.addCookie(cc);
-            }
-        }
-        return store;
     }
 
     public static SimpleHttpFetcher createSimpleHttpFetcher(HttpDownloaderConfig config){
@@ -70,9 +48,9 @@ public class FetcherFactory {
             }
         }
 
-        CookieStore store = FetcherFactory.getCookieStore(config);
+        CookieStore store = createCookieStore(config);
         if (store != null) {
-            httpFetcher.setCookie(store);
+            httpFetcher.setCookieStore(store);
         }
         return httpFetcher;
     }
@@ -95,6 +73,25 @@ public class FetcherFactory {
         torFetcher.setSocketTimeout(1000*1000);
         
         return new TorProxyFetcher(torFetcher, httpFetcher);
+    }
+
+    public static CookieStore createCookieStore(HttpDownloaderConfig config) {
+        List<HttpDownloaderConfig.Cookie> cookies = config.getCookies();
+        if (cookies == null) {
+            return null;
+        }
+        CookieStore store = new BasicCookieStore();
+        for (HttpDownloaderConfig.Cookie cookie : cookies) {
+            String[] values = cookie.cookie.split("; ");
+            for (int i = 0; i < values.length; i++) {
+                String[] kv = values[i].split("=", 2);
+                BasicClientCookie cc = new BasicClientCookie(kv[0], kv[1]);
+                cc.setPath(cookie.path);
+                cc.setDomain(cookie.domain);
+                store.addCookie(cc);
+            }
+        }
+        return store;
     }
 
 }

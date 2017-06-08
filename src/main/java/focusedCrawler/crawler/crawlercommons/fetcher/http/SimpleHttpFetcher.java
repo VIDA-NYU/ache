@@ -31,8 +31,8 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.HashSet;
-import java.util.Set;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import javax.net.ssl.HostnameVerifier;
@@ -61,9 +61,6 @@ import org.apache.http.NoHttpResponseException;
 import org.apache.http.ProtocolException;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.CookieStore;
-import org.apache.http.impl.cookie.BasicClientCookie;
-import org.apache.http.impl.client.BasicCookieStore;
-import org.apache.http.cookie.Cookie;
 import org.apache.http.client.HttpRequestRetryHandler;
 import org.apache.http.client.RedirectException;
 import org.apache.http.client.config.CookieSpecs;
@@ -79,6 +76,7 @@ import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.PlainConnectionSocketFactory;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultRedirectStrategy;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -158,11 +156,11 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 
     private ThreadLocal<CookieStore> localCookieStore = new ThreadLocal<CookieStore>() {
         protected CookieStore initialValue() {
-            BasicCookieStore cookieStore = new BasicCookieStore();
+            LocalCookieStore cookieStore = new LocalCookieStore();
             if (globalCookieStore != null) {
                 //Copy global cookie to local thread cookie
                 List<Cookie> cookies = globalCookieStore.getCookies();
-                cookieStore.addCookies((Cookie[])cookies.toArray(new Cookie[cookies.size()]));
+                cookieStore.addCookies((Cookie[]) cookies.toArray(new Cookie[cookies.size()]));
             }
             return cookieStore;
         }
@@ -524,7 +522,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         _maxRetryCount = maxRetryCount;
     }
 
-    public void setCookie(CookieStore cookieStore) {
+    public void setCookieStore(CookieStore cookieStore) {
         globalCookieStore = cookieStore;
     }
 
@@ -606,7 +604,6 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
         // cookie store.
         HttpContext localContext = new BasicHttpContext();
         CookieStore cookieStore = localCookieStore.get();
-        System.out.println("Cookie store in httpfetcher: " + cookieStore.toString());
         localContext.setAttribute(HttpClientContext.COOKIE_STORE, cookieStore);
 
         StringBuilder fetchTrace = null;
