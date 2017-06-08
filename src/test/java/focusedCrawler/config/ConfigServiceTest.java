@@ -37,7 +37,6 @@ public class ConfigServiceTest {
         // then
         assertThat(config, is(notNullValue()));
         
-        assertThat(config.isUseClassifier(), is(false));
         assertThat(config.isSaveNegativePages(), is(false));
         assertThat(config.getVisitedPageLimit(), is(12345));
         assertThat(config.isEnglishLanguageDetectionEnabled(), is(false));

@@ -1,7 +1,6 @@
 #
 # Example of configuration for crawling all pages of the web sites in the seeds
 #
-target_storage.use_classifier: false
 target_storage.data_format.type: FILESYSTEM_JSON
 target_storage.data_format.filesystem.compress_data: true
 target_storage.english_language_detection_enabled: false

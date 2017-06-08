@@ -24,8 +24,6 @@ public class TargetStorageConfig {
     @JsonProperty("target_storage.data_format.files.max_file_size")
     private long maxFileSize = 256*1024*1024;
     
-    @JsonProperty("target_storage.use_classifier")
-    private boolean useClassifier = true;
     @JsonProperty("target_storage.visited_page_limit")
     private int visitedPageLimit = 90000000;
     @JsonProperty("target_storage.hard_focus")
@@ -47,10 +45,6 @@ public class TargetStorageConfig {
     public TargetStorageConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
         this.serverConfig = StorageConfig.create(config, "target_storage.server.");
-    }
-
-    public boolean isUseClassifier() {
-        return useClassifier;
     }
 
     public String getTargetStorageDirectory() {

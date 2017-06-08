@@ -141,7 +141,7 @@ public class TargetStorage extends StorageDefault {
         
         //if one wants to use a classifier
         TargetClassifier targetClassifier = null;
-        if(config.isUseClassifier()){
+        if (modelPath != null && !modelPath.isEmpty()) {
             targetClassifier = TargetClassifierFactory.create(modelPath);
         }
 

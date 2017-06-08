@@ -1,7 +1,6 @@
 package focusedCrawler;
 
 import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.Method;
 import java.nio.file.Paths;
 import java.util.Arrays;
@@ -197,7 +196,7 @@ public class Main {
         @Option(name = {"-c", "--configDir"}, required = true, description = "Path to configuration files folder")
         String configPath;
         
-        @Option(name = {"-m", "--model"}, required = true, description = "")
+        @Option(name = {"-m", "--model"}, required = false, description = "")
         String modelPath;
         
         @Option(name = {"-s", "--seed"}, required = true, description = "Path to file of seed URLs")
@@ -222,7 +221,7 @@ public class Main {
         @Option(name = {"-c", "--configDir"}, required = true, description = "Path to configuration files folder")
         String configPath;
         
-        @Option(name = {"-m", "--model"}, required = true, description = "")
+        @Option(name = {"-m", "--modelDir"}, required = true, description = "")
         String modelPath;
 
         @Option(name = {"-s", "--seed"}, required = false, description = "Path to the file containing seed URLs")
@@ -245,7 +244,7 @@ public class Main {
         @Option(name = {"-c", "--config"}, required = true, description = "Path to configuration files folder")
         String configPath;
         
-        @Option(name = {"-m", "--modelDir"}, required = true, description = "Path to folder containing page classifier model")
+        @Option(name = {"-m", "--modelDir"}, required = false, description = "Path to folder containing page classifier model")
         String modelPath;
         
         @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
@@ -298,7 +297,7 @@ public class Main {
         @Option(name = {"-c", "--config"}, required = true, description = "Path to configuration files folder")
         String configPath;
         
-        @Option(name = {"-m", "--modelDir"}, required = true, description = "Path to folder containing page classifier model")
+        @Option(name = {"-m", "--modelDir"}, required = false, description = "Path to folder containing page classifier model")
         String modelPath;
         
         @Option(name = {"-o", "--outputDir"}, required = true, description = "Path to folder which model built should be stored")
@@ -318,11 +317,13 @@ public class Main {
             
             ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
             
+            MetricsManager metricsManager = null;
+            RestServer restServer = null;
             try {
-                MetricsManager metricsManager = new MetricsManager();
+                metricsManager = new MetricsManager();
                 
-                RestServer restServer = RestServer.create(dataOutputPath,
-                        metricsManager.getMetricsRegistry(), config, esIndexName, esTypeName);
+                restServer = RestServer.create(dataOutputPath, metricsManager.getMetricsRegistry(),
+                                               config, esIndexName, esTypeName);
                 restServer.start();
 
                 Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
@@ -348,13 +349,19 @@ public class Main {
 
             }
             catch (FrontierPersistentException  e) {
-                logger.error("Problem while creating LinkStorage", e);
-            }
-            catch (IOException e) {
-                logger.error("Problem while starting crawler.", e);
+                logger.error("Problem while creating LinkStorage" + e.getMessage() + "\n", e);
             }
             catch (Throwable e) {
-                logger.error("Crawler execution failed.", e);
+                logger.error("Crawler execution failed: " + e.getMessage() + "\n", e);
+            }
+            finally {
+                if(metricsManager != null) {
+                    metricsManager.close();
+                }
+                if(restServer != null) {
+                    restServer.shutdown();
+                }
+                
             }
         }
         

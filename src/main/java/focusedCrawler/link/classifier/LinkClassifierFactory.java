@@ -25,6 +25,10 @@ public class LinkClassifierFactory {
             case "LinkClassifierAuthority":
                 return new LinkClassifierAuthority();
             case "LinkClassifierImpl":
+                if (modelPath == null || modelPath.isEmpty()) {
+                    throw new IllegalArgumentException(
+                            "parameter --modelDir can not be empty when using LinkClassifierImpl");
+                }
                 String featureFilePath = Paths.get(modelPath, "linkclassifier.features").toString();
                 String modelFilePath = Paths.get(modelPath, "linkclassifier.model").toString();
                 LNClassifier lnClassifier = LNClassifier.create(featureFilePath, modelFilePath, stoplist);

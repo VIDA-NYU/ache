@@ -3,7 +3,6 @@
 # require with cookies (commentted lines in the end of this file need to be
 # uncommentted and filled properly).
 #
-target_storage.use_classifier: false
 target_storage.data_format.type: ELASTICSEARCH
 target_storage.data_format.elasticsearch.rest.hosts:
   - http://localhost:9200
@@ -17,7 +16,7 @@ link_storage.scheduler.host_min_access_interval: 2000
 link_storage.scheduler.max_links: 1000
 crawler_manager.downloader.user_agent.name: ACHE
 crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
-
+link_storage.link_classifier.type: LinkClassifierImpl
 #
 # Configurations for crawling using cookies
 #
