@@ -34,6 +34,7 @@ public class TargetStorage extends StorageDefault {
 	public static final Logger logger = LoggerFactory.getLogger(TargetStorage.class);
 
     private TargetRepository targetRepository;
+
     private Storage linkStorage;
     private TargetClassifier targetClassifier;
     private TargetStorageConfig config;
@@ -59,6 +60,13 @@ public class TargetStorage extends StorageDefault {
     @Override
     public Object insert(Object obj) throws StorageException {
         Page page = (Page) obj;
+
+        // download all non-HTML
+        if (!page.getContentType().toLowerCase().contains("text/html")){
+            targetRepository.insert(page);
+            monitor.countPage(page, false, 1d);
+            return null;
+        }
 
         if (config.isEnglishLanguageDetectionEnabled()) {
             // Only accept English language
@@ -145,10 +153,11 @@ public class TargetStorage extends StorageDefault {
             targetClassifier = TargetClassifierFactory.create(modelPath);
         }
 
-        TargetRepository targetRepository = createTargetRepository(dataPath, esIndexName,
+        TargetRepository targetRepository = createRepository(dataPath, esIndexName,
                                                                    esTypeName, config);
-        
+
         TargetStorageMonitor monitor = new TargetStorageMonitor(dataPath);
+
         
         Storage targetStorage = new TargetStorage(targetClassifier, targetRepository,
                                                   linkStorage, monitor, config);
@@ -156,13 +165,12 @@ public class TargetStorage extends StorageDefault {
         return targetStorage;
     }
 
-    private static TargetRepository createTargetRepository(String dataPath,
+    private static TargetRepository createRepository(String dataPath,
                                                            String esIndexName,
                                                            String esTypeName,
                                                            TargetStorageConfig config) {
-        
+
         Path targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory());
-        
         String dataFormat = config.getDataFormat();
         boolean compressData = config.getCompressData();
         boolean hashFilename = config.getHashFileName();

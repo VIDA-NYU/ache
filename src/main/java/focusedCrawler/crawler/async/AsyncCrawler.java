@@ -21,19 +21,19 @@ import focusedCrawler.util.storage.StorageFactoryException;
 import focusedCrawler.util.storage.distribution.StorageCreator;
 
 public class AsyncCrawler {
-	
+
     private static final Logger logger = LoggerFactory.getLogger(AsyncCrawler.class);
 
     private final Storage targetStorage;
     private final Storage linkStorage;
     private final HttpDownloader downloader;
     private final Map<LinkRelevance.Type, HttpDownloader.Callback> handlers = new HashMap<>();
-    
+
     private volatile boolean shouldStop = false;
     private Object running = new Object();
     private boolean isShutdown = false;
 
-    
+
     public AsyncCrawler(Storage targetStorage, Storage linkStorage,
             AsyncCrawlerConfig crawlerConfig, String dataPath,
             MetricsManager metricsManager) {
@@ -42,7 +42,7 @@ public class AsyncCrawler {
         this.linkStorage = linkStorage;
         this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig(), dataPath, metricsManager);
         
-        this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
+        this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(linkStorage,targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
         this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage, crawlerConfig.getDownloaderConfig().getUserAgentName()));
         

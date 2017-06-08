@@ -711,8 +711,12 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
                 throw new IOFetchException(url, e);
             }
         } catch (IOException e) {
-            // Oleg guarantees that no abort is needed in the case of an
             // IOException
+            Integer redirects = (Integer) localContext.getAttribute(REDIRECT_COUNT_CONTEXT_KEY);
+            if (redirects != null) {
+                url = extractRedirectedUrl(url, localContext); //save redirected URL incase of IOExceptions (required for catching redirected UnknownHosts)
+            }
+            // Oleg guarantees that no abort is needed in the case of an
             needAbort = false;
             throw new IOFetchException(url, e);
         } catch (URISyntaxException e) {

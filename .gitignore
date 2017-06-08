@@ -15,3 +15,6 @@ config/escort
 .DS_Store*
 docs/_build/
 src/main/resources/public/
+.idea/
+buildAndRun.sh
+classes/
