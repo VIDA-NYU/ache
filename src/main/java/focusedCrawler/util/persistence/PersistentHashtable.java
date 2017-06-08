@@ -41,7 +41,7 @@ import focusedCrawler.util.persistence.rocksdb.RocksDBHashtable;
 
 public class PersistentHashtable<T> {
     
-    enum DB {
+    public enum DB {
         BERKELEYDB, ROCKSDB
     }
     

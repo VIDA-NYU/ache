@@ -28,6 +28,7 @@ import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkFilter;
 import focusedCrawler.util.MetricsManager;
+import focusedCrawler.util.persistence.PersistentHashtable.DB;
 
 public class FrontierManagerTest {
 
@@ -48,7 +49,7 @@ public class FrontierManagerTest {
     
     @Before
     public void setUp() throws Exception {
-        frontier = new Frontier(tempFolder.newFolder().toString(), 1000);
+        frontier = new Frontier(tempFolder.newFolder().toString(), 1000, DB.ROCKSDB);
         dataPath = tempFolder.newFolder().toString();
         modelPath = tempFolder.newFolder().toString();
         Map<?, ?> props = ImmutableMap.of(
@@ -74,7 +75,7 @@ public class FrontierManagerTest {
         
         
         LinkSelector linkSelector = new RandomLinkSelector();
-        Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, scope);
+        Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, DB.ROCKSDB, scope);
         
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
                 linkSelector, null, emptyLinkFilter, metricsManager);

@@ -76,8 +76,8 @@ public class FrontierManager {
         this.domainCounter = new HashMap<String, Integer>();
         this.scheduler = new CrawlScheduler(linkSelector, recrawlSelector, frontier, metricsManager,
                                             config.getSchedulerHostMinAccessInterval(), linksToLoad);
-        this.graphRepository = new BipartiteGraphRepository(dataPath);
-        this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"));;
+        this.graphRepository = new BipartiteGraphRepository(dataPath, config.getPersistentHashtableBackend());
+        this.hostsManager = new HostManager(Paths.get(dataPath, "data_hosts"), config.getPersistentHashtableBackend());;
         this.schedulerLog = new LogFile(Paths.get(dataPath, "data_monitor", "scheduledlinks.csv"));
         this.outlinkClassifier = LinkClassifierFactory.create(modelPath, config.getTypeOfClassifier());
         if (config.getBacklinks()) {

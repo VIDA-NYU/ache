@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import focusedCrawler.util.persistence.PersistentHashtable;
+import focusedCrawler.util.persistence.PersistentHashtable.DB;
 import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.persistence.TupleIterator;
 
@@ -17,9 +18,8 @@ public class Frontier {
     protected Map<String, Integer> scope = null;
     private boolean useScope = false;
 
-    public Frontier(String directory, int maxCacheUrlsSize, Map<String, Integer> scope) {
-        
-        this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize, LinkRelevance.class);
+    public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend, Map<String, Integer> scope) {
+        this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize, LinkRelevance.class, persistentHashtableBackend);
         
         if (scope == null) {
             this.useScope = false;
@@ -30,10 +30,10 @@ public class Frontier {
         }
     }
 
-    public Frontier(String directory, int maxCacheUrlsSize) {
-        this(directory, maxCacheUrlsSize, null);
+    public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend) {
+        this(directory, maxCacheUrlsSize, persistentHashtableBackend, null);
     }
-
+    
     public void commit() {
         urlRelevance.commit();
     }

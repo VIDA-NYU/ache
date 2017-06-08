@@ -16,6 +16,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import focusedCrawler.util.persistence.PersistentHashtable.DB;
+
 public class FrontierTest {
 
     final Path testPath = Paths.get("frontier_temp/");
@@ -29,7 +31,7 @@ public class FrontierTest {
             FileUtils.deleteDirectory(file);
         }
         
-        frontier = new Frontier(testPath.toString(), 1000);
+        frontier = new Frontier(testPath.toString(), 1000, DB.ROCKSDB);
     }
     
     @After
