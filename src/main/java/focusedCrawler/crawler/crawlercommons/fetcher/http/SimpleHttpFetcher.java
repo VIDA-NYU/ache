@@ -949,7 +949,6 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 //                HttpProtocolParams.setVersion(params, _httpVersion);
                 
                 httpClientBuilder.setUserAgent(_userAgentString);
-                LOGGER.info("User agent string: " + _userAgentString);
                 
 //                HttpProtocolParams.setContentCharset(params, "UTF-8");
 //                HttpProtocolParams.setHttpElementCharset(params, "UTF-8");
