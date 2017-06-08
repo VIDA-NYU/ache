@@ -31,6 +31,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -75,6 +76,7 @@ import org.apache.http.conn.socket.ConnectionSocketFactory;
 import org.apache.http.conn.socket.PlainConnectionSocketFactory;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultRedirectStrategy;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -148,10 +150,18 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     private static final int DEFAULT_KEEP_ALIVE_DURATION = 5000;
 
     private IdleConnectionMonitorThread monitor;
+    
+    //Store cookies loaded from configuration file
+    private CookieStore globalCookieStore = null; 
 
     private ThreadLocal<CookieStore> localCookieStore = new ThreadLocal<CookieStore>() {
         protected CookieStore initialValue() {
-            CookieStore cookieStore = new LocalCookieStore();
+            LocalCookieStore cookieStore = new LocalCookieStore();
+            if (globalCookieStore != null) {
+                //Copy global cookie to local thread cookie
+                List<Cookie> cookies = globalCookieStore.getCookies();
+                cookieStore.addCookies((Cookie[]) cookies.toArray(new Cookie[cookies.size()]));
+            }
             return cookieStore;
         }
     };
@@ -171,7 +181,7 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
     transient private CloseableHttpClient _httpClient;
     transient private PoolingHttpClientConnectionManager _connectionManager;
 
-
+    
 
     private static class MyRequestRetryHandler implements HttpRequestRetryHandler {
         private int _maxRetryCount;
@@ -510,6 +520,10 @@ public class SimpleHttpFetcher extends BaseHttpFetcher {
 
     public void setMaxRetryCount(int maxRetryCount) {
         _maxRetryCount = maxRetryCount;
+    }
+
+    public void setCookieStore(CookieStore cookieStore) {
+        globalCookieStore = cookieStore;
     }
 
     @Override

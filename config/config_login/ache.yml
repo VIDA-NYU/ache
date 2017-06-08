@@ -1,0 +1,34 @@
+#
+# Example of configuration for crawling all pages within a web sites that
+# require with cookies (commentted lines in the end of this file need to be
+# uncommentted and filled properly).
+#
+target_storage.use_classifier: false
+target_storage.data_format.type: ELASTICSEARCH
+target_storage.data_format.elasticsearch.rest.hosts:
+  - http://localhost:9200
+target_storage.english_language_detection_enabled: false
+link_storage.max_pages_per_domain: 1000000000
+link_storage.link_strategy.use_scope: true
+link_storage.link_strategy.outlinks: true
+link_storage.link_selector: MaximizeWebsitesLinkSelector
+link_storage.download_sitemap_xml: true
+link_storage.scheduler.host_min_access_interval: 2000
+link_storage.scheduler.max_links: 1000
+crawler_manager.downloader.user_agent.name: ACHE
+crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
+
+#
+# Configurations for crawling using cookies
+#
+#crawler_manager.downloader.cookies:
+# - domain: example1.com
+#   cookie: key1=value; key2=value2;
+# - domain: example2.com
+#   cookie: key1=value; key2=value2;
+
+#
+# Some cookies only work with the same user-agent string that created it.
+# You can change it using the following config line:
+#
+#crawler_manager.downloader.user_agent.string: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36

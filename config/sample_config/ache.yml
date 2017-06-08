@@ -129,7 +129,7 @@ link_storage.scheduler.max_links: 10000
 crawler_manager.downloader.user_agent.name: ACHE
 crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
 #crawler_manager.downloader.user_agent.email: someone@example.com
-#crawler_manager.downloader.user_agent.url: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+#crawler_manager.downloader.user_agent.string: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
 
 crawler_manager.downloader.download_thread_pool_size: 100
 crawler_manager.downloader.max_retry_count: 2
