@@ -20,7 +20,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import focusedCrawler.crawler.crawlercommons.fetcher.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,6 +30,10 @@ import com.codahale.metrics.Timer.Context;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
 import focusedCrawler.crawler.async.fetcher.FetcherFactory;
+import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.MetricsManager;
 
