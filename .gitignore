@@ -16,3 +16,4 @@ config/escort
 docs/_build/
 src/main/resources/public/
 config/config_docker/data-*
+config/config_docker_tor/data-*
