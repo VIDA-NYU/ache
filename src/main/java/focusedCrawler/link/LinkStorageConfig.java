@@ -78,11 +78,18 @@ public class LinkStorageConfig {
     @JsonProperty("link_storage.download_sitemap_xml")
     private boolean downloadSitemapXml = false;
     
+    @JsonProperty("link_storage.recrawl_selector")
+    private String recrawlSelector = null;
+    
+    @JsonProperty("link_storage.recrawl_selector.sitemaps.interval")
+    private int sitemapsRecrawlInterval = 60;
+    
     @JsonProperty("link_storage.scheduler.host_min_access_interval")
     private int schedulerHostMinAccessInterval = 5000;
     
     @JsonProperty("link_storage.scheduler.max_links")
     private int schedulerMaxLinks = 10000;
+
     
     public LinkStorageConfig() {
         this.serverConfig = new StorageConfig();
@@ -144,6 +151,14 @@ public class LinkStorageConfig {
     public String getLinkSelector() {
         return linkSelector;
     }
+    
+    public String getRecrawlSelector() {
+        return recrawlSelector;
+    }
+
+    public int getSitemapsRecrawlInterval() {
+        return sitemapsRecrawlInterval;
+    }
 
     public StorageConfig getStorageServerConfig() {
         return serverConfig;
@@ -160,4 +175,5 @@ public class LinkStorageConfig {
     public int getSchedulerMaxLinks() {
         return schedulerMaxLinks;
     }
+
 }

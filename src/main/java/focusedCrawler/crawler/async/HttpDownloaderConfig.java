@@ -10,7 +10,7 @@ public class HttpDownloaderConfig {
 
     @JsonProperty("crawler_manager.downloader.download_thread_pool_size")
     private int downloadThreadPoolSize = 100;
-    
+
     @JsonProperty("crawler_manager.downloader.connection_pool_size")
     private int connectionPoolSize = 10000;
 
@@ -26,11 +26,16 @@ public class HttpDownloaderConfig {
     @JsonProperty("crawler_manager.downloader.user_agent.url")
     private String userAgentUrl = "https://github.com/ViDA-NYU/ache";
 
+    @JsonProperty("crawler_manager.downloader.user_agent.email")
+    private String userAgentEmail = null;
+
+    @JsonProperty("crawler_manager.downloader.user_agent.string")
+    private String userAgentString = null;
+
     @JsonProperty("crawler_manager.downloader.torproxy")
     private String torProxy = null;
-    
-    public HttpDownloaderConfig() {
-    }
+
+    public HttpDownloaderConfig() {}
 
     public HttpDownloaderConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
@@ -62,6 +67,14 @@ public class HttpDownloaderConfig {
     
     public String getTorProxy() {
         return this.torProxy;
+    }
+
+    public String getUserAgentString() {
+        return userAgentString;
+    }
+
+    public String getUserAgentEmail() {
+        return userAgentEmail;
     }
 
 }

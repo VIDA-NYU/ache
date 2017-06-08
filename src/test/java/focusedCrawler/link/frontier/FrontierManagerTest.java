@@ -23,6 +23,7 @@ import focusedCrawler.config.ConfigService;
 import focusedCrawler.link.LinkStorageConfig;
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.link.frontier.selector.RandomLinkSelector;
+import focusedCrawler.link.frontier.selector.SitemapsRecrawlSelector;
 import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.LinkFilter;
@@ -75,7 +76,8 @@ public class FrontierManagerTest {
         LinkSelector linkSelector = new RandomLinkSelector();
         Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, scope);
         
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config , linkSelector, emptyLinkFilter, metricsManager);
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                linkSelector, null, emptyLinkFilter, metricsManager);
         
         // when
         frontierManager.insert(link1);
@@ -106,7 +108,7 @@ public class FrontierManagerTest {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
-                                                              linkSelector, emptyLinkFilter, metricsManager);
+                                                              linkSelector, null, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1, LinkRelevance.Type.FORWARD);
         
@@ -126,6 +128,46 @@ public class FrontierManagerTest {
     }
     
     @Test
+    public void shouldNotInsertUrlTwice() throws Exception {
+        // given
+        Map<?, ?> props = ImmutableMap.of(
+                "link_storage.scheduler.max_links", schedulerMaxLinks,
+                "link_storage.scheduler.host_min_access_interval", 0,
+                "link_storage.download_sitemap_xml", false
+            );
+        config = new ConfigService(props).getLinkStorageConfig();
+        LinkSelector linkSelector = new TopkLinkSelector();
+        LinkSelector recrawlSelector = new SitemapsRecrawlSelector();
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                                                              linkSelector, recrawlSelector , emptyLinkFilter, metricsManager);
+        
+        LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/sitemap.xml"), 299, LinkRelevance.Type.SITEMAP);
+        assertThat(frontierManager.isRelevant(link1), is(true));
+        
+        // when
+        frontierManager.insert(link1);
+        // then
+        assertThat(frontierManager.isRelevant(link1), is(false));
+        
+        // when
+        LinkRelevance nextURL = frontierManager.nextURL();
+        // then
+        assertThat(nextURL, is(notNullValue()));
+        assertThat(nextURL.getRelevance(), is(299d));
+        assertThat(frontierManager.isRelevant(link1), is(false));
+        
+        // when
+        nextURL = frontierManager.nextURL();
+        // then
+        assertThat(nextURL, is(notNullValue()));
+        assertThat(nextURL.getRelevance(), is(-299d));
+        assertThat(frontierManager.isRelevant(link1), is(false));
+        
+        // finalize
+        frontierManager.close();
+    }
+    
+    @Test
     public void shouldSelectUrlsInsertedAfterFirstSelect() throws Exception {
         // given
         int minimumAccessTimeInterval = 500;
@@ -138,8 +180,10 @@ public class FrontierManagerTest {
         config = new ConfigService(props).getLinkStorageConfig();
             
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath,
-                                                              config, linkSelector, emptyLinkFilter, metricsManager);
+        LinkSelector recrawlSelector = null;
+
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                linkSelector, recrawlSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index1.html"), 1, LinkRelevance.Type.FORWARD);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example1.com/index2.html"), 1, LinkRelevance.Type.FORWARD);
@@ -177,7 +221,6 @@ public class FrontierManagerTest {
     @Test
     public void shouldInsertRobotsLinkWhenAddDomainForTheFirstTime() throws Exception {
         // given
-        LinkSelector linkSelector = new TopkLinkSelector();
         Map<?, ?> props = ImmutableMap.of(
             "link_storage.scheduler.max_links", schedulerMaxLinks,
             "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
@@ -185,7 +228,12 @@ public class FrontierManagerTest {
         );
         config = new ConfigService(props).getLinkStorageConfig();
         assertThat(config.getDownloadSitemapXml(), is(true));
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config, linkSelector, emptyLinkFilter, metricsManager);
+        
+        LinkSelector linkSelector = new TopkLinkSelector();
+        LinkSelector recrawlSelector = null;
+        
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                linkSelector, recrawlSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/sitemap.xml"), 1, LinkRelevance.Type.FORWARD);
         
@@ -216,7 +264,10 @@ public class FrontierManagerTest {
     public void shouldInsertUrlsAndSelectUrlsInSortedByRelevance() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config, linkSelector, emptyLinkFilter, metricsManager);
+        LinkSelector recrawlSelector = null;
+
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                linkSelector, recrawlSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
@@ -259,7 +310,10 @@ public class FrontierManagerTest {
     public void shouldNotReturnAgainALinkThatWasAlreadyReturned() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config, linkSelector, emptyLinkFilter, metricsManager);
+        LinkSelector recrawlSelector = null;
+
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                linkSelector, recrawlSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
@@ -312,7 +366,10 @@ public class FrontierManagerTest {
         assertThat(config.getSchedulerHostMinAccessInterval(), is(minimumAccessTimeInterval));
         
         LinkSelector linkSelector = new TopkLinkSelector();
-        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config, linkSelector, emptyLinkFilter, metricsManager);
+        LinkSelector recrawlSelector = null;
+
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                linkSelector, recrawlSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index1.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example1.com/index2.html"), 2);
