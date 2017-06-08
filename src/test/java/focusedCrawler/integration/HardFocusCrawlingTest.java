@@ -63,7 +63,7 @@ public class HardFocusCrawlingTest {
         ConfigService config = new ConfigService(configPath + "/ache.yml");
         String linkDirectory = config.getLinkStorageConfig().getLinkDirectory();
         String dir = Paths.get(outputPath, linkDirectory).toString();
-        Frontier frontier = new Frontier(dir, 1000);
+        Frontier frontier = new Frontier(dir, 1000, config.getLinkStorageConfig().getPersistentHashtableBackend());
 
         List<String> shouldBeDownloaded = asList(
                 "index.html",
