@@ -13,6 +13,7 @@ import crawlercommons.robots.BaseRobotsParser;
 import crawlercommons.robots.SimpleRobotRulesParser;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.CommunicationException;
 import focusedCrawler.util.storage.Storage;
@@ -88,6 +89,9 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
         try {
             RobotsData robotsData = new RobotsData(robotRules.getSitemaps());
             linkStorage.insert(robotsData);
+            if(linkStorage instanceof LinkStorage){
+                ((LinkStorage) linkStorage).insertRobotRules(link,robotRules);
+            }
         } catch (StorageException | CommunicationException e) {
             logger.error("Failed to insert robot.txt data into link storage.", e);
         }

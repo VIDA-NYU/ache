@@ -6,10 +6,15 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.net.InternetDomainName;
+
+import crawlercommons.robots.BaseRobotRules;
 import focusedCrawler.crawler.async.RobotsTxtHandler;
 import focusedCrawler.crawler.async.SitemapXmlHandler;
 import focusedCrawler.link.classifier.LinkClassifierFactory;
@@ -50,6 +55,8 @@ public class LinkStorage extends StorageDefault {
 
     private final FrontierManager frontierManager;
     private final OnlineLearning onlineLearning;
+    
+    private final Map<String, BaseRobotRules> robotRulesMap;
 
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager) throws IOException {
@@ -63,6 +70,7 @@ public class LinkStorage extends StorageDefault {
         this.onlineLearning = onlineLearning;
         this.getBacklinks = config.getBacklinks();
         this.getOutlinks = config.getOutlinks();
+        this.robotRulesMap = new HashMap<String, BaseRobotRules>();
     }
 
     public void close(){
@@ -155,7 +163,16 @@ public class LinkStorage extends StorageDefault {
      */
     public synchronized Object select(Object obj) throws StorageException, DataNotFoundException {
         try {
-            return frontierManager.nextURL();
+            LinkRelevance nextUrl = frontierManager.nextURL();
+            String domainName = nextUrl.getTopLevelDomainName();
+            if(domainName != null 
+                    && robotRulesMap.containsKey(domainName)
+                    && !robotRulesMap.get(domainName).isAllowed(nextUrl.getURL().toString())){
+                logger.info("Ignoring link "+domainName+" as it is present in the robots file which is disallowed.");
+                return null;
+            }else{
+                return nextUrl;
+            }
         } catch (FrontierPersistentException e) {
             throw new StorageException(e.getMessage(), e);
         }
@@ -225,6 +242,20 @@ public class LinkStorage extends StorageDefault {
             default:
                 throw new IllegalArgumentException("Unknown online learning method: " + onlineLearningType);
         }
+    }
+    
+    /**
+     * Inserts the robot rules object into the HashMap
+     * @param link
+     * @param robotRules
+     * @throws NullPointerException when either of the argument is null
+     */
+    public void insertRobotRules(LinkRelevance link, BaseRobotRules robotRules){
+        if(link == null || robotRules == null){
+            throw new NullPointerException("Link argument or robot rules argument cannot be null");
+        }
+        String domainName = link.getTopLevelDomainName();
+        robotRulesMap.put(domainName, robotRules);
     }
 
 }
