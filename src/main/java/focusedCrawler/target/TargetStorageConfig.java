@@ -35,7 +35,7 @@ public class TargetStorageConfig {
     private boolean saveNegativePages = true;
     
     @JsonProperty("target_storage.english_language_detection_enabled")
-    private boolean englishLanguageDetectionEnabled = true;
+    private boolean englishLanguageDetectionEnabled = false;
     
     @JsonUnwrapped
     private ElasticSearchConfig elasticSearchConfig = new ElasticSearchConfig();

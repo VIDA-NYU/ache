@@ -34,7 +34,7 @@ public class LinkStorageConfig {
     }
 
     @JsonProperty("link_storage.max_pages_per_domain")
-    private int maxPagesPerDomain = 100;
+    private int maxPagesPerDomain = Integer.MAX_VALUE;
 
     @JsonProperty("link_storage.link_classifier.type")
     private String typeOfClassifier = "LinkClassifierBaseline";
