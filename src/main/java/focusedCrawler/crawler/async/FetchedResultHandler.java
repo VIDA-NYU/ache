@@ -46,12 +46,12 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     private void processData(LinkRelevance link, FetchedResult response) {
         try {
             Page page = new Page(response);
-            
-            // TODO Check whether page is HTML before trying to parse HTML
-            PaginaURL pageParser = new PaginaURL(page);
-            page.setParsedData(new ParsedData(pageParser));
             page.setLinkRelevance(link);
-            
+
+            if (page.getContentType()!=null && page.getContentType().toLowerCase().contains("text/html")){
+                PaginaURL pageParser = new PaginaURL(page);
+                page.setParsedData(new ParsedData(pageParser));
+            }
             targetStorage.insert(page);
             
         } catch (Exception e) {
