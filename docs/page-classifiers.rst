@@ -1,3 +1,5 @@
+.. _pageclassifiers:
+
 Target Page Classifiers
 #######################
 
@@ -6,6 +8,8 @@ Target Page Classifiers
 ACHE uses target page classifiers to distinguish between relevant and irrelevant pages.
 Page classifiers are flexible and can be as simple as a simple regular expression,
 or a sophisticated machine-learning based classification model.
+
+
 
 Configuring Page Classifiers
 ============================
