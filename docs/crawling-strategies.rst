@@ -15,6 +15,7 @@ Link Classifiers
 ----------------
 TODO
 
+.. _crawlingstrategies-onlinelearning:
 
 Online Learning
 ---------------
