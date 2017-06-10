@@ -11,6 +11,8 @@ ACHE also includes **link classifiers**, which allows it decide the best order i
 
     install
     getting-started
+    tutorial-focused-crawl
+    tutorial-in-depth-crawl
     page-classifiers
     crawling-strategies
     data-formats
