@@ -1,11 +1,14 @@
 package focusedCrawler.crawler.async;
 
-import focusedCrawler.crawler.crawlercommons.fetcher.*;
-import focusedCrawler.link.*;
-import java.net.*;
+import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.crawler.crawlercommons.fetcher.IOFetchException;
+
+import java.net.UnknownHostException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.ParsedData;

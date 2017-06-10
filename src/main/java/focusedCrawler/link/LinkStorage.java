@@ -187,6 +187,10 @@ public class LinkStorage extends StorageDefault {
         }
     }
 
+    public Set<String> getBlackList(){
+        return blackList;
+    }
+
     public static void runServer(String configPath, String seedFilePath,
                                  String dataOutputPath, String modelPath,
                                  LinkStorageConfig config)
