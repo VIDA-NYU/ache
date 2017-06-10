@@ -15,7 +15,7 @@ public class TargetStorageConfig {
     @JsonProperty("target_storage.target_directory")
     private String targetStorageDirectory = "data_pages";
     @JsonProperty("target_storage.data_format.type")
-    private String dataFormat = "FILESYSTEM_JSON";
+    private String dataFormat = "FILES";
     @JsonProperty("target_storage.data_format.filesystem.hash_file_name")
     private boolean hashFileName = false;
     @JsonProperty("target_storage.data_format.filesystem.compress_data")
