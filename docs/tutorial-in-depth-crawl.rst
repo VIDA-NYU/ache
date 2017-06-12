@@ -1,3 +1,5 @@
+.. _tutorial-in-depth-crawl:
+
 Running a In-Depth Website Crawl
 ################################
 

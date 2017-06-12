@@ -1,12 +1,12 @@
-target_storage.store_negative_pages: true
+# Configure ACHE to index pages in Elasticsearch container
 target_storage.data_format.type: ELASTICSEARCH
 target_storage.data_format.elasticsearch.rest.hosts:
   - http://elasticsearch:9200
-target_storage.english_language_detection_enabled: false
 
-link_storage.max_pages_per_domain: 10000000
+# Basic configuration in-depth web site crawling
 link_storage.link_strategy.use_scope: true
 link_storage.link_strategy.outlinks: true
 link_storage.scheduler.host_min_access_interval: 1000
 
+# Configure ACHE to download .onion URLs through the TOR proxy container
 crawler_manager.downloader.torproxy: http://torproxy:8118
