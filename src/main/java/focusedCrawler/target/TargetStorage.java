@@ -60,6 +60,14 @@ public class TargetStorage extends StorageDefault {
     public Object insert(Object obj) throws StorageException {
         Page page = (Page) obj;
 
+        //non-html pages saved directly
+        if(!page.getContentType().toLowerCase().contains("text/html")){
+            targetRepository.insert(page);
+            logger.info("NonHTML content found at: "+page.getURL()+" - saved content type: "+page.getContentType());
+            monitor.countPage(page,false,0d);
+            return null;
+        }
+
         if (config.isEnglishLanguageDetectionEnabled()) {
             // Only accept English language
             if (this.langDetector.isEnglish(page) == false) {
