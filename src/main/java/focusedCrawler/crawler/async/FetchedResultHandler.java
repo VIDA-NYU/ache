@@ -48,7 +48,7 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
             Page page = new Page(response);
             page.setLinkRelevance(link);
 
-            if (page.getContentType()!=null && page.getContentType().toLowerCase().contains("text/html")){
+            if (page.isHtml()) {
                 PaginaURL pageParser = new PaginaURL(page);
                 page.setParsedData(new ParsedData(pageParser));
             }

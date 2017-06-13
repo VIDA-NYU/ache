@@ -60,11 +60,12 @@ public class TargetStorage extends StorageDefault {
     public Object insert(Object obj) throws StorageException {
         Page page = (Page) obj;
 
-        //non-html pages saved directly
-        if(!page.getContentType().toLowerCase().contains("text/html")){
+        // non-html pages saved directly
+        if (!page.isHtml()) {
+            page.setTargetRelevance(TargetRelevance.RELEVANT);
             targetRepository.insert(page);
-            logger.info("NonHTML content found at: "+page.getURL()+" - saved content type: "+page.getContentType());
-            monitor.countPage(page,false,0d);
+            logger.info("Non-HTML content found at: "+page.getURL()+" - saved content type: "+page.getContentType());
+            monitor.countPage(page, false, 0d);
             return null;
         }
 

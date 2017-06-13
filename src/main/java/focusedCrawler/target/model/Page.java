@@ -113,6 +113,11 @@ public class Page implements Serializable {
         String domain = url.getHost();
         return domain.startsWith("www.") ? domain.substring(4) : domain;
     }
+    
+
+    public boolean isHtml() {
+        return contentType != null && contentType.toLowerCase().contains("text/html");
+    }
 
     public boolean isHub() {
         if (linkRelevance != null) {
