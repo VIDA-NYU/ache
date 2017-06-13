@@ -120,3 +120,5 @@ crawler_manager.downloader.valid_mime_types:
  - test/mimetype
  - text/html
 link_storage.download_sitemap_xml: true
+
+link_storage.disallow_sites_in_robots_file: true

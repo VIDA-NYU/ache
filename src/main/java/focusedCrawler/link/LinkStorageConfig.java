@@ -76,6 +76,9 @@ public class LinkStorageConfig {
 
     @JsonProperty("link_storage.download_sitemap_xml")
     private boolean downloadSitemapXml = false;
+    
+    @JsonProperty("link_storage.disallow_sites_in_robots_file")
+    private boolean disallowSitesInRobotsFile = false;
 
     @JsonProperty("link_storage.recrawl_selector")
     private String recrawlSelector = null;
@@ -167,6 +170,10 @@ public class LinkStorageConfig {
 
     public boolean getDownloadSitemapXml() {
         return downloadSitemapXml;
+    }
+    
+    public boolean getDisallowSitesInRobotsFile() {
+        return disallowSitesInRobotsFile;
     }
 
     public int getSchedulerHostMinAccessInterval() {

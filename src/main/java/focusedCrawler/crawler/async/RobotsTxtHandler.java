@@ -20,82 +20,91 @@ import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageException;
 
 public class RobotsTxtHandler implements HttpDownloader.Callback {
-    
+
     @SuppressWarnings("serial")
     public static class RobotsData implements Serializable {
         public List<String> sitemapUrls = new ArrayList<>();
         public String content;
+
         public RobotsData(List<String> sitemapsUrls) {
             this.sitemapUrls = sitemapsUrls;
         }
     }
-    
+
     private static final Logger logger = LoggerFactory.getLogger(RobotsTxtHandler.class);
-    
+
     private BaseRobotsParser parser = new SimpleRobotRulesParser();
     private Storage linkStorage;
     private String userAgentName;
-    
+
     public RobotsTxtHandler(Storage linkStorage, String userAgentName) {
         this.linkStorage = linkStorage;
         this.userAgentName = userAgentName;
     }
-    
+
     @Override
     public void completed(LinkRelevance link, FetchedResult response) {
         int statusCode = response.getStatusCode();
-        if(statusCode >= 200 && statusCode < 300) {
-            logger.info("Successfully downloaded URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
+        if (statusCode >= 200 && statusCode < 300) {
+            logger.info("Successfully downloaded URL=[" + response.getBaseUrl() + "] HTTP-Response-Code=" + statusCode);
             processRobot(link, response, false);
         } else {
-            logger.info("Server returned bad code for URL=["+response.getBaseUrl()+"] HTTP-Response-Code="+statusCode);
+            logger.info("Server returned bad code for URL=[" + response.getBaseUrl() + "] HTTP-Response-Code="
+                    + statusCode);
             processRobot(link, response, true);
         }
     }
-    
+
     @Override
     public void failed(LinkRelevance link, Exception e) {
-        if(e instanceof AbortedFetchException) {
+        if (e instanceof AbortedFetchException) {
             AbortedFetchException afe = (AbortedFetchException) e;
-            logger.info("Download aborted: \n>URL: {}\n>Reason: {}",
-                        link.getURL().toString(), afe.getAbortReason());
+            logger.info("Download aborted: \n>URL: {}\n>Reason: {}", link.getURL().toString(), afe.getAbortReason());
         } else {
-            logger.info("Failed to download URL: "+link.getURL().toString(), e.getMessage());
+            logger.info("Failed to download URL: " + link.getURL().toString(), e.getMessage());
         }
         processRobot(link, null, true);
     }
-    
+
     private void processRobot(LinkRelevance link, FetchedResult response, boolean fetchFailed) {
-        
+
         BaseRobotRules robotRules;
-        if(fetchFailed || response == null) {
+        if (fetchFailed || response == null) {
             robotRules = parser.failedFetch(HttpStatus.SC_GONE);
-        }
-        else {
+        } else {
             String contentType = response.getContentType();
             boolean isPlainText = (contentType != null) && (contentType.startsWith("text/plain"));
             if ((response.getNumRedirects() > 0) && !isPlainText) {
                 robotRules = parser.failedFetch(HttpStatus.SC_GONE);
             } else {
-                robotRules = parser.parseContent(
-                    response.getFetchedUrl(),
-                    response.getContent(),
-                    response.getContentType(),
-                    userAgentName   
-                );
+                robotRules = parser.parseContent(response.getFetchedUrl(), response.getContent(),
+                        response.getContentType(), userAgentName);
             }
         }
+
         
         try {
-            RobotsData robotsData = new RobotsData(robotRules.getSitemaps());
-            linkStorage.insert(robotsData);
-            if(linkStorage instanceof LinkStorage){
-                ((LinkStorage) linkStorage).insertRobotRules(link,robotRules);
+            boolean insertSiteMaps = false;
+            boolean disallowSitesInRobotRules = false;
+            LinkStorage linkStorageTemp = null; 
+            if (linkStorage instanceof LinkStorage) {
+                linkStorageTemp = ((LinkStorage) linkStorage);
+                insertSiteMaps = linkStorageTemp.getInsertSiteMaps();
+                disallowSitesInRobotRules = linkStorageTemp.getDisallowSitesFromRobotsTxt();
+                if(disallowSitesInRobotRules){
+                    linkStorageTemp.insertRobotRules(link, robotRules);
+                }
             }
+            
+            if(insertSiteMaps){
+                RobotsData robotsData = new RobotsData(robotRules.getSitemaps());
+                linkStorage.insert(robotsData);
+            }
+            
         } catch (StorageException | CommunicationException e) {
             logger.error("Failed to insert robot.txt data into link storage.", e);
         }
-        
+
     }
-    
+
 }
