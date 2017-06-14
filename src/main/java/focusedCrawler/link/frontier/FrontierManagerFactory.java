@@ -15,6 +15,7 @@ import focusedCrawler.link.frontier.selector.MaximizeWebsitesLinkSelector;
 import focusedCrawler.link.frontier.selector.MultiLevelLinkSelector;
 import focusedCrawler.link.frontier.selector.NonRandomLinkSelector;
 import focusedCrawler.link.frontier.selector.RandomLinkSelector;
+import focusedCrawler.link.frontier.selector.MinRelevanceRecrawlSelector;
 import focusedCrawler.link.frontier.selector.SitemapsRecrawlSelector;
 import focusedCrawler.link.frontier.selector.TopkLinkSelector;
 import focusedCrawler.util.LinkFilter;
@@ -87,6 +88,8 @@ public class FrontierManagerFactory {
         switch(recrawlSelector) {
             case "SitemapsRecrawlSelector":
                 return new SitemapsRecrawlSelector(config.getSitemapsRecrawlInterval());
+            case "MinRelevanceRecrawlSelector":
+                return new MinRelevanceRecrawlSelector(config.getRecrawlMinRelevanceInterval(), config.getRecrawlMinRelevanceValue());
             default:
                 throw new IllegalArgumentException("Unknown recrawl selector configured: " + recrawlSelector);
         }

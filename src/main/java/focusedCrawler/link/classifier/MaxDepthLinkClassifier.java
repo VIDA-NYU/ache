@@ -23,7 +23,7 @@ public class MaxDepthLinkClassifier implements LinkClassifier {
         for (int i = 0; i < urls.length; i++) {
             
             URL url = urls[i];
-            double linkRelevance = page.getLinkRelevance().getRelevance() - 1;
+            double linkRelevance = Math.abs(page.getLinkRelevance().getRelevance()) - 1;
             int currentDepth = (int) (LinkRelevance.DEFAULT_RELEVANCE - linkRelevance);
             if(currentDepth <= maxDepth) {
                 links.add(new LinkRelevance(url, linkRelevance));
