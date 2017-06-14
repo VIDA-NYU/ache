@@ -302,6 +302,19 @@ public class FrontierManager {
     public void setOutlinkClassifier(LinkClassifier classifier) {
         this.outlinkClassifier = classifier;
     }
+    
+    public void updateOutlinkClassifier(LinkClassifier classifier) throws Exception {
+        this.outlinkClassifier = classifier;
+        graphRepository.visitLNs((LinkNeighborhood ln) -> {
+            try {
+                LinkRelevance lr = outlinkClassifier.classify(ln);
+                frontier.update(lr);
+            } catch (Exception e) {
+                logger.error("Failed to classify link neighborhood while updating classifier.", e);
+            }
+        });
+        frontier.commit();
+    }
 
     public BipartiteGraphRepository getGraphRepository() {
         return this.graphRepository;

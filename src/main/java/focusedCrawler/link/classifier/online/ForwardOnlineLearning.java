@@ -1,6 +1,6 @@
 package focusedCrawler.link.classifier.online;
 
-import java.util.HashSet;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,9 +8,7 @@ import org.slf4j.LoggerFactory;
 import focusedCrawler.link.classifier.LinkClassifier;
 import focusedCrawler.link.classifier.builder.LinkClassifierBuilder;
 import focusedCrawler.link.frontier.FrontierManager;
-import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.TargetStorageMonitor;
-import focusedCrawler.util.parser.LinkNeighborhood;
 
 public class ForwardOnlineLearning extends OnlineLearning {
     
@@ -40,16 +38,17 @@ public class ForwardOnlineLearning extends OnlineLearning {
     public synchronized void execute() throws Exception {
         logger.info("Building outlink classifier...");
         frontierManager.getFrontier().commit();
-        HashSet<String> relevantUrls = TargetStorageMonitor.readRelevantUrls(dataPath);
+        
+        logger.info("Reading relevant URLs...");
+        Set<String> relevantUrls = TargetStorageMonitor.readRelevantUrls(dataPath);
+        logger.info("Read {} relevant URLs.", relevantUrls.size());
+        
+        logger.info("Training new forward link classifier...");
         LinkClassifier outlinkClassifier = classifierBuilder.forwardlinkTraining(relevantUrls, levels, "LinkClassifierImpl");
-        frontierManager.setOutlinkClassifier(outlinkClassifier);
-        LinkNeighborhood[] outLNs = frontierManager.getGraphRepository().getLNs();
-        for (int i = 0; i < outLNs.length; i++) {
-            if (outLNs[i] != null) {
-                LinkRelevance lr = outlinkClassifier.classify(outLNs[i]);
-                frontierManager.getFrontier().update(lr);
-            }
-        }
+        
+        logger.info("Updating new forward link classifier...");
+        frontierManager.updateOutlinkClassifier(outlinkClassifier);
+        
         frontierManager.getFrontier().commit();
     }
 

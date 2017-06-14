@@ -36,6 +36,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
+import focusedCrawler.link.frontier.Visitor;
 import focusedCrawler.util.persistence.bdb.BerkeleyDBHashTable;
 import focusedCrawler.util.persistence.rocksdb.RocksDBHashtable;
 
@@ -74,8 +75,15 @@ public class PersistentHashtable<T> {
             this.persistentTable = new RocksDBHashtable<>(file.getPath(), contentClass);
         }
 	}
-	
-	public List<Tuple<T>> getTable() {
+
+    /**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls.
+     * 
+     * @return
+     * @throws Exception
+     */
+    @Deprecated
+    public List<Tuple<T>> getTable() {
         try {
             return persistentTable.listElements();
         } catch (Exception e) {
@@ -83,11 +91,12 @@ public class PersistentHashtable<T> {
         }
 	}
 
-	/**
-	 * Use method {@link #getTable()} instead.
-	 * @return
-	 */
-	@SuppressWarnings("unchecked")
+    /**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls.
+     * 
+     * @return
+     */
+    @SuppressWarnings("unchecked")
 	@Deprecated
 	public Tuple<T>[] getTableAsArray() {
 		List<Tuple<T>> table = getTable();
@@ -163,6 +172,12 @@ public class PersistentHashtable<T> {
             throw new RuntimeException("Failed to open hashtable iterator.", e);
         }
     }
-    
-   
+
+    public void visitTuples(Visitor<Tuple<T>> visitor) {
+        TupleIterator<T> it = iterator();
+        while (it.hasNext()) {
+            visitor.visit(it.next());
+        }
+    }
+
 }
