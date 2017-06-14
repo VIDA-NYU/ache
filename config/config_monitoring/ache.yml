@@ -1,0 +1,32 @@
+#
+# Example of configuration for recrawling seed pages and crawling all outlinks
+# discovered from the these seeds
+#
+
+# Store pages classified as irrelevant pages by the target page classifier
+target_storage.store_negative_pages: true
+# Allow crawling links from irrelevant pages
+target_storage.hard_focus: false
+
+# Enable "seed scope" to only crawl pages from the seed sites
+link_storage.link_strategy.use_scope: true
+
+# Set link classifier to crawl only links with 1-level from the seeds
+link_storage.link_classifier.type: MaxDepthLinkClassifier
+
+# Allways select top-k links with highest priority
+link_storage.link_selector: TopkLinkSelector
+
+# Recrawl links with relevance >=299 (i.e. seeds) using a fixed interval
+link_storage.recrawl_selector: MinRelevanceRecrawlSelector
+link_storage.recrawl_selector.relevance.min_relevance: 299
+link_storage.recrawl_selector.relevance.interval: 5
+
+# Configure the minimum time interval (in milliseconds) to wait between requests
+# to the same host to avoid overloading servers. If you are crawling your own
+# web site, you can descrease this value to speed-up the crawl.
+link_storage.scheduler.host_min_access_interval: 1000
+
+# Configure the User-Agent of the crawler
+crawler_manager.downloader.user_agent.name: ACHE
+crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache

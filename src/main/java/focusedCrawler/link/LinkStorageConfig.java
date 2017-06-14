@@ -83,6 +83,12 @@ public class LinkStorageConfig {
     @JsonProperty("link_storage.recrawl_selector.sitemaps.interval")
     private int sitemapsRecrawlInterval = 60;
 
+    @JsonProperty("link_storage.recrawl_selector.relevance.min_relevance")
+    private double minRelevanceRecrawl = 299d;
+
+    @JsonProperty("link_storage.recrawl_selector.relevance.interval")
+    private int recrawlMinRelevanceInterval = 60;
+
     @JsonProperty("link_storage.scheduler.host_min_access_interval")
     private int schedulerHostMinAccessInterval = 5000;
 
@@ -159,6 +165,14 @@ public class LinkStorageConfig {
 
     public int getSitemapsRecrawlInterval() {
         return sitemapsRecrawlInterval;
+    }
+
+    public double getRecrawlMinRelevanceValue() {
+        return minRelevanceRecrawl;
+    }
+
+    public int getRecrawlMinRelevanceInterval() {
+        return recrawlMinRelevanceInterval;
     }
 
     public StorageConfig getStorageServerConfig() {
