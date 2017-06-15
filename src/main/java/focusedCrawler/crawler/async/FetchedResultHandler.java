@@ -1,10 +1,14 @@
 package focusedCrawler.crawler.async;
 
+import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
+import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.crawler.crawlercommons.fetcher.IOFetchException;
+
+import java.net.UnknownHostException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
-import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.ParsedData;
@@ -16,8 +20,10 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
     private static final Logger logger = LoggerFactory.getLogger(FetchedResultHandler.class);
     
     private Storage targetStorage;
+    private Storage linkStorage;
 
-    public FetchedResultHandler(Storage targetStorage) {
+    public FetchedResultHandler(Storage linkStorage, Storage targetStorage) {
+        this.linkStorage = linkStorage;
         this.targetStorage = targetStorage;
     }
     
@@ -38,7 +44,12 @@ public class FetchedResultHandler implements HttpDownloader.Callback {
         if(e instanceof AbortedFetchException) {
             AbortedFetchException afe = (AbortedFetchException) e;
             logger.info("Download aborted: \n>URL: {}\n>Reason: {}", link.getURL().toString(), afe.getAbortReason());
-        } else {
+        }else if (e.getCause() instanceof UnknownHostException){
+            IOFetchException iofe = (IOFetchException) e;
+            ((LinkStorage)linkStorage).addToBlackList(iofe.getUrl());
+            logger.info("UnknownHostException - Domain added to Blacklist. URL: "+iofe.getUrl());
+        }
+        else {
             logger.info("Failed to download URL: {}\n>Reason: {}", link.getURL().toString(), e.getMessage());
         }
     }

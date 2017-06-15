@@ -7,6 +7,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import java.util.Collections;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,12 +53,13 @@ public class LinkStorage extends StorageDefault {
 
     private final FrontierManager frontierManager;
     private final OnlineLearning onlineLearning;
+    private final Set<String> blackList = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());
 
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager) throws IOException {
         this(config, frontierManager, null);
     }
-    
+
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager,
                        OnlineLearning onlineLearning) throws IOException {
@@ -66,7 +70,7 @@ public class LinkStorage extends StorageDefault {
     }
 
     public void close(){
-        
+
         logger.info("Shutting down FrontierManager...");
         this.frontierManager.close();
         logger.info("done.");
@@ -74,7 +78,7 @@ public class LinkStorage extends StorageDefault {
 
     /**
      * This method inserts links from a given page into the frontier
-     * 
+     *
      * @param obj
      *            Object - page containing links
      * @return Object
@@ -82,7 +86,7 @@ public class LinkStorage extends StorageDefault {
     public Object insert(Object obj) throws StorageException {
         if(obj instanceof Page) {
             return insert((Page) obj);
-        } 
+        }
         else if(obj instanceof RobotsTxtHandler.RobotsData) {
             insert((RobotsTxtHandler.RobotsData) obj);
         }
@@ -91,7 +95,7 @@ public class LinkStorage extends StorageDefault {
         }
         return null;
     }
-    
+
     public void insert(RobotsTxtHandler.RobotsData robotsData) {
         for (String sitemap : robotsData.sitemapUrls) {
             try {
@@ -101,7 +105,7 @@ public class LinkStorage extends StorageDefault {
             }
         }
     }
-    
+
     public void insert(SitemapXmlHandler.SitemapData sitemapData) {
         for (String link : sitemapData.links) {
             try {
@@ -111,7 +115,7 @@ public class LinkStorage extends StorageDefault {
             }
         }
         logger.info("Added {} URLs from sitemap.", sitemapData.links.size());
-        
+
         for (String sitemap : sitemapData.sitemaps) {
             try {
                 frontierManager.insert(new LinkRelevance(new URL(sitemap), 299, LinkRelevance.Type.SITEMAP));
@@ -121,8 +125,8 @@ public class LinkStorage extends StorageDefault {
         }
         logger.info("Added {} child sitemaps.", sitemapData.sitemaps.size());
     }
-    
-    
+
+
     public Object insert(Page page) throws StorageException {
         try {
             if (getBacklinks && page.isAuth()) {
@@ -151,14 +155,40 @@ public class LinkStorage extends StorageDefault {
 
     /**
      * This method sends a link to crawler
-     * @throws DataNotFoundException 
+     * @throws DataNotFoundException
      */
     public synchronized Object select(Object obj) throws StorageException, DataNotFoundException {
         try {
-            return frontierManager.nextURL();
+            LinkRelevance link = frontierManager.nextURL();
+            if(!blackList.contains(link.getTopLevelDomainName())){
+                return link;
+            }else {
+                logger.info("Dead Domain ignored: "+link.getTopLevelDomainName());
+                return select(null);
+            }
         } catch (FrontierPersistentException e) {
             throw new StorageException(e.getMessage(), e);
         }
+    }
+
+    public synchronized void addToBlackList(String url){
+        try{
+            blackList.add(new LinkRelevance(url,0d).getTopLevelDomainName());
+        }catch (MalformedURLException mue){
+            logger.info("MalformedURLException: "+url);
+        }
+    }
+
+    public synchronized void removeFromBlackList(String url){
+        try{
+            blackList.remove(new LinkRelevance(url,0d).getTopLevelDomainName());
+        }catch (MalformedURLException mue){
+            logger.info("MalformedURLException: "+url);
+        }
+    }
+
+    public Set<String> getBlackList(){
+        return blackList;
     }
 
     public static void runServer(String configPath, String seedFilePath,
@@ -177,14 +207,14 @@ public class LinkStorage extends StorageDefault {
             logger.error("Problem while starting LinkStorage.", e);
         }
     }
-    
-    public static Storage createLinkStorage(String configPath, String seedFile, 
+
+    public static Storage createLinkStorage(String configPath, String seedFile,
                                             String dataPath, String modelPath,
                                             LinkStorageConfig config,
                                             MetricsManager metricsManager)
                                             throws FrontierPersistentException,
                                                    IOException {
-        
+
         Path stoplistPath = Paths.get(configPath, "/stoplist.txt");
         StopList stoplist;
         if(Files.exists(stoplistPath)) {
@@ -192,7 +222,7 @@ public class LinkStorage extends StorageDefault {
         } else {
             stoplist = StopListFile.DEFAULT;
         }
-        
+
         LinkClassifierFactory.setDefaultStoplist(stoplist);
 
         FrontierManager frontierManager = FrontierManagerFactory.create(config, configPath, dataPath, modelPath, seedFile, metricsManager);
@@ -201,7 +231,7 @@ public class LinkStorage extends StorageDefault {
         if (config.isUseOnlineLearning()) {
             onlineLearning = createOnlineLearning(dataPath, config, stoplist, frontierManager);
         }
-        
+
         return new LinkStorage(config, frontierManager, onlineLearning);
     }
 
