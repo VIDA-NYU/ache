@@ -9,7 +9,7 @@ The process for running an in-depth crawl is simpler than for a focused crawl. A
 
 The following steps explain how to run such a crawl using ACHE.
 
-#. Prepare Seeds
+#. Prepare the seeds file
     A seeds file should contain URLs of all websites that need to be crawled. A sample seeds file can be seen at `config/sample.seeds <https://github.com/ViDA-NYU/ache/blob/master/config/sample.seeds>`_.
 
 #. Create an ``ache.yml`` configuration file
