@@ -10,7 +10,7 @@ Running using Docker
 
 **Prerequisite:** You will need to install a recent version of Docker. See https://docs.docker.com/engine/installation/ for details on how to install Docker for your platform.
 
-We publish pre-built docker images on [Docker Hub](https://hub.docker.com/r/vidanyu/ache/) for each released version.
+We publish pre-built docker images on `Docker Hub <https://hub.docker.com/r/vidanyu/ache/>`_ for each released version.
 You can run the latest image using::
 
   docker run -p 8080:8080 vidanyu/ache:latest
@@ -23,7 +23,7 @@ Alternatively, you can build the image yourself and run it::
   docker build -t ache .
   docker run -p 8080:8080 ache
 
-The [Dockerfile](https://github.com/ViDA-NYU/ache/blob/master/Dockerfile) exposes two data volumes so that you can mount a directory with your configuration files (at `/config`) and preserve the crawler stored data (at `/data`) after the container stops.
+The `Dockerfile <https://github.com/ViDA-NYU/ache/blob/master/Dockerfile>`_ exposes two data volumes so that you can mount a directory with your configuration files (at ``/config``) and preserve the crawler stored data (at ``/data``) after the container stops.
 
 
 Build from source with Gradle
