@@ -23,7 +23,7 @@ class DomainNode {
         this.domainName = domainName;
         this.lastAccessTime = lastAccessTime;
         int initialCapacity = 50;
-        this.links = new PriorityQueue<LinkRelevance>(initialCapacity, LinkRelevance.DESC_ORDER_COMPARATOR);
+        this.links = new PriorityQueue<LinkRelevance>(initialCapacity, LinkRelevance.DESC_ABS_ORDER_COMPARATOR);
     }
     
     public boolean isEmpty() {
