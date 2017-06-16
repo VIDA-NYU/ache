@@ -5,12 +5,10 @@ Some websites require users to login in order to access the content. ACHE suppor
 
 The following steps show how to crawl sites that require login using ACHE.
 
-#. Sign up to all the websites that you want to crawl.
-
 #. Get the cookie for each website using a web browser and also the user-agent string of that browser. 
-The following instructions assume that you are using Chrome browser, although it should be similar with other browsers (i.e., Firefox and IE). For each website, repeat as follows:
+       The following instructions assume that you are using Chrome browser, although it should be similar with other browsers (i.e., Firefox and IE). For each website, repeat as follows:
 
-        * Login to the website.
+        * Sign up and login to the website.
         
         * Right click and select ``Inspect``. It will show the Developer Tools of the browser. 
     
