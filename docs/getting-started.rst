@@ -1,6 +1,8 @@
 Getting Started
 ###############
 
+*Note: you need to have the Java runtime installed to install and run ACHE (http://www.oracle.com/technetwork/java/javase/downloads)*
+
 #. Clone ACHE's repository::
 
     git clone https://github.com/ViDA-NYU/ache.git
