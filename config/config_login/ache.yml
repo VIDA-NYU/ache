@@ -3,20 +3,25 @@
 # require with cookies (commentted lines in the end of this file need to be
 # uncommentted and filled properly).
 #
-target_storage.data_format.type: ELASTICSEARCH
-target_storage.data_format.elasticsearch.rest.hosts:
-  - http://localhost:9200
-target_storage.english_language_detection_enabled: false
-link_storage.max_pages_per_domain: 1000000000
+
+# Enables "scope" to only crawl pages that belong to domains of seed URLs
 link_storage.link_strategy.use_scope: true
-link_storage.link_strategy.outlinks: true
+
+# Select URLs from all domains during link selection phase,
 link_storage.link_selector: MaximizeWebsitesLinkSelector
-link_storage.download_sitemap_xml: true
+
+# Configure the minimum time interval (in milliseconds) to wait between requests
+# to the same host to avoid overloading servers. If you are crawling your own
+# web site, you can descrease this value to speed-up the crawl.
 link_storage.scheduler.host_min_access_interval: 2000
-link_storage.scheduler.max_links: 1000
+
+# Enables discovery of links using the Sitemaps protocol
+link_storage.download_sitemap_xml: true
+
+# Configure the name and web address of your crawler
 crawler_manager.downloader.user_agent.name: ACHE
 crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
-link_storage.link_classifier.type: LinkClassifierImpl
+
 #
 # Configurations for crawling using cookies
 #
@@ -28,6 +33,6 @@ link_storage.link_classifier.type: LinkClassifierImpl
 
 #
 # Some cookies only work with the same user-agent string that created it.
-# You can change it using the following config line:
+# You can set it using the following config line:
 #
 #crawler_manager.downloader.user_agent.string: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36

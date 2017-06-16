@@ -1,22 +1,23 @@
-Running in-depth website crawl with cookies
-##########################################
+Running a In-Depth Website Crawl with Cookies
+#############################################
 
-Some websites require users to login in order to access the content. ACHE supports users to simulate the user login to crawl these websites by sending the cookies along with HTTP requests. 
+Some websites require users to login in order to access its content.
+ACHE allows crawling these type of websites by simulating the user login through sending the cookies along with HTTP requests.
 
 The following steps show how to crawl sites that require login using ACHE.
 
-#. Get the cookie for each website using a web browser and also the user-agent string of that browser. 
-       The following instructions assume that you are using Chrome browser, although it should be similar with other browsers (i.e., Firefox and IE). For each website, repeat as follows:
+#. Get the cookies for each website using a web browser and also the user-agent string of that browser
+       The following instructions assume that you are using Chrome browser, although it should be similar with other browsers (i.e., Firefox and IE). For each website, repeat the following steps:
 
         * Sign up and login to the website.
         
-        * Right click and select ``Inspect``. It will show the Developer Tools of the browser. 
+        * Right click anywhere in the page and select ``Inspect``. It will show the Developer Tools of the browser. 
     
         * In the Developer Tools Bar on top, select the ``Network`` Tab.
 
         * Reload the page, to trigger the browser sending a request to the website. Then we will inspect this request to retrieve the cookie and user-agent string. 
 
-        * Select the first request in the ``Name`` panel on the left and the request header will be displayed in the right panel. Copy the values from the keys ``cookie`` and ``user-agent``. We only get the user-agent string once.
+        * Select the first request in the ``Name`` panel on the left and a new panel with a tab named "Headers" will show up. Look for the section "Request Headers". Under this section, you need to locate and copy the values from the keys ``cookie`` and ``user-agent`` into ACHE's configuration file as shown in the next section.
 
 #. Create an ``ache.yml`` configuration file
     The configuration file will contain the settings and rules the crawler will adhere to. A sample of the config file for running an in-depth website crawl with cookies is provided in `config/config_login/ache.yml <https://github.com/ViDA-NYU/ache/blob/master/config/config_login/ache.yml>`_ containing the following important parameters. Note that all the parameters are the same as ones used in in-depth website crawl except ``crawler_manager.downloader.user_agent.string`` and ``crawler_manager.downloader.cookies``
@@ -29,7 +30,7 @@ The following steps show how to crawl sites that require login using ACHE.
 
         * ``crawler_manager.downloader.user_agent.string`` - The user-agent string acquired in the previous step.
     
-        * ``crawler_manager.downloader.cookies`` - List of website and it's cookie acquired in the previous step. For example:::
+        * ``crawler_manager.downloader.cookies`` - A list of the website and its cookies acquired in the previous step. For example::
 
                     - domain: website1.com
                       cookie: cookie1
@@ -37,7 +38,7 @@ The following steps show how to crawl sites that require login using ACHE.
                       cookie: cookie2
 
 
-#. Prepare Seeds
+#. Prepare the seeds file
     A seeds file should contain URLs of all websites that need to be crawled. A sample seeds file can be seen at `config/sample.seeds <https://github.com/ViDA-NYU/ache/blob/master/config/sample.seeds>`_.
 
 #. Run ACHE
