@@ -20,6 +20,9 @@ ACHE supports many features, such as:
 - REST API and web-based user interface for crawler monitoring
 - Crawling of hidden services using TOR proxies
 
+## Documentation
+
+More info is available on the project's [documentation](http://ache.readthedocs.io/en/latest/).
 
 ## Installation
 
@@ -37,11 +40,14 @@ cd ache
 ./gradlew installDist
 ```
 
-which will generate an installation package under `ache/build/install/`. You can then make ACHE command line available in the terminal by adding ACHE to the PATH:
+which will generate an installation package under `ache/build/install/`.
+To install ACHE binaries into ``/opt`` and make it available on the command-line run:
 
-```bash
-export ACHE_HOME="{path-to-cloned-ache-repository}/build/install/ache"
-export PATH="$ACHE_HOME/bin:$PATH"
+```
+sudo mv build/install/ache /opt/
+echo 'export ACHE_HOME="/opt/ache"' | sudo tee -a /etc/profile.d/ache.sh
+echo 'export PATH="$ACHE_HOME/bin:$PATH"' | sudo tee -a /etc/profile.d/ache.sh
+sh /etc/profile.d/ache.sh
 ```
 
 ### Running using Docker
@@ -116,12 +122,6 @@ ACHE can store data in different data formats. The data format can be configured
 - ELATICSEARCH - raw content and metadata is indexed in an ElasticSearch index.
 
 For more details on data format configurations, see the [data formats documentation](http://ache.readthedocs.io/en/latest/data-formats.html) page.
-
-
-## Documentation
-
-More info is available on the project's [documentation](http://ache.readthedocs.io/en/latest/) and on the [wiki](https://github.com/ViDA-NYU/ache/wiki).
-
 
 ## Bug Reports and Questions
 

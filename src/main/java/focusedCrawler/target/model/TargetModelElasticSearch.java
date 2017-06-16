@@ -30,22 +30,23 @@ public class TargetModelElasticSearch {
     }
 
     public TargetModelElasticSearch(Page page) {
-
         this.url = page.getURL().toString();
         this.retrieved = new Date();
         this.domain = page.getDomainName();
         this.html = page.getContentAsString();
-        this.words = page.getParsedData().getWords();
-        this.wordsMeta = page.getParsedData().getWordsMeta();
-        this.title = page.getParsedData().getTitle();
-        this.isRelevant = page.getTargetRelevance().isRelevant() ? "relevant" : "irrelevant";
-        this.relevance = page.getTargetRelevance().getRelevance();
-        try {
-            this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
-        } catch (BoilerpipeProcessingException | ArrayIndexOutOfBoundsException e) {
-            this.text = "";
-        }
         this.topPrivateDomain = LinkRelevance.getTopLevelDomain(page.getDomainName());
+        if (page.isHtml()) {
+            this.words = page.getParsedData().getWords();
+            this.wordsMeta = page.getParsedData().getWordsMeta();
+            this.title = page.getParsedData().getTitle();
+            this.isRelevant = page.getTargetRelevance().isRelevant() ? "relevant" : "irrelevant";
+            this.relevance = page.getTargetRelevance().getRelevance();
+            try {
+                this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
+            } catch (BoilerpipeProcessingException | ArrayIndexOutOfBoundsException e) {
+                this.text = "";
+            }
+        }
     }
 
     public TargetModelElasticSearch(TargetModelCbor model) {
