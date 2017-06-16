@@ -13,6 +13,7 @@ ACHE also includes **link classifiers**, which allows it decide the best order i
     getting-started
     tutorial-focused-crawl
     tutorial-in-depth-crawl
+    tutorial-crawling-cookie
     tutorial-crawling-tor
     page-classifiers
     crawling-strategies
