@@ -20,6 +20,9 @@ ACHE supports many features, such as:
 - REST API and web-based user interface for crawler monitoring
 - Crawling of hidden services using TOR proxies
 
+## Documentation
+
+More info is available on the project's [documentation](http://ache.readthedocs.io/en/latest/).
 
 ## Installation
 
@@ -119,12 +122,6 @@ ACHE can store data in different data formats. The data format can be configured
 - ELATICSEARCH - raw content and metadata is indexed in an ElasticSearch index.
 
 For more details on data format configurations, see the [data formats documentation](http://ache.readthedocs.io/en/latest/data-formats.html) page.
-
-
-## Documentation
-
-More info is available on the project's [documentation](http://ache.readthedocs.io/en/latest/) and on the [wiki](https://github.com/ViDA-NYU/ache/wiki).
-
 
 ## Bug Reports and Questions
 
