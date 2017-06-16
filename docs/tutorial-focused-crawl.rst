@@ -53,3 +53,7 @@ In what follows, we provide details on how to run a focused crawl using ACHE.
       ache startCrawl -c <Path of Config Folder> -o <Path of Output Folder> -s <Path of Seeds File> -m <Path of Model Folder>
 
     ACHE will continue crawling until interrupted using ``CTRL+C``.
+    
+        .. attention::
+        If you are running ACHE from Docker, you should use the following command: 
+          docker run -p 8080:8080 vidanyu/ache:latest startCrawl -c <Path of Config Folder> -o <Path of Output Folder> -s <Path of Seeds File> -m <Path of Model Folder>
