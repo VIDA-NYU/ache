@@ -104,12 +104,14 @@ where,
 - `<model-path>` is the path to the model directory that contains the file `pageclassifier.yml`.
 - `<data-output-path>` is the path to the data output directory.
 
-Example of running ACHE using our sample data:
+Example of running ACHE using the sample *pre-trained page classifier model* and the sample *seeds file* available in the repository:
 
 ```
 ache startCrawl -o output -c config/sample_config -s config/sample.seeds -m config/sample_model
 ```
 
+The crawler will run and print the logs to the console. Hit ``Ctrl+C`` at any time to stop it (it may take some time).
+For long crawls, you should run ACHE in background using a tool like nohup.
 
 ### Data Formats
 
