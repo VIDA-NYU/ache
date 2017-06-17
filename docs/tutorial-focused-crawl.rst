@@ -54,10 +54,12 @@ In what follows, we provide details on how to run a focused crawl using ACHE.
 
     ACHE will continue crawling until interrupted using ``CTRL+C``.
     
-    For large crawls, you should use "nohup":
-          nohup ache startCrawl -c <Path of Config Folder> -o <Path of Output Folder> -s <Path of Seeds File> -m <Path of Model Folder>
-
+    For large crawls, you should consider using ``nohup`` for running the process in background::
     
-        .. attention::
-        If you are running ACHE from Docker, you should use the following command: 
-          docker run -p 8080:8080 vidanyu/ache:latest startCrawl -c <Path of Config Folder> -o <Path of Output Folder> -s <Path of Seeds File> -m <Path of Model Folder>
+          nohup ache startCrawl -c <Path of Config Folder> -o <Path of Output Folder> -s <Path of Seeds File> -m <Path of Model Folder> > crawler-log.txt &
+
+    If you are running ACHE from **Docker**, you should use the following command::
+    
+      docker run -v $CONFIG:/config -v $DATA:/data -p 8080:8080 vidanyu/ache:latest startCrawl -c /config/ -s /config/seeds.txt -o /data/ -m /config/model/
+      
+    where ``$DATA`` is the directory where the crawled data will be stored, and ``$CONFIG`` is the directory where the ``ache.yml``, the ``seeds.txt`` file, and a directory named ``model`` (which contains the page classification model) are located.
