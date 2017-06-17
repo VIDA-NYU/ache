@@ -31,6 +31,7 @@ ACHE supports many features, such as:
     data-formats
     link-filters
     seed-finder
+    faq
 
 Links
 -----
