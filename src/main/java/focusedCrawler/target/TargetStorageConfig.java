@@ -25,7 +25,7 @@ public class TargetStorageConfig {
     private long maxFileSize = 256*1024*1024;
     
     @JsonProperty("target_storage.visited_page_limit")
-    private int visitedPageLimit = 90000000;
+    private int visitedPageLimit = Integer.MAX_VALUE;
     @JsonProperty("target_storage.hard_focus")
     private boolean hardFocus = true;
     @JsonProperty("target_storage.bipartite")
