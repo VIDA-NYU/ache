@@ -70,8 +70,10 @@ public class FetcherFactory {
         }
         
         torFetcher.setProxy(torProxy.getProtocol(), torProxy.getHost(), torProxy.getPort());
-        torFetcher.setSocketTimeout(1000*1000);
-        
+        torFetcher.setMaxRetryCount(3);
+        torFetcher.setSocketTimeout(5*60*1000);
+        torFetcher.setConnectionTimeout(5*60*1000);
+        torFetcher.setConnectionRequestTimeout(5*60*1000);
         return new TorProxyFetcher(torFetcher, httpFetcher);
     }
 
