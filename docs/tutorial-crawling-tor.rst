@@ -30,7 +30,7 @@ The following steps explain in details how to crawl ``.onion`` sites using ACHE.
   (if you already cloned the git repository, you won't need to download them).
   Download the following files and put them in single directory named ``config_docker_tor``:
 
-  #. `tor.seeds <https://raw.githubusercontent.com/ViDA-NYU/ache/master/config/config_docker_tor/tor.seeds>`_: a plain text containing the URLs of the sites you want to crawl. In this example, the file contains a few URLs taken from https://thehiddenwiki.org/.
+  #. `tor.seeds <https://raw.githubusercontent.com/ViDA-NYU/ache/master/config/config_docker_tor/tor.seeds>`_: a plain text containing the URLs of the sites you want to crawl. In this example, the file contains a few URLs taken from https://thehiddenwiki.org/. If you want to crawl specific websites, you should list them on this file (one URL per line).
   #. `ache.yml <https://raw.githubusercontent.com/ViDA-NYU/ache/master/config/config_docker_tor/ache.yml>`_: the configuration file for ACHE. It basically configures ACHE to run a in-depth website crawl of the seed URLs, to index crawled pages in the Elasticsearch container, and to download .onion addresses using the TOR proxy container.
   #. `docker-compose.yml <https://raw.githubusercontent.com/ViDA-NYU/ache/master/config/config_docker_tor/docker-compose.yml>`_: a configuration file for Docker, which specifies which containers should be used. It starts an Elasticsearch node, the TOR proxy, and ACHE crawler.
 
@@ -40,24 +40,26 @@ The following steps explain in details how to crawl ``.onion`` sites using ACHE.
 
     mkdir /tmp/config_docker_tor/
     cd /tmp/config_docker_tor/
-    wget https://raw.githubusercontent.com/ViDA-NYU/ache/master/config/config_docker_tor/ache.yml
-    wget https://raw.githubusercontent.com/ViDA-NYU/ache/master/config/config_docker_tor/docker-compose.yml
-    wget https://raw.githubusercontent.com/ViDA-NYU/ache/master/config/config_docker_tor/tor.seeds
+    curl -O https://raw.githubusercontent.com/ViDA-NYU/ache/master/config/config_docker_tor/ache.yml
+    curl -O https://raw.githubusercontent.com/ViDA-NYU/ache/master/config/config_docker_tor/docker-compose.yml
+    curl -O https://raw.githubusercontent.com/ViDA-NYU/ache/master/config/config_docker_tor/tor.seeds
 
 **2. Start the Docker containers**
 
-  Enter the directory ``config_docker_tor`` you just created and start the containers with docker-compose:
+  Enter the directory ``config_docker_tor`` you just created and start the containers with docker-compose::
 
-  .. code:: bash
+      docker-compose up -d
 
-      docker-compose up
+  This command will automatically download all docker images and start all necessary containers in background mode.
+  The downloads may take a while to finish depending on your Internet connection speed.
 
-  This command will automatically download all docker images and start all necessary containers. The downloads may take a while to finish depending on your Internet connection speed.
 
 **3. Monitor the crawl progress**
 
-  Once all docker images have been downloaded and the all services have been started, you will be able to open ACHE's web interface at http://localhost:8080 a see some crawl metrics.
-  You can also search the indexed pages crawled using the web interface at http://localhost:8080/search.
+  Once all docker images have been downloaded and the all services have been started, you will be able to open ACHE's web interface at http://localhost:8080 to see some crawl metrics.
+  If you want to visualize the crawler logs, you can run::
+
+      docker-compose logs -f
 
 **4. Stop the Docker containers**
 
@@ -67,7 +69,7 @@ The following steps explain in details how to crawl ``.onion`` sites using ACHE.
 
       docker-compose down
 
-**Understanding the `docker-compose.yml` file**
+**Understanding the docker-compose.yml file**
 
 Basically, in ``docker-compose.yml`` we configure a container for the TOR proxy
 named ``torproxy`` that listens on the port 8118:
@@ -120,7 +122,7 @@ An finally, we configure a container named ``ache``. Note that in order to make 
       - elasticsearch
       - torproxy
 
-**Understanding the `ache.yml` file**
+**Understanding the ache.yml file**
 
 The ``ache.yml`` file basically configures ACHE to index crawled data in the ``elasticsearch`` container:
 
