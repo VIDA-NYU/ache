@@ -3,7 +3,7 @@ Running a Focused Crawl
 
 A focused (or topical) crawler crawls the Web in search of pages that belong to a given topic (or domain). To run a focused crawl using ACHE, you need to provide:
 
-- Samples of relevant and irrelevant pages: ACHE analyzes these pages, and learns a classification model that is able to determine the relevance of the pages retrieved during the crawl.  
+- Samples of relevant and irrelevant pages: ACHE analyzes these pages, and learns a classification model that is able to determine the relevance of the pages retrieved during the crawl.
 
 - A list of seed URLs, which will be the starting point for the crawl. The seeds are just HTTP or HTTPS links of pages that are relevant to the topic -- they can be the same as relevant pages supplied during model generation. ACHE will start crawling the Web from these links.
 
@@ -53,13 +53,13 @@ In what follows, we provide details on how to run a focused crawl using ACHE.
       ache startCrawl -c <Path of Config Folder> -o <Path of Output Folder> -s <Path of Seeds File> -m <Path of Model Folder>
 
     ACHE will continue crawling until interrupted using ``CTRL+C``.
-    
+
     For large crawls, you should consider using ``nohup`` for running the process in background::
-    
-          nohup ache startCrawl -c <Path of Config Folder> -o <Path of Output Folder> -s <Path of Seeds File> -m <Path of Model Folder> > crawler-log.txt &
+
+      nohup ache startCrawl -c <Path of Config Folder> -o <Path of Output Folder> -s <Path of Seeds File> -m <Path of Model Folder> > crawler-log.txt &
 
     If you are running ACHE from **Docker**, you should use the following command::
-    
+
       docker run -v $CONFIG:/config -v $DATA:/data -p 8080:8080 vidanyu/ache:latest startCrawl -c /config/ -s /config/seeds.txt -o /data/ -m /config/model/
-      
+
     where ``$DATA`` is the directory where the crawled data will be stored, and ``$CONFIG`` is the directory where the ``ache.yml``, the ``seeds.txt`` file, and a directory named ``model`` (which contains the page classification model) are located.
