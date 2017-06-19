@@ -66,6 +66,7 @@ public class Page implements Serializable {
         this.responseHeaders = target.getResponseHeaders();
         this.fetchTime = target.getFetchTime();
         this.contentType = target.getContentType();
+        this.targetRelevance = target.getRelevance();
 
     }
 
