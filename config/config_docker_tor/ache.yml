@@ -1,8 +1,3 @@
-# Configure ACHE to index pages in Elasticsearch container
-target_storage.data_format.type: ELASTICSEARCH
-target_storage.data_format.elasticsearch.rest.hosts:
-  - http://elasticsearch:9200
-
 # Basic configuration in-depth web site crawling
 link_storage.link_strategy.use_scope: true
 link_storage.link_strategy.outlinks: true
