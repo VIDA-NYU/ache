@@ -48,7 +48,7 @@ In what follows, we provide details on how to run a focused crawl using ACHE.
 
 
 #. Run ACHE
-    Finally, when you have created the *model*, the config file *ache.yml*, and the *seeds file*, you can run ACHE in the terminal:
+    Finally, when you have created the *model*, the config file *ache.yml*, and the *seeds file*, you can run ACHE in the terminal::
 
       ache startCrawl -c <Path of Config Folder> -o <Path of Output Folder> -s <Path of Seeds File> -m <Path of Model Folder>
 
