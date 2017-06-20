@@ -21,6 +21,9 @@ import focusedCrawler.util.storage.StorageException;
 
 public class RobotsTxtHandler implements HttpDownloader.Callback {
 
+	private final boolean insertSiteMaps;
+    private final boolean disallowSitesInRobotRules;
+    
     @SuppressWarnings("serial")
     public static class RobotsData implements Serializable {
         public List<String> sitemapUrls = new ArrayList<>();
@@ -37,9 +40,11 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
     private Storage linkStorage;
     private String userAgentName;
 
-    public RobotsTxtHandler(Storage linkStorage, String userAgentName) {
+    public RobotsTxtHandler(Storage linkStorage, String userAgentName, boolean disallowSitesInRobotRules, boolean insertSiteMaps) {
         this.linkStorage = linkStorage;
         this.userAgentName = userAgentName;
+        this.insertSiteMaps = insertSiteMaps;
+        this.disallowSitesInRobotRules = disallowSitesInRobotRules;
     }
 
     @Override
@@ -84,16 +89,8 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
 
         
         try {
-            boolean insertSiteMaps = false;
-            boolean disallowSitesInRobotRules = false;
-            LinkStorage linkStorageTemp = null; 
-            if (linkStorage instanceof LinkStorage) {
-                linkStorageTemp = ((LinkStorage) linkStorage);
-                insertSiteMaps = linkStorageTemp.getInsertSiteMaps();
-                disallowSitesInRobotRules = linkStorageTemp.getDisallowSitesFromRobotsTxt();
-                if(disallowSitesInRobotRules){
-                    linkStorageTemp.insertRobotRules(link, robotRules);
-                }
+            if(disallowSitesInRobotRules){
+            	((LinkStorage) linkStorage).insertRobotRules(link, robotRules);
             }
             
             if(insertSiteMaps){

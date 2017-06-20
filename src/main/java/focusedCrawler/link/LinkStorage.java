@@ -29,6 +29,7 @@ import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.model.Page;
 import focusedCrawler.util.DataNotFoundException;
 import focusedCrawler.util.MetricsManager;
+import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageDefault;
 import focusedCrawler.util.storage.StorageException;
@@ -60,7 +61,6 @@ public class LinkStorage extends StorageDefault {
     private final FrontierManager frontierManager;
     private final OnlineLearning onlineLearning;
 
-    private final Map<String, BaseRobotRules> robotRulesMap;
     private final boolean insertSiteMaps;
     private final boolean disallowSitesInRobotsTxt;
 
@@ -74,7 +74,6 @@ public class LinkStorage extends StorageDefault {
         this.onlineLearning = onlineLearning;
         this.getBacklinks = config.getBacklinks();
         this.getOutlinks = config.getOutlinks();
-        this.robotRulesMap = new HashMap<String, BaseRobotRules>();
         this.disallowSitesInRobotsTxt = config.getDisallowSitesInRobotsFile();
         this.insertSiteMaps = config.getDownloadSitemapXml();
 
@@ -169,15 +168,7 @@ public class LinkStorage extends StorageDefault {
     public synchronized Object select(Object obj) throws StorageException, DataNotFoundException {
         try {
             LinkRelevance nextUrl = frontierManager.nextURL();
-            String domainName = nextUrl.getTopLevelDomainName();
-            if (domainName != null && robotRulesMap.containsKey(domainName)
-                    && !robotRulesMap.get(domainName).isAllowed(nextUrl.getURL().toString())) {
-                logger.info(
-                        "Ignoring link " + domainName + " as it is present in the robots file which is disallowed.");
-                return null;
-            } else {
-                return nextUrl;
-            }
+            return nextUrl;
         } catch (FrontierPersistentException e) {
             throw new StorageException(e.getMessage(), e);
         }
@@ -253,8 +244,7 @@ public class LinkStorage extends StorageDefault {
         if (link == null || robotRules == null) {
             throw new NullPointerException("Link argument or robot rules argument cannot be null");
         }
-        String domainName = link.getTopLevelDomainName();
-        robotRulesMap.put(domainName, robotRules);
+        frontierManager.getFrontier().insertRobotRules(link, robotRules);
     }
 
     /**

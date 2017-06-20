@@ -100,6 +100,14 @@ public class CrawlScheduler {
                     continue;
                 }
                 
+                String domainName = link.getTopLevelDomainName().trim();
+                if (domainName != null && frontier.getRobotRulesMap().get(domainName) != null
+                        && !frontier.getRobotRulesMap().get(domainName).isAllowed(link.getURL().toString())) {
+                    logger.info(
+                            "Ignoring link " + link.getURL().toString() + " as it is present in the robots file which is disallowed.");
+                    continue;
+                }
+                
                 uncrawledLinks++;
                 // check whether link can be download now according to politeness constraints 
                 if(scheduler.canDownloadNow(link)) {

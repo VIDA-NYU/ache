@@ -35,16 +35,19 @@ public class AsyncCrawler {
 
     
     public AsyncCrawler(Storage targetStorage, Storage linkStorage,
-            AsyncCrawlerConfig crawlerConfig, String dataPath,
+    		ConfigService config, String dataPath,
             MetricsManager metricsManager) {
         
         this.targetStorage = targetStorage;
         this.linkStorage = linkStorage;
+        AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
         this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig(), dataPath, metricsManager);
         
         this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
-        this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage, crawlerConfig.getDownloaderConfig().getUserAgentName()));
+        this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage, crawlerConfig.getDownloaderConfig().getUserAgentName()
+        		, config.getLinkStorageConfig().getDisallowSitesInRobotsFile()
+        		, config.getLinkStorageConfig().getDownloadSitemapXml()));
         
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
@@ -123,7 +126,7 @@ public class AsyncCrawler {
             Storage targetStorage = new StorageCreator(targetServerConfig).produce();
             
             AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig, dataPath, new MetricsManager());
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, config, dataPath, new MetricsManager());
             crawler.run();
 
         } catch (StorageFactoryException ex) {
