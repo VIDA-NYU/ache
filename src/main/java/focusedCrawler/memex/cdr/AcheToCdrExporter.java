@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.zip.GZIPOutputStream;
 
@@ -18,6 +21,16 @@ import focusedCrawler.tools.SimpleBulkIndexer;
 import focusedCrawler.util.CliTool;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
+
+import com.google.common.hash.HashCode; 
+import com.google.common.hash.HashFunction; 
+import com.google.common.hash.Hashing;
+import com.google.common.hash.Hasher;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 @Command(name="AcheToCdrExporter", description="Exports crawled data to CDR format")
 public class AcheToCdrExporter extends CliTool {
@@ -75,7 +88,23 @@ public class AcheToCdrExporter extends CliTool {
     @Option(name={"--output-es-bulk-size", "-obs"}, description="ElasticSearch bulk size")
     int bulkSize = 25;
 
-    
+    @Option(name={"--filetype", "-ft"}, description="image or html")
+	String fileType = "html";
+
+	//AWS S3 Support
+	
+    @Option(name={"--accesskey", "-ak"}, description="AWS ACCESS KEY ID")
+	String accessKeyID = "";
+
+    @Option(name={"--secretkey", "-sk"}, description="AWS SECRET KEY ID")
+	String secretKeyID = "";
+
+    @Option(name={"--bucket", "-bk"}, description="AWS S3 BUCKET NAME")
+    String bucketName = "";
+
+	private HashMap<String, CDR31MediaObject> mediaObjectCache = new HashMap<String, CDR31MediaObject>(); // key: original url
+	private S3Uploader s3Uploader = new S3Uploader(); // Requires initialization
+
     //
     // Runtime variables
     //
@@ -96,6 +125,8 @@ public class AcheToCdrExporter extends CliTool {
         System.out.println("Generating CDR file at: "+outputFile);
         System.out.println(" Compressed repository: "+compressData);
         System.out.println("      Hashed file name: "+hashFilename);
+
+		s3Uploader.init(this.accessKeyID, this.secretKeyID, this.bucketName);
         
         if(outputFile != null) {
             GZIPOutputStream gzipStream = new GZIPOutputStream(new FileOutputStream(outputFile));
@@ -115,9 +146,21 @@ public class AcheToCdrExporter extends CliTool {
             FilesTargetRepository repository = new FilesTargetRepository(inputPath);
             it = repository.iterator();
         }
-        
+        Iterator<TargetModelJson> it1 = it; // used for next pass
+
+		//Process media files
         while (it.hasNext()) {
             TargetModelJson pageModel = it.next();
+            try{
+				processMediaFile(pageModel);
+            } catch(Exception e) {
+                System.err.println("Failed to process record.\n" + e.toString());
+            }
+		}
+		
+		//Process html files
+        while (it1.hasNext()) {
+            TargetModelJson pageModel = it1.next();
             try{
                 processRecord(pageModel);
                 processedPages++;
@@ -130,13 +173,35 @@ public class AcheToCdrExporter extends CliTool {
         }
         System.out.printf("Processed %d pages\n", processedPages);
         
-        //it.close();
+        it.close();
+		it1.close();
         
         if(out != null) out.close();
         if(bulkIndexer!= null) bulkIndexer.close();
         
         System.out.println("done.");
     }
+
+	private void processMediaFile(TargetModelJson pageModel) throws IOException {
+		// What if contentType is empty but the object is an image. 
+		//
+        String contentType = pageModel.getContentType();
+		
+        if (contentType == null || contentType.isEmpty()) {
+            System.err.println("Ignoring URL with no content-type: " + pageModel.getUrl());
+            return;
+        }
+
+		if (!contentType.startsWith("image")) {
+			return;
+		}
+
+		if (cdrVersion != CDRVersion.CDRv31) {
+			return;
+		}
+
+		createCDR31MediaObject(pageModel);
+	}
 
     private void processRecord(TargetModelJson pageModel) throws IOException {
         String contentType = pageModel.getContentType();
@@ -205,9 +270,55 @@ public class AcheToCdrExporter extends CliTool {
         this.doc = doc;
     }
 
+	public void createCDR31MediaObject(TargetModelJson pageModel) throws IOException {
+		// Hash and upload to S3
+		String storedUrl = this.uploadMediaFile(pageModel.getContent()); 
+
+		// Creat Media Object for the image
+        CDR31MediaObject obj = new CDR31MediaObject();
+		obj.setContentType(pageModel.getContentType());
+        obj.setTimestampCrawl(new Date(pageModel.getFetchTime()));
+        obj.setObjOriginalUrl(pageModel.getUrl());
+		obj.setObjStoredUrl(storedUrl);
+        obj.setResponseHeaders(pageModel.getResponseHeaders());
+
+		//Save it for including into the HTML pages later
+		this.mediaObjectCache.put(pageModel.getUrl(), obj);
+	}
+	
+	public String uploadMediaFile(byte[] content) throws IOException {
+		HashFunction hf = Hashing.sha256();
+		Hasher hasher = hf.newHasher();
+		hasher.putBytes(content);
+		String hs = hasher.hash().toString();		
+		
+		String storedUrl = this.s3Uploader.upload(hs, content);
+		return storedUrl;
+	}
+
+	public String[] extractImgLinks(String html) {
+		HashSet<String> links = new HashSet();
+		Document doc = Jsoup.parse(html);
+        Elements media = doc.select("[src]");
+
+        for (Element src : media) {
+            if (src.tagName().equals("img")) {
+            	links.add(src.attr("abs:src"));
+			}
+        }
+		return links.toArray(new String[links.size()]);
+	}
+
     public void createCDR31DocumentJson(TargetModelJson pageModel) {
-        HashMap<String, Object> crawlData = new HashMap<>();
-        crawlData.put("response_headers", pageModel.getResponseHeaders());
+        //HashMap<String, Object> crawlData = new HashMap<>();
+        //crawlData.put("response_headers", pageModel.getResponseHeaders());
+		List<CDR31MediaObject> mediaObjects = new ArrayList();
+		String[] imgLinks = extractImgLinks(pageModel.getContentAsString());
+		for (String link:imgLinks) {
+			if (this.mediaObjectCache.containsKey(link)) {
+				mediaObjects.add(this.mediaObjectCache.get(link));
+			}
+		}
 
         CDR31Document.Builder builder = new CDR31Document.Builder()
                 .setUrl(pageModel.getUrl())
@@ -216,6 +327,7 @@ public class AcheToCdrExporter extends CliTool {
                 .setContentType(pageModel.getContentType())
                 .setResponseHeaders(pageModel.getResponseHeaders())
                 .setRawContent(pageModel.getContentAsString())
+				.setObjects(mediaObjects)
                 .setTeam("NYU")
                 .setCrawler("ACHE");
 
