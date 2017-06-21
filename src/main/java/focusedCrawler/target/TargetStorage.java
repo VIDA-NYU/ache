@@ -60,6 +60,15 @@ public class TargetStorage extends StorageDefault {
     public Object insert(Object obj) throws StorageException {
         Page page = (Page) obj;
 
+        // non-html pages saved directly
+        if (!page.isHtml()) {
+            page.setTargetRelevance(TargetRelevance.IRRELEVANT);
+            targetRepository.insert(page);
+            monitor.countPage(page, false, 0.0d);
+            logger.info("Non-HTML content found at: "+page.getURL()+" - saved content type: "+page.getContentType());
+            return null;
+        }
+
         if (config.isEnglishLanguageDetectionEnabled()) {
             // Only accept English language
             if (this.langDetector.isEnglish(page) == false) {
@@ -141,7 +150,7 @@ public class TargetStorage extends StorageDefault {
         
         //if one wants to use a classifier
         TargetClassifier targetClassifier = null;
-        if(config.isUseClassifier()){
+        if (modelPath != null && !modelPath.isEmpty()) {
             targetClassifier = TargetClassifierFactory.create(modelPath);
         }
 
