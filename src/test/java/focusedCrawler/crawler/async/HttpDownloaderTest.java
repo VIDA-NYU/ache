@@ -2,26 +2,51 @@ package focusedCrawler.crawler.async;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.drew.lang.annotations.NotNull;
+import com.google.common.collect.ImmutableMap;
+import focusedCrawler.config.ConfigService;
+import focusedCrawler.link.LinkStorage;
+import focusedCrawler.link.LinkStorageConfig;
+import focusedCrawler.link.frontier.Frontier;
+import focusedCrawler.link.frontier.FrontierManager;
+import focusedCrawler.link.frontier.FrontierPersistentException;
+import focusedCrawler.link.frontier.selector.LinkSelector;
+import focusedCrawler.link.frontier.selector.RandomLinkSelector;
+import focusedCrawler.util.DataNotFoundException;
+import focusedCrawler.util.LinkFilter;
+import focusedCrawler.util.MetricsManager;
+import focusedCrawler.util.persistence.PersistentHashtable;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 
 import com.sun.net.httpserver.HttpServer;
 
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
 import focusedCrawler.link.frontier.LinkRelevance;
+import org.junit.rules.TemporaryFolder;
+
+import javax.net.ssl.SSLException;
+import javax.net.ssl.SSLHandshakeException;
 
 public class HttpDownloaderTest {
     
     private HttpDownloader downloader;
-    
+
+    @Rule
+    public TemporaryFolder tempFolder = new TemporaryFolder();
+
     @Before
     public void setUp() {
         this.downloader = new HttpDownloader();
@@ -137,4 +162,67 @@ public class HttpDownloaderTest {
         httpServer.stop(0);
     }
 
+    @Test
+    public void SSLExceptionsTests() throws IOException, FrontierPersistentException{
+        int minimumAccessTimeInterval = 0;
+        int schedulerMaxLinks = 2;
+        boolean downloadSitemapXml = false;
+        LinkFilter emptyLinkFilter = new LinkFilter(new ArrayList<String>());
+        MetricsManager metricsManager = new MetricsManager();
+        LinkSelector linkSelector = new RandomLinkSelector();
+        Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, PersistentHashtable.DB.ROCKSDB);
+        String dataPath = tempFolder.newFolder().toString();
+        String modelPath = tempFolder.newFolder().toString();
+        Map<?, ?> props = ImmutableMap.of(
+                    "link_storage.scheduler.max_links", schedulerMaxLinks,
+                    "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
+                    "link_storage.download_sitemap_xml", downloadSitemapXml
+                    );
+        LinkStorageConfig config = new ConfigService(props).getLinkStorageConfig();
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                                linkSelector, null, emptyLinkFilter, metricsManager);
+        LinkStorage linkStorage = new LinkStorage(config,frontierManager);
+
+        FetchedResultHandler frh = new FetchedResultHandler(linkStorage,null);
+
+//      check if HTTP saved in frontier as HTTPS incase of SSL exception
+        LinkRelevance link = new LinkRelevance("http://www.sikla.co.uk/",1d);
+        frh.failed(link,new SSLException("handshake_failure",new SSLHandshakeException("handshake_failure")));
+
+        LinkRelevance newLink = null;
+        try {
+            newLink = (LinkRelevance) frontierManager.nextURL();
+        }catch (DataNotFoundException dnfe){}
+
+        assertThat(newLink,is(notNullValue()));
+        assertThat(newLink.getURL().toString(),is("https://www.sikla.co.uk/"));
+
+//      check if HTTPS saved in frontier as HTTP incase of SSL exception
+        LinkRelevance link2 = new LinkRelevance("https://www.pseg.com/",1d);
+        frh.failed(link2,new SSLException("handshake_failure",new SSLHandshakeException("handshake_failure")));
+        LinkRelevance newLink2 = null;
+        try {
+            newLink2 = (LinkRelevance) frontierManager.nextURL();
+        }catch (DataNotFoundException dnfe){}
+
+        assertThat(newLink2,is(notNullValue()));
+        assertThat(newLink2.getURL().toString(),is("http://www.pseg.com/"));
+
+//      verify link not saved again when SSL exception occurs after trying both HTTP and HTTPS versions
+        frh.failed(link,new SSLException("handshake_failure",new SSLHandshakeException("handshake_failure")));
+        DataNotFoundException dnfe = null;
+        try {
+            linkStorage.select(null);
+        }catch (Exception e) {
+            if(e instanceof DataNotFoundException){
+                dnfe = (DataNotFoundException) e;
+            }
+        }
+
+        assertThat(dnfe, is(notNullValue()));
+        assertThat(dnfe.ranOutOfLinks(), is(true));
+
+
+
+    }
 }
