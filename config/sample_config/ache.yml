@@ -4,8 +4,6 @@
 # Configurations for Target Storage
 #
 
-# Uses a classifier to collect pages in topics, domains etc.
-target_storage.use_classifier: true
 # Change to false if you don't want to store pages classified as irrelevant
 target_storage.store_negative_pages: false
 
@@ -126,10 +124,13 @@ link_storage.scheduler.max_links: 10000
 #
 # Configurations for Crawler Manager
 #
-crawler_manager.downloader.download_thread_pool_size: 100
-crawler_manager.downloader.max_retry_count: 2
 crawler_manager.downloader.user_agent.name: ACHE
 crawler_manager.downloader.user_agent.url: https://github.com/ViDA-NYU/ache
+#crawler_manager.downloader.user_agent.email: someone@example.com
+#crawler_manager.downloader.user_agent.string: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+
+crawler_manager.downloader.download_thread_pool_size: 100
+crawler_manager.downloader.max_retry_count: 2
 crawler_manager.downloader.valid_mime_types:
  - text/xml
  - text/html

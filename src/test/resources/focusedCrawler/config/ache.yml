@@ -4,8 +4,6 @@
 # Configurations for Target Storage
 #
 
-# Uses a classifier to collect pages in topics, domains etc.
-target_storage.use_classifier: false
 # Change to false if don't want to store pages classified as irrelevant
 target_storage.store_negative_pages: false
 

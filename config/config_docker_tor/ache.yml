@@ -1,0 +1,7 @@
+# Basic configuration in-depth web site crawling
+link_storage.link_strategy.use_scope: true
+link_storage.link_strategy.outlinks: true
+link_storage.scheduler.host_min_access_interval: 1000
+
+# Configure ACHE to download .onion URLs through the TOR proxy container
+crawler_manager.downloader.torproxy: http://torproxy:8118

@@ -30,7 +30,7 @@ public class LNClassifier {
 		this.attributes = attributes;
 	}
 	
-	public synchronized double[] classify(LinkNeighborhood ln) throws Exception {
+	public double[] classify(LinkNeighborhood ln) throws Exception {
 		Map<String, Instance> urlWords = wrapper.extractLinksFull(ln, attributes);
 		Iterator<String> iter = urlWords.keySet().iterator();
 		String url = iter.next();

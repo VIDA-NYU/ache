@@ -1,0 +1,19 @@
+version: '2'
+services:
+  ache:
+    image: vidanyu/ache
+    entrypoint: sh -c 'sleep 10 && /ache/bin/ache startCrawl -c /config/ -s /config/tor.seeds -o /data -e tor'
+    ports:
+      - "8080:8080"
+    volumes:
+      # mounts /config and /data directories to paths relative to path where this file is located
+      - ./data-ache/:/data
+      - ./:/config
+    links:
+      - torproxy
+    depends_on:
+      - torproxy
+  torproxy:
+    image: dperson/torproxy
+    ports:
+      - "8118:8118"

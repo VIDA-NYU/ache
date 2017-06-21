@@ -23,6 +23,10 @@ public class TestUtils {
 
     // User agent for when we're not doing external fetching, so we just need a
     // fake name.
-    public static final UserAgent CC_TEST_AGENT = new UserAgent("test", "test@domain.com", "http://test.domain.com");
+    public static final UserAgent CC_TEST_AGENT = new UserAgent.Builder()
+            .setAgentName("test")
+            .setEmailAddress("test@domain.com")
+            .setWebAddress("http://test.domain.com")
+            .build();
 
 }

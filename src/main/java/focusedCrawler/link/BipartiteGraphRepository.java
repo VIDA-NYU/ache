@@ -8,6 +8,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import focusedCrawler.link.frontier.Visitor;
 import focusedCrawler.util.parser.BackLinkNeighborhood;
 import focusedCrawler.util.parser.LinkNeighborhood;
 import focusedCrawler.util.persistence.PersistentHashtable;
@@ -15,6 +19,8 @@ import focusedCrawler.util.persistence.PersistentHashtable.DB;
 import focusedCrawler.util.persistence.Tuple;
 
 public class BipartiteGraphRepository {
+    
+    private static final Logger logger = LoggerFactory.getLogger(BipartiteGraphRepository.class);
     
     private final int pagesToCommit = 100;
     private int uncommittedCount = 0;
@@ -91,25 +97,42 @@ public class BipartiteGraphRepository {
 
 	}
 	
+	/**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls.
+     * 
+     * @return
+     */
+	@Deprecated
 	public LinkNeighborhood[] getLNs() throws Exception{
 		Tuple<String>[] tuples = authID.getTableAsArray();
 		LinkNeighborhood[] lns = new LinkNeighborhood[tuples.length];
 		for (int i = 0; i < lns.length; i++) {
 			String strln = tuples[i].getValue();
 			if(strln != null){
-				String[] fields = strln.split(":::");
-				lns[i] = new LinkNeighborhood(new URL(fields[0]));
-				if(fields.length > 1){
-					lns[i].setAnchor(fields[1].split(" "));
-					if(fields.length > 2){
-						lns[i].setAround(fields[2].split(" "));
-					}
-				}
+			    lns[i] = parseString(strln);
 			}
 		}
 		return lns;
 	}
+	
+    public void visitLNs(Visitor<LinkNeighborhood> visitor) throws Exception {
+        authID.visitTuples((Tuple<String> tuple) -> {
+            String strln = tuple.getValue();
+            try {
+                visitor.visit(parseString(strln));
+            } catch (MalformedURLException e) {
+                logger.warn("Failed to parse URL: " + strln);
+            }
+        });
+    }
 
+    
+	/**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls.
+     * 
+     * @return
+     */
+    @Deprecated
 	public LinkNeighborhood[] getBacklinkLN() throws Exception{
 		Tuple<String>[] tuples = hubID.getTableAsArray();
 		LinkNeighborhood[] lns = new LinkNeighborhood[tuples.length];
@@ -166,8 +189,7 @@ public class BipartiteGraphRepository {
 	
 	public LinkNeighborhood getLN(URL url) throws MalformedURLException{
 		LinkNeighborhood ln = null;
-		URL normalizedURL = url;//new URL(url.getProtocol(), url.getHost(), "/"); 
-		String urlId = url2id.get(normalizedURL.toString());
+		String urlId = url2id.get(url.toString());
 		if(urlId != null){
 			String strln = authID.get(urlId);
 			ln = parseString(strln);
@@ -436,6 +458,5 @@ public class BipartiteGraphRepository {
 		}
 		return ln;
 	}
-	
 	
 }

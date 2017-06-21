@@ -1,0 +1,4 @@
+type: weka
+parameters:
+  features_file: pageclassifier.features
+  model_file: pageclassifier.model

@@ -192,6 +192,7 @@ public class FrontierManager {
     public void addSeeds(String[] seeds) {
         if (seeds != null && seeds.length > 0) {
             int count = 0;
+            int errors = 0;
             logger.info("Adding {} seed URL(s)...", seeds.length);
             for (String seed : seeds) {
 
@@ -199,7 +200,9 @@ public class FrontierManager {
                 try {
                     seedUrl = new URL(seed);
                 } catch (MalformedURLException e) {
-                    throw new IllegalArgumentException("Invalid seed URL provided: " + seed, e);
+                    logger.warn("Invalid seed URL provided: " + seed);
+                    errors++;
+                    continue;
                 }
                 LinkRelevance link = new LinkRelevance(seedUrl, LinkRelevance.DEFAULT_RELEVANCE);
                 try {
@@ -213,6 +216,9 @@ public class FrontierManager {
                 }
             }
             logger.info("Number of seeds added: " + count);
+            if (errors > 0) {
+                logger.info("Number of invalid seeds: " + errors);
+            }
         }
     }
 
@@ -309,6 +315,19 @@ public class FrontierManager {
 
     public void setOutlinkClassifier(LinkClassifier classifier) {
         this.outlinkClassifier = classifier;
+    }
+    
+    public void updateOutlinkClassifier(LinkClassifier classifier) throws Exception {
+        this.outlinkClassifier = classifier;
+        graphRepository.visitLNs((LinkNeighborhood ln) -> {
+            try {
+                LinkRelevance lr = outlinkClassifier.classify(ln);
+                frontier.update(lr);
+            } catch (Exception e) {
+                logger.error("Failed to classify link neighborhood while updating classifier.", e);
+            }
+        });
+        frontier.commit();
     }
 
     public BipartiteGraphRepository getGraphRepository() {

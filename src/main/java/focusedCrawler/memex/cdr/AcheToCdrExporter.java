@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.zip.GZIPOutputStream;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
@@ -20,6 +22,8 @@ import io.airlift.airline.Option;
 @Command(name="AcheToCdrExporter", description="Exports crawled data to CDR format")
 public class AcheToCdrExporter extends CliTool {
     
+    private static final ObjectMapper jsonMapper = new ObjectMapper();
+    
     //
     // Input data options
     //
@@ -27,8 +31,8 @@ public class AcheToCdrExporter extends CliTool {
     @Option(name = "--input-path", description="Path to ACHE data target folder", required=true)
     private String inputPath;
 
-    @Option(name={"--repository-type", "-rt"}, description="Which repository type should be used", required=true)
-    private RepositoryType repositoryType;
+    @Option(name={"--repository-type", "-rt"}, description="Which repository type should be used")
+    private RepositoryType repositoryType = RepositoryType.FILES;
     
     public enum RepositoryType { 
         FILES, FILESYSTEM_JSON;
@@ -45,10 +49,10 @@ public class AcheToCdrExporter extends CliTool {
     //
     
     @Option(name="--cdr-version", description="Which CDR version should be used")
-    private CDRVersion cdrVersion = CDRVersion.CDRv2;
+    private CDRVersion cdrVersion = CDRVersion.CDRv31;
     
     public enum CDRVersion {
-        CDRv2, CDRv3
+        CDRv2, CDRv3, CDRv31
     }
     
     @Option(name="--output-file", description="Gziped output file containing data formmated as per CDR schema")
@@ -63,7 +67,7 @@ public class AcheToCdrExporter extends CliTool {
     String outputType;
 
     @Option(name={"--output-es-url", "-ou"}, description="ElasticSearch full HTTP URL address")
-    String elasticSearchServer = "http://localhost:9200";
+    String elasticSearchServer = null;
     
     @Option(name={"--output-es-auth", "-oa"}, description="User and password for ElasticSearch in format: user:pass")
     String userPass = null;
@@ -117,7 +121,7 @@ public class AcheToCdrExporter extends CliTool {
             try{
                 processRecord(pageModel);
                 processedPages++;
-                if(processedPages % 100 == 0) {
+                if(processedPages % 1 == 0) {
                     System.out.printf("Processed %d pages\n", processedPages);
                 }
             } catch(Exception e) {
@@ -138,29 +142,30 @@ public class AcheToCdrExporter extends CliTool {
         String contentType = pageModel.getContentType();
 
         if (contentType == null || contentType.isEmpty()) {
-            System.err.println("Ignoring URL with no content-type: "+pageModel.getUrl());
+            System.err.println("Ignoring URL with no content-type: " + pageModel.getUrl());
             return;
         }
 
-        if (!contentType.startsWith("text/")) {
+        if (!contentType.startsWith("text/html")) {
             return;
         }
 
-        if(cdrVersion == CDRVersion.CDRv2) {
+        if (cdrVersion == CDRVersion.CDRv31) {
+            createCDR31DocumentJson(pageModel);
+        } else if (cdrVersion == CDRVersion.CDRv2) {
             createCDR2DocumentJson(pageModel);
         } else {
             createCDR3DocumentJson(pageModel);
         }
-        
-        if(doc != null&& out != null) {
-            out.println(doc);
+
+        if (doc != null && out != null) {
+            out.println(jsonMapper.writeValueAsString(doc));
         }
-        
-        if(bulkIndexer != null) {
+
+        if (bulkIndexer != null) {
             bulkIndexer.addDocument(outputIndex, outputType, doc, id);
         }
-        
-        
+
     }
 
     public void createCDR2DocumentJson(TargetModelJson pageModel) {
@@ -196,6 +201,25 @@ public class AcheToCdrExporter extends CliTool {
                 .setRawContent(pageModel.getContentAsString());
 
         CDR3Document doc = builder.build();
+        this.id = doc.getId();
+        this.doc = doc;
+    }
+
+    public void createCDR31DocumentJson(TargetModelJson pageModel) {
+        HashMap<String, Object> crawlData = new HashMap<>();
+        crawlData.put("response_headers", pageModel.getResponseHeaders());
+
+        CDR31Document.Builder builder = new CDR31Document.Builder()
+                .setUrl(pageModel.getUrl())
+                .setTimestampCrawl(new Date(pageModel.getFetchTime()))
+                .setTimestampIndex(new Date())
+                .setContentType(pageModel.getContentType())
+                .setResponseHeaders(pageModel.getResponseHeaders())
+                .setRawContent(pageModel.getContentAsString())
+                .setTeam("NYU")
+                .setCrawler("ACHE");
+
+        CDR31Document doc = builder.build();
         this.id = doc.getId();
         this.doc = doc;
     }

@@ -56,6 +56,13 @@ public class LinkRelevance implements Serializable {
             return Double.compare(o2.getRelevance(), o1.getRelevance());
         }
     };
+    
+    public static Comparator<LinkRelevance> DESC_ABS_ORDER_COMPARATOR = new Comparator<LinkRelevance>() {
+        @Override
+        public int compare(LinkRelevance o1, LinkRelevance o2) {
+            return Double.compare(Math.abs(o2.getRelevance()), Math.abs(o1.getRelevance()));
+        }
+    };
 
     @JsonDeserialize(using = UrlDeseralizer.class)
     private URL url;

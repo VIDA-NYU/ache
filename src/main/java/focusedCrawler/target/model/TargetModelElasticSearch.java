@@ -3,6 +3,8 @@ package focusedCrawler.target.model;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 import com.google.common.net.InternetDomainName;
 
@@ -22,6 +24,7 @@ public class TargetModelElasticSearch {
     private String[] wordsMeta;
     private String topPrivateDomain;
     private String html;
+    private Map<String, List<String>> responseHeaders;
     private String isRelevant;
     private double relevance;
     
@@ -30,22 +33,24 @@ public class TargetModelElasticSearch {
     }
 
     public TargetModelElasticSearch(Page page) {
-
         this.url = page.getURL().toString();
         this.retrieved = new Date();
         this.domain = page.getDomainName();
         this.html = page.getContentAsString();
-        this.words = page.getParsedData().getWords();
-        this.wordsMeta = page.getParsedData().getWordsMeta();
-        this.title = page.getParsedData().getTitle();
-        this.isRelevant = page.getTargetRelevance().isRelevant() ? "relevant" : "irrelevant";
-        this.relevance = page.getTargetRelevance().getRelevance();
-        try {
-            this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
-        } catch (BoilerpipeProcessingException | ArrayIndexOutOfBoundsException e) {
-            this.text = "";
-        }
+        this.responseHeaders = page.getResponseHeaders();
         this.topPrivateDomain = LinkRelevance.getTopLevelDomain(page.getDomainName());
+        this.isRelevant = page.getTargetRelevance().isRelevant() ? "relevant" : "irrelevant";
+        if (page.isHtml()) {
+            this.words = page.getParsedData().getWords();
+            this.wordsMeta = page.getParsedData().getWordsMeta();
+            this.title = page.getParsedData().getTitle();
+            this.relevance = page.getTargetRelevance().getRelevance();
+            try {
+                this.text = DefaultExtractor.getInstance().getText(page.getContentAsString());
+            } catch (BoilerpipeProcessingException | ArrayIndexOutOfBoundsException e) {
+                this.text = "";
+            }
+        }
     }
 
     public TargetModelElasticSearch(TargetModelCbor model) {

@@ -82,7 +82,7 @@ class HitItem extends React.Component {
     this.labelsManager = labelsManager;
     this.stopListening = this.labelsManager.addListener(()=> this.setState({}));
   }
-  
+
   componentWillUnmount() {
     this.stopListening();
   }
@@ -109,11 +109,12 @@ class HitItem extends React.Component {
   extractDescription(input) {
     // try to extraction description from metatag og:description
     var ogdesc = input.html.match(/<meta property="og:description" content="(.*?)"/i);
-    var clean = '';
-    if(ogdesc !== null) {
-      clean = ogdesc[1] + ' || ' + input.text;;
-    } else {
+    var clean = '[No Description Available]';
+    if(input.text !== null) {
       clean = input.text;
+    }
+    if(ogdesc !== null) {
+      clean = ogdesc[1] + ' || ' + clean;
     }
     clean = clean.replace(/\\n/g, " ");
     clean = clean.replace(/\s\s+/g, ' ' );
@@ -122,6 +123,9 @@ class HitItem extends React.Component {
   }
 
   extractImageFromSource(input) {
+    if(input.html === null) {
+      return '';
+    }
     var html = input.html;
     // try to extract og:image or the first <img> tag available in the html
     var result = html.match(/<meta property="og:image" content="(.*?)"/i);
@@ -147,13 +151,13 @@ class HitItem extends React.Component {
       return new URLUtils(img_url, input.url).href;
     }
   }
-  
+
   labelAs(url, feedback) {
     var domainLabels = {};
     domainLabels[url] = feedback;
     this.labelsManager.sendLabels(domainLabels);
   }
-  
+
   labelAsRelevant(result) {
     this.labelAs(result._source.url, true);
   }
@@ -164,27 +168,30 @@ class HitItem extends React.Component {
 
   render() {
     const props = this.props;
-    const desc = this.extractDescription(props.result._source);
-    const labeldAsRelevant = this.labelsManager.isRelevant(props.result._source.url);
-    const labeldAsIrrelevant = this.labelsManager.isIrrelevant(props.result._source.url);
+    const source = props.result._source;
+    const pageDesc = this.extractDescription(source);
+    const pageTitle = source.title !== null ? source.title : '[No Title Available]';
+    const labeldAsRelevant = this.labelsManager.isRelevant(source.url);
+    const labeldAsIrrelevant = this.labelsManager.isIrrelevant(source.url);
+
     return (
       <div className="row hit-item">
         <div className="col-sm-12">
           <div className="hit-title">
-            <a href={props.result._source.url} target="_blank">{props.result._source.title}</a>
+            <a href={source.url} target="_blank">{pageTitle}</a>
           </div>
           <div className="hit-url">
-            <a href={props.result._source.url} target="_blank">{props.result._source.url}</a>
+            <a href={source.url} target="_blank">{source.url}</a>
           </div>
           <div className="row">
             <div className="col-sm-2 hit-image">
-              <img src={this.extractImageFromSource(props.result._source)} alt="" />
+              <img src={this.extractImageFromSource(source)} alt="" />
             </div>
             <div className="col-sm-10">
-              <div className="hit-description">{desc}</div>
+              <div className="hit-description">{pageDesc}</div>
               <ul className="list-inline hit-properties">
-                <li><b>Crawl time:</b> <span className="label label-default">{this.formatDate(props.result._source.retrieved)}</span></li>
-                <li><b>Classified as:</b> <span className="label label-default">{this.props.result._source.isRelevant}</span></li>
+                <li><b>Crawl time:</b> <span className="label label-default">{this.formatDate(source.retrieved)}</span></li>
+                <li><b>Classified as:</b> <span className="label label-default">{source.isRelevant}</span></li>
                 <li>
                   <b>Actual label:</b>
                   <button onClick={()=>this.labelAsRelevant(props.result)}>

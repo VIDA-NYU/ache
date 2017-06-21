@@ -66,6 +66,7 @@ public class Page implements Serializable {
         this.responseHeaders = target.getResponseHeaders();
         this.fetchTime = target.getFetchTime();
         this.contentType = target.getContentType();
+        this.targetRelevance = target.getRelevance();
 
     }
 
@@ -112,6 +113,11 @@ public class Page implements Serializable {
     public String getDomainName() {
         String domain = url.getHost();
         return domain.startsWith("www.") ? domain.substring(4) : domain;
+    }
+    
+
+    public boolean isHtml() {
+        return contentType != null && contentType.toLowerCase().contains("text/html");
     }
 
     public boolean isHub() {

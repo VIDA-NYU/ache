@@ -43,6 +43,11 @@ public class Frontier {
         robotRulesMap.commit();
     }
 
+    /**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls. TODO: Provide an method that uses an
+     * iterator, and/or load just a sample of the data.
+     */
+    @Deprecated
     public HashSet<String> visitedAuths() throws Exception {
         HashSet<String> result = new HashSet<String>();
         List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
@@ -55,18 +60,19 @@ public class Frontier {
         return result;
     }
 
-    public HashSet<String> visitedLinks() throws Exception {
-        HashSet<String> result = new HashSet<String>();
-        List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
-        for (Tuple<LinkRelevance> tuple : tuples) {
-            double value = tuple.getValue().getRelevance();
-            if (value < 0) {
-                result.add(URLDecoder.decode(tuple.getKey(), "UTF-8"));
+    public void visitedLinks(Visitor<LinkRelevance> visitor) throws Exception {
+        urlRelevance.visitTuples((Tuple<LinkRelevance> tuple) -> {
+            if (tuple.getValue().getRelevance() < 0) {
+                visitor.visit(tuple.getValue());
             }
-        }
-        return result;
+        });
     }
 
+    /**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls. TODO: Provide an method that uses an
+     * iterator, and/or load just a sample of the data.
+     */
+    @Deprecated
     public HashSet<String> unvisitedAuths() throws Exception {
         HashSet<String> result = new HashSet<String>();
         List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
@@ -79,6 +85,11 @@ public class Frontier {
         return result;
     }
 
+    /**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls. TODO: Provide an method that uses an
+     * iterator, and/or load just a sample of the data.
+     */
+    @Deprecated
     public HashSet<String> visitedHubs() throws Exception {
         HashSet<String> result = new HashSet<String>();
         List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
@@ -91,6 +102,11 @@ public class Frontier {
         return result;
     }
 
+    /**
+     * DEPRECATED: may cause OutOfMemoryError on large crawls. TODO: Provide an method that uses an
+     * iterator, and/or load just a sample of the data.
+     */
+    @Deprecated
     public HashSet<String> unvisitedHubs() throws Exception {
         HashSet<String> result = new HashSet<String>();
         List<Tuple<LinkRelevance>> tuples = urlRelevance.getTable();
@@ -184,6 +200,7 @@ public class Frontier {
     public TupleIterator<LinkRelevance> iterator() {
         return urlRelevance.iterator();
     }
+
     
     /**
      * Inserts the robot rules object into the HashMap
@@ -210,5 +227,6 @@ public class Frontier {
     {
     	return robotRulesMap;
     }
+
 
 }

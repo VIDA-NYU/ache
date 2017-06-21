@@ -3,6 +3,11 @@ package focusedCrawler.crawler.async.fetcher;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import java.util.List;
+import org.apache.http.client.CookieStore;
+import org.apache.http.impl.client.BasicCookieStore;
+import org.apache.http.impl.cookie.BasicClientCookie;
+
 import focusedCrawler.crawler.async.HttpDownloaderConfig;
 import focusedCrawler.crawler.crawlercommons.fetcher.BaseFetcher;
 import focusedCrawler.crawler.crawlercommons.fetcher.http.SimpleHttpFetcher;
@@ -17,9 +22,14 @@ public class FetcherFactory {
             return createSimpleHttpFetcher(config);
         }
     }
-    
+
     public static SimpleHttpFetcher createSimpleHttpFetcher(HttpDownloaderConfig config){
-        UserAgent userAgent = new UserAgent(config.getUserAgentName(), "", config.getUserAgentUrl());
+        UserAgent userAgent = new UserAgent.Builder()
+                .setAgentName(config.getUserAgentName())
+                .setEmailAddress(config.getUserAgentEmail())
+                .setWebAddress(config.getUserAgentUrl())
+                .setUserAgentString(config.getUserAgentString())
+                .build();
         int connectionPoolSize = config.getConnectionPoolSize();
         SimpleHttpFetcher httpFetcher = new SimpleHttpFetcher(connectionPoolSize, userAgent);
         // timeout for inactivity between two consecutive data packets
@@ -37,7 +47,11 @@ public class FetcherFactory {
                 httpFetcher.addValidMimeType(mimeTypes);
             }
         }
-        
+
+        CookieStore store = createCookieStore(config);
+        if (store != null) {
+            httpFetcher.setCookieStore(store);
+        }
         return httpFetcher;
     }
     
@@ -56,9 +70,30 @@ public class FetcherFactory {
         }
         
         torFetcher.setProxy(torProxy.getProtocol(), torProxy.getHost(), torProxy.getPort());
-        torFetcher.setSocketTimeout(1000*1000);
-        
+        torFetcher.setMaxRetryCount(3);
+        torFetcher.setSocketTimeout(5*60*1000);
+        torFetcher.setConnectionTimeout(5*60*1000);
+        torFetcher.setConnectionRequestTimeout(5*60*1000);
         return new TorProxyFetcher(torFetcher, httpFetcher);
+    }
+
+    public static CookieStore createCookieStore(HttpDownloaderConfig config) {
+        List<HttpDownloaderConfig.Cookie> cookies = config.getCookies();
+        if (cookies == null) {
+            return null;
+        }
+        CookieStore store = new BasicCookieStore();
+        for (HttpDownloaderConfig.Cookie cookie : cookies) {
+            String[] values = cookie.cookie.split("; ");
+            for (int i = 0; i < values.length; i++) {
+                String[] kv = values[i].split("=", 2);
+                BasicClientCookie cc = new BasicClientCookie(kv[0], kv[1]);
+                cc.setPath(cookie.path);
+                cc.setDomain(cookie.domain);
+                store.addCookie(cc);
+            }
+        }
+        return store;
     }
 
 }
