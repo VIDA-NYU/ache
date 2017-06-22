@@ -337,7 +337,7 @@ public class Main {
                 AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
                 
                 // start crawl manager
-                AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig,
+                AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, config,
                                                         dataOutputPath, metricsManager);
                 try {
                     crawler.run();

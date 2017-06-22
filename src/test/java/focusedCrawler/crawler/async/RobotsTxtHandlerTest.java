@@ -35,7 +35,7 @@ public class RobotsTxtHandlerTest {
     public void shouldParseLinksFromSitemapXml() throws Exception {
         // given
         LinkStorageMock linkStorageMock = new LinkStorageMock(); 
-        RobotsTxtHandler handler = new RobotsTxtHandler(linkStorageMock, "TestAgent");
+        RobotsTxtHandler handler = new RobotsTxtHandler(linkStorageMock, "TestAgent", false, true);
         
         String url = "http://www.example.com/robots.txt";
         Path robotsFilePath = Paths.get(RobotsTxtHandler.class.getResource("sample-robots.txt").toURI());

@@ -13,12 +13,16 @@ import crawlercommons.robots.BaseRobotsParser;
 import crawlercommons.robots.SimpleRobotRulesParser;
 import focusedCrawler.crawler.crawlercommons.fetcher.AbortedFetchException;
 import focusedCrawler.crawler.crawlercommons.fetcher.FetchedResult;
+import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.util.CommunicationException;
 import focusedCrawler.util.storage.Storage;
 import focusedCrawler.util.storage.StorageException;
 
 public class RobotsTxtHandler implements HttpDownloader.Callback {
+	
+	private final boolean insertSiteMaps;
+    private final boolean disallowSitesInRobotRules;
     
     @SuppressWarnings("serial")
     public static class RobotsData implements Serializable {
@@ -35,9 +39,15 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
     private Storage linkStorage;
     private String userAgentName;
     
-    public RobotsTxtHandler(Storage linkStorage, String userAgentName) {
+    public RobotsTxtHandler(Storage linkStorage, String userAgentName, boolean disallowSitesInRobotRules, boolean insertSiteMaps) {
         this.linkStorage = linkStorage;
         this.userAgentName = userAgentName;
+        this.insertSiteMaps = insertSiteMaps;
+        this.disallowSitesInRobotRules = disallowSitesInRobotRules;
+    }
+    
+    public RobotsTxtHandler(Storage linkStorage, String userAgentName) {
+        this(linkStorage, userAgentName, false, false);
     }
     
     @Override
@@ -86,8 +96,15 @@ public class RobotsTxtHandler implements HttpDownloader.Callback {
         }
         
         try {
-            RobotsData robotsData = new RobotsData(robotRules.getSitemaps());
-            linkStorage.insert(robotsData);
+            if(disallowSitesInRobotRules){
+            	((LinkStorage) linkStorage).insertRobotRules(link, robotRules);
+            }
+            
+            if(insertSiteMaps){
+                RobotsData robotsData = new RobotsData(robotRules.getSitemaps());
+                linkStorage.insert(robotsData);
+            }
+            
         } catch (StorageException | CommunicationException e) {
             logger.error("Failed to insert robot.txt data into link storage.", e);
         }

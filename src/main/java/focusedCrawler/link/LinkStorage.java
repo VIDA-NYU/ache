@@ -10,6 +10,7 @@ import java.nio.file.Paths;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import crawlercommons.robots.BaseRobotRules;
 import focusedCrawler.crawler.async.RobotsTxtHandler;
 import focusedCrawler.crawler.async.SitemapXmlHandler;
 import focusedCrawler.link.classifier.LinkClassifierFactory;
@@ -50,6 +51,9 @@ public class LinkStorage extends StorageDefault {
 
     private final FrontierManager frontierManager;
     private final OnlineLearning onlineLearning;
+    
+    private final boolean insertSiteMaps;
+    private final boolean disallowSitesInRobotsTxt;
 
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager) throws IOException {
@@ -63,6 +67,8 @@ public class LinkStorage extends StorageDefault {
         this.onlineLearning = onlineLearning;
         this.getBacklinks = config.getBacklinks();
         this.getOutlinks = config.getOutlinks();
+        this.disallowSitesInRobotsTxt = config.getDisallowSitesInRobotsFile();
+        this.insertSiteMaps = config.getDownloadSitemapXml();
     }
 
     public void close(){
@@ -227,4 +233,37 @@ public class LinkStorage extends StorageDefault {
         }
     }
 
+    /**
+     * Inserts the robot rules object into the HashMap
+     * 
+     * @param link
+     * @param robotRules
+     * @throws NullPointerException
+     *             when either of the argument is null
+     */
+    public void insertRobotRules(LinkRelevance link, BaseRobotRules robotRules) {
+        if (link == null || robotRules == null) {
+            throw new NullPointerException("Link argument or robot rules argument cannot be null");
+        }
+        frontierManager.getFrontier().insertRobotRules(link, robotRules);
+    }
+
+    /**
+     * Returns true if the user wants to include sites maps from robots.txt
+     * else false
+     * @return
+     */
+    public boolean getInsertSiteMaps() {
+        return insertSiteMaps;
+    }
+
+    /**
+     * Returns true if the user wants to disallow sites in robots.txt under
+     * Disallow category else false.
+     * 
+     * @return
+     */
+    public boolean getDisallowSitesFromRobotsTxt() {
+        return disallowSitesInRobotsTxt;
+    }
 }
