@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import focusedCrawler.config.ConfigService;
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
 import focusedCrawler.link.LinkStorage;
+import focusedCrawler.link.LinkStorageConfig;
 import focusedCrawler.link.frontier.LinkRelevance;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.util.DataNotFoundException;
@@ -35,16 +36,20 @@ public class AsyncCrawler {
 
     
     public AsyncCrawler(Storage targetStorage, Storage linkStorage,
-            AsyncCrawlerConfig crawlerConfig, String dataPath,
+            ConfigService config, String dataPath,
             MetricsManager metricsManager) {
         
         this.targetStorage = targetStorage;
         this.linkStorage = linkStorage;
+        AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
+        LinkStorageConfig linkStorageConfig = config.getLinkStorageConfig();
         this.downloader = new HttpDownloader(crawlerConfig.getDownloaderConfig(), dataPath, metricsManager);
         
         this.handlers.put(LinkRelevance.Type.FORWARD, new FetchedResultHandler(targetStorage));
         this.handlers.put(LinkRelevance.Type.SITEMAP, new SitemapXmlHandler(linkStorage));
-        this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage, crawlerConfig.getDownloaderConfig().getUserAgentName()));
+        this.handlers.put(LinkRelevance.Type.ROBOTS, new RobotsTxtHandler(linkStorage, crawlerConfig.getDownloaderConfig().getUserAgentName() 
+        		, linkStorageConfig.getDisallowSitesInRobotsFile()
+        		, linkStorageConfig.getDownloadSitemapXml()));
         
         Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
@@ -123,7 +128,7 @@ public class AsyncCrawler {
             Storage targetStorage = new StorageCreator(targetServerConfig).produce();
             
             AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig, dataPath, new MetricsManager());
+            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, config, dataPath, new MetricsManager());
             crawler.run();
 
         } catch (StorageFactoryException ex) {

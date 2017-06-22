@@ -92,6 +92,14 @@ public class CrawlScheduler {
                 Tuple<LinkRelevance> tuple = it.next();
                 LinkRelevance link = tuple.getValue();
                 
+                String domainName = link.getTopLevelDomainName().trim();
+                if (domainName != null && frontier.getRobotRulesMap().get(domainName) != null
+                        && !frontier.getRobotRulesMap().get(domainName).isAllowed(link.getURL().toString())) {
+                    logger.info(
+                            "Ignoring link " + link.getURL().toString() + " as it is present in the robots file which is disallowed.");
+                    continue;
+                }
+                
                 // Links already downloaded or not relevant
                 if (link.getRelevance() <= 0) {
                     if(recrawlSelector != null) {

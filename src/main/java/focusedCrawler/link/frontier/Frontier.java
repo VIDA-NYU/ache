@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
+import crawlercommons.robots.BaseRobotRules;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import focusedCrawler.util.persistence.PersistentHashtable.DB;
 import focusedCrawler.util.persistence.Tuple;
@@ -17,9 +18,11 @@ public class Frontier {
     protected PersistentHashtable<LinkRelevance> urlRelevance;
     protected Map<String, Integer> scope = null;
     private boolean useScope = false;
+    private final PersistentHashtable<BaseRobotRules> robotRulesMap;
 
     public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend, Map<String, Integer> scope) {
         this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize, LinkRelevance.class, persistentHashtableBackend);
+        this.robotRulesMap = new PersistentHashtable<>(directory+"/robotRules", maxCacheUrlsSize, BaseRobotRules.class, persistentHashtableBackend);
         
         if (scope == null) {
             this.useScope = false;
@@ -36,6 +39,7 @@ public class Frontier {
     
     public void commit() {
         urlRelevance.commit();
+        robotRulesMap.commit();
     }
 
     /**
@@ -189,10 +193,36 @@ public class Frontier {
 
     public void close() {
         urlRelevance.close();
+        robotRulesMap.close();
     }
 
     public TupleIterator<LinkRelevance> iterator() {
         return urlRelevance.iterator();
     }
 
+    /**
+     * Inserts the robot rules object into the HashMap
+     * 
+     * @param link
+     * @param robotRules
+     * @throws NullPointerException
+     *             when either of the argument is null
+     */
+    public void insertRobotRules(LinkRelevance link, BaseRobotRules robotRules) {
+        if (link == null || robotRules == null) {
+            throw new NullPointerException("Link argument or robot rules argument cannot be null");
+        }
+        String domainName = link.getTopLevelDomainName().trim();
+        robotRulesMap.put(domainName, robotRules);
+    }
+    
+    
+    /**
+     * Returns the robot rules map
+     * @return
+     */
+    public PersistentHashtable<BaseRobotRules> getRobotRulesMap()
+    {
+    	return robotRulesMap;
+    }
 }

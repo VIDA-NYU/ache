@@ -4,6 +4,7 @@ import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.Matchers.lessThan;
+import static org.hamcrest.Matchers.greaterThan;
 import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
@@ -85,5 +86,94 @@ public class RobotsAndSitemapTest {
         }
     }
     
+    @Test
+    public void test1ToNotToDownloadSitesDisallowedOnRobots() throws Exception {
+
+        String outputPath = tempFolder.newFolder().toString();
+
+        String configPath = basePath + "/config/";
+        String seedPath = basePath + "/seeds.txt";
+        String modelPath = basePath + "/model/";
+
+        // when
+        String[] args = { "startCrawl", "-c", configPath, "-m", modelPath, "-o", outputPath, "-s", seedPath };
+        Main.main(args);
+
+        // then
+        ConfigService config = new ConfigService(configPath + "/ache.yml");
+        String linkDirectory = config.getLinkStorageConfig().getLinkDirectory();
+        String dir = Paths.get(outputPath, linkDirectory).toString();
+        Frontier frontier = new Frontier(dir, 1000, config.getLinkStorageConfig().getPersistentHashtableBackend());
+
+        List<String> shouldBeDownloaded = asList(
+                "index.html",
+                "page-listed-on-sitemap-1.html",
+                "page-listed-on-sitemap-2.html"
+        );
+
+        List<String> shouldNOTBeDownloaded = asList(
+                "not-listed-on-sitemaps.html"
+        );
+
+        for (String url : shouldBeDownloaded) {
+            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
+            assertThat("URL="+url, frontier.exist(link), is(lessThan(0)));
+        }
+
+        for (String url : shouldNOTBeDownloaded) {
+            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
+            assertThat("URL="+url, frontier.exist(link), is(nullValue()));
+        }
+        
+        String url= "http://127.0.0.1:1234/disallowed-link-1.html";
+        LinkRelevance link = LinkRelevance.create(url);
+        assertThat("URL="+url, frontier.exist(link), is(greaterThan(0)));
+    }
+    
+    
+    @Test
+    public void test2ToNotToDownloadSitesDisallowedOnRobotsWithSitemapsFalse() throws Exception {
+
+        String outputPath = tempFolder.newFolder().toString();
+
+        String configPath = basePath + "/config2/";
+        String seedPath = basePath + "/seeds.txt";
+        String modelPath = basePath + "/model/";
+
+        // when
+        String[] args = { "startCrawl", "-c", configPath, "-m", modelPath, "-o", outputPath, "-s", seedPath };
+        Main.main(args);
+
+        // then
+        ConfigService config = new ConfigService(configPath + "/ache.yml");
+        String linkDirectory = config.getLinkStorageConfig().getLinkDirectory();
+        String dir = Paths.get(outputPath, linkDirectory).toString();
+        Frontier frontier = new Frontier(dir, 1000, config.getLinkStorageConfig().getPersistentHashtableBackend());
+
+        List<String> shouldNOTBeDownloaded = asList(
+                "page-listed-on-sitemap-1.html",
+                "page-listed-on-sitemap-2.html",
+                "not-listed-on-sitemaps.html"
+        );
+        
+        
+        List<String> shouldBeDownloaded = asList(
+                "index.html"
+        );
+
+        for (String url : shouldBeDownloaded) {
+            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
+            assertThat("URL="+url, frontier.exist(link), is(lessThan(0)));
+        }
+        
+        for (String url : shouldNOTBeDownloaded) {
+            LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
+            assertThat("URL="+url, frontier.exist(link), is(nullValue()));
+        }
+        
+        String url= "http://127.0.0.1:1234/disallowed-link-1.html";
+        LinkRelevance link = LinkRelevance.create(url);
+        assertThat("URL="+url, frontier.exist(link), is(greaterThan(0)));
+    }
 
 }
