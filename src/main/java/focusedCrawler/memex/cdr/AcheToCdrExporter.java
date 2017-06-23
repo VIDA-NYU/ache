@@ -173,8 +173,8 @@ public class AcheToCdrExporter extends CliTool {
         }
         System.out.printf("Processed %d pages\n", processedPages);
         
-        it.close();
-		it1.close();
+        //it.close();
+		//it1.close();
         
         if(out != null) out.close();
         if(bulkIndexer!= null) bulkIndexer.close();
