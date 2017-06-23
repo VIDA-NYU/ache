@@ -13,7 +13,7 @@ import focusedCrawler.util.CliTool;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
 
-@Command(name = "StartRestServer", description = "Start a REST API for to manage web crawls")
+@Command(name = "startServer", description = "Start a REST API for to manage web crawls")
 public class StartRestServer extends CliTool {
 
     public static final String VERSION = Main.class.getPackage().getImplementationVersion();
