@@ -20,6 +20,7 @@ import focusedCrawler.rest.RestServer;
 import focusedCrawler.seedfinder.SeedFinder;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
+import focusedCrawler.tools.StartRestServer;
 import focusedCrawler.util.MetricsManager;
 import focusedCrawler.util.storage.Storage;
 import io.airlift.airline.Arguments;
@@ -51,6 +52,7 @@ public class Main {
             .withCommands(
                 AcheHelp.class,
                 StartCrawl.class,
+                StartRestServer.class,
                 BuildModel.class,
                 AddSeeds.class,
                 StartLinkStorage.class,
@@ -325,6 +327,7 @@ public class Main {
                 restServer = RestServer.create(dataOutputPath, metricsManager.getMetricsRegistry(),
                                                config, esIndexName, esTypeName);
                 restServer.start();
+                restServer.setCrawlerRunning();
 
                 Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
                         dataOutputPath, modelPath, config.getLinkStorageConfig(), metricsManager);
