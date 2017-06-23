@@ -56,6 +56,8 @@ public class FrontierManager {
     private final int linksToLoad;
     private final HostManager hostsManager;
     private final boolean downloadRobots;
+    private final boolean insertSitemaps;
+    private final boolean disallowSitesInRobotsFile;
     private final LogFile schedulerLog;
     private final MetricsManager metricsManager;
 
@@ -70,7 +72,9 @@ public class FrontierManager {
         this.frontier = frontier;
         this.linkFilter = linkFilter;
         this.metricsManager = metricsManager;
-        this.downloadRobots = config.getDownloadSitemapXml();
+        this.insertSitemaps = config.getDownloadSitemapXml();
+        this.disallowSitesInRobotsFile = config.getDisallowSitesInRobotsFile();
+        this.downloadRobots = getDownloadRobots();
         this.linksToLoad = config.getSchedulerMaxLinks();
         this.maxPagesPerDomain = config.getMaxPagesPerDomain();
         this.domainCounter = new HashMap<String, Integer>();
@@ -85,6 +89,10 @@ public class FrontierManager {
             this.backlinkClassifier = new LinkClassifierHub();
         }
         this.setupMetrics();
+    }
+
+    private boolean getDownloadRobots() {
+        return insertSitemaps || disallowSitesInRobotsFile;
     }
 
     private void setupMetrics() {

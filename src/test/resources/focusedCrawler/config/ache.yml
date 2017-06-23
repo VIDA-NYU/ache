@@ -117,3 +117,6 @@ crawler_manager.downloader.user_agent.url: http://www.test-agent-crawler-example
 crawler_manager.downloader.valid_mime_types:
  - test/mimetype
  - text/html
+link_storage.download_sitemap_xml: true
+
+link_storage.disallow_sites_in_robots_file: true
