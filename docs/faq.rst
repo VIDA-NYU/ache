@@ -3,28 +3,27 @@ Frequently Asked Questions
 
 What is inside the output directory?
 ------------------------------------
-By default ACHE creates the following output folders:
 
-    * **data_pages** contains relevant pages and all non-html content.
-    * **data_hosts**
-    * **data_monitor** contains current status of the crawler including list of relevant pages, irrelevant pages and download requests.
-    * **data_url** and **data_backlinks** are where the persistent storages keep data of the frontier and the crawled graph.
+Depending on the configuration settings, ACHE may creates different folders under the data output directory:
+
+  * **data_pages**: contains raw-data of crawled pages (including relevant, irrelevant and non-html content). The sub-directories and file formats depends on the configured *Data Format* being using. See :ref:`Data Formats <dataformat-filesystem>` for more information.
+  * **data_monitor**: contains TSV-formatted log files with information about the status of the crawl, including relevant and irrelevant pages along with their scores, download requests and its metadata, etc.
+  * **data_url**, **data_backlinks**, **data_hosts**: are where the persistent storages keep data needed for crawler operatio such as the frontier, the links graph, and metadata about crawled hosts.
 
 When will the crawler stop?
 ---------------------------
-Unless you stop it, the crawler exits when the number of visited pages exceeds the limit in the ``ache.yml`` file.
-
-You can look at **output/data_monitor/harvestinfo.csv** to check how many pages have been downloaded and decide whether you want to stop the crawler manually. The columns are **number of relevant pages**, **number of visited pages** and **timestamp** respectively.
+The crawler will run until it downloads all links discovered during the crawling process, or util it hits maximum number of visited pages as configured in the ``ache.yml`` file.
+You can also look at ``<data-output>/data_monitor/harvestinfo.csv`` to check how many pages have been downloaded and decide whether you want to stop the crawler manually.
 
 How to limit the number of visited pages?
 -----------------------------------------
-The crawler will exit when the number of visited pages reaches the default setting, which is 9 Million. You can modify it by changing ``target_storage.visited_page_limit`` key in the configuration file.
+By default, the maximum number of visited pages is set to the maximum integer value (*Integer.MAX_VALUE*).
+You can modify it by setting a value for the key ``target_storage.visited_page_limit`` in the ``ache.yml`` configuration file.
 
-What format is crawled data saved in?
--------------------------------------
-In default setting, the crawler stores crawled in html format without metadata information. You can store data in other data formats as well. For more information, see :ref:`Data Formats <dataformat-filesystem>`
-
-Indexing web pages directly into :ref:`ELATICSEARCH <dataformat-elasticsearch>` is available too.
+What format is used to store crawled data?
+------------------------------------------
+ACHE supports multiple types of the data formats. Take a look at the :ref:`Data Formats <dataformat-filesystem>` page for more information.
+ACHE also supports indexing web pages directly into :ref:`Elasticsearch <dataformat-elasticsearch>`.
 
 How can I save irrelevant pages?
 --------------------------------
@@ -32,11 +31,14 @@ By default, this is off so you will need to set the value of ``target_storage.st
 
 Does ACHE crawl webpages in languages other than English?
 ---------------------------------------------------------
-ACHE does language detection and tries to crawl only pages with content in English. You can enable or disable language detection in the configuration file by changing ``target_storage.english_language_detection_enabled``.
+ACHE does language detection and can be configured to ignore pages with non-English content.
+You can enable or disable language detection in the configuration file by changing ``target_storage.english_language_detection_enabled``.
+Detection of other languagues are currently not available, but could easily be supported in the future.
 
 Is there any limit on number of crawled webpages per website?
 -------------------------------------------------------------
-Yes, we limit this number so that the crawler doesn't get trapped by particular domains. The default is 100, however you can set it in the configuration file using ``link_storage.max_pages_per_domain``.
+There is no limit by default, but you can set a hard limit in the configuration file using the key ``link_storage.max_pages_per_domain``.
+You can enable this so that the crawler doesn't get trapped by particular domains, and to favor crawling a larger number of domains as opposed to focusing on a few domains.
 
 Where to report bugs?
 ---------------------
