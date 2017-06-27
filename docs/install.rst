@@ -56,7 +56,7 @@ To install ACHE binaries into ``/opt`` and make it available on the command-line
   sudo mv build/install/ache /opt/
   echo 'export ACHE_HOME="/opt/ache"' | sudo tee -a /etc/profile.d/ache.sh
   echo 'export PATH="$ACHE_HOME/bin:$PATH"' | sudo tee -a /etc/profile.d/ache.sh
-  sh /etc/profile.d/ache.sh
+  source /etc/profile.d/ache.sh
 
 After this, the command ``ache`` will be available on the terminal, so you can simply run the crawler with the apropriate parameters.
 

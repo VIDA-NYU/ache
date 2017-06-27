@@ -47,7 +47,7 @@ To install ACHE binaries into ``/opt`` and make it available on the command-line
 sudo mv build/install/ache /opt/
 echo 'export ACHE_HOME="/opt/ache"' | sudo tee -a /etc/profile.d/ache.sh
 echo 'export PATH="$ACHE_HOME/bin:$PATH"' | sudo tee -a /etc/profile.d/ache.sh
-sh /etc/profile.d/ache.sh
+source /etc/profile.d/ache.sh
 ```
 
 ### Running using Docker
@@ -133,7 +133,7 @@ We welcome user feedback. Please submit any suggestions, questions or bug report
 
 Code contributions are welcome. We use a code style derived from the [Google Style Guide](https://google.github.io/styleguide/javaguide.html), but with 4 spaces for tabs. A Eclipse Formatter configuration file is available in the [repository](https://github.com/ViDA-NYU/ache/blob/master/eclipse-code-style.xml).
 
-## Contact 
+## Contact
 
 - Aécio Santos [aecio.santos@nyu.edu]
 - Kien Pham [kien.pham@nyu.edu]
