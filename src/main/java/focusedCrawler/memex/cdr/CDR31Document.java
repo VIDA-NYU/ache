@@ -27,26 +27,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @JsonInclude(Include.NON_NULL)
 public class CDR31Document implements Serializable {
 
-    public static class CDR31MediaObject {
-
-        @JsonProperty("obj_original_url")
-        String objOriginalUrl;
-
-        @JsonProperty("obj_stored_url")
-        String objStoredUrl;
-
-        @JsonProperty("content_type")
-        private String contentType;
-
-        @JsonProperty("response_headers")
-        private Map<String, String> responseHeaders;
-
-        @JsonProperty("timestamp_crawl")
-        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'")
-        private Date timestampCrawl;
-
-    }
-
     private String _id;
 
     @JsonProperty("content_type")
