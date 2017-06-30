@@ -28,6 +28,7 @@ public class S3Uploader {
                         .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
                         .build();
         this.bucketName = bucketName;
+        System.out.println("Initializing S3 Uploader");
     }
 
  

@@ -138,15 +138,17 @@ public class AcheToCdrExporter extends CliTool {
         }
         
         Iterator<TargetModelJson> it;
+        Iterator<TargetModelJson> it1;
         if(repositoryType == RepositoryType.FILESYSTEM_JSON) {
             FileSystemTargetRepository repository = new FileSystemTargetRepository(inputPath,
                     DataFormat.JSON, hashFilename, compressData);
             it = repository.iterator();
+            it1 = repository.iterator();
         } else {
             FilesTargetRepository repository = new FilesTargetRepository(inputPath);
             it = repository.iterator();
+            it1 = repository.iterator();
         }
-        Iterator<TargetModelJson> it1 = it; // used for next pass
 
 		//Process media files
         while (it.hasNext()) {
@@ -164,7 +166,7 @@ public class AcheToCdrExporter extends CliTool {
             try{
                 processRecord(pageModel);
                 processedPages++;
-                if(processedPages % 1 == 0) {
+                if(processedPages % 100 == 0) {
                     System.out.printf("Processed %d pages\n", processedPages);
                 }
             } catch(Exception e) {
@@ -174,7 +176,6 @@ public class AcheToCdrExporter extends CliTool {
         System.out.printf("Processed %d pages\n", processedPages);
         
         //it.close();
-		//it1.close();
         
         if(out != null) out.close();
         if(bulkIndexer!= null) bulkIndexer.close();
@@ -273,6 +274,7 @@ public class AcheToCdrExporter extends CliTool {
 	public void createCDR31MediaObject(TargetModelJson pageModel) throws IOException {
 		// Hash and upload to S3
 		String storedUrl = this.uploadMediaFile(pageModel.getContent()); 
+        System.out.println(storedUrl);
 
 		// Creat Media Object for the image
         CDR31MediaObject obj = new CDR31MediaObject();
