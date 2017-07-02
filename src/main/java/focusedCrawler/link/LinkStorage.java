@@ -155,7 +155,7 @@ public class LinkStorage extends StorageDefault {
      */
     public synchronized Object select(Object obj) throws StorageException, DataNotFoundException {
         try {
-            return frontierManager.nextURL();
+            return frontierManager.nextURL(true);
         } catch (FrontierPersistentException e) {
             throw new StorageException(e.getMessage(), e);
         }
