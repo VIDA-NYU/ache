@@ -67,7 +67,7 @@ public class CrawlScheduler {
         metricsManager.register("frontier_manager.last_load.rejected", rejectedLinksGauge);
         
         Gauge<Integer> uncrawledLinksGauge = () -> uncrawledLinksDuringLoad;
-        metricsManager.register("frontier_manager.last_frontier_load.uncrawled", uncrawledLinksGauge);
+        metricsManager.register("frontier_manager.last_load.uncrawled", uncrawledLinksGauge);
         
         frontierLoadTimer = metricsManager.getTimer("frontier_manager.load.time");
     }

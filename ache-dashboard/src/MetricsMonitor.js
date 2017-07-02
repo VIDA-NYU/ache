@@ -190,7 +190,7 @@ class MetricsMonitor extends React.Component {
                   <tbody>
                     <tr>
                       <td>Uncrawled Pages in Frontier</td>
-                      <td>{metrics['gauges']['frontier_manager.last_frontier_load.uncrawled'].value.toLocaleString()}</td>
+                      <td>{metrics['gauges']['frontier_manager.last_load.uncrawled'].value.toLocaleString()}</td>
                     </tr>
                     <tr>
                       <td>Successfull Page Fetches (HTTP 2XX)</td>
