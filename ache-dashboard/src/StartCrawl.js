@@ -6,18 +6,14 @@ class StartCrawl extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      crawlType: null,
-      starting: false,
-      modelFile: null
-    };
+    this.state = {};
     this.checkCrawlerStatus();
   }
 
   componentDidMount() {
     this.timerID = setInterval(
       () => this.checkCrawlerStatus(),
-      2000 // update status every 1s
+      2000 // update status every 2s
     );
   }
 
@@ -33,45 +29,42 @@ class StartCrawl extends React.Component {
         return 'FETCH_ERROR';
       })
       .then( (response) => {
-        if(response === 'FETCH_ERROR') {
-          this.state.serverError = true;
-          this.state.serverMessage = "Failed to connect to ACHE API to get status.";
-          this.forceUpdate();
-        } else if (this.state.serverError === true) {
-          this.state.serverError = false;
-          this.state.serverMessage = null;
-          this.forceUpdate();
-        }
-        if(response.crawlerRunning === true) {
-          this.state.serverMessage = "Crawler is running. Open \"Monitoring\" tab for crawl details.";
-          this.state.crawlerRunning = true;
-          this.forceUpdate();
+        if (response === 'FETCH_ERROR') {
+          this.setState({
+            serverError: true,
+            serverMessage: "Failed to connect to ACHE API to get status."
+          });
         } else {
-          this.state.serverMessage = null;
-          this.state.crawlerRunning = false;
-          this.forceUpdate();
+          this.setState({serverError: false});
+          if(response.crawlerRunning === true) {
+            this.setState({
+              crawlerRunning: true,
+              serverMessage: "Crawler is running. Open \"Monitoring\" tab for crawl details."
+            });
+          } else {
+            this.setState({crawlerRunning: false});
+          }
         }
       });
   }
   
-  setCrawlType(crawlType) {
-    this.state.crawlType = crawlType;
-    this.forceUpdate();
+  setCrawlType(newCrawlType) {
+    this.setState({crawlType: newCrawlType});
   }
   
   cancelCrawl() {
-    this.state.crawlType = null;
-    this.state.seeds = null;
-    this.state.seedsContent = null;
-    this.state.modelFile = null;
-    this.state.invalidModel = null;
-    this.forceUpdate();
+    this.setState({
+      crawlType: null,
+      seeds: null,
+      seedsContent: null,
+      modelFile: null,
+      invalidModel: null,
+      starting: false
+    });
   }
   
   startCrawl(event) {
-    console.log("Starting crawl...");
-    this.state.starting = true;
-    this.forceUpdate();
+    this.setState({starting: true});
     var config = {
       method: 'POST',
       mode: 'cors',
@@ -91,38 +84,52 @@ class StartCrawl extends React.Component {
   }
   
   updateResponse(response) {
-    console.log(response);
     if('FETCH_ERROR' === response) {
-      console.log("Failed to start crawler.");
-      return
-    }  
+      this.setState({
+        serverError: true,
+        serverMessage: "Failed to connect to server to start the crawler."
+      });
+    } else {
+      if(response.crawlerStarted === false) {
+        this.setState({
+          starting: false,
+          serverError: true,
+          serverMessage: "Failed to start the crawler."
+        });
+      } else if(response.crawlerStarted === true) {
+        this.setState({
+          crawlerRunning: true,
+          serverMessage: "Crawler started successfully."
+        });
+      }
+    }
   }
 
   handleSelectModelFile(e) {
     const reader = new FileReader();
     const file = e.target.files[0];
-    console.log(file.type);
     if('application/zip' === file.type) {
       reader.onload = (upload) => {
-        this.state.modelFile = reader.result.split(',')[1];
-        this.state.invalidModel = false;
-        this.forceUpdate();
+        this.setState({
+          modelFile: reader.result.split(',')[1],
+          invalidModel: false
+        });
       };
       reader.readAsDataURL(file);
     } else {
-      this.state.invalidModel = true;
-      this.forceUpdate();
+      this.setState({
+        invalidModel: true
+      });
     }
   }
 
   handleSelectSeedFile(e) {
     const reader = new FileReader();
     const file = e.target.files[0];
-    console.log(file.type);
     reader.onload = (upload) => {
       //TODO validate reader.result not empty and filetype
-      let seedsContent = reader.result.replace(/\r\n/g, "\n")
-      var seeds = seedsContent.split('\n')
+      let seedsContent = reader.result.replace(/\r\n/g, "\n");
+      var seeds = seedsContent.split('\n');
       
       if(seeds !== null && seeds.length > 0) {
         let validUrls = []
@@ -131,41 +138,36 @@ class StartCrawl extends React.Component {
             validUrls.push(seeds[i]);
           }
         }
-        this.state.seeds = validUrls;
-        this.state.seedsContent = validUrls.join('\n');
-        this.forceUpdate();
+        this.setState({
+          seeds: validUrls,
+          seedsContent: validUrls.join('\n')
+        });
       }
     };
     reader.readAsText(file);
   }
   
   render(){
-    if(this.state.serverMessage !== null) {
-      if(this.state.serverError === true) {
-        return (
-          <div className="alert alert-danger message">
-            <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> {this.state.serverMessage}
-          </div>
-        );
-      } else {
-        return (
-          <div className="alert alert-success message">
-            <span className="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;{this.state.serverMessage}
-          </div>
-        );
-      }
-    }
-    const isStarting = this.state.starting;
-    const hasValidSeeds = this.state.seeds && this.state.seeds.length;
-    
-    let enableStart = null;
-    if (this.state.crawlType === 'DeepCrawl') {
-      enableStart = hasValidSeeds > 0 && !isStarting;
-    } else {
-      enableStart = this.state.modelFile !== null && !isStarting;
+    // render error message
+    if(this.state.serverError === true) {
+      return (
+        <div className="alert alert-danger message">
+          <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;{this.state.serverMessage}
+        </div>
+      );
     }
     
-    if(this.state.crawlType === null) {
+    // render crawker running message
+    if (this.state.crawlerRunning === true) {
+      return (
+        <div className="alert alert-success message">
+          <span className="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;{this.state.serverMessage}
+        </div>
+      );
+    }
+    
+    // render crawl type selection buttons
+    if(this.state.crawlType == null) {
       return (
         <div className="row">
           <div className="col-md-6 col-md-offset-3">
@@ -176,6 +178,17 @@ class StartCrawl extends React.Component {
         </div>
       );
     }
+
+    // render launch crawl pages
+    const isStarting = this.state.starting;
+    const hasValidSeeds = this.state.seeds && this.state.seeds.length;
+    
+    let enableStart = null;
+    if (this.state.crawlType === 'DeepCrawl') {
+      enableStart = hasValidSeeds > 0 && !isStarting;
+    } else {
+      enableStart = this.state.modelFile !== null && !isStarting;
+    }
     
     return (
       <div className="row">
@@ -184,7 +197,7 @@ class StartCrawl extends React.Component {
           {(this.state.crawlType === 'FocusedCrawl') && <h2>Start a <b>Focused Crawl</b></h2> }
           
           <form>
-            { 
+            {
               (this.state.crawlType === 'DeepCrawl')
               &&
               <div>
@@ -196,7 +209,7 @@ class StartCrawl extends React.Component {
                 </div>
               </div>
             }
-            { 
+            {
               (this.state.crawlType === 'FocusedCrawl')
               &&
               <div className="form-group">
