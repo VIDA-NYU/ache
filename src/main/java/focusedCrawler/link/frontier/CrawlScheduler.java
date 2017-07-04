@@ -85,6 +85,10 @@ public class CrawlScheduler {
 
                 LinkRelevance link = it.next().getValue();
 
+                if (frontier.isDisallowedByRobots(link)) {
+                    continue;
+                }
+
                 // Links already downloaded or not relevant
                 if (link.getRelevance() <= 0) {
                     if (recrawlSelector != null) {

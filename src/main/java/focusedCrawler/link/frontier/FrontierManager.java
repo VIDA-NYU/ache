@@ -56,6 +56,8 @@ public class FrontierManager {
     private final int linksToLoad;
     private final HostManager hostsManager;
     private final boolean downloadRobots;
+    private final boolean insertSitemaps;
+    private final boolean disallowSitesInRobotsFile;
     private final LogFile schedulerLog;
     private final MetricsManager metricsManager;
 
@@ -70,7 +72,9 @@ public class FrontierManager {
         this.frontier = frontier;
         this.linkFilter = linkFilter;
         this.metricsManager = metricsManager;
-        this.downloadRobots = config.getDownloadSitemapXml();
+        this.insertSitemaps = config.getDownloadSitemapXml();
+        this.disallowSitesInRobotsFile = config.getDisallowSitesInRobotsFile();
+        this.downloadRobots = getDownloadRobots();
         this.linksToLoad = config.getSchedulerMaxLinks();
         this.maxPagesPerDomain = config.getMaxPagesPerDomain();
         this.domainCounter = new HashMap<String, Integer>();
@@ -96,17 +100,21 @@ public class FrontierManager {
         scheduler.reload();
     }
 
-    public boolean isRelevant(LinkRelevance elem) throws FrontierPersistentException {
-        if (elem.getRelevance() <= 0) {
+    public boolean isRelevant(LinkRelevance link) throws FrontierPersistentException {
+        if (link.getRelevance() <= 0) {
+            return false;
+        }
+        
+        if(disallowSitesInRobotsFile && frontier.isDisallowedByRobots(link)) {
             return false;
         }
 
-        Integer value = frontier.exist(elem);
+        Integer value = frontier.exist(link);
         if (value != null) {
             return false;
         }
 
-        String url = elem.getURL().toString();
+        String url = link.getURL().toString();
         if (linkFilter.accept(url) == false) {
             return false;
         }
@@ -330,6 +338,16 @@ public class FrontierManager {
 
     public BipartiteGraphRepository getGraphRepository() {
         return this.graphRepository;
+    }
+
+    /**
+     * Returns true if either the property to include sitemaps is true or disallow sites in
+     * robots.txt is true
+     * 
+     * @return
+     */
+    private boolean getDownloadRobots() {
+        return insertSitemaps || disallowSitesInRobotsFile;
     }
 
 }
