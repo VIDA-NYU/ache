@@ -90,9 +90,6 @@ public class AcheToCdrExporter extends CliTool {
     @Option(name={"--output-es-bulk-size", "-obs"}, description="ElasticSearch bulk size")
     int bulkSize = 25;
 
-    @Option(name={"--filetype", "-ft"}, description="image or html")
-	String fileType = "html";
-
 	//AWS S3 Support
 	
     @Option(name={"--accesskey", "-ak"}, description="AWS ACCESS KEY ID")
@@ -103,6 +100,9 @@ public class AcheToCdrExporter extends CliTool {
 
     @Option(name = {"--bucket", "-bk"}, description = "AWS S3 BUCKET NAME")
     String bucketName = "";
+    
+    @Option(name = {"--region", "-rg"}, description = "AWS S3 Region name")
+    String region = "us-east-1";
 
     @Option(name = {"--tmp-path", "-tmp"}, description = "Path to temporary working folder")
     String temp = null;
@@ -137,7 +137,7 @@ public class AcheToCdrExporter extends CliTool {
             temp = tmpPath.toString();
         }
 
-        s3Uploader = new S3Uploader(this.accessKeyID, this.secretKeyID, this.bucketName);
+        s3Uploader = new S3Uploader(this.accessKeyID, this.secretKeyID, this.bucketName, this.region);
         mediaObjectCache =
                 new PersistentHashtable<CDR31MediaObject>(temp, 1000, CDR31MediaObject.class);
 
