@@ -3,6 +3,7 @@ package focusedCrawler.memex.cdr;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,22 +15,19 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.zip.GZIPOutputStream;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hasher;
 import com.google.common.hash.Hashing;
 
+import focusedCrawler.target.model.Page;
 import focusedCrawler.target.model.TargetModelJson;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FilesTargetRepository;
 import focusedCrawler.tools.SimpleBulkIndexer;
 import focusedCrawler.util.CliTool;
+import focusedCrawler.util.parser.PaginaURL;
 import focusedCrawler.util.persistence.PersistentHashtable;
 import io.airlift.airline.Command;
 import io.airlift.airline.Option;
@@ -104,6 +102,9 @@ public class AcheToCdrExporter extends CliTool {
     @Option(name = {"--region", "-rg"}, description = "AWS S3 Region name")
     String region = "us-east-1";
 
+    @Option(name = {"--skip-upload", "-su"}, description = "Disable upload of objects to S3")
+    private boolean skipUpload = false;
+
     @Option(name = {"--tmp-path", "-tmp"}, description = "Path to temporary working folder")
     String temp = null;
 
@@ -172,12 +173,13 @@ public class AcheToCdrExporter extends CliTool {
 		//Process media files
         while (it.hasNext()) {
             TargetModelJson pageModel = it.next();
-            try{
-				processMediaFile(pageModel);
-            } catch(Exception e) {
+            try {
+                processMediaFile(pageModel);
+            } catch (Exception e) {
                 System.err.println("Failed to process record.\n" + e.toString());
             }
-		}
+        }
+        mediaObjectCache.commit();
 		
 		//Process html files
         while (it1.hasNext()) {
@@ -291,7 +293,6 @@ public class AcheToCdrExporter extends CliTool {
 	public void createCDR31MediaObject(TargetModelJson pageModel) throws IOException {
 		// Hash and upload to S3
 		String storedUrl = this.uploadMediaFile(pageModel.getContent(), pageModel.getUrl()); 
-        System.out.println("Uploaded object: " + storedUrl);
 
 		// Create Media Object for the image
         CDR31MediaObject obj = new CDR31MediaObject();
@@ -311,26 +312,33 @@ public class AcheToCdrExporter extends CliTool {
         hasher.putBytes(content);
         String host = new URL(url).getHost();
         String hs = reverseDomain(host) + "/" + hasher.hash().toString();
-        this.s3Uploader.upload(hs, content);
+        if (skipUpload == false) {
+            this.s3Uploader.upload(hs, content);
+            System.out.println("Uploaded object: " + hs);
+        } else {
+            System.out.println("Created object: " + hs);
+        }
         return hs;
 	}
 
-	public String[] extractImgLinks(String html) {
-		HashSet<String> links = new HashSet<>();
-		Document doc = Jsoup.parse(html);
-        Elements media = doc.select("[src]");
-
-        for (Element src : media) {
-            if (src.tagName().equals("img")) {
-            	links.add(src.attr("abs:src"));
-			}
+    public String[] extractImgLinks(TargetModelJson pageModel) {
+        try {
+            PaginaURL pageParser = new PaginaURL(new Page(pageModel));
+            URL[] parsedLinks = pageParser.links();
+            HashSet<String> links = new HashSet<>();
+            for (URL url : parsedLinks) {
+                links.add(url.toString());
+            }
+            return links.toArray(new String[links.size()]);
+        } catch (MalformedURLException e) {
+            return new String[0];
         }
-		return links.toArray(new String[links.size()]);
-	}
+    }
 
     public void createCDR31DocumentJson(TargetModelJson pageModel) {
+
         List<CDR31MediaObject> mediaObjects = new ArrayList<>();
-        String[] imgLinks = extractImgLinks(pageModel.getContentAsString());
+        String[] imgLinks = extractImgLinks(pageModel);
         for (String link : imgLinks) {
             CDR31MediaObject object = this.mediaObjectCache.get(link);
             if (object != null) {
