@@ -138,6 +138,7 @@ public class FrontierManager {
                         try {
                             URL robotUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
                             LinkRelevance sitemap = new LinkRelevance(robotUrl, 299, LinkRelevance.Type.ROBOTS);
+                            logger.debug("downloaded robots.txt");
                             frontier.insert(sitemap);
                         } catch (Exception e) {
                             logger.warn("Failed to insert robots.txt for host: " + hostName, e);
