@@ -82,28 +82,30 @@ public class CrawlScheduler {
             this.startSelection(numberOfLinks);
 
             while (it.hasNext()) {
+                try {
+                    LinkRelevance link = it.next().getValue();
 
-                LinkRelevance link = it.next().getValue();
-
-                // Links already downloaded or not relevant
-                if (link.getRelevance() <= 0) {
-                    if (recrawlSelector != null) {
-                        recrawlSelector.evaluateLink(link);
+                    // Links already downloaded or not relevant
+                    if (link.getRelevance() <= 0) {
+                        if (recrawlSelector != null) {
+                            recrawlSelector.evaluateLink(link);
+                        }
+                        continue;
                     }
-                    continue;
+
+                    uncrawledLinks++;
+
+                    // check whether link can be download now according to politeness constraints
+                    if (scheduler.canDownloadNow(link)) {
+                        // consider link to be downloaded
+                        linkSelector.evaluateLink(link);
+                        linksAvailable++;
+                    } else {
+                        rejectedLinks++;
+                    }
+                } catch (Exception e) {
+                    // ignore exception and continue to load links even when some links fail
                 }
-
-                uncrawledLinks++;
-
-                // check whether link can be download now according to politeness constraints
-                if (scheduler.canDownloadNow(link)) {
-                    // consider link to be downloaded
-                    linkSelector.evaluateLink(link);
-                    linksAvailable++;
-                } else {
-                    rejectedLinks++;
-                }
-
             }
 
             this.addSelectedLinksToScheduler(recrawlSelector);

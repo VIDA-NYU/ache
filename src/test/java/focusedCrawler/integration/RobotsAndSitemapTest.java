@@ -71,7 +71,9 @@ public class RobotsAndSitemapTest {
         );
 
         List<String> shouldNOTBeDownloaded = asList(
-                "not-listed-on-sitemaps.html"
+                "not-listed-on-sitemaps.html",
+                "http://.invalid-url.com/sitemap.xml",
+                "http://.invalid-url.com/invalid-url.xml"
         );
 
         for (String url : shouldBeDownloaded) {
