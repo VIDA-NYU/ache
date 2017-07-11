@@ -104,7 +104,8 @@ public class CrawlScheduler {
                         rejectedLinks++;
                     }
                 } catch (Exception e) {
-                    // ignore exception and continue to load links even when some links fail
+                    // just log the exception and continue the load even when some link fails
+                    logger.error("Failed to load link in frontier.", e);
                 }
             }
 
