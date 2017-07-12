@@ -136,10 +136,13 @@ public class Frontier {
      * @throws FrontierPersistentException
      */
     public boolean insert(LinkRelevance linkRelev) throws FrontierPersistentException {
+        if (linkRelev == null) {
+            return false;
+        }
         boolean inserted = false;
         String url = linkRelev.getURL().toString();
-        Integer rel = exist(linkRelev);
-        if (rel == null && url.toString().length() < 210) {
+        Integer relevance = exist(linkRelev);
+        if (relevance == null) {
             urlRelevance.put(url, linkRelev);
             inserted = true;
         }

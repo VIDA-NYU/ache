@@ -1,5 +1,6 @@
 package focusedCrawler.memex.cdr;
 
+import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
@@ -119,6 +120,13 @@ public class CDRDocumentBuilderTest {
             "name2", Arrays.asList("value3")
         );
 
+        CDR31MediaObject obj = new CDR31MediaObject();
+        obj.setContentType("image/png");
+        obj.setTimestampCrawl(new Date());
+        obj.setObjOriginalUrl("http://example.com/image.png");
+        obj.setObjStoredUrl("com/example/ASDF435ASDFAFD");
+        obj.setResponseHeaders(responseHeaders);
+
         Date date = new Date(1497763340874l);
         String json = new CDR31Document.Builder()
                 .setUrl("http://www.darpa.mil/program/memex")
@@ -126,6 +134,7 @@ public class CDRDocumentBuilderTest {
                 .setContentType("text/html")
                 .setCrawler("memex-crawler")
                 .setTeam("DARPA")
+                .setObjects(asList(obj))
                 .setResponseHeaders(responseHeaders)
                 .setTimestampCrawl(date)
                 .setTimestampIndex(date)
@@ -160,7 +169,13 @@ public class CDRDocumentBuilderTest {
 
         assertThat(node.get("version").asDouble(), is(3.1d));
 
+        JsonNode obj0 = node.get("objects").elements().next();
 
+        assertThat(obj0.get("obj_original_url").asText(), is("http://example.com/image.png"));
+
+        assertThat(obj0.get("response_headers"), is(notNullValue()));
+        assertThat(obj0.get("response_headers").get("name1").asText(), is("value1,value2"));
+        assertThat(obj0.get("response_headers").get("name2").asText(), is("value3"));
     }
 
 }

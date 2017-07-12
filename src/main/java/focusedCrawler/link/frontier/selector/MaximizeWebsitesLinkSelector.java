@@ -17,7 +17,7 @@ import focusedCrawler.link.frontier.LinkRelevance;
  */
 public class MaximizeWebsitesLinkSelector implements LinkSelector {
     
-    private static final int MAX_LINKS_PER_DOMAIN = 5;
+    private static final int MAX_LINKS_PER_DOMAIN = 5000;
     
     private Map<String, MinMaxPriorityQueue<LinkRelevance>> topkLinksPerDomain;
     private int numberOfLinks;
