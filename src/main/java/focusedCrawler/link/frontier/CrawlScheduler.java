@@ -96,7 +96,7 @@ public class CrawlScheduler {
                     uncrawledLinks++;
 
                     // check whether link can be download now according to politeness constraints
-                    if (scheduler.canDownloadNow(link)) {
+                    if (scheduler.canInsertNow(link)) {
                         // consider link to be downloaded
                         linkSelector.evaluateLink(link);
                         linksAvailable++;

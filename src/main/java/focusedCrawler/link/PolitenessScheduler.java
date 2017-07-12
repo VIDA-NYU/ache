@@ -66,7 +66,9 @@ class DomainNode {
  *
  */
 public class PolitenessScheduler {
-    
+
+    private static final int MIN_LINKS_PER_DOMAIN_TO_ALLOW_LOAD = 2000;
+
     private final PriorityQueue<DomainNode> domainsQueue;
     private final PriorityQueue<DomainNode> emptyDomainsQueue;
     private final Map<String, DomainNode> domains;
@@ -243,5 +245,14 @@ public class PolitenessScheduler {
             return isAvailable(domain);
         }
     }
-    
+
+    public boolean canInsertNow(LinkRelevance link) {
+        DomainNode domain = domains.get(link.getTopLevelDomainName());
+        if (domain == null) {
+            return true;
+        } else {
+            return domain.size() < MIN_LINKS_PER_DOMAIN_TO_ALLOW_LOAD;
+        }
+    }
+
 }
