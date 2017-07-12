@@ -93,7 +93,7 @@ public class LinkStorageConfig {
     private int schedulerHostMinAccessInterval = 5000;
 
     @JsonProperty("link_storage.scheduler.max_links")
-    private int schedulerMaxLinks = 10000;
+    private int schedulerMaxLinks = 100000;
 
     @JsonProperty("link_storage.persistent_hashtable.backend")
     private String persistentHashtableBackend = "ROCKSDB";
