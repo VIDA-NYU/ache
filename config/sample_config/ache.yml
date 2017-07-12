@@ -58,10 +58,6 @@ target_storage.hard_focus: true
 # Run bipartite crawler
 target_storage.bipartite: false
 
-# Relevance threshold for classified pages. Pages with probability of being
-# relevant above this threshold are considered relevant
-target_storage.relevance_threshold: 0.5
-
 # Maximum number of pages to visit
 target_storage.visited_page_limit: 10000000
 
