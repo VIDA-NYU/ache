@@ -57,6 +57,8 @@ dependencies {
     // REST server dependencies
     compile "com.sparkjava:spark-core:2.5.3"
     
+    compile group: 'org.netpreserve.commons', name: 'webarchive-commons', version: '1.1.2'
+    compile group: 'org.apache.hadoop', name: 'hadoop-core', version: '0.20.2'
     
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest-all:1.3'

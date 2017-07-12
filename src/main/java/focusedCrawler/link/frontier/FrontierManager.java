@@ -56,6 +56,8 @@ public class FrontierManager {
     private final int linksToLoad;
     private final HostManager hostsManager;
     private final boolean downloadRobots;
+    private final boolean insertSitemaps;
+    private final boolean disallowSitesInRobotsFile;
     private final LogFile schedulerLog;
     private final MetricsManager metricsManager;
 
@@ -70,7 +72,9 @@ public class FrontierManager {
         this.frontier = frontier;
         this.linkFilter = linkFilter;
         this.metricsManager = metricsManager;
-        this.downloadRobots = config.getDownloadSitemapXml();
+        this.insertSitemaps = config.getDownloadSitemapXml();
+        this.disallowSitesInRobotsFile = config.getDisallowSitesInRobotsFile();
+        this.downloadRobots = getDownloadRobots();
         this.linksToLoad = config.getSchedulerMaxLinks();
         this.maxPagesPerDomain = config.getMaxPagesPerDomain();
         this.domainCounter = new HashMap<String, Integer>();
@@ -92,7 +96,7 @@ public class FrontierManager {
         this.selectTimer = metricsManager.getTimer("frontier_manager.select.time");
     }
 
-    public void forceReload() {
+    public void clearFrontier() {
         scheduler.reload();
     }
 
@@ -124,9 +128,6 @@ public class FrontierManager {
     public boolean insert(LinkRelevance linkRelevance) throws FrontierPersistentException {
         Context timerContext = insertTimer.time();
         try {
-            if (linkRelevance == null) {
-                return false;
-            }
             boolean insert = isRelevant(linkRelevance);
             if (insert) {
                 if (downloadRobots) {
@@ -135,8 +136,9 @@ public class FrontierManager {
                     if (!hostsManager.isKnown(hostName)) {
                         hostsManager.insert(hostName);
                         try {
-                            URL robotsUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
-                            LinkRelevance sitemap = LinkRelevance.createRobots(robotsUrl.toString(), 299);
+                            URL robotUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
+                            LinkRelevance sitemap = new LinkRelevance(robotUrl, 299, LinkRelevance.Type.ROBOTS);
+                            logger.debug("downloaded robots.txt");
                             frontier.insert(sitemap);
                         } catch (Exception e) {
                             logger.warn("Failed to insert robots.txt for host: " + hostName, e);
@@ -144,7 +146,6 @@ public class FrontierManager {
                     }
                 }
                 insert = frontier.insert(linkRelevance);
-                scheduler.notifyLinkInserted();
             }
             return insert;
         } finally {
@@ -153,13 +154,9 @@ public class FrontierManager {
     }
 
     public LinkRelevance nextURL() throws FrontierPersistentException, DataNotFoundException {
-        return nextURL(false);
-    }
-    
-    public LinkRelevance nextURL(boolean asyncLoad) throws FrontierPersistentException, DataNotFoundException {
         Context timerContext = selectTimer.time();
         try {
-            LinkRelevance link = scheduler.nextLink(asyncLoad);
+            LinkRelevance link = scheduler.nextLink();
             if (link == null) {
                 if (scheduler.hasPendingLinks()) {
                     throw new DataNotFoundException(false, "No links available for selection right now.");
@@ -215,7 +212,6 @@ public class FrontierManager {
                     throw new RuntimeException("Failed to insert seed URL: " + seed, e);
                 }
             }
-            frontier.commit();
             logger.info("Number of seeds added: " + count);
             if (errors > 0) {
                 logger.info("Number of invalid seeds: " + errors);
@@ -333,6 +329,15 @@ public class FrontierManager {
 
     public BipartiteGraphRepository getGraphRepository() {
         return this.graphRepository;
+    }
+    
+    /**
+     * Returns true if either the property to 
+     * include sitemaps is true or disallow sites in robots.txt is true
+     * @return
+     */
+    private boolean getDownloadRobots() {
+        return insertSitemaps || disallowSitesInRobotsFile;
     }
 
 }

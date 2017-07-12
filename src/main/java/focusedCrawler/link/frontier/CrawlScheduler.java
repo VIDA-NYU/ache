@@ -1,7 +1,6 @@
 package focusedCrawler.link.frontier;
 
 import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,25 +12,27 @@ import com.codahale.metrics.Timer.Context;
 import focusedCrawler.link.PolitenessScheduler;
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.util.MetricsManager;
+import focusedCrawler.util.persistence.Tuple;
 import focusedCrawler.util.persistence.TupleIterator;
 
 public class CrawlScheduler {
-
+    
     private static final Logger logger = LoggerFactory.getLogger(CrawlScheduler.class);
 
     private final LinkSelector linkSelector;
-    private final LinkSelector recrawlSelector;
     private final Frontier frontier;
     private final PolitenessScheduler scheduler;
     private final MetricsManager metricsManager;
     private final int linksToLoad;
 
-    private boolean hasUncrawledLinks = true;
-    private int availableLinksDuringLoad = -1;
-    private int rejectedLinksDuringLoad = -1;
-    private int uncrawledLinksDuringLoad = -1;
+    private boolean linksRejectedDuringLastLoad;
+    private int availableLinksDuringLoad;
+    private int rejectedLinksDuringLoad;
+    private int uncrawledLinksDuringLoad;
+    private int unavailableLinksDuringLoad;
     private Timer frontierLoadTimer;
-    private AtomicBoolean loadIsRunning = new AtomicBoolean(false);
+
+    private LinkSelector recrawlSelector;
     
     public CrawlScheduler(LinkSelector linkSelector, LinkSelector recrawlSelector,
                           Frontier frontier, MetricsManager metricsManager, 
@@ -59,65 +60,91 @@ public class CrawlScheduler {
         Gauge<Integer> availableLinksGauge = () -> availableLinksDuringLoad;
         metricsManager.register("frontier_manager.last_load.available", availableLinksGauge);
 
+        Gauge<Integer> unavailableLinksGauge = () -> unavailableLinksDuringLoad;
+        metricsManager.register("frontier_manager.last_load.unavailable", unavailableLinksGauge);
+        
         Gauge<Integer> rejectedLinksGauge = () -> rejectedLinksDuringLoad;
         metricsManager.register("frontier_manager.last_load.rejected", rejectedLinksGauge);
         
         Gauge<Integer> uncrawledLinksGauge = () -> uncrawledLinksDuringLoad;
-        metricsManager.register("frontier_manager.last_load.uncrawled", uncrawledLinksGauge);
+        metricsManager.register("frontier_manager.last_frontier_load.uncrawled", uncrawledLinksGauge);
         
         frontierLoadTimer = metricsManager.getTimer("frontier_manager.load.time");
     }
     
-    private synchronized void loadQueue(int numberOfLinks) {
+    private void loadQueue(int numberOfLinks) {
         logger.info("Loading more links from frontier into the scheduler...");
+//        scheduler.clear();
         frontier.commit();
-
         Context timerContext = frontierLoadTimer.time();
-        try (TupleIterator<LinkRelevance> it = frontier.iterator()) {
-
+        try(TupleIterator<LinkRelevance> it = frontier.iterator()) {
+            
             int rejectedLinks = 0;
             int uncrawledLinks = 0;
-            int linksAvailable = 0;
+            int availableLinks = 0;
+            int unavailableLinks = 0;
 
-            this.startSelection(numberOfLinks);
-
-            while (it.hasNext()) {
-                try {
-                    LinkRelevance link = it.next().getValue();
-
-                    // Links already downloaded or not relevant
-                    if (link.getRelevance() <= 0) {
-                        if (recrawlSelector != null) {
-                            recrawlSelector.evaluateLink(link);
-                        }
-                        continue;
+            linkSelector.startSelection(numberOfLinks);
+            if(recrawlSelector != null) {
+                recrawlSelector.startSelection(numberOfLinks);
+            }
+            while(it.hasNext()) {
+                Tuple<LinkRelevance> tuple = it.next();
+                LinkRelevance link = tuple.getValue();
+                
+                String domainName = link.getTopLevelDomainName().trim();
+                if (domainName != null && frontier.getRobotRulesMap().get(domainName) != null
+                        && !frontier.getRobotRulesMap().get(domainName).isAllowed(link.getURL().toString())) {
+                    logger.info(
+                            "Ignoring link " + link.getURL().toString() + " as it is present in the robots file which is disallowed.");
+                    continue;
+                }
+                
+                // Links already downloaded or not relevant
+                if (link.getRelevance() <= 0) {
+                    if(recrawlSelector != null) {
+                        recrawlSelector.evaluateLink(link);
                     }
-
-                    uncrawledLinks++;
-
-                    // check whether link can be download now according to politeness constraints
-                    if (scheduler.canDownloadNow(link)) {
-                        // consider link to be downloaded
-                        linkSelector.evaluateLink(link);
-                        linksAvailable++;
-                    } else {
-                        rejectedLinks++;
-                    }
-                } catch (Exception e) {
-                    // just log the exception and continue the load even when some link fails
-                    logger.error("Failed to load link in frontier.", e);
+                    continue;
+                }
+                
+                uncrawledLinks++;
+                // check whether link can be download now according to politeness constraints 
+                if(scheduler.canDownloadNow(link)) {
+                    // consider link to  be downloaded
+                    linkSelector.evaluateLink(link);
+                    availableLinks++;
+                } else {
+                    unavailableLinks++;
+                    rejectedLinks++;
                 }
             }
-
-            this.addSelectedLinksToScheduler(recrawlSelector);
-            rejectedLinks += this.addSelectedLinksToScheduler(linkSelector);
-
+            
+            if(recrawlSelector != null) {
+                for(LinkRelevance link : recrawlSelector.getSelectedLinks()) {
+                    scheduler.addLink(link);
+                }
+            }
+            
+            List<LinkRelevance> selectedLinks = linkSelector.getSelectedLinks();
+            
+            int linksAdded = 0;
+            for (LinkRelevance link : selectedLinks) {
+                boolean addedLink = scheduler.addLink(link);
+                if(addedLink) {
+                    linksAdded++;
+                } else {
+                    rejectedLinks++;
+                }
+            }
+            
+            this.availableLinksDuringLoad = availableLinks;
+            this.unavailableLinksDuringLoad = unavailableLinks;
             this.uncrawledLinksDuringLoad = uncrawledLinks;
             this.rejectedLinksDuringLoad = rejectedLinks;
-            this.availableLinksDuringLoad = linksAvailable;
+            this.linksRejectedDuringLastLoad = rejectedLinks > 0;
             
-            this.hasUncrawledLinks = rejectedLinks != 0 || uncrawledLinks != 0;
-
+            logger.info("Loaded {} links.", linksAdded);
         } catch (Exception e) {
             logger.error("Failed to read items from the frontier.", e);
         } finally {
@@ -125,68 +152,15 @@ public class CrawlScheduler {
         }
     }
     
-    public void notifyLinkInserted() {
-        this.hasUncrawledLinks = true;
-    }
-
-    private void startSelection(int numberOfLinks) {
-        if (linkSelector != null) {
-            linkSelector.startSelection(numberOfLinks);
-        }
-        if (recrawlSelector != null) {
-            recrawlSelector.startSelection(numberOfLinks);
-        }
-    }
-
-    private int addSelectedLinksToScheduler(LinkSelector selector) {
-        int rejectedLinks = 0;
-        int linksAdded = 0;
-        if (selector != null) {
-            List<LinkRelevance> links = selector.getSelectedLinks();
-            for (LinkRelevance link : links) {
-                if (scheduler.addLink(link)) {
-                    linksAdded++;
-                } else {
-                    rejectedLinks++;
-                }
-            }
-            logger.info("Loaded {} links.", linksAdded);
-        }
-        return rejectedLinks;
-    }
-
     public boolean hasPendingLinks() {
-        return hasUncrawledLinks || recrawlSelector != null || loadIsRunning.get() || scheduler.hasPendingLinks();
+        return scheduler.hasPendingLinks() || linksRejectedDuringLastLoad || recrawlSelector != null;
     }
 
-    public LinkRelevance nextLink(boolean asyncLoad) {
+    public LinkRelevance nextLink() {
         if (!scheduler.hasLinksAvailable()) {
-            maybeLoadQueue(asyncLoad);
+            loadQueue(linksToLoad);
         }
         return scheduler.nextLink();
-    }
-
-    private void maybeLoadQueue(boolean asyncLoad) {
-        if (!hasUncrawledLinks) {
-            return;
-        }
-        if (!asyncLoad) {
-            reload();
-            return;
-        }
-        if (loadIsRunning.compareAndSet(false, true)) {
-            Thread loaderThread = new Thread(() -> {
-                try {
-                    logger.info("Starting scheduler queues reload...");
-                    reload();
-                } finally {
-                    loadIsRunning.set(false);
-                    logger.info("Reload done.");
-                }
-            });
-            loaderThread.setName("FrontierLinkLoader");
-            loaderThread.start();
-        }
     }
 
     public void reload() {

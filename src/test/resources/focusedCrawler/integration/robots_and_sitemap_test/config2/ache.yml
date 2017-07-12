@@ -1,7 +1,4 @@
 target_storage.hard_focus: false
-target_storage.data_format.type: WARC
-target_storage.data_format.files.max_file_size: 134217728 
 link_storage.link_strategy.outlinks: true
 link_storage.scheduler.host_min_access_interval: 1
-link_storage.download_sitemap_xml: true
 link_storage.disallow_sites_in_robots_file: true
