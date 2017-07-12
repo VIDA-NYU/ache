@@ -2,8 +2,10 @@
 # Example of configuration for running a Focused Crawl
 #
 
-# Configure indexing in Elasticsearch container
-target_storage.data_format.type: ELASTICSEARCH
+# Configure ELASTICSEARCH and FILES data formats
+target_storage.data_formats:
+  - ELASTICSEARCH
+  - FILES
 target_storage.data_format.elasticsearch.rest.hosts:
   - http://elasticsearch:9200
 
