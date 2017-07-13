@@ -194,15 +194,17 @@ public class RestServer {
                 startCrawlThread(configPath, modelPath.toString(), seedPath);
             }
             
-            Map<?, ?> responseData = ImmutableMap.of(
-                    "status", 200,
-                    "message", "Crawler started.",
-                    "messageType", "success");
+            return ImmutableMap.of(
+                "message", "Crawler started successfully.",
+                "crawlerStarted", true
+            );
 
-            return responseData;
         } catch (Exception e) {
             logger.error("Failed to start crawler.", e);
-            return null;
+            return ImmutableMap.of(
+                "message", "Failed to start crawler.",
+                "crawlerStarted", false
+            );
         }
     };
 

@@ -33,7 +33,7 @@ public abstract class OnlineLearning {
                 // onlineLearningIsRunning is true
                 logger.info("Running Online Learning...");
                 this.execute();
-                frontierManager.clearFrontier();
+                frontierManager.forceReload();
                 logger.info("Online Learning finished.");
                 onlineLearningIsRunning.set(false);
             }
