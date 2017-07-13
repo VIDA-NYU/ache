@@ -1,5 +1,6 @@
 package focusedCrawler.config;
 
+import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertThat;
@@ -43,7 +44,7 @@ public class ConfigServiceTest {
         assertThat(config.isHardFocus(), is(false));
         assertThat(config.isBipartite(), is(true));
         
-        assertThat(config.getDataFormat(), is("ELASTICSEARCH"));
+        assertThat(config.getDataFormats(), contains("ELASTICSEARCH"));
         assertThat(config.getElasticSearchConfig(), is(notNullValue()));
         assertThat(config.getElasticSearchConfig().getHost(), is("elasticsearch.localhost"));
         assertThat(config.getElasticSearchConfig().getPort(), is(9999));

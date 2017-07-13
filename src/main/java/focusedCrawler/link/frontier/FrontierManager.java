@@ -132,6 +132,9 @@ public class FrontierManager {
     public boolean insert(LinkRelevance linkRelevance) throws FrontierPersistentException {
         Context timerContext = insertTimer.time();
         try {
+            if (linkRelevance == null) {
+                return false;
+            }
             boolean insert = isRelevant(linkRelevance);
             if (insert) {
                 if (downloadRobots) {
@@ -140,8 +143,8 @@ public class FrontierManager {
                     if (!hostsManager.isKnown(hostName)) {
                         hostsManager.insert(hostName);
                         try {
-                            URL robotUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
-                            LinkRelevance sitemap = new LinkRelevance(robotUrl, 299, LinkRelevance.Type.ROBOTS);
+                            URL robotsUrl = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/robots.txt");
+                            LinkRelevance sitemap = LinkRelevance.createRobots(robotsUrl.toString(), 299);
                             frontier.insert(sitemap);
                         } catch (Exception e) {
                             logger.warn("Failed to insert robots.txt for host: " + hostName, e);

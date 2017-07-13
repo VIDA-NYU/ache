@@ -28,6 +28,9 @@ import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Comparator;
+import java.util.regex.Pattern;
+
+import org.apache.commons.validator.routines.UrlValidator;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonParser;
@@ -46,6 +49,11 @@ public class LinkRelevance implements Serializable {
     public static double DEFAULT_HUB_RELEVANCE = 100;
     public static double DEFAULT_AUTH_RELEVANCE = 200;
     
+    private static final UrlValidator validator = new UrlValidator(new String[] {"http","https"});
+    // .onion links aren't accepted by the validator
+    // Regex ".[^.]+" --> any string of at least 1 char without dot
+    private static final Pattern onionPattern = Pattern.compile("https?://.[^.]+\\.onion.*");
+
     public enum Type {
         FORWARD, ROBOTS, SITEMAP
     }
@@ -73,15 +81,15 @@ public class LinkRelevance implements Serializable {
         // required for JSON serialization
     }
 
-    public LinkRelevance(String string, double relevance) throws MalformedURLException {
-        this(new URL(string), relevance);
+    public LinkRelevance(String url, double relevance) throws MalformedURLException {
+        this(new URL(url), relevance);
     }
 
     public LinkRelevance(URL url, double relevance) {
         this(url, relevance, Type.FORWARD);
     }
 
-    public LinkRelevance(String url, double relevance, Type type) throws MalformedURLException {
+    private LinkRelevance(String url, double relevance, Type type) throws MalformedURLException {
         this(new URL(url), relevance, type);
     }
 
@@ -152,6 +160,40 @@ public class LinkRelevance implements Serializable {
             JsonNode node = parser.getCodec().readTree(parser);
             return new URL(node.asText());
         }
+    }
+
+    public static LinkRelevance createForward(String url, double relevance) {
+        try {
+            if (isValid(url)) {
+                return new LinkRelevance(url, relevance, Type.FORWARD);
+            }
+        } catch (MalformedURLException e) {
+        }
+        return null;
+    }
+
+    public static LinkRelevance createSitemap(String url, double relevance) {
+        try {
+            if (isValid(url)) {
+                return new LinkRelevance(url, relevance, Type.SITEMAP);
+            }
+        } catch (MalformedURLException e) {
+        }
+        return null;
+    }
+
+    public static LinkRelevance createRobots(String url, double relevance) {
+        try {
+            if (isValid(url)) {
+                return new LinkRelevance(url, relevance, Type.ROBOTS);
+            }
+        } catch (MalformedURLException e) {
+        }
+        return null;
+    }
+
+    private static boolean isValid(String url) {
+        return validator.isValid(url) || onionPattern.matcher(url).matches();
     }
 
 }

@@ -3,6 +3,8 @@ package focusedCrawler.target;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +20,7 @@ import focusedCrawler.target.repository.ElasticSearchTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository;
 import focusedCrawler.target.repository.FileSystemTargetRepository.DataFormat;
 import focusedCrawler.target.repository.FilesTargetRepository;
+import focusedCrawler.target.repository.MultipleTargetRepositories;
 import focusedCrawler.target.repository.TargetRepository;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.CommunicationException;
@@ -148,31 +151,43 @@ public class TargetStorage extends StorageDefault {
                                               TargetStorageConfig config, Storage linkStorage)
                                               throws IOException {
         
-        //if one wants to use a classifier
+        // if one wants to use a classifier
         TargetClassifier targetClassifier = null;
         if (modelPath != null && !modelPath.isEmpty()) {
             targetClassifier = TargetClassifierFactory.create(modelPath);
         }
 
-        TargetRepository targetRepository = createTargetRepository(dataPath, esIndexName,
-                                                                   esTypeName, config);
-        
+        List<String> dataFormats = config.getDataFormats();
+
+        List<TargetRepository> repositories = new ArrayList<>();
+        for (String dataFormat : dataFormats) {
+            TargetRepository targetRepository =
+                    createRepository(dataFormat, dataPath, esIndexName, esTypeName, config);
+            repositories.add(targetRepository);
+        }
+
+        TargetRepository targetRepository = null;
+        if (repositories.size() == 1) {
+            targetRepository = repositories.get(0);
+        } else if (repositories.size() > 1) {
+            // create pool of repositories
+            targetRepository = new MultipleTargetRepositories(repositories);
+        } else {
+            throw new IllegalArgumentException("No valid data formats configured.");
+        }
+
         TargetStorageMonitor monitor = new TargetStorageMonitor(dataPath);
-        
+
         Storage targetStorage = new TargetStorage(targetClassifier, targetRepository,
                                                   linkStorage, monitor, config);
         
         return targetStorage;
     }
 
-    private static TargetRepository createTargetRepository(String dataPath,
-                                                           String esIndexName,
-                                                           String esTypeName,
-                                                           TargetStorageConfig config) {
+    private static TargetRepository createRepository(String dataFormat, String dataPath,
+            String esIndexName, String esTypeName, TargetStorageConfig config) {
         
         Path targetDirectory = Paths.get(dataPath, config.getTargetStorageDirectory());
-        
-        String dataFormat = config.getDataFormat();
         boolean compressData = config.getCompressData();
         boolean hashFilename = config.getHashFileName();
 

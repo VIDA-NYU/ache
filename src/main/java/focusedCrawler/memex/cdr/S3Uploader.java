@@ -18,14 +18,14 @@ public class S3Uploader {
     private final AmazonS3 s3client;
     private String bucketName = "";
     
-    public S3Uploader(String access_key_id, String secret_key_id, String bucketName) {
+    public S3Uploader(String access_key_id, String secret_key_id, String bucketName, String region) {
         System.out.println("S3 Access Key: "+access_key_id);
         System.out.println("S3 Secret Key ID: "+secret_key_id);
         System.out.println("S3 Bucket Name: "+bucketName);
         BasicAWSCredentials awsCreds = new BasicAWSCredentials(access_key_id, secret_key_id);
         this.s3client = AmazonS3ClientBuilder.standard()
                         .withCredentials(new AWSStaticCredentialsProvider(awsCreds))
-                        .withRegion("us-east-1")
+                        .withRegion(region)
                         .build();
         this.bucketName = bucketName;
         System.out.println("Initializing S3 Uploader");

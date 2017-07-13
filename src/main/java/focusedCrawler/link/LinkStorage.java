@@ -1,8 +1,6 @@
 package focusedCrawler.link;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -97,7 +95,7 @@ public class LinkStorage extends StorageDefault {
         }
         return null;
     }
-    
+
     public void insert(RobotsTxtHandler.RobotsData robotsData) {
         if (disallowSitesInRobotsTxt) {
             this.insertRobotRules(robotsData.link, robotsData.robotRules);
@@ -105,8 +103,8 @@ public class LinkStorage extends StorageDefault {
         if (insertSiteMaps) {
             for (String sitemap : robotsData.robotRules.getSitemaps()) {
                 try {
-                    frontierManager.insert(new LinkRelevance(sitemap, 299, LinkRelevance.Type.SITEMAP));
-                } catch (MalformedURLException | FrontierPersistentException e) {
+                    frontierManager.insert(LinkRelevance.createSitemap(sitemap, 299));
+                } catch (Exception e) {
                     logger.error("Failed to insert sitemap from robot: " + sitemap);
                 }
             }
@@ -116,8 +114,8 @@ public class LinkStorage extends StorageDefault {
     public void insert(SitemapXmlHandler.SitemapData sitemapData) {
         for (String link : sitemapData.links) {
             try {
-                frontierManager.insert(new LinkRelevance(link, 1.0d, LinkRelevance.Type.FORWARD));
-            } catch (MalformedURLException | FrontierPersistentException e) {
+                frontierManager.insert(LinkRelevance.createForward(link, 1.0d));
+            } catch (Exception e) {
                 logger.error("Failed to insert link into the frontier: "+link);
             }
         }
@@ -125,8 +123,8 @@ public class LinkStorage extends StorageDefault {
         
         for (String sitemap : sitemapData.sitemaps) {
             try {
-                frontierManager.insert(new LinkRelevance(new URL(sitemap), 299, LinkRelevance.Type.SITEMAP));
-            } catch (MalformedURLException | FrontierPersistentException e) {
+                frontierManager.insert(LinkRelevance.createSitemap(sitemap, 299));
+            } catch (Exception e) {
                 logger.error("Failed to insert sitemap into the frontier: "+sitemap);
             }
         }

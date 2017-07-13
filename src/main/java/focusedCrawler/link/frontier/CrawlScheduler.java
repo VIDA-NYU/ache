@@ -82,32 +82,35 @@ public class CrawlScheduler {
             this.startSelection(numberOfLinks);
 
             while (it.hasNext()) {
+                try {
+                    LinkRelevance link = it.next().getValue();
 
-                LinkRelevance link = it.next().getValue();
-
-                if (frontier.isDisallowedByRobots(link)) {
-                    continue;
-                }
-
-                // Links already downloaded or not relevant
-                if (link.getRelevance() <= 0) {
-                    if (recrawlSelector != null) {
-                        recrawlSelector.evaluateLink(link);
+                    if (frontier.isDisallowedByRobots(link)) {
+                        continue;
                     }
-                    continue;
+
+                    // Links already downloaded or not relevant
+                    if (link.getRelevance() <= 0) {
+                        if (recrawlSelector != null) {
+                            recrawlSelector.evaluateLink(link);
+                        }
+                        continue;
+                    }
+
+                    uncrawledLinks++;
+
+                    // check whether link can be download now according to politeness constraints
+                    if (scheduler.canInsertNow(link)) {
+                        // consider link to be downloaded
+                        linkSelector.evaluateLink(link);
+                        linksAvailable++;
+                    } else {
+                        rejectedLinks++;
+                    }
+                } catch (Exception e) {
+                    // just log the exception and continue the load even when some link fails
+                    logger.error("Failed to load link in frontier.", e);
                 }
-
-                uncrawledLinks++;
-
-                // check whether link can be download now according to politeness constraints
-                if (scheduler.canDownloadNow(link)) {
-                    // consider link to be downloaded
-                    linkSelector.evaluateLink(link);
-                    linksAvailable++;
-                } else {
-                    rejectedLinks++;
-                }
-
             }
 
             this.addSelectedLinksToScheduler(recrawlSelector);
