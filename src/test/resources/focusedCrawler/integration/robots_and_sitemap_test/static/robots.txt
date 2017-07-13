@@ -1,4 +1,5 @@
 User-Agent: *
 Disallow: /admin/
+Disallow: /disallowed-*
 Sitemap: ./sitemap-index.xml
 Sitemap: http://.invalid-url.com/sitemap.xml
