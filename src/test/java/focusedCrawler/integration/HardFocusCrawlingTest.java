@@ -80,12 +80,12 @@ public class HardFocusCrawlingTest {
 
         for (String url : shouldBeDownloaded) {
             LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-            assertThat(frontier.exist(link), is(lessThan(0)));
+            assertThat("URL="+link.getURL().toString(), frontier.exist(link), is(lessThan(0)));
         }
 
         for (String url : shouldNOTBeDownloaded) {
             LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-            assertThat(frontier.exist(link), is(nullValue()));
+            assertThat("URL="+link.getURL().toString(), frontier.exist(link), is(nullValue()));
         }
     }
     
