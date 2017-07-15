@@ -139,5 +139,8 @@ crawler_manager.downloader.valid_mime_types:
  - application/xhtml+xml
  - application/vnd.wap.xhtml+xml
 
+#use okhttp3Fetcher instead of simpleHttpFetcher
+crawler_manager.downloader.use_okhttp3_fetcher: true
+
 # Discovery of new links using sitemap.xml protocol
 link_storage.download_sitemap_xml: false
