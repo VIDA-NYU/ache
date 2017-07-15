@@ -18,6 +18,8 @@ public class FetcherFactory {
     public static BaseFetcher createFetcher(HttpDownloaderConfig config) {
         if(config.getTorProxy() != null) {
             return createTorProxyFetcher(config);
+        } else if(config.getOkHttpFetcher() != null){
+            return createOkHttpFetcher(config);
         } else {
             return createSimpleHttpFetcher(config);
         }
@@ -98,6 +100,28 @@ public class FetcherFactory {
             }
         }
         return store;
+    }
+
+    public static OkHttpFetcher createOkHttpFetcher(HttpDownloaderConfig config){
+        UserAgent userAgent = new UserAgent.Builder()
+                .setAgentName(config.getUserAgentName())
+                .setEmailAddress(config.getUserAgentEmail())
+                .setWebAddress(config.getUserAgentUrl())
+                .setUserAgentString(config.getUserAgentString())
+                .build();
+        int connectionPoolSize = config.getConnectionPoolSize();
+        OkHttpFetcher httpFetcher = new OkHttpFetcher(connectionPoolSize, userAgent);
+        httpFetcher.setMaxRedirects(config.getMaxRetryCount());
+        httpFetcher.setMaxConnectionsPerHost(1);
+        int defaultMaxContentSize = 51 * 1024 * 1024;
+        httpFetcher.setDefaultMaxContentSize(defaultMaxContentSize);
+
+        if(config.getValidMimeTypes() != null) {
+            for (String mimeTypes : config.getValidMimeTypes()) {
+                httpFetcher.addValidMimeType(mimeTypes);
+            }
+        }
+        return httpFetcher;
     }
 
 }
