@@ -2,14 +2,13 @@ package focusedCrawler;
 
 import java.io.File;
 import java.lang.reflect.Method;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.FrontierManager;
@@ -201,7 +200,7 @@ public class Main {
         String seedPath;
         
         public void run() {
-            ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+            Configuration config = new Configuration(configPath);
             FrontierManager frontierManager =
                     FrontierManagerFactory.create(config.getLinkStorageConfig(), configPath,
                             dataOutputPath, modelPath, seedPath, null);
@@ -227,7 +226,7 @@ public class Main {
         
         public void run() {
             try {
-                ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+                Configuration config = new Configuration(configPath);
                 LinkStorage.runServer(configPath, seedPath, dataOutputPath, modelPath, config.getLinkStorageConfig());
             } catch (Throwable t) {
                 logger.error("Something bad happened to LinkStorage :(", t);
@@ -257,7 +256,7 @@ public class Main {
         @Override
         public void run() {
             try {
-                ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+                Configuration config = new Configuration(configPath);
                 TargetStorage.runServer(configPath, modelPath, dataOutputPath, esIndexName, esTypeName, config);
             } catch (Throwable t) {
                 logger.error("Something bad happened to TargetStorage :(", t);
@@ -279,7 +278,7 @@ public class Main {
         @Override
         public void run() {
             try {
-                ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
+                Configuration config = new Configuration(configPath);
                 AsyncCrawler.run(config, dataPath);
                 
             } catch (Throwable t) {

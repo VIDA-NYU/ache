@@ -16,23 +16,23 @@ import focusedCrawler.link.LinkStorageConfig;
 import focusedCrawler.rest.RestConfig;
 import focusedCrawler.target.TargetStorageConfig;
 
-public class ConfigService {
+public class Configuration {
 
     private static final ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
     static {
         yamlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
-    
+
     private TargetStorageConfig targetStorageConfig;
     private LinkStorageConfig linkStorageConfig;
     private AsyncCrawlerConfig crawlerConfig;
     private RestConfig restConfig;
 
-    public ConfigService(String configPath) {
+    public Configuration(String configPath) {
         this(Paths.get(configPath));
     }
 
-    public ConfigService(Path configPath) {
+    public Configuration(Path configPath) {
         Path config;
         if (Files.isDirectory(configPath)) {
             config = configPath.resolve("ache.yml");
@@ -46,7 +46,7 @@ public class ConfigService {
         }
     }
     
-    public ConfigService(Map<?, ?> configMap) {
+    public Configuration(Map<?, ?> configMap) {
         try {
             init(yamlMapper.valueToTree(configMap));
         } catch (IllegalArgumentException | IOException e) {
