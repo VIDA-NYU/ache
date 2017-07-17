@@ -313,11 +313,13 @@ public class Main {
         @Override
         public void run() {
             try {
+                AsyncCrawler crawler = AsyncCrawler.create(configPath, dataOutputPath, seedPath,
+                        modelPath, esIndexName, esTypeName);
+
                 RestServer restServer = RestServer.create(configPath, dataOutputPath, esIndexName, esTypeName);
+                restServer.setCrawler(crawler);
                 restServer.start();
 
-                AsyncCrawler crawler = AsyncCrawler.create(configPath, dataOutputPath, seedPath,
-                                                           modelPath, esIndexName, esTypeName);
                 try {
                     crawler.startAsync();
                     crawler.awaitTerminated();
