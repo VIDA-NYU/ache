@@ -1,6 +1,8 @@
 package focusedCrawler.config;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 
@@ -25,12 +27,22 @@ public class ConfigService {
     private LinkStorageConfig linkStorageConfig;
     private AsyncCrawlerConfig crawlerConfig;
     private RestConfig restConfig;
-    
-    public ConfigService(String configFilePath) {
+
+    public ConfigService(String configPath) {
+        this(Paths.get(configPath));
+    }
+
+    public ConfigService(Path configPath) {
+        Path config;
+        if (Files.isDirectory(configPath)) {
+            config = configPath.resolve("ache.yml");
+        } else {
+            config = configPath;
+        }
         try {
-            init(yamlMapper.readTree(Paths.get(configFilePath).toFile()));
+            init(yamlMapper.readTree(config.toFile()));
         } catch (IOException e) {
-            throw new IllegalArgumentException("Could not read settings from file: "+configFilePath, e);
+            throw new IllegalArgumentException("Could not read config from file: " + config.toString(), e);
         }
     }
     

@@ -11,18 +11,14 @@ import org.slf4j.LoggerFactory;
 
 import focusedCrawler.config.ConfigService;
 import focusedCrawler.crawler.async.AsyncCrawler;
-import focusedCrawler.crawler.async.AsyncCrawlerConfig;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.FrontierManager;
 import focusedCrawler.link.frontier.FrontierManagerFactory;
-import focusedCrawler.link.frontier.FrontierPersistentException;
 import focusedCrawler.rest.RestServer;
 import focusedCrawler.seedfinder.SeedFinder;
 import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.classifier.WekaTargetClassifierBuilder;
 import focusedCrawler.tools.StartRestServer;
-import focusedCrawler.util.MetricsManager;
-import focusedCrawler.util.storage.Storage;
 import io.airlift.airline.Arguments;
 import io.airlift.airline.Cli;
 import io.airlift.airline.Cli.CliBuilder;
@@ -316,55 +312,20 @@ public class Main {
         
         @Override
         public void run() {
-            
-            ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-            
-            MetricsManager metricsManager = null;
-            RestServer restServer = null;
             try {
-                metricsManager = new MetricsManager();
-                
-                restServer = RestServer.create(dataOutputPath, metricsManager.getMetricsRegistry(),
-                                               config, esIndexName, esTypeName);
+                RestServer restServer = RestServer.create(configPath, dataOutputPath, esIndexName, esTypeName);
                 restServer.start();
-                restServer.setCrawlerRunning();
 
-                Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
-                        dataOutputPath, modelPath, config.getLinkStorageConfig(), metricsManager);
-
-                // start target storage
-                Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath,
-                        dataOutputPath, esIndexName, esTypeName,
-                        config.getTargetStorageConfig(), linkStorage);
-                
-                AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
-                
-                // start crawl manager
-                AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig,
-                                                        dataOutputPath, metricsManager);
+                AsyncCrawler crawler = AsyncCrawler.create(configPath, dataOutputPath, seedPath,
+                                                           modelPath, esIndexName, esTypeName);
                 try {
-                    crawler.run();
+                    crawler.startAsync();
+                    crawler.awaitTerminated();
                 } finally {
-                    crawler.shutdown();
-                    metricsManager.close();
                     restServer.shutdown();
                 }
-
-            }
-            catch (FrontierPersistentException  e) {
-                logger.error("Problem while creating LinkStorage" + e.getMessage() + "\n", e);
-            }
-            catch (Throwable e) {
+            } catch (Throwable e) {
                 logger.error("Crawler execution failed: " + e.getMessage() + "\n", e);
-            }
-            finally {
-                if(metricsManager != null) {
-                    metricsManager.close();
-                }
-                if(restServer != null) {
-                    restServer.shutdown();
-                }
-                
             }
         }
         

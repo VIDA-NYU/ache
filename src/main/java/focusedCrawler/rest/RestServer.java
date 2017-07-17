@@ -37,7 +37,6 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.jvm.ThreadDump;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
@@ -45,14 +44,9 @@ import com.google.common.collect.ImmutableMap;
 import focusedCrawler.Main;
 import focusedCrawler.config.ConfigService;
 import focusedCrawler.crawler.async.AsyncCrawler;
-import focusedCrawler.crawler.async.AsyncCrawlerConfig;
-import focusedCrawler.link.LinkStorage;
-import focusedCrawler.link.frontier.FrontierPersistentException;
-import focusedCrawler.target.TargetStorage;
 import focusedCrawler.target.TargetStorageConfig;
 import focusedCrawler.target.repository.elasticsearch.ElasticSearchConfig;
 import focusedCrawler.util.MetricsManager;
-import focusedCrawler.util.storage.Storage;
 import spark.Route;
 import spark.Service;
 
@@ -63,29 +57,26 @@ public class RestServer {
     private static final Logger logger = LoggerFactory.getLogger(RestServer.class);
     
     private RestConfig restConfig;
-    private MetricRegistry metricsRegistry;
     private Service server;
     private String dataPath;
     
-    private boolean isCrawlerRunning;
     private boolean isSearchEnabled = false;
     private String esHostAddress;
     private String esIndexName;
     private String esTypeName;
     private CloseableHttpClient httpclient;
     private LabelsManager labelsManager;
+    private AsyncCrawler crawler;
 
 
-
-    private RestServer(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry) {
-        this(dataPath, restConfig, metricsRegistry, null, null, null);
+    private RestServer(String dataPath, RestConfig restConfig) {
+        this(dataPath, restConfig, null, null, null);
     }
     
-    private RestServer(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry,
-                       String esIndexName, String esTypeName, String esHostAddress) {
+    private RestServer(String dataPath, RestConfig restConfig, String esIndexName,
+                       String esTypeName, String esHostAddress) {
         this.dataPath = dataPath;
         this.restConfig = restConfig;
-        this.metricsRegistry = metricsRegistry;
         if (esIndexName != null && esHostAddress != null) {
             this.esIndexName = esIndexName;
             this.esHostAddress = esHostAddress;
@@ -122,7 +113,7 @@ public class RestServer {
         /*
          * API endpoints routes
          */
-        server.get("/status",      Transformers.json(crawlerInfoResource));
+        server.get("/status",      Transformers.json(crawlerStatusResource));
         server.get("/metrics",     Transformers.json(metricsResource));
         server.get("/thread/dump", Transformers.text(threadDumpResource));
         
@@ -157,15 +148,15 @@ public class RestServer {
         logger.info("---------------------------------------------");
     }
     
-    private Route crawlerInfoResource = (request, response) -> {
-        Map<?, ?> crawlerInfo = ImmutableMap.of(
+    private Route crawlerStatusResource = (request, response) -> {
+        Map<?, ?> crawlerStatus = ImmutableMap.of(
             "status", 200,
             "name", "ACHE Crawler",
             "version", VERSION,
             "searchEnabled", isSearchEnabled,
-            "crawlerRunning", isCrawlerRunning
+            "crawlerRunning", crawler == null ? false : crawler.isRunning()
         );
-        return crawlerInfo;
+        return crawlerStatus;
     };
     
     private final static ObjectMapper json = new ObjectMapper();
@@ -185,15 +176,20 @@ public class RestServer {
             createConfigFile(params.crawlType, configPath);
 
             if ("DeepCrawl".equals(params.crawlType)) {
-                final String seedPath = storeSeedFile(params, configPath);
-                startCrawlThread(configPath, null, seedPath);
+                String seedPath = storeSeedFile(params, configPath);
+                this.crawler = AsyncCrawler.create(configPath.toString(), dataPath, seedPath, null, esIndexName, esTypeName);
             } else if ("FocusedCrawl".equals(params.crawlType)) {
                 Path modelPath = configPath.resolve("model");
                 storeModelFile(params, modelPath);
                 String seedPath = findSeedFileInModelPackage(modelPath);
-                startCrawlThread(configPath, modelPath.toString(), seedPath);
+                this.crawler = AsyncCrawler.create(configPath.toString(), dataPath, seedPath, modelPath.toString(), esIndexName, esTypeName);
+            } else {
+                throw new IllegalArgumentException("Unrecognized crawlerType: " + params.crawlType);
             }
-            
+
+            this.crawler.startAsync();
+            this.crawler.awaitRunning();
+
             return ImmutableMap.of(
                 "message", "Crawler started successfully.",
                 "crawlerStarted", true
@@ -207,21 +203,6 @@ public class RestServer {
             );
         }
     };
-
-    private void startCrawlThread(Path configPath, final String modelPath, final String seedPath) {
-        Thread thread = new Thread(() -> {
-            try {
-                startCrawl(configPath.toString(), dataPath, seedPath, modelPath, esIndexName, esTypeName);
-            } catch (Exception e) {
-                logger.error("Failed to run crawler. ", e);
-            } finally {
-                isCrawlerRunning = false;
-            }
-        });
-        thread.setName("CrawlerThread");
-        thread.start();
-        this.isCrawlerRunning = true;
-    }
 
     private String findSeedFileInModelPackage(Path model) throws IOException {
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(model)) {
@@ -259,12 +240,6 @@ public class RestServer {
             }
         }
         return seedFilePath;
-    }
-    
-    class ModelPackage {
-        public ModelPackage() {
-            // TODO Auto-generated constructor stub
-        }
     }
 
     private String storeModelFile(StartCrawlParams params, Path modelPath) throws IOException {
@@ -338,7 +313,8 @@ public class RestServer {
     };
 
     private Route metricsResource = (request, response) -> {
-        return metricsRegistry;
+        MetricsManager metricsManager = crawler.getMetricsManager();
+        return metricsManager != null ? metricsManager.getMetricsRegistry() : null;
     };
     
     private ThreadDump threadDump = new ThreadDump(ManagementFactory.getThreadMXBean());
@@ -367,50 +343,6 @@ public class RestServer {
                     ss.close();
                 } catch (IOException e) {
                 }
-            }
-        }
-    }
-
-    private void startCrawl(String configPath, String dataOutputPath, String seedPath,
-            String modelPath, String esIndexName, String esTypeName) {
-        
-
-        ConfigService config = new ConfigService(Paths.get(configPath, "ache.yml").toString());
-        
-        MetricsManager metricsManager = null;
-        try {
-            metricsManager = new MetricsManager(metricsRegistry, false);
-            
-            Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath,
-                    dataOutputPath, modelPath, config.getLinkStorageConfig(), metricsManager);
-
-            // start target storage
-            Storage targetStorage = TargetStorage.createTargetStorage(configPath, modelPath,
-                    dataOutputPath, esIndexName, esTypeName,
-                    config.getTargetStorageConfig(), linkStorage);
-            
-            AsyncCrawlerConfig crawlerConfig = config.getCrawlerConfig();
-            
-            // start crawl manager
-            AsyncCrawler crawler = new AsyncCrawler(targetStorage, linkStorage, crawlerConfig,
-                                                    dataOutputPath, metricsManager);
-            try {
-                crawler.run();
-            } finally {
-                crawler.shutdown();
-                metricsManager.close();
-            }
-
-        }
-        catch (FrontierPersistentException  e) {
-            logger.error("Problem while creating LinkStorage" + e.getMessage() + "\n", e);
-        }
-        catch (Throwable e) {
-            logger.error("Crawler execution failed: " + e.getMessage() + "\n", e);
-        }
-        finally {
-            if(metricsManager != null) {
-                metricsManager.close();
             }
         }
     }
@@ -450,31 +382,28 @@ public class RestServer {
         
     }
 
-    public static RestServer create(String dataPath, RestConfig restConfig, MetricRegistry metricsRegistry) {
-        return new RestServer(dataPath, restConfig, metricsRegistry);
+    public static RestServer create(String dataPath, RestConfig restConfig) {
+        return new RestServer(dataPath, restConfig);
     }
-    
-    public static RestServer create(String dataPath, MetricRegistry metricsRegistry,
-            ConfigService config, String esIndexName, String esTypeName) {
-        requireNonNull(metricsRegistry, "A metrics registry must be provided.");
-        requireNonNull(config, "A configuration must be provided.");
+
+    public static RestServer create(String configPath, String dataPath,
+                                    String esIndexName, String esTypeName) {
+        requireNonNull(configPath, "A config path must be provided.");
+        requireNonNull(dataPath, "A data path must be provided.");
+        ConfigService config = new ConfigService(configPath);
         TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
         ElasticSearchConfig esConfig = targetStorageConfig.getElasticSearchConfig();
         List<String> hosts = esConfig.getRestApiHosts();
-        if(hosts != null && !hosts.isEmpty()) {
+        if (hosts != null && !hosts.isEmpty()) {
             requireNonNull(esIndexName, "Elasticsearch index name should be provided when using ELASTICSEARCH data format.");
             if(esTypeName == null || esTypeName.isEmpty()) {
                 esTypeName = "page";
             }
             String esHostAddress = hosts.iterator().next();
-            return new RestServer(dataPath, config.getRestConfig(), metricsRegistry, esIndexName, esTypeName, esHostAddress);
+            return new RestServer(dataPath, config.getRestConfig(), esIndexName, esTypeName, esHostAddress);
         } else {
-            return new RestServer(dataPath, config.getRestConfig(), metricsRegistry);
+            return new RestServer(dataPath, config.getRestConfig());
         }
     }
 
-    public void setCrawlerRunning() {
-        this.isCrawlerRunning = true;
-    }
-    
 }

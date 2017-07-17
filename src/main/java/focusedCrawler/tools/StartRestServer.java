@@ -1,12 +1,6 @@
 package focusedCrawler.tools;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
-import com.codahale.metrics.MetricRegistry;
-
 import focusedCrawler.Main;
-import focusedCrawler.config.ConfigService;
 import focusedCrawler.rest.RestConfig;
 import focusedCrawler.rest.RestServer;
 import focusedCrawler.util.CliTool;
@@ -48,26 +42,15 @@ public class StartRestServer extends CliTool {
 
     @Override
     public void execute() throws Exception {
-        MetricRegistry metricsRegistry = new MetricRegistry();
-
         RestServer server = null;
-        if(configPath != null && !configPath.isEmpty()) {
-            
-            if(Files.isDirectory(Paths.get(configPath))) {
-                configPath = Paths.get(configPath, "ache.yml").toString();
-            }
-            
-            ConfigService config = new ConfigService(configPath);
-            server = RestServer.create(dataPath, metricsRegistry, config, esIndexName, esTypeName);
+        if (configPath != null && !configPath.isEmpty()) {
+            server = RestServer.create(configPath, dataPath, esIndexName, esTypeName);
         }
-        
-        if(server == null) {
+        if (server == null) {
             RestConfig restConfig = new RestConfig(host, port, enableCors);
-            server = RestServer.create(dataPath, restConfig, metricsRegistry);
+            server = RestServer.create(dataPath, restConfig);
         }
-        
         server.start();
-        
     }
 
 }
