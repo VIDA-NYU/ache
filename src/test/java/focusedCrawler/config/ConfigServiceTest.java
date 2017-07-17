@@ -30,7 +30,7 @@ public class ConfigServiceTest {
     @Test
     public void shouldReadTargeStorageConfig() throws IOException {
         // given
-        ConfigService configService = new ConfigService(configFilePath);
+        Configuration configService = new Configuration(configFilePath);
         
         // when
         TargetStorageConfig config = configService.getTargetStorageConfig();
@@ -59,7 +59,7 @@ public class ConfigServiceTest {
     @Test
     public void shouldReadLinkStorageConfig() throws IOException {
         // given
-        ConfigService configService = new ConfigService(configFilePath);
+        Configuration configService = new Configuration(configFilePath);
         
         // when
         LinkStorageConfig config = configService.getLinkStorageConfig();
@@ -95,7 +95,7 @@ public class ConfigServiceTest {
     @Test
     public void shouldReadCrawlerConfig() throws IOException {
         // given
-        ConfigService configService = new ConfigService(configFilePath);
+        Configuration configService = new Configuration(configFilePath);
         
         // when
         AsyncCrawlerConfig config = configService.getCrawlerConfig();

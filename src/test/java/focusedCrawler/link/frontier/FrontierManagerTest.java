@@ -19,7 +19,7 @@ import org.junit.rules.TemporaryFolder;
 
 import com.google.common.collect.ImmutableMap;
 
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.config.Configuration;
 import focusedCrawler.link.LinkStorageConfig;
 import focusedCrawler.link.frontier.selector.LinkSelector;
 import focusedCrawler.link.frontier.selector.RandomLinkSelector;
@@ -57,7 +57,7 @@ public class FrontierManagerTest {
             "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
             "link_storage.download_sitemap_xml", downloadSitemapXml
         );
-        config = new ConfigService(props).getLinkStorageConfig();
+        config = new Configuration(props).getLinkStorageConfig();
     }
     
     @After
@@ -136,7 +136,7 @@ public class FrontierManagerTest {
                 "link_storage.scheduler.host_min_access_interval", 0,
                 "link_storage.download_sitemap_xml", false
             );
-        config = new ConfigService(props).getLinkStorageConfig();
+        config = new Configuration(props).getLinkStorageConfig();
         LinkSelector linkSelector = new TopkLinkSelector();
         LinkSelector recrawlSelector = new SitemapsRecrawlSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
@@ -178,7 +178,7 @@ public class FrontierManagerTest {
                 "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
                 "link_storage.download_sitemap_xml", downloadSitemapXml
         );
-        config = new ConfigService(props).getLinkStorageConfig();
+        config = new Configuration(props).getLinkStorageConfig();
             
         LinkSelector linkSelector = new TopkLinkSelector();
         LinkSelector recrawlSelector = null;
@@ -227,7 +227,7 @@ public class FrontierManagerTest {
             "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
             "link_storage.download_sitemap_xml", true
         );
-        config = new ConfigService(props).getLinkStorageConfig();
+        config = new Configuration(props).getLinkStorageConfig();
         assertThat(config.getDownloadSitemapXml(), is(true));
         
         LinkSelector linkSelector = new TopkLinkSelector();
@@ -363,7 +363,7 @@ public class FrontierManagerTest {
             "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
             "link_storage.download_sitemap_xml", false
         );
-        LinkStorageConfig config = new ConfigService(props).getLinkStorageConfig();
+        LinkStorageConfig config = new Configuration(props).getLinkStorageConfig();
         assertThat(config.getSchedulerHostMinAccessInterval(), is(minimumAccessTimeInterval));
         
         LinkSelector linkSelector = new TopkLinkSelector();

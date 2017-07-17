@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.util.concurrent.AbstractExecutionThreadService;
 
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.HttpDownloader.Callback;
 import focusedCrawler.link.LinkStorage;
 import focusedCrawler.link.frontier.LinkRelevance;
@@ -114,7 +114,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
     public static AsyncCrawler create(String configPath, String dataPath, String seedPath,
             String modelPath, String esIndexName, String esTypeName) throws Exception {
 
-        ConfigService config = new ConfigService(configPath);
+        Configuration config = new Configuration(configPath);
 
         MetricsManager metricsManager = new MetricsManager(false);
         Storage linkStorage = LinkStorage.createLinkStorage(configPath, seedPath, dataPath,
@@ -127,7 +127,7 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
                 metricsManager);
     }
 
-    public static void run(ConfigService config, String dataPath)
+    public static void run(Configuration config, String dataPath)
             throws IOException, NumberFormatException {
         logger.info("Starting CrawlerManager...");
         try {

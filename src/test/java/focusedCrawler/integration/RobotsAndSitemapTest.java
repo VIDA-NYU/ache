@@ -20,7 +20,7 @@ import org.junit.rules.TemporaryFolder;
 import com.sun.net.httpserver.HttpServer;
 
 import focusedCrawler.Main;
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.TestWebServerBuilder;
 import focusedCrawler.link.frontier.Frontier;
 import focusedCrawler.link.frontier.LinkRelevance;
@@ -172,7 +172,7 @@ public class RobotsAndSitemapTest {
     }
 
     private Frontier openFrontier(String outputPath, String configPath) {
-        ConfigService config = new ConfigService(configPath + "/ache.yml");
+        Configuration config = new Configuration(configPath + "/ache.yml");
         String linkDirectory = config.getLinkStorageConfig().getLinkDirectory();
         String dir = Paths.get(outputPath, linkDirectory).toString();
         Frontier frontier = new Frontier(dir, 1000,

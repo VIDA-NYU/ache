@@ -10,7 +10,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import focusedCrawler.config.ConfigService;
+import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.rest.resources.CrawlerResource;
 import focusedCrawler.rest.resources.ElasticsearchProxyResource;
@@ -170,7 +170,7 @@ public class RestServer {
                                     String esIndexName, String esTypeName) {
         requireNonNull(configPath, "A config path must be provided.");
         requireNonNull(dataPath, "A data path must be provided.");
-        ConfigService config = new ConfigService(configPath);
+        Configuration config = new Configuration(configPath);
         TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
         ElasticSearchConfig esConfig = targetStorageConfig.getElasticSearchConfig();
         List<String> hosts = esConfig.getRestApiHosts();
