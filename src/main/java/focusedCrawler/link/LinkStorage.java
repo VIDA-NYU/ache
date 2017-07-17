@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import crawlercommons.robots.BaseRobotRules;
 import focusedCrawler.crawler.async.RobotsTxtHandler;
 import focusedCrawler.crawler.async.SitemapXmlHandler;
 import focusedCrawler.link.classifier.LinkClassifierFactory;
@@ -49,6 +50,9 @@ public class LinkStorage extends StorageDefault {
     private final FrontierManager frontierManager;
     private final OnlineLearning onlineLearning;
 
+    private final boolean insertSiteMaps;
+    private final boolean disallowSitesInRobotsTxt;
+
     public LinkStorage(LinkStorageConfig config,
                        FrontierManager frontierManager) throws IOException {
         this(config, frontierManager, null);
@@ -61,6 +65,8 @@ public class LinkStorage extends StorageDefault {
         this.onlineLearning = onlineLearning;
         this.getBacklinks = config.getBacklinks();
         this.getOutlinks = config.getOutlinks();
+        this.disallowSitesInRobotsTxt = config.getDisallowSitesInRobotsFile();
+        this.insertSiteMaps = config.getDownloadSitemapXml();
     }
 
     public void close(){
@@ -89,13 +95,18 @@ public class LinkStorage extends StorageDefault {
         }
         return null;
     }
-    
+
     public void insert(RobotsTxtHandler.RobotsData robotsData) {
-        for (String sitemap : robotsData.sitemapUrls) {
-            try {
-                frontierManager.insert(LinkRelevance.createSitemap(sitemap, 299));
-            } catch (Exception e) {
-                logger.error("Failed to insert sitemap from robot: "+sitemap);
+        if (disallowSitesInRobotsTxt) {
+            this.insertRobotRules(robotsData.link, robotsData.robotRules);
+        }
+        if (insertSiteMaps) {
+            for (String sitemap : robotsData.robotRules.getSitemaps()) {
+                try {
+                    frontierManager.insert(LinkRelevance.createSitemap(sitemap, 299));
+                } catch (Exception e) {
+                    logger.error("Failed to insert sitemap from robot: " + sitemap);
+                }
             }
         }
     }
@@ -223,6 +234,21 @@ public class LinkStorage extends StorageDefault {
             default:
                 throw new IllegalArgumentException("Unknown online learning method: " + onlineLearningType);
         }
+    }
+
+    /**
+     * Inserts the robot rules object into the HashMap
+     * 
+     * @param link
+     * @param robotRules
+     * @throws NullPointerException
+     *             when either of the argument is null
+     */
+    public void insertRobotRules(LinkRelevance link, BaseRobotRules robotRules) {
+        if (link == null || robotRules == null) {
+            throw new NullPointerException("Link argument or robot rules argument cannot be null");
+        }
+        frontierManager.getFrontier().insertRobotRules(link, robotRules);
     }
 
 }

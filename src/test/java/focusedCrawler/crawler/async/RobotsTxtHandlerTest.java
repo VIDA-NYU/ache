@@ -50,9 +50,9 @@ public class RobotsTxtHandlerTest {
         
         // then
         assertThat(linkStorageMock.robotsData, is(notNullValue()));
-        assertThat(linkStorageMock.robotsData.sitemapUrls.size(), is(2));
-        assertThat(linkStorageMock.robotsData.sitemapUrls.get(0), is("http://www.example.com/example-sitemap/sitemap.xml"));
-        assertThat(linkStorageMock.robotsData.sitemapUrls.get(1), is("http://www.example.com/example-sitemap/sitemap-news.xml"));
+        assertThat(linkStorageMock.robotsData.robotRules.getSitemaps().size(), is(2));
+        assertThat(linkStorageMock.robotsData.robotRules.getSitemaps().get(0), is("http://www.example.com/example-sitemap/sitemap.xml"));
+        assertThat(linkStorageMock.robotsData.robotRules.getSitemaps().get(1), is("http://www.example.com/example-sitemap/sitemap-news.xml"));
     }
 
 }
