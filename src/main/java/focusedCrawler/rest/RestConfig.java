@@ -17,6 +17,10 @@ public class RestConfig {
     @JsonProperty("http.cors.enabled")
     private boolean enableCors = true;
 
+    public RestConfig() {
+        // required for de-serialization
+    }
+
     public RestConfig(JsonNode config, ObjectMapper objectMapper) throws IOException {
         objectMapper.readerForUpdating(this).readValue(config);
     }

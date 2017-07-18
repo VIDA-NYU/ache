@@ -72,6 +72,7 @@ public class LinkStorageConfig {
     @JsonUnwrapped
     private BackSurferConfig backSurferConfig = new BackSurferConfig();
 
+    @JsonUnwrapped
     private final StorageConfig serverConfig;
 
     @JsonProperty("link_storage.download_sitemap_xml")
@@ -118,6 +119,7 @@ public class LinkStorageConfig {
         return typeOfClassifier;
     }
 
+    @JsonProperty("link_storage.link_strategy.outlinks")
     public boolean getOutlinks() {
         return getOutlinks;
     }
@@ -134,6 +136,7 @@ public class LinkStorageConfig {
         return maxCacheUrlsSize;
     }
 
+    @JsonProperty("link_storage.link_strategy.backlinks")
     public boolean getBacklinks() {
         return getBacklinks;
     }
@@ -170,7 +173,7 @@ public class LinkStorageConfig {
         return sitemapsRecrawlInterval;
     }
 
-    public double getRecrawlMinRelevanceValue() {
+    public double getRecrawlMinRelevance() {
         return minRelevanceRecrawl;
     }
 

@@ -26,12 +26,8 @@ public class FrontierManagerFactory {
     
     private static final Logger logger = LoggerFactory.getLogger(FrontierManagerFactory.class);
 
-    public static FrontierManager create(LinkStorageConfig config,
-                                         String configPath,
-                                         String dataPath,
-                                         String modelPath,
-                                         String seedFile,
-                                         MetricsManager metricsManager) {
+    public static FrontierManager create(LinkStorageConfig config, String configPath,
+            String dataPath, String modelPath, String seedFile, MetricsManager metricsManager) {
         
         String[] seedUrls = ParameterFile.getSeeds(seedFile);
         
@@ -89,7 +85,7 @@ public class FrontierManagerFactory {
             case "SitemapsRecrawlSelector":
                 return new SitemapsRecrawlSelector(config.getSitemapsRecrawlInterval());
             case "MinRelevanceRecrawlSelector":
-                return new MinRelevanceRecrawlSelector(config.getRecrawlMinRelevanceInterval(), config.getRecrawlMinRelevanceValue());
+                return new MinRelevanceRecrawlSelector(config.getRecrawlMinRelevanceInterval(), config.getRecrawlMinRelevance());
             default:
                 throw new IllegalArgumentException("Unknown recrawl selector configured: " + recrawlSelector);
         }
