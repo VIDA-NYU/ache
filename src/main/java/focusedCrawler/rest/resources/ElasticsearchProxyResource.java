@@ -39,7 +39,6 @@ public class ElasticsearchProxyResource {
                 query += param + "=" + request.queryParams(param);
             }
             String url = String.format("%s/%s/%s/_search", esHostAddress, esIndexName, esTypeName);
-            System.out.println("\n\n"+url);
             if (!query.isEmpty()) {
                 url += "?" + query;
             }

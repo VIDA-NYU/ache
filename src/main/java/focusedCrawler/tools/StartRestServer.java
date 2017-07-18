@@ -1,7 +1,6 @@
 package focusedCrawler.tools;
 
 import focusedCrawler.Main;
-import focusedCrawler.rest.RestConfig;
 import focusedCrawler.rest.RestServer;
 import focusedCrawler.util.CliTool;
 import io.airlift.airline.Command;
@@ -11,14 +10,6 @@ import io.airlift.airline.Option;
 public class StartRestServer extends CliTool {
 
     public static final String VERSION = Main.class.getPackage().getImplementationVersion();
-
-    @Option(name = {"-p", "--port"}, required = false,
-            description = "Port at which the web server will be available")
-    private int port = 8080;
-
-    private String host = "0.0.0.0";
-
-    private boolean enableCors = true;
 
     @Option(name = {"-d", "--data-path"}, required = true,
             description = "Path to folder where server should store its data")
@@ -42,14 +33,9 @@ public class StartRestServer extends CliTool {
 
     @Override
     public void execute() throws Exception {
-        RestServer server = null;
         if (configPath != null && !configPath.isEmpty()) {
-            server = RestServer.create(configPath, dataPath, esIndexName, esTypeName);
         }
-        if (server == null) {
-            RestConfig restConfig = new RestConfig(host, port, enableCors);
-            server = RestServer.create(dataPath, restConfig);
-        }
+        RestServer server = RestServer.create(configPath, dataPath, esIndexName, esTypeName);
         server.start();
     }
 

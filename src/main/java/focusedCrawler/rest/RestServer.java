@@ -33,13 +33,14 @@ public class RestServer {
     private ElasticsearchProxyResource elasticsearchProxyResource;
     private boolean isSearchEnabled = false;
 
-    private RestServer(String dataPath, RestConfig restConfig) {
-        this(dataPath, restConfig, null, null, null);
+
+    private RestServer(String dataPath, Configuration config) {
+        this(dataPath, config, null, null, null);
     }
     
-    private RestServer(String dataPath, RestConfig restConfig, String esIndexName,
+    private RestServer(String dataPath, Configuration config, String esIndexName,
                        String esTypeName, String esHostAddress) {
-        this.restConfig = restConfig;
+        this.restConfig = config.getRestConfig();
         if (esIndexName != null && esHostAddress != null) {
             this.isSearchEnabled = true;
             if (esTypeName == null || esTypeName.isEmpty()) {
@@ -48,7 +49,7 @@ public class RestServer {
         }
         this.threadsResource = new ThreadsResource();
         this.labelsResource  = new LabelsResource(dataPath);
-        this.crawlerResource = new CrawlerResource(dataPath, esIndexName, esTypeName);
+        this.crawlerResource = new CrawlerResource(config, dataPath, esIndexName, esTypeName);
         if (isSearchEnabled) {
             this.elasticsearchProxyResource = new ElasticsearchProxyResource(esHostAddress, esIndexName, esTypeName);
         }
@@ -162,27 +163,25 @@ public class RestServer {
         
     }
 
-    public static RestServer create(String dataPath, RestConfig restConfig) {
-        return new RestServer(dataPath, restConfig);
-    }
-
     public static RestServer create(String configPath, String dataPath,
                                     String esIndexName, String esTypeName) {
-        requireNonNull(configPath, "A config path must be provided.");
         requireNonNull(dataPath, "A data path must be provided.");
-        Configuration config = new Configuration(configPath);
+        Configuration config = configPath == null ? new Configuration() : new Configuration(configPath);
         TargetStorageConfig targetStorageConfig = config.getTargetStorageConfig();
         ElasticSearchConfig esConfig = targetStorageConfig.getElasticSearchConfig();
         List<String> hosts = esConfig.getRestApiHosts();
-        if (hosts != null && !hosts.isEmpty()) {
+        if (targetStorageConfig.getDataFormats().contains("ELASTICSEARCH") &&
+            hosts != null && !hosts.isEmpty()) {
             requireNonNull(esIndexName, "Elasticsearch index name should be provided when using ELASTICSEARCH data format.");
             if(esTypeName == null || esTypeName.isEmpty()) {
                 esTypeName = "page";
             }
             String esHostAddress = hosts.iterator().next();
-            return new RestServer(dataPath, config.getRestConfig(), esIndexName, esTypeName, esHostAddress);
+            logger.info("Starting server with Elasticsearch: " + esHostAddress + "/" + esIndexName + "/" + esTypeName);
+            return new RestServer(dataPath, config, esIndexName, esTypeName, esHostAddress);
         } else {
-            return new RestServer(dataPath, config.getRestConfig());
+            logger.info("Starting server with local data formats.");
+            return new RestServer(dataPath, config);
         }
     }
 

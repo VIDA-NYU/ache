@@ -18,7 +18,6 @@ import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +26,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableMap;
 
 import focusedCrawler.Main;
+import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.util.MetricsManager;
 import spark.Route;
@@ -43,8 +43,11 @@ public class CrawlerResource {
     private String esIndexName;
     private String esTypeName;
     private AsyncCrawler crawler;
+    private Configuration config;
 
-    public CrawlerResource(String dataPath, String esIndexName, String esTypeName) {
+
+    public CrawlerResource(Configuration config, String dataPath, String esIndexName, String esTypeName) {
+        this.config = config;
         if (esIndexName != null && esTypeName != null) {
             this.isSearchEnabled = true;
         }
@@ -74,23 +77,18 @@ public class CrawlerResource {
             StartCrawlParams params = json.readValue(request.body(), StartCrawlParams.class);
 
             Path configPath = Paths.get(dataPath, "config");
-            Files.createDirectories(configPath);
-            createConfigFile(params.crawlType, configPath);
+            Path modelPath = configPath.resolve("model");
 
-            if ("DeepCrawl".equals(params.crawlType)) {
-                String seedPath = storeSeedFile(params, configPath);
-                this.crawler = AsyncCrawler.create(configPath.toString(), dataPath, seedPath, null, esIndexName, esTypeName);
-            } else if ("FocusedCrawl".equals(params.crawlType)) {
-                Path modelPath = configPath.resolve("model");
-                storeModelFile(params, modelPath);
-                String seedPath = findSeedFileInModelPackage(modelPath);
-                this.crawler = AsyncCrawler.create(configPath.toString(), dataPath, seedPath, modelPath.toString(), esIndexName, esTypeName);
-            } else {
-                throw new IllegalArgumentException("Unrecognized crawlerType: " + params.crawlType);
-            }
+            createConfigForCrawlType(config, params.crawlType, configPath);
+            
+            String storedModelPath = storeModelFile(params.model, modelPath);
+            String seedPath = getSeedForCrawlType(params, configPath, storedModelPath);
 
+            this.crawler = AsyncCrawler.create(configPath.toString(), dataPath, seedPath,
+                    storedModelPath, esIndexName, esTypeName);
+            
             this.crawler.startAsync();
-            this.crawler.awaitRunning();
+//            this.crawler.awaitRunning();
 
             return ImmutableMap.of(
                 "message", "Crawler started successfully.",
@@ -106,12 +104,28 @@ public class CrawlerResource {
         }
     };
 
+    private String getSeedForCrawlType(StartCrawlParams params, Path configPath,
+            String storedModelPath) throws FileNotFoundException, IOException {
+        String seedPath;
+        switch (params.crawlType) {
+            case "DeepCrawl":
+                seedPath = storeSeedFile(params.seeds, configPath);
+                break;
+            case "FocusedCrawl":
+                seedPath = findSeedFileInModelPackage(storedModelPath);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown crawlerType: " + params.crawlType);
+        }
+        return seedPath;
+    }
+
     public void setCrawler(AsyncCrawler crawler) {
         this.crawler = crawler;
     }
 
-    private String findSeedFileInModelPackage(Path model) throws IOException {
-        try (DirectoryStream<Path> stream = Files.newDirectoryStream(model)) {
+    private String findSeedFileInModelPackage(String model) throws IOException {
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(Paths.get(model))) {
             for (Path entry: stream) {
                 String seedFile = entry.toString();
                 if(seedFile.endsWith("seeds.txt")) {
@@ -122,25 +136,41 @@ public class CrawlerResource {
         return null;
     }
 
-    private void createConfigFile(String crawlType, Path configPath) throws IOException {
-        File configFile = configPath.resolve("ache.yml").toFile();
-        URL stream;
-        if ("DeepCrawl".equals(crawlType)) {
-            stream = getClass().getClassLoader().getResource("config/config_website_crawl/ache.yml");
-        } else if ("FocusedCrawl".equals(crawlType)) {
-            stream = getClass().getClassLoader().getResource("config/config_focused_crawl/ache.yml");
-        } else {
-            throw new UnsupportedOperationException("Unsuported crawl type: " + crawlType);
+    private Configuration createConfigForCrawlType(Configuration baseConfig, String crawlType,
+            Path configPath) throws IOException {
+        URL configLocation = getConfigForCrawlType(crawlType);
+        InputStream configStream = configLocation.openStream();
+        try {
+            Configuration crawlConfig = baseConfig.copyUpdating(configStream);
+            Files.createDirectories(configPath);
+            crawlConfig.writeToFile(configPath.resolve("ache.yml"));
+            return crawlConfig;
+        } finally {
+            configStream.close();
         }
-        FileUtils.copyURLToFile(stream, configFile);
     }
 
-    private String storeSeedFile(StartCrawlParams params, Path configPath)
+    private URL getConfigForCrawlType(String crawlType) {
+        String fileName;
+        switch (crawlType) {
+            case "DeepCrawl":
+                fileName = "config/config_website_crawl/ache.yml";
+                break;
+            case "FocusedCrawl":
+                fileName = "config/config_focused_crawl/ache.yml";
+                break;
+            default:
+                throw new UnsupportedOperationException("Unsuported crawl type: " + crawlType);
+        }
+        return getClass().getClassLoader().getResource(fileName);
+    }
+
+    private String storeSeedFile(List<String> seeds, Path configPath)
             throws FileNotFoundException {
         String seedFilePath = configPath.resolve("seed.txt").toString();
         try (PrintStream fileWriter = new PrintStream(seedFilePath)) {
-            if (params != null && !params.seeds.isEmpty()) {
-                for (String seed : params.seeds) {
+            if (seeds != null && !seeds.isEmpty()) {
+                for (String seed : seeds) {
                     fileWriter.println(seed);
                 }
             }
@@ -148,15 +178,17 @@ public class CrawlerResource {
         return seedFilePath;
     }
 
-    private String storeModelFile(StartCrawlParams params, Path modelPath) throws IOException {
-        if (params.model != null && params.model.length > 0) {
+    private String storeModelFile(byte[] model, Path modelPath) throws IOException {
+        if (model != null && model.length > 0) {
             Path modelPathTmp = modelPath.resolve("tmp.zip");
             Files.createDirectories(modelPath);
-            Files.write(modelPathTmp, params.model);
+            Files.write(modelPathTmp, model);
             unzipFile(modelPathTmp, modelPath);
             Files.delete(modelPathTmp);
+            return modelPath.toString();
+        } else {
+            return null;
         }
-        return modelPath.toString();
     }
     
     private void unzipFile(Path file, Path outputDir) throws IOException {

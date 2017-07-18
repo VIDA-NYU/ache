@@ -3,13 +3,23 @@ package focusedCrawler.config;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.Map;
 
 import org.junit.Test;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.google.common.collect.ImmutableMap;
+
 import focusedCrawler.crawler.async.AsyncCrawlerConfig;
+import focusedCrawler.crawler.async.HttpDownloaderConfig;
 import focusedCrawler.link.LinkStorageConfig;
 import focusedCrawler.target.TargetStorageConfig;
 
@@ -97,6 +107,53 @@ public class ConfigurationTest {
         assertThat(config.getDownloaderConfig().getUserAgentName(), is("TestAgent"));
         assertThat(config.getDownloaderConfig().getUserAgentUrl(), is("http://www.test-agent-crawler-example.com/robot"));
         assertThat(config.getDownloaderConfig().getValidMimeTypes()[0], is("test/mimetype"));
+    }
+
+    @Test
+    public void shouldCopyAndUpdateConfig() throws IOException {
+        // given
+        Configuration baseConfig = new Configuration(configFilePath);
+
+        String params = "crawler_manager.downloader.user_agent.name: NewAgent";
+        InputStream is = new ByteArrayInputStream(params.getBytes(StandardCharsets.UTF_8));
+
+        // when
+        Configuration newConfig = baseConfig.copyUpdating(is);
+
+        // then
+        HttpDownloaderConfig baseDownloaderConfig = baseConfig.getCrawlerConfig().getDownloaderConfig();
+        assertThat(baseDownloaderConfig.getDownloadThreadPoolSize(), is(333));
+        assertThat(baseDownloaderConfig.getMaxRetryCount(), is(444));
+        assertThat(baseDownloaderConfig.getUserAgentName(), is("TestAgent"));
+        assertThat(baseDownloaderConfig.getUserAgentUrl(), is("http://www.test-agent-crawler-example.com/robot"));
+
+        assertThat(newConfig, is(notNullValue()));
+        HttpDownloaderConfig newDownloaderConfig = newConfig.getCrawlerConfig().getDownloaderConfig();
+        assertThat(newDownloaderConfig.getDownloadThreadPoolSize(), is(333));
+        assertThat(newDownloaderConfig.getMaxRetryCount(), is(444));
+        assertThat(newDownloaderConfig.getUserAgentName(), is("NewAgent"));
+        assertThat(newDownloaderConfig.getUserAgentUrl(), is("http://www.test-agent-crawler-example.com/robot"));
+
+        assertEquals(baseConfig.getTargetStorageConfig().getDataFormats(),
+                     newConfig.getTargetStorageConfig().getDataFormats());
+
+        assertEquals(baseConfig.getLinkStorageConfig().getDownloadSitemapXml(),
+                     newConfig.getLinkStorageConfig().getDownloadSitemapXml());
+    }
+
+    @Test
+    public void shouldNotChangeAfterSerialized() throws IOException {
+        // given
+        Map<?, ?> settings = ImmutableMap.of("target_storage.data_format.type", "ELASTICSEARCH");
+        Configuration baseConfig = new Configuration(settings);
+        ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+
+        // when
+        Configuration newConfig = baseConfig.copy();
+        // then
+        assertEquals(baseConfig.getTargetStorageConfig().getDataFormats(),
+                     newConfig.getTargetStorageConfig().getDataFormats());
+        assertEquals(mapper.writeValueAsString(baseConfig), mapper.writeValueAsString(newConfig));
     }
 
 }
