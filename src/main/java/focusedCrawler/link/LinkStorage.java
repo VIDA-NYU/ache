@@ -158,6 +158,10 @@ public class LinkStorage extends StorageDefault {
         return null;
     }
 
+    public void insertLink(LinkRelevance linkRelevance) throws FrontierPersistentException{
+            frontierManager.insert(linkRelevance);
+        }
+
     /**
      * This method sends a link to crawler
      * @throws DataNotFoundException 
