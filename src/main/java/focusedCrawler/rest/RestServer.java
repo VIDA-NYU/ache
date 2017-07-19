@@ -75,12 +75,16 @@ public class RestServer {
         }
         
         /*
-         * API endpoints routes
+         * Crawl routes
          */
         server.get("/status", Transformers.json(crawlerResource.getStatus));
         server.get("/metrics", Transformers.json(crawlerResource.metricsResource));
         server.post("/startCrawl", "*/*", Transformers.json(crawlerResource.startCrawl));
+        server.get("/stopCrawl", Transformers.json(crawlerResource.stopCrawl));
 
+        /*
+         * Thread management routes
+         */
         server.get("/thread/dump", Transformers.text(threadsResource.threadDump));
 
         if (isSearchEnabled) {
@@ -92,14 +96,14 @@ public class RestServer {
         }
 
         /*
-         * Endpoints for labeling web pages
+         * Page labeling routes
          */
         server.get( "/labels", Transformers.json(labelsResource.getLabels));
         server.put( "/labels", Transformers.json(labelsResource.addLabels));
         server.post("/labels", Transformers.json(labelsResource.addLabels));
         
         /*
-         * Routes used by the static web application
+         * Routes to serve index.html to the paths used by the React static web application
          */
         server.get("/search",     StaticFileEngine.noopRouter, StaticFileEngine.engine);
         server.get("/monitoring", StaticFileEngine.noopRouter, StaticFileEngine.engine);

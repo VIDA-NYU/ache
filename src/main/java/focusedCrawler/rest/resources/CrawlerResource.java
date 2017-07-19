@@ -15,8 +15,11 @@ import java.nio.file.Paths;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
@@ -29,6 +32,7 @@ import focusedCrawler.Main;
 import focusedCrawler.config.Configuration;
 import focusedCrawler.crawler.async.AsyncCrawler;
 import focusedCrawler.util.MetricsManager;
+import spark.Request;
 import spark.Route;
 
 public class CrawlerResource {
@@ -59,10 +63,10 @@ public class CrawlerResource {
     public Route getStatus = (request, response) -> {
         Map<?, ?> crawlerStatus = ImmutableMap.of(
             "status", 200,
-            "name", "ACHE Crawler",
             "version", VERSION,
             "searchEnabled", isSearchEnabled,
-            "crawlerRunning", crawler == null ? false : crawler.isRunning()
+            "crawlerRunning", crawler == null ? false : crawler.isRunning(),
+            "crawlerState", crawler.state().toString()
         );
         return crawlerStatus;
     };
@@ -97,12 +101,59 @@ public class CrawlerResource {
 
         } catch (Exception e) {
             logger.error("Failed to start crawler.", e);
+            response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             return ImmutableMap.of(
                 "message", "Failed to start crawler.",
                 "crawlerStarted", false
             );
         }
     };
+
+    public Route stopCrawl = (request, response) -> {
+        try {
+            if(crawler == null) {
+                return ImmutableMap.of(
+                    "message", "Crawler is not running.",
+                    "stutdownInitiated", false,
+                    "crawlerStoped", false
+                );
+            }
+
+            boolean awaitStoped = getParamAsBoolean("awaitStoped", request).orElse(false);
+            this.crawler.stopAsync();
+            if(awaitStoped) {
+                this.crawler.awaitTerminated();
+                return ImmutableMap.of(
+                    "message", "Crawler stopped successfully.",
+                    "stutdownInitiated", true,
+                    "crawlerStoped", true
+                );
+            } else {
+                return ImmutableMap.of(
+                    "message", "Crawler shutdown initiated.",
+                    "stutdownInitiated", true,
+                    "crawlerStoped", false
+                );
+            }
+        } catch (Exception e) {
+            logger.error("Failed to stop crawler.", e);
+            response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            return ImmutableMap.of(
+                "message", "Failed to stop crawler.",
+                "stutdownInitiated", false,
+                "crawlerStoped", false
+            );
+        }
+    };
+
+    private Optional<Boolean> getParamAsBoolean(String paramName, Request request) {
+        try {
+            Boolean valueOf = Boolean.valueOf(request.queryParams(paramName));
+            return Optional.of(valueOf);
+        } catch (Exception e) {
+            return Optional.empty();
+        }
+    }
 
     private String getSeedForCrawlType(StartCrawlParams params, Path configPath,
             String storedModelPath) throws FileNotFoundException, IOException {
