@@ -15,6 +15,8 @@ public class HttpDownloaderConfig {
         public String path = "/";
     }
 
+    @JsonProperty("crawler_manager.downloader.use_okhttp3_fetcher")
+    private String okHttpFetcher = null;
 
     @JsonProperty("crawler_manager.downloader.download_thread_pool_size")
     private int downloadThreadPoolSize = 100;
@@ -94,4 +96,7 @@ public class HttpDownloaderConfig {
         return userAgentEmail;
     }
 
+    public String getOkHttpFetcher() {
+        return okHttpFetcher;
+    }
 }
