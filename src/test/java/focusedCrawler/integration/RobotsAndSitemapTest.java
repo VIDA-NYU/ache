@@ -163,12 +163,12 @@ public class RobotsAndSitemapTest {
 
     private void assertWasCrawled(String url, Frontier frontier) throws Exception {
         LinkRelevance link = LinkRelevance.create("http://127.0.0.1:1234/" + url);
-        assertThat("URL=" + url, frontier.exist(link), is(lessThan(0)));
+        assertThat("URL=" + url, frontier.exist(link), is(lessThan(0d)));
     }
 
     private void assertWasNotCrawled(String url, Frontier frontier) throws Exception {
         LinkRelevance link = LinkRelevance.create(url);
-        assertThat("URL=" + url, frontier.exist(link), is(not(lessThan(0))));
+        assertThat("URL=" + url, frontier.exist(link), is(not(lessThan(0d))));
     }
 
     private Frontier openFrontier(String outputPath, String configPath) {

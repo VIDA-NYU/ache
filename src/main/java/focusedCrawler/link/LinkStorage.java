@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -249,6 +250,10 @@ public class LinkStorage extends StorageDefault {
             throw new NullPointerException("Link argument or robot rules argument cannot be null");
         }
         frontierManager.getFrontier().insertRobotRules(link, robotRules);
+    }
+
+    public void addSeeds(List<String> seeds) {
+        frontierManager.addSeeds(seeds);
     }
 
 }

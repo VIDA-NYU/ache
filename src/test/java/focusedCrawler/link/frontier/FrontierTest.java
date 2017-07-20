@@ -50,7 +50,7 @@ public class FrontierTest {
         frontier.insert(link1);
         
         // then
-        assertThat(frontier.exist(link1), is(1));
+        assertThat(frontier.exist(link1), is(1d));
         assertThat(frontier.exist(link2), is(nullValue()));
     }
     
@@ -66,10 +66,10 @@ public class FrontierTest {
         
         // then
         assertThat(frontier.exist(link1), is(notNullValue()));
-        assertThat(frontier.exist(link1), is(1));
+        assertThat(frontier.exist(link1), is(1d));
         
         assertThat(frontier.exist(link2), is(notNullValue()));
-        assertThat(frontier.exist(link2), is(2));
+        assertThat(frontier.exist(link2), is(2d));
     }
     
     
@@ -81,12 +81,12 @@ public class FrontierTest {
         // when
         frontier.insert(link1);
         // then
-        assertThat(frontier.exist(link1), is(1));
+        assertThat(frontier.exist(link1), is(1d));
         
         // when
         frontier.delete(link1);
         // then
-        assertThat(frontier.exist(link1), is(-1));
+        assertThat(frontier.exist(link1), is(-1d));
     }
 
 }

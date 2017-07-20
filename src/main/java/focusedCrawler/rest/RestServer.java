@@ -81,6 +81,7 @@ public class RestServer {
         server.get("/metrics", Transformers.json(crawlerResource.metricsResource));
         server.post("/startCrawl", "*/*", Transformers.json(crawlerResource.startCrawl));
         server.get("/stopCrawl", Transformers.json(crawlerResource.stopCrawl));
+        server.post("/seeds", "*/*", Transformers.json(crawlerResource.addSeeds));
 
         /*
          * Thread management routes

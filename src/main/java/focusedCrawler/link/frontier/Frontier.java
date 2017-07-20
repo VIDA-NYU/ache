@@ -1,7 +1,6 @@
 package focusedCrawler.link.frontier;
 
 import java.net.URLDecoder;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -16,21 +15,12 @@ import focusedCrawler.util.persistence.TupleIterator;
 public class Frontier {
 
     protected PersistentHashtable<LinkRelevance> urlRelevance;
-    protected Map<String, Integer> scope = null;
-    private boolean useScope = false;
+
     private final PersistentHashtable<BaseRobotRules> robotRulesMap;
 
     public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend, Map<String, Integer> scope) {
         this.urlRelevance = new PersistentHashtable<>(directory, maxCacheUrlsSize, LinkRelevance.class, persistentHashtableBackend);
         this.robotRulesMap = new PersistentHashtable<>(directory+"_robots", maxCacheUrlsSize, BaseRobotRules.class, persistentHashtableBackend);
-        
-        if (scope == null) {
-            this.useScope = false;
-            this.scope = new HashMap<String, Integer>();
-        } else {
-            this.scope = scope;
-            this.useScope = true;
-        }
     }
 
     public Frontier(String directory, int maxCacheUrlsSize, DB persistentHashtableBackend) {
@@ -141,7 +131,7 @@ public class Frontier {
         }
         boolean inserted = false;
         String url = linkRelev.getURL().toString();
-        Integer relevance = exist(linkRelev);
+        Double relevance = exist(linkRelev);
         if (relevance == null) {
             urlRelevance.put(url, linkRelev);
             inserted = true;
@@ -158,23 +148,9 @@ public class Frontier {
      * @return
      * @throws FrontierPersistentException
      */
-    public Integer exist(LinkRelevance linkRelev) throws FrontierPersistentException {
-        String url = linkRelev.getURL().toString();
-        LinkRelevance resStr = urlRelevance.get(url);
-        if (resStr != null) {
-            return (int) resStr.getRelevance();
-        } else {
-            Integer result = new Integer(-1);
-            if (useScope == true) {
-                String host = linkRelev.getURL().getHost();
-                if (scope.get(host) != null) {
-                    result = null;
-                }
-            } else {
-                result = null;
-            }
-            return result;
-        }
+    public Double exist(LinkRelevance linkRelev) throws FrontierPersistentException {
+        LinkRelevance link = urlRelevance.get(linkRelev.getURL().toString());
+        return link == null ? null : link.getRelevance();
     }
 
     /**

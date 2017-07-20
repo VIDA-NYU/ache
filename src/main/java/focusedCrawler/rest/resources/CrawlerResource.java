@@ -112,6 +112,7 @@ public class CrawlerResource {
     public Route stopCrawl = (request, response) -> {
         try {
             if(crawler == null) {
+                response.status(HttpServletResponse.SC_BAD_REQUEST);
                 return ImmutableMap.of(
                     "message", "Crawler is not running.",
                     "stutdownInitiated", false,
@@ -142,6 +143,39 @@ public class CrawlerResource {
                 "message", "Failed to stop crawler.",
                 "stutdownInitiated", false,
                 "crawlerStoped", false
+            );
+        }
+    };
+
+    public Route addSeeds = (request, response) -> {
+        try {
+            if(crawler == null) {
+                response.status(HttpServletResponse.SC_BAD_REQUEST);
+                return ImmutableMap.of(
+                    "message", "Crawler is not running.",
+                    "addedSeeds", false
+                );
+            }
+
+            AddSeedsParam params = json.readValue(request.body(), AddSeedsParam.class);
+            if (params.seeds == null || params.seeds.isEmpty()) {
+                response.status(HttpServletResponse.SC_BAD_REQUEST);
+                return ImmutableMap.of(
+                    "message", "No seeds provided.",
+                    "addedSeeds", false
+                );
+            }
+            crawler.addSeeds(params.seeds);
+            return ImmutableMap.of(
+                "message", "Seeds added successfully.",
+                "addedSeeds", true
+            );
+        } catch (Exception e) {
+            logger.error("Failed to add seeds.", e);
+            response.status(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            return ImmutableMap.of(
+                "message", "Failed to add seeds.",
+                "addedSeeds", false
             );
         }
     };
@@ -273,6 +307,10 @@ public class CrawlerResource {
         public String crawlType = null;
         public List<String> seeds = null;
         public byte[] model = null;
+    }
+
+    public static class AddSeedsParam {
+        public List<String> seeds = null;
     }
 
 }

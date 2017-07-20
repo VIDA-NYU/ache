@@ -1,5 +1,6 @@
 package focusedCrawler.link.frontier;
 
+import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
@@ -8,7 +9,6 @@ import static org.junit.Assert.fail;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.After;
@@ -69,47 +69,160 @@ public class FrontierManagerTest {
         // given
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
-        
-        Map<String, Integer> scope = new HashMap<String, Integer>();
-        scope.put("www.example1.com", -1);
-        
-        
+
         LinkSelector linkSelector = new RandomLinkSelector();
-        Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, DB.ROCKSDB, scope);
-        
+        Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, DB.ROCKSDB);
+
+        Map<?, ?> props = ImmutableMap.of(
+            "link_storage.scheduler.max_links", schedulerMaxLinks,
+            "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
+            "link_storage.download_sitemap_xml", downloadSitemapXml,
+            "link_storage.link_strategy.use_scope", true
+        );
+        LinkStorageConfig config = new Configuration(props).getLinkStorageConfig();
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
                 linkSelector, null, emptyLinkFilter, metricsManager);
-        
+
         // when
+        frontierManager.addSeedScope(link1);
         frontierManager.insert(link1);
         frontierManager.insert(link2);
-        
+
         LinkRelevance selectedLink1 = frontierManager.nextURL();
         DataNotFoundException notFoundException = null;
         try {
             frontierManager.nextURL();
-        } catch(DataNotFoundException e) {
+        } catch (DataNotFoundException e) {
             notFoundException = e;
         }
-        
-        
+
         // then
         assertThat(selectedLink1, is(notNullValue()));
         assertThat(selectedLink1.getURL(), is(notNullValue()));
         assertThat(selectedLink1.getURL(), is(link1.getURL()));
-        
+
         assertThat(notFoundException, is(notNullValue()));
         assertThat(notFoundException.ranOutOfLinks(), is(true));
         frontierManager.close();
     }
-    
+
+    @Test
+    public void shouldRememberScopeOnRestart() throws Exception {
+        // given
+        LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
+        LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
+
+        LinkSelector linkSelector = new RandomLinkSelector();
+        String folder = tempFolder.newFolder().toString();
+        Frontier frontier = new Frontier(folder, 1000, DB.ROCKSDB);
+
+        Map<?, ?> props = ImmutableMap.of(
+            "link_storage.scheduler.max_links", schedulerMaxLinks,
+            "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
+            "link_storage.download_sitemap_xml", downloadSitemapXml,
+            "link_storage.link_strategy.use_scope", true
+        );
+        LinkStorageConfig config = new Configuration(props).getLinkStorageConfig();
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                linkSelector, null, emptyLinkFilter, metricsManager);
+
+        // when
+        frontierManager.addSeedScope(link1);
+        frontierManager.close();
+        frontier.close();
+
+        frontier = new Frontier(folder, 1000, DB.ROCKSDB);
+        frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                linkSelector, null, emptyLinkFilter, new MetricsManager());
+
+        frontierManager.insert(link1);
+        frontierManager.insert(link2);
+
+        LinkRelevance selectedLink1 = frontierManager.nextURL();
+        DataNotFoundException notFoundException = null;
+        try {
+            frontierManager.nextURL();
+        } catch (DataNotFoundException e) {
+            notFoundException = e;
+        }
+
+        // then
+        assertThat(selectedLink1, is(notNullValue()));
+        assertThat(selectedLink1.getURL(), is(notNullValue()));
+        assertThat(selectedLink1.getURL(), is(link1.getURL()));
+
+        assertThat(notFoundException, is(notNullValue()));
+        assertThat(notFoundException.ranOutOfLinks(), is(true));
+        frontierManager.close();
+    }
+
+
+    @Test
+    public void shouldModifyScopeAfterAddingNewSeeds() throws Exception {
+        // given
+        LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
+
+        LinkRelevance link2_1 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
+        LinkRelevance link2_2 = new LinkRelevance(new URL("http://www.example2.com/about.html"), 2);
+
+        LinkSelector linkSelector = new RandomLinkSelector();
+        Frontier frontier = new Frontier(tempFolder.newFolder().toString(), 1000, DB.ROCKSDB);
+
+        Map<?, ?> props = ImmutableMap.of(
+            "link_storage.scheduler.max_links", schedulerMaxLinks,
+            "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
+            "link_storage.download_sitemap_xml", downloadSitemapXml,
+            "link_storage.link_strategy.use_scope", true
+        );
+        LinkStorageConfig config = new Configuration(props).getLinkStorageConfig();
+        FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
+                linkSelector, null, emptyLinkFilter, metricsManager);
+
+        // when
+        frontierManager.addSeedScope(link1);
+
+        frontierManager.insert(link1);
+        frontierManager.insert(link2_1);
+
+        LinkRelevance selectedLink1 = frontierManager.nextURL();
+        DataNotFoundException notFoundException = null;
+        try {
+            frontierManager.nextURL();
+        } catch (DataNotFoundException e) {
+            notFoundException = e;
+        }
+
+        frontierManager.addSeeds(asList(link2_1.getURL().toString()));
+        LinkRelevance selectedLink2 = frontierManager.nextURL();
+
+        frontierManager.insert(link2_2);
+        LinkRelevance selectedLink2_2 = frontierManager.nextURL();
+
+        // then
+        assertThat(selectedLink1, is(notNullValue()));
+        assertThat(selectedLink1.getURL(), is(notNullValue()));
+        assertThat(selectedLink1.getURL(), is(link1.getURL()));
+
+        assertThat(notFoundException, is(notNullValue()));
+        assertThat(notFoundException.ranOutOfLinks(), is(true));
+
+        assertThat(selectedLink2, is(notNullValue()));
+        assertThat(selectedLink2.getURL(), is(notNullValue()));
+        assertThat(selectedLink2.getURL(), is(link2_1.getURL()));
+
+        assertThat(selectedLink2_2, is(notNullValue()));
+        assertThat(selectedLink2_2.getURL(), is(notNullValue()));
+        assertThat(selectedLink2_2.getURL(), is(link2_2.getURL()));
+
+        frontierManager.close();
+    }
 
     @Test
     public void shouldInsertUrl() throws Exception {
         // given
         LinkSelector linkSelector = new TopkLinkSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
-                                                              linkSelector, null, emptyLinkFilter, metricsManager);
+                linkSelector, null, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1, LinkRelevance.Type.FORWARD);
         
@@ -140,7 +253,7 @@ public class FrontierManagerTest {
         LinkSelector linkSelector = new TopkLinkSelector();
         LinkSelector recrawlSelector = new SitemapsRecrawlSelector();
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
-                                                              linkSelector, recrawlSelector , emptyLinkFilter, metricsManager);
+                linkSelector, recrawlSelector, emptyLinkFilter, metricsManager);
         
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/sitemap.xml"), 299, LinkRelevance.Type.SITEMAP);
         assertThat(frontierManager.isRelevant(link1), is(true));
@@ -227,40 +340,41 @@ public class FrontierManagerTest {
             "link_storage.scheduler.host_min_access_interval", minimumAccessTimeInterval,
             "link_storage.download_sitemap_xml", true
         );
-        config = new Configuration(props).getLinkStorageConfig();
+        LinkStorageConfig config = new Configuration(props).getLinkStorageConfig();
         assertThat(config.getDownloadSitemapXml(), is(true));
-        
+
         LinkSelector linkSelector = new TopkLinkSelector();
         LinkSelector recrawlSelector = null;
-        
+
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
                 linkSelector, recrawlSelector, emptyLinkFilter, metricsManager);
-        
-        LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/sitemap.xml"), 1, LinkRelevance.Type.FORWARD);
-        
+
+        LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/sitemap.xml"), 1,
+                LinkRelevance.Type.FORWARD);
+
         // when
         frontierManager.insert(link1);
-        
-        
+
+
         // then
         LinkRelevance nextURL;
-        
+
         nextURL = frontierManager.nextURL();
         assertThat(nextURL, is(notNullValue()));
         assertThat(nextURL.getURL(), is(notNullValue()));
         assertThat(nextURL.getURL().toString(), is("http://www.example1.com/robots.txt"));
         assertThat(nextURL.getType(), is(LinkRelevance.Type.ROBOTS));
-        
+
         nextURL = frontierManager.nextURL();
         assertThat(nextURL, is(notNullValue()));
         assertThat(nextURL.getURL(), is(notNullValue()));
         assertThat(nextURL.getURL(), is(link1.getURL()));
         assertThat(nextURL.getRelevance(), is(link1.getRelevance()));
         assertThat(nextURL.getType(), is(link1.getType()));
-        
+
         frontierManager.close();
     }
-    
+
     @Test
     public void shouldInsertUrlsAndSelectUrlsInSortedByRelevance() throws Exception {
         // given
@@ -269,40 +383,40 @@ public class FrontierManagerTest {
 
         FrontierManager frontierManager = new FrontierManager(frontier, dataPath, modelPath, config,
                 linkSelector, recrawlSelector, emptyLinkFilter, metricsManager);
-        
+
         LinkRelevance link1 = new LinkRelevance(new URL("http://www.example1.com/index.html"), 1);
         LinkRelevance link2 = new LinkRelevance(new URL("http://www.example2.com/index.html"), 2);
         LinkRelevance link3 = new LinkRelevance(new URL("http://www.example3.com/index.html"), 3);
-        
+
         // when
         frontierManager.insert(link1);
         frontierManager.insert(link2);
         frontierManager.insert(link3);
-        
+
         LinkRelevance selectedLink1 = frontierManager.nextURL();
         LinkRelevance selectedLink2 = frontierManager.nextURL();
         LinkRelevance selectedLink3 = frontierManager.nextURL();
         DataNotFoundException notFoundException = null;
         try {
             frontierManager.nextURL();
-        } catch(DataNotFoundException e) {
+        } catch (DataNotFoundException e) {
             notFoundException = e;
         }
-        
+
         // then
-        
-        // should return only 3 inserted links, 4th should be null 
+
+        // should return only 3 inserted links, 4th should be null
         assertThat(selectedLink1, is(notNullValue()));
         assertThat(selectedLink2, is(notNullValue()));
         assertThat(selectedLink3, is(notNullValue()));
         assertThat(notFoundException, is(notNullValue()));
         assertThat(notFoundException.ranOutOfLinks(), is(true));
-        
+
         // should return bigger relevance values first
         assertThat(selectedLink1.getURL(), is(link3.getURL()));
         assertThat(selectedLink2.getURL(), is(link2.getURL()));
         assertThat(selectedLink3.getURL(), is(link1.getURL()));
-        
+
         frontierManager.close();
     }
     
@@ -343,13 +457,13 @@ public class FrontierManagerTest {
         // then
         assertThat(selectedLink1, is(notNullValue()));
         assertThat(selectedLink2, is(notNullValue()));
-        
+
         assertThat(notFoundException1, is(notNullValue()));
         assertThat(notFoundException1.ranOutOfLinks(), is(true));
-        
+
         assertThat(notFoundException2, is(notNullValue()));
         assertThat(notFoundException2.ranOutOfLinks(), is(true));
-        
+
         frontierManager.close();
         
     }

@@ -2,6 +2,7 @@ package focusedCrawler.crawler.async;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -151,6 +152,12 @@ public class AsyncCrawler extends AbstractExecutionThreadService {
 
     public MetricsManager getMetricsManager() {
         return metricsManager;
+    }
+
+    public void addSeeds(List<String> seeds) {
+        if (linkStorage instanceof LinkStorage) {
+            ((LinkStorage) linkStorage).addSeeds(seeds);
+        }
     }
 
 }

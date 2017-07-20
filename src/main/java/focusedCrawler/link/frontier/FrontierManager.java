@@ -1,15 +1,21 @@
 package focusedCrawler.link.frontier;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
+import java.io.PrintStream;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
+import org.elasticsearch.common.netty.util.internal.ConcurrentHashMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -60,9 +66,13 @@ public class FrontierManager {
     private final boolean disallowSitesInRobotsFile;
     private final LogFile schedulerLog;
     private final MetricsManager metricsManager;
+    private final boolean useScope;
+    private final Set<String> scope = Collections.newSetFromMap(new ConcurrentHashMap<>());
 
 	private Timer insertTimer;
 	private Timer selectTimer;
+
+    private PrintStream seedScopeFile;
 
     public FrontierManager(Frontier frontier, String dataPath, String modelPath,
                            LinkStorageConfig config, LinkSelector linkSelector,
@@ -88,7 +98,24 @@ public class FrontierManager {
             this.backlinkSurfer = new BacklinkSurfer(config.getBackSurferConfig());
             this.backlinkClassifier = new LinkClassifierHub();
         }
+        this.useScope = config.isUseScope();
+        this.openSeedScopeFile(dataPath);
         this.setupMetrics();
+    }
+
+    private void openSeedScopeFile(String dataPath) {
+        Path path = Paths.get(dataPath, "seeds_scope.txt");
+        try {
+            if (Files.exists(path)) {
+                List<String> lines = Files.readAllLines(path);
+                for (String line : lines) {
+                    scope.add(new URL(line).getHost());
+                }
+            }
+            this.seedScopeFile = new PrintStream(path.toFile());
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to open file: " + path.toString());
+        }
     }
 
     private void setupMetrics() {
@@ -104,12 +131,16 @@ public class FrontierManager {
         if (link.getRelevance() <= 0) {
             return false;
         }
-        
-        if(disallowSitesInRobotsFile && frontier.isDisallowedByRobots(link)) {
+
+        if (useScope && !scope.contains(link.getURL().getHost())) {
             return false;
         }
 
-        Integer value = frontier.exist(link);
+        if (disallowSitesInRobotsFile && frontier.isDisallowedByRobots(link)) {
+            return false;
+        }
+
+        Double value = frontier.exist(link);
         if (value != null) {
             return false;
         }
@@ -191,29 +222,27 @@ public class FrontierManager {
         frontier.close();
         hostsManager.close();
         schedulerLog.close();
+        seedScopeFile.close();
     }
 
     public Frontier getFrontier() {
         return frontier;
     }
 
-    public void addSeeds(String[] seeds) {
-        if (seeds != null && seeds.length > 0) {
+    public void addSeeds(List<String> seeds) {
+        if (seeds != null && seeds.size() > 0) {
             int count = 0;
             int errors = 0;
-            logger.info("Adding {} seed URL(s)...", seeds.length);
+            logger.info("Adding {} seed URL(s)...", seeds.size());
             for (String seed : seeds) {
-
-                URL seedUrl;
                 try {
-                    seedUrl = new URL(seed);
-                } catch (MalformedURLException e) {
-                    logger.warn("Invalid seed URL provided: " + seed);
-                    errors++;
-                    continue;
-                }
-                LinkRelevance link = new LinkRelevance(seedUrl, LinkRelevance.DEFAULT_RELEVANCE);
-                try {
+                    LinkRelevance link = LinkRelevance.createForward(seed, LinkRelevance.DEFAULT_RELEVANCE);
+                    if (link == null) {
+                        logger.warn("Invalid seed URL provided: " + seed);
+                        errors++;
+                        continue;
+                    }
+                    addSeedScope(link);
                     boolean inserted = insert(link);
                     if (inserted) {
                         logger.info("Added seed URL: {}", seed);
@@ -228,6 +257,18 @@ public class FrontierManager {
             if (errors > 0) {
                 logger.info("Number of invalid seeds: " + errors);
             }
+            logger.info("Using scope of following domains:");
+            for (String host : scope) {
+                logger.info(host);
+            }
+        }
+    }
+
+    public void addSeedScope(LinkRelevance link) {
+        if (useScope) {
+            scope.add(link.getURL().getHost());
+            seedScopeFile.println(link.getURL().toString());
+            seedScopeFile.flush();
         }
     }
 
