@@ -49,7 +49,6 @@ public class CrawlerResource {
     private AsyncCrawler crawler;
     private Configuration config;
 
-
     public CrawlerResource(Configuration config, String dataPath, String esIndexName, String esTypeName) {
         this.config = config;
         if (esIndexName != null && esTypeName != null) {
@@ -66,7 +65,7 @@ public class CrawlerResource {
             "version", VERSION,
             "searchEnabled", isSearchEnabled,
             "crawlerRunning", crawler == null ? false : crawler.isRunning(),
-            "crawlerState", crawler.state().toString()
+            "crawlerState", crawler == null ? "NEW" : crawler.state().toString()
         );
         return crawlerStatus;
     };
