@@ -140,7 +140,9 @@ public class RestServer {
 
     public void shutdown() {
         server.stop();
-        elasticsearchProxyResource.close();
+        if(elasticsearchProxyResource != null) {
+            elasticsearchProxyResource.close();
+        }
     }
     
     private void enableCORS(final String origin, final String methods) {
