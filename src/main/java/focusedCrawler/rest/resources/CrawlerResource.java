@@ -115,24 +115,24 @@ public class CrawlerResource {
                 return ImmutableMap.of(
                     "message", "Crawler is not running.",
                     "stutdownInitiated", false,
-                    "crawlerStoped", false
+                    "crawlerStopped", false
                 );
             }
 
-            boolean awaitStoped = getParamAsBoolean("awaitStoped", request).orElse(false);
+            boolean awaitStopped = getParamAsBoolean("awaitStopped", request).orElse(false);
             this.crawler.stopAsync();
-            if(awaitStoped) {
+            if(awaitStopped) {
                 this.crawler.awaitTerminated();
                 return ImmutableMap.of(
                     "message", "Crawler stopped successfully.",
                     "stutdownInitiated", true,
-                    "crawlerStoped", true
+                    "crawlerStopped", true
                 );
             } else {
                 return ImmutableMap.of(
                     "message", "Crawler shutdown initiated.",
                     "stutdownInitiated", true,
-                    "crawlerStoped", false
+                    "crawlerStopped", false
                 );
             }
         } catch (Exception e) {
@@ -141,7 +141,7 @@ public class CrawlerResource {
             return ImmutableMap.of(
                 "message", "Failed to stop crawler.",
                 "stutdownInitiated", false,
-                "crawlerStoped", false
+                "crawlerStopped", false
             );
         }
     };
